@@ -1,1 +1,0 @@
-Currently, the wiki is hosted [here](http://wiki.orbeon.com/forms/).
