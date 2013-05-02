@@ -1,3 +1,7 @@
+## 
+
+The function library is [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions).
+
 ### xxf:r()
 
 ```xpath
@@ -21,12 +25,12 @@ The `xxf:r()` function:
 Example:
 
 ```xml
-    <xf:instance id="orbeon-resources" xxf:readonly="true">
-        <resources>
-            <resource xml:lang="en"><buttons><download>Download</download></buttons></resource>
-            <resource xml:lang="fr"><buttons><download>Télécharger</download></buttons></resource>
-        </resources>
-    </xf:instance>
+<xf:instance id="orbeon-resources" xxf:readonly="true">
+    <resources>
+        <resource xml:lang="en"><buttons><download>Download</download></buttons></resource>
+        <resource xml:lang="fr"><buttons><download>Télécharger</download></buttons></resource>
+    </resources>
+</xf:instance>
 
-    <xf:label value="xxf:r('buttons.download')"/>
+<xf:label value="xxf:r('buttons.download')"/>
 ```
