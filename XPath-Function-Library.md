@@ -20,10 +20,6 @@ The function:
   - `fr-form-resources` (for Form Runner compatibility)
 - uses the resource name specified to find a resource located in the resources instance, relative to the ``
 
-The `xxf:r()` function:
-
-- takes a resource path of the form  following the XML structure in the resources instance; `foo.bar.baz` is also supported 
-
 Example:
 
 ```xml
