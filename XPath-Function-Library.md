@@ -4,6 +4,8 @@ The function library is [documented here](http://wiki.orbeon.com/forms/doc/devel
 
 ### xxf:r()
 
+The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources.
+
 ```xpath
 xxf:r($resource-name as xs:string) as xs:string
 ```
