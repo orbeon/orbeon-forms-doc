@@ -26,7 +26,7 @@ The `xxf:r()` function:
 
 Example:
 
-```XML
+```xml
 <xf:instance id="orbeon-resources" xxf:readonly="true">
     <resources>
         <resource xml:lang="en"><buttons><download>Download</download></buttons></resource>
