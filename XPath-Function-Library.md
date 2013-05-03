@@ -1,6 +1,6 @@
 ### Main function library documentation
 
-The function library is [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions).
+The function library is [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions). New functions are documented below.
 
 ### xxf:r()
 
