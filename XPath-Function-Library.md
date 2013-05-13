@@ -35,7 +35,7 @@ Example:
 
 ### xxf:get-request-method()
 
-The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources.
+Return the current HTTP method.
 
 ```ruby
 xxf:get-request-method() as xs:string
