@@ -32,3 +32,13 @@ Example:
 
 <xf:label value="xxf:r('buttons.download')"/>
 ```
+
+### xxf:get-request-method()
+
+The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources.
+
+```ruby
+xxf:get-request-method() as xs:string
+```
+
+Return the HTTP method of the current request, such as `GET`, `POST`, etc.
