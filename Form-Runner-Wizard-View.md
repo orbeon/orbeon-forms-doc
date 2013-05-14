@@ -1,0 +1,1 @@
+See this [blog entry](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html) for an introduction to the feature.
