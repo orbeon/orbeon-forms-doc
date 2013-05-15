@@ -8,12 +8,12 @@ This feature is available with Orbeon Forms 4.2 and newer.
 
 Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what happens with form data:
 
-- The "Save" button saves data to the database.
-- The "Submit" button saves data and shows a dialog after saving (with options to clear data, keep data, navigate to another page, or close the window).
-- The "Send" (AKA "workflow-send") button saves the data and then allows:
-	- sending an email
-	- sending form data to a service
-	- redirecting the user to a success or error page
+- The "Save" button to save data to the database.
+- The "Submit" button to save data and show a dialog after saving (with options to clear data, keep data, navigate to another page, or close the window).
+- The "Send" (AKA "workflow-send") button to save data and then allow:
+    - sending an email
+    - sending form data to a service
+    - redirecting the user to a success or error page
 
 For more information, see [Configuration Properties - Form Runner](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-form-runner).
 
