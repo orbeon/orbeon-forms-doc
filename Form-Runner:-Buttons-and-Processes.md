@@ -64,7 +64,7 @@ Here the following buttons get associated with processes defined in other proper
 
 The `refresh`, `clear` and `pdf` buttons are currently not implemented as processes and handled directly by Form Runner.
 
-## Reusable actions
+## Core actions
 
 ### validate
 
@@ -178,6 +178,16 @@ Alternatively, you can use the `process` action:
 - `wizard-next`: navigate the wizard to the next page
 - `success`: complete the process right away successfully
 - `process`: run a sub-process
+
+## Predefined reusable processes
+
+The following sub-processes are predefined and can be reused from other processes:
+
+- `require-uploads`: check whether there are pending uploads and if so display an error message and interrupt the process
+- `require-valid`: mark all controls as visited, check whether data is valid and if not display an error message and interrupt the process
+- `maybe-require-valid`: same as `require-valid` but skips validation if `oxf.fr.detail.save.validate` is set to `false`
+- `orbeon-home`: navigate to '/'
+- `form-runner-home`: navigate to '/fr'
 
 ## Combining actions
 
