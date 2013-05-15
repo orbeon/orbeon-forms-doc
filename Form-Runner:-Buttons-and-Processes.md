@@ -20,46 +20,107 @@ For more information, see [Configuration Properties - Form Runner](http://wiki.o
 
 ## Reusable actions
 
-The following set of reusable actions is available:
+### validate
 
-- `validate`: validate form data
-    - result
-        - success if data is valid
-        - failure if data is invalid
-    - parameters
-        - `property`: specifies a boolean property which, if `false`, skips validation (used for backward compatibility)
-- `pending-uploads`: checks whether there are pending uploads
-    - result
-        - success if there are no pending uploads
-        - failure if there are pending uploads
-    - parameters: none
-- `save`: save data and attachments via the persistence layer
-    - steps
-        - dispatch `fr-data-save-prepare` to `fr-form-model`
-        - save attachments
-        - save XML
-        - switch to `edit` mode
-        - dispatch `fr-data-save-done` to `fr-form-model`
-    - parameters: none
-    - result: success if there are no errors, failure otherwise
+Validate form data.
+
+- parameters
+    - `property`: specifies a boolean property which, if `false`, skips validation (used for backward compatibility)
+- result
+    - success if data is valid
+    - failure if data is invalid
+
+### pending-uploads
+
+Check whether there are pending uploads.
+
+- parameters
+    - none
+- result
+    - success if there are no pending uploads
+    - failure if there are pending uploads
+
+### save
+
+Save data and attachments via the persistence layer.
+
+- steps
+    - dispatch `fr-data-save-prepare` to `fr-form-model`
+    - save attachments
+    - save XML
+    - switch to `edit` mode
+    - dispatch `fr-data-save-done` to `fr-form-model`
+- parameters
+    - none
+
+### email
+
+Send an email with optionally XML form data, attachments, and PDF.
+
+- parameters: none
+- properties used: `oxf.fr.email.*`
+
+### send
+
+Send data to an HTTP URL.
+
+- parameters
+    - `property`: specifies a property prefix
+- properties used
+    - property prefix + `.method`: `GET`, `POST` (default), `PUT`
+    - property prefix + `.prune`: whether to prune non-relevant nodes (`true` by default)
+    - property prefix + `.replace`: `all` to load the resulting response in the browser, or `none` (default)
+    - property prefix + `.content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
+
+### navigate
+
+Navigate to an external page via client-side GET.
+
+- parameters
+    - `uri`: specifies the URL to navigate to
+    - `property`: specifies a property containing the URL to navigate to
+    - by default, try to guess based on the parameter
+
+### success-message and error-message
+
 - `success-message`: show a success message
     - parameters
         - `message`: resource key pointing to the message
 - `error-message`: show an error message
     - parameters
         - `message`: resource key pointing to the message
-- `email`: send an email
-    - parameters: none
-    - properties used: `oxf.fr.email.*`
-- `send`: send the data to an HTTP URL
-    - parameters
-        - `property`: specifies a property prefix
-    - properties used
-        - property prefix + `.method`: `GET`, `POST` (default), `PUT`
-        - property prefix + `.prune`: whether to prune non-relevant nodes (`true` by default)
-        - property prefix + `.replace`: `all` to load the resulting response in the browser, or `none` (default)
-        - property prefix + `.content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
-- `navigate`: navigate to an external page
+
+### Running a sub-process
+
+You can run a sub-process directly by name.
+
+Example:
+
+```xml
+    <!-- Define a sub-process which navigates to the "/" URL -->
+    <property
+      as="xs:string"
+      name="oxf.fr.detail.process.orbeon-home.*.*"
+      value='navigate("/")'/>
+
+    <!-- Use that sub-process from the "home" process -->
+    <property
+      as="xs:string"
+      name="oxf.fr.detail.process.home.*.*"
+      value='orbeon-home'/>
+```
+
+Alternatively, you can use the `process` action:
+
+```
+    <property
+      as="xs:string"
+      name="oxf.fr.detail.process.home.*.*"
+      value='process("orbeon-home")'/>
+```
+
+### Other actions
+
 - `review`, `edit`, `summary`: navigate to these Form Runner pages
 - `visit-all`: mark all controls as visited
 - `unvisit-all`: mark all controls as not visited
@@ -69,7 +130,7 @@ The following set of reusable actions is available:
 - `captcha`: trigger the captcha
 - `wizard-pref`: navigate the wizard to the previous page
 - `wizard-next`: navigate the wizard to the next page
-- `success`: complete the process
+- `success`: complete the process right away successfully
 - `process`: run a sub-process
 
 ## Combining actions
