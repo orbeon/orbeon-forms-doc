@@ -248,7 +248,9 @@ So how do you configure processes? Say you want to specify a couple of buttons o
   value="save-draft send"/>
 ```
 
-This places "Save" and "Send" buttons on the page. Each button is automatically associated with processes of the same names (`save-draft` and `send`). These particular buttons and process names are standard, but we can override them specifically for our form. Again, this is done with a property:
+This places a `save-draft` and `send` buttons on the page. Their default labels are "Save" and "Send". Each button is
+automatically associated with processes of the same names, `save-draft` and `send`. These particular buttons and
+process names are standard, but we can override them specifically for our form. Again, this is done with a property:
 
 ```xml
 <property
