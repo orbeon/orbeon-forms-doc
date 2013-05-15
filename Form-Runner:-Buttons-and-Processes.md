@@ -245,13 +245,13 @@ The following buttons are predefined and associated with the processes of the sa
 - `home`: navigate to `/`
 - `summary`: navigate to the summary page
 - `close`: navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page
-- `save-final`: save the form data if it is valid 
+- `save-final`: save the form data if it is valid
 - `save-draft`: save the form data even if it is valid
 - `validate`: run the `validate action
 - `review`: navigate to the review page if the data is valid
 - `edit`: navigate to the edit page from the review page
-- `send`: validate then send data using the `oxf.fr.detail.send.success` property prefix 
-- `email`: validate then email data 
+- `send`: validate then send data using the `oxf.fr.detail.send.success` property prefix
+- `email`: validate then email data
 - `collapse-all`: run the action of the same name
 - `expand-all`: run the action of the same name
 - `refresh`: visit all controls and update the page (noscript mode only)
@@ -264,9 +264,9 @@ The following buttons are predefined and associated with the processes of the sa
 
 In fact all buttons can do the same tasks if they are configured appropriately! But by default the buttons above are preconfigured to do different tasks, for convenience.
 
-## Configuring processes
+## Customizing processes
 
-So how do you configure processes? Say you want to specify a couple of buttons on your "acme/hr" form. Like before, you define a property:
+So how do you customize processes? Say you want to specify a couple of buttons on your "acme/hr" form. Like before, you define a property:
 
 ```xml
 <property
@@ -277,7 +277,7 @@ So how do you configure processes? Say you want to specify a couple of buttons o
 
 This places a `save-draft` and `send` buttons on the page. Their default labels are "Save" and "Send". Each button is
 automatically associated with processes of the same names, `save-draft` and `send`. These particular buttons and
-process names are standard, but we can override them specifically for our form. Again, this is done with a property:
+process names are standard, but we can customize them specifically for our form. Again, this is done with a property:
 
 ```xml
 <property
@@ -312,9 +312,21 @@ The following buttons are deprecated:
 - `workflow-review`: use `review` instead
 - `workflow-edit`: use `edit` instead
 
-The following property is the projected:
+When the `workflow-send` is used, the behavior matches that of Orbeon Forms 4.1 and earlier. The following properties
+are considered to build a process:
 
-    oxf.fr.detail.send.pdf
+- `oxf.fr.detail.send.email`
+- `oxf.fr.detail.send.success.uri`
+- `oxf.fr.detail.send.error.uri`
+
+The following property is deprecated:
+
+```xml
+<property
+  as="xs:boolean"
+  name="oxf.fr.detail.send.pdf.*.*"
+  value="false"/>
+```
 
 Instead, use:
 
