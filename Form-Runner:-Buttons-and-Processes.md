@@ -6,7 +6,7 @@ See this blog post for an introduction to the feature: [More powerful buttons](h
 
 This feature is available with Orbeon Forms 4.2 and newer.
 
-Up to version 4.1, Orbeon Forms had a few configurable buttons to specify what happens with form data:
+Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what happens with form data:
 
 - The "Save" button saves data to the database.
 - The "Submit" button saves data and shows a dialog after saving (with options to clear data, keep data, navigate to another page, or close the window).
