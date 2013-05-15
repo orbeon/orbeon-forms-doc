@@ -50,8 +50,15 @@ The following set of reusable actions is available:
         - `message`: resource key pointing to the message
 - `email`: send an email
     - parameters: none
-    - NOTE: uses `oxf.fr.email.*` properties
-- `send`: send the data to an HTTP service
+    - properties used: `oxf.fr.email.*`
+- `send`: send the data to an HTTP URL
+    - parameters
+        - `property`: specifies a property prefix
+    - properties used
+        - property prefix + `.method`: `GET`, `POST` (default), `PUT`
+        - property prefix + `.prune`: whether to prune non-relevant nodes (`true` by default)
+        - property prefix + `.replace`: `all` to load the resulting response in the browser, or `none` (default)
+        - property prefix + `.content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
 - `navigate`: navigate to an external page
 - `review`, `edit`, `summary`: navigate to these Form Runner pages
 - `visit-all`: mark all controls as visited
