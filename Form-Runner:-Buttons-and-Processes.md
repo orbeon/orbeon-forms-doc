@@ -18,6 +18,52 @@ Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what hap
 
 For more information, see [Configuration Properties - Form Runner](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-form-runner).
 
+## Defining a process
+
+You define a process with a property starting with `oxf.fr.detail.process`. For example:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.save-final.*.*"
+  value='require-uploads
+         then require-valid
+         then save
+         then success-message("save-success")
+         recover error-message("database-error")'/>
+```
+
+The name of the process immediately follows the property prefix, here `save-final`.
+
+The wildcards, as usual with Form Funner, can specify a form's application and form names.
+
+## Associating a process with a button
+
+A process is automatically associated with a button by name when using the following properties:
+
+- `oxf.fr.detail.buttons`
+- `oxf.fr.detail.buttons.inner`
+- `oxf.fr.detail.buttons.view`
+
+For example:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.detail.buttons.orbeon.controls"
+  value="refresh summary clear pdf save-final wizard-prev wizard-next review"/>
+```
+
+Here the following buttons get associated with processes defined in other properties:
+
+- `summary`
+- `save-final`
+- `wizard-prev`
+- `wizard-next`
+- `review`
+
+The `refresh`, `clear` and `pdf` buttons are currently not implemented as processes and handled directly by Form Runner.
+
 ## Reusable actions
 
 ### validate
@@ -97,26 +143,26 @@ You can run a sub-process directly by name.
 Example:
 
 ```xml
-    <!-- Define a sub-process which navigates to the "/" URL -->
-    <property
-      as="xs:string"
-      name="oxf.fr.detail.process.orbeon-home.*.*"
-      value='navigate("/")'/>
+<!-- Define a sub-process which navigates to the "/" URL -->
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.orbeon-home.*.*"
+  value='navigate("/")'/>
 
-    <!-- Use that sub-process from the "home" process -->
-    <property
-      as="xs:string"
-      name="oxf.fr.detail.process.home.*.*"
-      value='orbeon-home'/>
+<!-- Use that sub-process from the "home" process -->
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.home.*.*"
+  value='orbeon-home'/>
 ```
 
 Alternatively, you can use the `process` action:
 
 ```
-    <property
-      as="xs:string"
-      name="oxf.fr.detail.process.home.*.*"
-      value='process("orbeon-home")'/>
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.home.*.*"
+  value='process("orbeon-home")'/>
 ```
 
 ### Other actions
@@ -196,33 +242,33 @@ In fact all buttons can do the same tasks if they are configured appropriately! 
 So how do you configure processes? Say you want to specify a couple of buttons on your "acme/hr" form. Like before, you define a property:
 
 ```xml
-    <property
-      as="xs:string"
-      name="oxf.fr.detail.buttons.acme.hr"
-      value="save-draft send"/>
+<property
+  as="xs:string"
+  name="oxf.fr.detail.buttons.acme.hr"
+  value="save-draft send"/>
 ```
 
 This places "Save" and "Send" buttons on the page. Each button is automatically associated with processes of the same names (`save-draft` and `send`). These particular buttons and process names are standard, but we can override them specifically for our form. Again, this is done with a property:
 
 ```xml
-    <property
-      as="xs:string"
-      name="oxf.fr.detail.process.send.acme.hr"
-      value='require-valid
-             then pdf
-             then email
-             then send("http://example.org/")
-             then navigate("/success")
-             recover navigate("/failure")'/>
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.send.acme.hr"
+  value='require-valid
+         then pdf
+         then email
+         then send("http://example.org/")
+         then navigate("/success")
+         recover navigate("/failure")'/>
 ```
 
 Button labels can be overridden as well, as was the case before:
 
 ```xml
-    <property
-      as="xs:string"
-      name="oxf.fr.resource.*.*.en.detail.buttons.send"
-      value="Fancy Send"/>
+<property
+  as="xs:string"
+  name="oxf.fr.resource.*.*.en.detail.buttons.send"
+  value="Fancy Send"/>
 ```
 
 All the configuration above for a button called `send` could have been done with an entirely custom button named `foo`.
@@ -244,10 +290,10 @@ The following property is the projected:
 Instead, use:
 
 ```xml
-    <property
-      as="xs:string"
-      name="oxf.fr.detail.send.success.content.*.*"
-      value="pdf-url"/>
+<property
+  as="xs:string"
+  name="oxf.fr.detail.send.success.content.*.*"
+  value="pdf-url"/>
 ```
 
 Identical results can be achieved by using the appropriate reusable actions.
