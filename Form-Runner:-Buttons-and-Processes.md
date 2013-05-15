@@ -1,22 +1,11 @@
 ## See also
 
 - this blog post for an introduction to the feature: [More powerful buttons](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
-- the predefined configuration properties in [properties-form-runner.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml)
+- the predefined configuration properties in [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml)
 
 ## Availability
 
 This feature is available with Orbeon Forms 4.2 and newer.
-
-Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what happens with form data:
-
-- The "Save" button to save data to the database.
-- The "Submit" button to save data and show a dialog after saving (with options to clear data, keep data, navigate to another page, or close the window).
-- The "Send" (AKA "workflow-send") button to save data and then allow:
-    - sending an email
-    - sending form data to a service
-    - redirecting the user to a success or error page
-
-For more information, see [Configuration Properties - Form Runner](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-form-runner).
 
 ## Defining a process
 
@@ -54,7 +43,7 @@ For example:
   value="refresh summary clear pdf save-final wizard-prev wizard-next review"/>
 ```
 
-Here the following buttons get associated with processes defined in other properties:
+Here the following buttons get associated with processes of the same name defined in separate properties:
 
 - `refresh`
 - `summary`
@@ -63,7 +52,7 @@ Here the following buttons get associated with processes defined in other proper
 - `wizard-next`
 - `review`
 
-NOTE: The `clear` and `pdf` buttons are currently not implemented as processes and handled directly by Form Runner.
+NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented as processes but handled directly by Form Runner.
 
 ## Core actions
 
@@ -186,13 +175,13 @@ The following sub-processes are predefined and can be reused from other processe
 
 - `require-uploads`: check whether there are pending uploads and if so display an error message and interrupt the process
 - `require-valid`: mark all controls as visited, check whether data is valid and if not display an error message and interrupt the process
-- `maybe-require-valid`: same as `require-valid` but skips validation if `oxf.fr.detail.save.validate` is set to `false`
+- `maybe-require-valid`: same as `require-valid` but skips validation if `oxf.fr.detail.save.validate` is set to `false` (for backward compatibility)
 - `orbeon-home`: navigate to '/'
 - `form-runner-home`: navigate to '/fr'
 
 ## Combining actions
 
-Running a single action might be useful, but it is much more useful in many cases to combine actions. This means that you must be able to:
+Running a single action might be useful, but it is much more useful to combine actions. This means that you must be able to:
 
 - specify which actions run and in which order
 - decide what to do when they succeed or fail
@@ -202,6 +191,13 @@ For this purpose, the following combinators are defined:
 
 - `then`: used to specify that the following sequence of actions must run if the current action succeeds.
 - `recover`: used to specify that the following individual action must run if the current action fails. Once the following action has run, processing continues successfully.
+
+With actions and combinators, the syntax becomes:
+
+- The process must start with an action or a sub-process.
+- The process must also end with an action or a sub-process.
+- Two actions or sub-processes must be separated by a combinator.
+- Some actions have parameters (NOTE: As of Orbeon Forms 4.2, only a single, unnamed parameter is supported.).
 
 For example, the behavior of the (now deprecated) "Save" button is specified this way:
 
@@ -215,12 +211,12 @@ Notice that there are:
 
 - action names, like `save` and `success-message`
 - sub-processes, like `require-uploads` and `maybe-require-valid`, which runs a number of steps and stop processing if uploads are pending or the data is not valid)
-- two different combinators, `then` and `recover`
+- the two combinators, `then` and `recover`
 
 So in the example above what you want to say is the following:
 
-- start by checking that there are no pending uploads (if that's not the case, the process is interrupted)
-- then in case of success validate the data (if that's not the case, the process is interrupted)
+- start by checking that there are no pending uploads (if there are, the process is interrupted)
+- then in case of success validate the data (if it's invalid, the process is interrupted)
 - then in case of success save the data
 - then in case of success show a success message
 - if saving has failed, then show an error message
@@ -247,7 +243,7 @@ The following buttons are predefined and associated with the processes of the sa
 - `close`: navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page
 - `save-final`: save the form data if it is valid
 - `save-draft`: save the form data even if it is valid
-- `validate`: run the `validate action
+- `validate`: run the action of the same name
 - `review`: navigate to the review page if the data is valid
 - `edit`: navigate to the edit page from the review page
 - `send`: validate then send data using the `oxf.fr.detail.send.success` property prefix
@@ -304,6 +300,21 @@ All the configuration above for a button called `send` could have been done with
 
 ## Compatibility notes
 
+### Related Orbeon Forms 4.1 and earlier functionality
+
+Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what happens with form data:
+
+- The "Save" button to save data to the database.
+- The "Submit" button to save data and show a dialog after saving (with options to clear data, keep data, navigate to another page, or close the window).
+- The "Send" (AKA "workflow-send") button to save data and then allow:
+    - sending an email
+    - sending form data to a service
+    - redirecting the user to a success or error page
+
+For more information, see [Configuration Properties - Form Runner](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-form-runner).
+
+### Deprecated buttons
+
 The following buttons are deprecated:
 
 - `save`: use `save-draft` or `save-final`
@@ -318,6 +329,8 @@ are considered to build a process:
 - `oxf.fr.detail.send.email`
 - `oxf.fr.detail.send.success.uri`
 - `oxf.fr.detail.send.error.uri`
+
+### Deprecated property
 
 The following property is deprecated:
 
@@ -336,5 +349,3 @@ Instead, use:
   name="oxf.fr.detail.send.success.content.*.*"
   value="pdf-url"/>
 ```
-
-Identical results can be achieved by using the appropriate reusable actions.
