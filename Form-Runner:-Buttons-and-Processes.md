@@ -23,11 +23,34 @@ For more information, see [Configuration Properties - Form Runner](http://wiki.o
 The following set of reusable actions is available:
 
 - `validate`: validate form data
-- `pending-uploads`: checking whether there are pending uploads
-- `save`: save data via the persistence layer
+    - result
+        - success if data is valid
+        - failure if data is invalid
+    - parameters
+        - `property`: specifies a boolean property which, if `false`, skips validation (used for backward compatibility)
+- `pending-uploads`: checks whether there are pending uploads
+    - result
+        - success if there are no pending uploads
+        - failure if there are pending uploads
+    - parameters: none
+- `save`: save data and attachments via the persistence layer
+    - steps
+        - dispatch `fr-data-save-prepare` to `fr-form-model`
+        - save attachments
+        - save XML
+        - switch to `edit` mode
+        - dispatch `fr-data-save-done` to `fr-form-model`
+    - parameters: none
+    - result: success if there are no errors, failure otherwise
 - `success-message`: show a success message
+    - parameters
+        - `message`: resource key pointing to the message
 - `error-message`: show an error message
+    - parameters
+        - `message`: resource key pointing to the message
 - `email`: send an email
+    - parameters: none
+    - NOTE: uses `oxf.fr.email.*` properties
 - `send`: send the data to an HTTP service
 - `navigate`: navigate to an external page
 - `review`, `edit`, `summary`: navigate to these Form Runner pages
