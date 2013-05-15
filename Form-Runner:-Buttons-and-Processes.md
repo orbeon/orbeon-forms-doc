@@ -253,7 +253,6 @@ The following buttons are predefined and associated with the processes of the sa
 - `refresh`: visit all controls and update the page (noscript mode only)
 - `wizard-prev`: run the action of the same name
 - `wizard-next`: run the action of the same name
-
 - `save-final`: validate and save to the db
 - `save-draft`: save to the db without validating
 - `send`: validate and send to a service
