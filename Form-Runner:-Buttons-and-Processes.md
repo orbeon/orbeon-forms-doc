@@ -329,9 +329,9 @@ are considered to build a process:
 - `oxf.fr.detail.send.success.uri`
 - `oxf.fr.detail.send.error.uri`
 
-### Deprecated property
+### Removed property
 
-The following property is deprecated:
+The following property is no longer supported:
 
 ```xml
 <property
