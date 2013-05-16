@@ -148,7 +148,7 @@ Example:
 
 Alternatively, you can use the `process` action:
 
-```
+```xml
 <property
   as="xs:string"
   name="oxf.fr.detail.process.home.*.*"
