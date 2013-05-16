@@ -11,6 +11,8 @@ This feature is available with Orbeon Forms 4.2 and newer.
 
 This page describes how to configure the behavior of the buttons that appear at the bottom of the Form Runner detail page, whether in `new`, `edit` or `view` mode.
 
+![Example of Form Runner buttons](images/w9-form-buttons.png)
+
 ## Defining a process
 
 You define a process with a property starting with `oxf.fr.detail.process`. For example:
