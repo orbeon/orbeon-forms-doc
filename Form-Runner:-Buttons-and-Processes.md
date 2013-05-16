@@ -9,7 +9,7 @@ This feature is available with Orbeon Forms 4.2 and newer.
 
 ## What this is about
 
-This page describes how to configure the behavior of the buttons that appear on the Form Runner detail page, whether in `new`, `edit` or `view` mode.
+This page describes how to configure the behavior of the buttons that appear at the bottom of the Form Runner detail page, whether in `new`, `edit` or `view` mode.
 
 ## Defining a process
 
