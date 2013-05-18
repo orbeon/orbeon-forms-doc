@@ -127,10 +127,10 @@ Navigate to an external page via client-side GET.
 
 - `success-message`: show a success message
     - parameters
-        - `message`: resource key pointing to the message
+        - `resource`: resource key pointing to the message
 - `error-message`: show an error message
     - parameters
-        - `message`: resource key pointing to the message
+        - `resource`: resource key pointing to the message
 
 ### Running a sub-process
 
