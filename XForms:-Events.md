@@ -34,5 +34,8 @@
     - `event('xxf:error-type') as xs:string`
         - `size-error` if the upload was too large
         - `upload-error` if the cause of the error is unknown
-    - `event('xxf:permitted') as xs:integer?`: if `size-error`, and if known, maximum upload size allowed by configuration
-    - `event('xxf:actual') as xs:integer?`: if `size-error`, and if known, actual upload size detected
+        - *NOTE: other error types may be added in the future*
+    - `event('xxf:permitted') as xs:integer?`
+        - if `size-error`, and if known, maximum upload size allowed by configuration
+    - `event('xxf:actual') as xs:integer?`
+        - if `size-error`, and if known, actual upload size detected
