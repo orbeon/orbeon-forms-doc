@@ -22,7 +22,7 @@ The function:
 -  resolves the closest relevant resources instance
   - specified instance name if present
   - `orbeon-resources` or `fr-form-resources` (for Form Runner compatibility) if absent
-- uses the resource name specified to find a resource located in the resources instance, relative to the ``
+- uses the resource name specified to find a resource located in the resources instance, relative to the `resource` element with the matching language
 
 Example:
 
