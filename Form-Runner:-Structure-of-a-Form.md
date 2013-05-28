@@ -5,11 +5,13 @@ A Form Runner form is an XHTML document with a few twists. It contains:
 - XForms markup following certain patterns
 - some extension markup for the view
 
-## Head
+## Form definition
+
+### Head
 
 [IN PROGRESS]
 
-## Body
+### Body
 
 The standard body of the form looks like this:
 
@@ -36,3 +38,7 @@ The following attributes and elements are optional:
 - the `<fr:buttons>` element
 
 When the `<fr:buttons>` element is present, Form Runner ignores the buttons configured by default for the detail page, and instead uses the content of the `<fr:buttons>` element.
+
+## Form data
+
+[IN PROGRESS]
