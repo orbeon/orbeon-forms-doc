@@ -55,7 +55,7 @@ Return the portlet mode.
 xxf:get-portlet-mode() as xs:string
 ```
 
-If running within a portlet context, return the portlet mode (e.g. 'view', 'edit'), otherwise return the empty sequence.
+If running within a portlet context, return the portlet mode (e.g. `view`, `edit`), otherwise return the empty sequence.
 
 ### xxf:get-window-state()
 
@@ -65,4 +65,4 @@ Return the portlet window state.
 xxf:get-window-state() as xs:string
 ```
 
-If running within a portlet context, return the window state (e.g. 'normal', 'minimized', 'maximized'), otherwise return the empty sequence.
+If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
