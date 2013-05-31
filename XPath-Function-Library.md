@@ -39,6 +39,8 @@ Example:
 
 ### xxf:get-request-method()
 
+[SINCE: Orbeon Forms 4.2]
+
 Return the current HTTP method.
 
 ```ruby
@@ -49,6 +51,8 @@ Return the HTTP method of the current request, such as `GET`, `POST`, etc.
 
 ### xxf:get-portlet-mode()
 
+[SINCE: 2013-05-29 / Orbeon Forms 4.2]
+
 Return the portlet mode.
 
 ```ruby
@@ -57,7 +61,11 @@ xxf:get-portlet-mode() as xs:string
 
 If running within a portlet context, return the portlet mode (e.g. `view`, `edit`), otherwise return the empty sequence.
 
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+
 ### xxf:get-window-state()
+
+[SINCE: 2013-05-29 / Orbeon Forms 4.2]
 
 Return the portlet window state.
 
@@ -66,3 +74,5 @@ xxf:get-window-state() as xs:string
 ```
 
 If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
+
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
