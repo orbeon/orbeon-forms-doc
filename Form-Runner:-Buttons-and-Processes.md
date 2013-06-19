@@ -98,7 +98,7 @@ Save data and attachments via the persistence layer.
 The full URL, for attachments as well as for the XML data, is composed of:
 
 - the URL pointing to the persistence layer path, including the file name
-- the following URL parameters
+- the following URL parameter
     - `valid`: whether the data sent satisfies validation rules
 
 Example:
