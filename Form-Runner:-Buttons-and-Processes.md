@@ -126,7 +126,11 @@ The full URL is composed of:
 
 Example:
 
-    http://example.org/service?app=acme&form=invoice&document=f0cd6bf16ba1f783773bb7165f0d79deab37585f&valid=true
+    http://example.org/service?
+      app=acme&
+      form=invoice&
+      document=f0cd6bf16ba1f783773bb7165f0d79deab37585f&
+      valid=true
 
 ### navigate
 
