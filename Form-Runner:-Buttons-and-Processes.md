@@ -109,10 +109,24 @@ Send data to an HTTP URL.
 - parameters
     - `property`: specifies a property prefix
 - properties used
+    - property prefix + `.uri`: URL to which to send the data
     - property prefix + `.method`: `GET`, `POST` (default), `PUT`
     - property prefix + `.prune`: whether to prune non-relevant nodes (`true` by default)
     - property prefix + `.replace`: `all` to load the resulting response in the browser, or `none` (default)
     - property prefix + `.content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
+
+The full URL is composed of:
+
+- the URL specified by the `uri` property
+- the following URL parameters
+    - `app`: the current form's app name
+    - `form`: the current form's form name
+    - `document`: the current document id
+    - `valid`: whether the data sent satisfies validation rules
+
+Example:
+
+    http://example.org/service?app=acme&form=invoice&document=f0cd6bf16ba1f783773bb7165f0d79deab37585f&valid=true
 
 ### navigate
 
