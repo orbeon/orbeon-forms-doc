@@ -95,6 +95,20 @@ Save data and attachments via the persistence layer.
 - parameters
     - none
 
+The full URL, for attachments as well as for the XML data, is composed of:
+
+- the URL pointing to the persistence layer path, including the file name
+- the following URL parameters
+    - `valid`: whether the data sent satisfies validation rules
+
+Example:
+
+    http://example.org/orbeon/fr/service/persistence/crud/
+        orbeon/
+        bookshelf/
+        data/891ce63e59c17348f6fda273afe28c2b/data.xml?
+        valid=true
+
 ### email
 
 Send an email with optionally XML form data, attachments, and PDF.
