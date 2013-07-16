@@ -186,6 +186,7 @@ Send data to an HTTP URL.
     - property prefix + `.uri`: URL to which to send the data
     - property prefix + `.method`: `GET`, `POST` (default), `PUT`
     - property prefix + `.prune`: whether to prune non-relevant nodes (`true` by default)
+    - property prefix + `.annotate`: whether to annotate elements with warnings (`false` by default)
     - property prefix + `.replace`: `all` to load the resulting response in the browser, or `none` (default)
     - property prefix + `.content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
 
@@ -205,6 +206,17 @@ Example:
       form=invoice&
       document=f0cd6bf16ba1f783773bb7165f0d79deab37585f&
       valid=true
+
+When `annotate` is `true`, the XML data is annotated with warning information if any. For example:
+
+```xml
+    <form xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
+        <my-section>
+            <number xxf:warning="Should be 100 or more">50</number>
+            <text xxf:warning="Should be shorter than 10 characters">abcdefghijkl</text>
+        </my-section>
+    </form>
+```
 
 ### navigate
 
