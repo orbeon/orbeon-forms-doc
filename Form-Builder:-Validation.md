@@ -10,9 +10,9 @@ If such conditions are not met, the user must see an *error* and cannot submit t
 
 In addition, some values might be correct, but the user should be encouraged to pay special attention to them. In such cases, the user should see a *warning* or *informational message* before submitting the form.
 
-Form Builder supports this kind of validations via the Validations and Alerts tab of the Control Settings dialog. You open the dialog with the Control Settings icon to the right of each control.
+Form Builder supports this kind of validations via the "Validations and Alerts" tab of the "Control Settings" dialog. You open the dialog with the "Control Settings" icon to the right of each control.
 
-*NOTE: Prior to Orbeon Forms 4.3, the dialog was called Validation Properties.*
+*NOTE: Prior to Orbeon Forms 4.3, the dialog was called "Validation Properties". Orbeon Forms 4.3 combines dialogs and adds functionality.*
 
 ![Control validation settings](images/fb-validation.png)
 
