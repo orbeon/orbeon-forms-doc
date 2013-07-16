@@ -153,4 +153,4 @@ The user has the following choices:
 
 Optionally, it is possible to annotate the XML data submitted with warning messages.
 
-These processes are entirely configurable. See [Buttons and Processes](Form-Runner: Buttons and Processes) for more information.
+These processes are entirely configurable. See [Buttons and Processes](/orbeon/orbeon-forms/wiki/Form-Runner:-Buttons-and-Processes) for more information.
