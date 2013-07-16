@@ -84,6 +84,12 @@ Resume the process previously suspended with `suspend`.
 
 Abort the process previously suspended with `suspend`. This clears the information associated with the process and it won't be possible to resume it with `resume`.
 
+### nop
+
+[SINCE Orbeon Forms 4.3]
+
+Don't do anything and return a success value.
+
 ### validate
 
 Validate form data.
