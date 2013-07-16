@@ -338,6 +338,20 @@ The following buttons are predefined and associated with the processes of the sa
 
 In fact all buttons can do the same tasks if they are configured appropriately! But by default the buttons above are preconfigured to do different tasks, for convenience.
 
+## Standard dialogs
+
+[SINCE Orbeon Forms 4.3]
+
+The following dialog can be opened with the `dialog` action:
+
+- `fr-validation-dialog`: the validation dialog which asks the user to review validation messages
+
+Example:
+
+    dialog("fr-validation-dialog") then suspend
+
+![The validation dialog](images/review-messages.png)
+
 ## Customizing processes
 
 So how do you customize processes? Say you want to specify a couple of buttons on your "acme/hr" form. Like before, you define a property:
