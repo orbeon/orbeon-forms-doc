@@ -62,6 +62,28 @@ NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented 
 
 ## Core actions
 
+### success
+
+Complete the process right away successfully.
+
+### suspend
+
+[SINCE Orbeon Forms 4.3]
+
+Suspend the current process. The continuation of the process is associated with the current form session.
+
+### resume
+
+[SINCE Orbeon Forms 4.3]
+
+Resume the process previously suspended with `suspend`. 
+
+### abort
+
+[SINCE Orbeon Forms 4.3]
+
+Abort the process previously suspended with `suspend`. This clears the information associated with the process and it won't be possible to resume it with `resume`.
+
 ### validate
 
 Validate form data.
@@ -207,8 +229,6 @@ Alternatively, you can use the `process` action:
 - `captcha`: trigger the captcha
 - `wizard-pref`: navigate the wizard to the previous page
 - `wizard-next`: navigate the wizard to the next page
-- `success`: complete the process right away successfully
-- `process`: run a sub-process
 
 ## Predefined reusable processes
 
@@ -216,8 +236,8 @@ The following sub-processes are predefined and can be reused from other processe
 
 - `require-uploads`: check whether there are pending uploads and if so display an error message and interrupt the process
 - `require-valid`: mark all controls as visited, check whether data is valid and if not display an error message and interrupt the process
-- `review-messages`: if there are any `error`, `warning` or `info` messages, open a dialog so the user can decide whether to review them or continue the process [SINCE 2013-07-15 / Orbeon Forms 4.3]
-- `validate-all`: combine `require-valid` and `review-messages` [SINCE 2013-07-15 / Orbeon Forms 4.3]
+- `review-messages`: if there are any `error`, `warning` or `info` messages, open a dialog so the user can decide whether to review them or continue the process [SINCE Orbeon Forms 4.3]
+- `validate-all`: combine `require-valid` and `review-messages` [SINCE Orbeon Forms 4.3]
 - `orbeon-home`: navigate to '/'
 - `form-runner-home`: navigate to '/fr'
 
