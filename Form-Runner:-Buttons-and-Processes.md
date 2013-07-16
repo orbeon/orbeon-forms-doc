@@ -278,10 +278,10 @@ With actions and combinators, the syntax becomes:
 - Two actions or sub-processes must be separated by a combinator.
 - Some actions have parameters (NOTE: As of Orbeon Forms 4.2, only a single, unnamed parameter is supported.).
 
-For example, the behavior of the (now deprecated) "Save" button is specified this way:
+For example, the behavior of the "Save" button, associated with the `save-final` process, is specified this way:
 
     require-uploads
-    then require-valid
+    then validate-all
     then save
     then success-message("save-success")
     recover error-message("database-error")
@@ -289,13 +289,16 @@ For example, the behavior of the (now deprecated) "Save" button is specified thi
 Notice that there are:
 
 - action names, like `save` and `success-message`
-- sub-processes, like `require-uploads`, which runs a number of steps and stop processing if uploads are pending or the data is not valid)
+- sub-processes, like `require-uploads` and `validate-all`, which runs a number of steps and stop processing if uploads are pending or the data is not valid)
 - the two combinators, `then` and `recover`
 
 So in the example above what you want to say is the following:
 
-- start by checking that there are no pending uploads (if there are, the process is interrupted)
-- then in case of success validate the data (if it's invalid, the process is interrupted)
+- start by checking that there are no pending uploads
+    - if there are, the process is interrupted
+- then in case of success validate the data
+    - if it's invalid, the process is interrupted
+    - if there are warnings or info messages, a dialog is shown the user
 - then in case of success save the data
 - then in case of success show a success message
 - if saving has failed, then show an error message
