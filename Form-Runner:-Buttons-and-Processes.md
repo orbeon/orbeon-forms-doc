@@ -422,7 +422,7 @@ are considered to build a process:
 - `oxf.fr.detail.send.success.uri`
 - `oxf.fr.detail.send.error.uri`
 
-### Removed property
+### Removed properties
 
 The following property is no longer supported:
 
@@ -441,3 +441,16 @@ Instead, use:
   name="oxf.fr.detail.send.success.content.*.*"
   value="pdf-url"/>
 ```
+
+[SINCE Orbeon Forms 4.3]
+
+The following property is no longer supported:
+
+```xml
+<property
+  as="xs:boolean"
+  name="oxf.fr.detail.save.validate.*.*"
+  value="true"/>
+```
+
+Instead, use the `save-draft` process, or customize a process with the `save` action but no `require-valid`.
