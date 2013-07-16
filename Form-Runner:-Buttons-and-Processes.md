@@ -392,7 +392,9 @@ All the configuration above for a button called `send` could have been done with
 
 ## Compatibility notes
 
-### Related Orbeon Forms 4.1 and earlier functionality
+### Starting with Orbeon Forms 4.2
+
+#### Related Orbeon Forms 4.1 and earlier functionality
 
 Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what happens with form data:
 
@@ -405,7 +407,7 @@ Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what hap
 
 For more information, see [Configuration Properties - Form Runner](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-form-runner).
 
-### Deprecated buttons
+#### Deprecated buttons
 
 The following buttons are deprecated:
 
@@ -422,7 +424,7 @@ are considered to build a process:
 - `oxf.fr.detail.send.success.uri`
 - `oxf.fr.detail.send.error.uri`
 
-### Removed properties
+#### Removed property
 
 The following property is no longer supported:
 
@@ -442,9 +444,11 @@ Instead, use:
   value="pdf-url"/>
 ```
 
-[SINCE Orbeon Forms 4.3]
+### Starting with Orbeon Forms 4.3
 
-The following property is no longer supported:
+#### The validate action no longer supports a property
+
+The `validate` action no longer supports a `property` parameter. In particular, this means that the following property is no longer supported:
 
 ```xml
 <property
@@ -452,5 +456,7 @@ The following property is no longer supported:
   name="oxf.fr.detail.save.validate.*.*"
   value="true"/>
 ```
+
+This also means that the `maybe-require-valid` process is no longer available.
 
 Instead, use the `save-draft` process, or customize a process with the `save` action but no `require-valid`.
