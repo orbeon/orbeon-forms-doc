@@ -66,6 +66,35 @@ NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented 
 
 Complete the process right away successfully.
 
+### Running a sub-process
+
+You can run a sub-process directly by name.
+
+Example:
+
+```xml
+<!-- Define a sub-process which navigates to the "/" URL -->
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.orbeon-home.*.*"
+  value='navigate("/")'/>
+
+<!-- Use that sub-process from the "home" process -->
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.home.*.*"
+  value='orbeon-home'/>
+```
+
+Alternatively, you can use the `process` action:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.home.*.*"
+  value='process("orbeon-home")'/>
+```
+
 ### suspend
 
 [SINCE Orbeon Forms 4.3]
@@ -89,6 +118,8 @@ Abort the process previously suspended with `suspend`. This clears the informati
 [SINCE Orbeon Forms 4.3]
 
 Don't do anything and return a success value.
+
+## Core Form Runner actions
 
 ### validate
 
@@ -194,35 +225,6 @@ Navigate to an external page via client-side GET.
     - parameters
         - `message`: message to show
         - `resource`: resource key pointing to the message
-
-### Running a sub-process
-
-You can run a sub-process directly by name.
-
-Example:
-
-```xml
-<!-- Define a sub-process which navigates to the "/" URL -->
-<property
-  as="xs:string"
-  name="oxf.fr.detail.process.orbeon-home.*.*"
-  value='navigate("/")'/>
-
-<!-- Use that sub-process from the "home" process -->
-<property
-  as="xs:string"
-  name="oxf.fr.detail.process.home.*.*"
-  value='orbeon-home'/>
-```
-
-Alternatively, you can use the `process` action:
-
-```xml
-<property
-  as="xs:string"
-  name="oxf.fr.detail.process.home.*.*"
-  value='process("orbeon-home")'/>
-```
 
 ### Other actions
 
