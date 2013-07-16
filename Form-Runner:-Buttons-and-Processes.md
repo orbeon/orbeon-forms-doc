@@ -66,9 +66,18 @@ NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented 
 
 Complete the process right away successfully.
 
-### Running a sub-process
+### `process`
 
-You can run a sub-process directly by name.
+You can run a sub-process with the `process` action:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.home.*.*"
+  value='process("orbeon-home")'/>
+```
+
+You can also run a sub-process directly by name.
 
 Example:
 
@@ -84,15 +93,6 @@ Example:
   as="xs:string"
   name="oxf.fr.detail.process.home.*.*"
   value='orbeon-home'/>
-```
-
-Alternatively, you can use the `process` action:
-
-```xml
-<property
-  as="xs:string"
-  name="oxf.fr.detail.process.home.*.*"
-  value='process("orbeon-home")'/>
 ```
 
 ### suspend
