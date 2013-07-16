@@ -217,7 +217,7 @@ The following sub-processes are predefined and can be reused from other processe
 - `require-uploads`: check whether there are pending uploads and if so display an error message and interrupt the process
 - `require-valid`: mark all controls as visited, check whether data is valid and if not display an error message and interrupt the process
 - `review-messages`: if there are any `error`, `warning` or `info` messages, open a dialog so the user can decide whether to review them or continue the process [SINCE 2013-07-15 / Orbeon Forms 4.3]
-- `validate-all`: combine `require-valid` and `review-messages`
+- `validate-all`: combine `require-valid` and `review-messages` [SINCE 2013-07-15 / Orbeon Forms 4.3]
 - `orbeon-home`: navigate to '/'
 - `form-runner-home`: navigate to '/fr'
 
