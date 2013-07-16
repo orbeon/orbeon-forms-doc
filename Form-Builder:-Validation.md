@@ -122,7 +122,7 @@ Alert messages appear:
 - under the control value
 - in the Error Summary section of the form
 - as badge counts in the navigation bar
-- as general count in the form title
+- as general count in the browser's title bar
 
 ![Alert Messages](images/fr-validation.png)
 
