@@ -94,7 +94,7 @@ A warning or info level does not make the control value invalid and it is still 
 
 *NOTE: As of Orbeon Forms 4.3, it is not possible to associate a validation level to the required or data type validations: they always use the error level.*
 
-## Validation messages
+## Alert messages
 
 If the value is invalid at runtime, the control is highlighted and an error message is displayed. The message is selected as follows:
 
@@ -117,10 +117,14 @@ If the value is invalid at runtime, the control is highlighted and an error mess
 
 *NOTE: As of Orbeon Forms 4.3, it is not possible to associate specific alert message to the required or data type validations: they always use the default or global alert message.*
 
-The error message appears:
+Alert messages appear:
 
 - under the control value
-- in the Error Summary
+- in the Error Summary section of the form
+- as badge counts in the navigation bar
+- as general count in the form title
+
+![Alert Messages](images/fr-validation.png)
 
 ## Localization of messages
 
@@ -131,4 +135,3 @@ When opening the dialog, the current language of the form determines the languag
 - close the dialog
 - select another form language
 - reopen the dialog
-
