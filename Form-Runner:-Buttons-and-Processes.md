@@ -67,7 +67,8 @@ NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented 
 Validate form data.
 
 - parameters
-    - `property`: specifies a boolean property which, if `false`, skips validation (used for backward compatibility)
+    - `level`: validation level to check: one of `error`, `warning`, or `info`
+    - `property`: specifies a boolean property which, if `false`, skips validation (used for backward compatibility) [Orbeon Forms 4.2 only, removed in Orbeon Forms 4.3]
 - result
     - success if data is valid
     - failure if data is invalid
@@ -215,7 +216,8 @@ The following sub-processes are predefined and can be reused from other processe
 
 - `require-uploads`: check whether there are pending uploads and if so display an error message and interrupt the process
 - `require-valid`: mark all controls as visited, check whether data is valid and if not display an error message and interrupt the process
-- `maybe-require-valid`: same as `require-valid` but skips validation if `oxf.fr.detail.save.validate` is set to `false` (for backward compatibility)
+- `review-messages`: if there are any `error`, `warning` or `info` messages, open a dialog so the user can decide whether to review them or continue the process [SINCE 2013-07-15 / Orbeon Forms 4.3]
+- `validate-all`: combine `require-valid` and `review-messages`
 - `orbeon-home`: navigate to '/'
 - `form-runner-home`: navigate to '/fr'
 
@@ -242,7 +244,7 @@ With actions and combinators, the syntax becomes:
 For example, the behavior of the (now deprecated) "Save" button is specified this way:
 
     require-uploads
-    then maybe-require-valid
+    then require-valid
     then save
     then success-message("save-success")
     recover error-message("database-error")
@@ -250,7 +252,7 @@ For example, the behavior of the (now deprecated) "Save" button is specified thi
 Notice that there are:
 
 - action names, like `save` and `success-message`
-- sub-processes, like `require-uploads` and `maybe-require-valid`, which runs a number of steps and stop processing if uploads are pending or the data is not valid)
+- sub-processes, like `require-uploads`, which runs a number of steps and stop processing if uploads are pending or the data is not valid)
 - the two combinators, `then` and `recover`
 
 So in the example above what you want to say is the following:
@@ -283,7 +285,7 @@ The following buttons are predefined and associated with the processes of the sa
 - `close`: navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page
 - `save-final`: save the form data if it is valid
 - `save-draft`: save the form data even if it is valid
-- `validate`: run the action of the same name
+- `validate`: run `validate-all`
 - `review`: navigate to the review page if the data is valid
 - `edit`: navigate to the edit page from the review page
 - `send`: validate then send data using the `oxf.fr.detail.send.success` property prefix
