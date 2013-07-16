@@ -68,11 +68,13 @@ Since Orbeon Forms 4.3:
 - You add constraints with the `+` icon.
 - Each constraint can have a *level* associated with it and a custom alert message.
 
-TODO
+Each constraint is a boolean XPath expression running with the XML element containing the value as context item.
 
 The following expression, which would apply to a birthday date field, checks that the user is 18 year old or older:
 
     . <= (current-date() - xs:yearMonthDuration("P18Y"))
+
+The constraint *fails* if the expression doesn't return `true()`. This also means that it fails if there is an error while running the constraint.
 
 ## Control validity
 
@@ -80,13 +82,13 @@ A control value (entered by the user, constant, or calculated) is either *valid*
 
 - It is required but remains empty.
 - It does not match the selected data type.
-- There is an unmet *error* constraint.
+- There is a failed *error* constraint.
 
 ## Validation levels
 
-If a control is valid, it can have a *warning* level. This is the case if there is at least one unmet *warning* constraint.
+If a control is valid, it can have a *warning* level. This is the case if there is at least one failed *warning* constraint.
 
-If a control doesn't have a warning level, it can have an *info* level. This is the case if there is at least one unmet *info* constraint.
+If a control doesn't have a warning level, it can have an *info* level. This is the case if there is at least one failed *info* constraint.
 
 A warning or info level does not make the control value invalid and it is still possible to submit form data.
 
@@ -96,11 +98,22 @@ A warning or info level does not make the control value invalid and it is still 
 
 If the value is invalid at runtime, the control is highlighted and an error message is displayed. The message is selected as follows:
 
+- If data type validation has failed:
+    - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
+    - In this case, constraints are not checked which means that no constraint-specific message is shown.
 - If required or data type validation has failed:
     - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
-- If an error constraint is unmet:
+    - However, if there is one or more failed error constraints with specific messages, those messages are used.
+- If an error constraint has failed:
     - If no specific alert message is specified for the validation, the default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
     - If a specific alert message is specified, then it is used.
+    - More than one message can show is several error constraints have failed.
+- Only if the control is valid, if a warning constraint has failed:
+    - The specific alert message is used.
+    - More than one message can show is several warning constraints have failed.
+- Only if the control is valid and doesn't have any failed warning constraints, if an info constraint has failed:
+    - The specific alert message is used.
+    - More than one message can show is several info constraints have failed.
 
 *NOTE: As of Orbeon Forms 4.3, it is not possible to associate specific alert message to the required or data type validations: they always use the default or global alert message.*
 
@@ -111,4 +124,11 @@ The error message appears:
 
 ## Localization of messages
 
-TODO
+All alert messages can be localized.
+
+When opening the dialog, the current language of the form determines the language used. To switch languages:
+
+- close the dialog
+- select another form language
+- reopen the dialog
+
