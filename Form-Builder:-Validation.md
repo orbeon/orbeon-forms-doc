@@ -135,3 +135,19 @@ When opening the dialog, the current language of the form determines the languag
 - close the dialog
 - select another form language
 - reopen the dialog
+
+## Validation error and review messages dialog
+
+By default, when saving or sending form data, the following happens:
+
+- If any control value is invalid, a dialog shows and the operation is stopped.
+- If all controls are invalid and there are no warning or info messages, the operation continues.
+- If all controls are invalid and there is at least one warning or info message, the "Review Messages" dialog shows.
+
+![Review Messages](images/fr-review-messages.png)
+
+The user has the following choices:
+
+- Stop the operation, close the dialog and review the warnings and/or informational messages.
+- Continue the operation, ignoring the warnings and/or informational messages.
+
