@@ -92,7 +92,7 @@ A warning or info level does not make the control value invalid and it is still 
 
 *NOTE: As of Orbeon Forms 4.3, it is not possible to associate a validation level to the required or data type validations: they always use the error level.*
 
-## Validation at runtime
+## Validation messages
 
 If the value is invalid at runtime, the control is highlighted and an error message is displayed. The message is selected as follows:
 
