@@ -226,6 +226,15 @@ Navigate to an external page via client-side GET.
         - `message`: message to show
         - `resource`: resource key pointing to the message
 
+### dialog
+
+[SINCE Orbeon Forms 4.3]
+
+Open a dialog by name.
+
+- parameters
+    - `dialog`: specifies the name of the dialog to open
+
 ### Other actions
 
 - `review`, `edit`, `summary`: navigate to these Form Runner pages
