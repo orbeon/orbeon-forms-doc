@@ -66,7 +66,7 @@ NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented 
 
 Complete the process right away successfully.
 
-### `process`
+### process
 
 You can run a sub-process with the `process` action:
 
