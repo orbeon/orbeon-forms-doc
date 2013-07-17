@@ -220,7 +220,7 @@ Example:
     <form xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
         <my-section>
             <number xxf:info="Nice, greater than 1000!">2001</number>
-            <text xxf:warning="Should be shorter than 10 characters">abcdefghijkl</text>
+            <text xxf:warning="Should be shorter than 10 characters">This is a bit too long!</text>
         </my-section>
     </form>
 ```
