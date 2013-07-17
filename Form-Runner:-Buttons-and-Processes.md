@@ -186,7 +186,7 @@ Send data to an HTTP URL.
     - property prefix + `.uri`: URL to which to send the data
     - property prefix + `.method`: `GET`, `POST` (default), `PUT`
     - property prefix + `.prune`: whether to prune non-relevant nodes (`true` by default)
-    - property prefix + `.annotate`: whether to annotate elements with warnings (`false` by default)
+    - property prefix + `.annotate`: whether to annotate elements with warnings (the empty string by default)
     - property prefix + `.replace`: `all` to load the resulting response in the browser, or `none` (default)
     - property prefix + `.content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
 
@@ -207,12 +207,17 @@ Example:
       document=f0cd6bf16ba1f783773bb7165f0d79deab37585f&
       valid=true
 
-When `annotate` is `true`, the XML data is annotated with warning information if any. For example:
+`annotate` can contain the following tokens: `error`, `warning`, or `info`. The XML data is annotated with the information associated with the given level or levels. If the property is missing or empty, no annotation takes place. For example:
+
+    <property
+      as="xs:string"
+      name="oxf.fr.detail.send.success.annotate.acme.hr"
+      value="warning info"/>
 
 ```xml
     <form xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
         <my-section>
-            <number xxf:warning="Should be 100 or more">50</number>
+            <number xxf:info="Nice, greater than 1000!">2001</number>
             <text xxf:warning="Should be shorter than 10 characters">abcdefghijkl</text>
         </my-section>
     </form>
