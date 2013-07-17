@@ -61,19 +61,19 @@ When an XML Schema data type is selected:
 
 ## Constraint validation
 
-[SINCE Orbeon Forms 4.3]
-
-- There can be more than one constraint applied to a given control.
-- You add constraints with the `+` icon and remove them with the `-` icon.
-- Each constraint can have a *level* associated with it and a custom alert message.
-
-Each constraint is a boolean XPath expression running with the XML element containing the value as context item.
+A constraint is a boolean XPath expression running with the XML element containing the value as context item. The constraint *fails* if the expression doesn't return `true()`. This also means that it fails if there is an error while running the constraint.
 
 For example the following expression, which would make sense for a birthday date field, checks that the user is 18 year old or older:
 
     . <= (current-date() - xs:yearMonthDuration("P18Y"))
 
-The constraint *fails* if the expression doesn't return `true()`. This also means that it fails if there is an error while running the constraint.
+[SINCE Orbeon Forms 4.3]
+
+There can be more than one constraint applied to a given control. You add constraints with the `+` icon and remove them with the `-` icon. [SINCE Orbeon Forms 4.3]
+
+[SINCE Orbeon Forms 4.3]
+
+Each constraint can have a *level* associated with it and a custom alert message.
 
 ## Control validity
 
