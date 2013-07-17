@@ -145,7 +145,7 @@ By default, when saving or sending form data, the following happens:
 
 - If any control value is invalid, a dialog shows and the operation is stopped.
 - If all controls are invalid and there are no warning or info messages, the operation continues.
-- If all controls are invalid and there is at least one warning or info message, the "Review Messages" dialog shows. [SINCE Orbeon Forms 4.3]
+- If all controls are invalid and there is at least one warning or info message, the "Review Messages" dialog shows. [SINCE Orbeon Forms 4.3]
 
 ![Review Messages](images/fr-review-messages.png)
 
