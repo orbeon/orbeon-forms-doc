@@ -162,4 +162,4 @@ The user has the following choices:
 
 These processes are entirely configurable. See [Buttons and Processes](/orbeon/orbeon-forms/wiki/Form-Runner:-Buttons-and-Processes) for more information.
 
-Optionally, it is possible to annotate the XML data submitted with warning messages. See [Buttons and Processes](/orbeon/orbeon-forms/wiki/Form-Runner:-Buttons-and-Processes) for more information.
+Optionally, it is possible to annotate the XML data submitted with error, warning or informational messages. See [Buttons and Processes](/orbeon/orbeon-forms/wiki/Form-Runner:-Buttons-and-Processes) for more information.
