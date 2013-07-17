@@ -87,6 +87,8 @@ A control value (entered by the user, constant, or calculated) is either *valid*
 
 ## Validation levels
 
+[SINCE Orbeon Forms 4.3]
+
 If a control is valid, it can have a *warning* level. This is the case if there is at least one failed warning constraint.
 
 If a control doesn't have a warning level, it can have an *info* level. This is the case if there is at least one failed info constraint.
@@ -143,7 +145,7 @@ By default, when saving or sending form data, the following happens:
 
 - If any control value is invalid, a dialog shows and the operation is stopped.
 - If all controls are invalid and there are no warning or info messages, the operation continues.
-- If all controls are invalid and there is at least one warning or info message, the "Review Messages" dialog shows.
+- If all controls are invalid and there is at least one warning or info message, the "Review Messages" dialog shows. [SINCE Orbeon Forms 4.3]
 
 ![Review Messages](images/fr-review-messages.png)
 
