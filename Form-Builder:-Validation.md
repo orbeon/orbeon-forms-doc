@@ -52,6 +52,8 @@ At runtime, if the value is required and does not match the specified datatype, 
 
 If an XML Schema containing simple types has been attached to the form (Orbeon Forms PE only), the simples types are listed in the Schema Type menu.
 
+![Built-in Types](images/fb-schema-types.png)
+
 Either a built-in data type or an XML Schema data type can be selected. If you select an XML Schema data type, the built-in data type is automatically reset. Similarly, if you select a built-in data type, the XML Schema data type is reset.
 
 At runtime, if the value is required and does not match the specified datatype, the value is marked as invalid. For example, if the value must be an `integer`, the value "John" is invalid.
