@@ -81,7 +81,7 @@ A control value (entered by the user, constant, or calculated) is either *valid*
 
 - It is required but remains empty.
 - It does not match the selected data type.
-- There is a failed *error* constraint.
+- There is at least one failed error constraint.
 
 ## Validation levels
 
