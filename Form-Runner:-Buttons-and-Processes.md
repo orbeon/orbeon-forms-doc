@@ -209,10 +209,12 @@ Example:
 
 `annotate` can contain the following tokens: `error`, `warning`, or `info`. The XML data is annotated with the information associated with the given level or levels. If the property is missing or empty, no annotation takes place. For example:
 
+```xml
     <property
       as="xs:string"
       name="oxf.fr.detail.send.success.annotate.acme.hr"
       value="warning info"/>
+```
 
 ```xml
     <form xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
