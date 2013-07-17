@@ -71,7 +71,7 @@ For example the following expression, which would make sense for a birthday date
 
 [SINCE Orbeon Forms 4.3]
 
-There can be more than one constraint applied to a given control. You add constraints with the `+` icon and remove them with the `-` icon. [SINCE Orbeon Forms 4.3]
+There can be more than one constraint applied to a given control. You add constraints with the `+` icon and remove them with the `-` icon.
 
 [SINCE Orbeon Forms 4.3]
 
