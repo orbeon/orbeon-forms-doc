@@ -18,13 +18,15 @@ Form Builder supports this kind of validations via the "Validations and Alerts" 
 
 ## Validation types
 
+### Introduction
+
 The value associated with a control can be validated with 3 different validation types:
 
 1. *Required*. This indicates whether the value can be empty or not.
 2. *Data Type*. For example `string`, `decimal`, `date`, or `time`.
 3. *Constraint*. A custom formula, expressed in XPath, which determines whether the value is valid or not for a certain validation level.
 
-## Required validation
+### Required validation
 
 This simple validation has only two possibilities:
 
@@ -35,7 +37,7 @@ When the value is required, an asterisk appears next to the control to signify t
 
 At runtime, if the value is required but not empty, the value is marked as invalid.
 
-## Data type validation
+### Data type validation
 
 The list of data types includes:
 
@@ -59,7 +61,7 @@ When an XML Schema data type is selected:
 - If *Required* is set to *Yes*, the control is still made required, and an asterisk appears.
 - If *Required* is set to *No*, the value must still match the definition of the XML Schema type to be valid. If the XML Schema type requires a non-empty value, setting *Required* to *No* does not make the value optional.
 
-## Constraint validation
+### Constraint validation
 
 A constraint is a boolean XPath expression running with the XML element containing the value as context item. The constraint *fails* if the expression doesn't return `true()`. This also means that it fails if there is an error while running the constraint.
 
@@ -141,7 +143,7 @@ By default, when saving or sending form data, the following happens:
 
 - If any control value is invalid, a dialog shows and the operation is stopped.
 - If all controls are invalid and there are no warning or info messages, the operation continues.
-- If all controls are invalid and there is at least one warning or info message, the "Review Messages" dialog shows.
+- If all controls are invalid and there is at least one warning or info message, the "Review Messages" dialog shows.
 
 ![Review Messages](images/fr-review-messages.png)
 
