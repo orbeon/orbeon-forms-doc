@@ -44,6 +44,8 @@ The list of data types includes:
 - common types such as a plain `string`, `decimal`, `date`, `time`, `boolean`, or `email`
 - XML Schema types (only if an XML Schema with simple types was attache to the form)
 
+![Built-in Types](images/fb-built-in-types.png)
+
 At runtime, if the value is required and does not match the specified datatype, the value is marked as invalid.
 
 *NOTE: When selecting certain controls from the toolbox, such as "Email", "Date", "Time", and "Date and Time", the appropriate data type is already selected by Form Builder. Changing the type to a different type might change the appearance of the control to match the type selected.*
