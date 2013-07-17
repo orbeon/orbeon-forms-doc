@@ -85,9 +85,9 @@ A control value (entered by the user, constant, or calculated) is either *valid*
 
 ## Validation levels
 
-If a control is valid, it can have a *warning* level. This is the case if there is at least one failed *warning* constraint.
+If a control is valid, it can have a *warning* level. This is the case if there is at least one failed warning constraint.
 
-If a control doesn't have a warning level, it can have an *info* level. This is the case if there is at least one failed *info* constraint.
+If a control doesn't have a warning level, it can have an *info* level. This is the case if there is at least one failed info constraint.
 
 A warning or info level does not make the control value invalid and it is still possible to submit form data.
 
