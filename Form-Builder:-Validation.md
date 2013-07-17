@@ -2,9 +2,9 @@
 
 An important part of designing a form is to prevent incorrect data from being captured. For example:
 
-- an applicant's first and last names might be required
-- an applicant's age must be a positive number and might have to be greater than a minimum
-- an id number might have to follow a specific syntax
+- an applicant's first and last names is required
+- an applicant's age must be a positive number and has to be greater than a minimum
+- an id number has to follow a specific syntax
 
 If such conditions are not met, the user must see an *error* and cannot submit the form until they are corrected.
 
@@ -28,9 +28,8 @@ The value associated with a control can be validated with 3 different validation
 
 This simple validation has only two possibilities:
 
-- *Yes*: a value is required
-    - *NOTE: Blank spaces count as a value!*
-- *No*: a value is not required
+- *Yes*: a value is required and cannot be empty. (*NOTE: Blank spaces count as "not empty".*)
+- *No*: a value is not required and can be empty.
 
 When the value is required, an asterisk appears next to the control to signify to the user that the value is required.
 
@@ -47,13 +46,13 @@ At runtime, if the value is required and does not match the specified datatype, 
 
 *NOTE: When selecting certain controls from the toolbox, such as "Email", "Date", "Time", and "Date and Time", the appropriate data type is already selected by Form Builder. Changing the type to a different type might change the appearance of the control to match the type selected.*
 
-If an XML Schema containing simple types is available, those are listed in a Schema Type menu.
+If an XML Schema containing simple types has been attached to the form (Orbeon Forms PE only), the simples types are listed in the Schema Type menu.
 
 Either a built-in data type or an XML Schema data type can be selected. If you select an XML Schema data type, the built-in data type is automatically reset. Similarly, if you select a built-in data type, the XML Schema data type is reset.
 
 At runtime, if the value is required and does not match the specified datatype, the value is marked as invalid. For example, if the value must be an `integer`, the value "John" is invalid.
 
-*NOTE: If the control is of type `string`, doesn't have a constraint and is not required, then any value entered is valid.*
+*NOTE: If the control is of type `string`, doesn't have a constraint and is not required, then any value entered is valid. This is the default for input fields and text areas.*
 
 When an XML Schema data type is selected:
 
@@ -62,15 +61,15 @@ When an XML Schema data type is selected:
 
 ## Constraint validation
 
-Since Orbeon Forms 4.3:
+[SINCE Orbeon Forms 4.3]
 
 - There can be more than one constraint applied to a given control.
-- You add constraints with the `+` icon.
+- You add constraints with the `+` icon and remove them with the `-` icon.
 - Each constraint can have a *level* associated with it and a custom alert message.
 
 Each constraint is a boolean XPath expression running with the XML element containing the value as context item.
 
-The following expression, which would apply to a birthday date field, checks that the user is 18 year old or older:
+For example the following expression, which would make sense for a birthday date field, checks that the user is 18 year old or older:
 
     . <= (current-date() - xs:yearMonthDuration("P18Y"))
 
@@ -94,9 +93,19 @@ A warning or info level does not make the control value invalid and it is still 
 
 *NOTE: As of Orbeon Forms 4.3, it is not possible to associate a validation level to the required or data type validations: they always use the error level.*
 
+## Localization of messages
+
+All alert messages can be localized.
+
+When opening the dialog, the current language of the form determines the language used. To switch languages:
+
+- close the dialog
+- select another form language
+- reopen the dialog
+
 ## Alert messages
 
-If the value is invalid at runtime, the control is highlighted and an error message is displayed. The message is selected as follows:
+When the user enters data, if the value is invalid or if the control has a warning or info level, the control is highlighted and one or more alert messages are shown. The message is selected as follows, generally following the philosophy of "more specific messages win over less specific messages":
 
 - If data type validation has failed:
     - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
@@ -104,14 +113,14 @@ If the value is invalid at runtime, the control is highlighted and an error mess
 - If required or data type validation has failed:
     - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
     - However, if there is one or more failed error constraints with specific messages, those messages are used.
-- If an error constraint has failed:
+- If at least one error constraint has failed:
     - If no specific alert message is specified for the validation, the default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
     - If a specific alert message is specified, then it is used.
     - More than one message can show is several error constraints have failed.
-- Only if the control is valid, if a warning constraint has failed:
+- Only if the control is valid, if at least one warning constraint has failed:
     - The specific alert message is used.
     - More than one message can show is several warning constraints have failed.
-- Only if the control is valid and doesn't have any failed warning constraints, if an info constraint has failed:
+- Only if the control is valid and doesn't have any failed warning constraints, if at least one info constraint has failed:
     - The specific alert message is used.
     - More than one message can show is several info constraints have failed.
 
@@ -126,17 +135,7 @@ Alert messages appear:
 
 ![Alert Messages](images/fr-validation.png)
 
-## Localization of messages
-
-All alert messages can be localized.
-
-When opening the dialog, the current language of the form determines the language used. To switch languages:
-
-- close the dialog
-- select another form language
-- reopen the dialog
-
-## Validation error and review messages dialog
+## Validation errors and review messages dialog
 
 By default, when saving or sending form data, the following happens:
 
@@ -151,6 +150,6 @@ The user has the following choices:
 - Stop the operation, close the dialog and review the warnings and/or informational messages.
 - Continue the operation, ignoring the warnings and/or informational messages.
 
-Optionally, it is possible to annotate the XML data submitted with warning messages.
-
 These processes are entirely configurable. See [Buttons and Processes](/orbeon/orbeon-forms/wiki/Form-Runner:-Buttons-and-Processes) for more information.
+
+Optionally, it is possible to annotate the XML data submitted with warning messages. See [Buttons and Processes](/orbeon/orbeon-forms/wiki/Form-Runner:-Buttons-and-Processes) for more information.
