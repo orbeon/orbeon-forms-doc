@@ -372,7 +372,7 @@ Example:
 
     dialog("fr-validation-dialog") then suspend
 
-![The validation dialog](images/review-messages.png)
+![The validation dialog](images/fr-review-messages.png)
 
 ## Customizing processes
 
