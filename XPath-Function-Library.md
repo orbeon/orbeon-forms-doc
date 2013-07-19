@@ -163,10 +163,12 @@ element/@value/xxf:split()
 [SINCE: Orbeon Forms 4.3]
 
 ```ruby
-xxf:client-id($static-or-absolute-id as xs:string) as xs:string
+xxf:client-id($static-or-absolute-id as xs:string) as xs:string?
 ```
 
 Resolve the XForms object with the id specified, and return the id as used on the client.
+
+Return the empty sequence if the resolution fails.
 
 ```xml
 <xh:a href="#{xxf:client-id('my-element')}"/>
