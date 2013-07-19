@@ -81,10 +81,17 @@ If running within a portlet context, return the window state (e.g. `normal`, `mi
 
 [SINCE: 2013-07-18 / Orbeon Forms 4.3]
 
-Return true if the expression passed returns `true()` for all items passed as first argument. If the first argument is the empty sequence, return `true()`.
+Return true if `$expr` returns `true()` for all items in `$items`. If `$items` is the empty sequence, return `true()`.
+
+`$expr` is a Saxon stored expression which:
+
+- takes an `item()` as context item
+- must return an `xs:boolean`
 
 ```xml
-<xf:var name="is-available" value="saxon:expression('xxf:split(., ''/'')[3] = ''true''')"/>
+<xf:var
+  name="is-available"
+  value="saxon:expression('xxf:split(., ''/'')[3] = ''true''')"/>
 
 <xf:bind
   ref="unpublish-button"
