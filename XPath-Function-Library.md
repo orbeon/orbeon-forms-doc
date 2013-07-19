@@ -134,3 +134,26 @@ Return true if `$expr` returns `true()` for at least one item in `$items`. If `$
   readonly="not(normalize-space(../selection)
             and not(xxf:exists(xxf:split(../selection), $is-available)))"/>
 ```
+
+### xxf:split()
+
+[SINCE: Orbeon Forms 4.3]
+
+```ruby
+xxf:split() as xs:string*
+xxf:split($value as xs:string) as xs:string*
+xxf:split($value as xs:string, $separators as xs:string) as xs:string*
+```
+
+Split a string with one or more separator characters.
+
+If no argument is passed, split the context item on white space.
+
+If `$separator` is specified, each character is allowed as separator.
+
+```ruby
+xxf:split(' foo  bar   baz ')
+xxf:split('foo$bar_baz', '$_')
+element/xxf:split()
+element/@value/xxf:split()
+```
