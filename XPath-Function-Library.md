@@ -77,12 +77,15 @@ If running within a portlet context, return the window state (e.g. `normal`, `mi
 
 *NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
 
-### xxf:forall($)
+### xxf:forall()
 
 [SINCE: 2013-07-18 / Orbeon Forms 4.3]
 
 ```ruby
-xxf:forall($items as item()*, $expr as jt:net.sf.saxon.functions.Evaluate-PreparedExpression)
+xxf:forall(
+  $items as item()*,
+  $expr as jt:org.orbeon.saxon.functions.Evaluate-PreparedExpression
+) as xs:boolean
 ```
 
 Return true if `$expr` returns `true()` for all items in `$items`. If `$items` is the empty sequence, return `true()`.
@@ -101,4 +104,33 @@ Return true if `$expr` returns `true()` for all items in `$items`. If `$items` i
   ref="unpublish-button"
   readonly="not(normalize-space(../selection)
             and xxf:forall(xxf:split(../selection), $is-available))"/>
+```
+
+### xxf:exists()
+
+[SINCE: 2013-07-18 / Orbeon Forms 4.3]
+
+```ruby
+xxf:exists(
+  $items as item()*,
+  $expr as jt:org.orbeon.saxon.functions.Evaluate-PreparedExpression
+) as xs:boolean
+```
+
+Return true if `$expr` returns `true()` for at least one item in `$items`. If `$items` is the empty sequence, return `false()`.
+
+`$expr` is a Saxon stored expression which:
+
+- takes an `item()` as context item
+- must return an `xs:boolean`
+
+```xml
+<xf:var
+  name="is-available"
+  value="saxon:expression('xxf:split(., ''/'')[3] = ''true''')"/>
+
+<xf:bind
+  ref="publish-button"
+  readonly="not(normalize-space(../selection)
+            and not(xxf:exists(xxf:split(../selection), $is-available)))"/>
 ```
