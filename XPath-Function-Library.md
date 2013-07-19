@@ -77,9 +77,13 @@ If running within a portlet context, return the window state (e.g. `normal`, `mi
 
 *NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
 
-### xxf:forall($items as item()*, $expr as jt:net.sf.saxon.functions.Evaluate-PreparedExpression)
+### xxf:forall($)
 
 [SINCE: 2013-07-18 / Orbeon Forms 4.3]
+
+```ruby
+xxf:forall($items as item()*, $expr as jt:net.sf.saxon.functions.Evaluate-PreparedExpression)
+```
 
 Return true if `$expr` returns `true()` for all items in `$items`. If `$items` is the empty sequence, return `true()`.
 
