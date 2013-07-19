@@ -76,3 +76,18 @@ xxf:get-window-state() as xs:string
 If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
 
 *NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+
+### xxf:forall($items as item()*, $expr as jt:net.sf.saxon.functions.Evaluate-PreparedExpression)
+
+[SINCE: 2013-07-18 / Orbeon Forms 4.3]
+
+Return true if the expression passed returns `true()` for all items passed as first argument. If the first argument is the empty sequence, return `true()`.
+
+```xml
+<xf:var name="is-available" value="saxon:expression('xxf:split(., ''/'')[3] = ''true''')"/>
+
+<xf:bind
+  ref="unpublish-button"
+  readonly="not(normalize-space(../selection)
+            and xxf:forall(xxf:split(../selection), $is-available))"/>
+```
