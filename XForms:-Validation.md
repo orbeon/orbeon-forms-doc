@@ -1,4 +1,4 @@
-See also [/orbeon/orbeon-forms/wiki/Form-Builder:-Validation](Form Builder: Validation).
+See also [Form Builder: Validation](/orbeon/orbeon-forms/wiki/Form-Builder:-Validation).
 
 ## Extensions
 
