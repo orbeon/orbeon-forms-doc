@@ -132,7 +132,7 @@ Example:
 </xf:input>
 ```
 
-## Extension: `xxforms-valid` and `xxforms-invalid` events
+## Extension: xxforms-valid and xxforms-invalid events
 
 Orbeon Forms supports extensions events dispatched to an instance when it becomes valid or invalid:
 
@@ -168,7 +168,7 @@ These events can be used, for example, to toggle the appearance of icons indicat
 
 These events are dispatched just before `xforms-revalidate` completes, to all instances of the model being revalidated. For a given instance, either `xxforms-valid` or `xxforms-invalid` is dispatched for a given revalidation.
 
-## Extension: `xxforms-constraints-changed` event
+## Extension: xxforms-constraints-changed event
 
 This event is dispatched to a control whenever the list of failed constraints associated with the control's bound node change.
 
@@ -186,13 +186,13 @@ Context information:
 - `added-infos`: the ids of the current infos added since the last refresh
 - `removed-infos`: the ids of the current infos removed since the last refresh
 
-## Extension: `xxf:valid()` and `xxf:invalid()` XPath functions
+## Extension: xxf:valid() and xxf:invalid() XPath functions
 
 `xxf:valid()` returns the validity of a instance data node or of a subtree of instance data.
 
 `xxf:invalid-binds()` allows you to determine which bind caused node invalidity.
 
-## Extension: `xxf:xml` type
+## Extension: xxf:xml type
 
 This types checks that the value is well-formed XML:
 
@@ -202,7 +202,7 @@ This types checks that the value is well-formed XML:
 
 Note that this checks the string value of the node, which means that the node must contain *escaped* XML.
 
-## Extension: `xxf:xpath2` type
+## Extension: xxf:xpath2 type
 
 This types checks that the value is well-formed XPath 2.0. Any variable used by the expression is assumed to be in scope:
 
