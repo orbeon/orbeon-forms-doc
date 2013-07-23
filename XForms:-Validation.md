@@ -60,4 +60,29 @@ A warning or info level does not make the control value invalid and it is still 
 
 [SINCE: Orbeon Forms 4.3]
 
-TODO
+A control can have more than one `xf:alert` elements. By default, an `xf:alert` is considered the *default* alert for the control and is active for all validation levels and constraints:
+
+    <xf:alert>
+
+If a `level` attribute is specified, the alert is active for the given levels:
+
+    <xf:alert level="warning info">
+
+If a `validation` attribute is specified, the alert is active only for the given validations:
+
+    <xf:alert validation="c1 c2">
+
+Blank `level` and `validation` attributes are equivalent to no attributes.
+
+If both `level` and `validation` attributes are specified, `level` is ignored:
+
+    <xf:alert level="error" validation="c1 c2">
+
+More than one alert can be active at the same time, following a hierarchy:
+
+- If the control doesn't have a validation level, no alert is active.
+- If there is a level:
+    - If there are alerts that match specific constraints, those alerts and no others are active.
+    - Otherwise, if there are alerts that match the specific level, those alerts and no others are active.
+    - Otherwise, if present, the default alert is active.
+    - Otherwise, no alert is active.
