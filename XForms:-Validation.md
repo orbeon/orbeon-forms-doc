@@ -141,7 +141,7 @@ Orbeon Forms supports extensions events dispatched to an instance when it become
 
 ### Orbeon Forms 4 behavior
 
-[SINCE 2012-10-25 / ORBEON FORMS 4.0]
+[SINCE: 2012-10-25 / ORBEON FORMS 4.0]
 
 These events are dispatched just after `xforms-revalidate` completes on a given model to all instances that change their validation state (from valid to invalid or from invalid to valid):
 
@@ -169,6 +169,8 @@ These events can be used, for example, to toggle the appearance of icons indicat
 These events are dispatched just before `xforms-revalidate` completes, to all instances of the model being revalidated. For a given instance, either `xxforms-valid` or `xxforms-invalid` is dispatched for a given revalidation.
 
 ## Extension: xxforms-constraints-changed event
+
+[SINCE: Orbeon Forms 4.3]
 
 This event is dispatched to a control whenever the list of failed constraints associated with the control's bound node change.
 
