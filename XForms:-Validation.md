@@ -38,14 +38,23 @@ If there is a single error constraint, the following binds are equivalent:
 
 [SINCE: Orbeon Forms 4.3]
 
-In XForms, a control value can only be *valid* or *invalid*. Orbeon Forms adds the following additional validation levels:
+Orbeon Forms supports the following validation levels:
 
+- error (which corresponds to XForms's valid/invalid)
 - warning
 - info
 
 The default validation level is *error*.
 
-As of Orbeon Forms 4.3, it is possible to set a constraint level for XPath constraints.
+The warning and info levels allow checking validation conditions that are weaker than errors.
+
+Levels are hierarchical. If a control is valid, it can have a *warning* level. This is the case if there is at least one failed warning constraint.
+
+If a control doesn't have a warning level, it can have an *info* level. This is the case if there is at least one failed info constraint.
+
+A warning or info level does not make the control value invalid and it is still possible to submit form data.
+
+*NOTE: As of Orbeon Forms 4.3, it is only possible to associate a warning or info validation level to a constraint specified with `xf:constraint`. It is not possible to associate these levels to the required or data type validations: these always use the error level.*
 
 ### Multiple alerts
 
