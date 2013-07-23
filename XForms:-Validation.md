@@ -22,7 +22,7 @@ Orbeon Forms performs validation of a node in the following order:
     - required-but-empty
 - constraints
     - with `xf:bind/@constraint` or `xf:constraint`
-    - 
+    - are checked *only* if the control's data type is valid
 
 [IN PROGRESS]
 
