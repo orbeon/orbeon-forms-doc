@@ -1,3 +1,5 @@
+See also [/orbeon/orbeon-forms/wiki/Form-Builder:-Validation](Form Builder: Validation).
+
 ## Extensions
 
 ### Multiple constraints and alerts
