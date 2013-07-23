@@ -175,16 +175,16 @@ This event is dispatched to a control whenever the list of failed constraints as
 Context information:
 
 - `level`: the control's current validation level ("error", "warning", "info", or the empty sequence)
-- `constraints`: ids of the current failed constraints
-- `errors`: ids of the current failed error constraints
-- `warnings`: ids of the current failed warning constraints (empty if the current level is "error")
-- `infos`: ids of the current failed info constraints (empty if the current level is "warning" or "info")
-- `added-errors`: ids of the current errors added since the last refresh
-- `removed-errors`: ids of the current errors removed since the last refresh
-- `added-warnings`: ids of the current warnings added since the last refresh
-- `removed-warnings`: ids of the current warnings removed since the last refresh
-- `added-infos`: ids of the current infos added since the last refresh
-- `removed-infos`: ids of the current infos removed since the last refresh
+- `constraints`: ids of all current failed constraints
+- `errors`: ids of current failed error constraints
+- `warnings`: ids of current failed warning constraints (empty if current level is "error")
+- `infos`: ids of current failed info constraints (empty if current level is "warning" or "error")
+- `added-errors`: ids of current errors added since the last refresh
+- `removed-errors`: ids of current errors removed since the last refresh
+- `added-warnings`: ids of current warnings added since the last refresh
+- `removed-warnings`: ids of current warnings removed since the last refresh
+- `added-infos`: ids of current infos added since the last refresh
+- `removed-infos`: ids of current infos removed since the last refresh
 
 ## Extension: xxf:valid() and xxf:invalid() XPath functions
 
