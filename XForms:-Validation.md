@@ -1,6 +1,139 @@
 See also [Form Builder: Validation](/orbeon/orbeon-forms/wiki/Form-Builder:-Validation).
 
+## Introduction
+
+Orbeon Forms validates XForms instances following XForms 1.1 and adds some extensions to facilitate validation.
+
+## Validation constructs
+
+There are two main methods for validating data in XForms:
+
+- with an imported XML Schema
+- with `xf:bind`
+
+[IN PROGRESS: EXAMPLES]
+
+## Validation order
+
+Orbeon Forms performs validation of a node in the following order:
+
+- data type validation
+    - XML Schema validation (lax/strict/none on model instances)
+    - `xf:bind/@type`
+- required validation
+    - required-but-empty
+- constraints
+    - with `xf:bind/@constraint` or `xf:constraint`
+    - 
+
+[IN PROGRESS]
+
+## XML Schema validation
+
+[IN PROGRESS]
+
+## Validation and submission
+
+[IN PROGRESS]
+
+## Validation and controls
+
+[IN PROGRESS]
+
 ## Extensions
+
+### Extension events
+
+Orbeon Forms supports extensions events dispatched to an instance when it becomes valid or invalid:
+
+- `xxforms-valid`
+- `xxforms-invalid`
+
+#### Orbeon Forms 4 behavior
+
+[SINCE 2012-10-25 / ORBEON FORMS 4.0]
+
+These events are dispatched just after `xforms-revalidate` completes on a given model to all instances that change their validation state (from valid to invalid or from invalid to valid):
+
+- If the instance is newly valid, `xxforms-valid` is dispatched
+- If the instance is newly invalid, `xxforms-invalid` is dispatched
+
+Before the initial validation of a model, instances are assumed to be in the valid state.
+
+These events can be used, for example, to toggle the appearance of icons indicating that a form is valid or invalid:
+
+```xml
+<xf:instance id="my-instance">
+    ...
+</xf:instance>
+<xf:action ev:event="xxforms-invalid" ev:observer="my-instance">
+    <xf:toggle case="invalid-form-case"/>
+</xf:action>
+<xf:action ev:event="xxforms-valid" ev:observer="my-instance">
+    <xf:toggle case="valid-form-case"/>
+</xf:action>
+```
+
+#### Orbeon Forms 3.9 behavior
+
+These events are dispatched just before `xforms-revalidate` completes, to all instances of the model being revalidated. For a given instance, either `xxforms-valid` or `xxforms-invalid` is dispatched for a given revalidation.
+
+### Extension XPath functions
+
+`xxf:valid()` returns the validity of a instance data node or of a subtree of instance data.
+
+`xxf:invalid-binds()` allows you to determine which bind caused node invalidity.
+
+### Extension types
+
+#### `xxf:xml` extension type
+
+This types checks that the value is well-formed XML:
+
+```xml
+<xf:bind ref="my-xml" type="xxf:xml"/>
+```
+
+Note that this checks the string value of the node, which means that the node must contain *escaped* XML.
+
+#### `xxf:xpath2` extension type
+
+This types checks that the value is well-formed XPath 2.0. Any variable used by the expression is assumed to be in scope:
+
+```xml
+<xf:bind ref="my-xpath" type="xxf:xpath2"/>
+```
+
+*NOTE: In both these cases, Orbeon Forms checks for the required MIP: if it evaluates to `false()` and the value is the empty string, then the instance data node is considered valid. This is contrary to XForms 1.1.*
+
+### Controlling the XML Schema validation mode
+
+When an XML Schema is provided, Orbeon Forms supports controlling whether a particular instance is validated in the following modes:
+
+- "lax" mode
+- "strict" mode
+- not validated at all ("skip" mode)
+
+Orbeon Forms implements a "lax" validation mode by default, where only elements that have definitions in the imported schemas are validated. Other elements are not considered for validation. This is in line with XML Schema and XSLT 2.0 lax validation modes, and with the default validation mode as specified in XForms 1.1
+
+In addition, the author can specify the validation mode directly on each instance with the extension `xxf:validation` attribute, which takes values:
+
+- `lax` (the default)
+- `strict` (the root element has to have a definition in the schema and must be valid)
+- `skip` (no validation at all for that instance)
+
+```xml
+<xf:model schema="my-schema.xsd">
+    <xf:instance id="my-form" xxf:validation="strict">
+        <my-form> ... </my-form>
+    </xf:instance>
+    <xf:instance id="items" xxf:validation="skip">
+        <items> ... </items>
+    </xf:instance>
+</xf:model>
+```
+
+Nodes validated through an XML Schema receive data type annotations, which means that if an element or attribute is validated against `xs:date` in a schema, an XForms control bound to that node will display a date picker.
 
 ### Multiple constraints and alerts
 
