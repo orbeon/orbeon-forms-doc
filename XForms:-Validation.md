@@ -72,6 +72,8 @@ If a `validation` attribute is specified, the alert is active only for the given
 
     <xf:alert validation="c1 c2">
 
+In this example, `c1` and `c2` refer to `id` attributes on `xf:constraint` elements. Only `xf:constraint` elements associated with a bind pointing to the node to which the control is bound are considered.
+
 Blank `level` and `validation` attributes are equivalent to no attributes.
 
 If both `level` and `validation` attributes are specified, `level` is ignored:
