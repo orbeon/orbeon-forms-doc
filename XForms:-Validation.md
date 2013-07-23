@@ -24,20 +24,6 @@ Orbeon Forms performs validation of a node in the following order:
     - with `xf:bind/@constraint` or `xf:constraint`
     - are checked *only* if the control's data type is valid
 
-[IN PROGRESS]
-
-## XML Schema validation
-
-[IN PROGRESS]
-
-## Validation and submission
-
-[IN PROGRESS]
-
-## Validation and controls
-
-[IN PROGRESS]
-
 ## Extensions
 
 ### Extension events
@@ -221,3 +207,15 @@ More than one alert can be active at the same time, following a hierarchy:
     - Otherwise, if there are alerts that match the specific level, those alerts and no others are active.
     - Otherwise, if present, the default alert is active.
     - Otherwise, no alert is active.
+
+## XML Schema validation
+
+[IN PROGRESS]
+
+## Validation and submission
+
+[IN PROGRESS]
+
+## Validation and controls
+
+[IN PROGRESS]
