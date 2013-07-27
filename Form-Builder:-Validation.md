@@ -50,7 +50,7 @@ At runtime, if the value is required and does not match the specified datatype, 
 
 *NOTE: When selecting certain controls from the toolbox, such as "Email", "Date", "Time", and "Date and Time", the appropriate data type is already selected by Form Builder. Changing the type to a different type might change the appearance of the control to match the type selected.*
 
-If an XML Schema containing simple types has been attached to the form (Orbeon Forms PE only), the simples types are listed in the Schema Type menu.
+If an XML Schema containing simple types has been attached to the form [Orbeon Forms PE only], the simples types are listed in the Schema Type menu.
 
 ![Built-in Types](images/fb-schema-types.png)
 
@@ -105,6 +105,8 @@ A warning or info level does not make the control value invalid and it is still 
 
 ## Localization of messages
 
+[Orbeon Forms PE only]
+
 All alert messages can be localized.
 
 When opening the dialog, the current language of the form determines the language used. To switch languages:
@@ -150,8 +152,8 @@ Alert messages appear:
 By default, when saving or sending form data, the following happens:
 
 - If any control value is invalid, a dialog shows and the operation is stopped.
-- If all controls are invalid and there are no warning or info messages, the operation continues.
-- If all controls are invalid and there is at least one warning or info message, the "Review Messages" dialog shows. [SINCE Orbeon Forms 4.3]
+- If all controls are valid and there are no warning or info messages, the operation continues.
+- If all controls are valid and there is at least one warning or info message, the "Review Messages" dialog shows. [SINCE Orbeon Forms 4.3]
 
 ![Review Messages](images/fr-review-messages.png)
 
