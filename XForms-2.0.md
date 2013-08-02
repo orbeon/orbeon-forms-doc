@@ -8,5 +8,6 @@ As of Orbeon Forms 4.3, Orbeon Forms supports the following XForms 2.0 features:
 - `accept` attribute on `xf:upload`
 - `xf:property` child of `xf:dispatch` element
 - `iterate` attribute on actions
+- `xf:valid()` function
 
 For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=XForms+2.0&page=1&sort=updated&state=open).
