@@ -388,7 +388,7 @@ The following dialog can be opened with the `dialog` action:
 
 Example:
 
-    dialog("fr-validation-dialog") then suspend
+    xf:show("fr-validation-dialog") then suspend
 
 ![The validation dialog](images/fr-review-messages.png)
 
