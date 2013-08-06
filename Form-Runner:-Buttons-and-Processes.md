@@ -245,14 +245,32 @@ Navigate to an external page via client-side GET.
         - `message`: message to show
         - `resource`: resource key pointing to the message
 
-### dialog
+### xf:dispatch
 
 [SINCE Orbeon Forms 4.3]
 
-Open a dialog by name.
+Dispatch an XForms event by name to `fr-form-model`.
 
 - parameters
-    - `dialog`: specifies the name of the dialog to open
+    - `name`: specifies the name of the event to dispatch
+
+### xf:send
+
+[SINCE Orbeon Forms 4.3]
+
+Send an XForms submission.
+
+- parameters
+    - `submission`: specifies the id of the submission to send
+
+### xf:show
+
+[SINCE Orbeon Forms 4.3]
+
+Open an XForms dialog by id.
+
+- parameters
+    - `dialog`: specifies the id of the dialog to open
 
 ### Other actions
 
