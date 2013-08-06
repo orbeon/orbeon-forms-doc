@@ -382,7 +382,7 @@ In fact all buttons can do the same tasks if they are configured appropriately! 
 
 [SINCE Orbeon Forms 4.3]
 
-The following dialog can be opened with the `dialog` action:
+The following dialog can be opened with the `xf:show` action:
 
 - `fr-validation-dialog`: the validation dialog which asks the user to review validation messages
 
