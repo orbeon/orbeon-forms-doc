@@ -225,6 +225,25 @@ Example:
     </form>
 ```
 
+[SINCE Orbeon Forms 4.4]
+
+The following properties are Attribute Value Templates (AVTs) evaluating in the context of the root element of the form data instance:
+
+- `uri`
+- `method`
+- `prune`
+- `annotate`
+- `content`
+
+Example:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.send.success.uri.*.*"
+    value='/fr/service/custom/orbeon/echo?action=submit&amp;email={//email}'/>
+```
+
 ### navigate
 
 Navigate to an external page via client-side GET.
