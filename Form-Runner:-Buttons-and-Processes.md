@@ -181,14 +181,26 @@ Send an email with optionally XML form data, attachments, and PDF.
 Send data to an HTTP URL.
 
 - parameters
-    - `property`: specifies a property prefix
+    - `property`: specifies an optional property prefix
+    - `uri`: URL to which to send the data
+    - `method`: `GET`, `POST` (default), `PUT`
+    - `prune`: whether to prune non-relevant nodes (`true` by default)
+    - `annotate`: whether to annotate elements with warnings (the empty string by default)
+    - `replace`: `all` to load the resulting response in the browser, or `none` (default)
+    - `content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
 - properties used
     - property prefix + `.uri`: URL to which to send the data
-    - property prefix + `.method`: `GET`, `POST` (default), `PUT`
-    - property prefix + `.prune`: whether to prune non-relevant nodes (`true` by default)
-    - property prefix + `.annotate`: whether to annotate elements with warnings (the empty string by default)
-    - property prefix + `.replace`: `all` to load the resulting response in the browser, or `none` (default)
-    - property prefix + `.content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
+    - property prefix + `.method`: see `method` parameter
+    - property prefix + `.prune`: see `prune` parameter
+    - property prefix + `.annotate`: see `annotate` parameter
+    - property prefix + `.replace`: see `replace` parameter
+    - property prefix + `.content`: see `content` parameter
+
+Parameters have a higher precedence. In this example, the `uri` parameter is used, even if a `oxf.fr.detail.send.success.uri` property is present:
+
+```ruby
+send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
+```
 
 The full URL is composed of:
 
