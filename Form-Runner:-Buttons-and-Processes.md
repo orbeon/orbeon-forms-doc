@@ -372,6 +372,56 @@ Validating and sending data to a service looks like this:
 
 Some actions can take parameters. In the example above we point to properties to configure the `send` action. This means that, within a single process, you can have any number of `send` actions which send data to various services. This also allows you to have separate buttons to send data to different services. These two scenarios were not possible before.
 
+## Grouping actions
+
+[SINCE Orbeon Forms 4.4]
+
+You can use parentheses to group actions. For example:
+
+```ruby
+visit-all
+then captcha
+then validate("error")
+recover (
+    visit-all
+    then expand-all
+    then error-message("form-validation-error")
+    then success
+)
+```
+
+Here `recover` processes the entire content of the parentheses. Without the parentheses, only `visit-all` would be processed by `recover`, and the subsequent `expand-all` would run whether the preceding actions are successful or not.
+
+## Conditions
+
+[SINCE Orbeon Forms 4.4]
+
+You can use `if` to evaluate a condition during the expression of a process. The condition is expressed as an XPath expression and runs in the context of the root element of the main form instance:
+
+```ruby
+if ("//secret = 42") then success-message(message = "yea") else error-message(message = "nay")
+```
+
+The `else` branch is optional. This means that the following two lines are equivalent:
+
+```ruby
+if ("xpath") action1 then action2
+if ("xpath") action1 else nop then action2
+```
+
+The `if` and `else` operators have a higher precedence than the `then` and `recover` combinators. This means that if you need more that one action to run in either one of the branches, parentheses must be added:
+
+```ruby
+if ("xpath") (action1 then action2) else action3
+```
+
+This also means that the following two lines are equivalent:
+
+```ruby
+if ("xpath") action1 else action2 then action3
+(if ("xpath") action1 else action2) then action3
+```
+
 ## Predefined buttons
 
 The following buttons are predefined and associated with the processes of the same name:
