@@ -180,7 +180,7 @@ Send an email with optionally XML form data, attachments, and PDF.
 
 Send data to an HTTP URL.
 
-- parameters
+- parameters [SINCE Orbeon Forms 4.4 except `property`]
     - `property`: specifies an optional property prefix
     - `uri`: URL to which to send the data
     - `method`: `GET`, `POST` (default), `PUT`
