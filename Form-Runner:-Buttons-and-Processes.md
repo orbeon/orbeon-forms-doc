@@ -407,21 +407,21 @@ else error-message(message = "nay")
 The `else` branch is optional. This means that the following two lines are equivalent:
 
 ```ruby
-if ("xpath") action1 then action2
-if ("xpath") action1 else nop then action2
+if ("xpath") then action1 then action2
+if ("xpath") then action1 else nop then action2
 ```
 
 The `if` and `else` operators have a higher precedence than the `then` and `recover` combinators. This means that if you need more that one action to run in either one of the branches, parentheses must be added:
 
 ```ruby
-if ("xpath") (action1 then action2) else action3
+if ("xpath") then (action1 then action2) else action3
 ```
 
 This also means that the following two lines are equivalent:
 
 ```ruby
-if ("xpath") action1 else action2 then action3
-(if ("xpath") action1 else action2) then action3
+if ("xpath") then action1 else action2 then action3
+(if ("xpath") then action1 else action2) then action3
 ```
 
 ## Predefined buttons
