@@ -399,7 +399,9 @@ Here `recover` processes the entire content of the parentheses. Without the pare
 You can use `if` to evaluate a condition during the expression of a process. The condition is expressed as an XPath expression and runs in the context of the root element of the main form instance:
 
 ```ruby
-if ("//secret = 42") then success-message(message = "yea") else error-message(message = "nay")
+if ("//secret = 42")
+then success-message(message = "yea")
+else error-message(message = "nay")
 ```
 
 The `else` branch is optional. This means that the following two lines are equivalent:
