@@ -189,7 +189,7 @@ Send data to an HTTP URL.
     - `replace`: `all` to load the resulting response in the browser, or `none` (default)
     - `content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
 - properties used
-    - property prefix + `.uri`: URL to which to send the data
+    - property prefix + `.uri`: see `uri` parameter
     - property prefix + `.method`: see `method` parameter
     - property prefix + `.prune`: see `prune` parameter
     - property prefix + `.annotate`: see `annotate` parameter
