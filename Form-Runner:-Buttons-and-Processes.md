@@ -185,7 +185,7 @@ Send data to an HTTP URL.
     - `uri`: URL to which to send the data
     - `method`: `GET`, `POST` (default), `PUT`
     - `prune`: whether to prune non-relevant nodes (`true` by default)
-    - `annotate`: whether to annotate elements with warnings (the empty string by default)
+    - `annotate`: space-separated list of levels to annotate elements (the empty string by default)
     - `replace`: `all` to load the resulting response in the browser, or `none` (default)
     - `content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
 - properties used
@@ -383,6 +383,16 @@ Validating and sending data to a service looks like this:
     then send("oxf.fr.detail.send.success")
 
 Some actions can take parameters. In the example above we point to properties to configure the `send` action. This means that, within a single process, you can have any number of `send` actions which send data to various services. This also allows you to have separate buttons to send data to different services. These two scenarios were not possible before.
+
+## Action parameters
+
+[SINCE Orbeon Forms 4.4]
+
+In Orbeon Forms 4.2 and 4.3, actions support only an anonymous default parameter. With 4.4, actions support named parameters in addition to an anonymous default parameter:
+
+```ruby
+send(uri = "http://acme.org/orbeon", annotate = "error warning", replace = "all")
+```
 
 ## Grouping actions
 
