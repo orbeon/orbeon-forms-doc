@@ -1,5 +1,7 @@
 [SINCE Orbeon Forms 4.4]
 
+NOTE: This is an advanced feature, as it requires XForms knowledge.
+
 It can be useful to be able to define custom model logic, either for a particular form or shared among a number of forms. The `oxf.fr.detail.model.custom` property allows you to do just that:
 
 ```xml
@@ -49,4 +51,4 @@ We can create a [custom button](/orbeon/orbeon-forms/wiki/Form-Runner:-Buttons-a
   value='oxf:/forms/acme/whizz.xml'/>
 ```
 
-This is an advanced feature, as it requires XForms knowledge.
+![Example of Form Runner buttons](images/fr-your-email-is.png)
