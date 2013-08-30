@@ -4,7 +4,7 @@ By default with Form Runner all the form sections appear in the same page, on to
 
 With the wizard view, top-level sections instead appear in a navigation area to the left, and only a single top-level section is shown at any given time:
 
-![Example of Form Runner buttons](images/fr-wizard.png)
+![Form Runner Wizard](images/fr-wizard.png)
 
 You can navigate between sections by clicking on a section title, or you can use the navigation arrows.
 
