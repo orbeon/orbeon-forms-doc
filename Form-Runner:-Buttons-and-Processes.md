@@ -289,10 +289,11 @@ Navigate to an external page via client-side GET.
 
 [SINCE Orbeon Forms 4.3]
 
-Dispatch an XForms event by name to `fr-form-model`.
+Dispatch an XForms event by name to an XForms target.
 
 - parameters
-    - `name`: specifies the name of the event to dispatch
+    - `name` (default parameter): specifies the name of the event to dispatch
+    - `targetid`: specifies the event's target id,  `fr-form-model` by default. [SINCE Orbeon Forms 4.4]
 
 ### xf:send
 
