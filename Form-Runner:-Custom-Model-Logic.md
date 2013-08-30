@@ -51,4 +51,6 @@ We can create a [custom button](/orbeon/orbeon-forms/wiki/Form-Runner:-Buttons-a
   value='oxf:/forms/acme/whizz.xml'/>
 ```
 
+The result:
+
 ![Example of Form Runner buttons](images/fr-your-email-is.png)
