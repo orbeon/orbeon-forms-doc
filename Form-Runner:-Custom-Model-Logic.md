@@ -1,6 +1,6 @@
 [SINCE Orbeon Forms 4.4]
 
-NOTE: This is an advanced feature which requires XForms knowledge.
+*NOTE: This is an advanced feature which requires XForms knowledge.*
 
 It can be useful to be able to define custom model logic, either for a particular form or shared among a number of forms. The `oxf.fr.detail.model.custom` property allows you to do just that:
 
