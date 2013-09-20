@@ -5,7 +5,7 @@ create table orbeon_form_definition (
     username       varchar2(255),
     app            varchar2(255),
     form           varchar2(255),
-    deleted        char(1),
+    deleted        char(1) not null,
     xml            xmltype
 ) xmltype column xml store as basicfile clob;
 
@@ -15,7 +15,7 @@ create table orbeon_form_definition_attach (
     username       varchar2(255),
     app            varchar2(255),
     form           varchar2(255),
-    deleted        char(1),
+    deleted        char(1) not null,
     file_name      varchar2(255),
     file_content   blob
 );
@@ -40,7 +40,7 @@ create table orbeon_form_data_attach (
     app            varchar2(255),
     form           varchar2(255),
     document_id    varchar(255),
-    deleted        char(1),
+    deleted        char(1) not null,
     file_name      varchar2(255),
     file_content   blob
 );
