@@ -12,9 +12,9 @@ alter table orbeon_form_data              add           groupname      varchar2(
 alter table orbeon_form_data_attach       add           username       varchar2(255);
 alter table orbeon_form_data_attach       add           groupname      varchar2(255);
 alter table orbeon_form_data              add           draft          character(1);
-update      orbeon_form_data                        set draft = 'N';
+update      orbeon_form_data              set           draft = 'N';
 alter table orbeon_form_data              modify        draft          character(1) not null;
 alter table orbeon_form_data_attach       add           draft          character(1);
-update      orbeon_form_data_attach                 set draft = 'N';
+update      orbeon_form_data_attach       set           draft = 'N';
 alter table orbeon_form_data_attach       modify        draft          character(1) not null;
 ```
