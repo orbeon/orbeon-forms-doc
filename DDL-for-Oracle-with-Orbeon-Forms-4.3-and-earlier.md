@@ -45,8 +45,8 @@ create table orbeon_form_data_attach (
     file_content   blob
 );
 
-create index orbeon_form_definition_x on orbeon_form_definition(xml) indextype is ctxsys.context parameters ('sync (on commit)');
-create index orbeon_form_data_x       on orbeon_form_data      (xml) indextype is ctxsys.context parameters ('sync (on commit)');
+create index orbeon_form_definition_x      on orbeon_form_definition        (xml) indextype is ctxsys.context parameters ('sync (on commit)');
+create index orbeon_form_data_x            on orbeon_form_data              (xml) indextype is ctxsys.context parameters ('sync (on commit)');
 
 create index orbeon_form_definition_i1     on orbeon_form_definition        (app, form);
 create index orbeon_form_definition_att_i1 on orbeon_form_definition_attach (app, form, file_name);
