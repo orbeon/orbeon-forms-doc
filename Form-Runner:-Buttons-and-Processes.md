@@ -197,6 +197,10 @@ Send data to an HTTP URL.
     - `annotate`: space-separated list of levels to annotate elements (the empty string by default)
     - `replace`: `all` to load the resulting response in the browser, or `none` (default)
     - `content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
+    - `parameters`:
+        - space-separated list of standard parameters to automatically add to the URL
+        - any of the following tokens: `app`, `form`, `document`, `valid`
+        - default: `app form document valid`
 - properties used
     - property prefix + `.uri`: see `uri` parameter
     - property prefix + `.method`: see `method` parameter
@@ -204,6 +208,7 @@ Send data to an HTTP URL.
     - property prefix + `.annotate`: see `annotate` parameter
     - property prefix + `.replace`: see `replace` parameter
     - property prefix + `.content`: see `content` parameter
+    - property prefix + `.parameters`: see `content` parameter
 
 Parameters have a higher precedence. In this example, the `uri` parameter is used, even if a `oxf.fr.detail.send.success.uri` property is present:
 
