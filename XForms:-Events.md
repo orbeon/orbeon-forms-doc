@@ -21,13 +21,13 @@ On all events, the following extension attributes are supported:
 - `event('xxf:targetid') as xs:string`  
   Return the static id of the event target (`event('xxf:target')` is supported for backward compatibility).
 - `event('xxf:absolute-targetid') as xs:string`  
-  [SINCE 2012-07-10]  
+  *[SINCE 2012-07-10]*  
   Return the absolute id of the event target.
 - `event('xxf:observerid') as xs:string`  
-  [SINCE 2012-05-18]  
+  *[SINCE 2012-05-18]*  
   Return the static id of the event observer.
 - `event('xxf:absolute-observerid') as xs:string`  
-  [SINCE 2012-07-10]  
+  *[SINCE 2012-07-10]*  
   Return the absolute id of the event observer.
 - `event('xxf:bubbles') as xs:boolean`  
   Return whether the event is allowed to bubble or not.
@@ -81,7 +81,7 @@ The following extension attributes are supported:
 On `xforms-value-changed`, the following extension attributes are supported:
 
 - `event('xxf:value')`  
-  [SINCE Orbeon Forms 4.4]  
+  *[SINCE Orbeon Forms 4.4]*  
   The current value (that is, the value after the change) of the control.
 
 On `xforms-select`, the following extension attributes are supported:
