@@ -1,3 +1,7 @@
+## Standard event context information
+
+*TODO*
+
 ## Extension event context information
 
 ### All events
@@ -9,10 +13,6 @@ event($attribute-name as QName) item()*
 ```
 
 This allows namespacing attribute names, therefore better allowing for extension attributes.
-
-The following standard event attributes are implemented:
-
-*[TODO: describe standard Orbeon Forms support for `event()` function]*
 
 On all events, the following extension attributes are supported:
 
