@@ -9,7 +9,7 @@
 Orbeon Forms enhances the XML Events `event()` function to take a qualified name as parameter:
 
 ```ruby
-event($attribute-name as QName) item()*
+event($attribute-name as xs:QName) item()*
 ```
 
 This allows namespacing attribute names, therefore better allowing for extension attributes.
@@ -77,6 +77,11 @@ The following extension attributes are supported:
   Return the event target's help value if any.
 - `event('xxforms:alert') as xs:string?`  
   Return the event target's alert value if any.
+
+On `xforms-value-changed`, the following extension attributes are supported:
+
+- `event('xxforms:value')`  
+  The current value (that is, the value after the change) of the control.
 
 On `xforms-select`, the following extension attributes are supported:
 
