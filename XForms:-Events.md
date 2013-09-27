@@ -81,7 +81,7 @@ The following extension attributes are supported:
 On `xforms-value-changed`, the following extension attributes are supported:
 
 - `event('xxforms:value')`  
-  [SINCE Orbeon Forms 4.4]
+  [SINCE Orbeon Forms 4.4]  
   The current value (that is, the value after the change) of the control.
 
 On `xforms-select`, the following extension attributes are supported:
