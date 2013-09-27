@@ -80,7 +80,7 @@ The following extension attributes are supported:
 
 On `xforms-select`, the following extension attributes are supported:
 
-- event('xxforms:item-value')  
+- `event('xxforms:item-value')`  
   When this event is dispatched to in response to a selection control item being selected, returns the value of the selected item.
 
 ### Other events
