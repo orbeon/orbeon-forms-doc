@@ -65,37 +65,37 @@ These are:
 
 The following extension attributes are supported:
 
-- `event('xxforms:control-position') as xs:integer`  
+- `event('xxf:control-position') as xs:integer`  
   Return the event target's position in the user interface. This is the control's static position, i.e. this does not reflect possible repeat iterations.
-- `event('xxforms:binding') as node()?`  
+- `event('xxf:binding') as node()?`  
   Return the event target's single-node binding if any.
-- `event('xxforms:label') as xs:string?`  
+- `event('xxf:label') as xs:string?`  
   Return the event target's label value if any.
-- `event('xxforms:hint') as xs:string?`  
+- `event('xxf:hint') as xs:string?`  
   Return the event target's hint value if any.
-- `event('xxforms:help') as xs:string?`  
+- `event('xxf:help') as xs:string?`  
   Return the event target's help value if any.
-- `event('xxforms:alert') as xs:string?`  
+- `event('xxf:alert') as xs:string?`  
   Return the event target's alert value if any.
 
 On `xforms-value-changed`, the following extension attributes are supported:
 
-- `event('xxforms:value')`  
+- `event('xxf:value')`  
   [SINCE Orbeon Forms 4.4]  
   The current value (that is, the value after the change) of the control.
 
 On `xforms-select`, the following extension attributes are supported:
 
-- `event('xxforms:item-value')`  
+- `event('xxf:item-value')`  
   When this event is dispatched to in response to a selection control item being selected, returns the value of the selected item.
 
 ### Other events
 
 On `xforms-submit-serialize`, the following extension attributes are supported:
 
-- `event('xxforms:binding') as node()?`  
+- `event('xxf:binding') as node()?`  
   Return the submission's single-node binding if any.
-- `event('xxforms:serialization') as xs:string`  
+- `event('xxf:serialization') as xs:string`  
   Return the submission's requested serialization, e.g. `application/xml`, `application/x-www-form-urlencoded`, etc..
 
 ## Extension XForms events
