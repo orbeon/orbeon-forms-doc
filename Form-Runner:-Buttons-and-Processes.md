@@ -183,7 +183,7 @@ Example:
 Send an email with optionally XML form data, attachments, and PDF.
 
 - parameters: none
-- properties used: `oxf.fr.email.*`
+- properties used: [`oxf.fr.email.*`](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-form-runner#TOC-Email-settings)
 
 ### send
 
