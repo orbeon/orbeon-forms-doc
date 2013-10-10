@@ -125,7 +125,7 @@ When the remote server is configured as above, the first time you go to the Form
 
 ![Credentials](images/home-credentials.png)
 
-Once the credentials are correct, the Home page retrieve the remote server's list of dseployed forms and metadata, which appears in a new *Remote* column group. You then have access to new operations:
+Once the credentials are correct, the Home page retrieves the remote server's list of deployed forms and metadata, which appears in a new *Remote* column group. You then have access to new operations:
 
 - Publish remote form: make an unavailable form available again on the remote server
 - Unpublish remote form: make a previously published form unavailable on the remote server
@@ -134,11 +134,11 @@ Once the credentials are correct, the Home page retrieve the remote server's lis
 
 ![Push to Remote](images/home-push.png)
 
-A confirmation dialog always confirms the operation to perform:
+You are always prompted to confirm the operation to perform:
 
 ![Confirmation](images/home-confirmation.png)
 
-In addition, if the lasest modification time of the form definition differs, a Newer label appears:
+In addition, if the latest modification time of the form definitions differ, a *Newer* label appears:
 
 ![Newer](images/home-newer.png)
 
