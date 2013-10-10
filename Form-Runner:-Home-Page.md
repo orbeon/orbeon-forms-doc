@@ -51,6 +51,8 @@ When the user has access to admin operations, new information is shown:
 - whether the form is available or unavailable ("unpublished")
 - whether the form is a library form
 
+Unavailable forms remain on the server, but any user access to an unavailable form behaves as if the form had never been published.
+
 The user can select forms in two ways:
 
 - by using the checkboxes next to the form
@@ -62,10 +64,10 @@ The operations listed in the Operations menu are then available depending on the
 
 ![Operations Menu](images/home-operation-menu.png)
 
-- Publish local forms: make an unavailable form available again
-- Unpublish local forms: make a previously published form unavailable
+The main operations available are:
 
-Unavailable forms remain on the server, but any user access to unavailable forms behave as if the form had never been published.
+- Publish local forms: make an unavailable form available again
+- Unpublish local forms: make a published form unavailable
 
 ![Unavailable](images/home-unavailable.png)
 
