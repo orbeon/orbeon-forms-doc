@@ -48,7 +48,7 @@ In this view:
 
 When the user has access to admin operations, new information is shown:
 
-- whether the form is available or unavailable
+- whether the form is available or unavailable ("unpublished")
 - whether the form is a library form
 
 The user can select forms in two ways:
@@ -58,9 +58,16 @@ The user can select forms in two ways:
 
 ![Select Menu](images/home-select-menu.png)
 
-The operations listed in the Operations menu are then available, depending on the selection:
+The operations listed in the Operations menu are then available depending on the current selection:
 
 ![Operations Menu](images/home-operation-menu.png)
+
+- Publish local forms: make an unavailable form available again
+- Unpublish local forms: make a previously published form unavailable
+
+Unavailable forms remain on the server, but any user access to unavailable forms behave as if the form had never been published.
+
+![Unavailable](images/home-unavailable.png)
 
 ## Remote server operations
 
@@ -115,6 +122,23 @@ With this configuration, the local Orbeon Forms connects to services on the remo
 When the remote server is configured as above, the first time you go to the Form Runner Home page you are prompted for credentials:
 
 ![Credentials](images/home-credentials.png)
+
+Once the credentials are correct, the Home page retrieve the remote server's list of dseployed forms and metadata, which appears in a new *Remote* column group. You then have access to new operations:
+
+- Publish remote form: make an unavailable form available again on the remote server
+- Unpublish remote form: make a previously published form unavailable on the remote server
+- Push to remote: copy a form definition and its attachments from the local to the remote server
+- Pull from remote: copy a form definition and its attachments from the remote to the local server
+
+![Push to Remote](images/home-push.png)
+
+A confirmation dialog always confirms the operation to perform:
+
+![Confirmation](images/home-confirmation.png)
+
+In addition, if the lasest modification time of the form definition differs, a Newer label appears:
+
+![Newer](images/home-newer.png)
 
 ## Orbeon Forms 4.0 to 4.2
 
