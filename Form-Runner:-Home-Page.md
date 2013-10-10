@@ -98,10 +98,10 @@ You deploy this WAR file alongside `orbeon.war` on the remote server, and you ad
 
 ```xml
 <property
-    as="xs:anyURI"
-    processor-name="oxf:page-flow"
-    name="authorizer"
-    value="/orbeon-auth"/>
+  as="xs:anyURI"
+  processor-name="oxf:page-flow"
+  name="authorizer"
+  value="/orbeon-auth"/>
 ```
 
 This tells the remote server to use the `orbeon-auth` webapp to authenticate requests for services or pages which are not public.
