@@ -62,6 +62,60 @@ The operations listed in the Operations menu are then available, depending on th
 
 ![Operations Menu](images/home-operation-menu.png)
 
+## Remote server operations
+
+[SINCE Orbeon Forms 4.4]
+
+### Introduction
+
+This feature allows you to configure access to a remote server and to publish, unpublish, and transfer forms between the local and remote server.
+
+### Configuration on the local server
+
+In order to configure a remote server, you need to setup the `oxf.fr.production-server-uri` property:
+
+```xml
+<property
+  as="xs:anyURI"
+  name="oxf.fr.production-server-uri"
+  value="http://remote.server:8080/orbeon/"/>;
+```
+
+### Configuration on the remote server
+
+You also need to authorize the remote server to accept incoming connections for services. One way of doing this is to use the Orbeon Forms delegating `orbeon-auth.war`, documented [here](http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-controller/authorization#TOC-A-simple-authorization-service).
+
+You deploy this WAR file alongside `orbeon.war` on the remote server, and you add this property to the remote server's `properties-local.xml`:
+
+```xml
+<property
+    as="xs:anyURI"
+    processor-name="oxf:page-flow"
+    name="authorizer"
+    value="/orbeon-auth"/>
+```
+
+This tells the remote server to use the `orbeon-auth` webapp to authenticate requests for services or pages which are not public.
+
+By default, `orbeon-auth` requires that all external requests to Form Runner services are authenticated with `BASIC` authentication and have the `orbeon-service` role. It blocks any other request.
+
+If you are using Tomcat, you can then configure a user with role `orbeon-service`. For example, in `tomcat-users.xml`:
+
+```xml
+<role rolename="orbeon-service"/>
+<user username="orbeon-admin" password="changeme" roles="orbeon-service"/>
+```
+
+Then, on the local server, you would use username `orbeon-admin` and password `changeme` when prompted.
+
+With this configuration, the local Orbeon Forms connects to services on the remote Orbeon Forms, which calls up `orbeon-auth` to authenticate the connection. `orbeon-auth` requires that the username/password provided authenticate as a valid Tomcat user with the `orbeon-service` role. If that's successful, then the service proceeds, otherwise it fails.
+
+### Remote operations
+
+When the remote server is configured as above, the first time you go to the Form Runner Home page you are prompted for credentials:
+
+![Credentials](images/home-credentials.png)
+
 ## Orbeon Forms 4.0 to 4.2
 
 For each form definition the current user has access to, the following links are shown if allowed:
