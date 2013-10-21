@@ -11,6 +11,7 @@ See also the [blog post](http://blog.orbeon.com/2013/10/autosave.html).
 When autosave is enabled, form data is automatically saved as *drafts* in the background as you interact with the form. You can access drafts from the Summary page. On the Edit page, you'll also be asked whether you'd like to continue your work from a draft when needed.
 
 ## Configuration
+
 The following property specifies the delay, in ms, after which form data should be automatically saved:
 
 ```xml
@@ -21,3 +22,23 @@ The following property specifies the delay, in ms, after which form data should 
 ```
 
 [SINCE Orbeon Forms 4.4] If the value is 0 or negative, autosaving is disabled.
+
+The following property enables or disable autosave for a given persistence provider. This is because autosave requires support from the persistence provider.
+
+```xml
+<property
+  as="xs:boolean"
+  name="oxf.fr.persistence.*.autosave"
+  value="false"/>
+```
+
+For example, as of Orbeon Forms 4.4, the `exist` provider does not support autosave yet. But the `oracle` provider does:
+
+```xml
+<property
+  as="xs:boolean"
+  name="oxf.fr.persistence.oracle.autosave"
+  value="true"/>
+```
+
+By default, the `oracle`, `mysql` and `db2` providers support autosave.
