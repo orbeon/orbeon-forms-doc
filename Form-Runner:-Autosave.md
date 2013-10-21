@@ -21,7 +21,9 @@ The following property specifies the delay, in ms, after which form data should 
   value="5000"/>
 ```
 
-[SINCE Orbeon Forms 4.4] If the value is 0 or negative, autosaving is disabled.
+[SINCE Orbeon Forms 4.4]
+
+If the value of `oxf.fr.detail.autosave-delay` is 0 or negative, autosaving is disabled.
 
 The following property enables or disable autosave for a given persistence provider. This is because autosave requires support from the persistence provider.
 
