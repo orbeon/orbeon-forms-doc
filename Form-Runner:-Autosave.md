@@ -1,7 +1,7 @@
 ## Support
 
 - [SINCE Orbeon Forms 4.3] This feature is supported with MySQL and DB2 only.
-- [SINCE Orbeon Forms 4.4] Oracle support is added as well.
+- [SINCE Orbeon Forms 4.4] Oracle support is supported.
 - eXist is not yet supported as of Orbeon Forms 4.4.
 
 See also the [blog post](http://blog.orbeon.com/2013/10/autosave.html).
