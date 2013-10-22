@@ -25,7 +25,7 @@ The following property specifies the delay, in ms, after which form data should 
 
 If the value of `oxf.fr.detail.autosave-delay` is 0 or negative, autosaving is disabled.
 
-The following property enables or disable autosave for a given persistence provider. This is because autosave requires support from the persistence provider.
+The following property enables or disable autosave for a given persistence provider, as autosave requires support from the persistence provider.
 
 ```xml
 <property
