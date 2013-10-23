@@ -25,9 +25,9 @@ A few things come to mind:
 
 ### Is there any cost associated with using Orbeon Forms?
 
-[Community Edition (CE) builds](http://www.orbeon.com/download) are available free of charge whether your use it to build open source or commercial applications.
+[Professional Edition (PE) builds](http://www.orbeon.com/download) are available through [PE Subscription plans](http://www.orbeon.com/pricing). Further commercial support is available with [Dev Support plans](http://www.orbeon.com/services).
 
-[Professional Edition (PE) builds](http://www.orbeon.com/download) are available through [PE Subscription plans](http://www.orbeon.com/pricing).
+[Community Edition (CE) builds](http://www.orbeon.com/download) are available free of charge whether your use it to build open source or commercial applications.
 
 The complete [source code](github.com/orbeon/orbeon-forms/) to Orbeon Forms CE and PE is available free of charge and under *real* open source terms. Note that out of the box, the build file creates a CE build.
 
@@ -37,8 +37,6 @@ With the open source code, you are free as you please to:
 - build applications on top of the platform
 
 Note however that if you make changes to the existing Orbeon Forms code, you are bound by the terms of the LGPL license, which requires you to redistribute changes to the open source community when you distribute your application.
-
-Orbeon offers commercial support for Orbeon Forms via [PE Subscription plans]() and [Dev Support plans](http://www.orbeon.com/services).
 
 ### Is Orbeon Forms an XForms Engine?
 
