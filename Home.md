@@ -1,3 +1,3 @@
-See also the [legacy wiki](http://wiki.orbeon.com/forms/).
+This is the landing page for the Orbeon Forms documentation.
 
-[[orbeon-logo-trimmed-transparent-42.png]]
+See also the [rest of the documentation on Google Sites](http://wiki.orbeon.com/forms/). We plan to move documentation to github as time goes.
