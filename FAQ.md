@@ -8,9 +8,20 @@ Orbeon Forms is an open source, standard-based web forms solution, which include
 - Form Runner: a runtime environment which facilitates the deployment and integration of large and complex forms
 - a core forms processing engine which implements the [XForms specification](http://www.w3.org/TR/xforms/) and an XBL-inspired component model
 
-For more information about Orbeon Forms, please visit [orbeon.com](http://www.orbeon.com/).
+See also:
 
-Orbeon Forms is based on XML documents and XForms. This leads to an architecture perfectly suited for the tasks of capturing, processing, and presenting XML data (in particular form data), and does not require writing any Java, JavaScript or other scripting code at all.
+- the Orbeon web site at [orbeon.com](http://www.orbeon.com/)
+- the latest [README file](https://github.com/orbeon/orbeon-forms/blob/master/README.md)
+
+### What differentiates Orbeon Forms from other web solutions?
+
+A few things come to mind:
+
+1. Orbeon Forms is not intended to be a general-purpose web app platform, but instead focuses on forms, typically large forms, and handling many of them. It's not uncommon for users to have hundreds of forms to create and deploy, or to have forms with hundreds of fields (sometimes more than 1000 fields).
+
+2. Although from time to time customization is required, and some complex rules do require the use of XPath, Orbeon Forms strives not to require coding in Java, JavaScript or other programming languages
+ 
+3. Finally, Orbeon Forms is biased towards XML documents as a representation of both form definitions and form data.
 
 ### Is there any cost associated with using Orbeon Forms?
 
