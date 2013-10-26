@@ -32,7 +32,23 @@ If users started filling out a new form, but didn't save the data, if starting t
 
 ## Configuration
 
-The following property specifies the delay, in ms, after which form data should be automatically saved:
+### With Orbeon Forms 4.3
+
+With Orbeon Forms 4.3 specifically, you need to:
+
+- If using MySQL, update your database by running this  DDL. (The tables for DB2 on 4.3 already contain the required changes out-of-the-box.)
+- Set the following properties:
+
+```xml
+<property as="xs:boolean" name="oxf.fr.support-owner-group" value="true"/>
+<property as="xs:boolean" name="oxf.fr.support-autosave"    value="true"/>
+```
+
+### With Orbeon Forms 4.4 and newer
+
+You don't need to do anything special to use this feature.
+
+### Properties
 
 ```xml
 <property
