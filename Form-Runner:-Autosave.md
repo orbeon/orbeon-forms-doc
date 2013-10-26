@@ -8,7 +8,27 @@ See also the [blog post](http://blog.orbeon.com/2013/10/autosave.html).
 
 ## How autosave works
 
-When autosave is enabled, form data is automatically saved as *drafts* in the background as you interact with the form. You can access drafts from the Summary page. On the Edit page, you'll also be asked whether you'd like to continue your work from a draft when needed.
+When autosave is enabled and you are an authenticated user, form data is automatically saved as *drafts* in the background as you enter and modify form data. This reduces the chance that you will lose data if something goes wrong and you haven't explicitly saved the data.
+
+### Summary page
+
+The summary page shows the drafts, on separate lines and clearly marked as such. From the summary page, users can click on a draft to open it, or select it to then delete it, assuming they have the permission to do so.
+
+![Summary page](images/fr-autosave-summary.png)
+
+### Edit page
+
+If users edit a form for which there is a draft, they will be asked whether they want to open the saved data, or start from the autosaved draft.
+
+![Edit page](images/fr-autosave-open.png)
+
+### New page
+
+If users started filling out a new form, but didn't save the data, if starting to fill out a new form later, they will be asked whether they wish to start from scratch, or from one of the drafts saved earlier. In this case, the prompt will be different whether there is just one draft for new data, or multiple drafts available, as in the latter case, users will need to select which draft they want to use.
+
+![New page, single draft](images/fr-autosave-new-single.png)
+
+![New page, single draft](images/fr-autosave-new-multiple.png)
 
 ## Configuration
 
