@@ -36,7 +36,7 @@ If users started filling out a new form, but didn't save the data, if starting t
 
 With Orbeon Forms 4.3 specifically, you need to:
 
-- If using MySQL, update your database by running this  DDL. (The tables for DB2 on 4.3 already contain the required changes out-of-the-box.)
+- If using MySQL, pupdate your database by running this  DDL](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql). (The tables for DB2 on 4.3 already contain the required changes out-of-the-box.)
 - Set the following properties:
 
 ```xml
