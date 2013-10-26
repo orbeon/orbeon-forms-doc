@@ -20,9 +20,12 @@ Not all form validations can be encoded in an XML Schema. For example, validatio
 Here is the schema produced for the [W9 form](http://demo.orbeon.com/orbeon/fr/orbeon/w9/edit/4a83b4cf2b905fbe105d7e57ddc5597b5e78c0a3) as of Orbeon Forms 4.4:
 
 ```xml
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xf="http://www.w3.org/2002/xforms" >
-    <xs:import namespace="http://www.w3.org/2002/xforms"
-               schemaLocation="http://www.w3.org/MarkUp/Forms/2007/XForms-11-Schema.xsd"/>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xf="http://www.w3.org/2002/xforms" >
+    <xs:import
+        namespace="http://www.w3.org/2002/xforms"
+        schemaLocation="http://www.w3.org/MarkUp/Forms/2007/XForms-11-Schema.xsd"/>
     <xs:element name="form">
         <xs:complexType>
             <xs:sequence>
@@ -52,7 +55,7 @@ Here is the schema produced for the [W9 form](http://demo.orbeon.com/orbeon/fr/o
                             </xs:element>
                             <xs:element name="llc-classification"/>
                             <xs:element name="other-classification"/>
-                            <xs:element type="xf:boolean" name="exempt-payee"></xs:element>
+                            <xs:element type="xf:boolean" name="exempt-payee"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -85,7 +88,7 @@ Here is the schema produced for the [W9 form](http://demo.orbeon.com/orbeon/fr/o
                 <xs:element name="hidden">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element type="xf:date" name="current-date"></xs:element>
+                            <xs:element type="xf:date" name="current-date"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
