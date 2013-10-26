@@ -15,4 +15,82 @@ This assumes that the data model of the form is standard XML data model as gener
 
 Not all form validations can be encoded in an XML Schema. For example, validations specified with the XForms `constraint` attribute are not present, as they are expressed with XPath an XML Schema 1.0 does not support XPath constraints.
 
+## Example
 
+Here is the schema produced for the [W9 form](http://demo.orbeon.com/orbeon/fr/orbeon/w9/edit/4a83b4cf2b905fbe105d7e57ddc5597b5e78c0a3) as of Orbeon Forms 4.4:
+
+```xml
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xf="http://www.w3.org/2002/xforms" >
+    <xs:import namespace="http://www.w3.org/2002/xforms"
+               schemaLocation="http://www.w3.org/MarkUp/Forms/2007/XForms-11-Schema.xsd"/>
+    <xs:element name="form">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="applicant">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name"/>
+                            <xs:element name="business-name"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="classification">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="federal-tax-classification">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="1"/>
+                                        <xs:enumeration value="2"/>
+                                        <xs:enumeration value="3"/>
+                                        <xs:enumeration value="4"/>
+                                        <xs:enumeration value="5"/>
+                                        <xs:enumeration value="6"/>
+                                        <xs:enumeration value="7"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="llc-classification"/>
+                            <xs:element name="other-classification"/>
+                            <xs:element type="xf:boolean" name="exempt-payee"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="address-account">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="address-1"/>
+                            <xs:element name="address-2"/>
+                            <xs:element name="account-numbers"/>
+                            <xs:element name="requester-name-address"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tin">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ssn-or-ein">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="ssn"/>
+                                        <xs:enumeration value="ein"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ssn"/>
+                            <xs:element name="ein"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="hidden">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xf:date" name="current-date"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+```
