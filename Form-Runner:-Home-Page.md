@@ -87,7 +87,7 @@ In order to configure a remote server, you need to setup the `oxf.fr.production-
 <property
   as="xs:anyURI"
   name="oxf.fr.production-server-uri"
-  value="http://remote.server:8080/orbeon/"/>;
+  value="http://remote.server:8080/orbeon/"/>
 ```
 
 ### Configuration on the remote server
