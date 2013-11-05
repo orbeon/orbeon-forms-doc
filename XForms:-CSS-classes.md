@@ -47,3 +47,7 @@ The XForms engine place the following classes on HTML elements.
     - `xforms-items`: wrapper around all checkboxes/radio buttons
     - `xforms-selected`: wrapper around a selected checkboxe/radio button
     - `xforms-deselected`: wrapper around a deselected checkboxe/radio button
+
+### Classes on group, switch, case, and repeat
+
+TODO
