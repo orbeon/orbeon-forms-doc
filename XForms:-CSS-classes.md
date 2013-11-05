@@ -23,14 +23,27 @@ The XForms engine place the following classes on HTML elements.
     - `xforms-empty`: the control is required and empty
     - `xforms-filled`: the control is required and filled
 - `xforms-incremental`: the control is in incremental mode
-- `xforms-mediatype-foo`: the control has `mediatype="foo/*"`
-- `xforms-mediatype-foo-bar`: the control has `mediatype="foo/bar"`
+- appearance
+    - `xforms-select1-appearance-full`: an `xf:select1` control with `appearance="full"`
+- mediatype
+    - `xforms-mediatype-foo`: the control has `mediatype="foo/*"`
+    - `xforms-mediatype-foo-bar`: the control has `mediatype="foo/bar"`
 - `xforms-static`: the control is in static readonly mode
+
+### Classes on XBL components
+
+- `xbl-component`: indicate an XBL component
+- `xbl-fr-foo-bar`: indicate an `foo:bar` component
 
 ### Classes on other elements
 
 - `xforms-label`: a label element
 - `xforms-help`: a help element
 - `xforms-hint`: a hint element
-- `xforms-alert`: an alert element
-- `xforms-active`: an active alert
+- alerts
+    - `xforms-alert`: an alert element
+    - `xforms-active`: an active alert
+- items
+    - `xforms-items`: wrapper around all checkboxes/radio buttons
+    - `xforms-selected`: wrapper around a selected checkboxe/radio button
+    - `xforms-deselected`: wrapper around a deselected checkboxe/radio button
