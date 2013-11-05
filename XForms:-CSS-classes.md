@@ -1,3 +1,7 @@
+## Status
+
+*This documentation is not complete yet.*
+
 ## CSS classes in use
 
 The XForms engine place the following classes on HTML elements.
