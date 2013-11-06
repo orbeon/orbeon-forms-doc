@@ -467,7 +467,6 @@ The following buttons are predefined and associated with the processes of the sa
 
 - `home`: navigate to `/`
 - `summary`: navigate to the summary page
-- `close`: navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page
 - `save-final`: save the form data if it is valid
 - `save-draft`: save the form data even if it is valid
 - `validate`: run `validate-all`
@@ -483,6 +482,8 @@ The following buttons are predefined and associated with the processes of the sa
 - `save-final`: validate and save to the db
 - `save-draft`: save to the db without validating
 - `send`: validate and send to a service
+- `close`: navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page  
+    *NOTE: The button in fact navigates to a page, but doesn't just close the current window/tab, as there is no cross-browser way to do this.*
 
 In fact all buttons can do the same tasks if they are configured appropriately! But by default the buttons above are preconfigured to do different tasks, for convenience.
 
