@@ -6,6 +6,8 @@ The function library is [documented here](http://wiki.orbeon.com/forms/doc/devel
 
 ### xf:valid()
 
+[SINCE Orbeon Forms 4.3]
+
 ```ruby
 xf:valid() as xs:boolean
 xf:valid($items as item()*) as xs:boolean
@@ -16,6 +18,8 @@ xf:valid($items as item()*, $relevant as xs:boolean, $recurse as xs:boolean) as 
 The `valid()` function returns the validity of XPath items, including instance data nodes.
 
 ### xf:bind()
+
+[SINCE Orbeon Forms 4.5]
 
 ```ruby
 xf:bind($id as xs:string) as node()*
