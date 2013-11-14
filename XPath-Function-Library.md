@@ -2,6 +2,27 @@
 
 The function library is [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions). New functions are documented below.
 
+## XForms 2.0 functions
+
+### xf:valid()
+
+```ruby
+xf:valid() as xs:boolean
+xf:valid($items as item()*) as xs:boolean
+xf:valid($items as item()*, $relevant as xs:boolean) as xs:boolean
+xf:valid($items as item()*, $relevant as xs:boolean, $recurse as xs:boolean) as xs:boolean
+```
+
+The `valid()` function returns the validity of XPath items, including instance data nodes.
+
+### xf:bind()
+
+```ruby
+xf:bind($id as xs:string) as node()*
+```
+
+This function returns the sequence of nodes associated with the bind specified by the `id` parameter.
+
 ## Extension XForms functions
 
 ### xxf:r()
