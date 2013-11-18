@@ -219,7 +219,7 @@ send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
 The full URL is composed of:
 
 - the URL specified by the `uri` property
-- the following URL parameters
+- the following URL parameters (when present in `parameters`)
     - `app`: the current form's app name
     - `form`: the current form's form name
     - `document`: the current document id
@@ -269,6 +269,10 @@ Example:
     name="oxf.fr.detail.send.success.uri.*.*"
     value='/fr/service/custom/orbeon/echo?action=submit&amp;email={//email}'/>
 ```
+
+[SINCE Orbeon Forms 4.5]
+
+If `replace` is set to `all` and the service issues a redirection via an HTTP status code, the redirection is propagated to the client. This also works with portlets.
 
 ### navigate
 
