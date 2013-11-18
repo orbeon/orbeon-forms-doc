@@ -216,6 +216,8 @@ Parameters have a higher precedence. In this example, the `uri` parameter is use
 send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
 ```
 
+*SECURITY NOTE: If `replace` is set to `all`, the content of resources or redirection URLs accessible by the Orbeon Forms server are forwarded to the web browser. Care must be taken to forward only resources that users of the application are allowed to see.*
+
 The full URL is composed of:
 
 - the URL specified by the `uri` property
