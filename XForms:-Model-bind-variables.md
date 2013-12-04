@@ -43,6 +43,8 @@ More specifically, given the following:
 - an expression is on a given bind called below the *context bind*
 - a target bind referred to by means of a variable name in that expression
 
+The following algorithm is followed:
+
 1. If the variable name refers to the context bind itself or one of its ancestors, the single node corresponding to the current bind iteration is returned.
 2. Otherwise, if the context bind and the target bind share a common ancestor, all branches starting from the common iteration of that common ancestor bind are followed to all possible target bind objects, and all nodes associated with those target bind objects are returned.
 3. Otherwise, if the context bind and the target bind do not share a common ancestor, all nodes associated with all target bind objects are returned.
