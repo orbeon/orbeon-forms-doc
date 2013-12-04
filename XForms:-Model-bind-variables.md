@@ -2,7 +2,7 @@
 
 `<xf:bind>` elements with a `name` attribute automatically declare a corresponding XPath variable, as if using `<xf:var>`. This is an extension of the XForms specification.
 
-*NOTE 1: Variables declared this way can only be used within the XForms model where they are declared. Unlike top-level model variables, they are not visible in the view (see issue [#309](https://github.com/orbeon/orbeon-forms/issues/309)).*
+*NOTE 1: Variables declared this way can only be used on binds within the XForms model where they are declared. Unlike top-level model variables, they are not visible in the view (see issue [#309](https://github.com/orbeon/orbeon-forms/issues/309)).*
 
 *NOTE 2: Up until Orbeon Forms 4.4, issue [#152](https://github.com/orbeon/orbeon-forms/issues/152) prevented properly referring to named binds within bind iterations. This issue is fixed with Orbeon Forms 4.5.*
 
@@ -40,7 +40,7 @@ The result shows the expected sums:
 
 More specifically, given the following:
 
-- an expression is on a given bind called below the *context bind*
+- an expression on a given bind called below the *context bind*
 - a target bind referred to by means of a variable name in that expression
 
 The following algorithm is followed:
