@@ -1,6 +1,6 @@
 ## Overview
 
-`<xf:bind>` elements with a `name` attribute automatically declare a corresponding XPath variable, as if using `<xf:var>`.
+`<xf:bind>` elements with a `name` attribute automatically declare a corresponding XPath variable, as if using `<xf:var>`. This is an extension of the XForms specification.
 
 *NOTE 1: Variables declared this way can only be used within the XForms model where they are declared. Unlike top-level model variables, they are not visible in the view (see issue [#309](https://github.com/orbeon/orbeon-forms/issues/309)).*
 
