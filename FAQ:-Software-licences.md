@@ -1,6 +1,6 @@
 See also:
 
-- [General Orbeon Forms FAQ](FAQ)
+- [FAQ](FAQ)
 - [legacy FAQ](https://sites.google.com/a/orbeon.com/forms/orbeon-forms-faq?pli=1)
 
 ### You sent a license for orbeon Forms 4.4. Can I use Orbeon Forms 4.0 with that license?
