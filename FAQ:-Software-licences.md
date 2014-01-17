@@ -1,5 +1,3 @@
-## Software license FAQ
-
 See also:
 
 - [General Orbeon Forms FAQ](FAQ)
