@@ -1,5 +1,3 @@
-## General Orbeon Forms FAQ
-
 See also the [other parts of this FAQ](https://sites.google.com/a/orbeon.com/forms/orbeon-forms-faq?pli=1).
 
 ### What is Orbeon Forms?
