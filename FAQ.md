@@ -1,6 +1,6 @@
 See also:
 
-- [FAQ: Software licences](FAQ:-Software-licences)
+- [FAQ: Software licences](FAQ: Software licences)
 - [Legacy FAQ](https://sites.google.com/a/orbeon.com/forms/orbeon-forms-faq?pli=1)
 
 ### What is Orbeon Forms?
