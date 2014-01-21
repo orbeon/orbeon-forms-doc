@@ -4,6 +4,10 @@ Allowing Form Runner to cache form definitions is important to help with perform
 
 The idea is that when Form Runner requests a form definition, it is able, if it holds the form definition in its local cache, to perform a so-called HTTP conditional GET. This is exactly the same thing that web browsers do to revalidate some resources that they cache on the client. But here it is about Form Runner caching form definitions obtained from the persistence layer.
 
+## Audience
+
+This page is intended for programmers implementing their own persistence layer (or for anybody curious about how things work!).
+
 ## Status
 
 As of Orbeon Forms 4.0, there is minimal support in Form Runner for conditional GETs with the `Last-Modified` and `If-Modified-Since` HTTP headers. However the built-in eXist and relational persistence layer implementations do not support these headers properly yet.
