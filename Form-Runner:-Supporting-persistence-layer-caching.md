@@ -21,7 +21,7 @@ The server (here the persistence layer), when seeing this header, SHOULD first t
 - If the resource is newer, then the persistence layer must do the usual and serve the form definition with an HTTP `200` status code.
 - If the resource has the same date or is older, the persistence layer should simply return a `304` ("not modified") status code, without the need to send any response body.
 
-The obvious benefit of this is that:
+The benefits are that:
 
 - The persistence layer doesn't need to actually retrieve the form definition from a database.
 - The form definition doesn't need to be sent over the wire and parsed by Form Runner.
@@ -29,6 +29,8 @@ The obvious benefit of this is that:
 For this to work, your persistence layer MUST send, with every form definition, a correct `Last-Modified` header, for example:
 
     Last-Modified: Thu, 16 Jan 2014 01:16:27 GMT
+
+The above only needs to be supported for the HTTP `GET` method and, optionally, for the `HEAD` method (which Form Runner doesn't use).
 
 ## Supporting ETag and If-None-Match
 
