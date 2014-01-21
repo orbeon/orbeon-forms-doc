@@ -18,15 +18,15 @@ The idea is very simple: the HTTP request may contain an `If-Modified-Since` HTT
 
 The server (here the persistence layer), when seeing this header, SHOULD first try to check whether the resource requested (typically the form definition) has been modified since the given date (this can happen for example if the form is republished by Form Builder).
 
-- If the resource is newer, then the persistence layer must do the usual and serve the form definition with an HTTP 200 status code.
-- If the resource has the same date or is older, the persistence layer should simply return a 403 ("not modified") status code, without the need to send any response body.
+- If the resource is newer, then the persistence layer must do the usual and serve the form definition with an HTTP `200` status code.
+- If the resource has the same date or is older, the persistence layer should simply return a `304` ("not modified") status code, without the need to send any response body.
 
 The obvious benefit of this is that:
 
 - The persistence layer doesn't need to actually retrieve the form definition from a database.
 - The form definition doesn't need to be sent over the wire and parsed by Form Runner.
 
-Important note: for this work work, your persistence layer MUST send, with every form definition, a correct `Last-Modified` header, e.g.:
+For this to work, your persistence layer MUST send, with every form definition, a correct `Last-Modified` header, for example:
 
     Last-Modified: Thu, 16 Jan 2014 01:16:27 GMT
 
