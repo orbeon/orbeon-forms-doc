@@ -2,7 +2,7 @@
 
 Allowing Form Runner to cache form definitions is important to help with performance. Form Runner interfaces with the persistence layer through a [REST API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api). Standard HTTP caching mechanisms are introduced to allow caching at that level.
 
-The idea is that when Form Runner requests a form definition, it is able in some instances to perform a so-called HTTP conditional GET. This is exactly the same thing that web browsers do to revalidate some resources that they cache on the client. But here it is about Form Runner caching form definitions obtained from the persistence layer.
+The idea is that when Form Runner requests a form definition, it is able, if it holds the form definition in its local cache, to perform a so-called HTTP conditional GET. This is exactly the same thing that web browsers do to revalidate some resources that they cache on the client. But here it is about Form Runner caching form definitions obtained from the persistence layer.
 
 ## Status
 
