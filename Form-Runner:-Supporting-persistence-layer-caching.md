@@ -8,7 +8,7 @@ As of Orbeon Forms 4.0, there is minimal support in Form Runner for conditional 
 
 As we work towards the improvements described in issue [#1239](https://github.com/orbeon/orbeon-forms/issues/1239), we hope to see even better performance when the persistence layer supports these headers. We also plan to add support for `ETag` and `If-None-Match`, which will be required for persistence layers that support versioning.
 
-## Supporting `Last-Modified` and `If-Modified-Since`
+## Supporting Last-Modified and If-Modified-Since
 
 The idea is that when Form Runner requests a form definition, it is able in some instances to perform a so-called HTTP conditional GET. This is exactly the same thing that web browsers do to revalidate some resources that they cache on the client. But here it is about Form Runner caching form definitions obtained from the persistence layer.
 
@@ -29,3 +29,7 @@ The obvious benefit of this is that:
 Important note: for this work work, your persistence layer MUST send, with every form definition, a correct `Last-Modified` header, e.g.:
 
     Last-Modified: Thu, 16 Jan 2014 01:16:27 GMT
+
+## Supporting ETag and If-None-Match
+
+TODO
