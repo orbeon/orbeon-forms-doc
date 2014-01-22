@@ -226,6 +226,7 @@ The full URL is composed of:
     - `form`: the current form's form name
     - `document`: the current document id
     - `valid`: whether the data sent satisfies validation rules
+    - `language`: the language of the form at the time it was submitted [SINCE Orbeon Forms 4.5]
 
 Example:
 
@@ -233,7 +234,8 @@ Example:
       app=acme&
       form=invoice&
       document=f0cd6bf16ba1f783773bb7165f0d79deab37585f&
-      valid=true
+      valid=true&
+      language=fr
 
 `annotate` can contain the following tokens: `error`, `warning`, or `info`. The XML data is annotated with the information associated with the given level or levels. If the property is missing or empty, no annotation takes place. For example:
 
