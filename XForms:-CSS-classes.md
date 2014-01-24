@@ -49,6 +49,7 @@ The XForms engine place the following classes on HTML elements.
     - `xforms-deselected`: wrapper around a deselected checkboxe/radio button
 - `xforms-field`: in static readonly mode only, outputs which look like fields [SINCE Orbeon Forms 4.5]
     - for `xf:input`, `xf:secret`, `xf:select`/`xf:select1`
+    - this is used to highlight (by default display a field box around) readonly fields in review and PDF modes
 
 ### Classes on group, switch, case, and repeat
 
