@@ -12,6 +12,12 @@ For example, you can create a generic "US Address" section and reuse it in multi
 
 ![Defining a section template in Form Builder](images/fb-section-template.png)
 
+Sections can contain:
+
+- nested grids, with or without repeats
+- nested subsections, with or without repeats
+- services and actions (see below)
+
 When creating a form, the toolbox shows the available sections templates:
 
 - Global templates, created in `orbeon/library` form.
