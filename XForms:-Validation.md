@@ -11,6 +11,8 @@ There are two main methods for validating data in XForms:
 - with an imported XML Schema
 - with `xf:bind`
 
+Using a bind allows you to create precise error messages to the user based on the type of data entry error.
+
 ## Validation order
 
 Orbeon Forms performs validation of a node in the following order:
