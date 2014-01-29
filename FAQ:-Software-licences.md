@@ -17,3 +17,14 @@ You can check whether there is an actual expiration by checking the `expiration`
 ### What is the subscription-end field in the license file?
 
 The `subscription-end` field is informative and indicates the end of the support subscription, when applicable.
+
+### What am I paying for when I acquire an Orbeon Forms PE Production subscription?
+
+The first year, both:
+
+- a license to install and use the software
+- one year of support
+
+The second and subsequent years:
+
+- additional years of support
