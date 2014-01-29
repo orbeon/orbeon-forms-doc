@@ -10,7 +10,7 @@ Yes, a license generated for a given version will work with previous versions of
 ### Will my license expire and cause the software to stop working?
 
 - Production licenses don't expire.
-- Non-production Basic licenses as well as Dev licenses do expire.
+- Non-production Basic licenses (as well as the older Dev licenses) do expire.
 
 You can check whether there is an actual expiration by checking the `expiration` field of the license file.
 
