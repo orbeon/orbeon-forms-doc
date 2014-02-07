@@ -4,14 +4,17 @@ We describe a few usage scenarios for Orbeon Forms below, with the intent of ans
 
 ## Forms for a local government
 
-A local government publishes a number of forms for its citizens. Orbeon Forms is used for the capture of data as well as consultation by government employees.
+A local government publishes a number of forms for its constituents. Orbeon Forms is used for the capture of data as well as consultation by government employees.
 
-- Citizens are provided with a catalog of available forms (e.g. linked from a web page).
-- They can fill-out and submit relevant forms.
-- The data is saved to a database and/or sent to other systems or workflows.
+- Constituents are provided with a catalog of available forms (e.g. linked from a web page).
+    - They can fill-out and submit relevant forms.
+    - The data is saved to a database and/or sent to other systems or workflows.
+    - If enabled, they can download a PDF of the form, with the data they entered in the web form.
+    - If a "plain old signature" is required, they can print the PDF, sign it, and send the printed copy.
 - The relevant government offices have access to the captured data for further processing.
-  - Data entered by the citizen can be viewed.
-  - Additional data and notes can be provided by the government employee.
+    - Data entered by the citizen can be viewed.
+    - Additional data and notes can be provided by the government employee.
+    - If they receive a signed copy of the printed form, the copy can contain a bar code, so the government can correlate the printed form with information in the database, and thus avoid having to re-enter the information in the form.
 
 ## Forms for an organization's internal use
 
