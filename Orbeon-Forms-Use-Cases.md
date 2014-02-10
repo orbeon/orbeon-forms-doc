@@ -9,12 +9,27 @@ A local government publishes a number of forms for its constituents. Orbeon Form
 - Constituents are provided with a catalog of available forms (e.g. linked from a web page).
     - They can fill-out and submit relevant forms.
     - The data is saved to a database and/or sent to other systems or workflows.
-    - If enabled, they can download a PDF of the form, with the data they entered in the web form.
-    - If a "plain old signature" is required, they can print the PDF, sign it, and send the printed copy.
 - The relevant government offices have access to the captured data for further processing.
     - Data entered by the citizen can be viewed.
     - Additional data and notes can be provided by the government employee.
-    - If they receive a signed copy of the printed form, the copy can contain a bar code, so the government can correlate the printed form with information in the database, and thus avoid having to re-enter the information in the form.
+
+### When a signature on paper is required
+
+Not all workflows can be handled 100% online. Yet. But even when constituents will ultimately need to sign a document on paper, a web form can help. Here is how the workflow looks like:
+
+- Constituents:
+    - Fill out the form online, and the data is saved in a database, as above.
+    - Download a PDF of the form, with the data they entered.
+    - Sign it, and send the signed copy to the government.
+- The government:
+    - Receives the signed copy.
+    - The generated and printed PDF contains a bar code (if enabled), so the government can correlate the printed form with information in the database, and thus avoid having to re-enter the information in the form.
+
+While this isn't as straightforward as a 100% online solution, this use case has the following benefits:
+
+- It fits right into existing practices, and can be offered to constituents as an option to just filling out the paper form by themselves without the help of the web form, as they might already be used to.
+- The web form can better guide constituents. Its logic can be improved, even if in the end the same paper form is generate. It can check for errors as constituents fill out of the form, and avoid further frustrating and expensive back-and-forth.
+- Because the data can be saved in a database, there is no need to re-enter it, thus saving time and avoiding potential mistakes. 
 
 ## Forms for an organization's internal use
 
