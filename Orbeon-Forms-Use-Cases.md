@@ -44,5 +44,5 @@ Within an organization, employees capture, consult, and modify data.
 
 ## Anonymous data capture
 
-An form is provided online and allows data to be captured anonymously. Your organization can then consult the data. An example of this is the [Orbeon Forms PE Trial License form](http://demo.orbeon.com/orbeon/fr/orbeon/register/new).
+A form is provided online and allows data to be captured anonymously. Your organization can then consult the data. An example of this is the [Orbeon Forms PE Trial License form](http://demo.orbeon.com/orbeon/fr/orbeon/register/new).
 
