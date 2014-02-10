@@ -19,8 +19,8 @@ Not all workflows can be handled 100% online. Yet. But even when constituents wi
 
 - Constituents:
     - Fill out the form online, and the data is saved in a database, as above.
-    - Download a PDF of the form, with the data they entered.
-    - Sign it, and send the signed copy to the government.
+    - Download a PDF of the form with the data they entered.
+    - Print it, sign it, and send the signed paper copy to the government.
 - The government:
     - Receives the signed copy.
     - The generated and printed PDF contains a bar code (if enabled), so the government can correlate the printed form with information in the database, and thus avoid having to re-enter the information in the form.
@@ -28,7 +28,7 @@ Not all workflows can be handled 100% online. Yet. But even when constituents wi
 While this isn't as straightforward as a 100% online solution, this use case has the following benefits:
 
 - It fits right into existing practices, and can be offered to constituents as an option to just filling out the paper form by themselves without the help of the web form, as they might already be used to.
-- The web form can better guide constituents. Its logic can be improved, even if in the end the same paper form is generate. It can check for errors as constituents fill out of the form, and avoid further frustrating and expensive back-and-forth.
+- The web form can better guide constituents. Its logic can be improved, even if in the end the same paper form is generated. It can check for errors as constituents fill out the form, thus avoiding frustrating and expensive back-and-forth.
 - Because the data can be saved in a database, there is no need to re-enter it, thus saving time and avoiding potential mistakes. 
 
 ## Forms for an organization's internal use
