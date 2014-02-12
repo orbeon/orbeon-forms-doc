@@ -12,3 +12,12 @@ For most deployments, the following can be removed:
 - `WEB-INF/resources/forms/dmv-14`: some demo forms resources
 - `orbeon-cli.jar` and `commons-cli-1_0.jar`: for command-line XPL
 - `exist-data`: embedded eXist XML database (setup an external database instead)
+
+## Removing Form Builder
+
+Form Builder is packaged as a separate JAR file:
+
+`WEB-INF/lib/orbeon-form-builder.jar`
+
+If you don't need Form Builder in an installation, you can simply remove that JAR file.
+
