@@ -298,6 +298,27 @@ Navigate to an external page via client-side GET.
         - `message`: message to show
         - `resource`: resource key pointing to the message
 
+### confirm
+
+[SINCE Orbeon Forms 4.5]
+
+Show a confirmation dialog. If the user selects "No", the current process is aborted. If the user selects "Yes", the current process is resumed.
+
+![Confirmation dialog](images/fr-confirm.png)
+
+- parameters
+    - `message`: message to show
+    - `resource`: resource key pointing to the message
+
+Example of use:
+
+```
+save
+then confirm
+then suspend
+then send("oxf.fr.detail.send.success")'/>
+```
+
 ### xf:dispatch
 
 [SINCE Orbeon Forms 4.3]
