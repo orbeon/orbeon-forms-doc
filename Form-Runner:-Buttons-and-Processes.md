@@ -319,6 +319,15 @@ then suspend
 then send("oxf.fr.detail.send.success")'/>
 ```
 
+You can override the confirmation message as follows:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.resource.*.*.en.detail.messages.confirmation-dialog-message"
+  value="Are you sure you want to proceed?"/>
+```
+
 ### xf:dispatch
 
 [SINCE Orbeon Forms 4.3]
