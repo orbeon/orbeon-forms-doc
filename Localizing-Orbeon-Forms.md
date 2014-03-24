@@ -15,7 +15,7 @@ Spanish   | F | F | F | P | F | hoping to get full FR support
 Italian   | F | F | F | P | P
 German    | F | F | F | P | P
 Finnish   | F | F | P | P | P
-Norwegian | F | F | P | P | P | XBL components metadata missing
+Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 Swedish   | F | F | F | P | N
 Polish    | N | F | N | N | N
@@ -30,7 +30,7 @@ Italian   | F | F | F | F | F
 German    | F | F | F | F | F
 Spanish   | F | F | P | P | P
 Finnish   | F | F | P | P | P
-Norwegian | F | F | P | P | P | XBL components metadata missing
+Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 
 As of Orbeon Forms 4.2:
@@ -40,7 +40,7 @@ Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder | 
 English   | F | F | F | F | F
 French    | F | F | F | F | F
 Spanish   | F | F | P | P | P
-Norwegian | F | F | P | P | P | XBL components metadata missing
+Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 
 ## Files to localize
