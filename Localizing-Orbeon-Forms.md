@@ -180,7 +180,7 @@ You can go about this in various ways.
 3. Either way, we need the [CLA](http://wiki.orbeon.com/forms/community/cla) signed.
 
 But you will want to see the results yourself first. Here you can either work with
-- the source (from github)
+- the source [from github](https://github.com/orbeon/orbeon-forms)
 - or a binary build
 
 If working with the source, build Orbeon Forms, localize the files, and test as you go.
