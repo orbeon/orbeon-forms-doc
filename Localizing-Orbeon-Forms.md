@@ -75,8 +75,8 @@ As of Orbeon Forms 4.2:
 
 See these 2 files:
 
-- [https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/i18n/resources.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/i18n/resources.xml)
-- [https://github.com/orbeon/orbeon-forms/blob/master/src/resources/forms/orbeon/builder/form/resources.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/forms/orbeon/builder/form/resources.xml)
+- [Form Runner's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/i18n/resources.xml)
+- [Form Builder's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/forms/orbeon/builder/form/resources.xml)
 
 Each file has as series of `<resource>` elements each with an `xml:lang`
 attribute. You need to add your own element. Say you want to localize to
@@ -128,9 +128,7 @@ question](http://stackoverflow.com/questions/11449195/orbeon-4-0-0-m6-how-to-set
 
 ### Calendar resources
 
-See:
-
-[https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/ops/javascript/orbeon/xforms/control/CalendarResources.js](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/ops/javascript/orbeon/xforms/control/CalendarResources.js)
+See [`CalendarResources.js`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/ops/javascript/orbeon/xforms/control/CalendarResources.js).
 
 Similar idea here, but this is in JavaScript, for client-side calendar
 support.
@@ -143,7 +141,7 @@ Orbeon Forms XBL components are located as subdirectories here:
 
 Each subdirectory has a .xbl file with some metadata. For example:
 
-- https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/us-phone/us-phone.xbl
+- [`us-phone.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/us-phone/us-phone.xbl)
 
 In there, you will notice the localization in English, French, etc. Add your own language.
 
@@ -155,7 +153,7 @@ To get started search for the English version in all files for both:
 Then add the corresponding resources for the new language.
 
 *NOTE: Makes sure also to localize
-[dialog-select-resources.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/dialog-select/dialog-select-resources.xml),
+[`dialog-select-resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/dialog-select/dialog-select-resources.xml),
 which is easily missed.*
 
 ### Pseudo-XBL components
@@ -169,7 +167,7 @@ controls.
 
 For formatting of dates and times, a Java class usually needs to be added. See the example for Norwegian:
 
-- https://github.com/orbeon/orbeon-forms/blob/master/src/main/java/org/orbeon/saxon/number/Numberer_no.java
+- [`Numberer_no.java`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/java/org/orbeon/saxon/number/Numberer_no.java)
 
 ### How to localize
 
@@ -189,8 +187,8 @@ If working with the source, build Orbeon Forms, localize the files, and test as 
 
 If working with a binary build, you can override built-in files by creating your own files under the WAR file's WEB-INF/resources directory:
 
-- WEB-INF/resources/apps/fr/i18n/resources.xml
-- WEB-INF/resources/forms/orbeon/builder/form/resources.xml
-- WEB-INF/resources/ops/javascript/orbeon/xforms/control/CalendarResources.js
-- WEB-INF/resources/xbl/orbeon/*/*.xbl
-- WEB-INF/resources/forms/orbeon/builder/xbl/*/*.xbl
+- `WEB-INF/resources/apps/fr/i18n/resources.xml`
+- `WEB-INF/resources/forms/orbeon/builder/form/resources.xml`
+- `WEB-INF/resources/ops/javascript/orbeon/xforms/control/CalendarResources.js`
+- `WEB-INF/resources/xbl/orbeon/*/*.xbl`
+- `WEB-INF/resources/forms/orbeon/builder/xbl/*/*.xbl`
