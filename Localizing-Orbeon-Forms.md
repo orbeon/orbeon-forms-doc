@@ -7,11 +7,11 @@ This document explains how to localize Orbeon Forms
 
 As of Orbeon Forms 4.5:
 
-Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder | Notes
-----------|:--------:|:--------:|:--------------:|:-----------:|:------------:|------
+Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder 
+----------|:--------:|:--------:|:--------------:|:-----------:|:-----------:
 English   | F | F | F | F | F
 French    | F | F | F | F | F
-Spanish   | F | F | F | P | F | hoping to get full FR support
+Spanish   | F | F | F | P | F
 Italian   | F | F | F | P | P
 German    | F | F | F | P | P
 Finnish   | F | F | P | P | P
@@ -22,8 +22,8 @@ Polish    | N | F | N | N | N
 
 As of Orbeon Forms 4.3:
 
-Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder | Notes
-----------|:--------:|:--------:|:--------------:|:-----------:|:------------:|------
+Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder
+----------|:--------:|:--------:|:--------------:|:-----------:|:-----------:
 English   | F | F | F | F | F
 French    | F | F | F | F | F
 Italian   | F | F | F | F | F
@@ -35,8 +35,8 @@ Russian   | F | F | P | P | P
 
 As of Orbeon Forms 4.2:
 
-Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder | Notes
-----------|:--------:|:--------:|:--------------:|:-----------:|:------------:|------
+Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder
+----------|:--------:|:--------:|:--------------:|:-----------:|:-----------:
 English   | F | F | F | F | F
 French    | F | F | F | F | F
 Spanish   | F | F | P | P | P
