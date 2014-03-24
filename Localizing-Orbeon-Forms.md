@@ -3,9 +3,13 @@
 This document explains how to localize Orbeon Forms
 ([i18n/L10n](http://en.wikipedia.org/wiki/Internationalization_and_localization)).
 
-## Currently supported languages
+## Supported languages
 
-As of Orbeon Forms 4.5:
+- F: full support
+- P: partial support
+- N: no support
+
+### As of Orbeon Forms 4.5
 
 Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder 
 ----------|:--------:|:--------:|:--------------:|:-----------:|:-----------:
@@ -20,7 +24,7 @@ Russian   | F | F | P | P | P
 Swedish   | F | F | F | P | N
 Polish    | N | F | N | N | N
 
-As of Orbeon Forms 4.3:
+### As of Orbeon Forms 4.3
 
 Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder
 ----------|:--------:|:--------:|:--------------:|:-----------:|:-----------:
@@ -33,7 +37,7 @@ Finnish   | F | F | P | P | P
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 
-As of Orbeon Forms 4.2:
+### As of Orbeon Forms 4.2
 
 Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder
 ----------|:--------:|:--------:|:--------------:|:-----------:|:-----------:
