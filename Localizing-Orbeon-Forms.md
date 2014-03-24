@@ -7,33 +7,18 @@ This document explains how to localize Orbeon Forms
 
 As of Orbeon Forms 4.5:
 
-- English:
-    - full
-- French:
-    - full
-- Italian
-    - almost complete (hoping to get it updated)
-- German
-    - almost complete (hoping to get it updated)
-- Spanish:
-    - Form Runner: partial (hoping to get it updated)
-    - calendar and numberer: complete
-    - XBL components: complete
-    - FormBuilder: complete
-- Finnish
-    - partial
-- Norwegian:
-    - partial
-    - XBL components metadata: missing
-- Russian:
-    - partial
-- Swedish
-    - Form Runner: almost complete
-    - calendar and numberer: complete
-    - XBL components including metadata: complete
-    - Form Builder: missing
-- Polish
-    - numberer: complete
+Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder | Notes
+----------|:--------:|:--------:|:--------------:|:-----------:|:------------:|------
+English   | F | F | F | F | F
+French    | F | F | F | F | F
+Spanish   | F | F | F | P | F | hoping to get full FR support
+Italian   | F | F | F | P | P
+German    | F | F | F | P | P
+Finnish   | F | F | P | P | P
+Norwegian | F | F | P | P | P | XBL components metadata missing
+Russian   | F | F | P | P | P
+Swedish   | F | F | F | P | N
+Polish    | N | F | N | N | N
 
 As of Orbeon Forms 4.3:
 
