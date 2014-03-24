@@ -22,37 +22,26 @@ Polish    | N | F | N | N | N
 
 As of Orbeon Forms 4.3:
 
-- English:
-    - full
-- French:
-    - full
-- Italian
-    - full
-- German
-    - full
-- Finnish
-    - partial (some new resources missing)
-- Spanish:
-    - partial
-- Norwegian:
-    - partial
-    - XBL components metadata is not localized
-- Russian:
-    - partial
+Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder | Notes
+----------|:--------:|:--------:|:--------------:|:-----------:|:------------:|------
+English   | F | F | F | F | F
+French    | F | F | F | F | F
+Italian   | F | F | F | F | F
+German    | F | F | F | F | F
+Spanish   | F | F | P | P | P
+Finnish   | F | F | P | P | P
+Norwegian | F | F | P | P | P | XBL components metadata missing
+Russian   | F | F | P | P | P
 
 As of Orbeon Forms 4.2:
 
-- English:
-    - full
-- French:
-    - full
-- Spanish:
-    - partial
-- Norwegian:
-    - partial
-    - XBL components metadata is not localized
-- Russian:
-    - partial
+Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder | Notes
+----------|:--------:|:--------:|:--------------:|:-----------:|:------------:|------
+English   | F | F | F | F | F
+French    | F | F | F | F | F
+Spanish   | F | F | P | P | P
+Norwegian | F | F | P | P | P | XBL components metadata missing
+Russian   | F | F | P | P | P
 
 ## Files to localize
 
