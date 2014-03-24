@@ -89,7 +89,7 @@ Italian:
 You can start by copying an existing `<resource>` element (for example
 French).
 
-Starting 2014-03-21, we are marking placeholder resources for exiting
+Starting 2014-03-21, we are marking placeholder resources for existing
 languages with `todo="true"`.
 
 *NOTE: You must not translate the `<value>` part of item definitions, for
