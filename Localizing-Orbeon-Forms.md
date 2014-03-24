@@ -169,7 +169,7 @@ For formatting of dates and times, a Java class usually needs to be added. See t
 
 - [`Numberer_no.java`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/java/org/orbeon/saxon/number/Numberer_no.java)
 
-### How to localize
+## How to localize
 
 You can go about this in various ways.
 
