@@ -16,12 +16,12 @@ Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder
 English   | F | F | F | F | F
 French    | F | F | F | F | F
 Spanish   | F | F | F | F | F
+Swedish   | F | F | F | F | N
 Italian   | F | F | F | P | P
 German    | F | F | F | P | P
 Finnish   | F | F | P | P | P
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
-Swedish   | F | F | F | P | N
 Polish    | N | F | N | N | N
 
 ### As of Orbeon Forms 4.3
