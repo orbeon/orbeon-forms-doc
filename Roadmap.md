@@ -43,10 +43,12 @@ Dates:
 
 ### Performance
 
- (e.g. memory use)
+- memory use (see [#1606](https://github.com/orbeon/orbeon-forms/issues/1606))
+
 ### Mobile
 
- (e.g. responsive UI)
+- responsive UI
+
 ### Maintenance
 
 Like any project, Orbeon Forms has some technical debt. It is not possible to remove all of it at once, but, like garbage collection, we would like to improve the code base incrementally. This includes:
