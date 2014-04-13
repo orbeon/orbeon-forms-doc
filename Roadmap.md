@@ -21,6 +21,8 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
+- one performance item
+- one maintenance item
 - TBD
 
 Dates:
