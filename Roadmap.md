@@ -38,8 +38,10 @@ Focus:
 
 Dates:
 
-- 2014-07-xx: branching and big feature freeze
-- 2014-08-xx: tentative release date
+*Counting 1 slower month.*
+
+- 2014-08-xx: branching and big feature freeze
+- 2014-09-xx: tentative release date
 
 ## Tracks
 
