@@ -22,7 +22,9 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 Focus:
 
 - one performance item
+    - suggested: [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
 - one maintenance item
+    - suggested: 
 - [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
 
 Dates:
