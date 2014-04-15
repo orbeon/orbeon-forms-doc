@@ -23,7 +23,7 @@ Focus:
 
 - one performance item
 - one maintenance item
-- TBD
+- [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
 
 Dates:
 
