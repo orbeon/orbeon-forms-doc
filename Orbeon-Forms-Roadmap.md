@@ -78,4 +78,4 @@ This includes:
 
 ### Form Builder modernization
 
-- drag-and-drop ([#1479](https://github.com/orbeon/orbeon-forms/issues/1479))
+[See umbrella #1675](https://github.com/orbeon/orbeon-forms/issues/1675)
