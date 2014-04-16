@@ -16,7 +16,6 @@ For each release we would like to:
 - pick one maintenance (build system, refactoring, …) item
 - pick one performance item
 - pick one mobile item if possible
-- pick one 
 
 The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
 
@@ -54,6 +53,7 @@ Dates (tentative):
 
 - memory use (see umbrella [#1606](https://github.com/orbeon/orbeon-forms/issues/1606))
 - load time (see [#1239](https://github.com/orbeon/orbeon-forms/issues/1239))
+- MySQL performance (see [#649](https://github.com/orbeon/orbeon-forms/issues/649))
 
 ### Mobile
 
