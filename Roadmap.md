@@ -54,7 +54,7 @@ Dates:
 
 ### Mobile
 
-- responsive UI
+- responsive UI (see [#1181](https://github.com/orbeon/orbeon-forms/issues/1181))
 
 ### Maintenance
 
