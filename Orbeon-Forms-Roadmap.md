@@ -73,7 +73,7 @@ This includes:
 
 ### Integration
 
-- embedding ([#1235](https://github.com/orbeon/orbeon-forms/issues/1235))
+- Easy embedding of forms ([#1235](https://github.com/orbeon/orbeon-forms/issues/1235))
 - SQL Server support ([#697](https://github.com/orbeon/orbeon-forms/issues/697))
 
 ### Form Builder modernization
