@@ -30,7 +30,7 @@ Focus:
     - suggested: 
 - [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
 
-Dates:
+Dates (tentative):
 
 - 2014-05-08: branching and big feature freeze
 - 2014-06-05: tentative release date
@@ -42,12 +42,11 @@ Focus:
 - TBD
 - [Issues considered for 4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=38&page=1&sort=updated&state=open)
 
-Dates:
+Dates (tentative):
 
-*Counting 1 slower month.*
-
-- 2014-08-xx: branching and big feature freeze
-- 2014-09-xx: tentative release date
+- counting 1 slow summer month
+- 2014-08-12: branching and big feature freeze
+- 2014-09-09: tentative release date
 
 ## Tracks
 
