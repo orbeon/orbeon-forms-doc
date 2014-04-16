@@ -78,4 +78,4 @@ This includes:
 
 ### Form Builder modernization
 
-[See umbrella #1675](https://github.com/orbeon/orbeon-forms/issues/1675)
+- Improve Form Builder usability (see umbrella [#1675](https://github.com/orbeon/orbeon-forms/issues/1675))
