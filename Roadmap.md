@@ -50,6 +50,7 @@ Dates:
 ### Performance
 
 - memory use (see [#1606](https://github.com/orbeon/orbeon-forms/issues/1606))
+- load time (see [#1239](https://github.com/orbeon/orbeon-forms/issues/1239))
 
 ### Mobile
 
