@@ -1,11 +1,15 @@
 ## Ongoing development tracks
 
+As of 2014-04-16, we have identified the following major development tracks:
+
 1. performance (e.g. memory use)
 1. mobile (e.g. responsive UI)
 1. architecture and maintenance (e.g. modularization)
 1. integration (e.g. embedding, SQL Server support)
 1. Form Builder modernization (e.g. drag-and-drop)
 1. other
+
+See [below](#tracks) for more details.
 
 ## What's in a release
 
