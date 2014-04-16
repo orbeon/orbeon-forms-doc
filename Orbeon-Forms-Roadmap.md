@@ -93,4 +93,3 @@ This includes:
 - Document standard use cases / workflows with Orbeon Forms (see [#228](https://github.com/orbeon/orbeon-forms/issues/228))
 - Easier integration with external systems/workflows (see [Data Envelope and Metadata](https://sites.google.com/a/orbeon.com/forms/projects/form-runner-builder/form-runner-data-envelope))
 - Improved/more out of the box form controls (e.g. SSN, intl phone, etc.)
-- 
