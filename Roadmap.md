@@ -60,14 +60,14 @@ Dates:
 
 Like any project, Orbeon Forms has some technical debt. It is not possible to remove all of it at once, but, like garbage collection, we would like to improve the code base incrementally. This includes:
 
-- modularization of the code
+- modularization of the code (see [#1585](https://github.com/orbeon/orbeon-forms/issues/1585))
 - drop old frameworks and adopt new ones
 
 ### Integration
 
-- embedding
-- SQL Server support
+- embedding ([#1235](https://github.com/orbeon/orbeon-forms/issues/1235))
+- SQL Server support ([#697](https://github.com/orbeon/orbeon-forms/issues/697))
 
 ### Form Builder modernization
 
-- drag-and-drop
+- drag-and-drop ([#1479](https://github.com/orbeon/orbeon-forms/issues/1479))
