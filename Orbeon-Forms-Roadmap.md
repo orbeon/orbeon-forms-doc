@@ -69,6 +69,7 @@ In addition, we would like to look to the future to use the best possible langua
 This includes:
 
 - modularization of the code (see umbrella [#1585](https://github.com/orbeon/orbeon-forms/issues/1585))
+- refactoring (see [Refactoring issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Refactoring&milestone=&page=1&sort=updated&state=open))
 - evaluate Scala.js (see [#1600](https://github.com/orbeon/orbeon-forms/issues/1600))
 - drop old frameworks and adopt new ones
 - more automated testing (we have almost 800 tests, but need more)
