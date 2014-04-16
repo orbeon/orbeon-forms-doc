@@ -49,18 +49,18 @@ Dates:
 
 ### Performance
 
-- memory use (see [#1606](https://github.com/orbeon/orbeon-forms/issues/1606))
+- memory use (see umbrella [#1606](https://github.com/orbeon/orbeon-forms/issues/1606))
 - load time (see [#1239](https://github.com/orbeon/orbeon-forms/issues/1239))
 
 ### Mobile
 
-- responsive UI (see [#1181](https://github.com/orbeon/orbeon-forms/issues/1181))
+- responsive UI (see umbrella [#1181](https://github.com/orbeon/orbeon-forms/issues/1181))
 
 ### Maintenance
 
 Like any project, Orbeon Forms has some technical debt. It is not possible to remove all of it at once, but, like garbage collection, we would like to improve the code base incrementally. This includes:
 
-- modularization of the code (see [#1585](https://github.com/orbeon/orbeon-forms/issues/1585))
+- modularization of the code (see umbrella [#1585](https://github.com/orbeon/orbeon-forms/issues/1585))
 - drop old frameworks and adopt new ones
 
 ### Integration
