@@ -5,6 +5,7 @@
 1. architecture and maintenance (e.g. modularization)
 1. integration (e.g. embedding, SQL Server support)
 1. Form Builder modernization (e.g. drag-and-drop)
+1. other
 
 ## What's in a release
 
@@ -70,12 +71,21 @@ This includes:
 - modularization of the code (see umbrella [#1585](https://github.com/orbeon/orbeon-forms/issues/1585))
 - evaluate Scala.js (see [#1600](https://github.com/orbeon/orbeon-forms/issues/1600))
 - drop old frameworks and adopt new ones
+- more automated testing (we have almost 800 tests, but need more)
 
 ### Integration
 
 - Easy embedding of forms ([#1235](https://github.com/orbeon/orbeon-forms/issues/1235))
 - SQL Server support ([#697](https://github.com/orbeon/orbeon-forms/issues/697))
+- Import/export forms with dependencies ([#779](https://github.com/orbeon/orbeon-forms/issues/779))
 
 ### Form Builder modernization
 
 - Improve Form Builder usability (see umbrella [#1675](https://github.com/orbeon/orbeon-forms/issues/1675))
+
+### Other
+
+- Document standard use cases / workflows with Orbeon Forms (see [#228](https://github.com/orbeon/orbeon-forms/issues/228))
+- Easier integration with external systems/workflows (see [Data Envelope and Metadata](https://sites.google.com/a/orbeon.com/forms/projects/form-runner-builder/form-runner-data-envelope))
+- Improved/more out of the box form controls (e.g. SSN, intl phone, etc.)
+- 
