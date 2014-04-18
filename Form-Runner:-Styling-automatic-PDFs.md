@@ -4,11 +4,13 @@ Form Runner has two modes of [PDF Generation](http://wiki.orbeon.com/forms/doc/u
 
 ### How to figure out what CSS is applied to the PDF?
 
-The closest from the PDF is the Review mode. Compare:
+The closest from the PDF is the Form Runner Review mode. Compare:
 
   http://demo.orbeon.com/orbeon/fr/orbeon/bookshelf/view/891ce63e59c17348f6fda273afe28c2b
 
-with the PDF version. In both cases, the HTML markup is about the same. With Chrome, you can in addition put the browser in `@media print` emulation:
+with the PDF version. In both cases, the HTML markup is about the same, and you can use browser developer tools to inspect how CSS rules are applied.
+
+With Chrome, in particular, you can also put the browser in `@media print` emulation:
 
 ![Chrome emulation settings](images/fr-chrome-media-emulation.png)
 
