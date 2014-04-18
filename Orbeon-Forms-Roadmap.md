@@ -1,15 +1,14 @@
-## Ongoing development tracks
-
-As of 2014-04-16, we have identified the following major development tracks:
-
-1. performance (e.g. memory use)
-1. mobile (e.g. responsive UI)
-1. architecture and maintenance (e.g. modularization)
-1. integration (e.g. embedding, SQL Server support)
-1. Form Builder modernization (e.g. drag-and-drop)
-1. other
-
-See [below](#tracks) for more details.
+* [What's in a release](#whats-in-a-release)
+* Our main development tracks are:
+    1. [Performance](#performance) (e.g. memory use)
+    1. [Mobile](#mobile) (e.g. responsive UI)
+    1. [Architecture and maintenance](#architecture-and-maintenance) (e.g. modularization)
+    1. [Integration](#integration) (e.g. embedding, SQL Server support)
+    1. [Form Builder modernization](#form-builder-modernization) (e.g. drag-and-drop)
+    1. [Other](#other)
+* Future releases
+    * [Orbeon Forms 4.6](#orbeon-forms-46)
+    * [Orbeon Forms 4.7](#orbeon-forms-47)
 
 ## What's in a release
 
@@ -23,34 +22,6 @@ For each release we would like to:
 - pick one mobile item if possible
 
 The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
-
-## Orbeon Forms 4.6
-
-Focus:
-
-- one performance item
-    - suggested: [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
-- one maintenance item
-    - suggested: TODO
-- [4.6 issues (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
-
-Dates (tentative):
-
-- 2014-05-08: branching and big feature freeze
-- 2014-06-05: tentative release date
-
-## Orbeon Forms 4.7
-
-Focus:
-
-- TBD
-- [Issues considered for 4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=38&page=1&sort=updated&state=open)
-
-Dates (tentative):
-
-- counting 1 slow summer month
-- 2014-08-12: branching and big feature freeze
-- 2014-09-09: tentative release date
 
 ## Tracks
 
@@ -93,3 +64,33 @@ This includes:
 - Document standard use cases / workflows with Orbeon Forms (see [#228](https://github.com/orbeon/orbeon-forms/issues/228))
 - Easier integration with external systems/workflows (see [Data Envelope and Metadata](https://sites.google.com/a/orbeon.com/forms/projects/form-runner-builder/form-runner-data-envelope))
 - Improved/more out of the box form controls (e.g. SSN, intl phone, etc.)
+
+## Future releases
+
+### Orbeon Forms 4.6
+
+Focus:
+
+- one performance item
+    - suggested: [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
+- one maintenance item
+    - suggested: TODO
+- [4.6 issues (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
+
+Dates (tentative):
+
+- 2014-05-08: branching and big feature freeze
+- 2014-06-05: tentative release date
+
+### Orbeon Forms 4.7
+
+Focus:
+
+- TBD
+- [Issues considered for 4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=38&page=1&sort=updated&state=open)
+
+Dates (tentative):
+
+- counting 1 slow summer month
+- 2014-08-12: branching and big feature freeze
+- 2014-09-09: tentative release date
