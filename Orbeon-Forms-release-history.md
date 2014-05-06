@@ -23,7 +23,7 @@ Previously we had in general one major release per year. Historically:
 - 3.6: December 7, 2007
 - 3.5: February 20, 2007
 
-## Orbeon PresentationServer releases
+## Historical Orbeon PresentationServer releases
 
 - 3.0: January 17, 2006
 - 2.8: March 10, 2005
