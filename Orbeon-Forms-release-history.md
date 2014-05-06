@@ -14,7 +14,7 @@ See also the [roadmap](Orbeon-Forms-Roadmap). Since Orbeon Forms 4.0, we have a 
 
 ## Earlier Orbeon Forms releases
 
-Previously we had in general one major release per year. Historically:
+Previously we had in general one major release per year:
 
 - 3.9.1 PE: February 8, 2012
 - 3.9: May 15, 2011
