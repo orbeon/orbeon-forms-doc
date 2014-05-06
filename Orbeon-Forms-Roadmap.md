@@ -2,7 +2,7 @@
     1. [Performance](#performance) (e.g. memory use)
     1. [Mobile](#mobile) (e.g. responsive UI)
     1. [Architecture and maintenance](#architecture-and-maintenance) (e.g. modularization)
-    1. [Integration](#integration) (e.g. embedding, SQL Server support)
+    1. [Integration](#integration) (e.g. embedding)
     1. [Form Builder modernization](#form-builder-modernization) (e.g. drag-and-drop)
     1. [Other](#other)
 * Future releases
@@ -39,7 +39,6 @@ This includes:
 ### Integration
 
 - Easy embedding of forms ([#1235](https://github.com/orbeon/orbeon-forms/issues/1235))
-- SQL Server support ([#697](https://github.com/orbeon/orbeon-forms/issues/697))
 - Import/export forms with dependencies ([#779](https://github.com/orbeon/orbeon-forms/issues/779))
 
 ### Form Builder modernization
