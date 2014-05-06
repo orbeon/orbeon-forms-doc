@@ -1,14 +1,14 @@
 Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 
-- Orbeon Forms 4.5 PE and 4.5 CE were released on April 7, 2014. See also [the blog post of the announcement](http://blog.orbeon.com/2014/04/orbeon-forms-45.html).
-- Orbeon Forms 4.4.1 PE was released on January 15, 2013. See also [the blog post of the announcement](http://blog.orbeon.com/2014/01/orbeon-forms-441-pe.html).
-- Orbeon Forms 4.4 PE was released on November 4, 2013. See also [the blog post of the announcement](http://blog.orbeon.com/2013/11/orbeon-forms-44.html).
-- Orbeon Forms 4.3.1 PE was released on August 29, 2013. See also [the blog post of the announcement](http://blog.orbeon.com/2013/08/orbeon-forms-431-pe.html).
-- Orbeon Forms 4.3 PE and 4.3 CE were released on August 14, 2013. See also [the blog post of the announcement](http://blog.orbeon.com/2013/08/orbeon-forms-43.html).
-- Orbeon Forms 4.2 PE and 4.2 CE were released on May 30, 2013. See also [the blog post of the announcement](http://blog.orbeon.com/2013/05/orbeon-forms-42.html).
-- Orbeon Forms 4.1 PE and 4.1 CE were released on April 18, 2013. See also [the blog post of the announcement](http://blog.orbeon.com/2013/04/orbeon-forms-41.html).
-- Orbeon Forms 4.0.1 PE was released on March 18, 2013. See also [the blog post of the announcement](http://blog.orbeon.com/2013/03/orbeon-forms-401.html).
-- Orbeon Forms 4.0.0 PE and 4.0.0 CE were released on February 22, 2013. See also [the blog post of the announcement](http://blog.orbeon.com/2013/03/announcing-orbeon-forms-40.html) .
+- Orbeon Forms 4.5 PE and 4.5 CE were released on April 7, 2014. See also [the blog post](http://blog.orbeon.com/2014/04/orbeon-forms-45.html).
+- Orbeon Forms 4.4.1 PE was released on January 15, 2013. See also [the blog post](http://blog.orbeon.com/2014/01/orbeon-forms-441-pe.html).
+- Orbeon Forms 4.4 PE was released on November 4, 2013. See also [the blog post](http://blog.orbeon.com/2013/11/orbeon-forms-44.html).
+- Orbeon Forms 4.3.1 PE was released on August 29, 2013. See also [the blog post](http://blog.orbeon.com/2013/08/orbeon-forms-431-pe.html).
+- Orbeon Forms 4.3 PE and 4.3 CE were released on August 14, 2013. See also [the blog post](http://blog.orbeon.com/2013/08/orbeon-forms-43.html).
+- Orbeon Forms 4.2 PE and 4.2 CE were released on May 30, 2013. See also [the blog post](http://blog.orbeon.com/2013/05/orbeon-forms-42.html).
+- Orbeon Forms 4.1 PE and 4.1 CE were released on April 18, 2013. See also [the blog post](http://blog.orbeon.com/2013/04/orbeon-forms-41.html).
+- Orbeon Forms 4.0.1 PE was released on March 18, 2013. See also [the blog post](http://blog.orbeon.com/2013/03/orbeon-forms-401.html).
+- Orbeon Forms 4.0.0 PE and 4.0.0 CE were released on February 22, 2013. See also [the blog post](http://blog.orbeon.com/2013/03/announcing-orbeon-forms-40.html) .
 
 Previously we had in general one major release per year. Historically:
 
