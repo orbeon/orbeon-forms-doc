@@ -6,15 +6,15 @@ See the [roadmap](Orbeon-Forms-Roadmap).
 
 Since Orbeon Forms 4.0, we have a fairly fast release schedule. Releases so far:
 
-- Orbeon Forms 4.5 PE and 4.5 CE: April 7, 2014 ([blog post](http://blog.orbeon.com/2014/04/orbeon-forms-45.html)).
-- Orbeon Forms 4.4.1 PE: January 15, 2013 ([blog post](http://blog.orbeon.com/2014/01/orbeon-forms-441-pe.html)).
-- Orbeon Forms 4.4 PE: November 4, 2013 ([blog post](http://blog.orbeon.com/2013/11/orbeon-forms-44.html)).
-- Orbeon Forms 4.3.1 PE: August 29, 2013 ([blog post](http://blog.orbeon.com/2013/08/orbeon-forms-431-pe.html)).
-- Orbeon Forms 4.3 PE and 4.3 CE: August 14, 2013 ([blog post](http://blog.orbeon.com/2013/08/orbeon-forms-43.html)).
-- Orbeon Forms 4.2 PE and 4.2 CE: May 30, 2013 ([blog post](http://blog.orbeon.com/2013/05/orbeon-forms-42.html)).
-- Orbeon Forms 4.1 PE and 4.1 CE: April 18, 2013 ([blog post](http://blog.orbeon.com/2013/04/orbeon-forms-41.html)).
-- Orbeon Forms 4.0.1 PE: March 18, 2013 ([blog post](http://blog.orbeon.com/2013/03/orbeon-forms-401.html)).
-- Orbeon Forms 4.0.0 PE and 4.0.0 CE: February 22, 2013 ([blog post](http://blog.orbeon.com/2013/03/announcing-orbeon-forms-40.html)).
+- 4.5 PE and 4.5 CE: April 7, 2014 ([blog post](http://blog.orbeon.com/2014/04/orbeon-forms-45.html)).
+- 4.4.1 PE: January 15, 2013 ([blog post](http://blog.orbeon.com/2014/01/orbeon-forms-441-pe.html)).
+- 4.4 PE: November 4, 2013 ([blog post](http://blog.orbeon.com/2013/11/orbeon-forms-44.html)).
+- 4.3.1 PE: August 29, 2013 ([blog post](http://blog.orbeon.com/2013/08/orbeon-forms-431-pe.html)).
+- 4.3 PE and 4.3 CE: August 14, 2013 ([blog post](http://blog.orbeon.com/2013/08/orbeon-forms-43.html)).
+- 4.2 PE and 4.2 CE: May 30, 2013 ([blog post](http://blog.orbeon.com/2013/05/orbeon-forms-42.html)).
+- 4.1 PE and 4.1 CE: April 18, 2013 ([blog post](http://blog.orbeon.com/2013/04/orbeon-forms-41.html)).
+- 4.0.1 PE: March 18, 2013 ([blog post](http://blog.orbeon.com/2013/03/orbeon-forms-401.html)).
+- 4.0.0 PE and 4.0.0 CE: February 22, 2013 ([blog post](http://blog.orbeon.com/2013/03/announcing-orbeon-forms-40.html)).
 
 ## Earlier Orbeon Forms releases
 
