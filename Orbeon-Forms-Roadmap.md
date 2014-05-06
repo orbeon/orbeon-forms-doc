@@ -39,6 +39,7 @@ This includes:
 ### Integration
 
 - Easy embedding of forms ([#1235](https://github.com/orbeon/orbeon-forms/issues/1235))
+- Allow HTTP/DB services to be used for validation ([#1304](https://github.com/orbeon/orbeon-forms/issues/1304))
 - Import/export forms with dependencies ([#779](https://github.com/orbeon/orbeon-forms/issues/779))
 
 ### Form Builder modernization
