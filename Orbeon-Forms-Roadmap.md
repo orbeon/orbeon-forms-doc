@@ -1,4 +1,3 @@
-* [What's in a release](#whats-in-a-release)
 * Our main development tracks are:
     1. [Performance](#performance) (e.g. memory use)
     1. [Mobile](#mobile) (e.g. responsive UI)
@@ -9,19 +8,7 @@
 * Future releases
     * [Orbeon Forms 4.6](#orbeon-forms-46)
     * [Orbeon Forms 4.7](#orbeon-forms-47)
-
-## What's in a release
-
-For each release we would like to:
-
-- have bug-fixes
-- have at least one new feature (which can be small)
-- book one day of work on [documentation tasks](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Doc&milestone=&page=1&sort=updated&state=open)
-- pick one maintenance (build system, refactoring, …) item
-- pick one performance item
-- pick one mobile item if possible
-
-The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
+* [What's in a release](#whats-in-a-release)
 
 ## Tracks
 
@@ -94,3 +81,16 @@ Dates (tentative):
 - counting 1 slow summer month
 - 2014-08-12: branching and big feature freeze
 - 2014-09-09: tentative release date
+
+## What's in a release
+
+For each release we would like to:
+
+- have bug-fixes
+- have at least one new feature (which can be small)
+- book one day of work on [documentation tasks](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Doc&milestone=&page=1&sort=updated&state=open)
+- pick one maintenance (build system, refactoring, …) item
+- pick one performance item
+- pick one mobile item if possible
+
+The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
