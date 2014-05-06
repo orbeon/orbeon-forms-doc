@@ -25,6 +25,8 @@ Previously we had in general one major release per year. Historically:
 
 ## Historical Orbeon PresentationServer releases
 
+Orbeon PresentationServer was an open source, general-purpose XML processing and presentation platform.
+
 - 3.0: January 17, 2006
 - 2.8: March 10, 2005
 - 2.7: January 21, 2005
@@ -33,7 +35,7 @@ Previously we had in general one major release per year. Historically:
 
 ## Historical OXF releases
 
-For the curious:
+For the curious, these are releases of the Orbeon XML platform before it was open sourced!
 
 - 2.2: November 17, 2003
 - 2.1: September 16, 2003
