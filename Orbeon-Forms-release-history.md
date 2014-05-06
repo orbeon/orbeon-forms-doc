@@ -12,7 +12,7 @@ See also the [roadmap](Orbeon-Forms-Roadmap). Since Orbeon Forms 4.0, we have a 
 - Orbeon Forms 4.0.1 PE: March 18, 2013 ([blog post](http://blog.orbeon.com/2013/03/orbeon-forms-401.html)).
 - Orbeon Forms 4.0.0 PE and 4.0.0 CE: February 22, 2013 ([blog post](http://blog.orbeon.com/2013/03/announcing-orbeon-forms-40.html)).
 
-## Previous Orbeon Forms releases
+## Earlier Orbeon Forms releases
 
 Previously we had in general one major release per year. Historically:
 
