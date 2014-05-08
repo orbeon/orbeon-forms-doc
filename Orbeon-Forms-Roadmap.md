@@ -5,7 +5,7 @@
     1. [Integration](#integration) (e.g. embedding)
     1. [Form Builder modernization](#form-builder-modernization) (e.g. drag-and-drop)
     1. [Other](#other)
-* Future releases
+* Upcoming releases
     * [Orbeon Forms 4.6](#orbeon-forms-46)
     * [Orbeon Forms 4.7](#orbeon-forms-47)
 * [What's in a release](#whats-in-a-release)
@@ -52,7 +52,7 @@ This includes:
 - Easier integration with external systems/workflows (see [Data Envelope and Metadata](https://sites.google.com/a/orbeon.com/forms/projects/form-runner-builder/form-runner-data-envelope))
 - Improved/more out of the box form controls (e.g. SSN, intl phone, etc.)
 
-## Future releases
+## Upcoming releases
 
 ### Orbeon Forms 4.6
 
