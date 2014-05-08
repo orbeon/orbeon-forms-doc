@@ -59,9 +59,9 @@ This includes:
 Focus:
 
 - one performance item
-    - suggested: [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
+    - [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
 - one maintenance item
-    - suggested: TODO
+    - TBD
 - [4.6 issues (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
 
 Dates (tentative):
