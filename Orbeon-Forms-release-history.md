@@ -4,7 +4,7 @@ See the [roadmap](Orbeon-Forms-Roadmap).
 
 ## Orbeon Forms 4.x series
 
-Since Orbeon Forms 4.0, we have a fairly fast release schedule. Releases so far:
+Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 
 - 4.5.1 PE: May 13, 2013 ([blog post](http://blog.orbeon.com/2014/05/orbeon-forms-451.html)).
 - 4.5 PE and 4.5 CE: April 7, 2014 ([blog post](http://blog.orbeon.com/2014/04/orbeon-forms-45.html)).
