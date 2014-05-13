@@ -66,7 +66,7 @@ Focus:
 
 Dates (tentative):
 
-- 2014-05-08: branching and big feature freeze
+- ~~2014-05-08: branching and big feature freeze~~
 - 2014-06-05: tentative release date
 
 ### Orbeon Forms 4.7
