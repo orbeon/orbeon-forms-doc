@@ -106,9 +106,22 @@ Alternatively, for running without debugging, set instead:
 export JAVA_OPTS="$ORBEON_MEMORY_OPTS -server"
 ```
 
+### Running the tests
+
+Select the "Unit Tests" configuration in IntelliJ, and run it. This should take about a minute.
+
+IntelliJ then shows : "Done: 723 of 731  Failed: 8"
+
+The tests that fail are the following:
+
+- `CombinedClientTest`: this requires Selenium to be setup.
+- `DDLTest` and `RestApiTest`: these require a database setup.
+
+We hope to provide instructions to run these in the future.
+
 ## From the command line
 
-From the command line, you need ant installed.
+From the command line, you need [ant](http://ant.apache.org/) installed. Building should work with ant 1.8.x or 1.9.x.
 
 You can then run, from the `orbeon-forms` directory:
 
@@ -117,3 +130,5 @@ ant orbeon-war
 ```
 
 Currently, there is no incremental compilation when running from the command line. We hope to move to sbt in the future, see [#1585](https://github.com/orbeon/orbeon-forms/issues/1585).
+
+*NOTE: With ant, class files are produced under `build/classes`, but with IntelliJ they are produced under `build/orbeon-war/WEB-INF/classes`. You should be aware of this is you switch between building from IntelliJ and building with ant.*
