@@ -3,7 +3,7 @@ This page explains how to build Orbeon Forms:
 - [With IntelliJ](#with-intellij)
 - [From the command line](#from-the-command-line)
 
-The following instructions are meant to work as of 2014-05-20. If something is broken, please [let us know](https://twitter.com/intent/tweet?in_reply_to=orbeon&in_reply_to_status_id=261900968369729536&source=webclient&text=%40orbeon+).
+The following instructions are meant to work as of 2014-05-20, which is between the Orbeon Forms 4.5 and 4.6 releases. If something is broken, please [let us know](https://twitter.com/intent/tweet?in_reply_to=orbeon&in_reply_to_status_id=261900968369729536&source=webclient&text=%40orbeon+).
 
 ## What the Orbeon Forms developers use
 
