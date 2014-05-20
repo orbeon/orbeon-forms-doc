@@ -116,4 +116,4 @@ You can then run, from the `orbeon-forms` directory:
 ant orbeon-war
 ```
 
-Currently, there is no incremental compilation when running from the command line. We hope to move to sbt in the future, see #1585.
+Currently, there is no incremental compilation when running from the command line. We hope to move to sbt in the future, see [#1585](https://github.com/orbeon/orbeon-forms/issues/1585).
