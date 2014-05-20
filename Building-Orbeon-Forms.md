@@ -126,7 +126,13 @@ If you are connected to Tomcat via the debugger AND you are lucky, changed class
 
 If you modify resource files, re-run the ant `orbeon-war` target from IntelliJ.
 
+If you make changes to `.less` files and want those recompiled automatically, you need the "File Watchers" IntelliJ plugin, as well as the less compiler. You can install it with:
 
+```bash
+brew install lessc
+```
+
+This installs the less compiler to `/usr/local/bin/lessc`, which is where the included IntelliJ "File Watchers" configuration points to. If it's in a different location, you'll need to adjust the path.
 
 ### Running the tests
 
