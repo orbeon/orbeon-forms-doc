@@ -66,9 +66,10 @@ Then set `JAVA_OPTS` for Tomcat:
 ```bash
 ORBEON_MEMORY_OPTS="-Xms300m -Xmx600m -XX:MaxPermSize=256m -verbosegc -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCDetails"
 ORBEON_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=61155,suspend=n,server=y"
-JAVA_OPTS="-ea $ORBEON_MEMORY_OPTS $ORBEON_DEBUG_OPTS -Dapple.awt.UIElement=true"
-export JAVA_OPTS
+export JAVA_OPTS="-ea $ORBEON_MEMORY_OPTS $ORBEON_DEBUG_OPTS -Dapple.awt.UIElement=true"
 ```
+
+*NOTE: You don't have to set `-verbosegc -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCDetails` if you are not interested in garbage collector output.*
 
 Finally, you can start Tomcat with:
 
@@ -82,15 +83,25 @@ http://localhost:8080/orbeon/
 
 This will show the Orbeon Forms landing page.
 
-Alternatively, for running without debugging:
+### Debugging
 
-```bash
-JAVA_OPTS="$ORBEON_MEMORY_OPTS -server"
-```
+The settings above start Tomcat in debug mode. This means that you can debug the Java and Scala code, 
 
-Alternatively, for running with the YourKit profiler, you need to set `DYLD_LIBRARY_PATH`:
+### Profiling
+
+Alternatively, for running with the YourKit profiler, you need to set `DYLD_LIBRARY_PATH` and use a different `JAVA_OPTS` variable:
 
 ```bash
 export DYLD_LIBRARY_PATH=/Applications/YourKit\ Java\ Profiler\ 12.0.6.app/bin/mac/
-JAVA_OPTS="$ORBEON_MEMORY_OPTS -agentlib:yjpagent"
+export JAVA_OPTS="$ORBEON_MEMORY_OPTS -agentlib:yjpagent"
+```
+
+Note that the debugging and profiling settings above are different: you either run in debug mode, or in profiling mode.
+
+### Running without debugging and profiling
+
+Alternatively, for running without debugging, set instead:
+
+```bash
+export JAVA_OPTS="$ORBEON_MEMORY_OPTS -server"
 ```
