@@ -1,7 +1,7 @@
 This page explains how to build Orbeon Forms:
 
-- [with IntelliJ](#with-intellij)
-- [from the command line](#from-the-command-line)
+- [With IntelliJ](#with-intellij)
+- [From the command line](#from-the-command-line)
 
 ## With IntelliJ
 
