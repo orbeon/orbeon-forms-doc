@@ -105,3 +105,15 @@ Alternatively, for running without debugging, set instead:
 ```bash
 export JAVA_OPTS="$ORBEON_MEMORY_OPTS -server"
 ```
+
+## From the command line
+
+From the command line, you need ant installed.
+
+You can then run, from the `orbeon-forms` directory:
+
+```bash
+ant orbeon-war
+```
+
+Currently, there is no incremental compilation when running from the command line. We hope to move to sbt in the future, see #1585.
