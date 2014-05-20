@@ -23,6 +23,11 @@ On OS X, you can install git easily if you have [Homebrew](http://brew.sh/):
 brew install git
 ```
 
+With IntelliJ, you need the following plugins, which you can download and enable from IntelliJ directly:
+
+- Scala: to compile Scala files
+- File Watchers: to compile `.less` files if you make changes to those
+
 ### Getting the source
 
 If you have never obtained the Orbeon Forms source code, you need to get it [from github](https://github.com/orbeon/orbeon-forms). To get the latest code from the `master` branch, run the following command line:
@@ -112,6 +117,16 @@ Alternatively, for running without debugging, set instead:
 ```bash
 export JAVA_OPTS="$ORBEON_MEMORY_OPTS -server"
 ```
+
+### Making changes
+
+If you modify Java or Scala files, you need to recompile. Go to menu "Build" → "Make Module 'Orbeon Forms'", or use the keyboard shortcut (`F7`).
+
+If you are connected to Tomcat via the debugger AND you are lucky, changed classes will reload in the JVM. Otherwise, you need to restart Tomcat to see your changes.
+
+If you modify resource files, re-run the ant `orbeon-war` target from IntelliJ.
+
+
 
 ### Running the tests
 
