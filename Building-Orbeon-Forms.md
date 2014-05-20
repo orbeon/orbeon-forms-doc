@@ -1,3 +1,8 @@
+This page explains how to build Orbeon Forms:
+
+- [with IntelliJ](#with-intellij)
+- [from the command line](#from-the-command-line)
+
 ## With IntelliJ
 
 This is the recommended way to develop Orbeon Forms, used by the Orbeon developers. We use OS X Mavericks.
