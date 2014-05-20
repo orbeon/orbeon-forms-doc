@@ -26,7 +26,7 @@ git clone git@github.com:orbeon/orbeon-forms.git ~/my/projects/orbeon-forms
 
 where `~/my/projects` is an existing directory on your system where you want to place the Orbeon Forms source code.
 
-This clones the git repository into a directory called `orbeon-forms`.
+This clones the git repository into a child directory called `orbeon-forms`.
 
 *NOTE: There is no guarantee that the master branch is stable, as it contains some of the latest changes to Orbeon Forms!*
 
