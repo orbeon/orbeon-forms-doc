@@ -85,7 +85,7 @@ This will show the Orbeon Forms landing page.
 
 ### Debugging
 
-The settings above start Tomcat in debug mode. This means that you can debug the Java and Scala code, 
+The settings above start Tomcat in debug mode. This means that you can debug the Java and Scala code from IntelliJ. Select the "Tomcat" configuration in IntelliJ, then "Run" → "Debug". IntelliJ opens the debugging window and connects to Tomcat. You can then set breakpoints and do the usual things one does with a debugger!
 
 ### Profiling
 
@@ -98,7 +98,7 @@ export JAVA_OPTS="$ORBEON_MEMORY_OPTS -agentlib:yjpagent"
 
 Note that the debugging and profiling settings above are different: you either run in debug mode, or in profiling mode.
 
-### Running without debugging and profiling
+### Running without debugging or profiling
 
 Alternatively, for running without debugging, set instead:
 
