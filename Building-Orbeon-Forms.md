@@ -5,9 +5,12 @@ This page explains how to build Orbeon Forms:
 
 The following instructions are meant to work as of 2014-05-20. If something is broken, please [let us know](https://twitter.com/intent/tweet?in_reply_to=orbeon&in_reply_to_status_id=261900968369729536&source=webclient&text=%40orbeon+).
 
-## With IntelliJ
+## What the Orbeon Forms developers use
 
-This is the recommended way to develop Orbeon Forms, used by the Orbeon developers. We use OS X Mavericks.
+- OS X Mavericks
+- IntelliJ IDEA 13.1
+
+## With IntelliJ
 
 ### Prerequisites
 
