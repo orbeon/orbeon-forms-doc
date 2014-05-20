@@ -19,6 +19,7 @@ You need to have already installed:
 - [git](http://git-scm.com/)
 - [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html) 13.1 (previous versions may or may not work)
 - [Tomcat 7](http://tomcat.apache.org/download-70.cgi)
+- Java 1.6
 
 On OS X, you can install git easily if you have [Homebrew](http://brew.sh/):
 
