@@ -155,6 +155,8 @@ We hope to provide instructions to run these in the future.
 
 ## From the command line
 
+### Initial build
+
 From the command line, you need [ant](http://ant.apache.org/) installed. Building should work with ant 1.8.x or 1.9.x.
 
 You can then run, from the `orbeon-forms` directory:
@@ -166,3 +168,14 @@ ant orbeon-war
 Currently, there is no incremental compilation when running from the command line. We hope to move to sbt in the future, see [#1585](https://github.com/orbeon/orbeon-forms/issues/1585).
 
 *NOTE: With ant, class files are produced under `build/classes`, but with IntelliJ they are produced under `build/orbeon-war/WEB-INF/classes`. You should be aware of this is you switch between building from IntelliJ and building with ant.*
+
+### Building a distribution
+
+- run `ant clean`
+- run `ant orbeon-dist-war` to build the WAR files
+
+Alternatively:
+
+- run `ant teamcity-release` to clean, test, and build the entire release
+
+*NOTE: `ant clean` deletes everything under the `build` directory. This includes the data for the embedded eXist database. If you have some test data, including form definitions and data in there, backup `build/orbeon-war/WEB-INF/exist-data` first!*
