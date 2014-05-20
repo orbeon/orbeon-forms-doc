@@ -171,11 +171,11 @@ Currently, there is no incremental compilation when running from the command lin
 
 ### Building a distribution
 
+*WARNING: `ant clean` deletes everything under the `build` directory. This includes the data for the embedded eXist database. If you have some test data, including form definitions and data in there, backup `build/orbeon-war/WEB-INF/exist-data` first!*
+
 - run `ant clean`
 - run `ant orbeon-dist-war` to build the WAR files
 
 Alternatively:
 
 - run `ant teamcity-release` to clean, test, and build the entire release
-
-*NOTE: `ant clean` deletes everything under the `build` directory. This includes the data for the embedded eXist database. If you have some test data, including form definitions and data in there, backup `build/orbeon-war/WEB-INF/exist-data` first!*
