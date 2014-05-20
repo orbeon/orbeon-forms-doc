@@ -21,10 +21,10 @@ brew install git
 If you have never obtained the Orbeon Forms source code, you need to get it [from github](https://github.com/orbeon/orbeon-forms). To get the latest code from the `master` branch, run the following command line:
 
 ```bash
-git clone git@github.com:orbeon/orbeon-forms.git ~/some/directory/orbeon-forms
+git clone git@github.com:orbeon/orbeon-forms.git ~/my/projects/orbeon-forms
 ```
 
-where `~/some/directory/orbeon-forms` is a directory on your system where you want to place the Orbeon Forms source code.
+where `~/my/projects` is an existing directory on your system where you want to place the Orbeon Forms source code.
 
 This clones the git repository into a directory called `orbeon-forms`.
 
