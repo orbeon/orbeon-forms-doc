@@ -21,8 +21,10 @@ brew install git
 If you have never obtained the Orbeon Forms source code, you need to get it [from github](https://github.com/orbeon/orbeon-forms). To get the latest code from the `master` branch, run the following command line:
 
 ```bash
-git clone git@github.com:orbeon/orbeon-forms.git
+git clone git@github.com:orbeon/orbeon-forms.git ~/some/directory/orbeon-forms
 ```
+
+where `~/some/directory/orbeon-forms` is a directory on your system where you want to place the Orbeon Forms source code.
 
 This clones the git repository into a directory called `orbeon-forms`.
 
@@ -33,18 +35,21 @@ This clones the git repository into a directory called `orbeon-forms`.
 To open Orbeon Forms in IntelliJ:
 
 - Go to the "File" → "Open Project" menu and  select the `orbeon-forms` directory.
-- IntelliJ then indexes the project, which can take a minute the first time.
+- IntelliJ then indexes the project, which can take a minute the first time you do it.
 
 ### Building the project
 
 - Go to the "Build" → "Make Project" (this takes about 1 mn 10 seconds on a recent laptop).
-- Go to the "Ant Build" pane.
-- run the `orbeon-war` target
-- manually create the directory `orbeon-forms/src/resources-local` if it is missing
+- Go to the "Ant Build" pane and run the `orbeon-war` target.
+- Manually create the directory `orbeon-forms/src/resources-local` if it is missing.
+
+This builds Orbeon Forms in development mode, where the Java/Scala class files are not placed into JARs. This way you can quickly recompile incrementally.
+
+In this mode, running the `orbeon-war` ant target skips compilation but processes resources and creates an "exploded" WAR file which Tomcat can point to.
 
 ### Running Orbeon Forms
 
-First, create a new context in Tomcat's `server.xml`:
+Create a new context in Tomcat's `server.xml`:
 
 ```xml
 <Context
