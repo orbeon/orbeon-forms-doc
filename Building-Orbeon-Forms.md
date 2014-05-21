@@ -29,8 +29,8 @@ brew install git
 
 With IntelliJ, you need the following plugins, which you can download and enable from IntelliJ directly:
 
-- Scala: to compile Scala files
-- File Watchers: to compile `.less` files if you make changes to those
+- Scala: to compile Scala source code
+- File Watchers: to compile `.less` files to CSS (if you make changes to those)
 
 ### Getting the source
 
