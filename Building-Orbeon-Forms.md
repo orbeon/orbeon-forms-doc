@@ -165,7 +165,7 @@ You can then run, from the `orbeon-forms` directory:
 ant orbeon-war
 ```
 
-Currently, there is no incremental compilation when running from the command line. We hope to move to sbt in the future, see [#1585](https://github.com/orbeon/orbeon-forms/issues/1585). Because of this, Orbeon developers tend to build from IntelliJ, and use the command line build on build servers only.
+Currently, there is no incremental compilation when running from the command line. We hope to move to [sbt](http://www.scala-sbt.org/) in the future, see [#1585](https://github.com/orbeon/orbeon-forms/issues/1585). Because of this, Orbeon developers tend to build from IntelliJ, and use the command line build on build servers only.
 
 *NOTE: With ant, class files are produced under `build/classes`, but with IntelliJ they are produced under `build/orbeon-war/WEB-INF/classes`. You should be aware of this is you switch between building from IntelliJ and building with ant.*
 
