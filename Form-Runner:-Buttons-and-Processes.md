@@ -170,6 +170,8 @@ The full URL, for attachments as well as for the XML data, is composed of:
 - the following URL parameter
     - `valid`: whether the data sent satisfies validation rules
 
+*NOTE: The `save` action doesn't check data validity before running.*
+
 Example:
 
     http://example.org/orbeon/fr/service/persistence/crud/
