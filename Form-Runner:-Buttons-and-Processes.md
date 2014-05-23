@@ -159,7 +159,7 @@ Save data and attachments via the persistence layer.
     - dispatch `fr-data-save-prepare` to `fr-form-model`
     - save attachments
     - save XML
-    - switch to `edit` mode
+    - switch to `edit` mode (be aware of [#1653](https://github.com/orbeon/orbeon-forms/issues/1653))
     - dispatch `fr-data-save-done` to `fr-form-model`
 - parameters
     - `draft`: "true" if must be saved as a draft [SINCE Orbeon Forms 4.4]
