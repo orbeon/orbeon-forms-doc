@@ -321,7 +321,16 @@ then suspend
 then send("oxf.fr.detail.send.success")'/>
 ```
 
-You can override the confirmation message as follows:
+You can use a specific confirmation message with the `message` parameter:
+
+```xml
+save
+then confirm(message = "Please confirm that you would like to submit your data.")
+then suspend
+then send("oxf.fr.detail.send.success")'/>
+```
+
+You can also override the default confirmation message:
 
 ```xml
 <property
