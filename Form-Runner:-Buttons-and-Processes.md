@@ -1,7 +1,7 @@
 ## See also
 
 - this blog post for an introduction to the feature: [More powerful buttons](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
-- the predefined configuration properties in [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml)
+- the predefined configuration properties in [`pravoperties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml)
 
 ## Availability
 
@@ -259,7 +259,7 @@ Example:
 
 [SINCE Orbeon Forms 4.4]
 
-The following properties are Attribute Value Templates (AVTs) evaluating in the context of the root element of the form data instance:
+The following properties are XPath Value Templates evaluating in the context of the root element of the form data instance:
 
 - `uri`
 - `method`
@@ -288,6 +288,14 @@ Navigate to an external page via client-side GET.
     - `uri`: specifies the URL to navigate to
     - `property`: specifies a property containing the URL to navigate to
     - by default, try to guess based on the parameter
+
+[SINCE Orbeon Forms 4.6]
+
+The URL value, whether directly or via a property, can be an XPath Value Template, which runs in the context of the root element of the main form instance:
+
+```
+navigate(uri = "http://example.org/{xxf:get-request-parameter('bar')}/{.//code}")
+```
 
 ### success-message and error-message
 
