@@ -37,9 +37,9 @@ In that property, the value of `$GROUPNAME` determines a grouping of the control
 
 To properly show up in the toolbox, XBL files need to include the appropriate [component metadata](http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/toolbox-component-metadata).
 
-### Toolbox top-level entries
+### Other toolbox features
 
-In addition to controls, the toolbox shows other "menu entries", which you can enable or disable with the following properties:
+In addition to controls, the toolbox has other features which you can enable or disable with the following properties:
 
 ```xml
 <property as="xs:boolean" name="oxf.fb.menu.schema"            value="true"/>
@@ -47,6 +47,7 @@ In addition to controls, the toolbox shows other "menu entries", which you can e
 <property as="xs:boolean" name="oxf.fb.menu.edit-source"       value="true"/>
 <property as="xs:boolean" name="oxf.fb.menu.permissions"       value="true"/>
 ```
+
 [SINCE: Orbeon Forms 4.6] The following properties are also supported:
 
 ```xml
@@ -93,6 +94,36 @@ Whether to allow uploading a custom logo image. If set to false, this is not all
 ```
 
 [SINCE 2011-05-20 / Orbeon Forms 4.0] Use this property to change the default maximum number of grid columns form authors can create. The more columns there are, the more narrow each column is, and when columns become too narrow, some less "elastic" controls might not have enough space to render properly. You want to set this property to a "reasonable" value to reduce the chance of form authors ending up with columns that are too narrow to accommodate certain controls.
+
+## Initially closing sections
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.fb.section.close"
+    value="100"/>
+```
+
+Closing sections in Form Builder can improve responsiveness. This property sets the number of controls after which Form Builder will close all sections except the first one when loading a form. Below that number of controls, all sections are open by default.
+
+## Buttons on the Form Builder Summary page
+
+```xml
+<property as="xs:string"  name="oxf.fr.summary.buttons.orbeon.builder">
+    home delete duplicate new
+</property>
+```xml
+
+## Available languages
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.available-languages.orbeon.builder"
+    value="en fr es it de"/>
+```
+
+This controls which Form Builder user interface languages appear in the language selector.
 
 ## Access control 
 
