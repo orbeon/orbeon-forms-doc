@@ -48,7 +48,7 @@ In addition to controls, the toolbox has other features which you can enable or 
 <property as="xs:boolean" name="oxf.fb.menu.permissions"       value="true"/>
 ```
 
-[SINCE: Orbeon Forms 4.6] The following properties are also supported:
+[SINCE Orbeon Forms 4.6] The following properties are also supported:
 
 ```xml
 <property as="xs:boolean" name="oxf.fb.menu.services.http"     value="true"/>
@@ -58,7 +58,7 @@ In addition to controls, the toolbox has other features which you can enable or 
 
 ## Publish dialog actions
 
-[SINCE: Orbeon Forms 4.6]
+[SINCE Orbeon Forms 4.6]
 
 By default the Publish dialog proposes, upon successful publication of a form definition, shortcuts to navigate to the published form's New or Summary pages.
 
