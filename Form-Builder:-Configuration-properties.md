@@ -73,17 +73,6 @@ This property allows specifying which of these actions are available:
     value="new summary"/>
 ```
 
-## Metadata
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fb.metadata.logo"
-    value="true"/>
-```
-
-Whether to allow uploading a custom logo image. If set to false, this is not allowed and the default logo, if any, is used.
-
 ## Maximum number of columns 
 
 ```xml
