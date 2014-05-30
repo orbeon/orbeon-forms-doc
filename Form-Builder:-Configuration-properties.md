@@ -67,9 +67,9 @@ This property allows specifying which of these actions are available:
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.fb.publish.buttons"
-  value="new summary"/>
+    as="xs:string"
+    name="oxf.fb.publish.buttons"
+    value="new summary"/>
 ```
 
 ## Metadata
