@@ -65,9 +65,9 @@ The Publish dialog
 
 ```xml
 <property
-  as="xs:boolean"
-  name="oxf.fb.metadata.logo"
-  value="true"/>
+    as="xs:boolean"
+    name="oxf.fb.metadata.logo"
+    value="true"/>
 ```
 
 Whether to allow uploading a custom logo image. If set to false, this is not allowed and the default logo, if any, is used.
@@ -76,9 +76,9 @@ Whether to allow uploading a custom logo image. If set to false, this is not all
 
 ```xml
 <property
-  as="xs:integer"
-  name="oxf.fb.grid.max-columns"
-  value="4"/>
+    as="xs:integer"
+    name="oxf.fb.grid.max-columns"
+    value="4"/>
 ```
 
 [SINCE 2011-05-20 / Orbeon Forms 4.0] Use this property to change the default maximum number of grid columns form authors can create. The more columns there are, the more narrow each column is, and when columns become too narrow, some less "elastic" controls might not have enough space to render properly. You want to set this property to a "reasonable" value to reduce the chance of form authors ending up with columns that are too narrow to accommodate certain controls.
