@@ -27,7 +27,9 @@ In that property, the value of `$GROUPNAME` determines a grouping of the control
 *NOTE: With Orbeon Forms 4.5 and earlier, values must be placed in the `value` attribute.*
 
 ```xml
-<property as="xs:string" name="oxf.fb.toolbox.group.text.uri.*.*"
+<property
+    as="xs:string"
+    name="oxf.fb.toolbox.group.text.uri.*.*"
     value="oxf:/forms/orbeon/builder/xbl/text-controls.xbl
            oxf:/xbl/orbeon/tinymce/tinymce.xbl
            oxf:/xbl/orbeon/explanation/explanation.xbl"/>
