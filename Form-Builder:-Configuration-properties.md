@@ -59,7 +59,18 @@ In addition to controls, the toolbox shows other "menu entries", which you can e
 
 [SINCE: Orbeon Forms 4.6]
 
-The Publish dialog 
+By default the Publish dialog proposes, upon successful publication of a form definition, shortcuts to navigate to the published form's New or Summary pages.
+
+![Publish dialog](images/fb-publish-dialog.png)
+
+This property allows specifying which of these actions are available:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.fb.publish.buttons"
+  value="new summary"/>
+```
 
 ## Metadata
 
