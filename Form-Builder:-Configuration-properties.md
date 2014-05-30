@@ -106,13 +106,15 @@ Whether to allow uploading a custom logo image. If set to false, this is not all
 
 Closing sections in Form Builder can improve responsiveness. This property sets the number of controls after which Form Builder will close all sections except the first one when loading a form. Below that number of controls, all sections are open by default.
 
-## Buttons on the Form Builder Summary page
+## Form Builder Summary page
 
 ```xml
 <property as="xs:string"  name="oxf.fr.summary.buttons.orbeon.builder">
     home delete duplicate new
 </property>
 ```
+
+This controls which buttons appear on the Form Builder Summary page.
 
 ## Available languages
 
