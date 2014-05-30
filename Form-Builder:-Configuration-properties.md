@@ -9,15 +9,30 @@ For the latest configuration, see [properties-form-builder.xml](https://github.c
 You configure the contents of the toolbox by configuring properties of the form:
 
 ```xml
-<property as="xs:string" name="oxf.fb.toolbox.[GROUP].text.uri.*.*" value="[URI LIST]"/>
+<property as="xs:string"  name="oxf.fb.toolbox.group.$GROUPNAME.uri.*.*">
+    $URLS
+</property>
 ```
 
-In that property, the value of the group determines a grouping of the controls in the toolbox. The controls are defined by a list of XBL files. For example:
+In that property, the value of `$GROUPNAME` determines a grouping of the controls in the toolbox. The controls are defined by a list of XBL file URLs specified by `$URLS`. For example:
 
 ```xml
-<property as="xs:string" name="oxf.fb.toolbox.group.text.uri.*.*"
-                         value="oxf:/forms/orbeon/builder/xbl/text-controls.xbl
-                                oxf:/xbl/orbeon/inplace-input/inplace-input.xbl"/>
+<property as="xs:string"  name="oxf.fb.toolbox.group.text.uri.*.*">
+    oxf:/forms/orbeon/builder/xbl/text-controls.xbl
+    oxf:/xbl/orbeon/tinymce/tinymce.xbl
+    oxf:/xbl/orbeon/explanation/explanation.xbl
+</property>
+```
+
+*NOTE: With Orbeon Forms 4.5 and earlier, values must be placed in the `value` attribute.*
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fb.toolbox.group.text.uri.*.*"
+    value="oxf:/forms/orbeon/builder/xbl/text-controls.xbl
+           oxf:/xbl/orbeon/tinymce/tinymce.xbl
+           oxf:/xbl/orbeon/explanation/explanation.xbl"/>
 ```
 
 To properly show up in the toolbox, XBL files need to include the appropriate [component metadata](http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/toolbox-component-metadata).
