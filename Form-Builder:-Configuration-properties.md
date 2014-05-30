@@ -6,7 +6,7 @@ For the latest configuration, see [properties-form-builder.xml](https://github.c
 
 ### Groups of controls
 
-You configure the contents of the toolbox by configuring properties of the form:
+You configure the contents of the toolbox by configuring properties in this format:
 
 ```xml
 <property as="xs:string"  name="oxf.fb.toolbox.group.$GROUPNAME.uri.*.*">
