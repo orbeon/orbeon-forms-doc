@@ -4,7 +4,7 @@ For the latest configuration, see [properties-form-builder.xml](https://github.c
 
 ## Toolbox 
 
-### Control groups
+### Groups of controls
 
 You configure the contents of the toolbox by configuring properties of the form:
 
