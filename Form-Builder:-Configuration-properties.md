@@ -112,7 +112,7 @@ Closing sections in Form Builder can improve responsiveness. This property sets 
 <property as="xs:string"  name="oxf.fr.summary.buttons.orbeon.builder">
     home delete duplicate new
 </property>
-```xml
+```
 
 ## Available languages
 
