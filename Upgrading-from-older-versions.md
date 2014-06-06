@@ -1,6 +1,6 @@
 ## Compatibility policy
 
-- __Compability:__ We strive to remain backward compatible between versions of Orbeon Forms and not to break features on purpose.
+- __Compability:__ We strive to remain backward compatible between versions of Orbeon Forms and not to break features, whether on purpose or by accident.
 
 - __Deprecation and removal:__ Over time, we may mark some features as *deprecated*. After being deprecated for a while, these features can even be *removed* from the product. Over years, this means that backward compatibility is not always guaranteed.
 
