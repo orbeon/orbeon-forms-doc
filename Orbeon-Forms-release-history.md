@@ -21,8 +21,8 @@ Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 
 Previously we had in general one major release per year:
 
-- 3.9.1 PE: February 8, 2012
-- 3.9: May 15, 2011
+- 3.9.1 PE: February 8, 2012 ([blog post](http://blog.orbeon.com/2012/02/orbeon-forms-391-pe-released.html))
+- 3.9: May 15, 2011 ([blog post](http://blog.orbeon.com/2011/05/orbeon-forms-390-final.html))
 - 3.8: May 14, 2010
 - 3.7.1: June 1, 2009
 - 3.6: December 7, 2007
