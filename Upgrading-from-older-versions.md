@@ -40,7 +40,10 @@ We recommend you start by going through the release notes for all new versions b
 
 See also [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history).
 
-## Reliance on Form Builder or Form Runner internals
+## Reliance on Orbeon Forms internals
 
 Our users sometimes customize Orbeon Forms by relying on the internals of Orbeon Forms. This might even be on Orbeon's advice, when no better solution are available at a given time. In such cases, upgrading can be more difficult, because the internals of Orbeon Forms are subject to change, and backward compatibility of look and feel is difficult to achieve with only CSS.
 
+## What we want to do better in the future
+
+TODO
