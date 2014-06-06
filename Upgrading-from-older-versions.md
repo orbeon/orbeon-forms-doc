@@ -8,11 +8,10 @@
 
 ## Difficulty of upgrades
 
-- Orbeon Forms 4.0 was a large release with many changes. In general upgrades between pre-4.0 releases and 4.x releases are more difficult than upgrades between two 4.x releases.
-- Between any two subsequent releases, upgrades are expected to be fairly straightforward.
-- The longer the interval of time between two release, the harder the upgrade. For example, it is harder to upgrade between 3.9.1 and 4.6 than between 4.5 and 4.6.
-
-*NOTE: Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x releases.*
+- Between any two subsequent 4.x releases, upgrades are expected to be fairly straightforward.
+- The longer the interval of time between two release, the harder the upgrade might be. For example, it can be harder to upgrade between 4.0 and 4.6 than between 4.5 and 4.6.
+- Orbeon Forms 4.0 was a large release with many changes. In general upgrading between pre-4.0 releases and 4.x releases is more difficult than upgrades between two 4.x releases.
+- Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x releases.
 
 ## Areas of compatibility
 
