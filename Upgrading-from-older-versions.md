@@ -21,6 +21,7 @@
   - Similarly, and since Orbeon Forms 4.6, the Form Runner Home page has an "Upgrade" feature to upgrade published form definitions.
 - __XForms support:__ We strive for maximum backward compatibility at the XForms source level. But because the XForms processing model is quite advanced, some subtle details are subject to change, such as the order in which some events are dispatched.
 - __Look and feel and CSS:__ Often users adapt the Orbeon Forms look and feel using custom CSS. It is hard to guarantee full backward compatibility here due to the lack of encapsulation provided by CSS. Upgrades can require custom CSS to be adapted.
+- __Configuration properties:__ We strive to keep properties backward compatible. On rare occasions, configuration properties have changed in incompatible ways, in particular in 4.0 the Form Runner persistence providers configuration have changed.
 
 ## Compatibility notes for previous versions
 
