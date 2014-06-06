@@ -8,11 +8,11 @@
 
 ## Difficulty of upgrades
 
-Here are some general considerations:
-
 - Orbeon Forms 4.0 was a large release with many changes. In general upgrades between pre-4.0 releases and 4.x releases are more difficult than upgrades between two 4.x releases.
 - Between any two subsequent releases, upgrades are expected to be fairly straightforward.
 - The longer the interval of time between two release, the harder the upgrade. For example, it is harder to upgrade between 3.9.1 and 4.6 than between 4.5 and 4.6.
+
+*NOTE: Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x releases.*
 
 ## Areas of compatibility
 
@@ -22,8 +22,6 @@ Here are some general considerations:
   - Similarly, and since Orbeon Forms 4.6, the Form Runner Home page has an "Upgrade" feature to upgrade published form definitions.
 - __XForms support:__ We strive for maximum backward compatibility at the XForms source level. But because the XForms processing model is quite advanced, some subtle details are subject to change, such as the order in which some events are dispatched.
 - __Look and feel and CSS:__ Often users adapt the Orbeon Forms look and feel using custom CSS. It is hard to guarantee full backward compatibility here due to the lack of encapsulation provided by CSS. Upgrades can require custom CSS to be adapted.
-
-*NOTE: Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x releases.*
 
 ## Compatibility notes for previous versions
 
