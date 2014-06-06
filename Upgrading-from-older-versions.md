@@ -4,6 +4,16 @@ We strive to remain backward compatible between versions and not to break featur
 
 Release notes for each version might contain compatibility notes. When upgrading, please make sure to always review compatibility notes.
 
+## Difficulty of upgrades
+
+Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months.
+
+Here are some general considerations:
+
+- Between any two releases, upgrades are expected to be fairly straightforward.
+- Orbeon Forms 4.0 was a large release with many changes. In general upgrades between pre-4.0 releases and 4.x releases are more difficult than upgrades between two 4.x releases.
+- The longer the interval of time between two release, the harder the upgrade. For example, it is harder to upgrade between 3.9.1 and 4.6 than between 4.5 and 4.6.
+
 ## Areas of compatibility
 
 - Form Runner / Form Builder DDL: the relational database definitions are subject to change between releases.
