@@ -9,6 +9,21 @@ This document explains how to localize Orbeon Forms
 - P: partial support
 - N: no support
 
+### As of Orbeon Forms 4.6
+
+Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder 
+----------|:--------:|:--------:|:--------------:|:-----------:|:-----------:
+English   | F | F | F | F | F
+French    | F | F | F | F | F
+Portuguese| F | F | F | F | F
+Spanish   | F | F | F | P | P
+Swedish   | F | F | F | F | N
+Italian   | F | F | F | P | P
+German    | F | F | F | P | P
+Finnish   | F | F | P | P | P
+Norwegian | F | F | P | P | P
+Russian   | F | F | P | P | P
+Polish    | N | F | N | N | N
 ### As of Orbeon Forms 4.5
 
 Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder 
