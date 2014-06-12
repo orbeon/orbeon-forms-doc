@@ -24,6 +24,7 @@ Finnish   | F | F | P | P | P
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 Polish    | N | F | N | N | N
+
 ### As of Orbeon Forms 4.5
 
 Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder 
