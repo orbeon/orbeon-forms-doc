@@ -20,7 +20,7 @@ Spanish   | F | F | F | P | P
 Swedish   | F | F | F | F | N
 Italian   | F | F | F | P | P
 German    | F | F | F | P | P
-Finnish   | F | F | P | P | P
+Finnish   | F | F | P | F | F
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 Polish    | N | F | N | N | N
