@@ -17,10 +17,10 @@ English   | F | F | F | F | F
 French    | F | F | F | F | F
 Portuguese| F | F | F | F | F
 Spanish   | F | F | F | P | P
+Finnish   | F | F | P | F | F
 Swedish   | F | F | F | F | N
 Italian   | F | F | F | P | P
 German    | F | F | F | P | P
-Finnish   | F | F | P | F | F
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 Polish    | N | F | N | N | N
