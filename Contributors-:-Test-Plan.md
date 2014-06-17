@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributor Guide
+> [Wiki](Home) ▸ Contributors
 
 - Persistence
     - [DDL Test](a) [4.6 done]
