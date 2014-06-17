@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributor Guide ▸ [[Test Plan]] ▸ **DDL**
+> [Wiki](Home) ▸ Contributor Guide ▸ [[Test Plan]] ▸ **DDL Test**
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Between tests, run the `drop table` statements below.
 
