@@ -22,7 +22,7 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
     - Can see data of other users, but in readonly mode (since everyone can read)
         - Load `a/a/summary`, check *Ned* and *Ned2* show, but have the readonly "label"
         - Check that clicking on *Ned* and *Ned2* brings up the data in readonly mode
-        - Cdit the URL to have `edit` instead of `view`, check a 403 is returned
+        - Edit the URL to have `edit` instead of `view`, check a 403 is returned
     - Drafts for saved
         - Load `a/a/new`
             - Check we don't get a prompt to edit the draft created by b1 (since we only have read access to it).
@@ -30,16 +30,17 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
         - `a/a/summary`, click on *Homer2*, check the draft comes up
         - `a/a/summary`, click on *Homer*, check prompt comes up, try both options and see that *Homer*/*Homer2* comes up
         - editing one of the form data (*Homer* or *Homer2*), hit save, back on the summary check the draft was removed
+    - Drafts for new
+        - `a/a/new`, type *Bart*, after 6s go to summary page, check it shows *Bart* as draft
+        - `a/a/new`, check prompt, and try both options
+        - `a/a/new`, on prompt start from scratch, type *Lisa*, after 6s go to summary, check it shows *Bart* and *Lisa* as draft
+        - `a/a/new`, check prompt, try both options, in particular the one showing the drafts for new
+    - Summary
+        - Edit *Home3*, change to *Homer4*, after 6s go back to summary page.
+        - Delete *Homer3*, check *Homer4* is deleted as well
+        - Check *Lisa*, then view, check in view mode without prompt
+        - Delete *Bart*, check *Lisa* not deleted
 
-drafts for new
-a/a/new, type Bart, after 6s go to summary page, check it shows Bart as draft
-a/a/new, check prompt, and try both options
-a/a/new, on prompt start from scratch, type Lisa, after 6s go to summary, check it shows Bard and Lisa as draft
-a/a/new, check prompt, try both options, in particular the one showing the drafts for new
-summary
-delete Homer, check Homer2 deleted as well
-delete Bart, check Lisa not deleted
-check Lisa, then view, check in view mode without prompt
 with anonymous user
 a/a/summary only shows saved data, not drafts
 change form definition to remove the read permission form anyone
