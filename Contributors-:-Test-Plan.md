@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributor Guide ▸ **Test Plan**
+> [Wiki](Home) ▸ Contributor Guide
 
 - Persistence
     - [DDL Test](a) [4.6 done]
