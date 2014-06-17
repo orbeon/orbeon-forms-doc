@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributor Guide ▸ [[Test Plan]] ▸ **Autosave and Permissions**
+> [Wiki](Home) ▸ Contributor Guide ▸ [[Test Plan]] ▸ **Autosave and Permissions Test**
 
 Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
 
