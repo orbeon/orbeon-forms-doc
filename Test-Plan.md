@@ -1,5 +1,5 @@
 > [Wiki](Home) ▸ Contributor Guide ▸ **Test Plan**
 
 - Persistence
-    - [[DDL]]
+    - [[DDL]] [4.6 done]
     - [[Autosave and Permissions]]
