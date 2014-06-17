@@ -18,7 +18,6 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
 2. Logged in as user `b1` in group `b`:
     - `a/a/new`, type *Ned*, save, change to *Ned2*, tab out, after 6s go to the summary page, check it shows *Ned2* as draft
 3. Logged in as user `a1` in group `a`:
-
     - Can see data of other users, but in readonly mode (since everyone can read)
         - Load `a/a/summary`, check *Ned* and *Ned2* show, but have the readonly "label"
         - Check that clicking on *Ned* and *Ned2* brings up the data in readonly mode
@@ -40,16 +39,12 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
         - Delete *Homer3*, check *Homer4* is deleted as well
         - Check *Lisa*, then view, check in view mode without prompt
         - Delete *Bart*, check *Lisa* not deleted
-
 4. With anonymous user:
-
     - `a/a/summary` only shows saved data, not drafts
     - change form definition to remove the read permission form anyone
     - `a/a/summary` returns 403 (since anonymous users don't have the read permission)
     - `a/a/new`, type *Homer*, tab out, after 6s check that no autosave was done (e.g. with Charles that no PUT was made to the persistence layer)
-
 5. Permissions of drafts in summary page
-
     - Log in as user `a1` in group `a`.
     - `a/a/summary`, delete everything (to clean things up).
     - As user `a1` in group `a`, go to `a/a/new`, type *Homer*, hit save, edit into *Homer2*, after 6s go to `a/a/summary`, check it shows *Homer* and *Homer2* as draft.
