@@ -10,7 +10,7 @@ We do the following just for eXist and DB2, as automated tests already test most
     <property as="xs:string" name="oxf.fr.persistence.provider.db2.*.*" value="db2"/>
     <property as="xs:string" name="oxf.fr.persistence.provider.exist.*.*" value="exist"/>
     ```
-2. Create same form in all 4 apps: `exist/a`, `db2/a`.
+2. Create same form in 2 apps: `exist/a`, `db2/a`.
     - Use Duplicate button in FB Summary
     - Then change app name
 3. pages
