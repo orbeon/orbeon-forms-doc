@@ -19,6 +19,7 @@ Portuguese| F | F | F | F | F
 Spanish   | F | F | F | P | P
 Finnish   | F | F | P | F | F
 Swedish   | F | F | F | F | N
+Dutch     | F | F | F | F | N
 Italian   | F | F | F | P | P
 German    | F | F | F | P | P
 Norwegian | F | F | P | P | P
