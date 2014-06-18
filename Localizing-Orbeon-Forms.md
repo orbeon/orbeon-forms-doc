@@ -26,6 +26,8 @@ Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 Polish    | N | F | N | N | N
 
+*NOTE: In this version, Spanish, Italian and German have a few missing localized resources. We hope to have them fully updated for 4.7. Please let us know if you would like to help!*
+
 ### As of Orbeon Forms 4.5
 
 Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder 
