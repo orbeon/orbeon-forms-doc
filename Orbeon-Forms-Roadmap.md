@@ -58,29 +58,26 @@ This includes:
 
 Focus:
 
-- one performance item
-    - [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
-- one maintenance item
-    - TBD
-- [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
+- [x] one performance item: [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
+- [x] one maintenance item: TBD
+- [ ] doc items: TBD
+- [x] [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
 
-Dates (tentative):
+Dates:
 
 - ~~2014-05-08: branching and big feature freeze~~
-- 2014-06-05: tentative release date
+- ~~2014-06-05: tentative release date~~
+- 2014-06-xx: actual release date
 
 ### Orbeon Forms 4.7
 
 Focus:
 
-- TBD
-- one performance item
-    - TBD
-- one maintenance item
-    - TBD
-- doc items
-    - TBD
-- [Issues considered for 4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=38&page=1&sort=updated&state=open)
+- [ ] TBD
+- [ ] one performance item: TBD
+- [ ] one maintenance item: TBD
+- [ ] doc items: TBD
+- [ ] [Issues considered for 4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=38&page=1&sort=updated&state=open)
 
 Dates (tentative):
 
@@ -92,11 +89,11 @@ Dates (tentative):
 
 For each release we would like to:
 
-- have bug-fixes
-- have at least one new feature (which can be small)
-- book one day of work on [documentation tasks](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Doc&milestone=&page=1&sort=updated&state=open)
-- pick one maintenance (build system, refactoring, …) item
-- pick one performance item
-- pick one mobile item if possible
+- [ ] have bug-fixes
+- [ ] have at least one new feature (which can be small)
+- [ ] book one day of work on [documentation tasks](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Doc&milestone=&page=1&sort=updated&state=open)
+- [ ] pick one maintenance (build system, refactoring, …) item
+- [ ] pick one performance item
+- [ ] pick one mobile item if possible
 
 The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
