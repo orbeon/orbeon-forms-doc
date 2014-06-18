@@ -20,7 +20,7 @@ drop table orbeon_form_data_attach ;
 - Enable the flat view option, adding:
 
     ```xml
-    <property as="xs:boolean" name="oxf.fr.persistence.oracle.create-flat-view" value="false"/>`.
+    <property as="xs:boolean" name="oxf.fr.persistence.oracle.create-flat-view" value="true"/>`.
     ```
 - Create  a form with the sections and controls named as in the table in the [flat view documentation], publish, check that a view with the appropriate column names is created.
 
