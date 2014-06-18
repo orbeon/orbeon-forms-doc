@@ -24,6 +24,10 @@ drop table orbeon_form_data_attach ;
     ```
 - Create  a form with the sections and controls named as in the table in the [flat view documentation], publish, check that a view with the appropriate column names is created.
 
+    ```sql
+    SELECT * FROM orbeon_f_a_a ;
+    ```
+
   [4.3 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql
   [4.3 to 4.4 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3-to-4_4.sql
   [4.4 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4.sql
