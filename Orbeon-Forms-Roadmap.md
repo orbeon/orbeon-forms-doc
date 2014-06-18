@@ -62,7 +62,7 @@ Focus:
     - [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
 - one maintenance item
     - TBD
-- [4.6 issues (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
+- [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
 
 Dates (tentative):
 
