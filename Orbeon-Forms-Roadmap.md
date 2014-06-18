@@ -92,7 +92,7 @@ For each release we would like to:
 - [ ] have bug-fixes
 - [ ] have at least one new feature (which can be small)
 - [ ] book one day of work on [documentation tasks](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Doc&milestone=&page=1&sort=updated&state=open)
-- [ ] pick one maintenance (build system, refactoring, …) item
+- [ ] pick one [maintenance task](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Refactoring&milestone=&page=1&sort=updated&state=open) (build system, refactoring, …)
 - [ ] pick one performance item
 - [ ] pick one mobile item if possible
 
