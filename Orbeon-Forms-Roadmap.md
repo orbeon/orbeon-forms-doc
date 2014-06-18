@@ -93,7 +93,7 @@ For each release we would like to:
 - [ ] have at least one new feature (which can be small)
 - [ ] book one day of work on [documentation tasks](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Doc&milestone=&page=1&sort=updated&state=open)
 - [ ] pick one [maintenance task](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Refactoring&milestone=&page=1&sort=updated&state=open) (build system, refactoring, …)
-- [ ] pick one performance item
+- [ ] pick one [performance task](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Performance&milestone=&page=1&sort=updated&state=open)
 - [ ] pick one mobile item if possible
 
 The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
