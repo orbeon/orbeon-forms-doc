@@ -27,7 +27,7 @@
   - check that TinyMCE (rich text) appears ok, including with IE9 (icons)
   - upload works
   - attach image and save
-  - NOTE: noscript broken in Liferay (https://github.com/orbeon/orbeon-forms/issues/1041)
+  - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 - full portlet
   - all examples and Form Runner
   - upload works
