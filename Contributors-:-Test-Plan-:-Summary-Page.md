@@ -12,7 +12,7 @@
 - pdf
   - template
   - automatic
-    - try ?fr-language=en vs. ?fr-language=fr on PDF URL
+    - try `?fr-language=en` vs. `?fr-language=fr` on PDF URL
 - duplicate
 - delete
 - view
