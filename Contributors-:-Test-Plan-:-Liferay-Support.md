@@ -1,0 +1,38 @@
+> [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
+
+- setup
+  - remove existing `orbeon` and `proxy-portlet.war` webapps if present
+  - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
+  - start Liferay: `./tomcat-7.0.40/bin/catalina.sh ru`
+  - try `http://localhost:9090/`
+  - login
+    - *NOTE: Cannot seem to login with Chrome anymore. Tried removing JSESSIONID, still issue.*
+- proxy portlet
+  - set to point to http://localhost:9090/orbeon/ or separate Tomcat install
+  - try out pages
+    - New page
+    - Summary page
+    - Home page
+  - set Send Liferay language
+    - check that language picker in FR is gone on 3 pages
+    - change My Account → Display Settings → French
+    - check that all 3 pages now show in French (be aware of #1628)
+  - set Send Liferay user
+    - check w/ HttpScoop that user headers are sent to Form Runner
+      - Orbeon-Liferay-User-*
+  - readonly mode (be aware of https://github.com/orbeon/orbeon-forms/issues/884)
+  - edit/review/back
+  - send to external page
+  - PDF loads
+  - check that TinyMCE (rich text) appears ok, including with IE9 (icons)
+  - upload works
+  - attach image and save
+  - NOTE: noscript broken in Liferay (https://github.com/orbeon/orbeon-forms/issues/1041)
+- full portlet
+  - all examples and Form Runner
+  - upload works
+  - PDF works
+    - *NOTE: Hit issue of double JSESSIONID once, check cookies if problems.*
+  - attach image and save, make sure image shows properly
+  - *NOTE: noscript broken in Liferay*
+  - P2: async load mode
