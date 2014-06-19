@@ -16,11 +16,11 @@
   - set Send Liferay language
     - check that language picker in FR is gone on 3 pages
     - change My Account → Display Settings → French
-    - check that all 3 pages now show in French (be aware of #1628)
+    - check that all 3 pages now show in French (be aware of [#1628](https://github.com/orbeon/orbeon-forms/issues/1628))
   - set Send Liferay user
     - check w/ HttpScoop that user headers are sent to Form Runner
       - Orbeon-Liferay-User-*
-  - readonly mode (be aware of https://github.com/orbeon/orbeon-forms/issues/884)
+  - readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
   - edit/review/back
   - send to external page
   - PDF loads
