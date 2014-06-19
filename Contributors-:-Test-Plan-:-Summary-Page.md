@@ -1,4 +1,6 @@
-- e.g. http://localhost:8080/44/fr/orbeon/bookshelf/summary
+> [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
+
+- e.g. `http://localhost:8080/44/fr/orbeon/bookshelf/summary`
 - list forms
 - paging
   - create more than 10 instances if necessary
@@ -10,7 +12,7 @@
 - pdf
   - template
   - automatic
-    - try ?fr-language=en vs. ?fr-language=fr on PDF URL
+    - try `?fr-language=en` vs. `?fr-language=fr` on PDF URL
 - duplicate
 - delete
 - view
