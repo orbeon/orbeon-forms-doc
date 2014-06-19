@@ -4,4 +4,4 @@
 - change
 - remove PDF
   - publish and test, must see notemplate PDF
-- heck that DMV-14 PDF is filled out
+- check that DMV-14 PDF is filled out
