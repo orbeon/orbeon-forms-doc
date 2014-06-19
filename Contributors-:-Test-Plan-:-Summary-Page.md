@@ -1,6 +1,8 @@
 > [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
 
-- copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
+- setup
+  - remove existing `orbeon` and `proxy-portlet.war` webapps if present
+  - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
 - proxy portlet
   - set to point to http://localhost:9090/orbeon/ or separate Tomcat install
   - try out pages
