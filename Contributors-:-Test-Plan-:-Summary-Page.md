@@ -3,6 +3,8 @@
 - setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present
   - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
+  - start Liferay: `./tomcat-7.0.40/bin/catalina.sh ru`
+  - try `http://localhost:9090/`
 - proxy portlet
   - set to point to http://localhost:9090/orbeon/ or separate Tomcat install
   - try out pages
