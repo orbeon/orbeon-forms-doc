@@ -21,13 +21,13 @@
 - insert components from library into acme/test-library
     - insert S1 and S2 twice, S3
     - add French language
-    - check language changes in builder (be aware of #690)
+    - check language changes in builder (be aware of [#690](https://github.com/orbeon/orbeon-forms/issues/690))
     - publish
         - check control visibility change
         - check language changes
         - check services load in both languages (same labels)
         - enter data, save, check that data loads back in all fields
-        - test that repeated grid in section template shows (#1370) in the builder and nicely
+        - test that repeated grid in section template shows ([#1370](https://github.com/orbeon/orbeon-forms/issues/1370)) in the builder and nicely
         - check review, PDF
-- make sure Clear works (see #807, broken as of 4.0-4.5!)
+- make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.5!)
 - makes invalid controls in section template prevent saving
