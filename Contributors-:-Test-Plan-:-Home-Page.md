@@ -37,7 +37,7 @@
   - Select menu works
   - Operation menu works
     - push/pull forms
-  - take e.g. previous sales/my-sales-form
+  - take e.g. previous `sales/my-sales-form` (see [Form Builder Permissions](Contributors-:-Test-Plan-:-Form-Builder-Permissions))
     - attach static image
     - publish locally
     - push to remote
