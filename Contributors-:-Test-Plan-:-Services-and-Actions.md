@@ -29,3 +29,5 @@
                 <item label="Bar" value="bar"/>
             </items>
             ```
+
+[2]: https://github.com/orbeon/orbeon-forms/issues/1230
