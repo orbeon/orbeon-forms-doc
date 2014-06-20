@@ -4,8 +4,8 @@
     - [Distribution](./Contributors-:-Test-Plan-:-Distribution) [4.6 done]
     - [Landing Page](./Contributors-:-Test-Plan-:-Landing-Page) [4.6 done]
 - Persistence
-    - [Basic Persistence](./Contributors-:-Test-Plan-:-Basic-Persistence)
-    - [Data Capture Permissions](./Contributors-:-Test-Plan-:-Data-Capture-Permissions) [4.6 done]
+    - [Basic Persistence](./Contributors-:-Test-Plan-:-Basic-Persistence) [4.6 done]
+    - [Data Capture Permissions](./Contributors-:-Test-Plan-:-Data-Capture-Permissions)
     - [Autosave and Permissions Test](./Contributors-:-Test-Plan-:-Autosave-and-Permissions) [4.6 done]
     - [Other database tests](./Contributors-:-Test-Plan-:-Other-database-tests) [4.6 done]
 - Form Builder / Form Runner
