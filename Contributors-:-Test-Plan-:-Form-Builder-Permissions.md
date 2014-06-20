@@ -1,8 +1,8 @@
 > [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
 
-- NOTES 2014-03-20:
-    - Would be really nice to have automated for this!
-    - Should do for eXist, SQL Server and Oracle.
+- *NOTES 2014-03-20*
+    - *Would be really nice to have automated for this!*
+    - *Should do for eXist, SQL Server and Oracle.*
 - setup
     - "Uncomment this for the Form Runner authentication" in web.xml
     - `tomcat-users.xml`
