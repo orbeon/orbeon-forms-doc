@@ -11,9 +11,9 @@
         - sets service values on request
         - sets control values on response
         - set itemset values on response 
-            - /*/*
-            - concat(first, ' ', last)
-            - id
+            - `/*/*`
+            - `concat(first, ' ', last)`
+            - `id`
     - HTTP service
         - using echo service is ok
             - POST to /fr/service/custom/orbeon/echo
