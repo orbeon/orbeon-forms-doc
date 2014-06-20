@@ -12,7 +12,7 @@
     - [Section Templates](./Contributors-:-Test-Plan-:-Section-Templates) [4.6 done]
     - [PDF Automatic](./Contributors-:-Test-Plan-:-PDF-Automatic) [4.6 done]
     - [PDF Template](./Contributors-:-Test-Plan-:-PDF-Template) [4.6 done]
-    - [Form Builder Permissions](./Contributors-:-Test-Plan-:-Form-Builder-Permissions)
+    - [Form Builder Permissions](./Contributors-:-Test-Plan-:-Form-Builder-Permissions) [4.6 done]
 - Form Runner
     - [Home Page](./Contributors-:-Test-Plan-:-Home-Page)
     - [Summary Page](./Contributors-:-Test-Plan-:-Summary-Page) [4.6 done]
