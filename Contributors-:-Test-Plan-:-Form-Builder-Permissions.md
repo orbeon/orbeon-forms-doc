@@ -7,7 +7,7 @@
     - "Uncomment this for the Form Runner authentication" in web.xml
     - `tomcat-users.xml`
 
-    ```
+    ```xml
     <tomcat-users>
         <role rolename="orbeon-user"/>
         <role rolename="orbeon-sales"/>
@@ -23,7 +23,7 @@
     ```
     - `form-builder-permissions.xml`
 
-    ```
+    ```xml
     <roles>
         <role name="*"            app="guest" form="*"/>
         <role name="orbeon-sales" app="sales" form="*"/>
