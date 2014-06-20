@@ -2,7 +2,7 @@
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
-    - *Should do for eXist, SQL Server, Oracle and DB2.*
+    - *Should do for eXist + relational.*
 - setup
     - "Uncomment this for the Form Runner authentication" in web.xml
     - `tomcat-users.xml`
