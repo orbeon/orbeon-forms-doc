@@ -42,8 +42,9 @@
         - http://localhost:8080/orbeon/fr/sales/my-sales-form/summary
         - http://localhost:8080/orbeon/fr/sales/my-sales-form/new
     - new
+        - enter data and save
     - summary
-        - check  that saved in summary
+        - check that saved in summary
         - check can edit and duplicate
         - check Delete button is absent or disabled
         - check PDF works
