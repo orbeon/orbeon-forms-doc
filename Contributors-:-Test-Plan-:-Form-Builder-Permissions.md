@@ -4,7 +4,7 @@
     - *Would be really nice to have automated for this!*
     - *Should do for eXist + relational.*
 - setup
-    - "Uncomment this for the Form Runner authentication" in web.xml
+    - "Uncomment this for the Form Runner authentication" in `web.xml`
     - `tomcat-users.xml`
 
     ```xml
