@@ -52,7 +52,7 @@
         - Summary/New operations visible for sales/my-sales-form
         - admin ops for sales/my-sales-form
         - other forms don't have admin ops
-        - Select -> All, then Operation -> Unpublish Local Forms ([#1380][7])
+        - Select → All, then Operation → Unpublish Local Forms ([#1380][7])
             - check forms w/o access were not selected!
         - Summary/New not visible for sales/my-sales-form
     - FB summary page
