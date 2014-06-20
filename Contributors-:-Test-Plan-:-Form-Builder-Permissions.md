@@ -82,3 +82,9 @@
     - check nothing changed
 - browser 2
     - check still can't access http://localhost:8080/orbeon/fr/sales/my-sales-form/summary (403) (see [#1384][10] with eXist)
+
+    
+[7]: https://github.com/orbeon/orbeon-forms/issues/1380
+[8]: https://github.com/orbeon/orbeon-forms/issues/878
+[9]: https://github.com/orbeon/orbeon-forms/issues/1386
+[10]: https://github.com/orbeon/orbeon-forms/issues/1384
