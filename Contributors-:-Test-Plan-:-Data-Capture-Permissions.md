@@ -29,7 +29,7 @@
     * save and publish
 * make sure permissions are followed
     * anonymous user
-        * home page: shows create but not view link for acme/permissions
+        * home page: link goes to new page (not summary)
         * summary page: access rejected (fixed regression with [#1201][19])
         * detail page: only new mode accepted
     * logged in user
