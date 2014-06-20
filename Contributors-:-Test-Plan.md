@@ -14,7 +14,7 @@
     - [PDF Template](./Contributors-:-Test-Plan-:-PDF-Template) [4.6 done]
     - [Form Builder Permissions](./Contributors-:-Test-Plan-:-Form-Builder-Permissions)
 - Form Runner
-    - [Home Page](./Contributors-:-Test-Plan-:-Home-Page) [4.6 done]
+    - [Home Page](./Contributors-:-Test-Plan-:-Home-Page)
     - [Summary Page](./Contributors-:-Test-Plan-:-Summary-Page) [4.6 done]
     - [Excel Import](./Contributors-:-Test-Plan-:-Excel-Import) [4.6 done]
     - [Liferay Support](./Contributors-:-Test-Plan-:-Liferay-Support) [4.6 done]
