@@ -34,7 +34,7 @@ We do the following just for eXist and DB2, as automated tests already test most
         - data for latest form
         - older data
 7. versioning
-    - create form (mysql|oracle|db2)/a
+    - create form db2/a
         - input field A + file or image attachment
         - publish
         - go to new page
