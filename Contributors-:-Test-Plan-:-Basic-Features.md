@@ -1,0 +1,60 @@
+> [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
+
+- create new form
+- insert sections, grids, repeated grids
+- insert all controls
+- rename sections and controls
+    - check renamed in dialog
+    - check renamed in source
+- move sections
+    - up/down
+    - right/left (subsections)
+- repeated grid
+    - set min/max as ints
+    - set min/max as XPath expressions, e.g. `1 + 2`
+- make section repeated
+    - insert/move/remove iterations
+    - set min/max as ints
+    - set min/max as XPath expressions, e.g. `1 + 2`
+- set control label, hint, items
+    - plain
+    - HTML
+    - check HTML label appears correct in summary page / search
+- set control help ([lorem ipsum][2])
+    - plain
+    - HTML
+    - check help icon appears when help is set, and disappears when help is blanked
+- set section help
+    - check help icon appears when help is set, and disappears when help is blanked ([#1160][3] is a known issue)
+- set control validation
+    - set custom error constraint and alert
+    - set custom warning constraint and alert
+- set control MIPs and properties
+    - check required star appears with required set to true()
+    - check Show in Summary/Search work when form deployed
+- set section MIPs
+    - check show/hide based on control value e.g. $fortytwo = '42'
+- edit/modify source
+    - change e.g. control label
+- i18n (PE)
+    - check en/fr/es/it/de (languages with full support)
+    - switch FB language and check language changes
+    - add language
+    - edit label and items and switch languages
+    - edit source and change top-level language, make sure language selector switches
+    - remove language
+    - [#1223][4]
+        - add lang not fully supported (e.g. Afrikaans) , remove all other languages, enter some labels
+        - Test and Publish/new -> must show Afrikaans labels, not blank
+- FB Summary page
+    - check that search in Summary page updates title/description when FR language is changed (e.g. on Bookshelf)
+- set form title/description
+- test form
+- save
+- publish form
+    - check that attachments are published too
+- warning dialog if attempt to close page when unsaved
+
+[2]: http://www.lipsum.com/
+[3]: https://github.com/orbeon/orbeon-forms/issues/1160
+[4]: https://github.com/orbeon/orbeon-forms/issues/1223
