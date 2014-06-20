@@ -65,7 +65,7 @@
     - can't access
         - http://localhost:8080/orbeon/fr/sales/my-sales-form/summary (403) (see [#1386][9] with eXist)
         - http://localhost:8080/orbeon/fr/sales/my-sales-form/edit/... (403)
-            - NOTE: with eXist, can save, even repeatedly, but can't load /edit/…
+            - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
     - http://localhost:8080/orbeon/fr/
         - NO admin ops for sales/my-sales-form
         - CAN click on line and takes to /new
