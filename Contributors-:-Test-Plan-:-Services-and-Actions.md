@@ -1,11 +1,11 @@
 > [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
 
-- see also acme/library with 1 service above
-- create HTTP service AND database service which
+- see also `acme/library` with 1 service above
+- create HTTP service AND database service
     - database service
         - db
-            - restore MySQL snapshot on RDS, call it orbeonmysql
-            - set datasource in server.xml
+            - restore MySQL snapshot on RDS, call it `orbeonmysql`
+            - set datasource in `server.xml`
             - create test table + data row if doesn't exist (can use IntelliJ Database tools)
         - start with sample form and scenario from [#1230][2]
         - sets service values on request
