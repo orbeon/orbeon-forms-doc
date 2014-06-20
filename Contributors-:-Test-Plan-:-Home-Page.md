@@ -43,8 +43,11 @@
     - push to remote
     - check attachment is pushed
     - load form /new on remote, make sure works and attachment is there
-    - NOTE: /summary should do 403 if user is not orbeon-sales on remote!
+    - *NOTE: `/summary` should do 403 if user is not orbeon-sales on remote!*
     - pull back form
     - load form /new on local, make sure works and attachment is there
   - no checkbox for controls w/o admin access
 - upgrade form definitions
+  - upgrade local
+  - upgrade remote
+  - make sure forms still work
