@@ -1,6 +1,6 @@
 > [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
 
-- see also `acme/library` with 1 service above
+- see also [`acme/library` with 1 service](./Contributors-:-Test-Plan-:-Section-Templates)
 - create HTTP service AND database service
     - database service
         - db
