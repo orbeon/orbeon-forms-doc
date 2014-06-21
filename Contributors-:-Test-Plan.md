@@ -1,5 +1,7 @@
 > [Wiki](Home) ▸ Contributors
 
+This is the manual test plan for Orbeon Forms, starting with version 4.0. For each release, we follow this plan, which tests functionality in addition to the ~700 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this][1].
+
 - Misc
     - [Distribution](./Contributors-:-Test-Plan-:-Distribution) [4.6 done]
     - [Landing Page](./Contributors-:-Test-Plan-:-Landing-Page) [4.6 done]
@@ -24,3 +26,5 @@
     - [Summary Page](./Contributors-:-Test-Plan-:-Summary-Page) [4.6 done]
     - [Excel Import](./Contributors-:-Test-Plan-:-Excel-Import) [4.6 done]
     - [Liferay Support](./Contributors-:-Test-Plan-:-Liferay-Support) [4.6 done]
+
+[1]: https://github.com/orbeon/orbeon-forms/issues/227
