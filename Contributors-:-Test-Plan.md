@@ -1,6 +1,6 @@
 > [Wiki](Home) ▸ Contributors
 
-This is the manual test plan for Orbeon Forms, starting with version 4.0. For each release, we follow this plan, which tests functionality in addition to the ~700 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this][1].
+For each release of Orbeon Forms, we follow this test plan, which tests functionality in addition to the ~800 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this][1].
 
 - Misc
     - [Distribution](./Contributors-:-Test-Plan-:-Distribution) [4.6 done]
