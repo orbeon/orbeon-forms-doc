@@ -5,6 +5,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - Misc
     - [Distribution](./Contributors-:-Test-Plan-:-Distribution) [4.6 done]
     - [Landing Page](./Contributors-:-Test-Plan-:-Landing-Page) [4.6 done]
+    - [PE features availability](./Contributors-:-Test-Plan-:-PE-Features-Availability)
 - Persistence
     - [Basic Persistence](./Contributors-:-Test-Plan-:-Basic-Persistence) [4.6 done]
     - [Data Capture Permissions](./Contributors-:-Test-Plan-:-Data-Capture-Permissions) [4.6 done]
