@@ -89,6 +89,7 @@
 - switch language
 - open/close sections
 - repeats
+  - check can access repeated grid/section button and menu via keyboard navigation
 - noscript mode
     - add property to enable for forms which support it (some orbeon.* forms disable it further)
         - `<property as="xs:boolean" name="oxf.fr.noscript-link.*.*" value="true"/>`
