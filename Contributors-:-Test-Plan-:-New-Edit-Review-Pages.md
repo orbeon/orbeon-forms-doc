@@ -37,14 +37,14 @@
     - with throttling (with Charles)
 
         ```xml
-<property
-    as="xs:string" 
-    name="oxf.http.proxy.host"
-    value="localhost"/>
-<property
-    as="xs:integer"
-    name="oxf.http.proxy.port"
-    value="8888"/>
+        <property
+            as="xs:string"
+            name="oxf.http.proxy.host"
+            value="localhost"/>
+        <property
+            as="xs:integer"
+            name="oxf.http.proxy.port"
+            value="8888"/>
         ```
         - cancel midway works
         - progress indicator works
