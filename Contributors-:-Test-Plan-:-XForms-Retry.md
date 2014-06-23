@@ -13,8 +13,14 @@
     - set the following properties
 
         ```xml
-        <property as="xs:integer" name="oxf.xforms.delay-before-ajax-timeout" value="2000"/>
-        <property as="xs:integer" name="oxf.xforms.retry.delay-increment"     value="2000"/>
+        <property
+            as="xs:integer"
+            name="oxf.xforms.delay-before-ajax-timeout"
+            value="2000"/>
+        <property
+            as="xs:integer"
+            name="oxf.xforms.retry.delay-increment"    
+            value="2000"/>
         ```
     - open 
         - in Chrome, open the Dev Tools, go to the Network tab
