@@ -37,8 +37,14 @@
     - set the following properties
 
         ```xml
-        <property as="xs:integer" name="oxf.xforms.delay-before-ajax-timeout" value="30000"/>
-        <property as="xs:integer" name="oxf.xforms.retry.delay-increment"     value="0"/>
+        <property
+            as="xs:integer"
+            name="oxf.xforms.delay-before-ajax-timeout"
+            value="30000"/>
+        <property
+            as="xs:integer"
+            name="oxf.xforms.retry.delay-increment"
+            value="0"/>
         ```
     - using Charles, go in Proxy / Breakpoints, enable breakpoints, and add:  
       ![][3]
