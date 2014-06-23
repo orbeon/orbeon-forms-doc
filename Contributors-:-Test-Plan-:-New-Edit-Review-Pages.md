@@ -20,7 +20,7 @@
         - save and save-final
             - cannot save w/ invalid data
         - submit
-            - echoes PDF URL
+            - echoes PDF URL (try to download)
         - save 2
             - echoes XML
         - home/summary/edit/review
