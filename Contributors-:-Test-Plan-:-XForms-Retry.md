@@ -3,8 +3,13 @@
 - check retry happens
     - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
         - change sleep service to use `sleep?delay=20` (sleep 20 s)
-        - add to model:
-        `<xf:setvalue ev:event="xforms-submit-done" ref="/instance/count" value=". + 1"/>`
+        - add to model
+        ```xml
+        <xf:setvalue
+            event="xforms-submit-done"
+            ref="/instance/count"
+            value=". + 1"/>
+        ```
     - set the following properties
 
         ```xml
