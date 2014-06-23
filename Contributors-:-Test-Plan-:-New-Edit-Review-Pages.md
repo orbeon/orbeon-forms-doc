@@ -82,8 +82,10 @@
     <property as="xs:string"  name="oxf.fr.email.smtp.credentials.*.*"   value="**********"/>
     <property as="xs:string"  name="oxf.fr.email.smtp.encryption.*.*"    value="tls"/>
     ```
-    - hit send button, check email received, contains XML and PDF
-    - check attached PDF looks like PDF generated from detail page
+    - hit send button
+      - check email received
+      - contains XML and PDF
+      - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 - switch language
 - open/close sections
 - repeats
