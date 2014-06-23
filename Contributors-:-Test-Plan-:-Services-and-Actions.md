@@ -15,7 +15,8 @@
               last    varchar(255) not null,
               phone   varchar(255) not null
             );
-            insert into orbeon_address_book values(1, "John", "Smith", "5551231234"); 
+            insert into orbeon_address_book values(1, "John", "Smith", "5551231234");
+            insert into orbeon_address_book values(2, "Mary", "Smith", "5551111111");
             ```
         - start with sample form and scenario from [#1230][2]
         - sets service values on request
