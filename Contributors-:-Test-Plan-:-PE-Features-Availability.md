@@ -1,7 +1,5 @@
 > [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
 
-### PE features availability
-
 Check that all PE features are available in PE, but not in CE:
 
 - features
