@@ -113,7 +113,7 @@
         value="6LesxAYAAAAAAEF9eTyysdkOF6O2OsPLO9zAiyzX"/>
     <property
         as="xs:string" 
-        ame="oxf.xforms.xbl.fr.recaptcha.private-key"
+        name="oxf.xforms.xbl.fr.recaptcha.private-key"
         value="6LesxAYAAAAAAJIXoxMvErqbisKkt7W-CPoE_Huo"/>
     ```
     - test reCAPTCHA [NOTE: had to fix 2 bugs with 4.5!]
