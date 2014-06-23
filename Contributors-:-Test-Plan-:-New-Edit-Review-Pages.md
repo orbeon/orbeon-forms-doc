@@ -91,12 +91,7 @@
 - repeats
   - check can access repeated grid/section button and menu via keyboard navigation
 - noscript mode
-    - add property to enable for forms which support it (some orbeon.* forms disable it further)
-        - `<property as="xs:boolean" name="oxf.fr.noscript-link.*.*" value="true"/>`
-    - test w/ DMV-14
-        - wizard nav works
-        - PDF works
-        - repeat works [NOTE: 4.5 repeat menu is JavaScript so doesn't work!]
+    - orbeon/contact
     - test w/ new form w/ image & file attachments
         - attachments work [NOTE: be aware of [#1405][3]]
 - wizard
