@@ -55,7 +55,7 @@
         - clear and close
         - keep values and close
         - OK: goes to echo page
-        - close window [NOTE: Since 4.6, only if window was open with JS.]
+        - close window [NOTE: Only if window was open with JS.]
 - email
     - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
         - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
