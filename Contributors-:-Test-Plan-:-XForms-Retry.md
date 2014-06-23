@@ -45,6 +45,7 @@
             name="oxf.xforms.retry.delay-increment"
             value="0"/>
         ```
+    - load page again
     - using Charles, go in Proxy / Breakpoints, enable breakpoints, and add:  
       ![][3]
     - click on *Manual save*
