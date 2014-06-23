@@ -92,6 +92,7 @@
   - check can access repeated grid/section button and menu via keyboard navigation
 - noscript mode
     - orbeon/contact
+    - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
     - test w/ new form w/ image & file attachments
         - attachments work [NOTE: be aware of [#1405][3]]
 - wizard
