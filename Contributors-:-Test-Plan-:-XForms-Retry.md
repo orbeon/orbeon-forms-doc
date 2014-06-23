@@ -26,7 +26,8 @@
         - http://localhost:8080/46pe/xforms-sandbox/sample/dispatch-delay
         - in Chrome, open the Dev Tools, go to the Network tab
         - hit the *Manual save* button
-        - check after 20 seconds the value got to 1
+        - check after 20 seconds the value got to `1`  
+          *NOTE: Retry will return with 500 until the 20 s have elapsed.*
         - check in the Dev Tools the requests look as follows  
           ![][1]
         - the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114][2]
