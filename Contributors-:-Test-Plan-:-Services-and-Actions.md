@@ -18,9 +18,14 @@
             insert into orbeon_address_book values(1, "John", "Smith", "5551231234");
             insert into orbeon_address_book values(2, "Mary", "Smith", "5551111111");
             ```
-        - start with sample form and scenario from [#1230][2]
-        - sets service values on request
-        - sets control values on response
+        - create db service
+
+            ```sql
+            SELECT * FROM orbeon_address_book 
+            WHERE id = <sql:param type="xs:string" select=""/>
+            ```
+        - sets service value on request for param `1`
+        - sets control values on response, e.g. `concat(/*/*/first, /*/*/last)`
         - set itemset values on response 
             - `/*/*`
             - `concat(first, ' ', last)`
