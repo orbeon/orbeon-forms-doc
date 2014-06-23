@@ -6,7 +6,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [Distribution](./Contributors-:-Test-Plan-:-Distribution) [4.6 done]
     - [Landing Page](./Contributors-:-Test-Plan-:-Landing-Page) [4.6 done]
     - [PE Features Availability](./Contributors-:-Test-Plan-:-PE-Features-Availability)
-    - run all PE tests locally (UI tests in particular) as they don't run on Travis yet
+    - run all PE Selenium tests locally (UI tests in particular) as they don't run on Travis yet
 - Persistence
     - [Basic Persistence](./Contributors-:-Test-Plan-:-Basic-Persistence) [4.6 done]
     - [Data Capture Permissions](./Contributors-:-Test-Plan-:-Data-Capture-Permissions) [4.6 done]
