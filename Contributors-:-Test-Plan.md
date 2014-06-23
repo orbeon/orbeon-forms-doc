@@ -29,5 +29,6 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [Liferay Support](./Contributors-:-Test-Plan-:-Liferay-Support) [4.6 done]
     - [XForms Retry](./Contributors-:-Test-Plan-:-XForms-Retry)
     - [Other Browsers](./Contributors-:-Test-Plan-:-Other-Browsers)
+    - [Other](./Contributors-:-Test-Plan-:-Other)
 
 [1]: https://github.com/orbeon/orbeon-forms/issues/227
