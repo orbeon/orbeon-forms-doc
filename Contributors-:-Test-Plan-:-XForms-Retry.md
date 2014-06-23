@@ -47,7 +47,7 @@
         ```
     - using Charles, go in Proxy / Breakpoints, enable breakpoints, and add:  
       ![][3]
-    - click on Manual, 
+    - click on *Manual save*
     - the request is intercepted by Charles where you click on Abort, check that the client retries the request right away and that the request doesn't show in the server logs
 
     - finally click on Execute, and check the request runs on the server, and the counter is incremented in the browser after 5 s
