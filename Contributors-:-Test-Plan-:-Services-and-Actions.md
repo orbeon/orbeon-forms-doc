@@ -7,6 +7,16 @@
             - use MySQL on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
             - set datasource in `server.xml`
             - create test table + data row if doesn't exist (can use IntelliJ Database tools)
+
+            ```sql
+            create table orbeon_address_book (
+              id      integer not null primary key,
+              first   varchar(255) not null,
+              last    varchar(255) not null,
+              phone   varchar(255) not null
+            );
+            insert into orbeon_address_book values(1, "John", "Smith", "5551231234"); 
+            ```
         - start with sample form and scenario from [#1230][2]
         - sets service values on request
         - sets control values on response
