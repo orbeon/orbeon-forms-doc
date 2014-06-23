@@ -23,15 +23,13 @@
             value="2000"/>
         ```
     - open 
+        - http://localhost:8080/46pe/xforms-sandbox/sample/dispatch-delay
         - in Chrome, open the Dev Tools, go to the Network tab
-        - hit the Manual button
-        - check after 20 the value got to 1
+        - hit the *Manual save* button
+        - check after 20 seconds the value got to 1
         - check in the Dev Tools the requests look as follows  
           ![][1]
-        - the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of
-
-[#1114][2]
-
+        - the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114][2]
 - test request not reaching server
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - set the following properties
