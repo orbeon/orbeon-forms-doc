@@ -51,15 +51,15 @@
     - click on *Manual save*
     - the request is intercepted by Charles where you click on Abort, check that the client retries the request right away and that the request doesn't show in the server logs
 
-    - finally click on Execute, and check the request runs on the server, and the counter is incremented in the browser after 5 s
+    - finally click on *Execute*, and check the request runs on the server, and the counter is incremented in the browser after 5 s
 
 - response not reaching client
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - in Charles, edit the breakpoint set above (see screenshot), and this time break on the response, i.e. uncheck the "request" checkbox and check the "response" checkbox
-    - click on Manual, check after 5 s the breakpoint is hit, abort, check the request is made again right away by the browser, this time execute, and check the value is incremented in the UI
+    - click on Manual, check after 5 s the breakpoint is hit, abort, check the request is made again right away by the browser, this time *Execute*, and check the value is incremented in the UI
 - unexpected HTML response
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
-    - edit the response to contain non-valid XML, and execute
+    - edit the response to contain non-valid XML, and *Execute*
     - check the client re-executes the request
 - file upload
     - setup
