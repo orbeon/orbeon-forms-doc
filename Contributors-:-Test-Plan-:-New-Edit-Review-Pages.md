@@ -38,7 +38,7 @@
         - cancel midway works
         - progress indicator works
 - submit
-    - comment out custom submit button process in properties
+    - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
     - config
 
     ```xml
