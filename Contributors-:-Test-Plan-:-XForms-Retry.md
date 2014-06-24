@@ -56,7 +56,12 @@
 - response not reaching client
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - in Charles, edit the breakpoint set above (see screenshot), and this time break on the response, i.e. uncheck the "request" checkbox and check the "response" checkbox
-    - click on Manual, check after 5 s the breakpoint is hit, abort, check the request is made again right away by the browser, this time *Execute*, and check the value is incremented in the UI
+    - click on *Manual save*
+      - check after 5 s the breakpoint is hit
+      - Abort (make sure to abort Ajax response, not call to sleep service!)
+      - check the request is made again right away by the browser
+      - *Execute*
+      - check the value is incremented in the UI
 - unexpected HTML response
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - edit the response to contain non-valid XML, and *Execute*
