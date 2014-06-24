@@ -1,6 +1,8 @@
 > [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
 
-- main tests above with Google Chrome [4.5 done: latest is 35.0.1897.8 dev]
+- main tests above with Google Chrome
+  - [4.5: latest is 35.0.1897.8 dev]
+  - [4.6: latest is 37.0.2062.0 dev]
 - Form Builder / Form Runner run with
     - latest Firefox [4.5 done: 27.0.1 and 28]
     - latest Safari [4.5 done: 7.0.2]
