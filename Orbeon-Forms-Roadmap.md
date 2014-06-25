@@ -6,9 +6,11 @@
     1. [Form Builder modernization](#form-builder-modernization) (e.g. drag-and-drop)
     1. [Other](#other)
 * Upcoming releases
-    * [Orbeon Forms 4.6](#orbeon-forms-46)
     * [Orbeon Forms 4.7](#orbeon-forms-47)
+    * [Orbeon Forms 4.8](#orbeon-forms-48)
 * [What's in a release](#whats-in-a-release)
+* Past releases
+    * [Orbeon Forms 4.6](#orbeon-forms-46)
 
 ## Tracks
 
@@ -82,8 +84,25 @@ Focus:
 Dates (tentative):
 
 - counting 1 slow summer month
-- 2014-08-12: branching and big feature freeze
-- 2014-09-09: tentative release date
+- 2014-08-24: branching and big feature freeze
+- 2014-09-24: tentative release date
+
+### Orbeon Forms 4.8
+
+Focus:
+
+- [ ] TBD
+- [ ] one performance item: TBD
+- [ ] one maintenance item: TBD
+- [ ] doc items: TBD
+- [ ] [Considered for 4.8 (in progress)](https://github.com/orbeon/orbeon-forms/issues?
+milestone=44&state=open)
+- [ ] [4.8 (in progress)](https://github.com/orbeon/orbeon-forms/issues?milestone=43&state=open)
+
+
+Dates (tentative):
+
+- 2014-11-24: tentative release date
 
 ## What's in a release
 
