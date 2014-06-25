@@ -56,21 +56,6 @@ This includes:
 
 ## Upcoming releases
 
-### Orbeon Forms 4.6
-
-Focus:
-
-- [x] one performance item: [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
-- [x] one maintenance item: [#1710](https://github.com/orbeon/orbeon-forms/issues/1143)
-- [ ] doc items: TBD
-- [x] [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
-
-Dates:
-
-- ~~2014-05-08: branching and big feature freeze~~
-- ~~2014-06-05: tentative release date~~
-- ~~2014-06-24: actual release date~~
-
 ### Orbeon Forms 4.7
 
 Focus:
@@ -116,3 +101,22 @@ For each release we would like to:
 - [ ] pick one mobile item if possible
 
 The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
+
+---
+
+## Past releases
+
+### Orbeon Forms 4.6
+
+Focus:
+
+- [x] one performance item: [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
+- [x] one maintenance item: [#1710](https://github.com/orbeon/orbeon-forms/issues/1143)
+- [ ] doc items: TBD
+- [x] [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
+
+Dates:
+
+- ~~2014-05-08: branching and big feature freeze~~
+- ~~2014-06-05: tentative release date~~
+- ~~2014-06-24: actual release date~~
