@@ -10,10 +10,10 @@
     - latest Safari
       - [4.6: 7.0.4]
       - [4.5: 7.0.2]
-    - IE9
-    - IE10
     - IE11 (since 4.5)
+    - IE10
 - Form Runner run with
-    - IE 8: FB has warning, FR looks ok
-    - IE 7: FB has warning , FR works, a few cosmetic issues
+    - IE9: FB has warning, FR works and looks ok
+    - IE8: FB has warning, FR works and looks ok
+    - IE7: FB has warning , FR works, a few cosmetic issues
       - [4.6: very limited testing]
