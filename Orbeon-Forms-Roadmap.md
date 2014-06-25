@@ -67,7 +67,7 @@ Dates:
 
 - ~~2014-05-08: branching and big feature freeze~~
 - ~~2014-06-05: tentative release date~~
-- 2014-06-xx: actual release date
+- ~~2014-06-24: actual release date~~
 
 ### Orbeon Forms 4.7
 
