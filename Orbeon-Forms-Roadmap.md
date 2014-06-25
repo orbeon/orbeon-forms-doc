@@ -64,9 +64,11 @@ Focus:
 - [ ] one performance item: TBD
 - [ ] one maintenance item: TBD
 - [ ] doc items: TBD
-- Issues
-  - [ ] [Consider for 4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=38&page=1&sort=updated&state=open)
-  - [ ] [4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=41&page=1&sort=updated&state=open)
+
+Issues:
+
+- [ ] [Consider for 4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=38&page=1&sort=updated&state=open)
+- [ ] [4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=41&page=1&sort=updated&state=open)
 
 Dates (tentative):
 
@@ -82,10 +84,12 @@ Focus:
 - [ ] one performance item: TBD
 - [ ] one maintenance item: TBD
 - [ ] doc items: TBD
-- Issues
-  - [ ] [Considered for 4.8 (in progress)](https://github.com/orbeon/orbeon-forms/issues?
+
+Issues:
+
+- [ ] [Considered for 4.8 (in progress)](https://github.com/orbeon/orbeon-forms/issues?
 milestone=44&state=open)
-  - [ ] [4.8 (in progress)](https://github.com/orbeon/orbeon-forms/issues?milestone=43&state=open)
+- [ ] [4.8 (in progress)](https://github.com/orbeon/orbeon-forms/issues?milestone=43&state=open)
 
 Dates (tentative):
 
