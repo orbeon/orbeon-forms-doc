@@ -73,8 +73,7 @@ Issues:
 Dates (tentative):
 
 - counting 1 slow summer month
-- 2014-08-24: branching and big feature freeze
-- 2014-09-24: tentative release date
+- 2014-09-10: tentative release date
 
 ### Orbeon Forms 4.8
 
@@ -93,7 +92,7 @@ milestone=44&state=open)
 
 Dates (tentative):
 
-- 2014-11-24: tentative release date
+- 2014-11-10: tentative release date
 
 ## What's in a release
 
