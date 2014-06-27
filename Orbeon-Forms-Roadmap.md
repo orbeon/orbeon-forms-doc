@@ -63,7 +63,8 @@ Focus:
 - [ ] TBD
 - [ ] one performance item: TBD
 - [ ] one maintenance item: TBD
-- [ ] doc items: TBD
+- [ ] doc items
+  - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
 
 Issues:
 
