@@ -58,9 +58,7 @@ This includes:
 
 ### Orbeon Forms 4.7
 
-Focus:
-
-- [ ] TBD
+- [ ] [4.7 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=41&page=1&sort=updated&state=open)
 - [ ] one performance item: TBD
   - candidate: [FB: Test mode must not use cache entries #1730](https://github.com/orbeon/orbeon-forms/issues/1730)
   - candidate: [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718)
@@ -75,10 +73,6 @@ Focus:
   - candidate: [Use valid() function in dialogs #1809](https://github.com/orbeon/orbeon-forms/issues/1809)
 - [ ] doc items
   - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
-
-Issues:
-
-- [ ] [4.7 (in progress)](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=41&page=1&sort=updated&state=open)
 
 Dates (tentative):
 
