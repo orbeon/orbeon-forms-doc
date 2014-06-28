@@ -64,6 +64,8 @@ Focus:
 - [ ] one performance item: TBD
   - candidate: [FB: Test mode must not use cache entries #1730](https://github.com/orbeon/orbeon-forms/issues/1730)
   - candidate: [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718)
+  - candidate: [Internal requests must not go through HTTP #1363](https://github.com/orbeon/orbeon-forms/issues/1363)
+  - candidate: [FB: Publish should strip whitespace from form definition #1715](https://github.com/orbeon/orbeon-forms/issues/1715)
 - [ ] one maintenance item: TBD
 - [ ] doc items
   - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
