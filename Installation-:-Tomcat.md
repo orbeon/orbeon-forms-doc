@@ -21,7 +21,7 @@ On Unix systems, we recommend you don't use GIJ / GCG, as there are reports of i
 
 Optional steps:
 
-1. To run the authentication example:
+1. To setup Form Runner authentication:
     1. Open `TOMCAT_HOME/webapps/orbeon/WEB-INF/web.xml` and uncomment the `security-constraint`, `login-config` and `security-role` declarations at the end of the file.
     2. Open `TOMCAT_HOME/conf/server.xml` and uncomment the following declaration:
 
