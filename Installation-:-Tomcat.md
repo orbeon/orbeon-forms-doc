@@ -34,9 +34,8 @@ Optional steps:
 
     ```xml
     <tomcat-users>
-        <role rolename="orbeon-user"/>
-        <role rolename="orbeon-admin"/>
-        <user username="orbeonadmin" password="xforms" roles="orbeon-user,orbeon-admin"/>
+        <user username="orbeon-user"  password="xforms" roles="orbeon-user"/>
+        <user username="orbeon-admin" password="xforms" roles="orbeon-user,orbeon-admin"/>
     </tomcat-users>
     ```
 2. If you are using basic authentication on Tomcat 6.0.21 or newer, or on Tomcat 7, then you need to add the following valve inside the `<Context>` corresponding to the Orbeon Forms web app in Tomcat's configuration:
