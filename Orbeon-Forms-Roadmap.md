@@ -59,14 +59,11 @@ This includes:
 ### Orbeon Forms 4.7
 
 - [ ] [4.7 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=41&page=1&sort=updated&state=open)
-- [ ] one performance item: TBD
-  - candidate: [FB: Test mode must not use cache entries #1730](https://github.com/orbeon/orbeon-forms/issues/1730)
-  - candidate: [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718)
-  - candidate: [Internal requests must not go through HTTP #1363](https://github.com/orbeon/orbeon-forms/issues/1363)
-  - candidate: [FB: Publish should strip whitespace from form definition #1715](https://github.com/orbeon/orbeon-forms/issues/1715)
+- [ ] one performance item:
+  - see [Performance item for 4.7 #1812](https://github.com/orbeon/orbeon-forms/issues/1812)
 - [ ] maintenance items:
-  - [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
-  - [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
+  - [ ] [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
+  - [ ] [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
 - [ ] doc items
   - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
 
