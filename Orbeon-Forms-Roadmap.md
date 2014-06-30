@@ -64,13 +64,9 @@ This includes:
   - candidate: [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718)
   - candidate: [Internal requests must not go through HTTP #1363](https://github.com/orbeon/orbeon-forms/issues/1363)
   - candidate: [FB: Publish should strip whitespace from form definition #1715](https://github.com/orbeon/orbeon-forms/issues/1715)
-- [ ] one maintenance item: TBD
-  - candidate: [Remove service request/response instances #1593](https://github.com/orbeon/orbeon-forms/issues/1593)
-  - candidate: [Add metadata permissions in FormRunnerPersistenceProxy #1316](https://github.com/orbeon/orbeon-forms/issues/1316)
-  - candidate: [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
-  - candidate: [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
-  - candidate: [Remove manual relevance handling in dialogs #640](https://github.com/orbeon/orbeon-forms/issues/640)
-  - candidate: [Use valid() function in dialogs #1809](https://github.com/orbeon/orbeon-forms/issues/1809)
+- [ ] maintenance items:
+  - [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
+  - [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
 - [ ] doc items
   - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
 
