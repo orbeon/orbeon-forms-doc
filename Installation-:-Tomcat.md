@@ -9,6 +9,8 @@ We recommend using a current version of Tomcat. As of Orbeon Forms 4.6, those ar
 
 *NOTE: Tomcat 8 hasn't been tested yet.*
 
+On Unix systems, we recommend you don't use GIJ / GCG, as there are reports of issues with that runtime environment and Orbeon Forms. Instead, we recommend you use the Sun/Oracle runtime Java environment.
+
 ## Setup
 
 1. Assuming that `TOMCAT_HOME` represents the location of your Tomcat installation: create a new `TOMCAT_HOME/webapps/orbeon` directory.
@@ -16,8 +18,6 @@ We recommend using a current version of Tomcat. As of Orbeon Forms 4.6, those ar
 3. If using Orbeon Forms PE, make sure the `license.xml` file is in place (see above).
 4. You can now start Tomcat, and access `http://localhost:8080/orbeon/` to test your installation (replacing `localhost` and `8080` with the host name and port number of your Tomcat installation if different from the default).
 5. We recommend you add the `URIEncoding="UTF-8"` attribute on the `Connector`][2] element, in your `server.xml`, as [recommended in the Tomcat FAQ][3]. This will ensure that all characters get properly decoded on the URL, which is especially important if you're using non-ASCII characters in the app or form name in Form Builder.
-
-On Unix systems, we recommend you don't use GIJ / GCG, as there are reports of issues with that runtime environment and Orbeon Forms. Instead, we recommend you use the Sun/Oracle runtime environment. 
 
 Optional steps:
 
