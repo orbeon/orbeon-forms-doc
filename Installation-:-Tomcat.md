@@ -1,6 +1,6 @@
 > [Wiki](Home) ▸ Installation
 
-## Apache Tomcat
+## Versions
 
 We recommend using a current version of Tomcat. As of Orbeon Forms 4.6, those are:
 
@@ -8,6 +8,8 @@ We recommend using a current version of Tomcat. As of Orbeon Forms 4.6, those ar
 - Tomcat 7
 
 *NOTE: Tomcat 8 hasn't been tested yet.*
+
+## Setup
 
 1. Assuming that `TOMCAT_HOME` represents the location of your Tomcat installation: create a new `TOMCAT_HOME/webapps/orbeon` directory.
 2. Unzip `orbeon.war` in the `orbeon` directory you just created.
