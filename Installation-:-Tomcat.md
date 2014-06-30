@@ -46,7 +46,22 @@ Optional steps:
         changeSessionIdOnAuthentication="false"/>
     ```
 
-## Apache Tomcat with a custom context
+## Setting up a custom context
+
+You can setup the Tomcat context directly within the Orbeon Forms WAR under `TOMCAT_HOME/webapps/orbeon/META-INF/context.xml`. For example:
+
+```xml
+<Resource name="jdbc/mysql" auth="Container" type="javax.sql.DataSource"
+    initialSize="3" maxActive="10" maxIdle="20" maxWait="30000"
+    driverClassName="com.mysql.jdbc.Driver"
+    poolPreparedStatements="true"
+    username="orbeon"
+    password="password"
+    url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
+</Context>
+```
+
+## Setting up a custom context within server.xml
 
 This is an alternate way of deploying with Tomcat, which gives you more control as to where the Orbeon Forms files are located.
 
@@ -76,12 +91,12 @@ Note that if you have a JDBC datasource, you can also place it inside:
     reloadable="false"
     override="true"
     allowLinking="true">
-    <Resource name="jdbc/orbeonmysql" auth="Container" type="javax.sql.DataSource"
+    <Resource name="jdbc/mysql" auth="Container" type="javax.sql.DataSource"
         initialSize="3" maxActive="10" maxIdle="20" maxWait="30000"
         driverClassName="com.mysql.jdbc.Driver"
         poolPreparedStatements="true"
-        username=""
-        password=""
+        username="orbeon"
+        password="password"
         url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
     </Context>
 ```
