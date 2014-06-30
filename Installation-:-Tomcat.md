@@ -58,7 +58,7 @@ This means that under the `orbeon` directory, you should have a `WEB-INF` direct
 Then create a context in Tomcat's `server.xml`, for example:
 
 ```xml
-    <Context
+<Context
     path="/orbeon"
     docBase="/path/to/orbeon-war"
     reloadable="false"
