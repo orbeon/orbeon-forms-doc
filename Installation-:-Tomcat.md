@@ -100,7 +100,7 @@ Note that if you have a JDBC datasource, you can also place it inside:
         <user username="orbeon-admin" password="xforms" roles="orbeon-user,orbeon-admin"/>
     </tomcat-users>
     ```
-3. If you are using basic authentication on Tomcat 6.0.21 or newer, or on Tomcat 7, then you need to add the following valve inside the `<Context>` corresponding to the Orbeon Forms web app in Tomcat's configuration:
+3. If you are using BASIC authentication on Tomcat 6.0.21 or newer, or on Tomcat 7, then you need to add the following valve inside the `<Context>` corresponding to the Orbeon Forms web app in Tomcat's configuration:
 
     ```xml
     <Valve
