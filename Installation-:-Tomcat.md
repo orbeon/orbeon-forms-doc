@@ -67,9 +67,9 @@ This is an alternate way of deploying with Tomcat, which gives you more control 
 
 First, unzip the Orbeon Forms WAR file into a directory of your choice, for example:
 
-    /path/to/orbeon
+    /path/to/orbeon-war
 
-This means that under the `orbeon` directory, you should have a `WEB-INF` directory.
+This means that under the `orbeon-war` directory, you should have a `WEB-INF` directory.
 
 Then create a context in Tomcat's `server.xml`, for example:
 
