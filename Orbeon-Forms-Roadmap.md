@@ -67,7 +67,7 @@ This includes:
 - [ ] doc items
   - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
 
-Dates (tentative):
+Dates:
 
 - counting 1 slow summer month
 - 2014-09-10: tentative release date
