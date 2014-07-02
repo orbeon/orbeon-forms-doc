@@ -45,7 +45,7 @@ But why a reproducible test case? The alternative is to describe the issue in pl
 
 You can provide two types of test cases:
 
-- __An XHTML+XForms__ file that runs in Form Runner or in the XForms sandbox - This is the preferred way of submitting a test case. Most problems with XForms can be shown in one single XHTML+XForms file. If you need the XForms to call a service with an ``, you can simulate this by placing an XML file that contains the response from that service on a public web site, and changing the`` to point to that file. If you don't have a server of your own that you can use for this, a free hosting service will work.
+- __An XHTML+XForms__ file that runs in Form Runner or in the XForms sandbox - This is the preferred way of submitting a test case. Most problems with XForms can be shown in one single XHTML+XForms file. If you need the XForms to call a service with an `<xf:submission>`, you can simulate this by placing an XML file that contains the response from that service on a public web site, and changing the `<xf:submission>` to point to that file. If you don't have a server of your own that you can use for this, a free hosting service will work.
 
 - __An application__ - An Orbeon Forms application is stored under `resources/apps`. Assuming you have your application under `resources/apps/foo`, it can be accessed by going to`http://localhost:8080/ops/foo/`. If you can't create a test case that runs in the XForms sandbox, create a simple standalone application under directory foo, zip the content of that directory, and attach it to your email in the Orbeon Forms forum as `foo.zip`.
 
