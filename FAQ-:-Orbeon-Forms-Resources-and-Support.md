@@ -7,9 +7,7 @@
 
 ## How can I subscribe to the Orbeon Forms forum?
 
-See the [Community][5] page.
-
-If you are having any problem subscribing to the forum, please contact Orbeon at [info@orbeon.com][4].
+See the [Community][5] page. If you are having any problem subscribing to the forum, please contact Orbeon at [info@orbeon.com][4].
 
 ## Where do I find the source code?
 
