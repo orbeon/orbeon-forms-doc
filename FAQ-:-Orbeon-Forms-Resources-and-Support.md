@@ -95,5 +95,5 @@ See also our [roadmap](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-
 [3]: http://www.orbeon.com/services
 [4]: mailto:info%40orbeon.com
 [5]: http://www.orbeon.com/community
-[6]: http://wiki.orbeon.com/forms/orbeon-forms-faq/faq-orbeon-forms-support#source-code
+[6]: http://wiki.orbeon.com/forms/doc/contributor-guide/development-environment/orbeon-source-code-repository
 [7]: https://github.com/orbeon/orbeon-forms/issues
