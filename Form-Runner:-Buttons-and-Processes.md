@@ -280,6 +280,20 @@ Example:
 
 If `replace` is set to `all` and the service issues a redirection via an HTTP status code, the redirection is propagated to the client. This also works with portlets.
 
+### set-data-status
+
+[SINCE Orbeon Forms 4.7]
+
+Set the status of the form data in memory.
+
+- parameters
+    - `clean`: specifies the URL to navigate to
+        - `true`: mark the data is in initial state or saved (default)
+        - `false`: mark the data as modified by the user and not saved
+    - `draft`: whether only the autosave status must be set
+        - `true`: set the autosave status only
+        - `false`: set both the autosave status and the saved data status (default)
+
 ### navigate
 
 Navigate to an external page via client-side GET.
