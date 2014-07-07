@@ -287,9 +287,9 @@ If `replace` is set to `all` and the service issues a redirection via an HTTP st
 Set the status of the form data in memory.
 
 - parameters
-    - `clean`: specifies the status of the data
-        - `true`: mark the data as in initial state or saved (default)
-        - `false`: mark the data as modified by the user and not saved
+    - `status`: specifies the status of the data
+        - `safe`: mark the data as in initial state or saved (default)
+        - `unsafe`: mark the data as modified by the user and not saved
     - `draft`: whether only the autosave status must be set
         - `true`: set the autosave status only
         - `false`: set both the autosave status and the saved data status (default)
