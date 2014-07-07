@@ -287,12 +287,14 @@ If `replace` is set to `all` and the service issues a redirection via an HTTP st
 Set the status of the form data in memory.
 
 - parameters
-    - `clean`: specifies the URL to navigate to
-        - `true`: mark the data is in initial state or saved (default)
+    - `clean`: specifies the status of the data
+        - `true`: mark the data as in initial state or saved (default)
         - `false`: mark the data as modified by the user and not saved
     - `draft`: whether only the autosave status must be set
         - `true`: set the autosave status only
         - `false`: set both the autosave status and the saved data status (default)
+
+This action can be useful in conjunction with `send`. Upon successfully sending the data, if the data is not in addition saved to the local database, this action can be used to indicate to the user that the data is safe.
 
 ### navigate
 
