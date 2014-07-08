@@ -81,7 +81,20 @@ This feature allows you to configure access to a remote server and to publish, u
 
 ### Configuration on the local server
 
-In order to configure a remote server, you need to setup the `oxf.fr.production-server-uri` property:
+In order to configure a remote server, you need to setup a property.
+
+With Orbeon Forms 4.7, use the `oxf.fr.home.remote-servers` property, which allows configuring multiple remote servers:
+
+```xml
+<property as="xs:string" name="oxf.fr.home.remote-servers">
+    [
+        { "label": "Staging",    "url": "http://staging.example.org:8080/orbeon" },
+        { "label": "Production", "url": "http://prod.example.org:9090/orbeon" }
+    ]
+</property>
+```
+
+With Orbeon Forms 4.4 to 4.6, use the `oxf.fr.production-server-uri` property:
 
 ```xml
 <property
@@ -89,6 +102,8 @@ In order to configure a remote server, you need to setup the `oxf.fr.production-
   name="oxf.fr.production-server-uri"
   value="http://remote.server:8080/orbeon/"/>
 ```
+
+*NOTE: As of Orbeon Forms 4.7, the `oxf.fr.production-server-uri` is deprecated. With Orbeon Forms 4.7 and newer, if the `oxf.fr.production-server-uri` is set and not empty, it takes precedence over the new `oxf.fr.home.remote-servers` property, for backward compatibility.*
 
 ### Configuration on the remote server
 
