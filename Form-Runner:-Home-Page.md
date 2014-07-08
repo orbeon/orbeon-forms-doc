@@ -83,7 +83,7 @@ This feature allows you to configure access to a remote server and to publish, u
 
 In order to configure a remote server, you need to setup a property.
 
-With Orbeon Forms 4.7, use the `oxf.fr.home.remote-servers` property, which allows configuring multiple remote servers:
+With Orbeon Forms 4.7 and newer, use the `oxf.fr.home.remote-servers` property, which allows configuring multiple remote servers:
 
 ```xml
 <property as="xs:string" name="oxf.fr.home.remote-servers">
