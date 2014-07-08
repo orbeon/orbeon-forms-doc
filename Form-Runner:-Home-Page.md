@@ -94,6 +94,8 @@ With Orbeon Forms 4.7, use the `oxf.fr.home.remote-servers` property, which allo
 </property>
 ```
 
+The format is a JSON array containing any number of JSON objects. Each object must have a non-empty `label` property indicating the label to display to the user when selecting a remote server, and a non-empty `url` property indicating the location of the remote server.
+
 With Orbeon Forms 4.4 to 4.6, use the `oxf.fr.production-server-uri` property:
 
 ```xml
