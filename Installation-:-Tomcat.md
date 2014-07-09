@@ -77,7 +77,7 @@ Note that if you have a JDBC datasource, you can also place it inside:
         username="orbeon"
         password="password"
         url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
-    </Context>
+</Context>
 ```
 
 ## Optional steps
