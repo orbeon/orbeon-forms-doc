@@ -26,6 +26,10 @@
     - check help icon appears when help is set, and disappears when help is blanked
 - set section help
     - check help icon appears when help is set, and disappears when help is blanked ([#1160][3] is a known issue)
+- cut/copy/paste
+  - copy control with help
+  - paste control
+  - check in source that all elements have been renamed, including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
 - set control validation
     - set custom error constraint and alert
     - set custom warning constraint and alert
