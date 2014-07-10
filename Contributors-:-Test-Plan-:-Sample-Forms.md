@@ -6,6 +6,7 @@
     - autocomplete works
     - dynamic data dropdown loads data
     - review/PDF look ok
+    - enter long text without space in input field, check it wraps in view/pdf modes
 - Bookshelf
     - Summary: see Summary page below
     - Detail
