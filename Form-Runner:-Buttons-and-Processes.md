@@ -163,6 +163,19 @@ Save data and attachments via the persistence layer.
     - dispatch `fr-data-save-done` to `fr-form-model`
 - parameters
     - `draft`: "true" if must be saved as a draft [SINCE Orbeon Forms 4.4]
+    - `query`: additional query parameters to pass the persistence layer (is an XPath value template) [SINCE Orbeon Forms 4.6.1]
+
+Example of use of the `query` parameter:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.process.save-final.*.*">
+    require-uploads
+    then validate-all
+    then save(query = "foo=bar&amp;title={//title}")
+    then success-message("save-success")
+    recover error-message("database-error")
+</property>
+```
 
 The full URL, for attachments as well as for the XML data, is composed of:
 
