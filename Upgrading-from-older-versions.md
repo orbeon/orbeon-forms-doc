@@ -27,7 +27,7 @@
 
 When about to upgrade, we recommend you go through the release notes for all versions between the version you are using and the one you are upgrading to, paying particular attention to the compatibility notes sections. Here are the releases which contain backward compatibility notes:
 
-- 4.6.1: TBD
+- [4.6.1](http://blog.orbeon.com/2014/07/orbeon-forms-461.html)
 - [4.6](http://blog.orbeon.com/2014/06/orbeon-forms-46.html)
 - [4.5](http://blog.orbeon.com/2014/04/orbeon-forms-45.html)
 - [4.4](http://blog.orbeon.com/2013/11/orbeon-forms-44.html)
