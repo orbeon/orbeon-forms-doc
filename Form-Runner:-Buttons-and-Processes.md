@@ -406,7 +406,8 @@ Open an XForms dialog by id.
 
 ### Other actions
 
-- `review`, `edit`, `summary`: navigate to these Form Runner pages
+- `review`, `edit`: navigate to these Form Runner pages
+- `summary`: navigate to this Form Runner page (a predefined process since 4.7)
 - `visit-all`: mark all controls as visited
 - `unvisit-all`: mark all controls as not visited
 - `expand-all`: expand all sections
@@ -426,6 +427,7 @@ The following sub-processes are predefined and can be reused from other processe
 - `validate-all`: combine `require-valid` and `review-messages` [SINCE Orbeon Forms 4.3]
 - `orbeon-home`: navigate to '/'
 - `form-runner-home`: navigate to '/fr'
+- `summary`: navigate to this Form Runner page (a predefined process since 4.7)
 
 ## Combining actions
 
