@@ -15,7 +15,7 @@ This page describes how to configure the behavior of the buttons that appear at 
 
 ## Defining a process
 
-You define a process with a property starting with `oxf.fr.detail.process`. For example:
+You define a process with a property (typically in [`properties-local.xml`](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties)) starting with `oxf.fr.detail.process`. For example:
 
 ```xml
 <property
