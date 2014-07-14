@@ -303,9 +303,6 @@ Set the status of the form data in memory.
     - `status`: specifies the status of the data
         - `safe`: mark the data as in initial state or saved (default)
         - `unsafe`: mark the data as modified by the user and not saved
-    - `draft`: whether only the autosave status must be set
-        - `true`: set the autosave status only
-        - `false`: set both the autosave status and the saved data status (default)
 
 This action can be useful in conjunction with `send`. Upon successfully sending the data, if the data is not in addition saved to the local database, this action can be used to indicate to the user that the data is safe.
 
