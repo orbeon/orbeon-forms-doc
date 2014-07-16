@@ -14,7 +14,7 @@ It depends:
 
 The above is valid as long as the license hasn't expired, if it has an `expiration` date specified.
 
-In practice, the Orbeon Forms licenses we produce typically are like this;
+In practice, the Orbeon Forms licenses we produce typically have the following features:
 
 - PE Basic license
   - have an `expiration` date
