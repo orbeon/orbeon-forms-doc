@@ -618,9 +618,11 @@ Button labels can be overridden as well, as was the case before:
 ```xml
 <property
   as="xs:string"
-  name="oxf.fr.resource.*.*.en.detail.buttons.send"
+  name="oxf.fr.resource.*.*.en.buttons.send"
   value="Fancy Send"/>
 ```
+
+*NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.*
 
 All the configuration above for a button called `send` could have been done with an entirely custom button named `foo`.
 
