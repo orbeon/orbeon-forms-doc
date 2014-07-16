@@ -68,4 +68,6 @@ Much has changed between the 3.x and 4.x series of Orbeon Forms:
 - the configuration is more flexible
 - there are many new features
 
+In addition, we can support newer version of Orbeon Forms much better than older versions.
+
 See the [release notes of all the versions](./Orbeon-Forms-release-history) for more details.
