@@ -27,12 +27,16 @@
 - set section help
     - check help icon appears when help is set, and disappears when help is blanked ([#1160][3] is a known issue)
 - cut/copy/paste
-  - copy control with help
-  - paste control
-  - check in source that all elements have been renamed, including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
+    - copy control with help, required, constraint, and warning
+    - paste control
+    - check in source that all elements have been renamed, including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
+  - check that form runs and new control validates constraints properly
 - set control validation
     - set custom error constraint and alert
     - set custom warning constraint and alert
+    - set required
+    - check that if control is required but empty, generic message shows, not constraint message ([#1829](https://github.com/orbeon/orbeon-forms/issues/1829))
+    - check that if control is required but empty and there is an unmet constraint, generic message shows ([#1830](https://github.com/orbeon/orbeon-forms/issues/1830))
 - set control MIPs and properties
     - check required star appears with required set to true()
     - check Show in Summary/Search work when form deployed
