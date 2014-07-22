@@ -53,7 +53,8 @@ This is a typical filter configuration:
 And here is an example of embedding a form from a JSP page:
 
 ```jsp
-<%@ page pageEncoding="utf-8"
+<%@ page
+    pageEncoding="utf-8"
     contentType="text/html; charset=UTF-8"
     import="org.orbeon.oxf.fr.embedding.servlet.API" %>
 <!DOCTYPE HTML>
