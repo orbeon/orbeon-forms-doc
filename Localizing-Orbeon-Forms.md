@@ -16,17 +16,17 @@ Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder
 English   | F | F | F | F | F
 French    | F | F | F | F | F
 Portuguese| F | F | F | F | F
+Italian   | F | F | F | F | F
+German    | F | F | F | F | F
 Spanish   | F | F | F | P | P
 Finnish   | F | F | P | F | F
 Swedish   | F | F | F | F | N
 Dutch     | F | F | F | F | N
-Italian   | F | F | F | P | P
-German    | F | F | F | P | P
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 Polish    | N | F | N | N | N
 
-*NOTE: In this version, Spanish, Italian and German have a few missing localized resources. We hope to have them fully updated for 4.7. Please let us know if you would like to help!*
+*NOTE: In 4.6.0, this version, Spanish, Italian and German have a few missing localized resources. In 4.6.2, Italian and German resources are complete again. We hope to have Spanish resources fully updated for 4.7. Please let us know if you would like to help!*
 
 ### As of Orbeon Forms 4.5
 
