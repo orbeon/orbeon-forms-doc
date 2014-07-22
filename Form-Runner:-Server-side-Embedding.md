@@ -80,3 +80,4 @@ And here is an example of embedding a form from a JSP page:
 
 - navigation between pages, such as the Form Runner Edit and Review pages, is not supported
 - embedding Form Builder is currently not supported
+- embedding multiple forms is known to work in most cases, but has at least one known issue with repeated grid menus
