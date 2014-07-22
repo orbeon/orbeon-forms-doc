@@ -76,6 +76,16 @@ And here is an example of embedding a form from a JSP page:
 </html>
 ```
 
+## How it works
+
+When your web app calls the embedding API, an HTTP request is made to Form Runner to retrieve the HTML to embed.
+
+The embedding implementation:
+
+- appropriately rewrites URLs in the HTML returned by Form Runner
+- associates session cookies
+- proxies requests for resources Ajax calls and uploads to Form Runner
+
 ## Limitations
 
 - navigation between pages, such as the Form Runner Edit and Review pages, is not supported
