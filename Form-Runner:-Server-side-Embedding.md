@@ -69,7 +69,8 @@ And here is an example of embedding a form from a JSP page:
             "bookshelf",
             "new",
             null,
-            null);
+            null
+        );
     %>
 </body>
 </html>
