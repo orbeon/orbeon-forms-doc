@@ -10,7 +10,7 @@ The intent is to allow Java (and other Java Virtual Machine (JVM)-based language
 
 ## Configuration
 
-You deploy Form Runner in a separate web app, which can be located in the same servlet container as your web app or in a remote servlet container. The embedding code communicates with Form Runner via HTTP or HTTPS.
+You deploy Form Runner in a separate web app, which can be located in the same servlet container as your web app or in a remote servlet container.
 
 Your own web app does the following:
 
@@ -78,10 +78,9 @@ And here is an example of embedding a form from a JSP page:
 
 ## How it works
 
-When your web app calls the embedding API, an HTTP request is made to Form Runner to retrieve the HTML to embed.
-
 The embedding implementation:
 
+- makes an HTTP or HTTPs request to Form Runner to retrieve the HTML to embed when you call the API
 - appropriately rewrites URLs in the HTML returned by Form Runner
 - associates session cookies
 - proxies requests for resources Ajax calls and uploads to Form Runner
