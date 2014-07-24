@@ -90,11 +90,11 @@ With Orbeon Forms 4.7 and newer, use the `oxf.fr.home.remote-servers` property, 
   [
     {
       "label": "Staging",
-      "url": "http://staging.example.org:8080/orbeon"
+      "url":   "http://staging.example.org:8080/orbeon"
     },
     {
       "label": "Production",
-      "url": "http://prod.example.org:9090/orbeon"
+      "url":   "http://prod.example.org:9090/orbeon"
     }
   ]
 </property>
