@@ -606,7 +606,6 @@ process names are standard, but we can customize them specifically for our form.
   as="xs:string"
   name="oxf.fr.detail.process.send.acme.hr"
   value='require-valid
-         then pdf
          then email
          then send("http://example.org/")
          then navigate("/success")
