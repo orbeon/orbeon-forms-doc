@@ -10,7 +10,7 @@ The intent is to allow Java (and other Java Virtual Machine (JVM)-based language
 
 ## Configuration
 
-You deploy Form Runner in a separate web app, which can be located in the same servlet container as your web app or in a remote servlet container.
+You deploy Form Runner in a separate web app, which can be located in the same servlet container as your web app or in a separate or even remote servlet container.
 
 Your own web app does the following:
 
