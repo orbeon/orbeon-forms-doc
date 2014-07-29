@@ -422,7 +422,7 @@ Open an XForms dialog by id.
 - `collapse-all`: collapse all sections
 - `result-dialog`: show the result dialog
 - `captcha`: trigger the captcha
-- `wizard-pref`: navigate the wizard to the previous page
+- `wizard-prev`: navigate the wizard to the previous page
 - `wizard-next`: navigate the wizard to the next page
 
 ## Predefined reusable processes
