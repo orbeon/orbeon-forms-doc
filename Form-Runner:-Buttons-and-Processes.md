@@ -252,6 +252,17 @@ Example:
       valid=true&
       language=fr
 
+When `pdf-url` is specified, the XML document sent has the following format:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<url>/xforms-server/dynamic/567f14ee46c6b21640c1a5a7374d5ad8</url>
+```
+
+The PDF can be retrieved by accessing that path with the proper session cookie.
+
+*NOTE: This is not ideal, see [#1840](https://github.com/orbeon/orbeon-forms/issues/1840)*
+
 `annotate` can contain the following tokens: `error`, `warning`, or `info`. The XML data is annotated with the information associated with the given level or levels. If the property is missing or empty, no annotation takes place. For example:
 
 ```xml
