@@ -70,7 +70,7 @@ In addition, we can support newer version of Orbeon Forms much better than older
 
 See the [release notes of all the versions](./Orbeon-Forms-release-history) for more details.
 
-In addition, if you are on the 3.x series of Orbeon Forms, much has changed, the 4.x series brings:
+In addition, if you are on the 3.x series of Orbeon Forms, the 4.x series brings:
 
 - an improved look and feel
 - a rewritten Form Builder relying on a better foundation
