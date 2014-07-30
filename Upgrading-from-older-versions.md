@@ -59,15 +59,20 @@ When this happens, we consider the reasons changes relying upon Orbeon Forms int
 
 Finally, please let us know if you encounter issues while upgrading, via the [commmunity](http://www.orbeon.com/community), by email, or via professional support.
 
-## What are the benefits of upgrading from 3.x to 4.x?
+## What are the benefits of upgrading Orbeon Forms versions?
 
-Much has changed between the 3.x and 4.x series of Orbeon Forms:
+Each new version brings:
 
-- there have been lots of stability, security and other bug-fixes
-- there is an improved look and feel
-- the configuration is more flexible
-- there are many new features
+- stability, security and other bug-fixes
+- new features
 
 In addition, we can support newer version of Orbeon Forms much better than older versions.
 
 See the [release notes of all the versions](./Orbeon-Forms-release-history) for more details.
+
+In addition, if you are on the 3.x series of Orbeon Forms, much has changed, the 4.x series brings:
+
+- an improved look and feel
+- a rewritten Form Builder relying on a better foundation
+- more configurable features
+- many new features
