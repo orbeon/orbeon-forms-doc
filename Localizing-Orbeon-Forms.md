@@ -18,9 +18,9 @@ French    | F | F | F | F | F
 Portuguese| F | F | F | F | F
 Italian   | F | F | F | F | F
 German    | F | F | F | F | F
+Swedish   | F | F | F | F | F
 Spanish   | F | F | F | P | P
 Finnish   | F | F | P | F | F
-Swedish   | F | F | F | F | N
 Dutch     | F | F | F | F | N
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
