@@ -1,3 +1,7 @@
+## Availability
+
+This feature is available for Oracle since 4.0, and DB2 since 4.7.
+
 ## Property to enable
 
 Orbeon Forms can create in Oracle a form-specific view of your data, with one column for each form field. You enable this feature by setting the following property to `true`. (If you define your own provider for Oracle, use that provider name in the property name, instead of `oracle`.)
