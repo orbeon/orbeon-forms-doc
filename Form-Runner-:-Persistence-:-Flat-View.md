@@ -68,4 +68,6 @@ Section name           | Control name | Column name
 
 ## Limitations
 
-The Oracle flat view feature does not support nested sections and repeats, see issue #1069.
+The Oracle flat view feature does not support nested sections and repeats, see issue [#1069][1].
+
+  [1]: https://github.com/orbeon/orbeon-forms/issues/1069
