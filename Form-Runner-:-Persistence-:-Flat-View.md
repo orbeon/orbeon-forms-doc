@@ -3,7 +3,9 @@
 Orbeon Forms can create in Oracle a form-specific view of your data, with one column for each form field. You enable this feature by setting the following property to `true`. (If you define your own provider for Oracle, use that provider name in the property name, instead of `oracle`.)
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.persistence.oracle.create-flat-view" value="false"/>
+<property as="xs:boolean" 
+          name="oxf.fr.persistence.oracle.create-flat-view" 
+          value="false"/>
 ```
 
 ## View name
