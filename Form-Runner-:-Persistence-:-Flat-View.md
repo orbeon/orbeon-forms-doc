@@ -1,6 +1,6 @@
 ## Availability
 
-This feature is available for Oracle since 4.0, and DB2 since 4.7.
+Creating flat views on publish is available for Oracle since 4.0, and for DB2 since 4.7.
 
 ## Property to enable
 
