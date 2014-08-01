@@ -1,6 +1,6 @@
 - [Usage](#usage)
 
-## Use
+## Usage
 
 ### Rationale
 
