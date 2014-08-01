@@ -65,3 +65,7 @@ Section name           | Control name | Column name
                        | `address`    | `PERSONAL_INFOR_ADDRESS`
 `company`              | `name`       | `COMPANY_NAME`
                        | `industry`   | `COMPANY_INDUSTRY`
+
+## Limitations
+
+The Oracle flat view feature does not support nested sections and repeats, see issue #1069.
