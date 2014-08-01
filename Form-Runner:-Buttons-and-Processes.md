@@ -345,6 +345,8 @@ navigate(uri = "http://example.org/{xxf:get-request-parameter('bar')}/{.//code}"
         - `message`: message to show
         - `resource`: resource key pointing to the message
 
+[SINCE Orbeon Forms 4.7] The value of the `message` parameter and the message to which points the resource key in the `resource` parameter are interpreted as an XPath Value Template.
+
 ### confirm
 
 [SINCE Orbeon Forms 4.5]
