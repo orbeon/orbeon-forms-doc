@@ -1,4 +1,7 @@
 - [Usage](#usage)
+    - [Rationale](#rationale)
+    - [Availability](#availability)
+    - [Property to enable]
 
 ## Usage
 
