@@ -66,13 +66,14 @@ And here is an example of embedding a form from a JSP page:
 <body>
     <%
         API.embedFormJava(
-            request,
-            out,
-            "orbeon",
-            "bookshelf",
-            "new",
-            null,
-            null
+            request,      // incoming HttpServletRequest
+            out,          // Writer where the embedded form is written
+            "orbeon",     // Form Runner form name
+            "bookshelf",  // Form Runner app name
+            "new",        // Form Runner action name
+            null,         // Form Runner document id (optional)
+            null,         // query string (optional)
+            null          // custom HTTP headers (optional)
         );
     %>
 </body>
