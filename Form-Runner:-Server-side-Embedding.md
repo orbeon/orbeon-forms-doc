@@ -18,6 +18,10 @@ Your own web app does the following:
 - setup a filter in `WEB-INF/lib`
 - call the embedding API when producing a page
 
+SLF4J is also required for logging. If your application already uses SLF4J, you don't need to do anything. Otherwise, you must add slf4j-api.jar to your application's `WEB-INF/lib` folder.
+
+*OPTIONAL: In addition, if you want to actually configure logging for the embedding library, you must add a logging adapter for SLF4j and the appropriate configuration file, for example for log4j.*
+
 This is a typical filter configuration:
 
 ```xml
