@@ -86,7 +86,7 @@ The embedding implementation:
 
 - makes an HTTP or HTTPs request to Form Runner to retrieve the HTML to embed when you call the API
 - appropriately rewrites URLs in the HTML returned by Form Runner
-- associates session cookies
+- keeps track of session and other cookies
 - proxies requests for resources, Ajax calls and file uploads to Form Runner
 
 ## Limitations
