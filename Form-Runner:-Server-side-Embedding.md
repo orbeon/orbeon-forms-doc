@@ -10,6 +10,8 @@ The intent is to allow Java (and other Java Virtual Machine (JVM)-based language
 
 ## Configuration
 
+### Basic configuration
+
 You deploy Form Runner in a separate web app, which can be located in the same servlet container as your web app or in a separate or even remote servlet container.
 
 Your own web app does the following:
@@ -17,10 +19,6 @@ Your own web app does the following:
 - include `orbeon-embedding.jar` under `WEB-INF/lib`
 - setup a filter in `WEB-INF/lib`
 - call the embedding API when producing a page
-
-The embedding JAR uses SLF4J for logging. If your application already uses SLF4J and already has slf4j-api.jar, you can remove the one provided by Orbeon under `WEB-INF/lib`. Otherwise, you must keep slf4j-api.jar in your application's `WEB-INF/lib` folder.
-
-*OPTIONAL: In addition, if you want to actually configure logging for the embedding library, you must add a logging adapter for SLF4j and the appropriate configuration file, for example for log4j. See the sample configuration file under `WEB-INF/classes/log4j.properties.template`.*
 
 This is a typical filter configuration:
 
@@ -79,6 +77,77 @@ And here is an example of embedding a form from a JSP page:
 </body>
 </html>
 ```
+
+### Logging configuration
+
+The embedding JAR uses SLF4J for logging. If your application already uses SLF4J and already has slf4j-api.jar, you can remove the one provided by Orbeon under `WEB-INF/lib`. Otherwise, you must keep slf4j-api.jar in your application's `WEB-INF/lib` folder.
+
+*OPTIONAL: In addition, if you want to actually configure logging for the embedding library, you must add a logging adapter for SLF4j and the appropriate configuration file, for example for log4j. See the sample configuration file under `WEB-INF/classes/log4j.properties.template`.*
+
+### HTTP client configuration
+
+In general, you probably won't have to change this configuration. By default, it is as follows:
+
+```xml
+<init-param>
+    <param-name>oxf.http.stale-checking-enabled</param-name>
+    <param-value>true</param-value>
+</init-param>
+<init-param>
+    <param-name>oxf.http.so-timeout</param-name>
+    <param-value>0</param-value>
+</init-param>
+<init-param>
+    <param-name>oxf.http.chunk-requests</param-name>
+    <param-value>false</param-value>
+</init-param>
+<init-param>
+    <param-name>oxf.http.proxy.host</param-name>
+    <param-value/>
+</init-param>
+<init-param>
+    <param-name>oxf.http.proxy.port</param-name>
+    <param-value/>
+</init-param>
+<init-param>
+    <param-name>oxf.http.proxy.exclude</param-name>
+    <param-value/>
+</init-param>
+<init-param>
+    <param-name>oxf.http.ssl.hostname-verifier</param-name>
+    <param-value>strict</param-value>
+</init-param>
+<init-param>
+    <param-name>oxf.http.ssl.keystore.uri</param-name>
+    <param-value/>
+</init-param>
+<init-param>
+    <param-name>oxf.http.ssl.keystore.password</param-name>
+    <param-value/>
+</init-param>
+<init-param>
+    <param-name>oxf.http.proxy.use-ssl</param-name>
+    <param-value>false</param-value>
+</init-param>
+<init-param>
+    <param-name>oxf.http.proxy.username</param-name>
+    <param-value/>
+</init-param>
+<init-param>
+    <param-name>oxf.http.proxy.password</param-name>
+    <param-value/>
+</init-param>
+<init-param>
+    <param-name>oxf.http.proxy.ntlm.host</param-name>
+    <param-value/>
+</init-param>
+<init-param>
+    <param-name>oxf.http.proxy.ntlm.domain</param-name>
+    <param-value/>
+</init-param>
+```
+
+Details about the meaning of these parameters are [available here](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base#TOC-HTTP-Client).
 
 ## How it works
 
