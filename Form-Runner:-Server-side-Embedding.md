@@ -147,6 +147,30 @@ The embedding implementation communicates with the rest of Orbeon Forms via HTTP
 
 Details about the meaning of these parameters are [available here](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base#TOC-HTTP-Client).
 
+### Form Runner configuration
+
+TODO
+
+You can enable HTTP gzip compression between the embedding implementation and Form Runner. For example, with Tomcat:
+
+```xml
+<Connector
+    port="8080"
+    protocol="HTTP/1.1"
+    connectionTimeout="20000"
+    compression="force"
+    compressableMimeType="
+        text/html,
+        text/xml,
+        text/plain,
+        text/css,
+        text/javascript,
+        text/json,
+        application/x-javascript,
+        application/javascript,
+        application/json"
+    redirectPort="8443"/>
+```
 ## Use cases
 
 TODO
