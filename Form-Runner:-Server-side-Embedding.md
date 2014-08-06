@@ -147,6 +147,10 @@ The embedding implementation communicates with the rest of Orbeon Forms via HTTP
 
 Details about the meaning of these parameters are [available here](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base#TOC-HTTP-Client).
 
+## Use cases
+
+TODO
+
 ## How it works
 
 The embedding implementation:
