@@ -66,7 +66,6 @@ And here is an example of embedding a form from a JSP page:
 <body>
     <%
         API.embedFormJava(
-            getServletConfig().getServletContext(),
             request,
             out,
             "orbeon",
