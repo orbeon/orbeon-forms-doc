@@ -2,8 +2,6 @@
 
 [SINCE: Orbeon Forms 4.7]
 
-This documentation is preliminary as of 2014-07-22.
-
 ## Rationale
 
 The intent is to allow Java (and other Java Virtual Machine (JVM)-based languages) applications to easily embed forms produced with Form Builder within other pages.
