@@ -18,7 +18,7 @@ Your own web app does the following:
 - setup a filter in `WEB-INF/lib`
 - call the embedding API when producing a page
 
-SLF4J is also required for logging. If your application already uses SLF4J, you don't need to do anything. Otherwise, you must add slf4j-api.jar to your application's `WEB-INF/lib` folder.
+The embedding JAR uses SLF4J for logging. If your application already uses SLF4J and already has slf4j-api.jar, you can remove the one provided by Orbeon under `WEB-INF/lib`. Otherwise, you must keep slf4j-api.jar in your application's `WEB-INF/lib` folder.
 
 *OPTIONAL: In addition, if you want to actually configure logging for the embedding library, you must add a logging adapter for SLF4j and the appropriate configuration file, for example for log4j.*
 
@@ -66,14 +66,14 @@ And here is an example of embedding a form from a JSP page:
 <body>
     <%
         API.embedFormJava(
-            request,      // incoming HttpServletRequest
-            out,          // Writer where the embedded form is written
-            "orbeon",     // Form Runner form name
-            "bookshelf",  // Form Runner app name
-            "new",        // Form Runner action name
-            null,         // Form Runner document id (optional)
-            null,         // query string (optional)
-            null          // custom HTTP headers (optional)
+            request,      // HttpServletRequest: incoming HttpServletRequest
+            out,          // Writer: where the embedded form is written
+            "orbeon",     // String: Form Runner form name
+            "bookshelf",  // String: Form Runner app name
+            "new",        // String: Form Runner action name
+            null,         // String: Form Runner document id (optional)
+            null,         // String: query string (optional)
+            null          // Map<String, String>: custom HTTP headers (optional)
         );
     %>
 </body>
