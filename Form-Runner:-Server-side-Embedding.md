@@ -86,7 +86,7 @@ The embedding JAR uses SLF4J for logging. If your application already uses SLF4J
 
 ### HTTP client configuration
 
-In general, you probably won't have to change this configuration. By default, it is as follows:
+The embedding implementation communicates with the rest of Orbeon Forms via HTTP or HTTPS. In general, you probably won't have to change this configuration. By default, it is as follows:
 
 ```xml
 <init-param>
