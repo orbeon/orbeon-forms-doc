@@ -15,11 +15,12 @@ Using a bind allows you to create precise error messages to the user based on th
 
 ## Validation order
 
+*NOTE: This is the order as of Orbeon Forms 4.6.2 and newer, see [#1830](https://github.com/orbeon/orbeon-forms/issues/1830).*
+
 Orbeon Forms performs validation of a node in the following order:
 
 - required validation
     - required-but-empty
-    - *NOTE: This is the order as of Orbeon Forms 4.6.2 and newer, see [#1830](https://github.com/orbeon/orbeon-forms/issues/1830).*
 - data type validation
     - XML Schema validation (lax/strict/none on model instances)
     - `xf:bind/@type`
