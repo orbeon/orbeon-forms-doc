@@ -27,8 +27,6 @@ Orbeon Forms performs validation of a node in the following order:
     - with `xf:bind/@constraint` or `xf:constraint`
     - are checked *only* if the control's data type is valid
 
-This order means that if a field is required but empty, the error message associated with this condition will show first, even if other error validation also fails. In the past, 
-
 ## Extensions
 
 ### Multiple constraints and alerts
@@ -116,7 +114,8 @@ More than one alert can be active at the same time, following a hierarchy:
 - If the control doesn't have a validation level, no alert is active.
 - If there is a level:
     - If there is a failed required validation, the default alert is active.
-    - If there are alerts that match specific constraints, those alerts and no others are active.
+    - Otherwise, if there is a failed data type validation, the default alert is active.
+    - Otherwise, if there are alerts that match specific failed constraints, those alerts and no others are active.
     - Otherwise, if there are alerts that match the specific level, those alerts and no others are active.
     - Otherwise, if present, the default alert is active.
     - Otherwise, no alert is active.
