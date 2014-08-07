@@ -29,7 +29,9 @@
 - cut/copy/paste
     - copy control with help, required, constraint, and warning
     - paste control
-    - check in source that all elements have been renamed, including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
+    - check in source that all elements have been renamed
+      - including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
+      - including `@validation` and `xf:constraint/@id` (see [#1785](https://github.com/orbeon/orbeon-forms/issues/1785))
   - check that form runs and new control validates constraints properly
 - set control validation
     - set custom error constraint and alert
