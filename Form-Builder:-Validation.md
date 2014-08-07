@@ -119,9 +119,9 @@ When opening the dialog, the current language of the form determines the languag
 
 When the user enters data, if the value is invalid or if the control has a warning or info level, the control is highlighted and one or more alert messages are shown. The message is selected as follows, generally following the philosophy of "more specific messages win over less specific messages":
 
-**
+*NOTE: Since 4.6.2, required validations take precedence over other validations, see [#1830](https://github.com/orbeon/orbeon-forms/issues/1830). *
 
-- If required validation has failed:
+- If a required validation has failed:
     - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
     - Other messages are not used, even if there are data type or error constraint validations.
 - If data type validation has failed:
