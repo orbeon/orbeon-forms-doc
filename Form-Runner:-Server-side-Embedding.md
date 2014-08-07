@@ -188,4 +188,4 @@ The embedding implementation:
 
 - navigation between pages, such as the Form Runner Edit and Review pages, is not supported
 - embedding Form Builder is currently not supported
-- embedding multiple forms is known to work in most cases, but has at least one known issue with repeated grid menus
+- embedding multiple forms is known to work in some cases, but has known issues so we don't recommend doing this (see [#1854](https://github.com/orbeon/orbeon-forms/issues/1854))
