@@ -15,18 +15,18 @@ Using a bind allows you to create precise error messages to the user based on th
 
 ## Validation order
 
-*NOTE: This is the order as of Orbeon Forms 4.6.2 and newer, see [#1830](https://github.com/orbeon/orbeon-forms/issues/1830).*
-
 Orbeon Forms performs validation of a node in the following order:
 
-- required validation
-    - required-but-empty
 - data type validation
     - XML Schema validation (lax/strict/none on model instances)
     - `xf:bind/@type`
+- required validation
+    - required-but-empty
 - constraints
     - with `xf:bind/@constraint` or `xf:constraint`
     - are checked *only* if the control's data type is valid
+
+This order means that if a field is required but empty, the error message associated with this condition will show first, even if other error validation also fails. In the past, 
 
 ## Extensions
 
@@ -114,10 +114,13 @@ More than one alert can be active at the same time, following a hierarchy:
 
 - If the control doesn't have a validation level, no alert is active.
 - If there is a level:
+    - If there is a failed required validation, the default alert is active.
     - If there are alerts that match specific constraints, those alerts and no others are active.
     - Otherwise, if there are alerts that match the specific level, those alerts and no others are active.
     - Otherwise, if present, the default alert is active.
     - Otherwise, no alert is active.
+
+*NOTE: This is the behavior as of Orbeon Forms 4.6.2 and newer, see [#1830](https://github.com/orbeon/orbeon-forms/issues/1830). Prior to that, a failed required validation was at the same level as other failed validations. The 4.6.2 behavior makes it so that the required validation has priority over other error validations.*
 
 Example:
 
