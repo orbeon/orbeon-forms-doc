@@ -119,12 +119,14 @@ When opening the dialog, the current language of the form determines the languag
 
 When the user enters data, if the value is invalid or if the control has a warning or info level, the control is highlighted and one or more alert messages are shown. The message is selected as follows, generally following the philosophy of "more specific messages win over less specific messages":
 
+**
+
+- If required validation has failed:
+    - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
+    - Other messages are not used, even if there are data type or error constraint validations.
 - If data type validation has failed:
     - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
-    - In this case, constraints are not checked which means that no constraint-specific message is shown.
-- If required or data type validation has failed:
-    - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
-    - However, if there is one or more failed error constraints with specific messages, those messages are used.
+    - Other messages are not used, even if there are error constraint validations.
 - If at least one error constraint has failed:
     - If no specific alert message is specified for the validation, the default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
     - If a specific alert message is specified, then it is used.
