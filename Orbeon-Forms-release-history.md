@@ -20,6 +20,8 @@ Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 - 4.0.1 PE: March 18, 2013 ([blog post](http://blog.orbeon.com/2013/03/orbeon-forms-401.html)).
 - 4.0.0 PE and 4.0.0 CE: February 22, 2013 ([blog post](http://blog.orbeon.com/2013/03/announcing-orbeon-forms-40.html)).
 
+Why do we release often? We think more frequent releases are better because features and bug-fixes reach users faster. They also keep us almost always ready to ship, rather than having very large work in progress which can destabilize the product and then take weeks or months to fix. In short, we think that incremental development and releases are much better for everyone!
+
 ## Earlier Orbeon Forms releases
 
 Previously we had in general one major release per year:
