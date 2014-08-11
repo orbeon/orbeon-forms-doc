@@ -239,7 +239,7 @@ The full URL is composed of:
 - the following URL parameters (when present in `parameters`)
     - `app`: the current form's app name
     - `form`: the current form's form name
-    - `form-version`: [SINCE Orbeon Forms 4.5]
+    - `form-version`: the form definition version in use [SINCE Orbeon Forms 4.5]
     - `document`: the current document id
     - `valid`: whether the data sent satisfies validation rules
     - `language`: the language of the form at the time it was submitted [SINCE Orbeon Forms 4.5]
