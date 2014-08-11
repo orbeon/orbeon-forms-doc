@@ -213,9 +213,9 @@ Send data to an HTTP URL.
     - `replace`: `all` to load the resulting response in the browser, or `none` (default)
     - `content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
     - `parameters`:
-        - space-separated list of standard parameters to automatically add to the URL
-        - any of the following tokens: `app`, `form`, `document`, `valid`
-        - default: `app form document valid`
+        - space-separated list of standard parameters to automatically add to the URL (see below)
+        - default: `app form form-version document valid language`
+            - `form-version` added to defaults in Orbeon Forms 4.7
 - properties used
     - property prefix + `.uri`: see `uri` parameter
     - property prefix + `.method`: see `method` parameter
@@ -239,9 +239,11 @@ The full URL is composed of:
 - the following URL parameters (when present in `parameters`)
     - `app`: the current form's app name
     - `form`: the current form's form name
+    - `form-version`: [SINCE Orbeon Forms 4.5]
     - `document`: the current document id
     - `valid`: whether the data sent satisfies validation rules
     - `language`: the language of the form at the time it was submitted [SINCE Orbeon Forms 4.5]
+    - `noscript`: whether the noscript mode was in use [SINCE Orbeon Forms 4.6]
 
 Example:
 
