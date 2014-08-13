@@ -51,6 +51,8 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
 
 ### Autosave without permissions
 
+This tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858)
+
 1. User is authenticated
 1. Create form without permissions
 1. Go to /new, wait for autosave
