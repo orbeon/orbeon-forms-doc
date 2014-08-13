@@ -9,7 +9,7 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
 <property as="xs:integer" name="oxf.http.proxy.port"                   value="8888"/>
 ```
 
-### Autosave and permissions
+### Autosave with permissions
 
 1. In FB, create form `a/a`.
     - Create a field *first name*, marked as shown on summary page.
