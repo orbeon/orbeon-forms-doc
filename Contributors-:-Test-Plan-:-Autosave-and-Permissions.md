@@ -48,3 +48,16 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
     - As user `a1` in group `a`, go to `a/a/new`, type *Homer*, hit save, edit into *Homer2*, after 6s go to `a/a/summary`, check it shows *Homer* and *Homer2* as draft.
     - As user `a2` in group `a`, go to `a/a/summary`, check it shows *Homer* and *Homer2* as draft.
     - As user `b1` in group `b`, go to `a/a/summary`, check it shows neither *Homer* nor *Homer2*.
+
+### Autosave without permissions
+
+1. User is authenticated
+1. Create form without permissions
+1. Go to /new, wait for autosave
+1. Go to /new again
+1. Dialog must propose loading draft
+1. Save
+1. Make change
+1. Wait for autosave
+1. Go back to /edit
+1. Dialog must propose loading draft
