@@ -171,9 +171,13 @@ You can enable HTTP gzip compression between the embedding implementation and Fo
         application/json"
     redirectPort="8443"/>
 ```
-## Use cases
+## Usage scenarios
 
-TODO
+In your Java web application, any page covered by the servlet filter can call the embedding API. You can have a single page calling a single form, or several pages each calling a different form. Or, pages can (based on URL parameters, internal application state, etc.), embed a form dynamically.
+
+As of Orbeon Forms 4.7, the embedded form cannot navigate in place to another form or mode (such as Review).
+
+However, it can save form or send form data as it does in the standalone case. It can also run custom [processes](./Form-Runner:-Buttons-and-Processes) which can redirect the entire embedding page with `navigate`, or run JavaScript functions with `navigate(uri = "javascript:alert('Done!')")`. This allows communicating with the embedding application.
 
 ## How it works
 
