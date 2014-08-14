@@ -1,4 +1,4 @@
-## Status
+## Availability
 
 [SINCE: Orbeon Forms 4.7]
 
