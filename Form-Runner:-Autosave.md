@@ -30,6 +30,10 @@ If users started filling out a new form, but didn't save the data, if starting t
 
 ![New page, single draft](images/fr-autosave-new-multiple.png)
 
+When multiple drafts are available, choosing the "View auto-saved drafts" button takes you to the form's Summary page in a special mode where only the relevant drafts are visible:
+
+![Summary page with drafts only](images/fr-autosave-summary-drafts-only.png)
+
 ## Configuration
 
 ### With Orbeon Forms 4.3
