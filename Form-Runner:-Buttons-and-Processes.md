@@ -292,6 +292,8 @@ The following properties are XPath Value Templates evaluating in the context of 
 - `prune`
 - `annotate`
 - `content`
+- `parameters`
+- `replace` [SINCE Orbeon Forms 4.7]
 
 Example:
 
