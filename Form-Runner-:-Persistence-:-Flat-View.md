@@ -49,6 +49,8 @@ The view always has the following metadata columns, with information copied from
     - `metadata_last_modified_time`
     - `metadata_last_modified_by`
 
+Note that there is no `metadata_draft` column, as drafts are not included the view. (Before 4.7 they were, incorrectly, see [#1870].)
+
 ### Data column names
 
 In addition to those columns, you have one column per form field, and each column is named by combining the section name with the control name. Oracle columns names are limited to 30 characters, so the Oracle persistence layer truncates column names. It also converts dashes to underscores, removes any non alphanumeric character except inner underscores, and converts the name to uppercase (so it can be used in queries without quotes).
@@ -93,3 +95,4 @@ Section name           | Control name | Column name
 The Oracle flat view feature does not support nested sections and repeats, see issue [#1069][1].
 
   [1]: https://github.com/orbeon/orbeon-forms/issues/1069
+  [#1870]: https://github.com/orbeon/orbeon-forms/issues/1870
