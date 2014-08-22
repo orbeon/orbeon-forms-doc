@@ -270,6 +270,30 @@ The PDF can be retrieved by accessing that path with the proper session cookie.
 
 When `metadata` is specified, the XML document sent contains metadata per control. [This page](https://gist.github.com/orbeon/3684806b0a30a9a5ace9) shows examples based on the Orbeon Forms sample forms.
 
+The metadata is linked to the data with the `for` attribute, which can contain multiple id values separated by a space. This associates the given piece of metadata with multiple values in the form data. This typically happens where there are repeated fields in the form, so that there is no duplication of identical metadata.
+
+Here is an example of `send` process which sends XML data to a service, followed by sending metadata:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.process.send.orbeon.*">
+    require-uploads
+    then validate-all
+    then send(
+        uri      = "http://localhost:8080/orbeon/xforms-sandbox/service/echo-xml",
+        replace  = "none",
+        method   = "post",
+        content  = "xml",
+        annotate = "id"
+    )
+    then send(
+        uri      = "http://localhost:8080/orbeon/xforms-sandbox/service/echo-xml",
+        replace  = "none",
+        method   = "post",
+        content  = "metadata"
+    )
+</property>
+```
+
 `annotate` can contain the following tokens:
 
 - `error`, `warning`, `info`: XML elements are annotated with information associated with the given level or levels.
