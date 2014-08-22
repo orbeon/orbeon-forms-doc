@@ -202,6 +202,8 @@ Send an email with optionally XML form data, attachments, and PDF.
 
 ### send
 
+#### Configuration
+
 Send data to an HTTP URL.
 
 - parameters [SINCE Orbeon Forms 4.4 except `property`]
@@ -236,6 +238,33 @@ send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
 
 *SECURITY NOTE: If `replace` is set to `all`, the content of resources or redirection URLs accessible by the Orbeon Forms server are forwarded to the web browser. Care must be taken to forward only resources that users of the application are allowed to see.*
 
+[SINCE Orbeon Forms 4.4]
+
+The following properties are XPath Value Templates evaluating in the context of the root element of the form data instance:
+
+- `uri`
+- `method`
+- `prune`
+- `annotate`
+- `content`
+- `parameters`
+- `replace` [SINCE Orbeon Forms 4.7]
+
+Example:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.send.success.uri.*.*"
+    value='/fr/service/custom/orbeon/echo?action=submit&amp;email={//email}'/>
+```
+
+[SINCE Orbeon Forms 4.5]
+
+If `replace` is set to `all` and the service issues a redirection via an HTTP status code, the redirection is propagated to the client. This also works with portlets.
+
+#### URL format
+
 The full URL is composed of:
 
 - the URL specified by the `uri` property
@@ -257,6 +286,8 @@ Example:
       valid=true&
       language=fr
 
+#### Sending a PDF URL
+
 When `pdf-url` is specified, the XML document sent has the following format:
 
 ```xml
@@ -267,6 +298,10 @@ When `pdf-url` is specified, the XML document sent has the following format:
 The PDF can be retrieved by accessing that path with the proper session cookie.
 
 *NOTE: This is not ideal, see [#1840](https://github.com/orbeon/orbeon-forms/issues/1840)*
+
+#### Sending form metadata
+
+[SINCE Orbeon Forms 4.7]
 
 When `metadata` is specified, the XML document sent contains metadata per control. [This page](https://gist.github.com/orbeon/3684806b0a30a9a5ace9) shows examples based on the Orbeon Forms sample forms.
 
@@ -294,6 +329,8 @@ Here is an example of `send` process which sends XML data to a service, followed
 </property>
 ```
 
+#### Annotating XML data
+
 `annotate` can contain the following tokens:
 
 - `error`, `warning`, `info`: XML elements are annotated with information associated with the given level or levels.
@@ -316,31 +353,6 @@ If the property is missing or empty, no annotation takes place. For example:
         </my-section>
     </form>
 ```
-
-[SINCE Orbeon Forms 4.4]
-
-The following properties are XPath Value Templates evaluating in the context of the root element of the form data instance:
-
-- `uri`
-- `method`
-- `prune`
-- `annotate`
-- `content`
-- `parameters`
-- `replace` [SINCE Orbeon Forms 4.7]
-
-Example:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.send.success.uri.*.*"
-    value='/fr/service/custom/orbeon/echo?action=submit&amp;email={//email}'/>
-```
-
-[SINCE Orbeon Forms 4.5]
-
-If `replace` is set to `all` and the service issues a redirection via an HTTP status code, the redirection is propagated to the client. This also works with portlets.
 
 ### set-data-status
 
