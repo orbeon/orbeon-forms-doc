@@ -211,7 +211,10 @@ Send data to an HTTP URL.
     - `prune`: whether to prune non-relevant nodes (`true` by default)
     - `annotate`: space-separated list of levels to annotate elements (the empty string by default)
     - `replace`: `all` to load the resulting response in the browser, or `none` (default)
-    - `content`: `xml` to send the XML data (default), `pdf-url` to send the PDF URL
+    - `content`:
+        - `xml` to send the XML data (default)
+        - `pdf-url` to send the PDF URL
+        - `metadata`: to send form metadata [SINCE Orbeon Forms 4.7]
     - `parameters`:
         - space-separated list of standard parameters to automatically add to the URL (see below)
         - default: `app form form-version document valid language`
