@@ -265,7 +265,12 @@ The PDF can be retrieved by accessing that path with the proper session cookie.
 
 *NOTE: This is not ideal, see [#1840](https://github.com/orbeon/orbeon-forms/issues/1840)*
 
-`annotate` can contain the following tokens: `error`, `warning`, or `info`. The XML data is annotated with the information associated with the given level or levels. If the property is missing or empty, no annotation takes place. For example:
+`annotate` can contain the following tokens:
+
+- `error`, `warning`, `info`: XML elements are annotated with information associated with the given level or levels.
+- `id`: XML elements are annotated with a unique id. [SINCE Orbeon Forms 4.7]
+
+If the property is missing or empty, no annotation takes place. For example:
 
 ```xml
     <property
