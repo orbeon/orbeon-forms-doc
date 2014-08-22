@@ -268,6 +268,8 @@ The PDF can be retrieved by accessing that path with the proper session cookie.
 
 *NOTE: This is not ideal, see [#1840](https://github.com/orbeon/orbeon-forms/issues/1840)*
 
+When `metadata` is specified, the XML document sent contains metadata per control. [This page](https://gist.github.com/orbeon/3684806b0a30a9a5ace9) shows examples based on the Orbeon Forms sample forms.
+
 `annotate` can contain the following tokens:
 
 - `error`, `warning`, `info`: XML elements are annotated with information associated with the given level or levels.
