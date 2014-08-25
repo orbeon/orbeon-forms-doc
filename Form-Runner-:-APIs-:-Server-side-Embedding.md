@@ -2,7 +2,7 @@
 
 ## Availability
 
-[SINCE: Orbeon Forms 4.7]
+Since Orbeon Forms 4.7.
 
 ## Rationale
 
