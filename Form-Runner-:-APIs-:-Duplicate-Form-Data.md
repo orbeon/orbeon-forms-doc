@@ -4,6 +4,10 @@
 
 Since Orbeon Forms 4.7.
 
+## Internal uses
+
+The API is also used internally by the Summary page via the Duplicate button.
+
 ## Purpose
 
 The purpose of the `duplicate` API is to duplicate form data, including form data attachments.
