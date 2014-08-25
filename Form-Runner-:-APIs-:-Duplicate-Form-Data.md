@@ -1,14 +1,14 @@
 > [Wiki](Home) ▸ Form Runner ▸ [APIs](./Form-Runner-:-APIs)
 
-### Availability
+## Availability
 
 Since Orbeon Forms 4.7.
 
-### Purpose
+## Purpose
 
 The purpose of the `duplicate` API is to duplicate form data, including form data attachments.
 
-### Interface
+## Interface
 
 - URL: `/fr/service/$app/$form/duplicate`
 - Method: POST
@@ -33,6 +33,6 @@ Response body:
 <document-id>c0f6dd2e75e94f60b9493768843e3fdef2af6bc0</document-id>
 ```
 
-### Permissions
+## Permissions
 
 The caller must either call the service internally or have proper credentials to access the data (username, group, roles).
