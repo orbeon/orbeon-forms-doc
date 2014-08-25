@@ -22,3 +22,7 @@ Response body:
 <?xml version="1.0" encoding="UTF-8"?>
 <document-id>c0f6dd2e75e94f60b9493768843e3fdef2af6bc0</document-id>
 ```
+
+### Permissions
+
+The caller must either call the service internally or have proper credentials to access the data (username, group, roles).
