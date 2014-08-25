@@ -11,12 +11,18 @@ The purpose of the `duplicate` API is to duplicate form data with attachments.
 
 Request body:
 
+- `Content-Type: application/xml`
+- the element contains the document id to duplicate
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <document-id>51dfcf49bb4b7f994906a26911003e4a999f1e39</document-id>
 ```
 
 Response body:
+
+- `Content-Type: application/xml`
+- the element contains the newly created document id
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
