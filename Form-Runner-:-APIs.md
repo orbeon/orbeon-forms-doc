@@ -1,4 +1,4 @@
-The following APIs and services are documented:
+The following APIs and services are available and documented:
 
 - [Form Runner persistence](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api)
 - [Embed form server-side](./Form-Runner-:-APIs-:-Server-side-Embedding)
