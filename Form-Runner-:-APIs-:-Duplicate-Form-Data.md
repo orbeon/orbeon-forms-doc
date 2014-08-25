@@ -2,7 +2,7 @@
 
 ### Purpose
 
-The purpose of the `duplicate` API is to duplicate form data with attachments.
+The purpose of the `duplicate` API is to duplicate form data, including form data attachments.
 
 ### Interface
 
