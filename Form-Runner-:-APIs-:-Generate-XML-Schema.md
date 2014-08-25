@@ -2,7 +2,7 @@
 
 ## Availability
 
-Orbeon Forms 4.0 PE (since 2012-09-14).
+Since Orbeon Forms 4.0 PE.
 
 ## What it does
 
