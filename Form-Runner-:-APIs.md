@@ -1,5 +1,6 @@
-The following APIs are documented:
+The following APIs and services are documented:
 
 - [Form Runner/Form Builder Persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api)
 - [Server-side form embedding](./Form-Runner-:-APIs-:-Server-side-Embedding)
+- [XML Schema generation] (./Form-Runner-:-APIs-:-XML-Schema-Generator-Service)
 - [Duplicate form data](./Form-Runner-:-APIs-:-Duplicate-Form-Data)
