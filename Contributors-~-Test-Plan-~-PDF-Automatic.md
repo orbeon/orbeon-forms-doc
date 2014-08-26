@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
+> [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - Controls and Bookshelf: input field and text areas have highlighted and clickable links
 - form title in header/footer

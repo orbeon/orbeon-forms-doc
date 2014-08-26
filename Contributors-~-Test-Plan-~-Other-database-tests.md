@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
+> [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 # DB2 DDL
 

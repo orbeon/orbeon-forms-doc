@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
+> [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present

@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ [FAQ](./FAQ)
+> [[Home]] ▸ [FAQ](./FAQ)
 
 ### How can I get support for Orbeon Forms?
 

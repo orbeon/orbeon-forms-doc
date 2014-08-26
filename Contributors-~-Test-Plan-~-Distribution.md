@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
+> [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - README.md is up to date
   - links not broken (use Marked to save HTML, then check w/ Integrity)

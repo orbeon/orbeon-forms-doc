@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors
+> [[Home]] ▸ Contributors
 
 ## Removing leftover databases
 

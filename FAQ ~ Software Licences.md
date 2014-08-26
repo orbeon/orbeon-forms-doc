@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ [FAQ](./FAQ)
+> [[Home]] ▸ [FAQ](./FAQ)
 
 ### You sent a license for orbeon Forms 4.6. Can I use Orbeon Forms 4.0 with that license?
 

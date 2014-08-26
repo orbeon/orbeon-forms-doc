@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Installation
+> [[Home]] ▸ Installation
 
 ## Versions
 
