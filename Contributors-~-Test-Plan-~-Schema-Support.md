@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
+> [Wiki](Home) ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - attach Schema
     - use e.g. Bookcast schema
