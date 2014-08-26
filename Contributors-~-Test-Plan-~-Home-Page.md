@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
+> [Wiki](Home) ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - http://localhost:8080/orbeon/fr/ lists deployed forms
 - (see also Form Builder permissions above which already tests some of this)
