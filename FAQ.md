@@ -1,7 +1,7 @@
 See also:
 
-- [FAQ : Orbeon Forms Resources and Support](./FAQ-:-Orbeon-Forms-Resources-and-Support)
-- [FAQ : Software licences](./FAQ-:-Software-licences)
+- [[FAQ : Orbeon Forms Resources and Support|FAQ ~ Orbeon Forms Resources and Support]]
+- [[FAQ : Software licences|FAQ ~ Software Licences]]
 - [legacy FAQ](https://sites.google.com/a/orbeon.com/forms/orbeon-forms-faq?pli=1)
 
 ### What is Orbeon Forms?

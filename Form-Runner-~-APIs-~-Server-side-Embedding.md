@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Form Runner ▸ [APIs](./Form-Runner-:-APIs)
+> [[Home]] ▸ Form Runner ▸ [[APIs|Form-Runner ~ APIs]]
 
 ## Availability
 

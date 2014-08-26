@@ -39,7 +39,7 @@
   - Operation menu works
     - push/pull forms
   - add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
-  - take form (could be previous `sales/my-sales-form` (see [Form Builder Permissions](./Contributors-:-Test-Plan-:-Form-Builder-Permissions)) but doesn't have to be)
+  - take form (could be previous `sales/my-sales-form` (see [[Form Builder Permissions|Contributors ~ Test Plan ~ Form Builder Permissions]]) but doesn't have to be)
     - attach static image
     - publish locally
     - push to remote
