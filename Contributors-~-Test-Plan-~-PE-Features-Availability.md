@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
+> [Wiki](Home) ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 Check that all PE features are available in PE, but not in CE:
 
