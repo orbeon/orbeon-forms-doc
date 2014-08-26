@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
+> [Wiki](Home) ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
