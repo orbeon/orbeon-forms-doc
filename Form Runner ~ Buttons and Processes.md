@@ -450,8 +450,8 @@ If `value` is omitted, the value selected is the empty string.
 
 Examples:
 
-```xml
-xf:setvalue(ref = "//first-name")                           // clear the value of the `first-name` element if found
+```ruby
+xf:setvalue(ref = "//first-name")                            // clear the value of the `first-name` element if found
 xf:setvalue(ref = "//submit-date", value = "current-date()") // set the value of the `submit-date` field to the current date
 ```
 
