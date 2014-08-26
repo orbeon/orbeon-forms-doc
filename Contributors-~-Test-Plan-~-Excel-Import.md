@@ -1,4 +1,4 @@
-> [Wiki](Home) ▸ Contributors ▸ [Test Plan](./Contributors-:-Test-Plan)
+> [Wiki](Home) ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - http://localhost:8080/46pe/fr/orbeon/contact/import
 - import small doc first (`contact5.xlsx` on Dropbox)
