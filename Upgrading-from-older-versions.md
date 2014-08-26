@@ -46,8 +46,8 @@ Our users sometimes customize Orbeon Forms by relying on the internals of Orbeon
 When this happens, we consider the reasons changes relying upon Orbeon Forms internals, and evaluate how this could be improved in the future. Examples include:
 
 - Available
-  - [Form Runner: Buttons and Processes](https://github.com/orbeon/orbeon-forms/wiki/Form-Runner:-Buttons-and-Processes)
-  - [Form Runner: Custom Model Logic](https://github.com/orbeon/orbeon-forms/wiki/Form-Runner:-Custom-Model-Logic)
+  - [[Form Runner: Buttons and Processes|Buttons and Processes|Form-Runner-~-Buttons-and-Processes]]
+  - [[Form Runner: Custom Model Logic|Form-Runner-~-Custom-Model-Logic]]
 - Considered
   - [Stable API for Form Runner](https://github.com/orbeon/orbeon-forms/issues/1095)
 
