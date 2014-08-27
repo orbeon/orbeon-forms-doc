@@ -451,8 +451,8 @@ If `value` is omitted, the value selected is the empty string.
 Examples:
 
 ```ruby
-xf:setvalue(ref = "//first-name")                            // clear the value of the `first-name` element if found
-xf:setvalue(ref = "//submit-date", value = "current-date()") // set the value of the `submit-date` field to the current date
+xf:setvalue(ref = "//first-name")                            // clear the value of the `first-name` element, if found
+xf:setvalue(ref = "//submit-date", value = "current-date()") // set the value of the `submit-date` element, if found, to the current date
 ```
 
 ### xf:dispatch
@@ -507,6 +507,27 @@ The following sub-processes are predefined and can be reused from other processe
 - `orbeon-home`: navigate to '/'
 - `form-runner-home`: navigate to '/fr'
 - `summary`: navigate to this Form Runner page (a predefined process since 4.7)
+
+## Processes that apply to services
+
+### oxf.fr.service.duplicate.transform
+
+[SINCE Orbeon Forms 4.7]
+
+This process is called by the `duplicate` service after the original data has been read and before it is written back. This allows performing simple value transformations on the data such as clearing or setting fields upon data duplication.
+
+Examples:
+
+```xml
+<!-- Clear the value of the `first-name` element, if found -->
+<property as="xs:string" name="oxf.fr.service.duplicate.transform.myapp.myform">
+    xf:setvalue(ref = "//first-name")  
+</property>
+<!-- Set the value of the `submit-date` element, if found, to the current date -->
+<property as="xs:string" name="oxf.fr.service.duplicate.transform.myapp.myform">
+    xf:setvalue(ref = "//submit-date", value = "current-date()")
+</property>
+```
 
 ## Combining actions
 
