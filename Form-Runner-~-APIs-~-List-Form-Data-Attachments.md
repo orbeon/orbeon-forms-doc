@@ -10,7 +10,7 @@ None.
 
 ## Purpose
 
-The purpose of the `list form data attachments` API is to return information about form data attachments.
+The purpose of the `attachments` API is to return information about form data attachments.
 
 ## Interface
 
