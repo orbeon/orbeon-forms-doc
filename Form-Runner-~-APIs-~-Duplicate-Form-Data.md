@@ -22,6 +22,8 @@ Request body:
 - `Content-Type: application/xml`
 - the element contains the document id to duplicate
 
+Example request body:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <document-id>51dfcf49bb4b7f994906a26911003e4a999f1e39</document-id>
@@ -31,6 +33,8 @@ Response body:
 
 - `Content-Type: application/xml`
 - the element contains the newly created document id
+
+Example response body:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
