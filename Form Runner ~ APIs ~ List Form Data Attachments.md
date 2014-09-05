@@ -33,6 +33,8 @@ Response body:
     - `name` attribute: the associated control name
     - `filename`, `mediatype`, `size`: attachment metadata
 
+Example response body:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <attachments>
