@@ -1,6 +1,6 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
-# DB2 DDL
+## DB2 DDL
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Between tests, run the `drop table` statements below.
 
@@ -15,7 +15,7 @@ drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
 ```
 
-# Oracle Flat View
+## Oracle and DB2 Flat View
 
 - Enable the flat view option, adding:
 
