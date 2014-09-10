@@ -1,3 +1,5 @@
+> [[Home]] ▸ Installation
+
 ## Rationale
 
 The standard Orbeon Forms WAR comes with demo apps and forms. For production, you can safely remove some of that from the WAR file.
