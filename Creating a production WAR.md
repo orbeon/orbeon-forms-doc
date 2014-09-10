@@ -32,13 +32,11 @@ To remove the embedded eXist:
 - in `WEB-INF/web.xml`:
   - remove all `<servlet>`, `<servlet-mapping>`, `<filter`, and `<filter-mapping>` which refer to eXist
 
-If you don't need an eXist database at all, in `properties-local.xml`, add:
+If you don't need an eXist database at all, in `properties-local.xml`, add the following to fully disable the eXist persistence implementation.:
 
 ```xml
 <property as="xs:boolean" name="oxf.fr.persistence.exist.active"                            value="false"/>
 ```
-
-This disables the eXist persistence implementation.
 
 Then set a property to select the persistence implementation you are using, for example, for SQL Server:
 
