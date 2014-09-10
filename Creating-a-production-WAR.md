@@ -32,15 +32,32 @@ To remove the embedded eXist:
 - in `WEB-INF/web.xml`:
   - remove all `<servlet>`, `<servlet-mapping>`, `<filter`, and `<filter-mapping>` which refer to eXist
 
+If you want to point to an external eXist database, set the following property:
+
+```xml
+<property
+    as="xs:anyURI"
+    name="oxf.fr.persistence.exist.uri"
+    value="$urlToExistRestService"/>
+```
+
+And replace `$urlToExistRestService` with the actual URL of the eXist REST service.
+
 If you don't need an eXist database at all, in `properties-local.xml`, add the following to fully disable the eXist persistence implementation.:
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.persistence.exist.active"                            value="false"/>
+<property
+    as="xs:boolean"
+    name="oxf.fr.persistence.exist.active"
+    value="false"/>
 ```
 
 Then set a property to select the persistence implementation you are using, for example, for SQL Server:
 
 ```xml
-<property as="xs:string"  name="oxf.fr.persistence.provider.*.*.*"                          value="sqlserver"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.*.*.*"
+    value="sqlserver"/>
 ```
 
