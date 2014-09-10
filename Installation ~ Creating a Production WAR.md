@@ -1,4 +1,4 @@
-> [[Home]] ▸ Installation
+> [[Home]] ▸ [[Installation]]
 
 ## Rationale
 
