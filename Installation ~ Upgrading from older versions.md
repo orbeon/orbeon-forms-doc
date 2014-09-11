@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[Installation]]
+
 ## Compatibility policy
 
 - __Compability:__ We strive to remain backward compatible between versions of Orbeon Forms and not to break features, whether on purpose or by accident.
