@@ -1,2 +1,3 @@
 - [[Installing on Tomcat|Installation-~-Tomcat]]
 - [[Creating a production WAR|Installation-~-Creating-a-Production-WAR]]
+- [[Upgrading from older versions|Installation-~-Upgrading-from-older-versions]]
