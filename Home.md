@@ -1,6 +1,6 @@
 This is the landing page for the Orbeon Forms documentation.
 
-Main topics:
+Main topics covered on this site:
 
 - [[Installation]]
 - [[Form Builder]]
@@ -9,7 +9,9 @@ Main topics:
 - [[Contributors]]
 - [[FAQ]]
 
-- [Rest of the documentation on our legacy site](http://wiki.orbeon.com/forms)
+See also:
+
+- [Rest of the documentation (legacy site)](http://wiki.orbeon.com/forms)
 - [List of pages on this site](/orbeon/orbeon-forms/wiki/_pages)
 
-We plan to move the rest of the documentation to github as time goes.
+We plan to move the rest of the documentation to github over time.
