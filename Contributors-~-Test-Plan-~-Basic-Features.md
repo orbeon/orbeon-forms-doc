@@ -64,7 +64,15 @@
 - publish form
     - check that attachments are published too
 - warning dialog if attempt to close page when unsaved
+- serialization/deserialization [#1894][5]
+    - set properties  
+    ```xml
+    <property as="xs:integer" name="oxf.xforms.cache.documents.size"    value="1"/>
+    <property as="xs:integer" name="oxf.xforms.cache.static-state.size" value="1"/>
+    ```
+    - attempt to reproduce, also after introducing controls and nested sections
 
 [2]: http://www.lipsum.com/
 [3]: https://github.com/orbeon/orbeon-forms/issues/1160
 [4]: https://github.com/orbeon/orbeon-forms/issues/1223
+[5]: https://github.com/orbeon/orbeon-forms/issues/1894
