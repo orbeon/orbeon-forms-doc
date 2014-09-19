@@ -1,6 +1,3 @@
-This is an [Orbeon Forms PE](http://www.orbeon.com/support-services/professional) feature.
-
-- [Availability](#availability)
 - [Introduction](#introduction)
 - [Basic action configuration](#basic-action-configuration)
 - [Passing parameters to the service](#TOC-Passing-parameters-to-the-service)
@@ -10,7 +7,7 @@ This is an [Orbeon Forms PE](http://www.orbeon.com/support-services/professional
 
 ## Introduction
 
-The Action editor allows you to implement simple actions in your form. The basic philosophy goes as follows:
+The Form Builder action editor is an [Orbeon Forms PE](http://www.orbeon.com/support-services/professional) feature and allows you to implement simple actions in your form. The basic philosophy goes as follows:
 
 1. React to an event occurring on the form, such as the form being loaded or a user action.
 2. Call an HTTP or database service:
