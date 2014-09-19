@@ -1,3 +1,5 @@
+This is an [Orbeon Forms PE](http://www.orbeon.com/support-services/professional) feature.
+
 - [Availability](#availability)
 - [Introduction](#introduction)
 - [Basic action configuration](#basic-action-configuration)
@@ -5,10 +7,6 @@
 - [Handling the service response](#TOC-Handling-the-service-response)
 - [Examples](#TOC-Examples)
 - [Namespace handling](#TOC-Namespace-handling)
-
-## Availability
-
-This is an [Orbeon Forms PE](http://www.orbeon.com/support-services/professional) feature.
 
 ## Introduction
 
