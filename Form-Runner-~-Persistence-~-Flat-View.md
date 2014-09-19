@@ -14,11 +14,11 @@ This is an [Orbeon Forms PE](http://www.orbeon.com/support-services/professional
 
 The Action editor allows you to implement simple actions in your form. The basic philosophy goes as follows:
 
-- React to an event occurring on the form, such as the form being loaded or a user action
-- Call an HTTP or database service
-    - passing in parameters from the form
-    - receiving parameters back from the service
-- Use the returned parameters to update the form
+1. React to an event occurring on the form, such as the form being loaded or a user action.
+2. Call an HTTP or database service:
+    - passing in parameters from the form,
+    - receiving parameters back from the service.
+3. Use the returned parameters to update the form
 
 Actions are tightly coupled with services. In the future, support might be added for actions which do not require services.
 
