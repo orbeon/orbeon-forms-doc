@@ -73,7 +73,7 @@ Like for services, once your action is defined, the Save buttons saves it to the
 
 ## Internationalization
 
-[SINCE Orbeon Forms 4.7] Your service should return localized labels for all the languages supported by your form. For instance, if your form is available in English an French, a service you use to populate a dropdown with a list of countries might return:
+[SINCE Orbeon Forms 4.7] Your service should return localized labels for all the languages supported by your form. For instance, if your form is available in English and French, a service you use to populate a dropdown with a list of countries might return:
 
 ```xml
 <response>
@@ -100,7 +100,7 @@ Like for services, once your action is defined, the Save buttons saves it to the
 </response>
 ```
 
-After the service is called, the *items*, *label*, and *value* XPath expressions when defining the action are executed once per language supported by the form, and for each execution the `$fr-lang` variable is set to current language. So in the case of our hypothetical service returning a list of countries, you will define the *items* as `/response/row[@lang = $fr-lang]`, the *value* simply as `value`, and *label* as `label`.
+After the service is called, the *items*, *label*, and *value* XPath expressions you wrote when defining the action are executed once per language supported by the form, and for each execution the `$fr-lang` variable is set to current language. So in the case of our hypothetical service returning a list of countries, you will define the *items* as `/response/row[@lang = $fr-lang]`, the *value* simply as `value`, and *label* as `label`.
 
 While in theory this allows you to have the *values* depend on the language, to avoid unexpected behavior when users switch languages or different users look at the same data using a different language, you should make sure that values are the same for all languages, and only the *labels* differ between languages.
 
