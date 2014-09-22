@@ -1,10 +1,9 @@
 - [Introduction](#introduction)
 - [Basic action configuration](#basic-action-configuration)
-- [Passing parameters to the service](#TOC-Passing-parameters-to-the-service)
-- [Handling the service response](#TOC-Handling-the-service-response)
-- [Examples](#TOC-Examples)
-- [Internationalization](#TOC-Internationalization)
-- [Namespace handling](#TOC-Namespace-handling)
+- [Passing parameters to the service](#passing-parameters-to-the-service)
+- [Handling the service response](#handling-the-service-response)
+- [Internationalization](#internationalization)
+- [Namespace handling](#namespace-handling)
 
 ## Introduction
 
