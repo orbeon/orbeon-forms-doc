@@ -1,134 +1,102 @@
-- [Introduction](#introduction)
-- [Basic action configuration](#basic-action-configuration)
-- [Passing parameters to the service](#TOC-Passing-parameters-to-the-service)
-- [Handling the service response](#TOC-Handling-the-service-response)
-- [Examples](#TOC-Examples)
-- [Namespace handling](#TOC-Namespace-handling)
+- [Usage](#usage)
+    - [Rationale](#rationale)
+    - [Availability](#availability)
+    - [Property to enable](#property-to-enable)
+- [Generated names](#generated-names)
+    - [View name](#view-name)
+    - [Metadata column names](#metadata-column-names)
+    - [Data column names](#data-column-names)
+        - [With Orbeon Forms 4.5 and newer](#with-orbeon-forms-45-and-newer)
+        - [With Orbeon Forms 4.4 and earlier](#with-orbeon-forms-44-and-earlier)
+    - [Limitations](#limitations)
 
-## Introduction
+## Usage
 
-The Form Builder action editor is an [Orbeon Forms PE](http://www.orbeon.com/support-services/professional) feature and allows you to implement simple actions in your form. The basic philosophy goes as follows:
+### Rationale
 
-1. React to an event occurring on the form, such as the form being loaded or a user action.
-2. Call an HTTP or database service:
-    - passing in parameters from the form,
-    - receiving parameters back from the service.
-3. Use the returned parameters to update the form
+### Availability
 
-Actions are tightly coupled with services. In the future, support might be added for actions which do not require services.
+- [SINCE 4.0] Support on Oracle.
+- [SINCE 4.7] Support on DB2.
 
-## Basic action configuration
+### Property to enable
 
-This is the meaning of the fields of the dialog:
-
-- **Action Name.** This is the name of the action, as seen by Form Builder. Must start with a letter, and may not contain spaces.
-- **React to.** The event which starts the action. Can be one of the following:
-    - **Value Change.** A control's value has changed.
-    - **Value Change or Form Load.** A control's value has changed OR the form just finished loading.
-    - **Activation.** A button has been clicked, or the "Enter" key has been pressed in a text line.
-    - **Form Load.** The form just finished loading.
-- **Condition.** [SINCE: 2011-12-01]
-    - **Run always.** Run the action independently from the form mode.</span></font>
-    - **Run on creation only.** Run the action only in creation mode, that is when the user creates new data, as opposed to editing, viewing, emailing, or generating a PDF.
-- **Control.** Except for the Form Load event which does not depend on a particular control, this specifies which control the action reacts to.
-- **Service to Call.** The service to call as a response to the action.
-
-Like for services, once your action is defined, the Save buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the action name. You can also delete the action using the trashcan icon.
-
-## Passing parameters to the service
-
-- **Set Service Request Values.**
-    - Used with HTTP services only
-    - Function: uses the value of a control and stores that value into the body of the XML service request.
-        - **Source Control.** Specifies the control whose value must be used.
-        - **Destination XPath Expression.** The expression must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body"
-    - You can add as many such rows as you want using the "+" button, and remove existing entries with the trashcan icon.
-- **Set Database Service Parameters.**
-    - Used with database services only.
-    - Function: uses the value of a control and sets that value as the Nth query parameter of the database service.
-        - **Source Control.** Specifies the control whose value must be used.
-        - **Parameter Number.** To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
-    - You can add as many such rows as you want using the "+" button, and remove existing entries with the trashcan icon.
-
-## Handling the service response
-
-- **Set Response Control Values.**
-    - Function: uses a value returned by the service to set a control's value.
-        - **Destination Control.** Specifies the control whose value must be set.
-        - **Destination XPath Expression.** The expression must point to an element or attribute node of the response body returned by the service.
-    - You can add as many such rows as you want using the "+" button, and remove existing entries with the trashcan icon.
-- **Set response Selection Control Items.**
-    - Function: uses values returned by the service to set a selection control's set of items (itemset) with them.
-        - **Destination Selection Control.** Specifies the selection control whose items must be set. Only selection controls appear in this list.
-        - **Items.**
-            - The XPath expression must point to a set of element or attribute nodes of the response body returned by the service.
-            - For each node returned, an item is created.
-        - **Label.** The XPath expression must return the text of the label for an item. It is relative to the item expression.
-        - **Value.** The XPath expression must return the text of the value for an item. It is relative to the item expression.
-    - All the previous items of the selection control are replaced with the items specified here.
-    - [SINCE 2013-06-04 / Orbeon Forms 4.3]
-        - For single-selection controls: if the item value currently stored in the instance data is not part of the returned set of items, the value is cleared.
-        - For multiple-selection controls: any of the space-separated values currently stored in the instance data that are not part of the returned set of item values are filtered out.
-    - You can add as many such rows as you want using the "+" button, and remove existing entries with the trashcan icon.
-
-## Namespace handling
-
-At this point, you can't declare custom namespace mappings in the action editor. So say you have a response looking like this:
+If you're using Oracle or DB2, Orbeon Forms can create a form-specific view of your data, with one column for each form field. You enable this feature by setting the property `oxf.fr.persistence.oracle.create-flat-view` or `oxf.fr.persistence.db2.create-flat-view` to `true`, depending on whether you want to enable the capability for Oracle or DB2. (If you define your own provider for Oracle, use that provider name in the property name, instead of `oracle`.)
 
 ```xml
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-    <soap:Body>
-        <my:items xmlns:my="http://example.org/my">
-            <my:item>
-                <my:label>Cat</my:label>
-                <my:value>cat</my:value>
-            </my:item>
-            <my:item>
-                <my:label>Dog</my:label>
-                <my:value>dog</my:value>
-            </my:item>
-            <my:item>
-                <my:label>Bird</my:label>
-                <my:value>bird</my:value>
-            </my:item>
-        </my:items>
-    </soap:Body>
-</soap:Envelope>
+<property as="xs:boolean" 
+          name="oxf.fr.persistence.oracle.create-flat-view" 
+          value="true"/>
+<property as="xs:boolean" 
+          name="oxf.fr.persistence.db2.create-flat-view" 
+          value="true"/>
 ```
 
-or, using the default namespace mechanism:
+## Generated names
 
-```xml
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-    <soap:Body>
-        <items xmlns="http://example.org/my">
-            <item>
-                <label>Cat</label>
-                <value>cat</value>
-            </item>
-            <item>
-                <label>Dog</label>
-                <value>dog</value>
-            </item>
-            <item>
-                <label>Bird</label>
-                <value>bird</value>
-            </item>
-        </items>
-    </soap:Body>
-</soap:Envelope>
-```
+### View name
 
-In both these cases, `<my:item>` (or `<item>`) and nested elements are in the `http://example.org/my` namespace. This means that your XPath expression must match elements in a namespace and that, in theory, you need a custom namespace mapping in form builder. Since this is not supported yet, you can work around the issue by using XPath expressions with wildcards:
+When you enable this property, upon publishing a form, Oracle persistence layer creates a view specific to that form. The name of the view is based on your app and form name, and has the form: `orbeon_f_#{app}_#{form}`. For instance, if your app is hr and you form is expense, then the view is named `orbeon_f_hr_expense`. If upon publishing, there is already a view with that name, the Oracle persistence layer deletes it before recreating a new view.
 
-- Items: `/soap:Envelope/soap:Body/*:items/*:item`
-- Label: `*:label`
-- Value: `*:value`
+### Metadata column names
 
-You can even use shorter variations if element names are use consistently, for example:
+The view always has the following metadata columns, with information copied from the equivalent columns in `orbeon_form_data`:
 
-- Items: `//*:item`
-- Label: `*:label`
-- Value: `*:value`
+- [UP TO Orbeon Forms 4.3]
+    - `metadata_document_id`
+    - `metadata_created`
+    - `metadata_last_modified`
+    - `metadata_username`
+- [SINCE Orbeon Forms 4.4]
+    - `metadata_document_id`
+    - `metadata_created`
+    - `metadata_last_modified_time`
+    - `metadata_last_modified_by`
 
-These expressions with wildcards ignore namespace information completely, so you have to be careful if your XML document contains elements with the same name but in different namespaces.
+Note that there is no `metadata_draft` column, as drafts are not included the view. (Before 4.7 they were, incorrectly, see [#1870].)
+
+### Data column names
+
+In addition to those columns, you have one column per form field, and each column is named by combining the section name with the control name. Oracle columns names are limited to 30 characters, so the Oracle persistence layer truncates column names. It also converts dashes to underscores, removes any non alphanumeric character except inner underscores, and converts the name to uppercase (so it can be used in queries without quotes).
+
+#### With Orbeon Forms 4.5 and newer
+
+Orbeon Forms 4.5 introduces a new truncation algorithm:
+
+- If the section name or the control name is 14 characters or less, it is kept as is, and the other part is truncated if needed.
+- A numerical *suffix* is used instead for those columns which would introduce duplicates.
+
+Examples:
+
+Section name             | Control name                                 | Column name
+------------------------ | -------------------------------------------- | --------------------------------
+`personal-information`   | `first-name`                                 | `PERSONAL_INFORMATIO_FIRST_NAME`
+                         | `last-name`                                  | `PERSONAL_INFORMATION_LAST_NAME`
+                         | `address`	                                | `PERSONAL_INFORMATION_ADDRESS`
+`company`                | `name`                                       | `COMPANY_NAME`
+                         | `industry`                                   | `COMPANY_INDUSTRY`
+`section-with-long-name` | `my-control-with-a-pretty-long-name`	        | `SECTION_WITH_L_MY_CONTROL_WIT`
+                         | `my-control-with-a-pretty-long-name-too`     | `SECTION_WITH_L_MY_CONTROL_WIT1`
+                         | `my-control-with-a-pretty-long-name-really`	| `SECTION_WITH_L_MY_CONTROL_WIT2`
+
+
+#### With Orbeon Forms 4.4 and earlier
+
+The section name is truncated to 14 characters, the control name to 15 characters, and both are combined with an underscore in between. In the vast majority of the cases, this will result in distinct and recognizable column names. In cases where two or more columns would end up having the same name or conflict with one of the metadata column, the Oracle persistence layer adds a number prefix of the form `001_`, `002_`, `003_`… to each column to make it unique. If this happens, you might want to change your section and/or control names to have more recognizable column names.
+
+Examples:
+
+Section name           | Control name | Column name
+---------------------- | ------------ | ---------------------------
+`personal-information` | `first-name` | `PERSONAL_INFOR_FIRST_NAME`
+                       | `last-name`  | `PERSONAL_INFOR_LAST_NAME`
+                       | `address`    | `PERSONAL_INFOR_ADDRESS`
+`company`              | `name`       | `COMPANY_NAME`
+                       | `industry`   | `COMPANY_INDUSTRY`
+
+## Limitations
+
+The Oracle flat view feature does not support nested sections and repeats, see issue [#1069][1].
+
+  [1]: https://github.com/orbeon/orbeon-forms/issues/1069
+  [#1870]: https://github.com/orbeon/orbeon-forms/issues/1870
