@@ -3,6 +3,7 @@
 - [Passing parameters to the service](#TOC-Passing-parameters-to-the-service)
 - [Handling the service response](#TOC-Handling-the-service-response)
 - [Examples](#TOC-Examples)
+- [Internationalization](#TOC-Internationalization)
 - [Namespace handling](#TOC-Namespace-handling)
 
 ## Introduction
@@ -66,10 +67,43 @@ Like for services, once your action is defined, the Save buttons saves it to the
         - **Label.** The XPath expression must return the text of the label for an item. It is relative to the item expression.
         - **Value.** The XPath expression must return the text of the value for an item. It is relative to the item expression.
     - All the previous items of the selection control are replaced with the items specified here.
-    - [SINCE 2013-06-04 / Orbeon Forms 4.3]
+    - [SINCE Orbeon Forms 4.3] The selected value(s) are updated per the new itemset:
         - For single-selection controls: if the item value currently stored in the instance data is not part of the returned set of items, the value is cleared.
         - For multiple-selection controls: any of the space-separated values currently stored in the instance data that are not part of the returned set of item values are filtered out.
     - You can add as many such rows as you want using the "+" button, and remove existing entries with the trashcan icon.
+
+## Internationalization
+
+[SINCE Orbeon Forms 4.7] Your service should return localized labels for all the languages supported by your form. For instance, if your form is available in English an French, a service you use to populate a dropdown with a list of countries might return:
+
+```xml
+<response>
+    <row>
+        <value>us</value>
+        <lang>en</lang>
+        <label>United States</label>
+    </row>
+    <row>
+        <value>us</value>
+        <lang>fr</lang>
+        <label>États-Unis</label>
+    </row>
+    <row>
+        <value>ch</value>
+        <lang>en</lang>
+        <label>Switzerland</label>
+    </row>
+    <row>
+        <value>ch</value>
+        <lang>fr</lang>
+        <label>Swiss</label>
+    </row>
+</response>
+```
+
+After the service is called, the *items*, *label*, and *value* XPath expressions when defining the action are executed once per language supported by the form, and for each execution the `$fr-lang` variable is set to current language. So in the case of our hypothetical service returning a list of countries, you will define the *items* as `/response/row[@lang = $fr-lang]`, the *value* simply as `value`, and *label* as `label`.
+
+While in theory this allows you to have the *values* depend on the language, to avoid unexpected behavior when users switch languages or different users look at the same data using a different language, you should make sure that values are the same for all languages, and only the *labels* differ between languages.
 
 ## Namespace handling
 
