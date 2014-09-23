@@ -2,7 +2,7 @@
 
 This feature is available since January 2011.
 
-_NOTE: Some issues have been reported with the proxy portlet with Orbeon Forms 3.9 and 3.9.1. These issues have been fixed with Orbeon Forms 4.0._
+_NOTE: Some issues have been reported with the proxy portlet with Orbeon Forms 3.9 and 3.9.1. These issues have been fixed with Orbeon Forms 4.0 and newer._
 
 ## Introduction
 
