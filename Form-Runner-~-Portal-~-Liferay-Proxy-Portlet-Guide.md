@@ -79,19 +79,13 @@ If Orbeon Forms is _not_ deployed at the default address, the proxy portlet will
 
 ### Configure the proxy portlet
 
-1\. Open the portlet preferences page:
+1. Open the portlet preferences page:
 
 ![][6]
 
-
-
-
-2\. Configure the preferences
+2. Configure the preferences
 
 ![][7]
-
-
-
 
 The preferences are as follows:
 
@@ -158,7 +152,7 @@ This makes these headers and URL parameters available to Form Runner, for exampl
 
 Headers forwarded now follow the capitalization specified in the `forward-headers` property. For example, if the incoming header has name `mY-hEaDeR-1,` and the property specifies `My-Header-1`, the header will be forwarded under the name `My-Header-1`.
 
-## Configuring Form Runner to use Liferay user information
+### Configuring Form Runner to use Liferay user information
 
 [SINCE Orbeon Forms 4.4]
 
@@ -198,7 +192,7 @@ For the `oxf.fr.authentication.header.username` header, you can choose any of th
 - `Orbeon-Liferay-User-Screen-Name`
 - or possibly `Orbeon-Liferay-User-Email`
 
-## HTTP client configuration
+### HTTP client configuration
 
 [SINCE: Orbeon Forms 4.7]
 
