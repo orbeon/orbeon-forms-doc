@@ -192,9 +192,29 @@ For the `oxf.fr.authentication.header.username` header, you can choose any of th
 - `Orbeon-Liferay-User-Screen-Name`
 - or possibly `Orbeon-Liferay-User-Email`
 
+### Enabling form selection via URL parameters
+
+[SINCE Orbeon Forms 4.7]
+
+You can enable form selection via URL parameters by setting the `enable-url-parameters` portlet parameter in `portlet.xml` to `true`:
+
+```xml
+<init-param>
+    <name>enable-url-parameters</name>
+    <value>true</value>
+</init-param>
+````
+
+When this is enabled, the following portal URL parameters are propagated to Orbeon Forms to allow form selection:
+
+- `orbeon-app`: the Form Runner app name
+- `orbeon-form`: the Form Runner form name
+- `orbeon-document`: the Form Runner document (for `edit` and `view` pages)
+- `orbeon-page`: the Form Runner page (`new`, `edit`, or `view`)
+
 ### HTTP client configuration
 
-[SINCE: Orbeon Forms 4.7]
+[SINCE Orbeon Forms 4.7]
 
 This is the same as the [[server-side embedding configuration|Form-Runner-~-APIs-~-Server-side-Embedding]].
 
