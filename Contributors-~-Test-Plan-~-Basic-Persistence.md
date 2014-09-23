@@ -5,8 +5,14 @@ We do the following just for eXist and DB2, as automated tests already test most
 1. Setup: in `properties-local.xml`, add:
 
     ```xml
-    <property as="xs:string" name="oxf.fr.persistence.provider.db2.*.*"   value="db2"/>
-    <property as="xs:string" name="oxf.fr.persistence.provider.exist.*.*" value="exist"/>
+    <property 
+        as="xs:string" 
+        name="oxf.fr.persistence.provider.db2.*.*"   
+        value="db2"/>
+    <property 
+        as="xs:string" 
+        name="oxf.fr.persistence.provider.exist.*.*" 
+        value="exist"/>
     ```
 2. Create same form in 2 apps: `exist/a`, `db2/a`.
     - Use Duplicate button in FB Summary
