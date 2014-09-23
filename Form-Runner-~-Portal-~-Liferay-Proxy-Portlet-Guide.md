@@ -1,5 +1,3 @@
-# Form Runner Liferay Proxy Portlet Guide
-
 ## Status
 
 This feature is available since January 2011.
