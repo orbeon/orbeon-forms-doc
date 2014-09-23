@@ -49,20 +49,19 @@ For Orbeon Forms 4.0 and newer, no particular configuration is needed.
 _NOTE: For builds prior to 2012-05-14, you need the following configuration in your [properties-local.xml][3]:_
 
 ```xml
-<properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
-            xmlns:oxf="http://www.orbeon.com/oxf/processors">
-
-    <property as="xs:boolean" name="oxf.url-rewriting.wsrp.encode-resources" value="true"/>
-
-    <!-- ... Other properties will go here ... -->
-
-</properties>
+<property
+    as="xs:boolean"
+    name="oxf.url-rewriting.wsrp.encode-resources"
+    value="true"/>
 ```
 
 _NOTE: Prior to 2011-10-18 builds, the following property is also needed:_
 
 ```xml
-<property as="xs:string" name="oxf.url-rewriting.strategy.servlet" value="wsrp"/>
+<property
+    as="xs:string"
+    name="oxf.url-rewriting.strategy.servlet"
+    value="wsrp"/>
 ```
 
 ### Deploy the proxy portlet
