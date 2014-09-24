@@ -18,3 +18,7 @@
   - PDF template works
 - Contact
   - noscript mode
+    - Clear clears right away
+    - PDF stays in tab
+    - errors prevent saving
+    - Refresh icon works
