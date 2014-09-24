@@ -1,6 +1,6 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
-We do the following just for eXist and DB2, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases.
+Do at least for eXist and DB2, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases. But if possible do for the other relational databases as well.
 
 1. Setup: in `properties-local.xml`, add:
 
