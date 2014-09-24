@@ -70,10 +70,14 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
         - save
     - #1911 
         - FR: check that previous form data loads image
-    - /fr/service/(mysql|oracle|db2)/a/schema: schema with B is produced
-    - /fr/service/(mysql|oracle|db2)/a/schema?form-version=1: schema with A is produced
-    - go to the summary page, click on first row (created last), check field B/value b and attachment show
-    - go to the summary page, click on second row (created first), check field A/value a and attachment show
+    - /fr/service/(oracle|mysql|sqlserver|db2)/a/schema: schema with B is produced
+    - /fr/service/(oracle|mysql|sqlserver|db2)/a/schema?form-version=1: schema with A is produced
+    - go to the summary page, click on first row (created last)
+        - check field B/value b and attachment show
+        - check PDF 
+    - go to the summary page, click on second row (created first)
+        - check field A/value a and attachment show
+        - check PDF 
     - Form Builder Publish dialog options (new in 4.6)
         - with persistence layer which supports versioning (mysql)
             - if mysql/a form has never been published
