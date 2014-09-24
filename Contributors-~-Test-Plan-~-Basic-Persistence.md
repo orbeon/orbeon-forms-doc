@@ -7,14 +7,26 @@ We do the following just for eXist and DB2, as automated tests already test most
     ```xml
     <property 
         as="xs:string" 
-        name="oxf.fr.persistence.provider.db2.*.*"   
-        value="db2"/>
-    <property 
-        as="xs:string" 
         name="oxf.fr.persistence.provider.exist.*.*" 
         value="exist"/>
+    <property 
+        as="xs:string" 
+        name="oxf.fr.persistence.provider.oracle.*.*"   
+        value="oracle"/>
+    <property 
+        as="xs:string" 
+        name="oxf.fr.persistence.provider.mysql.*.*"   
+        value="mysql"/>
+    <property 
+        as="xs:string" 
+        name="oxf.fr.persistence.provider.sqlserver.*.*"   
+        value="sqlserver"/>
+    <property 
+        as="xs:string" 
+        name="oxf.fr.persistence.provider.db2.*.*"   
+        value="db2"/>
     ```
-2. Create same form in 2 apps: `exist/a`, `db2/a`, `oracle/a`, `mysql/a`, `sqlserver/a`
+2. Create same form in 2 apps: `exist/a`, `oracle/a`, `mysql/a`, `sqlserver/a`, `db2/a`
     - Use Duplicate button in FB Summary
     - Then change app name
 3. pages
