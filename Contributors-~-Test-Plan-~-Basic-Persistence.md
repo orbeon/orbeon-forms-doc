@@ -26,9 +26,10 @@ We do the following just for eXist and DB2, as automated tests already test most
         name="oxf.fr.persistence.provider.db2.*.*"   
         value="db2"/>
     ```
-2. Create same form in 2 apps: `exist/a`, `oracle/a`, `mysql/a`, `sqlserver/a`, `db2/a`
-    - Use Duplicate button in FB Summary
-    - Then change app name
+2. Create same form in all apps: `exist/a`, `oracle/a`, `mysql/a`, `sqlserver/a`, `db2/a`
+    - add static image
+    - use Duplicate button in FB Summary
+    - then change app name
 3. pages
     - FB: create form, publish
     - FR: check it shows on http://localhost:8080/orbeon/fr/
