@@ -30,9 +30,6 @@ We do the following just for eXist and DB2, as automated tests already test most
         - DB2: be aware of #1409
     - FR: deployed form loads image
     - FR: attach file, save, edit
-    - #1911
-        - FB: create new form version and publish
-        - FR: check that previous form data loads image
 5. search
     - FB: check summary/search field, save and deploy
     - FR: create new form data, see in summary
@@ -44,7 +41,7 @@ We do the following just for eXist and DB2, as automated tests already test most
         - older data
 7. versioning
     - create form db2/a
-        - input field A + file or image attachment
+        - input field A + file + image attachment
         - publish
         - go to new page
         - enter value a in field A, attach file
@@ -52,11 +49,14 @@ We do the following just for eXist and DB2, as automated tests already test most
         - save
     - edit the form definition
         - rename field in B
+        - remove image attachment (#1911)
         - publish
         - go to new page
         - enter value b in field B, attach file
         - review and back to edit
         - save
+    - #1911 
+        - FR: check that previous form data loads image
     - /fr/service/(mysql|oracle|db2)/a/schema: schema with B is produced
     - /fr/service/(mysql|oracle|db2)/a/schema?form-version=1: schema with A is produced
     - go to the summary page, click on first row (created last), check field B/value b and attachment show
