@@ -30,6 +30,9 @@ We do the following just for eXist and DB2, as automated tests already test most
         - DB2: be aware of #1409
     - FR: deployed form loads image
     - FR: attach file, save, edit
+    - #1911
+        - FB: create new form version and publish
+        - FR: check that previous form data loads image
 5. search
     - FB: check summary/search field, save and deploy
     - FR: create new form data, see in summary
