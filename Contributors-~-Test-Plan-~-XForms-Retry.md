@@ -23,7 +23,7 @@
             value="2000"/>
         ```
     - open 
-        - http://localhost:8080/46pe/xforms-sandbox/sample/dispatch-delay
+        - http://localhost:8080/orbeon/xforms-sandbox/sample/dispatch-delay
         - in Chrome, open the Dev Tools, go to the Network tab
         - hit the *Manual save* button
         - check after 20 seconds the value got to `1`  
