@@ -49,7 +49,7 @@
         - check Delete button is absent or disabled
         - check PDF works
     - http://localhost:8080/orbeon/fr/
-        - Summary/New operations visible for sales/my-sales-form
+        - sales/my-sales-form shows on the home page
         - admin ops for sales/my-sales-form
         - other forms don't have admin ops
         - Select → All, then Operation → Unpublish Local Forms ([#1380][7])
