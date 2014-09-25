@@ -54,7 +54,7 @@
         - other forms don't have admin ops
         - Select → All, then Operation → Unpublish Local Forms ([#1380][7])
             - check forms w/o access were not selected!
-        - Summary/New not visible for sales/my-sales-form
+        - now that sales/my-sales-form is unavailable, check the link is disabled
     - FB summary page
         - open structured search (be aware of  [#878][8])
         - check only guest and sales forms are available
