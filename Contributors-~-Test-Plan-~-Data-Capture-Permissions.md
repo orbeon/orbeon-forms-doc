@@ -16,7 +16,7 @@
     name="oxf.fr.authentication.container.roles"
     value="orbeon-user orbeon-sales orbeon-admin clerk admin"/>`
     - for headers-based  auth
-        - set rewriting rules with Charles
+        - set rewriting rules with Charles (⌘⇧W)
             - for user clerk ([gist][16])
             - for user admin ([gist][17])
         - to switch between users in below steps
