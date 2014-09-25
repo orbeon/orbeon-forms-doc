@@ -37,8 +37,8 @@
 - make sure permissions are followed
     - anonymous user
         - home page: link goes to new page (not summary)
-        - summary page: access rejected (fixed regression with [#1201][19])
-        - detail page: only new mode accepted
+        - summary page: unauthorized (fixed regression with [#1201][19])
+        - detail page: only `new` accepted, `edit`, `view`, `pdf` are unauthorized
     - logged in user
         - check permissions as clerk/clerk
             - remove `JSESSIONID` (i.e. with Dev Tools)
