@@ -2,6 +2,13 @@
 
 - setup
     - with Oracle, MySQL, SQL Server, DB2
+
+    ```xml
+    <property
+        as="xs:string"
+        name="oxf.fr.persistence.provider.acme.permissions.*"
+        value="oracle"/>
+    ```
     - restore `form-builder-permissions.xml` to default
     - for container auth
         - in `web.xml`
