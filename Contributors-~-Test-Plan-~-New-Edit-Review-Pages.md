@@ -93,6 +93,7 @@
 - noscript mode
     - orbeon/contact
     - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
+    - go to form with ?fr-noscript=true
     - test w/ new form w/ image & file attachments
         - attachments work [NOTE: be aware of [#1405][3]]
 - wizard
