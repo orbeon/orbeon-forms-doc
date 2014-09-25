@@ -55,7 +55,7 @@
         - Select → All, then Operation → Unpublish Local Forms ([#1380][7])
             - check forms w/o access were not selected!
         - now that sales/my-sales-form is unavailable, check the link is disabled
-    - FB summary page
+    - http://localhost:8080/orbeon/fr/orbeon/builder/summary
         - open structured search (be aware of  [#878][8])
         - check only guest and sales forms are available
 - browser 2
