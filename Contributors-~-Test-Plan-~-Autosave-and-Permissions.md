@@ -1,6 +1,6 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
-Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
+Repeat what follows with Oracle, MySQL, SQL Server, and DB2 with the following settings:
 
 ```xml
 <property
@@ -35,45 +35,45 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
 
 ### Autosave with permissions
 
-1. In FB, create form `a/a`.
+1. In FB, create form `$provider/a`.
     - Create a field *first name*, marked as shown on summary page.
     - Enable permissions as shown below, save, deploy.  
         ![Permissions dialog](images/test-permissions.png)
 2. Logged in as user `b1` in group `b`:
-    - `a/a/new`, type *Ned*, save, change to *Ned2*, tab out, after 6s go to the summary page, check it shows *Ned2* as draft
+    - `$provider/a/new`, type *Ned*, save, change to *Ned2*, tab out, after 6s go to the summary page, check it shows *Ned2* as draft
 3. Logged in as user `a1` in group `a`:
     - Can see data of other users, but in readonly mode (since everyone can read)
-        - Load `a/a/summary`, check *Ned* and *Ned2* show, but have the readonly "label"
+        - Load `$provider/a/summary`, check *Ned* and *Ned2* show, but have the readonly "label"
         - Check that clicking on *Ned* and *Ned2* brings up the data in readonly mode
         - Edit the URL to have `edit` instead of `view`, check a 403 is returned
     - Drafts for saved
-        - Load `a/a/new`
+        - Load `$provider/a/new`
             - Check we don't get a prompt to edit the draft created by b1 (since we only have read access to it).
             - Type *Homer*, hit save, edit into *Homer2*, after 6s go to summary page, check it shows *Homer* and *Homer2* as draft
-        - `a/a/summary`, click on *Homer2*, check the draft comes up
-        - `a/a/summary`, click on *Homer*, check prompt comes up, try both options and see that *Homer*/*Homer2* comes up
+        - `$provider/a/summary`, click on *Homer2*, check the draft comes up
+        - `$provider/a/summary`, click on *Homer*, check prompt comes up, try both options and see that *Homer*/*Homer2* comes up
         - editing one of the form data (*Homer* or *Homer2*), hit save, back on the summary check the draft was removed
     - Drafts for new
-        - `a/a/new`, type *Bart*, after 6s go to summary page, check it shows *Bart* as draft
-        - `a/a/new`, check prompt, and try both options
-        - `a/a/new`, on prompt start from scratch, type *Lisa*, after 6s go to summary, check it shows *Bart* and *Lisa* as draft
-        - `a/a/new`, check prompt, try both options, in particular the one showing the drafts for new
+        - `$provider/a/new`, type *Bart*, after 6s go to summary page, check it shows *Bart* as draft
+        - `$provider/a/new`, check prompt, and try both options
+        - `$provider/a/new`, on prompt start from scratch, type *Lisa*, after 6s go to summary, check it shows *Bart* and *Lisa* as draft
+        - `$provider/a/new`, check prompt, try both options, in particular the one showing the drafts for new
     - Summary
         - Edit *Home3*, change to *Homer4*, after 6s go back to summary page.
         - Delete *Homer3*, check *Homer4* is deleted as well
         - Check *Lisa*, then view, check in view mode without prompt
         - Delete *Bart*, check *Lisa* not deleted
 4. With anonymous user:
-    - `a/a/summary` only shows saved data, not drafts
+    - `$provider/a/summary` only shows saved data, not drafts
     - change form definition to remove the read permission form anyone
-    - `a/a/summary` returns 403 (since anonymous users don't have the read permission)
-    - `a/a/new`, type *Homer*, tab out, after 6s check that no autosave was done (e.g. with Charles that no PUT was made to the persistence layer)
+    - `$provider/a/summary` returns 403 (since anonymous users don't have the read permission)
+    - `$provider/a/new`, type *Homer*, tab out, after 6s check that no autosave was done (e.g. with Charles that no PUT was made to the persistence layer)
 5. Permissions of drafts in summary page
     - Log in as user `a1` in group `a`.
-    - `a/a/summary`, delete everything (to clean things up).
-    - As user `a1` in group `a`, go to `a/a/new`, type *Homer*, hit save, edit into *Homer2*, after 6s go to `a/a/summary`, check it shows *Homer* and *Homer2* as draft.
-    - As user `a2` in group `a`, go to `a/a/summary`, check it shows *Homer* and *Homer2* as draft.
-    - As user `b1` in group `b`, go to `a/a/summary`, check it shows neither *Homer* nor *Homer2*.
+    - `$provider/a/summary`, delete everything (to clean things up).
+    - As user `a1` in group `a`, go to `$provider/a/new`, type *Homer*, hit save, edit into *Homer2*, after 6s go to `$provider/a/summary`, check it shows *Homer* and *Homer2* as draft.
+    - As user `a2` in group `a`, go to `$provider/a/summary`, check it shows *Homer* and *Homer2* as draft.
+    - As user `b1` in group `b`, go to `$provider/a/summary`, check it shows neither *Homer* nor *Homer2*.
 
 ### Autosave without permissions
 
