@@ -3,10 +3,34 @@
 Repeat what follows with Oracle, MySQL, SQL Server, and DB2, for each setting:
 
 ```xml
-<property as="xs:string"  name="oxf.fr.persistence.provider.*.*.*"     value="..."/>
-<property as="xs:string"  name="oxf.fr.authentication.container.roles" value="a b"/>
-<property as="xs:string"  name="oxf.http.proxy.host"                   value="localhost"/>
-<property as="xs:integer" name="oxf.http.proxy.port"                   value="8888"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.oracle.*.*"
+    value="oracle"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.mysql.*.*"
+    value="mysql"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.sqlserver.*.*"
+    value="sqlserver"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.db2.*.*"
+    value="db2"/>
+<property 
+    as="xs:string"  
+    name="oxf.fr.authentication.container.roles" 
+    value="a b"/>
+<property 
+    as="xs:string"  
+    name="oxf.http.proxy.host"                   
+    value="localhost"/>
+<property 
+    as="xs:integer" 
+    name="oxf.http.proxy.port"                   
+    value="8888"/>
 ```
 
 ### Autosave with permissions
