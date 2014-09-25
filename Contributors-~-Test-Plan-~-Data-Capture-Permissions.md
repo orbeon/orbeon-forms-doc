@@ -1,7 +1,7 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - setup
-    - with MySQL, Oracle, DB2
+    - with Oracle, MySQL, SQL Server, DB2
     - restore `form-builder-permissions.xml` to default
     - for container auth
         - in `web.xml`
