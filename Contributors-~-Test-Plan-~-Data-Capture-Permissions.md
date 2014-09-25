@@ -2,13 +2,6 @@
 
 - setup
     - with Oracle, MySQL, SQL Server, DB2
-
-    ```xml
-    <property
-        as="xs:string"
-        name="oxf.fr.persistence.provider.acme.permissions.*"
-        value="oracle"/>
-    ```
     - restore `form-builder-permissions.xml` to default
     - for container auth
         - in `web.xml`
@@ -30,7 +23,7 @@
             - enable rewrite for clerk or admin headers, or disable rewrite
             - remove JSESSIONID when switching users
 - in Form Builder
-    - create new form acme/permissions
+    - create new form `oracle/permissions`, `mysql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
     - enable permissions for form and configure like on [doc page][18]
         - NOTE: doc on new table format is also on this page
     - save and publish
