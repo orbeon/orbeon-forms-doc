@@ -42,6 +42,7 @@
                 - click on existing data created by anonymous user shows read-only view
                 - PDF works
                 - click on new button opens new page
+            - new/edit
                 - save data works
                 - user is owner so can edit his own data
         - check permissions as admin/admin
