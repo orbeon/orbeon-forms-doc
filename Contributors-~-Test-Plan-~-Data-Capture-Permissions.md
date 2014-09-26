@@ -51,9 +51,9 @@
             - on click goes to summary page
             - on summary page
                 - click on new opens new page
-                - sees data previously entered by anonymous user, delete button enabled
+                - sees data previously entered by anonymous user and clerk
+                - delete button enabled and works
                 - on open data, can edit data
-                - delete works
 
 [16]: https://gist.github.com/ebruchez/10079296
 [17]: https://gist.github.com/ebruchez/10079254
