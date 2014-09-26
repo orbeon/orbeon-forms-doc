@@ -1,6 +1,7 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - main tests above with Google Chrome
+  - [4.7: latest is 37.0.2062.122]
   - [4.6: latest is 37.0.2062.0 dev]
   - [4.5: latest is 35.0.1897.8 dev]
 - Form Builder / Form Runner run with
