@@ -18,4 +18,3 @@
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
-    - IE7: FB has warning , FR works, a few cosmetic issues
