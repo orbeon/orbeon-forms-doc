@@ -26,7 +26,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Home Page|Contributors ~ Test Plan ~ Home Page]] [4.7 done]
     - [[Summary Page|Contributors ~ Test Plan ~ Summary Page]] [4.6 done]
     - [[Excel Import|Contributors ~ Test Plan ~ Excel Import]] [4.7 done]
-    - [[Liferay Support|Contributors ~ Test Plan ~ Liferay Support]] [4.6 done][Erik]
+    - [[Liferay Support|Contributors ~ Test Plan ~ Liferay Support]] [4.7 done]
     - [[Embedding|Contributors ~ Test Plan ~ Embedding]] [4.x done][Erik]
     - [[XForms Retry|Contributors ~ Test Plan ~ XForms Retry]] [4.7 done]
     - [[Other Browsers|Contributors ~ Test Plan ~ Other Browsers]] [4.6 done][Alex]
