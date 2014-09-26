@@ -1,6 +1,6 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
-- http://localhost:8080/46pe/fr/orbeon/contact/import
+- http://localhost:8080/47pe/fr/orbeon/contact/import
 - import small doc first (`contact5.xlsx` on Dropbox)
   - check 2 out of  5 docs invalid
   - continue and check import passes: 3 documents were imported
