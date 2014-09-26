@@ -4,6 +4,7 @@
     - with Oracle, MySQL, SQL Server, DB2
     - restore `form-builder-permissions.xml` to default
     - for container auth
+        - `<property as="xs:string"  name="oxf.fr.authentication.method" value="container"/>`
         - in `web.xml`
             - uncomment security section towards the end
             - change first `<url-pattern>` from `/fr/*` to `/auth` (it doesn't matter that page doesn't exist, it's just a path to force authentication)
@@ -16,6 +17,7 @@
     name="oxf.fr.authentication.container.roles"
     value="orbeon-user orbeon-sales orbeon-admin clerk admin"/>`
     - for headers-based  auth
+        - `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
         - set rewriting rules with Charles (⌘⇧W)
             - for user clerk ([gist][16])
             - for user admin ([gist][17])
