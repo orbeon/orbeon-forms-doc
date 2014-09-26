@@ -36,8 +36,9 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2 with the following s
 Setup permissions e.g. in `tomcat-users.xml`:
 
 ```xml
-<user username="a" password="a" roles="a"/>
-<user username="b" password="b" roles="b"/>
+<user username="a1" password="a1" roles="a"/>
+<user username="a2" password="a2" roles="a"/>
+<user username="b1" password="b1" roles="b"/>
 ```
 
 Authorize on:
@@ -54,7 +55,9 @@ Authorize on:
     - `$provider/autosave/new`, type *Ned*, save, change to *Ned2*, tab out, after 6s go to the summary page, check it shows *Ned2* as draft
 3. Logged in as user `a1` in group `a`:
     - Can see data of other users, but in readonly mode (since everyone can read)
-        - Load `$provider/autosave/summary`, check *Ned* and *Ned2* show, but have the readonly "label"
+        - Load `$provider/autosave/summary`
+        - Check *Ned* shows, but has the readonly "label"
+        - Check *Ned2* doesn't show (*NOTE: Test used to say should show. Doesn't as of 4.7.*)
         - Check that clicking on *Ned* and *Ned2* brings up the data in readonly mode
         - Edit the URL to have `edit` instead of `view`, check a 403 is returned
     - Drafts for saved
