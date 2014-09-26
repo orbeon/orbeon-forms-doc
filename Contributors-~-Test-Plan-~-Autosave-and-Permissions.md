@@ -57,7 +57,7 @@ Authorize on:
     - Can see data of other users, but in readonly mode (since everyone can read)
         - Load `$provider/autosave/summary`
         - Check *Ned* shows, but has the readonly "label"
-        - Check *Ned2* doesn't show (*NOTE: Test used to say should show. Doesn't as of 4.7.*)
+        - Check *Ned2* shows, but has the readonly "label"
         - Check that clicking on *Ned* and *Ned2* brings up the data in readonly mode
         - Edit the URL to have `edit` instead of `view`, check a 403 is returned
     - Drafts for saved
