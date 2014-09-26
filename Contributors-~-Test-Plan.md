@@ -10,7 +10,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Basic Persistence|Contributors ~ Test Plan ~ Basic Persistence]] [4.7 done]
     - [[Data Capture Permissions|Contributors ~ Test Plan ~ Data Capture Permissions]] [4.7 done]
     - [[Autosave and Permissions Test|Contributors ~ Test Plan ~ Autosave and Permissions]] [4.7 done]
-    - [[Other Database Tests|Contributors ~ Test Plan ~ Other Database Tests]] [4.6 done]
+    - [[Other Database Tests|Contributors ~ Test Plan ~ Other Database Tests]] [4.6 done][Erik]
 - Form Builder
     - [[Basic Features|Contributors ~ Test Plan ~ Basic Features]] [4.7 done]
     - [[Schema Support|Contributors ~ Test Plan ~ Schema Support]] [4.7 done]
@@ -24,7 +24,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Sample forms|Contributors ~ Test Plan ~ Sample Forms]] [4.7 done]
     - [[New, Edit, Review Pages|Contributors ~ Test Plan ~ New Edit Review Pages]] [4.7 done]
     - [[Home Page|Contributors ~ Test Plan ~ Home Page]] [4.7 done]
-    - [[Summary Page|Contributors ~ Test Plan ~ Summary Page]] [4.6 done]
+    - [[Summary Page|Contributors ~ Test Plan ~ Summary Page]] [4.6 done][Erik]
     - [[Excel Import|Contributors ~ Test Plan ~ Excel Import]] [4.7 done]
     - [[Liferay Support|Contributors ~ Test Plan ~ Liferay Support]] [4.7 done]
     - [[Embedding|Contributors ~ Test Plan ~ Embedding]] [4.7 done]
