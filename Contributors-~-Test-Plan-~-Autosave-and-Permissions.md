@@ -33,6 +33,17 @@ Repeat what follows with Oracle, MySQL, SQL Server, and DB2 with the following s
     value="8888"/>
 ```
 
+Setup permissions e.g. in `tomcat-users.xml`:
+
+```xml
+<user username="a" password="a" roles="a"/>
+<user username="b" password="b" roles="b"/>
+```
+
+Authorize on:
+
+    http://localhost:8080/47pe/auth
+
 ### Autosave with permissions
 
 1. In FB, create form `$provider/autosave`.
