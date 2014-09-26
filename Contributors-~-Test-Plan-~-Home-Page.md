@@ -13,7 +13,7 @@
     - e.g. remote in Liferay Tomcat
 
     ```xml
-    <property as="xs:anyURI" name="oxf.fr.home.remote-servers">
+    <property as="xs:string" name="oxf.fr.home.remote-servers">
         [
             { "label": "Remote server", "url": "http://Eriks-MacBook-Pro.local:9090/orbeon/" }
         ]
