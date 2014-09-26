@@ -39,9 +39,11 @@
             - home page: link goes to the summary page
             - summary page
                 - sees data previously entered by anonymous user, cannot delete
-                - click on new button opens new page
-                - click on existing data shows read-only view
+                - click on existing data created by anonymous user shows read-only view
                 - PDF works
+                - click on new button opens new page
+                - save data works
+                - user is owner so can edit his own data
         - check permissions as admin/admin
             - remove `JSESSIONID` (i.e. with Dev Tools)
             - switch user
