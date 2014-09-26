@@ -23,7 +23,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - Form Runner
     - [[Sample forms|Contributors ~ Test Plan ~ Sample Forms]] [4.7 done]
     - [[New, Edit, Review Pages|Contributors ~ Test Plan ~ New Edit Review Pages]] [4.7 done]
-    - [[Home Page|Contributors ~ Test Plan ~ Home Page]] [4.6 done][Erik]
+    - [[Home Page|Contributors ~ Test Plan ~ Home Page]] [4.7 done]
     - [[Summary Page|Contributors ~ Test Plan ~ Summary Page]] [4.6 done]
     - [[Excel Import|Contributors ~ Test Plan ~ Excel Import]] [4.7 done]
     - [[Liferay Support|Contributors ~ Test Plan ~ Liferay Support]] [4.6 done][Erik]
