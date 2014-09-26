@@ -6,9 +6,11 @@
   - [4.5: latest is 35.0.1897.8 dev]
 - Form Builder / Form Runner run with
     - latest Firefox
+      - [4.7: 32]
       - [4.6: 30]
       - [4.5: 27.0.1 and 28]
     - latest Safari
+      - [4.7: 7.0.6]
       - [4.6: 7.0.4]
       - [4.5: 7.0.2]
     - IE11 (since 4.5)
