@@ -30,7 +30,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Embedding|Contributors ~ Test Plan ~ Embedding]] [4.7 done]
     - [[XForms Retry|Contributors ~ Test Plan ~ XForms Retry]] [4.7 done]
     - [[Other Browsers|Contributors ~ Test Plan ~ Other Browsers]] [4.7 done]
-    - [[Other|Contributors ~ Test Plan ~ Other]] [4.6 done][Alex]
+    - [[Other|Contributors ~ Test Plan ~ Other]] [4.7 done]
 
 
   [1]: https://github.com/orbeon/orbeon-forms/issues/227
