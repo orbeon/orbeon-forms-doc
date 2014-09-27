@@ -4,7 +4,7 @@ Check that all PE features are available in PE, but not in CE:
 
 - features
     - test publish from the Form Runner home page is disabled
-        - edit `form-builder-permissions.xml`, add `<role name="orbeon-user" app="*" form="*"/>`
+        - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `web.xml` uncomment authentication section at the bottom of the file
         - access http://localhost:8080/orbeon/fr/ and login with user with the `orbeon-user` role
         - check the page doesn't have any form admin feature
