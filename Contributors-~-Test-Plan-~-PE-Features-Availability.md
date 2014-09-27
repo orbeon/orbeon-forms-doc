@@ -5,7 +5,9 @@ Check that all PE features are available in PE, but not in CE:
 - features
     - [Not yet implemented, see below] test publish from the Form Runner home page is disabled
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
-        - in `properties-local.xml` add `<property as="xs:string" name="oxf.fr.authentication.container.roles" value="orbeon-user"/>`
+        - in `properties-local.xml` add:
+            - `<property as="xs:string" name="oxf.fr.authentication.container.roles" value="orbeon-user"/>`
+            - The properties for the private/public key
         - in `web.xml` uncomment authentication section
         - access [http://localhost:8080/orbeon/fr/](http://localhost:8080/orbeon/fr/)
         - login with user with the `orbeon-user` role
