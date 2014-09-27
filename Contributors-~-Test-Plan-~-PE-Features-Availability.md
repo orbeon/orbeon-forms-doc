@@ -12,7 +12,7 @@ Check that all PE features are available in PE, but not in CE:
         - check the page doesn't have any form admin feature
     - all the features listed on the [web site][1]
     - known issues
-        - [#1043](https://github.com/orbeon/orbeon-forms/issues/1043)
+        - [#1043](https://github.com/orbeon/orbeon-forms/issues/1043) Disable noscript mode in CE version
         - [#1407][2] Accessible link changes the toolbar with CE builds
         - [#1408][3] PE check not in place for Excel import feature
         - [#1926](https://github.com/orbeon/orbeon-forms/issues/1926) PE check not in place for Publish to Production
