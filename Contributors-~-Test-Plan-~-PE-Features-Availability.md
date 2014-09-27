@@ -3,7 +3,7 @@
 Check that all PE features are available in PE, but not in CE:
 
 - features
-    - test publish from the Form Runner home page is disabled
+    - [Not yet implemented, see below] test publish from the Form Runner home page is disabled
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml` add `<property as="xs:string" name="oxf.fr.authentication.container.roles" value="orbeon-user"/>`
         - in `web.xml` uncomment authentication section
@@ -15,6 +15,7 @@ Check that all PE features are available in PE, but not in CE:
         - [#1043](https://github.com/orbeon/orbeon-forms/issues/1043)
         - [#1407][2] Accessible link changes the toolbar with CE builds
         - [#1408][3] PE check not in place for Excel import feature
+        - [#1926](https://github.com/orbeon/orbeon-forms/issues/1926) PE check not in place for Publish to Production
     - captcha
 - in Form Builder, check with CE, that when accessing a PE feature a PE dialog shows
 
