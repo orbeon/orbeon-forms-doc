@@ -27,7 +27,7 @@ drop table orbeon_form_data_attach ;
     ```
 - Remove existing view if any: `drop view orbeon_f_db2_a ;`
 - Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [[flat view documentation|Form-Runner-~-Persistence-~-Flat-View]]
-  - rename app name to `db2
+  - rename app name to `db2`
   - publish, check that a view with the appropriate column names is created.
 
     ```sql
