@@ -7,7 +7,7 @@ Check that all PE features are available in PE, but not in CE:
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml` add:
             - `<property as="xs:string" name="oxf.fr.authentication.container.roles" value="orbeon-user"/>`
-            - The properties for the private/public key
+            - the properties for the private/public key
         - in `web.xml` uncomment authentication section
         - access [http://localhost:8080/orbeon/fr/](http://localhost:8080/orbeon/fr/)
         - login with user with the `orbeon-user` role
