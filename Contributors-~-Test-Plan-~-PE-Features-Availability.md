@@ -21,8 +21,7 @@ Check that all PE features are available in PE, but not in CE:
             - `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
             - the properties for the private/public key
         - access [http://localhost:8080/orbeon/fr/orbeon/bookshelf/new](http://localhost:8080/orbeon/fr/orbeon/bookshelf/new)
-        - enter book title and auth, click save
-        - we should get an error, but no captcha shown
+        - check the captcha isn't shown
 - in Form Builder, check with CE, that when accessing a PE feature a PE dialog shows
 
 [1]: http://www.orbeon.com/download
