@@ -10,13 +10,13 @@ Check that all PE features are available in PE, but not in CE:
         - access [http://localhost:8080/orbeon/fr/](http://localhost:8080/orbeon/fr/)
         - login with user with the `orbeon-user` role
         - check the page doesn't have any form admin feature
-    - all the features listed on the [web site][1]
     - [Skip: check not yet in place] captcha
         - in `properties-local.xml` add
             - `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
             - the properties for the private/public key
         - access [http://localhost:8080/orbeon/fr/orbeon/bookshelf/new](http://localhost:8080/orbeon/fr/orbeon/bookshelf/new)
         - check the captcha isn't shown
+    - all the other features listed on the [web site][1]
     - known issues
         - [#1043](https://github.com/orbeon/orbeon-forms/issues/1043) Disable noscript mode in CE version
         - [#1407][2] Accessible link changes the toolbar with CE builds
