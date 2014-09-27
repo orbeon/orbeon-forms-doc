@@ -17,6 +17,10 @@ Check that all PE features are available in PE, but not in CE:
         - [#1408][3] PE check not in place for Excel import feature
         - [#1926](https://github.com/orbeon/orbeon-forms/issues/1926) PE check not in place for Publish to Production
     - captcha
+        - in `properties-local.xml` add `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
+        - access [http://localhost:8080/orbeon/fr/orbeon/bookshelf/new](http://localhost:8080/orbeon/fr/orbeon/bookshelf/new)
+        - enter book title and auth, click save
+        - we should get an error, but no captcha shown
 - in Form Builder, check with CE, that when accessing a PE feature a PE dialog shows
 
 [1]: http://www.orbeon.com/download
