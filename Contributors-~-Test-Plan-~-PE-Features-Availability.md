@@ -5,9 +5,7 @@ Check that all PE features are available in PE, but not in CE:
 - features
     - [Not yet implemented, see below] test publish from the Form Runner home page is disabled
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
-        - in `properties-local.xml` add:
-            - `<property as="xs:string" name="oxf.fr.authentication.container.roles" value="orbeon-user"/>`
-            - the properties for the private/public key
+        - in `properties-local.xml` add `<property as="xs:string" name="oxf.fr.authentication.container.roles" value="orbeon-user"/>`
         - in `web.xml` uncomment authentication section
         - access [http://localhost:8080/orbeon/fr/](http://localhost:8080/orbeon/fr/)
         - login with user with the `orbeon-user` role
@@ -19,7 +17,9 @@ Check that all PE features are available in PE, but not in CE:
         - [#1408][3] PE check not in place for Excel import feature
         - [#1926](https://github.com/orbeon/orbeon-forms/issues/1926) PE check not in place for Publish to Production
     - captcha
-        - in `properties-local.xml` add `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
+        - in `properties-local.xml` add
+            - `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
+            - the properties for the private/public key
         - access [http://localhost:8080/orbeon/fr/orbeon/bookshelf/new](http://localhost:8080/orbeon/fr/orbeon/bookshelf/new)
         - enter book title and auth, click save
         - we should get an error, but no captcha shown
