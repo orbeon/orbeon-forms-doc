@@ -9,7 +9,7 @@ This document explains how to localize Orbeon Forms
 - P: partial support
 - N: no support
 
-### As of Orbeon Forms 4.6.2
+### As of Orbeon Forms 4.6.2 and 4.7
 
 Language  | Calendar | Numberer | XBL components | Form Runner | Form Builder 
 ----------|:--------:|:--------:|:--------------:|:-----------:|:-----------:
