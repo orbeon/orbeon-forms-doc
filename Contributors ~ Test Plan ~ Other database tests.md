@@ -25,11 +25,13 @@ drop table orbeon_form_data_attach ;
         name="oxf.fr.persistence.db2.create-flat-view" 
         value="true"/>
     ```
-- Remove existing view if any: `drop view orbeon_f_a_a ;`
-- Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [[flat view documentation|Form-Runner-~-Persistence-~-Flat-View]], publish, check that a view with the appropriate column names is created.
+- Remove existing view if any: `drop view orbeon_f_db2_a ;`
+- Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [[flat view documentation|Form-Runner-~-Persistence-~-Flat-View]]
+  - rename app name to `db2
+  - publish, check that a view with the appropriate column names is created.
 
     ```sql
-    SELECT * FROM orbeon_f_a_a ;
+    SELECT * FROM orbeon_f_db2_a ;
     ```
 
   [4.3 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql
