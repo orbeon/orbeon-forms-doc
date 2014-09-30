@@ -77,7 +77,26 @@ milestone=44&state=open)
 
 Dates (tentative):
 
-- 2014-11-10: tentative release date
+- 2014-11-26: tentative release date
+
+### Orbeon Forms 4.9
+
+Focus:
+
+- [ ] TBD
+- [ ] one performance item: TBD
+- [ ] one maintenance item: TBD
+- [ ] doc items: TBD
+
+Issues:
+
+- [ ] Considered for 4.9
+- [ ] 4.9
+
+Dates (tentative):
+
+- counting 2 slow weeks around the end of year
+- 2015-02-15: tentative release date
 
 ## What's in a release
 
