@@ -62,10 +62,12 @@ Focus:
 
 - [ ] TBD
 - [ ] one performance item: TBD
+  - [ ] see [Performance item for 4.8 #1812](https://github.com/orbeon/orbeon-forms/issues/1812)
 - [ ] one maintenance item: TBD
   - [ ] [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
   - [ ] [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
-- [ ] doc items: TBD
+- [ ] doc items
+  - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
 
 Issues:
 
