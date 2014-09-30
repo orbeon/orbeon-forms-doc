@@ -6,8 +6,8 @@
     1. [Form Builder modernization](#form-builder-modernization) (e.g. drag-and-drop)
     1. [Other](#other)
 * Upcoming releases
-    * [Orbeon Forms 4.7](#orbeon-forms-47)
     * [Orbeon Forms 4.8](#orbeon-forms-48)
+    * [Orbeon Forms 4.9](#orbeon-forms-49)
 * [What's in a release](#whats-in-a-release)
 * Past releases
     * [Orbeon Forms 4.6](#orbeon-forms-46)
