@@ -11,6 +11,7 @@
 * [What's in a release](#whats-in-a-release)
 * Past releases
     * [Orbeon Forms 4.6](#orbeon-forms-46)
+    * [Orbeon Forms 4.7](#orbeon-forms-47)
 
 ## Tracks
 
