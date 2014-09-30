@@ -56,22 +56,6 @@ This includes:
 
 ## Upcoming releases
 
-### Orbeon Forms 4.7
-
-- [ ] [4.7 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=41&page=1&sort=updated&state=open)
-- [ ] one performance item:
-  - see [Performance item for 4.7 #1812](https://github.com/orbeon/orbeon-forms/issues/1812)
-- [ ] maintenance items:
-  - [ ] [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
-  - [ ] [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
-- [ ] doc items
-  - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
-
-Dates:
-
-- counting 1 slow summer month
-- 2014-09-10: tentative release date
-
 ### Orbeon Forms 4.8
 
 Focus:
@@ -79,6 +63,8 @@ Focus:
 - [ ] TBD
 - [ ] one performance item: TBD
 - [ ] one maintenance item: TBD
+  - [ ] [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
+  - [ ] [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
 - [ ] doc items: TBD
 
 Issues:
@@ -122,3 +108,21 @@ Dates:
 - ~~2014-05-08: branching and big feature freeze~~
 - ~~2014-06-05: tentative release date~~
 - ~~2014-06-24: actual release date~~
+
+### Orbeon Forms 4.7
+
+- [x] [4.7 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=41&page=1&sort=updated&state=open)
+- [x] one performance item:
+  - [x] [Internal requests must not go through HTTP #1363](https://github.com/orbeon/orbeon-forms/issues/1363)
+- [x] maintenance items:
+  - didn't do the ones planned, but did some others
+  - [x] [FB: Itemset editor doesn't correctly distinguish between select/select1 #1084](https://github.com/orbeon/orbeon-forms/issues/1084)
+  - [x] [Don't use built-in HTTP client in proxy portlet #1412](https://github.com/orbeon/orbeon-forms/issues/1412)
+- [ ] doc items
+  - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
+
+Dates:
+
+- ~~counting 1 slow summer month~~
+- ~~2014-09-10: tentative release date~~
+- ~~2014-09-26: actual release date~~
