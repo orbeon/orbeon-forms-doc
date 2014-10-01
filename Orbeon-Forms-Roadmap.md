@@ -39,8 +39,9 @@ This includes:
 
 - modularization of the code (see umbrella [#1585](https://github.com/orbeon/orbeon-forms/issues/1585))
 - maintenance (see [Maintenance issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMaintenance))
-- evaluate Scala.js (see [#1600](https://github.com/orbeon/orbeon-forms/issues/1600))
 - drop old frameworks and adopt new ones
+  - get rid of YUI ([#1599](https://github.com/orbeon/orbeon-forms/issues/1599))
+  - evaluate Scala.js (see [#1600](https://github.com/orbeon/orbeon-forms/issues/1600))
 - more automated testing (we have almost 800 tests, but need more)
 
 ### Integration
