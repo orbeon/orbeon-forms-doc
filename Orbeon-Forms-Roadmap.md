@@ -15,7 +15,7 @@
 
 ## See also
 
-[Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history)
+- [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history)
 
 ## Tracks
 
