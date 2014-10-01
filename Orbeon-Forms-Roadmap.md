@@ -13,6 +13,10 @@
     * [Orbeon Forms 4.6](#orbeon-forms-46)
     * [Orbeon Forms 4.7](#orbeon-forms-47)
 
+## See also
+
+[Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history)
+
 ## Tracks
 
 ### Performance
