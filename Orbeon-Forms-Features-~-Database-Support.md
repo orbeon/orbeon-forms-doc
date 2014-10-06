@@ -13,7 +13,7 @@ We have two categories of databases:
 
 Feature                              | eXist | Oracle | MySQL | SQL Server | DB2
 -------------------------------------|-------|--------|-------|------------|----
-[Repeated grids and sections][^1]    | Y     | Y      |Y      |Y           |Y
+[Form controls and layout including repeated grids and sections][^1]    | Y     | Y      |Y      |Y           |Y
 [Versioning][^2]                     | N     | Y      |Y      |Y           |Y
 [Owner/group-based permissions][^3]  | N     | Y      |Y      |Y           |Y
 [Autosave (requires permissions)][^4]| N     | Y      |Y      |Y           |Y
