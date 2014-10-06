@@ -1,3 +1,3 @@
 > [[Home]] ▸ Orbeon Forms Features
 
-- [[Orbeon-Forms-Features-~-Database-Support]]
+- [[Database support|Orbeon-Forms-Features-~-Database-Support]]
