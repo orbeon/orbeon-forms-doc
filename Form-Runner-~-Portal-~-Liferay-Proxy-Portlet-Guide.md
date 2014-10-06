@@ -411,5 +411,5 @@ _NOTE: This is no longer a limitation with Orbeon Forms 4.0 and nightly builds s
 [5]: ./images/fr-liferay-proxy-portlet.png
 [6]: ./images/fr-liferay-portlet-preferences.png
 [7]: ./images/fr-liferay-portlet-config.png
-[8]: https://github.com/orbeon/orbeon-forms/blob/master/descriptors/proxy-portlet/portlet.xml
+[8]: https://github.com/orbeon/orbeon-forms/blob/master/descriptors/proxy-portlet/WEB-INF/portlet.xml
 [9]: http://urlrewritefilter.googlecode.com/svn/trunk/src/doc/manual/3.2/index.html
