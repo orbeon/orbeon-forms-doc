@@ -1,6 +1,6 @@
 > [[Home]] ▸ Contributors
 
-For each release of Orbeon Forms, we follow this test plan, which tests functionality in addition to the ~800 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this][1].
+For each release of Orbeon Forms, we follow this test plan, which tests functionality in addition to the ~800 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this](https://github.com/orbeon/orbeon-forms/issues/227).
 
 - Misc
     - [[Distribution|Contributors ~ Test Plan ~ Distribution]] [4.7 done]
@@ -31,6 +31,3 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[XForms Retry|Contributors ~ Test Plan ~ XForms Retry]] [4.7 done]
     - [[Other Browsers|Contributors ~ Test Plan ~ Other Browsers]] [4.7 done]
     - [[Other|Contributors ~ Test Plan ~ Other]] [4.7 done]
-
-
-  [1]: https://github.com/orbeon/orbeon-forms/issues/227
