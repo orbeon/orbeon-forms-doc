@@ -25,7 +25,7 @@
             - enable rewrite for clerk or admin headers, or disable rewrite
             - remove JSESSIONID when switching users
 - in Form Builder
-    - create new form `oracle/permissions`, `mysql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
+    - create new form `exist/permissions`, `oracle/permissions`, `mysql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
     - enable permissions for form and configure like on [doc page][18]
         - NOTE: doc on new table format is also on this page
     - save and publish
