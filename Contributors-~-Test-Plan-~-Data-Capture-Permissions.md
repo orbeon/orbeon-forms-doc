@@ -1,7 +1,7 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - setup
-    - with Oracle, MySQL, SQL Server, DB2
+    - with eXist, Oracle, MySQL, SQL Server, DB2
     - restore `form-builder-permissions.xml` to default
     - for container auth
         - `<property as="xs:string"  name="oxf.fr.authentication.method" value="container"/>`
