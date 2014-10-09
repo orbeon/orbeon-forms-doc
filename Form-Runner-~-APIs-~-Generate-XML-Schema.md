@@ -1,8 +1,6 @@
 > [[Home]] ▸ Form Runner ▸ [[APIs|Form-Runner ~ APIs]]
 
-## Availability
-
-Since Orbeon Forms 4.0 PE.
+[SINCE Orbeon Forms 4.0 PE]
 
 ## What it does
 
