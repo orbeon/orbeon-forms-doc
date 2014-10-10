@@ -15,7 +15,7 @@ Feature                              | eXist | Oracle | MySQL | SQL Server | DB2
 -------------------------------------|-------|--------|-------|------------|----
 [Form controls and layouts including repeated grids and sections][^1]    | Y     | Y      |Y      |Y           |Y
 [Versioning][^2]                     | N      | Y      |Y      |Y           |Y
-[Owner/group-based permissions][^3]  | Y (4.8)| Y      |Y      |Y           |Y
+[Owner/group-based permissions][^3]  | Y (SINCE: 4.8)| Y      |Y      |Y           |Y
 [Autosave][^4]                       | N      | Y      |Y      |Y           |Y
 [Flat view][^5]                      | N/A    | Y      |N      |N           |Y
 
