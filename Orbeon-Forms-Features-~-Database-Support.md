@@ -14,14 +14,13 @@ We have two categories of databases:
 Feature                              | eXist | Oracle | MySQL | SQL Server | DB2
 -------------------------------------|-------|--------|-------|------------|----
 [Form controls and layouts including repeated grids and sections][^1]    | Y     | Y      |Y      |Y           |Y
-[Versioning][^2]                     | N        | Y      |Y      |Y           |Y
-[Owner/group-based permissions][^3]  | [Y][^4.8]| Y      |Y      |Y           |Y
-[Autosave][^4]                       | N        | Y      |Y      |Y           |Y
-[Flat view][^5]                      | N/A      | Y      |N      |N           |Y
+[Versioning][^2]                     | N      | Y      |Y      |Y           |Y
+[Owner/group-based permissions][^3]  | Y (4.8)| Y      |Y      |Y           |Y
+[Autosave][^4]                       | N      | Y      |Y      |Y           |Y
+[Flat view][^5]                      | N/A    | Y      |N      |N           |Y
 
 [^1]: http://blog.orbeon.com/2014/01/repeated-sections.html
 [^2]: http://blog.orbeon.com/2014/02/form-versioning.html
 [^3]: http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control#TOC-Permissions-for-owner-group-members
 [^4]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Autosave
 [^5]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Persistence-~-Flat-View
-[^4.8]: Since Orbeon Forms 4.8
