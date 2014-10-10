@@ -19,7 +19,7 @@ Feature                              | eXist | Oracle | MySQL | SQL Server | DB2
 [Autosave][^4]                       | N            | Y      |Y      |Y           |Y
 [Flat view][^5]                      | N/A          | Y      |N      |N           |Y
 
-1. Owner/group-based permissions support in eXist since Orbeon Forms 4.8.
+1. Since Orbeon Forms 4.8.
 
 [^1]: http://blog.orbeon.com/2014/01/repeated-sections.html
 [^2]: http://blog.orbeon.com/2014/02/form-versioning.html
