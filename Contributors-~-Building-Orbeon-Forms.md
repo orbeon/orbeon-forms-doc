@@ -9,8 +9,10 @@ The following instructions are known to work as of 2014-05-20, which is between 
 
 ## What the Orbeon Forms developers use
 
+As of 2014-10-13:
+
 - OS X Mavericks
-- IntelliJ IDEA 13.1
+- IntelliJ IDEA 13.1 (and 14 EAP)
 
 ## With IntelliJ
 
