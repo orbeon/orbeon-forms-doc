@@ -5,7 +5,7 @@
 This document explains how to localize Orbeon Forms
 ([i18n/L10n](http://en.wikipedia.org/wiki/Internationalization_and_localization)).
 
-See also [Supported Languages|[Form Runner ~ Supported Languages]].
+See also [[Supported Languages|Form Runner ~ Supported Languages]].
 
 ## Files to localize
 
