@@ -16,4 +16,8 @@ XForms 2.0 features added with Orbeon Forms 4.5:
 
 - `xf:bind()` function
 
+XForms 2.0 features added with Orbeon Forms 4.8:
+
+- `caseref` attribute on `xf:switch`
+
 For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=XForms+2.0&page=1&sort=updated&state=open).
