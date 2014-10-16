@@ -1,5 +1,28 @@
 > [[Home]] ▸ Form Runner
 
+## Introduction
+
+There are three distinct categories of languages to consider:
+
+1. The languages of the forms you create.
+2. The languages of the Form Builder user interface.
+3. The languages of the Form Runner user interface.
+
+This means that a form author could use Form Builder in the French language, create a form in Mandarin Chinese, and run it with the Form Runner's English user interface.
+
+## Form languages
+
+Form Builder (Orbeon Forms PE only) lets you create forms in multiple languages. Most world languages are available, with some limitations described below.
+
+### Known limitations
+
+1. With PDF output, there are some  known issues with ligatures in some Indian languages such as Hindi or Tamil.
+2. Right-to-left languages are not officially supported.
+
+We are glad to get help to address these two limitations.
+
+## Form Builder and Form Runner user interface
+
 - F: full support
 - P: partial support
 - N: no support
