@@ -66,20 +66,18 @@ This includes:
 
 Focus:
 
-- [ ] TBD
-- [ ] one performance item: TBD
-  - [ ] see [Performance item for 4.8 #1812](https://github.com/orbeon/orbeon-forms/issues/1812)
+- [ ] one performance item:
+  - [ ] [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718)
+  - [ ] see also [Performance item for 4.8 #1812](https://github.com/orbeon/orbeon-forms/issues/1812)
 - [ ] one maintenance item: TBD
   - [ ] [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
   - [ ] [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
-- [ ] doc items
+- [ ] doc item
   - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
 
 Issues:
 
-- [ ] [Considered for 4.8 (in progress)](https://github.com/orbeon/orbeon-forms/issues?
-milestone=44&state=open)
-- [ ] [4.8 (in progress)](https://github.com/orbeon/orbeon-forms/issues?milestone=43&state=open)
+- [ ] [4.8 (in progress)](https://github.com/orbeon/orbeon-forms/milestones/4.8)
 
 Dates (tentative):
 
