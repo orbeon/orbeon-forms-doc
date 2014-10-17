@@ -68,8 +68,8 @@ Focus:
 
 - [ ] one performance item:
   - [ ] [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718)
-  - [ ] see also [Performance item for 4.8 #1812](https://github.com/orbeon/orbeon-forms/issues/1812)
-- [ ] one maintenance item: TBD
+- [ ] one maintenance item from:
+  - [ ] [Recalculate/revalidate: deferred event dispatch #1773](https://github.com/orbeon/orbeon-forms/issues/1773)
   - [ ] [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
   - [ ] [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
 - [ ] doc item
