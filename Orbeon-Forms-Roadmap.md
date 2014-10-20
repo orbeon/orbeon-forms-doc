@@ -77,7 +77,7 @@ Focus:
 
 Issues:
 
-- [ ] [4.8 (in progress)](https://github.com/orbeon/orbeon-forms/milestones/4.8)
+- [ ] [all Orbeon Forms 4.8 issues](https://github.com/orbeon/orbeon-forms/milestones/4.8)
 
 Dates (tentative):
 
