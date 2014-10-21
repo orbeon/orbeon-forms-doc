@@ -84,7 +84,7 @@ Note that if you have a JDBC datasource, you can also place it inside:
 
 ### URIEncoding
 
-We recommend you add the `URIEncoding="UTF-8"` attribute on the [`<Connector>`][2] element, in your `server.xml`, as [recommended in the Tomcat FAQ][3]. This will ensure that all characters get properly decoded on the URL, which is especially important if you're using non-ASCII characters in the app or form name in Form Builder.
+We recommend you add the `URIEncoding="UTF-8"` attribute on the [`<Connector>`](http://tomcat.apache.org/tomcat-7.0-doc/config/http.html) element, in your `server.xml`, as [recommended in the Tomcat FAQ](http://wiki.apache.org/tomcat/FAQ/CharacterEncoding#Q8). This will ensure that all characters get properly decoded on the URL, which is especially important if you're using non-ASCII characters in the app or form name in Form Builder.
 
 ### Form Runner authentication
 
@@ -124,6 +124,3 @@ If you are using BASIC authentication on Tomcat 6.0.21 or newer, or on Tomcat 7,
 	className="org.apache.catalina.authenticator.BasicAuthenticator"
 	changeSessionIdOnAuthentication="false"/>
 ```
-
-[2]: http://tomcat.apache.org/tomcat-7.0-doc/config/http.html
-[3]: http://wiki.apache.org/tomcat/FAQ/CharacterEncoding#Q8
