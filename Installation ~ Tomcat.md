@@ -93,27 +93,35 @@ To setup Form Runner authentication:
 1. Open `TOMCAT_HOME/webapps/orbeon/WEB-INF/web.xml` and uncomment the `security-constraint`, `login-config` and `security-role` declarations at the end of the file.
 2. Open `TOMCAT_HOME/conf/server.xml` and make sure there is a `<Realm>` enabled. For example, by default with Tomcat 7:
 
-	```xml
-	<Realm className="org.apache.catalina.realm.LockOutRealm">
-		<Realm
-			className="org.apache.catalina.realm.UserDatabaseRealm"
-			resourceName="UserDatabase"/>
-	</Realm>
-```
+    ```xml
+    <Realm className="org.apache.catalina.realm.LockOutRealm">
+        <Realm
+            className="org.apache.catalina.realm.UserDatabaseRealm"
+            resourceName="UserDatabase"/>
+    </Realm>
+    ```
 3. Edit `TOMCAT_HOME/conf/tomcat-users.xml` and replace the content of the file with:
 
-	```xml
-	<tomcat-users>
-		<user
-			username="orbeon-user"
-			password="Secret, change me!"
-			roles="orbeon-user"/>
-		<user
-			username="orbeon-admin"
-			password="Secret, change me!"
-			roles="orbeon-user,orbeon-admin"/>
-	</tomcat-users>
-	```
+    ```xml
+    <tomcat-users>
+        <user
+            username="orbeon-user"
+            password="Secret, change me!"
+            roles="orbeon-user"/>
+        <user
+            username="orbeon-admin"
+            password="Secret, change me!"
+            roles="orbeon-user,orbeon-admin"/>
+    </tomcat-users>
+    ```
+4. Enumerate the roles in the following property:
+
+    ```xml
+    <property
+      as="xs:string"
+      name="oxf.fr.authentication.container.roles"
+      value="orbeon-user orbeon-admin"/>
+    ```
 
 ### BASIC authentication
 
