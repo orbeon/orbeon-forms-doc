@@ -82,31 +82,48 @@ Note that if you have a JDBC datasource, you can also place it inside:
 
 ## Optional steps
 
-1. We recommend you add the `URIEncoding="UTF-8"` attribute on the [`<Connector>`][2] element, in your `server.xml`, as [recommended in the Tomcat FAQ][3]. This will ensure that all characters get properly decoded on the URL, which is especially important if you're using non-ASCII characters in the app or form name in Form Builder.
-2. To setup Form Runner authentication:
-    1. Open `TOMCAT_HOME/webapps/orbeon/WEB-INF/web.xml` and uncomment the `security-constraint`, `login-config` and `security-role` declarations at the end of the file.
-    2. Open `TOMCAT_HOME/conf/server.xml` and make sure there is a `<Realm>` enabled. For example, by default with Tomcat 7:
+### URIEncoding
 
-    ```xml
-    <Realm className="org.apache.catalina.realm.LockOutRealm">
-        <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase"/>
-    </Realm>
-    ```
-    3. Edit `TOMCAT_HOME/conf/tomcat-users.xml` and replace the content of the file with:
+We recommend you add the `URIEncoding="UTF-8"` attribute on the [`<Connector>`][2] element, in your `server.xml`, as [recommended in the Tomcat FAQ][3]. This will ensure that all characters get properly decoded on the URL, which is especially important if you're using non-ASCII characters in the app or form name in Form Builder.
 
-    ```xml
-    <tomcat-users>
-        <user username="orbeon-user"  password="Secret, change me!" roles="orbeon-user"/>
-        <user username="orbeon-admin" password="Secret, change me!" roles="orbeon-user,orbeon-admin"/>
-    </tomcat-users>
-    ```
-3. If you are using BASIC authentication on Tomcat 6.0.21 or newer, or on Tomcat 7, then you need to add the following valve inside the `<Context>` corresponding to the Orbeon Forms web app in Tomcat's configuration:
+### Form Runner authentication
 
-    ```xml
-    <Valve
-        className="org.apache.catalina.authenticator.BasicAuthenticator"
-        changeSessionIdOnAuthentication="false"/>
-    ```
+To setup Form Runner authentication:
+
+1. Open `TOMCAT_HOME/webapps/orbeon/WEB-INF/web.xml` and uncomment the `security-constraint`, `login-config` and `security-role` declarations at the end of the file.
+2. Open `TOMCAT_HOME/conf/server.xml` and make sure there is a `<Realm>` enabled. For example, by default with Tomcat 7:
+
+```xml
+<Realm className="org.apache.catalina.realm.LockOutRealm">
+	<Realm 
+		className="org.apache.catalina.realm.UserDatabaseRealm" 
+		resourceName="UserDatabase"/>
+</Realm>
+```
+3. Edit `TOMCAT_HOME/conf/tomcat-users.xml` and replace the content of the file with:
+
+```xml
+<tomcat-users>
+	<user
+		username="orbeon-user"
+		password="Secret, change me!"
+		roles="orbeon-user"/>
+	<user
+		username="orbeon-admin"
+		password="Secret, change me!"
+		roles="orbeon-user,orbeon-admin"/>
+</tomcat-users>
+```
+
+### BASIC authentication
+
+If you are using BASIC authentication on Tomcat 6.0.21 or newer, or on Tomcat 7, then you need to add the following valve inside the `<Context>` corresponding to the Orbeon Forms web app in Tomcat's configuration:
+
+```xml
+<Valve
+	className="org.apache.catalina.authenticator.BasicAuthenticator"
+	changeSessionIdOnAuthentication="false"/>
+```
 
 [2]: http://tomcat.apache.org/tomcat-7.0-doc/config/http.html
 [3]: http://wiki.apache.org/tomcat/FAQ/CharacterEncoding#Q8
