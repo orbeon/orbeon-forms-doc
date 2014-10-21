@@ -11,7 +11,7 @@ We plan to migrate the content of these two pages here in the future.
 
 ## Scenarios
 
-### Anonymous data capture with administrator
+### 1. Anonymous data capture with administrator
 
 1. Setup at least one user and role for your container.
     - The easiest way to do this with Tomcat, if you don't have already users setup within your system (via a Tomcat realm for example), is to modify Tomcat's `tomcat-users.xml` file, for example as follows:
@@ -33,7 +33,7 @@ We plan to migrate the content of these two pages here in the future.
       name="oxf.fr.authentication.container.roles"
       value="orbeon-admin"/>
     ```
-1. Protect Form Builder and the Form Runner Home page
+1. Protect Form Builder and, optionally, the Form Runner Home page
     - In web.xml, uncomment the permissions section.
     - Replace:
 
@@ -45,9 +45,11 @@ We plan to migrate the content of these two pages here in the future.
 
     ```xml
     <url-pattern>/fr/orbeon/builder/*</url-pattern>
+    <!-- Optional, to prevent anonymous users from accessing the Form Runner Home Page -->
+    <url-pattern>/fr/</url-pattern>
     ```
     and replace the role name:
-    
+
     ```xml
     <role-name>orbeon-user</role-name>
     ```
@@ -63,7 +65,9 @@ We plan to migrate the content of these two pages here in the future.
   - set the `create` permission for all users
   - set all permissions for the role `orbeon-admin`
   - republish your forms
-  - see also [#1860](https://github.com/orbeon/orbeon-forms/issues/1860)
+  - see also [#1860](https://github.com/orbeon/orbeon-forms/issues/1860))
+1. Configure forms' buttons
+  - You will want only a "Send" or "Submit" button, as a plain "Save" button doesn't make sense in this case.
 
 With this setup:
 
@@ -74,3 +78,8 @@ With this setup:
 - All other operations (`read`, `update`, `delete`) are not available to anonymous users or logged in users without the `orbeon-admin` role.
 Users with the `orbeon-admin` role have
 - Users with the `orbeon-admin` role can perform any operations on the form data after they are logged in.
+
+Limitations:
+
+- Anonymous data entry does not support autosave.
+- As an administrator, you first have to login, for example by accessing Form Builder, before accessing published forms' Summary page (issue [#1292](https://github.com/orbeon/orbeon-forms/issues/1292)).
