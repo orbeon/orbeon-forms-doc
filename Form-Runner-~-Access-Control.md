@@ -63,7 +63,7 @@ We plan to migrate the content of these two pages here in the future.
   - set the `create` permission for all users
   - set all permissions for the role `orbeon-admin`
   - republish your forms
-  - see also [#1860](https://github.com/orbeon/orbeon-forms/issues/1860))
+  - see also [#1860](https://github.com/orbeon/orbeon-forms/issues/1860)
 
 With this setup:
 
