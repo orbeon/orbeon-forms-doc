@@ -17,9 +17,9 @@ On GitHub. See: [Orbeon Source Code Repository](http://wiki.orbeon.com/forms/doc
 
 See: [Orbeon Source Code Repository](http://wiki.orbeon.com/forms/doc/contributor-guide/development-environment/orbeon-source-code-repository).
 
-### When are you going to fix/implement [feature]?
+### When are you going to fix/implement my favorite issue/feature?
 
-Usually a feature gets implemented in Orbeon Forms when:
+Usually an issue gets fixed or a feature gets implemented in Orbeon Forms when:
 
 - The bug has been reported by a support customer and has been evaluated as high priority.
 - It is very easy to implement, so we just implement it along the way to make everybody happy.
