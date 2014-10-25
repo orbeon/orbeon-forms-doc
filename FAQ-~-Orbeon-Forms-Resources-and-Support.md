@@ -28,6 +28,8 @@ Usually an issue gets fixed or a feature gets implemented in Orbeon Forms when:
 - Somebody sponsors it.
 - Somebody sends a patch for it.
 
+For a list of open issues/features, see the [issue tracker](https://github.com/orbeon/orbeon-forms/issues).
+
 We need help on Orbeon Forms by the way, and we definitely appreciate outside contributions. So check out the [source code][6] and start hacking away. You can ask your questions on the [Orbeon Forms forum][1].
 
 ### How do I report an issue?
