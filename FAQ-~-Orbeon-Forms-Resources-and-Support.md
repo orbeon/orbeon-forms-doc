@@ -23,7 +23,7 @@ Usually a feature gets implemented in Orbeon Forms when:
 
 - The bug has been reported by a support customer and has been evaluated as high priority.
 - It is very easy to implement, so we just implement it along the way to make everybody happy.
-- We have put it on our roadmap and scheduled it because we think it is a crucial feature for Orbeon Forms. 
+- We have put it on our [roadmap](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-Roadmap) and scheduled it because we think it is a crucial feature for Orbeon Forms. 
 - We need it for a project we are currently working on.
 - Somebody sponsors it.
 - Somebody sends a patch for it.
