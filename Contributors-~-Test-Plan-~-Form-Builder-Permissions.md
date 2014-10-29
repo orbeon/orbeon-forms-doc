@@ -83,7 +83,7 @@
     - check nothing changed
 - browser 2
     - check still can't access http://localhost:8080/orbeon/fr/sales/my-sales-form/summary (403) (see [#1384][10] with eXist)
-- access is rejected if user doesn't have any matching roles [#1963](https://github.com/orbeon/orbeon-forms/issues/1963)
+- access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
   - setup `dummy` role only in `form-builder-permissions.xml`
   - access to Summary page is rejected
   - access to New page is rejected
