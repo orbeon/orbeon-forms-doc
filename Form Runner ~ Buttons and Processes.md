@@ -253,11 +253,16 @@ The following properties are XPath Value Templates evaluating in the context of 
 Example:
 
 ```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.send.success.uri.*.*"
-    value='/fr/service/custom/orbeon/echo?action=submit&amp;email={//email}'/>
+<property as="xs:string" name="oxf.fr.detail.send.success.uri.*.*">
+    /fr/service/custom/orbeon/echo?action=submit&amp;foo={
+        encode-for-uri(xxf:instance("fr-form-instance")//foo)
+    }&amp;bar={
+        encode-for-uri(xxf:instance("fr-form-instance")//bar)
+    }
+</property>
 ```
+
+Note the use of the `encode-for-uri()` function which escapes the value to place after the `=` sign.
 
 [SINCE Orbeon Forms 4.5]
 
