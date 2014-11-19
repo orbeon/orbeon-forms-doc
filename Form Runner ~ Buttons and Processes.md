@@ -287,11 +287,13 @@ The full URL is composed of:
 Example:
 
     http://example.org/service?
-      app=acme&
-      form=invoice&
-      document=f0cd6bf16ba1f783773bb7165f0d79deab37585f&
-      valid=true&
-      language=fr
+        document=7520171020e65a1585e72574ae1fbe138c415bee&
+        process=139ceb515f918d6d17030b81255d8a3dfa0501cc&
+        valid=true&
+        app=acme&
+        form=invoice&
+        form-version=1&
+        language=en
 
 #### Sending a PDF URL
 
