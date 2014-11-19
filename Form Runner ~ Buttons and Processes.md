@@ -219,8 +219,9 @@ Send data to an HTTP URL.
         - `metadata`: to send form metadata [SINCE Orbeon Forms 4.7]
     - `parameters`:
         - space-separated list of standard parameters to automatically add to the URL (see below)
-        - default: `app form form-version document valid language`
+        - default: `app form form-version document valid language process`
             - `form-version` added to defaults in Orbeon Forms 4.7
+            - `process` added to defaults in Orbeon Forms 4.7
 - properties used
     - property prefix + `.uri`: see `uri` parameter
     - property prefix + `.method`: see `method` parameter
@@ -281,6 +282,7 @@ The full URL is composed of:
     - `valid`: whether the data sent satisfies validation rules
     - `language`: the language of the form at the time it was submitted [SINCE Orbeon Forms 4.5]
     - `noscript`: whether the noscript mode was in use [SINCE Orbeon Forms 4.6]
+    - `process`: unique process id for the currently running process [SINCE Orbeon Forms 4.7]
 
 Example:
 
