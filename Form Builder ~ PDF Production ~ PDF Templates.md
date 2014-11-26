@@ -2,16 +2,13 @@
 
 ## How PDF templates work
 
-The purpose of the PDF template is to allow using existing PDF forms and using Form Runner to fill them out. This has benefits:
-
-- Your organization might already have PDF forms.
-- Those forms might have been designed carefully for printing or archival purposes.
+The purpose of this feature is to allow using existing PDF forms and using Form Runner to fill them out. This has the benefit that your organization can reuse existing forms, which might have been designed carefully for printing or archival purposes.
 
 A PDF template must include Acrobat form fields. You can create these with Acrobat Professional. At runtime, when producing a filled-out PDF, Form Runner performs the following operations:
 
-- Reads the PDF template
-- Reads the filled-out form data as XML
-- Fill out the fields in the PDF template based on the data.
+- read the PDF template
+- read the filled-out form data
+- fill out the fields in the PDF template based on the data
 
 ## Creating a PDF template for use with Form Builder
 
@@ -23,7 +20,8 @@ In order to create a template, you need Acrobat Professional or a similar tool t
 2. Perform automatic field detection
 3. Remove incorrectly detected areas
 4. Set all field names, as per the `section-name$field-name` explained below
-5. For languages like French, make sure that fields in the form have an Arial font, not Helvetica. Not using Arial can cause issue with accents.
+
+*NOTE: For languages like French, make sure that fields in the form have an Arial font, not Helvetica. Not using Arial can cause issue with accents.*
 
 ![Example of form fields in Acrobat Professional](images/fb-pdf-template.png)
 
@@ -43,20 +41,30 @@ Form Runner identifies the PDF fields to fill-out based on their name. Those nam
 - Enable multi-line in Acrobat form field
 - Set a white background if necessary to hide dotted lines from the original form
 
-### Exclusive checkboxes
+### Exclusive checkboxes or radio buttons
 
-Create multiple fields in the PDF (radio buttons), all with the same name: `my-section$my-field`, but each with an _Export value_ matching the corresponding value in your form:
+In the PDF, create multiple fields of type radio button (which can visually appear like checkboxes or radio buttons - the defining feature is that they are exclusive), all with the same name: `my-section$my-field`, but each with an _Export value_ matching the corresponding value in your form. In summary:
 
-- Use PDF radio buttons with Cross or Check appearance
-- Use the same name for all buttons
-- Use different export values for each button
-- The checkbox value (and NOT the label) is used by Form Runner to match on the export value
+- Use PDF radio buttons with the desired appearance.
+- Use the *same name* for all controls.
+- Use *different export values* for each control.
+- The checkbox value (and *not* the label) is used by Form Runner to match on the export value.
 
 ### Non-exclusive checkboxes
 
 [SINCE 2011-05-12]
 
-Create multiple fields in the PDF (checkboxes), each with a different name of the form `my-section$my-field$value`, where `value` corresponds to the value in your form. The Export value for all the checkboxes must be `true`.
+- Create multiple PDF checkboxes.
+- Each checkbox must have a different name of the form `my-section$my-field$value`, where `value` corresponds to the item value in your form.
+- Set an *export value* for all the checkboxes of `true`.
+
+### Boolean checkboxes
+
+For a boolean checkbox:
+
+- Create a single non-exclusive PDF checkbox.
+- Name it `my-section$my-field` or `my-section$my-field$true`.
+- Set an *export value* of `true`.
 
 ### Image attachments
 
@@ -80,14 +88,14 @@ When a control is within a repeat:
 
 So for example, if you have the hierarchy:
 
-- my-section
-- my-repeat
-- my-input
+- `my-section`
+- `my-repeat`
+- `my-input`
 
 The field names must look like:
 
 - `my-section$my-repeat$my-input$1` for the first iteration
 - `my-section$my-repeat$my-input$2` for the second iteration
-- etc
+- etc.
 
 ![Example of repeated fields](images/fb-pdf-template-repeat.png)
