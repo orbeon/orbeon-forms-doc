@@ -25,7 +25,7 @@ In order to create a template, you need Acrobat Professional or a similar tool t
 4. Set all field names, as per the `section-name$field-name` explained below
 5. For languages like French, make sure that fields in the form have an Arial font, not Helvetica. Not using Arial can cause issue with accents.
 
-![Example of form fields in Acrobat Professional][2]
+![Example of form fields in Acrobat Professional](images/fb-pdf-template.png)
 
 ### Naming fields
 
@@ -90,7 +90,4 @@ The field names must look like:
 - `my-section$my-repeat$my-input$2` for the second iteration
 - etc
 
-![Example of repeated fields][4]
-
-[2]: https://sites.google.com/a/orbeon.com/forms/_/rsrc/1305312237285/doc/user-guide/form-builder-user-guide/pdf-generation/acrofields-shadow.png
-[4]: https://sites.google.com/a/orbeon.com/forms/_/rsrc/1359668900101/doc/user-guide/form-builder-user-guide/pdf-generation/Screen%20Shot%202013-01-31%20at%201.46.40%20PM.png
+![Example of repeated fields](images/fb-pdf-template-repeat.png)
