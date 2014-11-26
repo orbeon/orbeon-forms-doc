@@ -13,7 +13,7 @@ Form Builder and Form Runner can produce PDF output in two ways:
 ## Availability
 
 - Automatic PDF generation is available in Orbeon Forms CE and PE
-- Templates are an [Orbeon Forms PE][1] feature.
+- Templates are an [Orbeon Forms PE](http://www.orbeon.com/download) feature.
 
 ## How PDF templates work
 
@@ -49,7 +49,7 @@ Form Runner identifies the PDF fields to fill-out based on their name. Those nam
 - Let's assume you the name of a field to `my-field` and the name of the section in which that field is to `my-section`.
 - The name of the PDF field must be: `my-section$my-field`.
 
-[LIMITATION] It has been [reported][3] that Adobe Livecycle Designer does not support the `$` character in field names.
+[LIMITATION] It has been [reported](http://discuss.orbeon.com/Creating-a-PDF-template-for-use-with-Form-Builder-td931856.html) that Adobe Livecycle Designer does not support the `$` character in field names.
 
 ## Controls
 
@@ -107,7 +107,5 @@ The field names must look like:
 
 ![Example of repeated fields][4]
 
-[1]: http://www.orbeon.com/support-services/professional
 [2]: https://sites.google.com/a/orbeon.com/forms/_/rsrc/1305312237285/doc/user-guide/form-builder-user-guide/pdf-generation/acrofields-shadow.png
-[3]: http://n4.nabble.com/Creating-a-PDF-template-for-use-with-Form-Builder-td931856.html
 [4]: https://sites.google.com/a/orbeon.com/forms/_/rsrc/1359668900101/doc/user-guide/form-builder-user-guide/pdf-generation/Screen%20Shot%202013-01-31%20at%201.46.40%20PM.png
