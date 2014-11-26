@@ -7,3 +7,4 @@
 - remove PDF
   - publish and test, must see notemplate PDF
 - check that DMV-14 PDF is filled out
+  - check Vote and Leased checkboxes
