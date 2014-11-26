@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[PDF| Form Builder ~ PDF]]
+
 ## How PDF templates work
 
 The purpose of the PDF template is to allow using existing PDF forms and using Form Runner to fill them out. This has benefits:
