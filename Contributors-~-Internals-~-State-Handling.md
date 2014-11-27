@@ -1,14 +1,20 @@
-# XForms - State Handling - forms
+## Audience
 
-## Rationale
+The audience for this page is developers or advanced system administrators.
 
-The Orbeon Forms XForms engine requires keeping processing state while operating on an XForms page. Such state includes the current values of XForms instances, selected repeated elements, and more. With Orbeon Forms, by default XForms state information is stored on the server.
+## What is this about?
+
+The Orbeon Forms XForms engine requires keeping server state while the user is interacting with a form. Such state includes the current values of XForms instances, selected repeated elements, and more. With Orbeon Forms, by default XForms state information is stored on the server.
+
+## How does XForms state handling work?
+
+See [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718) for some pointers.
 
 ## Configuring state handling
 
 ### XForms document and static state caches
 
-A property controls whether the XForms engine should try to optimize state reconstruction by using a cache. This property should usually be set to `true`:
+A property controls whether the XForms engine should try to optimize state reconstruction by using a cache. This property is typically set to `true`:
 
 ```xml
 <property 
@@ -17,11 +23,7 @@ A property controls whether the XForms engine should try to optimize state recon
     value="true">
 ```
 
-The global configuration can be overridden for each page by setting the `xxf:cache.document` attribute in the page. This attribute can be set on the root element of the XHTML page, or on the first `xf:model` element. Only the first such attribute encountered by the XForms engine is used:
-
-```xml
-<xf:model xxf:cache.document="false">
-```
+*NOTE: We might get rid of this property in the future as there is no use case for setting it to false.*
 
 If `oxf.xforms.cache.document` is set to `true`, the number of XForms documents that can be held in that document cache at a given time is configured with the following property:
 
@@ -32,9 +34,9 @@ If `oxf.xforms.cache.document` is set to `true`, the number of XForms documents 
     value="50">
 ```
 
-*_NOTE: This property is global and cannot be overridden on a page by page basis._*
+*NOTE: This property is global and cannot be overridden on a page by page basis.*
 
-*_NOTE: If a user loads the same XForms page twice, two entries are created in the document cache._*
+*NOTE: If a user loads the same XForms page twice, two entries are created in the document cache.*
 
 The static state (or static analysis) of an XForms page is stored in a separate cache, controlled with this property:
 
