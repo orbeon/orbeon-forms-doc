@@ -16,8 +16,7 @@
 
 ### Availability
 
-- [SINCE 4.0] Support on Oracle.
-- [SINCE 4.7] Support on DB2.
+See [[Database Support|Orbeon Forms Features ~ Database Support]].
 
 ### Property to enable
 
