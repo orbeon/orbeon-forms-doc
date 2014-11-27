@@ -13,11 +13,11 @@ We have two categories of databases:
 
 Feature                              | eXist        | Oracle | MySQL | SQL Server | PostgreSQL | DB2
 -------------------------------------|--------------|--------|-------|------------|------------|----
-[Form controls and layouts including repeated grids and sections][^1]    | Y     | Y      |Y      |Y        |Y           |Y
-[Versioning][^2]                     | N            | Y      |Y      |Y           |Y           |Y
-[Owner/group-based permissions][^3]  | Y<sup>1</sup>| Y      |Y      |Y           |Y           |Y
-[Autosave][^4]                       | N            | Y      |Y      |Y           |Y           |Y
-[Flat view][^5]                      | N/A          | Y      |N      |N           |Y           |Y
+[Form controls and layouts including repeated grids and sections][^1]    | Y     | Y      |Y      |Y        |Y<sup>1</sup>           |Y
+[Versioning][^2]                     | N            | Y      |Y      |Y           |Y<sup>1</sup>           |Y
+[Owner/group-based permissions][^3]  | Y<sup>1</sup>| Y      |Y      |Y           |Y<sup>1</sup>           |Y
+[Autosave][^4]                       | N            | Y      |Y      |Y           |Y<sup>1</sup>           |Y
+[Flat view][^5]                      | N/A          | Y      |N      |N           |Y<sup>1</sup>           |Y
 
 1. Since Orbeon Forms 4.8.
 
