@@ -13,7 +13,7 @@ This feature is supported:
 - Since 4.3 on MySQL and DB2
 - Since 4.4 on Oracle
 - Since 4.6 on SQL Server
-- Since 4.8 on eXist-db
+- Since 4.8 on eXist-db and PostgreSQL
 
 On 4.3, this feature was not enabled by default. It is enabled by default since 4.4, so if you're using 4.4 or newer, you don't need to worry about this. But if you're specifically on 4.3, you should set the following 2 properties if you want enable owner/group-based permissions:
 
