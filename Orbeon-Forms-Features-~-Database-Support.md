@@ -11,14 +11,19 @@ We have two categories of databases:
 
 ## Feature matrix
 
-Feature                              | eXist        | Oracle | MySQL | SQL Server | PostgreSQL | DB2
--------------------------------------|--------------|--------|-------|------------|------------|----
-[Form controls and layouts including repeated grids and sections][^1]    | Y     | Y      |Y      |Y        |Y<sup>1</sup>           |Y
-[Versioning][^2]                     | N            | Y      |Y      |Y           |Y<sup>1</sup>           |Y
-[Owner/group-based permissions][^3]  | Y<sup>1</sup>| Y      |Y      |Y           |Y<sup>1</sup>           |Y
-[Autosave][^4]                       | N            | Y      |Y      |Y           |Y<sup>1</sup>           |Y
-[Flat view][^5]                      | N/A          | Y      |N      |N           |Y<sup>1</sup>           |Y
+Feature                                                              |eXist        |Oracle       |MySQL        |SQL Server   |PostgreSQL   |DB2
+---------------------------------------------------------------------|-------------|-------------|-------------|-------------|-------------|-------------
+[Form controls and layouts including repeated grids and sections][^1]|Y            |Y            |Y            |Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
+[Versioning][^2]                                                     |N            |Y<sup>3</sup>|Y<sup>3</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>3</sup>
+[Owner/group-based permissions][^3]                                  |Y<sup>6</sup>|Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
+[Autosave][^4]                                                       |N            |Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
+[Flat view][^5]                                                      |N/A          |Y            |N            |N            |Y<sup>6</sup>|Y<sup>5</sup>
 
+1. Since Orbeon Forms 4.3.
+1. Since Orbeon Forms 4.4.
+1. Since Orbeon Forms 4.5.
+1. Since Orbeon Forms 4.6.
+1. Since Orbeon Forms 4.7.
 1. Since Orbeon Forms 4.8.
 
 [^1]: http://blog.orbeon.com/2014/01/repeated-sections.html
