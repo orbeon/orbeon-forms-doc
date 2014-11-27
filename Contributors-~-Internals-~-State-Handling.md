@@ -79,13 +79,10 @@ Note that whenever an application keeps sessions alive for a long time, it is a 
 The session heartbeat should help prevent many occurrences of "session expired" error messages. As an Orbeon Forms application developer you don't have to worry about anything: the session heartbeat is enabled by default. You can configure it globally in `properties-local.xml`:
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.session-heartbeat" value="true">
-```
-
-You can also override the global default by specifying a property on the first XForms model of a page:
-
-```xml
-<xf:model id="my-model" xxf:session-heartbeat="false">
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.session-heartbeat" 
+    value="true">
 ```
 
 ## Browser navigation (back and forward) handling
@@ -98,4 +95,4 @@ In certain situations, it can be useful instead to ask the XForms page to reload
 <xf:model xxf:revisit-handling="reload">
 ```
 
-*_NOTE: It is recommended to use the `reload` value carefully, as reloading pages upon browser navigation often does not match the expectation of the user._*
+*NOTE: It is recommended to use the `reload` value carefully, as reloading pages upon browser navigation often does not match the expectation of the user.*
