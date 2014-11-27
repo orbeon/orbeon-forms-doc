@@ -23,7 +23,10 @@ The global configuration can be overridden for each page by setting the `xxf:cac
 If `oxf.xforms.cache.document` is set to `true`, the number of XForms documents that can be held in that document cache at a given time is configured with the following property:
 
 ```xml
-<property as="xs:integer" name="oxf.xforms.cache.documents.size" value="50">
+<property
+    as="xs:integer"
+    name="oxf.xforms.cache.documents.size"
+    value="50">
 ```
 
 *_NOTE: This property is global and cannot be overridden on a page by page basis._*
@@ -33,7 +36,10 @@ If `oxf.xforms.cache.document` is set to `true`, the number of XForms documents 
 The static state (or static analysis) of an XForms page is stored in a separate cache, controlled with this property:
 
 ```xml
-<property as="xs:integer" name="oxf.xforms.cache.static-state.size" value="50">
+<property
+    as="xs:integer"
+    name="oxf.xforms.cache.static-state.size"
+    value="50">
 ```
 
 This property should be set to a number equal to or greater than the number of distinct XForms pages you have.
