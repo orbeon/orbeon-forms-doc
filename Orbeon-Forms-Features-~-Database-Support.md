@@ -5,7 +5,7 @@
 We have two categories of databases:
 
 - XML: eXist
-- relational: Oracle, MySQL, SQL Server, DB2
+- Relational: Oracle, MySQL, SQL Server, DB2
 
 *NOTE: As of Orbeon Forms 4.4, the implementation of relational support is common to all databases. There used to be separate implementation for each relational database.*
 
