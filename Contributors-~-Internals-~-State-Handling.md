@@ -11,7 +11,10 @@ The Orbeon Forms XForms engine requires keeping processing state while operating
 A property controls whether the XForms engine should try to optimize state reconstruction by using a cache. This property should usually be set to `true`:
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.cache.document" value="true">
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.cache.document" 
+    value="true">
 ```
 
 The global configuration can be overridden for each page by setting the `xxf:cache.document` attribute in the page. This attribute can be set on the root element of the XHTML page, or on the first `xf:model` element. Only the first such attribute encountered by the XForms engine is used:
