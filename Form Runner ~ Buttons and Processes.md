@@ -314,6 +314,8 @@ The PDF can be retrieved by accessing that path with the proper session cookie.
 
 When `metadata` is specified, the XML document sent contains metadata per control. [This page](https://gist.github.com/orbeon/3684806b0a30a9a5ace9) shows examples based on the Orbeon Forms sample forms.
 
+*NOTE: The `<value>` element is present only since Orbeon Forms 4.7.1.*
+
 The metadata is linked to the data with the `for` attribute, which can contain multiple id values separated by a space. This associates the given piece of metadata with multiple values in the form data. This typically happens where there are repeated fields in the form, so that there is no duplication of identical metadata.
 
 Here is an example of `send` process which sends XML data to a service, followed by sending metadata:
