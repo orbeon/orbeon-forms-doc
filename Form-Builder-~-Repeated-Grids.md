@@ -10,6 +10,11 @@ Once a grid is inserted, you can edit its properties with the "Grid Settings" ic
 
 ![Grid Settings](images/fb-repeated-grid-settings-icon.png)
 
+## See also
+
+- [Inserting and reordering grid rows](http://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
+- [Repeated sections](http://blog.orbeon.com/2014/01/repeated-sections.html)
+
 ## Grid settings
 
 The "Visibility" and "Read-Only" formulas control whether the entire grid (including it's headers if any) is visible at all or whether its content is entirely readonly. 
