@@ -20,7 +20,7 @@ If you add multiple rows with the arrow icons, the entire group of rows is repea
 
 ## How things look at runtime
 
-At runtime, notice how in the first case a single row is repeated, and in the second case the two rows are repeated.
+At runtime, notice how in the first grid a single row is repeated, and in the second grid the two rows are repeated.
 
 ![Repeated grids](images/fr-repeated-grids.png)
 
