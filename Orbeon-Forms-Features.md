@@ -13,7 +13,6 @@ As of 2014-12-03 this page just got started so it's incomplete. Its purpose is t
 - Form Builder
   - Repeated grids: [[doc|Form Builder ~ Repeated Grids]], [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
 - Form Runner
-  - Server side Embedding: [[doc|Form-Runner-~-APIs-~-Server-side-Embedding]], [blog post](http://blog.orbeon.com/2014/09/embedding-support-in-orbeon-forms-47.html)
   - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
   - Home Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
 - Databases
@@ -23,5 +22,10 @@ As of 2014-12-03 this page just got started so it's incomplete. Its purpose is t
 - Form handling
   - Session heartbeat: [[doc|Contributors ~ Internals ~ State Handling]]
   - Browser back/forward button support: [[doc|Contributors ~ Internals ~ State Handling]]
+- Embedding
+  - Liferay full portlet
+  - Liferay proxy portlet
 - Core
+  - Server side Embedding: [[doc|Form-Runner-~-APIs-~-Server-side-Embedding]], [blog post](http://blog.orbeon.com/2014/09/embedding-support-in-orbeon-forms-47.html)
   - Limiter to limit the number of concurrent form requests
+  - Internal service requests
