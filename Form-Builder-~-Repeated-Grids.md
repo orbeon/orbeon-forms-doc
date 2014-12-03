@@ -2,21 +2,23 @@
 
 ## Introduction
 
-Form Builder supports grids with repeated rows. You can repeat a single row (which is the most common case), or multiple rows.
+Form Builder supports grids with repeated rows. You can repeat a single row (which is the most common case), or multiple heterogeneous (that is with different controls) rows.
 
 ## Creating a repeated grid
 
 You insert a new repeated grid with the "New Repeated Grid" toolbox button.
 
-Once the grid is inserted, you can add (using the grid arrow icons which appear on mouseover) and remove (using the trash icon which appears on mouseover) columns and rows, and add controls to grid cells as you would in a regular non-repeated grid.
+Once the grid is inserted, you can add and remove (using the grid arrow and trash icons which appear on mouseover) columns and rows, and add controls to grid cells as you would in a regular non-repeated grid.
 
-With only one row, the control labels are used as column headers and are not repeated within the grid.
+With only one row, the control labels are used as column headers and are not repeated within the grid. That single row is repeatable with the "plus" icon.
 
 ![Repeating a single row](images/fb-repeated-grid-single.png)
 
-If you add multiple rows with the arrow icons, the entire group of rows is repeated. Control labels do not appear as column headers, but appear alongside the controls in the grid.
+You can add multiple heterogeneous rows with the arrow icons. In this case the entire group of rows is repeatable. Control labels do not appear as column headers, but appear alongside the controls in the grid.
 
 ![Repeating multiple rows](images/fb-repeated-grid-multiple.png)
+
+Whether there is a single or multiple repeatable rows, you can add and remove repetitions (iterations) of those rows with the "plus" icon. You typically let the user add iterations at runtime, but it is possible to create iterations in advance at design time as well.
 
 ## How things look at runtime
 
