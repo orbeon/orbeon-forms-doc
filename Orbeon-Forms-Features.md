@@ -17,6 +17,7 @@ As of 2014-11-27 this page just got started so it's incomplete. Its purpose is t
   - Home Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
 - Databases
   - Database support: [[doc|Orbeon-Forms-Features-~-Database-Support]]
+  - SQL Server support in Orbeon Forms: [blog post](http://blog.orbeon.com/2014/05/sql-server-support-in-orbeon-forms.html)
   - PostgreSQL support in Orbeon Forms: [blog post](http://blog.orbeon.com/2014/12/postgresql-support-in-orbeon-forms.html)
 - Form handling
   - Session heartbeat: [[doc|Contributors ~ Internals ~ State Handling]]
