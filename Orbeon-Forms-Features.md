@@ -8,9 +8,9 @@ As of 2014-11-27 this page just got started so it's incomplete. Its purpose is t
 
 - Form Builder/Form Runner
   - Inserting and reordering grid rows: [blog post](http://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
-  - Repeated grids: [[doc|Form Builder ~ Repeated Grids]]
   - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
 - Form Builder
+  - Repeated grids: [[doc|Form Builder ~ Repeated Grids]]
 - Form Runner
 - Databases
   - Database support: [[doc|Orbeon-Forms-Features-~-Database-Support]]
