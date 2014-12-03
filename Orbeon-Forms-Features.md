@@ -2,7 +2,7 @@
 
 ## Status
 
-As of 2014-11-27 this page just got started so it's incomplete. Its purpose is to index features by name in a central place.
+As of 2014-12-03 this page just got started so it's incomplete. Its purpose is to index features by name in a central place.
 
 ## List of Orbeon Forms features
 
