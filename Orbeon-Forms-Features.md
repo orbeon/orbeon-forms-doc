@@ -23,9 +23,9 @@ As of 2014-12-03 this page just got started so it's incomplete. Its purpose is t
   - Session heartbeat: [[doc|Contributors ~ Internals ~ State Handling]]
   - Browser back/forward button support: [[doc|Contributors ~ Internals ~ State Handling]]
 - Embedding
+  - Server side Embedding: [[doc|Form-Runner-~-APIs-~-Server-side-Embedding]], [blog post](http://blog.orbeon.com/2014/09/embedding-support-in-orbeon-forms-47.html)
   - Liferay full portlet
   - Liferay proxy portlet
 - Core
-  - Server side Embedding: [[doc|Form-Runner-~-APIs-~-Server-side-Embedding]], [blog post](http://blog.orbeon.com/2014/09/embedding-support-in-orbeon-forms-47.html)
   - Limiter to limit the number of concurrent form requests
   - Internal service requests
