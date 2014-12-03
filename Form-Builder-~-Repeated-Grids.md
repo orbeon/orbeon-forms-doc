@@ -8,13 +8,21 @@ Form Builder supports grids with repeated rows. You can repeat a single row (whi
 
 You insert a new repeated grid with the "New Repeated Grid" toolbox button.
 
-Once the grid is inserted, you can add (using the grid arrows which appear on mouse hover) and remove (using the trash icon which appears on mouse hover) columns and rows, and add controls to grid cells as you would in a regular non-repeated grid.
+Once the grid is inserted, you can add (using the grid arrow icons which appear on mouseover) and remove (using the trash icon which appears on mouseover) columns and rows, and add controls to grid cells as you would in a regular non-repeated grid.
+
+With only one row, the control labels are used as column headers and are not repeated within the grid.
 
 ![Repeating a single row](images/fb-repeated-grid-single.png)
 
-If you add multiple rows with the arrows, the entire group of rows is repeated.
+If you add multiple rows with the arrow icons, the entire group of rows is repeated. Control labels do not appear as column headers, but appear alongside the controls in the grid.
 
 ![Repeating multiple rows](images/fb-repeated-grid-multiple.png)
+
+## How things look at runtime
+
+At runtime, notice how in the first case a single row is repeated, and in the second case the two rows are repeated.
+
+![Repeated grids](images/fr-repeated-grids.png)
 
 ## Grid settings
 
