@@ -4,18 +4,23 @@
 
 Form Builder supports grids with repeated rows. You can repeat a single row (which is the most common case), or multiple rows.
 
+## Creating a repeated grid
+
 You insert a new repeated grid with the "New Repeated Grid" toolbox button.
+
+Once the grid is inserted, you can add (using the grid arrows which appear on mouse hover) and remove (using the trash icon which appears on mouse hover) columns and rows, and add controls to grid cells as you would in a regular non-repeated grid.
+
+![Repeating a single row](images/fb-repeated-grid-single.png)
+
+If you add multiple rows with the arrows, the entire group of rows is repeated.
+
+![Repeating multiple rows](images/fb-repeated-grid-multiple.png)
+
+## Grid settings
 
 Once a grid is inserted, you can edit its properties with the "Grid Settings" icon.
 
 ![Grid Settings](images/fb-repeated-grid-settings-icon.png)
-
-## See also
-
-- Inserting and reordering grid rows: [blog post](http://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
-- Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
-
-## Grid settings
 
 The "Visibility" and "Read-Only" formulas control whether the entire grid (including it's headers if any) is visible at all or whether its content is entirely readonly. 
 
@@ -26,3 +31,8 @@ The "Visibility" and "Read-Only" formulas control whether the entire grid (inclu
 The repeat settings control whether to use a custom iteration name (not recommended in most cases), and the minimum/maximum number of repeat iterations allowed.
 
 ![Grid Settings](images/fb-repeated-grid-settings-repeat.png)
+
+## See also
+
+- Inserting and reordering grid rows: [blog post](http://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
+- Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
