@@ -14,7 +14,7 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
         name="oxf.fr.persistence.provider.db2.*.*"   
         value="db2"/>
     ```
-2. Create same form in all apps: `exist/a`, `oracle/a`, `mysql/a`, `sqlserver/a`, `db2/a`
+2. Create same form in all apps: `exist/a`, `db2/a`
     - add static image
     - use Duplicate button in FB Summary
     - then change app name
