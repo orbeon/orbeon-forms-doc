@@ -10,11 +10,11 @@ You insert a new repeated grid with the "New Repeated Grid" toolbox button.
 
 Once the grid is inserted, you can add and remove (using the grid arrow and trash icons which appear on mouseover) columns and rows, and add controls to grid cells as you would in a regular non-repeated grid.
 
-With only one row, the control labels are used as column headers and are not repeated within the grid. That single row is repeatable with the "plus" icon.
+With only one row, the control labels are used as column headers and are not repeated within the grid. If present, control hints are also added to the column headers. That single row is repeatable with the "plus" icon.
 
 ![Repeating a single row](images/fb-repeated-grid-single.png)
 
-You can add multiple heterogeneous rows with the arrow icons. In this case the entire group of rows is repeatable. Control labels do not appear as column headers, but appear alongside the controls in the grid.
+You can add multiple heterogeneous rows with the arrow icons. In this case the entire group of rows is repeatable. Control labels and hints do not appear in column headers, but appear alongside the controls in the grid.
 
 ![Repeating multiple rows](images/fb-repeated-grid-multiple.png)
 
