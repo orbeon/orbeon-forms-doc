@@ -26,6 +26,12 @@ At runtime, notice how in the first grid a single row is repeated, and in the se
 
 ![Repeated grids](images/fr-repeated-grids.png)
 
+In review mode and PDF mode, icons and menus disappear and the grid appears entirely readonly.
+
+![Repeated grids in review mode](images/fr-repeated-grids-view.png)
+
+![Repeated grids in PDF mode](images/fr-repeated-grids-pdf.png)
+
 ## Grid settings
 
 Once a grid is inserted, you can edit its properties with the "Grid Settings" icon.
