@@ -11,18 +11,6 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
         value="exist"/>
     <property 
         as="xs:string" 
-        name="oxf.fr.persistence.provider.oracle.*.*"   
-        value="oracle"/>
-    <property 
-        as="xs:string" 
-        name="oxf.fr.persistence.provider.mysql.*.*"   
-        value="mysql"/>
-    <property 
-        as="xs:string" 
-        name="oxf.fr.persistence.provider.sqlserver.*.*"   
-        value="sqlserver"/>
-    <property 
-        as="xs:string" 
         name="oxf.fr.persistence.provider.db2.*.*"   
         value="db2"/>
     ```
