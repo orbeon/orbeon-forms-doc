@@ -15,6 +15,13 @@ This feature is supported:
 - Since 4.6 on SQL Server
 - Since 4.8 on eXist-db and PostgreSQL
 
+For eXist, you also need to set the following property:
+
+```xml
+<property as="xs:string"
+          name="oxf.xforms.forward-submission-headers"
+          value="Orbeon-Username Orbeon-Roles Orbeon-Group"/>
+```
 On 4.3, this feature was not enabled by default. It is enabled by default since 4.4, so if you're using 4.4 or newer, you don't need to worry about this. But if you're specifically on 4.3, you should set the following 2 properties if you want enable owner/group-based permissions:
 
 ```xml
