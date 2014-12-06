@@ -1,4 +1,4 @@
-## See also:
+## See also
 
 - [[FAQ: Orbeon Forms Resources and Support|FAQ ~ Orbeon Forms Resources and Support]]
 - [[FAQ: Software Licences|FAQ ~ Software Licences]]
