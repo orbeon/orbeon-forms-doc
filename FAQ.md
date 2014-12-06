@@ -1,6 +1,7 @@
 ## See also
 
 - [[FAQ: Orbeon Forms Resources and Support|FAQ ~ Orbeon Forms Resources and Support]]
+- [[FAQ: Orbeon Form Builder and Orbeon Form Runner|FAQ ~ Orbeon Form Builder and Orbeon Form Runner]]
 - [[FAQ: Software Licences|FAQ ~ Software Licences]]
 - [legacy FAQ](https://sites.google.com/a/orbeon.com/forms/orbeon-forms-faq?pli=1)
 
