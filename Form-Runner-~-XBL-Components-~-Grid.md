@@ -58,16 +58,16 @@ Attributes:
 - `repeat`
   - `true`: legacy repeat mode
   - `content`: new repeat mode with an enclosing element [SINCE Orbeon Forms 4.8]
-- `bind` and `ref`
-  - with `repeat="true"`: binds to the repeated elements
-  - with `repeat="content"`: binds to the enclosing element
+- `bind` or `ref`
+  - with `repeat="content"`: single item binding which binds to the enclosing element
+  - with `repeat="true"`: item sequence binding which binds to the repeated elements
 - `template`
   - XML data template used to insert new data when iterations are inserted
   - optional when the grid is readonly
 - `min` and `max`
   - minimum vs. maximum number of repeat iterations supported
   - can be an AVT
-  - evaluate in the context of ???
+  - evaluate in the context of the binding (typically `bind`)
   - are checked when the user attempts to add/remove iterations with the UI
 - `remove-constraint`
   - optional XPath expression running in the context of an iteration
