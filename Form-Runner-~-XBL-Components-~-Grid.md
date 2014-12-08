@@ -137,3 +137,4 @@ In either case, `fr:grid` contains the rows to repeat as `xh:tr`. Each `xh:tr` c
 ## See also
 
 - [[Form Builder ~ Repeated Grids |Form-Builder-~-Repeated-Grids]]
+- Example of use outside of Form Runner: [gist](https://gist.github.com/orbeon/5d592bfa4640569b116f)
