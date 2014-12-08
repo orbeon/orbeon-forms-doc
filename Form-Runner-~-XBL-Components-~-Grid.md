@@ -72,7 +72,9 @@ Attributes:
     - with `repeat="true"`: context of the `fr:grid element`
   - are checked when the user attempts to add/remove iterations with the UI
 - `remove-constraint`
-  - optional XPath expression running in the context of an iteration
+  - optional XPath expression
+  - evaluation context
+    - context of the iteration item
   - if the constraint returns `false()`, the current row cannot be removed
 - `freeze`
   - optional number of rows at the top which cannot be removed or moved
