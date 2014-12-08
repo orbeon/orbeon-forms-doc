@@ -67,7 +67,9 @@ Attributes:
 - `min` and `max`
   - minimum vs. maximum number of repeat iterations supported
   - can be an AVT
-  - evaluate in the context of the binding (typically `bind`)
+  - evaluation context
+    - with `repeat="content"`: context of the binding (`bind` or `ref`)
+    - with `repeat="true"`: context of the `fr:grid element`
   - are checked when the user attempts to add/remove iterations with the UI
 - `remove-constraint`
   - optional XPath expression running in the context of an iteration
