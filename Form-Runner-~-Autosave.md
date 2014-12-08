@@ -6,6 +6,20 @@
 
 See also the [blog post](http://blog.orbeon.com/2013/10/autosave.html).
 
+## Enabling autosave
+
+The following conditions must be met for autosave to happen:
+
+- The user must be logged in.
+- The user must have update permissions (if permissions are enabled for the form).
+- The form mode must be `new` or `edit`.
+- The persistence layer must support it and have the `oxf.fr.persistence.$name.autosave` property set to `true` (`true` by default for the built-in relational databases).
+- The autosave delay must be greater than `0` (true by default).
+
+See [[Database-Support|Orbeon-Forms-Features ~ Database-Support]] for the detail of which persistence layers support autosave.
+
+*NOTE: Form Builder doesn't support autosave as of Orbeon Forms 4.8._
+
 ## How autosave works
 
 When autosave is enabled and you are an authenticated user, form data is automatically saved as *drafts* in the background as you enter and modify form data. This reduces the chance that you will lose data if something goes wrong and you haven't explicitly saved the data.
@@ -83,4 +97,4 @@ For example, as of Orbeon Forms 4.4, the `exist` provider does not support autos
   value="true"/>
 ```
 
-By default, the `oracle`, `mysql` and `db2` providers support autosave.
+For database support, see [[Database-Support|Orbeon-Forms-Features ~ Database-Support]].
