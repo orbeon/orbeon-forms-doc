@@ -18,7 +18,7 @@ The following conditions must be met for autosave to happen:
 
 See [[Database-Support|Orbeon-Forms-Features ~ Database-Support]] for the detail of which persistence layers support autosave.
 
-*NOTE: Form Builder doesn't support autosave as of Orbeon Forms 4.8._
+*NOTE: Form Builder doesn't support autosave as of Orbeon Forms 4.8.*
 
 ## How autosave works
 
