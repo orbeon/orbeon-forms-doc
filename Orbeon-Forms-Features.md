@@ -16,6 +16,7 @@ As of 2014-12-03 this page just got started so it's incomplete. Its purpose is t
   - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
   - Home Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
   - Buttons and Processes: [[doc|Form-Runner-~-Buttons-and-Processes]], [blog post](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
+  - Autosave: [[doc|Form-Runner ~ Autosave]], [blog post](http://blog.orbeon.com/2013/10/autosave.html)
 - Databases
   - Database support: [[doc|Orbeon-Forms-Features-~-Database-Support]]
   - SQL Server support in Orbeon Forms: [blog post](http://blog.orbeon.com/2014/05/sql-server-support-in-orbeon-forms.html)
