@@ -3,6 +3,8 @@
 - create new form
 - insert sections, grids, repeated grids
 - insert all controls
+  - into regular grid
+  - into repeated grid
 - rename sections and controls
     - check renamed in dialog
     - check renamed in source
