@@ -3,7 +3,7 @@
 For each release of Orbeon Forms, we follow this test plan, which tests functionality in addition to the ~800 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this](https://github.com/orbeon/orbeon-forms/issues/227).
 
 - Misc
-    - [[Distribution|Contributors ~ Test Plan ~ Distribution]] [4.7 done]
+    - [[Distribution|Contributors ~ Test Plan ~ Distribution]] [4.8 done]
     - [[Landing Page|Contributors ~ Test Plan ~ Landing Page]] [4.7 done]
     - [[PE Features Availability|Contributors ~ Test Plan ~ PE Features Availability]] [4.7 done]
 - Persistence
