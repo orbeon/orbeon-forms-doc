@@ -2,7 +2,7 @@
 
 - create new form
 - insert sections, grids, repeated grids
-- insert all controls
+- insert all controls [automated for 4.8]
   - into regular grid
   - into repeated grid
 - rename sections and controls
