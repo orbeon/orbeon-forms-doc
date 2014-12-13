@@ -48,6 +48,8 @@
     - check show/hide based on control value e.g. $fortytwo = '42'
 - edit/modify source
     - change e.g. control label
+- image annotation control
+  - create simple form and test works, saves, loads
 - i18n (PE)
     - check en/fr/es/it/de (languages with full support)
     - switch FB language and check language changes
