@@ -10,7 +10,7 @@
     - check renamed in source
 - move sections
     - up/down
-    - right/left (subsections)
+    - right/left (subsections) (be aware of [#2031](https://github.com/orbeon/orbeon-forms/issues/2031))
 - repeated grid
     - set min/max as ints
     - set min/max as XPath expressions, e.g. `1 + 2`
