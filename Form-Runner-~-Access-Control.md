@@ -6,9 +6,9 @@ When it comes to access control, Orbeon Forms leverages and delegates some work 
 
 Access control touches on the following:
 
-* __Form Builder__ – Can the user create, edit, or view form definitions.
-* __Form level__ – Can the user access this deployed form? If so, what operations are allowed?
-* __Field level__ – If the user can access the form, can she access a particular field? If so, can the field be changed or just viewed?
+* __Form definitions__ – Can the user create, edit, or view form definitions.
+* __Published forms__ – Can the user access this deployed form? If so, what operations (such as creating, viewing, editing, deleting) are allowed?
+* __Form fields__ – If the user can access the form, can she access a particular field? If so, can the field be changed or just viewed?
 
 The following pages address specific topics:
 
