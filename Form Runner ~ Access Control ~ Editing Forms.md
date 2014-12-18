@@ -1,6 +1,6 @@
 > [[Home]] ▸ Form Runner ▸ [[Access Control |Form Runner ~ Access Control]]
 
-## Access to specific apps/forms in Form Builder
+## Form Builder permissions
 
 This is configured with `form-builder-permissions.xml`.
 
