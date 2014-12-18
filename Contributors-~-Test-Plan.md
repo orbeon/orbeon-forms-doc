@@ -17,7 +17,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Services and Actions|Contributors ~ Test Plan ~ Services and Actions]] [4.8 done]
 - Form Builder / Form Runner
     - [[Section Templates|Contributors ~ Test Plan ~ Section Templates]] [4.8 done]
-    - [[PDF Automatic|Contributors ~ Test Plan ~ PDF Automatic]] [Erik]
+    - [[PDF Automatic|Contributors ~ Test Plan ~ PDF Automatic]] [4.8 done]
     - [[PDF Template|Contributors ~ Test Plan ~ PDF Template]] [Erik]
     - [[Form Builder Permissions|Contributors ~ Test Plan ~ Form Builder Permissions]] [Erik]
 - Form Runner
