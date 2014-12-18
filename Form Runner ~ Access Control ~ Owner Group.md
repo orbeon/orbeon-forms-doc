@@ -1,5 +1,9 @@
 > [[Home]] ▸ Form Runner ▸ [[Access Control|Form Runner ~ Access Control]]
 
+## Availability
+
+See [[Database Support|Orbeon Forms Features ~ Database Support]].
+
 ## Usage
 
 Owner/group-based are useful when you want users to only see their own data, or maybe also the data of other users in the same group. For Orbeon Forms to be able to show a user only her data, Orbeon Forms needs to know who that user is, and hence this can only be used for authenticated users.
@@ -8,9 +12,7 @@ To use this feature for a form, in Form Builder, when editing a form, open the *
 
 ![Permissions dialog](images/fr-permissions-dialog.png)
 
-## Availability
-
-See [[Database Support|Orbeon Forms Features ~ Database Support]].
+## Configuration
 
 For eXist, you also need to set the following property:
 
