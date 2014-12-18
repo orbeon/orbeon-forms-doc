@@ -2,5 +2,6 @@
 
 - Controls and Bookshelf: input field and text areas have highlighted and clickable links
 - form title in header/footer
-- page numbering at bottom center
+- logo in title
+- page numbering/total at bottom center
 - PDF looks good overall
