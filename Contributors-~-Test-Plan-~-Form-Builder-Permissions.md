@@ -75,6 +75,7 @@
     - http://localhost:8080/orbeon/fr/
         - NO admin ops for sales/my-sales-form
         - CAN click on line and takes to /new
+        - CAN do Review/Edit/PDF
 - browser 1
     - remove all permissions for Anyone for this form, re-add Create for orbeon-sales, save, publish
     - check can still new/edit/view
