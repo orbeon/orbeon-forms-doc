@@ -25,7 +25,7 @@ Orbeon Forms can infer the roles for the current user either based on informatio
 1. The Form Builder summary page will only show the forms users have access to.
 2. When they create a new form, if users don't have the right to create a form in any app, instead of seeing a text field where they can enter the application name, they will see a drop-down listing the possible application, as shown in the following screenshot:
 
-![][9]
+![][images/fb-new-form-app-dropdown.png]
 
 [LIMITATION] Restrictions on the form name in `form-builder-permissions.xml` are at this point not supported; only restrictions on the app name are supported. This means that you should always use `form="*"`. If you define a restriction on the form name, it won't be enforced at the time the form is created, allowing users to create, save, and publish a form with an undesirable name. However they then won't be able to see the form they created when going back to the summary page.
 
@@ -71,5 +71,3 @@ The paths used by Form Builder look as follows:
 Path-based access restrictions can also be implemented to fully or partially protect Form Builder access.
 
 Orbeon Forms does not specifically provide a mechanism to protect access based on paths, but your container or web server might.
-
-[9]: http://wiki.orbeon.com/forms/_/rsrc/1309558021753/doc/developer-guide/form-runner/access-control/20110701-150512.png
