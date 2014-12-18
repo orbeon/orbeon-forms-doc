@@ -6,7 +6,7 @@ Specific Form Builder permissions are configured with `WEB-INF/resources/config/
 
 If you'd like to have multiple classes of Form Builder users where some case edit, say, form in the `hr` app, while other can edit forms in the `sales` app, then you'll want to setup the `form-builder-permissions.xml`.
 
-_NOTE: [SINCE 2011-09-07] The file is now called `form-builder-permissions.xml` file. It replaces the file called `form-runner-roles.xml`. For backward compatibility, `form-runner-roles.xml` is still supported._
+_NOTE: The file used to be called `form-runner-roles.xml`._
 
 In this file you map role names to applications and forms. For instance, the following tells Orbeon Forms that only users with the role `hr-form-editor` can edit or create forms in the `hr` app, and only users with the role `sales-form-editor` can edit or create forms in the `sales` app. As you can infer from the syntax, you could be even more specific and only give access to users with a given role to a _specific_ form in a _specific_ app.
 
