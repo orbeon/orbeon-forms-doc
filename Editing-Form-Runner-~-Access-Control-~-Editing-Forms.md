@@ -1,15 +1,3 @@
-## Access to Form Builder as a whole
-
-The paths used by Form Builder look as follows:
-
-|Path|Description|
-|----|-----------|
-| `/orbeon/fr/orbeon/builder/new` |  To create a new form. |
-| `/orbeon/fr/orbeon/builder/edit/{id}` |  To edit a form with the given id. |
-| `/orbeon/fr/orbeon/builder/summary` |  To view all the editable forms. |
-
-If you have multiple classes want to give access to Form Builder to one class of users, and those users are able to edit any form in any app, the you can use path-based access restrictions, as described the previous section.
-
 ## Access to specific apps/forms in Form Builder
 
 This is configured with `form-builder-permissions.xml`.
@@ -67,5 +55,19 @@ This logic ensures:
 
 * that Form Builder is usable out of the box even without setting Form Builder permissions
 * that the Form Runner Home page, which can by default be accessed by any user unless it is explicitly protected, does not inadvertently provide access to administrative functions
+
+## Path-based permissions
+
+The paths used by Form Builder look as follows:
+
+|Path|Description|
+|----|-----------|
+| `/orbeon/fr/orbeon/builder/new` |  To create a new form. |
+| `/orbeon/fr/orbeon/builder/edit/{id}` |  To edit a form with the given id. |
+| `/orbeon/fr/orbeon/builder/summary` |  To view all the editable forms. |
+
+If you have multiple classes of Form Builder users and want to give access to Form Builder to one class of users, and those users are able to edit any form in any app, the you can use path-based access restrictions.
+
+Orbeon Forms does not specifically provide a mechanism to protect access based on paths, but your container or web server might.
 
 [9]: http://wiki.orbeon.com/forms/_/rsrc/1309558021753/doc/developer-guide/form-runner/access-control/20110701-150512.png
