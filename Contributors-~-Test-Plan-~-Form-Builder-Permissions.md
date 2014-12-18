@@ -16,6 +16,7 @@
         <user username="orbeon-sales" password="xforms" roles="orbeon-user,orbeon-sales"/>
         <user username="orbeon-admin" password="xforms" roles="orbeon-user,orbeon-admin"/>
     </tomcat-users>
+    ```
     - `properties-local.xml`
 
     ```xml
