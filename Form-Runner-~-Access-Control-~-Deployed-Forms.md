@@ -41,7 +41,7 @@ In the example below:
 
 ## Permissions for owner / group members
 
-This part of the documentation has [moved][8].
+See [[Owner and Group Member Permissions|Form Runner ~ Access Control ~ Owner Group]].
 
 ## Access restrictions
 
