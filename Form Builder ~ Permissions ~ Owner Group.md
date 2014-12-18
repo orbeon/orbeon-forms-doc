@@ -8,12 +8,7 @@ To use this feature for a form, in Form Builder, when editing a form, open the *
 
 ## Availability
 
-This feature is supported:
-
-- Since 4.3 on MySQL and DB2
-- Since 4.4 on Oracle
-- Since 4.6 on SQL Server
-- Since 4.8 on eXist-db and PostgreSQL
+See [[Database Support|Orbeon Forms Features ~ Database Support]].
 
 For eXist, you also need to set the following property:
 
