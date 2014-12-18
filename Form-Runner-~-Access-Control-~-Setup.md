@@ -6,8 +6,6 @@ Form Runner uses the username, group, and roles to control who can access Form B
 
 ### Container-driven method
 
-[SINCE 2011-07-01]
-
 You want to use container roles if your users are setup at the application server level, with container managed security. In Tomcat, this would correspond to using a [security realm][10], which in its simplest form gets users from Tomcat's `conf/tomcat-users.xml`. To setup container-driven roles, configure your `form-builder-permissions.xml` as described above, then:
 
 
@@ -86,8 +84,6 @@ The header `oxf.fr.authentication.header.roles` consists of a list of comma- or 
     ```
 
 ## Accessing the username and roles
-
-[SINCE 2011-05-18]
 
 * __Username/role from headers or container__ — Orbeon Forms automatically adds two headers, which are available within Orbeon Forms applications, in particularForm Runner:
 
