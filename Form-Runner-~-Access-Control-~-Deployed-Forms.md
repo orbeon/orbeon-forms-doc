@@ -19,7 +19,7 @@ After you click on the checkbox, you'll be able to set access restriction on the
 3. On the_Group members_line, set the operations allowed to users in the same group as the owner. [SINCE Orbeon Forms 4.3] 
 4. On the following lines, you can enter a role name, and define what operations users with that role can perform.
 
-### Example
+## Example
 
 In the example below:
 
@@ -29,7 +29,7 @@ In the example below:
 
 ![][7]
 
-### Permissions dialog
+## Permissions dialog
 
 * Permissions you set in the dialog are _additive_ –Say you defined permissions for two roles, where users with the_reader_role can read and users in the_clerk_role can delete, users with both roles (_reader_and_clerk_)are allowed to perform both operations (reading and deleting).
 * Operation on _Anyone_ apply to all other rows – When you select a checkbox for a given operation on the first _Anyone_ row, that checkbox will be automatically checked and disabled so you can't change it, for any additional row, since you wouldn't want to authorize users with additional roles to perform less operations.
@@ -37,11 +37,11 @@ In the example below:
 * _Create_ can't be set for the _owner_ and _group members_ – The owner/group is a piece of information attached to existing form data, keeping track of the user who create the data, and the group in which this user is. This information is only known for existing data, so assigning the _create_ permission to the _owner_ or _group members_ doesn't make sense, and the dialog doesn't show that checkbox.
 * Permissions for the _owner_ and _group members_ can be setindependently– If you want data to be accessible only by people who created it, check read/update/delete for the owner but not for group members. If you want data to be accessible by all people in the same group,check read/update/delete for the group members and don't check them for the owner if you want the owner to loose access to that data in case the owner changes group. (The latter highlights the need for permissions owner and group member to be set independently.)
 
-### Permissions for owner / group members
+## Permissions for owner / group members
 
 This part of the documentation has [moved][8].
 
-### Access restrictions
+## Access restrictions
 
 Which operations the current user can perform drives what page they can access, and on some pages which buttons are shown:
 
