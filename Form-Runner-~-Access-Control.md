@@ -6,7 +6,7 @@ This page documents how to secure Form Runner and Form Builder.
 
 - [[Setup|Form Runner ~ Access Control ~ Setup]]
 - [[Deployed Forms|Form Runner ~ Access Control ~ Deployed Forms]]
-= [[Editing Forms|Form Runner ~ Access Control ~ Editing Forms]]
+- [[Editing Forms|Form Runner ~ Access Control ~ Editing Forms]]
 
 ## Scenarios
 
