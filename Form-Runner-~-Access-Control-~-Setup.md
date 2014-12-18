@@ -1,16 +1,5 @@
 > [[Home]] ▸ Form Runner ▸ [[Access Control |Form Runner ~ Access Control]]
 
-## Overview
-
-When it comes to access control, Orbeon Forms leverages and delegates as much as possible to your existing security infrastructure. In particular, you define users and roles outside of Orbeon Forms.
-
-You can have access control at two levels:
-
-* __Form level__ – Can the current user access this form?
-* __Field level__ – If the current user can access the form, can they access a particular field? If they can, can they change the field or just read its value?
-
-You implement the later in your form definition, by using the [`$fr-roles`][1] in the in the _visibility_ and _read-only_ XPath expressions of the [Form Builder control validation dialog][2]. You can make a control non-visible to the current user by defining a _visibility_ expression that returns false. If the control is visible, you can make it read-only to current user by defining a _read-only_ expression that returns true. The rest of this page focuses on form-level access control.
-
 ## Providing username, group, and roles
 
 Form Runner uses the username, group, and roles to control who can access Form Builder and the forms you create with Form Builder (see the two sections above for more details on how those are setup). Form Runner can obtain this information by calling a standard servlet API implemented by your application server (_container-driven method_) or by using HTTP headers (_header-driver method_), typically set by a front-end (e.g. Apache module) or a servlet filter.
