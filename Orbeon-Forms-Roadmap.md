@@ -90,6 +90,7 @@ Focus:
 - [ ] TBD
 - [ ] one performance item: TBD
 - [ ] one maintenance item: TBD
+- [ ] one test automation item: TBD
 - [ ] doc items: TBD
 
 Issues:
