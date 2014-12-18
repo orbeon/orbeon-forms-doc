@@ -20,7 +20,7 @@ $fr-roles = 'admin'
 
 Due to the logic of XPath comparison on sequences, this expression returns `true()` if at least one of the roles is `admin`, even if there are other roles available.
 
-TODO: more examples.
+TODO: more examples (in particular using `xxf:get-header('Orbeon-Username')`, etc.).
 
 [1]: http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/xpath-expressions#TOC-Scenario:-checking-the-role-s-of-the-current-user
 [2]: http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/control-validation-dialog
