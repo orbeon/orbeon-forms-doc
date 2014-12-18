@@ -1,8 +1,4 @@
-## Access control for deployed forms
-
-[SINCE Orbeon Forms 4.0]
-
-### Enabling permissions
+## Enabling permissions
 
 For forms created in Form Builder, you can restrict which users can access which forms, and what operations they can perform. Those restrictions apply to the forms you create once they are deployed, not to editing those forms in Form Builder (for the latter, see the section that follows: _Access control for editing forms_).
 
@@ -14,7 +10,7 @@ This shows the following dialog:
 
 ![][6]
 
-### Setting permissions
+## Setting permissions
 
 After you click on the checkbox, you'll be able to set access restriction on the _create_, _read, update_, and _delete_ operations:
 
