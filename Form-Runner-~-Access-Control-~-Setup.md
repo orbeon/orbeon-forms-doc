@@ -86,14 +86,13 @@ The header `oxf.fr.authentication.header.roles` consists of a list of comma- or 
 ## Accessing username, group and roles in Orbeon Forms
 
 * __Username/role from headers or container__ — Orbeon Forms automatically adds two headers, which are available within Form Runner:
-
-* `Orbeon-Username` — if present, the value contains the current username
+  * `Orbeon-Username` — if present, the value contains the current username
     * if `oxf.fr.authentication.method == "container"`:
         * obtained through the servlet/portlet container's `getRemoteUser()` function
     * if `oxf.fr.authentication.method == "header"
         * obtained via the header specified by `oxf.fr.authentication.header.username`
-* `Orbeon-Group` — if present, the value contains the current group
-* `Orbeon-Roles` — if present, is a list of values, each with one role
+  * `Orbeon-Group` — if present, the value contains the current group
+  * `Orbeon-Roles` — if present, is a list of values, each with one role
     * if `oxf.fr.authentication.method == "container"`:
         * each role listed in `oxf.fr.authentication.container.roles` is checked against the container's `isUserInRole()` function
     * if `oxf.fr.authentication.method == "header"`
