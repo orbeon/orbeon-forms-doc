@@ -74,7 +74,11 @@ The header `oxf.fr.authentication.header.roles` consists of a list of comma- or 
         name="oxf.xforms.forward-submission-headers"
         value="My-Username-Header My-Group-Header My-Roles-Header"/>
     ```
-4. __LDAP-style header syntax (Optional)__ – The value of the header is a list of roles separated by spaces, commas, or pipes (`|`). Furthermore, they can optionally be composed of properties in the form of `name=value`, where `name` is specified by a configuration property, and `value` is the value of the role. This is typically useful the value if the header follows an LDAP-style syntax, for instance: `cn=role1,dc=acme,dc=ch|cn=role2,dc=acme,dc=ch`. If your header follows a LDAP-style syntax, set the following property to configure what "name" contains the header, which in this example is `cn`:
+4. __LDAP-style header syntax (Optional)__ – The value of the header is a list of roles separated by spaces, commas, or pipes (`|`). Furthermore, they can optionally be composed of properties in the form of `name=value`, where `name` is specified by a configuration property, and `value` is the value of the role. This is typically useful the value if the header follows an LDAP-style syntax, for instance:
+    ```
+    cn=role1,dc=acme,dc=ch|cn=role2,dc=acme,dc=ch
+    ```
+    If your header follows a LDAP-style syntax, set the following property to configure what "name" contains the header, which in this example is `cn`:
 
     ```xml
     <property
