@@ -6,11 +6,11 @@ For forms created in Form Builder, you can restrict which users can access which
 
 By default, no restriction is imposed on _who_ can do _what_ with forms you create in Form Builder. You enable permissions by going to the Form Builder sidebar, and under _Advanced_, clicking on _Set Permissions_.
 
-![][5]
+![](images/fb-advanced-menu.png)
 
 This shows the following dialog:
 
-![][6]
+![](images/fb-permissions-enable.png)
 
 ## Setting permissions
 
@@ -29,7 +29,7 @@ In the example below:
 * Users with the role _clerk_to read data.
 * Users with the role _admin_ to do any operation, including deleting form data.
 
-![][7]
+![](images/fb-permissions-dialog.png)
 
 ## Permissions dialog
 
@@ -62,8 +62,3 @@ Which operations the current user can perform drives what page they can access, 
 * For the _edit_ page, access is denied if the current user can't perform the _update_ operation.
 
 [SINCE 4.3] In Orbeon Forms 4.2 and earlier, role-based permissions set in Form Builder could only be driven by container-based roles and the value of the `oxf.fr.authentication.method` property was not taken into account. Since version 4.3, those permissions also apply if you are using header-driven roles.
-
-[5]: http://wiki.orbeon.com/forms/_/rsrc/1357774269110/doc/developer-guide/form-runner/access-control/advanced1.png
-[6]: http://wiki.orbeon.com/forms/_/rsrc/1371575909134/doc/developer-guide/form-runner/access-control/Screen%20Shot%202013-06-18%20at%2010.17.17%20AM.png
-[7]: http://wiki.orbeon.com/forms/_/rsrc/1371576079151/doc/developer-guide/form-runner/access-control/Screen%20Shot%202013-06-18%20at%2010.20.25%20AM.png
-[8]: https://github.com/orbeon/orbeon-forms/wiki/Form-Builder-~-Permissions-~-Owner-Group
