@@ -68,7 +68,7 @@ The paths used by Form Builder look as follows:
 | `/orbeon/fr/orbeon/builder/edit/{id}` |  To edit a form with the given id. |
 | `/orbeon/fr/orbeon/builder/summary` |  To view all the editable forms. |
 
-If you have multiple classes of Form Builder users and want to give access to Form Builder to one class of users, and those users are able to edit any form in any app, the you can use path-based access restrictions.
+Path-based access restrictions can also be implemented to fully or partially protect Form Builder access.
 
 Orbeon Forms does not specifically provide a mechanism to protect access based on paths, but your container or web server might.
 
