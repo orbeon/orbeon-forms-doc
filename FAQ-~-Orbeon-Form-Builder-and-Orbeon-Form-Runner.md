@@ -41,6 +41,7 @@ No, for multiple reasons:
 
 - The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [XBL][9], and [extension functions][10] not available in other XForms engines.
 - Forms designed with Form Builder assume some standard components provided by Form Runner, like sections and grids.
+- A lot of the functionality of the form is handled by the Form Runner runtime, including: saving and retrieving data from a database, autosave, permissions, services and actions, and more. The form itself mainly contains the data model, controls, and descriptions of actions and services.
 
 This said, Form Builder forms are probably one XSLT transformation away from being runnable within some other XForms processors.
 
