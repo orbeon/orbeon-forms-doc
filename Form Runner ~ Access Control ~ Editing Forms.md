@@ -2,7 +2,7 @@
 
 ## Form Builder permissions
 
-This is configured with `form-builder-permissions.xml`.
+Specific Form Builder permissions are configured with `WEB-INF/resources/config/form-builder-permissions.xml`.
 
 If you'd like to have multiple classes of Form Builder users where some case edit, say, form in the `hr` app, while other can edit forms in the `sales` app, then you'll want to setup the `form-builder-permissions.xml`.
 
