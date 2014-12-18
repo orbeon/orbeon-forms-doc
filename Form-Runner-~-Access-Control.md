@@ -8,13 +8,14 @@ Access control touches on the following:
 
 * __Form definitions__ – Can the user create, edit, or view form definitions.
 * __Published forms__ – Can the user access this deployed form? If so, what operations (such as creating, viewing, editing, deleting) are allowed?
-* __Form fields__ – If the user can access the form, can she access a particular field? If so, can the field be changed or just viewed?
+* __Form fields__ – If the user can access the form, can she access a particular field or group of fields? If so, can the field be changed or just viewed?
 
 The following pages address specific topics:
 
 - [[Setup|Form Runner ~ Access Control ~ Setup]] - How to setup Orbeon Forms so that users and roles are provided.
 - [[Editing Forms|Form Runner ~ Access Control ~ Editing Forms]] - How to control access to Form Builder.
 - [[Deployed Forms|Form Runner ~ Access Control ~ Deployed Forms]] - How to control access to deployed forms.
+- [[Form Fields|Form Runner ~ Access Control ~ Form Fields]] - How to control access to specific form fields, grids or sections.
 
 ## Scenarios
 
