@@ -2,10 +2,7 @@
 
 ## Overview
 
-When it comes to access control, Orbeon Forms leverages and delegates as much as possible to your existing security infrastructure:
-
-* You define users and roles outside of Orbeon Forms.
-* Whenever possible, access control is path-based, so you can define who can access what based on the path in the URL with your existing security infrastructure.
+When it comes to access control, Orbeon Forms leverages and delegates as much as possible to your existing security infrastructure. In particular, you define users and roles outside of Orbeon Forms.
 
 You can have access control at two levels:
 
