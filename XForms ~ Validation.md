@@ -182,7 +182,7 @@ Orbeon Forms supports extensions events dispatched to an instance when it become
 - `xxforms-valid`
 - `xxforms-invalid`
 
-### Orbeon Forms 4 behavior
+#### Orbeon Forms 4 behavior
 
 [SINCE: 2012-10-25 / ORBEON FORMS 4.0]
 
@@ -207,7 +207,7 @@ These events can be used, for example, to toggle the appearance of icons indicat
 </xf:action>
 ```
 
-### Orbeon Forms 3.9 behavior
+#### Orbeon Forms 3.9 behavior
 
 These events are dispatched just before `xforms-revalidate` completes, to all instances of the model being revalidated. For a given instance, either `xxforms-valid` or `xxforms-invalid` is dispatched for a given revalidation.
 
