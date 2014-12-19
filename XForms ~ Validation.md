@@ -113,6 +113,35 @@ A warning or info level does not make the control value invalid and it is still 
 
 *NOTE: As of Orbeon Forms 4.3, it is only possible to associate a warning or info validation level to a constraint specified with `xf:validation/@constraint` (or deprecated `xf:constraint`). It is not possible to associate these levels to the required or data type validations: these always use the error level.*
 
+### Nested validation elements
+
+[SINCE: Orbeon Forms 4.9]
+
+`xf:validation` elements nested within `xf:bind` support the same validation attributes as `xf:bind`:
+
+- `type`
+- `required`
+- `constraint`
+
+The main use case for this is to allow assigning a specific identifier to a validation with the `id` attribute, so that `xf:alert` can refer to those with the `validation` attribute:
+
+```xml
+<xf:bind id="control-1-bind" name="control-1" ref="control-1">
+    <xf:validation required="true()" id="validation-3-validation"/>
+    <xf:validation type="xs:decimal" id="validation-4-validation"/>
+    <xf:validation constraint=". ge 10" id="validation-5-validation"/>
+    <xf:validation constraint=". ge 20" id="validation-6-validation" level="warning"/>
+</xf:bind>
+<fr:number bind="control-1-bind">
+
+    <xf:alert ref="$form-resources/control-1/alert[1]" validation="validation-3-validation"/>
+    <xf:alert ref="$form-resources/control-1/alert[2]" validation="validation-4-validation"/>
+    <xf:alert ref="$form-resources/control-1/alert[3]" validation="validation-5-validation"/>
+    <xf:alert ref="$form-resources/control-1/alert[4]" validation="validation-6-validation"/>
+    <xf:alert ref="$fr-resources/detail/labels/alert"/>
+</fr:number>
+```
+
 ### Multiple alerts
 
 [SINCE: Orbeon Forms 4.3]
