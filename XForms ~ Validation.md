@@ -32,6 +32,8 @@ Orbeon Forms performs validation of a node in the following order:
     - `xf:validation/@constraint` (or deprecated  `xf:constraint`)
     - are checked *only* if the control's data type is valid
 
+*NOTE: The `xf:constraint` element, introduced with Orbeon Forms 4.3, is deprecated in Orbeon Forms 4.9 in favor of `xf:validation`.*
+
 ## Extensions
 
 ### Multiple constraints and alerts
