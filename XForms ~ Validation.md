@@ -22,11 +22,14 @@ Orbeon Forms performs validation of a node in the following order:
 - data type validation
     - XML Schema validation (lax/strict/none on model instances)
     - `xf:bind/@type`
+    - `xf:validation/@type`
 - required validation
     - required-but-empty
     - `xf:bind/@required`
+    - `xf:validation/@required`
 - constraints
-    - with `xf:bind/@constraint` or `xf:validation/@constraint` (or deprecated  `xf:constraint`)
+    - `xf:bind/@constraint`
+    - `xf:validation/@constraint` (or deprecated  `xf:constraint`)
     - are checked *only* if the control's data type is valid
 
 ## Extensions
