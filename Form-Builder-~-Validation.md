@@ -34,15 +34,15 @@ This simple validation has 3 possibilities:
 - *No*: a value is not required and can be empty.
 - *Formula*: an XPath expression to dynamically control whether the control is valid or not. [SINCE Orbeon Forms 4.7]
 
-[SINCE Orbeon Forms 4.9]
-
-The Required validation can have a custom alert message.
-
 ![Options for required validation](images/fb-required-formula.png)
 
 When the value is required, an asterisk appears next to the control to signify to the user that the value is required.
 
 At runtime, if the value is required but not empty, the value is marked as invalid.
+
+[SINCE Orbeon Forms 4.9]
+
+The Required validation can have a custom alert message.
 
 ### Data type validation
 
