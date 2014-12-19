@@ -148,6 +148,8 @@ This allows having distinct alerts for indicating:
 - that the value must be of the given datatype
 - that the value must satisfy constraints expressed in XPath
 
+*LIMITATION: As of Orbeon Forms 4.9, only the first `type` and the first `required` attributes associated with an `xf:bind` element are taken into account. On the other hand, all `constraint` attributes are handled.*
+
 ### Multiple alerts
 
 [SINCE: Orbeon Forms 4.3]
