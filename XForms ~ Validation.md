@@ -123,7 +123,7 @@ A warning or info level does not make the control value invalid and it is still 
 - `required`
 - `constraint`
 
-The main use case for this is to allow assigning a specific identifier to a validation with the `id` attribute, so that `xf:alert` can refer to those with the `validation` attribute:
+This allows assigning a specific identifier to a validation with the `id` attribute, so that `xf:alert` can refer to those with the `validation` attribute:
 
 ```xml
 <xf:bind id="control-1-bind" name="control-1" ref="control-1">
@@ -141,6 +141,12 @@ The main use case for this is to allow assigning a specific identifier to a vali
     <xf:alert ref="$fr-resources/detail/labels/alert"/>
 </fr:number>
 ```
+
+This allows having distinct alerts for indicating:
+
+- that the value is required
+- that the value must be of the given datatype
+- that the value must satisfy constraints expressed in XPath
 
 ### Multiple alerts
 
