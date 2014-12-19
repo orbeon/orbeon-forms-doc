@@ -26,7 +26,7 @@ Orbeon Forms performs validation of a node in the following order:
     - required-but-empty
     - `xf:bind/@required`
 - constraints
-    - with `xf:bind/@constraint` or `xf:constraint`
+    - with `xf:bind/@constraint` or `xf:validation/@constraint` (or deprecated  `xf:constraint`)
     - are checked *only* if the control's data type is valid
 
 ## Extensions
@@ -35,7 +35,16 @@ Orbeon Forms performs validation of a node in the following order:
 
 [SINCE: Orbeon Forms 4.3]
 
-XForms allows a single `constraint` attribute on the `xf:bind` element. Orbeon Forms extends this to support any number of nested `xf:constraint` elements, each specifying a single constraint:
+XForms allows a single `constraint` attribute on the `xf:bind` element. Orbeon Forms extends this to support any number of nested `xf:validation` elements (or deprecated `xf:constraint` elements), each specifying a single validation:
+
+```xml
+<xf:bind ref="." id="input-bind">
+    <xf:validation id="length-constraint"    level="error"   constraint="string-length() gt 1"/>
+    <xf:validation id="uppercase-constraint" level="warning" constraint="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
+</xf:bind>
+```
+
+Deprecated example:
 
 ```xml
 <xf:bind ref="." id="input-bind">
@@ -49,7 +58,7 @@ Each constraint applies to the enclosing `xf:bind`.
 Attributes:
 
 - `level` attribute: optional, specifies an alert level (defaults to `error`)
-- `value`: XPath expression specifying the constraint
+- `constraint`: XPath expression specifying the constraint
 
 The `id` attribute is optional and useful to attach alerts.
 
@@ -61,7 +70,7 @@ If there is a single error constraint, the following binds are equivalent:
 <xf:bind ref="." id="input-bind" constraint="string-length() gt 1"/>
 
 <xf:bind ref="." id="input-bind">
-    <xf:constraint level="error" value="string-length() gt 1"/>
+    <xf:validation level="error" constraint="string-length() gt 1"/>
 </xf:bind>
 ```
 
@@ -85,7 +94,7 @@ If a control doesn't have a warning level, it can have an *info* level. This is 
 
 A warning or info level does not make the control value invalid and it is still possible to submit form data.
 
-*NOTE: As of Orbeon Forms 4.3, it is only possible to associate a warning or info validation level to a constraint specified with `xf:constraint`. It is not possible to associate these levels to the required or data type validations: these always use the error level.*
+*NOTE: As of Orbeon Forms 4.3, it is only possible to associate a warning or info validation level to a constraint specified with `xf:validation/@constraint` (or deprecated `xf:constraint`). It is not possible to associate these levels to the required or data type validations: these always use the error level.*
 
 ### Multiple alerts
 
@@ -103,7 +112,7 @@ If a `validation` attribute is specified, the alert is active only for the given
 
     <xf:alert validation="c1 c2">
 
-In this example, `c1` and `c2` refer to `id` attributes on `xf:constraint` elements. Only `xf:constraint` elements associated with a bind pointing to the node to which the control is bound are considered.
+In this example, `c1` and `c2` refer to `id` attributes on `xf:validation` elements. Only `xf:validation` elements associated with a bind pointing to the node to which the control is bound are considered.
 
 Blank `level` and `validation` attributes are equivalent to no attributes.
 
@@ -128,8 +137,8 @@ Example:
 
 ```xml
 <xf:bind ref="." id="input-bind">
-    <xf:constraint id="length-constraint"    level="error"   value="string-length() gt 1"/>
-    <xf:constraint id="uppercase-constraint" level="warning" value="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
+    <xf:validation id="length-constraint"    level="error"   constraint="string-length() gt 1"/>
+    <xf:validation id="uppercase-constraint" level="warning" constraint="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
 </xf:bind>
 
 <xf:input id="my-input" ref=".">
