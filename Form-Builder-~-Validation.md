@@ -34,7 +34,9 @@ This simple validation has 3 possibilities:
 - *No*: a value is not required and can be empty.
 - *Formula*: an XPath expression to dynamically control whether the control is valid or not. [SINCE Orbeon Forms 4.7]
 
-[SINCE Orbeon Forms 4.9] The Required validation can have a custom alert message.
+[SINCE Orbeon Forms 4.9]
+
+The Required validation can have a custom alert message.
 
 ![Options for required validation](images/fb-required-formula.png)
 
@@ -70,7 +72,9 @@ When an XML Schema data type is selected:
 - If *Required* is set to *Yes*, the control is still made required, and an asterisk appears.
 - If *Required* is set to *No*, the value must still match the definition of the XML Schema type to be valid. If the XML Schema type requires a non-empty value, setting *Required* to *No* does not make the value optional.
 
-[SINCE Orbeon Forms 4.9] The Required validation can have a custom alert message.
+[SINCE Orbeon Forms 4.9]
+
+The Required validation can have a custom alert message.
 
 ### Constraint validation
 
