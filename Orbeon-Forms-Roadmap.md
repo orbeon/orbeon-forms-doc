@@ -82,6 +82,7 @@ Issues:
 Dates (tentative):
 
 - 2014-11-26: tentative release date
+- 2015-01-08: new tentative release date
 
 ### Orbeon Forms 4.9
 
@@ -101,7 +102,7 @@ Issues:
 Dates (tentative):
 
 - counting 2 slow weeks around the end of year
-- 2015-02-15: tentative release date
+- 2015-03-17: tentative release date
 
 ## What's in a release
 
