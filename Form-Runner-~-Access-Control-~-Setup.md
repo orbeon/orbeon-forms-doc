@@ -50,42 +50,58 @@ There is no container API for Orbeon Forms to get the user's group; in fact the 
 
 You want to use header-driven method if you have a servlet filter, single sign-on software, or other system that sets the roles for the current user in an HTTP header. To use header-driven method, configure your `form-builder-permissions.xml` as described above, then:
 
-1. __Enable header-driven method__ – To do so, set the following property in your `properties-local.xml`:
+#### 1. Enable header-driven method
 
-    ```xml
-    <property
-        as="xs:string"
-        name="oxf.fr.authentication.method"
-        value="header"/>
-    ```
-2. __Header name__ – Tell Orbeon Forms what is the name of the HTTP headers that will contain the username, group, and roles for the current user.
+Set the following property in your `properties-local.xml`:
 
-    ```xml
-    <property as="xs:string" name="oxf.fr.authentication.header.username" value="My-Username-Header"/>
-    <property as="xs:string" name="oxf.fr.authentication.header.group"    value="My-Group-Header"/>
-    <property as="xs:string" name="oxf.fr.authentication.header.roles"    value="My-Roles-Header"/>
-    ```
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.method"
+    value="header"/>
+```
+
+#### 2. Header names
+
+Tell Orbeon Forms the name of the HTTP headers that contain the username, group, and roles for the current user.
+
+```xml
+<property as="xs:string" name="oxf.fr.authentication.header.username" value="My-Username-Header"/>
+<property as="xs:string" name="oxf.fr.authentication.header.group"    value="My-Group-Header"/>
+<property as="xs:string" name="oxf.fr.authentication.header.roles"    value="My-Roles-Header"/>
+```
+
 The header `oxf.fr.authentication.header.roles` consists of a list of comma- or pipe-separated role names, for example: "Administrator, Power User, User" or"Administrator | Power User | User". White space around the commas or pipes is ignored. In addition or alternatively, multiple role headers can be provided, and each of them is split according to those roles. The resulting set of roles is the combination of all roles extracted from all role headers.
-3. __Forwarding headers__ — When using header-based authentication, in addition to defining the name of the headers Form Runner gets the username and role from `oxf.fr.authentication.header.username` and `oxf.fr.authentication.header.roles`, you need to add those header names to the `oxf.xforms.forward-submission-headers` property, so the headers are forwarded by the XForms engine to Form Runner. For instance:
 
-    ```xml
-    <property
-        as="xs:string"
-        name="oxf.xforms.forward-submission-headers"
-        value="My-Username-Header My-Group-Header My-Roles-Header"/>
-    ```
-4. __LDAP-style header syntax (Optional)__ – The value of the header is a list of roles separated by spaces, commas, or pipes (`|`). Furthermore, they can optionally be composed of properties in the form of `name=value`, where `name` is specified by a configuration property, and `value` is the value of the role. This is typically useful the value if the header follows an LDAP-style syntax, for instance:
-    ```
-    cn=role1,dc=acme,dc=ch|cn=role2,dc=acme,dc=ch
-    ```
-    If your header follows a LDAP-style syntax, set the following property to configure what "name" contains the header, which in this example is `cn`:
+#### 3. Forwarding headers (Orbeon Forms 4.6 and earlier)
 
-    ```xml
-    <property
-        as="xs:string"
-        name="oxf.fr.authentication.header.roles.property-name"
-        value="cn"/>
-    ```
+*NOTE: This step is not necessary for Orbeon Forms 4.7 and newer.*
+
+When using header-based authentication, in addition to defining the name of the headers Form Runner gets the username and role from `oxf.fr.authentication.header.username` and `oxf.fr.authentication.header.roles`, you need to add those header names to the `oxf.xforms.forward-submission-headers` property, so the headers are forwarded by the XForms engine to Form Runner. For instance:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.forward-submission-headers"
+    value="My-Username-Header My-Group-Header My-Roles-Header"/>
+```
+
+#### 4. LDAP-style header syntax (Optional)
+
+The value of the header is a list of roles separated by spaces, commas, or pipes (`|`). Furthermore, they can optionally be composed of properties in the form of `name=value`, where `name` is specified by a configuration property, and `value` is the value of the role. This is typically useful the value if the header follows an LDAP-style syntax, for instance:
+
+```
+cn=role1,dc=acme,dc=ch|cn=role2,dc=acme,dc=ch
+```
+
+If your header follows a LDAP-style syntax, set the following property to configure what "name" contains the header, which in this example is `cn`:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.header.roles.property-name"
+    value="cn"/>
+```
 
 ## Accessing username, group and roles in Orbeon Forms
 
