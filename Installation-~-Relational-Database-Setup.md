@@ -1,6 +1,5 @@
 > [[Home]] ▸ [[Installation]]
 
-
 ## Overview
 
 The setup for the relational persistence layers is a 3 step process. The first two steps are database specific, so please refer to the relevant subsections below.
@@ -277,7 +276,7 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
 
 ### With Orbeon Forms 3.9
 
-See [legacy documentation](https://wiki.orbeon.com/forms/doc/developer-guide/form-runner/oracle-and-mysql-persistence-layers).
+See [legacy documentation](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/oracle-and-mysql-persistence-layers).
 
 ### With Orbeon Forms 4.0
 
