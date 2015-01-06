@@ -10,7 +10,7 @@
         - enter [Lorum Ipsum](http://www.lipsum.com/feed/html) in input field
         - enter long text without space in input field and textarea
 - Bookshelf
-    - Summary: see Summary page below
+    - Summary: see Summary page tests
     - Detail
         - help works
         - review and back works
