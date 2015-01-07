@@ -48,7 +48,7 @@
     - *NOTE: `/summary` should do 403 if user is not orbeon-sales on remote!*
     - pull back form
     - load form /new on local, make sure works and attachment is there
-  - no checkbox for controls w/o admin access
+  - no checkbox for forms w/o admin access (e.g. set `<role name="*" app="orbeon" form="*"/>`)
 - upgrade form definitions
   - upgrade local
   - upgrade remote
