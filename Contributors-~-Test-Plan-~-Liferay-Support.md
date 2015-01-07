@@ -3,7 +3,7 @@
 - setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present
   - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
-  - start Liferay: `./tomcat-7.0.40/bin/catalina.sh ru`
+  - start Liferay: `./tomcat-7.0.40/bin/catalina.sh run`
   - try `http://localhost:9090/`
   - login
     - *NOTE: Cannot seem to login with Chrome anymore. Tried removing JSESSIONID, still issue.*
