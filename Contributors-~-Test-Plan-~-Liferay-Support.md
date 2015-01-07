@@ -24,6 +24,7 @@
   - edit/review/back
   - send to external page
   - PDF loads
+    - check that checkboxes appear correctly (see [#2046](https://github.com/orbeon/orbeon-forms/issues/2046))
   - check that TinyMCE (rich text) appears ok, including with IE9 (icons)
   - upload works
   - attach image and save
@@ -32,6 +33,7 @@
   - all examples and Form Runner
   - upload works
   - PDF works
+    - check that checkboxes appear correctly
     - *NOTE: Hit issue of double JSESSIONID once, check cookies if problems.*
   - attach image and save, make sure image shows properly
   - *NOTE: noscript broken in Liferay*
