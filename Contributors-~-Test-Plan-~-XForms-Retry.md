@@ -57,7 +57,7 @@
     - click on *Manual save*
     - the request is intercepted by Charles where you click on Abort, check that the client retries the request right away and that the request doesn't show in the server logs
 
-    - finally click on *Execute*, and check the request runs on the server, and the counter is incremented in the browser after 5 s
+    - finally click on *Execute*, and check the request runs on the server, and the response reaches the browser after 5 s
 
 - response not reaching client
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
