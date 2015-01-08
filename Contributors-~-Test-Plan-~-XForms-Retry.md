@@ -42,6 +42,14 @@
             as="xs:integer"
             name="oxf.xforms.retry.delay-increment"
             value="0"/>
+        <property
+            as="xs:string"
+            name="oxf.http.proxy.host"
+            value="localhost"/>
+        <property
+            as="xs:integer"
+            name="oxf.http.proxy.port"
+            value="8888"/>
         ```
     - load page again
     - using Charles, go in Proxy / Breakpoints, enable breakpoints, and add:  
