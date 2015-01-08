@@ -24,6 +24,11 @@ drop table orbeon_form_data_attach ;
         as="xs:boolean"
         name="oxf.fr.persistence.db2.create-flat-view" 
         value="true"/>
+
+    <property 
+        as="xs:string"
+        name="oxf.fr.persistence.provider.db2.*.*"
+        value="db2"/>
     ```
 - Remove existing view if any: `drop view orbeon_f_db2_a ;`
 - Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [[flat view documentation|Form-Runner-~-Persistence-~-Flat-View]]
