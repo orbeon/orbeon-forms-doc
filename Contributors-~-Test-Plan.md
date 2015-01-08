@@ -29,6 +29,6 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Liferay Support|Contributors ~ Test Plan ~ Liferay Support]] [4.8 done]
     - [[Embedding|Contributors ~ Test Plan ~ Embedding]] [4.8 done]
     - [[XForms Retry|Contributors ~ Test Plan ~ XForms Retry]] [4.7 done]
-    - [[Error Dialog|Contributors ~ Test Plan ~ Error Dialog]] [Erik]
+    - [[Error Dialog|Contributors ~ Test Plan ~ Error Dialog]] [4.8 done]
     - [[Other Browsers|Contributors ~ Test Plan ~ Other Browsers]] [4.7 done]
     - [[Other|Contributors ~ Test Plan ~ Other]] [4.7 done]
