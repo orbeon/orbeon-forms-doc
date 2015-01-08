@@ -6,9 +6,9 @@ Features to test, with all supported browsers:
     - http://localhost:8080/orbeon/xforms-jsp/guess-the-number/
     - http://localhost:8080/orbeon/xforms-jsp/flickr-search/
     - plain XHTML
-        - move `flickr-search/index.jsp` into `resources/apps/xforms-jsp/guess-the-number/index.html`
-        - edit that file to remove the JSP markup at the beginning, and hardcode the answer to 42
-        - access http://localhost:8080/orbeon/xforms-jsp/guess-the-number/index.html
+        - copy `flickr-search/index.jsp` into `resources/apps/filter-test/index.html`
+        - edit that file to remove the JSP markup at the beginning
+        - access http://localhost:8080/orbeon/xforms-jsp/filter-test/index.html
 - examples-cli in distribution work (fix/remove them if not)
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
