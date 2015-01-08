@@ -2,7 +2,7 @@
 
 ## DB2 DDL
 
-Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Between tests, run the `drop table` statements below.
+Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
 1. Run the [4.3 DDL] and [4.3 to 4.4 DDL].
 2. Run the [4.4 DDL] and [4.4 to 4.6 DDL].
