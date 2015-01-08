@@ -27,7 +27,6 @@
         - in Chrome, open the Dev Tools, go to the Network tab (or use HttpScoop or Charles)
         - hit the *Manual save* button
         - check after 20 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 20 s have elapsed)
-        - check in the Dev Tools the requests look as follows
         - (the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114][2])
 - test request not reaching server
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
