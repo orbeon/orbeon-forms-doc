@@ -67,10 +67,10 @@
 - in Charles, edit the breakpoint set above (see screenshot), and this time break on the response, i.e. uncheck the "request" checkbox and check the "response" checkbox
 - click on *Manual save*
   - check after 5 s the breakpoint is hit
-  - Abort (make sure to abort Ajax response, not call to sleep service!)
-  - check the request is made again right away by the browser
+  - Abort (make sure to abort Ajax response, not call to sleep service - no longer an issue with 4.7+)
+  - check the request is made again right away by the browser and replayed right away by the server
   - *Execute*
-  - check the value is incremented in the UI
+  - check the response reaches the client
       
 ## 4. Unexpected HTML response
 
