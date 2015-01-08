@@ -2,7 +2,7 @@
 
 - check retry happens
     - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
-        - change sleep service to use `sleep?delay=20` (sleep 20 s)
+        - change sleep service to use `sleep?delay=10` (sleep 10 s)
         - add to model
         ```xml
         <xf:setvalue
@@ -26,7 +26,8 @@
         - http://localhost:8080/orbeon/xforms-sandbox/sample/dispatch-delay
         - in Chrome, open the Dev Tools, go to the Network tab (or use HttpScoop or Charles)
         - hit the *Manual save* button
-        - check after 20 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 20 s have elapsed)
+        - check after ~10 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 20 s have elapsed)
+        - can also hit the *Start* button, and notice the number incrementing after ~10s
         - (the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114][2])
 - test request not reaching server
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
