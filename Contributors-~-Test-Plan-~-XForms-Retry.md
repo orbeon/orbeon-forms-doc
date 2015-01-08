@@ -89,7 +89,7 @@
 - http://localhost:8080/orbeon/xforms-upload/
 - select image, and upload start in the background
 - execute all the upload progress requests, but abort the final response to the background upload
-- check it interrupts the download (we're not retrying uploads)
+- check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
 [1]: ./images/test-chrome-timeline.png
 [2]: https://github.com/orbeon/orbeon-forms/issues/1114
