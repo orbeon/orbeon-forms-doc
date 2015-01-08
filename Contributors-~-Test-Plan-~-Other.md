@@ -2,6 +2,7 @@
 
 Features to test, with all supported browsers:
 
+- give CE version a quick run
 - XForms filter
     - http://localhost:8080/orbeon/xforms-jsp/guess-the-number/
     - http://localhost:8080/orbeon/xforms-jsp/flickr-search/
