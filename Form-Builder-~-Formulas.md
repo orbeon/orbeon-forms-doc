@@ -1,12 +1,14 @@
 ## XPath expressions
 
-XPath is a standard _expression language_ for XML. It does not allow you to _modify_ XML data, but it allows you to _query_ XML data and compute values.
+Formulas in Orbeon Forms are expressed using *XPath*, a standard _expression language_ for XML. It does not allow you to _modify_ XML data, but it allows you to _query_ XML data and compute values.
 
 In general you don't need to know about XPath in Form Builder, with the exception of some properties in the Control Settings and Section Settings dialogs. XPath expressions are considered an advanced feature of Form Builder, which might require some programming knowledge.
 
 *NOTE: Incorrect XPath expressions may cause the form to behave improperly, so caution must be applied.*
 
-## Control Settings dialog
+## Where do formulas appear?
+
+### Control Settings dialog
 
 In the Control Details dialog, XPath expressions are used to specify the following aspects of a control:
 
@@ -26,7 +28,7 @@ In the Control Details dialog, XPath expressions are used to specify the followi
 
     * Default: the default value of the control, or the value entered by the form user.  
 
-## Section Settings dialog
+### Section Settings dialog
 
 In the Section Details dialog, XPath expressions are used to specify the following aspects of a section:
 
@@ -37,7 +39,11 @@ In the Section Details dialog, XPath expressions are used to specify the followi
     * If this field is left blank, then the section content is always editable.
     * Otherwise, the section content is editable only if the result of the Boolean expression is false().
 
-## Grid Settings dialog
+### Grid Settings dialog
+
+TODO
+
+### Actions
 
 TODO
 
