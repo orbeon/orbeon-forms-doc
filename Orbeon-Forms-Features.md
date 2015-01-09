@@ -1,8 +1,10 @@
 > [[Home]] ▸ Orbeon Forms Features
 
-## Status
+## Purpose and status
 
-As of 2014-12-03 this page just got started so it's incomplete. Its purpose is to index features by name in a central place.
+The purpose of this page is to index features by name in a central place.
+
+As of 2015-01-08 this page is *very* incomplete.
 
 ## List of Orbeon Forms features
 
