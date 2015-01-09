@@ -21,4 +21,5 @@ The wizard view is optional - you can use the regular view instead, and you can 
 
 ## See also
 
+- [[Wizard XBL component|XForm Runner ~ XBL Components ~ Wizard]]
 - [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog entry which introduces to the feature, including and a video
