@@ -6,10 +6,10 @@
     1. [Form Builder modernization](#form-builder-modernization) (e.g. drag-and-drop)
     1. [Other](#other)
 * Upcoming releases
-    * [Orbeon Forms 4.8](#orbeon-forms-48)
     * [Orbeon Forms 4.9](#orbeon-forms-49)
 * [What's in a release](#whats-in-a-release)
 * Past releases
+    * [Orbeon Forms 4.8](#orbeon-forms-48)
     * [Orbeon Forms 4.6](#orbeon-forms-46)
     * [Orbeon Forms 4.7](#orbeon-forms-47)
 
@@ -61,28 +61,6 @@ This includes:
 - Improved/more out of the box form controls (e.g. SSN, intl phone, etc.)
 
 ## Upcoming releases
-
-### Orbeon Forms 4.8
-
-Focus:
-
-- [ ] one performance item:
-  - [ ] [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718)
-- [ ] one maintenance item from:
-  - [ ] [Recalculate/revalidate: deferred event dispatch #1773](https://github.com/orbeon/orbeon-forms/issues/1773)
-  - [ ] [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
-  - [ ] [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
-- [ ] doc item
-  - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
-
-Issues:
-
-- [ ] [all Orbeon Forms 4.8 issues](https://github.com/orbeon/orbeon-forms/milestones/4.8)
-
-Dates (tentative):
-
-- 2014-11-26: tentative release date
-- 2015-01-08: new tentative release date
 
 ### Orbeon Forms 4.9
 
@@ -153,3 +131,25 @@ Dates:
 - ~~counting 1 slow summer month~~
 - ~~2014-09-10: tentative release date~~
 - ~~2014-09-26: actual release date~~
+
+### Orbeon Forms 4.8
+
+Focus:
+
+- [ ] one performance item:
+  - [ ] [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718)
+- [ ] one maintenance item from:
+  - [ ] [Recalculate/revalidate: deferred event dispatch #1773](https://github.com/orbeon/orbeon-forms/issues/1773)
+  - [ ] [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
+  - [ ] [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
+- [ ] doc item
+  - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
+
+Issues:
+
+- [ ] [all Orbeon Forms 4.8 issues](https://github.com/orbeon/orbeon-forms/milestones/4.8)
+
+Dates (tentative):
+
+- ~~2014-11-26: tentative release date~~
+- ~~2015-01-08: actual release date~~
