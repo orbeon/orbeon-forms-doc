@@ -8,7 +8,7 @@ As a form author, you can mark a form as *singleton* in Form Builder by opening 
 
 ## In Form Runner
 
-At runtime, when accessing the `/new` page of a singleton form, the following will happen depending on the number of form data the current user can access for that form:
+At runtime, when accessing the `/new` page of a singleton form, the following will happen depending on how many form data the current user can access for that form:
 
 - 0: if she can't access any existing data for the current form, then she stays on *new* page for the form.
 - 1: if she can access exactly one form data, she is redirected to the *edit* page for that form.
