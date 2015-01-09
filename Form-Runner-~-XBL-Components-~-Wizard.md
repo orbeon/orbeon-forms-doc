@@ -34,3 +34,8 @@ The `sectionref` attribute allows reading and writing the current section *name*
 When the wizard shows for the first time, the current section value is read from instance data. If it matches one of the section names, the given section is shown first. When the user navigates between sections, the current section name is stored into instance data.
 
 *NOTE: The section name is obtained from the section id by removing its `-section` or `-control` suffix. So in this example, the value stored will be `personal-data` or `comments`*
+
+## See also
+
+- [[Form Runner Wizard View|Form Runner ~ Wizard View]]
+- [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog entry which introduces to the feature, including and a video
