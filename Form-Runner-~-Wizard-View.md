@@ -22,4 +22,3 @@ The wizard view is optional - you can use the regular view instead, and you can 
 See also:
 
 - [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog entry which introduces to the feature, including and a video
-- [Create a wizard or multi-page form with Form Builder](http://wiki.orbeon.com/forms/how-to/fb-fr/form-builder-wizard): a way to implement this by hand for older version of Orbeon Forms
