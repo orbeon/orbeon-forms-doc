@@ -6,7 +6,7 @@ Most forms are filled out for a given purpose, and then submitted. When the init
 
 As a form author, you can mark a form as *singleton* in Form Builder by opening the *Form Settings* dialog, and clicking on the *Singleton form* checkbox.
 
-## In Form Running
+## In Form Runner
 
 At runtime, when accessing the `/new` page of a singleton form, the following will happen depending on the number of form data the current user can access for that form:
 
