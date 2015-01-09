@@ -174,7 +174,7 @@ Explanation:
     * `@size` accesses the file size
 * `$my-attachment/@filename` returns the file name associated with attachment "my-attachment"
 * The `lower-case()` function converts that name to a lower case value
-* The `ends-with()` function checks whether its first argument ends with the second argument_  
+* The `ends-with()` function checks whether its first argument ends with the second argument
 
 Similarly, you can test the file type:
 
