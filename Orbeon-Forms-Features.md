@@ -32,5 +32,5 @@ As of 2015-01-08 this page is *very* incomplete.
   - Liferay full portlet
   - Liferay proxy portlet
 - Core
-  - Limiter to limit the number of concurrent form requests
+  - Limiter filter to limit the number of concurrent form requests: [[doc|Installation ~ Limiter Filter]]
   - Internal service requests
