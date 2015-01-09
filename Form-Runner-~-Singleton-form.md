@@ -4,7 +4,7 @@ Most forms are filled out for a given purpose, and then submitted. When the init
 
 ## In Form Builder
 
-As a form author, you can mark as form as *singleton* in Form Builder by opening the *Form Settings* dialog, and clicking on the *Singleton form* checkbox.
+As a form author, you can mark a form as *singleton* in Form Builder by opening the *Form Settings* dialog, and clicking on the *Singleton form* checkbox.
 
 ## In Form Running
 
