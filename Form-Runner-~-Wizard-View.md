@@ -19,6 +19,6 @@ The wizard view is optional - you can use the regular view instead, and you can 
   value="wizard"/>
 ```
 
-See also:
+## See also
 
 - [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog entry which introduces to the feature, including and a video
