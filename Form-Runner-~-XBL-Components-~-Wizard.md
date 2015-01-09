@@ -38,4 +38,4 @@ When the wizard shows for the first time, the current section value is read from
 ## See also
 
 - [[Form Runner Wizard View|Form Runner ~ Wizard View]]: the relevant Form Runner documentation
-- [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, including and a video
+- [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, with a video
