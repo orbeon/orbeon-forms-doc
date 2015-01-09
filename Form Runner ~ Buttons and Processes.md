@@ -217,9 +217,12 @@ Send data to an HTTP URL.
         - `xml` to send the XML data (default)
         - `pdf-url` to send the PDF URL
         - `metadata`: to send form metadata [SINCE Orbeon Forms 4.7]
+    - `data-format-version` [SINCE Orbeon Forms 4.8]:
+        - `edge`: send the data in the latest internal format
+        - `4.0.0`: send the data in the Orbeon Forms 4.0-compatible format (the default)
     - `parameters`:
         - space-separated list of standard parameters to automatically add to the URL (see below)
-        - default: `app form form-version document valid language process`
+        - default: `app form form-version document valid language process data-format-version`
             - `form-version` added to defaults in Orbeon Forms 4.7
             - `process` added to defaults in Orbeon Forms 4.7
 - properties used
