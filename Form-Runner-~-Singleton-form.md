@@ -1,6 +1,6 @@
 ## Use case
 
-Most forms are filled out for a given purpose, and then submitted. When the initial purpose comes up again, the form is filled and submitted one more time. For instance, a *car registration* form would be such an example. However, certain forms are often used more like "documents", that users create, and then come back to update, without creating another instance of the form. Those forms are here referred to as *singleton forms*.
+Most forms are filled out for a given purpose, and then submitted. When the initial purpose comes up again, the form is filled and submitted one more time. For instance, a *car registration* form would be such an example. However, certain forms are often used more like "documents", that users create, and then come back to update, without creating another instance of that form/document. Those forms are here referred to as *singleton forms*.
 
 ## In Form Builder
 
