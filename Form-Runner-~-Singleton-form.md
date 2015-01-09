@@ -12,7 +12,7 @@ As a form author, you can mark a form as *singleton* in Form Builder by opening 
 
 When accessing the *new* page of a singleton form, the following will happen depending on how many form data the current user can access for that form:
 
-- 0: if she can't access any existing data for the current form, then she stays on *new* page for the form.
+- 0: if she can't access any existing data for the current form, then she stays on the *new* page for the form.
 - 1: if she can access exactly one form data, she is redirected to the *edit* page for that form.
 - 2 or more: a dialog warns her she can't create any additional form data, and links to the *summary* page for that form, which she can use to pick the form data she wants to edit.
 
