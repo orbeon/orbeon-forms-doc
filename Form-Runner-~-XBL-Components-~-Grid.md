@@ -17,7 +17,7 @@ Non-repeated usage:
 <fr:grid id="note-grid">
     <xh:tr>
         <xh:td>
-            <xf:textarea id="note-text-control" bind="note-text-bind" appearance="xxf:autosize">
+            <xf:textarea id="note-text-control" bind="note-text-bind">
                 <xf:label ref="$form-resources/note-text/label"/>
                 <xf:hint ref="$form-resources/note-text/hint"/>
                 <xf:help ref="$form-resources/note-text/help"/>
@@ -38,10 +38,15 @@ _NOTE: In the future `bind` and `ref` should be supported._
 Repeated usage:
 
 ```xml
-<fr:grid id="note-grid" repeat="content" bind="note-bind" template="instance('note-template')" min="0">
+<fr:grid 
+    id="note-grid" 
+    repeat="content" 
+    bind="note-bind" 
+    template="instance('note-template')" 
+    min="0">
     <xh:tr>
         <xh:td>
-            <xf:textarea id="note-text-control" bind="note-text-bind" appearance="xxf:autosize">
+            <xf:textarea id="note-text-control" bind="note-text-bind">
                 <xf:label ref="$form-resources/note-text/label"/>
                 <xf:hint ref="$form-resources/note-text/hint"/>
                 <xf:help ref="$form-resources/note-text/help"/>
