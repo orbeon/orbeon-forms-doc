@@ -8,13 +8,19 @@ As a form author, you can mark a form as *singleton* in Form Builder by opening 
 
 ## In Form Runner
 
-At runtime, when accessing the *new* page of a singleton form, the following will happen depending on how many form data the current user can access for that form:
+### New page
+
+When accessing the *new* page of a singleton form, the following will happen depending on how many form data the current user can access for that form:
 
 - 0: if she can't access any existing data for the current form, then she stays on *new* page for the form.
 - 1: if she can access exactly one form data, she is redirected to the *edit* page for that form.
 - 2 or more: a dialog warns her she can't create any additional form data, and links to the *summary* page for that form, which she can use to pick the form data she wants to edit.
 
+### Summary page
+
 When accessing the *summary* page for a singleton form, the *New* button won't show if the user can access 1 or more form data.
+
+### Driven by permissions
 
 The simplest use case, described above, calls for having at most 1 form data per user, however, since the *singleton* aspect is driven by what users can see, you can use permissions to control whether you want to have one form per user, per group, per users having a given role, or even in the whole system.
 
