@@ -1,6 +1,4 @@
-This is the landing page for the Orbeon Forms documentation.
-
-Main topics covered on this site:
+This is the landing page for the Orbeon Forms documentation. The main topics covered on this site are:
 
 - [[Installation]]
 - [[Form Builder]]
