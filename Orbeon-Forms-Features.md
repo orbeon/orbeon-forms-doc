@@ -12,6 +12,7 @@ As of 2015-01-08 this page is *very* incomplete.
   - Inserting and reordering grid rows: [blog post](http://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
   - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
   - Singleton forms: [[doc|Form Runner ~ Singleton Form]]
+  - Versioning of form definitions: [blog](http://blog.orbeon.com/2014/02/form-versioning.html)
 - Form Builder
   - Repeated grids: [[doc|Form Builder ~ Repeated Grids]], [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
 - Form Runner
