@@ -71,7 +71,15 @@ Tell Orbeon Forms the name of the HTTP headers that contain the username, group,
 <property as="xs:string" name="oxf.fr.authentication.header.roles"    value="My-Roles-Header"/>
 ```
 
-The header `oxf.fr.authentication.header.roles` consists of a list of comma- or pipe-separated role names, for example: "Administrator, Power User, User" or"Administrator | Power User | User". White space around the commas or pipes is ignored. In addition or alternatively, multiple role headers can be provided, and each of them is split according to those roles. The resulting set of roles is the combination of all roles extracted from all role headers.
+The header `oxf.fr.authentication.header.roles` consists of a list of comma- or pipe-separated role names, for example:
+
+    Administrator, Power User, User
+
+or:
+
+    Administrator | Power User | User
+
+White space around the commas or pipes is ignored. In addition or alternatively, multiple role headers can be provided, and each of them is split according to those roles. The resulting set of roles is the combination of all roles extracted from all role headers.
 
 #### 3. Forwarding headers (Orbeon Forms 4.6 and earlier)
 
