@@ -80,7 +80,7 @@ The Required validation can have a custom alert message.
 
 A constraint is a boolean XPath expression running with the XML element containing the value as context item. The constraint *fails* if the expression doesn't return `true()`. This also means that it fails if there is an error while running the constraint.
 
-See also [Advanced: XPath expressions in Form Builder](http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/xpath-expressions).
+See also [[Form Builder Formulas|Form Builder ~ Formulas]].
 
 For example the following expression, which would make sense for a birthday date field, checks that the user is 18 year old or older:
 
