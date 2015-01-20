@@ -95,12 +95,13 @@ In addition or alternatively, multiple role headers can be provided, and each of
 
 [SINCE Orbeon Forms 4.9] The splitting of header names can be overridden with the following property:
 
-    ```xml
-    <property
-        as="xs:string"
-        name="oxf.fr.authentication.header.roles.split"
-        value="(\s*[,\|]\s*)+"/>
-    ```
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.header.roles.split"
+    value="(\s*[,\|]\s*)+"/>
+```
+
 #### 3. Forwarding headers (Orbeon Forms 4.6 and earlier)
 
 *NOTE: This step is not necessary for Orbeon Forms 4.7 and newer.*
