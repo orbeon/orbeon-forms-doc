@@ -17,13 +17,21 @@ You want to use container roles if your users are setup at the application serve
         name="oxf.fr.authentication.method"
         value="container"/>
     ```
-2. __List possible roles__ – There is no container API for Orbeon Forms to ask for all the roles for the current user; instead Orbeon Forms can only ask if the current user has a specific role. Because of this, you need to list the possible roles in the following property. For instance, if you have two roles `form-builder-hr` and `form-builder-finance` define it as:
+2. __List possible roles__ – There is no container API for Orbeon Forms to ask for all the roles for the current user; instead Orbeon Forms can only ask if the current user has a specific role. Because of this, you need to list the possible roles in the following property. For instance, if you have two roles `form-builder-hr` and `form-builder-finance` define them as:
 
     ```xml
     <property
         as="xs:string"
         name="oxf.fr.authentication.container.roles"
         value="form-builder-hr form-builder-finance"/>
+    ```
+    [SINCE Orbeon Forms 4.9] By default, the `oxf.fr.authentication.container.roles` property splits header names on commas, pipes, and white space. This can be overridden with the following property:
+
+    ```xml
+    <property
+        as="xs:string"
+        name="oxf.fr.authentication.container.roles.split"
+        value=",|\s+"/>
     ```
 3. __Groups__ – 
 There is no container API for Orbeon Forms to get the user's group; in fact the concept of _group_is foreign the container API. So, when using container-driven method, Orbeon Forms takes the first role listed in `oxf.fr.authentication.container.roles` that the user has as the user's group. If you need more flexibility in determining what the user's group is, you might want to use the _header-driven method_ instead, which allows you to explicitly set through a header what the user's group is (more on this below).
