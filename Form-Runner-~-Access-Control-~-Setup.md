@@ -25,7 +25,8 @@ You want to use container roles if your users are setup at the application serve
         name="oxf.fr.authentication.container.roles"
         value="form-builder-hr form-builder-finance"/>
     ```
-    [SINCE Orbeon Forms 4.9] By default, the `oxf.fr.authentication.container.roles` property splits header names on commas, pipes, and white space. This can be overridden with the following property:
+    Header names are split on commas, pipes, and white space (based on the regular expression `,|\s+`).
+    [SINCE Orbeon Forms 4.9] The splitting of header names can be overridden with the following property:
 
     ```xml
     <property
@@ -80,7 +81,7 @@ Tell Orbeon Forms the name of the HTTP headers that contain the username, group,
 <property as="xs:string" name="oxf.fr.authentication.header.roles"    value="My-Roles-Header"/>
 ```
 
-The header `oxf.fr.authentication.header.roles` consists of a list of comma- or pipe-separated role names, for example:
+The header `oxf.fr.authentication.header.roles` consists of a list of comma- or pipe-separated role names (following the regular expression `(\s*[,\|]\s*)+`), for example:
 
     Administrator, Power User, User
 
@@ -88,8 +89,18 @@ or:
 
     Administrator | Power User | User
 
-White space around the commas or pipes is ignored. In addition or alternatively, multiple role headers can be provided, and each of them is split according to those roles. The resulting set of roles is the combination of all roles extracted from all role headers.
+White space around the commas or pipes is ignored.
 
+In addition or alternatively, multiple role headers can be provided, and each of them is split according to those roles. The resulting set of roles is the combination of all roles extracted from all role headers.
+
+[SINCE Orbeon Forms 4.9] The splitting of header names can be overridden with the following property:
+
+    ```xml
+    <property
+        as="xs:string"
+        name="oxf.fr.authentication.header.roles.split"
+        value="(\s*[,\|]\s*)+"/>
+    ```
 #### 3. Forwarding headers (Orbeon Forms 4.6 and earlier)
 
 *NOTE: This step is not necessary for Orbeon Forms 4.7 and newer.*
