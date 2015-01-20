@@ -25,7 +25,7 @@ You want to use container roles if your users are setup at the application serve
         name="oxf.fr.authentication.container.roles"
         value="form-builder-hr form-builder-finance"/>
     ```
-    Header names are split on commas, pipes, and white space (based on the regular expression `,|\s+`).
+    Header names are split on commas, pipes, and white space (using the regular expression `,|\s+`).
     [SINCE Orbeon Forms 4.9] The splitting of header names can be overridden with the following property:
 
     ```xml
@@ -81,7 +81,7 @@ Tell Orbeon Forms the name of the HTTP headers that contain the username, group,
 <property as="xs:string" name="oxf.fr.authentication.header.roles"    value="My-Roles-Header"/>
 ```
 
-The header `oxf.fr.authentication.header.roles` consists of a list of comma- or pipe-separated role names (following the regular expression `(\s*[,\|]\s*)+`), for example:
+The header `oxf.fr.authentication.header.roles` consists of a list of comma- or pipe-separated role names (using the regular expression `(\s*[,\|]\s*)+`), for example:
 
     Administrator, Power User, User
 
