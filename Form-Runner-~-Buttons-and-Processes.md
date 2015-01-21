@@ -1,15 +1,15 @@
 - [Availability](#availability)
 - [What this is about](#what-this-is-about)
-- [Defining a process]
+- [Defining a process](#defining-a-process)
 - [Associating a process with a button]
-- [Core actions]
+- [Core actions](#core-actions)
     - [success]
     - [process]
     - [suspend]
     - [resume]
     - [abort]
     - [nop]
-- [Core Form Runner actions]
+- [Core Form Runner actions](#core-form-runner-actions)
     - [validate]
     - [pending-uploads]
     - [save]
@@ -24,19 +24,19 @@
     - [xf:send]
     - [xf:show]
     - [Other actions]
-- [Predefined reusable processes]
-- [Processes that apply to services]
+- [Predefined reusable processes](#predefined-reusable-processes)
+- [Processes that apply to services](#processes-that-apply-to-services)
     - [oxf.fr.service.duplicate.transform]
-- [Combining actions]
-- [Action parameters]
-- [Grouping actions]
-- [Conditions]
-- [Predefined buttons]
-- [Standard dialogs]
+- [Combining actions](#combining-actions)
+- [Action parameters](#action-parameters)
+- [Grouping actions](#grouping-actions)
+- [Conditions](#conditions)
+- [Predefined buttons](#predefined-buttons)
+- [Standard dialogs](#standard-dialogs)
     - [Validation dialog]
     - [The result dialog]
-- [Customizing processes]
-- [Compatibility notes]
+- [Customizing processes](#customizing-processes)
+- [Compatibility notes](#compatibility-notes)
     - [Starting with Orbeon Forms 4.2]
         - [Related Orbeon Forms 4.1 and earlier functionality]
         - [Deprecated buttons]
