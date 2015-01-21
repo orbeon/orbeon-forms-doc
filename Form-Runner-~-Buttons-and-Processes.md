@@ -1,7 +1,48 @@
-## See also
-
-- this blog post for an introduction to the feature: [More powerful buttons](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
-- the predefined configuration properties in [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml)
+- [Availability](#availability)
+- [What this is about](#what-this-is-about)
+- [Defining a process]
+- [Associating a process with a button]
+- [Core actions]
+    - [success]
+    - [process]
+    - [suspend]
+    - [resume]
+    - [abort]
+    - [nop]
+- [Core Form Runner actions]
+    - [validate]
+    - [pending-uploads]
+    - [save]
+    - [email]
+    - [send]
+    - [set-data-status]
+    - [navigate]
+    - [success-message and error-message]
+    - [confirm]
+    - [xf:setvalue]
+    - [xf:dispatch]
+    - [xf:send]
+    - [xf:show]
+    - [Other actions]
+- [Predefined reusable processes]
+- [Processes that apply to services]
+    - [oxf.fr.service.duplicate.transform]
+- [Combining actions]
+- [Action parameters]
+- [Grouping actions]
+- [Conditions]
+- [Predefined buttons]
+- [Standard dialogs]
+    - [Validation dialog]
+    - [The result dialog]
+- [Customizing processes]
+- [Compatibility notes]
+    - [Starting with Orbeon Forms 4.2]
+        - [Related Orbeon Forms 4.1 and earlier functionality]
+        - [Deprecated buttons]
+        - [Removed property]
+    - [Starting with Orbeon Forms 4.3]
+        - [The validate action no longer supports a property]
 
 ## Availability
 
@@ -847,3 +888,8 @@ The `validate` action no longer supports a `property` parameter. In particular, 
 This also means that the `maybe-require-valid` process is no longer available.
 
 Instead, use the `save-draft` process, or customize a process with the `save` action but no `require-valid`.
+
+## See also
+
+- This blog post for an introduction to the feature: [More powerful buttons](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
+- The predefined configuration properties in [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml)
