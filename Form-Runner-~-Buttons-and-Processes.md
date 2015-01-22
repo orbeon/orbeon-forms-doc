@@ -1,47 +1,47 @@
 - [Availability](#availability)
 - [What this is about](#what-this-is-about)
 - [Defining a process](#defining-a-process)
-- [Associating a process with a button]
+- [Associating a process with a button](#associating-a-process-with-a-button)
 - [Core actions](#core-actions)
-    - [success]
-    - [process]
-    - [suspend]
-    - [resume]
-    - [abort]
-    - [nop]
+    - [success](#success)
+    - [process](#process)
+    - [suspend](#suspend)
+    - [resume](#resume)
+    - [abort](#abort)
+    - [nop](#nop)
 - [Core Form Runner actions](#core-form-runner-actions)
-    - [validate]
-    - [pending-uploads]
-    - [save]
-    - [email]
-    - [send]
-    - [set-data-status]
-    - [navigate]
-    - [success-message and error-message]
-    - [confirm]
-    - [xf:setvalue]
-    - [xf:dispatch]
-    - [xf:send]
-    - [xf:show]
-    - [Other actions]
+    - [validate](#validate)
+    - [pending-uploads](#pending-uploads)
+    - [save](#save)
+    - [email](#email)
+    - [send](#send)
+    - [set-data-status](#set-data-status)
+    - [navigate](#navigate)
+    - [success-message and error-message](#success-message-and-error-message)
+    - [confirm](#confirm)
+    - [xf:setvalue](#xfsetvalue)
+    - [xf:dispatch](#xfdispatch)
+    - [xf:send](#xfsend)
+    - [xf:show](#xfshow)
+    - [Other actions](#other-actions)
 - [Predefined reusable processes](#predefined-reusable-processes)
 - [Processes that apply to services](#processes-that-apply-to-services)
-    - [oxf.fr.service.duplicate.transform]
+    - [oxf.fr.service.duplicate.transform](#oxffrserviceduplicatetransform)
 - [Combining actions](#combining-actions)
 - [Action parameters](#action-parameters)
 - [Grouping actions](#grouping-actions)
 - [Conditions](#conditions)
 - [Predefined buttons](#predefined-buttons)
 - [Standard dialogs](#standard-dialogs)
-    - [Validation dialog]
-    - [The result dialog]
+    - [Validation dialog](#validation-dialog)
+    - [The result dialog](#the-result-dialog)
 - [Customizing processes](#customizing-processes)
 - [Compatibility notes](#compatibility-notes)
-    - [Starting with Orbeon Forms 4.2]
+    - [Starting with Orbeon Forms 4.2](#starting-with-orbeon-forms-42)
         - [Related Orbeon Forms 4.1 and earlier functionality]
         - [Deprecated buttons]
         - [Removed property]
-    - [Starting with Orbeon Forms 4.3]
+    - [Starting with Orbeon Forms 4.3](#starting-with-orbeon-forms-43)
         - [The validate action no longer supports a property]
 
 ## Availability
