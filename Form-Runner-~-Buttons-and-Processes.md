@@ -38,11 +38,11 @@
 - [Customizing processes](#customizing-processes)
 - [Compatibility notes](#compatibility-notes)
     - [Starting with Orbeon Forms 4.2](#starting-with-orbeon-forms-42)
-        - [Related Orbeon Forms 4.1 and earlier functionality]
-        - [Deprecated buttons]
-        - [Removed property]
+        - [Related Orbeon Forms 4.1 and earlier functionality](#related-orbeon-forms-41-and-earlier-functionality)
+        - [Deprecated buttons](#deprecated-buttons)
+        - [Removed property](#removed-property)
     - [Starting with Orbeon Forms 4.3](#starting-with-orbeon-forms-43)
-        - [The validate action no longer supports a property]
+        - [The validate action no longer supports a property](#the-validate-action-no-longer-supports-a-property)
 
 ## Availability
 
