@@ -4,7 +4,7 @@ See [[Database Support|Orbeon Forms Features ~ Database Support]].
 
 ## See also
 
--[Blog post](http://blog.orbeon.com/2013/10/autosave.html).
+- [Blog post](http://blog.orbeon.com/2013/10/autosave.html).
 
 ## Enabling autosave
 
