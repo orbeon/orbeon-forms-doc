@@ -1,6 +1,6 @@
 ## Support
 
-See [[Database Support|Orbeon Forms Features ~ Database Support]].
+See [[Database Support|Orbeon Forms Features ~ Database Support]] for the detail of which persistence layers support autosave.
 
 ## See also
 
@@ -15,8 +15,6 @@ The following conditions must be met for autosave to happen:
 - The form mode must be `new` or `edit`.
 - The persistence layer must support autosave and have the `oxf.fr.persistence.$name.autosave` property set to `true` (`true` by default for the built-in relational databases).
 - The autosave delay (set with `oxf.fr.detail.autosave-delay`) must be greater than `0` (which is the case by default).
-
-See [[Database-Support|Orbeon-Forms-Features ~ Database-Support]] for the detail of which persistence layers support autosave.
 
 *NOTE: Form Builder doesn't support autosave as of Orbeon Forms 4.8.*
 
