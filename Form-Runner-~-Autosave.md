@@ -97,4 +97,4 @@ For example, as of Orbeon Forms 4.4, the `exist` provider does not support autos
   value="true"/>
 ```
 
-For database support, see [[Database-Support|Orbeon-Forms-Features ~ Database-Support]].
+For database support, see [[Database Support|Orbeon Forms Features ~ Database Support]].
