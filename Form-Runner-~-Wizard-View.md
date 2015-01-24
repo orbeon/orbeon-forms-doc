@@ -1,14 +1,18 @@
+## Availability
+
 [SINCE Orbeon Forms 4.0]
+
+## Basic usage
 
 By default with Form Runner all the form sections appear in the same page, on top of each other. If your form is large that means that you have to scroll to fill out the entire form.
 
-With the wizard view, top-level sections instead appear in a navigation area to the left, and only a single top-level section is shown at any given time:
+With the wizard view, top-level sections instead appear in a table of contents area to the left, and only a single top-level section is shown at any given time in a separate wizard "page":
 
 ![Form Runner Wizard](images/fr-wizard.png)
 
-You can navigate between sections by clicking on a section title, or you can use the navigation arrows.
+You can navigate between pages by clicking on a title in the table of contents, or you can use the navigation arrows. You can also use "Prev" and "Next" buttons when configured.
 
-Errors on your form appear at the bottom as usual, and sections that contain errors are highlighted in red. If you click on an error you are taken directly to the section and control containing the error.
+Errors on your form appear at the bottom as usual, and the title of pages that contain errors are highlighted in red. If you click on an error you are taken directly to the page and control containing the error.
 
 The wizard view is optional - you can use the regular view instead, and you can enable this view per form, per app, or globally with a property:
 
@@ -17,6 +21,29 @@ The wizard view is optional - you can use the regular view instead, and you can 
   as="xs:string"
   name="oxf.fr.detail.view.appearance.*.*"
   value="wizard"/>
+```
+
+## Modes
+
+[SINCE Orbeon Forms 4.9]
+
+By default, forward and back navigation, as well as changing page with the table of contents, can be done freely.
+
+The wizard also supports a "validated" mode, where forward navigation is dependent on whether form fields are valid. In this mode:
+
+- as in the "free" mode, you can freely go back to a previous page
+- unlike the "free" mode, you can only go forward if
+  - there are no errors on the preceding and current page
+  - or if you have already visited the next page
+- the table of contents only allow you to select pages you have already visited 
+
+The following property controls the behavior:
+
+```xml
+<property
+  as="xs:boolean"
+  name="oxf.xforms.xbl.fr.wizard.validate.*.*"
+  value="true"/>
 ```
 
 ## See also
