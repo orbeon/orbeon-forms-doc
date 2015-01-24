@@ -27,17 +27,26 @@ The wizard view is optional - you can use the regular view instead, and you can 
 
 [SINCE Orbeon Forms 4.9]
 
-By default, forward and back navigation, as well as changing page with the table of contents, can be done freely.
+The wizard supports two mode:
 
-The wizard also supports a "validated" mode, where forward navigation is dependent on whether form fields are valid. In this mode:
+- the *free* mode (which is the default mode)
+- the *validated* mode
 
-- as in the "free" mode, you can freely go back to a previous page
-- unlike the "free" mode, you can only go forward if
-  - there are no errors on the preceding and current page
+When using the free mode, you can freely:
+
+- go back to the preceding page
+- go forward to the next page
+- change page from the table of contents
+
+When using the validated mode:
+
+- you can freely go back to the preceding page
+- but you can only go forward to the next page if
+  - there are no errors on all preceding pages as well as the current page
   - or if you have already visited the next page
-- the table of contents only allow you to select pages you have already visited 
+- the table of contents only allow you to navigate to pages you have already visited 
 
-The following property controls the behavior:
+The following property enables the validated mode:
 
 ```xml
 <property
