@@ -25,12 +25,10 @@ The wizard view is optional - you can use the regular view instead, and you can 
 
 ## Modes
 
-[SINCE Orbeon Forms 4.9]
-
 The wizard supports two mode:
 
 - the *free* mode (which is the default mode)
-- the *validated* mode
+- the *validated* mode [SINCE Orbeon Forms 4.9]
 
 When using the free mode, you can freely:
 
