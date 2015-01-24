@@ -35,6 +35,7 @@ When using the free mode, you can freely:
 - go back to the preceding page
 - go forward to the next page
 - change page from the table of contents
+- leaving a page marks all fields on the given page as visited, ensuring that errors on that page, if any, show in the error summary
 
 When using the validated mode:
 
@@ -43,6 +44,8 @@ When using the validated mode:
   - there are no errors on all preceding pages as well as the current page
   - or if you have already visited the next page
 - the table of contents only allow you to navigate to pages you have already visited 
+- you should generally use the "Prev" or "Next" buttons for navigation
+- any attempt to navigate to the next page marks all the fields of the preceding pages as well as the current page as visited, ensuring that errors on those pages, if any, show in the error summary
 
 The following property enables the validated mode:
 
