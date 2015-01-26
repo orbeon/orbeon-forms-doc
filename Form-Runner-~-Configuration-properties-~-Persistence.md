@@ -48,8 +48,9 @@ Property | Explanation
 `oxf.fr.persistence.provider.orbeon.contact.form`   | form definitions for "orbeon/contact"
 `oxf.fr.persistence.provider.orbeon.contact.data`   | form data for "orbeon/contact"
 
-For example some built-in demo forms as well as Form Builder load their form definitions directly from the Orbeon
-Forms web application. This is done my using more specific properties (without wildcards):
+_NOTE: This means that you can't name a persistence provider `provider`._
+
+For example some built-in demo forms as well as Form Builder load their form definitions directly from the Orbeon Forms web application. This is done my using more specific properties (without wildcards):
 
 ```xml
 <property
@@ -115,8 +116,6 @@ An *active* provider means a provider which is visible to Form Runner. If a prov
 
 Each provider may have specific configuration properties. For the latest settings, see
 [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml#L17).
-
-_NOTE: You can't name a persistence provider `provider`._
 
 ## See also
 
