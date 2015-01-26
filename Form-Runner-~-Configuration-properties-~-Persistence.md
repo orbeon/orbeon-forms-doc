@@ -117,3 +117,8 @@ Each provider may have specific configuration properties. For the latest setting
 [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml#L17).
 
 _NOTE: You can't name a persistence provider `provider`._
+
+## See also
+
+- [Persistence API](https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/form-
+runner/persistence-api)
