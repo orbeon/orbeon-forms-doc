@@ -185,3 +185,9 @@ A related known issue, from the command-line, is that running `ant classes` twic
 Alternatively:
 
 - run `ant teamcity-release` to clean, test, and build the entire release
+
+## About building Orbeon Forms PE
+
+Orbeon does not provide public instructions or code to build Orbeon Forms PE, which is a commercial, supported build of the product. If you are a PE customer, contact Orbeon at info@orbeon.com.
+
+The idea is just that we want to ensure that something called "Orbeon Forms PE" in fact comes from Orbeon.
