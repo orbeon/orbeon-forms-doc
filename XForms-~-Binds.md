@@ -1,10 +1,19 @@
 ## Introduction
 
-The XForms `xf:bind` element is used to point to data and allows to associate:
+The XForms `xf:bind` element is used to point to data in the data model. It allows to associate with data:
 
 - an `id`
-- a `name` [Orbeon extension]
-- 
+- a `name` (see [[Model Bind Variables|XForms ~ Model Bind Variables]])
+- properties, called "Model Item Properties" or MIPs
+
+This serves the following functions:
+
+- in the model
+  - determine which part of the data is valid, readonly, and relevant
+  - apply calculations to the data (formulas)
+  - export variables used in calculations (see [[Model Bind Variables|XForms ~ Model Bind Variables]])
+- in the model and in the view
+  - as an indirection to the data model, with the `bind` attribute or the `xxf:bind()` function
 
 ## Extensions
 
