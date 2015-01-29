@@ -22,16 +22,21 @@ Instead of the `type`, `readonly`, `required`, `relevant`, `calculate`, `constra
 - `xf:constraint`
 - `xxf:default` (see below)
 
-All elements except `xf:type` (whose value is not an XPath expression but a type literal) have a `value` attribute. The following is equivalent:
+All elements except `xf:type` (whose value is not an XPath expression but a type literal) have a `value` attribute. The following binds are equivalent:
 
 ```xml
-<xf:bind ref="control-1" type="xf:decimal" xxf:default="42" constraint=". ge 10" required="true()"/>
+<xf:bind
+    ref="control-1" 
+    type="xf:decimal" 
+    xxf:default="42" 
+    constraint=". ge 10" 
+    required="true()"/>
 ```
 
 and:
 
 ```xml
-<xf:bind ref="control-1" type="xs:decimal" xxf:default="42" constraint=". ge 10" required="true()" relevant="$qty gt 0">
+<xf:bind ref="control-1">
     <xf:type>xs:decimal</xf:type>
     <xxf:default value="42"/>
     <xf:constraint value=". ge 10"/>
