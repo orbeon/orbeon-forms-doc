@@ -1,10 +1,10 @@
 ## Introduction
 
-TODO
+The XForms `xf:bind` element is used to point to data and allows to associate:
 
-## Standard Model Item Properties (MIPs)
-
-TODO
+- an `id`
+- a `name` [Orbeon extension]
+- 
 
 ## Extensions
 
@@ -228,6 +228,7 @@ You often want to present a form without allowing the user to enter data. An eas
 ## See also
 
 - [[XForms Validation|XForms ~ Validation]]
+- [[XForms Model bind variables| XForms ~ Model bind variables]]
 - [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
