@@ -10,9 +10,42 @@ TODO
 
 ### Nested MIP elements
 
-[SINCE Orbeon Forms 4.9]
+[SINCE Orbeon Forms 4.3 for `xf:constraint`, and 4.9 for other elements]
 
-xxxx
+Instead of the `type`, `readonly`, `required`, `relevant`, `calculate`, `constraint`, and `xxf:default` attributes, you can use nested elements:
+
+- `xf:type`
+- `xf:readonly`
+- `xf:required`
+- `xf:relevant`
+- `xf:calculate`
+- `xf:constraint`
+- `xxf:default` (see below)
+
+All elements except `xf:type` (whose value is not an XPath expression but a type literal) have a `value` attribute. The following is equivalent:
+
+```xml
+<xf:bind ref="control-1" type="xf:decimal" xxf:default="42" constraint=". ge 10" required="true()"/>
+```
+
+and:
+
+```xml
+<xf:bind ref="control-1" type="xs:decimal" xxf:default="42" constraint=". ge 10" required="true()" relevant="$qty gt 0">
+    <xf:type>xs:decimal</xf:type>
+    <xxf:default value="42"/>
+    <xf:constraint value=". ge 10"/>
+    <xf:required value="true()"/>
+    <xf:relevant value="$qty gt 0"/>
+</xf:bind>
+```
+
+This enables two features:
+
+- the ability to assign a specific `id` attribute to a property
+- the ability to specify multiple `readonly`, `required`, `relevant`, and `constraint` rules (which combined using either a boolean "or" or a boolean "and")
+
+See [[XForms Validation|XForms ~ Validation]] for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
 
 ### Multiple binds pointing to the same node
 
@@ -27,10 +60,12 @@ Properties (MIPs) have a default value:
 
 The resulting value of a property on a given node when multiple binds touch that node is the result of a boolean combination:
 
-- required: boolean or
-- valid: boolean and
-- relevant: boolean and
-- readonly: boolean or
+- required: boolean "or"
+- valid: boolean "and"
+- relevant: boolean "and"
+- readonly: boolean "or"
+
+The values also combined this way when multiple nested elements are specified on a same bind.
 
 Consider the following example:
 
