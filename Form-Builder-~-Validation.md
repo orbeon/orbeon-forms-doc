@@ -178,3 +178,10 @@ The user has the following choices:
 These processes are entirely configurable. See [[Buttons and Processes|Form-Runner-~-Buttons-and-Processes]] for more information.
 
 Optionally, it is possible to annotate the XML data submitted with error, warning or informational messages. See [[Buttons and Processes|Form-Runner-~-Buttons-and-Processes]] for more information.
+
+## See also
+
+- [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
+- [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
+- [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
+- [[XForms Validation|XForms ~ Validation]]
