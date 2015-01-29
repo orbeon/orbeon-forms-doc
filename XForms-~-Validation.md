@@ -22,17 +22,15 @@ Orbeon Forms performs validation of a node in the following order:
 - data type validation
     - XML Schema validation (lax/strict/none on model instances)
     - `xf:bind/@type`
-    - `xf:validation/@type`
+    - `xf:type`
 - required validation
     - required-but-empty
     - `xf:bind/@required`
-    - `xf:validation/@required`
+    - `xf:required/@value`
 - constraints
     - `xf:bind/@constraint`
-    - `xf:validation/@constraint` (or deprecated  `xf:constraint`)
+    - `xf:constraint/@value`
     - are checked *only* if the control's data type is valid
-
-*NOTE: The `xf:constraint` element, introduced with Orbeon Forms 4.3, is deprecated in Orbeon Forms 4.9 in favor of `xf:validation`.*
 
 ## Extensions
 
@@ -40,18 +38,18 @@ Orbeon Forms performs validation of a node in the following order:
 
 [SINCE: Orbeon Forms 4.3]
 
-XForms allows a single `constraint` attribute on the `xf:bind` element. Orbeon Forms extends this to support any number of nested `xf:validation` elements (or deprecated `xf:constraint` elements), each specifying a single validation:
+XForms allows a single `constraint` attribute on the `xf:bind` element. Orbeon Forms extends this to support any number of nested `xf:constraint` elements, each specifying a single validation:
 
 ```xml
 <xf:bind ref="." id="input-bind">
-    <xf:validation 
+    <xf:constraint 
         id="length-constraint"    
         level="error"   
-        constraint="string-length() gt 1"/>
-    <xf:validation 
+        value="string-length() gt 1"/>
+    <xf:constraint 
         id="uppercase-constraint" 
         level="warning" 
-        constraint="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
+        value="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
 </xf:bind>
 ```
 
@@ -87,7 +85,7 @@ If there is a single error constraint, the following binds are equivalent:
 <xf:bind ref="." id="input-bind" constraint="string-length() gt 1"/>
 
 <xf:bind ref="." id="input-bind">
-    <xf:validation level="error" constraint="string-length() gt 1"/>
+    <xf:constraint level="error" value="string-length() gt 1"/>
 </xf:bind>
 ```
 
@@ -111,29 +109,24 @@ If a control doesn't have a warning level, it can have an *info* level. This is 
 
 A warning or info level does not make the control value invalid and it is still possible to submit form data.
 
-*NOTE: As of Orbeon Forms 4.3, it is only possible to associate a warning or info validation level to a constraint specified with `xf:validation/@constraint` (or deprecated `xf:constraint`). It is not possible to associate these levels to the required or data type validations: these always use the error level.*
+*NOTE: As of Orbeon Forms 4.3, it is only possible to associate a warning or info validation level to a constraint specified with `xf:constraint/@value`. It is not possible to associate these levels to the required or data type validations: these always use the error level.*
 
 ### Nested validation elements
 
 [SINCE: Orbeon Forms 4.9]
 
-`xf:validation` elements nested within `xf:bind` support the same validation attributes as `xf:bind`:
-
-- `type`
-- `required`
-- `constraint`
+Instead of `type` and `required` attributes, you can use `xf:type` and `xf:required` elements nested within `xf:bind`.
 
 This allows assigning a specific identifier to a validation with the `id` attribute, so that `xf:alert` can refer to those with the `validation` attribute:
 
 ```xml
 <xf:bind id="control-1-bind" name="control-1" ref="control-1">
-    <xf:validation required="true()" id="validation-3-validation"/>
-    <xf:validation type="xs:decimal" id="validation-4-validation"/>
-    <xf:validation constraint=". ge 10" id="validation-5-validation"/>
-    <xf:validation constraint=". ge 20" id="validation-6-validation" level="warning"/>
+    <xf:required value="true()" id="validation-3-validation"/>
+    <xf:type id="validation-4-validation">xs:decimal</xf:type>
+    <xf:constraint value=". ge 10" id="validation-5-validation"/>
+    <xf:constraint value=". ge 20" id="validation-6-validation" level="warning"/>
 </xf:bind>
 <fr:number bind="control-1-bind">
-
     <xf:alert ref="$form-resources/control-1/alert[1]" validation="validation-3-validation"/>
     <xf:alert ref="$form-resources/control-1/alert[2]" validation="validation-4-validation"/>
     <xf:alert ref="$form-resources/control-1/alert[3]" validation="validation-5-validation"/>
@@ -148,7 +141,7 @@ This allows having distinct alerts for indicating:
 - that the value must be of the given datatype
 - that the value must satisfy constraints expressed in XPath
 
-*LIMITATION: As of Orbeon Forms 4.9, only the first `type` and the first `required` attributes associated with an `xf:bind` element are taken into account. On the other hand, all `constraint` attributes are handled.*
+*LIMITATION: As of Orbeon Forms 4.9, only the first `type` and the first `required` attribute or element associated with an `xf:bind` element are taken into account. On the other hand, all `constraint` elements are handled.*
 
 ### Multiple alerts
 
@@ -166,7 +159,7 @@ If a `validation` attribute is specified, the alert is active only for the given
 
     <xf:alert validation="c1 c2">
 
-In this example, `c1` and `c2` refer to `id` attributes on `xf:validation` elements. Only `xf:validation` elements associated with a bind pointing to the node to which the control is bound are considered.
+In this example, `c1` and `c2` refer to `id` attributes on `xf:constraint` elements. Only `xf:constraint` elements associated with a bind pointing to the node to which the control is bound are considered.
 
 Blank `level` and `validation` attributes are equivalent to no attributes.
 
@@ -191,14 +184,14 @@ Example:
 
 ```xml
 <xf:bind ref="." id="input-bind">
-    <xf:validation 
+    <xf:constraint 
         id="length-constraint"    
         level="error"   
-        constraint="string-length() gt 1"/>
-    <xf:validation 
+        value="string-length() gt 1"/>
+    <xf:constraint 
         id="uppercase-constraint" 
         level="warning" 
-        constraint="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
+        value="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
 </xf:bind>
 
 <xf:input id="my-input" ref=".">
