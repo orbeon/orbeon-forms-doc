@@ -56,3 +56,7 @@ The following algorithm is followed:
 If a bind referenced by a variable is within an unambiguous context, that is the context in which that bind evaluates is a single node, then the values of the bind's node-set is returned by the variable, otherwise the empty sequence is returned.
 
 This means that target bind objects within more than one bind iteration cannot be accessed.
+
+## See also
+
+- [[XForms Binds|XForms ~ Binds]]
