@@ -17,6 +17,8 @@ The Form Builder action editor is an [Orbeon Forms PE](http://www.orbeon.com/pri
 
 Actions are tightly coupled with services. In the future, support might be added for actions which do not require services.
 
+![Actions Editor](images/fb-actions.png)
+
 ## Basic action configuration
 
 This is the meaning of the fields of the dialog:
