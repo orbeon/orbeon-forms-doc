@@ -4,7 +4,7 @@ See the [roadmap](Orbeon-Forms-Roadmap).
 
 ## Release strategy
 
-- __Why do we release often?__ We think more frequent releases are better because features and bug-fixes reach users faster. They also keep us almost always ready to ship, rather than having very large work in progress which can destabilize the product and then take weeks or months to fix. In short, we think that incremental development and releases are much better for everyone! Based on our experience since early 2013 when we introduced the new release schedule, we are so far (late 2014) very happy with the change.
+- __Why do we release often?__ We think more frequent releases are better because features and bug-fixes reach users faster. They also keep us almost always ready to ship, rather than having very large work in progress which can destabilize the product and then take weeks or months to fix. In short, we think that incremental development and releases are much better for everyone! Based on our experience since early 2013 when we introduced the new release schedule, we are so far (early 2015) very happy with the change.
 - __What do releases contain?__ Releases address both new features and bug-fixes. Point-releases, like 4.6.1, 4.6.2 essentially contain bug-fixes and sometimes very small features. They are done only when necessary, and only for the PE version of the product. Bigger features are for the bigger releases, like 4.5, 4.6, 4.7, and we try do those on a regular schedule.
 
 ## Orbeon Forms 4.x series
