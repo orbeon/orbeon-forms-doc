@@ -711,20 +711,17 @@ The following buttons are predefined and associated with the processes of the sa
 - `home`: navigate to `/`
 - `summary`: navigate to the summary page
 - `save-final`: save the form data if it is valid
-- `save-draft`: save the form data even if it is valid
+- `save-draft`: save the form data even if it isn't valid
 - `validate`: run `validate-all`
 - `review`: navigate to the review page if the data is valid
 - `edit`: navigate to the edit page from the review page
-- `send`: validate then send data using the `oxf.fr.detail.send.success` property prefix
+- `send`: validate then send data to a service
 - `email`: validate then email data
 - `collapse-all`: run the action of the same name
 - `expand-all`: run the action of the same name
 - `refresh`: visit all controls and update the page (noscript mode only)
 - `wizard-prev`: run the action of the same name
 - `wizard-next`: run the action of the same name
-- `save-final`: validate and save to the db
-- `save-draft`: save to the db without validating
-- `send`: validate and send to a service
 - `close`: navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page  
     *NOTE: The button in fact navigates to a page, but doesn't just close the current window/tab, as there is no cross-browser way to do this.*
 
