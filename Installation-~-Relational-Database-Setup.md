@@ -243,7 +243,7 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
         poolPreparedStatements="true"
         username="orbeon"
         password="orbeon"
-        url="jdbc:postgresql://server:5432/"/>
+        url="jdbc:postgresql://server:5432/?useUnicode=true&amp;characterEncoding=UTF8&amp;socketTimeout=30&amp;tcpKeepAlive=true"/>
     ```
 
 ### DB2
