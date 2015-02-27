@@ -287,13 +287,13 @@ In your `properties-local.xml`:
 1. Map an app, form, form type to the Oracle or MySQL persistence layer using the `oxf.fr.persistence.provider.*.*.*` [wildcard property][10], For instance, the following indicates that all the form definition and form data in the `acme` "app" are stored using the Oracle provider, use:
 
     ```xml
-    <property as="xs:string" name="oxf.fr.persistence.provider.acme.*.*" value="oracle">
+    <property as="xs:string" name="oxf.fr.persistence.provider.acme.*.*" value="oracle"/>
     ```
 
 2. Set the value of the property `oxf.fr.persistence.oracle.datasource` for Oracle or `oxf.fr.persistence.mysql.datasource` for MySQL to match the name of the resource you setup in `server.xml`. For instance, if in `server.xml` the resource name is `jdbc/oracle`, then the property should be set to just `oracle`, as in:
 
     ```xml
-    <property as="xs:string" name="oxf.fr.persistence.oracle.datasource" value="oracle">
+    <property as="xs:string" name="oxf.fr.persistence.oracle.datasource" value="oracle"/>
     ```
 
 #### With multiple schemas   
@@ -327,8 +327,8 @@ The single schema configuration described in the previous section uses the prede
 3. Still in `properties-local.xml`, you map the `hr` and `finance` app to the respective provider:
 
     ```xml
-    <property as="xs:string" name="oxf.fr.persistence.provider.hr.*.*"      value="hr">
-    <property as="xs:string" name="oxf.fr.persistence.provider.finance.*.*" value="finance">
+    <property as="xs:string" name="oxf.fr.persistence.provider.hr.*.*"      value="hr"/>
+    <property as="xs:string" name="oxf.fr.persistence.provider.finance.*.*" value="finance"/>
     ```
 
 ## Flat view or table   
