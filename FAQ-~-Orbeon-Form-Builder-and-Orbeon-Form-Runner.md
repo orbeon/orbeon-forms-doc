@@ -17,6 +17,10 @@ Orbeon Form Runner is the Orbeon Forms runtime environment which usually runs fo
 
 You can use Orbeon Forms without using the Form Runner or Form Builder components if all you are interested in is the XForms engine or the pipeline engine.
 
+### How much load can Orbeon Forms handle?
+
+Our testing using real forms used by customers in production show that Orbeon Forms can sustain, per CPU, 400 concurrent active users filling out a field every 10 seconds, or 40 requests per second. This, to be conservative in our testing, on a laptop-grade 2013 4-core i7 CPU, so a recent server-grade Xeon CPU, with maybe 6 or even 8 cores instead of 4, will get you better results. This means that if you have a forms in which 75 fields are filled by users, with 1/3 load during a given day, we can support 40*3600*24/3/75 = 15360 forms submissions per day, per server.
+
 ### Where is the Form Builder documentation?
 
 See the [Orbeon Form Builder - User Guide][3] (English) and [Orbeon Form Builder - Guide Utilisateur][4] (French).
