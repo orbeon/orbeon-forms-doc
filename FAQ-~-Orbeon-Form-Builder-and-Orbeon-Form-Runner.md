@@ -21,7 +21,7 @@ You can use Orbeon Forms without using the Form Runner or Form Builder component
 
 Our testing using real forms used by customers in production show that Orbeon Forms can sustain, on a laptop-grade 2013 4-core i7 CPU, 400 concurrent active users filling out a field every 10 seconds, or 40 requests per second.
 
-This means that if you have a forms with 75 fields filled by users on average, with 1/3 load during a given day, Orbeon Forms can support 40\*3600\*24/3/75 ~= 15,000 forms submissions per day, per processor.
+This means that if you have a forms with 75 fields filled by users on average, with 1/3 load during a given day, Orbeon Forms can support 40\*3600\*24/3/75 ~= 15,000 form submissions per day, per processor.
 
 A recent server-grade Xeon CPU with 6 or even 8 cores instead of 4 will yield proportionally better results.
 
