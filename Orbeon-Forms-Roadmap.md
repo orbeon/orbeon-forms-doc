@@ -66,7 +66,6 @@ This includes:
 
 Focus:
 
-- [ ] TBD
 - [ ] one performance item: TBD
 - [ ] one maintenance item: TBD
 - [ ] one test automation item: TBD
@@ -74,12 +73,10 @@ Focus:
 
 Issues:
 
-- [ ] Considered for 4.9
-- [ ] 4.9
+- [ ] [all Orbeon Forms 4.9 issues](https://github.com/orbeon/orbeon-forms/milestones/4.9)
 
 Dates (tentative):
 
-- counting 2 slow weeks around the end of year
 - 2015-03-17: tentative release date
 
 ## What's in a release
