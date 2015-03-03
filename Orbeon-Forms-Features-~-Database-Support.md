@@ -32,6 +32,6 @@ Feature                                                              |eXist     
 [^4]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Autosave
 [^5]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Persistence-~-Flat-View
 
-## Third-party support
+## Third-party implementations
 
 A third-party [MarkLogic persistence layer for Orbeon Form Runner](https://gitlab.dyomedea.com/marklogic/orbeon-form-runner-persistence-layer/tree/master) is available. As of 2015-03-02, this does not support versioning and owner/group-based permissions. Also please note that this is currently not officially supported by Orbeon.
