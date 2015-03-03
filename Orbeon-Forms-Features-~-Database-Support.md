@@ -31,3 +31,7 @@ Feature                                                              |eXist     
 [^3]: http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control#TOC-Permissions-for-owner-group-members
 [^4]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Autosave
 [^5]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Persistence-~-Flat-View
+
+## Third-party support
+
+A third-party [MarkLogic persistence layer for Orbeon Form Runner](https://gitlab.dyomedea.com/marklogic/orbeon-form-runner-persistence-layer/tree/master) is available. Please not that this is currently not officially supported by Orbeon.
