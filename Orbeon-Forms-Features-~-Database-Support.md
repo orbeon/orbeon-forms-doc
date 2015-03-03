@@ -34,4 +34,4 @@ Feature                                                              |eXist     
 
 ## Third-party support
 
-A third-party [MarkLogic persistence layer for Orbeon Form Runner](https://gitlab.dyomedea.com/marklogic/orbeon-form-runner-persistence-layer/tree/master) is available. Please not that this is currently not officially supported by Orbeon.
+A third-party [MarkLogic persistence layer for Orbeon Form Runner](https://gitlab.dyomedea.com/marklogic/orbeon-form-runner-persistence-layer/tree/master) is available. As of 2015-03-02, this does not support versioning and owner/group-based permissions. Also please note that this is currently not officially supported by Orbeon.
