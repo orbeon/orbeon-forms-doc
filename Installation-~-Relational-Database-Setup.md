@@ -90,6 +90,8 @@ mysql> CREATE schema orbeon;
 
 [SINCE Orbeon Forms 4.6]
 
+Orbeon Forms relies on SQL Server's full-text search, which is included out-of-the-box in all SQL Server editions, except the Express and Express with Tools. If you're using one of those two editions of SQL Server, you might want to look into getting Express with Advanced Services.
+
 Create the tables used for Orbeon Forms in the `orbeon` schema:
 
 - With Orbeon Forms 4.6, 4.7 and 4.8:
