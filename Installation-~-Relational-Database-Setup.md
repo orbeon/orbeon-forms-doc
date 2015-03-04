@@ -1,7 +1,5 @@
 > [[Home]] ▸ [[Installation]]
 
-- [Overview]()
-
 ## Overview
 
 The setup for the relational persistence layers is a 3 step process. The first two steps are database specific, so please refer to the relevant subsections below.
