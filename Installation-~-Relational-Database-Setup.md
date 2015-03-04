@@ -1,5 +1,24 @@
 > [[Home]] ▸ [[Installation]]
 
+- [Overview](#overview)
+- [Database setup](#database-setup)
+    - [Oracle](#oracle)
+    - [MySQL](#mysql)
+    - [SQL Server](#sql-server)
+    - [PostgreSQL](#postgresql)
+    - [DB2](#db2)
+- [Application server setup](#)
+    - [Oracle](#oracle-1)
+    - [MySQL](#mysql-1)
+    - [SQL Server](#sql-server-1)
+    - [PostgreSQL](#postgresql-1)
+    - [DB2](#db2-1)
+- [Orbeon Forms setup](#orbeon-forms-setup)
+    - [With a single schema](#with-a-single-schema)
+    - [With multiple schemas](#with-multiple-schemas)
+- [Flat view or table](#flat-view-or-table)
+- [Auditing and versioning](#auditing-and-versioning)
+
 ## Overview
 
 The setup for the relational persistence layers is a 3 step process. The first two steps are database specific, so please refer to the relevant subsections below.
