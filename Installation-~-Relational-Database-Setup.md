@@ -293,13 +293,9 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
 
 ## Orbeon Forms setup
 
-### With Orbeon Forms 3.9
+What follows applies to Orbeon Forms 4.0 and newer. For Orbeon Forms 3.9, see this [legacy documentation](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/oracle-and-mysql-persistence-layers).
 
-See [legacy documentation](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/oracle-and-mysql-persistence-layers).
-
-### With Orbeon Forms 4.0
-
-#### With a single schema
+### With a single schema
 
 In your `properties-local.xml`:  
 
@@ -315,7 +311,7 @@ In your `properties-local.xml`:
     <property as="xs:string" name="oxf.fr.persistence.oracle.datasource" value="oracle"/>
     ```
 
-#### With multiple schemas   
+### With multiple schemas   
 
 The single schema configuration described in the previous section uses the predefined `oracle` and `mysql` providers. To use multiple schemas you need to define you own provider names. For instance, assume that you have two apps, `hr` and `finance`, and would like both the form definition and data for those apps to be stored in two separate schemas:  
 
