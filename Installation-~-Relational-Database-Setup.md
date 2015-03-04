@@ -7,7 +7,7 @@
     - [SQL Server](#sql-server)
     - [PostgreSQL](#postgresql)
     - [DB2](#db2)
-- [Application server setup](#)
+- [Application server setup](#application-server-setup)
     - [Oracle](#oracle-1)
     - [MySQL](#mysql-1)
     - [SQL Server](#sql-server-1)
