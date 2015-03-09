@@ -19,11 +19,19 @@ You can use Orbeon Forms without using the Form Runner or Form Builder component
 
 ### How much load can Orbeon Forms handle?
 
-Our testing using real forms used by customers in production show that Orbeon Forms can sustain, on a laptop-grade 2013 4-core i7 CPU, 400 concurrent active users filling out a field every 10 seconds, or 40 requests per second.
+Our testing using real forms used by customers in production show that Orbeon Forms can sustain, on a laptop-grade 2013 4-core i7 CPU, 400 concurrent active users filling out a field every 10 seconds, or 40 requests per second. This means that if you have a forms with 75 fields filled by users on average, with 1/3 load during a given day, Orbeon Forms can support 40\*3600\*24/3/75 ~= 15,000 form submissions per day, per processor.
 
-This means that if you have a forms with 75 fields filled by users on average, with 1/3 load during a given day, Orbeon Forms can support 40\*3600\*24/3/75 ~= 15,000 form submissions per day, per processor.
+We don't recommend you to deploy Orbeon Forms on server less powerful than the aforementioned 2013 4-core i7 CPU. This means that the server has to run on a recent i7 or Xeon processors (not AMD processors), and on [Geekbench](http://www.primatelabs.com/geekbench/) have a score of more than 3,000 on single-core and 12,000 on multi-core.
 
-A recent server-grade Xeon CPU with 6 or even 8 cores instead of 4 will yield proportionally better results.
+If you're looking to run Orbeon Forms in the cloud, check CouldHarmony's table with [Geekbench score for a number of cloud providers](https://cloudharmony.com/benchmarks), and make sure to pick a configuration that matches the above requirement. For, instance, the table below provides a summary of Amazon's AWS offering, with [EC2 pricing](http://aws.amazon.com/ec2/pricing/). On EC2, we recommend you start with a c4.2xlarge.
+
+|                           | Single-core | Multi-core | Price /year  |  
+| ------------------------- | -----------:|-----------:|-------------:|----------------
+| 2013 laptop 4-core i7 CPU | 3,380       | 12,903     |              |
+| EC2 c4.xlarge (4 vCPU)    | 3,397       |  7,804     |  $1,276      |
+| EC2 c4.2xlarge (8 vCPU)   | 3,381       | 14,185     |  $2,552      | ← Recommended
+| EC2 c4.4xlarge (16 vCPU)  | 3,381       | 26,238     |  $5,104      |
+| EC2 c4.8xlarge (32 vCPU)  | 3,528       | 53,208     | $10,208      |
 
 ### Where is the Form Builder documentation?
 
