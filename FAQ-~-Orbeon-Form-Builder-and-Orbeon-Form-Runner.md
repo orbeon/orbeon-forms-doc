@@ -25,13 +25,13 @@ We don't recommend you to deploy Orbeon Forms on server less powerful than the a
 
 If you're looking to run Orbeon Forms in the cloud, check CouldHarmony's table with [Geekbench score for a number of cloud providers](https://cloudharmony.com/benchmarks), and make sure to pick a configuration that matches the above requirement. For, instance, the table below provides a summary of Amazon's AWS offering, with [EC2 pricing](http://aws.amazon.com/ec2/pricing/). On EC2, we recommend you start with a c4.2xlarge.
 
-|                           | Single-core | Multi-core | Price /year  |  
-| ------------------------- | -----------:|-----------:|-------------:|----------------
-| 2013 laptop 4-core i7 CPU | 3,380       | 12,903     |              |
-| EC2 c4.xlarge (4 vCPU)    | 3,397       |  7,804     |  $1,276      |
-| EC2 c4.2xlarge (8 vCPU)   | 3,381       | 14,185     |  $2,552      | ← Recommended
-| EC2 c4.4xlarge (16 vCPU)  | 3,381       | 26,238     |  $5,104      |
-| EC2 c4.8xlarge (32 vCPU)  | 3,528       | 53,208     | $10,208      |
+|                | vCPU |Single-core | Multi-core | Price /year  |  
+| ---------------| ----:|-----------:|-----------:|-------------:|----------------
+| 2013 4-core i7 |      | 3,380      | 12,903     |              |
+| EC2 c4.xlarge  |    4 | 3,397      |  7,804     |  $1,276      |
+| EC2 c4.2xlarge |    8 | 3,381      | 14,185     |  $2,552      | ← Recommended
+| EC2 c4.4xlarge |   16 | 3,381      | 26,238     |  $5,104      |
+| EC2 c4.8xlarge |   32 | 3,528      | 53,208     | $10,208      |
 
 ### Where is the Form Builder documentation?
 
