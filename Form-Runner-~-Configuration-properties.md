@@ -44,7 +44,10 @@ _NOTE: To configure access to the application server, see [Configuration Propert
 ### Default language
 
 ```xml
-<property as="xs:string" name="oxf.fr.default-language.*.*" value="en">
+<property 
+    as="xs:string" 
+    name="oxf.fr.default-language.*.*" 
+    value="en">
 ```
 
 Form Runner's default language.
@@ -94,7 +97,10 @@ For pages that don't involve a specific form, like the Form Runner home page, th
 ### Summary page size
 
 ```xml
-<property as="xs:integer" name="oxf.fr.summary.page-size.*.*" value="10"/>
+<property 
+    as="xs:integer" 
+    name="oxf.fr.summary.page-size.*.*" 
+    value="10"/>
 ```
 
 Number of rows shown in the summary page.
@@ -110,17 +116,24 @@ By default, the summary page shows a Created and Last Modified columns:
 You can remove either one of those columns by setting the value appropriate property to `false`:
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.summary.show-created.*.*"        value="true"/>
-<property as="xs:boolean" name="oxf.fr.summary.show-last-modified.*.*"  value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.summary.show-created.*.*"        
+    value="true"/>
+    
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.summary.show-last-modified.*.*"  
+    value="true"/>
 ```
 
 ### Buttons on the summary page
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.fr.summary.buttons.*.*"
-  value="home review pdf delete duplicate new"/>
+    as="xs:string"
+    name="oxf.fr.summary.buttons.*.*"
+    value="home review pdf delete duplicate new"/>
 ```
 
 The property configures which buttons are included on the summary page, and in what order they are shown. Possible buttons are:
@@ -153,7 +166,10 @@ The property configures which buttons are included on the summary page, and in w
 ### Show table of contents
 
 ```xml
-<property as="xs:integer" name="oxf.fr.detail.toc.*.*" value="0"/>
+<property 
+    as="xs:integer" 
+    name="oxf.fr.detail.toc.*.*" 
+    value="0"/>
 
 ```
 
@@ -162,7 +178,10 @@ If the number of table of contents entries are greater than this value, then sho
 ### Position of error summary
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.error-summary.*.*" value="bottom"/>
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.error-summary.*.*" 
+    value="bottom"/>
 ```
 
 Where to place the error summary: `top`, `bottom`, `both`, or `none`.
@@ -170,7 +189,10 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
 ### Buttons on the detail page
 
 ```xml
-<property as="xs:string"  name="oxf.fr.detail.buttons.*.*" value="close clear print pdf save submit"/>
+<property 
+    as="xs:string"  
+    name="oxf.fr.detail.buttons.*.*" 
+    value="close clear print pdf save submit"/>
 ```
 
 The property configures which buttons are included on the detail page, and in what order they are shown. For more information, see Form Runner: Buttons and Processes.
@@ -183,9 +205,9 @@ When using the wizard view (or other detail page custom views), the following pr
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.fr.detail.buttons.inner.*.*"
-  value="wizard-prev wizard-next"/>
+    as="xs:string"
+    name="oxf.fr.detail.buttons.inner.*.*"
+    value="wizard-prev wizard-next"/>
 ```
 
 The example above places the wizard's Prev and Next buttons just under the current wizard section:
@@ -199,7 +221,10 @@ For more information, see Form Runner: Buttons and Processes.
 This property set whether the control hints are shown inline, rather than as tool-tips. The default is `true`.
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.detail.hints.inline.*.*" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.hints.inline.*.*" 
+    value="true"/>
 ```
 
 ### PDF
@@ -212,9 +237,9 @@ The following property dynamically controls the name of the PDF file produced on
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.fr.detail.pdf.filename.*.*"
-  value=""/>
+    as="xs:string"
+    name="oxf.fr.detail.pdf.filename.*.*"
+    value=""/>
 ```
 
 The value of the property, if not empty, is an XPath expression which runs in the context of the root element of the XML document containing form data. The trimmed string value of the result of the expression is used to determine the filename.
@@ -223,9 +248,9 @@ Example:
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.fr.detail.pdf.filename.*.*"
-  value="//customer-id"/>
+    as="xs:string"
+    name="oxf.fr.detail.pdf.filename.*.*"
+    value="//customer-id"/>
 ```
 
 If the form contains a `customer-id` field, the PDF filename will be the value of that field followed by `.pdf`. If the field is blank, the default, random id filename is used, as if the property had not been specified.
@@ -238,9 +263,9 @@ The following property controls whether hyperlinks are enabled in the generated 
 
 ```xml
 <property
-  as="xs:boolean"
-  name="oxf.fr.detail.pdf.hyperlinks.*.*"
-  value="true"/>
+    as="xs:boolean"
+    name="oxf.fr.detail.pdf.hyperlinks.*.*"
+    value="true"/>
 ```
 
 When set to `true`:
@@ -258,7 +283,7 @@ When set to `false`:
 
 For example, the default style for hyperlinks only highlights and underlines `<a>` elements with an `href` attribute:
 
-```xml
+```css
 a[href] {
     text-decoration: underline;
     &:link, &:visited {
@@ -272,7 +297,10 @@ a[href] {
 The following property specifies whether a barcode must be included on PDF files.
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.detail.pdf.barcode.*.*" value="false">
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.pdf.barcode.*.*" 
+    value="false">
 ```
 
 #### Font embedding in automatic mode
@@ -282,8 +310,15 @@ The following property specifies whether a barcode must be included on PDF files
 These properties allow specifying fonts to embed in PDF files. The `oxf.fr.pdf.font.path` property ends with an identifier for the font (here `vera`). It specifies the path to the font file. Optionally, the oxf.fr.pdf.font.family property ending with the same identifier (here `vera`) allows overriding the font family.
 
 ```xml
-<property as="xs:string" name="oxf.fr.pdf.font.path.vera"   value="/path/to/font.ttf"/>
-<property as="xs:string" name="oxf.fr.pdf.font.family.vera" value="Arial"/>
+<property 
+    as="xs:string" 
+    name="oxf.fr.pdf.font.path.vera"   
+    value="/path/to/font.ttf"/>
+    
+<property 
+    as="xs:string" 
+    name="oxf.fr.pdf.font.family.vera" 
+    value="Arial"/>
 ```
 
 As of Orbeon Forms 4.x, to change the main font, you must map to the Helvetica Neue font. For example;
@@ -324,7 +359,10 @@ With version 4.0 and earlier, the PDF button is always disabled if invalid data 
 The PDF button is always enabled, allowing users to generate a PDF for the current form, even if some data in the form is invalid. If instead, you wish to disable the PDF button when the form is invalid, set the following property to `true` (it is set to `false` by default):
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.detail.pdf.disable-if-invalid.*.*" value="false"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.pdf.disable-if-invalid.*.*" 
+    value="false"/>
 ```
 
 ### Captcha
@@ -340,7 +378,10 @@ SimpleCaptcha support.
 If you are creating a public form, you might want to add a captcha to avoid spam. You can do so by enabling the _captcha_ feature, which you do by adding the following property to your `properties-local.xml`:
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.captcha.*.*" 
+    value="reCAPTCHA"/>
 ```
 
 You can set this property to either `reCAPTCHA` or `SimpleCaptcha`, depending on the captcha implementation you want to use (also see: [Which captcha is right for you][10]).  Setting it to blank (empty string), won't show a captcha, which is the default. Instead of stars (`*`) in the name of the first property, use specific app/form names for the captcha to only show on certain forms.
@@ -348,8 +389,15 @@ You can set this property to either `reCAPTCHA` or `SimpleCaptcha`, depending on
 If using the reCAPTCHA, also add the following properties to specify your reCAPTCHA public and private keys. You can get those by [signing up for reCAPTCHA][11].
 
 ```xml
-<property as="xs:string"  name="oxf.xforms.xbl.fr.recaptcha.public-key"  value="..."/>
-<property as="xs:string"  name="oxf.xforms.xbl.fr.recaptcha.private-key" value="..."/>
+<property 
+    as="xs:string"  
+    name="oxf.xforms.xbl.fr.recaptcha.public-key"  
+    value="..."/>
+    
+<property 
+    as="xs:string"  
+    name="oxf.xforms.xbl.fr.recaptcha.private-key" 
+    value="..."/>
 ```
 
 With those properties in place, your forms will show a captcha as illustrated by the following screenshot.
@@ -429,7 +477,10 @@ The following property defines a space-separated list of request parameters to b
 You configure which buttons are shown on the view page with the following property:
 
 ```xml
-<property as="xs:string"  name="oxf.fr.detail.buttons.view.*.*" value="back workflow-edit pdf"/>
+<property 
+    as="xs:string"  
+    name="oxf.fr.detail.buttons.view.*.*" 
+    value="back workflow-edit pdf"/>
 ```
 
 You can use all the buttons available on the detail page. In addition, the following buttons apply:
@@ -443,7 +494,10 @@ You can use all the buttons available on the detail page. In addition, the follo
 [UNTIL Orbeon Forms 4.6, use `oxf.show-version` starting Orbeon Forms 4.6.1]
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.version.*.*" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.version.*.*"
+    value="true"/>
 ```
 
 Whether to show the Orbeon Forms version at the bottom.
@@ -473,9 +527,9 @@ With this property, you can set the default logo URI. This logo appears on the s
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.fr.css.custom.uri.*.*"
-  value="/config/acme.css"/>
+    as="xs:string"
+    name="oxf.fr.css.custom.uri.*.*"
+    value="/config/acme.css"/>
 ```
 
 You can add more than one file, and just separate the paths by whitespace in the property.
@@ -485,8 +539,15 @@ You can add more than one file, and just separate the paths by whitespace in the
 1. **Disable the minimal and combined resources**. When working on your CSS, you might want to temporarily set the following properties in your `properties-local.xml`, which  will disable the combined and minimized resources, so the files and line numbers you see in your browser correspond to what you have on disk.
 
     ```xml
-    <property as="xs:boolean" name="oxf.xforms.minimal-resources" value="false"/>
-    <property as="xs:boolean" name="oxf.xforms.combine-resources" value="false"/>
+    <property 
+        as="xs:boolean" 
+        name="oxf.xforms.minimal-resources" 
+        value="false"/>
+    
+    <property 
+        as="xs:boolean" 
+        name="oxf.xforms.combine-resources" 
+        value="false"/>
     ```
 2. **Know which class names to use in your CSS selectors**. We strongly recommend you use the [Chrome Dev Tools][15] or [Firebug][16] to check which classes are generated by Orbeon Forms. Look specifically for classes that start with `fr-`. Once you have your CSS working with Chrome and/or Firefox, to test it on IE, you'll need to enable minimal resources, as IE is [unable to loads more than 31 CSS files][17].
 
@@ -506,9 +567,9 @@ You can add more than one file, and just separate the paths by whitespace in the
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.fr.js.custom.uri.*.*"
-  value="/forms/acme/assets/acme.js forms/acme/sales/assets/acme-sales.js"/>
+    as="xs:string"
+    name="oxf.fr.js.custom.uri.*.*"
+    value="/forms/acme/assets/acme.js forms/acme/sales/assets/acme-sales.js"/>
 ```
 
 You can add more than one file, and just separate the paths by whitespace in the property.
@@ -538,51 +599,51 @@ These properties control email sending in Form Runner:
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.fr.email.smtp.host.*.*"
-  value="my.outgoing.smtp.server.org"/>
+    as="xs:string"
+    name="oxf.fr.email.smtp.host.*.*"
+    value="my.outgoing.smtp.server.org"/>
 
 <!-- SINCE 2012-07-23 / Orbeon Forms 4.0 -->
 <property
-  as="xs:string"
-  name="oxf.fr.email.smtp.port.*.*"
-  value="587"/>
+    as="xs:string"
+    name="oxf.fr.email.smtp.port.*.*"
+    value="587"/>
 
 <!-- SINCE 2012-07-23 / Orbeon Forms 4.0 -->
 <property
-  as="xs:string"
-  name="oxf.fr.email.smtp.encryption.*.*"
-  value="tls"/>
+    as="xs:string"
+    name="oxf.fr.email.smtp.encryption.*.*"
+    value="tls"/>
 
 <property
-  as="xs:string"
-  name="oxf.fr.email.smtp.username.*.*"
-  value="jdoe"/>
+    as="xs:string"
+    name="oxf.fr.email.smtp.username.*.*"
+    value="jdoe"/>
 
 <property
-  as="xs:string"
-  name="oxf.fr.email.smtp.credentials.*.*"
-  value="secret"/>
+    as="xs:string"
+    name="oxf.fr.email.smtp.credentials.*.*"
+    value="secret"/>
 
 <property
-  as="xs:string"
-  name="oxf.fr.email.from.*.*"
-  value="john@example.org"/>
+    as="xs:string"
+    name="oxf.fr.email.from.*.*"
+    value="john@example.org"/>
 
 <property
-  as="xs:string"
-  name="oxf.fr.email.to.*.*"
-   value="mary@example.org,nancy@example.org"/>
+    as="xs:string"
+    name="oxf.fr.email.to.*.*"
+    value="mary@example.org,nancy@example.org"/>
 
 <property
-  as="xs:boolean"
-  name="oxf.fr.email.attach-pdf.*.*"
-  value="true"/>
+    as="xs:boolean"
+    name="oxf.fr.email.attach-pdf.*.*"
+    value="true"/>
 
 <property
-  as="xs:boolean"
-  name="oxf.fr.email.attach-xml.*.*"
-  value="true"/>
+    as="xs:boolean"
+    name="oxf.fr.email.attach-xml.*.*"
+    value="true"/>
 ```
 
 * The following properties control the connection to the SMTP server.
@@ -606,7 +667,10 @@ These properties control email sending in Form Runner:
 ### Show Noscript link
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.noscript-link.*.*" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.noscript-link.*.*" 
+    value="true"/>
 ```
 
 Whether to show the link to the noscript/full version. 
@@ -614,7 +678,10 @@ Whether to show the link to the noscript/full version.
 ### Noscript: use table layout
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.detail.noscript.table.*.*" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.noscript.table.*.*" 
+    value="true"/>
 ```
 
 Whether forms in noscript mode are allowed to use a layout based on tables. If false, no tables are used. WYSIWYG is lost, but the form may be more accessible. Default is true.
@@ -622,7 +689,10 @@ Whether forms in noscript mode are allowed to use a layout based on tables. If f
 Noscript: allow sections to collapse
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.detail.noscript.section.collapse.*.*" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.noscript.section.collapse.*.*" 
+    value="true"/>
 ```
 
 Whether sections in noscript mode are allowed to collapse. A value of false may make sections more accessible and less confusing to screen reader users. Default is true.
@@ -630,7 +700,10 @@ Whether sections in noscript mode are allowed to collapse. A value of false may 
 ### Ajax mode: allow sections to collapse
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.detail.ajax.section.collapse.*.*" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.ajax.section.collapse.*.*" 
+    value="true"/>
 ```
 
 Whether sections in Ajax mode are allowed to collapse. Default is true.
@@ -638,7 +711,10 @@ Whether sections in Ajax mode are allowed to collapse. Default is true.
 ### Ajax mode: allow sections to animate
 
 ```xml
-<property as="xs:boolean" name="oxf.fr.detail.ajax.section.animate.*.*" value="true"/>
+<property
+    as="xs:boolean" 
+    name="oxf.fr.detail.ajax.section.animate.*.*" 
+    value="true"/>
 ```
 
 Whether sections in Ajax mode are allowed to open and close with an animation. Default is true. A value of false is more efficient with slow browsers / large forms.
