@@ -4,14 +4,14 @@ For the latest configuration, see [properties-form-runner.xml](https://github.co
 
 ## Form Runner properties documented elsewhere
 
-* [[Form Runner: Custom Model Logic|Form-Runner-~-Custom-Model-Logic]]
+* [[Custom Model Logic|Form-Runner-~-Custom-Model-Logic]]
     * `oxf.fr.detail.model.custom`
-* [[Form Runner: Wizard View|Form Runner ~ Wizard View]]
+* [[Wizard View|Form Runner ~ Wizard View]]
     * `oxf.fr.detail.view.appearance`
-* [[Form Runner ~ Autosave|Form Runner ~ Autosave]]
+* [[Autosave|Form Runner ~ Autosave]]
     * `oxf.fr.detail.autosave-delay`
     * `oxf.fr.persistence.*.autosave`
-* [[Form Runner ~ Configuration properties ~ Persistence|Form Runner ~ Configuration properties ~ Persistence]]
+* [[Configuration Properties ~ Persistence|Form Runner ~ Configuration properties ~ Persistence]]
     * `oxf.fr.persistence.provider`
     * `oxf.fr.persistence.[provider].uri`
     * `oxf.fr.persistence.[provider].active`
