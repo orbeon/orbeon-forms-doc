@@ -4,22 +4,21 @@ For the latest configuration, see [properties-form-runner.xml](https://github.co
 
 ## Form Runner properties documented elsewhere
 
-* [Form Runner: Custom Model Logic][1]
+* [[Form Runner: Custom Model Logic|Form-Runner-~-Custom-Model-Logic]]
     * `oxf.fr.detail.model.custom`
-* [Form Runner: Wizard View][2]
+* [[Form Runner: Wizard View|Form Runner ~ Wizard View]]
     * `oxf.fr.detail.view.appearance`
-* [Form Runner ~ Autosave][3]
+* [[Form Runner ~ Autosave|Form Runner ~ Autosave]]
     * `oxf.fr.detail.autosave-delay`
     * `oxf.fr.persistence.*.autosave`
-* [Form Runner ~ Configuration properties ~ Persistence][4]
+* [[Form Runner ~ Configuration properties ~ Persistence|Form Runner ~ Configuration properties ~ Persistence]]
     * `oxf.fr.persistence.provider`
     * `oxf.fr.persistence.[provider].uri`
     * `oxf.fr.persistence.[provider].active`
     * `oxf.fr.persistence.[provider].autosave`
     * `oxf.fr.persistence.[provider].permissions`
     * `oxf.fr.persistence.[provider].versioning`
-* [Form Runner Access Control][5]
-
+* [[Form Runner Access Control|https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Access-Control-~-Setup]]
     * `oxf.fr.support-owner-group`
     * `oxf.fr.authentication.method`
     * `oxf.fr.authentication.container.roles`
@@ -696,12 +695,6 @@ Whether sections in Ajax mode are allowed to collapse. Default is true.
 
 Whether sections in Ajax mode are allowed to open and close with an animation. Default is true. A value of false is more efficient with slow browsers / large forms.
 
-
-[1]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner:-Custom-Model-Logic
-[2]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Wizard-View
-[3]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Autosave
-[4]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Configuration-properties-~-Persistence
-[5]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Access-Control-~-Setup
 [6]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base
 [7]: https://sites.google.com/a/orbeon.com/forms/_/rsrc/1231872685941/doc/developer-guide/configuration-properties/created-last-modified-1.png
 [8]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/form-runner/importing-data
