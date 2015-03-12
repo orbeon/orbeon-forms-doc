@@ -388,22 +388,10 @@ For #2, this behaves as if a browser was submitting an HTML form that looks like
 
 The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to POST data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a send action using [`format-version = "edge"`][14].
 
-**Enabling with Orbeon Forms 4.0
-
 Use the authorization mechanism for services (see [Authorization of pages and services](http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-controller/authorization)), to enable submitting initial instances to the new page:
 
 * Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when POSTing to Form Runner.
 * Your authorizer service must validate those credentials.
-
-**Enabling with Orbeon Forms 3.9 (including 3.9.1)**
-
-Enable the following property:
-
-```xml
-<property as="xs:boolean" name="oxf.fr.detail.new.accept-post.*.*" value="false"/>
-```
-
-For security, this property is set to false by default; this prevents ill-intentioned users from forcing the form to start with an instance of their own creation. You need to enable this property if you are using including the `save-locally` button in your detail pages.
 
 #### Initial instance from service
 
@@ -433,26 +421,6 @@ The following property defines a space-separated list of request parameters to b
 ```
 
 *NOTE: Enabling `oxf.fr.detail.new.service.enable` doesn't change the behavior with regard to POSTed instance: even if you are calling a service to get the initial instance, the POSTed instance will be used when a document is POSTed to the corresponding "new form" page.*
-
-#### Save locally button
-
-[SINCE 4.0] The save locally functionality isn't available anymore.
-
-With Orbeon Forms 3.9 builds from 2012-03-14 to 2012-10-09:
-
-When you enable the `save-locally` button, you also need to set the following property:
-
-```xml
-<property as="xs:boolean" name="oxf.fr.detail.edit.accept-post.*.*" value="false"/>
-```
-
-With Orbeon Forms 3.9 builds up to 2012-03-14:
-
-When you enable the` save-locally` button, you also need to set the following property:
-
-```xml
-<property as="xs:boolean" name="oxf.fr.detail.new.accept-post.*.*" value="false"/>
-```
 
 ## View page
 
@@ -511,26 +479,6 @@ With this property, you can set the default logo URI. This logo appears on the s
 ```
 
 You can add more than one file, and just separate the paths by whitespace in the property.
-
-#### Adding your own CSS files (Orbeon Forms 3.9)
-
-1. Create your own CSS file and store it under `WEB-INF/resources/config`. For instance, you create a file in that directory called `acme.css`.
-2. Place your CSS file(s) under one of the following recommended locations:
-    * `WEB-INF/resources/forms/assets`: scripts for all forms
-    * `WEB-INF/resources/forms/APP/assets`: scripts for app name APP
-    * `WEB-INF/resources/forms/APP/FORM/assets`: scripts for app name APP and form name FORM
-3. Override the `oxf.fr.css.uri.*.*` property. Its value is sequence of URIs pointing to CSS files, as in the example below. The actual value of the property will depend on the version you're using. To find what it is in your version, from the archive `WEB-INF/lib/orbeon-resources-private.jar`, extract the file `config/properties-form-runner.xml`, and look for the property definition in that file. Copy it to your properties-local.xml, adding `/config/acme.css` to the list of CSS files.
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.css.uri.orbeon.*"
-    value="/ops/yui/reset-fonts-grids/reset-fonts-grids.css
-           /ops/yui/datatable/assets/skins/sam/datatable.css
-           /apps/fr/style/form-runner-base.css
-           /apps/fr/style/form-runner-orbeon.css
-           /config/acme.css"/>
-```
 
 ### Authoring CSS
 
