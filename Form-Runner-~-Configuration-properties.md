@@ -29,12 +29,6 @@ For the latest configuration, see [properties-form-runner.xml](https://github.co
     * `oxf.fr.authentication.header.roles.split`
     * `oxf.fr.authentication.header.roles.property-name`
 
-## Backend
-
-### Application server URI
-
-_NOTE: To configure access to the application server, see [Configuration Properties - Base][6] and the `oxf.url-rewriting.service.base-uri` property._
-
 ## General
 
 ### Default language
