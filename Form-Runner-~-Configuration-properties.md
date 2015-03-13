@@ -29,7 +29,7 @@ For the latest configuration, see [properties-form-runner.xml](https://github.co
     * `oxf.fr.authentication.header.roles.split`
     * `oxf.fr.authentication.header.roles.property-name`
 
-## General
+## Language
 
 ### Default language
 
@@ -41,7 +41,6 @@ For the latest configuration, see [properties-form-runner.xml](https://github.co
 ```
 
 Form Runner's default language.
-
 
 ### Available languages
 
