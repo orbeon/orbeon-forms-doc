@@ -35,10 +35,6 @@ For the latest configuration, see [properties-form-runner.xml](https://github.co
 
 _NOTE: To configure access to the application server, see [Configuration Properties - Base][6] and the `oxf.url-rewriting.service.base-uri` property._
 
-### Persistence layer configuration
-
-[This documentation has moved](https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Configuration-properties-~-Persistence).
-
 ## General
 
 ### Default language
