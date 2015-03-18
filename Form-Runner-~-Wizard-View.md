@@ -56,6 +56,8 @@ The following property enables the validated mode:
   value="true"/>
 ```
 
+![Wizard validated mode](images/fr-wizard-validated.png)
+
 ## See also
 
 - [[Wizard XBL component|Form Runner ~ XBL Components ~ Wizard]]
