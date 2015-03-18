@@ -43,7 +43,7 @@ When using the validated mode:
 - but you can only go forward to the next page if
   - there are no errors on all preceding pages as well as the current page
   - or if you have already visited the next page
-- the table of contents only allow you to navigate to pages you have already visited 
+- the table of contents only allows you to navigate to pages you have already visited 
 - you should generally use the "Prev" or "Next" buttons for navigation
 - any attempt to navigate to the next page marks all the fields of the preceding pages as well as the current page as visited, ensuring that errors on those pages, if any, show in the error summary
 
