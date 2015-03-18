@@ -111,7 +111,7 @@ Then the component must be added to the property as follows:
 
 The `fr` prefix must be in scope, and there must be a mapping (via `oxf.xforms.xbl.mapping`) for the URI associated with that prefix (this is the case by default for `fr` and `http://orbeon.org/oxf/xml/form-runner`). With this, `fr:tinymce` points to the XBL file `oxf:/xbl/orbeon/tinymce/tinymce.xbl`.
 
-Components references are separated by whitespace:
+Component references are separated by whitespace:
 
 ```xml
 <property as="xs:string" name="oxf.xforms.xbl.library">
