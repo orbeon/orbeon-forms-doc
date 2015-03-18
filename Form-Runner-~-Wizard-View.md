@@ -56,6 +56,8 @@ The following property enables the validated mode:
   value="true"/>
 ```
 
+You can see in the following picture that the sections in the table of contents which have not yet been visited are grayed out:
+
 ![Wizard validated mode](images/fr-wizard-validated.png)
 
 ## See also
