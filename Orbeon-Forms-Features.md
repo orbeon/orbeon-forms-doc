@@ -17,7 +17,7 @@ As of 2015-01-08 this page is *very* incomplete.
   - Repeated grids: [[doc|Form Builder ~ Repeated Grids]], [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
 - Form Runner
   - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
-  - Home Page: [[doc|Form Runner ~ Home Page]],[blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
+  - Home Page: [[doc|Form Runner ~ Home Page]], [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
   - Buttons and Processes: [[doc|Form-Runner-~-Buttons-and-Processes]], [blog post](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
   - Autosave: [[doc|Form-Runner ~ Autosave]], [blog post](http://blog.orbeon.com/2013/10/autosave.html)
   - Wizard view: [[doc|Form Runner ~ Wizard View]], [blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
