@@ -59,4 +59,33 @@ Such bindings are checked for freshness every time a form is loaded. If a bindin
 
 ## Other bindings
 
-TODO
+Bindings which are not inline and which are not by name only need to be explicitly listed so that the XForms engine is able to process them. You do this with the `oxf.xforms.xbl.library` property. By default,  as of Orbeon Forms 4.9, this property is empty as no built-in XBL component binds by attribute in that version:
+
+```xml
+<property as="xs:string" name="oxf.xforms.xbl.library">
+</property>
+```
+
+XBL components with bindings by attribute can be added using the same format used by `oxf.xforms.resources.baseline`. Say, for example, that `fr:tinymce` adds a binding by attribute as follows:
+
+```xml
+element="fr|tinymce, xf|textarea[mediatype ~= 'text/html']"
+```
+
+Then the component must be added to the property as follows:
+
+```xml
+<property as="xs:string" name="oxf.xforms.xbl.library">
+    fr:tinymce
+</property>
+```
+
+The `fr` prefix must be in scope, and there must be a mapping (via `oxf.xforms.xbl.mapping`) for the URI associated with that prefix (this is the case by default for `fr` and `http://orbeon.org/oxf/xml/form-runner`). With this, `fr:tinymce` points to the XBL file `oxf:/xbl/orbeon/tinymce/tinymce.xbl`.
+
+Components references are separated by whitespace:
+
+```xml
+<property as="xs:string" name="oxf.xforms.xbl.library">
+    fr:tinymce acme:button
+</property>
+```
