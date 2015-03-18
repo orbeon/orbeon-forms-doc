@@ -16,7 +16,14 @@ The binding:
 
 ## Binding selector
 
-The `element` attribute specifies, via one or more CSS selectors, which XML elements, in the source form, it associates with. The simplest way is to bind by element name:
+The `element` attribute specifies, via one or more CSS selectors, which XML elements, in the source form, it associates with. The following CSS selectors are supported:
+
+- by element name
+- by element name and XML datatype (Form Builder only)
+- by attribute only [SINCE Orbeon Forms 4.9]
+- by element name and attribute [SINCE Orbeon Forms 4.9]
+
+The simplest way is to bind by element name:
 
 ```xml
 element="fr|number"
@@ -24,7 +31,7 @@ element="fr|number"
 
 This means that elements called `fr:number` in the form will use this binding.
 
-Form Builder, at design time only (as of Orbeon Forms 4.9), also supports bindings by type:
+Form Builder, at design time only (as of Orbeon Forms 4.9), also supports bindings by name and XML datatype:
 
 ```xml
 xf|input:xxf-type('xs:decimal')
