@@ -33,7 +33,7 @@ With the property above:
 
 1. Say element `<acme:button>` is found by the XForms engine, in your own `http://www.acme.com/xbl` namespace.
 2. Orbeon Forms looks for a property with a name that starts with `oxf.xforms.xbl.mapping` and with a value equal to the namespace `http://www.acme.com/xbl`. In this case it finds the property `oxf.xforms.xbl.mapping.acme`.
-3. The XForms engine extracts the part of the property name after `oxf.xforms.xbl.mapping`. In this case `acme`.
+3. The XForms engine extracts the part of the property name after `oxf.xforms.xbl.mapping`, in this case `acme`.
 4. This is used to resolve a resource called `oxf:/xbl/acme/button/button.xbl`.
     * The first part of the path is always `xbl`.
     * This is followed by the directory name found in step 3, here `acme`.
