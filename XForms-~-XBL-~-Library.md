@@ -41,7 +41,7 @@ You can place inline `xbl:xbl` elements within the `xh:head` element, at the sam
 </xh:html>
 ```
 
-## Bindings by name
+## By name bindings 
 
 Orbeon Forms allows for automatic inclusion of XBL bindings when matching by name only. This avoids including the XBL for those components in all the forms that use them. In addition, the bindings can be shared among forms, which saves memory and makes loading them faster.
 
