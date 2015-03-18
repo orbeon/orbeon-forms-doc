@@ -9,7 +9,9 @@
 
 The Orbeon Forms XForms engine proposes out of the box a set of controls, including input fields, radio buttons, etc. Those are typically implemented natively within the XForms engine.
 
-Beyond the basic set of controls, there is an obvious need for creating new reusable controls. It would be difficult to modify the XForms engine itself. Orbeon Forms therefore proposes a complete framework inspired by the [XBL 2][1] specification to address this need.  
+Beyond the basic set of controls, there is an obvious need for creating new reusable controls. It would be difficult to modify the XForms engine itself. Orbeon Forms therefore proposes a complete framework inspired by the [XBL 2][1] specification to address this need.
+
+*NOTE: The XBL 2 specification is no longer under development at W3C, but as of 2015 [Web Components](http://webcomponents.org/) embody most of the ideas of XBL 2, including custom elements, the shadow DOM, and strong encapsulation.*
 
 ### Use cases   
 
