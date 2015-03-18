@@ -20,7 +20,7 @@ As of 2015-01-08 this page is *very* incomplete.
   - Home Page: [[doc|Form Runner ~ Home Page]], [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
   - Buttons and Processes: [[doc|Form-Runner-~-Buttons-and-Processes]], [blog post](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
   - Autosave: [[doc|Form-Runner ~ Autosave]], [blog post](http://blog.orbeon.com/2013/10/autosave.html)
-  - Wizard view: [[doc|Form Runner ~ Wizard View]], [blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
+  - Wizard view: [[doc|Form Runner ~ Wizard View]], [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html), [validated mode blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
 - Databases
   - Database support: [[doc|Orbeon-Forms-Features-~-Database-Support]]
   - SQL Server support in Orbeon Forms: [blog post](http://blog.orbeon.com/2014/05/sql-server-support-in-orbeon-forms.html)
