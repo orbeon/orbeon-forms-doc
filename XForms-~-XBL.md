@@ -1,3 +1,8 @@
+## See also
+
+- [Guide to Using and Writing XBL Components](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components-guide)
+- [[XBL Bindings| XForms ~ XBL ~ Bindings]]
+
 ## Introduction
 
 ### Why are components needed?  
