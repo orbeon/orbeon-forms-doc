@@ -48,18 +48,16 @@ It is possible to associate bindings by:
 - attribute only
 - or by name and attribute
 
+The following matches elements such as `<fr:charcounter>` (by name) but also `<foo:bar appearance="cool charcounter stuff">`:
+
 ```xml
 element="fr|charcounter, [appearance ~= charcounter]"
 ```
 
-The above matches elements such as `<fr:charcounter>` (by name) but also `<foo:bar appearance="cool charcounter stuff">`.
-
-or:
+The following matches elements having the `charcounter` appearance and which, at the same time, have the name `foo:bar`:
 
 ```xml
 element="foo|bar[appearance ~= charcounter]"
 ```
-
-The above matches elements having the `charcounter` appearance, but which also have the name `foo:bar`.
 
 The following standard CSS operations on attributes are supported: `=`, `~=`, `|=`, `^=`, `$=`, `*=`.
