@@ -10,7 +10,36 @@ The XForms engine finds XBL bindings in the following ways:
 
 ## Inline bindings
 
-TODO
+You can place inline `xbl:xbl` elements within the `xh:head` element, at the same level as `xf:model` elements. For example:
+
+```xml
+<xh:html
+        xmlns:xh="http://www.w3.org/1999/xhtml"
+        xmlns:xf="http://www.w3.org/2002/xforms"
+        xmlns:xbl="http://www.w3.org/ns/xbl">
+    <xh:head>
+        <xf:model id="fr-form-model">
+            ...
+        </xf:model>
+        <xbl:xbl ...>
+            <xbl:binding ...>
+                ...
+            </xbl:binding>
+            <xbl:binding ...>
+                ...
+            </xbl:binding>
+        </xbl:xbl>
+        <xbl:xbl ...>
+            <xbl:binding ...>
+                ...
+            </xbl:binding>
+        </xbl:xbl>
+    </xh:head>
+    <xh:body>
+        ...
+    </xh:body>
+</xh:html>
+```
 
 ## Bindings by name
 
