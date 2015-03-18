@@ -34,7 +34,7 @@ With the property above:
 1. Say element `<acme:button>` is found by the XForms engine, in your own `http://www.acme.com/xbl` namespace.
 2. Orbeon Forms looks for a property with a name that starts with `oxf.xforms.xbl.mapping` and with a value equal to the namespace `http://www.acme.com/xbl`. In this case it finds the property `oxf.xforms.xbl.mapping.acme`.
 3. The XForms engine extracts the part of the property name after `oxf.xforms.xbl.mapping`, in this case `acme`.
-4. This is used to resolve a resource called `oxf:/xbl/acme/button/button.xbl`.
+4. This is used to resolve the resource `oxf:/xbl/acme/button/button.xbl`.
     * The first part of the path is always `xbl`.
     * This is followed by the directory name found in step 3, here `acme`.
     * This is followed by a directory with the same name as the local name of your component, containing an XBL file also with the same name, here `button/button.xbl`.  
@@ -50,8 +50,8 @@ By default, all the elements in the `http://orbeon.org/oxf/xml/form-runner` name
 
 For example:
 
-- `<fr:number>` is loaded from `/xbl/orbeon/number/number.xbl`
-- `<fr:section>` is loaded from `/xbl/orbeon/section/section.xbl`
+- `<fr:number>` is loaded from `oxf:/xbl/orbeon/number/number.xbl`
+- `<fr:section>` is loaded from `oxf:/xbl/orbeon/section/section.xbl`
 
 etc.
 
