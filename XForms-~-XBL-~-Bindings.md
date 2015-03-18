@@ -14,7 +14,7 @@ The binding:
 - describes the component's markup and behavior
 - determines which XML elements, in the source form, it associates with
 
-## Binding selector
+## Binding selectors
 
 The `element` attribute specifies, via one or more CSS selectors, which XML elements, in the source form, it associates with. The following CSS selectors are supported:
 
