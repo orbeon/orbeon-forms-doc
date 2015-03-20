@@ -1,6 +1,6 @@
 ## Past releases
 
-- [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history)
+See the [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history).
 
 ## Release strategy
 
