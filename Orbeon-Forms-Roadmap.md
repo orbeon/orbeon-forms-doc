@@ -102,7 +102,6 @@ Focus:
 
 - [x] one performance item: [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
 - [x] one maintenance item: [#1710](https://github.com/orbeon/orbeon-forms/issues/1710)
-- [ ] doc items: TBD
 - [x] [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
 
 Dates:
