@@ -10,7 +10,7 @@ See the [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wi
 
 ## Planning strategy
 
-- __How far ahead do we plan?__ Once we've published a major release, we do the planning for the following release. You can see the future releases listed on the [open milestone page](https://github.com/orbeon/orbeon-forms/milestones), and from there, see what has been planned for the next release. We don't plan feature or bugs to be included in releases beyond the very next release, so we can react faster to our customers needs, deciding for every release what will best serve our customers.
+- __How far ahead do we plan?__ Once we've published a major release, we do the planning for the following one. You can see the future releases listed on the [open milestone page](https://github.com/orbeon/orbeon-forms/milestones), and from there, see what has been planned for the next release. We don't plan feature or bugs to be included in releases beyond the very next release, so we can react faster to our customers needs, deciding for every release what will best serve our customers.
 - __How do we decide what improvements to include in a release?__ A fair amount of the new features we develop are designed in collaboration with our customers, and sponsored by customers through a [Dev Support plan](http://www.orbeon.com/services). Other features are added to better serve existing and future users of the product. And last, but not least, for every release we strive to do work in each one of the development tracks outlined below.
 
 ## Development tracks
