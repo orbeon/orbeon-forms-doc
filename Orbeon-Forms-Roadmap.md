@@ -1,3 +1,5 @@
+Since 2013, starting with version 4.0, we're a "fast release cycle", with a new major release done about every 3 months. In the 2 years from February 2013 to February 2015, we had 9 major releases, and 8 additional point releases.
+
 * Our main development tracks are:
     1. [Performance](#performance) (e.g. memory use)
     1. [Mobile](#mobile) (e.g. responsive UI)
