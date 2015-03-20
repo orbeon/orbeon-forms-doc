@@ -1,3 +1,7 @@
+## Past releases
+
+- [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history)
+
 ## Release strategy
 
 - __How often do we release?__ Since 2013, starting with version 4.0, we're on a "fast release cycle", with a new major release done about every 3 months. In the 2 years from February 2013 to February 2015, we had 9 major releases, and 8 additional point releases.
@@ -18,10 +22,6 @@
     * [Orbeon Forms 4.8](#orbeon-forms-48)
     * [Orbeon Forms 4.6](#orbeon-forms-46)
     * [Orbeon Forms 4.7](#orbeon-forms-47)
-
-## See also
-
-- [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history)
 
 ## Tracks
 
