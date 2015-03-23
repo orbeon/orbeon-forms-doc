@@ -473,6 +473,8 @@ then suspend
 then send("oxf.fr.detail.send.success")'/>
 ```
 
+*NOTE: The `confirm` action is not synchronous, so the process *must* be suspended right after or the process will continue before the dialog is shown to the user.*
+
 You can use a specific confirmation message with the `message` parameter:
 
 ```xml
