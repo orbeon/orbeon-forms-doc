@@ -76,9 +76,18 @@ Set the following property in your `properties-local.xml`:
 Tell Orbeon Forms the name of the HTTP headers that contain the username, group, and roles for the current user.
 
 ```xml
-<property as="xs:string" name="oxf.fr.authentication.header.username" value="My-Username-Header"/>
-<property as="xs:string" name="oxf.fr.authentication.header.group"    value="My-Group-Header"/>
-<property as="xs:string" name="oxf.fr.authentication.header.roles"    value="My-Roles-Header"/>
+<property 
+    as="xs:string" 
+    name="oxf.fr.authentication.header.username" 
+    value="My-Username-Header"/>
+<property 
+    as="xs:string" 
+    name="oxf.fr.authentication.header.group"  
+    value="My-Group-Header"/>
+<property 
+    as="xs:string" 
+    name="oxf.fr.authentication.header.roles"  
+    value="My-Roles-Header"/>
 ```
 
 The header `oxf.fr.authentication.header.roles` consists of a list of comma- or pipe-separated role names (using the regular expression `(\s*[,\|]\s*)+`), for example:
