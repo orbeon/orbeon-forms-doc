@@ -14,14 +14,23 @@ To use this feature for a form, in Form Builder, when editing a form, open the *
 
 ## Configuration
 
-For eXist, you also need to set the following property:
+### Since Orbeon Forms 4.9
+
+There is no particular configuration.
+
+### With Orbeon Forms 4.8.x (eXist database only)
+
+When using this features with eXist, you need to set the following property:
 
 ```xml
 <property as="xs:string"
           name="oxf.xforms.forward-submission-headers"
           value="Orbeon-Username Orbeon-Roles Orbeon-Group"/>
 ```
-On 4.3, this feature was not enabled by default. It is enabled by default since 4.4, so if you're using 4.4 or newer, you don't need to worry about this. But if you're specifically on 4.3, you should set the following 2 properties if you want enable owner/group-based permissions:
+
+### With Orbeon Forms 4.3
+
+With Orbeon Forms 4.3, owner/group-based permissions were not enabled by default, and you must set the following 2 properties to enable them:
 
 ```xml
 <property as="xs:boolean" name="oxf.fr.support-owner-group" value="true"/>
