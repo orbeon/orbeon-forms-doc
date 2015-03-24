@@ -15,7 +15,7 @@ Feature                                                              |eXist     
 ---------------------------------------------------------------------|-------------|-------------|-------------|-------------|-------------|-------------
 [Form controls and layouts including repeated grids and sections][^1]|Y            |Y            |Y            |Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
 [Versioning][^2]                                                     |N            |Y<sup>3</sup>|Y<sup>3</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>3</sup>
-[Owner/group-based permissions][^3]                                  |Y<sup>6</sup>|Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
+[[Owner/group-based permissions|Form-Runner ~ Access Control ~ Owner-Group]]                                  |Y<sup>6</sup>|Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
 [Autosave][^4]                                                       |N            |Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
 [Flat view][^5]                                                      |N/A          |Y            |N            |N            |Y<sup>6</sup>|Y<sup>5</sup>
 
@@ -28,7 +28,6 @@ Feature                                                              |eXist     
 
 [^1]: http://blog.orbeon.com/2014/01/repeated-sections.html
 [^2]: http://blog.orbeon.com/2014/02/form-versioning.html
-[^3]: http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control#TOC-Permissions-for-owner-group-members
 [^4]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Autosave
 [^5]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Persistence-~-Flat-View
 
