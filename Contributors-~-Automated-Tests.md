@@ -1,6 +1,6 @@
 > [[Home]] ▸ Contributors
 
-## Removing leftover databases
+## Removing leftover databases on SQL Server
 
 ```sql
 BEGIN
