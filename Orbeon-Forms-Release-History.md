@@ -18,8 +18,8 @@ Since Orbeon Forms 4.0, we have a fairly fast release schedule:
     - 4.6 PE and 4.6 CE: June 24, 2014 ([blog post](http://blog.orbeon.com/2014/06/orbeon-forms-46.html)).
     - 4.5.1 PE: May 13, 2014 ([blog post](http://blog.orbeon.com/2014/05/orbeon-forms-451.html)).
     - 4.5 PE and 4.5 CE: April 7, 2014 ([blog post](http://blog.orbeon.com/2014/04/orbeon-forms-45.html)).
+    - 4.4.1 PE: January 15, 2014 ([blog post](http://blog.orbeon.com/2014/01/orbeon-forms-441-pe.html)).
 - 2013
-    - 4.4.1 PE: January 15, 2013 ([blog post](http://blog.orbeon.com/2014/01/orbeon-forms-441-pe.html)).
     - 4.4 PE: November 4, 2013 ([blog post](http://blog.orbeon.com/2013/11/orbeon-forms-44.html)).
     - 4.3.1 PE: August 29, 2013 ([blog post](http://blog.orbeon.com/2013/08/orbeon-forms-431-pe.html)).
     - 4.3 PE and 4.3 CE: August 14, 2013 ([blog post](http://blog.orbeon.com/2013/08/orbeon-forms-43.html)).
