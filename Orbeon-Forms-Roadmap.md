@@ -38,7 +38,24 @@ Issues:
 
 Dates (tentative):
 
-- 2015-04-15: tentative release date
+- 2015-04-15: tentative release date (updated)
+
+### Orbeon Forms 4.10
+
+Focus:
+
+- [ ] one performance item: TBD
+- [ ] one maintenance item: TBD
+- [ ] one test automation item: TBD
+- [ ] doc items: TBD
+
+Issues:
+
+- [ ] [all Orbeon Forms 4.10 issues](https://github.com/orbeon/orbeon-forms/milestones/4.10)
+
+Dates (tentative):
+
+- 2015-07-08: tentative release date
 
 ## What's in a release
 
