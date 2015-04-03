@@ -38,7 +38,7 @@ Issues:
 
 Dates (tentative):
 
-- 2015-03-17: tentative release date
+- 2015-04-15: tentative release date
 
 ## What's in a release
 
