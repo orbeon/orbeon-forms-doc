@@ -239,7 +239,7 @@ The following example validates that the image is within 10% of a 1x1 aspect rat
 xxf:username() as xs:string?
 ```
 
-Return the current user's username if available. This function works with container- and header-driven methods. See [[Form Runner ~ Access Control ~ Setup]].
+Return the current user's username if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
 
 ### xxf:user-group()
 
@@ -249,7 +249,7 @@ Return the current user's username if available. This function works with contai
 xxf:user-group() as xs:string?
 ```
 
-Return the current user's group if available. This function works with container- and header-driven methods. See [[Form Runner ~ Access Control ~ Setup]].
+Return the current user's group if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
 
 ### xxf:user-roles()
 
@@ -259,4 +259,4 @@ Return the current user's group if available. This function works with container
 xxf:user-roles() as xs:string*
 ```
 
-Return the current user's groups if available. This function works with container- and header-driven methods. See [[Form Runner ~ Access Control ~ Setup]].
+Return the current user's groups if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
