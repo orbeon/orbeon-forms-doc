@@ -231,3 +231,32 @@ The following example validates that the image is within 10% of a 1x1 aspect rat
   constraint="abs(xs:decimal(xxf:image-metadata(., 'width')) div xs:decimal(xxf:image-metadata(., 'height')) - 1.0) le 0.1"/>
 ```
 
+### xxf:username()
+
+[SINCE: Orbeon Forms 4.9]
+
+```ruby
+xxf:username() as xs:string?
+```
+
+Return the current user's username if available. This function works with container- and header-driven methods. See [[Form Runner ~ Access Control ~ Setup]].
+
+### xxf:user-group()
+
+[SINCE: Orbeon Forms 4.9]
+
+```ruby
+xxf:user-group() as xs:string?
+```
+
+Return the current user's group if available. This function works with container- and header-driven methods. See [[Form Runner ~ Access Control ~ Setup]].
+
+### xxf:user-roles()
+
+[SINCE: Orbeon Forms 4.9]
+
+```ruby
+xxf:user-roles() as xs:string*
+```
+
+Return the current user's groups if available. This function works with container- and header-driven methods. See [[Form Runner ~ Access Control ~ Setup]].
