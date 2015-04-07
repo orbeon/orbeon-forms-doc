@@ -20,17 +20,17 @@ By default, such errors are logged at WARNING level and then shown to the user i
 
 Errors can happen while a form is being loaded, or afterwards, as the user interacts with the form.
 
-### Orbeon Forms 4.0 to 4.5
+### With Orbeon Forms 4.0 to 4.5
 
 Errors occurring during the page initialization are not recoverable. They throw an exception and interrupt XForms processing. The idea was that there is not much to recover from, as the user has just landed on the page. The user can attempt to recover from such errors with the browser back button.
 
 Dynamic XPath errors on MIPs are always recoverable via the `xxforms-xpath-error` event.
 
-### Orbeon Forms 4.6 to 4.8
+### With Orbeon Forms 4.6 to 4.8
 
 The behavior is the same as before but fatal errors during initialization can be disabled via the `oxf.xforms.fatal-errors-during-initialization` property.
 
-### Orbeon Forms 4.9
+### With Orbeon Forms 4.9
 
 The `oxf.xforms.fatal-errors-during-initialization` property is removed. This is motivated by the fact that many XPath errors, such as those doing calculations in forms, happen as a matter of course. For example, if you write a formula in Form Builder:
 
