@@ -4,7 +4,7 @@ A number of things can go wrong while the user is interacting with an XForms pag
 
 In XForms 1.1, certain runtime errors, including errors in XPath expressions, must stop the XForms engine, and Orbeon Forms used to implement that behavior. However in many cases this is not desirable, as this prevents the user to attempt to recover from those errors. A user might be able, for example, to save data after an error, but not if the XForms engine has already stopped functioning!
 
-So Orbeon Forms 4.0 implements an improved behavior for certain runtime errors. This behavior is described below and is also expected to be part of XForms 2.0.
+So Orbeon Forms 4.0 and newer implements an improved behavior for certain runtime errors. This behavior is described below and is also expected to be part of XForms 2.0.
 
 ## Orbeon XForms error handling behavior
 
