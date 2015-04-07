@@ -1,4 +1,6 @@
-See also [[XForms Error Handling|XForms ~ Error Handling]].
+See also:
+
+- [[XForms Error Handling|XForms ~ Error Handling]]
 
 ## Philosophy of error handling
 
