@@ -1,12 +1,12 @@
 ## Rationale
 
-[SINCE: 2011-11-05]
+[SINCE Orbeon Forms 4.0]
 
 A number of things can go wrong while the user is interacting with an XForms page. In particular, XPath expressions and actions can raise errors when evaluating and executing.
 
-In XForms 1.1, certain runtime errors, including errors in XPath expressions, must stop the XForms engine, and Orbeon Forms used to implement that behavior. However in many cases this is not desirable, as this prevents the user to attempt to recover from errors. A user might be able, for example, to save data after an error, but not if the XForms engine has already stopped functioning!
+In XForms 1.1, certain runtime errors, including errors in XPath expressions, must stop the XForms engine, and Orbeon Forms used to implement that behavior. However in many cases this is not desirable, as this prevents the user to attempt to recover from those errors. A user might be able, for example, to save data after an error, but not if the XForms engine has already stopped functioning!
 
-So Orbeon Forms (since 2011-11-05) implements a new and improved behavior for certain runtime errors. This behavior is described below and is also expected to be part of XForms 2.0.
+So Orbeon Forms 4.0 implements a new and improved behavior for certain runtime errors. This behavior is described below and is also expected to be part of XForms 2.0.
 
 ## Orbeon XForms error handling behavior
 
@@ -16,11 +16,42 @@ By default, such errors are logged at WARNING level and then shown to the user i
 
 ![Error dialog](images/xforms-error-dialog.png)
 
-In addition, dynamic XPath errors on model item properties (MIPs) can optionally be fully ignored by providing a customer handler for the `xxforms-xpath-error` event.
+## Errors during page load
 
-_NOTE: By default, errors occurring during the page initialization are not recoverable. They still throw an exception and interrupt XForms processing. The idea is that there is not much to recover from, as the user has just landed on the page. The user can attempt to recover from such errors with the browser back button. The exception is dynamic XPath errors on MIPs, which are always recoverable via the `xxforms-xpath-error` event. Since Orbeon Forms 4.6, the can be controlled via `oxf.xforms.fatal-errors-during-initialization`._
+Errors can happen while a form is being loaded, or afterwards, as the user interacts with the form.
 
-_NOTE: Other errors, such as error in XML pipelines, Java exceptions, or Orbeon Forms bugs typically are not recoverable._
+### Orbeon Forms 4.0 to 4.5
+
+Errors occurring during the page initialization are not recoverable. They throw an exception and interrupt XForms processing. The idea was that there is not much to recover from, as the user has just landed on the page. The user can attempt to recover from such errors with the browser back button.
+
+Dynamic XPath errors on MIPs are always recoverable via the `xxforms-xpath-error` event.
+
+### Orbeon Forms 4.6 to 4.8
+
+The behavior is the same as before but fatal errors during initialization can be disabled via the `oxf.xforms.fatal-errors-during-initialization` property.
+
+### Orbeon Forms 4.9
+
+The `oxf.xforms.fatal-errors-during-initialization` property is removed. This is motivated by the fact that many XPath errors, such as those doing calculations in forms, happen as a matter of course. For example, if you write a formula in Form Builder:
+
+```ruby
+$a div $b
+```
+
+and the value for `$b`, provided by the user in a field, is `0`, there is an error. But this is not a bug in the form: it is expected, and the calculation simply doesn't produce a result.
+
+So the only types of errors which are now fatal during page load and cause the page to display an unrecoverable error are:
+
+- __Static XPath errors:__ These are typically XPath errors which have syntax errors, which reveal bugs in a form or in Orbeon Forms.
+- __Other static errors__: For example, duplicate `id` attributes on elements.
+
+_NOTE: Like before, non-XForms errors typically are not recoverable. This includes errors in XML pipelines, XSLT transformations outside of XForms, and other unexpected Java exceptions in Orbeon Forms._
+
+On the other hand, the following errors do not cause the form to fail loading:
+
+- __Dynamic XPath errors:__ This includes divisions by zero, and other errors which can happen while an XPath expression executes.
+- __Errors writing values into the data model__: For example, a `calculate` expression attempting to write to a non-leaf XML element or a an XML document element.
+- __XForms actions errors__: In addition to a failed `xf:setvalue`, unexpected errors when running an XForms action.
 
 ## Configuration properties
 
