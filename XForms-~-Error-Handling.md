@@ -16,7 +16,7 @@ The new error handling behavior allows recovering from many errors, including XP
 
 By default, such errors are logged at WARNING level and then shown to the user in a dialog. The user can then close the dialog and try to continue working with the page. There is no guarantee that further actions on the form will work, but at least the user can try.
 
-![Error dialog][images/xforms-error-dialog.png]
+![Error dialog](images/xforms-error-dialog.png)
 
 In addition, dynamic XPath errors on model item properties (MIPs) can optionally be fully ignored by providing a customer handler for the `xxforms-xpath-error` event.
 
@@ -82,7 +82,7 @@ Default: `true`.
 
 In noscript mode, an error panel is also shown for recoverable errors:
 
-![Noscript error panel][images/xforms-noscript-error.png]
+![Noscript error panel](images/xforms-noscript-error.png)
 
 The differences with the Ajax mode are:
 
