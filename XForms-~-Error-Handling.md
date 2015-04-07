@@ -6,13 +6,11 @@ A number of things can go wrong while the user is interacting with an XForms pag
 
 In XForms 1.1, certain runtime errors, including errors in XPath expressions, must stop the XForms engine, and Orbeon Forms used to implement that behavior. However in many cases this is not desirable, as this prevents the user to attempt to recover from those errors. A user might be able, for example, to save data after an error, but not if the XForms engine has already stopped functioning!
 
-So Orbeon Forms 4.0 implements a new and improved behavior for certain runtime errors. This behavior is described below and is also expected to be part of XForms 2.0.
+So Orbeon Forms 4.0 implements an improved behavior for certain runtime errors. This behavior is described below and is also expected to be part of XForms 2.0.
 
 ## Orbeon XForms error handling behavior
 
 The error handling behavior allows recovering from many errors, including XPath errors, binding errors, and errors while running actions.
-
-By default, such errors are logged at WARNING level and then shown to the user in a dialog. The user can then close the dialog and try to continue working with the page. There is no guarantee that further actions on the form will work, but at least the user can try.
 
 ![Error dialog](images/xforms-error-dialog.png)
 
@@ -24,7 +22,9 @@ Errors can happen while a form is being loaded, or afterwards, as the user inter
 
 Errors occurring during the page initialization are not recoverable. They throw an exception and interrupt XForms processing. The idea was that there is not much to recover from, as the user has just landed on the page. The user can attempt to recover from such errors with the browser back button.
 
-Dynamic XPath errors on MIPs are always recoverable via the `xxforms-xpath-error` event.
+Dynamic XPath errors on MIPs are recoverable via the `xxforms-xpath-error` event.
+
+Errors are logged at WARNING level and then shown to the user in a dialog. The user can then close the dialog and try to continue working with the page. There is no guarantee that further actions on the form will work, but at least the user can try.
 
 ### With Orbeon Forms 4.6 to 4.8
 
@@ -53,6 +53,9 @@ On the other hand, the following errors do not cause the form to fail loading:
 
 _NOTE: Like before, non-XForms errors typically are fatal during page load. These include errors in XML pipelines, XSLT transformations outside of XForms, and other unexpected Java exceptions in Orbeon Forms._
 
+## Errors during form minteraction
+
+By default, such errors are logged at WARNING level and then shown to the user in a dialog. The user can then close the dialog and try to continue working with the page. There is no guarantee that further actions on the form will work, but at least the user can try.
 ## Configuration properties
 
 ### Error dialog
