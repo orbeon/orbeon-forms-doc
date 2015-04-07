@@ -18,7 +18,7 @@ By default, such errors are logged at WARNING level and then shown to the user i
 
 ## Errors during page load
 
-Errors can happen while a form is being loaded, or afterwards, as the user interacts with the form.
+Errors can happen while a form is being loaded, or afterwards, as the user interacts with the form. This section covers errors which happen while the form is being loaded.
 
 ### With Orbeon Forms 4.0 to 4.5
 
