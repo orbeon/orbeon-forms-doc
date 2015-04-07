@@ -1,7 +1,5 @@
 ## Rationale
 
-[SINCE Orbeon Forms 4.0]
-
 A number of things can go wrong while the user is interacting with an XForms page. In particular, XPath expressions and actions can raise errors when evaluating and executing.
 
 In XForms 1.1, certain runtime errors, including errors in XPath expressions, must stop the XForms engine, and Orbeon Forms used to implement that behavior. However in many cases this is not desirable, as this prevents the user to attempt to recover from those errors. A user might be able, for example, to save data after an error, but not if the XForms engine has already stopped functioning!
