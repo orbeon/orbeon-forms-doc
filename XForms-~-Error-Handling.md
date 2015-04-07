@@ -45,13 +45,13 @@ So the only types of errors which are now fatal during page load and cause the p
 - __Static XPath errors:__ These are typically XPath errors which have syntax errors, which reveal bugs in a form or in Orbeon Forms.
 - __Other static errors__: For example, duplicate `id` attributes on elements.
 
-_NOTE: Like before, non-XForms errors typically are not recoverable. This includes errors in XML pipelines, XSLT transformations outside of XForms, and other unexpected Java exceptions in Orbeon Forms._
-
 On the other hand, the following errors do not cause the form to fail loading:
 
 - __Dynamic XPath errors:__ This includes divisions by zero, and other errors which can happen while an XPath expression executes.
 - __Errors writing values into the data model__: For example, a `calculate` expression attempting to write to a non-leaf XML element or a an XML document element.
 - __XForms actions errors__: In addition to a failed `xf:setvalue`, unexpected errors when running an XForms action.
+
+_NOTE: Like before, non-XForms errors typically are fatal during page load. These include errors in XML pipelines, XSLT transformations outside of XForms, and other unexpected Java exceptions in Orbeon Forms._
 
 ## Configuration properties
 
