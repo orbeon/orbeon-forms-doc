@@ -8,7 +8,7 @@ In XForms 1.1, certain runtime errors, including errors in XPath expressions, mu
 
 So Orbeon Forms (since 2011-11-05) implements a new and improved behavior for certain runtime errors. This behavior is described below and is also expected to be part of XForms 2.0.
 
-## Orbeon XForms error handling behavior at a glance
+## Orbeon XForms error handling behavior
 
 The error handling behavior allows recovering from many errors, including XPath errors, binding errors, and errors while running actions.
 
