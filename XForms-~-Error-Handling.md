@@ -16,11 +16,11 @@ The new error handling behavior allows recovering from many errors, including XP
 
 By default, such errors are logged at WARNING level and then shown to the user in a dialog. The user can then close the dialog and try to continue working with the page. There is no guarantee that further actions on the form will work, but at least the user can try.
 
-![Error dialog][./images/xforms-error-dialog.png]
+![Error dialog][images/xforms-error-dialog.png]
 
 In addition, dynamic XPath errors on model item properties (MIPs) can optionally be fully ignored by providing a customer handler for the `xxforms-xpath-error` event.
 
-_NOTE: By default, errors occurring during the page initialization are not recoverable. They still throw an exception and interrupt XForms processing. The idea is that there is not much to recover from, as the user has just landed on the page. The user can attempt to recover from such errors with the browser back button. The exception is dynamic XPath errors on MIPs, which are always recoverable via the __`xxforms-xpath-error` event__. Since Orbeon Forms 4.6, the can be controlled via __`oxf.xforms.fatal-errors-during-initialization`._
+_NOTE: By default, errors occurring during the page initialization are not recoverable. They still throw an exception and interrupt XForms processing. The idea is that there is not much to recover from, as the user has just landed on the page. The user can attempt to recover from such errors with the browser back button. The exception is dynamic XPath errors on MIPs, which are always recoverable via the `xxforms-xpath-error` event. Since Orbeon Forms 4.6, the can be controlled via `oxf.xforms.fatal-errors-during-initialization`._
 
 _NOTE: Other errors, such as error in XML pipelines, Java exceptions, or Orbeon Forms bugs typically are not recoverable._
 
@@ -82,7 +82,7 @@ Default: `true`.
 
 In noscript mode, an error panel is also shown for recoverable errors:
 
-![Noscript error panel][xforms-noscript-error.png]
+![Noscript error panel][images/xforms-noscript-error.png]
 
 The differences with the Ajax mode are:
 
