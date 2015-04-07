@@ -6,13 +6,11 @@ A number of things can go wrong while the user is interacting with an XForms pag
 
 In XForms 1.1, certain runtime errors, including errors in XPath expressions, must stop the XForms engine, and Orbeon Forms used to implement that behavior. However in many cases this is not desirable, as this prevents the user to attempt to recover from errors. A user might be able, for example, to save data after an error, but not if the XForms engine has already stopped functioning!
 
-So since 2011-11-05, Orbeon Forms implements a new and improved behavior for certain runtime errors. This behavior is described below.
+So Orbeon Forms (since 2011-11-05) implements a new and improved behavior for certain runtime errors. This behavior is described below and is also expected to be part of XForms 2.0.
 
 ## Orbeon XForms error handling behavior at a glance
 
-In the past, once an error occurred when the user was interacting with the form, the XForms engine would display an error dialog to the user but wouldn't allow recovering from that error. The form was basically non-functional after that.
-
-The new error handling behavior allows recovering from many errors, including XPath errors, binding errors, and errors while running actions.
+The error handling behavior allows recovering from many errors, including XPath errors, binding errors, and errors while running actions.
 
 By default, such errors are logged at WARNING level and then shown to the user in a dialog. The user can then close the dialog and try to continue working with the page. There is no guarantee that further actions on the form will work, but at least the user can try.
 
@@ -65,7 +63,7 @@ _NOTE: Before 2012-05-03, the default was _10_._
 
 ### Fatal errors during form initialization
 
-[SINCE Orbeon Forms 4.6]
+[SINCE Orbeon Forms 4.6, UNTIL Orbeon Forms 4.8.x]
 
 The following property controls whether errors occurring during form initialization are considered fatal or not. If `true`, they are fatal and an error shows when loading the page.
 
@@ -210,6 +208,8 @@ _Q: Are there any other references by id that can be statically checked?_
 ## Historical: how things used to work
 
 Until 2011-11-04 builds, including Orbeon Forms 3.8 and 3.9:
+
+Once an error occurred when the user is interacting with the form, the XForms engine displays an error dialog to the user but doesn't allow recovering from that error. The form is basically non-functional after that.
 
 * Most runtime errors are fatal and stop XForms processing.
 * In particular, `xforms-compute-exception` and `xforms-binding-exception` can be dispatched and are fatal.
