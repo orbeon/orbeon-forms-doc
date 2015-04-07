@@ -241,9 +241,9 @@ _Q: Are there any other references by id that can be statically checked?_
 
 ## Historical: how things used to work
 
-Until 2011-11-04 builds, including Orbeon Forms 3.8 and 3.9:
+Until Orbeon Forms 3.9:
 
-Once an error occurred when the user is interacting with the form, the XForms engine displays an error dialog to the user but doesn't allow recovering from that error. The form is basically non-functional after that.
+Once an error occurs when the user is interacting with the form, the XForms engine displays an error dialog to the user but doesn't allow recovering from that error. The form is basically non-functional after that.
 
 * Most runtime errors are fatal and stop XForms processing.
 * In particular, `xforms-compute-exception` and `xforms-binding-exception` can be dispatched and are fatal.
@@ -251,4 +251,3 @@ Once an error occurred when the user is interacting with the form, the XForms en
 
 [3]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-extensions#TOC-Custom-Events
 [4]: http://wiki.orbeon.com/forms/_/rsrc/1320697168699/welcome/xforms-error-handling/noscript-panel.png
-  </toggle></setindex></setfocus></send></dispatch></insert></delete></setvalue></property></property></property>
