@@ -49,7 +49,7 @@ All other recoverable errors dispatch one of the following XForms events:
 - `xxforms-binding-error`
 - `xxforms-action-error`
 
-The default action for these events is to log the error at the `debug` level.
+The default action for these events is to log the error at `debug` level.
 
 *NOTE: Until Orbeon Forms 4.8, these errors were logged at `warning` level.*
 
