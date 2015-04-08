@@ -41,9 +41,17 @@ After a form has loaded, static XPath errors do not cause the form to stop worki
 
 ## Handling of recoverable errors
 
-Recoverable errors dispatch events, which by default cause the error to be logged at the `debug` level.
+When `xxf:expose-xpath-types="true"`, errors caused by incorrect access to typed values are just logged at `debug` level.
 
-*NOTE: Until Orbeon Forms 4.8, they were logged at `warning` level.*
+All other recoverable errors dispatch one of the following XForms events:
+
+- `xxforms-xpath-error`
+- `xxforms-binding-error`
+- `xxforms-action-error`
+
+The default action for these events is to log the error at the `debug` level.
+
+*NOTE: Until Orbeon Forms 4.8, these errors were logged at `warning` level.*
 
 Custom event handlers can be used to provide specific error handling for these errors, as described in [[XForms Error Handling Detailed Behavior|XForms ~ Error Handling ~ Detailed Behavior]].
 
