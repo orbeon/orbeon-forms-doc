@@ -214,6 +214,21 @@ This property set whether the control hints are shown inline, rather than as too
     value="true"/>
 ```
 
+#### Initial keyboard focus
+
+[SINCE Orbeon Forms 4.9]
+
+This property controls whether Form Runner attempts to set focus on the first control upon form load. The default is `true`.
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.initial-focus.*.*" 
+    value="true"/>
+```
+
+In some cases, such as [[embedding| Form Runner ~ APIs ~ Server side Embedding]], it can be desirable to disable this by setting the property to `false`.
+
 ### PDF
 
 #### Custom PDF filename
