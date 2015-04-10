@@ -35,6 +35,25 @@ Language  | Calendar | Numberer | XBL components | Form Runner   | Form Builder
 ----------|:--------:|:--------:|:--------------:|:-------------:|:-----------:
 English   | F        | F        | F              | F             | F
 French    | F        | F        | F              | F             | F
+Swedish   | F        | F        | F              | F             | F
+Portuguese| F        | F        | F              | F<sup>1</sup> | F<sup>1</sup>
+Italian   | F        | F        | F              | F<sup>1</sup> | F<sup>1</sup>
+German    | F        | F        | F              | F<sup>1</sup> | F<sup>1</sup>
+Spanish   | F        | F        | F              | P             | P
+Finnish   | F        | F        | P              | F<sup>1</sup> | F<sup>1</sup>
+Dutch     | F        | F        | F              | F             | N
+Norwegian | F        | F        | P              | P             | P
+Russian   | F        | F        | P              | P             | P
+Polish    | N        | F        | N              | N             | N
+
+1. A few resources are missing.
+
+### As of Orbeon Forms 4.6.2, 4.7 and 4.8
+
+Language  | Calendar | Numberer | XBL components | Form Runner   | Form Builder
+----------|:--------:|:--------:|:--------------:|:-------------:|:-----------:
+English   | F        | F        | F              | F             | F
+French    | F        | F        | F              | F             | F
 Portuguese| F        | F        | F              | F<sup>1</sup> | F<sup>1</sup>
 Italian   | F        | F        | F              | F<sup>1</sup> | F<sup>1</sup>
 German    | F        | F        | F              | F<sup>1</sup> | F<sup>1</sup>
