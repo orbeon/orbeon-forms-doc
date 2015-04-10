@@ -81,4 +81,30 @@ Example:
 </form>
 ```
 
+### Nested sections
+
+TODO
+
+### Repeated grids and sections
+
 TODO: Specify how nested grids and nested sections are represented.
+
+### Attachments
+
+For attachments, the control element is slightly different:
+
+- the text content is a URL pointing to the location of the attachment in the persistence layer
+- attributes are used for storing
+    - the file name
+    - the file media type
+    - the file size  
+
+Example:
+
+```xml
+<my-attachment filename="book.png" mediatype="image/png" size="13245">
+/fr/service/exist/crud/orbeon/builder/data/5277.../book.png
+</my-attachment>
+```
+
+_NOTE: Non-repeated grids do not create containing elements._
