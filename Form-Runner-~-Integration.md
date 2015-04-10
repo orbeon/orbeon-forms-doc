@@ -80,3 +80,5 @@ Example:
     </notes>
 </form>
 ```
+
+TODO: Specify how nested grids and nested sections are represented.
