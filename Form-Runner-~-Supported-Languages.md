@@ -29,7 +29,7 @@ We are glad to get help to address these two limitations.
 
 See also [[Localizing Orbeon Forms|Contributors-~-Localizing-Orbeon-Forms]] for information about how to localize Form Builder and Form runner in additional languages. Your contributions are welcome!
 
-### As of Orbeon Forms 4.6.2, 4.7 and 4.8
+### As of Orbeon Forms 4.9
 
 Language  | Calendar | Numberer | XBL components | Form Runner   | Form Builder
 ----------|:--------:|:--------:|:--------------:|:-------------:|:-----------:
