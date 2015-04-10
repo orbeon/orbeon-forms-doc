@@ -8,9 +8,10 @@ We make a distinction between:
 
 * **Form definitions**: for example an "address" form vs. a "claim" form
 * **Form data**: for example a given instance of the "address" form filled out by a particular user.
-In Form Builder, a form definition is identified by a two-level hierarchy of names:  
 
 ## Application name and form name
+
+In Form Builder, a form definition is identified by a two-level hierarchy of names:
 
 - **Application name**: a name which allows grouping form together. The application name (or app name) can be, for example:
   - a company name such as "orbeon" or "acme"
