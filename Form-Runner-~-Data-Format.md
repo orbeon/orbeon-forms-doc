@@ -43,6 +43,8 @@ TODO
 
 TODO: Specify how nested grids and nested sections are represented.
 
+_NOTE: Non-repeated grids do not create containing elements._
+
 ## Attachments
 
 For attachments, the control element is slightly different:
@@ -60,5 +62,3 @@ Example:
 /fr/service/exist/crud/orbeon/builder/data/5277.../book.png
 </my-attachment>
 ```
-
-_NOTE: Non-repeated grids do not create containing elements._
