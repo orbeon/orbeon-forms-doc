@@ -4,20 +4,22 @@
 
 Most of the function library is [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions). The following functions are documented on this page:
 
-- `xf:valid()`
-- `xf:bind()`
-- `xxf:r()`
-- `xxf:get-request-method()`
-- `xxf:get-portlet-mode()`
-- `xxf:get-window-state()`
-- `xxf:forall()`
-- `xxf:exists()`
-- `xxf:split()`
-- `xxf:client-id()`
-- `xxf:image-metadata()`
-- `xxf:username()`
-- `xxf:user-group()`
-- `xxf:user-roles()`
+- XForms 2.0
+    - `xf:valid()`
+    - `xf:bind()`
+- extension functions
+    - `xxf:r()`
+    - `xxf:get-request-method()`
+    - `xxf:get-portlet-mode()`
+    - `xxf:get-window-state()`
+    - `xxf:forall()`
+    - `xxf:exists()`
+    - `xxf:split()`
+    - `xxf:client-id()`
+    - `xxf:image-metadata()`
+    - `xxf:username()`
+    - `xxf:user-group()`
+    - `xxf:user-roles()`
 
 ## XForms 2.0 functions
 
