@@ -2,9 +2,7 @@
 
 ## Main function library documentation
 
-The function library is [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions). New functions are documented below.
-
-Functions documented on this page:
+Most of the function library is [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions). The following functions are documented on this page:
 
 - `xf:valid()`
 - `xf:bind()`
