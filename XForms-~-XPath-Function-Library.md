@@ -4,6 +4,23 @@
 
 The function library is [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions). New functions are documented below.
 
+Functions documented on this page:
+
+- `xf:valid()`
+- `xf:bind()`
+- `xxf:r()`
+- `xxf:get-request-method()`
+- `xxf:get-portlet-mode()`
+- `xxf:get-window-state()`
+- `xxf:forall()`
+- `xxf:exists()`
+- `xxf:split()`
+- `xxf:client-id()`
+- `xxf:image-metadata()`
+- `xxf:username()`
+- `xxf:user-group()`
+- `xxf:user-roles()`
+
 ## XForms 2.0 functions
 
 ### xf:valid()
