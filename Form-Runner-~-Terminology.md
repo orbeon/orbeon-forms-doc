@@ -6,8 +6,8 @@ This page explains some terms which occur often in the Orbeon Forms documentatio
 
 We make a distinction between:  
 
-* **Form definitions**: for example an "address" form vs. a "claim" form
-* **Form data**: for example a given instance of the "address" form filled out by a particular user.
+* A **Form definition** is the description of a given form, including which sections, grids, and fields it has, and all associated properties. With Orbeon Forms, a form definition is encoded as an XML document using XHTML and XForms. Examples of form definitions include an "Address" form, or a "Claim" form.
+* **Form data** is a set of data entered by a user via a form definition. For example, Hillary might have used the "Address" form to file a claim. With Orbeon Forms, form data is encoded as an XML document.
 
 ## Application name and form name
 
