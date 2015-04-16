@@ -4,7 +4,7 @@
   - links not broken (use Marked to save HTML, then check w/ Integrity)
   - latest release year
   - version number is correct
-  - links to release notes
+  - links to release notes (include link to new version even if blog post not up yet)
 - file layout is correct in zip and war
 - check WAR files have reasonable sizes (sizes as of 4.8)
   - orbeon-auth.war (< 10 KB)
