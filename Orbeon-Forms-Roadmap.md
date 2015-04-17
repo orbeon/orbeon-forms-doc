@@ -27,7 +27,7 @@ See the [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wi
 
 Focus:
 
-- [ ] one performance item: TBD
+- [ ] one performance item: #2185, #2183, #2181, #2174
 - [ ] one maintenance item: TBD
 - [ ] one test automation item: TBD
 - [ ] doc items: TBD
