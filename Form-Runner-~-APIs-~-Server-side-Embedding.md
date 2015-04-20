@@ -1,5 +1,9 @@
 > [[Home]] ▸ Form Runner ▸ [[APIs|Form-Runner ~ APIs]]
 
+## See also
+
+- [[Liferay proxy portlet guide|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
+
 ## Availability
 
 Since Orbeon Forms 4.7.
