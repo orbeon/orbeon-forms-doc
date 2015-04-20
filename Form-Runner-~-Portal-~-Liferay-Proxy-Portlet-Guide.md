@@ -1,3 +1,7 @@
+## See also
+
+- [[Server-side Embedding API|Form Runner ~ APIs ~ Server side Embedding]]
+
 ## Status
 
 This feature is available since January 2011.
