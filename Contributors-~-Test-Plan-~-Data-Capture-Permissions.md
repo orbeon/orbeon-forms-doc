@@ -59,5 +59,5 @@
 
 [16]: https://gist.github.com/ebruchez/10079296
 [17]: https://gist.github.com/ebruchez/10079254
-[18]: http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control#TOC-Enabling-permissions
+[18]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Access-Control-~-Deployed-Forms#example
 [19]: https://github.com/orbeon/orbeon-forms/issues/1201
