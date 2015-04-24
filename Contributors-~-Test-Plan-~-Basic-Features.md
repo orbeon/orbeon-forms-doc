@@ -2,9 +2,6 @@
 
 - create new form
 - insert sections, grids, repeated grids
-- insert all controls [automated for 4.8, see [`BasicControls`](https://github.com/orbeon/orbeon-forms/blob/master/src/test/scala/org/orbeon/oxf/client/fb/BasicControls.scala)]
-  - into regular grid
-  - into repeated grid
 - rename sections and controls
     - check renamed in dialog [automated for 4.8, see [`BasicControls`](https://github.com/orbeon/orbeon-forms/blob/master/src/test/scala/org/orbeon/oxf/client/fb/BasicControls.scala)]
     - check renamed in source
