@@ -21,6 +21,11 @@ As of 2015-01-08 this page is *very* incomplete.
   - Buttons and Processes: [[doc|Form-Runner-~-Buttons-and-Processes]], [blog post](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
   - Autosave: [[doc|Form-Runner ~ Autosave]], [blog post](http://blog.orbeon.com/2013/10/autosave.html)
   - Wizard view: [[doc|Form Runner ~ Wizard View]], [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html), [validated mode blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
+  - PDF
+    - Production: [[doc|Form Builder ~ PDF Production]]
+      - Automatic
+      - Template-based: [[doc|Form Builder ~ PDF Production ~ PDF Templates]]
+    - Automatic highlighting of links [blog post](http://blog.orbeon.com/2015/04/automatic-web-links-in-pdf-files.html)
 - Databases
   - Database support: [[doc|Orbeon-Forms-Features-~-Database-Support]]
   - SQL Server support in Orbeon Forms: [blog post](http://blog.orbeon.com/2014/05/sql-server-support-in-orbeon-forms.html)
