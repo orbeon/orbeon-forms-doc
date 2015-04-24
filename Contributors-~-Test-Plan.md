@@ -8,7 +8,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[PE Features Availability|Contributors ~ Test Plan ~ PE Features Availability]]
 - Persistence
     - [[Basic Persistence|Contributors ~ Test Plan ~ Basic Persistence]] [4.9 done]
-    - [[Data Capture Permissions|Contributors ~ Test Plan ~ Data Capture Permissions]] [Alex]
+    - [[Data Capture Permissions|Contributors ~ Test Plan ~ Data Capture Permissions]] [4.9 done]
     - [[Autosave and Permissions Test|Contributors ~ Test Plan ~ Autosave and Permissions]] [Alex]
     - [[Other Database Tests|Contributors ~ Test Plan ~ Other Database Tests]] [Alex]
 - Form Builder
