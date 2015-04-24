@@ -15,6 +15,7 @@ As of 2015-01-08 this page is *very* incomplete.
   - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
 - Form Builder
   - Repeated grids: [[doc|Form Builder ~ Repeated Grids]], [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
+  - Explanation control: [blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)
 - Form Runner
   - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
   - Home Page: [[doc|Form Runner ~ Home Page]], [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
@@ -40,3 +41,5 @@ As of 2015-01-08 this page is *very* incomplete.
 - Core
   - Limiter filter to limit the number of concurrent form requests: [[doc|Installation ~ Limiter Filter]]
   - Internal service requests
+- Performance
+  - Internal connections: [blog post](http://blog.orbeon.com/2015/01/saying-goodbye-to-internal-http.html)
