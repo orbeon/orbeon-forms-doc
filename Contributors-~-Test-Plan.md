@@ -12,9 +12,9 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Autosave and Permissions Test|Contributors ~ Test Plan ~ Autosave and Permissions]] [4.9 done]
     - [[Other Database Tests|Contributors ~ Test Plan ~ Other Database Tests]] [4.9 done]
 - Form Builder
-    - [[Basic Features|Contributors ~ Test Plan ~ Basic Features]]
-    - [[Schema Support|Contributors ~ Test Plan ~ Schema Support]]
-    - [[Services and Actions|Contributors ~ Test Plan ~ Services and Actions]]
+    - [[Basic Features|Contributors ~ Test Plan ~ Basic Features]] [Alex]
+    - [[Schema Support|Contributors ~ Test Plan ~ Schema Support]] [Alex]
+    - [[Services and Actions|Contributors ~ Test Plan ~ Services and Actions]] [Alex]
 - Form Builder / Form Runner
     - [[Section Templates|Contributors ~ Test Plan ~ Section Templates]]
     - [[PDF Automatic|Contributors ~ Test Plan ~ PDF Automatic]]
