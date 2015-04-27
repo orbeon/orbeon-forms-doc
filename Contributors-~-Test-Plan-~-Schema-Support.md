@@ -1,7 +1,7 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - attach Schema
-    - use e.g. Bookcast schema
+    - use e.g. [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd)
     - upload schema
         - see that types are listed in dialog
     - change schema
