@@ -21,7 +21,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[PDF Template|Contributors ~ Test Plan ~ PDF Template]] [4.9 done]
     - [[Form Builder Permissions|Contributors ~ Test Plan ~ Form Builder Permissions]] [Alex]
 - Form Runner
-    - [[Sample forms|Contributors ~ Test Plan ~ Sample Forms]]
+    - [[Sample forms|Contributors ~ Test Plan ~ Sample Forms]] [4.9 done]
     - [[New, Edit, Review Pages|Contributors ~ Test Plan ~ New Edit Review Pages]]
     - [[Home Page|Contributors ~ Test Plan ~ Home Page]]
     - [[Summary Page|Contributors ~ Test Plan ~ Summary Page]]
