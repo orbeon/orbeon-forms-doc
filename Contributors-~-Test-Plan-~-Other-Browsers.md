@@ -1,6 +1,7 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - main tests above with Google Chrome
+  - 4.9: latest is 42.0.2311.135
   - 4.8: latest is 39.0.2171.95 and 41.0.2267.0 dev
   - 4.7: latest is 37.0.2062.122
   - 4.6: latest is 37.0.2062.0 dev
