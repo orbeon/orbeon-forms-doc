@@ -30,5 +30,5 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Embedding|Contributors ~ Test Plan ~ Embedding]] [Erik]
     - [[XForms Retry|Contributors ~ Test Plan ~ XForms Retry]] [Alex]
     - [[Error Dialog|Contributors ~ Test Plan ~ Error Dialog]] [Alex]
-    - [[Other Browsers|Contributors ~ Test Plan ~ Other Browsers]] [Alex]
+    - [[Other Browsers|Contributors ~ Test Plan ~ Other Browsers]] [4.9 done]
     - [[Other|Contributors ~ Test Plan ~ Other]] [Alex]
