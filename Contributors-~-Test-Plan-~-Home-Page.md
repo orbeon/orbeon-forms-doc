@@ -48,7 +48,7 @@
     - push to remote
     - check attachment is pushed
     - load form /new on remote, make sure works and attachment is there
-    - *NOTE: `/summary` should do 403 if user is not orbeon-sales on remote!*
+    - *NOTE: `/summary` should do 403 if user is not `orbeon-sales` on remote. For this, make sure form has permissions enabled and e.g. `orbeon-sales` only can read.*
     - pull back form
     - load form /new on local, make sure works and attachment is there
   - no checkbox for forms w/o admin access (e.g. set `<role name="*" app="orbeon" form="*"/>`)
