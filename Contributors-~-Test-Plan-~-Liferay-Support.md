@@ -38,4 +38,3 @@
   - attach image and save, make sure image shows properly
   - Image annotation control works (in Controls form)
   - *NOTE: noscript broken in Liferay*
-  - P2: async load mode
