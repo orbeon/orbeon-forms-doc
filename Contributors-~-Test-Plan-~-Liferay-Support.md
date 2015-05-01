@@ -1,5 +1,8 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
+- versions as of Orbeon Forms 4.9
+  - Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)
+  - Liferay Portal Community Edition 6.1.2 CE GA3
 - setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present
   - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
