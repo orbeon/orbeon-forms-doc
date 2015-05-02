@@ -8,3 +8,6 @@
   - publish and test, must see notemplate PDF
 - check that DMV-14 PDF is filled out
   - check Vote and Leased checkboxes
+- email PDF
+  - check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
+  
