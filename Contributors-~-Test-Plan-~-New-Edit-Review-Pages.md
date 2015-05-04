@@ -27,7 +27,7 @@
     - send w/ replace all/none
         - set acme.submit.replace to none
         - must not navigate after submit
-- attachments/uploads
+- attachments/uploads [4.9 done]
     - basic upload works
     - removing uploaded file works
     - large uploads fail (> 100 MB by default)
