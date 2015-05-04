@@ -48,7 +48,7 @@
         ```
         - cancel midway works
         - progress indicator works
-- submit
+- submit [4.9 done]
     - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
     - config
 
