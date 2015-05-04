@@ -35,7 +35,7 @@
         - control is back to empty
     - very small (a few KB) upload works multiple times in a row
     - with throttling (with Charles)
-
+        *NOTE: Proxy settings not really useful as we are looking at browser/server traffic.*
         ```xml
         <property
             as="xs:string"
