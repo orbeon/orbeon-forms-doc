@@ -67,7 +67,7 @@
         - keep values and close
         - OK: goes to echo page
         - close window [NOTE: Only if window was open with JS.]
-- email
+- email [4.9 done]
     - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
         - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
     - config (change ebruchez@gmail.com in the following properties to your email)
