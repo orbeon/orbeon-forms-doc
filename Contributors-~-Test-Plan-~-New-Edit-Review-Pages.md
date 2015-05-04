@@ -70,7 +70,6 @@
 - email
     - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
         - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
-    - NOTE: doesn't work if doc hasn't been saved
     - config (change ebruchez@gmail.com in the following properties to your email)
 
     ```xml
