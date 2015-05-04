@@ -15,7 +15,7 @@ As of 2015-04-24 this page is *very* incomplete.
   - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
   - Singleton forms: [[doc|Form Runner ~ Singleton Form]]
   - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
-  - Form field validation: [blog post](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html), [[Form Builder Validation|Form Builder ~ Validation]]
+  - Form field validation: [[doc|Form Builder ~ Validation]], [blog post](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
     - required fields (also via formula, see [blog post](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html))
     - data types such as string, number, date, etc.
     - multiple constraints with formulas
