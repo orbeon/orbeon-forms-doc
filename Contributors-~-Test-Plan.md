@@ -31,4 +31,4 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[XForms Retry|Contributors ~ Test Plan ~ XForms Retry]] [4.9 done]
     - [[Error Dialog|Contributors ~ Test Plan ~ Error Dialog]] [4.9 done]
     - [[Other Browsers|Contributors ~ Test Plan ~ Other Browsers]] [4.9 done]
-    - [[Other|Contributors ~ Test Plan ~ Other]] [Erik]
+    - [[Other|Contributors ~ Test Plan ~ Other]] [4.9 done]
