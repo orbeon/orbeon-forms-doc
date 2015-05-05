@@ -46,7 +46,7 @@ As of 2015-04-24 this page is *very* incomplete.
   - Browser back/forward button support: [[doc|Contributors ~ Internals ~ State Handling]]
 - Embedding
   - Server side Embedding: [[doc|Form Runner ~ APIs ~ Server-side Embedding]], [blog post](http://blog.orbeon.com/2014/09/embedding-support-in-orbeon-forms-47.html)
-  - Liferay proxy portlet: [[doc|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]
+  - Liferay proxy portlet: [[doc|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
   - Liferay full portlet: [doc](http://wiki.orbeon.com/forms/doc/developer-guide/admin/deployment-portlet)
 - Performance
   - Limiter filter to limit the number of concurrent form requests: [[doc|Installation ~ Limiter Filter]]
