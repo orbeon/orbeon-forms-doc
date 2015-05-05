@@ -81,14 +81,13 @@
 ## 5. File upload
 
 - setup
-    - disable Charles breakpoints
+    - enable breakpoint on response for `/49pe/xforms-server/upload`
     - enable throttling in Charles per the following configuration  
       ![][4]
-    - download [this image][5] (~300 KB, with this setup the upload will take about a minute)
-    - enable the above breakpoint on response
-- http://localhost:8080/orbeon/xforms-upload/
+    - download [this image][5] (~200 KB)
+- http://localhost:8080/49pe/xforms-upload/
 - select image, and upload start in the background
-- execute all the upload progress requests, but abort the final response to the background upload
+- abort the response to the background upload
 - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
 [1]: ./images/test-chrome-timeline.png
