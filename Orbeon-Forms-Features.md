@@ -29,7 +29,8 @@ As of 2015-04-24 this page is *very* incomplete.
   - Home Page: [[doc|Form Runner ~ Home Page]], [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
   - Buttons and Processes: [[doc|Form-Runner-~-Buttons-and-Processes]], [blog post](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
   - Autosave: [[doc|Form-Runner ~ Autosave]], [blog post](http://blog.orbeon.com/2013/10/autosave.html)
-  - Wizard view: [[doc|Form Runner ~ Wizard View]], [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html), [validated mode blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
+  - Wizard view: [[doc|Form Runner ~ Wizard View]], [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
+    - validated mode: [blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
   - PDF
     - Production: [[doc|Form Builder ~ PDF Production]]
       - Automatic
