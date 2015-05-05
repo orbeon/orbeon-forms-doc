@@ -1,6 +1,8 @@
 ## Basic usage
 
+```xml
 <xforms:textarea ref="text"/>
+```
 
 ## Standard appearance
 
