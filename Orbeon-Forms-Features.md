@@ -48,8 +48,8 @@ As of 2015-04-24 this page is *very* incomplete.
   - Server side Embedding: [[doc|Form-Runner-~-APIs-~-Server-side-Embedding]], [blog post](http://blog.orbeon.com/2014/09/embedding-support-in-orbeon-forms-47.html)
   - Liferay full portlet
   - Liferay proxy portlet
-- Core
-  - Limiter filter to limit the number of concurrent form requests: [[doc|Installation ~ Limiter Filter]]
-  - Internal service requests
 - Performance
-  - Internal connections: [blog post](http://blog.orbeon.com/2015/01/saying-goodbye-to-internal-http.html)
+  - Limiter filter to limit the number of concurrent form requests: [[doc|Installation ~ Limiter Filter]]
+  - Internal service requests: [blog post](http://blog.orbeon.com/2015/01/saying-goodbye-to-internal-http.html)
+- Misc
+  - namespaced jQuery to avoid conflicts with other jQuery versions
