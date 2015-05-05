@@ -124,7 +124,7 @@
     ```
     - test reCAPTCHA [NOTE: had to fix 2 bugs with 4.5!]
     - test SimpleCaptcha
-- help popups/hint tooltips positioning
+- help popups/hint tooltips positioning [4.9 done]
     - create form to test general positioning
       - help on all elements
       - repeats
@@ -132,7 +132,7 @@
     - help: see [#1637][5]
     - hints: see [#1649][6]
     - test Bookshelf help
-    - create form with fields, including checkboxes/readio buttons
+    - create form with fields, including checkboxes/radio buttons
 
 [2]: https://gist.github.com/ebruchez/5666643
 [3]: https://github.com/orbeon/orbeon-forms/issues/1405
