@@ -98,7 +98,7 @@
 - wizard
     - add property
         - `<property as="xs:string"  name="oxf.fr.detail.view.appearance.*.*" value="wizard"/>`
-    - test errors in section template are highlighted in TOC (be aware of [#943][4])
+    - test errors in section template are highlighted in TOC
 - captcha
     - enable with property
     
@@ -130,6 +130,5 @@
 
 [2]: https://gist.github.com/ebruchez/5666643
 [3]: https://github.com/orbeon/orbeon-forms/issues/1405
-[4]: https://github.com/orbeon/orbeon-forms/issues/943
 [5]: https://github.com/orbeon/orbeon-forms/issues/1637
 [6]: https://github.com/orbeon/orbeon-forms/issues/1649
