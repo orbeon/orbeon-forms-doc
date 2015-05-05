@@ -99,7 +99,7 @@
     - add property
         - `<property as="xs:string"  name="oxf.fr.detail.view.appearance.*.*" value="wizard"/>`
     - test errors in section template are highlighted in TOC
-- captcha
+- captcha [4.9 done]
     - enable with property
     
     ```xml
