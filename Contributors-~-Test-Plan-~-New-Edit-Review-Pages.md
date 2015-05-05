@@ -85,17 +85,23 @@
       - check email received
       - contains XML and PDF
       - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
-- switch language
-- open/close sections
-- repeats
-  - check can access repeated grid/section button and menu via keyboard navigation
-- noscript mode
+- misc [4.9 done]
+    - switch language
+    - open/close sections
+    - repeats
+        - check can access repeated grid/section button and menu via keyboard navigation
+- noscript mode [4.9 done]
     - orbeon/contact
     - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
     - go to form with ?fr-noscript=true
     - test w/ new form w/ image & file attachments
         - attachments work [NOTE: be aware of [#1405][3]]
-- wizard
+- wizard [4.9 done]
+    - validated mode
+        - `/fr/orbeon/w9/new`
+        - check cannot click in TOC
+        - check cannot navigate forward with error in current section
+        - once all sections visited, can freely navigate
     - add property
         - `<property as="xs:string"  name="oxf.fr.detail.view.appearance.*.*" value="wizard"/>`
     - test errors in section template are highlighted in TOC
