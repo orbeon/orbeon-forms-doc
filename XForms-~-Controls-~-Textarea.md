@@ -29,6 +29,8 @@ With the standard appearance, the following attributes are available:
 
 If you add the attribute `mediatype="text/html"` on your `<xforms:textarea>`, then the text area will be rendered as an HTML editor:
 
+![Rich text editor in Orbeon Forms](xforms-textarea-formatted.png)
+
 ### HTML cleanup
 
 When using the attribute `mediatype="text/html"`, the HTML area will clean-up the HTML typed or pasted in the editor. This is done for two reasons: 
