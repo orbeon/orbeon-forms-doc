@@ -91,8 +91,8 @@
 - browser 2
     - check still can't access http://localhost:8080/orbeon/fr/sales/my-sales-form/summary (403) (see [#1384][10] with eXist)
     - /new, save
-    - Summary shows forms in readonly mode
-        - FAILS, AT LEAST WITH EXIST
+    - Summary shows forms in readonly mode [4.9 done]
+        - FAILS WITH EXIST
 - access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
   - setup `dummy` role only in `form-builder-permissions.xml`
   - access to Summary page is rejected
