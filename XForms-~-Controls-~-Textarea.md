@@ -29,7 +29,7 @@ With the standard appearance, the following attributes are available:
 
 If you add the attribute `mediatype="text/html"` on your `<xforms:textarea>`, then the text area will be rendered as an HTML editor:
 
-![Rich text editor in Orbeon Forms](xforms-textarea-formatted.png)
+![Rich text editor in Orbeon Forms](images/xforms-textarea-formatted.png)
 
 ### HTML cleanup
 
