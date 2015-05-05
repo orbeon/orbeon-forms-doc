@@ -27,7 +27,7 @@
     - http://localhost:8080/orbeon/xforms-sandbox/sample/dispatch-delay
     - in Chrome, open the Dev Tools, go to the Network tab (or use HttpScoop or Charles)
     - hit the *Manual save* button
-    - check after ~10 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 20 s have elapsed)
+    - check after ~10 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 10 s have elapsed)
     - can also hit the *Start* button, and notice the number incrementing after ~10s
     - (the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114][2])
         
