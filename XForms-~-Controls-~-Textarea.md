@@ -23,6 +23,8 @@ With the standard appearance, the following attributes are available:
 - `xxforms:rows`: same as HTML input `rows` attribute
 - `xxforms:maxlength`: same as HTML 5 input `maxlength` attribute (not all browsers support this attribute as of 2011-03)
 
+You can add the `appearance="xxf:autosize"` attribute on the `<xf:textarea>` to get the textarea height to automatically adjust to its content.
+
 ## Formatted text
 
 ### Enabling the rich text editor
