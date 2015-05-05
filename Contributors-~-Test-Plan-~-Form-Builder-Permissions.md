@@ -2,7 +2,7 @@
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
-    - *Should do for eXist + relational.*
+- Do eXist AND relational as code is a bit different.
 - setup
     - "Uncomment this for the Form Runner authentication" in `web.xml`
     - `tomcat-users.xml`
