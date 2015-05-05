@@ -19,7 +19,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Section Templates|Contributors ~ Test Plan ~ Section Templates]] [4.9 done]
     - [[PDF Automatic|Contributors ~ Test Plan ~ PDF Automatic]] [4.9 done]
     - [[PDF Template|Contributors ~ Test Plan ~ PDF Template]] [4.9 done]
-    - [[Form Builder Permissions|Contributors ~ Test Plan ~ Form Builder Permissions]] [Alex]
+    - [[Form Builder Permissions|Contributors ~ Test Plan ~ Form Builder Permissions]] [Erik]
 - Form Runner
     - [[Sample forms|Contributors ~ Test Plan ~ Sample Forms]] [4.9 done]
     - [[New, Edit, Review Pages|Contributors ~ Test Plan ~ New Edit Review Pages]] [4.9 done]
@@ -31,4 +31,4 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[XForms Retry|Contributors ~ Test Plan ~ XForms Retry]] [4.9 done]
     - [[Error Dialog|Contributors ~ Test Plan ~ Error Dialog]] [4.9 done]
     - [[Other Browsers|Contributors ~ Test Plan ~ Other Browsers]] [4.9 done]
-    - [[Other|Contributors ~ Test Plan ~ Other]] [Alex]
+    - [[Other|Contributors ~ Test Plan ~ Other]] [Erik]
