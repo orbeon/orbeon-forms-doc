@@ -4,7 +4,7 @@
 <xforms:textarea ref="text"/>
 ```
 
-## Standard appearance
+## Unformatted text
 
 By default, the text area control is rendered as a regular multi-line text area:
 
@@ -14,7 +14,7 @@ With the standard appearance, the following attributes are available:
 - `xxforms:rows`: same as HTML input `rows` attribute
 - `xxforms:maxlength`: same as HTML 5 input `maxlength` attribute (not all browsers support this attribute as of 2011-03)
 
-## Rich text editor (HTML editor)
+## Formatted text
 
 ### Enabling the rich text editor
 
