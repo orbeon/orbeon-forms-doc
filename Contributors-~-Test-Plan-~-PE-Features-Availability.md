@@ -3,15 +3,15 @@
 Check that all PE features are available in PE, but not in CE:
 
 - features which are checked [4.9 done]
-    - `orbeon-embedding.war` and `proxy-portlet.war` are not in distribution
+    - distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
     - FB: no "Add Language" button
-    - FR: PDF Template button doesn't show for DMV-14 and W-9
     - FB: check with CE that a PE dialog shows for
         - Services
         - Actions
         - Attach PDF
         - Attach Schema
         - Permissions
+    - FR: PDF Template button doesn't show for DMV-14 and W-9
 - features which are not checked
     - test publish from the Form Runner home page is disabled
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
