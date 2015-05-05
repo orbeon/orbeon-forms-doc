@@ -17,8 +17,7 @@ Check that all PE features are available in PE, but not in CE:
         - access [http://localhost:8080/orbeon/fr/orbeon/bookshelf/new](http://localhost:8080/orbeon/fr/orbeon/bookshelf/new)
         - check the captcha isn't shown
     - all the other features listed on the [web site][1]
-      - PDF Template button doesn't show for DMV-14
-      - TODO
+      - PDF Template button doesn't show for DMV-14 and W-9 [4.9 done]
     - known issues
         - [#1043](https://github.com/orbeon/orbeon-forms/issues/1043) Disable noscript mode in CE version
         - [#1407][2] Accessible link changes the toolbar with CE builds
