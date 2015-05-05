@@ -15,6 +15,8 @@
 
 By default, the text area control is rendered as a regular multi-line text area:
 
+![Multi-line text area in Orbeon Forms](images/xforms-textarea-unformatted.png)
+
 With the standard appearance, the following attributes are available:
 
 - `xxforms:cols`: same as HTML input `cols` attribute
