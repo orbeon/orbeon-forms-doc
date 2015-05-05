@@ -1,3 +1,10 @@
+- [Basic usage](#Basic usage)
+- [Unformatted text](#unformatted-text)
+- [Formatted text](#formatted-text)
+    - [Enabling the rich text editor](#enabling-the-rich-text-editor)
+    - [HTML cleanup](#html-cleanup)
+- [Limitations](#limitations)
+
 ## Basic usage
 
 ```xml
