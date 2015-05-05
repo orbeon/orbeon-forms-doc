@@ -20,7 +20,7 @@ Check that all PE features are available in PE, but not in CE:
         - access [http://localhost:8080/orbeon/fr/](http://localhost:8080/orbeon/fr/)
         - login with user with the `orbeon-user` role
         - check the page doesn't have any form admin feature
-    - [captcha
+    - captcha
         - in `properties-local.xml` add
             - `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
             - the properties for the private/public key
