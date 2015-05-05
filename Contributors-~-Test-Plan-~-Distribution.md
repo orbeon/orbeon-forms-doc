@@ -11,5 +11,8 @@
   - orbeon-embedding.war (1-2 MB)
   - proxy-portlet.war (1-2 MB)
   - orbeon.war (65 MB)
+- check CE zip doesn't have
+  - orbeon-embedding.war
+  - proxy-portlet.war
 - dropping the WAR file (with license included or in ~/.orbeon/license.xml) into Tomcat and Liferay works - out of the box
 - make sure the PE license is not included
