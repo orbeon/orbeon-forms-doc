@@ -726,7 +726,7 @@ Whether sections in Ajax mode are allowed to open and close with an animation. D
 [11]: https://www.google.com/recaptcha/admin/create
 [13]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/xbl-components/recaptcha
 [14]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Buttons-and-Processes#send
-[15]: https://developers.google.com/chrome-developer-tools/docs/overview
+[15]: https://developer.chrome.com/devtools
 [16]: http://getfirebug.com/
 [17]: http://wiki.orbeon.com/forms/doc/contributor-guide/browser#TOC-IE-limit-of-31-CSS-files
 [18]: https://github.com/orbeon/orbeon-forms/issues/635
