@@ -31,8 +31,8 @@ Focus:
   - responsive UI for Form Runner, see [#1181](https://github.com/orbeon/orbeon-forms/issues/1181) and [#2146](https://github.com/orbeon/orbeon-forms/pull/2146)
 - [ ] performance
 - [ ] maintenance
-  - candidates
-    - migrate build to sbt [#1585](https://github.com/orbeon/orbeon-forms/issues/1585)
+  - migrate build to sbt [#1585](https://github.com/orbeon/orbeon-forms/issues/1585)
+  - migrate some code to Java in the perspective of [#1221](https://github.com/orbeon/orbeon-forms/issues/1221)
 - [ ] one test automation item: TBD
 - [ ] doc items: TBD
 
