@@ -33,6 +33,7 @@ Focus:
 - [ ] maintenance
   - migrate build to sbt [#1585](https://github.com/orbeon/orbeon-forms/issues/1585)
   - migrate some code to Java in the perspective of [#1221](https://github.com/orbeon/orbeon-forms/issues/1221)
+  - Don't use dom4j XPath APIs [#2164](https://github.com/orbeon/orbeon-forms/issues/2164)
 - [ ] test automation: TBD
 - [ ] doc: TBD
 
