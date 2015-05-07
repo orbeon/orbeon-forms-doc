@@ -23,23 +23,6 @@ See the [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wi
 
 ## Upcoming releases
 
-### Orbeon Forms 4.9
-
-Focus:
-
-- [ ] one performance item: #2185, #2183, #2181, #2174
-- [ ] one maintenance item: TBD
-- [ ] one test automation item: TBD
-- [ ] doc items: TBD
-
-Issues:
-
-- [ ] [all Orbeon Forms 4.9 issues](https://github.com/orbeon/orbeon-forms/milestones/4.9)
-
-Dates (tentative):
-
-- 2015-04-15: tentative release date (updated)
-
 ### Orbeon Forms 4.10
 
 Focus:
@@ -74,56 +57,3 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ## Past releases
 
-### Orbeon Forms 4.6
-
-Focus:
-
-- [x] one performance item: [#1143](https://github.com/orbeon/orbeon-forms/issues/1143)
-- [x] one maintenance item: [#1710](https://github.com/orbeon/orbeon-forms/issues/1710)
-- [x] [4.6 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=37&page=1&sort=updated&state=open)
-
-Dates:
-
-- ~~2014-05-08: branching and big feature freeze~~
-- ~~2014-06-05: tentative release date~~
-- ~~2014-06-24: actual release date~~
-
-### Orbeon Forms 4.7
-
-- [x] [4.7 issues](https://github.com/orbeon/orbeon-forms/issues?direction=desc&milestone=41&page=1&sort=updated&state=open)
-- [x] one performance item:
-  - [x] [Internal requests must not go through HTTP #1363](https://github.com/orbeon/orbeon-forms/issues/1363)
-- [x] maintenance items:
-  - didn't do the ones planned, but did some others
-  - [x] [FB: Itemset editor doesn't correctly distinguish between select/select1 #1084](https://github.com/orbeon/orbeon-forms/issues/1084)
-  - [x] [Don't use built-in HTTP client in proxy portlet #1412](https://github.com/orbeon/orbeon-forms/issues/1412)
-- [ ] doc items
-  - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
-
-Dates:
-
-- ~~counting 1 slow summer month~~
-- ~~2014-09-10: tentative release date~~
-- ~~2014-09-26: actual release date~~
-
-### Orbeon Forms 4.8
-
-Focus:
-
-- [ ] one performance item:
-  - [ ] [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-forms/issues/1718)
-- [ ] one maintenance item from:
-  - [ ] [Recalculate/revalidate: deferred event dispatch #1773](https://github.com/orbeon/orbeon-forms/issues/1773)
-  - [ ] [Rewrite `ControlTree` in Scala #769](https://github.com/orbeon/orbeon-forms/issues/769)
-  - [ ] [Complete move of controls to Scala #715](https://github.com/orbeon/orbeon-forms/issues/715)
-- [ ] doc item
-  - [ ] [Migrate and update Form Builder doc to reflect current UI #219](https://github.com/orbeon/orbeon-forms/issues/219)
-
-Issues:
-
-- [ ] [all Orbeon Forms 4.8 issues](https://github.com/orbeon/orbeon-forms/milestones/4.8)
-
-Dates (tentative):
-
-- ~~2014-11-26: tentative release date~~
-- ~~2015-01-08: actual release date~~
