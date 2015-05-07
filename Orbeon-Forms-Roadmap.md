@@ -33,7 +33,7 @@ Focus:
 - [ ] maintenance candidates
   - migrate build to sbt [#1585](https://github.com/orbeon/orbeon-forms/issues/1585)
   - migrate some code to Java in the perspective of [#1221](https://github.com/orbeon/orbeon-forms/issues/1221)
-  - Don't use dom4j XPath APIs [#2164](https://github.com/orbeon/orbeon-forms/issues/2164)
+  - [Don't use dom4j XPath APIs #2164](https://github.com/orbeon/orbeon-forms/issues/2164)
   - [Upgrade to Scala 2.11.6 #1703](https://github.com/orbeon/orbeon-forms/issues/1703)
   - [Upgrade to Proguard 5.2.x #1975](https://github.com/orbeon/orbeon-forms/issues/1975)
 - [ ] test automation: TBD
