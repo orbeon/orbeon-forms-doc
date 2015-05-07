@@ -27,8 +27,12 @@ See the [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wi
 
 Focus:
 
-- [ ] one performance item: TBD
-- [ ] one maintenance item: TBD
+- [ ] mobile
+  - responsive UI for Form Runner, see [#1181](https://github.com/orbeon/orbeon-forms/issues/1181) and [#2146](https://github.com/orbeon/orbeon-forms/pull/2146)
+- [ ] performance
+- [ ] maintenance
+  - candidates
+    - migrate build to sbt [#1585](https://github.com/orbeon/orbeon-forms/issues/1585)
 - [ ] one test automation item: TBD
 - [ ] doc items: TBD
 
@@ -56,4 +60,3 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 ---
 
 ## Past releases
-
