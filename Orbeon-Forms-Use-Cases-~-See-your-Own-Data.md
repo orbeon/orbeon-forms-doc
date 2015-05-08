@@ -39,4 +39,4 @@ For example, you can:
 
 ## See also
 
-- [Owner/group-based permissions AKA "See your own data"](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html) blog post
+- Blog post: [Owner/group-based permissions AKA "See your own data"](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)
