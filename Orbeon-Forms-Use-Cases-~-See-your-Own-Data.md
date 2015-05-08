@@ -36,3 +36,7 @@ For example, you can:
 - send data to an external service with the `send` action
 - email form data with the `email` action
 - and much more
+
+## See also
+
+- [Owner/group-based permissions AKA "See your own data"](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html) blog post
