@@ -36,3 +36,7 @@ With Orbeon Forms 4.3, owner/group-based permissions were not enabled by default
 <property as="xs:boolean" name="oxf.fr.support-owner-group" value="true"/>
 <property as="xs:boolean" name="oxf.fr.support-autosave"    value="true"/>
 ```
+
+## See also
+
+- [Owner/group-based permissions AKA "See your own data"](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html) blog post
