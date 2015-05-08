@@ -2,6 +2,10 @@
 
 We describe a few usage scenarios for Orbeon Forms below, with the intent of answering the question "For what purpose can I use Orbeon Forms?".
 
+## See also
+
+- [[See your Own Data|Orbeon Forms Use Cases ~ See your Own Data]]
+
 ## Forms for a local government
 
 A local government publishes a number of forms for its constituents. Orbeon Forms is used for the capture of data as well as consultation by government employees.
