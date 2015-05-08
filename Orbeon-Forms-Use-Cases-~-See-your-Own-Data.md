@@ -2,11 +2,11 @@
 
 In this use case:
 
-- users are logged in (no anonymous data entry)
-- any logged in user can create and save data
-- users cannot see other users' data
-- users can come back to see their own data and modify it
-- users can submit and email their form data
+- Users are logged in (no anonymous data entry).
+- Any logged in user can create and save data.
+- Users cannot see other users' data.
+- Users can come back to see their own data and modify it.
+- Users can submit and email their form data.
 
 ## Implementing this use case with Orbeon Forms
 
