@@ -21,9 +21,12 @@ As of 2015-04-24 this page is *very* incomplete.
     - multiple constraints with formulas
     - errors, warnings, and informational validations
     - custom alert messages per validation
+  - Access control
+    - Owner / Group permissions [[doc|Form Runner ~ Access Control ~ Owner Group]], [blog post](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)
 - Form Builder
   - Repeated grids: [[doc|Form Builder ~ Repeated Grids]], [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
   - Explanation control: [blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)
+  - Access control for editing forms [[doc|Form Runner ~ Access Control ~ Editing Forms]]
 - Form Runner
   - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
   - Home Page: [[doc|Form Runner ~ Home Page]], [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
