@@ -59,7 +59,3 @@ For each release we would like to:
 - [ ] pick one mobile item if possible
 
 The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
-
----
-
-## Past releases
