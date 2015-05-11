@@ -21,6 +21,19 @@ See the [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wi
 - __Integration and workflow__ – We want to make it easier to [embed forms](https://github.com/orbeon/orbeon-forms/issues/1235), make it easier to use [HTTP/DB services for validation](https://github.com/orbeon/orbeon-forms/issues/1304), allow [forms to be imported/exported with dependencies](https://github.com/orbeon/orbeon-forms/issues/779), better document [standard use cases / workflows](https://github.com/orbeon/orbeon-forms/issues/228), make [integration with external systems/workflows simpler](https://sites.google.com/a/orbeon.com/forms/projects/form-runner-builder/form-runner-data-envelope), and more.
 - __Form Builder modernization__ – We want to push the envelope and keep improving the [usability of Form Builder](https://github.com/orbeon/orbeon-forms/issues/1675).
 
+## What's in a release
+
+For each release we would like to:
+
+- [ ] have bug-fixes
+- [ ] have at least one new feature (which can be small)
+- [ ] book one day of work on [documentation tasks](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Doc&milestone=&page=1&sort=updated&state=open)
+- [ ] pick one [maintenance task](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Refactoring&milestone=&page=1&sort=updated&state=open) (build system, refactoring, …)
+- [ ] pick one [performance task](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Performance&milestone=&page=1&sort=updated&state=open)
+- [ ] pick one mobile item if possible
+
+The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
+
 ## Upcoming releases
 
 ### Orbeon Forms 4.10
@@ -47,15 +60,3 @@ Dates (tentative):
 
 - 2015-07-08: tentative release date
 
-## What's in a release
-
-For each release we would like to:
-
-- [ ] have bug-fixes
-- [ ] have at least one new feature (which can be small)
-- [ ] book one day of work on [documentation tasks](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Doc&milestone=&page=1&sort=updated&state=open)
-- [ ] pick one [maintenance task](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Refactoring&milestone=&page=1&sort=updated&state=open) (build system, refactoring, …)
-- [ ] pick one [performance task](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Performance&milestone=&page=1&sort=updated&state=open)
-- [ ] pick one mobile item if possible
-
-The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
