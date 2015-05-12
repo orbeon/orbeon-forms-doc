@@ -21,6 +21,7 @@ As of 2015-04-24 this page is *very* incomplete.
     - multiple constraints with formulas
     - errors, warnings, and informational validations
     - custom alert messages per validation
+    - centralized error summary showing currently relevant errors
   - Access control
     - Owner / group permissions: [[doc|Form Runner ~ Access Control ~ Owner Group]], [blog post](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)
 - Form Builder
