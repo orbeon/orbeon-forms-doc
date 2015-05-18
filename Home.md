@@ -1,6 +1,6 @@
 ## What this is
 
-This is the landing page for the Orbeon Forms documentation. For a comprehensive list of topics, see the [complete list of pages](/orbeon/orbeon-forms/wiki/_pages).
+This is the landing page for the Orbeon Forms documentation.
 
 ## Topics
 
@@ -12,6 +12,8 @@ The main topics covered on this site include:
 - [[XForms]]
 - [[Contributors]]
 - [[FAQ]]
+
+For a comprehensive list of topics, see the [complete list of pages](/orbeon/orbeon-forms/wiki/_pages).
 
 ## See also
 
