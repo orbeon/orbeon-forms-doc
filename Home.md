@@ -12,11 +12,11 @@ The main topics covered on this site include:
 - [[XForms]]
 - [[Contributors]]
 - [[FAQ]]
-- [[Orbeon Forms Features|Orbeon Forms Features]]
+- [[Features|Orbeon Forms Features]]
     - [[Database Support|Orbeon Forms Features ~ Database Support]]
-- [[Orbeon Forms Release History|Orbeon Forms Release History]]
-- [[Orbeon Forms Roadmap|Orbeon Forms Roadmap]]
-- [[Orbeon Forms Use Cases|Orbeon Forms Use Cases]]
+- [[Release History|Orbeon Forms Release History]]
+- [[Roadmap|Orbeon Forms Roadmap]]
+- [[Use Cases|Orbeon Forms Use Cases]]
     - [[See your Own Data|Orbeon Forms Use Cases ~ See your Own Data]]
 
 For a comprehensive list of topics, see the [complete list of pages](/orbeon/orbeon-forms/wiki/_pages).
