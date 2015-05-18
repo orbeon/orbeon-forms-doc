@@ -21,7 +21,8 @@
 - [[Embedding|Form Runner ~ Embedding]]
 - [[Home Page|Form Runner ~ Home Page]]
 - [[Integration|Form Runner ~ Integration]]
-- [[Portal ~ Liferay Proxy Portlet Guide|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
+- Portal
+    - [[Liferay Proxy Portlet Guide|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
 - [[Singleton Form|Form Runner ~ Singleton Form]]
 - [[Structure of a Form|Form Runner ~ Structure of a Form]]
 - [[Styling automatic PDFs|Form Runner ~ Styling automatic PDFs]]
