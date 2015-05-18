@@ -19,7 +19,7 @@ The main topics covered on this site include:
 - [[Use Cases|Orbeon Forms Use Cases]]
     - [[See your Own Data|Orbeon Forms Use Cases ~ See your Own Data]]
 
-For a comprehensive list of topics, see the [complete list of pages](/orbeon/orbeon-forms/wiki/_pages).
+See also the [complete list of pages](/orbeon/orbeon-forms/wiki/_pages).
 
 ## See also
 
