@@ -7,7 +7,8 @@
         - [[Owner Group|Form Runner ~ Access Control ~ Owner Group]]
     - [[Form Fields|Form Runner ~ Access Control ~ Form Fields]]
 - [[APIs|Form Runner ~ APIs]]
-    - [[Persistence ~ Flat View|Form Runner ~ Persistence ~ Flat View]]
+    - Persistence
+        - [[Flat View|Form Runner ~ Persistence ~ Flat View]]
     - [[Server side Embedding|Form Runner ~ APIs ~ Server side Embedding]]
     - [[Generate XML Schema|Form Runner ~ APIs ~ Generate XML Schema]]
     - [[Duplicate Form Data|Form Runner ~ APIs ~ Duplicate Form Data]]
