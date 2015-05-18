@@ -15,7 +15,7 @@
 - [[Autosave|Form Runner ~ Autosave]]
 - [[Buttons and Processes|Form Runner ~ Buttons and Processes]]
 - [[Configuration properties|Form Runner ~ Configuration properties]]
-- [[Configuration properties ~ Persistence|Form Runner ~ Configuration properties ~ Persistence]]
+    - [[Persistence|Form Runner ~ Configuration properties ~ Persistence]]
 - [[Custom Model Logic|Form Runner ~ Custom Model Logic]]
 - [[Data Format|Form Runner ~ Data Format]]
 - [[Embedding|Form Runner ~ Embedding]]
