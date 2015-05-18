@@ -1,4 +1,10 @@
 > [[Home]]
 
+- [[Actions|Form Builder ~ Actions]]
+- [[Configuration properties|Form Builder ~ Configuration properties]]
+- [[Formulas|Form Builder ~ Formulas]]
 - [[PDF Production|Form Builder ~ PDF Production]]
     - [[PDF Templates|Form Builder ~ PDF Production ~ PDF Templates]]
+- [[Repeated Grids|Form Builder ~ Repeated Grids]]
+- [[Section Templates|Form Builder ~ Section Templates]]
+- [[Validation|Form Builder ~ Validation]]
