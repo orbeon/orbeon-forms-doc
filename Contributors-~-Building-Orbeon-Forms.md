@@ -9,7 +9,7 @@ The following instructions are known to work as of 2014-05-20, which is between 
 
 ## What the Orbeon Forms developers use
 
-As of 2015-05-21
+As of 2015-05-21:
 
 - OS X Mavericks
 - IntelliJ IDEA 14
