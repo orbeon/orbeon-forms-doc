@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[Installation]]
+
 ## Software requirements
 
 Orbeon Forms 4 runs on any platform that supports:
