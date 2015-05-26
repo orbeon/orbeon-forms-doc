@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[Installation]]
+
 ## JBoss 7 and JBoss EAP 6
 
 ### Status
