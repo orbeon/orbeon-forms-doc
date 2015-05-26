@@ -12,7 +12,9 @@
     ```
 4. **Testing your installation** – Check the console: you should see the that Orbeon Forms was deployed successfully. Then access `http://localhost:9080/orbeon/home/`, and you should see the Orbeon Forms home page. If you start WebSphere from the WLP/bin directory, as mentioned on step 2, you will find the Orbeon Forms log file in `WLP/usr/servers/logs/orbeon.log`.
 
-[SINCE Orbeon Forms 4.3] To setup a JDBC, for instance here for Oracle:
+[SINCE Orbeon Forms 4.3]
+
+To setup a JDBC, for instance here for Oracle:
 
 1. **Install the database driver** – Create a directory `WLS/usr/servers/defaultServer/lib`, and inside it place the database driver jar file, for instance `ojdbc6_g.jar`. On WebSphere, Orbeon Forms requires a JDBC 4 driver (e.g. for Oracle , use `ojdbc6_g.jar` or `ojdbc6.jar` but not `ojdbc5_g.jar` or `ojdbc5.jar`).
 2. **Setup a datasource in WebSphere** – Open your `WLP/usr/servers/defaultServer/server.xml` in an editor. Your server.xml should look like the one below.  The `jdbc-4.0` feature in included, a top level library is declared pointing to the driver jar (in this case `ojdbc6_g.jar`), a datasource is defined, and the JNDI name set to `jdbc/oracle`, and both the data source and the application point to the same top level library, which is particularly important so WebSphere loads the driver classes with a single shared class loader.
@@ -52,7 +54,7 @@
 3. **Setup the datasource the Orbeon Forms web app** – In `WLP/usr/servers/defaultServer/apps/war/orbeon/WEB-INF` create a file `ibm-web-bnd.xml` with the following content:
 
     ```xml
-      <web-bnd
+    <web-bnd
             xmlns="http://websphere.ibm.com/xml/ns/javaee"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://websphere.ibm.com/xml/ns/javaee
