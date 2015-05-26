@@ -5,7 +5,7 @@
   - [[Tomcat|Installation ~ Tomcat]]
   - [[JBoss|Installation ~ JBoss]]
   - [[WebLogic|Installation ~ WebLogic]]
-  - [[IBM WebSphere|Installation ~ IBM WebSphere]]
+  - [[WebSphere|Installation ~ WebSphere]]
   - [[GlassFish|Installation ~ GlassFish]]
   - [[Troubleshooting|Installation ~ Troubleshooting]]
 - [[Relational database setup|Installation ~ Relational Database Setup]]
