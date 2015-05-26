@@ -1,8 +1,10 @@
 ## JBoss 7 and JBoss EAP 6
 
-### Deploy Orbeon Forms
+### Status
 
-This was tested with JBoss AS 7.1.1.Final "Brontes".
+These steps have been tested with JBoss AS 7.1.1.Final "Brontes".
+
+### Deploy Orbeon Forms
 
 To install Orbeon Forms:
 
