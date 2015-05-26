@@ -27,6 +27,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
     1. In `modules/com`, create a directory `mysql/main`.
     2. [Download the MySQL JDBC driver][2], say `mysql-connector-java-5.1.22-bin.jar`, and place it in the `main` directory.
     3. In the `main` directory, create a file named `module.xml` with the following content. Update the value of the `path` attribute to match the name of the file you download in the previous step.
+    
         ```xml
         <module xmlns="urn:jboss:module:1.0" name="com.mysql">
             <resources>
@@ -39,6 +40,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
         ```
 3. In JBoss, define the datasource:
     1. Editing `standalone/configuration/standalone.xml`, and replace the `<datasources>` with the following.
+    
         ```xml
         <datasources>
             <datasource jndi-name="java:/comp/env/jdbc/mysql" pool-name="mysql" enabled="true">
@@ -69,6 +71,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
     2. In `<connection-url>`, change the host and database name, and under `<security>` the user name and password as appropriate.
 4. (Optional) Check that the module and datasource are configured properly:
     1. Starting JBoss (bin/standalone.sh) and verifying you see the following two lines in the console:
+    
     ```
     [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
     [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:/comp/env/jdbc/mysql]
@@ -88,6 +91,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
 
 1. Follow the steps in the previous section, using the Oracle driver instead of the MySQL driver.
 2. Add to the `orbeon.war`, in the `WEB-INF` directory, a file named `jboss-deployment-structure.xml` with the content that follows. This assumes, that in the previous step, you named the module `com.oracle`.
+
     ```xml
     <jboss-deployment-structure>
         <deployment>
@@ -101,6 +105,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
 Orbeon Forms doesn't come by default with this file, so deployment on JBoss doesn't fail for those who are not using the Oracle persistence layer, and thus haven't create a `com.oracle` module.
 3. Create the [Orbeon tables][4] in Oracle.
 4. Setup Orbeon Forms to [use the Oracle persistence layer][5]. At the minimun, you'll need to add the following two properties to your `properties-local.xml`:
+
     ```xml
     <property as="xs:string"  name="oxf.fr.persistence.provider.*.*.*"     value="oracle"/>
     <property as="xs:string"  name="oxf.fr.persistence.oracle.datasource"  value="db"/>
@@ -114,6 +119,7 @@ Orbeon Forms doesn't come by default with this file, so deployment on JBoss does
 
 3. Depending on the version of JBoss you are using:
     * Create a file `orbeon.war/WEB-INF/jboss-scanning.xml` with the following content. This is get around a bug happening in the JBoss scanner when it goes through Scala classes. With Orbeon Forms 3.9:
+    
         ```xml
         <scanning xmlns="urn:jboss:scanning:1.0">
             <path name="WEB-INF/lib/scala-library-2.9.2.jar">
@@ -133,6 +139,7 @@ Orbeon Forms doesn't come by default with this file, so deployment on JBoss does
     1. Open `JBOSS_HOME/server/default/deploy/orbeon.war/WEB-INF/web.xml` and uncomment the `security-constraint`, `login-config` and `security-role` declarations at the end of the file.
     2. Open `JBOSS_HOME/server/default/deploy/orbeon.war/WEB-INF/jboss-web.xml` and uncomment the security-domain element near the end of bottom of the file.
     3. Open `JBOSS_HOME/server/default/conf/login-config.xml` and add the following aplication policy to the list of policies:
+    
     ```xml
     <application-policy name="orbeon-demo">
         <authentication>
