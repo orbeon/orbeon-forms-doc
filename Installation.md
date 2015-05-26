@@ -1,6 +1,7 @@
 > [[Home]]
 
-- [[Installing Orbeon Forms|Installation ~ Basic]]
+- Installing Orbeon Forms
+  - [[Basic Installation Steps|Installation ~ Basic]]
   - [[Tomcat|Installation ~ Tomcat]]
   - [[JBoss|Installation ~ JBoss]]
   - [[WebLogic|Installation ~ WebLogic]]
