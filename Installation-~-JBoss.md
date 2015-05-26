@@ -1,4 +1,4 @@
-## JBoss 7 and JBoss EAP 6 with Orbeon Forms 4
+## JBoss 7 and JBoss EAP 6
 
 ### Deploy Orbeon Forms
 
