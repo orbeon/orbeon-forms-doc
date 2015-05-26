@@ -1,13 +1,13 @@
 > [[Home]]
 
-- Installing Orbeon Forms
-  - [[Basic Installation Steps|Installation ~ Basic]]
+- [[Basic Installation Steps|Installation ~ Basic]]
+- Specific steps for your container / app server
   - [[Tomcat|Installation ~ Tomcat]]
   - [[JBoss|Installation ~ JBoss]]
   - [[WebLogic|Installation ~ WebLogic]]
   - [[WebSphere|Installation ~ WebSphere]]
   - [[GlassFish|Installation ~ GlassFish]]
-  - [[Troubleshooting|Installation ~ Troubleshooting]]
+- [[Troubleshooting|Installation ~ Troubleshooting]]
 - [[Relational database setup|Installation ~ Relational Database Setup]]
 - [[Creating a production WAR|Installation-~-Creating-a-Production-WAR]]
 - [[Upgrading from older versions|Installation-~-Upgrading-from-older-versions]]
