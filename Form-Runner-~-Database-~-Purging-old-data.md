@@ -2,7 +2,7 @@
 
 The built-in implementation of the persistence API for relational databases never deletes saved data from your database. When users "delete" data from the UI, it marks the data as deleted in the database, and then ignores such data. This is done to increase safety, enable auditing, and allow an admin to "undelete" data that has been deleted by mistake.
 
-While keeping data marked as deleted as deleted has benefits, there are cases where you might want to get rid of it, for instance to comply with regulatory requirements, or save space and improve performance, the case of larger systems.
+While keeping data marked as deleted has benefits, there are cases where you might want to get rid of it, for instance to comply with regulatory requirements, or save space and improve performance, the case of larger systems.
 
 This is done in 2 steps, starting by removing form data, and corresponding attachments. We recommend you follow the below only if you are familiar with SQL. Also, especially if you are going to run this on a production database, we highly recommend you first create a backup of that database.
 
