@@ -36,3 +36,15 @@ WHERE  document_id IN
 ```
 
 ## Removing form attachments
+
+Next, we want to remove "orphan" attachments. Those are attachments no longer referenced by an existing document. As in the previous step, first check the data returned by the following query, and make sure this is data you want to delete. If that is the case, replace `SELECT *` by `DELETE` and run that statement again.
+
+```sql
+SELECT *
+FROM   orbeon_form_data_attach
+WHERE  document_id NOT IN
+       (
+           SELECT document_id
+           FROM orbeon_form_data
+       )
+```
