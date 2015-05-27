@@ -18,7 +18,10 @@ WHERE  document_id IN
            SELECT t.document_id
            FROM   orbeon_form_data t,
                   (
-                      SELECT   max(last_modified_time) last_modified_time, app, form, document_id
+                      SELECT   max(last_modified_time) last_modified_time,
+                               app,
+                               form,
+                               document_id
                       FROM     orbeon_form_data
                       GROUP BY app, form, document_id
                   ) m
@@ -35,4 +38,3 @@ WHERE  document_id IN
 ```
 
 ## Removing form attachments
-
