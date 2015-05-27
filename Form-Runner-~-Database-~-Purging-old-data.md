@@ -4,7 +4,7 @@ The built-in implementation of the persistence API for relational databases neve
 
 While there are benefits to keeping data marked as deleted, there are cases where you might want to get rid of it, for instance to comply with regulatory requirements, or for larger systems to save space and improve performance.
 
-This is done in 2 steps, starting by removing form data, and corresponding attachments. We recommend you follow the below only if you are familiar with SQL. Also, especially if you are going to run this on a production database, we highly recommend you first create a backup of that database.
+This is done in 2 steps, starting by removing form data, and then the corresponding attachments. We recommend you follow the below only if you are familiar with SQL. Also, especially if you are going to run this on a production database, we highly recommend you first create a backup of that database.
 
 ## Removing form data
 
