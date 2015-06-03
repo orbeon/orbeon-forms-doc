@@ -8,7 +8,7 @@
 * You use a combination of `<xf:itemset>` and `<xf:item>` to define the values suggested to the user. Just as with `<xf:select1>`, what is visible to users are item's labels and what is stored in the node to which your autocomplete is bound is the selected item's value.
 * Just like the `<xf:select1>`, the autocomplete only implements a closed selection: users will only be able to select a value which exists in the itemset. The value of the node bound to the autocomplete won't be set to the value typed by users in the field, unless they select an item from the suggestion list or type text which is identical to one of the item's label.
 
-![Auto Complete field used for a list of countries][images/fr-autocomplete-simple.png]
+![Auto Complete field used for a list of countries](images/fr-autocomplete-simple.png)
 
 ## Modes
 
@@ -190,7 +190,7 @@ When several configurations are used for an autocomplete component, the `<fr:max
 
 By default, the autocomplete control shows a button next to the autocomplete. Clicking on the button shows the suggestions users would get if they had typed the value currently in the field. For a country list, if you have _Sw_ in the field and you click on the button, you would get _Swaziland_, _Sweden_, and _Switzerland_. This won't be a common scenario as users will automatically get those suggestions when typing the _Sw_. A more common case is users not knowing what to type in the field. In that case they can click on the button when the field is empty, and the suggestion will contain the first _n_ possible values.
 
-![][images/fr-autocomplete-all.png]
+![](images/fr-autocomplete-all.png)
 
 
 This is the out of the box behavior in static mode. It is left to you to return the first _n_ items when in dynamic mode, when you get the `fr-search-changed` event with an empty `label`, and in resource mode when your service is called with an empty search value.
@@ -223,7 +223,7 @@ You can disable this button by adding a `show-suggestions-button="false"` attrib
 
 Then, a vertical scrollbar will show when necessary:
 
-![][images/fr-autocomplete-scrollbar.png]
+![](images/fr-autocomplete-scrollbar.png)
 
 
 [1]: http://en.wikipedia.org/wiki/Autocomplete
