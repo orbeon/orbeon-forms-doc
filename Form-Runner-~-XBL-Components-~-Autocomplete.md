@@ -17,7 +17,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
 ### Static
 
 * When to use the _static_ mode?
-    * When you can reasonably determine the full list of suggested values without having to do any processing when users type in the field, such as submissions to a service you provide. You will typically use this mode when the list of suggested values isn't extremly large. Examples include a list of states, of countries, or of departments in your company.
+    * When you can reasonably determine the full list of suggested values without having to do any processing when users type in the field, such as submissions to a service you provide. You will typically use this mode when the list of suggested values isn't extremely large. Examples include a list of states, of countries, or of departments in your company.
     * When the default filtering mechanism works for you (more on this below).
 * Does the itemset really need to be static?
 
@@ -121,7 +121,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
     </fr:autocomplete>
     ```
 
-*For more on the labelref attribute, see the above section the _resource_ mode.*
+*For more on the `labelref` attribute, see the above section the _resource_ mode.*
 
 
 ## Events
@@ -168,7 +168,7 @@ By default, the autocomplete displays a maximum of 10 items. You can have the au
     <fr:autocomplete max-results-displayed="20">
     ```
 
-* Adding a nested element <fr:max-results-displayed>, which supports [single node binding attributes][2] (`ref`, `model`, and `bind`) as well as the `value` attribute. For instance:
+* Adding a nested element `<fr:max-results-displayed>`, which supports [single node binding attributes][2] (`ref`, `model`, and `bind`) as well as the `value` attribute. For instance:
 
     ```xml
     <fr:autocomplete>
@@ -202,13 +202,13 @@ You can disable this button by adding a `show-suggestions-button="false"` attrib
 * By default, the width of the input field is `140px`. You can change the width of all the autocomplete fields with:
 
     ```css
-    .xbl-fr-autocomplete .xforms-input input { width: 30em }
+    .xbl-fr-autocomplete .xforms-input input { width: 200px }
     ```
 
     To change a specific autocomplete, add your own class on the autocomplete, say `<fr:autocomplete class="my-autocomplete"> `and the following CSS:
 
     ```css
-    .my-autocomplete .xforms-input input { width: 30em }
+    .my-autocomplete .xforms-input input { width: 200px }
     ```
 
 * You can constraint the height of the section that displays results with CSS. For instance, the following will set a max height constraint of 100 pixels:
@@ -218,7 +218,6 @@ You can disable this button by adding a `show-suggestions-button="false"` attrib
         overflow-x: hidden;
         overflow-y: auto;
         max-height: 100px;
-        *height:expression(this.scrollHeight&gt;100?"100px":"auto");
     }
     ```
 
