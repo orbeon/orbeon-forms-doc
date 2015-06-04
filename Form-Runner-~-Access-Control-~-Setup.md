@@ -6,7 +6,7 @@ Form Runner uses the username, group, and roles to control who can access Form B
 
 ### Container-driven method
 
-You want to use container roles if your users are setup at the application server level, with container managed security. In Tomcat, this would correspond to using a [security realm][10], which in its simplest form gets users from Tomcat's `conf/tomcat-users.xml`. To setup container-driven roles, configure your `form-builder-permissions.xml` as described above, then:
+You want to use container roles if your users are setup at the application server level, with container managed security. In Tomcat, this would correspond to using a [security realm][10], which in its simplest form gets users from Tomcat's `conf/tomcat-users.xml`.
 
 
 1. __Enable container-driven method__ – To do so, set the following property in your `properties-local.xml`:
