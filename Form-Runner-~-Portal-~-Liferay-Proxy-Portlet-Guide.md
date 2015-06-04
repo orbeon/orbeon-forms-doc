@@ -180,7 +180,17 @@ When "Send Liferay user" is enabled, you can configure Form Runner to use the HT
     as="xs:string"
     name="oxf.fr.authentication.header.roles"
     value="Orbeon-Liferay-User-Roles"/>
+```
 
+For the `oxf.fr.authentication.header.username` header, you can choose any of the Liferay headers associated with the user, but typically this will be:
+
+- `Orbeon-Liferay-User-Id`
+- `Orbeon-Liferay-User-Screen-Name`
+- or possibly `Orbeon-Liferay-User-Email`
+
+_NOTE: For builds prior to Orbeon 4.9, you need the following configuration in your [properties-local.xml][3]:_
+
+```xml
 <property
     as="xs:string"
     name="oxf.http.forward-headers"
@@ -190,12 +200,6 @@ When "Send Liferay user" is enabled, you can configure Form Runner to use the HT
     name="oxf.xforms.forward-submission-headers"
     value="Orbeon-Liferay-User-Screen-Name Orbeon-Liferay-User-Group-Name Orbeon-Liferay-User-Roles"/>
 ```
-
-For the `oxf.fr.authentication.header.username` header, you can choose any of the Liferay headers associated with the user, but typically this will be:
-
-- `Orbeon-Liferay-User-Id`
-- `Orbeon-Liferay-User-Screen-Name`
-- or possibly `Orbeon-Liferay-User-Email`
 
 ### Enabling form selection via URL parameters
 
