@@ -19,15 +19,15 @@ Beyond the basic set of controls, there is an obvious need for creating new reus
 You can use components to implement:  
 
 * Controls for datatypes which have a native implementation, but where a custom appearance is required
-    * For example a custom control for entering a date with dropdown menus rather than a date picker
+    * Example: a custom control for entering a date with dropdown menus rather than a date picker
 * Controls for datatypes which do not have a native implementation
-    * For example a control to capture the `xs:duration` type  
+    * Example: a control to capture the `xs:duration` type  
 * Controls which do not have a standard XML type
-    * For example a phone number control
+    * Example: a phone number control
 * Higher-level components  
-    * Instance inspector component
     * A form section component
     * A form grid component
+    * Instance inspector component
     * A Google Maps component
 
 This is not an exhaustive list. Your imagination is the limit!
