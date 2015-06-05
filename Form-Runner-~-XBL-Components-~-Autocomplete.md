@@ -190,8 +190,7 @@ When several configurations are used for an autocomplete component, the `<fr:max
 
 By default, the autocomplete control shows a button next to the autocomplete. Clicking on the button shows the suggestions users would get if they had typed the value currently in the field. For a country list, if you have _Sw_ in the field and you click on the button, you would get _Swaziland_, _Sweden_, and _Switzerland_. This won't be a common scenario as users will automatically get those suggestions when typing the _Sw_. A more common case is users not knowing what to type in the field. In that case they can click on the button when the field is empty, and the suggestion will contain the first _n_ possible values.
 
-![](images/fr-autocomplete-all.png)
-
+![](images/fr-autocomplete-improved-css.png)
 
 This is the out of the box behavior in static mode. It is left to you to return the first _n_ items when in dynamic mode, when you get the `fr-search-changed` event with an empty `label`, and in resource mode when your service is called with an empty search value.
 
@@ -207,8 +206,6 @@ The defaults of the autocomplete are improved compared to previous versions:
 - The dropdown list
     - doesn't have a fixed width
     - and has a maximum height with a scrollbar when needed.
-
-![](images/fr-autocomplete-improved-css.png)
 
 ### Orbeon Forms 4.9 and earlier
 
