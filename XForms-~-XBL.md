@@ -34,7 +34,7 @@ This is not an exhaustive list. Your imagination is the limit!
 
 ### Terminology
 
-* **Component:** a piece of software which provides reusable behavior and presentation.  
+* **Component or custom control:** a piece of software which provides reusable behavior and presentation.  
 * **Component instance:** a particular use of a component within an XForms document. A component might have multiple instances in a given page.
     * _NOTE: This should not be confused with XForms instances._
 * **Component implementation:** the code which constitutes the inner workings of a particular component.  
