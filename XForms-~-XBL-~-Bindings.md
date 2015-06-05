@@ -35,7 +35,7 @@ This means that elements called `fr:number` in the form will use this binding.
 
 Form Builder, at design time only (as of Orbeon Forms 4.9), also supports bindings by name and XML datatype:
 
-```xml
+```css
 xf|input:xxf-type('xs:decimal')
 ```
 
