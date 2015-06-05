@@ -208,6 +208,8 @@ The defaults of the autocomplete are improved compared to previous versions:
     - doesn't have a fixed width
     - and has a maximum height with a scrollbar when needed.
 
+![](images/fr-autocomplete-improved-css.png)
+
 ### Orbeon Forms 4.9 and earlier
 
 * By default, the width of the input field is `140px`. You can change the width of all the autocomplete fields with:
@@ -232,9 +234,7 @@ The defaults of the autocomplete are improved compared to previous versions:
     }
     ```
 
-Then, a vertical scrollbar will show when necessary:
-
-![](images/fr-autocomplete-scrollbar.png)
+Then, a vertical scrollbar will show when necessary.
 
 
 [1]: http://en.wikipedia.org/wiki/Autocomplete
