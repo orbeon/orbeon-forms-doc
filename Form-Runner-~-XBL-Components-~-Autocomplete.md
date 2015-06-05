@@ -199,22 +199,33 @@ You can disable this button by adding a `show-suggestions-button="false"` attrib
 
 ## Styling
 
+### Orbeon Forms 4.10 and later
+
+The defaults of the autocomplete are improved compared to previous versions:
+
+- The control takes the entire width of a Form Runner grid.
+- The dropdown list
+    - doesn't have a fixed width
+    - and has a maximum height with a scrollbar when needed.
+
+### Orbeon Forms 4.9 and earlier
+
 * By default, the width of the input field is `140px`. You can change the width of all the autocomplete fields with:
 
     ```css
-    .xbl-fr-autocomplete .xforms-input input { width: 200px }
+    .orbeon .xbl-fr-autocomplete .xforms-input input { width: 200px }
     ```
 
     To change a specific autocomplete, add your own class on the autocomplete, say `<fr:autocomplete class="my-autocomplete"> `and the following CSS:
 
     ```css
-    .my-autocomplete .xforms-input input { width: 200px }
+    .orbeon .my-autocomplete .xforms-input input { width: 200px }
     ```
 
 * You can constraint the height of the section that displays results with CSS. For instance, the following will set a max height constraint of 100 pixels:
 
     ```css
-    .fr-autocomplete-container .yui-ac-content {
+    .orbeon .fr-autocomplete-container .yui-ac-content {
         overflow-x: hidden;
         overflow-y: auto;
         max-height: 100px;
