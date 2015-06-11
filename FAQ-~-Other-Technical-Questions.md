@@ -1,7 +1,5 @@
 > [[Home]] ▸ [FAQ](./FAQ)
 
-# FAQ - 5. Other Orbeon Forms Technical Questions
-
 ## Configuration
 
 ### How can I remove the sample applications from my Orbeon Forms deployment?
