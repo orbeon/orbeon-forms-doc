@@ -13,6 +13,8 @@ Under the WAR file's `WEB-INF/lib` directory, remove:
 
 ## How can I know which version of Orbeon Forms I am running?
 
+The full version number is logged on the server when the Orbeon Forms web application starts.
+
 You can set the following property in your `properties-local.xml`:
 
 ```xml
