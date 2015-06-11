@@ -2,7 +2,7 @@
 
 ## How can I remove the sample applications from my Orbeon Forms deployment?
 
-See [[Creating a Production WAR|Installation ~ Creating a Production WAR]]
+See [[Creating a Production WAR|Installation ~ Creating a Production WAR]].
 
 ## How can I remove Form Runner / Form Builder from my Orbeon Forms deployment?
 
@@ -10,6 +10,10 @@ Under the WAR file's `WEB-INF/lib` directory, remove:
 
 - if you are not using Form Builder: `orbeon-form-builder.jar`
 - if you are using neither Form Builder nor Form Runner: `orbeon-form-runner.jar`
+
+*NOTE: Form Builder also requires `orbeon-form-runner.jar`.*
+
+See also [[Creating a Production WAR|Installation ~ Creating a Production WAR]].
 
 ## How can I know which version of Orbeon Forms I am running?
 
