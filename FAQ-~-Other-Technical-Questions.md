@@ -1,19 +1,17 @@
 > [[Home]] ▸ [FAQ](./FAQ)
 
-## Configuration
-
-### How can I remove the sample applications from my Orbeon Forms deployment?
+## How can I remove the sample applications from my Orbeon Forms deployment?
 
 See [[Creating a Production WAR|Installation ~ Creating a Production WAR]]
 
-### How can I remove Form Runner / Form Builder from my Orbeon Forms deployment?
+## How can I remove Form Runner / Form Builder from my Orbeon Forms deployment?
 
 Under the WAR file's `WEB-INF/lib` directory, remove:
 
 - if you are not using Form Builder: `orbeon-form-builder.jar`
 - if you are using neither Form Builder nor Form Runner: `orbeon-form-runner.jar`
 
-### How can I know which version of Orbeon Forms I am running?
+## How can I know which version of Orbeon Forms I am running?
 
 You can set the following property in your `properties-local.xml`:
 
@@ -28,13 +26,11 @@ This is done automatically if you run Orbeon Forms in `dev` mode.
 
 You will see the version number appear at the bottom of Orbeon Forms pages.
 
-## Errors
-
-### I am getting frequent Out of Memory errors with Orbeon Forms. What can I do?
+## I am getting frequent Out of Memory errors with Orbeon Forms. What can I do?
 
 The first thing to check is whether your Java VM has enough heap memory as documented in [[Installation|Installation ~ Basic]].
 
-### What should I make of the SocketException I see in the logs?
+## What should I make of the SocketException I see in the logs?
 
 In most cases, this exception doesn't reflect any problem. Browsers make requests to Orbeon Forms, which answers by sending data back to the browsers. 
 Requests can be for web pages (e.g. forms), CSS files, images, and more. You will get this exception if, while Orbeon Forms sends data back to the browser,
