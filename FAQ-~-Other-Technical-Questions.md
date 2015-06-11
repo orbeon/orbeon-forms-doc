@@ -47,7 +47,7 @@ if users clicked on a link to load a page, and while the page is being loaded in
 previous page is still visible), or pressing the _escape_ key or the equivalent browser button, or closing the browser window or tab. Unless you also see 
 another user-facing issue, you don't need to worry about this exception in the logs.
 
-## I am concerned about the performance of Orbeon Forms. Can you provide performance numbers please?
+## Can you provide performance numbers?
 
 As of 2015, we have tests showing that a modern Intel server CPU with 4-8 cores can handle 200-400 users concurrently filling form data.
  
