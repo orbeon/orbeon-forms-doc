@@ -141,7 +141,7 @@ _NOTE: The reason there are two properties is that in the future, the XForms eng
 
 ### XForms 1.1-compatible of switch/case
 
-XForms 1.1 specifies that a non-visible case behaves as non-relevant.
+[XForms 1.1 specifies](http://www.w3.org/TR/xforms/#ui-switch-module) that a non-visible case behaves as non-relevant.
 
 a property allows enabling XForms 1.1-compatible behavior. (Orbeon Forms did not support this previously and considered that non-visible cases were hidden but still relevant.)
 
