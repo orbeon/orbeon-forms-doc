@@ -10,6 +10,15 @@ WEB-INF/resources/config/properties-local.xml
 
 Orbeon Forms will do a certain number of things out of the box without touching `properties-local.xml`. But if you want to change the default behavior (and it is likely you will want to in order to setup access control, database access, configure buttons, etc.), you will need to make changes to that file. This page describes the basics of that process.
 
+## Documentation for specific properties
+
+Each Orbeon Forms subsystem defines its own properties. They are documented in the following pages:
+
+- [[XForms Configuration Properties|XForms ~ Configuration Properties]]
+- [[Form Runner Configuration properties|Form Runner ~ Configuration properties]]
+- [[Form Runner Persistence Configuration properties|Form Runner ~ Configuration properties ~ Persistence]]
+- [[Form Builder Configuration properties|Form Builder ~ Configuration properties]]
+
 ## What's in a property
 
  A property is made of:
@@ -189,13 +198,6 @@ The properties sub-system is initialized after the [Resource Manager][2] (the pr
 * command-line:  `oxf:/properties.xml`
 
 Property files support inclusions via XInclude. This is the mechanism used by Orbeon Forms to load  all the secondary property files.
-
-## See also
-
-- [[XForms Configuration Properties|XForms ~ Configuration Properties]]
-- [[Form Runner Configuration properties|Form Runner ~ Configuration properties]]
-- [[Form Runner Persistence Configuration properties|Form Runner ~ Configuration properties ~ Persistence]]
-- [[Form Builder Configuration properties|Form Builder ~ Configuration properties]]
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions#TOC-xxf:property-
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/resource-managers
