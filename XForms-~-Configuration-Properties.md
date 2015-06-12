@@ -358,6 +358,10 @@ uses the formatting defined by `oxf.xforms.format.input.date` and the time text 
 <property as="xs:string"  name="oxf.xforms.format.input.time"  value="[h]:[m]:[s] [P]"/>
 ```
 
+##  Error handling
+
+See [[XForms Error Handling|XForms-~-Error-Handling]].
+
 ## Automatic inclusion of XBL bindings
 
 If you write your own XBL components, you need to include the XBL in every page that uses them. To avoid this, you can define a mapping between the namespace in which your XBL components are, and a directory containing the XBL file. Then, following some naming conventions (more on this below), your XBL will be automatically found by Orbeon Forms, without you having to explicitly include it in every page that uses it.
