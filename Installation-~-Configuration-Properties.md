@@ -2,14 +2,24 @@
 
 ## Overview
 
-Orbeon Forms is mainly configured via _properties_. A property is made of:
+Orbeon Forms is configured via _configuration properties_. They are usually setup in a file called `properties-local.xml` and stored in the Orbeon Forms WAR file as:
+
+```
+WEB-INF/resources/config/properties-local.xml
+```
+
+Orbeon Forms will do a certain number of things out of the box without touching `properties-local.xml`. But if you want to change the default behavior (and it is likely you will want to in order to setup access control, database access, configure buttons, etc.), you will need to make changes to that file. This page describes the basics of that process.
+
+## What's in a property
+
+ A property is made of:
 
 - a _type_, such as `xs:boolean`
 - a _name_, such as `oxf.resources.versioned`
 - a _value_, such as `true`
 - optionally, and rarely, a _processor name_, such as  `oxf:page-flow`, which refers to an XPL processor name
 
-The basic format looks like this:
+This is typically put together like this in `properties-local.xml`:
 
 ```xml
 <property
@@ -36,23 +46,25 @@ You can also place longer property values inline: [SINCE Orbeon Forms 4.6]
 </property>
 ```
 
+Property files are reloaded every time they are changed (after a short delay), however some properties are taken into account only when the server is first started.
+
+## Categories of properties
+
 Properties fall in two categories:
 
-- standard: defined by Orbeon Forms
-- custom: defined by programmers
+- *standard*, which means they are defined by Orbeon Forms
+- *custom*, which means they are defined by form authors, administrators or integrators
 
-All standard properties have standard values defined in built-in property files, described below, and can be overridden when needed. They are documented in sub-pages.
+All standard properties have standard values defined in built-in property files, described below, and can be overridden when needed.
 
 In general, here is how you deal with properties:
 
-- look up the documentation for a given property
-- if needed, override it in `properties-local.xml` files under your web app's `WEB-INF/resources/config`
-
-Property files are reloaded every time they are changed (after a short delay), however some properties are taken into account only when the server is first started.
+- you look up the documentation for a given property
+- if needed, you set or override the property in `properties-local.xml`
 
 ## Setting and overriding properties
 
-To override properties, you create one of the following files  under your web app's  `WEB-INF/resources/config`:
+To override properties, you create one of the following files under your web app's  `WEB-INF/resources/config`:
 
 * `properties-local.xml`
 * `properties-local-dev.xml`
@@ -66,7 +78,7 @@ Properties defined in these files override properties in the standard property f
 
 By following this practice, you avoid modifying files that ships with Orbeon Forms, which makes upgrading to newer versions of Orbeon Forms easier.
 
-If you don't already have one of the `properties-local*.xml` files:
+If you don't already have one of the `properties-local.xml` files:
 
 * copy any or all of the following files, as required:
     * `properties-local.xml.template`  to `properties-local.xml`
@@ -74,7 +86,7 @@ If you don't already have one of the `properties-local*.xml` files:
     * ``properties-local-prod.xml.template`  to  `properties-local-prod.xml``
 * add your own properties to the resulting XML files
 
-  Note that each property file must have a root `<properties>` element:
+Each property file must have a root `<properties>` element:
 
 ```xml
 <properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -83,7 +95,7 @@ If you don't already have one of the `properties-local*.xml` files:
 </properties>
 ```
 
-_NOTE: The  `*.template`  files are just templates for the actual property files.  We don't recommend you modify the template files themselves._
+_NOTE: The  `*.template`  files are just templates for the actual property files.  You should not modify the template files themselves._
 
 ## Wildcards in properties
 
@@ -167,7 +179,7 @@ In addition to the standard properties, you can define your own properties. You 
 
 In all cases, for security reasons, those functions won't return the value of properties that contain the string "password" in the name of the property.
 
-## Properties subsystem initialization
+## For contributors: properties subsystem initialization
 
 The properties sub-system is initialized after the [Resource Manager][2] (the properties being read like any other Orbeon Forms resources). By default, the following top-level URL is loaded:
 
