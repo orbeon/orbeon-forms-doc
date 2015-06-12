@@ -274,7 +274,7 @@ Be sure to place the main session cookie name first in the list, as special hand
 
 _NOTE: When a username for HTTP Basic authentication is specified, cookies are not forwarded._
 
-_WARNING__: For security reasons, you should be careful with cookies forwarding, as this might cause non trusted services to receive client cookies._
+_WARNING: For security reasons, you should be careful with cookies forwarding, as this might cause non trusted services to receive client cookies._
 
 ### Stale checking
 
