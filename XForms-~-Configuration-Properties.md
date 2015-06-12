@@ -100,7 +100,7 @@ The following property controls whether instance types annotations are exposed t
  <property as="xs:boolean" name="oxf.xforms.expose-xpath-types" value="true"/>
  ```
 
-- If set to false (the default as of July 2009), instance types are not made available to XPath expressions.
+- If set to false (the default), instance types are not made available to XPath expressions.
 - If set to true, they are made available.
 
 
