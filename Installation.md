@@ -7,6 +7,7 @@
   - [[WebLogic|Installation ~ WebLogic]]
   - [[WebSphere|Installation ~ WebSphere]]
   - [[GlassFish|Installation ~ GlassFish]]
+- [[Configuration Properties|Installation ~ Configuration Properties]]
 - [[Troubleshooting|Installation ~ Troubleshooting]]
 - [[Relational database setup|Installation ~ Relational Database Setup]]
 - [[Creating a production WAR|Installation-~-Creating-a-Production-WAR]]
