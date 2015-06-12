@@ -69,7 +69,7 @@ Orbeon forms uses hash algorithms in at least the following cases:
 ### oxf.cache.size
 
 | | |
-| -- | -- |
+| --- | --- |
 | Purpose |  Setup the size of the Orbeon Forms cache |
 | Type |  `xs:integer` |   |
 | Default Value |  500 |
@@ -79,7 +79,7 @@ Orbeon Forms uses an efficient caching system. Orbeon Forms automatically determ
 ### oxf.cache.xpath.size
 
 | | |
-| -- | -- |
+| --- | --- |
 | Purpose |  Setup the size of the Orbeon Forms XPath cache |
 | Type |  `xs:integer` |
 | Default Value |  2000 |
@@ -338,7 +338,7 @@ In those cases, the application server will try to connect to `http://www.mycomp
 ### oxf.epilogue.theme
 
 | | |
-| -- | -- |
+| --- | --- |
 | Name |  `oxf.epilogue.theme` |
 | Purpose |  Specifies the theme stylesheet. This can be overwritten for a given app by placing a file `theme.xsl` inside the app directory. |
 | Type |  `xs:anyURI` |
@@ -347,7 +347,7 @@ In those cases, the application server will try to connect to `http://www.mycomp
 ###  oxf.epilogue.theme.embeddable
 
 | | |
-| -- | -- |
+| --- | --- |
 | Name |  `oxf.epilogue.theme.embeddable` |
 | Purpose |  Specifies the theme stylesheet to use when within a portlet or in embeddable mode. This can be overwritten for a given app by placing a file `theme-embeddable.xsl `inside the app directory. |
 | Type |  `xs:anyURI` |
@@ -356,7 +356,7 @@ In those cases, the application server will try to connect to `http://www.mycomp
 ### oxf.epilogue.theme.renderer
 
 | | |
-| -- | -- |
+| --- | --- |
 | Name |  `oxf.epilogue.theme.renderer` |
 | Purpose |  Specifies the theme stylesheet to use when using the XForms filter, whether in integrated or separate deployment mode. By default, this is a plain theme. |
 | Type |  `xs:anyURI` |
@@ -365,7 +365,7 @@ In those cases, the application server will try to connect to `http://www.mycomp
 ### oxf.epilogue.theme.error
 
 | | |
-| -- | -- |
+| --- | --- |
 | Name |  `oxf.epilogue.theme.error` |
 | Purpose |  Specifies the theme stylesheet to use on the error page |
 | Type |  `xs:anyURI` |
@@ -374,7 +374,7 @@ In those cases, the application server will try to connect to `http://www.mycomp
 ### oxf.epilogue.use-theme
 
 | | |
-| -- | -- |
+| --- | --- |
 | Name |  `oxf.epilogue.use-theme` |
 | Purpose |  Specifies whether a theme stylesheet must be applied |
 | Type |  `xs:boolean` |
@@ -383,7 +383,7 @@ In those cases, the application server will try to connect to `http://www.mycomp
 ### oxf.epilogue.output-xhtml
 
 | | |
-| -- | -- |
+| --- | --- |
 | Name |  `oxf.epilogue.output-xhtml` |
 | Purpose |  Whether to output XHTML to the browser or not |
 | Type |  `xs:boolean` |
@@ -392,7 +392,7 @@ In those cases, the application server will try to connect to `http://www.mycomp
 ### oxf.epilogue.renderer-rewrite
 
 | | |
-| -- | -- |
+| --- | --- |
 | Name |  `oxf.epilogue.renderer-rewrite` |
 | Purpose |  Whether the XForms renderer used in separate deployment must rewrite URLs |
 | Type |  `xs:boolean` |
@@ -401,7 +401,7 @@ In those cases, the application server will try to connect to `http://www.mycomp
 ### oxf.epilogue.process-svg
 
 | | |
-| -- | -- |
+| --- | --- |
 | Name |  `oxf.epilogue.process-svg` |
 | Purpose |  Whether SVG content must be converted server-side to images |
 | Type |  `xs:boolean` |
@@ -502,7 +502,7 @@ This property can easily be commented out for deployment, or placed in `properti
 ### oxf.log4j-config
 
 | | |
-| -- | -- |
+| --- | --- |
 | Purpose |  Configures the logging system |
 | Type |  `xs:anyURI` |
 | Default Value |  The logging system not initialized with a warning if this property is not present. |
@@ -524,7 +524,7 @@ _NOTE: You don't usually need to modify this property._
 ### oxf.validation.processor
 
 | | |
-| -- | -- |
+| --- | --- |
 | Purpose |  Controls the automatic processor validation |
 | Type |  `xs:boolean` |
 | Default Value |  Enabled |
@@ -536,7 +536,7 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 ### oxf.validation.user
 
 | | |
-| -- | -- |
+| --- | --- |
 | Purpose |  Controls user-defined validation |
 | Type |  `boolean` |
 | Default Value |  Enabled |
@@ -548,7 +548,7 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 ### sax.inspection
 
 | | |
-| -- | -- |
+| --- | --- |
 | Purpose |  Enable inspection SAX events |
 | Type |  `xs:boolean` |
 | Default Value |  false |
