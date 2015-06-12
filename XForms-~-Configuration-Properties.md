@@ -210,11 +210,11 @@ Individual controls also support this property locally:
 
 By default, YUI date picker shows as follows:
 
-![Default date picker][3]
+![Default date picker](images/xforms-datepicker-simple.png)
 
 You can set the `oxf.xforms.datepicker.two-months` property to `true`, and the date picker will show two months at a time:
 
-![Date picker with two months displayed at a time][4]
+![Date picker with two months displayed at a time](images/xforms-datepicker-navigator.png)
 
 By default, the property is set to `false`, (only one month is shown). You can override by adding the following to your `properties-local.xml`:
 
@@ -226,7 +226,7 @@ By default, the property is set to `false`, (only one month is shown). You can o
 
 With the `oxf.xforms.datepicker.navigator` property set to `true` (the default), when you click on the month headers, a small dialog allows you to type a year and select a month from a drop-down. This is particularly convenient if the date you want to capture has a chance to be further in the future or in the past (such as a birth date).
 
-![Month and year selection in YUI date picker with navigator and two months properties enabled][5]
+![Month and year selection in YUI date picker with navigator and two months properties enabled](images/xforms-datepicker-month-year.png)
 
 You disable the navigator by setting the following property to `false` (it is `true` by default):
 
@@ -239,7 +239,7 @@ You disable the navigator by setting the following property to `false` (it is `t
 When you use an `<xf:upload>` control, as soon users select a file, the file is uploaded in the background from the browser to Orbeon Forms. While the file is
  uploaded, a progress bar is show in the browser, in place of the file selection control, as in this screenshot:
 
-![][6]
+![Upload Progress](images/xforms-upload-progress-bar.png)
 
 To know how much of the file has been uploaded so far, the browser sends an Ajax request to the server, at a regular interval, asking the server what
  percentage of the file it has received. By default, the browser sends a request every 2 seconds. You can change this by overriding the following property.
@@ -453,10 +453,6 @@ If your forms leverage dialogs and your users are likely to use a screen reader,
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xpath-2-0-support
-[3]: https://web.archive.org/web/20141013090850im_/http%3A/wiki.orbeon.com/forms/_/rsrc/1242587265199/doc/developer-guide/configuration-properties/datepicker-simple.png
-[4]: https://web.archive.org/web/20141013090850im_/http%3A/wiki.orbeon.com/forms/_/rsrc/1242587347821/doc/developer-guide/configuration-properties/datepicker-navigator.png
-[5]: https://web.archive.org/web/20141013090850im_/http%3A/wiki.orbeon.com/forms/_/rsrc/1242587398765/doc/developer-guide/configuration-properties/datepicker-month-year.png
-[6]: https://web.archive.org/web/20141013090850im_/http%3A/wiki.orbeon.com/forms/_/rsrc/1294896488873/doc/developer-guide/configuration-properties/configuration-properties-xforms/upload-progress-bar.png
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xforms-inspector
 [8]: http://blog.orbeon.com/2014/03/review-and-pdf-improvements.html
 [9]: http://java.sun.com/javase/6/docs/api/java/text/SimpleDateFormat.html
