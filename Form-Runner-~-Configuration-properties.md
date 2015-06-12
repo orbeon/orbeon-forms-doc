@@ -1,5 +1,9 @@
 > [[Home]] ▸ Form Runner ▸ Configuration Properties
 
+## Configuration properties
+
+For general documentation about configuration properties, see [[Configuration Properties |Installation ~ Configuration Properties]].
+
 ## Default values
 
 For the latest default values of Form Runner properties, see [properties-form-runner.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml).
