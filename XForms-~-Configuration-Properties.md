@@ -54,7 +54,8 @@ The following property controls some aspects of XForms submission in Orbeon Form
 <property as="xs:boolean" name="optimize-get-all" value="true"/>
 ```
 
-If set to true (the default), Orbeon Forms optimizes submissions with replace="all" and the get method by sending URL of the submission action directly to the web browser. This however means that submission errors cannot be caught by XForms event handlers after Orbeon Forms has started connecting to the submission URL, as should be the case following the XForms specification. If set to false, Orbeon Forms buffers the reply so that errors can be handled as per XForms. However, this solution is less efficient.
+- If set to true (the default), Orbeon Forms optimizes submissions with replace="all" and the get method by sending URL of the submission action directly to the web browser. This however means that submission errors cannot be caught by XForms event handlers after Orbeon Forms has started connecting to the submission URL, as should be the case following the XForms specification.
+- If set to false, Orbeon Forms buffers the reply so that errors can be handled as per XForms. However, this solution is less efficient.
 
 The following two properties control optimized XForms submissions:
 
