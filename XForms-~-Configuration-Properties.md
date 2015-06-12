@@ -4,15 +4,11 @@
 
 ### Encryption password
 
-[SINCE 2012-08-15]
-
 With Orbeon Forms 4.0, the `oxf.xforms.password` property has been renamed `oxf.crypto.password`. For more information, see [Configuration Properties - Base][1].
 
 `oxf.xforms.password` is still supported for backward compatibility.
 
 #### XForms items encoding
-
-[SINCE 2012-08-15]
 
 With Orbeon Forms 4.0, XForms item values (like in checkboxes, dropdown menus, etc.) are no longer encrypted, but they are encoded by position. The following property can be used to enable or disable this behavior, like in Orbeon Forms 3.9:
 
