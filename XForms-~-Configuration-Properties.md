@@ -54,8 +54,8 @@ The following property controls some aspects of XForms submission in Orbeon Form
 <property as="xs:boolean" name="optimize-get-all" value="true"/>
 ```
 
-- If set to true (the default), Orbeon Forms optimizes submissions with replace="all" and the get method by sending URL of the submission action directly to the web browser. This however means that submission errors cannot be caught by XForms event handlers after Orbeon Forms has started connecting to the submission URL, as should be the case following the XForms specification.
-- If set to false, Orbeon Forms buffers the reply so that errors can be handled as per XForms. However, this solution is less efficient.
+- If set to `true`With Orbeon Forms 4.0, XForms item values (like in checkboxes, dropdown menus, etc.) are no longer encrypted, but they are encoded by position.  (the default), Orbeon Forms optimizes submissions with replace="all" and the get method by sending URL of the submission action directly to the web browser. This however means that submission errors cannot be caught by XForms event handlers after Orbeon Forms has started connecting to the submission URL, as should be the case following the XForms specification.
+- If set to `false`, Orbeon Forms buffers the reply so that errors can be handled as per XForms. However, this solution is less efficient.
 
 The following two properties control optimized XForms submissions:
 
@@ -63,15 +63,15 @@ The following two properties control optimized XForms submissions:
 <property as="xs:boolean" name="oxf.xforms.oxf.xforms.local-submission-forward" value="true"/>
 ```
 
-- If set to true (the default), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) submissions with replace="all", by using the Java Servlet API's forward capability instead of actually performing an HTTP request.
-- If set to false, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
+- If set to `true` (the default), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) submissions with replace="all", by using the Java Servlet API's forward capability instead of actually performing an HTTP request.
+- If set to `false`, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
 
 ```xml
 <property as="xs:boolean" name="oxf.xforms.oxf.xforms.local-submission-include" value="false"/>
 ```
 
-- If set to true (the default is false), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) submissions with replace="instance", replace="text" or replace="none", by directly using the Java Servlet API's include capability instead of actually performing an HTTP request.
-- If set to false, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
+- If set to `true` (the default is false), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) submissions with replace="instance", replace="text" or replace="none", by directly using the Java Servlet API's include capability instead of actually performing an HTTP request.
+- If set to `false`, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
 
 
 ## Instance inclusion
@@ -82,8 +82,8 @@ The following property controls optimized instance inclusion:
 <property as="xs:boolean" name="oxf.xforms.local-instance-include" value="false"/>
 ```
 
-- If set to true (the default is false), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) instance inclusions, by directly using the Java Servlet API's include capability instead of actually performing an HTTP request.
-- If set to false, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
+- If set to `true` (the default is false), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) instance inclusions, by directly using the Java Servlet API's include capability instead of actually performing an HTTP request.
+- If set to `false`, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
 
 Note that for any optimized submission or inclusion to occur, the following is required:
 
@@ -100,8 +100,8 @@ The following property controls whether instance types annotations are exposed t
  <property as="xs:boolean" name="oxf.xforms.expose-xpath-types" value="true"/>
  ```
 
-- If set to false (the default), instance types are not made available to XPath expressions.
-- If set to true, they are made available.
+- If set to `false` (the default), instance types are not made available to XPath expressions.
+- If set to `true`, they are made available.
 
 
 More information: [XPath 2.0 support][2].
@@ -208,7 +208,7 @@ By default, YUI date picker shows as follows:
 
 ![Default date picker][3]
 
-You can set the `oxf.xforms.datepicker.two-months` property to true, and the date picker will show two months at a time:
+You can set the `oxf.xforms.datepicker.two-months` property to `true`, and the date picker will show two months at a time:
 
 ![Date picker with two months displayed at a time][4]
 
@@ -220,7 +220,7 @@ By default, the property is set to `false`, (only one month is shown). You can o
 
 ### Navigator
 
-With the `oxf.xforms.datepicker.navigator` property set to true (which is the default), when you click on the month headers, a small dialog allows you to type a year and select a month from a drop-down. This is particularly convenient if the date you want to capture has a chance to be further in the future or in the past (such as a birth date).
+With the `oxf.xforms.datepicker.navigator` property set to `true` (the default), when you click on the month headers, a small dialog allows you to type a year and select a month from a drop-down. This is particularly convenient if the date you want to capture has a chance to be further in the future or in the past (such as a birth date).
 
 ![Month and year selection in YUI date picker with navigator and two months properties enabled][5]
 
@@ -250,7 +250,7 @@ To know how much of the file has been uploaded so far, the browser sends an Ajax
 
 ## XForms inspector
 
-You can enable the [XForms Inspector][7] for all the page in your site by setting the following property to true (the default is false):
+You can enable the [XForms Inspector][7] for all the page in your site by setting the following property to `true` (the default is `false`):
 
 ```xml
 <property as="xs:boolean" name="oxf.epilogue.xforms.inspector" value="true"/>
