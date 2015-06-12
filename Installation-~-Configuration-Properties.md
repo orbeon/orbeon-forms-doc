@@ -197,4 +197,4 @@ Property files support inclusions via XInclude. This is the mechanism used by Or
 - [[Form Builder Configuration properties|Form Builder ~ Configuration properties]]
 
 [1]: http://www.orbeon.com/ops/doc/reference-xforms-functions
-[2]: http://www.orbeon.com/orbeon/doc/reference-resource-managers
+[2]: http://wiki.orbeon.com/forms/doc/developer-guide/resource-managers
