@@ -196,5 +196,5 @@ Property files support inclusions via XInclude. This is the mechanism used by Or
 - [[Form Runner Persistence Configuration properties|Form Runner ~ Configuration properties ~ Persistence]]
 - [[Form Builder Configuration properties|Form Builder ~ Configuration properties]]
 
-[1]: http://www.orbeon.com/ops/doc/reference-xforms-functions
+[1]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions#TOC-xxf:property-
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/resource-managers
