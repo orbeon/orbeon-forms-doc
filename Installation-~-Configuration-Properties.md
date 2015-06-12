@@ -14,6 +14,7 @@ Orbeon Forms will do a certain number of things out of the box without touching 
 
 Each Orbeon Forms subsystem defines its own properties. They are documented in the following pages:
 
+- [[Base Configuration Properties|Installation ~ Configuration Properties ~ Base Properties]]
 - [[XForms Configuration Properties|XForms ~ Configuration Properties]]
 - [[Form Runner Configuration properties|Form Runner ~ Configuration properties]]
     - [[Persistence Configuration properties|Form Runner ~ Configuration properties ~ Persistence]]
