@@ -192,6 +192,7 @@ Property files support inclusions via XInclude. This is the mechanism used by Or
 
 ## See also
 
+- [[XForms Configuration Properties|XForms ~ Configuration Properties]]
 - [[Form Runner Configuration properties|Form Runner ~ Configuration properties]]
 - [[Form Runner Persistence Configuration properties|Form Runner ~ Configuration properties ~ Persistence]]
 - [[Form Builder Configuration properties|Form Builder ~ Configuration properties]]
