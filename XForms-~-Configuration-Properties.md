@@ -1,5 +1,7 @@
 ## Default values
 
+For the latest default values of XForms properties, see [`properties-xforms.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-xforms.xml).
+
 ## Encryption and passwords
 
 ### Encryption password
