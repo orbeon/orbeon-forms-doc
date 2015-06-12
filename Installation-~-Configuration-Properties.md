@@ -16,7 +16,7 @@ Each Orbeon Forms subsystem defines its own properties. They are documented in t
 
 - [[XForms Configuration Properties|XForms ~ Configuration Properties]]
 - [[Form Runner Configuration properties|Form Runner ~ Configuration properties]]
-- [[Form Runner Persistence Configuration properties|Form Runner ~ Configuration properties ~ Persistence]]
+    - [[Persistence Configuration properties|Form Runner ~ Configuration properties ~ Persistence]]
 - [[Form Builder Configuration properties|Form Builder ~ Configuration properties]]
 
 ## What's in a property
