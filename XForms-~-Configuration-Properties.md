@@ -1,3 +1,7 @@
+## Configuration properties
+
+For general documentation about configuration properties, see [[Configuration Properties |Installation ~ Configuration Properties]].
+
 ## Default values
 
 For the latest default values of XForms properties, see [`properties-xforms.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-xforms.xml).
