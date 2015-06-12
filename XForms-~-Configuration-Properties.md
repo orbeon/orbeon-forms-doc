@@ -23,7 +23,7 @@ In general, this should be set to `true`, but you can set it to `false` if you n
 
 ## XPath analysis
 
-See [XPath Analysis](https://web.archive.org/web/20130420144305/http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-analysis).
+See [XPath Analysis](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-analysis).
 
 ## File location information
 
