@@ -56,10 +56,10 @@ To override properties, you create one of the following files  under your web ap
 
 * `properties-local.xml`
 * `properties-local-dev.xml`
-    * `dev` run mode only  [SINCE 2012-05-03]
+    * `dev` run mode only
     * properties in this file also override properties in `properties-local.xml`
 * `properties-local-prod.xml`
-    * `prod`  run mode only  [SINCE 2012-05-03]
+    * `prod`  run mode only
     * properties in this file also override properties in `properties-local.xml`
 
 Properties defined in these files override properties in the standard property files.
@@ -134,11 +134,9 @@ So:
 The default values for those properties are provided in the following files, which are stored in `orbeon-resources-private.jar`:
 
 * `config/properties-dev.xml`
-    * [`SINCE 2012-05-03]`
     * root of  `dev`  mode properties
 * `config/properties-prod.xml`
-    * [`SINCE 2012-05-03`
-    * root of  `prod`  mode properties  [SINCE 2012-05-03]
+    * root of  `prod`  mode properties
 * `config/properties-base.xml`
     * base Orbeon Forms properties
 * `config/properties-xforms.xml`
@@ -173,10 +171,10 @@ In all cases, for security reasons, those functions won't return the value of pr
 
 The properties sub-system is initialized after the [Resource Manager][2] (the properties being read like any other Orbeon Forms resources). By default, the following top-level URL is loaded:
 
-* web app in `prod` mode:  `oxf:/config/properties-prod.xml`  [SINCE 2012-05-03]
-* web app in  `dev`  mode:  oxf:/config/properties-dev.xml  [SINCE 2012-05-03]
-* web app (prior to 2012-05-03):  oxf:/config/properties.xml
-* command-line:  oxf:/properties.xml
+* web app in `prod` mode:  `oxf:/config/properties-prod.xml`
+* web app in  `dev`  mode:  `oxf:/config/properties-dev.xml`
+* web app (prior to 2012-05-03):  `oxf:/config/properties.xml`
+* command-line:  `oxf:/properties.xml`
 
 Property files support inclusions via XInclude. This is the mechanism used by Orbeon Forms to load  all the secondary property files.
 
