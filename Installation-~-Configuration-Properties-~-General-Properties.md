@@ -181,6 +181,26 @@ To configure an HTTP proxy to be used for all the HTTP connections established b
     as="xs:string"
     name="oxf.http.proxy.exclude"
     value=""/>
+
+<property
+    as="xs:string"
+    name="oxf.http.proxy.username"
+    value=""/>
+
+<property
+    as="xs:string"
+    name="oxf.http.proxy.password"
+    value=""/>
+
+<property
+    as="xs:string"
+    name="oxf.http.proxy.ntlm.host"
+    value=""/>
+
+<property
+    as="xs:string"
+    name="oxf.http.proxy.ntlm.domain"
+    value=""/>
 ```
 
 By default, the host and port properties are commented and Orbeon Forms doesn't use a proxy. Some of the use cases where you will want to define a proxy include:
@@ -188,7 +208,7 @@ By default, the host and port properties are commented and Orbeon Forms doesn't 
 - Your network setup requires you to go through a proxy.
 - You would like see what goes through HTTP by using a tool that acts as an HTTP proxy, such as [Charles](http://blog.orbeon.com/2013/04/let-charles-help-you-monitor-http.html).
 
-To connect to the proxy over HTTPS, instead of HTTP which is the default, set the `oxf.http.proxy.use-ssl` property to true.
+To connect to the proxy over HTTPS, instead of HTTP which is the default, set the `oxf.http.proxy.use-ssl` property to `true`.
 
 [SINCE Orbeon Forms 4.6]
 
@@ -229,10 +249,12 @@ When using HTTPS, you can specify which key store (or trust store) to use to ver
     value="changeit"/>
 ```
 
-- `oxf.http.ssl.keystore.uri` specifies the URL of the key store file
+- `oxf.http.ssl.keystore.uri`
+    - specifies the URL of the key store file
     - this can use the `file:` or `oxf:` protocols
     - if this property is blank, the default JSSE algorithm to find a trust store applies (see the [JSSE Reference Guide][3])
-- `oxf.http.ssl.keystore.password` specifies the password needed to access the key store file
+- `oxf.http.ssl.keystore.password`
+    - specifies the password needed to access the key store file
 
 This can be useful for using self-signed certificates:
 
@@ -304,6 +326,11 @@ By default, Orbeon doesn't set a timeout with HttpClient. Setting a timeout can 
 ```
 
 _NOTE: These two headers are computed values and it is only possible to override them with constant values by using the properties above. In general we don't recommend overriding these headers by using the properties above._
+
+## Other HTTP properties
+
+- `oxf.http.chunk-requests`
+- xxx
 
 ## URL rewriting
 
@@ -559,7 +586,7 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 
 SAX is the underlying mechanism in Orbeon Forms by which processors receive and generate XML data. Given only the constraints of the SAX API, it is possible for a processor to generate an invalid sequence of SAX events. Another processor that receives that invalid sequence of events may or may not be able to deal with it without throwing an exception. Some processors try to process invalid SAX events, while others throw exceptions. This means that when a processor generating an invalid sequence of SAX events is used in a pipeline, the problem might go unnoticed, or it might cause some other processor downstream to throw an exception.
 
-To deal more efficiently with those cases, the `sax.inspection` property can be set to `true`. When it is set to true, the pipeline engine checks the outputs of every processor at runtime and makes sure that valid SAX events are generated. When an error is detected, an exception is thrown right away, with information about the processor that generated the invalid SAX events.
+To deal more efficiently with those cases, the `sax.inspection` property can be set to `true`. When it is set to `true`, the pipeline engine checks the outputs of every processor at runtime and makes sure that valid SAX events are generated. When an error is detected, an exception is thrown right away, with information about the processor that generated the invalid SAX events.
 
 There is a performance penalty for enabling SAX events inspection. So this property should not be enabled on a production system.
 
