@@ -70,9 +70,9 @@ Orbeon forms uses hash algorithms in at least the following cases:
 
 | | |
 | --- | --- |
-| Purpose |  Setup the size of the Orbeon Forms cache |
-| Type |  `xs:integer` |   |
-| Default Value |  500 |
+| Purpose | Setup the size of the Orbeon Forms cache |
+| Type | `xs:integer` | |
+| Default Value | 500 |
 
 Orbeon Forms uses an efficient caching system. Orbeon Forms automatically determines what can be cached and when to expire objects. The cache has a default size of 200, meaning that it can hold 200 objects. This size is reasonable for most applications. A bigger cache tends to make the application faster, but it uses more memory. To tune the cache size, see the suggestions in the [Performance and Tuning][1] section.
 
@@ -80,9 +80,9 @@ Orbeon Forms uses an efficient caching system. Orbeon Forms automatically determ
 
 | | |
 | --- | --- |
-| Purpose |  Setup the size of the Orbeon Forms XPath cache |
-| Type |  `xs:integer` |
-| Default Value |  2000 |
+| Purpose | Setup the size of the Orbeon Forms XPath cache |
+| Type | `xs:integer` |
+| Default Value | 2000 |
 
 This property configures the maximum number of compiled XPath expressions to keep in the XPath cache. To tune the cache size, see the suggestions in the [Performance and Tuning][1] section.
 
@@ -176,7 +176,7 @@ To configure an HTTP proxy to be used for all the HTTP connections established b
     as="xs:boolean"
     name="oxf.http.proxy.use-ssl"
     value="false"/>
-    
+
 <property
     as="xs:string"
     name="oxf.http.proxy.exclude"
@@ -199,9 +199,9 @@ You can exclude host names from the proxy using the `oxf.http.proxy.exclude` pro
 When using HTTPS, you can specify how the hostname of the server is checked against the hostname in its certificate. You do so with the following property:
 
 ```xml
-<property 
-    as="xs:string" 
-    name="oxf.http.ssl.hostname-verifier" 
+<property
+    as="xs:string"
+    name="oxf.http.ssl.hostname-verifier"
     value="strict"/>
 ```
 
@@ -375,73 +375,73 @@ In those cases, the application server will try to connect to `http://www.mycomp
 
 | | |
 | --- | --- |
-| Name |  `oxf.epilogue.theme` |
-| Purpose |  Specifies the theme stylesheet. This can be overwritten for a given app by placing a file `theme.xsl` inside the app directory. |
-| Type |  `xs:anyURI` |
-| Default Value |  `oxf:/config/theme-examples.xsl` |
+| Name | `oxf.epilogue.theme` |
+| Purpose | Specifies the theme stylesheet. This can be overwritten for a given app by placing a file `theme.xsl` inside the app directory. |
+| Type | `xs:anyURI` |
+| Default Value | `oxf:/config/theme-examples.xsl` |
 
 ###  oxf.epilogue.theme.embeddable
 
 | | |
 | --- | --- |
-| Name |  `oxf.epilogue.theme.embeddable` |
-| Purpose |  Specifies the theme stylesheet to use when within a portlet or in embeddable mode. This can be overwritten for a given app by placing a file `theme-embeddable.xsl `inside the app directory. |
-| Type |  `xs:anyURI` |
-| Default Value |  `oxf:/config/theme-portlet-examples.xsl` |
+| Name | `oxf.epilogue.theme.embeddable` |
+| Purpose | Specifies the theme stylesheet to use when within a portlet or in embeddable mode. This can be overwritten for a given app by placing a file `theme-embeddable.xsl `inside the app directory. |
+| Type | `xs:anyURI` |
+| Default Value | `oxf:/config/theme-portlet-examples.xsl` |
 
 ### oxf.epilogue.theme.renderer
 
 | | |
 | --- | --- |
-| Name |  `oxf.epilogue.theme.renderer` |
-| Purpose |  Specifies the theme stylesheet to use when using the XForms filter, whether in integrated or separate deployment mode. By default, this is a plain theme. |
-| Type |  `xs:anyURI` |
-| Default Value |  `oxf:/config/theme-portlet-examples.xsl` |
+| Name | `oxf.epilogue.theme.renderer` |
+| Purpose | Specifies the theme stylesheet to use when using the XForms filter, whether in integrated or separate deployment mode. By default, this is a plain theme. |
+| Type | `xs:anyURI` |
+| Default Value | `oxf:/config/theme-portlet-examples.xsl` |
 
 ### oxf.epilogue.theme.error
 
 | | |
 | --- | --- |
-| Name |  `oxf.epilogue.theme.error` |
-| Purpose |  Specifies the theme stylesheet to use on the error page |
-| Type |  `xs:anyURI` |
-| Default Value |  `oxf:/config/theme-error.xsl` |
+| Name | `oxf.epilogue.theme.error` |
+| Purpose | Specifies the theme stylesheet to use on the error page |
+| Type | `xs:anyURI` |
+| Default Value | `oxf:/config/theme-error.xsl` |
 
 ### oxf.epilogue.use-theme
 
 | | |
 | --- | --- |
-| Name |  `oxf.epilogue.use-theme` |
-| Purpose |  Specifies whether a theme stylesheet must be applied |
-| Type |  `xs:boolean` |
-| Default Value |  `true` |
+| Name | `oxf.epilogue.use-theme` |
+| Purpose | Specifies whether a theme stylesheet must be applied |
+| Type | `xs:boolean` |
+| Default Value | `true` |
 
 ### oxf.epilogue.output-xhtml
 
 | | |
 | --- | --- |
-| Name |  `oxf.epilogue.output-xhtml` |
-| Purpose |  Whether to output XHTML to the browser or not |
-| Type |  `xs:boolean` |
-| Default Value |  `false` |
+| Name | `oxf.epilogue.output-xhtml` |
+| Purpose | Whether to output XHTML to the browser or not |
+| Type | `xs:boolean` |
+| Default Value | `false` |
 
 ### oxf.epilogue.renderer-rewrite
 
 | | |
 | --- | --- |
-| Name |  `oxf.epilogue.renderer-rewrite` |
-| Purpose |  Whether the XForms renderer used in separate deployment must rewrite URLs |
-| Type |  `xs:boolean` |
-| Default Value |  `false` |
+| Name | `oxf.epilogue.renderer-rewrite` |
+| Purpose | Whether the XForms renderer used in separate deployment must rewrite URLs |
+| Type | `xs:boolean` |
+| Default Value | `false` |
 
 ### oxf.epilogue.process-svg
 
 | | |
 | --- | --- |
-| Name |  `oxf.epilogue.process-svg` |
-| Purpose |  Whether SVG content must be converted server-side to images |
-| Type |  `xs:boolean` |
-| Default Value |  `true` |
+| Name | `oxf.epilogue.process-svg` |
+| Purpose | Whether SVG content must be converted server-side to images |
+| Type | `xs:boolean` |
+| Default Value | `true` |
 
 
 ## Email processor properties
@@ -492,6 +492,7 @@ Configure the SMTP password for all email processors. This global property can b
     processor-name="oxf:email"
     name="password"
     value="secret"/>
+```
 
 ### Global SMTP encryption
 
@@ -539,9 +540,9 @@ This property can easily be commented out for deployment, or placed in `properti
 
 | | |
 | --- | --- |
-| Purpose |  Configures the logging system |
-| Type |  `xs:anyURI` |
-| Default Value |  The logging system not initialized with a warning if this property is not present. |
+| Purpose | Configures the logging system |
+| Type | `xs:anyURI` |
+| Default Value | The logging system not initialized with a warning if this property is not present. |
 
 Orbeon Forms uses the log4j logging framework. In Orbeon Forms, log4j is configured with an XML file. Here is the [default Orbeon Forms log4j configuration][8].
 
@@ -561,9 +562,9 @@ _NOTE: You don't usually need to modify this property._
 
 | | |
 | --- | --- |
-| Purpose |  Controls the automatic processor validation |
-| Type |  `xs:boolean` |
-| Default Value |  Enabled |
+| Purpose | Controls the automatic processor validation |
+| Type | `xs:boolean` |
+| Default Value | Enabled |
 
 Many processors validate their configuration input with a schema. This validation is automatic and allows meaningful error reporting. To potentially improve the performance of the application, validation can be disabled in production environments.
 
@@ -573,9 +574,9 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 
 | | |
 | --- | --- |
-| Purpose |  Controls user-defined validation |
-| Type |  `boolean` |
-| Default Value |  Enabled |
+| Purpose | Controls user-defined validation |
+| Type | `boolean` |
+| Default Value | Enabled |
 
 User-defined validation is activated in the [XML Pipeline Definition Language][9] with the attributes `schema-href` and `schema-uri`. To potentially improve the performance of the application, validation can be disabled in production environments.
 
@@ -585,9 +586,9 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 
 | | |
 | --- | --- |
-| Purpose |  Enable inspection SAX events |
-| Type |  `xs:boolean` |
-| Default Value |  false |
+| Purpose | Enable inspection SAX events |
+| Type | `xs:boolean` |
+| Default Value | `false` |
 
 SAX is the underlying mechanism in Orbeon Forms by which processors receive and generate XML data. Given only the constraints of the SAX API, it is possible for a processor to generate an invalid sequence of SAX events. Another processor that receives that invalid sequence of events may or may not be able to deal with it without throwing an exception. Some processors try to process invalid SAX events, while others throw exceptions. This means that when a processor generating an invalid sequence of SAX events is used in a pipeline, the problem might go unnoticed, or it might cause some other processor downstream to throw an exception.
 
@@ -596,6 +597,7 @@ To deal more efficiently with those cases, the `sax.inspection` property can be 
 There is a performance penalty for enabling SAX events inspection. So this property should not be enabled on a production system.
 
 _NOTE: You don't usually need to enable this property._
+
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning
 [2]: http://ws.apache.org/commons/tcpmon/
