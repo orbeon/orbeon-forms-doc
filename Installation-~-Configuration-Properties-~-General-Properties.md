@@ -119,16 +119,16 @@ During development, the following XSLT transformer configuration helps with line
 - `smart`: maximal XSLT output line number information provided. This is recommended for development.
 
 ```xml
-<property 
-    as="xs:string" 
-    processor-name="oxf:builtin-saxon" 
-    name="location-mode" 
+<property
+    as="xs:string"
+    processor-name="oxf:builtin-saxon"
+    name="location-mode"
     value="none"/>
-    
-<property 
-    as="xs:string" 
-    processor-name="oxf:unsafe-builtin-saxon" 
-    name="location-mode" 
+
+<property
+    as="xs:string"
+    processor-name="oxf:unsafe-builtin-saxon"
+    name="location-mode"
     value="none"/>
 ```
 
@@ -144,7 +144,7 @@ Default:
 The following property specifies whether the server is allowed to send detailed error and exceptions messages to the browser:
 
 ```xml
-<property 
+<property
     as="xs:boolean"
     name="oxf.http.exceptions"
     value="false"/>
@@ -162,24 +162,24 @@ Default:
 To configure an HTTP proxy to be used for all the HTTP connections established by Orbeon Forms, add the following two properties:
 
 ```xml
-<property 
-    as="xs:string"  
-    name="oxf.http.proxy.host"    
+<property
+    as="xs:string"
+    name="oxf.http.proxy.host"
     value="localhost"/>
-    
-<property 
-    as="xs:integer" 
-    name="oxf.http.proxy.port"    
+
+<property
+    as="xs:integer"
+    name="oxf.http.proxy.port"
     value="8090"/>
-    
-<property 
-    as="xs:boolean" 
-    name="oxf.http.proxy.use-ssl" 
+
+<property
+    as="xs:boolean"
+    name="oxf.http.proxy.use-ssl"
     value="false"/>
     
-<property 
-    as="xs:string"  
-    name="oxf.http.proxy.exclude" 
+<property
+    as="xs:string"
+    name="oxf.http.proxy.exclude"
     value=""/>
 ```
 
@@ -199,7 +199,10 @@ You can exclude host names from the proxy using the `oxf.http.proxy.exclude` pro
 When using HTTPS, you can specify how the hostname of the server is checked against the hostname in its certificate. You do so with the following property:
 
 ```xml
-<property as="xs:string" name="oxf.http.ssl.hostname-verifier" value="strict"/>
+<property 
+    as="xs:string" 
+    name="oxf.http.ssl.hostname-verifier" 
+    value="strict"/>
 ```
 
 The possible values are:
@@ -277,9 +280,9 @@ When Orbeon Forms performs XForms submissions, or retrieves documents in XPL ove
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.http.forward-headers"
-  value="Orbeon-Client Authorization"/>
+    as="xs:string"
+    name="oxf.http.forward-headers"
+    value="Orbeon-Client Authorization"/>
 ```
 
 _WARNING: For security reasons, you should be careful with header forwarding, as this might cause non trusted services to receive client headers._
@@ -290,9 +293,9 @@ Similar to general headers forwarding, cookies can be forwarded. By default, the
 
 ```xml
 <property
-  as="xs:string"
-  name="oxf.http.forward-cookies"
-  value="JSESSIONID JSESSIONIDSSO"/>
+    as="xs:string"
+    name="oxf.http.forward-cookies"
+    value="JSESSIONID JSESSIONIDSSO"/>
 ```
 
 This is typically used to forward session cookies to the same application server.
@@ -313,8 +316,8 @@ By default, Orbeon checks for stale HTTP connections. You can disabling stale co
 
 ```xml
 <property
-    as="xs:boolean" 
-    name="oxf.http.stale-checking-enabled" 
+    as="xs:boolean"
+    name="oxf.http.stale-checking-enabled"
     value="false"/>
 ```
 
@@ -328,7 +331,7 @@ By default, Orbeon doesn't set a timeout with HttpClient. Setting a timeout can 
 
 ```xml
 <property
-    as="xs:integer" 
+    as="xs:integer"
     name="oxf.http.so-timeout"
     value="60000"/>
 ```
@@ -449,10 +452,10 @@ Configure the SMTP host for all email processors. This global property can be ov
 
 ```xml
 <property
-  as="xs:string"
-  processor-name="oxf:email"
-  name="smtp-host"
-  value="mail.example.org"/>
+    as="xs:string"
+    processor-name="oxf:email"
+    name="smtp-host"
+    value="mail.example.org"/>
 ```
 
 ### Global SMTP port
@@ -461,10 +464,10 @@ Configure the SMTP port for all email processors. This global property can be ov
 
 ```xml
 <property
-  as="xs:string"
-  processor-name="oxf:email"
-  name="smtp-port"
-  value="25"/>
+    as="xs:string"
+    processor-name="oxf:email"
+    name="smtp-port"
+    value="25"/>
 ```
 
 ### Global SMTP username
@@ -473,10 +476,10 @@ Configure the SMTP username for all email processors. This global property can b
 
 ```xml
 <property
-  as="xs:string"
-  processor-name="oxf:email"
-  name="username"
-  value="john"/>
+    as="xs:string"
+    processor-name="oxf:email"
+    name="username"
+    value="john"/>
 ```
 
 ### Global SMTP password
@@ -485,10 +488,10 @@ Configure the SMTP password for all email processors. This global property can b
 
 ```xml
 <property
-  as="xs:string"
-  processor-name="oxf:email"
-  name="password"
-  value="secret"/>
+    as="xs:string"
+    processor-name="oxf:email"
+    name="password"
+    value="secret"/>
 
 ### Global SMTP encryption
 
@@ -496,10 +499,10 @@ Configure the SMTP encryption for all email processors. This global property can
 
 ```xml
 <property
-  as="xs:string"
-  processor-name="oxf:email"
-  name="encryption"
-  value="tls"/>
+    as="xs:string"
+    processor-name="oxf:email"
+    name="encryption"
+    value="tls"/>
 ```
 
 ### Test SMTP host
@@ -508,10 +511,10 @@ Configure a test SMTP host for all email processors. This global property when s
 
 ```xml
 <property
-  as="xs:string"
-  processor-name="oxf:email"
-  name="test-to"
-  value="joe@example.org"/>
+    as="xs:string"
+    processor-name="oxf:email"
+    name="test-to"
+    value="joe@example.org"/>
 ```
 
 This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes][7]).
@@ -522,10 +525,10 @@ Configure a test recipient email address for all email processors. This global p
 
 ```xml
 <property
-  as="xs:string"
-  processor-name="oxf:email"
-  name="test-to"
-  value="joe@example.org"/>
+    as="xs:string"
+    processor-name="oxf:email"
+    name="test-to"
+    value="joe@example.org"/>
 ```
 
 This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes][7]).
