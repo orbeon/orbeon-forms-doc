@@ -241,39 +241,6 @@ This can be useful for using self-signed certificates:
 
 This enables a secure connection between Orbeon Forms and the servlet container.
 
-### State setup
-
-When Orbeon Forms performs XForms submissions, or retrieves documents in XPL over HTTP, it has the ability to keep state across requests. State information includes:
-
-- Cookies, including session cookies
-- Credentials / authentication information, e.g. HTTP Basic authentication
-
-By default, these settings are stored in the current user session:
-
-```xml
-<property as="xs:string"  name="oxf.http.state" value="session"/>
-```
-
-You can change the property to the following values:
-
-- `none`: state is not stored at all between HTTP requests
-- `request`: state is stored for the duration of an HTTP request from the user's browser
-- `session`: state is stored for the duration of the user's session
-- `application`: state is stored for the duration of the web application's life
-
-This setting impacts the following HTTP requests:
-
-- Loading of XForms instances with `xf:instance/@src`
-- Requests issued by `xf:submission`
-- Requests issued by HTTP URLs in XPL pipelines
-- Requests issued by `oxf:url-generator` in XPL pipelines
-- Requests issued by `oxf:xhtml-to-pdf` when requesting external resources such as CSS, JavaScript, and image files
-
-In fact, any HTTP request from Orbeon Forms should be handled by the above mechanisms. If you find an exception, please let Orbeon know on [the forum][4]!
-
-_NOTE: These settings only control how the HTTP **client*- in Orbeon Forms handles cookies and credentials._
-
-
 ### Headers forwarding
 
 When Orbeon Forms performs XForms submissions, or retrieves documents in XPL over HTTP, it has the ability to forward incoming HTTP headers. For example, if you want to forward the `Orbeon-Client` and the `Authorization` header to your services:
