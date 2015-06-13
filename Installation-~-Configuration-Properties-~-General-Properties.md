@@ -119,8 +119,17 @@ During development, the following XSLT transformer configuration helps with line
 - `smart`: maximal XSLT output line number information provided. This is recommended for development.
 
 ```xml
-<property as="xs:string" processor-name="oxf:builtin-saxon" name="location-mode" value="none"/>
-<property as="xs:string" processor-name="oxf:unsafe-builtin-saxon" name="location-mode" value="none"/>
+<property 
+    as="xs:string" 
+    processor-name="oxf:builtin-saxon" 
+    name="location-mode" 
+    value="none"/>
+    
+<property 
+    as="xs:string" 
+    processor-name="oxf:unsafe-builtin-saxon" 
+    name="location-mode" 
+    value="none"/>
 ```
 
 Default:
@@ -135,7 +144,10 @@ Default:
 The following property specifies whether the server is allowed to send detailed error and exceptions messages to the browser:
 
 ```xml
-<property as="xs:boolean" name="oxf.http.exceptions" value="false"/>
+<property 
+    as="xs:boolean"
+    name="oxf.http.exceptions"
+    value="false"/>
 ```
 
 Default:
@@ -150,10 +162,25 @@ Default:
 To configure an HTTP proxy to be used for all the HTTP connections established by Orbeon Forms, add the following two properties:
 
 ```xml
-<property as="xs:string"  name="oxf.http.proxy.host"    value="localhost"/>
-<property as="xs:integer" name="oxf.http.proxy.port"    value="8090"/>
-<property as="xs:boolean" name="oxf.http.proxy.use-ssl" value="false"/>
-<property as="xs:string"  name="oxf.http.proxy.exclude" value=""/>
+<property 
+    as="xs:string"  
+    name="oxf.http.proxy.host"    
+    value="localhost"/>
+    
+<property 
+    as="xs:integer" 
+    name="oxf.http.proxy.port"    
+    value="8090"/>
+    
+<property 
+    as="xs:boolean" 
+    name="oxf.http.proxy.use-ssl" 
+    value="false"/>
+    
+<property 
+    as="xs:string"  
+    name="oxf.http.proxy.exclude" 
+    value=""/>
 ```
 
 By default, the host and port properties are commented and Orbeon Forms doesn't use a proxy. Some of the use cases where you will want to define a proxy include:
@@ -285,7 +312,10 @@ This property is tied to the [HttpClient stale checking](http://hc.apache.org/ht
 By default, Orbeon checks for stale HTTP connections. You can disabling stale connection checking by setting the following property to `false` (it is `true` by default):
 
 ```xml
-<property as="xs:boolean" name="oxf.http.stale-checking-enabled" value="false"/>
+<property
+    as="xs:boolean" 
+    name="oxf.http.stale-checking-enabled" 
+    value="false"/>
 ```
 
 ### Socket timeout
@@ -297,7 +327,10 @@ This property is tied to the [HttpClient SO timeout](http://hc.apache.org/httpcl
 By default, Orbeon doesn't set a timeout with HttpClient. Setting a timeout can be potentially dangerous as it can lead to service calls that take longer to run than the timeout you specified to fail in a way that can be unpredictable, as it is possible for your services to sometimes return before the timeout and sometimes after. If, nevertheless, you need to set a timeout, you can do so by adding the following property, e.g. here setting a timeout at 1 minute:
 
 ```xml
-<property as="xs:integer" name="oxf.http.so-timeout" value="60000"/>
+<property
+    as="xs:integer" 
+    name="oxf.http.so-timeout"
+    value="60000"/>
 ```
 
 _NOTE: These two headers are computed values and it is only possible to override them with constant values by using the properties above. In general we don't recommend overriding these headers by using the properties above._
