@@ -186,7 +186,7 @@ To configure an HTTP proxy to be used for all the HTTP connections established b
 By default, the host and port properties are commented and Orbeon Forms doesn't use a proxy. Some of the use cases where you will want to define a proxy include:
 
 - Your network setup requires you to go through a proxy.
-- You would like see what goes through HTTP by using a tool that acts as an HTTP proxy, such as [Apache TCPMon][2].
+- You would like see what goes through HTTP by using a tool that acts as an HTTP proxy, such as [Charles](http://blog.orbeon.com/2013/04/let-charles-help-you-monitor-http.html).
 
 To connect to the proxy over HTTPS, instead of HTTP which is the default, set the `oxf.http.proxy.use-ssl` property to true.
 
@@ -567,9 +567,7 @@ _NOTE: You don't usually need to enable this property._
 
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning
-[2]: http://ws.apache.org/commons/tcpmon/
 [3]: http://docs.oracle.com/javase/6/docs/technotes/guides/security/jsse/JSSERefGuide.html#X509TrustManager
-[4]: http://www.orbeon.com/ops/doc/home-faq#mailing-list
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/run-modes
 [8]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/config/log4j.xml
 [9]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl
