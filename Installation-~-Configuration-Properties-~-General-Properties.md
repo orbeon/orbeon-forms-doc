@@ -327,7 +327,7 @@ By default, Orbeon doesn't set a timeout with HttpClient. Setting a timeout can 
 
 _NOTE: These two headers are computed values and it is only possible to override them with constant values by using the properties above. In general we don't recommend overriding these headers by using the properties above._
 
-## Request chunking
+### Request chunking
 
 ```xml
 <property
