@@ -188,7 +188,7 @@ For the `oxf.fr.authentication.header.username` header, you can choose any of th
 - `Orbeon-Liferay-User-Screen-Name`
 - or possibly `Orbeon-Liferay-User-Email`
 
-_NOTE: For builds prior to Orbeon 4.9, you need the following configuration in your [properties-local.xml][3]:_
+_NOTE: For builds prior to Orbeon 4.9, you need the following configuration in your [[`properties-local.xml`|Installation-~-Configuration-Properties]]:_
 
 ```xml
 <property
