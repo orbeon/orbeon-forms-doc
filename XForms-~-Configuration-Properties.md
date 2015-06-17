@@ -10,7 +10,7 @@ For the latest default values of XForms properties, see [`properties-xforms.xml`
 
 ### Encryption password
 
-Before Orbeon Forms 4.0, the `oxf.xforms.password` property was defined. It has since been renamed `oxf.crypto.password`. For more information, see [Configuration Properties - Base][1]. `oxf.xforms.password` is still supported for backward compatibility.
+Before Orbeon Forms 4.0, the `oxf.xforms.password` property was defined. It has since been renamed `oxf.crypto.password`. For more information, see [[General Configuration Properties|Installation ~ Configuration Properties ~ General Properties]]. `oxf.xforms.password` is still supported for backward compatibility.
 
 #### XForms items encoding
 
@@ -451,7 +451,6 @@ If your forms leverage dialogs and your users are likely to use a screen reader,
 <property as="xs:boolean" name="oxf.xforms.use-aria" value="false"/>
 ```
 
-[1]: http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xpath-2-0-support
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xforms-inspector
 [8]: http://blog.orbeon.com/2014/03/review-and-pdf-improvements.html
