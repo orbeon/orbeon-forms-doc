@@ -239,7 +239,7 @@ Example:
 Send an email with optionally XML form data, attachments, and PDF.
 
 - parameters: none
-- properties used: [`oxf.fr.email.*`](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-form-runner#TOC-Email-settings)
+- properties used: [[`oxf.fr.email.*`|Form-Runner-~-Configuration-properties#TOC-Email-settings]]
 
 ### send
 
@@ -832,7 +832,7 @@ Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what hap
     - sending form data to a service
     - redirecting the user to a success or error page
 
-For more information, see [Configuration Properties - Form Runner](http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-form-runner).
+For more information, see [[Configuration Properties - Form Runner|Form-Runner-~-Configuration-properties]].
 
 #### Deprecated buttons
 
