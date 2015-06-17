@@ -32,7 +32,7 @@ Configure the Java VM with:
 * If you are running Orbeon Forms CE, you don't need to install a license file.
 * If you are running Orbeon Forms PE:
     * complete the steps for your application server below
-    * you can obtain a full licence from Orbeon, or get a [trial license](http://www.orbeon.com/orbeon/fr/orbeon/register/new)
+    * you can obtain a full licence from Orbeon, or get a [trial license](http://demo.orbeon.com/orbeon/fr/orbeon/register/new)
     * before starting your servlet container, copy your license file under the Orbeon Forms WAR file as:
     ```
     WEB-INF/resources/config/license.xml
