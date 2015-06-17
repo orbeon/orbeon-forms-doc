@@ -155,7 +155,7 @@ Not reliably, sorry.
 
 ### Can I customize the appearance of forms I create with Form Builder?
 
-1. You can change fonts, colors, and other styling by creating your own CSS stylesheet, to [[supplement or override the default CSS|Form-Runner-~-Configuration-properties]].
+1. You can change fonts, colors, and other styling by creating your own CSS stylesheet, to [[supplement or override the default CSS|Form-Runner-~-Configuration-properties#adding-your-own-css]].
 1. For changes that you can't do with CSS and that require modifications to the HTML sent by Orbeon Forms to browser, you can change the Form Runner XBL and XSLT stylesheets. But this is hard work and we discourage it.
 
 [3]: http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide
