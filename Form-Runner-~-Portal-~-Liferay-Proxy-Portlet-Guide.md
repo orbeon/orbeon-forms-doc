@@ -51,7 +51,7 @@ _NOTE: An instance of Form Runner configured as server for the proxy portlet can
 
 For Orbeon Forms 4.0 and newer, no particular configuration is needed.
 
-_NOTE: For builds prior to 2012-05-14, you need the following configuration in your [properties-local.xml][3]:_
+_NOTE: For builds prior to 2012-05-14, you need the following configuration in your [[`properties-local.xml`|Installation-~-Configuration-Properties]]:_
 
 ```xml
 <property
@@ -415,7 +415,6 @@ _NOTE: This is no longer a limitation with Orbeon Forms 4.0 and nightly builds s
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/deployment-portlet
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/installing
-[3]: http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties
 [4]: ./images/fr-liferay-add-form-runner.png
 [5]: ./images/fr-liferay-proxy-portlet.png
 [6]: ./images/fr-liferay-portlet-preferences.png
