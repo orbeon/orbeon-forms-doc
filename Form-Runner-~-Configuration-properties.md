@@ -443,7 +443,7 @@ For #2, this behaves as if a browser was submitting an HTML form that looks like
 
 The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to POST data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a send action using [`format-version = "edge"`][14].
 
-Use the authorization mechanism for services (see [Authorization of pages and services](http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-controller/authorization)), to enable submitting initial instances to the new page:
+Use the authorization mechanism for services (see [[Authorization of pages and services|Controller-~-Authorization-of-Pages-and-Services]]), to enable submitting initial instances to the new page:
 
 * Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when POSTing to Form Runner.
 * Your authorizer service must validate those credentials.
