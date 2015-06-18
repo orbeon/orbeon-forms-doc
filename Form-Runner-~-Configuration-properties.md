@@ -50,8 +50,6 @@ Form Runner's default language.
 
 ### Available languages
 
-[SINCE 2012-06-19]
-
 For a given form, you can filter which languages are available in the language selector with a space-separated list of language codes:
 
 ```xml
@@ -76,7 +74,7 @@ When this property is specified, only the intersection of the languages is shown
 
 If the property is blank or contains the wildcard `*`, all the form languages are available.
 
-[SINCE 2012-07-18 / Orbeon Forms 4.3]
+[SINCE Orbeon Forms 4.3]
 
 For pages that don't involve a specific form, like the Form Runner home page, the following property controls the available languages:
 
@@ -345,8 +343,6 @@ As of Orbeon Forms 4.x, to change the main font, you must map to the Helvetica N
 
 #### Font embedding in template mode
 
-[SINCE 2012-06-16]
-
 In template mode, fonts can be specified to provide glyphs which are not present in the PDF's original font(s). Several fonts can be specified, separated by spaces:
 
 ```xml
@@ -375,11 +371,7 @@ The PDF button is always enabled, allowing users to generate a PDF for the curre
 
 ### Captcha
 
-[SINCE 2011-06-30]
-
 reCAPTCHA support.
-
-[SINCE 2012-05-19]
 
 SimpleCaptcha support.
 
@@ -524,8 +516,6 @@ With this property, you can set the default logo URI. This logo appears on the s
 
 #### Adding your own CSS files (Orbeon Forms 4)
 
-[SINCE 2012-12-12]
-
 1. Place your CSS file(s) under one of the following recommended locations:
     * `WEB-INF/resources/forms/assets`: CSS for all forms
     * `WEB-INF/resources/forms/APP/assets`: CSS for app name APP
@@ -610,13 +600,11 @@ These properties control email sending in Form Runner:
     name="oxf.fr.email.smtp.host.*.*"
     value="my.outgoing.smtp.server.org"/>
 
-<!-- SINCE 2012-07-23 / Orbeon Forms 4.0 -->
 <property
     as="xs:string"
     name="oxf.fr.email.smtp.port.*.*"
     value="587"/>
 
-<!-- SINCE 2012-07-23 / Orbeon Forms 4.0 -->
 <property
     as="xs:string"
     name="oxf.fr.email.smtp.encryption.*.*"
@@ -655,11 +643,11 @@ These properties control email sending in Form Runner:
 
 * The following properties control the connection to the SMTP server.
     * `host`: required SMTP host name
-    * `port`: [SINCE 2012-07-23] optional SMTP port override. If not specified, the defaults are:
+    * `port`: optional SMTP port override. If not specified, the defaults are:
         * plain SMTP: 25
         * TLS: 587
         * SSL: 465
-    * `encryption`: [SINCE 2012-07-23] 
+    * `encryption`:
         * blank: none (plain SMTP)
         * `tls`: use TLS
         * `ssl`: use SSL
