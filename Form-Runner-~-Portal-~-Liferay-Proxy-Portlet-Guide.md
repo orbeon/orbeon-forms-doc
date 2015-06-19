@@ -396,23 +396,3 @@ Concretely, this means that you cannot have the  following portlet instances at 
 - `orbeon/contact` form in "list and review form data" scenario
 
 This is because both scenarios need a different configuration for the summary page buttons.
-
-### Orbeon Forms URL rewriting configuration is global
-
-_NOTE: This is no longer a limitation with Orbeon Forms 4.0 and nightly builds since 2011-10-18._
-
-~~The Form Runner server's URL rewriting configuration is global. This configuration makes Orbeon Forms in effect inaccessible directly from a web browser.~~
-
-~~This means that:~~
-
-- ~~Form Builder must be deployed as its own WAR. So you deploy:~~
-    - ~~one Orbeon Forms instance specifically as Form Runner server~~
-    - ~~one Orbeon Forms instance as Form Builder server (or as a general-purpose Orbeon Forms installation)~~
-- ~~Your Form Runner database (eXist, Oracle, etc., or your own persistence layer implementation) must be shared between the two installations.~~
-
-[4]: ./images/fr-liferay-add-form-runner.png
-[5]: ./images/fr-liferay-proxy-portlet.png
-[6]: ./images/fr-liferay-portlet-preferences.png
-[7]: ./images/fr-liferay-portlet-config.png
-[8]: https://github.com/orbeon/orbeon-forms/blob/master/descriptors/proxy-portlet/WEB-INF/portlet.xml
-[9]: http://urlrewritefilter.googlecode.com/svn/trunk/src/doc/manual/3.2/index.html
