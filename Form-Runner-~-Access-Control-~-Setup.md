@@ -155,11 +155,10 @@ If your header follows a LDAP-style syntax, set the following property to config
         * each role listed in `oxf.fr.authentication.container.roles` is checked against the container's `isUserInRole()` function
     * if `oxf.fr.authentication.method == "header"`
         * obtained via the header specified by `oxf.fr.authentication.header.roles`
-* __Persistence__ — These headers are forwarded to the persistence layer, which can make use of them. In particular, the [relational persistence layers][3] store the current username when doing any database update.
+* __Persistence__ — These headers are forwarded to the persistence layer, which can make use of them. In particular, the [[relational persistence layers|Installation-~-Relational-Database-Setup]] store the current username when doing any database update.
 
-See also: [Accessing liferay users and roles](http://wiki.orbeon.com/forms/doc/developer-guide/admin/deployment-portlet#TOC-Accessing-liferay-users-and-roles).
+See also: [[Accessing liferay users and roles|Form-Runner-~-Portal-~-Full-Portlet-Guide#accessing-liferay-users-and-roles]].
 
 [1]: http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/xpath-expressions#TOC-Scenario:-checking-the-role-s-of-the-current-user
 [2]: http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/control-validation-dialog
-[3]: http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/oracle-and-mysql-persistence-layers
 [10]: http://tomcat.apache.org/tomcat-6.0-doc/realm-howto.html
