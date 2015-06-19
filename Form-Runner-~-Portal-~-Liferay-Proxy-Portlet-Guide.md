@@ -227,7 +227,7 @@ This is the same as the [[server-side embedding configuration|Form-Runner-~-APIs
 
 ## Performance tuning
 
-See the Performance tuning section in [Deploying Orbeon Forms as a Portlet into Liferay](http://wiki.orbeon.com/forms/doc/developer-guide/admin/deployment-portlet).
+See the Performance Tuning section of the [[Full Portlet Guide|Form-Runner-~-Portal-~-Full-Portlet-Guide#performance-tuning]].
 
 ## Securing Form Runner with an IP filter
 
