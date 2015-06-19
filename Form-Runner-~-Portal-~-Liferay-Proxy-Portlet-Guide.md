@@ -2,6 +2,7 @@
 
 - [[Form Runner Embedding|Form-Runner-~-Embedding]]
 - [[Server-side Embedding API|Form Runner ~ APIs ~ Server side Embedding]]
+- [[Full Portlet Guide|Form-Runner-~-Portal-~-Full-Portlet-Guide]]
 
 ### Availability
 
