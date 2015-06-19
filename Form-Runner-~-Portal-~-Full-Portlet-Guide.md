@@ -164,7 +164,7 @@ First, replace this line in `page-flow-portlet.xml`:
 
 with:
 
-```
+```xml
 <page id="home" path-info="/home/" view="home.xhtml">
 ```
 
