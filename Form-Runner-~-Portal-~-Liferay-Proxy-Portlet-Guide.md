@@ -44,29 +44,9 @@ Note the URL at which Form runner is deployed. The default is assumed to be:
 
     http://localhost:8080/orbeon/
 
-_NOTE: An instance of Form Runner configured as server for the proxy portlet cannot, as of 2011-01-07, be used as a regular instance of Form Runner due to the URL rewriting configuration. See the Limitations section below for more details._
-
 ### Configure Form Runner
 
 For Orbeon Forms 4.0 and newer, no particular configuration is needed.
-
-_NOTE: For builds prior to 2012-05-14, you need the following configuration in your [[`properties-local.xml`|Installation-~-Configuration-Properties]]:_
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.url-rewriting.wsrp.encode-resources"
-    value="true"/>
-```
-
-_NOTE: Prior to 2011-10-18 builds, the following property is also needed:_
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.url-rewriting.strategy.servlet"
-    value="wsrp"/>
-```
 
 ### Deploy the proxy portlet
 
