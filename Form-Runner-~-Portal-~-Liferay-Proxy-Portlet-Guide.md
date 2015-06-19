@@ -15,7 +15,7 @@ Form Runner can be deployed [[directly|Form-Runner-~-Portal-~-Full-Portlet-Guide
 - Form Runner can be maintained and upgraded separately from the portal.
 - The Form Runner application itself does not have to be exposed to the outside world.
 
-If you only need Form Runner and are happy with deploying only one form per portlet, and if you want a simple configuration UI to set this up, then the proxy portlet is for you. Otherwise, you will have to look into the [full portlet][1].
+If you only need Form Runner and are happy with deploying only one form per portlet, and if you want a simple configuration UI to set this up, then the proxy portlet is for you. Otherwise, you will have to look into the [[full portlet|Form-Runner-~-Portal-~-Full-Portlet-Guide]].
 
 This guide describes how to install, administer and use the Form Runner proxy portlet.
 
@@ -34,7 +34,7 @@ The Form Runner server can be entirely hidden behind a firewall as it doesn't ne
 
 ## Installation
 
-Install and deploy Orbeon Forms [as usual][2]. You can deploy it:
+[[Install|Installation]] and deploy Orbeon Forms as usual. You can deploy it:
 
 - within the same container as Liferay
 - in a separate servlet container
@@ -410,9 +410,6 @@ _NOTE: This is no longer a limitation with Orbeon Forms 4.0 and nightly builds s
     - ~~one Orbeon Forms instance as Form Builder server (or as a general-purpose Orbeon Forms installation)~~
 - ~~Your Form Runner database (eXist, Oracle, etc., or your own persistence layer implementation) must be shared between the two installations.~~
 
-
-[1]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/deployment-portlet
-[2]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/installing
 [4]: ./images/fr-liferay-add-form-runner.png
 [5]: ./images/fr-liferay-proxy-portlet.png
 [6]: ./images/fr-liferay-portlet-preferences.png
