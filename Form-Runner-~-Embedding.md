@@ -20,6 +20,15 @@ Portals provide features such as:
 * __Personalization__: Users or administrators of the portal can customize the user interface. This often means not only customizing the look and feel, but also selecting a certain set of available functionalities within the application.
 * __Single sign-On__: The user logs in only once to access several applications in the portal.
 
+### Status of portlet support in Orbeon Forms
+
+As of Orbeon Forms 4.9, portlet support is tested with Liferay 6.0 and 6.1. We recommend Liferay 6.1 GA2 or newer.
+
+The following Form Runner limitations are known within portals:
+
+* Form Builder proper is not supported (but you can run forms designed with Form Builder).
+* The "noscript" mode is not supported.
+
 ### Form Runner proxy portlet or full portlet?
 
 The full portlet is not specifically tied to Form Runner and does not provide Form-Runner-specific features. Using the full portlet usually requires setting a custom landing page and possibly other custom configurations.
