@@ -72,26 +72,25 @@ _NOTE: Prior to 2011-10-18 builds, the following property is also needed:_
 1. Deploy `proxy-portlet.war` (formerly `orbeon-PE-proxy-portlet.war`) into Liferay
 2. Add an instance of the Orbeon Forms → Form Runner portlet to a page:
 
-    ![][4]
+    ![](images/fr-liferay-applications.png)
 
-3. The portlet will load with its default configuration. If Orbeon Forms is deployed at the default address, a form shows:
+3. The portlet will load with its default configuration. If Orbeon Forms is deployed at the default address, a form shows.
 
-    ![][5]
-    
-    If Orbeon Forms is _not_ deployed at the default address, the proxy portlet will initially show an error. You can ignore this error and proceed to the proxy portlet configuration below.
+    If Orbeon Forms is _not_ deployed at the default address, the proxy portlet will initially show an error. You can
+    ignore this error and proceed to the proxy portlet configuration below.
 
 ### Configure the proxy portlet
 
 1. Open the portlet preferences page:
 
-    ![][6]
+    ![](images/fr-liferay-proxy-open-preferences.png)
 
 2. Configure the preferences
 
-    ![][7]
-    
+    ![](images/fr-liferay-portlet-preferences.png)
+
     The preferences are as follows:
-    
+
     - __Form Runner Page__
         - Initial Form Runner action (page) to show
         - Possible values
@@ -123,11 +122,11 @@ _NOTE: Prior to 2011-10-18 builds, the following property is also needed:_
             - `Orbeon-Liferay-User-Group-Id`
             - `Orbeon-Liferay-User-Group-Name`
             - `Orbeon-Liferay-User-Roles`
-    
+
     When read-only access is enabled, if the Form Runner summary page is enabled and accessed, selecting a form takes the user to the Review page instead of the Edit page for a given form.
-    
+
     Press the "Save" or "Cancel" button to save/cancel and return to the portlet.
-    
+
     The default values of the preferences are provided via initialization parameters in the `portlet.xml` file. The latest version of this file is [available here][8].
 
 ### Configuring header and URL parameter forwarding
