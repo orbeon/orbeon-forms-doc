@@ -9,7 +9,7 @@ This is an Orbeon Forms PE feature, available since Orbeon Forms 4.0.
 
 ## Introduction
 
-Form Runner can be deployed directly into Liferay. However in some cases, it is desirable to deploy Form Runner separately. The Form Runner proxy portlet provides allows this type of deployment, with the following benefits:
+Form Runner can be deployed [[directly|Form-Runner-~-Portal-~-Full-Portlet-Guide]] into Liferay. However in some cases, it is desirable to deploy Form Runner separately. The Form Runner proxy portlet provides allows this type of deployment, with the following benefits:
 
 - You configure a specific form to show in the portlet via portlet preferences.
 - Form Runner can be maintained and upgraded separately from the portal.
