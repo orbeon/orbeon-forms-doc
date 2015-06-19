@@ -6,7 +6,7 @@ Orbeon Forms supports several embedding methods:
 
 - with the [[Server-side embedding API|Form Runner ~ APIs ~ Server side Embedding]] [Since Orbeon Forms 4.7] 
 - with the [[Form Runner proxy portlet|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
-- with the [Orbeon Forms full portlet](http://wiki.orbeon.com/forms/doc/developer-guide/admin/deployment-portlet)
+- with the [[Form Runner full portlet|Form Runner ~ Portal ~ Full Portlet Guide]]
 
 ## Form Runner proxy portlet or full portlet?
 
