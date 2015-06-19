@@ -62,21 +62,17 @@ Installation steps:
 
     The host name (`localhost`), port (`8080`), and context path (`orbeon`) must be updated to match your local configuration.
 
-4. __Add the Orbeon Forms portlet:__ Log into the portal, go to the Add menu:
+4. __Add the Orbeon Forms portlet:__ Log into the portal, go to the Add menu and create a new page, for example _Orbeon Page_:
 
-    ![][3]
-
-    Create a new page, for example _Orbeon Page_:
-
-    ![][4]
+    ![](images/fr-liferay-add-page.png)
 
     Go to the Add menu again and select _More…_:
 
-    ![][5]
+    ![](images/fr-liferay-add-more.png)
 
     Select the _Orbeon Forms Portlet_ entry:
 
-    ![][6]
+    ![](images/fr-liferay-applications.png)
 
     Drag the portlet to the page. The Orbeon Forms home page will show.
 
@@ -193,9 +189,3 @@ Finally, to change the Orbeon portlet theme to the plain theme, set this propert
   name="oxf.epilogue.theme.embeddable"
   value="oxf:/config/theme-embeddable.xsl"/>
 ```
-
-[2]: http://wiki.orbeon.com/forms/_/rsrc/1299210978298/doc/developer-guide/admin/deployment-portlet/home-liferay-shadow-small.png
-[3]: http://wiki.orbeon.com/forms/_/rsrc/1286410826460/doc/developer-guide/admin/deployment-portlet/01%20liferay-add.png
-[4]: http://wiki.orbeon.com/forms/_/rsrc/1286410855066/doc/developer-guide/admin/deployment-portlet/02%20liferay-page-title.png
-[5]: http://wiki.orbeon.com/forms/_/rsrc/1286410916238/doc/developer-guide/admin/deployment-portlet/03%20liferay-add-more.png
-[6]: http://wiki.orbeon.com/forms/_/rsrc/1286410942865/doc/developer-guide/admin/deployment-portlet/04%20liferay-add-portlet.png
