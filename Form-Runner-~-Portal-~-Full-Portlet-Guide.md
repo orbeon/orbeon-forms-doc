@@ -1,6 +1,4 @@
-## Introduction
-
-### See also
+## See also
 
 - [[Form Runner Embedding|Form-Runner-~-Embedding]]
 - [[Form Runner Liferay Proxy Portlet Guide|Form-Runner-~-Portal-~-Liferay-Proxy-Portlet-Guide]]
@@ -10,33 +8,9 @@ Please make sure to check the [[Form Runner Liferay Proxy Portlet Guide|Form-Run
 as well, as that is the recommended way to deploy Orbeon Forms into Liferay, and [[Form Runner Embedding|Form-Runner-~-Embedding]]
 for a comparison of portlet deployments.
 
-### Availability
+## Availability
 
-This is an Orbeon Forms PE feature.
-
-### Servlet vs. portlet deployment
-
-In addition to deploying Orbeon Forms into a servlet container such as Tomcat, you can deploy it into the Liferay portal
-using the Orbeon Forms portlet component.
-
-Portals provide features such as:
-
-* __Content aggregation__:  A single web page aggregates the output or user interface of several data sources or applications.
-* __Personalization__: Users or administrators of the portal can customize the user interface. This often means not only customizing the look and feel, but also selecting a certain set of available functionalities within the application.
-* __Single sign-On__: The user logs in only once to access several applications in the portal.
-
-![][1]
-
-_Bookshelf form deployed in Liferay_
-
-### Status of portlet support in Orbeon Forms
-
-As of Orbeon Forms 4.0, portlet support was tested with Liferay 6.0 and 6.1. We recommend Liferay 6.1 GA2 or newer.
-
-The following Form Runner limitations are known:
-
-* Form Builder is not supported within portlets (but you can run forms designed with Form Builder).
-* The Noscript mode is not supported within portlets.
+This is an Orbeon Forms PE feature, available since Orbeon Forms 4.0.
 
 ## Deploying into Liferay
 
@@ -220,97 +194,6 @@ Finally, to change the Orbeon portlet theme to the plain theme, set this propert
   value="oxf:/config/theme-embeddable.xsl"/>
 ```
 
-
-## Technical information
-
-### What is a portlet?
-
-Orbeon Forms achieves deployment into portals by supporting a standard, namely the Java Portlet specification version 2 (also known as JSR-286).
-
-According to the Java Portlet Specification, a portlet is a "Java technology based Web component, managed by a portlet container that processes requests and generates dynamic content. Portlets are used by portals as pluggable user interface components that provide a presentation layer to Information Systems". An implementation agnostic definition can be found in the Web Services for Remote Portals (WSRP) White Paper of 22 September 2002 "Portlets are user-facing, interactive Web application components rendering markup fragments to be aggregated and displayed by the portal."
-
-In other words, a portlet is usually a web application that can be embedded within a portal, and shares web page real estate with other portlets. Traditionally portlets available in public portals have provided simple features such as stock quotes, news feeds, weather reports, etc. In particular thanks to the Java Portlet specification, there is no limit to the extent of the features provided by a portlet, and it is expected that complex interactive portlets will become more and more widespread.
-
-### Orbeon Forms and portlets
-
-Orbeon Forms hides the complexity of the Portlet API to allow most Orbeon Forms applications to work unmodified within portlet container. For the curious, the Portlet API requires:
-
-- __Separation of faceless actions from rendering:__ Orbeon Forms allows actions to generate output while still adhering to the Java Portlet specification. Developers are obviously free to only write faceless actions. In the Page Flow Controller, such actions end with a <result page="some-page-id"> directive.
-- __Getting rid of the familiar concept of URL path:__ Orbeon Forms abstracts this behavior and provides Orbeon Forms Portlet developers with the notion of a path, implicitly in the Web Application Controller, or explicitly with the Request Generator, while still adhering to the Java Portlet specification.
-- __Getting rid of the familiar concept of URL redirection:__ Instead, portlet actions can set parameters to use in subsequent portlet rendering. Orbeon Forms abstracts this behavior and provides, indirectly in the Page Flow Controller, or explicitly with the Redirect Processor, the notion of redirecting to another page within the portlet.
-- __Calling APIs to generate URLs:__ Orbeon Forms handles this by providing automatic URL rewriting.
-- __Generating markup fragments:__ The default Orbeon Forms epilogue automatically extracts a fragment from an HTML document. This allows pages to remain unmodified for both servlet and portlet deployment.
-
-### Portlet application configuration file
-
-Configuration of portlets is done in a standard file called `portlet.xml` that sits in the same directory (`WEB-INF`) as your `web.xml`. The portlet-class element must always be:
-
-`org.orbeon.oxf.portlet.OrbeonPortlet`
-
-You can also configure non-Orbeon Forms portlets within the same `portlet.xml`.The main processor URI and optional inputs are specified with the `oxf.main-processor.name` and `oxf.main-processor.input.*` initialization parameters.
-
-It is possible to configure several Orbeon Forms Portlets within the same portlet.xml, with the same or a different configuration. The `portlet-name` element however must be different for each portlet, as per the Java Portlet specification.
-
-### Portlet output
-
-The type of the portlet output is determined by the serializer. With the default Orbeon Forms epilogue in `config/epilogue-portlet.xpl`, the HTML serializer is used.
-
-### Preferences
-
-Portlet preferences can be retrieved with the `oxf:portlet-preferences-generator` processor.
-
-To retrieve the preferences of your current portlet, use the following code:
-
-```xml
-<p:processor name="oxf:portlet-preferences">
-    <p:output name="data" id="portlet-preferences"/>
-</p:processor>
-```
-
-The generator outputs a document containing name / values in the following format:
-
-```xml
-<portlet-preferences>
-    <preference>
-        <name>name1</name>
-        <value>value1</value>
-    </preference>
-    <preference>
-        <name>name2</name>
-        <value>value1</value>
-        <value>value2</value>
-        <value>value3</value>
-    </preference>
-</portlet-preferences>
-```
-
-For example:
-
-```xml
-<portlet-preferences>
-    <preference>
-        <name>max-items</name>
-        <value>10</value>
-    </preference>
-    <preference>
-        <name>url</name>
-        <value>http://xml.newsisfree.com/feeds/42/1842.xml</value>
-    </preference>
-</portlet-preferences>
-```
-
-Portlet preferences can be saved with the `oxf:portlet-preferences-serializer processor`. [TODO: document]
-
-### Limitations of Orbeon Forms portlets
-
-The Orbeon Forms Portlet developer should be aware of the following limitations:
-
-- __Redirection:__ In the Page Flow Controller, pages that are the target of a portlet render URL cannot end with a redirection. This in particular applies to the default portlet page ("/"). Developers have to make sure that a page exists for "/" that produces content and does not end in a redirect. Other pages can end with redirects by making sure that they are targeted by action URLs (by default, only the target of HTML or XHTML form submissions generate action URLs).
-- __Portlet Mode and Window State hints:__ It is currently not possible to set a portlet mode or window state hint in a URL.
-- __Content Type Hints:__ It is not possible for an Orbeon Forms Portlet to know which content types are supported by the portal.
-- __Preferences:__ It is currently not possible to modify portlet preferences or store them from within a portlet.
-
-[1]: http://wiki.orbeon.com/forms/_/rsrc/1300417103701/doc/developer-guide/release-notes/39/liferay-detail-shadow-small.png
 [2]: http://wiki.orbeon.com/forms/_/rsrc/1299210978298/doc/developer-guide/admin/deployment-portlet/home-liferay-shadow-small.png
 [3]: http://wiki.orbeon.com/forms/_/rsrc/1286410826460/doc/developer-guide/admin/deployment-portlet/01%20liferay-add.png
 [4]: http://wiki.orbeon.com/forms/_/rsrc/1286410855066/doc/developer-guide/admin/deployment-portlet/02%20liferay-page-title.png
