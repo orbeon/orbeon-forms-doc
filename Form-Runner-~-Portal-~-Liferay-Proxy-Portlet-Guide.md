@@ -3,11 +3,9 @@
 - [[Form Runner Embedding|Form-Runner-~-Embedding]]
 - [[Server-side Embedding API|Form Runner ~ APIs ~ Server side Embedding]]
 
-## Status
+### Availability
 
-This feature is available since Orbeon Forms 4.0.
-
-_NOTE: An earlier version of the feature is reported to have had issues with Orbeon Forms 3.9 and 3.9.1. These issues have been fixed with Orbeon Forms 4.0 and newer._
+This is an Orbeon Forms PE feature, available since Orbeon Forms 4.0.
 
 ## Introduction
 
