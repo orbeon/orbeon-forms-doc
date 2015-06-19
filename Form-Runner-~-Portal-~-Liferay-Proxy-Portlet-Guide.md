@@ -72,63 +72,63 @@ _NOTE: Prior to 2011-10-18 builds, the following property is also needed:_
 1. Deploy `proxy-portlet.war` (formerly `orbeon-PE-proxy-portlet.war`) into Liferay
 2. Add an instance of the Orbeon Forms → Form Runner portlet to a page:
 
-![][4]
+    ![][4]
 
 3. The portlet will load with its default configuration. If Orbeon Forms is deployed at the default address, a form shows:
 
-![][5]
-
-If Orbeon Forms is _not_ deployed at the default address, the proxy portlet will initially show an error. You can ignore this error and proceed to the proxy portlet configuration below.
+    ![][5]
+    
+    If Orbeon Forms is _not_ deployed at the default address, the proxy portlet will initially show an error. You can ignore this error and proceed to the proxy portlet configuration below.
 
 ### Configure the proxy portlet
 
 1. Open the portlet preferences page:
 
-![][6]
+    ![][6]
 
 2. Configure the preferences
 
-![][7]
-
-The preferences are as follows:
-
-- __Form Runner Page__
-    - Initial Form Runner action (page) to show
-    - Possible values
-        - _New Page_: show the "new" page for the given app/form
-        - _Summary Page_: show the "summary" page for the given app/form
-        - _Home Page_: Form Runner Home page showing the form list [SINCE Orbeon Forms 4.4]
-- __Form Runner URL__
-    - URL, including servlet context, where the Form Runner instance is deployed
-    - Example: `http://localhost:8080/orbeon/`
-- __Form Runner app name__
-    - Initial Form Runner application name to show
-    - Example: `orbeon`
-- __Form Runner form name__
-    - Initial Form Runner form name to show
-    - Example: `controls`
-- __Readonly access__
-    - Whether the user is able to edit forms
-    - _NOTE: To ensure read-only access, it is also important to configure a `oxf.fr.detail.buttons.view.*.*` property without the `workflow-edit` button._
-- __Send Liferay language__ [SINCE Orbeon Forms 4.4]
-    - Whether Form Runner should use the Liferay user's language
-    - This also hides the Form Runner language selector
-- __Send Liferay user__ [SINCE Orbeon Forms 4.4]
-    - Whether the Liferay user information is sent to Form Runner
-    - This sends the following headers to Form Runner
-        - `Orbeon-Liferay-User-Id`
-        - `Orbeon-Liferay-User-Screen-Name`
-        - `Orbeon-Liferay-User-Full-Name`
-        - `Orbeon-Liferay-User-Email`
-        - `Orbeon-Liferay-User-Group-Id`
-        - `Orbeon-Liferay-User-Group-Name`
-        - `Orbeon-Liferay-User-Roles`
-
-When read-only access is enabled, if the Form Runner summary page is enabled and accessed, selecting a form takes the user to the Review page instead of the Edit page for a given form.
-
-Press the "Save" or "Cancel" button to save/cancel and return to the portlet.
-
-The default values of the preferences are provided via initialization parameters in the `portlet.xml` file. The latest version of this file is [available here][8].
+    ![][7]
+    
+    The preferences are as follows:
+    
+    - __Form Runner Page__
+        - Initial Form Runner action (page) to show
+        - Possible values
+            - _New Page_: show the "new" page for the given app/form
+            - _Summary Page_: show the "summary" page for the given app/form
+            - _Home Page_: Form Runner Home page showing the form list [SINCE Orbeon Forms 4.4]
+    - __Form Runner URL__
+        - URL, including servlet context, where the Form Runner instance is deployed
+        - Example: `http://localhost:8080/orbeon/`
+    - __Form Runner app name__
+        - Initial Form Runner application name to show
+        - Example: `orbeon`
+    - __Form Runner form name__
+        - Initial Form Runner form name to show
+        - Example: `controls`
+    - __Readonly access__
+        - Whether the user is able to edit forms
+        - _NOTE: To ensure read-only access, it is also important to configure a `oxf.fr.detail.buttons.view.*.*` property without the `workflow-edit` button._
+    - __Send Liferay language__ [SINCE Orbeon Forms 4.4]
+        - Whether Form Runner should use the Liferay user's language
+        - This also hides the Form Runner language selector
+    - __Send Liferay user__ [SINCE Orbeon Forms 4.4]
+        - Whether the Liferay user information is sent to Form Runner
+        - This sends the following headers to Form Runner
+            - `Orbeon-Liferay-User-Id`
+            - `Orbeon-Liferay-User-Screen-Name`
+            - `Orbeon-Liferay-User-Full-Name`
+            - `Orbeon-Liferay-User-Email`
+            - `Orbeon-Liferay-User-Group-Id`
+            - `Orbeon-Liferay-User-Group-Name`
+            - `Orbeon-Liferay-User-Roles`
+    
+    When read-only access is enabled, if the Form Runner summary page is enabled and accessed, selecting a form takes the user to the Review page instead of the Edit page for a given form.
+    
+    Press the "Save" or "Cancel" button to save/cancel and return to the portlet.
+    
+    The default values of the preferences are provided via initialization parameters in the `portlet.xml` file. The latest version of this file is [available here][8].
 
 ### Configuring header and URL parameter forwarding
 
