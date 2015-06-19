@@ -74,7 +74,7 @@ _NOTE: Prior to 2011-10-18 builds, the following property is also needed:_
 
 ![][4]
 
-3\. The portlet will load with its default configuration. If Orbeon Forms is deployed at the default address, a form shows:
+3. The portlet will load with its default configuration. If Orbeon Forms is deployed at the default address, a form shows:
 
 ![][5]
 
