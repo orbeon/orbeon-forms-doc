@@ -82,7 +82,7 @@ _NOTE: Prior to 2011-10-18 builds, the following property is also needed:_
 
 ### Configure the proxy portlet
 
-1. Open the portlet preferences page:
+1. Open the portlet preferences page
 
     ![](images/fr-liferay-proxy-open-preferences.png)
 
