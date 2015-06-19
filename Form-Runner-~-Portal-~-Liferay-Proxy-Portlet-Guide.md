@@ -70,7 +70,7 @@ _NOTE: Prior to 2011-10-18 builds, the following property is also needed:_
 ### Deploy the proxy portlet
 
 1. Deploy `proxy-portlet.war` (formerly `orbeon-PE-proxy-portlet.war`) into Liferay
-2. Add an instance of The Orbeon Forms → Form Runner portlet to a page:
+2. Add an instance of the Orbeon Forms → Form Runner portlet to a page:
 
 ![][4]
 
