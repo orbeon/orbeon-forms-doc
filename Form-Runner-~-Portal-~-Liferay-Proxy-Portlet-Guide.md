@@ -20,6 +20,8 @@ If you only need Form Runner and are happy with deploying only one form per port
 
 This guide describes how to install, administer and use the Form Runner proxy portlet.
 
+![Controls form through the Liferay proxy portlet](images/fr-liferay-proxy-controls.png)
+
 _NOTE: As of Orbeon Forms 4.0, this feature has been tested with Liferay 6.0 and 6.1._
 
 ## Architecture
