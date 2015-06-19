@@ -8,6 +8,16 @@ Orbeon Forms supports several embedding methods:
 - with the [[Form Runner proxy portlet|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
 - with the [[Form Runner full portlet|Form Runner ~ Portal ~ Full Portlet Guide]]
 
+## Servlet vs. portlet deployment
+
+In addition to deploying Orbeon Forms into a servlet container such as Tomcat, you can deploy it into the Liferay portal using the Orbeon Forms portlets.
+
+Portals provide features such as:
+
+* __Content aggregation__:  A single web page aggregates the output or user interface of several data sources or applications.
+* __Personalization__: Users or administrators of the portal can customize the user interface. This often means not only customizing the look and feel, but also selecting a certain set of available functionalities within the application.
+* __Single sign-On__: The user logs in only once to access several applications in the portal.
+
 ## Form Runner proxy portlet or full portlet?
 
 The full portlet is not specifically tied to Form Runner and does not provide Form-Runner-specific features. Using the full portlet usually requires setting a custom landing page and possibly other custom configurations.
