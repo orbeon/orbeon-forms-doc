@@ -33,6 +33,8 @@ The Test button allows you to test the service. Before doing this, you might wan
 
 This helps you to troubleshoot the service call.
 
+![Testing a service](images/fb-test-service.png)
+
 ## Saving the service
 
 Once your service is defined, the Save buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the service name. You can also delete the service using the trashcan icon.
