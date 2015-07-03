@@ -23,7 +23,7 @@ This is the meaning of the fields:
 
 ## Testing a service
 
-The Test button allows you to test the service. Before doing this, you might want to set data in the request body first. Form Builder executes the service, and then provides information about the response returned, including:
+The Test button allows you to test the service. Before doing this, you might want to set data in the request body. Form Builder executes the service, and then provides information about the response returned, including:
 
 - Whether an error occurred (green or red highlight)
 - URL called
