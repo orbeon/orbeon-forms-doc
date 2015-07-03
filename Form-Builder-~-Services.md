@@ -12,10 +12,10 @@ This is the meaning of the fields:
 - **Resource URL** – HTTP or HTTPS URL to which the service must be called.
 - **Method** – The HTTP method to use: GET, POST, PUT or DELETE.
 - **Serialization** – Controls how the request body is sent for POST or PUT.
-    - **XML** – Sends the request body as XML (application/xml)
-    - **HTML Form** – Sends the request body as HTML form data (application/x-www-form-urlencoded)
+    - **XML** – Sends the request body as XML (`application/xml`)
+    - **HTML Form** – Sends the request body as HTML form data (`application/x-www-form-urlencoded`)
 - **SOAP Service** – Whether this is a SOAP service
-- **SOAP Action** – If selected, the value of the SOAPAction header.
+- **SOAP Action** – If selected, the value of the `SOAPAction` header.
 - **HTTP Authentication** – Whether to use HTTP authentication.
     - **Username** – Username to use.
     - **Password** - Password to use.
