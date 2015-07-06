@@ -137,6 +137,22 @@ This makes these headers and URL parameters available to Form Runner, for exampl
 
 Headers forwarded now follow the capitalization specified in the `forward-headers` property. For example, if the incoming header has name `mY-hEaDeR-1,` and the property specifies `My-Header-1`, the header will be forwarded under the name `My-Header-1`.
 
+[SINCE Orbeon Forms 4.10]
+
+You can forward portlet request properties as headers to Form Runner.
+
+```xml
+<init-param>
+    <name>forward-properties</name>
+    <value>My-Property-1 My-Property-2</value>
+</init-param>
+```
+
+This is useful for example to set custom security headers in the proxy portlet:
+
+- create a portlet filter overriding `getPropertyNames`, `getProperty`, and `getProperties` to add custom properties (see an example of wrapper in Scala [here](https://github.com/orbeon/orbeon-forms/blob/master/src/main/scala/org/orbeon/oxf/portlet/wrappers.scala) and examples of filters [here](https://github.com/orbeon/orbeon-forms/blob/master/src/main/scala/org/orbeon/oxf/portlet/liferay/FormRunnerAuthFilter.scala))
+- use the `forward-properties` parameter to specify that the proxy portlet must send the names and values of these properties as headers to Form Runner
+
 ### Configuring Form Runner to use Liferay user information
 
 [SINCE Orbeon Forms 4.4]
