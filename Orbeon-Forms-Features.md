@@ -77,6 +77,8 @@ As of 2015-07-07 this page is *very* incomplete.
   - buttons
     - button
     - link button
+  - other
+    - character counter: [[doc|Form Runner ~ XBL Components ~ Character Counter]]
 - Databases
   - Database support: [[doc|Orbeon-Forms-Features-~-Database-Support]]
   - SQL Server support in Orbeon Forms: [blog post](http://blog.orbeon.com/2014/05/sql-server-support-in-orbeon-forms.html)
