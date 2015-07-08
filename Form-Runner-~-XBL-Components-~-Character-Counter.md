@@ -13,8 +13,6 @@ The `fr:character-counter` component encapsulates an existing text control and a
 - `xf:secret`
 - `fr:tinymce`
 
-See also the [blog post](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html).
-
 ## Basic usage
 
 The component is generally activated using the `appearance` attribute:
@@ -41,3 +39,7 @@ The component displays its counter in  different ways:
     - a CSS class `fr-charcounter-over` is present on the counter
 
 By default, `fr-charcounter-over` places a minus sign in front of the number of characters over the limit.
+
+## See also
+
+- [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
