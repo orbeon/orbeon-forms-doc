@@ -20,7 +20,7 @@ As of 2015-07-07 this page is *very* incomplete.
     - required fields (also via formula, see [blog post](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html))
     - data types such as string, number, date, etc.
     - multiple constraints with formulas
-    - minimum length and maximum length validations [[doc|Form Builder ~ Validation]]
+    - minimum length and maximum length validations: [[doc|Form Builder ~ Validation]]
     - errors, warnings, and informational validations
     - custom alert messages per validation
     - centralized error summary showing currently relevant errors
