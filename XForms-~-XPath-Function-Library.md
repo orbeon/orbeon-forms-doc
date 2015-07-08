@@ -20,6 +20,9 @@ Most of the function library is [documented here](http://wiki.orbeon.com/forms/d
     - `xxf:username()`
     - `xxf:user-group()`
     - `xxf:user-roles()`
+- validation functions
+    - `xxf:max-length()`
+    - `xxf:min-length()`
 
 ## XForms 2.0 functions
 
@@ -277,3 +280,27 @@ xxf:user-roles() as xs:string*
 ```
 
 Return the current user's groups if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
+
+## Validation functions
+
+### xxf:max-length()
+
+[SINCE: Orbeon Forms 4.10]
+
+```ruby
+xxf:max-length($max as xs:integer?) as xs:boolean
+```
+
+Return `true()` if the context item converted to a string via the `string()` function contains at most the number of characters
+specified by `$max.` Also return `true()` if `$max` is the empty sequence.
+
+### xxf:min-length()
+
+[SINCE: Orbeon Forms 4.10]
+
+```ruby
+xxf:min-length($min as xs:integer?) as xs:boolean
+```
+
+Return `true()` if the context item converted to a string via the `string()` function contains at least the number of characters
+specified by `$min.` Also return `true()` if `$min` is the empty sequence.
