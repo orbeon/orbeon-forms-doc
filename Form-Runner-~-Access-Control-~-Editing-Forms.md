@@ -26,7 +26,7 @@ Orbeon Forms can infer the roles for the current user either based on informatio
 
 ![](images/fb-new-form-app-dropdown.png)
 
-[LIMITATION] Restrictions on the form name in `form-builder-permissions.xml` are at this point not supported; only restrictions on the app name are supported. This means that you should always use `form="*"`. If you define a restriction on the form name, it won't be enforced at the time the form is created, allowing users to create, save, and publish a form with an undesirable name. However they then won't be able to see the form they created when going back to the summary page.
+*LIMITATION: Restrictions on the form name in `form-builder-permissions.xml` are at this point not supported; only restrictions on the app name are supported. This means that you should always use `form="*"`. If you define a restriction on the form name, it won't be enforced at the time the form is created, allowing users to create, save, and publish a form with an undesirable name. However they then won't be able to see the form they created when going back to the summary page.*
 
 ## Form Runner Home page
 
