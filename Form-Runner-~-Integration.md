@@ -4,7 +4,7 @@ Form Builder and Form Runner integrate with other systems through the following 
 
 - plain URLs, through which you access Form Runner and Form Builder's pages
     - The URLs can be accessed simply by using hyperlinks or redirects from another application.
-- a [configurable persistence API][4] based on REST (that is, through HTTP)
+- a [configurable persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api) based on REST (that is, through HTTP)
 - HTTP services
   - called from forms via the Service Editors
   - called by Form Runner to load initial XML data
