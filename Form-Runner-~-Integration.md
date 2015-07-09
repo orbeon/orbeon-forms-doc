@@ -103,3 +103,5 @@ _NOTE: Non-repeated grids do not create containing elements._
 ## See also
 
 - [[Form Builder Integration|Form Builder ~ Integration]]
+- [[Form Runner Embedding|Form-Runner ~ Embedding]]
+- [Persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api)
