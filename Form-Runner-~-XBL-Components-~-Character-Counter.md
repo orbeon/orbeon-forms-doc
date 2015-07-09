@@ -6,7 +6,11 @@
 
 ## What it does
 
-The `fr:character-counter` component encapsulates an existing text control and adds a character counter next to it. It applies to:
+The `fr:character-counter` component encapsulates an existing text control and adds a character counter next to it.
+
+![Input field with character counter](images/fr-character-counter-control.png)
+
+It applies to:
 
 - `xf:input`
 - `xf:textarea`
