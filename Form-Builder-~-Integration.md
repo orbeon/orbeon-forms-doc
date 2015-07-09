@@ -36,7 +36,7 @@ The dialog is actually bypassed only if the values passed are valid, specificall
 - `fr-form`
   - must be non-blank and only contain ASCII letters, digits, "-" or "_"
 
-In case the app and/or form name are invalid, Form Builder presents the user with the New Form dialog. For example, with the following path:
+In case the app and/or form name are missing or invalid, Form Builder presents the user with the New Form dialog. For example, with the following path:
 
 ```
 /fr/orbeon/builder/new?fr-app=acme&fr-form=o/rder&fr-title=This+is+a+wonderful+form!
