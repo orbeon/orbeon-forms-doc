@@ -29,7 +29,7 @@ The following URL patterns are followed:
 * Read-only PDF view:  
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/pdf/[DOCUMENT_ID]`
 
-See also [[Form Builder ~ Integration|Form Builder ~ Integration]].
+See also [[Form Builder Integration|Form Builder ~ Integration]].
 
 _NOTE: All paths above are relative to the deployment context, e.g the actual URLs start with http://localhost:8080/orbeon/fr/..._
 
