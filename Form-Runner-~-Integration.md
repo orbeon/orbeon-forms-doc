@@ -14,11 +14,11 @@ Form Builder and Form Runner integrate with other systems through the following 
 
 The persistence API can be implemented either within Orbeon Forms (like for example the built-in eXist persistence layer), or within an external system.  
 
-### Form Runner and Form Builder URLs   
+### Form Runner URLs   
 
-Form Runner/Form builder attempt to use friendly URLs.
+Form Runner and Form builder attempt to use friendly URLs.
 
-The following URL patterns are followed:  
+The following URL patterns are followed:
 
 * Summary page for a given form definition:  
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/summary`
@@ -31,14 +31,7 @@ The following URL patterns are followed:
 * Read-only PDF view:  
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/pdf/[DOCUMENT_ID]`
 
-For Form Builder itself:  
-
-* Summary page:  
-    `/fr/orbeon/builder/summary`
-* New empty form definition:  
-    `/fr/orbeon/builder/new`
-* Edit existing form definition:  
-    `/fr/orbeon/builder/edit/[FORM_ID]`
+See also [[]].
 
 _NOTE: All paths above are relative to the deployment context, e.g the actual URLs start with http://localhost:8080/orbeon/fr/..._
 
@@ -108,3 +101,7 @@ Example:
 ```
 
 _NOTE: Non-repeated grids do not create containing elements._
+
+## See also
+
+- [[Form Builder Integration|Form Builder ~ Integration]]
