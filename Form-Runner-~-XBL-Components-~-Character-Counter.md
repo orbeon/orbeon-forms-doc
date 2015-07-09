@@ -10,7 +10,7 @@ The `fr:character-counter` component encapsulates an existing text control and a
 
 ![Input field with character counter](images/fr-character-counter-control.png)
 
-It applies to:
+It supports the following controls:
 
 - `xf:input`
 - `xf:textarea`
