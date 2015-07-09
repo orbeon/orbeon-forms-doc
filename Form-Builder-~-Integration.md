@@ -47,3 +47,4 @@ In case the app and/or form name are invalid, Form Builder presents the user wit
 ## See also
 
 - [[Form Runner Integration|Form Runner ~ Integration]]
+- [[Form Builder Permissions|Form Runner ~ Access Control ~ Editing Forms#form-builder-permissions]]
