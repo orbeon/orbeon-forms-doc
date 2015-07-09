@@ -8,7 +8,7 @@ Form Builder and Form Runner integrate with other systems through the following 
 - HTTP services
   - called from forms via the Service Editors
   - called by Form Runner to load initial XML data
-- embedding
+- [[embedding|Form-Runner ~ Embedding]]
     - [[server-side embedding|Form Runner ~ APIs ~ Server side Embedding]]
     - [[within a portal|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
 
