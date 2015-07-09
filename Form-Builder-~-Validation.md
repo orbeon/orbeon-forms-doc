@@ -24,7 +24,8 @@ The value associated with a control can be validated with 3 different validation
 
 1. *Required*. This indicates whether the value can be empty or not.
 2. *Data Type*. For example `string`, `decimal`, `date`, or `time`.
-3. *Constraint*. A custom formula, expressed in XPath, which determines whether the value is valid or not for a certain validation level.
+3. *Formula*. A custom formula, expressed in XPath, which determines whether the value is valid or not for a certain validation level.
+4. *Common Constraints*. This includes "Has Maximum Length" and "Has Minimum Length" constraints. [SINCE Orbeon Forms 4.10]
 
 ### Required validation
 
@@ -76,23 +77,40 @@ When an XML Schema data type is selected:
 
 The Required validation can have a custom alert message.
 
-### Constraint validation
+### Formula validation
 
-A constraint is a boolean XPath expression running with the XML element containing the value as context item. The constraint *fails* if the expression doesn't return `true()`. This also means that it fails if there is an error while running the constraint.
+A formula validation is a boolean XPath expression running with the XML element containing the value as context item. The validation *fails* if the expression doesn't return `true()`. This also means that it fails if there is an error while running the validation.
 
 See also [[Form Builder Formulas|Form Builder ~ Formulas]].
 
 For example the following expression, which would make sense for a birthday date field, checks that the user is 18 year old or older:
 
-    . <= (current-date() - xs:yearMonthDuration("P18Y"))
+```ruby
+. <= (current-date() - xs:yearMonthDuration("P18Y"))
+```
 
 [SINCE Orbeon Forms 4.3]
 
-There can be more than one constraint applied to a given control. You add constraints with the `+` icon and remove them with the `-` icon.
+There can be more than one formulas applied to a given control. You add formulas with the `+` icon and remove them with the `-` icon.
 
 [SINCE Orbeon Forms 4.3]
 
-Each constraint can have a *level* associated with it and a custom alert message.
+Each formula can have a *level* associated with it and a custom alert message.
+
+### Common constraints
+
+[SINCE Orbeon Forms 4.10]
+
+A common constraint consists of the following:
+
+- "Has Maximum Length"
+  - the constraint fails if the length of the value converted to a string is larger than the specified integer value
+- "Has Minimum Length"
+  - the constraint fails if the length of the value converted to a string is smaller than the specified integer value
+
+In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
+
+![Min and max length constraints](images/fb-min-max-constraints.png)
 
 ## Control validity
 
@@ -100,15 +118,15 @@ A control value (entered by the user, constant, or calculated) is either *valid*
 
 - It is required but remains empty.
 - It does not match the selected data type.
-- There is at least one failed error constraint.
+- There is at least one failed error formula or common constraint validation.
 
 ## Validation levels
 
 [SINCE Orbeon Forms 4.3]
 
-If a control is valid, it can have a *warning* level. This is the case if there is at least one failed warning constraint.
+If a control is valid, it can have a *warning* level. This is the case if there is at least one failed warning validation.
 
-If a control doesn't have a warning level, it can have an *info* level. This is the case if there is at least one failed info constraint.
+If a control doesn't have a warning level, it can have an *info* level. This is the case if there is at least one failed info validation.
 
 A warning or info level does not make the control value invalid and it is still possible to submit form data.
 
@@ -134,20 +152,20 @@ When the user enters data, if the value is invalid or if the control has a warni
 
 - If a required validation has failed:
     - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
-    - Other messages are not used, even if there are data type or error constraint validations.
+    - Other messages are not used, even if there are data type or error formula or common constraint validations.
 - If data type validation has failed:
     - The default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
-    - Other messages are not used, even if there are error constraint validations.
-- If at least one error constraint has failed:
+    - Other messages are not used, even if there are error formula or common constraint validations.
+- If at least one error validation has failed:
     - If no specific alert message is specified for the validation, the default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
     - If a specific alert message is specified, then it is used.
-    - More than one message can show is several error constraints have failed.
-- Only if the control is valid, if at least one warning constraint has failed:
+    - More than one message can show is several error validations have failed.
+- Only if the control is valid, if at least one warning formula or common constraint has failed:
     - The specific alert message is used.
-    - More than one message can show is several warning constraints have failed.
-- Only if the control is valid and doesn't have any failed warning constraints, if at least one info constraint has failed:
+    - More than one message can show is several warning validations have failed.
+- Only if the control is valid and doesn't have any failed warning s, if at least one info formula or common constraint has failed:
     - The specific alert message is used.
-    - More than one message can show is several info constraints have failed.
+    - More than one message can show is several info validations have failed.
 
 *NOTE: As of Orbeon Forms 4.3, it is not possible to associate specific alert message to the required or data type validations: they always use the default or global alert message.*
 
