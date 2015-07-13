@@ -52,7 +52,9 @@ See [[Form Builder Formulas|Form Builder ~ Formulas]] for details.
 
 ![Help tab](images/fb-control-settings-help.png)
 
-This allows specifying some help text, which can be plain text or rich text.
+This allows specifying some help text, which can be plain text or rich text when the "Use HTML" checkbox is selected.
+
+See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html).
 
 ## See also
 
