@@ -35,8 +35,6 @@ When deploying the form, section templates appear like regular editable sections
 
 ## Services and actions
 
-[SINCE: 2011-11-30]
-
 Actions involving controls in a given section are automatically included with the section template, along with the services called by the actions.
 
 *NOTE: If an action involves controls in more than one section, the action will not properly work at runtime.*
