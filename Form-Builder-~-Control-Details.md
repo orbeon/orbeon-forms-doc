@@ -54,6 +54,10 @@ See [[Form Builder Formulas|Form Builder ~ Formulas]] for details.
 
 This allows specifying some help text, which can be plain text or rich text when the "Use HTML" checkbox is selected.
 
+The help message is available at runtime through a help icon positioned next to the control. By default, the icon opens a pop-up containing the help text. In *noscript* mode, the icon links to a help section at the bottom of the form.
+
+The help text is localizable.
+
 See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html).
 
 ## See also
