@@ -1,4 +1,4 @@
-> [[Home]] ▸ Form Builder
+> [[Home]] ▸ [[Form Builder|Form Builder]]
 
 ## Introduction
 
