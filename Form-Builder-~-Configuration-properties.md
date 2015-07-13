@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[Form Builder|Form Builder]]
+
 ## Configuration properties
 
 For general documentation about configuration properties, see [[Configuration Properties |Installation ~ Configuration Properties]].
