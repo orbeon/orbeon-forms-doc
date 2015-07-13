@@ -27,9 +27,16 @@ As of 2015-07-07 this page is *very* incomplete.
   - Access control
     - Owner / group permissions: [[doc|Form Runner ~ Access Control ~ Owner Group]], [blog post](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)
 - Form Builder
+  - Control Settings: [[doc|Form Builder ~ Control Settings]]
+    - control name
+    - Summary page options
+    - custom CSS classes
+    - easy switching of control appearances: [blog post](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
+    - validation
+    - formulas
+    - help text (plain text and rich text)
   - Explanation text: [blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)
   - Access control for editing forms: [[doc|Form Runner ~ Access Control ~ Editing Forms]]
-  - Easy switching of control appearances: [blog post](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
 - Form Runner
   - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
   - Home Page: [[doc|Form Runner ~ Home Page]], [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
