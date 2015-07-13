@@ -23,6 +23,7 @@
     - [xf:dispatch](#xfdispatch)
     - [xf:send](#xfsend)
     - [xf:show](#xfshow)
+    - [xf:hide](#xfhide)
     - [Other actions](#other-actions)
 - [Predefined reusable processes](#predefined-reusable-processes)
 - [Processes that apply to services](#processes-that-apply-to-services)
