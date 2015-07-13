@@ -35,11 +35,11 @@ In the Control Details dialog, XPath expressions are used to specify the followi
 * **Calculated Value:** string expression specifying a calculated value of the control which updates while the form user interacts with the form.  
     * Default: the default value of the control, or the value entered by the form user.  
 
-### Section Settings dialog
+### Section/Grid Settings dialog
 
 ![Basic Settings and Formulas](images/fb-section-settings.png)
 
-In the Section Details dialog, XPath expressions are used to specify the following aspects of a section:
+In the Section/Grid Settings dialog, XPath expressions are used to specify the following aspects of a section or grid:
 
 * **Visibility:** Boolean expression specifying whether the section is visible or not.
     * If this field is left blank, then the section is always visible.
@@ -47,10 +47,6 @@ In the Section Details dialog, XPath expressions are used to specify the followi
 * **Read-Only:** Boolean expression specifying whether the section is shown as read-only or not.
     * If this field is left blank, then the section content is always editable.
     * Otherwise, the section content is editable only if the result of the Boolean expression is false().
-
-### Grid Settings dialog
-
-TODO
 
 ### Actions
 
