@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[Form Builder|Form Builder]]
+
 ## Configuration
 
 The HTTP Service Editor allows you to create simple REST services. The idea is that a form can call a service, typically passing XML back and forth. The HTTP Service Editor follows closely the semantics of an XForms submission.
