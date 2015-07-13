@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[PDF Production| Form Builder ~ PDF Production]]
+> [[Home]] ▸ [[Form Builder|Form Builder]] ▸ [[PDF Production| Form Builder ~ PDF Production]]
 
 ## How PDF templates work
 
