@@ -541,6 +541,15 @@ Open an XForms dialog by id.
 - parameters
     - `dialog`: specifies the id of the dialog to open
 
+### xf:hide
+
+[SINCE Orbeon Forms 4.10]
+
+Close an XForms dialog by id.
+
+- parameters
+    - `dialog`: specifies the id of the dialog to close
+
 ### Other actions
 
 - `review`, `edit`: navigate to these Form Runner pages
