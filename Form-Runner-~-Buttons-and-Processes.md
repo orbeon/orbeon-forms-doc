@@ -351,7 +351,9 @@ When `pdf-url` is specified, the XML document sent has the following format:
 
 The PDF can be retrieved by accessing that path with the proper session cookie.
 
-*NOTE: We realize that requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
+A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the PDF.
+
+*NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
 
 #### Sending form metadata
 
