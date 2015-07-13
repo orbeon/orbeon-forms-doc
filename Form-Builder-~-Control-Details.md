@@ -48,7 +48,7 @@ See [[Form Builder Validation|Form Builder ~ Validation]] for details.
 
 See [[Form Builder Formulas|Form Builder ~ Formulas]] for details.
 
-### Help
+### Help Message
 
 ![Help tab](images/fb-control-settings-help.png)
 
