@@ -34,7 +34,7 @@ Some controls support more than one appearance. For example, a single selection 
 or as radio buttons. When available, the "Control Appearance" selector allows selecting and changing the appearance of
 the control.
 
-See [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html) for details.
+See also [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html).
 
 ### Validations and alerts
 
