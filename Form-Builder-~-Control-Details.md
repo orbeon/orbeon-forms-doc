@@ -15,7 +15,7 @@ identifier is used for the following:
 - to refer to the control value from formulas
 - to determine the name when the form data is represented as XML
 
-If no control name is explicitly specified, Form Builder assigns a default name, such as "control-42".
+If no control name is explicitly specified, Form Builder assigns a default name, such as `control-42`.
 
 The following options are available:
 
