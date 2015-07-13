@@ -9,7 +9,7 @@ has several tabs, detailed below.
 
 #### Basic options
 
-The control *name* specifies a identifier for the control, unique in the entire form (except section templates). The
+The control *name* specifies a identifier for the control, unique in the entire form (except [[Section Templates|Form-Builder ~ Section Templates]]). The
 identifier is used for the following:
 
 - to refer to the control value from formulas
