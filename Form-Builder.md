@@ -2,7 +2,7 @@
 
 - [[Actions|Form Builder ~ Actions]]
 - [[Configuration properties|Form Builder ~ Configuration properties]]
-- [[Control Details|Form Builder ~ Control Details]]
+- [[Control Settings|Form Builder ~ Control Settings]]
 - [[Formulas|Form Builder ~ Formulas]]
 - [[Integration|Form Builder ~ Integration]]
 - [[PDF Production|Form Builder ~ PDF Production]]
