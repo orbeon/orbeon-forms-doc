@@ -43,8 +43,8 @@ When the `<fr:buttons>` element is present, Form Runner ignores the buttons conf
 
 ## Form data
 
-See [[Data Format|Form Runner ~ Data Format]
+See [[Data Format|Form Runner ~ Data Format]]
 
 ## See also
 
-- [[Data Format|Form Runner ~ Data Format]
+- [[Data Format|Form Runner ~ Data Format]]
