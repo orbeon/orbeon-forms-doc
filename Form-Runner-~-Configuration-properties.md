@@ -1,4 +1,4 @@
-> [[Home]] ▸ Form Runner ▸ Configuration Properties
+> [[Home]] ▸ [[Form Runner|Form Runner]] ▸ Configuration Properties
 
 ## Configuration properties
 
