@@ -64,3 +64,7 @@ Example:
 /fr/service/exist/crud/orbeon/builder/data/5277.../book.png
 </my-attachment>
 ```
+
+## See also
+
+- [[Form Definition Format|Form Runner ~ Form Definition Format]]
