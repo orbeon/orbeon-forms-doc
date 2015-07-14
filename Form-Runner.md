@@ -33,6 +33,7 @@
 - [[Updating your 4.5 MySQL database tables|Form Runner ~ Updating your 4.5 MySQL database tables]]
 - [[Wizard View|Form Runner ~ Wizard View]]
 - XBL Components
+    - [[Character Counter|Form Runner ~ XBL Components ~ Character Counter]]
     - [[Grid|Form Runner ~ XBL Components ~ Grid]]
     - [[Map|Form Runner ~ XBL Components ~ Map]]
     - [[Repeater|Form Runner ~ XBL Components ~ Repeater]]
