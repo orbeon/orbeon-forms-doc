@@ -25,7 +25,7 @@
 - Portal
     - [[Liferay Proxy Portlet Guide|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
 - [[Singleton Form|Form Runner ~ Singleton Form]]
-- [[Structure of a Form|Form Runner ~ Structure of a Form]]
+- [[Form Definition Format|Form Runner ~ Form Definition Format]]
 - [[Styling automatic PDFs|Form Runner ~ Styling automatic PDFs]]
 - [[Supported Languages|Form Runner ~ Supported Languages]]
 - [[Supporting persistence layer caching|Form Runner ~ Supporting persistence layer caching]]
