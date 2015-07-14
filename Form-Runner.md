@@ -20,7 +20,7 @@
 - [[Custom Model Logic|Form Runner ~ Custom Model Logic]]
 - [[Data Format|Form Runner ~ Data Format]]
 - [[Embedding|Form Runner ~ Embedding]]
-    - [[Server-side embedding API|Form Runner ~ APIs ~ Server side Embedding]] [Since Orbeon Forms 4.7]
+    - [[Server-side embedding API|Form Runner ~ APIs ~ Server side Embedding]]
     - [[Form Runner proxy portlet|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
     - [[Form Runner full portlet|Form Runner ~ Portal ~ Full Portlet Guide]]
 - [[Home Page|Form Runner ~ Home Page]]
