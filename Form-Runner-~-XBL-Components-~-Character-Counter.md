@@ -1,4 +1,4 @@
-> [[Home]] ▸ Form Runner ▸ [[XBL Components|Form Runner ~ XBL Components]]
+> [[Home]] ▸ [[Form Runner|Form Runner]] ▸ [[XBL Components|Form Runner ~ XBL Components]]
 
 ## Availability
 
