@@ -87,5 +87,5 @@ The benefit of changing this configuration is that you know exactly where the fi
 - [[Tomcat|Installation ~ Tomcat]]
 - [[JBoss|Installation ~ JBoss]]
 - [[WebLogic|Installation ~ WebLogic]]
-- [[IBM WebSphere|Installation ~ IBM WebSphere]]
+- [[WebSphere|Installation ~ WebSphere]]
 - [[GlassFish|Installation ~ GlassFish]]
