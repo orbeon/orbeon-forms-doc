@@ -343,29 +343,33 @@ _NOTE: These two headers are computed values and it is only possible to override
 | | |
 | --- | --- |
 | Name | `oxf.url-rewriting.service.base-uri` |
-| Purpose | Specify the base URL for rewriting some service URLs. |
+| Purpose | Specify the base URL for rewriting some internal service URLs. |
 | Type | `xs:anyURI` |
 | Default Value | Empty. Rewriting is done against the incoming request. |
 
-Usually Orbeon Forms will use the host, port, and context name as seen by the browser, e.g.
-`http://www.mycompany.com/orbeon`, to infer how to reach itself when calling some service URLs (see above for which
-URLs apply depending on the Orbeon Forms version).
+Usually Orbeon Forms uses the host, port, and context name as seen by the browser, such as:
+
+```
+http://www.mycompany.com/orbeon
+
+to infer how to reach itself when calling some service URLs (see below for which URLs apply depending on the Orbeon
+Forms version). But in some cases, Orbeon Forms cannot reach to itself this way and an explicit base URL must be
+specified with this property.
 
 #### Orbeon Forms 4.7 and newer
 
 Since Orbeon Forms 4.7, this property is only used for the following:
 
 - access to the embedded eXist database
-- access to an authorization service (see [[Authorization of Pages and Services|Controller ~ Authorization of Pages and Services#authorization-service]])
-- access to custom services added by an administrator located in the Orbeon web app (there are none by default) 
+- access to custom services added by an administrator located in the Orbeon web app (there are none by default)
 
 You don't need to set this property if:
 
-- you do not use the embedded eXist or an authorization service
-- or you use the embedded eXist database or an authorization service and
+- you do not use the embedded eXist or custom services added to the Orbeon web app
+- or you use the embedded eXist database or a custom service and
   - you are running your servlet container on a local computer for testing or deployment
   - or your external server name and port are accessible from the servlet container
-  
+
 When things don't work out of the box, typically when the network setup contains a front-end web server and/or prevents
 a network connection from the servlet container to itself, setting it to the following is usually enough:
 
@@ -381,8 +385,8 @@ Make sure to adjust the port and prefix as needed.
 #### Orbeon Forms 4.6.x and earlier
 
 Up to and including Orbeon Forms 4.6.x, this property was used for all service calls, including calls to internal
-services used by Form Runner and Form Builder, such as loading i18n resources and accessing persistence
-implementations.
+services used by Form Runner and Form Builder, such as loading i18n resources and accessing the persistence
+implementation.
 
 With 4.6.x and earlier, you don't need to set this property if:
 
