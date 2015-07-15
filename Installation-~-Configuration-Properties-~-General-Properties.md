@@ -2,11 +2,11 @@
 
 - [Configuration properties](#configuration-properties)
 - [Default values](#default-values)
+- [Internal services URL](#internal-services-url)
 - [Encryption properties](#encryption-properties)
 - [Global properties](#global-properties)
 - [HTTP server](#http-server)
 - [HTTP client](#http-client)
-- [Base URL of services](#base-url-of-services)
 - [Epilogue and theme properties](#epilogue-and-theme-properties)
 - [Email processor properties](#email-processor-properties)
 - [Rarely used properties](#rarely-used-properties)
@@ -18,6 +18,76 @@ For general documentation about configuration properties, see [[Configuration Pr
 ## Default values
 
 For the latest default values of general properties, see [`properties-base.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-base.xml).
+
+## Internal services URL
+
+### oxf.url-rewriting.service.base-uri
+
+| | |
+| --- | --- |
+| Name | `oxf.url-rewriting.service.base-uri` |
+| Purpose | Specify the base URL for rewriting some internal service URLs. |
+| Type | `xs:anyURI` |
+| Default Value | Empty. Rewriting is done against the incoming request. |
+
+Usually Orbeon Forms uses the host, port, and context name as seen by the browser, such as:
+
+```
+http://www.mycompany.com/orbeon
+```
+
+to infer how to reach itself when calling some service URLs (see below for which URLs apply depending on the Orbeon
+Forms version). But in some cases, Orbeon Forms cannot reach to itself this way and an explicit base URL must be
+specified with this property.
+
+#### Orbeon Forms 4.7 and newer
+
+Since Orbeon Forms 4.7, this property is only used for the following:
+
+- access to the embedded eXist database
+- access to custom services located in the Orbeon web app (there are none by default)
+
+You *don't need* to set this property if:
+
+- you do not use the embedded eXist or custom services
+- or you use the embedded eXist database or a custom service and
+  - you are running your servlet container on a local computer for testing or deployment
+  - or your external server name and port are accessible from the servlet container
+
+When things don't work out of the box, typically when the network setup contains a front-end web server and/or prevents
+a network connection from the servlet container to itself, setting it to the following is usually enough:
+
+```xml
+<property
+    as="xs:anyURI"
+    name="oxf.url-rewriting.service.base-uri"
+    value="http://localhost:8080/orbeon"/>
+```
+
+Make sure to adjust the port and prefix as needed.
+
+#### Orbeon Forms 4.6.x and earlier
+
+Up to and including Orbeon Forms 4.6.x, this property was used for all service calls, including calls to internal
+services used by Form Runner and Form Builder, such as loading i18n resources and accessing the persistence
+implementation.
+
+With 4.6.x and earlier, you *don't need* to set this property if:
+
+- you are running your servlet container on a local computer for testing or deployment
+- or your external server name and port are accessible from the servlet container
+
+When things don't work out of the box, typically when the network setup contains a front-end web server and/or prevents
+a network connection from the servlet container to itself, setting it to the following is usually enough:
+
+```xml
+<property
+    as="xs:anyURI"
+    name="oxf.url-rewriting.service.base-uri"
+    value="http://localhost:8080/orbeon"/>
+```
+
+Make sure to adjust the port and prefix as needed.
 
 ## Encryption properties
 
@@ -348,76 +418,6 @@ _NOTE: These two headers are computed values and it is only possible to override
     name="oxf.http.chunk-requests"
     value="false"/>
 ```
-
-## Base URL of services
-
-### oxf.url-rewriting.service.base-uri
-
-| | |
-| --- | --- |
-| Name | `oxf.url-rewriting.service.base-uri` |
-| Purpose | Specify the base URL for rewriting some internal service URLs. |
-| Type | `xs:anyURI` |
-| Default Value | Empty. Rewriting is done against the incoming request. |
-
-Usually Orbeon Forms uses the host, port, and context name as seen by the browser, such as:
-
-```
-http://www.mycompany.com/orbeon
-```
-
-to infer how to reach itself when calling some service URLs (see below for which URLs apply depending on the Orbeon
-Forms version). But in some cases, Orbeon Forms cannot reach to itself this way and an explicit base URL must be
-specified with this property.
-
-#### Orbeon Forms 4.7 and newer
-
-Since Orbeon Forms 4.7, this property is only used for the following:
-
-- access to the embedded eXist database
-- access to custom services located in the Orbeon web app (there are none by default)
-
-You *don't need* to set this property if:
-
-- you do not use the embedded eXist or custom services
-- or you use the embedded eXist database or a custom service and
-  - you are running your servlet container on a local computer for testing or deployment
-  - or your external server name and port are accessible from the servlet container
-
-When things don't work out of the box, typically when the network setup contains a front-end web server and/or prevents
-a network connection from the servlet container to itself, setting it to the following is usually enough:
-
-```xml
-<property
-    as="xs:anyURI"
-    name="oxf.url-rewriting.service.base-uri"
-    value="http://localhost:8080/orbeon"/>
-```
-
-Make sure to adjust the port and prefix as needed.
-
-#### Orbeon Forms 4.6.x and earlier
-
-Up to and including Orbeon Forms 4.6.x, this property was used for all service calls, including calls to internal
-services used by Form Runner and Form Builder, such as loading i18n resources and accessing the persistence
-implementation.
-
-With 4.6.x and earlier, you *don't need* to set this property if:
-
-- you are running your servlet container on a local computer for testing or deployment
-- or your external server name and port are accessible from the servlet container
-
-When things don't work out of the box, typically when the network setup contains a front-end web server and/or prevents
-a network connection from the servlet container to itself, setting it to the following is usually enough:
-
-```xml
-<property
-    as="xs:anyURI"
-    name="oxf.url-rewriting.service.base-uri"
-    value="http://localhost:8080/orbeon"/>
-```
-
-Make sure to adjust the port and prefix as needed.
 
 ## Epilogue and theme properties
 
