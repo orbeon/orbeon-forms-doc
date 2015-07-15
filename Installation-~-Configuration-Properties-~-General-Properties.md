@@ -2,7 +2,7 @@
 
 - [Configuration properties](#configuration-properties)
 - [Default values](#default-values)
-- [Internal services URL](#internal-services-url)
+- [URL rewriting](#url-rewriting)
 - [Encryption properties](#encryption-properties)
 - [Global properties](#global-properties)
 - [HTTP server](#http-server)
@@ -19,7 +19,7 @@ For general documentation about configuration properties, see [[Configuration Pr
 
 For the latest default values of general properties, see [`properties-base.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-base.xml).
 
-## Internal services URL
+## URL rewriting
 
 ### oxf.url-rewriting.service.base-uri
 
