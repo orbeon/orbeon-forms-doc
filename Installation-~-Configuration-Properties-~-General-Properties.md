@@ -6,7 +6,7 @@ For general documentation about configuration properties, see [[Configuration Pr
 
 ## Default values
 
-For the latest default values of base properties, see [`properties-base.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-base.xml).
+For the latest default values of general properties, see [`properties-base.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-base.xml).
 
 ## Encryption properties
 
@@ -336,19 +336,38 @@ _NOTE: These two headers are computed values and it is only possible to override
     value="false"/>
 ```
 
-## URL rewriting
+## Base URL of services
 
 ### oxf.url-rewriting.service.base-uri
 
-- **Name:** `oxf.url-rewriting.service.base-uri`
-- **Purpose:** Specify the base URL for rewriting service URLs.
-- **Type:** `xs:anyURI`
-- **Subtype:** HTTP or HTTPS URL
-- **Default:** Empty. Rewriting is done against the incoming request.
+| | |
+| --- | --- |
+| Name | `oxf.url-rewriting.service.base-uri` |
+| Purpose | Specify the base URL for rewriting some service URLs. |
+| Type | `xs:anyURI` |
+| Default Value | Empty. Rewriting is done against the incoming request. |
 
-If this property is set to a non-blank value, URLs are rewritten against it.
+Usually Orbeon Forms will use the host, port, and context name as seen by the browser, e.g.
+`http://www.mycompany.com/orbeon`, to infer how to reach itself when calling some service URLs (see above for which
+URLs apply depending on the Orbeon Forms version).
 
-Example:
+#### Orbeon Forms 4.7 and newer
+
+Since Orbeon Forms 4.7, this property is only used for the following:
+
+- access to the embedded eXist database
+- access to an authorization service (see [[Authorization of Pages and Services|Controller ~ Authorization of Pages and Services#authorization-service]])
+- access to custom services added by an administrator located in the Orbeon web app (there are none by default) 
+
+You don't need to set this property if:
+
+- you do not use the embedded eXist or an authorization service
+- or you use the embedded eXist database or an authorization service and
+  - you are running your servlet container on a local computer for testing or deployment
+  - or your external server name and port are accessible from the servlet container
+  
+When things don't work out of the box, typically when the network setup contains a front-end web server and/or prevents
+a network connection from the servlet container to itself, setting it to the following is usually enough:
 
 ```xml
 <property
@@ -357,15 +376,30 @@ Example:
     value="http://localhost:8080/orbeon"/>
 ```
 
-Usually Orbeon Forms will use the host, port, and context name as seen by the browser, e.g. `http://www.mycompany.com/orbeon`, to infer how to reach itself when calling service URLs. In some cases, this needs to be changed e.g.:
+Make sure to adjust the port and prefix as needed.
 
-- You have a web server (e.g. Apache httpd) which forwards requests to the application server (e.g. Tomcat).
-- The application server cannot connect to the web server because of a specific network configuration.
+#### Orbeon Forms 4.6.x and earlier
 
-In those cases, the application server will try to connect to `http://www.mycompany.com/orbeon/...` which isn't reachable. To solve those, you can use the `oxf.url-rewriting.service.base-uri` property to provide a URL for the application server which can be reached by the application server, for instance: `http://localhost:8080/orbeon`.
+Up to and including Orbeon Forms 4.6.x, this property was used for all service calls, including calls to internal
+services used by Form Runner and Form Builder, such as loading i18n resources and accessing persistence
+implementations.
 
+With 4.6.x and earlier, you don't need to set this property if:
 
-[TODO: Explain where this property is used.]
+- you are running your servlet container on a local computer for testing or deployment
+- or your external server name and port are accessible from the servlet container
+
+When things don't work out of the box, typically when the network setup contains a front-end web server and/or prevents
+a network connection from the servlet container to itself, setting it to the following is usually enough:
+
+```xml
+<property
+    as="xs:anyURI"
+    name="oxf.url-rewriting.service.base-uri"
+    value="http://localhost:8080/orbeon"/>
+```
+
+Make sure to adjust the port and prefix as needed.
 
 ## Epilogue and theme properties
 
