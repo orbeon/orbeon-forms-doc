@@ -50,6 +50,21 @@ The benefit of this approach is that you don't have to find where the WAR file i
 
 _NOTE:  Orbeon Forms uses Java's `System.getProperty("user.home")` to identify the user's home directory.__  This corresponds to the user running the servlet container and not necessarily to the user of the developer or system administrator._
 
+## Base URL configuration
+
+Depending on your setup, if things don't work out of the box (for example if you have database errors with the sample forms) you might have to set the [[`oxf.url-rewriting.service.base-uri`|Installation ~ Configuration Properties ~ General Properties#oxfurl-rewritingservicebase-uri]] configuration property.
+
+Often, it is enough to set it to the following (adjusting for port and prefix):
+
+```xml
+<property
+    as="xs:anyURI"
+    name="oxf.url-rewriting.service.base-uri"
+    value="http://localhost:8080/orbeon"/>
+```
+
+For more information about how to set configuration properties, see [[Configuration Properties| Installation ~ Configuration Properties]].
+
 ## Logging configuration
 
 This step is optional.
