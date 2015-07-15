@@ -52,6 +52,8 @@ _NOTE:  Orbeon Forms uses Java's `System.getProperty("user.home")` to identify t
 
 ## Base URL for internal services
 
+This step is sometimes optional.
+
 Depending on your setup, if things don't work out of the box (for example if you have database errors with the sample forms) you might have to set the [[oxf.url-rewriting.service.base-uri|Installation ~ Configuration Properties ~ General Properties#oxfurl-rewritingservicebase-uri]] configuration property in your `properties-local.xml` file.
 
 Often, it is enough to set it to the following (adjusting for port and prefix):
