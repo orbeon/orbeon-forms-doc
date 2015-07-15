@@ -1,5 +1,16 @@
 > [[Home]] ▸ [[Installation]]
 
+- [Configuration properties](#configuration-properties)
+- [Default values](#default-values)
+- [Encryption properties](#encryption-properties)
+- [Global properties](#global-properties)
+- [HTTP server](#http-server)
+- [HTTP client](#http-client)
+- [Base URL of services](#base-url-of-services)
+- [Epilogue and theme properties](#epilogue-and-theme-properties)
+- [Email processor properties](#email-processor-properties)
+- [Rarely used properties](#rarely-used-properties)
+
 ## Configuration properties
 
 For general documentation about configuration properties, see [[Configuration Properties |Installation ~ Configuration Properties]].
