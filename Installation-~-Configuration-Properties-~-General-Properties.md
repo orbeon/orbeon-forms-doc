@@ -362,11 +362,11 @@ specified with this property.
 Since Orbeon Forms 4.7, this property is only used for the following:
 
 - access to the embedded eXist database
-- access to custom services added by an administrator located in the Orbeon web app (there are none by default)
+- access to custom services located in the Orbeon web app (there are none by default)
 
-You don't need to set this property if:
+You *don't need* to set this property if:
 
-- you do not use the embedded eXist or custom services added to the Orbeon web app
+- you do not use the embedded eXist or custom services
 - or you use the embedded eXist database or a custom service and
   - you are running your servlet container on a local computer for testing or deployment
   - or your external server name and port are accessible from the servlet container
@@ -389,7 +389,7 @@ Up to and including Orbeon Forms 4.6.x, this property was used for all service c
 services used by Form Runner and Form Builder, such as loading i18n resources and accessing the persistence
 implementation.
 
-With 4.6.x and earlier, you don't need to set this property if:
+With 4.6.x and earlier, you *don't need* to set this property if:
 
 - you are running your servlet container on a local computer for testing or deployment
 - or your external server name and port are accessible from the servlet container
