@@ -351,6 +351,7 @@ Usually Orbeon Forms uses the host, port, and context name as seen by the browse
 
 ```
 http://www.mycompany.com/orbeon
+```
 
 to infer how to reach itself when calling some service URLs (see below for which URLs apply depending on the Orbeon
 Forms version). But in some cases, Orbeon Forms cannot reach to itself this way and an explicit base URL must be
