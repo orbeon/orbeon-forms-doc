@@ -26,7 +26,7 @@ For the latest default values of general properties, see [`properties-base.xml`]
 | | |
 | --- | --- |
 | Name | `oxf.url-rewriting.service.base-uri` |
-| Purpose | Specify the base URL for rewriting some internal service URLs. |
+| Purpose | specify the base URL for rewriting some internal service URLs |
 | Type | `xs:anyURI` |
 | Default Value | Empty. Rewriting is done against the incoming request. |
 
@@ -152,7 +152,7 @@ Orbeon forms uses hash algorithms in at least the following cases:
 | | |
 | --- | --- |
 | Name | `oxf.cache.size` |
-| Purpose | Setup the size of the Orbeon Forms cache |
+| Purpose | set the size of the Orbeon Forms object cache |
 | Type | `xs:integer` | |
 | Default Value | 500 |
 
@@ -163,7 +163,7 @@ Orbeon Forms uses an efficient caching system. Orbeon Forms automatically determ
 | | |
 | --- | --- |
 | Name | `oxf.cache.xpath.size` |
-| Purpose | Setup the size of the Orbeon Forms XPath cache |
+| Purpose | set the size of the Orbeon Forms XPath cache |
 | Type | `xs:integer` |
 | Default Value | 2000 |
 
@@ -426,34 +426,38 @@ _NOTE: These two headers are computed values and it is only possible to override
 | | |
 | --- | --- |
 | Name | `oxf.epilogue.theme` |
-| Purpose | Specifies the theme stylesheet. This can be overwritten for a given app by placing a file `theme.xsl` inside the app directory. |
+| Purpose | specifies the theme stylesheet |
 | Type | `xs:anyURI` |
 | Default Value | `oxf:/config/theme-examples.xsl` |
+
+This can be overwritten for a given app by placing a file `theme.xsl` inside the app directory.
 
 ###  oxf.epilogue.theme.embeddable
 
 | | |
 | --- | --- |
 | Name | `oxf.epilogue.theme.embeddable` |
-| Purpose | Specifies the theme stylesheet to use when within a portlet or in embeddable mode. This can be overwritten for a given app by placing a file `theme-embeddable.xsl `inside the app directory. |
+| Purpose | specifies the theme stylesheet to use when within a portlet or in embeddable mode |
 | Type | `xs:anyURI` |
 | Default Value | `oxf:/config/theme-portlet-examples.xsl` |
+
+This can be overwritten for a given app by placing a file `theme-embeddable.xsl `inside the app directory.
 
 ### oxf.epilogue.theme.renderer
 
 | | |
 | --- | --- |
 | Name | `oxf.epilogue.theme.renderer` |
-| Purpose | Specifies the theme stylesheet to use when using the XForms filter, whether in integrated or separate deployment mode. By default, this is a plain theme. |
+| Purpose | specifies the theme stylesheet to use when using the XForms filter, whether in integrated or separate deployment mode |
 | Type | `xs:anyURI` |
-| Default Value | `oxf:/config/theme-portlet-examples.xsl` |
+| Default Value | `oxf:/config/theme-plain.xsl` |
 
 ### oxf.epilogue.theme.error
 
 | | |
 | --- | --- |
 | Name | `oxf.epilogue.theme.error` |
-| Purpose | Specifies the theme stylesheet to use on the error page |
+| Purpose | specifies the theme stylesheet to use on the error page |
 | Type | `xs:anyURI` |
 | Default Value | `oxf:/config/theme-error.xsl` |
 
@@ -462,7 +466,7 @@ _NOTE: These two headers are computed values and it is only possible to override
 | | |
 | --- | --- |
 | Name | `oxf.epilogue.use-theme` |
-| Purpose | Specifies whether a theme stylesheet must be applied |
+| Purpose | whether a theme stylesheet must be applied |
 | Type | `xs:boolean` |
 | Default Value | `true` |
 
@@ -471,7 +475,7 @@ _NOTE: These two headers are computed values and it is only possible to override
 | | |
 | --- | --- |
 | Name | `oxf.epilogue.output-xhtml` |
-| Purpose | Whether to output XHTML to the browser or not |
+| Purpose | whether to output XHTML to the browser or not |
 | Type | `xs:boolean` |
 | Default Value | `false` |
 
@@ -480,7 +484,7 @@ _NOTE: These two headers are computed values and it is only possible to override
 | | |
 | --- | --- |
 | Name | `oxf.epilogue.renderer-rewrite` |
-| Purpose | Whether the XForms renderer used in separate deployment must rewrite URLs |
+| Purpose | whether the XForms renderer used in separate deployment must rewrite URLs |
 | Type | `xs:boolean` |
 | Default Value | `false` |
 
@@ -489,7 +493,7 @@ _NOTE: These two headers are computed values and it is only possible to override
 | | |
 | --- | --- |
 | Name | `oxf.epilogue.process-svg` |
-| Purpose | Whether SVG content must be converted server-side to images |
+| Purpose | whether SVG content must be converted server-side to images |
 | Type | `xs:boolean` |
 | Default Value | `true` |
 
@@ -591,7 +595,7 @@ This property can easily be commented out for deployment, or placed in `properti
 | | |
 | --- | --- |
 | Name | `oxf.log4j-config` |
-| Purpose | Configures the logging system |
+| Purpose | configure the logging system |
 | Type | `xs:anyURI` |
 | Default Value | The logging system not initialized with a warning if this property is not present. |
 
@@ -606,7 +610,7 @@ _NOTE: You don't usually need to modify this property._
 | | |
 | --- | --- |
 | Name | `oxf.pipeline.processors` |
-| Purpose | Specify the URL of the XML file with processor definitions for the XPL pipeline engine. |
+| Purpose | specify the URL of the XML file with processor definitions for the XPL pipeline engine |
 | Type | `xs:anyURI` |
 | Default Value | `oxf:/processors.xml` |
 
@@ -617,7 +621,7 @@ _NOTE: You don't usually need to modify this property._
 | | |
 | --- | --- |
 | Name | `oxf.validation.processor` |
-| Purpose | Controls the automatic processor validation |
+| Purpose | control the automatic processor validation |
 | Type | `xs:boolean` |
 | Default Value | Enabled |
 
@@ -630,7 +634,7 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 | | |
 | --- | --- |
 | Name | `oxf.validation.user` |
-| Purpose | Controls user-defined validation |
+| Purpose | control user-defined validation |
 | Type | `boolean` |
 | Default Value | Enabled |
 
@@ -643,7 +647,7 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 | | |
 | --- | --- |
 | Name | `sax.inspection` |
-| Purpose | Enable inspection SAX events |
+| Purpose | enable inspection SAX events |
 | Type | `xs:boolean` |
 | Default Value | `false` |
 
