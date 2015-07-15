@@ -81,6 +81,7 @@ Orbeon forms uses hash algorithms in at least the following cases:
 
 | | |
 | --- | --- |
+| Name | `oxf.cache.size` |
 | Purpose | Setup the size of the Orbeon Forms cache |
 | Type | `xs:integer` | |
 | Default Value | 500 |
@@ -91,6 +92,7 @@ Orbeon Forms uses an efficient caching system. Orbeon Forms automatically determ
 
 | | |
 | --- | --- |
+| Name | `oxf.cache.xpath.size` |
 | Purpose | Setup the size of the Orbeon Forms XPath cache |
 | Type | `xs:integer` |
 | Default Value | 2000 |
@@ -588,6 +590,7 @@ This property can easily be commented out for deployment, or placed in `properti
 
 | | |
 | --- | --- |
+| Name | `oxf.log4j-config` |
 | Purpose | Configures the logging system |
 | Type | `xs:anyURI` |
 | Default Value | The logging system not initialized with a warning if this property is not present. |
@@ -600,16 +603,20 @@ _NOTE: You don't usually need to modify this property._
 
 ### oxf.pipeline.processors
 
-- **Name:** `oxf.pipeline.processors`
-- **Purpose:** Specify the URL of the XML file with processor definitions for the XPL pipeline engine.
-- **Subtype: **HTTP or HTTPS URL
-- **Default:** oxf:/processors.xml
-- **Note:** You don't usually need to modify this property.
+| | |
+| --- | --- |
+| Name | `oxf.pipeline.processors` |
+| Purpose | Specify the URL of the XML file with processor definitions for the XPL pipeline engine. |
+| Type | `xs:anyURI` |
+| Default Value | `oxf:/processors.xml` |
+
+_NOTE: You don't usually need to modify this property._
 
 ### oxf.validation.processor
 
 | | |
 | --- | --- |
+| Name | `oxf.validation.processor` |
 | Purpose | Controls the automatic processor validation |
 | Type | `xs:boolean` |
 | Default Value | Enabled |
@@ -622,6 +629,7 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 
 | | |
 | --- | --- |
+| Name | `oxf.validation.user` |
 | Purpose | Controls user-defined validation |
 | Type | `boolean` |
 | Default Value | Enabled |
@@ -634,6 +642,7 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 
 | | |
 | --- | --- |
+| Name | `sax.inspection` |
 | Purpose | Enable inspection SAX events |
 | Type | `xs:boolean` |
 | Default Value | `false` |
