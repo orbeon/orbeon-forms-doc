@@ -1,6 +1,7 @@
 ## See also
 
 - [[FAQ: Orbeon Forms Resources and Support|FAQ ~ Orbeon Forms Resources and Support]]
+- [[FAQ: PE Subscriptions and Dev Support Plans|FAQ ~ PE Subscriptions and Dev Support Plans]]
 - [[FAQ: Orbeon Form Builder and Orbeon Form Runner|FAQ ~ Orbeon Form Builder and Orbeon Form Runner]]
 - [[FAQ: Software Licences|FAQ ~ Software Licences]]
 - [[FAQ: Other Technical Questions|FAQ ~ Other Technical Questions]]
