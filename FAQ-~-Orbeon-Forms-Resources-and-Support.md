@@ -86,7 +86,7 @@ Feel free to add or make changes to the contents there. You can do so after crea
 
 ### What's going on with development?
 
-We regularly publish a [status message like this one](http://discuss.orbeon.com/Activity-in-Orbeon-land-td4658518.html) in the forum.
+We regularly publish a [status message like this one](http://discuss.orbeon.com/Activity-in-Orbeon-land-td4660203.html) in the forum.
 
 See also our [roadmap](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-Roadmap).
 
