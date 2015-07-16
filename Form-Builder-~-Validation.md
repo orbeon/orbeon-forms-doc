@@ -1,5 +1,19 @@
 > [[Home]] ▸ [[Form Builder|Form Builder]]
 
+- [Introduction](#introduction)
+- [Validation types](#validation-types)
+  - [Introduction](#introduction)
+  - [Required validation](#required-validation)
+  - [Data type validation](#data-type-validation)
+  - [Formula validation](#formula-validation)
+  - [Formula validation](#formula-validation)
+- [Control validity](#control-validity)
+- [Validation levels](#validation-levels)
+- [Localization of messages](#localization-of-messages)
+- [Alert messages](#alert-messages)
+- [Validation errors and review messages dialog](#validation-errors-and-review-messages-dialog)
+- [See also](#see-also)
+
 ## Introduction
 
 An important part of designing a form is to prevent incorrect data from being captured. For example:
