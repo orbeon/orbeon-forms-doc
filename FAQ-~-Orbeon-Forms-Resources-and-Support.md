@@ -79,8 +79,8 @@ In general, we recommend you do not add bugs or RFEs in the tracker yourself, as
 
 Yes, in fact we have two (which we plan to unify):
 
-- on [Google Sites](http://wiki.orbeon.com/forms/)
-- on [GitHub](https://github.com/orbeon/orbeon-forms/wiki)
+- the new one on [GitHub](https://github.com/orbeon/orbeon-forms/wiki)
+- the old one on [Google Sites](http://wiki.orbeon.com/forms/)
 
 Feel free to add or make changes to the contents there. You can do so after creating a user (anonymous changes are not allowed). But please be considerate. You may want to discuss changes on the forum first.
 
