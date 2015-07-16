@@ -11,7 +11,9 @@ See the [Community][5] page. If you are having any problem subscribing to the fo
 
 ### Where do I find the source code?
 
-On GitHub. See: [Orbeon Source Code Repository](http://wiki.orbeon.com/forms/doc/contributor-guide/development-environment/orbeon-source-code-repository).
+The source code for the CE version is on GitHub. See: [Orbeon Source Code Repository](http://wiki.orbeon.com/forms/doc/contributor-guide/development-environment/orbeon-source-code-repository).
+
+The source code for the PE version is made available to PE customers on demand.
 
 ### Where do I find the source code for a particular release of Orbeon Forms?
 
