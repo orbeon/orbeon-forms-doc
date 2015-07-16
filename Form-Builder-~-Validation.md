@@ -6,7 +6,7 @@
   - [Required validation](#required-validation)
   - [Data type validation](#data-type-validation)
   - [Formula validation](#formula-validation)
-  - [Formula validation](#formula-validation)
+  - [Common constraints](#common-constraints)
 - [Control validity](#control-validity)
 - [Validation levels](#validation-levels)
 - [Localization of messages](#localization-of-messages)
