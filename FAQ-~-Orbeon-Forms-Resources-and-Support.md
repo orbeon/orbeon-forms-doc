@@ -65,7 +65,7 @@ You can help by:
 
 - Subscribing to the [discussion forum][1], and helping other people in community.
 - Contributing to the open source effort. If you have a feature in mind and think it would benefit Orbeon Forms, you can implement it and contribute it. The best place to get started is to discuss your idea on the Orbeon Forms forum.
-- Get a Support Plan with Orbeon. If Orbeon Forms is what it is today, it is in great part thanks to companies who have financially supported Orbeon, allowing Orbeon developers to be paid to work on Orbeon Forms and make it a better product. For more information, see [Service][3] or contact Orbeon at [info@orbeon.com][4].
+- Get a [PE Subscription](http://www.orbeon.com/pricing) or a [Dev Support Plan](http://www.orbeon.com/services) with Orbeon. If Orbeon Forms is what it is today, it is in great part thanks to companies who have financially supported Orbeon, allowing Orbeon developers to be paid to work on Orbeon Forms and make it a better product. For more, contact Orbeon at [info@orbeon.com][4].
 
 Your support is greatly appreciated!
 
