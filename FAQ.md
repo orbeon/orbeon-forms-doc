@@ -30,7 +30,7 @@ A few things come to mind:
 
 [Community Edition (CE) builds](http://www.orbeon.com/download) are available free of charge whether your use it to build open source or commercial applications.
 
-The complete [source code](github.com/orbeon/orbeon-forms/) to Orbeon Forms CE and PE is available free of charge and under *real* open source terms. Note that out of the box, the build file creates a CE build.
+The complete [source code](github.com/orbeon/orbeon-forms/) to Orbeon Forms CE is available free of charge and under *real* open source terms. The source code to Orbeon Forms PE is available to subscription customers on demand.
 
 With the open source code, you are free as you please to:
 
