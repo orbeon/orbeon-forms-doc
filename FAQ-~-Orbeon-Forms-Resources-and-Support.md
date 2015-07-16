@@ -57,7 +57,7 @@ In both cases:
 
 ### Where are the Orbeon Forms forum archives?
 
-At [Nabble](http://discuss.orbeon.com/).
+[Right here](http://discuss.orbeon.com/).
 
 ### How can I support Orbeon Forms?
 
