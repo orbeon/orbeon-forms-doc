@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[FAQ|FAQ]]
+
 ## What is the difference between the Development and Production subscriptions?
 
 1. __Intended use__ — _Development subscriptions_ are for laptops, workstations, or servers on which you install Orbeon Forms PE for development, that are not accessed by end users of the forms or application you are creating. _Production subscriptions_ are for the servers on which you install Orbeon Forms PE and that will be accessed by end users.
