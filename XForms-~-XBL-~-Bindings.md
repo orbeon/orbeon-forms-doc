@@ -51,7 +51,7 @@ This must be used on conjunction with a "direct" binding like `fr|number`:
 fr|number, xf|input:xxf-type('xs:decimal')
 ```
 
-In this case an input field (`xf:input`) bound to an `xs:decimal` or `xf:decimal` type will be replaced, at design time, with an `fr:number` binding.
+In this case an input field (`xf:input`) bound to an `xs:decimal` or `xf:decimal` type will be substituted, at design time, with an `fr:number` binding.
 
 *NOTE: In the future, we would like such bindings to work at runtime as well, see [#1248](https://github.com/orbeon/orbeon-forms/issues/1248).*
 
