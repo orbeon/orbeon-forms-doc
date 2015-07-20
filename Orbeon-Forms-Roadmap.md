@@ -40,7 +40,7 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
-- [ ] mobile
+- [x] mobile
   - responsive UI for Form Runner, see [#1181](https://github.com/orbeon/orbeon-forms/issues/1181) and [#2146](https://github.com/orbeon/orbeon-forms/pull/2146)
 - [ ] performance: TBD
 - [ ] maintenance candidates
