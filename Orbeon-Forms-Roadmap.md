@@ -50,7 +50,8 @@ Focus:
   - [x] [Upgrade to Scala 2.11.6 #1703](https://github.com/orbeon/orbeon-forms/issues/1703)
   - [x] [Upgrade to Proguard 5.2.x #1975](https://github.com/orbeon/orbeon-forms/issues/1975)
 - [ ] test automation: TBD
-- [ ] doc: TBD
+- [x] doc
+  - [x] move more doc from old to new wiki
 
 Issues:
 
