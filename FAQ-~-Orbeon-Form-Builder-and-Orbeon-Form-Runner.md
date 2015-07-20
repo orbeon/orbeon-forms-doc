@@ -153,6 +153,10 @@ Orbeon Forms 4.7 and newer supports [server side embedding](https://github.com/o
 
 Not reliably, sorry.
 
+### Can I use Form Builder to create a form, then paste the form into a plain XForms file, and expect it to work?
+
+No, this is not supported, sorry. Forms created with Form Builder require Form Runner to run. Form Runner is enabled only for forms published with Form Builder.
+
 ### Can I customize the appearance of forms I create with Form Builder?
 
 1. You can change fonts, colors, and other styling by creating your own CSS stylesheet, to [[supplement or override the default CSS|Form-Runner-~-Configuration-properties#adding-your-own-css]].
