@@ -43,12 +43,12 @@ Focus:
 - [x] mobile
   - responsive UI for Form Runner, see [#1181](https://github.com/orbeon/orbeon-forms/issues/1181) and [#2146](https://github.com/orbeon/orbeon-forms/pull/2146)
 - [ ] performance: TBD
-- [ ] maintenance candidates
-  - Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
-  - migrate some Java code to Scala in the perspective of [#1221](https://github.com/orbeon/orbeon-forms/issues/1221)
-  - [Don't use dom4j XPath APIs #2164](https://github.com/orbeon/orbeon-forms/issues/2164)
-  - [Upgrade to Scala 2.11.6 #1703](https://github.com/orbeon/orbeon-forms/issues/1703)
-  - [Upgrade to Proguard 5.2.x #1975](https://github.com/orbeon/orbeon-forms/issues/1975)
+- [x] maintenance candidates
+  - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
+  - [ ] migrate some Java code to Scala in the perspective of [#1221](https://github.com/orbeon/orbeon-forms/issues/1221)
+  - [ ] [Don't use dom4j XPath APIs #2164](https://github.com/orbeon/orbeon-forms/issues/2164)
+  - [x] [Upgrade to Scala 2.11.6 #1703](https://github.com/orbeon/orbeon-forms/issues/1703)
+  - [x] [Upgrade to Proguard 5.2.x #1975](https://github.com/orbeon/orbeon-forms/issues/1975)
 - [ ] test automation: TBD
 - [ ] doc: TBD
 
@@ -59,4 +59,3 @@ Issues:
 Dates (tentative):
 
 - 2015-07-08: tentative release date
-
