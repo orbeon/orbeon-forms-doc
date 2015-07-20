@@ -55,7 +55,7 @@ Focus:
 
 Issues:
 
-- [ ] [all Orbeon Forms 4.10 issues](https://github.com/orbeon/orbeon-forms/milestones/4.10)
+- [ ] [all Orbeon Forms 4.10 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/4.10)
 
 Dates (tentative):
 
