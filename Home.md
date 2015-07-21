@@ -24,7 +24,7 @@ The main topics covered on this site include:
 - [[Roadmap|Orbeon Forms Roadmap]]
 - [[Use Cases|Orbeon Forms Use Cases]]
     - [[See your Own Data|Orbeon Forms Use Cases ~ See your Own Data]]
-- [Documentation (legacy site)](http://wiki.orbeon.com/forms/doc)
+- [Documentation on the legacy site](http://wiki.orbeon.com/forms/doc)
 
 See also the [complete list of pages](/orbeon/orbeon-forms/wiki/_pages).
 
@@ -32,4 +32,4 @@ See also the [complete list of pages](/orbeon/orbeon-forms/wiki/_pages).
 
 Some documentation is still on a legacy site. It is progressively being migrated here over time:
 
-- [Rest of the documentation (legacy site)](http://wiki.orbeon.com/forms/doc)
+- [Documentation on the legacy site](http://wiki.orbeon.com/forms/doc)
