@@ -6,9 +6,15 @@
 
 Orbeon Form Builder is a visual form designer which allows you to build and deploy forms in minutes right from your web browser.
 
+For a list of Form Builder features, see [[Orbeon Forms Features|Orbeon Forms Features#list-of-orbeon-forms-features]].
+
 ### What is Orbeon Form Runner?
 
-Orbeon Form Runner is the Orbeon Forms runtime environment which usually runs forms created with Form Builder. Form Runner manages form definitions and form data, handles search, validation, and takes care of the plumbing necessary to capture, save, import and export form data.
+Orbeon Form Runner is the Orbeon Forms runtime environment which usually runs forms created with Form Builder.
+Form Runner manages form definitions and form data, handles search, validation, and takes care of the plumbing
+necessary to capture, save, import and export form data.
+
+For a list of Form Runner features, see [[Orbeon Forms Features|Orbeon Forms Features#list-of-orbeon-forms-features]].
 
 ### What is the difference between Orbeon Forms, Form Runner and Form Builder?
 
