@@ -47,6 +47,7 @@ Russian   | F        | F        | P              | P             | P
 Polish    | N        | F        | N              | N             | N
 
 1. A few resources are missing.
+
 ### As of Orbeon Forms 4.9
 
 Language  | Calendar | Numberer | XBL components | Form Runner   | Form Builder
