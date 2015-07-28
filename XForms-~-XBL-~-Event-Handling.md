@@ -4,7 +4,9 @@
 
 XBL promotes a strong encapsulation of data and behavior. In particular events which target elements within the component typically are invisible to the component user:
 
-- Events flow along XBL scopes.
+- Events flow along XBL scopes:
+    - An event flowing *inside* the component is not visible from outside the component.
+    - An event flowing *outside* the component, including within content copied with `xbl:content` is not visible from inside the component.
 - For special use cases like `fr:error-summary`, _[phantom handlers][3]_ are introduced.
 - `DOMFocusIn` and `DOMFocusOut` follow the behavior outlined in [XForms - Focus][4].
 
