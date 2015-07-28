@@ -1,6 +1,7 @@
 ## See also
 
 - [Guide to Using and Writing XBL Components](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components-guide)
+- [[XBL Event Handling|XForms ~ XBL ~ Event Handling]]
 - [[XBL Bindings| XForms ~ XBL ~ Bindings]]
 - [[XBL Library| XForms ~ XBL ~ Library]]
 
