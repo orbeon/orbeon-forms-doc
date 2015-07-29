@@ -149,8 +149,11 @@ Return true if `$expr` returns `true()` for all items in `$items`. If `$items` i
 
 <xf:bind
   ref="unpublish-button"
-  readonly="not(normalize-space(../selection)
-            and xxf:forall(xxf:split(../selection), $is-available))"/>
+  readonly="
+    not(
+        normalize-space(../selection) and
+        xxf:forall(xxf:split(../selection), $is-available)
+    )"/>
 ```
 
 ### xxf:exists()
@@ -178,8 +181,11 @@ Return true if `$expr` returns `true()` for at least one item in `$items`. If `$
 
 <xf:bind
   ref="publish-button"
-  readonly="not(normalize-space(../selection)
-            and not(xxf:exists(xxf:split(../selection), $is-available)))"/>
+  readonly="
+    not(
+        normalize-space(../selection) and
+        not(xxf:exists(xxf:split(../selection), $is-available))
+    )"/>
 ```
 
 ### xxf:split()
@@ -248,7 +254,11 @@ The following example validates that the image is within 10% of a 1x1 aspect rat
 ```xml
 <xf:bind
   ref="uploaded-image"
-  constraint="abs(xs:decimal(xxf:image-metadata(., 'width')) div xs:decimal(xxf:image-metadata(., 'height')) - 1.0) le 0.1"/>
+  constraint="
+    abs(
+        xs:decimal(xxf:image-metadata(., 'width')) div
+        xs:decimal(xxf:image-metadata(., 'height')) - 1.0
+    ) le 0.1"/>
 ```
 
 ### xxf:username()
