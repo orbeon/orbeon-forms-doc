@@ -16,8 +16,6 @@ The following functions are documented on this page:
     - `xxf:get-window-state()`
 - Other functions
     - `xxf:r()`
-    - `xxf:forall()`
-    - `xxf:exists()`
     - `xxf:split()`
     - `xxf:client-id()`
     - `xxf:image-metadata()`
@@ -171,70 +169,6 @@ Example:
 </xf:instance>
 
 <xf:label value="xxf:r('buttons.download')"/>
-```
-
-### xxf:forall()
-
-[SINCE Orbeon Forms 4.3]
-
-```ruby
-xxf:forall(
-  $items as item()*,
-  $expr as jt:org.orbeon.saxon.functions.Evaluate-PreparedExpression
-) as xs:boolean
-```
-
-Return true if `$expr` returns `true()` for all items in `$items`. If `$items` is the empty sequence, return `true()`.
-
-`$expr` is a Saxon stored expression which:
-
-- takes an `item()` as context item
-- must return an `xs:boolean`
-
-```xml
-<xf:var
-  name="is-available"
-  value="saxon:expression('xxf:split(., ''/'')[3] = ''true''')"/>
-
-<xf:bind
-  ref="unpublish-button"
-  readonly="
-    not(
-        normalize-space(../selection) and
-        xxf:forall(xxf:split(../selection), $is-available)
-    )"/>
-```
-
-### xxf:exists()
-
-[SINCE Orbeon Forms 4.3]
-
-```ruby
-xxf:exists(
-  $items as item()*,
-  $expr as jt:org.orbeon.saxon.functions.Evaluate-PreparedExpression
-) as xs:boolean
-```
-
-Return true if `$expr` returns `true()` for at least one item in `$items`. If `$items` is the empty sequence, return `false()`.
-
-`$expr` is a Saxon stored expression which:
-
-- takes an `item()` as context item
-- must return an `xs:boolean`
-
-```xml
-<xf:var
-  name="is-available"
-  value="saxon:expression('xxf:split(., ''/'')[3] = ''true''')"/>
-
-<xf:bind
-  ref="publish-button"
-  readonly="
-    not(
-        normalize-space(../selection) and
-        not(xxf:exists(xxf:split(../selection), $is-available))
-    )"/>
 ```
 
 ### xxf:split()
