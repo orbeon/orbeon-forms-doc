@@ -322,3 +322,298 @@ specified by `$min.` Also return `true()` if `$min` is the empty sequence.
 Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
 
 > what is counted is the number of XML characters in the string (or equivalently, the number of Unicode code points). Some implementations may represent a code point above xFFFF using two 16-bit values known as a surrogate. A surrogate counts as one character, not two.
+
+## Other functions
+
+### xxf:call-xpl()
+
+```ruby
+xxf:call-xpl(
+    $xplURL        as xs:string,
+    $inputNames    as xs:string*,
+    $inputElements as element()*,
+    $outputNames   as xs:string+
+) as document-node()*
+```
+
+This function lets you call an XPL pipeline.
+
+- `$xplURL` is the URL of the pipeline. It must be an absolute URL.
+- `$inputNames` is a sequence of strings, each one representing the name of an input of the pipeline that you want to connect.
+- `$inputElements` is a sequence of elements to be used as input for the pipeline. The `$inputNames` and `$inputElements` sequences must have the same length. For each element in `$inputElements`, a document is created and connected to an input of the pipeline. Elements are matched to input name by position, for instance the element at position 3 of `$inputElements` is connected to the input with the name specified at position 3 in `$inputNames`.
+- `$outputNames` is a sequence of output names to read.
+
+The function returns a sequence of document nodes corresponding the output of the pipeline. The returned sequence will have the same length as `$outputNames` and will correspond to the pipeline output with the name specified on `$outputNames` based on position.
+
+The example below shows a call to the `xxf:call-xpl` function, calling a pipeline with two inputs and one output :
+
+```ruby
+xxf:call-xpl(
+    'oxf:/examples/sandbox/xpath/run-xpath.xpl',
+    (
+        'input',
+        'xpath'
+    ),
+    (
+        instance('instance')/input,
+        instance('instance')/xpath
+    ),
+    'html'
+)
+```
+
+### xxf:encode-iso9075-14()
+
+```ruby
+xxf:encode-iso9075-14($value as xs:string) as xs:string
+```
+
+The `xxf:encode-iso9075-14()` function encodes a string according to ISO 9075-14:2003. The purpose is to escape any character which is not valid in an XML name.
+
+### xxf:decode-iso9075-14()
+
+```ruby
+xxf:decode-iso9075-14($value as xs:string) as xs:string
+```
+
+The `xxf:decode-iso9075-14()` function decodes a string according to ISO 9075-14:2003.
+
+### xxf:doc-base64()
+
+```ruby
+xxf:doc-base64($href as xs:string) as xs:string
+```
+
+The `xxf:doc-base64()` function reads a resource identified by the given URL, and returns the content of the file as a Base64-encoded string. It is a dynamic XPath error if the resource cannot be read.
+
+### xxf:doc-base64-available()
+
+```ruby
+xxf:doc-base64-available($href as xs:string) as xs:boolean
+```
+
+The `xxf:doc-base64-available()` function reads a resource identified by the given URL. It returns `true()` if the file can be read, `false()` otherwise.
+
+### xxf:lang()
+
+```ruby
+xxf:lang() as xs:string?
+```
+
+The `xxf:lang()` function returns the current language as specified with the `xml:lang` attribute.
+
+The `xml:lang` value to use is determined this way:
+
+* if the element containing the `xxf:lang()` function has an `xml:lang` attribute, that attribute is used
+* otherwise, the first ancestor element of the element containing the `xxf:lang()` function that has an `xml:lang` attribute is used
+
+`xml:lang` is supported in the following locations:
+
+* for a static xml:lang value
+    * on any XForms element
+    * on the top-level `<xh:html>` element
+* for a dynamic xml:lang value (using an AVT)
+    * only on the top-level `<xh:html>` element
+
+_NOTE: `xml:lang` attributes on HTML elements other than the top-level `<xh:html>` are ignored for the purpose of the `xxf:lang()` function._
+
+_NOTE: Format of the locale is currently restricted to the form "en" or "en-GB". Support for [BCP 47][4] would be desirable._
+
+Example of static values:
+
+```xml
+<xf:group xml:lang="it">
+    <!-- This output produces the value "it" -->
+    <xf:output value="xxf:lang()"/>
+    <!-- This output produces the value "zh" -->
+    <xf:output value="xxf:lang()" xml:lang="zh"/>
+</xf:group>
+```
+
+Example with an AVT:
+
+```xml
+<xh:html xml:lang="{instance()}">
+    <xh:head>
+        <xf:model id="model">
+            <xf:instance id="instance">
+                <lang>it</lang>
+            </xf:instance>
+        </xf:model>
+    </xh:head>
+    <xh:body>
+        <xf:group>
+            <!-- This output produces "it" based on the top-level AVT, which
+                 contains the value stored in the instance -->
+            <xf:output value="xxf:lang()"/>
+            <!-- This output produces "zh" -->
+            <xf:output value="xxf:lang()" xml:lang="zh"/>
+        </xf:group>
+    </xh:body>
+</xh:html>
+```
+
+When calling the `xxf:lang()` function from an XBL component:
+
+- `xml:lang` is first searched as described above
+- if no `xml:lang` value is found in the XBL component, then the `xml:lang` value of the XBL bound element is searched
+
+Example:
+
+```xml
+<xbl:xbl>
+    <xbl:binding id="fr-foo" element="fr|foo">
+        <xbl:template>
+            <xf:group>
+                <!-- The xml:lang value of the bound element is used -->
+                <xf:output value="xxf:lang()"/>
+                <!-- The xml:lang value is "zh" -->
+                <xf:output value="xxf:lang()" xml:lang="zh"/>
+            </xf:group>
+        </xbl:template>
+    </xbl:binding>
+</xbl:xbl>
+```
+
+### xxf:format-message()
+
+
+```ruby
+xxf:format-message($template as xs:string, $parameters as item()*) as xs:string
+```
+
+The `xxf:format-message()` function allows you to format a localized message based on a template and parameters.
+
+* the first parameter is a template string following the syntax of the Java [MessageFormat][5] class
+* the second parameter is a sequence of parameters that can be referenced from the template string
+
+The following types are supported:
+
+* string (the default)
+* number (including currency and percent)
+* date
+* time
+
+The function uses the current language as would be obtained by the `xxf:lang()` function to determine a locale.
+
+Example with number, date, time, and string:
+
+```xml
+<xf:output
+    value="
+        xxf:format-message(
+            'At {2,time,short} on {2,date,long}, we detected {1,number,integer} spaceships on the planet {0}.',
+            (
+                'Mars',
+                3,
+                xs:dateTime('2010-07-23T19:25:13-07:00')
+            )
+        )"/>
+```
+
+This produces the following output with an en-US locale:
+
+```
+At 7:25 PM on July 23, 2010, we detected 3 spaceships on the planet Mars.
+```
+
+Example including a choice:
+
+```xml
+<xf:output
+    value="
+        xxf:format-message(
+            'There {0,choice,0#are no files|1#is one file|1&lt;are {0,number,integer} files}.',
+            xs:integer(.)
+        )"/>
+```
+
+This produces the following outputs, depending on the value provided:
+
+```
+There are no files.
+There is one file.
+There are 1,273 files.
+```
+
+_NOTE: It is important to pass dates and times as typed values. Use `xs:dateTime()`, `xs:date()`, or `xs:time()` if needed to convert from a string._
+
+### xxf:form-urlencode()
+
+```ruby
+xxf:form-urlencode($document as node()) as xs:string
+```
+
+Performs `application/x-www-form-urlencoded` encoding on an XML document.
+
+### xxf:rewrite-resource-uri()
+
+```ruby
+xxf:rewrite-resource-uri($uri as xs:string) as xs:string
+```
+
+Rewrite a URI as an Orbeon Forms resource URI.
+
+### xxf:has-class()
+
+```ruby
+xxf:has-class($class-name as xs:string) as xs:boolean
+xxf:has-class($class-name as xs:string, $el as node()) as xs:boolean
+```
+
+Returns whether the context element, or the given element, has a `class` attribute containing the specified class name.
+
+### xxf:classes()
+
+```ruby
+xxf:classes() as xs:boolean
+xxf:classes($el as node()) as xs:string*
+```
+
+Returns for the context element or the given element if provided, all the classes on the `class` attribute.
+
+## XSLT 2.0 functions
+
+The following functions from XSLT 2.0 are  available:
+
+The following functions from XSLT 2.0 are  available:
+
+- `format-date()` ([external documentation](http://www.w3.org/TR/2005/WD-xslt20-20050915/#function-format-date))
+- `format-dateTime()` ([external documentation](http://www.w3.org/TR/2005/WD-xslt20-20050915/#function-format-dateTime))
+- `format-time()` ([external documentation](http://www.w3.org/TR/2005/WD-xslt20-20050915/#function-format-time))
+- `format-number()` ([external documentation](http://www.w3.org/TR/2005/WD-xslt20-20050915/#function-format-number))
+
+## eXforms functions
+
+eXForms was a suggested set of extensions to XForms 1.0, grouped into different modules. Orbeon Forms supports the `exf:mip` module, which includes the following functions:
+
+- `exf:relevant()`
+- `exf:readonly()`
+- `exf:required()`
+
+_NOTE: These functions will be available as part of XForms 2.0 support._
+
+Orbeon Forms also supports the following from the *sorting module*:
+
+```ruby
+exf:sort(
+    $sequence   as item()*,
+    $sort-key   as xs:string,
+    $datatype   as xs:string?,
+    $order      as xs:string?,
+    $case-order as xs:string?
+) as item()*
+```
+
+Note that the second argument is interpreted as a string, unlike with `xxf:sort()`:
+
+```xml
+<xf:itemset ref="exf:sort(instance('samples-instance')/file, '@name', 'text', 'ascending')">
+    ...
+</xf:itemset>
+```
+
+eXForms functions live in the `http://www.exforms.org/exf/1-0` namespace, usually bound to the prefix `exf` or `exforms`.
+
+[4]: http://www.rfc-editor.org/rfc/bcp/bcp47.txt
+[5]: http://docs.oracle.com/javase/7/docs/api/java/text/MessageFormat.html
