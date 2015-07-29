@@ -556,3 +556,6 @@ xxf:classes($el as node()) as xs:string*
 ```
 
 Returns for the context element or the given element if provided, all the classes on the `class` attribute.
+
+[4]: http://www.rfc-editor.org/rfc/bcp/bcp47.txt
+[5]: http://docs.oracle.com/javase/7/docs/api/java/text/MessageFormat.html
