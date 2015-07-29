@@ -4,7 +4,7 @@
 
 Most of the function library is [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions). The following functions are documented on this page:
 
-- XForms 2.0
+- XForms 2.0 functions
     - `xf:valid()`
     - `xf:bind()`
 - extension functions
