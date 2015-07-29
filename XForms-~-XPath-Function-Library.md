@@ -7,24 +7,23 @@ Most of the function library is [documented here](http://wiki.orbeon.com/forms/d
 - XForms 2.0 functions
     - `xf:valid()`
     - `xf:bind()`
-- Extension XForms functions
+- Validation functions
+    - `xxf:max-length()`
+    - `xxf:min-length()`
+- HTTP request functions
+    - `xxf:username()`
+    - `xxf:user-group()`
+    - `xxf:user-roles()`
+    - `xxf:get-request-method()`
+    - `xxf:get-portlet-mode()`
+    - `xxf:get-window-state()`
+- Other functions
     - `xxf:r()`
     - `xxf:forall()`
     - `xxf:exists()`
     - `xxf:split()`
     - `xxf:client-id()`
     - `xxf:image-metadata()`
-    - `xxf:username()`
-    - `xxf:user-group()`
-    - `xxf:user-roles()`
-- Validation functions
-    - `xxf:max-length()`
-    - `xxf:min-length()`
-- HTTP request functions
-    - `xxf:get-request-method()`
-    - `xxf:get-portlet-mode()`
-    - `xxf:get-window-state()`
-- Other functions
     - `xxf:call-xpl()`
     - `xxf:encode-iso9075-14()`
     - `xxf:decode-iso9075-14()`
@@ -72,7 +71,112 @@ xf:bind($id as xs:string) as node()*
 
 This function returns the sequence of nodes associated with the bind specified by the `id` parameter.
 
-## Extension functions
+## Validation functions
+
+### xxf:max-length()
+
+[SINCE Orbeon Forms 4.10]
+
+```ruby
+xxf:max-length($max as xs:integer?) as xs:boolean
+```
+
+Return `true()` if the context item converted to a string via the `string()` function contains at most the number of characters
+specified by `$max.` Also return `true()` if `$max` is the empty sequence.
+
+Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
+
+> what is counted is the number of XML characters in the string (or equivalently, the number of Unicode code points). Some implementations may represent a code point above xFFFF using two 16-bit values known as a surrogate. A surrogate counts as one character, not two.
+
+### xxf:min-length()
+
+[SINCE Orbeon Forms 4.10]
+
+```ruby
+xxf:min-length($min as xs:integer?) as xs:boolean
+```
+
+Return `true()` if the context item converted to a string via the `string()` function contains at least the number of characters
+specified by `$min.` Also return `true()` if `$min` is the empty sequence.
+
+Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
+
+> what is counted is the number of XML characters in the string (or equivalently, the number of Unicode code points). Some implementations may represent a code point above xFFFF using two 16-bit values known as a surrogate. A surrogate counts as one character, not two.
+
+## HTTP request functions
+
+### xxf:username()
+
+[SINCE Orbeon Forms 4.9]
+
+```ruby
+xxf:username() as xs:string?
+```
+
+Return the current user's username if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
+
+### xxf:user-group()
+
+[SINCE Orbeon Forms 4.9]
+
+```ruby
+xxf:user-group() as xs:string?
+```
+
+Return the current user's group if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
+
+### xxf:user-roles()
+
+[SINCE Orbeon Forms 4.9]
+
+```ruby
+xxf:user-roles() as xs:string*
+```
+
+Return the current user's groups if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
+
+
+### xxf:get-request-method()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the current HTTP method.
+
+```ruby
+xxf:get-request-method() as xs:string
+```
+
+Return the HTTP method of the current request, such as `GET`, `POST`, etc.
+
+### xxf:get-portlet-mode()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the portlet mode.
+
+```ruby
+xxf:get-portlet-mode() as xs:string
+```
+
+If running within a portlet context, return the portlet mode (e.g. `view`, `edit`), otherwise return the empty sequence.
+
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+
+### xxf:get-window-state()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the portlet window state.
+
+```ruby
+xxf:get-window-state() as xs:string
+```
+
+If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
+
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+
+## Other functions
 
 ### xxf:r()
 
@@ -243,112 +347,6 @@ The following example validates that the image is within 10% of a 1x1 aspect rat
         xs:decimal(xxf:image-metadata(., 'height')) - 1.0
     ) le 0.1"/>
 ```
-
-### xxf:username()
-
-[SINCE Orbeon Forms 4.9]
-
-```ruby
-xxf:username() as xs:string?
-```
-
-Return the current user's username if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
-
-### xxf:user-group()
-
-[SINCE Orbeon Forms 4.9]
-
-```ruby
-xxf:user-group() as xs:string?
-```
-
-Return the current user's group if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
-
-### xxf:user-roles()
-
-[SINCE Orbeon Forms 4.9]
-
-```ruby
-xxf:user-roles() as xs:string*
-```
-
-Return the current user's groups if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
-
-## Validation functions
-
-### xxf:max-length()
-
-[SINCE Orbeon Forms 4.10]
-
-```ruby
-xxf:max-length($max as xs:integer?) as xs:boolean
-```
-
-Return `true()` if the context item converted to a string via the `string()` function contains at most the number of characters
-specified by `$max.` Also return `true()` if `$max` is the empty sequence.
-
-Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
-
-> what is counted is the number of XML characters in the string (or equivalently, the number of Unicode code points). Some implementations may represent a code point above xFFFF using two 16-bit values known as a surrogate. A surrogate counts as one character, not two.
-
-### xxf:min-length()
-
-[SINCE Orbeon Forms 4.10]
-
-```ruby
-xxf:min-length($min as xs:integer?) as xs:boolean
-```
-
-Return `true()` if the context item converted to a string via the `string()` function contains at least the number of characters
-specified by `$min.` Also return `true()` if `$min` is the empty sequence.
-
-Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
-
-> what is counted is the number of XML characters in the string (or equivalently, the number of Unicode code points). Some implementations may represent a code point above xFFFF using two 16-bit values known as a surrogate. A surrogate counts as one character, not two.
-
-## HTTP request functions
-
-### xxf:get-request-method()
-
-[SINCE Orbeon Forms 4.2]
-
-Return the current HTTP method.
-
-```ruby
-xxf:get-request-method() as xs:string
-```
-
-Return the HTTP method of the current request, such as `GET`, `POST`, etc.
-
-### xxf:get-portlet-mode()
-
-[SINCE Orbeon Forms 4.2]
-
-Return the portlet mode.
-
-```ruby
-xxf:get-portlet-mode() as xs:string
-```
-
-If running within a portlet context, return the portlet mode (e.g. `view`, `edit`), otherwise return the empty sequence.
-
-*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
-
-### xxf:get-window-state()
-
-[SINCE Orbeon Forms 4.2]
-
-Return the portlet window state.
-
-```ruby
-xxf:get-window-state() as xs:string
-```
-
-If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
-
-*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
-
-## Other functions
 
 ### xxf:call-xpl()
 
