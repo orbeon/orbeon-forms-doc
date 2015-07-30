@@ -37,7 +37,9 @@ _NOTE: All paths above are relative to the deployment context, e.g the actual UR
 
 ### Persistence API
 
-See [Persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api).
+The persistence API is used to store and retrieve *form definitions* and *form data*.
+
+Orbeon Forms ships out of the box with support for a number of databases (see [[Database Support|Orbeon Forms Features ~ Database Support]]). Integrators can provide persistence via the [persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api).
 
 ### XML representation of form data
 
