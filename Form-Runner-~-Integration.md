@@ -42,6 +42,10 @@ The persistence API is used to store and retrieve *form definitions* and *form d
 
 Orbeon Forms ships out of the box with support for a number of databases (see [[Database Support|Orbeon Forms Features ~ Database Support]]). Integrators can provide persistence via the [persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api).
 
+### External user management
+
+See [[Access Control|Form Runner ~ Access Control]].
+
 ### XML representation of form data
 
 See [[Data Format|Form Runner ~ Data Format]]
@@ -53,4 +57,5 @@ _NOTE: Non-repeated grids do not create containing elements._
 - [[Form Builder Integration|Form Builder ~ Integration]]
 - [[Form Runner Embedding|Form-Runner ~ Embedding]]
 - [Persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api)
+- [[Access Control|Form Runner ~ Access Control]].
 - [[Data Format|Form Runner ~ Data Format]]
