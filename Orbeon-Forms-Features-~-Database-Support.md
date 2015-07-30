@@ -11,13 +11,15 @@ We have two categories of databases:
 
 ## Feature matrix
 
-Feature                                                              |eXist        |Oracle       |MySQL        |SQL Server   |PostgreSQL   |DB2
----------------------------------------------------------------------|-------------|-------------|-------------|-------------|-------------|-------------
-[Form controls and layouts including repeated grids and sections][^1]|Y            |Y            |Y            |Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
-[Versioning][^2]                                                     |N            |Y<sup>3</sup>|Y<sup>3</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>3</sup>
-[[Owner/group-based permissions|Form-Runner ~ Access Control ~ Owner-Group]]                                  |Y<sup>6</sup>|Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
+Feature                                                                                   |eXist        |Oracle       |MySQL        |SQL Server   |PostgreSQL   |DB2
+------------------------------------------------------------------------------------------|-------------|-------------|-------------|-------------|-------------|-------------
+[Form controls and layouts including repeated grids and sections][^1]                     |Y            |Y            |Y            |Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
+[Versioning][^2]                                                                          |N            |Y<sup>3</sup>|Y<sup>3</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>3</sup>
+[[Owner/group-based permissions|Form-Runner ~ Access Control ~ Owner-Group]]|Y<sup>6</sup>|Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
 [[Autosave|Form-Runner ~ Autosave]]                                                       |N            |Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
-[[Flat view|Form-Runner ~ Persistence ~ Flat View]]                                                      |N/A          |Y            |N            |N            |Y<sup>6</sup>|Y<sup>5</sup>
+[[Flat view|Form-Runner ~ Persistence ~ Flat View]]                                       |N/A          |Y            |N            |N            |Y<sup>6</sup>|Y<sup>5</sup>
+Orbeon Forms PE support                                                                   |Y            |Y            |Y            |Y            |Y            |Y
+Orbeon Forms CE support                                                                   |Y            |N            |Y            |N            |Y            |N
 
 1. Since Orbeon Forms 4.3.
 1. Since Orbeon Forms 4.4.
