@@ -4,13 +4,14 @@
 
 Form Builder and Form Runner integrate with other systems through the following means:  
 
-- plain URLs, through which you access Form Runner and Form Builder's pages
+- __Plain URLs__, through which you access Form Runner and Form Builder's pages
     - The URLs can be accessed simply by using hyperlinks or redirects from another application.
-- a [configurable persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api) based on REST (that is, through HTTP)
-- HTTP services
+- __A [configurable persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api)__ based on REST (that is, through HTTP)
+- __External user management__, to connect to a directory of users with associated roles.
+- __HTTP services__
   - called from forms via the Service Editors
   - called by Form Runner to load initial XML data
-- [[embedding|Form-Runner ~ Embedding]] (including within a portal)
+- __[[Embedding|Form-Runner ~ Embedding]]__, including within a portal
 
 The persistence API can be implemented either within Orbeon Forms (like for example the built-in eXist persistence layer), or within an external system.  
 
