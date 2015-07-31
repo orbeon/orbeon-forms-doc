@@ -115,7 +115,9 @@ This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
 
 The `autosave` property specifies whether [[autosave|Form Runner ~ Autosave]] is supported.
 
-If `true`, Form Runner enables autosave if the other [[conditions|Form-Runner-~-Autosave#enabling-autosave]] are met. Otherwise, Form Runner will not attempt to enable autosave.
+This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
+
+- If `true`, Form Runner enables autosave if the other [[conditions|Form-Runner-~-Autosave#enabling-autosave]] are met. Otherwise, Form Runner will not attempt to enable autosave.
 
 ```xml
 <property
@@ -150,7 +152,7 @@ If `true`, Form Runner assumes that versioning is supported by the provider impl
 
 This is used as follows (confirmed for Orbeon Forms 4.5 to 4.10):
 
-- At form publishing time, Form Builder proposes the option to overwrite the existing published form definition, or to create a new version. 
+- At form publishing time, Form Builder proposes the option to overwrite the existing published form definition, or to create a new version.
 
 ```xml
 <property
