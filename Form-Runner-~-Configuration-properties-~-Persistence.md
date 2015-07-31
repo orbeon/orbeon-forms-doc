@@ -99,9 +99,10 @@ The `uri` property specifies the location, via HTTP, of the provider implementat
 
 The `active` property specifies whether the provider is active.
 
-If active, the Form Runner Home page queries this persistence implementation to obtain the list of published forms and enable administrative operations.
+This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
 
-_NOTE: This is used only by the Home page as of Orbeon Forms 4.4 to 4.10._
+- If active, the Form Runner Home Page queries the persistence implementation to obtain the list of published forms and enable administrative operations.
+- See issue [#2327](https://github.com/orbeon/orbeon-forms/issues/2327).
 
 ```xml
 <property
@@ -129,6 +130,11 @@ The `permissions` property specifies whether user/group permissions are supporte
 
 If `true`, Form Runner assumes that permissions are supported by the provider implementation.
 
+This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
+
+- The Summary Page sends a 403 if the user doesn't have access based on role, and the persistence provider is known
+  not to support permissions.
+
 ```xml
 <property
     as="xs:boolean"
@@ -141,6 +147,10 @@ If `true`, Form Runner assumes that permissions are supported by the provider im
 The `versioning` property specifies whether versioning is supported.
 
 If `true`, Form Runner assumes that versioning is supported by the provider implementation.
+
+This is used as follows (confirmed for Orbeon Forms 4.5 to 4.10):
+
+- At form publishing time, Form Builder proposes the option to overwrite the existing published form definition, or to create a new version. 
 
 ```xml
 <property
