@@ -43,8 +43,8 @@ Each of those can be a wildcard (`*`). Wildcards allow you to setup Orbeon Forms
 
 The properties are interpreted hierarchically and you may specify the configuration more or less specifically:
 
-Property | Explanation
----------|------------
+Property                                            | Explanation
+----------------------------------------------------|-------------------------------------------------------
 `oxf.fr.persistence.provider.*.*.*`                 | form definitions and form data for all applications
 `oxf.fr.persistence.provider.*.*.data`              | form data for all applications
 `oxf.fr.persistence.provider.*.*.form`              | form definitions for all applications
@@ -84,41 +84,70 @@ Because wildcards are used, this property does not override the configuration fo
 
 In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combination. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [[multiple schemas|Installation ~ Relational Database Setup#with-multiple-schemas]].
 
-Each provider supports standard properties:
+Each provider supports standard properties, as follows:
+
+The `uri` property specifies the location, via HTTP, of the provider implementation.
 
 ```xml
-<!-- URI of the provider -->
 <property
     as="xs:anyURI"
     name="oxf.fr.persistence.[provider].uri"
     value="[URI to reach the provider]"/>
+```
 
-<!-- Whether the provider is active (used only by the Home page as of 4.4) [SINCE Orbeon Forms 4.4]  -->
+[SINCE Orbeon Forms 4.4]
+
+The `active` property specifies whether the provider is active.
+
+If active, the Form Runner Home page queries this persistence implementation to obtain the list of published forms and enable administrative operations.
+
+_NOTE: This is used only by the Home page as of Orbeon Forms 4.4 to 4.10._
+
+```xml
 <property
     as="xs:boolean"
     name="oxf.fr.persistence.[provider].active"
     value="[true|false]"/>
+```
 
-<!-- Whether autosave is supported [SINCE Orbeon Forms 4.4]  -->
+[SINCE Orbeon Forms 4.4]
+
+The `autosave` property specifies whether [[autosave|Form Runner ~ Autosave]] is supported.
+
+If `true`, Form Runner enables autosave if the other [[conditions|Form-Runner-~-Autosave#enabling-autosave]] are met. Otherwise, Form Runner will not attempt to enable autosave.
+
+```xml
 <property
     as="xs:boolean"
     name="oxf.fr.persistence.[provider].autosave"
     value="[true|false]"/>
+```
 
-<!-- Whether user/group permissions are supported [SINCE Orbeon Forms 4.4]  -->
+[SINCE Orbeon Forms 4.4]
+
+The `permissions` property specifies whether user/group permissions are supported.
+
+If `true`, Form Runner assumes that permissions are supported by the provider implementation.
+
+```xml
 <property
     as="xs:boolean"
     name="oxf.fr.persistence.[provider].permissions"
     value="[true|false]"/>
+```
 
-<!-- Whether versioning is supported [SINCE Orbeon Forms 4.5]  -->
+[SINCE Orbeon Forms 4.5]
+
+The `versioning` property specifies whether versioning is supported.
+
+If `true`, Form Runner assumes that versioning is supported by the provider implementation.
+
+```xml
 <property
     as="xs:boolean"
     name="oxf.fr.persistence.[provider].versioning"
     value="[true|false]"/>
 ```
-
-An *active* provider means a provider which is visible to Form Runner. If a provider is marked as not active, by setting the property to `false`, the Form Runner Home page, for example, will not show form definitions associated with this provider.
 
 Each provider may have specific configuration properties. For the latest settings, see
 [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml#L17).
