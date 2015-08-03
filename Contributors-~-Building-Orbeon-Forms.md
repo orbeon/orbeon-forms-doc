@@ -23,14 +23,16 @@ As of 2015-05-21:
 You need to have already installed:
 
 - [git](http://git-scm.com/)
-- [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html) 13.1 (previous versions may or may not work)
+- [sbt](http://www.scala-sbt.org/) [SINCE 2015-08]
+- [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html) 14 (previous versions may or may not work)
 - [Tomcat 7](http://tomcat.apache.org/download-70.cgi)
 - Java 1.6
 
-On OS X, you can install git easily if you have [Homebrew](http://brew.sh/):
+On OS X, you can install git and sbt easily if you have [Homebrew](http://brew.sh/):
 
 ```bash
 brew install git
+brew install sbt
 ```
 
 With IntelliJ, you need the following plugins, which you can download and enable from IntelliJ directly:
