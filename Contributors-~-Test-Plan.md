@@ -4,7 +4,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 - Misc
     - [[Distribution|Contributors ~ Test Plan ~ Distribution]] [4.10 DONE]
-    - [[Landing Page|Contributors ~ Test Plan ~ Landing Page]] [4.10 TODO]
+    - [[Landing Page|Contributors ~ Test Plan ~ Landing Page]] [4.10 DONE]
     - [[PE Features Availability|Contributors ~ Test Plan ~ PE Features Availability]] [4.10 TODO]
 - Persistence
     - [[Basic Persistence|Contributors ~ Test Plan ~ Basic Persistence]] [4.10 TODO]
