@@ -8,29 +8,30 @@ The following functions are documented on this page:
     - `xxf:max-length()`
     - `xxf:min-length()`
 - HTTP request functions
+    - `xxf:get-portlet-mode()`
+    - `xxf:get-request-method()`
+    - `xxf:get-window-state()`
     - `xxf:username()`
     - `xxf:user-group()`
     - `xxf:user-roles()`
-    - `xxf:get-request-method()`
-    - `xxf:get-portlet-mode()`
-    - `xxf:get-window-state()`
 - Other functions
-    - `xxf:r()`
-    - `xxf:split()`
-    - `xxf:client-id()`
-    - `xxf:image-metadata()`
     - `xxf:call-xpl()`
-    - `xxf:encode-iso9075-14()`
+    - `xxf:classes()`
+    - `xxf:client-id()`
     - `xxf:decode-iso9075-14()`
     - `xxf:doc-base64()`
     - `xxf:doc-base64-available()`
+    - `xxf:encode-iso9075-14()`
+    - `xxf:form-urlencode()`
+    - `xxf:format-message()`
+    - `xxf:has-class()`
+    - `xxf:image-metadata()`
     - `xxf:lang()`
     - `xxf:property()`
-    - `xxf:format-message()`
-    - `xxf:form-urlencode()`
+    - `xxf:r()`
     - `xxf:rewrite-resource-uri()`
-    - `xxf:has-class()`
-    - `xxf:classes()`
+    - `xxf:split()`
+
 
 ## Validation functions
 
