@@ -25,6 +25,7 @@ The following functions are documented on this page:
     - `xxf:doc-base64()`
     - `xxf:doc-base64-available()`
     - `xxf:lang()`
+    - `xxf:property()`
     - `xxf:format-message()`
     - `xxf:form-urlencode()`
     - `xxf:rewrite-resource-uri()`
@@ -392,6 +393,23 @@ Example:
         </xbl:template>
     </xbl:binding>
 </xbl:xbl>
+```
+
+### xxf:property()
+
+```
+xxf:property($property-name as xs:string) as xs:anyAtomicType?
+```
+
+The `xxf:property()` function retrieves the value of a property defined in `properties-local.xml`.
+
+This function returns the following:
+
+- empty sequence if the property is not found
+- `xs:string`, `xs:integer`, `xs:boolean` or `xs:anyURI` depending on the actual type of the property
+
+```xml
+<xf:setvalue ref="my-property" value="xxf:property('my.property.name')"/>
 ```
 
 ### xxf:format-message()
