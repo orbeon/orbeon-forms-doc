@@ -11,9 +11,9 @@ The following functions are documented on this page:
     - `xxf:get-portlet-mode()`
     - `xxf:get-request-method()`
     - `xxf:get-window-state()`
-    - `xxf:username()`
     - `xxf:user-group()`
     - `xxf:user-roles()`
+    - `xxf:username()`
 - Other functions
     - `xxf:call-xpl()`
     - `xxf:classes()`
@@ -67,15 +67,45 @@ Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
 
 ## HTTP request functions
 
-### xxf:username()
+### xxf:get-portlet-mode()
 
-[SINCE Orbeon Forms 4.9]
+[SINCE Orbeon Forms 4.2]
+
+Return the portlet mode.
 
 ```ruby
-xxf:username() as xs:string?
+xxf:get-portlet-mode() as xs:string
 ```
 
-Return the current user's username if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
+If running within a portlet context, return the portlet mode (e.g. `view`, `edit`), otherwise return the empty sequence.
+
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+
+### xxf:get-request-method()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the current HTTP method.
+
+```ruby
+xxf:get-request-method() as xs:string
+```
+
+Return the HTTP method of the current request, such as `GET`, `POST`, etc.
+
+### xxf:get-window-state()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the portlet window state.
+
+```ruby
+xxf:get-window-state() as xs:string
+```
+
+If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
+
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
 
 ### xxf:user-group()
 
@@ -97,154 +127,17 @@ xxf:user-roles() as xs:string*
 
 Return the current user's groups if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
 
+### xxf:username()
 
-### xxf:get-request-method()
-
-[SINCE Orbeon Forms 4.2]
-
-Return the current HTTP method.
+[SINCE Orbeon Forms 4.9]
 
 ```ruby
-xxf:get-request-method() as xs:string
+xxf:username() as xs:string?
 ```
 
-Return the HTTP method of the current request, such as `GET`, `POST`, etc.
-
-### xxf:get-portlet-mode()
-
-[SINCE Orbeon Forms 4.2]
-
-Return the portlet mode.
-
-```ruby
-xxf:get-portlet-mode() as xs:string
-```
-
-If running within a portlet context, return the portlet mode (e.g. `view`, `edit`), otherwise return the empty sequence.
-
-*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
-
-### xxf:get-window-state()
-
-[SINCE Orbeon Forms 4.2]
-
-Return the portlet window state.
-
-```ruby
-xxf:get-window-state() as xs:string
-```
-
-If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
-
-*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+Return the current user's username if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
 
 ## Other functions
-
-### xxf:r()
-
-The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources.
-
-```ruby
-xxf:r($resource-name as xs:string) as xs:string
-xxf:r($resource-name as xs:string, $instance-name as xs:string) as xs:string
-```
-
-- `$resource-name`: resource path of the form `foo.bar.baz`. The path is relative to the `resource` element corresponding to the current language in the resources instance.
-- `$instance-name`: name of the resources instance. If omitted, search `orbeon-resources` and then `fr-form-resources`.
-
-The function:
-
-- determines the current language based on `xml:lang`attribute in scope where the function is in used
--  resolves the closest relevant resources instance
-  - specified instance name if present
-  - `orbeon-resources` or `fr-form-resources` (for Form Runner compatibility) if absent
-- uses the resource name specified to find a resource located in the resources instance, relative to the `resource` element with the matching language
-
-Example:
-
-```xml
-<xf:instance id="orbeon-resources" xxf:readonly="true">
-    <resources>
-        <resource xml:lang="en"><buttons><download>Download</download></buttons></resource>
-        <resource xml:lang="fr"><buttons><download>Télécharger</download></buttons></resource>
-    </resources>
-</xf:instance>
-
-<xf:label value="xxf:r('buttons.download')"/>
-```
-
-### xxf:split()
-
-[SINCE Orbeon Forms 4.3]
-
-```ruby
-xxf:split() as xs:string*
-xxf:split($value as xs:string) as xs:string*
-xxf:split($value as xs:string, $separators as xs:string) as xs:string*
-```
-
-Split a string with one or more separator characters.
-
-If no argument is passed, split the context item on white space.
-
-If `$separator` is specified, each character is allowed as separator.
-
-```ruby
-xxf:split(' foo  bar   baz ')
-xxf:split('foo$bar_baz', '$_')
-element/xxf:split()
-element/@value/xxf:split()
-```
-
-### xxf:client-id()
-
-[SINCE Orbeon Forms 4.3]
-
-```ruby
-xxf:client-id($static-or-absolute-id as xs:string) as xs:string?
-```
-
-Resolve the XForms object with the id specified, and return the id as used on the client.
-
-Return the empty sequence if the resolution fails.
-
-```xml
-<xh:a href="#{xxf:client-id('my-element')}"/>
-
-<xh:div id="my-element" xxf:control="true">...</xh:div>
-```
-
-### xxf:image-metadata()
-
-[SINCE Orbeon Forms 4.4]
-
-```ruby
-xxf:image-metadata($content as xs:anyURI, $name as xs:string) as xs:item?
-```
-
-Access basic image metadata.
-
-The function returns the empty sequence if the URL is empty or the metadata requested is not found.
-
-- `$content`: URL pointing to an image
-- `$name`: metadata property name
-    - `width`: image width in pixels, returns an `xs:integer` if found
-    - `height`: image height in pixels, returns an `xs:integer` if found
-    - `mediatype`: image mediatype based on the content, returns an `xs:string` of `image/jpeg`, `image/png`, `image/gif` or `image/bmp` (the formats universally supported by browsers) if found
-
-*NOTE: The function dereferences the content of the URL when called. Accesses to local files are likely to be faster than remote files.*
-
-The following example validates that the image is within 10% of a 1x1 aspect ratio:
-
-```xml
-<xf:bind
-  ref="uploaded-image"
-  constraint="
-    abs(
-        xs:decimal(xxf:image-metadata(., 'width')) div
-        xs:decimal(xxf:image-metadata(., 'height')) - 1.0
-    ) le 0.1"/>
-```
 
 ### xxf:call-xpl()
 
@@ -283,13 +176,32 @@ xxf:call-xpl(
 )
 ```
 
-### xxf:encode-iso9075-14()
+### xxf:classes()
 
 ```ruby
-xxf:encode-iso9075-14($value as xs:string) as xs:string
+xxf:classes() as xs:boolean
+xxf:classes($el as node()) as xs:string*
 ```
 
-The `xxf:encode-iso9075-14()` function encodes a string according to ISO 9075-14:2003. The purpose is to escape any character which is not valid in an XML name.
+Returns for the context element or the given element if provided, all the classes on the `class` attribute.
+
+### xxf:client-id()
+
+[SINCE Orbeon Forms 4.3]
+
+```ruby
+xxf:client-id($static-or-absolute-id as xs:string) as xs:string?
+```
+
+Resolve the XForms object with the id specified, and return the id as used on the client.
+
+Return the empty sequence if the resolution fails.
+
+```xml
+<xh:a href="#{xxf:client-id('my-element')}"/>
+
+<xh:div id="my-element" xxf:control="true">...</xh:div>
+```
 
 ### xxf:decode-iso9075-14()
 
@@ -314,6 +226,126 @@ xxf:doc-base64-available($href as xs:string) as xs:boolean
 ```
 
 The `xxf:doc-base64-available()` function reads a resource identified by the given URL. It returns `true()` if the file can be read, `false()` otherwise.
+
+### xxf:encode-iso9075-14()
+
+```ruby
+xxf:encode-iso9075-14($value as xs:string) as xs:string
+```
+
+The `xxf:encode-iso9075-14()` function encodes a string according to ISO 9075-14:2003. The purpose is to escape any character which is not valid in an XML name.
+
+### xxf:form-urlencode()
+
+```ruby
+xxf:form-urlencode($document as node()) as xs:string
+```
+
+Performs `application/x-www-form-urlencoded` encoding on an XML document.
+
+### xxf:format-message()
+
+
+```ruby
+xxf:format-message($template as xs:string, $parameters as item()*) as xs:string
+```
+
+The `xxf:format-message()` function allows you to format a localized message based on a template and parameters.
+
+* the first parameter is a template string following the syntax of the Java [MessageFormat][5] class
+* the second parameter is a sequence of parameters that can be referenced from the template string
+
+The following types are supported:
+
+* string (the default)
+* number (including currency and percent)
+* date
+* time
+
+The function uses the current language as would be obtained by the `xxf:lang()` function to determine a locale.
+
+Example with number, date, time, and string:
+
+```xml
+<xf:output
+    value="
+        xxf:format-message(
+            'At {2,time,short} on {2,date,long}, we detected {1,number,integer} spaceships on the planet {0}.',
+            (
+                'Mars',
+                3,
+                xs:dateTime('2010-07-23T19:25:13-07:00')
+            )
+        )"/>
+```
+
+This produces the following output with an en-US locale:
+
+```
+At 7:25 PM on July 23, 2010, we detected 3 spaceships on the planet Mars.
+```
+
+Example including a choice:
+
+```xml
+<xf:output
+    value="
+        xxf:format-message(
+            'There {0,choice,0#are no files|1#is one file|1&lt;are {0,number,integer} files}.',
+            xs:integer(.)
+        )"/>
+```
+
+This produces the following outputs, depending on the value provided:
+
+```
+There are no files.
+There is one file.
+There are 1,273 files.
+```
+
+_NOTE: It is important to pass dates and times as typed values. Use `xs:dateTime()`, `xs:date()`, or `xs:time()` if needed to convert from a string._
+
+### xxf:has-class()
+
+```ruby
+xxf:has-class($class-name as xs:string) as xs:boolean
+xxf:has-class($class-name as xs:string, $el as node()) as xs:boolean
+```
+
+Returns whether the context element, or the given element, has a `class` attribute containing the specified class name.
+
+### xxf:image-metadata()
+
+[SINCE Orbeon Forms 4.4]
+
+```ruby
+xxf:image-metadata($content as xs:anyURI, $name as xs:string) as xs:item?
+```
+
+Access basic image metadata.
+
+The function returns the empty sequence if the URL is empty or the metadata requested is not found.
+
+- `$content`: URL pointing to an image
+- `$name`: metadata property name
+    - `width`: image width in pixels, returns an `xs:integer` if found
+    - `height`: image height in pixels, returns an `xs:integer` if found
+    - `mediatype`: image mediatype based on the content, returns an `xs:string` of `image/jpeg`, `image/png`, `image/gif` or `image/bmp` (the formats universally supported by browsers) if found
+
+*NOTE: The function dereferences the content of the URL when called. Accesses to local files are likely to be faster than remote files.*
+
+The following example validates that the image is within 10% of a 1x1 aspect ratio:
+
+```xml
+<xf:bind
+  ref="uploaded-image"
+  constraint="
+    abs(
+        xs:decimal(xxf:image-metadata(., 'width')) div
+        xs:decimal(xxf:image-metadata(., 'height')) - 1.0
+    ) le 0.1"/>
+```
 
 ### xxf:lang()
 
@@ -413,76 +445,38 @@ This function returns the following:
 <xf:setvalue ref="my-property" value="xxf:property('my.property.name')"/>
 ```
 
-### xxf:format-message()
+### xxf:r()
 
-
-```ruby
-xxf:format-message($template as xs:string, $parameters as item()*) as xs:string
-```
-
-The `xxf:format-message()` function allows you to format a localized message based on a template and parameters.
-
-* the first parameter is a template string following the syntax of the Java [MessageFormat][5] class
-* the second parameter is a sequence of parameters that can be referenced from the template string
-
-The following types are supported:
-
-* string (the default)
-* number (including currency and percent)
-* date
-* time
-
-The function uses the current language as would be obtained by the `xxf:lang()` function to determine a locale.
-
-Example with number, date, time, and string:
-
-```xml
-<xf:output
-    value="
-        xxf:format-message(
-            'At {2,time,short} on {2,date,long}, we detected {1,number,integer} spaceships on the planet {0}.',
-            (
-                'Mars',
-                3,
-                xs:dateTime('2010-07-23T19:25:13-07:00')
-            )
-        )"/>
-```
-
-This produces the following output with an en-US locale:
-
-```
-At 7:25 PM on July 23, 2010, we detected 3 spaceships on the planet Mars.
-```
-
-Example including a choice:
-
-```xml
-<xf:output
-    value="
-        xxf:format-message(
-            'There {0,choice,0#are no files|1#is one file|1&lt;are {0,number,integer} files}.',
-            xs:integer(.)
-        )"/>
-```
-
-This produces the following outputs, depending on the value provided:
-
-```
-There are no files.
-There is one file.
-There are 1,273 files.
-```
-
-_NOTE: It is important to pass dates and times as typed values. Use `xs:dateTime()`, `xs:date()`, or `xs:time()` if needed to convert from a string._
-
-### xxf:form-urlencode()
+The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources.
 
 ```ruby
-xxf:form-urlencode($document as node()) as xs:string
+xxf:r($resource-name as xs:string) as xs:string
+xxf:r($resource-name as xs:string, $instance-name as xs:string) as xs:string
 ```
 
-Performs `application/x-www-form-urlencoded` encoding on an XML document.
+- `$resource-name`: resource path of the form `foo.bar.baz`. The path is relative to the `resource` element corresponding to the current language in the resources instance.
+- `$instance-name`: name of the resources instance. If omitted, search `orbeon-resources` and then `fr-form-resources`.
+
+The function:
+
+- determines the current language based on `xml:lang`attribute in scope where the function is in used
+-  resolves the closest relevant resources instance
+  - specified instance name if present
+  - `orbeon-resources` or `fr-form-resources` (for Form Runner compatibility) if absent
+- uses the resource name specified to find a resource located in the resources instance, relative to the `resource` element with the matching language
+
+Example:
+
+```xml
+<xf:instance id="orbeon-resources" xxf:readonly="true">
+    <resources>
+        <resource xml:lang="en"><buttons><download>Download</download></buttons></resource>
+        <resource xml:lang="fr"><buttons><download>Télécharger</download></buttons></resource>
+    </resources>
+</xf:instance>
+
+<xf:label value="xxf:r('buttons.download')"/>
+```
 
 ### xxf:rewrite-resource-uri()
 
@@ -492,23 +486,29 @@ xxf:rewrite-resource-uri($uri as xs:string) as xs:string
 
 Rewrite a URI as an Orbeon Forms resource URI.
 
-### xxf:has-class()
+### xxf:split()
+
+[SINCE Orbeon Forms 4.3]
 
 ```ruby
-xxf:has-class($class-name as xs:string) as xs:boolean
-xxf:has-class($class-name as xs:string, $el as node()) as xs:boolean
+xxf:split() as xs:string*
+xxf:split($value as xs:string) as xs:string*
+xxf:split($value as xs:string, $separators as xs:string) as xs:string*
 ```
 
-Returns whether the context element, or the given element, has a `class` attribute containing the specified class name.
+Split a string with one or more separator characters.
 
-### xxf:classes()
+If no argument is passed, split the context item on white space.
+
+If `$separator` is specified, each character is allowed as separator.
 
 ```ruby
-xxf:classes() as xs:boolean
-xxf:classes($el as node()) as xs:string*
+xxf:split(' foo  bar   baz ')
+xxf:split('foo$bar_baz', '$_')
+element/xxf:split()
+element/@value/xxf:split()
 ```
 
-Returns for the context element or the given element if provided, all the classes on the `class` attribute.
 
 [4]: http://www.rfc-editor.org/rfc/bcp/bcp47.txt
 [5]: http://docs.oracle.com/javase/7/docs/api/java/text/MessageFormat.html
