@@ -5,33 +5,32 @@
 The following functions are documented on this page:
 
 - Validation functions
-    - `xxf:max-length()`
-    - `xxf:min-length()`
+    - [`xxf:max-length()`](#xxfmax-length)
+    - [`xxf:min-length()`](#xxfmin-length)
 - HTTP request functions
-    - `xxf:get-portlet-mode()`
-    - `xxf:get-request-method()`
-    - `xxf:get-window-state()`
-    - `xxf:user-group()`
-    - `xxf:user-roles()`
-    - `xxf:username()`
+    - [`xxf:get-portlet-mode()`](#xxfget-portlet-mode)
+    - [`xxf:get-request-method()`](#xxfget-request-method)
+    - [`xxf:get-window-state()`](#xxfget-window-state)
+    - [`xxf:user-group()`](#xxfuser-group)
+    - [`xxf:user-roles()`](#xxfuser-roles)
+    - [`xxf:username()`](#xxfusername)
 - Other functions
-    - `xxf:call-xpl()`
-    - `xxf:classes()`
-    - `xxf:client-id()`
-    - `xxf:decode-iso9075-14()`
-    - `xxf:doc-base64()`
-    - `xxf:doc-base64-available()`
-    - `xxf:encode-iso9075-14()`
-    - `xxf:form-urlencode()`
-    - `xxf:format-message()`
-    - `xxf:has-class()`
-    - `xxf:image-metadata()`
-    - `xxf:lang()`
-    - `xxf:property()`
-    - `xxf:r()`
-    - `xxf:rewrite-resource-uri()`
-    - `xxf:split()`
-
+    - [`xxf:call-xpl()`](#xxfcall-xpl)
+    - [`xxf:classes()`](#xxfclasses)
+    - [`xxf:client-id()`](#xxfclient-id)
+    - [`xxf:decode-iso9075-14()`](#xxfdecode-iso9075-14)
+    - [`xxf:doc-base64()`](#xxfdoc-base64)
+    - [`xxf:doc-base64-available()`](#xxfdoc-base64-available)
+    - [`xxf:encode-iso9075-14()`](#xxfencode-iso9075-14)
+    - [`xxf:form-urlencode()`](#xxfform-urlencode)
+    - [`xxf:format-message()`](#xxfformat-message)
+    - [`xxf:has-class()`](#xxfhas-class)
+    - [`xxf:image-metadata()`](#xxfimage-metadata)
+    - [`xxf:lang()`](#xxflang)
+    - [`xxf:property()`](#xxfproperty)
+    - [`xxf:r()`](#xxfr)
+    - [`xxf:rewrite-resource-uri()`](#xxfrewrite-resource-uri)
+    - [`xxf:split()`](#xxfsplit)
 
 ## Validation functions
 
