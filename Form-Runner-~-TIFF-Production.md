@@ -35,7 +35,9 @@ Example for the Summary Page:
 
 See also [[Predefined buttons|Form Runner ~ Buttons and Processes#predefined buttons]].
 
-### Configuration
+### Properties
+
+#### Compression type
 
 The TIFF compression type can be selected with the `oxf.fr.detail.tiff.compression.type` property:
 
@@ -49,6 +51,8 @@ The TIFF compression type can be selected with the `oxf.fr.detail.tiff.compressi
 - possible value: `CCITT RLE`, `CCITT T.4`, `CCITT T.6`, `LZW`, `JPEG`, `ZLib`, `PackBits`, `Deflate`, `EXIF JPEG` or `none`
 - default: `LZW`
 
+#### Compression quality
+
 The compression quality can be selected with the `oxf.fr.detail.tiff.compression.quality` property:
 
 ```xml
@@ -60,6 +64,8 @@ The compression quality can be selected with the `oxf.fr.detail.tiff.compression
 
 - possible values: `0.0` to `1.0`
 - default: `0.8`
+
+#### Scale factor
 
 The scale factor can be selected with the `oxf.fr.detail.tiff.scale` property:
 
@@ -73,6 +79,7 @@ The scale factor can be selected with the `oxf.fr.detail.tiff.scale` property:
 - possible values: positive double-precision number
 - default: `3.0`
 
+### Custom TIFF filename
 
 The following property dynamically controls the name of the TIFF file produced on the Detail Page. By default, if the property value is blank, the TIFF filename is a random id assigned to the current form session.
 
