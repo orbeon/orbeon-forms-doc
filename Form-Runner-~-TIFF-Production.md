@@ -33,7 +33,7 @@ Example for the Summary Page:
 </property>
 ```
 
-See also [[Predefined buttons|Buttons and Processes#predefined buttons]].
+See also [[Predefined buttons|Form Runner ~ Buttons and Processes#predefined buttons]].
 
 ### Configuration
 
