@@ -79,7 +79,7 @@ The scale factor can be selected with the `oxf.fr.detail.tiff.scale` property:
 - possible values: positive double-precision number
 - default: `3.0`
 
-### Custom TIFF filename
+#### Custom TIFF filename
 
 The following property dynamically controls the name of the TIFF file produced on the Detail Page. By default, if the property value is blank, the TIFF filename is a random id assigned to the current form session.
 
