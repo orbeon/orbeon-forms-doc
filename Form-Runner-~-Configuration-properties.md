@@ -34,6 +34,9 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.authentication.header.roles`
     * `oxf.fr.authentication.header.roles.split`
     * `oxf.fr.authentication.header.roles.property-name`
+* [[TIFF Production|Form Runner ~ TIFF Production]]
+    * `oxf.fr.detail.tiff.compression.type`
+    * `oxf.fr.detail.tiff.compression.quality`
 
 ## Language
 
