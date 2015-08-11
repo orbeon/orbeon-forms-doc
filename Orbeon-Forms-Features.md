@@ -62,6 +62,7 @@ As of 2015-07-07 this page is *very* incomplete.
         - Template-based: [[doc|Form Builder ~ PDF Production ~ PDF Templates]]
     - Automatic highlighting of links [blog post](http://blog.orbeon.com/2015/04/automatic-web-links-in-pdf-files.html)
     - customizable file name: [[doc|Form Runner ~ Configuration properties#custom-pdf-filename]]
+    - TIFF production: [[doc|Form Runner ~ TIFF Production]]
 - Validation
     - as-you-type validation
     - centralized error summary showing currently relevant errors
