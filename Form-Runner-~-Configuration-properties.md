@@ -40,9 +40,9 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 ### Default language
 
 ```xml
-<property 
-    as="xs:string" 
-    name="oxf.fr.default-language.*.*" 
+<property
+    as="xs:string"
+    name="oxf.fr.default-language.*.*"
     value="en">
 ```
 
@@ -76,7 +76,7 @@ If the property is blank or contains the wildcard `*`, all the form languages ar
 
 [SINCE Orbeon Forms 4.3]
 
-For pages that don't involve a specific form, like the Form Runner home page, the following property controls the available languages:
+For pages that don't involve a specific form, like the Form Runner Home Page, the following property controls the available languages:
 
 ```xml
 <property
@@ -85,40 +85,40 @@ For pages that don't involve a specific form, like the Form Runner home page, th
   value="en fr"/>
 ```
 
-## Summary page
+## Summary Page
 
-### Summary page size
+### Summary Page size
 
 ```xml
-<property 
-    as="xs:integer" 
-    name="oxf.fr.summary.page-size.*.*" 
+<property
+    as="xs:integer"
+    name="oxf.fr.summary.page-size.*.*"
     value="10"/>
 ```
 
-Number of rows shown in the summary page.
+Number of rows shown in the Summary Page.
 
 ### Created and Last Modified columns
 
-By default, the summary page shows a Created and Last Modified columns:
+By default, the Summary Page shows a Created and Last Modified columns:
 
 ![](images/fr-summary-created-last-modified.png)
 
 You can remove either one of those columns by setting the value appropriate property to `false`:
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.summary.show-created.*.*"        
+<property
+    as="xs:boolean"
+    name="oxf.fr.summary.show-created.*.*"
     value="true"/>
-    
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.summary.show-last-modified.*.*"  
+
+<property
+    as="xs:boolean"
+    name="oxf.fr.summary.show-last-modified.*.*"
     value="true"/>
 ```
 
-### Buttons on the summary page
+### Buttons on the Summary Page
 
 ```xml
 <property
@@ -127,39 +127,42 @@ You can remove either one of those columns by setting the value appropriate prop
     value="home review pdf delete duplicate new"/>
 ```
 
-The property configures which buttons are included on the summary page, and in what order they are shown. Possible buttons are:
+The property configures which buttons are included on the Summary Page, and in what order they are shown. Possible buttons are:
 
 * `home`
     * Label: "Home"
-    * Action: Navigate to the Form Runner Home page.
+    * Action: Navigate to the Form Runner Home Page.
 * review
     * Label: "Review"
-    * Action: Navigate to the detail page in "view" mode to review the selected form data.
+    * Action: Navigate to the Detail Page in "view" mode to review the selected form data.
 * `pdf`
     * Label: "PDF"
     * Action: Create a PDF file for the selected form data.
+* `tiff` [SINCE Orbeon Forms 4.11]
+    * Label: "TIFF"
+    * Action: Create a TIFF image file for the selected form data.
 * `delete`
     * Label: "Delete"
     * Action: Delete the selected form data.
 * `import`
     * Label: "Import"
     * Action: Import data via the [Import page][8].
-* `duplicate` [SINCE Orbeon Forms 4.5] 
+* `duplicate` [SINCE Orbeon Forms 4.5]
     * Label: "Duplicate"
-    * Action: Duplicate the selected form data (or form definition on the Form Builder Summary page), including attachments.
-    * Usage: Select one or more checkboxes and press the "Duplicate" button. When the operation completes the Summary page refreshes with the new duplicated form data.
+    * Action: Duplicate the selected form data (or form definition on the Form Builder Summary Page), including attachments.
+    * Usage: Select one or more checkboxes and press the "Duplicate" button. When the operation completes the Summary Page refreshes with the new duplicated form data.
 * `new`
     * Label: "New"
-    * Action: Navigate to the detail page in "new" mode to create new form data.
+    * Action: Navigate to the Detail Page in "new" mode to create new form data.
 
-## Detail page
+## Detail Page
 
 ### Show table of contents
 
 ```xml
-<property 
-    as="xs:integer" 
-    name="oxf.fr.detail.toc.*.*" 
+<property
+    as="xs:integer"
+    name="oxf.fr.detail.toc.*.*"
     value="0"/>
 
 ```
@@ -169,30 +172,30 @@ If the number of table of contents entries are greater than this value, then sho
 ### Position of error summary
 
 ```xml
-<property 
-    as="xs:string" 
-    name="oxf.fr.detail.error-summary.*.*" 
+<property
+    as="xs:string"
+    name="oxf.fr.detail.error-summary.*.*"
     value="bottom"/>
 ```
 
 Where to place the error summary: `top`, `bottom`, `both`, or `none`.
 
-### Buttons on the detail page
+### Buttons on the Detail Page
 
 ```xml
-<property 
-    as="xs:string"  
-    name="oxf.fr.detail.buttons.*.*" 
+<property
+    as="xs:string"
+    name="oxf.fr.detail.buttons.*.*"
     value="close clear print pdf save submit"/>
 ```
 
-The property configures which buttons are included on the detail page, and in what order they are shown. For more information, see Form Runner: Buttons and Processes.
+The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [[Buttons and Processes|Form Runner ~ Buttons and Processes].
 
-### Buttons in detail page custom views
+### Buttons in Detail Page custom views
 
 [SINCE 2013-05-03 / Orbeon Forms 4.2]
 
-When using the wizard view (or other detail page custom views), the following property allows specifying which buttons are presented inside the view, as opposed to the bottom of the page:
+When using the wizard view (or other Detail Page custom views), the following property allows specifying which buttons are presented inside the view, as opposed to the bottom of the page:
 
 ```xml
 <property
@@ -205,16 +208,16 @@ The example above places the wizard's Prev and Next buttons just under the curre
 
 ![](images/fr-wizard-buttons.png)
 
-For more information, see Form Runner: Buttons and Processes.
+For more information, see [[Buttons and Processes|Form Runner ~ Buttons and Processes].
 
 ### Display hints inline
 
 This property set whether the control hints are shown inline, rather than as tool-tips. The default is `true`.
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.detail.hints.inline.*.*" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.hints.inline.*.*"
     value="true"/>
 ```
 
@@ -225,9 +228,9 @@ This property set whether the control hints are shown inline, rather than as too
 This property controls whether Form Runner attempts to set focus on the first control upon form load. The default is `true`.
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.detail.initial-focus.*.*" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.initial-focus.*.*"
     value="true"/>
 ```
 
@@ -239,7 +242,7 @@ In some cases, such as [[embedding| Form Runner ~ APIs ~ Server side Embedding]]
 
 [SINCE Orbeon Forms 4.9]
 
-The following property dynamically controls the name of the PDF file produced on the detail page. By default, if the property value is blank, the PDF filename is a random id assigned to the current form session.
+The following property dynamically controls the name of the PDF file produced on the Detail Page. By default, if the property value is blank, the PDF filename is a random id assigned to the current form session.
 
 ```xml
 <property
@@ -303,9 +306,9 @@ a[href] {
 The following property specifies whether a barcode must be included on PDF files.
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.detail.pdf.barcode.*.*" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.pdf.barcode.*.*"
     value="false">
 ```
 
@@ -316,14 +319,14 @@ The following property specifies whether a barcode must be included on PDF files
 These properties allow specifying fonts to embed in PDF files. The `oxf.fr.pdf.font.path` property ends with an identifier for the font (here `vera`). It specifies the path to the font file. Optionally, the oxf.fr.pdf.font.family property ending with the same identifier (here `vera`) allows overriding the font family.
 
 ```xml
-<property 
-    as="xs:string" 
-    name="oxf.fr.pdf.font.path.vera"   
+<property
+    as="xs:string"
+    name="oxf.fr.pdf.font.path.vera"
     value="/path/to/font.ttf"/>
-    
-<property 
-    as="xs:string" 
-    name="oxf.fr.pdf.font.family.vera" 
+
+<property
+    as="xs:string"
+    name="oxf.fr.pdf.font.family.vera"
     value="Arial"/>
 ```
 
@@ -363,9 +366,9 @@ With version 4.0 and earlier, the PDF button is always disabled if invalid data 
 The PDF button is always enabled, allowing users to generate a PDF for the current form, even if some data in the form is invalid. If instead, you wish to disable the PDF button when the form is invalid, set the following property to `true` (it is set to `false` by default):
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.detail.pdf.disable-if-invalid.*.*" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.pdf.disable-if-invalid.*.*"
     value="false"/>
 ```
 
@@ -378,9 +381,9 @@ SimpleCaptcha support.
 If you are creating a public form, you might want to add a captcha to avoid spam. You can do so by enabling the _captcha_ feature, which you do by adding the following property to your `properties-local.xml`:
 
 ```xml
-<property 
-    as="xs:string" 
-    name="oxf.fr.detail.captcha.*.*" 
+<property
+    as="xs:string"
+    name="oxf.fr.detail.captcha.*.*"
     value="reCAPTCHA"/>
 ```
 
@@ -389,14 +392,14 @@ You can set this property to either `reCAPTCHA` or `SimpleCaptcha`, depending on
 If using the reCAPTCHA, also add the following properties to specify your reCAPTCHA public and private keys. You can get those by [signing up for reCAPTCHA][11].
 
 ```xml
-<property 
-    as="xs:string"  
-    name="oxf.xforms.xbl.fr.recaptcha.public-key"  
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.recaptcha.public-key"
     value="..."/>
-    
-<property 
-    as="xs:string"  
-    name="oxf.xforms.xbl.fr.recaptcha.private-key" 
+
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.recaptcha.private-key"
     value="..."/>
 ```
 
@@ -476,25 +479,25 @@ The following property defines a space-separated list of request parameters to b
 You configure which buttons are shown on the view page with the following property:
 
 ```xml
-<property 
-    as="xs:string"  
-    name="oxf.fr.detail.buttons.view.*.*" 
+<property
+    as="xs:string"
+    name="oxf.fr.detail.buttons.view.*.*"
     value="back workflow-edit pdf"/>
 ```
 
-You can use all the buttons available on the detail page. In addition, the following buttons apply:
+You can use all the buttons available on the Detail Page. In addition, the following buttons apply:
 
 * `workflow-edit`
     * Label: "Edit"
-    * Action: Navigate back to the detail page in "edit" mode.
+    * Action: Navigate back to the Detail Page in "edit" mode.
 
 ### Show Orbeon Forms version
 
 [UNTIL Orbeon Forms 4.6, use `oxf.show-version` starting Orbeon Forms 4.6.1]
 
 ```xml
-<property 
-    as="xs:boolean" 
+<property
+    as="xs:boolean"
     name="oxf.fr.version.*.*"
     value="true"/>
 ```
@@ -510,7 +513,7 @@ Whether to show the Orbeon Forms version at the bottom.
     value="/apps/fr/style/orbeon-logo-trimmed-transparent-42.png"/>
 ```
 
-With this property, you can set the default logo URI. This logo appears on the summary and detail pages for a given form. You can omit (or comment out) this property or set its value to `""` (empty string) if you don't want a default logo at all.
+With this property, you can set the default logo URI. This logo appears on the summary and Detail Pages for a given form. You can omit (or comment out) this property or set its value to `""` (empty string) if you don't want a default logo at all.
 
 ### Adding your own CSS
 
@@ -536,14 +539,14 @@ You can add more than one file, and just separate the paths by whitespace in the
 1. **Disable the minimal and combined resources**. When working on your CSS, you might want to temporarily set the following properties in your `properties-local.xml`, which  will disable the combined and minimized resources, so the files and line numbers you see in your browser correspond to what you have on disk.
 
     ```xml
-    <property 
-        as="xs:boolean" 
-        name="oxf.xforms.minimal-resources" 
+    <property
+        as="xs:boolean"
+        name="oxf.xforms.minimal-resources"
         value="false"/>
-    
-    <property 
-        as="xs:boolean" 
-        name="oxf.xforms.combine-resources" 
+
+    <property
+        as="xs:boolean"
+        name="oxf.xforms.combine-resources"
         value="false"/>
     ```
 2. **Know which class names to use in your CSS selectors**. We strongly recommend you use the [Chrome Dev Tools][15] or [Firebug][16] to check which classes are generated by Orbeon Forms. Look specifically for classes that start with `fr-`. Once you have your CSS working with Chrome and/or Firefox, to test it on IE, you'll need to enable minimal resources, as IE is [unable to loads more than 31 CSS files][17].
@@ -573,7 +576,7 @@ You can add more than one file, and just separate the paths by whitespace in the
 
 ### Overriding resources
 
-In some cases, it might make sense to change some of the resources provided out of the box by Form Runner. For instance, the detail page can have a submit button, which in English has a label "Submit". For your application, another label might make more sense, for instance "Send". To override Form Runner resources, you define properties with a name that has the following structure:
+In some cases, it might make sense to change some of the resources provided out of the box by Form Runner. For instance, the Detail Page can have a submit button, which in English has a label "Submit". For your application, another label might make more sense, for instance "Send". To override Form Runner resources, you define properties with a name that has the following structure:
 
 1. The name start with `oxf.fr.resource`.
 2. Followed by the name of the application and form name for which you want to redefine the resource. You can use `*` for either if you want the redefinition to apply to all the applications or all the forms. For instance: `*.*`, or `my-app.my-form`.
@@ -662,20 +665,20 @@ These properties control email sending in Form Runner:
 ### Show Noscript link
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.noscript-link.*.*" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.noscript-link.*.*"
     value="true"/>
 ```
 
-Whether to show the link to the noscript/full version. 
+Whether to show the link to the noscript/full version.
 
 ### Noscript: use table layout
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.detail.noscript.table.*.*" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.noscript.table.*.*"
     value="true"/>
 ```
 
@@ -684,9 +687,9 @@ Whether forms in noscript mode are allowed to use a layout based on tables. If f
 Noscript: allow sections to collapse
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.detail.noscript.section.collapse.*.*" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.noscript.section.collapse.*.*"
     value="true"/>
 ```
 
@@ -695,9 +698,9 @@ Whether sections in noscript mode are allowed to collapse. A value of false may 
 ### Ajax mode: allow sections to collapse
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.detail.ajax.section.collapse.*.*" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.ajax.section.collapse.*.*"
     value="true"/>
 ```
 
@@ -707,8 +710,8 @@ Whether sections in Ajax mode are allowed to collapse. Default is true.
 
 ```xml
 <property
-    as="xs:boolean" 
-    name="oxf.fr.detail.ajax.section.animate.*.*" 
+    as="xs:boolean"
+    name="oxf.fr.detail.ajax.section.animate.*.*"
     value="true"/>
 ```
 
