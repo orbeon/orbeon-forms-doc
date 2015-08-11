@@ -21,4 +21,4 @@ Form Builder and Form Runner can produce PDF output in two ways:
 
 [SINCE Orbeon Forms 4.11]
 
-PDF files can be converted to TIFF images. See [[TIFF Production|Form Runner ~ PDF Production]].
+PDF files can be converted to TIFF images. See [[TIFF Production|Form Runner ~ TIFF Production]].
