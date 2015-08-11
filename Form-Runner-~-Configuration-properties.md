@@ -10,7 +10,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 
 ## Form Runner properties documented elsewhere
 
-* [[Custom Model Logic|Form-Runner-~-Custom-Model-Logic]]
+* [[Custom Model Logic|Form Runner ~ Custom Model Logic]]
     * `oxf.fr.detail.model.custom`
 * [[Wizard View|Form Runner ~ Wizard View]]
     * `oxf.fr.detail.view.appearance`
@@ -24,7 +24,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.persistence.[provider].autosave`
     * `oxf.fr.persistence.[provider].permissions`
     * `oxf.fr.persistence.[provider].versioning`
-* [[Form Runner Access Control|https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Access-Control-~-Setup]]
+* [[Form Runner Access Control|Form Runner ~ Access Control ~ Setup]]
     * `oxf.fr.support-owner-group`
     * `oxf.fr.authentication.method`
     * `oxf.fr.authentication.container.roles`
@@ -37,6 +37,8 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 * [[TIFF Production|Form Runner ~ TIFF Production]]
     * `oxf.fr.detail.tiff.compression.type`
     * `oxf.fr.detail.tiff.compression.quality`
+    * `oxf.fr.detail.tiff.scale`
+    * `oxf.fr.detail.tiff.filename`
 
 ## Language
 
