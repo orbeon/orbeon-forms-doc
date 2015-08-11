@@ -1,6 +1,11 @@
 ## Introduction
 
-This processor
+This processor converts a PDF document into a single image document.
+
+When the output format is TIFF, the processor creates a multi-page TIFF containing one page for each page in the PDF
+document. For other output formats, only the first page of the PDF document is used and a single image is created.
+
+When using the TIFF format, if the destination format is bitonal (black and white), dithering is applied.
 
 ## Basic usage example
 
