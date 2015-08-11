@@ -1,3 +1,7 @@
+## Availability
+
+Orbeon Forms 4.11 and newer.
+
 ## Introduction
 
 This processor converts a PDF document into a single image document.
