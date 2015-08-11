@@ -72,3 +72,26 @@ The scale factor can be selected with the `oxf.fr.detail.tiff.scale` property:
 
 - possible values: positive double-precision number
 - default: `3.0`
+
+
+The following property dynamically controls the name of the TIFF file produced on the Detail Page. By default, if the property value is blank, the TIFF filename is a random id assigned to the current form session.
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.tiff.filename.*.*"
+    value=""/>
+```
+
+The value of the property, if not empty, is an XPath expression which runs in the context of the root element of the XML document containing form data. The trimmed string value of the result of the expression is used to determine the filename.
+
+Example:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.tiff.filename.*.*"
+    value="//customer-id"/>
+```
+
+If the form contains a `customer-id` field, the PDF filename will be the value of that field followed by `.tiff`. If the field is blank, the default, random id filename is used, as if the property had not been specified.
