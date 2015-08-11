@@ -189,7 +189,7 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
     value="close clear print pdf save submit"/>
 ```
 
-The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [[Buttons and Processes|Form Runner ~ Buttons and Processes].
+The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [[Buttons and Processes|Form Runner ~ Buttons and Processes]].
 
 ### Buttons in Detail Page custom views
 
@@ -208,7 +208,7 @@ The example above places the wizard's Prev and Next buttons just under the curre
 
 ![](images/fr-wizard-buttons.png)
 
-For more information, see [[Buttons and Processes|Form Runner ~ Buttons and Processes].
+For more information, see [[Buttons and Processes|Form Runner ~ Buttons and Processes]].
 
 ### Display hints inline
 
