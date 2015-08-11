@@ -31,6 +31,8 @@ The following URL patterns are followed:
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/view/[DOCUMENT_ID]`
 * Read-only PDF view:  
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/pdf/[DOCUMENT_ID]`
+* Read-only TIFF view: [SINCE Orbeon Forms 4.11]
+    `/fr/[APPLICATION_NAME]/[FORM_NAME]/tiff/[DOCUMENT_ID]`
 
 See also [[Form Builder Integration|Form Builder ~ Integration]].
 
