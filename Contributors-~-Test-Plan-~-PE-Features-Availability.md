@@ -13,6 +13,7 @@ Check that all PE features are available in PE, but not in CE:
         - Permissions
     - FR: PDF Template button doesn't show for DMV-14 and W-9
     - FR: TIFF button doesn't show even if configured
+    - FR: Import page returns 404
 - features which are not checked
     - test publish from the Form Runner home page is disabled
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
@@ -31,10 +32,8 @@ Check that all PE features are available in PE, but not in CE:
     - known issues
         - [#1043](https://github.com/orbeon/orbeon-forms/issues/1043) Disable noscript mode in CE version
         - [#1407][2] Accessible link changes the toolbar with CE builds
-        - [#1408][3] PE check not in place for Excel import feature
         - [#1926](https://github.com/orbeon/orbeon-forms/issues/1926) PE check not in place for Publish to Production
         - [#1927](https://github.com/orbeon/orbeon-forms/issues/1927) PE check not in place for captcha feature
 
 [1]: http://www.orbeon.com/download
 [2]: https://github.com/orbeon/orbeon-forms/issues/1407
-[3]: https://github.com/orbeon/orbeon-forms/issues/1408
