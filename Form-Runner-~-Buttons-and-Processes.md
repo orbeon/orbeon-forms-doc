@@ -360,6 +360,8 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 #### Sending a TIFF URL
 
+[SINCE Orbeon Forms 4.11]
+
 When `tiff-url` is specified, the XML document sent has the following format:
 
 ```xml
