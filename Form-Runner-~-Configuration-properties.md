@@ -645,6 +645,11 @@ These properties control email sending in Form Runner:
 
 <property
     as="xs:boolean"
+    name="oxf.fr.email.attach-tiff.*.*"
+    value="true"/>
+
+<property
+    as="xs:boolean"
     name="oxf.fr.email.attach-xml.*.*"
     value="true"/>
 ```
@@ -663,7 +668,7 @@ These properties control email sending in Form Runner:
     * `credentials`: SMTP password
 * The `from` property specifies the sender email address(es) appearing in the email sent.
 * The `to` property specifies the recipient email address(es) of the email sent.
-* The `attach-pdf` and `attach-xml` properties control whether PDF and/or XML versions of the form data are attached to the email.
+* The `attach-pdf`, `attach-tiff` and `attach-xml` properties control whether PDF, TIFF and/or XML versions of the form data are attached to the email.
 
 ## Noscript and Ajax modes
 
