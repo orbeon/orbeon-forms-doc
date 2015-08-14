@@ -102,3 +102,18 @@ Example:
 ```
 
 If the form contains a `customer-id` field, the PDF filename will be the value of that field followed by `.tiff`. If the field is blank, the default, random id filename is used, as if the property had not been specified.
+
+### Sending
+
+You can *send* the URL of a TIFF file using the `content = "tiff-url"` parameter. See [[Sending a TIFF URL|Form Runner ~ Buttons and Processes#sending-a-tiff-url]].
+
+### Email
+
+You can *email* the TIFF file using the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.email.attach-tiff.*.*"
+    value="true"/>
+```
