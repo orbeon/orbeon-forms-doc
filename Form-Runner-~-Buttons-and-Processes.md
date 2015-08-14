@@ -260,6 +260,7 @@ Send data to an HTTP URL.
     - `content`:
         - `xml` to send the XML data (default)
         - `pdf-url` to send the PDF URL
+        - `tiff-url` to send the TIFF URL [SINCE Orbeon Forms 4.11]
         - `metadata`: to send form metadata [SINCE Orbeon Forms 4.7]
     - `data-format-version` [SINCE Orbeon Forms 4.8]:
         - `edge`: send the data in the latest internal format
@@ -354,6 +355,21 @@ When `pdf-url` is specified, the XML document sent has the following format:
 The PDF can be retrieved by accessing that path with the proper session cookie.
 
 A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the PDF.
+
+*NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
+
+#### Sending a TIFF URL
+
+When `tiff-url` is specified, the XML document sent has the following format:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<url>/xforms-server/dynamic/567f14ee46c6b21640c1a5a7374d5ad8</url>
+```
+
+The TIFF can be retrieved by accessing that path with the proper session cookie.
+
+A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the TIFF file.
 
 *NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
 
