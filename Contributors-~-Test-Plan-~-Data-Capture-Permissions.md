@@ -33,6 +33,7 @@
         - home page: link goes to new page (not summary)
         - summary page: unauthorized (fixed regression with [#1201][19])
         - detail page: only `new` accepted, `edit`, `view`, `pdf` are unauthorized
+        - enter and save data on `new`
     - logged in user
         - check permissions as clerk/clerk
             - remove `JSESSIONID` (i.e. with Dev Tools)
