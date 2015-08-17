@@ -7,6 +7,10 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
 ```xml
 <property
     as="xs:string"
+    name="oxf.fr.persistence.provider.exist.*.*"
+    value="exist"/>
+<property
+    as="xs:string"
     name="oxf.fr.persistence.provider.oracle.*.*"
     value="oracle"/>
 <property
