@@ -35,24 +35,26 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
     value="orbeon-user orbeon-sales orbeon-admin clerk admin"/>
 ```
 
-- setup
-    - with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2
-    - restore `form-builder-permissions.xml` to default
-    - for container auth
-        - in `web.xml`
-            - uncomment security section towards the end
-            - change first `<url-pattern>` from `/fr/*` to `/auth` (it doesn't matter that page doesn't exist, it's just a path to force authentication)
-        - in `tomcat-users.xml`, setup users:
-            - `<user username="clerk" password="clerk" roles="orbeon-user,clerk"/>`
-            - `<user username="admin" password="admin" roles="orbeon-user,admin"/>`
-    - for headers-based  auth
-        - `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
-        - set rewriting rules with Charles (⌘⇧W)
-            - for user clerk ([gist][16])
-            - for user admin ([gist][17])
-        - to switch between users in below steps
-            - enable rewrite for clerk or admin headers, or disable rewrite
-            - remove JSESSIONID when switching users
+- repeat with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2
+- restore `form-builder-permissions.xml` to default
+- for container auth
+    - in `web.xml`
+        - uncomment security section towards the end
+        - change first `<url-pattern>` from `/fr/*` to `/auth` (it doesn't matter that page doesn't exist, it's just a path to force authentication)
+    - in `tomcat-users.xml`, setup users:
+        - `<user username="clerk" password="clerk" roles="orbeon-user,clerk"/>`
+        - `<user username="admin" password="admin" roles="orbeon-user,admin"/>`
+- for headers-based  auth
+    - `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
+    - set rewriting rules with Charles (⌘⇧W)
+        - for user clerk ([gist][16])
+        - for user admin ([gist][17])
+    - to switch between users in below steps
+        - enable rewrite for clerk or admin headers, or disable rewrite
+        - remove JSESSIONID when switching users
+            
+## Tests
+            
 - in Form Builder
     - create new form `exist/permissions`, `oracle/permissions`, `mysql/permissions`, `postgresql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
     - enable permissions for form and configure like on [doc page][18]
