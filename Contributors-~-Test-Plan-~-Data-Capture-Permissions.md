@@ -42,6 +42,7 @@
             - summary page
                 - sees data previously entered by anonymous user, cannot delete
                 - click on existing data created by anonymous user shows read-only view
+                - replace `view` with `edit` in URL shows 404
                 - PDF works
                 - click on new button opens new page
             - new/edit
