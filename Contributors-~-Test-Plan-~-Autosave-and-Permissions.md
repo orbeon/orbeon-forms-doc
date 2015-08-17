@@ -13,6 +13,10 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
     value="mysql"/>
 <property
     as="xs:string"
+    name="oxf.fr.persistence.provider.postgresql.*.*"
+    value="postgresql"/>
+<property
+    as="xs:string"
     name="oxf.fr.persistence.provider.sqlserver.*.*"
     value="sqlserver"/>
 <property
