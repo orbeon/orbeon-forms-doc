@@ -1,5 +1,40 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
+## Setup
+
+Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.oracle.*.*"
+    value="oracle"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.mysql.*.*"
+    value="mysql"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.postgresql.*.*"
+    value="postgresql"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.sqlserver.*.*"
+    value="sqlserver"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.db2.*.*"
+    value="db2"/>
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.method"
+    value="container"/><!-- change to header for header-based auth -->
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.container.roles"
+    value="orbeon-user orbeon-sales orbeon-admin clerk admin"/>
+```
+
 - setup
     - with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2
     - restore `form-builder-permissions.xml` to default
