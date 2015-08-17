@@ -31,7 +31,7 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 
 ## Database setup
 
-### Oracle   
+### Oracle
 
 1. Make sure that Oracle's Database Character Set is set to `AL32UTF8`, also as [recommended by Oracle][2].  You can see you database parameters by running the following query: `select * from nls_database_parameters`,  and the Database Character Set is identified by `nls_characterset`.
 2. Create a user/schema in Oracle, for instance with the commands below. In this example "all privileges" are granted to the newly created user/schema, which is not strictly required. You might want to fine-tune permissions on your system as appropriate. If you had already created this schema and that the definition changed, or that you want to restart from scratch for some other reason, you can first delete the schema with all the data it contains with `drop user orbeon cascade`.
@@ -43,9 +43,11 @@ SQL> grant all privileges to orbeon ;
 ```
 3. Create the tables and indexes used by Orbeon Forms:
 
-    - With Orbeon Forms 4.6, 4.7 and 4.8:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_6.sql)
+    - With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
+        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_10.sql)
         - [DDL to upgrade your database created for Orbeon Forms 4.5](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_5-to-4_6.sql)
+        - [DDL to upgrade your database created for Orbeon Forms 4.6](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_6-to-4_10.sql)
+        - *NOTE: The schema is unchanged between 4.6 and 4.10 included, but `oracle-4_10.sql` includes the fix for issue [#2289](https://github.com/orbeon/orbeon-forms/issues/2289) and can be used for versions 4.6, 4.7, 4.8, and 4.9 as well.*
     - With Orbeon Forms 4.5:
         - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_5.sql)
         - [DDL to upgrade your database created for Orbeon Forms 4.4](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_4-to-4_5.sql)
@@ -59,22 +61,22 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
 ### MySQL
 
-The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer. However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].  
+The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer. However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].
 
-1. Create a new user `orbeon`. Orbeon Forms will connect to MySQL as that user.  
+1. Create a new user `orbeon`. Orbeon Forms will connect to MySQL as that user.
 
 ```sql
 mysql -u root
 mysql> CREATE USER orbeon IDENTIFIED BY ${PASSWORD};
 ```
-2. Create a new schema `orbeon`. This schema will contains the tables used to store your forms definitions and form data.  
+2. Create a new schema `orbeon`. This schema will contains the tables used to store your forms definitions and form data.
 
 ```sql
 mysql> CREATE schema orbeon;
 ```
 3. Create the tables used for Orbeon Forms in the `orbeon` schema:
 
-    - With Orbeon Forms 4.6, 4.7 and 4.8:
+    - With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
         - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_6.sql)
         - [DDL to upgrade your database created for Orbeon Forms 4.5](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_5-to-4_6.sql)
     - With Orbeon Forms 4.5:
@@ -94,7 +96,7 @@ Orbeon Forms relies on SQL Server's full-text search, which is included out-of-t
 
 Create the tables used for Orbeon Forms in the `orbeon` schema:
 
-- With Orbeon Forms 4.6, 4.7 and 4.8:
+- With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
     - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/sqlserver-4_6.sql)
 
 ### PostgreSQL
@@ -112,7 +114,7 @@ Create the tables used for Orbeon Forms in the `orbeon` schema:
 
 Create the tables used for Orbeon Forms in the `orbeon` schema:
 
-- With Orbeon Forms 4.6, 4.7 and 4.8:
+- With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
     - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_6.sql)
     - [DDL to upgrade your database created for Orbeon Forms 4.4](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4-to-4_6.sql)
 - With Orbeon Forms 4.4 or 4.5:
@@ -123,7 +125,7 @@ Create the tables used for Orbeon Forms in the `orbeon` schema:
 
 ## Application server setup
 
-### Oracle   
+### Oracle
 
 #### General
 
@@ -219,9 +221,9 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
 
 [SINCE Orbeon Forms 4.6]
 
-1. [Download the Microsoft JDBC driver for SQL Server][7]. 
+1. [Download the Microsoft JDBC driver for SQL Server][7].
 2. Uncompress the zip file, and copy the `sqljdbc4.jar` it contains to the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
-3. Setup the JDBC data source for your DB2 instance. On Tomcat, you typically do this by editing Tomcat's `server.xml`, and within the `<context>` for Orbeon Forms adding a `<resource>` element similar to the one that follows.  
+3. Setup the JDBC data source for your DB2 instance. On Tomcat, you typically do this by editing Tomcat's `server.xml`, and within the `<context>` for Orbeon Forms adding a `<resource>` element similar to the one that follows.
 
     ```xml
     <Resource
@@ -266,9 +268,9 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
         password="orbeon"
         url="jdbc:postgresql://server:5432/database?useUnicode=true&amp;characterEncoding=UTF8&amp;socketTimeout=30&amp;tcpKeepAlive=true"/>
     ```
-    
+
     The following attributes of the datasource need to be configured as needed:
-    
+
     - `username`
     - `password`
     - `url`: including the `server` and `database` parts of the path
@@ -305,7 +307,7 @@ What follows applies to Orbeon Forms 4.0 and newer. For Orbeon Forms 3.9, see th
 
 ### With a single schema
 
-In your `properties-local.xml`:  
+In your `properties-local.xml`:
 
 1. Map an app, form, form type to the Oracle or MySQL persistence layer using the `oxf.fr.persistence.provider.*.*.*` [[wildcard property|Installation-~-Configuration-Properties#wildcards-in-properties]], For instance, the following indicates that all the form definition and form data in the `acme` "app" are stored using the Oracle provider, use:
 
@@ -319,9 +321,9 @@ In your `properties-local.xml`:
     <property as="xs:string" name="oxf.fr.persistence.oracle.datasource" value="oracle"/>
     ```
 
-### With multiple schemas   
+### With multiple schemas
 
-The single schema configuration described in the previous section uses the predefined `oracle` and `mysql` providers. To use multiple schemas you need to define you own provider names. For instance, assume that you have two apps, `hr` and `finance`, and would like both the form definition and data for those apps to be stored in two separate schemas:  
+The single schema configuration described in the previous section uses the predefined `oracle` and `mysql` providers. To use multiple schemas you need to define you own provider names. For instance, assume that you have two apps, `hr` and `finance`, and would like both the form definition and data for those apps to be stored in two separate schemas:
 
 1. In your application server configuration, you setup two data sources ; let's call them `hr-datasource` and `finance-datasource`.
 2. In `properties-local.xml`, you use the following properties to define two providers `hr` and `finance` that you configure to use the desired persistence layer implementation (Oracle in this example) and data source:
@@ -354,7 +356,7 @@ The single schema configuration described in the previous section uses the prede
     <property as="xs:string" name="oxf.fr.persistence.provider.finance.*.*" value="finance"/>
     ```
 
-## Flat view or table   
+## Flat view or table
 
 Orbeon Forms stores form data as XML in relational databases, which gives it a lot of flexibility. However, it might be harder for other tools to access this XML data. For this reason, you might want to provide other tools a way to access the XML data through another "flat" table or view that has one column per form field.
 
@@ -383,17 +385,17 @@ create table bookshelf (
 Choose an appropriate type for your columns, depending on the maximum length for the fields. Then create a trigger, which will update your `bookshelf` table when form data is saved in `orbeon_form_data`:
 
 ```sql
-delimiter |  
-create trigger bookshelf_trigger before insert on orbeon_form_data for each row begin  
-    if new.app = 'orbeon' and new.form = 'bookshelf' then   
-        delete from bookshelf where document_id = new.document_id;  
-        if new.deleted = 'N' then  
-            insert into bookshelf set document_id = new.document_id,  
-                title = extractValue(new.xml, '/book/details/title'),  
-                author = extractValue(new.xml, '/book/details/author');  
-        end if;  
-    end if;  
-end;  
+delimiter |
+create trigger bookshelf_trigger before insert on orbeon_form_data for each row begin
+    if new.app = 'orbeon' and new.form = 'bookshelf' then
+        delete from bookshelf where document_id = new.document_id;
+        if new.deleted = 'N' then
+            insert into bookshelf set document_id = new.document_id,
+                title = extractValue(new.xml, '/book/details/title'),
+                author = extractValue(new.xml, '/book/details/author');
+        end if;
+    end if;
+end;
 |
 ```
 
