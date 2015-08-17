@@ -27,7 +27,6 @@
 - in Form Builder
     - create new form `exist/permissions`, `oracle/permissions`, `mysql/permissions`, `postgresql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
     - enable permissions for form and configure like on [doc page][18]
-        - NOTE: doc on new table format is also on this page
     - save and publish
 - make sure permissions are followed
     - anonymous user
