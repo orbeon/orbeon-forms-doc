@@ -1,6 +1,6 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
-Repeat what follows with Oracle, MySQL, SQL Server, and DB2 with the following settings:
+Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
 
 ```xml
 <property
