@@ -48,6 +48,7 @@
             - new/edit
                 - save data works
                 - user is owner so can edit his own data
+                - cannot delete from Summary because no `delete` permission
         - check permissions as admin/admin
             - remove `JSESSIONID` (i.e. with Dev Tools)
             - switch user
