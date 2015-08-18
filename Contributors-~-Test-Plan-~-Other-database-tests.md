@@ -17,7 +17,7 @@ drop table orbeon_form_data_attach ;
 
 ## Oracle and DB2 Flat View
 
-- Make sure DB2 datasource is setup in `server.xml`.
+- Make sure Oracle and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
 
     ```xml
