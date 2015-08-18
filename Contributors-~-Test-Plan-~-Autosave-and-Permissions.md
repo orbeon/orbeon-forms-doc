@@ -106,7 +106,6 @@ This tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858)
 1. Go to /new again
 1. Dialog must propose loading draft
 1. Save
-1. Make change
-1. Wait for autosave
+1. Make change to text in field, tab out, wait for autosave
 1. Go back to /edit
 1. Dialog must propose loading draft
