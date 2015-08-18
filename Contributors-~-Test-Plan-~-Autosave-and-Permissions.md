@@ -80,8 +80,8 @@ Authorize on:
         - `$provider/autosave/new`, on prompt start from scratch, type *Lisa*, after 6s go to summary, check it shows *Bart* and *Lisa* as draft
         - `$provider/autosave/new`, check prompt, try both options, in particular the one showing the drafts for new
     - Summary
-        - Edit *Home3*, change to *Homer4*, after 6s go back to summary page.
-        - Delete *Homer3*, check *Homer4* is deleted as well
+        - Edit *Homer*, change to *Homer4*, after 6s go back to summary page.
+        - Delete *Homer*, check *Homer4* is deleted as well
         - Check *Lisa*, then view, check in view mode without prompt
         - Delete *Bart*, check *Lisa* not deleted
 4. With anonymous user:
