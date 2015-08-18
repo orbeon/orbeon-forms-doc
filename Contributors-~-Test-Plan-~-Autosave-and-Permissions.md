@@ -1,6 +1,8 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
-Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
+Repeat what follows with Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
+
+*NOTE: As of Orbeon Forms 4.10, autosave is not supported with eXist.*
 
 ```xml
 <property
