@@ -55,6 +55,8 @@ Authorize on:
     - Create a field *first name*, marked as shown on summary page.
     - Enable permissions as shown below, save, deploy.  
         ![Permissions dialog](images/test-permissions.png)
+    - publish
+    - duplicate for all providers and publish
 2. Logged in as user `b1` in group `b`:
     - `$provider/autosave/new`, type *Ned*, save, change to *Ned2*, tab out, after 6s go to the summary page, check it shows *Ned2* as draft
 3. Logged in as user `a1` in group `a`:
