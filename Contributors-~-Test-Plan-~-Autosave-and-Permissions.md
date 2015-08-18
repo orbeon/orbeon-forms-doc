@@ -102,7 +102,7 @@ This tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858)
 
 1. User is authenticated
 1. Create form without permissions
-1. Go to /new, wait for autosave
+1. Go to /new, enter text in field, tab out, wait for autosave
 1. Go to /new again
 1. Dialog must propose loading draft
 1. Save
