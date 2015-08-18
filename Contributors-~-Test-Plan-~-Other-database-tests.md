@@ -23,8 +23,18 @@ drop table orbeon_form_data_attach ;
     ```xml
     <property 
         as="xs:boolean"
+        name="oxf.fr.persistence.oracle.create-flat-view" 
+        value="true"/>
+
+    <property 
+        as="xs:boolean"
         name="oxf.fr.persistence.db2.create-flat-view" 
         value="true"/>
+
+    <property 
+        as="xs:string"
+        name="oxf.fr.persistence.provider.oracle.*.*"
+        value="oracle"/>
 
     <property 
         as="xs:string"
