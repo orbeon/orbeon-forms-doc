@@ -69,6 +69,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
         - summary page: unauthorized (fixed regression with [#1201][19])
         - detail page: only `new` accepted, `edit`, `view`, `pdf` are unauthorized
         - enter and save data on `new`
+        - check URL doesn't change to `edit`
     - logged in user
         - check permissions as clerk/clerk
             - remove `JSESSIONID` (i.e. with Dev Tools)
