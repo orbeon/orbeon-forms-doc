@@ -50,7 +50,7 @@
 - i18n (PE)
     - check en/fr/es/it/de (languages with full support)
     - switch FB language and check language changes
-    - add language
+    - add language [CONTINUE HERE]
     - edit label and items and switch languages
     - edit source and change top-level language, make sure language selector switches
     - remove language
