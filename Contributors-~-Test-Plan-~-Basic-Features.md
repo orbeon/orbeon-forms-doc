@@ -50,7 +50,7 @@
 - i18n (PE)
     - check en/fr/es/it/de (languages with full support)
     - switch FB language and check language changes
-    - add language [CONTINUE HERE]
+    - add language
     - edit label and items and switch languages
     - edit source and change top-level language, make sure language selector switches
     - remove language
@@ -59,6 +59,7 @@
         - Test and Publish/new -> must show Afrikaans labels, not blank
 - FB Summary page
     - check that search in Summary page updates title/description when FR language is changed (e.g. on Bookshelf)
+    - be aware of [#2348](https://github.com/orbeon/orbeon-forms/issues/2348)
 - set form title/description
 - test form
 - save
