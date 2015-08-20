@@ -78,12 +78,12 @@
         name="oxf.xforms.cache.static-state.size" 
         value="1"/>
     ```
-    - visit http://localhost:8080/orbeon/fr/orbeon/builder/new
+    - in 1st tab, visit http://localhost:8080/orbeon/fr/orbeon/builder/new
     - enter a/a to go to editor
-    - visit http://localhost:8080/orbeon/fr/orbeon/contact/new
-    - back to http://localhost:8080/orbeon/fr/orbeon/builder/new
+    - in 2nd tab, visit http://localhost:8080/orbeon/fr/orbeon/contact/new
+    - back to 1st tab
     - insert control
-    - Check there is no JS error
+    - check there is no JS error
 
 [2]: http://www.lipsum.com/
 [3]: https://github.com/orbeon/orbeon-forms/issues/1160
