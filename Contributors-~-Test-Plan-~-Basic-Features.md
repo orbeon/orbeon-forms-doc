@@ -64,13 +64,19 @@
 - test form
 - save
 - publish form
-    - check that attachments are published too
+    - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
 - warning dialog if attempt to close page when unsaved
 - serialization/deserialization [#1894][5]
     - set properties  
     ```xml
-    <property as="xs:integer" name="oxf.xforms.cache.documents.size"    value="1"/>
-    <property as="xs:integer" name="oxf.xforms.cache.static-state.size" value="1"/>
+    <property 
+        as="xs:integer" 
+        name="oxf.xforms.cache.documents.size"    
+        value="1"/>
+    <property 
+        as="xs:integer" 
+        name="oxf.xforms.cache.static-state.size" 
+        value="1"/>
     ```
     - visit http://localhost:8080/orbeon/fr/orbeon/builder/new
     - enter a/a to go to editor
