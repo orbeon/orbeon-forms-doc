@@ -6,24 +6,24 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
 
 Setup: in `properties-local.xml`, add:
 
-    ```xml
-    <property
-        as="xs:string"
-        name="oxf.fr.persistence.provider.exist.*.*"
-        value="exist"/>
-    <property
-        as="xs:string"
-        name="oxf.fr.persistence.provider.db2.*.*"
-        value="db2"/>
-    <property 
-        as="xs:string"  
-        processor-name="oxf:page-flow" 
-        name="service-public-methods"    
-        value="GET HEAD"/>
-    ```
-    
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.exist.*.*"
+    value="exist"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.db2.*.*"
+    value="db2"/>
+<property
+    as="xs:string"
+    processor-name="oxf:page-flow"
+    name="service-public-methods"
+    value="GET HEAD"/>
+```
+
 ## Create forms
-    
+
 Create same form in all apps: `exist/a`, `db2/a`
 
 - add static image
@@ -59,7 +59,7 @@ Create same form in all apps: `exist/a`, `db2/a`
 - FR: Summary: Duplicate button works
     - data for latest form
     - older data
-    
+
 ## Versioning
 
 - create form db2/a
@@ -110,9 +110,9 @@ Create same form in all apps: `exist/a`, `db2/a`
             - no options are shown
             - message about overwrite
         - publish message says version 1 was updated
-   
+
 ## Home page
-        
+
 With all persistence layers active
 
 - go to /fr/
