@@ -12,7 +12,7 @@ Check that all PE features are available in PE, but not in CE:
         - Attach Schema
         - Permissions
     - FR: PDF Template button doesn't show for DMV-14 and W-9
-    - FR: TIFF button doesn't show even if configured
+    - FR: TIFF button doesn't show even if configured [SINCE 4.11]
     - FR: Import page returns 404
     - FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
