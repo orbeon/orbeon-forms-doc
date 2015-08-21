@@ -13,7 +13,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[Other Database Tests|Contributors ~ Test Plan ~ Other Database Tests]] [4.10 DONE]
 - Form Builder
     - [[Basic Features|Contributors ~ Test Plan ~ Basic Features]] [4.10 DONE]
-    - [[Schema Support|Contributors ~ Test Plan ~ Schema Support]] [4.10 TODO]
+    - [[Schema Support|Contributors ~ Test Plan ~ Schema Support]] [4.10 DONE]
     - [[Services and Actions|Contributors ~ Test Plan ~ Services and Actions]] [4.10 TODO]
 - Form Builder / Form Runner
     - [[Section Templates|Contributors ~ Test Plan ~ Section Templates]] [4.10 TODO]
