@@ -24,13 +24,13 @@ Check that all PE features are available in PE, but not in CE:
             name="oxf.fr.authentication.container.roles"
             value="orbeon-user"/>
 
-          <property as="xs:string"  name="oxf.fr.home.remote-servers">
-              [
-                  { "label": "Public Demo Server", "url": "http://demo.orbeon.com/orbeon" },
-                  { "label": "Local Liferay", "url": "http://localhost:9090/orbeon" }
-              ]
-          </property>
-          ```
+        <property as="xs:string"  name="oxf.fr.home.remote-servers">
+            [
+                { "label": "Public Demo Server", "url": "http://demo.orbeon.com/orbeon" },
+                { "label": "Local Liferay", "url": "http://localhost:9090/orbeon" }
+            ]
+        </property>
+         ```
         - in `web.xml` uncomment authentication section
         - access [http://localhost:8080/orbeon/fr/](http://localhost:8080/orbeon/fr/)
         - login with user with the `orbeon-user` role
