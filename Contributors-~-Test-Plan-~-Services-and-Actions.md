@@ -23,12 +23,13 @@
     SELECT * FROM orbeon_address_book
     WHERE id = <sql:param type="xs:string" select=""/>
     ```
-- sets service value on request for param `1`
-- sets control values on response, e.g. `concat(/*/*/first, /*/*/last)`
-- set itemset values on response
-    - `/*/*`
-    - `concat(first, ' ', last)`
-    - `id`
+- create action
+    - sets service value on request for param `1`
+    - sets control values on response, e.g. `concat(/*/*/first, /*/*/last)`
+    - set itemset values on response
+        - `/*/*`
+        - `concat(first, ' ', last)`
+        - `id`
 
 ## HTTP service
 
