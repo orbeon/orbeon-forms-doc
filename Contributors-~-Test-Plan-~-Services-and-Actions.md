@@ -2,7 +2,7 @@
 
 ## Database service
 
-- db
+- setup db
     - use MySQL on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
     - set datasource in `server.xml`
     - create test table + data row if doesn't exist (can use IntelliJ Database tools)
