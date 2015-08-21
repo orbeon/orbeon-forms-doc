@@ -38,7 +38,7 @@
 ## HTTP service
 
 - using echo service is ok
-    - POST to /fr/service/custom/orbeon/echo
+    - POST to `/fr/service/custom/orbeon/echo`
 - test
     - call service upon form load and set control value upon response
     - same with button activation
