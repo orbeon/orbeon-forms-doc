@@ -17,17 +17,20 @@ Check that all PE features are available in PE, but not in CE:
     - FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml`
-            - add `<property as="xs:string" name="oxf.fr.authentication.container.roles" value="orbeon-user"/>`
-            - add remove servers, e.g.:
-            
-              ```xml
-              <property as="xs:string"  name="oxf.fr.home.remote-servers">
-                  [
-                      { "label": "Public Demo Server", "url": "http://demo.orbeon.com/orbeon" },
-                      { "label": "Local Liferay", "url": "http://localhost:9090/orbeon" }
-                  ]
-              </property>
-              ```
+
+        ```xml
+        <property
+            as="xs:string"
+            name="oxf.fr.authentication.container.roles"
+            value="orbeon-user"/>
+
+          <property as="xs:string"  name="oxf.fr.home.remote-servers">
+              [
+                  { "label": "Public Demo Server", "url": "http://demo.orbeon.com/orbeon" },
+                  { "label": "Local Liferay", "url": "http://localhost:9090/orbeon" }
+              ]
+          </property>
+          ```
         - in `web.xml` uncomment authentication section
         - access [http://localhost:8080/orbeon/fr/](http://localhost:8080/orbeon/fr/)
         - login with user with the `orbeon-user` role
