@@ -50,13 +50,13 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
         - save
     - edit the form definition
         - rename field in B
-        - remove image attachment (#1911)
+        - remove image attachment ([#1911](https://github.com/orbeon/orbeon-forms/issues/1911))
         - publish
         - go to new page
         - enter value b in field B, attach file
         - review and back to edit
         - save
-    - #1911 
+    - [#1911](https://github.com/orbeon/orbeon-forms/issues/1911)
         - FR: check that previous form data loads image
     - /fr/service/(oracle|mysql|sqlserver|db2)/a/schema: schema with B is produced
     - /fr/service/(oracle|mysql|sqlserver|db2)/a/schema?form-version=1: schema with A is produced
@@ -88,5 +88,3 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
 8. with all persistence layers active
     - go to /fr/
     - check that form definitions from all persistence layers show
-
-  [#1409]: https://github.com/orbeon/orbeon-forms/issues/1409
