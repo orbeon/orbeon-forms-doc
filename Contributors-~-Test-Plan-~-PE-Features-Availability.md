@@ -35,7 +35,7 @@ Check that all PE features are available in PE, but not in CE:
         - access [http://localhost:8080/orbeon/fr/](http://localhost:8080/orbeon/fr/)
         - login with user with the `orbeon-user` role
         - check doesn't ask user for remote servers and only loads local form definitions
-- features which are not checked
+- features which are not checked yet but should be
     - Proxy portlet
     - Embedding
     - Oracle/DB2/SQL Server
