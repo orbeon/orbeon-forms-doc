@@ -2,7 +2,7 @@
 
 Check that all PE features are available in PE, but not in CE:
 
-- features which are checked [4.10 TODO]
+- features which are checked
     - distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
     - FB: no "Add Language" button
     - FB: check with CE that a PE dialog shows for
