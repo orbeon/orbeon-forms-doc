@@ -21,14 +21,14 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
 3. pages
     - FB: create form, publish
     - FR: check it shows on http://localhost:8080/orbeon/fr/
-    - FR: create new form, review, back to edit (#1643)
+    - FR: create new form, review, back to edit ([#1643](https://github.com/orbeon/orbeon-forms/issues/1643))
     - FR: enter data, save
     - FR: check it shows in the summary page
 4. attachments
     - FB: attach static image to form
     - FB: add file attachment field
     - FB: save and publish
-        - DB2: be aware of #1409
+        - DB2: be aware of [#1409](https://github.com/orbeon/orbeon-forms/issues/1409)
     - FR: deployed form loads image
     - FR: attach file, save, edit
 5. search
