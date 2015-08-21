@@ -17,6 +17,10 @@
     insert into orbeon_address_book values(1, "John", "Smith", "5551231234");
     insert into orbeon_address_book values(2, "Mary", "Smith", "5551111111");
     ```
+- setup form
+  - 1 input field
+  - 1 output field
+  - 1 selection control
 - create db service
 
     ```sql
