@@ -58,8 +58,18 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
         - save
     - [#1911](https://github.com/orbeon/orbeon-forms/issues/1911)
         - FR: check that previous form data loads image
-    - /fr/service/(oracle|mysql|sqlserver|db2)/a/schema: schema with B is produced
-    - /fr/service/(oracle|mysql|sqlserver|db2)/a/schema?form-version=1: schema with A is produced
+    - XML Schema production
+        - set property
+
+        ```xml
+        <property 
+            as="xs:string"  
+            processor-name="oxf:page-flow" 
+            name="service-public-methods"    
+            value="GET HEAD"/>
+        ```
+        - /fr/service/(oracle|mysql|sqlserver|db2)/a/schema: schema with B is produced
+        - /fr/service/(oracle|mysql|sqlserver|db2)/a/schema?form-version=1: schema with A is produced
     - go to the summary page, click on first row (created last)
         - check field B/value b and attachment show
         - check PDF 
