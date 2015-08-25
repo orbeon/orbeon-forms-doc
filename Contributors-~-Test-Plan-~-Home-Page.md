@@ -45,6 +45,7 @@
   - Select menu works
   - Operation menu works
     - push/pull forms
+    - check available on /fr/ page on remote (e.g. in Liferay)
   - add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
   - take form (could be previous `sales/my-sales-form` (see [[Form Builder Permissions|Contributors ~ Test Plan ~ Form Builder Permissions]]) but doesn't have to be)
     - attach static image
