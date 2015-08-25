@@ -9,9 +9,6 @@
 
     ```xml
     <tomcat-users>
-        <role rolename="orbeon-user"/>
-        <role rolename="orbeon-sales"/>
-        <role rolename="orbeon-admin"/>
         <user username="orbeon-user"  password="xforms" roles="orbeon-user"/>
         <user username="orbeon-sales" password="xforms" roles="orbeon-user,orbeon-sales"/>
         <user username="orbeon-admin" password="xforms" roles="orbeon-user,orbeon-admin"/>
@@ -34,7 +31,7 @@
     </roles>
     ```
 - browser 1
-    - http://localhost:8080/orbeon/fr/orbeon/builder/new
+    - http://localhost:8080/410pe/fr/orbeon/builder/new
     - login as orbeon-sales
     - must see guest and sales as app names
     - create sales/my-sales-form
@@ -43,8 +40,8 @@
         - orbeon-sales → Read and Update
     - save and publish
     - can access
-        - http://localhost:8080/orbeon/fr/sales/my-sales-form/summary
-        - http://localhost:8080/orbeon/fr/sales/my-sales-form/new
+        - http://localhost:8080/410pe/fr/sales/my-sales-form/summary
+        - http://localhost:8080/410pe/fr/sales/my-sales-form/new
     - new
         - enter data and save
     - summary
@@ -52,7 +49,7 @@
         - check can edit and duplicate
         - check Delete button is absent or disabled
         - check PDF works
-    - http://localhost:8080/orbeon/fr/
+    - http://localhost:8080/410pe/fr/
         - sales/my-sales-form shows on the home page
         - admin ops for sales/my-sales-form
         - other forms don't have admin ops
@@ -61,18 +58,18 @@
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
-    - http://localhost:8080/orbeon/fr/orbeon/builder/summary
+    - http://localhost:8080/410pe/fr/orbeon/builder/summary
         - open structured search (be aware of  [#878][8])
         - check only guest and sales forms are available
 - browser 2
     - login as orbeon-user
     - can access
-        - http://localhost:8080/orbeon/fr/sales/my-sales-form/new
+        - http://localhost:8080/410pe/fr/sales/my-sales-form/new
     - can't access
-        - http://localhost:8080/orbeon/fr/sales/my-sales-form/summary (403) (see [#1386][9] with eXist)
-        - http://localhost:8080/orbeon/fr/sales/my-sales-form/edit/... (403)
+        - http://localhost:8080/410pe/fr/sales/my-sales-form/summary (403) (see [#1386][9] with eXist)
+        - http://localhost:8080/410pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
-    - http://localhost:8080/orbeon/fr/
+    - http://localhost:8080/410pe/fr/
         - NO admin ops for sales/my-sales-form
         - CAN click on line and takes to /new
         - CAN do Review/Edit/PDF
@@ -81,15 +78,15 @@
     - check can still new/edit/view
 - browser 2
     - can't access
-        - http://localhost:8080/orbeon/fr/sales/my-sales-form/new (403)
-    - http://localhost:8080/orbeon/fr/
+        - http://localhost:8080/410pe/fr/sales/my-sales-form/new (403)
+    - http://localhost:8080/410pe/fr/
         - form not visible
 - browser 1
     - re-add Anyone → Create
     - add Owner → Read
     - check nothing changed
 - browser 2
-    - check still can't access http://localhost:8080/orbeon/fr/sales/my-sales-form/summary (403) (see [#1384][10] with eXist)
+    - check still can't access http://localhost:8080/410pe/fr/sales/my-sales-form/summary (403) (see [#1384][10] with eXist)
     - /new, save
     - Summary shows forms in readonly mode
 - access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
