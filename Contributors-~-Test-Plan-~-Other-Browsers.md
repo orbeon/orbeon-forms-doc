@@ -1,6 +1,7 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
 - main tests above with Google Chrome
+  - 4.10: latest is ??? and 46.0.2490.4 dev
   - 4.9: latest is 42.0.2311.135
   - 4.8: latest is 39.0.2171.95 and 41.0.2267.0 dev
   - 4.7: latest is 37.0.2062.122
@@ -8,6 +9,7 @@
   - 4.5: latest is 35.0.1897.8 dev
 - Form Builder / Form Runner run with
     - latest Firefox
+      - 4.10: 40.0.2
       - 4.8: 37.0.1
       - 4.8: 34
       - 4.7: 32
