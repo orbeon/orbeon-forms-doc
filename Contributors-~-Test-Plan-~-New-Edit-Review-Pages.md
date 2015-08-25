@@ -29,7 +29,7 @@
     - set acme.submit.replace to none
     - must not navigate after submit
     
-### Attachments/uploads [4.9 done]
+### Attachments/uploads [4.10 done]
 
 - basic upload works
 - removing uploaded file works
