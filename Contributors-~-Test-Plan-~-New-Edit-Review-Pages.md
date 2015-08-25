@@ -131,7 +131,7 @@
 - /fr/orbeon/controls/new
     - test errors in section template are highlighted in TOC
 
-### Captcha [4.9 DONE]
+### Captcha [4.10 DONE]
 
 - enable with property
 
@@ -152,7 +152,7 @@
 - test reCAPTCHA [NOTE: had to fix 2 bugs with 4.5!]
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning [4.9 DONE]
+### Help popups/hint tooltips positioning [4.10 DONE]
 
 - create form to test general positioning
   - help on all elements
