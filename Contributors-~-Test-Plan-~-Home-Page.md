@@ -5,6 +5,9 @@
   - comment all roles in form-builder-permissions.xml
 - no admin buttons/actions show
 - set all Form Builder permissions
+    ```xml
+    <role name="*" app="*" form="*"/>
+    ```
   - admin actions show
   - Available/Unavailable/Library labels show
   - publish/unpublish works
