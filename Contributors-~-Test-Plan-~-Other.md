@@ -16,6 +16,5 @@ Features to test, with all supported browsers:
     - no debug information
     - no unwanted information
     - be aware of [#849][1]
-- Test sample forms on iOS
 
 [1]: https://github.com/orbeon/orbeon-forms/issues/849
