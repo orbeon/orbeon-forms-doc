@@ -103,20 +103,23 @@
   - contains attachments, XML, PDF and TIFF [SINCE 4.11]
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc [4.9 DONE]
+### Misc [4.10 DONE]
 
 - switch language
 - open/close sections
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode [4.9 DONE]
+### Noscript mode [4.10 DONE]
 
 - orbeon/contact
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
 - go to form with ?fr-noscript=true
 - test w/ new form w/ image & file attachments
     - attachments work [NOTE: be aware of [#1405][3]]
+- be aware of
+    - [#2355](https://github.com/orbeon/orbeon-forms/issues/2355)
+    - [#2356](https://github.com/orbeon/orbeon-forms/issues/2356)
 
 ### Wizard [4.10 DONE]
 
