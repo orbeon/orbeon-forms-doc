@@ -118,16 +118,15 @@
 - test w/ new form w/ image & file attachments
     - attachments work [NOTE: be aware of [#1405][3]]
 
-### Wizard [4.9 DONE]
+### Wizard [4.10 DONE]
 
 - validated mode
     - `/fr/orbeon/w9/new`
     - check cannot click in TOC
     - check cannot navigate forward with error in current section
     - once all sections visited, can freely navigate
-- add property
-    - `<property as="xs:string"  name="oxf.fr.detail.view.appearance.*.*" value="wizard"/>`
-- test errors in section template are highlighted in TOC
+- /fr/orbeon/controls/new
+    - test errors in section template are highlighted in TOC
 
 ### Captcha [4.9 DONE]
 
