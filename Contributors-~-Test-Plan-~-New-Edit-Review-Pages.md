@@ -1,6 +1,6 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
-- errors and warnings [4.9 done]
+- errors and warnings [4.10 done]
     - FB: create form 
         - required field
         - non-required field
@@ -11,7 +11,7 @@
     - FR: review page if no errors
     - FR: review page shows review dialog if warning or info
     - FR: come back to review page
-- process buttons [4.9 done]
+- process buttons [4.10 done]
     - create and publish guest/test
     - add [these properties][2], and add `review` the list of buttons in the first property
     - check standard behavior of buttons
