@@ -4,8 +4,8 @@ Features to test, with all supported browsers:
 
 - give CE version a quick run
 - XForms filter
-    - http://localhost:8080/orbeon/xforms-jsp/guess-the-number/
-    - http://localhost:8080/orbeon/xforms-jsp/flickr-search/
+    - http://localhost:8080/410pe/xforms-jsp/guess-the-number/
+    - http://localhost:8080/410pe/xforms-jsp/flickr-search/
 - examples-cli in distribution work (fix/remove them if not)
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
