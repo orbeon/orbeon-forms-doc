@@ -1,8 +1,8 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
-### Errors and warnings [4.10 done]
+### Errors and warnings [4.10 DONE]
 
-- FB: create form 
+- FB: create form
     - required field
     - non-required field
     - field with 1 warning and 1 info
@@ -12,7 +12,9 @@
 - FR: review page if no errors
 - FR: review page shows review dialog if warning or info
 - FR: come back to review page
-- process buttons [4.10 done]
+
+### Process buttons [4.10 DONE]
+
 - create and publish guest/test
 - add [these properties][2], and add `review` the list of buttons in the first property
 - check standard behavior of buttons
@@ -28,8 +30,8 @@
 - send w/ replace all/none
     - set acme.submit.replace to none
     - must not navigate after submit
-    
-### Attachments/uploads [4.10 done]
+
+### Attachments/uploads [4.10 DONE]
 
 - basic upload works
 - removing uploaded file works
@@ -38,7 +40,7 @@
     - control is back to empty
 - very small (a few KB) upload works multiple times in a row
 - with throttling (with Charles) (*NOTE: Proxy settings not really useful as we are looking at browser/server traffic.*)
-    
+
     ```xml
     <property
         as="xs:string"
@@ -51,8 +53,8 @@
     ```
     - cancel midway works
     - progress indicator works
-    
-### Submit [4.9 done]
+
+### Submit [4.10 DONE]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -72,8 +74,8 @@
     - keep values and close
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
-    
-### Email [4.9 done]
+
+### Email [4.9 DONE]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -92,23 +94,23 @@
   - check email received
   - contains XML and PDF
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
-  
-### Misc [4.9 done]
+
+### Misc [4.9 DONE]
 
 - switch language
 - open/close sections
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
-    
-### Noscript mode [4.9 done]
+
+### Noscript mode [4.9 DONE]
 
 - orbeon/contact
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
 - go to form with ?fr-noscript=true
 - test w/ new form w/ image & file attachments
     - attachments work [NOTE: be aware of [#1405][3]]
-    
-### Wizard [4.9 done]
+
+### Wizard [4.9 DONE]
 
 - validated mode
     - `/fr/orbeon/w9/new`
@@ -119,7 +121,7 @@
     - `<property as="xs:string"  name="oxf.fr.detail.view.appearance.*.*" value="wizard"/>`
 - test errors in section template are highlighted in TOC
 
-### Captcha [4.9 done]
+### Captcha [4.9 DONE]
 
 - enable with property
 
@@ -133,14 +135,14 @@
     name="oxf.xforms.xbl.fr.recaptcha.public-key"
     value="6LesxAYAAAAAAEF9eTyysdkOF6O2OsPLO9zAiyzX"/>
 <property
-    as="xs:string" 
+    as="xs:string"
     name="oxf.xforms.xbl.fr.recaptcha.private-key"
     value="6LesxAYAAAAAAJIXoxMvErqbisKkt7W-CPoE_Huo"/>
 ```
 - test reCAPTCHA [NOTE: had to fix 2 bugs with 4.5!]
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning [4.9 done]
+### Help popups/hint tooltips positioning [4.9 DONE]
 
 - create form to test general positioning
   - help on all elements
