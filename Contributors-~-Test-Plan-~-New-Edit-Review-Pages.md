@@ -75,7 +75,7 @@
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email [4.9 DONE]
+### Email [4.10 DONE]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -89,10 +89,18 @@
 <property as="xs:string"  name="oxf.fr.email.smtp.username.*.*"      value="ebruchez@gmail.com"/>
 <property as="xs:string"  name="oxf.fr.email.smtp.credentials.*.*"   value="**********"/>
 <property as="xs:string"  name="oxf.fr.email.smtp.encryption.*.*"    value="tls"/>
+
+<property as="xs:string"  name="oxf.fr.detail.buttons.orbeon.controls">
+    refresh pdf email wizard-prev wizard-next review
+</property>
+
+<property as="xs:boolean" name="oxf.fr.email.attach-pdf.orbeon.controls"  value="true"/>
+<property as="xs:boolean" name="oxf.fr.email.attach-tiff.orbeon.controls" value="true"/>
 ```
-- hit send button
+- /fr/orbeon/controls/new
+- hit Email button
   - check email received
-  - contains XML and PDF
+  - contains attachments, XML, PDF and TIFF [SINCE 4.11]
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
 ### Misc [4.9 DONE]
