@@ -9,9 +9,18 @@
 
     ```xml
     <tomcat-users>
-        <user username="orbeon-user"  password="xforms" roles="orbeon-user"/>
-        <user username="orbeon-sales" password="xforms" roles="orbeon-user,orbeon-sales"/>
-        <user username="orbeon-admin" password="xforms" roles="orbeon-user,orbeon-admin"/>
+        <user
+            username="orbeon-user"
+            password="xforms"
+            roles="orbeon-user"/>
+        <user
+            username="orbeon-sales"
+            password="xforms"
+            roles="orbeon-user,orbeon-sales"/>
+        <user
+            username="orbeon-admin"
+            password="xforms"
+            roles="orbeon-user,orbeon-admin"/>
     </tomcat-users>
     ```
     - `properties-local.xml`
@@ -51,6 +60,7 @@
         - check PDF works
     - http://localhost:8080/410pe/fr/
         - sales/my-sales-form shows on the home page
+        - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
         - other forms don't have admin ops
         - Select → All, then Operation → Unpublish Local Forms ([#1380][7])
@@ -66,11 +76,12 @@
     - can access
         - http://localhost:8080/410pe/fr/sales/my-sales-form/new
     - can't access
-        - http://localhost:8080/410pe/fr/sales/my-sales-form/summary (403) (see [#1386][9] with eXist)
+        - http://localhost:8080/410pe/fr/sales/my-sales-form/summary (403)
         - http://localhost:8080/410pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
     - http://localhost:8080/410pe/fr/
         - NO admin ops for sales/my-sales-form
+        - BUT admin ops for guest/*
         - CAN click on line and takes to /new
         - CAN do Review/Edit/PDF
 - browser 1
@@ -86,16 +97,14 @@
     - add Owner → Read
     - check nothing changed
 - browser 2
-    - check still can't access http://localhost:8080/410pe/fr/sales/my-sales-form/summary (403) (see [#1384][10] with eXist)
+    - can access http://localhost:8080/410pe/fr/sales/my-sales-form/summary, but only see own data as readonly
     - /new, save
     - Summary shows forms in readonly mode
 - access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
   - setup `dummy` role only in `form-builder-permissions.xml`
-  - access to Summary page is rejected
-  - access to New page is rejected
-  - access to Edit page is rejected if form doesn't have matching role
-    
+  - access to FB Summary page is rejected
+  - access to FB New page is rejected
+  - access to FB Edit page is rejected if form doesn't have matching role
+
 [7]: https://github.com/orbeon/orbeon-forms/issues/1380
 [8]: https://github.com/orbeon/orbeon-forms/issues/878
-[9]: https://github.com/orbeon/orbeon-forms/issues/1386
-[10]: https://github.com/orbeon/orbeon-forms/issues/1384
