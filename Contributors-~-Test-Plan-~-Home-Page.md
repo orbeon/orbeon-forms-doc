@@ -1,6 +1,6 @@
 > [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
 
-- http://localhost:8080/orbeon/fr/ lists deployed forms
+- http://localhost:8080/410pe/fr/ lists deployed forms
 - (see also Form Builder permissions above which already tests some of this)
   - comment all roles in form-builder-permissions.xml
 - no admin buttons/actions show
