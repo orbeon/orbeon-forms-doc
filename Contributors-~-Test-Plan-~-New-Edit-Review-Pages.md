@@ -120,10 +120,11 @@
 - be aware of
     - [#2355](https://github.com/orbeon/orbeon-forms/issues/2355)
     - [#2356](https://github.com/orbeon/orbeon-forms/issues/2356)
-- Clear clears right away
-- PDF stays in tab
-- errors prevent saving
-- Refresh icon works
+- Contact form
+    - Clear clears right away
+    - PDF stays in tab
+    - errors prevent saving
+    - Refresh icon works
 
 ### Wizard [4.10 DONE]
 
