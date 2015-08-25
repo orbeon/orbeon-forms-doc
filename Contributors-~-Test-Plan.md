@@ -32,4 +32,4 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [[XForms Retry|Contributors ~ Test Plan ~ XForms Retry]] [4.10 TODO]
     - [[Error Dialog|Contributors ~ Test Plan ~ Error Dialog]] [4.10 DONE]
     - [[Other Browsers|Contributors ~ Test Plan ~ Other Browsers]] [4.10 TODO]
-    - [[Other|Contributors ~ Test Plan ~ Other]] [4.10 TODO]
+    - [[Other|Contributors ~ Test Plan ~ Other]] [4.10 DONE]
