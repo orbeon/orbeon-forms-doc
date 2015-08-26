@@ -4,7 +4,7 @@ Starting with version 4.10, Orbeon Forms supports [responsive design][1] for for
 
 On a mobile phone, they will show as:
 
-<img src="images/fr-responsive-mobile.png" width="200">
+<img src="images/fr-responsive-mobile.png" width="50%">
 
 
 
