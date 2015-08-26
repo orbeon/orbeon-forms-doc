@@ -4,4 +4,6 @@ Starting with version 4.10, Orbeon Forms supports [responsive design][1] for for
 
 On a mobile phone, they will show as:
 
+![Fields as shown on an mobile phone](images/fr-responsive-mobile.png)
+
 [1]: https://en.wikipedia.org/wiki/Responsive_web_design
