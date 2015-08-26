@@ -35,7 +35,7 @@
 - [[TIFF Production|Form Runner ~ TIFF Production]]
 - [[Updating your 4.5 MySQL database tables|Form Runner ~ Updating your 4.5 MySQL database tables]]
 - [[Wizard View|Form Runner ~ Wizard View]]
-- [[Responsive design|Form Runner ~ Responsive]]
+- [[Responsive design|Form Runner ~ Responsive Design]]
 - XBL Components
     - [[Character Counter|Form Runner ~ XBL Components ~ Character Counter]]
     - [[Grid|Form Runner ~ XBL Components ~ Grid]]
