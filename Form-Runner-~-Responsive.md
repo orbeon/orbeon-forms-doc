@@ -10,6 +10,6 @@ If you have a form with a section containing a grid with two columns, on a deskt
 
 When the same form is loaded from a mobile phone, fields will automatically be shown in one column to better fit that screen:
 
-<p align="center"><img src="images/fr-responsive-mobile.png" width="50%"></p>
+<p align="center"><img src="images/fr-responsive-mobile.png" width="40%"></p>
 
 [1]: https://en.wikipedia.org/wiki/Responsive_web_design
