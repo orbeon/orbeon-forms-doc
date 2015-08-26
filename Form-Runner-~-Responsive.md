@@ -2,7 +2,7 @@
 
 ## Fields in one column
 
-Starting with version 4.10, Orbeon Forms supports [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) for forms you create with Form Builder. One significant implication is that when your forms are shown on a narrow screen, for instance on a mobile phone, fields are reflowed to show on the same "column", whereas some will shown next to each other on a wider display.
+Starting with version 4.10, Orbeon Forms supports [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) for forms you create with Form Builder. One significant implication is that when your forms are shown on a narrow screen, for instance on a mobile phone, most fields are reflowed to be on the same "column", whereas some will shown next to each other on a wider display.
 
 ## Example
 
