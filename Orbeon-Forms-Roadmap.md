@@ -40,7 +40,7 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
-- [] mobile
+- [ ] mobile
 - [ ] performance: TBD
 - [ ] maintenance candidates
   - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
