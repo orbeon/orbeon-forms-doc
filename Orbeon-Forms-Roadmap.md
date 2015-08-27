@@ -40,7 +40,7 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
-- [ ] 1 basic workflow feature ([#2256](https://github.com/orbeon/orbeon-forms/issues/2256))
+- [ ] 1 basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 - [ ] performance
 - [ ] maintenance candidates
   - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
