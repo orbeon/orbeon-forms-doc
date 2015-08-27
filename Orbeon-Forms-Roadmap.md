@@ -36,27 +36,23 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ## Upcoming releases
 
-### Orbeon Forms 4.10
+### Orbeon Forms 4.11
 
 Focus:
 
-- [x] mobile
-  - responsive UI for Form Runner, see [#1181](https://github.com/orbeon/orbeon-forms/issues/1181) and [#2146](https://github.com/orbeon/orbeon-forms/pull/2146)
+- [] mobile
 - [ ] performance: TBD
-- [x] maintenance candidates
+- [ ] maintenance candidates
   - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
   - [ ] migrate some Java code to Scala in the perspective of [#1221](https://github.com/orbeon/orbeon-forms/issues/1221)
   - [ ] [Don't use dom4j XPath APIs #2164](https://github.com/orbeon/orbeon-forms/issues/2164)
-  - [x] [Upgrade to Scala 2.11.6 #1703](https://github.com/orbeon/orbeon-forms/issues/1703)
-  - [x] [Upgrade to Proguard 5.2.x #1975](https://github.com/orbeon/orbeon-forms/issues/1975)
 - [ ] test automation: TBD
-- [x] doc
-  - [x] move more doc from old to new wiki
+- [ ] doc
 
 Issues:
 
-- [ ] [all Orbeon Forms 4.10 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/4.10)
+- [ ] [all Orbeon Forms 4.11 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/4.11)
 
 Dates (tentative):
 
-- 2015-07-08: tentative release date
+- 2015-11-25: tentative release date
