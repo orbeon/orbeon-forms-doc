@@ -40,13 +40,13 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
-- [ ] mobile
-- [ ] performance: TBD
+- [ ] 1 basic workflow feature
+- [ ] performance
 - [ ] maintenance candidates
   - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
   - [ ] migrate some Java code to Scala in the perspective of [#1221](https://github.com/orbeon/orbeon-forms/issues/1221)
   - [ ] [Don't use dom4j XPath APIs #2164](https://github.com/orbeon/orbeon-forms/issues/2164)
-- [ ] test automation: TBD
+- [ ] test automation
 - [ ] doc
 
 Issues:
