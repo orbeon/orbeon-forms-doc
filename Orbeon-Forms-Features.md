@@ -6,7 +6,7 @@ The purpose of this page is to index features by name in a central place.
 
 ## Status
 
-As of 2015-07-07 this page is *very* incomplete.
+As of 2015-08-31 this page is still incomplete.
 
 ## List of Orbeon Forms features
 
