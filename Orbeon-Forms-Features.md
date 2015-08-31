@@ -50,7 +50,7 @@ As of 2015-07-07 this page is *very* incomplete.
 - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
     - search
 - Detail Page
-    - Responsive design for mobile devices such as smartphones: [[doc|Form Runner ~ Responsive Design]]
+    - Responsive design for mobile devices such as smartphones: [[doc|Form Runner ~ Responsive Design]], [blog](http://blog.orbeon.com/2015/08/responsive-design.html)
     - Review mode (printable)
     - Wizard view: [[doc|Form Runner ~ Wizard View]], [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
         - validated mode: [blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
