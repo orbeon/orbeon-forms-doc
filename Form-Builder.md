@@ -9,5 +9,7 @@
     - [[PDF Templates|Form Builder ~ PDF Production ~ PDF Templates]]
 - [[Repeated Grids|Form Builder ~ Repeated Grids]]
 - [[Section Templates|Form Builder ~ Section Templates]]
-- [[Services|Form Builder ~ Services]]
 - [[Validation|Form Builder ~ Validation]]
+- Advanced
+    - [[HTTP Services|Form Builder ~ HTTP Services]]
+    - [[Database Services|Form Builder ~ Database Services]]
