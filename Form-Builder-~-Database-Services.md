@@ -12,7 +12,7 @@
 
 ## Overview
 
-Database services allow you to use data stored in a relational database, in your own table, for instance to dynamically populate a dropdown or other selection control, or to pre-populate fields based on a value entered by users.
+By using *database services*, you can use data stored in any table of a relational database, for instance to dynamically populate a dropdown, or to pre-populate fields based on a value entered by users.
 
 ## Populating a dropdown
 
