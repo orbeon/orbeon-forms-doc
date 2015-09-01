@@ -44,3 +44,21 @@ To "link" the service to the dropdown, you create a new action, set it to run on
 Finally, when your form runs and users make a selection in the dropdown, what you defined to be the *value*, here the content of the `<dept-no>` element is used to populate the element corresponding to the field in the form data.
 
 ![Database Service - User selects value](https://orbeon.mybalsamiq.com/mockups/3495565.png?key=841eef62620e9825a0008b66db449881ef52faf0)
+
+## Populating fields using another field value
+
+Say when users enter a value in *employee number*, you want to lookup that employee in your database and populate other fields, *First name* and *Last name*, based on the information you find about that employee. We've already seen how you establish a [connection with the database](#1-connect-with-the-database), so let's start by seeing how we can use the value of a field in a SQL query.
+
+![Database Services - Populate fields](https://orbeon.mybalsamiq.com/mockups/3496134.png?key=9afebca492194367800ecb4f8115399f58620646)
+
+### 1. Set a service parameter
+
+You can use *parameters* in your SQL query. Those look like: `<sql:param type="xs:string" select=""/>`. The `type` attribute corresponds to the SQL type to use (e.g. `xs:string`, `xs:decimal`, …). The `select` attribute must be left blank; it is filled-out by the action editor when the service is called. The value of each parameter will be set to the current value of a form field, and you define the mapping between parameter in the SQL query and form field when you create an action. That mapping will be done by position; e.g. in the above query, you'll want to set parameter 1 to a control containing an employee id.
+
+![Database Services - Set service parameter](https://orbeon.mybalsamiq.com/mockups/3496171.png?key=35cd8774cb62e8d8773b71aa33d797bb49a98264)
+
+### 2. Set control values
+
+Next, you want to use the *Set Response Control Values* of the *Actions Editor* to map the extract the information you're interested in from the XML produced based on the result from the query, and populate fields in the form.
+
+![Database Services - Set control values](https://orbeon.mybalsamiq.com/mockups/3496182.png?key=3edd2eeb09ef054c3e18e6e18dfc0f085d60894c)
