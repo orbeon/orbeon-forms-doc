@@ -28,6 +28,6 @@ To "link" the service to the dropdown, you create a new action, set it to run on
 
 ### 4. User selects a value
 
-Finally, when your form runs and users make a selection in the dropdown, the value you pointed to 
+Finally, when your form runs and users make a selection in the dropdown, what you defined to be the *value*, here the content of the `<dept-no>` element is used to populate the element corresponding to the field in the form data.
 
 ![Database Service - User selects value](https://orbeon.mybalsamiq.com/mockups/3495565.png?key=841eef62620e9825a0008b66db449881ef52faf0)
