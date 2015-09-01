@@ -59,6 +59,6 @@ You can use *parameters* in your SQL query. Those look like: `<sql:param type="x
 
 ### 2. Set control values
 
-Next, you want to use the *Set Response Control Values* of the *Actions Editor* to map the extract the information you're interested in from the XML produced based on the result from the query, and populate fields in the form.
+Next, you want to use the *Set Response Control Values* section of the *Actions Editor* dialog to map the extract the information you're interested in from the XML produced based on the result from the query, and populate fields in the form.
 
 ![Database Services - Set control values](https://orbeon.mybalsamiq.com/mockups/3496182.png?key=3edd2eeb09ef054c3e18e6e18dfc0f085d60894c)
