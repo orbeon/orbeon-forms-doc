@@ -6,7 +6,7 @@
     - [2. Write the SQL query](#2-write-the-sql-query)
     - [3. Link the dropdown](#3-link-the-dropdown)
     - [4. Select a value](#4-select-a-value)
-- [Populating fields using another field value]
+- [Populating fields using another field value](#populating-fields-using-another-field-value)
     - [1. Set a service parameter](#1-set-a-service-parameter)
     - [2. Set control values](#2-set-control-values)
 
