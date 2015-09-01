@@ -1,8 +1,11 @@
 > [[Home]] ▸ [[Form Builder|Form Builder]]
 
 - [Overview](#overview)
-    - [Populating a dropdown]
-
+- [Populating a dropdown](#populating-a-dropdown)
+    - [1. Connect with the database](#1-connect-with-the-database)
+    - [2. Write the SQL query](#2-write-the-sql-query)
+    - [3. Link the dropdown](#3-link-the-dropdown)
+    - [4. Select a value](#4-select-a-value)
 
 ## Overview
 
