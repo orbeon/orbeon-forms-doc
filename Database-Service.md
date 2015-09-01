@@ -20,13 +20,13 @@ Still in the *Database Service Editor*, you write the SQL query to run in the da
 
 ![Database Service - Run a query](https://orbeon.mybalsamiq.com/mockups/3492410.png?key=5932ce2360c24e025c7089374d153a38e837d72c)
 
-### 3. Link to the dropdown
+### 3. Link the dropdown
 
 To "link" the service to the dropdown, you create a new action, set it to run on *Form Load*, call the service you earlier named `list-departments`. With the result of the service you want to set the list of possible values of an a *Department* dropdown you have in the form. This is where you need to the XML document created based on what was returned by your SQL query, and you do this with 3 XPath expressions. The first points to the values, and will almost always be set to `/response/row` to match the format of the document created by Orbeon Forms. Next, you need to tell Orbeon Forms where it can find, inside the `<row>`, the label (the text shown to users) and the value (what is stored in data when users make a selection).
 
 ![Database Service - Link to the dropdown](https://orbeon.mybalsamiq.com/mockups/3495548.png?key=f4f2e69b9a6fa9f8b95b4374cd5d916e1d20021e)
 
-### 4. User selects a value
+### 4. Select a value
 
 Finally, when your form runs and users make a selection in the dropdown, what you defined to be the *value*, here the content of the `<dept-no>` element is used to populate the element corresponding to the field in the form data.
 
