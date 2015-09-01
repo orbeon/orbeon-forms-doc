@@ -27,7 +27,7 @@ If you're using Tomcat, the simplest way of doing this is to edit Tomcat's `serv
 
 ### 2. Write the SQL query
 
-Still in the *Database Service Editor*, you write the SQL query to run in the database. When that query runs, Orbeon Forms creates an XML document with the data returned by the query, and you'll be referring to parts of that document when linking the database service to a specific dropdown. In essence, root element is always `<response>`, it contains one nested `<row>` element per row, which contains one element per column, with the element name being derived from the column name, and underscores replaced by dashes. So values for the `dept_no` column end up in the `<dept-no>` element.
+Still in the *Database Service Editor*, you write the SQL query to run in the database. When that query runs, Orbeon Forms creates an XML document with the data returned by the query, and you'll be referring to parts of that document when linking the database service to a specific dropdown. In essence, root element is always `<response>`, it contains one nested `<row>` element per row, which contains one element per column, with the element name being derived from the column name, converted in lowercase and underscores replaced by dashes. So values for the `dept_no` column end up in the `<dept-no>` element.
 
 ![Database Service - Run a query](https://orbeon.mybalsamiq.com/mockups/3492410.png?key=5932ce2360c24e025c7089374d153a38e837d72c)
 
