@@ -11,6 +11,8 @@
 
 Database services allow you to use data stored in a relational database, in your own table, for instance to dynamically populate a dropdown or other selection control, or to pre-populate fields based on a value entered by users.
 
+![Database Service - Dropdown](https://orbeon.mybalsamiq.com/mockups/3495681.png?key=0aef78079ee7f7d7df5b0ab3365003107bff3097)
+
 ## Populating a dropdown
 
 In what follows, we'll see how you can populate a *Department* dropdown in your form using values stored in an `departments` table of your relational database.
