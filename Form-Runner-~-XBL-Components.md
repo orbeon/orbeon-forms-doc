@@ -1,3 +1,5 @@
+The following XBL components are documented:
+
 - [[Autocomplete|Form Runner ~ XBL Components ~ Autocomplete]]
 - [[Character Counter|Form Runner ~ XBL Components ~ Character Counter]]
 - [[Grid|Form Runner ~ XBL Components ~ Grid]]
