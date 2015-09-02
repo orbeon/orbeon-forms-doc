@@ -24,7 +24,7 @@ The following XBL components remain to be documented:
 - Explanation
 - Fields Date
 - File Attachment
-- Image Attachment
+- [[Image Attachment|Form Runner ~ XBL Components ~ Image Attachment]]
 - [[Repeater|Form Runner ~ XBL Components ~ Repeater]]
 - [[Section|Form Runner ~ XBL Components ~ Section]]
 - US Phone
