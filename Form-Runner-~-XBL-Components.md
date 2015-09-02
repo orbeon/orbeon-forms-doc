@@ -1,3 +1,5 @@
+For more about XBL components, see [Guide to Using and Writing XBL Components](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components-guide).
+
 The following XBL components are documented:
 
 - [[Autocomplete|Form Runner ~ XBL Components ~ Autocomplete]]
