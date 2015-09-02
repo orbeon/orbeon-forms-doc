@@ -11,8 +11,11 @@ The following XBL components are documented:
 - [Image Annotation](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/image-annotation)
 - [[Map|Form Runner ~ XBL Components ~ Map]]
 - [Number](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/number)
-- [[Repeater|Form Runner ~ XBL Components ~ Repeater]]
-- [[Section|Form Runner ~ XBL Components ~ Section]]
 - [Source Code Editor](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/source-code-editor)
 - [US State](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/us-state)
 - [[Wizard|Form Runner ~ XBL Components ~ Wizard]]
+
+The following XBL components must still be documented:
+
+- [[Repeater|Form Runner ~ XBL Components ~ Repeater]]
+- [[Section|Form Runner ~ XBL Components ~ Section]]
