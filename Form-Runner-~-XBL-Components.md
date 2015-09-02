@@ -2,6 +2,7 @@ For more about XBL components, see [Guide to Using and Writing XBL Components](h
 
 The following XBL components are documented:
 
+- [Alert Dialog](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/alert-dialog)
 - [[Autocomplete|Form Runner ~ XBL Components ~ Autocomplete]]
 - [Captcha](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/recaptcha)
 - [[Character Counter|Form Runner ~ XBL Components ~ Character Counter]]
@@ -14,6 +15,7 @@ The following XBL components are documented:
 - [[Map|Form Runner ~ XBL Components ~ Map]]
 - [Number](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/number)
 - [Source Code Editor](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/source-code-editor)
+- [Tab View](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/tab-view)
 - [TinyMCE](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/tinymce)
 - [US State](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/us-state)
 - [[Wizard|Form Runner ~ XBL Components ~ Wizard]]
@@ -29,4 +31,5 @@ The following XBL components remain to be documented:
 - [[Image Attachment|Form Runner ~ XBL Components ~ Image Attachment]]
 - [[Repeater|Form Runner ~ XBL Components ~ Repeater]]
 - [[Section|Form Runner ~ XBL Components ~ Section]]
+- Tabbable
 - US Phone
