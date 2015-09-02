@@ -16,7 +16,15 @@ The following XBL components are documented:
 - [US State](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/us-state)
 - [[Wizard|Form Runner ~ XBL Components ~ Wizard]]
 
-The following XBL components must still be documented:
+The following XBL components remain to be documented:
 
+- Box Select
+- Dropdown Date
+- Dropdown Select1
+- Explanation
+- Fields Date
+- File Attachment
+- Image Attachment
 - [[Repeater|Form Runner ~ XBL Components ~ Repeater]]
 - [[Section|Form Runner ~ XBL Components ~ Section]]
+- US Phone
