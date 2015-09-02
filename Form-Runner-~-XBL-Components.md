@@ -12,6 +12,7 @@ The following XBL components are documented:
 - [[Map|Form Runner ~ XBL Components ~ Map]]
 - [Number](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/number)
 - [Source Code Editor](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/source-code-editor)
+- [TinyMCE](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/tinymce)
 - [US State](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/us-state)
 - [[Wizard|Form Runner ~ XBL Components ~ Wizard]]
 
