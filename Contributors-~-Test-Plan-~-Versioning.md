@@ -24,7 +24,11 @@ Try with db2 at least.
 </property>
 
 <property as="xs:string" name="oxf.fr.detail.process.send.db2.versioning">
-    send(uri = '/fr/service/custom/orbeon/echo', replace = 'all', content = 'pdf-url')
+    send(
+        uri     = '/fr/service/custom/orbeon/echo', 
+        replace = 'all', 
+        content = 'pdf-url'
+    )
 </property>
 
 <property
