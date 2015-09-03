@@ -33,7 +33,7 @@ Try with db2 at least.
 
 <property
     as="xs:string"
-    name="oxf.fr.email.to.*.*"
+    name="oxf.fr.email.to.db2.versioning"
     value=""/>
 ```
 
