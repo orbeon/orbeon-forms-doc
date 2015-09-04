@@ -19,7 +19,7 @@ The intent is to allow Java (and other Java Virtual Machine (JVM)-based language
 
 ### Basic configuration
 
-You deploy Form Runner in a separate web app, which can be located in the same servlet container as your web app or in a separate or even remote servlet container.
+#### Your web application
 
 Your own web app does the following:
 
@@ -83,6 +83,19 @@ And here is an example of embedding a form from a JSP page:
     %>
 </body>
 </html>
+```
+
+#### Form Runner configuration
+
+You deploy Form Runner in a separate web app, which can be located in the same servlet container as your web app or in a separate or even remote servlet container.
+
+Form runner must used "combined resources" to work. This is the case by default in `prod` mode (see [[Run Modes|Installation ~ Run Modes]]), but if you happen to have setup Orbeon Forms in `dev` mode, make sure to add this property in your `properties-local.xml`:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.combine-resources"
+    value="true"/>
 ```
 
 ### Logging configuration
@@ -200,3 +213,4 @@ The embedding implementation:
 - navigation between pages, such as the Form Runner Edit and Review pages, is not supported
 - embedding Form Builder is currently not supported
 - embedding multiple forms is known to work in some cases, but has known issues so we don't recommend doing this (see [#1854](https://github.com/orbeon/orbeon-forms/issues/1854))
+- `oxf.xforms.combine-resources` must be set to `true`
