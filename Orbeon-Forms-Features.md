@@ -132,3 +132,4 @@ As of 2015-08-31 this page is still incomplete.
 ### Misc
 
 - namespaced jQuery to avoid conflicts with other jQuery versions
+- run modes: [[doc|Installation ~ Run Modes]], [blog](http://blog.orbeon.com/2012/05/run-modes.html)
