@@ -1,6 +1,7 @@
 > [[Home]]
 
 - [[Binds|XForms ~ Binds]]
+- [[Client Side JavaScript API|XForms ~ Client Side JavaScript API]]
 - Controls
     - [[Textarea|XForms ~ Controls ~ Textarea]]
 - [[CSS classes|XForms ~ CSS classes]]
