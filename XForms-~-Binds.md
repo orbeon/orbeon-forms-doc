@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[XForms]]
+
 ## Introduction
 
 The XForms `xf:bind` element is used to point to data in the data model. It allows to associate with data:
