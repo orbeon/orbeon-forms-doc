@@ -2,6 +2,7 @@
 
 - [[Binds|XForms ~ Binds]]
 - [[Client Side JavaScript API|XForms ~ Client Side JavaScript API]]
+- [[Configuration Properties|XForms ~ Configuration Properties]]
 - Controls
     - [[Textarea|XForms ~ Controls ~ Textarea]]
 - [[CSS classes|XForms ~ CSS classes]]
@@ -12,7 +13,10 @@
 - [[Online Resources|XForms ~ Online Resources]]
 - [[Validation|XForms ~ Validation]]
 - [[XBL|XForms ~ XBL]]
-    - [[XBL ~ Bindings|XForms ~ XBL ~ Bindings]]
-    - [[XBL ~ Library|XForms ~ XBL ~ Library]]
+    - [[Bindings|XForms ~ XBL ~ Bindings]]
+    - [[Event Handling|XForms ~ XBL ~ Event Handling]]
+    - [[Library|XForms ~ XBL ~ Library]]
 - [[XForms 2.0|XForms ~ XForms 2.0]]
 - [[XPath Function Library|XForms ~ XPath Function Library]]
+    - [[Extension Functions|XForms ~ XPath Function Library ~ Extension Functions]]
+    - [[Extension Standard|XForms ~ XPath Function Library ~ Standard Functions]]
