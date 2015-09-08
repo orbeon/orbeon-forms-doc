@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[XForms]]
+
 ## Rationale
 
 While XForms gets you a long way towards creating a dynamic user-friendly user interface, there are some dynamic behaviors of the user interface that cannot be implemented easily or at all with XForms, or you might already have some JavaScript code that you would like to reused. A JavaScript API is provided to handle those cases, or other use cases involving JavaScript.
