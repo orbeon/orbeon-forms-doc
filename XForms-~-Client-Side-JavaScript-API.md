@@ -108,8 +108,8 @@ An event handler for the custom event can be in an XForms model or control, and 
 
 #### Parameters
 
-| Property name | Required | Description |
-| ----- | ----- | ----- |
+| Name | Required | Description |
+| ---- | -------- | ----------- |
 | **targetId** |  Yes |  Id of the target element. The element must be an element in the XForms namespace: you cannot dispatch events to HTML elements. In addition, the id must identify either a relevant and non-readonly XForms control, or a model object that supports event handlers such as `<xf:model>`, `<xf:instance>`, or `<xf:submission>`. |
 | **eventName** |  Yes |  Name of the event.
 | **form** |  No |  The form object that corresponds to the XForms form you want to dispatch the event to. This argument is only needed when you have multiple "XForms forms" on the same HTML page. Typically, this would only happens if you are running your form in a portal and you have multiple portlets using XForms on the same page. When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
