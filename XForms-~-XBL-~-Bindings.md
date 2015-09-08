@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[XBL|XForms ~ XBL]]
+> [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
 
 ## Introduction
 
