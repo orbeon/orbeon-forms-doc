@@ -15,7 +15,8 @@ See [Scripting Actions](https://sites.google.com/a/orbeon.com/forms/doc/develope
 In addition to `<xxf:script>` / `<xf:action>`, you can also use the `javascript:` protocol from the `<xf:load>` action to run scripts:
 
 ```xml
-<xf:load resource="javascript:ORBEON.Builder.controlAdded.fire('{$effective-id}')"/>
+<xf:load
+    resource="javascript:ORBEON.Builder.controlAdded.fire('{$effective-id}')"/>
 ```
 
 Using AVTs on the `resource` attribute allows you to pass parameters from XForms to JavaScript.
