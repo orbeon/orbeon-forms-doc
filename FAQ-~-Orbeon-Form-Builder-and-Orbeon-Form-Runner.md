@@ -41,7 +41,7 @@ If you're looking to run Orbeon Forms in the cloud, check CouldHarmony's table w
 
 ### Where is the Form Builder documentation?
 
-See the [Orbeon Form Builder - User Guide][3] (English) and [Orbeon Form Builder - Guide Utilisateur][4] (French).
+See the [Orbeon Form Builder - User Guide][3].
 
 ## Questions about specific features
 
@@ -169,7 +169,6 @@ No, this is not supported, sorry. Forms created with Form Builder require Form R
 1. For changes that you can't do with CSS and that require modifications to the HTML sent by Orbeon Forms to browser, you can change the Form Runner XBL and XSLT stylesheets. But this is hard work and we discourage it.
 
 [3]: http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide
-[4]: http://wiki.orbeon.com/forms/doc/user-guide/orbeon-forms-builder-guide-utilisateur
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning
 [8]: http://wiki.orbeon.com/forms/doc/developer-guide/xpath-2-0-support
 [9]: http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components-guide
