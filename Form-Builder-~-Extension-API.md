@@ -6,7 +6,7 @@ Since Orbeon Forms 4.11.
 
 ## Introduction
 
-Form Builder exposes the following extension API:
+Form Builder exposes the following developer extension API:
 
 - API to add a custom Form Settings tab
 - API to add a custom Control Settings tab
@@ -116,19 +116,25 @@ Here is a template for the new XBL component:
 
 ### Responding to events
 
-Form Builder dispatches the following events to the component:
+#### Events dispatched
 
-- `fb-initialize`: initialize the tab when the dialog shows
-    - `form` parameter: points to the root element of the form definition
-    - `form-instance` parameter: points to the root element of the form definition's form instance
-    - `form-metadata` parameter: points to the root element of the form definition's form metadata
-- `fb-apply`: save the settings, if any, to the form definition:
-    - `form` parameter: points to the root element of the form definition
-    - `form-instance` parameter: points to the root element of the form definition's form instance
-    - `form-metadata` parameter: points to the root element of the form definition's form metadata
+Form Builder dispatches events to the component, following a predefined lifecycle:
+
+- `fb-initialize` is dispatched to initialize the tab when the dialog shows.
+- `fb-apply` is dispatched to save the settings, if any, to the form definition.
 
 Handlers for these events can access the form definition and read from / write to it. Component authors have to be
 very careful not damaging the form definition in the process.
+
+#### Event parameters
+
+`fb-initialize` and `fb-apply` both take the following parameters:
+
+Parameter Name|Type|Value
+--|--|--
+`form` | `element(xh:html)` | root element of the form definition
+`form-instance` | `element(form)` | root element of the form definition's form instance
+`form-metadata` | `element(metadata)` | root element of the form definition's form metadata
 
 ## Custom Control Settings tab
 
@@ -161,21 +167,44 @@ For an example template, see above for `acme:form-settings`.
 
 ### Responding to events
 
+#### Events dispatched
+
 Form Builder dispatches the following events to the component:
 
-- `fb-initialize`
-    - `form` parameter: points to the root element of the form definition
-    - `form-instance` parameter: points to the root element of the form definition's form instance
-    - `form-metadata` parameter: points to the root element of the form definition's form metadata
-    - `original-control-id` parameter: the original control id, such as `first-name-control`
-    - `original-control-name` parameter: the original control name, such as `first-name`
-    - `data-holders` parameter: sequence of all data holders for the given control
-- `fb-apply`
-    - `form` parameter: points to the root element of the form definition
-    - `form-instance` parameter: points to the root element of the form definition's form instance
-    - `form-metadata` parameter: points to the root element of the form definition's form metadata
-    - `control-name` parameter : the new control name, such as `first-name`
-    - `data-holders` parameter : sequence of all data holders for the given control
+- `fb-initialize` is dispatched to initialize the tab when the dialog shows.
+- `fb-apply` is dispatched to save the settings, if any, to the form definition.
+
+Handlers for these events can access the form definition and read from / write to it. Component authors have to be
+very careful not damaging the form definition in the process.
+
+#### Event parameters
+
+`fb-initialize` and `fb-apply` both take the following parameters:
+
+Parameter Name|Type|Value
+--|--|--
+`form` | `element(xh:html)` | root element of the form definition
+`form-instance` | `element(form)` | root element of the form definition's form instance
+`form-metadata` | `element(metadata)` | root element of the form definition's form metadata
+`data-holders` | `element()*` | all data holders for the given control
+
+In addition, `fb-initialize` takes the following parameters:
+
+Parameter Name|Type|Value
+--|--|--
+`original-control-id` | `xs:string` | original control id, such as `first-name-control`
+`original-control-name` | `xs:string` | original control name, such as `first-name`
+
+In addition, `fb-apply` takes the following parameters:
+
+Parameter Name|Type|Value
+--|--|--
+`control-name` | `xs:string` | new control name, such as `first-name`
 
 Between `fb-initialize` and `fb-apply`, the control name (and id) might have been changed in the dialog by the user.
-So `original-control-name` and `control-name` reflect that: they might be identical or different.
+The `original-control-name` and `control-name` parameters reflect that change when needed.
+
+## See also
+
+- [[Automatic inclusion of XBL bindings|XForms-~-Configuration-Properties#automatic-inclusion-of-xbl-bindings]]
+- [XBL - Guide to Using and Writing XBL Components](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components-guide)
