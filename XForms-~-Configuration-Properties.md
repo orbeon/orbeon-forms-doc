@@ -375,7 +375,10 @@ If you write your own XBL components, you need to include the XBL in every page 
 Properties starting with `oxf.xforms.xbl.mapping` specify a mapping between directory name an a URI:
 
 ```xml
-<property as="xs:string" name="oxf.xforms.xbl.mapping.acme" value="http://www.acme.com/xbl"/>
+<property
+  as="xs:string"
+  name="oxf.xforms.xbl.mapping.acme"
+  value="http://www.acme.com/xbl"/>
 ```
 
 Consider an example, with the property above set:
