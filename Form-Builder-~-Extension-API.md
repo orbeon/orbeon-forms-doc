@@ -155,6 +155,7 @@ You then create the file implementing the component under:
 
 ```
 WEB-INF/resources/xbl/acme/control-settings/control-settings.xbl
+```
 
 For an example template, see above for `acme:form-settings`.
 
