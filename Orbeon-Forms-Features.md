@@ -41,6 +41,7 @@ As of 2015-08-31 this page is still incomplete.
     - formulas
     - help text (plain text and rich text)
 - Explanation text: [blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)
+- Extension API: [[doc|Form Builder ~ Extension API]]
 - Access control for editing forms: [[doc|Form Runner ~ Access Control ~ Editing Forms]]
 - Internationalization (i18n)
 
