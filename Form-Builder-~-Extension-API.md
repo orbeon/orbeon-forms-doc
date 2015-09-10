@@ -131,7 +131,7 @@ very careful not damaging the form definition in the process.
 `fb-initialize` and `fb-apply` both take the following parameters:
 
 Parameter Name|Type|Value
---|--|--
+---|---|---
 `form` | `element(xh:html)` | root element of the form definition
 `form-instance` | `element(form)` | root element of the form definition's form instance
 `form-metadata` | `element(metadata)` | root element of the form definition's form metadata
@@ -182,7 +182,7 @@ very careful not damaging the form definition in the process.
 `fb-initialize` and `fb-apply` both take the following parameters:
 
 Parameter Name|Type|Value
---|--|--
+---|---|---
 `form` | `element(xh:html)` | root element of the form definition
 `form-instance` | `element(form)` | root element of the form definition's form instance
 `form-metadata` | `element(metadata)` | root element of the form definition's form metadata
@@ -191,14 +191,14 @@ Parameter Name|Type|Value
 In addition, `fb-initialize` takes the following parameters:
 
 Parameter Name|Type|Value
---|--|--
+---|---|---
 `original-control-id` | `xs:string` | original control id, such as `first-name-control`
 `original-control-name` | `xs:string` | original control name, such as `first-name`
 
 In addition, `fb-apply` takes the following parameters:
 
 Parameter Name|Type|Value
---|--|--
+---|---|---
 `control-name` | `xs:string` | new control name, such as `first-name`
 
 Between `fb-initialize` and `fb-apply`, the control name (and id) might have been changed in the dialog by the user.
