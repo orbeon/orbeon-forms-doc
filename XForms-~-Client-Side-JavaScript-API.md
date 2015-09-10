@@ -87,7 +87,7 @@ As an example, consider you have the model below. It declares an instance with t
 ```javascript
 ORBEON.xforms.Document.dispatchEvent(
     {
-        targetId: 'my-target',
+        targetId:  'my-target',
         eventName: 'my-event'
     }
 );
@@ -98,7 +98,12 @@ You can dispatch your own events from JavaScript by calling the function `ORBEON
 In most cases, you only need to call `dispatchEvent()` with a target id and event name, as in:
 
 ```javascript
-ORBEON.xforms.Document.dispatchEvent("main-model", "do-something");
+ORBEON.xforms.Document.dispatchEvent(
+    {
+        targetId:  'main-model',
+        eventName: 'do-something'
+    }
+);
 ```
 
 An event handler for the custom event can be in an XForms model or control, and can execute any valid XForms action. Here an action is explicitly declared to handle the `do-something` event on the XForms model:
@@ -170,8 +175,8 @@ For instance:
 
 ```javascript
 ORBEON.xforms.Document.dispatchEvent({
-    targetId: "my-target",
-    eventName: "my-event",
+    targetId:   "my-target",
+    eventName:  "my-event",
     properties: { p1: 'v1', p2: 'v2' }
 });
 ```
