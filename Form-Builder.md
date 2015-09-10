@@ -3,6 +3,7 @@
 - [[Actions|Form Builder ~ Actions]]
 - [[Configuration properties|Form Builder ~ Configuration properties]]
 - [[Control Settings|Form Builder ~ Control Settings]]
+- [[Extension API|Form Builder ~ Extension API]]
 - [[Formulas|Form Builder ~ Formulas]]
 - [[Integration|Form Builder ~ Integration]]
 - [[PDF Production|Form Builder ~ PDF Production]]
