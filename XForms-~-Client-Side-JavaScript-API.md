@@ -85,7 +85,12 @@ As an example, consider you have the model below. It declares an instance with t
 #### Basic usage
 
 ```javascript
-ORBEON.xforms.Document.dispatchEvent({targetId: 'my-target', eventName: 'my-event'})
+ORBEON.xforms.Document.dispatchEvent(
+    {
+        targetId: 'my-target',
+        eventName: 'my-event'
+    }
+);
 ```
 
 You can dispatch your own events from JavaScript by calling the function `ORBEON.xforms.Document.dispatchEvent()`. The function takes a single parameter which is an object with properties as defined in the table below. Calling the function with several parameters in order listed in the table below is supported as a deprecated alternative for backward compatibility.
