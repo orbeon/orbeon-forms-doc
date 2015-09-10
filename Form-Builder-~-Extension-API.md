@@ -127,7 +127,7 @@ Form Builder dispatches the following events to the component:
     - `form-instance` parameter: points to the root element of the form definition's form instance
     - `form-metadata` parameter: points to the root element of the form definition's form metadata
 
-Handlers for these events can access the form definition and read from/ write to it. Component authors have to be
+Handlers for these events can access the form definition and read from / write to it. Component authors have to be
 very careful not damaging the form definition in the process.
 
 ## Custom Control Settings tab
