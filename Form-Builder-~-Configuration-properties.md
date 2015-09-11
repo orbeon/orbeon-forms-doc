@@ -41,7 +41,7 @@ In that property, the value of `$GROUPNAME` determines a grouping of the control
            oxf:/xbl/orbeon/explanation/explanation.xbl"/>
 ```
 
-To properly show up in the toolbox, XBL files need to include the appropriate [component metadata](http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/toolbox-component-metadata).
+To properly show up in the toolbox, XBL files need to include the appropriate [[component metadata| Form Builder ~ Toolbox ~ Metadata]].
 
 ### Other toolbox features
 
