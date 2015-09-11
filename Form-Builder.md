@@ -10,6 +10,8 @@
     - [[PDF Templates|Form Builder ~ PDF Production ~ PDF Templates]]
 - [[Repeated Grids|Form Builder ~ Repeated Grids]]
 - [[Section Templates|Form Builder ~ Section Templates]]
+- Toolbox
+  - [[Metadata|Form Builder ~ Toolbox ~ Metadata]]
 - [[Validation|Form Builder ~ Validation]]
 - Advanced
     - [[HTTP Services|Form Builder ~ HTTP Services]]
