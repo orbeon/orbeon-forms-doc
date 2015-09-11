@@ -572,7 +572,7 @@ Configure a test SMTP host for all email processors. This global property when s
     value="joe@example.org"/>
 ```
 
-This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes][7]).
+This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [[Run Modes|Installation ~ Run Modes]]).
 
 ### Test recipient
 
@@ -586,7 +586,7 @@ Configure a test recipient email address for all email processors. This global p
     value="joe@example.org"/>
 ```
 
-This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes][7]).
+This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [[Run Modes|Installation ~ Run Modes]]).
 
 ## Rarely used properties
 
@@ -662,6 +662,5 @@ _NOTE: You don't usually need to enable this property._
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning
 [3]: http://docs.oracle.com/javase/6/docs/technotes/guides/security/jsse/JSSERefGuide.html#X509TrustManager
-[7]: http://wiki.orbeon.com/forms/doc/developer-guide/run-modes
 [8]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/config/log4j.xml
 [9]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl
