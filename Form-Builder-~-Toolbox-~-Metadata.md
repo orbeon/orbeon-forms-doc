@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[Form Builder|Form Builder]]
+
 ## Rationale
 
 XBL components can be loaded by the Form Builder toolbox. In order for Form Builder to have information about those components, metadata can be added to each XBL binding.
