@@ -335,7 +335,7 @@ These properties allow specifying fonts to embed in PDF files. The `oxf.fr.pdf.f
     value="Arial"/>
 ```
 
-As of Orbeon Forms 4.x, to change the main font, you must map to the Helvetica Neue font. For example;
+To change the main font, you must map to the Helvetica Neue font. For example;
 
 ```xml
 <property
@@ -522,7 +522,7 @@ With this property, you can set the default logo URI. This logo appears on the s
 
 ### Adding your own CSS
 
-#### Adding your own CSS files (Orbeon Forms 4)
+#### Adding your own CSS files
 
 1. Place your CSS file(s) under one of the following recommended locations:
     * `WEB-INF/resources/forms/assets`: CSS for all forms
