@@ -520,6 +520,8 @@ Whether to show the Orbeon Forms version at the bottom.
 
 With this property, you can set the default logo URI. This logo appears on the summary and Detail Pages for a given form. You can omit (or comment out) this property or set its value to `""` (empty string) if you don't want a default logo at all.
 
+If you use two `*` wildcards, as in the example above, the property also sets the logo on the [[Form Runner Home page|Form Runner ~ Home Page]].
+
 ### Adding your own CSS
 
 #### Adding your own CSS files
