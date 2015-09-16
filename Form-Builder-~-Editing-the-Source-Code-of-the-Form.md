@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[Form Builder|Form Builder]]
+
 The "Edit Source" button in the toolbox opens the "Edit Source" dialog.
 
 Form Builder uses XHTML+XForms as form definition representation. The format must be well-formed XML. The dialog shows a text area containing that representation.
