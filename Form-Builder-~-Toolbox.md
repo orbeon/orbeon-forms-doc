@@ -34,7 +34,8 @@ The following control information is copied and pasted:
 * Name
 * Label, hint, and help
 * Itemset
-* Validation settings including data type and constraints
+* Validations, including datatype, constraints, and alerts
+* Formulas
 * All associated localized resources
 
 When the control is pasted, if the control name of the clipboard control is currently not in use in the form, it is used. Otherwise, a new name is chosen by Form Builder.
@@ -80,15 +81,14 @@ After insertion, the new grid has one column and one cell. You can change the di
 
 ![](images/fb-text-controls.png)
 
-The following text controls are available from the toolbox:
-
-|     |     |
+| Name | Description |
 | --- | --- |
-| **Input field** | A simple input field |
-| **Password field** | An input field that hides the characters you type |
-| **Text area** | Simple multi-line area |
-| **Text output** | Like most other controls, the text output has a label, hint, but unlike most other control, the it can't be used by users to edit its value; instead, it just shows a value. It is intended to be used to display calculated values.<br><br>It can also be used to display a block of static text, like an explanation, by entering the text as the label of the control. The downside is that the text [has to be typed in a text field][29], which isn't appropriate for longer pieces of text and doesn't allow the text to be split in paragraphs. |
-| **Formatted text** | A rich text editor, aka HTML editor |
+| **Input field**    | Simple input field |
+| **Text Area**      | Simple multi-line area |
+| **Text Output**    | Like most other controls, the text output has a label, hint, but unlike most other control, the it can't be used by users to edit its value. Instead, it just *shows* a value, either fixed or calculated with a formula. |
+| **Password Field** | An input field that hides the characters you type |
+| **Formatted Text** | A rich text editor, aka HTML editor |
+| **Explanation**    | Explanatory text which does not capture a value ([blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
 
 Controls appear as follows in Form Builder:
 
@@ -108,81 +108,61 @@ At runtime, in preview mode:
 
 ![](images/fb-typed-controls.png)
 
+| Name | Description |
+| --- | --- |
+| **Email Address** | Input field which validates that the content is an email address |
+| **US Phone Number** | US phone number with automatic formatting |
+| **Number** | A simple number |
+| **Currency** | US dollar currency |
+| **US State** | US state selector |
+
+
 ## Date and time controls
 
 ![](images/fb-date-time-controls.png)
+
+| Name | Description |
+| --- | --- |
+| **Date** | Date field with date picker |
+| **Time** | Time field |
+| **Date and Time** | Combined date and time field |
+| **Dropdown Date** | Date chooser which uses dropdown menus |
+| **Fields Date** | date chooser which uses separate text fields |
 
 ## Selection controls
 
 ![](images/fb-selection-controls.png)
 
+| Name | Selection | Description |
+| --- | --- | --- |
+| **Dropdown Menu** | single | dropdown menu |
+| **Radio Buttons** | single | radio buttons |
+| **Checkboxes** | multiple | checkboxes |
+| **Scrollable List** | single | scrollable list|
+| **Boolean Input** | - | checkbox storing a boolean value |
+| **Scrollable Checkboxes** | single | scrollable radio buttons |
+| **Dynamic Data Dropdown** | single | dynamic dropdown bound to a REST service |
+| **Autocomplete** | single | autocompletion |
+
 ## Attachment controls
 
 ![](images/fb-attachment-controls.png)
+
+| Name | Description |
+| --- | --- |
+| **Image** | Image displayed on the form at design time. It is not possible to change the image at runtime. |
+| **Image Attachment** | Image which can be attached to the form at design time or at runtime. The image can also be changed at runtime once attached. |
+| **File Attachment** | File which can be attached to the form at design time or at runtime. The file can also be replaced or downloaded once attached. |
+| **Image Annotation** | Select and annotate an image (see [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)). |
 
 ## Button controls
 
 ![](images/fb-button-controls.png)
 
-## TODO
-
-The following text controls are available from the toolbox:
-
-* Standard
-    * **Date:** date field with date picker.
-    * **Time:** time field.
-    * **Date and Time:** date and time field.
-    * **Email Address:** input field which validates that the content is an email address.
-    * **Static Image:** image displayed on the form at design time. It is not possible to change the image at runtime.
-    * **Image Attachment:** image which can be attached to the form at design time, but which can also be changed at runtime.
-    * **File Attachment:** file which can be attached to the form at design time or at runtime. The file can also be replaced or downloaded once attached.
-* Experimental
-    * **Dropdown Date:** date chooser which uses dropdown menus.
-    * **Fields Date:** date chooser which uses separate text fields.
-    * **Date Picker:** date chooser which just uses a date picker.
-    * **US Phone Number:** US phone number showing area code and number in separate fields.
-    * **Dollars (Thousand):** field to capture dollars as thousands.
-
-Controls appear as follows in Form Builder:
-
-![][34]
-
-At runtime, with data captured:
-
-![][35]
-
-At runtime, in preview mode:
-
-![][36]
-
-![][37]
-
-## Selection controls
-
-The following selection controls are available from the toolbox:
-
-* Standard
-    * **Dropdown** (single selection)
-    * **Radio Buttons** (single selection)
-    * **Checkboxes** (multiple selection)
-    * **Single List Box** (single selection)
-    * **Multi List Box** (multiple selection)
-* Experimental
-    * **Data Dropdown** (single selection dropdown bound to a service)
-    * **Autocomplete** (single section with completion)
-    * **Link Selector** (single selection with items shown as clickable links)
-
-Controls appear as follows in Form Builder:
-
-![][38]
-
-At runtime, with data captured:
-
-![][39]
-
-At runtime, in preview mode:
-
-![][40]
+| Name | Description |
+| --- | --- |
+| **Button** | Simple button |
+| **Link Button** | Button appearing as a link |
 
 ### Choices
 
