@@ -1,6 +1,6 @@
 ## Creating your first form definition
 
-After pressing the "New" button on the [[summary page|Form Builder ~ Summary Page]], you reach the form editor proper. Form Builder requires that you provide two small pieces of information before starting:
+After pressing the "New" button on the [[summary page|Form Builder ~ Summary Page]], you reach the form editor (also known as form designer) proper. Form Builder requires that you provide two small pieces of information before starting:
 
 * **Application Name.** Each form definition has an _application name_ which identifies a group of forms that belong together. In practice, an application name might correspond to a project, or a department, or a company. For example, all forms built by Orbeon have the "orbeon" application name.
 _NOTE: Depending on your permissions, the application name might have been picked for you already, or you might have the choice of a restricted set of application names._
