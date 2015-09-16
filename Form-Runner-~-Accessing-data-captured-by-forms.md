@@ -22,7 +22,10 @@ In what follows, you'll see  3 techniques for doing so:
 
 ### 1. Send data on submit
 
+In most cases, this is the best option, and the one we recommend. In essence, you setup Orbeon Forms so when users fill out a form and submit it, Orbeon Forms sends the data users entered to your app. Your app can do whatever it wants with this data, and if needed, in the response to Orbeon Forms, your app can tell Orbeon Forms which page the user should go to next.
+
 ![Doc - Accessing data - Process - Overview](https://orbeon.mybalsamiq.com/mockups/3496362.png?key=0de5fdf28d9bff939a0bef381754c6bf57a271a7)
+
 ![Doc - Accessing data - Process - How](https://orbeon.mybalsamiq.com/mockups/3496409.png?key=8c133721c5ab53800f4a0ba422730f4f020dd695)
 
 ### 2. Call the REST API
