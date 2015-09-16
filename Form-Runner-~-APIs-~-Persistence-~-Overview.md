@@ -10,14 +10,21 @@
 
 ## REST-based
 
-The Form Runner/Form Builder persistence API is based on REST. This means that Form Builder and Form Runner use HTTP to communicate with a persistence layer implementation.
+The Form Runner/Form Builder persistence API is based on REST. This means that Form Builder and Form Runner use HTTP to communicate with a persistence layer implementation, roughly as follows:
 
 Form Runner calls URLs as follows:
 
 * Create, Read, update, delete (CRUD) form data → HTTP GET, PUT, DELETE to:
-`/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml`
+
+    ```
+    /crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml
+    ```
+
 * Search → HTTP POST with `Content-Type: application/xml` to:
-`/search/`[`APPLICATION_NAME]/[FORM_NAME]`
+
+    ```
+    /search/[APPLICATION_NAME]/[FORM_NAME]
+    ```
 
 Following the REST philosophy, HTTP methods are used to determine what CRUD operation to perform:
 
