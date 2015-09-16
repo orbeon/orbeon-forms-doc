@@ -1,6 +1,10 @@
 > [[Home]] ▸ [[Form Runner|Form Runner]]
 
 - [Situation](#situation)
+- [Techniques](#techniques)
+    - [](#)
+    - [](#)
+    - [](#)
 
 ## Situation
 
