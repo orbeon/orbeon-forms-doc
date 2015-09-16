@@ -10,11 +10,11 @@
 
 ## Purpose
 
-This is the API used, in particular, by the [[Form Runner Home page|Form Runner ~ Home Page]], accessible to users on `/fr/`. The Form Runner home page lists all the deployed forms the user has access to, and for each one it provides a link to create a new instance of that form, and to the summary page for that form. Either one of those links might be missing, depending on [[the user's permissions|Form Runner ~ Access Control]].
+This is the API used, in particular, by the [[Form Runner Home page|Form Runner ~ Home Page]], accessible to users on `/fr/`. The Form Runner home page lists all the published forms the user has access to, and for each one it provides a link to create a new instance of that form, and to the summary page for that form. Either one of those links might be missing, depending on [[the user's permissions|Form Runner ~ Access Control]].
 
 ## API
 
-You get the list of all the deployed forms with a GET on `/fr/service/persistence/form`. This will, in turn call the corresponding API for each persistence API implementation defined in the properties, since different forms can be deployed on different persistence implementations. For instance, this might call MySQL implementation doing a GET on `/fr/service/mysql/form` and the eXist implementation with another GET on `/fr/service/exist/form`, finally aggregating the results returned by each implementation.
+You get the list of all the published forms with a GET on `/fr/service/persistence/form`. This will, in turn call the corresponding API for each persistence API implementation defined in the properties, since different forms can be published on different persistence implementations. For instance, this might call MySQL implementation doing a GET on `/fr/service/mysql/form` and the eXist implementation with another GET on `/fr/service/exist/form`, finally aggregating the results returned by each implementation.
 
 The document returns by this API looks like this:
 
@@ -63,7 +63,7 @@ Each `<form>` element contains:
 * All the elements inside the form metadata instance of the corresponding form definition, which can be retrieved with the following XPath expression: `/xh:html/xh:head/xf:model/xf:instance[@id = 'fr-form-metadata']/metadata/*`.
 * A `<last-modified-time>` element. [SINCE Orbeon Forms 4.4]
 
-[SINCE: Orbeon Forms 4.3] Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about deployed forms in that specific app, or that specific app and form is returned.
+[SINCE: Orbeon Forms 4.3] Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about published forms in that specific app, or that specific app and form is returned.
 
 * When an app specified, the URL looks like `/fr/service/persistence/form/[APP_NAME]`.
 * When both an app and form name are specified, the URL looks like `/fr/service/persistence/form/[APP_NAME]/[FORM_NAME]`.
