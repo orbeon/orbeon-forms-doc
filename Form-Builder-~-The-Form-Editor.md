@@ -47,13 +47,11 @@ _NOTE: This feature controls the language of the Form Builder user interface onl
 
 The bottom bar of Form Builder shows two types of elements:
 
-* Status icons
-    * **Errors on Form icon.** This red icon indicates whether there are errors in the form, such as a missing title or missing section titles. If this icon appears, you cannot save your form definition.
-    * **Unsaved Changes icon.** This icon indicates whether there are some unsaved changes.
 * Buttons
-    * **Close button.** Close the browser window/tab in which Form Builder is open.
+    * **Summary button.** Takes you to the [[Form Builder Summary page|Form Builder ~ Summary Page]].
         * If the form has unsaved changes, a warning dialog shows first.
         * Otherwise, the window/tab closes and takes you back to the Form Builder summary page.
+    * **New button.** Create a new form.
     * **Test button.** Test the current form. If the form contains errors, this button is disabled.
     * **Publish button.** Publish the current form. If the form contains errors or has unsaved changes, this button is disabled. You must fix errors and save the form before you can publish it.
     * **Save button.** Save the form to the database.
