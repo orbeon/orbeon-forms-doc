@@ -43,7 +43,7 @@ Your second option is to have your app call the Orbeon Forms [persistence API](F
 
 As mentioned, the API provided by Orbeon Forms is quite simple, but there are a few complications to keep in mind when calling such an API, which often make [option 1](#1-send-data-on-submit) above more desirable:
 
-1. You're deciding when to call the API. Most likely you'll want to do this at regular interval, like every hour or every day, to process any new data submitted to the system. This means that you need to have a cron-like infrastructure to perform that task on a regular basis, and that your app won't know about new data in real-time.
+1. You're deciding when to call the API. Most likely you'll want to do this at a regular interval, like every hour or every day, to process any new data submitted to the system. This means that you need to have a cron-like infrastructure to perform that task on a regular basis, and that your app won't know about new data in real-time.
 2. Assuming your app is just interested in processing new data, it will need to somehow keep track of what data it has already processed.
 3. Out-of-the-box, for security reasons, access to the REST API is blocked. You can either completely open up access to the API at the Orbeon Forms level, and protect it through some other mean (e.g. filter), or setup some authentication between the caller of the API and Orbeon Forms, through an authorization service. You can find more about this in [Authorization of Pages and Services](Controller-~-Authorization-of-Pages-and-Services).
 
