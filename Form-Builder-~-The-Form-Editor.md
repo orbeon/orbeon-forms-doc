@@ -27,9 +27,9 @@ You also may enter at this time a form title and description.
 Form Builder's form editor is organized in 4 areas:
 
 * **Top:** title area with status information and selection of the Form Builder user interface language.
-* **Left:** the toolbox, which might scroll vertically depending on your browser or monitor size.
+* **Left:** the [[toolbox|Form Builder ~ Toolbox]], which might scroll vertically depending on your browser or monitor size.
 * **Bottom:** status icons and buttons.
-* **Center:** WYSIWYG area where you actually edit your form definition. This area might scroll vertically depending on your browser or monitor size or the size of the form you are editing.
+* **Center:** WYSIWYG [[form area|Form Builder ~ The Form Area]] where you actually edit your form definition. This area might scroll vertically depending on your browser or monitor size or the size of the form you are editing.
 
 ![](images/fb-new.png)
 
