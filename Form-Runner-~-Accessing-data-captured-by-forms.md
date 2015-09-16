@@ -2,9 +2,15 @@
 
 ## The question
 
-You've created forms, Orbeon Forms stores 
+You've created forms with Form Builder, published those forms, and setup Orbeon Forms so stores data captured by the forms in your relational database. Now, how can another app of yours access this data?
 
 ![Accessing data - How](https://orbeon.mybalsamiq.com/mockups/3495508.png?key=409bf6fda74861c325ab1cbb3f99d1ac269a20b6)
+
+In what follows, you'll see  here 3 techniques for doing so:
+
+1. Having Orbeon Forms send the data to your app when users click on the submit button in your form.
+2. Your app calling a REST API provided by Orbeon Forms for this purpose.
+3. Your app accessing the data directly into database where it is saved by Orbeon Forms.
 
 ## Techniques
 ### 1. Send data on submit
