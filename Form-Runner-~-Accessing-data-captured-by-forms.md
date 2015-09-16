@@ -2,7 +2,7 @@
 
 ## The question
 
-You've created forms with Form Builder, published those forms, and setup Orbeon Forms so stores data captured by the forms in your relational database. Now, how can another app of yours access this data?
+You've created forms with Form Builder, published those forms, and setup Orbeon Forms so it [stores data captured by the forms in your relational database](Installation-~-Relational-Database-Setup). Now, how can another app of yours access this data?
 
 ![Accessing data - How](https://orbeon.mybalsamiq.com/mockups/3495508.png?key=409bf6fda74861c325ab1cbb3f99d1ac269a20b6)
 
