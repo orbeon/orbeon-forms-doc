@@ -49,5 +49,12 @@ As mentioned, the API provided by Orbeon Forms is quite simple, but there are a 
 
 ### 3. Accessing the database
 
+Accessing data in the database rather than through an API, per [option 2](#2-call-the-rest-api) above, increases the chances that changes to your code will be needed when you upgrade Orbeon Forms, as the format of the Orbeon tables is more likely to change than the API. Despite this caveat, we've found that it is often more practical for customers to access data in a database rather than through an API.
+
 ![Doc - Accessing data - DB - Overview](https://orbeon.mybalsamiq.com/mockups/3496415.png?key=78c6cf5202454498bc2560e8ea8bc7e593e5fce1)
+
+The table you'll be the most interested in is `orbeon_form_data`, where the data users save or submit goes. In that table, a given "form data" (i.e. instance of a user filling out a form), is identified with a `document_id`. The actual data, i.e. values of the fields, is stored as XML in the `xml` column. For more details on the table format, see the DDL creating those tables for your database in the [Relational Database Setup](Installation-~-Relational-Database-Setup), as it varies slightly depending on the database you're using.
+
+One way to access the data in `orbeon_form_data` is through a database trigger that copies the data you're interested in from the XML in `orbeon_form_data` every time new data is saved; for instance see an [example of such a trigger for MySQL](Installation-~-Relational-Database-Setup#manual-relational-table-setup-with-mysql).
+
 ![Doc - Accessing data - DB - How](https://orbeon.mybalsamiq.com/mockups/3496425.png?key=1865cc9145143beea62ed382102edddf24de1b03)
