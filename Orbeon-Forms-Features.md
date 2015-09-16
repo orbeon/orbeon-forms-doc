@@ -101,7 +101,7 @@ As of 2015-08-31 this page is still incomplete.
     - static image
     - image attachment
     - file attachment
-    - image annotation
+    - image annotation: [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)
 - buttons
     - button
     - link button
