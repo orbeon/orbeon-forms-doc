@@ -24,7 +24,7 @@ _NOTE: The exact URL might be provided by your IT organization._
 
 Once you reach the summary page, you will either see an empty list, or a list containing existing form definitions, as shown in this screenshot.
 
-![][20]
+![](images/fb-summary.png)
 
 For each form definition, the list shows:
 
@@ -53,6 +53,8 @@ The top of the summary page features search fields. There are two types of searc
 To search: enter a search term and press the "Search" button or the "enter" key.
 
 Tip: to clear the search and list all the form definitions again, clear all search fields and press the "Search" button or the "enter" key.
+
+![](images/fb-summary-search.png)
 
 ## Creating a new form definition
 
