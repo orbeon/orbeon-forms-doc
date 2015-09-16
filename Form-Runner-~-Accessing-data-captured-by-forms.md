@@ -26,6 +26,13 @@ In most cases, this is the best option, and the one we recommend. In essence, yo
 
 ![Doc - Accessing data - Process - Overview](https://orbeon.mybalsamiq.com/mockups/3496362.png?key=0de5fdf28d9bff939a0bef381754c6bf57a271a7)
 
+Let's see in more details what this entails:
+
+1. When users click the *submit* button on a form created in Form Builder (or for that matter any other button at the bottom of the form), a *process* runs. In essence, a *process* defines a sequence of actions to be performed, and one of them can be to *send* the data to your app. Currently, processes are defined in your [`properties-local.xml`](Installation-~-Configuration-Properties). To learn more about processes, see the documentation on [Buttons and Processes](Form-Runner-~-Buttons-and-Processes).
+2. In your process, you'll be using the [`send()`](Form-Runner-~-Buttons-and-Processes#send) action to instruct Orbeon Forms to POST the data entered by users to a URL of your choice.
+3. Your app can do what it wants with the data it receives: perform some operation in a database, call a service, etc.
+4. If you passed the `replace = "all"` parameter to `send()`, then what your app sends back to Orbeon Forms in the HTTP response will be sent/proxied back to the browser by Orbeon Forms. This allows you to send a custom confirmation page, or issue a redirect to another page or form that users should go to next.
+
 ![Doc - Accessing data - Process - How](https://orbeon.mybalsamiq.com/mockups/3496409.png?key=8c133721c5ab53800f4a0ba422730f4f020dd695)
 
 ### 2. Call the REST API
