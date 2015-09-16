@@ -135,7 +135,7 @@ All persistence URLs are called with headers matching configuration properties f
 * MySQL
     * property:
 
-        ```
+        ```xml
         <property
             as="xs:string"
             name="oxf.fr.persistence.mysql.datasource"
@@ -151,7 +151,7 @@ All persistence URLs are called with headers matching configuration properties f
 * DB2
     * property:
 
-        ```
+        ```xml
         <property
             as="xs:string"
             name="oxf.fr.persistence.db2.datasource"
