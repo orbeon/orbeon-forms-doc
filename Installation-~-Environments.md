@@ -1,3 +1,5 @@
+> [[Home]] ▸ [[Installation]]
+
 ## Types of environments
 
 Orbeon Forms is often installed in different environments, with one or more servers dedicated to each environment. For instance:
