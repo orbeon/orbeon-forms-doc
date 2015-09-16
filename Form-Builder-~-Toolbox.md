@@ -220,22 +220,22 @@ From the perspective of people who will be filling out your form, the data dropd
 2. Click on cogwheel to bring up a _Control Settings_ dialog, similar to the one shown to the right.
 3. In the _Resource URI_, enter the address of an HTTP service that returns the data you want to use to populate the dropdown. In most cases, the URL will look like `http://your-host/your-service`. If the address you specify start with a `/`, it is relative to the Orbeon Forms web app, which allows you to access a service you might have implemented in Orbeon Forms with XPL. For this example, let's assuming your service returns a list of states that looks like:
 
-``xml
+```xml
 <states>
     <state abbreviation="AK" name="Alaska"/>
     <state abbreviation="AL" name="Alabama"/>
     <state abbreviation="AR" name="Arkansas"/>
     ...
 </states>
-``
+```
 4. In the _Items_ field, enter an XPath expression that returns one node per state. In this case, it will be: `/states/state`.
 5. For each state (_item_), specify an expression relative to the node returning the label (shown to users in the dropdown) and the value (stored in the data). In this case, those expressions will be, respectively: `@name` and `@abbreviation`.
 
 If the data in the dropdown depends on a value entered by users in another form field, you can pass that value to the service as a request parameter. For instance, let's say that in addition to the _State_ dropdown, you have a _City_ dropdown where you want to list all the cities in the currently selected state. If the service is at `/xforms-sandbox/service/zip-cities` and takes a request parameter `state-abbreviation`, assuming you named your _State_ field `state`, in the _Resource URI_ enter:
 
-``xml
+```
 /xforms-sandbox/service/zip-cities?state-abbreviation={$state}
-``
+```
 
 [AS OF 2011-05-10] Limitation: you can't yet use a variable, as shown in the above example, to refer to another fields value. Instead, if the control is in the same section use `{state}`; if in a different section with name other-section, use `{../other-section/state}`.
 
@@ -245,8 +245,8 @@ If the data in the dropdown depends on a value entered by users in another form 
 
 The autocomplete control is a single item selection control that loads a list of suggestions from a service. It takes the same _Resource URI_, _Items_, _Label_, and _Value_ configuration parameters as the [Data dropdown control][46]. You may want to pass the value of other controls to the service, but you'll always want to pass the currently typed value, as the suggestions should depend on what users typed so far. You access to the currently typed by value with `$fr-search-value`, as in the following example:
 
-``xml
+```
 /xforms-controls/services/countries?country-name={`encode-for-uri($fr-search-value)}
-``
+```
 
 ![][47]
