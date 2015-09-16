@@ -105,6 +105,10 @@ Orbeon is expecting feedback from users on the controls marked _experimental_ be
 | **Formatted Text** | A rich text editor, aka HTML editor |
 | **Explanation**    | Explanatory text which does not capture a value ([blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
 
+The controls appear like this at design time:
+
+![](images/fb-text-controls-design-time.png)
+
 ### Typed controls
 
 ![](images/fb-typed-controls.png)
@@ -117,6 +121,9 @@ Orbeon is expecting feedback from users on the controls marked _experimental_ be
 | **Currency** | US dollar currency |
 | **US State** | US state selector |
 
+The controls appear like this at design time:
+
+![](images/fb-typed-controls-design-time.png)
 
 ### Date and time controls
 
@@ -129,6 +136,10 @@ Orbeon is expecting feedback from users on the controls marked _experimental_ be
 | **Date and Time** | Combined date and time field |
 | **Dropdown Date** | Date chooser which uses dropdown menus |
 | **Fields Date** | date chooser which uses separate text fields |
+
+The controls appear like this at design time:
+
+![](images/fb-tate-time-controls-design-time.png)
 
 ### Selection controls
 
@@ -147,6 +158,10 @@ Orbeon is expecting feedback from users on the controls marked _experimental_ be
 
 You edit the choices of most selection controls with the [[Itemset Editor|Form Builder ~ Itemset Editor]].
 
+The controls appear like this at design time:
+
+![](images/fb-selection-controls-design-time.png)
+
 ### Attachment controls
 
 ![](images/fb-attachment-controls.png)
@@ -157,6 +172,10 @@ You edit the choices of most selection controls with the [[Itemset Editor|Form B
 | **Image Attachment** | Image which can be attached to the form at design time or at runtime. The image can also be changed at runtime once attached. |
 | **File Attachment** | File which can be attached to the form at design time or at runtime. The file can also be replaced or downloaded once attached. |
 | **Image Annotation** | Select and annotate an image (see [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)). |
+
+The controls appear like this at design time:
+
+![](images/fb-attachment-controls-design-time.png)
 
 ### Button controls
 
@@ -170,6 +189,10 @@ You edit the choices of most selection controls with the [[Itemset Editor|Form B
 Buttons do not allow entering data, and by default do nothing significant, but they can be used to trigger actions with the Action Editor.
 
 _NOTE: Buttons do not appear at all in preview mode._
+
+The controls appear like this at design time:
+
+![](images/fb-button-controls-design-time.png)
 
 ### Choices
 
