@@ -1,7 +1,5 @@
 > [[Home]] ▸ [[Form Builder|Form Builder]]
 
-![][25]
-
 The toolbox contains several categories:
 
 * Global cut/copy/paste and "reload toolbox" icon buttons
@@ -20,7 +18,7 @@ These categories are detailed below.
 
 The Cut, Copy and Paste icons are located at the top of the toolbox:
 
-![][26]
+![](images/fb-xcv.png)
 
 They allow performing the usual cut/copy/paste operations on form controls.
 
@@ -80,7 +78,7 @@ After insertion, the new grid has one column and one cell. You can change the di
 
 ## Text controls
 
-![][28]
+![](images/fb-text-controls.png)
 
 The following text controls are available from the toolbox:
 
@@ -107,6 +105,26 @@ At runtime, in preview mode:
 ![][33]
 
 ## Typed controls
+
+![](images/fb-typed-controls.png)
+
+## Date and time controls
+
+![](images/fb-date-time-controls.png)
+
+## Selection controls
+
+![](images/fb-selection-controls.png)
+
+## Attachment controls
+
+![](images/fb-attachment-controls.png)
+
+## Button controls
+
+![](images/fb-button-controls.png)
+
+## TODO
 
 The following text controls are available from the toolbox:
 
