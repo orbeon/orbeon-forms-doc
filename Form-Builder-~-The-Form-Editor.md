@@ -20,6 +20,8 @@ _NOTE: One reason for these restrictions is that the names will eventually appea
 
 For your first form, don't worry too much about those: just enter any name! You can always change these settings later!
 
+You also may enter at this time a form title and description.
+
 ## General Form Builder layout
 
 Form Builder's form editor is organized in 4 areas:
