@@ -139,7 +139,7 @@ The controls appear like this at design time:
 
 The controls appear like this at design time:
 
-![](images/fb-tate-time-controls-design-time.png)
+![](images/fb-date-time-controls-design-time.png)
 
 ### Selection controls
 
