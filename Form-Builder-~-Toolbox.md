@@ -1,18 +1,24 @@
 > [[Home]] ▸ [[Form Builder|Form Builder]]
 
-The toolbox contains several categories:
+## Introduction
 
-* Global cut/copy/paste and "reload toolbox" icon buttons
-* **Form controls**
-    * New Section and New Grid buttons
-    * User interface controls you can insert into your form
+The Form Builder toolbox provides the following:
+
+* **Global buttons.** Global cut/copy/paste and "reload toolbox" icon buttons
+* **Form structure**
+    * New Section
+    * New Grid
+    * New Repeated Grid
+* **Form controls**. Form control (AKA form fields) you can add to your form to capture and/or show data.
 * **Metadata.** Allows you to modify the application name and form name.
 * **Advanced.** Includes advanced features like XML Schema, PDF and source code view.
 * **Services and Actions.** Editors for simple services and actions.
 
 Depending on your monitor or browser size, you can use the scrollbar to the right of the toolbox to see more toolbox content.
 
-These categories are detailed below.
+## Configuration of the toolbox
+
+The toolbox can be configured via properties and component metadata.
 
 ## Cut, copy and paste
 
@@ -40,15 +46,38 @@ The following control information is copied and pasted:
 
 When the control is pasted, if the control name of the clipboard control is currently not in use in the form, it is used. Otherwise, a new name is chosen by Form Builder.
 
-## User interface controls
+## Form structure
+
+![](images/fb-form-structure.png)
+
+### New section button
+
+Pressing this button inserts a new section into the form. The section is inserted after the currently selected section, that is the section containing the currently selected control.
+
+After insertion, the new section has an empty title. You can change the section title by clicking on it.
+
+![][27]
+
+### New grid button
+
+Pressing this button inserts a new grid into the form. The grid is inserted after the currently selected grid within the currently selected section, that is the section and grid containing the currently selected control.
+
+### New repeated grid button
+
+Pressing this button inserts a new repeated grid into the form. The grid is inserted after the currently selected grid within the currently selected section, that is the section and grid containing the currently selected control.
+
+After insertion, the new grid has one column and one cell. You can change the dimensions of the grid using the grid icons. You can change the grid settings with the Grid Settings icon.
+
+## Form controls
 
 The toolbox contains the user interface controls you can insert into your form, grouped by category:
 
 * **Text controls.** Controls that just capture or show text.
 * **Typed controls.** Controls that have type information associated, like email, phone number, attachments, etc.
+* **Date and time controls.** Controls for capturing a date or a time or both.
 * **Selection controls.** Controls that allow selecting one or more values, like dropdown menus, radio buttons, etc.
-* **Other controls.** Currently this only includes buttons.
-* **Section templates.** Custom controls representing a complete section.
+* **Attachment controls.** Controls to attach images or files.
+* **Button controls.** Action buttons.
 
 To add a control to your form, simply click on the control. The following insertion logic is implemented:
 
@@ -63,21 +92,7 @@ Controls appear in the grid in two ways:
 * Some controls are represented just with an icon. This is the case of some controls such as phone number, currency fields, etc.
 Orbeon is expecting feedback from users on the controls marked _experimental_ below.
 
-## New section button
-
-Pressing this button inserts a new section into the form. The section is inserted after the currently selected section, that is the section containing the currently selected control.
-
-After insertion, the new section has an empty title. You can change the section title by clicking on it.
-
-![][27]
-
-## New grid button
-
-Pressing this button inserts a new grid into the form. The grid is inserted after the currently selected grid within the currently selected section, that is the section and grid containing the currently selected control.
-
-After insertion, the new grid has one column and one cell. You can change the dimensions of the grid using the grid icons.
-
-## Text controls
+### Text controls
 
 ![](images/fb-text-controls.png)
 
@@ -90,21 +105,7 @@ After insertion, the new grid has one column and one cell. You can change the di
 | **Formatted Text** | A rich text editor, aka HTML editor |
 | **Explanation**    | Explanatory text which does not capture a value ([blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
 
-Controls appear as follows in Form Builder:
-
-![][30]
-
-At runtime, with data captured:
-
-![][31]
-
-At runtime, in preview mode:
-
-![][32]
-
-![][33]
-
-## Typed controls
+### Typed controls
 
 ![](images/fb-typed-controls.png)
 
@@ -117,7 +118,7 @@ At runtime, in preview mode:
 | **US State** | US state selector |
 
 
-## Date and time controls
+### Date and time controls
 
 ![](images/fb-date-time-controls.png)
 
@@ -129,7 +130,7 @@ At runtime, in preview mode:
 | **Dropdown Date** | Date chooser which uses dropdown menus |
 | **Fields Date** | date chooser which uses separate text fields |
 
-## Selection controls
+### Selection controls
 
 ![](images/fb-selection-controls.png)
 
@@ -144,7 +145,7 @@ At runtime, in preview mode:
 | **Dynamic Data Dropdown** | single | dynamic dropdown bound to a REST service |
 | **Autocomplete** | single | autocompletion |
 
-## Attachment controls
+### Attachment controls
 
 ![](images/fb-attachment-controls.png)
 
@@ -155,7 +156,7 @@ At runtime, in preview mode:
 | **File Attachment** | File which can be attached to the form at design time or at runtime. The file can also be replaced or downloaded once attached. |
 | **Image Annotation** | Select and annotate an image (see [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)). |
 
-## Button controls
+### Button controls
 
 ![](images/fb-button-controls.png)
 
@@ -163,6 +164,10 @@ At runtime, in preview mode:
 | --- | --- |
 | **Button** | Simple button |
 | **Link Button** | Button appearing as a link |
+
+Buttons do not allow entering data, and by default do nothing significant, but they can be used to trigger actions with the Action Editor.
+
+_NOTE: Buttons do not appear at all in preview mode._
 
 ### Choices
 
@@ -220,22 +225,3 @@ The autocomplete control is a single item selection control that loads a list of
 ``
 
 ![][47]
-
-## Other controls
-
-The following miscellaneous controls are available from the toolbox:
-
-* **Button:** standard browser button.
-* **YUI Button:** more stylish button with cross-browser appearance (based on the YUI library).
-
-Controls appear as follows in Form Builder:
-
-![][48]
-
-At runtime:
-
-![][49]
-
-_NOTE: Buttons do not appear at all in preview mode._
-
-Buttons do not allow entering data, and by default do nothing significant, but they can be used to trigger actions with the Action Editor.
