@@ -145,6 +145,8 @@ Orbeon is expecting feedback from users on the controls marked _experimental_ be
 | **Dynamic Data Dropdown** | single | dynamic dropdown bound to a REST service |
 | **Autocomplete** | single | autocompletion |
 
+You edit the choices of most selection controls with the [[Itemset Editor|Form Builder ~ Itemset Editor]].
+
 ### Attachment controls
 
 ![](images/fb-attachment-controls.png)
