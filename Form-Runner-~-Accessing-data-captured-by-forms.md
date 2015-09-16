@@ -37,7 +37,7 @@ Let's see in more details what this entails:
 
 ### 2. Call the REST API
 
-Your second option is to have your app call the Orbeon Forms [persistence API](Form-Runner-~-APIs-~-Persistence) to retrieve the data saved by Orbeon Forms in the database. This is a simple REST API, and you'll want to make a first call to the [search API](Form-Runner-~-APIs-~-Persistence-~-Search) to *list* data submitted or saved with a specific form, and then a call to the [CRUD API](Form-Runner-~-APIs-~-Persistence-~-CRUD) to retrieve any piece of data you're interested in.
+Your second option is to have your app call the Orbeon Forms [persistence API](Form-Runner-~-APIs-~-Persistence) to retrieve the data saved by Orbeon Forms in the database. This is a simple REST API, and you'll want to make a first call to the [search API](Form-Runner-~-APIs-~-Persistence-~-Search) to *list* data submitted or saved with a specific form, and then a call to the [CRUD API](Form-Runner-~-APIs-~-Persistence-~-CRUD) to *retrieve* any piece of data you're interested in.
 
 ![Doc - Accessing data - REST - Overview](https://orbeon.mybalsamiq.com/mockups/3496368.png?key=74ab13a5b0003ab944d0242d8f70f51c6293ce35)
 
