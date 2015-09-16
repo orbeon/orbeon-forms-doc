@@ -186,8 +186,6 @@ If you check the HTML checkbox, all the hints and labels you type in dialog are 
 
 ### Data dropdown
 
-[SINCE 2011-05-10]
-
 From the perspective of people who will be filling out your form, the data dropdown works just like a regular dropdown. However, the data in the dropdown comes from a service. For instance, imagine you have a list to select a state and that you don't want to hard code the list of states in the form, either for convenience, or because the subset of selectable states is dynamic:
 
 1. Insert a data dropdown field.
@@ -216,8 +214,6 @@ If the data in the dropdown depends on a value entered by users in another form 
 ![][45]
 
 ### Autocomplete
-
-[SINCE 2011-05-10]
 
 The autocomplete control is a single item selection control that loads a list of suggestions from a service. It takes the same _Resource URI_, _Items_, _Label_, and _Value_ configuration parameters as the [Data dropdown control][46]. You may want to pass the value of other controls to the service, but you'll always want to pass the currently typed value, as the suggestions should depend on what users typed so far. You access to the currently typed by value with `$fr-search-value`, as in the following example:
 
