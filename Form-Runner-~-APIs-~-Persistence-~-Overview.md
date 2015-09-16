@@ -12,8 +12,6 @@
 
 The Form Runner/Form Builder persistence API is based on REST. This means that Form Builder and Form Runner use HTTP to communicate with a persistence layer implementation, roughly as follows:
 
-Form Runner calls URLs as follows:
-
 * Create, Read, update, delete (CRUD) form data → HTTP GET, PUT, DELETE to:
 
     ```
