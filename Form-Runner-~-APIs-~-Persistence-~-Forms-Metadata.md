@@ -13,6 +13,8 @@
 
 This is the API used, in particular, by the [[Form Runner Home page|Form Runner ~ Home Page]], accessible to users on `/fr/`. The Form Runner home page lists all the deployed forms the user has access to, and for each one it provides a link to create a new instance of that form, and to the summary page for that form. Either one of those links might be missing, depending on [[the user's permissions|Form Runner ~ Access Control]].
 
+## API
+
 You get the list of all the deployed forms with a GET on `/fr/service/persistence/form`. This will, in turn call the corresponding API for each persistence API implementation defined in the properties, since different forms can be deployed on different persistence implementations. For instance, this might call MySQL implementation doing a GET on `/fr/service/mysql/form` and the eXist implementation with another GET on `/fr/service/exist/form`, finally aggregating the results returned by each implementation.
 
 The document returns by this API looks like this:
