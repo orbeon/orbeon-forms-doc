@@ -4,13 +4,13 @@
 
 The toolbox contains several categories:
 
-* **Controls**
-    * Global cut/copy/paste and "reload controls" icons
+* Global cut/copy/paste and "reload toolbox" icon buttons
+* **Form controls**
     * New Section and New Grid buttons
     * User interface controls you can insert into your form
 * **Metadata.** Allows you to modify the application name and form name.
 * **Advanced.** Includes advanced features like XML Schema, PDF and source code view.
-* **Services &amp; Actions.** Editor for simple services and actions.
+* **Services and Actions.** Editors for simple services and actions.
 
 Depending on your monitor or browser size, you can use the scrollbar to the right of the toolbox to see more toolbox content.
 
