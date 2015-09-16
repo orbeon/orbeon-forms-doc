@@ -241,7 +241,3 @@ At runtime:
 _NOTE: Buttons do not appear at all in preview mode._
 
 Buttons do not allow entering data, and by default do nothing significant, but they can be used to trigger actions with the Action Editor.
-
-## Section templates
-
-See: [Section templates][14].
