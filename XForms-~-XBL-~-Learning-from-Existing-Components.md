@@ -5,10 +5,10 @@
 - [[Introduction|XForms ~ XBL ~ Introduction]]
 - [[FAQ|XForms ~ XBL ~ FAQ]]
 - [[Tutorial|XForms ~ XBL ~ Tutorial]]
-- [[XBL Bindings| XForms ~ XBL ~ Bindings]]
+- [[Bindings| XForms ~ XBL ~ Bindings]]
 - [[XForms Models|XForms ~ XBL ~ XForms Models]]
 - [[Including Content|XForms ~ XBL ~ Including Content]]
-- [[XBL Event Handling|XForms ~ XBL ~ Event Handling]]
+- [[Event Handling|XForms ~ XBL ~ Event Handling]]
 - [[Conventions|XForms ~ XBL ~ Conventions]]
 
 ## Finding existing components
