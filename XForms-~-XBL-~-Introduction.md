@@ -53,8 +53,4 @@ You might want to also check the [[components|Form Runner ~ XBL Components]] pro
     * In general, _writing_ a component will be harder than _using_ one.
     * Obviously the user can be the same as the author!
 
-## See also
-
-- [[Form Runner XBL Components|Form Runner ~ XBL Components]]
-
 [1]: http://www.w3.org/TR/xbl/
