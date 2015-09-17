@@ -5,10 +5,10 @@
 - [[FAQ|XForms ~ XBL ~ FAQ]]
 - [[Learning from Existing Components|XForms ~ XBL ~ Learning from Existing Components]]
 - [[Tutorial|XForms ~ XBL ~ Tutorial]]
-- [[XBL Bindings| XForms ~ XBL ~ Bindings]]
+- [[Bindings| XForms ~ XBL ~ Bindings]]
 - [[XForms Models|XForms ~ XBL ~ XForms Models]]
 - [[Including Content|XForms ~ XBL ~ Including Content]]
-- [[XBL Event Handling|XForms ~ XBL ~ Event Handling]]
+- [[Event Handling|XForms ~ XBL ~ Event Handling]]
 - [[Conventions|XForms ~ XBL ~ Conventions]]
 
 ## Why are components needed?  
