@@ -1,5 +1,11 @@
 > [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
 
+## Following XForms
+
+Whenever it is possible, XBL components should follow patterns found in XForms controls. For instance, if it makes sense to think that the component is bound to a node, then the component should support single node binding attributes on the component element, just like an XForms control would.
+
+## Parameters
+
 Some components take "parameters" that can be specified by users of the component. Consider the existing date picker component. You bind it to a node which contains the date entered by the user, but can also provide a minimum and maximum date. We call those min/max dates _parameters_. Parameters can be:
 
 * **Read-only** – they only provide a value to the component, as in the above case of the min/max dates.
