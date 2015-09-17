@@ -40,6 +40,8 @@ You can use components to implement:
 
 This is not an exhaustive list. Your imagination is the limit!
 
+You might want to also check the [[components|Runner ~ XBL Components]] provided out of the box by Orbeon Forms.
+
 ## Terminology
 
 * **Component or custom control:** a piece of software which provides reusable behavior and presentation.
