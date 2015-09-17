@@ -23,14 +23,14 @@ WHERE  document_id IN
                       FROM     orbeon_form_data
                       GROUP BY app, form, document_id
                   ) m
-           WHERE  -- Look at "last row" in the "journal"                                                                                                                                                                                                                                                         
+           WHERE  -- Look at "last row" in the "journal"
                   t.last_modified_time = m.last_modified_time AND
                   t.app                = m.app                AND
                   t.form               = m.form               AND
                   t.document_id        = m.document_id        AND
-                  -- Take deleted items                                                                                                                                                                                                                                                                        
+                  -- Take deleted items
                   deleted = 'Y'                               AND
-                  -- Deleted at least 1 month ago                                                                                                                                                                                                                                                              
+                  -- Deleted at least 1 month ago
                   t.last_modified_time <= ADD_MONTHS(SYSDATE, -1)
        )
 ```
