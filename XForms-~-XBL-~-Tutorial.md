@@ -257,8 +257,8 @@ So here you go: you have a fully working non-trivial component:
         id="fr-tutorial-davinci"
         xxbl:mode="lhha binding value">
         <xbl:handlers>
-            <!-- When the control comes to life or its value changes, copy the new value to the local
-                 model after reversing it -->
+            <!-- When the control comes to life or its value changes, copy
+                 the new value to the local model after reversing it -->
             <xbl:handler
                 event="xforms-enabled xforms-value-changed"
                 ref="instance()"
@@ -279,8 +279,8 @@ So here you go: you have a fully working non-trivial component:
             </xf:model>
             <!-- Input points to the internal value -->
             <xf:input ref="instance()">
-                <!-- When the local value changes, copy it to the external single-node binding after
-                     reversing it -->
+                <!-- When the local value changes, copy it to the external
+                     single-node binding after reversing it -->
                 <xf:setvalue
                     event="xforms-value-changed"
                     ref="xxf:binding('fr-tutorial-davinci')"
