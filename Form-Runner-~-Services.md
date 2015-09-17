@@ -39,3 +39,22 @@ A service called `bar` is made available the following URL:
 
 ## Implementation of the service
 
+The service takes an `instance` input, containing any XML data posted to the service. This service produces an XML result on its `data` output.
+
+The following is an example service with just echoes the incoming data:
+
+```xml
+<p:config
+    xmlns:p="http://www.orbeon.com/oxf/pipeline"
+    xmlns:oxf="http://www.orbeon.com/oxf/processors">
+
+    <p:param type="input" name="instance"/>
+    <p:param type="output" name="data"/>
+
+    <p:processor name="oxf:identity">
+        <p:input name="data" href="#instance"/>
+        <p:output name="data" ref="data"/>
+    </p:processor>
+
+</p:config>
+```
