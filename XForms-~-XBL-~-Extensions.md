@@ -97,5 +97,81 @@ You can use `<xsl:message terminate="yes">` to report to the user errors that oc
 <xsl:message terminate="yes">Terminating!</xsl:message>
 ```
 
-
 This results in an error will be output in the log, and an error message will show in the browser.
+
+## xxbl:global element
+
+The `<xxbl:global>` element allows an XBL binding to place global markup that is included in a page only once.
+
+```xml
+<xbl:xbl>
+    <xbl:binding element="fr|foo">
+        <xxbl:global>
+            <!-- The single global dialog -->
+            <xxf:dialog id="my-dialog" level="modal" model="my-dialog-model">
+                <xf:label>My Global Dialog</xf:label>
+
+                <!-- Dialog model -->
+                <xf:model id="my-dialog-model">
+                    ...
+                </xf:model>
+
+                ...
+
+            </xxf:dialog>
+        </xxbl:global>
+        <xbl:template>
+            ...
+        </xbl:template>
+    </xbl:binding>
+</xbl:xbl>
+```
+
+How this works:
+
+* The global markup is included at the end of the top-level XForms document, as if you put it there by hand.
+* If the XBL binding is not used, the global markup is not included.
+* Ids on elements in global markup must be made unique by the component author, as those ids become global as well.
+
+The component can dispatch events to global controls if the outer scope is the top-level scope, with the `xxbl:scope="outer"` attribute. For instance, if in the `<xxbl:global>` you defined an `<xxf:dialog id="my-dialog">`, then from within the component, you can run the following action:
+
+```xml
+<xxf:show dialog="my-dialog" xxbl:scope="outer"/>
+```
+
+_NOTE: A future enhancement to this feature might restrict id and XPath scope of global markup to that of the XBL binding._
+
+## xxbl:mirror attribute
+
+[SINCE 2013-01-23]
+
+This attribute, placed on a local XForms instance, tells the XBL engine to automatically mirror changes between that instance and the XBL component's bound node.
+
+For mirroring to work, the XBL component must either:
+
+* if it has an XPath node binding: be bound to an element node
+* if it doesn't have an XPath node binding: be in the XPath context of an element node (done for compatibility with Form Builder section templates)
+
+At most one instance in a given XBL component may have `xxbl:mirror="true"`.
+
+Lifecycle:
+
+* when the XBL component becomes relevant
+    * the XBL instance is first initialized as usual
+    * then if the XBL binding or context points to an element, that element is extracted to become the root element of a new element, which replaces the XBL instance
+* when updates (value changes, inserts, deletes) take place on the XBL instance, these changes are mirrored outside
+* when updates (value changes, inserts, deletes) take place outside, these changes are mirrored on the XBL instance
+
+Example:
+
+```xml
+<xbl:binding id="fr-gaga" element="fr|gaga" xxbl:mode="binding">
+    <xbl:implementation>
+        <xf:model id="gaga-model">
+            <xf:instance id="gaga-instance" xxbl:mirror="true">
+                <empty/>
+            </xf:instance>
+        </xf:model>
+    </xbl:implementation>
+</xbl:binding>
+```
