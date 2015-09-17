@@ -17,7 +17,14 @@ Beyond the basic set of controls, there is an obvious need for creating new reus
 
 *NOTE: The XBL 2 specification is no longer under development at W3C, but as of 2015 [Web Components](http://webcomponents.org/) embody most of the ideas of XBL 2, including custom elements, the shadow DOM, and strong encapsulation.*
 
-### Use cases   
+### Use cases
+
+There are several types of components:
+
+* components that simply add a little bit of functionality over an existing XForms control (e.g. a simple currency field)
+* components that group together multiple XForms controls. (e.g. a component to enter a date with multiple text fields)
+* components that implement completely new controls (e.g. a map)
+* components that take, and possibly transform, nested markup placed by the user (e.g. a data table with sorting and paging)
 
 You can use components to implement:  
 
