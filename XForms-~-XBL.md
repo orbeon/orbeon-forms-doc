@@ -10,12 +10,12 @@
 - [[XForms Models|XForms ~ XBL ~ XForms Models]]
 - [[Including Content|XForms ~ XBL ~ Including Content]]
 - [[XBL Event Handling|XForms ~ XBL ~ Event Handling]]
-- [[JavaScript|XForms ~ XBL ~ JavaScript]]
 - [[Conventions|XForms ~ XBL ~ Conventions]]
 
 ## Advanced topics 
     
 - [[XBL Library| XForms ~ XBL ~ Library]]
+- [[JavaScript|XForms ~ XBL ~ JavaScript]]
 - [[Extensions|XForms ~ XBL ~ Extensions]]
 
 ## Topics that are not yet documented
