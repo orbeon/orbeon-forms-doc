@@ -1,16 +1,29 @@
 > [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
 
+## Related pages
+
+- [[Introduction|XForms ~ XBL ~ Introduction]]
+- [[FAQ|XForms ~ XBL ~ FAQ]]
+- [[Tutorial|XForms ~ XBL ~ Tutorial]]
+- [[XBL Bindings| XForms ~ XBL ~ Bindings]]
+- [[XForms Models|XForms ~ XBL ~ XForms Models]]
+- [[Including Content|XForms ~ XBL ~ Including Content]]
+- [[XBL Event Handling|XForms ~ XBL ~ Event Handling]]
+- [[Conventions|XForms ~ XBL ~ Conventions]]
+
+## Finding existing components
+
 A good thing to do is to look at existing components:
 
 * If you are working with the Orbeon Forms sources, they are located under:
     * [src/resources-packaged/xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl)
 * If you are working with a binary distribution:
     * unzip `orbeon-resources-private.jar`
-    * the components are under the xbl directory
+    * the components are under the `xbl` directory
 
-The "meat" of most components is in files ending with the .xbl extension.
+The "meat" of most components is in files ending with the `.xbl` extension.
 
-To create your own component:
+## Creating your own component
 
 * create a new `xbl` directory under your RESOURCES directory
 * create a directory with your company or project name (e.g. `acme`; Orbeon uses `orbeon`)
