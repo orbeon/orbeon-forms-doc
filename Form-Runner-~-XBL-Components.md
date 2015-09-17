@@ -1,6 +1,4 @@
-For more about XBL components, see [Guide to Using and Writing XBL Components](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components-guide).
-
-The following XBL components are documented:
+## XBL components documentation
 
 - [Alert Dialog](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/alert-dialog)
 - [[Autocomplete|Form Runner ~ XBL Components ~ Autocomplete]]
@@ -20,7 +18,7 @@ The following XBL components are documented:
 - [US State](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/us-state)
 - [[Wizard|Form Runner ~ XBL Components ~ Wizard]]
 
-The following XBL components remain to be documented:
+## XBL components to document
 
 - Box Select
 - Dropdown Date
