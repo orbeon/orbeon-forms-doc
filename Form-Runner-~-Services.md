@@ -44,7 +44,7 @@ The XPL has the following interface:
 - `instance` input: contains the XML data posted to the service URL
 - `data` output: XML data produced by the service
 
-The following is an example service implementation in XPL with just echoes the incoming data:
+The following example XPL just echoes the incoming data:
 
 ```xml
 <p:config
