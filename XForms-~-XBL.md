@@ -18,10 +18,14 @@
 - [[JavaScript|XForms ~ XBL ~ JavaScript]]
 - [[Extensions|XForms ~ XBL ~ Extensions]]
 
-## Topics that are not yet documented
+## Topics to document
 
 - XPath resolution
 - events used for communication
 - model resolution, including `xxf:instance()`
 - template copying elements and attributes
 - `xxbl:scope` in more details
+
+## See also
+
+- [[Form Runner XBL Components|Form Runner ~ XBL Components]]
