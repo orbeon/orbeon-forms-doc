@@ -35,7 +35,7 @@ Now here is a more complex scenario:
 ```xml
 <fr:link-select1 ref="gender">
     <xf:label>Gender</xf:label>
-    <xf:itemset nodeset="instance('genders')/gender">
+    <xf:itemset ref="instance('genders')/gender">
         <xf:label ref="label"/>
         <xf:value ref="value"/>
     </xf:itemset>
