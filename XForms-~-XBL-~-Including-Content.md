@@ -71,7 +71,7 @@ The recommend way to express this is as follows:
     <xbl:content includes=":root > xf|label"/>
 ```
 
-The `:root` pseudo-class refers to the bound element (here `fr:link-select1`). The `&gt;` combinator "describes a childhood relationship between two elements", like the XPath `/` axis. So the result is equivalent to the XPath:
+The `:root` pseudo-class refers to the bound element (here `fr:link-select1`). The `>` combinator "describes a childhood relationship between two elements", like the XPath `/` axis. So the result is equivalent to the XPath:
 
 ```xml
 /*/xf:label
