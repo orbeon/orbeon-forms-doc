@@ -93,7 +93,9 @@ The transformation has full access to the bound element and can transform any of
 
 You can use `<xsl:message terminate="yes">` to report to the user errors that occur during the XSLT transformation. For example:
 
-`<xsl:message terminate="yes">Terminating!</xsl:message>`
+```xml
+<xsl:message terminate="yes">Terminating!</xsl:message>
+```
 
 
 This results in an error will be output in the log, and an error message will show in the browser.
