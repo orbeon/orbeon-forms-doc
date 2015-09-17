@@ -1,5 +1,16 @@
 > [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
 
+## Related pages
+
+- [[Introduction|XForms ~ XBL ~ Introduction]]
+- [[Learning from Existing Components|XForms ~ XBL ~ Learning from Existing Components]]
+- [[Tutorial|XForms ~ XBL ~ Tutorial]]
+- [[XBL Bindings| XForms ~ XBL ~ Bindings]]
+- [[XForms Models|XForms ~ XBL ~ XForms Models]]
+- [[Including Content|XForms ~ XBL ~ Including Content]]
+- [[XBL Event Handling|XForms ~ XBL ~ Event Handling]]
+- [[Conventions|XForms ~ XBL ~ Conventions]]
+
 ## What can component do?
 
 A lot! Among other things, they can:
