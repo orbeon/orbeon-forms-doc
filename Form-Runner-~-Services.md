@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Form Runner supports implementing services using XPL, associated with an application or a specific form.
+Form Runner supports implementing services using XPL (the XML pipeline language), associated with an application or a specific form.
 
 _NOTE: This is an advanced feature which requires programming._
 
-## Placement of the XPL files
+## Mapping and XPL
 
 Assuming the following:
 
@@ -34,14 +34,14 @@ WEB-INF/resources/form/acme/order/service/
 A service called `bar` is made available the following URL:
 
 ```
-/fr/service/custom/acme/order/foo
+/fr/service/custom/acme/order/bar
 ````
 
 ## Implementation of the service
 
 The service takes an `instance` input, containing any XML data posted to the service. This service produces an XML result on its `data` output.
 
-The following is an example service with just echoes the incoming data:
+The following is an example service implementation in XPL with just echoes the incoming data:
 
 ```xml
 <p:config
