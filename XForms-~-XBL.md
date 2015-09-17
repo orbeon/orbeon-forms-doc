@@ -1,6 +1,6 @@
 > [[Home]] ▸ [[XForms]]
 
-## Guide to Using and Writing XBL Components
+## Guide to using and writing XBL components
 
 - [[Introduction|XForms ~ XBL ~ Introduction]]
 - [[FAQ|XForms ~ XBL ~ FAQ]]
