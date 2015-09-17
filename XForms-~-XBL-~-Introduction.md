@@ -1,6 +1,6 @@
 > [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
 
-### Why are components needed?  
+## Why are components needed?  
 
 The Orbeon Forms XForms engine proposes out of the box a set of controls, including input fields, radio buttons, etc. Those are typically implemented natively within the XForms engine.
 
@@ -8,7 +8,7 @@ Beyond the basic set of controls, there is an obvious need for creating new reus
 
 *NOTE: The XBL 2 specification is no longer under development at W3C, but as of 2015 [Web Components](http://webcomponents.org/) embody most of the ideas of XBL 2, including custom elements, the shadow DOM, and strong encapsulation.*
 
-### Use cases
+## Use cases
 
 There are several types of components:
 
@@ -33,7 +33,7 @@ You can use components to implement:
 
 This is not an exhaustive list. Your imagination is the limit!
 
-### Terminology
+## Terminology
 
 * **Component or custom control:** a piece of software which provides reusable behavior and presentation.  
 * **Component instance:** a particular use of a component within an XForms document. A component might have multiple instances in a given page.
@@ -43,3 +43,5 @@ This is not an exhaustive list. Your imagination is the limit!
 * **Component user:** the person who uses a component.
     * In general, _writing_ a component will be harder than _using_ one.
     * Obviously the user can be the same as the author!
+
+[1]: http://www.w3.org/TR/xbl/
