@@ -1,6 +1,6 @@
 > [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
 
-A number of component take "parameters" that can be specified by users. Consider the existing date picker component. You bind it to a node which contains the date entered by the user, but can also provide a minimum and maximum date. We call those min/max dates _parameters_. Parameters can be:
+Some components take "parameters" that can be specified by users of the component. Consider the existing date picker component. You bind it to a node which contains the date entered by the user, but can also provide a minimum and maximum date. We call those min/max dates _parameters_. Parameters can be:
 
 * **Read-only** – they only provide a value to the component, as in the above case of the min/max dates.
 * **Read/write** – the component can update a value stored in a an instance.
