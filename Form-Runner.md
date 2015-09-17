@@ -26,6 +26,7 @@
     - [[Form Runner full portlet|Form Runner ~ Portal ~ Full Portlet Guide]]
 - [[Home Page|Form Runner ~ Home Page]]
 - [[Integration|Form Runner ~ Integration]]
+- [[Services|Form Runner ~ Services]]
 - [[Singleton Form|Form Runner ~ Singleton Form]]
 - [[Form Definition Format|Form Runner ~ Form Definition Format]]
 - [[Styling automatic PDFs|Form Runner ~ Styling automatic PDFs]]
