@@ -53,4 +53,12 @@ This is not an exhaustive list. Your imagination is the limit!
     * In general, _writing_ a component will be harder than _using_ one.
     * Obviously the user can be the same as the author!
 
+## Topics that are not yet documented
+
+* XPath resolution
+* events used for communication
+* model resolution, including `xxf:instance()`
+* template copying elements and attributes
+* `xxbl:scope` in more details
+
 [1]: http://www.w3.org/TR/xbl/
