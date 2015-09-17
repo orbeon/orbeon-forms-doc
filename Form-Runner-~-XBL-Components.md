@@ -1,4 +1,4 @@
-## XBL components documentation
+## Documented XBL components
 
 - [Alert Dialog](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/alert-dialog)
 - [[Autocomplete|Form Runner ~ XBL Components ~ Autocomplete]]
