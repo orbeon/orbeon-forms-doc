@@ -166,4 +166,4 @@ Each provider may have specific configuration properties. For the latest setting
 
 ## See also
 
-- [Persistence API](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/persistence-api)
+- [[Form Runner persistence API|Form Runner ~ APIs ~ Persistence]]

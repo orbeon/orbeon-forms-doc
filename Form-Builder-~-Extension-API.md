@@ -30,7 +30,7 @@ Below, we assume the following example mapping:
 In practice, you would probably choose a prefix different from `acme`, and a namespace different from
 `http://www.acme.com/xbl`.
 
-For more on XBL components, see [XBL - Guide to Using and Writing XBL Components](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components-guide).
+For more on XBL components, see [[XBL documentation|XForms ~ XBL]].
 
 ## Custom Form Settings tab
 
@@ -207,4 +207,4 @@ The `original-control-name` and `control-name` parameters reflect that change wh
 ## See also
 
 - [[Automatic inclusion of XBL bindings|XForms-~-Configuration-Properties#automatic-inclusion-of-xbl-bindings]]
-- [XBL - Guide to Using and Writing XBL Components](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components-guide)
+- [[XBL documentation|XForms ~ XBL]]
