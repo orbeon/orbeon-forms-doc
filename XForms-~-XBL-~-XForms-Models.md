@@ -1,5 +1,16 @@
 > [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
 
+## Related pages
+
+- [[Introduction|XForms ~ XBL ~ Introduction]]
+- [[FAQ|XForms ~ XBL ~ FAQ]]
+- [[Learning from Existing Components|XForms ~ XBL ~ Learning from Existing Components]]
+- [[Tutorial|XForms ~ XBL ~ Tutorial]]
+- [[XBL Bindings| XForms ~ XBL ~ Bindings]]
+- [[Including Content|XForms ~ XBL ~ Including Content]]
+- [[XBL Event Handling|XForms ~ XBL ~ Event Handling]]
+- [[Conventions|XForms ~ XBL ~ Conventions]]
+
 ## Placement of local models
 
 A component can have its own set of XForms models, called _local models_. For each instance of the component, a new copy of the models is made, so that component instances behave completely independently from each other.
