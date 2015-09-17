@@ -21,28 +21,31 @@ Beyond the basic set of controls, there is an obvious need for creating new reus
 
 ## Use cases
 
-There are several types of components:
-
-* components that simply add a little bit of functionality over an existing XForms control (e.g. a simple currency field)
-* components that group together multiple XForms controls. (e.g. a component to enter a date with multiple text fields)
-* components that implement completely new controls (e.g. a map)
-* components that take, and possibly transform, nested markup placed by the user (e.g. a data table with sorting and paging)
-
 You can use components to implement:  
 
 * Controls for datatypes which have a native implementation, but where a custom appearance is required
-    * Example: a custom control for entering a date with dropdown menus rather than a date picker
+    * A custom control for entering a date with dropdown menus rather than a date picker
 * Controls for datatypes which do not have a native implementation
-    * Example: a control to capture the `xs:duration` type  
+    * A control to capture the `xs:duration` type  
 * Controls which do not have a standard XML type
-    * Example: a phone number control
-* Higher-level components  
+    * A phone number control
+* Higher-level components
     * A form section component
     * A form grid component
-    * Instance inspector component
     * A Google Maps component
 
 This is not an exhaustive list. Your imagination is the limit!
+
+Components can also be categorized by the way they operate:
+
+* A component might simply add a little bit of functionality over an existing XForms control
+    * A simple currency field
+* A component might *group* together multiple XForms controls
+    * A component to enter a date by using multiple text fields
+* A component might implement a completely new control based on a JavaScript library
+    * Example: a Google Map component
+* A component might take, and possibly transform, nested markup placed by the user
+    * Example: a data table component with sorting and paging
 
 ## Terminology
 
