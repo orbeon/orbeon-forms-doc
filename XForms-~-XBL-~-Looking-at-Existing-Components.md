@@ -21,10 +21,10 @@ To create your own component:
 Then:
 
 * copy into your XBL file the content of a simple existing component, like `xbl/orbeon/tutorial-simple/tutorial-simple.xbl`
-* modify the binding rule ("fr|tutorial-simple") into something that matches your component name ("fr|cool-stuff")
+* modify the binding rule (`fr|tutorial-simple`) into something that matches your component name (`fr|cool-stuff`)
 * within an XForms page
     * declare `xmlns:fr="http://orbeon.org/oxf/xml/form-runner"`
-    * use the control with something like: <fr:cool-stuff ref="my-node">
+    * use the control with something like: `<fr:cool-stuff ref="my-node">`
     * when running your XForms page, you should see an upload field appear!
 
-_NOTE: In your own components, you should not use the "fr:" namespace, but instead you should use your own namespace to avoid naming conflicts._
+_NOTE: In your own components, you should not use the `fr:` namespace, but instead you should use your own namespace to avoid naming conflicts._
