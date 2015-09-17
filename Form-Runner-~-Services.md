@@ -6,7 +6,7 @@ Form Runner supports implementing services using XPL (the XML pipeline language)
 
 _NOTE: This is an advanced feature which requires programming._
 
-## Mapping and XPL
+## Mapping an XPL file to a service URL
 
 Assuming the following:
 
