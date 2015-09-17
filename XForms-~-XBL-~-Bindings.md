@@ -8,7 +8,7 @@
 - [[Tutorial|XForms ~ XBL ~ Tutorial]]
 - [[XForms Models|XForms ~ XBL ~ XForms Models]]
 - [[Including Content|XForms ~ XBL ~ Including Content]]
-- [[XBL Event Handling|XForms ~ XBL ~ Event Handling]]
+- [[Event Handling|XForms ~ XBL ~ Event Handling]]
 - [[Conventions|XForms ~ XBL ~ Conventions]]
 
 ## Introduction
