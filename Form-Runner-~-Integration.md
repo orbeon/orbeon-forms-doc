@@ -6,7 +6,7 @@ Form Builder and Form Runner integrate with other systems through the following 
 
 - __Plain URLs__, through which you access Form Runner and Form Builder's pages
     - The URLs can be accessed simply by using hyperlinks or redirects from another application.
-- __A [[configurable persistence API|Form Runner ~ APIs ~ Persistence]]__ based on REST (that is, through HTTP)
+- __A [[configurable persistence API|Form Runner ~ APIs ~ Persistence]]__ based on REST (that is, through HTTP).
 - __External user management__, to connect to a directory of users with associated roles.
 - __HTTP services__
   - called from forms via the Service Editors
