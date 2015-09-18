@@ -90,42 +90,42 @@ As of 2015-09-18 this page is still being updated.
 
 ### Form controls
 
-- text controls
-    - input field
-    - textarea
-    - text output
-    - password field
-    - formatted text (rich text)
-    - explanation text
-- typed controls
-    - email field
+- Text controls
+    - Input field
+    - Textarea
+    - Text output
+    - Password field
+    - Formatted text (rich text)
+    - Explanation text
+- Typed controls
+    - Email field
     - US phone number field
-    - number field
-    - currency field
+    - Number field
+    - Currency field
     - US state
-- date and time controls
-    - date, time, date and time
-    - dropdown date, fields date
-- selection controls
-    - dropdown menu
-    - radio buttons
-    - checkboxes
-    - scrollable list
-    - boolean input
-    - scrollable checkboxes
-    - dynamic data dropdown
-    - autocomplete
-- attachments
-    - static image
-    - image attachment
-    - file attachment
-    - image annotation: [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)
-- buttons
-    - button
-    - link button
-- other
-    - character counter: [[doc|Form Runner ~ XBL Components ~ Character Counter]]
-    - custom components: [[doc|XForms ~ XBL]]
+- Date and time controls
+    - Date, time, date and time
+    - Dropdown date, fields date
+- Selection controls
+    - Dropdown menu
+    - Radio buttons
+    - Checkboxes
+    - Scrollable list
+    - Boolean input
+    - Scrollable checkboxes
+    - Dynamic data dropdown
+    - Autocomplete
+- Attachments
+    - Static image
+    - Image attachment
+    - File attachment
+    - Image annotation: [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)
+- Buttons
+    - Button
+    - Link button
+- Other
+    - Character counter: [[doc|Form Runner ~ XBL Components ~ Character Counter]]
+    - Custom components: [[doc|XForms ~ XBL]]
 
 ### Databases
 
@@ -151,5 +151,5 @@ As of 2015-09-18 this page is still being updated.
 
 ### Misc
 
-- namespaced jQuery to avoid conflicts with other jQuery versions
-- run modes: [[doc|Installation ~ Run Modes]], [blog](http://blog.orbeon.com/2012/05/run-modes.html)
+- Namespaced jQuery to avoid conflicts with other jQuery versions
+- Run modes: [[doc|Installation ~ Run Modes]], [blog](http://blog.orbeon.com/2012/05/run-modes.html)
