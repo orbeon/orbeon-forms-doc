@@ -16,15 +16,14 @@ The main topics covered on this site include:
 - [[Form Builder]]
 - [[Form Runner]]
 - [[XForms]]
-- [[Contributors]]
+- [[XBL components|XForms ~ XBL]]
 - [[FAQ]]
-- [[Features|Orbeon Forms Features]]
-    - [[Database Support|Orbeon Forms Features ~ Database Support]]
+- [[Features|Orbeon Forms Features]] including [[database support|Orbeon Forms Features ~ Database Support]]
 - [[Release History|Orbeon Forms Release History]]
 - [[Roadmap|Orbeon Forms Roadmap]]
 - [[Use Cases|Orbeon Forms Use Cases]]
     - [[See your Own Data|Orbeon Forms Use Cases ~ See your Own Data]]
-- [Documentation on the legacy site](http://wiki.orbeon.com/forms/doc)
+- [[For contributors|Contributors]]
 
 See also the [complete list of pages](/orbeon/orbeon-forms/wiki/_pages).
 
