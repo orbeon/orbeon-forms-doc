@@ -90,7 +90,6 @@ As of 2015-09-18 this page is still being updated.
 
 ### Form controls
 
-- custom components: [[doc|XForms ~ XBL]]
 - text controls
     - input field
     - textarea
@@ -126,6 +125,7 @@ As of 2015-09-18 this page is still being updated.
     - link button
 - other
     - character counter: [[doc|Form Runner ~ XBL Components ~ Character Counter]]
+    - custom components: [[doc|XForms ~ XBL]]
 
 ### Databases
 
