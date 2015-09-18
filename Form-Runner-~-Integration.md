@@ -17,7 +17,8 @@ See [[Persistence API|Form Runner ~ APIs ~ Persistence]] for more details.
 
 - The API is based on REST (that is, through HTTP).
 - It provides CRUD, search, and metadata operations.
-- see also [[Accessing data captured by forms|Form Runner ~ Accessing data captured by forms]]
+
+See also [[Accessing data captured by forms|Form Runner ~ Accessing data captured by forms]]
 
 ## Other APIS
 
@@ -33,11 +34,9 @@ See also [[Accessing data captured by forms|Form Runner ~ Accessing data capture
 
 ## Embedding
 
-See [[Embedding|Form-Runner ~ Embedding]] for more details.
+Embedding allows you to integrate a form in another application's page.
 
-- with the [[Server-side embedding API|Form Runner ~ APIs ~ Server side Embedding]]
-- with the [[Form Runner proxy portlet|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
-- with the [[Form Runner full portlet|Form Runner ~ Portal ~ Full Portlet Guide]]
+See [[Embedding|Form-Runner ~ Embedding]] for more details.
 
 ## User management
 
