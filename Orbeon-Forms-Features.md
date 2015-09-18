@@ -6,7 +6,7 @@ The purpose of this page is to index features by name in a central place.
 
 ## Status
 
-As of 2015-08-31 this page is still incomplete.
+As of 2015-09-18 this page is still being updated.
 
 ## List of Orbeon Forms features
 
@@ -15,6 +15,7 @@ As of 2015-08-31 this page is still incomplete.
 - Inserting and reordering grid rows: [blog post](http://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
 - Repeated grids: [[doc|Form Builder ~ Repeated Grids]], [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
 - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
+- Section Templates: [[doc|Form Builder ~ Section Templates]]
 - Singleton forms: [[doc|Form Runner ~ Singleton Form]]
 - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
 - Form field validation: [[doc|Form Builder ~ Validation]], [blog post](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
@@ -32,22 +33,39 @@ As of 2015-08-31 this page is still incomplete.
 
 ### Form Builder
 
+- Summary page: [[doc|Form Builder ~ Summary Page]]
+- Toolbox:
+    - features: [[doc|https://github.com/orbeon/orbeon-forms/wiki/Form-Builder-~-Toolbox]]
+    - configurability: [[doc|Form Builder ~ Toolbox ~ Metadata]]
+    - XBL components: [[doc|XForms ~ XBL]]
 - Control Settings: [[doc|Form Builder ~ Control Settings]]
     - control name
     - Summary page options
     - custom CSS classes
     - easy switching of control appearances: [blog post](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
-    - validation
-    - formulas
+    - validation: [[doc|Form Builder ~ Validation]]
+    - formulas: [[doc|Form Builder ~ Formulas]]
     - help text (plain text and rich text)
+        - appearance of help messages: [blog post](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
+- Itemset Editor: [[doc|Form Builder ~ Itemset Editor]]
+    - Hints for checkboxes and radio buttons: [blog post](http://blog.orbeon.com/2014/02/hints-for-checkboxes-and-radio-buttons.html)
+- Section Settings: [[doc|Form Builder ~ Section Settings]]
 - Explanation text: [blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)
 - Extension API: [[doc|Form Builder ~ Extension API]]
 - Access control for editing forms: [[doc|Form Runner ~ Access Control ~ Editing Forms]]
-- Internationalization (i18n)
+- Internationalization (i18n) / localization (l10n): [[doc|Form Builder ~ Creating Localized Forms]]
+- Services and actions
+    - HTTP Services: [[doc|Form Builder ~ HTTP Services]]
+    - Database Services: [[doc|Form Builder ~ Database Services]]
+    - Actions: [[doc|Form Builder ~ Actions]]
+- XML Schema Support: [[doc|Form Builder ~ XML Schema Support]]
+- Source code editor: [[doc|Form Builder ~ Editing the Source Code of the Form]]
+- Extension API: [[doc|Form Builder ~ Extension API]]
 
 ### Form Runner
 
 - Standard look & feel
+- Custom XBL components: [[doc|XForms ~ XBL]]
 - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
     - search
 - Detail Page
@@ -72,6 +90,7 @@ As of 2015-08-31 this page is still incomplete.
 
 ### Form controls
 
+- custom components: [[doc|XForms ~ XBL]]
 - text controls
     - input field
     - textarea
