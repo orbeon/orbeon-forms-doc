@@ -28,7 +28,7 @@ As of 2015-08-31 this page is still incomplete.
     - Owner / group permissions: [[doc|Form Runner ~ Access Control ~ Owner Group]], [blog post](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)
 - Persistence (databases)
     - persistence API: [[doc|Form Runner ~ APIs ~ Persistence]]
-    - [[persistence implementations|Orbeon Forms Features ~ Database Support]]
+    - persistence implementations: [[doc|Orbeon Forms Features ~ Database Support]]
 
 ### Form Builder
 
