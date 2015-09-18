@@ -4,7 +4,11 @@
 
 The purpose of this page is to index features, their documentation and [blog posts](http://blog.orbeon.com/) in a central location so that you can get an idea of what Orbeon Forms offers at a glance.
 
-See also the [Orbeon web site](http://www.orbeon.com/) and the [Orbeon blog](http://blog.orbeon.com/).
+## See also
+
+- [[Documentation home|https://github.com/orbeon/orbeon-forms/wiki]]
+- [Orbeon web site](http://www.orbeon.com/)
+- [Orbeon blog](http://blog.orbeon.com/)
 
 ## Status
 
