@@ -40,9 +40,9 @@ See [[Embedding|Form-Runner ~ Embedding]] for more details.
 
 ## User management
 
-See [[Access Control|Form Runner ~ Access Control]] for more details.
-
 By integrating with a user management system, you make Orbeon Forms aware of users and roles which can be associated with permissions.
+
+See [[Access Control|Form Runner ~ Access Control]] for more details.
 
 ### XML representation of form data
 
