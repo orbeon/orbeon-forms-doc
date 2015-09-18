@@ -12,6 +12,7 @@ Form Builder Guide:
 - [[Validation|Form Builder ~ Validation]]
 - [[Control Settings|Form Builder ~ Control Settings]]
 - [[Section Settings|Form Builder ~ Section Settings]]
+- [[Publishing|Form Builder ~ Publishing]]
 - [[Section Templates|Form Builder ~ Section Templates]]
 - [[Creating Localized Forms|Form Builder ~ Creating Localized Forms]]
 - [[Formulas|Form Builder ~ Formulas]]
