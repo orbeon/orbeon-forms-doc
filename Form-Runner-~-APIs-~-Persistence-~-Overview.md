@@ -20,13 +20,13 @@ Following the REST philosophy, HTTP methods are used to determine what CRUD oper
 
 For example, to deal with form data:
 
-| Operations | HTTP Methods | URL |
-| ---------- | ------------ | --- |
-| Create     | PUT          | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
-| Read       | GET          | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
-| Update     | PUT          | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
-| Delete     | DELETE       | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
-| Search     | POST         | `/search/[APPLICATION_NAME]/[FORM_NAME]` |
+| Operation | HTTP Method | URL |
+| --------- | ----------- | --- |
+| Create    | PUT         | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
+| Read      | GET         | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
+| Update    | PUT         | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
+| Delete    | DELETE      | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
+| Search    | POST        | `/search/[APPLICATION_NAME]/[FORM_NAME]` |
 
 ## Optional features
 
