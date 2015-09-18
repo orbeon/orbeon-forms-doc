@@ -44,6 +44,6 @@ _NOTE: Non-repeated grids do not create containing elements._
 - [[Form Builder Integration|Form Builder ~ Integration]]
 - [[Form Runner Embedding|Form-Runner ~ Embedding]]
 - [[Form Runner persistence API|Form Runner ~ APIs ~ Persistence]]
-- [[Access Control|Form Runner ~ Access Control]].
+- [[Access Control|Form Runner ~ Access Control]]
 - [[Data Format|Form Runner ~ Data Format]]
 - [[Accessing data captured by forms|Form Runner ~ Accessing data captured by forms]]
