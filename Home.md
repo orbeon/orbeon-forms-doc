@@ -22,7 +22,6 @@ The main topics covered on this site include:
 - [[Release History|Orbeon Forms Release History]]
 - [[Roadmap|Orbeon Forms Roadmap]]
 - [[Use Cases|Orbeon Forms Use Cases]]
-    - [[See your Own Data|Orbeon Forms Use Cases ~ See your Own Data]]
 - [[For contributors|Contributors]]
 
 See also the [complete list of pages](/orbeon/orbeon-forms/wiki/_pages).
