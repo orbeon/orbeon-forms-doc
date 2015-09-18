@@ -39,7 +39,7 @@ When versioning is enabled, you have a choice, when publishing, of whether to cr
 
 [SINCE Orbeon Forms 4.11] You can overwrite not only the latest published version, but any previous version.
 
-For details, see:
+## See also
 
 - [Form versioning](http://blog.orbeon.com/2014/02/form-versioning.html) blog post
 - [Choosing the best versioning option when publishing a form](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html) blog post
