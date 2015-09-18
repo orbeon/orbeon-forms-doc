@@ -22,11 +22,17 @@ For example, to deal with form data:
 
 | Operation | HTTP Method | URL |
 | --------- | ----------- | --- |
-| Create    | PUT         | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
-| Read      | GET         | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
-| Update    | PUT         | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
-| Delete    | DELETE      | `/crud/[APPLICATION_NAME]/[FORM_NAME]/(data|draft)/[FORM_DATA_ID]/data.xml` |
-| Search    | POST        | `/search/[APPLICATION_NAME]/[FORM_NAME]` |
+| Create    | PUT         | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
+| Read      | GET         | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
+| Update    | PUT         | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
+| Delete    | DELETE      | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
+| Search    | POST        | `/search/$app/$form` |
+
+where:
+
+- `$app` is the form definition's application name
+- `$form` is the form definition's form name
+- `$doc` is the form definition's document id
 
 ## Optional features
 
