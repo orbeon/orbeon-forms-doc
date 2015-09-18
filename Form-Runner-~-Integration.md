@@ -9,7 +9,7 @@ Form Builder and Form Runner integrate with other systems through the following 
 - __A [[configurable persistence API|Form Runner ~ APIs ~ Persistence]]__ based on REST (that is, through HTTP).
 - __External user management__, to connect to a directory of users with associated roles.
 - __HTTP services__
-  - called from forms via the Service Editors
+  - called from forms via the [[HTTP Service Editor|Form Builder ~ HTTP Services]]
   - called by Form Runner to load initial XML data
   - called by Form Runner to [[submit data|Form Runner ~ Buttons and Processes#send]]
 - __[[Embedding|Form-Runner ~ Embedding]]__, including within a portal
