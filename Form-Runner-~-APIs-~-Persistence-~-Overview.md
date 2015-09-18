@@ -14,9 +14,9 @@ The Form Runner/Form Builder persistence API is based on REST. This means that F
 
 Following the REST philosophy, HTTP methods are used to determine what CRUD operation to perform:
 
-* GET: read a resource
-* PUT: create or update a resource
-* DELETE: delete a resource
+* `GET`: read a resource
+* `PUT`: create or update a resource
+* `DELETE`: delete a resource
 
 For example, to deal with form data:
 
