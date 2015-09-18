@@ -23,13 +23,17 @@
 
 The notion of _publishing_ is central to Form Builder/Form Runner.
 
-* As a form author, you work on a form definition in a special space where the form can be modified, saved, and tested.
+* As a form author, you first work on a form definition in a special space where the form can be modified, saved, and tested.
 * Once the form definition is ready, you _publish it_ to Form Runner.
 * After that moment:
     * the form becomes available by form users for data entry
     * Form Builder is no longer part of the equation
 
-## See also
+## Versioning
+
+When versioning is enabled, you have a choice, when publishing, of whether to create a new form version or to override an existing one.
+
+For details, see:
 
 - [Form versioning](http://blog.orbeon.com/2014/02/form-versioning.html) blog post
 - [Choosing the best versioning option when publishing a form](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html) blog post
