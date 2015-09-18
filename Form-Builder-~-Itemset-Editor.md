@@ -61,3 +61,7 @@ Item values are not localizable: they remain the same for each language. On the 
     - Value: apple
 
 This ensures that the data captured is machine-readable even if the user interface language changes.
+
+## See also
+
+- [Hints for checkboxes and radio buttons](http://blog.orbeon.com/2014/02/hints-for-checkboxes-and-radio-buttons.html) blog post
