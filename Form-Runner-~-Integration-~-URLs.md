@@ -1,6 +1,6 @@
 > [[Home]] ▸ [[Form Runner|Form Runner]] ▸ [[Integration|Form Runner ~ Integration]]
 
-Form Runner and Form builder attempt to use friendly URLs.
+Form Runner and Form builder use friendly URLs.
 
 The following URL patterns are followed:
 
