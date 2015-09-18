@@ -12,7 +12,10 @@ Form Builder and Form Runner integrate with other systems through the following 
   - called from forms via the [[HTTP Service Editor|Form Builder ~ HTTP Services]]
   - called by Form Runner to load initial XML data
   - called by Form Runner to [[submit data|Form Runner ~ Buttons and Processes#send]]
-- __[[Embedding|Form-Runner ~ Embedding]]__, including within a portal
+- __[[Embedding|Form-Runner ~ Embedding]]__
+    - with the [[Server-side embedding API|Form Runner ~ APIs ~ Server side Embedding]]
+    - with the [[Form Runner proxy portlet|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
+    - with the [[Form Runner full portlet|Form Runner ~ Portal ~ Full Portlet Guide]]
 
 The persistence API can be implemented either within Orbeon Forms (like for example the built-in eXist persistence layer), or within an external system.
 
