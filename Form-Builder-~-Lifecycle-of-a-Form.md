@@ -40,4 +40,4 @@ Form definitions, as well as form data, can also be searched and deleted.
 
 ## See also
 
-- [[Publishing|Form Builder ~ Publishing]
+- [[Publishing|Form Builder ~ Publishing]]
