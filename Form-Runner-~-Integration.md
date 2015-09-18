@@ -8,7 +8,7 @@ Form Builder and Form Runner integrate with other systems through the a number o
 
 See [[URLs|Form Runner ~ Integration ~ URLs]] for more details.
 
-- Through URLs, you access Form Runner and Form Builder's pages
+- Through URLs, you access Form Runner and Form Builder's pages.
 - The URLs can be produced simply by using hyperlinks or redirects from other applications.
 
 ## Configurable persistence API
