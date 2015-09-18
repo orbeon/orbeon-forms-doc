@@ -4,14 +4,18 @@
 
 Form Builder and Form Runner integrate with other systems through the following means:
 
-- __Plain URLs__, through which you access Form Runner and Form Builder's pages
-    - The URLs can be accessed simply by using hyperlinks or redirects from another application.
-- __A [[configurable persistence API|Form Runner ~ APIs ~ Persistence]]__ based on REST (that is, through HTTP).
-- __External user management__, to connect to a directory of users with associated roles.
+- __Plain URLs__
+    - Through URLS you access Form Runner and Form Builder's pages
+    - The URLs can be accessed simply by using hyperlinks or redirects from other applications.
+- __A [[configurable persistence API|Form Runner ~ APIs ~ Persistence]]__
+    - The API is based on REST (that is, through HTTP).
+    - It provides CRUD, search, and metadata operations.
+- __External user management__
+    - This allows you to connect Orbeon Forms to a directory of users with associated roles.
 - __HTTP services__
-  - via the [[HTTP Service Editor|Form Builder ~ HTTP Services]]
-  - via properties to load initial XML data
-  - via processes to [[submit data|Form Runner ~ Buttons and Processes#send]]
+    - via the [[HTTP Service Editor|Form Builder ~ HTTP Services]]
+    - via properties to load initial XML data
+    - via processes to [[submit data|Form Runner ~ Buttons and Processes#send]]
 - __[[Embedding|Form-Runner ~ Embedding]]__
     - with the [[Server-side embedding API|Form Runner ~ APIs ~ Server side Embedding]]
     - with the [[Form Runner proxy portlet|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
