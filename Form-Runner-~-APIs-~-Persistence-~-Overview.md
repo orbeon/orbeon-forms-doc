@@ -27,7 +27,7 @@ For example, to deal with form data:
 | Update    | PUT         | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
 | Delete    | DELETE      | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
 | Search    | POST        | `/search/$app/$form` |
-| Metadata  | GET         | `/fr/service/persistence/form` |
+| Metadata  | GET         | `/form` |
 
 where:
 
