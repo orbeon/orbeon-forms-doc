@@ -56,6 +56,7 @@ As of 2015-09-18 this page is still being updated.
 - Itemset Editor: [[doc|Form Builder ~ Itemset Editor]]
     - Hints for checkboxes and radio buttons: [blog post](http://blog.orbeon.com/2014/02/hints-for-checkboxes-and-radio-buttons.html)
 - Section Settings: [[doc|Form Builder ~ Section Settings]]
+- Publishing a form definition: [[doc|Form Builder ~ Publishing]]
 - Explanation text: [blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)
 - Extension API: [[doc|Form Builder ~ Extension API]]
 - Access control for editing forms: [[doc|Form Runner ~ Access Control ~ Editing Forms]]
