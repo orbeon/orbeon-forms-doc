@@ -33,25 +33,25 @@ You use the number component like a regular input field, for example:
 These are the default values of the properties:
 
 ```xml
-<property 
-    as="xs:string" 
-    name="oxf.xforms.xbl.fr.currency.prefix"                      
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.currency.prefix"
     value="$"/>
-<property 
-    as="xs:string" 
-    name="oxf.xforms.xbl.fr.currency.suffix"                      
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.currency.suffix"
     value=""/>
-<property 
-    as="xs:string" 
-    name="oxf.xforms.xbl.fr.currency.digits-after-decimal"        
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.currency.digits-after-decimal"
     value="2"/>
-<property 
-    as="xs:string" 
-    name="oxf.xforms.xbl.fr.currency.decimal-separator"           
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.currency.decimal-separator"
     value="."/>
-<property 
-    as="xs:string" 
-    name="oxf.xforms.xbl.fr.currency.grouping-separator"          
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.currency.grouping-separator"
     value=","/>
 ```
 
@@ -61,7 +61,10 @@ By default the dollar sign ("$") is used as a currency prefix. You can override 
 
 * Globally for all your forms in your ‘properties-local.xml’ by setting the following property:
 ```xml
-<property as="xs:string" name="oxf.xforms.xbl.fr.currency.prefix" value="£"/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.currency.prefix" 
+    value="£"/>
 ```
 * For a particular instance of the component:
     * With the `prefix` attribute, for static values.
@@ -73,7 +76,10 @@ By default, the component shows the value to 2 digits after the decimal sign. Yo
 
 * Globally for all your forms in your `properties-local.xml` by setting the following property:
 ```xml
-<property as="xs:string" name="oxf.xforms.xbl.fr.currency.digits-after-decimal" value="3"/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.currency.digits-after-decimal" 
+    value="3"/>
 ```
 * For a particular instance of the component:
     * With the `digits-after-decimal` attribute, for static values.
