@@ -4,7 +4,7 @@
 - [[Autocomplete|Form Runner ~ XBL Components ~ Autocomplete]]
 - [Captcha](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/recaptcha)
 - [[Character Counter|Form Runner ~ XBL Components ~ Character Counter]]
-- [Currency](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/currency)
+- [[Currency|Form Runner ~ XBL Components ~ Currency]]
 - [Data-Bound Select1](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/databound-select1)
 - [Error Summary](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/error-summary-component)
 - [[Grid|Form Runner ~ XBL Components ~ Grid]]
