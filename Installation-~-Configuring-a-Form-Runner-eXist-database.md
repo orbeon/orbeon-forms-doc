@@ -117,8 +117,6 @@ See also the [latest version of this file on GitHub][5].
 
 _NOTE: Without this configuration, free-text search in the Form Runner summary page won't work._
 
-_NOTE: Full-text indexing is configured by default in the sample database that comes with Orbeon Forms starting 2011-01-18._
-
 ## Configuring Form Runner
 
 The last step is to tell Form Runner how to connect to eXist. Set the following property in the Orbeon `properties-local.xml` file. With Orbeon Forms 4.0:
