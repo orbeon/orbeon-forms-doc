@@ -11,7 +11,7 @@
 - [[Image|Form Runner ~ XBL Components ~ Image]]
 - [[Image Annotation|Form Runner ~ XBL Components ~ Image Annotation]]
 - [[Map|Form Runner ~ XBL Components ~ Map]]
-- [Number](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/number)
+- [[Number|Form Runner ~ XBL Components ~ Number]]
 - [Source Code Editor](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/source-code-editor)
 - [Tab View](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/tab-view)
 - [TinyMCE](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/tinymce)
