@@ -73,7 +73,7 @@ When deploying eXist as a WAR file, it will run using the Unix user of the servl
 
 To do so, you can use the eXist database administration tool:
 
-![][2]
+![](images/fr-exist-users.png)
 
 Steps:
 
@@ -157,7 +157,6 @@ In addition:
     * the `orbeon` user
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/40
-[2]: http://wiki.orbeon.com/forms/_/rsrc/1271365928682/doc/developer-guide/exist-configuration/configure-user.png
 [3]: http://exist-db.org/ftlegacy.html
 [4]: http://www.exist-db.org/lucene.html
 [5]: https://github.com/orbeon/orbeon-forms/tree/master/src/resources/apps/fr/persistence/exist/collection.xconf
