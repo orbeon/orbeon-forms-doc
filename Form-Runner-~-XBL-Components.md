@@ -15,7 +15,7 @@
 - [[Rich Text Editor|Form Runner ~ XBL Components ~ Rich Text Editor]]
 - [Source Code Editor](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/source-code-editor)
 - [Tab View](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/tab-view)
-- [US State](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/us-state)
+- [[US State|Form Runner ~ XBL Components ~ US State]]
 - [[Wizard|Form Runner ~ XBL Components ~ Wizard]]
 
 ## XBL components to document
