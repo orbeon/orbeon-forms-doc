@@ -33,11 +33,26 @@ You use the number component like a regular input field, for example:
 These are the default values of the properties:
 
 ```xml
-<property as="xs:string" name="oxf.xforms.xbl.fr.currency.prefix"                      value="$"/>
-<property as="xs:string" name="oxf.xforms.xbl.fr.currency.suffix"                      value=""/>
-<property as="xs:string" name="oxf.xforms.xbl.fr.currency.digits-after-decimal"        value="2"/>
-<property as="xs:string" name="oxf.xforms.xbl.fr.currency.decimal-separator"           value="."/>
-<property as="xs:string" name="oxf.xforms.xbl.fr.currency.grouping-separator"          value=","/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.currency.prefix"                      
+    value="$"/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.currency.suffix"                      
+    value=""/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.currency.digits-after-decimal"        
+    value="2"/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.currency.decimal-separator"           
+    value="."/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.currency.grouping-separator"          
+    value=","/>
 ```
 
 ### Currency prefix
