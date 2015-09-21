@@ -5,11 +5,11 @@
 - [Captcha](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/recaptcha)
 - [[Character Counter|Form Runner ~ XBL Components ~ Character Counter]]
 - [[Currency|Form Runner ~ XBL Components ~ Currency]]
-- [Data-Bound Select1](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/databound-select1)
+- [[Data-Bound Select1|Form Runner ~ XBL Components ~ Dynamic Data Dropdown]]
 - [Error Summary](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/error-summary-component)
 - [[Grid|Form Runner ~ XBL Components ~ Grid]]
 - [[Image|Form Runner ~ XBL Components ~ Image]]
-- [Image Annotation](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/image-annotation)
+- [[Image Annotation|Form Runner ~ XBL Components ~ Image Annotation]
 - [[Map|Form Runner ~ XBL Components ~ Map]]
 - [Number](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/number)
 - [Source Code Editor](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/source-code-editor)
