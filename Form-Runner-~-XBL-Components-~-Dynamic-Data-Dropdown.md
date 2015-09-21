@@ -16,12 +16,12 @@ You need 3 drop-downs: _state_, _city_, and _zip code_. The _state_ drop-down li
 To populate the _state_ drop-down, you use a pre-existing service that [returns the list of states][2].This service is at the URI `/xforms-sandbox/service/zip-states`. You specify that URI in the `resource` attribute. Other than that, the `<fr:databound-select1>` looks very much like an `<xf:select1>`:
 
 ```xml
-<fr:databound-select1 
-    ref="state" 
+<fr:databound-select1
+    ref="state"
     appearance="minimal"
     resource="/xforms-sandbox/service/zip-states">
-    <xf:label>State: </xf:label>
-    <xf:itemset nodeset="/states/state">
+    <xf:label>State</xf:label>
+    <xf:itemset ref="/states/state">
         <xf:label ref="@name"/>
         <xf:value ref="@abbreviation"/>
     </xf:itemset>
@@ -31,12 +31,12 @@ To populate the _state_ drop-down, you use a pre-existing service that [returns 
 So far so good: assuming you have such a service that returns the data you need, this component saves you from having to declare a submission to call the service, to declare an instance to store the data, and to call the service when appropriate. But things become more interesting when you chain another `<fr:databound-select1>`. Let's assume you have a service that [returns the list cities for a state][3], taking that state as a parameter. As for the first drop-down, you specify the URI of that service in the `resource` attribute, and use an AVT to pass the value of the parameter. The component then takes care of calling the service whenever the parameter changes, to update the data as necessary:
 
 ```xml
-<fr:databound-select1 
-    ref="city" 
+<fr:databound-select1
+    ref="city"
     appearance="minimal"
     resource="/xforms-sandbox/service/zip-cities?state-abbreviation={state}">
-    <xf:label>City: </xf:label>
-    <xf:itemset nodeset="/cities/city">
+    <xf:label>City</xf:label>
+    <xf:itemset ref="/cities/city">
         <xf:label ref="@name"/>
         <xf:value ref="@name"/>
     </xf:itemset>
