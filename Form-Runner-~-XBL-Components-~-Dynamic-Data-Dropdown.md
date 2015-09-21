@@ -10,7 +10,7 @@ You can also use this component to create chained select1 controls, where the va
 
 You need 3 drop-downs: _state_, _city_, and _zip code_. The _state_ drop-down lists the 50 states, the _city_ drop-down lists all the cities in the selected state, and the _zip code_ drop-down lists all the zip codes for the selected city. This is the situation you see in the following screenshot:
 
-![](images/xbl-databound-select1)
+![](images/xbl-databound-select1.png)
 
 
 To populate the _state_ drop-down, you use a pre-existing service that [returns the list of states][2].This service is at the URI `/xforms-sandbox/service/zip-states`. You specify that URI in the `resource` attribute. Other than that, the `<fr:databound-select1>` looks very much like an `<xf:select1>`:
