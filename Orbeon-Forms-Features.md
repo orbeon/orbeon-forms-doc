@@ -92,7 +92,7 @@ As of 2015-09-18 this page is still being updated.
     - TIFF production: [[doc|Form Runner ~ TIFF Production]]
 - Validation
     - as-you-type validation
-    - centralized error summary showing currently relevant errors
+    - centralized error summary showing currently relevant errors: [[XBL component doc|Form Runner ~ XBL Components ~ Error Summary]], [blog post on warnings/infos enhancements](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
 - Captcha: [[doc|Form Runner ~ Configuration properties#captcha]], [[XBL doc|Form Runner ~ XBL Components ~ Captcha]], [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 
