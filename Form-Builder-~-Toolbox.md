@@ -170,7 +170,6 @@ The controls appear like this at design time:
 | **Dropdown Menu** | single | dropdown menu |
 | **Radio Buttons** | single | radio buttons |
 | **Checkboxes** | multiple | checkboxes |
-| **Scrollable List** | single | scrollable list|
 | **Boolean Input** | - | checkbox storing a boolean value |
 | **Scrollable Checkboxes** | single | scrollable radio buttons |
 | **Dynamic Data Dropdown** | single | dynamic dropdown bound to a REST service |
@@ -181,6 +180,8 @@ You edit the choices of most selection controls with the [[Itemset Editor|Form B
 The controls appear like this at design time:
 
 ![](images/fb-selection-controls-design-time.png)
+
+__NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 4.11 and removed from the toolbox.__
 
 ### Attachment controls
 
