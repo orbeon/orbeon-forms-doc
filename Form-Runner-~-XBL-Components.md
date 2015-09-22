@@ -1,6 +1,6 @@
 ## Documented XBL components
 
-- [Alert Dialog](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/alert-dialog)
+- [[Alert Dialog|Form Runner ~ XBL Components ~ Alert Dialog]]
 - [[Autocomplete|Form Runner ~ XBL Components ~ Autocomplete]]
 - [Captcha](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/recaptcha)
 - [[Character Counter|Form Runner ~ XBL Components ~ Character Counter]]
