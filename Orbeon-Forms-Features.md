@@ -94,6 +94,7 @@ As of 2015-09-18 this page is still being updated.
     - as-you-type validation
     - centralized error summary showing currently relevant errors
 - Sending emails
+- Captcha: [[doc|Form Runner ~ Configuration properties#captcha]], [[XBL doc|Form Runner ~ XBL Components ~ Captcha]], [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 
 ### Form controls
 
