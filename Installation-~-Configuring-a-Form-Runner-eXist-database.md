@@ -158,5 +158,5 @@ In addition:
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/40
 [3]: http://exist-db.org/ftlegacy.html
-[4]: http://www.exist-db.org/lucene.html
+[4]: http://exist-db.org/exist/apps/doc/lucene.xml
 [5]: https://github.com/orbeon/orbeon-forms/tree/master/src/resources/apps/fr/persistence/exist/collection.xconf
