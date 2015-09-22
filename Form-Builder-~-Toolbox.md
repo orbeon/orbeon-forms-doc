@@ -181,7 +181,7 @@ The controls appear like this at design time:
 
 ![](images/fb-selection-controls-design-time.png)
 
-__NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 4.11 and removed from the toolbox.__
+_NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 4.11 and removed from the toolbox._
 
 ### Attachment controls
 
