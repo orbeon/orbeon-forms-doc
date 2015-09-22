@@ -68,7 +68,7 @@ In most cases, you will be using either the positive and negative choice togethe
 
 You specify the actions running upon a button being pressed by either:
 
-* **Use inline actions** – Placing the actions inside the `<fr:``positive-choice``>` or <fr:negative-choice> or <fr:neutral-choice>, and run them on the `DOMActivate` event, as done in the [example above][5].
+* **Use inline actions** – Placing the actions inside the `<fr:``positive-choice``>` or <fr:negative-choice> or <fr:neutral-choice>, and run them on the `DOMActivate` event, as done in the example above.
 * **Use a "callback"** – [SINCE 2011-07-22] When opening the alert dialog, passing the id of an element to which the dialog will dispatch an event upon a button being pressed. For instance you would open the dialog with:
 
     ```xml
