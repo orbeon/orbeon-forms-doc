@@ -127,10 +127,3 @@ Depending on the number of buttons you place in your dialog, a different icon is
 * When you have 1 button, the dialog is considered to be **informational**. The CSS class is `xbl-fr-alert-dialog-info` and the dialog looks like:
 
     ![](images/xbl-alert-dialog-info.png)
-
-[1]: http://wiki.orbeon.com/forms/_/rsrc/1268331937354/doc/developer-guide/xbl-components/Orbeon%20Forms%20Example%20Applications%20-%20XBL%20-%20Alert%20Dialog-3.png
-[2]: http://wiki.orbeon.com/forms/_/rsrc/1268331937354/doc/developer-guide/xbl-components/Orbeon%20Forms%20Example%20Applications%20-%20XBL%20-%20Alert%20Dialog-5.png
-[3]: http://wiki.orbeon.com/forms/_/rsrc/1268331937354/doc/developer-guide/xbl-components/Orbeon%20Forms%20Example%20Applications%20-%20XBL%20-%20Alert%20Dialog-4.png
-[4]: http://wiki.orbeon.com/forms/_/rsrc/1268331937354/doc/developer-guide/xbl-components/Orbeon%20Forms%20Example%20Applications%20-%20XBL%20-%20Alert%20Dialog-6.png
-[5]: http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/alert-dialog#TOC-Example
-[6]: http://wiki.orbeon.com/forms/_/rsrc/1268331937354/doc/developer-guide/xbl-components/Orbeon%20Forms%20Example%20Applications%20-%20XBL%20-%20Alert%20Dialog-8.png
