@@ -2,7 +2,7 @@
 
 - [[Alert Dialog|Form Runner ~ XBL Components ~ Alert Dialog]]
 - [[Autocomplete|Form Runner ~ XBL Components ~ Autocomplete]]
-- [Captcha](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/recaptcha)
+- [[Captcha|Form Runner ~ XBL Components ~ Captcha]]
 - [[Character Counter|Form Runner ~ XBL Components ~ Character Counter]]
 - [[Currency|Form Runner ~ XBL Components ~ Currency]]
 - [[Dynamic Data Dropdown|Form Runner ~ XBL Components ~ Dynamic Data Dropdown]]
