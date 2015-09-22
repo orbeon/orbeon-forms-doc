@@ -392,7 +392,7 @@ If you are creating a public form, you might want to add a captcha to avoid spam
     value="reCAPTCHA"/>
 ```
 
-You can set this property to either `reCAPTCHA` or `SimpleCaptcha`, depending on the captcha implementation you want to use (also see: [Which captcha is right for you][10]).  Setting it to blank (empty string), won't show a captcha, which is the default. Instead of stars (`*`) in the name of the first property, use specific app/form names for the captcha to only show on certain forms.
+You can set this property to either `reCAPTCHA` or `SimpleCaptcha`, depending on the captcha implementation you want to use (also see: [[Which captcha is right for you|Form Runner ~ XBL Components ~ Captcha#which-captcha-is-right-for-you]]).  Setting it to blank (empty string), won't show a captcha, which is the default. Instead of stars (`*`) in the name of the first property, use specific app/form names for the captcha to only show on certain forms.
 
 If using the reCAPTCHA, also add the following properties to specify your reCAPTCHA public and private keys. You can get those by [signing up for reCAPTCHA][11].
 
@@ -412,7 +412,7 @@ With those properties in place, your forms will show a captcha as illustrated by
 
 ![](images/fr-recaptcha.png)
 
-[LIMITATION] The Form Runner captcha uses the [captcha XBL components][13], which doesn't support the noscript mode. Hence,  enabling this feature will have no effect in noscript mode.
+[LIMITATION] The Form Runner captcha uses the [[captcha XBL components|Form Runner ~ XBL Components ~ Captcha]], which doesn't support the noscript mode. Hence,  enabling this feature will have no effect in noscript mode.
 
 ### Initial instance
 
@@ -731,9 +731,7 @@ Whether sections in Ajax mode are allowed to open and close with an animation. D
 
 [6]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base
 [8]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/form-runner/importing-data
-[10]: http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/recaptcha#TOC-Which-captcha-is-right-for-you
 [11]: https://www.google.com/recaptcha/admin/create
-[13]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/xbl-components/recaptcha
 [14]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Buttons-and-Processes#send
 [15]: https://developer.chrome.com/devtools
 [16]: http://getfirebug.com/
