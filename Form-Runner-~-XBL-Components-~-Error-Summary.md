@@ -183,3 +183,7 @@ To properly update the error summary within a submission response, you might nee
     <xf:dispatch name="fr-update" targetid="error-summary"/>
 </xf:action>
 ```
+
+## See also
+
+- [Enhanced validation in Form Builder and Form Runner](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
