@@ -16,6 +16,7 @@
 - [[Source Code Editor|Form Runner ~ XBL Components ~ Source Code Editor]]
 - [Tab View](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/tab-view)
 - [[US State|Form Runner ~ XBL Components ~ US State]]
+- [[XForms Inspector|Form Runner ~ XBL Components ~ XForms Inspector]]
 - [[Wizard|Form Runner ~ XBL Components ~ Wizard]]
 
 ## XBL components to document
