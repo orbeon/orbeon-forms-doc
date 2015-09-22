@@ -6,7 +6,7 @@
 - [[Character Counter|Form Runner ~ XBL Components ~ Character Counter]]
 - [[Currency|Form Runner ~ XBL Components ~ Currency]]
 - [[Dynamic Data Dropdown|Form Runner ~ XBL Components ~ Dynamic Data Dropdown]]
-- [Error Summary](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/error-summary-component)
+- [[Error Summary|Form Runner ~ XBL Components ~ Error Summary]]
 - [[Grid|Form Runner ~ XBL Components ~ Grid]]
 - [[Image|Form Runner ~ XBL Components ~ Image]]
 - [[Image Annotation|Form Runner ~ XBL Components ~ Image Annotation]]
