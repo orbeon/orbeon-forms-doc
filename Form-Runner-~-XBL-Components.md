@@ -13,7 +13,7 @@
 - [[Map|Form Runner ~ XBL Components ~ Map]]
 - [[Number|Form Runner ~ XBL Components ~ Number]]
 - [[Rich Text Editor|Form Runner ~ XBL Components ~ Rich Text Editor]]
-- [Source Code Editor](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/source-code-editor)
+- [[Source Code Editor|Form Runner ~ XBL Components ~ Source Code Editor]]
 - [Tab View](http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components/tab-view)
 - [[US State|Form Runner ~ XBL Components ~ US State]]
 - [[Wizard|Form Runner ~ XBL Components ~ Wizard]]
