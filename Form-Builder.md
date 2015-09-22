@@ -1,6 +1,6 @@
 > [[Home]]
 
-Form Builder Guide:
+## Form Builder Guide
 
 - [[Introduction|Form Builder ~ Introduction]]
 - [[Summary Page|Form Builder ~ Summary Page]]
@@ -21,7 +21,7 @@ Form Builder Guide:
 - [[PDF Production|Form Builder ~ PDF Production]]
     - [[PDF Templates|Form Builder ~ PDF Production ~ PDF Templates]]
     
-Advanced topics:
+## Advanced topics
     
 - [[HTTP Services|Form Builder ~ HTTP Services]]
 - [[Database Services|Form Builder ~ Database Services]]
