@@ -105,7 +105,7 @@ Number of rows shown in the Summary Page.
 
 ### Created and Last Modified columns
 
-By default, the Summary Page shows a Created and Last Modified columns:
+By default, the Summary Page shows a Created and Modified columns:
 
 ![](images/fr-summary-created-last-modified.png)
 
