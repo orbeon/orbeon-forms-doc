@@ -560,7 +560,7 @@ You can add more than one file, and just separate the paths by whitespace in the
 
  **Use case** |  **Sample CSS** |  **Description**
 -----|-----|-----
- Change the width of a column |  `.fr-grid-invoice .fr-grid-col-1 { width: 40px }` | 1. In Form Builder, you can name grids (for now [only repeated grids can be named][18]). When doing so, the table element corresponding to your grid gets a `fr-grid-my-name` class, where `my-name` is the name you choose for the grid. In the example, the name was `invoice`. 2. Each column gets a class `fr-grid-col-1`, `fr-grid-col-2` and so on, starting with the number 1.
+ Change the width of a column |  `.fr-grid-invoice .fr-grid-col-1 { width: 40px }` | 1. In Form Builder, you can name grids (for now [only repeated grids can be named][18]). When doing so, the table element corresponding to your grid gets a `fr-grid-my-name` class, where `my-name` is the name you choose for the grid. In the example, the name was `invoice`.<br>2. Each column gets a class `fr-grid-col-1`, `fr-grid-col-2` and so on, starting with the number 1.
 
 ### Adding your own JavaScript
 
