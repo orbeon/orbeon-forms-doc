@@ -30,9 +30,9 @@ It's pretty simple!
 
 _NOTE: Only the Excel 2007 .xlsx format (Office Open XML) is supported. The older, .xls format is not supported._
 
-## Enabling the import button on the summary page
+## Enabling the import button
 
-You enable the import button by adding the import token to the `oxf.fr.summary.buttons.*.*` property. Here for the Orbeon Contact form:
+You enable the import button on the Summary page by adding the import token to the `oxf.fr.summary.buttons.*.*` property. Here for the Orbeon Contact form:
 
 ```xml
 <property as="xs:string"
@@ -40,7 +40,7 @@ You enable the import button by adding the import token to the `oxf.fr.summary.b
   value="new import edit print pdf delete"/>
 ```
 
-## Mapping between form controls and Excel spreadsheet
+## Mapping between form controls and spreadsheet
 
 A given Excel file contains data for a single Orbeon Forms form.
 
