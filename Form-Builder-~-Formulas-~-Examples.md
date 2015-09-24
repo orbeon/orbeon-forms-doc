@@ -187,9 +187,9 @@ Explanation:
 * The standard `string-length()` function returns the length of its argument
 * The `<=` or `lt` comparator means "lower than or equal to"
 
-## Set the value of a field from a URL parameter only if it exists
+## Set the value of a field from a URL parameter
 
-Scenario: Set the value of a field from a URL parameter only if it exists.
+Scenario: We want to set the value of a field from a URL parameter, but only if that parameter exists. If it doesn't, we want to leave the value of the field as it is. 
 
 ```ruby
 (xxf:get-request-parameter('Eval-Status'), .)[1]
