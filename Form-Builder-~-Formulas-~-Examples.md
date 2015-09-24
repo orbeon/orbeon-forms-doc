@@ -192,7 +192,7 @@ Explanation:
 Scenario: We want to set the value of a field from a URL parameter, but only if that parameter exists. If it doesn't, we want to leave the value of the field as it is. 
 
 ```ruby
-(xxf:get-request-parameter('Eval-Status'), .)[1]
+(xxf:get-request-parameter('my-parameter'), .)[1]
 ```
 
 Explanation:
