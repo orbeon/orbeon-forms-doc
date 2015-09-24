@@ -14,6 +14,8 @@
 - [[Section Settings|Form Builder ~ Section Settings]]
 - [[Section Templates|Form Builder ~ Section Templates]]
 - [[Creating Localized Forms|Form Builder ~ Creating Localized Forms]]
+- Formulas
+    - [[Examples|Form Builder ~ Formulas ~ Examples]]
 - [[Itemset Editor|Form Builder ~ Itemset Editor]]
 - [[Lifecycle of a Form|Form Builder ~ Lifecycle of a Form]]
 - [[PDF Production|Form Builder ~ PDF Production]]
@@ -77,8 +79,13 @@ TODO
 
 XPath expressions may refer to the value of other controls in the page, using variables named after the name of the controls to use.
 
+## Examples
+
+See [[examples of formulas|Form Builder ~ Formulas ~ Examples]].
+
 ## See also
 
+- [[Examples of formulas|Form Builder ~ Formulas ~ Examples]]
 - [[Form Builder Validation|Form Builder ~ Validation]]
 - [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
