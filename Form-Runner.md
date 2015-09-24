@@ -20,6 +20,7 @@
 - [[Custom Model Logic|Form Runner ~ Custom Model Logic]]
 - [[CSS Styling|Form Runner ~ CSS Styling]]
 - [[Data Format|Form Runner ~ Data Format]]
+- [[Date and Time in Form Data|Form Runner ~ Date and Time in Form Data]]
 - [[Embedding|Form Runner ~ Embedding]]
     - [[Server-side embedding API|Form Runner ~ APIs ~ Server side Embedding]]
     - [[Form Runner proxy portlet|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
