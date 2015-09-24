@@ -19,9 +19,7 @@
 - [[PDF Production|Form Builder ~ PDF Production]]
     - [[PDF Templates|Form Builder ~ PDF Production ~ PDF Templates]]
 
-## Scenarios
-
-### Make a control read-only based on the value of another control
+## Make a control read-only based on the value of another control
 
 Scenario: Make a control read-only if the value of the `first-name` control is blank:
 
@@ -37,7 +35,7 @@ Explanation:
 * `normalize-space()` is a standard XPath function which removes all leading and trailing white space and combine internal white space. Using this function ensures that, even if the value contains spaces, it resolves to an empty string.
 * `= ''` compares the result of the function to the empty string
 
-### Setting a dynamic initial value
+## Setting a dynamic initial value
 
 Scenario: As a form author, you can set a _static initial value_ for a control simply by setting that value at design time. For example:
 
@@ -56,7 +54,7 @@ Explanation:
 
 * `current-date()` is a standard XPath function returning the current date.
 
-### Simple calculated values
+## Simple calculated values
 
 Scenario: compute the sum of two numbers entered by the user in two fields, "quantity1" and "quantity2".
 
@@ -78,7 +76,7 @@ This can be specified for example on a Text Output control.
 
 *NOTE: If the value of a control is calculated, by default it is also marked as read-only. If you want a calculated control to be still editable by the user, set its Read-Only property explicitly to `false()`.*
 
-### Sum of values in a repeat
+## Sum of values in a repeat
 
 [SINCE Orbeon Forms 4.0]
 
@@ -102,7 +100,7 @@ Explanation:
 * [`. castable as xs:decimal]` excludes values that are blank or not decimal number
 * `sum()` is a standard XPath function to compute the sum of a sequence of items
 
-### Access a control in a particular repeat iteration
+## Access a control in a particular repeat iteration
 
 Given [this form](https://gist.github.com/orbeon/e7272c1b2499c3a5fb5f) and a control called `name` within a repeat:
 
@@ -114,11 +112,11 @@ Given [this form](https://gist.github.com/orbeon/e7272c1b2499c3a5fb5f) and a con
 
 See also [[Model bind variables|XForms ~ Model bind variables]] and this [StackOverflow question](http://stackoverflow.com/questions/27820641/access-to-iterated-controls-in-repeated-sections-in-orbeon/27830585?noredirect=1#comment44118606_27830585).
 
-### Check the role(s) of the current user
+## Check the role(s) of the current user
 
 See [[Form Fields|Form Runner ~ Access Control ~ Form Fields]].
 
-### Check the Form Runner mode
+## Check the Form Runner mode
 
 A special XPath variable named `$fr-mode` is exposed by Form Runner to all XPath expressions. Its value can be one of:
 
@@ -134,7 +132,7 @@ You can test the mode as follows, for example in a Visibility expression:
 $fr-mode = 'edit'
 ```
 
-### Access HTTP request parameters and HTTP headers
+## Access HTTP request parameters and HTTP headers
 
 It can be useful to access HTTP headers to set default values upon form initialization, for example when single sign-on systems use HTTP headers as a way of communicating information to an application.
 
@@ -146,7 +144,7 @@ xxf:get-request-header('full-name')
 
 *NOTE: With Orbeon Forms 3.8 and 3.9, headers cannot be reliably accessed after the form is initialized, so this function should be used for setting initial values on controls only. See the next scenario for a workaround.*
 
-### Check the type of an attachment
+## Check the type of an attachment
 
 Scenario: field `my-attachment` must be a PDF file.
 
@@ -174,7 +172,7 @@ $my-attachment/@mediatype = 'application/pdf'
 
 *NOTE: Because the file name and file type are sent by the client's browser, they cannot be trusted. This should only be considered a first level of data validation, and further validation based on the content must be performed at a later time if needed. See also issue [#1838](https://github.com/orbeon/orbeon-forms/issues/1838).*
 
-### Validate the length of a value
+## Validate the length of a value
 
 Scenario: the maximum length of the "last-name" control is 30 characters.
 
@@ -188,6 +186,25 @@ Explanation:
 
 * The standard `string-length()` function returns the length of its argument
 * The `<=` or `lt` comparator means "lower than or equal to"
+
+## Set the value of a field from a URL parameter only if it exists
+
+Scenario: Set the value of a field from a URL parameter only if it exists.
+
+```ruby
+(xxf:get-request-parameter('Eval-Status'), .)[1]
+```
+
+Explanation:
+
+- If the parameter exists
+    - `xxf:get-request-parameter()` returns a single string
+    - so you get a sequence containing that string following by the current value of the field
+    - we take the first value of the sequence, so the value of the parameter is used
+- if the parameter doesn't exist
+    - `xxf:get-request-parameter()` returns an empty XPath sequence
+    - so you get a sequence containing only the current value of the field
+    - we take the first value of that sequence, so we get the current value of the control
 
 ## See also
 
