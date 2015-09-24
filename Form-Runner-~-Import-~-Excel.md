@@ -14,23 +14,19 @@ It's pretty simple!
 
 1. You start the import from the Form Runner import page, accessible from the summary page
 
-    ![][1]
+    ![](images/fr-excel-import-summary.png)
 
 2. You select the Excel 2007 file to upload and import
 
-    ![][2]
+    ![](images/fr-excel-import-select.png)
 
 3. Form Runner validates the Excel file and give you the option to add to existing data for the given form, or remove all existing data first
 
-    ![][3]
+    ![](images/fr-excel-import-validate.png)
 
 4. Form Runner imports valid data from the Excel file
 
-    ![][4]
-
-5. The import is complete!
-
-    ![][5]
+    ![](images/fr-excel-import-import.png)
 
 _NOTE: Only the Excel 2007 .xlsx format (Office Open XML) is supported. The older, .xls format is not supported._
 
@@ -58,17 +54,10 @@ In your form, you create controls with names that match the names in the first r
 
 Here is an example spreadsheet for the sample Orbeon Contact form:
 
-![][6]
+![]![](images/fr-excel-import-sheet.png)
 
 _NOTE: Only characters allowed in XML names are allowed as control names in Form Builder. In case your Excel header row requires names with non-XML characters (Form Builder will tell you the name is not allowed), simply replace them by "_" in Form Builder._
 
 ## Limitations
 
 The import functionality does not support importing data into repeated grids.
-
-[1]: http://wiki.orbeon.com/forms/_/rsrc/1305744746496/doc/developer-guide/form-runner/importing-data/01%20Summary%20shadow.png
-[2]: http://wiki.orbeon.com/forms/_/rsrc/1305744758433/doc/developer-guide/form-runner/importing-data/02%20Upload%20shadow.png
-[3]: http://wiki.orbeon.com/forms/_/rsrc/1305744776932/doc/developer-guide/form-runner/importing-data/03%20Validation%20shadow.png
-[4]: http://wiki.orbeon.com/forms/_/rsrc/1305744793626/doc/developer-guide/form-runner/importing-data/04%20Import%20shadow.png
-[5]: http://wiki.orbeon.com/forms/_/rsrc/1305744818223/doc/developer-guide/form-runner/importing-data/05%20Complete%20shadow.png
-[6]: http://wiki.orbeon.com/forms/_/rsrc/1305745300125/doc/developer-guide/form-runner/importing-data/excel.png
