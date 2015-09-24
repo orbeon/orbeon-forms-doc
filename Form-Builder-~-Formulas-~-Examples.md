@@ -187,9 +187,17 @@ Explanation:
 * The standard `string-length()` function returns the length of its argument
 * The `<=` or `lt` comparator means "lower than or equal to"
 
+[SINCE Orbeon Forms 4.10]
+
+The same can be expressed, for the current control, as:
+
+```ruby
+xxf:max-length(30)
+```
+
 ## Set the value of a field from a URL parameter
 
-Scenario: We want to set the value of a field from a URL parameter, but only if that parameter exists. If it doesn't, we want to leave the value of the field as it is. 
+Scenario: We want to set the value of a field from a URL parameter, but only if that parameter exists. If it doesn't, we want to leave the value of the field as it is.
 
 ```ruby
 (xxf:get-request-parameter('my-parameter'), .)[1]
