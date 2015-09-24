@@ -16,6 +16,7 @@
 - [[Section Templates|Form Builder ~ Section Templates]]
 - [[Creating Localized Forms|Form Builder ~ Creating Localized Forms]]
 - [[Formulas|Form Builder ~ Formulas]]
+    - [[Examples|Form Builder ~ Formulas ~ Examples]]
 - [[Itemset Editor|Form Builder ~ Itemset Editor]]
 - [[Lifecycle of a Form|Form Builder ~ Lifecycle of a Form]]
 - [[PDF Production|Form Builder ~ PDF Production]]
