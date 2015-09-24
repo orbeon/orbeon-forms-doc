@@ -27,11 +27,11 @@ When investigating issues, you often need to look at what goes "over the wire", 
 
 After you install WireShark, click on _Capture Options_, and setup a setup the _Capture Filter_ to be `tcp port 8080`. (Replace `8080` with the port on which your application server or services are listening, as appropriate.)
 
-![][9]
+![](images/wireshark-capture-filter.png)
 
 Click Start, and since you only interested about HTTP (versus TCP) traffic, in _Filter_ type `http` and press enter to apply.
 
-![][10]
+![](images/wireshark-filter.png)
 
 Next WireShark will show you all the HTTP traffic that goes through the machine it is running on, to the port you specified (here 8080).
 
@@ -83,6 +83,4 @@ The Request Dumper Valve doesn't log the body of POSTs, it can only be used on T
 [6]: http://ws.apache.org/commons/tcpmon/tcpmontutorial.html
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-logging
 [8]: https://addons.mozilla.org/en-US/firefox/addon/1843
-[9]: http://wiki.orbeon.com/forms/_/rsrc/1276304364653/doc/developer-guide/admin/monitoring-http-requests/wireshart-capture-filter.png
-[10]: http://wiki.orbeon.com/forms/_/rsrc/1276304364653/doc/developer-guide/admin/monitoring-http-requests/wireshart-filter-2.png
 [11]: https://tomcat.apache.org/download-70.cgi
