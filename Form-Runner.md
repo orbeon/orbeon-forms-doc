@@ -27,6 +27,7 @@
     - [[Form Runner proxy portlet|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
     - [[Form Runner full portlet|Form Runner ~ Portal ~ Full Portlet Guide]]
 - [[Home Page|Form Runner ~ Home Page]]
+- [[Excel Import|Form Runner ~ Import ~ Excel]]
 - [[Integration|Form Runner ~ Integration]]
 - [[Services|Form Runner ~ Services]]
 - [[Singleton Form|Form Runner ~ Singleton Form]]
