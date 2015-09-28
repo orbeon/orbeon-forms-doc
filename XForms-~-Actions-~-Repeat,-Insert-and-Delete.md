@@ -1,5 +1,16 @@
 > [[Home]] ▸ [[XForms]]
 
+This pages covers:
+
+- [[Basics|#basics]]
+- [[Repeat index|#repeat-index]]
+- [[Deleting iterations with the delete action|#deleting-iterations-with-the-delete-action]]
+- [[Inserting iterations with the insert action|#inserting-iterations-with-the-insert-action]]
+- [[Using a trigger to execute actions|#using-a-trigger-to-execute-actions]]
+- [[Nested repeats|#nested-repeats]]
+- [[Iterating over plain values|#iterating-over-plain-values]]
+- [[Evaluation of initial values upon insert|#evaluation-of-initial-values-upon-insert]]
+
 ## Basics
 
 A very common requirement of user interfaces consists in repeating visual elements, such as rows in a table or entries in a list. Those repeated sections usually (but not always) have an homogeneous aspect: they all have the same or a very similar structure. For example, multiple table rows will differ only in the particular content they display in their cells. An example of this is an invoice made of lines with each a description, unit price, and quantity.
@@ -252,28 +263,24 @@ In this case, the context item within the repeat is a number, not a node.
 
 _NOTE: This ability is also part of the XForms 2 specification._
 
-## Recalculation of initial values
+## Evaluation of initial values upon insert
 
 Orbeon Forms supports the `xxf:default` extension attribute on `xf:bind` to specify [[dynamic initial values|XForms ~ Binds#dynamic-initial-values]].
 
 By default (no pun intended), `xxf:default` does not apply to the newly inserted nodes. But by setting the `xxf:defaults` attribute (note the plural "defaults") on `xf:insert` to `true`, this behavior can be changed, and any `xxf:default` pointing to a newly-inserted node is re-evaluated during the next recalculation.
 
-Consider the following examplem where the `xf:bind` points to any `<value>` element child of the root element, and sets a dynamic initial value:
+Consider the following example where the bind points to any `<value>` element child of the root element, and sets a dynamic initial value:
 
 ```xml
-<xf:model>
+<xf:instance>
+  <data>
+      <value/>
+  </data>
+</xf:instance>
 
-    <xf:instance>
-      <data>
-          <value/>
-      </data>
-    </xf:instance>
-
-    <xf:bind
-        ref="instance()/value"
-        xxf:default="count(//*)"/>
-
-</xf:model>
+<xf:bind
+    ref="instance()/value"
+    xxf:default="count(//*)"/>
 ```
 
 The data looks like this after initialization:
@@ -294,7 +301,7 @@ Running the following insert adds a new `<value>` element after the first one:
     xxf:defaults="true"/>
 ```
 
-Because the action specifies `xxf:defaults="true"`, the first `value` element is unchanged, but thew new `<value>` element gets its dynamic initial value set:
+Because the action specifies `xxf:defaults="true"`, the first `value` element is unchanged, but the new `<value>` element gets its dynamic initial value set:
 
 ```xml
 <data>
