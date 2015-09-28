@@ -67,6 +67,16 @@ The repeat settings control whether to use a custom iteration name (not recommen
 
 ![Grid Settings](images/fb-repeated-grid-settings-repeat.png)
 
+[SINCE Orbeon Forms 4.11]
+
+The "Apply Initial Value Formulas when Adding Iterations" option specifies whether the "Initial Value" formulas for controls within the grid are evaluated for new iterations.
+
+With Orbeon Forms 4.11, the option is enabled by default for new forms and new repeated grids. The option is disabled by default for grids created with previous versions of Orbeon Forms.
+
+With the option enabled, new iterations can have dynamic initial values:
+
+![Initial Values](images/fb-iteration-initial-values.png)
+
 ## See also
 
 - Support for repeats lands in Form Builder: [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
