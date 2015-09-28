@@ -11,6 +11,7 @@
 - [[Events|XForms ~ Events]]
 - [[Model bind variables|XForms ~ Model bind variables]]
 - [[Online Resources|XForms ~ Online Resources]]
+- [[Repeat, Insert and Delete|XForms ~ Repeat, Insert and Delete]]
 - [[Validation|XForms ~ Validation]]
 - [[XBL|XForms ~ XBL]]
     - [[Bindings|XForms ~ XBL ~ Bindings]]
