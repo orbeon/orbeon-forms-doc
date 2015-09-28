@@ -65,7 +65,7 @@ The `index()` function should not be confused wit the `position()` function.
 
 _NOTE: XForms 1.1 does not explicitly limit in what type of XPath expressions `index()` can be used. However, in Orbeon Forms, it is strongly advised at the moment to only use `index()` within actions, and to avoid using it in control bindings and binds, as doing so may yield unpredictable results._
 
-## Deleting iterations with the <xf:delete> action
+## Deleting iterations with the delete action
 
 `<xf:repeat>` may be used purely for display purposes, but it can also be used for interactively editing repeated data. This includes allowing the user to delete and insert iterations. Two XForms actions are used for this purpose: `<xf:delete>` and `<xf:insert>`.
 
@@ -87,30 +87,30 @@ _NOTE: XForms 1.1 does not explicitly limit in what type of XPath expressions `i
 
 _NOTE: Prior to XForms 1.1, the `at` attribute was mandatory. Since XForms 1.1, it is optional, and if omitted the `ref` attribute specifies all the nodes to remove._
 
-## Inserting iterations with the <xf:insert> action
+## Inserting iterations with the insert action
 
 _See also the [Insert a new item into a repeat][1] how-to guide._
 
 `<xf:insert>` has a `ref` attribute pointing to the collection into which the insertion must take place. If no `origin` attribute is specified, `<xf:insert>` then considers the _last_ element of that collection (and all its content if any) as a _template_ for the new element to insert: it duplicates it and inserts it into the collection at a position you specify. In this case, the last element of a collection acts as a _template_ for insertions:
 
 ```xml
-<!-- This inserts a copy of the template before the last element of the collection -->
+<!-- Insert a copy of the template before the last element of the collection -->
 <xf:insert ref="employees" at="last()" position="before"/>
 
-<!-- This inserts a copy of the template after the last element of the collection -->
+<!-- Insert a copy of the template after the last element of the collection -->
 <xf:insert ref="employees" at="last()" position="after"/>
 
-<!-- This inserts a copy of the template before the first element of the collection -->
+<!-- Insert a copy of the template before the first element of the collection -->
 <xf:insert ref="employees" at="1" position="before"/>
 
-<!-- This inserts a copy of the template after the first element of the collection -->
+<!-- Insert a copy of the template after the first element of the collection -->
 <xf:insert ref="employees" at="1" position="after"/>
 <xf:insert ref="employees" at="last()" position="after"/>
 
-<!-- This inserts a copy of the template before the currently selected element of the collection -->
+<!-- Insert a copy of the template before the currently selected element of the collection -->
 <xf:insert ref="employees" at="index('employee-repeat')" position="before"/>
 
-<!-- This inserts a copy of the template after the currently selected element of the collection -->
+<!-- Insert a copy of the template after the currently selected element of the collection -->
 <xf:insert ref="employees" at="index('employee-repeat')" position="after"/>
 ```
 
@@ -125,7 +125,7 @@ As an extension to XForms 1.1, Orbeon Forms supports inserting an element into a
 
 This is particularly useful in conjunction with the `xxf:create-document()` function.
 
-## Using <xf:trigger> to execute actions
+## Using a trigger to execute actions
 
 Insertions and deletions are typically performed when the user of the application presses a button, with the effect of adding a new repeated element before or after the currently selected element, or of deleting the currently selected element. You use an `xf:trigger` control and the XPath `index()` function for that purpose:
 
