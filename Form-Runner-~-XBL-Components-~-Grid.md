@@ -40,11 +40,11 @@ _NOTE: In the future `bind` and `ref` should be supported._
 Repeated usage:
 
 ```xml
-<fr:grid 
-    id="note-grid" 
-    repeat="content" 
-    bind="note-bind" 
-    template="instance('note-template')" 
+<fr:grid
+    id="note-grid"
+    repeat="content"
+    bind="note-bind"
+    template="instance('note-template')"
     min="0">
     <xh:tr>
         <xh:td>
@@ -89,6 +89,10 @@ Attributes:
 - `readonly`
   - force the grid to be readonly when set to `true`
   - this cannot be an AVT
+- `apply-defaults`
+  - SINCE Orbeon Forms 4.11
+  - dynamic initial values (via the `xxf:default` MIP) apply to new iterations
+  - see also: [[Evaluation of initial values upon insert|XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert]]
 
 ## Data format
 
@@ -145,3 +149,4 @@ In either case, `fr:grid` contains the rows to repeat as `xh:tr`. Each `xh:tr` c
 
 - [[Form Builder ~ Repeated Grids |Form-Builder-~-Repeated-Grids]]
 - Example of use outside of Form Runner: [gist](https://gist.github.com/orbeon/5d592bfa4640569b116f)
+- [[Evaluation of initial values upon insert|XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert]]
