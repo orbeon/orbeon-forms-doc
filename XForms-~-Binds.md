@@ -195,8 +195,6 @@ See [[Evaluation of initial values upon insert|XForms-~-Actions-~-Repeat,-Insert
 
 ### Deferred rebuild, recalculate and revalidate
 
-[SINCE 2012-11-28]
-
 XForms provides actions to force a given model's rebuild, recalculate, revalidate. As XForms specifies it, these actions have an immediate effect.
 
 Orbeon Forms provides an extension on those actions to defer the behavior of those actions by just setting the appropriate flags defined in the XForms specification, but not actually running the actions immediately. The actions will run as needed the next time the flags are checked.
@@ -209,7 +207,7 @@ Orbeon Forms provides an extension on those actions to defer the behavior of tho
 
 ### Static appearance for read-only controls
 
-Sometimes, read-only controls don't appear very nicely in web browsers. For example, a combo box will appear grayed out. It maybe be hard to read, and there is not much point showing a combo box since the user can't interact with it. Furthermore, with some browsers, like IE 6 and earlier, it is not even possible to make disabled controls appear nicer with CSS. In order to make read-only versions of forms look nicer, Orbeon Forms supports a special extention attribute that allows you to produce a "static" appearance for read-only controls. You enable this on your first XForms model:
+Sometimes, read-only controls don't appear very nicely in web browsers. For example, a combo box will appear grayed out. It maybe be hard to read, and there is not much point showing a combo box since the user can't interact with it. Furthermore, with some browsers, like IE 6 and earlier, it is not even possible to make disabled controls appear nicer with CSS. In order to make read-only versions of forms look nicer, Orbeon Forms supports a special extension attribute that allows you to produce a "static" appearance for read-only controls. You enable this on your first XForms model:
 
 ```xml
 <xf:model xxf:readonly-appearance="static">
