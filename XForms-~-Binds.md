@@ -244,3 +244,4 @@ You often want to present a form without allowing the user to enter data. An eas
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
 - [[Evaluation of initial values upon insert|XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert]]
+- [[Grid component|Form Runner ~ XBL Components ~ Grid]]
