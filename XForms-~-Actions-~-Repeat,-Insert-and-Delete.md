@@ -254,7 +254,7 @@ _NOTE: This ability is also part of the XForms 2 specification._
 
 ## Recalculation of initial values
 
-Orbeon Forms supports the `xxf:default` extension attribute on `xf:bind` to specify [[dynamic initial values|https://github.com/orbeon/orbeon-forms/wiki/XForms-~-Binds#dynamic-initial-values]].
+Orbeon Forms supports the `xxf:default` extension attribute on `xf:bind` to specify [[dynamic initial values|XForms ~ Binds#dynamic-initial-values]].
 
 By default (no pun intended), `xxf:default` does not apply to the newly inserted nodes. But by setting the `xxf:defaults` attribute (note the plural "defaults") on `xf:insert` to `true`, this behavior can be changed, and any `xxf:default` pointing to a newly-inserted node is re-evaluated during the next recalculation. Consider the following example:
 
@@ -266,11 +266,11 @@ By default (no pun intended), `xxf:default` does not apply to the newly inserted
           <value/>
       </data>
     </xf:instance>
-    
+
     <xf:bind
         ref="instance()/value"
         xxf:default="count(//*)"/>
-        
+
 </xf:model>
 
 <xf:insert
@@ -296,5 +296,9 @@ After the insert, the first `value` element is unchanged, but thew new `value` e
     <value>3</value>
 </data>
 ```
+
+## See also
+
+- [[Dynamic initial values|XForms ~ Binds#dynamic-initial-values]]
 
 [1]: http://wiki.orbeon.com/forms/how-to/logic/repeat-insert-position
