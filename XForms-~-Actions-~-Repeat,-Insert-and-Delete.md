@@ -254,18 +254,23 @@ _NOTE: This ability is also part of the XForms 2 specification._
 
 ## Recalculation of initial values
 
-Orbeon Forms support an extension attribute on `xf:bind`, `xxf:default`, to specify [[dynamic initial values|https://github.com/orbeon/orbeon-forms/wiki/XForms-~-Binds#dynamic-initial-values]].
+Orbeon Forms supports the `xxf:default` extension attribute on `xf:bind` to specify [[dynamic initial values|https://github.com/orbeon/orbeon-forms/wiki/XForms-~-Binds#dynamic-initial-values]].
 
-By default, `xxf:default` does not apply to the newly inserted nodes. But by setting the `xxf:defaults` attribute on `xf:insert` to `true`, this behavior can be changed, and any `xxf:default` pointing to a newly-inserted node is re-evaluated during the next recalculation:
- 
+By default (no pun intended), `xxf:default` does not apply to the newly inserted nodes. But by setting the `xxf:defaults` attribute (note the plural "defaults") on `xf:insert` to `true`, this behavior can be changed, and any `xxf:default` pointing to a newly-inserted node is re-evaluated during the next recalculation. Consider the following example:
+
 ```xml
-<xf:model id="my-model">
-    <xf:instance id="my-instance">
+<xf:model>
+
+    <xf:instance>
       <data>
           <value/>
       </data>
     </xf:instance>
-    <xf:bind ref="value" xxf:default="count(//*)"/>
+    
+    <xf:bind
+        ref="instance()/value"
+        xxf:default="count(//*)"/>
+        
 </xf:model>
 
 <xf:insert
@@ -275,7 +280,7 @@ By default, `xxf:default` does not apply to the newly inserted nodes. But by set
     xxf:defaults="true"/>
 ```
 
-In the example above, the data looks like this before the insert:
+The data looks like this before the insert:
 
 ```xml
 <data>
@@ -283,7 +288,7 @@ In the example above, the data looks like this before the insert:
 </data>
 ```
 
-And after the insert:
+After the insert, the first `value` element is unchanged, but thew new `value` element gets its dynamic initial value set:
 
 ```xml
 <data>
