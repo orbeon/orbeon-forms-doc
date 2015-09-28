@@ -256,7 +256,9 @@ _NOTE: This ability is also part of the XForms 2 specification._
 
 Orbeon Forms supports the `xxf:default` extension attribute on `xf:bind` to specify [[dynamic initial values|XForms ~ Binds#dynamic-initial-values]].
 
-By default (no pun intended), `xxf:default` does not apply to the newly inserted nodes. But by setting the `xxf:defaults` attribute (note the plural "defaults") on `xf:insert` to `true`, this behavior can be changed, and any `xxf:default` pointing to a newly-inserted node is re-evaluated during the next recalculation. Consider the following example:
+By default (no pun intended), `xxf:default` does not apply to the newly inserted nodes. But by setting the `xxf:defaults` attribute (note the plural "defaults") on `xf:insert` to `true`, this behavior can be changed, and any `xxf:default` pointing to a newly-inserted node is re-evaluated during the next recalculation.
+
+Consider the following examplem where the `xf:bind` points to any `<value>` element child of the root element, and sets a dynamic initial value:
 
 ```xml
 <xf:model>
@@ -272,15 +274,9 @@ By default (no pun intended), `xxf:default` does not apply to the newly inserted
         xxf:default="count(//*)"/>
 
 </xf:model>
-
-<xf:insert
-    ref="instance()/value"
-    position="after"
-    origin="xf:element('value')"
-    xxf:defaults="true"/>
 ```
 
-The data looks like this before the insert:
+The data looks like this after initialization:
 
 ```xml
 <data>
@@ -288,7 +284,17 @@ The data looks like this before the insert:
 </data>
 ```
 
-After the insert, the first `value` element is unchanged, but thew new `value` element gets its dynamic initial value set:
+Running the following insert adds a new `<value>` element after the first one:
+
+```
+<xf:insert
+    ref="instance()/value"
+    position="after"
+    origin="xf:element('value')"
+    xxf:defaults="true"/>
+```
+
+Because the action specifies `xxf:defaults="true"`, the first `value` element is unchanged, but thew new `<value>` element gets its dynamic initial value set:
 
 ```xml
 <data>
