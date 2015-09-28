@@ -252,4 +252,44 @@ In this case, the context item within the repeat is a number, not a node.
 
 _NOTE: This ability is also part of the XForms 2 specification._
 
+## Recalculation of initial values
+
+Orbeon Forms support an extension attribute on `xf:bind`, `xxf:default`, to specify [[dynamic initial values|https://github.com/orbeon/orbeon-forms/wiki/XForms-~-Binds#dynamic-initial-values]].
+
+By default, `xxf:default` does not apply to the newly inserted nodes. But by setting the `xxf:defaults` attribute on `xf:insert` to `true`, this behavior can be changed, and any `xxf:default` pointing to a newly-inserted node is re-evaluated during the next recalculation:
+ 
+```xml
+<xf:model id="my-model">
+    <xf:instance id="my-instance">
+      <data>
+          <value/>
+      </data>
+    </xf:instance>
+    <xf:bind ref="value" xxf:default="count(//*)"/>
+</xf:model>
+
+<xf:insert
+    ref="instance()/value"
+    position="after"
+    origin="xf:element('value')"
+    xxf:defaults="true"/>
+```
+
+In the example above, the data looks like this before the insert:
+
+```xml
+<data>
+    <value>2</value>
+</data>
+```
+
+And after the insert:
+
+```xml
+<data>
+    <value>2</value>
+    <value>3</value>
+</data>
+```
+
 [1]: http://wiki.orbeon.com/forms/how-to/logic/repeat-insert-position
