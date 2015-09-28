@@ -286,7 +286,7 @@ The data looks like this after initialization:
 
 Running the following insert adds a new `<value>` element after the first one:
 
-```
+```xml
 <xf:insert
     ref="instance()/value"
     position="after"
