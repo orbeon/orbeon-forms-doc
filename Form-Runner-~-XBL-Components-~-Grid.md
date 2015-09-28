@@ -90,7 +90,9 @@ Attributes:
   - force the grid to be readonly when set to `true`
   - this cannot be an AVT
 - `apply-defaults` [SINCE Orbeon Forms 4.11]
-  - dynamic initial values (via the `xxf:default` MIP) apply to new iterations
+  - `true`: dynamic initial values (via the `xxf:default` MIP) apply to new iterations
+  - missing or `false: dynamic initial values do not apply to new iterations
+  - can be an AVT
   - see also: [[Evaluation of initial values upon insert|XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert]]
 
 ## Data format
