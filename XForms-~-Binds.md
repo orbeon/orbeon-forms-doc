@@ -177,8 +177,6 @@ For convenience, Orbeon Forms support an extension model item property: `xxf:def
 
 #### Forcing recalculation of initial values with the recalculate action
 
-[SINCE 2010-05-28]
-
 The `<xf:recalculate>` supports an extension attribute, `xxf:defaults`, which, when set to `true`, forces the re-evaluation of initial values before performing the recalculation.
 
 ```xml
@@ -190,6 +188,10 @@ The `xxf:defaults` attribute is an AVT so can include XPath expressions between 
 ```xml
 <xf:recalculate xxf:defaults="{instance()/status = 'dirty'}"/>
 ```
+
+#### Evaluation of initial values upon insert
+
+See [[Evaluation of initial values upon insert|XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert]].
 
 ### Deferred rebuild, recalculate and revalidate
 
