@@ -214,6 +214,20 @@ Explanation:
     - so you get a sequence containing only the current value of the field
     - we take the first value of that sequence, so we get the current value of the control
 
+## Constraint the number of selected checkboxes
+
+Scenario: For a given set of checkboxes, make sure the number of selected checkboxes is at most 3.
+
+```ruby
+count(xxf:split(.)) le 3
+```
+
+Explanation:
+
+- `xxf:split(.)` tokenizes the space-separated values selected by the checkbox
+- the number of tokens obtained with `count()` corresponds to the number of selected checkboxes
+- then this makes sure the number of tokens is lower than or equal to 3
+
 ## See also
 
 - [[Formulas|Form Builder ~ Formulas]]
