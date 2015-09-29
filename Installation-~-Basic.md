@@ -27,6 +27,12 @@ Configure the Java VM with:
 * ` -XX:MaxPermSize` for "permgen" space:
     * use at least: `-XX:MaxPermSize=256m`
 
+## Database setup
+
+Out-of-the-box, forms you create with Form Builder, as well as data captured with those forms, will be saved in an embedded database called eXist. You can setup Orbeon Forms so this data gets [stored in your relational database](Installation-~-Relational-Database-Setup), but if you're getting started with Orbeon Forms, you might to just use the embedded eXist, even if just temporarily.
+
+Note that eXist will need to be able to write to the `WEB-INF/exist-data` directory, wherever Orbeon Forms `.war` file is uncompressed. So, especially if you're on UNIX, make sure that this directory is writable by the process running your app server.
+
 ## License installation (Orbeon Forms PE only)
 
 * If you are running Orbeon Forms CE, you don't need to install a license file.
