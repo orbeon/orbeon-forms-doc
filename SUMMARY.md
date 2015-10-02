@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Installation](install/README.md)
-    * [App server / container](install/server/README.md)
+    * App server / container
         * [Tomcat](install/server/tomcat.md)
         * [JBoss](install/server/jboss.md)
         * [WebSphere](install/server/websphere.md)
