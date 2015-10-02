@@ -25,8 +25,8 @@
     * [Licensing](faq/licensing.md)
     * [Orbeon Forms PE and Dev Support](faq/pe-dev-support.md)
     * [Form Builder and Form Runner](faq/form-builder-runner.md)
-    * [](faq/resources-support.md)
-    * [](faq/.md)
+    * [Resources and support](faq/resources-support.md)
+    * [Other technical questions](faq/other-technical.md)
 * Form Builder
    * [Introduction](Form-Builder-Introduction.md)
        * [Sun-intro](fb/sub-intro.md)
