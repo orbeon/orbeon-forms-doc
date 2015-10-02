@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Installation](install/README.md)
-   * [App server / container](install/server/README.md)
+   * [App server / container](install/server.md)
       * [Tomcat](install/server/tomcat.md)
 * Form Builder
    * [Introduction](Form-Builder-Introduction.md)
