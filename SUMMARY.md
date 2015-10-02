@@ -20,6 +20,13 @@
         * [Run Modes](install/advanced/run-modes.md)
         * [Environments](install/advanced/environments.md)
         * [Configuring a Form Runner eXist database](install/advanced/exist-db.md)
+* FAQ
+    * [General](faq/general.md)
+    * [Licensing](faq/licensing.md)
+    * [Orbeon Forms PE and Dev Support](faq/pe-dev-support.md)
+    * [Form Builder and Form Runner](faq/form-builder-runner.md)
+    * [](faq/resources-support.md)
+    * [](faq/.md)
 * Form Builder
    * [Introduction](Form-Builder-Introduction.md)
        * [Sun-intro](fb/sub-intro.md)
