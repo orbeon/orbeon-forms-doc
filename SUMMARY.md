@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [Installation](chapter1.md)
-* Form Builder
+* [Form Builder](form_builder.md)
 
