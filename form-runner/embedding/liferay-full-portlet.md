@@ -1,10 +1,6 @@
+# Form Runner Liferay Full Portlet
+
 <!-- toc -->
-
-## See also
-
-- [[Form Runner Embedding|Form-Runner-~-Embedding]]
-- [[Form Runner Liferay Proxy Portlet Guide|Form-Runner-~-Portal-~-Liferay-Proxy-Portlet-Guide]]
-- [[Server-side Embedding API|Form Runner ~ APIs ~ Server side Embedding]]
 
 Please make sure to check the [[Form Runner Liferay Proxy Portlet Guide|Form-Runner-~-Portal-~-Liferay-Proxy-Portlet-Guide]]
 as well, as that is the recommended way to deploy Orbeon Forms into Liferay, and [[Form Runner Embedding|Form-Runner-~-Embedding]]
