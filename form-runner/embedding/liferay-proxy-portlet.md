@@ -2,12 +2,6 @@
 
 <!-- toc -->
 
-## See also
-
-- [[Form Runner Embedding|Form-Runner-~-Embedding]]
-- [[Server-side Embedding API|Form Runner ~ APIs ~ Server side Embedding]]
-- [[Full Portlet Guide|Form-Runner-~-Portal-~-Full-Portlet-Guide]]
-
 ### Availability
 
 This is an Orbeon Forms PE feature, available since Orbeon Forms 4.0.
