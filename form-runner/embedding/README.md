@@ -1,8 +1,8 @@
+# Embedding Orbeon Forms 
+
 <!-- toc -->
 
-## Embedding Orbeon Forms 
-
-"Embedding" refers to a deployment option where Orbeon Forms pages or forms appear *embedded* or *nested* within another application's page. This is in contrast to the default deployment setup where Orbeon Forms produces entire web pages, and you would, from your application [link to those pages produced by Orbeon Forms]().
+"Embedding" refers to a deployment option where Orbeon Forms pages or forms appear *embedded* or *nested* within another application's page. This is in contrast to the default deployment setup where Orbeon Forms produces entire web pages, and link to those page from your application.
 
 Orbeon Forms supports several embedding methods:
 
