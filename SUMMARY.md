@@ -31,4 +31,7 @@
 * Form Builder
     * [Introduction](Form-Builder-Introduction.md)
         * [Sun-intro](fb/sub-intro.md)
-    * []
+    * [Lifecycle of a form](form-builder/lifecycle-of-a-form.md)
+    * [HTTP Services](form-builder/http-services.md)
+    * Formulas
+        * [Examples](form-builder/formulas/examples.md)
