@@ -6,9 +6,9 @@
 
 Orbeon Forms supports several embedding methods:
 
-- with the [[Server-side embedding API|Form Runner ~ APIs ~ Server side Embedding]] [Since Orbeon Forms 4.7]
-- with the [[Form Runner proxy portlet|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
-- with the [[Form Runner full portlet|Form Runner ~ Portal ~ Full Portlet Guide]]
+- with the [Form Runner server-side Java embedding API](java-api.md)
+- with the [Form Runner proxy portlet](liferay-proxy-portlet.md)
+- with the [Form Runner full portlet](liferay-full-portlet.md)
 
 ## Portals
 
