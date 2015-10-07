@@ -20,7 +20,7 @@ This is an Orbeon Forms PE feature, available since Orbeon Forms 4.0.
 
 The Orbeon Forms WAR can be directly deployed into the Liferay portal. By default, the Form Runner demo forms and XForms examples are immediately available within the portlet:
 
-![Orbeon Forms welcome page in Liferay](images/fr-liferay-full-home.png)
+![Orbeon Forms welcome page in Liferay](liferay-full-home.png)
 
 The following steps assume that:
 
@@ -66,15 +66,15 @@ Installation steps:
 
 4. __Add the Orbeon Forms portlet:__ Log into the portal, go to the Add menu and create a new page, for example _Orbeon Page_:
 
-    ![](images/fr-liferay-add-page.png)
+    ![](liferay-add-page.png)
 
     Go to the Add menu again and select _More…_:
 
-    ![](images/fr-liferay-add-more.png)
+    ![](liferay-add-more.png)
 
     Select the _Orbeon Forms Portlet_ entry:
 
-    ![](images/fr-liferay-applications.png)
+    ![](liferay-applications.png)
 
     Drag the portlet to the page. The Orbeon Forms home page will show.
 
