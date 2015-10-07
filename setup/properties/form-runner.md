@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[Form Runner|Form Runner]] ▸ Configuration Properties
+<!-- toc -->
 
 ## Configuration properties
 
