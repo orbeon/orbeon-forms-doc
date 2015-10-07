@@ -1,9 +1,6 @@
+# Form Runner Java Embedding API
+
 <!-- toc -->
-
-## See also
-
-- [[Form Runner Embedding|Form-Runner-~-Embedding]]
-- [[Liferay proxy portlet guide|Form Runner ~ Portal ~ Liferay Proxy Portlet Guide]]
 
 ## Availability
 
