@@ -2,23 +2,27 @@
 
 <!-- toc -->
 
-## xxf:get-request-path()
+## xxf:get-session-attribute()
 
 ```ruby
-xxf:get-request-path() as xs:string
+xxf:get-session-attribute(
+    $name         as xs:string,
+    $content-type as xs:string?
+) as item()?
 ```
 
-The `xxf:get-request-path()` function returns the path of the incoming HTTP request (without the Java servlet context if any).
+The `xxf:get-session-attribute()` function returns the value of the given session attribute.
+
+The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-session-attribute()`.
+
+If present, the second parameter can specify the 'text/plain' content type. In that case, if a String object is retrieved, it is return as an xs:string instead of being parsed as XML.
 
 ```xml
-<xf:setvalue
-  ref="request-path"
-  value="xxf:get-request-path()"/>
+<!-- Get the "document" attribute and use it to replace instance "my-instance" -->
+<xf:insert
+  ref="instance('my-instance')"
+  origin="xxf:get-session-attribute('document')"/>
 ```
-
-This function can be used even after page initialization, and can be used everywhere other XPath functions are supported.
-
-_NOTE: With Orbeon Forms 3.8 and 3.9, this function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
 
 ## xxf:get-request-header()
 
@@ -68,6 +72,25 @@ _NOTE: By default, most if not all servlet containers do not use the UTF-8 encod
 * [http://www.mail-archive.com/users@tomcat.apache.org/msg48593.html](http://www.mail-archive.com/users@tomcat.apache.org/msg48593.html)
 * [http://tomcat.apache.org/tomcat-6.0-doc/config/http.html](http://tomcat.apache.org/tomcat-6.0-doc/config/http.html)
 
+
+## xxf:get-request-path()
+
+```ruby
+xxf:get-request-path() as xs:string
+```
+
+The `xxf:get-request-path()` function returns the path of the incoming HTTP request (without the Java servlet context if any).
+
+```xml
+<xf:setvalue
+  ref="request-path"
+  value="xxf:get-request-path()"/>
+```
+
+This function can be used even after page initialization, and can be used everywhere other XPath functions are supported.
+
+_NOTE: With Orbeon Forms 3.8 and 3.9, this function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
+
 ## xxf:get-request-attribute()
 
 ```ruby
@@ -92,27 +115,6 @@ If present, the second parameter can specify the 'text/plain' content type. In t
 
 _NOTE: This function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
 
-## xxf:get-session-attribute()
-
-```ruby
-xxf:get-session-attribute(
-    $name         as xs:string,
-    $content-type as xs:string?
-) as item()?
-```
-
-The `xxf:get-session-attribute()` function returns the value of the given session attribute.
-
-The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-session-attribute()`.
-
-If present, the second parameter can specify the 'text/plain' content type. In that case, if a String object is retrieved, it is return as an xs:string instead of being parsed as XML.
-
-```xml
-<!-- Get the "document" attribute and use it to replace instance "my-instance" -->
-<xf:insert
-  ref="instance('my-instance')"
-  origin="xxf:get-session-attribute('document')"/>
-```
 
 ## xxf:set-request-attribute()
 
