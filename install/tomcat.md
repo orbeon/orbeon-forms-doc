@@ -1,5 +1,3 @@
-> [[Home]] ▸ [[Installation]]
-
 ## Versions
 
 We recommend using a current version of Tomcat. As of Orbeon Forms 4.6, those are:
