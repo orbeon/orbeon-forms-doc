@@ -1,4 +1,6 @@
-> [[Home]] ▸ [[FAQ|FAQ]]
+# FAQ - Form Builder and Form Runner
+
+<!-- toc -->
 
 ## General questions
 
