@@ -1,4 +1,4 @@
-# Core functions
+# Deprecated functions
 
 <!-- toc -->
 
