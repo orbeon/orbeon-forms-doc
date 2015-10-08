@@ -46,6 +46,7 @@
        * Access Form Data
        * Architecture
        * Integration
+       * Terminology
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
