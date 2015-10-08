@@ -123,108 +123,6 @@ The `xxf:index()` function behaves like the standard XForms `index()` function, 
 </xf:repeat>
 ```
 
-## xxf:pending-uploads()
-
-```ruby
-xxf:pending-uploads() as xs:integer
-```
-
-The xxf:pending-uploads() function returns the number of known pending uploads in the page.
-
-If there is no pending upload, the function returns 0.
-
-A pending upload is an upload started but not completed yet.
-
-_NOTE: The XForms engine is informed of uploads start and completion in an asynchronous way. This function only indicates the best knowledge the server has of the status of uploads at any given time._
-
-See also: [Upload control][?]
-
-## xxf:repeat-current()
-
-_NOTE: You can often use [`xxf:context()`][2] or the XForms 1.1 `context()` function instead._
-
-```ruby
-xxf:repeat-current(
-    $repeat-id as xs:string?
-) as node()
-```
-
-The `xxf:repeat-current()` function allows you to obtain a reference to an enclosing `xf:repeat`'s current iteration node. It takes one optional string parameter. If present, the id of the enclosing `xf:repeat` is searched. If absent, the function looks for the closest enclosing `xf:repeat`.
-
-```xml
-<xf:repeat ref="employee" id="employee-repeat">
-    <tr>
-        <td>
-            <!-- The context is being set to another instance that controls the
-                 visibility of the group. -->
-            <xf:group ref="instance('control-instance')/input">
-                <!-- Using xxf:repeat-current() allows reclaiming the context of
-                     the repeat iteration. -->
-                <xf:input ref="xxf:repeat-current('employee-repeat')/name">
-                    <xf:label>Employee Name</xf:label>
-                </xf:input>
-            </xf:group>
-        </td>
-    </tr>
-</xf:repeat>
-```
-
-The `xxf:repeat-current()` function must be called from within an `xf:repeat` element.
-## xxf:repeat-items()
-
-[SINCE: Orbeon Forms 4.5]
-
-_NOTE: This function is also available in previous versions of Orbeon Forms as xxf:repeat-nodeset()._
-
-```ruby
-xxf:repeat-nodeset(
-    $repeat-id as xs:string?
-) as node()*
-```
-
-The `xxf:repeat-nodeset()` function returns the node-set of an enclosing `xf:repeat`. It takes a string parameter containing the id of an enclosing repeat XForms control. When the argument is omitted, the function returns the index of the closest enclosing `<xf:repeat>` element. This function must always be used within `<xf:repeat>` otherwise an error is raised.
-
-```xml
-<xf:repeat id="employee-repeat" ref="employee">
-    <xh:div>
-        <xf:output value="count(xxf:repeat-nodeset('employee-repeat'))"/>
-    </xh:div>
-</xf:repeat>
-```
-
-## xxf:repeat-position()
-
-```ruby
-xxf:repeat-position(
-    $repeat-id as xs:string?
-) as xs:integer
-```
-
-The `xxf:repeat-position()` function returns an enclosing `xf:repeat`'s current iteration position. It takes one optional string parameter. If present, the id of the enclosing `xf:repeat` is searched. If absent, the function looks for the closest enclosing `xf:repeat`.
-
-```xml
-<xf:repeat ref="employee" id="employee-repeat">
-    <div>
-        <xf:output value="xxf:repeat-position()"/>
-    </div>
-</xf:repeat>
-```
-
-The `xxf:repeat-current()` function must be called from within an `xf:repeat` element.
-
-
-## xxf:value()
-
-```ruby
-xxf:value(
-    $control-id as xs:string
-) as xs:string?
-```
-
-The `xxf:value`() function returns a control's value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
-
-_NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
-
 ## xxf:itemset()
 
 ```ruby
@@ -434,6 +332,108 @@ Example of JSON result with `xxf:itemset('my-select1', 'json', true())` (formatt
    ]
 ]
 ```
+
+## xxf:pending-uploads()
+
+```ruby
+xxf:pending-uploads() as xs:integer
+```
+
+The xxf:pending-uploads() function returns the number of known pending uploads in the page.
+
+If there is no pending upload, the function returns 0.
+
+A pending upload is an upload started but not completed yet.
+
+_NOTE: The XForms engine is informed of uploads start and completion in an asynchronous way. This function only indicates the best knowledge the server has of the status of uploads at any given time._
+
+See also: [Upload control][?]
+
+## xxf:repeat-current()
+
+_NOTE: You can often use [`xxf:context()`][2] or the XForms 1.1 `context()` function instead._
+
+```ruby
+xxf:repeat-current(
+    $repeat-id as xs:string?
+) as node()
+```
+
+The `xxf:repeat-current()` function allows you to obtain a reference to an enclosing `xf:repeat`'s current iteration node. It takes one optional string parameter. If present, the id of the enclosing `xf:repeat` is searched. If absent, the function looks for the closest enclosing `xf:repeat`.
+
+```xml
+<xf:repeat ref="employee" id="employee-repeat">
+    <tr>
+        <td>
+            <!-- The context is being set to another instance that controls the
+                 visibility of the group. -->
+            <xf:group ref="instance('control-instance')/input">
+                <!-- Using xxf:repeat-current() allows reclaiming the context of
+                     the repeat iteration. -->
+                <xf:input ref="xxf:repeat-current('employee-repeat')/name">
+                    <xf:label>Employee Name</xf:label>
+                </xf:input>
+            </xf:group>
+        </td>
+    </tr>
+</xf:repeat>
+```
+
+The `xxf:repeat-current()` function must be called from within an `xf:repeat` element.
+## xxf:repeat-items()
+
+[SINCE: Orbeon Forms 4.5]
+
+_NOTE: This function is also available in previous versions of Orbeon Forms as xxf:repeat-nodeset()._
+
+```ruby
+xxf:repeat-nodeset(
+    $repeat-id as xs:string?
+) as node()*
+```
+
+The `xxf:repeat-nodeset()` function returns the node-set of an enclosing `xf:repeat`. It takes a string parameter containing the id of an enclosing repeat XForms control. When the argument is omitted, the function returns the index of the closest enclosing `<xf:repeat>` element. This function must always be used within `<xf:repeat>` otherwise an error is raised.
+
+```xml
+<xf:repeat id="employee-repeat" ref="employee">
+    <xh:div>
+        <xf:output value="count(xxf:repeat-nodeset('employee-repeat'))"/>
+    </xh:div>
+</xf:repeat>
+```
+
+## xxf:repeat-position()
+
+```ruby
+xxf:repeat-position(
+    $repeat-id as xs:string?
+) as xs:integer
+```
+
+The `xxf:repeat-position()` function returns an enclosing `xf:repeat`'s current iteration position. It takes one optional string parameter. If present, the id of the enclosing `xf:repeat` is searched. If absent, the function looks for the closest enclosing `xf:repeat`.
+
+```xml
+<xf:repeat ref="employee" id="employee-repeat">
+    <div>
+        <xf:output value="xxf:repeat-position()"/>
+    </div>
+</xf:repeat>
+```
+
+The `xxf:repeat-current()` function must be called from within an `xf:repeat` element.
+
+
+## xxf:value()
+
+```ruby
+xxf:value(
+    $control-id as xs:string
+) as xs:string?
+```
+
+The `xxf:value`() function returns a control's value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
+
+_NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
 
 ## xxf:label, xxf:help, xxf:hint, xxf:alert
 
