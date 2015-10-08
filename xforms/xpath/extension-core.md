@@ -146,3 +146,84 @@ xxf:event(
 ```
 
 `xxf:event()` works like the XForms 1.1 `event()` function, except that when using XBL components, `xxf:event()` returns event information from the original event instead of the retargeted event.
+
+## xxf:property()
+
+```
+xxf:property($property-name as xs:string) as xs:anyAtomicType?
+```
+
+The `xxf:property()` function retrieves the value of a property defined in `properties-local.xml`.
+
+This function returns the following:
+
+- empty sequence if the property is not found
+- `xs:string`, `xs:integer`, `xs:boolean` or `xs:anyURI` depending on the actual type of the property
+
+```xml
+<xf:setvalue ref="my-property" value="xxf:property('my.property.name')"/>
+```
+
+## xxf:r()
+
+The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources.
+
+```ruby
+xxf:r($resource-name as xs:string) as xs:string
+xxf:r($resource-name as xs:string, $instance-name as xs:string) as xs:string
+```
+
+- `$resource-name`: resource path of the form `foo.bar.baz`. The path is relative to the `resource` element corresponding to the current language in the resources instance.
+- `$instance-name`: name of the resources instance. If omitted, search `orbeon-resources` and then `fr-form-resources`.
+
+The function:
+
+- determines the current language based on `xml:lang`attribute in scope where the function is in used
+-  resolves the closest relevant resources instance
+  - specified instance name if present
+  - `orbeon-resources` or `fr-form-resources` (for Form Runner compatibility) if absent
+- uses the resource name specified to find a resource located in the resources instance, relative to the `resource` element with the matching language
+
+Example:
+
+```xml
+<xf:instance id="orbeon-resources" xxf:readonly="true">
+    <resources>
+        <resource xml:lang="en"><buttons><download>Download</download></buttons></resource>
+        <resource xml:lang="fr"><buttons><download>Télécharger</download></buttons></resource>
+    </resources>
+</xf:instance>
+
+<xf:label value="xxf:r('buttons.download')"/>
+```
+
+## xxf:rewrite-resource-uri()
+
+```ruby
+xxf:rewrite-resource-uri($uri as xs:string) as xs:string
+```
+
+Rewrite a URI as an Orbeon Forms resource URI.
+
+## xxf:split()
+
+[SINCE Orbeon Forms 4.3]
+
+```ruby
+xxf:split() as xs:string*
+xxf:split($value as xs:string) as xs:string*
+xxf:split($value as xs:string, $separators as xs:string) as xs:string*
+```
+
+Split a string with one or more separator characters.
+
+If no argument is passed, split the context item on white space.
+
+If `$separator` is specified, each character is allowed as separator.
+
+```ruby
+xxf:split(' foo  bar   baz ')
+xxf:split('foo$bar_baz', '$_')
+element/xxf:split()
+element/@value/xxf:split()
+```
