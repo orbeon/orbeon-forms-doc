@@ -1,5 +1,23 @@
 # XML functions
 
+## xxf:classes()
+
+```ruby
+xxf:classes() as xs:boolean
+xxf:classes($el as node()) as xs:string*
+```
+
+Returns for the context element or the given element if provided, all the classes on the `class` attribute.
+
+## xxf:has-class()
+
+```ruby
+xxf:has-class($class-name as xs:string) as xs:boolean
+xxf:has-class($class-name as xs:string, $el as node()) as xs:boolean
+```
+
+Returns whether the context element, or the given element, has a `class` attribute containing the specified class name.
+
 ## xxf:evaluate()
 
 ```ruby
@@ -33,7 +51,7 @@ The `xxf:serialize()` function allows you to serialize an XML node to XML, HTML,
 
 ## xf:element() / xxf:element()
 
-_NOTE: Rhis function is also allowed in the XForms namespace, as it is being standardized in XForms 2.0. Prior to this date, it must be in the Orbeon `xxf` extension namespace._
+_NOTE: This function is also allowed in the XForms namespace, as it is being standardized in XForms 2.0. Prior to this date, it must be in the Orbeon `xxf` extension namespace._
 
 ```ruby
 xf:element(
