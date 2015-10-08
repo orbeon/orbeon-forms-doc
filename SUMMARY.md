@@ -42,6 +42,7 @@
        * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
+   * Styling
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
