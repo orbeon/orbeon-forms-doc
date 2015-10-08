@@ -21,8 +21,8 @@
 ### String functions
 
 * `if()`
-    * use the native XPath 2.0 `if (...) then ... else ...` construct when possible
     * available as `xf:if()`
+    * _NOTE: Prefer the native XPath 2.0 `if (...) then ... else ...` construct._
 * `property()`
     * This function supports extension property names in the `http://orbeon.org/oxf/xml/xforms` namespace (usually mapped to the `xxf` prefix). Any such property name will return the value of an XForms engine property. Example:
 
@@ -60,7 +60,7 @@ _NOTE: Prefer the XPath 2.0 date and time functions when possible._
 ### Object functions
 
 * `choose()`
-    * use the native XPath 2.0 `if (...) then ... else ...` construct when possible
+    * _NOTE: Prefer the native XPath 2.0 `if (...) then ... else ...` construct._
 * `event()`
 
 ### Functions not yet implemented
