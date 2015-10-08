@@ -22,13 +22,13 @@
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
 * Form Runner
-    * Persistence
-        * [Using a relational database](form-runner/persistence/relational-db.md)
-    * [Embedding](form-runner/embedding/README.md)
+   * Persistence
+       * [Using a relational database](form-runner/persistence/relational-db.md)
+   * [Embedding](form-runner/embedding/README.md)
        * [Java API](form-runner/embedding/java-api.md)
        * [Liferay full portlet](form-runner/embedding/liferay-full-portlet.md)
        * [Liferay proxy portlet](form-runner/embedding/liferay-proxy-portlet.md)
-   * Advanced
+           * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
 * XForms
    * XPath function library
@@ -43,16 +43,17 @@
            * [Other functions](xforms/xpath/extension-other.md)
            * [Deprecated functions](xforms/xpath/deprecated-functions.md)
 * Setup
-    * [Properties](setup/properties/README.md)
+   * [Properties](setup/properties/README.md)
        * [General](setup/properties/general.md)
        * [Persistence](setup/properties/persistence.md)
        * [Form Runner](setup/properties/form-runner.md)
        * [Form Builder](setup/properties/form-builder.md)
        * [XForms](setup/properties/xforms.md)
-   * Advanced
+           * Advanced
        * [Creating a production WAR](setup/advanced/production-war.md)
        * [Upgrading from older versions](setup/advanced/upgrading.md)
        * [Limiter Filter](setup/advanced/limiter-filter.md)
        * [Run Modes](setup/advanced/run-modes.md)
        * [Environments](setup/advanced/environments.md)
        * [Configuring a Form Runner eXist database](setup/advanced/exist-db.md)
+
