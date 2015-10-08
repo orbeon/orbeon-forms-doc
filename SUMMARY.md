@@ -14,7 +14,7 @@
    * [Form Builder and Form Runner](faq/form-builder-runner.md)
    * [Resources and support](faq/resources-support.md)
    * [Other technical questions](faq/other-technical.md)
-* Form Builder
+* [Form Builder](form-builder/README.md)
    * [Introduction](Form-Builder-Introduction.md)
        * [Sun-intro](fb/sub-intro.md)
    * [Lifecycle of a form](form-builder/lifecycle-of-a-form.md)
