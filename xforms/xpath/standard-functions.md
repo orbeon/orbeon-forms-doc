@@ -21,6 +21,7 @@
 ### String functions
 
 * `if()`
+    * use the native XPath 2.0 `if (...) then ... else ...` construct when possible
     * available as `xf:if()`
     * using a plain `if()` triggers the native XPath 2.0 `if (...) then ... else ...` construct
 * `property()`
