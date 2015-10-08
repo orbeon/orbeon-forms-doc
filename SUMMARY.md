@@ -59,4 +59,5 @@
 * [Index of Features](features.md)
 * Release History
 * Product Roadmap
+* Use Cases
 
