@@ -42,3 +42,15 @@
         * [Liferay proxy portlet](form-runner/embedding/liferay-proxy-portlet.md)
     * Advanced
         * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
+* XForms
+    * XPath function library
+        * [Standard functions](xforms/xpath/standard-functions.md)
+        * Extension functions
+            * [Core functions](xforms/xpath/extension-core.md)
+            * [Model functions](xforms/xpath/extension-model.md)
+            * [Validation functions](xforms/xpath/extension-validation.md)
+            * [Controls functions](xforms/xpath/extension-controls.md)
+            * [XML functions](xforms/xpath/extension-xml.md)
+            * [HTTP functions](xforms/xpath/extension-http.md)
+            * [Other functions](xforms/xpath/extension-other.md)
+            
