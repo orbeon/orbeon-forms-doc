@@ -45,7 +45,7 @@
        * [Form Fields](form-runner/access-control/form-fields.md)
        * [Editing Forms](form-runner/access-control/editing-forms.md)
        * [Owner Group](form-runner/access-control/owner-group.md)
-       * Setup
+       * [Setup](form-runner/access-control/setup.md)
    * Styling
        * [CSS](form-runner/styling/css.md)
        * [Automatic PDF](form-runner/styling/automatic-pdf.md)
