@@ -33,6 +33,7 @@
    * Features
        * Home Page
        * Responsive Design
+       * Supported Languages
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
