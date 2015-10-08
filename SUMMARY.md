@@ -35,6 +35,7 @@
        * Responsive Design
        * Supported Languages
        * TIFF Production
+       * Wizard View
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
