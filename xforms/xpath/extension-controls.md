@@ -19,6 +19,38 @@ The `xxf:binding()` function returns a control's binding, that is the node or no
 
 _NOTE: This function can return not only nodes, but also atomic items._
 
+## xxf:case()
+
+```ruby
+xxf:case(
+    $switch-id as xs:string
+) as xs:string?
+```
+
+The `xxf:case()` function returns the id of the currently selected `<xf:case>` within the given `<xf:switch>`. It is recommended to use this function from XForms actions only.
+
+```xml
+<xf:switch id="my-switch">
+    <xf:case id="my-case-1">...</xf:case>
+    <xf:case id="my-case-2">...</xf:case>
+</xf:switch>
+...
+<xf:trigger>
+    <xf:label>Add One</xf:label>
+    <xf:setvalue if="xxf:case('my-switch')" ref="foobar" value="12"/>
+</xf:trigger>
+```
+
+## xxf:cases()
+
+```ruby
+xxf:cases(
+    $switch-id as xs:string
+) as xs:string*
+```
+
+The `xxf:cases()` function returns a sequence of ids of `<xf:case>` elements within the given `<xf:switch>`. It is recommended to use this function from XForms actions only.
+
 ## xxf:client-id()
 
 [SINCE Orbeon Forms 4.3]
@@ -67,18 +99,6 @@ See also the XForms 1.1 `context()` function, which returns the current evaluati
 </xf:group>
 ```
 
-## xxf:value()
-
-```ruby
-xxf:value(
-    $control-id as xs:string
-) as xs:string?
-```
-
-The `xxf:value`() function returns a control's value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
-
-_NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
-
 ## xxf:index()
 
 ```ruby
@@ -103,59 +123,21 @@ The `xxf:index()` function behaves like the standard XForms `index()` function, 
 </xf:repeat>
 ```
 
-## xxf:case()
+## xxf:pending-uploads()
 
 ```ruby
-xxf:case(
-    $switch-id as xs:string
-) as xs:string?
+xxf:pending-uploads() as xs:integer
 ```
 
-The `xxf:case()` function returns the id of the currently selected `<xf:case>` within the given `<xf:switch>`. It is recommended to use this function from XForms actions only.
+The xxf:pending-uploads() function returns the number of known pending uploads in the page.
 
-```xml
-<xf:switch id="my-switch">
-    <xf:case id="my-case-1">...</xf:case>
-    <xf:case id="my-case-2">...</xf:case>
-</xf:switch>
-...
-<xf:trigger>
-    <xf:label>Add One</xf:label>
-    <xf:setvalue if="xxf:case('my-switch')" ref="foobar" value="12"/>
-</xf:trigger>
-```
+If there is no pending upload, the function returns 0.
 
-## xxf:cases()
+A pending upload is an upload started but not completed yet.
 
-```ruby
-xxf:cases(
-    $switch-id as xs:string
-) as xs:string*
-```
+_NOTE: The XForms engine is informed of uploads start and completion in an asynchronous way. This function only indicates the best knowledge the server has of the status of uploads at any given time._
 
-The `xxf:cases()` function returns a sequence of ids of `<xf:case>` elements within the given `<xf:switch>`. It is recommended to use this function from XForms actions only.
-
-## xxf:repeat-items()
-
-[SINCE: Orbeon Forms 4.5]
-
-_NOTE: This function is also available in previous versions of Orbeon Forms as xxf:repeat-nodeset()._
-
-```ruby
-xxf:repeat-nodeset(
-    $repeat-id as xs:string?
-) as node()*
-```
-
-The `xxf:repeat-nodeset()` function returns the node-set of an enclosing `xf:repeat`. It takes a string parameter containing the id of an enclosing repeat XForms control. When the argument is omitted, the function returns the index of the closest enclosing `<xf:repeat>` element. This function must always be used within `<xf:repeat>` otherwise an error is raised.
-
-```xml
-<xf:repeat id="employee-repeat" ref="employee">
-    <xh:div>
-        <xf:output value="count(xxf:repeat-nodeset('employee-repeat'))"/>
-    </xh:div>
-</xf:repeat>
-```
+See also: [Upload control][?]
 
 ## xxf:repeat-current()
 
@@ -188,6 +170,27 @@ The `xxf:repeat-current()` function allows you to obtain a reference to an enclo
 ```
 
 The `xxf:repeat-current()` function must be called from within an `xf:repeat` element.
+## xxf:repeat-items()
+
+[SINCE: Orbeon Forms 4.5]
+
+_NOTE: This function is also available in previous versions of Orbeon Forms as xxf:repeat-nodeset()._
+
+```ruby
+xxf:repeat-nodeset(
+    $repeat-id as xs:string?
+) as node()*
+```
+
+The `xxf:repeat-nodeset()` function returns the node-set of an enclosing `xf:repeat`. It takes a string parameter containing the id of an enclosing repeat XForms control. When the argument is omitted, the function returns the index of the closest enclosing `<xf:repeat>` element. This function must always be used within `<xf:repeat>` otherwise an error is raised.
+
+```xml
+<xf:repeat id="employee-repeat" ref="employee">
+    <xh:div>
+        <xf:output value="count(xxf:repeat-nodeset('employee-repeat'))"/>
+    </xh:div>
+</xf:repeat>
+```
 
 ## xxf:repeat-position()
 
@@ -209,21 +212,18 @@ The `xxf:repeat-position()` function returns an enclosing `xf:repeat`'s current 
 
 The `xxf:repeat-current()` function must be called from within an `xf:repeat` element.
 
-## xxf:pending-uploads()
+
+## xxf:value()
 
 ```ruby
-xxf:pending-uploads() as xs:integer
+xxf:value(
+    $control-id as xs:string
+) as xs:string?
 ```
 
-The xxf:pending-uploads() function returns the number of known pending uploads in the page.
+The `xxf:value`() function returns a control's value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
 
-If there is no pending upload, the function returns 0.
-
-A pending upload is an upload started but not completed yet.
-
-_NOTE: The XForms engine is informed of uploads start and completion in an asynchronous way. This function only indicates the best knowledge the server has of the status of uploads at any given time._
-
-See also: [Upload control][?]
+_NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
 
 ## xxf:itemset()
 
