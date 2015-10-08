@@ -1,5 +1,7 @@
 # Model functions
 
+<!-- toc -->
+
 ## xxf:bind()
 
 ```ruby
