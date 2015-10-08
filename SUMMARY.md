@@ -39,8 +39,8 @@
        * [Java API](form-runner/embedding/java-api.md)
        * [Liferay full portlet](form-runner/embedding/liferay-full-portlet.md)
        * [Liferay proxy portlet](form-runner/embedding/liferay-proxy-portlet.md)
-       * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
    * Advanced
+* [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
