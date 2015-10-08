@@ -37,10 +37,10 @@ For more on XBL components, see [[XBL documentation|XForms ~ XBL]].
 In order to add a custom Form Settings tab, the following property must be set to a non-blank value:
 
 ```xml
-<property 
+<property
   as="xs:string
   name="oxf.fb.extension.form-settings"
-   value="acme:form-settings"/>
+  value="acme:form-settings"/>
 ```
 
 Here, the value `acme:form-settings` refers to the XBL component implementing the custom tab:
