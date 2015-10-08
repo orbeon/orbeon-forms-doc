@@ -42,7 +42,7 @@
        * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
    * [Access Control](form-runner/access-control/README.md)
        * [Deployed Forms](form-runner/access-control/deployed-forms.md)
-       * Form Fields
+       * [Form Fields](form-runner/access-control/form-fields.md)
        * Editing Forms
        * Owner Group
        * Setup
