@@ -44,7 +44,7 @@
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
    * Styling
        * [CSS](form-runner/styling/css.md)
-       * Automatic PDF
+       * [Automatic PDF](form-runner/styling/automatic-pdf.md)
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
