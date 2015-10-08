@@ -1,5 +1,7 @@
 > [[Home]] ▸ [[XForms]] ▸ [[XForms ~ XPath Function Library]]
 
+<!-- toc -->
+
 ## Introduction
 
 The following functions are documented on this page:
