@@ -17,6 +17,24 @@ The `xxf:binding()` function returns a control's binding, that is the node or no
 
 _NOTE: This function can return not only nodes, but also atomic items._
 
+## xxf:client-id()
+
+[SINCE Orbeon Forms 4.3]
+
+```ruby
+xxf:client-id($static-or-absolute-id as xs:string) as xs:string?
+```
+
+Resolve the XForms object with the id specified, and return the id as used on the client.
+
+Return the empty sequence if the resolution fails.
+
+```xml
+<xh:a href="#{xxf:client-id('my-element')}"/>
+
+<xh:div id="my-element" xxf:control="true">...</xh:div>
+```
+
 ## xxf:context()
 
 ```ruby
