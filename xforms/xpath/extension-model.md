@@ -49,8 +49,6 @@ Return the value of the custom MIP of the first item specified, if any.
 
 The name of the property must match the qualified name used on the `xf:bind` that sets the property.
 
-
-
 ## xxf:evaluate-bind-property()
 
 ```ruby
