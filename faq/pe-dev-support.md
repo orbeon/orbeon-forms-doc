@@ -1,4 +1,6 @@
-> [[Home]] ▸ [[FAQ|FAQ]]
+# FAQ - Professional Edition (PE) and Dev Support
+
+<!-- toc -->
 
 ## What is the difference between the Development and Production subscriptions?
 
