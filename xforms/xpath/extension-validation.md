@@ -1,5 +1,7 @@
 # Validation functions
 
+<!-- toc -->
+
 ## xxf:max-length()
 
 [SINCE Orbeon Forms 4.10]
