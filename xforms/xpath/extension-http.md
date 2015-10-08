@@ -16,6 +16,14 @@ If running within a portlet context, return the portlet mode (e.g. `view`, `edit
 
 *NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
 
+## xxf:get-remote-user()
+
+```ruby
+xxf:get-remote-user() as xs:string?
+```
+
+Returns the username for the current user of the application, if known by the container, for instance because users log in with BASIC of FORM-based authentication.
+
 ## xxf:get-request-attribute()
 
 ```ruby
@@ -156,6 +164,17 @@ If running within a portlet context, return the window state (e.g. `normal`, `mi
 
 *NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
 
+## xxf:is-user-in-role()
+
+```ruby
+xxf:is-user-in-role(
+    $role as xs:string
+) as xs:boolean
+```
+
+Returns true if and only if the container recognizes that the current user of the application has the specified role. Roles will be typically known by the container when users are logged in using either BASIC or FORM-based authentication.
+
+
 ## xxf:set-request-attribute()
 
 ```ruby
@@ -221,21 +240,3 @@ xxf:username() as xs:string?
 ```
 
 Return the current user's username if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
-
-## xxf:get-remote-user()
-
-```ruby
-xxf:get-remote-user() as xs:string?
-```
-
-Returns the username for the current user of the application, if known by the container, for instance because users log in with BASIC of FORM-based authentication.
-
-## xxf:is-user-in-role()
-
-```ruby
-xxf:is-user-in-role(
-    $role as xs:string
-) as xs:boolean
-```
-
-Returns true if and only if the container recognizes that the current user of the application has the specified role. Roles will be typically known by the container when users are logged in using either BASIC or FORM-based authentication.
