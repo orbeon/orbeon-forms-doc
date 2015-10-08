@@ -34,6 +34,7 @@
        * Home Page
        * Responsive Design
        * Supported Languages
+       * TIFF Production
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
