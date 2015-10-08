@@ -22,6 +22,11 @@
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
 * Form Runner
+   * Overview
+       * Architecture
+       * Access Form Data
+       * Integration
+       * Terminology
    * Features
        * Home Page
        * Responsive Design
@@ -42,11 +47,6 @@
        * [Liferay proxy portlet](form-runner/embedding/liferay-proxy-portlet.md)
            * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
-   * Overview
-       * Architecture
-       * Access Form Data
-       * Integration
-       * Terminology
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
