@@ -35,7 +35,7 @@
        * Wizard View
    * Persistence
        * [Using a relational database](form-runner/persistence/relational-db.md)
-   * [Embedding](form-runner/embedding/README.md)
+   * [Link or Embed](form-runner/embedding/README.md)
        * [Java API](form-runner/embedding/java-api.md)
        * [Liferay full portlet](form-runner/embedding/liferay-full-portlet.md)
        * [Liferay proxy portlet](form-runner/embedding/liferay-proxy-portlet.md)
