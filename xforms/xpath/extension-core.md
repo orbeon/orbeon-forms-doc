@@ -15,6 +15,68 @@ This function is similar to `saxon:evaluate()` or `xxf:evaluate()`, but instead 
     value="xxf:evalute-avt('/xforms-sandbox/service/zip-zips?state-abbreviation={state}&amp;city={city}')"/>
 ```
 
+## xxf:format-message()
+
+```ruby
+xxf:format-message($template as xs:string, $parameters as item()*) as xs:string
+```
+
+The `xxf:format-message()` function allows you to format a localized message based on a template and parameters.
+
+* the first parameter is a template string following the syntax of the Java [MessageFormat](http://docs.oracle.com/javase/7/docs/api/java/text/MessageFormat.html) class
+* the second parameter is a sequence of parameters that can be referenced from the template string
+
+The following types are supported:
+
+* string (the default)
+* number (including currency and percent)
+* date
+* time
+
+The function uses the current language as would be obtained by the `xxf:lang()` function to determine a locale.
+
+Example with number, date, time, and string:
+
+```xml
+<xf:output
+    value="
+        xxf:format-message(
+            'At {2,time,short} on {2,date,long}, we detected {1,number,integer} spaceships on the planet {0}.',
+            (
+                'Mars',
+                3,
+                xs:dateTime('2010-07-23T19:25:13-07:00')
+            )
+        )"/>
+```
+
+This produces the following output with an en-US locale:
+
+```
+At 7:25 PM on July 23, 2010, we detected 3 spaceships on the planet Mars.
+```
+
+Example including a choice:
+
+```xml
+<xf:output
+    value="
+        xxf:format-message(
+            'There {0,choice,0#are no files|1#is one file|1&lt;are {0,number,integer} files}.',
+            xs:integer(.)
+        )"/>
+```
+
+This produces the following outputs, depending on the value provided:
+
+```
+There are no files.
+There is one file.
+There are 1,273 files.
+```
+
+_NOTE: It is important to pass dates and times as typed values. Use `xs:dateTime()`, `xs:date()`, or `xs:time()` if needed to convert from a string._
+
 ## xxf:instance()
 
 ```ruby
