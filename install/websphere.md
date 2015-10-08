@@ -1,5 +1,3 @@
-> [[Home]] ▸ [[Installation]]
-
 ## IBM WebSphere 8.5
 
 1. **Installing WebSphere** – Download [WebSphere 8.5 Liberty Profile](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-non-eclipse-environments/). Run the command line mentioned on that page, e.g. `java -jar wlp-developers-runtime-8.5.5.0.jar`. In what follows, we'll refer to the directory where you installed WebSphere Liberty Profile as `WLP`.
