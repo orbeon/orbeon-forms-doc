@@ -1,4 +1,6 @@
-> [[Home]] ▸ [FAQ](./FAQ)
+# FAQ - Other Technical Questions
+
+<!-- toc -->
 
 ## How can I remove the sample applications from my Orbeon Forms deployment?
 
