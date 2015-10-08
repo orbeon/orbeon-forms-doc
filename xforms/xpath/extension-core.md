@@ -147,6 +147,89 @@ xxf:event(
 
 `xxf:event()` works like the XForms 1.1 `event()` function, except that when using XBL components, `xxf:event()` returns event information from the original event instead of the retargeted event.
 
+## xxf:lang()
+
+```ruby
+xxf:lang() as xs:string?
+```
+
+The `xxf:lang()` function returns the current language as specified with the `xml:lang` attribute.
+
+The `xml:lang` value to use is determined this way:
+
+* if the element containing the `xxf:lang()` function has an `xml:lang` attribute, that attribute is used
+* otherwise, the first ancestor element of the element containing the `xxf:lang()` function that has an `xml:lang` attribute is used
+
+`xml:lang` is supported in the following locations:
+
+* for a static xml:lang value
+    * on any XForms element
+    * on the top-level `<xh:html>` element
+* for a dynamic xml:lang value (using an AVT)
+    * only on the top-level `<xh:html>` element
+
+_NOTE: `xml:lang` attributes on HTML elements other than the top-level `<xh:html>` are ignored for the purpose of the `xxf:lang()` function._
+
+_NOTE: Format of the locale is currently restricted to the form "en" or "en-GB". Support for [BCP 47](http://www.rfc-editor.org/rfc/bcp/bcp47.txt) would be desirable._
+
+Example of static values:
+
+```xml
+<xf:group xml:lang="it">
+    <!-- This output produces the value "it" -->
+    <xf:output value="xxf:lang()"/>
+    <!-- This output produces the value "zh" -->
+    <xf:output value="xxf:lang()" xml:lang="zh"/>
+</xf:group>
+```
+
+Example with an AVT:
+
+```xml
+<xh:html xml:lang="{instance()}">
+    <xh:head>
+        <xf:model id="model">
+            <xf:instance id="instance">
+                <lang>it</lang>
+            </xf:instance>
+        </xf:model>
+    </xh:head>
+    <xh:body>
+        <xf:group>
+            <!-- This output produces "it" based on the top-level AVT, which
+                 contains the value stored in the instance -->
+            <xf:output value="xxf:lang()"/>
+            <!-- This output produces "zh" -->
+            <xf:output value="xxf:lang()" xml:lang="zh"/>
+        </xf:group>
+    </xh:body>
+</xh:html>
+```
+
+When calling the `xxf:lang()` function from an XBL component:
+
+- `xml:lang` is first searched as described above
+- if no `xml:lang` value is found in the XBL component, then the `xml:lang` value of the XBL bound element is searched
+
+Example:
+
+```xml
+<xbl:xbl>
+    <xbl:binding id="fr-foo" element="fr|foo">
+        <xbl:template>
+            <xf:group>
+                <!-- The xml:lang value of the bound element is used -->
+                <xf:output value="xxf:lang()"/>
+                <!-- The xml:lang value is "zh" -->
+                <xf:output value="xxf:lang()" xml:lang="zh"/>
+            </xf:group>
+        </xbl:template>
+    </xbl:binding>
+</xbl:xbl>
+```
+
+
+
 ## xxf:property()
 
 ```
