@@ -23,6 +23,7 @@
        * [Examples](form-builder/formulas/examples.md)
    * Advanced
    * Form Editor
+   * Form Localization
 * Form Runner
    * Overview
        * Architecture
