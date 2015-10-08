@@ -23,7 +23,6 @@
 * `if()`
     * use the native XPath 2.0 `if (...) then ... else ...` construct when possible
     * available as `xf:if()`
-    * using a plain `if()` triggers the native XPath 2.0 `if (...) then ... else ...` construct
 * `property()`
     * This function supports extension property names in the `http://orbeon.org/oxf/xml/xforms` namespace (usually mapped to the `xxf` prefix). Any such property name will return the value of an XForms engine property. Example:
 
