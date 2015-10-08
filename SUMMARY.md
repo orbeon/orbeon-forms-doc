@@ -44,6 +44,7 @@
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
    * Overview
        * Access Form Data
+       * Architecture
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
