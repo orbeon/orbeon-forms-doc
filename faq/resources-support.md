@@ -1,4 +1,6 @@
-> [[Home]] ▸ [[FAQ|FAQ]]
+# FAQ - Resources and Support
+
+<!-- toc -->
 
 ### How can I get support for Orbeon Forms?
 
