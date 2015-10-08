@@ -1,5 +1,7 @@
 # Controls functions
 
+<!-- toc -->
+
 ## xxf:binding()
 
 ```ruby
