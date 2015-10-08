@@ -1,3 +1,7 @@
+# Product Roadmap
+
+<!-- toc -->
+
 ## Past releases
 
 See the [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history).
