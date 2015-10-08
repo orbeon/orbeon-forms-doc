@@ -15,13 +15,13 @@
    * [Resources and support](faq/resources-support.md)
    * [Other technical questions](faq/other-technical.md)
 * [Form Builder](form-builder/README.md)
+   * Advanced
    * [Introduction](Form-Builder-Introduction.md)
        * [Sun-intro](fb/sub-intro.md)
    * [Lifecycle of a form](form-builder/lifecycle-of-a-form.md)
    * [HTTP Services](form-builder/http-services.md)
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
-   * Advanced
    * Form Editor
    * Form Localization
    * Toolbox
