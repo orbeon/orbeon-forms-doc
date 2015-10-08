@@ -62,6 +62,18 @@ This function can be used even after page initialization, and can be used everyw
 
 _NOTE: With Orbeon Forms 3.8 and 3.9, this function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
 
+## xxf:get-request-method()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the current HTTP method.
+
+```ruby
+xxf:get-request-method() as xs:string
+```
+
+Return the HTTP method of the current request, such as `GET`, `POST`, etc.
+
 ## xxf:get-request-parameter()
 
 ```ruby
@@ -165,18 +177,6 @@ The `xxf:set-session-attribute()` function stores the given value as a session a
   context="."
   origin="xxf:set-session-attribute('document', instance('my-instance'))"/>
 ```
-
-## xxf:get-request-method()
-
-[SINCE Orbeon Forms 4.2]
-
-Return the current HTTP method.
-
-```ruby
-xxf:get-request-method() as xs:string
-```
-
-Return the HTTP method of the current request, such as `GET`, `POST`, etc.
 
 ## xxf:get-window-state()
 
