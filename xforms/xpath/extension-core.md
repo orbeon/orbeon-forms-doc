@@ -1,5 +1,7 @@
 # Core functions
 
+<!-- toc -->
+
 ## xxf:evaluate-avt()
 
 ```ruby
