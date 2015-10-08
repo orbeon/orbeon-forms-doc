@@ -1,23 +1,6 @@
-> [[Home]] ▸ [[Installation]]
+# Using a relational database
 
-- [Overview](#overview)
-- [Database setup](#database-setup)
-    - [Oracle](#oracle)
-    - [MySQL](#mysql)
-    - [SQL Server](#sql-server)
-    - [PostgreSQL](#postgresql)
-    - [DB2](#db2)
-- [Application server setup](#application-server-setup)
-    - [Oracle](#oracle-1)
-    - [MySQL](#mysql-1)
-    - [SQL Server](#sql-server-1)
-    - [PostgreSQL](#postgresql-1)
-    - [DB2](#db2-1)
-- [Orbeon Forms setup](#orbeon-forms-setup)
-    - [With a single schema](#with-a-single-schema)
-    - [With multiple schemas](#with-multiple-schemas)
-- [Flat view or table](#flat-view-or-table)
-- [Auditing and versioning](#auditing-and-versioning)
+<!-- toc -->
 
 ## Overview
 
