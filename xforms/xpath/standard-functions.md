@@ -1,6 +1,75 @@
-> [[Home]] ▸ [[XForms]] ▸ [[XForms ~ XPath Function Library]]
+# Standard functions
 
 <!-- toc -->
+
+## XForms 1.1 functions
+
+### Boolean functions
+
+* `boolean-from-string()`
+* `is-card-number()`
+
+### Number functions
+
+* `avg()`, `min()`, `max()`
+    * availble from XPath 2.0
+* `count-non-empty()`
+* `index()`
+* `power()`
+* `random()`
+
+### String functions
+
+* `if()`
+    * available as `xf:if()`
+    * using a plain `if()` triggers the native XPath 2.0 `if (...) then ... else ...` construct
+* `property()`
+    * This function supports extension property names in the `http://orbeon.org/oxf/xml/xforms` namespace (usually mapped to the `xxf` prefix). Any such property name will return the value of an XForms engine property. Example:
+
+        ```xml
+        <xf:output value="property('xxf:noscript')"/>
+        ```
+
+    * NOTE: The standard XForms function returns an XPath 1.0 `string`. The Orbeon Forms implementation returns the following:
+        * empty sequence (if the property is not found)
+        * `xs:string`, `xs:integer`, `xs:boolean` or `xs:anyURI` depending on the type of the property
+* `digest()`
+* `hmac()`
+
+### Date and time functions
+
+_NOTE: Prefer the XPath 2.0 date and time functions when possible._
+
+* `local-date()`
+* `local-dateTime()`
+* `now()`
+* `days-from-date()`
+* `days-to-date()`
+* `seconds-from-dateTime()`
+    * available as `xf:seconds-from-dateTime()`
+* `seconds-to-dateTime()`
+* `seconds()`
+* `months()`
+
+### Node-set functions
+
+* `instance()`
+* `current()`
+* `context()`
+
+### Object functions
+
+* `choose()`
+    * use the native XPath 2.0 `if (...) then ... else ...` construct when possible
+* `event()`
+
+### Functions not yet implemented
+
+The following XForms 1.1 functions are NOT supported as of February 2010:
+
+* `id()`
+* `adjust-dateTime-to-timezone()` (prefer the [XPath 2.0 Timezone Adjustment Functions on Dates and Time Values][2] functions)
+
 
 ## XForms 2.0 functions
 
