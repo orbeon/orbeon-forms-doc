@@ -36,6 +36,21 @@ The `xxf:bind()` function returns the node-set of a given bind:
 "/>
 ```
 
+## xxf:custom-mip
+
+```ruby
+xxf:custom-mip(
+    $item as item()*,
+    $mip-name as xs:string
+) as xs:string
+```
+
+Return the value of the custom MIP of the first item specified, if any.
+
+The name of the property must match the qualified name used on the `xf:bind` that sets the property.
+
+
+
 ## xxf:evaluate-bind-property()
 
 ```ruby
@@ -74,6 +89,34 @@ If the property is not present on the bind, an empty sequence is returned.
 ```
 
 _NOTE: The property is instantly evaluated, which means that it might be different from the value evaluated during the previous model recalculation or revalidation._
+
+## xxf:invalid-binds()
+
+```ruby
+xxf:invalid-binds(
+    $node as node()?
+) as xs:string*
+```
+
+The `xxf:invalid-binds()` function returns a sequence of strings. If the node was made invalid because of an `<xf:bind>` element, then the id of that bind element is present in the list.
+
+This function is useful to help determine the reason why a node is invalid:
+
+```xml
+<xf:bind ref="age" constraint=". ge 21" id="age-limit"/>
+...
+<xf:action if="xxf:invalid-binds(event('xxf:binding')) = 'age-limit'">
+...
+</xf:action>
+```
+
+You can also use this function to show bind-specific errors:
+
+```xml
+<xf:alert value="if (xxf:invalid-binds(.)="age-limit" )="" then="" ...="" else="" ..."="">
+```
+
+Note however that the function actually only returns the first invalid bind at the moment, not all of them. So this works for scenarios where error messages go from general to specific.
 
 ## xxf:type()
 
@@ -121,44 +164,3 @@ If no item is available, or if the item is an atomic value, the function returns
 If the optional third argument is specified and set to true(), non-relevant nodes are ignored, as in the case of `xf:submission`.
 
 Because of the way the XForms processing model is defined, the evaluation of `calculate`, `required`, `readonly` and `relevant` takes place during the processing of the `xforms-recalculate` event, which generally takes place before the processing of vaidation with the `xforms-revalidate` event. This means that by default using `xxf:valid()` to control, for example, whether a button is read-only or relevant will not work.
-
-## xxf:custom-mip
-
-```ruby
-xxf:custom-mip(
-    $item as item()*,
-    $mip-name as xs:string
-) as xs:string
-```
-
-Return the value of the custom MIP of the first item specified, if any.
-
-The name of the property must match the qualified name used on the `xf:bind` that sets the property.
-
-## xxf:invalid-binds()
-
-```ruby
-xxf:invalid-binds(
-    $node as node()?
-) as xs:string*
-```
-
-The `xxf:invalid-binds()` function returns a sequence of strings. If the node was made invalid because of an `<xf:bind>` element, then the id of that bind element is present in the list.
-
-This function is useful to help determine the reason why a node is invalid:
-
-```xml
-<xf:bind ref="age" constraint=". ge 21" id="age-limit"/>
-...
-<xf:action if="xxf:invalid-binds(event('xxf:binding')) = 'age-limit'">
-...
-</xf:action>
-```
-
-You can also use this function to show bind-specific errors:
-
-```xml
-<xf:alert value="if (xxf:invalid-binds(.)="age-limit" )="" then="" ...="" else="" ..."="">
-```
-
-Note however that the function actually only returns the first invalid bind at the moment, not all of them. So this works for scenarios where error messages go from general to specific.
