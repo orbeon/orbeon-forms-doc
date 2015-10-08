@@ -1,7 +1,7 @@
 # Summary
 
 * [Getting Started](README.md)
-* [Setup](setup/README.md)
+* [Installation](setup/README.md)
    * App server / container
        * [Tomcat](setup/server/tomcat.md)
        * [JBoss](setup/server/jboss.md)
