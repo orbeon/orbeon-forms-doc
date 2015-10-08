@@ -22,6 +22,7 @@
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
    * Advanced
+   * Form Editor
 * Form Runner
    * Overview
        * Architecture
