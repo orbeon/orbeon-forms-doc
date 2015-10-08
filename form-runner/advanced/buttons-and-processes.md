@@ -10,7 +10,7 @@ This feature is available with Orbeon Forms 4.2 and newer.
 
 This page describes how to configure the behavior of the buttons that appear at the bottom of the Form Runner detail page, whether in `new`, `edit` or `view` mode. Here is an example of buttons:
 
-![Example of Form Runner buttons](images/w9-form-buttons.png)
+![Example of Form Runner buttons](w9-form-buttons.png)
 
 ## Defining a process
 
@@ -436,7 +436,7 @@ navigate(uri = "http://example.org/{xxf:get-request-parameter('bar')}/{.//code}"
 
 Show a confirmation dialog. If the user selects "No", the current process is aborted. If the user selects "Yes", the current process is resumed.
 
-![Confirmation dialog](images/fr-confirm.png)
+![Confirmation dialog](confirm.png)
 
 - parameters
     - `message`: message to show
@@ -734,7 +734,7 @@ Example:
 
     xf:show("fr-validation-dialog") then suspend
 
-![The validation dialog](images/fr-review-messages.png)
+![The validation dialog](review-messages.png)
 
 ### The result dialog
 
