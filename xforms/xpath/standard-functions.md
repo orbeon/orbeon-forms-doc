@@ -2,24 +2,6 @@
 
 <!-- toc -->
 
-## Introduction
-
-The following functions are documented on this page:
-
-- XForms 2.0 functions
-    - `xf:valid()`
-    - `xf:bind()`
-- XSLT 2.0 functions
-    - `format-date()`
-    - `format-dateTime()`
-    - `format-time()`
-    - `format-number()`
-- eXforms functions
-    - `exf:relevant()`
-    - `exf:readonly()`
-    - `exf:required()`
-    - `exf:sort()`
-
 ## XForms 2.0 functions
 
 ### xf:valid()
