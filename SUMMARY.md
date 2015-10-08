@@ -2,12 +2,11 @@
 
 * [Getting Started](README.md)
 * [Installing](setup/README.md)
-   * App server / container
-       * [Tomcat](install/server/tomcat.md)
-       * [JBoss](install/server/jboss.md)
-       * [WebSphere](install/server/websphere.md)
-       * [WebLogic](install/server/weblogic.md)
-       * [GlassFish](install/server/glassfish.md)
+   * [On Tomcat](install/server/tomcat.md)
+   * [On JBoss](install/server/jboss.md)
+   * [On WebSphere](install/server/websphere.md)
+   * [On WebLogic](install/server/weblogic.md)
+   * [On GlassFish](install/server/glassfish.md)
 * FAQ
    * [General](faq/general.md)
    * [Licensing](faq/licensing.md)
