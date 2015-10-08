@@ -1,5 +1,7 @@
 # XML functions
 
+<!-- toc -->
+
 ## xxf:classes()
 
 ```ruby
