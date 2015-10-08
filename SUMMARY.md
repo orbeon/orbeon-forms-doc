@@ -2,11 +2,11 @@
 
 * [Getting Started](README.md)
 * [Installing](setup/README.md)
-   * [On Tomcat](install/server/tomcat.md)
-   * [On JBoss](install/server/jboss.md)
-   * [On WebSphere](install/server/websphere.md)
-   * [On WebLogic](install/server/weblogic.md)
-   * [On GlassFish](install/server/glassfish.md)
+   * [Tomcat](install/tomcat.md)
+   * [JBoss](install/jboss.md)
+   * [WebSphere](install/websphere.md)
+   * [WebLogic](install/weblogic.md)
+   * [GlassFish](install/glassfish.md)
 * FAQ
    * [General](faq/general.md)
    * [Licensing](faq/licensing.md)
