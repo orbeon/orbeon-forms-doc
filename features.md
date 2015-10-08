@@ -1,4 +1,6 @@
-> [[Home]] ▸ Orbeon Forms Features
+# Index of Features
+
+<!-- toc -->
 
 ## Purpose
 
