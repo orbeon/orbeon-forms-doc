@@ -2,6 +2,16 @@
 
 <!-- toc -->
 
+## xxf:document-id()
+
+```ruby
+xxf:document-id() as xs:string`
+```
+
+Each time an XForms document is created, typically when a user requests a page, it is assigned a unique id.
+
+This function returns the current XForms document (or page)'s unique id.
+
 ## xxf:evaluate-avt()
 
 ```ruby
@@ -79,6 +89,17 @@ There are 1,273 files.
 
 _NOTE: It is important to pass dates and times as typed values. Use `xs:dateTime()`, `xs:date()`, or `xs:time()` if needed to convert from a string._
 
+## xf:if() / xxf:if()
+
+_NOTE: Prefer the XPath 2 `if(...) then ... else ...` construct._
+
+```ruby
+xf:if()
+xxf:if()
+```
+
+This function implements the semantic of the XForms 1.0 `if()` function.
+
 ## xxf:instance()
 
 ```ruby
@@ -117,25 +138,6 @@ For example, if there are no XBL components, and 2 top-level models:
 ```
 
 [SINCE Orbeon Forms 4.5] The `xxf:instance()` function can also take an absolute id as parameter.
-
-## xxf:document-id()
-
-```ruby
-xxf:document-id() as xs:string`
-```
-
-Each time an XForms document is created, typically when a user requests a page, it is assigned a unique id.
-
-This function returns the current XForms document (or page)'s unique id.
-
-## xf:if() / xxf:if()
-
-```ruby
-xf:if()
-xxf:if()
-```
-
-This function implements the semantic of the XForms 1.0 `if()` function. See Note About XPath 2.0 Expressions for more details.
 
 ## xxf:event()
 
