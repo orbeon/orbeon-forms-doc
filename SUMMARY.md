@@ -56,4 +56,5 @@
        * [Run Modes](setup/advanced/run-modes.md)
        * [Environments](setup/advanced/environments.md)
        * [Configuring a Form Runner eXist database](setup/advanced/exist-db.md)
+* Index of Features
 
