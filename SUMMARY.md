@@ -53,4 +53,5 @@
             * [XML functions](xforms/xpath/extension-xml.md)
             * [HTTP functions](xforms/xpath/extension-http.md)
             * [Other functions](xforms/xpath/extension-other.md)
+            * [Deprecated functions](xforms/xpath/deprecated-functions.md)
             
