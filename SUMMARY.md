@@ -41,8 +41,8 @@
        * [Liferay full portlet](form-runner/link-embed/liferay-full-portlet.md)
        * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
    * Access Control
-       * Setup
        * Deployed Forms
+       * Setup
        * Editing Forms
        * Form Fields
        * Owner Group
