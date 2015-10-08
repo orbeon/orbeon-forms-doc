@@ -1,5 +1,3 @@
-> [[Home]] ▸ [[Installation]]
-
 ## GlassFish 3.1
 
 On GlassFish, you need to do the following setup to avoid a `java.security.UnrecoverableKeyException` with the message _Password must not be null_:
