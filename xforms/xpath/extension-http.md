@@ -2,18 +2,18 @@
 
 <!-- toc -->
 
-## xxf:get-session-attribute()
+## xxf:get-request-attribute()
 
 ```ruby
-xxf:get-session-attribute(
+xxf:get-request-attribute(
     $name         as xs:string,
     $content-type as xs:string?
 ) as item()?
 ```
 
-The `xxf:get-session-attribute()` function returns the value of the given session attribute.
+The `xxf:get-request-attribute()` function returns the value of the given request attribute. The attribute may have been previously placed in the request through Java code, or using `xxf:set-request-attribute()`, for example.
 
-The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-session-attribute()`.
+The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-request-attribute()`.
 
 If present, the second parameter can specify the 'text/plain' content type. In that case, if a String object is retrieved, it is return as an xs:string instead of being parsed as XML.
 
@@ -21,8 +21,11 @@ If present, the second parameter can specify the 'text/plain' content type. In t
 <!-- Get the "document" attribute and use it to replace instance "my-instance" -->
 <xf:insert
   ref="instance('my-instance')"
-  origin="xxf:get-session-attribute('document')"/>
+  origin="xxf:get-request-attribute('document')"/>
 ```
+
+_NOTE: This function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
+
 
 ## xxf:get-request-header()
 
@@ -91,18 +94,18 @@ This function can be used even after page initialization, and can be used everyw
 
 _NOTE: With Orbeon Forms 3.8 and 3.9, this function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
 
-## xxf:get-request-attribute()
+## xxf:get-session-attribute()
 
 ```ruby
-xxf:get-request-attribute(
+xxf:get-session-attribute(
     $name         as xs:string,
     $content-type as xs:string?
 ) as item()?
 ```
 
-The `xxf:get-request-attribute()` function returns the value of the given request attribute. The attribute may have been previously placed in the request through Java code, or using `xxf:set-request-attribute()`, for example.
+The `xxf:get-session-attribute()` function returns the value of the given session attribute.
 
-The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-request-attribute()`.
+The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-session-attribute()`.
 
 If present, the second parameter can specify the 'text/plain' content type. In that case, if a String object is retrieved, it is return as an xs:string instead of being parsed as XML.
 
@@ -110,11 +113,8 @@ If present, the second parameter can specify the 'text/plain' content type. In t
 <!-- Get the "document" attribute and use it to replace instance "my-instance" -->
 <xf:insert
   ref="instance('my-instance')"
-  origin="xxf:get-request-attribute('document')"/>
+  origin="xxf:get-session-attribute('document')"/>
 ```
-
-_NOTE: This function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
-
 
 ## xxf:set-request-attribute()
 
