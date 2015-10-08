@@ -1,4 +1,4 @@
-# Embedding Orbeon Forms
+# Linking and Embedding
 
 <!-- toc -->
 
