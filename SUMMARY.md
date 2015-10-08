@@ -1,7 +1,7 @@
 # Summary
 
 * [Getting Started](README.md)
-* [Installing](setup/README.md)
+* [Installing](install/README.md)
    * [Tomcat](install/tomcat.md)
    * [JBoss](install/jboss.md)
    * [WebSphere](install/websphere.md)
