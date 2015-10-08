@@ -16,7 +16,7 @@ xxf:event(
 
 ## xf:if() / xxf:if()
 
-_NOTE: Prefer the XPath 2 `if(...) then ... else ...` construct._
+Prefer the XPath 2 `if(...) then ... else ...` construct.
 
 ```ruby
 xf:if()
