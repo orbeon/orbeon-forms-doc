@@ -40,7 +40,7 @@
        * [Embedding Java API](form-runner/link-embed/java-api.md)
        * [Liferay full portlet](form-runner/link-embed/liferay-full-portlet.md)
        * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
-   * Access Control
+   * [Access Control](form-runner/access-control/README.md)
        * Deployed Forms
        * Form Fields
        * Editing Forms
