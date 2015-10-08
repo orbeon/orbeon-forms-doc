@@ -42,9 +42,9 @@
        * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
    * Access Control
        * Deployed Forms
+       * Form Fields
        * Editing Forms
        * Setup
-       * Form Fields
        * Owner Group
    * Styling
        * [CSS](form-runner/styling/css.md)
