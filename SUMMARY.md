@@ -36,7 +36,7 @@
    * Persistence
        * [Using a relational database](form-runner/persistence/relational-db.md)
    * [Link or Embed](form-runner/embedding/README.md)
-       * Linking
+       * [Linking](form-runner/embedding/linking.md)
        * [Embedding Java API](form-runner/embedding/java-api.md)
        * [Liferay full portlet](form-runner/embedding/liferay-full-portlet.md)
        * [Liferay proxy portlet](form-runner/embedding/liferay-proxy-portlet.md)
