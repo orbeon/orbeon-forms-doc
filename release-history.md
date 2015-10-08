@@ -1,3 +1,7 @@
+# Release History
+
+<!-- toc -->
+
 ## Upcoming releases
 
 See the [Orbeon Forms roadmap](Orbeon-Forms-Roadmap).
