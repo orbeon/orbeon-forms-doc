@@ -24,6 +24,7 @@
    * Advanced
    * Form Editor
    * Form Localization
+   * Toolbox
 * Form Runner
    * Overview
        * Architecture
