@@ -56,8 +56,8 @@
        * [Run Modes](setup/advanced/run-modes.md)
        * [Environments](setup/advanced/environments.md)
        * [Configuring a Form Runner eXist database](setup/advanced/exist-db.md)
-* Use Cases
+* [Use Cases](use-cases.md)
 * [Index of Features](features.md)
-* Release History
-* Product Roadmap
+* [Release History](release-history.md)
+* [Product Roadmap](roadmap.md)
 
