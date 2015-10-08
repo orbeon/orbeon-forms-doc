@@ -43,8 +43,8 @@
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
    * Styling
-       * Automatic PDF
        * CSS
+       * Automatic PDF
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
