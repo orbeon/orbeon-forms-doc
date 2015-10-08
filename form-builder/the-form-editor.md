@@ -1,24 +1,3 @@
-> [[Home]] ▸ [[Form Builder|Form Builder]]
-
-## Related pages
-
-- [[Introduction|Form Builder ~ Introduction]]
-- [[Summary Page|Form Builder ~ Summary Page]]
-- [[Toolbox|Form Builder ~ Toolbox]]
-    - [[Repeated Grids|Form Builder ~ Repeated Grids]]
-    - [[Metadata|Form Builder ~ Toolbox ~ Metadata]]
-- [[Form Area|Form Builder ~ Form Area]]
-- [[Validation|Form Builder ~ Validation]]
-- [[Control Settings|Form Builder ~ Control Settings]]
-- [[Section Settings|Form Builder ~ Section Settings]]
-- [[Section Templates|Form Builder ~ Section Templates]]
-- [[Creating Localized Forms|Form Builder ~ Creating Localized Forms]]
-- [[Formulas|Form Builder ~ Formulas]]
-- [[Itemset Editor|Form Builder ~ Itemset Editor]]
-- [[Lifecycle of a Form|Form Builder ~ Lifecycle of a Form]]
-- [[PDF Production|Form Builder ~ PDF Production]]
-    - [[PDF Templates|Form Builder ~ PDF Production ~ PDF Templates]]
-
 ## Creating your first form definition
 
 After pressing the "New" button on the [[summary page|Form Builder ~ Summary Page]], you reach the form editor (also known as form designer) proper. Form Builder requires that you provide two small pieces of information before starting:
