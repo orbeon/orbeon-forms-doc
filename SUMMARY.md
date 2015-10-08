@@ -49,7 +49,7 @@
        * [Form Runner](setup/properties/form-runner.md)
        * [Form Builder](setup/properties/form-builder.md)
        * [XForms](setup/properties/xforms.md)
-           * Advanced
+   * Advanced
        * [Creating a production WAR](setup/advanced/production-war.md)
        * [Upgrading from older versions](setup/advanced/upgrading.md)
        * [Limiter Filter](setup/advanced/limiter-filter.md)
