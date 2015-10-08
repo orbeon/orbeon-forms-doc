@@ -11,15 +11,6 @@ xxf:classes($el as node()) as xs:string*
 
 Returns for the context element or the given element if provided, all the classes on the `class` attribute.
 
-## xxf:has-class()
-
-```ruby
-xxf:has-class($class-name as xs:string) as xs:boolean
-xxf:has-class($class-name as xs:string, $el as node()) as xs:boolean
-```
-
-Returns whether the context element, or the given element, has a `class` attribute containing the specified class name.
-
 ## xxf:evaluate()
 
 ```ruby
@@ -35,6 +26,15 @@ The `xxf:evaluate()` function allows you to evaluate XPath expressions dynamical
     <xf:label>...</xf:label>
 </xf:input>
 ```
+
+## xxf:has-class()
+
+```ruby
+xxf:has-class($class-name as xs:string) as xs:boolean
+xxf:has-class($class-name as xs:string, $el as node()) as xs:boolean
+```
+
+Returns whether the context element, or the given element, has a `class` attribute containing the specified class name.
 
 ## xxf:serialize()
 
