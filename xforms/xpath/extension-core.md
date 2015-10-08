@@ -12,6 +12,18 @@ Each time an XForms document is created, typically when a user requests a page, 
 
 This function returns the current XForms document (or page)'s unique id.
 
+## xxf:event()
+
+_NOTE: This function is deprecated since Orbeon Forms 4 and is just an alias for the `event()` function._
+
+```ruby
+xxf:event(
+    $attribute-name as xs:string
+) as item()*
+```
+
+`xxf:event()` works like the XForms 1.1 `event()` function, except that when using XBL components, `xxf:event()` returns event information from the original event instead of the retargeted event.
+
 ## xxf:evaluate-avt()
 
 ```ruby
@@ -138,18 +150,6 @@ For example, if there are no XBL components, and 2 top-level models:
 ```
 
 [SINCE Orbeon Forms 4.5] The `xxf:instance()` function can also take an absolute id as parameter.
-
-## xxf:event()
-
-_NOTE: This function is deprecated since Orbeon Forms 4 and is just an alias for the `event()` function._
-
-```ruby
-xxf:event(
-    $attribute-name as xs:string
-) as item()*
-```
-
-`xxf:event()` works like the XForms 1.1 `event()` function, except that when using XBL components, `xxf:event()` returns event information from the original event instead of the retargeted event.
 
 ## xxf:lang()
 
