@@ -4,9 +4,6 @@
 
 The following functions are documented on this page:
 
-- Validation functions
-    - [`xxf:max-length()`](#xxfmax-length)
-    - [`xxf:min-length()`](#xxfmin-length)
 - Other functions
     - [`xxf:call-xpl()`](#xxfcall-xpl)
     - [`xxf:classes()`](#xxfclasses)
