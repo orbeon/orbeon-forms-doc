@@ -44,8 +44,8 @@
        * Deployed Forms
        * Form Fields
        * Editing Forms
-       * Setup
        * Owner Group
+       * Setup
    * Styling
        * [CSS](form-runner/styling/css.md)
        * [Automatic PDF](form-runner/styling/automatic-pdf.md)
