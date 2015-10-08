@@ -226,3 +226,40 @@ Note that the second argument differs from the `exf:sort()` function: it does no
   ...
 </xf:itemset>
 ```
+
+## xxf:call-xpl()
+
+```ruby
+xxf:call-xpl(
+    $xplURL        as xs:string,
+    $inputNames    as xs:string*,
+    $inputElements as element()*,
+    $outputNames   as xs:string+
+) as document-node()*
+```
+
+This function lets you call an XPL pipeline.
+
+- `$xplURL` is the URL of the pipeline. It must be an absolute URL.
+- `$inputNames` is a sequence of strings, each one representing the name of an input of the pipeline that you want to connect.
+- `$inputElements` is a sequence of elements to be used as input for the pipeline. The `$inputNames` and `$inputElements` sequences must have the same length. For each element in `$inputElements`, a document is created and connected to an input of the pipeline. Elements are matched to input name by position, for instance the element at position 3 of `$inputElements` is connected to the input with the name specified at position 3 in `$inputNames`.
+- `$outputNames` is a sequence of output names to read.
+
+The function returns a sequence of document nodes corresponding the output of the pipeline. The returned sequence will have the same length as `$outputNames` and will correspond to the pipeline output with the name specified on `$outputNames` based on position.
+
+The example below shows a call to the `xxf:call-xpl` function, calling a pipeline with two inputs and one output :
+
+```ruby
+xxf:call-xpl(
+    'oxf:/examples/sandbox/xpath/run-xpath.xpl',
+    (
+        'input',
+        'xpath'
+    ),
+    (
+        instance('instance')/input,
+        instance('instance')/xpath
+    ),
+    'html'
+)
+```
