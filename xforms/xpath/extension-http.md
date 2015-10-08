@@ -2,6 +2,20 @@
 
 <!-- toc -->
 
+## xxf:get-portlet-mode()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the portlet mode.
+
+```ruby
+xxf:get-portlet-mode() as xs:string
+```
+
+If running within a portlet context, return the portlet mode (e.g. `view`, `edit`), otherwise return the empty sequence.
+
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+
 ## xxf:get-request-attribute()
 
 ```ruby
@@ -151,20 +165,6 @@ The `xxf:set-session-attribute()` function stores the given value as a session a
   context="."
   origin="xxf:set-session-attribute('document', instance('my-instance'))"/>
 ```
-
-## xxf:get-portlet-mode()
-
-[SINCE Orbeon Forms 4.2]
-
-Return the portlet mode.
-
-```ruby
-xxf:get-portlet-mode() as xs:string
-```
-
-If running within a portlet context, return the portlet mode (e.g. `view`, `edit`), otherwise return the empty sequence.
-
-*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
 
 ## xxf:get-request-method()
 
