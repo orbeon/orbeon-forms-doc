@@ -148,6 +148,76 @@ The `xxf:set-session-attribute()` function stores the given value as a session a
   origin="xxf:set-session-attribute('document', instance('my-instance'))"/>
 ```
 
+## xxf:get-portlet-mode()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the portlet mode.
+
+```ruby
+xxf:get-portlet-mode() as xs:string
+```
+
+If running within a portlet context, return the portlet mode (e.g. `view`, `edit`), otherwise return the empty sequence.
+
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+
+## xxf:get-request-method()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the current HTTP method.
+
+```ruby
+xxf:get-request-method() as xs:string
+```
+
+Return the HTTP method of the current request, such as `GET`, `POST`, etc.
+
+## xxf:get-window-state()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the portlet window state.
+
+```ruby
+xxf:get-window-state() as xs:string
+```
+
+If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
+
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+
+## xxf:user-group()
+
+[SINCE Orbeon Forms 4.9]
+
+```ruby
+xxf:user-group() as xs:string?
+```
+
+Return the current user's group if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
+
+## xxf:user-roles()
+
+[SINCE Orbeon Forms 4.9]
+
+```ruby
+xxf:user-roles() as xs:string*
+```
+
+Return the current user's groups if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
+
+## xxf:username()
+
+[SINCE Orbeon Forms 4.9]
+
+```ruby
+xxf:username() as xs:string?
+```
+
+Return the current user's username if available. This function works with container- and header-driven methods. See [[Form Runner Access Control Setup|Form Runner ~ Access Control ~ Setup]].
+
 ## xxf:get-remote-user()
 
 ```ruby
