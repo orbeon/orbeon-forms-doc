@@ -281,3 +281,11 @@ xxf:call-xpl(
     'html'
 )
 ```
+
+## xxf:form-urlencode()
+
+```ruby
+xxf:form-urlencode($document as node()) as xs:string
+```
+
+Performs `application/x-www-form-urlencoded` encoding on an XML document.
