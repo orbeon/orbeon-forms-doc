@@ -142,6 +142,20 @@ If present, the second parameter can specify the 'text/plain' content type. In t
   origin="xxf:get-session-attribute('document')"/>
 ```
 
+## xxf:get-window-state()
+
+[SINCE Orbeon Forms 4.2]
+
+Return the portlet window state.
+
+```ruby
+xxf:get-window-state() as xs:string
+```
+
+If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
+
+*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
+
 ## xxf:set-request-attribute()
 
 ```ruby
@@ -177,20 +191,6 @@ The `xxf:set-session-attribute()` function stores the given value as a session a
   context="."
   origin="xxf:set-session-attribute('document', instance('my-instance'))"/>
 ```
-
-## xxf:get-window-state()
-
-[SINCE Orbeon Forms 4.2]
-
-Return the portlet window state.
-
-```ruby
-xxf:get-window-state() as xs:string
-```
-
-If running within a portlet context, return the window state (e.g. `normal`, `minimized`, `maximized`), otherwise return the empty sequence.
-
-*NOTE: This function only works with the full portlet. The proxy portlet is not supported.*
 
 ## xxf:user-group()
 
