@@ -36,12 +36,6 @@
    * Persistence
        * [Using a relational database](form-runner/persistence/relational-db.md)
    * [Embedding](form-runner/embedding/README.md)
-       * Features
-           * Home Page
-           * Responsive Design
-           * Supported Languages
-           * TIFF Production
-           * Wizard View
        * [Java API](form-runner/embedding/java-api.md)
        * [Liferay full portlet](form-runner/embedding/liferay-full-portlet.md)
        * [Liferay proxy portlet](form-runner/embedding/liferay-proxy-portlet.md)
