@@ -333,6 +333,30 @@ Example of JSON result with `xxf:itemset('my-select1', 'json', true())` (formatt
 ]
 ```
 
+## xxf:label, xxf:help, xxf:hint, xxf:alert
+
+```ruby
+xxf:label($control-id as xs:string) as xs:string?
+xxf:help ($control-id as xs:string) as xs:string?
+xxf:hint ($control-id as xs:string) as xs:string?
+xxf:alert($control-id as xs:string) as xs:string?
+```
+
+These functions return a control's current label, help, hint, or alert, given a control id.
+
+```xml
+<xf:input id="my-input" ref="foo">
+    <xf:label>Label</xf:label>
+</xf:input>
+
+<xf:trigger>
+   <xf:label>Get label</xf:label>
+    <xf:message ev:event="DOMActivate" value="xxf:label('my-input')"/>
+</xf:trigger>
+```
+
+If the control is not  relevant, or does not have an associated label, help, hint, or alert, the empty sequence is returned.
+
 ## xxf:pending-uploads()
 
 ```ruby
@@ -434,30 +458,6 @@ xxf:value(
 The `xxf:value`() function returns a control's value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
 
 _NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
-
-## xxf:label, xxf:help, xxf:hint, xxf:alert
-
-```ruby
-xxf:label($control-id as xs:string) as xs:string?
-xxf:help ($control-id as xs:string) as xs:string?
-xxf:hint ($control-id as xs:string) as xs:string?
-xxf:alert($control-id as xs:string) as xs:string?
-```
-
-These functions return a control's current label, help, hint, or alert, given a control id.
-
-```xml
-<xf:input id="my-input" ref="foo">
-    <xf:label>Label</xf:label>
-</xf:input>
-
-<xf:trigger>
-   <xf:label>Get label</xf:label>
-    <xf:message ev:event="DOMActivate" value="xxf:label('my-input')"/>
-</xf:trigger>
-```
-
-If the control is not  relevant, or does not have an associated label, help, hint, or alert, the empty sequence is returned.
 
 ## xxf:visited
 
