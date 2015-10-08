@@ -43,8 +43,8 @@
            * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
    * Overview
-       * Access Form Data
        * Architecture
+       * Access Form Data
        * Integration
        * Terminology
 * XForms
