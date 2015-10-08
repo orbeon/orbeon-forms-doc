@@ -38,7 +38,7 @@
    * [Linking and Embedding](form-runner/link-embed/README.md)
        * [Linking](form-runner/link-embed/linking.md)
        * [Embedding Java API](form-runner/link-embed/java-api.md)
-       * [Liferay full portlet](form-runner/embedding/liferay-full-portlet.md)
+       * [Liferay full portlet](form-runner/link-embed/liferay-full-portlet.md)
        * [Liferay proxy portlet](form-runner/embedding/liferay-proxy-portlet.md)
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
