@@ -24,6 +24,12 @@
 * Form Runner
    * Persistence
        * [Using a relational database](form-runner/persistence/relational-db.md)
+   * Features
+       * Home Page
+       * Responsive Design
+       * Supported Languages
+       * TIFF Production
+       * Wizard View
    * [Embedding](form-runner/embedding/README.md)
        * Features
            * Home Page
