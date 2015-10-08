@@ -31,6 +31,7 @@
            * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
    * Features
+       * Home Page
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
