@@ -1,5 +1,7 @@
 # HTTP request functions
 
+<!-- toc -->
+
 ## xxf:get-request-path()
 
 ```ruby
