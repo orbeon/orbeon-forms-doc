@@ -32,7 +32,6 @@
        * [PDF Production](form-builder/advanced/pdf-production.md)
        * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
    * [Lifecycle of a form](form-builder/lifecycle-of-a-form.md)
-   * [HTTP Services](form-builder/http-services.md)
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
    * Form Localization
