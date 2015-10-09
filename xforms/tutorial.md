@@ -1351,7 +1351,11 @@ So what does this pipeline do? It runs a _processor_ called `oxf:xforms-submissi
 Now look at the page view:
 
 ```xml
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xsl:version="2.0">
+<feed
+    xmlns="http://www.w3.org/2005/Atom"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xsl:version="2.0">
 
     <title>Orbeon Forms Bookcast</title>
     <subtitle>An Orbeon Forms tutorial example</subtitle>
@@ -1439,7 +1443,11 @@ You should see something similar to this, depending on your browser:
 To make things even better, add the following to `view.xhtml` under the `<head>` element:
 
 ```xml
-<link rel="alternate" type="application/atom+xml" title="Orbeon XForms Bookcast Tutorial Feed" href="atom">
+<link 
+    rel="alternate"
+    type="application/atom+xml"
+    title="Orbeon XForms Bookcast Tutorial Feed"
+    href="atom">
 ```
 
 With this addition, most modern browsers will display a feed icon or an RSS icon, making the feed directly accessible from the main Bookcast page.
