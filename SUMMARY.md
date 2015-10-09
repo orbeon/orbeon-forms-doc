@@ -36,6 +36,7 @@
    * Form Localization
    * Toolbox
    * Form Editor
+   * Forms Localization
 * Form Runner
    * Overview
        * Architecture
