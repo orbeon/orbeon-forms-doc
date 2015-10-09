@@ -1,6 +1,6 @@
 # Summary
 
-* [Get Started](README.md)
+* [Getting Started](README.md)
 * [Installation](install/README.md)
    * [Tomcat](install/tomcat.md)
    * [JBoss](install/jboss.md)
