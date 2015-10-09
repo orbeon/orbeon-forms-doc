@@ -51,7 +51,7 @@
        * [Terminology](form-runner/overview/terminology.md)
    * Features
        * [Home Page](form-runner/feature/home-page.md)
-       * Responsive Design
+       * [Responsive Design](form-runner/feature/responsive-design.md)
        * Supported Languages
        * TIFF Production
        * Wizard View
