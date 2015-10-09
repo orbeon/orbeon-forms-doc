@@ -70,6 +70,8 @@
        * [Automatic PDF](form-runner/styling/automatic-pdf.md)
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
+* Properties
+   * General
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
@@ -100,6 +102,4 @@
 * [Index of Features](features.md)
 * [Release History](release-history.md)
 * [Product Roadmap](roadmap.md)
-* Properties
-   * General
 
