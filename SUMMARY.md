@@ -52,7 +52,7 @@
    * Features
        * [Home Page](form-runner/feature/home-page.md)
        * [Responsive Design](form-runner/feature/responsive-design.md)
-       * Supported Languages
+       * [Supported Languages](form-runner/feature/supported-languages.md)
        * TIFF Production
        * Wizard View
    * Persistence
