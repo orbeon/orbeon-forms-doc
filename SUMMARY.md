@@ -38,7 +38,7 @@
        * [Examples](form-builder/formulas/examples.md)
    * [Form Localization](form-builder/forms-localization.md)
    * [Toolbox](form-builder/toolbox/README.md)
-       * Repeated Grids
+       * [Repeated Grids](form-builder/toolbox/repeated-grids.md)
    * Forms Localization
 * Form Runner
    * Overview
