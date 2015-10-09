@@ -39,7 +39,6 @@
        * [PDF Templates](form-builder/advanced/pdf-templates.md)
        * [Section Templates](form-builder/advanced/section-templates.md)
    * [Form Localization](form-builder/forms-localization.md)
-   * Forms Localization
 * Form Runner
    * Overview
        * Architecture
