@@ -37,8 +37,8 @@
        * [Extension API](form-builder/advanced/extension-api.md)
        * [Integration](form-builder/advanced/integration.md)
        * [PDF Production](form-builder/advanced/pdf-production.md)
-       * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
        * [PDF Templates](form-builder/advanced/pdf-templates.md)
+       * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
        * [Section Templates](form-builder/advanced/section-templates.md)
 * Form Runner
    * Overview
