@@ -258,9 +258,7 @@ Under `RESOURCES`, you see the following files and directories:
 
 You find the application under `RESOURCES/apps/xforms-hello`. That directory contains the two files that you have seen earlier through the Source Code Viewer in your web browser. Again, the name `xforms-hello` is important and matches the `xforms-hello` part of the URL in your web browser: `http://localhost:8080/orbeon/xforms-hello/`.
 
-_NOTE:_
-
-_In this tutorial, you will often have to "reload" pages in your web browser to see the effects of your changes to XHTML or XForms markup. Because of the way Orbeon Forms handles page reloads with XForms, for consistent results we recommend that you don't simply use your browser's reload button, but instead use one of the following two ways to reload a page:_
+_NOTE: In this tutorial, you will often have to "reload" pages in your web browser to see the effects of your changes to XHTML or XForms markup. Because of the way Orbeon Forms handles page reloads with XForms, for consistent results we recommend that you don't simply use your browser's reload button, but instead use one of the following two ways to reload a page:_
 
 * _Position your text cursor on your browser's URL bar and press the "Enter" key. Browsers often have keyboard shortcuts such as `CTRL-L` or `CMD-L` to reach the URL bar._
 * _Use your browser's "force reload" feature. This is often enabled by pressing the `SHIFT` key and pressing the "reload" button at the same time. Browsers often have keyboard shortcuts such as `CTRL-F5`, `CTRL-SHIFT-R`, or `CMD-SHIFT-R` to perform this operation._
@@ -272,16 +270,14 @@ Now, modify `view.xhtml`:
 * Save `view.xhtml`.
 * Go back to the Hello application in your web browser and reload the page. You should see the new text appear:
 
-![][9]
+    ![][9]
 
 * Repeat the experience but add some XForms. For example, add a second `<xf:input>` right after the first one:
 
-```xml
-<xf:input ref="/first-name" incremental="true">
-```
-```xml
-<xf:input ref="/first-name" incremental="true">
-```
+    ```xml
+    <xf:input ref="/first-name" incremental="true">
+    <xf:input ref="/first-name" incremental="true">
+    ```
 
 Reload the page, and notice, as you type in an input field, how the other one updates as you type. This happens because the two fields are bound to the same instance data. The `incremental="true"` attribute allows the changes to occur as you type, instead of occurring when you focus in and out of fields:
 
@@ -306,29 +302,29 @@ But first things first. Start by making a first functional page:
 * The first thing to do is to create a new directory for your application. Orbeon Forms already come with the complete `xforms-bookcast` application, so instead let's decide on another name, for example `my-bookcast`. Create a directory with that name as `RESOURCES/apps/my-bookcast`. For convenience, we refer to that new directory as the `BOOKCAST` directory below.
 * Create a `page-flow.xml` file under `BOOKCAST`:
 
-```xml
-<controller xmlns="http://www.orbeon.com/oxf/controller">
-    <page path="/my-bookcast/" view="view.xhtml"/>
-    <epilogue url="oxf:/config/epilogue.xpl"/>
-</controller>
-```
+    ```xml
+    <controller xmlns="http://www.orbeon.com/oxf/controller">
+        <page path="/my-bookcast/" view="view.xhtml"/>
+        <epilogue url="oxf:/config/epilogue.xpl"/>
+    </controller>
+    ```
 
 This page flow is automatically called for any path that starts with `/orbeon/my-bookcast/`. Here, it matches on the exact path `/orbeon/my-bookcast/` and calls up the page view called `view.xhtml`.
 
 * Create a skeleton for your `view.xhtml` under `BOOKCAST`:
 
-```xml
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xxforms="http://orbeon.org/oxf/xml/xforms">
-    <head>
-        <title>XForms Bookcast</title>
-    </head>
-    <body>
-        <p>Hello!</p>
-    </body>
-</html>
-```
+    ```xml
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xxforms="http://orbeon.org/oxf/xml/xforms">
+        <head>
+            <title>XForms Bookcast</title>
+        </head>
+        <body>
+            <p>Hello!</p>
+        </body>
+    </html>
+    ```
 
-This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the ``/. It also declares a bunch of XML namespaces that you need later in the document.
+    This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the ``/. It also declares a bunch of XML namespaces that you need later in the document.
 
 Now go to:
 
@@ -466,8 +462,8 @@ Now say you want to make the title and author required data. You control this wi
 
 ```xml
 <xf:bind ref="book">
-    <xf:bind nodeset="title" required="true()"/>
-    <xf:bind nodeset="author" required="true()"/>
+    <xf:bind ref="title" required="true()"/>
+    <xf:bind ref="author" required="true()"/>
 </xf:bind>
 ```
 
@@ -480,22 +476,22 @@ The above requires some explanations:
 * Much like `<xf:group>` in the controls, `<xf:bind>` elements can be nested.
 * `<xf:bind>` uses a `ref` attribute, which allows pointing at more than one node using a single XPath expression.
 * The outer `<xf:bind>` element points to the `<book>` element under the top-level `<books>` element of your instance. This happens because the evaluation context for a top-level XPath expression in an `<xf:bind>` element is the root element of the first XForms instance. You could be more explicit, for example with:
-
-```xml
-<xf:bind ref="/books/book">
-    ...
-</xf:bind>
-```
-
-Or with:
-
-```xml
-<xf:bind ref="instance('books-instance')/book">
-    ...
-</xf:bind>
-```
-
-The latter makes it clear, with the XForms `instance()` function, that you are addressing the `books-instance` instance and not another instance, so you will probably tend to prefer that notation.
+    
+    ```xml
+    <xf:bind ref="/books/book">
+        ...
+    </xf:bind>
+    ```
+    
+    Or with:
+    
+    ```xml
+    <xf:bind ref="instance('books-instance')/book">
+        ...
+    </xf:bind>
+    ```
+    
+    The latter makes it clear, with the XForms `instance()` function, that you are addressing the `books-instance` instance and not another instance, so you will probably tend to prefer that notation.
 
 * The inner `<xf:bind>` elements apply the _required_ MIP to the `<title>` and `<author>` elements. The `required` attribute must contain an XPath expression, which is why it contains `true()` (the way to express a Boolean "true" value in XPath) and not simply `true`. Using XPath expressions allows you to make MIPs dynamically change, so that, for example, a form field can be required or not depending on other form fields.
 * Note that MIPs are assigned to XML nodes, not directly to controls. But they affect the controls that are bound to those nodes. This is part of XForms's MVC philosophy.
@@ -537,24 +533,22 @@ Nested within the control, you find several `<xf:item>` elements. Each one creat
 Now XForms encourages you to store data in the model. For a selection control, this means storing the list of labels and values in an XForms instance instead of statically listing the items under the `<xf:select1>` element. So let's do this! Create a new instance in the model:
 
 ```xml
-<html>
-    <xf:instance id="languages-instance">
-        <languages xmlns="">
-            <language>
-                <name>English</name>
-                <value>en</value>
-            </language>
-            <language>
-                <name>French</name>
-                <value>fr</value>
-            </language>
-            <language>
-                <name>Spanish</name>
-                <value>es</value>
-            </language>
-        </languages>
-    </xf:instance>
-</html>
+<xf:instance id="languages-instance">
+    <languages xmlns="">
+        <language>
+            <name>English</name>
+            <value>en</value>
+        </language>
+        <language>
+            <name>French</name>
+            <value>fr</value>
+        </language>
+        <language>
+            <name>Spanish</name>
+            <value>es</value>
+        </language>
+    </languages>
+</xf:instance>
 ```
 
 Then modify the `<xf:select1>` element as follows:
@@ -566,7 +560,7 @@ Then modify the `<xf:select1>` element as follows:
         <xf:label>Choose One...</xf:label>
         <xf:value/>
     </xf:item>
-    <xf:itemset nodeset="instance('languages-instance')/language">
+    <xf:itemset ref="instance('languages-instance')/language">
         <xf:label ref="name"/>
         <xf:value ref="value"/>
     </xf:itemset>
@@ -598,32 +592,30 @@ Note that the application captures the same data without the `appearance` attrib
 To create the ratings input, add this new instance:
 
 ```xml
-<html>
-    <xf:instance id="ratings-instance">
-        <ratings xmlns="">
-            <rating>
-                <name>1</name>
-                <value>1</value>
-            </rating>
-            <rating>
-                <name>2</name>
-                <value>2</value>
-            </rating>
-            <rating>
-                <name>3</name>
-                <value>3</value>
-            </rating>
-            <rating>
-                <name>4</name>
-                <value>4</value>
-            </rating>
-            <rating>
-                <name>5</name>
-                <value>5</value>
-            </rating>
-        </ratings>
-    </xf:instance>
-</html>
+<xf:instance id="ratings-instance">
+    <ratings xmlns="">
+        <rating>
+            <name>1</name>
+            <value>1</value>
+        </rating>
+        <rating>
+            <name>2</name>
+            <value>2</value>
+        </rating>
+        <rating>
+            <name>3</name>
+            <value>3</value>
+        </rating>
+        <rating>
+            <name>4</name>
+            <value>4</value>
+        </rating>
+        <rating>
+            <name>5</name>
+            <value>5</value>
+        </rating>
+    </ratings>
+</xf:instance>
 ```
 
 And then add another `<xf:select1>` control:
@@ -635,7 +627,7 @@ And then add another `<xf:select1>` control:
         <xf:label>None</xf:label>
         <xf:value/>
     </xf:item>
-    <xf:itemset nodeset="instance('ratings-instance')/rating">
+    <xf:itemset ref="instance('ratings-instance')/rating">
         <xf:label ref="name"/>
         <xf:value ref="value"/>
     </xf:itemset>
@@ -662,7 +654,7 @@ The only missing control now is the input field bound to the `<link>` element. A
             <xf:label>Choose One...</xf:label>
             <xf:value/>
         </xf:item>
-        <xf:itemset nodeset="instance('languages-instance')/language">
+        <xf:itemset ref="instance('languages-instance')/language">
             <xf:label ref="name"/>
             <xf:value ref="value"/>
         </xf:itemset>
@@ -678,7 +670,7 @@ The only missing control now is the input field bound to the `<link>` element. A
             <xf:label>None</xf:label>
             <xf:value/>
         </xf:item>
-        <xf:itemset nodeset="instance('ratings-instance')/rating">
+        <xf:itemset ref="instance('ratings-instance')/rating">
             <xf:label ref="name"/>
             <xf:value ref="value"/>
         </xf:itemset>
@@ -707,9 +699,12 @@ So how do you save data from XForms to a database? An important feature of XForm
 So look at how you create a submission that saves the `books-instance` instance into eXist:
 
 ```xml
-<xf:submission id="save-submission"
-  ref="instance('books-instance')"
-  resource="/exist/rest/db/orbeon/my-bookcast/books.xml" method="put" replace="none"/>
+<xf:submission
+    id="save-submission"
+    ref="instance('books-instance')"
+    resource="/exist/rest/db/orbeon/my-bookcast/books.xml"
+    method="put"
+    replace="none"/>
 ```
 
 Let's look at the details:
@@ -885,7 +880,7 @@ Then you want to copy that template to the right place in `books-instance` when 
 ```xml
 <xf:trigger>
     <xf:label>Add One</xf:label>
-    <xf:insert ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="1" position="before" origin="instance('book-template')"/>
+    <xf:insert ev:event="DOMActivate" context="instance('books-instance')" ref="book" at="1" position="before" origin="instance('book-template')"/>
 </xf:trigger>
 ```
 
@@ -898,7 +893,7 @@ Let's explain what the above does:
 * `<xf:insert>` is declared as an event handler with the `ev:event="DOMActivate"` attribute, so this action runs when the user presses the button.
 * Here we have decided that we want to insert a new book always in first position in the page. The trick is to configure the insert action with the appropriate attributes.
 
-With the configuration provided, the action _inserts_ (`<xf:insert>`) the contents of the `book-template` instance (origin="instance('book-template')") _before_ (`position="before"`) the _first_ (`at="1"`) element called `<book>` (`nodeset="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`).
+With the configuration provided, the action _inserts_ (`<xf:insert>`) the contents of the `book-template` instance (origin="instance('book-template')") _before_ (`position="before"`) the _first_ (`at="1"`) element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`).
 
 This may sound a little confusing at first, but that's because `<xf:insert>` is in fact very powerful and you can combine its attributes in many different ways.
 
@@ -916,7 +911,7 @@ If you can add books, you probably also want to be able to remove them. This can
 <xf:trigger>
     <xf:label>Remove</xf:label>
     <xf:delete ev:event="DOMActivate" context="instance('books-instance')"
-                   nodeset="book" at="index('book-repeat')"/>
+                   ref="book" at="index('book-repeat')"/>
 </xf:trigger>
 ```
 
@@ -926,7 +921,7 @@ This works in a way very similar to the "Add One" button:
 * `<xf:delete>` is declared as an event handler with the `ev:event="DOMActivate"` attribute.
 * The difference is in the configuration of `<xf:delete>`.
 
-Here you don't use the `position` and `origin` attributes. What you are telling the action here is to delete (`<xf:delete>`) the element called `<book>` (`nodeset="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`) which is at the current index position of the `book-repeat` repetition (`at="index('book-repeat')"`).
+Here you don't use the `position` and `origin` attributes. What you are telling the action here is to delete (`<xf:delete>`) the element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`) which is at the current index position of the `book-repeat` repetition (`at="index('book-repeat')"`).
 
 To understand the `index()` function, you should know that each repetition in XForms has an associated _current index_, which tells you which current iteration of a repetition is currently active. The current index changes as you navigate through controls. If you type in the title input field of the first book, the index is `1`; if you type in the author input field of the third book, the index is `3`; and so on. The index changes also if you click buttons. Usually, the current index is also visually highlighted.
 
@@ -984,22 +979,22 @@ Then encapsulate the main XForms controls within a table:
         <td>
             <xf:trigger appearance="minimal">
                 <xf:label><img src="../apps/my-bookcast/images/add.gif"/></xf:label>
-                <xf:insert ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="1" position="before" origin="instance('book-template')"/>
+                <xf:insert ev:event="DOMActivate" context="instance('books-instance')" ref="book" at="1" position="before" origin="instance('book-template')"/>
             </xf:trigger>
         </td>
         <td class="add-td">
             <xf:trigger appearance="minimal">
                 <xf:label>Add One</xf:label>
-                <xf:insert ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="1" position="before" origin="instance('book-template')"/>
+                <xf:insert ev:event="DOMActivate" context="instance('books-instance')" ref="book" at="1" position="before" origin="instance('book-template')"/>
             </xf:trigger>
         </td>
     </tr>
-    <xf:repeat nodeset="book" id="book-repeat">
+    <xf:repeat ref="book" id="book-repeat">
         <tr>
             <td>
                 <xf:trigger appearance="minimal">
                     <xf:label><img src="../apps/my-bookcast/images/remove.gif"/></xf:label>
-                    <xf:delete ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="index('book-repeat')"/>
+                    <xf:delete ev:event="DOMActivate" context="instance('books-instance')" ref="book" at="index('book-repeat')"/>
                 </xf:trigger>
             </td>
             <td class="form-td">
