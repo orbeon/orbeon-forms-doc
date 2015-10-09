@@ -39,4 +39,4 @@ Orbeon Forms follows a few principles:
 * **Instant gratification.** You get instant gratification by making changes to your application and just reloading your page in your web browser. (You don't need to "compile" or "build".)
 
 [1]: http://www.orbeon.com/
-[2]: http://www.orbeon.com/community
+[2]: http://discuss.orbeon.com/
