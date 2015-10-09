@@ -39,7 +39,7 @@
        * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
        * [PDF Templates](form-builder/advanced/pdf-templates.md)
        * [Section Templates](form-builder/advanced/section-templates.md)
-   * Summary Page
+   * [Summary Page](form-builder/summary-page.md)
 * Form Runner
    * Overview
        * Architecture
