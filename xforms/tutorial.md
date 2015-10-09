@@ -713,20 +713,20 @@ Let's look at the details:
 * As usual, the `id` attribute allows referring to the submission from other XForms constructs.
 * The `ref` attribute specifies what piece of XML must be handled by the submission. It points to an instance node with an XPath expression. Here, we point to the whole `books-instance` instance by using the `instance()` function.
 * The `resource` attribute specifies to what URL the submission takes place. Here, you use an absolute path:
-
-```xml
-/exist/rest/db/orbeon/my-bookcast/books.xml
-```
-
-This path is equivalent to using the absolute URL:
-
-```xml
-http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
-```
-
-(Because it is inconvenient for you to always write absolute URLs when you want to address an URL handle by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
-
-The paths starts with `/exist/rest/`, which maps to the built-in eXist database. The rest of the path (`/db/orbeon/my-bookcast/books.xml`) specifies the _collection_ and `document` to access. Here, we decide to save the data to a document called `books` within a collection called `/db/orbeon/my-bookcast/`.
+    
+    ```xml
+    /exist/rest/db/orbeon/my-bookcast/books.xml
+    ```
+    
+    This path is equivalent to using the absolute URL:
+    
+    ```xml
+    http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
+    ```
+    
+    (Because it is inconvenient for you to always write absolute URLs when you want to address an URL handle by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
+    
+    The paths starts with `/exist/rest/`, which maps to the built-in eXist database. The rest of the path (`/db/orbeon/my-bookcast/books.xml`) specifies the _collection_ and `document` to access. Here, we decide to save the data to a document called `books` within a collection called `/db/orbeon/my-bookcast/`.
 * The `method` attribute specifies what HTTP method to use. Here, you use the value `put`, which translates into using the HTTP PUT method. (You may not be very familiar with the PUT method (HTML forms, for example, always use GET and POST), but PUT is getting used more and more with REST interfaces. In just a few words, PUT allows you to store a resource to a particular location on an HTTP server.)
 * Finally, the `replace` attribute specifies what to do with the response sent by the server (here the server is the eXist database). Specifying a value of `none` tells the XForms engine to discard the content of the response from the database.
 
@@ -783,7 +783,13 @@ You can now save your data to the database, and read it back using your web brow
 You guessed it, one way of doing this is to use a submission:
 
 ```xml
-<xf:submission id="list-submission" serialization="none" method="get" resource="/exist/rest/db/orbeon/my-bookcast/books.xml" replace="instance" instance="books-instance"/>
+<xf:submission
+    id="list-submission"
+    serialization="none"
+    method="get"
+    resource="/exist/rest/db/orbeon/my-bookcast/books.xml"
+    replace="instance"
+    instance="books-instance"/>
 ```
 
 There are a few differences with this `<xf:submission>`:
