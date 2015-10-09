@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[Installation]]
+# Installation
 
 ## Software requirements
 
