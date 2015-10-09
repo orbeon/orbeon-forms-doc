@@ -50,7 +50,7 @@
        * [Integration](form-runner/overview/integration.md)
        * [Terminology](form-runner/overview/terminology.md)
    * Features
-       * Home Page
+       * [Home Page](v)
        * Responsive Design
        * Supported Languages
        * TIFF Production
