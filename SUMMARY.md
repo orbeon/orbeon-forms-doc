@@ -14,7 +14,7 @@
 * FAQ
    * [General](faq/general.md)
    * [Licensing](faq/licensing.md)
-   * [Orbeon Forms PE and Dev Support](faq/pe-dev-support.md)
+   * [PE and Dev Support](faq/pe-dev-support.md)
    * [Form Builder and Form Runner](faq/form-builder-runner.md)
    * [Resources and support](faq/resources-support.md)
    * [Other technical questions](faq/other-technical.md)
