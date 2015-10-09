@@ -15,7 +15,6 @@
    * [Resources and support](faq/resources-support.md)
    * [Other technical questions](faq/other-technical.md)
 * [Form Builder](form-builder/README.md)
-   * [Introduction](Form-Builder-Introduction.md)
    * Advanced
        * [HTTP Services](form-builder/advanced/http-services.md)
        * [Database Services](form-builder/advanced/database-services.md)
