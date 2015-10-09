@@ -14,6 +14,7 @@ But Orbeon Forms also includes:
 - an application controller (the Page Flow Controller or PFC)
 
 You are free to use Orbeon Forms for its XForms functionality only, but you can also leverage more of Orbeon Forms to build your forms-based application.
+
 ### What differentiates Orbeon Forms from other web solutions?
 
 A few things come to mind:
