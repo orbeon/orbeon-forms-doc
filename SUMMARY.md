@@ -19,7 +19,7 @@
        * [Actions](form-builder/advanced/actions.md)
        * [Database Services](form-builder/advanced/database-services.md)
        * [Edit Source](form-builder/advanced/edit-source.md)
-       * Extension API
+       * [Extension API](form-builder/advanced/extension-api.md)
        * HTTP Services
        * Integration
        * PDF Production
