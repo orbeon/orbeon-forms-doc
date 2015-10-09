@@ -18,7 +18,7 @@
    * Advanced
        * [Actions](form-builder/advanced/actions.md)
        * [Database Services](form-builder/advanced/database-services.md)
-       * Edit Source
+       * [Edit Source](form-builder/advanced/edit-source.md)
        * Extension API
        * HTTP Services
        * Integration
