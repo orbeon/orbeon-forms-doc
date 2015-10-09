@@ -37,3 +37,6 @@ Orbeon Forms follows a few principles:
 * **More standards.** You use standards whenever possible. For example, Orbeon Forms applications are created using XForms and XHTML, which are W3C standards.
 * **Less scripting.** You write most applications without writing Java, JavaScript, or other scripting code. (But you can if you really want.)
 * **Instant gratification.** You get instant gratification by making changes to your application and just reloading your page in your web browser. (You don't need to "compile" or "build".)
+
+[1]: http://www.orbeon.com/
+[2]: http://www.orbeon.com/community
