@@ -33,7 +33,7 @@
        * [PDF Production](form-builder/advanced/pdf-production.md)
        * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
        * [PDF Templates](form-builder/advanced/pdf-templates.md)
-       * Section Templates
+       * [Section Templates](form-builder/advanced/section-templates.md)
    * [Formulas](form-builder/formulas/README.md)
        * [Examples](form-builder/formulas/examples.md)
    * [Form Localization](form-builder/forms-localization.md)
