@@ -2,13 +2,6 @@
 
 <!-- toc -->
 
-### What is Orbeon Forms?
-
-See:
-
-- the Orbeon web site at [orbeon.com](http://www.orbeon.com/)
-- the latest [README file](https://github.com/orbeon/orbeon-forms/blob/master/README.md)
-
 ### What differentiates Orbeon Forms from other web solutions?
 
 A few things come to mind:
