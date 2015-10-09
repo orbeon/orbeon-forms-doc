@@ -23,6 +23,8 @@
        * [Section Settings](form-builder/form-editor/section-settings.md)
        * [Validation](form-builder/form-editor/validation.md)
        * [Metadata](form-builder/form-editor/metadata.md)
+   * [Toolbox](form-builder/toolbox/README.md)
+       * [Repeated Grids](form-builder/toolbox/repeated-grids.md)
    * Advanced
        * [HTTP Services](form-builder/advanced/http-services.md)
        * [Database Services](form-builder/advanced/database-services.md)
@@ -37,8 +39,6 @@
    * [Formulas](form-builder/formulas/README.md)
        * [Examples](form-builder/formulas/examples.md)
    * [Form Localization](form-builder/forms-localization.md)
-   * [Toolbox](form-builder/toolbox/README.md)
-       * [Repeated Grids](form-builder/toolbox/repeated-grids.md)
    * Forms Localization
 * Form Runner
    * Overview
