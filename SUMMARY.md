@@ -70,18 +70,6 @@
        * [Automatic PDF](form-runner/styling/automatic-pdf.md)
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
-* XForms
-   * XPath function library
-       * [Standard functions](xforms/xpath/standard-functions.md)
-       * Extension functions
-           * [Core functions](xforms/xpath/extension-core.md)
-           * [Model functions](xforms/xpath/extension-model.md)
-           * [Validation functions](xforms/xpath/extension-validation.md)
-           * [Controls functions](xforms/xpath/extension-controls.md)
-           * [XML functions](xforms/xpath/extension-xml.md)
-           * [HTTP functions](xforms/xpath/extension-http.md)
-           * [Other functions](xforms/xpath/extension-other.md)
-           * [Deprecated functions](xforms/xpath/deprecated-functions.md)
 * Setup
    * [Properties](setup/properties/README.md)
        * [General](setup/properties/general.md)
@@ -96,6 +84,18 @@
        * [Run Modes](setup/advanced/run-modes.md)
        * [Environments](setup/advanced/environments.md)
        * [Configuring a Form Runner eXist database](setup/advanced/exist-db.md)
+* XForms
+   * XPath function library
+       * [Standard functions](xforms/xpath/standard-functions.md)
+       * Extension functions
+           * [Core functions](xforms/xpath/extension-core.md)
+           * [Model functions](xforms/xpath/extension-model.md)
+           * [Validation functions](xforms/xpath/extension-validation.md)
+           * [Controls functions](xforms/xpath/extension-controls.md)
+           * [XML functions](xforms/xpath/extension-xml.md)
+           * [HTTP functions](xforms/xpath/extension-http.md)
+           * [Other functions](xforms/xpath/extension-other.md)
+           * [Deprecated functions](xforms/xpath/deprecated-functions.md)
 * [Use Cases](use-cases.md)
 * [Index of Features](features.md)
 * [Release History](release-history.md)
