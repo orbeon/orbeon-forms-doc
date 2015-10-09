@@ -72,7 +72,7 @@
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
 * [Properties](properties/README.md)
    * [General](properties/general.md)
-   * Persistence
+   * [Persistence](properties/persistence.md)
    * [Form Runner](properties/form-runner.md)
    * [Form Builder](properties/form-builder.md)
    * XForms
