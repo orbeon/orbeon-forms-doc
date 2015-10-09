@@ -314,7 +314,7 @@ This page flow is automatically called for any path that starts with `/orbeon/my
 * Create a skeleton for your `view.xhtml` under `BOOKCAST`:
 
     ```xml
-    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xxforms="http://orbeon.org/oxf/xml/xforms">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
         <head>
             <title>XForms Bookcast</title>
         </head>
@@ -804,7 +804,7 @@ Add this element after the previous `<xf:submission>` element which has an id va
 Like with the `<xf:submission`> having  an id of  `save-submission`, the submission needs to be sent to achieve something. You do this by adding the following _event handler_ to the model, just before the end of the model:
 
 ```xml
-<xf:send ev:event="xforms-ready" submission="list-submission"/>
+<xf:send event="xforms-ready" submission="list-submission"/>
 ```
 
 Hence the code now has the appearance of
@@ -814,12 +814,12 @@ Hence the code now has the appearance of
 
 <xf:submission id="list-submission" .../>
 
-<xf:send ev:event="xforms-ready" .../>
+<xf:send event="xforms-ready" .../>
 ```
 
 This tells the XForms engine to execute an _action_ called `<xf:send>` when the XForms engine is ready. This action takes an attribute called `submission`, which specifies which submission to send, here `list-submission`.
 
-Note the special attribute called `ev:event`: this attributes marks the `<xf:send>` element as an _event handler_, that is an action that must respond to an event dispatched by the XForms engine. In this case, the name of the event is `xforms-ready`, which is a standard XForms event with the meaning that well, the XForms engine is ready.
+Note the special attribute called `event`: this attributes marks the `<xf:send>` element as an _event handler_, that is an action that must respond to an event dispatched by the XForms engine. In this case, the name of the event is `xforms-ready`, which is a standard XForms event with the meaning that well, the XForms engine is ready.
 
 After adding the event handler, reload the page, and notice how the page now loads and immediately shows the data that you saved into the database.
 
@@ -898,7 +898,7 @@ Let's explain what the above does:
 
 * The `<xf:trigger>` element declares a button (remember, XForms likes more abstract names, but this control could have as well been called `<xf:button>`). Like all XForms controls, `<xf:trigger>` takes a label, which is here displayed within the button.
 * Once the user presses it, the button sends an event called `DOMActivate`. Don't be scared by this funny name, you will use it all the time. It just means that the user has _activated_ the button, which in most cases means that the user pressed (clicked) on it.
-* `<xf:insert>` is declared as an event handler with the `ev:event="DOMActivate"` attribute, so this action runs when the user presses the button.
+* `<xf:insert>` is declared as an event handler with the `event="DOMActivate"` attribute, so this action runs when the user presses the button.
 * Here we have decided that we want to insert a new book always in first position in the page. The trick is to configure the insert action with the appropriate attributes.
 
     With the configuration provided, the action _inserts_ (`<xf:insert>`) the contents of the `book-template` instance (origin="instance('book-template')") _before_ (`position="before"`) the _first_ (`at="1"`) element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`).
@@ -918,15 +918,18 @@ If you can add books, you probably also want to be able to remove them. This can
 ```xml
 <xf:trigger>
     <xf:label>Remove</xf:label>
-    <xf:delete ev:event="DOMActivate" context="instance('books-instance')"
-                   ref="book" at="index('book-repeat')"/>
+    <xf:delete
+        event="DOMActivate"
+        context="instance('books-instance')"
+        ref="book"
+        at="index('book-repeat')"/>
 </xf:trigger>
 ```
 
 This works in a way very similar to the "Add One" button:
 
 * The `<xf:trigger>` element declares a button, but here with a different label ("Remove"). Once the user presses it, the button sends a `DOMActivate`.
-* `<xf:delete>` is declared as an event handler with the `ev:event="DOMActivate"` attribute.
+* `<xf:delete>` is declared as an event handler with the `event="DOMActivate"` attribute.
 * The difference is in the configuration of `<xf:delete>`.
 
     Here you don't use the `position` and `origin` attributes. What you are telling the action here is to delete (`<xf:delete>`) the element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`) which is at the current index position of the `book-repeat` repetition (`at="index('book-repeat')"`).
@@ -987,13 +990,13 @@ Then encapsulate the main XForms controls within a table:
         <td>
             <xf:trigger appearance="minimal">
                 <xf:label><img src="../apps/my-bookcast/images/add.gif"/></xf:label>
-                <xf:insert ev:event="DOMActivate" context="instance('books-instance')" ref="book" at="1" position="before" origin="instance('book-template')"/>
+                <xf:insert event="DOMActivate" context="instance('books-instance')" ref="book" at="1" position="before" origin="instance('book-template')"/>
             </xf:trigger>
         </td>
         <td class="add-td">
             <xf:trigger appearance="minimal">
                 <xf:label>Add One</xf:label>
-                <xf:insert ev:event="DOMActivate" context="instance('books-instance')" ref="book" at="1" position="before" origin="instance('book-template')"/>
+                <xf:insert event="DOMActivate" context="instance('books-instance')" ref="book" at="1" position="before" origin="instance('book-template')"/>
             </xf:trigger>
         </td>
     </tr>
@@ -1002,7 +1005,7 @@ Then encapsulate the main XForms controls within a table:
             <td>
                 <xf:trigger appearance="minimal">
                     <xf:label><img src="../apps/my-bookcast/images/remove.gif"/></xf:label>
-                    <xf:delete ev:event="DOMActivate" context="instance('books-instance')" ref="book" at="index('book-repeat')"/>
+                    <xf:delete event="DOMActivate" context="instance('books-instance')" ref="book" at="index('book-repeat')"/>
                 </xf:trigger>
             </td>
             <td class="form-td">
@@ -1265,7 +1268,7 @@ It would be nice to tell the user that saving didn't work. You can do this very 
 </xf:submission>
 ```
 
-The `<xf:submission>` element hasn't changed, except we added a nested `<xf:message>` element. Besides the `ev:event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and message for the user.
+The `<xf:submission>` element hasn't changed, except we added a nested `<xf:message>` element. Besides the `event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and message for the user.
 
 Try now making this change, enter an invalid link, and press the "Save" link: an alert message should show up!
 
