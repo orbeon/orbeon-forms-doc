@@ -34,6 +34,7 @@
        * Itemset Editor
        * Publishing
        * Section Settings
+       * Validation
    * Form Localization
    * Toolbox
    * Form Editor
