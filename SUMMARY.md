@@ -31,7 +31,6 @@
        * [Integration](form-builder/advanced/integration.md)
        * [PDF Production](form-builder/advanced/pdf-production.md)
        * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
-   * [Lifecycle of a form](form-builder/lifecycle-of-a-form.md)
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
    * Form Localization
