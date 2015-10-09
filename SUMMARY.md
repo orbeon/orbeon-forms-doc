@@ -21,7 +21,7 @@
        * [Edit Source](form-builder/advanced/edit-source.md)
        * [Extension API](form-builder/advanced/extension-api.md)
        * [HTTP Services](form-builder/advanced/http-services.md)
-       * Integration
+       * [Integration](form-builder/advanced/integration.md)
        * PDF Production
        * XML Schemas Support
    * [Introduction](Form-Builder-Introduction.md)
