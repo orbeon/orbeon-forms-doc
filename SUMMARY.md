@@ -15,6 +15,13 @@
    * [Resources and support](faq/resources-support.md)
    * [Other technical questions](faq/other-technical.md)
 * [Form Builder](form-builder/README.md)
+   * [Form Editor](form-builder/form-editor/README.md)
+       * [Control Settings](form-builder/form-editor/control-settings.md)
+       * [Form Area](form-builder/form-editor/form-area.md)
+       * [Itemset Editor](form-builder/form-editor/itemset-editor.md)
+       * [Publishing](form-builder/form-editor/publishing.md)
+       * [Section Settings](form-builder/form-editor/section-settings.md)
+       * [Validation](form-builder/form-editor/validation.md)
    * Advanced
        * [HTTP Services](form-builder/advanced/http-services.md)
        * [Database Services](form-builder/advanced/database-services.md)
@@ -28,13 +35,6 @@
    * [HTTP Services](form-builder/http-services.md)
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
-   * [Form Editor](form-builder/form-editor/README.md)
-       * [Control Settings](form-builder/form-editor/control-settings.md)
-       * [Form Area](form-builder/form-editor/form-area.md)
-       * [Itemset Editor](form-builder/form-editor/itemset-editor.md)
-       * [Publishing](form-builder/form-editor/publishing.md)
-       * [Section Settings](form-builder/form-editor/section-settings.md)
-       * [Validation](form-builder/form-editor/validation.md)
    * Form Localization
    * Toolbox
    * Form Editor
