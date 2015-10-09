@@ -71,7 +71,7 @@
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
 * [Properties](properties/README.md)
-   * General
+   * [General](properties/general.md)
    * Persistence
    * [Form Runner](properties/form-runner.md)
    * [Form Builder](properties/form-builder.md)
