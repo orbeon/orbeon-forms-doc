@@ -25,6 +25,8 @@
        * [Metadata](form-builder/form-editor/metadata.md)
    * [Toolbox](form-builder/toolbox/README.md)
        * [Repeated Grids](form-builder/toolbox/repeated-grids.md)
+   * [Formulas](form-builder/formulas/README.md)
+       * [Examples](form-builder/formulas/examples.md)
    * Advanced
        * [HTTP Services](form-builder/advanced/http-services.md)
        * [Database Services](form-builder/advanced/database-services.md)
@@ -36,8 +38,6 @@
        * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
        * [PDF Templates](form-builder/advanced/pdf-templates.md)
        * [Section Templates](form-builder/advanced/section-templates.md)
-   * [Formulas](form-builder/formulas/README.md)
-       * [Examples](form-builder/formulas/examples.md)
    * [Form Localization](form-builder/forms-localization.md)
    * Forms Localization
 * Form Runner
