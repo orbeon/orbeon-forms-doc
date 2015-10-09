@@ -75,7 +75,7 @@
    * [Persistence](properties/persistence.md)
    * [Form Runner](properties/form-runner.md)
    * [Form Builder](properties/form-builder.md)
-   * XForms
+   * [XForms](properties/xforms.md)
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
