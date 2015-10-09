@@ -746,27 +746,27 @@ So go ahead and:
 * Add the submission to the model.
 * Reload the page.
 * Enter a book title and an author, then press the "Save" button. Your form data has been silently saved to the database. It was that easy!
-* Then, let's check that the data is actually in the database. [SINCE 4.0] By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/EB-INF/web.xml`  noting that you will need to remove the  comment after <url-pattern> to make it well formed XML. (and don't forget to put them back before going to production if necessary):
-
-```xml
-<filter-mapping>
-    <filter-name>orbeon-exist-filter</filter-name>
-    <url-pattern>/exist/*</url-pattern>
-    <xsl:comment>Security filter for eXist</xsl:comment>
-    <dispatcher>REQUEST</dispatcher>
-    <dispatcher>FORWARD</dispatcher>
-</filter-mapping>
-```
-
-Then, open up a new browser tab or window, and enter the following URL:
-
-```xml
-http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
-```
-
-This is the exact same URL to which your submission has done an HTTP PUT. By entering it in your browser, you tell it to do an HTTP GET instead, and the eXist database simply sends the XML document to your browser. You should see this:
-
-![][18]
+* Then, let's check that the data is actually in the database. [SINCE 4.0] By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/WEB-INF/web.xml`  noting that you will need to remove the  comment after <url-pattern> to make it well formed XML. (and don't forget to put them back before going to production if necessary):
+    
+    ```xml
+    <filter-mapping>
+        <filter-name>orbeon-exist-filter</filter-name>
+        <url-pattern>/exist/*</url-pattern>
+        <xsl:comment>Security filter for eXist</xsl:comment>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    ```
+    
+    Then, open up a new browser tab or window, and enter the following URL:
+    
+    ```xml
+    http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
+    ```
+    
+    This is the exact same URL to which your submission has done an HTTP PUT. By entering it in your browser, you tell it to do an HTTP GET instead, and the eXist database simply sends the XML document to your browser. You should see this:
+    
+    ![][18]
 
 Try changing the book author and pressing "Save" again. Then in your other browser tab or window, reload the eXist URL, and notice that the data has actually changed in the database.
 
@@ -810,13 +810,11 @@ Like with the `<xf:submission`> having  an id of  `save-submission`, the submiss
 Hence the code now has the appearance of
 
 ```xml
-<xf:submission id="save-submission" ...
+<xf:submission id="save-submission" .../>
 
-<xf:submission id="list-submission" ...
+<xf:submission id="list-submission" .../>
 
-<xf:send ev:event="xforms-ready" ...
-
-</xf:model>
+<xf:send ev:event="xforms-ready" .../>
 ```
 
 This tells the XForms engine to execute an _action_ called `<xf:send>` when the XForms engine is ready. This action takes an attribute called `submission`, which specifies which submission to send, here `list-submission`.
