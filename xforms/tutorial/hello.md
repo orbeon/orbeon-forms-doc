@@ -1,6 +1,6 @@
-## The Hello application
+# The Hello application
 
-### Running the Hello application
+## Running the Hello application
 
 The Hello application is about the simplest Orbeon Forms application you can think of. It asks for your name and displays it back. Here is a direct link for running XForms Hello [online on the Orbeon web site][6].
 
@@ -11,7 +11,7 @@ Simply enter your first name in the input field, for example "Joe". You should p
 * `view.xhtml`: this is the XHTML and XForms code for the Hello application.
 * `page-flow.xml`: this is the page flow for the Hello application. The main task of a page flow is mapping external URLs (as typed in a web browser) to Orbeon Forms pages.
 
-### The source code
+## The source code
 
 You are now ready to look at the source code of the Hello application. This will give you an idea of what an Orbeon Forms application looks like. First, select `view.xhtml` to make the source code for that file appear on the right:
 
@@ -109,7 +109,7 @@ A few things to point out:
 * The `concat` function concatenates all its parameters into a resulting string. It is like the JavaScript `+` operator on strings.
 * Note the use of the single quote `'` around strings. This is needed because the XPath expression is put within double quotes `"` in the `value` attribute.
 
-### Page flow
+## Page flow
 
 If you look at your browser's URL bar when showing the example, you notice that it looks like this:
 
@@ -144,7 +144,7 @@ http://localhost:8080/orbeon/xforms-hello/my-page
 
 The exact same result shows! Of course, page flows make the most sense when you have more than one page in your application, which translates into more than one `<page>` element.
 
-### Orbeon Forms resources
+## Orbeon Forms resources
 
 Under `TOMCAT_HOME/webapps/orbeon`, you find a `WEB-INF` directory. That directory, in turn, contains a `resources` directory. We refer to that `resources` directory as `RESOURCES` below.
 
@@ -152,7 +152,7 @@ The `RESOURCES` directory is very important: this is where your application live
 
 _NOTE: Orbeon Forms supports storing your resources pretty much anywhere you want. For convenience, by default they are available under the WAR file's `WEB-INF/resources` so you can get up and running without configuration._
 
-### A look into the resources directory structure
+## A look into the resources directory structure
 
 Under `RESOURCES`, you see the following files and directories:
 
@@ -161,7 +161,7 @@ Under `RESOURCES`, you see the following files and directories:
 * `page-flow.xml` file: the top-level page flow file. You should not worry about this file just yet. Just know that by default, it is in charge of deciding which application to run depending on the application name in the URL that you enter in your web browser.
 * `apps-list.xml` file: contains the list of sample applications to display on the left side of the screen. This is not needed by your own application.
 
-### Playing with the hello application source code
+## Playing with the hello application source code
 
 You find the application under `RESOURCES/apps/xforms-hello`. That directory contains the two files that you have seen earlier through the Source Code Viewer in your web browser. Again, the name `xforms-hello` is important and matches the `xforms-hello` part of the URL in your web browser: `http://localhost:8080/orbeon/xforms-hello/`.
 
