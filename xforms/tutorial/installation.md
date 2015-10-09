@@ -1,5 +1,7 @@
 # Installation
 
+<!-- toc -->
+
 ## Installing and configuring Orbeon Forms
 
 ### Downloading and installing Java
