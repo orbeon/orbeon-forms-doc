@@ -45,7 +45,7 @@
        * [Section Templates](form-builder/advanced/section-templates.md)
 * Form Runner
    * Overview
-       * Architecture
+       * [Architecture](form-runner/overview/architecture.md)
        * Access Form Data
        * Integration
        * Terminology
