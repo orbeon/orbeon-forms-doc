@@ -34,7 +34,7 @@
        * [Itemset Editor](form-builder/form-editor/itemset-editor.md)
        * [Publishing](form-builder/form-editor/publishing.md)
        * [Section Settings](form-builder/form-editor/section-settings.md)
-       * Validation
+       * [Validation](form-builder/form-editor/validation.md)
    * Form Localization
    * Toolbox
    * Form Editor
