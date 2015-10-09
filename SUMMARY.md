@@ -33,7 +33,7 @@
        * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
-   * Form Localization
+   * [Form Localization](form-builder/forms-localization.md)
    * Toolbox
    * Form Editor
    * Forms Localization
