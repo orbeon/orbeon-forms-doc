@@ -25,7 +25,6 @@
        * [Validation](form-builder/form-editor/validation.md)
        * [Itemset Editor](form-builder/form-editor/itemset-editor.md)
        * [Publishing](form-builder/form-editor/publishing.md)
-       * [Metadata](form-builder/form-editor/metadata.md)
    * [Toolbox](form-builder/toolbox/README.md)
        * [Repeated Grids](form-builder/toolbox/repeated-grids.md)
    * [Formulas](form-builder/formulas/README.md)
@@ -42,6 +41,7 @@
        * [PDF Production](form-builder/advanced/pdf-production.md)
        * [PDF Templates](form-builder/advanced/pdf-templates.md)
        * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
+       * [Metadata](form-builder/form-editor/metadata.md)
        * [Section Templates](form-builder/advanced/section-templates.md)
 * Form Runner
    * Overview
