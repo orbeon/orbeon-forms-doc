@@ -72,6 +72,7 @@
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
 * Properties
    * General
+   * Persistence
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
