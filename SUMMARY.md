@@ -20,6 +20,7 @@
        * Database Services
        * Edit Source
        * Extension API
+       * HTTP Services
    * [Introduction](Form-Builder-Introduction.md)
        * [Sun-intro](fb/sub-intro.md)
    * [Lifecycle of a form](form-builder/lifecycle-of-a-form.md)
