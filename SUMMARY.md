@@ -12,7 +12,6 @@
 * [Release History](release-history.md)
 * [Product Roadmap](roadmap.md)
 * FAQ
-   * [General](faq/general.md)
    * [Licensing](faq/licensing.md)
    * [PE and Dev Support](faq/pe-dev-support.md)
    * [Form Builder and Form Runner](faq/form-builder-runner.md)
