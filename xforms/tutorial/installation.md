@@ -2,9 +2,7 @@
 
 <!-- toc -->
 
-## Installing and configuring Orbeon Forms
-
-### Downloading and installing Java
+## Downloading and installing Java
 
 Java provides the cross-platform environment in which Orbeon Forms runs.
 
@@ -12,7 +10,7 @@ If you don't have Java installed yet, download it from http://www.oracle.com/tec
 
 _NOTE: If you use a Mac with Mac OS X, you probably have Java already installed on your machine, but if not visit <http: support.apple.com="" kb="" dl1572="">. Then follow the instructions to install Java._
 
-### Downloading and installing Apache Tomcat
+## Downloading and installing Apache Tomcat
 
 Tomcat is the container application into which Orbeon Forms deploys. Follow these steps to download and install Tomcat if you don't have it installed yet:
 
@@ -33,7 +31,7 @@ Tomcat is the container application into which Orbeon Forms deploys. Follow thes
 
 _NOTE: We recommend using Tomcat for this tutorial, but Orbeon Forms can deploy into containers other than Tomcat._
 
-### Downloading and installing Orbeon Forms
+## Downloading and installing Orbeon Forms
 
 Follow these steps to download and install Orbeon Forms:
 
@@ -43,7 +41,7 @@ Follow these steps to download and install Orbeon Forms:
 
 3. Under `ORBEON_FORMS_HOME`, you find a file called `orbeon.war`. This is the file to deploy into Tomcat. To do so, just copy it under `TOMCAT_HOME/webapps` (alternatively, if you know what you are doing, you can uncompress it at a location of your choice and configure a context in `TOMCAT_HOME/conf/server.xml`). The `webapps` directory is already present after you have installed Tomcat.
 
-### Testing your setup
+## Testing your setup
 
 Make sure you restart Tomcat (run the shutdown script under `TOMCAT_HOME/bin`, and then the startup script again). Then open up with a web browser the following URL:
 
