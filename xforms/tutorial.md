@@ -929,11 +929,11 @@ This works in a way very similar to the "Add One" button:
 * `<xf:delete>` is declared as an event handler with the `ev:event="DOMActivate"` attribute.
 * The difference is in the configuration of `<xf:delete>`.
 
-Here you don't use the `position` and `origin` attributes. What you are telling the action here is to delete (`<xf:delete>`) the element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`) which is at the current index position of the `book-repeat` repetition (`at="index('book-repeat')"`).
-
-To understand the `index()` function, you should know that each repetition in XForms has an associated _current index_, which tells you which current iteration of a repetition is currently active. The current index changes as you navigate through controls. If you type in the title input field of the first book, the index is `1`; if you type in the author input field of the third book, the index is `3`; and so on. The index changes also if you click buttons. Usually, the current index is also visually highlighted.
-
-So here, when you click on the "Remove" button of, say, the second book, the index for the `books-repeat` repetition changes to `2`, and therefore `index('books-repeat')` also returns `2`. This way, you can tell `<xf:delete>` to remove the second `<book>` element.
+    Here you don't use the `position` and `origin` attributes. What you are telling the action here is to delete (`<xf:delete>`) the element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`) which is at the current index position of the `book-repeat` repetition (`at="index('book-repeat')"`).
+    
+    To understand the `index()` function, you should know that each repetition in XForms has an associated _current index_, which tells you which current iteration of a repetition is currently active. The current index changes as you navigate through controls. If you type in the title input field of the first book, the index is `1`; if you type in the author input field of the third book, the index is `3`; and so on. The index changes also if you click buttons. Usually, the current index is also visually highlighted.
+    
+    So here, when you click on the "Remove" button of, say, the second book, the index for the `books-repeat` repetition changes to `2`, and therefore `index('books-repeat')` also returns `2`. This way, you can tell `<xf:delete>` to remove the second `<book>` element.
 
 Now add the new trigger within `<xf:repeat>` and reload the page. Try adding books, then removing them by pressing the "Remove" button.
 
@@ -1027,32 +1027,21 @@ Finally, add a `books-label` class to the controls related to book data, for exa
 
 Now remember that Orbeon Forms does not send the XForms code directly to the web browser, but instead it transforms it into HTML. You realize that this is done because Orbeon Forms cannot assume that your web browser to support XForms at all. Consider the following examples:
 
-| ----- |
-| XForms Source |  HTML Result in Web Browser |
-|
-
 ```xml
 <xf:submit id="my-submit" submission="save-submission">
     <xf:label>Save</xf:label>
 </xf:submit>
 ```
 
- |
-
 ```xml
 <button id="my-submit" class="xforms-control xforms-submit" type="button">Save</button>
 ```
-
- |
-|
 
 ```xml
 <xf:input id="my-input" ref="title">
     <xf:label>Title</xf:label>
 </xf:input>
 ```
-
- |
 
 ```xml
 <label class="xforms-label" for="my-input">Title</label>
@@ -1070,16 +1059,11 @@ Now remember that Orbeon Forms does not send the XForms code directly to the web
 <label class="xforms-alert xforms-alert-inactive" for="my-input"/>
 ```
 
- |
-|
-
 ```xml
 <xf:textarea ref="notes">
     <xf:label class="books-label">Notes</xf:label>
 </xf:textarea>
 ```
-
- |
 
 ```xml
 <label class="books-label xforms-label" for="my-textarea">Notes</label>
@@ -1093,14 +1077,12 @@ Now remember that Orbeon Forms does not send the XForms code directly to the web
 <label class="xforms-alert xforms-alert-inactive" for="my-textarea"/>
 ```
 
- |
-
 And so on for each XForms construct. You notice that Orbeon Forms produces HTML code, including HTML form elements. Ideally, you wouldn't have to know this, and often you don't, but when it comes to styling with CSS having an idea of what the resulting HTML looks like will help you a lot.
 
 So now look at the following CSS declaration for the Bookcast application:
 
-| ----- |
 | CSS |  Description |
+| --- | --- |
 |  ` .xforms-label { font-weight: bold } `  |  Display all labels in bold.  |
 |  ` .books-label { display: -moz-inline-box; display: inline-block; width: expression('9em'); min-width: 9em; } `  |  Display all labels with the `books-label` class to have a minimum width. This allows aligning all the labels on the left. Note the mozilla- and IE-specific CSS.  |
 |  ` .xforms-textarea-appearance-xxforms-autosize { width: 20em; margin-bottom: 2px } `  |  Set width and margin to all text area controls with appearance `xxf:autosize`.  |
