@@ -31,6 +31,7 @@
    * [Form Editor](form-builder/form-editor/README.md)
        * [Control Settings](form-builder/form-editor/control-settings.md)
        * Form Area
+       * Itemset Editor
    * Form Localization
    * Toolbox
    * Form Editor
