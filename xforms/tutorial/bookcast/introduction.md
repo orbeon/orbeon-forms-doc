@@ -5,3 +5,6 @@ In this section, you will create a more complete XForms application: the Bookcas
 ![][11]
 
 You can run the final application [online on the Orbeon web site][12].
+
+[11]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/07.png
+[12]: http://demo.orbeon.com/orbeon/xforms-bookcast/
