@@ -74,6 +74,7 @@
    * General
    * Persistence
    * Form Runner
+   * Form Builder
 * XForms
    * XPath function library
        * [Standard functions](xforms/xpath/standard-functions.md)
