@@ -865,18 +865,16 @@ This tells the XForms engine that the content of the `<xf:repeat>` element must 
 The trick now is to manage to _add_ a new `<book>` element to the `books-instance` instance. First, create a _template_ for the new `<book>` element to insert by declaring a new instance:
 
 ```xml
-<html>
-    <xf:instance id="book-template">
-        <book xmlns="">
-            <title/>
-            <author/>
-            <language/>
-            <link/>
-            <rating/>
-            <notes/>
-        </book>
-    </xf:instance>
-</html>
+<xf:instance id="book-template">
+    <book xmlns="">
+        <title/>
+        <author/>
+        <language/>
+        <link/>
+        <rating/>
+        <notes/>
+    </book>
+</xf:instance>
 ```
 
 Then you want to copy that template to the right place in `books-instance` when the user presses a button. You do this with a new control called `<xf:trigger>` and a new action called `<xf:insert>`. Add the following to your controls:
@@ -884,7 +882,13 @@ Then you want to copy that template to the right place in `books-instance` when 
 ```xml
 <xf:trigger>
     <xf:label>Add One</xf:label>
-    <xf:insert ev:event="DOMActivate" context="instance('books-instance')" ref="book" at="1" position="before" origin="instance('book-template')"/>
+    <xf:insert
+        event="DOMActivate"
+        context="instance('books-instance')"
+        ref="book"
+        at="1"
+        position="before"
+        origin="instance('book-template')"/>
 </xf:trigger>
 ```
 
