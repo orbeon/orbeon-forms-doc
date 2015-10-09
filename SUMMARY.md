@@ -33,6 +33,7 @@
        * Form Area
        * Itemset Editor
        * Publishing
+       * Section Settings
    * Form Localization
    * Toolbox
    * Form Editor
