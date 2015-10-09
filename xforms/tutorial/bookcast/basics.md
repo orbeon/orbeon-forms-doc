@@ -1,5 +1,7 @@
 # The basic app
 
+<!-- toc -->
+
 ## Getting started
 
 But first things first. Start by making a first functional page:
