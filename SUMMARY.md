@@ -20,7 +20,7 @@
        * [Database Services](form-builder/advanced/database-services.md)
        * [Edit Source](form-builder/advanced/edit-source.md)
        * [Extension API](form-builder/advanced/extension-api.md)
-       * HTTP Services
+       * [HTTP Services](form-builder/advanced/http-services.md)
        * Integration
        * PDF Production
        * XML Schemas Support
