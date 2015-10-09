@@ -34,7 +34,7 @@
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
    * [Form Localization](form-builder/forms-localization.md)
-   * Toolbox
+   * [Toolbox](form-builder/toolbox/README.md)
    * Form Editor
    * Forms Localization
 * Form Runner
