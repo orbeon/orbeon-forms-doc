@@ -1086,9 +1086,8 @@ So now look at the following CSS declaration for the Bookcast application:
 |  ` .xforms-label { font-weight: bold } `  |  Display all labels in bold.  |
 |  ` .books-label { display: -moz-inline-box; display: inline-block; width: expression('9em'); min-width: 9em; } `  |  Display all labels with the `books-label` class to have a minimum width. This allows aligning all the labels on the left. Note the mozilla- and IE-specific CSS.  |
 |  ` .xforms-textarea-appearance-xxforms-autosize { width: 20em; margin-bottom: 2px } `  |  Set width and margin to all text area controls with appearance `xxf:autosize`.  |
-|  ` .xforms-input input { width: 20em; margin-bottom: 2px } `  |  Set width and margin to all input controls.  |
-|  ` .xforms-select1 { margin-bottom: 2px }
-.xforms-select1 input { margin-bottom: 2px } `  |  Set margin to all single selection controls.  |
+|  ` .xforms-input input { width: 20em; margin-bottom: 2px }`  |  Set width and margin to all input controls.  |
+|  `.xforms-select1 { margin-bottom: 2px } .xforms-select1 input { margin-bottom: 2px } `  |  Set margin to all single selection controls.  |
 |  ` .books-table { background-color: #fce5b6 }
 .books-table .add-td { width: 33em }
 .books-table .form-td { width: 33em; background: white; padding: .5em } `  |  Format the main table.  |
@@ -1218,16 +1217,12 @@ Also add `<xf:alert>` elements to the controls which might be invalid. This allo
     <xf:label class="books-label">Title</xf:label>
     <xf:alert>The title is required</xf:alert>
 </xf:input>
-```
 
-```xml
 <xf:input ref="author">
     <xf:label class="books-label">Author</xf:label>
     <xf:alert>The author is required</xf:alert>
 </xf:input>
-```
 
-```xml
 <xf:input ref="link">
     <xf:label class="books-label">Link</xf:label>
     <xf:alert>The link is incorrect</xf:alert>
@@ -1236,9 +1231,7 @@ Also add `<xf:alert>` elements to the controls which might be invalid. This allo
 
 Reload the page, and try to enter an invalid link, for example "ftp://ftp.example.com/". An alert icon will show up as you leave the link field with your cursor.
 
-_NOTE:_
-
-_The URL of the schema, "/apps/my-bookcast/schema.xsd", is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded though:_
+_NOTE: The URL of the schema, "/apps/my-bookcast/schema.xsd", is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded though:_
 
 ```xml
 http://localhost:8080/orbeon/apps/my-bookcast/schema.xsd
@@ -1260,9 +1253,15 @@ Still with an invalid link, press the "Save" link and check the data in the data
 It would be nice to tell the user that saving didn't work. You can do this very easily: if a submission error occurs, the `<xf:submission>` element dispaches the `xforms-submit-error` event. So let's see how you catch that event and display a message to the user:
 
 ```xml
-<xf:submission id="save-submission" ref="instance('books-instance')"
-  resource="/exist/rest/db/orbeon/my-bookcast/books.xml" method="put" replace="none">
-    <xf:message ev:event="xforms-submit-error" level="modal">An error occurred while saving!</xf:message>
+<xf:submission
+    id="save-submission"
+    ref="instance('books-instance')"
+    resource="/exist/rest/db/orbeon/my-bookcast/books.xml" 
+    method="put"
+    replace="none">
+    <xf:message
+        event="xforms-submit-error"
+        level="modal">An error occurred while saving!</xf:message>
 </xf:submission>
 ```
 
@@ -1323,14 +1322,20 @@ This separation means that you can change how the data is retrieved without chan
 Consider the page model:
 
 ```xml
-<p:config xmlns:p="http://www.orbeon.com/oxf/pipeline" xmlns:oxf="http://www.orbeon.com/oxf/processors">
+<p:config
+    xmlns:p="http://www.orbeon.com/oxf/pipeline"
+    xmlns:oxf="http://www.orbeon.com/oxf/processors">
 
     <p:param name="data" type="output"/>
 
     <!-- Execute REST submission -->
     <p:processor name="oxf:xforms-submission">
         <p:input name="submission">
-            <xf:submission xmlns:xforms="http://www.w3.org/2002/xforms" serialization="none" method="get" resource="/exist/rest/db/orbeon/my-bookcast/books.xml"/>
+            <xf:submission
+                xmlns:xforms="http://www.w3.org/2002/xforms"
+                serialization="none"
+                method="get"
+                resource="/exist/rest/db/orbeon/my-bookcast/books.xml"/>
         </p:input>
         <p:input name="request"><dummy/></p:input>
         <p:output name="response" ref="data"/>
