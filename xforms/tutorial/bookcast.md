@@ -1,6 +1,6 @@
-## The Bookcast application
+# The Bookcast application
 
-### What is it?
+## What is it?
 
 In this section, you will create a more complete XForms application: the Bookcast application. The Bookcast application allows you to keep track of information about books you have read. For each book, you enter information such as title, author, language, and your own comments. The information is persisted so you can access it again. Then you can do cool things with the available data such create an Atom feed of your entries.
 
@@ -8,7 +8,7 @@ In this section, you will create a more complete XForms application: the Bookcas
 
 You can run the final application [online on the Orbeon web site][12].
 
-### Getting started
+## Getting started
 
 But first things first. Start by making a first functional page:
 
@@ -56,7 +56,7 @@ _If you get lost at some point in this tutorial, feel free to look at the refere
 * [view.xhtml][?]
 * [page-flow.xml][?]
 
-### XForms model and instance
+## XForms model and instance
 
 An XForms document that wants to do something really useful needs at least one model containing one instance. But first it is wise to decide how you would like to represent the information captured by your form. This is an example that shows a possible representation of the data of the Bookcast application (notes are borrowed from Wikipedia and are under the GNU Free Documentation License):
 
@@ -145,7 +145,7 @@ Now do the following:
 
 You should still see a blank page, because so far you haven't added any visual elements!
 
-### First controls
+## First controls
 
 Now it's time to add some visual controls to your page. Start with the following under the `<body>` element:
 
@@ -169,7 +169,7 @@ After having looked at the Hello example, this should be clear, with a little no
 
 Another thing: all XForms controls require a nested `<xf:label>` element, as an effort to help accessibility. In some cases, you won't want an actual label to display next to the control: to achieve this, you can either hide the label with CSS, or use an empty label element (`<xf:label/>`).
 
-### Adding constraints
+## Adding constraints
 
 Now say you want to make the title and author required data. You control this with the `<xf:bind>` element in the XForms model. Add the following under `<xf:model>` after your instance:
 
@@ -209,7 +209,7 @@ The above requires some explanations:
 * The inner `<xf:bind>` elements apply the _required_ MIP to the `<title>` and `<author>` elements. The `required` attribute must contain an XPath expression, which is why it contains `true()` (the way to express a Boolean "true" value in XPath) and not simply `true`. Using XPath expressions allows you to make MIPs dynamically change, so that, for example, a form field can be required or not depending on other form fields.
 * Note that MIPs are assigned to XML nodes, not directly to controls. But they affect the controls that are bound to those nodes. This is part of XForms's MVC philosophy.
 
-### Single selection controls
+## Single selection controls
 
 XForms is of course not limited to simple input controls. Add the following after the second `<xf:input>` control:
 
@@ -284,7 +284,7 @@ Notice the new `<xf:itemset>` element in addition to the `<xf:item>` previously 
 
 You often don't have to use an item set, but using them gives you the flexibility of reusing existing sets of data, dynamically changing the list of items, easing localization, etc.
 
-### Adding a text area
+## Adding a text area
 
 Now add yet another control, a text area:
 
@@ -300,7 +300,7 @@ Here there is a little trick: you use the `appearance` attribute to tell Orbeon 
 
 Note that the application captures the same data without the `appearance` attribute, it's just that the control appears slightly differently and the user experience is changed.
 
-### Finishing-up the controls
+## Finishing-up the controls
 
 To create the ratings input, add this new instance:
 
@@ -401,7 +401,7 @@ And this is how the result should look like (you will see how to add the Save bu
 
 By now you probably get the gist of it!
 
-### Adding a "save" button
+## Adding a "save" button
 
 The Bookcast application now allows you to capture some data. But it is not a very useful application yet, because it doesn't do anything with it! So let's see how you can add a "Save" button that, once pressed, well, saves the data in your form.
 
@@ -489,7 +489,7 @@ _NOTE:_
 
 _Of course, you don't have to use eXist or even an XML database with Orbeon Forms: you can in fact interface with any system you can think of with submissions. For systems that don't already have a REST API, you will need to write REST interfaces - and you can do this with your favorite language and platform, including Java, PHP, Ruby, or .NET. You can even write such services with Orbeon Forms XPL (the Orbeon Forms XML pipelines language), which feature built-in components for access to relational databases, web services, and more._
 
-### Loading the initial data
+## Loading the initial data
 
 You can now save your data to the database, and read it back using your web browser. The missing part of course consists in allowing the application to automatically load up the data when the page is first displayed.
 
@@ -551,7 +551,7 @@ _Actions_ and _events_ are very important in xf: they are the glue that allows y
 
 (You may wonder what would happen the first time the `list-submission` is called if no `books.xml` document is available in the database. The answer is that the database would return an error, and the submission would throw an event called `xforms-submit-error`. But because you don't have an event handler for this event, nothing happens: the initial content of the `books-submission` instance is not changed and so you see an empty form.)
 
-### Adding more books
+## Adding more books
 
 Now let's see how we can enter information about more than a single book!
 
@@ -624,7 +624,7 @@ Let's explain what the above does:
 
 Again the XForms engine does its magic and takes care of updating the web page automatically. You also notice that the web page does not reload as it updates. This is because Orbeon Forms uses Ajax technology to perform updates to the page. With Ajax, client-side JavaScript code silently talks to the Orbeon Forms server, which then communicates to the client-side code the updates to perform to the page. These update are directly done to the HTML Document Object Model (DOM) without reload.
 
-### Deleting a book
+## Deleting a book
 
 If you can add books, you probably also want to be able to remove them. This can be done with the `<xf:delete>` action. It doesn't seem to make much sense to always remove the first book, but rather, you probably want to delete a specific book. This can be done in several ways, but what about adding a delete button next to each series of repeated controls:
 
@@ -655,7 +655,7 @@ Now add the new trigger within `<xf:repeat>` and reload the page. Try adding boo
 
 ![][20]
 
-### Adding a "revert" button
+## Adding a "revert" button
 
 For fun, let's also add a new button to cancel your unsaved edits and reload the original data from the database. It's as easy as this:
 
@@ -667,7 +667,7 @@ For fun, let's also add a new button to cancel your unsaved edits and reload the
 
 When you press the "Revert" button, the `list-submission` submission is called, which causes the latest saved `books.xml` document to be reloaded. The XForms engine makes sure that all the controls on the page, including repeats, automatically update to reflect the changes to the `books-instance` instance.
 
-### Making things look nicer
+## Making things look nicer
 
 You are probably not very happy with the look of your application. But let's see how you can improve this with CSS.
 
@@ -828,7 +828,7 @@ Reload the page, and you should see something like this:
 
 A little bit of CSS does make things look a little better, doesn't it?
 
-### Adding validation
+## Adding validation
 
 You already made the title and author mandatory fields, but you may want to validate the data more thoroughly. With XForms, validation has two sides:
 
@@ -987,7 +987,7 @@ Try now making this change, enter an invalid link, and press the "Save" link: an
 
 ![][22]
 
-### The Atom feed
+## The Atom feed
 
 Remember, the name of this application is Book_cast_, which lets suggest that we can expose the list of books as a feed of some sort. Here, you will use the Atom Syndication Format (or Atom in short). Atom is a format very much like RSS but it has been standardized by IETF and is much cleaner than RSS (note that there are at least 6 different versions of RSS). Atom is now supported by most feed readers.
 
