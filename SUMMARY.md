@@ -23,7 +23,7 @@
        * [HTTP Services](form-builder/advanced/http-services.md)
        * [Integration](form-builder/advanced/integration.md)
        * [PDF Production](form-builder/advanced/pdf-production.md)
-       * XML Schemas Support
+       * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
    * [Introduction](Form-Builder-Introduction.md)
        * [Sun-intro](fb/sub-intro.md)
    * [Lifecycle of a form](form-builder/lifecycle-of-a-form.md)
