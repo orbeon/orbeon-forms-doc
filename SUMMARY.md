@@ -30,7 +30,7 @@
        * [Examples](form-builder/formulas/examples.md)
    * [Form Editor](form-builder/form-editor/README.md)
        * [Control Settings](form-builder/form-editor/control-settings.md)
-       * Form Area
+       * [Form Area](form-builder/form-editor/form-area.md)
        * Itemset Editor
        * Publishing
        * Section Settings
