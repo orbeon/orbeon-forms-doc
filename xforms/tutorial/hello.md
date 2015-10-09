@@ -1,5 +1,7 @@
 # The Hello application
 
+<!-- toc -->
+
 ## Running the Hello application
 
 The Hello application is about the simplest Orbeon Forms application you can think of. It asks for your name and displays it back. Here is a direct link for running XForms Hello [online on the Orbeon web site][6].
