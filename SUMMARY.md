@@ -28,7 +28,7 @@
    * [HTTP Services](form-builder/http-services.md)
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
-   * Form Editor
+   * [Form Editor](form-builder/form-editor/README.md)
    * Form Localization
    * Toolbox
    * Form Editor
