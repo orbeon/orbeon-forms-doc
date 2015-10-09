@@ -2,16 +2,6 @@
 
 <!-- toc -->
 
-### What differentiates Orbeon Forms from other web solutions?
-
-A few things come to mind:
-
-1. Orbeon Forms is not intended to be a general-purpose web app platform, but instead focuses on forms, typically large forms, and handling many of them. It's not uncommon for users to have hundreds of forms to create and deploy, or to have forms with hundreds of fields (sometimes more than 1000 fields).
-
-2. Although from time to time customization is required, and some complex rules do require the use of XPath, Orbeon Forms strives not to require coding in Java, JavaScript or other programming languages. Instead, Orbeon Forms provides an authoring tool and a runtime environment that try to do as much as possible out of the box.
-
-3. Orbeon Forms does not rely on any particular proprietary technology, unlike solutions from some large companies.
-
 ### Is there any cost associated with using Orbeon Forms?
 
 [Professional Edition (PE) builds](http://www.orbeon.com/download) are available through [PE Subscription plans](http://www.orbeon.com/pricing). Further commercial support is available with [Dev Support plans](http://www.orbeon.com/services).
