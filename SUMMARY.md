@@ -74,7 +74,7 @@
    * General
    * Persistence
    * Form Runner
-   * Form Builder
+   * [Form Builder](properties/form-builder.md)
    * XForms
 * XForms
    * XPath function library
