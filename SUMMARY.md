@@ -100,4 +100,5 @@
 * [Index of Features](features.md)
 * [Release History](release-history.md)
 * [Product Roadmap](roadmap.md)
+* Properties
 
