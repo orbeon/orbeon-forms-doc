@@ -17,7 +17,7 @@
 * [Form Builder](form-builder/README.md)
    * Advanced
        * [Actions](form-builder/advanced/actions.md)
-       * Database Services
+       * [Database Services](form-builder/advanced/database-services.md)
        * Edit Source
        * Extension API
        * HTTP Services
