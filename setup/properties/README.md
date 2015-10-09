@@ -1,4 +1,6 @@
-> [[Home]] ▸ [[Installation]]
+# Properties
+
+<!-- toc -->
 
 ## Overview
 
