@@ -64,7 +64,7 @@ Tomcat is the container application into which Orbeon Forms deploys. Follow thes
     ```
 
     You should see the Tomcat welcome page.
-    
+
     ![][3]
 
 _NOTE: We recommend using Tomcat for this tutorial, but Orbeon Forms can deploy into containers other than Tomcat._
@@ -84,7 +84,7 @@ Follow these steps to download and install Orbeon Forms:
 Make sure you restart Tomcat (run the shutdown script under `TOMCAT_HOME/bin`, and then the startup script again). Then open up with a web browser the following URL:
 
 ```xml
-http://localhost:8080/orbeon/  
+http://localhost:8080/orbeon/
 ```
 
 You should see the Orbeon Forms welcome page:
@@ -113,20 +113,20 @@ You are now ready to look at the source code of the Hello application. This will
       xmlns:xforms="http://www.w3.org/2002/xforms">
     <head>
         <title>XForms Hello</title>
-        <xforms:model>
-            <xforms:instance>
+        <xf:model>
+            <xf:instance>
                 <first-name xmlns=""/>
-            </xforms:instance>
-        </xforms:model>
+            </xf:instance>
+        </xf:model>
     </head>
     <body>
         <p>
-            <xforms:input ref="/first-name" incremental="true">
-                <xforms:label>Please enter your first name:</xforms:label>
-            </xforms:input>
+            <xf:input ref="/first-name" incremental="true">
+                <xf:label>Please enter your first name:</xf:label>
+            </xf:input>
         </p>
         <p>
-            <xforms:output
+            <xf:output
               value="if (normalize-space(/first-name) = '') then ''
                      else concat('Hello, ', /first-name, '!')"/>
         </p>
@@ -136,33 +136,33 @@ You are now ready to look at the source code of the Hello application. This will
 
 The first thing you notice is that this looks very much like HTML (notice the `<html>` tag). But in fact, this is XHTML, the XML-compatible version of HTML. There are only a few differences that matter between HTML and XHTML, in particular you must close all your tags and use quotes around attributes. Also, you must place your tags in a _namespace_, which is why the `<html>` tag features the `xmlns="http://www.w3.org/1999/xhtml"` _namespace declaration_.
 
-Another difference with plain HTML is that there are tags that start with the string `xforms:`. Those are defined by the [XForms specification][8] from W3C. They are at the heart of Orbeon Forms and enable all the cool forms features that you see in Orbeon Forms demos. (In order to use XForms tags that start with `xforms:`, you must add another namespace declaration on the `` tag: `xmlns:xforms="http://www.w3.org/2002/xforms"`.)
+Another difference with plain HTML is that there are tags that start with the string `xf:`. Those are defined by the [XForms specification][8] from W3C. They are at the heart of Orbeon Forms and enable all the cool forms features that you see in Orbeon Forms demos. (In order to use XForms tags that start with `xf:`, you must add another namespace declaration on the `<html>` tag: `xmlns:xforms="http://www.w3.org/2002/xforms"`.)
 
 Using XForms in Orbeon Forms means that you don't have to use HTML forms at all. The benefit is that XForms is much more powerful than HTML forms, as you will see in this tutorial.
 
-You notice a tag called `<xforms:model>`. Because XForms follows a Model-View-Controller (MVC) approach, most XForms pages contain one or more _models_ that usually encapsulate other XForms markup. You place these models under the XHTML `` tag.
+You notice a tag called `<xf:model>`. Because XForms follows a Model-View-Controller (MVC) approach, most XForms pages contain one or more _models_ that usually encapsulate other XForms markup. You place these models under the XHTML `<head>` tag.
 
 Note that from now on, we prefer the term _element_ to the term _tag_. An element is an XML term that includes the start tag and end tag, and can have content such as other elements and text.
 
 With XForms, you store the data captured by controls such as input fields, combo boxes, etc. as text contained within XML elements or attributes. Consider the following XML document containing a single element called `first-name`.
 
 ```xml
-<first-name>  
+<first-name>
 ```
 
 The `first-name` element is _empty_. Contrast with:
 
 ```xml
-<first-name>Joe</first-name>  
+<first-name>Joe</first-name>
 ```
 
-The element now contains the string "Joe". Notice how in `view.xhtml` the XML document is encapsulated within an `<xforms:instance>` element:
+The element now contains the string "Joe". Notice how in `view.xhtml` the XML document is encapsulated within an `<xf:instance>` element:
 
 ```xml
 <html>
-    <xforms:instance>
+    <xf:instance>
         <first-name xmlns=""/>
-    </xforms:instance>
+    </xf:instance>
 </html>
 ```
 
@@ -170,22 +170,22 @@ Also notice the special `xmlns=""` namespace attribute on `<first-name>`: this i
 
 This element defines an XForms _instance_, which is just XForms' way of calling an XML document used to store data.
 
-Now consider the remaining XForms elements in the source file: `<xforms:input>` and `<xforms:output>`. These two elements are not located under the XHTML ``, but under ``. They are part of the _view_ of your page, in other words these elements directly help define visible controls on the page. Consider `<xforms:input>`:
+Now consider the remaining XForms elements in the source file: `<xf:input>` and `<xf:output>`. These two elements are not located under the XHTML ``, but under ``. They are part of the _view_ of your page, in other words these elements directly help define visible controls on the page. Consider `<xf:input>`:
 
 ```xml
-<xforms:input ref="/first-name" incremental="true">  
+<xf:input ref="/first-name" incremental="true">
 ```
 
-You guessed that this element allows the user to _input_ information. `<xforms:input>` is usually displayed to the user as an input field. The `ref` attribute is the magic that connects the input field to the XForms instance. It contains an _XPath expression_, which in this case just looks like a file path. In this case, `/first-name` points to the element called `first-name`, which happens to be the only element we have in the XForms instance. Using the `ref` attribute this way is called a _binding_ and means two things:
+You guessed that this element allows the user to _input_ information. `<xf:input>` is usually displayed to the user as an input field. The `ref` attribute is the magic that connects the input field to the XForms instance. It contains an _XPath expression_, which in this case just looks like a file path. In this case, `/first-name` points to the element called `first-name`, which happens to be the only element we have in the XForms instance. Using the `ref` attribute this way is called a _binding_ and means two things:
 
 * When the user enters text in the input field, the text is saved into the element called `first-name`.
 * It also goes the other way: if somehow the text content of `first-name` in the XForms instance changes, this is automatically reflected in the input field.
 
-Now consider `<xforms:output>`. As you guess from the name of the element, this simply displays a value on screen. If you have tried running the Hello application, you have probably guessed the logic that is being implemented: if the first name entered by the user is not a blank string, then we display the "Hello" message followed by the first name and then an exclamation mark. Otherwise if the first name consists only of spaces, we just display a blank string. The idea is to avoid displaying things like "Hello !" without an actual first name.
+Now consider `<xf:output>`. As you guess from the name of the element, this simply displays a value on screen. If you have tried running the Hello application, you have probably guessed the logic that is being implemented: if the first name entered by the user is not a blank string, then we display the "Hello" message followed by the first name and then an exclamation mark. Otherwise if the first name consists only of spaces, we just display a blank string. The idea is to avoid displaying things like "Hello !" without an actual first name.
 
 With many client-side libraries, you express this type of logic with JavaScript. With XForms, you use XPath instead. This means that you need to learn at least a few bits of the XPath syntax. While XPath may be different from what you already know (it is based on expressions and definitely targeted at XML), it is in fact a smaller language than JavaScript.
 
-So how do you hook-up the logic within `<xforms:output>`? Here, instead of a `ref` attribute, we use a `value` attribute. Like `ref`, `value` takes an XPath expression, but it doesn't actually create a binding to instance data: it just returns a string. The XPath is as follows:
+So how do you hook-up the logic within `<xf:output>`? Here, instead of a `ref` attribute, we use a `value` attribute. Like `ref`, `value` takes an XPath expression, but it doesn't actually create a binding to instance data: it just returns a string. The XPath is as follows:
 
 ```ruby
 if (normalize-space(/first-name) = '') then
@@ -207,7 +207,7 @@ A few things to point out:
 If you look at your browser's URL bar when showing the example, you notice that it looks like this:
 
 ```xml
-http://localhost:8080/orbeon/xforms-hello/  
+http://localhost:8080/orbeon/xforms-hello/
 ```
 
 * The first part of the URL, `http://localhost:8080/`, is self-explanatory: it depends on what host and port your server is running.
@@ -226,13 +226,13 @@ So now look at `page-flow.xml` for the Hello application. It is very simple:
 The important line in this page flow is this one:
 
 ```xml
-<page path="*" view="view.xhtml">  
+<page path="*" view="view.xhtml">
 ```
 
 It tells Orbeon Forms that any path (notice the wildcard `*`) sent by the web browser to this application causes the page view stored in `view.xhtml` to be processed. You can check this by entering the following path in your browser:
 
 ```xml
-http://localhost:8080/orbeon/xforms-hello/my-page  
+http://localhost:8080/orbeon/xforms-hello/my-page
 ```
 
 The exact same result shows! Of course, page flows make the most sense when you have more than one page in your application, which translates into more than one `<page>` element.
@@ -274,13 +274,13 @@ Now, modify `view.xhtml`:
 
 ![][9]
 
-* Repeat the experience but add some XForms. For example, add a second `<xforms:input>` right after the first one:
+* Repeat the experience but add some XForms. For example, add a second `<xf:input>` right after the first one:
 
 ```xml
-<xforms:input ref="/first-name" incremental="true">  
+<xf:input ref="/first-name" incremental="true">
 ```
 ```xml
-<xforms:input ref="/first-name" incremental="true">  
+<xf:input ref="/first-name" incremental="true">
 ```
 
 Reload the page, and notice, as you type in an input field, how the other one updates as you type. This happens because the two fields are bound to the same instance data. The `incremental="true"` attribute allows the changes to occur as you type, instead of occurring when you focus in and out of fields:
@@ -328,12 +328,12 @@ This page flow is automatically called for any path that starts with `/orbeon/my
 </html>
 ```
 
-This is a very basic XHTML document. It features a title in the `` and a "Hello!" message in the ``/. It also declares a bunch of XML namespaces that you need later in the document.
+This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the ``/. It also declares a bunch of XML namespaces that you need later in the document.
 
 Now go to:
 
 ```xml
-http://localhost:8080/orbeon/my-bookcast/  
+http://localhost:8080/orbeon/my-bookcast/
 ```
 
 You should something like this:
@@ -406,12 +406,12 @@ An XForms document that wants to do something really useful needs at least one m
 </books>
 ```
 
-As you can see, the idea is to store the information about all the books in a single XML document. So under a top-level `<books>` element, we put as many `<book>` children elements as needed. You will see later how it is possible with XForms to add and remove children elements. For now, your initial instance declaration is empty and contains a single book, and you place it as usual within an `<xforms:model>` element:
+As you can see, the idea is to store the information about all the books in a single XML document. So under a top-level `<books>` element, we put as many `<book>` children elements as needed. You will see later how it is possible with XForms to add and remove children elements. For now, your initial instance declaration is empty and contains a single book, and you place it as usual within an `<xf:model>` element:
 
 ```xml
 <html>
-    <xforms:model>
-        <xforms:instance id="books-instance">
+    <xf:model>
+        <xf:instance id="books-instance">
             <books xmlns="">
                 <book>
                     <title/>
@@ -422,8 +422,8 @@ As you can see, the idea is to store the information about all the books in a si
                     <notes/>
                 </book>
             </books>
-        </xforms:instance>
-    </xforms:model>
+        </xf:instance>
+    </xf:model>
 </html>
 ```
 
@@ -441,104 +441,104 @@ You should still see a blank page, because so far you haven't added any visual e
 Now it's time to add some visual controls to your page. Start with the following under the `<body>` element:
 
 ```xml
-<xforms:group ref="book">
-    <xforms:input ref="title">
-        <xforms:label>Title</xforms:label>
-    </xforms:input>
+<xf:group ref="book">
+    <xf:input ref="title">
+        <xf:label>Title</xf:label>
+    </xf:input>
     <br/>
-    <xforms:input ref="author">
-        <xforms:label>Author</xforms:label>
-    </xforms:input>
-</xforms:group>
+    <xf:input ref="author">
+        <xf:label>Author</xf:label>
+    </xf:input>
+</xf:group>
 ```
 
 Reload the page. You should seem something like this:
 
 ![][14]
 
-After having looked at the Hello example, this should be clear, with a little novelty: `<xforms:group>`: this element allows grouping XForms controls together. The `ref="book"` element changes the current _evaluation context_ for the nested controls, which means that they can use simpler XPath expressions: `ref="title"` instead of `ref="book/title"` and `ref="author"` instead of `ref="book/author"` (groups have other uses but you don't need to learn that now).
+After having looked at the Hello example, this should be clear, with a little novelty: `<xf:group>`: this element allows grouping XForms controls together. The `ref="book"` element changes the current _evaluation context_ for the nested controls, which means that they can use simpler XPath expressions: `ref="title"` instead of `ref="book/title"` and `ref="author"` instead of `ref="book/author"` (groups have other uses but you don't need to learn that now).
 
-Another thing: all XForms controls require a nested `<xforms:label>` element, as an effort to help accessibility. In some cases, you won't want an actual label to display next to the control: to achieve this, you can either hide the label with CSS, or use an empty label element (`<xforms:label/>`).
+Another thing: all XForms controls require a nested `<xf:label>` element, as an effort to help accessibility. In some cases, you won't want an actual label to display next to the control: to achieve this, you can either hide the label with CSS, or use an empty label element (`<xf:label/>`).
 
 ### Adding constraints
 
-Now say you want to make the title and author required data. You control this with the `<xforms:bind>` element in the XForms model. Add the following under `<xforms:model>` after your instance:
+Now say you want to make the title and author required data. You control this with the `<xf:bind>` element in the XForms model. Add the following under `<xf:model>` after your instance:
 
 ```xml
-<xforms:bind ref="book">
-    <xforms:bind nodeset="title" required="true()"/>
-    <xforms:bind nodeset="author" required="true()"/>
-</xforms:bind>
+<xf:bind ref="book">
+    <xf:bind nodeset="title" required="true()"/>
+    <xf:bind nodeset="author" required="true()"/>
+</xf:bind>
 ```
 
 Notice how, as you enter text in the title or author field, the field's background changes color to indicate that the field must be filled out.
 
 The above requires some explanations:
 
-* The `<xforms:bind>` element is used to assign so-called _Model Item Properties_ (or _MIPs_) to XForms instance nodes (typically XML elements or attributes). Such properties include whether a field is required, read-only, or visible; whether the field has to satisfy a certain constraint or be of a particular type; and whether the field is a calculated value.
+* The `<xf:bind>` element is used to assign so-called _Model Item Properties_ (or _MIPs_) to XForms instance nodes (typically XML elements or attributes). Such properties include whether a field is required, read-only, or visible; whether the field has to satisfy a certain constraint or be of a particular type; and whether the field is a calculated value.
 * Here we use the `required` attribute, which determines whether a field is, well, required, that is, whether it has to be filled out by the user.
-* Much like `<xforms:group>` in the controls, `<xforms:bind>` elements can be nested.
-* `<xforms:bind>` uses a `ref` attribute, which allows pointing at more than one node using a single XPath expression.
-* The outer `<xforms:bind>` element points to the `<book>` element under the top-level `<books>` element of your instance. This happens because the evaluation context for a top-level XPath expression in an `<xforms:bind>` element is the root element of the first XForms instance. You could be more explicit, for example with:
+* Much like `<xf:group>` in the controls, `<xf:bind>` elements can be nested.
+* `<xf:bind>` uses a `ref` attribute, which allows pointing at more than one node using a single XPath expression.
+* The outer `<xf:bind>` element points to the `<book>` element under the top-level `<books>` element of your instance. This happens because the evaluation context for a top-level XPath expression in an `<xf:bind>` element is the root element of the first XForms instance. You could be more explicit, for example with:
 
 ```xml
-<xforms:bind ref="/books/book">
+<xf:bind ref="/books/book">
     ...
-</xforms:bind>
+</xf:bind>
 ```
 
 Or with:
 
 ```xml
-<xforms:bind ref="instance('books-instance')/book">
+<xf:bind ref="instance('books-instance')/book">
     ...
-</xforms:bind>
+</xf:bind>
 ```
 
 The latter makes it clear, with the XForms `instance()` function, that you are addressing the `books-instance` instance and not another instance, so you will probably tend to prefer that notation.
 
-* The inner `<xforms:bind>` elements apply the _required_ MIP to the `<title>` and `<author>` elements. The `required` attribute must contain an XPath expression, which is why it contains `true()` (the way to express a Boolean "true" value in XPath) and not simply `true`. Using XPath expressions allows you to make MIPs dynamically change, so that, for example, a form field can be required or not depending on other form fields.
+* The inner `<xf:bind>` elements apply the _required_ MIP to the `<title>` and `<author>` elements. The `required` attribute must contain an XPath expression, which is why it contains `true()` (the way to express a Boolean "true" value in XPath) and not simply `true`. Using XPath expressions allows you to make MIPs dynamically change, so that, for example, a form field can be required or not depending on other form fields.
 * Note that MIPs are assigned to XML nodes, not directly to controls. But they affect the controls that are bound to those nodes. This is part of XForms's MVC philosophy.
 
 ### Single selection controls
 
-XForms is of course not limited to simple input controls. Add the following after the second `<xforms:input>` control:
+XForms is of course not limited to simple input controls. Add the following after the second `<xf:input>` control:
 
 ```xml
-<xforms:select1 ref="language">
-    <xforms:label>Language</xforms:label>
-    <xforms:item>
-        <xforms:label>Choose one...</xforms:label>
-        <xforms:value/>
-    </xforms:item>
-    <xforms:item>
-        <xforms:label>English</xforms:label>
-        <xforms:value>en</xforms:value>
-    </xforms:item>
-    <xforms:item>
-        <xforms:label>French</xforms:label>
-        <xforms:value>fr</xforms:value>
-    </xforms:item>
-    <xforms:item>
-        <xforms:label>Spanish</xforms:label>
-        <xforms:value>es</xforms:value>
-    </xforms:item>
-</xforms:select1>
+<xf:select1 ref="language">
+    <xf:label>Language</xf:label>
+    <xf:item>
+        <xf:label>Choose one...</xf:label>
+        <xf:value/>
+    </xf:item>
+    <xf:item>
+        <xf:label>English</xf:label>
+        <xf:value>en</xf:value>
+    </xf:item>
+    <xf:item>
+        <xf:label>French</xf:label>
+        <xf:value>fr</xf:value>
+    </xf:item>
+    <xf:item>
+        <xf:label>Spanish</xf:label>
+        <xf:value>es</xf:value>
+    </xf:item>
+</xf:select1>
 ```
 
 Reload the page. You should see the following:
 
 ![][15]
 
-You have just added a single selection control with `<xforms:select1>`. The name means that the user can "select one" item among several items. (XForms tends to call controls using more abstract terms, rather than giving them names such as "combo box" or "menu".) The single selection control usually appears like a drop-down menu or combo box with most XForms implementations (but you can change it's appearance as shown later).
+You have just added a single selection control with `<xf:select1>`. The name means that the user can "select one" item among several items. (XForms tends to call controls using more abstract terms, rather than giving them names such as "combo box" or "menu".) The single selection control usually appears like a drop-down menu or combo box with most XForms implementations (but you can change it's appearance as shown later).
 
-Nested within the control, you find several `<xforms:item>` elements. Each one creates an item in the drop-down menu. An item has to sides: the `<xforms:label>` element specifies the _label_ that is presented to the user, and the `<xforms:value>` element specifies the _value_ that is stored into the XForms instance when the user selects that particular item.
+Nested within the control, you find several `<xf:item>` elements. Each one creates an item in the drop-down menu. An item has to sides: the `<xf:label>` element specifies the _label_ that is presented to the user, and the `<xf:value>` element specifies the _value_ that is stored into the XForms instance when the user selects that particular item.
 
-Now XForms encourages you to store data in the model. For a selection control, this means storing the list of labels and values in an XForms instance instead of statically listing the items under the `<xforms:select1>` element. So let's do this! Create a new instance in the model:
+Now XForms encourages you to store data in the model. For a selection control, this means storing the list of labels and values in an XForms instance instead of statically listing the items under the `<xf:select1>` element. So let's do this! Create a new instance in the model:
 
 ```xml
 <html>
-    <xforms:instance id="languages-instance">
+    <xf:instance id="languages-instance">
         <languages xmlns="">
             <language>
                 <name>English</name>
@@ -553,27 +553,27 @@ Now XForms encourages you to store data in the model. For a selection control, t
                 <value>es</value>
             </language>
         </languages>
-    </xforms:instance>
+    </xf:instance>
 </html>
 ```
 
-Then modify the `<xforms:select1>` element as follows:
+Then modify the `<xf:select1>` element as follows:
 
 ```xml
-<xforms:select1 ref="language">
-    <xforms:label>Language</xforms:label>
-    <xforms:item>
-        <xforms:label>Choose One...</xforms:label>
-        <xforms:value/>
-    </xforms:item>
-    <xforms:itemset nodeset="instance('languages-instance')/language">
-        <xforms:label ref="name"/>
-        <xforms:value ref="value"/>
-    </xforms:itemset>
-</xforms:select1>
+<xf:select1 ref="language">
+    <xf:label>Language</xf:label>
+    <xf:item>
+        <xf:label>Choose One...</xf:label>
+        <xf:value/>
+    </xf:item>
+    <xf:itemset nodeset="instance('languages-instance')/language">
+        <xf:label ref="name"/>
+        <xf:value ref="value"/>
+    </xf:itemset>
+</xf:select1>
 ```
 
-Notice the new `<xforms:itemset>` element in addition to the `<xforms:item>` previously used. That element specifies an _item set_, which allows you to point to the list of `<language>` nodes in the `languages-instance` instance, and for each of those to tell the control where to find the label and the value.
+Notice the new `<xf:itemset>` element in addition to the `<xf:item>` previously used. That element specifies an _item set_, which allows you to point to the list of `<language>` nodes in the `languages-instance` instance, and for each of those to tell the control where to find the label and the value.
 
 You often don't have to use an item set, but using them gives you the flexibility of reusing existing sets of data, dynamically changing the list of items, easing localization, etc.
 
@@ -582,14 +582,14 @@ You often don't have to use an item set, but using them gives you the flexibilit
 Now add yet another control, a text area:
 
 ```xml
-<xforms:textarea ref="notes" appearance="xxforms:autosize">
-    <xforms:label>Notes</xforms:label>
-</xforms:textarea>
+<xf:textarea ref="notes" appearance="xxf:autosize">
+    <xf:label>Notes</xf:label>
+</xf:textarea>
 ```
 
-The `<xforms:textarea>` element acts very much like the HTML `textarea` element. It makes sense to use it to allow entering more than one line of text.
+The `<xf:textarea>` element acts very much like the HTML `textarea` element. It makes sense to use it to allow entering more than one line of text.
 
-Here there is a little trick: you use the `appearance` attribute to tell Orbeon Forms to use a particular appearance for the text area control. Instead of the standard text area, `appearance="xxforms:autosize"` allows the text area to grow vertically as the user enters more text. (This is an appearance which is specific to Orbeon Forms, and you can tell that because of the `xxforms:` prefix in the appearance value.)
+Here there is a little trick: you use the `appearance` attribute to tell Orbeon Forms to use a particular appearance for the text area control. Instead of the standard text area, `appearance="xxf:autosize"` allows the text area to grow vertically as the user enters more text. (This is an appearance which is specific to Orbeon Forms, and you can tell that because of the `xxf:` prefix in the appearance value.)
 
 Note that the application captures the same data without the `appearance` attribute, it's just that the control appears slightly differently and the user experience is changed.
 
@@ -599,7 +599,7 @@ To create the ratings input, add this new instance:
 
 ```xml
 <html>
-    <xforms:instance id="ratings-instance">
+    <xf:instance id="ratings-instance">
         <ratings xmlns="">
             <rating>
                 <name>1</name>
@@ -622,72 +622,72 @@ To create the ratings input, add this new instance:
                 <value>5</value>
             </rating>
         </ratings>
-    </xforms:instance>
+    </xf:instance>
 </html>
 ```
 
-And then add another `<xforms:select1>` control:
+And then add another `<xf:select1>` control:
 
 ```xml
-<xforms:select1 ref="rating" appearance="full">
-    <xforms:label>Rating</xforms:label>
-    <xforms:item>
-        <xforms:label>None</xforms:label>
-        <xforms:value/>
-    </xforms:item>
-    <xforms:itemset nodeset="instance('ratings-instance')/rating">
-        <xforms:label ref="name"/>
-        <xforms:value ref="value"/>
-    </xforms:itemset>
-</xforms:select1>
+<xf:select1 ref="rating" appearance="full">
+    <xf:label>Rating</xf:label>
+    <xf:item>
+        <xf:label>None</xf:label>
+        <xf:value/>
+    </xf:item>
+    <xf:itemset nodeset="instance('ratings-instance')/rating">
+        <xf:label ref="name"/>
+        <xf:value ref="value"/>
+    </xf:itemset>
+</xf:select1>
 ```
 
-Here again, you store the list of items as a separate instance, but we keep the "empty" item as an `<xforms:item>`. There is something new: the use of the `full` appearance, which displays the selection control as a list of radio buttons. This is a standard XForms appearance value, which is likely to be supported by all XForms implementations. (You can tell that it is standard because there is no colon `:` in the appearance value.)
+Here again, you store the list of items as a separate instance, but we keep the "empty" item as an `<xf:item>`. There is something new: the use of the `full` appearance, which displays the selection control as a list of radio buttons. This is a standard XForms appearance value, which is likely to be supported by all XForms implementations. (You can tell that it is standard because there is no colon `:` in the appearance value.)
 
 The only missing control now is the input field bound to the `<link>` element. Add this, and you should have something like this in your controls:
 
 ```xml
-<xforms:group ref="book">
-    <xforms:input ref="title">
-        <xforms:label>Title</xforms:label>
-    </xforms:input>
+<xf:group ref="book">
+    <xf:input ref="title">
+        <xf:label>Title</xf:label>
+    </xf:input>
     <br/>
-    <xforms:input ref="author">
-        <xforms:label>Author</xforms:label>
-    </xforms:input>
+    <xf:input ref="author">
+        <xf:label>Author</xf:label>
+    </xf:input>
     <br/>
-    <xforms:select1 ref="language">
-        <xforms:label>Language</xforms:label>
-        <xforms:item>
-            <xforms:label>Choose One...</xforms:label>
-            <xforms:value/>
-        </xforms:item>
-        <xforms:itemset nodeset="instance('languages-instance')/language">
-            <xforms:label ref="name"/>
-            <xforms:value ref="value"/>
-        </xforms:itemset>
-    </xforms:select1>
+    <xf:select1 ref="language">
+        <xf:label>Language</xf:label>
+        <xf:item>
+            <xf:label>Choose One...</xf:label>
+            <xf:value/>
+        </xf:item>
+        <xf:itemset nodeset="instance('languages-instance')/language">
+            <xf:label ref="name"/>
+            <xf:value ref="value"/>
+        </xf:itemset>
+    </xf:select1>
     <br/>
-    <xforms:input ref="link">
-        <xforms:label>Link</xforms:label>
-    </xforms:input>
+    <xf:input ref="link">
+        <xf:label>Link</xf:label>
+    </xf:input>
     <br/>
-    <xforms:select1 ref="rating" appearance="full">
-        <xforms:label>Rating</xforms:label>
-        <xforms:item>
-            <xforms:label>None</xforms:label>
-            <xforms:value/>
-        </xforms:item>
-        <xforms:itemset nodeset="instance('ratings-instance')/rating">
-            <xforms:label ref="name"/>
-            <xforms:value ref="value"/>
-        </xforms:itemset>
-    </xforms:select1>
+    <xf:select1 ref="rating" appearance="full">
+        <xf:label>Rating</xf:label>
+        <xf:item>
+            <xf:label>None</xf:label>
+            <xf:value/>
+        </xf:item>
+        <xf:itemset nodeset="instance('ratings-instance')/rating">
+            <xf:label ref="name"/>
+            <xf:value ref="value"/>
+        </xf:itemset>
+    </xf:select1>
     <br/>
-    <xforms:textarea ref="notes" appearance="xxforms:autosize">
-        <xforms:label>Notes</xforms:label>
-    </xforms:textarea>
-</xforms:group>
+    <xf:textarea ref="notes" appearance="xxf:autosize">
+        <xf:label>Notes</xf:label>
+    </xf:textarea>
+</xf:group>
 ```
 
 And this is how the result should look like (you will see how to add the Save button you see on this screenshot in the next section):
@@ -707,14 +707,14 @@ So how do you save data from XForms to a database? An important feature of XForm
 So look at how you create a submission that saves the `books-instance` instance into eXist:
 
 ```xml
-<xforms:submission id="save-submission"
+<xf:submission id="save-submission"
   ref="instance('books-instance')"
   resource="/exist/rest/db/orbeon/my-bookcast/books.xml" method="put" replace="none"/>
 ```
 
 Let's look at the details:
 
-* The `<xforms:submission>` element declares a submission.
+* The `<xf:submission>` element declares a submission.
 * As usual, the `id` attribute allows referring to the submission from other XForms constructs.
 * The `ref` attribute specifies what piece of XML must be handled by the submission. It points to an instance node with an XPath expression. Here, we point to the whole `books-instance` instance by using the `instance()` function.
 * The `resource` attribute specifies to what URL the submission takes place. Here, you use an absolute path:
@@ -738,20 +738,20 @@ The paths starts with `/exist/rest/`, which maps to the built-in eXist database.
 This is great, but specifying a submission does not do anything until you _send_ (execute) that submission. A simple way to do this is to use the submit control:
 
 ```xml
-<xforms:submit submission="save-submission">
-    <xforms:label>Save</xforms:label>
-</xforms:submit>
+<xf:submit submission="save-submission">
+    <xf:label>Save</xf:label>
+</xf:submit>
 ```
 
 This control has a `submission` attribute which specifies what submission to send. The control typically looks like a push button, into which the specified label appears. Pressing it automatically sends the submission specified.
 
 So go ahead and:
 
-* Add the submit control just before the `<xforms:group>` element.
+* Add the submit control just before the `<xf:group>` element.
 * Add the submission to the model.
 * Reload the page.
 * Enter a book title and an author, then press the "Save" button. Your form data has been silently saved to the database. It was that easy!
-* Then, let's check that the data is actually in the database. [SINCE 4.0] By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/EB-INF/web.xml`  noting that you will need to remove the  comment after <url-pattern> to make it well formed XML. (and don't forget to put them back before going to production if necessary):   
+* Then, let's check that the data is actually in the database. [SINCE 4.0] By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/EB-INF/web.xml`  noting that you will need to remove the  comment after <url-pattern> to make it well formed XML. (and don't forget to put them back before going to production if necessary):
 
 ```xml
 <filter-mapping>
@@ -766,7 +766,7 @@ So go ahead and:
 Then, open up a new browser tab or window, and enter the following URL:
 
 ```xml
-http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml  
+http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
 ```
 
 This is the exact same URL to which your submission has done an HTTP PUT. By entering it in your browser, you tell it to do an HTTP GET instead, and the eXist database simply sends the XML document to your browser. You should see this:
@@ -788,39 +788,39 @@ You can now save your data to the database, and read it back using your web brow
 You guessed it, one way of doing this is to use a submission:
 
 ```xml
-<xforms:submission id="list-submission" serialization="none" method="get" resource="/exist/rest/db/orbeon/my-bookcast/books.xml" replace="instance" instance="books-instance"/>
+<xf:submission id="list-submission" serialization="none" method="get" resource="/exist/rest/db/orbeon/my-bookcast/books.xml" replace="instance" instance="books-instance"/>
 ```
 
-There are a few differences with this `<xforms:submission>`:
+There are a few differences with this `<xf:submission>`:
 
 * The `id` attribute is different: `list-submission`. (All the `id` attributes in a given XForms document must be different.)
 * The `serialization="none"` attribute specifies that you don't want to send XML data with this submission.
 * The `get` method specifies that you want to do an HTTP GET, like when you pointed your web browser at the URL to read the document from eXist.
 * The `replace="instance"` attribute specifies that the result of the submission has to be stored into an instance. The `instance="books-instance"` attribute specifies the identifier of the instance into which the result must be stored.
 
-Add this element after the previous `<xforms:submission>` element which has an id value of `save-submission, `i.e. one submission follows the other. 
+Add this element after the previous `<xf:submission>` element which has an id value of `save-submission, `i.e. one submission follows the other.
 
-Like with the `<xforms:submission`> having  an id of  `save-submission`, the submission needs to be sent to achieve something. You do this by adding the following _event handler_ to the model, just before the end of the model:
-
-```xml
-<xforms:send ev:event="xforms-ready" submission="list-submission"/>  
-```
-
-Hence the code now has the appearance of 
+Like with the `<xf:submission`> having  an id of  `save-submission`, the submission needs to be sent to achieve something. You do this by adding the following _event handler_ to the model, just before the end of the model:
 
 ```xml
-<xforms:submission id="save-submission" ...
-
-<xforms:submission id="list-submission" ...
-
-<xforms:send ev:event="xforms-ready" ...
-
-</xforms:model>
+<xf:send ev:event="xforms-ready" submission="list-submission"/>
 ```
 
-This tells the XForms engine to execute an _action_ called `<xforms:send>` when the XForms engine is ready. This action takes an attribute called `submission`, which specifies which submission to send, here `list-submission`.
+Hence the code now has the appearance of
 
-Note the special attribute called `ev:event`: this attributes marks the `<xforms:send>` element as an _event handler_, that is an action that must respond to an event dispatched by the XForms engine. In this case, the name of the event is `xforms-ready`, which is a standard XForms event with the meaning that well, the XForms engine is ready.
+```xml
+<xf:submission id="save-submission" ...
+
+<xf:submission id="list-submission" ...
+
+<xf:send ev:event="xforms-ready" ...
+
+</xf:model>
+```
+
+This tells the XForms engine to execute an _action_ called `<xf:send>` when the XForms engine is ready. This action takes an attribute called `submission`, which specifies which submission to send, here `list-submission`.
+
+Note the special attribute called `ev:event`: this attributes marks the `<xf:send>` element as an _event handler_, that is an action that must respond to an event dispatched by the XForms engine. In this case, the name of the event is `xforms-ready`, which is a standard XForms event with the meaning that well, the XForms engine is ready.
 
 After adding the event handler, reload the page, and notice how the page now loads and immediately shows the data that you saved into the database.
 
@@ -830,12 +830,12 @@ The following is an overview of what has just happened:
 * Orbeon Forms receives the request, looks up the page flow file, and finds out that `view.xhtml` must be served.
 * `view.xhtml` goes through the XForms engine, which does a few bits of magic: it goes through an initialization phase, where it creates the objects you have defined such as as model, instance, and controls.
 * Once this is done, the XForms engine sends the `xforms-ready` event to the model.
-* Because you have defined an event handler for `xforms-ready`, that handler is called. This caused the `<xforms:send>` action to be run and, therefore, the `list-submission` submission to be sent.
+* Because you have defined an event handler for `xforms-ready`, that handler is called. This caused the `<xf:send>` action to be run and, therefore, the `list-submission` submission to be sent.
 * The submission performs an HTTP GET to the URL you have specified. The connection reaches the built-in eXist database, which returns the document called `books.xml`. The content of that document reaches back the XForms engine, which stores it into the `books-instance` instance.
 * The XForms engine updates the XForms controls bound to the instance with the values now contained in the instance. For example, the "title" and "author" input fields are now updated with the values that came from the database.
 * The XForms engine sends an HTML page to your web browser. You see the page with all the correct data as saved earlier into the database.
 
-_Actions_ and _events_ are very important in XForms: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable action that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
+_Actions_ and _events_ are very important in xf: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable action that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
 
 (You may wonder what would happen the first time the `list-submission` is called if no `books.xml` document is available in the database. The answer is that the database would return an error, and the submission would throw an event called `xforms-submit-error`. But because you don't have an event handler for this event, nothing happens: the initial content of the `books-submission` instance is not changed and so you see an empty form.)
 
@@ -843,31 +843,31 @@ _Actions_ and _events_ are very important in XForms: they are the glue that allo
 
 Now let's see how we can enter information about more than a single book!
 
-XForms comes with a really handy construct called `<xforms:repeat>`. This allows you to _repeat_ sections of user interface controls, based on instance data. To see how this works, first replace the group you have defined:
+XForms comes with a really handy construct called `<xf:repeat>`. This allows you to _repeat_ sections of user interface controls, based on instance data. To see how this works, first replace the group you have defined:
 
 ```xml
-<xforms:group ref="book">
+<xf:group ref="book">
     ...
-</xforms:group>
+</xf:group>
 ```
 
 with, instead, this:
 
 ```xml
-<xforms:repeat ref="book" id="book-repeat">
+<xf:repeat ref="book" id="book-repeat">
     ...
-</xforms:repeat>
+</xf:repeat>
 ```
 
 Reload the page, and notice that, well, nothing changes so far!
 
-This tells the XForms engine that the content of the `<xforms:repeat>` element must be _repeated_ as many times as `<book>` elements are found in the instance. If you have a single `<book>` element, then the controls are not repeated (which is equivalent to having `<xforms:group>`); if you have two `<book>` elements, they are repeated two times, etc.
+This tells the XForms engine that the content of the `<xf:repeat>` element must be _repeated_ as many times as `<book>` elements are found in the instance. If you have a single `<book>` element, then the controls are not repeated (which is equivalent to having `<xf:group>`); if you have two `<book>` elements, they are repeated two times, etc.
 
 The trick now is to manage to _add_ a new `<book>` element to the `books-instance` instance. First, create a _template_ for the new `<book>` element to insert by declaring a new instance:
 
 ```xml
 <html>
-    <xforms:instance id="book-template">
+    <xf:instance id="book-template">
         <book xmlns="">
             <title/>
             <author/>
@@ -876,31 +876,31 @@ The trick now is to manage to _add_ a new `<book>` element to the `books-instanc
             <rating/>
             <notes/>
         </book>
-    </xforms:instance>
+    </xf:instance>
 </html>
 ```
 
-Then you want to copy that template to the right place in `books-instance` when the user presses a button. You do this with a new control called `<xforms:trigger>` and a new action called `<xforms:insert>`. Add the following to your controls:
+Then you want to copy that template to the right place in `books-instance` when the user presses a button. You do this with a new control called `<xf:trigger>` and a new action called `<xf:insert>`. Add the following to your controls:
 
 ```xml
-<xforms:trigger>
-    <xforms:label>Add One</xforms:label>
-    <xforms:insert ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="1" position="before" origin="instance('book-template')"/>
-</xforms:trigger>
+<xf:trigger>
+    <xf:label>Add One</xf:label>
+    <xf:insert ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="1" position="before" origin="instance('book-template')"/>
+</xf:trigger>
 ```
 
-Insert this immediately before the `</xforms:repeat>` . 
+Insert this immediately before the `</xf:repeat>` .
 
 Let's explain what the above does:
 
-* The `<xforms:trigger>` element declares a button (remember, XForms likes more abstract names, but this control could have as well been called `<xforms:button>`). Like all XForms controls, `<xforms:trigger>` takes a label, which is here displayed within the button.
+* The `<xf:trigger>` element declares a button (remember, XForms likes more abstract names, but this control could have as well been called `<xf:button>`). Like all XForms controls, `<xf:trigger>` takes a label, which is here displayed within the button.
 * Once the user presses it, the button sends an event called `DOMActivate`. Don't be scared by this funny name, you will use it all the time. It just means that the user has _activated_ the button, which in most cases means that the user pressed (clicked) on it.
-* `<xforms:insert>` is declared as an event handler with the `ev:event="DOMActivate"` attribute, so this action runs when the user presses the button.
+* `<xf:insert>` is declared as an event handler with the `ev:event="DOMActivate"` attribute, so this action runs when the user presses the button.
 * Here we have decided that we want to insert a new book always in first position in the page. The trick is to configure the insert action with the appropriate attributes.
 
-With the configuration provided, the action _inserts_ (`<xforms:insert>`) the contents of the `book-template` instance (origin="instance('book-template')") _before_ (`position="before"`) the _first_ (`at="1"`) element called `<book>` (`nodeset="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`).
+With the configuration provided, the action _inserts_ (`<xf:insert>`) the contents of the `book-template` instance (origin="instance('book-template')") _before_ (`position="before"`) the _first_ (`at="1"`) element called `<book>` (`nodeset="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`).
 
-This may sound a little confusing at first, but that's because `<xforms:insert>` is in fact very powerful and you can combine its attributes in many different ways.
+This may sound a little confusing at first, but that's because `<xf:insert>` is in fact very powerful and you can combine its attributes in many different ways.
 
 Make the changes above, press on the "Add One" button, and you see a new row of controls created.
 
@@ -910,29 +910,29 @@ Again the XForms engine does its magic and takes care of updating the web page a
 
 ### Deleting a book
 
-If you can add books, you probably also want to be able to remove them. This can be done with the `<xforms:delete>` action. It doesn't seem to make much sense to always remove the first book, but rather, you probably want to delete a specific book. This can be done in several ways, but what about adding a delete button next to each series of repeated controls:
+If you can add books, you probably also want to be able to remove them. This can be done with the `<xf:delete>` action. It doesn't seem to make much sense to always remove the first book, but rather, you probably want to delete a specific book. This can be done in several ways, but what about adding a delete button next to each series of repeated controls:
 
 ```xml
-<xforms:trigger>
-    <xforms:label>Remove</xforms:label>
-    <xforms:delete ev:event="DOMActivate" context="instance('books-instance')"
+<xf:trigger>
+    <xf:label>Remove</xf:label>
+    <xf:delete ev:event="DOMActivate" context="instance('books-instance')"
                    nodeset="book" at="index('book-repeat')"/>
-</xforms:trigger>
+</xf:trigger>
 ```
 
 This works in a way very similar to the "Add One" button:
 
-* The `<xforms:trigger>` element declares a button, but here with a different label ("Remove"). Once the user presses it, the button sends a `DOMActivate`.
-* `<xforms:delete>` is declared as an event handler with the `ev:event="DOMActivate"` attribute.
-* The difference is in the configuration of `<xforms:delete>`.
+* The `<xf:trigger>` element declares a button, but here with a different label ("Remove"). Once the user presses it, the button sends a `DOMActivate`.
+* `<xf:delete>` is declared as an event handler with the `ev:event="DOMActivate"` attribute.
+* The difference is in the configuration of `<xf:delete>`.
 
-Here you don't use the `position` and `origin` attributes. What you are telling the action here is to delete (`<xforms:delete>`) the element called `<book>` (`nodeset="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`) which is at the current index position of the `book-repeat` repetition (`at="index('book-repeat')"`).
+Here you don't use the `position` and `origin` attributes. What you are telling the action here is to delete (`<xf:delete>`) the element called `<book>` (`nodeset="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`) which is at the current index position of the `book-repeat` repetition (`at="index('book-repeat')"`).
 
 To understand the `index()` function, you should know that each repetition in XForms has an associated _current index_, which tells you which current iteration of a repetition is currently active. The current index changes as you navigate through controls. If you type in the title input field of the first book, the index is `1`; if you type in the author input field of the third book, the index is `3`; and so on. The index changes also if you click buttons. Usually, the current index is also visually highlighted.
 
-So here, when you click on the "Remove" button of, say, the second book, the index for the `books-repeat` repetition changes to `2`, and therefore `index('books-repeat')` also returns `2`. This way, you can tell `<xforms:delete>` to remove the second `<book>` element.
+So here, when you click on the "Remove" button of, say, the second book, the index for the `books-repeat` repetition changes to `2`, and therefore `index('books-repeat')` also returns `2`. This way, you can tell `<xf:delete>` to remove the second `<book>` element.
 
-Now add the new trigger within `<xforms:repeat>` and reload the page. Try adding books, then removing them by pressing the "Remove" button.
+Now add the new trigger within `<xf:repeat>` and reload the page. Try adding books, then removing them by pressing the "Remove" button.
 
 ![][20]
 
@@ -941,9 +941,9 @@ Now add the new trigger within `<xforms:repeat>` and reload the page. Try adding
 For fun, let's also add a new button to cancel your unsaved edits and reload the original data from the database. It's as easy as this:
 
 ```xml
-<xforms:submit submission="list-submission">
-    <xforms:label>Revert</xforms:label>
-</xforms:submit>
+<xf:submit submission="list-submission">
+    <xf:label>Revert</xf:label>
+</xf:submit>
 ```
 
 When you press the "Revert" button, the `list-submission` submission is called, which causes the latest saved `books.xml` document to be reloaded. The XForms engine makes sure that all the controls on the page, including repeats, automatically update to reflect the changes to the `books-instance` instance.
@@ -958,14 +958,14 @@ First, start with a nicer "action bar" at the top of the page:
 <table class="books-action-table">
     <tr>
         <td>
-            <xforms:submit submission="save-submission" appearance="minimal">
-                <xforms:label><img src="../apps/my-bookcast/images/save.gif" alt="Save"/> Save</xforms:label>
-            </xforms:submit>
+            <xf:submit submission="save-submission" appearance="minimal">
+                <xf:label><img src="../apps/my-bookcast/images/save.gif" alt="Save"/> Save</xf:label>
+            </xf:submit>
         </td>
         <td>
-            <xforms:submit submission="list-submission" appearance="minimal">
-                <xforms:label><img src="../apps/my-bookcast/images/recycle-green.png" alt="Revert"/> Revert</xforms:label>
-            </xforms:submit>
+            <xf:submit submission="list-submission" appearance="minimal">
+                <xf:label><img src="../apps/my-bookcast/images/recycle-green.png" alt="Revert"/> Revert</xf:label>
+            </xf:submit>
         </td>
     </tr>
 </table>
@@ -982,44 +982,44 @@ Then encapsulate the main XForms controls within a table:
 <table class="books-table">
     <tr>
         <td>
-            <xforms:trigger appearance="minimal">
-                <xforms:label><img src="../apps/my-bookcast/images/add.gif"/></xforms:label>
-                <xforms:insert ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="1" position="before" origin="instance('book-template')"/>
-            </xforms:trigger>
+            <xf:trigger appearance="minimal">
+                <xf:label><img src="../apps/my-bookcast/images/add.gif"/></xf:label>
+                <xf:insert ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="1" position="before" origin="instance('book-template')"/>
+            </xf:trigger>
         </td>
         <td class="add-td">
-            <xforms:trigger appearance="minimal">
-                <xforms:label>Add One</xforms:label>
-                <xforms:insert ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="1" position="before" origin="instance('book-template')"/>
-            </xforms:trigger>
+            <xf:trigger appearance="minimal">
+                <xf:label>Add One</xf:label>
+                <xf:insert ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="1" position="before" origin="instance('book-template')"/>
+            </xf:trigger>
         </td>
     </tr>
-    <xforms:repeat nodeset="book" id="book-repeat">
+    <xf:repeat nodeset="book" id="book-repeat">
         <tr>
             <td>
-                <xforms:trigger appearance="minimal">
-                    <xforms:label><img src="../apps/my-bookcast/images/remove.gif"/></xforms:label>
-                    <xforms:delete ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="index('book-repeat')"/>
-                </xforms:trigger>
+                <xf:trigger appearance="minimal">
+                    <xf:label><img src="../apps/my-bookcast/images/remove.gif"/></xf:label>
+                    <xf:delete ev:event="DOMActivate" context="instance('books-instance')" nodeset="book" at="index('book-repeat')"/>
+                </xf:trigger>
             </td>
             <td class="form-td">
                 <!--Put the remaining form controls here!-->
                 ...
             </td>
         </tr>
-    </xforms:repeat>
+    </xf:repeat>
 </table>
 ```
 
 You notice a few more things:
 
-* `<xforms:repeat>` is put around an XHTML `<tr>` element, which means that the repetition repeats table rows.
+* `<xf:repeat>` is put around an XHTML `<tr>` element, which means that the repetition repeats table rows.
 * You add class names on the table and on a table cell, in order to facilitate CSS styling.
 
 Finally, add a `books-label` class to the controls related to book data, for example:
 
 ```xml
-<xforms:label class="books-label">Title</xforms:label>  
+<xf:label class="books-label">Title</xf:label>
 ```
 
 Now remember that Orbeon Forms does not send the XForms code directly to the web browser, but instead it transforms it into HTML. You realize that this is done because Orbeon Forms cannot assume that your web browser to support XForms at all. Consider the following examples:
@@ -1029,9 +1029,9 @@ Now remember that Orbeon Forms does not send the XForms code directly to the web
 |
 
 ```xml
-<xforms:submit id="my-submit" submission="save-submission">
-    <xforms:label>Save</xforms:label>
-</xforms:submit>
+<xf:submit id="my-submit" submission="save-submission">
+    <xf:label>Save</xf:label>
+</xf:submit>
 ```
 
  |
@@ -1044,9 +1044,9 @@ Now remember that Orbeon Forms does not send the XForms code directly to the web
 |
 
 ```xml
-<xforms:input id="my-input" ref="title">
-    <xforms:label>Title</xforms:label>
-</xforms:input>
+<xf:input id="my-input" ref="title">
+    <xf:label>Title</xf:label>
+</xf:input>
 ```
 
  |
@@ -1071,23 +1071,23 @@ Now remember that Orbeon Forms does not send the XForms code directly to the web
 |
 
 ```xml
-<xforms:textarea ref="notes">
-    <xforms:label class="books-label">Notes</xforms:label>
-</xforms:textarea>
+<xf:textarea ref="notes">
+    <xf:label class="books-label">Notes</xf:label>
+</xf:textarea>
 ```
 
  |
 
 ```xml
-<label class="books-label xforms-label" for="my-textarea">Notes</label>  
+<label class="books-label xforms-label" for="my-textarea">Notes</label>
 ```
 
 ```xml
-<textarea id="my-textarea" class="xforms-control xforms-textarea" name="my-textarea"/>  
+<textarea id="my-textarea" class="xforms-control xforms-textarea" name="my-textarea"/>
 ```
 
 ```xml
-<label class="xforms-alert xforms-alert-inactive" for="my-textarea"/>  
+<label class="xforms-alert xforms-alert-inactive" for="my-textarea"/>
 ```
 
  |
@@ -1100,17 +1100,17 @@ So now look at the following CSS declaration for the Bookcast application:
 | CSS |  Description |
 |  ` .xforms-label { font-weight: bold } `  |  Display all labels in bold.  |
 |  ` .books-label { display: -moz-inline-box; display: inline-block; width: expression('9em'); min-width: 9em; } `  |  Display all labels with the `books-label` class to have a minimum width. This allows aligning all the labels on the left. Note the mozilla- and IE-specific CSS.  |
-|  ` .xforms-textarea-appearance-xxforms-autosize { width: 20em; margin-bottom: 2px } `  |  Set width and margin to all text area controls with appearance `xxforms:autosize`.  |
+|  ` .xforms-textarea-appearance-xxforms-autosize { width: 20em; margin-bottom: 2px } `  |  Set width and margin to all text area controls with appearance `xxf:autosize`.  |
 |  ` .xforms-input input { width: 20em; margin-bottom: 2px } `  |  Set width and margin to all input controls.  |
-|  ` .xforms-select1 { margin-bottom: 2px }   
+|  ` .xforms-select1 { margin-bottom: 2px }
 .xforms-select1 input { margin-bottom: 2px } `  |  Set margin to all single selection controls.  |
-|  ` .books-table { background-color: #fce5b6 }   
-.books-table .add-td { width: 33em }   
+|  ` .books-table { background-color: #fce5b6 }
+.books-table .add-td { width: 33em }
 .books-table .form-td { width: 33em; background: white; padding: .5em } `  |  Format the main table.  |
 |  ` .xforms-repeat-selected-item-1 .form-td { background: #ffc } `  |  Change the background color of the currently selected repeat index.  |
-|  ` .books-action-table { margin-bottom: 1em }   
-.books-action-table td { white-space: nowrap; vertical-align: middle; padding-right: 1em }   
-.books-action-table .xforms-submit img { vertical-align: middle }   
+|  ` .books-action-table { margin-bottom: 1em }
+.books-action-table td { white-space: nowrap; vertical-align: middle; padding-right: 1em }
+.books-action-table .xforms-submit img { vertical-align: middle }
 .books-action-table .xforms-trigger-appearance-minimal img { margin-right: 1em; vertical-align: middle } `  |  Set margins and alignment for the action table at the top of the page.  |
 
 Now just add all the CSS declaration under the page's `<head>` element, encapsulated within an HTML `<style>` element:
@@ -1209,44 +1209,44 @@ XML Schema requires some learning, but for now just consider the following:
 Now create the schema as `schema.xsd` in the same directory as `view.xhtml` and `page-flow.xml`. Then link it to the XForms page as follows:
 
 ```xml
-<xforms:model schema="/apps/my-bookcast/schema.xsd">
+<xf:model schema="/apps/my-bookcast/schema.xsd">
     <!-- Rest of the XForms model -->
     ...
-</xforms:model>
+</xf:model>
 ```
 
 Alternatively, you can place the schema inline within the XForms model:
 
 ```xml
-<xforms:model >
+<xf:model >
     <xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified">
         <!-- Rest of the schema -->
     </xs:schema>
     <!-- Rest of the XForms model -->
-</xforms:model>
+</xf:model>
 ```
 
-Also add `<xforms:alert>` elements to the controls which might be invalid. This allows you to specify a meaningful validation message:
+Also add `<xf:alert>` elements to the controls which might be invalid. This allows you to specify a meaningful validation message:
 
 ```xml
-<xforms:input ref="title">
-    <xforms:label class="books-label">Title</xforms:label>
-    <xforms:alert>The title is required</xforms:alert>
-</xforms:input>
-```
-
-```xml
-<xforms:input ref="author">
-    <xforms:label class="books-label">Author</xforms:label>
-    <xforms:alert>The author is required</xforms:alert>
-</xforms:input>
+<xf:input ref="title">
+    <xf:label class="books-label">Title</xf:label>
+    <xf:alert>The title is required</xf:alert>
+</xf:input>
 ```
 
 ```xml
-<xforms:input ref="link">
-    <xforms:label class="books-label">Link</xforms:label>
-    <xforms:alert>The link is incorrect</xforms:alert>
-</xforms:input>
+<xf:input ref="author">
+    <xf:label class="books-label">Author</xf:label>
+    <xf:alert>The author is required</xf:alert>
+</xf:input>
+```
+
+```xml
+<xf:input ref="link">
+    <xf:label class="books-label">Link</xf:label>
+    <xf:alert>The link is incorrect</xf:alert>
+</xf:input>
 ```
 
 Reload the page, and try to enter an invalid link, for example "ftp://ftp.example.com/". An alert icon will show up as you leave the link field with your cursor.
@@ -1256,32 +1256,32 @@ _NOTE:_
 _The URL of the schema, "/apps/my-bookcast/schema.xsd", is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded though:_
 
 ```xml
-http://localhost:8080/orbeon/apps/my-bookcast/schema.xsd  
+http://localhost:8080/orbeon/apps/my-bookcast/schema.xsd
 ```
 
 Because retrieving documents through HTTP takes some time, you can also use the Orbeon Forms protocol, `oxf:`, to load the schema:
 
 ```xml
-<xforms:model xschema="oxf:/apps/my-bookcast/schema.xsd">
+<xf:model xschema="oxf:/apps/my-bookcast/schema.xsd">
     <!-- Rest of the XForms model -->
     ...
-</xforms:model>
+</xf:model>
 ```
 
 This protocol allows loading files stored as Orbeon Forms resources.
 
 Still with an invalid link, press the "Save" link and check the data in the database. Notice that the invalid data didn't save! This happens because the XForms engine automatically ensures that the data sent by a submission is valid before going on with the actual submission.
 
-It would be nice to tell the user that saving didn't work. You can do this very easily: if a submission error occurs, the `<xforms:submission>` element dispaches the `xforms-submit-error` event. So let's see how you catch that event and display a message to the user:
+It would be nice to tell the user that saving didn't work. You can do this very easily: if a submission error occurs, the `<xf:submission>` element dispaches the `xforms-submit-error` event. So let's see how you catch that event and display a message to the user:
 
 ```xml
-<xforms:submission id="save-submission" ref="instance('books-instance')"
+<xf:submission id="save-submission" ref="instance('books-instance')"
   resource="/exist/rest/db/orbeon/my-bookcast/books.xml" method="put" replace="none">
-    <xforms:message ev:event="xforms-submit-error" level="modal">An error occurred while saving!</xforms:message>
-</xforms:submission>
+    <xf:message ev:event="xforms-submit-error" level="modal">An error occurred while saving!</xf:message>
+</xf:submission>
 ```
 
-The `<xforms:submission>` element hasn't changed, except we added a nested `<xforms:message>` element. Besides the `ev:event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and message for the user.
+The `<xf:submission>` element hasn't changed, except we added a nested `<xf:message>` element. Besides the `ev:event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and message for the user.
 
 Try now making this change, enter an invalid link, and press the "Save" link: an alert message should show up!
 
@@ -1320,7 +1320,7 @@ It would be nice if you could use XForms to produce such a format, and in fact i
 But first, it's time to introduce the Model-View-Controller (MVC) support in the page flow. Consider the following page flow declaration:
 
 ```xml
-<page path="/my-bookcast/atom" model="atom.xpl" view="atom.xsl">  
+<page path="/my-bookcast/atom" model="atom.xpl" view="atom.xsl">
 ```
 
 Notice how, instead of an XHTML page view (`view.xhtml`), you now use:
@@ -1345,7 +1345,7 @@ Consider the page model:
     <!-- Execute REST submission -->
     <p:processor name="oxf:xforms-submission">
         <p:input name="submission">
-            <xforms:submission xmlns:xforms="http://www.w3.org/2002/xforms" serialization="none" method="get" resource="/exist/rest/db/orbeon/my-bookcast/books.xml"/>
+            <xf:submission xmlns:xforms="http://www.w3.org/2002/xforms" serialization="none" method="get" resource="/exist/rest/db/orbeon/my-bookcast/books.xml"/>
         </p:input>
         <p:input name="request"><dummy/></p:input>
         <p:output name="response" ref="data"/>
@@ -1424,7 +1424,7 @@ Now look at the page view:
 This page view is an XSLT document (notice the `xsl:version="2.0"` attribute on the root element). It automatically receives on its main input the document produced by the page model. So if you were to write:
 
 ```xml
-<xsl:value-of select="/books/book[1]/title">  
+<xsl:value-of select="/books/book[1]/title">
 ```
 
 You would get the title of the first book from `books.xsl`.
@@ -1432,24 +1432,24 @@ You would get the title of the first book from `books.xsl`.
 Now this XSLT document does not use many XSLT constructs:
 
 * XSLT relies on XPath, like XForms. So you can reuse your knowledge of XPath when writing XSLT.
-* `<xsl:value-of>` outputs the text value returned by the XPath expression on the `select` attribute. It is very similar to `<xforms:output>`.
-* `<xsl:for-each>` iterates over the nodes returned by the XPath expression on the `select` attribute. It is very similar to `<xforms:repeat>`.
+* `<xsl:value-of>` outputs the text value returned by the XPath expression on the `select` attribute. It is very similar to `<xf:output>`.
+* `<xsl:for-each>` iterates over the nodes returned by the XPath expression on the `select` attribute. It is very similar to `<xf:repeat>`.
 * The brackets in `<a href="{link}">` mean that the XPath expression `link` has to be evaluated to produce the `href` attribute.
 
 And that's it! You can now add the entry in `page-flow.xml`, add the two files `atom.xpl` and `atom.xsl`, and point your browser to:
 
 ```xml
-http://localhost:8080/orbeon/my-bookcast/atom  
+http://localhost:8080/orbeon/my-bookcast/atom
 ```
 
 You should see something similar to this, depending on your browser:
 
 ![][25]
 
-To make things even better, add the following to `view.xhtml` under the `` element:
+To make things even better, add the following to `view.xhtml` under the `<head>` element:
 
 ```xml
-<link rel="alternate" type="application/atom+xml" title="Orbeon XForms Bookcast Tutorial Feed" href="atom">  
+<link rel="alternate" type="application/atom+xml" title="Orbeon XForms Bookcast Tutorial Feed" href="atom">
 ```
 
 With this addition, most modern browsers will display a feed icon or an RSS icon, making the feed directly accessible from the main Bookcast page.
@@ -1467,7 +1467,7 @@ So far you have seen:
 * How to build your own application that allows editing and persisting a form.
 * How to create an Atom feed from form data.
 
-You have now covered a good part of the basics of Orbeon Forms. You can now look at the [Orbeon Forms example applications][27] and the [rest of the Orbeon Forms documentation][28]!
+You have now covered a good part of the basics of Orbeon Forms. You can now look at the [Orbeon Forms example applications][27] and the [rest of the Orbeon Forms documentation](http://doc.orbeon.com/)!
 
 [1]: http://www.orbeon.com/
 [2]: http://www.orbeon.com/community
@@ -1496,5 +1496,3 @@ You have now covered a good part of the basics of Orbeon Forms. You can now look
 [25]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/19.png
 [26]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/20.png
 [27]: http://demo.orbeon.com/orbeon/home/
-[28]: http://wiki.orbeon.com/forms/
-
