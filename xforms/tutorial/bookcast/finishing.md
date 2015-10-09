@@ -1,4 +1,4 @@
-# Finishing the app
+# Polishing the app
 
 ## Making things look nicer
 
