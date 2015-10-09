@@ -103,8 +103,7 @@
         * [Introduction](xforms/tutorial/introduction.md)
         * [Installation](xforms/tutorial/installation.md)
         * [The Hello application](xforms/tutorial/hello.md)
-        * The Bookcast application
-            * [Introduction](xforms/tutorial/bookcast/introduction.md)
+        * [The Bookcast application](xforms/tutorial/bookcast/README.md)
             * [The basic app](xforms/tutorial/bookcast/basics.md)
             * [Database access](xforms/tutorial/bookcast/database.md)
             * [Polishing the app](xforms/tutorial/bookcast/polishing.md)
