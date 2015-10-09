@@ -29,6 +29,7 @@
    * Formulas
        * [Examples](form-builder/formulas/examples.md)
    * [Form Editor](form-builder/form-editor/README.md)
+       * Control Settings
    * Form Localization
    * Toolbox
    * Form Editor
