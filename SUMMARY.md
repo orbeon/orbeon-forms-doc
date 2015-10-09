@@ -33,7 +33,7 @@
        * [Form Area](form-builder/form-editor/form-area.md)
        * [Itemset Editor](form-builder/form-editor/itemset-editor.md)
        * [Publishing](form-builder/form-editor/publishing.md)
-       * Section Settings
+       * [Section Settings](form-builder/form-editor/section-settings.md)
        * Validation
    * Form Localization
    * Toolbox
