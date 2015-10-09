@@ -1,4 +1,4 @@
-# FAQ - Professional Edition (PE) and Dev Support
+# FAQ - PE and Dev Support
 
 <!-- toc -->
 
