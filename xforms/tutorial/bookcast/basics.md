@@ -395,8 +395,6 @@ And this is how the result should look like (you will see how to add the Save bu
 
 By now you probably get the gist of it!
 
-[11]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/07.png
-[12]: http://demo.orbeon.com/orbeon/xforms-bookcast/
 [13]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/08.png
 [14]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/09.png
 [15]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/11.png
