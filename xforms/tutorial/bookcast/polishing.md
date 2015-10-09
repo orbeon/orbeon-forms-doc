@@ -1,5 +1,7 @@
 # Polishing the app
 
+<!-- toc -->
+
 ## Making things look nicer
 
 You are probably not very happy with the look of your application. But let's see how you can improve this with CSS.
