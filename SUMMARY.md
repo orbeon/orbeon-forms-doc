@@ -32,7 +32,7 @@
        * [Control Settings](form-builder/form-editor/control-settings.md)
        * [Form Area](form-builder/form-editor/form-area.md)
        * [Itemset Editor](form-builder/form-editor/itemset-editor.md)
-       * Publishing
+       * [Publishing](form-builder/form-editor/publishing.md)
        * Section Settings
        * Validation
    * Form Localization
