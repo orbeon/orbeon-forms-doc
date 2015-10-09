@@ -27,6 +27,7 @@
        * [Repeated Grids](form-builder/toolbox/repeated-grids.md)
    * [Formulas](form-builder/formulas/README.md)
        * [Examples](form-builder/formulas/examples.md)
+   * [Summary Page](form-builder/summary-page.md)
    * [Form Localization](form-builder/forms-localization.md)
    * Advanced
        * [HTTP Services](form-builder/advanced/http-services.md)
@@ -39,7 +40,6 @@
        * [XML Schemas Support](form-builder/advanced/xml-schema-support.md)
        * [PDF Templates](form-builder/advanced/pdf-templates.md)
        * [Section Templates](form-builder/advanced/section-templates.md)
-   * [Summary Page](form-builder/summary-page.md)
 * Form Runner
    * Overview
        * Architecture
