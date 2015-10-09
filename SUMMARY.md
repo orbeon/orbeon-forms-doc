@@ -15,7 +15,7 @@
    * [Licensing](faq/licensing.md)
    * [PE and Dev Support](faq/pe-dev-support.md)
    * [Form Builder and Form Runner](faq/form-builder-runner.md)
-   * [Resources and support](faq/resources-support.md)
+   * [Resources and Support](faq/resources-support.md)
    * [Other technical questions](faq/other-technical.md)
 * [Form Builder](form-builder/README.md)
    * [Form Editor](form-builder/form-editor/README.md)
