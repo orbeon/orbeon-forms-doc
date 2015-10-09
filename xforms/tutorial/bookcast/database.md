@@ -1,5 +1,7 @@
 # Database access
 
+<!-- toc -->
+
 ## Adding a "save" button
 
 The Bookcast application now allows you to capture some data. But it is not a very useful application yet, because it doesn't do anything with it! So let's see how you can add a "Save" button that, once pressed, well, saves the data in your form.
