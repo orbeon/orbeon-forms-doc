@@ -1,4 +1,0 @@
-# FAQ - General
-
-<!-- toc -->
-
