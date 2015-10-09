@@ -32,6 +32,7 @@
        * [Control Settings](form-builder/form-editor/control-settings.md)
        * Form Area
        * Itemset Editor
+       * Publishing
    * Form Localization
    * Toolbox
    * Form Editor
