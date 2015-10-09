@@ -16,7 +16,7 @@
    * [Other technical questions](faq/other-technical.md)
 * [Form Builder](form-builder/README.md)
    * Advanced
-       * Actions
+       * [Actions](form-builder/advanced/actions.md)
        * Database Services
        * Edit Source
        * Extension API
