@@ -16,7 +16,7 @@
    * [PE and Dev Support](faq/pe-dev-support.md)
    * [Form Builder and Form Runner](faq/form-builder-runner.md)
    * [Resources and Support](faq/resources-support.md)
-   * [Other technical questions](faq/other-technical.md)
+   * [Other Technical Questions](faq/other-technical.md)
 * [Form Builder](form-builder/README.md)
    * [Form Editor](form-builder/form-editor/README.md)
        * [Form Area](form-builder/form-editor/form-area.md)
