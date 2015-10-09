@@ -1,5 +1,7 @@
 # Introduction
 
+<!-- toc -->
+
 ## What is this?
 
 This is the tutorial for Orbeon Forms's XForms features. It is aimed at programmers who want to program Orbeon Forms, as opposed to analysis who want to use [Form Builder][1].
