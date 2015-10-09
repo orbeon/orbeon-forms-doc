@@ -11,7 +11,7 @@
 * [Index of Features](features.md)
 * [Release History](release-history.md)
 * [Product Roadmap](roadmap.md)
-* FAQ
+* [FAQ](faq/README.md)
    * [Licensing](faq/licensing.md)
    * [PE and Dev Support](faq/pe-dev-support.md)
    * [Form Builder and Form Runner](faq/form-builder-runner.md)
