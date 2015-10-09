@@ -22,7 +22,7 @@
        * [Extension API](form-builder/advanced/extension-api.md)
        * [HTTP Services](form-builder/advanced/http-services.md)
        * [Integration](form-builder/advanced/integration.md)
-       * PDF Production
+       * [PDF Production](form-builder/advanced/pdf-production.md)
        * XML Schemas Support
    * [Introduction](Form-Builder-Introduction.md)
        * [Sun-intro](fb/sub-intro.md)
