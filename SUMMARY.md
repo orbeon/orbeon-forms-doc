@@ -70,7 +70,7 @@
        * [Automatic PDF](form-runner/styling/automatic-pdf.md)
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
-* Properties
+* [Properties](properties/README.md)
    * General
    * Persistence
    * Form Runner
