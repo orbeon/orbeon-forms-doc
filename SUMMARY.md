@@ -54,7 +54,7 @@
        * [Responsive Design](form-runner/feature/responsive-design.md)
        * [Supported Languages](form-runner/feature/supported-languages.md)
        * [TIFF Production](form-runner/feature/tiff-production.md)
-       * Wizard View
+       * [Wizard View](form-runner/feature/wizard-view.md)
    * Persistence
        * [Using a relational database](form-runner/persistence/relational-db.md)
    * [Linking and Embedding](form-runner/link-embed/README.md)
