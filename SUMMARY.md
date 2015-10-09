@@ -22,7 +22,7 @@
        * [Publishing](form-builder/form-editor/publishing.md)
        * [Section Settings](form-builder/form-editor/section-settings.md)
        * [Validation](form-builder/form-editor/validation.md)
-       * Metadata
+       * [Metadata](form-builder/form-editor/metadata.md)
    * Advanced
        * [HTTP Services](form-builder/advanced/http-services.md)
        * [Database Services](form-builder/advanced/database-services.md)
