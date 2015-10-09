@@ -88,16 +88,21 @@
        * [Environments](setup/advanced/environments.md)
        * [Configuring a Form Runner eXist database](setup/advanced/exist-db.md)
 * XForms
-   * XPath function library
-       * [Standard functions](xforms/xpath/standard-functions.md)
-       * Extension functions
-           * [Core functions](xforms/xpath/extension-core.md)
-           * [Model functions](xforms/xpath/extension-model.md)
-           * [Validation functions](xforms/xpath/extension-validation.md)
-           * [Controls functions](xforms/xpath/extension-controls.md)
-           * [XML functions](xforms/xpath/extension-xml.md)
-           * [HTTP functions](xforms/xpath/extension-http.md)
-           * [Other functions](xforms/xpath/extension-other.md)
-           * [Deprecated functions](xforms/xpath/deprecated-functions.md)
+    * XPath function library
+        * [Standard functions](xforms/xpath/standard-functions.md)
+        * Extension functions
+            * [Core functions](xforms/xpath/extension-core.md)
+            * [Model functions](xforms/xpath/extension-model.md)
+            * [Validation functions](xforms/xpath/extension-validation.md)
+            * [Controls functions](xforms/xpath/extension-controls.md)
+            * [XML functions](xforms/xpath/extension-xml.md)
+            * [HTTP functions](xforms/xpath/extension-http.md)
+            * [Other functions](xforms/xpath/extension-other.md)
+            * [Deprecated functions](xforms/xpath/deprecated-functions.md)
+    * XForms tutorial
+        * [Introduction](xforms/tutorial/introduction.md)
+        * [Installation](xforms/tutorial/installation.md)
+        * [The Hello application](xforms/tutorial/hello.md)
+        * [The Bookcast application](xforms/tutorial/bookcast.md)
 * Contributors
 
