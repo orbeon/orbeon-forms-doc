@@ -48,7 +48,7 @@
        * [Architecture](form-runner/overview/architecture.md)
        * [Access Form Data](form-runner/overview/accessing-data.md)
        * [Integration](form-runner/overview/integration.md)
-       * Terminology
+       * [Terminology](form-runner/overview/terminology.md)
    * Features
        * Home Page
        * Responsive Design
