@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[Form Runner|Form Runner]]
+## Available APIs
 
 The following APIs and services are available and documented:
 
@@ -13,3 +13,7 @@ The following APIs and services are available and documented:
 - [[Generate XML Schema|Form-Runner ~ APIs ~ Generate XML Schema]]
 - [[Duplicate form data|Form-Runner ~ APIs ~ Duplicate Form Data]]
 - [[List form data attachments|Form-Runner-~-APIs-~-List-Form-Data-Attachments]]
+
+## See also
+
+- [[Client-Side JavaScript API|XForms ~ Client Side JavaScript API]]
