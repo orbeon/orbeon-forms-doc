@@ -68,8 +68,10 @@ With the option enabled, new iterations can have dynamic initial values:
 
 The "Initial Number of Iterations Uses Template" option specifies, when an *enclosing repeated section* creates a new iteration, how many iterations this repeated grid will contains:
 
-- when enabled: the number of iterations shown in Form Builder
+- when enabled: the number of iterations shown in Form Builder (including no iterations at all)
 - when disabled: one iteration
+
+
 
 <!--
 ![Initial Iterations](images/)
