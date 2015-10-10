@@ -1,15 +1,6 @@
-> [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
+# Learning from existing components
 
-## Related pages
-
-- [[Introduction|XForms ~ XBL ~ Introduction]]
-- [[FAQ|XForms ~ XBL ~ FAQ]]
-- [[Tutorial|XForms ~ XBL ~ Tutorial]]
-- [[Bindings| XForms ~ XBL ~ Bindings]]
-- [[XForms Models|XForms ~ XBL ~ XForms Models]]
-- [[Including Content|XForms ~ XBL ~ Including Content]]
-- [[Event Handling|XForms ~ XBL ~ Event Handling]]
-- [[Conventions|XForms ~ XBL ~ Conventions]]
+<!-- toc -->
 
 ## Finding existing components
 
