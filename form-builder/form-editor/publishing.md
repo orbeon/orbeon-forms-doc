@@ -1,3 +1,7 @@
+# Publishing
+
+<!-- toc -->
+
 ## Introduction
 
 The notion of _publishing_ is central to Form Builder/Form Runner.
