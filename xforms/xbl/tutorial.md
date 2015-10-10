@@ -200,7 +200,7 @@ What is needed now is, when the local value changes, to copy it to the external 
 ```xml
 <xf:input ref="instance()">
     <xf:setvalue
-        ev:event="xforms-value-changed"
+        event="xforms-value-changed"
         ref="xxf:binding('fr-tutorial-davinci')"
         value="context()"/>
 </xf:input>
