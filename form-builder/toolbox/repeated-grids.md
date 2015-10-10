@@ -71,9 +71,10 @@ The "Initial Number of Iterations Uses Template" option specifies, when an *encl
 - when enabled: the number of iterations shown in Form Builder (including no iterations at all)
 - when disabled: exactly one iteration
 
-
-
 <!--
+
+Example:
+
 ![Initial Iterations](images/)
 -->
 
