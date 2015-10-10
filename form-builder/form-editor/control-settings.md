@@ -1,4 +1,4 @@
-# Control Settings
+# Control settings
 
 ## Introduction
 
