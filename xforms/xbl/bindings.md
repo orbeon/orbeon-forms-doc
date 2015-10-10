@@ -1,15 +1,6 @@
-> [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
+# Bindings
 
-## Related pages
-
-- [[Introduction|XForms ~ XBL ~ Introduction]]
-- [[FAQ|XForms ~ XBL ~ FAQ]]
-- [[Learning from Existing Components|XForms ~ XBL ~ Learning from Existing Components]]
-- [[Tutorial|XForms ~ XBL ~ Tutorial]]
-- [[XForms Models|XForms ~ XBL ~ XForms Models]]
-- [[Including Content|XForms ~ XBL ~ Including Content]]
-- [[Event Handling|XForms ~ XBL ~ Event Handling]]
-- [[Conventions|XForms ~ XBL ~ Conventions]]
+<!-- toc -->
 
 ## Introduction
 
