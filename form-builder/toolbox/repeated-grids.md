@@ -75,9 +75,12 @@ The following screenshot shows a case with a repeated grid within nested repeate
 
 ![](fr-iterations-initial.png)
 
-With the option enabled on the grid, adding a new iteration of _Repeated section2_ causes the 
+With the option enabled on the grid, adding a new iteration of _Repeated section2_ causes the new iteration to contain a new repeated grid with two iterations:
 
 ![](fr-iterations-template.png)
+
+While, with the option disabled on the grid, adding a new iteration of _Repeated section2_ causes the new iteration to contain a new repeated grid a single iterations:
+
 ![](fr-iterations-single.png)
 
 <!--
