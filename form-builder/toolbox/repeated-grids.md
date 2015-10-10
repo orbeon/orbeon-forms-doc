@@ -71,6 +71,15 @@ The "Initial Number of Iterations Uses Template" option specifies, when an *encl
 - when enabled: the number of iterations shown in Form Builder (which can be no iterations at all, one iteration, two iterations, etc.)
 - when disabled: exactly one iteration
 
+The following screenshot shows a case with a repeated grid within nested repeated sections. At first, when the form shows, there are two iterations of the repeated grid.
+
+![](fr-iterations-initial.png)
+
+With the option enabled on the grid, adding a new iteration of _Repeated section2_ causes the 
+
+![](fr-iterations-template.png)
+![](fr-iterations-single.png)
+
 <!--
 
 Example:
