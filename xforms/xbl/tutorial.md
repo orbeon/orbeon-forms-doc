@@ -1,5 +1,7 @@
 # Tutorial
 
+<!-- toc -->
+
 ## Encapsulation
 
 The component system favors a strong _encapsulation_ so that components can be:
