@@ -64,6 +64,17 @@ With the option enabled, new iterations can have dynamic initial values:
 
 ![Initial Values](images/fb-iteration-initial-values.png)
 
+[SINCE Orbeon Forms 4.11]
+
+The "Initial Number of Iterations Uses Template" option specifies, when an *enclosing repeated section* creates a new iteration, how many iterations this repeated grid will contains:
+
+- when enabled: the number of iterations shown in Form Builder
+- when disabled: one iteration
+
+<!--
+![Initial Iterations](images/)
+-->
+
 ## See also
 
 - Support for repeats lands in Form Builder: [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
