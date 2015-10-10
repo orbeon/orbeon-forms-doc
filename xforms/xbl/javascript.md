@@ -1,4 +1,6 @@
-> [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
+# JavaScript
+
+<!-- toc -->
 
 ## Define a class for your component
 
