@@ -1,4 +1,6 @@
-> [[Home]] ▸ [[XForms]] ▸ [[XBL|XForms ~ XBL]]
+# XBL library
+
+<!-- toc -->
 
 ## Introduction
 
