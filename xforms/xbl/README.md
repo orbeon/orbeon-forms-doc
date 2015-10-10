@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[XForms]]
+# XBL components
 
 ## Guide to using and writing XBL components
 
