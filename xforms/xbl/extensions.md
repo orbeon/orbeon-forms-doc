@@ -2,6 +2,8 @@
 
 <!-- toc -->
 
+## Namespaces
+
 All the generic extensions are in the namespace `http://orbeon.org/oxf/xml/xbl`, and the usual mapping of this namespace is `xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"`.
 
 ## xxbl:container attribute
