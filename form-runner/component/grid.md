@@ -148,6 +148,20 @@ With `repeat="content"`:
 
 In either case, `fr:grid` contains the rows to repeat as `xh:tr`. Each `xh:tr` contains `xh:td` cells as needed.
 
+## Events
+
+[SINCE Orbeon Forms 4.11]
+
+The following events are dispatched to the `fr:grid` element:
+
+| Event name | Description |
+| --- | --- |
+| `fr-iteration-added` | Dispatched when the user has just added an iteration |
+| `fr-iteration-removed` | Dispatched when the user has just removed an iteration |
+
+These events are not dispatched if the number of iterations changes by other means, for examle if the data is replaced, or inserts/deletes happen outside of the component.
+
+
 ## See also
 
 - [[Form Builder: Repeated Grids |Form-Builder-~-Repeated-Grids]]
