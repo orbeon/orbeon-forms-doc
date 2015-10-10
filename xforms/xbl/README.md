@@ -1,5 +1,7 @@
 # XBL components
 
+<!-- toc -->
+
 ## Guide to using and writing XBL components
 
 - [[Introduction|XForms ~ XBL ~ Introduction]]
