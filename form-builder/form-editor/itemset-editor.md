@@ -1,5 +1,7 @@
 # Itemset editor
 
+<!-- toc -->
+
 ## Introduction
 
 You can edit the possible choices for selection controls by clicking on the icon that shows to the right of a control. When doing so, a dialog, like the one shown in the following screenshot, will appear.
