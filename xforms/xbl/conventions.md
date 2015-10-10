@@ -1,5 +1,7 @@
 # Conventions
 
+<!-- toc -->
+
 ## Following XForms
 
 Whenever it is possible, XBL components should follow patterns found in XForms controls. For instance, if it makes sense to think that the component is bound to a node, then the component should support single node binding attributes on the component element, just like an XForms control would.
