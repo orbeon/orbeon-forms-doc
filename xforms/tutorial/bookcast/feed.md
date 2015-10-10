@@ -98,7 +98,7 @@ Now look at the page view:
     <xsl:for-each select="/books/book">
         <entry>
             <title><xsl:value-of select="concat(author, ' - ', title)"/></title>
-            <id>http://www.orbeon.com/ops/my-bookcast/<xsl:value-of select="concat(author, ' - ', title)"/>"/&gt;</id>
+            <id>http://www.orbeon.com/ops/my-bookcast/<xsl:value-of select="concat(author, ' - ', title)"/>"/</id>
             <updated><xsl:value-of select="current-dateTime()"/></updated>
             <content type="xhtml" xml:lang="en">
                 <div xmlns="http://www.w3.org/1999/xhtml">
