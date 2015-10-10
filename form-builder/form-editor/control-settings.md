@@ -1,5 +1,7 @@
 # Control settings
 
+<!-- toc -->
+
 ## Introduction
 
 The Control Details dialog allows controlling all the aspects the a control besides its label and hint. The dialog
