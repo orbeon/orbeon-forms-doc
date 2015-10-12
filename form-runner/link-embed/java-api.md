@@ -10,7 +10,7 @@ Since Orbeon Forms 4.7.
 
 The intent is to allow Java (and other Java Virtual Machine (JVM)-based languages) applications to easily embed forms produced with Form Builder within other pages.
 
-![A form embedded in a simple page with a top banner](embedding.png)
+![A form embedded in a simple page with a top banner](images/embedding.png)
 
 ## Configuration
 
