@@ -20,9 +20,9 @@ The intent is to allow Java (and other Java Virtual Machine (JVM)-based language
 
 Your own web app does the following:
 
-- include `orbeon-embedding.jar` under `WEB-INF/lib`
-- setup a filter in `WEB-INF/lib`
-- call the embedding API when producing a page
+1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`
+2. Setup the filter in your `web.xml` per the snippet below.
+3. Call the embedding API when producing a page, as done in the example below.
 
 This is a typical filter configuration:
 
