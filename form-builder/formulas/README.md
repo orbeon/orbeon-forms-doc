@@ -1,5 +1,7 @@
 # Formulas
 
+<!-- toc -->
+
 ## Formulas and XPath
 
 Formulas in Orbeon Forms are expressed using *XPath*, a standard _expression language_ for XML. It does not allow you to _modify_ XML data, but it allows you to _query_ XML data and compute values.
