@@ -1,3 +1,7 @@
+# Extension API
+
+<!-- toc -->
+
 ## Availability
 
 Since Orbeon Forms 4.11.
