@@ -1,4 +1,6 @@
-> [[Home]] ▸ [[Form Builder|Form Builder]]
+# Edit source
+
+<!-- toc -->
 
 The "Edit Source" button in the toolbox opens the "Edit Source" dialog.
 
