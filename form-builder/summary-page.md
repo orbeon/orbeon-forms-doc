@@ -1,3 +1,7 @@
+# The Summary page
+
+<!-- toc -->
+
 ## Purpose
 
 The Form Builder summary page is your starting point when you work with Form Builder. It allows:
