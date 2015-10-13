@@ -1,5 +1,7 @@
 # PDF templates
 
+<!-- toc -->
+
 ## How PDF templates work
 
 The purpose of this feature is to allow using existing PDF forms and using Form Runner to fill them out. This has the benefit that your organization can reuse existing forms, which might have been designed carefully for printing or archival purposes.
