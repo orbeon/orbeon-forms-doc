@@ -1,4 +1,4 @@
-# Formulas
+# Examples of formulas
 
 <!-- toc -->
 
