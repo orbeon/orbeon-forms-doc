@@ -1,4 +1,4 @@
-# Edit source
+# Editing the source code of the form definition
 
 <!-- toc -->
 
