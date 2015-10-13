@@ -1,11 +1,6 @@
-> [[Home]] ▸ [[Form Builder|Form Builder]]
+# Actions
 
-- [Introduction](#introduction)
-- [Basic action configuration](#basic-action-configuration)
-- [Passing parameters to the service](#passing-parameters-to-the-service)
-- [Handling the service response](#handling-the-service-response)
-- [Internationalization](#internationalization)
-- [Namespace handling](#namespace-handling)
+<!-- toc -->
 
 ## Introduction
 
