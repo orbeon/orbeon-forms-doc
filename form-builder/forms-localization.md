@@ -1,3 +1,7 @@
+# Form localization
+
+<!-- toc -->
+
 ## Availability
 
 This is an [Orbeon Forms PE][60] feature.
