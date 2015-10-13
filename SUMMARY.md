@@ -30,7 +30,7 @@
    * [Formulas](form-builder/formulas.md)
        * [Examples](form-builder/formulas-examples.md)
    * [Summary Page](form-builder/summary-page.md)
-   * [Form Localization](form-builder/forms-localization.md)
+   * [Form Localization](form-builder/localization.md)
    * Advanced
        * [HTTP Services](form-builder/http-services.md)
        * [Database Services](form-builder/database-services.md)
