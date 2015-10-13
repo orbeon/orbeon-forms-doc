@@ -1,5 +1,9 @@
 # Orbeon Form Builder
 
+<!-- toc -->
+
+## Introduction
+
 Orbeon Form Builder is a visual form designer which allows you to build and deploy forms in minutes right from your web browser.
 
 A few key Form Builder features:
