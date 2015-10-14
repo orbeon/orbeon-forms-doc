@@ -46,7 +46,7 @@ Explanation:
 If you want to refer to a specific control by name, you can use:
 
 ```ruby
-string-length($message) >= 10 and string-length($message) <= 140
+string-length($message) >= 2 and string-length($message) <= 140
 ```
 
 ## Make a control read-only based on the value of another control
