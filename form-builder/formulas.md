@@ -62,7 +62,7 @@ XPath expressions may refer to the value of other controls in the page, using va
 
 ## Examples
 
-See [[examples of formulas|Form Builder ~ Formulas ~ Examples]].
+See [examples of formulas](formulas-examples.html).
 
 ## See also
 
