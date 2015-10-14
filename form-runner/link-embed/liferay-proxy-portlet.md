@@ -221,6 +221,8 @@ When this is enabled, the following portal URL parameters are propagated to Orbe
 
 This is the same as the [server-side embedding configuration](java-api.html).
 
+*NOTE: Be aware that `web.xml` uses `<param-name>` and `<param-value>`, but `portlet.xml` uses `<name>` and `<value>`.*
+
 ## Performance tuning
 
 See the Performance Tuning section of the [[Full Portlet Guide|Form-Runner-~-Portal-~-Full-Portlet-Guide#performance-tuning]].
