@@ -21,7 +21,7 @@ Explanation:
 If you want to refer to a specific control by name, you can use:
 
 ```ruby
-$my-control ge 12 and $my-control le 17
+$my-control >= 12 and $my-control <= 17
 ```
 
 ## Constrain the length of a string
