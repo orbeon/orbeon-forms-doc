@@ -57,6 +57,14 @@ The same can be expressed, for the current control, as:
 xxf:min-length(2) and xxf:max-length(140)
 ```
 
+## Validating with a regular expression
+
+Scneario: check that a given value matches a regular expression, for example "only ASCII letters and digits, the dash, and underscore character".
+
+```ruby
+matches(., '^[A-Za-z0-9\-_]+$')
+```
+
 ## Make a control read-only based on the value of another control
 
 Scenario: Make a control read-only if the value of the `first-name` control is blank:
