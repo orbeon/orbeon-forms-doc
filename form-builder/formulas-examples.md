@@ -210,29 +210,6 @@ $my-attachment/@mediatype = 'application/pdf'
 
 *NOTE: Because the file name and file type are sent by the client's browser, they cannot be trusted. This should only be considered a first level of data validation, and further validation based on the content must be performed at a later time if needed. See also issue [#1838](https://github.com/orbeon/orbeon-forms/issues/1838).*
 
-## Validate the length of a value
-
-Scenario: the maximum length of the "last-name" control is 30 characters.
-
-Constraint expression:
-
-```ruby
-string-length($last-name) <= 30
-```
-
-Explanation:
-
-* The standard `string-length()` function returns the length of its argument
-* The `<=` or `lt` comparator means "lower than or equal to"
-
-[SINCE Orbeon Forms 4.10]
-
-The same can be expressed, for the current control, as:
-
-```ruby
-xxf:max-length(30)
-```
-
 ## Set the value of a field from a URL parameter
 
 Scenario: We want to set the value of a field from a URL parameter, but only if that parameter exists. If it doesn't, we want to leave the value of the field as it is.
