@@ -25,7 +25,7 @@ If you want to refer to a specific control by name, you can use:
 $my-control >= 12 and $my-control <= 17
 ```
 
-## Constrain the length of a string
+## Constrain the length of a string between two values
 
 Scenario: Make the current field valid only if its length is between two values, say 2 and 140.
 
