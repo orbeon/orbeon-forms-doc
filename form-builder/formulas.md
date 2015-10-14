@@ -66,7 +66,7 @@ See [examples of formulas](formulas-examples.html).
 
 ## See also
 
-- [[Examples of formulas|Form Builder ~ Formulas ~ Examples]]
+- [Examples of formulas](formulas-examples.html)
 - [[Form Builder Validation|Form Builder ~ Validation]]
 - [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
