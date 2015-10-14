@@ -2,14 +2,36 @@
 
 <!-- toc -->
 
-## Constraint a number between two values
+## Constrain a number between two values
 
-Scenario: Make the current integer number field valid only if its value is between wo other values, say 12 and 17.
+Scenario: Make the current integer number field valid only if its value is between two values, say 12 and 17 included.
 
 Expression:
 
 ```ruby
 . ge 12 and . le 17
+```
+
+Explanation:
+
+- `.` refers to the current value of the control
+- `ge` means "greater than or equals to"
+- `le` means "less than or equals to"
+
+If you want to refer to a specific control by name, you can use:
+
+```ruby
+$my-control ge 12 and $my-control le 17
+```
+
+## Constrain the length of a string
+
+Scenario: Make the current field valid only if its length is between two values, say 10 and 140.
+
+Expression:
+
+```ruby
+string-length(.) ge 10 and string-length(.) le 140
 ```
 
 Explanation:
