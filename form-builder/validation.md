@@ -180,7 +180,7 @@ Alert messages appear:
 - as badge counts in the navigation bar
 - as general count in the browser's title bar
 
-![Alert Messages](images/fr-validation.png)
+![Alert Messages](../form-runner/images/fr-validation.png)
 
 ## Validation errors and review messages dialog
 
@@ -190,7 +190,7 @@ By default, when saving or sending form data, the following happens:
 - If all controls are valid and there are no warning or info messages, the operation continues.
 - If all controls are valid and there is at least one warning or info message, the "Review Messages" dialog shows. [SINCE Orbeon Forms 4.3]
 
-![Review Messages](images/fr-review-messages.png)
+![Review Messages](../form-runner/images/fr-review-messages.png)
 
 The user has the following choices:
 
