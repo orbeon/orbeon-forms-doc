@@ -49,6 +49,14 @@ If you want to refer to a specific control by name, you can use:
 string-length($message) >= 2 and string-length($message) <= 140
 ```
 
+[SINCE Orbeon Forms 4.10]
+
+The same can be expressed, for the current control, as:
+
+```ruby
+xxf:min-length(2) and xxf:max-length(140)
+```
+
 ## Make a control read-only based on the value of another control
 
 Scenario: Make a control read-only if the value of the `first-name` control is blank:
