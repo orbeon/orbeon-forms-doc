@@ -17,6 +17,7 @@ Explanation:
 - `.` refers to the current value of the control
 - `>=` or `ge` means "greater than or equals to"
 - `<=` or `le` means "less than or equals to"
+- `and` is the logical "and" operator
 
 If you want to refer to a specific control by name, you can use:
 
@@ -26,12 +27,12 @@ $my-control >= 12 and $my-control <= 17
 
 ## Constrain the length of a string
 
-Scenario: Make the current field valid only if its length is between two values, say 10 and 140.
+Scenario: Make the current field valid only if its length is between two values, say 2 and 140.
 
 Expression:
 
 ```ruby
-string-length(.) >= 10 and string-length(.) <= 140
+string-length(.) >= 2 and string-length(.) <= 140
 ```
 
 Explanation:
@@ -40,11 +41,12 @@ Explanation:
 - The standard `string-length()` function returns the length of its argument
 - `>=` or `ge` means "greater than or equals to"
 - `<=` or `le` means "less than or equals to"
+- `and` is the logical "and" operator
 
 If you want to refer to a specific control by name, you can use:
 
 ```ruby
-$my-control ge 12 and $my-control le 17
+string-length($message) >= 10 and string-length($message) <= 140
 ```
 
 ## Make a control read-only based on the value of another control
