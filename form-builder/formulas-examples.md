@@ -65,6 +65,10 @@ Scneario: check that a given value matches a regular expression, for example "on
 matches(., '^[A-Za-z0-9\-_]+$')
 ```
 
+Explanation:
+
+- the standard `matches()` function applies the regular expression passed as second argument to the first argument, and returns true if it does match
+
 ## Make a control read-only based on the value of another control
 
 Scenario: Make a control read-only if the value of the `first-name` control is blank:
