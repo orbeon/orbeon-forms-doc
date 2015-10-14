@@ -31,15 +31,15 @@ Scenario: Make the current field valid only if its length is between two values,
 Expression:
 
 ```ruby
-string-length(.) ge 10 and string-length(.) le 140
+string-length(.) >= 10 and string-length(.) <= 140
 ```
 
 Explanation:
 
 - `.` refers to the current value of the control
-- the ``
-- `ge` means "greater than or equals to"
-- `le` means "less than or equals to"
+- The standard `string-length()` function returns the length of its argument
+- `>=` or `ge` means "greater than or equals to"
+- `<=` or `le` means "less than or equals to"
 
 If you want to refer to a specific control by name, you can use:
 
