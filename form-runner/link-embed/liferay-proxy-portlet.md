@@ -206,7 +206,7 @@ You can enable form selection via URL parameters by setting the `enable-url-para
     <name>enable-url-parameters</name>
     <value>true</value>
 </init-param>
-````
+```
 
 When this is enabled, the following portal URL parameters are propagated to Orbeon Forms to allow form selection:
 
