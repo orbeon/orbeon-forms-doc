@@ -2,6 +2,22 @@
 
 <!-- toc -->
 
+## Constraint a number between two values
+
+Scenario: Make the current integer number field valid only if its value is between wo other values, say 12 and 17.
+
+Expression:
+
+```ruby
+. ge 12 and . le 17
+```
+
+Explanation:
+
+- `.` refers to the current value of the control
+- `ge` means "greater than or equals to"
+- `le` means "less than or equals to"
+
 ## Make a control read-only based on the value of another control
 
 Scenario: Make a control read-only if the value of the `first-name` control is blank:
