@@ -18,6 +18,12 @@ Explanation:
 - `ge` means "greater than or equals to"
 - `le` means "less than or equals to"
 
+If you want to refer to a specific control by name, you can use:
+
+```ruby
+$my-control ge 12 and $my-control le 17
+```
+
 ## Make a control read-only based on the value of another control
 
 Scenario: Make a control read-only if the value of the `first-name` control is blank:
