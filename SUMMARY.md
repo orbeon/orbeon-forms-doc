@@ -67,7 +67,7 @@
        * [Form Fields](form-runner/access-control/form-fields.md)
        * [Editing Forms](form-runner/access-control/editing-forms.md)
        * [Owner Group](form-runner/access-control/owner-group.md)
-       * [Setup](form-runner/access-control/setup.md)
+       * [Users, roles, groups](form-runner/access-control/setup.md)
    * Styling
        * [CSS](form-runner/styling/css.md)
        * [Automatic PDF](form-runner/styling/automatic-pdf.md)
@@ -88,25 +88,25 @@
        * [Environments](configuration/advanced/environments.md)
        * [Configuring a Form Runner eXist database](configuration/advanced/exist-db.md)
 * XForms
-    * XPath function library
-        * [Standard functions](xforms/xpath/standard-functions.md)
-        * Extension functions
-            * [Core functions](xforms/xpath/extension-core.md)
-            * [Model functions](xforms/xpath/extension-model.md)
-            * [Validation functions](xforms/xpath/extension-validation.md)
-            * [Controls functions](xforms/xpath/extension-controls.md)
-            * [XML functions](xforms/xpath/extension-xml.md)
-            * [HTTP functions](xforms/xpath/extension-http.md)
-            * [Other functions](xforms/xpath/extension-other.md)
-            * [Deprecated functions](xforms/xpath/deprecated-functions.md)
-    * XForms tutorial
-        * [Introduction](xforms/tutorial/introduction.md)
-        * [Installation](xforms/tutorial/installation.md)
-        * [The Hello application](xforms/tutorial/hello.md)
-        * [The Bookcast application](xforms/tutorial/bookcast/README.md)
-            * [The basic app](xforms/tutorial/bookcast/basics.md)
-            * [Database access](xforms/tutorial/bookcast/database.md)
-            * [Polishing the app](xforms/tutorial/bookcast/polishing.md)
-            * [Adding a feed](xforms/tutorial/bookcast/feed.md)
+   * XPath function library
+       * [Standard functions](xforms/xpath/standard-functions.md)
+       * Extension functions
+           * [Core functions](xforms/xpath/extension-core.md)
+           * [Model functions](xforms/xpath/extension-model.md)
+           * [Validation functions](xforms/xpath/extension-validation.md)
+           * [Controls functions](xforms/xpath/extension-controls.md)
+           * [XML functions](xforms/xpath/extension-xml.md)
+           * [HTTP functions](xforms/xpath/extension-http.md)
+           * [Other functions](xforms/xpath/extension-other.md)
+           * [Deprecated functions](xforms/xpath/deprecated-functions.md)
+   * XForms tutorial
+       * [Introduction](xforms/tutorial/introduction.md)
+       * [Installation](xforms/tutorial/installation.md)
+       * [The Hello application](xforms/tutorial/hello.md)
+       * [The Bookcast application](xforms/tutorial/bookcast/README.md)
+           * [The basic app](xforms/tutorial/bookcast/basics.md)
+           * [Database access](xforms/tutorial/bookcast/database.md)
+           * [Polishing the app](xforms/tutorial/bookcast/polishing.md)
+           * [Adding a feed](xforms/tutorial/bookcast/feed.md)
 * Contributors
 
