@@ -73,15 +73,15 @@ The "Initial Number of Iterations Uses Template" option specifies, when an *encl
 
 The following screenshot shows a case with a repeated grid within nested repeated sections. At first, when the form shows, there are two iterations of the repeated grid.
 
-![](fr-iterations-initial.png)
+![](images/iterations-initial.png)
 
 With the option enabled on the grid, adding a new iteration of _Repeated section2_ causes the new iteration to contain a new repeated grid with two iterations:
 
-![](fr-iterations-template.png)
+![](images/iterations-template.png)
 
 While, with the option disabled on the grid, adding a new iteration of _Repeated section2_ causes the new iteration to contain a new repeated grid a single iterations:
 
-![](fr-iterations-single.png)
+![](images/iterations-single.png)
 
 <!--
 
