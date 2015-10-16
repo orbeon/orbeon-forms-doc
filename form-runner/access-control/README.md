@@ -19,7 +19,7 @@ The following pages address specific topics:
 - [Setup](setup.md) - How to setup Orbeon Forms so that users and roles are provided.
 - [Editing Forms](editing-forms.md) - How to control access to Form Builder.
 - [Deployed Forms](deployed-forms.md) - How to control access to deployed forms.
-  - [[Owner and Group Member permissions|Form Runner ~ Access Control ~ Owner Group]] - How to control access based on ownership and groups.
+  - [Owner and Group Member permissions](owner-group.md) - How to control access based on ownership and groups.
 - [[Form Fields|Form Runner ~ Access Control ~ Form Fields]] - How to control access to specific form fields, grids or sections.
 
 ## Scenarios
