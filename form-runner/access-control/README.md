@@ -4,9 +4,7 @@
 
 ## Introduction
 
-This page documents how to secure Form Runner and Form Builder.
-
-When it comes to access control, Orbeon Forms leverages and delegates some work to external security infrastructure. In particular, you define users and roles outside of Orbeon Forms.
+Here we''ll go over how you can secure Form Runner and Form Builder. When it comes to access control, Orbeon Forms leverages and delegates some work to external security infrastructure. In particular, you define users and roles outside of Orbeon Forms.
 
 Access control touches on the following:
 
