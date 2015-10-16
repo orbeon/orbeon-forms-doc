@@ -1,8 +1,24 @@
+# Linking to Your Forms
 
+## Rationale
 
-Form Runner and Form builder use friendly URLs.
+When you create a form with Form Builder, you pick an *application name* and *form name* for that form. For instance, for a marriage registration, you might choose `clerk` as the application name, and `marriage-regristration` as the form name.
 
-The following URL patterns are followed:
+When you publish the form, assuming you have Orbeon Forms deployed on a server at `http://www.city.gov/forms`, citizen will be able to fill out a new marriage registration by going to `http://www.city.gov/forms/fr/clerk/marriage-regristration/new`.
+
+In a typical deployment, users will access this page from another part of your web site or web application that contains a link to form served by Orbeon Forms. For instance, a city government might have on its web site a page listing forms citizen can fill out, which links to the marriage registration form on `http://www.city.gov/forms/fr/clerk/marriage-regristration/new`.
+
+![Page on your web site/app linking to a form](https://orbeon.mybalsamiq.com/mockups/3666369.png?key=4e3bc223354f14e89e19a736a331bd47184edc0f)
+
+## Technology agnostic
+
+Linking doesn't make any assumption on the technology used by the web site or application you're linking from. Your site could use Drupal, WordPress, be served by IIS, using .NET, or any other technology. For instance, in the diagram below is for a situation where your web site is served by Microsoft IIS, implemented in .NET, and links to forms served by Orbeon Forms.
+
+![IIS front-end](https://orbeon.mybalsamiq.com/mockups/3666462.png?key=18bf82e9371656091c7b6139b5d5ee58e6e6b746)
+
+## Paths
+
+The `/fr/clerk/marriage-regristration/new` in our example is what is referred to below as a *path*, and for a given form, multiple such paths exist. Knowing those paths look like is particulary important as this allows you to link from your web site or web application to forms your created with Form Builder. All the paths are relative to the *deployment context*, i.e. where you've deloyed Orbeon Forms, which in our example was `http://www.city.gov/forms`.
 
 * Summary page for a given form definition:
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/summary`
@@ -16,7 +32,3 @@ The following URL patterns are followed:
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/pdf/[DOCUMENT_ID]`
 * Read-only TIFF view: [SINCE Orbeon Forms 4.11]
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/tiff/[DOCUMENT_ID]`
-
-See also [[Form Builder Integration|Form Builder ~ Integration]].
-
-_NOTE: All paths above are relative to the deployment context, e.g the actual URLs start with http://localhost:8080/orbeon/fr/..._
