@@ -16,7 +16,7 @@ Access control touches on the following:
 
 The following pages address specific topics:
 
-- [[Setup|Form Runner ~ Access Control ~ Setup]] - How to setup Orbeon Forms so that users and roles are provided.
+- [Setup](setup.md) - How to setup Orbeon Forms so that users and roles are provided.
 - [[Editing Forms|Form Runner ~ Access Control ~ Editing Forms]] - How to control access to Form Builder.
 - [[Deployed Forms|Form Runner ~ Access Control ~ Deployed Forms]] - How to control access to deployed forms.
   - [[Owner and Group Member permissions|Form Runner ~ Access Control ~ Owner Group]] - How to control access based on ownership and groups.
