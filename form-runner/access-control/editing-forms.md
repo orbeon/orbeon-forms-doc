@@ -1,4 +1,6 @@
-> [[Home]] ▸ Form Runner ▸ [[Access Control |Form Runner ~ Access Control]]
+# Access Control in Form Builder
+
+<!-- toc -->
 
 ## Form Builder permissions
 
@@ -12,7 +14,7 @@ In this file you map role names to applications and forms. For instance, the fol
 
 ```xml
 <roles>
-  <role name="hr-form-editor"    app="hr" form="*"/>
+  <role name="hr-form-editor"    app="hr" form="*"/>
   <role name="sales-form-editor" app="sales" form="*"/>
 </roles>
 ```
