@@ -1,4 +1,6 @@
-> [[Home]] ▸ [[Form Runner|Form Runner]]
+# Access Control
+
+<!-- toc -->
 
 ## Introduction
 
@@ -94,9 +96,3 @@ Limitations:
 
 - Anonymous data entry does not support autosave.
 - As an administrator, you first have to login, for example by accessing Form Builder, before accessing published forms' Summary page (issue [#1292](https://github.com/orbeon/orbeon-forms/issues/1292)).
-
-
-## See also
-
-- [Securing Form Runner](http://wiki.orbeon.com/forms/doc/user-guide/form-runner-user-guide#TOC-Securing-Form-Runner)
-- [Legacy configuration for Orbeon Forms 3.9](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control)
