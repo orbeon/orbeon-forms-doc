@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[Installation]]
+
 
 - [Configuration properties](#configuration-properties)
 - [Default values](#default-values)

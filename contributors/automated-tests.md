@@ -1,4 +1,4 @@
-> [[Home]] ▸ Contributors
+
 
 ## Removing leftover databases on SQL Server
 

@@ -1,4 +1,4 @@
-> [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
+
 
 - e.g. http://localhost:8080/410pe/fr/orbeon/bookshelf/summary
 - list forms

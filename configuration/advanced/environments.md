@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[Installation]]
+
 
 ## Types of environments
 

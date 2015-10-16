@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[Installation]]
+
 
 ## Session not found when running both Tomcat and WebLogic
 

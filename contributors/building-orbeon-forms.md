@@ -1,4 +1,4 @@
-> [[Home]] ▸ Contributors
+
 
 This page explains how to build Orbeon Forms:
 

@@ -1,4 +1,4 @@
-> [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
+
 
 - deploy `orbeon-embedding.war` into Tomcat
 - update `web.xml`:

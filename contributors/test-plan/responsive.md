@@ -1,4 +1,4 @@
-> [[Home]] ▸ Contributors ▸ [[Test Plan|Contributors ~ Test Plan]]
+
 
 - access detail page from iPhone
     - Bookshelf

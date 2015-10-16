@@ -1,4 +1,4 @@
-> [[Home]] ▸ Contributors
+
 
 ## Introduction
 

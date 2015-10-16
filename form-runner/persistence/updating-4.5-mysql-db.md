@@ -1,4 +1,4 @@
-> [[Home]] ▸ [[Form Runner|Form Runner]]
+
 
 If when accessing the Form Runner summary page, the data you're seeing looks garbled, then run the following in on your MySQL database:
 
