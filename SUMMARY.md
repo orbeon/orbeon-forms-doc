@@ -63,11 +63,11 @@
        * [Liferay full portlet](form-runner/link-embed/liferay-full-portlet.md)
        * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
    * [Access Control](form-runner/access-control/README.md)
+       * [Users](form-runner/access-control/setup.md)
        * [Deployed Forms](form-runner/access-control/deployed-forms.md)
        * [Form Fields](form-runner/access-control/form-fields.md)
        * [Editing Forms](form-runner/access-control/editing-forms.md)
        * [Owner Group](form-runner/access-control/owner-group.md)
-       * [Users](form-runner/access-control/setup.md)
    * Styling
        * [CSS](form-runner/styling/css.md)
        * [Automatic PDF](form-runner/styling/automatic-pdf.md)
