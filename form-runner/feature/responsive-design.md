@@ -8,7 +8,7 @@ Starting with version 4.10, Orbeon Forms supports [responsive design](https://en
 
 If you have a form with a section containing a grid with two columns, on a desktop or tablet your form might show as:
 
-![Fields as shown on a desktop](images/fr-responsive-desktop.png)
+![Fields as shown on a desktop](/form-runner/images/responsive-desktop.png)
 
 When the same form is loaded from a mobile phone, fields will automatically be shown in one column to better fit that screen:
 

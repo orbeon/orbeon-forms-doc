@@ -14,7 +14,7 @@ For each choice, you can enter:
 - A _value_ – This is what is stored as part of the data when users select this choice.
 - A _hint_ – The third column only shows for radio buttons and checkboxes. If you provide a hint for a choice, that choice will be highlighted and the hint you provided will show when users move the mouse pointer over the label, as shown in the following screenshot.
 
-![](images/fr-itemset-hint.png)
+![](/form-runner/images/itemset-hint.png)
 
 If you check the HTML checkbox, all the hints and labels you type in dialog are interpreted as HTML, allowing you to use HTML tags in label and hints, say to make text bold or italic.
 

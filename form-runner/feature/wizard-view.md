@@ -6,7 +6,7 @@ By default with Form Runner all the form sections appear in the same page, on to
 
 With the wizard view, top-level sections instead appear in a table of contents area to the left, and only a single top-level section is shown at any given time in a separate wizard "page":
 
-![Form Runner Wizard](images/fr-wizard.png)
+![Form Runner Wizard](/form-runner/images/wizard.png)
 
 You can navigate between pages by clicking on a title in the table of contents, or you can use the navigation arrows. You can also use "Prev" and "Next" buttons when configured.
 
@@ -56,7 +56,7 @@ The following property enables the validated mode:
 
 You can see in the following picture that the sections in the table of contents which have not yet been visited are grayed out:
 
-![Wizard validated mode](images/fr-wizard-validated.png)
+![Wizard validated mode](/form-runner/images/wizard-validated.png)
 
 ## See also
 

@@ -8,7 +8,7 @@
 
 The `fr:character-counter` component encapsulates an existing text control and adds a character counter next to it.
 
-![Input field with character counter](images/fr-character-counter-control.png)
+![Input field with character counter](/form-runner/images/character-counter-control.png)
 
 It supports the following controls:
 

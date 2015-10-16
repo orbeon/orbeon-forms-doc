@@ -35,7 +35,7 @@ The section appears with read-only fields (which means that you cannot change pr
 
 When deploying the form, section templates appear like regular editable sections:
 
-![Section templates in Form Runner](images/fr-section-template.png)
+![Section templates in Form Runner](/form-runner/images/section-template.png)
 
 ## Services and actions
 

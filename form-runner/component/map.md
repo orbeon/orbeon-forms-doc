@@ -8,7 +8,7 @@ This component renders a Google Maps widget on the page. It is bound to an addre
 - If a latitude/longitude is provided, it takes precedence over the address and the marker will be placed at that latitude/longitude instead of at the address.
 - The user can move the pin to choose another location. When that happens, the latitude/longitude for the new position of the marker will be stored.
 
-![Map component in action](images/fr-xbl-map.png)
+![Map component in action](/form-runner/images/xbl-map.png)
 
 ## Usage
 

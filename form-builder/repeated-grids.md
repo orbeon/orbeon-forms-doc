@@ -26,13 +26,13 @@ Whether there is a single or multiple repeatable rows, you can add and remove re
 
 At runtime, notice how in the first grid a single row is repeated, and in the second grid the two rows are repeated.
 
-![Repeated grids](images/fr-repeated-grids.png)
+![Repeated grids](/form-runner/images/repeated-grids.png)
 
 In review mode and PDF mode, icons and menus disappear and the grid appears entirely readonly.
 
-![Repeated grids in review mode](images/fr-repeated-grids-view.png)
+![Repeated grids in review mode](/form-runner/images/repeated-grids-view.png)
 
-![Repeated grids in PDF mode](images/fr-repeated-grids-pdf.png)
+![Repeated grids in PDF mode](/form-runner/images/repeated-grids-pdf.png)
 
 ## Grid settings
 

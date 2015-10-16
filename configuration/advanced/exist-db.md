@@ -73,7 +73,7 @@ When deploying eXist as a WAR file, it will run using the Unix user of the servl
 
 To do so, you can use the eXist database administration tool:
 
-![](images/fr-exist-users.png)
+![](/form-runner/images/exist-users.png)
 
 Steps:
 

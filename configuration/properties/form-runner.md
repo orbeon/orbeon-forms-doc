@@ -107,7 +107,7 @@ Number of rows shown in the Summary Page.
 
 By default, the Summary Page shows a Created and Modified columns:
 
-![](images/fr-summary-created-last-modified.png)
+![](/form-runner/images/summary-created-last-modified.png)
 
 You can remove either one of those columns by setting the value appropriate property to `false`:
 
@@ -211,7 +211,7 @@ When using the wizard view (or other Detail Page custom views), the following pr
 
 The example above places the wizard's Prev and Next buttons just under the current wizard section:
 
-![](images/fr-wizard-buttons.png)
+![](/form-runner/images/wizard-buttons.png)
 
 For more information, see [[Buttons and Processes|Form Runner ~ Buttons and Processes]].
 
@@ -410,7 +410,7 @@ If using the reCAPTCHA, also add the following properties to specify your reCAPT
 
 With those properties in place, your forms will show a captcha as illustrated by the following screenshot.
 
-![](images/fr-recaptcha.png)
+![](/form-runner/images/recaptcha.png)
 
 [LIMITATION] The Form Runner captcha uses the [[captcha XBL components|Form Runner ~ XBL Components ~ Captcha]], which doesn't support the noscript mode. Hence,  enabling this feature will have no effect in noscript mode.
 
