@@ -18,7 +18,7 @@ In the Control Details dialog, XPath expressions are used to specify the followi
 
 #### Validations and alerts
 
-![Validations](images/fb-control-settings-validations.png)
+![Validations](/form-builder/images/control-settings-validations.png)
 
 * **Constraint:** Boolean expression specifying whether the control is valid.
     * If this field is left blank, then the validity of the control depends on the data type and the "Required" option.
@@ -26,7 +26,7 @@ In the Control Details dialog, XPath expressions are used to specify the followi
 
 #### Formulas
 
-![Formulas](images/fb-control-settings-formulas.png)
+![Formulas](/form-builder/images/control-settings-formulas.png)
 
 * **Visibility:** Boolean expression specifying whether the control is visible.
     * If this field is left blank, then the control is always visible, unless the section is not visible.
@@ -41,7 +41,7 @@ In the Control Details dialog, XPath expressions are used to specify the followi
 
 ### Section/Grid Settings dialog
 
-![Basic Settings and Formulas](images/fb-section-settings.png)
+![Basic Settings and Formulas](/form-builder/images/section-settings.png)
 
 In the Section/Grid Settings dialog, XPath expressions are used to specify the following aspects of a section or grid:
 

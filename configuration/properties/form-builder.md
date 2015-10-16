@@ -68,7 +68,7 @@ In addition to controls, the toolbox has other features which you can enable or 
 
 By default the Publish dialog proposes, upon successful publication of a form definition, shortcuts to navigate to the published form's New or Summary pages.
 
-![Publish dialog](images/fb-publish-initial-after.png)
+![Publish dialog](/form-builder/images/publish-initial-after.png)
 
 This property allows specifying which of these actions are available:
 

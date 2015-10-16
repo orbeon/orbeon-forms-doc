@@ -9,7 +9,7 @@ has several tabs, detailed below.
 
 ### Basic Settings
 
-![Basic Settings tab](images/fb-control-settings.png)
+![Basic Settings tab](/form-builder/images/control-settings.png)
 
 #### Basic options
 
@@ -42,19 +42,19 @@ See also [How the new Form Builder Appearance Selector Works](http://blog.orbeon
 
 ### Validations and alerts
 
-![Validations and alerts tab](images/fb-control-settings-validations.png)
+![Validations and alerts tab](/form-builder/images/control-settings-validations.png)
 
 See [[Form Builder Validation|Form Builder ~ Validation]] for details.
 
 ### Formulas
 
-![Formulas tab](images/fb-control-settings-formulas.png)
+![Formulas tab](/form-builder/images/control-settings-formulas.png)
 
 See [[Form Builder Formulas|Form Builder ~ Formulas]] for details.
 
 ### Help Message
 
-![Help tab](images/fb-control-settings-help.png)
+![Help tab](/form-builder/images/control-settings-help.png)
 
 This allows specifying some help text, which can be plain text or rich text when the "Use HTML" checkbox is selected.
 

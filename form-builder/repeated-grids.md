@@ -14,11 +14,11 @@ Once the grid is inserted, you can add and remove (using the grid arrow and tras
 
 With only one row, the control labels are used as column headers and are not repeated within the grid. If present, control hints are also added to the column headers. That single row is repeatable with the "plus" icon.
 
-![Repeating a single row](images/fb-repeated-grid-single.png)
+![Repeating a single row](/form-builder/images/repeated-grid-single.png)
 
 You can add multiple heterogeneous rows with the arrow icons. In this case the entire group of rows is repeatable. Control labels and hints do not appear in column headers, but appear alongside the controls in the grid.
 
-![Repeating multiple rows](images/fb-repeated-grid-multiple.png)
+![Repeating multiple rows](/form-builder/images/repeated-grid-multiple.png)
 
 Whether there is a single or multiple repeatable rows, you can add and remove repetitions (iterations) of those rows with the "plus" icon. You typically let the user add iterations at runtime, but it is possible to create iterations in advance at design time as well.
 
@@ -38,7 +38,7 @@ In review mode and PDF mode, icons and menus disappear and the grid appears enti
 
 Once a grid is inserted, you can edit its properties with the "Grid Settings" icon.
 
-![Grid Settings](images/fb-repeated-grid-settings-icon.png)
+![Grid Settings](/form-builder/images/repeated-grid-settings-icon.png)
 
 ### Formulas
 
@@ -46,13 +46,13 @@ The "Visibility" and "Read-Only" formulas control whether the entire grid (inclu
 
 *NOTE: Since Orbeon Forms 4.8, these settings properly apply to the entire grid. Previously, the grid's repeat headers did not hide properly for example when the grid was hidden. See issue [#635](https://github.com/orbeon/orbeon-forms/issues/635).*
 
-![Grid Settings](images/fb-repeated-grid-settings-basic.png)
+![Grid Settings](/form-builder/images/repeated-grid-settings-basic.png)
 
 ### Repeat settings
 
 The repeat settings control whether to use a custom iteration name (not recommended in most cases), and the minimum/maximum number of repeat iterations allowed.
 
-![Grid Settings](images/fb-repeated-grid-settings-repeat.png)
+![Grid Settings](/form-builder/images/repeated-grid-settings-repeat.png)
 
 [SINCE Orbeon Forms 4.11]
 
@@ -62,7 +62,7 @@ With Orbeon Forms 4.11, the option is enabled by default for new forms and new r
 
 With the option enabled, new iterations can have dynamic initial values:
 
-![Initial Values](images/fb-iteration-initial-values.png)
+![Initial Values](/form-builder/images/iteration-initial-values.png)
 
 [SINCE Orbeon Forms 4.11]
 

@@ -16,9 +16,9 @@ The notion of _publishing_ is central to Form Builder/Form Runner.
 
 When versioning is enabled, you have a choice, when publishing, of whether to create a new form version or to override an existing one.
 
-![Creating a new version](images/fb-publish-version-next.png)
+![Creating a new version](/form-builder/images/publish-version-next.png)
 
-![Overwriting an existing version](images/fb-publish-version-overwrite.png)
+![Overwriting an existing version](/form-builder/images/publish-version-overwrite.png)
 
 [SINCE Orbeon Forms 4.11] You can overwrite not only the latest published version, but any previous version.
 

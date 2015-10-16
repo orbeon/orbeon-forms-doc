@@ -8,11 +8,11 @@ For forms created in Form Builder, you can restrict which users can access which
 
 By default, no restriction is imposed on _who_ can do _what_ with forms you create in Form Builder. You enable permissions by going to the Form Builder sidebar, and under _Advanced_, clicking on _Set Permissions_.
 
-![](images/fb-advanced-menu.png)
+![](/form-builder/images/advanced-menu.png)
 
 This shows the following dialog:
 
-![](images/fb-permissions-enable.png)
+![](/form-builder/images/permissions-enable.png)
 
 ## Setting permissions
 
@@ -31,7 +31,7 @@ In the example below:
 * Users with the role _clerk_to read data.
 * Users with the role _admin_ to do any operation, including deleting form data.
 
-![](images/fb-permissions-dialog.png)
+![](/form-builder/images/permissions-dialog.png)
 
 ## Permissions dialog
 

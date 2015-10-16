@@ -14,7 +14,7 @@ Form Builder supports defining reusable sections called section templates. Here 
 
 For example, you can create a generic "US Address" section and reuse it in multiple forms:
 
-![Defining a section template in Form Builder](images/fb-section-template.png)
+![Defining a section template in Form Builder](/form-builder/images/section-template.png)
 
 Sections can contain:
 
@@ -31,7 +31,7 @@ When you click on a given section template, the section is inserted into the for
 
 The section appears with read-only fields (which means that you cannot change properties of the controls once inserted):
 
-![Using section templates in Form Builder](images/fb-section-template-use.png)
+![Using section templates in Form Builder](/form-builder/images/section-template-use.png)
 
 When deploying the form, section templates appear like regular editable sections:
 
