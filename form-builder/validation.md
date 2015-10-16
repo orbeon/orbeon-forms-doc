@@ -18,7 +18,7 @@ Form Builder supports this kind of validations via the "Validations and Alerts" 
 
 *NOTE: Prior to Orbeon Forms 4.3, the dialog was called "Validation Properties". Orbeon Forms 4.3 combines dialogs and adds functionality.*
 
-![Control validation settings](/form-builder/images/validation.png)
+![Control validation settings](images/validation.png)
 
 ## Validation types
 
@@ -39,7 +39,7 @@ This simple validation has 3 possibilities:
 - *No*: a value is not required and can be empty.
 - *Formula*: an XPath expression to dynamically control whether the control is valid or not. [SINCE Orbeon Forms 4.7]
 
-![Options for required validation](/form-builder/images/required-formula.png)
+![Options for required validation](images/required-formula.png)
 
 When the value is required, an asterisk appears next to the control to signify to the user that the value is required.
 
@@ -56,7 +56,7 @@ The list of data types includes:
 - common types such as a plain `string`, `decimal`, `date`, `time`, `boolean`, or `email`
 - XML Schema types (only if an XML Schema with simple types was attache to the form)
 
-![Built-in Types](/form-builder/images/built-in-types.png)
+![Built-in Types](images/built-in-types.png)
 
 At runtime, if the value is required and does not match the specified datatype, the value is marked as invalid.
 
@@ -64,7 +64,7 @@ At runtime, if the value is required and does not match the specified datatype, 
 
 If an XML Schema containing simple types has been attached to the form [Orbeon Forms PE only], the simples types are listed in the Schema Type menu.
 
-![Built-in Types](/form-builder/images/schema-types.png)
+![Built-in Types](images/schema-types.png)
 
 Either a built-in data type or an XML Schema data type can be selected. If you select an XML Schema data type, the built-in data type is automatically reset. Similarly, if you select a built-in data type, the XML Schema data type is reset.
 
@@ -114,7 +114,7 @@ A common constraint consists of the following:
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
 
-![Min and max length constraints](/form-builder/images/min-max-constraints.png)
+![Min and max length constraints](images/min-max-constraints.png)
 
 ## Control validity
 

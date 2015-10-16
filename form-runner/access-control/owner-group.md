@@ -10,7 +10,7 @@ Owner/group-based are useful when you want users to only see their own data, or 
 
 To use this feature for a form, in Form Builder, when editing a form, open the *Permissions* dialog, and check boxes on the *Owner* and *Group member* lines as appropriate for your situation.
 
-![Permissions dialog](/form-runner/images/permissions-dialog.png)
+![Permissions dialog](../images/permissions-dialog.png)
 
 ## Configuration
 

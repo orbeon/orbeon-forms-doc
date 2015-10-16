@@ -25,7 +25,7 @@ In order to create a template, you need Acrobat Professional or a similar tool t
 
 *NOTE: For languages like French, make sure that fields in the form have an Arial font, not Helvetica. Not using Arial can cause issue with accents.*
 
-![Example of form fields in Acrobat Professional](/form-builder/images/pdf-template.png)
+![Example of form fields in Acrobat Professional](images/pdf-template.png)
 
 ### Naming fields
 
@@ -100,4 +100,4 @@ The field names must look like:
 - `my-section$my-repeat$my-input$2` for the second iteration
 - etc.
 
-![Example of repeated fields](/form-builder/images/pdf-template-repeat.png)
+![Example of repeated fields](images/pdf-template-repeat.png)

@@ -26,7 +26,7 @@ The toolbox can be configured via properties and component metadata.
 
 The Cut, Copy and Paste icons are located at the top of the toolbox:
 
-![](/form-builder/images/xcv.png)
+![](images/xcv.png)
 
 They allow performing the usual cut/copy/paste operations on form controls.
 
@@ -50,7 +50,7 @@ When the control is pasted, if the control name of the clipboard control is curr
 
 ## Form structure
 
-![](/form-builder/images/form-structure.png)
+![](images/form-structure.png)
 
 ### New section button
 
@@ -96,7 +96,7 @@ Orbeon is expecting feedback from users on the controls marked _experimental_ be
 
 ### Text controls
 
-![](/form-builder/images/text-controls.png)
+![](images/text-controls.png)
 
 | Name | Description |
 | --- | --- |
@@ -109,11 +109,11 @@ Orbeon is expecting feedback from users on the controls marked _experimental_ be
 
 The controls appear like this at design time:
 
-![](/form-builder/images/text-controls-design-time.png)
+![](images/text-controls-design-time.png)
 
 ### Typed controls
 
-![](/form-builder/images/typed-controls.png)
+![](images/typed-controls.png)
 
 | Name | Description |
 | --- | --- |
@@ -125,11 +125,11 @@ The controls appear like this at design time:
 
 The controls appear like this at design time:
 
-![](/form-builder/images/typed-controls-design-time.png)
+![](images/typed-controls-design-time.png)
 
 ### Date and time controls
 
-![](/form-builder/images/date-time-controls.png)
+![](images/date-time-controls.png)
 
 | Name | Description |
 | --- | --- |
@@ -141,11 +141,11 @@ The controls appear like this at design time:
 
 The controls appear like this at design time:
 
-![](/form-builder/images/date-time-controls-design-time.png)
+![](images/date-time-controls-design-time.png)
 
 ### Selection controls
 
-![](/form-builder/images/selection-controls.png)
+![](images/selection-controls.png)
 
 | Name | Selection | Description |
 | --- | --- | --- |
@@ -161,13 +161,13 @@ You edit the choices of most selection controls with the [[Itemset Editor|Form B
 
 The controls appear like this at design time:
 
-![](/form-builder/images/selection-controls-design-time.png)
+![](images/selection-controls-design-time.png)
 
 _NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 4.11 and removed from the toolbox._
 
 ### Attachment controls
 
-![](/form-builder/images/attachment-controls.png)
+![](images/attachment-controls.png)
 
 | Name | Description |
 | --- | --- |
@@ -178,11 +178,11 @@ _NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 4.11 and r
 
 The controls appear like this at design time:
 
-![](/form-builder/images/attachment-controls-design-time.png)
+![](images/attachment-controls-design-time.png)
 
 ### Button controls
 
-![](/form-builder/images/button-controls.png)
+![](images/button-controls.png)
 
 | Name | Description |
 | --- | --- |
@@ -195,7 +195,7 @@ _NOTE: Buttons do not appear at all in preview mode._
 
 The controls appear like this at design time:
 
-![](/form-builder/images/button-controls-design-time.png)
+![](images/button-controls-design-time.png)
 
 ### Choices
 

@@ -14,19 +14,19 @@ It's pretty simple!
 
 1. You start the import from the Form Runner import page, accessible from the summary page
 
-    ![](/form-runner/images/excel-import-summary.png)
+    ![](../images/excel-import-summary.png)
 
 2. You select the Excel 2007 file to upload and import
 
-    ![](/form-runner/images/excel-import-select.png)
+    ![](../images/excel-import-select.png)
 
 3. Form Runner validates the Excel file and give you the option to add to existing data for the given form, or remove all existing data first
 
-    ![](/form-runner/images/excel-import-validate.png)
+    ![](../images/excel-import-validate.png)
 
 4. Form Runner imports valid data from the Excel file
 
-    ![](/form-runner/images/excel-import-import.png)
+    ![](../images/excel-import-import.png)
 
 _NOTE: Only the Excel 2007 .xlsx format (Office Open XML) is supported. The older, .xls format is not supported._
 
@@ -54,7 +54,7 @@ In your form, you create controls with names that match the names in the first r
 
 Here is an example spreadsheet for the sample Orbeon Contact form:
 
-![]![](/form-runner/images/excel-import-sheet.png)
+![]![](../images/excel-import-sheet.png)
 
 _NOTE: Only characters allowed in XML names are allowed as control names in Form Builder. In case your Excel header row requires names with non-XML characters (Form Builder will tell you the name is not allowed), simply replace them by "_" in Form Builder._
 

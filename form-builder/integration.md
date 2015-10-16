@@ -23,7 +23,7 @@ _NOTE: All paths above are relative to the deployment context, e.g the actual UR
 
 When navigating to `/fr/orbeon/builder/new`, Form Builder usually presents the user with the New Form dialog, which asks for at least an app and form name.
 
-![New Form Dialog](/form-builder/images/new-form-dialog.png)
+![New Form Dialog](images/new-form-dialog.png)
 
 It is possible to bypass that dialog by providing the following URL parameters:
 
@@ -46,7 +46,7 @@ In case the app and/or form name are missing or invalid, Form Builder presents t
 /fr/orbeon/builder/new?fr-app=acme&fr-form=o/rder&fr-title=This+is+a+wonderful+form!
 ```
 
-![New Form Dialog with Error](/form-builder/images/new-form-dialog-error.png)
+![New Form Dialog with Error](images/new-form-dialog-error.png)
 
 ## See also
 

@@ -55,4 +55,4 @@ We can create a [[custom button|Form-Runner-~-Buttons-and-Processes]] that dispa
 
 The result:
 
-![Form Runner message](/form-runner/images/your-email-is.png)
+![Form Runner message](../images/your-email-is.png)

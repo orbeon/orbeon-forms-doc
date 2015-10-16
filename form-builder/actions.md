@@ -14,7 +14,7 @@ The Form Builder action editor is an [Orbeon Forms PE](http://www.orbeon.com/pri
 
 Actions are tightly coupled with services. In the future, support might be added for actions which do not require services.
 
-![Actions Editor](/form-builder/images/actions.png)
+![Actions Editor](images/actions.png)
 
 ## Basic action configuration
 

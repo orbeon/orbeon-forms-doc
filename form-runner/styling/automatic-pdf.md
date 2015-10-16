@@ -14,6 +14,6 @@ with the PDF version. In both cases, the HTML markup is about the same, and you 
 
 With Chrome, in particular, you can also put the browser in `@media print` emulation:
 
-![Chrome emulation settings](/form-runner/images/chrome-media-emulation.png)
+![Chrome emulation settings](../images/chrome-media-emulation.png)
 
 With that setting enabled, the main remaining difference between the Review page and the PDF is how browsers and the PDF library Orbeon Forms uses (FlyingSaucer) interpret CSS, as there are differences. Often you have to go by trial and error.

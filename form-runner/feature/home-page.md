@@ -100,7 +100,7 @@ With Orbeon Forms 4.7 and newer, use the `oxf.fr.home.remote-servers` property, 
 </property>
 ```
 
-![Multiple Remote Servers](/form-runner/images/remote-server-credentials.png)
+![Multiple Remote Servers](../images/remote-server-credentials.png)
 
 The format is a JSON array containing any number of JSON objects. Each object must have a non-empty `label` property indicating the label to display to the user when selecting a remote server, and a non-empty `url` property indicating the location of the remote server.
 
