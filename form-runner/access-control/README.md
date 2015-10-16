@@ -20,7 +20,7 @@ The following pages address specific topics:
 - [Editing Forms](editing-forms.md) - How to control access to Form Builder.
 - [Deployed Forms](deployed-forms.md) - How to control access to deployed forms.
   - [Owner and Group Member permissions](owner-group.md) - How to control access based on ownership and groups.
-- [[Form Fields|Form Runner ~ Access Control ~ Form Fields]] - How to control access to specific form fields, grids or sections.
+- [Form Fields](form-fields.md) - How to control access to specific form fields, grids or sections.
 
 ## Scenarios
 
