@@ -1,4 +1,4 @@
-.book .book-summary ul.summary li:first {
+.book .book-summary ul.summary > li:first-child {
     background-image: url(http://www.orbeon.com/img/orbeon-logo-trimmed-transparent-42.png);
     background-repeat: no-repeat;
     background-position-x: 16px; 
