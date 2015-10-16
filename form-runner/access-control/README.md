@@ -8,9 +8,9 @@ Here we'll go over how you can secure Form Runner and Form Builder. When it come
 
 Access control touches on the following:
 
-* __Form definitions__ – Can the user create, edit, or view form definitions.
-* __Published forms__ – Can the user access this deployed form? If so, what operations (such as creating, viewing, editing, deleting) are allowed?
-* __Form fields__ – If the user can access the form, can she access a particular field or group of fields? If so, can the field be changed or just viewed?
+- __Form definitions__ – Can the user create, edit, or view form definitions.
+- __Published forms__ – Can the user access this deployed form? If so, what operations (such as creating, viewing, editing, deleting) are allowed?
+- __Form fields__ – If the user can access the form, can she access a particular field or group of fields? If so, can the field be changed or just viewed?
 
 The following pages address specific topics:
 
