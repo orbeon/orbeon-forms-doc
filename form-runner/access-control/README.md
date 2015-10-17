@@ -10,7 +10,7 @@ Access control touches on the following:
 
 The following pages address specific topics:
 
-- [Setup](users.md) - How to setup Orbeon Forms so that users and roles are provided.
+- [Setup users](users.md) - How to setup Orbeon Forms so that users and roles are provided.
 - [Editing Forms](editing-forms.md) - How to control access to Form Builder.
 - [Deployed Forms](deployed-forms.md) - How to control access to deployed forms.
   - [Owner and Group Member permissions](owner-group.md) - How to control access based on ownership and groups.
