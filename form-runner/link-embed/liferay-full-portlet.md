@@ -62,15 +62,15 @@ Installation steps:
 
 4. __Add the Orbeon Forms portlet:__ Log into the portal, go to the Add menu and create a new page, for example _Orbeon Page_:
 
-    ![](liferay-add-page.png)
+    ![](images/liferay-add-page.png)
 
     Go to the Add menu again and select _More…_:
 
-    ![](liferay-add-more.png)
+    ![](images/liferay-add-more.png)
 
     Select the _Orbeon Forms Portlet_ entry:
 
-    ![](liferay-applications.png)
+    ![](images/liferay-applications.png)
 
     Drag the portlet to the page. The Orbeon Forms home page will show.
 
