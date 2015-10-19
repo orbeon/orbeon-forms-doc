@@ -16,7 +16,7 @@ This is an Orbeon Forms PE feature, available since Orbeon Forms 4.0.
 
 The Orbeon Forms WAR can be directly deployed into the Liferay portal. By default, the Form Runner demo forms and XForms examples are immediately available within the portlet:
 
-![Orbeon Forms welcome page in Liferay](images/)
+![Orbeon Forms welcome page in Liferay](images/liferay-full-home.png)
 
 The following steps assume that:
 
