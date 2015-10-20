@@ -101,7 +101,7 @@
             * [Other functions](xforms/xpath/extension-other.md)
             * [Deprecated functions](xforms/xpath/deprecated-functions.md)
     * [XBL components](xforms/xbl/README.md)
-        * Guide to using and writing XBL components
+        * XBL components guide
             * [FAQ](xforms/xbl/faq.md)
             * [Learning from Existing Components](xforms/xbl/learning-from-existing-components.md)
             * [Tutorial](xforms/xbl/tutorial.md)
