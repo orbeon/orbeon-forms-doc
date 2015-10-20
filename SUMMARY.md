@@ -101,15 +101,15 @@
             * [Other functions](xforms/xpath/extension-other.md)
             * [Deprecated functions](xforms/xpath/deprecated-functions.md)
     * [XBL components](xforms/xbl/README.md)
-        * XBL components guide
+        * Guide
             * [FAQ](xforms/xbl/faq.md)
-            * [Learning from Existing Components](xforms/xbl/learning-from-existing-components.md)
             * [Tutorial](xforms/xbl/tutorial.md)
             * [Bindings](xforms/xbl/bindings.md)
             * [XForms Models](xforms/xbl/xforms-models.md)
             * [Including Content](xforms/xbl/including-content.md)
             * [Event Handling](xforms/xbl/event-handling.md)
             * [Conventions](xforms/xbl/conventions.md)
+            * [Learning from Existing Components](xforms/xbl/learning-from-existing-components.md)
         * Advanced topics
             * [XBL Library](xforms/xbl/library.md)
             * [JavaScript](xforms/xbl/javascript.md)
