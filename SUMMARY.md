@@ -89,7 +89,7 @@
         * [Environments](configuration/advanced/environments.md)
         * [Configuring a Form Runner eXist database](configuration/advanced/exist-db.md)
 * XForms
-    * XPath function library
+    * [XPath function library](xforms/xpath/README.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
         * Extension functions
             * [Core functions](xforms/xpath/extension-core.md)
