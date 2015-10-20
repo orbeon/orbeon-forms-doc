@@ -101,8 +101,8 @@
             * [Other functions](xforms/xpath/extension-other.md)
             * [Deprecated functions](xforms/xpath/deprecated-functions.md)
     * [XBL components](xforms/xbl/README.md)
+        * [FAQ](xforms/xbl/faq.md)
         * Guide
-            * [FAQ](xforms/xbl/faq.md)
             * [Tutorial](xforms/xbl/tutorial.md)
             * [Bindings](xforms/xbl/bindings.md)
             * [XForms Models](xforms/xbl/xforms-models.md)
