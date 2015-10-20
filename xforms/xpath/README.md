@@ -1,4 +1,4 @@
-## Introduction
+## The XPath function library
 
 <!-- toc -->
 
