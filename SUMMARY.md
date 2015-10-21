@@ -74,6 +74,7 @@
         * [Automatic PDF](form-runner/styling/automatic-pdf.md)
     * Advanced
         * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
+        * [Custom model logic](form-runner/advanced/custom-model-logic.md)
 * Configuration
     * [Properties](configuration/properties/README.md)
         * [General](configuration/properties/general.md)
