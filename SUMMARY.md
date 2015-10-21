@@ -52,6 +52,7 @@
    * Components
        * Section
        * US State
+       * Error Summary
    * Features
        * [Home Page](form-runner/feature/home-page.md)
        * [Responsive Design](form-runner/feature/responsive-design.md)
