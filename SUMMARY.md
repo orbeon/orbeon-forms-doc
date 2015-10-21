@@ -50,7 +50,7 @@
        * [Integration](form-runner/overview/integration.md)
        * [Terminology](form-runner/overview/terminology.md)
    * Components
-       * Section
+       * [Section](form-runner/component/section.md)
        * US State
        * Error Summary
        * XForms Inspector
