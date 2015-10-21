@@ -49,12 +49,27 @@
        * [Access Form Data](form-runner/overview/accessing-data.md)
        * [Integration](form-runner/overview/integration.md)
        * [Terminology](form-runner/overview/terminology.md)
-   * Components
+   * [Components](form-runner/component/README.md)
        * [Section](form-runner/component/section.md)
-       * US State
-       * Error Summary
-       * XForms Inspector
-       * Image Annotation
+       * [US State](form-runner/component/us-state.md)
+       * [Error Summary](form-runner/component/error-summary.md)
+       * [XForms Inspector](form-runner/component/xforms-inspector.md)
+       * [Image Annotation](form-runner/component/immage-annotation.md)
+       * [Rich Text Editor](form-runner/component/rich-text-editor.md)
+       * [Map](form-runner/component/map.md)
+       * [Source code editor](form-runner/component/source-code-editor.md)
+       * [Image](form-runner/component/image.md)
+       * [Captcha](form-runner/component/captcha.md)
+       * [Alert Dialog](form-runner/component/alert-dialog.md)
+       * [Character Counter](form-runner/component/character-counter.md)
+       * [Image attachment](form-runner/component/image-attachment.md)
+       * [Currency](form-runner/component/currency.md)
+       * [Wizard](form-runner/component/wizard.md)
+       * [Number](form-runner/component/number.md)
+       * [Autocomplete](form-runner/component/autocomplete.md)
+       * [Repeater](form-runner/component/repeater.md)
+       * [Grid](form-runner/component/grid.md)
+       * [Dynamic data dropdown](form-runner/component/dynamic-data-dropdown.md)
    * Features
        * [Home Page](form-runner/feature/home-page.md)
        * [Responsive Design](form-runner/feature/responsive-design.md)
