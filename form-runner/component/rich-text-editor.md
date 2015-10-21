@@ -1,4 +1,4 @@
-
+# Rich Text Editor
 
 ## Rationale
 
