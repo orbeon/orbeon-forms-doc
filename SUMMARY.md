@@ -54,6 +54,7 @@
        * US State
        * Error Summary
        * XForms Inspector
+       * Image Annotation
    * Features
        * [Home Page](form-runner/feature/home-page.md)
        * [Responsive Design](form-runner/feature/responsive-design.md)
