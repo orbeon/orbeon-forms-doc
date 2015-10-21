@@ -1,4 +1,6 @@
+# Custom model logic
 
+<!-- toc -->
 
 [SINCE Orbeon Forms 4.4]
 
