@@ -49,6 +49,7 @@
        * [Access Form Data](form-runner/overview/accessing-data.md)
        * [Integration](form-runner/overview/integration.md)
        * [Terminology](form-runner/overview/terminology.md)
+   * Components
    * Features
        * [Home Page](form-runner/feature/home-page.md)
        * [Responsive Design](form-runner/feature/responsive-design.md)
@@ -75,7 +76,6 @@
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
        * [Custom model logic](form-runner/advanced/custom-model-logic.md)
-   * Components
 * Configuration
    * [Properties](configuration/properties/README.md)
        * [General](configuration/properties/general.md)
