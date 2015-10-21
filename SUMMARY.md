@@ -54,7 +54,7 @@
        * [US State](form-runner/component/us-state.md)
        * [Error Summary](form-runner/component/error-summary.md)
        * [XForms Inspector](form-runner/component/xforms-inspector.md)
-       * [Image Annotation](form-runner/component/immage-annotation.md)
+       * [Image Annotation](form-runner/component/image-annotation.md)
        * [Rich Text Editor](form-runner/component/rich-text-editor.md)
        * [Map](form-runner/component/map.md)
        * [Source code editor](form-runner/component/source-code-editor.md)
