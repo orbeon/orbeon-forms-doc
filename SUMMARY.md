@@ -50,6 +50,7 @@
        * [Integration](form-runner/overview/integration.md)
        * [Terminology](form-runner/overview/terminology.md)
    * Components
+       * Section
    * Features
        * [Home Page](form-runner/feature/home-page.md)
        * [Responsive Design](form-runner/feature/responsive-design.md)
