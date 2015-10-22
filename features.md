@@ -14,7 +14,7 @@ The purpose of this page is to index features, their documentation and [blog pos
 
 ## Status
 
-As of 2015-09-18 this page is still being updated.
+As of 2015-10-22 this page is still being updated.
 
 ## List of Orbeon Forms features
 
