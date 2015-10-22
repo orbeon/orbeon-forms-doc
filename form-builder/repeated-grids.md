@@ -62,7 +62,7 @@ With Orbeon Forms 4.11, the option is enabled by default for new forms and new r
 
 With the option enabled, new iterations can have dynamic initial values:
 
-![Initial Values](images/iteration-initial-values.png)
+![Initial Values](images/iterations-initial-values.png)
 
 [SINCE Orbeon Forms 4.11]
 
