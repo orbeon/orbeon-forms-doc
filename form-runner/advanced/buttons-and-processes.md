@@ -409,6 +409,12 @@ Navigate to an external page via client-side GET.
     - `property`: specifies a property containing the URL to navigate to
     - by default, try to guess based on the parameter
 
+You can also use the `navigate` action to execute JavaScript:
+
+```
+navigate(uri = "javascript:myFunction()")
+```
+
 [SINCE Orbeon Forms 4.6]
 
 The URL value, whether directly or via a property, can be an XPath Value Template, which runs in the context of the root element of the main form instance:
