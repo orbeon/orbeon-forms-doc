@@ -24,7 +24,7 @@ As of 2015-09-18 this page is still being updated.
 - Repeated grids and sections
     - Repeated grids: [doc](form-builder/repeated-grids.html), [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
     - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
-    - 
+    - Options for new repeat iterations: [blog post](http://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
 - Section Templates: [[doc|Form Builder ~ Section Templates]]
 - Singleton forms: [[doc|Form Runner ~ Singleton Form]]
 - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
