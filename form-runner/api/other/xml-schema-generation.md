@@ -19,7 +19,7 @@ The service assumes that the data model of the form is standard XML data model a
 
 ## Form version
 
-If the persistence layer on which form is published supports versioning, by default the latest version of the form used. Instead, you'd like to produce the schema for a specific form version, you can pass that version number with the `form-version` request parameter, e.g. in 4.4+ `/fr/service/[app]/[form]/schema?form-version=42`.
+If the persistence layer on which your form is published supports versioning, by default the latest version of the form is used. Instead, you'd like to produce the schema for a specific form version, you can pass that version number with the `form-version` request parameter, e.g. in 4.4+ `/fr/service/[app]/[form]/schema?form-version=42`.
 
 ## Limitations
 
