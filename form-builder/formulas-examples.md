@@ -179,7 +179,7 @@ Explanation:
 
 * `$my-repeat` points to the repeat data's enclosing XML elements
 * the nested `/number` path points to the `number` field within each iteration
-* [`. castable as xs:decimal]` excludes values that are blank or not decimal number
+* `[string() castable as xs:decimal]` excludes values that are blank or not decimal number
 * `sum()` is a standard XPath function to compute the sum of a sequence of items
 
 ## Access a control in a particular repeat iteration
