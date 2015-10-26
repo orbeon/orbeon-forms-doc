@@ -12,13 +12,3 @@ Out of the box, Orbeon Forms provides an implementation of the persistence API f
 
 For a description of the terminology and configuration properties, see [[Form Runner Configuration Properties|Form Runner ~ Configuration Properties]].
 
-## The persistence API
-
-The API is described in the following pages:
-
-- [[Overview|Form Runner ~ APIs ~ Persistence ~ Overview]]
-- [[CRUD|Form Runner ~ APIs ~ Persistence ~ CRUD]]
-- [[Search|Form Runner ~ APIs ~ Persistence ~ Search]]
-- [[Form Metadata|Form Runner ~ APIs ~ Persistence ~ Forms Metadata]]
-- [[Versioning|Form Runner ~ APIs ~ Persistence ~ Versioning]]
-- [[Implementing a Persistence Service|Form Runner ~ APIs ~ Persistence ~ Implementing a Persistence Service]]
