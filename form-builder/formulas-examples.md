@@ -136,6 +136,13 @@ Say you have:
 
 * a repeated grid
 * a decimal field called `price` on each row
+* an integer field called `quantity` on each row
+* a decimal text output field called `row-total` on each row
+* a decimal text output field called `total` below the grid
+
+You want to compute the row totals and athe general total called.
+
+Calculated value expression for thw 
 
 [SINCE Orbeon Forms 4.0]
 
