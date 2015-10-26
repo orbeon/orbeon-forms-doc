@@ -98,13 +98,13 @@
            * [CRUD](form-runner/api/persistence/crud.md)
            * [Search](form-runner/api/persistence/search.md)
            * [List Form Data Attachments](form-runner/api/persistence/list-form-data-attachments.md)
-           * [Form Metadata](form-runner/api/persistence/form-metadata.md)
+           * [Form Metadata](form-runner/api/persistence/forms-metadata.md)
            * [Caching](form-runner/api/persistence/caching.md)
            * [Versioning](form-runner/api/persistence/versioning.md)
            * [Implementing a Persistence Service](form-runner/api/persistence/implementing-a-persistence-service.md)
        * Other APIs
-           * [XML Schema Generation](form-runner/api/persistence/xml-schema-generation.md)
-           * [Duplicate Form Data](form-runner/api/persistence/duplicate-form-data.md)
+           * [XML Schema Generation](form-runner/api/other/xml-schema-generation.md)
+           * [Duplicate Form Data](form-runner/api/other/duplicate-form-data.md)
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
        * [Custom model logic](form-runner/advanced/custom-model-logic.md)
