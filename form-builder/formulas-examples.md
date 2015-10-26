@@ -128,7 +128,7 @@ This can be specified for example on a Text Output control.
 
 ## Sum of values in a repeat
 
-[SINCE Orbeon Forms 4.5]
+### With Orbeon Forms 4.5 and newer
 
 Scenario: compute the sum of values in multiple repeat iterations.
 
@@ -160,7 +160,7 @@ Explanation:
 
 See also [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
 
-[SINCE Orbeon Forms 4.0 UNTIL Orbeon Forms 4.4.x]
+### With Orbeon Forms 4.0 until 4.4.x
 
 Scenario: compute the sum of values in multiple repeat iterations.
 
