@@ -156,7 +156,12 @@ sum($row-total[string() castable as xs:decimal], 0.0)
 
 Explanation:
 
-- `sum()` supports a second argument which is the value to return in case no value satisfies the predicate. This makes sure that we return a decimal value, as we are using a literal decimal 0.0
+- when accessing control values with variables, the "closest" variables are found
+- this means that the `row-total` control calculation applies to the closest `price` and `quantity` controls, that is, those on the same row, and each row gets its own total
+- the `total` calculation is outside the repeat, and when it refers to `$row-total`, all `row-total` values are returned
+- `sum()` is a standard XPath function to compute the sum of a sequence of items
+- `sum()` therefore sums the totals of all rows
+- `sum()` supports a second argument which is the value to return in case no value satisfies the predicate (this makes sure that we return a decimal value, as we are using a literal decimal 0.0)
 
 See also [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
 
