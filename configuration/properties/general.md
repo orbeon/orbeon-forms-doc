@@ -1,15 +1,6 @@
+## General configuration properties
 
-
-- [Configuration properties](#configuration-properties)
-- [Default values](#default-values)
-- [URL rewriting](#url-rewriting)
-- [Encryption properties](#encryption-properties)
-- [Global properties](#global-properties)
-- [HTTP server](#http-server)
-- [HTTP client](#http-client)
-- [Epilogue and theme properties](#epilogue-and-theme-properties)
-- [Email processor properties](#email-processor-properties)
-- [Rarely used properties](#rarely-used-properties)
+<!-- toc -->
 
 ## Configuration properties
 
