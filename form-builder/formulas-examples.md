@@ -154,7 +154,9 @@ Calculated value expression for `total`:
 sum($row-total[string() castable as xs:decimal], 0.0)
 ```
 
-Explanation
+Explanation:
+
+- `sum()` supports a second argument which is the value to return in case no value satisfies the predicate. This makes sure that we return a decimal value, as we are using a literal decimal 0.0
 
 See also [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
 
@@ -170,7 +172,7 @@ Say you have:
 Calculated value expression:
 
 ```ruby
-sum($my-repeat/number[. castable as xs:decimal])
+sum($my-repeat/number[string() castable as xs:decimal])
 ```
 
 Explanation:
