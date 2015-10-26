@@ -2,6 +2,72 @@
 
 <!-- toc -->
 
+## Sum of values in a repeat
+
+### With Orbeon Forms 4.5 and newer
+
+Scenario: compute the sum of values in multiple repeat iterations.
+
+Say you have:
+
+* a repeated grid
+* a decimal field called `price` on each row
+* an integer field called `quantity` on each row
+* a decimal text output field called `row-total` on each row
+* a decimal text output field called `total` below the grid
+
+You want to compute the row totals and athe general total.
+
+Calculated value expression for `row-total`:
+
+```ruby
+$price * $quantity
+```
+
+Calculated value expression for `total`:
+
+```ruby
+sum($row-total[string() castable as xs:decimal], 0.0)
+```
+
+Explanation:
+
+- when accessing control values with variables, the "closest" variables are found
+- this means that the `row-total` control calculation applies to the closest `price` and `quantity` controls, that is, those on the same row, and each row gets its own total
+- the `total` calculation is outside the repeat, and when it refers to `$row-total`, all `row-total` values are returned
+- `sum()` is a standard XPath function to compute the sum of a sequence of items
+- `sum()` therefore sums the totals of all rows
+    - the predicate `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
+    - see this [blog post](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html) for the use of `string()` within the predicate
+- `sum()` supports a second argument which is the value to return in case no value satisfies the predicate (this makes sure that we return a decimal value, as we are using a literal decimal 0.0)
+
+See also:
+
+- [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
+- [Unexpected result with variable inside an `<xf:bind>` iteration #152](https://github.com/orbeon/orbeon-forms/issues/152)
+
+### With Orbeon Forms 4.0 until 4.4.x
+
+Scenario: compute the sum of values in multiple repeat iterations.
+
+Say you have:
+
+* a repeat called `my-repeat`
+* with a decimal field called `number` on each row
+
+Calculated value expression:
+
+```ruby
+sum($my-repeat/number[string() castable as xs:decimal])
+```
+
+Explanation:
+
+* `$my-repeat` points to the repeat data's enclosing XML elements
+* the nested `/number` path points to the `number` field within each iteration
+* `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
+* `sum()` is a standard XPath function to compute the sum of a sequence of items
+* 
 ## Constrain a number between two values
 
 Scenario: Make the current integer number field valid only if its value is between two values, say 12 and 17 included.
@@ -125,72 +191,6 @@ Explanation:
 This can be specified for example on a Text Output control.
 
 *NOTE: If the value of a control is calculated, by default it is also marked as read-only. If you want a calculated control to be still editable by the user, set its Read-Only property explicitly to `false()`.*
-
-## Sum of values in a repeat
-
-### With Orbeon Forms 4.5 and newer
-
-Scenario: compute the sum of values in multiple repeat iterations.
-
-Say you have:
-
-* a repeated grid
-* a decimal field called `price` on each row
-* an integer field called `quantity` on each row
-* a decimal text output field called `row-total` on each row
-* a decimal text output field called `total` below the grid
-
-You want to compute the row totals and athe general total.
-
-Calculated value expression for `row-total`:
-
-```ruby
-$price * $quantity
-```
-
-Calculated value expression for `total`:
-
-```ruby
-sum($row-total[string() castable as xs:decimal], 0.0)
-```
-
-Explanation:
-
-- when accessing control values with variables, the "closest" variables are found
-- this means that the `row-total` control calculation applies to the closest `price` and `quantity` controls, that is, those on the same row, and each row gets its own total
-- the `total` calculation is outside the repeat, and when it refers to `$row-total`, all `row-total` values are returned
-- `sum()` is a standard XPath function to compute the sum of a sequence of items
-- `sum()` therefore sums the totals of all rows
-    - the predicate `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
-    - see this [blog post](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html) for the use of `string()` within the predicate
-- `sum()` supports a second argument which is the value to return in case no value satisfies the predicate (this makes sure that we return a decimal value, as we are using a literal decimal 0.0)
-
-See also:
-
-- [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
-- [Unexpected result with variable inside an `<xf:bind>` iteration #152](https://github.com/orbeon/orbeon-forms/issues/152)
-
-### With Orbeon Forms 4.0 until 4.4.x
-
-Scenario: compute the sum of values in multiple repeat iterations.
-
-Say you have:
-
-* a repeat called `my-repeat`
-* with a decimal field called `number` on each row
-
-Calculated value expression:
-
-```ruby
-sum($my-repeat/number[string() castable as xs:decimal])
-```
-
-Explanation:
-
-* `$my-repeat` points to the repeat data's enclosing XML elements
-* the nested `/number` path points to the `number` field within each iteration
-* `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
-* `sum()` is a standard XPath function to compute the sum of a sequence of items
 
 ## Access a control in a particular repeat iteration
 
