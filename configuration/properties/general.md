@@ -2,8 +2,6 @@
 
 <!-- toc -->
 
-For general documentation about configuration properties, see [[Configuration Properties |Installation ~ Configuration Properties]].
-
 ## Default values
 
 For the latest default values of general properties, see [`properties-base.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-base.xml).
