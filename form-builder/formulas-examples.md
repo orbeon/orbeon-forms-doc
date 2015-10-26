@@ -140,9 +140,23 @@ Say you have:
 * a decimal text output field called `row-total` on each row
 * a decimal text output field called `total` below the grid
 
-You want to compute the row totals and athe general total called.
+You want to compute the row totals and athe general total.
 
-Calculated value expression for thw 
+Calculated value expression for `row-total`:
+
+```ruby
+$price * $quantity
+```
+
+Calculated value expression for `total`:
+
+```ruby
+sum($row-total[string() castable as xs:decimal], 0.0)
+```
+
+Explanation
+
+See also [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
 
 [SINCE Orbeon Forms 4.0]
 
