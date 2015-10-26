@@ -162,7 +162,7 @@ Explanation:
 - `sum()` is a standard XPath function to compute the sum of a sequence of items
 - `sum()` therefore sums the totals of all rows
     - the predicate `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
-    - 
+    - see this [blog post](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html) for the use of `string()` within the predicate
 - `sum()` supports a second argument which is the value to return in case no value satisfies the predicate (this makes sure that we return a decimal value, as we are using a literal decimal 0.0)
 
 See also:
