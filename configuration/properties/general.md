@@ -1,4 +1,4 @@
-## General configuration properties
+# General configuration properties
 
 <!-- toc -->
 
