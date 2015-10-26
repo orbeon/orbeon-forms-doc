@@ -1,8 +1,6 @@
-## Form Builder configuration properties
+# Form Builder configuration properties
 
 <!-- toc -->
-
-For general documentation about configuration properties, see [[Configuration Properties |Installation ~ Configuration Properties]].
 
 ## Default values
 
