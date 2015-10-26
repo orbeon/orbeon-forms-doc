@@ -128,6 +128,15 @@ This can be specified for example on a Text Output control.
 
 ## Sum of values in a repeat
 
+[SINCE Orbeon Forms 4.x]
+
+Scenario: compute the sum of values in multiple repeat iterations.
+
+Say you have:
+
+* a repeated grid
+* a decimal field called `price` on each row
+
 [SINCE Orbeon Forms 4.0]
 
 Scenario: compute the sum of values in multiple repeat iterations.
