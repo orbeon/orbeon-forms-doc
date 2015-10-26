@@ -1,8 +1,6 @@
+# XForms configuration properties
 
-
-## Configuration properties
-
-For general documentation about configuration properties, see [[Configuration Properties |Installation ~ Configuration Properties]].
+<!-- toc -->
 
 ## Default values
 
