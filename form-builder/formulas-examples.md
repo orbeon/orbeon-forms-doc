@@ -161,9 +161,14 @@ Explanation:
 - the `total` calculation is outside the repeat, and when it refers to `$row-total`, all `row-total` values are returned
 - `sum()` is a standard XPath function to compute the sum of a sequence of items
 - `sum()` therefore sums the totals of all rows
+    - the predicate `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
+    - 
 - `sum()` supports a second argument which is the value to return in case no value satisfies the predicate (this makes sure that we return a decimal value, as we are using a literal decimal 0.0)
 
-See also [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
+See also:
+
+- [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
+- [Unexpected result with variable inside an <xf:bind> iteration #152](https://github.com/orbeon/orbeon-forms/issues/152)
 
 ### With Orbeon Forms 4.0 until 4.4.x
 
