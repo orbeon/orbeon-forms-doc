@@ -10,7 +10,7 @@ This feature is available with Orbeon Forms 4.2 and newer.
 
 This documentation describes how to configure the behavior of the buttons that appear at the bottom of the Form Runner detail page, whether in `new`, `edit` or `view` mode. Here is an example of such buttons:
 
-![Example of Form Runner buttons](w9-form-buttons.png)
+![Example of Form Runner buttons](../w9-form-buttons.png)
 
 ## What is a process?
 
