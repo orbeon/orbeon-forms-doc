@@ -94,3 +94,8 @@ You can learn more about:
     - [Form Runner actions](actions-form-runner.md)
     - [XForms actions](actions-xforms.md)
 - [predefined buttons, processes and dialogs](predefined.md)
+
+## See also
+
+- This blog post for an introduction to the feature: [More powerful buttons](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
+- The predefined configuration properties in [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml)
