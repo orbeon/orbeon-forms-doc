@@ -26,7 +26,7 @@ This follows a DSL (domain-specific language) described in more details below. T
     - [Form Runner actions](actions-form-runner.md)
     - [XForms actions](actions-xforms.md)
 
-## Associating a process
+## Exposing a process
 
 You expose a process with a property (typically in [[`properties-local.xml`|Installation-~-Configuration-Properties]]) starting with `oxf.fr.detail.process`. For example:
 
