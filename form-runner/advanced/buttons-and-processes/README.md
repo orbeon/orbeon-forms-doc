@@ -71,17 +71,16 @@ So how do you customize processes? Say you want to specify a couple of buttons o
 This places a `save-draft` and `send` buttons on the page. Their default labels are "Save" and "Send". Each button is automatically associated with processes of the same names, `save-draft` and `send`. These particular buttons and process names are standard, but we can customize them specifically for our form. Again, this is done with a property:
 
 ```xml
-<property
-  as="xs:string"
-  name="oxf.fr.detail.process.send.acme.hr"
-  value='require-valid
-         then email
-         then send("http://example.org/")
-         then navigate("/success")
-         recover navigate("/failure")'/>
+<property as="xs:string" name="oxf.fr.detail.process.send.acme.hr">
+    require-valid
+    then email
+    then send("http://example.org/")
+    then navigate("/success")
+    recover navigate("/failure")
+</property>
 ```
 
-Button labels can be overridden as well, as was the case before:
+Button labels can be overridden as well:
 
 ```xml
 <property
@@ -89,6 +88,8 @@ Button labels can be overridden as well, as was the case before:
   name="oxf.fr.resource.*.*.en.buttons.send"
   value="Fancy Send"/>
 ```
+
+With this, we have overridden the functionality of the "Send" button specifically for the "acme/hr" form.
 
 *NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.*
 
