@@ -4,6 +4,30 @@
 
 ## Defining a process
 
+A process is defined with some text following a specific syntax. For example:
+
+```
+require-uploads
+then require-valid
+then save
+then success-message("save-success")
+recover error-message("database-error")
+```
+
+This follows a DSL (domain-specific language) described in more details below. The process DSL supports:
+
+- actions with or without parameters
+- combinators to handle success and failure
+- grouping with parentheses
+- conditions ("if")
+- sub-processes
+- a set of standard actions, including:
+    - [core actions](actions-core.md)
+    - [Form Runner actions](actions-form-runner.md)
+    - [XForms actions](actions-xforms.md)
+
+## Associating a process
+
 You define a process with a property (typically in [[`properties-local.xml`|Installation-~-Configuration-Properties]]) starting with `oxf.fr.detail.process`. For example:
 
 ```xml
@@ -19,18 +43,6 @@ You define a process with a property (typically in [[`properties-local.xml`|Inst
 The name of the process immediately follows the property prefix, here `save-final`.
 
 The wildcards, as usual with Form Funner, can specify a form's application and form names. Here, the process is available to all forms in all apps because of the `*.*` wildcard.
-
-The inline value, staring in this example with `require-uploads`, actually describes the process. It follows a DSL (domain-specific language) described in more details below. The process DSL supports:
-
-- actions with or without parameters
-- combinators to handle success and failure
-- grouping with parentheses
-- conditions ("if")
-- sub-processes
-- a set of standard actions, including:
-    - [core actions](actions-core.md)
-    - [Form Runner actions](actions-form-runner.md)
-    - [XForms actions](actions-xforms.md)
 
 ## Simple actions
 
