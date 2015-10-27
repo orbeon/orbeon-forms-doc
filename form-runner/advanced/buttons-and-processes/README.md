@@ -59,7 +59,7 @@ Here the following buttons get associated with processes of the same name define
 
 ## Customizing processes
 
-So how do you customize processes? Say you want to specify a couple of buttons on your "acme/hr" form. Like before, you define a property:
+So how do you customize processes? Say you want to specify a couple of buttons on your "acme/hr" form. Like above, you define a property:
 
 ```xml
 <property
