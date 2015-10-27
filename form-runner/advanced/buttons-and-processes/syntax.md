@@ -22,7 +22,7 @@ The wildcards, as usual with Form Funner, can specify a form's application and f
 
 The inline value, staring in this example with `require-uploads`, actuallydescribes the process. It follows a DSL (domain-specific language) described in more details below. The process DSL supports:
 
-- actions with parameters
+- actions with or without parameters
 - combinators to handle success and failure
 - grouping with parentheses
 - conditions ("if")
