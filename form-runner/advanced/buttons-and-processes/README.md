@@ -68,8 +68,7 @@ So how do you customize processes? Say you want to specify a couple of buttons o
   value="save-draft send"/>
 ```
 
-This places a `save-draft` and `send` buttons on the page. Their default labels are "Save" and "Send". Each button is
-automatically associated with processes of the same names, `save-draft` and `send`. These particular buttons and
+This places a `save-draft` and `send` buttons on the page. Their default labels are "Save" and "Send". Each button is automatically associated with processes of the same names, `save-draft` and `send`. These particular buttons and
 process names are standard, but we can customize them specifically for our form. Again, this is done with a property:
 
 ```xml
