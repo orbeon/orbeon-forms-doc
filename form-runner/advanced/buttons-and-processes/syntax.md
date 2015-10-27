@@ -18,7 +18,7 @@ You define a process with a property (typically in [[`properties-local.xml`|Inst
 
 The name of the process immediately follows the property prefix, here `save-final`.
 
-The wildcards, as usual with Form Funner, can specify a form's application and form names. Here, the process is available to all forms because of the `*.*` wildcard.
+The wildcards, as usual with Form Funner, can specify a form's application and form names. Here, the process is available to all forms in all apps because of the `*.*` wildcard.
 
 The inline value, staring in this example with `require-uploads`, describes the process following a DSL (domain-specific language) described in more details below. The process DSL supports:
 
