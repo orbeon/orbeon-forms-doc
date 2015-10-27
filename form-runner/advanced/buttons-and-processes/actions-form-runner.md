@@ -2,6 +2,10 @@
 
 <!-- toc -->
 
+## Introduction
+
+These actions are specific to Form Runner. They allow you to validate, save and send data, in particular.
+
 ## validate
 
 Validate form data.
