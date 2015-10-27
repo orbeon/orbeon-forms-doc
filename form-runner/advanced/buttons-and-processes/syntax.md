@@ -27,7 +27,10 @@ The inline value, staring in this example with `require-uploads`, actuallydescri
 - grouping with parentheses
 - conditions ("if")
 - sub-processes
-- a set of standard actions
+- a set of standard actions, including:
+    - [core actions](actions-core.md)
+    - [Form Runner actions](actions-form-runner.md)
+    - [XForms actions](actions-xforms.md)
 
 ## Simple actions
 
