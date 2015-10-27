@@ -24,16 +24,14 @@ You can also run a sub-process directly by name:
 
 ```xml
 <!-- Define a sub-process which navigates to the "/" URL -->
-<property
-  as="xs:string"
-  name="oxf.fr.detail.process.orbeon-home.*.*"
-  value='navigate("/")'/>
+<property as="xs:string" name="oxf.fr.detail.process.orbeon-home.*.*">
+    navigate("/")
+</property>
 
 <!-- Use that sub-process from the "home" process -->
-<property
-  as="xs:string"
-  name="oxf.fr.detail.process.home.*.*"
-  value='orbeon-home'/>
+<property as="xs:string" name="oxf.fr.detail.process.home.*.*">
+    orbeon-home
+</property>
 ```
 
 ## suspend
