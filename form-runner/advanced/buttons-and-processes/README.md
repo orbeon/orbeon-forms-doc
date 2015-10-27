@@ -20,33 +20,6 @@ With Orbeon Forms, processes are configurable. They are defined separately from 
 
 You can learn more about the [process syntax](syntax.md).
 
-## Predefined buttons
-
-The following buttons are predefined and associated with the processes of the same name:
-
-- `home`: navigate to `/`
-- `summary`: navigate to the summary page
-- `save-final`: save the form data if it is valid
-- `save-draft`: save the form data even if it isn't valid
-- `validate`: run `validate-all`
-- `review`: navigate to the review page if the data is valid
-- `edit`: navigate to the edit page from the review page
-- `send`: validate then send data to a service
-- `pdf`: generate a PDF version of the current form
-- `tiff` [SINCE Orbeon Forms 4.11]
-    - generate a TIFF version of the current form (see [[TIFF Production|Form Runner ~ TIFF Production]])
-- `email`: validate then email data
-- `collapse-all`: run the action of the same name
-- `expand-all`: run the action of the same name
-- `refresh`: visit all controls and update the page (noscript mode only)
-- `wizard-prev`: run the action of the same name
-- `wizard-next`: run the action of the same name
-- `close`: navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page
-    *NOTE: The button in fact navigates to a page, but doesn't just close the current window/tab, as there is no cross-browser way to do this.*
-
-In fact all buttons except the `pdf` and `tiff` buttons can do the same tasks if they are configured appropriately! But
-by default the buttons above are preconfigured to do different tasks, for convenience.
-
 ## Associating a process with a button
 
 A process is automatically associated with a button by name when using the following properties:
