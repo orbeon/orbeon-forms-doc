@@ -315,7 +315,7 @@ navigate(uri = "http://example.org/{xxf:get-request-parameter('bar')}/{.//code}"
 
 Show a confirmation dialog. If the user selects "No", the current process is aborted. If the user selects "Yes", the current process is resumed.
 
-![Confirmation dialog](confirm.png)
+![Confirmation dialog](../confirm.png)
 
 - parameters
     - `message`: message to show
