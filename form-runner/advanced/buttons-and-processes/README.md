@@ -18,6 +18,8 @@ A "process" consists in a list of actions, or steps, which are executed by Form 
 
 With Orbeon Forms, processes are configurable. They are defined separately from buttons, but can be linked to buttons. Orbeon Forms comes with predefined processes for some common tasks, such as saving form data, but you can write your own processes.
 
+You can learn more about the process syntax in .
+
 ## Predefined buttons
 
 The following buttons are predefined and associated with the processes of the same name:
