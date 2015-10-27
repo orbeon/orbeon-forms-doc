@@ -1,4 +1,4 @@
-# Predefined processes and dialogs
+# Predefined buttons, processes and dialogs
 
 <!-- toc -->
 
