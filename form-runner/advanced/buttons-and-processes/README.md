@@ -80,9 +80,13 @@ Button labels can be overridden as well:
 
 With this, we have overridden the functionality of the "Send" button specifically for the "acme/hr" form.
 
-*NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.*
+Another approach would be to create an entirely custom button instead of reusing the name `send`. Just pick a button/process name, say `foo`, and then:
 
-All the configuration above for a button called `send` could have been done with an entirely custom button named `foo`.
+- add `foo` to the list of buttons for the form
+- define a button label for `foo`
+- define a process for `foo`
+
+*NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.*
 
 ## What next?
 
