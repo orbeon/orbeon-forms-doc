@@ -1,115 +1,173 @@
-# Predefined buttons, processes and dialogs
+# Buttons and processes
 
 <!-- toc -->
 
-## Predefined buttons
+## Availability
 
-The following buttons are predefined and associated with the processes of the same name:
+This feature is available with Orbeon Forms 4.2 and newer.
 
-| Name | Description | Since |
-| ---- | ----------- | ----- |
-| `home` | navigate to `/` | 4.2 |
-| `summary` | navigate to the summary page | 4.2 |
-| `save-final` | save the form data if it is valid | 4.2 |
-| `save-draft` | save the form data even if it isn't valid | 4.2 |
-| `validate` | run `validate-all` | 4.2 |
-| `review` | navigate to the review page if the data is valid | 4.2 |
-| `edit` | navigate to the edit page from the review page | 4.2 |
-| `send` | validate then send data to a service | 4.2 |
-| `pdf` | generate a PDF version of the current form | 4.2 |
-| `tiff` | generate a TIFF version of the current form (see [TIFF Production](TIFF Production)) | 4.2 |
-| `email` | validate then email data | 4.2 |
-| `collapse-all` | run the action of the same name | 4.2 |
-| `expand-all` | run the action of the same name | 4.2 |
-| `refresh` | visit all controls and update the page (noscript mode only) | 4.2 |
-| `wizard-prev` | run the action of the same name | 4.2 |
-| `wizard-next` | run the action of the same name | 4.2 |
-| `close` | navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page<br>*NOTE: The button in fact navigates to a page, but doesn't just close the current window/tab, as there is no cross-browser way to do this.* | 4.2 |
+## Introduction
 
-In fact all buttons except the `pdf` and `tiff` buttons can do the same tasks if they are configured appropriately! But
-by default the buttons above are preconfigured to do different tasks, for convenience.
+This documentation describes how to configure the behavior of the buttons that appear at the bottom of the Form Runner detail page, whether in `new`, `edit` or `view` mode. Here is an example of such buttons:
 
-## Predefined reusable processes
+![Example of Form Runner buttons](../w9-form-buttons.png)
 
-The following sub-processes are predefined and can be reused from other processes:
+## What is a process?
 
-| Name | Description | Since |
-| ---- | ----------- | ----- |
-| `require-uploads` | check whether there are pending uploads and if so display an error message and interrupt the process | 4.2 |
-| `require-valid` | mark all controls as visited, check whether data is valid and if not display an error message and interrupt the process | 4.2 |
-| `review-messages` | if there are any `error`, `warning` or `info` messages, open a dialog so the user can decide whether to review them or continue the process | 4.3 |
-| `validate-all` | combine `require-valid` and `review-messages` | 4.3 |
-| `orbeon-home` | navigate to '/' | 4.2 |
-| `form-runner-home` | navigate to '/fr' | 4.2 |
-| `summary` | navigate to this Form Runner page | 4.7 |
+A "process" consists in a list of actions, or steps, which are executed by Form Runner, typically when the user presses a button. For example, a process might say: "when the user presses this button, validate the form data, then save it to the database".
 
-## Processes that apply to services
+With Orbeon Forms, processes are configurable. They are defined separately from buttons, but can be linked to buttons. Orbeon Forms comes with predefined processes for some common tasks, such as saving form data, but you can write your own processes.
 
-### oxf.fr.service.duplicate.transform
+## What next?
 
-[SINCE Orbeon Forms 4.7]
+You can learn more about:
 
-This process is called by the `duplicate` service after the original data has been read and before it is written back. This allows performing simple value transformations on the data such as clearing or setting fields upon data duplication.
+- the [process syntax](syntax.md)
+- the actions you can use, including:
+    - [core actions](actions-core.md)
+    - [Form Runner actions](actions-form-runner.md)
+    - [XForms actions](actions-xforms.md)
+- [predefined buttons, processes and dialogs](predefined.md)
 
-Examples:
+## Associating a process with a button
+
+A process is automatically associated with a button by name when using the following properties:
+
+- `oxf.fr.detail.buttons`
+- `oxf.fr.detail.buttons.inner`
+- `oxf.fr.detail.buttons.view`
+
+For example:
 
 ```xml
-<!-- Clear the value of the `first-name` element, if found -->
-<property as="xs:string" name="oxf.fr.service.duplicate.transform.myapp.myform">
-    xf:setvalue(ref = "//first-name")
-</property>
-<!-- Set the value of the `submit-date` element, if found, to the current date -->
-<property as="xs:string" name="oxf.fr.service.duplicate.transform.myapp.myform">
-    xf:setvalue(ref = "//submit-date", value = "current-date()")
-</property>
+<property
+  as="xs:string"
+  name="oxf.fr.detail.buttons.orbeon.controls"
+  value="refresh summary clear pdf save-final wizard-prev wizard-next review"/>
 ```
 
-## Standard dialogs
+Here the following buttons get associated with processes of the same name defined in separate properties:
 
-[SINCE Orbeon Forms 4.3]
+- `refresh`
+- `summary`
+- `save-final`
+- `wizard-prev`
+- `wizard-next`
+- `review`
 
-### Validation dialog
+*NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented as processes but handled directly by Form Runner.*
 
-The following dialog can be opened with the `xf:show` action:
+## Customizing processes
 
-- `fr-validation-dialog`: the validation dialog which asks the user to review validation messages
+So how do you customize processes? Say you want to specify a couple of buttons on your "acme/hr" form. Like before, you define a property:
 
-Example:
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.detail.buttons.acme.hr"
+  value="save-draft send"/>
+```
 
-    xf:show("fr-validation-dialog") then suspend
+This places a `save-draft` and `send` buttons on the page. Their default labels are "Save" and "Send". Each button is
+automatically associated with processes of the same names, `save-draft` and `send`. These particular buttons and
+process names are standard, but we can customize them specifically for our form. Again, this is done with a property:
 
-![The validation dialog](../review-messages.png)
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.detail.process.send.acme.hr"
+  value='require-valid
+         then email
+         then send("http://example.org/")
+         then navigate("/success")
+         recover navigate("/failure")'/>
+```
 
-### The result dialog
+Button labels can be overridden as well, as was the case before:
 
-The `result-dialog` action shows a configurable dialog. You can customize:
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.resource.*.*.en.buttons.send"
+  value="Fancy Send"/>
+```
 
-- The **message** shown in the dialog, which can either be a static message informing users that the data has been submitted (the default), or a message returned by the persistence layer. In the later case, it is assumed that the persistence layer responds to a CRUD PUT operation with the HTML to display in the dialog. None of the persistence implementations that ship with Orbeon Forms do that, so this property is only relevant if you implement your own persistence layer. Otherwise, you will want to leave this property to its default value:
+*NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.*
 
-    ```xml
-    <property
-      as="xs:boolean"
-      name="oxf.fr.detail.submit.content-from-persistence.*.*"
-      value="false"/>
-    ```
-- The **buttons** shows in the submit dialog, which can be:
-    - `clear`: Sets all the fields to their default value and closes the dialog.
-    - `keep`: Keeps the field values as they are and closes the dialog.
-    - `go`: Go to a URL (see below for how the URL can be configured)
-    - `close-window`: Closes the window. For this to work, JavaScript must be enabled, and the window in which the form is shown must have been opened by another page you created.
+All the configuration above for a button called `send` could have been done with an entirely custom button named `foo`.
 
-    ```xml
-    <property
-      as="xs:string"
-      name="oxf.fr.detail.submit.buttons.*.*"
-      value="go"/>
-    ```
-- The **go URI**, if you have enabled the go button. When the "go" button is pressed, users will be taken to the URI specified by the following property. The value of the property is an XPath expression evaluated in the context of the form instance. This allows you both to have a "dynamic" URI (which depends on the initial data or data entered by users) or a "static" URI in the form of a URI between single quote in the XPath expression.
+## Compatibility notes
 
-    ```xml
-    <property
-      as="xs:string"
-      name="oxf.fr.detail.submit.go.uri-xpath.*.*"
-      value="/book/details/link"/>
-    ```
+### Starting with Orbeon Forms 4.2
 
+#### Related Orbeon Forms 4.1 and earlier functionality
+
+Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what happens with form data:
+
+- The "Save" button to save data to the database.
+- The "Submit" button to save data and show a dialog after saving (with options to clear data, keep data, navigate to another page, or close the window).
+- The "Send" (AKA "workflow-send") button to save data and then allow:
+    - sending an email
+    - sending form data to a service
+    - redirecting the user to a success or error page
+
+For more information, see [[Configuration Properties - Form Runner|Form-Runner-~-Configuration-properties]].
+
+#### Deprecated buttons
+
+The following buttons are deprecated:
+
+- `save`: use `save-draft` or `save-final`
+- `submit`: use the `send` button with the desired sequence of actions
+- `workflow-send`: use the `send` button with the desired sequence of actions
+- `workflow-review`: use `review` instead
+- `workflow-edit`: use `edit` instead
+
+When the `workflow-send` is used, the behavior matches that of Orbeon Forms 4.1 and earlier. The following properties
+are considered to build a process:
+
+- `oxf.fr.detail.send.email`
+- `oxf.fr.detail.send.success.uri`
+- `oxf.fr.detail.send.error.uri`
+
+#### Removed property
+
+The following property is no longer supported:
+
+```xml
+<property
+  as="xs:boolean"
+  name="oxf.fr.detail.send.pdf.*.*"
+  value="false"/>
+```
+
+Instead, use:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.detail.send.success.content.*.*"
+  value="pdf-url"/>
+```
+
+### Starting with Orbeon Forms 4.3
+
+#### The validate action no longer supports a property
+
+The `validate` action no longer supports a `property` parameter. In particular, this means that the following property is no longer supported:
+
+```xml
+<property
+  as="xs:boolean"
+  name="oxf.fr.detail.save.validate.*.*"
+  value="true"/>
+```
+
+This also means that the `maybe-require-valid` process is no longer available.
+
+Instead, use the `save-draft` process, or customize a process with the `save` action but no `require-valid`.
+
+## See also
+
+- This blog post for an introduction to the feature: [More powerful buttons](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
+- The predefined configuration properties in [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml)
