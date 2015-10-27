@@ -8,23 +8,23 @@ The following buttons are predefined and associated with the processes of the sa
 
 | Name | Description | Since |
 | ---- | ----------- | ----- |
-| `home` | navigate to `/` |
-| `summary` | navigate to the summary page |
-| `save-final` | save the form data if it is valid |
-| `save-draft` | save the form data even if it isn't valid |
-| `validate` | run `validate-all` |
-| `review` | navigate to the review page if the data is valid |
-| `edit` | navigate to the edit page from the review page |
-| `send` | validate then send data to a service |
-| `pdf` | generate a PDF version of the current form |
-| `tiff` | generate a TIFF version of the current form (see [TIFF Production](TIFF Production))<br>[SINCE Orbeon Forms 4.11] |
-| `email` | validate then email data |
-| `collapse-all` | run the action of the same name |
-| `expand-all` | run the action of the same name |
-| `refresh` | visit all controls and update the page (noscript mode only) |
-| `wizard-prev` | run the action of the same name |
-| `wizard-next` | run the action of the same name |
-| `close` | navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page<br>*NOTE: The button in fact navigates to a page, but doesn't just close the current window/tab, as there is no cross-browser way to do this.* |
+| `home` | navigate to `/` | 4.2 |
+| `summary` | navigate to the summary page | 4.2 |
+| `save-final` | save the form data if it is valid | 4.2 |
+| `save-draft` | save the form data even if it isn't valid | 4.2 |
+| `validate` | run `validate-all` | 4.2 |
+| `review` | navigate to the review page if the data is valid | 4.2 |
+| `edit` | navigate to the edit page from the review page | 4.2 |
+| `send` | validate then send data to a service | 4.2 |
+| `pdf` | generate a PDF version of the current form | 4.2 |
+| `tiff` | generate a TIFF version of the current form (see [TIFF Production](TIFF Production)) | 4.2 |
+| `email` | validate then email data | 4.2 |
+| `collapse-all` | run the action of the same name | 4.2 |
+| `expand-all` | run the action of the same name | 4.2 |
+| `refresh` | visit all controls and update the page (noscript mode only) | 4.2 |
+| `wizard-prev` | run the action of the same name | 4.2 |
+| `wizard-next` | run the action of the same name | 4.2 |
+| `close` | navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page<br>*NOTE: The button in fact navigates to a page, but doesn't just close the current window/tab, as there is no cross-browser way to do this.* | 4.2 |
 
 In fact all buttons except the `pdf` and `tiff` buttons can do the same tasks if they are configured appropriately! But
 by default the buttons above are preconfigured to do different tasks, for convenience.
@@ -33,15 +33,15 @@ by default the buttons above are preconfigured to do different tasks, for conven
 
 The following sub-processes are predefined and can be reused from other processes:
 
-| Name | Description |
-| ---- | ----------- |
-| `require-uploads` | check whether there are pending uploads and if so display an error message and interrupt the process |
-| `require-valid` | mark all controls as visited, check whether data is valid and if not display an error message and interrupt the process |
-| `review-messages` | if there are any `error`, `warning` or `info` messages, open a dialog so the user can decide whether to review them or continue the process<br>[SINCE Orbeon Forms 4.3] |
-| `validate-all` | combine `require-valid` and `review-messages`<br>[SINCE Orbeon Forms 4.3] |
-| `orbeon-home` | navigate to '/' |
-| `form-runner-home` | navigate to '/fr' |
-| `summary` | navigate to this Form Runner page<br>(a predefined process since 4.7) |
+| Name | Description | Since |
+| ---- | ----------- | ----- |
+| `require-uploads` | check whether there are pending uploads and if so display an error message and interrupt the process | 4.2 |
+| `require-valid` | mark all controls as visited, check whether data is valid and if not display an error message and interrupt the process | 4.2 |
+| `review-messages` | if there are any `error`, `warning` or `info` messages, open a dialog so the user can decide whether to review them or continue the process | 4.3 |
+| `validate-all` | combine `require-valid` and `review-messages` | 4.3 |
+| `orbeon-home` | navigate to '/' | 4.2 |
+| `form-runner-home` | navigate to '/fr' | 4.2 |
+| `summary` | navigate to this Form Runner page | 4.7 |
 
 ## Processes that apply to services
 
