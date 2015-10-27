@@ -15,10 +15,9 @@ Complete the process right away successfully.
 You can run a sub-process with the `process` action:
 
 ```xml
-<property
-  as="xs:string"
-  name="oxf.fr.detail.process.home.*.*"
-  value='process("orbeon-home")'/>
+<property as="xs:string"  name="oxf.fr.detail.process.home.*.*">
+    process("orbeon-home")
+</property>
 ```
 
 You can also run a sub-process directly by name:
