@@ -2,6 +2,10 @@
 
 <!-- toc -->
 
+## Introduction
+
+Core actions are actions directly supported by the process interpreter. They relate to how the process runs, completes or fails.
+
 ## success
 
 Complete the process right away successfully.
