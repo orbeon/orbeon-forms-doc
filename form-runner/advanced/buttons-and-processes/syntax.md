@@ -42,7 +42,11 @@ TODO
 In Orbeon Forms 4.2 and 4.3, actions support only an anonymous default parameter. With 4.4, actions support named parameters in addition to an anonymous default parameter:
 
 ```ruby
-send(uri = "http://acme.org/orbeon", annotate = "error warning", replace = "all")
+send(
+    uri      = "http://acme.org/orbeon",
+    annotate = "error warning",
+    replace  = "all"
+)
 ```
 
 ## Combining actions
