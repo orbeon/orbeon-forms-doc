@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Core actions are actions directly supported by the process interpreter. They relate to how the process runs, completes or fails.
+Core actions are actions directly supported by the process interpreter. They relate to how a process runs, completes or fails.
 
 ## success
 
