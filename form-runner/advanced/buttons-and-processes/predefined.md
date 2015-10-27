@@ -49,7 +49,7 @@ Example:
 
     xf:show("fr-validation-dialog") then suspend
 
-![The validation dialog](review-messages.png)
+![The validation dialog](../review-messages.png)
 
 ### The result dialog
 
