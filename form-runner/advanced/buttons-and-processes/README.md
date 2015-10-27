@@ -18,17 +18,6 @@ A "process" consists in a list of actions, or steps, which are executed by Form 
 
 With Orbeon Forms, processes are configurable. They are defined separately from buttons, but can be linked to buttons. Orbeon Forms comes with predefined processes for some common tasks, such as saving form data, but you can write your own processes.
 
-## What next?
-
-You can learn more about:
-
-- the [process syntax](syntax.md)
-- the actions you can use, including:
-    - [core actions](actions-core.md)
-    - [Form Runner actions](actions-form-runner.md)
-    - [XForms actions](actions-xforms.md)
-- [predefined buttons, processes and dialogs](predefined.md)
-
 ## Associating a process with a button
 
 A process is automatically associated with a button by name when using the following properties:
@@ -94,6 +83,17 @@ With this, we have overridden the functionality of the "Send" button specificall
 *NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.*
 
 All the configuration above for a button called `send` could have been done with an entirely custom button named `foo`.
+
+## What next?
+
+You can learn more about:
+
+- the [process syntax](syntax.md)
+- the actions you can use, including:
+    - [core actions](actions-core.md)
+    - [Form Runner actions](actions-form-runner.md)
+    - [XForms actions](actions-xforms.md)
+- [predefined buttons, processes and dialogs](predefined.md)
 
 ## Compatibility notes
 
