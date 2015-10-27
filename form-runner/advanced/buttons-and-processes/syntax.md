@@ -20,7 +20,7 @@ The name of the process immediately follows the property prefix, here `save-fina
 
 The wildcards, as usual with Form Funner, can specify a form's application and form names. Here, the process is available to all forms in all apps because of the `*.*` wildcard.
 
-The inline value, staring in this example with `require-uploads`, actuallydescribes the process. It follows a DSL (domain-specific language) described in more details below. The process DSL supports:
+The inline value, staring in this example with `require-uploads`, actually describes the process. It follows a DSL (domain-specific language) described in more details below. The process DSL supports:
 
 - actions with or without parameters
 - combinators to handle success and failure
