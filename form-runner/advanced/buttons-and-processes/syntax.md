@@ -33,7 +33,13 @@ The inline value, staring in this example with `require-uploads`, describes the 
 
 ### Actions without parameters
 
-TODO
+Some actions, such as the `email` action, don't have or don't require any parameters. You just write the name of the action:
+
+```xml
+<property as="xs:string" name="oxf.fr.detail.process.email-my-form.*.*">
+    email
+</property>
+```
 
 ### Actions with parameters
 
