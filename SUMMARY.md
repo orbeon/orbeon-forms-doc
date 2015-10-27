@@ -106,7 +106,8 @@
            * [XML Schema Generation](form-runner/api/other/xml-schema-generation.md)
            * [Duplicate Form Data](form-runner/api/other/duplicate-form-data.md)
    * Advanced
-       * [Buttons and processes](form-runner/advanced/buttons-and-processes.md)
+       * [Buttons and processes](form-runner/advanced/buttons-and-processes/README.md)
+           * 
        * [Custom model logic](form-runner/advanced/custom-model-logic.md)
 * Configuration
    * [Properties](configuration/properties/README.md)
