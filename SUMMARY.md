@@ -107,7 +107,11 @@
            * [Duplicate Form Data](form-runner/api/other/duplicate-form-data.md)
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes/README.md)
-           * 
+           * [Syntax]()
+           * [Core actions](form-runner/advanced/buttons-and-processes/actions-core.md)
+           * [Form Runner actions](form-runner/advanced/buttons-and-processes/actions-form-runner.md)
+           * [XForms actions](form-runner/advanced/buttons-and-processes/actions-xforms.md)
+           * [Predefined processe and dialogs](form-runner/advanced/buttons-and-processes/predefined.md)
        * [Custom model logic](form-runner/advanced/custom-model-logic.md)
 * Configuration
    * [Properties](configuration/properties/README.md)
