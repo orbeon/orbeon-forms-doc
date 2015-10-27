@@ -17,9 +17,7 @@ You can run a sub-process with the `process` action:
   value='process("orbeon-home")'/>
 ```
 
-You can also run a sub-process directly by name.
-
-Example:
+You can also run a sub-process directly by name:
 
 ```xml
 <!-- Define a sub-process which navigates to the "/" URL -->
