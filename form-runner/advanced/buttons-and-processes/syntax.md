@@ -29,6 +29,22 @@ The inline value, staring in this example with `require-uploads`, describes the 
 - sub-processes
 - a set of standard actions
 
+## Simple actions
+
+### Actions without parameters
+
+TODO
+
+### Actions with parameters
+
+[SINCE Orbeon Forms 4.4]
+
+In Orbeon Forms 4.2 and 4.3, actions support only an anonymous default parameter. With 4.4, actions support named parameters in addition to an anonymous default parameter:
+
+```ruby
+send(uri = "http://acme.org/orbeon", annotate = "error warning", replace = "all")
+```
+
 ## Combining actions
 
 Running a single action might be useful, but it is much more useful to combine actions. This means that you must be able to:
@@ -86,16 +102,6 @@ Validating and sending data to a service looks like this:
     then send("oxf.fr.detail.send.success")
 
 Some actions can take parameters. In the example above we point to properties to configure the `send` action. This means that, within a single process, you can have any number of `send` actions which send data to various services. This also allows you to have separate buttons to send data to different services. These two scenarios were not possible before.
-
-## Action parameters
-
-[SINCE Orbeon Forms 4.4]
-
-In Orbeon Forms 4.2 and 4.3, actions support only an anonymous default parameter. With 4.4, actions support named parameters in addition to an anonymous default parameter:
-
-```ruby
-send(uri = "http://acme.org/orbeon", annotate = "error warning", replace = "all")
-```
 
 ## Grouping actions
 
