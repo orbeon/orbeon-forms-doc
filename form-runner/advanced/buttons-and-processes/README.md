@@ -57,7 +57,7 @@ Here the following buttons get associated with processes of the same name define
 
 *NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented as processes but handled directly by Form Runner.*
 
-## Customizing processes
+## Customizing existing processes
 
 So how do you customize processes? Say you want to specify a couple of buttons on your "acme/hr" form. Like above, you define a property:
 
