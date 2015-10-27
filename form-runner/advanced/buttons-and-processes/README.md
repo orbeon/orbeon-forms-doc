@@ -14,11 +14,9 @@ This documentation describes how to configure the behavior of the buttons that a
 
 ## What is a process?
 
-TODO
+A "process" consists in a list of actions, or steps, which are executed by Form Runner, typically when the user presses a button. For example, a process might say: "when the user presses this button, validate the form data, then save it to the database".
 
-## What is button?
-
-TODO
+With Orbeon Forms, processes are configurable. They are defined separately from buttons, but can be linked to buttons. Orbeon Forms comes with predefined processes for some common tasks, such as saving form data, but you can write your own processes.
 
 ## Predefined buttons
 
