@@ -107,7 +107,7 @@
            * [Duplicate Form Data](form-runner/api/other/duplicate-form-data.md)
    * Advanced
        * [Buttons and processes](form-runner/advanced/buttons-and-processes/README.md)
-           * [Syntax]()
+           * [Syntax](form-runner/advanced/buttons-and-processes/syntax.md)
            * [Core actions](form-runner/advanced/buttons-and-processes/actions-core.md)
            * [Form Runner actions](form-runner/advanced/buttons-and-processes/actions-form-runner.md)
            * [XForms actions](form-runner/advanced/buttons-and-processes/actions-xforms.md)
