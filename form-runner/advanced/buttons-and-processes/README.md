@@ -71,7 +71,7 @@ Here the following buttons get associated with processes of the same name define
 - `wizard-next`
 - `review`
 
-NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented as processes but handled directly by Form Runner.
+*NOTE: As of Orbeon Forms 4.2, the `clear` and `pdf` buttons are not implemented as processes but handled directly by Form Runner.*
 
 ## Customizing processes
 
