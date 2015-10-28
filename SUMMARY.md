@@ -164,10 +164,8 @@
            * [Polishing the app](xforms/tutorial/bookcast/polishing.md)
            * [Adding a feed](xforms/tutorial/bookcast/feed.md)
 * Contributors
-    * Contributors
-        * [Automated tests](contributors/.md)
-        * [Building Orbeon Forms](contributors/.md)
-        * [Localizing Orbeon Forms](contributors/.md)
-        * [State handling](contributors/.md)
-        * [Test plan](contributors/test-plan/README.md)
-
+    * [Automated tests](contributors/.md)
+    * [Building Orbeon Forms](contributors/.md)
+    * [Localizing Orbeon Forms](contributors/.md)
+    * [State handling](contributors/.md)
+    * [Test plan](contributors/test-plan/README.md)
