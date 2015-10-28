@@ -66,11 +66,11 @@ In this use case:
 
 #### 1. Secure access to Orbeon Forms
 
-There are many ways to do that. One of the easiest ways, if you don't already have infrastructure for that, is to use Tomcat and its `tomcat-users.xml` file. See also [[Access Control Setup| Form Runner ~ Access Control ~ Setup]].
+There are many ways to do that. One of the easiest ways, if you don't already have infrastructure for that, is to use Tomcat and its `tomcat-users.xml` file. See also [Access Control](form-runner/access-control/users.md).
 
 #### 2. Setup Owner/Group permissions for your forms.
 
-See [[Owner Group| Form Runner ~ Access Control ~ Owner Group]]. Setup permissions this way:
+See [Owner Group](form-runner/access-control/owner-group.md). Setup permissions this way:
 
 - `Anyone` has `Create` permissions
 - `Owner` can `Read`, `Update`, and possibly `Delete` data
@@ -81,7 +81,7 @@ See [[Buttons on the detail page| Form Runner ~ Configuration properties#buttons
 
 #### 4. Specify what to do when the Send or Submit button is pressed
 
-Orbeon Forms is quite flexible when it comes to configuring form submission. See [[Buttons-and-Processes|Form Runner ~ Buttons and Processes]].
+Orbeon Forms is quite flexible when it comes to configuring form submission. See [Buttons-and-Processes](form-runner/advanced/buttons-and-processes/README.md).
 
 For example, you can:
 
