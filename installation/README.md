@@ -107,8 +107,8 @@ The benefit of changing this configuration is that you know exactly where the fi
 
 ## Specific steps for your container / app server
 
-- [[Tomcat|Installation ~ Tomcat]]
-- [[JBoss|Installation ~ JBoss]]
-- [[WebLogic|Installation ~ WebLogic]]
-- [[WebSphere|Installation ~ WebSphere]]
-- [[GlassFish|Installation ~ GlassFish]]
+- [Tomcat](tomcat.md)
+- [JBoss](jboss.md)
+- [WebLogic](weblogic.md)
+- [WebSphere](websphere.md)
+- [GlassFish](g;assfish.md)
