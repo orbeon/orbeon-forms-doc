@@ -111,4 +111,4 @@ The benefit of changing this configuration is that you know exactly where the fi
 - [JBoss](jboss.md)
 - [WebLogic](weblogic.md)
 - [WebSphere](websphere.md)
-- [GlassFish](g;assfish.md)
+- [GlassFish](glassfish.md)
