@@ -1,4 +1,4 @@
-
+# Automated Tests
 
 ## Removing leftover databases on SQL Server
 
