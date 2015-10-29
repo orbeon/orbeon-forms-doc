@@ -163,6 +163,9 @@
            * [Database access](xforms/tutorial/bookcast/database.md)
            * [Polishing the app](xforms/tutorial/bookcast/polishing.md)
            * [Adding a feed](xforms/tutorial/bookcast/feed.md)
+* XML Platform
+    * Controller
+        * [Authorizing pages and services](controller/authorization-of-pages-and-services.md)
 * Contributors
     * [Automated tests](contributors/automated-tests.md)
     * [Building Orbeon Forms](contributors/building-orbeon-forms.md)
