@@ -32,7 +32,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - XForms examples
   - load, look reasonable, and work
 
-    - [PE Features Availability](pe-features-availability.md) [4.10 DONE]
+### PE Features Availability [4.10 DONE]
 
 ## Persistence
 
