@@ -281,9 +281,281 @@ Also have other email properties setup.
             - message about overwrite
         - publish message says version 1 was updated
         
-    - [Data Capture Permissions](data-capture-permissions.md) [4.10 DONE]
-    - [Autosave and Permissions Test](autosave-and-permissions.md) [4.10 DONE]
-    - [Other Database Tests](other-database-tests.md) [4.10 DONE]
+### Data Capture Permissions [4.10 DONE]
+
+## Setup
+
+Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.exist.*.*"
+    value="exist"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.oracle.*.*"
+    value="oracle"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.mysql.*.*"
+    value="mysql"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.postgresql.*.*"
+    value="postgresql"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.sqlserver.*.*"
+    value="sqlserver"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.db2.*.*"
+    value="db2"/>
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.method"
+    value="container"/><!-- change to header for header-based auth -->
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.container.roles"
+    value="orbeon-user orbeon-sales orbeon-admin clerk admin"/>
+```
+
+- repeat with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2
+- restore `form-builder-permissions.xml` to default
+- for container auth
+    - in `web.xml`
+        - uncomment security section towards the end
+        - change first `<url-pattern>` from `/fr/*` to `/auth` (it doesn't matter that page doesn't exist, it's just a path to force authentication)
+    - in `tomcat-users.xml`, setup users:
+        - `<user username="clerk" password="clerk" roles="orbeon-user,clerk"/>`
+        - `<user username="admin" password="admin" roles="orbeon-user,admin"/>`
+- for headers-based  auth
+    - `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
+    - set rewriting rules with Charles (⌘⇧W)
+        - for user clerk ([gist][16])
+        - for user admin ([gist][17])
+    - to switch between users in below steps
+        - enable rewrite for clerk or admin headers, or disable rewrite
+        - remove JSESSIONID when switching users
+            
+## Tests
+            
+- in Form Builder
+    - create new form `exist/permissions`, `oracle/permissions`, `mysql/permissions`, `postgresql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
+    - enable permissions for form and configure like on [doc page][18]
+    - save and publish
+- make sure permissions are followed
+    - anonymous user
+        - home page: link goes to new page (not summary)
+        - summary page: unauthorized (fixed regression with [#1201][19])
+        - detail page: only `new` accepted, `edit`, `view`, `pdf` are unauthorized
+        - enter and save data on `new`
+        - check URL doesn't change to `edit`
+    - logged in user
+        - check permissions as clerk/clerk
+            - remove `JSESSIONID` (i.e. with Dev Tools)
+            - switch user
+            - home page: link goes to the summary page
+            - summary page
+                - sees data previously entered by anonymous user, cannot delete
+                - click on existing data created by anonymous user shows read-only view
+                - replace `view` with `edit` in URL shows 404
+                - PDF works
+                - click on new button opens new page
+            - new/edit
+                - save data works
+                - user is owner so can edit his own data
+                - cannot delete from Summary because no `delete` permission
+        - check permissions as admin/admin
+            - remove `JSESSIONID` (i.e. with Dev Tools)
+            - switch user
+            - on click goes to summary page
+            - on summary page
+                - click on new opens new page
+                - sees data previously entered by anonymous user and clerk
+                - delete button enabled and works
+                - on open data, can edit data
+
+[16]: https://gist.github.com/ebruchez/10079296
+[17]: https://gist.github.com/ebruchez/10079254
+[18]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Access-Control-~-Deployed-Forms#example
+[19]: https://github.com/orbeon/orbeon-forms/issues/1201
+
+### Autosave and Permissions Test [4.10 DONE]
+
+Repeat what follows with Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
+
+*NOTE: As of Orbeon Forms 4.10, autosave is not supported with eXist.*
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.oracle.*.*"
+    value="oracle"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.mysql.*.*"
+    value="mysql"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.postgresql.*.*"
+    value="postgresql"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.sqlserver.*.*"
+    value="sqlserver"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.db2.*.*"
+    value="db2"/>
+<property 
+    as="xs:string"  
+    name="oxf.fr.authentication.container.roles" 
+    value="a b"/>
+<property 
+    as="xs:string"  
+    name="oxf.http.proxy.host"                   
+    value="localhost"/>
+<property 
+    as="xs:integer" 
+    name="oxf.http.proxy.port"                   
+    value="8888"/>
+```
+
+Setup permissions e.g. in `tomcat-users.xml`:
+
+```xml
+<user username="a1" password="a1" roles="a"/>
+<user username="a2" password="a2" roles="a"/>
+<user username="b1" password="b1" roles="b"/>
+```
+
+Authorize on:
+
+    http://localhost:8080/47pe/auth
+
+### Autosave with permissions
+
+1. In FB, create form `$provider/autosave`.
+    - Create a field *first name*, marked as shown on summary page.
+    - Enable permissions as shown below, save, deploy.  
+        ![Permissions dialog](images/test-permissions.png)
+    - duplicate for all providers and publish
+2. Logged in as user `b1` in group `b`:
+    - `$provider/autosave/new`, type *Ned*, save, change to *Ned2*, tab out, after 6s go to the summary page, check it shows *Ned2* as draft
+3. Logged in as user `a1` in group `a`:
+    - Can see data of other users, but in readonly mode (since everyone can read)
+        - Load `$provider/autosave/summary`
+        - Check *Ned* shows, but has the readonly "label"
+        - Check *Ned2* shows, but has the readonly "label"
+        - Check that clicking on *Ned* and *Ned2* brings up the data in readonly mode
+        - Edit the URL to have `edit` instead of `view`, check a 403 is returned
+    - Drafts for saved
+        - Load `$provider/autosave/new`
+            - Check we don't get a prompt to edit the draft created by b1 (since we only have read access to it).
+            - Type *Homer*, hit save, edit into *Homer2*, after 6s go to summary page, check it shows *Homer* and *Homer2* as draft
+        - `$provider/autosave/summary`, click on *Homer2*, check the draft comes up
+        - `$provider/autosave/summary`, click on *Homer*, check prompt comes up, try both options and see that *Homer*/*Homer2* comes up
+        - editing one of the form data (*Homer* or *Homer2*), hit save, back on the summary check the draft was removed
+    - Drafts for new
+        - `$provider/autosave/new`, type *Bart*, after 6s go to summary page, check it shows *Bart* as draft
+        - `$provider/autosave/new`, check prompt, and try both options
+        - `$provider/autosave/new`, on prompt start from scratch, type *Lisa*, after 6s go to summary, check it shows *Bart* and *Lisa* as draft
+        - `$provider/autosave/new`, check prompt, try both options, in particular the one showing the drafts for new
+    - Summary
+        - Edit *Homer*, change to *Homer4*, after 6s go back to summary page.
+        - Delete *Homer*, check *Homer4* is deleted as well
+        - Check *Lisa*, then view, check in view mode without prompt
+        - Delete *Bart*, check *Lisa* not deleted
+4. With anonymous user:
+    - `$provider/autosave/summary` only shows saved data, not drafts
+    - change form definition to remove the read permission form anyone
+    - `$provider/autosave/summary` returns 403 (since anonymous users don't have the read permission)
+    - `$provider/autosave/new`, type *Homer*, tab out, after 6s check that no autosave was done (e.g. with Charles that no PUT was made to the persistence layer)
+5. Permissions of drafts in summary page
+    - Log in as user `a1` in group `a`.
+    - `$provider/autosave/summary`, delete everything (to clean things up).
+    - As user `a1` in group `a`, go to `$provider/autosave/new`, type *Homer*, hit save, edit into *Homer2*, after 6s go to `$provider/autosave/summary`, check it shows *Homer* and *Homer2* as draft.
+    - As user `a2` in group `a`, go to `$provider/autosave/summary`, check it shows *Homer* and *Homer2* as draft.
+    - As user `b1` in group `b`, go to `$provider/autosave/summary`, check it shows neither *Homer* nor *Homer2*.
+
+### Autosave without permissions
+
+This tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858)
+
+1. User is authenticated
+1. Create form without permissions
+1. Go to /new, enter text in field, tab out, wait for autosave
+1. Go to /new again
+1. Dialog must propose loading draft
+1. Save
+1. Make change to text in field, tab out, wait for autosave
+1. Go back to /edit
+1. Dialog must propose loading draft
+
+### Other Database Tests [4.10 DONE]
+
+## DB2 DDL
+
+Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
+
+1. Run the [4.3 DDL] and [4.3 to 4.4 DDL].
+2. Run the [4.4 DDL] and [4.4 to 4.6 DDL].
+3. Run the [4.6 DDL].
+
+```sql
+drop table orbeon_form_definition ;
+drop table orbeon_form_definition_attach ;
+drop table orbeon_form_data ;
+drop table orbeon_form_data_attach ;
+```
+
+## Oracle and DB2 Flat View
+
+- Make sure Oracle and DB2 datasources are  setup in `server.xml`.
+- Enable the flat view option, adding:
+
+    ```xml
+    <property 
+        as="xs:boolean"
+        name="oxf.fr.persistence.oracle.create-flat-view" 
+        value="true"/>
+
+    <property 
+        as="xs:boolean"
+        name="oxf.fr.persistence.db2.create-flat-view" 
+        value="true"/>
+
+    <property 
+        as="xs:string"
+        name="oxf.fr.persistence.provider.oracle.*.*"
+        value="oracle"/>
+
+    <property 
+        as="xs:string"
+        name="oxf.fr.persistence.provider.db2.*.*"
+        value="db2"/>
+    ```
+- Remove existing view if any: `drop view orbeon_f_db2_a ;`
+- Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [[flat view documentation|Form-Runner-~-Persistence-~-Flat-View]]
+  - rename app name to `oracle` or `db2` depending
+  - publish, check that a view with the appropriate column names is created.
+
+    ```sql
+    SELECT * FROM orbeon_f_db2_a;
+    ```
+
+    ```sql
+    SELECT * FROM orbeon_f_oracle_a;
+    ```
+
+  [4.3 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql
+  [4.3 to 4.4 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3-to-4_4.sql
+  [4.4 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4.sql
+  [4.4 to 4.6 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4-to-4_6.sql
+  [4.6 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_6.sql
 
 ## Form Builder
 
