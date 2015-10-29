@@ -2,26 +2,35 @@
 
 For each release of Orbeon Forms, we follow this test plan, which tests functionality in addition to the ~800 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this](https://github.com/orbeon/orbeon-forms/issues/227).
 
-- Misc
+# Misc
+
     - [Distribution](distribution.md) [4.10 DONE]
     - [Landing Page](landing-page.md) [4.10 DONE]
     - [PE Features Availability](pe-features-availability.md) [4.10 DONE]
-- Persistence
+
+# Persistence
+
     - [Basic Persistence](basic-persistence.md) [4.10 DONE]
     - [Versioning](versioning.md)
     - [Data Capture Permissions](data-capture-permissions.md) [4.10 DONE]
     - [Autosave and Permissions Test](autosave-and-permissions.md) [4.10 DONE]
     - [Other Database Tests](other-database-tests.md) [4.10 DONE]
-- Form Builder
+
+# Form Builder
+
     - [Basic Features](basic-features.md) [4.10 DONE]
     - [Schema Support](schema-support.md) [4.10 DONE]
     - [Services and Actions](services-and-actions.md) [4.10 DONE]
-- Form Builder / Form Runner
+
+# Form Builder / Form Runner
+
     - [Section Templates](section-templates.md) [4.10 DONE]
     - [PDF Automatic](pdf-automatic.md) [4.10 DONE]
     - [PDF Template](pdf-template.md) [4.10 DONE]
     - [Form Builder Permissions](form-builder-permissions.md) [4.10 DONE]
-- Form Runner
+
+# Form Runner
+
     - [Sample forms](sample-forms.md) [4.10 DONE]
     - [New, Edit, Review Pages](new-edit-review-pages.md) [4.10 DONE]
     - [Responsive](responsive.md) [4.10 DONE]
