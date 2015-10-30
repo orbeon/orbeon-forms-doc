@@ -646,16 +646,13 @@ drop table orbeon_form_data_attach ;
     - upload schema
         - see that types are listed in dialog
     - change schema
-    - delete schema, check removed from model (be aware of [#694][2])
+    - delete schema, check removed from model (be aware of [#694](https://github.com/orbeon/orbeon-forms/issues/694))
     - re-add schema
     - assign types to controls
     - check that validation is working as per the types
     - check schema types are reloaded in Control Settings dialog
 
-[2]: https://github.com/orbeon/orbeon-forms/issues/694
-
 ### Services and Actions [4.10 DONE]
-
 
 #### Database service
 
@@ -837,13 +834,13 @@ drop table orbeon_form_data_attach ;
         - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
         - other forms don't have admin ops
-        - Select → All, then Operation → Unpublish Local Forms ([#1380][7])
+        - Select → All, then Operation → Unpublish Local Forms ([#1380](https://github.com/orbeon/orbeon-forms/issues/1380))
             - check forms w/o access were not selected!
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
     - http://localhost:8080/410pe/fr/orbeon/builder/summary
-        - open structured search (be aware of  [#878][8])
+        - open structured search (be aware of  [#878](https://github.com/orbeon/orbeon-forms/issues/878))
         - check only guest and sales forms are available
 - browser 2
     - login as orbeon-user
@@ -879,9 +876,6 @@ drop table orbeon_form_data_attach ;
   - access to FB Summary page is rejected
   - access to FB New page is rejected
   - access to FB Edit page is rejected if form doesn't have matching role
-
-[7]: https://github.com/orbeon/orbeon-forms/issues/1380
-[8]: https://github.com/orbeon/orbeon-forms/issues/878
 
 ## Form Runner
 
@@ -925,7 +919,7 @@ drop table orbeon_form_data_attach ;
 #### Process buttons [4.10 DONE]
 
 - create and publish guest/test
-- add [these properties][2], and add `review` the list of buttons in the first property
+- add [these properties](https://gist.github.com/ebruchez/5666643), and add `review` the list of buttons in the first property
 - check standard behavior of buttons
     - save-draft
         - can save w/ invalid data
@@ -1025,7 +1019,7 @@ drop table orbeon_form_data_attach ;
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
 - go to form with ?fr-noscript=true
 - test w/ new form w/ image & file attachments
-    - attachments work [NOTE: be aware of [#1405][3]]
+    - attachments work [NOTE: be aware of [#1405](https://github.com/orbeon/orbeon-forms/issues/1405)]
 - be aware of
     - [#2355](https://github.com/orbeon/orbeon-forms/issues/2355)
     - [#2356](https://github.com/orbeon/orbeon-forms/issues/2356)
@@ -1072,15 +1066,10 @@ drop table orbeon_form_data_attach ;
   - help on all elements
   - repeats
   - hints on checkboxes/radios
-- help: see [#1637][5]
-- hints: see [#1649][6]
+- help: see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637)
+- hints: see [#1649](https://github.com/orbeon/orbeon-forms/issues/1649)
 - test Bookshelf help
 - create form with fields, including checkboxes/radio buttons
-
-[2]: https://gist.github.com/ebruchez/5666643
-[3]: https://github.com/orbeon/orbeon-forms/issues/1405
-[5]: https://github.com/orbeon/orbeon-forms/issues/1637
-[6]: https://github.com/orbeon/orbeon-forms/issues/1649
 
 ### Responsive [4.10 DONE]
 
@@ -1284,7 +1273,7 @@ drop table orbeon_form_data_attach ;
     - hit the *Manual save* button
     - check after ~10 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 10 s have elapsed)
     - can also hit the *Start* button, and notice the number incrementing after ~10s
-    - (the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114][2])
+    - (the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114](https://github.com/orbeon/orbeon-forms/issues/1114))
         
 #### 2. Request not reaching server
 
@@ -1311,7 +1300,7 @@ drop table orbeon_form_data_attach ;
     ```
 - load page again
 - using Charles, go in Proxy / Breakpoints, enable breakpoints, and add:  
-  ![][3]
+  ![](images/test-charles-request.png)
 - click on *Manual save*
 - the request is intercepted by Charles where you click on Abort, check that the client retries the request right away and that the request doesn't show in the server logs
 - finally click on *Execute*, and check the request runs on the server, and the response reaches the browser after 5 s
@@ -1338,19 +1327,12 @@ drop table orbeon_form_data_attach ;
 - setup
     - enable breakpoint on response for `/49pe/xforms-server/upload`
     - enable throttling in Charles per the following configuration  
-      ![][4]
-    - download [this image][5] (~200 KB)
+      ![](images/test-charles-throttling.png)
+    - download [this image](http://placekitten.com/g/2000/2000) (~200 KB)
 - http://localhost:8080/49pe/xforms-upload/
 - select image, and upload start in the background
 - abort the response to the background upload
 - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
-
-[1]: ./images/test-chrome-timeline.png
-[2]: https://github.com/orbeon/orbeon-forms/issues/1114
-[3]: ./images/test-charles-request.png
-[4]: ./images/test-charles-throttling.png
-[5]: http://placekitten.com/g/2000/2000
-
 
 ### Error Dialog [4.10 DONE]
 
@@ -1414,6 +1396,4 @@ Features to test, with all supported browsers:
 - check logs
     - no debug information
     - no unwanted information
-    - be aware of [#849][1]
-
-[1]: https://github.com/orbeon/orbeon-forms/issues/849
+    - be aware of [#849](https://github.com/orbeon/orbeon-forms/issues/849)
