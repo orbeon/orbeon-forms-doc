@@ -29,4 +29,4 @@ Then update your datasource configuration. For example, with Tomcat:
     url="jdbc:log4jdbc:oracle:thin:@//localhost:1521/globaldb"/>
 ```
 
-Note that the URL starts with `jdbc:log4jdbc:`, and that then only does the usual driver prefix, here `oracle:`, follow.
+Note the `driverClassName` set to `net.sf.log4jdbc.DriverSpy`, and the `url` starting with `jdbc:log4jdbc:`, followed by the usual driver prefix, here `oracle:`.
