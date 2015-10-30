@@ -128,6 +128,8 @@
        * [Environments](configuration/advanced/environments.md)
        * [Configuring a Form Runner eXist database](configuration/advanced/exist-db.md)
        * [Troubleshooting](configuration/advanced/troubleshooting.md)
+    * Troubleshooting
+        * [Relational database logging](configuration/troubleshooting/database-logging.md)
 * XForms
    * [XPath function library](xforms/xpath/README.md)
        * [Standard functions](xforms/xpath/standard-functions.md)
