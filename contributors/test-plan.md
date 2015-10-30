@@ -139,7 +139,7 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
     - go to /fr/
     - check that form definitions from all persistence layers show
 
-### Versioning
+### Versioning [4.10 DONE]
 
 - Setup
     - Database: try with db2 at least.
