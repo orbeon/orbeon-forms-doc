@@ -336,8 +336,8 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
 - for headers-based  auth
     - `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
     - set rewriting rules with Charles (⌘⇧W)
-        - for user clerk ([gist][16])
-        - for user admin ([gist][17])
+        - for user clerk ([gist](https://gist.github.com/ebruchez/10079296))
+        - for user admin ([gist]()https://gist.github.com/ebruchez/10079254)
     - to switch between users in below steps
         - enable rewrite for clerk or admin headers, or disable rewrite
         - remove JSESSIONID when switching users
@@ -346,12 +346,12 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
             
 - in Form Builder
     - create new form `exist/permissions`, `oracle/permissions`, `mysql/permissions`, `postgresql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
-    - enable permissions for form and configure like on [doc page][18]
     - save and publish
+    - enable permissions for form and configure like on [doc page](../../form-runner/access-control/deployed-forms.md#example)
 - make sure permissions are followed
     - anonymous user
         - home page: link goes to new page (not summary)
-        - summary page: unauthorized (fixed regression with [#1201][19])
+        - summary page: unauthorized (fixed regression with [#1201](https://github.com/orbeon/orbeon-forms/issues/1201))
         - detail page: only `new` accepted, `edit`, `view`, `pdf` are unauthorized
         - enter and save data on `new`
         - check URL doesn't change to `edit`
@@ -379,11 +379,6 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - sees data previously entered by anonymous user and clerk
                 - delete button enabled and works
                 - on open data, can edit data
-
-[16]: https://gist.github.com/ebruchez/10079296
-[17]: https://gist.github.com/ebruchez/10079254
-[18]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Access-Control-~-Deployed-Forms#example
-[19]: https://github.com/orbeon/orbeon-forms/issues/1201
 
 ### Autosave and Permissions Test [4.10 DONE]
 
