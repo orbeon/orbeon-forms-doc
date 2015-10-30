@@ -458,9 +458,7 @@ Authorize on:
     1. Go back to /edit
     1. Dialog must propose loading draft
 
-### Other Database Tests [4.10 DONE]
-
-#### DB2 DDL
+### DB2 DDL [4.10 DONE]
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
@@ -476,7 +474,7 @@ drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
 ```
 
-#### Oracle and DB2 Flat View
+### Oracle and DB2 Flat View [4.10 DONE]
 
 - Make sure Oracle and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
