@@ -863,9 +863,7 @@ drop table orbeon_form_data_attach ;
   - PDF template works
   - 
   
-### New, Edit, Review Pages [4.10 DONE]
-
-#### Errors and warnings [4.10 DONE]
+### Errors and warnings [4.10 DONE]
 
 - FB: create form
     - required field
@@ -878,7 +876,7 @@ drop table orbeon_form_data_attach ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to review page
 
-#### Process buttons [4.10 DONE]
+### Process buttons [4.10 DONE]
 
 - create and publish guest/test
 - add [these properties](https://gist.github.com/ebruchez/5666643), and add `review` the list of buttons in the first property
@@ -896,7 +894,7 @@ drop table orbeon_form_data_attach ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-#### Attachments/uploads [4.10 DONE]
+### Attachments/uploads [4.10 DONE]
 
 - basic upload works
 - removing uploaded file works
@@ -919,7 +917,7 @@ drop table orbeon_form_data_attach ;
     - cancel midway works
     - progress indicator works
 
-#### Submit [4.10 DONE]
+### Submit [4.10 DONE]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -940,7 +938,7 @@ drop table orbeon_form_data_attach ;
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-#### Email [4.10 DONE]
+### Email [4.10 DONE]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -968,14 +966,14 @@ drop table orbeon_form_data_attach ;
   - contains attachments, XML, PDF and TIFF [SINCE 4.11]
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-#### Misc [4.10 DONE]
+### Misc [4.10 DONE]
 
 - switch language
 - open/close sections
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-#### Noscript mode [4.10 DONE]
+### Noscript mode [4.10 DONE]
 
 - orbeon/contact
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
@@ -991,7 +989,7 @@ drop table orbeon_form_data_attach ;
     - errors prevent saving
     - Refresh icon works
 
-#### Wizard [4.10 DONE]
+### Wizard [4.10 DONE]
 
 - validated mode
     - `/fr/orbeon/w9/new`
@@ -1001,7 +999,7 @@ drop table orbeon_form_data_attach ;
 - /fr/orbeon/controls/new
     - test errors in section template are highlighted in TOC
 
-#### Captcha [4.10 DONE]
+### Captcha [4.10 DONE]
 
 - enable with property
 
@@ -1022,7 +1020,7 @@ drop table orbeon_form_data_attach ;
 - test reCAPTCHA [NOTE: had to fix 2 bugs with 4.5!]
 - test SimpleCaptcha
 
-#### Help popups/hint tooltips positioning [4.10 DONE]
+### Help popups/hint tooltips positioning [4.10 DONE]
 
 - create form to test general positioning
   - help on all elements
