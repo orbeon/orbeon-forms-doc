@@ -164,11 +164,12 @@
            * [Polishing the app](xforms/tutorial/bookcast/polishing.md)
            * [Adding a feed](xforms/tutorial/bookcast/feed.md)
 * XML Platform
-    * Controller
-        * [Authorizing pages and services](xml-platform/controller/authorization-of-pages-and-services.md)
+   * Controller
+       * [Authorizing pages and services](xml-platform/controller/authorization-of-pages-and-services.md)
 * Contributors
-    * [Automated tests](contributors/automated-tests.md)
-    * [Building Orbeon Forms](contributors/building-orbeon-forms.md)
-    * [Localizing Orbeon Forms](contributors/localizing-orbeon-forms.md)
-    * [State handling](contributors/state-handling.md)
-    * [Test plan](contributors/test-plan/README.md)
+   * [Automated tests](contributors/automated-tests.md)
+   * [Building Orbeon Forms](contributors/building-orbeon-forms.md)
+   * [Localizing Orbeon Forms](contributors/localizing-orbeon-forms.md)
+   * [State handling](contributors/state-handling.md)
+   * [Test plan](contributors/test-plan.md)
+
