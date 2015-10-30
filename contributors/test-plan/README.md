@@ -1,5 +1,7 @@
 # Test Plan
 
+<!-- toc -->
+
 For each release of Orbeon Forms, we follow this test plan, which tests functionality in addition to the ~800 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this](https://github.com/orbeon/orbeon-forms/issues/227).
 
 ## Misc
@@ -91,7 +93,7 @@ check that all PE features are available in PE, but not in CE:
 
 Do at least for eXist and DB2, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases. But if possible do for the other relational databases as well.
 
-## Setup
+#### Setup
 
 Setup: in `properties-local.xml`, add:
 
@@ -111,7 +113,7 @@ Setup: in `properties-local.xml`, add:
     value="GET HEAD"/>
 ```
 
-## Create forms
+#### Create forms
 
 Create same form in all apps: `exist/a`, `db2/a`
 
@@ -119,7 +121,7 @@ Create same form in all apps: `exist/a`, `db2/a`
 - use Duplicate button in FB Summary
 - then change app name
 
-## Pages
+#### Pages
 
 - FB: create form, publish
 - FR: check it shows on http://localhost:8080/orbeon/fr/
@@ -127,7 +129,7 @@ Create same form in all apps: `exist/a`, `db2/a`
 - FR: enter data, save
 - FR: check it shows in the summary page
 
-## Attachments
+#### Attachments
 
 - FB: attach static image to form
 - FB: add file attachment field
@@ -136,20 +138,20 @@ Create same form in all apps: `exist/a`, `db2/a`
 - FR: deployed form loads image
 - FR: attach file, save, edit
 
-## Search
+#### Search
 
 - FB: check summary/search field, save and deploy
 - FR: create new form data, see in summary
 - FR: search free-text and structured
 - FR: delete data in summary page works
 
-## Duplicate
+#### Duplicate
 
 - FR: Summary: Duplicate button works
     - data for latest form
     - older data
 
-## Home page
+#### Home page
 
 With all persistence layers active
 
@@ -158,13 +160,13 @@ With all persistence layers active
 - 
 ### Versioning
 
-## Setup
+#### Setup
 
-### Database
+##### Database
 
 Try with db2 at least.
 
-### Properties
+##### Properties
 
 ```xml
 <property
@@ -197,7 +199,7 @@ Try with db2 at least.
 
 Also have other email properties setup.
 
-## Steps
+#### Steps
 
 - create form db2/versioning
     -fields
@@ -283,7 +285,7 @@ Also have other email properties setup.
         
 ### Data Capture Permissions [4.10 DONE]
 
-## Setup
+#### Setup
 
 Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
 
@@ -340,7 +342,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
         - enable rewrite for clerk or admin headers, or disable rewrite
         - remove JSESSIONID when switching users
             
-## Tests
+#### Tests
             
 - in Form Builder
     - create new form `exist/permissions`, `oracle/permissions`, `mysql/permissions`, `postgresql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
@@ -436,7 +438,7 @@ Authorize on:
 
     http://localhost:8080/47pe/auth
 
-### Autosave with permissions
+#### Autosave with permissions
 
 1. In FB, create form `$provider/autosave`.
     - Create a field *first name*, marked as shown on summary page.
@@ -481,7 +483,7 @@ Authorize on:
     - As user `a2` in group `a`, go to `$provider/autosave/summary`, check it shows *Homer* and *Homer2* as draft.
     - As user `b1` in group `b`, go to `$provider/autosave/summary`, check it shows neither *Homer* nor *Homer2*.
 
-### Autosave without permissions
+#### Autosave without permissions
 
 This tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858)
 
@@ -497,7 +499,7 @@ This tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858)
 
 ### Other Database Tests [4.10 DONE]
 
-## DB2 DDL
+#### DB2 DDL
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
@@ -512,7 +514,7 @@ drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
 ```
 
-## Oracle and DB2 Flat View
+#### Oracle and DB2 Flat View
 
 - Make sure Oracle and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -670,7 +672,7 @@ drop table orbeon_form_data_attach ;
 ### Services and Actions [4.10 DONE]
 
 
-## Database service
+#### Database service
 
 - setup db
     - use MySQL on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
@@ -705,7 +707,7 @@ drop table orbeon_form_data_attach ;
         - `concat(first, ' ', last)`
         - `id`
 
-## HTTP service
+#### HTTP service
 
 - using echo service is ok
     - POST to `/fr/service/custom/orbeon/echo`
@@ -900,7 +902,6 @@ drop table orbeon_form_data_attach ;
 
 ### Sample forms [4.10 DONE]
 
-
 - load all
 - Controls
     - wizard navigation
@@ -923,9 +924,7 @@ drop table orbeon_form_data_attach ;
   
 ### New, Edit, Review Pages [4.10 DONE]
 
-
-
-### Errors and warnings [4.10 DONE]
+#### Errors and warnings [4.10 DONE]
 
 - FB: create form
     - required field
@@ -938,7 +937,7 @@ drop table orbeon_form_data_attach ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to review page
 
-### Process buttons [4.10 DONE]
+#### Process buttons [4.10 DONE]
 
 - create and publish guest/test
 - add [these properties][2], and add `review` the list of buttons in the first property
@@ -956,7 +955,7 @@ drop table orbeon_form_data_attach ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads [4.10 DONE]
+#### Attachments/uploads [4.10 DONE]
 
 - basic upload works
 - removing uploaded file works
@@ -979,7 +978,7 @@ drop table orbeon_form_data_attach ;
     - cancel midway works
     - progress indicator works
 
-### Submit [4.10 DONE]
+#### Submit [4.10 DONE]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -1000,7 +999,7 @@ drop table orbeon_form_data_attach ;
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email [4.10 DONE]
+#### Email [4.10 DONE]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1028,14 +1027,14 @@ drop table orbeon_form_data_attach ;
   - contains attachments, XML, PDF and TIFF [SINCE 4.11]
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc [4.10 DONE]
+#### Misc [4.10 DONE]
 
 - switch language
 - open/close sections
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode [4.10 DONE]
+#### Noscript mode [4.10 DONE]
 
 - orbeon/contact
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
@@ -1051,7 +1050,7 @@ drop table orbeon_form_data_attach ;
     - errors prevent saving
     - Refresh icon works
 
-### Wizard [4.10 DONE]
+#### Wizard [4.10 DONE]
 
 - validated mode
     - `/fr/orbeon/w9/new`
@@ -1061,7 +1060,7 @@ drop table orbeon_form_data_attach ;
 - /fr/orbeon/controls/new
     - test errors in section template are highlighted in TOC
 
-### Captcha [4.10 DONE]
+#### Captcha [4.10 DONE]
 
 - enable with property
 
@@ -1082,7 +1081,7 @@ drop table orbeon_form_data_attach ;
 - test reCAPTCHA [NOTE: had to fix 2 bugs with 4.5!]
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning [4.10 DONE]
+#### Help popups/hint tooltips positioning [4.10 DONE]
 
 - create form to test general positioning
   - help on all elements
@@ -1100,8 +1099,6 @@ drop table orbeon_form_data_attach ;
 
 ### Responsive [4.10 DONE]
 
-
-
 - access detail page from iPhone
     - Bookshelf
     - DMV-14
@@ -1109,10 +1106,8 @@ drop table orbeon_form_data_attach ;
     - Controls
     - Contact
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
-- 
 
 ### Home Page [4.10 DONE]
-
 
 - http://localhost:8080/410pe/fr/ lists deployed forms
 - (see also Form Builder permissions above which already tests some of this)
@@ -1178,7 +1173,6 @@ drop table orbeon_form_data_attach ;
   
 ### Summary Page [4.10 DONE]
 
-
 - e.g. http://localhost:8080/410pe/fr/orbeon/bookshelf/summary
 - list forms
 - paging
@@ -1198,7 +1192,6 @@ drop table orbeon_form_data_attach ;
 
 ### Excel Import [4.10 DONE]
 
-
 - http://localhost:8080/48pe/fr/orbeon/contact/import
 - import small doc first (`contact5.xlsx` on Dropbox)
   - check 2 out of  5 docs invalid
@@ -1211,7 +1204,6 @@ drop table orbeon_form_data_attach ;
 
 
 ### Liferay Support [4.10 DONE]
-
 
 - versions as of Orbeon Forms 4.9
   - Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)
@@ -1255,9 +1247,7 @@ drop table orbeon_form_data_attach ;
   - Image annotation control works (in Controls form)
   - *NOTE: noscript broken in Liferay*
   
-
 ### Embedding [4.10 DONE]
-
 
 - deploy `orbeon-embedding.war` into Tomcat
 - update `web.xml`:
@@ -1280,8 +1270,7 @@ drop table orbeon_form_data_attach ;
    
 ### XForms Retry [4.10 DONE]
 
-
-## 1. Retry happens
+#### 1. Retry happens
 
 - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
     - change sleep service to use `sleep?delay=10` (sleep 10 s)
@@ -1312,7 +1301,7 @@ drop table orbeon_form_data_attach ;
     - can also hit the *Start* button, and notice the number incrementing after ~10s
     - (the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114][2])
         
-## 2. Request not reaching server
+#### 2. Request not reaching server
 
 - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
 - set the following properties
@@ -1342,7 +1331,7 @@ drop table orbeon_form_data_attach ;
 - the request is intercepted by Charles where you click on Abort, check that the client retries the request right away and that the request doesn't show in the server logs
 - finally click on *Execute*, and check the request runs on the server, and the response reaches the browser after 5 s
 
-## 3. Response not reaching client
+#### 3. Response not reaching client
 
 - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
 - in Charles, edit the breakpoint set above (see screenshot), and this time break on the response, i.e. uncheck the "request" checkbox and check the "response" checkbox
@@ -1353,13 +1342,13 @@ drop table orbeon_form_data_attach ;
   - *Execute*
   - check the response reaches the client
       
-## 4. Unexpected HTML response
+#### 4. Unexpected HTML response
 
 - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
 - edit the response to contain non-valid XML, and *Execute*
 - check the client re-executes the request
 
-## 5. File upload
+#### 5. File upload
 
 - setup
     - enable breakpoint on response for `/49pe/xforms-server/upload`
@@ -1380,7 +1369,6 @@ drop table orbeon_form_data_attach ;
 
 ### Error Dialog [4.10 DONE]
 
-
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 - scenario 1
@@ -1395,9 +1383,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
   
-
 ### Other Browsers [4.10 DONE]
-
 
 - main tests above with Google Chrome
   - 4.10: latest is ??? and 46.0.2490.4 dev
@@ -1426,9 +1412,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
     
-
 ### Other [4.10 DONE]
-
 
 Features to test, with all supported browsers:
 
