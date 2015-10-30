@@ -498,9 +498,10 @@ This tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858)
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
-1. Run the [4.3 DDL] and [4.3 to 4.4 DDL].
-2. Run the [4.4 DDL] and [4.4 to 4.6 DDL].
-3. Run the [4.6 DDL].
+1. Run the [4.3 DDL](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql) and [4.3 to 4.4 DDL](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3-to-4_4.sql).
+2. Run the [4.4 DDL](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4.sql
+) and [4.4 to 4.6 DDL](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4-to-4_6.sql).
+3. Run the [4.6 DDL](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_6.sql).
 
 ```sql
 drop table orbeon_form_definition ;
@@ -548,12 +549,6 @@ drop table orbeon_form_data_attach ;
     SELECT * FROM orbeon_f_oracle_a;
     ```
 
-  [4.3 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql
-  [4.3 to 4.4 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3-to-4_4.sql
-  [4.4 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4.sql
-  [4.4 to 4.6 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4-to-4_6.sql
-  [4.6 DDL]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_6.sql
-
 ## Form Builder
 
 ### Basic Features [4.10 DONE]
@@ -577,12 +572,12 @@ drop table orbeon_form_data_attach ;
     - plain
     - HTML
     - check HTML label appears correct in summary page / search
-- set control help ([lorem ipsum][2])
+- set control help ([lorem ipsum](http://www.lipsum.com/))
     - plain
     - HTML
     - check help icon appears when help is set, and disappears when help is blanked
 - set section help
-    - check help icon appears when help is set, and disappears when help is blanked ([#1160][3] is a known issue)
+    - check help icon appears when help is set, and disappears when help is blanked ([#1160](https://github.com/orbeon/orbeon-forms/issues/1160) is a known issue)
 - cut/copy/paste
     - copy control with help, required, constraint, and warning
     - paste control
@@ -612,7 +607,7 @@ drop table orbeon_form_data_attach ;
     - edit label and items and switch languages
     - edit source and change top-level language, make sure language selector switches
     - remove language
-    - [#1223][4]
+    - [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
         - add lang not fully supported (e.g. Afrikaans) , remove all other languages, enter some labels
         - Test and Publish/new -> must show Afrikaans labels, not blank
 - FB Summary page
@@ -624,7 +619,7 @@ drop table orbeon_form_data_attach ;
 - publish form
     - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
 - warning dialog if attempt to close page when unsaved
-- serialization/deserialization [#1894][5]
+- serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
     - set properties  
     ```xml
     <property 
@@ -642,11 +637,6 @@ drop table orbeon_form_data_attach ;
     - back to 1st tab
     - insert control
     - check there is no JS error
-
-[2]: http://www.lipsum.com/
-[3]: https://github.com/orbeon/orbeon-forms/issues/1160
-[4]: https://github.com/orbeon/orbeon-forms/issues/1223
-[5]: https://github.com/orbeon/orbeon-forms/issues/1894
 
 ### Schema Support [4.10 DONE]
 
