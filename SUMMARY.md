@@ -129,7 +129,7 @@
        * [Configuring a Form Runner eXist database](configuration/advanced/exist-db.md)
     * Troubleshooting
         * [Relational database logging](configuration/troubleshooting/database-logging.md)
-        * [Tomcat and WebLogic](configuration/troubleshooting/tomcat-weblogic.md)
+        * [Misc](configuration/troubleshooting/misc.md)
 * XForms
    * [XPath function library](xforms/xpath/README.md)
        * [Standard functions](xforms/xpath/standard-functions.md)
