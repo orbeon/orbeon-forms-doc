@@ -1,3 +1,7 @@
+# Purging Old Data
+
+<!-- toc -->
+
 ## Rationale
 
 The built-in implementation of the persistence API for relational databases never deletes saved data from your database. When users "delete" data from the UI, it marks the data as deleted in the database, and then ignores such data. This is done to increase safety, enable auditing, and allow an admin to "undelete" data that has been deleted by mistake.
