@@ -1,4 +1,4 @@
-# Form localization
+# Form Localization
 
 <!-- toc -->
 
