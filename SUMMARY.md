@@ -79,6 +79,10 @@
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
         * [Purging old data](form-runner/persistence/purging-old-data.md)
+        * [Auditing](form-runner/persistence/auditing.md)
+        * [Autosave](form-runner/persistence/autosave.md)
+        * [DB Support](form-runner/persistence/db-support.md)
+        * [Flat view](form-runner/persistence/flat-view.md)
     * [Linking and Embedding](form-runner/link-embed/README.md)
         * [Linking](form-runner/link-embed/linking.md)
         * [Embedding Java API](form-runner/link-embed/java-api.md)
