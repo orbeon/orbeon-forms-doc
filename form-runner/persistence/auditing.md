@@ -1,4 +1,6 @@
+# Auditing
 
+<!-- toc -->
 
 ## Rationale
 
