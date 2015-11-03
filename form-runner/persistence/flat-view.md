@@ -1,6 +1,6 @@
 # Flat view
 
-<!-- -->
+<!-- toc -->
 
 ## Usage
 
