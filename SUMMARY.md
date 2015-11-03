@@ -73,7 +73,7 @@
     * Features
         * [Home Page](form-runner/feature/home-page.md)
         * [Responsive Design](form-runner/feature/responsive-design.md)
-        * [Supported Languages](form-runner/feature/supported-languages.md)
+        * [Localization](form-runner/feature/localization.md)
         * [TIFF Production](form-runner/feature/tiff-production.md)
         * [Wizard View](form-runner/feature/wizard-view.md)
     * Persistence
