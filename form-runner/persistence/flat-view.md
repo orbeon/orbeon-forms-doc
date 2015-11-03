@@ -1,14 +1,4 @@
-- [Usage](#usage)
-    - [Rationale](#rationale)
-    - [Availability](#availability)
-    - [Property to enable](#property-to-enable)
-- [Generated names](#generated-names)
-    - [View name](#view-name)
-    - [Metadata column names](#metadata-column-names)
-    - [Data column names](#data-column-names)
-        - [With Orbeon Forms 4.5 and newer](#with-orbeon-forms-45-and-newer)
-        - [With Orbeon Forms 4.4 and earlier](#with-orbeon-forms-44-and-earlier)
-    - [Limitations](#limitations)
+# Flat view
 
 ## Usage
 
