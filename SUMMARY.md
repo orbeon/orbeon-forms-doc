@@ -78,6 +78,7 @@
         * [Wizard View](form-runner/feature/wizard-view.md)
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
+        * [Purging old data](form-runner/persistence/purging-old-data.md)
     * [Linking and Embedding](form-runner/link-embed/README.md)
         * [Linking](form-runner/link-embed/linking.md)
         * [Embedding Java API](form-runner/link-embed/java-api.md)
