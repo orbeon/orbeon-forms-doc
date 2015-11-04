@@ -32,4 +32,3 @@ ORBEON.xforms.Events.errorEvent.subscribe(function(eventName, eventData) {`
     window.location.href = "http://www.orbeon.com/";
 });
 ```
-
