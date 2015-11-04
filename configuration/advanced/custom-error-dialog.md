@@ -18,7 +18,7 @@ By default, when an Ajax error happens, Orbeon Forms shows users an error dialog
 Orbeon Forms exposes a [custom JavaScript event](http://developer.yahoo.com/yui/event/#customevent): `ORBEON.xforms.Events.errorEvent`. You can register your own listener on that event, and when fired, send users to a page you choose, as done in the following snippet, which sends users to the Orbeon home page:
 
 ```javascript
-ORBEON.xforms.Events.errorEvent.subscribe(function(eventName, eventData) {`  
+ORBEON.xforms.Events.errorEvent.subscribe(function(eventName, eventData) {
     // your code here
 });
 ```
