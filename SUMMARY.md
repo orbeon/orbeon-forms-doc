@@ -132,6 +132,7 @@
        * [Run Modes](configuration/advanced/run-modes.md)
        * [Environments](configuration/advanced/environments.md)
        * [Configuring a Form Runner eXist database](configuration/advanced/exist-db.md)
+       * [Client-side error handling](configuration/advanced/client-error-handling.md)
    * Troubleshooting
        * [Relational database logging](configuration/troubleshooting/database-logging.md)
        * [Misc](configuration/troubleshooting/misc.md)
