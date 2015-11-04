@@ -17,9 +17,9 @@ Feature                                                                         
 ------------------------------------------------------------------------------------------|-------------|-------------|-------------|-------------|-------------|-------------
 [Form controls and layouts including repeated grids and sections][blog1]                  |Y            |Y            |Y            |Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
 [Versioning][blog2]                                                                       |N            |Y<sup>3</sup>|Y<sup>3</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>3</sup>
-[Owner/group-based permissions](Form-Runner ~ Access Control ~ Owner-Group)|Y<sup>6</sup> |Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
-[Autosave](Form-Runner ~ Autosave)                                                        |N            |Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
-[Flat view](Form-Runner ~ Persistence ~ Flat View)                                        |N/A          |Y            |N            |N            |Y<sup>6</sup>|Y<sup>5</sup>
+[Owner/group-based permissions](../access-control/owner-group.md)                         |Y<sup>6</sup> |Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
+[Autosave](autosave.md)                                                                   |N            |Y<sup>2</sup>|Y<sup>1</sup>|Y<sup>4</sup>|Y<sup>6</sup>|Y<sup>1</sup>
+[Flat view](flat-view.md)                                                                 |N/A          |Y            |N            |N            |Y<sup>6</sup>|Y<sup>5</sup>
 Orbeon Forms PE support                                                                   |Y            |Y            |Y            |Y            |Y            |Y
 Orbeon Forms CE support                                                                   |Y            |N            |Y            |N            |Y            |N
 
