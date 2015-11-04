@@ -4,7 +4,7 @@
 
 ## Disabling the standard error dialog
 
-By default, when an Ajax error happens, Orbeon Forms shows users an error dialog. First, you'll want to disable this behavior. You can do so by adding this property to your `properties-local.xml`:
+By default, when an Ajax error happens, Orbeon Forms shows users an error dialog. You can disable this behavior by adding this property to your `properties-local.xml`:
 
 ```xml
 <property
