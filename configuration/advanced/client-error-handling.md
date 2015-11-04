@@ -1,4 +1,4 @@
-# Custom error dialog
+# Client-side error handling
 
 <!-- toc -->
 
