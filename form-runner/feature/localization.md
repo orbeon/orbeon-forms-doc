@@ -12,16 +12,17 @@ There are three distinct categories of languages to consider:
 
 This means that a form author could use Form Builder in the French language, create a form in Mandarin Chinese, and run it with the Form Runner's English user interface.
 
-## Form languages
+For more on how to localize your forms in Form Builder, see [Form Localization in Form Builder](../../form-builder/localization.md). For more on how to localize the Form Builder or Form Runner user interface, see [Localizing Orbeon Forms](../../contributors/localizing-orbeon-forms.html). In what follows, we'll discuss how Form Runner picks which language to use at runtime, and what languages are supported by Form Builder and Form Runner out-of-the-box.
 
-Form Builder (Orbeon Forms PE only) lets you create forms in multiple languages. Most world languages are available, with some limitations described below.
+## Language picked at runtime
 
-### Known limitations
+Several factors can impact what language is being used by Form Runner. To determine what language to use, Form Runner goes does the current list and picks the first language it finds *and* in which your form is available:
 
-1. PDF output: There are some  known issues with ligatures in some Indian languages such as Hindi or Tamil.
-2. Right-to-left languages are not officially supported.
-
-We are glad to get help to address these two limitations.
+1. If Orbeon Forms is used with Liferay, the language coming from Liferay. <!-- TODO: provide mode details -->
+2. If present, the language specified by the `fr-language` request parameter.
+3. If present, the language specified by the `fr-language` servlet session attribute.
+4. If present, the language specified by the [`oxf.fr.default-language.*.*` property](../../configuration/properties/form-runner.md#default-language).
+5. Finally, if everything else fails, English (`en`) is used.
 
 ## Form Builder and Form Runner user interface
 
@@ -128,3 +129,11 @@ Spanish   | F | F | P | P | P
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 
+## Known limitations
+
+Form Builder (Orbeon Forms PE only) lets you create forms in multiple languages. Most world languages are available, with some limitations described below.
+
+1. PDF output: There are some  known issues with ligatures in some Indian languages such as Hindi or Tamil.
+2. Right-to-left languages are not officially supported.
+
+We are glad to get help to address these two limitations.
