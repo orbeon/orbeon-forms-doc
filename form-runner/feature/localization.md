@@ -30,7 +30,7 @@ Several factors can impact what language is being used by Form Runner. To determ
 - P: partial support
 - N: no support
 
-See also [[Localizing Orbeon Forms|Contributors-~-Localizing-Orbeon-Forms]] for information about how to localize Form Builder and Form runner in additional languages. Your contributions are welcome!
+See also [Localizing Orbeon Forms](../../contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form runner in additional languages. Your contributions are welcome!
 
 ### As of Orbeon Forms 4.10
 
