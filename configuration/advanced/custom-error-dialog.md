@@ -29,6 +29,6 @@ In case the user session expires, or some other error happens, you would like to
 
 ```javascript
 ORBEON.xforms.Events.errorEvent.subscribe(function(eventName, eventData) {`  
-    window.location.href = "http://www.orbeon.com/";
+    window.location.href = "http://www.example.org/";
 });
 ```
