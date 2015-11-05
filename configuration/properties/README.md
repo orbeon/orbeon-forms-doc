@@ -46,7 +46,7 @@ Some properties support wildcards, for example:
 oxf.fr.persistence.app.uri.*.*.*
 ```
 
-You can also place longer property values inline: [SINCE Orbeon Forms 4.6]
+You can also place longer property values inline [SINCE Orbeon Forms 4.6]: 
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.save-final.*.*">
@@ -58,7 +58,7 @@ You can also place longer property values inline: [SINCE Orbeon Forms 4.6]
 </property>
 ```
 
-Property files are reloaded every time they are changed (after a short delay), however some properties are taken into account only when the server is first started.
+Changes to most properties are taken into account as soon as you save you property file (e.g. `properties-local.xml`), however changes to some properties are only taken into account when the server is first started.
 
 ## Categories of properties
 
@@ -67,7 +67,7 @@ Properties fall in two categories:
 - *standard*, which means they are defined by Orbeon Forms
 - *custom*, which means they are defined by form authors, administrators or integrators
 
-All standard properties have standard values defined in built-in property files, described below, and can be overridden when needed.
+All standard properties have standard values defined in built-in property files, described in the pages linked above, and can be overridden when needed.
 
 In general, here is how you deal with properties:
 
@@ -76,7 +76,7 @@ In general, here is how you deal with properties:
 
 ## Setting and overriding properties
 
-To override properties, you create one of the following files under your web app's  `WEB-INF/resources/config`:
+To override properties, you create one of the following files under your web app's  `WEB-INF/resources/config`. Properties defined in these files override properties in the standard property files.
 
 * `properties-local.xml`
 * `properties-local-dev.xml`
@@ -86,7 +86,7 @@ To override properties, you create one of the following files under your web app
     * `prod`  run mode only
     * properties in this file also override properties in `properties-local.xml`
 
-Properties defined in these files override properties in the standard property files.
+In general, you can define all your custom properties in `properties-local.xml`. However, if the value of a property needs to differ depending on the environment, e.g. the value is different for `dev` and `prod`, then you can define those properties twice, in `properties-local-dev.xml` *and* `properties-local-prod.xml`, and have different value defined for the property depending on the file. In that case, you would still keep your custom properties that don't differ depending on the environment in `properties-local.xml`.
 
 By following this practice, you avoid modifying files that ships with Orbeon Forms, which makes upgrading to newer versions of Orbeon Forms easier.
 
@@ -185,7 +185,7 @@ Properties have a documented type, which must be one of the following:
 
 In addition to the standard properties, you can define your own properties. You can then access them from:
 
-* XPath expressions in XForms with [`xxf:property()`][1].
+* XPath expressions in XForms with [`xxf:property()`](../../xforms/xpath/extension-core.md#xxfproperty).
 * XPath expressions in XPL with `p:property()`, where the prefix `p` is mapped to the namespace `http://www.orbeon.com/oxf/pipeline`.
 * XPath expressions in XSLT with `pipeline:property()`, where the prefix pipeline is mapped to namespace `java:org.orbeon.oxf.processor.pipeline.PipelineFunctionLibrary`.
 
