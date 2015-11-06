@@ -1,4 +1,6 @@
+# Wizard Component
 
+<!-- toc -->
 
 ## What it does
 
