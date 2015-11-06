@@ -62,6 +62,6 @@ You can see in the following picture that the sections in the table of contents 
 
 ## See also
 
-- [[Wizard XBL component|Form Runner ~ XBL Components ~ Wizard]]
+- [Wizard XBL component](../component/wizard.md)
 - [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, with a video
 - [New wizard validated mode](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html): a blog post which introduces thew validated mode.
