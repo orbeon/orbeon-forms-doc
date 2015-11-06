@@ -1,4 +1,6 @@
+# Overriding and adding resources
 
+<!-- toc -->
 
 ## Rationale
 
