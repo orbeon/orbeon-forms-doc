@@ -2,14 +2,6 @@
 
 <!-- toc -->
 
-## Related pages
-
-- [[Overview|Form Runner ~ APIs ~ Persistence ~ Overview]]
-- [[CRUD|Form Runner ~ APIs ~ Persistence ~ CRUD]]
-- [[Search|Form Runner ~ APIs ~ Persistence ~ Search]]
-- [[Versioning|Form Runner ~ APIs ~ Persistence ~ Versioning]]
-- [[Implementing a Persistence Service|Form Runner ~ APIs ~ Persistence ~ Implementing a Persistence Service]]
-
 ## Purpose
 
 This is the API used, in particular, by the [[Form Runner Home page|Form Runner ~ Home Page]], accessible to users on `/fr/`. The Form Runner home page lists all the *published* forms the user has access to, and for each one it provides a link to create a new instance of that form, and to the summary page for that form. Either one of those links might be missing, depending on [[the user's permissions|Form Runner ~ Access Control]].

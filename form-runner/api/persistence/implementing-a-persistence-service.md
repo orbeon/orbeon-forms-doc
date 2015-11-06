@@ -2,14 +2,6 @@
 
 <!-- toc -->
 
-## Related pages
-
-- [[Overview|Form Runner ~ APIs ~ Persistence ~ Overview]]
-- [[CRUD|Form Runner ~ APIs ~ Persistence ~ CRUD]]
-- [[Search|Form Runner ~ APIs ~ Persistence ~ Search]]
-- [[Form Metadata|Form Runner ~ APIs ~ Persistence ~ Forms Metadata]]
-- [[Versioning|Form Runner ~ APIs ~ Persistence ~ Versioning]]
-
 ## Scenario
 
 This scenario describes how company Acme can go about implementing their own persistence service.
