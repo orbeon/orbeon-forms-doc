@@ -76,38 +76,18 @@ In general, here is how you deal with properties:
 
 ## Setting and overriding properties
 
-To override properties, you create one of the following files under your web app's  `WEB-INF/resources/config`. Properties defined in these files override properties in the standard property files.
+You can change properties by editing `properties-local.xml`. That file goes in the directory `WEB-INF/resources/config`, inside the Orbeon Forms web app.
 
-* `properties-local.xml`
-* `properties-local-dev.xml`
-    * `dev` run mode only
-    * properties in this file also override properties in `properties-local.xml`
-* `properties-local-prod.xml`
-    * `prod`  run mode only
-    * properties in this file also override properties in `properties-local.xml`
-
-In general, you can define all your custom properties in `properties-local.xml`. However, if the value of a property needs to differ depending on the environment, e.g. the value is different for `dev` and `prod`, then you can define those properties twice, in `properties-local-dev.xml` *and* `properties-local-prod.xml`, and have different value defined for the property depending on the file. In that case, you would still keep your custom properties that don't differ depending on the environment in `properties-local.xml`.
-
-By following this practice, you avoid modifying files that ships with Orbeon Forms, which makes upgrading to newer versions of Orbeon Forms easier.
-
-If you don't already have one of the `properties-local.xml` files:
-
-* copy any or all of the following files, as required:
-    * `properties-local.xml.template`  to `properties-local.xml`
-    * `properties-local-dev.xml.template`  to  `properties-local-dev.xml`
-    * ``properties-local-prod.xml.template`  to  `properties-local-prod.xml``
-* add your own properties to the resulting XML files
-
-Each property file must have a root `<properties>` element:
+If that file doesn't exist yet in your installation of Orbeon Forms, you can create it by renaming or copying the file `properties-local.xml.template` into `properties-local.xml`. At this point, your `properties-local.xml` will only contain an opening `<properties>` tag and closing `</properties>` tag, and you'll want to edit it to add properties between those two tags, as in:
 
 ```xml
 <properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:oxf="http://www.orbeon.com/oxf/processors">
-    ... properties are defined here ...
+    <property as="xs:string"  
+              name="oxf.fr.persistence.provider.*.*.*"
+              value="oracle"/>
 </properties>
 ```
-
-_NOTE: The  `*.template`  files are just templates for the actual property files.  You should not modify the template files themselves._
 
 ## Wildcards in properties
 
@@ -190,6 +170,13 @@ In addition to the standard properties, you can define your own properties. You 
 * XPath expressions in XSLT with `pipeline:property()`, where the prefix pipeline is mapped to namespace `java:org.orbeon.oxf.processor.pipeline.PipelineFunctionLibrary`.
 
 In all cases, for security reasons, those functions won't return the value of properties that contain the string "password" in the name of the property.
+
+## Different properties for dev vs. production
+
+In general, you can define all your custom properties in `properties-local.xml`. However, if the value of a property needs to differ depending on the environment, e.g. the value is different for `dev` and `prod`, then you can define those properties twice, in `properties-local-dev.xml` *and* `properties-local-prod.xml`, and have different value defined for the property depending on the file. In that case, you would still keep your custom properties that don't differ depending on the environment in `properties-local.xml`.
+
+- Properties you define in `properties-local-dev.xml` apply in `dev` run mode only, and in that case override properties in `properties-local.xml`.
+- Properties you define in `properties-local-prod.xml` apply in `prod` run mode only, and in that case override properties in `properties-local.xml`.
 
 ## For contributors: properties subsystem initialization
 
