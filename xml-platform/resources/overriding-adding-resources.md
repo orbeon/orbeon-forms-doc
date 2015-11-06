@@ -96,11 +96,11 @@ This assumes that you are deploying Orbeon Forms in WebLogic as an enterprise ar
 
 2. From the WebLogic Console, under _Deployments_, click the checkbox next to _orbeon-ear_, and click on the _Update_ button.
 
-    ![](images/weblogic-deployments-summary.png)
+    ![](../../images/weblogic-deployments-summary.png)
 
 3. On the next screen, choose _Redeploy the application using the following deployment files_. The _Source path_ will most likely be pre-populated with the path in which you have your Orbeon Forms enterprise archive (exploded or as an `ear` file). For the _Deployment plan path_, select the file you created in step 1. Click _Finish_ to redeploy Orbeon Forms taking into account the context parameters set in the deployment plan.
 
-    ![](images/weblogic-update-application.png)
+    ![](../../images/weblogic-update-application.png)
 
 Step 2 and 3 above assume you use the WebLogic Console to deploy Orbeon Forms. If instead you use `java weblogic.Deployer`, on the command line, just add the following parameter to the command you normally use to deploy Orbeon Forms: `-plan plan.xml`.
 
