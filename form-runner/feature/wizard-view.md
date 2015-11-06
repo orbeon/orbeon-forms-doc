@@ -1,4 +1,6 @@
+# Wizard View
 
+<!--toc -->
 
 ## Basic usage
 
