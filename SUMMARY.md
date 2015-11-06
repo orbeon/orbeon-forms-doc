@@ -175,7 +175,7 @@
     * Controller
         * [Authorizing pages and services](xml-platform/controller/authorization-of-pages-and-services.md)
     * Resources
-        * [Overriding and adding resources](xml-platform/resources/overriding-adding-resources.md)
+        * [Overriding and adding resources](xml-platform/resources/external-resources.md)
 * Contributors
     * [Automated tests](contributors/automated-tests.md)
     * [Building Orbeon Forms](contributors/building-orbeon-forms.md)
