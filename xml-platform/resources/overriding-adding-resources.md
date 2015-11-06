@@ -1,4 +1,4 @@
-# Overriding and adding resources
+# Setting up an external resources directory
 
 <!-- toc -->
 
