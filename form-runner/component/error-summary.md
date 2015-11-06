@@ -1,5 +1,7 @@
 # Error Summary
 
+<!-- toc -->
+
 ## What it does
 
 The Error Summary component is a reusable component listing the errors present on your form (or a sub-form):

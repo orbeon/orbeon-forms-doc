@@ -1,5 +1,7 @@
 # Localizing Orbeon Forms
 
+<!-- toc -->
+
 ## Introduction
 
 This document explains how to localize Orbeon Forms

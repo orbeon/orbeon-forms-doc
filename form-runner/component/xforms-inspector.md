@@ -1,5 +1,7 @@
 # XForms Inspector
 
+<!-- toc -->
+
 ## Overview
 
 The XForms Inspector allows you to:

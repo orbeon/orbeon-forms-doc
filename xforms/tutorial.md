@@ -1,5 +1,7 @@
 # Orbeon Forms XForms Tutorial - forms
 
+<!-- toc -->
+
 ## What is this?
 
 This is the tutorial for Orbeon Forms's XForms features. It is aimed at programmers who want to program Orbeon Forms, as opposed to analysis who want to use [Form Builder][1].
@@ -476,21 +478,21 @@ The above requires some explanations:
 * Much like `<xf:group>` in the controls, `<xf:bind>` elements can be nested.
 * `<xf:bind>` uses a `ref` attribute, which allows pointing at more than one node using a single XPath expression.
 * The outer `<xf:bind>` element points to the `<book>` element under the top-level `<books>` element of your instance. This happens because the evaluation context for a top-level XPath expression in an `<xf:bind>` element is the root element of the first XForms instance. You could be more explicit, for example with:
-    
+
     ```xml
     <xf:bind ref="/books/book">
         ...
     </xf:bind>
     ```
-    
+
     Or with:
-    
+
     ```xml
     <xf:bind ref="instance('books-instance')/book">
         ...
     </xf:bind>
     ```
-    
+
     The latter makes it clear, with the XForms `instance()` function, that you are addressing the `books-instance` instance and not another instance, so you will probably tend to prefer that notation.
 
 * The inner `<xf:bind>` elements apply the _required_ MIP to the `<title>` and `<author>` elements. The `required` attribute must contain an XPath expression, which is why it contains `true()` (the way to express a Boolean "true" value in XPath) and not simply `true`. Using XPath expressions allows you to make MIPs dynamically change, so that, for example, a form field can be required or not depending on other form fields.
@@ -713,19 +715,19 @@ Let's look at the details:
 * As usual, the `id` attribute allows referring to the submission from other XForms constructs.
 * The `ref` attribute specifies what piece of XML must be handled by the submission. It points to an instance node with an XPath expression. Here, we point to the whole `books-instance` instance by using the `instance()` function.
 * The `resource` attribute specifies to what URL the submission takes place. Here, you use an absolute path:
-    
+
     ```xml
     /exist/rest/db/orbeon/my-bookcast/books.xml
     ```
-    
+
     This path is equivalent to using the absolute URL:
-    
+
     ```xml
     http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
     ```
-    
+
     (Because it is inconvenient for you to always write absolute URLs when you want to address an URL handle by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
-    
+
     The paths starts with `/exist/rest/`, which maps to the built-in eXist database. The rest of the path (`/db/orbeon/my-bookcast/books.xml`) specifies the _collection_ and `document` to access. Here, we decide to save the data to a document called `books` within a collection called `/db/orbeon/my-bookcast/`.
 * The `method` attribute specifies what HTTP method to use. Here, you use the value `put`, which translates into using the HTTP PUT method. (You may not be very familiar with the PUT method (HTML forms, for example, always use GET and POST), but PUT is getting used more and more with REST interfaces. In just a few words, PUT allows you to store a resource to a particular location on an HTTP server.)
 * Finally, the `replace` attribute specifies what to do with the response sent by the server (here the server is the eXist database). Specifying a value of `none` tells the XForms engine to discard the content of the response from the database.
@@ -747,7 +749,7 @@ So go ahead and:
 * Reload the page.
 * Enter a book title and an author, then press the "Save" button. Your form data has been silently saved to the database. It was that easy!
 * Then, let's check that the data is actually in the database. [SINCE 4.0] By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/WEB-INF/web.xml`  noting that you will need to remove the  comment after <url-pattern> to make it well formed XML. (and don't forget to put them back before going to production if necessary):
-    
+
     ```xml
     <filter-mapping>
         <filter-name>orbeon-exist-filter</filter-name>
@@ -757,15 +759,15 @@ So go ahead and:
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
     ```
-    
+
     Then, open up a new browser tab or window, and enter the following URL:
-    
+
     ```xml
     http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
     ```
-    
+
     This is the exact same URL to which your submission has done an HTTP PUT. By entering it in your browser, you tell it to do an HTTP GET instead, and the eXist database simply sends the XML document to your browser. You should see this:
-    
+
     ![][18]
 
 Try changing the book author and pressing "Save" again. Then in your other browser tab or window, reload the eXist URL, and notice that the data has actually changed in the database.
@@ -902,11 +904,11 @@ Let's explain what the above does:
 * Here we have decided that we want to insert a new book always in first position in the page. The trick is to configure the insert action with the appropriate attributes.
 
     With the configuration provided, the action _inserts_ (`<xf:insert>`) the contents of the `book-template` instance (origin="instance('book-template')") _before_ (`position="before"`) the _first_ (`at="1"`) element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`).
-    
+
     This may sound a little confusing at first, but that's because `<xf:insert>` is in fact very powerful and you can combine its attributes in many different ways.
-    
+
     Make the changes above, press on the "Add One" button, and you see a new row of controls created.
-    
+
     ![][19]
 
 Again the XForms engine does its magic and takes care of updating the web page automatically. You also notice that the web page does not reload as it updates. This is because Orbeon Forms uses Ajax technology to perform updates to the page. With Ajax, client-side JavaScript code silently talks to the Orbeon Forms server, which then communicates to the client-side code the updates to perform to the page. These update are directly done to the HTML Document Object Model (DOM) without reload.
@@ -933,9 +935,9 @@ This works in a way very similar to the "Add One" button:
 * The difference is in the configuration of `<xf:delete>`.
 
     Here you don't use the `position` and `origin` attributes. What you are telling the action here is to delete (`<xf:delete>`) the element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`) which is at the current index position of the `book-repeat` repetition (`at="index('book-repeat')"`).
-    
+
     To understand the `index()` function, you should know that each repetition in XForms has an associated _current index_, which tells you which current iteration of a repetition is currently active. The current index changes as you navigate through controls. If you type in the title input field of the first book, the index is `1`; if you type in the author input field of the third book, the index is `3`; and so on. The index changes also if you click buttons. Usually, the current index is also visually highlighted.
-    
+
     So here, when you click on the "Remove" button of, say, the second book, the index for the `books-repeat` repetition changes to `2`, and therefore `index('books-repeat')` also returns `2`. This way, you can tell `<xf:delete>` to remove the second `<book>` element.
 
 Now add the new trigger within `<xf:repeat>` and reload the page. Try adding books, then removing them by pressing the "Remove" button.
@@ -1259,7 +1261,7 @@ It would be nice to tell the user that saving didn't work. You can do this very 
 <xf:submission
     id="save-submission"
     ref="instance('books-instance')"
-    resource="/exist/rest/db/orbeon/my-bookcast/books.xml" 
+    resource="/exist/rest/db/orbeon/my-bookcast/books.xml"
     method="put"
     replace="none">
     <xf:message
@@ -1446,7 +1448,7 @@ You should see something similar to this, depending on your browser:
 To make things even better, add the following to `view.xhtml` under the `<head>` element:
 
 ```xml
-<link 
+<link
     rel="alternate"
     type="application/atom+xml"
     title="Orbeon XForms Bookcast Tutorial Feed"

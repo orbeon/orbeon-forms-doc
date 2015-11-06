@@ -1,4 +1,6 @@
+# XForms Validation
 
+<!-- toc -->
 
 See also [[Form Builder Validation|Form Builder ~ Validation]].
 
@@ -42,13 +44,13 @@ XForms allows a single `constraint` attribute on the `xf:bind` element. Orbeon F
 
 ```xml
 <xf:bind ref="." id="input-bind">
-    <xf:constraint 
-        id="length-constraint"    
-        level="error"   
+    <xf:constraint
+        id="length-constraint"
+        level="error"
         value="string-length() gt 1"/>
-    <xf:constraint 
-        id="uppercase-constraint" 
-        level="warning" 
+    <xf:constraint
+        id="uppercase-constraint"
+        level="warning"
         value="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
 </xf:bind>
 ```
@@ -57,13 +59,13 @@ Deprecated example:
 
 ```xml
 <xf:bind ref="." id="input-bind">
-    <xf:constraint 
-        id="length-constraint"    
-        level="error"   
+    <xf:constraint
+        id="length-constraint"
+        level="error"
         value="string-length() gt 1"/>
-    <xf:constraint 
-        id="uppercase-constraint" 
-        level="warning" 
+    <xf:constraint
+        id="uppercase-constraint"
+        level="warning"
         value="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
 </xf:bind>
 ```
@@ -184,13 +186,13 @@ Example:
 
 ```xml
 <xf:bind ref="." id="input-bind">
-    <xf:constraint 
-        id="length-constraint"    
-        level="error"   
+    <xf:constraint
+        id="length-constraint"
+        level="error"
         value="string-length() gt 1"/>
-    <xf:constraint 
-        id="uppercase-constraint" 
-        level="warning" 
+    <xf:constraint
+        id="uppercase-constraint"
+        level="warning"
         value="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
 </xf:bind>
 

@@ -1,4 +1,6 @@
+# Captcha
 
+<!-- toc -->
 
 ## Which captcha is right for you
 

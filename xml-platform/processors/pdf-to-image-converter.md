@@ -1,3 +1,7 @@
+# PDF to Image Converter
+
+<!-- toc -->
+
 ## Availability
 
 Orbeon Forms 4.11 and newer.

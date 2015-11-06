@@ -1,4 +1,6 @@
+# Automatic PDF
 
+<!-- toc -->
 
 ### Context
 

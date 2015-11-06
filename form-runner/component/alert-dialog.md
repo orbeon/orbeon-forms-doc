@@ -1,4 +1,6 @@
+# Alert Dialog
 
+<!-- toc -->
 
 ## Rationale
 

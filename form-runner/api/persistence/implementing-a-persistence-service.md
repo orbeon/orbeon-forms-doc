@@ -1,5 +1,7 @@
 # Implementing a Persistence Service
 
+<!-- toc -->
+
 ## Related pages
 
 - [[Overview|Form Runner ~ APIs ~ Persistence ~ Overview]]

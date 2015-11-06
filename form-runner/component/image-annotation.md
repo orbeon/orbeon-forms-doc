@@ -1,4 +1,6 @@
+# Image Annotation Component
 
+<!-- toc -->
 
 ## Rationale
 

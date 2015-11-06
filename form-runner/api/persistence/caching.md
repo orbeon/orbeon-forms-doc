@@ -1,4 +1,6 @@
+# Caching
 
+<!-- toc -->
 
 ## Rationale
 

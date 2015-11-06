@@ -1,4 +1,6 @@
+# Number Component
 
+<!-- toc -->
 
 ## Availability
 

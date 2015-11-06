@@ -1,3 +1,7 @@
+# Authorization of Pages and Services
+
+<!-- toc -->
+
 ## Availability
 
 This feature is available since Orbeon Forms 4.0. Orbeon Forms 3.9 and earlier did *not* protect pages and services as described below.

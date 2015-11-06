@@ -1,4 +1,6 @@
-# US State
+# US State Component
+
+<!-- toc -->
 
 ## Overview
 

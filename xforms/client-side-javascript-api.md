@@ -1,4 +1,6 @@
+# Client-side JavaScript API
 
+<!-- toc -->
 
 ## Rationale
 

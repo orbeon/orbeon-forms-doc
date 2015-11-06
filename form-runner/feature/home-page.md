@@ -1,4 +1,6 @@
+# Home Page
 
+<!-- toc -->
 
 ## Introduction
 
@@ -171,7 +173,7 @@ In addition, if the latest modification time of the form definitions differ, a *
 
 For each form definition the current user has access to, the following links are shown if allowed:
 
-- Link to the summary page: shown if the current user can perform either one of the read, update, or delete operations on the form. 
+- Link to the summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
 - Link to the new page: shown if the current user can perform the create operation on the form.
 
 ![Home Page](images/home.png)

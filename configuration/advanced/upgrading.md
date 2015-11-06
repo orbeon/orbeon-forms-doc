@@ -1,3 +1,6 @@
+# Upgrading
+
+<!-- toc -->
 
 
 ## Compatibility policy

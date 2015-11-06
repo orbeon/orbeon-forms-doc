@@ -1,4 +1,6 @@
+# Limiter Filter
 
+<!-- toc -->
 
 ## Rationale
 

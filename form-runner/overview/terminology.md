@@ -1,4 +1,6 @@
+# Terminology
 
+<!-- toc -->
 
 ## Rationale
 

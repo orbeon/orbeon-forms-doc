@@ -1,10 +1,10 @@
-# Relational database logging
+# Relational Database Logging
 
 <!-- toc -->
 
 ## Introduction
 
-In case of issues when using Orbeon Forms with a relational database, you might want to see what's happening between Orbeon Forms and said database. We have found that [log4jdbc](https://github.com/arthurblake/log4jdbc) is a useful tool for troubleshooting this scenario. 
+In case of issues when using Orbeon Forms with a relational database, you might want to see what's happening between Orbeon Forms and said database. We have found that [log4jdbc](https://github.com/arthurblake/log4jdbc) is a useful tool for troubleshooting this scenario.
 
 ## Configuration
 

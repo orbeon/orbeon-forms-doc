@@ -1,4 +1,6 @@
+# Form Data Format
 
+<!-- toc -->
 
 ## Introduction
 
@@ -6,15 +8,15 @@ Form Runner loads and saves data in XML format. This page describes the format u
 
 ## Basics
 
-As you create a form definition with Form Builder, an XML representation for the data to capture is automatically created. It is organized as follows:  
+As you create a form definition with Form Builder, an XML representation for the data to capture is automatically created. It is organized as follows:
 
-* A root element:  
+* A root element:
     `<form>`
-* Within that element, for each section, a sub-element named after the section name:  
+* Within that element, for each section, a sub-element named after the section name:
     `<address>`
-* Within a section element, a sub-element for each control in the section, named after the control name:  
+* Within a section element, a sub-element for each control in the section, named after the control name:
     `<first-name>`
-* Within each control element, the value of the control is stored:  
+* Within each control element, the value of the control is stored:
     `<first-name>Alice</first-name>`
 
 Example:
@@ -55,7 +57,7 @@ For attachments, the control element is slightly different:
 - attributes are used for storing
     - the file name
     - the file media type
-    - the file size  
+    - the file size
 
 Example:
 

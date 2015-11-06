@@ -1,9 +1,6 @@
+# Accessing Data
 
-- [Situation](#situation)
-- [Techniques](#techniques)
-    - [1. Send data on submit](#1-send-data-on-submit)
-    - [2. Call the REST API](#2-call-the-rest-api)
-    - [3. Accessing the database](#3-accessing-the-database)
+<!-- toc -->
 
 ## Situation
 

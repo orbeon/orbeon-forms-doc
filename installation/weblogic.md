@@ -1,4 +1,4 @@
-## Oracle WebLogic 11g
+# Oracle WebLogic 11g
 
 A version of the ANTLR library that ships with WebLogic 11g conflicts with the version required by Orbeon Forms. To run Orbeon Forms on WebLogic 10/11g, you need to instruct WebLogic to let Orbeon Forms use the version of ANTLR that ships with Orbeon Forms. You can do this in the WebLogic EAR descriptor, which means you need to encapsulate Orbeon Forms in an EAR before you deploy it:
 

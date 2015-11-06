@@ -1,5 +1,7 @@
 # Linking to Your Forms
 
+<!-- toc -->
+
 ## Rationale
 
 When you create a form with Form Builder, you pick an *application name* and *form name* for that form. For instance, for a marriage registration, you might choose `clerk` as the application name, and `marriage-registration` as the form name.

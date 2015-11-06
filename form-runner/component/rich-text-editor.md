@@ -1,4 +1,6 @@
-# Rich Text Editor
+# Rich Text Editor Component
+
+<!-- toc -->
 
 ## Rationale
 

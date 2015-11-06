@@ -1,4 +1,6 @@
+# Currency Component
 
+<!-- toc -->
 
 ## What it does
 
@@ -61,9 +63,9 @@ By default the dollar sign ("$") is used as a currency prefix. You can override 
 
 * Globally for all your forms in your ‘properties-local.xml’ by setting the following property:
 ```xml
-<property 
-    as="xs:string" 
-    name="oxf.xforms.xbl.fr.currency.prefix" 
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.currency.prefix"
     value="£"/>
 ```
 * For a particular instance of the component:
@@ -76,9 +78,9 @@ By default, the component shows the value to 2 digits after the decimal sign. Yo
 
 * Globally for all your forms in your `properties-local.xml` by setting the following property:
 ```xml
-<property 
-    as="xs:string" 
-    name="oxf.xforms.xbl.fr.currency.digits-after-decimal" 
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.currency.digits-after-decimal"
     value="3"/>
 ```
 * For a particular instance of the component:

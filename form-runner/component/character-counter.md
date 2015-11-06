@@ -1,4 +1,6 @@
+# Character Counter
 
+<!-- toc -->
 
 ## Availability
 
@@ -36,7 +38,7 @@ The component displays its counter in  different ways:
   - a CSS class `fr-charcounter-current` is present on the counter
 - if a `max-length` validation is present on the bound node
   - if the current length is smaller than `max-length`
-    - the counter value is the number of remaining characters allowed 
+    - the counter value is the number of remaining characters allowed
     - a CSS class `fr-charcounter-remaining` is present on the counter
   - if the current length is larger than `max-length`
     - the counter value is the number of extra characters allowed

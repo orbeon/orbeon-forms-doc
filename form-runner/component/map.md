@@ -1,4 +1,6 @@
+# Map Component
 
+<!-- toc -->
 
 ## What it does
 
@@ -31,7 +33,7 @@ Where:
 If you wish to deploy a form using the map component (other than accessing your form with a URL such as `http://localhost:8080/orbeon/...`), you need to [obtain a Google API Key](https://developers.google.com/maps/documentation/javascript/tutorial#api_key). After you obtained your key, indicate it in the following property that you add to your config/properties-local.xml:
 
 ```xml
-<property as="xs:string"  
+<property as="xs:string"
           name="oxf.xforms.xbl.fr.map.key"
           value="..."/>
 ```
@@ -39,7 +41,7 @@ If you wish to deploy a form using the map component (other than accessing your 
 Since Orbeon Forms 4.8, the map component uses the Google Map v3 API, and this all you need. Orbeon Forms 4.7 and earlier was using the Google Map v2 API, which is now obsolete, on which the following 2 additional properties for [Google Maps Premier](http://code.google.com/apis/maps/documentation/premier/guide.html) customers are supported:
 
 ```xml
-<property as="xs:string"  
+<property as="xs:string"
           name="oxf.xforms.xbl.fr.map.clientid"
           value="..."/>
 <property as="xs:boolean"

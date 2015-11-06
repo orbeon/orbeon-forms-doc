@@ -1,4 +1,6 @@
+# Source Code Editor Component
 
+<!-- toc -->
 
 ## Overview
 

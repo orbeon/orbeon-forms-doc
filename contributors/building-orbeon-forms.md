@@ -7,6 +7,8 @@ This page explains how to build Orbeon Forms:
 
 The following instructions are known to work as of 2014-05-20, which is between the Orbeon Forms 4.5 and 4.6 releases. If something is broken, please [let us know](https://twitter.com/intent/tweet?in_reply_to=orbeon&in_reply_to_status_id=261900968369729536&source=webclient&text=%40orbeon+)!
 
+<!-- toc -->
+
 ## What the Orbeon Forms developers use
 
 As of 2015-05-21:

@@ -1,11 +1,6 @@
+# XForms Controls
 
-
-- [Basic usage](#Basic usage)
-- [Unformatted text](#unformatted-text)
-- [Formatted text](#formatted-text)
-    - [Enabling the rich text editor](#enabling-the-rich-text-editor)
-    - [HTML cleanup](#html-cleanup)
-- [Limitations](#limitations)
+<!-- toc -->
 
 ## Basic usage
 
@@ -37,7 +32,7 @@ If you add the attribute `mediatype="text/html"` on your `<xforms:textarea>`, th
 
 ### HTML cleanup
 
-When using the attribute `mediatype="text/html"`, the HTML area will clean-up the HTML typed or pasted in the editor. This is done for two reasons: 
+When using the attribute `mediatype="text/html"`, the HTML area will clean-up the HTML typed or pasted in the editor. This is done for two reasons:
 
 - **Avoiding a "tag soup"** – The HTML received from the browser can be grossly invalid, and contain foreign elements, in particular when pasting text copied from another application (e.g. Microsoft Word) into the editor. If kept as-is, the "HTML" you capture this way is then harder to process.
 - **Security** – If you don't clean up the HTML, and if your application sometimes shows HTML entered by one user to another user, your application can pose a security threat. A malicious user M can insert in the HTML some JavaScript that exploits a security bug in a given browser. When a victim V loads a page that displays the HTML added by M, that HTML (with the script it contains) runs and can potentially compromise V's computer.

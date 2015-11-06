@@ -1,4 +1,6 @@
+# Image Component
 
+<!-- toc -->
 
 ## Availability
 

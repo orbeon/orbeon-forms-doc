@@ -1,4 +1,6 @@
+# XForms Binds
 
+<!-- toc -->
 
 ## Introduction
 
@@ -37,10 +39,10 @@ All elements except `xf:type` (whose value is not an XPath expression but a type
 
 ```xml
 <xf:bind
-    ref="control-1" 
-    type="xf:decimal" 
-    xxf:default="42" 
-    constraint=". ge 10" 
+    ref="control-1"
+    type="xf:decimal"
+    xxf:default="42"
+    constraint=". ge 10"
     required="true()"/>
 ```
 

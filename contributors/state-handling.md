@@ -1,5 +1,7 @@
 # State Handling
 
+<!-- toc -->
+
 ## Audience
 
 The audience for this page is developers or advanced system administrators.
@@ -19,9 +21,9 @@ See [Review XForms cache architecture #1718](https://github.com/orbeon/orbeon-fo
 A property controls whether the XForms engine should try to optimize state reconstruction by using a cache. This property is typically set to `true`:
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.cache.document" 
+<property
+    as="xs:boolean"
+    name="oxf.xforms.cache.document"
     value="true">
 ```
 
@@ -81,9 +83,9 @@ Note that whenever an application keeps sessions alive for a long time, it is a 
 The session heartbeat should help prevent many occurrences of "session expired" error messages. As an Orbeon Forms application developer you don't have to worry about anything: the session heartbeat is enabled by default. You can configure it globally in `properties-local.xml`:
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.session-heartbeat" 
+<property
+    as="xs:boolean"
+    name="oxf.xforms.session-heartbeat"
     value="true">
 ```
 

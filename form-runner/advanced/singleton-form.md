@@ -1,4 +1,6 @@
+# Singleton Form
 
+<!-- toc -->
 
 ## Use case
 

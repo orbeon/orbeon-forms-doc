@@ -165,3 +165,4 @@ As of 2015-10-22 this page is still being updated.
 
 - Namespaced jQuery to avoid conflicts with other jQuery versions
 - Run modes: [[doc|Installation ~ Run Modes]], [blog](http://blog.orbeon.com/2012/05/run-modes.html)
+

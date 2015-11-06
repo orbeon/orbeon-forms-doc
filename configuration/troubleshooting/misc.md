@@ -1,4 +1,4 @@
-# Misc troubleshooting
+# Misc Troubleshooting
 
 <!-- toc -->
 

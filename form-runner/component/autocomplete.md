@@ -1,4 +1,6 @@
+# Autocomplete Component
 
+<!-- toc -->
 
 ## Overview
 

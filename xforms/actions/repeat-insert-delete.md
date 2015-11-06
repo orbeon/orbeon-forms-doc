@@ -1,15 +1,6 @@
+# Repeat, Insert, and Delete XForms Actions
 
-
-This pages covers:
-
-- [Basics](#basics)
-- [Repeat index](#repeat-index)
-- [Deleting iterations with the delete action](#deleting-iterations-with-the-delete-action)
-- [Inserting iterations with the insert action](#inserting-iterations-with-the-insert-action)
-- [Using a trigger to execute actions](#using-a-trigger-to-execute-actions)
-- [Nested repeats](#nested-repeats)
-- [Iterating over plain values](#iterating-over-plain-values)
-- [Evaluation of initial values upon insert](#evaluation-of-initial-values-upon-insert)
+<!-- toc -->
 
 ## Basics
 
