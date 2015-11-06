@@ -8,7 +8,6 @@ The purpose of this page is to index features, their documentation and [blog pos
 
 ## See also
 
-- [[Documentation home|https://github.com/orbeon/orbeon-forms/wiki]]
 - [Orbeon web site](http://www.orbeon.com/)
 - [Orbeon blog](http://blog.orbeon.com/)
 
@@ -45,7 +44,7 @@ As of 2015-10-22 this page is still being updated.
 
 - Summary page: [[doc|Form Builder ~ Summary Page]]
 - Toolbox:
-    - features: [[doc|https://github.com/orbeon/orbeon-forms/wiki/Form-Builder-~-Toolbox]]
+    - features: [doc](form-builder/toolbox.md)
     - configurability: [[doc|Form Builder ~ Toolbox ~ Metadata]]
     - XBL components: [[doc|XForms ~ XBL]]
 - Control Settings: [[doc|Form Builder ~ Control Settings]]

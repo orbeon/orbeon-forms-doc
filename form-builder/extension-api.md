@@ -205,8 +205,3 @@ Parameter Name|Type|Value
 
 Between `fb-initialize` and `fb-apply`, the control name (and id) might have been changed in the dialog by the user.
 The `original-control-name` and `control-name` parameters reflect that change when needed.
-
-## See also
-
-- [[Automatic inclusion of XBL bindings|XForms-~-Configuration-Properties#automatic-inclusion-of-xbl-bindings]]
-- [[XBL documentation|XForms ~ XBL]]
