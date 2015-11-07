@@ -28,19 +28,19 @@ See also [Accessing data captured by forms](accessing-data.md)
 - With properties, you can tell Form Runner to load initial XML data.
 - Configure processes to [submit data](../advanced/buttons-and-processes/actions-form-runner.md#send).
 
-See also [Accessing data captured by forms](FIXME Form Runner ~ Accessing data captured by forms).
+See also [Accessing data captured by forms](accessing-data.md).
 
 ## Embedding
 
 Embedding allows you to integrate a form in another application's page.
 
-See [Embedding](FIXME Form-Runner ~ Embedding) for more details.
+See [Embedding](../link-embed/README.md) for more details.
 
 ## User management
 
 By integrating with a user management system, you make Orbeon Forms aware of users and roles which can be associated with permissions.
 
-See [Access Control](FIXME Form Runner ~ Access Control) for more details.
+See [Access Control](../access-control/README.md) for more details.
 
 ### XML representation of form data
 
@@ -48,8 +48,4 @@ See [Data Format](FIXME Form Runner ~ Data Format)
 
 ## See also
 
-- [Form Builder Integration](FIXME Form Builder ~ Integration)
-- [Form Runner Embedding](FIXME Form-Runner ~ Embedding)
-- [Form Runner persistence API](FIXME Form Runner ~ APIs ~ Persistence)
-- [Data Format](FIXME Form Runner ~ Data Format)
-- [Accessing data captured by forms](FIXME Form Runner ~ Accessing data captured by forms)
+- [Form Builder Integration](../../form-builder/integration.md)
