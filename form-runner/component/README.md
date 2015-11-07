@@ -10,9 +10,9 @@ See the left sidebar for the list of documented XBL components.
 - Explanation
 - Fields Date
 - File Attachment
-- [Image Attachment](FIXME Form Runner ~ XBL Components ~ Image Attachment)
-- [Repeater](FIXME Form Runner ~ XBL Components ~ Repeater)
-- [Section](FIXME Form Runner ~ XBL Components ~ Section)
+- [Image Attachment](image-attachment.md)
+- [Repeater](repeater.md)
+- [Section](section.md)
 - Tabbable
 - US Phone
 
