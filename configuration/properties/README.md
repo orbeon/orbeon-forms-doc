@@ -16,7 +16,7 @@ Orbeon Forms will do a certain number of things out of the box without you havin
 
 Each Orbeon Forms subsystem defines its own properties. They are documented in the following pages:
 
-- [General properties](/configuration/properties/general.md)
+- [General properties](general.md)
 - [XForms properties](xforms.md)
 - [Form Runner properties](form-runner.md)
     - [Persistence properties](persistence.md)
