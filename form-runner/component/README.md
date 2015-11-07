@@ -18,4 +18,4 @@ See the left sidebar for the list of documented XBL components.
 
 ## See also
 
-- [XBL documentation](FIXME XForms ~ XBL)
+- [XBL documentation](../../xforms/xbl/README.md)
