@@ -80,7 +80,7 @@ If you want to change the default provider to Oracle, and since a provider named
 
 Because wildcards are used, this property does not override the configuration for the built-in demo forms as well as Form Builder! This is desirable, because the Form Builder implementation itself is not usually something you want to store somewhere else.
 
-In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combination. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [[multiple schemas|Installation ~ Relational Database Setup#with-multiple-schemas]].
+In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combination. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [multiple schemas](FIXME Installation ~ Relational Database Setup#with-multiple-schemas).
 
 Each provider supports standard properties, as follows:
 
@@ -111,11 +111,11 @@ This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
 
 [SINCE Orbeon Forms 4.4]
 
-The `autosave` property specifies whether [[autosave|Form Runner ~ Autosave]] is supported.
+The `autosave` property specifies whether [autosave](FIXME Form Runner ~ Autosave) is supported.
 
 This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
 
-- If `true`, Form Runner enables autosave if the other [[conditions|Form-Runner-~-Autosave#enabling-autosave]] are met. Otherwise, Form Runner will not attempt to enable autosave.
+- If `true`, Form Runner enables autosave if the other [conditions](FIXME Form-Runner-~-Autosave#enabling-autosave) are met. Otherwise, Form Runner will not attempt to enable autosave.
 
 ```xml
 <property
@@ -164,4 +164,4 @@ Each provider may have specific configuration properties. For the latest setting
 
 ## See also
 
-- [[Form Runner persistence API|Form Runner ~ APIs ~ Persistence]]
+- [Form Runner persistence API](FIXME Form Runner ~ APIs ~ Persistence)

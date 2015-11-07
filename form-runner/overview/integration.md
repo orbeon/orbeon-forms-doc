@@ -8,52 +8,52 @@ Form Builder and Form Runner integrate with other systems through the a number o
 
 ## Plain URLs
 
-See [[URLs|Form Runner ~ Integration ~ URLs]] for more details.
+See [URLs](FIXME Form Runner ~ Integration ~ URLs) for more details.
 
 - Through URLs, you access Form Runner and Form Builder's pages.
 - The URLs can be produced simply by using hyperlinks or redirects from other applications.
 
 ## Configurable persistence API
 
-See [[Persistence API|Form Runner ~ APIs ~ Persistence]] for more details.
+See [Persistence API](FIXME Form Runner ~ APIs ~ Persistence) for more details.
 
 - The API is based on REST (that is, through HTTP).
 - It provides CRUD, search, and metadata operations.
 
-See also [[Accessing data captured by forms|Form Runner ~ Accessing data captured by forms]]
+See also [Accessing data captured by forms](FIXME Form Runner ~ Accessing data captured by forms)
 
 ## Other APIS
 
-See [[APIs|Form Runner ~ APIs]] for more details.
+See [APIs](FIXME Form Runner ~ APIs) for more details.
 
 ## HTTP services
 
-- The [[HTTP Service Editor|Form Builder ~ HTTP Services]] allows you to create and bind services from a form.
+- The [HTTP Service Editor](FIXME Form Builder ~ HTTP Services) allows you to create and bind services from a form.
 - With properties, you can tell Form Runner to load initial XML data.
-- Configure processes to [[submit data|Form Runner ~ Buttons and Processes#send]].
+- Configure processes to [submit data](FIXME Form Runner ~ Buttons and Processes#send).
 
-See also [[Accessing data captured by forms|Form Runner ~ Accessing data captured by forms]].
+See also [Accessing data captured by forms](FIXME Form Runner ~ Accessing data captured by forms).
 
 ## Embedding
 
 Embedding allows you to integrate a form in another application's page.
 
-See [[Embedding|Form-Runner ~ Embedding]] for more details.
+See [Embedding](FIXME Form-Runner ~ Embedding) for more details.
 
 ## User management
 
 By integrating with a user management system, you make Orbeon Forms aware of users and roles which can be associated with permissions.
 
-See [[Access Control|Form Runner ~ Access Control]] for more details.
+See [Access Control](FIXME Form Runner ~ Access Control) for more details.
 
 ### XML representation of form data
 
-See [[Data Format|Form Runner ~ Data Format]]
+See [Data Format](FIXME Form Runner ~ Data Format)
 
 ## See also
 
-- [[Form Builder Integration|Form Builder ~ Integration]]
-- [[Form Runner Embedding|Form-Runner ~ Embedding]]
-- [[Form Runner persistence API|Form Runner ~ APIs ~ Persistence]]
-- [[Data Format|Form Runner ~ Data Format]]
-- [[Accessing data captured by forms|Form Runner ~ Accessing data captured by forms]]
+- [Form Builder Integration](FIXME Form Builder ~ Integration)
+- [Form Runner Embedding](FIXME Form-Runner ~ Embedding)
+- [Form Runner persistence API](FIXME Form Runner ~ APIs ~ Persistence)
+- [Data Format](FIXME Form Runner ~ Data Format)
+- [Accessing data captured by forms](FIXME Form Runner ~ Accessing data captured by forms)

@@ -27,7 +27,7 @@ Here is a very simple example:
 
 Here we define custom XForms that reacts to an event called `foobar` and displays a message to the user.
 
-We can create a [[custom button|Form-Runner-~-Buttons-and-Processes]] that dispatches that event with the following properties:
+We can create a [custom button](FIXME Form-Runner-~-Buttons-and-Processes) that dispatches that event with the following properties:
 
 ```xml
 <!-- Place custom button on all `acme` forms -->

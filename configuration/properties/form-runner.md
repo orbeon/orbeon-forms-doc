@@ -8,21 +8,21 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 
 ## Form Runner properties documented elsewhere
 
-* [[Custom Model Logic|Form Runner ~ Custom Model Logic]]
+* [Custom Model Logic](FIXME Form Runner ~ Custom Model Logic)
     * `oxf.fr.detail.model.custom`
-* [[Wizard View|Form Runner ~ Wizard View]]
+* [Wizard View](FIXME Form Runner ~ Wizard View)
     * `oxf.fr.detail.view.appearance`
-* [[Autosave|Form Runner ~ Autosave]]
+* [Autosave](FIXME Form Runner ~ Autosave)
     * `oxf.fr.detail.autosave-delay`
     * `oxf.fr.persistence.*.autosave`
-* [[Configuration Properties ~ Persistence|Form Runner ~ Configuration properties ~ Persistence]]
+* [Configuration Properties ~ Persistence](FIXME Form Runner ~ Configuration properties ~ Persistence)
     * `oxf.fr.persistence.provider`
     * `oxf.fr.persistence.[provider].uri`
     * `oxf.fr.persistence.[provider].active`
     * `oxf.fr.persistence.[provider].autosave`
     * `oxf.fr.persistence.[provider].permissions`
     * `oxf.fr.persistence.[provider].versioning`
-* [[Form Runner Access Control|Form Runner ~ Access Control ~ Setup]]
+* [Form Runner Access Control](FIXME Form Runner ~ Access Control ~ Setup)
     * `oxf.fr.support-owner-group`
     * `oxf.fr.authentication.method`
     * `oxf.fr.authentication.container.roles`
@@ -32,7 +32,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.authentication.header.roles`
     * `oxf.fr.authentication.header.roles.split`
     * `oxf.fr.authentication.header.roles.property-name`
-* [[TIFF Production|Form Runner ~ TIFF Production]]
+* [TIFF Production](FIXME Form Runner ~ TIFF Production)
     * `oxf.fr.detail.tiff.compression.type`
     * `oxf.fr.detail.tiff.compression.quality`
     * `oxf.fr.detail.tiff.scale`
@@ -192,7 +192,7 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
     value="close clear print pdf save submit"/>
 ```
 
-The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [[Buttons and Processes|Form Runner ~ Buttons and Processes]].
+The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](FIXME Form Runner ~ Buttons and Processes).
 
 ### Buttons in Detail Page custom views
 
@@ -211,7 +211,7 @@ The example above places the wizard's Prev and Next buttons just under the curre
 
 ![](/form-runner/images/wizard-buttons.png)
 
-For more information, see [[Buttons and Processes|Form Runner ~ Buttons and Processes]].
+For more information, see [Buttons and Processes](FIXME Form Runner ~ Buttons and Processes).
 
 ### Display hints inline
 
@@ -237,7 +237,7 @@ This property controls whether Form Runner attempts to set focus on the first co
     value="true"/>
 ```
 
-In some cases, such as [[embedding| Form Runner ~ APIs ~ Server side Embedding]], it can be desirable to disable this by setting the property to `false`.
+In some cases, such as [embedding](FIXME  Form Runner ~ APIs ~ Server side Embedding), it can be desirable to disable this by setting the property to `false`.
 
 ### PDF
 
@@ -390,7 +390,7 @@ If you are creating a public form, you might want to add a captcha to avoid spam
     value="reCAPTCHA"/>
 ```
 
-You can set this property to either `reCAPTCHA` or `SimpleCaptcha`, depending on the captcha implementation you want to use (also see: [[Which captcha is right for you|Form Runner ~ XBL Components ~ Captcha#which-captcha-is-right-for-you]]).  Setting it to blank (empty string), won't show a captcha, which is the default. Instead of stars (`*`) in the name of the first property, use specific app/form names for the captcha to only show on certain forms.
+You can set this property to either `reCAPTCHA` or `SimpleCaptcha`, depending on the captcha implementation you want to use (also see: [Which captcha is right for you](FIXME Form Runner ~ XBL Components ~ Captcha#which-captcha-is-right-for-you)).  Setting it to blank (empty string), won't show a captcha, which is the default. Instead of stars (`*`) in the name of the first property, use specific app/form names for the captcha to only show on certain forms.
 
 If using the reCAPTCHA, also add the following properties to specify your reCAPTCHA public and private keys. You can get those by [signing up for reCAPTCHA][11].
 
@@ -410,7 +410,7 @@ With those properties in place, your forms will show a captcha as illustrated by
 
 ![](/form-runner/images/recaptcha.png)
 
-[LIMITATION] The Form Runner captcha uses the [[captcha XBL components|Form Runner ~ XBL Components ~ Captcha]], which doesn't support the noscript mode. Hence,  enabling this feature will have no effect in noscript mode.
+[LIMITATION] The Form Runner captcha uses the [captcha XBL components](FIXME Form Runner ~ XBL Components ~ Captcha), which doesn't support the noscript mode. Hence,  enabling this feature will have no effect in noscript mode.
 
 ### Initial instance
 
@@ -441,7 +441,7 @@ For #2, this behaves as if a browser was submitting an HTML form that looks like
 
 The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to POST data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a send action using [`format-version = "edge"`][14].
 
-Use the authorization mechanism for services (see [[Authorization of pages and services|Controller-~-Authorization-of-Pages-and-Services]]), to enable submitting initial instances to the new page:
+Use the authorization mechanism for services (see [Authorization of pages and services](FIXME Controller-~-Authorization-of-Pages-and-Services)), to enable submitting initial instances to the new page:
 
 * Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when POSTing to Form Runner.
 * Your authorizer service must validate those credentials.
@@ -518,7 +518,7 @@ Whether to show the Orbeon Forms version at the bottom.
 
 With this property, you can set the default logo URI. This logo appears on the summary and Detail Pages for a given form. You can omit (or comment out) this property or set its value to `""` (empty string) if you don't want a default logo at all.
 
-If you use two `*` wildcards, as in the example above, the property also sets the logo on the [[Form Runner Home page|Form Runner ~ Home Page]].
+If you use two `*` wildcards, as in the example above, the property also sets the logo on the [Form Runner Home page](FIXME Form Runner ~ Home Page).
 
 ### Adding your own CSS
 

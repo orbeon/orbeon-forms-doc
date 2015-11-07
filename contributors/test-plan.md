@@ -149,24 +149,24 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
             as="xs:boolean"
             name="oxf.fr.email.attach-pdf.db2.versioning"
             value="true"/>
-        
+
         <property
             as="xs:boolean"
             name="oxf.fr.email.attach-tiff.db2.versioning"
             value="true"/>
-        
+
         <property as="xs:string" name="oxf.fr.detail.buttons.db2.versioning">
             pdf tiff email save send
         </property>
-        
+
         <property as="xs:string" name="oxf.fr.detail.process.send.db2.versioning">
             send(
-                uri     = '/fr/service/custom/orbeon/echo', 
-                replace = 'all', 
+                uri     = '/fr/service/custom/orbeon/echo',
+                replace = 'all',
                 content = 'pdf-url'
             )
         </property>
-        
+
         <property
             as="xs:string"
             name="oxf.fr.email.to.db2.versioning"
@@ -257,7 +257,7 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
                 - no options are shown
                 - message about overwrite
             - publish message says version 1 was updated
-        
+
 ### Data Capture Permissions [4.10 DONE]
 
 - Setup
@@ -377,17 +377,17 @@ Repeat what follows with Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the fol
     as="xs:string"
     name="oxf.fr.persistence.provider.db2.*.*"
     value="db2"/>
-<property 
-    as="xs:string"  
-    name="oxf.fr.authentication.container.roles" 
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.container.roles"
     value="a b"/>
-<property 
-    as="xs:string"  
-    name="oxf.http.proxy.host"                   
+<property
+    as="xs:string"
+    name="oxf.http.proxy.host"
     value="localhost"/>
-<property 
-    as="xs:integer" 
-    name="oxf.http.proxy.port"                   
+<property
+    as="xs:integer"
+    name="oxf.http.proxy.port"
     value="8888"/>
 ```
 
@@ -406,7 +406,7 @@ Authorize on:
 - Autosave with permissions
     1. In FB, create form `$provider/autosave`.
         - Create a field *first name*, marked as shown on summary page.
-        - Enable permissions as shown below, save, deploy.  
+        - Enable permissions as shown below, save, deploy.
             ![Permissions dialog](images/test-permissions.png)
         - duplicate for all providers and publish
     2. Logged in as user `b1` in group `b`:
@@ -480,28 +480,28 @@ drop table orbeon_form_data_attach ;
 - Enable the flat view option, adding:
 
     ```xml
-    <property 
+    <property
         as="xs:boolean"
-        name="oxf.fr.persistence.oracle.create-flat-view" 
+        name="oxf.fr.persistence.oracle.create-flat-view"
         value="true"/>
 
-    <property 
+    <property
         as="xs:boolean"
-        name="oxf.fr.persistence.db2.create-flat-view" 
+        name="oxf.fr.persistence.db2.create-flat-view"
         value="true"/>
 
-    <property 
+    <property
         as="xs:string"
         name="oxf.fr.persistence.provider.oracle.*.*"
         value="oracle"/>
 
-    <property 
+    <property
         as="xs:string"
         name="oxf.fr.persistence.provider.db2.*.*"
         value="db2"/>
     ```
 - Remove existing view if any: `drop view orbeon_f_db2_a ;`
-- Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [[flat view documentation|Form-Runner-~-Persistence-~-Flat-View]]
+- Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [flat view documentation](FIXME Form-Runner-~-Persistence-~-Flat-View)
   - rename app name to `oracle` or `db2` depending
   - publish, check that a view with the appropriate column names is created.
 
@@ -584,15 +584,15 @@ drop table orbeon_form_data_attach ;
     - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
 - warning dialog if attempt to close page when unsaved
 - serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
-    - set properties  
+    - set properties
     ```xml
-    <property 
-        as="xs:integer" 
-        name="oxf.xforms.cache.documents.size"    
+    <property
+        as="xs:integer"
+        name="oxf.xforms.cache.documents.size"
         value="1"/>
-    <property 
-        as="xs:integer" 
-        name="oxf.xforms.cache.static-state.size" 
+    <property
+        as="xs:integer"
+        name="oxf.xforms.cache.static-state.size"
         value="1"/>
     ```
     - in 1st tab, visit http://localhost:8080/orbeon/fr/orbeon/builder/new
@@ -706,7 +706,7 @@ drop table orbeon_form_data_attach ;
         - check review, PDF
 - make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10!)
 - makes invalid controls in section template prevent saving
-- 
+-
 ### PDF Automatic [4.10 DONE]
 
 - Controls and Bookshelf: input field and text areas have highlighted and clickable links
@@ -715,7 +715,7 @@ drop table orbeon_form_data_attach ;
 - logo in title
 - page numbering/total at bottom center
 - PDF looks good overall
-- 
+-
 ### PDF Template [4.10 DONE]
 
 
@@ -729,7 +729,7 @@ drop table orbeon_form_data_attach ;
   - check Vote and Leased checkboxes
 - email PDF
   - check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
-  
+
 ### Form Builder Permissions [4.10 DONE]
 
 
@@ -861,8 +861,8 @@ drop table orbeon_form_data_attach ;
         - change lang works
 - DMV-14
   - PDF template works
-  - 
-  
+  -
+
 ### Errors and warnings [4.10 DONE]
 
 - FB: create form
@@ -1090,7 +1090,7 @@ drop table orbeon_form_data_attach ;
     - push/pull forms
     - check available on /fr/ page on remote (e.g. in Liferay)
   - add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
-  - take form (could be previous `sales/my-sales-form` (see [[Form Builder Permissions|Contributors ~ Test Plan ~ Form Builder Permissions]]) but doesn't have to be)
+  - take form (could be previous `sales/my-sales-form` (see [Form Builder Permissions](FIXME Contributors ~ Test Plan ~ Form Builder Permissions)) but doesn't have to be)
     - attach static image
     - publish locally
     - push to remote
@@ -1104,7 +1104,7 @@ drop table orbeon_form_data_attach ;
   - upgrade local
   - upgrade remote
   - make sure forms still work
-  
+
 ### Summary Page [4.10 DONE]
 
 - e.g. http://localhost:8080/410pe/fr/orbeon/bookshelf/summary
@@ -1180,7 +1180,7 @@ drop table orbeon_form_data_attach ;
   - attach image and save, make sure image shows properly
   - Image annotation control works (in Controls form)
   - *NOTE: noscript broken in Liferay*
-  
+
 ### Embedding [4.10 DONE]
 
 - deploy `orbeon-embedding.war` into Tomcat
@@ -1201,7 +1201,7 @@ drop table orbeon_form_data_attach ;
   - help/hints
   - uploads
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
-   
+
 ### XForms Retry [4.10 DONE]
 
 1. Retry happens
@@ -1215,7 +1215,7 @@ drop table orbeon_form_data_attach ;
             value=". + 1"/>
         ```
     - set the following properties
-    
+
         ```xml
         <property
             as="xs:integer"
@@ -1223,10 +1223,10 @@ drop table orbeon_form_data_attach ;
             value="2000"/>
         <property
             as="xs:integer"
-            name="oxf.xforms.retry.delay-increment"    
+            name="oxf.xforms.retry.delay-increment"
             value="2000"/>
         ```
-    - open 
+    - open
         - http://localhost:8080/orbeon/xforms-sandbox/sample/dispatch-delay
         - in Chrome, open the Dev Tools, go to the Network tab (or use HttpScoop or Charles)
         - hit the *Manual save* button
@@ -1236,7 +1236,7 @@ drop table orbeon_form_data_attach ;
 2. Request not reaching server
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - set the following properties
-    
+
         ```xml
         <property
             as="xs:integer"
@@ -1256,7 +1256,7 @@ drop table orbeon_form_data_attach ;
             value="8888"/>
         ```
     - load page again
-    - using Charles, go in Proxy / Breakpoints, enable breakpoints, and add:  
+    - using Charles, go in Proxy / Breakpoints, enable breakpoints, and add:
       ![](images/test-charles-request.png)
     - click on *Manual save*
     - the request is intercepted by Charles where you click on Abort, check that the client retries the request right away and that the request doesn't show in the server logs
@@ -1277,7 +1277,7 @@ drop table orbeon_form_data_attach ;
 5. File upload
     - setup
         - enable breakpoint on response for `/49pe/xforms-server/upload`
-        - enable throttling in Charles per the following configuration  
+        - enable throttling in Charles per the following configuration
           ![](images/test-charles-throttling.png)
         - download [this image](http://placekitten.com/g/2000/2000) (~200 KB)
     - http://localhost:8080/49pe/xforms-upload/
@@ -1300,7 +1300,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
   - same but with other error
       - WHICH ONE?
   - same result except that exception must be logged
-  
+
 ### Other Browsers [4.10 DONE]
 
 - main tests above with Google Chrome
@@ -1329,7 +1329,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
-    
+
 ### Other [4.10 DONE]
 
 Features to test, with all supported browsers:

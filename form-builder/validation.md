@@ -85,7 +85,7 @@ The Required validation can have a custom alert message.
 
 A formula validation is a boolean XPath expression running with the XML element containing the value as context item. The validation *fails* if the expression doesn't return `true()`. This also means that it fails if there is an error while running the validation.
 
-See also [[Form Builder Formulas|Form Builder ~ Formulas]].
+See also [Form Builder Formulas](FIXME Form Builder ~ Formulas).
 
 For example the following expression, which would make sense for a birthday date field, checks that the user is 18 year old or older:
 
@@ -197,9 +197,9 @@ The user has the following choices:
 - Stop the operation, close the dialog and review the warnings and/or informational messages.
 - Continue the operation, ignoring the warnings and/or informational messages.
 
-These processes are entirely configurable. See [[Buttons and Processes|Form-Runner-~-Buttons-and-Processes]] for more information.
+These processes are entirely configurable. See [Buttons and Processes](FIXME Form-Runner-~-Buttons-and-Processes) for more information.
 
-Optionally, it is possible to annotate the XML data submitted with error, warning or informational messages. See [[Buttons and Processes|Form-Runner-~-Buttons-and-Processes]] for more information.
+Optionally, it is possible to annotate the XML data submitted with error, warning or informational messages. See [Buttons and Processes](FIXME Form-Runner-~-Buttons-and-Processes) for more information.
 
 ## See also
 
@@ -207,4 +207,4 @@ Optionally, it is possible to annotate the XML data submitted with error, warnin
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
 - [How Common Constraints Work](http://blog.orbeon.com/2015/07/how-common-constraints-work.html)
-- [[XForms Validation|XForms ~ Validation]]
+- [XForms Validation](FIXME XForms ~ Validation)

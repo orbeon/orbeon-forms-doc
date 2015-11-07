@@ -8,7 +8,7 @@ Orbeon Forms 4.0.
 
 ## What it does
 
-The number component is designed to enter integer or decimal numbers. See [[Currency|Form Runner ~ XBL Components ~ Currency]] for a similar component designed to enter currency amounts.
+The number component is designed to enter integer or decimal numbers. See [Currency](FIXME Form Runner ~ XBL Components ~ Currency) for a similar component designed to enter currency amounts.
 
 ![](images/xbl-number.png)
 

@@ -10,7 +10,7 @@ For the latest default values of XForms properties, see [`properties-xforms.xml`
 
 ### Encryption password
 
-Before Orbeon Forms 4.0, the `oxf.xforms.password` property was defined. It has since been renamed `oxf.crypto.password`. For more information, see [[General Configuration Properties|Installation ~ Configuration Properties ~ General Properties]]. `oxf.xforms.password` is still supported for backward compatibility.
+Before Orbeon Forms 4.0, the `oxf.xforms.password` property was defined. It has since been renamed `oxf.crypto.password`. For more information, see [General Configuration Properties](FIXME Installation ~ Configuration Properties ~ General Properties). `oxf.xforms.password` is still supported for backward compatibility.
 
 #### XForms items encoding
 
@@ -364,7 +364,7 @@ uses the formatting defined by `oxf.xforms.format.input.date` and the time text 
 
 ##  Error handling
 
-See [[XForms Error Handling|XForms-~-Error-Handling]].
+See [XForms Error Handling](FIXME XForms-~-Error-Handling).
 
 ## Automatic inclusion of XBL bindings
 

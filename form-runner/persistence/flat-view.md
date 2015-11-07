@@ -8,20 +8,20 @@
 
 ### Availability
 
-See [[Database Support|Orbeon Forms Features ~ Database Support]].
+See [Database Support](FIXME Orbeon Forms Features ~ Database Support).
 
 ### Property to enable
 
 If you're using Oracle or DB2, Orbeon Forms can create a form-specific view of your data, with one column for each form field. You enable this feature by setting the property `oxf.fr.persistence.oracle.create-flat-view` or `oxf.fr.persistence.db2.create-flat-view` to `true`, depending on whether you want to enable the capability for Oracle or DB2. (If you define your own provider for Oracle, use that provider name in the property name, instead of `oracle`.)
 
 ```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.persistence.oracle.create-flat-view" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.persistence.oracle.create-flat-view"
     value="true"/>
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.persistence.db2.create-flat-view" 
+<property
+    as="xs:boolean"
+    name="oxf.fr.persistence.db2.create-flat-view"
     value="true"/>
 ```
 

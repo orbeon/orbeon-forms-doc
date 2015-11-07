@@ -18,7 +18,7 @@ Each extension is implemented with an XBL component. The component interacts wit
 ## Setting up an XBL component
 
 First, make sure you have chosen a prefix-to-namespace mapping for your components, as explained in
-[[Automatic inclusion of XBL bindings|XForms-~-Configuration-Properties#automatic-inclusion-of-xbl-bindings]].
+[Automatic inclusion of XBL bindings](FIXME XForms-~-Configuration-Properties#automatic-inclusion-of-xbl-bindings).
 
 Below, we assume the following example mapping:
 
@@ -32,7 +32,7 @@ Below, we assume the following example mapping:
 In practice, you would probably choose a prefix different from `acme`, and a namespace different from
 `http://www.acme.com/xbl`.
 
-For more on XBL components, see [[XBL documentation|XForms ~ XBL]].
+For more on XBL components, see [XBL documentation](FIXME XForms ~ XBL).
 
 ## Custom Form Settings tab
 

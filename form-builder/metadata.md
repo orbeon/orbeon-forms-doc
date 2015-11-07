@@ -86,7 +86,7 @@ If your component only needs a template for the view, which is maybe the most fr
 
 ![](../images/toolbox-fields.png)
 
-All the controls share certain properties, like the control name. However, some XBL components take additional properties, set at form design time, in Form Builder. For instance the [[Dynamic Data Dropdown|Form Runner ~ XBL Components ~ Dynamic Data Dropdown]] takes the HTTP URI of a service returning an XML document with the items shown in the drop-down, an XPath expression extracting the items from the XML document, and two XPath expressions returning the label and value for each item.
+All the controls share certain properties, like the control name. However, some XBL components take additional properties, set at form design time, in Form Builder. For instance the [Dynamic Data Dropdown](FIXME Form Runner ~ XBL Components ~ Dynamic Data Dropdown) takes the HTTP URI of a service returning an XML document with the items shown in the drop-down, an XPath expression extracting the items from the XML document, and two XPath expressions returning the label and value for each item.
 
 
 When your XBL component takes additional "properties", you want Form Builder users to be able to set them in from the Edit Control Details dialog. For this, inside the `<fb:metadata>` add an `<fb:control-details>`, which contains XForms control used to edit those properties, as in:

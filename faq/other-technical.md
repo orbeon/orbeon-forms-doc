@@ -27,7 +27,7 @@ A few things come to mind:
 
 ## How can I remove the sample applications from my Orbeon Forms deployment?
 
-See [[Creating a Production WAR|Installation ~ Creating a Production WAR]].
+See [Creating a Production WAR](FIXME Installation ~ Creating a Production WAR).
 
 ## How can I remove Form Runner / Form Builder from my Orbeon Forms deployment?
 
@@ -38,7 +38,7 @@ Under the WAR file's `WEB-INF/lib` directory, remove:
 
 *NOTE: Form Builder also requires `orbeon-form-runner.jar`.*
 
-See also [[Creating a Production WAR|Installation ~ Creating a Production WAR]].
+See also [Creating a Production WAR](FIXME Installation ~ Creating a Production WAR).
 
 ## How can I know which version of Orbeon Forms I am running?
 
@@ -59,21 +59,21 @@ You will see the version number appear at the bottom of Orbeon Forms pages.
 
 ## I am getting frequent Out of Memory errors with Orbeon Forms. What can I do?
 
-The first thing to check is whether your Java VM has enough heap memory as documented in [[Installation|Installation ~ Basic]].
+The first thing to check is whether your Java VM has enough heap memory as documented in [Installation](FIXME Installation ~ Basic).
 
 ## What should I make of the SocketException I see in the logs?
 
-In most cases, this exception doesn't reflect any problem. Browsers make requests to Orbeon Forms, which answers by sending data back to the browsers. 
+In most cases, this exception doesn't reflect any problem. Browsers make requests to Orbeon Forms, which answers by sending data back to the browsers.
 Requests can be for web pages (e.g. forms), CSS files, images, and more. You will get this exception if, while Orbeon Forms sends data back to the browser,
 the connection between the browser and the server is interrupted.
 
-In most cases, this happens because the browser cut the connection, as a way to tell the server _don't bother, after all, I don't need this_. This can happen 
-if users clicked on a link to load a page, and while the page is being loaded interrupt the browser, for instance by clicking on another link (assuming the 
-previous page is still visible), or pressing the _escape_ key or the equivalent browser button, or closing the browser window or tab. Unless you also see 
+In most cases, this happens because the browser cut the connection, as a way to tell the server _don't bother, after all, I don't need this_. This can happen
+if users clicked on a link to load a page, and while the page is being loaded interrupt the browser, for instance by clicking on another link (assuming the
+previous page is still visible), or pressing the _escape_ key or the equivalent browser button, or closing the browser window or tab. Unless you also see
 another user-facing issue, you don't need to worry about this exception in the logs.
 
 ## Can you provide performance numbers?
 
 As of 2015, we have tests showing that a modern Intel server CPU with 4-8 cores can handle 200-400 users concurrently filling form data.
- 
+
 However please note that this can vary widely depending on the complexity and size of the forms.

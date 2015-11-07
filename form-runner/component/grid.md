@@ -95,7 +95,7 @@ Attributes:
   - `true`: dynamic initial values (via the `xxf:default` MIP) apply to new iterations
   - missing or `false: dynamic initial values do not apply to new iterations
   - can be an AVT
-  - see also: [[Evaluation of initial values upon insert|XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert]]
+  - see also: [Evaluation of initial values upon insert](FIXME XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert)
 
 ## Data format
 
@@ -164,6 +164,6 @@ These events are not dispatched if the number of iterations changes by other mea
 
 ## See also
 
-- [[Form Builder: Repeated Grids |Form-Builder-~-Repeated-Grids]]
+- [Form Builder: Repeated Grids ](FIXME Form-Builder-~-Repeated-Grids)
 - Example of use outside of Form Runner: [gist](https://gist.github.com/orbeon/5d592bfa4640569b116f)
-- [[Evaluation of initial values upon insert|XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert]]
+- [Evaluation of initial values upon insert](FIXME XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert)

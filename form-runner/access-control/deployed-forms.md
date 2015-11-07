@@ -20,7 +20,7 @@ After you click on the checkbox, you'll be able to set access restriction on the
 
 1. On the _Anyone_ line, set the operations allowed to all users.
 2. On the _Owner_ line, set the operations allowed to the user who created the data. [SINCE Orbeon Forms 4.3]
-3. On the_Group members_line, set the operations allowed to users in the same group as the owner. [SINCE Orbeon Forms 4.3] 
+3. On the_Group members_line, set the operations allowed to users in the same group as the owner. [SINCE Orbeon Forms 4.3]
 4. On the following lines, you can enter a role name, and define what operations users with that role can perform.
 
 ## Example
@@ -43,7 +43,7 @@ In the example below:
 
 ## Permissions for owner / group members
 
-See [[Owner and Group Member Permissions|Form Runner ~ Access Control ~ Owner Group]].
+See [Owner and Group Member Permissions](FIXME Form Runner ~ Access Control ~ Owner Group).
 
 ## Access restrictions
 

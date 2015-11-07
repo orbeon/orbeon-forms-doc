@@ -62,7 +62,7 @@ _NOTE:  Orbeon Forms uses Java's `System.getProperty("user.home")` to identify t
 
 This step is sometimes optional.
 
-Depending on your setup, if things don't work out of the box (for example if you have database errors with the sample forms) you might have to set the [[oxf.url-rewriting.service.base-uri|Installation ~ Configuration Properties ~ General Properties#oxfurl-rewritingservicebase-uri]] configuration property in your `properties-local.xml` file.
+Depending on your setup, if things don't work out of the box (for example if you have database errors with the sample forms) you might have to set the [oxf.url-rewriting.service.base-uri](FIXME Installation ~ Configuration Properties ~ General Properties#oxfurl-rewritingservicebase-uri) configuration property in your `properties-local.xml` file.
 
 Often, it is enough to set it to the following (adjusting for port and prefix):
 
@@ -73,7 +73,7 @@ Often, it is enough to set it to the following (adjusting for port and prefix):
     value="http://localhost:8080/orbeon"/>
 ```
 
-For more information about how to set configuration properties, see [[Configuration Properties| Installation ~ Configuration Properties]].
+For more information about how to set configuration properties, see [Configuration Properties](FIXME  Installation ~ Configuration Properties).
 
 ## Logging configuration
 

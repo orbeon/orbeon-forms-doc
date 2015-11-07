@@ -66,7 +66,7 @@ Explanation:
 * the nested `/number` path points to the `number` field within each iteration
 * `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
 * `sum()` is a standard XPath function to compute the sum of a sequence of items
-* 
+*
 ## Constrain a number between two values
 
 Scenario: Make the current integer number field valid only if its value is between two values, say 12 and 17 included.
@@ -201,11 +201,11 @@ Given [this form](https://gist.github.com/orbeon/e7272c1b2499c3a5fb5f) and a con
 
 *NOTE: This works when the expression is outside repeat iterations. For expressions within the same repeat, `$name` returns the closest control.*
 
-See also [[Model bind variables|XForms ~ Model bind variables]] and this [StackOverflow question](http://stackoverflow.com/questions/27820641/access-to-iterated-controls-in-repeated-sections-in-orbeon/27830585?noredirect=1#comment44118606_27830585).
+See also [Model bind variables](FIXME XForms ~ Model bind variables) and this [StackOverflow question](http://stackoverflow.com/questions/27820641/access-to-iterated-controls-in-repeated-sections-in-orbeon/27830585?noredirect=1#comment44118606_27830585).
 
 ## Check the role(s) of the current user
 
-See [[Form Fields|Form Runner ~ Access Control ~ Form Fields]].
+See [Form Fields](FIXME Form Runner ~ Access Control ~ Form Fields).
 
 ## Check the Form Runner mode
 
@@ -303,4 +303,4 @@ Explanation:
 - [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
-- [[XForms Validation|XForms ~ Validation]]
+- [XForms Validation](FIXME XForms ~ Validation)

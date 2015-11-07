@@ -292,7 +292,7 @@ What follows applies to Orbeon Forms 4.0 and newer. For Orbeon Forms 3.9, see th
 
 In your `properties-local.xml`:
 
-1. Map an app, form, form type to the Oracle or MySQL persistence layer using the `oxf.fr.persistence.provider.*.*.*` [[wildcard property|Installation-~-Configuration-Properties#wildcards-in-properties]], For instance, the following indicates that all the form definition and form data in the `acme` "app" are stored using the Oracle provider, use:
+1. Map an app, form, form type to the Oracle or MySQL persistence layer using the `oxf.fr.persistence.provider.*.*.*` [wildcard property](FIXME Installation-~-Configuration-Properties#wildcards-in-properties), For instance, the following indicates that all the form definition and form data in the `acme` "app" are stored using the Oracle provider, use:
 
     ```xml
     <property as="xs:string" name="oxf.fr.persistence.provider.acme.*.*" value="oracle"/>
@@ -345,7 +345,7 @@ Orbeon Forms stores form data as XML in relational databases, which gives it a l
 
 ### Flat view support
 
-See [[Flat View|Form-Runner-~-Persistence-~-Flat-View]].
+See [Flat View](FIXME Form-Runner-~-Persistence-~-Flat-View).
 
 ### Manual relational table setup with MySQL
 

@@ -51,7 +51,7 @@ In Tomcat's `server.xml`, add the two `<parameter>` elements to the `<context>` 
 
 ## With WebLogic
 
-This assumes that you are deploying Orbeon Forms in WebLogic as an enterprise archive (`ear`), as described in [[Installation with WebLogic|Installation ~ WebLogic]].
+This assumes that you are deploying Orbeon Forms in WebLogic as an enterprise archive (`ear`), as described in [Installation with WebLogic](FIXME Installation ~ WebLogic).
 
 1. Save the XML file below in to an XML file (say `plan.xml`). This is going to be your WebLogic deployment plan. You keep it in a directory if your choice, separate from Orbeon Forms. (If you are already using a deployment for Orbeon Forms, then amend as appropriate.)
 

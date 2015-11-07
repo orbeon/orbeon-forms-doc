@@ -10,12 +10,12 @@ See the left sidebar for the list of documented XBL components.
 - Explanation
 - Fields Date
 - File Attachment
-- [[Image Attachment|Form Runner ~ XBL Components ~ Image Attachment]]
-- [[Repeater|Form Runner ~ XBL Components ~ Repeater]]
-- [[Section|Form Runner ~ XBL Components ~ Section]]
+- [Image Attachment](FIXME Form Runner ~ XBL Components ~ Image Attachment)
+- [Repeater](FIXME Form Runner ~ XBL Components ~ Repeater)
+- [Section](FIXME Form Runner ~ XBL Components ~ Section)
 - Tabbable
 - US Phone
 
 ## See also
 
-- [[XBL documentation|XForms ~ XBL]]
+- [XBL documentation](FIXME XForms ~ XBL)

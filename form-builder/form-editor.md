@@ -2,7 +2,7 @@
 
 ## Creating your first form definition
 
-After pressing the "New" button on the [[summary page|Form Builder ~ Summary Page]], you reach the form editor (also known as form designer) proper. Form Builder requires that you provide two small pieces of information before starting:
+After pressing the "New" button on the [summary page](FIXME Form Builder ~ Summary Page), you reach the form editor (also known as form designer) proper. Form Builder requires that you provide two small pieces of information before starting:
 
 * **Application Name.** Each form definition has an _application name_ which identifies a group of forms that belong together. In practice, an application name might correspond to a project, or a department, or a company. For example, all forms built by Orbeon have the "orbeon" application name.
 _NOTE: Depending on your permissions, the application name might have been picked for you already, or you might have the choice of a restricted set of application names._
@@ -27,9 +27,9 @@ You also may enter at this time a form title and description.
 Form Builder's form editor is organized in 4 areas:
 
 * **Top:** title area with status information and selection of the Form Builder user interface language.
-* **Left:** the [[toolbox|Form Builder ~ Toolbox]], which might scroll vertically depending on your browser or monitor size.
+* **Left:** the [toolbox](FIXME Form Builder ~ Toolbox), which might scroll vertically depending on your browser or monitor size.
 * **Bottom:** status icons and buttons.
-* **Center:** WYSIWYG [[form area|Form Builder ~ Form Area]] where you actually edit your form definition. This area might scroll vertically depending on your browser or monitor size or the size of the form you are editing.
+* **Center:** WYSIWYG [form area](FIXME Form Builder ~ Form Area) where you actually edit your form definition. This area might scroll vertically depending on your browser or monitor size or the size of the form you are editing.
 
 ![](images/new.png)
 
@@ -47,7 +47,7 @@ _NOTE: This feature controls the language of the Form Builder user interface onl
 
 The bottom bar of Form Builder shows the following buttons:
 
-* **Summary button.** Takes you to the [[Form Builder Summary page|Form Builder ~ Summary Page]].
+* **Summary button.** Takes you to the [Form Builder Summary page](FIXME Form Builder ~ Summary Page).
     * If the form has unsaved changes, a warning dialog shows first.
     * Otherwise, the window/tab closes and takes you back to the Form Builder summary page.
 * **New button.** Create a new form.

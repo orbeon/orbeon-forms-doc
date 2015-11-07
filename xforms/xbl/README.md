@@ -21,17 +21,17 @@ You can use components to implement:
 * Controls which do not have a standard XML type
     * Example: A phone number control
 * Controls which wrap existing controls
-    * Example: A [[character counter component|Form Runner ~ XBL Components ~ Character Counter]]
+    * Example: A [character counter component](FIXME Form Runner ~ XBL Components ~ Character Counter)
 * Higher-level components
     * Examples:
-        * A [[form grid component|Form Runner ~ XBL Components ~ Grid]]
-        * A [[wizard component|Form Runner ~ XBL Components ~ Wizard]]
+        * A [form grid component](FIXME Form Runner ~ XBL Components ~ Grid)
+        * A [wizard component](FIXME Form Runner ~ XBL Components ~ Wizard)
 * Components which implement a completely new control based on a JavaScript library
-    * Example: A [[map component|Form Runner ~ XBL Components ~ Map]]
+    * Example: A [map component](FIXME Form Runner ~ XBL Components ~ Map)
 
 This is not an exhaustive list. Your imagination is the limit!
 
-You might want to also check the [[components|Form Runner ~ XBL Components]] provided out of the box by Orbeon Forms.
+You might want to also check the [components](FIXME Form Runner ~ XBL Components) provided out of the box by Orbeon Forms.
 
 ## Terminology
 
@@ -46,4 +46,4 @@ You might want to also check the [[components|Form Runner ~ XBL Components]] pro
 
 ## See also
 
-- [[Form Runner XBL Components|Form Runner ~ XBL Components]]
+- [Form Runner XBL Components](FIXME Form Runner ~ XBL Components)

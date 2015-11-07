@@ -8,7 +8,7 @@
 
 Orbeon Form Builder is a visual form designer which allows you to build and deploy forms in minutes right from your web browser.
 
-For a list of Form Builder features, see [[Orbeon Forms Features|Orbeon Forms Features#list-of-orbeon-forms-features]].
+For a list of Form Builder features, see [Orbeon Forms Features](FIXME Orbeon Forms Features#list-of-orbeon-forms-features).
 
 ### What is Orbeon Form Runner?
 
@@ -16,7 +16,7 @@ Orbeon Form Runner is the Orbeon Forms runtime environment which usually runs fo
 Form Runner manages form definitions and form data, handles search, validation, and takes care of the plumbing
 necessary to capture, save, import and export form data.
 
-For a list of Form Runner features, see [[Orbeon Forms Features|Orbeon Forms Features#list-of-orbeon-forms-features]].
+For a list of Form Runner features, see [Orbeon Forms Features](FIXME Orbeon Forms Features#list-of-orbeon-forms-features).
 
 ### What is the difference between Orbeon Forms, Form Runner and Form Builder?
 
@@ -43,7 +43,7 @@ If you're looking to run Orbeon Forms in the cloud, check CouldHarmony's table w
 
 ### Where is the Form Builder documentation?
 
-See the [[Form Builder| Form Builder]].
+See the [Form Builder](FIXME  Form Builder).
 
 ## Questions about specific features
 
@@ -63,7 +63,7 @@ This is the `-Xmx` option of Java. Set it to at least 500 MB of heap for local t
 
 No, for multiple reasons:
 
-- The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [[XBL|XForms ~ XBL]], and [extension functions][10] not available in other XForms engines.
+- The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [XBL](FIXME XForms ~ XBL), and [extension functions][10] not available in other XForms engines.
 - Forms designed with Form Builder assume some standard components provided by Form Runner, like sections and grids.
 - A lot of the functionality of the form is handled by the Form Runner runtime, including: saving and retrieving data from a database, autosave, permissions, services and actions, and more. The form itself mainly contains the data model, controls, and descriptions of actions and services.
 
@@ -75,7 +75,7 @@ Form Builder produces XHTML+XForms files as output, but it follows a number of c
 
 ### Where is my Form Builder form stored?
 
-When you save or publish a form definition, it is stored through the [[Form Runner persistence API|Form Runner ~ APIs ~ Persistence]].
+When you save or publish a form definition, it is stored through the [Form Runner persistence API](FIXME Form Runner ~ APIs ~ Persistence).
 
 The API has a number of implementations. The default implementation is the embedded eXist XML database, but you can also use relational or your own implementation of the API.
 
@@ -83,7 +83,7 @@ The API has a number of implementations. The default implementation is the embed
 
 There is no built-in integration with  CMS or workflow engines. However you can integrate with systems in a few ways:
 
-- Form Runner is built around a [[REST API for persistence|Form Runner ~ APIs ~ Persistence]], which allows you to integrate yourself with any system by providing an implementation of that API.
+- Form Runner is built around a [REST API for persistence](FIXME Form Runner ~ APIs ~ Persistence), which allows you to integrate yourself with any system by providing an implementation of that API.
 - [Simple processes](https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Buttons-and-Processes) allow you to send data to external systems.
 
 ### Is it possible to edit and update a published form?
@@ -167,7 +167,7 @@ No, this is not supported, sorry. Forms created with Form Builder require Form R
 
 ### Can I customize the appearance of forms I create with Form Builder?
 
-1. You can change fonts, colors, and other styling by creating your own CSS stylesheet, to [[supplement or override the default CSS|Form-Runner-~-Configuration-properties#adding-your-own-css]].
+1. You can change fonts, colors, and other styling by creating your own CSS stylesheet, to [supplement or override the default CSS](FIXME Form-Runner-~-Configuration-properties#adding-your-own-css).
 1. For changes that you can't do with CSS and that require modifications to the HTML sent by Orbeon Forms to browser, you can change the Form Runner XBL and XSLT stylesheets. But this is hard work and we discourage it.
 
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning

@@ -8,13 +8,13 @@ This is an Orbeon Forms PE feature, available since Orbeon Forms 4.0.
 
 ## Introduction
 
-Form Runner can be deployed [[directly|Form-Runner-~-Portal-~-Full-Portlet-Guide]] into Liferay. However in some cases, it is desirable to deploy Form Runner *separately*. The Form Runner proxy portlet provides this type of deployment, with the following benefits:
+Form Runner can be deployed [directly](FIXME Form-Runner-~-Portal-~-Full-Portlet-Guide) into Liferay. However in some cases, it is desirable to deploy Form Runner *separately*. The Form Runner proxy portlet provides this type of deployment, with the following benefits:
 
 - You configure a specific form to show in the portlet via portlet preferences.
 - Form Runner can be maintained and upgraded separately from the portal.
 - The Form Runner application itself does not have to be exposed to the outside world.
 
-If you only need Form Runner and are happy with deploying only one form per portlet, and if you want a simple configuration UI to set this up, then the proxy portlet is for you. Otherwise, you will have to look into the [[full portlet|Form-Runner-~-Portal-~-Full-Portlet-Guide]].
+If you only need Form Runner and are happy with deploying only one form per portlet, and if you want a simple configuration UI to set this up, then the proxy portlet is for you. Otherwise, you will have to look into the [full portlet](FIXME Form-Runner-~-Portal-~-Full-Portlet-Guide).
 
 This guide describes how to install, administer and use the Form Runner proxy portlet.
 
@@ -35,7 +35,7 @@ The Form Runner server can be entirely hidden behind a firewall as it doesn't ne
 
 ## Installation
 
-[[Install|Installation]] and deploy Orbeon Forms as usual. You can deploy it:
+[Install](FIXME Installation) and deploy Orbeon Forms as usual. You can deploy it:
 
 - within the same container as Liferay
 - in a separate servlet container
@@ -182,7 +182,7 @@ For the `oxf.fr.authentication.header.username` header, you can choose any of th
 - `Orbeon-Liferay-User-Screen-Name`
 - or possibly `Orbeon-Liferay-User-Email`
 
-_NOTE: For builds prior to Orbeon 4.9, you need the following configuration in your [[`properties-local.xml`|Installation-~-Configuration-Properties]]:_
+_NOTE: For builds prior to Orbeon 4.9, you need the following configuration in your [`properties-local.xml`](FIXME Installation-~-Configuration-Properties):_
 
 ```xml
 <property
@@ -225,7 +225,7 @@ This is the same as the [server-side embedding configuration](java-api.html).
 
 ## Performance tuning
 
-See the Performance Tuning section of the [[Full Portlet Guide|Form-Runner-~-Portal-~-Full-Portlet-Guide#performance-tuning]].
+See the Performance Tuning section of the [Full Portlet Guide](FIXME Form-Runner-~-Portal-~-Full-Portlet-Guide#performance-tuning).
 
 ## Securing Form Runner with an IP filter
 

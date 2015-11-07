@@ -8,11 +8,11 @@
 
 The following URL patterns are followed:
 
-- Summary page:  
+- Summary page:
     `/fr/orbeon/builder/summary`
-- New empty form definition:  
+- New empty form definition:
     `/fr/orbeon/builder/new`
-- Edit existing form definition:  
+- Edit existing form definition:
     `/fr/orbeon/builder/edit/[FORM_ID]`
 
 _NOTE: All paths above are relative to the deployment context, e.g the actual URLs start with http://localhost:8080/orbeon/fr/..._
@@ -36,7 +36,7 @@ The dialog is actually bypassed only if the values passed are valid, specificall
 
 - `fr-app`
   - must be non-blank and only contain ASCII letters, digits, "-" or "_"
-  - if Form Builder permission are enabled, the app name must be allowed by those permissions (see [[Form Builder Permissions|Form Runner ~ Access Control ~ Editing Forms#form-builder-permissions]])
+  - if Form Builder permission are enabled, the app name must be allowed by those permissions (see [Form Builder Permissions](FIXME Form Runner ~ Access Control ~ Editing Forms#form-builder-permissions))
 - `fr-form`
   - must be non-blank and only contain ASCII letters, digits, "-" or "_"
 
@@ -50,5 +50,5 @@ In case the app and/or form name are missing or invalid, Form Builder presents t
 
 ## See also
 
-- [[Form Runner Integration|Form Runner ~ Integration]]
-- [[Form Builder Permissions|Form Runner ~ Access Control ~ Editing Forms#form-builder-permissions]]
+- [Form Runner Integration](FIXME Form Runner ~ Integration)
+- [Form Builder Permissions](FIXME Form Runner ~ Access Control ~ Editing Forms#form-builder-permissions)

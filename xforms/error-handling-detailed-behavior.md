@@ -2,7 +2,7 @@
 
 See also:
 
-- [[XForms Error Handling|XForms ~ Error Handling]]
+- [XForms Error Handling](FIXME XForms ~ Error Handling)
 
 ## Philosophy of error handling
 

@@ -2,7 +2,7 @@
 
 ## Availability
 
-See [[Database Support|Orbeon Forms Features ~ Database Support]].
+See [Database Support](FIXME Orbeon Forms Features ~ Database Support).
 
 ## Usage
 

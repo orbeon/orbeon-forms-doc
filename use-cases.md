@@ -33,7 +33,7 @@ While this isn't as straightforward as a 100% online solution, this use case has
 
 - It fits right into existing practices, and can be offered to constituents as an option to just filling out the paper form by themselves without the help of the web form, as they might already be used to.
 - The web form can better guide constituents. Its logic can be improved, even if in the end the same paper form is generated. It can check for errors as constituents fill out the form, thus avoiding frustrating and expensive back-and-forth.
-- Because the data can be saved in a database, there is no need to re-enter it, thus saving time and avoiding potential mistakes. 
+- Because the data can be saved in a database, there is no need to re-enter it, thus saving time and avoiding potential mistakes.
 
 ## Forms for an organization's internal use
 
@@ -77,7 +77,7 @@ See [Owner Group](form-runner/access-control/owner-group.md). Setup permissions 
 
 #### 3. Setup which buttons are visible on the form
 
-See [[Buttons on the detail page| Form Runner ~ Configuration properties#buttons-on-the-detail-page]] to control which buttons appear on the page. You might want to add the `send` or `submit` button, in particular.
+See [Buttons on the detail page](FIXME  Form Runner ~ Configuration properties#buttons-on-the-detail-page) to control which buttons appear on the page. You might want to add the `send` or `submit` button, in particular.
 
 #### 4. Specify what to do when the Send or Submit button is pressed
 

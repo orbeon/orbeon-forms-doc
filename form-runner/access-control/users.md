@@ -4,7 +4,7 @@
 
 ## Providing username, group, and roles
 
-Form Runner uses the username, group, and roles to control who can access Form Builder and the forms you create with Form Builder (see [[Editing Forms|Form Runner ~ Access Control ~ Editing Forms]] and [[Deployed Forms|Form Runner ~ Access Control ~ Deployed Forms]] for more details on how those are setup). Form Runner can obtain this information by calling a standard servlet API implemented by your application server (_container-driven method_) or by using HTTP headers (_header-driver method_), typically set by a front-end (e.g. Apache module) or a servlet filter.
+Form Runner uses the username, group, and roles to control who can access Form Builder and the forms you create with Form Builder (see [Editing Forms|Form Runner ~ Access Control ~ Editing Forms]] and [[Deployed Forms](FIXME Form Runner ~ Access Control ~ Deployed Forms) for more details on how those are setup). Form Runner can obtain this information by calling a standard servlet API implemented by your application server (_container-driven method_) or by using HTTP headers (_header-driver method_), typically set by a front-end (e.g. Apache module) or a servlet filter.
 
 ### Container-driven method
 
@@ -36,7 +36,7 @@ You want to use container roles if your users are setup at the application serve
         name="oxf.fr.authentication.container.roles.split"
         value=",|\s+"/>
     ```
-3. __Groups__ – 
+3. __Groups__ –
 There is no container API for Orbeon Forms to get the user's group; in fact the concept of _group_is foreign the container API. So, when using container-driven method, Orbeon Forms takes the first role listed in `oxf.fr.authentication.container.roles` that the user has as the user's group. If you need more flexibility in determining what the user's group is, you might want to use the _header-driven method_ instead, which allows you to explicitly set through a header what the user's group is (more on this below).
 4. __Require authentication__ – You'll also want to have another role, say `form-builder`, that you grant to all the users who can access Form Builder. Hence, in our example, users will have either the two roles `form-builder` and `form-builder-hr`, or the two roles `form-builder` and `form-builder-finance`. In Orbeon Forms `WEB-INF/web.xml`, add the following to require users to login to access Form Builder. This assumes that you're using basic authentication:
 
@@ -78,17 +78,17 @@ Set the following property in your `properties-local.xml`:
 Tell Orbeon Forms the name of the HTTP headers that contain the username, group, and roles for the current user.
 
 ```xml
-<property 
-    as="xs:string" 
-    name="oxf.fr.authentication.header.username" 
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.header.username"
     value="My-Username-Header"/>
-<property 
-    as="xs:string" 
-    name="oxf.fr.authentication.header.group"  
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.header.group"
     value="My-Group-Header"/>
-<property 
-    as="xs:string" 
-    name="oxf.fr.authentication.header.roles"  
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.header.roles"
     value="My-Roles-Header"/>
 ```
 
@@ -157,9 +157,9 @@ If your header follows a LDAP-style syntax, set the following property to config
         * each role listed in `oxf.fr.authentication.container.roles` is checked against the container's `isUserInRole()` function
     * if `oxf.fr.authentication.method == "header"`
         * obtained via the header specified by `oxf.fr.authentication.header.roles`
-* __Persistence__ — These headers are forwarded to the persistence layer, which can make use of them. In particular, the [[relational persistence layers|Installation-~-Relational-Database-Setup]] store the current username when doing any database update.
+* __Persistence__ — These headers are forwarded to the persistence layer, which can make use of them. In particular, the [relational persistence layers](FIXME Installation-~-Relational-Database-Setup) store the current username when doing any database update.
 
-See also: [[Accessing liferay users and roles|Form-Runner-~-Portal-~-Full-Portlet-Guide#accessing-liferay-users-and-roles]].
+See also: [Accessing liferay users and roles](FIXME Form-Runner-~-Portal-~-Full-Portlet-Guide#accessing-liferay-users-and-roles).
 
 [1]: http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/xpath-expressions#TOC-Scenario:-checking-the-role-s-of-the-current-user
 [2]: http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/control-validation-dialog

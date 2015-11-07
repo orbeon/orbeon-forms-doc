@@ -61,4 +61,4 @@ This means that target bind objects within more than one bind iteration cannot b
 
 ## See also
 
-- [[XForms Binds|XForms ~ Binds]]
+- [XForms Binds](FIXME XForms ~ Binds)

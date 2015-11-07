@@ -12,7 +12,7 @@ Form Builder and Form Runner can produce PDF output in two ways:
 - __Template-based__
     - You upload a PDF file using the Upload PDF dialog in the toolbox. At runtime, Form Runner fills-out Acrobat fields in the template.
     - This mode is automatically enabled for a form if a PDF template is attached.
-    - For more, see [[PDF Templates|Form Builder ~ PDF Production ~ PDF Templates]].
+    - For more, see [PDF Templates](FIXME Form Builder ~ PDF Production ~ PDF Templates).
 
 ## Availability
 
@@ -23,4 +23,4 @@ Form Builder and Form Runner can produce PDF output in two ways:
 
 [SINCE Orbeon Forms 4.11]
 
-PDF files can be converted to TIFF images. See [[TIFF Production|Form Runner ~ TIFF Production]].
+PDF files can be converted to TIFF images. See [TIFF Production](FIXME Form Runner ~ TIFF Production).

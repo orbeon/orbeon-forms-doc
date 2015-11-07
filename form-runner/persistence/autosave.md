@@ -4,7 +4,7 @@
 
 ## Support
 
-See [[Database Support|Orbeon Forms Features ~ Database Support]] for the detail of which persistence layers and Orbeon Forms versions support the autosave feature.
+See [Database Support](FIXME Orbeon Forms Features ~ Database Support) for the detail of which persistence layers and Orbeon Forms versions support the autosave feature.
 
 ## See also
 
@@ -99,4 +99,4 @@ For example, as of Orbeon Forms 4.4, the `exist` provider does not support autos
   value="true"/>
 ```
 
-For database support, see [[Database Support|Orbeon Forms Features ~ Database Support]].
+For database support, see [Database Support](FIXME Orbeon Forms Features ~ Database Support).

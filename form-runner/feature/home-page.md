@@ -119,7 +119,7 @@ With Orbeon Forms 4.4 to 4.6, use the `oxf.fr.production-server-uri` property:
 
 ### Configuration on the remote server
 
-You also need to authorize the remote server to accept incoming connections for services. One way of doing this is to use the Orbeon Forms delegating `orbeon-auth.war`, documented [[here|Controller-~-Authorization-of-Pages-and-Services]].
+You also need to authorize the remote server to accept incoming connections for services. One way of doing this is to use the Orbeon Forms delegating `orbeon-auth.war`, documented [here](FIXME Controller-~-Authorization-of-Pages-and-Services).
 
 You deploy this WAR file alongside `orbeon.war` on the remote server, and you add this property to the remote server's `properties-local.xml`:
 
