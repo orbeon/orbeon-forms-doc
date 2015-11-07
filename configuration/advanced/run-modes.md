@@ -76,5 +76,5 @@ In addition, depending on the mode, the following local file is used:
 
 ## See also
 
-- [[Configuration Properties|Installation ~ Configuration Properties]]
+- [Configuration Properties](../../configuration/properties/README.md)
 - Blog post: [Run modes](http://blog.orbeon.com/2012/05/run-modes.html)
