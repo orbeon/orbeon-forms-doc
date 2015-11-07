@@ -8,29 +8,25 @@ Form Builder and Form Runner integrate with other systems through the a number o
 
 ## Plain URLs
 
-See [URLs](FIXME Form Runner ~ Integration ~ URLs) for more details.
+See [URLs](../link-embed/linking.md) for more details.
 
 - Through URLs, you access Form Runner and Form Builder's pages.
 - The URLs can be produced simply by using hyperlinks or redirects from other applications.
 
 ## Configurable persistence API
 
-See [Persistence API](FIXME Form Runner ~ APIs ~ Persistence) for more details.
+See [Persistence API](../api/persistence/README.md) for more details.
 
 - The API is based on REST (that is, through HTTP).
 - It provides CRUD, search, and metadata operations.
 
-See also [Accessing data captured by forms](FIXME Form Runner ~ Accessing data captured by forms)
-
-## Other APIS
-
-See [APIs](FIXME Form Runner ~ APIs) for more details.
+See also [Accessing data captured by forms](accessing-data.md)
 
 ## HTTP services
 
-- The [HTTP Service Editor](FIXME Form Builder ~ HTTP Services) allows you to create and bind services from a form.
+- The [HTTP Service Editor](../../form-builder/http-services.md) allows you to create and bind services from a form.
 - With properties, you can tell Form Runner to load initial XML data.
-- Configure processes to [submit data](FIXME Form Runner ~ Buttons and Processes#send).
+- Configure processes to [submit data](../advanced/buttons-and-processes/actions-form-runner.md#send).
 
 See also [Accessing data captured by forms](FIXME Form Runner ~ Accessing data captured by forms).
 
