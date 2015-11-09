@@ -49,7 +49,7 @@ Focus:
   - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
 - [ ] test automation
 - [ ] doc
-    - [ ] significant progress migrating Form Runner / Form Builder / XForms doc from old doc site
+    - [x] significant progress migrating Form Runner / Form Builder / XForms doc from old doc site
 
 Issues:
 
