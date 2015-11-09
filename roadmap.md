@@ -47,8 +47,6 @@ Focus:
 - [ ] 1 basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 - [ ] maintenance candidates
   - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
-  - [ ] migrate some Java code to Scala in the perspective of [#1221](https://github.com/orbeon/orbeon-forms/issues/1221)
-  - [ ] [Don't use dom4j XPath APIs #2164](https://github.com/orbeon/orbeon-forms/issues/2164)
 - [ ] test automation
 - [ ] doc
     - [ ] significant progress migrating Form Runner / Form Builder / XForms doc from old doc site
