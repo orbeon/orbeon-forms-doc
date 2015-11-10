@@ -13,7 +13,7 @@ Orbeon Forms 4 runs on any platform that supports:
 
 Orbeon Forms is best installed on hardware with:
 
-* a reasonably fast CPU:
+* a fast CPU:
     * Intel Core i7 or better (desktop-grade)
     * Intel Xeon (server-grade)
     * As of 2015, we don't recommend AMD CPUs, which tend to be 2-4 times slower than Intel CPUs per core.
