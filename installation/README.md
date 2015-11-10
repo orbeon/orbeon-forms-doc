@@ -13,11 +13,13 @@ Orbeon Forms 4 runs on any platform that supports:
 
 Orbeon Forms is best installed on hardware with:
 
-* a fast CPU:
+* CPU
     * Intel Core i7 or better (desktop-grade)
     * Intel Xeon (server-grade)
-    * As of 2015, we don't recommend AMD CPUs, which tend to be 2-4 times slower than Intel CPUs per core.
-* at least 1.5 GB of RAM available to the Java Virtual Machine (JVM heap size)
+* RAM
+    * at least 1.5 GB of RAM available to the Java Virtual Machine (JVM heap size)
+
+_NOTE: As of 2015, we don't recommend AMD CPUs, which tend to be 2-4 times slower than Intel CPUs per core._
 
 ## Java virtual machine configuration
 
