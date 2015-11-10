@@ -390,7 +390,7 @@ If you are creating a public form, you might want to add a captcha to avoid spam
     value="reCAPTCHA"/>
 ```
 
-You can set this property to either `reCAPTCHA` or `SimpleCaptcha`, depending on the captcha implementation you want to use (also see: [Which captcha is right for you](FIXME Form Runner ~ XBL Components ~ Captcha#which-captcha-is-right-for-you)).  Setting it to blank (empty string), won't show a captcha, which is the default. Instead of stars (`*`) in the name of the first property, use specific app/form names for the captcha to only show on certain forms.
+You can set this property to either `reCAPTCHA` or `SimpleCaptcha`, depending on the captcha implementation you want to use (also see: [Which captcha is right for you](../../form-runner/component/captcha.md).  Setting it to blank (empty string), won't show a captcha, which is the default. Instead of stars (`*`) in the name of the first property, use specific app/form names for the captcha to only show on certain forms.
 
 If using the reCAPTCHA, also add the following properties to specify your reCAPTCHA public and private keys. You can get those by [signing up for reCAPTCHA][11].
 
@@ -410,7 +410,7 @@ With those properties in place, your forms will show a captcha as illustrated by
 
 ![](/form-runner/images/recaptcha.png)
 
-[LIMITATION] The Form Runner captcha uses the [captcha XBL components](FIXME Form Runner ~ XBL Components ~ Captcha), which doesn't support the noscript mode. Hence,  enabling this feature will have no effect in noscript mode.
+[LIMITATION] The Form Runner captcha uses the [captcha XBL components](../../form-runner/component/captcha.md), which doesn't support the noscript mode. Hence,  enabling this feature will have no effect in noscript mode.
 
 ### Initial instance
 
@@ -441,7 +441,7 @@ For #2, this behaves as if a browser was submitting an HTML form that looks like
 
 The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to POST data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a send action using [`format-version = "edge"`][14].
 
-Use the authorization mechanism for services (see [Authorization of pages and services](FIXME Controller-~-Authorization-of-Pages-and-Services)), to enable submitting initial instances to the new page:
+Use the authorization mechanism for services (see [Authorization of pages and services](../../xml-platform/controller/authorization-of-pages-and-services.md), to enable submitting initial instances to the new page:
 
 * Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when POSTing to Form Runner.
 * Your authorizer service must validate those credentials.
@@ -518,7 +518,7 @@ Whether to show the Orbeon Forms version at the bottom.
 
 With this property, you can set the default logo URI. This logo appears on the summary and Detail Pages for a given form. You can omit (or comment out) this property or set its value to `""` (empty string) if you don't want a default logo at all.
 
-If you use two `*` wildcards, as in the example above, the property also sets the logo on the [Form Runner Home page](FIXME Form Runner ~ Home Page).
+If you use two `*` wildcards, as in the example above, the property also sets the logo on the [Form Runner Home page](../../form-runner/feature/home-page.md).
 
 ### Adding your own CSS
 
