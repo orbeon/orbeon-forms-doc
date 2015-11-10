@@ -110,6 +110,10 @@
         * Other APIs
             * [XML Schema Generation](form-runner/api/other/xml-schema-generation.md)
             * [Duplicate Form Data](form-runner/api/other/duplicate-form-data.md)
+        * Data formats
+            * [Form data](form-runner/data-format/form-data.md)
+            * [Date and time](form-runner/data-format/date-and-time.md)
+            * [Form definition](form-runner/data-format/form-definition.md)
     * Advanced
         * [Buttons and processes](form-runner/advanced/buttons-and-processes/README.md)
             * [Syntax](form-runner/advanced/buttons-and-processes/syntax.md)
