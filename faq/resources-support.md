@@ -2,26 +2,26 @@
 
 <!-- toc -->
 
-### How can I get support for Orbeon Forms?
+## How can I get support for Orbeon Forms?
 
 - You can get support from the Orbeon Forms community on the [Orbeon Forms forum][1] which is the hub of the Orbeon Forms community, and this is the best place to ask questions, share your experience, or post issues and requests for enhancements.
 - Orbeon can provide professional support for your company. Orbeon has two types of plans: [Orbeon Forms PE subscriptions][2] are the most appropriate when your application is in production, while [Dev Support plans][3] also covers issues during development, feature enhancements, and training. For more information contact Orbeon at [info@orbeon.com][4].
 
-### How can I subscribe to the Orbeon Forms forum?
+## How can I subscribe to the Orbeon Forms forum?
 
 See the [Community][5] page. If you are having any problem subscribing to the forum, please contact Orbeon at [info@orbeon.com][4].
 
-### Where do I find the source code?
+## Where do I find the source code?
 
 The source code for the CE version is on GitHub. See: [Orbeon Source Code Repository](http://wiki.orbeon.com/forms/doc/contributor-guide/development-environment/orbeon-source-code-repository).
 
 The source code for the PE version is made available to PE customers on demand.
 
-### Where do I find the source code for a particular release of Orbeon Forms?
+## Where do I find the source code for a particular release of Orbeon Forms?
 
 See: [Orbeon Source Code Repository](http://wiki.orbeon.com/forms/doc/contributor-guide/development-environment/orbeon-source-code-repository).
 
-### When are you going to fix/implement my favorite issue/feature?
+## When are you going to fix/implement my favorite issue/feature?
 
 Usually an issue gets fixed or a feature gets implemented in Orbeon Forms when:
 
@@ -36,7 +36,7 @@ For a list of open issues/features, see the [issue tracker](https://github.com/o
 
 We need help on Orbeon Forms by the way, and we definitely appreciate outside contributions. So check out the [source code][6] and start hacking away. You can ask your questions on the [Orbeon Forms forum][1].
 
-### How do I report an issue?
+## How do I report an issue?
 
 The key to effectively reporting an issue is to post in the Orbeon Forms forum a message with:
 
@@ -57,11 +57,11 @@ In both cases:
 - Make your test case as simple as possible. Remember that people who will be helping you in the forum often don't have much time, and you are more likely to receive feedback that is useful if your test case only contains the minimum amount of code required to reproduce the issue.
 - Keep your post focused on a single issue. If there are more issues you would like to report, post them in separate threads, or post the first one and wait to get that one resolved before you post the next one in another thread.
 
-### Where are the Orbeon Forms forum archives?
+## Where are the Orbeon Forms forum archives?
 
 [Right here](http://discuss.orbeon.com/).
 
-### How can I support Orbeon Forms?
+## How can I support Orbeon Forms?
 
 You can help by:
 
@@ -71,13 +71,13 @@ You can help by:
 
 Your support is greatly appreciated!
 
-### Is there a list of known issues?
+## Is there a list of known issues?
 
 Yes, [on GitHub][7].
 
 In general, we recommend you do not add bugs or RFEs in the tracker yourself, as we may miss them, and you may introduce duplicates. Please discuss bugs or issues on the Orbeon Forms [forum][1] first.
 
-### Is there a wiki?
+## Is there a wiki?
 
 Yes, in fact we have two (which we plan to unify):
 
@@ -86,7 +86,7 @@ Yes, in fact we have two (which we plan to unify):
 
 Feel free to add or make changes to the contents there. You can do so after creating a user (anonymous changes are not allowed). But please be considerate. You may want to discuss changes on the forum first.
 
-### What's going on with development?
+## What's going on with development?
 
 We regularly publish a [status message like this one](http://discuss.orbeon.com/Activity-in-Orbeon-land-td4660203.html) in the forum.
 
