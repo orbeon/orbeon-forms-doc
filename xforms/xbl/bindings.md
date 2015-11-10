@@ -1,4 +1,4 @@
-# Bindings
+# XBL Bindings
 
 <!-- toc -->
 
