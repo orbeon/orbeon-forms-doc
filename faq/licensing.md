@@ -2,7 +2,7 @@
 
 <!-- toc -->
 
-### Is there any cost associated with using Orbeon Forms?
+## Is there any cost associated with using Orbeon Forms?
 
 [Professional Edition (PE) builds](http://www.orbeon.com/download) are available through [PE Subscription plans](http://www.orbeon.com/pricing). Further commercial support is available with [Dev Support plans](http://www.orbeon.com/services).
 
@@ -17,11 +17,11 @@ With the open source code, you are free as you please to:
 
 Note however that if you make changes to the existing Orbeon Forms code, you are bound by the terms of the LGPL license, which requires you to redistribute changes to the open source community when you distribute your application.
 
-### You sent a license for orbeon Forms 4.6. Can I use Orbeon Forms 4.0 with that license?
+## You sent a license for orbeon Forms 4.6. Can I use Orbeon Forms 4.0 with that license?
 
 Yes, a license generated for a given version will work with previous versions of the software as well.
 
-### You sent a license for orbeon Forms 4.4. Can I use Orbeon Forms 4.6 with that license?
+## You sent a license for orbeon Forms 4.4. Can I use Orbeon Forms 4.6 with that license?
 
 It depends:
 
@@ -42,18 +42,18 @@ In practice, the Orbeon Forms licenses we produce typically have the following f
   - have a `version` specified
   - have a `subscription-end` date specified
 
-### Will my license expire and cause the software to stop working?
+## Will my license expire and cause the software to stop working?
 
 - Production licenses don't expire.
 - Non-production Basic licenses (as well as the older Dev licenses) do expire.
 
 You can check whether there is an actual expiration by checking the `expiration` field of the license file.
 
-### What is the subscription-end field in the license file?
+## What is the subscription-end field in the license file?
 
 The `subscription-end` field is informative and indicates the end of the support subscription, when applicable.
 
-### What am I paying for when I acquire an Orbeon Forms PE Production subscription?
+## What am I paying for when I acquire an Orbeon Forms PE Production subscription?
 
 The first year, both:
 
