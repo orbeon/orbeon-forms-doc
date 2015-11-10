@@ -123,6 +123,8 @@
             * [Predefined processe and dialogs](form-runner/advanced/buttons-and-processes/predefined.md)
         * [Custom model logic](form-runner/advanced/custom-model-logic.md)
         * [Excel import](form-runner/advanced/excel.md)
+        * [Services](form-runner/advanced/services.md)
+        * [Singleton Form](form-runner/advanced/singleton-form.md)
         * [Monitoring HTTP Requests](form-runner/advanced/monitoring-http-requests.md)
 * Configuration
    * [Properties](configuration/properties/README.md)
