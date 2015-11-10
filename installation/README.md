@@ -11,13 +11,15 @@ Orbeon Forms 4 runs on any platform that supports:
 
 ## Hardware requirements
 
-Orbeon Forms is best installed on hardware with:
+Orbeon Forms is best installed on hardware with the following minimal requirements:
 
 * CPU
     * 4-core (or more) Intel Core i7 or better (desktop-grade)
     * 4-core (or more) Intel Xeon (server-grade)
 * RAM
-    * 1.5 GB of RAM available to the Java Virtual Machine (JVM heap size)
+    * 2 GB of RAM (or more) available to the Java Virtual Machine (JVM heap size)
+
+These are indicative, as the amount of CPU and RAM needed varies depending on the number of forms, their size, as well as the number of concurrent users.
 
 _NOTE: As of 2015, we don't recommend AMD CPUs, which tend to be 2-4 times slower than Intel CPUs per core._
 
@@ -26,8 +28,8 @@ _NOTE: As of 2015, we don't recommend AMD CPUs, which tend to be 2-4 times slowe
 Configure the Java VM with:
 
 * `-Xmx` option for dedicated Java heap memory:
-    * on a development machine: at least 512 MB of Java heap: `-Xmx512m`
-    * on a production machine: at least 1 GB of Java heap: `-Xmx1024m`
+    * on a development machine: at least 1 GB of Java heap: `-Xmx1024m`
+    * on a production machine: at least 2 GB of Java heap: `-Xmx2048m`
 * ` -XX:MaxPermSize` for "permgen" space:
     * use at least: `-XX:MaxPermSize=256m`
 
