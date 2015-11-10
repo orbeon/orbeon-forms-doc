@@ -122,6 +122,7 @@
             * [XForms actions](form-runner/advanced/buttons-and-processes/actions-xforms.md)
             * [Predefined processe and dialogs](form-runner/advanced/buttons-and-processes/predefined.md)
         * [Custom model logic](form-runner/advanced/custom-model-logic.md)
+        * [Excel import](form-runner/advanced/excel.md)
 * Configuration
    * [Properties](configuration/properties/README.md)
        * [General](configuration/properties/general.md)
