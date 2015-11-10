@@ -145,8 +145,13 @@
        * [Relational database logging](configuration/troubleshooting/database-logging.md)
        * [Misc](configuration/troubleshooting/misc.md)
 * XForms
-    * Core constructs
+    * Core
         * [Binds](xforms/binds.md)
+        * [Client-side JavaScript API](xforms/client-side-javascript-api.md)
+        * [Error handling](xforms/error-handling.md)
+            * [Detailed behavior](xforms/error-handling-detailed-behavior.md)
+    * Controls
+        * [Textarea](xforms/controls/textarea.md)
     * [XPath function library](xforms/xpath/README.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
         * Extension functions
