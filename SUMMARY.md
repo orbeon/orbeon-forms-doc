@@ -137,6 +137,8 @@
        * [Relational database logging](configuration/troubleshooting/database-logging.md)
        * [Misc](configuration/troubleshooting/misc.md)
 * XForms
+    * Core constructs
+        * [Binds](xforms/binds.md)
     * [XPath function library](xforms/xpath/README.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
         * Extension functions
