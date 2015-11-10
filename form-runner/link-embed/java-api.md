@@ -208,6 +208,7 @@ The embedding implementation:
 ## Limitations
 
 - navigation between pages, such as the Form Runner Edit and Review pages, is not supported
+- the `send` action within a processe does not support `replace="all"`
 - embedding Form Builder is currently not supported
 - embedding multiple forms is known to work in some cases, but has known issues so we don't recommend doing this (see [#1854](https://github.com/orbeon/orbeon-forms/issues/1854))
 - `oxf.xforms.combine-resources` must be set to `true`
