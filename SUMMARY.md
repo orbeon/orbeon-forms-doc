@@ -150,6 +150,8 @@
         * [Client-side JavaScript API](xforms/client-side-javascript-api.md)
         * [Error handling](xforms/error-handling.md)
             * [Detailed behavior](xforms/error-handling-detailed-behavior.md)
+        * [Model-Bind Variables](xforms/model-bind-variables.md)
+        * [XForms 2.0](xforms/xforms-2-0.md)
     * Controls
         * [Textarea](xforms/controls/textarea.md)
     * [XPath function library](xforms/xpath/README.md)
@@ -189,6 +191,8 @@
 * XML Platform
     * Controller
         * [Authorizing pages and services](xml-platform/controller/authorization-of-pages-and-services.md)
+    * Processors
+        * [PDF to Image Converter](xml-platform/processors/pdf-to-image-converter.md)
     * Resources
         * [Setting up an external resources directory](xml-platform/resources/external-resources.md)
 * Contributors
