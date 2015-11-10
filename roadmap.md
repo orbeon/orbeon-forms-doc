@@ -42,6 +42,8 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ### Orbeon Forms 4.11
 
+The single major enhancement for this version is the "workflow stage" feature ([#2256](https://github.com/orbeon/orbeon-forms/issues/2256)).
+
 Focus:
 
 - [ ] 1 basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
