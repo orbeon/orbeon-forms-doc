@@ -2,7 +2,7 @@
 
 <!-- toc -->
 
-### Is Orbeon Forms an XForms Engine?
+## Is Orbeon Forms an XForms Engine?
 
 Orbeon Forms *includes* an XForms engine (also known as an XForms processor), which we refer to as the Orbeon Forms XForms engine.
 
@@ -15,7 +15,7 @@ But Orbeon Forms also includes:
 
 You are free to use Orbeon Forms for its XForms functionality only, but you can also leverage more of Orbeon Forms to build your forms-based application.
 
-### What differentiates Orbeon Forms from other web solutions?
+## What differentiates Orbeon Forms from other web solutions?
 
 A few things come to mind:
 
