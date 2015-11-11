@@ -43,7 +43,7 @@ If you're looking to run Orbeon Forms in the cloud, check CouldHarmony's table w
 
 ### Where is the Form Builder documentation?
 
-See the [Form Builder](FIXME  Form Builder).
+See the [Form Builder](faq/form-builder-runner.md).
 
 ## Questions about specific features
 
@@ -63,7 +63,7 @@ This is the `-Xmx` option of Java. Set it to at least 500 MB of heap for local t
 
 No, for multiple reasons:
 
-- The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [XBL](FIXME XForms ~ XBL), and [extension functions][10] not available in other XForms engines.
+- The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [XBL](../xforms/xbl/faq.md), and [extension functions][10] not available in other XForms engines.
 - Forms designed with Form Builder assume some standard components provided by Form Runner, like sections and grids.
 - A lot of the functionality of the form is handled by the Form Runner runtime, including: saving and retrieving data from a database, autosave, permissions, services and actions, and more. The form itself mainly contains the data model, controls, and descriptions of actions and services.
 
@@ -75,7 +75,7 @@ Form Builder produces XHTML+XForms files as output, but it follows a number of c
 
 ### Where is my Form Builder form stored?
 
-When you save or publish a form definition, it is stored through the [Form Runner persistence API](FIXME Form Runner ~ APIs ~ Persistence).
+When you save or publish a form definition, it is stored through the [Form Runner persistence API](../form-runner/api/persistence/README.md).
 
 The API has a number of implementations. The default implementation is the embedded eXist XML database, but you can also use relational or your own implementation of the API.
 
@@ -83,7 +83,7 @@ The API has a number of implementations. The default implementation is the embed
 
 There is no built-in integration with  CMS or workflow engines. However you can integrate with systems in a few ways:
 
-- Form Runner is built around a [REST API for persistence](FIXME Form Runner ~ APIs ~ Persistence), which allows you to integrate yourself with any system by providing an implementation of that API.
+- Form Runner is built around a [REST API for persistence](../form-runner/api/persistence/README.md), which allows you to integrate yourself with any system by providing an implementation of that API.
 - [Simple processes](https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Buttons-and-Processes) allow you to send data to external systems.
 
 ### Is it possible to edit and update a published form?
