@@ -1,24 +1,24 @@
-# XForms Controls
+# Text area
 
 <!-- toc -->
 
 ## Basic usage
 
 ```xml
-<xforms:textarea ref="text"/>
+<xf:textarea ref="text"/>
 ```
 
 ## Unformatted text
 
 By default, the text area control is rendered as a regular multi-line text area:
 
-![Multi-line text area in Orbeon Forms](images/xforms-textarea-unformatted.png)
+![Multi-line text area in Orbeon Forms](../images/xforms-textarea-unformatted.png)
 
 With the standard appearance, the following attributes are available:
 
-- `xxforms:cols`: same as HTML input `cols` attribute
-- `xxforms:rows`: same as HTML input `rows` attribute
-- `xxforms:maxlength`: same as HTML 5 input `maxlength` attribute (not all browsers support this attribute as of 2011-03)
+- `xxf:cols`: same as HTML input `cols` attribute
+- `xxf:rows`: same as HTML input `rows` attribute
+- `xxf:maxlength`: same as HTML 5 input `maxlength` attribute (not all browsers support this attribute as of 2011-03)
 
 You can add the `appearance="xxf:autosize"` attribute on the `<xf:textarea>` to get the textarea height to automatically adjust to its content.
 
@@ -26,9 +26,9 @@ You can add the `appearance="xxf:autosize"` attribute on the `<xf:textarea>` to 
 
 ### Enabling the rich text editor
 
-If you add the attribute `mediatype="text/html"` on your `<xforms:textarea>`, then the text area will be rendered as an HTML editor:
+If you add the attribute `mediatype="text/html"` on your `<xf:textarea>`, then the text area will be rendered as an HTML editor:
 
-![Rich text editor in Orbeon Forms](images/xforms-textarea-formatted.png)
+![Rich text editor in Orbeon Forms](../images/xforms-textarea-formatted.png)
 
 ### HTML cleanup
 
