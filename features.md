@@ -24,30 +24,30 @@ As of 2015-10-22 this page is still being updated.
     - Repeated grids: [doc](form-builder/repeated-grids.html), [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
     - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
     - Options for new repeat iterations: [blog post](http://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
-- Section Templates: [doc](FIXME Form Builder ~ Section Templates)
-- Singleton forms: [doc](FIXME Form Runner ~ Singleton Form)
+- Section Templates: [doc](form-builder/section-templates.md)
+- Singleton forms: [doc](form-runner/advanced/singleton-form.md)
 - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
-- Form field validation: [doc](FIXME Form Builder ~ Validation), [blog post](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
+- Form field validation: [doc](form-builder/validation.md), [blog post](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
     - required fields (also via formula, see [blog post](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html))
     - data types such as string, number, date, etc.
     - multiple constraints with formulas
-    - common constraints such as minimum length and maximum length: [doc](FIXME Form Builder ~ Validation#common-constraints), [blog post](http://blog.orbeon.com/2015/07/how-common-constraints-work.html)
+    - common constraints such as minimum length and maximum length: [doc](form-builder/validation.md#commonconstraints), [blog post](http://blog.orbeon.com/2015/07/how-common-constraints-work.html)
     - errors, warnings, and informational validations
     - custom alert messages per validation
 - Access control
-    - Owner / group permissions: [doc](FIXME Form Runner ~ Access Control ~ Owner Group), [blog post](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)
+    - Owner / group permissions: [doc](form-runner/access-control/owner-group.md), [blog post](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)
 - Persistence (databases)
-    - persistence API: [doc](FIXME Form Runner ~ APIs ~ Persistence)
-    - persistence implementations: [doc](FIXME Orbeon Forms Features ~ Database Support)
+    - persistence API: [doc](form-runner/api/persistence/README.md)
+    - persistence implementations: [doc](form-runner/persistence/db-support.md)
 
 ### Form Builder
 
-- Summary page: [doc](FIXME Form Builder ~ Summary Page)
+- Summary page: [doc](form-builder/summary-page.md)
 - Toolbox:
     - features: [doc](form-builder/toolbox.md)
-    - configurability: [doc](FIXME Form Builder ~ Toolbox ~ Metadata)
-    - XBL components: [doc](FIXME XForms ~ XBL)
-- Control Settings: [doc](FIXME Form Builder ~ Control Settings)
+    - configurability: [doc](form-builder/metadata.md)
+    - XBL components: [doc](xforms/xbl/README.md)
+- Control Settings: [doc](form-builder/control-settings.md)
     - control name
     - Summary page options
     - custom CSS classes
@@ -56,48 +56,48 @@ As of 2015-10-22 this page is still being updated.
     - formulas: [doc](FIXME Form Builder ~ Formulas)
     - help text (plain text and rich text)
         - appearance of help messages: [blog post](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
-- Itemset Editor: [doc](FIXME Form Builder ~ Itemset Editor)
+- Itemset Editor: [doc](form-builder/itemset-editor.md)
     - Hints for checkboxes and radio buttons: [blog post](http://blog.orbeon.com/2014/02/hints-for-checkboxes-and-radio-buttons.html)
-- Section Settings: [doc](FIXME Form Builder ~ Section Settings)
-- Publishing a form definition: [doc](FIXME Form Builder ~ Publishing)
+- Section Settings: [doc](form-builder/section-settings.md)
+- Publishing a form definition: [doc](form-builder/publishing.md)
 - Explanation text: [blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)
-- Extension API: [doc](FIXME Form Builder ~ Extension API)
-- Access control for editing forms: [doc](FIXME Form Runner ~ Access Control ~ Editing Forms)
+- Extension API: [doc](form-builder/extension-api.md)
+- Access control for editing forms: [doc](form-runner/access-control/README.md)
 - Internationalization (i18n) / localization (l10n): [doc](FIXME Form Builder ~ Creating Localized Forms)
 - Services and actions
-    - HTTP Services: [doc](FIXME Form Builder ~ HTTP Services)
-    - Database Services: [doc](FIXME Form Builder ~ Database Services)
-    - Actions: [doc](FIXME Form Builder ~ Actions)
-- XML Schema Support: [doc](FIXME Form Builder ~ XML Schema Support)
-- Source code editor: [doc](FIXME Form Builder ~ Editing the Source Code of the Form)
-- Extension API: [doc](FIXME Form Builder ~ Extension API)
+    - HTTP Services: [doc](form-builder/http-services.md)
+    - Database Services: [doc](form-builder/database-services.md
+    - Actions: [doc](form-builder/actions.md)
+- XML Schema Support: [doc](form-builder/xml-schema-support.md)
+- Source code editor: [doc](form-runner/component/source-code-editor.md)
+- Extension API: [doc](form-builder/extension-api.md)
 
 ### Form Runner
 
 - Standard look & feel
-- Custom XBL components: [doc](FIXME XForms ~ XBL)
+- Custom XBL components: [doc](xforms/xbl/README.md)
 - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
     - search
 - Detail Page
-    - Responsive design for mobile devices such as smartphones: [doc](FIXME Form Runner ~ Responsive Design), [blog](http://blog.orbeon.com/2015/08/responsive-design.html)
+    - Responsive design for mobile devices such as smartphones: [doc](form-runner/feature/responsive-design.md), [blog](http://blog.orbeon.com/2015/08/responsive-design.html)
     - Review mode (printable)
-    - Wizard view: [doc](FIXME Form Runner ~ Wizard View), [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
+    - Wizard view: [doc](form-runner/feature/wizard-view.md), [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
         - validated mode: [blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
-- Home Page: [doc](FIXME Form Runner ~ Home Page), [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
-- Buttons and Processes: [doc](FIXME Form-Runner-~-Buttons-and-Processes), [blog post](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
-- Autosave: [doc](FIXME Form-Runner ~ Autosave), [blog post](http://blog.orbeon.com/2013/10/autosave.html)
+- Home Page: [doc](form-runner/feature/home-page.md), [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
+- Buttons and Processes: [doc](form-runner/advanced/buttons-and-processes/README.md), [blog post](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
+- Autosave: [doc](form-runner/persistence/autosave.md), [blog post](http://blog.orbeon.com/2013/10/autosave.html)
 - PDF
-    - Production: [doc](FIXME Form Builder ~ PDF Production)
+    - Production: [doc](form-builder/pdf-production.md)
         - Automatic
         - Template-based: [doc](FIXME Form Builder ~ PDF Production ~ PDF Templates)
     - Automatic highlighting of links [blog post](http://blog.orbeon.com/2015/04/automatic-web-links-in-pdf-files.html)
-    - customizable file name: [doc](FIXME Form Runner ~ Configuration properties#custom-pdf-filename)
-    - TIFF production: [doc](FIXME Form Runner ~ TIFF Production)
+    - customizable file name: [doc](configuration/properties/form-runner.md#custom-pdf-filename)
+    - TIFF production: [doc](form-runner/feature/tiff-production.md)
 - Validation
     - as-you-type validation
-    - centralized error summary showing currently relevant errors: [XBL component doc](FIXME Form Runner ~ XBL Components ~ Error Summary), [blog post on warnings/infos enhancements](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
+    - centralized error summary showing currently relevant errors: [XBL component doc](form-runner/component/images/xbl-error-summary-errors.png), [blog post on warnings/infos enhancements](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
-- Captcha: [doc|Form Runner ~ Configuration properties#captcha]], [[XBL doc](FIXME Form Runner ~ XBL Components ~ Captcha), [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
+- Captcha: [doc|Form Runner ~ Configuration properties#captcha]], [[XBL doc](form-runner/component/captcha.md), [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 
 ### Form controls
 
@@ -135,29 +135,29 @@ As of 2015-10-22 this page is still being updated.
     - Button
     - Link button
 - Other
-    - Character counter: [doc](FIXME Form Runner ~ XBL Components ~ Character Counter)
-    - Custom components: [doc](FIXME XForms ~ XBL)
+    - Character counter: [doc](form-runner/component/character-counter.md)
+    - Custom components: [doc](xforms/xbl/README.md)
 
 ### Databases
 
-- Database support: [doc](FIXME Orbeon-Forms-Features-~-Database-Support)
+- Database support: [doc](form-runner/persistence/db-support.md)
 - SQL Server support in Orbeon Forms: [blog post](http://blog.orbeon.com/2014/05/sql-server-support-in-orbeon-forms.html)
 - PostgreSQL support in Orbeon Forms: [blog post](http://blog.orbeon.com/2014/12/postgresql-support-in-orbeon-forms.html)
 
 ### Form handling
 
-- Session heartbeat: [doc](FIXME Contributors ~ Internals ~ State Handling)
+- Session heartbeat: [doc](contributors/state-handling.md)
 - Browser back/forward button support: [doc](FIXME Contributors ~ Internals ~ State Handling)
 
 ### Embedding
 
 - Server side Embedding: [doc](FIXME Form Runner ~ APIs ~ Server-side Embedding), [blog post](http://blog.orbeon.com/2014/09/embedding-support-in-orbeon-forms-47.html)
-- Liferay proxy portlet: [doc](FIXME Form Runner ~ Portal ~ Liferay Proxy Portlet Guide)
-- Liferay full portlet: [doc](FIXME Form-Runner-~-Portal-~-Full-Portlet-Guide)
+- Liferay proxy portlet: [doc](form-runner/link-embed/liferay-proxy-portlet.md)
+- Liferay full portlet: [doc](form-runner/link-embed/liferay-full-portlet.md)
 
 ### Performance
 
-- Limiter filter to limit the number of concurrent form requests: [doc](FIXME Installation ~ Limiter Filter)
+- Limiter filter to limit the number of concurrent form requests: [doc](configuration/advanced/limiter-filter.md)
 - Internal service requests: [blog post](http://blog.orbeon.com/2015/01/saying-goodbye-to-internal-http.html)
 
 ### Misc
