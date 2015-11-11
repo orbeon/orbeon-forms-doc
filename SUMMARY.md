@@ -153,7 +153,7 @@
         * [Model-Bind Variables](xforms/model-bind-variables.md)
         * [XForms 2.0](xforms/xforms-2-0.md)
     * Controls
-        * [Textarea](xforms/controls/textarea.md)
+        * [Text area](xforms/controls/textarea.md)
     * [XPath function library](xforms/xpath/README.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
         * Extension functions
