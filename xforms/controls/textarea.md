@@ -42,6 +42,6 @@ The cleanup is performed in two stages:
 1. The HTML goes through TagSoup and converted into a well-formed XML fragment.
 2. The XML fragment goes through an XSLT transformation, which removes all the `<script>` and their content, and only keeps well-known elements in the HTML (such as `<b>`, `<p>`, `<a>`...). This is done in [`clean-html.xsl`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/ops/xforms/clean-html.xsl), which is bundled in `orbeon-resources-private.jar`. Should you want to change the way HTML is cleaned, you can override this file by placing your copy under the same path in your resources (typically `WEB-INF/resources/ops/xforms/clean-html.xsl`).
 
-## Limitations
+### Limitations
 
 HTML Editor in incremental mode – When the HTML editor is in incremental mode, XForms code can't change the value shown by the editor as long as the editor has the focus.
