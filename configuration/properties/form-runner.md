@@ -211,7 +211,7 @@ The example above places the wizard's Prev and Next buttons just under the curre
 
 ![](/form-runner/images/wizard-buttons.png)
 
-For more information, see [Buttons and Processes](FIXME Form Runner ~ Buttons and Processes).
+For more information, see [Buttons and Processes](../form-runner/advanced/buttons-and-processes/README.md).
 
 ### Display hints inline
 
