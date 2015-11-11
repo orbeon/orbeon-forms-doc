@@ -80,7 +80,7 @@ If you want to change the default provider to Oracle, and since a provider named
 
 Because wildcards are used, this property does not override the configuration for the built-in demo forms as well as Form Builder! This is desirable, because the Form Builder implementation itself is not usually something you want to store somewhere else.
 
-In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combination. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [multiple schemas](FIXME Installation ~ Relational Database Setup#with-multiple-schemas).
+In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combination. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [multiple schemas](../../form-runner/persistence/relational-db.md).
 
 Each provider supports standard properties, as follows:
 
@@ -115,7 +115,7 @@ The `autosave` property specifies whether [autosave](FIXME Form Runner ~ Autosav
 
 This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
 
-- If `true`, Form Runner enables autosave if the other [conditions](FIXME Form-Runner-~-Autosave#enabling-autosave) are met. Otherwise, Form Runner will not attempt to enable autosave.
+- If `true`, Form Runner enables autosave if the other [conditions](../../form-runner/persistence/autosave.md) are met. Otherwise, Form Runner will not attempt to enable autosave.
 
 ```xml
 <property
