@@ -7,7 +7,7 @@
 Orbeon Forms 4 runs on any platform that supports:
 
 * Java 6, 7 (recommended), or 8
-* a Servlet 2.5 container or greater (such as [Apache Tomcat][1] 6, 7 (recommended) or greater)
+* a Servlet 2.5 container or greater (such as [Apache Tomcat](http://tomcat.apache.org/) 6, 7 (recommended) or 8)
 
 ## Hardware requirements
 
