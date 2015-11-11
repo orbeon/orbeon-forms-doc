@@ -33,6 +33,9 @@ Configure the Java VM with:
 * ` -XX:MaxPermSize` for "permgen" space:
     * use at least: `-XX:MaxPermSize=256m`
 
+Also, make sure that you do *not* have tiered compilation when using Java 7. See [A dangerous Java 7 JVM option: TieredCompilation
+](http://blog.orbeon.com/2015/08/a-dangerous-java-7-jvm-option.html).
+
 ## Database setup
 
 Out-of-the-box, forms you create with Form Builder, as well as data captured with those forms, will be saved in an embedded database called eXist. You can setup Orbeon Forms so this data gets [stored in your relational database](Installation-~-Relational-Database-Setup), but if you're getting started with Orbeon Forms, you might to just use the embedded eXist, even if just temporarily.
