@@ -13,7 +13,7 @@ has several tabs, detailed below.
 
 #### Basic options
 
-The control *name* specifies a identifier for the control, unique in the entire form (except [Section Templates](FIXME Form-Builder ~ Section Templates)). The
+The control *name* specifies a identifier for the control, unique in the entire form (except [Section Templates](../form-builder/section-templates.md)). The
 identifier is used for the following:
 
 - to refer to the control value from formulas
@@ -44,13 +44,13 @@ See also [How the new Form Builder Appearance Selector Works](http://blog.orbeon
 
 ![Validations and alerts tab](images/control-settings-validations.png)
 
-See [Form Builder Validation](FIXME Form Builder ~ Validation) for details.
+See [Form Builder Validation](form-builder/validation.md) for details.
 
 ### Formulas
 
 ![Formulas tab](images/control-settings-formulas.png)
 
-See [Form Builder Formulas](FIXME Form Builder ~ Formulas) for details.
+See [Form Builder Formulas](form-builder/formulas.md) for details.
 
 ### Help Message
 
@@ -66,8 +66,8 @@ See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/im
 
 ## See also
 
-- [Form Builder Validation](FIXME Form Builder ~ Validation)
+- [Form Builder Validation](../form-builder/validation.md)
 - [Enhanced validation in Form Builder and Form Runner](Enhanced validation in Form Builder and Form Runner)
-- [Form Builder Formulas](FIXME Form Builder ~ Formulas)
+- [Form Builder Formulas](../form-builder/formulas.md)
 - [Improving how we show help messages](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
 - [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
