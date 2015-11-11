@@ -59,5 +59,6 @@ Issues:
 
 Dates (tentative):
 
-- 2015-12-17: workflow enhancement is code complete
-- 2016-01-27: tentative release date
+- 2015-12-17: workflow UI complete
+- 2016-01-27: workflow enhancement is code complete
+- 2016-02-24: tentative release date
