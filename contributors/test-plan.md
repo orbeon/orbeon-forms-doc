@@ -501,7 +501,7 @@ drop table orbeon_form_data_attach ;
         value="db2"/>
     ```
 - Remove existing view if any: `drop view orbeon_f_db2_a ;`
-- Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [flat view documentation](FIXME Form-Runner-~-Persistence-~-Flat-View)
+- Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [flat view documentation](../form-runner/persistence/flat-view.md)
   - rename app name to `oracle` or `db2` depending
   - publish, check that a view with the appropriate column names is created.
 
@@ -1090,7 +1090,7 @@ drop table orbeon_form_data_attach ;
     - push/pull forms
     - check available on /fr/ page on remote (e.g. in Liferay)
   - add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
-  - take form (could be previous `sales/my-sales-form` (see [Form Builder Permissions](FIXME Contributors ~ Test Plan ~ Form Builder Permissions)) but doesn't have to be)
+  - take form (could be previous `sales/my-sales-form` (see [Form Builder Permissions](../form-builder/images/permissions-enable.png)) but doesn't have to be)
     - attach static image
     - publish locally
     - push to remote
