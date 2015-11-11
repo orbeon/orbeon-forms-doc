@@ -192,7 +192,7 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
     value="close clear print pdf save submit"/>
 ```
 
-The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](FIXME Form Runner ~ Buttons and Processes).
+The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md).
 
 ### Buttons in Detail Page custom views
 
