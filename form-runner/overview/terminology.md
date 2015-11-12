@@ -55,6 +55,6 @@ Form Runner and Form Builder have a few pages (or screens) which are referred to
     - This page is useful for *end users* to see which *form definitions* they have access to.
     - It can be a starting point to create new form data or to access the Form Runner Summary page.
     - This page is also useful for *administrators*, who can set form availability, move them between servers, and more.
-    - See [Form Runner Home Page](FIXME Form Runner ~ Home Page) for more.
+    - See [Form Runner Home Page](../../form-runner/feature/home-page.md) for more.
 
 See also [The Form Builder summary page and Form Runner home page](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html).
