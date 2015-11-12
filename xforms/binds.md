@@ -7,7 +7,7 @@
 The XForms `xf:bind` element is used to point to data in the data model. It allows to associate with data:
 
 - an `id`
-- a `name` (see [Model Bind Variables](FIXME XForms ~ Model Bind Variables))
+- a `name` (see [Model Bind Variables](../xforms/model-bind-variables.md))
 - properties, called "Model Item Properties" or MIPs
 
 This serves the following functions:
@@ -15,7 +15,7 @@ This serves the following functions:
 - in the model
   - determine which part of the data is valid, readonly, and relevant
   - apply calculations to the data (formulas)
-  - export variables used in calculations (see [Model Bind Variables](FIXME XForms ~ Model Bind Variables))
+  - export variables used in calculations (see [Model Bind Variables](../xforms/model-bind-variables.md))
 - in the model and in the view
   - as an indirection to the data model, with the `bind` attribute or the `xxf:bind()` function
 
@@ -63,7 +63,7 @@ This enables two features:
 - the ability to assign a specific `id` attribute to a property
 - the ability to specify multiple `readonly`, `required`, `relevant`, and `constraint` rules (which combined using either a boolean "or" or a boolean "and")
 
-See [XForms Validation](FIXME XForms ~ Validation) for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
+See [XForms Validation](xforms/validation.md) for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
 
 ### Multiple binds pointing to the same node
 
@@ -193,7 +193,7 @@ The `xxf:defaults` attribute is an AVT so can include XPath expressions between 
 
 #### Evaluation of initial values upon insert
 
-See [Evaluation of initial values upon insert](FIXME XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert).
+See [Evaluation of initial values upon insert](xforms/actions/repeat-insert-delete.md).
 
 ### Deferred rebuild, recalculate and revalidate
 
@@ -240,10 +240,10 @@ You often want to present a form without allowing the user to enter data. An eas
 
 ## See also
 
-- [XForms Validation](FIXME XForms ~ Validation)
-- [XForms Model bind variables](FIXME  XForms ~ Model bind variables)
+- [XForms Validation](xforms/validation.md)
+- [XForms Model bind variables](xforms/model-bind-variables.md)
 - [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
-- [Evaluation of initial values upon insert](FIXME XForms-~-Actions-~-Repeat,-Insert-and-Delete#evaluation-of-initial-values-upon-insert)
-- [Grid component](FIXME Form Runner ~ XBL Components ~ Grid)
+- [Evaluation of initial values upon insert](xforms/actions/repeat-insert-delete.md)
+- [Grid component](form-runner/component/grid.md)
