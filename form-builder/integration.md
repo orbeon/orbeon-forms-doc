@@ -36,7 +36,7 @@ The dialog is actually bypassed only if the values passed are valid, specificall
 
 - `fr-app`
   - must be non-blank and only contain ASCII letters, digits, "-" or "_"
-  - if Form Builder permission are enabled, the app name must be allowed by those permissions (see [Form Builder Permissions](FIXME Form Runner ~ Access Control ~ Editing Forms#form-builder-permissions))
+  - if Form Builder permission are enabled, the app name must be allowed by those permissions (see [Form Builder Permissions](../form-runner/access-control/editing-forms.md#form-builder-permissions))
 - `fr-form`
   - must be non-blank and only contain ASCII letters, digits, "-" or "_"
 
@@ -50,5 +50,5 @@ In case the app and/or form name are missing or invalid, Form Builder presents t
 
 ## See also
 
-- [Form Runner Integration](FIXME Form Runner ~ Integration)
-- [Form Builder Permissions](FIXME Form Runner ~ Access Control ~ Editing Forms#form-builder-permissions)
+- [Form Runner Integration](../form-builder/integration.md)
+- [Form Builder Permissions](../form-runner/access-control/editing-forms.md)
