@@ -20,7 +20,7 @@ For  auditing to work, Form Runner needs to know who is presently using the appl
 * **Container** - It can ask the container (i.e. servlet container or application server). This is typically useful when users log into the application using basic or form-based authentication.
 * **Header** - It can get the username from an HTTP header. This is typically useful when you are using some type of front-end which "knows" who the user is and thus can pass this information to Form Runner through a header.
 
-For more details on this configuration, see [Access Control](FIXME Form Runner ~ Access Control).
+For more details on this configuration, see [Access Control](../../form-runner/access-control/README.md).
 
 ## Implementation for relational databases
 
@@ -37,6 +37,6 @@ When you use the Oracle or MySQL persistence layer:
 
 ## See also
 
-- [Access Control](FIXME Form Runner ~ Access Control)
-- [Relational Database Setup](FIXME Installation ~ Relational Database Setup)
-- [Database Support](FIXME Orbeon Forms Features ~ Database Support)
+- [Access Control](../../form-runner/access-control/README.md)
+- [Relational Database Setup](../../form-runner/persistence/relational-db.md)
+- [Database Support](../../form-runner/persistence/db-support.md)
