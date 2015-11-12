@@ -32,7 +32,7 @@ Below, we assume the following example mapping:
 In practice, you would probably choose a prefix different from `acme`, and a namespace different from
 `http://www.acme.com/xbl`.
 
-For more on XBL components, see [XBL documentation](FIXME XForms ~ XBL).
+For more on XBL components, see [XBL documentation](../xforms/xbl/README.md).
 
 ## Custom Form Settings tab
 
