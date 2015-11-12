@@ -4,7 +4,7 @@
 
 ## Introduction
 
-PDF files, whether produced automatically or via a [PDF template](FIXME Form Builder ~ PDF Production ~ PDF Templates), can
+PDF files, whether produced automatically or via a [PDF template](../../form-builder/pdf-templates.md), can
 be converted to TIFF image files for download or email.
 
 ## Availability
@@ -35,7 +35,7 @@ Example for the Summary Page:
 </property>
 ```
 
-See also [Predefined buttons](FIXME Form Runner ~ Buttons and Processes#predefined buttons).
+See also [Predefined buttons](../../form-runner/advanced/buttons-and-processes/README.md#predefined buttons).
 
 ### Properties
 
@@ -107,7 +107,7 @@ If the form contains a `customer-id` field, the PDF filename will be the value o
 
 ### Sending
 
-You can *send* the URL of a TIFF file using the `content = "tiff-url"` parameter. See [Sending a TIFF URL](FIXME Form Runner ~ Buttons and Processes#sending-a-tiff-url).
+You can *send* the URL of a TIFF file using the `content = "tiff-url"` parameter. See [Sending a TIFF URL](../../form-runner/advanced/buttons-and-processes/README.md#sending-a-tiff-url).
 
 ### Email
 
