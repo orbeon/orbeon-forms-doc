@@ -99,4 +99,4 @@ For example, as of Orbeon Forms 4.4, the `exist` provider does not support autos
   value="true"/>
 ```
 
-For database support, see [Database Support](FIXME Orbeon Forms Features ~ Database Support).
+For database support, see [Database Support](../../form-runner/persistence/db-support.md).
