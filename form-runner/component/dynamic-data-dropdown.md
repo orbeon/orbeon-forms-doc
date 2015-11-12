@@ -3,7 +3,6 @@
 <!-- toc -->
 
 ## Overview
-
 This components behaves very much like an `<xf:select1>`, except that the data populating the control doesn't come from an instance, but from a service. You specify the URI of the service and the data-bound select1 component takes care of calling it when necessary, retrieving the data, and using that data to populate a drop-down, list, or radio buttons.
 
 You can also use this component to create chained select1 controls, where the value selected in the first one drives the list of values available in the second one, and so on. The following example illustrates this situation.
@@ -53,8 +52,8 @@ Using this technique, you can chain as many drop-downs (or lists, or radio butto
 
 You can rely on the value in the `itemset-empty` attribute to hide the control when users can't select a value, if in your form it doesn't make sense to show the control when there is just no value available to select. When doing so, make sure not to make the control non-relevant in that case (e.g. don't do this an `<xf:bind relevant="…">`), as when non-relevant the control is completely disabled, and it wouldn't be able to re-evaluate the AVT you provided through the `resource` attribute. Instead, you should use CSS for this, for instance:
 
-1. Add an `fr:bind` or update the relevant `fr:bind` for this control, adding a `fr:itemset-empty` [custom MIP](FIXME XForms ~ Binds#custom-mips), as in: `<xf:bind ref="…" fr:itemset-empty="@itemset-empty = 'true'">`. If you're doing this in Form Builder, edit the source of the form, find the `xf:bind` that corresponds to your control, and add the attribute fr:itemset-empty="@itemset-empty = 'true'".
-2. Add CSS to hide the control, using the class added on the control based on the value of the custom MIP, as in: `.orbeon .fr-itemset-empty-true { display: none }`. If you're doing this in Form Builder, you can place this CSS in your [custom CSS file](FIXME Form Runner ~ Configuration properties#adding-your-own-css), or if you're just using this in one form, in the source of the form, by editing the source of the form, and below the `xh:title`, adding:
+1. Add an `fr:bind` or update the relevant `fr:bind` for this control, adding a `fr:itemset-empty` [custom MIP](../../xforms/binds.md#custom-mips), as in: `<xf:bind ref="…" fr:itemset-empty="@itemset-empty = 'true'">`. If you're doing this in Form Builder, edit the source of the form, find the `xf:bind` that corresponds to your control, and add the attribute fr:itemset-empty="@itemset-empty = 'true'".
+2. Add CSS to hide the control, using the class added on the control based on the value of the custom MIP, as in: `.orbeon .fr-itemset-empty-true { display: none }`. If you're doing this in Form Builder, you can place this CSS in your [custom CSS file](../../configuration/properties/form-runner.md#adding-your-own-css), or if you're just using this in one form, in the source of the form, by editing the source of the form, and below the `xh:title`, adding:
 
     ```xml
     <xh:style type="text/css">
