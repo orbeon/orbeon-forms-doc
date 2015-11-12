@@ -91,7 +91,7 @@ The following property controls optimized instance inclusion:
 
 Note that for any optimized submission or inclusion to occur, the following is required:
 
-- URL must be an absolute path, e.g. /foo/bar. Using an explicit protocol (http://foo.com/bar) disables optimized submissions.
+- URL must be an absolute path, e.g. /foo/bar. Using an explicit protocol (`http://foo.com/bar`) disables optimized submissions.
 - No  elements must be passed.
 - The submission must be synchronous.
 
