@@ -8,11 +8,11 @@ Orbeon Forms *form definitions* and *form data* are stored via an an abstraction
 
 ## Built-in support
 
-Out of the box, Orbeon Forms provides an implementation of the persistence API for a number of databases, and other implementations are provided by third parties. See [Database Support](FIXME Orbeon Forms Features ~ Database Support) for details.
+Out of the box, Orbeon Forms provides an implementation of the persistence API for a number of databases, and other implementations are provided by third parties. See [Database Support](../../../form-runner/persistence/db-support.md) for details.
 
 ## Configuration
 
-For a description of the terminology and configuration properties, see [Form Runner Configuration Properties](FIXME Form Runner ~ Configuration Properties).
+For a description of the terminology and configuration properties, see [Form Runner Configuration Properties](../../../configuration/properties/form-runner.md).
 
 ## REST-based
 
@@ -45,9 +45,9 @@ where:
 
 [SINCE: Orbeon Forms 4.4]
 
-If your persistence provider does not support drafts, you can specifically turn off the autosave feature for that persistence layer with the `oxf.fr.persistence.*.autosave` property. See [Autosave|Form Runner ~ Autosave]] and [[persistence layer configuration](FIXME Form Runner ~ Configuration properties ~ Persistence) for details.
+If your persistence provider does not support drafts, you can specifically turn off the autosave feature for that persistence layer with the `oxf.fr.persistence.*.autosave` property. See [Autosave|Form Runner ~ Autosave]] and [[persistence layer configuration](../../../configuration/properties/persistence.md) for details.
 
-Similarly, if your persistence provider does not support user/group permissions, you can specifically turn off the permissions feature for that persistence layer with the `oxf.fr.persistence.*.permissions` property. See [persistence layer configuration](FIXME Form Runner ~ Configuration properties ~ Persistence) for details.
+Similarly, if your persistence provider does not support user/group permissions, you can specifically turn off the permissions feature for that persistence layer with the `oxf.fr.persistence.*.permissions` property. See [persistence layer configuration](../../../configuration/properties/persistence.md) for details.
 
 ## Virtual hierarchy of data
 
@@ -96,7 +96,7 @@ The hierarchy is organized as follows:
     * form.xhtml: the main form definition, which is an XHTML+XForms resource
     * optional attachments, such as images, PDF files, and other file attachments uploaded by the form author when editing the form definition
 * Each "data" collection contains one collection for each form data id, identified by an automatically-generated UUID
-* The "draft" collection is analogous to the "data" collection, but used by the [Autosave](FIXME Form Runner ~ Autosave) to store form data before users explicitly save it
+* The "draft" collection is analogous to the "data" collection, but used by the [Autosave](../../../form-runner/persistence/autosave.md) to store form data before users explicitly save it
     * implementations of the persistence API are expected to remove the draft (with the corresponding attachments) when the corresponding data is saved
 * Each form data collection contains:
     * data.xml: the main form data document
