@@ -86,7 +86,7 @@ And here is an example of embedding a form from a JSP page:
 
 You deploy Form Runner in a separate web app, which can be located in the same servlet container as your web app or in a separate or even remote servlet container.
 
-Form runner must use "combined resources" to work. This is the case by default in `prod` mode (see [Run Modes](FIXME Installation ~ Run Modes)), but if you happen to have setup Orbeon Forms in `dev` mode, make sure to add this property in your `properties-local.xml`:
+Form runner must use "combined resources" to work. This is the case by default in `prod` mode (see [Run Modes](../../configuration/advanced/run-modes.md)), but if you happen to have setup Orbeon Forms in `dev` mode, make sure to add this property in your `properties-local.xml`:
 
 ```xml
 <property
@@ -164,7 +164,7 @@ The embedding implementation communicates with the rest of Orbeon Forms via HTTP
 </init-param>
 ```
 
-Details about the meaning of these parameters are [available here](FIXME Installation-~-Configuration-Properties-~-General-Properties#http-client).
+Details about the meaning of these parameters are [available here](../../configuration/properties/general.md).
 
 ### HTTP server configuration
 
@@ -194,7 +194,7 @@ In your Java web application, any page covered by the servlet filter can call th
 
 As of Orbeon Forms 4.7, the embedded form cannot navigate in place to another form or mode (such as Review).
 
-However, it can save form or send form data as it does in the standalone case. It can also run custom [processes](FIXME Form-Runner-~-Buttons-and-Processes) which can redirect the entire embedding page with `navigate`, or run JavaScript functions with `navigate(uri = "javascript:alert('Done!')")`. This allows communicating with the embedding application.
+However, it can save form or send form data as it does in the standalone case. It can also run custom [processes](form-runner/advanced/buttons-and-processes/README.md) which can redirect the entire embedding page with `navigate`, or run JavaScript functions with `navigate(uri = "javascript:alert('Done!')")`. This allows communicating with the embedding application.
 
 ## How it works
 
