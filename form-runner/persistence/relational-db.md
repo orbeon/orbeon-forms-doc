@@ -345,7 +345,7 @@ Orbeon Forms stores form data as XML in relational databases, which gives it a l
 
 ### Flat view support
 
-See [Flat View](FIXME Form-Runner-~-Persistence-~-Flat-View).
+See [Flat View](../../form-runner/persistence/flat-view.md).
 
 ### Manual relational table setup with MySQL
 
