@@ -77,7 +77,7 @@ See [Owner Group](form-runner/access-control/owner-group.md). Setup permissions 
 
 #### 3. Setup which buttons are visible on the form
 
-See [Buttons on the detail page](FIXME  Form Runner ~ Configuration properties#buttons-on-the-detail-page) to control which buttons appear on the page. You might want to add the `send` or `submit` button, in particular.
+See [Buttons on the detail page](configuration/properties/form-runner.md#buttons-on-the-detail-page) to control which buttons appear on the page. You might want to add the `send` or `submit` button, in particular.
 
 #### 4. Specify what to do when the Send or Submit button is pressed
 
