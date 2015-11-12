@@ -28,7 +28,7 @@ This follows a DSL (domain-specific language) described in more details below. T
 
 ## Exposing a process
 
-You expose a process with a property (typically in [`properties-local.xml`](FIXME Installation-~-Configuration-Properties)) starting with `oxf.fr.detail.process`. For example:
+You expose a process with a property (typically in [`properties-local.xml`](../../../configuration/properties/README.md)) starting with `oxf.fr.detail.process`. For example:
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.save-final.*.*">
