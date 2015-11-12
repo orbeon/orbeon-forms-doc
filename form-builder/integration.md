@@ -15,7 +15,7 @@ The following URL patterns are followed:
 - Edit existing form definition:
     `/fr/orbeon/builder/edit/[FORM_ID]`
 
-_NOTE: All paths above are relative to the deployment context, e.g the actual URLs start with http://localhost:8080/orbeon/fr/..._
+_NOTE: All paths above are relative to the deployment context, e.g the actual URLs start with `http://localhost:8080/orbeon/fr/...`_
 
 ### Bypassing the New Form dialog
 
