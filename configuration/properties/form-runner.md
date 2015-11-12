@@ -149,7 +149,7 @@ The property configures which buttons are included on the Summary Page, and in w
     * Action: Delete the selected form data.
 * `import`
     * Label: "Import"
-    * Action: Import data via the [Import page][8].
+    * Action: Import data via the [Excel import page](../../form-runner/advanced/excel.md).
 * `duplicate` [SINCE Orbeon Forms 4.5]
     * Label: "Duplicate"
     * Action: Duplicate the selected form data (or form definition on the Form Builder Summary Page), including attachments.
@@ -728,7 +728,6 @@ Whether sections in Ajax mode are allowed to collapse. Default is true.
 Whether sections in Ajax mode are allowed to open and close with an animation. Default is true. A value of false is more efficient with slow browsers / large forms.
 
 [6]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base
-[8]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/form-runner/importing-data
 [11]: https://www.google.com/recaptcha/admin/create
 [14]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Buttons-and-Processes#send
 [15]: https://developer.chrome.com/devtools
