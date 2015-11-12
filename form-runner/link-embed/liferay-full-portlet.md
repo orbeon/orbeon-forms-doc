@@ -2,8 +2,8 @@
 
 <!-- toc -->
 
-Please make sure to check the [Form Runner Liferay Proxy Portlet Guide](FIXME Form-Runner-~-Portal-~-Liferay-Proxy-Portlet-Guide)
-as well, as that is the recommended way to deploy Orbeon Forms into Liferay, and [Form Runner Embedding](FIXME Form-Runner-~-Embedding)
+Please make sure to check the [Form Runner Liferay Proxy Portlet Guide](../../form-runner/link-embed/liferay-proxy-portlet.md)
+as well, as that is the recommended way to deploy Orbeon Forms into Liferay, and [Form Runner Embedding](../../form-runner/link-embed/images/embedding.png)
 for a comparison of portlet deployments.
 
 ## Availability
@@ -127,7 +127,7 @@ Example:
 
 `('Administrator', 'Power user', 'User')`
 
-Alternatively, you can use the standard Orbeon-Username and Orbeon-Roles headers. See also [Access Control](FIXME Form-Runner-~-Access-Control).
+Alternatively, you can use the standard Orbeon-Username and Orbeon-Roles headers. See also [Access Control](../../form-runner/access-control/README.md).
 
 ### Performance tuning
 
