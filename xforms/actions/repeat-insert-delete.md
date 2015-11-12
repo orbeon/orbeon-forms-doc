@@ -256,7 +256,7 @@ _NOTE: This ability is also part of the XForms 2 specification._
 
 ## Evaluation of initial values upon insert
 
-Orbeon Forms supports the `xxf:default` extension attribute on `xf:bind` to specify [dynamic initial values](FIXME XForms ~ Binds#dynamic-initial-values).
+Orbeon Forms supports the `xxf:default` extension attribute on `xf:bind` to specify [dynamic initial values](../../xforms/binds.md#dynamic-initial-values).
 
 By default (no pun intended), `xxf:default` does not apply to the newly inserted nodes. But by setting the `xxf:defaults` attribute (note the plural "defaults") on `xf:insert` to `true`, this behavior can be changed, and any `xxf:default` pointing to a newly-inserted node is re-evaluated during the next recalculation.
 
@@ -303,7 +303,7 @@ Because the action specifies `xxf:defaults="true"`, the first `value` element is
 
 ## See also
 
-- [Dynamic initial values](FIXME XForms ~ Binds#dynamic-initial-values)
+- [Dynamic initial values](../../xforms/binds.md#dynamic-initial-values)
 - [Grid component](FIXME Form Runner ~ XBL Components ~ Grid)
 
 [1]: http://wiki.orbeon.com/forms/how-to/logic/repeat-insert-position
