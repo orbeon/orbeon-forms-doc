@@ -21,13 +21,13 @@ You can use components to implement:
 * Controls which do not have a standard XML type
     * Example: A phone number control
 * Controls which wrap existing controls
-    * Example: A [character counter component](FIXME Form Runner ~ XBL Components ~ Character Counter)
+    * Example: A [character counter component](../../form-runner/component/character-counter.md)
 * Higher-level components
     * Examples:
-        * A [form grid component](FIXME Form Runner ~ XBL Components ~ Grid)
-        * A [wizard component](FIXME Form Runner ~ XBL Components ~ Wizard)
+        * A [form grid component](../../form-runner/component/grid.md)
+        * A [wizard component](../../form-runner/component/wizard.md)
 * Components which implement a completely new control based on a JavaScript library
-    * Example: A [map component](FIXME Form Runner ~ XBL Components ~ Map)
+    * Example: A [map component](../../form-runner/component/map.md)
 
 This is not an exhaustive list. Your imagination is the limit!
 
