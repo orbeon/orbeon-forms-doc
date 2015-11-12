@@ -4,7 +4,7 @@
 
 ## Purpose
 
-This is the API used, in particular, by the [Form Runner Home page|Form Runner ~ Home Page]], accessible to users on `/fr/`. The Form Runner home page lists all the *published* forms the user has access to, and for each one it provides a link to create a new instance of that form, and to the summary page for that form. Either one of those links might be missing, depending on [[the user's permissions](FIXME Form Runner ~ Access Control).
+This is the API used, in particular, by the [Form Runner Home page|Form Runner ~ Home Page]], accessible to users on `/fr/`. The Form Runner home page lists all the *published* forms the user has access to, and for each one it provides a link to create a new instance of that form, and to the summary page for that form. Either one of those links might be missing, depending on [[the user's permissions](../../../form-runner/access-control/README.md).
 
 ## API
 
