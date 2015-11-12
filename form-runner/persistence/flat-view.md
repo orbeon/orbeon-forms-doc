@@ -8,7 +8,7 @@
 
 ### Availability
 
-See [Database Support](FIXME Orbeon Forms Features ~ Database Support).
+See [Database Support](../../form-runner/persistence/db-support.md).
 
 ### Property to enable
 
