@@ -15,7 +15,7 @@ Up to version 4.1, Orbeon Forms had a few predefined buttons to specify what hap
     - sending form data to a service
     - redirecting the user to a success or error page
 
-For more information, see [Configuration Properties - Form Runner](FIXME Form-Runner-~-Configuration-properties).
+For more information, see [Configuration Properties - Form Runner](../../../configuration/properties/README.md).
 
 ### Deprecated buttons
 
