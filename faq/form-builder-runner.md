@@ -31,7 +31,7 @@ Our testing using real forms used by customers in production show that Orbeon Fo
 
 We don't recommend you deploy Orbeon Forms on a server less powerful than the aforementioned 2013 4-core i7 CPU. This means that the server has to run on a recent i7 or Xeon processors (not AMD processors), and on [Geekbench](http://www.primatelabs.com/geekbench/) have a score of more than 3,000 on single-core and 12,000 on multi-core.
 
-If you're looking to run Orbeon Forms in the cloud, check CouldHarmony's table with [Geekbench score for a number of cloud providers](https://cloudharmony.com/benchmarks), and make sure to pick a configuration that matches the above requirement. For instance, the table below provides a summary of Amazon's AWS offering, with [EC2 pricing](http://aws.amazon.com/ec2/pricing/). On EC2, we recommend you start with a c4.2xlarge.
+If you're looking to run Orbeon Forms in the cloud, make sure to pick a configuration that matches the above requirement. For instance, the table below provides a summary of Amazon's AWS offering, with [EC2 pricing](http://aws.amazon.com/ec2/pricing/). On EC2, we recommend you start with a c4.2xlarge.
 
 |            | vCPU |Single-core | Multi-core | Price /year  | <!---->
 | -----------| ----:|-----------:|-----------:|-------------:|----------------
