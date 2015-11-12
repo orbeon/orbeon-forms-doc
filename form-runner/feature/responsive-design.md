@@ -18,4 +18,4 @@ When the same form is loaded from a mobile phone, fields will automatically be s
 
 ## Limitations
 
-Version 4.10 introduces responsive design to the "detail page", i.e. the page used to fill out a form, as it is the page accessed by most end users, who are also more likely to be using a mobile device. In future versions, responsive design will be brought also to the summary page and [home page](FIXME Form Runner ~ Home Page).
+Version 4.10 introduces responsive design to the "detail page", i.e. the page used to fill out a form, as it is the page accessed by most end users, who are also more likely to be using a mobile device. In future versions, responsive design will be brought also to the summary page and [home page](../../form-runner/feature/home-page.md).
