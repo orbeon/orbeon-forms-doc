@@ -14,11 +14,11 @@ You access the Form Runner Home page by adding `fr/` to the path on which you de
 
 If the user doesn't have any permissions set via `form-builder-permissions.xml`, as [documented here](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control#TOC-Form-Runner-Home-page), a simple user view is presented:
 
-![Home Page](images/home-simple-view.png)
+![Home Page](../images/home-simple-view.png)
 
 If the user has permissions set in `form-builder-permissions.xml`, a view with admin privileges is presented:
 
-![Home Page](images/home-admin-view.png)
+![Home Page](../images/home-admin-view.png)
 
 The list of forms listed depends on the roles set in `form-builder-permissions.xml`. For example, with:
 
@@ -60,18 +60,18 @@ The user can select forms in two ways:
 - by using the checkboxes next to the form
 - by using the Select menu to automatically select all forms matching a certain condition
 
-![Select Menu](images/home-select-menu.png)
+![Select Menu](../images/home-select-menu.png)
 
 The operations listed in the Operations menu are then available depending on the current selection:
 
-![Operations Menu](images/home-operation-menu.png)
+![Operations Menu](../images/home-operation-menu.png)
 
 The main operations available are:
 
 - Publish local forms: make an unavailable form available again
 - Unpublish local forms: make a published form unavailable
 
-![Unavailable](images/home-unavailable.png)
+![Unavailable](../images/home-unavailable.png)
 
 ## Remote server operations
 
@@ -150,7 +150,7 @@ With this configuration, the local Orbeon Forms connects to services on the remo
 
 When the remote server is configured as above, the first time you go to the Form Runner Home page you are prompted for credentials:
 
-![Credentials](images/home-credentials.png)
+![Credentials](../images/home-credentials.png)
 
 Once the credentials are correct, the Home page retrieves the remote server's list of deployed forms and metadata, which appears in a new *Remote* column group. You then have access to new operations:
 
@@ -159,15 +159,15 @@ Once the credentials are correct, the Home page retrieves the remote server's li
 - Push to remote: copy a form definition and its attachments from the local to the remote server
 - Pull from remote: copy a form definition and its attachments from the remote to the local server
 
-![Push to Remote](images/home-push.png)
+![Push to Remote](../images/home-push.png)
 
 You are always prompted to confirm the operation to perform:
 
-![Confirmation](images/home-confirmation.png)
+![Confirmation](../images/home-confirmation.png)
 
 In addition, if the latest modification time of the form definitions differ, a *Newer* label appears:
 
-![Newer](images/home-newer.png)
+![Newer](../images/home-newer.png)
 
 ## Orbeon Forms 4.0 to 4.2
 
@@ -176,7 +176,7 @@ For each form definition the current user has access to, the following links are
 - Link to the summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
 - Link to the new page: shown if the current user can perform the create operation on the form.
 
-![Home Page](images/home.png)
+![Home Page](../images/home.png)
 
 ## See also
 
