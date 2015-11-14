@@ -63,7 +63,7 @@ This is the `-Xmx` option of Java. Set it to at least 500 MB of heap for local t
 
 No, for multiple reasons:
 
-- The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [XBL](../xforms/xbl/faq.md), and [extension functions][10] not available in other XForms engines.
+- The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [XBL](../xforms/xbl/faq.md), and [extension functions](../xforms/xpath/README.md) not available in other XForms engines.
 - Forms designed with Form Builder assume some standard components provided by Form Runner, like sections and grids.
 - A lot of the functionality of the form is handled by the Form Runner runtime, including: saving and retrieving data from a database, autosave, permissions, services and actions, and more. The form itself mainly contains the data model, controls, and descriptions of actions and services.
 
