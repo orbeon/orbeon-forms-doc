@@ -29,11 +29,11 @@ When investigating issues, you often need to look at what goes "over the wire", 
 
 After you install WireShark, click on _Capture Options_, and setup a setup the _Capture Filter_ to be `tcp port 8080`. (Replace `8080` with the port on which your application server or services are listening, as appropriate.)
 
-![](images/wireshark-capture-filter.png)
+![](../images/wireshark-capture-filter.png)
 
 Click Start, and since you only interested about HTTP (versus TCP) traffic, in _Filter_ type `http` and press enter to apply.
 
-![](images/wireshark-filter.png)
+![](../images/wireshark-filter.png)
 
 Next WireShark will show you all the HTTP traffic that goes through the machine it is running on, to the port you specified (here 8080).
 
