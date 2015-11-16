@@ -75,14 +75,14 @@ The requested language is determined following this order of priority:
 1. The current Liferay language if Form Runner is used via the [Liferay proxy portlet](../link-embed/liferay-proxy-portlet.html) and the "Send Liferay language" option is selected.
 2. The value of the `fr-language` request parameter if specified.
 3. The value of the `fr-language` servlet session attribute if present.
-4. The value of the [`oxf.fr.default-language.*.*` property](../../configuration/properties/form-runner.html#default-language) if present.
+4. The value of the [`oxf.fr.default-language` property](../../configuration/properties/form-runner.html#default-language) if present.
 5. English (`en`) if everything else fails.
 
-Then the actual form language is selected:
+Then the actual Form Runner UI language is selected:
 
 - If the requested language is one of the available languages, then it is selected.
-- Otherwise, if the default language specified with `oxf.fr.default-language.*.*` is one of the available languages, then it is selected.
-- Otherwise the first language available in the form definition is selected.
+- Otherwise, if the default language specified with `oxf.fr.default-language` is one of the available languages, then it is selected.
+- Otherwise English is selected.
 
 *NOTE: This means that one language is always picked, even if it is not an "available" language.*
 
