@@ -16,24 +16,31 @@ For more on how to localize your forms in Form Builder, see [Form Localization i
 
 ## Language picked at runtime
 
-Several factors can impact what language is being used by Form Runner. To determine what language to use, Form Runner first establishes the *requested language*. In order of priority, the requested language is set to:
+Several factors can impact what language is being used by Form Runner. To determine what language to use, Form Runner determines a list of *available languages* for the form, as well as a *requested language*. From these, it determines the language to actually use.
 
+The list of available languages for the current form is selected as follows:
+
+- It starts with the list of languages defined in the form definition. There is always at least one such language present.
+- If the property `oxf.fr.available-languages.*.*` specifies at least one language, then only those languages which are both in the form definition *and* specified by the property are retained.
+
+*NOTE: The result can be an empty selection.*
+
+The requested language is determined following this order of priority:
+
+1. The language just selected by the user in the Form Runner language selector.
 1. The current Liferay language if Form Runner is used via the [Liferay proxy portlet](link-embed/liferay-proxy-portlet.html) and the "Send Liferay language" option is selected.
 2. The value of the `fr-language` request parameter if specified.
 3. The value of the `fr-language` servlet session attribute if present.
 4. The value of the [`oxf.fr.default-language.*.*` property](../../configuration/properties/form-runner.md#default-language) if present.
 5. English (`en`) if everything else fails.
 
-Then the list of *available languages* for the current form is selected as follows:
-
-- It starts with the list of languages defined in the form definition. There is always at least one such language present.
-- If the property `oxf.fr.available-languages.*.*` specifies at least one language, then only those languages which are both in the form definition *and* specified by the property are retained.
-
 Then the actual form language is selected:
 
-- 
+- If the requested language is one of the available languages, then it is selected.
+- Otherwise, if the default language specified with `oxf.fr.default-language.*.*` is one of the available languages, then it is selected.
+- Otherwise the first language available in the form definition is selected.
 
-goes does the current list and picks the first language it finds *and* in which your form is available:
+*NOTE: This means that one language is always picked, even if it is not an "available" language.*
 
 
 
