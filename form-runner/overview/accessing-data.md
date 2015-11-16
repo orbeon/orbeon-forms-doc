@@ -33,7 +33,7 @@ Let's see in more details what this entails:
 
 ### 2. Call the REST API
 
-Your second option is to have your app call the Orbeon Forms [persistence API](Form-Runner-~-APIs-~-Persistence) to retrieve the data saved by Orbeon Forms in the database. This is a simple REST API, and you'll want to make a first call to the [search API](Form-Runner-~-APIs-~-Persistence-~-Search) to *list* data submitted or saved with a specific form, and then a call to the [CRUD API](Form-Runner-~-APIs-~-Persistence-~-CRUD) to *retrieve* any piece of data you're interested in.
+Your second option is to have your app call the Orbeon Forms [persistence API](../form-runner/api/persistence/README.md) to retrieve the data saved by Orbeon Forms in the database. This is a simple REST API, and you'll want to make a first call to the [search API](../form-runner/api/persistence/search.md) to *list* data submitted or saved with a specific form, and then a call to the [CRUD API](../form-runner/api/persistence/crud.md) to *retrieve* any piece of data you're interested in.
 
 ![Doc - Accessing data - REST - Overview](https://orbeon.mybalsamiq.com/mockups/3496368.png?key=74ab13a5b0003ab944d0242d8f70f51c6293ce35)
 
@@ -41,7 +41,7 @@ As mentioned, the API provided by Orbeon Forms is quite simple, but there are a 
 
 1. You're deciding when to call the API. Most likely you'll want to do this at a regular interval, like every hour or every day, to process any new data submitted to the system. This means that you need to have a cron-like infrastructure to perform that task on a regular basis, and that your app won't know about new data in real-time.
 2. Assuming your app is just interested in processing new data, it will need to somehow keep track of what data it has already processed.
-3. Out-of-the-box, for security reasons, access to the REST API is blocked. You can either completely open up access to the API at the Orbeon Forms level, and protect it through some other mean (e.g. filter), or setup some authentication between the caller of the API and Orbeon Forms, through an authorization service. You can find more about this in [Authorization of Pages and Services](Controller-~-Authorization-of-Pages-and-Services).
+3. Out-of-the-box, for security reasons, access to the REST API is blocked. You can either completely open up access to the API at the Orbeon Forms level, and protect it through some other mean (e.g. filter), or setup some authentication between the caller of the API and Orbeon Forms, through an authorization service. You can find more about this in [Authorization of Pages and Services](../../xml-platform/controller/authorization-of-pages-and-services.md).
 
 ### 3. Accessing the database
 
