@@ -42,6 +42,8 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 
 ### Default language
 
+The following property determines Form Runner's default language:
+
 ```xml
 <property
     as="xs:string"
@@ -49,7 +51,18 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     value="en">
 ```
 
-Form Runner's default language. For more details, see [Language selection at runtime](../../form-runner/feature/localization.html#language-selection-at-runtime)
+When wildcards are specified, this property can control the default language for a given app or form.
+
+The property without wildcards can also be used to control the default language of pages which don't involve a specific form, such as the Form Runner Home Page
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.default-language"
+    value="en">
+```
+
+For more details, see [Language selection at runtime](../../form-runner/feature/localization.html#language-selection-at-runtime)
 
 ### Available languages
 
@@ -79,7 +92,7 @@ If the property is blank or contains the wildcard `*`, all the form languages ar
 
 [SINCE Orbeon Forms 4.3]
 
-For pages that don't involve a specific form, such as the Form Runner Home Page, the following property controls the available languages:
+For pages which don't involve a specific form, such as the Form Runner Home Page, the following property controls the available languages:
 
 ```xml
 <property
