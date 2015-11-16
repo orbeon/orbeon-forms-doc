@@ -66,8 +66,8 @@ See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/im
 
 ## See also
 
-- [Form Builder Validation](../form-builder/validation.md)
+- [Form Builder Validation](form-builder/validation.md)
 - [Enhanced validation in Form Builder and Form Runner](Enhanced validation in Form Builder and Form Runner)
-- [Form Builder Formulas](../form-builder/formulas.md)
+- [Form Builder Formulas](form-builder/formulas.md)
 - [Improving how we show help messages](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
 - [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
