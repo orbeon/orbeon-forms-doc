@@ -21,7 +21,7 @@ Several factors can impact what language is being used by Form Runner. To determ
 The list of available languages for the current form is selected as follows:
 
 - It starts with the list of languages defined in the form definition. There is always at least one such language present.
-- If the `oxf.fr.available-languages.*.*` [property](../../configuration/properties/form-runner.html#default-language) specifies at least one language, then only those languages which are both in the form definition *and* specified by the property are retained.
+- If the [`oxf.fr.available-languages.*.*` property](../../configuration/properties/form-runner.html#available-languages) specifies at least one language, then only those languages which are both in the form definition *and* specified by the property are retained.
 
 *NOTE: The result can be an empty selection.*
 
