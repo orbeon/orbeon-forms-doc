@@ -59,7 +59,7 @@ You will see the version number appear at the bottom of Orbeon Forms pages.
 
 ## I am getting frequent Out of Memory errors with Orbeon Forms. What can I do?
 
-The first thing to check is whether your Java VM has enough heap memory as documented in [Installation](FIXME Installation ~ Basic).
+The first thing to check is whether your Java VM has enough heap memory as documented in [Installation](../installation/README.md).
 
 ## What should I make of the SocketException I see in the logs?
 
