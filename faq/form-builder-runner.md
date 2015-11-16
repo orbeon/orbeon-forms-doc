@@ -8,7 +8,7 @@
 
 Orbeon Form Builder is a visual form designer which allows you to build and deploy forms in minutes right from your web browser.
 
-For a list of Form Builder features, see [Orbeon Forms Features](FIXME Orbeon Forms Features#list-of-orbeon-forms-features).
+For a list of Form Builder features, see [Orbeon Forms Features](../form-runner/feature/responsive-design.md).
 
 ### What is Orbeon Form Runner?
 
@@ -16,7 +16,7 @@ Orbeon Form Runner is the Orbeon Forms runtime environment which usually runs fo
 Form Runner manages form definitions and form data, handles search, validation, and takes care of the plumbing
 necessary to capture, save, import and export form data.
 
-For a list of Form Runner features, see [Orbeon Forms Features](FIXME Orbeon Forms Features#list-of-orbeon-forms-features).
+For a list of Form Runner features, see [Orbeon Forms Features](../form-runner/feature/responsive-design.md).
 
 ### What is the difference between Orbeon Forms, Form Runner and Form Builder?
 
@@ -167,7 +167,7 @@ No, this is not supported, sorry. Forms created with Form Builder require Form R
 
 ### Can I customize the appearance of forms I create with Form Builder?
 
-1. You can change fonts, colors, and other styling by creating your own CSS stylesheet, to [supplement or override the default CSS](FIXME Form-Runner-~-Configuration-properties#adding-your-own-css).
+1. You can change fonts, colors, and other styling by creating your own CSS stylesheet, to [supplement or override the default CSS](../form-runner/styling/css.md).
 1. For changes that you can't do with CSS and that require modifications to the HTML sent by Orbeon Forms to browser, you can change the Form Runner XBL and XSLT stylesheets. But this is hard work and we discourage it.
 
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning
