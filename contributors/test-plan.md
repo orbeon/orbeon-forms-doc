@@ -68,7 +68,7 @@ check that all PE features are available in PE, but not in CE:
             </property>
              ```
         - in `web.xml` uncomment authentication section
-        - access `http://localhost:8080/orbeon/fr/`
+        - access http://localhost:8080/orbeon/fr/
         - login with user with the `orbeon-user` role
         - check doesn't ask user for remote servers and only loads local form definitions
 - features which are not checked yet but should be
@@ -83,7 +83,7 @@ check that all PE features are available in PE, but not in CE:
         - in `properties-local.xml` add
             - `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
             - the properties for the private/public key
-        - access `http://localhost:8080/orbeon/fr/orbeon/bookshelf/new`
+        - access http://localhost:8080/orbeon/fr/orbeon/bookshelf/new
         - check the captcha isn't shown
 - Check other features listed on the [web site](http://www.orbeon.com/download)
 
@@ -115,7 +115,7 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
     - then change app name
 - Pages
     - FB: create form, publish
-    - FR: check it shows on `http://localhost:8080/orbeon/fr/`
+    - FR: check it shows on http://localhost:8080/orbeon/fr/
     - FR: create new form, review, back to edit ([#1643](https://github.com/orbeon/orbeon-forms/issues/1643))
     - FR: enter data, save
     - FR: check it shows in the summary page
