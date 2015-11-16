@@ -84,8 +84,6 @@ Then the actual Form Runner UI language is selected:
 - Otherwise, if the default language specified with `oxf.fr.default-language` is one of the available languages, then it is selected.
 - Otherwise English is selected.
 
-*NOTE: This means that one language is always picked, even if it is not an "available" language.*
-
 Once a language is selected, it is stored as the `fr-language` session attribute so that it is remembered when the user navigates pages. This behavior can be turned off if the `fr-remember-language=false` is passed as request parameter.
 
 ## Form Builder and Form Runner user interface
