@@ -14,7 +14,7 @@ This means that a form author could use Form Builder in the French language, cre
 
 For more on how to localize your forms in Form Builder, see [Form Localization in Form Builder](../../form-builder/localization.md). For more on how to localize the Form Builder or Form Runner user interface, see [Localizing Orbeon Forms](../../contributors/localizing-orbeon-forms.md). In what follows, we'll discuss how Form Runner picks which language to use at runtime, and what languages are supported by Form Builder and Form Runner out-of-the-box.
 
-## Language picked at runtime
+## Language selection at runtime
 
 ### Determination of the form's language
 
