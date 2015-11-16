@@ -64,8 +64,8 @@ The form's language is first selected as described above. Then the actual Form R
 
 The list of available languages is selected as follows:
 
-- It starts with the list of Form Runner UI languages. There is always at least one such language present.
-- If the [`oxf.fr.available-languages` property](../../configuration/properties/form-runner.html#available-languages) specifies at least one language, then only those languages which are both Form Runner UI languages *and* specified by the property are retained.
+- It starts with the list of Form Runner user interface languages. There is always at least one such language present.
+- If the [`oxf.fr.available-languages` property](../../configuration/properties/form-runner.html#available-languages) (without wildcards) specifies at least one language, then only those languages which are both Form Runner UI languages *and* specified by the property are retained.
 
 *NOTE: The result can be an empty selection.*
 
