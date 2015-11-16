@@ -153,13 +153,13 @@ A simple way do implement this is as follows:
 First, replace this line in `page-flow-portlet.xml`:
 
 ```xml
-<page id="home" path-info="/home/" model="apps/home/page-flow.xml">
+<page path="/" model="apps/home/page-flow.xml"/>
 ```
 
 with:
 
 ```xml
-<page id="home" path-info="/home/" view="home.xhtml">
+<page path="/" view="home.xhtml"/>
 ```
 
 Second, create a new file, `WEB-INF/resources/home.xhtml`, with content such as:
