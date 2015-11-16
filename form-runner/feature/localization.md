@@ -58,7 +58,7 @@ The form language is first selected as described above. Then the actual form lan
 - Otherwise, if the default language specified with `oxf.fr.default-language.*.*` is one of the available languages, then it is selected.
 - Otherwise English is selected.
 
-The Form Runner user interface can match the language of the form, or be separate. For example, if your form definition is in Mandarin Chinese, but Form Runner doesn't support that language for it's UI yet, the Form Runner UI will be in English.
+This means that the Form Runner user interface can be the same as the language of the form, or be different. For example, if your form definition is in Mandarin Chinese, but Form Runner doesn't support that language for its UI yet, the Form Runner UI will be in English.
 
 #### Home page
 
