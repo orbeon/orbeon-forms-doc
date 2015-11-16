@@ -157,7 +157,7 @@ The controls appear like this at design time:
 | **Dynamic Data Dropdown** | single | dynamic dropdown bound to a REST service |
 | **Autocomplete** | single | autocompletion |
 
-You edit the choices of most selection controls with the [Itemset Editor](form-builder/itemset-editor.md).
+You edit the choices of most selection controls with the [Itemset Editor](../form-builder/itemset-editor.md).
 
 The controls appear like this at design time:
 
