@@ -105,7 +105,7 @@ Finally, you can start Tomcat with:
 
 And test by going to:
 
-http://localhost:8080/orbeon/
+`http://localhost:8080/orbeon/`
 
 This will show the Orbeon Forms landing page.
 
