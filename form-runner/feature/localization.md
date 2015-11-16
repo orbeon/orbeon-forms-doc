@@ -43,7 +43,6 @@ Then the actual form language is selected:
 *NOTE: This means that one language is always picked, even if it is not an "available" language.*
 
 
-
 ## Form Builder and Form Runner user interface
 
 - F: full support
