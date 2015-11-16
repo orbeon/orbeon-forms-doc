@@ -4,7 +4,7 @@
 
 ## Upcoming releases
 
-See the [Orbeon Forms roadmap](Orbeon-Forms-Roadmap).
+See the [Orbeon Forms roadmap](images/legacy/reference-xforms-upload-image.png).
 
 ## Orbeon Forms 4.x series
 
