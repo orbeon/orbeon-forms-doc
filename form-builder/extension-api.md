@@ -18,7 +18,7 @@ Each extension is implemented with an XBL component. The component interacts wit
 ## Setting up an XBL component
 
 First, make sure you have chosen a prefix-to-namespace mapping for your components, as explained in
-[Automatic inclusion of XBL bindings](FIXME XForms-~-Configuration-Properties#automatic-inclusion-of-xbl-bindings).
+[Automatic inclusion of XBL bindings](../xforms/xbl/bindings.md).
 
 Below, we assume the following example mapping:
 
