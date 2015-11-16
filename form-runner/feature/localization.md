@@ -18,7 +18,7 @@ For more on how to localize your forms in Form Builder, see [Form Localization i
 
 Several factors can impact what language is being used by Form Runner. To determine what language to use, Form Runner goes does the current list and picks the first language it finds *and* in which your form is available:
 
-1. If Orbeon Forms is used with Liferay, the language coming from Liferay. <!-- TODO: provide mode details -->
+1. If Orbeon Forms is used with the [Liferay proxy portlet](link-embed/liferay-proxy-portlet.html) and the "Send Liferay language" option is selected, the language coming from Liferay is used.
 2. If present, the language specified by the `fr-language` request parameter.
 3. If present, the language specified by the `fr-language` servlet session attribute.
 4. If present, the language specified by the [`oxf.fr.default-language.*.*` property](../../configuration/properties/form-runner.md#default-language).
