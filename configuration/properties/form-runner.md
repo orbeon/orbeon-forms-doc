@@ -75,9 +75,7 @@ For a given form, you can filter which languages are available in the language s
   value="en fr"/>
 ```
 
-The language selector by default shows all languages available in the form definition.
-
-When this property is specified, only the intersection of the languages is shown in the selector. For example:
+The language selector by default shows all languages available in the form definition. When this property is specified, only the intersection of the languages is shown in the selector. For example:
 
 * Example 1
     * form languages: `en fr jp`
