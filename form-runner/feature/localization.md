@@ -21,7 +21,7 @@ Several factors can impact what language is being used by Form Runner. To determ
 The list of available languages for the current form is selected as follows:
 
 - It starts with the list of languages defined in the form definition. There is always at least one such language present.
-- If the property `oxf.fr.available-languages.*.*` specifies at least one language, then only those languages which are both in the form definition *and* specified by the property are retained.
+- If the `oxf.fr.available-languages.*.*` [property](../../configuration/properties/form-runner.html#default-language) specifies at least one language, then only those languages which are both in the form definition *and* specified by the property are retained.
 
 *NOTE: The result can be an empty selection.*
 
@@ -31,7 +31,7 @@ The requested language is determined following this order of priority:
 1. The current Liferay language if Form Runner is used via the [Liferay proxy portlet](link-embed/liferay-proxy-portlet.html) and the "Send Liferay language" option is selected.
 2. The value of the `fr-language` request parameter if specified.
 3. The value of the `fr-language` servlet session attribute if present.
-4. The value of the [`oxf.fr.default-language.*.*` property](../../configuration/properties/form-runner.md#default-language) if present.
+4. The value of the [`oxf.fr.default-language.*.*` property](../../configuration/properties/form-runner.html#default-language) if present.
 5. English (`en`) if everything else fails.
 
 Then the actual form language is selected:
@@ -42,6 +42,7 @@ Then the actual form language is selected:
 
 *NOTE: This means that one language is always picked, even if it is not an "available" language.*
 
+Once a language is selected, it is stored as the `fr-language` session attribute so that it is remembered when the user navigates pages. This behavior can be turned off if the `fr-remember-language=false` is passed as request parameter.
 
 ## Form Builder and Form Runner user interface
 
