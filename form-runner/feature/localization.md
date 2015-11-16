@@ -16,7 +16,11 @@ For more on how to localize your forms in Form Builder, see [Form Localization i
 
 ## Language picked at runtime
 
-Several factors can impact what language is being used by Form Runner. To determine what language to use, Form Runner determines a list of *available languages* for the form, as well as a *requested language*. From these, it determines the language to actually use.
+### Determination of the form's language
+
+The following applies to Form Runner pages which deal with a given form definition, such as the Summary page and Detail page. It doesn't apply to the Form Runner Home page, which deals with multiple form definitions.
+
+To determine what language to use, Form Runner determines a list of *available languages* for the form, as well as a *requested language*. From these, it determines the language to actually use.
 
 The list of available languages for the current form is selected as follows:
 
@@ -43,6 +47,22 @@ Then the actual form language is selected:
 *NOTE: This means that one language is always picked, even if it is not an "available" language.*
 
 Once a language is selected, it is stored as the `fr-language` session attribute so that it is remembered when the user navigates pages. This behavior can be turned off if the `fr-remember-language=false` is passed as request parameter.
+
+### Determination of the Form Runner UI language
+
+#### Summary page and Detail page
+
+The form language is first selected as described above. Then the actual form language is selected:
+
+- If the form language is one of the available Form Runner UI languages, then it is selected.
+- Otherwise, if the default language specified with `oxf.fr.default-language.*.*` is one of the available languages, then it is selected.
+- Otherwise English is selected.
+
+The Form Runner user interface can match the language of the form, or be separate. For example, if your form definition is in Mandarin Chinese, but Form Runner doesn't support that language for it's UI yet, the Form Runner UI will be in English.
+
+#### Home page
+
+xxx
 
 ## Form Builder and Form Runner user interface
 
