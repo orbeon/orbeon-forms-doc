@@ -12,7 +12,7 @@ Form Builder and Form Runner can produce PDF output in two ways:
 - __Template-based__
     - You upload a PDF file using the Upload PDF dialog in the toolbox. At runtime, Form Runner fills-out Acrobat fields in the template.
     - This mode is automatically enabled for a form if a PDF template is attached.
-    - For more, see [PDF Templates](form-builder/pdf-templates.md).
+    - For more, see [PDF Templates](../form-builder/pdf-templates.md).
 
 ## Availability
 
