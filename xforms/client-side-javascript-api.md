@@ -202,7 +202,7 @@ You can listen in your code on the following events:
 
 - `ORBEON.xforms.Events.orbeonLoadedEvent` – Fired when the form is fully loaded and initialized.
 - `ORBEON.xforms.Events.errorEvent` – Fired when the JavaScript code catches an error. By default a dialog is shown to the user when an error is intercepted. If you prefer to show your own dialog or to implement some other behavior in case of error,  most likely you will want to:
-    - Disable the default error dialog by setting the [oxf.xforms.show-error-dialog](xforms/error-handling.md#error-dialog) property to `false`.
+    - Disable the default error dialog by setting the [oxf.xforms.show-error-dialog](error-handling.md#error-dialog) property to `false`.
     - Register your own listener on `ORBEON.xforms.Events.errorEvent`.
 
 To register (subscribe) your event listener on, say `orbeonLoadedEvent`, write:
