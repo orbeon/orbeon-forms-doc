@@ -21,7 +21,7 @@ As of 2015-10-22 this page is still being updated.
 
 - Inserting and reordering grid rows: [blog post](http://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
 - Repeated grids and sections
-    - Repeated grids: [doc](form-builder/repeated-grids.html), [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
+    - Repeated grids: [doc](form-builder/repeated-grids.md), [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
     - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
     - Options for new repeat iterations: [blog post](http://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
 - Section Templates: [doc](form-builder/section-templates.md)

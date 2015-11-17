@@ -219,7 +219,7 @@ When this is enabled, the following portal URL parameters are propagated to Orbe
 
 [SINCE Orbeon Forms 4.7]
 
-This is the same as the [server-side embedding configuration](java-api.html).
+This is the same as the [server-side embedding configuration](java-api.md).
 
 *NOTE: Be aware that `web.xml` uses `<param-name>` and `<param-value>`, but `portlet.xml` uses `<name>` and `<value>`.*
 
