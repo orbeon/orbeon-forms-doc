@@ -46,7 +46,7 @@ When about to upgrade, we recommend you go through the release notes for all ver
 - [4.0](http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/40#TOC-Compatibility-notes)
 - [3.9](http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/39#TOC-Compatibility-notes)
 
-See also [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history).
+See also [Orbeon Forms release history](../../release-history.md).
 
 ## Reliance on Orbeon Forms internals
 
