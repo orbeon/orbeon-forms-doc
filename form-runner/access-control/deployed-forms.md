@@ -43,7 +43,7 @@ In the example below:
 
 ## Permissions for owner / group members
 
-See [Owner and Group Member Permissions](../form-runner/access-control/owner-group.md).
+See [Owner and Group Member Permissions](../../form-runner/access-control/owner-group.md).
 
 ## Access restrictions
 
