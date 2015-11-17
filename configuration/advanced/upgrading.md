@@ -78,7 +78,7 @@ Each new version brings:
 
 In addition, we can support newer version of Orbeon Forms much better than older versions.
 
-See the [release notes of all the versions](../../Orbeon-Forms-release-history) for more details.
+See the [release notes of all the versions](../../release-history.md) for more details.
 
 In addition, if you are on the 3.x series of Orbeon Forms, the 4.x series brings:
 
