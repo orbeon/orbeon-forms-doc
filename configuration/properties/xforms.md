@@ -210,11 +210,11 @@ Individual controls also support this property locally:
 
 By default, YUI date picker shows as follows:
 
-![Default date picker](images/xforms-datepicker-simple.png)
+![Default date picker](../../xforms/images/xforms-datepicker-simple.png)
 
 You can set the `oxf.xforms.datepicker.two-months` property to `true`, and the date picker will show two months at a time:
 
-![Date picker with two months displayed at a time](images/xforms-datepicker-navigator.png)
+![Date picker with two months displayed at a time](../../xforms/images/xforms-datepicker-navigator.png)
 
 By default, the property is set to `false`, (only one month is shown). You can override by adding the following to your `properties-local.xml`:
 
@@ -226,7 +226,7 @@ By default, the property is set to `false`, (only one month is shown). You can o
 
 With the `oxf.xforms.datepicker.navigator` property set to `true` (the default), when you click on the month headers, a small dialog allows you to type a year and select a month from a drop-down. This is particularly convenient if the date you want to capture has a chance to be further in the future or in the past (such as a birth date).
 
-![Month and year selection in YUI date picker with navigator and two months properties enabled](images/xforms-datepicker-month-year.png)
+![Month and year selection in YUI date picker with navigator and two months properties enabled](../../xforms/images/xforms-datepicker-month-year.png)
 
 You disable the navigator by setting the following property to `false` (it is `true` by default):
 
