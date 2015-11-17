@@ -31,7 +31,7 @@ You can use components to implement:
 
 This is not an exhaustive list. Your imagination is the limit!
 
-You might want to also check the [components](FIXME Form Runner ~ XBL Components) provided out of the box by Orbeon Forms.
+You might want to also check the [components](../../form-runner/component/README.md) provided out of the box by Orbeon Forms.
 
 ## Terminology
 
@@ -43,7 +43,3 @@ You might want to also check the [components](FIXME Form Runner ~ XBL Components
 * **Component user:** the person who uses a component.
     * In general, _writing_ a component will be harder than _using_ one.
     * Obviously the user can be the same as the author!
-
-## See also
-
-- [Form Runner XBL Components](FIXME Form Runner ~ XBL Components)
