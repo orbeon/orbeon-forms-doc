@@ -250,7 +250,7 @@ This property controls whether Form Runner attempts to set focus on the first co
     value="true"/>
 ```
 
-In some cases, such as [embedding](FIXME  Form Runner ~ APIs ~ Server side Embedding), it can be desirable to disable this by setting the property to `false`.
+In some cases, such as [embedding](../../form-runner/link-embed/java-api.md), it can be desirable to disable this by setting the property to `false`.
 
 ### PDF
 
