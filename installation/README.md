@@ -80,7 +80,7 @@ Often, it is enough to set it to the following (adjusting for port and prefix):
     value="http://localhost:8080/orbeon"/>
 ```
 
-For more information about how to set configuration properties, see [Configuration Properties](FIXME  Installation ~ Configuration Properties).
+For more information about how to set configuration properties, see [Configuration Properties](../configuration/properties/README.md).
 
 ## Logging configuration
 
