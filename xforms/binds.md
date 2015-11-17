@@ -109,7 +109,7 @@ _NOTE: This is the behavior with Orbeon Forms 3.9 onwards. With Orbeon Forms 3.8
 - The `xxf:evaluate-bind-property()` function evaluates a property of a given bind.
 - The `xxf:type()` function returns the type of the instance data node passed as parameter.
 
-For details, see [XPath Function Library](FIXME XForms ~ XPath Function Library).
+For details, see [XPath Function Library](../xforms/xpath/standard-functions.md).
 
 ### Custom MIPs
 
