@@ -4,5 +4,13 @@
 
 This page and sub-pages describe the Orbeon Forms XPath function library. The documentation is split into:
 
-- new [Standard Functions](../../xforms/xpath/standard-functions.md) documentation
-- new [Extension Functions](FIXME XForms ~ XPath Function Library ~ Extension Functions) documentation
+- [Standard Functions](standard-functions.md) documentation
+- Extension Functions
+    - [Core functions](extension-core.md)
+    - [Model functions](extension-model.md)
+    - [Validation functions](extension-validation.md)
+    - [Controls functions](extension-controls.md)
+    - [XML functions](extension-xml.md)
+    - [HTTP functions](extension-http.md)
+    - [Other functions](extension-other.md)
+    - [Deprecated functions](deprecated-functions.md)
