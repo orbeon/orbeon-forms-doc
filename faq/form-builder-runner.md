@@ -43,7 +43,7 @@ If you're looking to run Orbeon Forms in the cloud, make sure to pick a configur
 
 ### Where is the Form Builder documentation?
 
-See the [Form Builder](faq/form-builder-runner.md).
+See the [Form Builder](../form-builder/README.md).
 
 ## Questions about specific features
 
