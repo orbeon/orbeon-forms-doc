@@ -63,7 +63,7 @@ This enables two features:
 - the ability to assign a specific `id` attribute to a property
 - the ability to specify multiple `readonly`, `required`, `relevant`, and `constraint` rules (which combined using either a boolean "or" or a boolean "and")
 
-See [XForms Validation](xforms/validation.md) for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
+See [XForms Validation](../xforms/validation.md) for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
 
 ### Multiple binds pointing to the same node
 
@@ -240,7 +240,7 @@ You often want to present a form without allowing the user to enter data. An eas
 
 ## See also
 
-- [XForms Validation](xforms/validation.md)
+- [XForms Validation](../xforms/validation.md)
 - [XForms Model bind variables](xforms/model-bind-variables.md)
 - [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
