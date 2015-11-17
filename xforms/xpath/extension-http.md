@@ -219,7 +219,7 @@ The `xxf:set-session-attribute()` function stores the given value as a session a
 xxf:user-group() as xs:string?
 ```
 
-Return the current user's group if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](FIXME Form Runner ~ Access Control ~ Setup).
+Return the current user's group if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
 ## xxf:user-roles()
 
@@ -229,7 +229,7 @@ Return the current user's group if available. This function works with container
 xxf:user-roles() as xs:string*
 ```
 
-Return the current user's groups if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](FIXME Form Runner ~ Access Control ~ Setup).
+Return the current user's groups if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
 ## xxf:username()
 
@@ -239,4 +239,4 @@ Return the current user's groups if available. This function works with containe
 xxf:username() as xs:string?
 ```
 
-Return the current user's username if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](FIXME Form Runner ~ Access Control ~ Setup).
+Return the current user's username if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
