@@ -85,7 +85,7 @@ The Required validation can have a custom alert message.
 
 A formula validation is a boolean XPath expression running with the XML element containing the value as context item. The validation *fails* if the expression doesn't return `true()`. This also means that it fails if there is an error while running the validation.
 
-See also [Form Builder Formulas](form-builder/formulas.md).
+See also [Form Builder Formulas](formulas.md).
 
 For example the following expression, which would make sense for a birthday date field, checks that the user is 18 year old or older:
 
