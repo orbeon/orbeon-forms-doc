@@ -4,7 +4,7 @@
 
 ## Default values
 
-For the latest default values of Form Builder properties, see [properties-form-builder.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-builder.xml).
+For the latest default values of Form Builder properties, see [properties-form-builder.xml](://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-builder.xml).
 
 ## Toolbox 
 
@@ -39,7 +39,7 @@ In that property, the value of `$GROUPNAME` determines a grouping of the control
            oxf:/xbl/orbeon/explanation/explanation.xbl"/>
 ```
 
-To properly show up in the toolbox, XBL files need to include the appropriate [component metadata](../form-builder/metadata.md).
+To properly show up in the toolbox, XBL files need to include the appropriate [component metadata](../../form-builder/metadata.md).
 
 ### Other toolbox features
 
