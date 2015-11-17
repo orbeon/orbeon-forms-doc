@@ -193,7 +193,7 @@ The `xxf:defaults` attribute is an AVT so can include XPath expressions between 
 
 #### Evaluation of initial values upon insert
 
-See [Evaluation of initial values upon insert](../xforms/actions/repeat-insert-delete.md).
+See [Evaluation of initial values upon insert](../actions/repeat-insert-delete.md).
 
 ### Deferred rebuild, recalculate and revalidate
 
