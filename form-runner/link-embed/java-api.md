@@ -194,7 +194,7 @@ In your Java web application, any page covered by the servlet filter can call th
 
 As of Orbeon Forms 4.7, the embedded form cannot navigate in place to another form or mode (such as Review).
 
-However, it can save form or send form data as it does in the standalone case. It can also run custom [processes](form-runner/advanced/buttons-and-processes/README.md) which can redirect the entire embedding page with `navigate`, or run JavaScript functions with `navigate(uri = "javascript:alert('Done!')")`. This allows communicating with the embedding application.
+However, it can save form or send form data as it does in the standalone case. It can also run custom [processes](../../form-runner/advanced/buttons-and-processes/README.md) which can redirect the entire embedding page with `navigate`, or run JavaScript functions with `navigate(uri = "javascript:alert('Done!')")`. This allows communicating with the embedding application.
 
 ## How it works
 
