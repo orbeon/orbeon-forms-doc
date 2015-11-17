@@ -559,7 +559,7 @@ Configure a test SMTP host for all email processors. This global property when s
     value="joe@example.org"/>
 ```
 
-This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes](configuration/advanced/run-modes.md)).
+This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes](../../configuration/advanced/run-modes.md)).
 
 ### Test recipient
 
@@ -573,7 +573,7 @@ Configure a test recipient email address for all email processors. This global p
     value="joe@example.org"/>
 ```
 
-This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes](FIXME Installation ~ Run Modes)).
+This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes](../../configuration/advanced/run-modes.md)).
 
 ## Rarely used properties
 
