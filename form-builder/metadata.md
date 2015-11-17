@@ -6,7 +6,7 @@
 
 XBL components can be loaded by the Form Builder toolbox. In order for Form Builder to have information about those components, metadata can be added to each XBL binding.
 
-![](../images/toolbox-text-controls.png)
+![](images/text-controls.png)
 
 ## Namespace
 
@@ -84,7 +84,7 @@ If your component only needs a template for the view, which is maybe the most fr
 
 ## Control metadata for the Edit Control Details dialog
 
-![](../images/toolbox-fields.png)
+![](images/toolbox-fields.png)
 
 All the controls share certain properties, like the control name. However, some XBL components take additional properties, set at form design time, in Form Builder. For instance the [Dynamic Data Dropdown](../form-runner/component/dynamic-data-dropdown.md) takes the HTTP URI of a service returning an XML document with the items shown in the drop-down, an XPath expression extracting the items from the XML document, and two XPath expressions returning the label and value for each item.
 
