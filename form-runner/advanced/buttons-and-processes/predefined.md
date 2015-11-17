@@ -17,7 +17,7 @@ The following buttons are predefined and associated with the processes of the sa
 | `edit` | navigate to the edit page from the review page | 4.2 |
 | `send` | validate then send data to a service | 4.2 |
 | `pdf` | generate a PDF version of the current form | 4.2 |
-| `tiff` | generate a TIFF version of the current form (see [TIFF Production](TIFF Production)) | 4.2 |
+| `tiff` | generate a TIFF version of the current form (see [TIFF Production](../../feature/tiff-production.md)) | 4.2 |
 | `email` | validate then email data | 4.2 |
 | `collapse-all` | run the action of the same name | 4.2 |
 | `expand-all` | run the action of the same name | 4.2 |
