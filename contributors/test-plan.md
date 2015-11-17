@@ -317,7 +317,7 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
     - in Form Builder
         - create new form `exist/permissions`, `oracle/permissions`, `mysql/permissions`, `postgresql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
         - save and publish
-        - enable permissions for form and configure like on [doc page](../../form-runner/access-control/deployed-forms.md#example)
+        - enable permissions for form and configure like on [doc page](../form-runner/access-control/deployed-forms.md#example)
     - make sure permissions are followed
         - anonymous user
             - home page: link goes to new page (not summary)
