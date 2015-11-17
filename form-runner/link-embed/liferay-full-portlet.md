@@ -70,7 +70,7 @@ Installation steps:
 
     Select the _Orbeon Forms Portlet_ entry:
 
-    ![](../images/liferay-applications.png)
+    ![](images/liferay-applications.png)
 
     Drag the portlet to the page. The Orbeon Forms home page will show.
 
