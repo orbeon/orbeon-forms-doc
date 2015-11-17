@@ -239,7 +239,7 @@ You disable the navigator by setting the following property to `false` (it is `t
 When you use an `<xf:upload>` control, as soon users select a file, the file is uploaded in the background from the browser to Orbeon Forms. While the file is
  uploaded, a progress bar is show in the browser, in place of the file selection control, as in this screenshot:
 
-![Upload Progress](../../images/xforms-upload-progress-bar.png)
+![Upload Progress](../../xforms/images/xforms-upload-progress-bar.png)
 
 To know how much of the file has been uploaded so far, the browser sends an Ajax request to the server, at a regular interval, asking the server what
  percentage of the file it has received. By default, the browser sends a request every 2 seconds. You can change this by overriding the following property.
