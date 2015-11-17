@@ -14,7 +14,7 @@ If you have a form with a section containing a grid with two columns, on a deskt
 
 When the same form is loaded from a mobile phone, fields will automatically be shown in one column to better fit that screen:
 
-<p align="center"><img src="images/responsive-mobile.png" width="40%" alt="Fields as shown on a mobile phone"></p>
+<p align="center"><img src="../images/responsive-mobile.png" width="40%" alt="Fields as shown on a mobile phone"></p>
 
 ## Limitations
 
