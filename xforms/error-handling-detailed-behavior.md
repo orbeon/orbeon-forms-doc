@@ -2,7 +2,7 @@
 
 See also:
 
-- [XForms Error Handling](xforms/error-handling.md)
+- [XForms Error Handling](../xforms/error-handling.md)
 
 ## Philosophy of error handling
 
