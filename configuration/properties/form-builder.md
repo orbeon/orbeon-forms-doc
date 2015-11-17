@@ -4,7 +4,7 @@
 
 ## Default values
 
-For the latest default values of Form Builder properties, see [properties-form-builder.xml](://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-builder.xml).
+For the latest default values of Form Builder properties, see [properties-form-builder.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-builder.xml).
 
 ## Toolbox 
 
