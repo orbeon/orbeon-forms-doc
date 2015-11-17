@@ -4,7 +4,7 @@
 
 ## Support
 
-See [Database Support](FIXME Orbeon Forms Features ~ Database Support) for the detail of which persistence layers and Orbeon Forms versions support the autosave feature.
+See [Database Support](../form-runner/persistence/db-support.md) for the detail of which persistence layers and Orbeon Forms versions support the autosave feature.
 
 ## See also
 
