@@ -1,6 +1,6 @@
 # XForms 2.0
 
-XForms 2.0 features available as of Orbeon Forms 4.3:
+[XForms 2.0](http://www.w3.org/MarkUp/Forms/wiki/XForms_2.0) features available as of Orbeon Forms 4.3:
 
 - `xf:var`
 - `xf:repeat` over sequences of atomic values and nodes
