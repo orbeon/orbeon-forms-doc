@@ -1,6 +1,6 @@
 # XForms 2.0
 
-[XForms 2.0](http://www.w3.org/MarkUp/Forms/wiki/XForms_2.0) features available as of Orbeon Forms 4.3:
+Heere at the feature from [XForms 2.0](https://www.w3.org/community/xformsusers/wiki/XForms_2.0) and its [XPath expression module](https://www.w3.org/community/xformsusers/wiki/XPath_Expressions_Module) that are available as of Orbeon Forms 4.3:
 
 - `xf:var`
 - `xf:repeat` over sequences of atomic values and nodes
