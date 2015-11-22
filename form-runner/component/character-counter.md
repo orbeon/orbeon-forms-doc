@@ -26,7 +26,7 @@ The component is generally activated using the `appearance` attribute:
 ```xml
 <fr:input bind="message-bind" appearance="character-counter">
     <xf:label>Message</xf:label>
-</fr:wizard>
+</fr:input>
 ```
 
 The component automatically encapsulates the specified control, here `xf:input`.
