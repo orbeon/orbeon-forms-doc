@@ -91,6 +91,6 @@ This way you can write CSS that only impact the appearance of the PDF, not that 
 
 
 [1]: http://getbootstrap.com/2.3.2/
-[2]: ../../configuration/properties/form-runner.html#adding-your-own-css
+[2]: ../../configuration/properties/form-runner.md#adding-your-own-css
 [4]: http://getbootstrap.com/2.3.2/scaffolding.html
 [5]: https://developer.chrome.com/devtools
