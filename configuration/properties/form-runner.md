@@ -768,7 +768,7 @@ The following property controls the whether collapsing/opening of sections uses 
 
 A value of `false` can be more efficient with slower browsers or large forms.
 
-#### Deprecated properties
+### Deprecated properties
 
 Before Orbeon Forms 4.11, you could use the following properties, deprecated since Orbeon Forms 4.11. Section collapsing:
 
