@@ -701,9 +701,50 @@ These properties control email sending in Form Runner:
 
 ## Sections and grids
 
+### Appearance of repeated sections
 
+[SINCE Orbeon Forms 4.11]
 
-## Noscript and Ajax modes
+### Appearance of repeated grids
+
+[SINCE Orbeon Forms 4.11]
+
+### Section collapsing
+
+Noscript: allow sections to collapse
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.noscript.section.collapse.*.*"
+    value="true"/>
+```
+
+Whether sections in noscript mode are allowed to collapse. A value of false may make sections more accessible and less confusing to screen reader users. Default is true.
+
+### Ajax mode: allow sections to collapse
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.ajax.section.collapse.*.*"
+    value="true"/>
+```
+
+Whether sections in Ajax mode are allowed to collapse. Default is true.
+
+### Ajax mode: allow sections to animate
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.ajax.section.animate.*.*"
+    value="true"/>
+```
+
+Whether sections in Ajax mode are allowed to open and close with an animation. Default is true. A value of false is more efficient with slow browsers / large forms.
+
+## Noscript properties
 
 ### Show Noscript link
 
