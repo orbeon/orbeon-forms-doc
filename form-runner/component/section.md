@@ -14,6 +14,14 @@ The `fr:section` component organizes [grids](grid.md) under a header or title. F
 
 ## Basic usage
 
+### Non-repeated mode
+
+TODO
+
+### Repeated mode
+
+TODO
+
 Attributes:
 
 TODO:
