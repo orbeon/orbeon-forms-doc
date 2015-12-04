@@ -733,6 +733,28 @@ See also the [`appearance`](../../form-runner/component/grid.html#repeated-mode)
 
 ### Section collapsing
 
+[SINCE Orbeon Forms 4.11]
+
+The following property allows you to set whether a section content can be collapsed by clicking on its title for all forms or for a subset of forms:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.section.collapse.*.*"
+    value="false"/>
+```
+
+By default, sections are allowed to collapse.
+
+Before Orbeon Forms 4.11, you could use the following property (deprecated since Orbeon Forms 4.11):
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.ajax.section.collapse.*.*"
+    value="true"/>
+```
+
 Noscript: allow sections to collapse
 
 ```xml
@@ -746,12 +768,7 @@ Whether sections in noscript mode are allowed to collapse. A value of false may 
 
 ### Ajax mode: allow sections to collapse
 
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.detail.ajax.section.collapse.*.*"
-    value="true"/>
-```
+
 
 Whether sections in Ajax mode are allowed to collapse. Default is true.
 
