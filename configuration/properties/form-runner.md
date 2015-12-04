@@ -209,6 +209,8 @@ The property configures which buttons are included on the Detail Page, and in wh
 
 ### Loading indicator inside buttons
 
+[SINCE Orbeon Forms 4.11]
+
 The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BUTTON` by a specific button name, allows you to instruct Orbeon Forms to show a loading indicator inside the button when that button on the detail page is pressed, as shown below:
 
 ![Loading indicator inside Save](http://i.imgur.com/w1qbdF8.gif)
