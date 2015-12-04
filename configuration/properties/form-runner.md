@@ -705,7 +705,16 @@ These properties control email sending in Form Runner:
 
 [SINCE Orbeon Forms 4.11]
 
-See the [`appearance`](../../form-runner/component/grid.html#repeated-mode) attribute.
+The following property allows you to set the appearance of repeated sections to `full` (the default) or `minimal` for all forms or for a subset of forms:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.section.repeat.appearance.*.*"
+    value="minimal"/>
+```
+
+See also the [`appearance`](../../form-runner/component/grid.html#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.html).
 
 ### Appearance of repeated grids
 
