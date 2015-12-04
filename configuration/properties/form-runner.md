@@ -699,6 +699,10 @@ These properties control email sending in Form Runner:
 * The `to` property specifies the recipient email address(es) of the email sent.
 * The `attach-pdf`, `attach-tiff` and `attach-xml` properties control whether PDF, TIFF and/or XML versions of the form data are attached to the email.
 
+## Sections and grids
+
+
+
 ## Noscript and Ajax modes
 
 ### Show Noscript link
@@ -723,38 +727,6 @@ Whether to show the link to the noscript/full version.
 
 Whether forms in noscript mode are allowed to use a layout based on tables. If false, no tables are used. WYSIWYG is lost, but the form may be more accessible. Default is true.
 
-Noscript: allow sections to collapse
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.detail.noscript.section.collapse.*.*"
-    value="true"/>
-```
-
-Whether sections in noscript mode are allowed to collapse. A value of false may make sections more accessible and less confusing to screen reader users. Default is true.
-
-### Ajax mode: allow sections to collapse
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.detail.ajax.section.collapse.*.*"
-    value="true"/>
-```
-
-Whether sections in Ajax mode are allowed to collapse. Default is true.
-
-### Ajax mode: allow sections to animate
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.detail.ajax.section.animate.*.*"
-    value="true"/>
-```
-
-Whether sections in Ajax mode are allowed to open and close with an animation. Default is true. A value of false is more efficient with slow browsers / large forms.
 
 [6]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base
 [11]: https://www.google.com/recaptcha/admin/create
