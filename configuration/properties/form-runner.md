@@ -744,9 +744,22 @@ The following property allows you to set whether a section content can be collap
     value="false"/>
 ```
 
-By default, sections are allowed to collapse.
+By default, sections are allowed to collapse. 
 
-Before Orbeon Forms 4.11, you could use the following property (deprecated since Orbeon Forms 4.11):
+The following property controls the same beahvior in noscript mode:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.section.noscript.collapse.*.*"
+    value="false"/>
+```
+
+A value of `false` may make sections more accessible and less confusing to screen reader users.
+
+#### Deprecated properties
+
+Before Orbeon Forms 4.11, you could use the following properties, deprecated since Orbeon Forms 4.11:
 
 ```xml
 <property
@@ -755,7 +768,7 @@ Before Orbeon Forms 4.11, you could use the following property (deprecated since
     value="true"/>
 ```
 
-Noscript: allow sections to collapse
+and:
 
 ```xml
 <property
@@ -763,14 +776,6 @@ Noscript: allow sections to collapse
     name="oxf.fr.detail.noscript.section.collapse.*.*"
     value="true"/>
 ```
-
-Whether sections in noscript mode are allowed to collapse. A value of false may make sections more accessible and less confusing to screen reader users. Default is true.
-
-### Ajax mode: allow sections to collapse
-
-
-
-Whether sections in Ajax mode are allowed to collapse. Default is true.
 
 ### Ajax mode: allow sections to animate
 
