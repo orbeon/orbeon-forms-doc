@@ -15,7 +15,7 @@ The `fr:grid` component organizes contained controls in a grid of rows and colum
 
 ## Basic usage
 
-Non-repeated usage:
+### Non-repeated mode
 
 ```xml
 <fr:grid id="note-grid">
@@ -39,7 +39,7 @@ Attributes:
 
 _NOTE: In the future `bind` and `ref` should be supported._
 
-Repeated usage:
+### Repeated mode
 
 ```xml
 <fr:grid
