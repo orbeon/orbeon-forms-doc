@@ -765,7 +765,7 @@ Before Orbeon Forms 4.11, you could use the following properties, deprecated sin
 <property
     as="xs:boolean"
     name="oxf.fr.detail.ajax.section.collapse.*.*"
-    value="true"/>
+    value="false"/>
 ```
 
 and:
@@ -774,7 +774,7 @@ and:
 <property
     as="xs:boolean"
     name="oxf.fr.detail.noscript.section.collapse.*.*"
-    value="true"/>
+    value="false"/>
 ```
 
 ### Ajax mode: allow sections to animate
