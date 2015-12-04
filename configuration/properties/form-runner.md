@@ -207,6 +207,22 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
 
 The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md).
 
+### Loading indicator inside the buttons
+
+The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BUTTON` by a specific button name, allows you to instruct Orbeon Forms to show a loading indicator inside the button when that button on the detail page is pressed, as shown below:
+
+![Loading indicator inside Save](http://i.imgur.com/w1qbdF8.gif)
+
+By default, only the `save-final` button is setup to show this loading indicator, this with the following property:
+
+```xml
+<property as="xs:boolean"
+          name="oxf.fr.detail.loading-indicator.save-final.*.*"
+          value="true"/>
+```
+
+Should you not want the loading indicator to show for that button, override this property and set its value to `false`. To have the loading indicator show for other buttons, set a similar property, replacing `save-final` by the name of the button for which you'd like the loading indicator to show.
+
 ### Buttons in Detail Page custom views
 
 [SINCE 2013-05-03 / Orbeon Forms 4.2]
