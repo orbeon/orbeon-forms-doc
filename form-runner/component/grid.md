@@ -108,10 +108,6 @@ Attributes:
     - does not show the row menu and associated features
     - instead just provides "Add another" and "Remove" links at the bottom
 
-## Configuration properties
-
-[SINCE ]
-
 ## Data format
 
 With `repeat="content"`:
