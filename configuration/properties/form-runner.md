@@ -757,6 +757,13 @@ The following property controls the same beahvior in noscript mode:
 
 A value of `false` may make sections more accessible and less confusing to screen reader users.
 
+The following property controls the whether collapsing/opening of sections uses an animation. The default is `true`:
+
+```xml
+```
+
+A value of `false` can be more efficient with slower browsers or large forms.
+
 #### Deprecated properties
 
 Before Orbeon Forms 4.11, you could use the following properties, deprecated since Orbeon Forms 4.11:
@@ -777,16 +784,12 @@ and:
     value="false"/>
 ```
 
-### Ajax mode: allow sections to animate
-
 ```xml
 <property
     as="xs:boolean"
     name="oxf.fr.detail.ajax.section.animate.*.*"
     value="true"/>
 ```
-
-Whether sections in Ajax mode are allowed to open and close with an animation. Default is true. A value of false is more efficient with slow browsers / large forms.
 
 ## Noscript properties
 
