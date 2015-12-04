@@ -18,18 +18,21 @@ The `fr:section` component organizes [grids](grid.md) under a header or title. F
 
 TODO
 
-### Repeated mode
-
-TODO
-
 Attributes:
 
 TODO:
 
 - `collapse`
   - whether the section can be collapsed by clicking on its title
-  - default: `true`
-  - values: `true` or `false`
+  - `true` (default)
+    - allow section to be collapsed
+  - `false`
+    - don't allow section to be collapsed
+
+### Repeated mode
+
+TODO
+
 - `appearance` [SINCE Orbeon Forms 4.11]
   - `full`
     - the default appearance, as with Orbeon Forms 4.10 and earlier
