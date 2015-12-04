@@ -175,6 +175,7 @@ These events are not dispatched if the number of iterations changes by other mea
 
 ## See also
 
+- [Section component](section.md)
 - [Form Builder: Repeated Grids ](../../form-builder/repeated-grids.md)
 - Example of use outside of Form Runner: [gist](https://gist.github.com/orbeon/5d592bfa4640569b116f)
 - [Evaluation of initial values upon insert](../../xforms/actions/repeat-insert-delete.md#evaluation-of-initial-values-upon-insert)
