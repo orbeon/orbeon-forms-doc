@@ -800,7 +800,7 @@ Section collapsing animation:
 
 ## Noscript properties
 
-### Show Noscript link
+### Show noscript link
 
 ```xml
 <property
