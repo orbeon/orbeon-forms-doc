@@ -760,6 +760,10 @@ A value of `false` may make sections more accessible and less confusing to scree
 The following property controls the whether collapsing/opening of sections uses an animation. The default is `true`:
 
 ```xml
+<property 
+    as="xs:boolean
+    name="oxf.xforms.xbl.fr.section.animate.*.*"
+    value="false"/>
 ```
 
 A value of `false` can be more efficient with slower browsers or large forms.
