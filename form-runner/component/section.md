@@ -46,7 +46,7 @@ TODO
 
 [SINCE Orbeon Forms 4.11]
 
-The following events are dispatched to the `fr:grid` element:
+The following events are dispatched to the `fr:section` element:
 
 | Event name | Description |
 | --- | --- |
