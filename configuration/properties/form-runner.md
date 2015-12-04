@@ -820,7 +820,7 @@ Whether to show the link to the noscript/full version.
     value="true"/>
 ```
 
-Whether forms in noscript mode are allowed to use a layout based on tables. If false, no tables are used. WYSIWYG is lost, but the form may be more accessible. Default is true.
+Whether forms in noscript mode are allowed to use a layout based on tables. If `false`, no tables are used. WYSIWYG is lost, but the form may be more accessible. The default is `true`.
 
 
 [6]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base
