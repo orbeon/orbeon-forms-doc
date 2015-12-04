@@ -11,7 +11,6 @@ The `fr:section` component organizes [grids](grid.md) under a header or title. F
   - configurable min/max number of iterations
   - can repeat over several heterogeneous rows
   - built-in icons and menus to add, remove, and move repeated rows
-  - supports `relevant` and `readonly` MIPs [SINCE Orbeon Forms 4.8]
 
 ## Basic usage
 
