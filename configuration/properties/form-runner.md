@@ -770,7 +770,7 @@ A value of `false` can be more efficient with slower browsers or large forms.
 
 #### Deprecated properties
 
-Before Orbeon Forms 4.11, you could use the following properties, deprecated since Orbeon Forms 4.11:
+Before Orbeon Forms 4.11, you could use the following properties, deprecated since Orbeon Forms 4.11. Section collapsing:
 
 ```xml
 <property
@@ -779,7 +779,8 @@ Before Orbeon Forms 4.11, you could use the following properties, deprecated sin
     value="false"/>
 ```
 
-and:
+Section collapsing in noscript mode:
+
 
 ```xml
 <property
@@ -787,6 +788,8 @@ and:
     name="oxf.fr.detail.noscript.section.collapse.*.*"
     value="false"/>
 ```
+
+Section collapsing animation:
 
 ```xml
 <property
