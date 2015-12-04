@@ -99,9 +99,10 @@ Attributes:
 - `appearance` [SINCE Orbeon Forms 4.11]
   - `full`
     - the default appearance, as with Orbeon Forms 4.10 and earlier
-    - supports reordering of rows
-    - supports insertion of rows at specific points
-    - supports removing specific rows
+    - row menu
+      - reordering of rows
+      - insertion of rows at specific points
+      - removing of specific rows
   - `minimal`
     - does not show the "+" button at the top left
     - does not show the row menu
