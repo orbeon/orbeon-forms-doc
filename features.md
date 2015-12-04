@@ -97,7 +97,7 @@ As of 2015-10-22 this page is still being updated.
     - as-you-type validation
     - centralized error summary showing currently relevant errors: [component doc](form-runner/component/images/xbl-error-summary-errors.png), [blog post on warnings/infos enhancements](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
-- Captcha: [doc](configuration/properties/form-runner.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
+- Captcha: [properties doc](configuration/properties/form-runner.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 - Appearance of repeated sections: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-repeated-sections), [component doc](http://doc.orbeon.com/form-runner/component/grid.html#repeated-mode)
 - Appearance of repeated grids: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-grids-sections), [component doc](http://doc.orbeon.com/form-runner/component/section.html#repeated-mode)
 
