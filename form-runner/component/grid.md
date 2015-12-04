@@ -96,6 +96,17 @@ Attributes:
   - missing or `false: dynamic initial values do not apply to new iterations
   - can be an AVT
   - see also: [Evaluation of initial values upon insert](../../xforms/actions/repeat-insert-delete.md#evaluation-of-initial-values-upon-insert)
+- `appearance` [SINCE Orbeon Forms 4.11]
+  - `full`
+    - the default appearance, as with Orbeon Forms 4.10 and earlier
+  - `minimal`
+    - does not show the row menu
+    - does not allow reordering
+    - instead just provides "Add another" and "Remove" links at the bottom
+
+## Configuration properties
+
+[SINCE ]
 
 ## Data format
 
