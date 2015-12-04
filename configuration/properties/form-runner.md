@@ -705,6 +705,8 @@ These properties control email sending in Form Runner:
 
 [SINCE Orbeon Forms 4.11]
 
+See the [`appearance`](../../form-runner/component/grid.html#repeated-mode) attribute.
+
 ### Appearance of repeated grids
 
 [SINCE Orbeon Forms 4.11]
