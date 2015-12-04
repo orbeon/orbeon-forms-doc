@@ -29,7 +29,7 @@ TODO:
 - `collapse`
   - whether the section can be collapsed by clicking on its title
   - default: `true`
-  - valeus: `true` or `false`
+  - values: `true` or `false`
 - `appearance` [SINCE Orbeon Forms 4.11]
   - `full`
     - the default appearance, as with Orbeon Forms 4.10 and earlier
