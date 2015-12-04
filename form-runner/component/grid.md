@@ -105,8 +105,7 @@ Attributes:
       - removing of specific rows
   - `minimal`
     - does not show the "+" button at the top left
-    - does not show the row menu
-    - does not allow reordering
+    - does not show the row menu and associated features
     - instead just provides "Add another" and "Remove" links at the bottom
 
 ## Configuration properties
