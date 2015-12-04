@@ -714,11 +714,22 @@ The following property allows you to set the appearance of repeated sections to 
     value="minimal"/>
 ```
 
-See also the [`appearance`](../../form-runner/component/grid.html#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.html).
+See also the [`appearance`](../../form-runner/component/section.html#repeated-mode) attribute of the [section component](../../form-runner/component/section.html).
 
 ### Appearance of repeated grids
 
 [SINCE Orbeon Forms 4.11]
+
+The following property allows you to set the appearance of repeated grids to `full` (the default) or `minimal` for all forms or for a subset of forms:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.grid.repeat.appearance.*.*"
+    value="minimal"/>
+```
+
+See also the [`appearance`](../../form-runner/component/grid.html#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.html).
 
 ### Section collapsing
 
