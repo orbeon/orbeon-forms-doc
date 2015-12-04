@@ -6,7 +6,7 @@
 
 The `fr:section` component organizes [grids](grid.md) under a header or title. Features:
 
-- configurable number of rows and columns
+- collapsible section content
 - optional repetition of its content
   - configurable min/max number of iterations
   - can repeat over several heterogeneous rows
