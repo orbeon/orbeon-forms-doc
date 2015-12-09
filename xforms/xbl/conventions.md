@@ -39,7 +39,7 @@ The convention dealing with parameters is as follows:
 * For **read/write** parameters, users bind the component to the node from which to read/write the value with:
 
     * An **attribute**:
-        * the attribute name starts with `ref-` followed by the parameter name;
+        * the attribute name ends with `-ref` preceded by the parameter name;
         * the attribute value is a binding expression.
 
             ```xml
