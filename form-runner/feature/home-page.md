@@ -169,6 +169,19 @@ In addition, if the latest modification time of the form definitions differ, a *
 
 ![Newer](../images/home-newer.png)
 
+## Configuration properties
+
+### Page size
+
+The number of forms shown on a given page can be set with the following property:
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.fr.home.page-size"
+    value="20"/>
+```
+
 ## Orbeon Forms 4.0 to 4.2
 
 For each form definition the current user has access to, the following links are shown if allowed:
