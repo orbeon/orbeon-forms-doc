@@ -13,6 +13,22 @@ The `fr:grid` component organizes contained controls in a grid of rows and colum
   - built-in icons and menus to add, remove, and move repeated rows
   - supports `relevant` and `readonly` MIPs [SINCE Orbeon Forms 4.8]
 
+## Appearance
+
+### Full repeat appearance
+
+![Full appearance / single-line](images/xbl-grid-full-single-line.png)
+
+![Full appearance / multi-line](images/xbl-grid-full-multi-line.png)
+
+### Minimal repeat appearance
+
+[SINCE Orbeon Forms 4.11]
+
+![Minimal appearance / single-line](images/xbl-grid-minimal-single-line.png)
+
+![Minimal appearance / multi-line](images/xbl-grid-minimal-multi-line.png)
+
 ## Basic usage
 
 ### Non-repeated mode
