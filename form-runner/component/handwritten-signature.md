@@ -16,4 +16,4 @@ In Form Builder, to add a *signature control* to your form, click on *Handwritte
 
 ## Support and limitations
 
-**HTML5 canvas**. For its implementation, this component uses the HTML5 canvas, which is supported on all modern browsers, including modern mobile browsers. On IE, it is supported with IE9 onwards.
+**HTML5 canvas**. For its implementation, this component uses the [HTML5 canvas](http://caniuse.com/#feat=canvas), which is supported on all modern browsers, including modern mobile browsers. On IE, it is supported with IE9 onwards.
