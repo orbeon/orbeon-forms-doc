@@ -158,3 +158,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 ```
 
 ![](images/xbl-currency4.png)
+
+### Rounding
+
+For examples of rounding, see the [`fr:number`](number.md) component.
