@@ -114,7 +114,7 @@ Scenario:
 
 - User types "12345.678".
 - Because `round-when-storing` is `false`, the value is not rounded and stored as is in the data.
-- When the user focuses out of the field, the value is formatted and rounded, because `round-when-formatting` is set to `true.
+- When the user focuses out of the field, the value is formatted and rounded, because `round-when-formatting` is set to `true`.
 - Field displays "12,345.68".
 
 This is useful if you want to keep the full precision of decimal values in the data, but format them nicely to a given number of decimals.
@@ -143,7 +143,10 @@ Scenario:
 
 - User types "12345.678".
 - Because `round-when-storing` is `true`, the value is rounded and stored as "12345.68" in the data.
-- When the user focuses out of the field, the value is formatted and rounded, because `round-when-formatting` is set to `true. Here the rounding during formatting doesn't change the value since it was rounded when stored in the first place.
+- When the user focuses out of the field, the value is formatted and rounded, because `round-when-formatting` is set to `true`.
 - Field displays "12,345.68".
+
+*NOTE: Here rounding during formatting doesn't change the value since it was rounded when stored in the first place.*
+
 
 This is useful if you don't want to keep the full precision of decimal values in the data and want to force a maximum number of digits after the decimal point.
