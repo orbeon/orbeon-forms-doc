@@ -31,6 +31,12 @@ You use the number component like a regular input field, for example:
 * `digits-after-decimal`: digits to show after the decimal point (by default 2)
 * `decimal-separator`: single character to use as decimal separator
 * `grouping-separator`: single character to use as thousands separator separator (can be blank)
+* `round-when-formatting`: when formatting the number for display, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
+    * SINCE Orbeon Forms 4.11
+    * Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
+* `round-when-storing`: when storing the number entered by the user, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
+    * SINCE Orbeon Forms 4.11
+    * Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
 
 These are the default values of the properties:
 
@@ -55,6 +61,14 @@ These are the default values of the properties:
     as="xs:string"
     name="oxf.xforms.xbl.fr.currency.grouping-separator"
     value=","/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.xbl.fr.currency.round-when-formatting"         
+    value="false"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.xbl.fr.currency.round-when-storing"            
+    value="false"/>
 ```
 
 ### Currency prefix
@@ -115,8 +129,6 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 </fr:currency>
 ```
 
-![](images/xbl-currency2.png)
-
 ### Showing 3 digits after decimal sign
 
 ```xml
@@ -125,7 +137,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
     digits-after-decimal="3/>
 ```
 
-![](images/xbl-currency3.png)
+![](images/xbl-currency2.png)
 
 ### Showing 0 digits after the decimal sign
 
@@ -135,7 +147,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
     digits-after-decimal="0/>
 ```
 
-![](images/xbl-currency4.png)
+![](images/xbl-currency3.png)
 
 ### Read-only input field, because bound to node set as read-only with a MIP
 
@@ -145,4 +157,4 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 <fr:currency ref="readonly-node"/>
 ```
 
-![](images/xbl-currency5.png)
+![](images/xbl-currency4.png)
