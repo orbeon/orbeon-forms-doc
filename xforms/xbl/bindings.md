@@ -89,7 +89,7 @@ The following standard CSS selector operations on attributes are supported: `=`,
 |`E[foo^="bar"]`|an `E` element whose `foo` attribute value begins exactly with the string `bar`|
 |`E[foo$="bar"]`|an `E` element whose `foo` attribute value ends exactly with the string `bar`|
 |`E[foo*="bar"]`|an `E` element whose `foo` attribute value contains the substring `bar`|
-|`E[foo|="en"]`	|an `E` element whose `foo` attribute value is a hyphen-separated list of values beginning with `en`|
+|<code>E[foo&#124;="en"]</code>	|an `E` element whose `foo` attribute value is a hyphen-separated list of values beginning with `en`|
 
 ### Binding to elements in the XForms namespace
 
