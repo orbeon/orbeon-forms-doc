@@ -161,4 +161,6 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 
 ### Rounding
 
+[SINCE Orbeon Forms 4.11]
+
 For examples of rounding, see the [`fr:number`](number.md) component.
