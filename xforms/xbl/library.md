@@ -90,24 +90,24 @@ Such bindings are checked for freshness every time a form is loaded. If a bindin
 
 ## Other bindings
 
-Bindings which are not inline and which are not by name only need to be explicitly listed so that the XForms engine is able to process them. You do this with the `oxf.xforms.xbl.library` property. By default,  as of Orbeon Forms 4.9, this property is empty as no built-in XBL component binds by attribute in that version:
+Bindings which are not inline and which are not by name only need to be explicitly listed so that the XForms engine is able to process them. You do this with the `oxf.xforms.xbl.library` property.
+
+With Orbeon Forms 4.9, this property is empty as no built-in XBL component binds by attribute in that version:
 
 ```xml
 <property as="xs:string" name="oxf.xforms.xbl.library">
 </property>
 ```
 
-XBL components with bindings by attribute can be added using the same format used by `oxf.xforms.resources.baseline`. Say, for example, that `fr:tinymce` adds a binding by attribute as follows:
+XBL components with bindings by attribute can be added using the same format used by `oxf.xforms.resources.baseline`. With Orbeon Forms 4.10, the property is as follows:
 
 ```xml
-element="fr|tinymce, xf|textarea[mediatype ~= 'text/html']"
-```
-
-Then the component must be added to the property as follows:
-
-```xml
-<property as="xs:string" name="oxf.xforms.xbl.library">
-    fr:tinymce
+<property as="xs:string"  name="oxf.xforms.xbl.library">
+    fr:dropdown-select1
+    fr:dropdown-date
+    fr:fields-date
+    fr:box-select
+    fr:character-counter
 </property>
 ```
 
