@@ -99,7 +99,7 @@ With Orbeon Forms 4.9, this property is empty as no built-in XBL component binds
 </property>
 ```
 
-XBL components with bindings by attribute can be added using the same format used by `oxf.xforms.resources.baseline`. With Orbeon Forms 4.10, the property is as follows:
+XBL components with bindings by attribute can be added using the same format used by `oxf.xforms.resources.baseline`. Component references are separated by whitespace: With Orbeon Forms 4.10, the property is as follows:
 
 ```xml
 <property as="xs:string"  name="oxf.xforms.xbl.library">
@@ -111,12 +111,4 @@ XBL components with bindings by attribute can be added using the same format use
 </property>
 ```
 
-The `fr` prefix must be in scope, and there must be a mapping (via `oxf.xforms.xbl.mapping`) for the URI associated with that prefix (this is the case by default for `fr` and `http://orbeon.org/oxf/xml/form-runner`). With this, `fr:tinymce` points to the XBL file `oxf:/xbl/orbeon/tinymce/tinymce.xbl`.
-
-Component references are separated by whitespace:
-
-```xml
-<property as="xs:string" name="oxf.xforms.xbl.library">
-    fr:tinymce acme:button
-</property>
-```
+The `fr` prefix must be in scope, and there must be a mapping (via `oxf.xforms.xbl.mapping`) for the URI associated with that prefix (this is the case by default for `fr` and `http://orbeon.org/oxf/xml/form-runner`).
