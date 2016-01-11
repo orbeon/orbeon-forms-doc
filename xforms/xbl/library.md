@@ -99,7 +99,7 @@ With Orbeon Forms 4.9, this property is empty as no built-in XBL component binds
 </property>
 ```
 
-XBL components with bindings by attribute can be added using the same format used by `oxf.xforms.resources.baseline`. Component references are separated by whitespace: With Orbeon Forms 4.10, the property is as follows:
+XBL components with bindings by attribute can be added using the same format used by `oxf.xforms.resources.baseline`. Component references are separated by whitespace. With Orbeon Forms 4.10, the property is as follows:
 
 ```xml
 <property as="xs:string"  name="oxf.xforms.xbl.library">
