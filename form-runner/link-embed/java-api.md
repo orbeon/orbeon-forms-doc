@@ -20,7 +20,8 @@ The intent is to allow Java (and other Java Virtual Machine (JVM)-based language
 
 Your own web app does the following:
 
-1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`
+1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`. Both are included in `orbeon-embedding.war` which is shipped 
+   in Orbeon Professional Edition(PE) only.  
 2. Setup the filter in your `web.xml` per the snippet below.
 3. Call the embedding API when producing a page, as done in the example below.
 
@@ -68,14 +69,14 @@ And here is an example of embedding a form from a JSP page:
 <body>
     <%
         API.embedFormJava(
-            request,      // HttpServletRequest: incoming HttpServletRequest
-            out,          // Writer: where the embedded form is written
-            "orbeon",     // String: Form Runner form name
-            "bookshelf",  // String: Form Runner app name
-            "new",        // String: Form Runner action name
-            null,         // String: Form Runner document id (optional)
-            null,         // String: query string (optional)
-            null          // Map<String, String>: custom HTTP headers (optional)
+            request,            // HttpServletRequest: incoming HttpServletRequest
+            out,                // Writer: where the embedded form is written
+            "my_application",   // String: Form Runner app name
+            "my_form",          // String: Form Runner form name
+            "new",              // String: Form Runner action name
+            null,               // String: Form Runner document id (optional)
+            null,               // String: query string (optional)
+            null                // Map<String, String>: custom HTTP headers (optional)
         );
     %>
 </body>
