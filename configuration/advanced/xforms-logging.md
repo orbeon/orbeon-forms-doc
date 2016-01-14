@@ -4,9 +4,7 @@
 
 ## Enabling XForms logging
 
-When a fatal error occurs, the XForms engine throws a Java exception which either results in an error page in your web browser (when the error occurs during page initialization) or in an error message at the top of the displayed XForms page (when the error occurs during an Ajax request after the page is loaded). The main Java exception is also logged on the server.
-
-Sometimes, this provides enough information to the developer to figure out what went wrong. But often this is not sufficient. In those cases, you should turn to the XForms engine logging facility. To enable it, make sure you uncomment the following logging category under WEB-INF/`resources/config/log4j.xml`:
+Sometimes, an error message or stack trace in the Orbeon Forms log file provides enough information to a developer to figure out what went wrong, but not always. In such cases, you can turn to the XForms engine logging facility. To enable it, make sure you uncomment the following logging category under WEB-INF/`resources/config/log4j.xml`:
 
 ```xml
 <!-- XForms engine activity -->
