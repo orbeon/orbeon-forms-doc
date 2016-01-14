@@ -4,7 +4,7 @@
 
 ## Enabling XForms logging
 
-Sometimes, an error message or stack trace in the Orbeon Forms log file provides enough information to a developer to figure out what went wrong, but not always. In such cases, you can turn to the XForms engine logging facility. To enable it, make sure you uncomment the following logging category under WEB-INF/`resources/config/log4j.xml`:
+Sometimes, an error message or stack trace in the Orbeon Forms log file provides enough information to a developer to figure out what went wrong, but not always. In such cases, you can turn to the XForms engine logging facility. To enable it, make sure you uncomment the following logging category under `WEB-INF/resources/config/log4j.xml`:
 
 ```xml
 <!-- XForms engine activity -->
