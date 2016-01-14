@@ -135,6 +135,7 @@
        * [Form Builder](configuration/properties/form-builder.md)
        * [XForms](configuration/properties/xforms.md)
    * Advanced
+       * [XForms logging](configuration/advanced/xforms-logging.md)
        * [Creating a production WAR](configuration/advanced/production-war.md)
        * [Upgrading from older versions](configuration/advanced/upgrading.md)
        * [Limiter Filter](configuration/advanced/limiter-filter.md)
