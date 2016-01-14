@@ -1,4 +1,4 @@
-# XForms - Logging - forms
+# XForms Logging
 
 <!-- toc -->
 
