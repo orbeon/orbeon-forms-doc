@@ -28,10 +28,10 @@ For example, to deal with form data:
 
 | Operation | HTTP Method | URL |
 | --------- | ----------- | --- |
-| Create    | PUT         | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
-| Read      | GET         | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
-| Update    | PUT         | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
-| Delete    | DELETE      | `/crud/$app/$form/(data|draft)/$doc/data.xml` |
+| Create    | PUT         | <code>/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Read      | GET         | <code>/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Update    | PUT         | <code>/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Delete    | DELETE      | <code>/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
 | Search    | POST        | `/search/$app/$form` |
 | Metadata  | GET         | `/form` |
 
