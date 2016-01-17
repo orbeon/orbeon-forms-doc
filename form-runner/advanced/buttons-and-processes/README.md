@@ -86,7 +86,7 @@ Another approach would be to create an entirely custom button instead of reusing
 - define a button label for `foo`
 - define a process for `foo`
 
-*NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.*
+NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.
 
 ## What next?
 
