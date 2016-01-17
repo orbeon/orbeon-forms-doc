@@ -51,11 +51,28 @@ The wildcards, as usual with Form Runner, can specify a form's application and f
 Some actions, such as the `email` action, don't have or don't require any parameters. You just write the name of the action:
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.process.email-my-form.*.*">
+<property as="xs:string" name="oxf.fr.detail.process.email-my-form.*.*">. 
     email
 </property>
 ```
-Sending emails is configured [with properties](../../../configuration/properties/form-runner.html#email-settings).
+Sending emails is configured [with properties](../../../configuration/properties/form-runner.html#email-settings). To send a form `my_app/my_form` to an email address `form-recipient@example.org` using for instance the SMTP server `smtp.example.org` you can add the following properties to [`properties-local.xml`](../../../configuration/properties/README.md):
+```xml
+<property as="xs:string"  
+    name="oxf.fr.email.smtp.host.my_app.my_form"          
+    value="smtp.example.org"/>
+<property as="xs:string"  
+    name="oxf.fr.email.from.my_app.my_form"               
+    value="noreply@example.org"/>
+<property as="xs:string"  
+    name="oxf.fr.email.to.my_app.my_form"                 
+    value="form-recipient@example.org"/>
+<property as="xs:string"  
+    name="oxf.fr.email.smtp.username.my_app.my_form"      
+    value="user@example.org"/>
+<property as="xs:string"  
+    name="oxf.fr.email.smtp.credentials.my_app.my_form"   
+    value="******"/> <!-- replace with the password to access the SMTP server-->
+```
 
 ### Actions with parameters
 
