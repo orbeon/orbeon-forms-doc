@@ -6,7 +6,7 @@
 
 A process is defined with some text following a specific syntax. For example:
 
-```ruby
+```sh
 require-uploads
 then require-valid
 then save
@@ -62,7 +62,7 @@ Some actions, such as the `email` action, don't have or don't require any parame
 
 In Orbeon Forms 4.2 and 4.3, actions support only an anonymous default parameter. With 4.4, actions support named parameters in addition to an anonymous default parameter:
 
-```ruby
+```sh
 send(
     uri      = "http://acme.org/orbeon",
     annotate = "error warning",
@@ -92,7 +92,7 @@ With actions and combinators, the syntax becomes:
 
 For example, the behavior of the "Save" button, associated with the `save-final` process, is specified this way:
 
-```ruby
+```sh
 require-uploads
 then validate-all
 then save
@@ -118,7 +118,7 @@ So in the example above what you want to say is the following:
 
 A process which just saves the data without checking validity and shows success and error messages looks like this:
 
-```ruby
+```sh
 save
 then success-message("save-draft-success")
 recover error-message("database-error")
@@ -126,7 +126,7 @@ recover error-message("database-error")
 
 Validating and sending data to a service looks like this:
 
-```ruby
+```sh
 require-valid
 then send("oxf.fr.detail.send.success")
 ```
@@ -139,7 +139,7 @@ Some actions can take parameters. In the example above we point to properties to
 
 You can use parentheses to group actions. For example:
 
-```ruby
+```sh
 visit-all
 then captcha
 then validate("error")
@@ -159,7 +159,7 @@ Here `recover` processes the entire content of the parentheses. Without the pare
 
 You can use `if` to evaluate a condition during the execution of a process. The condition is expressed as an XPath expression and runs in the context of the root element of the main form instance:
 
-```ruby
+```sh
 if ("//secret = 42")
 then success-message(message = "yea")
 else error-message(message = "nay")
@@ -167,20 +167,20 @@ else error-message(message = "nay")
 
 The `else` branch is optional. This means that the following two lines are equivalent:
 
-```ruby
+```sh
 if ("xpath") then action1 then action2
 if ("xpath") then action1 else nop then action2
 ```
 
 The `if` and `else` operators have a higher precedence than the `then` and `recover` combinators. This means that if you need more than one action to run in either one of the branches, parentheses must be added:
 
-```ruby
+```sh
 if ("xpath") then (action1 then action2) else action3
 ```
 
 This also means that the following two lines are equivalent:
 
-```ruby
+```sh
 if ("xpath") then action1 else action2 then action3
 (if ("xpath") then action1 else action2) then action3
 ```
