@@ -42,7 +42,7 @@ You expose a process with a property (typically in [`properties-local.xml`](../.
 
 The name of the process immediately follows the property prefix, here `save-final`.
 
-The wildcards, as usual with Form Funner, can specify a form's application and form names. Here, the process is available to all forms in all apps because of the `*.*` wildcard.
+The wildcards, as usual with Form Runner, can specify a form's application and form names. Here, the process is available to all forms in all apps because of the `*.*` wildcard.
 
 ## Simple actions
 
