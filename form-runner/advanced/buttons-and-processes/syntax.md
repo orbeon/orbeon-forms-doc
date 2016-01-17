@@ -55,6 +55,7 @@ Some actions, such as the `email` action, don't have or don't require any parame
     email
 </property>
 ```
+Sending emails is configured [with propperties](../../../configuration/properties/form-runner.html#email-settings).
 
 ### Actions with parameters
 
