@@ -113,31 +113,30 @@ During XForms development, you might want to enable a more aggressive debug conf
 
 1. Add (or uncomment) the following in your `config/log4j.xml`:
 
-```xml
-<!-- XForms engine activity -->
-<category name="org.orbeon.oxf.xforms.processor.XFormsServer">
-    <priority value="debug"/>
-</category>
-```
+    ```xml
+    <category name="org.orbeon.oxf.xforms.processor.XFormsServer">
+        <priority value="debug"/>
+    </category>
+    ```
 
 2. Configure the `oxf.xforms.logging.debug` property in your `config/properties-local.xml`. You can choose precisely what the XForms engine logs. The following is the most comprehensive configuration. It will log almost everything. In most cases, this is a good configuration during development, and while troubleshooting issues in staging:
 
-```xml
-<property as="xs:NMTOKENS" name="oxf.xforms.logging.debug">
-    document 
-    model 
-    submission 
-    control 
-    event 
-    action 
-    analysis 
-    server 
-    server-body 
-    html
-    submission-details 
-    submission-body
-</property>
-```
+    ```xml
+    <property as="xs:NMTOKENS" name="oxf.xforms.logging.debug">
+        document 
+        model 
+        submission 
+        control 
+        event 
+        action 
+        analysis 
+        server 
+        server-body 
+        html
+        submission-details 
+        submission-body
+    </property>
+    ```
 
 ## Production configuration 
 
@@ -146,7 +145,6 @@ During XForms development, you might want to enable a more aggressive debug conf
 In production, you probably don't want any debug information coming out to your logs. So set this in `log4j.xml`:
 
 ```xml
-<!-- XForms engine activity -->
 <category name="org.orbeon.oxf.xforms.processor.XFormsServer">
     <priority value="info"/>
 </category>
@@ -159,7 +157,6 @@ Alternatively, remove or comment-out the lines above. When this is done, the `ox
 If you only want to see submission timings, in your `log4j.xml` use:
 
 ```xml
-<!-- XForms engine activity -->
 <category name="org.orbeon.oxf.xforms.processor.XFormsServer">
     <priority value="debug"/>
 </category>
