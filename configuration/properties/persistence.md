@@ -54,7 +54,7 @@ Property                                            | Explanation
 
 _NOTE: This means that you can't name a persistence provider `provider`._
 
-For example some built-in demo forms as well as Form Builder load their form definitions directly from the Orbeon Forms web application. This is done my using more specific properties (without wildcards):
+For example some built-in demo forms as well as Form Builder load their form definitions directly from the Orbeon Forms web application. This is done by using more specific properties (without wildcards):
 
 ```xml
 <property
@@ -67,7 +67,7 @@ For example some built-in demo forms as well as Form Builder load their form def
     value="resource"/>
 ```
 
-One thing you might notice is that, as far as configuring persistence, you treat Form Builder itself just like another form, with the app name is `orbeon` and the form name is `builder`.
+One thing you might notice is that, as far as configuring persistence, you treat Form Builder itself just like another form, with app name `orbeon` and form name `builder`.
 
 If you want to change the default provider to Oracle, and since a provider named `oracle` is predefined, the following configuration will do just that:
 
@@ -80,7 +80,7 @@ If you want to change the default provider to Oracle, and since a provider named
 
 Because wildcards are used, this property does not override the configuration for the built-in demo forms as well as Form Builder! This is desirable, because the Form Builder implementation itself is not usually something you want to store somewhere else.
 
-In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combination. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [multiple schemas](../../form-runner/persistence/relational-db.md).
+In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combinations. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [multiple schemas](../../form-runner/persistence/relational-db.md).
 
 Each provider supports standard properties, as follows:
 
