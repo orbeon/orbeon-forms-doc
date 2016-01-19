@@ -68,6 +68,7 @@ This places a `save-draft` and `send` buttons on the page. Their default labels 
     recover navigate("/failure")
 </property>
 ```
+With this, we have overridden the functionality of the "Send" button specifically for the "acme/hr" form.
 
 Button labels can be overridden as well:
 
@@ -78,7 +79,7 @@ Button labels can be overridden as well:
   value="Fancy Send"/>
 ```
 
-With this, we have overridden the functionality of the "Send" button specifically for the "acme/hr" form.
+With this, we have overridden the label of the "Send" button in general for all forms whîch are displayed in the english local.
 
 Another approach would be to create an entirely custom button instead of reusing the name `send`. Just pick a button/process name, say `foo`, and then:
 
@@ -86,7 +87,7 @@ Another approach would be to create an entirely custom button instead of reusing
 - define a button label for `foo`
 - define a process for `foo`
 
-*NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.*
+NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.
 
 ## What next?
 

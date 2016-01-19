@@ -58,7 +58,7 @@ You can also place longer property values inline [SINCE Orbeon Forms 4.6]:
 </property>
 ```
 
-Changes to most properties are taken into account as soon as you save you property file (e.g. `properties-local.xml`), however changes to some properties are only taken into account when the server is first started.
+Changes to most properties are taken into account as soon as you save your property file (e.g. `properties-local.xml`), however changes to some properties are only taken into account when the server is first started.
 
 ## Categories of properties
 
@@ -173,7 +173,7 @@ In all cases, for security reasons, those functions won't return the value of pr
 
 ## Different properties for dev vs. production
 
-In general, you can define all your custom properties in `properties-local.xml`. However, if the value of a property needs to differ depending on the environment, e.g. the value is different for `dev` and `prod`, then you can define those properties twice, in `properties-local-dev.xml` *and* `properties-local-prod.xml`, and have different value defined for the property depending on the file. In that case, you would still keep your custom properties that don't differ depending on the environment in `properties-local.xml`.
+In general, you can define all your custom properties in `properties-local.xml`. However, if the value of a property needs to differ depending on the environment, e.g. the value is different for `dev` and `prod`, then you can define those properties twice, in `properties-local-dev.xml` *and* `properties-local-prod.xml`, and have different values defined for the property depending on the file. In that case, you would still keep your custom properties that don't differ depending on the environment in `properties-local.xml`.
 
 - Properties you define in `properties-local-dev.xml` apply in `dev` run mode only, and in that case override properties in `properties-local.xml`.
 - Properties you define in `properties-local-prod.xml` apply in `prod` run mode only, and in that case override properties in `properties-local.xml`.
