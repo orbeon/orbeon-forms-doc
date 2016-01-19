@@ -84,6 +84,16 @@ In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use
 
 Each provider supports standard properties, as follows:
 
+Property                                                                    | Explanation
+----------------------------------------------------------------------------|-------------------------------------------------------
+[`oxf.fr.persistence.[provider].uri`](#property_uri)                        | specifies the location, via HTTP, of the provider implementation.
+[`oxf.fr.persistence.[provider].active`](#property_active)                  | specifies whether the provider is active
+[`oxf.fr.persistence.[provider].autosave`](#property_autosave)              | specifies whether [autosave](../../form-runner/persistence/autosave.md) is supported.
+[`oxf.fr.persistence.[provider].permissions`](#property_permissions)        | specifies whether user/group permissions are supported
+[`oxf.fr.persistence.[provider].versioning`](#property_versioning)          | specifies whether versioning is supported
+
+### <a name="property_uri"></a> `uri` property
+
 The `uri` property specifies the location, via HTTP, of the provider implementation.
 
 ```xml
@@ -92,6 +102,8 @@ The `uri` property specifies the location, via HTTP, of the provider implementat
     name="oxf.fr.persistence.[provider].uri"
     value="[URI to reach the provider]"/>
 ```
+
+### <a name="property_active"></a> `active` property
 
 [SINCE Orbeon Forms 4.4]
 
@@ -108,6 +120,7 @@ This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
     name="oxf.fr.persistence.[provider].active"
     value="[true|false]"/>
 ```
+### <a name="property_autosave"></a>`autosave` property
 
 [SINCE Orbeon Forms 4.4]
 
@@ -123,6 +136,8 @@ This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
     name="oxf.fr.persistence.[provider].autosave"
     value="[true|false]"/>
 ```
+
+### <a name="property_permissions"></a> `permissions` property
 
 [SINCE Orbeon Forms 4.4]
 
@@ -142,6 +157,8 @@ This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
     value="[true|false]"/>
 ```
 
+### <a name="property_versioning"></a> `versioning` property
+
 [SINCE Orbeon Forms 4.5]
 
 The `versioning` property specifies whether versioning is supported.
@@ -158,6 +175,8 @@ This is used as follows (confirmed for Orbeon Forms 4.5 to 4.10):
     name="oxf.fr.persistence.[provider].versioning"
     value="[true|false]"/>
 ```
+
+## Configuration properties for specific persistence providers
 
 Each provider may have specific configuration properties. For the latest settings, see
 [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml#L17).
