@@ -54,7 +54,7 @@ Property                                            | Explanation
 
 _NOTE: This means that you can't name a persistence provider `provider`._
 
-For example some built-in demo forms as well as Form Builder load their form definitions directly from the Orbeon Forms web application. This is done my using more specific properties (without wildcards):
+For example some built-in demo forms as well as Form Builder load their form definitions directly from the Orbeon Forms web application. This is done by using more specific properties (without wildcards):
 
 ```xml
 <property
@@ -67,7 +67,7 @@ For example some built-in demo forms as well as Form Builder load their form def
     value="resource"/>
 ```
 
-One thing you might notice is that, as far as configuring persistence, you treat Form Builder itself just like another form, with the app name is `orbeon` and the form name is `builder`.
+One thing you might notice is that, as far as configuring persistence, you treat Form Builder itself just like another form, with app name `orbeon` and form name `builder`.
 
 If you want to change the default provider to Oracle, and since a provider named `oracle` is predefined, the following configuration will do just that:
 
@@ -80,9 +80,19 @@ If you want to change the default provider to Oracle, and since a provider named
 
 Because wildcards are used, this property does not override the configuration for the built-in demo forms as well as Form Builder! This is desirable, because the Form Builder implementation itself is not usually something you want to store somewhere else.
 
-In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combination. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [multiple schemas](../../form-runner/persistence/relational-db.md).
+In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combinations. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [multiple schemas](../../form-runner/persistence/relational-db.md).
 
 Each provider supports standard properties, as follows:
+
+Property                                                                    | Explanation
+----------------------------------------------------------------------------|-------------------------------------------------------
+[`oxf.fr.persistence.[provider].uri`](#property_uri)                        | specifies the location, via HTTP, of the provider implementation.
+[`oxf.fr.persistence.[provider].active`](#property_active)                  | specifies whether the provider is active
+[`oxf.fr.persistence.[provider].autosave`](#property_autosave)              | specifies whether [autosave](../../form-runner/persistence/autosave.md) is supported.
+[`oxf.fr.persistence.[provider].permissions`](#property_permissions)        | specifies whether user/group permissions are supported
+[`oxf.fr.persistence.[provider].versioning`](#property_versioning)          | specifies whether versioning is supported
+
+### <a name="property_uri"></a> `uri` property
 
 The `uri` property specifies the location, via HTTP, of the provider implementation.
 
@@ -92,6 +102,8 @@ The `uri` property specifies the location, via HTTP, of the provider implementat
     name="oxf.fr.persistence.[provider].uri"
     value="[URI to reach the provider]"/>
 ```
+
+### <a name="property_active"></a> `active` property
 
 [SINCE Orbeon Forms 4.4]
 
@@ -108,6 +120,7 @@ This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
     name="oxf.fr.persistence.[provider].active"
     value="[true|false]"/>
 ```
+### <a name="property_autosave"></a>`autosave` property
 
 [SINCE Orbeon Forms 4.4]
 
@@ -123,6 +136,8 @@ This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
     name="oxf.fr.persistence.[provider].autosave"
     value="[true|false]"/>
 ```
+
+### <a name="property_permissions"></a> `permissions` property
 
 [SINCE Orbeon Forms 4.4]
 
@@ -142,6 +157,8 @@ This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
     value="[true|false]"/>
 ```
 
+### <a name="property_versioning"></a> `versioning` property
+
 [SINCE Orbeon Forms 4.5]
 
 The `versioning` property specifies whether versioning is supported.
@@ -158,6 +175,8 @@ This is used as follows (confirmed for Orbeon Forms 4.5 to 4.10):
     name="oxf.fr.persistence.[provider].versioning"
     value="[true|false]"/>
 ```
+
+## Configuration properties for specific persistence providers
 
 Each provider may have specific configuration properties. For the latest settings, see
 [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml#L17).
