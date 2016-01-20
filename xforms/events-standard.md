@@ -182,6 +182,41 @@ Example:
 </xbl:handlers>
 ```
 
+### Delayed events
+
+#### Support and limitations
+
+Orbeon Forms partially supports the XForms 1.1 `delay` attribute on `<xf:dispatch>`. The limitations are:
+
+* A delay greater than zero always incurs a round-trip with the client. This may mean higher latency and resource usage than could be expected. You are advised to use delays in the order of seconds at least.
+* Events are not combined as specified in XForms 1.1.
+* Custom event context information is not supported and simply ignored.
+
+#### Extensions
+
+The boolean attribute `xxf:show-progress` allows specifying whether the client must enable the loading indicator when sending back delay events from the client. The default is `true` and the indicator is used.
+
+```xml
+<xf:dispatch 
+    name="my-event" 
+    targetid="my-model" 
+    delay="2000"
+    xxf:show-progress="false"/>
+```
+
+The `xxf:progress-message` attribute allows specifying a custom progress message when `xxf:show-progress` is `true`. By default, the standard progres message is used.
+
+```xml
+<xf:dispatch 
+    name="my-event" 
+    targetid="my-model" 
+    delay="2000"
+    xxf:show-progress="true"
+    xxf:progress-message="Autosave..."/>
+```
+
+For more information, see the [XForms specification](https://www.w3.org/TR/xforms11/#action-dispatch).
+
 ### The ev:handler attribute
 
 *Not supported by Orbeon Forms.*
