@@ -51,11 +51,12 @@ Similarly, if your persistence provider does not support user/group permissions,
 
 ## Virtual hierarchy of data
 
-Form Runner/Form Builder access data under a virtual hierarchy or URLs, not unlike directories or folders in a filesystem. However this hierarchy can be physically located in different places:
+Form Runner/Form Builder access data under a virtual hierarchy of URLs, not unlike directories or folders in a filesystem. However, this hierarchy can be physically located in different places:
 
 * An XML database, like eXist.
 * A disk-based filesystem.
 * Your own system, which you can implement on top of a database or other type of storage.
+
 Following XML database technology, we use the terms **collections** and **resources** instead of directories and files.
 
 The hierarchy looks like this:
@@ -96,10 +97,10 @@ The hierarchy is organized as follows:
     * form.xhtml: the main form definition, which is an XHTML+XForms resource
     * optional attachments, such as images, PDF files, and other file attachments uploaded by the form author when editing the form definition
 * Each "data" collection contains one collection for each form data id, identified by an automatically-generated UUID
-* The "draft" collection is analogous to the "data" collection, but used by the [Autosave](../../../form-runner/persistence/autosave.md) to store form data before users explicitly save it
+* The "draft" collection is analogous to the "data" collection, but used by [autosave](../../../form-runner/persistence/autosave.md) to store form data before users explicitly save it
     * implementations of the persistence API are expected to remove the draft (with the corresponding attachments) when the corresponding data is saved
 * Each form data collection contains:
-    * data.xml: the main form data document
+    * `data.xml`: the main form data document
     * optional attachments, such as images uploaded by the user when editing the form data
 
 ## Headers
