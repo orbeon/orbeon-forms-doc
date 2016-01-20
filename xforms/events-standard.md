@@ -85,7 +85,7 @@ The above example also shows how you can constrain an event handler to respond t
 
 ### Top-level event handlers  
 
-Since late January 2010 builds, you can place event handlers at the top-level under the `<xh:body>` element:
+You can place event handlers at the top-level under the `<xh:body>` element:
 
 ```xml
 <xh:body>
