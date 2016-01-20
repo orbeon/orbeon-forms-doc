@@ -195,3 +195,8 @@ You specify what key stroke you want to listen to with the following two attribu
 
 * `xxf:text` specifies the key you want to listen to. This attribute is mandatory: if you have a `ev:event="keypress"` on an action, then you need to specify an `xxf:text`.
 * `xxf:modifier` specifies what key modifier needs to be pressed in addition to the key. This is a space separated list of values, where the values can be `Control`, `Shift`, and `Alt`. This attribute is optional: leave it out to listener to a key press with no modifier.
+
+[1]: http://www.w3.org/TR/DOM-Level-2-Events/events.html
+[2]: http://www.w3.org/TR/xml-events/
+[3]: http://www.w3.org/TR/DOM-Level-3-Events/
+[4]: http://www.w3.org/TR/xbl/
