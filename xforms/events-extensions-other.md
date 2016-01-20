@@ -6,28 +6,43 @@
 
 The usual XForms way of using XML events is by prefixing attributes with the `ev:` prefix. This is in fact not absolutely mandated by XForms, and leads to heaver attribute syntax, so Orbeon Forms allows using the attributes without a namespace.
 
-## Creating keyboard shortcuts
+## Creating keyboard shortcuts with the keypress event
 
-In some cases, you want your form to react to users pressing certain key combination by running XForms actions. Typically, this allows you to define keyboard shortcuts for operations that would otherwise require using the mouse or require many keystrokes.
+You can, by listening to the `keypress` event, run actions as users type a certain key combination. Your listener can be registered on:
 
-You declare a listener on a certain key combination with:
+* **The whole document**, in which case it will run whenever users press the key combination you specified. You can register a listener on the whole document either by declaring you listener directly under the `xh:body` as in:
 
-```xml
-<xf:group id="my-group">
-    <xf:action ev:event="keypress" xxf:modifiers="control" xxf:text="y">
-        <!-- Runs when an element inside my-group has the focus, and ctrl-y is pressed -->
-    </xf:action>    
-</xf:group>
-```
+    ```xml
+    <xh:body>
+        <xf:action 
+            ev:event="keypress" 
+            xxf:modifiers="Control" 
+            xxf:text="y">
+            ...
+        </xf:action>
+        ...
+    </xh:body>
+    ```
+    
+    Or you can declare it anywhere in your form with an observer set to `#document`, as in:
+    
+    ```xml
+    <xf:action 
+        ev:event="keypress" 
+        ev:observer="#document" 
+        xxf:modifiers="Control"
+        xxf:text="y">
+        ...
+    </xf:action>
+    ```
 
-* The attributes `modifiers` and `text` are [borrowed from XBL][5] where they are defined on the `xbl:handler` element. In time they could become part of XML Events. The supported values of modifier are `shift`, `alt`, and `control` (from the [DOM Level 3 events][6] specification but in lowercase, to follow XBL 2).
-* When you declare a listener on `keypress`, you must specify the key with `xxf:text` and can optionally indicate a modifier with `xxf:modifiers`.
+* **Part of the document**, in which case you set your actions to listen on a XForms control such as a `xf:group` or an `xf:input`. Note that in this case, your listener will be called only if a form control (either the one you have specified, or form control inside the one you have specified for container form controls) has the focus when users press the key combination.
+* **A dialog**, in which case your listener will be called only when users press the key combination while the dialog is open. In this case, the only requirement for the listener to be called is for the dialog to be open; the focus does not necessarily need to be on a form control inside the dialog.
 
-A `keypress` listener can be active:  
+You specify what key stroke you want to listen to with the following two attributes:
 
-* For the whole document, if it has `ev:observer="#document"` on the listener.  
-* For a given dialog, if your listener is declared directly under the `` or has an `ev:observer` pointing to that dialog.
-* For only a section of the document. For instance, in the above example the listener is active only if the key is pressed while a form element inside that group has the focus. In most cases, you'll rather want the listener to be active for the whole document or for a specific dialog.
+* `xxf:text` specifies the key you want to listen to. This attribute is mandatory: if you have a `ev:event="keypress"` on an action, then you need to specify an `xxf:text`.
+* `xxf:modifier` specifies what key modifier needs to be pressed in addition to the key. This is a space separated list of values, where the values can be `Control`, `Shift`, and `Alt`. This attribute is optional: leave it out to listener to a key press with no modifier.
 
 ## Filtering on the event phase
 
