@@ -21,9 +21,15 @@ The `ev:observer` attribute  allows you to register event handlers by specifying
 ```xml
 <xf:model id="main-model">
     <!-- Child instance -->
-   <xf:instance id="child-instance" src="my-instance.xml"/>
+    <xf:instance 
+        id="child-instance"
+        src="my-instance.xml"/>
     <!-- Register the event handler on the child instance -->
-    <xf:dispatch ev:observer="child-instance" ev:event="xforms-insert" targetid="main-model" name="update-after-insert"/>
+    <xf:dispatch 
+        ev:observer="child-instance" 
+        ev:event="xforms-insert" 
+        targetid="main-model" 
+        name="update-after-insert"/>
 </xf:model>
 ```
 
@@ -148,38 +154,6 @@ Example:
 ### The ev:listener element
 
 *Not supported by Orbeon Forms.*
-
-### The keypress event
-
-You can, by listening to the `keypress` event, run actions as users type a certain key combination. Your listener can be registered on:
-
-* **The whole document**, in which case it will run whenever users press the key combination you specified. You can register a listener on the whole document either by declaring you listener directly under the `xh:body` as in:
-
-```xml
-<xh:body>
-    <xf:action ev:event="keypress" xxf:modifiers="Control" xxf:text="y">
-        ...
-    </xf:action>
-    ...
-</xh:body>
-```
-
-Or you can declare it anywhere in your form with an observer set to `#document`, as in:
-
-```xml
-<xf:action ev:event="keypress" ev:observer="#document" 
-        xxf:modifiers="Control" xxf:text="y">
-    ...
-</xf:action>
-```
-
-* **Part of the document**, in which case you set your actions to listen on a XForms control such as a `xf:group` or an `xf:input`. Note that in this case, your listener will be called only if a form control (either the one you have specified, or form control inside the one you have specified for container form controls) has the focus when users press the key combination.
-* **A dialog**, in which case your listener will be called only when users press the key combination while the dialog is open. In this case, the only requirement for the listener to be called is for the dialog to be open; the focus does not necessarily need to be on a form control inside the dialog.
-
-You specify what key stroke you want to listen to with the following two attributes:
-
-* `xxf:text` specifies the key you want to listen to. This attribute is mandatory: if you have a `ev:event="keypress"` on an action, then you need to specify an `xxf:text`.
-* `xxf:modifier` specifies what key modifier needs to be pressed in addition to the key. This is a space separated list of values, where the values can be `Control`, `Shift`, and `Alt`. This attribute is optional: leave it out to listener to a key press with no modifier.
 
 ## Historical note: differences between specifications  
 
