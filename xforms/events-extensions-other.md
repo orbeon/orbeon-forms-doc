@@ -113,8 +113,8 @@ When that control is within a repeat iteration, the actual control targetted is 
 
 ```xml
 <!-- Repeat hierarchy -->
-<xf:repeat nodeset="todo-list">
-    <xf:repeat nodeset="todo-item">
+<xf:repeat ref="todo-list">
+    <xf:repeat ref="todo-item">
         <xf:switch>
              <xf:case id="edit-case">...</xf:case>
              <xf:case id="view-case">...</xf:case>
@@ -206,7 +206,7 @@ The `ev:observer` attribute can be set to the value `#preceding-sibling`:
 </xf:repeat
 
 <xf:action
-  ev:event="xforms-enabled xforms-disabled xxforms-index-changed xxforms-nodeset-changed"
+  ev:event="xforms-enabled xforms-disabled xxforms-index-changed xxforms-ref-changed"
   ev:observer="#preceding-sibling"
   ev:target="#observer">
     
