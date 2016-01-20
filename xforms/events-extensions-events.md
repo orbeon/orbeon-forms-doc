@@ -124,7 +124,7 @@ Example:
     <xxf:script ev:target="my-repeat" ev:event="xxforms-nodeset-changed xforms-enabled xforms-disabled">
         alert("Nodeset changed!");
     </xxf:script>
-    <xf:repeat nodeset="record" id="my-repeat">
+    <xf:repeat ref="record" id="my-repeat">
         ...
     </xf:repeat>
 </xf:group>
@@ -142,7 +142,7 @@ If nodes related to a repeat are inserted with `xf:insert` or `xf:delete` (inclu
 Currently, we interpret handlers placed directly within `<xf:repeat>` as being attached to a particular repeat -*iteration**, not to the repeat element itself. This means you can write things like:
 
 ```xml
-<xf:repeat nodeset="value" id="my-repeat">
+<xf:repeat ref="value" id="my-repeat">
     <xf:action ev:event="my-event">
         <xxf:variable name="position" select="position()"/>
         <xf:setvalue ref="." value="$position"/>
@@ -173,7 +173,7 @@ We propose the current solution:
 The `xxforms-index-changed` event allows you to detect changes to a repeat index.
 
 ```xml
-<xf:repeat nodeset="value" id="my-repeat">
+<xf:repeat ref="value" id="my-repeat">
     <xf:action ev:event="my-event">
         <xxf:variable name="position" select="position()"/>
         <xf:setvalue ref="." value="$position"/>
@@ -186,7 +186,7 @@ The `xxforms-index-changed` event is not dispatched during control creation, onl
 
 ```xml
 <xf:group>
-    <xf:repeat nodeset="item" id="my-repeat">
+    <xf:repeat ref="item" id="my-repeat">
         <!-- Test handler with ev:target="#observer" -->
         <xf:action ev:event="xforms-enabled" ev:target="#observer">
             ... use index('my-repeat') or xxf:index() here ...
