@@ -68,19 +68,19 @@ Here is how you pass context attributes when executing an action:
 
 ```xml
 <xf:dispatch name="rename-control" target="my-model">
-    <xf:property name="control" select="my/control"/>
-    <xf:property name="control-name" select="'beverage-selection'"/>
+    <xf:property name="control"      value="my/control"/>
+    <xf:property name="control-name" value="'beverage-selection'"/>
 </xf:dispatch>
 ```
 
-*NOTE: Prior to standard XForms support, the `<xxf:context>` child element was introduced for the same purpose and can still be used for backward compatibility.*
+*NOTE: Prior to standard XForms support, the `<xxf:context>` child element was introduced for the same purpose and can still be used for backward compatibility. The `select` attribute can also be used in place of `value`.*
 
 `<xf:property>` supports the following two attributes:
 
 ||||
 |---|---|---|
 | `name` |  Mandatory | Name of the context attribute. |
-| `select` |  Mandatory |  XPath 2.0 expression determining the value of the context attribute.  |
+| `value` |  Mandatory |  XPath 2.0 expression determining the value of the context attribute.  |
 
 Note that the context attribute name cannot be a qualified name (QName), because this would not be compatible with [DOM 2 Events][1]. However, a QName can be used as custom event name.
 
