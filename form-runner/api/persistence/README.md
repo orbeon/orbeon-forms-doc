@@ -92,12 +92,12 @@ The hierarchy is organized as follows:
 
 * At the top-level there is one collection per application
 * Within an application collection, there is one collection per form definition
-* Within a form definition  there is one collection called "form" for the form definitions produced by Form Builder, and one collection called "data" for form data produced by Form Runner
-* Each "form" collection contains:
-    * form.xhtml: the main form definition, which is an XHTML+XForms resource
+* Within a form definition  there is one collection called `form` for the form definitions produced by Form Builder, and one collection called `data` for form data produced by Form Runner
+* Each `form` collection contains:
+    * `form.xhtml`: the main form definition, which is an XHTML+XForms resource
     * optional attachments, such as images, PDF files, and other file attachments uploaded by the form author when editing the form definition
-* Each "data" collection contains one collection for each form data id, identified by an automatically-generated UUID
-* The "draft" collection is analogous to the "data" collection, but used by [autosave](../../../form-runner/persistence/autosave.md) to store form data before users explicitly save it
+* Each `data` collection contains one collection for each form data id, identified by an automatically-generated UUID
+* The `draft` collection is analogous to the "data" collection, but used by [autosave](../../../form-runner/persistence/autosave.md) to store form data before users explicitly save it
     * implementations of the persistence API are expected to remove the draft (with the corresponding attachments) when the corresponding data is saved
 * Each form data collection contains:
     * `data.xml`: the main form data document
