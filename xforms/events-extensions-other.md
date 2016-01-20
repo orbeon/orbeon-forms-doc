@@ -2,10 +2,6 @@
 
 <!-- toc -->
 
-## Optional ev: prefix for event attributes
-
-The usual XForms way of using XML events is by prefixing attributes with the `ev:` prefix. This is in fact not absolutely mandated by XForms, and leads to heaver attribute syntax, so Orbeon Forms allows using the attributes without a namespace.
-
 ## Creating keyboard shortcuts with the keypress event
 
 You can, by listening to the `keypress` event, run actions as users type a certain key combination. Your listener can be registered on:
