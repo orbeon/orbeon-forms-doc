@@ -6,7 +6,97 @@
 
 This page documents extension events, that is events which are not part of the XForms specifications. Such events, by convention, start with the prefix `xxforms-`.
 
-## xxforms-nodeset-changed
+## Instance events
+
+### xxforms-value-changed
+
+- __Dispatched in response to:__ value changed in an instance
+- __Target:__ `<xf:instance>` element  
+- __Bubbles:__ Yes  
+- __Cancelable:__ Yes
+- __Context Info:__
+    - `event('node') as node()`: element or attribute node whose value has changed
+    - `event('old-value') as xs:string`: previous value
+    - `event('new-value') as `xs:string: new value
+
+The `xxforms-value-changed` event is dispatched to an instance when an element or attribute value is changed in that instance, namely through the following mechanisms:
+
+- `calculate` or `xxf:default` MIP
+- `<xf:setvalue>` action
+- value of a bound control changed by the user
+- submission result with `replace="text"`
+
+Example:
+
+```xml
+<html xmlns:xforms="http://www.w3.org/2002/xforms"
+      xmlns:ev="http://www.w3.org/2001/xml-events"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <xf:model>
+            <xf:instance id="table">
+                <table xmlns=""/>
+            </xf:instance>
+        </xf:model>
+    </head>
+    <body>
+       <xf:message ev:event="xxforms-value-changed" ev:observer="table">Changed!</xf:message>
+        <xf:input ref="instance()">
+            <xf:label>Change me:</xf:label>
+        </xf:input>
+    </body>
+</html>
+```
+
+### xxforms-valid
+
+- __Dispatched in response to:__ instance being valid after validation
+- __Target:__ `<xf:instance>` element  
+- __Bubbles:__ Yes  
+- __Cancelable:__ Yes  
+- __Context Info:__ none
+
+The `xxforms-valid` event is dispatched to an instance after validation if it is valid.  
+
+### xxforms-invalid
+
+- __Dispatched in response to:__ instance being invalid after validation
+- __Target:__ `<xf:instance>` element  
+- __Bubbles:__ Yes  
+- __Cancelable:__ Yes  
+- __Context Info:__ none
+
+The `xxforms-invalid` event is dispatched to an instance after validation if it is invalid.  
+
+## Dialog control events
+
+### xxforms-dialog-open
+
+- __Dispatched in response to:__ `xxf:show` action
+- __Target:__ `<xxf:dialog>` element  
+- __Bubbles:__ Yes  
+- __Cancelable:__ Yes  
+- __Context Info:__ none
+
+The `xxforms-dialog-open` event is dispatched to an dialog in response to running the  action targeting that dialog.  
+
+### xxforms-dialog-close
+
+- __Dispatched in response to: `xxf:hide` action
+- __Target:__ `<xxf:dialog>` element  
+- __Bubbles:__ Yes  
+- __Cancelable:__ Yes  
+- __Context Info:__ none
+
+The `xxforms-dialog-close` event is dispatched to an dialog in response to:
+
+- running the `<xxf:hide>` action targeting that dialog
+- the user closing the dialog with the dialog close box, if present
+
+## Repeat control events
+
+### xxforms-nodeset-changed
 
 - __Dispatched in response to:__ node-set changed on `<xf:repeat>`  
 - __Target:__ `<xf:repeat>` element  
@@ -70,7 +160,7 @@ We propose the current solution:
 - if an event targets `<xf:repeat>`, then instead we dispatch it to the current repeat iteration, setting the appropriate XPath context for handlers associated with the iteration  
 - in the case where there is no repeat iteration (empty repeat nodeset), the XPath context becomes empty
 
-## xxforms-index-changed
+### xxforms-index-changed
 
 - __Dispatched in response to:__ index changed on `<xf:repeat>`  
 - __Target:__ `<xf:repeat>` element  
@@ -109,7 +199,7 @@ The `xxforms-index-changed` event is not dispatched during control creation, onl
 </xf:group>
 ```
 
-## xxforms-iteration-moved
+### xxforms-iteration-moved
 
 - __Dispatched in response to:__ iteration containing the control has changed since the last refresh or the time the iteration was first created
 - __Target:__ control element  
@@ -139,86 +229,44 @@ This event is useful for example to run `xxf:script` actions to update client-si
 
 _NOTE: This event doesn't bubble, so event listeners must directly observe the controls receiving the event._
 
-## xxforms-value-changed
+## Upload control events 
 
-- __Dispatched in response to:__ value changed in an instance
-- __Target:__ instance  
-- __Bubbles:__ Yes  
+### xxforms-upload-start
+
+- __Dispatched in response to:__ upload started on the client
+- __Target:__ `<xf:upload>` element
+- __Bubbles:__ Yes
+- __Cancelable:__ Yes
+- __Context Info:__ None
+
+### xxforms-upload-cancel
+
+- __Dispatched in response to:__ upload canceled by user on the client
+- __Target:__ `<xf:upload>` element
+- __Bubbles:__ Yes
+- __Cancelable:__ Yes
+- __Context Info:__ None
+
+### xxforms-upload-done
+
+- __Dispatched in response to:__ upload completed on the server
+- __Target:__ `<xf:upload>` element
+- __Bubbles:__ Yes
+- __Cancelable:__ Yes
+- __Context Info:__ None
+
+### xxforms-upload-error
+
+- __Dispatched in response to:__ upload ended with an error
+- __Target:__ `<xf:upload>` element
+- __Bubbles:__ Yes
 - __Cancelable:__ Yes
 - __Context Info:__
-    - `event('node') as node()`: element or attribute node whose value has changed
-    - `event('old-value') as xs:string`: previous value
-    - `event('new-value') as `xs:string: new value
-
-The `xxforms-value-changed` event is dispatched to an instance when an element or attribute value is changed in that instance, namely through the following mechanisms:
-
-- `calculate` or `xxf:default` MIP
-- `<xf:setvalue>` action
-- value of a bound control changed by the user
-- submission result with `replace="text"`
-
-Example:
-
-```xml
-<html xmlns:xforms="http://www.w3.org/2002/xforms"
-      xmlns:ev="http://www.w3.org/2001/xml-events"
-      xmlns="http://www.w3.org/1999/xhtml">
-
-    <head>
-        <xf:model>
-            <xf:instance id="table">
-                <table xmlns=""/>
-            </xf:instance>
-        </xf:model>
-    </head>
-    <body>
-       <xf:message ev:event="xxforms-value-changed" ev:observer="table">Changed!</xf:message>
-        <xf:input ref="instance()">
-            <xf:label>Change me:</xf:label>
-        </xf:input>
-    </body>
-</html>
-```
-
-## xxforms-valid
-
-- __Dispatched in response to:__ instance being valid after validation
-- __Target:__ instance  
-- __Bubbles:__ Yes  
-- __Cancelable:__ Yes  
-- __Context Info:__ none
-
-The `xxforms-valid` event is dispatched to an instance after validation if it is valid.  
-
-## xxforms-invalid
-
-- __Dispatched in response to:__ instance being invalid after validation
-- __Target:__ instance  
-- __Bubbles:__ Yes  
-- __Cancelable:__ Yes  
-- __Context Info:__ none
-
-The `xxforms-invalid` event is dispatched to an instance after validation if it is invalid.  
-
-## xxforms-dialog-open
-
-- __Dispatched in response to:__ `xxf:show` action
-- __Target:__ dialog  
-- __Bubbles:__ Yes  
-- __Cancelable:__ Yes  
-- __Context Info:__ none
-
-The `xxforms-dialog-open` event is dispatched to an dialog in response to running the  action targeting that dialog.  
-
-## xxforms-dialog-close
-
-- __Dispatched in response to: `xxf:hide` action
-- __Target:__ dialog  
-- __Bubbles:__ Yes  
-- __Cancelable:__ Yes  
-- __Context Info:__ none
-
-The `xxforms-dialog-close` event is dispatched to an dialog in response to:
-
-- running the `<xxf:hide>` action targeting that dialog
-- the user closing the dialog with the dialog close box, if present
+    - `event('xxf:error-type') as xs:string`
+        - `size-error` if the upload was too large
+        - `upload-error` if the cause of the error is unknown
+        - *NOTE: other error types may be added in the future*
+    - `event('xxf:permitted') as xs:integer?`
+        - if `size-error`, and if known, maximum upload size allowed by configuration
+    - `event('xxf:actual') as xs:integer?`
+        - if `size-error`, and if known, actual upload size detected
