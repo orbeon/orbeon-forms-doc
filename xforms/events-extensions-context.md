@@ -1,4 +1,4 @@
-# Extension event context information
+# Extension Event Context Information
 
 <!-- toc -->
 
