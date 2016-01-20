@@ -1,4 +1,4 @@
-# Events - Standard Support
+# Standard Event Support
 
 <!-- toc -->
 
