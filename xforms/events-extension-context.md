@@ -1,14 +1,12 @@
-# XForms Events
+# Extension event context information
 
 <!-- toc -->
 
-## Standard event context information
+## Introduction
 
-*TODO*
+XForms specifies some context information for events. Orbeon Forms adds further context information to events.
 
-## Extension event context information
-
-### All events
+## All events
 
 Orbeon Forms enhances the XML Events `event()` function to take a qualified name as parameter:
 
@@ -20,33 +18,21 @@ This allows namespacing attribute names, therefore better allowing for extension
 
 On all events, the following extension attributes are supported:
 
-- `event('xxf:type') as xs:string`
-  Return the event type (also known as event name), for example `DOMActivate`.
-- `event('xxf:targetid') as xs:string`
-  Return the static id of the event target (`event('xxf:target')` is supported for backward compatibility).
-- `event('xxf:absolute-targetid') as xs:string`
-  *[SINCE 2012-07-10 / Orbeon Forms 4.0]*
-  Return the absolute id of the event target.
-- `event('xxf:observerid') as xs:string`
-  *[SINCE 2012-05-18 / Orbeon Forms 4.0]*
-  Return the static id of the event observer.
-- `event('xxf:absolute-observerid') as xs:string`
-  *[SINCE 2012-07-10 / Orbeon Forms 4.0]*
-  Return the absolute id of the event observer.
-- `event('xxf:bubbles') as xs:boolean`
-  Return whether the event is allowed to bubble or not.
-- `event('xxf:cancelable') as xs:boolean`
-  Return whether the event is cancelable or not.
-- `event('xxf:phase') as xs:string`
-  The current event phase: capture, target, or bubbling.
-- `event('xxf:repeat-indexes') as xs:string*`
-  Return the event target's current repeat indexes, if any, starting from the ancestor repeat.
-- `event('xxf:repeat-ancestors') as xs:string*`
-  Return the event target's ancestor repeat ids, if any.
-- `event('xxf:target-prefixes') as xs:string*`
-  Return the event target's id prefixes, if any, starting from the ancestor components. This will be empty unless the target is within an XBL component.
+| Context | Type | Description |
+| --- | --- | --- |
+| `xxf:type` | `xs:string` |  event type (also known as event name), for example `DOMActivate` |
+| `xxf:targetid` | `xs:string` |  static id of the event target (`event('xxf:target')` is supported for backward compatibility) |
+| `xxf:absolute-targetid` | `xs:string` |  absolute id of the event target |
+| `xxf:observerid` | `xs:string` | static id of the event observer |
+| `xxf:absolute-observerid` | `xs:string` | absolute id of the event observer |
+| `xxf:bubbles` | `xs:boolean` | whether the event is allowed to bubble or not |
+| `xxf:cancelable` | `xs:boolean` | whether the event is cancelable or not |
+| `xxf:phase` | `xs:string` | current event phase: capture, target, or bubbling |
+| `xxf:repeat-indexes` | `xs:string*` | event target's current repeat indexes, if any, starting from the ancestor repeat |
+| `xxf:repeat-ancestors` | `xs:string*` | event target's ancestor repeat ids, if any |
+| `xxf:target-prefixes` | `xs:string*` | event target's id prefixes, if any, starting from the ancestor components. This will be empty unless the target is within an XBL component |
 
-### UI events
+## UI events
 
 These are:
 
@@ -69,18 +55,14 @@ These are:
 
 The following extension attributes are supported:
 
-- `event('xxf:control-position') as xs:integer`
-  Return the event target's position in the user interface. This is the control's static position, i.e. this does not reflect possible repeat iterations.
-- `event('xxf:binding') as node()?`
-  Return the event target's single-node binding if any.
-- `event('xxf:label') as xs:string?`
-  Return the event target's label value if any.
-- `event('xxf:hint') as xs:string?`
-  Return the event target's hint value if any.
-- `event('xxf:help') as xs:string?`
-  Return the event target's help value if any.
-- `event('xxf:alert') as xs:string?`
-  Return the event target's alert value if any.
+| Context | Type | Description |
+| --- | --- | --- |
+| `xxf:control-position` | `xs:integer` | event target's position in the user interface. This is the control's static position, i.e. this does not reflect  possible repeat iterations |
+| `xxf:binding` | `node()?` | event target's single-node binding if any |
+| `xxf:label` | `xs:string?` | event target's label value if any |
+| `xxf:hint` | `xs:string?` | event target's hint value if any |
+| `xxf:help` | `xs:string?` | event target's help value if any |
+| `xxf:alert` | `xs:string?` | event target's alert value if any |
 
 On `xforms-value-changed`, the following extension attributes are supported:
 
@@ -93,11 +75,11 @@ On `xforms-select`, the following extension attributes are supported:
 - `event('xxf:item-value')`
   When this event is dispatched to in response to a selection control item being selected, returns the value of the selected item.
 
-### Other events
+## Other events
 
 On `xforms-submit-serialize`, the following extension attributes are supported:
 
-- `event('xxf:binding') as node()?`
-  Return the submission's single-node binding if any.
-- `event('xxf:serialization') as xs:string`
-  Return the submission's requested serialization, e.g. `application/xml`, `application/x-www-form-urlencoded`, etc..
+| Context | Type | Description |
+| --- | --- | --- |
+| `xxf:binding` | `node()?` |submission's single-node binding if any |
+| `xxf:serialization` | `xs:string` |submission's requested serialization, e.g. `application/xml`, `application/x-www-form-urlencoded`, etc |
