@@ -1,5 +1,7 @@
 # Events - Extensions
 
+<!-- toc -->
+
 ## Orbeon Forms extensions   
 
 ### Creating keyboard shortcuts
@@ -380,7 +382,7 @@ The `xxforms-value-changed` event is dispatched to an instance when an element o
 * value of a bound control changed by the user
 * submission result with `replace="text"`
 
-Example ([also on gist.github][9]):
+Example:
 
 ```xml
 <html xmlns:xforms="http://www.w3.org/2002/xforms"
@@ -450,13 +452,13 @@ The `xxforms-dialog-close` event is dispatched to an dialog in response to:
 * running the `<xxf:hide>` action targeting that dialog
 * the user closing the dialog with the dialog close box, if present
 
-[1]: http://www.w3.org/TR/DOM-Level-2-Events/events.html
-[2]: http://www.w3.org/TR/xml-events/
-[3]: http://www.w3.org/TR/DOM-Level-3-Events/
-[4]: http://www.w3.org/TR/xbl/
-[5]: http://www.w3.org/TR/xbl/#the-handler
-[6]: http://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107/keyset.html
+[1]: https://www.w3.org/TR/DOM-Level-2-Events/events.html
+[2]: https://www.w3.org/TR/2010/NOTE-xml-events2-20101216/
+[3]: https://www.w3.org/TR/DOM-Level-3-Events/
+[4]: https://www.w3.org/TR/xbl/
+[5]: https://www.w3.org/TR/xbl/#the-handler
+[6]: https://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107/keyset.html
 [7]: https://github.com/orbeon/orbeon-forms/wiki/XForms-~-Events
-[8]: http://lists.w3.org/Archives/Public/www-html-editor/2008JanMar/0012.html
-[9]: http://gist.github.com/557755
+[8]: https://lists.w3.org/Archives/Public/www-html-editor/2008JanMar/0012.html
+
 
