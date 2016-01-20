@@ -57,7 +57,7 @@ _NOTE: In most cases, the `ev:phase` attribute can be omitted, in which case the
 
 ## Enhanced xf:dispatch support
 
-Orbeon Forms supports passing event context attributes with the `` child element. The actions supported are actions which directly cause an event to be dispatched:
+Orbeon Forms supports passing event context attributes with the XForms 2.0 `<xf:property>` child element. The actions supported are actions which directly cause an event to be dispatched:
 
 * `<xf:dispatch>`
 * `<xf:send>`
@@ -68,15 +68,17 @@ Here is how you pass context attributes when executing an action:
 
 ```xml
 <xf:dispatch name="rename-control" target="my-model">
-    <xxf:context name="control" select="my/control"/>
-    <xxf:context name="control-name" select="'beverage-selection'"/>
+    <xf:property name="control" select="my/control"/>
+    <xf:property name="control-name" select="'beverage-selection'"/>
 </xf:dispatch>
 ```
 
-`<xxf:context>` supports the following two attributes:
+*NOTE: Prior to standard XForms support, the `<xxf:context>` child element was introduced for the same purpose and can still be used for backward compatibility.*
 
-|||
-|---|---|
+`<xf:property>` supports the following two attributes:
+
+||||
+|---|---|---|
 | `name` |  Mandatory | Name of the context attribute. |
 | `select` |  Mandatory |  XPath 2.0 expression determining the value of the context attribute.  |
 
@@ -92,7 +94,7 @@ Context attributes passed this way can be retrieved using the `event()` function
 </xf:action>
 ```
  
-_NOTE: At the moment, with, `<xf:dispatch>`, only custom events support passing context attributes this way. Built-in events, such as `xforms-value-changed`, or `DOMActivate`, ignore nested `<xxf:context>` elements._
+_NOTE: At the moment, with, `<xf:dispatch>`, only custom events support passing context attributes this way. Built-in events, such as `xforms-value-changed`, or `DOMActivate`, ignore nested `<xf:property>` elements._
 
 ## Enhanced support for xforms-select and xforms-deselect
 
