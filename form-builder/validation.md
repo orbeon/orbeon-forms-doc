@@ -53,10 +53,26 @@ The Required validation can have a custom alert message.
 
 The list of data types includes:
 
-- common types such as a plain `string`, `decimal`, `date`, `time`, `boolean`, or `email`
-- XML Schema types (only if an XML Schema with simple types was attache to the form)
+- Built-in types
+- XML Schema types (only if an XML Schema with simple types was attache to the form).
+
+Built-in types include:
+
+- Common Types
+    - String: any string of characters
+    - Boolean: `true` or `false`
+    - Email address: an email address
+- Number Types
+    - Decimal: positive or negative decimal number, which can be fractional with an optional decimal point `.`
+    - Integer: positive or negative integer decimal number
+- Date and Time Types
+    - Date: date stored in ISO format
+    - Time: time stored in ISO format
+    - Date and Time: date and time stored in ISO format
 
 ![Built-in Types](images/built-in-types.png)
+
+*COMPATIBILITY NOTE: Until Orbeon Forms 4.10, there was also a "Double-precision floating point" exposed, which was removed as explained in this [blog post](http://blog.orbeon.com/2016/01/removing-double-datatype.html). And prior to Orbeon Forms 4.3, the list was longer, as explained in [this other blog post](http://blog.orbeon.com/2013/07/simplifying-list-of-data-types-in-form.html)*
 
 At runtime, if the value is required and does not match the specified datatype, the value is marked as invalid.
 
