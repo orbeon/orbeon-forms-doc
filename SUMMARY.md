@@ -154,11 +154,12 @@
         * [Error handling](xforms/error-handling.md)
             * [Detailed behavior](xforms/error-handling-detailed-behavior.md)
         * [Model-Bind Variables](xforms/model-bind-variables.md)
-        * [XForms 2.0](xforms/xforms-2-0.md)
-        * Events
-            * [Events](xforms/events.md)
-            * [Events - Standard support](xforms/events-standard.md)
-            * [Events - Extensions](xforms/events-extensions.md)
+        * [XForms 2.0 support](xforms/xforms-2-0.md)
+    * Events
+        * [Standard support](xforms/events-standard.md)
+        * [Extension events](xforms/events-extensions-events.md)
+        * [Extension context information](xforms/events-extensions-context.md)
+        * [Other extensions](xforms/events-extensions-other.md)
     * Controls
         * [Text area](xforms/controls/textarea.md)
     * [XPath function library](xforms/xpath/README.md)
