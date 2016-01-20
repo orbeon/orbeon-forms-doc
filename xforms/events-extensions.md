@@ -29,7 +29,7 @@ A `keypress` listener can be active:
 
 XML Events 1 only supports filtering event handlers on a subset of the DOM Level 2 Events phases. Orbeon Forms extends that behavior and supports registering handlers that match on one of the 3 main event phases specified by DOM Level 2 Events: `capture`, `target`, and `bubbling`.
 
-As of January 2010, Orbeon Forms supports the following values for the `ev:phase` attribute:  
+Orbeon Forms supports the following values for the `ev:phase` attribute:  
 
 * `capture`: only activate the handler during the capture phase (this is compatible with all the specifications)
 * `default` or unspecified: only activate the handler during the target or bubbling phase (this is compatible with XML Events 1 but not included in the current XBL 2 proposal)
@@ -185,8 +185,6 @@ In this example, this is identical to:`
 
 ### Observing the preceding sibling element
 
-[SINCE 2012-05-18]
-
 The `ev:observer` attribute can be set to the value `#preceding-sibling`:
 
 ```xml
@@ -208,11 +206,9 @@ This is useful in situations where it is not possible to explicitly set an id on
 
 ### Phantom handlers
 
-[SINCE 2012-06-08]
-
 Event handler support the `xxf:phantom="true"` attribute to specify that the event handler is listening to events flowing across XBL scopes.
 
-Starting Orbeon Forms 4 and builds since 2012-06-08, XForms events flow along XBL boundaries and are fully encapsulated. This attribute allows special consumers of events to have a global view of events flowing in the XForms page. Example:
+XForms events flow along XBL boundaries and are fully encapsulated. This attribute allows special consumers of events to have a global view of events flowing in the XForms page. Example:
 
 ```xml
 <xf:action
@@ -223,7 +219,7 @@ Starting Orbeon Forms 4 and builds since 2012-06-08, XForms events flow along XB
 
 In this example, the handler will catch events that happen not only in the current XBL scope, but also those in nested XBL scopes.
 
-This is an advanced feature and should be used wisely. As of 2012-06-08, it is used in Orbeon Forms by the error summary (`fr:error-summary`) and by Form Builder.
+This is an advanced feature and should be used wisely. It is used in Orbeon Forms by the error summary (`fr:error-summary`) and by Form Builder.
 
 ## Orbeon Forms extension events
 
@@ -371,7 +367,7 @@ Target: instance
 Bubbles: Yes  
 Cancelable: Yes
 
-Context Info [SINCE 2012-01-05]:
+Context Info:
 
 * `event('node') as node()`: element or attribute node whose value has changed
 * `event('old-value') as xs:string`: previous value
