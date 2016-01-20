@@ -10,6 +10,30 @@ What's new with XForms is that it allows users to declaratively register event h
 
 ## Orbeon Forms support
 
+### Optional ev: prefix for event attributes
+
+The usual XForms way of using XML events is by prefixing attributes with the `ev:` prefix. This is in fact not absolutely mandated by XForms, and leads to heaver attribute syntax, so Orbeon Forms allows using the attributes without a namespace. The examples below usually use the `ev:` prefix, but most of the Orbeon Forms code doesn't.
+
+Example with prefix:
+
+```xml
+<xf:dispatch 
+    ev:observer="child-instance" 
+    ev:event="xforms-insert" 
+    targetid="main-model" 
+    name="update-after-insert"/>
+```
+
+Example without prefix:
+
+```xml
+<xf:dispatch 
+    observer="child-instance" 
+    event="xforms-insert" 
+    targetid="main-model" 
+    name="update-after-insert"/>
+```
+
 ### Registering event handlers  
 
 [TODO: basic placement and ev:event support]  
@@ -44,7 +68,10 @@ Note that you still need to use the `ev:event` attribute to specify to what even
                 <instance>initial</instance>
             </xf:instance>
             <!-- Event handler located in the model but observing an element in the view -->
-            <xf:action ev:observer="my-group" ev:target="my-input" ev:event="DOMFocusIn">
+            <xf:action
+                ev:observer="my-group"
+                ev:target="my-input"
+                ev:event="DOMFocusIn">
                 <xf:setvalue ref=".">new</xf:setvalue>
             </xf:action>
         </xf:model>
@@ -56,7 +83,9 @@ Note that you still need to use the `ev:event` attribute to specify to what even
                 <xf:label>My Data</xf:label>
             </xf:input>
             <!-- Event handler located in the view but observing an element in the model -->
-            <xf:action ev:observer="my-model" ev:event="xforms-ready">
+            <xf:action
+                ev:observer="my-model"
+                ev:event="xforms-ready">
                 <xf:dispatch name="DOMFocusIn" targetid="my-input"/>
             </xf:action>
         </xf:group>
@@ -122,7 +151,10 @@ Event handlers with the `ev:observer` attribute are also recognized as long as t
 
 ```xml
 <fr:foo id="my-foo">
-    <xf:setvalue ev:event="my-event" ev:observer="my-input" ref="my-value">43</xf:setvalue>
+    <xf:setvalue
+        ev:event="my-event"
+        ev:observer="my-input"
+        ref="my-value">43</xf:setvalue>
 </fr:foo>
 <xf:input id="my-input" ref="my-value"/>
 ```
@@ -141,7 +173,10 @@ Example:
 
 ```xml
 <xbl:handlers>
-    <xbl:handler event="xforms-focus" phase="target" defaultAction="cancel">
+    <xbl:handler
+        event="xforms-focus"
+        phase="target"
+        defaultAction="cancel">
         <xxf:script id="xf-sf">YAHOO.xbl.fr.Currency.instance(this).setfocus();</xxf:script>
     </xbl:handler>
 </xbl:handlers>
