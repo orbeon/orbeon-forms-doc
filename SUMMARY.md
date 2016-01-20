@@ -196,6 +196,7 @@
     * Processors
         * [PDF to Image Converter](xml-platform/processors/pdf-to-image-converter.md)
     * Resources
+        * [Resource managers](xml-platform/resources/resource-managers.md)
         * [Setting up an external resources directory](xml-platform/resources/external-resources.md)
 * Contributors
     * [Automated tests](contributors/automated-tests.md)
