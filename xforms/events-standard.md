@@ -158,11 +158,11 @@ Example:
 
 ### The ev:handler attribute
 
-[TODO: not supported by Orbeon Forms as of 2010-01]
+*Not supported by Orbeon Forms.*
 
-### The  element
+### The ev:listener element
 
-[TODO: not supported by Orbeon Forms as of 2010-01]
+*Not supported by Orbeon Forms.*
 
 ### The keypress event
 
