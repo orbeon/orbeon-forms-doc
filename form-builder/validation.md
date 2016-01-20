@@ -29,7 +29,7 @@ The value associated with a control can be validated with 3 different validation
 1. *Required*. This indicates whether the value can be empty or not.
 2. *Data Type*. For example `string`, `decimal`, `date`, or `time`.
 3. *Formula*. A custom formula, expressed in XPath, which determines whether the value is valid or not for a certain validation level.
-4. *Common Constraints*. This includes "Has Maximum Length" and "Has Minimum Length" constraints. [SINCE Orbeon Forms 4.10]
+4. *Common Constraints*. This includes constraints such as "Maximum Length", "Minimum Length", and more. [SINCE Orbeon Forms 4.10]
 
 ### Required validation
 
@@ -119,14 +119,39 @@ Each formula can have a *level* associated with it and a custom alert message.
 
 ### Common constraints
 
-[SINCE Orbeon Forms 4.10]
-
 A common constraint consists of the following:
 
-- "Has Maximum Length"
+- "Maximum Length"
+  - SINCE Orbeon Forms 4.10
+  - applies to "String" and "Email" types only
   - the constraint fails if the length of the value converted to a string is larger than the specified integer value
-- "Has Minimum Length"
+- "Minimum Length"
+  - SINCE Orbeon Forms 4.10
+  - applies to "String" and "Email" types only
   - the constraint fails if the length of the value converted to a string is smaller than the specified integer value
+- "Positive"
+  - SINCE Orbeon Forms 4.11
+  - applies to "Decimal" and "Integer" types only
+  - the constraint fails if the number is not positive
+- "Positive or Zero"
+  - SINCE Orbeon Forms 4.11
+  - applies to "Decimal" and "Integer" types only
+  - the constraint fails if the number is not positive or zero
+- "Negative or Zero"
+  - SINCE Orbeon Forms 4.11
+  - applies to "Decimal" and "Integer" types only
+  - the constraint fails if the number is not negative or zero
+- "Negative"
+  - SINCE Orbeon Forms 4.11
+  - applies to "Decimal" and "Integer" types only
+  - the constraint fails if the number is not negative
+- "Maximum Fractional Digits"
+  - SINCE Orbeon Forms 4.11
+  - applies to "Decimal" type only
+  - the constraint fails if the decimal number has more than the specified number of significant digits (trailing zeros are ignored)
+
+
+
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
 
