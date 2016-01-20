@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Orbeon Forms *form definitions* and *form data* are stored via an an abstraction called the persistence API. This allows storing form definitions and form data for all or specific forms in different places. For example, you could store your form definitions into Oracle, and your form data into your own, custom database.
+Orbeon Forms *form definitions* and *form data* are stored via an an abstraction called the **persistence API**. This allows storing form definitions and form data for all or specific forms in different places. For example, you could store your form definitions into Oracle, and your form data into your own, custom database.
 
 ## Built-in support
 
@@ -45,7 +45,7 @@ where:
 
 [SINCE: Orbeon Forms 4.4]
 
-If your persistence provider does not support drafts, you can specifically turn off the autosave feature for that persistence layer with the `oxf.fr.persistence.*.autosave` property. See [Autosave|Form Runner ~ Autosave]] and [[persistence layer configuration](../../../configuration/properties/persistence.md) for details.
+If your persistence provider does not support drafts, you can specifically turn off the autosave feature for that persistence layer with the `oxf.fr.persistence.*.autosave` property. See [Autosave](../../persistence/autosave.md) and [persistence layer configuration](../../../configuration/properties/persistence.md) for details.
 
 Similarly, if your persistence provider does not support user/group permissions, you can specifically turn off the permissions feature for that persistence layer with the `oxf.fr.persistence.*.permissions` property. See [persistence layer configuration](../../../configuration/properties/persistence.md) for details.
 
