@@ -190,4 +190,4 @@ The properties sub-system is initialized after the [Resource Manager][2] (the pr
 Property files support inclusions via XInclude. This is the mechanism used by Orbeon Forms to load  all the secondary property files.
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions#TOC-xxf:property-
-[2]: ../../xml-platform/resources/resource-manager.md
+[2]: ../../xml-platform/resources/resource-managers.md
