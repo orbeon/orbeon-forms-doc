@@ -162,6 +162,7 @@
         * [Other extensions](xforms/events-extensions-other.md)
     * Controls
         * [Text area](xforms/controls/textarea.md)
+        * [Upload](xforms/controls/upload.md)
         * [Dialog](xforms/controls/dialog.md)
     * [XPath function library](xforms/xpath/README.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
