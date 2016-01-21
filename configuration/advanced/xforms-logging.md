@@ -57,7 +57,7 @@ The first property controls what is logged at debug level:
         * other activity related to an XForms document
         * this includes the output of the ``<xf:message>`` action with level `xxf:log-debug`  
     * `process`
-        * activity related to [processes](../../form-runner/advanced/buttons-and-processes/index.md)
+        * activity related to [processes](../../form-runner/advanced/buttons-and-processes/)
 * Not related to a particular XForms document:
     * `analysis`
         * activity related to the static analysis of an XForms document  
