@@ -160,6 +160,9 @@
         * [Extension events](xforms/events-extensions-events.md)
         * [Extension context information](xforms/events-extensions-context.md)
         * [Other extensions](xforms/events-extensions-other.md)
+    * Actions
+        * [Repeat, insert and delete](xforms/actions/repeat-insert-delete.md)
+        * [Scripting actions](xforms/actions/scripting.md)
     * Controls
         * [Text area](xforms/controls/textarea.md)
         * [Upload](xforms/controls/upload.md)
