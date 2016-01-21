@@ -1,4 +1,4 @@
-# Actions for running client-side or server-side scripts
+# Scripting Actions
 
 <!-- toc -->
 
