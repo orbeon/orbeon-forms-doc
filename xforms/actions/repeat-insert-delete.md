@@ -304,6 +304,6 @@ Because the action specifies `xxf:defaults="true"`, the first `value` element is
 ## See also
 
 - [Dynamic initial values](../../xforms/binds.md#dynamic-initial-values)
-- [Grid component](../../form-runner/components/grid.md)
+- [Grid component](../../form-runner/component/grid.md)
 
 [1]: http://wiki.orbeon.com/forms/how-to/logic/repeat-insert-position
