@@ -193,12 +193,11 @@ In addition, the `xxf:pending-uploads()` function returns the number of pending 
     readonly="xxf:pending-uploads() gt 0">
 ```
 
-Events dispatched to `<xf:upload>`:
+### Events
 
-* `xxforms-upload-start`: dispatched when an upload starts
-* `xxforms-upload-cancel`: dispatched when an upload is canceled by the user
-* `xxforms-upload-done`: dispatched when an upload is completed
-* _NOTE: `xforms-select` is no longer dispatched when a file is selected_
+See [Upload control events](../events-extensions-events.md#upload-control-events).
+
+_NOTE: `xforms-select` is no longer dispatched when a file is selected._
 
 [3]: https://www.ietf.org/rfc/rfc2045.txt
 [4]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-url-generator
