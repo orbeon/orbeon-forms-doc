@@ -104,4 +104,4 @@ This assumes that you are deploying Orbeon Forms in WebLogic as an enterprise ar
 
 Step 2 and 3 above assume you use the WebLogic Console to deploy Orbeon Forms. If instead you use `java weblogic.Deployer`, on the command line, just add the following parameter to the command you normally use to deploy Orbeon Forms: `-plan plan.xml`.
 
-[1]: http://wiki.orbeon.com/forms/doc/developer-guide/resource-managers
+[1]: resource-managers.md
