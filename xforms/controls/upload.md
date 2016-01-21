@@ -193,7 +193,7 @@ In addition, the `xxf:pending-uploads()` function returns the number of pending 
     readonly="xxf:pending-uploads() gt 0">
 ```
 
-### Events
+## Events
 
 See [Upload control events](../events-extensions-events.md#upload-control-events).
 
