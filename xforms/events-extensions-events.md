@@ -108,7 +108,7 @@ When the dialog opens upon receiving the `xxforms-dialog-open` event, it sets th
 
 ### xxforms-dialog-close
 
-- __Dispatched in response to: `xxf:hide` action
+- __Dispatched in response to:__ `xxf:hide` action
 - __Target:__ `<xxf:dialog>` element  
 - __Bubbles:__ Yes  
 - __Cancelable:__ Yes  
