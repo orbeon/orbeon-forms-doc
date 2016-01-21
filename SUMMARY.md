@@ -163,6 +163,7 @@
     * Actions
         * [Repeat, insert and delete](xforms/actions/repeat-insert-delete.md)
         * [Scripting actions](xforms/actions/scripting.md)
+        * [Extensions](xforms/actions/extensions.md)
     * Controls
         * [Text area](xforms/controls/textarea.md)
         * [Upload](xforms/controls/upload.md)
