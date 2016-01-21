@@ -2,7 +2,7 @@
 
 ## Extension actions
 
-### The <xxf:setvisited> action
+### The `<xxf:setvisited>` action
 
 The `<xxf:setvisited>` action allows updating the "visited" flag of a control. It has the following attributes:
 
