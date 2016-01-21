@@ -79,7 +79,32 @@ The `xxforms-invalid` event is dispatched to an instance after validation if it 
 - __Cancelable:__ Yes  
 - __Context Info:__ none
 
-The `xxforms-dialog-open` event is dispatched to an dialog in response to running the  action targeting that dialog.  
+The `xxforms-dialog-open` event is dispatched to a dialog in response to running the  `<xxf:show>` action targeting that dialog.
+
+You can respond to this event before the dialog opens, for example to perform initialization of data:
+
+```xml
+<xxf:dialog id="hello-dialog">
+  <xh:div>
+    Hello!
+  </xh:div>
+  <xf:setvalue 
+    ev:event="xxforms-dialog-open" 
+    ref="..." 
+    value="..."/>
+</xxf:dialog>
+```
+
+You can set the focus on a specific control of the dialog with a `setfocus` action on the target or bubbling phase of this event:
+
+```xml
+<xf:setfocus 
+    ev:event="xxforms-dialog-open" 
+    control="my-control">
+```
+
+When the dialog opens upon receiving the `xxforms-dialog-open` event, it sets the focus on the first relevant, non-readonly control. This means that in general you don't need to use an explicit `setfocus` action.
+
 
 ### xxforms-dialog-close
 
@@ -89,7 +114,7 @@ The `xxforms-dialog-open` event is dispatched to an dialog in response to runnin
 - __Cancelable:__ Yes  
 - __Context Info:__ none
 
-The `xxforms-dialog-close` event is dispatched to an dialog in response to:
+The `xxforms-dialog-close` event is dispatched to a dialog in response to:
 
 - running the `<xxf:hide>` action targeting that dialog
 - the user closing the dialog with the dialog close box, if present
