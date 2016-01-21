@@ -8,9 +8,9 @@ While XForms gets you a long way towards creating a dynamic user-friendly user i
 
 ## Calling JavaScript from XForms
 
-### Scripting action
+### Scripting actions
 
-See [Scripting Actions](https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/xforms-actions/actions-script-action).
+See [Scripting Actions](actions/scripting.md).
 
 ### The javascript: protocol
 
