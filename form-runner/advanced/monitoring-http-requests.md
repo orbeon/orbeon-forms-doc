@@ -83,6 +83,6 @@ The Request Dumper Valve doesn't log the body of POSTs, it can only be used on T
 [4]: http://www.wireshark.org/
 [5]: http://ws.apache.org/commons/tcpmon/
 [6]: http://ws.apache.org/commons/tcpmon/tcpmontutorial.html
-[7]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-logging
+[7]: ../../configuration/advanced/xforms-logging.html
 [8]: https://addons.mozilla.org/en-US/firefox/addon/1843
 [11]: https://tomcat.apache.org/download-70.cgi
