@@ -23,7 +23,9 @@ In addition to `<xxf:script>` / `<xf:action>`, you can also use the `javascript:
 "/>
 ```
 
-Using AVTs on the `resource` attribute allows you to pass parameters from XForms to JavaScript.
+Using AVTs on the `resource` attribute allows you to pass parameters from XForms to JavaScript, although you have to be careful to properly escape values.
+
+Starting Orbeon Forms 4.11, the recommended way to pass parameters is to use the nested `<xxf:param>` attribute of [scripting actions](actions/scripting.md).
 
 ## Calling XForms from JavaScript
 
