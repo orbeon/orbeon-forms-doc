@@ -687,23 +687,43 @@ These properties control email sending in Form Runner:
     as="xs:boolean"
     name="oxf.fr.email.attach-xml.*.*"
     value="true"/>
+    
+<property
+    as="xs:string"
+    name="oxf.fr.email.attach-files.*.*"
+    value="all"/>
 ```
 
-* The following properties control the connection to the SMTP server.
-    * `host`: required SMTP host name
-    * `port`: optional SMTP port override. If not specified, the defaults are:
-        * plain SMTP: 25
-        * TLS: 587
-        * SSL: 465
-    * `encryption`:
-        * blank: none (plain SMTP)
-        * `tls`: use TLS
-        * `ssl`: use SSL
-    * `username`: SMTP username (required if TLS or SSL is used, optional otherwise)
-    * `credentials`: SMTP password
-* The `from` property specifies the sender email address(es) appearing in the email sent.
-* The `to` property specifies the recipient email address(es) of the email sent.
-* The `attach-pdf`, `attach-tiff` and `attach-xml` properties control whether PDF, TIFF and/or XML versions of the form data are attached to the email.
+The following properties control the connection to the SMTP server.
+
+- `host`: required SMTP host name
+- `port`: optional SMTP port override. If not specified, the defaults are:
+    * plain SMTP: 25
+    * TLS: 587
+    * SSL: 465
+- `encryption`:
+    * blank: none (plain SMTP)
+    * `tls`: use TLS
+    * `ssl`: use SSL
+- `username`: SMTP username (required if TLS or SSL is used, optional otherwise)
+- `credentials`: SMTP password
+
+Email addresses properties:
+
+- `from`: sender email address(es) appearing in the email sent
+- `to`: recipient email address(es) of the email sent
+
+Attachment properties:
+
+- `attach-pdf`: whether the PDF representation is attached to the email
+- `attach-tiff`: whether the TIFF representation is attached to the email
+- `attach-xml`:  whether the XML data is attached to the email
+- `attach-files`:
+    - SINCE Orbeon Forms 4.11
+    - whether file and image form attachments are attached to the email
+    - `all`: all form attachments are included (this is the default)
+    - `none`: no form attachments is included
+    - `selected`: only form attachments selected in the Form Builder with "Include as Email Attachment" are included 
 
 ## Sections and grids
 
