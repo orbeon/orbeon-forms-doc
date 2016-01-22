@@ -27,8 +27,14 @@ The following options are available:
 - __Show in Search:__ when selected, the control value is searchable in the summary page
 - __Email Recipient:__ when selected, the control is used to determine an email recipient when the form data is sent by email
 - __Show in Email Subject:__ when selected, the control value is used as part of the subject of the email when the form data is sent by email
+- __Include as Email Attachment__:
+    - SINCE Orbeon Forms 4.11
+    - this option only shows for file and image attachments
+    - when the property `oxf.fr.email.attach-files` is set to `selected`, only file and image attachments with this option checked are attached to the email
 
-The "Custom CSS Classes" field allows adding CSS classes which will be placed on the control in the resulting HTML.
+![Attachment Settings](images/attachment-settings.png)
+
+The "Custom CSS Classes" field allows adding CSS classes which will be placed on the control in the resulting HTML. This can be used for custom styling.
 
 #### Control appearance
 
