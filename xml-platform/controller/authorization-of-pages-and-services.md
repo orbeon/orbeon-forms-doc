@@ -79,7 +79,7 @@ With previous versions of Orbeon Forms, requests were unrestricted. Although we 
 
 ### Authorization service
 
-You configure the authorization service via a property:
+You can configure the authorization service via a property:
 
 ```xml
 <property
@@ -91,15 +91,15 @@ You configure the authorization service via a property:
 
 The value of this property is either an absolute URL or an absolute path. If it is an absolute path, it is resolved against the host receiving the request. For example, if your servlet container is deployed on `http://localhost:8080/`, the path above resolves to `http://localhost:8080/orbeon-auth`.
 
-This means that the authorization service can reside within the same container has Orbeon Forms, or in a completely different location.
+This means that the authorization service can reside within the same container as Orbeon Forms, or in a completely different location.
 
 ## How the authorization service works
 
-It's pretty simple: Orbeon Forms _forward_ the incoming request to that service. This includes: HTTP method, headers, and requested path. Note that, even in the case of a POST or PUT, the request body is _not_ forwarded. The requested path is appended to the path of the authorization service. For example, if the request was for the following service:
+It's pretty simple: Orbeon Forms _forwards_ the incoming request to that service. This includes: HTTP method, headers, and requested path. Note, that even in the case of a POST or PUT, the request body is _not_ forwarded. The requested path is appended to the path of the authorization service. For example, if the request was for the following service:
 
     /fr/service/exist/crud/acme/gaga/form/form.xhtml
 
-with the settings above, the following service your would be called:
+with the settings above, the following URL would be called:
 
     http://localhost:8080/orbeon-auth/fr/service/exist/crud/acme/gaga/form/form.xhtml
 
@@ -107,7 +107,7 @@ This allows the authorization service to discriminate between different types of
 
 ## A simple authorization service
 
-Orbeon Forms ships with a very simple WAR file: `orbeon-auth.war`. This war file contains a dummy servlet and a web.xml which stub to configure BASIC authentication. You typically deploy this WAR file within the same serlvet container as the main Orbeon Forms WAR file. This means that you can set the property above to /orbeon-auth. Here is the default content of the `web.xml`:
+Orbeon Forms ships with a very simple WAR file: `orbeon-auth.war`. This war file contains a dummy servlet and a web.xml with stub to configure BASIC authentication. You typically deploy this WAR file within the same servlet container as the main Orbeon Forms WAR file. This means that you can set the property above to `/orbeon-auth`. Here is the default content of the `web.xml`:
 
 ```xml
 <web-app version="2.4"
@@ -159,17 +159,17 @@ Orbeon Forms ships with a very simple WAR file: `orbeon-auth.war`. This war file
 </web-app>
 ```
 
-By default, this configuration enable BASIC auth and only authorizes requests with a role called `orbeon-service`. This role is arbitrary. You can configure your servlet container to handle any role. If you are using Tomcat, you can for example configure users and roles in the [tomcat-users.xml file][1].
+By default, this configuration enables BASIC auth and only authorizes requests with a role called `orbeon-service`. This role is arbitrary. You can configure your servlet container to handle any role. If you are using Tomcat, you can for example configure users and roles in the [tomcat-users.xml file][1].
 
-With this setup, a request for an Orbeon Forms page or service is forwarded to this authorization service. If the request comes with appropriate credentials for the BASIC authentication which translates into a user with the given role, the servlet returns a successful response, and the request is authorized. Otherwise, the request is denied, and the request to the page or service is rejected.
+With this setup, a request for an Orbeon Forms page or service is forwarded to this authorization service. If the request comes with appropriate credentials for BASIC authentication which translates into a user with the given role, the servlet returns a successful response, and the request is authorized. Otherwise, the request is denied, and the request to the page or service is rejected.
 
 Note that this example is just about the simplest way that you can implement the authorization service. But you most likely will want to do some more advanced configuration. Also, note that you are not limited to BASIC authentication. You could for example fully delegate authorization to your own servlet.
 
 ## Implementing your own service
 
-You don't have to use the WAR provided to implement your service. You can implement your own servlets, or in fact implement your own service which can reside on any server and be written with any technology you like.
+You don't have to use the WAR provided to implement your service. You can implement your own servlet, or in fact implement your own service which can reside on any server and be written with any technology you like.
 
-Just make sure that your service responds with a successful HTTP return code when the request is authorized, and a non-successful HTTP return call when the request is not authorized (such as 401 or 403).
+Just make sure that your service responds with a successful HTTP return code when the request is authorized, and a non-successful HTTP return code when the request is not authorized (such as 401 or 403).
 
 It is very important to validate _services_ independently from _logged in users_. This is because in general, human users of the application must not be able to access services directly!
 
