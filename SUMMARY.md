@@ -165,6 +165,7 @@
         * [Scripting actions](xforms/actions/scripting.md)
         * [Extensions](xforms/actions/extensions.md)
     * Controls
+        * [Input](xforms/controls/input.md)
         * [Text area](xforms/controls/textarea.md)
         * [Upload](xforms/controls/upload.md)
         * [Dialog](xforms/controls/dialog.md)
