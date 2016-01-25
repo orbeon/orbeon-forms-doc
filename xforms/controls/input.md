@@ -1,5 +1,7 @@
 # Input Control
 
+<!-- toc -->
+
 ## Basic Usage
 
 ```xml
@@ -8,7 +10,7 @@
 
 ## Standard appearance
 
-By default, the text area control is rendered as a regular single-line input fields:
+By default, the text area control is rendered as a regular single-line input field:
 
 ![](../images/xforms-input-simple.png)
 
@@ -76,6 +78,8 @@ The way the XForms input control is be rendered on the page depends on the type 
 
 ![Boolean input](../images/xforms-input-boolean.png)
 
+![Date picker](../images/xforms-datepicker-simple.png)
+
 ![Date and time input variations](../images/xforms-input-dates-times.png)
 
 ## date, time, and dateTime types
@@ -137,7 +141,7 @@ If you type in a date field a year with only two digits (say 5/20/10), the contr
 
 By default, the months and days of the week are in English in the date picker (as shown in the screenshot above). You can  change this by setting the value of the lang attribute on the  element of the page. The value of the attribute two-letter [ISO 639-1 language code][5]. For instance with  months and weekdays will be shown in French, for instance:
 
-![][6]
+![Localized date picker](../images/xforms-datepicker-french.png)
 
 For more on which languages are supported localized out-of-the-box, see [supported languages][7]. Note that the changing the language also changes which day of the week is shown first in the calendar: in English, Sunday is shown first; with French and Spanish, Monday is shown first. 
 
@@ -145,7 +149,7 @@ For more on which languages are supported localized out-of-the-box, see [support
 
 If you are using the date picker in an area of your page which is scrollable (e.g. `<div style="overflow: scroll">`), if users scroll in that area while the date picker is open, you want the date picker to be anchored to the field it is related to and to scroll with the content of the scrollable area (versus being attached to the page, and only scrolling if the page is scrolled). For this to work, assuming you have the class `scrollable-area` on your scrollable area, you need to add the following CSS:
 
-```xml
+```css
 .scrollable-area { position: relative }
 ```
 
@@ -153,9 +157,9 @@ If you are using the date picker in an area of your page which is scrollable (e.
 
 On iOS (iPhone, iPad, iPod touch), inputs bound to nodes of type `xs:date`, `xs:time`, or `xs:dateTime` are rendered using the iOS 5 browser native date or time widgets, which iOS users are accustomed to, and which provides a better usability, especially on the smaller screen iPhone and iPod touch.
 
-![][8]![][9]
+![iOS date picker][8]
 
-  
+![iOS time picker][9]
 
 ### Limitations
 
@@ -198,10 +202,9 @@ Sanitation applies to:
 
 You can also use the `xxf:sanitize` attribute on the XForms model to set a filter local to a given page.
 
-[3]: http://wiki.orbeon.com/forms/doc/developer-guide/configuration-properties#TOC-Date-picker-navigator
-[4]: https://github.com/orbeon/orbeon-forms/wiki/XForms-~-Configuration-Properties#formatting
+[3]: ../../configuration/properties/xforms.html#navigator
+[4]: ../../configuration/properties/xforms.html#for-xfinput
 [5]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-[6]: http://wiki.orbeon.com/forms/_/rsrc/1249684911290/doc/developer-guide/xforms-controls/Picture%203.png
-[7]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Supported-Languages
+[7]: ../../form-runner/feature/localization.html
 [8]: ../images/xforms-ios-date.png
 [9]: ../images/xforms-ios-time.png
