@@ -22,7 +22,7 @@ Attributes:
 
 TODO:
 
-- `collapse`
+- `collapsible`
   - whether the section can be collapsed by clicking on its title
   - `true` (default)
     - allow section to be collapsed
