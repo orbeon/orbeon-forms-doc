@@ -22,8 +22,7 @@ Attributes:
 
 TODO:
 
-- `collapsible`
-  - SINCE Orbeon Forms 4.11
+- `collapsible` [SINCE Orbeon Forms 4.11]
   - whether the section can be collapsed by clicking on its title
   - `true` (default)
     - allow section to be collapsed
