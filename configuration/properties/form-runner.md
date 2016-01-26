@@ -766,18 +766,18 @@ The following property allows you to set whether a section content can be collap
 ```xml
 <property
     as="xs:boolean"
-    name="oxf.xforms.xbl.fr.section.collapse.*.*"
+    name="oxf.xforms.xbl.fr.section.collapsible.*.*"
     value="false"/>
 ```
 
 By default, sections are allowed to collapse. 
 
-The following property controls the same beahvior in noscript mode:
+The following property controls the same behavior in noscript mode:
 
 ```xml
 <property
     as="xs:boolean"
-    name="oxf.xforms.xbl.fr.section.noscript.collapse.*.*"
+    name="oxf.xforms.xbl.fr.section.noscript.collapsible.*.*"
     value="false"/>
 ```
 
