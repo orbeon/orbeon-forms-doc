@@ -80,6 +80,14 @@ These are the default values of the properties:
     value="false"/>
 ```
 
+## Validation vs. formatting
+
+The `digits-after-decimal` parameter controls how the value entered by the user gets *formatted* when the field displays it. This does not impact validation of the data at all.
+
+[SINCE Orbeon Forms 4.11]
+
+In order to validate the number to have a specific number of decimal digits, the `xxf:fraction-digits()` function should be used. 
+
 ## Mobile support
 
 [SINCE Orbeon Forms 4.11]
