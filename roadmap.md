@@ -76,4 +76,4 @@ Issues:
 
 Please remember that the following schedule is a plan, not a promise:
 
-- before 2016-06-30: tentative release date
+- 2016-06-30: tentative release date
