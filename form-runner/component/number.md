@@ -184,4 +184,4 @@ This is useful if you don't want to keep the full precision of decimal values in
 
 ## See also
 
-- [Better numeric input on mobile](http://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
+- Blog post [Better numeric input on mobile](http://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
