@@ -22,9 +22,18 @@ You use the number component like a regular input field, for example:
 </fr:number>
 ```
 
+## Datatype
+
+`fr:number` must be bound to either of:
+
+- `xs:decimal`
+- `xs:integer` [SINCE Orbeon Forms 4.11]
+
+
+
 ## Parameters
 
-`fr:number` supports parameters, which you can set via properties or directly on fr:number:
+`fr:number` supports parameters, which you can set via properties or directly on `fr:number`:
 
 * `prefix`: optional prefix shown before the number
 * `suffix`: optional suffix shown after the number
@@ -71,6 +80,23 @@ These are the default values of the properties:
     value="false"/>
 ```
 
+## Mobile support
+
+[SINCE Orbeon Forms 4.11]
+
+On iOS, when the control identifies that the value is a non-negative integer, it shows a numeric keypad:
+ 
+![iOS numeric keypad](images/xbl-number-numeric-keypad.png)
+
+This is the case if:
+
+- the control is bound to `xs:integer` OR is bound to `xs:decimal` and has an `xxf:fraction-digits(0)` constraint 
+- AND has an `xxf:non-negative()` constraint
+
+Otherwise, the control shows the numeric pane of the regular keyboard:
+
+![iOS numeric keypad](images/xbl-number-numeric-pane.png)
+
 ## Examples
 
 ### Use of a suffix
@@ -109,7 +135,6 @@ Assume the following properties or corresponding attributes:
     value="false"/>
 ```
 
-
 Scenario:
 
 - User types "12345.678".
@@ -119,7 +144,7 @@ Scenario:
 
 This is useful if you want to keep the full precision of decimal values in the data, but format them nicely to a given number of decimals.
 
-#### Rouding when formatting and when storing
+#### Rounding when formatting and when storing
 
 Assume the following properties or corresponding attributes:
 
@@ -138,7 +163,6 @@ Assume the following properties or corresponding attributes:
     value="true"/>
 ```
 
-
 Scenario:
 
 - User types "12345.678".
@@ -148,5 +172,8 @@ Scenario:
 
 *NOTE: Here rounding during formatting doesn't change the value since it was rounded when stored in the first place.*
 
-
 This is useful if you don't want to keep the full precision of decimal values in the data and want to force a maximum number of digits after the decimal point.
+
+## See also
+
+- [Better numeric input on mobile](http://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
