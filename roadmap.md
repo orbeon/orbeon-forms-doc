@@ -42,6 +42,25 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ### Orbeon Forms 4.11
 
+This release contains a large number of small features and bug-fixes.
+
+*NOTE: We had initially planned the "workflow stage" feature ([#2256](https://github.com/orbeon/orbeon-forms/issues/2256)) for this release but have moved it to 4.12.*
+
+Focus:
+
+- [x] significant progress migrating Form Runner / Form Builder / XForms doc from old doc site
+
+Issues:
+
+- [ ] [all Orbeon Forms 4.11 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/4.11)
+
+Please remember that the following schedule is a plan, not a promise:
+
+- 2016-01-19: code complete and start testing
+- 2016-02-02: tentative release date
+
+### Orbeon Forms 4.12
+
 The single major enhancement for this version is the "workflow stage" feature ([#2256](https://github.com/orbeon/orbeon-forms/issues/2256)).
 
 Focus:
@@ -50,15 +69,11 @@ Focus:
 - [ ] maintenance candidates
   - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
 - [ ] test automation
-- [ ] doc
-    - [x] significant progress migrating Form Runner / Form Builder / XForms doc from old doc site
 
 Issues:
 
 - [ ] [all Orbeon Forms 4.11 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/4.11)
 
-Dates (tentative):
+Please remember that the following schedule is a plan, not a promise:
 
-- 2015-12-17: workflow UI complete
-- 2016-01-27: workflow enhancement complete
-- 2016-02-24: tentative release date
+- before 2016-06-30: tentative release date
