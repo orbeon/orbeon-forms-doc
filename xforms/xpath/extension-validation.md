@@ -59,7 +59,7 @@ Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
 xxf:negative() as xs:boolean
 ```
 
-- return `true()` if the value parses as an `xs:decimal` which is negative
+- return `true()` if the context item converted to a string via the `string()` function parses as an `xs:decimal` which is negative
 - return `false()` otherwise
 
 ## xxf:non-negative()
@@ -70,7 +70,7 @@ xxf:negative() as xs:boolean
 xxf:non-negative() as xs:boolean
 ```
 
-- return `true()` if the value parses as an `xs:decimal` which is not negative
+- return `true()` if the context item converted to a string via the `string()` function parses as an `xs:decimal` which is not negative
 - return `false()` otherwise  
 
 ## xxf:non-positive()
@@ -81,7 +81,7 @@ xxf:non-negative() as xs:boolean
 xxf:non-positive() as xs:boolean
 ```
 
-- return `true()` if the value parses as an `xs:decimal` which is not positive
+- return `true()` if the context item converted to a string via the `string()` function parses as an `xs:decimal` which is not positive
 - return `false()` otherwise 
 
 ## xxf:positive()
@@ -92,5 +92,5 @@ xxf:non-positive() as xs:boolean
 xxf:positive() as xs:boolean
 ```
 
-- return `true()` if the value parses as an `xs:decimal` which is positive
+- return `true()` if the context item converted to a string via the `string()` function parses as an `xs:decimal` which is positive
 - return `false()` otherwise 
