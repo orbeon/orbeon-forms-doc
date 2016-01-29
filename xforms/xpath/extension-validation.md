@@ -2,6 +2,19 @@
 
 <!-- toc -->
 
+## Introduction
+
+These functions are typically used on the `constraint` attribute of the `xf:bind` element. For example, as used by Form Builder:
+
+```xml
+<xf:bind 
+    id="control-1-bind" 
+    name="control-1" 
+    ref="control-1" 
+    type="xf:decimal"
+    constraint="xxf:fraction-digits(2)"/>
+```
+
 ## xxf:fraction-digits()
 
 [SINCE Orbeon Forms 4.11]
