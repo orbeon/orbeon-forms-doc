@@ -29,8 +29,6 @@ You use the number component like a regular input field, for example:
 - `xs:decimal`
 - `xs:integer` [SINCE Orbeon Forms 4.11]
 
-
-
 ## Parameters
 
 `fr:number` supports parameters, which you can set via properties or directly on `fr:number`:
@@ -98,8 +96,8 @@ On iOS, when the control identifies that the value is a non-negative integer, it
 
 This is the case if:
 
-- the control is bound to `xs:integer` OR is bound to `xs:decimal` and has an `xxf:fraction-digits(0)` constraint 
-- AND has an `xxf:non-negative()` constraint
+- the control is bound to `xs:integer` OR is bound to `xs:decimal` and has an [`xxf:fraction-digits(0)`](../../xforms/xpath/extension-validation.html#xxffractiondigits) constraint 
+- AND has an [`xxf:non-negative()`](../../xforms/xpath/extension-validation.html#xxfnonnegative) constraint
 
 Otherwise, the control shows the numeric pane of the regular keyboard:
 
