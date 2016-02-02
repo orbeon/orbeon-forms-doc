@@ -4,6 +4,8 @@
 
 ## What it does
 
+[SINCE Orbeon Forms 4.11]
+
 The `fr:open-select1` component presents:
 
 - a list of radio buttons predefined by the form author
