@@ -13,7 +13,7 @@ The `fr:open-select1` component presents:
 
 ## Usage
 
-````xml
+```xml
 <fr:open-select1 id="flavor" bind="flavor-bind">
     <xf:label>Make your selection</xf:label>
     <xf:item>
