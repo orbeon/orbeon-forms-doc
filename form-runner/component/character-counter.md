@@ -1,4 +1,4 @@
-# Character Counter
+# Character Counter Component
 
 <!-- toc -->
 
