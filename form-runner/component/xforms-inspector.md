@@ -1,4 +1,4 @@
-# XForms Inspector
+# XForms Inspector Component
 
 <!-- toc -->
 
