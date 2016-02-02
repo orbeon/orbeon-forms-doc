@@ -1,4 +1,4 @@
-# Section
+# Section Component
 
 <!-- toc -->
 
