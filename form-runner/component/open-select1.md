@@ -15,6 +15,8 @@ The `fr:open-select1` component presents:
 
 ## Usage
 
+You use `fr:open-select1` like a regular `xf:select1` control:
+
 ```xml
 <fr:open-select1 id="flavor" bind="flavor-bind">
     <xf:label>Make your selection</xf:label>
