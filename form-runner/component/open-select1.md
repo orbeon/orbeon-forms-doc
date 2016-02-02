@@ -31,6 +31,14 @@ The `fr:open-select1` component presents:
 </fr:open-select1>
 ```
 
+## Advanced usage
+
+`fr:open-select1` supports the following attributes:
+
+- `appearance`
+    - `full`: shows radio buttons (the default)
+    - `minimal`: shows a dropdown menu
+
 ## Data format
 
 The predefined radio buttons have a *label* and a *value*, and, like all radio buttons, store their *value* into the data. 
