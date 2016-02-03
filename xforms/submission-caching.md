@@ -1,4 +1,4 @@
-# Advanced Submissions - Caching
+# Submissions - Caching Extension
 
 <!-- toc -->
 
