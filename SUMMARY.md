@@ -173,7 +173,7 @@
     * Submission
         * [Standard support](xforms/submission-standard.md)
         * [Asynchronous submissions](xforms/submission-asynchronous.md)
-        * [Caching](xforms/submission-caching.md)
+        * [Caching extension](xforms/submission-caching.md)
         * [Other extensions](xforms/submission-extensions.md)
     * [XPath function library](xforms/xpath/README.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
