@@ -154,12 +154,12 @@
         * [Client-side JavaScript API](xforms/client-side-javascript-api.md)
         * [Error handling](xforms/error-handling.md)
             * [Detailed behavior](xforms/error-handling-detailed-behavior.md)
-        * [Model-Bind Variables](xforms/model-bind-variables.md)
+        * [Model-Bind variables](xforms/model-bind-variables.md)
         * [XForms 2.0 support](xforms/xforms-2-0.md)
     * Events
         * [Standard support](xforms/events-standard.md)
         * [Extension events](xforms/events-extensions-events.md)
-        * [Extension context information](xforms/events-extensions-context.md)
+        * [Extension ontext information](xforms/events-extensions-context.md)
         * [Other extensions](xforms/events-extensions-other.md)
     * Actions
         * [Repeat, insert and delete](xforms/actions/repeat-insert-delete.md)
