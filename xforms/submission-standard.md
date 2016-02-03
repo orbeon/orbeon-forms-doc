@@ -27,8 +27,6 @@ Orbeon Forms supports the XForms 1.1 `validate` and `relevant` attributes on `<x
     replace="none"/>
 ```
 
-
-
 ## Controlling serialization
 
 Orbeon Forms supports the XForms 1.1 `serialization` on `<xf:submission>`. This is particularly useful to specify the value `none` with a `get` method:
@@ -41,7 +39,6 @@ Orbeon Forms supports the XForms 1.1 `serialization` on `<xf:submission>`. This 
     replace="instance"
     instance="my-instance"/>
 ```
-For more information, please visit the [XForms 1.1 specification][1].
 
 ## Asynchronous submissions
 
