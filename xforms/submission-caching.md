@@ -1,4 +1,4 @@
-# Submissions - Caching Extension
+# Submissions Caching
 
 <!-- toc -->
 
