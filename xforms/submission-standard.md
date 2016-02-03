@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Orbeon Forms supports most standard XForms features, including serializations and replacements.
+Orbeon Forms supports most standard XForms features, including serializations and replacements. For more information, please visit the [XForms 1.1 specification][1].
 
 ## Disabling Validation and relevance checks
 
@@ -19,7 +19,7 @@ Orbeon Forms supports the XForms 1.1 `validate` and `relevant` attributes on `<x
     replace="none"/>
 ```
 
-For more information, please visit the [XForms 1.1 specification][1].
+
 
 ## Controlling serialization
 
