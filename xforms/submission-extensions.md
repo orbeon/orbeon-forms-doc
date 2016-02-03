@@ -270,7 +270,7 @@ XForms 1.1 does not explicitly support submitting binary content, but does not p
         file:/Users/jdoe/Applications/apache-tomcat-5.5.20/temp/xforms_upload_30877.tmp
     </attachment>
 </xf:instance>
-<xf:bind nodeset="instance('attachment')" type="xs:anyURI"/>
+<xf:bind ref="instance('attachment')" type="xs:anyURI"/>
 ...
 <xf:submission 
     id="save-submission" 
