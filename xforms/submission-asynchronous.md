@@ -1,4 +1,4 @@
-# Advanced Submissions - Asynchronous Submissions
+# Submissions - Asynchronous Submissions
 
 <!-- toc -->
 
