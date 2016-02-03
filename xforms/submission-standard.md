@@ -34,7 +34,7 @@ When a submission returns an `application/json` mediatype, the submission parses
 The following JSON object:
 
 ```json
-{"given": "Mark", "family": "Smith"}
+{ "given": "Mark", "family": "Smith" }
 ```
 
 converts to:
@@ -51,7 +51,7 @@ and the values can be accessed in XPath with the paths `instance()/given` and `i
 Numbers have a `type="number"` attribute:
 
 ```json
-{"name": "Mark", "age": 21}
+{ "name": "Mark", "age": 21 }
 ```
 
 converts to:
@@ -66,7 +66,7 @@ converts to:
 Booleans similarly have a `type="boolean"` attribute:"
 
 ```json
-{"selected": true}
+{ "selected": true }
 ```
 
 converts to:
@@ -80,7 +80,7 @@ converts to:
 Arrays use the `_` element name and the `type="array"` attribute:
 
 ```json
-{"cities": ["Amsterdam", "Paris", "London"]}
+{ "cities": ["Amsterdam", "Paris", "London"] }
 ```
 
 converts to:
@@ -101,13 +101,15 @@ and the string "Paris" can be accessed with `instance()/cities/_[2]`.
 JSON `null` adds a `type="null"` attribute:"
 
 ```json
-{"p": null} 
+{ "p": null }
 ```
 
 converts to:
 
 ```xml
-<json type="object"><p type="null"/></json>
+<json type="object">
+    <p type="null"/>
+</json>
 ```
 
 Here is a link to [more examples](https://github.com/orbeon/orbeon-forms/blob/master/src/test/scala/org/orbeon/oxf/json/ConverterTest.scala) as part of the test suite.
