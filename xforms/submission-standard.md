@@ -2,6 +2,10 @@
 
 <!-- toc -->
 
+## Introduction
+
+Orbeon Forms supports most standard XForms features, including serializations and replacements.
+
 ## Disabling Validation and relevance checks
 
 Orbeon Forms supports the XForms 1.1 `validate` and `relevant` attributes on `<xf:submission>`. These boolean attributes disable processing of validation and relevance respectively for a given submission:
@@ -30,5 +34,9 @@ Orbeon Forms supports the XForms 1.1 `serialization` on `<xf:submission>`. This 
     instance="my-instance"/>
 ```
 For more information, please visit the [XForms 1.1 specification][1].
+
+## Asynchronous submissions
+
+See [Asynchronous Submissions](submission-asynchronous.md).
 
 [1]: http://www.w3.org/TR/xforms11/#submit-submission-element
