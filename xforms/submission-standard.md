@@ -77,7 +77,7 @@ converts to:
 </json>
 ```
 
-Arrays use the `_` element name:
+Arrays use the `_` element name and the `type="array"` attribute:
 
 ```json
 {"cities": ["Amsterdam", "Paris", "London"]}
