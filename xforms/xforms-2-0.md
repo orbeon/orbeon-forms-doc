@@ -19,7 +19,9 @@ XForms 2.0 features added with Orbeon Forms 4.5:
 XForms 2.0 features added with Orbeon Forms 4.8:
 
 - `caseref` attribute on `xf:switch`
-- `case()` function (was already available as `xxf:case()` in previous versions)
+    - This allows stroring the value of the currently-selected case to instance data.
+- `case()` function
+    - This function was already available as `xxf:case()` in previous versions.
 
 XForms 2.0 features added with Orbeon Forms 4.11:
 
