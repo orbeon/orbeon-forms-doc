@@ -1,4 +1,4 @@
-# Submissions - Other Extensions
+# Submission Extensions
 
 <!-- toc -->
 
