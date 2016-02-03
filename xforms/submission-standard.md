@@ -7,8 +7,7 @@
 Orbeon Forms supports most standard XForms features, including:
 
 - serializations: `application/x-www-form-urlencoded`, `application/xml`, `application/json` (SINCE Orbeon Forms 4.11), `multipart/form-data`, as well as [extensions](submission-extensions.md).
-- replacements
-    - `all`, `instance`, and `text`
+- replacements: `all`, `instance`, and `text`
 - SOAP support
 
 One exception is the lack of support for `multipart/related`. 
