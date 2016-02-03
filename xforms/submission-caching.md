@@ -2,13 +2,11 @@
 
 <!-- toc -->
 
-## Caching of XForms instances with xxf:cache
-
-### Availability
+## Availability
 
 This is an [Orbeon Forms PE](http://www.orbeon.com/download) feature.
 
-### Configuration
+## Configuration
 
 Orbeon Forms supports a boolean extension attribute, `xxf:cache`, on the `<xf:instance>` and `<xf:submission>` elements. This attribute can be used with instances that are read-only or read-write. When set to true:
 
@@ -47,22 +45,31 @@ _NOTE: Since POST and PUT are not meant to be idempotent methods, you should use
 You set the size of the shared instances cache using a property in `properties.xm`l:
 
 ```xml
-<property as="xs:integer" name="oxf.xforms.cache.shared-instances.size" value="50"/>
+<property 
+    as="xs:integer" 
+    name="oxf.xforms.cache.shared-instances.size" 
+    value="50"/>
 ```
+
+## Invalidation
 
 You can force the XForms engine to remove a shared instance from the cache by dispatching the `xxforms-instance-invalidate` event to it. The next time an XForms document requires this instance, it will not be found in the cache and therefore reloaded. Example:
 
 ```xml
 <xf:action ev:event="DOMActivate">
     <xf:send submission="save-submission"/>
-    <xf:dispatch name="xxforms-instance-invalidate" target="data-to-save-instance"/>
+    <xf:dispatch 
+        name="xxforms-instance-invalidate" 
+        target="data-to-save-instance"/>
 </xf:action>
 ```
 
 The `xxf:invalidate-instance` action allows invalidating a shared instance by resource URI, for example:
 
 ```xml
-<xxf:invalidate-instance ev:event="DOMActivate" resource="/forms/resources/fr"/>
+<xxf:invalidate-instance 
+    ev:event="DOMActivate" 
+    resource="/forms/resources/fr"/>
 ```
 
 This action also supports the `xinclude` attribute, which if present will only invalidate the instance with the given resource if it was loaded with a matching `xxf:xinclude` attribute.
