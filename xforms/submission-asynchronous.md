@@ -13,7 +13,7 @@ Orbeon Forms supports true asynchronous submissions (with some limitations due t
 
 ## Declaring an asynchronous submission
 
-You enable an asynchronous submission with `mode="asynchronous"`
+You enable an asynchronous submission with `mode="asynchronous"`:
 
 ```xml
 <xf:submission 
