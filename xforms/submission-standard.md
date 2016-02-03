@@ -1,4 +1,4 @@
-# Advanced Submissions - Standard Support
+# Submissions - Standard Support
 
 <!-- toc -->
 
