@@ -23,7 +23,9 @@ XForms 2.0 features added with Orbeon Forms 4.8:
 
 XForms 2.0 features added with Orbeon Forms 4.11:
 
-- `xf:submission` and `xf:instance` JSON support
+- `xf:submission` and `xf:instance` JSON support.
+    - This allows receiving `application/json` content. The JSON received is converted to an XML representation friendly to XPath expressions. This allows receiving data from JSON services and using it in your forms, including via Form Builder services.
+    - This also allows sending `application/json` content, based on an XML representation.
 
 For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=XForms+2.0&page=1&sort=updated&state=open).
 
