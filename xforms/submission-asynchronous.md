@@ -35,7 +35,7 @@ _NOTE: While XForms 1.1 specifies that `mode="asynchronous"` should be the defau
 
 ### Availability
 
-This is an [Orbeon Forms PE][1]
+This is an [Orbeon Forms PE][1] feature.
 
 ### Configuration
 
