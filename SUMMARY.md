@@ -171,10 +171,10 @@
         * [Upload](xforms/controls/upload.md)
         * [Dialog](xforms/controls/dialog.md)
     * Submission
-        * [Standard support](submission-standard.md)
-        * [Asynchronous submissions](submission-asynchronous.md)
-        * [Extensions](submission-extensions.md)
-        * [Caching](submission-caching.md)
+        * [Standard support](xforms/submission-standard.md)
+        * [Asynchronous submissions](xforms/submission-asynchronous.md)
+        * [Extensions](xforms/submission-extensions.md)
+        * [Caching](xforms/submission-caching.md)
     * [XPath function library](xforms/xpath/README.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
         * Extension functions
