@@ -122,4 +122,4 @@ This controls which Form Builder user interface languages appear in the language
 
 ## Access control 
 
-If you'd like to have multiple classes of Form Builder users where some case edit, say, form in the `hr` app, while other can edit forms in the `sales` app, see [Access control for editing forms](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control#TOC-Access-control-for-editing-forms).
+If you'd like to have multiple classes of Form Builder users where some can edit, say, forms in the `hr` app, while others can edit forms in the `sales` app, see [Access control for editing forms](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control#TOC-Access-control-for-editing-forms).
