@@ -76,3 +76,7 @@ This helps you troubleshoot the service call.
 ## Saving the service
 
 Once your service is defined, the "Save" buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the service name. You can also delete the service using the trashcan icon.
+
+## Deleting a service
+
+You can delete a saved service using the "Remove" button.
