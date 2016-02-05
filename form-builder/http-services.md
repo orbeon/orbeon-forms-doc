@@ -8,7 +8,7 @@ The HTTP Service Editor allows you to create simple REST services. The idea is t
 
 To create a new HTTP service, click the Add icon under "HTTP Services". The HTTP Service Editor opens. The following screenshot shows an example of filled-out service:
 
-![Service Editor](images/service.png)
+![Service Editor](images/service-definition.png)
 
 This is the meaning of the fields:
 
@@ -37,7 +37,7 @@ The Test button allows you to test the service. Before doing this, you might wan
 
 This helps you to troubleshoot the service call.
 
-![Testing a service](images/test-service.png)
+![Testing a service](images/service-test.png)
 
 ## Saving the service
 
