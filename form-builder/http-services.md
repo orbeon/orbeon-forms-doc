@@ -53,7 +53,7 @@ The "Advanced" tab allows you to set advanced service parameters:
 - **SOAP Action**
     - If selected, the value of the `SOAPAction` header.
 - **HTTP Authentication**
-    – Whether to use HTTP authentication.
+    - Whether to use HTTP authentication.
     - **Username:** Username to use.
     - **Password:** Password to use.
 
