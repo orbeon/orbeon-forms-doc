@@ -14,7 +14,7 @@ Before Orbeon Forms 4.0, the `oxf.xforms.password` property was defined. It has 
 
 ### XForms items encoding
 
-With Orbeon Forms 4.0, XForms item values (like in checkboxes, dropdown menus, etc.) are no longer encrypted, but they are encoded by position. The following property can be used to enable or disable this behavior, like in Orbeon Forms 3.9:
+With Orbeon Forms 4.0, XForms item values (like in checkboxes, dropdown menus, etc.) are no longer encrypted, but they are encoded by position. The following property can be used to enable or disable this behavior:
 
 ```xml
 <property
