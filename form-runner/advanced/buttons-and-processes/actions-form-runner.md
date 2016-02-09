@@ -175,6 +175,7 @@ send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
 ```
 
 #### properties and XPath Value Templates
+
 [SINCE Orbeon Forms 4.4]
 
 The following properties are XPath Value Templates evaluating in the context of the root element of the form data instance:
