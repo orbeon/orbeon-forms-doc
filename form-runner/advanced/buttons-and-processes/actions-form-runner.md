@@ -78,7 +78,7 @@ Send an email with optionally XML form data, attachments, and PDF.
 
 ## send
 
-###  configuration
+###  Configuration
 
 Send data to an HTTP URL.
 
@@ -129,7 +129,7 @@ The following parameters can be used:
         - `form-version` added to defaults in Orbeon Forms 4.7
         - `process` added to defaults in Orbeon Forms 4.7
 
-#### using properties
+#### Using properties
 
 The following example refers in the `send` action to the properties with the common
 prefix `oxf.fr.detail.process.send.my_app.my_form`. It configures the URL, the method, 
@@ -166,7 +166,7 @@ The following properties can be used to configure a `send` action with propertie
 - property prefix + `.content`: see [`content` parameter](#send_parameter_content)
 - property prefix + `.parameters`: see [`parameters` parameter](#send_parameter_parameters)
 
-#### presedence of parameter over properties
+#### Presedence of parameter over properties
 
 Parameters have a higher precedence. In this example, the `uri` parameter is used, even if a `oxf.fr.detail.send.success.uri` property is present:
 
