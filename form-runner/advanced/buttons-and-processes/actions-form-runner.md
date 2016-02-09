@@ -115,9 +115,9 @@ The following parameters can be used:
 
 - <a name="send_parameter_content"></a>`content`:
     - `xml` to send the XML data (default)
-    - `pdf-url` to send the PDF URL, see [details](#sending_a_pdf_url)
-    - `metadata` to send form metadata, see [details](#sending_form_metadata) [SINCE Orbeon Forms 4.7]
-    - `tiff-url` to send the TIFF URL, see [details](#sending_a_tiff_url) [SINCE Orbeon Forms 4.11]
+    - `pdf-url` to send the PDF URL, see [details](#sending-a-pdf-url)
+    - `metadata` to send form metadata, see [details](#sending-form-metadata) [SINCE Orbeon Forms 4.7]
+    - `tiff-url` to send the TIFF URL, see [details](#sending-a-tiff-url) [SINCE Orbeon Forms 4.11]
 
 - <a name="send_parameter_data-format-version"></a>`data-format-version` [SINCE Orbeon Forms 4.8]:
     - `edge`: send the data in the latest internal format
@@ -228,7 +228,7 @@ Example:
         form-version=1&
         language=en
 
-### <a name="sending_a_pdf_url"></a> Sending a PDF URL
+### Sending a PDF URL
 
 When `pdf-url` is specified, the XML document sent has the following format:
 
@@ -243,7 +243,7 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 *NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
 
-### <a name="sending_a_tiff_url"></a> Sending a TIFF URL
+### Sending a TIFF URL
 
 [SINCE Orbeon Forms 4.11]
 
@@ -260,7 +260,7 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 *NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
 
-### <a name="sending_form_metadata"></a>Sending form metadata
+### Sending form metadata
 
 [SINCE Orbeon Forms 4.7]
 
