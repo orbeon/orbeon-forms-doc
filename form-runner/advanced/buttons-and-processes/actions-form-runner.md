@@ -82,34 +82,53 @@ Send an email with optionally XML form data, attachments, and PDF.
 
 Send data to an HTTP URL.
 
-- parameters [SINCE Orbeon Forms 4.4 except `property`]
-    - `property`: specifies an optional property prefix
-    - `uri`: URL to which to send the data
-    - `method`: `GET`, `POST` (default), `PUT`
-    - `prune`: whether to prune non-relevant nodes (`true` by default)
-    - `annotate`: space-separated list of levels to annotate elements (the empty string by default)
-    - `replace`: `all` to load the resulting response in the browser, or `none` (default)
-    - `content`:
-        - `xml` to send the XML data (default)
-        - `pdf-url` to send the PDF URL
-        - `tiff-url` to send the TIFF URL [SINCE Orbeon Forms 4.11]
-        - `metadata`: to send form metadata [SINCE Orbeon Forms 4.7]
-    - `data-format-version` [SINCE Orbeon Forms 4.8]:
-        - `edge`: send the data in the latest internal format
-        - `4.0.0`: send the data in the Orbeon Forms 4.0-compatible format (the default)
-    - `parameters`:
-        - space-separated list of standard parameters to automatically add to the URL (see below)
-        - default: `app form form-version document valid language process data-format-version`
-            - `form-version` added to defaults in Orbeon Forms 4.7
-            - `process` added to defaults in Orbeon Forms 4.7
-- properties used
-    - property prefix + `.uri`: see `uri` parameter
-    - property prefix + `.method`: see `method` parameter
-    - property prefix + `.prune`: see `prune` parameter
-    - property prefix + `.annotate`: see `annotate` parameter
-    - property prefix + `.replace`: see `replace` parameter
-    - property prefix + `.content`: see `content` parameter
-    - property prefix + `.parameters`: see `content` parameter
+#### using parameters
+
+[SINCE Orbeon Forms 4.4 except `property`]
+
+The following example uses four parameters in the `send` action for the form `my_app/my_form`:
+
+```xml
+<property as="xs:string" name="oxf.fr.detail.process.send.my_app.my_form" >
+    send(
+        uri        = "http://example.org/accept-form",
+        method     = "PUT",
+        content    = "metadata",
+        parameters = "app form document"
+    )        
+</property>
+```
+
+The following parameters can be used:
+
+- `property`: specifies an optional property prefix
+- `uri`: URL to which to send the data
+- `method`: `GET`, `POST`(default), or `PUT`
+- `prune`: whether to prune non-relevant nodes (`true` by default)
+- `annotate`: space-separated list of levels to annotate elements (the empty string by default)
+- `replace`: `all` to load the resulting response in the browser, or `none` (default)
+- `content`:
+    - `xml` to send the XML data (default)
+    - `pdf-url` to send the PDF URL
+    - `tiff-url` to send the TIFF URL [SINCE Orbeon Forms 4.11]
+    - `metadata` to send form metadata [SINCE Orbeon Forms 4.7]
+- `data-format-version` [SINCE Orbeon Forms 4.8]:
+    - `edge`: send the data in the latest internal format
+    - `4.0.0`: send the data in the Orbeon Forms 4.0-compatible format (the default)
+- `parameters`:
+    - space-separated list of standard parameters to automatically add to the URL (see below)
+    - default: `app form form-version document valid language process data-format-version`
+        - `form-version` added to defaults in Orbeon Forms 4.7
+        - `process` added to defaults in Orbeon Forms 4.7
+
+#### using properties
+- property prefix + `.uri`: see `uri` parameter
+- property prefix + `.method`: see `method` parameter
+- property prefix + `.prune`: see `prune` parameter
+- property prefix + `.annotate`: see `annotate` parameter
+- property prefix + `.replace`: see `replace` parameter
+- property prefix + `.content`: see `content` parameter
+- property prefix + `.parameters`: see `content` parameter
 
 Parameters have a higher precedence. In this example, the `uri` parameter is used, even if a `oxf.fr.detail.send.success.uri` property is present:
 
