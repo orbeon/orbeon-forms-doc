@@ -78,38 +78,95 @@ Send an email with optionally XML form data, attachments, and PDF.
 
 ## send
 
-## Configuration
+###  Configuration
 
 Send data to an HTTP URL.
 
-- parameters [SINCE Orbeon Forms 4.4 except `property`]
-    - `property`: specifies an optional property prefix
-    - `uri`: URL to which to send the data
-    - `method`: `GET`, `POST` (default), `PUT`
-    - `prune`: whether to prune non-relevant nodes (`true` by default)
-    - `annotate`: space-separated list of levels to annotate elements (the empty string by default)
-    - `replace`: `all` to load the resulting response in the browser, or `none` (default)
-    - `content`:
-        - `xml` to send the XML data (default)
-        - `pdf-url` to send the PDF URL
-        - `tiff-url` to send the TIFF URL [SINCE Orbeon Forms 4.11]
-        - `metadata`: to send form metadata [SINCE Orbeon Forms 4.7]
-    - `data-format-version` [SINCE Orbeon Forms 4.8]:
-        - `edge`: send the data in the latest internal format
-        - `4.0.0`: send the data in the Orbeon Forms 4.0-compatible format (the default)
-    - `parameters`:
-        - space-separated list of standard parameters to automatically add to the URL (see below)
-        - default: `app form form-version document valid language process data-format-version`
-            - `form-version` added to defaults in Orbeon Forms 4.7
-            - `process` added to defaults in Orbeon Forms 4.7
-- properties used
-    - property prefix + `.uri`: see `uri` parameter
-    - property prefix + `.method`: see `method` parameter
-    - property prefix + `.prune`: see `prune` parameter
-    - property prefix + `.annotate`: see `annotate` parameter
-    - property prefix + `.replace`: see `replace` parameter
-    - property prefix + `.content`: see `content` parameter
-    - property prefix + `.parameters`: see `content` parameter
+#### using parameters
+
+[SINCE Orbeon Forms 4.4 except `property`]
+
+The following example uses three parameters in the `send` action for the form `my_app/my_form`:
+
+```xml
+<property as="xs:string" name="oxf.fr.detail.process.send.my_app.my_form" >
+    send(
+        uri        = "http://example.org/accept-form",
+        method     = "PUT",
+        content    = "metadata"
+    )       
+</property>
+```
+
+The following parameters can be used:
+
+- <a name="send_parameter_property"></a>`property`: specifies an optional property prefix
+- <a name="send_parameter_uri"></a>`uri`: URL to which to send the data
+- <a name="send_parameter_method"></a>`method`: `GET`, `POST`(default), or `PUT`
+- <a name="send_parameter_prune"></a>`prune`: whether to prune non-relevant nodes (`true` by default)
+- <a name="send_parameter_annotate"></a>`annotate`: space-separated list of levels to annotate elements (the empty string by default)
+- <a name="send_parameter_replace"></a>`replace`: `all` to load the resulting response in the browser, or `none` (default)
+
+    [SINCE Orbeon Forms 4.5]
+
+    If `replace` is set to `all` and the service issues a redirection via an HTTP status code, the redirection is propagated to the client. This also works with portlets.
+
+    *SECURITY NOTE: If `replace` is set to `all`, the content of resources or redirection URLs accessible by the Orbeon Forms server are forwarded to the web browser. Care must be taken to forward only resources that users of the application are allowed to see.*
+
+- <a name="send_parameter_content"></a>`content`:
+    - `xml` to send the XML data (default)
+    - `pdf-url` to send the PDF URL, see [details](#sending_a_pdf_url)
+    - `metadata` to send form metadata, see [details](#sending_form_metadata) [SINCE Orbeon Forms 4.7]
+    - `tiff-url` to send the TIFF URL, see [details](#sending_a_tiff_url) [SINCE Orbeon Forms 4.11]
+
+- <a name="send_parameter_data-format-version"></a>`data-format-version` [SINCE Orbeon Forms 4.8]:
+    - `edge`: send the data in the latest internal format
+    - `4.0.0`: send the data in the Orbeon Forms 4.0-compatible format (the default)
+- <a name="send_parameter_parameters"></a>`parameters`: mame of arameters sent to the service end point, in addition to the 
+    form content
+    - space-separated list of standard parameters to automatically add to the URL (see below)
+    - default: `app form form-version document valid language process data-format-version`
+        - `form-version` added to defaults in Orbeon Forms 4.7
+        - `process` added to defaults in Orbeon Forms 4.7
+
+#### Using properties
+
+The following example refers in the `send` action to the properties with the common
+prefix `oxf.fr.detail.process.send.my_app.my_form`. It configures the URL, the method, 
+and the type of content using three additional sub-properties.
+
+```xml
+<property as="xs:string" name="oxf.fr.detail.process.send.my_app.my_form" >
+    send("oxf.fr.detail.process.send.my_app.my_form")
+</property>
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.process.send.my_app.my_form.**uri**" 
+    value="http://example.org/accept-form"
+    />
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.process.send.my_app.my_form.method" 
+    value="PUT"
+    />
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.process.send.my_app.my_form.content" 
+    value="metadata"
+    />
+```
+
+The following properties can be used to configure a `send` action with properties:
+
+- property prefix + `.uri`: see [`uri` parameter](#send_parameter_property)
+- property prefix + `.method`: see [`method` parameter](#send_parameter_method)
+- property prefix + `.prune`: see [`prune` parameter](#send_parameter_prune)
+- property prefix + `.annotate`: see [`annotate` parameter](#send_parameter_annotate)
+- property prefix + `.replace`: see [`replace` parameter](#send_parameter_replace)
+- property prefix + `.content`: see [`content` parameter](#send_parameter_content)
+- property prefix + `.parameters`: see [`parameters` parameter](#send_parameter_parameters)
+
+#### Presedence of parameter over properties
 
 Parameters have a higher precedence. In this example, the `uri` parameter is used, even if a `oxf.fr.detail.send.success.uri` property is present:
 
@@ -117,8 +174,7 @@ Parameters have a higher precedence. In this example, the `uri` parameter is use
 send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
 ```
 
-*SECURITY NOTE: If `replace` is set to `all`, the content of resources or redirection URLs accessible by the Orbeon Forms server are forwarded to the web browser. Care must be taken to forward only resources that users of the application are allowed to see.*
-
+#### properties and XPath Value Templates
 [SINCE Orbeon Forms 4.4]
 
 The following properties are XPath Value Templates evaluating in the context of the root element of the form data instance:
@@ -145,11 +201,7 @@ Example:
 
 Note the use of the `encode-for-uri()` function which escapes the value to place after the `=` sign.
 
-[SINCE Orbeon Forms 4.5]
-
-If `replace` is set to `all` and the service issues a redirection via an HTTP status code, the redirection is propagated to the client. This also works with portlets.
-
-## URL format
+### URL format
 
 The full URL is composed of:
 
@@ -175,7 +227,7 @@ Example:
         form-version=1&
         language=en
 
-## Sending a PDF URL
+### <a name="sending_a_pdf_url"></a> Sending a PDF URL
 
 When `pdf-url` is specified, the XML document sent has the following format:
 
@@ -190,7 +242,7 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 *NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
 
-## Sending a TIFF URL
+### <a name="sending_a_tiff_url"></a> Sending a TIFF URL
 
 [SINCE Orbeon Forms 4.11]
 
@@ -207,7 +259,7 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 *NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
 
-## Sending form metadata
+### <a name="sending_form_metadata"></a>Sending form metadata
 
 [SINCE Orbeon Forms 4.7]
 
@@ -239,7 +291,7 @@ Here is an example of `send` process which sends XML data to a service, followed
 </property>
 ```
 
-## Annotating XML data
+### Annotating XML data
 
 `annotate` can contain the following tokens:
 

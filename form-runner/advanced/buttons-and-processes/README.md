@@ -57,7 +57,7 @@ So how do you customize processes? Say you want to specify a couple of buttons o
   value="save-draft send"/>
 ```
 
-This places a `save-draft` and `send` buttons on the page. Their default labels are "Save" and "Send". Each button is automatically associated with processes of the same names, `save-draft` and `send`. These particular buttons and process names are standard, but we can customize them specifically for our form. Again, this is done with a property:
+This places a `save-draft` and `send` button on the page. Their default labels are "Save" and "Send". Each button is automatically associated with processes of the same names, `save-draft` and `send`. These particular button and process names are standard, but we can customize them specifically for our form. Again, this is done with a property:
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.send.acme.hr">
@@ -79,7 +79,7 @@ Button labels can be overridden as well:
   value="Fancy Send"/>
 ```
 
-With this, we have overridden the label of the "Send" button in general for all forms whîch are displayed in the english local.
+With this, we have overridden the label of the "Send" button in general for all forms which are displayed in the english local.
 
 Another approach would be to create an entirely custom button instead of reusing the name `send`. Just pick a button/process name, say `foo`, and then:
 
