@@ -78,7 +78,7 @@ Send an email with optionally XML form data, attachments, and PDF.
 
 ## send
 
-## Configuration
+###  Configuration
 
 Send data to an HTTP URL.
 
