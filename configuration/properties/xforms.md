@@ -12,9 +12,9 @@ For the latest default values of XForms properties, see [`properties-xforms.xml`
 
 Before Orbeon Forms 4.0, the `oxf.xforms.password` property was defined. It has since been renamed `oxf.crypto.password`. For more information, see [General Configuration Properties](../../configuration/properties/general.md). `oxf.xforms.password` is still supported for backward compatibility.
 
-#### XForms items encoding
+### XForms items encoding
 
-With Orbeon Forms 4.0, XForms item values (like in checkboxes, dropdown menus, etc.) are no longer encrypted, but they are encoded by position. The following property can be used to enable or disable this behavior, like in Orbeon Forms 3.9:
+With Orbeon Forms 4.0, XForms item values (like in checkboxes, dropdown menus, etc.) are no longer encrypted, but they are encoded by position. The following property can be used to enable or disable this behavior:
 
 ```xml
 <property

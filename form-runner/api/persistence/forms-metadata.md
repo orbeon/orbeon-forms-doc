@@ -23,6 +23,7 @@ The document returns by this API looks like this:
         <title xml:lang="fr">Orbeon Forms Bookshelf</title>
         <description xml:lang="fr">Orbeon Forms Bookshelf présente un formulaire simple…</description>
         <last-modified-time>2014-06-04T11:21:33.043-07:00</last-modified-time>
+        <form-version>1</form-version>
     </form>
     <form operations="*">
         <application-name>orbeon</application-name>
@@ -30,6 +31,7 @@ The document returns by this API looks like this:
         <title xml:lang="en">Request for Taxpayer Identification Number and Certification</title>
         <description xml:lang="en"/>
         <last-modified-time>2014-06-04T11:21:34.051-07:00</last-modified-time>
+        <form-version>3</form-version>
     </form>
     <form operations="create read update">
         <application-name>acme</application-name>
@@ -48,14 +50,16 @@ The document returns by this API looks like this:
             <permission operations="create read update"/>
         </permissions>
         <last-modified-time>2014-08-21T16:52:24.429-07:00</last-modified-time>
+        <form-version>2</form-version>
     </form>
 </forms>
 ```
 
 Each `<form>` element contains:
 
-* All the elements inside the form metadata instance of the corresponding form definition, which can be retrieved with the following XPath expression: `/xh:html/xh:head/xf:model/xf:instance[@id = 'fr-form-metadata']/metadata/*`.
+* All the elements inside the form metadata instance of the corresponding form definition, which can be retrieved with the following XPath expression: `/xh:html/xh:head/xf:model/xf:instance[@id = 'fr-form-metadata']/metadata/*`, [SINCE Orbeon Forms 4.11] except the `<description>` and `<migration>` elements.
 * A `<last-modified-time>` element. [SINCE Orbeon Forms 4.4]
+* A `<form-version>` element, when using a relational database (as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524)). [SINCE Orbeon Forms 4.11]
 
 [SINCE: Orbeon Forms 4.3] Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about published forms in that specific app, or that specific app and form is returned.
 

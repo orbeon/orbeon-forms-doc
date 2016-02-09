@@ -1,4 +1,4 @@
-# Alert Dialog
+# Alert Dialog Component
 
 <!-- toc -->
 

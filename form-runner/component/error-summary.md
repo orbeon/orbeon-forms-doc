@@ -1,4 +1,4 @@
-# Error Summary
+# Error Summary Component
 
 <!-- toc -->
 
