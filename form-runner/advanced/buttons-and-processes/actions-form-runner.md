@@ -227,7 +227,7 @@ Example:
         form-version=1&
         language=en
 
-## Sending a PDF URL
+### Sending a PDF URL
 
 When `pdf-url` is specified, the XML document sent has the following format:
 
@@ -242,7 +242,7 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 *NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
 
-## Sending a TIFF URL
+### Sending a TIFF URL
 
 [SINCE Orbeon Forms 4.11]
 
@@ -259,7 +259,7 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 *NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
 
-## Sending form metadata
+### Sending form metadata
 
 [SINCE Orbeon Forms 4.7]
 
@@ -291,7 +291,7 @@ Here is an example of `send` process which sends XML data to a service, followed
 </property>
 ```
 
-## Annotating XML data
+### Annotating XML data
 
 `annotate` can contain the following tokens:
 
