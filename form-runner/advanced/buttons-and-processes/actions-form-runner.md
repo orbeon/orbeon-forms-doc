@@ -174,7 +174,7 @@ Parameters have a higher precedence. In this example, the `uri` parameter is use
 send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
 ```
 
-#### properties and XPath Value Templates
+#### Properties and XPath Value Templates
 
 [SINCE Orbeon Forms 4.4]
 
