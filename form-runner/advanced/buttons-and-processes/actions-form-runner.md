@@ -82,7 +82,7 @@ Send an email with optionally XML form data, attachments, and PDF.
 
 Send data to an HTTP URL.
 
-#### using parameters
+#### Using parameters
 
 [SINCE Orbeon Forms 4.4 except `property`]
 
