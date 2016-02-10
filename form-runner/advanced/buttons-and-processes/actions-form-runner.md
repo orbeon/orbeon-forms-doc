@@ -166,15 +166,7 @@ The following properties can be used to configure a `send` action with propertie
 - property prefix + `.content`: see [`content` parameter](#send_parameter_content)
 - property prefix + `.parameters`: see [`parameters` parameter](#send_parameter_parameters)
 
-#### Precedence of parameters over properties
-
-Parameters have a higher precedence. In this example, the `uri` parameter is used, even if a `oxf.fr.detail.send.success.uri` property is present:
-
-```ruby
-send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
-```
-
-#### Properties and XPath Value Templates
+##### Properties and XPath Value Templates
 
 [SINCE Orbeon Forms 4.4]
 
@@ -188,7 +180,7 @@ The following properties are XPath Value Templates evaluating in the context of 
 - `parameters`
 - `replace` [SINCE Orbeon Forms 4.7]
 
-Example:
+**Example**
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.send.success.uri.*.*">
@@ -201,6 +193,14 @@ Example:
 ```
 
 Note the use of the `encode-for-uri()` function which escapes the value to place after the `=` sign.
+
+#### Precedence of parameters over properties
+
+Parameters have a higher precedence. In this example, the `uri` parameter is used, even if a `oxf.fr.detail.send.success.uri` property is present:
+
+```ruby
+send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
+```
 
 ### URL format
 
