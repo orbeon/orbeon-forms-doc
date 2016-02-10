@@ -166,7 +166,7 @@ The following properties can be used to configure a `send` action with propertie
 - property prefix + `.content`: see [`content` parameter](#send_parameter_content)
 - property prefix + `.parameters`: see [`parameters` parameter](#send_parameter_parameters)
 
-#### Precedence of parameter over properties
+#### Precedence of parameters over properties
 
 Parameters have a higher precedence. In this example, the `uri` parameter is used, even if a `oxf.fr.detail.send.success.uri` property is present:
 
