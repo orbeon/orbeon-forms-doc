@@ -122,7 +122,7 @@ The following parameters can be used:
 - <a name="send_parameter_data-format-version"></a>`data-format-version` [SINCE Orbeon Forms 4.8]:
     - `edge`: send the data in the latest internal format
     - `4.0.0`: send the data in the Orbeon Forms 4.0-compatible format (the default)
-- <a name="send_parameter_parameters"></a>`parameters`: mame of arameters sent to the service end point, in addition to the 
+- <a name="send_parameter_parameters"></a>`parameters`: name of parameters sent to the service end point, in addition to the 
     form content
     - space-separated list of standard parameters to automatically add to the URL (see below)
     - default: `app form form-version document valid language process data-format-version`
