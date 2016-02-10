@@ -141,7 +141,7 @@ and the type of content using three additional sub-properties.
 </property>
 <property 
     as="xs:string" 
-    name="oxf.fr.detail.process.send.my_app.my_form.**uri**" 
+    name="oxf.fr.detail.process.send.my_app.my_form.uri" 
     value="http://example.org/accept-form"
     />
 <property 
