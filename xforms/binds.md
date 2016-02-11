@@ -279,3 +279,4 @@ You often want to present a form without allowing the user to enter data. An eas
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
 - [Evaluation of initial values upon insert](actions/repeat-insert-delete.md)
 - [Grid component](../form-runner/component/grid.md)
+- Blog post: [Required fields: more subtle than you might think](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
