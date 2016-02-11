@@ -2,6 +2,16 @@
 
 <!-- toc -->
 
+## Testing on a Yes/No Answer field
+
+Say you have a *Yes/No Answer* field (before 4.11 called *Boolean Input*), named `yes-no`, and if the answer is *Yes*, you would like to show another field. In the *Visibility* expression for this other field, you should write:
+
+```xpath
+$yes-no = true()
+```
+
+But why not just write `$yes-no`? If you do, the expression will always evaluate to true, because Orbeon Forms evaluates `boolean($yes-no)`. Since `$yes-no` points to a node, the `boolean` function [always returns true](https://www.w3.org/TR/xpath-functions-3/#func-boolean). Instead, when you're doing `$yes-no = true()`, `$yes-no` is [atomized](https://www.w3.org/TR/xpath-30/#id-atomization), and since it is a node its typed value is returned, which is the boolean you want.
+
 ## Sum of values in a repeat
 
 ### With Orbeon Forms 4.5 and newer
