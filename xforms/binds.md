@@ -205,12 +205,21 @@ The `xxf:whitespace` MIP controls whitespace trimming. When the MIP is absent, t
 
 `xxf:whitespace` can take one of two values:
 
-- `preserve`: there is no change to the value's whitespace (the default)
-- `trim`: leading and trailing whitespace is removed
+- `preserve`: there is no change to the value's whitespace (the default).
+- `trim`: leading and trailing whitespace is removed.
 
-The value is static (it cannot be the result of an XPath expression).
+*NOTE: The value is static and cannot be the result of an XPath expression.*
 
 When using `trim`, all leading and trailing characters which are spaces, including non-breakable spaces, or ISO control characters, are removed.
+
+Example:
+
+```xml
+<xf:bind
+    id="first-name-bind"
+    ref="first-name"
+    xxf:whitespace="trim"/>
+```
 
 #### Processing model
 
