@@ -195,6 +195,29 @@ The `xxf:defaults` attribute is an AVT so can include XPath expressions between 
 
 See [Evaluation of initial values upon insert](actions/repeat-insert-delete.md).
 
+### Whitespace processing
+
+#### The xxf:whitespace MIP
+
+[SINCE Orbeon Forms 4.11]
+
+The `xxf:whitespace` MIP controls whitespace trimming. When the MIP is absent, there is no whitespace trimming.
+
+`xxf:whitespace` can take one of two values:
+
+- `preserve`: there is no change to the value's whitespace (the default)
+- `trim`: leading and trailing whitespace is removed
+
+The value is static (it cannot be the result of an XPath expression).
+
+When using `trim`, all leading and trailing characters which are spaces, including non-breakable spaces, or ISO control characters, are removed.
+
+#### Processing model
+
+`xxf:whitespace` processing takes place during XForms recalculate processing before `xxf:default` and `calculate` processing. This means that calculations have access to data which already had whitespace processed.
+
+The result of `xxf:default` and `calculate` follows the `xxf:whitespace` MIP. This means that at the time of revalidation and refresh, all values including calculated values have up to date whitespace.
+
 ### Deferred rebuild, recalculate and revalidate
 
 XForms provides actions to force a given model's rebuild, recalculate, revalidate. As XForms specifies it, these actions have an immediate effect.
