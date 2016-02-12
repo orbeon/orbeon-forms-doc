@@ -57,7 +57,7 @@ When the "Trim leading and trailing spaces" option is enabled, leading and trail
 
 When used in conjunction with the Required validation, this allows making sure that a required field doesn't contain just spaces and in fact contains some value.
 
-This option is also useful for non-required fields which must not contain leading or trailing spaces.
+This option is also useful for non-required fields which must not contain leading or trailing spaces. For example if the user enters "  Sam", the value is automatically converted into "Sam" as the user focuses out of the field.
 
 ![Whitespace trimming](images/whitespace-trimming.png)
 
