@@ -260,4 +260,4 @@ Optionally, it is possible to annotate the XML data submitted with error, warnin
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
 - [How Common Constraints Work](http://blog.orbeon.com/2015/07/how-common-constraints-work.html)
 - [XForms Validation](../xforms/validation.md)
-- [Required fields: more subtle than you might think](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html).
+- [Required fields: more subtle than you might think](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
