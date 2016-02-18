@@ -11,7 +11,7 @@ In some cases, you want to keep the files from Orbeon Forms completely separate 
 
 ## How it works
 
-Orbeon Forms uses [resource managers][1] to load most of the files that configure or implement your forms. You can use different resource managers, which look for files in different places, say in a sub-directory inside the web archive (e.g. `WEB-INF/resources`), or from the class path (e.g. inside jar files), or in a specific directory on disk. Different resources managers can also be chained, so you can configure Orbeon Forms to look for in location A first, and then in location B next. This is configured with context parameters, which you typically set in the `WEB-INF/web.xml`.
+Orbeon Forms uses [resource managers](resource-managers.md) to load most of the files that configure or implement your forms. You can use different resource managers, which look for files in different places, say in a sub-directory inside the web archive (e.g. `WEB-INF/resources`), or from the class path (e.g. inside jar files), or in a specific directory on disk. Different resources managers can also be chained, so you can configure Orbeon Forms to look for in location A first, and then in location B next. This is configured with context parameters, which you typically set in the `WEB-INF/web.xml`.
 
 To be able to override resources that come with Orbeon Forms without changing any of the files inside the web archive:
 
@@ -103,5 +103,3 @@ This assumes that you are deploying Orbeon Forms in WebLogic as an enterprise ar
     ![](../../images/weblogic-update-application.png)
 
 Step 2 and 3 above assume you use the WebLogic Console to deploy Orbeon Forms. If instead you use `java weblogic.Deployer`, on the command line, just add the following parameter to the command you normally use to deploy Orbeon Forms: `-plan plan.xml`.
-
-[1]: resource-managers.md
