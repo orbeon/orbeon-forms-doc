@@ -6,8 +6,8 @@
 
 Form Runner uses the username, group, and roles to control who can access:
 
-- Form Builder to edit forms (for more on this, see [access control for editing forms](editing-forms.md));
-- Deployed forms you created with Form Builder (for more on this, see [access control for deployed Forms](deployed-forms.md)).
+- Form Builder to edit forms – for more on this, see [access control for editing forms](editing-forms.md);
+- Deployed forms you created with Form Builder – for more on this, see [access control for deployed Forms](deployed-forms.md).
 
 Form Runner can obtain information about username, group, and roles by calling a standard servlet API implemented by your application server (_container-driven method_) or by using HTTP headers (_header-driver method_), typically set by a front-end (e.g. Apache module) or a servlet filter.
 
