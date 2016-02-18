@@ -106,7 +106,7 @@ Step 2 and 3 above assume you use the WebLogic Console to deploy Orbeon Forms. I
 
 ## With any container
 
-Web app context parameters are typically defined in the `WEB-INF/web.xml`, and some containers provide a mechanism for you to override those parameters without having to change the `WEB-INF/web.xml`. We've seen earlier how to this on Tomcat and WebLogic.
+Web app context parameters are typically defined in the `WEB-INF/web.xml`, and some containers provide a mechanism for you to override those parameters without having to change the `WEB-INF/web.xml`. We've seen earlier how to do this on Tomcat and WebLogic.
 
 If your container does not provide such a mechanism, or updating the `WEB-INF/web.xml` isn't a problem for you, you can point your container to an external resource directory by adding the following to your `WEB-INF/web.xml`:
 
