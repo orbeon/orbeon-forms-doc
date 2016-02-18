@@ -6,7 +6,7 @@
 
 Form Runner uses the username, group, and roles to control who can access Form Builder and the forms you create with Form Builder (see [Editing Forms|Form Runner ~ Access Control ~ Editing Forms]] and [[Deployed Forms](../../form-runner/access-control/deployed-forms.md) for more details on how those are setup). Form Runner can obtain this information by calling a standard servlet API implemented by your application server (_container-driven method_) or by using HTTP headers (_header-driver method_), typically set by a front-end (e.g. Apache module) or a servlet filter.
 
-### Container-driven method
+### Container driven method
 
 You want to use container roles if your users are setup at the application server level, with container managed security. In Tomcat, this would correspond to using a [security realm][10], which in its simplest form gets users from Tomcat's `conf/tomcat-users.xml`.
 
@@ -58,7 +58,7 @@ There is no container API for Orbeon Forms to get the user's group; in fact the 
     </security-role>
     ```
 
-### Header-driven method
+### Header driven method
 
 You want to use header-driven method if you have a servlet filter, single sign-on software, or other system that sets the roles for the current user in an HTTP header.
 
