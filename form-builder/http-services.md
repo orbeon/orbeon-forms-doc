@@ -32,17 +32,29 @@ The "Definition" tab allows you to set the basic service parameters:
     - A non-blank URL parameter specifies a default value for the parameter.
     - An action can set the value of a parameter.
 
-*NOTE: Prior to Orbeon Forms 4.11, a "request body" is mandatory for the `GET` and `DELETE` methods. The body is not sent to the service, but instead is used to configure request parameters. Orbeon Forms 4.11 instead provides a specific user interface to set URL parameters. For example:*
+The following screenshot shows an example of filled-out service:
+
+![Service Definition](images/service-definition.png)
+
+### URL Parameters before Orbeon Forms 4.11
+
+Prior to Orbeon Forms 4.11, a "request body" is mandatory for the `GET` and `DELETE` methods. The body is not sent to the service, but instead is used to configure request parameters. 
+
+The content of the "Request Body" form has to be a well-formed XML document. The name of the root element doesn't matter, but usually `params`or `request` is used. Each child element defines a parameter as shown in the following example: 
 
 ```xml
 <params>
     <userId>1</userId>
+    <userName>test</userName>
 </params>
 ```
+Here Orbeon invokes the URL:
+```
+$<Resource URL>?userId=1&userName=test
+```
+where `$<Resoure URL>` is the content of the input field "Resource URL".
 
-The following screenshot shows an example of filled-out service:
-
-![Service Definition](images/service-definition.png)
+Make sure to select `HTML Form` in the `Serialization` dropdown, otherwise the URL parameters are not appended to the request URL.
 
 ## Advanced parameters
 
@@ -61,7 +73,7 @@ The "Advanced" tab allows you to set advanced service parameters:
 
 ## Testing a service
 
-The Test button allows you to test the service. Before doing this, you have to set data in the request body for a `POST` or `PUT` request, or you might want to set URL parmeters for a `GET` or `DELETE`. Form Builder executes the service, and then provides information about the response returned, including:
+The Test button allows you to test the service. Before doing this, you have to set data in the request body for a `POST` or `PUT` request, or you might want to set URL parameters for a `GET` or `DELETE`. Form Builder executes the service, and then provides information about the response returned, including:
 
 - Whether an error occurred (green or red highlight)
 - URL called
@@ -75,7 +87,7 @@ This helps you troubleshoot the service call.
 
 ## Saving the service
 
-Once your service is defined, the "Save" buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the service name. You can also delete the service using the trashcan icon.
+Once your service is defined, the "Save" buttons saves it to the form. You can come back to it and modify it later by clicking on the "Edit" icon next to the service name. You can also delete the service using the trashcan icon.
 
 ## Deleting a service
 
