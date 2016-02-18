@@ -11,8 +11,8 @@ Form Runner uses the username, group, and roles to control who can access:
 
 Form Runner can obtain information about username, group, and roles either by:
 
-- Calling a standard servlet API implemented by your application server, refered to as _container-driven method_.
-- Using HTTP headers set by a reverse proxy or a servlet filter, refered to as _header-driver method_.
+- Calling a standard servlet API implemented by your application server, referred to as _container-driven method_.
+- Using HTTP headers set by a reverse proxy or a servlet filter, referred to as _header-driver method_.
 
 ### Container driven method
 
