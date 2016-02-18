@@ -61,7 +61,7 @@ The "Advanced" tab allows you to set advanced service parameters:
 
 ## Testing a service
 
-The Test button allows you to test the service. Before doing this, you have to set data in the request body for a `POST` or `PUT` request, or you might want to set URL parmeters for a `GET` or `DELETE`. Form Builder executes the service, and then provides information about the response returned, including:
+The Test button allows you to test the service. Before doing this, you have to set data in the request body for a `POST` or `PUT` request, or you might want to set URL parameters for a `GET` or `DELETE`. Form Builder executes the service, and then provides information about the response returned, including:
 
 - Whether an error occurred (green or red highlight)
 - URL called
