@@ -37,15 +37,24 @@ The following screenshot shows an example of filled-out service:
 ![Service Definition](images/service-definition.png)
 
 ### URL Parameters before Orbeon Forms 4.11
-Prior to Orbeon Forms 4.11, a "request body" is mandatory for the `GET` and `DELETE` methods. The body is not sent to the service, but instead is used to configure request parameters. Orbeon Forms 4.11 instead provides a specific user interface to set URL parameters. For example:
+
+Prior to Orbeon Forms 4.11, a "request body" is mandatory for the `GET` and `DELETE` methods. The body is not sent to the service, but instead is used to configure request parameters. 
+
+The content of the "Request Body" form has to be a well-formed XML document. The name of the root element doesn't matter, but usually `params`or `request` is used. Each child element defines a parameter as shown in the following example: 
 
 ```xml
-<request>
+<params>
     <userId>1</userId>
-</request>
+    <userName>test</userName>
+</params>
 ```
+Here Orbeon invokes the URL:
+```
+$<Resource URL>?userId=1&userName=test
+```
+where `$<Resoure URL>` is the content of the input field "Resource URL".
 
-Make sure that you select `HTML Form` as `Serialization`, otherwise the request parameters are not appended to the GET request.
+Make sure to select `HTML Form` in the `Serialization` dropdown, otherwise the URL parameters are not appended to the request URL.
 
 ## Advanced parameters
 
