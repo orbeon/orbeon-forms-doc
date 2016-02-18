@@ -103,3 +103,20 @@ This assumes that you are deploying Orbeon Forms in WebLogic as an enterprise ar
     ![](../../images/weblogic-update-application.png)
 
 Step 2 and 3 above assume you use the WebLogic Console to deploy Orbeon Forms. If instead you use `java weblogic.Deployer`, on the command line, just add the following parameter to the command you normally use to deploy Orbeon Forms: `-plan plan.xml`.
+
+## With any container
+
+Web app context parameters are typically defined in the `WEB-INF/web.xml`, and some containers provide a mechanism for you to override those parameters without having to change the `WEB-INF/web.xml`. We've seen earlier how to this on Tomcat and WebLogic.
+
+If your container does not provide such a mechanism, or updating the `WEB-INF/web.xml` isn't a problem for you, you can point your container to an external resource directory by adding the following to your `WEB-INF/web.xml`:
+
+```xml
+<context-param>
+    <param-name>oxf.resources.priority.0</param-name>
+    <param-value>org.orbeon.oxf.resources.FilesystemResourceManagerFactory</param-value>
+</context-param>
+<context-param>
+    <param-name>oxf.resources.priority.0.oxf.resources.filesystem.sandbox-directory</param-name>
+    <param-value>/home/myapp/resources</param-value>
+</context-param>
+```
