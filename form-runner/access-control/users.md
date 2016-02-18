@@ -4,12 +4,21 @@
 
 ## Providing username, group, and roles
 
-Form Runner uses the username, group, and roles to control who can access Form Builder and the forms you create with Form Builder (see [Editing Forms|Form Runner ~ Access Control ~ Editing Forms]] and [[Deployed Forms](../../form-runner/access-control/deployed-forms.md) for more details on how those are setup). Form Runner can obtain this information by calling a standard servlet API implemented by your application server (_container-driven method_) or by using HTTP headers (_header-driver method_), typically set by a front-end (e.g. Apache module) or a servlet filter.
+Form Runner uses the username, group, and roles to control who can access:
+
+- Form Builder to edit forms (for more on this, see [access control for editing forms](editing-forms.md));
+- Deployed forms you created with Form Builder (for more on this, see [access control for deployed Forms](deployed-forms.md)).
+
+Form Runner can obtain information about username, group, and roles by calling a standard servlet API implemented by your application server (_container-driven method_) or by using HTTP headers (_header-driver method_), typically set by a front-end (e.g. Apache module) or a servlet filter.
 
 ### Container driven method
 
-You want to use container roles if your users are setup at the application server level, with container managed security. In Tomcat, this would correspond to using a [security realm][10], which in its simplest form gets users from Tomcat's `conf/tomcat-users.xml`.
+With the container-driven method, Orbeon Forms uses a standard API to ask the container, typically Tomcat, about the current user. Users are typically setup in a directory service, like Active Directory or LDAP, and you setup the container to interface with that directory service. With Tomcat:
 
+- See [Tomcat's Windows Authentication How-To](https://tomcat.apache.org/tomcat-8.0-doc/windows-auth-howto.html) for more on how to setup Tomcat with Active Directory.
+- See [Tomcat's JNDIRealm](https://tomcat.apache.org/tomcat-8.0-doc/realm-howto.html#JNDIRealm) for nore on how to setup Tomcat with LDAP.
+
+In addition to the configuration at the container level, at the Orbeon Forms level, you'll want:
 
 1. __Enable container-driven method__ – To do so, set the following property in your `properties-local.xml`:
 
