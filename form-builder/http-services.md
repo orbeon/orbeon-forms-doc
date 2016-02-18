@@ -32,17 +32,20 @@ The "Definition" tab allows you to set the basic service parameters:
     - A non-blank URL parameter specifies a default value for the parameter.
     - An action can set the value of a parameter.
 
-*NOTE: Prior to Orbeon Forms 4.11, a "request body" is mandatory for the `GET` and `DELETE` methods. The body is not sent to the service, but instead is used to configure request parameters. Orbeon Forms 4.11 instead provides a specific user interface to set URL parameters. For example:*
-
-```xml
-<params>
-    <userId>1</userId>
-</params>
-```
-
 The following screenshot shows an example of filled-out service:
 
 ![Service Definition](images/service-definition.png)
+
+### URL Parameters before Orbeon Forms 4.11
+Prior to Orbeon Forms 4.11, a "request body" is mandatory for the `GET` and `DELETE` methods. The body is not sent to the service, but instead is used to configure request parameters. Orbeon Forms 4.11 instead provides a specific user interface to set URL parameters. For example:
+
+```xml
+<request>
+    <userId>1</userId>
+</request>
+```
+
+Make sure that you select `HTML Form` as `Serialization`, otherwise the request parameters are not appended to the GET request.
 
 ## Advanced parameters
 
