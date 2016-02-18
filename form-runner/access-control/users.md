@@ -19,7 +19,7 @@ Form Runner can obtain information about username, group, and roles either by:
 With the container-driven method, Orbeon Forms uses a standard API to ask the container, typically Tomcat, about the current user. Users are typically setup in a directory service, like Active Directory or LDAP, and you setup the container to interface with that directory service. With Tomcat:
 
 - See [Tomcat's Windows Authentication How-To](https://tomcat.apache.org/tomcat-8.0-doc/windows-auth-howto.html) for more on how to setup Tomcat with Active Directory.
-- See [Tomcat's JNDIRealm](https://tomcat.apache.org/tomcat-8.0-doc/realm-howto.html#JNDIRealm) for nore on how to setup Tomcat with LDAP.
+- See [Tomcat's JNDIRealm](https://tomcat.apache.org/tomcat-8.0-doc/realm-howto.html#JNDIRealm) for more on how to setup Tomcat with LDAP.
 
 In addition to the configuration at the container level, at the Orbeon Forms level, you'll want to:
 
