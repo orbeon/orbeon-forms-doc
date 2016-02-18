@@ -13,7 +13,7 @@ The purpose of this page is to index features, their documentation and [blog pos
 
 ## Status
 
-As of 2015-10-22 this page is still being updated.
+As of 2016-02-11 this page is still being updated.
 
 ## List of Orbeon Forms features
 
@@ -30,6 +30,7 @@ As of 2015-10-22 this page is still being updated.
 - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
 - Form field validation: [doc](form-builder/validation.md), [blog post](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
     - required fields (also via formula, see [blog post](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html))
+    - white space trimming: [doc](form-builder/validation.md#trimming-leading-and-trailing-spaces), [blog post](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
     - data types such as string, number, date, etc.
     - multiple constraints with formulas
     - common constraints such as minimum length and maximum length: [doc](form-builder/validation.md#commonconstraints), [blog post](http://blog.orbeon.com/2015/07/how-common-constraints-work.html)

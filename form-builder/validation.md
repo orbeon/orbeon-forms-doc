@@ -49,6 +49,20 @@ At runtime, if the value is required but not empty, the value is marked as inval
 
 The Required validation can have a custom alert message.
 
+### Trimming leading and trailing spaces
+
+[SINCE Orbeon Forms 4.11]
+
+When the "Trim leading and trailing spaces" option is enabled, leading and trailing spaces are removed from the value of the control before validation. This option is enabled by default for text and email fields.
+
+When used in conjunction with the Required validation, this allows making sure that a required field doesn't contain just spaces and in fact contains some value.
+
+This option is also useful for non-required fields which must not contain leading or trailing spaces. For example if the user enters "  Sam", the value is automatically converted into "Sam" as the user focuses out of the field.
+
+See also [Required fields: more subtle than you might think](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html).
+
+![Whitespace trimming](images/whitespace-trimming.png)
+
 ### Data type validation
 
 The list of data types includes:
@@ -150,9 +164,6 @@ A common constraint consists of the following:
   - applies to "Decimal" type only
   - the constraint fails if the decimal number has more than the specified number of significant digits (trailing zeros are ignored)
 
-
-
-
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
 
 ![Min and max length constraints](images/min-max-constraints.png)
@@ -249,3 +260,4 @@ Optionally, it is possible to annotate the XML data submitted with error, warnin
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
 - [How Common Constraints Work](http://blog.orbeon.com/2015/07/how-common-constraints-work.html)
 - [XForms Validation](../xforms/validation.md)
+- [Required fields: more subtle than you might think](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)

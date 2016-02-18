@@ -195,6 +195,38 @@ The `xxf:defaults` attribute is an AVT so can include XPath expressions between 
 
 See [Evaluation of initial values upon insert](actions/repeat-insert-delete.md).
 
+### Whitespace processing
+
+#### The xxf:whitespace MIP
+
+[SINCE Orbeon Forms 4.11]
+
+The `xxf:whitespace` MIP controls whitespace trimming. When the MIP is absent, there is no whitespace trimming.
+
+`xxf:whitespace` can take one of two values:
+
+- `preserve`: there is no change to the value's whitespace (the default).
+- `trim`: leading and trailing whitespace is removed.
+
+*NOTE: The value is static and cannot be the result of an XPath expression.*
+
+When using `trim`, all leading and trailing characters which are spaces, including non-breakable spaces, or ISO control characters, are removed.
+
+Example:
+
+```xml
+<xf:bind
+    id="first-name-bind"
+    ref="first-name"
+    xxf:whitespace="trim"/>
+```
+
+#### Processing model
+
+`xxf:whitespace` processing takes place during XForms recalculate processing before `xxf:default` and `calculate` processing. This means that calculations have access to data which already had whitespace processed.
+
+The result of `xxf:default` and `calculate` follows the `xxf:whitespace` MIP. This means that at the time of revalidation and refresh, all values including calculated values have up to date whitespace.
+
 ### Deferred rebuild, recalculate and revalidate
 
 XForms provides actions to force a given model's rebuild, recalculate, revalidate. As XForms specifies it, these actions have an immediate effect.
@@ -247,3 +279,4 @@ You often want to present a form without allowing the user to enter data. An eas
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
 - [Evaluation of initial values upon insert](actions/repeat-insert-delete.md)
 - [Grid component](../form-runner/component/grid.md)
+- Blog post: [Required fields: more subtle than you might think](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
