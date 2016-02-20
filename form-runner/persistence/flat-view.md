@@ -56,10 +56,7 @@ In addition to those columns, you have one column per form field, and each colum
 
 #### With Orbeon Forms 4.5 and newer
 
-Orbeon Forms 4.5 introduces a new truncation algorithm:
-
-- If the section name or the control name is 14 characters or less, it is kept as is, and the other part is truncated if needed.
-- A numerical *suffix* is used instead for those columns which would introduce duplicates.
+Orbeon Forms 4.5 introduces a new truncation algorithm so names are not cut short unnecessarily, and A numerical *suffix* is used instead for those columns which would introduce duplicates.
 
 Examples:
 
@@ -70,7 +67,7 @@ Section name             | Control name                                 | Column
                          | `address`	                                | `PERSONAL_INFORMATION_ADDRESS`
 `company`                | `name`                                       | `COMPANY_NAME`
                          | `industry`                                   | `COMPANY_INDUSTRY`
-`section-with-long-name` | `my-control-with-a-pretty-long-name`	        | `SECTION_WITH_L_MY_CONTROL_WIT`
+`section-with-long-name` | `my-control-with-a-pretty-long-name`	        | `SECTION_WITH_L_MY_CONTROL_WITH`
                          | `my-control-with-a-pretty-long-name-too`     | `SECTION_WITH_L_MY_CONTROL_WIT1`
                          | `my-control-with-a-pretty-long-name-really`	| `SECTION_WITH_L_MY_CONTROL_WIT2`
 
