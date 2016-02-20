@@ -48,7 +48,7 @@ The view always has the following metadata columns, with information copied from
     - `metadata_last_modified_time`
     - `metadata_last_modified_by`
 
-Note that there is no `metadata_draft` column, as drafts are not included the view. (Before 4.7 they were, incorrectly, see [#1870].)
+Note that there is no `metadata_draft` column, as drafts are not included the view. (Before 4.7 they were, incorrectly, see [issue 1870](https://github.com/orbeon/orbeon-forms/issues/1870).)
 
 ### Data column names
 
@@ -91,7 +91,5 @@ Section name           | Control name | Column name
 
 ## Limitations
 
-The Oracle flat view feature does not support nested sections and repeats, see issue [#1069][1].
-
-  [1]: https://github.com/orbeon/orbeon-forms/issues/1069
-  [#1870]: https://github.com/orbeon/orbeon-forms/issues/1870
+- Repeated grids and repeated sections are not supported, see [issue 1069](https://github.com/orbeon/orbeon-forms/issues/1069).
+- [SINCE Orbeon Forms 4.11] Orbeon Forms is able to handle fields inside nested sections, while such fields used to be ignored with Orbeon Forms 4.10 and earlier.
