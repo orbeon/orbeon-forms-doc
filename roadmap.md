@@ -4,7 +4,7 @@
 
 ## Past releases
 
-See the [Orbeon Forms release history](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-release-history).
+See the [Orbeon Forms release history](release-history.md).
 
 ## Release strategy
 
@@ -56,8 +56,8 @@ Issues:
 
 Please remember that the following schedule is a plan, not a promise:
 
-- 2016-02-19: code complete and start testing
-- 2016-03-02: tentative release date
+- 2016-02-26: code complete and start testing
+- 2016-03-09: tentative release date
 
 ### Orbeon Forms 4.12
 
