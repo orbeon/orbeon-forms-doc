@@ -10,8 +10,8 @@ This is a Form Runner service that generates an XML Schema 1.0 or 1.1 schema for
 
 You access the service using the following URL:
 
-- Orbeon Forms 4.0 to 4.3: `/fr/[app]/[form]/schema`
 - Orbeon Forms 4.4 and newer: `/fr/service/[app]/[form]/schema`
+- Orbeon Forms 4.0 to 4.3: `/fr/[app]/[form]/schema`
 
 With 4.4 and newer, the service must be [authorized](../../../xml-platform/controller/authorization-of-pages-and-services.md) like other services.
 
