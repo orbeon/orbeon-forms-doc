@@ -37,6 +37,7 @@ You use the number component like a regular input field, for example:
 * `suffix`: optional suffix shown after the number
 * `digits-after-decimal`: digits to show after the decimal point (by default 0, which means the number is an integer)
 * `decimal-separator`: single character to use as decimal separator
+    * use `.` or `,` only
 * `grouping-separator`: single character to use as thousands separator separator (can be blank)
 * `round-when-formatting`: when formatting the number for display, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
     * SINCE Orbeon Forms 4.11
@@ -44,6 +45,9 @@ You use the number component like a regular input field, for example:
 * `round-when-storing`: when storing the number entered by the user, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
     * SINCE Orbeon Forms 4.11
     * Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
+* `pattern`
+    * SINCE Orbeon Forms 4.11
+    * overrides the HTML `pattern` attribute
 
 These are the default values of the properties:
 
@@ -68,13 +72,13 @@ These are the default values of the properties:
     as="xs:string"
     name="oxf.xforms.xbl.fr.number.grouping-separator"
     value=","/>
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.xbl.fr.number.round-when-formatting"         
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.number.round-when-formatting"
     value="false"/>
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.xbl.fr.number.round-when-storing"            
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.number.round-when-storing"
     value="false"/>
 ```
 
@@ -84,19 +88,19 @@ The `digits-after-decimal` parameter controls how the value entered by the user 
 
 [SINCE Orbeon Forms 4.11]
 
-In order to validate the number to have a specific number of decimal digits, the `xxf:fraction-digits()` function should be used. 
+In order to validate the number to have a specific number of decimal digits, the `xxf:fraction-digits()` function should be used.
 
 ## Mobile support
 
 [SINCE Orbeon Forms 4.11]
 
 On iOS, when the control identifies that the value is a non-negative integer, it shows a numeric keypad:
- 
+
 ![iOS numeric keypad](images/xbl-number-numeric-keypad.png)
 
 This is the case if:
 
-- the control is bound to `xs:integer` OR is bound to `xs:decimal` and has an [`xxf:fraction-digits(0)`](../../xforms/xpath/extension-validation.html#xxffractiondigits) constraint 
+- the control is bound to `xs:integer` OR is bound to `xs:decimal` and has an [`xxf:fraction-digits(0)`](../../xforms/xpath/extension-validation.html#xxffractiondigits) constraint
 - AND has an [`xxf:non-negative()`](../../xforms/xpath/extension-validation.html#xxfnonnegative) constraint
 
 Otherwise, the control shows the numeric pane of the regular keyboard:
@@ -131,13 +135,13 @@ Assume the following properties or corresponding attributes:
     as="xs:string"
     name="oxf.xforms.xbl.fr.number.digits-after-decimal"
     value="2"/>
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.xbl.fr.number.round-when-formatting"         
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.number.round-when-formatting"
     value="true"/>
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.xbl.fr.number.round-when-storing"            
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.number.round-when-storing"
     value="false"/>
 ```
 
@@ -159,13 +163,13 @@ Assume the following properties or corresponding attributes:
     as="xs:string"
     name="oxf.xforms.xbl.fr.number.digits-after-decimal"
     value="2"/>
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.xbl.fr.number.round-when-formatting"         
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.number.round-when-formatting"
     value="true"/>
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.xbl.fr.number.round-when-storing"            
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.number.round-when-storing"
     value="true"/>
 ```
 
