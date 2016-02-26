@@ -69,7 +69,7 @@
         * [Rich Text Editor](form-runner/component/rich-text-editor.md)
         * [Section](form-runner/component/section.md)
         * [Source code editor](form-runner/component/source-code-editor.md)
-        * [US State](form-runner/component/us-state.md)       
+        * [US State](form-runner/component/us-state.md)
         * [Wizard](form-runner/component/wizard.md)
         * [XForms Inspector](form-runner/component/xforms-inspector.md)
     * Features
@@ -159,7 +159,7 @@
     * Events
         * [Standard support](xforms/events-standard.md)
         * [Extension events](xforms/events-extensions-events.md)
-        * [Extension ontext information](xforms/events-extensions-context.md)
+        * [Extension context information](xforms/events-extensions-context.md)
         * [Other extensions](xforms/events-extensions-other.md)
     * Actions
         * [Repeat, insert and delete](xforms/actions/repeat-insert-delete.md)
@@ -223,4 +223,4 @@
     * [Localizing Orbeon Forms](contributors/localizing-orbeon-forms.md)
     * [State handling](contributors/state-handling.md)
     * [Test plan](contributors/test-plan.md)
-    
+
