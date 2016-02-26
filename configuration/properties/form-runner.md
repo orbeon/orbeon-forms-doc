@@ -347,7 +347,7 @@ The following property specifies whether a barcode must be included on PDF files
 <property
     as="xs:boolean"
     name="oxf.fr.detail.pdf.barcode.*.*"
-    value="false">
+    value="false"/>
 ```
 
 #### Font embedding in automatic mode
