@@ -133,7 +133,7 @@ xxf:itemset(
 ) as item()?
 ```
 
-The xxf:itemset() function returns the current value of a given control's itemset.
+The `xxf:itemset()` function returns the current value of a given control's itemset.
 
 * The first parameter is the id of a selection control (`<xf:select>` or `<xf:select1>`).
 * The second parameter is the format to return:
@@ -363,7 +363,7 @@ If the control is not  relevant, or does not have an associated label, help, hin
 xxf:pending-uploads() as xs:integer
 ```
 
-The xxf:pending-uploads() function returns the number of known pending uploads in the page.
+The `xxf:pending-uploads()` function returns the number of known pending uploads in the page.
 
 If there is no pending upload, the function returns 0.
 
@@ -455,7 +455,7 @@ xxf:value(
 ) as xs:string?
 ```
 
-The `xxf:value`() function returns a control's value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
+The `xxf:value()` function returns a control's value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
 
 _NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
 
