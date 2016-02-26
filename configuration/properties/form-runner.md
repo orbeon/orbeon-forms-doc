@@ -341,7 +341,7 @@ a[href] {
 
 #### Barcode
 
-The following property specifies whether a barcode must be included on PDF files.
+[Orbeon Forms PE] The following property specifies whether a barcode must be included on PDF files produced from a PDF template. Adding a barcode to a PDF produced without a PDF template isn't supported at this point (see [RFE #2190](https://github.com/orbeon/orbeon-forms/issues/2190)).
 
 ```xml
 <property
