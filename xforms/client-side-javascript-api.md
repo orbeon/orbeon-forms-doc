@@ -42,10 +42,9 @@ ORBEON.xforms.Document.setValue(controlIdOrElement, newValue, form)
 | **newValue** |  Yes | Any value convertible with `toString()` | Value to set on the control (for `setValue()` only).
 | **form** |  No | `HTMLElement` | [SINCE Orbeon Forms 4.11] The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in a portal and you have multiple portlets using XForms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used.
 
-To:
 
-- Get a control value, use: `var value = ORBEON.xforms.Document.getValue(myControl)`.
-- Set control value, use: `ORBEON.xforms.Document.setValue(myControl, "42")`. Setting the value with JavaScript is equivalent to changing the value of the control in the browser. This will trigger the recalculation of the instances, and the dispatch of the `xforms-value-changed` event. More formally, the Value Change sequence of events occurs.
+- To get a control value, use: `var value = ORBEON.xforms.Document.getValue(myControl)`.
+- To set a control value, use: `ORBEON.xforms.Document.setValue(myControl, "42")`. Setting the value with JavaScript is equivalent to changing the value of the control in the browser. This will trigger the recalculation of the instances, and the dispatch of the `xforms-value-changed` event. More formally, the Value Change sequence of events occurs.
 
 For both `getValue()` and `setValue()`:
 
