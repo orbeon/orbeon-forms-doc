@@ -188,9 +188,14 @@ Example:
 
 Orbeon Forms partially supports the XForms 1.1 `delay` attribute on `<xf:dispatch>`. The limitations are:
 
-* A delay greater than zero always incurs a round-trip with the client. This may mean higher latency and resource usage than could be expected. You are advised to use delays in the order of seconds at least.
 * Events are not combined as specified in XForms 1.1.
 * Custom event context information is not supported and simply ignored.
+
+
+Until Orbeon Forms 4.10 included, a delay greater than zero always incurs a round-trip with the client. This may mean higher latency and resource usage than could be expected. You are advised to use delays in the order of seconds at least.
+
+Since Orbeon Forms 4.11, delayed events are checked for expiration before sending responses to the client.
+
 
 #### Extensions
 
