@@ -189,13 +189,19 @@ Example:
 Orbeon Forms partially supports the XForms 1.1 `delay` attribute on `<xf:dispatch>`. The limitations are:
 
 * Events are not combined as specified in XForms 1.1.
-* Custom event context information is not supported and simply ignored.
+* Custom event context information is not supported and simply ignored (see [#2579](https://github.com/orbeon/orbeon-forms/issues/2579)).
 
+Until Orbeon Forms 4.10 included:
 
-Until Orbeon Forms 4.10 included, a delay greater than zero always incurs a round-trip with the client. This may mean higher latency and resource usage than could be expected. You are advised to use delays in the order of seconds at least.
+* A delay greater than zero always incurs a round-trip with the client. This may mean higher latency and resource usage than could be expected. You are advised to use delays in the order of seconds at least.
+* A delay of `0` causes the event to be dispatched synchronously righ away, as if the `delay` attribute is not present.
+* A non-integer value causes the action to fail with an error.
 
-Since Orbeon Forms 4.11, delayed events are checked for expiration before sending responses to the client.
+Since Orbeon Forms 4.11:
 
+- Delayed events are checked for expiration before sending responses to the client.
+- A delay of `0` can be used to dispatch an event asynchronously with a guarantee that there will be no roundtrip to the client. This conforms to XForms 1.1.
+- A non-integer value causes the event to be dispatched synchronously right away. This conforms to XForms 1.1.
 
 #### Extensions
 
