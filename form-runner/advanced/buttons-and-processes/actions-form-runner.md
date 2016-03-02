@@ -94,7 +94,7 @@ The following example uses three parameters in the `send` action for the form `m
         uri        = "http://example.org/accept-form",
         method     = "PUT",
         content    = "metadata"
-    )       
+    )
 </property>
 ```
 
@@ -122,36 +122,58 @@ The following parameters can be used:
 - <a name="send_parameter_data-format-version"></a>`data-format-version` [SINCE Orbeon Forms 4.8]:
     - `edge`: send the data in the latest internal format
     - `4.0.0`: send the data in the Orbeon Forms 4.0-compatible format (the default)
-- <a name="send_parameter_parameters"></a>`parameters`: name of parameters sent to the service end point, in addition to the 
+- <a name="send_parameter_parameters"></a>`parameters`: name of parameters sent to the service end point, in addition to the
     form content
     - space-separated list of standard parameters to automatically add to the URL (see below)
     - default: `app form form-version document valid language process data-format-version`
         - `form-version` added to defaults in Orbeon Forms 4.7
         - `process` added to defaults in Orbeon Forms 4.7
+- <a name="send_parameter_serialization"></a>`prune-metadata`:
+
+    [SINCE Orbeon Forms 4.7]
+
+    - determine the serialization of the XML data
+    - values
+        - `application/xml`: XML serialization
+        - `none`: no serialization
+    - default
+        - `application/xml` when `method` is set to `post` or `put`
+        - `none` otherwise
+
+- <a name="send_parameter_prune_metadata"></a>`prune-metadata`:
+
+    [SINCE Orbeon Forms 4.11]
+
+    - this is applied when `content` is set to `xml` only
+    - `true` to remove all occurrences of `fr:`-prefixed elements and attributes
+    - `false` to leave such occurrences
+    - default
+        - `false` when `data-format-version` is set to `edge`
+        - `true` otherwise
 
 #### Using properties
 
 The following example refers in the `send` action to the properties with the common
-prefix `oxf.fr.detail.process.send.my_app.my_form`. It configures the URL, the method, 
+prefix `oxf.fr.detail.process.send.my_app.my_form`. It configures the URL, the method,
 and the type of content using three additional sub-properties.
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.send.my_app.my_form" >
     send("oxf.fr.detail.process.send.my_app.my_form")
 </property>
-<property 
-    as="xs:string" 
-    name="oxf.fr.detail.process.send.my_app.my_form.uri" 
+<property
+    as="xs:string"
+    name="oxf.fr.detail.process.send.my_app.my_form.uri"
     value="http://example.org/accept-form"
     />
-<property 
-    as="xs:string" 
-    name="oxf.fr.detail.process.send.my_app.my_form.method" 
+<property
+    as="xs:string"
+    name="oxf.fr.detail.process.send.my_app.my_form.method"
     value="PUT"
     />
-<property 
-    as="xs:string" 
-    name="oxf.fr.detail.process.send.my_app.my_form.content" 
+<property
+    as="xs:string"
+    name="oxf.fr.detail.process.send.my_app.my_form.content"
     value="metadata"
     />
 ```
@@ -165,6 +187,8 @@ The following properties can be used to configure a `send` action with propertie
 - property prefix + `.replace`: see [`replace` parameter](#send_parameter_replace)
 - property prefix + `.content`: see [`content` parameter](#send_parameter_content)
 - property prefix + `.parameters`: see [`parameters` parameter](#send_parameter_parameters)
+- property prefix + `.serialization`: see [`serialization` parameter](#send_parameter_serialization)
+- property prefix + `.prune-metadata`: see [`prune-metadata` parameter](#send_parameter_prune_metadata)
 
 ##### Properties and XPath Value Templates
 
