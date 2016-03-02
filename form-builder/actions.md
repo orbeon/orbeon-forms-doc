@@ -51,28 +51,62 @@ Like for services, once your action is defined, the Save buttons saves it to the
 
 ## Handling the service response
 
-- **Set Response Control Values.**
-    - Function: uses a value returned by the service to set a control's value.
-        - **Destination Control.** Specifies the control whose value must be set.
-        - **Destination XPath Expression.** The expression must point to an element or attribute node of the response body returned by the service.
-    - You can add as many such rows as you want using the "+" button, and remove existing entries with the trashcan icon.
-- **Set response Selection Control Items.**
-    - Function: uses values returned by the service to set a selection control's set of items (itemset) with them.
-        - **Destination Selection Control.** Specifies the selection control whose items must be set. Only selection controls appear in this list.
-        - **Items.**
-            - The XPath expression must point to a set of element or attribute nodes of the response body returned by the service.
-            - For each node returned, an item is created.
-        - **Label.** The XPath expression must return the text of the label for an item. It is relative to the item expression.
-        - **Value.** The XPath expression must return the text of the value for an item. It is relative to the item expression.
-    - All the previous items of the selection control are replaced with the items specified here.
-    - [SINCE Orbeon Forms 4.3] The selected value(s) are updated per the new itemset:
-        - For single-selection controls: if the item value currently stored in the instance data is not part of the returned set of items, the value is cleared.
-        - For multiple-selection controls: any of the space-separated values currently stored in the instance data that are not part of the returned set of item values are filtered out.
-    - You can add as many such rows as you want using the "+" button, and remove existing entries with the trashcan icon.
+### Setting the value of a control
 
-## Internationalization
+As a result of running an action, you can set a form control's value from data returned by a service using "Set Response Control Values".
 
-[SINCE Orbeon Forms 4.7] Your service should return localized labels for all the languages supported by your form. For instance, if your form is available in English and French, a service you use to populate a dropdown with a list of countries might return:
+- __Destination Control.__
+    - Specifies the control whose value must be set.
+    - A single "closest" control will be selected.
+- __Source XPath Expression.__
+    - The expression is evaluated in the context of root element of the XML data returned by the service.
+    - The expression can point to an element or attribute node of the response body, but can also be a more complex expression. Its result is converted to a string.
+
+### Setting the items of a selection control
+
+#### Basics
+
+As a result of running an action, you can set a selection control's set of items (AKA "itemset") using "Set response Selection Control Items".
+
+Selection controls include dropdown menus, checkboxes, and more.
+
+- __Destination Selection Control.__
+    - Specifies the selection control whose items must be set. Only selection controls appear in this list.
+    - Depending on the relative position of the source of the action and the target selection controls, one or more "closest" controls can be selected (see the detailed explanation of the behavior below).
+- __Items.__
+    - The XPath expression must point to a set of element or attribute nodes of the response body returned by the service.
+    - For each node returned, an item is created.
+- __Label.__ The XPath expression must return the text of the label for an item. It is relative to the current item node.
+- __Value.__ The XPath expression must return the text of the value for an item. It is relative to the current item node.
+
+#### Adjustment of control values
+
+[SINCE Orbeon Forms 4.3]
+
+Each selection control's selected value(s) are updated to be in range following the new itemset:
+
+- For single-selection controls: if the item value currently stored in the instance data is not part of the returned set of items, the value is cleared.
+- For multiple-selection controls: any of the space-separated values currently stored in the instance data that are not part of the returned set of item values are removed.
+
+#### Behavior starting with Orbeon Forms 4.11
+
+In the presence of repeated grids or sections, the destination selection control can resolve to zero, one or more concrete controls.
+
+The way this works is that the "closest" controls are searched. This means:
+
+- If the destination selection control is not within a repeated grid or section, then the single destination control is updated.
+- If the source of the action is *within the same repeated iteration* as the destination selection control, then that single destination control is updated. Occurrences of the selection control on other repeat iterations are not updated.
+- If the source of the action is at a higher level compared to the destination selection control, then all iterations of the selection control are updated, and subsequent new iterations added will also use the new itemset.
+
+#### Behavior up to Orbeon Forms 4.10 included
+
+All the previously available items of the selection control(s) identified are replaced with the items specified. In other words, the itemset for the given control is global. This is the case even in the presence of repeated grids or sections.
+
+#### Internationalization
+
+[SINCE Orbeon Forms 4.7]
+
+Your service should return localized labels for all the languages supported by your form. For instance, if your form is available in English and French, a service you use to populate a dropdown with a list of countries might return:
 
 ```xml
 <response>
