@@ -128,7 +128,7 @@ The following parameters can be used:
     - default: `app form form-version document valid language process data-format-version`
         - `form-version` added to defaults in Orbeon Forms 4.7
         - `process` added to defaults in Orbeon Forms 4.7
-- <a name="send_parameter_serialization"></a>`prune-metadata`:
+- <a name="send_parameter_serialization"></a>`serialization`:
 
     [SINCE Orbeon Forms 4.7]
 
