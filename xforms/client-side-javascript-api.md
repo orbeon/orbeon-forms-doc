@@ -91,6 +91,17 @@ As an example, consider you have the model below. It declares an instance with t
 </xh:p>
 ```
 
+#### For forms created in Form Builder
+
+Keep in mind that, in Form Builder, if you have a field named `first-name`, the XForms id for that field will be `first-name-control`. Also, because your field is inside other containers, for instance a section, the id in the HTML for that field will have some prefix. Consequently, when using `getValue()` and `setValue()` described above, you'll want to write code along those lines:
+
+```javascript
+var firstNameControl = ORBEON.jQuery('*[id $= "first-name-control"]')[0];
+var firstName = ORBEON.xforms.Document.getValue(firstNameControl);
+```
+
+The first line above uses the [`$=` CSS selector](https://www.w3.org/TR/selectors4/#attribute-substrings) to get the element in the DOM whose id ends with `first-name`.
+
 
 ### Dispatching events
 
