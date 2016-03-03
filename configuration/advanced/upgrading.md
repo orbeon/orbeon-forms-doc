@@ -2,6 +2,13 @@
 
 <!-- toc -->
 
+## When using Form Builder and Form Runner
+
+If your forms are created with Form Builder, to upgrade to a new version of Orbeon Forms you'll want to:
+
+1. Apply any changes you've done to the old Orbeon Forms web app to the new Orbeon Forms web app. Often, the only file you need to modify is the `properties-local.xml` (inside `WEB-INF/resources/config`), but you might have created or made changes to other files.
+2. If you're using the internal eXist and want to keep the forms you created, and corresponding data captured with those forms, you'll want to move the `WEB-INF/exist-data` directory to the new web app. If using a relational database, you might have to run some upgrade DDL at the database level. Search for "upgrade" in the [relational database configuration documentation](../../form-runner/persistence/relational-db.md), and check if there is some DDL you need to run to upgrade your database schema.
+3. Thoroughly test that everything is working as expected with the new version of Orbeon Forms.
 
 ## Compatibility policy
 
