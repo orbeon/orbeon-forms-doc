@@ -100,7 +100,7 @@ var firstNameControl = ORBEON.jQuery('*[id $= "first-name-control"]')[0];
 var firstName = ORBEON.xforms.Document.getValue(firstNameControl);
 ```
 
-The first line above uses the [`$=` CSS selector](https://www.w3.org/TR/selectors4/#attribute-substrings) to get the element in the DOM whose id ends with `first-name`.
+The first line above uses the [`$=` CSS selector](https://www.w3.org/TR/selectors4/#attribute-substrings) to get the element in the DOM whose id ends with `first-name-control`.
 
 
 ### Dispatching events
