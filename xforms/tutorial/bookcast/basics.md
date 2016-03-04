@@ -39,7 +39,7 @@ Now go to:
 http://localhost:8080/orbeon/my-bookcast/
 ```
 
-You should something like this:
+You should see something like this:
 
 ![][13]
 
