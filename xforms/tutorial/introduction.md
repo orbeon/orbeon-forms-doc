@@ -4,7 +4,7 @@
 
 ## What is this?
 
-This is the tutorial for Orbeon Forms's XForms features. It is aimed at programmers who want to program Orbeon Forms, as opposed to analysis who want to use [Form Builder][1].
+This is the tutorial for Orbeon Forms's XForms features. It is aimed at programmers who want to program Orbeon Forms, as opposed to users who want to use [Form Builder][3].
 
 If you have questions, issues or suggestions related to this tutorial, please send a message to the [Orbeon forum][2].
 
@@ -12,7 +12,7 @@ If you have questions, issues or suggestions related to this tutorial, please se
 
 ### What Orbeon Forms does for you
 
-Orbeon Forms is an open source solution to build and deploy web forms. For more information, please visit the Orbeon home page at http://www.orbeon.com.
+Orbeon Forms is an open source solution to build and deploy web forms. For more information, please visit the [Orbeon home page][1].
 
 ### Prerequisites
 
@@ -42,3 +42,4 @@ Orbeon Forms follows a few principles:
 
 [1]: http://www.orbeon.com/
 [2]: http://discuss.orbeon.com/
+[3]: http://doc.orbeon.com/form-builder/index.html

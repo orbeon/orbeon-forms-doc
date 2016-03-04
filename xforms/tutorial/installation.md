@@ -6,15 +6,16 @@
 
 Java provides the cross-platform environment in which Orbeon Forms runs.
 
-If you don't have Java installed yet, download it from http://www.oracle.com/technetwork/java/javase/downloads/index.html.
+If you don't have Java installed yet, download it from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
-_NOTE: If you use a Mac with Mac OS X, you probably have Java already installed on your machine, but if not visit <http: support.apple.com="" kb="" dl1572="">. Then follow the instructions to install Java._
+_NOTE: If you use a Mac with Mac OS X, you probably have Java already installed on your machine, but if not, follow the instructions
+in this [knowledge base article](https://support.apple.com/kb/DL1572).
 
 ## Downloading and installing Apache Tomcat
 
 Tomcat is the container application into which Orbeon Forms deploys. Follow these steps to download and install Tomcat if you don't have it installed yet:
 
-1. Download Tomcat 6 from the Apache web site at http://tomcat.apache.org/download-60.cgi..
+1. Download Tomcat 6 from the [Apache web site](http://tomcat.apache.org/download-60.cgi).
 
 2. Install Tomcat as per the instructions. If you downloaded the installer version (Windows only), run the installer. If you downloaded a compressed archive, uncompress it to the location of your choice. We call the install location `TOMCAT_HOME` (on windows, this could be `c:/Program Files/Apache/Tomcat`, on a Unix system, `/home/jdoe/tomcat`, etc.).
 

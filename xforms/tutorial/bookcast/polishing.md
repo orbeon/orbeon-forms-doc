@@ -76,7 +76,7 @@ Finally, add a `books-label` class to the controls related to book data, for exa
 <xf:label class="books-label">Title</xf:label>
 ```
 
-Now remember that Orbeon Forms does not send the XForms code directly to the web browser, but instead it transforms it into HTML. You realize that this is done because Orbeon Forms cannot assume that your web browser to support XForms at all. Consider the following examples:
+Now remember that Orbeon Forms does not send the XForms code directly to the web browser, but instead it transforms it into HTML. You realize that this is done because Orbeon Forms cannot assume your web browser to support XForms at all. Consider the following examples:
 
 ```xml
 <xf:submit id="my-submit" submission="save-submission">
@@ -139,14 +139,9 @@ So now look at the following CSS declaration for the Bookcast application:
 |  ` .xforms-textarea-appearance-xxforms-autosize { width: 20em; margin-bottom: 2px } `  |  Set width and margin to all text area controls with appearance `xxf:autosize`.  |
 |  ` .xforms-input input { width: 20em; margin-bottom: 2px }`  |  Set width and margin to all input controls.  |
 |  `.xforms-select1 { margin-bottom: 2px } .xforms-select1 input { margin-bottom: 2px } `  |  Set margin to all single selection controls.  |
-|  ` .books-table { background-color: #fce5b6 }
-.books-table .add-td { width: 33em }
-.books-table .form-td { width: 33em; background: white; padding: .5em } `  |  Format the main table.  |
+|  `.books-table { background-color: #fce5b6 }` <br> `.books-table .add-td { width: 33em }` <br> `.books-table .form-td { width: 33em; background: white; padding: .5em }`  |  Format the main table.  |
 |  ` .xforms-repeat-selected-item-1 .form-td { background: #ffc } `  |  Change the background color of the currently selected repeat index.  |
-|  ` .books-action-table { margin-bottom: 1em }
-.books-action-table td { white-space: nowrap; vertical-align: middle; padding-right: 1em }
-.books-action-table .xforms-submit img { vertical-align: middle }
-.books-action-table .xforms-trigger-appearance-minimal img { margin-right: 1em; vertical-align: middle } `  |  Set margins and alignment for the action table at the top of the page.  |
+|  ` .books-action-table { margin-bottom: 1em }` <br> `.books-action-table td { white-space: nowrap; vertical-align: middle; padding-right: 1em }` <br>  `.books-action-table .xforms-submit img { vertical-align: middle }` <br> `.books-action-table .xforms-trigger-appearance-minimal img { margin-right: 1em; vertical-align: middle }`  |  Set margins and alignment for the action table at the top of the page.  |
 
 Now just add all the CSS declaration under the page's `<head>` element, encapsulated within an HTML `<style>` element:
 
@@ -173,7 +168,7 @@ You already made the title and author mandatory fields, but you may want to vali
 XForms supports two ways of performing validation:
 
 * With Model Item Properties (MIPs) in the model, called `constraint` and `type`.
-* With an _XML Schema_. XML Schema is a W3C standard to specify constraints on XML documents, including constraints on the structure of the document or on the data types contained.
+* With an _XML Schema_. [XML Schema][23] is a W3C standard to specify constraints on XML documents, including constraints on the structure of the document or on the data types contained.
 
 Look at the following XML Schema for the Bookcast application:
 
@@ -282,7 +277,7 @@ Also add `<xf:alert>` elements to the controls which might be invalid. This allo
 
 Reload the page, and try to enter an invalid link, for example "ftp://ftp.example.com/". An alert icon will show up as you leave the link field with your cursor.
 
-_NOTE: The URL of the schema, "/apps/my-bookcast/schema.xsd", is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded though:_
+_NOTE: The URL of the schema, `/apps/my-bookcast/schema.xsd`, is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded through:_
 
 ```xml
 http://localhost:8080/orbeon/apps/my-bookcast/schema.xsd
@@ -316,7 +311,7 @@ It would be nice to tell the user that saving didn't work. You can do this very 
 </xf:submission>
 ```
 
-The `<xf:submission>` element hasn't changed, except we added a nested `<xf:message>` element. Besides the `event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and message for the user.
+The `<xf:submission>` element hasn't changed, except we added a nested `<xf:message>` element. Besides the `event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and a message for the user.
 
 Try now making this change, enter an invalid link, and press the "Save" link: an alert message should show up!
 
@@ -324,3 +319,4 @@ Try now making this change, enter an invalid link, and press the "Save" link: an
 
 [21]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/16.png
 [22]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/17.png
+[23]: https://www.w3.org/XML/Schema

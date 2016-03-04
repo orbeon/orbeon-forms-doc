@@ -4,7 +4,7 @@
 
 ## What is it?
 
-Remember, the name of this application is Book_cast_, which lets suggest that we can expose the list of books as a feed of some sort. Here, you will use the Atom Syndication Format (or Atom in short). Atom is a format very much like RSS but it has been standardized by IETF and is much cleaner than RSS (note that there are at least 6 different versions of RSS). Atom is now supported by most feed readers.
+Remember, the name of this application is Book_cast_, which lets suggest that we can expose the list of books as a feed of some sort. Here, you will use the [Atom Syndication Format][28] (or Atom in short). Atom is a format very much like RSS but it has been standardized by IETF and is much cleaner than RSS (note that there are at least 6 different versions of RSS). Atom is now supported by most feed readers.
 
 An atom feed looks like this (example from the Atom specification):
 
@@ -43,7 +43,7 @@ Notice how, instead of an XHTML page view (`view.xhtml`), you now use:
 * A page _model_, called `atom.xpl`. This page model has an `*.xpl` extension, which tells you that it contains an _XML pipeline_.
 * A page _view_, called `view.xsl`. This page view has an `*.xsl` extension, which tells you that it contains an _XSLT stylesheet_.
 
-So what's the idea page models and page view? The idea is to separate the _production_ of the data to display, from the _visual formatting_ of that data. The page model is in charge of the former, and the page view of the latter. In the case of the production of the Atom feed:
+So what's the idea behind page models and page views? The idea is to separate the _production_ of the data to display, from the _visual formatting_ of that data. The page model is in charge of the former, and the page view of the latter. In the case of the production of the Atom feed:
 
 * The page model is in charge of fetching the data (the `books.xml` document) from the database.
 * The page view formats that data to produce a valid Atom document.
@@ -77,7 +77,7 @@ Consider the page model:
 
 This document contains an XML pipeline described in a language called XPL (XML Pipeline Language). An XML pipeline language is simply a language for describing operations to be performed on XML documents. Orbeon Forms comes with an implementation of [XPL][23]. (Orbeon is currently working at W3C on the standardization of a pipeline language called [XProc][24].)
 
-So what does this pipeline do? It runs a _processor_ called `oxf:xforms-submission`, which is handy component that allows you to perform XForms submissions from XPL. That submission retrieves `books.xml` and returns it on the processor's `response` output. That output in turn is sent to the `data` output of the page model pipeline.
+So what does this pipeline do? It runs a _processor_ called `oxf:xforms-submission`, which is a handy component that allows you to perform XForms submissions from XPL. That submission retrieves `books.xml` and returns it on the processor's `response` output. That output in turn is sent to the `data` output of the page model pipeline.
 
 Now look at the page view:
 
@@ -204,3 +204,4 @@ You have now covered a good part of the basics of Orbeon Forms. You can now look
 [25]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/19.png
 [26]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/20.png
 [27]: http://demo.orbeon.com/orbeon/home/
+[28]: https://www.ietf.org/rfc/rfc4287.txt

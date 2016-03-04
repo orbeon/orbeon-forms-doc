@@ -56,7 +56,7 @@ Note that from now on, we prefer the term _element_ to the term _tag_. An elemen
 With XForms, you store the data captured by controls such as input fields, combo boxes, etc. as text contained within XML elements or attributes. Consider the following XML document containing a single element called `first-name`.
 
 ```xml
-<first-name>
+<first-name/>
 ```
 
 The `first-name` element is _empty_. Contrast with:
@@ -79,7 +79,7 @@ Also notice the special `xmlns=""` namespace attribute on `<first-name>`: this i
 
 This element defines an XForms _instance_, which is just XForms' way of calling an XML document used to store data.
 
-Now consider the remaining XForms elements in the source file: `<xf:input>` and `<xf:output>`. These two elements are not located under the XHTML ``, but under ``. They are part of the _view_ of your page, in other words these elements directly help define visible controls on the page. Consider `<xf:input>`:
+Now consider the remaining XForms elements in the source file: `<xf:input>` and `<xf:output>`. These two elements are not located under the XHTML `<head>`, but under `<body>`. They are part of the _view_ of your page, in other words these elements directly help define visible controls on the page. Consider `<xf:input>`:
 
 ```xml
 <xf:input ref="/first-name" incremental="true">

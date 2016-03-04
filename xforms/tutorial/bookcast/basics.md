@@ -31,7 +31,7 @@ This page flow is automatically called for any path that starts with `/orbeon/my
     </html>
     ```
 
-    This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the ``/. It also declares a bunch of XML namespaces that you need later in the document.
+    This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the `<body>`. It also declares a bunch of XML namespaces that you need later in the document.
 
 Now go to:
 
@@ -39,7 +39,7 @@ Now go to:
 http://localhost:8080/orbeon/my-bookcast/
 ```
 
-You should something like this:
+You should see something like this:
 
 ![][13]
 
@@ -47,8 +47,8 @@ _NOTE:_
 
 _If you get lost at some point in this tutorial, feel free to look at the reference source files for the Bookcast application:_
 
-* [view.xhtml][?]
-* [page-flow.xml][?]
+* [view.xhtml][17]
+* [page-flow.xml][18]
 
 ## XForms model and instance
 
@@ -112,22 +112,20 @@ An XForms document that wants to do something really useful needs at least one m
 As you can see, the idea is to store the information about all the books in a single XML document. So under a top-level `<books>` element, we put as many `<book>` children elements as needed. You will see later how it is possible with XForms to add and remove children elements. For now, your initial instance declaration is empty and contains a single book, and you place it as usual within an `<xf:model>` element:
 
 ```xml
-<html>
-    <xf:model>
-        <xf:instance id="books-instance">
-            <books xmlns="">
-                <book>
-                    <title/>
-                    <author/>
-                    <language/>
-                    <link/>
-                    <rating/>
-                    <notes/>
-                </book>
-            </books>
-        </xf:instance>
-    </xf:model>
-</html>
+<xf:model>
+    <xf:instance id="books-instance">
+        <books xmlns="">
+            <book>
+                <title/>
+                <author/>
+                <language/>
+                <link/>
+                <rating/>
+                <notes/>
+            </book>
+        </books>
+    </xf:instance>
+</xf:model>
 ```
 
 Notice the `id` attribute which allows other XForms constructs to refer to that particular instance.
@@ -155,11 +153,11 @@ Now it's time to add some visual controls to your page. Start with the following
 </xf:group>
 ```
 
-Reload the page. You should seem something like this:
+Reload the page. You should see something like this:
 
 ![][14]
 
-After having looked at the Hello example, this should be clear, with a little novelty: `<xf:group>`: this element allows grouping XForms controls together. The `ref="book"` element changes the current _evaluation context_ for the nested controls, which means that they can use simpler XPath expressions: `ref="title"` instead of `ref="book/title"` and `ref="author"` instead of `ref="book/author"` (groups have other uses but you don't need to learn that now).
+After having looked at the [Hello example](../hello.md), this should be clear, with a little novelty: `<xf:group>`. This element allows grouping XForms controls together. The `ref="book"` element changes the current _evaluation context_ for the nested controls, which means that they can use simpler XPath expressions: `ref="title"` instead of `ref="book/title"` and `ref="author"` instead of `ref="book/author"` (groups have other uses but you don't need to learn that now).
 
 Another thing: all XForms controls require a nested `<xf:label>` element, as an effort to help accessibility. In some cases, you won't want an actual label to display next to the control: to achieve this, you can either hide the label with CSS, or use an empty label element (`<xf:label/>`).
 
@@ -178,7 +176,7 @@ Notice how, as you enter text in the title or author field, the field's backgrou
 
 The above requires some explanations:
 
-* The `<xf:bind>` element is used to assign so-called _Model Item Properties_ (or _MIPs_) to XForms instance nodes (typically XML elements or attributes). Such properties include whether a field is required, read-only, or visible; whether the field has to satisfy a certain constraint or be of a particular type; and whether the field is a calculated value.
+* The `<xf:bind>` element is used to assign so-called [_Model Item Properties_][19] (or _MIPs_) to XForms instance nodes (typically XML elements or attributes). Such properties include whether a field is required, read-only, or visible; whether the field has to satisfy a certain constraint or be of a particular type; and whether the field is a calculated value.
 * Here we use the `required` attribute, which determines whether a field is, well, required, that is, whether it has to be filled out by the user.
 * Much like `<xf:group>` in the controls, `<xf:bind>` elements can be nested.
 * `<xf:bind>` uses a `ref` attribute, which allows pointing at more than one node using a single XPath expression.
@@ -235,7 +233,7 @@ Reload the page. You should see the following:
 
 You have just added a single selection control with `<xf:select1>`. The name means that the user can "select one" item among several items. (XForms tends to call controls using more abstract terms, rather than giving them names such as "combo box" or "menu".) The single selection control usually appears like a drop-down menu or combo box with most XForms implementations (but you can change it's appearance as shown later).
 
-Nested within the control, you find several `<xf:item>` elements. Each one creates an item in the drop-down menu. An item has to sides: the `<xf:label>` element specifies the _label_ that is presented to the user, and the `<xf:value>` element specifies the _value_ that is stored into the XForms instance when the user selects that particular item.
+Nested within the control, you find several `<xf:item>` elements. Each one creates an item in the drop-down menu. An item has two sides: the `<xf:label>` element specifies the _label_ that is presented to the user, and the `<xf:value>` element specifies the _value_ that is stored into the XForms instance when the user selects that particular item.
 
 Now XForms encourages you to store data in the model. For a selection control, this means storing the list of labels and values in an XForms instance instead of statically listing the items under the `<xf:select1>` element. So let's do this! Create a new instance in the model:
 
@@ -399,3 +397,6 @@ By now you probably get the gist of it!
 [14]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/09.png
 [15]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/11.png
 [16]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/12.png
+[17]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/view.xhtml
+[18]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/page-flow.xml
+[19]: https://www.w3.org/TR/2006/REC-xforms-20060314/slice6.html

@@ -40,7 +40,7 @@ Let's look at the details:
 
     (Because it is inconvenient for you to always write absolute URLs when you want to address an URL handle by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
 
-    The paths starts with `/exist/rest/`, which maps to the built-in eXist database. The rest of the path (`/db/orbeon/my-bookcast/books.xml`) specifies the _collection_ and `document` to access. Here, we decide to save the data to a document called `books` within a collection called `/db/orbeon/my-bookcast/`.
+    The path starts with `/exist/rest/`, which maps to the built-in eXist database. The rest of the path (`/db/orbeon/my-bookcast/books.xml`) specifies the _collection_ and _document_ to access. Here, we decide to save the data to a document called `books` within a collection called `/db/orbeon/my-bookcast/`.
 * The `method` attribute specifies what HTTP method to use. Here, you use the value `put`, which translates into using the HTTP PUT method. (You may not be very familiar with the PUT method (HTML forms, for example, always use GET and POST), but PUT is getting used more and more with REST interfaces. In just a few words, PUT allows you to store a resource to a particular location on an HTTP server.)
 * Finally, the `replace` attribute specifies what to do with the response sent by the server (here the server is the eXist database). Specifying a value of `none` tells the XForms engine to discard the content of the response from the database.
 
@@ -60,7 +60,7 @@ So go ahead and:
 * Add the submission to the model.
 * Reload the page.
 * Enter a book title and an author, then press the "Save" button. Your form data has been silently saved to the database. It was that easy!
-* Then, let's check that the data is actually in the database. [SINCE 4.0] By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/WEB-INF/web.xml`  noting that you will need to remove the  comment after <url-pattern> to make it well formed XML. (and don't forget to put them back before going to production if necessary):
+* Then, let's check that the data is actually in the database. [SINCE Orbeon Forms 4.0] By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/WEB-INF/web.xml`  noting that you will need to remove the  comment after `<url-pattern>` to make it well formed XML. (and don't forget to put them back before going to production if necessary):
 
     ```xml
     <filter-mapping>
@@ -148,7 +148,7 @@ The following is an overview of what has just happened:
 * The XForms engine updates the XForms controls bound to the instance with the values now contained in the instance. For example, the "title" and "author" input fields are now updated with the values that came from the database.
 * The XForms engine sends an HTML page to your web browser. You see the page with all the correct data as saved earlier into the database.
 
-_Actions_ and _events_ are very important in xf: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable action that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
+_Actions_ and _events_ are very important in XForms: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable action that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
 
 (You may wonder what would happen the first time the `list-submission` is called if no `books.xml` document is available in the database. The answer is that the database would return an error, and the submission would throw an event called `xforms-submit-error`. But because you don't have an event handler for this event, nothing happens: the initial content of the `books-submission` instance is not changed and so you see an empty form.)
 
@@ -223,7 +223,7 @@ Let's explain what the above does:
 
     ![][19]
 
-Again the XForms engine does its magic and takes care of updating the web page automatically. You also notice that the web page does not reload as it updates. This is because Orbeon Forms uses Ajax technology to perform updates to the page. With Ajax, client-side JavaScript code silently talks to the Orbeon Forms server, which then communicates to the client-side code the updates to perform to the page. These update are directly done to the HTML Document Object Model (DOM) without reload.
+Again the XForms engine does its magic and takes care of updating the web page automatically. You also notice that the web page does not reload as it updates. This is because Orbeon Forms uses Ajax technology to perform updates to the page. With Ajax, client-side JavaScript code silently talks to the Orbeon Forms server, which then communicates to the client-side code the updates to perform to the page. These updates are directly done to the HTML Document Object Model (DOM) without reload.
 
 ## Deleting a book
 
