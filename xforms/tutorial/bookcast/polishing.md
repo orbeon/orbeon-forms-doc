@@ -76,7 +76,7 @@ Finally, add a `books-label` class to the controls related to book data, for exa
 <xf:label class="books-label">Title</xf:label>
 ```
 
-Now remember that Orbeon Forms does not send the XForms code directly to the web browser, but instead it transforms it into HTML. You realize that this is done because Orbeon Forms cannot assume that your web browser to support XForms at all. Consider the following examples:
+Now remember that Orbeon Forms does not send the XForms code directly to the web browser, but instead it transforms it into HTML. You realize that this is done because Orbeon Forms cannot assume your web browser to support XForms at all. Consider the following examples:
 
 ```xml
 <xf:submit id="my-submit" submission="save-submission">
