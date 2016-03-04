@@ -316,7 +316,7 @@ It would be nice to tell the user that saving didn't work. You can do this very 
 </xf:submission>
 ```
 
-The `<xf:submission>` element hasn't changed, except we added a nested `<xf:message>` element. Besides the `event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and message for the user.
+The `<xf:submission>` element hasn't changed, except we added a nested `<xf:message>` element. Besides the `event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and a message for the user.
 
 Try now making this change, enter an invalid link, and press the "Save" link: an alert message should show up!
 
