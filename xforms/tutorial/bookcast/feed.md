@@ -43,7 +43,7 @@ Notice how, instead of an XHTML page view (`view.xhtml`), you now use:
 * A page _model_, called `atom.xpl`. This page model has an `*.xpl` extension, which tells you that it contains an _XML pipeline_.
 * A page _view_, called `view.xsl`. This page view has an `*.xsl` extension, which tells you that it contains an _XSLT stylesheet_.
 
-So what's the idea page models and page view? The idea is to separate the _production_ of the data to display, from the _visual formatting_ of that data. The page model is in charge of the former, and the page view of the latter. In the case of the production of the Atom feed:
+So what's the idea behind page models and page views? The idea is to separate the _production_ of the data to display, from the _visual formatting_ of that data. The page model is in charge of the former, and the page view of the latter. In the case of the production of the Atom feed:
 
 * The page model is in charge of fetching the data (the `books.xml` document) from the database.
 * The page view formats that data to produce a valid Atom document.
