@@ -4,7 +4,7 @@
 
 ## What is it?
 
-Remember, the name of this application is Book_cast_, which lets suggest that we can expose the list of books as a feed of some sort. Here, you will use the Atom Syndication Format (or Atom in short). Atom is a format very much like RSS but it has been standardized by IETF and is much cleaner than RSS (note that there are at least 6 different versions of RSS). Atom is now supported by most feed readers.
+Remember, the name of this application is Book_cast_, which lets suggest that we can expose the list of books as a feed of some sort. Here, you will use the [Atom Syndication Format][28] (or Atom in short). Atom is a format very much like RSS but it has been standardized by IETF and is much cleaner than RSS (note that there are at least 6 different versions of RSS). Atom is now supported by most feed readers.
 
 An atom feed looks like this (example from the Atom specification):
 
@@ -204,3 +204,4 @@ You have now covered a good part of the basics of Orbeon Forms. You can now look
 [25]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/19.png
 [26]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/20.png
 [27]: http://demo.orbeon.com/orbeon/home/
+[28]: https://www.ietf.org/rfc/rfc4287.txt
