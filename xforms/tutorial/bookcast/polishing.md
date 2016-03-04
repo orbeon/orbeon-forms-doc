@@ -139,14 +139,9 @@ So now look at the following CSS declaration for the Bookcast application:
 |  ` .xforms-textarea-appearance-xxforms-autosize { width: 20em; margin-bottom: 2px } `  |  Set width and margin to all text area controls with appearance `xxf:autosize`.  |
 |  ` .xforms-input input { width: 20em; margin-bottom: 2px }`  |  Set width and margin to all input controls.  |
 |  `.xforms-select1 { margin-bottom: 2px } .xforms-select1 input { margin-bottom: 2px } `  |  Set margin to all single selection controls.  |
-|  ` .books-table { background-color: #fce5b6 }
-.books-table .add-td { width: 33em }
-.books-table .form-td { width: 33em; background: white; padding: .5em } `  |  Format the main table.  |
+|  `.books-table { background-color: #fce5b6 }` <br> `.books-table .add-td { width: 33em }` <br> `.books-table .form-td { width: 33em; background: white; padding: .5em }`  |  Format the main table.  |
 |  ` .xforms-repeat-selected-item-1 .form-td { background: #ffc } `  |  Change the background color of the currently selected repeat index.  |
-|  ` .books-action-table { margin-bottom: 1em }
-.books-action-table td { white-space: nowrap; vertical-align: middle; padding-right: 1em }
-.books-action-table .xforms-submit img { vertical-align: middle }
-.books-action-table .xforms-trigger-appearance-minimal img { margin-right: 1em; vertical-align: middle } `  |  Set margins and alignment for the action table at the top of the page.  |
+|  ` .books-action-table { margin-bottom: 1em }` <br> `.books-action-table td { white-space: nowrap; vertical-align: middle; padding-right: 1em }` <br>  `.books-action-table .xforms-submit img { vertical-align: middle }` <br> `.books-action-table .xforms-trigger-appearance-minimal img { margin-right: 1em; vertical-align: middle }`  |  Set margins and alignment for the action table at the top of the page.  |
 
 Now just add all the CSS declaration under the page's `<head>` element, encapsulated within an HTML `<style>` element:
 
