@@ -12,7 +12,7 @@ If you have questions, issues or suggestions related to this tutorial, please se
 
 ### What Orbeon Forms does for you
 
-Orbeon Forms is an open source solution to build and deploy web forms. For more information, please visit the Orbeon home page at http://www.orbeon.com.
+Orbeon Forms is an open source solution to build and deploy web forms. For more information, please visit the [Orbeon home page](http://www.orbeon.com).
 
 ### Prerequisites
 
