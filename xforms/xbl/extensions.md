@@ -147,8 +147,6 @@ _NOTE: A future enhancement to this feature might restrict id and XPath scope of
 
 ## xxbl:mirror attribute
 
-[SINCE 2013-01-23]
-
 This attribute, placed on a local XForms instance, tells the XBL engine to automatically mirror changes between that instance and the XBL component's bound node.
 
 For mirroring to work, the XBL component must either:

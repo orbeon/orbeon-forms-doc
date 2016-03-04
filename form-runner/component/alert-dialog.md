@@ -71,7 +71,7 @@ In most cases, you will be using either the positive and negative choice togethe
 You specify the actions running upon a button being pressed by either:
 
 * **Use inline actions** – Placing the actions inside the `<fr:``positive-choice``>` or <fr:negative-choice> or <fr:neutral-choice>, and run them on the `DOMActivate` event, as done in the example above.
-* **Use a "callback"** – [SINCE 2011-07-22] When opening the alert dialog, passing the id of an element to which the dialog will dispatch an event upon a button being pressed. For instance you would open the dialog with:
+* **Use a "callback"** – When opening the alert dialog, passing the id of an element to which the dialog will dispatch an event upon a button being pressed. For instance you would open the dialog with:
 
     ```xml
     <xf:trigger id="delete-trigger">
@@ -87,7 +87,7 @@ You specify the actions running upon a button being pressed by either:
 
 _You pass the element id using the context property named `positive-targetid`, `negative-targetid`, or `neutral-targetid`. Then, the alert dialog dispatches an event named `fr-positive`, or `fr-negative`, or `fr-neutral` to that element. This second technique is particularly useful when you want to have one instance of an alert dialog that you want to reuse from the multiple places in your form._
 
-_**Keeping context information** – [SINCE 2012-09-26] When opening the dialog you can pass an optional context property named `context`; the value of this property must be a string, and it will be passed back to your handler for `fr-positive`, or `fr-negative`, or `fr-neutral`. This is particularly useful when you want to "forward" an event property to your custom handler. For instance you can open the dialog with:_
+_**Keeping context information** – When opening the dialog you can pass an optional context property named `context`; the value of this property must be a string, and it will be passed back to your handler for `fr-positive`, or `fr-negative`, or `fr-neutral`. This is particularly useful when you want to "forward" an event property to your custom handler. For instance you can open the dialog with:_
 
 ```xml
 <xf:dispatch target="confirm-deletion-dialog" name="fr-show">

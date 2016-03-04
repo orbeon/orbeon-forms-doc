@@ -23,7 +23,7 @@ See also:
     * Upon binding errors with the `model` attribute
         * the model doesn't change, as if the `model` attribute was missing
 1. For XPath MIP values
-    * Upon XPath errors for  `calculate` and `xxforms:default` [SINCE 2012-12-06]
+    * Upon XPath errors for  `calculate` and `xxforms:default`
         * the destination value is set to blank
         * if `xxforms:expose-xpath-types="true"` and there is an error accessing a typed value
             * the error is logged at debug level
@@ -78,11 +78,8 @@ _NOTE: This should ideally not occur as the value control binding should not poi
 
 The `xxforms-action-error` event is dispatched:
 
-* [SINCE 2012-06-08]
-    * to the _observer_ of the action, upon encountering an error during processing of an action
-    * this includes: controls, model, instance, and submission
-* [PRIOR TO 2012-06-08]
-    * to the top-level _document_, upon encountering an error during processing of an action
+* to the _observer_ of the action, upon encountering an error during processing of an action
+* this includes: controls, model, instance, and submission
 
 _NOTE: The fatal, non-cancelable XForms `xforms-compute-exception` and `xforms-binding-exception` are no longer dispatched by Orbeon Forms._
 

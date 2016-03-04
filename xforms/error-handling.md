@@ -83,8 +83,6 @@ If you disable the default error dialog, you might want to provide an alternativ
 
 ### Recoverable errors
 
-[SINCE 2011-11-04]
-
 The following property allows you to enable or disable showing recoverable server errors to the user via the error dialog, and to determine a maximum number of errors to show the user. This is intended as a *development* feature, not a production feature.
 
 ```xml

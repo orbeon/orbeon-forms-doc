@@ -46,7 +46,7 @@ Some properties support wildcards, for example:
 oxf.fr.persistence.app.uri.*.*.*
 ```
 
-You can also place longer property values inline [SINCE Orbeon Forms 4.6]: 
+You can also place longer property values inline [SINCE Orbeon Forms 4.6]:
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.save-final.*.*">
@@ -83,7 +83,7 @@ If that file doesn't exist yet in your installation of Orbeon Forms, you can cre
 ```xml
 <properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:oxf="http://www.orbeon.com/oxf/processors">
-    <property as="xs:string"  
+    <property as="xs:string"
               name="oxf.fr.persistence.provider.*.*.*"
               value="oracle"/>
 </properties>
@@ -184,7 +184,6 @@ The properties sub-system is initialized after the [Resource Manager][2] (the pr
 
 * web app in `prod` mode:  `oxf:/config/properties-prod.xml`
 * web app in  `dev`  mode:  `oxf:/config/properties-dev.xml`
-* web app (prior to 2012-05-03):  `oxf:/config/properties.xml`
 * command-line:  `oxf:/properties.xml`
 
 Property files support inclusions via XInclude. This is the mechanism used by Orbeon Forms to load  all the secondary property files.

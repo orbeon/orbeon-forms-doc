@@ -21,56 +21,56 @@ Two properties in `WEB-INF/resources/config/properties-local.xml` control exactl
 ```xml
     <property as="xs:NMTOKENS" name="oxf.xforms.logging.debug">
         document
-        model 
-        submission 
-        control 
-        event 
-        action 
-        analysis 
-        server 
+        model
+        submission
+        control
+        event
+        action
+        analysis
+        server
         html
         process
     </property>
-    
+
     <property as="xs:NMTOKENS" name="oxf.xforms.logging.error">
         submission-error-body
     </property>
 ```
 
-The first property controls what is logged at debug level:  
+The first property controls what is logged at debug level:
 
 * Related to a particular XForms document:
     * `model`
-        * activity related to `xf:model`, including instance loads, validation, and binds  
+        * activity related to `xf:model`, including instance loads, validation, and binds
     * `submission`
         * timing activity related to `xf:submission`
     * `submission-details`
         * detail activity related to `xf:submission`
-        * requires `submission` to be present as well  
+        * requires `submission` to be present as well
     * `control`
-        * activity related to controls  
+        * activity related to controls
     * `event`
-        * activity related to events dispatching and propagation  
+        * activity related to events dispatching and propagation
     * `action`
         * activity related to XForms actions
     * `document`
         * other activity related to an XForms document
-        * this includes the output of the ``<xf:message>`` action with level `xxf:log-debug`  
+        * this includes the output of the ``<xf:message>`` action with level `xxf:log-debug`
     * `process`
         * activity related to [processes](../../form-runner/advanced/buttons-and-processes/README.md)
 * Not related to a particular XForms document:
     * `analysis`
-        * activity related to the static analysis of an XForms document  
+        * activity related to the static analysis of an XForms document
     * `server`
-        * activity related to handling Ajax requests  
+        * activity related to handling Ajax requests
     * `html`
-        * activity related to converting XForms to HTML  
+        * activity related to converting XForms to HTML
     * `resources`
-        * activity related to handling XForms CSS and JavaScript resources  
+        * activity related to handling XForms CSS and JavaScript resources
     * `state`
         * activity related to state handling
     * `resolver`
-        * activity related to the URI resolver  
+        * activity related to the URI resolver
     * `utils`
         * miscellaneous activity
     * `cache`
@@ -78,7 +78,6 @@ The first property controls what is logged at debug level:
         * activity of the static state cache during XForms initialization
 * Data:
     * `html-static-state`
-        * [SINCE: 2010-09-07]
         * requires `html`
         * outputs the static state input
     * `analysis-xbl-tree`
@@ -94,7 +93,7 @@ The first property controls what is logged at debug level:
         * requires `server`
         * outputs the full Ajax request and response bodies
 
-The second property controls what is logged at error level:  
+The second property controls what is logged at error level:
 
 * `submission-error-body`
     * Whether to attempt to output a submission response body when a submission error occurs
@@ -105,7 +104,7 @@ The second property controls what is logged at error level:
         * The body is logged
         * Then the rest of the submission proceeds
 * `server-body`
-    * output the Ajax request in case of error occurring while processing the request  
+    * output the Ajax request in case of error occurring while processing the request
 
 ## Development configuration
 
@@ -123,24 +122,24 @@ During XForms development, you might want to enable a more aggressive debug conf
 
     ```xml
     <property as="xs:NMTOKENS" name="oxf.xforms.logging.debug">
-        document 
-        model 
-        submission 
-        control 
-        event 
-        action 
-        analysis 
-        server 
-        server-body 
+        document
+        model
+        submission
+        control
+        event
+        action
+        analysis
+        server
+        server-body
         html
-        submission-details 
+        submission-details
         submission-body
     </property>
     ```
 
-## Production configuration 
+## Production configuration
 
-### No debug output 
+### No debug output
 
 In production, you probably don't want any debug information coming out to your logs. So set this in `log4j.xml`:
 
@@ -152,7 +151,7 @@ In production, you probably don't want any debug information coming out to your 
 
 Alternatively, remove or comment-out the lines above. When this is done, the `oxf.xforms.logging.debug` property is no longer used, so it does not matter what it contains. However, the `oxf.xforms.logging.error` is still relevant. Configure it appropriately, depending on whether you want to see submission responses bodies logged or not.
 
-### Just submission timings   
+### Just submission timings
 
 If you only want to see submission timings, in your `log4j.xml` use:
 
@@ -170,7 +169,7 @@ And in your `properties-local.xml`:
 </property>
 ```
 
-## Example output  
+## Example output
 
 The following shows a sample XForms logging session:
 

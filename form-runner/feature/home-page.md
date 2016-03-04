@@ -75,7 +75,9 @@ The main operations available are:
 
 ## Remote server operations
 
-[SINCE Orbeon Forms 4.4] This is an Orbeon Forms PE feature.
+[SINCE Orbeon Forms 4.4]
+
+This is an Orbeon Forms PE feature.
 
 ### Introduction
 

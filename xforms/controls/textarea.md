@@ -18,7 +18,7 @@ With the standard appearance, the following attributes are available:
 
 - `xxf:cols`: same as HTML input `cols` attribute
 - `xxf:rows`: same as HTML input `rows` attribute
-- `xxf:maxlength`: same as HTML 5 input `maxlength` attribute (not all browsers support this attribute as of 2011-03)
+- `xxf:maxlength`: same as HTML 5 input `maxlength` attribute (not all browsers support this attribute, and some have bugs)
 
 You can add the `appearance="xxf:autosize"` attribute on the `<xf:textarea>` to get the textarea height to automatically adjust to its content.
 

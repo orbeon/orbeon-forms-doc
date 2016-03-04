@@ -26,7 +26,7 @@ This is the meaning of the fields of the dialog:
     - **Value Change or Form Load.** A control's value has changed OR the form just finished loading.
     - **Activation.** A button has been clicked, or the "Enter" key has been pressed in a text line.
     - **Form Load.** The form just finished loading.
-- **Condition.** [SINCE: 2011-12-01]
+- **Condition.**
     - **Run always.** Run the action independently from the form mode.</span></font>
     - **Run on creation only.** Run the action only in creation mode, that is when the user creates new data, as opposed to editing, viewing, emailing, or generating a PDF.
 - **Control.** Except for the Form Load event which does not depend on a particular control, this specifies which control the action reacts to.

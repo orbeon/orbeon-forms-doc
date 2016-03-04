@@ -231,7 +231,7 @@ Should you not want the loading indicator to show for that button, override this
 
 ### Buttons in Detail Page custom views
 
-[SINCE 2013-05-03 / Orbeon Forms 4.2]
+[SINCE Orbeon Forms 4.2]
 
 When using the wizard view (or other Detail Page custom views), the following property allows specifying which buttons are presented inside the view, as opposed to the bottom of the page:
 
@@ -352,8 +352,6 @@ a[href] {
 
 #### Font embedding in automatic mode
 
-[SINCE 2011-09-27]
-
 These properties allow specifying fonts to embed in PDF files. The `oxf.fr.pdf.font.path` property ends with an identifier for the font (here `vera`). It specifies the path to the font file. Optionally, the oxf.fr.pdf.font.family property ending with the same identifier (here `vera`) allows overriding the font family.
 
 ```xml
@@ -395,11 +393,11 @@ In template mode, fonts can be specified to provide glyphs which are not present
 
 #### Disabling the PDF button when form is invalid
 
-[BEFORE 2013-03-13]
+[BEFORE Orbeon Forms 4.2]
 
 With version 4.0 and earlier, the PDF button is always disabled if invalid data is present in the form.
 
-[SINCE 2013-03-13]
+[SINCE Orbeon Forms 4.2]
 
 The PDF button is always enabled, allowing users to generate a PDF for the current form, even if some data in the form is invalid. If instead, you wish to disable the PDF button when the form is invalid, set the following property to `true` (it is set to `false` by default):
 
@@ -687,7 +685,7 @@ These properties control email sending in Form Runner:
     as="xs:boolean"
     name="oxf.fr.email.attach-xml.*.*"
     value="true"/>
-    
+
 <property
     as="xs:string"
     name="oxf.fr.email.attach-files.*.*"
@@ -723,7 +721,7 @@ Attachment properties:
     - whether file and image form attachments are attached to the email
     - `all`: all form attachments are included (this is the default)
     - `none`: no form attachments is included
-    - `selected`: only form attachments selected in the Form Builder with "Include as Email Attachment" are included 
+    - `selected`: only form attachments selected in the Form Builder with "Include as Email Attachment" are included
 
 ## Sections and grids
 
@@ -770,7 +768,7 @@ The following property allows you to set whether a section content can be collap
     value="false"/>
 ```
 
-By default, sections are allowed to collapse. 
+By default, sections are allowed to collapse.
 
 The following property controls the same behavior in noscript mode:
 
@@ -786,7 +784,7 @@ A value of `false` may make sections more accessible and less confusing to scree
 The following property controls the whether collapsing/opening of sections uses an animation. The default is `true`:
 
 ```xml
-<property 
+<property
     as="xs:boolean
     name="oxf.xforms.xbl.fr.section.animate.*.*"
     value="false"/>

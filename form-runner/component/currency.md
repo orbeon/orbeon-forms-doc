@@ -10,7 +10,7 @@ The currency component is an input field specialized to capture amounts in a par
 
 When the input field doesn't have the focus, it shows a formatted currency, such as `1,234.00`. When the control has the focus, it shows the plain number, such as `1234` to facilitate input.
 
-While working with currency amounts, the component is careful not to do any manipulation that relies on how numbers are represented on a particular platform, to avoid any possibility of rounding or precision error. [SINCE: 2011-03-07]
+While working with currency amounts, the component is careful not to do any manipulation that relies on how numbers are represented on a particular platform, to avoid any possibility of rounding or precision error.
 
 ## Basic usage
 
@@ -61,13 +61,13 @@ These are the default values of the properties:
     as="xs:string"
     name="oxf.xforms.xbl.fr.currency.grouping-separator"
     value=","/>
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.xbl.fr.currency.round-when-formatting"         
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.currency.round-when-formatting"
     value="false"/>
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.xbl.fr.currency.round-when-storing"            
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.currency.round-when-storing"
     value="false"/>
 ```
 

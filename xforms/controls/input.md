@@ -30,7 +30,7 @@ With the standard appearance, the following attributes are available and forward
     - not recommended, use CSS instead
 - `xxf:title`
     - SINCE Orbeon Forms 4.11
-    - can be useful for accessibility 
+    - can be useful for accessibility
 
 Example:
 
@@ -58,11 +58,11 @@ This causes either the label or the hint to appear on the background of the fiel
 
 Orbeon Forms leverages the HTML 5 `placeholder` attribute for browsers that support it (Firefox 3.5+, Chrome, Safari, Opera), and simulates the HTML 5 `placeholder` functionality  in JavaScript for browsers that don't support it (all versions of IE). In that case, you can customize how the placeholder is displayed by overriding the CSS class `x``forms-placeholder`.
 
-_NOTE: The `xxf:placeholder` appearance can also be used instead of the `minimal` appearance. Initially (2011-11) the feature only supported `xxf:placeholder` and support for `minimal` was added upon discussion with the W3C Forms Working Group._
+_NOTE: The `xxf:placeholder` appearance can also be used instead of the `minimal` appearance. Initially the feature only supported `xxf:placeholder` and support for `minimal` was added upon discussion with the W3C Forms Working Group._
 
 ## Appearance based on type and appearance
 
-The way the XForms input control is be rendered on the page depends on the type of the node it is bound to, and possibly the control's appearance:  
+The way the XForms input control is be rendered on the page depends on the type of the node it is bound to, and possibly the control's appearance:
 
 | Type          | Appearance          | Description |
 | ------------- | ------------------- | ----------- |
@@ -115,7 +115,7 @@ Date formats:
 |---|---|---|
 | today |    | ^tod |
 | tomorrow |    | ^tom |
-| yesterday |   | ^yes |          
+| yesterday |   | ^yes |
 | 4th | The 4th of the current year and month | ^(d{1,2})(st&#124;nd&#124;rd&#124;th)?$ |
 | 4th Jan |   | ^(d{1,2})(?:st&#124;nd&#124;rd&#124;th)? (w+)$ |
 | 4th Jan 2003 |   | ^(d{1,2})(?:st&#124;nd&#124;rd&#124;th)? (w+),? (d{2,4})$ |
@@ -130,12 +130,12 @@ Date formats:
 
 ### Two digits years
 
-If you type in a date field a year with only two digits (say 5/20/10), the control will assume that you intended to type a year in the twentieth or twenty first century, rather than a year in the first century. It will convert the two-digit year you typed into a four digits year by taking the corresponding year in either the twentieth or twenty first century based on which one is closest to the current year. So for instance, if the current year is 2020:  
+If you type in a date field a year with only two digits (say 5/20/10), the control will assume that you intended to type a year in the twentieth or twenty first century, rather than a year in the first century. It will convert the two-digit year you typed into a four digits year by taking the corresponding year in either the twentieth or twenty first century based on which one is closest to the current year. So for instance, if the current year is 2020:
 
 * 10 is changed to 2010
 * 80 is changed to 1980
 * 60 is changed to 2060
-  
+
 
 ### Date picker internationalization
 
@@ -143,9 +143,9 @@ By default, the months and days of the week are in English in the date picker (a
 
 ![Localized date picker](../images/xforms-datepicker-french.png)
 
-For more on which languages are supported localized out-of-the-box, see [supported languages][7]. Note that the changing the language also changes which day of the week is shown first in the calendar: in English, Sunday is shown first; with French and Spanish, Monday is shown first. 
+For more on which languages are supported localized out-of-the-box, see [supported languages][7]. Note that the changing the language also changes which day of the week is shown first in the calendar: in English, Sunday is shown first; with French and Spanish, Monday is shown first.
 
-### Date picker in scrollable area 
+### Date picker in scrollable area
 
 If you are using the date picker in an area of your page which is scrollable (e.g. `<div style="overflow: scroll">`), if users scroll in that area while the date picker is open, you want the date picker to be anchored to the field it is related to and to scroll with the content of the scrollable area (versus being attached to the page, and only scrolling if the page is scrolled). For this to work, assuming you have the class `scrollable-area` on your scrollable area, you need to add the following CSS:
 
@@ -193,7 +193,7 @@ Input sanitation allows you to apply a filter on the data entered by the user, b
 </property>
 ```
 
-The configuration is a JSON map of string to string.  Each replacement is applied in the order in which it appears in the map. If the configuration is blank string, sanitation is turned off. 
+The configuration is a JSON map of string to string.  Each replacement is applied in the order in which it appears in the map. If the configuration is blank string, sanitation is turned off.
 
 Sanitation applies to:
 
