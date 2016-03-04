@@ -15,7 +15,7 @@ in this [knowledge base article](https://support.apple.com/kb/DL1572).
 
 Tomcat is the container application into which Orbeon Forms deploys. Follow these steps to download and install Tomcat if you don't have it installed yet:
 
-1. Download Tomcat 6 from the Apache web site at http://tomcat.apache.org/download-60.cgi..
+1. Download Tomcat 6 from the [Apache web site](http://tomcat.apache.org/download-60.cgi).
 
 2. Install Tomcat as per the instructions. If you downloaded the installer version (Windows only), run the installer. If you downloaded a compressed archive, uncompress it to the location of your choice. We call the install location `TOMCAT_HOME` (on windows, this could be `c:/Program Files/Apache/Tomcat`, on a Unix system, `/home/jdoe/tomcat`, etc.).
 
