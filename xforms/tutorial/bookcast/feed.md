@@ -77,7 +77,7 @@ Consider the page model:
 
 This document contains an XML pipeline described in a language called XPL (XML Pipeline Language). An XML pipeline language is simply a language for describing operations to be performed on XML documents. Orbeon Forms comes with an implementation of [XPL][23]. (Orbeon is currently working at W3C on the standardization of a pipeline language called [XProc][24].)
 
-So what does this pipeline do? It runs a _processor_ called `oxf:xforms-submission`, which is handy component that allows you to perform XForms submissions from XPL. That submission retrieves `books.xml` and returns it on the processor's `response` output. That output in turn is sent to the `data` output of the page model pipeline.
+So what does this pipeline do? It runs a _processor_ called `oxf:xforms-submission`, which is a handy component that allows you to perform XForms submissions from XPL. That submission retrieves `books.xml` and returns it on the processor's `response` output. That output in turn is sent to the `data` output of the page model pipeline.
 
 Now look at the page view:
 
