@@ -282,7 +282,7 @@ Also add `<xf:alert>` elements to the controls which might be invalid. This allo
 
 Reload the page, and try to enter an invalid link, for example "ftp://ftp.example.com/". An alert icon will show up as you leave the link field with your cursor.
 
-_NOTE: The URL of the schema, `/apps/my-bookcast/schema.xsd`, is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded though:_
+_NOTE: The URL of the schema, `/apps/my-bookcast/schema.xsd`, is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded through:_
 
 ```xml
 http://localhost:8080/orbeon/apps/my-bookcast/schema.xsd
