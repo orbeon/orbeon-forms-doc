@@ -56,7 +56,7 @@ Note that from now on, we prefer the term _element_ to the term _tag_. An elemen
 With XForms, you store the data captured by controls such as input fields, combo boxes, etc. as text contained within XML elements or attributes. Consider the following XML document containing a single element called `first-name`.
 
 ```xml
-<first-name>
+<first-name/>
 ```
 
 The `first-name` element is _empty_. Contrast with:
