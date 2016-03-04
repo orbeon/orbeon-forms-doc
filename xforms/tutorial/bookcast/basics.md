@@ -112,22 +112,20 @@ An XForms document that wants to do something really useful needs at least one m
 As you can see, the idea is to store the information about all the books in a single XML document. So under a top-level `<books>` element, we put as many `<book>` children elements as needed. You will see later how it is possible with XForms to add and remove children elements. For now, your initial instance declaration is empty and contains a single book, and you place it as usual within an `<xf:model>` element:
 
 ```xml
-<html>
-    <xf:model>
-        <xf:instance id="books-instance">
-            <books xmlns="">
-                <book>
-                    <title/>
-                    <author/>
-                    <language/>
-                    <link/>
-                    <rating/>
-                    <notes/>
-                </book>
-            </books>
-        </xf:instance>
-    </xf:model>
-</html>
+<xf:model>
+    <xf:instance id="books-instance">
+        <books xmlns="">
+            <book>
+                <title/>
+                <author/>
+                <language/>
+                <link/>
+                <rating/>
+                <notes/>
+            </book>
+        </books>
+    </xf:instance>
+</xf:model>
 ```
 
 Notice the `id` attribute which allows other XForms constructs to refer to that particular instance.
