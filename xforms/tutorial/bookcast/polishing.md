@@ -173,7 +173,7 @@ You already made the title and author mandatory fields, but you may want to vali
 XForms supports two ways of performing validation:
 
 * With Model Item Properties (MIPs) in the model, called `constraint` and `type`.
-* With an _XML Schema_. XML Schema is a W3C standard to specify constraints on XML documents, including constraints on the structure of the document or on the data types contained.
+* With an _XML Schema_. [XML Schema][23] is a W3C standard to specify constraints on XML documents, including constraints on the structure of the document or on the data types contained.
 
 Look at the following XML Schema for the Bookcast application:
 
@@ -324,3 +324,4 @@ Try now making this change, enter an invalid link, and press the "Save" link: an
 
 [21]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/16.png
 [22]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/17.png
+[23]: https://www.w3.org/XML/Schema
