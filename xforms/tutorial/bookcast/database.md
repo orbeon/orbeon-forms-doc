@@ -223,7 +223,7 @@ Let's explain what the above does:
 
     ![][19]
 
-Again the XForms engine does its magic and takes care of updating the web page automatically. You also notice that the web page does not reload as it updates. This is because Orbeon Forms uses Ajax technology to perform updates to the page. With Ajax, client-side JavaScript code silently talks to the Orbeon Forms server, which then communicates to the client-side code the updates to perform to the page. These update are directly done to the HTML Document Object Model (DOM) without reload.
+Again the XForms engine does its magic and takes care of updating the web page automatically. You also notice that the web page does not reload as it updates. This is because Orbeon Forms uses Ajax technology to perform updates to the page. With Ajax, client-side JavaScript code silently talks to the Orbeon Forms server, which then communicates to the client-side code the updates to perform to the page. These updates are directly done to the HTML Document Object Model (DOM) without reload.
 
 ## Deleting a book
 
