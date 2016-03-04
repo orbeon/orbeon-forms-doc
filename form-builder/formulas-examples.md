@@ -54,7 +54,7 @@ See also:
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
 - [Unexpected result with variable inside an `<xf:bind>` iteration #152](https://github.com/orbeon/orbeon-forms/issues/152)
 
-### With Orbeon Forms 4.0 until 4.4.x
+### From Orbeon Forms 4.0 to 4.4.x
 
 Scenario: compute the sum of values in multiple repeat iterations.
 

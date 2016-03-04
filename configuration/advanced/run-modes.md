@@ -9,10 +9,6 @@ It is often necessary to have slightly different settings between development an
 
 For a quick introduction, see also this [blog post](http://blog.orbeon.com/2012/05/run-modes.html).
 
-## Availability
-
-This feature is available in builds starting Orbeon Forms 4.0.
-
 ## Configuration
 
 The run mode is configured in the web application's web.xml file:

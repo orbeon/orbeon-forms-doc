@@ -4,7 +4,7 @@
 
 ### Availability
 
-This is an Orbeon Forms PE feature, available since Orbeon Forms 4.0.
+This is an Orbeon Forms PE feature.
 
 ## Introduction
 

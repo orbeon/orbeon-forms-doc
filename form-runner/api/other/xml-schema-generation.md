@@ -2,7 +2,9 @@
 
 <!-- toc -->
 
-[SINCE Orbeon Forms 4.0 PE]
+## Availability
+
+This is an Orbeon Forms PE feature.
 
 ## What it does
 

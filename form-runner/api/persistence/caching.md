@@ -13,7 +13,7 @@ This page is intended for programmers implementing their own persistence layer (
 
 ## Status
 
-As of Orbeon Forms 4.0, there is minimal support in Form Runner for conditional GETs with the `Last-Modified` and `If-Modified-Since` HTTP headers. However the built-in eXist and relational persistence layer implementations do not support these headers properly yet.
+There is minimal support in Form Runner for conditional GETs with the `Last-Modified` and `If-Modified-Since` HTTP headers. However the built-in eXist and relational persistence layer implementations do not support these headers properly yet.
 
 As we work towards the improvements described in issue [#1239](https://github.com/orbeon/orbeon-forms/issues/1239), we hope to see even better performance when the persistence layer supports these headers. We also plan to add support for `ETag` and `If-None-Match`, which will be required for persistence layers that support versioning.
 

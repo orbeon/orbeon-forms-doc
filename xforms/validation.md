@@ -216,8 +216,6 @@ Orbeon Forms supports extensions events dispatched to an instance when it become
 
 #### Orbeon Forms 4 behavior
 
-[SINCE: 2012-10-25 / ORBEON FORMS 4.0]
-
 These events are dispatched just after `xforms-revalidate` completes on a given model to all instances that change their validation state (from valid to invalid or from invalid to valid):
 
 - If the instance is newly valid, `xxforms-valid` is dispatched
