@@ -153,7 +153,7 @@ Now it's time to add some visual controls to your page. Start with the following
 </xf:group>
 ```
 
-Reload the page. You should seem something like this:
+Reload the page. You should see something like this:
 
 ![][14]
 
