@@ -31,7 +31,7 @@ This page flow is automatically called for any path that starts with `/orbeon/my
     </html>
     ```
 
-    This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the ``/. It also declares a bunch of XML namespaces that you need later in the document.
+    This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the `<body>`. It also declares a bunch of XML namespaces that you need later in the document.
 
 Now go to:
 
