@@ -176,7 +176,7 @@ Notice how, as you enter text in the title or author field, the field's backgrou
 
 The above requires some explanations:
 
-* The `<xf:bind>` element is used to assign so-called _Model Item Properties_ (or _MIPs_) to XForms instance nodes (typically XML elements or attributes). Such properties include whether a field is required, read-only, or visible; whether the field has to satisfy a certain constraint or be of a particular type; and whether the field is a calculated value.
+* The `<xf:bind>` element is used to assign so-called [_Model Item Properties_][19] (or _MIPs_) to XForms instance nodes (typically XML elements or attributes). Such properties include whether a field is required, read-only, or visible; whether the field has to satisfy a certain constraint or be of a particular type; and whether the field is a calculated value.
 * Here we use the `required` attribute, which determines whether a field is, well, required, that is, whether it has to be filled out by the user.
 * Much like `<xf:group>` in the controls, `<xf:bind>` elements can be nested.
 * `<xf:bind>` uses a `ref` attribute, which allows pointing at more than one node using a single XPath expression.
@@ -399,3 +399,4 @@ By now you probably get the gist of it!
 [16]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/12.png
 [17]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/view.xhtml
 [18]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/page-flow.xml
+[19]: https://www.w3.org/TR/2006/REC-xforms-20060314/slice6.html
