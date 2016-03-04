@@ -157,7 +157,7 @@ Reload the page. You should see something like this:
 
 ![][14]
 
-After having looked at the Hello example, this should be clear, with a little novelty: `<xf:group>`: this element allows grouping XForms controls together. The `ref="book"` element changes the current _evaluation context_ for the nested controls, which means that they can use simpler XPath expressions: `ref="title"` instead of `ref="book/title"` and `ref="author"` instead of `ref="book/author"` (groups have other uses but you don't need to learn that now).
+After having looked at the [Hello example](../hello.md), this should be clear, with a little novelty: `<xf:group>`: this element allows grouping XForms controls together. The `ref="book"` element changes the current _evaluation context_ for the nested controls, which means that they can use simpler XPath expressions: `ref="title"` instead of `ref="book/title"` and `ref="author"` instead of `ref="book/author"` (groups have other uses but you don't need to learn that now).
 
 Another thing: all XForms controls require a nested `<xf:label>` element, as an effort to help accessibility. In some cases, you won't want an actual label to display next to the control: to achieve this, you can either hide the label with CSS, or use an empty label element (`<xf:label/>`).
 
