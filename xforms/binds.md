@@ -162,7 +162,7 @@ In XForms, default or initial values can be set by pre-populating an instance do
 </xf:instance>
 ```
 
-For dynamic values, for example coming from request parameters or session values, there is no declarative notation and you must use `xforms-submit-done, `xforms-model-construct-done or `xforms-submit-ready`, which is sometimes cumbersome:
+For dynamic values, for example coming from request parameters or session values, there is no declarative notation and you must use `xforms-submit-done`, `xforms-model-construct-done`, or `xforms-submit-ready`, which is sometimes cumbersome:
 
 ```xml
 <xf:setvalue
