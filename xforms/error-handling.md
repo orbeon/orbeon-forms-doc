@@ -57,7 +57,7 @@ The default action for these events is to log the error at `debug` level.
 
 *NOTE: Until Orbeon Forms 4.8, these errors were logged at `warning` level.*
 
-Custom event handlers can be used to provide specific error handling for these errors, as described in [XForms Error Handling Detailed Behavior](../xforms/error-handling-detailed-behavior.md).
+Custom event handlers can be used to provide specific error handling for these errors, as described in [XForms Error Handling Detailed Behavior](error-handling-detailed-behavior.md).
 
 ## Configuration properties
 
