@@ -4,7 +4,7 @@
 
 See also:
 
-- [XForms Error Handling Detailed Behavior](../xforms/error-handling-detailed-behavior.md)
+- [XForms Error Handling Detailed Behavior](error-handling-detailed-behavior.md)
 
 ## Rationale
 
