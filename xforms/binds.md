@@ -15,7 +15,7 @@ This serves the following functions:
 - in the model
   - determine which part of the data is valid, readonly, and relevant
   - apply calculations to the data (formulas)
-  - export variables used in calculations (see [Model Bind Variables](../xforms/model-bind-variables.md))
+  - export variables used in calculations (see [Model Bind Variables](model-bind-variables.md))
 - in the model and in the view
   - as an indirection to the data model, with the `bind` attribute or the `xxf:bind()` function
 
