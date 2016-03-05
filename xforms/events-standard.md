@@ -40,7 +40,7 @@ Example without prefix:
 
 ### Using the ev:observer and ev:target attributes
 
-The `ev:observer` attribute  allows you to register event handlers by specifying an element identifier, instead of embedding the event handler within that element. This is particularly useful to register event handlers on `` elements, which do not allow you to directly embed XML event handlers.
+The `ev:observer` attribute  allows you to register event handlers by specifying an element identifier, instead of embedding the event handler within that element. This is particularly useful to register event handlers on elements, which do not allow you to directly embed XML event handlers.
 
 ```xml
 <xf:model id="main-model">
