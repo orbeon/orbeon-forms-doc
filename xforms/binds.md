@@ -83,7 +83,7 @@ The resulting value of a MIP on a given node when multiple binds touch that node
 - relevant: boolean "and"
 - readonly: boolean "or"
 
-The values also combined this way when multiple nested elements are specified on a same bind.
+The values are also combined this way when multiple nested elements are specified on a same bind.
 
 Consider the following example:
 
