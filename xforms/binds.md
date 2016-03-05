@@ -185,7 +185,7 @@ For convenience, Orbeon Forms support an extension MIP: `xxf:default`. It works 
 <xf:recalculate xxf:defaults="true"/>
 ```
 
-The `xxf:defaults` attribute is an AVT so can include XPath expressions between curly brackets:
+The `xxf:defaults` attribute is an AVT and can include XPath expressions between curly brackets:
 
 ```xml
 <xf:recalculate xxf:defaults="{instance()/status = 'dirty'}"/>
