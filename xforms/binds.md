@@ -179,7 +179,7 @@ For convenience, Orbeon Forms support an extension MIP: `xxf:default`. It works 
 
 #### Forcing recalculation of initial values with the recalculate action
 
-The `<xf:recalculate>` supports an extension attribute, `xxf:defaults`, which, when set to `true`, forces the re-evaluation of initial values before performing the recalculation.
+`<xf:recalculate>` supports an extension attribute, `xxf:defaults`, which, when set to `true`, forces the re-evaluation of initial values before performing the recalculation.
 
 ```xml
 <xf:recalculate xxf:defaults="true"/>
