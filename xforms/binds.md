@@ -63,7 +63,7 @@ This enables two features:
 - the ability to assign a specific `id` attribute to a property
 - the ability to specify multiple `readonly`, `required`, `relevant`, and `constraint` rules (which are combined using either a boolean "or" or a boolean "and")
 
-See [XForms Validation](../xforms/validation.md) for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
+See [XForms Validation](validation.md) for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
 
 ### Multiple binds pointing to the same node
 
