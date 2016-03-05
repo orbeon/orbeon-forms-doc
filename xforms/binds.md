@@ -171,7 +171,7 @@ For dynamic values, for example coming from request parameters or session values
     value="xxf:get-request-header('MY_USER')"/>
 ```
 
-For convenience, Orbeon Forms support an extension model item property: `xxf:default`. It works like the standard `calculate`, except that it is evaluated only once, just before the first evaluation of the `calculate` expressions if any.
+For convenience, Orbeon Forms support an extension MIP: `xxf:default`. It works like the standard `calculate`, except that it is evaluated only once, just before the first evaluation of the `calculate` expressions if any.
 
 ```xml
 <xf:bind ref="username" xxf:default="xxf:get-request-header('MY_USER')"/>
