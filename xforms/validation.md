@@ -55,21 +55,6 @@ XForms allows a single `constraint` attribute on the `xf:bind` element. Orbeon F
 </xf:bind>
 ```
 
-Deprecated example:
-
-```xml
-<xf:bind ref="." id="input-bind">
-    <xf:constraint
-        id="length-constraint"
-        level="error"
-        value="string-length() gt 1"/>
-    <xf:constraint
-        id="uppercase-constraint"
-        level="warning"
-        value="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
-</xf:bind>
-```
-
 Each constraint applies to the enclosing `xf:bind`.
 
 Attributes:
