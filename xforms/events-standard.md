@@ -10,7 +10,7 @@ What's new with XForms is that it allows users to declaratively register event h
 
 ## Orbeon Forms support
 
-### Optional ev: prefix for event attributes
+### Optional `ev:` prefix for event attributes
 
 The usual XForms way of using XML events is by prefixing attributes with the `ev:` prefix. This is in fact not absolutely mandated by XForms, and leads to heaver attribute syntax, so Orbeon Forms allows using the attributes without a namespace. The examples below usually use the `ev:` prefix, but most of the Orbeon Forms code doesn't.
 
