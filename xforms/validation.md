@@ -136,15 +136,21 @@ This allows having distinct alerts for indicating:
 
 A control can have more than one `xf:alert` element. By default, an `xf:alert` is considered the *default* alert for the control and is active for all validation levels and constraints:
 
-    <xf:alert>
+```xml
+<xf:alert>
+```
 
 If a `level` attribute is specified, the alert is active for the given levels:
 
-    <xf:alert level="warning info">
+```xml
+<xf:alert level="warning info">
+```
 
 If a `validation` attribute is specified, the alert is active only for the given validations:
 
-    <xf:alert validation="c1 c2">
+```xml
+<xf:alert validation="c1 c2">
+```
 
 In this example, `c1` and `c2` refer to `id` attributes on `xf:constraint` elements. Only `xf:constraint` elements associated with a bind pointing to the node to which the control is bound are considered.
 
@@ -152,8 +158,9 @@ Blank `level` and `validation` attributes are equivalent to no attributes.
 
 If both `level` and `validation` attributes are specified, `level` is ignored:
 
-    <xf:alert level="error" validation="c1 c2">
-
+```xml
+<xf:alert level="error" validation="c1 c2">
+```
 More than one alert can be active at the same time, following a hierarchy:
 
 - If the control doesn't have a validation level, no alert is active.
