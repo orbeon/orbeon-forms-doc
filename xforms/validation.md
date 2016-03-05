@@ -134,7 +134,7 @@ This allows having distinct alerts for indicating:
 
 [SINCE: Orbeon Forms 4.3]
 
-A control can have more than one `xf:alert` elements. By default, an `xf:alert` is considered the *default* alert for the control and is active for all validation levels and constraints:
+A control can have more than one `xf:alert` element. By default, an `xf:alert` is considered the *default* alert for the control and is active for all validation levels and constraints:
 
     <xf:alert>
 
