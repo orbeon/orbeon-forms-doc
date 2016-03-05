@@ -249,7 +249,7 @@ Sometimes, read-only controls don't appear very nicely in web browsers. For exam
 </xf:model>
 ```
 
-The attribute takes one of two vales: `static` or `dynamic` (the default). When using the value `static`, read-only controls do not produce disabled HTML form controls. This has one major limitation: you can't switch a control back to being read-write once it is displayed as read-only.
+The attribute takes one of two values: `static` or `dynamic` (the default). When using the value `static`, read-only controls do not produce disabled HTML form controls. This has one major limitation: you can't switch a control back to being read-write once it is displayed as read-only.
 
 You can also set the `xxf:readonly-appearance` attribute directly on individual XForms controls.
 
