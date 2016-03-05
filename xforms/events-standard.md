@@ -167,7 +167,7 @@ Event handlers on XBL bindings are very similar to regular XML Events handlers, 
 
 * they use the `` containing element placed within the `` section of an XBL binding
 * attributes do not use the XML Events namespace (typically with the `ev:` prefix)  
-* the XBL 2 `default-action` attribute is not supported but instead the XML Events 1 `defaultAction` is supported (both support the value `cancel` and `perform` values)  
+* the XBL 2 `default-action` attribute is not supported but instead the XML Events 1 `defaultAction` is supported (both support the value `cancel` and `perform`)  
 
 Example:
 
