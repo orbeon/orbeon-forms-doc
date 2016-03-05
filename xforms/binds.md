@@ -241,7 +241,7 @@ Orbeon Forms provides an extension on those actions to defer the behavior of tho
 
 ### Static appearance for read-only controls
 
-Sometimes, read-only controls don't appear very nicely in web browsers. For example, a combo box will appear grayed out. It maybe be hard to read, and there is not much point showing a combo box since the user can't interact with it. Furthermore, with some browsers, like IE 6 and earlier, it is not even possible to make disabled controls appear nicer with CSS. In order to make read-only versions of forms look nicer, Orbeon Forms supports a special extension attribute that allows you to produce a "static" appearance for read-only controls. You enable this on your first XForms model:
+Sometimes, read-only controls don't appear very nicely in web browsers. For example, a combo box will appear grayed out. It may be be hard to read, and there is not much point showing a combo box since the user can't interact with it. Furthermore, with some browsers, like IE 6 and earlier, it is not even possible to make disabled controls appear nicer with CSS. In order to make read-only versions of forms look nicer, Orbeon Forms supports a special extension attribute that allows you to produce a "static" appearance for read-only controls. You enable this on your first XForms model:
 
 ```xml
 <xf:model xxf:readonly-appearance="static">
