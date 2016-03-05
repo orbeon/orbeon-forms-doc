@@ -64,7 +64,7 @@ Attributes:
 
 The `id` attribute is optional and useful to attach alerts.
 
-Constraints combine with a logical "AND" for a given level. For example, if the error level is used (the default), the value is valid only if all constraints evaluate to `true()`.
+Constraints combine with a logical "and" for a given level. For example, if the error level is used (the default), the value is valid only if all constraints evaluate to `true()`.
 
 If there is a single error constraint, the following binds are equivalent:
 
