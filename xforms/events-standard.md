@@ -159,7 +159,7 @@ Event handlers with the `ev:observer` attribute are also recognized as long as t
 <xf:input id="my-input" ref="my-value"/>
 ```
 
-_NOTE: For event handlers nested further within the bound node, the behavior is up to the XBL component. Typically, components that are containing controls, such as ``, manage event handlers as you expect!_  
+_NOTE: For event handlers nested further within the bound node, the behavior is up to the XBL component. Typically, components that are containing controls, such as `<xf:input>`, manage event handlers as you expect!_  
 
 ### Event handlers within XBL bindings  
 
