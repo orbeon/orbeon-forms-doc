@@ -69,14 +69,14 @@ See [XForms Validation](validation.md) for details about the validation-related 
 
 _NOTE: This is scheduled to be standardized in XForms 2._
 
-Properties (MIPs) have a default value:
+Model Item Properties (MIPs) have a default value:
 
 - required: `false`
 - valid: `true` (depends on a series of conditions, including `required`)
 - relevant: `true`
 - readonly: `false`
 
-The resulting value of a property on a given node when multiple binds touch that node is the result of a boolean combination:
+The resulting value of a MIP on a given node when multiple binds touch that node is the result of a boolean combination:
 
 - required: boolean "or"
 - valid: boolean "and"
