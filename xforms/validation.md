@@ -59,7 +59,7 @@ Each constraint applies to the enclosing `xf:bind`.
 
 Attributes:
 
-- `level` attribute: optional, specifies an alert level (defaults to `error`)
+- `level`: optional, specifies an alert level (defaults to `error`)
 - `constraint`: XPath expression specifying the constraint
 
 The `id` attribute is optional and useful to attach alerts.
