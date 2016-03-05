@@ -93,7 +93,7 @@ Note that you still need to use the `ev:event` attribute to specify to what even
 </xh:html>
 ```
 
-The above example also shows how you can constrain an event handler to respond to an event dispatched to a particular target element using the `ev:target` attribute. here, the event handler responds to `DOMFocusIn` events, but only those dispatched to the `my-input` control.   
+The above example also shows how you can constrain an event handler to respond to an event dispatched to a particular target element using the `ev:target` attribute. Here, the event handler responds to `DOMFocusIn` events, but only those dispatched to the `my-input` control.   
 
 ### The ev:propagate attribute
 
