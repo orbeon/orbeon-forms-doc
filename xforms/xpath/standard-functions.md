@@ -101,8 +101,6 @@ This function returns the sequence of nodes associated with the bind specified b
 
 The following functions from XSLT 2.0 are  available:
 
-The following functions from XSLT 2.0 are  available:
-
 - `format-date()` ([external documentation](http://www.w3.org/TR/2005/WD-xslt20-20050915/#function-format-date))
 - `format-dateTime()` ([external documentation](http://www.w3.org/TR/2005/WD-xslt20-20050915/#function-format-dateTime))
 - `format-time()` ([external documentation](http://www.w3.org/TR/2005/WD-xslt20-20050915/#function-format-time))
