@@ -19,7 +19,7 @@ You are now ready to look at the source code of the Hello application. This will
 
 ```xml
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:xforms="http://www.w3.org/2002/xforms">
+      xmlns:xf="http://www.w3.org/2002/xforms">
     <head>
         <title>XForms Hello</title>
         <xf:model>
