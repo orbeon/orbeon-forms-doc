@@ -140,7 +140,7 @@ The important line in this page flow is this one:
 
 It tells Orbeon Forms that any path (notice the wildcard `*`) sent by the web browser to this application causes the page view stored in `view.xhtml` to be processed. You can check this by entering the following path in your browser:
 
-```xml
+```
 http://localhost:8080/orbeon/xforms-hello/my-page
 ```
 
