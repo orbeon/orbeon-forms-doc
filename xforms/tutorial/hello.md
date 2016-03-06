@@ -45,7 +45,7 @@ You are now ready to look at the source code of the Hello application. This will
 
 The first thing you notice is that this looks very much like HTML (notice the `<html>` tag). But in fact, this is XHTML, the XML-compatible version of HTML. There are only a few differences that matter between HTML and XHTML, in particular you must close all your tags and use quotes around attributes. Also, you must place your tags in a _namespace_, which is why the `<html>` tag features the `xmlns="http://www.w3.org/1999/xhtml"` _namespace declaration_.
 
-Another difference with plain HTML is that there are tags that start with the string `xf:`. Those are defined by the [XForms specification][8] from W3C. They are at the heart of Orbeon Forms and enable all the cool forms features that you see in Orbeon Forms demos. (In order to use XForms tags that start with `xf:`, you must add another namespace declaration on the `<html>` tag: `xmlns:xforms="http://www.w3.org/2002/xforms"`.)
+Another difference with plain HTML is that there are tags that start with the string `xf:`. Those are defined by the [XForms specification][8] from W3C. They are at the heart of Orbeon Forms and enable all the cool forms features that you see in Orbeon Forms demos. (In order to use XForms tags that start with `xf:`, you must add another namespace declaration on the `<html>` tag: `xmlns:xf="http://www.w3.org/2002/xforms"`.)
 
 Using XForms in Orbeon Forms means that you don't have to use HTML forms at all. The benefit is that XForms is much more powerful than HTML forms, as you will see in this tutorial.
 
