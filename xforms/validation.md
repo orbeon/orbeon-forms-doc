@@ -55,31 +55,16 @@ XForms allows a single `constraint` attribute on the `xf:bind` element. Orbeon F
 </xf:bind>
 ```
 
-Deprecated example:
-
-```xml
-<xf:bind ref="." id="input-bind">
-    <xf:constraint
-        id="length-constraint"
-        level="error"
-        value="string-length() gt 1"/>
-    <xf:constraint
-        id="uppercase-constraint"
-        level="warning"
-        value="for $first in substring(., 1, 1) return upper-case($first) = $first"/>
-</xf:bind>
-```
-
 Each constraint applies to the enclosing `xf:bind`.
 
 Attributes:
 
-- `level` attribute: optional, specifies an alert level (defaults to `error`)
+- `level`: optional, specifies an alert level (defaults to `error`)
 - `constraint`: XPath expression specifying the constraint
 
 The `id` attribute is optional and useful to attach alerts.
 
-Constraints combine with a logical "AND" for a given level. For example, if the error level is used (the default), the value is valid only if all constraints evaluate to `true()`.
+Constraints combine with a logical "and" for a given level. For example, if the error level is used (the default), the value is valid only if all constraints evaluate to `true()`.
 
 If there is a single error constraint, the following binds are equivalent:
 
@@ -111,7 +96,7 @@ If a control doesn't have a warning level, it can have an *info* level. This is 
 
 A warning or info level does not make the control value invalid and it is still possible to submit form data.
 
-*NOTE: As of Orbeon Forms 4.3, it is only possible to associate a warning or info validation level to a constraint specified with `xf:constraint/@value`. It is not possible to associate these levels to the required or data type validations: these always use the error level.*
+*NOTE: As of Orbeon Forms 4.3, it is only possible to associate a warning or info validation level to a constraint specified with `xf:constraint/@value`. It is not possible to associate these levels to the required or data type validations: they always use the error level.*
 
 ### Nested validation elements
 
@@ -149,17 +134,23 @@ This allows having distinct alerts for indicating:
 
 [SINCE: Orbeon Forms 4.3]
 
-A control can have more than one `xf:alert` elements. By default, an `xf:alert` is considered the *default* alert for the control and is active for all validation levels and constraints:
+A control can have more than one `xf:alert` element. By default, an `xf:alert` is considered the *default* alert for the control and is active for all validation levels and constraints:
 
-    <xf:alert>
+```xml
+<xf:alert>
+```
 
 If a `level` attribute is specified, the alert is active for the given levels:
 
-    <xf:alert level="warning info">
+```xml
+<xf:alert level="warning info">
+```
 
 If a `validation` attribute is specified, the alert is active only for the given validations:
 
-    <xf:alert validation="c1 c2">
+```xml
+<xf:alert validation="c1 c2">
+```
 
 In this example, `c1` and `c2` refer to `id` attributes on `xf:constraint` elements. Only `xf:constraint` elements associated with a bind pointing to the node to which the control is bound are considered.
 
@@ -167,8 +158,9 @@ Blank `level` and `validation` attributes are equivalent to no attributes.
 
 If both `level` and `validation` attributes are specified, `level` is ignored:
 
-    <xf:alert level="error" validation="c1 c2">
-
+```xml
+<xf:alert level="error" validation="c1 c2">
+```
 More than one alert can be active at the same time, following a hierarchy:
 
 - If the control doesn't have a validation level, no alert is active.
@@ -297,7 +289,7 @@ When an XML Schema is provided, Orbeon Forms supports controlling whether a part
 
 Orbeon Forms implements a "lax" validation mode by default, where only elements that have definitions in the imported schemas are validated. Other elements are not considered for validation. This is in line with XML Schema and XSLT 2.0 lax validation modes, and with the default validation mode as specified in XForms 1.1
 
-In addition, the author can specify the validation mode directly on each instance with the extension `xxf:validation` attribute, which takes values:
+In addition, the author can specify the validation mode directly on each instance with the extension attribute `xxf:validation`, which takes values:
 
 - `lax` (the default)
 - `strict` (the root element has to have a definition in the schema and must be valid)

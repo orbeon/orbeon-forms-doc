@@ -2,7 +2,7 @@
 
 See also:
 
-- [XForms Error Handling](../xforms/error-handling.md)
+- [XForms Error Handling](error-handling.md)
 
 ## Philosophy of error handling
 
@@ -49,8 +49,8 @@ See also:
     * `xxforms-action-error` event is dispatched to observer of the action
     * _NOTE: Some actions silently ignore some error conditions, including:_
         * `<setvalue>` pointing to an empty sequence or to an atomic item (such as a string) instead of a node
-        * <delete> with an empty sequence or an empty overridden context
-        * <insert> with an empty or non-element insert context, an empty overridden context, or an empty origin
+        * `<delete>` with an empty sequence or an empty overridden context
+        * `<insert>` with an empty or non-element insert context, an empty overridden context, or an empty origin
         * actions with AVTs evaluating to the empty sequence
     * `<dispatch>`, `<send>`, `<setfocus>`, `<setindex>`, `<toggle>` when the target element is not found
 

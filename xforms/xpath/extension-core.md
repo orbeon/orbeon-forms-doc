@@ -143,7 +143,7 @@ The `xml:lang` value to use is determined this way:
 
 `xml:lang` is supported in the following locations:
 
-* for a static xml:lang value
+* for a static `xml:lang` value
     * on any XForms element
     * on the top-level `<xh:html>` element
 * for a dynamic xml:lang value (using an AVT)

@@ -18,9 +18,9 @@ The XForms engine place the following classes on HTML elements.
 - `xforms-type-custom-*`: the extension datatype of the control
 - `xforms-visited`: the control has been visited, i.e. tabbed out once
 - constraint and error classes
-    - `xforms-invalid`; the control has an error level
-    - `xforms-warning`; the control has a warning level
-    - `xforms-info`; the control has an info level
+    - `xforms-invalid`: the control has an error level
+    - `xforms-warning`: the control has a warning level
+    - `xforms-info`: the control has an info level
 - `xforms-disabled`: the control is non-relevant
 - `xforms-readonly`: the control is readonly
 - `xforms-required`: the control is required

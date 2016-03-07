@@ -10,9 +10,9 @@ What's new with XForms is that it allows users to declaratively register event h
 
 ## Orbeon Forms support
 
-### Optional ev: prefix for event attributes
+### Optional `ev:` prefix for event attributes
 
-The usual XForms way of using XML events is by prefixing attributes with the `ev:` prefix. This is in fact not absolutely mandated by XForms, and leads to heaver attribute syntax, so Orbeon Forms allows using the attributes without a namespace. The examples below usually use the `ev:` prefix, but most of the Orbeon Forms code doesn't.
+The usual XForms way of using XML events is by prefixing attributes with the `ev:` prefix. This is in fact not absolutely mandated by XForms, and leads to heavier attribute syntax, so Orbeon Forms allows using the attributes without a namespace. The examples below usually use the `ev:` prefix, but most of the Orbeon Forms code doesn't.
 
 Example with prefix:
 
@@ -40,7 +40,7 @@ Example without prefix:
 
 ### Using the ev:observer and ev:target attributes
 
-The `ev:observer` attribute  allows you to register event handlers by specifying an element identifier, instead of embedding the event handler within that element. This is particularly useful to register event handlers on `` elements, which do not allow you to directly embed XML event handlers.
+The `ev:observer` attribute  allows you to register event handlers by specifying an element identifier, instead of embedding the event handler within that element. This is particularly useful to register event handlers on elements, which do not allow you to directly embed XML event handlers.
 
 ```xml
 <xf:model id="main-model">
@@ -93,7 +93,7 @@ Note that you still need to use the `ev:event` attribute to specify to what even
 </xh:html>
 ```
 
-The above example also shows how you can constrain an event handler to respond to an event dispatched to a particular target element using the `ev:target` attribute. here, the event handler responds to `DOMFocusIn` events, but only those dispatched to the `my-input` control.   
+The above example also shows how you can constrain an event handler to respond to an event dispatched to a particular target element using the `ev:target` attribute. Here, the event handler responds to `DOMFocusIn` events, but only those dispatched to the `my-input` control.   
 
 ### The ev:propagate attribute
 
@@ -159,7 +159,7 @@ Event handlers with the `ev:observer` attribute are also recognized as long as t
 <xf:input id="my-input" ref="my-value"/>
 ```
 
-_NOTE: For event handlers nested further within the bound node, the behavior is up to the XBL component. Typically, components that are containing controls, such as ``, manage event handlers as you expect!_  
+_NOTE: For event handlers nested further within the bound node, the behavior is up to the XBL component. Typically, components that are containing controls, such as `<xf:input>`, manage event handlers as you expect!_  
 
 ### Event handlers within XBL bindings  
 
@@ -167,7 +167,7 @@ Event handlers on XBL bindings are very similar to regular XML Events handlers, 
 
 * they use the `` containing element placed within the `` section of an XBL binding
 * attributes do not use the XML Events namespace (typically with the `ev:` prefix)  
-* the XBL 2 `default-action` attribute is not supported but instead the XML Events 1 `defaultAction` is supported (both support the value `cancel` and `perform` values)  
+* the XBL 2 `default-action` attribute is not supported but instead the XML Events 1 `defaultAction` is supported (both support the value `cancel` and `perform`)  
 
 Example:
 

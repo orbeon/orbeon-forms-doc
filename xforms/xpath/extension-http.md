@@ -37,7 +37,7 @@ The `xxf:get-request-attribute()` function returns the value of the given reques
 
 The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-request-attribute()`.
 
-If present, the second parameter can specify the 'text/plain' content type. In that case, if a String object is retrieved, it is return as an xs:string instead of being parsed as XML.
+If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is return as an `xs:string` instead of being parsed as XML.
 
 ```xml
 <!-- Get the "document" attribute and use it to replace instance "my-instance" -->
@@ -141,7 +141,7 @@ The `xxf:get-session-attribute()` function returns the value of the given sessio
 
 The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-session-attribute()`.
 
-If present, the second parameter can specify the 'text/plain' content type. In that case, if a String object is retrieved, it is return as an xs:string instead of being parsed as XML.
+If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is return as an `xs:string` instead of being parsed as XML.
 
 ```xml
 <!-- Get the "document" attribute and use it to replace instance "my-instance" -->

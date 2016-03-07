@@ -161,4 +161,4 @@ If no item is available, or if the item is an atomic value, the function returns
 
 If the optional third argument is specified and set to true(), non-relevant nodes are ignored, as in the case of `xf:submission`.
 
-Because of the way the XForms processing model is defined, the evaluation of `calculate`, `required`, `readonly` and `relevant` takes place during the processing of the `xforms-recalculate` event, which generally takes place before the processing of vaidation with the `xforms-revalidate` event. This means that by default using `xxf:valid()` to control, for example, whether a button is read-only or relevant will not work.
+Because of the way the XForms processing model is defined, the evaluation of `calculate`, `required`, `readonly` and `relevant` takes place during the processing of the `xforms-recalculate` event, which generally takes place before the processing of validation with the `xforms-revalidate` event. This means that by default using `xxf:valid()` to control, for example, whether a button is read-only or relevant will not work.

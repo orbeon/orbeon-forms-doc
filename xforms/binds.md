@@ -7,15 +7,15 @@
 The XForms `xf:bind` element is used to point to data in the data model. It allows to associate with data:
 
 - an `id`
-- a `name` (see [Model Bind Variables](../xforms/model-bind-variables.md))
-- properties, called "Model Item Properties" or MIPs
+- a `name` (see [Model Bind Variables](model-bind-variables.md))
+- properties, called Model Item Properties (MIPs)
 
 This serves the following functions:
 
 - in the model
   - determine which part of the data is valid, readonly, and relevant
   - apply calculations to the data (formulas)
-  - export variables used in calculations (see [Model Bind Variables](../xforms/model-bind-variables.md))
+  - export variables used in calculations (see [Model Bind Variables](model-bind-variables.md))
 - in the model and in the view
   - as an indirection to the data model, with the `bind` attribute or the `xxf:bind()` function
 
@@ -60,30 +60,30 @@ and:
 
 This enables two features:
 
-- the ability to assign a specific `id` attribute to a property
-- the ability to specify multiple `readonly`, `required`, `relevant`, and `constraint` rules (which combined using either a boolean "or" or a boolean "and")
+- the ability to assign a specific `id` attribute to a MIP and [refer to it from an `<xf:alert>](validation.md#Nested validation elements)
+- the ability to specify multiple `readonly`, `required`, `relevant`, and `constraint` rules (which are combined using either a boolean "or" or a boolean "and")
 
-See [XForms Validation](../xforms/validation.md) for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
+See [XForms Validation](validation.md) for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
 
 ### Multiple binds pointing to the same node
 
 _NOTE: This is scheduled to be standardized in XForms 2._
 
-Properties (MIPs) have a default value:
+Model Item Properties (MIPs) have a default value:
 
 - required: `false`
 - valid: `true` (depends on a series of conditions, including `required`)
 - relevant: `true`
 - readonly: `false`
 
-The resulting value of a property on a given node when multiple binds touch that node is the result of a boolean combination:
+The resulting value of a MIP on a given node when multiple binds touch that node is the result of a boolean combination:
 
 - required: boolean "or"
 - valid: boolean "and"
 - relevant: boolean "and"
 - readonly: boolean "or"
 
-The values also combined this way when multiple nested elements are specified on a same bind.
+The values are also combined this way when multiple nested elements are specified on a same bind.
 
 Consider the following example:
 
@@ -109,7 +109,7 @@ _NOTE: This is the behavior with Orbeon Forms 3.9 onwards. With Orbeon Forms 3.8
 - The `xxf:evaluate-bind-property()` function evaluates a property of a given bind.
 - The `xxf:type()` function returns the type of the instance data node passed as parameter.
 
-For details, see [XPath Function Library](../xforms/xpath/standard-functions.md).
+For details, see [XPath Function Library](xpath/standard-functions.md).
 
 ### Custom MIPs
 
@@ -162,7 +162,7 @@ In XForms, default or initial values can be set by pre-populating an instance do
 </xf:instance>
 ```
 
-For dynamic values, for example coming from request parameters or session values, there is no declarative notation and you must use `xforms-submit-done, `xforms-model-construct-done or `xforms-submit-ready`, which is sometimes cumbersome:
+For dynamic values, for example coming from request parameters or session values, there is no declarative notation and you must use `xforms-submit-done`, `xforms-model-construct-done`, or `xforms-submit-ready`, which is sometimes cumbersome:
 
 ```xml
 <xf:setvalue
@@ -171,7 +171,7 @@ For dynamic values, for example coming from request parameters or session values
     value="xxf:get-request-header('MY_USER')"/>
 ```
 
-For convenience, Orbeon Forms support an extension model item property: `xxf:default`. It works like the standard `calculate`, except that it is evaluated only once, just before the first evaluation of the `calculate` expressions if any.
+For convenience, Orbeon Forms support an extension MIP: `xxf:default`. It works like the standard `calculate`, except that it is evaluated only once, just before the first evaluation of the `calculate` expressions if any.
 
 ```xml
 <xf:bind ref="username" xxf:default="xxf:get-request-header('MY_USER')"/>
@@ -179,13 +179,13 @@ For convenience, Orbeon Forms support an extension model item property: `xxf:def
 
 #### Forcing recalculation of initial values with the recalculate action
 
-The `<xf:recalculate>` supports an extension attribute, `xxf:defaults`, which, when set to `true`, forces the re-evaluation of initial values before performing the recalculation.
+`<xf:recalculate>` supports an extension attribute, `xxf:defaults`, which, when set to `true`, forces the re-evaluation of initial values before performing the recalculation.
 
 ```xml
 <xf:recalculate xxf:defaults="true"/>
 ```
 
-The `xxf:defaults` attribute is an AVT so can include XPath expressions between curly brackets:
+The `xxf:defaults` attribute is an AVT and can include XPath expressions between curly brackets:
 
 ```xml
 <xf:recalculate xxf:defaults="{instance()/status = 'dirty'}"/>
@@ -241,7 +241,7 @@ Orbeon Forms provides an extension on those actions to defer the behavior of tho
 
 ### Static appearance for read-only controls
 
-Sometimes, read-only controls don't appear very nicely in web browsers. For example, a combo box will appear grayed out. It maybe be hard to read, and there is not much point showing a combo box since the user can't interact with it. Furthermore, with some browsers, like IE 6 and earlier, it is not even possible to make disabled controls appear nicer with CSS. In order to make read-only versions of forms look nicer, Orbeon Forms supports a special extension attribute that allows you to produce a "static" appearance for read-only controls. You enable this on your first XForms model:
+Sometimes, read-only controls don't appear very nicely in web browsers. For example, a combo box will appear grayed out. It may be be hard to read, and there is not much point showing a combo box since the user can't interact with it. Furthermore, with some browsers, like IE 6 and earlier, it is not even possible to make disabled controls appear nicer with CSS. In order to make read-only versions of forms look nicer, Orbeon Forms supports a special extension attribute that allows you to produce a "static" appearance for read-only controls. You enable this on your first XForms model:
 
 ```xml
 <xf:model xxf:readonly-appearance="static">
@@ -249,7 +249,7 @@ Sometimes, read-only controls don't appear very nicely in web browsers. For exam
 </xf:model>
 ```
 
-The attribute takes one of two vales: `static` or `dynamic` (the default). When using the value `static`, read-only controls do not produce disabled HTML form controls. This has one major limitation: you can't switch a control back to being read-write once it is displayed as read-only.
+The attribute takes one of two values: `static` or `dynamic` (the default). When using the value `static`, read-only controls do not produce disabled HTML form controls. This has one major limitation: you can't switch a control back to being read-write once it is displayed as read-only.
 
 You can also set the `xxf:readonly-appearance` attribute directly on individual XForms controls.
 
@@ -272,8 +272,8 @@ You often want to present a form without allowing the user to enter data. An eas
 
 ## See also
 
-- [XForms Validation](../xforms/validation.md)
-- [XForms Model bind variables](../xforms/model-bind-variables.md)
+- [XForms Validation](validation.md)
+- [XForms Model bind variables](model-bind-variables.md)
 - [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
 - [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
