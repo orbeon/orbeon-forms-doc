@@ -2,11 +2,11 @@
 
 <!-- toc -->
 
-### Context
+## Context
 
-form Runner has two modes of [PDF production](../../form-builder/pdf-production.md). When using the automatic mode, the PDF is produced from HTML and CSS. It is sometimes desirable to modify the appearance of the PDF produced. This typically involves modifying CSS.
+Form Runner has two modes of [PDF production](../../form-builder/pdf-production.md). When using the automatic mode, the PDF is produced from HTML and CSS. It is sometimes desirable to modify the appearance of the PDF produced. This typically involves modifying CSS.
 
-### How to figure out what CSS is applied to the PDF?
+## How to figure out what CSS is applied to the PDF?
 
 The closest from the PDF is the Form Runner Review mode. Compare:
 

@@ -24,7 +24,7 @@ You can either:
 
 1. Store your CSS is a separate CSS file, which you either provide in addition or that overrides the default CSS provided by Orbeon Forms. For more on this, see the [`oxf.fr.css.custom.uri`][2] configuration property. This is the recommended technique if your CSS is intended to be shared by several forms.
 
-2. Put your CSS inline, in the form. This is the recommended technique if you CSS is quite short, and specific to a given form (not to be share amongst forms). For this, put the rules within your own `<style>` section of the form:
+2. Put your CSS inline, in the form. This is the recommended technique if your CSS is quite short, and specific to a given form (not to be shared amongst forms). For this, put the rules within your own `<style>` section of the form:
     ```xml
     <xh:title>My Form Title</xh:title>
     <xh:style type="text/css">
@@ -36,14 +36,14 @@ You can either:
 
 ### Styling specific controls
 
-You style specific control in your form, say to set the width of an input field, by adding a CSS class on that control. To do so:
+You style specific controls in your form, say to set the width of an input field, by adding a CSS class on that control. To do so:
 
 1. Edit the source code for the form (in Form Builder, from the left sidebar, under _Advanced_, click on _Edit Source_).
 2. Locate the XForms control you need to modify (for instance `<xf:input>` for an input field).
 3. If not present, add a class attribute (for instance: `<xf:input class="" ...="">`).
-4. Add the space-separated class or classes in the `class` attribute (for instance: `<xf:input class="my-class" ...="">`).
+4. Add the space-separated class or classes in the `class` attribute (for instance: `<xf:input class="my-class" ...>`).
 
-The CSS class you use can either be one you define, or one of the following class provided for convenience in `form-runner-base.css`:
+The CSS class you use can either be one you define, or one of the following classes provided for convenience in `form-runner-base.css`:
 
 - `fr-width-2em``:` sets the field with to 2 em
 - `fr-width-3em``:` sets the field with to 3 em
@@ -52,7 +52,7 @@ The CSS class you use can either be one you define, or one of the following clas
 - `fr-width-10em``:` sets the field with to 10 em
 - `fr-width-15em``:` sets the field with to 15 em
 
-If you define your own CSS class, then write a CSS rule for that class. Make sure to use a strong selector, so it precedence over CSS provide by Orbeon Forms one. E.g. something like:
+If you define your own CSS class, then write a CSS rule for that class. Make sure to use a strong selector, so its precedence is higher than CSS provide by Orbeon Forms, e.g. something like:
 
 ```css
 #fr-view .fr-grid .fr-grid-content .my-class input.xforms-input-input {
