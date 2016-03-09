@@ -36,7 +36,7 @@ You can either:
 
 ### Styling specific controls
 
-You style specific control in your form, say to set the width of an input field, by adding a CSS class on that control. To do so:
+You style specific controls in your form, say to set the width of an input field, by adding a CSS class on that control. To do so:
 
 1. Edit the source code for the form (in Form Builder, from the left sidebar, under _Advanced_, click on _Edit Source_).
 2. Locate the XForms control you need to modify (for instance `<xf:input>` for an input field).
