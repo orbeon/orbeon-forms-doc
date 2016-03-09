@@ -25,10 +25,14 @@ The wizard view is optional - you can use the regular view instead, and you can 
 
 ## Modes
 
+### Introduction
+
 The wizard supports two mode:
 
 - the *free* mode (which is the default mode)
 - the *validated* mode [SINCE Orbeon Forms 4.9]
+
+### Free mode
 
 When using the free mode, you can freely:
 
@@ -37,13 +41,17 @@ When using the free mode, you can freely:
 - change page from the table of contents
 - leaving a page marks all fields on the given page as visited, ensuring that errors on that page, if any, show in the error summary
 
+### Validated mode
+
 When using the validated mode:
 
 - you can freely go back to the preceding page
 - but you can only go forward to the next page if
   - there are no errors on all preceding pages as well as the current page
-  - or if you have already visited the next page
-- the table of contents only allows you to navigate to pages you have already visited 
+  - if you have already visited the next page
+- the table of contents only allows you to navigate
+  - to pages you have already visited
+  - or to the next page if there are no errors on all preceding pages as well as the current page [SINCE Orbeon Forms 4.11]
 - you should generally use the "Prev" or "Next" buttons for navigation
 - any attempt to navigate to the next page marks all the fields of the preceding pages as well as the current page as visited, ensuring that errors on those pages, if any, show in the error summary
 
