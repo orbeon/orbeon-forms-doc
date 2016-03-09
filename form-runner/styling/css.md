@@ -24,7 +24,7 @@ You can either:
 
 1. Store your CSS is a separate CSS file, which you either provide in addition or that overrides the default CSS provided by Orbeon Forms. For more on this, see the [`oxf.fr.css.custom.uri`][2] configuration property. This is the recommended technique if your CSS is intended to be shared by several forms.
 
-2. Put your CSS inline, in the form. This is the recommended technique if you CSS is quite short, and specific to a given form (not to be share amongst forms). For this, put the rules within your own `<style>` section of the form:
+2. Put your CSS inline, in the form. This is the recommended technique if your CSS is quite short, and specific to a given form (not to be shared amongst forms). For this, put the rules within your own `<style>` section of the form:
     ```xml
     <xh:title>My Form Title</xh:title>
     <xh:style type="text/css">
