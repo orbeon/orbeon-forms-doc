@@ -52,7 +52,7 @@ The CSS class you use can either be one you define, or one of the following clas
 - `fr-width-10em``:` sets the field with to 10 em
 - `fr-width-15em``:` sets the field with to 15 em
 
-If you define your own CSS class, then write a CSS rule for that class. Make sure to use a strong selector, so it precedence over CSS provide by Orbeon Forms one. E.g. something like:
+If you define your own CSS class, then write a CSS rule for that class. Make sure to use a strong selector, so its precedence is higher than CSS provide by Orbeon Forms, e.g. something like:
 
 ```css
 #fr-view .fr-grid .fr-grid-content .my-class input.xforms-input-input {
