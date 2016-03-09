@@ -43,7 +43,7 @@ You style specific controls in your form, say to set the width of an input field
 3. If not present, add a class attribute (for instance: `<xf:input class="" ...="">`).
 4. Add the space-separated class or classes in the `class` attribute (for instance: `<xf:input class="my-class" ...>`).
 
-The CSS class you use can either be one you define, or one of the following class provided for convenience in `form-runner-base.css`:
+The CSS class you use can either be one you define, or one of the following classes provided for convenience in `form-runner-base.css`:
 
 - `fr-width-2em``:` sets the field with to 2 em
 - `fr-width-3em``:` sets the field with to 3 em
