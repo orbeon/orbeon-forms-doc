@@ -41,7 +41,7 @@ You style specific controls in your form, say to set the width of an input field
 1. Edit the source code for the form (in Form Builder, from the left sidebar, under _Advanced_, click on _Edit Source_).
 2. Locate the XForms control you need to modify (for instance `<xf:input>` for an input field).
 3. If not present, add a class attribute (for instance: `<xf:input class="" ...="">`).
-4. Add the space-separated class or classes in the `class` attribute (for instance: `<xf:input class="my-class" ...="">`).
+4. Add the space-separated class or classes in the `class` attribute (for instance: `<xf:input class="my-class" ...>`).
 
 The CSS class you use can either be one you define, or one of the following class provided for convenience in `form-runner-base.css`:
 
