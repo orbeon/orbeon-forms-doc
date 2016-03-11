@@ -27,7 +27,7 @@ Usually an issue gets fixed or a feature gets implemented in Orbeon Forms when:
 
 - The bug has been reported by a support customer and has been evaluated as high priority.
 - It is very easy to implement, so we just implement it along the way to make everybody happy.
-- We have put it on our [roadmap](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-Roadmap) and scheduled it because we think it is a crucial feature for Orbeon Forms. 
+- We have put it on our [roadmap](../roadmap.md) and scheduled it because we think it is a crucial feature for Orbeon Forms.
 - We need it for a project we are currently working on.
 - Somebody sponsors it.
 - Somebody sends a patch for it.
@@ -90,7 +90,7 @@ Feel free to add or make changes to the contents there. You can do so after crea
 
 We regularly publish a [status message like this one](http://discuss.orbeon.com/Activity-in-Orbeon-land-td4660203.html) in the forum.
 
-See also our [roadmap](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-Roadmap).
+See also our [roadmap](../roadmap.md).
 
 [1]: http://discuss.orbeon.com/
 [2]: http://www.orbeon.com/pricing
