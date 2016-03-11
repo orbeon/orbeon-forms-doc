@@ -56,8 +56,8 @@ Issues:
 
 Please remember that the following schedule is a plan, not a promise:
 
-- 2016-02-26: code complete and start testing
-- 2016-03-09: tentative release date
+- 2016-03-11: code complete and start testing
+- 2016-03-29: tentative release date
 
 ### Orbeon Forms 4.12
 
