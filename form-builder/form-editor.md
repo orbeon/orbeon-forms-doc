@@ -35,7 +35,7 @@ Form Builder's form editor is organized in 4 areas:
 
 ![](images/new.png)
 
-### The top bar
+## The top bar
 
 On the top right corner of the top bar, you can change the Form Builder user interface language by clicking on one of the languages available. Currently, English and French are available. More languages may be added in the future.
 
