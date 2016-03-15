@@ -1,5 +1,7 @@
 # The form editor
 
+<!-- toc -->
+
 ## Creating your first form definition
 
 After pressing the "New" button on the [summary page](../form-builder/summary-page.md), you reach the form editor (also known as form designer) proper. Form Builder requires that you provide two small pieces of information before starting:
