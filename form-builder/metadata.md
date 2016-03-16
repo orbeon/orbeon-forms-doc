@@ -207,8 +207,8 @@ Example:
 
 The text for control `<xf:label>`, `<xf:hint>`, `<xf:help>`, and `<xf:alert>`, can either be:
 
-- Inline, with a `lang` attribute indicating the language. This is what the author of the autocomplete control did for the first `<xf:input>` above.
-- Taken from the [Form Builder resource file][6], which is typically useful when your control uses resources that already exists elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the autocomplete control did for the second `<xf:input>` above.
+- Inline, with a `lang` attribute indicating the language. This is what the author of the  Dynamic Data Dropdown control did for the first `<xf:input>` above.
+- Taken from the [Form Builder resource file][6], which is typically useful when your control uses resources that already exists elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the Dynamic Data Dropdown control did for the second `<xf:input>` above.
 
 [1]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/forms/orbeon/builder/xbl/text-controls.xbl
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components#TOC-Date-Picker
