@@ -82,33 +82,29 @@ If your component only needs a template for the view, which is maybe the most fr
 </fb:template>
 ```
 
-## Control metadata for the Edit Control Details dialog
+## Control metadata for the Control Settings dialog
 
 ### Introduction
 
+All the controls share certain properties, like the control name. However, some XBL components take additional properties, set at design time in Form Builder. For instance the [Dynamic Data Dropdown](../form-runner/component/dynamic-data-dropdown.md) takes:
+
+- the HTTP URI of a service returning an XML document with the items shown in the drop-down,
+- an XPath expression extracting the items from the XML document,
+- and two XPath expressions returning the label and value for each item.
+
 ![](images/toolbox-fields.png)
 
-All the controls share certain properties, like the control name. However, some XBL components take additional properties, set at form design time, in Form Builder. For instance the [Dynamic Data Dropdown](../form-runner/component/dynamic-data-dropdown.md) takes the HTTP URI of a service returning an XML document with the items shown in the drop-down, an XPath expression extracting the items from the XML document, and two XPath expressions returning the label and value for each item.
-
-
-When your XBL component takes additional "properties", you want Form Builder users to be able to set them in from the Edit Control Details dialog. For this, inside the `<fb:metadata>` add an `<fb:control-details>`, which contains XForms control used to edit those properties.
-
-The text for control `label`, `hint`, `help`, and `alert`, can either be:
-
-* Inline, with a `lang` attribute indicating the language. This is what the author of the autocomplete control did for the first `<xf:input>` above.
-* Taken from the [Form Builder resource file][6], which is typically useful when your control uses resources that already exists elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the autocomplete control did for the second `<xf:input>` above.
+You can create a custom user interface within Form Builder for XBL component that require such additional properties by adding XForms controls under the the `<fb:control-details>` element, which you add under `<fb:metadata>`.
 
 ### With Orbeon Forms 4.11 and newer
 
-The `<fb:control-details>` can contain any control and not only `<xf:input>` controls.
-
-In addition, you can place an `<xf:model>`, which can be used for:
+`<fb:control-details>` can contain any XForms control. In addition, you can place an `<xf:model>`, which can be used for:
 
 - additional local instances
 - validation
 - event handlers
 
-The content of `<xf:model>` is made available to the control specified.
+The content of `<xf:model>` is available to the control specified.
 
 Example:
 
@@ -206,6 +202,13 @@ Example:
     </xf:input>
 </fb:control-details>
 ```
+
+### Internationalization of labels and other elements
+
+The text for control `<xf:label>`, `<xf:hint>`, `<xf:help>`, and `<xf:alert>`, can either be:
+
+- Inline, with a `lang` attribute indicating the language. This is what the author of the autocomplete control did for the first `<xf:input>` above.
+- Taken from the [Form Builder resource file][6], which is typically useful when your control uses resources that already exists elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the autocomplete control did for the second `<xf:input>` above.
 
 [1]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/forms/orbeon/builder/xbl/text-controls.xbl
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components#TOC-Date-Picker
