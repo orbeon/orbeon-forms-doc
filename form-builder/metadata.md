@@ -91,7 +91,98 @@ If your component only needs a template for the view, which is maybe the most fr
 All the controls share certain properties, like the control name. However, some XBL components take additional properties, set at form design time, in Form Builder. For instance the [Dynamic Data Dropdown](../form-runner/component/dynamic-data-dropdown.md) takes the HTTP URI of a service returning an XML document with the items shown in the drop-down, an XPath expression extracting the items from the XML document, and two XPath expressions returning the label and value for each item.
 
 
-When your XBL component takes additional "properties", you want Form Builder users to be able to set them in from the Edit Control Details dialog. For this, inside the `<fb:metadata>` add an `<fb:control-details>`, which contains XForms control used to edit those properties, as in:
+When your XBL component takes additional "properties", you want Form Builder users to be able to set them in from the Edit Control Details dialog. For this, inside the `<fb:metadata>` add an `<fb:control-details>`, which contains XForms control used to edit those properties.
+
+The text for control `label`, `hint`, `help`, and `alert`, can either be:
+
+* Inline, with a `lang` attribute indicating the language. This is what the author of the autocomplete control did for the first `<xf:input>` above.
+* Taken from the [Form Builder resource file][6], which is typically useful when your control uses resources that already exists elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the autocomplete control did for the second `<xf:input>` above.
+
+### With Orbeon Forms 4.11 and newer
+
+The `<fb:control-details>` can contain any control and not only `<xf:input>` controls.
+
+In addition, you can place an `<xf:model>`, which can be used for:
+
+- additional local instances
+- validation
+- event handlers
+
+The content of `<xf:model>` is made available to the control specified.
+
+Example:
+
+```xml
+<fb:control-details>
+    <xf:model>
+        <xf:bind ref="@resource"/>
+        <xf:bind ref="xf:itemset">
+            <xf:bind
+                ref="@ref | xf:label/@ref | xf:value/@ref"
+                type="xxf:xpath2"
+                required="true()"/>
+        </xf:bind>
+    </xf:model>
+    <fr:grid>
+        <xh:tr>
+            <xh:td colspan="2">
+                <xf:input ref="@resource">
+                    <xf:label lang="en">Resource URL</xf:label>
+                    <xf:label lang="es">URL del Recurso</xf:label>
+                    <xf:label lang="fi">Resurssi URL</xf:label>
+                    <xf:label lang="fr">URL de la ressource</xf:label>
+                    <xf:label lang="ru">URL ресурса</xf:label>
+                    <xf:label lang="it">URL della risorsa</xf:label>
+                    <xf:label lang="de">URL der Ressource</xf:label>
+                    <xf:label lang="sv">Resursens adress</xf:label>
+                    <xf:label lang="nl">Resource URL</xf:label>
+                    <xf:label lang="pt">URL do Recurso</xf:label>
+                    <xf:hint lang="en">HTTP URL returning data used to populate the dropdown</xf:hint>
+                    <xf:hint lang="es">HTTP URL retornando datos para poblar la lista</xf:hint>
+                    <xf:hint lang="fi">HTTP URL palauttaa pudotusvalikon täyttämiseen käytettyä dataa</xf:hint>
+                    <xf:hint lang="fr">URL HTTP auquel réside le service</xf:hint>
+                    <xf:hint lang="ru">HTTP URL сервиса, данными из которого будет заполнен выпадающий список</xf:hint>
+                    <xf:hint lang="it">URL HTTP che da i dati per il menu a tendina</xf:hint>
+                    <xf:hint lang="de">HTTP URL die die Inhalte für das Dropdown-Menü liefert</xf:hint>
+                    <xf:hint lang="sv">Vanligen en Internetadress som börjar med http://</xf:hint>
+                    <xf:hint lang="nl">HTTP URL als bron voor de gegevens in de selectie</xf:hint>
+                    <xf:hint lang="pt">HTTP URL devolvendo dados para preencher a lista de opções</xf:hint>
+                </xf:input>
+            </xh:td>
+        </xh:tr>
+        <xh:tr>
+            <xh:td colspan="2">
+                <xf:input ref="xf:itemset/@ref">
+                    <xf:label ref="$resources/dialog-actions/items/label"/>
+                    <xf:hint ref="$resources/dialog-actions/items/hint"/>
+                </xf:input>
+            </xh:td>
+        </xh:tr>
+        <xh:tr>
+            <xh:td>
+                <xf:input ref="xf:itemset/xf:label/@ref">
+                    <xf:label ref="$resources/dialog-actions/item-label/label"/>
+                    <xf:hint ref="$resources/dialog-actions/item-label/hint"/>
+                </xf:input>
+            </xh:td>
+            <xh:td>
+                <xf:input ref="xf:itemset/xf:value/@ref">
+                    <xf:label ref="$resources/dialog-actions/item-value/label"/>
+                    <xf:hint ref="$resources/dialog-actions/item-value/hint"/>
+                </xf:input>
+            </xh:td>
+        </xh:tr>
+    </fr:grid>
+</fb:control-details>
+```
+
+Implicitly, there is always a default instance accessible with `instance()`, which contains the control being edited.
+
+### With Orbeon Forms 4.10 and earlier
+
+The `<fb:control-details>` only supports `<xf:input>` controls. These are bound to attributes or elements inside the template you provided inside `<fb:template>`.
+
+Example:
 
 ```xml
 <fb:control-details>
@@ -115,29 +206,6 @@ When your XBL component takes additional "properties", you want Form Builder use
     </xf:input>
 </fb:control-details>
 ```
-
-The text for the label, hint, help, and alert, can either be:
-
-* Inline, with a `lang` attribute indicating the language. This is what the author of the autocomplete control did for the first `<xf:input>` above.
-* Taken from the [Form Builder resource file][6], which is typically useful when your control uses resources that already exists elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the autocomplete control did for the second `<xf:input>` above.
-
-### With Orbeon Forms 4.11 and newer
-
-The `<fb:control-details>` can contain any control and not only `<xf:input>` controls.
-
-In addition, you can place an `<xf:model>`, which can be used for:
-
-- additional local instances
-- validation
-- event handlers
-
-The content of `<xf:model>` is made available to the control specified.
-
-Implicitly, there is always a default instance accessible with `instance()`, which contains the control being edited.
-
-### With Orbeon Forms 4.10 and earlier
-
-The `<fb:control-details>` only supports `<xf:input>` controls. These are bound to attributes or elements inside the template you provided inside `<fb:template>`.
 
 [1]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/forms/orbeon/builder/xbl/text-controls.xbl
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components#TOC-Date-Picker
