@@ -169,8 +169,8 @@ Example:
     <xf:input ref="@resource">
         <xf:label lang="en">Resource URL</xf:label>
         <xf:label lang="fr">URL de la ressource</xf:label>
-        <xf:hint lang="en">HTTP URL returning data used to populate the dropdown</xf:hint>
-        <xf:hint lang="fr">URL HTTP auquel réside le service</xf:hint>
+        <xf:hint  lang="en">HTTP URL returning data used to populate the dropdown</xf:hint>
+        <xf:hint  lang="fr">URL HTTP auquel réside le service</xf:hint>
     </xf:input>
     <xf:input ref="xf:itemset/@ref">
         <xf:label ref="$resources/dialog-actions/items/label"/>
