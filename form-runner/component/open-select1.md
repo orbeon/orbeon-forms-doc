@@ -43,8 +43,12 @@ You use `fr:open-select1` like a regular `xf:select1` control:
     - `full`: shows radio buttons (the default)
     - `minimal`: shows a dropdown menu
 
+This is the control with the `minimal` appearance:
+
+![Open selection component with `minimal` appearance](images/xbl-open-select1-minimal.png)
+
 ## Data format
 
-The predefined radio buttons have a *label* and a *value*, and, like all radio buttons, store their *value* into the data. 
+The predefined radio buttons have a *label* and a *value*, and, like all radio buttons, store their *value* into the data.
 
 The text of the custom choice entered by the user is saved directly into the data.
