@@ -124,25 +124,9 @@ Example:
             <xh:td colspan="2">
                 <xf:input ref="@resource">
                     <xf:label lang="en">Resource URL</xf:label>
-                    <xf:label lang="es">URL del Recurso</xf:label>
-                    <xf:label lang="fi">Resurssi URL</xf:label>
                     <xf:label lang="fr">URL de la ressource</xf:label>
-                    <xf:label lang="ru">URL ресурса</xf:label>
-                    <xf:label lang="it">URL della risorsa</xf:label>
-                    <xf:label lang="de">URL der Ressource</xf:label>
-                    <xf:label lang="sv">Resursens adress</xf:label>
-                    <xf:label lang="nl">Resource URL</xf:label>
-                    <xf:label lang="pt">URL do Recurso</xf:label>
-                    <xf:hint lang="en">HTTP URL returning data used to populate the dropdown</xf:hint>
-                    <xf:hint lang="es">HTTP URL retornando datos para poblar la lista</xf:hint>
-                    <xf:hint lang="fi">HTTP URL palauttaa pudotusvalikon täyttämiseen käytettyä dataa</xf:hint>
-                    <xf:hint lang="fr">URL HTTP auquel réside le service</xf:hint>
-                    <xf:hint lang="ru">HTTP URL сервиса, данными из которого будет заполнен выпадающий список</xf:hint>
-                    <xf:hint lang="it">URL HTTP che da i dati per il menu a tendina</xf:hint>
-                    <xf:hint lang="de">HTTP URL die die Inhalte für das Dropdown-Menü liefert</xf:hint>
-                    <xf:hint lang="sv">Vanligen en Internetadress som börjar med http://</xf:hint>
-                    <xf:hint lang="nl">HTTP URL als bron voor de gegevens in de selectie</xf:hint>
-                    <xf:hint lang="pt">HTTP URL devolvendo dados para preencher a lista de opções</xf:hint>
+                    <xf:hint  lang="en">HTTP URL returning data used to populate the dropdown</xf:hint>
+                    <xf:hint  lang="fr">URL HTTP auquel réside le service</xf:hint>
                 </xf:input>
             </xh:td>
         </xh:tr>
