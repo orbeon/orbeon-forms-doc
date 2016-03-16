@@ -2,9 +2,11 @@
 
 <!-- toc -->
 
-## What it does
+## Availability
 
 [SINCE Orbeon Forms 4.11]
+
+## What it does
 
 The `fr:open-select1` component presents:
 
