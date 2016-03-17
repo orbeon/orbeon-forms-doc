@@ -602,8 +602,15 @@ drop table orbeon_form_data_attach ;
     - insert control
     - check there is no JS error
 
-### Schema Support [4.10 DONE]
+### Singleton forms
 
+- test that the features works as documented
+    - no form data
+    - one instance of form data
+    - more than one instance of form data
+- test from Proxy Portlet
+
+### Schema Support [4.10 DONE]
 
 - attach Schema
     - use e.g. [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd) or the [XForms simple types](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
@@ -672,7 +679,6 @@ drop table orbeon_form_data_attach ;
 
 ### Section Templates [4.10 DONE]
 
-
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
     - https://gist.github.com/ebruchez/6187704
@@ -706,7 +712,7 @@ drop table orbeon_form_data_attach ;
         - check review, PDF
 - make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10!)
 - makes invalid controls in section template prevent saving
--
+
 ### PDF Automatic [4.10 DONE]
 
 - Controls and Bookshelf: input field and text areas have highlighted and clickable links
@@ -715,7 +721,7 @@ drop table orbeon_form_data_attach ;
 - logo in title
 - page numbering/total at bottom center
 - PDF looks good overall
--
+
 ### PDF Template [4.10 DONE]
 
 
@@ -729,6 +735,8 @@ drop table orbeon_form_data_attach ;
   - check Vote and Leased checkboxes
 - email PDF
   - check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
+- W9 form
+  - check that signature appears in the PDF and doesn't go over background PDF lines
 
 ### Form Builder Permissions [4.10 DONE]
 
