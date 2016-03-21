@@ -99,7 +99,11 @@ Use this property to change the default maximum number of grid columns form auth
 
 Closing sections in Form Builder can improve responsiveness. This property sets the number of controls after which Form Builder will close all sections except the first one when loading a form. Below that number of controls, all sections are open by default.
 
-## Form Builder Summary page
+## Action buttons in Form Builder
+
+### Action buttons on the Form Builder summary page
+
+This controls which buttons appear on the Form Builder summary page.
 
 ```xml
 <property as="xs:string"  name="oxf.fr.summary.buttons.orbeon.builder">
@@ -107,7 +111,15 @@ Closing sections in Form Builder can improve responsiveness. This property sets 
 </property>
 ```
 
-This controls which buttons appear on the Form Builder Summary page.
+### Action buttons on the Form Builder detail page
+
+This controls which buttons appear on the Form Builder detail page.
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.buttons.orbeon.builder">
+    summary new test publish save
+</property>
+```
 
 ## Available languages
 
