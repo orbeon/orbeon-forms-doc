@@ -14,7 +14,7 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 
 ## Database setup
 
-### Oracle
+### Oracle database setup
 
 1. Make sure that Oracle's Database Character Set is set to `AL32UTF8`, also as [recommended by Oracle][2].  You can see you database parameters by running the following query: `select * from nls_database_parameters`,  and the Database Character Set is identified by `nls_characterset`.
 2. Create a user/schema in Oracle, for instance with the commands below. In this example "all privileges" are granted to the newly created user/schema, which is not strictly required. You might want to fine-tune permissions on your system as appropriate. If you had already created this schema and that the definition changed, or that you want to restart from scratch for some other reason, you can first delete the schema with all the data it contains with `drop user orbeon cascade`.
@@ -42,7 +42,7 @@ SQL> grant all privileges to orbeon ;
 
 With Oracle 11.2, `XMLType` values are stored by default using the binary XML storage. The binary XML storage has numerous benefits over the basic file storage. In many respect, it is the "proper" way to store XML. However, we found that Oracle fails to properly save some documents when the binary XML storage is used. In particular, when documents have attributes with long values (several thousands of characters), when retrieving the document, the value of some attributes is missing. For this reason, until this issue is solved by Oracle, we recommend you store `XMLType` values as "basic file", per the above DDL.
 
-### MySQL
+### MySQL database setup
 
 The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer. However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].
 
@@ -71,7 +71,7 @@ mysql> CREATE schema orbeon;
     - With Orbeon Forms 4.3 or earlier:
         - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_3.sql)
 
-### SQL Server
+### SQL Server database setup
 
 [SINCE Orbeon Forms 4.6]
 
@@ -82,7 +82,7 @@ Create the tables used for Orbeon Forms in the `orbeon` schema:
 - With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
     - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/sqlserver-4_6.sql)
 
-### PostgreSQL
+### PostgreSQL database setup
 
 [SINCE Orbeon Forms 4.8]
 
@@ -91,7 +91,7 @@ Create the tables used for Orbeon Forms in the `orbeon` schema:
 - With Orbeon Forms 4.8:
     - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/postgresql-4_8.sql)
 
-### DB2
+### DB2 database setup
 
 [SINCE Orbeon Forms 4.3]
 
@@ -108,7 +108,7 @@ Create the tables used for Orbeon Forms in the `orbeon` schema:
 
 ## Application server setup
 
-### Oracle
+### Oracle application server setup
 
 #### General
 
@@ -176,7 +176,7 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
     </jboss-web>
     ```
 
-### MySQL
+### MySQL application server setup
 
 1. [Download the MySQL JDBC driver][6], called Connector/J, e.g. mysql-connector-java-5.1.29-bin.jar (latest version as of 2014-02-03)
 2. Copy it in the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
@@ -200,7 +200,7 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
         url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
     ```
 
-### SQL Server
+### SQL Server application server setup
 
 [SINCE Orbeon Forms 4.6]
 
@@ -226,7 +226,7 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
         url="jdbc:sqlserver://server"/>
     ```
 
-### PostgreSQL
+### PostgreSQL application server setup
 
 [SINCE Orbeon Forms 4.8]
 
@@ -258,7 +258,7 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
     - `password`
     - `url`: including the `server` and `database` parts of the path
 
-### DB2
+### DB2 application server setup
 
 [SINCE Orbeon Forms 4.3]
 
