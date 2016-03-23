@@ -10,12 +10,35 @@ xxf:binding(
 ) as item()*
 ```
 
-The `xxf:binding()` function returns a control's binding, that is the node or nodes to which the control is bound. Use this function carefully, as depending on when this function is called during XForms processing, it may refer to stale nodes. Likely the safest use of `xxf:binding()` is in response to UI events.
+The `xxf:binding()` function returns a control's binding, that is the item or items to which the control is bound. Use this function carefully, as depending on when this function is called during XForms processing, it may refer to stale items. It is usually safe to use `xxf:binding()` in response to UI events.
 
 ```xml
 <!-- Store the value of the element to which the first-name control is bound -->
 <xf:setvalue ref="my-value" value="xxf:binding('first-name')"/>
 ```
+
+_NOTE: This function can return not only nodes, but also atomic items._
+
+## xxf:binding-context()
+
+```ruby
+xxf:binding-context(
+    $control-id as xs:string
+) as item()?
+```
+
+The `xxf:binding-context()` function returns the context of a control's binding, that is the single in-scope context item before the control's binding is applied if present. Use this function carefully, as depending on when this function is called during XForms processing, it may refer to stale items. It is usually safe to use `xxf:binding-context()` in response to UI events.
+
+```xml
+<!-- Store the value of the element to which the first-name control is bound -->
+<xf:var
+    name="context"
+    value="xxf:binding-context('my-custom-component')"/>
+```
+
+_NOTE: Before Orbeon Forms 4.11, this function could return more than one item when called for a component within a repeat. This was incorrect and has been fixed._
+
+_NOTE: This function is rarely used, and when used is typically used from within XBL components._
 
 _NOTE: This function can return not only nodes, but also atomic items._
 
