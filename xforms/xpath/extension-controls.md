@@ -36,7 +36,7 @@ The `xxf:binding-context()` function returns the context of a control's binding,
     value="xxf:binding-context('my-custom-component')"/>
 ```
 
-_NOTE: Before Orbeon Forms 4.11, this function could return more than one item when called for a component within a repeat. This was incorrect and has been fixed._
+_NOTE: Before Orbeon Forms 4.11, this function could return more than one item when called for a component within a repeat. This was incorrect and has been fixed. See [#2642](https://github.com/orbeon/orbeon-forms/issues/2642)._
 
 _NOTE: This function is rarely used, and when used is typically used from within XBL components._
 
