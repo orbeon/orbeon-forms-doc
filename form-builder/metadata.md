@@ -98,7 +98,11 @@ You can create a custom user interface within Form Builder for XBL component tha
 
 ### With Orbeon Forms 4.11 and newer
 
-`<fb:control-details>` can contain any XForms control. In addition, you can place an `<xf:model>`, which can be used for:
+`<fb:control-details>` can contain any XForms control. This allows for more flexible layouts:
+
+![Custom Control Settings](images/custom-properties.png)
+
+In addition, you can place an `<xf:model>`, which can be used for:
 
 - additional local instances
 - validation

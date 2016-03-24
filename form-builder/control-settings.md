@@ -46,6 +46,14 @@ the control.
 
 See also [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html).
 
+#### Custom control settings
+
+Some controls have custom settings. For example:
+
+![Custom Control Settings](images/custom-properties.png)
+
+See also [Control metadata for the Control Settings dialog](metadata.md#control-metadata-for-the-control-settings-dialog)
+
 ### Validations and alerts
 
 ![Validations and alerts tab](images/control-settings-validations.png)
@@ -72,6 +80,7 @@ See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/im
 
 ## See also
 
+- [Control metadata for the Control Settings dialog](metadata.md#control-metadata-for-the-control-settings-dialog)
 - [Form Builder Validation](validation.md)
 - [Enhanced validation in Form Builder and Form Runner](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - [Form Builder Formulas](formulas.md)
