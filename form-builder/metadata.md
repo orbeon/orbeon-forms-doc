@@ -96,6 +96,8 @@ All the controls share certain properties, like the control name. However, some 
 
 You can create a custom user interface within Form Builder for XBL component that require such additional properties by adding XForms controls under the the `<fb:control-details>` element, which you add under `<fb:metadata>`.
 
+See also [Custom control settings](control-settings.md#custom-control-settings).
+
 ### With Orbeon Forms 4.11 and newer
 
 `<fb:control-details>` can contain any XForms control. This allows for more flexible layouts:
@@ -202,3 +204,7 @@ The text for control `<xf:label>`, `<xf:hint>`, `<xf:help>`, and `<xf:alert>`, c
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components#TOC-Date-Picker
 [3]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/date-picker/date-picker.xbl
 [6]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/forms/orbeon/builder/form/resources.xml
+
+## See also
+
+- [Custom control settings](control-settings.md#custom-control-settings)
