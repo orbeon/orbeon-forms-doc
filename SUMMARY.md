@@ -54,6 +54,7 @@
         * [Autocomplete](form-runner/component/autocomplete.md)
         * [Captcha](form-runner/component/captcha.md)
         * [Character Counter](form-runner/component/character-counter.md)
+        * [Checkbox Input](form-runner/component/checkbox-input.md)
         * [Currency](form-runner/component/currency.md)
         * [Dynamic Data Dropdown](form-runner/component/dynamic-data-dropdown.md)
         * [Error Summary](form-runner/component/error-summary.md)
@@ -72,6 +73,7 @@
         * [US State](form-runner/component/us-state.md)
         * [Wizard](form-runner/component/wizard.md)
         * [XForms Inspector](form-runner/component/xforms-inspector.md)
+        * [Yes/No Answer](form-runner/component/yesno-input.md)
     * Features
         * [Home Page](form-runner/feature/home-page.md)
         * [Responsive Design](form-runner/feature/responsive-design.md)
