@@ -24,5 +24,4 @@ You use `fr:yesno-input` like a regular XForms controls. Example:
 
 ## See also
 
-- [Checkbox Input Component](yesno-input.md)
-
+- [Checkbox Input Component](checkbox-input.md)
