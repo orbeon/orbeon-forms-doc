@@ -1,4 +1,4 @@
-# Checkbox Input Component
+# Yes/No Component
 
 <!-- toc -->
 
