@@ -8,7 +8,7 @@
 
 ## What it does
 
-The `fr:yesno-input` component displays a simple choice between "Yes" and "No". It stores a value of `true` when selected and `false` when deselected.
+The `fr:yesno-input` component displays a simple choice between "Yes" and "No". It stores a value of `true` when "Yes" is selected and `false` when "No" is selected.
 
 ![Appearance](images/xbl-yesno-input.png)
 
