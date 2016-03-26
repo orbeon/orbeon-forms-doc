@@ -15,7 +15,7 @@ If no argument is passed, use the context item converted to a string.
 
 If an empty sequence is passed, return `true()`.
 
-Return true if the argument or context item string is a blank string, or if no argument is passed. Otherwise return false.
+Return `true()` if the argument or context item string is a blank string. Otherwise return `false()`.
 
 With one argument, this function returns the same as `not(xxf:non-blank(arg))`.
 
@@ -34,7 +34,7 @@ If no argument is passed, use the context item converted to a string.
 
 If an empty sequence is passed, return `false()`.
 
-Return true if the argument or context item string is not a blank string. Otherwise return false.
+Return `true()` if the argument or context item string is not a blank string. Otherwise return `false()`.
 
 With one argument, this function returns the same as `not(xxf:is-blank(arg))`.
 
