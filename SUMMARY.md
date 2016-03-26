@@ -181,6 +181,7 @@
         * [Standard functions](xforms/xpath/standard-functions.md)
         * Extension functions
             * [Core functions](xforms/xpath/extension-core.md)
+            * [Utility functions](xforms/xpath/extension-util.md)
             * [Model functions](xforms/xpath/extension-model.md)
             * [Validation functions](xforms/xpath/extension-validation.md)
             * [Controls functions](xforms/xpath/extension-controls.md)

@@ -88,6 +88,45 @@ If the property is not present on the bind, an empty sequence is returned.
 
 _NOTE: The property is instantly evaluated, which means that it might be different from the value evaluated during the previous model recalculation or revalidation._
 
+## xxf:instance()
+
+```ruby
+xxf:instance(
+    $instance-id as xs:string
+) as element()?
+```
+
+The `xxf:instance()` function works like the standard `instance()` function except that it searches for instances:
+
+* independently from the current in-scope model specified by the `model` attribute
+* across ancestor XBL scopes
+
+The search works as follows:
+
+* first, in a given XBL scope, the function searches all models within that scope
+* second, it recursively searches ancestor XBL scopes
+
+For example, if there are no XBL components, and 2 top-level models:
+
+```xml
+<xf:model id="main-model">
+  <xf:instance id="main-instance">
+    ...
+  </xf:instance>
+</xf:model>
+<xf:model id="resources-model">
+  <xf:instance id="resources-instance">
+    ...
+  </xf:instance>
+</xf:model>
+...
+<xf:group model="main-model">
+  <xf:output value="xxf:instance('resources-instance')/title"/>
+</xf:group>
+```
+
+[SINCE Orbeon Forms 4.5] The `xxf:instance()` function can also take an absolute id as parameter.
+
 ## xxf:invalid-binds()
 
 ```ruby

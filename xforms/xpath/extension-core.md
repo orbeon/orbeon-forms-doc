@@ -89,45 +89,6 @@ There are 1,273 files.
 
 _NOTE: It is important to pass dates and times as typed values. Use `xs:dateTime()`, `xs:date()`, or `xs:time()` if needed to convert from a string._
 
-## xxf:instance()
-
-```ruby
-xxf:instance(
-    $instance-id as xs:string
-) as element()?
-```
-
-The `xxf:instance()` function works like the standard `instance()` function except that it searches for instances:
-
-* independently from the current in-scope model specified by the `model` attribute
-* across ancestor XBL scopes
-
-The search works as follows:
-
-* first, in a given XBL scope, the function searches all models within that scope
-* second, it recursively searches ancestor XBL scopes
-
-For example, if there are no XBL components, and 2 top-level models:
-
-```xml
-<xf:model id="main-model">
-  <xf:instance id="main-instance">
-    ...
-  </xf:instance>
-</xf:model>
-<xf:model id="resources-model">
-  <xf:instance id="resources-instance">
-    ...
-  </xf:instance>
-</xf:model>
-...
-<xf:group model="main-model">
-  <xf:output value="xxf:instance('resources-instance')/title"/>
-</xf:group>
-```
-
-[SINCE Orbeon Forms 4.5] The `xxf:instance()` function can also take an absolute id as parameter.
-
 ## xxf:lang()
 
 ```ruby
@@ -209,8 +170,6 @@ Example:
 </xbl:xbl>
 ```
 
-
-
 ## xxf:property()
 
 ```
@@ -268,26 +227,3 @@ xxf:rewrite-resource-uri($uri as xs:string) as xs:string
 ```
 
 Rewrite a URI as an Orbeon Forms resource URI.
-
-## xxf:split()
-
-[SINCE Orbeon Forms 4.3]
-
-```ruby
-xxf:split() as xs:string*
-xxf:split($value as xs:string) as xs:string*
-xxf:split($value as xs:string, $separators as xs:string) as xs:string*
-```
-
-Split a string with one or more separator characters.
-
-If no argument is passed, split the context item on white space.
-
-If `$separator` is specified, each character is allowed as separator.
-
-```ruby
-xxf:split(' foo  bar   baz ')
-xxf:split('foo$bar_baz', '$_')
-element/xxf:split()
-element/@value/xxf:split()
-```
