@@ -193,6 +193,7 @@
         * Guide
             * [Tutorial](xforms/xbl/tutorial.md)
             * [Bindings](xforms/xbl/bindings.md)
+            * [Modes](xforms/xbl/modes.md)
             * [XForms Models](xforms/xbl/xforms-models.md)
             * [Including Content](xforms/xbl/including-content.md)
             * [Event Handling](xforms/xbl/event-handling.md)
