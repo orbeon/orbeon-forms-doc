@@ -1,4 +1,4 @@
-# XBL Conventions
+# Conventions
 
 <!-- toc -->
 

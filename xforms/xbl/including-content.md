@@ -1,4 +1,4 @@
-# XBL: Including content
+# Including content
 
 <!-- toc -->
 

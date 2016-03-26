@@ -1,4 +1,4 @@
-# XBL: Learning from existing components
+# Learning from existing components
 
 <!-- toc -->
 

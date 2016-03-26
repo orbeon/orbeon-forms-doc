@@ -1,4 +1,4 @@
-# XBL JavaScript
+# JavaScript Integration
 
 <!-- toc -->
 

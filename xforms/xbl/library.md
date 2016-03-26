@@ -1,4 +1,4 @@
-# XBL library
+# XBL Library
 
 <!-- toc -->
 
@@ -43,7 +43,7 @@ You can place inline `xbl:xbl` elements within the `xh:head` element, at the sam
 </xh:html>
 ```
 
-## By name bindings 
+## By name bindings
 
 Orbeon Forms allows for automatic inclusion of XBL bindings when matching by name only. This avoids including the XBL for those components in all the forms that use them. In addition, the bindings can be shared among forms, which saves memory and makes loading them faster.
 
@@ -68,7 +68,7 @@ With the property above:
 4. This is used to resolve the resource `oxf:/xbl/acme/button/button.xbl`.
     * The first part of the path is always `xbl`.
     * This is followed by the directory name found in step 3, here `acme`.
-    * This is followed by a directory with the same name as the local name of your component, containing an XBL file also with the same name, here `button/button.xbl`.  
+    * This is followed by a directory with the same name as the local name of your component, containing an XBL file also with the same name, here `button/button.xbl`.
     * The resource, if found, is automatically included in the page for XBL processing.
 
 By default, all the elements in the `http://orbeon.org/oxf/xml/form-runner` namespace (typically using the prefix `fr`) are handled this way, as a mapping is defined by default as follows:
