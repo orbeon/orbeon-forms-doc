@@ -104,4 +104,4 @@ You use this mode when the component implementation is mostly done in JavaScript
 
 The `nohandlers` mode disables automatic processing of nested event handlers. You should only need this for very special components.
 
-For an example and more details, see [http://doc.orbeon.com/xforms/xbl/event-handling.html#component-user-attaching-event-handlers-to-the-bound-node).
+For an example and more details, see [Component user: attaching event handlers to the bound node](http://doc.orbeon.com/xforms/xbl/event-handling.html#component-user-attaching-event-handlers-to-the-bound-node).
