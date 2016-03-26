@@ -6,9 +6,44 @@
 
 The XBL component binding defined with `<xbl:binding>` supports the `xxbl:mode` attribute, which contains an optional space-separated list of tokens. Each token enables a mode, as described below. Modes change the behavior of the component.
 
+Example:
+
+```xml
+<xbl:binding
+    id="fr-code-mirror"
+    element="fr|code-mirror"
+    xxbl:mode="lhha binding value external-value focus">
+```
+
 ## The binding mode
 
-The `binding` mode enables an optional XForms single-item binding. This means that the component can be used with XForms's `ref` or `bind` attribute, including the modifying `context` and `model` attributes.
+The `binding` mode enables an optional XForms single-item binding. This means that the component supports the XForms binding attributes:
+
+* `model`
+* `context`
+* `ref`
+* `bind`
+
+When a component has a binding, UI events are dispatched depending on the bound item:
+
+* `xforms-enabled` / `xforms-disabled`
+* `xforms-readonly` / `xforms-readwrite`
+* `xforms-optional` / `xforms-required`
+* `xforms-valid` / `xforms-invalid`
+
+You can access the actual bound node via the `xxf:binding()` function:
+
+```xml
+xxf:binding('fr-foo')
+```
+
+The id passed must be the id of the `xbl:binding` element.
+
+The `xxf:binding-context()` function returns the XPath evaluation context of the binding
+
+```xml
+xxf:binding-context('fr-foo')
+```
 
 For an example, see [Creating a single-node binding](http://doc.orbeon.com/xforms/xbl/tutorial.html#creating-a-single-node-binding).
 
