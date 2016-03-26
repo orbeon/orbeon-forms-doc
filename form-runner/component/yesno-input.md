@@ -1,4 +1,4 @@
-# Yes/No Component
+# Yes/No Answer Component
 
 <!-- toc -->
 
