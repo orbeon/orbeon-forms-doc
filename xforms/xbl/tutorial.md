@@ -35,9 +35,7 @@ Orbeon Forms provides direct support for bindings with the `binding` mode:
 <xbl:binding id="fr-foo" element="fr|foo" xxbl:mode="binding">
 ```
 
-This automatically means that the component supports all the XForms binding attributes, including `ref` and `bind`.
-
-When a component has a binding, UI events such as `xforms-enabled` / `xforms-disabled` and others are dispatched.
+This automatically means that the component supports all the XForms binding attributes, including `ref` and `bind`, and UI events such as `xforms-enabled` / `xforms-disabled` and others are dispatched as needed.
 
 You can access the actual bound node via the `xxf:binding()` function:
 
@@ -48,10 +46,6 @@ xxf:binding('fr-foo')
 The id passed must be the id of the `xbl:binding` element.
 
 For more, see [The binding mode](modes.md#the-binding-mode).
-
-```xml
-xxf:binding-context('fr-foo')
-```
 
 ## Adding support for a value
 

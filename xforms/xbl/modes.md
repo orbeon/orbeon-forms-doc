@@ -64,8 +64,8 @@ You use the `external-value` mode in addition to the `binding` and `value` modes
 By default, `value` doesn't expose the control's value to the client. By adding the `external-value` mode, the control's value:
 
 - can be set from the client using `ORBEON.xforms.Document.setValue`
-- can be read from the client using `ORBEON.xforms.Document.getValue` if the JavaScript companion class of the component supports it
-- is sent to the client in Ajax responses, and calls the JavaScript companion class of the component if it supports it
+- can be read from the client using `ORBEON.xforms.Document.getValue` if the JavaScript companion class of the component exposes a `getCurrentValue()` function
+- is sent to the client in Ajax responses and calls the JavaScript companion class's `updateWithServerValue()` if exposed
 
 For an example, see [the implementation of the `fr:code-mirror` component](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/code-mirror/code-mirror.xbl).
 
@@ -95,6 +95,8 @@ For examples, see [some of the Orbeon Forms XBL components](https://github.com/o
 ## The focus mode
 
 The `focus` mode allows the component to handle keyboard focus natively, so that the XForms engine is aware of focus.
+
+When the component receives focus, for example following an XForms `<xf:setfocus>` action, the JavaScript companion class of the component's `setFocus()` function is called.
 
 You use this mode when the component implementation is mostly done in JavaScript and not with nested XForms controls.
 
