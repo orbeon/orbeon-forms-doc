@@ -1,4 +1,4 @@
-# Tutorial
+# XBL Tutorial
 
 <!-- toc -->
 

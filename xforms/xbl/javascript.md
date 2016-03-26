@@ -1,10 +1,10 @@
-# JavaScript
+# XBL JavaScript
 
 <!-- toc -->
 
 ## Define a class for your component
 
-The XBL component shipped with Orbeon Forms are stored in their own directory under `/xbl/orbeon`. For instance, all the files for the currency component are under `/xbl/orbeon/currency`. To include a JavaScript file, use the `<xbl:script>` element directly inside the `<xbl:xbl>`:
+The XBL component shipped with Orbeon Forms are stored in their own directory under `/xbl/orbeon`. For instance, all the files for the currency component are under `/xbl/orbeon/currency`. To include a companion JavaScript file, use the `<xbl:script>` element directly inside the `<xbl:xbl>`:
 
 ```xml
 <xbl:xbl>
@@ -15,7 +15,7 @@ The XBL component shipped with Orbeon Forms are stored in their own directory un
 </xbl:xbl>
 ```
 
-In the JavaScript file corresponding to your component, declare a class as follows:
+In the JavaScript file corresponding to your component, declare a companion class as follows:
 
 ```javascript
 YAHOO.namespace("xbl.fr");

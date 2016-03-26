@@ -1,4 +1,4 @@
-# Extensions
+# XBL Extensions
 
 <!-- toc -->
 

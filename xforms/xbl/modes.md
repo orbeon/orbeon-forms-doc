@@ -1,4 +1,4 @@
-# Modes
+# XBL Modes
 
 <!-- toc -->
 
