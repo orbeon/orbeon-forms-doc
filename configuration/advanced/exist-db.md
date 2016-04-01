@@ -1,4 +1,4 @@
-# Limiter Filter
+# Configuring a Form Runner eXist database
 
 <!-- toc -->
 
