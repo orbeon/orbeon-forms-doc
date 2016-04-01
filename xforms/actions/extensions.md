@@ -1,5 +1,7 @@
 # Actions Extensions
 
+<!-- toc -->
+
 ## Extension actions
 
 ### The `<xxf:setvisited>` action
@@ -15,9 +17,9 @@ All attributes are AVTs.
 Example:
 
 ```xml
-<xxf:setvisited 
-    control="{$control-id}" 
-    visited="true" 
+<xxf:setvisited
+    control="{$control-id}"
+    visited="true"
     recurse="true"/>
 ```
 
