@@ -2,66 +2,155 @@
 
 <!-- toc -->
 
-## Define a class for your component
+## Rationale
 
-The XBL component shipped with Orbeon Forms are stored in their own directory under `/xbl/orbeon`. For instance, all the files for the currency component are under `/xbl/orbeon/currency`. To include a companion JavaScript file, use the `<xbl:script>` element directly inside the `<xbl:xbl>`:
+Some components do not require any custom JavaScript code, for example components which combine other controls (such as a date components made of separate input fields or dropdown menus). In such cases, you implement all the logic with XForms.
+
+On the other hand some components are introduced to encapsulate functionality mainly implemented in JavaScript. Orbeon Forms provides an easy way to interface with the JavaScript side. Each JavaScript-based component must define a JavaScript class used to handle the component's lifecycle as well as hold custom data and functions. This class is called the component's *companion class*. One instance of this class is created by Orbeon Forms for each instance of relevant (visible) control. We call these instances *companion instances*.
+
+## Directory layout
+
+You place your JavaScript files alongside your XBL file. See [Directory layout](bindings.md#directory-layout) for details.
+
+To include a companion JavaScript file, use the `<xbl:script>` element directly within the `<xbl:xbl>` element:
+
 
 ```xml
-<xbl:xbl>
-    <xbl:script src="/xbl/orbeon/currency/currency.js"/>
-    <xbl:binding id="fr-currency" element="fr|currency">
-        ....
+<xbl:xbl
+    xmlns:xf="http://www.w3.org/2002/xforms"
+    xmlns:acme="http://www.acme.com/xbl"
+    xmlns:xbl="http://www.w3.org/ns/xbl">
+
+    <xbl:script src="/xbl/acme/multi-tool/multi-tool.js"/>
+
+    <xbl:binding
+        id="acme-multi-tool"
+        element="acme|multi-tool">
+
+        ...binding definition here...
+
     </xbl:binding>
-</xbl:xbl>
+</xbl>
 ```
+
+## Creating and declaring a companion class
+
+### With Orbeon Forms 4.11 and newer
+
+Orbeon Forms 4.11 provides a simple way to declare a companion class. Here is the overall structure:
+
+```javascript
+(function() {
+
+    // Optional shortcut to jQuery
+    var $ = ORBEON.jQuery;
+
+    // Register your companion class by its binding name
+    ORBEON.xforms.XBL.declareCompanion('acme|multi-tool', {
+
+        // Your custom data goes here
+        myField: null,
+
+        init: function() {
+            // Perform your JavaScript initialization here
+        },
+        destroy: function() {
+            // Perform your JavaScript clean-up here
+        },
+        xformsFocus: function() {
+            // Orbeon Forms calls this when the control is handed focus
+        },
+        xformsUpdateReadonly: function(readonly) {
+            // Orbeon Forms calls this when the control's readonly status changes
+        },
+        xformsUpdateValue: function(newValue) {
+            // Orbeon Forms calls this when the control's value changes
+        },
+        xformsGetValue: function() {
+            // Orbeon Forms calls this to obtain the control's value
+        },
+        // Your custom functions go here
+        myFunction: function() {
+            ...
+        },
+    });
+})();
+
+```
+
+The first parameter to `declareCompanion()` must match the component's binding name, for example:
+
+- if your component's binding is `acme|multi-tool`
+    - pass `acme|multi-tool`
+    - you place the JavaScript file under `/xbl/acme/multi-tool/multi-tool.js`
+- if your component's binding is `foo|bar`
+    - pass `foo|bar`
+    - you place the JavaScript file under `/xbl/foo/bar/bar.js`
+
+### With Orbeon Forms 4.10 and earlier
 
 In the JavaScript file corresponding to your component, declare a companion class as follows:
 
 ```javascript
-YAHOO.namespace("xbl.fr");
-YAHOO.xbl.fr.Currency = function() {};
-ORBEON.xforms.XBL.declareClass(YAHOO.xbl.fr.Currency, "xbl-fr-currency");
-YAHOO.xbl.fr.Currency.prototype = {
+(function() {
 
-    attribute1: null,
-    attribute2: null,
+    // Optional shortcut to jQuery
+    var $ = ORBEON.jQuery;
 
-    init: function() {
+    YAHOO.namespace("xbl.acme");
+    YAHOO.xbl.acme.MultiTool = function() {};
+    ORBEON.xforms.XBL.declareClass(YAHOO.xbl.acme.MultiTool, "xbl-acme-multi-tool");
+    YAHOO.xbl.acme.MultiTool.prototype = {
+
+        // Your custom data goes here
+        myField: null,
+
+        init: function() {
+            // Perform your JavaScript initialization here
+        },
+        destroy: function() {
+            // Perform your JavaScript clean-up here
+        },
+        xformsFocus: function() {
+            // Orbeon Forms calls this when the control is handed focus
+        },
+        // Your custom functions go here
+        myFunction: function() {
+            ...
+        },
+
         ...
-    },
-
-    valueChanged: function() {
-        ...
-    },
-
-    ...
-};
+    };
+})();
 ```
 
-* `YAHOO.namespace("xbl.fr")` defines a namespace for your class. All the XBL components components that ship with Orbeon Forms are in the `xbl.fr` namespace. If you are defining a component for your company or project named Acme, you could use the namespace `xbl.acme`.
-
+* `YAHOO.namespace("xbl.acme")` defines a namespace for your class. All the XBL components components that ship with Orbeon Forms are in the `xbl.fr` namespace. If you are defining a component for your company or project named Acme, you could use the namespace `xbl.acme`.
 * ` ORBEON.xforms.XBL.declareClass()` defines your class as an XBL class:
-    * It takes 2 parameters: your class, and the CSS class found on the most HTML element that contains the markup for your components. This element is generated by Orbeon Forms, and the class name is derived from the id of your `<xbl:binding>;` for instance, if the id is `fr-currency`, the class name is `xbl-fr-currency`.
-    * It adds a static method to your class called `instance()`. It is a factory method, which you will use to get or create an object corresponding to the "current" component (more on this later).
-It define a static `container` attribute. In your JavaScript code, you can refer to this`.container` to retrieve the most outer HTML element corresponding to your component. For instance, if you know you have an input with the class xbl-fr-currency-xforms-input inside your component, you get the HTML element corresponding to that input with:
+    * It takes 2 parameters: your class, and the CSS class found on the outermost HTML element that contains the markup for your components. This element is generated by Orbeon Forms, and the class name is derived from the by-name binding of your `<xbl:binding>`. For instance, if the binding is `acme|multi-tool`, the class name is `xbl-acme-multi-tool`.
 
-```xml
-YAHOO.util.Dom.getElementsByClassName(
-    "xbl-fr-currency-xforms-input",
-    null,
-    this.container
-)[0];
-```
+### The companion class
+
+Both `declareCompanion()` and `declareClass()` create a JavaScript class and:
+
+- add a static `instance()` method.
+    - This is a factory method, which you will use to get or create an object corresponding to the "current" component (more on this later).
+- add a `container` attribute.
+    - In your JavaScript code, you can refer to `this.container` to retrieve the outermost HTML element corresponding to your component. For instance, if you know you have an input field with the class `` inside your component, you get the HTML element corresponding to that input with the following jQuery:
+        ```javascript
+        $(this.container).find('.acme-my-input')[0]
+        ```
 
 ## Call methods of your class on XForms events
 
-You can call a JavaScript method defined in your JavaScript class when an XForms event occurs. For instance, to call the `init()` method when on `xforms-enabled`, write:
+You can call a JavaScript method defined in your JavaScript class when an XForms event occurs. For instance, to call the `myFunction()` method on `xforms-enabled`, write:
 
 ```xml
-<xxf:script ev:event="xforms-enabled">YAHOO.xbl.fr.Currency.instance(this).init();</xxf:script>
+<xxf:script event="xforms-enabled">
+    YAHOO.xbl.acme.MultiTool.instance(this).myFunction();
+</xxf:script>
 ```
 
-The `instance()` method acts as an object factory for your component: it returns an instance of your class corresponding to the "current" component. It creates an instance of your class as necessary, and keeps track of existing objects, maintaing a 1-to-1 mapping between instances of the XBL component in the form and instance of your JavaScript class.
+The `instance()` method acts as an object factory for your component: it returns an instance of your class corresponding to the "current" component. It creates an instance of your class as necessary, and keeps track of existing objects, maintaining a 1-to-1 mapping between instances of the XBL component in the form and instance of your JavaScript class.
 
 ## Read-only parameters
 

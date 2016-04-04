@@ -18,6 +18,9 @@ An XBL file contains one or more *bindings*, expressed with the `xbl:binding` el
         element="acme|multi-tool">
 
         ...binding definition here...
+
+    </xbl:binding>
+</xbl>
 ```
 
 The binding:
