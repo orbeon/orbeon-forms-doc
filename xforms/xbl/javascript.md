@@ -147,18 +147,18 @@ $(this.container).find('.acme-my-input')[0]
 
 ### Summary of companion class methods
 
-| Method                 | Description                        | Mode                                 | Since            | Status |
-|------------------------|------------------------------------|--------------------------------------|------------------|--------|
-| `init`                 | initialize component               | `javascript-lifecycle`<sup>1</sup>   | 4.11<sup>1</sup> | fresh  |
-| `destroy`              | clean-up component                 | `javascript-lifecycle`               | 4.11             | fresh  |
-| `xformsUpdateReadonly` | change component readonly status   | `javascript-lifecycle`               | 4.11             | fresh  |
-| `xformsUpdateValue`    | update component value             | `external-value`                     | 4.11             | fresh  |
-| `xformsGetValue`       | get component value                | `external-value`                     | 4.11             | fresh  |
-| `xformsFocus`          | hand focus to component            | `focus`                              | 4.11             | fresh  |
-| `setFocus`             | hand focus to component            | `focus`                              | 4.0              | legacy |
-| `enabled`              | enable component after full update |                                      | 4.0              | legacy |
+| Method                 | Description              | Mode                                 | Since            | Status |
+|------------------------|--------------------------|--------------------------------------|------------------|--------|
+| `init`                 | initialize               | `javascript-lifecycle`<sup>1</sup>   | 4.11<sup>1</sup> | fresh  |
+| `destroy`              | clean-up                 | `javascript-lifecycle`               | 4.11             | fresh  |
+| `xformsUpdateReadonly` | change readonly status   | `javascript-lifecycle`               | 4.11             | fresh  |
+| `xformsUpdateValue`    | update value             | `external-value`                     | 4.11             | fresh  |
+| `xformsGetValue`       | get value                | `external-value`                     | 4.11             | fresh  |
+| `xformsFocus`          | hand focus               | `focus`                              | 4.11             | fresh  |
+| `setFocus`             | hand focus               | `focus`                              | 4.0              | legacy |
+| `enabled`              | enable after full update |                                      | 4.0              | legacy |
 
-1. The `init()` method is not new in Orbeon Forms 4.11, but when using the `javascript-lifecycle` mode it is called automatically. Prior to Orbeon Forms 4.11, it is called either via XForms event handlers, or as a side-effect of calls to `setFocus()` or `enabled()`.
+1. The `init()` method is not new in Orbeon Forms 4.11, but when using the `javascript-lifecycle` mode it is called automatically. Prior to Orbeon Forms 4.11, or when not using the `javascript-lifecycle`  mode, it is called either via XForms event handlers, or as a side-effect of calls to `setFocus()` or `enabled()`.
 
 ## Calling methods upon XForms events
 
