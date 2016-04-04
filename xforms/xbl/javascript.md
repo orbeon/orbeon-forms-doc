@@ -145,6 +145,18 @@ For example, if you know you have an input field with the class `acme-my-input` 
 $(this.container).find('.acme-my-input')[0]
 ```
 
+### Summary of companion class methods
+
+| Method                 | Description                       | Mode                                 | Since              |
+|------------------------|-----------------------------------|--------------------------------------|--------------------|
+| `init`                 | component initialization          | `javascript-lifecycle` or explicitly | 4.11 for automatic |
+| `destroy`              | component clean-up                | `javascript-lifecycle` or explicitly | 4.11 for automatic |
+| `xformsFocus`          | control is handed focus           | `focus`                              | 4.11               |
+| `setFocus`             | control is handed focus           | `focus`                              | 4.0                |
+| `xformsUpdateReadonly` | control readonly status changed   | `javascript-lifecycle`               | 4.11               |
+| `xformsUpdateValue`    | control value changed             | `external-value`                     | 4.11               |
+| `xformsGetValue`       | obtain the control value          | `external-value`                     | 4.11               |
+
 ## Calling methods upon XForms events
 
 ### With Orbeon Forms 4.11 and newer

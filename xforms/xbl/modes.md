@@ -106,7 +106,13 @@ You use this mode when the component implementation is mostly done in JavaScript
 
 The `focus` mode allows the component to handle keyboard focus natively, so that the XForms engine is aware of focus.
 
-When the component receives focus, for example following an XForms `<xf:setfocus>` action, the JavaScript companion class of the component's `setFocus()` function is called.
+[SINCE Orbeon Forms 4.11]
+
+When the component receives focus, for example following an XForms `<xf:setfocus>` action, the JavaScript companion class's `xformsFocus()` method is called if present. If the method is missing, then the legacy `setFocus()` method is called.
+
+[UNTIL Orbeon Forms 4.10 included]
+
+The JavaScript companion class's `setFocus()` method is called if present.
 
 ## The nohandlers mode
 
