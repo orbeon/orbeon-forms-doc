@@ -1,4 +1,4 @@
-# JavaScript Integration
+# JavaScript Companion Classes
 
 <!-- toc -->
 

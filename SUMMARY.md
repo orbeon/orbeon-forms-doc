@@ -194,15 +194,15 @@
         * Guide
             * [Tutorial](xforms/xbl/tutorial.md)
             * [Bindings](xforms/xbl/bindings.md)
-            * [Modes](xforms/xbl/modes.md)
             * [XForms Models](xforms/xbl/xforms-models.md)
             * [Including Content](xforms/xbl/including-content.md)
             * [Event Handling](xforms/xbl/event-handling.md)
             * [Conventions](xforms/xbl/conventions.md)
             * [Learning from Existing Components](xforms/xbl/learning-from-existing-components.md)
         * Advanced topics
+            * [Modes](xforms/xbl/modes.md)
+            * [JavaScript Companion Classes](xforms/xbl/javascript.md)
             * [XBL Library](xforms/xbl/library.md)
-            * [JavaScript](xforms/xbl/javascript.md)
             * [Extensions](xforms/xbl/extensions.md)
     * XForms tutorial
         * [Introduction](xforms/tutorial/introduction.md)
