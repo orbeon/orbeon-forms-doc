@@ -173,15 +173,18 @@ With Orbeon Forms 4.10 and earlier, you obtain the class using the JavaScript na
 
 [SINCE Orbeon Forms 4.11]
 
-When the [`external-value` mode](modes.md#the-value-mode) is enabled, the following two methods must be provided:
+When the [`external-value` mode](modes.md#the-externalvalue-mode) is enabled, the following two methods must be provided:
 
 - `xformsUpdateValue()`
 - `xformsGetValue()`
+
+For an example, see [the implementation of the `fr:code-mirror` component](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/code-mirror/code-mirror.xbl).
 
 ### The xformsUpdateValue method
 
 The XForms engine calls this method:
 
+- if the `javascript-lifecycle` mode is enabled, just after the control is initialized,
 - when the internal value of the control changes,
 - and in response to calls to `ORBEON.xforms.Document.setValue()`.
 
@@ -190,15 +193,12 @@ The XForms engine calls this method:
 If the value is not set synchronously, `xformsUpdateValue()` must return a deferred object whose `done()` method must be called once the value is known to have been fully applied. For example, using jQuery:
 
 ```javascript
-var editor = this.editor;
-
+var editor   = this.editor;
 var deferred = $.Deferred();
-
 setTimeout(function() {
     editor.setValue(newValue);
     deferred.resolve();
 }, 0);
-
 return deferred.promise();
 ```
 
@@ -214,6 +214,54 @@ The XForms engine calls this method when:
 - and in response to calls to `ORBEON.xforms.Document.getValue()`.
 
 `xformsGetValue()` returns a string obtained from the associated JavaScript control.
+
+## Support for the javascript-lifecycle mode
+
+### Introduction
+
+[SINCE Orbeon Forms 4.11]
+
+When the [`javascript-lifecycle` mode](modes.md#the-javascriptlifecycle-mode) is enabled, the following methods should be provided:
+
+- `init()`
+- `destroy()`
+- `xformsUpdateReadonly()`
+
+*NOTE: The XForms engine does not call these methods if they are not present.*
+
+On the JavaScript side, the lifecycle of a companion instance does not exactly follow that of the XForms controls when repeats are involved.
+
+For an example, see [the implementation of the `fr:code-mirror` component](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/code-mirror/code-mirror.xbl).
+
+### The init method
+
+The `init()` method is called when the control becomes relevant, including:
+
+- when the page first loads and the control is initially relevant
+- when the control becomes relevant at a later time
+- when a new repeat iteration is added
+- when `xxf:full-update` or `xxf:dynamic` replace an entire block of HTML on the client
+
+### The destroy method
+
+The `destroy()` method is called when the control becomes non-relevant, including:
+
+- when the control becomes non-relevant after the page has loaded
+
+As of Orbeon Forms 4.11, it is *not* called:
+
+- when a repeat iteration is removed
+- when `xxf:full-update` or `xxf:dynamic` replace an entire block of HTML on the client
+
+The assumption is that, when HTML elements are removed from the browser DOM, the associated JavaScript resources are garbage-collected. This means that you have to be careful about clean-up of event handlers in particular in such cases.
+
+### The xformsUpdateReadonly method
+
+The `xformsUpdateReadonly()` method is called when the control's readonly status changes.
+
+It takes a boolean parameter set to `true` if the control becomes readonly and to `false` if the control becomes readwrite.
+
+It is *not* called just after the control is initialized.
 
 ## Read-only parameters
 

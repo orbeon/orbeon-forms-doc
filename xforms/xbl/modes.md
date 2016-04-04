@@ -61,15 +61,23 @@ For an example, see [Adding support for a value](http://doc.orbeon.com/xforms/xb
 
 You use the `external-value` mode in addition to the `binding` and `value` modes.
 
-By default, `value` doesn't expose the control's value to the client. By adding the `external-value` mode, the control's value is made available to the client and accessible via JavaScript. It:
+You use this mode when the component implementation is mostly done in JavaScript and not with nested XForms controls.
 
-- can be set from JavaScript using `ORBEON.xforms.Document.setValue()`
-- can be read from JavaScript using `ORBEON.xforms.Document.getValue()`
-- is sent to the client in Ajax responses and calls the JavaScript companion class's `xformsUpdateValue()` if exposed
+By default, `value` doesn't expose the control's value to the client. By adding the `external-value` mode, the control's value is made available to the client and accessible via JavaScript.
 
-For an example, see [the implementation of the `fr:code-mirror` component](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/code-mirror/code-mirror.xbl).
+For more details, see [Support for the external-value mode](javascript.md#support-for-the-externalvalue-mode).
+
+## The javascript-lifecycle mode
+
+[SINCE Orbeon Forms 4.11]
 
 You use this mode when the component implementation is mostly done in JavaScript and not with nested XForms controls.
+
+The `javascript-lifecycle` mode lets Orbeon Forms handle more of a JavaScript companion class's lifecycle, including initialization, destruction, and state changes. You often use it in conjunction with `external-value`.
+
+For example prior to Orbeon Forms 4.11, you would call the component's `init()` method from XForms event handlers. With `javascript-lifecycle`, this is no longer needed.
+
+For more details, see [Support for the javascript-lifecycle mode](javascript.md#support-for-the-javascriptlifecycle-mode).
 
 ## The lhha and custom-lhha modes
 
@@ -94,11 +102,11 @@ For examples, see [some of the Orbeon Forms XBL components](https://github.com/o
 
 ## The focus mode
 
+You use this mode when the component implementation is mostly done in JavaScript and not with nested XForms controls.
+
 The `focus` mode allows the component to handle keyboard focus natively, so that the XForms engine is aware of focus.
 
 When the component receives focus, for example following an XForms `<xf:setfocus>` action, the JavaScript companion class of the component's `setFocus()` function is called.
-
-You use this mode when the component implementation is mostly done in JavaScript and not with nested XForms controls.
 
 ## The nohandlers mode
 
