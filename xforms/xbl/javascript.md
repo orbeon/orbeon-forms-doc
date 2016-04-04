@@ -57,9 +57,6 @@ Orbeon Forms 4.11 provides a simple way to declare a companion class. Here is th
         destroy: function() {
             // Perform your JavaScript clean-up here
         },
-        xformsFocus: function() {
-            // Orbeon Forms calls this when the control is handed focus
-        },
         xformsUpdateReadonly: function(readonly) {
             // Orbeon Forms calls this when the control's readonly status changes
         },
@@ -68,6 +65,9 @@ Orbeon Forms 4.11 provides a simple way to declare a companion class. Here is th
         },
         xformsGetValue: function() {
             // Orbeon Forms calls this to obtain the control's value
+        },
+        xformsFocus: function() {
+            // Orbeon Forms calls this when the control is handed focus
         },
         // Your custom functions go here
         myFunction: function() {
@@ -147,15 +147,18 @@ $(this.container).find('.acme-my-input')[0]
 
 ### Summary of companion class methods
 
-| Method                 | Description                       | Mode                                 | Since              |
-|------------------------|-----------------------------------|--------------------------------------|--------------------|
-| `init`                 | component initialization          | `javascript-lifecycle` or explicitly | 4.11 for automatic |
-| `destroy`              | component clean-up                | `javascript-lifecycle` or explicitly | 4.11 for automatic |
-| `xformsFocus`          | control is handed focus           | `focus`                              | 4.11               |
-| `setFocus`             | control is handed focus           | `focus`                              | 4.0                |
-| `xformsUpdateReadonly` | control readonly status changed   | `javascript-lifecycle`               | 4.11               |
-| `xformsUpdateValue`    | control value changed             | `external-value`                     | 4.11               |
-| `xformsGetValue`       | obtain the control value          | `external-value`                     | 4.11               |
+| Method                 | Description                        | Mode                                 | Since            | Status |
+|------------------------|------------------------------------|--------------------------------------|------------------|--------|
+| `init`                 | initialize component               | `javascript-lifecycle`<sup>1</sup>   | 4.11<sup>1</sup> | fresh  |
+| `destroy`              | clean-up component                 | `javascript-lifecycle`               | 4.11             | fresh  |
+| `xformsUpdateReadonly` | change component readonly status   | `javascript-lifecycle`               | 4.11             | fresh  |
+| `xformsUpdateValue`    | update component value             | `external-value`                     | 4.11             | fresh  |
+| `xformsGetValue`       | get component value                | `external-value`                     | 4.11             | fresh  |
+| `xformsFocus`          | hand focus to component            | `focus`                              | 4.11             | fresh  |
+| `setFocus`             | hand focus to component            | `focus`                              | 4.0              | legacy |
+| `enabled`              | enable component after full update |                                      | 4.0              | legacy |
+
+1. The `init()` method is not new in Orbeon Forms 4.11, but when using the `javascript-lifecycle` mode it is called automatically. Prior to Orbeon Forms 4.11, it is called either via XForms event handlers, or as a side-effect of calls to `setFocus()` or `enabled()`.
 
 ## Calling methods upon XForms events
 
