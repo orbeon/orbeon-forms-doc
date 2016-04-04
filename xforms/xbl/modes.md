@@ -61,11 +61,11 @@ For an example, see [Adding support for a value](http://doc.orbeon.com/xforms/xb
 
 You use the `external-value` mode in addition to the `binding` and `value` modes.
 
-By default, `value` doesn't expose the control's value to the client. By adding the `external-value` mode, the control's value:
+By default, `value` doesn't expose the control's value to the client. By adding the `external-value` mode, the control's value is made available to the client and accessible via JavaScript. It:
 
-- can be set from the client using `ORBEON.xforms.Document.setValue`
-- can be read from the client using `ORBEON.xforms.Document.getValue` if the JavaScript companion class of the component exposes a `getCurrentValue()` function
-- is sent to the client in Ajax responses and calls the JavaScript companion class's `updateWithServerValue()` if exposed
+- can be set from JavaScript using `ORBEON.xforms.Document.setValue()`
+- can be read from JavaScript using `ORBEON.xforms.Document.getValue()`
+- is sent to the client in Ajax responses and calls the JavaScript companion class's `xformsUpdateValue()` if exposed
 
 For an example, see [the implementation of the `fr:code-mirror` component](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/code-mirror/code-mirror.xbl).
 

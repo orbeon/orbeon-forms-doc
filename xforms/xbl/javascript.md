@@ -167,6 +167,54 @@ With Orbeon Forms 4.10 and earlier, you obtain the class using the JavaScript na
 </xxf:action>
 ```
 
+## Support for the external-value mode
+
+### Introduction
+
+[SINCE Orbeon Forms 4.11]
+
+When the [`external-value` mode](modes.md#the-value-mode) is enabled, the following two methods must be provided:
+
+- `xformsUpdateValue()`
+- `xformsGetValue()`
+
+### The xformsUpdateValue method
+
+The XForms engine calls this method:
+
+- when the internal value of the control changes,
+- and in response to calls to `ORBEON.xforms.Document.setValue()`.
+
+`xformsUpdateValue()` receives a string and must update the associated JavaScript control, making the value accessible to the user.
+
+If the value is not set synchronously, `xformsUpdateValue()` must return a deferred object whose `done()` method must be called once the value is known to have been fully applied. For example, using jQuery:
+
+```javascript
+var editor = this.editor;
+
+var deferred = $.Deferred();
+
+setTimeout(function() {
+    editor.setValue(newValue);
+    deferred.resolve();
+}, 0);
+
+return deferred.promise();
+```
+
+This allows the XForms engine to know when it is safe to call `xformsGetValue()` after a new value has been set.
+
+When updating the value is synchronous, `xformsUpdateValue()` must simply return `undefined` (which is the default for JavaScript functions).
+
+### The xformsGetValue method
+
+The XForms engine calls this method when:
+
+- it needs the control's value,
+- and in response to calls to `ORBEON.xforms.Document.getValue()`.
+
+`xformsGetValue()` returns a string obtained from the associated JavaScript control.
+
 ## Read-only parameters
 
 So your JavaScript can access the current value of parameters and be notified when their value changes, include the `oxf:/oxf/xslt/utils/xbl.xsl` XSL file, and call `xxbl:parameter()` function for each parameter, as in:
