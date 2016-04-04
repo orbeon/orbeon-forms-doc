@@ -145,7 +145,7 @@ For example, if you know you have an input field with the class `acme-my-input` 
 $(this.container).find('.acme-my-input')[0]
 ```
 
-## Calling methods of your class when receiving XForms events
+## Calling methods upon XForms events
 
 ### With Orbeon Forms 4.11 and newer
 
