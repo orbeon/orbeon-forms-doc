@@ -307,11 +307,7 @@ Then in JavaScript, you can access the current value of the property with:
 
 ```javascript
 var prefixElement =
-    YAHOO.util.Dom.getElementsByClassName(
-        "xbl-fr-currency-prefix",
-        null,
-        this.container
-    )[0];
+    $(this.container).find('.xbl-fr-currency-prefix')[0];
 
 var prefix =
     ORBEON.xforms.Document.getValue(prefixElement.id);
