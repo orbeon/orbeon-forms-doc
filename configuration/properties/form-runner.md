@@ -210,7 +210,7 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
 
 The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md).
 
-### Loading indicator inside buttons
+### Loading indicator for buttons
 
 [SINCE Orbeon Forms 4.11]
 
