@@ -214,20 +214,25 @@ The property configures which buttons are included on the Detail Page, and in wh
 
 [SINCE Orbeon Forms 4.11]
 
-The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BUTTON` by a specific button name, allows you to instruct Orbeon Forms to show a loading indicator inside the button when that button on the detail page is pressed, as shown below:
+The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BUTTON` by a specific button name, allows you to configure which loading indicator, if any, is to be used for that button. The value of the property can be either:
 
-![Loading indicator inside Save](http://i.imgur.com/w1qbdF8.gif)
+- Empty, which is the default, and means "no loading indicator".
+- `modal`, greys out the background, shows a spinner in the center of the screen, and prevents any user input as long as the action triggered by the button is being processed.
+- `inline`, shows a spinner inside the button itself, as in:
+  ![Loading indicator inside Save](http://i.imgur.com/w1qbdF8.gif)
 
-By default, only the `save-final` button is setup to show this loading indicator, this with the following property:
+In general, we would expect this property to be used as follows:
 
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.detail.loading-indicator.save-final.*.*"
-    value="true"/>
-```
+- `modal` for buttons performing actions for which allowing users to change the value of fields after the button is pressed wouldn't make any sense, would be confusing, or outright dangerous. This would for instance be the case for *submit* or *publish* buttons.
+- `inline` for buttons performing actions that are expected to take a little bit of time, like a *save* operation.
+- Empty for any other button.
 
-Should you not want the loading indicator to show for that button, override this property and set its value to `false`. To have the loading indicator show for other buttons, set a similar property, replacing `save-final` by the name of the button for which you'd like the loading indicator to show.
+In all cases, should an action take any noticeable amount of time, Orbeon Forms will always show a loading bar at the top of the page, so users know one of their actions is being processed.
+
+By default:
+
+- The `modal` loading indicator used for the `submit` button.
+- The `inline` loading indicator for the *save* buttons (`save-draft` and `save-final`).
 
 ### Buttons in Detail Page custom views
 
