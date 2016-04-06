@@ -219,7 +219,8 @@ The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BU
 - Empty, which is the default, and means "no loading indicator".
 - `modal`, greys out the background, shows a spinner in the center of the screen, and prevents any user input as long as the action triggered by the button is being processed.
 - `inline`, shows a spinner inside the button itself, as in:
-  ![Loading indicator inside Save](http://i.imgur.com/w1qbdF8.gif)
+
+![Loading indicator inside Save](http://i.imgur.com/w1qbdF8.gif)
 
 In general, we would expect this property to be used as follows:
 
