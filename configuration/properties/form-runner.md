@@ -218,9 +218,7 @@ The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BU
 
 - Empty, which is the default, and means "no loading indicator".
 - `modal`, greys out the background, shows a spinner in the center of the screen, and prevents any user input as long as the action triggered by the button is being processed.
-- `inline`, shows a spinner inside the button itself, as in:
-
-![Loading indicator inside Save](http://i.imgur.com/w1qbdF8.gif)
+- `inline`, shows a spinner inside the button itself.
 
 In general, we would expect this property to be used as follows:
 
@@ -230,10 +228,13 @@ In general, we would expect this property to be used as follows:
 
 In all cases, should an action take any noticeable amount of time, Orbeon Forms will always show a loading bar at the top of the page, so users know one of their actions is being processed.
 
-By default:
+By default, as shown in the below video:
 
 - The `modal` loading indicator used for the `submit` button.
 - The `inline` loading indicator for the *save* buttons (`save-draft` and `save-final`).
+
+![Loading indicators](../images/loading-indicators.gif)
+
 
 ### Buttons in Detail Page custom views
 
