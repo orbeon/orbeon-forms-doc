@@ -4,7 +4,7 @@
 
 ## Rationale
 
-This components wraps the [TinyMCE][1] WYSIWYG editor. You can use it as an alternative to an `<xf:textarea mediatype="text/html">`, which uses the [YUI 2 RTE][2].
+This components wraps the [TinyMCE][1] WYSIWYG editor.
 
 ![](images/xbl-tinymce.png)
 
@@ -15,6 +15,14 @@ Include the TinyMCE editor in your page with:
 ```xml
 <fr:tinymce ref="..."/>
 ```
+
+Since Orbeon Forms 4.11, it is also enabled with:
+
+```xml
+<xf:textarea mediatype="text/html">
+```
+
+Until Orbeon Forms 4.10 included, `<xf:textarea mediatype="text/html">` was using the deprecated YUI 2 RTE editor.
 
 ### Configuration
 
@@ -35,7 +43,6 @@ The component supports being bound to a node which can be read-only or non-relev
 * Because of the update heuristic (see above), by design the TinyMCE won't update if the value of the bound node changes while the focus is on the TinyMCE.
 
 [1]: http://www.tinymce.com/
-[2]: http://developer.yahoo.com/yui/editor/
 [4]: http://www.tinymce.com/wiki.php/Configuration
 [5]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/tinymce/tinymce-config.js
 [6]: http://thebigreason.com/blog/2008/09/29/thebigreason-tinymce-skin
