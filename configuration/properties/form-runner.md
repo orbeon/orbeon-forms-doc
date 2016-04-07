@@ -534,7 +534,7 @@ You can use all the buttons available on the Detail Page. In addition, the follo
     * Label: "Edit"
     * Action: Navigate back to the Detail Page in "edit" mode.
 
-### Show Orbeon Forms version
+## Show Orbeon Forms version
 
 [UNTIL Orbeon Forms 4.6, use `oxf.show-version` starting Orbeon Forms 4.6.1]
 
@@ -547,7 +547,7 @@ You can use all the buttons available on the Detail Page. In addition, the follo
 
 Whether to show the Orbeon Forms version at the bottom.
 
-### Default logo
+## Default logo
 
 ```xml
 <property
@@ -560,9 +560,9 @@ With this property, you can set the default logo URI. This logo appears on the s
 
 If you use two `*` wildcards, as in the example above, the property also sets the logo on the [Form Runner Home page](../../form-runner/feature/home-page.md).
 
-### Adding your own CSS
+## Adding your own CSS
 
-#### Adding your own CSS files
+### Adding your own CSS files
 
 1. Place your CSS file(s) under one of the following recommended locations:
     * `WEB-INF/resources/forms/assets`: CSS for all forms
@@ -600,7 +600,7 @@ You can add more than one file, and just separate the paths by whitespace in the
 -----|-----|-----
  Change the width of a column |  `.fr-grid-invoice .fr-grid-col-1 { width: 40px }` | 1. In Form Builder, you can name grids (for now [only repeated grids can be named][18]). When doing so, the table element corresponding to your grid gets a `fr-grid-my-name` class, where `my-name` is the name you choose for the grid. In the example, the name was `invoice`.<br>2. Each column gets a class `fr-grid-col-1`, `fr-grid-col-2` and so on, starting with the number 1.
 
-### Adding your own JavaScript
+## Adding your own JavaScript
 
 [SINCE Orbeon Forms 4.4]
 
@@ -619,7 +619,7 @@ You can add more than one file, and just separate the paths by whitespace in the
 
 You can add more than one file, and just separate the paths by whitespace in the property.
 
-### Overriding resources
+## Overriding resources
 
 In some cases, it might make sense to change some of the resources provided out of the box by Form Runner. For instance, the Detail Page can have a submit button, which in English has a label "Submit". For your application, another label might make more sense, for instance "Send". To override Form Runner resources, you define properties with a name that has the following structure:
 
@@ -638,7 +638,7 @@ For instance, to change the label of the submit button to be "Send" in English f
     value='&lt;i class="icon-arrow-right"/&gt; Send'/>
 ```
 
-### Email settings
+## Email settings
 
 These properties control email sending in Form Runner:
 
