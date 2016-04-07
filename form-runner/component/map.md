@@ -17,9 +17,12 @@ This component renders a Google Maps widget on the page. It is bound to an addre
 You use the map component with:
 
 ```xml
-<fr:map address-ref="address" id="unittest-map"
-        longitude-ref="longitude" latitude-ref="latitude"
-        style="width: 500px; height: 300px"/>
+<fr:map
+    address-ref="address"
+    id="unittest-map"
+    longitude-ref="longitude"
+    latitude-ref="latitude"
+    style="width: 500px; height: 300px"/>
 ```
 
 Where:
@@ -33,20 +36,23 @@ Where:
 If you wish to deploy a form using the map component (other than accessing your form with a URL such as `http://localhost:8080/orbeon/...`), you need to [obtain a Google API Key](https://developers.google.com/maps/documentation/javascript/tutorial#api_key). After you obtained your key, indicate it in the following property that you add to your config/properties-local.xml:
 
 ```xml
-<property as="xs:string"
-          name="oxf.xforms.xbl.fr.map.key"
-          value="..."/>
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.map.key"
+    value="..."/>
 ```
 
 Since Orbeon Forms 4.8, the map component uses the Google Map v3 API, and this all you need. Orbeon Forms 4.7 and earlier was using the Google Map v2 API, which is now obsolete, on which the following 2 additional properties for [Google Maps APIs Premium Plan](https://developers.google.com/maps/premium/?csw=1) customers are supported:
 
 ```xml
-<property as="xs:string"
-          name="oxf.xforms.xbl.fr.map.clientid"
-          value="..."/>
-<property as="xs:boolean"
-          name="oxf.xforms.xbl.fr.map.ssl"
-          value="true"/>
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.map.clientid"
+    value="..."/>
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.map.ssl"
+    value="true"/>
 ```
 
 The first is used in place of `oxf.xforms.xbl.fr.map.key` (the client id should be set without the leading `gme-` prefix), and the second allows you to tell Google Maps to use HTTPS. (Since Orbeon Forms 4.8, the component always uses HTTPS to talk to Google's servers, whether your forms are served from an HTTPS server or not.)
