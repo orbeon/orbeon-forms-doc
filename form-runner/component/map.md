@@ -38,7 +38,7 @@ If you wish to deploy a form using the map component (other than accessing your 
           value="..."/>
 ```
 
-Since Orbeon Forms 4.8, the map component uses the Google Map v3 API, and this all you need. Orbeon Forms 4.7 and earlier was using the Google Map v2 API, which is now obsolete, on which the following 2 additional properties for [Google Maps Premier](http://code.google.com/apis/maps/documentation/premier/guide.html) customers are supported:
+Since Orbeon Forms 4.8, the map component uses the Google Map v3 API, and this all you need. Orbeon Forms 4.7 and earlier was using the Google Map v2 API, which is now obsolete, on which the following 2 additional properties for [Google Maps APIs Premium Plan](https://developers.google.com/maps/premium/?csw=1) customers are supported:
 
 ```xml
 <property as="xs:string"
