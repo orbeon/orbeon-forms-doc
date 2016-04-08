@@ -71,9 +71,3 @@ In most cases, this happens because the browser cut the connection, as a way to 
 if users clicked on a link to load a page, and while the page is being loaded interrupt the browser, for instance by clicking on another link (assuming the
 previous page is still visible), or pressing the _escape_ key or the equivalent browser button, or closing the browser window or tab. Unless you also see
 another user-facing issue, you don't need to worry about this exception in the logs.
-
-## Can you provide performance numbers?
-
-As of 2015, we have tests showing that a modern Intel server CPU with 4-8 cores can handle 200-400 users concurrently filling form data.
-
-However please note that this can vary widely depending on the complexity and size of the forms.
