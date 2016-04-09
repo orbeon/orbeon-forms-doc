@@ -1039,14 +1039,38 @@ drop table orbeon_form_data_attach ;
 - test Bookshelf help
 - create form with fields, including checkboxes/radio buttons
 
-### Responsive [4.10 DONE]
+### Mobile and Responsive [4.10 DONE]
 
-- access detail page from iPhone
-    - Bookshelf
-    - DMV-14
-    - W-9
-    - Controls
-    - Contact
+- setup
+    - iPhone 6S or 6S Plus
+    - can also test more using simulator
+- default layout
+    - NOTE: Summary and Home are not responsive as of 4.11
+    - Contact Form / Bookshelf Form
+        - looks ok
+        - can navigate to `view` and back
+        - PDF shows
+- wizard layout
+    - general
+        - looks ok
+        - can navigate sections via TOC at top
+        - buttons at bottom work
+        - can enter data, select checkboxes/radio buttons
+        - can pinch zoom
+            - add error, save, must de-zoom before showing error dialog
+    - Control Form
+        - NOTE: Repeat not handled nicely.
+        - PDF
+    - DMV-14 Form
+        - NOTE: Repeat not handled nicely.
+        - PDF
+    - W-9 Form
+        - PDF
+
+- Number field
+    - test that non-negative integers show keypad
+    - other numbers show number pane
+    - if decimal separator is `,`, show regular pane (if US settings)
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 
 ### Home Page [4.10 DONE]
