@@ -1072,6 +1072,7 @@ drop table orbeon_form_data_attach ;
     - other numbers show number pane
     - if decimal separator is `,`, show regular pane (if US settings)
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
+- close [#2476](https://github.com/orbeon/orbeon-forms/issues/2476) when satisfied
 
 ### Home Page [4.10 DONE]
 
