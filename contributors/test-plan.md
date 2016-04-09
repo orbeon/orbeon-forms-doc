@@ -6,7 +6,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ## Misc
 
-### Distribution [4.10 DONE]
+### Distribution
 
 - README.md is up to date
   - links not broken (use Marked to save HTML, then check w/ Integrity)
@@ -25,7 +25,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - dropping the WAR file (with license included or in ~/.orbeon/license.xml) into Tomcat and Liferay works - out of the box
 - make sure the PE license is not included
 
-### Landing Page [4.10 DONE]
+### Landing Page
 
 - version number is correct in logs when starting
 - home page
@@ -34,7 +34,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - XForms examples
   - load, look reasonable, and work
 
-### PE Features Availability [4.10 DONE]
+### PE Features Availability
 
 check that all PE features are available in PE, but not in CE:
 
@@ -89,7 +89,7 @@ check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-###  Basic Persistence [4.10 DONE]
+###  Basic Persistence
 
 Do at least for eXist and DB2, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases. But if possible do for the other relational databases as well.
 
@@ -139,7 +139,7 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
     - go to /fr/
     - check that form definitions from all persistence layers show
 
-### Versioning [4.10 DONE]
+### Versioning
 
 - Setup
     - Database: try with db2 at least.
@@ -258,7 +258,7 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
                 - message about overwrite
             - publish message says version 1 was updated
 
-### Data Capture Permissions [4.10 DONE]
+### Data Capture Permissions
 
 - Setup
     - Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
@@ -350,7 +350,7 @@ Do at least for eXist and DB2, as automated tests already test most of this, and
                     - delete button enabled and works
                     - on open data, can edit data
 
-### Autosave and Permissions Test [4.10 DONE]
+### Autosave and Permissions Test
 
 Repeat what follows with Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
 
@@ -458,7 +458,7 @@ Authorize on:
     1. Go back to /edit
     1. Dialog must propose loading draft
 
-### DB2 DDL [4.10 DONE]
+### DB2 DDL
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
@@ -474,7 +474,7 @@ drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
 ```
 
-### Oracle and DB2 Flat View [4.10 DONE]
+### Oracle and DB2 Flat View
 
 - Make sure Oracle and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -515,7 +515,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder
 
-### Basic Features [4.10 DONE]
+### Basic Features
 
 - create new form
 - insert sections, grids, repeated grids
@@ -610,7 +610,7 @@ drop table orbeon_form_data_attach ;
     - more than one instance of form data
 - test from Proxy Portlet
 
-### Schema Support [4.10 DONE]
+### Schema Support
 
 - attach Schema
     - use e.g. [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd) or the [XForms simple types](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
@@ -623,7 +623,7 @@ drop table orbeon_form_data_attach ;
     - check that validation is working as per the types
     - check schema types are reloaded in Control Settings dialog
 
-### Database service [4.10 DONE]
+### Database service
 
 - setup db
     - use MySQL on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
@@ -658,7 +658,7 @@ drop table orbeon_form_data_attach ;
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service [4.10 DONE]
+### HTTP service
 
 - using echo service is ok
     - POST to `/fr/service/custom/orbeon/echo`
@@ -677,7 +677,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder / Form Runner
 
-### Section Templates [4.10 DONE]
+### Section Templates
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
@@ -713,7 +713,7 @@ drop table orbeon_form_data_attach ;
 - make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10!)
 - makes invalid controls in section template prevent saving
 
-### PDF Automatic [4.10 DONE]
+### PDF Automatic
 
 - Controls and Bookshelf: input field and text areas have highlighted and clickable links
 - Controls: image annotation shows in PDF
@@ -722,7 +722,7 @@ drop table orbeon_form_data_attach ;
 - page numbering/total at bottom center
 - PDF looks good overall
 
-### PDF Template [4.10 DONE]
+### PDF Template
 
 
 - attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
@@ -738,7 +738,7 @@ drop table orbeon_form_data_attach ;
 - W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions [4.10 DONE]
+### Form Builder Permissions
 
 
 - *NOTES 2014-03-20*
@@ -849,7 +849,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Runner
 
-### Sample forms [4.10 DONE]
+### Sample forms
 
 - load all
 - Controls
@@ -871,7 +871,7 @@ drop table orbeon_form_data_attach ;
   - PDF template works
   -
 
-### Errors and warnings [4.10 DONE]
+### Errors and warnings
 
 - FB: create form
     - required field
@@ -884,7 +884,7 @@ drop table orbeon_form_data_attach ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to review page
 
-### Process buttons [4.10 DONE]
+### Process buttons
 
 - create and publish guest/test
 - add [these properties](https://gist.github.com/ebruchez/5666643), and add `review` the list of buttons in the first property
@@ -902,7 +902,7 @@ drop table orbeon_form_data_attach ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads [4.10 DONE]
+### Attachments/uploads
 
 - basic upload works
 - removing uploaded file works
@@ -925,7 +925,7 @@ drop table orbeon_form_data_attach ;
     - cancel midway works
     - progress indicator works
 
-### Submit [4.10 DONE]
+### Submit
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -946,7 +946,7 @@ drop table orbeon_form_data_attach ;
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email [4.10 DONE]
+### Email
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -974,14 +974,14 @@ drop table orbeon_form_data_attach ;
   - contains attachments, XML, PDF and TIFF [SINCE 4.11]
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc [4.10 DONE]
+### Misc
 
 - switch language
 - open/close sections
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode [4.10 DONE]
+### Noscript mode
 
 - orbeon/contact
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
@@ -997,7 +997,7 @@ drop table orbeon_form_data_attach ;
     - errors prevent saving
     - Refresh icon works
 
-### Wizard [4.10 DONE]
+### Wizard
 
 - validated mode
     - `/fr/orbeon/w9/new`
@@ -1007,7 +1007,7 @@ drop table orbeon_form_data_attach ;
 - /fr/orbeon/controls/new
     - test errors in section template are highlighted in TOC
 
-### Captcha [4.10 DONE]
+### Captcha
 
 - enable with property
 
@@ -1028,7 +1028,7 @@ drop table orbeon_form_data_attach ;
 - test reCAPTCHA [NOTE: had to fix 2 bugs with 4.5!]
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning [4.10 DONE]
+### Help popups/hint tooltips positioning
 
 - create form to test general positioning
   - help on all elements
@@ -1039,7 +1039,7 @@ drop table orbeon_form_data_attach ;
 - test Bookshelf help
 - create form with fields, including checkboxes/radio buttons
 
-### Mobile and Responsive [4.10 DONE]
+### Mobile and Responsive
 
 - setup
     - iPhone 6S or 6S Plus
@@ -1074,7 +1074,7 @@ drop table orbeon_form_data_attach ;
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - close [#2476](https://github.com/orbeon/orbeon-forms/issues/2476) when satisfied
 
-### Home Page [4.10 DONE]
+### Home Page
 
 - http://localhost:8080/410pe/fr/ lists deployed forms
 - (see also Form Builder permissions above which already tests some of this)
@@ -1138,7 +1138,7 @@ drop table orbeon_form_data_attach ;
   - upgrade remote
   - make sure forms still work
 
-### Summary Page [4.10 DONE]
+### Summary Page
 
 - e.g. http://localhost:8080/410pe/fr/orbeon/bookshelf/summary
 - list forms
@@ -1157,7 +1157,7 @@ drop table orbeon_form_data_attach ;
 - delete
 - view
 
-### Excel Import [4.10 DONE]
+### Excel Import
 
 - http://localhost:8080/48pe/fr/orbeon/contact/import
 - import small doc first (`contact5.xlsx` on Dropbox)
@@ -1170,7 +1170,7 @@ drop table orbeon_form_data_attach ;
 - check import completes
 
 
-### Liferay Support [4.10 DONE]
+### Liferay Support
 
 - versions as of Orbeon Forms 4.9
   - Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)
@@ -1214,7 +1214,7 @@ drop table orbeon_form_data_attach ;
   - Image annotation control works (in Controls form)
   - *NOTE: noscript broken in Liferay*
 
-### Embedding [4.10 DONE]
+### Embedding
 
 - deploy `orbeon-embedding.war` into Tomcat
 - update `web.xml`:
@@ -1235,7 +1235,7 @@ drop table orbeon_form_data_attach ;
   - uploads
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
 
-### XForms Retry [4.10 DONE]
+### XForms Retry
 
 1. Retry happens
     - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
@@ -1318,7 +1318,7 @@ drop table orbeon_form_data_attach ;
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog [4.10 DONE]
+### Error Dialog
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
@@ -1334,7 +1334,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
 
-### Other Browsers [4.10 DONE]
+### Other Browsers
 
 - main tests above with Google Chrome
   - 4.10: latest is ??? and 46.0.2490.4 dev
@@ -1363,7 +1363,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
 
-### Other [4.10 DONE]
+### Other
 
 Features to test, with all supported browsers:
 
