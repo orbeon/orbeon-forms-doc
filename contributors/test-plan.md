@@ -674,6 +674,7 @@ drop table orbeon_form_data_attach ;
         <item label="Bar" value="bar"/>
     </items>
     ```
+    - setting itemsets within repeats ([#1770](https://github.com/orbeon/orbeon-forms/issues/1770)) has an automated test
 
 ## Form Builder / Form Runner
 
