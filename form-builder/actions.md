@@ -34,7 +34,9 @@ This is the meaning of the fields of the dialog:
 
 Like for services, once your action is defined, the Save buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the action name. You can also delete the action using the trashcan icon.
 
-## Passing parameters to the service
+## Handling the service request
+
+### Passing parameters to the service
 
 - **Set Service Request Values.**
     - Used with HTTP services only
@@ -58,6 +60,8 @@ As a result of running an action, you can set a form control's value from data r
 - __Destination Control.__
     - Specifies the control whose value must be set.
     - A single "closest" control will be selected.
+        - If the destination selection control is not within a repeated grid or section, then the single destination control is updated.
+        - Otherwise the control which is the closest by following repeat iterations and repeat indexes is chosen.
 - __Source XPath Expression.__
     - The expression is evaluated in the context of root element of the XML data returned by the service.
     - The expression can point to an element or attribute node of the response body, but can also be a more complex expression. Its result is converted to a string.
