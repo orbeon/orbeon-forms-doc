@@ -1040,7 +1040,7 @@ drop table orbeon_form_data_attach ;
 - test Bookshelf help
 - create form with fields, including checkboxes/radio buttons
 
-### Mobile and Responsive [Erik]
+### Mobile and Responsive \[2016.1 Erik\]
 
 - setup
     - iPhone 6S or 6S Plus
