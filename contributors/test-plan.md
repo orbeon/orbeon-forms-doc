@@ -1040,7 +1040,7 @@ drop table orbeon_form_data_attach ;
 - test Bookshelf help
 - create form with fields, including checkboxes/radio buttons
 
-### Mobile and Responsive
+### Mobile and Responsive [Erik]
 
 - setup
     - iPhone 6S or 6S Plus
@@ -1057,8 +1057,6 @@ drop table orbeon_form_data_attach ;
         - can navigate sections via TOC at top
         - buttons at bottom work
         - can enter data, select checkboxes/radio buttons
-        - can pinch zoom
-            - add error, save, must de-zoom before showing error dialog
     - Control Form
         - NOTE: Repeat not handled nicely.
         - PDF
@@ -1067,13 +1065,15 @@ drop table orbeon_form_data_attach ;
         - PDF
     - W-9 Form
         - PDF
-
+- zoom
+    - can pinch zoom
+    - add error, save, must de-zoom before showing Error dialog
+    - same for Clear dialog
 - Number field
     - test that non-negative integers show keypad
     - other numbers show number pane
     - if decimal separator is `,`, show regular pane (if US settings)
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
-- close [#2476](https://github.com/orbeon/orbeon-forms/issues/2476) when satisfied
 
 ### Home Page
 
