@@ -515,7 +515,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder
 
-### Basic Features
+### Basic Features \[2016.1 Alex\]
 
 - create new form
 - insert sections, grids, repeated grids
@@ -602,7 +602,7 @@ drop table orbeon_form_data_attach ;
     - insert control
     - check there is no JS error
 
-### Singleton forms
+### Singleton forms \[2016.1 Alex\]
 
 - test that the features works as documented
     - no form data
@@ -610,7 +610,7 @@ drop table orbeon_form_data_attach ;
     - more than one instance of form data
 - test from Proxy Portlet
 
-### Schema Support
+### Schema Support \[2016.1 Alex\]
 
 - attach Schema
     - use e.g. [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd) or the [XForms simple types](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
@@ -623,7 +623,7 @@ drop table orbeon_form_data_attach ;
     - check that validation is working as per the types
     - check schema types are reloaded in Control Settings dialog
 
-### Database service
+### Database service \[2016.1 Alex\]
 
 - setup db
     - use MySQL on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
@@ -658,7 +658,7 @@ drop table orbeon_form_data_attach ;
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service
+### HTTP service \[2016.1 Alex\]
 
 - using echo service is ok
     - POST to `/fr/service/custom/orbeon/echo`
