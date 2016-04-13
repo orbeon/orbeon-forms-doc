@@ -177,7 +177,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
 
 - Steps
     - create form db2/versioning
-        -fields
+        - fields
             - 1 email field with "Email Recipient", say e.g. `erik at bruchez dot org`
             - 1 email field without "Email Recipient"
             - 1 static Image with image statically attached
