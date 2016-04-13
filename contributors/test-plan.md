@@ -139,7 +139,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
     - go to /fr/
     - check that form definitions from all persistence layers show
 
-### Versioning
+### Versioning \[2016.1 Alex\]
 
 - Setup
     - Database: try with db2 at least.
