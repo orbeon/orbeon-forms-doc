@@ -35,7 +35,7 @@ With the standard appearance, the following attributes are available and forward
 Example:
 
 ```xml
-<xf:input ref="text" xxf:autocomplete="off/>
+<xf:input ref="text" xxf:autocomplete="off"/>
 ```
 
 ### Placeholder for label and hint
@@ -77,6 +77,8 @@ The way the XForms input control is be rendered on the page depends on the type 
 | `xs:dateTime` |                     | combined date and time fields |
 
 ![Boolean input](../images/xforms-input-boolean.png)
+
+*NOTE: The Boolean input is deprecated. Use the `fr:checkbox-input` component instead.*
 
 ![Date picker](../images/xforms-datepicker-simple.png)
 
