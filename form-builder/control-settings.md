@@ -64,7 +64,7 @@ See [Form Builder Validation](validation.md) for details.
 
 ![Formulas tab](images/control-settings-formulas.png)
 
-See [Form Builder Formulas](formulas.md) for details.
+See [Formulas](formulas.md) for details.
 
 ### Help Message
 
@@ -83,6 +83,6 @@ See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/im
 - [Control metadata for the Control Settings dialog](metadata.md#control-metadata-for-the-control-settings-dialog)
 - [Form Builder Validation](validation.md)
 - [Enhanced validation in Form Builder and Form Runner](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
-- [Form Builder Formulas](formulas.md)
+- [Formulas](formulas.md)
 - [Improving how we show help messages](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
 - [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)

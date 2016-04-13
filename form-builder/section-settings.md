@@ -5,7 +5,7 @@ Each section has:
 * a _name_ or identifier, which determines how section data is represented in XML
 * XPath expressions that determine the section visibility and readonliness (advanced feature)
 
-![][56]
+![](images/section-settings.png)
 
 The section name specifies an identifier for the section, unique in the entire form.
 
@@ -16,4 +16,8 @@ The XPath expressions control:
 * **Visibility:** whether the section is visible or not.
 * **Read-Only:** whether the section is shown as read-only or not.
 
-XPath expressions are described in more details here: [Advanced: XPath expressions in Form Builder][57].
+XPath expressions are described in more details in [Formulas](formulas.md).
+
+## See also
+
+- [Formulas](formulas.md)
