@@ -58,8 +58,6 @@ Pressing this button inserts a new section into the form. The section is inserte
 
 After insertion, the new section has an empty title. You can change the section title by clicking on it.
 
-![][27]
-
 ### New grid button
 
 Pressing this button inserts a new grid into the form. The grid is inserted after the currently selected grid within the currently selected section, that is the section and grid containing the currently selected control.
@@ -100,16 +98,23 @@ Orbeon is expecting feedback from users on the controls marked _experimental_ be
 
 | Name | Description |
 | --- | --- |
-| **Input field**    | Simple input field |
-| **Text Area**      | Simple multi-line area |
-| **Text Output**    | Like most other controls, the text output has a label, hint, but unlike most other control, the it can't be used by users to edit its value. Instead, it just *shows* a value, either fixed or calculated with a formula. |
-| **Password Field** | An input field that hides the characters you type |
-| **Formatted Text** | A rich text editor, aka HTML editor |
-| **Explanation**    | Explanatory text which does not capture a value ([blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
+| **Input Field**         | single-line input field |
+| **Plain Text Area**     | multi-line plain text area |
+| **Formatted Text Area** | formatted text area (AKA rich text editor) |
+| **Password Field**      | input field that hides the characters you type |
 
 The controls appear like this at design time:
 
 ![](images/text-controls-design-time.png)
+
+### Output controls
+
+![](images/output-controls.png)
+
+| Name | Description |
+| --- | --- |
+| **Explanatory Text** | Explanatory text which does not capture a value ([blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
+| **Calculated Value** | Like most other controls, the Calculated Value has a label and hint, but unlike most controls it is not used to enter a value. Instead, it just *shows* a value, either fixed or calculated with a formula. |
 
 ### Typed controls
 
@@ -117,11 +122,11 @@ The controls appear like this at design time:
 
 | Name | Description |
 | --- | --- |
-| **Email Address** | Input field which validates that the content is an email address |
+| **Number**          | number field with formatting, validation and rounding |
+| **Email Address**   | text field which validates that the content is an email address |
+| **Currency**        | US dollar currency |
 | **US Phone Number** | US phone number with automatic formatting |
-| **Number** | A simple number |
-| **Currency** | US dollar currency |
-| **US State** | US state selector |
+| **US State**        | US state selector |
 
 The controls appear like this at design time:
 
@@ -133,11 +138,11 @@ The controls appear like this at design time:
 
 | Name | Description |
 | --- | --- |
-| **Date** | Date field with date picker |
-| **Time** | Time field |
-| **Date and Time** | Combined date and time field |
-| **Dropdown Date** | Date chooser which uses dropdown menus |
-| **Fields Date** | date chooser which uses separate text fields |
+| **Date**          | date field with date picker |
+| **Time**          | time field |
+| **Date and Time** | combined date and time field |
+| **Dropdown Date** | date chooser which uses dropdown menus |
+| **Fields Date**   | date chooser which uses separate text fields |
 
 The controls appear like this at design time:
 
@@ -149,13 +154,14 @@ The controls appear like this at design time:
 
 | Name | Selection | Description |
 | --- | --- | --- |
-| **Dropdown Menu** | single | dropdown menu |
-| **Radio Buttons** | single | radio buttons |
-| **Checkboxes** | multiple | checkboxes |
-| **Boolean Input** | - | checkbox storing a boolean value |
-| **Scrollable Checkboxes** | single | scrollable radio buttons |
-| **Dynamic Data Dropdown** | single | dynamic dropdown bound to a REST service |
-| **Autocomplete** | single | autocompletion |
+| **Dropdown Menu**              | single   | dropdown menu |
+| **Radio Buttons**              | single   | radio buttons |
+| **Radio Buttons with "Other"** | single   | radio buttons with "Other" option to a enter a custom option |
+| **Checkboxes**                 | multiple | checkboxes |
+| **Scrollable Checkboxes**      | multiple | scrollable checkboxes |
+| **Yes/No Answer**              | single   | a simple "Yes" or "No" choice |
+| **Dynamic Data Dropdown**      | single   | dynamic dropdown bound to a REST service |
+| **Autocomplete**               | single   | autocompletion |
 
 You edit the choices of most selection controls with the [Itemset Editor](itemset-editor.md).
 
@@ -171,14 +177,22 @@ _NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 4.11 and r
 
 | Name | Description |
 | --- | --- |
-| **Image** | Image displayed on the form at design time. It is not possible to change the image at runtime. |
-| **Image Attachment** | Image which can be attached to the form at design time or at runtime. The image can also be changed at runtime once attached. |
-| **File Attachment** | File which can be attached to the form at design time or at runtime. The file can also be replaced or downloaded once attached. |
-| **Image Annotation** | Select and annotate an image (see [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)). |
+| **File Attachment**       | - file which can be attached to the form at design time or at runtime<br>- the file can also be replaced or downloaded once attached |
+| **Image Attachment**      | - image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached. |
+| **Image**                 | - image attached to the form at design time<br>- it is not possible to change the image at runtime |
+| **Handwritten Signature** | signature drawn with a mouse or touch screen |
+
+<!--
+| **Image Annotation**      | image with annotat annotation (see [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)) |
+-->
 
 The controls appear like this at design time:
 
 ![](images/attachment-controls-design-time.png)
+
+And this is the Signature control ( which of course you usually leave blank at design time):
+
+![](images/signature-design-time.png)
 
 ### Button controls
 
@@ -186,8 +200,8 @@ The controls appear like this at design time:
 
 | Name | Description |
 | --- | --- |
-| **Button** | Simple button |
-| **Link Button** | Button appearing as a link |
+| **Button**      | standard button |
+| **Link Button** | button appearing as a link |
 
 Buttons do not allow entering data, and by default do nothing significant, but they can be used to trigger actions with the Action Editor.
 
@@ -199,21 +213,7 @@ The controls appear like this at design time:
 
 ### Choices
 
-You can edit the possible choices by clicking on the  ![][41]  icon that shows to the right of a control. When doing so, a dialog, like the one shown in the following screenshot, will appear.
-
-![][42]
-
-For each choice, you can enter:
-
-* A _label_ – This is what users see when they fill out the form.
-* A _value_ – This is what is stored as part of the data when users select this choice.
-* A _hint_ – The third column only shows for radio buttons and checkboxes. If you provide a hint for a choice, that choice will be highlighted and the hint you provided will show when users move the mouse pointer over the label, as shown in the following screenshot.
-
-![][43]
-
-If you check the HTML checkbox, all the hints and labels you type in dialog are interpreted as HTML, allowing you to use HTML tags in label and hints, say to make text bold or italic.
-
-![][44]
+See the [Itemset Editor](itemset-editor.md).
 
 ### Data dropdown
 
@@ -240,9 +240,8 @@ If the data in the dropdown depends on a value entered by users in another form 
 /xforms-sandbox/service/zip-cities?state-abbreviation={$state}
 ```
 
-Limitation: you can't yet use a variable as shown in the above example, to refer to another fields value. Instead, if the control is in the same section use `{state}`; if in a different section with name other-section, use `{../other-section/state}`. See [#431](https://github.com/orbeon/orbeon-forms/issues/431).
+*Limitation: you can't yet use a variable as shown in the above example, to refer to another fields value. Instead, if the control is in the same section use `{state}`. If in a different section with name other-section, use `{../other-section/state}`. See [#431](https://github.com/orbeon/orbeon-forms/issues/431).*
 
-![][45]
 
 ### Autocomplete
 
@@ -251,5 +250,3 @@ The autocomplete control is a single item selection control that loads a list of
 ```
 /xforms-controls/services/countries?country-name={`encode-for-uri($fr-search-value)}
 ```
-
-![][47]

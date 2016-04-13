@@ -12,6 +12,14 @@ The notion of _publishing_ is central to Form Builder/Form Runner.
     * the form becomes available by form users for data entry
     * Form Builder is no longer part of the equation
 
+## First publish
+
+When you start publishing a form with the Publish button at the bottom of Form Builder, a dialog opens to confirm the application name form name:
+
+![Creating a new version](images/publish-initial-no-versioning.png)
+
+If you decide to go ahead with publishing, simply use the Publish button.
+
 ## Versioning
 
 When versioning is enabled, you have a choice, when publishing, of whether to create a new form version or to override an existing one.

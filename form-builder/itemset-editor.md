@@ -20,6 +20,10 @@ If you check the HTML checkbox, all the hints and labels you type in dialog are 
 
 At first, there are sample items available for the control. You add items using the "+" button, and remove them using the menu.
 
+You move, insert and remove items using the menu to the left of each row. For example to remove an item entirely:
+
+![](images/itemset-editor-remove.png)
+
 ## Usability notes
 
 - When in a label field, pressing the "tab" key into an empty value field automatically creates a default value. For example:
