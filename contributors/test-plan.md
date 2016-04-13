@@ -141,10 +141,15 @@ Do the following for eXist and DB2. We do not test other relational databases he
 
 ### Versioning \[2016.1 Alex\]
 
+Do the following on DB2.
+
 - Setup
-    - Database: try with db2 at least.
     - Properties
         ```xml
+        <property
+            as="xs:string"
+            name="oxf.fr.persistence.provider.*.*.*"
+            value="db2"/>
         <property
             as="xs:boolean"
             name="oxf.fr.email.attach-pdf.db2.versioning"
@@ -173,7 +178,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
             value=""/>
         ```
 
-        Also have other email properties setup.
+        Also add the email properties (starting with `oxf.fr.email`) from your own `properties-local.xml`.
 
 - Steps
     - create form db2/versioning
