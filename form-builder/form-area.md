@@ -20,23 +20,17 @@ Form Builder allows you to edit certain text information in-place. This just mea
 To edit such text:
 
 * Click on the text (or placeholder text)
-* An input field appears
+* An text field appears
 * Enter the text
 * Press the Apply button
 
-![][50]
-
 To indicate that the text is editable, it highlights when the mouse hovers over it.
-
-![][51]
 
 This mechanism is how you edit:
 
-* Form title
-* Form description
 * Section title
-* Field label
-* Field hint
+* Control label
+* Control hint
 
 ## Sections and grids
 
@@ -67,10 +61,6 @@ Each section contains one or more _grids_:
 
 When your mouse pointer hovers over a grid, the grid boundaries, cells and icons are highlighted.
 
-The following screenshot shows two sections, "Section 1" and "Section 2". The first section contains a 3 columns by 2 rows grid.
-
-![][52]
-
 You can perform the following operations on grids:
 
 * Add grid columns by clicking on the left and right arrows at the top of each column.
@@ -81,7 +71,7 @@ You can perform the following operations on grids:
 
 For delete operations, a warning dialog shows if controls will be deleted as a result.
 
-![][53]
+![](../form-runner/component/images/xbl-alert-dialog.png)
 
 ## Grid cells and controls
 
@@ -106,6 +96,3 @@ When your mouse pointer hovers over a grid cell containing a control, some icons
 * **Expand icon:** expands the cell down if possible.
     * This allows the control to take two or more rows of space in the grid, for example for taller lists of radio buttons.
     * If the control takes more than one grid row, then a Collapse icon performs the opposite operation.
-* **Switch Appearance icon:** Switch between selection control types (selection controls only)
-
-![][54]
