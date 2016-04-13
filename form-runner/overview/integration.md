@@ -42,7 +42,7 @@ By integrating with a user management system, you make Orbeon Forms aware of use
 
 See [Access Control](../access-control/README.md) for more details.
 
-### XML representation of form data
+## XML representation of form data
 
 See [Form Data Format](../data-format/form-data.md)
 
