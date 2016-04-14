@@ -154,16 +154,13 @@ Do the following on DB2.
             as="xs:boolean"
             name="oxf.fr.email.attach-pdf.db2.versioning"
             value="true"/>
-
         <property
             as="xs:boolean"
             name="oxf.fr.email.attach-tiff.db2.versioning"
             value="true"/>
-
         <property as="xs:string" name="oxf.fr.detail.buttons.db2.versioning">
             pdf tiff email save send
         </property>
-
         <property as="xs:string" name="oxf.fr.detail.process.send.db2.versioning">
             send(
                 uri     = '/fr/service/custom/orbeon/echo',
@@ -171,7 +168,6 @@ Do the following on DB2.
                 content = 'pdf-url'
             )
         </property>
-
         <property
             as="xs:string"
             name="oxf.fr.email.to.db2.versioning"
@@ -181,7 +177,7 @@ Do the following on DB2.
         Also add the email properties (starting with `oxf.fr.email`) from your own `properties-local.xml`.
 
 - Steps
-    - create form db2/versioning
+    - create form `db2/versioning`
         - fields
             - 1 email field with "Email Recipient", say e.g. `erik at bruchez dot org`
             - 1 email field without "Email Recipient"
