@@ -871,7 +871,7 @@ drop table orbeon_form_data_attach ;
 - DMV-14
   - PDF template works
 
-### Errors and warnings \[2016.1 Erik TODO\]
+### Errors and warnings \[2016.1 DONE\]
 
 - FB: create form
     - required field
@@ -882,7 +882,7 @@ drop table orbeon_form_data_attach ;
     - links and focuses to controls, including XBL controls, but not invalid output controls
 - FR: review page if no errors
 - FR: review page shows review dialog if warning or info
-- FR: come back to review page
+- FR: come back to edit page
 
 ### Process buttons \[2016.1 Erik TODO\]
 
