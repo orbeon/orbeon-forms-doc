@@ -12,6 +12,18 @@ The `fr:section` component organizes [grids](grid.md) under a header or title. F
   - can repeat over several heterogeneous rows
   - built-in icons and menus to add, remove, and move repeated rows
 
+## Appearance
+
+### Full repeat appearance
+
+![Full appearance](images/xbl-section-full.png)
+
+### Minimal repeat appearance
+
+[SINCE Orbeon Forms 2016.1]
+
+![Minimal appearance](images/xbl-section-minimal.png)
+
 ## Basic usage
 
 ### Non-repeated mode
