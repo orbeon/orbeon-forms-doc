@@ -57,6 +57,10 @@ TODO
     - does not show the iteration menu and associated features
     - instead just provides "Add another" and "Remove" links at the bottom
 
+You move, insert, and remove iterations using the left menu:
+
+![Menu](images/xbl-section-menu.png)
+
 ## Data format
 
 TODO
