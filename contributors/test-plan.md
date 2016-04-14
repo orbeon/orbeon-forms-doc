@@ -8,27 +8,27 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ### Distribution \[2016.1 Erik TODO\]
 
-- README.md is up to date
-  - links not broken (use Marked to save HTML, then check w/ Integrity)
-  - latest release year
-  - version number is correct
-  - links to release notes (include link to new version even if blog post not up yet)
-- file layout is correct in zip and wars
-- check WAR files have reasonable sizes (sizes as of 4.8)
+- [ ] README.md is up to date
+  - [ ] links not broken (use Marked to save HTML, then check w/ Integrity)
+  - [x] latest release year
+  - [x] version number is correct
+  - [x] links to release notes (include link to new version even if blog post not up yet)
+- [x] file layout is correct in zip and wars
+- [x] check WAR files have reasonable sizes (sizes as of 2016.1)
   - orbeon-auth.war (< 10 KB)
   - orbeon-embedding.war (1-2 MB)
   - proxy-portlet.war (1-2 MB)
   - orbeon.war (65 MB)
-- check CE zip doesn't have
+- [x] check CE zip doesn't have
   - orbeon-embedding.war
   - proxy-portlet.war
-- dropping the WAR file (with license included or in ~/.orbeon/license.xml) into Tomcat and Liferay works - out of the box
-- make sure the PE license is not included
+- [ ] dropping the WAR file (with license included or in ~/.orbeon/license.xml) into Tomcat and Liferay works - out of the box
+- [x] make sure the PE license is not included
 
-### Landing Page \[2016.1 Erik TODO\]
+### Landing Page \[2016.1 DONE\]
 
 - version number is correct in logs when starting
-- home page
+- landing page
   - layout of FR examples
   - layout of XForms examples
 - XForms examples
@@ -39,7 +39,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 check that all PE features are available in PE, but not in CE:
 
 - features which are checked
-    - distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
+    - [x] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
     - FB: no "Add Language" button
     - FB: check with CE that a PE dialog shows for
         - Services
@@ -849,7 +849,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Runner
 
-### Sample forms \[2016.1 Erik TODO\]
+### Sample forms \[2016.1 DONE\]
 
 - load all
 - Controls
@@ -869,7 +869,6 @@ drop table orbeon_form_data_attach ;
         - change lang works
 - DMV-14
   - PDF template works
-  -
 
 ### Errors and warnings \[2016.1 Erik TODO\]
 
