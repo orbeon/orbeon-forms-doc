@@ -8,8 +8,8 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ### Distribution \[2016.1 Erik TODO\]
 
-- [ ] README.md is up to date
-  - [ ] links not broken (use Marked to save HTML, then check w/ Integrity)
+- [x] README.md is up to date
+  - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
   - [x] latest release year
   - [x] version number is correct
   - [x] links to release notes (include link to new version even if blog post not up yet)
@@ -34,23 +34,24 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - XForms examples
   - load, look reasonable, and work
 
-### PE Features Availability
+### PE Features Availability \[2016.1 Erik TODO\]
 
 check that all PE features are available in PE, but not in CE:
 
 - features which are checked
     - [x] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
-    - FB: no "Add Language" button
-    - FB: check with CE that a PE dialog shows for
+    - [x] FB: no "Add Language" button
+    - [x] FB: check with CE that a PE dialog shows for
         - Services
         - Actions
         - Attach PDF
         - Attach Schema
         - Permissions
-    - FR: PDF Template button doesn't show for DMV-14 and W-9
-    - FR: TIFF button doesn't show even if configured [SINCE 2016.1]
-    - FR: Import page returns 404
-    - FR: No remote server support in Form Runner home page
+    - [x] FB: no Signature control in toolbox
+    - [x] FR: PDF Template button doesn't show for DMV-14 and W-9
+    - [ ] FR: TIFF button doesn't show even if configured [SINCE 2016.1]
+    - [x] FR: Import page returns 404
+    - [ ] FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml`
 
@@ -89,7 +90,7 @@ check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-###  Basic Persistence \[2016.1 done\]
+###  Basic Persistence \[2016.1 DONE\]
 
 Do the following for eXist and DB2. We do not test other relational databases here, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases.
 
