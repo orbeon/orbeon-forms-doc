@@ -25,6 +25,13 @@ For a list of Form Runner features, see [Orbeon Forms Features](../form-runner/f
 
 You can use Orbeon Forms without using the Form Runner or Form Builder components if all you are interested in is the XForms engine or the pipeline engine.
 
+### What are the hardware requirements for Orbeon Forms?
+
+Specific requirements will depend on how much load Orbeon Forms needs to handle, but as a starting point:
+
+- **Memory** - We recommend you have enough memory on the server to be able to comfortably allocate about 2 GB to the JVM.
+- **CPU** - We recommend you use a server with a modern Intel Xeon or Core i7 CPU (2013+, with a Geekbench single-core score of at least 3000). We strongly recommend you avoid servers with AMD or Sparc CPUs, as they have significantly slower single-core performance, which isn't appropriate for running Orbeon Forms.
+
 ### How much load can Orbeon Forms handle?
 
 Our testing using real forms used by customers in production show that Orbeon Forms can sustain, on a laptop-grade 2013 4-core i7 CPU, 400 concurrent active users filling out a field every 10 seconds, or 40 requests per second. This means that if you have a forms with 75 fields filled by users on average, with 1/3 load during a given day, Orbeon Forms can support 40\*3600\*24/3/75 ~= 15,000 form submissions per day, per processor.
