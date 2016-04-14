@@ -6,7 +6,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ## Misc
 
-### Distribution
+### Distribution \[2016.1 Erik TODO\]
 
 - README.md is up to date
   - links not broken (use Marked to save HTML, then check w/ Integrity)
@@ -25,7 +25,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - dropping the WAR file (with license included or in ~/.orbeon/license.xml) into Tomcat and Liferay works - out of the box
 - make sure the PE license is not included
 
-### Landing Page
+### Landing Page \[2016.1 Erik TODO\]
 
 - version number is correct in logs when starting
 - home page
@@ -726,7 +726,6 @@ drop table orbeon_form_data_attach ;
 
 ### PDF Template
 
-
 - attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - add field "name" in section "applicant"
 - publish and test that name appears in PDF
@@ -741,7 +740,6 @@ drop table orbeon_form_data_attach ;
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
 ### Form Builder Permissions
-
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -851,7 +849,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Runner
 
-### Sample forms
+### Sample forms \[2016.1 Erik TODO\]
 
 - load all
 - Controls
@@ -873,7 +871,7 @@ drop table orbeon_form_data_attach ;
   - PDF template works
   -
 
-### Errors and warnings
+### Errors and warnings \[2016.1 Erik TODO\]
 
 - FB: create form
     - required field
@@ -886,7 +884,7 @@ drop table orbeon_form_data_attach ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to review page
 
-### Process buttons
+### Process buttons \[2016.1 Erik TODO\]
 
 - create and publish guest/test
 - add [these properties](https://gist.github.com/ebruchez/5666643), and add `review` the list of buttons in the first property
@@ -904,7 +902,7 @@ drop table orbeon_form_data_attach ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads
+### Attachments/uploads \[2016.1 Erik TODO\]
 
 - basic upload works
 - removing uploaded file works
@@ -927,7 +925,7 @@ drop table orbeon_form_data_attach ;
     - cancel midway works
     - progress indicator works
 
-### Submit
+### Submit \[2016.1 Erik TODO\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -948,7 +946,7 @@ drop table orbeon_form_data_attach ;
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email
+### Email \[2016.1 Erik TODO\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -976,14 +974,14 @@ drop table orbeon_form_data_attach ;
   - contains attachments, XML, PDF and TIFF [SINCE 2016.1]
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc
+### Misc \[2016.1 Erik TODO\]
 
 - switch language
 - open/close sections
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode
+### Noscript mode \[2016.1 Erik TODO\]
 
 - orbeon/contact
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
@@ -999,7 +997,7 @@ drop table orbeon_form_data_attach ;
     - errors prevent saving
     - Refresh icon works
 
-### Wizard
+### Wizard \[2016.1 Erik TODO\]
 
 - validated mode
     - `/fr/orbeon/w9/new`
@@ -1009,7 +1007,7 @@ drop table orbeon_form_data_attach ;
 - /fr/orbeon/controls/new
     - test errors in section template are highlighted in TOC
 
-### Captcha
+### Captcha \[2016.1 Erik TODO\]
 
 - enable with property
 
@@ -1030,7 +1028,7 @@ drop table orbeon_form_data_attach ;
 - test reCAPTCHA [NOTE: had to fix 2 bugs with 4.5!]
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning
+### Help popups/hint tooltips positioning \[2016.1 Erik TODO\]
 
 - create form to test general positioning
   - help on all elements
@@ -1041,7 +1039,7 @@ drop table orbeon_form_data_attach ;
 - test Bookshelf help
 - create form with fields, including checkboxes/radio buttons
 
-### Mobile and Responsive \[2016.1 Erik\]
+### Mobile and Responsive \[2016.1 Erik TODO\]
 
 - setup
     - iPhone 6S or 6S Plus
@@ -1172,7 +1170,7 @@ drop table orbeon_form_data_attach ;
 - check import completes
 
 
-### Liferay Support
+### Liferay Support \[2016.1 Erik TODO\]
 
 - versions as of Orbeon Forms 4.9
   - Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)
@@ -1216,7 +1214,7 @@ drop table orbeon_form_data_attach ;
   - Image annotation control works (in Controls form)
   - *NOTE: noscript broken in Liferay*
 
-### Embedding
+### Embedding \[2016.1 Erik TODO\]
 
 - deploy `orbeon-embedding.war` into Tomcat
 - update `web.xml`:
