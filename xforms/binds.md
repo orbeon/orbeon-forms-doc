@@ -199,7 +199,7 @@ See [Evaluation of initial values upon insert](actions/repeat-insert-delete.md).
 
 #### The xxf:whitespace MIP
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 The `xxf:whitespace` MIP controls whitespace trimming. When the MIP is absent, there is no whitespace trimming.
 

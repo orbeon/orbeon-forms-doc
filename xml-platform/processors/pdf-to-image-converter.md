@@ -4,7 +4,7 @@
 
 ## Availability
 
-Orbeon Forms 4.11 and newer.
+Orbeon Forms 2016.1 and newer.
 
 ## Introduction
 

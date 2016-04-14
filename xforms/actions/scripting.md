@@ -8,7 +8,7 @@
 
 Call client-side JavaScript as a result of XForms events:
 
-Starting Orbeon Forms 4.11:
+Starting Orbeon Forms 2016.1:
 
 ```xml
 <xf:action ev:event="xforms-value-changed" type="javascript">
@@ -17,7 +17,7 @@ Starting Orbeon Forms 4.11:
 </xf:action>
 ```
 
-Prior to Orbeon Forms 4.11:
+Prior to Orbeon Forms 2016.1:
 
 ```xml
 <xxf:script ev:event="xforms-value-changed">
@@ -45,7 +45,7 @@ _NOTE: Because regular XForms actions run on the server and JavaScript actions r
 
 ### Passing parameters
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 You can specify parameters to pass to the JavaScript, for example:
 
@@ -75,7 +75,7 @@ For an example within Orbeon Forms, see [code-mirror.xbl](https://github.com/orb
 
 ### XBL handlers
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 The `<xbl:handler>` element works like an `<xf:action>` element and also supports the `type` attribute and nested `<xf:param>` and `<xf:body>` elements:
 
@@ -104,7 +104,7 @@ You specify an XPath script either with:
 </xf:action>
 ```
 
-Or (deprecated as of Orbeon Forms 4.11):
+Or (deprecated as of Orbeon Forms 2016.1):
 
 ```xml
 <xxf:script type="xpath">
@@ -127,7 +127,7 @@ XPath scripts have access to the current XPath context, including the focus and 
 
 ## `<xxf:script>` or `<xf:action>`?
 
-Orbeon Forms first introduced JavaScript with the `<xxf:script>` action. This action is deprecated as of Orbeon Forms 4.11 and it is recommended to use `<xf:action type="javascript">` and `<xf:action type="xpath">` instead.
+Orbeon Forms first introduced JavaScript with the `<xxf:script>` action. This action is deprecated as of Orbeon Forms 2016.1 and it is recommended to use `<xf:action type="javascript">` and `<xf:action type="xpath">` instead.
 
 Here are the differences between the two:
 
@@ -135,7 +135,7 @@ Here are the differences between the two:
     * this is a standard XForms action
     * without a `type` attribute, the behavior is standard XForms and runs nested XForms actions
     * with a `type` attribute, this is able to run nested client-side JavaScript or server-side XPath scripts
-    * Only available for JavaScript actions starting Orbeon Forms 4.11.
+    * Only available for JavaScript actions starting Orbeon Forms 2016.1.
 * `<xxf:script>`:
     * this is a custom Orbeon Forms action
     * this never runs nested XForms actions

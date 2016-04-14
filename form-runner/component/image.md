@@ -4,7 +4,7 @@
 
 ## Availability
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ## What it does
 
@@ -12,7 +12,7 @@ The `fr:image` component shows an image. Unlike [fr:image-attachment](../../form
 
 In addition, when in the Form Runner context, `fr:image` retrieves the resource while passing the `Orbeon-Form-Definition-Version` HTTP header when available.
 
-*NOTE: Prior to Orbeon Forms 4.11, a plain `xf:output` was produced by Form Builder to achieve similar, but less explicit, behavior.*
+*NOTE: Prior to Orbeon Forms 2016.1, a plain `xf:output` was produced by Form Builder to achieve similar, but less explicit, behavior.*
 
 ## Basic usage
 

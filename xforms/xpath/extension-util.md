@@ -4,7 +4,7 @@
 
 ## xxf:is-blank()
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ```ruby
 xxf:is-blank() as xs:boolean
@@ -23,7 +23,7 @@ A string is considered blank if all leading and trailing Unicode whitespace, non
 
 ## xxf:non-blank()
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ```ruby
 xxf:non-blank() as xs:boolean
@@ -65,7 +65,7 @@ element/@value/xxf:split()
 
 ## xxf:trim()
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ```ruby
 xxf:trim() as xs:boolean

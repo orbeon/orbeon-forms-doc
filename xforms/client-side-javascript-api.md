@@ -25,7 +25,7 @@ In addition to `<xxf:script>` / `<xf:action>`, you can also use the `javascript:
 
 Using AVTs on the `resource` attribute allows you to pass parameters from XForms to JavaScript, although you have to be careful to properly escape values.
 
-Starting Orbeon Forms 4.11, the recommended way to pass parameters is to use the nested `<xxf:param>` attribute of [scripting actions](actions/scripting.md).
+Starting Orbeon Forms 2016.1, the recommended way to pass parameters is to use the nested `<xxf:param>` attribute of [scripting actions](actions/scripting.md).
 
 ## Calling XForms from JavaScript
 
@@ -40,7 +40,7 @@ ORBEON.xforms.Document.setValue(controlIdOrElement, newValue, form)
 | ---- | -------- | ---- | ----------- |
 | **controlIdOrElement** |  Yes |  `String` or `HTMLElement` | Either the id of the control *without namespace* (in the case of portal or embedding), or the control element.
 | **newValue** |  Yes | Any value convertible with `toString()` | Value to set on the control (for `setValue()` only).
-| **form** |  No | `HTMLElement` | [SINCE Orbeon Forms 4.11] The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in a portal and you have multiple portlets using XForms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used.
+| **form** |  No | `HTMLElement` | [SINCE Orbeon Forms 2016.1] The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in a portal and you have multiple portlets using XForms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used.
 
 
 - To get a control value, use: `var value = ORBEON.xforms.Document.getValue(myControl)`.

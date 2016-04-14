@@ -4,7 +4,7 @@
 
 ## Rationale
 
-[SINCE Orbeon Forms 4.11 PE]
+[SINCE Orbeon Forms 2016.1 PE]
 
 This component allows you to capture a signature from people filling out the form, similar to what you would do if you had a paper form, except of course:
 

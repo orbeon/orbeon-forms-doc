@@ -4,7 +4,7 @@
 
 ## Availability
 
-Since Orbeon Forms 4.11.
+Since Orbeon Forms 2016.1.
 
 ## Introduction
 

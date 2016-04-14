@@ -23,7 +23,7 @@ You use the number component like a regular input field, for example:
 `fr:number` must be bound to either of:
 
 - `xs:decimal`
-- `xs:integer` [SINCE Orbeon Forms 4.11]
+- `xs:integer` [SINCE Orbeon Forms 2016.1]
 
 ## Parameters
 
@@ -36,13 +36,13 @@ You use the number component like a regular input field, for example:
     * use `.` or `,` only
 * `grouping-separator`: single character to use as thousands separator separator (can be blank)
 * `round-when-formatting`: when formatting the number for display, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
-    * SINCE Orbeon Forms 4.11
+    * SINCE Orbeon Forms 2016.1
     * Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
 * `round-when-storing`: when storing the number entered by the user, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
-    * SINCE Orbeon Forms 4.11
+    * SINCE Orbeon Forms 2016.1
     * Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
 * `pattern`
-    * SINCE Orbeon Forms 4.11
+    * SINCE Orbeon Forms 2016.1
     * overrides the HTML `pattern` attribute
 
 These are the default values of the properties:
@@ -82,13 +82,13 @@ These are the default values of the properties:
 
 The `digits-after-decimal` parameter controls how the value entered by the user gets *formatted* when the field displays it. This does not impact validation of the data at all.
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 In order to validate the number to have a specific number of decimal digits, the `xxf:fraction-digits()` function should be used.
 
 ## Mobile support
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 On iOS, when the control identifies that the value is a non-negative integer, it shows a numeric keypad:
 
@@ -120,7 +120,7 @@ Here is an example with a suffix:
 
 ### Rounding
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 #### Rouding when formatting only
 

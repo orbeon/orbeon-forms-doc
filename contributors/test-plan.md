@@ -48,7 +48,7 @@ check that all PE features are available in PE, but not in CE:
         - Attach Schema
         - Permissions
     - FR: PDF Template button doesn't show for DMV-14 and W-9
-    - FR: TIFF button doesn't show even if configured [SINCE 4.11]
+    - FR: TIFF button doesn't show even if configured [SINCE 2016.1]
     - FR: Import page returns 404
     - FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
@@ -973,7 +973,7 @@ drop table orbeon_form_data_attach ;
 - /fr/orbeon/controls/new
 - hit Email button
   - check email received
-  - contains attachments, XML, PDF and TIFF [SINCE 4.11]
+  - contains attachments, XML, PDF and TIFF [SINCE 2016.1]
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
 ### Misc
@@ -1047,7 +1047,7 @@ drop table orbeon_form_data_attach ;
     - iPhone 6S or 6S Plus
     - can also test more using simulator
 - default layout
-    - NOTE: Summary and Home are not responsive as of 4.11
+    - NOTE: Summary and Home are not responsive as of 2016.1
     - Contact Form / Bookshelf Form
         - looks ok
         - can navigate to `view` and back

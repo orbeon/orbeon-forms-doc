@@ -28,7 +28,7 @@ When versioning is enabled, you have a choice, when publishing, of whether to cr
 
 ![Overwriting an existing version](images/publish-version-overwrite.png)
 
-[SINCE Orbeon Forms 4.11] You can overwrite not only the latest published version, but any previous version.
+[SINCE Orbeon Forms 2016.1] You can overwrite not only the latest published version, but any previous version.
 
 ## See also
 

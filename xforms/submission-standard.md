@@ -9,24 +9,24 @@ Orbeon Forms supports most standard XForms features, including:
 - the specified processing processing model
 - events: `xforms-submit`, `xforms-submit-serialize`, `xforms-submit-done`, and `xforms-submit-error`
 - all HTTP and HTTPS methods
-- serializations: `application/x-www-form-urlencoded`, `application/xml`, `application/json` (SINCE Orbeon Forms 4.11), `multipart/form-data`, as well as [extensions](submission-extensions.md).
+- serializations: `application/x-www-form-urlencoded`, `application/xml`, `application/json` (SINCE Orbeon Forms 2016.1), `multipart/form-data`, as well as [extensions](submission-extensions.md).
 - replacements: `all`, `instance`, and `text`
 - SOAP support
 
-One exception is the lack of support for `multipart/related`. 
+One exception is the lack of support for `multipart/related`.
 
 For more information, please visit the [XForms 1.1 specification][1].
 
 ## JSON support
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ### Receiving JSON
 
 #### Introduction
 
 When a submission returns an `application/json` mediatype, the submission parses the received JSON and converts it to an XML representation friendly to XPath expressions.
-  
+
 *NOTE: This is also supported with `xf:instance` when using the `src` or `resource` attributes, when the content is received with an `application/json` mediatype.*
 
 #### Conversion examples
@@ -139,7 +139,7 @@ Orbeon Forms supports the XForms 1.1 `serialization` on `<xf:submission>`. This 
 <xf:submission id="my-submission"
     method="get"
     serialization="none"
-    resource="http://example.org/document.xml" 
+    resource="http://example.org/document.xml"
     replace="instance"
     instance="my-instance"/>
 ```

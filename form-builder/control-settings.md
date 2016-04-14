@@ -28,7 +28,7 @@ The following options are available:
 - __Email Recipient:__ when selected, the control is used to determine an email recipient when the form data is sent by email
 - __Show in Email Subject:__ when selected, the control value is used as part of the subject of the email when the form data is sent by email
 - __Include as Email Attachment__:
-    - SINCE Orbeon Forms 4.11
+    - SINCE Orbeon Forms 2016.1
     - this option only shows for file and image attachments
     - when the property `oxf.fr.email.attach-files` is set to `selected`, only file and image attachments with this option checked are attached to the email
 

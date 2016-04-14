@@ -51,7 +51,7 @@ The Required validation can have a custom alert message.
 
 ### Trimming leading and trailing spaces
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 When the "Trim leading and trailing spaces" option is enabled, leading and trailing spaces are removed from the value of the control before validation. This option is enabled by default for text and email fields.
 
@@ -144,23 +144,23 @@ A common constraint consists of the following:
   - applies to "String" and "Email" types only
   - the constraint fails if the length of the value converted to a string is smaller than the specified integer value
 - "Positive"
-  - SINCE Orbeon Forms 4.11
+  - SINCE Orbeon Forms 2016.1
   - applies to "Decimal" and "Integer" types only
   - the constraint fails if the number is not positive
 - "Positive or Zero"
-  - SINCE Orbeon Forms 4.11
+  - SINCE Orbeon Forms 2016.1
   - applies to "Decimal" and "Integer" types only
   - the constraint fails if the number is not positive or zero
 - "Negative or Zero"
-  - SINCE Orbeon Forms 4.11
+  - SINCE Orbeon Forms 2016.1
   - applies to "Decimal" and "Integer" types only
   - the constraint fails if the number is not negative or zero
 - "Negative"
-  - SINCE Orbeon Forms 4.11
+  - SINCE Orbeon Forms 2016.1
   - applies to "Decimal" and "Integer" types only
   - the constraint fails if the number is not negative
 - "Maximum Fractional Digits"
-  - SINCE Orbeon Forms 4.11
+  - SINCE Orbeon Forms 2016.1
   - applies to "Decimal" type only
   - the constraint fails if the decimal number has more than the specified number of significant digits (trailing zeros are ignored)
 

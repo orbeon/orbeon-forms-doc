@@ -78,7 +78,7 @@ XBL components with bindings by attribute can be added using the same format use
 </property>
 ```
 
-With Orbeon Forms 4.11, the property is as follows:
+With Orbeon Forms 2016.1, the property is as follows:
 
 ```xml
 <property as="xs:string"  name="oxf.xforms.xbl.library">

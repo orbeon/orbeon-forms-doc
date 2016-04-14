@@ -57,9 +57,9 @@ The document returns by this API looks like this:
 
 Each `<form>` element contains:
 
-* All the elements inside the form metadata instance of the corresponding form definition, which can be retrieved with the following XPath expression: `/xh:html/xh:head/xf:model/xf:instance[@id = 'fr-form-metadata']/metadata/*`, [SINCE Orbeon Forms 4.11] except the `<description>` and `<migration>` elements.
+* All the elements inside the form metadata instance of the corresponding form definition, which can be retrieved with the following XPath expression: `/xh:html/xh:head/xf:model/xf:instance[@id = 'fr-form-metadata']/metadata/*`, [SINCE Orbeon Forms 2016.1] except the `<description>` and `<migration>` elements.
 * A `<last-modified-time>` element. [SINCE Orbeon Forms 4.4]
-* A `<form-version>` element, when using a relational database (as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524)). [SINCE Orbeon Forms 4.11]
+* A `<form-version>` element, when using a relational database (as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524)). [SINCE Orbeon Forms 2016.1]
 
 [SINCE: Orbeon Forms 4.3] Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about published forms in that specific app, or that specific app and form is returned.
 

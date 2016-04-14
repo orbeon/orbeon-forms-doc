@@ -32,5 +32,5 @@ The `/fr/clerk/marriage-registration/new` in our example is what is referred to 
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/view/[DOCUMENT_ID]`
 * Read-only PDF view:
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/pdf/[DOCUMENT_ID]`
-* Read-only TIFF view: [SINCE Orbeon Forms 4.11]
+* Read-only TIFF view: [SINCE Orbeon Forms 2016.1]
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/tiff/[DOCUMENT_ID]`

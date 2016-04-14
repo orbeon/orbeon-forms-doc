@@ -23,7 +23,7 @@ XForms 2.0 features added with Orbeon Forms 4.8:
 - `case()` function
     - This function was already available as `xxf:case()` in previous versions.
 
-XForms 2.0 features added with Orbeon Forms 4.11:
+XForms 2.0 features added with Orbeon Forms 2016.1:
 
 - `xf:submission` and `xf:instance` [JSON support](submission-standard.md#json-support).
     - This allows receiving `application/json` content. The JSON received is converted to an XML representation friendly to XPath expressions. This allows receiving data from JSON services and using it in your forms, including via Form Builder services.

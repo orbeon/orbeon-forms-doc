@@ -6,7 +6,7 @@
 
 The event model of XForms is based on the [Document Object Model (DOM) Level 2 Events][1] specification. This is the same specification that defines how your web browser handles events in HTML documents. This is good news because it means that his knowledge is reusable between XForms and HTML/JavaScript development!
 
-What's new with XForms is that it allows users to declaratively register event handlers following the [XML Events 2][2] specification. If you write HTML and JavaScript code running directly in your browser, you would typically register event handlers using JavaScript APIs. In XForms, which does not mandate JavaScript, XML Events provide a declarative alternative to using JavaScript. This usually makes it clearer how listeners are attached to XForms objects.  
+What's new with XForms is that it allows users to declaratively register event handlers following the [XML Events 2][2] specification. If you write HTML and JavaScript code running directly in your browser, you would typically register event handlers using JavaScript APIs. In XForms, which does not mandate JavaScript, XML Events provide a declarative alternative to using JavaScript. This usually makes it clearer how listeners are attached to XForms objects.
 
 ## Orbeon Forms support
 
@@ -17,26 +17,26 @@ The usual XForms way of using XML events is by prefixing attributes with the `ev
 Example with prefix:
 
 ```xml
-<xf:dispatch 
-    ev:observer="child-instance" 
-    ev:event="xforms-insert" 
-    targetid="main-model" 
+<xf:dispatch
+    ev:observer="child-instance"
+    ev:event="xforms-insert"
+    targetid="main-model"
     name="update-after-insert"/>
 ```
 
 Example without prefix:
 
 ```xml
-<xf:dispatch 
-    observer="child-instance" 
-    event="xforms-insert" 
-    targetid="main-model" 
+<xf:dispatch
+    observer="child-instance"
+    event="xforms-insert"
+    targetid="main-model"
     name="update-after-insert"/>
 ```
 
-### Registering event handlers  
+### Registering event handlers
 
-[TODO: basic placement and ev:event support]  
+[TODO: basic placement and ev:event support]
 
 ### Using the ev:observer and ev:target attributes
 
@@ -45,14 +45,14 @@ The `ev:observer` attribute  allows you to register event handlers by specifying
 ```xml
 <xf:model id="main-model">
     <!-- Child instance -->
-    <xf:instance 
+    <xf:instance
         id="child-instance"
         src="my-instance.xml"/>
     <!-- Register the event handler on the child instance -->
-    <xf:dispatch 
-        ev:observer="child-instance" 
-        ev:event="xforms-insert" 
-        targetid="main-model" 
+    <xf:dispatch
+        ev:observer="child-instance"
+        ev:event="xforms-insert"
+        targetid="main-model"
         name="update-after-insert"/>
 </xf:model>
 ```
@@ -93,7 +93,7 @@ Note that you still need to use the `ev:event` attribute to specify to what even
 </xh:html>
 ```
 
-The above example also shows how you can constrain an event handler to respond to an event dispatched to a particular target element using the `ev:target` attribute. Here, the event handler responds to `DOMFocusIn` events, but only those dispatched to the `my-input` control.   
+The above example also shows how you can constrain an event handler to respond to an event dispatched to a particular target element using the `ev:target` attribute. Here, the event handler responds to `DOMFocusIn` events, but only those dispatched to the `my-input` control.
 
 ### The ev:propagate attribute
 
@@ -103,7 +103,7 @@ The above example also shows how you can constrain an event handler to respond t
 
 [TODO: describe]
 
-### Top-level event handlers  
+### Top-level event handlers
 
 You can place event handlers at the top-level under the `<xh:body>` element:
 
@@ -114,7 +114,7 @@ You can place event handlers at the top-level under the `<xh:body>` element:
     ...
 </xh:body>
 ```
-  
+
 Previously, you had to use a top-level `<xh:group>` for this to work:
 
 ```xml
@@ -126,18 +126,18 @@ Previously, you had to use a top-level `<xh:group>` for this to work:
     </xf:group>
 </xh:body>
 ```
-  
+
 You can also explicitly register top-level handlers using the `#document` observer id:
 
 ```xml
 <xf:setvalue ev:observer="#document" ev:event="my-event" ref="value" value="$answer"/>
 ```
-  
-_NOTE: Events from top-level models do not bubble to handlers observing on  `#document`. Arguably, they should!_  
 
-### Event handlers on XBL bound nodes  
+_NOTE: Events from top-level models do not bubble to handlers observing on  `#document`. Arguably, they should!_
 
-When using an XBL component, you can register handlers in the same way you register handlers on built-in XForms controls.  
+### Event handlers on XBL bound nodes
+
+When using an XBL component, you can register handlers in the same way you register handlers on built-in XForms controls.
 
 In this case, the handler is placed directly under the bound node (`<fr:foo>`):
 
@@ -159,15 +159,15 @@ Event handlers with the `ev:observer` attribute are also recognized as long as t
 <xf:input id="my-input" ref="my-value"/>
 ```
 
-_NOTE: For event handlers nested further within the bound node, the behavior is up to the XBL component. Typically, components that are containing controls, such as `<xf:input>`, manage event handlers as you expect!_  
+_NOTE: For event handlers nested further within the bound node, the behavior is up to the XBL component. Typically, components that are containing controls, such as `<xf:input>`, manage event handlers as you expect!_
 
-### Event handlers within XBL bindings  
+### Event handlers within XBL bindings
 
 Event handlers on XBL bindings are very similar to regular XML Events handlers, except:
 
 * they use the `` containing element placed within the `` section of an XBL binding
-* attributes do not use the XML Events namespace (typically with the `ev:` prefix)  
-* the XBL 2 `default-action` attribute is not supported but instead the XML Events 1 `defaultAction` is supported (both support the value `cancel` and `perform`)  
+* attributes do not use the XML Events namespace (typically with the `ev:` prefix)
+* the XBL 2 `default-action` attribute is not supported but instead the XML Events 1 `defaultAction` is supported (both support the value `cancel` and `perform`)
 
 Example:
 
@@ -197,7 +197,7 @@ Until Orbeon Forms 4.10 included:
 * A delay of `0` causes the event to be dispatched synchronously righ away, as if the `delay` attribute is not present.
 * A non-integer value causes the action to fail with an error.
 
-Since Orbeon Forms 4.11:
+Since Orbeon Forms 2016.1:
 
 - Delayed events are checked for expiration before sending responses to the client.
 - A delay of `0` can be used to dispatch an event asynchronously with a guarantee that there will be no roundtrip to the client. This conforms to XForms 1.1.
@@ -208,9 +208,9 @@ Since Orbeon Forms 4.11:
 The boolean attribute `xxf:show-progress` allows specifying whether the client must enable the loading indicator when sending back delay events from the client. The default is `true` and the indicator is used.
 
 ```xml
-<xf:dispatch 
-    name="my-event" 
-    targetid="my-model" 
+<xf:dispatch
+    name="my-event"
+    targetid="my-model"
     delay="2000"
     xxf:show-progress="false"/>
 ```
@@ -218,9 +218,9 @@ The boolean attribute `xxf:show-progress` allows specifying whether the client m
 The `xxf:progress-message` attribute allows specifying a custom progress message when `xxf:show-progress` is `true`. By default, the standard progres message is used.
 
 ```xml
-<xf:dispatch 
-    name="my-event" 
-    targetid="my-model" 
+<xf:dispatch
+    name="my-event"
+    targetid="my-model"
     delay="2000"
     xxf:show-progress="true"
     xxf:progress-message="Autosave..."/>
@@ -236,9 +236,9 @@ For more information, see the [XForms specification](https://www.w3.org/TR/xform
 
 *Not supported by Orbeon Forms.*
 
-## Historical note: differences between specifications  
+## Historical note: differences between specifications
 
-There are differences between some events specifications, in particular with regard to how events phases are defined hand how handlers can specify event phases.  
+There are differences between some events specifications, in particular with regard to how events phases are defined hand how handlers can specify event phases.
 
 * DOM Level 3 Events nicely clarifies the different event phases (capture, target, and bubbling).
 * XML Events 1 `phase="default"` attribute means a listener is activated on the `target` or `bubbling` phase.

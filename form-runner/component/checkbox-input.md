@@ -4,7 +4,7 @@
 
 ## Availability
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ## What it does
 
@@ -12,7 +12,7 @@ The `fr:checkbox-input` component displays a single checkbox and by default stor
 
 ![Appearance](images/xbl-checkbox-input.png)
 
-*NOTE: It differs from the (deprecated in Orbeon Forms 4.11) Boolean Input field (obtained by binding an `xf:input` to a field of `xs:boolean` type) in that the Checkbox Input displays the label right next to the checkbox.*
+*NOTE: It differs from the (deprecated in Orbeon Forms 2016.1) Boolean Input field (obtained by binding an `xf:input` to a field of `xs:boolean` type) in that the Checkbox Input displays the label right next to the checkbox.*
 
 ![Appearance](images/xbl-checkbox-input-and-boolean-input.png)
 

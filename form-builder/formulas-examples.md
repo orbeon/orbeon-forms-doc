@@ -4,7 +4,7 @@
 
 ## Testing on a Yes/No Answer field
 
-Say you have a *Yes/No Answer* field (before 4.11 called *Boolean Input*), named `yes-no`, and if the answer is *Yes*, you would like to show another field. In the *Visibility* expression for this other field, you should write:
+Say you have a *Yes/No Answer* field (before 2016.1 called *Boolean Input*), named `yes-no`, and if the answer is *Yes*, you would like to show another field. In the *Visibility* expression for this other field, you should write:
 
 ```xpath
 $yes-no = true()

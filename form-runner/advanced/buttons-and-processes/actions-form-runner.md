@@ -117,7 +117,7 @@ The following parameters can be used:
     - `xml` to send the XML data (default)
     - `pdf-url` to send the PDF URL, see [details](#sending-a-pdf-url)
     - `metadata` to send form metadata, see [details](#sending-form-metadata) [SINCE Orbeon Forms 4.7]
-    - `tiff-url` to send the TIFF URL, see [details](#sending-a-tiff-url) [SINCE Orbeon Forms 4.11]
+    - `tiff-url` to send the TIFF URL, see [details](#sending-a-tiff-url) [SINCE Orbeon Forms 2016.1]
 
 - <a name="send_parameter_data-format-version"></a>`data-format-version` [SINCE Orbeon Forms 4.8]:
     - `edge`: send the data in the latest internal format
@@ -142,7 +142,7 @@ The following parameters can be used:
 
 - <a name="send_parameter_prune_metadata"></a>`prune-metadata`:
 
-    [SINCE Orbeon Forms 4.11]
+    [SINCE Orbeon Forms 2016.1]
 
     - this is applied when `content` is set to `xml` only
     - `true` to remove all occurrences of `fr:`-prefixed elements and attributes
@@ -269,7 +269,7 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 ### Sending a TIFF URL
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 When `tiff-url` is specified, the XML document sent has the following format:
 

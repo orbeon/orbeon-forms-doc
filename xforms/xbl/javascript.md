@@ -35,9 +35,9 @@ To include a companion JavaScript file, use the `<xbl:script>` element directly 
 
 ## Creating and declaring a companion class
 
-### With Orbeon Forms 4.11 and newer
+### With Orbeon Forms 2016.1 and newer
 
-Orbeon Forms 4.11 provides a simple way to declare a companion class. Here is the overall structure:
+Orbeon Forms 2016.1 provides a simple way to declare a companion class. Here is the overall structure:
 
 ```javascript
 (function() {
@@ -147,22 +147,22 @@ $(this.container).find('.acme-my-input')[0]
 
 ### Summary of companion class methods
 
-| Method                 | Description              | Mode                                 | Since            | Status |
-|------------------------|--------------------------|--------------------------------------|------------------|--------|
-| `init`                 | initialize               | `javascript-lifecycle`<sup>1</sup>   | 4.11<sup>1</sup> | fresh  |
-| `destroy`              | clean-up                 | `javascript-lifecycle`               | 4.11             | fresh  |
-| `xformsUpdateReadonly` | change readonly status   | `javascript-lifecycle`               | 4.11             | fresh  |
-| `xformsUpdateValue`    | update value             | `external-value`                     | 4.11             | fresh  |
-| `xformsGetValue`       | get value                | `external-value`                     | 4.11             | fresh  |
-| `xformsFocus`          | hand focus               | `focus`                              | 4.11             | fresh  |
-| `setFocus`             | hand focus               | `focus`                              | 4.0              | legacy |
-| `enabled`              | enable after full update |                                      | 4.0              | legacy |
+| Method                 | Description              | Mode                                 | Since              | Status |
+|------------------------|--------------------------|--------------------------------------|--------------------|--------|
+| `init`                 | initialize               | `javascript-lifecycle`<sup>1</sup>   | 2016.1<sup>1</sup> | fresh  |
+| `destroy`              | clean-up                 | `javascript-lifecycle`               | 2016.1             | fresh  |
+| `xformsUpdateReadonly` | change readonly status   | `javascript-lifecycle`               | 2016.1             | fresh  |
+| `xformsUpdateValue`    | update value             | `external-value`                     | 2016.1             | fresh  |
+| `xformsGetValue`       | get value                | `external-value`                     | 2016.1             | fresh  |
+| `xformsFocus`          | hand focus               | `focus`                              | 2016.1             | fresh  |
+| `setFocus`             | hand focus               | `focus`                              | 4.0                | legacy |
+| `enabled`              | enable after full update |                                      | 4.0                | legacy |
 
-1. The `init()` method is not new in Orbeon Forms 4.11, but when using the `javascript-lifecycle` mode it is called automatically. Prior to Orbeon Forms 4.11, or when not using the `javascript-lifecycle`  mode, it is called either via XForms event handlers, or as a side-effect of calls to `setFocus()` or `enabled()`.
+1. The `init()` method is not new in Orbeon Forms 2016.1, but when using the `javascript-lifecycle` mode it is called automatically. Prior to Orbeon Forms 2016.1, or when not using the `javascript-lifecycle`  mode, it is called either via XForms event handlers, or as a side-effect of calls to `setFocus()` or `enabled()`.
 
 ## Calling methods upon XForms events
 
-### With Orbeon Forms 4.11 and newer
+### With Orbeon Forms 2016.1 and newer
 
 You can call a JavaScript method defined in your JavaScript class when an XForms event occurs. For example, to call the `myFunction()` method on `xforms-enabled`, write:
 
@@ -186,7 +186,7 @@ With Orbeon Forms 4.10 and earlier, you obtain the class using the JavaScript na
 
 ### Introduction
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 When the [`external-value` mode](modes.md#the-externalvalue-mode) is enabled, the following two methods must be provided:
 
@@ -234,7 +234,7 @@ The XForms engine calls this method when:
 
 ### Introduction
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 When the [`javascript-lifecycle` mode](modes.md#the-javascriptlifecycle-mode) is enabled, the following methods should be provided:
 
@@ -263,7 +263,7 @@ The `destroy()` method is called when the control becomes non-relevant, includin
 
 - when the control becomes non-relevant after the page has loaded
 
-As of Orbeon Forms 4.11, it is *not* called:
+As of Orbeon Forms 2016.1, it is *not* called:
 
 - when a repeat iteration is removed
 - when `xxf:full-update` or `xxf:dynamic` replace an entire block of HTML on the client

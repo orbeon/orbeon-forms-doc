@@ -32,10 +32,10 @@ You use the number component like a regular input field, for example:
 * `decimal-separator`: single character to use as decimal separator
 * `grouping-separator`: single character to use as thousands separator separator (can be blank)
 * `round-when-formatting`: when formatting the number for display, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
-    * SINCE Orbeon Forms 4.11
+    * SINCE Orbeon Forms 2016.1
     * Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
 * `round-when-storing`: when storing the number entered by the user, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
-    * SINCE Orbeon Forms 4.11
+    * SINCE Orbeon Forms 2016.1
     * Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
 
 These are the default values of the properties:
@@ -161,6 +161,6 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 
 ### Rounding
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 For examples of rounding, see the [`fr:number`](number.md) component.

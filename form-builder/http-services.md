@@ -26,7 +26,7 @@ The "Definition" tab allows you to set the basic service parameters:
     - This applies to the `POST` and `PUT` methods.
     - The XML document to send to the service.
 - **URL Parameters**
-    - SINCE Orbeon Forms 4.11
+    - SINCE Orbeon Forms 2016.1
     - This applies to the `GET` and `DELETE` methods.
     - You can add as many URL parameters as needed.
     - A non-blank URL parameter specifies a default value for the parameter.
@@ -36,11 +36,11 @@ The following screenshot shows an example of filled-out service:
 
 ![Service Definition](images/service-definition.png)
 
-### URL Parameters before Orbeon Forms 4.11
+### URL Parameters before Orbeon Forms 2016.1
 
-Prior to Orbeon Forms 4.11, a "request body" is mandatory for the `GET` and `DELETE` methods. The body is not sent to the service, but instead is used to configure request parameters. 
+Prior to Orbeon Forms 2016.1, a "request body" is mandatory for the `GET` and `DELETE` methods. The body is not sent to the service, but instead is used to configure request parameters.
 
-The content of the "Request Body" form has to be a well-formed XML document. The name of the root element doesn't matter, but usually `params`or `request` is used. Each child element defines a parameter as shown in the following example: 
+The content of the "Request Body" form has to be a well-formed XML document. The name of the root element doesn't matter, but usually `params`or `request` is used. Each child element defines a parameter as shown in the following example:
 
 ```xml
 <params>

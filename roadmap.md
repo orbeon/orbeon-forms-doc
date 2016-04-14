@@ -40,11 +40,11 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ## Upcoming releases
 
-### Orbeon Forms 4.11
+### Orbeon Forms 2016.1
 
 This release contains a large number of small features and bug-fixes.
 
-*NOTE: We had initially planned the "workflow stage" feature ([#2256](https://github.com/orbeon/orbeon-forms/issues/2256)) for this release but have moved it to 4.12.*
+*NOTE: We had initially planned the "workflow stage" feature ([#2256](https://github.com/orbeon/orbeon-forms/issues/2256)) for this release but have moved it to 2016.2.*
 
 Focus:
 
@@ -52,14 +52,14 @@ Focus:
 
 Issues:
 
-- [ ] [all Orbeon Forms 4.11 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/4.11)
+- [ ] [all Orbeon Forms 2016.1 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2016.1)
 
 Please remember that the following schedule is a plan, not a promise:
 
 - 2016-03-11: code complete and start testing
 - 2016-03-29: tentative release date
 
-### Orbeon Forms 4.12
+### Orbeon Forms 2016.2
 
 The single major enhancement for this version is the "workflow stage" feature ([#2256](https://github.com/orbeon/orbeon-forms/issues/2256)).
 
@@ -72,7 +72,7 @@ Focus:
 
 Issues:
 
-- [ ] [all Orbeon Forms 4.11 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/4.11)
+- [ ] [all Orbeon Forms 2016.2 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2016.2)
 
 Please remember that the following schedule is a plan, not a promise:
 

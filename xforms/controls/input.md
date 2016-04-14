@@ -24,12 +24,12 @@ With the standard appearance, the following attributes are available and forward
 
 - `xxf:maxlength`
 - `xxf:pattern`
-    - SINCE Orbeon Forms 4.11
+    - SINCE Orbeon Forms 2016.1
 - `xxf:autocomplete`
 - `xxf:size`
     - not recommended, use CSS instead
 - `xxf:title`
-    - SINCE Orbeon Forms 4.11
+    - SINCE Orbeon Forms 2016.1
     - can be useful for accessibility
 
 Example:

@@ -7,17 +7,17 @@
 These functions are typically used on the `constraint` attribute of the `xf:bind` element. For example, as used by Form Builder:
 
 ```xml
-<xf:bind 
-    id="control-1-bind" 
-    name="control-1" 
-    ref="control-1" 
+<xf:bind
+    id="control-1-bind"
+    name="control-1"
+    ref="control-1"
     type="xf:decimal"
     constraint="xxf:fraction-digits(2)"/>
 ```
 
 ## xxf:fraction-digits()
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ```ruby
 xxf:fraction-digits($digits as xs:integer?) as xs:boolean
@@ -66,7 +66,7 @@ Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
 
 ## xxf:negative()
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ```ruby
 xxf:negative() as xs:boolean
@@ -77,33 +77,33 @@ xxf:negative() as xs:boolean
 
 ## xxf:non-negative()
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ```ruby
 xxf:non-negative() as xs:boolean
 ```
 
 - return `true()` if the context item converted to a string via the `string()` function parses as an `xs:decimal` which is not negative
-- return `false()` otherwise  
+- return `false()` otherwise
 
 ## xxf:non-positive()
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ```ruby
 xxf:non-positive() as xs:boolean
 ```
 
 - return `true()` if the context item converted to a string via the `string()` function parses as an `xs:decimal` which is not positive
-- return `false()` otherwise 
+- return `false()` otherwise
 
 ## xxf:positive()
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ```ruby
 xxf:positive() as xs:boolean
 ```
 
 - return `true()` if the context item converted to a string via the `string()` function parses as an `xs:decimal` which is positive
-- return `false()` otherwise 
+- return `false()` otherwise

@@ -42,7 +42,7 @@ Once a grid is inserted, you can edit its properties with the "Grid Settings" ic
 
 ### Formulas
 
-The "Visibility" and "Read-Only" formulas control whether the entire grid (including it's headers if any) is visible at all or whether its content is entirely readonly. 
+The "Visibility" and "Read-Only" formulas control whether the entire grid (including it's headers if any) is visible at all or whether its content is entirely readonly.
 
 *NOTE: Since Orbeon Forms 4.8, these settings properly apply to the entire grid. Previously, the grid's repeat headers did not hide properly for example when the grid was hidden. See issue [#635](https://github.com/orbeon/orbeon-forms/issues/635).*
 
@@ -54,17 +54,17 @@ The repeat settings control whether to use a custom iteration name (not recommen
 
 ![Grid Settings](images/repeated-grid-settings-repeat.png)
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 The "Apply Initial Value Formulas when Adding Iterations" option specifies whether the "Initial Value" formulas for controls within the grid are evaluated for new iterations.
 
-With Orbeon Forms 4.11, the option is enabled by default for new forms and new repeated grids. The option is disabled by default for grids created with previous versions of Orbeon Forms.
+With Orbeon Forms 2016.1, the option is enabled by default for new forms and new repeated grids. The option is disabled by default for grids created with previous versions of Orbeon Forms.
 
 With the option enabled, new iterations can have dynamic initial values:
 
 ![Initial Values](images/iterations-initial-values.png)
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 The "Initial Number of Iterations Uses Template" option specifies, when an *enclosing repeated section* creates a new iteration, how many iterations this repeated grid will contains:
 

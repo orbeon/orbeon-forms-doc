@@ -4,7 +4,7 @@
 
 ## Availability
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 ## What it does
 

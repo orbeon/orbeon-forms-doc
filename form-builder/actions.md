@@ -92,7 +92,7 @@ Each selection control's selected value(s) are updated to be in range following 
 - For single-selection controls: if the item value currently stored in the instance data is not part of the returned set of items, the value is cleared.
 - For multiple-selection controls: any of the space-separated values currently stored in the instance data that are not part of the returned set of item values are removed.
 
-#### Behavior starting with Orbeon Forms 4.11
+#### Behavior starting with Orbeon Forms 2016.1
 
 In the presence of repeated grids or sections, the destination selection control can resolve to zero, one or more concrete controls.
 

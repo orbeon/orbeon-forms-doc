@@ -157,7 +157,7 @@ The property configures which buttons are included on the Summary Page, and in w
 * `pdf`
     * Label: "PDF"
     * Action: Create a PDF file for the selected form data.
-* `tiff` [SINCE Orbeon Forms 4.11]
+* `tiff` [SINCE Orbeon Forms 2016.1]
     * Label: "TIFF"
     * Action: Create a TIFF image file for the selected form data.
 * `delete`
@@ -212,7 +212,7 @@ The property configures which buttons are included on the Detail Page, and in wh
 
 ### Loading indicator for buttons
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BUTTON` by a specific button name, allows you to configure which loading indicator, if any, is to be used for that button. The value of the property can be either:
 
@@ -724,7 +724,7 @@ Attachment properties:
 - `attach-tiff`: whether the TIFF representation is attached to the email
 - `attach-xml`:  whether the XML data is attached to the email
 - `attach-files`:
-    - SINCE Orbeon Forms 4.11
+    - SINCE Orbeon Forms 2016.1
     - whether file and image form attachments are attached to the email
     - `all`: all form attachments are included (this is the default)
     - `none`: no form attachments is included
@@ -734,7 +734,7 @@ Attachment properties:
 
 ### Appearance of repeated sections
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 The following property allows you to set the appearance of repeated sections to `full` (the default) or `minimal` for all forms or for a subset of forms:
 
@@ -749,7 +749,7 @@ See also the [`appearance`](../../form-runner/component/section.html#repeated-mo
 
 ### Appearance of repeated grids
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 The following property allows you to set the appearance of repeated grids to `full` (the default) or `minimal` for all forms or for a subset of forms:
 
@@ -764,7 +764,7 @@ See also the [`appearance`](../../form-runner/component/grid.html#repeated-mode)
 
 ### Section collapsing
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 The following property allows you to set whether a section content can be collapsed by clicking on its title for all forms or for a subset of forms:
 
@@ -801,7 +801,7 @@ A value of `false` can be more efficient with slower browsers or large forms.
 
 ### Deprecated properties
 
-Before Orbeon Forms 4.11, you could use the following properties, deprecated since Orbeon Forms 4.11. Section collapsing:
+Before Orbeon Forms 2016.1, you could use the following properties, deprecated since Orbeon Forms 2016.1. Section collapsing:
 
 ```xml
 <property

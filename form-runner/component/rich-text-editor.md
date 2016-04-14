@@ -16,7 +16,7 @@ Include the TinyMCE editor in your page with:
 <fr:tinymce ref="..."/>
 ```
 
-Since Orbeon Forms 4.11, it is also enabled with:
+Since Orbeon Forms 2016.1, it is also enabled with:
 
 ```xml
 <xf:textarea mediatype="text/html">

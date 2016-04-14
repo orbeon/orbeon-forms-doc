@@ -169,7 +169,7 @@ The controls appear like this at design time:
 
 ![](images/selection-controls-design-time.png)
 
-_NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 4.11 and removed from the toolbox._
+_NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 2016.1 and removed from the toolbox._
 
 ### Attachment controls
 

@@ -57,7 +57,7 @@ For an example, see [Adding support for a value](http://doc.orbeon.com/xforms/xb
 
 ## The external-value mode
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 You use the `external-value` mode in addition to the `binding` and `value` modes.
 
@@ -69,13 +69,13 @@ For more details, see [Support for the external-value mode](javascript.md#suppor
 
 ## The javascript-lifecycle mode
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 You use this mode when the component implementation is mostly done in JavaScript and not with nested XForms controls.
 
 The `javascript-lifecycle` mode lets Orbeon Forms handle more of a JavaScript companion class's lifecycle, including initialization, destruction, and state changes. You often use it in conjunction with `external-value`.
 
-For example prior to Orbeon Forms 4.11, you would call the component's `init()` method from XForms event handlers. With `javascript-lifecycle`, this is no longer needed.
+For example prior to Orbeon Forms 2016.1, you would call the component's `init()` method from XForms event handlers. With `javascript-lifecycle`, this is no longer needed.
 
 For more details, see [Support for the javascript-lifecycle mode](javascript.md#support-for-the-javascriptlifecycle-mode).
 
@@ -106,7 +106,7 @@ You use this mode when the component implementation is mostly done in JavaScript
 
 The `focus` mode allows the component to handle keyboard focus natively, so that the XForms engine is aware of focus.
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 When the component receives focus, for example following an XForms `<xf:setfocus>` action, the JavaScript companion class's `xformsFocus()` method is called if present. If the method is missing, then the legacy `setFocus()` method is called.
 

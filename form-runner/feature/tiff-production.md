@@ -9,7 +9,7 @@ be converted to TIFF image files for download or email.
 
 ## Availability
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 This is an Orbeon Forms PE feature.
 

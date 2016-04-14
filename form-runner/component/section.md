@@ -34,7 +34,7 @@ Attributes:
 
 TODO:
 
-- `collapsible` [SINCE Orbeon Forms 4.11]
+- `collapsible` [SINCE Orbeon Forms 2016.1]
   - whether the section can be collapsed by clicking on its title
   - `true` (default)
     - allow section to be collapsed
@@ -45,7 +45,7 @@ TODO:
 
 TODO
 
-- `appearance` [SINCE Orbeon Forms 4.11]
+- `appearance` [SINCE Orbeon Forms 2016.1]
   - `full`
     - the default appearance, as with Orbeon Forms 4.10 and earlier
     - iteration menu
@@ -67,7 +67,7 @@ TODO
 
 ## Events
 
-[SINCE Orbeon Forms 4.11]
+[SINCE Orbeon Forms 2016.1]
 
 The following events are dispatched to the `fr:section` element:
 
