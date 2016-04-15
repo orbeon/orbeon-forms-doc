@@ -1157,7 +1157,7 @@ drop table orbeon_form_data_attach ;
 - delete
 - view
 
-### Excel Import \[2016.1 Erik TODO\]
+### Excel Import \[2016.1 DONE\]
 
 - `http://localhost:8080/2016.1-pe/fr/orbeon/contact/import`
 - import small doc first (`contact5.xlsx` on Dropbox)
