@@ -1203,6 +1203,7 @@ drop table orbeon_form_data_attach ;
   - check that TinyMCE (rich text) appears ok, including with IE9 (icons)
   - upload works
   - attach image and save
+  - check singleton form works
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 - full portlet
   - all examples and Form Runner
@@ -1214,7 +1215,7 @@ drop table orbeon_form_data_attach ;
   - Image annotation control works (in Controls form)
   - *NOTE: noscript broken in Liferay*
 
-### Embedding \[2016.1 Erik TODO\]
+### Embedding \[2016.1 DONE\]
 
 - deploy `orbeon-embedding.war` into Tomcat
 - update `web.xml`:
@@ -1222,7 +1223,7 @@ drop table orbeon_form_data_attach ;
     ```xml
     <init-param>
         <param-name>form-runner-url</param-name>
-        <param-value>http://localhost:8080/49pe</param-value>
+        <param-value>http://localhost:8080/2016.1-pe</param-value>
     </init-param>
     ````
 - navigate to `http://localhost:8080/orbeon-embedding/`
@@ -1233,6 +1234,7 @@ drop table orbeon_form_data_attach ;
   - repeats
   - help/hints
   - uploads
+  - signature
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
 
 ### XForms Retry
