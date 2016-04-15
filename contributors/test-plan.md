@@ -884,10 +884,11 @@ drop table orbeon_form_data_attach ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2016.1 Erik TODO\]
+### Process buttons \[2016.1 DONE\]
 
 - create and publish guest/test
-- add [these properties](https://gist.github.com/ebruchez/5666643), and add `review` the list of buttons in the first property
+    - 1 required field
+- add [these properties](https://gist.github.com/ebruchez/5666643), and add `review` to the list of buttons in the first property
 - check standard behavior of buttons
     - save-draft
         - can save w/ invalid data
@@ -902,7 +903,7 @@ drop table orbeon_form_data_attach ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2016.1 Erik TODO\]
+### Attachments/uploads \[2016.1 DONE\]
 
 - basic upload works
 - removing uploaded file works
@@ -911,7 +912,6 @@ drop table orbeon_form_data_attach ;
     - control is back to empty
 - very small (a few KB) upload works multiple times in a row
 - with throttling (with Charles) (*NOTE: Proxy settings not really useful as we are looking at browser/server traffic.*)
-
     ```xml
     <property
         as="xs:string"
@@ -925,7 +925,7 @@ drop table orbeon_form_data_attach ;
     - cancel midway works
     - progress indicator works
 
-### Submit \[2016.1 Erik TODO\]
+### Submit \[2016.1 DONE\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -946,7 +946,7 @@ drop table orbeon_form_data_attach ;
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2016.1 Erik TODO\]
+### Email \[2016.1 DONE\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -974,14 +974,14 @@ drop table orbeon_form_data_attach ;
   - contains attachments, XML, PDF and TIFF [SINCE 2016.1]
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2016.1 Erik TODO\]
+### Misc \[2016.1 DONE\]
 
 - switch language
 - open/close sections
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode \[2016.1 Erik TODO\]
+### Noscript mode \[2016.1 DONE\]
 
 - orbeon/contact
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
