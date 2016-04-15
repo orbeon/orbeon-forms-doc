@@ -1170,16 +1170,17 @@ drop table orbeon_form_data_attach ;
 - check import completes
 
 
-### Liferay Support \[2016.1 Erik TODO\]
+### Liferay Support \[2016.1 DONE\]
 
-- versions as of Orbeon Forms 4.9
-  - Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)
-  - Liferay Portal Community Edition 6.1.2 CE GA3
+- versions as of Orbeon Forms 2016.1
+  - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
+  - Liferay Portal Community Edition 6.1.2 CE GA3 (August 2013)
+  - Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
 - setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present
   - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
-  - start Liferay: `./tomcat-7.0.40/bin/catalina.sh run`
-  - try `http://localhost:9090/`
+  - start Liferay: `./liferay-portal-6.1.2-ce-ga3/tomcat-7.0.40/bin/catalina.sh ru`
+  - try `http://localhost:9090/` from Firefox
   - login
     - *NOTE: Cannot seem to login with Chrome anymore. Tried removing JSESSIONID, still issue.*
 - proxy portlet
@@ -1194,7 +1195,7 @@ drop table orbeon_form_data_attach ;
     - check that all 3 pages now show in French (be aware of [#1628](https://github.com/orbeon/orbeon-forms/issues/1628))
   - set Send Liferay user
     - check w/ HttpScoop that user headers are sent to Form Runner
-      - Orbeon-Liferay-User-*
+      - `Orbeon-Liferay-User-*`
   - readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
   - edit/review/back
   - send to external page
@@ -1212,7 +1213,7 @@ drop table orbeon_form_data_attach ;
     - check that checkboxes appear correctly
     - *NOTE: Hit issue of double JSESSIONID once, check cookies if problems.*
   - attach image and save, make sure image shows properly
-  - Image annotation control works (in Controls form)
+  - ~~Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay*
 
 ### Embedding \[2016.1 DONE\]
@@ -1233,8 +1234,11 @@ drop table orbeon_form_data_attach ;
   - PDF
   - repeats
   - help/hints
-  - uploads
-  - signature
+  - controls to check
+      - upload
+      - signature
+      - number
+      - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
 
 ### XForms Retry
