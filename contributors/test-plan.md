@@ -1175,6 +1175,7 @@ drop table orbeon_form_data_attach ;
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
   - Liferay Portal Community Edition 6.1.2 CE GA3 (August 2013)
   - Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
+    - *NOTE: Not officially supported by Orbeon as of 2016.1. Things work, but see [#2728](https://github.com/orbeon/orbeon-forms/issues/2728)*
 - setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present
   - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
