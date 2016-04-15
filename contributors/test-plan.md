@@ -1074,7 +1074,7 @@ drop table orbeon_form_data_attach ;
     - if decimal separator is `,`, show regular pane (if US settings)
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 
-### Home Page
+### Home Page \[2016.1 Erik TODO\]
 
 - http://localhost:8080/410pe/fr/ lists deployed forms
 - (see also Form Builder permissions above which already tests some of this)
@@ -1157,9 +1157,9 @@ drop table orbeon_form_data_attach ;
 - delete
 - view
 
-### Excel Import
+### Excel Import \[2016.1 Erik TODO\]
 
-- http://localhost:8080/48pe/fr/orbeon/contact/import
+- `http://localhost:8080/2016.1-pe/fr/orbeon/contact/import`
 - import small doc first (`contact5.xlsx` on Dropbox)
   - check 2 out of  5 docs invalid
   - continue and check import passes: 3 documents were imported
@@ -1168,7 +1168,6 @@ drop table orbeon_form_data_attach ;
   - continue and check import passes: 180 documents were imported
 - check % and ETA progress during validation and import
 - check import completes
-
 
 ### Liferay Support \[2016.1 DONE\]
 
