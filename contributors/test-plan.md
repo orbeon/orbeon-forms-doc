@@ -6,7 +6,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ## Misc
 
-### Distribution \[2016.1 Erik TODO\]
+### Distribution \[2016.1 DONE\]
 
 - [x] README.md is up to date
   - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
@@ -22,7 +22,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - [x] check CE zip doesn't have
   - orbeon-embedding.war
   - proxy-portlet.war
-- [ ] dropping the WAR file (with license included or in ~/.orbeon/license.xml) into Tomcat and Liferay works - out of the box
+- [x] dropping the WAR file (with license included or in ~/.orbeon/license.xml) into Tomcat and Liferay works - out of the box
 - [x] make sure the PE license is not included
 
 ### Landing Page \[2016.1 DONE\]
@@ -680,7 +680,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder / Form Runner
 
-### Section Templates
+### Section Templates \[2016.1 Erik TODO\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
@@ -716,7 +716,7 @@ drop table orbeon_form_data_attach ;
 - make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10!)
 - makes invalid controls in section template prevent saving
 
-### PDF Automatic
+### PDF Automatic \[2016.1 Erik TODO\]
 
 - Controls and Bookshelf: input field and text areas have highlighted and clickable links
 - Controls: image annotation shows in PDF
@@ -725,7 +725,7 @@ drop table orbeon_form_data_attach ;
 - page numbering/total at bottom center
 - PDF looks good overall
 
-### PDF Template
+### PDF Template \[2016.1 Erik TODO\]
 
 - attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - add field "name" in section "applicant"
@@ -740,7 +740,7 @@ drop table orbeon_form_data_attach ;
 - W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions
+### Form Builder Permissions \[2016.1 Erik TODO\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -1138,7 +1138,7 @@ drop table orbeon_form_data_attach ;
   - upgrade remote
   - make sure forms still work
 
-### Summary Page
+### Summary Page \[2016.1 Erik TODO\]
 
 - e.g. http://localhost:8080/410pe/fr/orbeon/bookshelf/summary
 - list forms
