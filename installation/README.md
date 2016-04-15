@@ -4,10 +4,11 @@
 
 ## Software requirements
 
-Orbeon Forms 4 runs on any platform that supports:
+Orbeon Forms runs on any platform that supports:
 
-* Java 6, 7 (recommended), or 8
-* a Servlet 2.5 container or greater (such as [Apache Tomcat](http://tomcat.apache.org/) 6, 7 (recommended) or 8)
+* Java 6, __7__ (recommended), or 8
+* a Servlet 2.5 (or greater) container such as [Apache Tomcat](http://tomcat.apache.org/) 6 or __7__ (recommended)
+
 
 ## Hardware requirements
 
@@ -35,6 +36,8 @@ Configure the Java VM with:
 
 Also, make sure that you do *not* have tiered compilation when using Java 7. See [A dangerous Java 7 JVM option: TieredCompilation
 ](http://blog.orbeon.com/2015/08/a-dangerous-java-7-jvm-option.html).
+
+*NOTE: On Unix systems, GIJ / GCG is not supported as there are reports of issues with that runtime environment and Orbeon Forms. Instead, we recommend you use the Oracle runtime Java environment.*
 
 ## Database setup
 

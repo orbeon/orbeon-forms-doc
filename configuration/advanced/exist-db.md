@@ -11,7 +11,7 @@ By default, Orbeon Forms ships with an embedded eXist database. For production, 
 
 Here we look at how to deploy a separate eXist WAR file (the first option).
 
-_NOTE: Since [Orbeon Forms 4.0,][1]  the embedded eXist database is secured by a token mechanism, which only allows accesses internal to Orbeon Forms. Follow the instructions on this page if you need to setup a secure, separate eXist database which can be accessed  from outside Orbeon Forms, or setup a completely separate eXist instance._
+_NOTE: Since [Orbeon Forms 4.0][1],  the embedded eXist database is secured by a token mechanism, which only allows accesses internal to Orbeon Forms. Follow the instructions on this page if you need to setup a secure, separate eXist database which can be accessed  from outside Orbeon Forms, or setup a completely separate eXist instance._
 
 ## Creating a separate eXist WAR
 

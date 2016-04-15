@@ -4,14 +4,15 @@
 
 ## Versions
 
-We recommend using a current version of Tomcat. As of Orbeon Forms 4.6, those are:
+We recommend using a current version of Tomcat. As of Orbeon Forms 2016.1, those are:
 
 - Tomcat 6
 - Tomcat 7
 
-*NOTE: Tomcat 8 hasn't been tested yet.*
+*NOTES:*
 
-On Unix systems, we recommend you don't use GIJ / GCG, as there are reports of issues with that runtime environment and Orbeon Forms. Instead, we recommend you use the Sun/Oracle runtime Java environment.
+- Tomcat 8 hasn't been tested yet.
+- [TIFF support](http://doc.orbeon.com/form-runner/feature/tiff-production.html) is not available when using Tomcat 6 (see [#2717](https://github.com/orbeon/orbeon-forms/issues/2717)).
 
 ## Setup
 
