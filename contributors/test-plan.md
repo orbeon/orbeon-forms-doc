@@ -668,7 +668,7 @@ drop table orbeon_form_data_attach ;
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service \[2016.1 Alex TODO\]
+### HTTP service \[2016.1 DONE\]
 
 - using echo service is ok
     - POST to `/fr/service/custom/orbeon/echo`
@@ -684,7 +684,6 @@ drop table orbeon_form_data_attach ;
         <item label="Bar" value="bar"/>
     </items>
     ```
-    - setting itemsets within repeats ([#1770](https://github.com/orbeon/orbeon-forms/issues/1770)) has an automated test
 
 ## Form Builder / Form Runner
 
