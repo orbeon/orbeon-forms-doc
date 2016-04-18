@@ -1350,7 +1350,7 @@ drop table orbeon_form_data_attach ;
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2016.1 TODO\]
+### Error Dialog \[2016.1 Alex TODO\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
@@ -1366,7 +1366,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
 
-### Other Browsers \[2016.1 TODO\]
+### Other Browsers \[2016.1 Alex TODO\]
 
 - main tests above with Google Chrome
   - 4.10: latest is ??? and 46.0.2490.4 dev
