@@ -1005,17 +1005,18 @@ drop table orbeon_form_data_attach ;
     - errors prevent saving
     - Refresh icon works
 
-### Wizard \[2016.1 Erik TODO\]
+### Wizard \[2016.1 DONE\]
 
 - validated mode
     - `/fr/orbeon/w9/new`
     - check cannot click in TOC
     - check cannot navigate forward with error in current section
     - once all sections visited, can freely navigate
+    - check back to edit allows navigating all sections
 - /fr/orbeon/controls/new
     - test errors in section template are highlighted in TOC
 
-### Captcha \[2016.1 Erik TODO\]
+### Captcha \[2016.1 DONE\]
 
 - enable with property
 
@@ -1033,10 +1034,12 @@ drop table orbeon_form_data_attach ;
     name="oxf.xforms.xbl.fr.recaptcha.private-key"
     value="6LesxAYAAAAAAJIXoxMvErqbisKkt7W-CPoE_Huo"/>
 ```
-- test reCAPTCHA [NOTE: had to fix 2 bugs with 4.5!]
+- test reCAPTCHA
+    - *NOTE: had to fix 1 regression with 2016.1.*
+    - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2016.1 Erik TODO\]
+### Help popups/hint tooltips positioning \[2016.1 DONE\]
 
 - create form to test general positioning
   - help on all elements
