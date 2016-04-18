@@ -680,7 +680,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2016.1 Erik TODO\]
+### Section Templates \[2016.1 DONE\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
@@ -713,7 +713,7 @@ drop table orbeon_form_data_attach ;
         - enter data, save, check that data loads back in all fields
         - test that repeated grid in section template shows ([#1370](https://github.com/orbeon/orbeon-forms/issues/1370)) in the builder and nicely
         - check review, PDF
-- make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10!)
+- make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10, works as of 2016.1)
 - makes invalid controls in section template prevent saving
 
 ### PDF Automatic \[2016.1 Erik TODO\]
