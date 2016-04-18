@@ -268,7 +268,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite
 
-### Data Capture Permissions
+### Data Capture Permissions \[2016.1 TODO\]
 
 - Setup
     - Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
@@ -360,7 +360,7 @@ Do the following on DB2.
                     - delete button enabled and works
                     - on open data, can edit data
 
-### Autosave and Permissions Test
+### Autosave and Permissions Test \[2016.1 TODO\]
 
 Repeat what follows with Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
 
@@ -468,7 +468,7 @@ Authorize on:
     1. Go back to /edit
     1. Dialog must propose loading draft
 
-### DB2 DDL
+### DB2 DDL \[2016.1 TODO\]
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
@@ -484,7 +484,7 @@ drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
 ```
 
-### Oracle and DB2 Flat View
+### Oracle and DB2 Flat View \[2016.1 TODO\]
 
 - Make sure Oracle and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -1251,7 +1251,7 @@ drop table orbeon_form_data_attach ;
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
 
-### XForms Retry
+### XForms Retry \[2016.1 TODO\]
 
 1. Retry happens
     - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
@@ -1334,7 +1334,7 @@ drop table orbeon_form_data_attach ;
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog
+### Error Dialog \[2016.1 TODO\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
@@ -1350,7 +1350,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
 
-### Other Browsers
+### Other Browsers \[2016.1 TODO\]
 
 - main tests above with Google Chrome
   - 4.10: latest is ??? and 46.0.2490.4 dev
@@ -1379,7 +1379,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
 
-### Other
+### Other \[2016.1 TODO\]
 
 Features to test, with all supported browsers:
 
