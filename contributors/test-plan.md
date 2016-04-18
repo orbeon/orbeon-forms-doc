@@ -525,12 +525,11 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder
 
-### Basic Features \[2016.1 Alex TODO\]
+### Basic Features \[2016.1 DONE\]
 
 - create new form
 - insert sections, grids, repeated grids
 - rename sections and controls
-    - check renamed in dialog [automated for 4.8, see [`BasicControls`](https://github.com/orbeon/orbeon-forms/blob/master/src/test/scala/org/orbeon/oxf/client/fb/BasicControls.scala)]
     - check renamed in source
 - move sections
     - up/down
@@ -566,10 +565,10 @@ drop table orbeon_form_data_attach ;
     - check that if control is required but empty, generic message shows, not constraint message ([#1829](https://github.com/orbeon/orbeon-forms/issues/1829))
     - check that if control is required but empty and there is an unmet constraint, generic message shows ([#1830](https://github.com/orbeon/orbeon-forms/issues/1830))
 - set control MIPs and properties
-    - check required star appears with required set to true()
+    - check required star appears with required set to `true()`
     - check Show in Summary/Search work when form deployed
 - set section MIPs
-    - check show/hide based on control value e.g. $fortytwo = '42'
+    - check show/hide based on control value e.g. `$fortytwo = '42'`
 - edit/modify source
     - change e.g. control label
 - image annotation control
