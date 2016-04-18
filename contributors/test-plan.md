@@ -140,7 +140,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
     - go to /fr/
     - check that form definitions from all persistence layers show
 
-### Versioning \[2016.1 Alex TODO\]
+### Versioning \[2016.1 DONE\]
 
 Do the following on DB2.
 
@@ -149,7 +149,11 @@ Do the following on DB2.
         ```xml
         <property
             as="xs:string"
-            name="oxf.fr.persistence.provider.*.*.*"
+            name="oxf.fr.persistence.provider.exist.*.*"
+            value="exist"/>
+        <property
+            as="xs:string"
+            name="oxf.fr.persistence.provider.db2.*.*"
             value="db2"/>
         <property
             as="xs:boolean"
@@ -160,7 +164,7 @@ Do the following on DB2.
             name="oxf.fr.email.attach-tiff.db2.versioning"
             value="true"/>
         <property as="xs:string" name="oxf.fr.detail.buttons.db2.versioning">
-            pdf tiff email save send
+            pdf tiff email save review send
         </property>
         <property as="xs:string" name="oxf.fr.detail.process.send.db2.versioning">
             send(
@@ -173,6 +177,8 @@ Do the following on DB2.
             as="xs:string"
             name="oxf.fr.email.to.db2.versioning"
             value=""/>
+        <property as="xs:string"  processor-name="oxf:page-flow" name="service-public-methods"  value="GET HEAD POST PUT DELETE"/>
+        <property as="xs:string"  processor-name="oxf:page-flow" name="page-public-methods"     value="GET HEAD POST PUT DELETE"/>
         ```
 
         Also add the email properties (starting with `oxf.fr.email`) from your own `properties-local.xml`.
@@ -180,11 +186,14 @@ Do the following on DB2.
 - Steps
     - create form `db2/versioning`
         - fields
+            - Name section `personal-information`
             - 1 email field with "Email Recipient", say e.g. `erik at bruchez dot org`
-            - 1 email field without "Email Recipient"
+            - 1 input field "First name"
+                - Name it `first-name`
             - 1 static Image with image statically attached
             - 1 Image Attachment with image statically attached
-            - 1 PDF template with image (e.g. `personal-information$last-name` from DVM-14)
+            - Attach PDF template
+                - Use `src/resources/forms/orbeon/dmv-14/form/dmv14.pdf`
         - publish as version 1
         - go to new page
             - image and image attachment show
@@ -229,36 +238,35 @@ Do the following on DB2.
                 [#2367](https://github.com/orbeon/orbeon-forms/issues/2367),
                 [#2330](https://github.com/orbeon/orbeon-forms/issues/2330)
     - XML Schema production
-        - `/fr/service/(oracle|mysql|sqlserver|db2)/a/schema`
-            - schema with B is produced
-        - `/fr/service/(oracle|mysql|sqlserver|db2)/a/schema?form-version=1`
+        - `/fr/service/db2/versioning/schema`
+            - Check this is the schema for first form published earlier
+        - `/fr/service/db2/versioning/schema?form-version=1`
             - *NOTE: Adjust version numbers depending on which versions were published.*
-            - schema with A is produced
+            - Check this is the schema for the second form published earlier
     - go to the summary page, click on first row (created last)
-        - check field B/value b and attachment show
+        - check the data shows with the correct version of the form
         - check PDF
     - go to the summary page, click on second row (created first)
         - check field A/value a and attachment show
         - check PDF
     - Form Builder Publish dialog options (new in 4.6)
-        - with persistence layer which supports versioning (mysql)
-            - if mysql/a form has never been published
+        - with persistence layer which supports versioning (db2)
+            - if `db2/a` has never been published
                 - no options and no messages are shown
                 - latest version shows "-"
                 - publish message says version 1 was created
-            - if mysql/a form has been published
+            - if `db2/a` form has been published
                 - latest version shows correct number
                 - option to create new version or overwrite (check version numbers)
                 - switch option shows different message
                 - publish message says which version was created/updated
         - with persistence layer which doesn't support versioning (exist)
             - latest version line doesn't show
-            - if no exist/a form has been published
+            - if no `exist/a` form has been published
                 - no options and no messages are shown
             - if exist/a form has been published
                 - no options are shown
                 - message about overwrite
-            - publish message says version 1 was updated
 
 ### Data Capture Permissions
 
