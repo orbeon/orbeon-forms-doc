@@ -611,22 +611,23 @@ drop table orbeon_form_data_attach ;
     - insert control
     - check there is no JS error
 
-### Singleton forms \[2016.1 Alex TODO\]
+### Singleton forms \[2016.1 DONE\]
 
-- test that the features works as documented
+- test that the features works as [documented](../form-runner/advanced/singleton-form.md)
     - no form data
     - one instance of form data
     - more than one instance of form data
-- test from Proxy Portlet
 
-### Schema Support \[2016.1 Alex TODO\]
+### Schema Support \[2016.1 DONE\]
 
 - attach Schema
-    - use e.g. [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd) or the [XForms simple types](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
-    - upload schema
-        - see that types are listed in dialog
-    - change schema
-    - delete schema, check removed from model (be aware of [#694](https://github.com/orbeon/orbeon-forms/issues/694))
+    - attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd)
+        - available types contains `rating`, `language`, `link`
+    - change to the [XForms types schema](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
+        - available types contains `card-number`, `dayTimeDuration`, `yearMonthDuration`
+    - delete schema, check removed from model, be aware of
+        - Delete attached XML Schema causes error if type in use [#694](https://github.com/orbeon/orbeon-forms/issues/694))
+        - When removing schema, type from previously selected schema are showing [#2733](https://github.com/orbeon/orbeon-forms/issues/2733)
     - re-add schema
     - assign types to controls
     - check that validation is working as per the types
