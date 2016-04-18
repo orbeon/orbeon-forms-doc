@@ -54,7 +54,6 @@ check that all PE features are available in PE, but not in CE:
     - [ ] FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml`
-
             ```xml
             <property
                 as="xs:string"
@@ -770,11 +769,19 @@ drop table orbeon_form_data_attach ;
             username="orbeon-admin"
             password="xforms"
             roles="orbeon-user,orbeon-admin"/>
+        <user
+            username="orbeon-service"
+            password="xforms"
+            roles="orbeon-user,orbeon-service"/>
     </tomcat-users>
     ```
     - `properties-local.xml`
 
     ```xml
+    <property
+        as="xs:string"
+        name="oxf.fr.authentication.method"
+        value="container"/><!-- change to header for header-based auth -->
     <property
         as="xs:string"
         name="oxf.fr.authentication.container.roles"
@@ -789,8 +796,8 @@ drop table orbeon_form_data_attach ;
     </roles>
     ```
 - browser 1
-    - http://localhost:8080/410pe/fr/orbeon/builder/new
-    - login as orbeon-sales
+    - `http://localhost:8080/2016.1-pe/fr/orbeon/builder/new`
+    - login as `orbeon-sales`
     - must see guest and sales as app names
     - create sales/my-sales-form
     - set permissions
@@ -798,8 +805,8 @@ drop table orbeon_form_data_attach ;
         - orbeon-sales → Read and Update
     - save and publish
     - can access
-        - http://localhost:8080/410pe/fr/sales/my-sales-form/summary
-        - http://localhost:8080/410pe/fr/sales/my-sales-form/new
+        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/summary
+        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new
     - new
         - enter data and save
     - summary
@@ -807,7 +814,7 @@ drop table orbeon_form_data_attach ;
         - check can edit and duplicate
         - check Delete button is absent or disabled
         - check PDF works
-    - http://localhost:8080/410pe/fr/
+    - http://localhost:8080/2016.1-pe/fr/
         - sales/my-sales-form shows on the home page
         - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
@@ -817,18 +824,18 @@ drop table orbeon_form_data_attach ;
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
-    - http://localhost:8080/410pe/fr/orbeon/builder/summary
+    - http://localhost:8080/2016.1-pe/fr/orbeon/builder/summary
         - open structured search (be aware of  [#878](https://github.com/orbeon/orbeon-forms/issues/878))
         - check only guest and sales forms are available
 - browser 2
     - login as orbeon-user
     - can access
-        - http://localhost:8080/410pe/fr/sales/my-sales-form/new
+        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new
     - can't access
-        - http://localhost:8080/410pe/fr/sales/my-sales-form/summary (403)
-        - http://localhost:8080/410pe/fr/sales/my-sales-form/edit/... (403)
+        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/summary (403)
+        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
-    - http://localhost:8080/410pe/fr/
+    - http://localhost:8080/2016.1-pe/fr/
         - NO admin ops for sales/my-sales-form
         - BUT admin ops for guest/*
         - CAN click on line and takes to /new
@@ -838,15 +845,15 @@ drop table orbeon_form_data_attach ;
     - check can still new/edit/view
 - browser 2
     - can't access
-        - http://localhost:8080/410pe/fr/sales/my-sales-form/new (403)
-    - http://localhost:8080/410pe/fr/
+        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new (403)
+    - http://localhost:8080/2016.1-pe/fr/
         - form not visible
 - browser 1
     - re-add Anyone → Create
     - add Owner → Read
     - check nothing changed
 - browser 2
-    - can access http://localhost:8080/410pe/fr/sales/my-sales-form/summary, but only see own data as readonly
+    - can access http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/summary, but only see own data as readonly
     - /new, save
     - Summary shows forms in readonly mode
 - access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
@@ -1049,26 +1056,31 @@ drop table orbeon_form_data_attach ;
 - test Bookshelf help
 - create form with fields, including checkboxes/radio buttons
 
-### Mobile and Responsive \[2016.1 Erik TODO\]
+### Mobile and Responsive \[2016.1 DONE\]
+
+*NOTE: Summary and Home are not responsive as of 2016.1.*
 
 - setup
     - iPhone 6S or 6S Plus
     - can also test more using simulator
 - default layout
-    - NOTE: Summary and Home are not responsive as of 2016.1
     - Contact Form / Bookshelf Form
         - looks ok
         - can navigate to `view` and back
         - PDF shows
+        - upload book cover in Bookshelf
 - wizard layout
     - general
         - looks ok
-        - can navigate sections via TOC at top
+        - can navigate sections via TOC at top (click and buttons)
         - buttons at bottom work
-        - can enter data, select checkboxes/radio buttons
     - Control Form
-        - NOTE: Repeat not handled nicely.
+        - can enter data, select checkboxes/radio buttons
+        - date picker works
+        - can quickly select radio buttons/checkboxes (zoom in if needed, touch areas are small)
+        - signature works
         - PDF
+        - NOTE: Repeat not handled nicely.
     - DMV-14 Form
         - NOTE: Repeat not handled nicely.
         - PDF
@@ -1086,12 +1098,13 @@ drop table orbeon_form_data_attach ;
 
 ### Home Page \[2016.1 Erik TODO\]
 
-- http://localhost:8080/410pe/fr/ lists deployed forms
-- (see also Form Builder permissions above which already tests some of this)
-  - comment all roles in form-builder-permissions.xml
-- no admin buttons/actions show
-- set all Form Builder permissions
+*See also Form Builder permissions above which already tests some of this.*
 
+- `http://localhost:8080/2016.1-pe/fr/` lists deployed forms
+- comment all roles in form-builder-permissions.xml
+- no admin buttons/actions show
+- changing language to French works
+- set all Form Builder permissions
     ```xml
     <role name="*" app="*" form="*"/>
     ```
@@ -1101,7 +1114,6 @@ drop table orbeon_form_data_attach ;
 - "publish to production"
   - configure  remote server and production-server-uri
     - e.g. remote in Liferay Tomcat
-
     ```xml
     <property as="xs:string" name="oxf.fr.home.remote-servers">
         [
@@ -1120,19 +1132,23 @@ drop table orbeon_form_data_attach ;
         name="authorizer"
         value="/orbeon-auth"/>
     ```
-    - set Form Builder permissions
-    ```xml
-    <role name="*" app="*" form="*"/>
-    ```
   - server asks for credentials if user has admin role
-    - orbeon-admin/x*
+      - `orbeon-service/x*`
   - Cancel  → loads local forms
   - Connect → loads local and remote forms, sorted by mod date desc
   - Select menu works
   - Operation menu works
-    - push/pull forms
-    - check available on /fr/ page on remote (e.g. in Liferay)
-  - add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
+      - push/pull forms
+      - check available on /fr/ page on remote (e.g. in Liferay)
+  -   add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
+      ```xml
+      <property as="xs:string"  name="oxf.fr.home.remote-servers">
+          [
+            { "label": "Public Demo Server", "url": "http://demo.orbeon.com/orbeon" },
+            { "label": "Local Liferay", "url": "http://Eriks-MacBook-Pro.local:9090/orbeon/" }
+          ]
+      </property>
+      ```
   - take form (could be previous `sales/my-sales-form` (see [Form Builder Permissions](../form-builder/images/permissions-enable.png)) but doesn't have to be)
     - attach static image
     - publish locally
@@ -1148,9 +1164,9 @@ drop table orbeon_form_data_attach ;
   - upgrade remote
   - make sure forms still work
 
-### Summary Page \[2016.1 Erik TODO\]
+### Summary Page \[2016.1 DONE\]
 
-- e.g. http://localhost:8080/410pe/fr/orbeon/bookshelf/summary
+- e.g. `http://localhost:8080/2016.1-pe/fr/orbeon/bookshelf/summary`
 - list forms
 - paging
   - create more than 10 instances if necessary
@@ -1385,8 +1401,8 @@ Features to test, with all supported browsers:
 
 - give CE version a quick run
 - XForms filter
-    - http://localhost:8080/410pe/xforms-jsp/guess-the-number/
-    - http://localhost:8080/410pe/xforms-jsp/flickr-search/
+    - http://localhost:8080/2016.1-pe/xforms-jsp/guess-the-number/
+    - http://localhost:8080/2016.1-pe/xforms-jsp/flickr-search/
 - examples-cli in distribution work (fix/remove them if not)
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
