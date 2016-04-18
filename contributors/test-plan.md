@@ -716,7 +716,7 @@ drop table orbeon_form_data_attach ;
 - make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10, works as of 2016.1)
 - makes invalid controls in section template prevent saving
 
-### PDF Automatic \[2016.1 Erik TODO\]
+### PDF Automatic \[2016.1 DONE\]
 
 - Controls and Bookshelf: input field and text areas have highlighted and clickable links
 - Controls: image annotation shows in PDF
@@ -725,7 +725,7 @@ drop table orbeon_form_data_attach ;
 - page numbering/total at bottom center
 - PDF looks good overall
 
-### PDF Template \[2016.1 Erik TODO\]
+### PDF Template \[2016.1 DONE\]
 
 - attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - add field "name" in section "applicant"
