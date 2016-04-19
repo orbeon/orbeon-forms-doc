@@ -1418,21 +1418,21 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
 
-### Other \[2016.1 TODO\]
+### Other \[2016.1 DONE\]
 
 Features to test, with all supported browsers:
 
-- [ ] give CE version a quick run
+- [x] give CE version a quick run
 - [x] XForms filter
     - `http://localhost:8080/2016.1-pe/xforms-jsp/guess-the-number/`
     - `http://localhost:8080/2016.1-pe/xforms-jsp/flickr-search/`
-- [] examples-cli in distribution work (fix/remove them if not)
+- [x] examples-cli in distribution work (fix/remove them if not)
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
     - `unzip -d orbeon orbeon.war`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/simple/stdout.xpl`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/transform/transform.xpl`
-- [ ] check logs
+- [x] check logs
     - no debug information
     - no unwanted information
     - be aware of [#849](https://github.com/orbeon/orbeon-forms/issues/849)
