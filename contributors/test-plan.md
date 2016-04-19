@@ -49,7 +49,7 @@ check that all PE features are available in PE, but not in CE:
         - Permissions
     - [x] FB: no Signature control in toolbox
     - [x] FR: PDF Template button doesn't show for DMV-14 and W-9
-    - [ ] FR: TIFF button doesn't show even if configured [SINCE 2016.1]
+    - [ ] FR: TIFF button doesn't show even if configured \[SINCE 2016.1\]
     - [x] FR: Import page returns 404
     - [ ] FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
@@ -746,7 +746,7 @@ drop table orbeon_form_data_attach ;
 - W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2016.1 Erik TODO\]
+### Form Builder Permissions \[2016.1 DONE\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -796,6 +796,7 @@ drop table orbeon_form_data_attach ;
     </roles>
     ```
 - browser 1
+    - clear cookies
     - `http://localhost:8080/2016.1-pe/fr/orbeon/builder/new`
     - login as `orbeon-sales`
     - must see guest and sales as app names
@@ -812,9 +813,9 @@ drop table orbeon_form_data_attach ;
     - summary
         - check that saved in summary
         - check can edit and duplicate
-        - check Delete button is absent or disabled
+        - check Delete button is disabled
         - check PDF works
-    - http://localhost:8080/2016.1-pe/fr/
+    - `http://localhost:8080/2016.1-pe/fr/`
         - sales/my-sales-form shows on the home page
         - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
@@ -824,43 +825,45 @@ drop table orbeon_form_data_attach ;
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
-    - http://localhost:8080/2016.1-pe/fr/orbeon/builder/summary
+    - `http://localhost:8080/2016.1-pe/fr/orbeon/builder/summary`
         - open structured search (be aware of  [#878](https://github.com/orbeon/orbeon-forms/issues/878))
         - check only guest and sales forms are available
 - browser 2
+    - clear cookies
     - login as orbeon-user
     - can access
-        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new
+        - `http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new`
     - can't access
         - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/summary (403)
         - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
-    - http://localhost:8080/2016.1-pe/fr/
+    - `http://localhost:8080/2016.1-pe/fr/`
         - NO admin ops for sales/my-sales-form
-        - BUT admin ops for guest/*
-        - CAN click on line and takes to /new
+        - BUT admin ops for `guest/*` (create a `guest/test-guest` form)
+        - CAN click on line and takes to `/new`
         - CAN do Review/Edit/PDF
 - browser 1
     - remove all permissions for Anyone for this form, re-add Create for orbeon-sales, save, publish
     - check can still new/edit/view
 - browser 2
     - can't access
-        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new (403)
+        - `http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new` (403)
     - http://localhost:8080/2016.1-pe/fr/
         - form not visible
 - browser 1
     - re-add Anyone → Create
     - add Owner → Read
     - check nothing changed
+        - well, can do `/new` from Home
 - browser 2
-    - can access http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/summary, but only see own data as readonly
+    - can access `http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/summary`, but only see own data as readonly
     - /new, save
     - Summary shows forms in readonly mode
 - access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
-  - setup `dummy` role only in `form-builder-permissions.xml`
-  - access to FB Summary page is rejected
-  - access to FB New page is rejected
-  - access to FB Edit page is rejected if form doesn't have matching role
+    - setup `dummy` role only in `form-builder-permissions.xml` e.g. `<role name="dummy" app="sales" form="*"/>`
+    - access to FB Summary page is rejected
+    - access to FB New page is rejected
+    - access to FB Edit page is rejected if form doesn't have matching role
 
 ## Form Runner
 
@@ -1096,7 +1099,7 @@ drop table orbeon_form_data_attach ;
     - if decimal separator is `,`, show regular pane (if US settings)
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 
-### Home Page \[2016.1 Erik TODO\]
+### Home Page \[2016.1 DONE\]
 
 *See also Form Builder permissions above which already tests some of this.*
 
