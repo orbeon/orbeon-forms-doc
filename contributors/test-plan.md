@@ -83,7 +83,7 @@ check that all PE features are available in PE, but not in CE:
         - in `properties-local.xml` add
             - `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
             - the properties for the private/public key
-        - access http://localhost:8080/orbeon/fr/orbeon/bookshelf/new
+        - access http://localhost:8080/2016.1-pe/fr/orbeon/bookshelf/new
         - check the captcha isn't shown
 - Check other features listed on the [web site](http://www.orbeon.com/download)
 
@@ -115,7 +115,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
     - then change app name
 - Pages
     - FB: create form, publish
-    - FR: check it shows on http://localhost:8080/orbeon/fr/
+    - FR: check it shows on http://localhost:8080/2016.1-pe/fr/
     - FR: create new form, review, back to edit ([#1643](https://github.com/orbeon/orbeon-forms/issues/1643))
     - FR: enter data, save
     - FR: check it shows in the summary page
@@ -616,9 +616,9 @@ drop table orbeon_form_data_attach ;
         name="oxf.xforms.cache.static-state.size"
         value="1"/>
     ```
-    - in 1st tab, visit http://localhost:8080/orbeon/fr/orbeon/builder/new
+    - in 1st tab, visit http://localhost:8080/2016.1-pe/fr/orbeon/builder/new
     - enter a/a to go to editor
-    - in 2nd tab, visit http://localhost:8080/orbeon/fr/orbeon/contact/new
+    - in 2nd tab, visit http://localhost:8080/2016.1-pe/fr/orbeon/contact/new
     - back to 1st tab
     - insert control
     - check there is no JS error
@@ -1269,7 +1269,7 @@ drop table orbeon_form_data_attach ;
         <param-value>http://localhost:8080/2016.1-pe</param-value>
     </init-param>
     ````
-- navigate to `http://localhost:8080/orbeon-embedding/`
+- navigate to `http://localhost:8080/2016.1-pe-embedding/`
 - go through demo forms and test
   - enter data
   - Save
@@ -1283,7 +1283,7 @@ drop table orbeon_form_data_attach ;
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
 
-### XForms Retry \[2016.1 Erik TODO\]
+### XForms Retry \[2016.1 DONE\]
 
 1. Retry happens
     - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
@@ -1308,7 +1308,7 @@ drop table orbeon_form_data_attach ;
             value="2000"/>
         ```
     - open
-        - http://localhost:8080/orbeon/xforms-sandbox/sample/dispatch-delay
+        - `http://localhost:8080/2016.1-pe/xforms-sandbox/sample/dispatch-delay`
         - in Chrome, open the Dev Tools, go to the Network tab (or use HttpScoop or Charles)
         - hit the *Manual save* button
         - check after ~10 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 10 s have elapsed)
