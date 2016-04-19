@@ -359,7 +359,7 @@ Do the following on DB2.
                     - delete button enabled and works
                     - on open data, can edit data
 
-### Autosave and Permissions Test \[2016.1 TODO\]
+### Autosave and Permissions Test \[2016.1 Erik TODO\]
 
 Repeat what follows with Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
 
