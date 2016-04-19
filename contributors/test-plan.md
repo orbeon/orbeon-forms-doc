@@ -267,7 +267,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite
 
-### Data Capture Permissions \[2016.1 Erik TODO\]
+### Data Capture Permissions \[2016.1 DONE\]
 
 ####  Setup
 
@@ -1422,17 +1422,17 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 Features to test, with all supported browsers:
 
-- give CE version a quick run
-- XForms filter
-    - http://localhost:8080/2016.1-pe/xforms-jsp/guess-the-number/
-    - http://localhost:8080/2016.1-pe/xforms-jsp/flickr-search/
-- examples-cli in distribution work (fix/remove them if not)
+- [ ] give CE version a quick run
+- [x] XForms filter
+    - `http://localhost:8080/2016.1-pe/xforms-jsp/guess-the-number/`
+    - `http://localhost:8080/2016.1-pe/xforms-jsp/flickr-search/`
+- [] examples-cli in distribution work (fix/remove them if not)
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
     - `unzip -d orbeon orbeon.war`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/simple/stdout.xpl`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/transform/transform.xpl`
-- check logs
+- [ ] check logs
     - no debug information
     - no unwanted information
     - be aware of [#849](https://github.com/orbeon/orbeon-forms/issues/849)

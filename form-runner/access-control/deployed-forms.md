@@ -35,7 +35,7 @@ In the example below:
 
 ## Permissions dialog
 
-* Permissions you set in the dialog are _additive_ –Say you defined permissions for two roles, where users with the_reader_role can read and users in the_clerk_role can delete, users with both roles (_reader_and_clerk_)are allowed to perform both operations (reading and deleting).
+* Permissions you set in the dialog are _additive_ – Say you defined permissions for two roles, where users with the _reader_ role can read and users in the _clerk_ role can delete, users with both roles ( _reader_ and _clerk_) are allowed to perform both operations (reading and deleting).
 * Operation on _Anyone_ apply to all other rows – When you select a checkbox for a given operation on the first _Anyone_ row, that checkbox will be automatically checked and disabled so you can't change it, for any additional row, since you wouldn't want to authorize users with additional roles to perform less operations.
 * _Update_ implies _read_ – On any row, if you check _update_, then _read_ will be automatically checked, as it wouldn't make sense to say that some users can update data, but can't read it, as when updating data, obviously, they must be shown the data they are updating.
 * _Create_ can't be set for the _owner_ and _group members_ – The owner/group is a piece of information attached to existing form data, keeping track of the user who create the data, and the group in which this user is. This information is only known for existing data, so assigning the _create_ permission to the _owner_ or _group members_ doesn't make sense, and the dialog doesn't show that checkbox.
