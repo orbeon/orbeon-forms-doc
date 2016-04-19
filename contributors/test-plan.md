@@ -34,7 +34,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - XForms examples
   - load, look reasonable, and work
 
-### PE Features Availability \[2016.1 Erik TODO\]
+### PE Features Availability \[2016.1 DONE\]
 
 check that all PE features are available in PE, but not in CE:
 
@@ -49,9 +49,9 @@ check that all PE features are available in PE, but not in CE:
         - Permissions
     - [x] FB: no Signature control in toolbox
     - [x] FR: PDF Template button doesn't show for DMV-14 and W-9
-    - [ ] FR: TIFF button doesn't show even if configured \[SINCE 2016.1\]
+    - [x] FR: TIFF button doesn't show even if configured \[SINCE 2016.1\]
     - [x] FR: Import page returns 404
-    - [ ] FR: No remote server support in Form Runner home page
+    - [x] FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml`
             ```xml
@@ -68,7 +68,7 @@ check that all PE features are available in PE, but not in CE:
             </property>
              ```
         - in `web.xml` uncomment authentication section
-        - access http://localhost:8080/orbeon/fr/
+        - access `http://localhost:8080/2016.1-ce/fr/`
         - login with user with the `orbeon-user` role
         - check doesn't ask user for remote servers and only loads local form definitions
 - features which are not checked yet but should be
