@@ -1283,7 +1283,7 @@ drop table orbeon_form_data_attach ;
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
 
-### XForms Retry \[2016.1 TODO\]
+### XForms Retry \[2016.1 Erik TODO\]
 
 1. Retry happens
     - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
@@ -1357,11 +1357,11 @@ drop table orbeon_form_data_attach ;
     - check the client re-executes the request
 5. File upload
     - setup
-        - enable breakpoint on response for `/49pe/xforms-server/upload`
+        - enable breakpoint on response for `/2016.1-pe/xforms-server/upload`
         - enable throttling in Charles per the following configuration
           ![](images/test-charles-throttling.png)
         - download [this image](http://placekitten.com/g/2000/2000) (~200 KB)
-    - http://localhost:8080/49pe/xforms-upload/
+    - `http://localhost:8080/2016.1-pe/xforms-upload/`
     - select image, and upload start in the background
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
