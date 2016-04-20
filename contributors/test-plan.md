@@ -496,7 +496,7 @@ drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
 ```
 
-### Oracle and DB2 Flat View \[2016.1 Alex TODO\]
+### Oracle and DB2 Flat View \[2016.1 DONE\]
 
 - Make sure PostgreSQL, Oracle and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -548,6 +548,35 @@ drop table orbeon_form_data_attach ;
     ```sql
     SELECT * FROM orbeon_f_oracle_a;
     ```
+
+With PostgreSQL, do:
+
+```sql
+SELECT *
+FROM information_schema.columns
+WHERE
+  table_schema = 'public' AND
+  table_name   = 'orbeon_f_postgresql_a'
+ORDER BY ordinal_position
+
+```
+
+Should get the following columns:
+
+```
+metadata_document_id
+metadata_created
+metadata_last_modified_time
+metadata_last_modified_by
+personal_informatio_first_name
+personal_information_last_name
+personal_information_address
+company_name
+company_industry
+section_with_l_my_control_with
+section_with_l_my_control_wit1
+section_with_l_my_control_wit2
+```
 
 ## Form Builder
 
@@ -1380,7 +1409,7 @@ drop table orbeon_form_data_attach ;
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2016.1 Erik TODO\]
+### Error Dialog \[2016.1 DONE\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
