@@ -39,6 +39,7 @@ If your forms are created with Form Builder, to upgrade to a new version of Orbe
 
 When about to upgrade, we recommend you go through the release notes for all versions between the version you are using and the one you are upgrading to, paying particular attention to the compatibility notes sections. Here are the releases which contain backward compatibility notes:
 
+- [2016.1](http://blog.orbeon.com/2016/04/orbeon-forms-20161.html)
 - [4.10](http://blog.orbeon.com/2015/08/orbeon-forms-410.html)
 - [4.9](http://blog.orbeon.com/2015/05/orbeon-forms-49.html)
 - [4.8](http://blog.orbeon.com/2015/01/orbeon-forms-48.html)
