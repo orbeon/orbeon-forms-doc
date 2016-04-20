@@ -8,7 +8,13 @@ The HTTP Service Editor allows you to create simple REST services. The idea is t
 
 To create a new HTTP service, click the Add icon under "HTTP Services". The HTTP Service Editor opens.
 
+The following screenshot shows an example of filled-out service:
+
+![Service Definition](images/service-definition.png)
+
 ## Service definition
+
+### Basic settings
 
 The "Definition" tab allows you to set the basic service parameters:
 
@@ -25,16 +31,23 @@ The "Definition" tab allows you to set the basic service parameters:
 - **Request Body**
     - This applies to the `POST` and `PUT` methods.
     - The XML document to send to the service.
-- **URL Parameters**
-    - SINCE Orbeon Forms 2016.1
-    - This applies to the `GET` and `DELETE` methods.
-    - You can add as many URL parameters as needed.
-    - A non-blank URL parameter specifies a default value for the parameter.
-    - An action can set the value of a parameter.
 
-The following screenshot shows an example of filled-out service:
+### URL parameters
 
-![Service Definition](images/service-definition.png)
+\[SINCE Orbeon Forms 2016.1\]
+
+- This applies to the `GET` and `DELETE` methods.
+- You can add as many URL parameters as needed.
+- A non-blank URL parameter specifies a default value for the parameter.
+- An action can set the value of a parameter.
+
+### JSON support
+
+\[SINCE Orbeon Forms 2016.1\]
+
+A JSON *response* from a service is processed and converted to an XML document following the XForms 2.0 scheme (see [JSON support](../xforms/submission-standard.html#json-support)).
+
+As of Orbeon Forms 2016.1, it is not yet possible to *send* JSON to a service. See [#2480](https://github.com/orbeon/orbeon-forms/issues/2480) for details.
 
 ### URL Parameters before Orbeon Forms 2016.1
 

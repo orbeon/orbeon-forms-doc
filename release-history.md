@@ -6,10 +6,12 @@
 
 See the [Orbeon Forms roadmap](roadmap.md).
 
-## Orbeon Forms 4.x series
+## Orbeon Forms 4.x and newer
 
 Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 
+- 2016
+    - 2016.1 PE and 2016.1 CE: April 20, 2016
 - 2015
     - 4.10.2 PE: December 2, 2015 ([blog post](http://blog.orbeon.com/2015/12/orbeon-forms-4102.html))
     - 4.10.1 PE: November 16, 2015 ([blog post](http://blog.orbeon.com/2015/11/orbeon-forms-4101.html))
