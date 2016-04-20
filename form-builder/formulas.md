@@ -31,7 +31,7 @@ In the Control Details dialog, XPath expressions are used to specify the followi
 * **Visibility:** Boolean expression specifying whether the control is visible.
     * If this field is left blank, then the control is always visible, unless the section is not visible.
     * Otherwise, it is visible only if the result of the Boolean expression is `true()`.
-* **Read-Only:** Boolean expression specifying whether the control is read-only, that is not editable.
+* **Read-Only:** Boolean expression specifying whether the control is read-only (not editable).
     * If this field is left blank, then the control is editable unless the section is read-only.
     * Otherwise, the field is editable only if the result of the Boolean expression is `false()`.
 * **Initial value:** string expression returning the initial value of the control when the form first shows.
