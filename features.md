@@ -13,7 +13,7 @@ The purpose of this page is to index features, their documentation and [blog pos
 
 ## Status
 
-As of 2016-02-11 this page is still being updated.
+As of 2016-04-19 this page is still being updated.
 
 ## List of Orbeon Forms features
 
@@ -24,16 +24,20 @@ As of 2016-02-11 this page is still being updated.
     - Repeated grids: [doc](form-builder/repeated-grids.md), [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
     - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
     - Options for new repeat iterations: [blog post](http://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
-    - Mimimal appearances of repeated grids and sections: [blog post](http://blog.orbeon.com/2015/12/leaner-repeated-sections-and-grids.html)
+    - Minimal appearances of repeated grids and sections: [blog post](http://blog.orbeon.com/2015/12/leaner-repeated-sections-and-grids.html)
 - Section Templates: [doc](form-builder/section-templates.md)
 - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
 - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
+    - overwriting of existing version
 - Form field validation: [doc](form-builder/validation.md), [blog post](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
     - required fields (also via formula, see [blog post](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html))
-    - white space trimming: [doc](form-builder/validation.md#trimming-leading-and-trailing-spaces), [blog post](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
+    - whitespace trimming: [doc](form-builder/validation.md#trimming-leading-and-trailing-spaces), [blog post](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
     - data types such as string, number, date, etc.
     - multiple constraints with formulas
-    - common constraints such as minimum length and maximum length: [doc](form-builder/validation.md#commonconstraints), [blog post](http://blog.orbeon.com/2015/07/how-common-constraints-work.html)
+    - common constraints: [doc](form-builder/validation.md#commonconstraints), [blog post](http://blog.orbeon.com/2015/07/how-common-constraints-work.html)
+        - minimum/maximum length
+        - positive, positive or zero, negative or zero, or negative value
+        - maximum fractional digits
     - errors, warnings, and informational validations
     - custom alert messages per validation
 - Access control
@@ -61,6 +65,8 @@ As of 2016-02-11 this page is still being updated.
 - Itemset Editor: [doc](form-builder/itemset-editor.md)
     - Hints for checkboxes and radio buttons: [blog post](http://blog.orbeon.com/2014/02/hints-for-checkboxes-and-radio-buttons.html)
 - Section Settings: [doc](form-builder/section-settings.md)
+    - whether section is collapsible
+    - whether section is initially collapsed
 - Publishing a form definition: [doc](form-builder/publishing.md)
 - Explanation text: [blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)
 - Extension API: [doc](form-builder/extension-api.md)
@@ -68,10 +74,12 @@ As of 2016-02-11 this page is still being updated.
 - Internationalization (i18n) / localization (l10n): [doc](form-builder/localization.md)
 - Services and actions
     - HTTP Services: [doc](form-builder/http-services.md)
+        - JSON support (for reading only): [doc](http://doc.orbeon.com/xforms/submission-standard.html#json-support)
+        - setting URL parameters
     - Database Services: [doc](form-builder/database-services.md
     - Actions: [doc](form-builder/actions.md)
 - XML Schema Support: [doc](form-builder/xml-schema-support.md)
-- Source code editor: [doc](form-runner/component/source-code-editor.md)
+- Source code editor: [doc](form-runner/component/source-code-editor.md)whether section is collapsible
 - Extension API: [doc](form-builder/extension-api.md)
 
 ### Form Runner
@@ -82,9 +90,12 @@ As of 2016-02-11 this page is still being updated.
     - search
 - Detail Page
     - Responsive design for mobile devices such as smartphones: [doc](form-runner/feature/responsive-design.md), [blog](http://blog.orbeon.com/2015/08/responsive-design.html)
+        - show numeric keypad/numbers and punctuation" keyboard pane when possible: [blog post](http://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
     - Review mode (printable)
     - Wizard view: [doc](form-runner/feature/wizard-view.md), [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
         - validated mode: [blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
+        - highlighting of sections in error/accessible sections
+        - buttons appearing only on the wizard's last page
 - Home Page: [doc](form-runner/feature/home-page.md), [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
 - Buttons and Processes: [doc](form-runner/advanced/buttons-and-processes/README.md), [blog post](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
 - Autosave: [doc](form-runner/persistence/autosave.md), [blog post](http://blog.orbeon.com/2013/10/autosave.html)
@@ -99,6 +110,7 @@ As of 2016-02-11 this page is still being updated.
     - as-you-type validation
     - centralized error summary showing currently relevant errors: [component doc](form-runner/component/images/xbl-error-summary-errors.png), [blog post on warnings/infos enhancements](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
+    - controlling which attachments are included: [Form Builder doc](http://doc.orbeon.com/form-builder/control-settings.html#basic-options), [Form Runner doc](http://doc.orbeon.com/configuration/properties/form-runner.html#email-settings)
 - Captcha: [properties doc](configuration/properties/form-runner.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 - Appearance of repeated sections: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-repeated-sections), [component doc](http://doc.orbeon.com/form-runner/component/grid.html#repeated-mode)
 - Appearance of repeated grids: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-grids-sections), [component doc](http://doc.orbeon.com/form-runner/component/section.html#repeated-mode)
@@ -106,34 +118,39 @@ As of 2016-02-11 this page is still being updated.
 ### Form controls
 
 - Text controls
-    - Input field
-    - Textarea
-    - Text output
+    - Text field
+    - Plain text area
+    - Formatted text area
     - Password field
-    - Formatted text (rich text)
-    - Explanation text
+- Output controls
+    - Explanatory text
+    - Calculated value
 - Typed controls
-    - Email field
-    - US phone number field
-    - Number field
-    - Currency field
+    - Number
+        - control of rounding when formatting/capturing data
+    - Email address
+    - Currency
+    - US phone number
     - US state
 - Date and time controls
     - Date, time, date and time
-    - Dropdown date, fields date
-- Selection controls
+    - Dropdown date
+    - Fields date
+- Selection controls [doc](http://doc.orbeon.com/form-builder/toolbox.html#selection-controls)
     - Dropdown menu
     - Radio buttons
+    - Radio buttons with "Other": [doc](http://doc.orbeon.com/form-runner/component/open-select1.html)
     - Checkboxes
-    - Scrollable list
-    - Boolean input
     - Scrollable checkboxes
+    - Yes/No answer: [doc](http://doc.orbeon.com/form-runner/component/yesno-input.html)
+    - Single checkbox: [doc](http://doc.orbeon.com/form-runner/component/checkbox-input.html)
     - Dynamic data dropdown
     - Autocomplete
 - Attachments
-    - Static image
-    - Image attachment
     - File attachment
+    - Image attachment
+    - Static image
+    - Handwritten signature: [doc](http://doc.orbeon.com/form-runner/component/handwritten-signature.html)
     - Image annotation: [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)
 - Buttons
     - Button
@@ -141,6 +158,7 @@ As of 2016-02-11 this page is still being updated.
 - Other
     - Character counter: [doc](form-runner/component/character-counter.md)
     - Custom components: [doc](xforms/xbl/README.md)
+        - support JavaScript Companion Classes: [doc](http://doc.orbeon.com/xforms/xbl/javascript.html)
 
 ### Databases
 
@@ -166,6 +184,7 @@ As of 2016-02-11 this page is still being updated.
 
 ### Misc
 
+- Loading indicator and spinners: [blog post](http://blog.orbeon.com/2016/04/how-do-you-tell-users-something-is.html)
 - Namespaced jQuery to avoid conflicts with other jQuery versions
 - Run modes: [doc](configuration/advanced/run-modes.md
 ), [blog](http://blog.orbeon.com/2012/05/run-modes.html)
