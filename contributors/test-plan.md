@@ -480,7 +480,7 @@ http://localhost:8080/2016.1-pe/fr/auth
     1. Go back to /edit
     1. Dialog must propose loading draft
 
-### DB2 DDL \[2016.1 Alex TODO\]
+### DB2 DDL \[2016.1 DONE\]
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
