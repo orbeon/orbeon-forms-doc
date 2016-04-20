@@ -70,6 +70,8 @@ Examples:
 
 ### Validation dialog
 
+![The validation dialog](../../images/review-messages.png)
+
 The following dialog can be opened with the `xf:show` action:
 
 - `fr-validation-dialog`: the validation dialog which asks the user to review validation messages
@@ -78,9 +80,9 @@ Example:
 
     xf:show("fr-validation-dialog") then suspend
 
-![The validation dialog](../review-messages.png)
-
 ### The result dialog
+
+![The result dialog](../../images/result-dialog.png)
 
 The `result-dialog` action shows a configurable dialog. You can customize:
 
