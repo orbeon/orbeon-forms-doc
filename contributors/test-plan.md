@@ -480,7 +480,7 @@ http://localhost:8080/2016.1-pe/fr/auth
     1. Go back to /edit
     1. Dialog must propose loading draft
 
-### DB2 DDL \[2016.1 TODO\]
+### DB2 DDL \[2016.1 Alex TODO\]
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
@@ -496,12 +496,17 @@ drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
 ```
 
-### Oracle and DB2 Flat View \[2016.1 TODO\]
+### Oracle and DB2 Flat View \[2016.1 Alex TODO\]
 
-- Make sure Oracle and DB2 datasources are  setup in `server.xml`.
+- Make sure PostgreSQL, Oracle and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
 
     ```xml
+    <property
+        as="xs:boolean"
+        name="oxf.fr.persistence.postgresql.create-flat-view"
+        value="true"/>
+
     <property
         as="xs:boolean"
         name="oxf.fr.persistence.oracle.create-flat-view"
@@ -511,6 +516,11 @@ drop table orbeon_form_data_attach ;
         as="xs:boolean"
         name="oxf.fr.persistence.db2.create-flat-view"
         value="true"/>
+
+    <property
+        as="xs:string"
+        name="oxf.fr.persistence.provider.postgresql.*.*"
+        value="postgresql"/>
 
     <property
         as="xs:string"
@@ -524,8 +534,12 @@ drop table orbeon_form_data_attach ;
     ```
 - Remove existing view if any: `drop view orbeon_f_db2_a ;`
 - Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [flat view documentation](../form-runner/persistence/flat-view.md)
-  - rename app name to `oracle` or `db2` depending
+  - rename app name to `postgresql`, `oracle` or `db2` depending
   - publish, check that a view with the appropriate column names is created.
+
+    ```sql
+    SELECT * FROM orbeon_f_postgresql_a;
+    ```
 
     ```sql
     SELECT * FROM orbeon_f_db2_a;
@@ -1366,7 +1380,7 @@ drop table orbeon_form_data_attach ;
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2016.1 Alex TODO\]
+### Error Dialog \[2016.1 Erik TODO\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 

@@ -90,7 +90,7 @@ As of 2016-04-19 this page is still being updated.
     - search
 - Detail Page
     - Responsive design for mobile devices such as smartphones: [doc](form-runner/feature/responsive-design.md), [blog](http://blog.orbeon.com/2015/08/responsive-design.html)
-        - show numeric keypad/numbers and punctuation" keyboard pane when possible: [blog post](http://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
+        - show numeric keypad/numbers and punctuation" keyboard pane when possible: [doc](http://doc.orbeon.com/form-runner/component/number.html#mobile-support), [blog post](http://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
     - Review mode (printable)
     - Wizard view: [doc](form-runner/feature/wizard-view.md), [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
         - validated mode: [blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
