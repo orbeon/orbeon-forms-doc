@@ -40,35 +40,14 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ## Upcoming releases
 
-### Orbeon Forms 2016.1
-
-This release contains a large number of small features and bug-fixes.
-
-*NOTE: We had initially planned the "workflow stage" feature ([#2256](https://github.com/orbeon/orbeon-forms/issues/2256)) for this release but have moved it to 2016.2.*
-
-Focus:
-
-- [x] significant progress migrating Form Runner / Form Builder / XForms doc from old doc site
-
-Issues:
-
-- [ ] [all Orbeon Forms 2016.1 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2016.1)
-
-Please remember that the following schedule is a plan, not a promise:
-
-- 2016-03-11: code complete and start testing
-- 2016-03-29: tentative release date
-
 ### Orbeon Forms 2016.2
 
-The single major enhancement for this version is the "workflow stage" feature ([#2256](https://github.com/orbeon/orbeon-forms/issues/2256)).
-
 Focus:
 
-- [ ] 1 basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
+- [ ] Form Builder usability
+- [ ] test automation
 - [ ] maintenance candidates
   - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
-- [ ] test automation
 
 Issues:
 
@@ -77,3 +56,19 @@ Issues:
 Please remember that the following schedule is a plan, not a promise:
 
 - 2016-06-30: tentative release date
+
+### Orbeon Forms 2016.3
+
+Focus:
+
+- [ ] basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
+- [ ] maintenance candidates
+- [ ] test automation
+
+Issues:
+
+- [ ] [all Orbeon Forms 2016.3 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2016.3)
+
+Please remember that the following schedule is a plan, not a promise:
+
+- 2016-10-30: tentative release date
