@@ -10,4 +10,4 @@ The Orbeon Forms architecture, viewed from the outside, is simple. It consists o
 
 ## Integration points
 
-See [Form Runner Integration| Form Runner ~ Integration]] and [[Form Builder Integration](../../form-builder/integration.md).
+See [Form Runner Integration](integration.md) and [Form Builder Integration](../../form-builder/integration.md).
