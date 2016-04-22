@@ -83,6 +83,18 @@ Each subdirectory has a .xbl file with some metadata. For example:
 
 - [`us-phone.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/us-phone/us-phone.xbl)
 
+As of Orbeon Forms 2016.1, the following controls need help:
+
+- [character-counter.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/character-counter/character-counter.xbl)
+- [checkbox-input.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/checkbox-input/checkbox-input.xbl)
+- [dialog-select.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/dialog-select/dialog-select.xbl)
+- [dialog-select1.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/dialog-select1/dialog-select1.xbl)
+- [explanation.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/explanation/explanation.xbl)
+- [handwritten-signature.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/handwritten-signature/handwritten-signature.xbl)
+- [number.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/number/number.xbl)
+- [open-select1.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/open-select1/open-select1.xbl)
+- [yesno-input.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/yesno-input/yesno-input.xbl)
+
 In there, you will notice the localization in English, French, etc. Add your own language.
 
 To get started search for the English version in all files for both:
@@ -100,8 +112,15 @@ which is easily missed.*
 
 - https://github.com/orbeon/orbeon-forms/tree/master/src/resources/forms/orbeon/builder/xbl
 
-These files are used by the Form Builder toolbox for built-in XForms
-controls.
+These files are used by the Form Builder toolbox for built-in XForms controls.
+
+As of Orbeon Forms 2016.1, the following files need help:
+
+- [attachment-controls.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources/forms/orbeon/builder/xbl/attachment-controls.xbl)
+- [output-controls.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources/forms/orbeon/builder/xbl/output-controls.xbl)
+- [text-output.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources/forms/orbeon/builder/xbl/text-output.xbl)
+- [text-textarea-autosize.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources/forms/orbeon/builder/xbl/text-textarea-autosize.xbl)
+
 
 ### Dates and times
 
