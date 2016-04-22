@@ -94,6 +94,25 @@ Once a language is selected, it is stored as the `fr-language` session attribute
 
 See also [Localizing Orbeon Forms](../../contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form runner in additional languages. Your contributions are welcome!
 
+### As of Orbeon Forms 2016.1
+
+Language  | Calendar | Numberer | XBL components | Form Runner   | Form Builder
+----------|:--------:|:--------:|:--------------:|:-------------:|:-----------:
+English   | F        | F        | F              | F             | F
+French    | F        | F        | F              | F             | F
+Swedish   | F        | F        | F <sup>1</sup> | F<sup>1</sup> | F<sup>1</sup>
+Portuguese| F        | F        | F <sup>1</sup> | F<sup>1</sup> | F<sup>1</sup>
+Italian   | F        | F        | F <sup>1</sup> | F<sup>1</sup> | F<sup>1</sup>
+German    | F        | F        | F <sup>1</sup> | F<sup>1</sup> | F<sup>1</sup>
+Spanish   | F        | F        | F <sup>1</sup> | P             | P
+Finnish   | F        | F        | P              | F<sup>1</sup> | F<sup>1</sup>
+Dutch     | F        | F        | F <sup>1</sup> | F<sup>1</sup> | N
+Norwegian | F        | F        | P              | P             | P
+Russian   | F        | F        | P              | P             | P
+Polish    | N        | F        | N              | N             | N
+
+1. A few resources are missing.
+
 ### As of Orbeon Forms 4.10
 
 Language  | Calendar | Numberer | XBL components | Form Runner   | Form Builder
@@ -199,3 +218,8 @@ Form Builder (Orbeon Forms PE only) lets you create forms in multiple languages.
 2. Right-to-left languages are not officially supported.
 
 We are glad to get help to address these two limitations.
+
+## See also
+
+- [Form Localization in Form Builder](../../form-builder/localization.md)
+- [Localizing Orbeon Forms](../../contributors/localizing-orbeon-forms.md)
