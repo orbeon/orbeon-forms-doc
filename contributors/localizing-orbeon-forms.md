@@ -132,3 +132,8 @@ If working with a binary build, you can override built-in files by creating your
 - `WEB-INF/resources/ops/javascript/orbeon/xforms/control/CalendarResources.js`
 - `WEB-INF/resources/xbl/orbeon/*/*.xbl`
 - `WEB-INF/resources/forms/orbeon/builder/xbl/*/*.xbl`
+
+## See also
+
+- [Form Localization in Form Builder](../form-builder/localization.md)
+- [Localization](../form-runner/feature/localization.md)

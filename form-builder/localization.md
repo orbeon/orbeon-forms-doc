@@ -30,3 +30,8 @@ Here is how you typically proceed to create a form in two languages:
 - Add the secondary language.
 - Translate all localizable resources now visible on the form.
 - When testing the form, you can switch between the two languages to make sure no resource was missed.
+
+## See also
+
+- [Localization](../form-runner/feature/localization.md)
+- [Localizing Orbeon Forms](../contributors/localizing-orbeon-forms.md)
