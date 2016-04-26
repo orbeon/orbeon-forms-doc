@@ -123,6 +123,13 @@ Attributes:
     - does not show the "+" button at the top left
     - does not show the row menu and associated features
     - instead just provides "Add another" and "Remove" links at the bottom
+- `insert` [SINCE Orbeon Forms 2016.2]
+  - `index`
+    - the "Add Another" or "+" button adds a new repetition after the iteration currently with keyboard focus
+    - this is the default in `full` appearance
+  - `bottom`
+    - the "Add Another" or "+" button adds a new repetition after the last iteration
+    - this is the default in `minimal` appearance
 
 ## Data format
 

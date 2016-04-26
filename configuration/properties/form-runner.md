@@ -762,6 +762,36 @@ The following property allows you to set the appearance of repeated grids to `fu
 
 See also the [`appearance`](../../form-runner/component/grid.html#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.html).
 
+### Insert position of repeated sections
+
+[SINCE Orbeon Forms 2016.2]
+
+The following property allows you to select where new iterations are added when using the "Add Another" or "+" button. Allowed values are `index` (default for the `full` appearance) and `bottom` (default for the `minimal` appearance):
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.section.repeat.insert.*.*"
+    value="index"/>
+```
+
+See also the [`insert`](../../form-runner/component/section.html#repeated-mode) attribute of the [section component](../../form-runner/component/section.html).
+
+### Insert position of repeated grids
+
+[SINCE Orbeon Forms 2016.2]
+
+The following property allows you to select where new iterations are added when using the "Add Another" or "+" button. Allowed values are `index` (default for the `full` appearance) and `bottom` (default for the `minimal` appearance):
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.grid.repeat.insert.*.*"
+    value="index"/>
+```
+
+See also the [`insert`](../../form-runner/component/grid.html#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.html).
+
 ### Section collapsing
 
 [SINCE Orbeon Forms 2016.1]
