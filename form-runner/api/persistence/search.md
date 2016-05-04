@@ -294,6 +294,6 @@ For each of the documents found, a `<document>` element is returned:
 * `draft` attribute:
     * `true` or `false`, depending on whether the form data is a draft (autosaved) or not
 * `operations` attribute:
-    * a space separated subset of the following token read, write, update, and delete, whichever operations the user is allowed to perform; also see [Supporting permissions in your persistence API implementation](http://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)
+    * a space separated subset of the following token: `read`, `write`, `update`, and `delete`, whichever operations the user is allowed to perform; also see [Supporting permissions in your persistence API implementation](http://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)
 
 Each document contains one <detail> element in the order determined by the `<query>` elements with a summary-field set to `true` in the request. The text value of the `<detail>` element is the value of the field in the document found.
