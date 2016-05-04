@@ -293,7 +293,7 @@ The root element contains these attributes:
 * `page-number` attribute:
     * echo of the query's attribute
     * this might be removed in the future
-* `query` attribute:
+* \[Up to 2016.1\] `query` attribute:
     * echo of the full-text query text
     * this might be removed in the future
 
