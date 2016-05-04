@@ -52,11 +52,11 @@ The following shows for example a search from the demo Bookshelf form:
 
 The `query` element is the most complex element. It is used for full-text and structured search. Full-text search and structured search are exclusive: either Form Runner performs one, or the other.
 
-**Full-text search**
+### Full-text search
 
 If the user is performing a full-text search, the first `<query>` element (which does not have attributes) contains the text of the search. The result details to return is still determined by the subsequent `<query>` elements with summary-field set to `true`. See below for more information about the response format. The exact semantic of the full-text search is implementation-dependent.
 
-**Structured search**
+### Structured search
 
 When building a structured search query, Form Runner first looks at all controls in the source form that have the class `fr-summary` or `fr-search`. These are used to build the request.
 
@@ -106,7 +106,7 @@ For each such control found, a `<query>` element is added to the request, with t
     * the search string entered by the user, if any
     * this is useful only for `<query>` elements with `search-field` set to `true`
 
-**Search paths**
+### Search paths
 
 The `path` attribute can be looked at a search key. Say your documents looks like this:
 
@@ -140,7 +140,7 @@ The paths sent by Form Runner are usually simple paths, but there are some excep
 
 If the persistence layer is able to run XPath expressions (as eXist or other XML databases can), then the path provided by the search request can be executed. However, XPath evaluation is not absolutely required. For example with non-XML (relational, key/value) data stores, it is easier to consider the search path as an opaque search key that uniquely identifies the field to search.
 
-## Old query elements
+### Old query elements
 
 * 2013-05-24: Removal
     * All the previously deprecated elements mentioned below have been removed, and are not sent to the search API.
