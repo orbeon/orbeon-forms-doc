@@ -160,6 +160,12 @@ The `page-size` and `page-number` elements control paging.
 
 ## Language
 
+### Since 2016.2
+
+The Form Runner home page doesn't send the `<lang>` element, and the implementations of the API that ship with Orbeon Forms don't use it if provided. Instead, when the persistence knows about multiple values corresponding to different languages for a "field", it returns all the values. In turn, the summary page displays all the values. This is inline with what is done for fields inside repeated grids or repeated sections, which can have multiple values.
+
+### Up to 2016.1
+
 The `lang` element contains the current language used by the user in the summary page. If the form contains language-dependent fields, this information can be used to refine the search. Only Form Builder makes use of this capability.
 
 For example, Form Builder allows storing a form title and description in more than one language. When searching the form title field, the expectation of the user is likely to be that, if the user interface is in English, the English title will be searched and not, for example, the Italian title. In this case, the search path contains a special variable, `$fb-lang`, which allows the persistence implementation to discriminate on the language:
