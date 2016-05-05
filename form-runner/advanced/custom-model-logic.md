@@ -2,9 +2,13 @@
 
 <!-- toc -->
 
+## Availability
+
 [SINCE Orbeon Forms 4.4]
 
 *NOTE: This is an advanced feature which requires XForms knowledge.*
+
+## Introduction
 
 It can be useful to be able to define custom model logic, either for a particular form or shared among a number of forms. The `oxf.fr.detail.model.custom` property allows you to do just that:
 
@@ -17,11 +21,15 @@ It can be useful to be able to define custom model logic, either for a particula
 
 The value of the property is a URL which points to a file containing the custom logic. The format of the file is that of an XForms model. The custom content is included in your form's main model, which is identified by `fr-form-model`. This means that you have access to your form data in instance `fr-form-instance`, for example.
 
+## Example
+
 Here is a very simple example:
 
 ```xml
 <xf:model xmlns:xf="http://www.w3.org/2002/xforms">
-    <xf:message event="foobar">Your email is: <xf:output value="instance()//email"/>.</xf:message>
+    <xf:message event="foobar">
+        Your email is: <xf:output value="instance()//email"/>.
+    </xf:message>
 </xf:model>
 ```
 
