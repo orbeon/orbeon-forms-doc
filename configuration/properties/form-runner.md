@@ -12,6 +12,8 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.detail.model.custom`
 * [Wizard View](../../form-runner/component/wizard.md)
     * `oxf.fr.detail.view.appearance`
+    * `oxf.fr.detail.buttons.inner`
+    * `oxf.xforms.xbl.fr.wizard.validate`
 * [Autosave](../../form-runner/persistence/autosave.md)
     * `oxf.fr.detail.autosave-delay`
     * `oxf.fr.persistence.*.autosave`
@@ -240,20 +242,7 @@ By default, as shown in the below video:
 
 [SINCE Orbeon Forms 4.2]
 
-When using the wizard view (or other Detail Page custom views), the following property allows specifying which buttons are presented inside the view, as opposed to the bottom of the page:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.buttons.inner.*.*"
-    value="wizard-prev wizard-next"/>
-```
-
-The example above places the wizard's Prev and Next buttons just under the current wizard section:
-
-![](/form-runner/images/wizard-buttons.png)
-
-For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md).
+See [Wizard View](../../form-runner/component/wizard.md).
 
 ### Display hints inline
 

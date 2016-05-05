@@ -68,8 +68,43 @@ You can see in the following picture that the sections in the table of contents 
 
 ![Wizard validated mode](../images/wizard-validated.png)
 
+## Buttons
+
+### Inner buttons
+
+The following property allows specifying which buttons are presented *inside* the wizard, as opposed to the bottom of the page. This example places the wizard's "Prev" and "Next" buttons just under the current wizard section:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.buttons.inner.*.*"
+    value="wizard-prev wizard-next"/>
+```
+
+![](../../form-runner/images/wizard-buttons.png)
+
+### Buttons visibility
+
+[SINCE Orbeon Forms 2016.1]
+
+When the following conditions are met:
+
+1. You are using inner buttons.
+2. You are using the validated mode.
+
+The following buttons are automatically hidden until the wizard shows the last top-level form section:
+
+- `save-final`
+- `submit`
+- `send`
+- `review`
+- `pdf`
+- `tiff`
+- `email`
+
 ## See also
 
 - [Wizard XBL component](../component/wizard.md)
+- [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md)
 - [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, with a video
 - [New wizard validated mode](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html): a blog post which introduces thew validated mode.
