@@ -102,6 +102,86 @@ The following buttons are automatically hidden until the wizard shows the last t
 - `tiff`
 - `email`
 
+## Separate table of contents
+
+[SINCE Orbeon Forms 2016.2]
+
+When set to `true`, the following property enables showing the table of contents separately, as if on a different page:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.wizard.separate-toc.*.*"
+    value="true"/>
+```
+
+When `false` (the default):
+
+- the table of contents appears to the left (wide desktop layout) or the top (narrow mobile layout)
+- the section content appears to the right (wide desktop layout) or under the table of conents (narrow mobile layout)
+
+When `true`:
+
+- the table of contents takes the entire width when landing on the page
+- when selecting a section, the view toggles to the selected section (top-level or subsection depending on whether subsection navigation is enabled)
+
+<!-- TODO: screenshot -->
+
+## Subsections
+
+### Subsections navigation
+
+[SINCE Orbeon Forms 2016.2]
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.wizard.subsections-nav.*.*"
+    value="true"/>
+```
+
+When `false` (the default):
+
+- the wizard allows you to navigate only between top-level sections
+
+When `true`:
+
+- the wizard navigates through the first level of subsections when present
+- it shows one first level of subsections at a time, or one top-level section at a time for those top-level sections which don't have any subsections
+- "Next" goes to next first-level subsection if any, and then to the next top-level section's first subsection if any
+
+*NOTE: Grids directly nested within top-level sections which have any subsections are ignored in this mode. The recommendation is to avoid this situation when using subsections navigation and not place grids directly at the same level of first-level subsections.*
+
+<!-- TODO: screenshot -->
+
+### Visibility in the table of contents
+
+[SINCE Orbeon Forms 2016.2]
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.wizard.subsections-toc.*.*"
+    value="active"/>
+```
+
+In all cases, the table of contents shows all visible top-level sections.
+
+When `active` (the default and only behavior until 2016.1):
+
+- the table of contents shows visible subsections only for the currently-visible top-level section
+
+When `all`:
+
+- the table of contents shows all visible subsections
+
+When `none`:
+
+- the table of contents doesn't show any subsection
+
+<!-- TODO: screenshot -->
+
+
 ## See also
 
 - [Wizard XBL component](../component/wizard.md)

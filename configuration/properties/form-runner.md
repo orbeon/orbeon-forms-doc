@@ -14,6 +14,9 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.detail.view.appearance`
     * `oxf.fr.detail.buttons.inner`
     * `oxf.xforms.xbl.fr.wizard.validate`
+    * `oxf.xforms.xbl.fr.wizard.separate-toc`
+    * `oxf.xforms.xbl.fr.wizard.subsections-nav`
+    * `oxf.xforms.xbl.fr.wizard.subsections-toc`
 * [Autosave](../../form-runner/persistence/autosave.md)
     * `oxf.fr.detail.autosave-delay`
     * `oxf.fr.persistence.*.autosave`
@@ -236,13 +239,6 @@ By default, as shown in the below video:
 - The `inline` loading indicator for the *save* buttons (`save-draft` and `save-final`).
 
 ![Loading indicators](../images/loading-indicators.gif)
-
-
-### Buttons in Detail Page custom views
-
-[SINCE Orbeon Forms 4.2]
-
-See [Wizard View](../../form-runner/component/wizard.md).
 
 ### Display hints inline
 
