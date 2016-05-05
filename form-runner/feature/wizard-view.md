@@ -148,7 +148,11 @@ When `true`:
 
 - the wizard navigates through the first level of subsections when present
 - it shows one first level of subsections at a time, or one top-level section at a time for those top-level sections which don't have any subsections
-- "Next" goes to next first-level subsection if any, and then to the next top-level section's first subsection if any
+- second-level and deeper levels of subsections appear on the same wizard page
+- the "Next" and "Prev" buttons go to the next or previous first-level subsection if any, and then to the next or previous top-level section's first subsection if any
+- the validated mode, if enabled, still applies only to top-level sections, which means that
+    - it is possible to freely navigate through subsections within a given top-level section
+    - however when attempting to navigate to the next top-level section, validation contraints apply
 
 *NOTE: Grids directly nested within top-level sections which have any subsections are ignored in this mode. The recommendation is to avoid this situation when using subsections navigation and not place grids directly at the same level of first-level subsections.*
 
