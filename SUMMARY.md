@@ -174,6 +174,7 @@
         * [Dialog](xforms/controls/dialog.md)
     * Submission
         * [Standard support](xforms/submission-standard.md)
+        * [JSON support](xforms/submission-json.md)
         * [Asynchronous submissions](xforms/submission-asynchronous.md)
         * [Caching extension](xforms/submission-caching.md)
         * [Other extensions](xforms/submission-extensions.md)
