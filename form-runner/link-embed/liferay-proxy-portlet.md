@@ -215,6 +215,23 @@ When this is enabled, the following portal URL parameters are propagated to Orbe
 - `orbeon-document`: the Form Runner document (for `edit` and `view` pages)
 - `orbeon-page`: the Form Runner page (`new`, `edit`, or `view`)
 
+### Disabling short namespaces
+
+[SINCE Orbeon Forms 2016.2]
+
+You can disable the use of short namespaces by setting the `use-short-namespaces` portlet parameter in `portlet.xml` to `false`:
+
+```xml
+<init-param>
+    <name>use-short-namespaces</name>
+    <value>false</value>
+</init-param>
+```
+
+By default (and this was the case in previous Orbeon Forms versions as well), short namespaces are enabled to reduce the size of the resulting HTML page and browser DOM.
+
+However, in some cases of load-balancing, this can be an issue. In such cases, you can disable short namespaces with this option. See [issue #2764](https://github.com/orbeon/orbeon-forms/issues/2764) for details.
+
 ### HTTP client configuration
 
 [SINCE Orbeon Forms 4.7]
