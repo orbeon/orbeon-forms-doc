@@ -1,4 +1,4 @@
-# Using XForms from your Java app
+# Using XForms from Java apps
 
 <!-- toc -->
 
@@ -18,6 +18,8 @@ The recommended way of using XForms this way is what is called *separate deploym
 * Preventing situations where different versions of JAR files could conflict.
 * Cleaner application architecture.
 
+This is implemented with the help of a servlet filter, referred to as the *XForms filter*.
+
 ## Deployment and configuration
 
 ### web.xml configuration
@@ -29,7 +31,8 @@ The `<url-pattern>` defined under the first `<filter-mapping>` has the value `/x
 The `<url-pattern>` defined under the second `<filter-mapping>` has the value `/orbeon/*`. This is necessary to allow for all Orbeon Forms resources, such as JavaScript, CSS, and Ajax server, to be accessible. This `/orbeon/*` value is related to the default context into which you deploy Orbeon Forms: if you change you context, you change this value as well.
 
 ```xml
-<!-- Declare and configure the Orbeon Forms XForms filter -->
+
+<!-- Filter configuration -->
 <filter>
     <filter-name>orbeon-xforms-filter</filter-name>
     <filter-class>org.orbeon.oxf.servlet.OrbeonXFormsFilter</filter-class>
@@ -40,8 +43,9 @@ The `<url-pattern>` defined under the second `<filter-mapping>` has the value `/
     <init-param>
         <param-name>oxf.xforms.renderer.default-encoding</param-name>
         <param-value>UTF-8</param-value>
-    </init-param>
+    </init-param>-->
 </filter>
+
 <!-- Any web resource under /xforms-jsp is processed by the XForms engine -->
 <filter-mapping>
     <filter-name>orbeon-xforms-filter</filter-name>
@@ -49,6 +53,7 @@ The `<url-pattern>` defined under the second `<filter-mapping>` has the value `/
     <dispatcher>REQUEST</dispatcher>
     <dispatcher>FORWARD</dispatcher>
 </filter-mapping>
+
 <!-- This is necessary so that XForms engine resources can be served appropriately -->
 <filter-mapping>
     <filter-name>orbeon-xforms-filter</filter-name>
@@ -101,7 +106,7 @@ You deploy Orbeon Forms as a separate WAR with the following steps:
 
 ### Session handling
 
-Before forwarding Ajax requests to Orbeon Forms, the Orbeon filter [checks][8] that a session exists for the current user. This is done to deal with the scenario where users log out from your application but still have, say in another tab, a form created with Orbeon Forms open. When they logout, you invalidate the session in your app, but the Orbeon session is still there. Without this check, after logging, users could switch to the other tab, and continue to interact with the form, and it would work as the Ajax requests would be routed to Orbeon Forms, whose session is still alive, which, obviously, you wouldn't want that happen.
+Before forwarding Ajax requests to Orbeon Forms, the XForms filter [checks][8] that a session exists for the current user. This is done to deal with the scenario where users log out from your application but still have, say in another tab, a form created with Orbeon Forms open. When they logout, you invalidate the session in your app, but the Orbeon session is still there. Without this check, after logging, users could switch to the other tab, and continue to interact with the form, and it would work as the Ajax requests would be routed to Orbeon Forms, whose session is still alive, which, obviously, you wouldn't want that happen.
 
 If your application never creates a session, this check will always fail, and Ajax request will never go through. To get around this, you can either:
 
@@ -288,13 +293,13 @@ _NOTE: In separate deployment, you can use `input:instance` only if your JSP or 
 
 The Orbeon Forms filter implemented by `OrbeonXFormsFilter` sets the following request attributes:
 
-| Property name |  Value type |  Function |
+| Property name |  Value type |  Comments |
 |---|---|---|
-| `oxf.xforms.renderer.deployment` |  `integrated` or `separate` | - whether deployment is integrated (deprecated) or separate<br>- this is passed for Orbeon Forms resources as well as documents
-| `oxf.xforms.renderer.base-uri` |  path | - contains request path, i.e. /xforms-jsp/guess-the-number/test.jsp <br>-used for xml:base resolution by XForms
-| `oxf.xforms.renderer.document` |  XHTML document as string | the document must contain well-formed XML
+| `oxf.xforms.renderer.deployment` |  `separate` |
+| `oxf.xforms.renderer.base-uri` |  path | - contains request path, i.e. `/xforms-jsp/guess-the-number/test.jsp` <br>- used for `xml:base` resolution by XForms
+| `oxf.xforms.renderer.document` |  XHTML document as string | the string must contain well-formed XML
 | `oxf.xforms.renderer.content-type` |  content-type | content-type of the document passed
-| `oxf.xforms.renderer.has-session` |  `true` or `false` | whether the filter sees an existing session or not
+| `oxf.xforms.renderer.has-session` |  `true` / `false` | whether the filter sees an existing session or not
 
 _NOTE: In general, you do not need to know about these properties to use the Orbeon Forms filter._
 
