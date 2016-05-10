@@ -6,7 +6,7 @@
 
 This page relates to the use of _plain XForms applications_. If you use Form Builder and Form Runner, the content of this page is probably not relevant.
 
-See the [Form Runner Java Embedding API](form-runner/link-embed/java-api.md) for integration with Form Runner.
+See the [Form Runner Java Embedding API](../form-runner/link-embed/java-api.md) for integration with Form Runner.
 
 ## Introduction
 
@@ -345,8 +345,8 @@ The Orbeon Forms filter implemented by `OrbeonXFormsFilter` sets the following r
 
 _NOTE: In general, you do not need to know about these properties to use the Orbeon Forms filter._
 
-[1]: http://www.orbeon.com/ops/doc/reference-page-flow
-[2]: http://www.orbeon.com/ops/doc/reference-xpl-pipelines
+[1]: http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-controller
+[2]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl
 [5]: ../installation/index.md
 [6]: ../xforms/tutorial/introduction.md
 [7]: ../configuration/properties/README.md
