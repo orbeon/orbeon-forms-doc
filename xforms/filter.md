@@ -301,20 +301,26 @@ You then use this object to gather data about the query sent to your service.
 In XForms you reference the service with the action attribute of `<xf:submission>`:
 
 ```xml
-<xf:submission id="do-query"
-    ref="instance('query')" method="post"
-    replace="instance" instance="photos"
+<xf:submission
+    id="do-query"
+    ref="instance('query')"
+    method="post"
+    replace="instance"
+    instance="photos"
     resource="/xforms-jsp/flickr-search/service-search.jsp"/>
 
-<xf:submission id="do-query"
-    ref="instance('query')" method="post"
-    replace="instance" instance="photos"
+<xf:submission
+    id="do-query"
+    ref="instance('query')"
+    method="post"
+    replace="instance"
+    instance="photos"
     resource="/xforms-jsp/flickr-search/service-search.jsp"/>
 ```
 
 ## Advanced
 
-## Processing model
+### Processing model
 
 What happens when your JSP or servlet produces an XHTML and XForms document?
 
@@ -325,7 +331,7 @@ What happens when your JSP or servlet produces an XHTML and XForms document?
 
 Note that the epilogue applies the default theme under `/config/theme-plain.xsl`. However, it does not perform further URL rewriting by default.
 
-## Attributes set by the Orbeon Forms filter
+### Attributes set by the Orbeon Forms filter
 
 The Orbeon Forms filter implemented by `OrbeonXFormsFilter` sets the following request attributes:
 
