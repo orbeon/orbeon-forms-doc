@@ -184,7 +184,9 @@ You can use the include directive in the same way to include an arbitrary part o
 </xh:body>
 ```
 
-## Passing instance data from Java to XForms during page initialization
+## How-tos
+
+### Passing instance data from Java to XForms during page initialization
 
 Say your application produces XForms using JSP. You might want to pass some information from the Java side to the XForms side. This could be user profile information, data retrieved from a database, etc.
 
@@ -254,18 +256,7 @@ You can similarly use other functions, including:
 * `xxf:get-request-parameter()`
 * `xxf:get-session-attribute()`
 
-## Processing model
-
-What happens when your JSP or servlet produces an XHTML and XForms document?
-
-* If configured appropriately in `web.xml`, the Orbeon Forms XForms filter kicks in and intercepts the output of your JSP or servlet (whether produced the regular way or passed as a request attribute).
-* The Orbeon Forms XForms filter then forward the request to Orbeon Forms, at the location `/xforms-renderer`.
-* Orbeon Forms reacts to `/xforms-renderer` by extracting the XHTML and XForms document from the forwarded request.
-* Orbeon Forms sends the XHTML and XForms document to the standard Orbeon Forms [epilogue][12] called `/config/epilogue-servlet.xpl`. The epilogue performs several tasks, including transforming XHTML and XForms into HTML that the browser can understand. The default configuration of this pipeline should be fine for most use cases, which means you usually don't need to worry about it.
-
-Note that the epilogue applies the default theme under `/config/theme-plain.xsl`. However, it does not perform further URL rewriting by default.
-
-## Accessing submitted XML data
+### Accessing submitted XML data
 
 Orbeon Forms supports the `input:instance` URI to access XML data submitted to the current page:
 
@@ -289,21 +280,7 @@ This allows you to implement scenarios like this one:
     4. HTML is sent to the browser
 _NOTE: In separate deployment, you can use `input:instance` only if your JSP or servlet has not attempted to read the request body first!_
 
-## Attributes set by the Orbeon Forms filter
-
-The Orbeon Forms filter implemented by `OrbeonXFormsFilter` sets the following request attributes:
-
-| Property name |  Value type |  Comments |
-|---|---|---|
-| `oxf.xforms.renderer.deployment` |  `separate` |
-| `oxf.xforms.renderer.base-uri` |  path | - contains request path, i.e. `/xforms-jsp/guess-the-number/test.jsp` <br>- used for `xml:base` resolution by XForms
-| `oxf.xforms.renderer.document` |  XHTML document as string | the string must contain well-formed XML
-| `oxf.xforms.renderer.content-type` |  content-type | content-type of the document passed
-| `oxf.xforms.renderer.has-session` |  `true` / `false` | whether the filter sees an existing session or not
-
-_NOTE: In general, you do not need to know about these properties to use the Orbeon Forms filter._
-
-## Implementing XForms services with JSP
+### Implementing XForms services with JSP
 
 The backend of your forms is usually best implemented with "services" which can be called with `<xf:submission>`. Most of the time, XML is being posted to the service and XML is returned by the service. Since services take XML as input and generate XML, [XML pipelines][2] are an ideal tool to implement services.
 
@@ -334,6 +311,33 @@ In XForms you reference the service with the action attribute of `<xf:submission
     replace="instance" instance="photos"
     resource="/xforms-jsp/flickr-search/service-search.jsp"/>
 ```
+
+## Advanced
+
+## Processing model
+
+What happens when your JSP or servlet produces an XHTML and XForms document?
+
+* If configured appropriately in `web.xml`, the Orbeon Forms XForms filter kicks in and intercepts the output of your JSP or servlet (whether produced the regular way or passed as a request attribute).
+* The Orbeon Forms XForms filter then forward the request to Orbeon Forms, at the location `/xforms-renderer`.
+* Orbeon Forms reacts to `/xforms-renderer` by extracting the XHTML and XForms document from the forwarded request.
+* Orbeon Forms sends the XHTML and XForms document to the standard Orbeon Forms [epilogue][12] called `/config/epilogue-servlet.xpl`. The epilogue performs several tasks, including transforming XHTML and XForms into HTML that the browser can understand. The default configuration of this pipeline should be fine for most use cases, which means you usually don't need to worry about it.
+
+Note that the epilogue applies the default theme under `/config/theme-plain.xsl`. However, it does not perform further URL rewriting by default.
+
+## Attributes set by the Orbeon Forms filter
+
+The Orbeon Forms filter implemented by `OrbeonXFormsFilter` sets the following request attributes:
+
+| Property name |  Value type |  Comments |
+|---|---|---|
+| `oxf.xforms.renderer.deployment` |  `separate` |
+| `oxf.xforms.renderer.base-uri` |  path | - contains request path, i.e. `/xforms-jsp/guess-the-number/test.jsp` <br>- used for `xml:base` resolution by XForms
+| `oxf.xforms.renderer.document` |  XHTML document as string | the string must contain well-formed XML
+| `oxf.xforms.renderer.content-type` |  content-type | content-type of the document passed
+| `oxf.xforms.renderer.has-session` |  `true` / `false` | whether the filter sees an existing session or not
+
+_NOTE: In general, you do not need to know about these properties to use the Orbeon Forms filter._
 
 [1]: http://www.orbeon.com/ops/doc/reference-page-flow
 [2]: http://www.orbeon.com/ops/doc/reference-xpl-pipelines
