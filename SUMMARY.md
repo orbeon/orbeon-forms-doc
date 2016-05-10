@@ -214,6 +214,7 @@
             * [Database access](xforms/tutorial/bookcast/database.md)
             * [Polishing the app](xforms/tutorial/bookcast/polishing.md)
             * [Adding a feed](xforms/tutorial/bookcast/feed.md)
+    * [Using XForms from your Java app](xforms/filter.md)
 * XML Platform
     * Controller
         * [Authorizing pages and services](xml-platform/controller/authorization-of-pages-and-services.md)
