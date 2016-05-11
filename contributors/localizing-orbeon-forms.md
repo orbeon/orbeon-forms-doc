@@ -90,7 +90,7 @@ As of Orbeon Forms 2016.1, the following controls need help:
 - [dialog-select.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/dialog-select/dialog-select.xbl)
 - [dialog-select1.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/dialog-select1/dialog-select1.xbl)
 - [explanation.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/explanation/explanation.xbl)
-- [handwritten-signature.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/handwritten-signature/handwritten-signature.xbl)
+- [handwritten-signature.xbl](https://github.com/orbeon/orbeon-forms-pe/tree/master/src/resources-packaged/xbl/orbeon/handwritten-signature/handwritten-signature.xbl) (link needs authorization)
 - [number.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/number/number.xbl)
 - [open-select1.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/open-select1/open-select1.xbl)
 - [yesno-input.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/yesno-input/yesno-input.xbl)

@@ -347,7 +347,7 @@ _NOTE: In general, you do not need to know about these properties to use the Orb
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-controller
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl
-[5]: ../installation/index.md
+[5]: ../installation/README.md
 [6]: ../xforms/tutorial/introduction.md
 [7]: ../configuration/properties/README.md
 [8]: https://github.com/orbeon/orbeon-forms/blob/5a5b6bb40917397f4db1ca3555a544bccd7af031/src/java/org/orbeon/oxf/servlet/OrbeonXFormsFilter.java#L69
