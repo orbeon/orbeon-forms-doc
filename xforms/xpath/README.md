@@ -1,10 +1,15 @@
-## XPath function library
+## XPath expressions
 
 <!-- toc -->
 
-This page and sub-pages describe the Orbeon Forms XPath function library. The documentation is split into:
+Orbeon Forms uses [XPath 2.0](https://www.w3.org/TR/xpath20/) as expression language.
 
-- [Standard Functions](standard-functions.md) documentation
+This page and sub-pages describe XPath usage and the Orbeon Forms XPath function library. The documentation is split into:
+
+- [Type annotations](xforms/xpath/type-annotations.md)
+- [Tips](xforms/xpath/tips.md)
+- [Compatibility](xforms/xpath/compatibility.md)
+- [Standard Functions](standard-functions.md)
 - Extension Functions
     - [Core functions](extension-core.md)
     - [Model functions](extension-model.md)

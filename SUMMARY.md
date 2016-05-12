@@ -178,7 +178,10 @@
         * [Asynchronous submissions](xforms/submission-asynchronous.md)
         * [Caching extension](xforms/submission-caching.md)
         * [Other extensions](xforms/submission-extensions.md)
-    * [XPath function library](xforms/xpath/README.md)
+    * [XPath](xforms/xpath/README.md)
+        * [Type annotations](xforms/xpath/type-annotations.md)
+        * [Tips](xforms/xpath/tips.md)
+        * [Compatibility](xforms/xpath/compatibility.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
         * Extension functions
             * [Core functions](xforms/xpath/extension-core.md)
