@@ -56,7 +56,7 @@ When multiple drafts are available, choosing the "View auto-saved drafts" button
 
 With Orbeon Forms 4.3 specifically, you need to:
 
-- If using MySQL, pupdate your database by running this  DDL](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql). (The tables for DB2 on 4.3 already contain the required changes out-of-the-box.)
+- If using MySQL, update your database by running [this  DDL](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql). (The tables for DB2 on 4.3 already contain the required changes out-of-the-box.)
 - Set the following properties:
 
 ```xml
