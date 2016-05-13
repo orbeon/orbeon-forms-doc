@@ -8,20 +8,42 @@ This is the API used, in particular, by the [Form Runner Home page](../../featur
 
 ## API
 
-You get the list of all the published forms with a GET on `/fr/service/persistence/form`. This will, in turn call the corresponding API for each persistence API implementation defined in the properties, since different forms can be published on different persistence implementations. For instance, this might call MySQL implementation doing a GET on `/fr/service/mysql/form` and the eXist implementation with another GET on `/fr/service/exist/form`, finally aggregating the results returned by each implementation.
+### Request
 
-The document returns by this API looks like this:
+You get the list of all the published forms with a GET on:
+ 
+    /fr/service/persistence/form
+    
+This, in turn, calls the corresponding API for each persistence API implementation defined in the properties as [*active*](../../../configuration/properties/persistence.md#property_active), since different forms can be published on different persistence implementations. For example, this might call MySQL implementation doing a GET on:
+ 
+    /fr/service/mysql/form
+    
+Then it might call the eXist implementation with another GET on:
+ 
+    /fr/service/exist/form
+    
+Finally it aggregates the results returned by each implementation.
+
+[SINCE: Orbeon Forms 4.3]
+
+Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about published forms in that specific app, or that specific app and form is returned.
+
+* When an app specified, the URL looks like:  
+  `/fr/service/persistence/form/[APP_NAME]`
+* When both an app and form name are specified, the URL looks like:  
+  `/fr/service/persistence/form/[APP_NAME]/[FORM_NAME]`
+
+### Response
+
+The document returned by this API looks like this:
 
 ```xml
 <forms>
-    <form>
     <form operations="*">
         <application-name>orbeon</application-name>
         <form-name>bookshelf</form-name>
         <title xml:lang="en">Orbeon Forms Bookshelf</title>
-        <description xml:lang="en">Orbeon Forms Bookshelf is a simple form …</description>
         <title xml:lang="fr">Orbeon Forms Bookshelf</title>
-        <description xml:lang="fr">Orbeon Forms Bookshelf présente un formulaire simple…</description>
         <last-modified-time>2014-06-04T11:21:33.043-07:00</last-modified-time>
         <form-version>1</form-version>
     </form>
@@ -29,7 +51,6 @@ The document returns by this API looks like this:
         <application-name>orbeon</application-name>
         <form-name>w9</form-name>
         <title xml:lang="en">Request for Taxpayer Identification Number and Certification</title>
-        <description xml:lang="en"/>
         <last-modified-time>2014-06-04T11:21:34.051-07:00</last-modified-time>
         <form-version>3</form-version>
     </form>
@@ -37,9 +58,7 @@ The document returns by this API looks like this:
         <application-name>acme</application-name>
         <form-name>order</form-name>
         <title xml:lang="en">ACME Order Form</title>
-        <description xml:lang="en">This is a form to order new stuff from ACME, Inc.</description>
         <title xml:lang="fr">Formulaire de commande ACME</title>
-        <description xml:lang="fr">Ceci est un formulaire de commande pour ACME, Inc.</description>
         <permissions>
             <permission operations="delete">
                 <group-member/>
@@ -57,11 +76,20 @@ The document returns by this API looks like this:
 
 Each `<form>` element contains:
 
-* All the elements inside the form metadata instance of the corresponding form definition, which can be retrieved with the following XPath expression: `/xh:html/xh:head/xf:model/xf:instance[@id = 'fr-form-metadata']/metadata/*`, [SINCE Orbeon Forms 2016.1] except the `<description>` and `<migration>` elements.
-* A `<last-modified-time>` element. [SINCE Orbeon Forms 4.4]
-* A `<form-version>` element, when using a relational database (as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524)). [SINCE Orbeon Forms 2016.1]
-
-[SINCE: Orbeon Forms 4.3] Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about published forms in that specific app, or that specific app and form is returned.
-
-* When an app specified, the URL looks like `/fr/service/persistence/form/[APP_NAME]`.
-* When both an app and form name are specified, the URL looks like `/fr/service/persistence/form/[APP_NAME]/[FORM_NAME]`.
+- `<application-name>`
+- `<form-name>`
+- All the elements inside the *form metadata* instance of the corresponding form definition
+    - This can be retrieved with the following XPath expression:  
+      `/xh:html/xh:head/xf:model/xf:instance[@id = 'fr-form-metadata']/metadata/*`
+    - [SINCE Orbeon Forms 2016.1]
+        - The `<description>` and `<migration>` elements are excluded.
+- `<last-modified-time>`
+    - [SINCE Orbeon Forms 4.4]
+    - [UNTIL Orbeon Forms 4.10.x]
+        - last modification date/time for the app/form combination
+    - [SINCE Orbeon Forms 2016.1]
+        - last modification date/time for the app/form/version combination
+- `<form-version>`
+    - [SINCE Orbeon Forms 2016.1]
+    - When using a relational database, as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524)
+    - contains the highest published version number 
