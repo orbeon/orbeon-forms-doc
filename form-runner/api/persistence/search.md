@@ -195,10 +195,10 @@ The `<drafts>` element is used to tell the implementation of the persistence API
 
 _NOTE: `exclude` is not used in 4.6.2, but it could be used in the future._
 
-The `<drafts>` element can have the following attributes when the value is `only` or `include`:
+If the value of `<drafts>` is `only`, then the `<drafts>` element can optionally have one of the following attributes:
 
-* `for-document-id="$document-id"`: return only drafts with the given document id
-* `for-never-saved-document="true"`: return only drafts for documents never saved
+* `for-document-id="$document-id"` instructs the persistence to only return drafts for the given document id, of which there can be 0 or 1. This is used by Form Runner's `/edit` page to check if a draft exists for a given document that is being opened, so it can, when appropriate, ask users if they prefer to open the draft or non-draft document.
+* `for-never-saved-document="true"` instructs the persistence to only return drafts for documents that were never saved. This is used by Form Runner's `/new` page to check if existing drafts already exist, in which case it might ask users if they prefer to start a new document or edit one of those drafts.
 
 This is what Form Runner uses as of Orbeon Forms 4.6.2:
 
