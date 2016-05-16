@@ -1,8 +1,8 @@
-## Type annotations
+# Type annotations
 
 <!-- toc -->
 
-### Basics
+## Basics
 
 Orbeon Forms supports exposing MIP type annotations to XPath 2.0.
 
@@ -41,7 +41,7 @@ or:
   constraint=". le (current-date() + xdt:dayTimeDuration('P2D'))"/>
 ```
 
-### Enabling type annotations
+## Enabling type annotations
 
 _NOTE: Type annotations are not automatically enabled for backward compatibility reasons. However, they are enabled by default for new forms created with Form Builder._
 
@@ -71,7 +71,7 @@ You can also enable this on a per-instance basis:
 <xf:instance xxf:expose-xpath-types="true">
 ```
 
-### Where does this work?
+## Where does this work?
 
 Static type annotations (with `xf:bind/@type` and `xsi:type`) can be used by all XPath expressions, including  `xf:bind/@calculate`.
 

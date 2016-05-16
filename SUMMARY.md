@@ -180,6 +180,7 @@
         * [Other extensions](xforms/submission-extensions.md)
     * [XPath](xforms/xpath/README.md)
         * [Type annotations](xforms/xpath/type-annotations.md)
+        * [Expression analysis](xforms/xpath/expression-analysis.md)
         * [Tips](xforms/xpath/tips.md)
         * [Compatibility](xforms/xpath/compatibility.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
