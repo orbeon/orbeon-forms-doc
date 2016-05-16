@@ -189,27 +189,20 @@ In persistence implementations that don't support XPath, this kind of queries ar
 
 The `<drafts>` element is used to tell the implementation of the persistence API which documents we're interested in, and thus which documents it must return:
 
-* `exclude`: don't include drafts.
-* `only`: only return drafts
-* `include`: return both drafts and non-drafts. This is the default if the `<drafts>` element is missing.
+* If the element is present, it must contain one of the following values:
+    * `exclude`: don't include drafts. This value isn't used by Form Runner, but could be used in the future, and [SINCE 2016.2] is supported by the persistence for relational databases.
+    * `only`: only return drafts.
+    * `include`: return both drafts and non-drafts. This is the default if the `<drafts>` element is missing.
+* If the element isn't present, then the persistence must return drafts and non-drafts alike.
 
 _NOTE: `exclude` is not used in 4.6.2, but it could be used in the future._
 
 If the value of `<drafts>` is `only`, then the `<drafts>` element can optionally have one of the following attributes:
 
 * `for-document-id="$document-id"` instructs the persistence to only return drafts for the given document id, of which there can be 0 or 1. This is used by Form Runner's `/edit` page to check if a draft exists for a given document that is being opened, so it can, when appropriate, ask users if they prefer to open the draft or non-draft document.
-* `for-never-saved-document="true"` instructs the persistence to only return drafts for documents that were never saved. This is used by Form Runner's `/new` page to check if existing drafts already exist, in which case it might ask users if they prefer to start a new document or edit one of those drafts.
-
-This is what Form Runner uses as of Orbeon Forms 4.6.2:
-
-* In the Summary page
-    * No `<drafts>` element, which means to retrieve drafts and non-drafts alike
-    * If `drafts-for-never-saved-document=true` in the URL
-        * `<drafts for-never-saved-document="true">only</drafts>`
-* In `edit` mode, if a draft is not explicitly requested in the URL with `draft=true`
-    * `<drafts for-document-id="$document-id">only</drafts for-document-id="$document-id"></drafts>`
-* In `new` mode
-    * `<drafts for-never-saved-document="true"``>only</drafts>`
+* `for-never-saved-document="true"` instructs the persistence to only return drafts for documents that were never saved. This is used by Form Runner's:
+    * `/new` page to check if existing drafts already exist, in which case it might ask users if they prefer to start a new document or edit one of those drafts.
+    * `/summary` page if that page gets `drafts-for-never-saved-document=true` in the URL.
 
 Here are examples of requests/response in `edit` mode. Only zero or one document can be returned:
 
