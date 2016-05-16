@@ -32,6 +32,13 @@ Optionally, an app name or both an app name and form name can be specified on th
   `/fr/service/persistence/form/[APP_NAME]`
 * When both an app and form name are specified, the URL looks like:  
   `/fr/service/persistence/form/[APP_NAME]/[FORM_NAME]`
+  
+[SINCE Orbeon Forms 2016.2]
+
+Optionally, you can pass the URL parameter `all-versions`:
+
+- when set to `true`, all form definition versions are returned
+- when omitted or set to `false`, only the highest published version number is returned
 
 ### Response
 
@@ -91,5 +98,6 @@ Each `<form>` element contains:
         - last modification date/time for the app/form/version combination
 - `<form-version>`
     - [SINCE Orbeon Forms 2016.1]
-    - When using a relational database, as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524)
-    - contains the highest published version number 
+    - contains the version number of the given `<form>`
+    - *NOTE: This is only returned when using a relational database, as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524).*
+    
