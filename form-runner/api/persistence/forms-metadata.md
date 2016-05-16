@@ -10,6 +10,8 @@ This is the API used, in particular, by the [Form Runner Home page](../../featur
 
 ### Request
 
+### Basics
+
 You get the list of all the published forms with a GET on:
  
     /fr/service/persistence/form
@@ -24,6 +26,8 @@ Then it might call the eXist implementation with another GET on:
     
 Finally it aggregates the results returned by each implementation.
 
+### Restricting by app/form name
+
 [SINCE: Orbeon Forms 4.3]
 
 Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about published forms in that specific app, or that specific app and form is returned.
@@ -32,6 +36,8 @@ Optionally, an app name or both an app name and form name can be specified on th
   `/fr/service/persistence/form/[APP_NAME]`
 * When both an app and form name are specified, the URL looks like:  
   `/fr/service/persistence/form/[APP_NAME]/[FORM_NAME]`
+  
+### Returning all form definition versions
   
 [SINCE Orbeon Forms 2016.2]
 
