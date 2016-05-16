@@ -35,8 +35,6 @@ The expression is evaluated in the element's single-item binding if present, oth
 
 If the `value` attribute is omitted, the text content of the `<xf:var>` element is used as the value.
 
-_NOTE: The value attribute is supported since 2011-03-30 and is likely to be the XForms 2.0 attribute name._|
-
 ## Variables within xf:model
 
 Directly under the `<xf:model>` element, the following rules apply:
@@ -167,7 +165,7 @@ This is particularly useful for XBL component implementors, where this can be us
 </xf:var>
 ```
 
-single-item attributes may be used on the `<xxf:value>` element.
+Single-item attributes may be used on the `<xxf:value>` element.
 
 ## Scoping of variables in the view
 
