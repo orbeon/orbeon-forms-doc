@@ -23,11 +23,11 @@ The `fr:wizard` component presents the nested list of `fr:section` elements as a
 </fr:wizard>
 ```
 
-## `sectionref`
+## The sectionref attribute
 
 [SINCE Orbeon Forms 4.8]
 
-The `sectionref` attribute allows reading and writing the current section *name* to instance data.
+The `sectionref` attribute allows reading and writing the current top-level section *name* to instance data.
 
 ```xml
 <fr:wizard sectionref="instance('foo')/bar">
