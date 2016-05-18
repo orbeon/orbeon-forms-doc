@@ -44,8 +44,8 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
-- [ ] Form Builder usability
-- [ ] test automation
+- [ ] customer-requested improvements
+- [ ] tests automation
 - [ ] maintenance candidates
   - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
 
