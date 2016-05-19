@@ -61,6 +61,7 @@ Please remember that the following schedule is a plan, not a promise:
 
 Focus:
 
+- [ ] Form Builder usability
 - [ ] basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 - [ ] maintenance candidates
 - [ ] test automation
