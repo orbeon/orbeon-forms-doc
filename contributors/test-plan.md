@@ -320,7 +320,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
         ```
 - for headers-based auth:
     - `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
-    - set rewriting rules with Charles (⌘⇧W)
+    - set rewriting rules with Charles (⌘⇧E)
         - for user clerk ([gist](https://gist.github.com/ebruchez/10079296))
         - for user admin ([gist]()https://gist.github.com/ebruchez/10079254)
     - to switch between users in below steps
