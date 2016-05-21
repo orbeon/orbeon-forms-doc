@@ -11,12 +11,10 @@ The following instructions are known to work as of 2014-05-20, which is between 
 
 ## What the Orbeon Forms developers use
 
-As of 2015-05-21:
+As of 2016-05-20:
 
-- OS X Mavericks
-- IntelliJ IDEA 14
-
-*NOTE: There seems to be an issue compiling with IntelliJ 13. We recommend using IntelliJ 14 instead.*
+- OS X El Capitan
+- IntelliJ IDEA 2016.1
 
 ## With IntelliJ
 
@@ -34,6 +32,7 @@ On OS X, you can install git and sbt easily if you have [Homebrew](http://brew.s
 
 ```bash
 brew install git
+brew install ant
 brew install sbt
 ```
 
