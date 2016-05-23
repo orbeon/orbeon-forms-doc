@@ -1,5 +1,7 @@
 # Building Orbeon Forms
 
+<!-- toc -->
+
 This page explains how to build Orbeon Forms:
 
 - [With IntelliJ](#with-intellij)
@@ -7,14 +9,31 @@ This page explains how to build Orbeon Forms:
 
 The following instructions are known to work as of 2014-05-20, which is between the Orbeon Forms 4.5 and 4.6 releases. If something is broken, please [let us know](https://twitter.com/intent/tweet?in_reply_to=orbeon&in_reply_to_status_id=261900968369729536&source=webclient&text=%40orbeon+)!
 
-<!-- toc -->
-
 ## What the Orbeon Forms developers use
 
 As of 2016-05-20:
 
 - OS X El Capitan
 - IntelliJ IDEA 2016.1
+
+## With sbt from the command-line
+
+[SINCE 2016-05-23]
+
+To compile the Scala and Java files, from the command-line, run:
+
+- `sbt -Dorbeon.env=dev -Dorbeon.edition=PE`
+- `project core`
+- `test:compile` (run once) or `~test:compile` (run and check for file changes)
+
+As of 2016-05-23:
+ 
+- this gets sbt to compile and incrementally recompile all files to `build/orbeon-war/WEB-INF/classes`
+- this doesn't yet produce JAR files or other artifacts (work in progress)
+- compiling from IntelliJ doesn't work yet
+- running unit tests from IntelliJ should work
+- we still need to fix quite a bit of things in build.sbt as right now, IntelliJ can be confused by certain things (like modules outputting class files to the same directory)
+
 
 ## With IntelliJ
 
