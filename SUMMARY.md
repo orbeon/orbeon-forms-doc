@@ -225,6 +225,7 @@
     * Controller
         * [Authorizing pages and services](xml-platform/controller/authorization-of-pages-and-services.md)
     * Processors
+        * [URL generator](xml-platform/processors/url-generator.md)
         * [PDF to Image Converter](xml-platform/processors/pdf-to-image-converter.md)
     * Resources
         * [Resource managers](xml-platform/resources/resource-managers.md)
