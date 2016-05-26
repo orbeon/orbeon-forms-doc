@@ -135,7 +135,7 @@ Variables are allowed within `<xf:action>` elements, whether those elements are 
 
 You can nest an `<xxf:value>` element within `<xf:var>`.
 
-_NOTE: The `<xxf:value>` element replaces the deprecated  `<xxf:sequence>` element but works exactly the same way. Until Orbeon Forms 4.6 included, you must use the element `<xxf:sequence>`. From Orbeon Forms 4.7 onward, use `<xxf:value>`.
+_NOTE: The `<xxf:value>` element replaces the deprecated  `<xxf:sequence>` element but works exactly the same way. Until Orbeon Forms 4.6 included, you must use the element `<xxf:sequence>`. From Orbeon Forms 4.7 onward, use `<xxf:value>`._
 
 The element supports the following attributes: 
 
