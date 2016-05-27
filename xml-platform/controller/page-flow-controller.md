@@ -875,34 +875,34 @@ The following content for `xml-rpc.xpl` implements an XML service returning as a
 
 Notice the optional `schema-href` attributes which allow validating the request and the response against schemas.
 
-[1]: ../images/legacy/reference-controller-oxf-app.png
+[1]: ../../images/legacy/reference-controller-oxf-app.png
 [2]: http://www.orbeon.com/orbeon/doc/integration-packaging#main-processor
 [3]: http://www.orbeon.com/orbeon/doc/integration-packaging
 [4]: #page-navigation
 [5]: authorization-of-pages-and-services.md
 [6]: resources/resource-managers
-[7]: ../images/legacy/reference-controller-mvc.png
+[7]: ../../images/legacy/reference-controller-mvc.png
 [8]: http://www.orbeon.com/orbeon/doc/reference-epilogue
 [9]: http://www.orbeon.com/orbeon/doc/reference-xpl-pipelines
 [10]: #action-element
 [11]: #matchers
 [12]: http://www.orbeon.com/orbeon/doc/processors-generators-request
-[13]: ../images/legacy/reference-controller-navigation.png
+[13]: ../../images/legacy/reference-controller-navigation.png
 [14]: http://www.orbeon.com/orbeon/atm/
-[15]: ../images/legacy/reference-controller-atm-screen.png
-[16]: ../images/legacy/reference-controller-atm-logic.png
+[15]: ../../images/legacy/reference-controller-atm-screen.png
+[16]: ../../images/legacy/reference-controller-atm-logic.png
 [17]: #epilogue-element
 [18]: ../xforms/tutorial/README.md
-[19]: ../images/legacy/home-changes-forward.png
-[20]: ../images/legacy/home-changes-redirect.png
+[19]: ../../images/legacy/home-changes-forward.png
+[20]: ../../images/legacy/home-changes-redirect.png
 [21]: http://jakarta.apache.org/oro/api/org/apache/oro/text/GlobCompiler.html
 [22]: http://www.orbeon.com/orbeon/doc/processors-other#resource-server
-[23]: ../images/legacy/reference-controller-epilogue.png
-[24]: ../images/legacy/reference-controller-view.png
-[25]: ../images/legacy/reference-controller-model.png
-[26]: ../images/legacy/reference-controller-view-xforms.png
-[27]: ../images/legacy/reference-controller-model-xforms.png
-[28]: ../images/legacy/reference-controller-view-model.png
-[29]: ../images/legacy/reference-controller-view-model-xforms-1.png
-[30]: ../images/legacy/reference-controller-view-model-xforms-2.png
+[23]: ../../images/legacy/reference-controller-epilogue.png
+[24]: ../../images/legacy/reference-controller-view.png
+[25]: ../../images/legacy/reference-controller-model.png
+[26]: ../../images/legacy/reference-controller-view-xforms.png
+[27]: ../../images/legacy/reference-controller-model-xforms.png
+[28]: ../../images/legacy/reference-controller-view-model.png
+[29]: ../../images/legacy/reference-controller-view-model-xforms-1.png
+[30]: ../../images/legacy/reference-controller-view-model-xforms-2.png
  
