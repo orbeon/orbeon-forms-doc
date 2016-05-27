@@ -52,6 +52,14 @@ An external XML submission must refer to the URL of the page accepting the submi
 <page path="/xmlrpc" model="xmlrpc.xpl">  
 ```
 
+## External JSON submission
+
+[SINCE Orbeon Forms 2016.2]
+
+It is possible to submit JSON to a page or service with the `application/json` mediatype.
+
+The JSON received is automatically converted to XML using the [XForms 2.0 conversion scheme](../../xforms/submission-json.md). 
+
 ## Default submission
 
 In case there is no external or internal XML submission, it is possible to specify a static default XML submission document. This is particularly useful to extract information from a page URL, as documented below. You specify a default submission with the `default-submission` attribute as follows:
