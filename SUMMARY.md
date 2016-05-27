@@ -223,6 +223,7 @@
     * [Using XForms from Java apps](xforms/filter.md)
 * XML Platform
     * Controller
+        * [Page Flow Controller](xml-platform/controller/page-flow-controller.md)
         * [Authorizing pages and services](xml-platform/controller/authorization-of-pages-and-services.md)
     * Processors
         * [URL generator](xml-platform/processors/url-generator.md)
