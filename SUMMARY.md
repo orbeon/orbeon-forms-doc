@@ -231,6 +231,8 @@
     * Resources
         * [Resource managers](xml-platform/resources/resource-managers.md)
         * [Setting up an external resources directory](xml-platform/resources/external-resources.md)
+    * Other
+        * [Binary and text documents](xml-platform/binary-text-documents.md)
 * Contributors
     * [Automated tests](contributors/automated-tests.md)
     * [Building Orbeon Forms](contributors/building-orbeon-forms.md)
