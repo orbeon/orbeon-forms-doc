@@ -345,7 +345,7 @@ The Orbeon Forms filter implemented by `OrbeonXFormsFilter` sets the following r
 
 _NOTE: In general, you do not need to know about these properties to use the Orbeon Forms filter._
 
-[1]: ../xml-platform/page-flow-controller.md
+[1]: ../xml-platform/controller/README.md
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl
 [5]: ../installation/README.md
 [6]: ../xforms/tutorial/introduction.md
