@@ -174,6 +174,19 @@ The resulting document consists of a `document` root element containing the text
 
 _NOTE: The URL generator performs streaming. It generates a stream of short character SAX events. It is therefore possible to generate an "infinitely" long document with a constant amount of memory, assuming the generator is connected to other processors that do not require storing the entire stream of data in memory, for example the [__SQL processor_][3]_ (with an appropriate configuration to stream BLOBs), or the [_HTTP serializer_][4]._
 
+## JSON mode
+
+[SINCE Orbeon Forms 2016.2]
+
+The JSON mode is selected when:
+
+- the content type is `application/json` according to the selection algorithm above
+- the `json` mode is forced using the `<mode>` configuration element
+
+In this mode, the URL generator uses the [XForms 2.0 conversion scheme](../../xforms/submission-json.md) to convert the incoming JSON content to XML.
+
+
+
 ## Binary mode
 
 The binary mode is selected when:
