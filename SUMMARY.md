@@ -222,15 +222,14 @@
             * [Adding a feed](xforms/tutorial/bookcast/feed.md)
     * [Using XForms from Java apps](xforms/filter.md)
 * XML Platform
-    * Controller
-        * [Page Flow Controller](xml-platform/controller/README.md)
-            * [Basics](xml-platform/controller/basics.md)
-            * [XML submission](xml-platform/controller/submission.md)
-            * [Navigating between pages](xml-platform/controller/navigation.md)
-            * [Paths and matchers](xml-platform/controller/paths-matchers.md)
-            * [Other configuration elements](xml-platform/controller/other.md)
-            * [Typical combinations of page model and page view](xml-platform/controller/combinations.md)
-            * [Examples](xml-platform/controller/examples.md)
+    * [Page Flow Controller](xml-platform/controller/README.md)
+        * [Basics](xml-platform/controller/basics.md)
+        * [XML submission](xml-platform/controller/submission.md)
+        * [Navigating between pages](xml-platform/controller/navigation.md)
+        * [Paths and matchers](xml-platform/controller/paths-matchers.md)
+        * [Other configuration elements](xml-platform/controller/other.md)
+        * [Typical combinations of page model and page view](xml-platform/controller/combinations.md)
+        * [Examples](xml-platform/controller/examples.md)
         * [Authorizing pages and services](xml-platform/controller/authorization-of-pages-and-services.md)
     * Processors
         * [URL generator](xml-platform/processors/url-generator.md)
