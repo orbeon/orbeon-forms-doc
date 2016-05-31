@@ -102,6 +102,15 @@ var firstName = ORBEON.xforms.Document.getValue(firstNameControl);
 
 The first line above uses the [`$=` CSS selector](https://www.w3.org/TR/selectors4/#attribute-substrings) to get the element in the DOM whose id ends with `first-name-control`.
 
+#### For compound XBL controls
+
+Some XBL controls, like `<fr:dropdown>` AKA `<xf:select1 appearance="dropdown">` are compound controls: they are built out of other controls and do not directly export a value to JavaScript.
+
+For those, you have to go search for the nested core XForms control which holds the value, in this case the `.xforms-select1` control:
+
+```javascript
+ORBEON.xforms.Document.getValue(ORBEON.jQuery(this).find('.xforms-select1')[0])
+```
 
 ### Dispatching events
 
