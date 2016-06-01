@@ -509,7 +509,10 @@ If your forms leverage dialogs and your users are likely to use a screen reader,
  the following property to `true`. By default, the property is set to `false`, as enabling it has a cost in performance on IE.
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.use-aria" value="false"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.use-aria" 
+    value="false"/>
 ```
 
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xpath-2-0-support
