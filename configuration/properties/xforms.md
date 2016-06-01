@@ -369,8 +369,11 @@ Here are some examples of outputs with the default properties:
 The default formatting properties for `date`, `time`, and `dateTime` now use the current language by the `xxforms:lang()` function, for example:
 
 ```xml
-<property as="xs:string"  name="oxf.xforms.format.output.date">
-    if (. castable as xs:date) then format-date(xs:date(.), '[FNn] [MNn] [D], [Y]', xxf:lang(), (), ()) else .
+<property as="xs:string" name="oxf.xforms.format.output.date">
+    if (. castable as xs:date) then
+        format-date(xs:date(.), '[FNn] [MNn] [D], [Y]', xxf:lang(), (), ())
+    else
+        .
 </property>
 ```
 
