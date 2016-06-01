@@ -36,7 +36,10 @@ See [XPath Analysis](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpa
 The following property specifies whether the XForms engine should keep file location formation:
 
 ```xml
-<property as="xs:string" name="oxf.xforms.location-mode" value="none"/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.location-mode" 
+    value="none"/>
 ```
 
 If the value is `smart`, location data is kept.
@@ -55,7 +58,10 @@ _NOTE: Before Orbeon Forms 4.4, location data was always kept._
 The following property controls some aspects of XForms submission in Orbeon Forms:
 
 ```xml
-<property as="xs:boolean" name="optimize-get-all" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="optimize-get-all" 
+    value="true"/>
 ```
 
 - If set to `true` (the default), Orbeon Forms optimizes submissions with replace="all" and the get method by sending URL of the submission action directly to the web browser. This however means that submission errors cannot be caught by XForms event handlers after Orbeon Forms has started connecting to the submission URL, as should be the case following the XForms specification.
@@ -89,7 +95,10 @@ The following two properties control optimized XForms submissions:
 The following property controls optimized instance inclusion:
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.local-instance-include" value="false"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.local-instance-include" 
+    value="false"/>
 ```
 
 - If set to `true` (the default is false), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) instance inclusions, by directly using the Java Servlet API's include capability instead of actually performing an HTTP request.
@@ -107,12 +116,14 @@ Note that for any optimized submission or inclusion to occur, the following is r
 The following property controls whether instance types annotations are exposed to XPath 2.0 expressions:
 
 ```xml
- <property as="xs:boolean" name="oxf.xforms.expose-xpath-types" value="true"/>
- ```
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.expose-xpath-types" 
+    value="true"/>
+```
 
 - If set to `false` (the default), instance types are not made available to XPath expressions.
 - If set to `true`, they are made available.
-
 
 More information: [XPath 2.0 support][2].
 
@@ -130,14 +141,20 @@ The following properties are documented in a [separate page](http://wiki.orbeon.
 The following property controls whether noscript mode is enabled:
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.noscript" value="false"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.noscript" 
+    value="false"/>
 ```
 
 
 The following property controls whether noscript mode is supported:
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.noscript-support" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.noscript-support" 
+    value="true"/>
 ```
 
 The noscript mode is enabled only if both properties are true.
@@ -153,7 +170,10 @@ _NOTE: The reason there are two properties is that in the future, the XForms eng
 a property allows enabling XForms 1.1-compatible behavior. (Orbeon Forms did not support this previously and considered that non-visible cases were hidden but still relevant.)
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.xforms11-switch" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.xforms11-switch" 
+    value="true"/>
 ```
 
 You can also set this property on a per-switch basis:
@@ -292,6 +312,7 @@ If you don't like this behavior, you can set the following two properties:
     as="xs:string" 
     name="oxf.xforms.readonly-appearance.static.select"  
     value="minimal"/>
+    
 <!-- For radio buttons -->
 <property 
     as="xs:string" 
@@ -315,13 +336,13 @@ The value of each property is an XPath expression executed on the node bound to 
 containing the value which will be shown to the user.
 
 ```xml
-<property as="xs:string"  name="oxf.xforms.format.output.date"      value="..."/>
-<property as="xs:string"  name="oxf.xforms.format.output.dateTime"  value="..."/>
-<property as="xs:string"  name="oxf.xforms.format.output.time"      value="..."/>
-<property as="xs:string"  name="oxf.xforms.format.output.decimal"   value="..."/>
-<property as="xs:string"  name="oxf.xforms.format.output.integer"   value="..."/>
-<property as="xs:string"  name="oxf.xforms.format.output.float"     value="..."/>
-<property as="xs:string"  name="oxf.xforms.format.output.double"    value="..."/>
+<property as="xs:string" name="oxf.xforms.format.output.date"     value="..."/>
+<property as="xs:string" name="oxf.xforms.format.output.dateTime" value="..."/>
+<property as="xs:string" name="oxf.xforms.format.output.time"     value="..."/>
+<property as="xs:string" name="oxf.xforms.format.output.decimal"  value="..."/>
+<property as="xs:string" name="oxf.xforms.format.output.integer"  value="..."/>
+<property as="xs:string" name="oxf.xforms.format.output.float"    value="..."/>
+<property as="xs:string" name="oxf.xforms.format.output.double"   value="..."/>
 ```
 
 Here are some examples of outputs with the default properties:
@@ -348,12 +369,9 @@ Here are some examples of outputs with the default properties:
 The default formatting properties for `date`, `time`, and `dateTime` now use the current language by the `xxforms:lang()` function, for example:
 
 ```xml
-<property
-  as="xs:string"
-  name="oxf.xforms.format.output.date"
-  value="if (. castable as xs:date)
-         then format-date(xs:date(.), '[FNn] [MNn] [D], [Y] [ZN]', xxforms:lang(), (), ())
-         else ."/>
+<property as="xs:string"  name="oxf.xforms.format.output.date">
+    if (. castable as xs:date) then format-date(xs:date(.), '[FNn] [MNn] [D], [Y]', xxf:lang(), (), ()) else .
+</property>
 ```
 
 This means that the language that is used for the formatting is the language in effect where the control is in used, via the `xml:lang` attribute.
@@ -382,8 +400,8 @@ An `<xf:input>` bound to a node of type `xs:dateTime` is shown as two text field
 uses the formatting defined by `oxf.xforms.format.input.date` and the time text field uses the formatting defined by `oxf.xforms.format.input.time`.
 
 ```xml
-<property as="xs:string"  name="oxf.xforms.format.input.date"  value="[M]/[D]/[Y]"/>
-<property as="xs:string"  name="oxf.xforms.format.input.time"  value="[h]:[m]:[s] [P]"/>
+<property as="xs:string" name="oxf.xforms.format.input.date" value="[M]/[D]/[Y]"/>
+<property as="xs:string" name="oxf.xforms.format.input.time" value="[h]:[m]:[s] [P]"/>
 ```
 
 ##  Error handling
@@ -427,7 +445,10 @@ then the client resends the request. The default value of the timeout for Ajax r
 property. A value of `-1` disables the retry mechanism.
 
 ```xml
-<property as="xs:integer" name="oxf.xforms.delay-before-ajax-timeout" value="30000"/>
+<property 
+    as="xs:integer" 
+    name="oxf.xforms.delay-before-ajax-timeout" 
+    value="30000"/>
 ```
 
 The first time the client retries to send a request, it does so right away. However, the second time it waits for 5 seconds, the third time for 10 seconds,
@@ -435,10 +456,15 @@ the fourth time for 15 seconds, and so on, until it reaches a maximum delay betw
  5 seconds) and the "maximum delay" (by default 30 seconds) with the following properties:
 
 ```xml
-<property as="xs:integer" name="oxf.xforms.retry.delay-increment"     value="5000"/>
-<property as="xs:integer" name="oxf.xforms.retry.max-delay"           value="30000"/>
+<property 
+    as="xs:integer" 
+    name="oxf.xforms.retry.delay-increment"     
+    value="5000"/>
+<property 
+    as="xs:integer" 
+    name="oxf.xforms.retry.max-delay"           
+    value="30000"/>
 ```
-
 
 Orbeon Forms handles the case where a request was successfully received and executed by the server, but the response didn't make it to the client.
 In those cases, the client resends the request to the server. The server detects that this particular request has been already executed, so it doesn't
@@ -454,7 +480,10 @@ this property is set to the empty string, meaning that Orbeon Forms doesn't try 
  response that aren't Orbeon Forms error pages. For some background on this, see our blog post [Detecting login pages in Ajax requests][10].
 
 ```xml
-<property as="xs:string"  name="oxf.xforms.login-page-detection-regexp"  value=""/>
+<property 
+    as="xs:string"  
+    name="oxf.xforms.login-page-detection-regexp"  
+    value=""/>
 ```
 
 ## Preprocessing step
@@ -462,9 +491,14 @@ this property is set to the empty string, meaning that Orbeon Forms doesn't try 
 The XForms engine supports a preprocessing step. By default, this step is disabled. You can enable it with the following properties:
 
 ```xml
-<property as="xs:boolean" name="oxf.epilogue.xforms.preprocessing" value="true"/>
-<property as="xs:anyURI"  name="oxf.epilogue.xforms.preprocessing.uri"
-                          value="oxf:/my/preprocessing/pipeline.xpl"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.epilogue.xforms.preprocessing" 
+    value="true"/>
+    
+<property as="xs:anyURI"
+    name="oxf.epilogue.xforms.preprocessing.uri"
+    value="oxf:/my/preprocessing/pipeline.xpl"/>
 ```
 
 The second property must point to an XPL file with a `data` input and data output. The pipeline can transform the incoming XForms.
