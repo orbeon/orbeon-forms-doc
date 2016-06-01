@@ -64,14 +64,20 @@ The following property controls some aspects of XForms submission in Orbeon Form
 The following two properties control optimized XForms submissions:
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.oxf.xforms.local-submission-forward" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.oxf.xforms.local-submission-forward" 
+    value="true"/>
 ```
 
 - If set to `true` (the default), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) submissions with replace="all", by using the Java Servlet API's forward capability instead of actually performing an HTTP request.
 - If set to `false`, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.oxf.xforms.local-submission-include" value="false"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.oxf.xforms.local-submission-include" 
+    value="false"/>
 ```
 
 - If set to `true` (the default is false), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) submissions with replace="instance", replace="text" or replace="none", by directly using the Java Servlet API's include capability instead of actually performing an HTTP request.
@@ -190,7 +196,10 @@ If an element is configured to be a label, a `for` attribute pointing to the con
 The following property controls the order of label, help, hint, alert, and control elements output by the XForms engine:
 
 ```xml
-<property as="xs:string" name="oxf.xforms.order" value="label control help alert hint"/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.order" 
+    value="label control help alert hint"/>
 ```
 
 The property uses the order of the predefined tokens `label`, `control`, `help`, `alert`, and `hint` to set the order.
@@ -219,7 +228,10 @@ You can set the `oxf.xforms.datepicker.two-months` property to `true`, and the d
 By default, the property is set to `false`, (only one month is shown). You can override by adding the following to your `properties-local.xml`:
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.datepicker.two-months" value="false"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.datepicker.two-months" 
+    value="false"/>
 ```
 
 ### Navigator
@@ -231,7 +243,10 @@ With the `oxf.xforms.datepicker.navigator` property set to `true` (the default),
 You disable the navigator by setting the following property to `false` (it is `true` by default):
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.datepicker.navigator" value="false"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.datepicker.navigator" 
+    value="false"/>
 ```
 
 ### Upload
@@ -257,7 +272,10 @@ To know how much of the file has been uploaded so far, the browser sends an Ajax
 You can enable the [XForms Inspector][7] for all the page in your site by setting the following property to `true` (the default is `false`):
 
 ```xml
-<property as="xs:boolean" name="oxf.epilogue.xforms.inspector" value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.epilogue.xforms.inspector" 
+    value="true"/>
 ```
 
 ## Appearance of radio buttons and checkboxes in review and PDF modes
@@ -270,9 +288,15 @@ If you don't like this behavior, you can set the following two properties:
 
 ```xml
 <!-- For checkboxes -->
-<property as="xs:string" name="oxf.xforms.readonly-appearance.static.select"  value="minimal"/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.readonly-appearance.static.select"  
+    value="minimal"/>
 <!-- For radio buttons -->
-<property as="xs:string" name="oxf.xforms.readonly-appearance.static.select1" value="minimal"/>
+<property 
+    as="xs:string" 
+    name="oxf.xforms.readonly-appearance.static.select1" 
+    value="minimal"/>
 ```
 
 These cause the radio buttons and checkboxes to display only the values selected, as text, like for dropdown menus and other section controls.
