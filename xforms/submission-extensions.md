@@ -68,23 +68,64 @@ _NOTE: On  `<xf:instance>`, the attribute is statically-defined. On `<xf:submiss
 
 ## HTTP headers forwarding
 
-_NOTE: As of Orbeon Forms 4.9, `oxf.xforms.forward-submission-headers` is deprecated. Use `oxf.http.forward-headers` instead. For backward compatibility, header names from both properties are combined into a single set of header names. It is no longer possible to specify per-form forwarding headers using `xxf:forward-submission-headers`._
+### What this does
 
-HTTP requests initiated by `<xf:submission>` and `<xf:instance>` can automatically forward incoming HTTP headers. Two properties are looked at in order:
+HTTP requests initiated by `<xf:submission>` and `<xf:instance>` can automatically forward incoming HTTP headers.
 
-1. The local, XForms-specific oxf.xforms.forward-submission-headers property. [DEPRECATED]
-2. The global Orbeon Forms [oxf.http.forward-headers](../configuration/properties/general.html#headers-forwarding) property (used only as a default if the XForms property is not set).
+_SECURITY NOTE: Forwarding authentication-related headers may cause a security risks when communicated with non-trusted servers. Use carefully!_
 
-Both properties contain a space-separated list of header names to forward:
+### Configuration
+
+You do this with the global [`oxf.http.forward-headers`](../configuration/properties/general.md#headers-forwarding) property.
+
+The property contains a space-separated list of header names to forward:
 
 ```xml
 <property
   as="xs:string"
-  name="oxf.xforms.forward-submission-headers"
-  value="Orbeon-Client Authorization SM_USER"/>
+  name="oxf.http.forward-headers"
+  value="My-Header-1 My-Header-2"/>
 ```
 
-`oxf.xforms.forward-submission-headers` can also be set on a per-page basis on your first model element: [REMOVED as of Orbeon Forms 4.9]
+### Lifecycle
+
+Whenever an XForms document initializes, it saves the incoming HTTP headers to its internal state. This means that instance or submission header forwarding always uses the HTTP headers which were present *at the time the XForms page was loaded*. HTTP headers present during subsequent Ajax requests are ignored.
+
+Whenever an HTTP request must be performed in relation to an instance or submission, the XForms engine looks at the list of header names and it forwards the header value if the following conditions are met:
+
+- There is an incoming header with that name.
+- There is no author-specified header with the same name in an `<xf:header>` element within `<xf:submission>`.
+
+### The Authorization header
+
+The `Authorization` header is treated specially: if a username is specified on the submission with `xxf:username`, then this header is not forwarded.
+
+Forwarding the `Authorization` or other authentication-related headers can be useful to propagate authentication credentials to other services, but it can also be unsafe.
+
+### Setting headers with a servlet filter
+
+Often it is necessary to set a header for further use by Orbeon Forms. This can be done for example by a proxy or a servlet filter. In the latter case, you have to make sure you override all the relevant methods of the Java servlet API's `HttpServletRequestWrapper`:
+ 
+```java
+getHeaderNames()
+getHeader(String name)
+getHeaders(String name)
+```
+
+### Compatibility notes
+
+As of Orbeon Forms 4.9, `oxf.xforms.forward-submission-headers` is deprecated. Use `oxf.http.forward-headers` instead. For backward compatibility, header names from both properties are combined into a single set of header names. It is no longer possible to specify per-form forwarding headers using `xxf:forward-submission-headers`.
+
+Prior to Orbeon Forms 4.9, the two properties were looked at in order:
+
+1. The local, XForms-specific `oxf.xforms.forward-submission-headers` property. [DEPRECATED]
+2. The global Orbeon Forms [`oxf.http.forward-headers`](../configuration/properties/general.md#headers-forwarding) property (used only as a default if `oxf.xforms.forward-submission-headers` is not set).
+
+### Per-page forwarding settings (removed)
+
+[REMOVED as of Orbeon Forms 4.9]
+
+`oxf.xforms.forward-submission-headers` can also be set on a per-page basis on your first model element: 
 
 ```xml
 <xf:model
@@ -92,17 +133,6 @@ Both properties contain a space-separated list of header names to forward:
     ...
 </xf:model>
 ```
-
-Whenever an HTTP request must be performed, the XForms engine looks at this list of header names and it forwards the header value if the following conditions are met:
-
-* There is an incoming header with that name, i.e. either the HTTP request causing the XForms page to load or the XForms Ajax request to run contains that header.
-* There is no author-specified header with the same name in an `<xf:header>` element within `<xf:submission>`.
-
-Forwarding the `Authorization` or other authentication-related headers can be useful to propagate authentication credentials to other services.
-
-_NOTE: The `Authorization` header is treated specially: if a username is specified on the submission with `xxf:username`, then this header is not forwarded._
-
-_SECURITY NOTE: Forwarding authentication-related headers may cause a security risks when communicated with non-trusted servers. Use carefully!_
 
 ## Loading indicator
 

@@ -1,5 +1,7 @@
 # Owner-Group Permissions
 
+<!-- toc -->
+
 ## Availability
 
 See [Database Support](../../form-runner/persistence/db-support.md).
@@ -23,9 +25,10 @@ There is no particular configuration.
 When using this features with eXist, you need to set the following property:
 
 ```xml
-<property as="xs:string"
-          name="oxf.xforms.forward-submission-headers"
-          value="Orbeon-Username Orbeon-Roles Orbeon-Group"/>
+<property 
+    as="xs:string"
+    name="oxf.xforms.forward-submission-headers"
+    value="Orbeon-Username Orbeon-Roles Orbeon-Group"/>
 ```
 
 ### With Orbeon Forms 4.3

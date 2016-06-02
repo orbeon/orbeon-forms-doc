@@ -162,14 +162,17 @@ When "Send Liferay user" is enabled, you can configure Form Runner to use the HT
     as="xs:string"
     name="oxf.fr.authentication.method"
     value="header"/>
+    
 <property
     as="xs:string"
     name="oxf.fr.authentication.header.username"
     value="Orbeon-Liferay-User-Screen-Name"/>
+    
 <property
     as="xs:string"
     name="oxf.fr.authentication.header.group"
     value="Orbeon-Liferay-User-Group-Name"/>
+    
 <property
     as="xs:string"
     name="oxf.fr.authentication.header.roles"
@@ -182,13 +185,14 @@ For the `oxf.fr.authentication.header.username` header, you can choose any of th
 - `Orbeon-Liferay-User-Screen-Name`
 - or possibly `Orbeon-Liferay-User-Email`
 
-_NOTE: For builds prior to Orbeon 4.9, you need the following configuration in your [../../configuration/properties/README.md):_
+_NOTE: Prior to Orbeon Forms 4.9, you need the following configuration in your [../../configuration/properties/README.md):_
 
 ```xml
 <property
     as="xs:string"
     name="oxf.http.forward-headers"
     value="Orbeon-Liferay-User-Screen-Name Orbeon-Liferay-User-Group-Name Orbeon-Liferay-User-Roles"/>
+    
 <property
     as="xs:string"
     name="oxf.xforms.forward-submission-headers"
@@ -333,8 +337,8 @@ In this scenario, the user of the portlet is only allowed to capture and save fo
 
 Portlet preferences:
 
-- __Form Runner action:__ new
-- __Read-Only access:__ false
+- __Form Runner action:__ `new`
+- __Read-Only access:__ `false`
 
 Configuration properties in `properties-local.xml` (here for the orbeon/contact form):
 
@@ -355,8 +359,8 @@ In this scenario, the user of the portlet can, in addition to capture and save, 
 
 Portlet preferences:
 
-- __Form Runner action:__ summary
-- __Read-Only access:__ false
+- __Form Runner action:__ `summary`
+- __Read-Only access:__ `false`
 
 Configuration properties in `properties-local.xml` (here for the orbeon/contact form):
 
@@ -383,8 +387,8 @@ In this scenario, the user of the portlet is only allowed to capture and save fo
 
 Portlet preferences:
 
-- __Form Runner action:__ summary
-- __Read-Only access:__ true
+- __Form Runner action:__ `summary`
+- __Read-Only access:__ `true`
 
 Configuration properties in `properties-local.xml` (here for the orbeon/contact form):
 
