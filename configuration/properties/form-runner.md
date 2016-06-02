@@ -251,6 +251,19 @@ This property set whether the control hints are shown inline, rather than as too
     value="true"/>
 ```
 
+### Order of LHHA elements
+
+[SINCE Orbeon Forms 2016.2]
+
+This property sets the respective order, in the generated HTML markup, of label/help/hint/alert and the control element. It is not recommended to change the default value of this property.
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.lhha-order.*.*"                               
+    value="help label control alert hint"/>
+```
+
 #### Initial keyboard focus
 
 [SINCE Orbeon Forms 4.9]
