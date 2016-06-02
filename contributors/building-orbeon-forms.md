@@ -11,29 +11,69 @@ The following instructions are known to work as of 2014-05-20, which is between 
 
 ## What the Orbeon Forms developers use
 
-As of 2016-05-20:
+As of 2016-06-02:
 
 - OS X El Capitan
 - IntelliJ IDEA 2016.1
 
 ## With sbt from the command-line
 
-[SINCE 2016-05-23]
+As of 2016-06-02:
 
-To compile the Scala and Java files, from the command-line, run:
+To compile the Scala and Java files from the command-line the first time, run:
 
-- `sbt -Dorbeon.env=dev -Dorbeon.edition=PE`
-- `project core`
-- `test:compile` (run once) or `~test:compile` (run and check for file changes)
+- `ant orbeon-war`
 
-As of 2016-05-23:
+To incrementally compile Scala and Java files during further development, run:
+
+- `sbt -Dorbeon.edition=PE` (PE branch) or `sbt -Dorbeon.edition=CE` (CE branch)
+- `project root`
+- one of
+    - `~copyJarToExplodedWar`: to only update server-side classes
+    - `~fastOptJSToExplodedWar`: to only update the Form Builder Scala.js artifacts
+    - `~ ;copyJarToExplodedWar;fastOptJSToExplodedWar`: to update both
+
+The `copyJarToExplodedWar` command in the `root` project incrementally:
  
-- this gets sbt to compile and incrementally recompile all files to `build/orbeon-war/WEB-INF/classes`
-- this doesn't yet produce JAR files or other artifacts (work in progress)
-- compiling from IntelliJ doesn't work yet
-- running unit tests from IntelliJ should work
-- we still need to fix quite a bit of things in build.sbt as right now, IntelliJ can be confused by certain things (like modules outputting class files to the same directory)
+- builds all the sub-projects depended by `root`
+    - `orbeon-common`
+    - `orbeon-dom`
+    - `orbeon-form-builder-shared` (empty currently on `master`)
+    - `orbeon-xupdate`
+    - `orbeon-core`
+    - `orbeon-form-runner`    
+    - `orbeon-form-builder`
+    - `orbeon-form-builder-client`
+- copies the following resulting JAR files to `build/orbeon-war/WEB-INF/lib`
+    - `orbeon-common.jar`
+    - `orbeon-dom.jar`
+    - `orbeon-form-builder-shared.jar`
+    - `orbeon-xupdate.jar`
+    - `orbeon-core.jar`    
+    - `orbeon-form-runner.jar`
+    - `orbeon-form-builder.jar`
+    
+To run tests from IntelliJ:
 
+- from sbt, first run `test:compile`
+- run "Unit Tests" from IntelliJ
+    - there are issues, with the following tests failing:
+        - `formRunnerStaticCache`
+            - "Some(false) did not equal None"
+        - `formRunnerItemsetActions`
+            - "None.get"
+        - `ResourcesPatcherTest.testResourcesConsistency`
+            - "Cannot find resource: /apps/fr/i18n/resources.xml"
+        - `MemoryCacheTest`
+            - tries to connect to Selenium?
+        - "Form Runner and Form Builder - Oracle view column names"
+            - "Cannot find resource: /apps/fr/persistence/relational/sql-utils.xsl"
+        - `VersionTest`
+            because the version used is "2016.2-SNAPSHOT"
+
+NOTES:
+
+- compiling from IntelliJ doesn't work properly yet: files compile, but won't be copied to the exploded WAR
 
 ## With IntelliJ
 
