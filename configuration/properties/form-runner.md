@@ -264,7 +264,7 @@ This property sets the respective order, in the generated HTML markup, of label/
     value="help label control alert hint"/>
 ```
 
-#### Initial keyboard focus
+### Initial keyboard focus
 
 [SINCE Orbeon Forms 4.9]
 

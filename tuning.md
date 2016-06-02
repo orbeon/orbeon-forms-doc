@@ -2,6 +2,8 @@
 
 <!-- toc -->
 
+NOTE: Not linked yet.
+
 TODO: separate items which are useful to Form Runner/Form Builder user deployments first. Make plain XForms/XSLT/XPL separate.
 
 ## Sizing
