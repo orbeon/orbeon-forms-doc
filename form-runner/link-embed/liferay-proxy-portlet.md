@@ -297,7 +297,7 @@ Here is an example configuration:
         <condition type="remote-addr" operator="notequal">0:0:0:0:0:0:0:1%0</condition>
         <condition type="remote-addr" operator="notequal">127.0.0.1</condition>
         <set type="status">403</set>
-        <to type="temporary-redirect" last="true">/unauthorized</to>
+        <to>null</to>
     </rule>
 </urlrewrite>
 ```
