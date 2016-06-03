@@ -21,9 +21,9 @@ place your `license.xml` file under `WEB-INF/resources/config/license.xml`
 
 To setup a datasource, if you'd like Orbeon Forms to connect to your relational database, here for MySQL:
 
-1. Setup Orbeon Forms to use a JBoss datasource (configured in the following steps):``
+1. Setup Orbeon Forms to use a JBoss datasource (configured in the following steps):
     1. Unzip `orbeon.war`,
-    2. Edit `WEB-INF/w``eb.xml` to uncomment the `<resource-ref>`.
+    2. Edit `WEB-INF/web.xml` to uncomment the `<resource-ref>`.
     3. Edit `WEB-INF/jboss-web.xml` to uncomment the `<resource-ref>`. Change the `<jndi-name>` to `java:/comp/env/jdbc/mysql`.
 2. In JBoss, install the JDBC driver as a module:
     1. In `modules/com`, create a directory `mysql/main`.
