@@ -4,18 +4,24 @@
 
 ## Status
 
-These steps have been tested with JBoss AS 7.1.1.Final "Brontes".
+These steps have been tested with:
+ 
+- JBoss AS 7.1.1.Final "Brontes"
+- JBoss EAP 6.4.0.GA (AS 7.5.0.Final) with Orbeon Forms 2016.1
 
 ## Deploy Orbeon Forms
 
 To install Orbeon Forms:
 
-1. For Orbeon Forms PE
-    * Unzip `orbeon.war`
-place your `license.xml` file under `WEB-INF/resources/config/license.xml`
-    * Re-zip `orbeon.war`
+1. For Orbeon Forms PE only
+    - either place your license file under `~/.orbeon/license.xml` (see [License installation](README.md#license-installation-orbeon-forms-pe-only))
+    - or
+        - unzip `orbeon.war`
+        - place your `license.xml` file under `WEB-INF/resources/config/license.xml`
+        - re-zip `orbeon.war`
 2. Start a standalone server with `bin/standalone.sh`
 3. Drop `orbeon.war` into the JBoss `standalone/deployments` folder
+4. Check whether the deployment was successful by watching `standalone/log/server.log`
 
 ## Setup a JDBC datasource
 
