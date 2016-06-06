@@ -26,7 +26,7 @@ To compile the Scala and Java files from the command-line the first time, run:
 
 To incrementally compile Scala and Java files during further development, run:
 
-- `sbt -Dorbeon.edition=PE` (PE branch) or `sbt -Dorbeon.edition=CE` (CE branch)
+- `sbt`
 - `project root`
 - one of
     - `~copyJarToExplodedWar`: to only update server-side classes
