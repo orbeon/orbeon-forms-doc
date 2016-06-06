@@ -214,7 +214,7 @@ Here are examples of requests/response in `edit` mode. Only zero or one document
     <lang>en</lang>
 </search>
 
-<documents total="5" search-total="1">
+<documents search-total="1">
     <document created="2014-08-15T17:12:04.570Z" last-modified="2014-08-15T17:18:50.993Z" draft="true"
               name="fbba3db82e7fb1e0054e97d49026b5d303a1fa2f" operations="*">
         <details/>
@@ -232,7 +232,7 @@ And in `new` mode, zero or more documents can be returned:
     <lang>en</lang>
 </search>
 
-<documents total="4" search-total="2">
+<documents search-total="2">
     <document created="2014-08-15T17:05:11.563Z" last-modified="2014-08-15T17:05:11.563Z" draft="true"
               name="dac2971cca0e71e36880e890297ab8818a5298e0" operations="*">
         <details/>
@@ -249,7 +249,7 @@ And in `new` mode, zero or more documents can be returned:
 The persistence layer must return a document of this form:
 
 ```xml
-<documents total="13" search-total="4" page-size="10" page-number="1" query="">
+<documents search-total="4" page-size="10" page-number="1" query="">
     <document created="2011-05-06T14:58:40.376-07:00"
               last-modified="2011-09-12T12:05:07.3-07:00"
               name="e8bfd3ba63fa12a8b59cdd5c08369a35"
@@ -276,19 +276,11 @@ The persistence layer must return a document of this form:
 
 The root element contains these attributes:
 
-* `total` attribute:
-    * total number of documents in the database for this app/form
-* search-total attribute:
-    * number of documents matched by the current search
-* `page-size` attribute:
-    * echo of the query's attribute
-    * this might be removed in the future
-* `page-number` attribute:
-    * echo of the query's attribute
-    * this might be removed in the future
-* \[Up to 2016.1\] `query` attribute:
-    * echo of the full-text query text
-    * this might be removed in the future
+* `search-total` attribute: number of documents matched by the current search.
+* \[Up to 2016.1\] `total` attribute: total number of documents in the database for this app/form.
+* \[Up to 2016.1\] `page-size` attribute: echos of the query's attribute.
+* \[Up to 2016.1\] `page-number` attribute: echos of the query's attribute.
+* \[Up to 2016.1\] `query` attribute: echos of the full-text query text.
 
 For each of the documents found, a `<document>` element is returned:
 
