@@ -47,7 +47,7 @@ Focus:
 - [ ] customer-requested improvements
 - [ ] tests automation
 - [x] maintenance candidates
-  - [] Move build to sbt, phase 1 [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
+  - [x] Move build to sbt, phase 1 [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
 
 Issues:
 
