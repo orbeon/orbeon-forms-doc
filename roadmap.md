@@ -46,8 +46,8 @@ Focus:
 
 - [ ] customer-requested improvements
 - [ ] tests automation
-- [ ] maintenance candidates
-  - [ ] Move build to sbt [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
+- [x] maintenance candidates
+  - [] Move build to sbt, phase 1 [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
 
 Issues:
 
@@ -64,6 +64,7 @@ Focus:
 - [ ] Form Builder usability
 - [ ] basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 - [ ] maintenance candidates
+    - [ ] Move build to sbt, phase 1 [#2805](https://github.com/orbeon/orbeon-forms/issues/2805)
 - [ ] test automation
 
 Issues:
