@@ -115,6 +115,12 @@ With Orbeon Forms 3.9 and 4.x Form Runner uses the [Lucene-based full-text index
 </collection>
 ```
 
+You typically use the eXist admin client to store this configuration under collection:
+
+```
+system/config/db/orbeon/fr/
+```
+
 See also the [latest version of this file on GitHub][5].
 
 _NOTE: Without this configuration, free-text search in the Form Runner summary page won't work._
