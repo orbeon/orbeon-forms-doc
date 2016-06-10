@@ -32,7 +32,7 @@ This is the equivalent of the previous model where an XML submission is used. In
 
 This is a variant of the previous case where the model declares an `instance` output. This allows the model to modify the submitted XML instance. This is typically useful when the view displays some values from the XML submission document but these values are not exactly the same as those entered by the user. For example, a page with a text field where the user types an airport code. If the user enters a known city such as San Francisco, the application may automatically add the corresponding airport code (SFO in this case). ![][30]
 
-[9]: http://www.orbeon.com/orbeon/doc/reference-xpl-pipelines
+[9]: http://wiki.orbeon.com/forms/doc/developer-guide/reference-xpl-pipelines
 [24]: ../../images/legacy/reference-controller-view.png
 [25]: ../../images/legacy/reference-controller-model.png
 [26]: ../../images/legacy/reference-controller-view-xforms.png

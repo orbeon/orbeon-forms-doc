@@ -171,7 +171,7 @@ You can configure the method:
 
 A configuration at the application level (`properties.xml`) can be overridden by a configuration at the page flow level (`instance-passing` on the root element), which can in its turn be overridden by a configuration at the result level (`instance-passing` on the `<result>` element).
 
-[9]: http://www.orbeon.com/orbeon/doc/reference-xpl-pipelines
+[9]: http://wiki.orbeon.com/forms/doc/developer-guide/reference-xpl-pipelines
 [13]: ../../images/legacy/reference-controller-navigation.png
 [14]: http://www.orbeon.com/orbeon/atm/
 [15]: ../../images/legacy/reference-controller-atm-screen.png

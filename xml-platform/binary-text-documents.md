@@ -86,12 +86,12 @@ Unlike binary documents, text documents can easily be examined by users. They ca
 
 Processors can stream binary and text documents by issuing a number of short character SAX events. It is therefore possible to generate "infinitely" long binary and text documents with a constant amount of memory, assuming both the sender and the receiver of the document are able to perform streaming. This is the case for example of the [URL generator][3] and the [HTTP serializer][5].
 
-[1]: http://www.orbeon.com/orbeon/doc/reference-xpl-pipelines
+[1]: http://wiki.orbeon.com/forms/doc/developer-guide/reference-xpl-pipelines
 [2]: http://www.ietf.org/rfc/rfc2045.txt
 [3]: processors/url-generator.md
-[4]: http://www.orbeon.com/orbeon/doc/processors-converters
-[5]: http://www.orbeon.com/orbeon/doc/processors-serializers-http
-[6]: http://www.orbeon.com/orbeon/doc/processors-messaging-email
-[7]: http://www.orbeon.com/orbeon/doc/processors-xslt
+[4]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-converters
+[5]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-serializers-http
+[6]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-messaging-email
+[7]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-xslt
   
 
