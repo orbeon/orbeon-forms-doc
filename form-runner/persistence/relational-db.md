@@ -27,18 +27,18 @@ SQL> grant all privileges to orbeon ;
 3. Create the tables and indexes used by Orbeon Forms:
 
     - With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_10.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.5](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_5-to-4_6.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.6](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_6-to-4_10.sql)
+        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_10.sql)
+        - [DDL to upgrade your database created for Orbeon Forms 4.5](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5-to-4_6.sql)
+        - [DDL to upgrade your database created for Orbeon Forms 4.6](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_6-to-4_10.sql)
         - *NOTE: The schema is unchanged between 4.6 and 4.10 included, but `oracle-4_10.sql` includes the fix for issue [#2289](https://github.com/orbeon/orbeon-forms/issues/2289) and can be used for versions 4.6, 4.7, 4.8, and 4.9 as well.*
     - With Orbeon Forms 4.5:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_5.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.4](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_4-to-4_5.sql)
+        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5.sql)
+        - [DDL to upgrade your database created for Orbeon Forms 4.4](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4-to-4_5.sql)
     - With Orbeon Forms 4.4:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_4.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.3 or earlier](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_3-to-4_4.sql)
+        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4.sql)
+        - [DDL to upgrade your database created for Orbeon Forms 4.3 or earlier](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3-to-4_4.sql)
     - With Orbeon Forms 4.3 or earlier:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/oracle-4_3.sql)
+        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3.sql)
 
 With Oracle 11.2, `XMLType` values are stored by default using the binary XML storage. The binary XML storage has numerous benefits over the basic file storage. In many respect, it is the "proper" way to store XML. However, we found that Oracle fails to properly save some documents when the binary XML storage is used. In particular, when documents have attributes with long values (several thousands of characters), when retrieving the document, the value of some attributes is missing. For this reason, until this issue is solved by Oracle, we recommend you store `XMLType` values as "basic file", per the above DDL.
 
@@ -60,16 +60,16 @@ mysql> CREATE schema orbeon;
 3. Create the tables used for Orbeon Forms in the `orbeon` schema:
 
     - With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_6.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.5](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_5-to-4_6.sql)
+        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_6.sql)
+        - [DDL to upgrade your database created for Orbeon Forms 4.5](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_5-to-4_6.sql)
     - With Orbeon Forms 4.5:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_5.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.4](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_4-to-4_5.sql)
+        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_5.sql)
+        - [DDL to upgrade your database created for Orbeon Forms 4.4](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_4-to-4_5.sql)
     - With Orbeon Forms 4.4:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_4.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.3 or earlier](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql)
+        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_4.sql)
+        - [DDL to upgrade your database created for Orbeon Forms 4.3 or earlier](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql)
     - With Orbeon Forms 4.3 or earlier:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/mysql-4_3.sql)
+        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_3.sql)
 
 ### SQL Server database setup
 
@@ -80,7 +80,7 @@ Orbeon Forms relies on SQL Server's full-text search, which is included out-of-t
 Create the tables used for Orbeon Forms in the `orbeon` schema:
 
 - With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
-    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/sqlserver-4_6.sql)
+    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-4_6.sql)
 
 ### PostgreSQL database setup
 
@@ -89,7 +89,7 @@ Create the tables used for Orbeon Forms in the `orbeon` schema:
 Create the tables used for Orbeon Forms in the `orbeon` schema:
 
 - With Orbeon Forms 4.8:
-    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/postgresql-4_8.sql)
+    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-4_8.sql)
 
 ### DB2 database setup
 
@@ -98,13 +98,13 @@ Create the tables used for Orbeon Forms in the `orbeon` schema:
 Create the tables used for Orbeon Forms in the `orbeon` schema:
 
 - With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
-    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_6.sql)
-    - [DDL to upgrade your database created for Orbeon Forms 4.4](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4-to-4_6.sql)
+    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_6.sql)
+    - [DDL to upgrade your database created for Orbeon Forms 4.4](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_4-to-4_6.sql)
 - With Orbeon Forms 4.4 or 4.5:
-    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_4.sql)
-    - [DDL to upgrade your database created for Orbeon Forms 4.3 or earlier](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3-to-4_4.sql)
+    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_4.sql)
+    - [DDL to upgrade your database created for Orbeon Forms 4.3 or earlier](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_3-to-4_4.sql)
 - With Orbeon Forms 4.3 or earlier:
-    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql)
+    - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql)
 
 ## Application server setup
 

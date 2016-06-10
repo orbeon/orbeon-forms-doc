@@ -15,7 +15,7 @@ See also [Supported Languages](../form-runner/feature/localization.md#form-build
 
 See these 2 files:
 
-- [Form Runner's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/fr/i18n/resources.xml)
+- [Form Runner's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/i18n/resources.xml)
 - [Form Builder's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/forms/orbeon/builder/form/resources.xml)
 
 Each file has as series of `<resource>` elements each with an `xml:lang`
