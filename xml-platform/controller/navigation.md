@@ -6,7 +6,7 @@
 
 ![][13]
 
-The site logic or page flow describes the conditions that trigger the navigation from one page to the other. It also describes how arguments are passed from one page to the other. In a simple web application simulating an ATM, as illustrated by the [ATM example][14] the navigation logic could look like the one described in the diagram on the right. In this diagram, the square boxes represent pages and diamond-shaped boxes represent actions performed by the end-user.
+The site logic or page flow describes the conditions that trigger the navigation from one page to the other. It also describes how arguments are passed from one page to the other. In a simple web application simulating an ATM, the navigation logic could look like the one described in the diagram on the right. In this diagram, the square boxes represent pages and diamond-shaped boxes represent actions performed by the end-user.
 
 With the PFC, page flow is expressed declaratively and externally to the pages. Consequently, pages can be designed independently from each other. The benefits of a clear separation between site logic and page logic and layout include:
 
@@ -173,7 +173,6 @@ A configuration at the application level (`properties.xml`) can be overridden by
 
 [9]: http://wiki.orbeon.com/forms/doc/developer-guide/reference-xpl-pipelines
 [13]: ../../images/legacy/reference-controller-navigation.png
-[14]: http://www.orbeon.com/orbeon/atm/
 [15]: ../../images/legacy/reference-controller-atm-screen.png
 [16]: ../../images/legacy/reference-controller-atm-logic.png
 [17]: #epilogue-element
