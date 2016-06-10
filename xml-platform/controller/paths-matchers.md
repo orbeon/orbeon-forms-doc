@@ -8,7 +8,7 @@ The value of the `path` attribute can be either a glob pattern or a full regular
 
 | Value |  Description |
 |---|---|
-| Glob |  This is the default but can also be set explicitly with the  `matcher` attribute set to glob (or oxf:glob-matcher for backward compatibility) on the `<page>` element. This supports the wildcards "`*`" and "?". as well as character classes, as [documented here][21].|
+| Glob |  This is the default but can also be set explicitly with the  `matcher` attribute set to glob (or `oxf:glob-matcher` for backward compatibility) on the `<page>` element. This supports the wildcards "`*`" and "?". as well as character classes, as [documented here][21].|
 |Regular expression|This is enabled with the  `matcher` attribute set to regexp (or oxf:perl5-matcher for backward compatibility) on the `<page>` element. This enables full Java/Perl 5 regular expressions.|
 
 Simple examples of glob:
@@ -105,4 +105,4 @@ The PFC reconstructs the path to `/user/orbeon/blog/12345`. This path is used to
 
 _NOTE: Navigation to pages that use matchers but that do not provide an internal XML submission or `<setvalue>` elements will cause the requested path to have its literal value, in the example above `/user/([^/]+)/blog/([^/]+)`. It is not advised to perform navigation this way._
 
-[21]: http://jakarta.apache.org/oro/api/org/apache/oro/text/GlobCompiler.html
+[21]: https://svn.apache.org/repos/asf/jakarta/oro/tags/oro-2.0.9-dev-1/docs/api/org/apache/oro/text/GlobCompiler.html

@@ -412,8 +412,7 @@ URLs passed to the URL generator can be relative. For example, consider the foll
 In this case, the URL resolves to: `oxf:/documents/claim.xml`.
 
 [1]: ../resources/resource-managers.md
-[2]: reference-formats#text-documents
+[2]: ../binary-text-documents.md#text-documents
 [3]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-sql#binary-data
 [4]: processors-serializers-http
-[5]: reference-formats#binary-documents
-
+[5]: ../binary-text-documents.md#binary-documents

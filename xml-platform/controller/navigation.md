@@ -177,6 +177,6 @@ A configuration at the application level (`properties.xml`) can be overridden by
 [15]: ../../images/legacy/reference-controller-atm-screen.png
 [16]: ../../images/legacy/reference-controller-atm-logic.png
 [17]: #epilogue-element
-[18]: ../xforms/tutorial/README.md
+[18]: ../../xforms/tutorial/README.md
 [19]: ../../images/legacy/home-changes-forward.png
 [20]: ../../images/legacy/home-changes-redirect.png

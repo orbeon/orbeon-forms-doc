@@ -204,7 +204,7 @@ Then an XSLT view can display the content of the `<name>` element as follows:
 [3]: http://www.orbeon.com/orbeon/doc/integration-packaging
 [4]: #page-navigation
 [5]: authorization-of-pages-and-services.md
-[6]: resources/resource-managers.md
+[6]: ../resources/resource-managers.md
 [7]: ../../images/legacy/reference-controller-mvc.png
 [8]: http://www.orbeon.com/orbeon/doc/reference-epilogue
 [9]: http://www.orbeon.com/orbeon/doc/reference-xpl-pipelines

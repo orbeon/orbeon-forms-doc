@@ -178,5 +178,4 @@ No, this is not supported, sorry. Forms created with Form Builder require Form R
 1. For changes that you can't do with CSS and that require modifications to the HTML sent by Orbeon Forms to browser, you can change the Form Runner XBL and XSLT stylesheets. But this is hard work and we discourage it.
 
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning
-[8]: http://doc.orbeon.com/xforms/xpath/README.md
-[10]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-functions
+[8]: ..//xforms/xpath/README.md
