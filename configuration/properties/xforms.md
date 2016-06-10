@@ -27,7 +27,7 @@ In general, this should be set to `true`, but you can set it to `false` if you n
 
 ## XPath analysis
 
-See [XPath Analysis](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xpath-analysis).
+See [XPath Analysis](../../xforms/xpath/expression-analysis.md).
 
 ## File location information
 
@@ -125,7 +125,7 @@ The following property controls whether instance types annotations are exposed t
 - If set to `false` (the default), instance types are not made available to XPath expressions.
 - If set to `true`, they are made available.
 
-More information: [XPath 2.0 support][2].
+More information: [Type annotations](../../xforms/xpath/type-annotations.md).
 
 ## JavaScript and CSS Resources
 
@@ -518,7 +518,6 @@ If your forms leverage dialogs and your users are likely to use a screen reader,
     value="false"/>
 ```
 
-[2]: http://wiki.orbeon.com/forms/doc/developer-guide/xpath-2-0-support
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xforms-inspector
 [8]: http://blog.orbeon.com/2014/03/review-and-pdf-improvements.html
 [9]: http://java.sun.com/javase/6/docs/api/java/text/SimpleDateFormat.html

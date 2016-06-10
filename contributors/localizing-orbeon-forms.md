@@ -16,7 +16,7 @@ See also [Supported Languages](../form-runner/feature/localization.md#form-build
 See these 2 files:
 
 - [Form Runner's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/i18n/resources.xml)
-- [Form Builder's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/forms/orbeon/builder/form/resources.xml)
+- [Form Builder's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/src/main/resources/forms/orbeon/builder/form/resources.xml)
 
 Each file has as series of `<resource>` elements each with an `xml:lang`
 attribute. You need to add your own element. Say you want to localize to
@@ -116,11 +116,10 @@ These files are used by the Form Builder toolbox for built-in XForms controls.
 
 As of Orbeon Forms 2016.1, the following files need help:
 
-- [attachment-controls.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources/forms/orbeon/builder/xbl/attachment-controls.xbl)
-- [output-controls.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources/forms/orbeon/builder/xbl/output-controls.xbl)
-- [text-output.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources/forms/orbeon/builder/xbl/text-output.xbl)
-- [text-textarea-autosize.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources/forms/orbeon/builder/xbl/text-textarea-autosize.xbl)
-
+- [attachment-controls.xbl](https://github.com/orbeon/orbeon-forms/tree/master/form-builder/src/main/resources/forms/orbeon/builder/xbl/attachment-controls.xbl)
+- [output-controls.xbl](https://github.com/orbeon/orbeon-forms/tree/master/form-builder/src/main/resources/forms/orbeon/builder/xbl/output-controls.xbl)
+- [text-output.xbl](https://github.com/orbeon/orbeon-forms/tree/master/form-builder/src/main/resources/forms/orbeon/builder/xbl/text-output.xbl)
+- [text-textarea-autosize.xbl](https://github.com/orbeon/orbeon-forms/tree/master/form-builder/src/main/resources/forms/orbeon/builder/xbl/text-textarea-autosize.xbl)
 
 ### Dates and times
 

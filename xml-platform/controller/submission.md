@@ -178,4 +178,4 @@ _NOTE: If a page actually uses an XML submission, which means either having `<ac
 [9]: http://www.orbeon.com/orbeon/doc/reference-xpl-pipelines
 [10]: #action-element
 [11]: #matchers
-[12]: http://www.orbeon.com/orbeon/doc/processors-generators-request
+[12]: ../processors/request-generator.md

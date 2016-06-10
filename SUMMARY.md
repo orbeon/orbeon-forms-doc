@@ -102,7 +102,7 @@
     * Styling
         * [CSS](form-runner/styling/css.md)
         * [Automatic PDF](form-runner/styling/automatic-pdf.md)
-    * [APIs](form-runner/apis/README.md)
+    * APIs
         * [Persistence API](form-runner/api/persistence/README.md)
             * [CRUD](form-runner/api/persistence/crud.md)
             * [Search](form-runner/api/persistence/search.md)

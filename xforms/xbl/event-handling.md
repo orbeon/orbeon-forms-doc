@@ -209,4 +209,4 @@ Event handlers are attached to the bound node but they execute within the contex
 - controls declared within `xbl:template`
 
 [3]: ../events-extensions-other.md#phantom-handlers
-[4]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-focus
+[4]: ../focus.md
