@@ -59,7 +59,7 @@ You can also turn specify this property specifically for a given form by adding 
 <xf:model xxf:function-library="org.orbeon.oxf.fr.library.FormRunnerFunctionLibrary">
 ```
 
-## Exposing XPath data types
+### Exposing XPath data types
 
 The following property controls whether instance types annotations are exposed to XPath 2.0 expressions:
 
