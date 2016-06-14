@@ -1,4 +1,4 @@
-# XPath Analysis
+# XPath expression analysis
 
 <!-- toc -->
 

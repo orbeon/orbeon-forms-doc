@@ -25,7 +25,57 @@ With Orbeon Forms 4.0, XForms item values (like in checkboxes, dropdown menus, e
 
 In general, this should be set to `true`, but you can set it to `false` if you need to access the value of selection controls through JavaScript on the client and if the item values are not confidential.
 
-## XPath analysis
+## XPath
+
+### XPath function library
+
+[SINCE Orbeon Forms 2016.2]
+
+By default, the XForms engine exposes standard XForms functions and a number of extension functions (see [../../xforms/xpath/README.md](XPath expressions)).
+
+The following property allows adding a custom extension XPath function library:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.xforms.function-library" 
+    value="org.orbeon.oxf.fr.library.FormRunnerFunctionLibrary"/>
+```
+
+When this property is present, the XForms engine attempts to load the given class, and calls a static `instance()` method on it to obtain an `org.orbeon.saxon.functions.FunctionLibrary`. For example:
+
+```scala
+object FormRunnerFunctionLibrary extends FunctionLibrary {
+
+  def instance = this
+  
+  // Expose XPath functions here
+}
+```
+
+You can also turn specify this property specifically for a given form by adding an `xxf:function-library` attribute on the first model:
+
+```xml
+<xf:model xxf:function-library="org.orbeon.oxf.fr.library.FormRunnerFunctionLibrary">
+```
+
+## Exposing XPath data types
+
+The following property controls whether instance types annotations are exposed to XPath 2.0 expressions:
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.expose-xpath-types" 
+    value="true"/>
+```
+
+- If set to `false` (the default), instance types are not made available to XPath expressions.
+- If set to `true`, they are made available.
+
+More information: [Type annotations](../../xforms/xpath/type-annotations.md).
+
+### XPath expression analysis
 
 See [XPath Analysis](../../xforms/xpath/expression-analysis.md).
 
@@ -109,23 +159,6 @@ Note that for any optimized submission or inclusion to occur, the following is r
 - URL must be an absolute path, e.g. /foo/bar. Using an explicit protocol (`http://foo.com/bar`) disables optimized submissions.
 - No  elements must be passed.
 - The submission must be synchronous.
-
-
-## Instance data types
-
-The following property controls whether instance types annotations are exposed to XPath 2.0 expressions:
-
-```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.xforms.expose-xpath-types" 
-    value="true"/>
-```
-
-- If set to `false` (the default), instance types are not made available to XPath expressions.
-- If set to `true`, they are made available.
-
-More information: [Type annotations](../../xforms/xpath/type-annotations.md).
 
 ## JavaScript and CSS Resources
 
