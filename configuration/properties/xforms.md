@@ -31,7 +31,7 @@ In general, this should be set to `true`, but you can set it to `false` if you n
 
 [SINCE Orbeon Forms 2016.2]
 
-By default, the XForms engine exposes standard XForms functions and a number of extension functions (see [../../xforms/xpath/README.md](XPath expressions)).
+By default, the XForms engine exposes standard XForms functions and a number of extension functions (see [XPath expressions](../../xforms/xpath/README.md)).
 
 The following property allows adding a custom extension XPath function library:
 
