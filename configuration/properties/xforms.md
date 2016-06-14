@@ -42,12 +42,31 @@ The following property allows adding a custom extension XPath function library:
     value="org.orbeon.oxf.fr.library.FormRunnerFunctionLibrary"/>
 ```
 
-When this property is present, the XForms engine attempts to load the given class, and calls a static `instance()` method on it to obtain an `org.orbeon.saxon.functions.FunctionLibrary`. For example:
+When this property is present, the XForms engine attempts to load an extension function library. It does this in two ways:
+
+1. First, it tries to access a Scala object extending `org.orbeon.saxon.functions.FunctionLibrary`.
+2. If that fails, it tries to access a Java class and calls a static `instance()` method on it to obtain an `org.orbeon.saxon.functions.FunctionLibrary`.
+
+Scala example:
 
 ```scala
 object FormRunnerFunctionLibrary extends FunctionLibrary {
+  // Expose XPath functions here
+}
+```
 
-  def instance = this
+Java example:
+
+```java
+class FormRunnerFunctionLibrary {
+
+    private static FunctionLibrary _instance = null;
+
+    public static synchronized FunctionLibrary instance() {
+        if (_instance == null)
+            _instance = new FormRunnerFunctionLibrary();
+        return _instance;
+    }
   
   // Expose XPath functions here
 }
