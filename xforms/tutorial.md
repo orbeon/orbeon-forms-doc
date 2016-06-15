@@ -189,7 +189,7 @@ With many client-side libraries, you express this type of logic with JavaScript.
 
 So how do you hook-up the logic within `<xf:output>`? Here, instead of a `ref` attribute, we use a `value` attribute. Like `ref`, `value` takes an XPath expression, but it doesn't actually create a binding to instance data: it just returns a string. The XPath is as follows:
 
-```ruby
+```xpath
 if (normalize-space(/first-name) = '') then
     ''
 else

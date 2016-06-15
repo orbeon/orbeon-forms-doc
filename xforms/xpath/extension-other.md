@@ -4,7 +4,7 @@
 
 ## xxf:decode-iso9075-14()
 
-```ruby
+```xpath
 xxf:decode-iso9075-14($value as xs:string) as xs:string
 ```
 
@@ -12,7 +12,7 @@ The `xxf:decode-iso9075-14()` function decodes a string according to ISO 9075-14
 
 ## xxf:doc-base64()
 
-```ruby
+```xpath
 xxf:doc-base64($href as xs:string) as xs:string
 ```
 
@@ -20,7 +20,7 @@ The `xxf:doc-base64()` function reads a resource identified by the given URL, an
 
 ## xxf:doc-base64-available()
 
-```ruby
+```xpath
 xxf:doc-base64-available($href as xs:string) as xs:boolean
 ```
 
@@ -28,7 +28,7 @@ The `xxf:doc-base64-available()` function reads a resource identified by the giv
 
 ## xxf:encode-iso9075-14()
 
-```ruby
+```xpath
 xxf:encode-iso9075-14($value as xs:string) as xs:string
 ```
 
@@ -38,7 +38,7 @@ The `xxf:encode-iso9075-14()` function encodes a string according to ISO 9075-14
 
 [SINCE Orbeon Forms 4.4]
 
-```ruby
+```xpath
 xxf:image-metadata($content as xs:anyURI, $name as xs:string) as xs:item?
 ```
 

@@ -4,7 +4,7 @@
 
 ## xxf:binding()
 
-```ruby
+```xpath
 xxf:binding(
     $control-id as xs:string
 ) as item()*
@@ -21,7 +21,7 @@ _NOTE: This function can return not only nodes, but also atomic items._
 
 ## xxf:binding-context()
 
-```ruby
+```xpath
 xxf:binding-context(
     $control-id as xs:string
 ) as item()?
@@ -44,7 +44,7 @@ _NOTE: This function can return not only nodes, but also atomic items._
 
 ## xxf:case()
 
-```ruby
+```xpath
 xxf:case(
     $switch-id as xs:string
 ) as xs:string?
@@ -66,7 +66,7 @@ The `xxf:case()` function returns the id of the currently selected `<xf:case>` w
 
 ## xxf:cases()
 
-```ruby
+```xpath
 xxf:cases(
     $switch-id as xs:string
 ) as xs:string*
@@ -78,7 +78,7 @@ The `xxf:cases()` function returns a sequence of ids of `<xf:case>` elements wit
 
 [SINCE Orbeon Forms 4.3]
 
-```ruby
+```xpath
 xxf:client-id($static-or-absolute-id as xs:string) as xs:string?
 ```
 
@@ -94,7 +94,7 @@ Return the empty sequence if the resolution fails.
 
 ## xxf:context()
 
-```ruby
+```xpath
 xxf:context(
     $element-id as xs:string
 ) as node()
@@ -124,7 +124,7 @@ See also the XForms 1.1 `context()` function, which returns the current evaluati
 
 ## xxf:index()
 
-```ruby
+```xpath
 xxf:index(
     $repeat-id as xs:string?
 ) as xs:integer
@@ -148,7 +148,7 @@ The `xxf:index()` function behaves like the standard XForms `index()` function, 
 
 ## xxf:itemset()
 
-```ruby
+```xpath
 xxf:itemset(
     $control-id     as xs:string,
     $format         as xs:string,
@@ -358,7 +358,7 @@ Example of JSON result with `xxf:itemset('my-select1', 'json', true())` (formatt
 
 ## xxf:label, xxf:help, xxf:hint, xxf:alert
 
-```ruby
+```xpath
 xxf:label($control-id as xs:string) as xs:string?
 xxf:help ($control-id as xs:string) as xs:string?
 xxf:hint ($control-id as xs:string) as xs:string?
@@ -382,7 +382,7 @@ If the control is not  relevant, or does not have an associated label, help, hin
 
 ## xxf:pending-uploads()
 
-```ruby
+```xpath
 xxf:pending-uploads() as xs:integer
 ```
 
@@ -400,7 +400,7 @@ See also: [Upload control][?]
 
 _NOTE: You can often use [`xxf:context()`][2] or the XForms 1.1 `context()` function instead._
 
-```ruby
+```xpath
 xxf:repeat-current(
     $repeat-id as xs:string?
 ) as node()
@@ -433,7 +433,7 @@ The `xxf:repeat-current()` function must be called from within an `xf:repeat` el
 
 _NOTE: This function is also available in previous versions of Orbeon Forms as xxf:repeat-nodeset()._
 
-```ruby
+```xpath
 xxf:repeat-nodeset(
     $repeat-id as xs:string?
 ) as node()*
@@ -451,7 +451,7 @@ The `xxf:repeat-nodeset()` function returns the node-set of an enclosing `xf:rep
 
 ## xxf:repeat-position()
 
-```ruby
+```xpath
 xxf:repeat-position(
     $repeat-id as xs:string?
 ) as xs:integer
@@ -472,7 +472,7 @@ The `xxf:repeat-current()` function must be called from within an `xf:repeat` el
 
 ## xxf:value()
 
-```ruby
+```xpath
 xxf:value(
     $control-id as xs:string
 ) as xs:string?
@@ -484,7 +484,7 @@ _NOTE: You must be careful when using this function as a control's value might b
 
 ## xxf:visited
 
-```ruby
+```xpath
 xxf:visited(
     $control-id as xs:string
 ) as xs:boolean?

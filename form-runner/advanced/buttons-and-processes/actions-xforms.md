@@ -20,7 +20,7 @@ If `value` is omitted, the value selected is the empty string.
 
 Examples:
 
-```ruby
+```xpath
 xf:setvalue(ref = "//first-name")                            // clear the value of the `first-name` element, if found
 xf:setvalue(ref = "//submit-date", value = "current-date()") // set the value of the `submit-date` element, if found, to the current date
 ```

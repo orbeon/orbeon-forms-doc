@@ -6,7 +6,7 @@
 
 _NOTE: This function is also allowed in the XForms namespace, as it is being standardized in XForms 2.0. Prior to this date, it must be in the Orbeon `xxf` extension namespace._
 
-```ruby
+```xpath
 xf:attribute(
     $qname as xs:anyAtomicType
 ) as attribute()
@@ -38,7 +38,7 @@ The first argument can be of type `xs:QName`:
 
 ## xxf:call-xpl()
 
-```ruby
+```xpath
 xxf:call-xpl(
     $xplURL        as xs:string,
     $inputNames    as xs:string*,
@@ -58,7 +58,7 @@ The function returns a sequence of document nodes corresponding the output of th
 
 The example below shows a call to the `xxf:call-xpl` function, calling a pipeline with two inputs and one output :
 
-```ruby
+```xpath
 xxf:call-xpl(
     'oxf:/examples/sandbox/xpath/run-xpath.xpl',
     (
@@ -76,7 +76,7 @@ xxf:call-xpl(
 
 ## xxf:classes()
 
-```ruby
+```xpath
 xxf:classes() as xs:boolean
 xxf:classes($el as node()) as xs:string*
 ```
@@ -85,7 +85,7 @@ Returns for the context element or the given element if provided, all the classe
 
 ## xxf:create-document()
 
-```ruby
+```xpath
 xxf:create-document() as document-node()
 ```
 
@@ -101,7 +101,7 @@ The `xxf:create-document()` creates a new empty XML document. You can then inser
 
 _NOTE: This function is also allowed in the XForms namespace, as it is being standardized in XForms 2.0. Prior to this date, it must be in the Orbeon `xxf` extension namespace._
 
-```ruby
+```xpath
 xf:element(
     $element-name as xs:anyAtomicType
 ) as element()
@@ -143,7 +143,7 @@ The first argument can be of type `xs:QName`:
 
 ## xxf:evaluate()
 
-```ruby
+```xpath
 xxf:evaluate(
     $xpath as xs:string
 ) as item()*
@@ -159,7 +159,7 @@ The `xxf:evaluate()` function allows you to evaluate XPath expressions dynamical
 
 ## xxf:extract-document()
 
-```ruby
+```xpath
 xxf:extract-document(
   $element as element()
 ) as document-node()
@@ -191,7 +191,7 @@ The `xxf:extract-document()` function extracts a new XML document from a documen
 
 The expression:
 
-```ruby
+```xpath
 xxf:extract-document(instance('my-instance')/book, '', false())
 ```
 
@@ -209,7 +209,7 @@ returns a new XML document rooted at the `<book>` element:
 
 ## xxf:form-urlencode()
 
-```ruby
+```xpath
 xxf:form-urlencode($document as node()) as xs:string
 ```
 
@@ -218,7 +218,7 @@ Performs `application/x-www-form-urlencoded` encoding on an XML document.
 
 ## xxf:has-class()
 
-```ruby
+```xpath
 xxf:has-class($class-name as xs:string) as xs:boolean
 xxf:has-class($class-name as xs:string, $el as node()) as xs:boolean
 ```
@@ -227,7 +227,7 @@ Returns whether the context element, or the given element, has a `class` attribu
 
 ## xxf:mutable-document()
 
-```ruby
+```xpath
 xxf:mutable-document(
     $node as node()
 ) as document-node()
@@ -255,7 +255,7 @@ Note that by compatibility with the XSLT `document()` and XPath 2.0 `doc()` func
 
 ## xxf:serialize()
 
-```ruby
+```xpath
 xxf:serialize(
     $item as node(),
     $format as xs:string?
@@ -270,7 +270,7 @@ The `xxf:serialize()` function allows you to serialize an XML node to XML, HTML,
 
 ## xxf:sort()
 
-```ruby
+```xpath
 xxf:sort(
     $sequence   as item()*,
     $sort-key   as item(),

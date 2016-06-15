@@ -119,7 +119,7 @@ See also [Form Builder Formulas](formulas.md).
 
 For example the following expression, which would make sense for a birthday date field, checks that the user is 18 year old or older:
 
-```ruby
+```xpath
 . <= (current-date() - xs:yearMonthDuration("P18Y"))
 ```
 

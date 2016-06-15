@@ -8,7 +8,7 @@
 
 Return the portlet mode.
 
-```ruby
+```xpath
 xxf:get-portlet-mode() as xs:string
 ```
 
@@ -18,7 +18,7 @@ If running within a portlet context, return the portlet mode (e.g. `view`, `edit
 
 ## xxf:get-remote-user()
 
-```ruby
+```xpath
 xxf:get-remote-user() as xs:string?
 ```
 
@@ -26,7 +26,7 @@ Returns the username for the current user of the application, if known by the co
 
 ## xxf:get-request-attribute()
 
-```ruby
+```xpath
 xxf:get-request-attribute(
     $name         as xs:string,
     $content-type as xs:string?
@@ -51,7 +51,7 @@ _NOTE: This function can only be called during page initialization, otherwise it
 
 ## xxf:get-request-header()
 
-```ruby
+```xpath
 xxf:get-request-header(
     $header-name as xs:string
 ) as xs:string*
@@ -76,7 +76,7 @@ _NOTE: With Orbeon Forms 3.8 and 3.9, this function can only be called during pa
 
 Return the current HTTP method.
 
-```ruby
+```xpath
 xxf:get-request-method() as xs:string
 ```
 
@@ -84,7 +84,7 @@ Return the HTTP method of the current request, such as `GET`, `POST`, etc.
 
 ## xxf:get-request-parameter()
 
-```ruby
+```xpath
 xxf:get-request-parameter(
     $parameter-name as xs:string
 ) as xs:string*
@@ -112,7 +112,7 @@ _NOTE: By default, most if not all servlet containers do not use the UTF-8 encod
 
 ## xxf:get-request-path()
 
-```ruby
+```xpath
 xxf:get-request-path() as xs:string
 ```
 
@@ -130,7 +130,7 @@ _NOTE: With Orbeon Forms 3.8 and 3.9, this function can only be called during pa
 
 ## xxf:get-session-attribute()
 
-```ruby
+```xpath
 xxf:get-session-attribute(
     $name         as xs:string,
     $content-type as xs:string?
@@ -156,7 +156,7 @@ If present, the second parameter can specify the `text/plain` content type. In t
 
 Return the portlet window state.
 
-```ruby
+```xpath
 xxf:get-window-state() as xs:string
 ```
 
@@ -166,7 +166,7 @@ If running within a portlet context, return the window state (e.g. `normal`, `mi
 
 ## xxf:is-user-in-role()
 
-```ruby
+```xpath
 xxf:is-user-in-role(
     $role as xs:string
 ) as xs:boolean
@@ -177,7 +177,7 @@ Returns true if and only if the container recognizes that the current user of th
 
 ## xxf:set-request-attribute()
 
-```ruby
+```xpath
 xxf:set-request-attribute(
     $name  as xs:string,
     $value as item()
@@ -195,7 +195,7 @@ The `xxf:set-request-attribute()` function stores the given value as a request a
 
 ## xxf:set-session-attribute()
 
-```ruby
+```xpath
 xxf:set-session-attribute(
     $name  as xs:string,
     $value as item()
@@ -215,7 +215,7 @@ The `xxf:set-session-attribute()` function stores the given value as a session a
 
 [SINCE Orbeon Forms 4.9]
 
-```ruby
+```xpath
 xxf:user-group() as xs:string?
 ```
 
@@ -225,7 +225,7 @@ Return the current user's group if available. This function works with container
 
 [SINCE Orbeon Forms 4.9]
 
-```ruby
+```xpath
 xxf:user-roles() as xs:string*
 ```
 
@@ -235,7 +235,7 @@ Return the current user's groups if available. This function works with containe
 
 [SINCE Orbeon Forms 4.9]
 
-```ruby
+```xpath
 xxf:username() as xs:string?
 ```
 

@@ -4,7 +4,7 @@
 
 ## xxf:bind()
 
-```ruby
+```xpath
 xxf:bind(
     $bind-id as xs:string
 ) as node()*
@@ -38,7 +38,7 @@ The `xxf:bind()` function returns the node-set of a given bind:
 
 ## xxf:custom-mip
 
-```ruby
+```xpath
 xxf:custom-mip(
     $item as item()*,
     $mip-name as xs:string
@@ -51,7 +51,7 @@ The name of the property must match the qualified name used on the `xf:bind` tha
 
 ## xxf:evaluate-bind-property()
 
-```ruby
+```xpath
 xxf:evaluate-bind-property(
     $bind-id        as xs:string,
     $property-qname as xs:string
@@ -90,7 +90,7 @@ _NOTE: The property is instantly evaluated, which means that it might be differe
 
 ## xxf:instance()
 
-```ruby
+```xpath
 xxf:instance(
     $instance-id as xs:string
 ) as element()?
@@ -129,7 +129,7 @@ For example, if there are no XBL components, and 2 top-level models:
 
 ## xxf:invalid-binds()
 
-```ruby
+```xpath
 xxf:invalid-binds(
     $node as node()?
 ) as xs:string*
@@ -157,7 +157,7 @@ Note however that the function actually only returns the first invalid bind at t
 
 ## xxf:type()
 
-```ruby
+```xpath
 xxf:type(
     $node as node()?
 ) as xs:QName?
@@ -181,7 +181,7 @@ The `xxf:type()` function returns the type of the instance data node passed as p
 
 ## xxf:valid()
 
-```ruby
+```xpath
 xxf:valid() as xs:boolean
 xxf:valid($item as xs:item*) as xs:boolean
 xxf:valid($item as xs:item*, $recurse as xs:boolean) as xs:boolean

@@ -99,7 +99,7 @@ When running in Liferay, you can access some specific user and roles information
 
 Getting the current user's email:
 
-```ruby
+```xpath
 xxf:get-request-header('orbeon-liferay-user-email')
 ```
 
@@ -109,7 +109,7 @@ Example:
 
 Getting the current user's full name:
 
-```ruby
+```xpath
 xxf:get-request-header('orbeon-liferay-user-full-name')
 ```
 
@@ -119,7 +119,7 @@ Example:
 
 Getting the current user's role names:
 
-```ruby
+```xpath
 xxf:get-request-header('orbeon-liferay-user-roles')
 ```
 

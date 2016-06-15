@@ -10,7 +10,7 @@ XForms specifies some context information for events. Orbeon Forms adds further 
 
 Orbeon Forms enhances the XML Events `event()` function to take a qualified name as parameter:
 
-```ruby
+```xpath
 event($attribute-name as xs:QName) item()*
 ```
 

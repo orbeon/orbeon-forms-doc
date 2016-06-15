@@ -29,13 +29,13 @@ You want to compute the row totals and athe general total.
 
 Calculated value expression for `row-total`:
 
-```ruby
+```xpath
 $price * $quantity
 ```
 
 Calculated value expression for `total`:
 
-```ruby
+```xpath
 sum($row-total[string() castable as xs:decimal], 0.0)
 ```
 
@@ -65,7 +65,7 @@ Say you have:
 
 Calculated value expression:
 
-```ruby
+```xpath
 sum($my-repeat/number[string() castable as xs:decimal])
 ```
 
@@ -82,7 +82,7 @@ Scenario: Make the current integer number field valid only if its value is betwe
 
 Expression:
 
-```ruby
+```xpath
 . >= 12 and . <= 17
 ```
 
@@ -95,7 +95,7 @@ Explanation:
 
 If you want to refer to a specific control by name, you can use:
 
-```ruby
+```xpath
 $my-control >= 12 and $my-control <= 17
 ```
 
@@ -105,7 +105,7 @@ Scenario: Make the current field valid only if its length is between two values,
 
 Expression:
 
-```ruby
+```xpath
 string-length(.) >= 2 and string-length(.) <= 140
 ```
 
@@ -119,7 +119,7 @@ Explanation:
 
 If you want to refer to a specific control by name, you can use:
 
-```ruby
+```xpath
 string-length($message) >= 2 and string-length($message) <= 140
 ```
 
@@ -127,7 +127,7 @@ string-length($message) >= 2 and string-length($message) <= 140
 
 The same can be expressed, for the current control, as:
 
-```ruby
+```xpath
 xxf:min-length(2) and xxf:max-length(140)
 ```
 
@@ -135,7 +135,7 @@ xxf:min-length(2) and xxf:max-length(140)
 
 Scneario: check that a given value matches a regular expression, for example "only ASCII letters and digits, the dash, and underscore character".
 
-```ruby
+```xpath
 matches(., '^[A-Za-z0-9\-_]+$')
 ```
 
@@ -149,7 +149,7 @@ Scenario: Make a control read-only if the value of the `first-name` control is b
 
 Expression:
 
-```ruby
+```xpath
 normalize-space($first-name) = ''
 ```
 
@@ -170,7 +170,7 @@ But not all initial values can be static. For example, you might want a date sel
 
 Initial Value expression:
 
-```ruby
+```xpath
 current-date()
 ```
 
@@ -184,7 +184,7 @@ Scenario: compute the sum of two numbers entered by the user in two fields, "qua
 
 Calculated Value expression:
 
-```ruby
+```xpath
 if ($quantity1 castable as xs:integer and $quantity2 castable as xs:integer)
 then $quantity1 + $quantity2
 else ''
@@ -228,7 +228,7 @@ A special XPath variable named `$fr-mode` is exposed by Form Runner to all XPath
 
 You can test the mode as follows, for example in a Visibility expression:
 
-```ruby
+```xpath
 $fr-mode = 'edit'
 ```
 
@@ -238,7 +238,7 @@ It can be useful to access HTTP headers to set default values upon form initiali
 
 XPath expressions have access to a special function, `xxf:request-header()`, which allows retrieving a header by name. Example of setting the default value of a field using an initial value:
 
-```ruby
+```xpath
 xxf:get-request-header('full-name')
 ```
 
@@ -250,7 +250,7 @@ Scenario: field `my-attachment` must be a PDF file.
 
 Constraint expression:
 
-```ruby
+```xpath
 ends-with(lower-case($my-attachment/@filename), '.pdf')
 ```
 
@@ -266,7 +266,7 @@ Explanation:
 
 Similarly, you can test the file type:
 
-```ruby
+```xpath
 $my-attachment/@mediatype = 'application/pdf'
 ```
 
@@ -276,7 +276,7 @@ $my-attachment/@mediatype = 'application/pdf'
 
 Scenario: We want to set the value of a field from a URL parameter, but only if that parameter exists. If it doesn't, we want to leave the value of the field as it is.
 
-```ruby
+```xpath
 (xxf:get-request-parameter('my-parameter'), .)[1]
 ```
 
@@ -295,7 +295,7 @@ Explanation:
 
 Scenario: For a given set of checkboxes, make sure the number of selected checkboxes is at most 3.
 
-```ruby
+```xpath
 count(xxf:split(.)) le 3
 ```
 

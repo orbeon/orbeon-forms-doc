@@ -77,7 +77,7 @@ The following XForms 1.1 functions are NOT supported as of February 2010:
 
 [SINCE Orbeon Forms 4.3]
 
-```ruby
+```xpath
 xf:valid() as xs:boolean
 xf:valid($items as item()*) as xs:boolean
 xf:valid($items as item()*, $relevant as xs:boolean) as xs:boolean
@@ -90,7 +90,7 @@ The `valid()` function returns the validity of XPath items, including instance d
 
 [SINCE Orbeon Forms 4.5]
 
-```ruby
+```xpath
 xf:bind($id as xs:string) as node()*
 ```
 
@@ -118,7 +118,7 @@ _NOTE: These functions will be available as part of XForms 2.0 support._
 
 Orbeon Forms also supports the following from the *sorting module*:
 
-```ruby
+```xpath
 exf:sort(
     $sequence   as item()*,
     $sort-key   as xs:string,

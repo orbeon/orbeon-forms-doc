@@ -14,7 +14,7 @@ According to the XForms 1.1 specification, certain runtime errors, including err
 
 In addition, many errors, such as XPath calculations in forms, happen as a matter of course. For example, if you write a formula in Form Builder:
 
-```ruby
+```xpath
 $a div $b
 ```
 

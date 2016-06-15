@@ -222,7 +222,7 @@ Note the use of the `encode-for-uri()` function which escapes the value to place
 
 Parameters have a higher precedence. In this example, the `uri` parameter is used, even if a `oxf.fr.detail.send.success.uri` property is present:
 
-```ruby
+```xpath
 send(property = "oxf.fr.detail.send.success", uri = "http://acme.org/orbeon")
 ```
 

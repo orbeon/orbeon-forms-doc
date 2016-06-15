@@ -6,7 +6,7 @@
 
 [SINCE Orbeon Forms 2016.1]
 
-```ruby
+```xpath
 xxf:is-blank() as xs:boolean
 xxf:is-blank($value as xs:string?) as xs:boolean
 ```
@@ -25,7 +25,7 @@ A string is considered blank if all leading and trailing Unicode whitespace, non
 
 [SINCE Orbeon Forms 2016.1]
 
-```ruby
+```xpath
 xxf:non-blank() as xs:boolean
 xxf:non-blank($value as xs:string?) as xs:boolean
 ```
@@ -44,7 +44,7 @@ A string is considered blank if all leading and trailing Unicode whitespace, non
 
 [SINCE Orbeon Forms 4.3]
 
-```ruby
+```xpath
 xxf:split() as xs:string*
 xxf:split($value as xs:string) as xs:string*
 xxf:split($value as xs:string, $separators as xs:string) as xs:string*
@@ -56,7 +56,7 @@ If no argument is passed, split the context item on white space.
 
 If `$separator` is specified, each character passed is allowed as separator.
 
-```ruby
+```xpath
 xxf:split(' foo  bar   baz ')
 xxf:split('foo$bar_baz', '$_')
 element/xxf:split()
@@ -67,7 +67,7 @@ element/@value/xxf:split()
 
 [SINCE Orbeon Forms 2016.1]
 
-```ruby
+```xpath
 xxf:trim() as xs:boolean
 xxf:trim($value as xs:string?) as xs:string?
 ```

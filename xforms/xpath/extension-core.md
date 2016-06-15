@@ -4,7 +4,7 @@
 
 ## xxf:document-id()
 
-```ruby
+```xpath
 xxf:document-id() as xs:string`
 ```
 
@@ -14,7 +14,7 @@ This function returns the current XForms document (or page)'s unique id.
 
 ## xxf:evaluate-avt()
 
-```ruby
+```xpath
 xxf:evaluate-avt(
     $avt-expression as xs:string
 ) as item()*
@@ -29,7 +29,7 @@ This function is similar to `saxon:evaluate()` or `xxf:evaluate()`, but instead 
 
 ## xxf:format-message()
 
-```ruby
+```xpath
 xxf:format-message($template as xs:string, $parameters as item()*) as xs:string
 ```
 
@@ -91,7 +91,7 @@ _NOTE: It is important to pass dates and times as typed values. Use `xs:dateTime
 
 ## xxf:lang()
 
-```ruby
+```xpath
 xxf:lang() as xs:string?
 ```
 
@@ -191,7 +191,7 @@ This function returns the following:
 
 The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources.
 
-```ruby
+```xpath
 xxf:r($resource-name as xs:string) as xs:string
 xxf:r($resource-name as xs:string, $instance-name as xs:string) as xs:string
 ```
@@ -222,7 +222,7 @@ Example:
 
 ## xxf:rewrite-resource-uri()
 
-```ruby
+```xpath
 xxf:rewrite-resource-uri($uri as xs:string) as xs:string
 ```
 

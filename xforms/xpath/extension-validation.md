@@ -19,7 +19,7 @@ These functions are typically used on the `constraint` attribute of the `xf:bind
 
 [SINCE Orbeon Forms 2016.1]
 
-```ruby
+```xpath
 xxf:fraction-digits($digits as xs:integer?) as xs:boolean
 ```
 
@@ -38,7 +38,7 @@ after the decimal point is 2.
 
 [SINCE Orbeon Forms 4.10]
 
-```ruby
+```xpath
 xxf:max-length($max as xs:integer?) as xs:boolean
 ```
 
@@ -53,7 +53,7 @@ Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
 
 [SINCE Orbeon Forms 4.10]
 
-```ruby
+```xpath
 xxf:min-length($min as xs:integer?) as xs:boolean
 ```
 
@@ -68,7 +68,7 @@ Following [XPath 2.0](http://www.w3.org/TR/xpath-functions/#string-types):
 
 [SINCE Orbeon Forms 2016.1]
 
-```ruby
+```xpath
 xxf:negative() as xs:boolean
 ```
 
@@ -79,7 +79,7 @@ xxf:negative() as xs:boolean
 
 [SINCE Orbeon Forms 2016.1]
 
-```ruby
+```xpath
 xxf:non-negative() as xs:boolean
 ```
 
@@ -90,7 +90,7 @@ xxf:non-negative() as xs:boolean
 
 [SINCE Orbeon Forms 2016.1]
 
-```ruby
+```xpath
 xxf:non-positive() as xs:boolean
 ```
 
@@ -101,7 +101,7 @@ xxf:non-positive() as xs:boolean
 
 [SINCE Orbeon Forms 2016.1]
 
-```ruby
+```xpath
 xxf:positive() as xs:boolean
 ```
 

@@ -21,7 +21,7 @@ The use of the XForms 1.1 `if()` function clashes with XPath 2.0's built-in `if 
 
 The bottom line is that you cannot directly use the XForms `if()` function in Orbeon Forms. The following, for example, will not work in Orbeon Forms:
 
-```ruby
+```xpath
 if (normalize-space(/first-name) = '', '', concat('Hello, ', /first-name, '!'))
 ```
 
@@ -29,13 +29,13 @@ The good news is that you have ways around this issue:
 
 Use the XPath 2.0 `if (...) then ... else ...` construct instead:
 
-```ruby
+```xpath
 if (normalize-space(/first-name) = '') then '' else concat('Hello, ', /first-name, '!')
 ```
 
 Use the Orbeon Forms `xf:if()` extension, which behaves like the XForms `if()` function (not recommended):
 
-```ruby
+```xpath
 xf:if (normalize-space(/first-name) = '', '', concat('Hello, ', /first-name, '!'))
 ```
 
