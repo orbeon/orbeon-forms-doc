@@ -1,8 +1,21 @@
-## Compatibility
+# Compatibility
 
 <!-- toc -->
 
-### XForms 1.1 if() function
+## Support for let expressions
+
+[SINCE Orbeon Forms 2016.2]
+
+As an extension to XPath 2.0, Orbeon Forms supports "let expressions" in XPath. XPath 2.0 doesn't support such expressions, while XQuery 1.0 and XPath 3.0 and 3.1 do. Example:
+ 
+```xpath
+let $a := 42,
+    $b := 100
+return
+    $a + $b
+```
+
+## XForms 1.1 if() function
 
 The use of the XForms 1.1 `if()` function clashes with XPath 2.0's built-in `if (...) then ... else ...` construct.
 
@@ -26,7 +39,7 @@ Use the Orbeon Forms `xf:if()` extension, which behaves like the XForms `if()` f
 xf:if (normalize-space(/first-name) = '', '', concat('Hello, ', /first-name, '!'))
 ```
 
-### XForms seconds-from-dateTime() function
+## XForms seconds-from-dateTime() function
 
 The XForms 1.1 `seconds-from-dateTime()` function clashes with the XPath 2.0 function of the same name:
 
