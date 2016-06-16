@@ -9,10 +9,11 @@
 As an extension to XPath 2.0, Orbeon Forms supports "let expressions" in XPath. XPath 2.0 doesn't support such expressions, while XQuery 1.0 and XPath 3.0 and 3.1 do. Example:
  
 ```xpath
-let $a := 42,
-    $b := 100
+let $a := 'Lorem ipsum dolor',
+    $b := 'sit amet',
+    $c := string-join(($a, $b), ' ')
 return
-    $a + $b
+    concat($c, ', consectetur adipiscing elit.')
 ```
 
 ## XForms 1.1 if() function
