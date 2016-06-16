@@ -131,6 +131,42 @@ fr:mode() as xs:string
 
 Return the Form Runner mode.
 
+### fr:run-process()
+
+```xpath
+fr:run-process-by-name($scope as xs:string, $process as xs:string) as item()?
+```
+
+Run the given process given a scope and process content.
+
+This function returns the empty sequence.
+
+Example:
+
+```xml
+<xf:action type="xpath">
+    fr:run-process('oxf.fr.detail.process', 'set-data-status(status = "safe")')
+</xf:action>
+```
+
+### fr:run-process-by-name()
+
+```xpath
+fr:run-process-by-name($scope as xs:string, $process as xs:string) as item()?
+```
+
+Run the given process given a scope and process name.
+
+This function returns the empty sequence.
+
+Example:
+
+```xml
+<xf:action type="xpath">
+    fr:run-process-by-name('oxf.fr.detail.process', 'save')
+</xf:action>
+```
+
 ## Authentication functions
 
 ### fr:user-group()
