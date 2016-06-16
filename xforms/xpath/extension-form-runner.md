@@ -72,7 +72,7 @@ This function is particularly useful for XBL components.
 fr:is-form-data-saved() as xs:boolean
 ```
 
-Return whether the form data has been saved (including after [the `set-data-status` action](../../form-runner/advanced/buttons-and-processes.md#set-data-status) was called with a `status` parameter set to `safe`).
+Return whether the form data has been saved (including after [the `set-data-status` action](../../form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status) was called with a `status` parameter set to `safe`).
 
 ### fr:is-form-data-valid()
 
