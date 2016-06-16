@@ -215,6 +215,40 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
 
 The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md).
 
+### Hiding and disabling buttons
+
+[SINCE Orbeon Forms 2016.2]
+
+The following properties, where you replace `BUTTON` by a specific button name, control whether a particular button is visible or disabled:
+
+```xml
+oxf.fr.detail.button.BUTTON.visible.*.*
+```
+
+```xml
+oxf.fr.detail.button.BUTTON.enabled.*.*
+```
+
+The value of these properties is an XPath expression. For example the following set of properties hide, show, and disable buttons depending on whether the wizard shows its table of contents or its body:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.button.wizard-next.visible.*.*">
+    fr:is-wizard-body-shown()
+</property>
+
+<property as="xs:string"  name="oxf.fr.detail.button.wizard-prev.visible.*.*">
+    fr:is-wizard-body-shown()
+</property>
+
+<property as="xs:string"  name="oxf.fr.detail.button.wizard-toc.visible.*.*">
+    fr:is-wizard-body-shown()
+</property>
+
+<property as="xs:string"  name="oxf.fr.detail.button.save-final.enabled.*.*">
+    fr:is-wizard-toc-shown()
+</property>
+```
+
 ### Loading indicator for buttons
 
 [SINCE Orbeon Forms 2016.1]
