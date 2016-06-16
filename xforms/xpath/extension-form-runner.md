@@ -30,7 +30,7 @@ xmlns:fr="http://orbeon.org/oxf/xml/form-runner"
 fr:app-name() as xs:string
 ```
 
-Return the form's application name:
+Return the form's application name.
 
 ### fr:document-id()
 
@@ -38,7 +38,7 @@ Return the form's application name:
 fr:document-id() as xs:string
 ```
 
-Return the form's document id:
+Return the form's document id.
 
 ### fr:form-name()
 
@@ -46,15 +46,15 @@ Return the form's document id:
 fr:form-name() as xs:string
 ```
 
-Return the form's form name:
+Return the form's form name.
 
 ### fr:form-version()
 
 ```xpath
-fr:form-version() as xs:string
+fr:form-version() as xs:integer
 ```
 
-Return the form's current version: 
+Return the form definition's current version. By default, when versioning is not enabled, or in `test` mode, return `1`. 
 
 ### fr:is-design-time()
 
@@ -62,9 +62,25 @@ Return the form's current version:
 fr:is-design-time() as xs:boolean
 ```
 
-Return whether the form is shown at design time within Form Builder:
+Return whether the form is shown at design time within Form Builder.
 
 This function is particularly useful for XBL components.
+
+### fr:is-form-data-saved()
+
+```xpath
+fr:is-form-data-saved() as xs:boolean
+```
+
+Return whether the form data has been saved (including after [the `set-data-status` action](../../form-runner-advanced/buttons-and-processes.md#set-data-status) was called with a `status` parameter set to `safe`).
+
+### fr:is-form-data-valid()
+
+```xpath
+fr:is-form-data-valid() as xs:boolean
+```
+
+Return whether the form data is valid, that is the form data does not contain any errors.
 
 ### fr:is-noscript()
 
@@ -80,7 +96,23 @@ fr:is-noscript() as xs:boolean
 fr:is-readonly-mode() as xs:boolean
 ```
 
-Return whether the current page is in a readonly mode such as `view`:
+Return whether the current page is in a readonly mode such as `view`, `pdf`, or `email`.
+
+### fr:is-wizard-body-shown()
+
+```xpath
+fr:is-wizard-body-shown() as xs:boolean
+```
+
+Whether the wizard's body is visible.
+
+### fr:is-wizard-toc-shown()
+
+```xpath
+fr:is-wizard-toc-shown() as xs:boolean
+```
+
+Whether the wizard's table of content is visible.
 
 ### fr:lang()
 
@@ -88,7 +120,7 @@ Return whether the current page is in a readonly mode such as `view`:
 fr:lang() as xs:string
 ```
 
-Return the form's current language:
+Return the form's current language.
 
 
 ### fr:mode()
@@ -97,7 +129,7 @@ Return the form's current language:
 fr:mode() as xs:string
 ```
 
-Return the Form Runner mode:
+Return the Form Runner mode.
 
 ## Authentication functions
 
