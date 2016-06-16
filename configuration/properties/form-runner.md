@@ -229,7 +229,7 @@ oxf.fr.detail.button.BUTTON.visible.*.*
 oxf.fr.detail.button.BUTTON.enabled.*.*
 ```
 
-The value of these properties is an XPath expression. For example the following set of properties hide, show, and disable buttons depending on whether the wizard shows its table of contents or its body:
+The value of these properties is an XPath expression. For example the following properties hide, show, and disable buttons depending on whether the wizard shows its table of contents or its body:
 
 ```xml
 <property as="xs:string"  name="oxf.fr.detail.button.wizard-next.visible.*.*">
