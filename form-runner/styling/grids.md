@@ -4,15 +4,13 @@
 
 ## HTML markup
 
-[SINCE Orbeon Forms 2016.2]
+Form Runner grids produce HTML markup which is different whether a grid is repeated or not.
 
-Form Runner grids produce HTML markup which contains some differences whether a grid is repeated or not, in particular, repeated grids:
-  
-- include a header row
-- include a left or right column  with icons and menus
-- produce repeated rows following the Orbeon Forms XForms `<xf:repeat>` output
+This page shows the markup produced by Orbeon Forms 2016.2.
  
 ## Non-repeated grids without rowspans
+
+[SINCE Orbeon Forms 2016.2]
 
 Grids which are not repeated and do not include `rowpan`s do not use a `<table>` element but use instead `<div>`s:
 
@@ -49,7 +47,7 @@ Grids which are not repeated and do not include `rowpan`s do not use a `<table>`
 
 ## Non-repeated grids with rowspans
 
-Grids which are not repeated and do include `rowpan`s still use a `<table>` element:
+Grids which are not repeated and do include `rowpan`s use a `<table>` element:
 
 ```html
 <table class="fr-grid fr-grid-2 fr-norepeat">
@@ -78,7 +76,14 @@ Grids which are not repeated and do include `rowpan`s still use a `<table>` elem
 
 ## Repeated grids
 
-Grids which are repeated also use a `<table>` element:
+Repeated grids:
+  
+- include a header row
+- include a left or right column  with icons and menus
+- produce repeated rows following the Orbeon Forms XForms `<xf:repeat>` output
+- use a `<table>` element
+
+Example:
 
 ```html
 <table class="fr-grid fr-grid-2 fr-grid-image-attachments table table-bordered table-condensed fr-repeat fr-repeat-single-row">
