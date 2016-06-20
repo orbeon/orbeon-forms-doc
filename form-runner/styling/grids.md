@@ -47,10 +47,10 @@ Grids which are not repeated and do not include `rowpan`s do not use a `<table>`
 
 ## Non-repeated grids with rowspans
 
-Grids which are not repeated and do include `rowpan`s use a `<table>` element:
+Grids which are not repeated and do include `rowpan`s use a `<table>` element with `role="presentation"`:
 
 ```html
-<table class="fr-grid fr-grid-2 fr-norepeat">
+<table class="fr-grid fr-grid-2 fr-norepeat" role="presentation">
     <tbody class="fr-grid-body">
         <tr class="fr-grid-tr">
             <td class="fr-grid-td">
