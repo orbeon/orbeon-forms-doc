@@ -35,7 +35,7 @@ Example for the Summary Page:
 </property>
 ```
 
-See also [Predefined buttons](../../form-runner/advanced/buttons-and-processes/README.md#predefined buttons).
+See also [Predefined buttons](../advanced/buttons-and-processes/README.md#predefined buttons).
 
 ### Properties
 
@@ -107,7 +107,7 @@ If the form contains a `customer-id` field, the PDF filename will be the value o
 
 ### Sending
 
-You can *send* the URL of a TIFF file using the `content = "tiff-url"` parameter. See [Sending a TIFF URL](../../form-runner/advanced/buttons-and-processes/README.md#sending-a-tiff-url).
+You can *send* the URL of a TIFF file using the `content = "tiff-url"` parameter. See [Sending a TIFF URL](../advanced/buttons-and-processes/actions-form-runner.md#sending-a-tiff-url).
 
 ### Email
 
@@ -119,3 +119,5 @@ You can *email* the TIFF file using the following property:
     name="oxf.fr.email.attach-tiff.*.*"
     value="true"/>
 ```
+
+See also [Email properties](../../configuration/properties/form-runner.md#email).

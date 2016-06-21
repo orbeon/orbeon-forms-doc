@@ -13,19 +13,52 @@ Form Builder and Form Runner can produce PDF output in two ways:
     - You upload a PDF file using the Upload PDF dialog in the toolbox. At runtime, Form Runner fills-out Acrobat fields in the template.
     - This mode is automatically enabled for a form if a PDF template is attached.
     - For more, see [PDF Templates](../form-builder/pdf-templates.md).
-    
-## What you can do with a PDF
-
-You can:
-
-- __Show the PDF in the browser:__ see [Predefined buttons](../form-runner/advanced/buttons-and-processes/predefined.html#predefined-buttons).
-- __Attach the PDF to an email:__ see [Email properties](../form-runner/advanced/buttons-and-processes/actions-form-runner.html#email).
-- __Send an URL to the PDF:__ see [Sending a PDF URL](../form-runner/advanced/buttons-and-processes/actions-form-runner.html#sending-a-PDF-URL).
 
 ## Availability
 
 - Automatic PDF generation is available in Orbeon Forms CE and PE
 - Templates are an [Orbeon Forms PE](http://www.orbeon.com/download) feature.
+
+## Setup
+
+### Using buttons
+
+PDF files can be accessed directly from the Form Runner Summary Page and Detail Page using the `pdf` button.
+
+Example for the Detail Page:
+
+```xml
+<property as="xs:string" name="oxf.fr.detail.buttons.orbeon.controls">
+    summary wizard-prev wizard-next pdf tiff save review
+</property>
+```
+
+Example for the Summary Page:
+
+```xml
+<property as="xs:string"  name="oxf.fr.summary.buttons.orbeon.controls">
+    home review pdf tiff delete duplicate new
+</property>
+```
+
+See also [Predefined buttons](../form-runner/advanced/buttons-and-processes/README.md#predefined buttons).
+
+### Sending
+
+You can *send* the URL of a PDF file using the `content = "pdf-url"` parameter. See [Sending a PDF URL](../form-runner/advanced/buttons-and-processes/actions-form-runner.md#sending-a-pdf-url).
+
+### Email
+
+You can *email* the PDF file using the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.email.attach-pdf.*.*"
+    value="true"/>
+```
+
+See also [Email properties](../configuration/properties/form-runner.md#email).
 
 ## Production of TIFF images
 
