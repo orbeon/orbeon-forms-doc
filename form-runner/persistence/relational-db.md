@@ -178,7 +178,7 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
 
 ### MySQL application server setup
 
-1. [Download the MySQL JDBC driver][6], called Connector/J, e.g. mysql-connector-java-5.1.29-bin.jar (latest version as of 2014-02-03)
+1. [Download the MySQL JDBC driver][6], called Connector/J, e.g. `mysql-connector-java-5.1.39-bin.jar` (latest version as of 2016-06-20)
 2. Copy it in the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
 3. Setup a JDBC data source for your MySQL schema. With Tomcat, you can do this in `conf/server.xml`, where you define a `Resource` pointing to your MySQL database and schema. In the example below, the MySQL server is running on `localhost` port 3306, the schema is `orbeon`, the username/password is `orbeon`/`orbeon`. Those values are highlighted in the configuration below, and you'll most likely want to change them to fit your setup. Also, on the JDBC URL you're telling the MySQL driver to use Unicode and the UTF-8 encoding when talking to the database, which we highly recommend you to do in order to avoid encoding issues with non-ASCII characters.
 

@@ -33,7 +33,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
     3. Edit `WEB-INF/jboss-web.xml` to uncomment the `<resource-ref>`. Change the `<jndi-name>` to `java:/comp/env/jdbc/mysql`.
 2. In JBoss, install the JDBC driver as a module:
     1. In `modules/com`, create a directory `mysql/main`.
-    2. [Download the MySQL JDBC driver][2], say `mysql-connector-java-5.1.22-bin.jar`, and place it in the `main` directory.
+    2. [Download the MySQL JDBC driver][2], say `mysql-connector-java-5.1.39-bin.jar` (latest as of 2016-06-20), and place it in the `main` directory.
     3. In the `main` directory, create a file named `module.xml` with the following content. Update the value of the `path` attribute to match the name of the file you download in the previous step.
 
         ```xml
