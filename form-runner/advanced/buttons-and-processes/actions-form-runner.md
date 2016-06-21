@@ -74,7 +74,7 @@ Example:
 Send an email with optionally XML form data, attachments, and PDF.
 
 - parameters: none
-- properties used: [`oxf.fr.email.*`](../../../configuration/properties/README.md#email-settings)
+- properties used: [`oxf.fr.email.*`](../../../configuration/properties/form-runner.md#email-settings)
 
 ## send
 

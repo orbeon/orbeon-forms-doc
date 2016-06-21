@@ -13,6 +13,14 @@ Form Builder and Form Runner can produce PDF output in two ways:
     - You upload a PDF file using the Upload PDF dialog in the toolbox. At runtime, Form Runner fills-out Acrobat fields in the template.
     - This mode is automatically enabled for a form if a PDF template is attached.
     - For more, see [PDF Templates](../form-builder/pdf-templates.md).
+    
+## What you can do with a PDF
+
+You can:
+
+- __Show the PDF in the browser:__ see [Predefined buttons](../form-runner/advanced/buttons-and-processes/predefined.html#predefined-buttons).
+- __Attach the PDF to an email:__ see [Email properties](../form-runner/advanced/buttons-and-processes/actions-form-runner.html#email).
+- __Send an URL to the PDF:__ see [Sending a PDF URL](../form-runner/advanced/buttons-and-processes/actions-form-runner.html#sending-a-PDF-URL).
 
 ## Availability
 
