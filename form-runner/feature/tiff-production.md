@@ -120,4 +120,4 @@ You can *email* the TIFF file using the following property:
     value="true"/>
 ```
 
-See also [Email properties](../../configuration/properties/form-runner.md#email).
+See also [Email properties](../../configuration/properties/form-runner.md#email-settings).
