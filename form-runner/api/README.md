@@ -12,7 +12,8 @@ Form Runner offers a number of integration APIs, including:
 
 ## See also
 
-- [Integration](../overview/integration.html)
+- [Integration](../overview/integration.md)
+- [Form Runner Java embedding API](../link-embed/java-api.md)
 - [Accessing data](../overview/accessing-data.md)
-- [Form Builder integration](../../form-builder/integration.html)
-- [Form Builder extension API](../../form-builder/extension-api.html)
+- [Form Builder integration](../../form-builder/integration.md)
+- [Form Builder extension API](../../form-builder/extension-api.md)
