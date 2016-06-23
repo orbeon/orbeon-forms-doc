@@ -89,6 +89,9 @@ In your CSS file, write CSS specific to the print format, under a section like t
 
 This way you can write CSS that only impact the appearance of the PDF, not that of the HTML.
 
+## See also
+
+- [Grids CSS](grids.md)
 
 [1]: http://getbootstrap.com/2.3.2/
 [2]: ../../configuration/properties/form-runner.md#adding-your-own-css
