@@ -10,6 +10,8 @@ Most forms are filled out for a given purpose, and then submitted. When the init
 
 As a form author, you can mark a form as *singleton* in Form Builder by opening the *Form Settings* dialog, and clicking on the *Singleton form* checkbox.
 
+![](../../form-builder/images/form-options.png)
+
 ## In Form Runner
 
 ### New page
