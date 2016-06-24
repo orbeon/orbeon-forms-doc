@@ -2,7 +2,7 @@
 
 <!-- toc -->
 
-## Basic usage
+## Introduction
 
 By default with Form Runner all the form sections appear in the same page, on top of each other. If your form is large that means that you have to scroll to fill out the entire form.
 
@@ -14,6 +14,10 @@ You can navigate between pages by clicking on a title in the table of contents, 
 
 Errors on your form appear at the bottom as usual, and the title of pages that contain errors are highlighted in red. If you click on an error you are taken directly to the page and control containing the error.
 
+## Enabling the wizard view 
+
+### Using a property
+
 The wizard view is optional - you can use the regular view instead, and you can enable this view per form, per app, or globally with a property:
 
 ```xml
@@ -22,6 +26,19 @@ The wizard view is optional - you can use the regular view instead, and you can 
   name="oxf.fr.detail.view.appearance.*.*"
   value="wizard"/>
 ```
+
+### From Form Builder
+
+[SINCE Orbeon Forms 2016.2]
+
+You can enable or disable the wizard view for a specific form definition directly from Form Builder's Form Settings dialog, under Form Options:
+
+- __Use Default:__ use  the configuration specified with the `oxf.fr.detail.view.appearance` property
+- __Always:__ enable the wizard view no matter what the `oxf.fr.detail.view.appearance` property specifies
+- __Never:__ disable the wizard view no matter what the `oxf.fr.detail.view.appearance` property specifies
+
+![](../../form-builder/images/form-options.png)
+
 
 ## Modes
 
