@@ -6,7 +6,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ## Misc
 
-### Distribution \[2016.1 DONE\]
+### Distribution \[2016.2 TODO\]
 
 - [x] README.md is up to date
   - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
@@ -25,7 +25,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - [x] dropping the WAR file (with license included or in ~/.orbeon/license.xml) into Tomcat and Liferay works - out of the box
 - [x] make sure the PE license is not included
 
-### Landing Page \[2016.1 DONE\]
+### Landing Page \[2016.2 TODO\]
 
 - version number is correct in logs when starting
 - landing page
@@ -34,7 +34,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - XForms examples
   - load, look reasonable, and work
 
-### PE Features Availability \[2016.1 DONE\]
+### PE Features Availability \[2016.2 TODO\]
 
 check that all PE features are available in PE, but not in CE:
 
@@ -89,7 +89,7 @@ check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-###  Basic Persistence \[2016.1 DONE\]
+###  Basic Persistence \[2016.2 TODO\]
 
 Do the following for eXist and DB2. We do not test other relational databases here, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases.
 
@@ -139,7 +139,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
     - go to /fr/
     - check that form definitions from all persistence layers show
 
-### Versioning \[2016.1 DONE\]
+### Versioning \[2016.2 TODO\]
 
 Do the following on DB2.
 
@@ -267,7 +267,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite
 
-### Data Capture Permissions \[2016.1 DONE\]
+### Data Capture Permissions \[2016.2 TODO\]
 
 ####  Setup
 
@@ -365,7 +365,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - delete button enabled and works
                 - on open data, can edit data
 
-### Autosave and Permissions Test \[2016.1 DONE\]
+### Autosave and Permissions Test \[2016.2 TODO\]
 
 Repeat what follows with Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
 
@@ -480,7 +480,7 @@ http://localhost:8080/2016.1-pe/fr/auth
     1. Go back to /edit
     1. Dialog must propose loading draft
 
-### DB2 DDL \[2016.1 DONE\]
+### DB2 DDL \[2016.2 TODO\]
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
@@ -496,7 +496,7 @@ drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
 ```
 
-### Flat View \[2016.1 DONE\]
+### Flat View \[2016.2 TODO\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -550,7 +550,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder
 
-### Basic Features \[2016.1 DONE\]
+### Basic Features \[2016.2 TODO\]
 
 - create new form
 - insert sections, grids, repeated grids
@@ -636,14 +636,14 @@ drop table orbeon_form_data_attach ;
     - insert control
     - check there is no JS error
 
-### Singleton forms \[2016.1 DONE\]
+### Singleton forms \[2016.2 TODO\]
 
 - test that the features works as [documented](../form-runner/advanced/singleton-form.md)
     - no form data
     - one instance of form data
     - more than one instance of form data
 
-### Schema Support \[2016.1 DONE\]
+### Schema Support \[2016.2 TODO\]
 
 - attach Schema
     - attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd)
@@ -658,7 +658,7 @@ drop table orbeon_form_data_attach ;
     - check that validation is working as per the types
     - check schema types are reloaded in Control Settings dialog
 
-### Database service \[2016.1 DONE\]
+### Database service \[2016.2 TODO\]
 
 - setup db
     - use MySQL on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
@@ -693,7 +693,7 @@ drop table orbeon_form_data_attach ;
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service \[2016.1 DONE\]
+### HTTP service \[2016.2 TODO\]
 
 - using echo service is ok
     - POST to `/fr/service/custom/orbeon/echo`
@@ -712,7 +712,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2016.1 DONE\]
+### Section Templates \[2016.2 TODO\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
@@ -748,7 +748,7 @@ drop table orbeon_form_data_attach ;
 - make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10, works as of 2016.1)
 - makes invalid controls in section template prevent saving
 
-### PDF Automatic \[2016.1 DONE\]
+### PDF Automatic \[2016.2 TODO\]
 
 - Controls and Bookshelf: input field and text areas have highlighted and clickable links
 - Controls: image annotation shows in PDF
@@ -757,7 +757,7 @@ drop table orbeon_form_data_attach ;
 - page numbering/total at bottom center
 - PDF looks good overall
 
-### PDF Template \[2016.1 DONE\]
+### PDF Template \[2016.2 TODO\]
 
 - attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - add field "name" in section "applicant"
@@ -772,7 +772,7 @@ drop table orbeon_form_data_attach ;
 - W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2016.1 DONE\]
+### Form Builder Permissions \[2016.2 TODO\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -893,7 +893,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Runner
 
-### Sample forms \[2016.1 DONE\]
+### Sample forms \[2016.2 TODO\]
 
 - load all
 - Controls
@@ -914,7 +914,7 @@ drop table orbeon_form_data_attach ;
 - DMV-14
   - PDF template works
 
-### Errors and warnings \[2016.1 DONE\]
+### Errors and warnings \[2016.2 TODO\]
 
 - FB: create form
     - required field
@@ -927,7 +927,7 @@ drop table orbeon_form_data_attach ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2016.1 DONE\]
+### Process buttons \[2016.2 TODO\]
 
 - create and publish guest/test
     - 1 required field
@@ -946,7 +946,7 @@ drop table orbeon_form_data_attach ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2016.1 DONE\]
+### Attachments/uploads \[2016.2 TODO\]
 
 - basic upload works
 - removing uploaded file works
@@ -968,7 +968,7 @@ drop table orbeon_form_data_attach ;
     - cancel midway works
     - progress indicator works
 
-### Submit \[2016.1 DONE\]
+### Submit \[2016.2 TODO\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -989,7 +989,7 @@ drop table orbeon_form_data_attach ;
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2016.1 DONE\]
+### Email \[2016.2 TODO\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1017,14 +1017,14 @@ drop table orbeon_form_data_attach ;
   - contains attachments, XML, PDF and TIFF [SINCE 2016.1]
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2016.1 DONE\]
+### Misc \[2016.2 TODO\]
 
 - switch language
 - open/close sections
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode \[2016.1 DONE\]
+### Noscript mode \[2016.2 TODO\]
 
 - orbeon/contact
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
@@ -1040,7 +1040,7 @@ drop table orbeon_form_data_attach ;
     - errors prevent saving
     - Refresh icon works
 
-### Wizard \[2016.1 DONE\]
+### Wizard \[2016.2 TODO\]
 
 - validated mode
     - `/fr/orbeon/w9/new`
@@ -1050,8 +1050,9 @@ drop table orbeon_form_data_attach ;
     - check back to edit allows navigating all sections
 - /fr/orbeon/controls/new
     - test errors in section template are highlighted in TOC
+- check that Form Builder's Wizard option enables/disables the wizard
 
-### Captcha \[2016.1 DONE\]
+### Captcha \[2016.2 TODO\]
 
 - enable with property
 
@@ -1074,7 +1075,7 @@ drop table orbeon_form_data_attach ;
     - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2016.1 DONE\]
+### Help popups/hint tooltips positioning \[2016.2 TODO\]
 
 - create form to test general positioning
   - help on all elements
@@ -1085,7 +1086,7 @@ drop table orbeon_form_data_attach ;
 - test Bookshelf help
 - create form with fields, including checkboxes/radio buttons
 
-### Mobile and Responsive \[2016.1 DONE\]
+### Mobile and Responsive \[2016.2 TODO\]
 
 *NOTE: Summary and Home are not responsive as of 2016.1.*
 
@@ -1125,7 +1126,7 @@ drop table orbeon_form_data_attach ;
     - if decimal separator is `,`, show regular pane (if US settings)
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 
-### Home Page \[2016.1 DONE\]
+### Home Page \[2016.2 TODO\]
 
 *See also Form Builder permissions above which already tests some of this.*
 
@@ -1193,7 +1194,7 @@ drop table orbeon_form_data_attach ;
   - upgrade remote
   - make sure forms still work
 
-### Summary Page \[2016.1 DONE\]
+### Summary Page \[2016.2 TODO\]
 
 - e.g. `http://localhost:8080/2016.1-pe/fr/orbeon/bookshelf/summary`
 - list forms
@@ -1212,7 +1213,7 @@ drop table orbeon_form_data_attach ;
 - delete
 - view
 
-### Excel Import \[2016.1 DONE\]
+### Excel Import \[2016.2 TODO\]
 
 - `http://localhost:8080/2016.1-pe/fr/orbeon/contact/import`
 - import small doc first (`contact5.xlsx` on Dropbox)
@@ -1224,7 +1225,7 @@ drop table orbeon_form_data_attach ;
 - check % and ETA progress during validation and import
 - check import completes
 
-### Liferay Support \[2016.1 DONE\]
+### Liferay Support \[2016.2 TODO\]
 
 - versions as of Orbeon Forms 2016.1
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
@@ -1271,7 +1272,7 @@ drop table orbeon_form_data_attach ;
   - ~~Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay*
 
-### Embedding \[2016.1 DONE\]
+### Embedding \[2016.2 TODO\]
 
 - deploy `orbeon-embedding.war` into Tomcat
 - update `web.xml`:
@@ -1296,7 +1297,7 @@ drop table orbeon_form_data_attach ;
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
 
-### XForms Retry \[2016.1 DONE\]
+### XForms Retry \[2016.2 TODO\]
 
 1. Retry happens
     - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
@@ -1379,7 +1380,7 @@ drop table orbeon_form_data_attach ;
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2016.1 DONE\]
+### Error Dialog \[2016.2 TODO\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
@@ -1395,7 +1396,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
 
-### Other Browsers \[2016.1 DONE\]
+### Other Browsers \[2016.2 TODO\]
 
 - main tests above with Google Chrome
   - 2016.1: latest is 49.0.2623.112
@@ -1431,7 +1432,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
 
-### Other \[2016.1 DONE\]
+### Other \[2016.2 TODO\]
 
 Features to test, with all supported browsers:
 
