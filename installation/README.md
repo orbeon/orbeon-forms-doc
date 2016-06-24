@@ -89,7 +89,7 @@ For more information about how to set configuration properties, see [Configurati
 
 This step is optional.
 
-Orbeon Forms has a logging configuration file under WEB-INF/resources/config/log4j.xml. By default, logging information is output to a file path relative to the directory where you start your application server.
+Orbeon Forms has a logging configuration file under `WEB-INF/resources/config/log4j.xml`. By default, logging information is output to a file path relative to the directory where you start your application server.
 
 ```xml
 <appender name="SingleFileAppender" class="org.apache.log4j.FileAppender">
