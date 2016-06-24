@@ -290,7 +290,7 @@ Orbeon Forms supports sending an XML document as HTML or XHTML as per [XSLT 2.0 
 XForms 1.1 does not explicitly support submitting binary content, but does not prohibit it either. Orbeon Forms supports sending the content of a binary resource specified by a URI. Such resources are easily obtained with `<xf:upload>`, for example. To perform a binary submission:
 
 * The `post` or `put` method is required.
-* You must use application/octet-stream as `serialization` attribute.
+* You must use `application/octet-stream` as `serialization` attribute.
 * The node referred to by the submission must be of type `xs:anyURI`.
 * Relative URLs are supported and resolved as service URLs against the `<xf:submission>` element.
 
