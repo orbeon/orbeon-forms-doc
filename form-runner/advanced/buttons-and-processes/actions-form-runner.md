@@ -115,8 +115,10 @@ The following parameters can be used:
 
 - <a name="send_parameter_content"></a>`content`:
     - `xml` to send the XML data (default)
-    - `pdf-url` to send the PDF URL, see [details](#sending-a-pdf-url)
     - `metadata` to send form metadata, see [details](#sending-form-metadata) [SINCE Orbeon Forms 4.7]
+    - `pdf` to send the PDF binary, see [details](#sending-a-pdf-binary) [SINCE Orbeon Forms 2016.2]
+    - `tiff` to send the TIFF binary, see [details](#sending-a-tiff-binary) [SINCE Orbeon Forms 2016.2]
+    - `pdf-url` to send the PDF URL, see [details](#sending-a-pdf-url)
     - `tiff-url` to send the TIFF URL, see [details](#sending-a-tiff-url) [SINCE Orbeon Forms 2016.1]
 
 - <a name="send_parameter_data-format-version"></a>`data-format-version` [SINCE Orbeon Forms 4.8]:
@@ -150,6 +152,17 @@ The following parameters can be used:
     - default
         - `false` when `data-format-version` is set to `edge`
         - `true` otherwise
+        
+- <a name="send_parameter_content_type"></a>`content-type`:
+
+    [SINCE Orbeon Forms 2016.2]
+
+    - specify the `Content-Type` header to set when `method` is set to `post` or `put`
+    - it is usually not necessary to specify `content-type` explicitly
+    - default
+        - `application/xml` when `content` is set to `xml`, `metadata`, `pdf-url` or `tiff-url`
+        - `application/pdf` when `content` is set to `pdf`
+        - `image/tiff` when `content` is set to `tiff`
 
 #### Using properties
 
@@ -252,6 +265,18 @@ Example:
         form-version=1&
         language=en
 
+### Sending a PDF binary
+
+[SINCE Orbeon Forms 2016.2]
+
+When `pdf` is specified, the PDF binary is sent with a `Content-Type` set to `application/pdf`.
+
+### Sending a TIFF binary
+
+[SINCE Orbeon Forms 2016.2]
+
+When `tiff` is specified, the TIFF binary is sent with a `Content-Type` set to `image/tiff`.
+
 ### Sending a PDF URL
 
 When `pdf-url` is specified, the XML document sent has the following format:
@@ -265,7 +290,7 @@ The PDF can be retrieved by accessing that path with the proper session cookie.
 
 A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the PDF.
 
-*NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
+*NOTE: When the PDF must be sent to a remote service, it is better to send the PDF binary directly using `pdf`.*
 
 ### Sending a TIFF URL
 
@@ -282,7 +307,7 @@ The TIFF can be retrieved by accessing that path with the proper session cookie.
 
 A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the TIFF file.
 
-*NOTE: We realize that if the URL is sent to a remote server, requiring the session cookie is not ideal. We hope to address this in a future release of Orbeon Forms.*
+*NOTE: When the TIFF must be sent to a remote service, it is better to send the TIFF binary directly using `tiff`.*
 
 ### Sending form metadata
 
