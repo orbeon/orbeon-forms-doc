@@ -48,6 +48,8 @@ In this view:
 
 ## Admin view
 
+### Admin operations on forms
+
 When the user has access to admin operations, new information is shown:
 
 - whether the form is available or unavailable ("unpublished")
@@ -55,10 +57,10 @@ When the user has access to admin operations, new information is shown:
 
 Unavailable forms remain on the server, but any user access to an unavailable form behaves as if the form had never been published.
 
-The user can select forms in two ways:
+Admins can select forms in two ways:
 
 - by using the checkboxes next to the form
-- by using the Select menu to automatically select all forms matching a certain condition
+- by using the *Select* menu to automatically select all forms matching a certain condition
 
 ![Select Menu](../images/home-select-menu.png)
 
@@ -73,17 +75,17 @@ The main operations available are:
 
 ![Unavailable](../images/home-unavailable.png)
 
-## Remote server operations
+### Remote server operations
 
 [SINCE Orbeon Forms 4.4]
 
 This is an Orbeon Forms PE feature.
 
-### Introduction
+#### Introduction
 
 This feature allows you to configure access to a remote server and to publish, unpublish, and transfer forms between the local and remote server.
 
-### Configuration on the local server
+#### Configuration on the local server
 
 In order to configure a remote server, you need to setup a property.
 
@@ -119,7 +121,7 @@ With Orbeon Forms 4.4 to 4.6, use the `oxf.fr.production-server-uri` property:
 
 *NOTE: As of Orbeon Forms 4.7, the `oxf.fr.production-server-uri` is deprecated. With Orbeon Forms 4.7 and newer, if the `oxf.fr.production-server-uri` is set and not empty, it takes precedence over the new `oxf.fr.home.remote-servers` property, for backward compatibility.*
 
-### Configuration on the remote server
+#### Configuration on the remote server
 
 You also need to authorize the remote server to accept incoming connections for services. One way of doing this is to use the Orbeon Forms delegating `orbeon-auth.war`, documented [here](../../xml-platform/controller/authorization-of-pages-and-services.md).
 
@@ -148,7 +150,7 @@ Then, on the local server, you would use username `orbeon-admin` and password `c
 
 With this configuration, the local Orbeon Forms connects to services on the remote Orbeon Forms, which calls up `orbeon-auth` to authenticate the connection. `orbeon-auth` requires that the username/password provided authenticate as a valid Tomcat user with the `orbeon-service` role. If that's successful, then the service proceeds, otherwise it fails.
 
-### Remote operations
+#### Remote operations
 
 When the remote server is configured as above, the first time you go to the Form Runner Home page you are prompted for credentials:
 
@@ -170,6 +172,10 @@ You are always prompted to confirm the operation to perform:
 In addition, if the latest modification time of the form definitions differ, a *Newer* label appears:
 
 ![Newer](../images/home-newer.png)
+
+### Reindexing
+
+[SINCE Orbeon Forms 2016.2] After upgrading to 2016.2, [TO BE COMPLETED].
 
 ## Configuration properties
 
