@@ -18,6 +18,7 @@
     * [Resources and support](faq/resources-support.md)
     * [Other technical questions](faq/other-technical.md)
 * [Form Builder](form-builder/README.md)
+    * [Form settings](form-builder/form-settings.md)
     * [Form editor](form-builder/form-editor.md)
         * [Form area](form-builder/form-area.md)
         * [Control settings](form-builder/control-settings.md)

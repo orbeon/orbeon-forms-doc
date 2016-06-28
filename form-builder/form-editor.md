@@ -10,7 +10,7 @@ After pressing the "New" button on the [summary page](../form-builder/summary-pa
 _NOTE: Depending on your permissions, the application name might have been picked for you already, or you might have the choice of a restricted set of application names._
 * **Form Name.** Each form definition also has a _form name_, which identifies a unique form name within a particular application.
 
-![](images/new.png)
+![](images/form-settings-new.png)
 
 Both application name and form name must respect a certain format:
 
@@ -33,7 +33,7 @@ Form Builder's form editor is organized in 4 areas:
 * **Bottom:** status icons and buttons.
 * **Center:** WYSIWYG [form area](../form-builder/form-area.md) where you actually edit your form definition. This area might scroll vertically depending on your browser or monitor size or the size of the form you are editing.
 
-![](images/new.png)
+![](images/general-layout.png)
 
 ## The top bar
 
