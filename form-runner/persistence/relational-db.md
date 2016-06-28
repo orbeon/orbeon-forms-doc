@@ -49,8 +49,6 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 [oracle-4_3-to-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3-to-4_4.sql
 [oracle-4_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3.sql
 
-
-
 #### Oracle binary XML storage
 
 With Oracle 11.2, `XMLType` values are stored by default using the binary XML storage. The binary XML storage has numerous benefits over the basic file storage. In many respect, it is the "proper" way to store XML. However, we found that Oracle fails to properly save some documents when the binary XML storage is used. In particular, when documents have attributes with long values (several thousands of characters), when retrieving the document, the value of some attributes is missing. For this reason, until this issue is solved by Oracle, we recommend you store `XMLType` values as "basic file", per the above DDL.
@@ -64,7 +62,7 @@ The MySQL persistence layer relies on [XML functions][3] that have been introduc
     ```sql
     mysql -u root
     mysql> CREATE USER orbeon IDENTIFIED BY ${PASSWORD};
-```
+    ```
 2. Create a new schema `orbeon`. This schema will contains the tables used to store your forms definitions and form data.
 
     ```sql
@@ -79,6 +77,8 @@ The MySQL persistence layer relies on [XML functions][3] that have been introduc
     | 4.5                      | 4.5                            | [mysql-4_5.sql]            | [mysql-4_4-to-4_5.sql]              |
     | 4.4                      | 4.4                            | [mysql-4_4.sql]            | [mysql-4_3-to-4_4.sql]              |
     | 4.3                      | 4.3                            | [mysql-4_3.sql]            | -                                   |
+
+4. If upgrading to 2016.2, you need to [reindex the Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
 [mysql-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_2.sql
 [mysql-4_6-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_6-to-2016_2.sql
