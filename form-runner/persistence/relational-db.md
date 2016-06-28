@@ -24,18 +24,16 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
     SQL> create user orbeon identified by password ;
     SQL> grant all privileges to orbeon ;
     ```
-3. Create the tables and indexes used by Orbeon Forms:
+3. Run the following DDL to create or update your Orbeon database, and note that uf upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
-    | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
-    | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-    | 2016.2                   | 2016.2                         | [oracle-2016_2.sql]        | [oracle-4_10-to-2016_2.sql]         |
-    | 4.10, 2016.1             | 4.10                           | [oracle-4_10.sql]          | [oracle-4_6-to-4_10.sql]            |
-    | 4.6, 4.7, 4.8, 4.9       | 4.6                            | [oracle-4_6.sql]           | [oracle-4_5-to-4_6.sql]             |
-    | 4.5                      | 4.5                            | [oracle-4_5.sql]           | [oracle-4_4-to-4_5.sql]             |
-    | 4.4                      | 4.4                            | [oracle-4_4.sql]           | [oracle-4_3-to-4_4.sql]             |
-    | 4.3                      | 4.3                            | [oracle-4_3.sql]           | -                                   |
-
-4. If upgrading to 2016.2, you need to [reindex the Orbeon database](../feature/home-page.md#upgrading-to-20162).
+| Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
+| ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2016.2                   | 2016.2                         | [oracle-2016_2.sql]        | [oracle-4_10-to-2016_2.sql]         |
+| 4.10, 2016.1             | 4.10                           | [oracle-4_10.sql]          | [oracle-4_6-to-4_10.sql]            |
+| 4.6, 4.7, 4.8, 4.9       | 4.6                            | [oracle-4_6.sql]           | [oracle-4_5-to-4_6.sql]             |
+| 4.5                      | 4.5                            | [oracle-4_5.sql]           | [oracle-4_4-to-4_5.sql]             |
+| 4.4                      | 4.4                            | [oracle-4_4.sql]           | [oracle-4_3-to-4_4.sql]             |
+| 4.3                      | 4.3                            | [oracle-4_3.sql]           | -                                   |
 
 [oracle-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_2.sql
 [oracle-4_10-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_10-to-2016_2.sql
@@ -68,15 +66,15 @@ The MySQL persistence layer relies on [XML functions][3] that have been introduc
     ```sql
     mysql> CREATE schema orbeon;
     ```
-3. Create the tables used for Orbeon Forms in the `orbeon` schema:
+3. Run the following DDL to create or update your Orbeon database, and note that uf upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
-    | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
-    | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-    | 2016.2                   | 2016.2                         | [mysql-2016_2.sql]         | [mysql-4_6-to-2016_2.sql]           |
-    | 4.6 to 4.16, 2016.2      | 4.6                            | [mysql-4_6.sql]            | [mysql-4_5-to-4_6.sql]              |
-    | 4.5                      | 4.5                            | [mysql-4_5.sql]            | [mysql-4_4-to-4_5.sql]              |
-    | 4.4                      | 4.4                            | [mysql-4_4.sql]            | [mysql-4_3-to-4_4.sql]              |
-    | 4.3                      | 4.3                            | [mysql-4_3.sql]            | -                                   |
+| Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
+| ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2016.2                   | 2016.2                         | [mysql-2016_2.sql]         | [mysql-4_6-to-2016_2.sql]           |
+| 4.6 to 4.16, 2016.2      | 4.6                            | [mysql-4_6.sql]            | [mysql-4_5-to-4_6.sql]              |
+| 4.5                      | 4.5                            | [mysql-4_5.sql]            | [mysql-4_4-to-4_5.sql]              |
+| 4.4                      | 4.4                            | [mysql-4_4.sql]            | [mysql-4_3-to-4_4.sql]              |
+| 4.3                      | 4.3                            | [mysql-4_3.sql]            | -                                   |
 
 4. If upgrading to 2016.2, you need to [reindex the Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
