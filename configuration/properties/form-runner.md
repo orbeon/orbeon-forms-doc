@@ -274,7 +274,59 @@ By default, as shown in the below video:
 
 ![Loading indicators](../images/loading-indicators.gif)
 
+### Controlling the appearance of control labels
+
+[SINCE Orbeon Forms 2016.2]
+ 
+By default, with Form Runner, control labels appear *inline* above the control. The following property allows overriding this behavior:
+ 
+ ```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.label.appearance.*.*"
+    value="full"/>
+```
+
+Allowed values:
+
+- `full`: labels show inline above the control (the default)
+- `full minimal`: labels show inline above the control, but for text, date, and time input fields only, labels show as an HTML *placeholder* within the field when the field is empty
+
+*LIMITATION: The `minimal` appearance is not supported on combined "Date and Time" fields and on text fields with "Character Counter" appearance.* 
+
+*NOTE: Only one `minimal` appearance can be used between `oxf.xforms.label.appearance` and `oxf.xforms.hint.appearance`. If both include `minimal`, the label wins.*
+
+For more about placeholders, see [Use HTML5 placeholders, in XForms](http://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html).
+
+### Controlling the appearance of control hints
+
+[SINCE Orbeon Forms 2016.2]
+ 
+By default, with Form Runner, control hints appear *inline* under the control. The following property allows overriding this behavior:
+ 
+ ```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.hint.appearance.*.*"
+    value="full"/>
+```
+
+Allowed values:
+
+- `full`: hints show inline below the control (the default)
+- `full minimal`: hints show inline below the control, but for text, date, and time input fields only, hints show as an HTML *placeholder* within the field when the field is empty
+- `tooltip`: hints show as tooltips upon mouseover
+- `tooltip minimal`: hints show as tooltips upon mouseover, but for input fields only, hints show as an HTML *placeholder* within the field when the field is empty
+
+*LIMITATION: The `minimal` appearance is not supported on combined "Date and Time" fields and on text fields with "Character Counter" appearance.* 
+
+*NOTE: Only one `minimal` appearance can be used between `oxf.xforms.label.appearance` and `oxf.xforms.hint.appearance`. If both include `minimal`, the label wins.*
+
+For more about placeholders, see [Use HTML5 placeholders, in XForms](http://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html).
+
 ### Display hints inline
+
+[DEPRECATED as of Orbeon Forms 2016.2]
 
 This property set whether the control hints are shown inline, rather than as tool-tips. The default is `true`.
 
@@ -284,6 +336,11 @@ This property set whether the control hints are shown inline, rather than as too
     name="oxf.fr.detail.hints.inline.*.*"
     value="true"/>
 ```
+
+As of Orbeon Forms 2016.2, this property is deprecated. Use `oxf.fr.detail.hint.appearance` instead. For backward compatibility, when this property is present, it overrides `oxf.xforms.hint.appearance` and sets it to:
+
+- `full` if set to `true`
+- `tooltip` if set to `false`
 
 ### Order of LHHA elements
 

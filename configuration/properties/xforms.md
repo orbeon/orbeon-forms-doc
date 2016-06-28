@@ -6,6 +6,13 @@
 
 For the latest default values of XForms properties, see [`properties-xforms.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-xforms.xml).
 
+## XForms properties documented elsewhere
+
+* [Input Control](../../xforms/controls/input.md)
+    * `oxf.xforms.label.appearance`
+    * `oxf.xforms.hint.appearance`
+    * `oxf.xforms.sanitize`
+
 ## Encryption and passwords
 
 ### Encryption password

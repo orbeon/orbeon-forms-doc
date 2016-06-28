@@ -40,6 +40,8 @@ Example:
 
 ### Placeholder for label and hint
 
+#### Per-control properties
+
 The label or hint associated with `<xf:input>` may have the `minimal`  appearance:
 
 ```xml
@@ -54,11 +56,59 @@ The label or hint associated with `<xf:input>` may have the `minimal`  appearanc
 </xf:input>
 ```
 
-This causes either the label or the hint to appear on the background of the field when it is empty.
+This causes either the label or the hint to appear on the background of the field when it is empty. If both the label and hint have a `minimal` appearance, the label wins.
 
-Orbeon Forms leverages the HTML 5 `placeholder` attribute for browsers that support it (Firefox 3.5+, Chrome, Safari, Opera), and simulates the HTML 5 `placeholder` functionality  in JavaScript for browsers that don't support it (all versions of IE). In that case, you can customize how the placeholder is displayed by overriding the CSS class `x``forms-placeholder`.
+This is only supported for text, date, and time input fields.
 
-_NOTE: The `xxf:placeholder` appearance can also be used instead of the `minimal` appearance. Initially the feature only supported `xxf:placeholder` and support for `minimal` was added upon discussion with the W3C Forms Working Group._
+Orbeon Forms leverages the HTML 5 `placeholder` attribute for browsers that support it (Firefox 3.5+, Chrome, Safari, Opera), and simulates the HTML 5 `placeholder` functionality  in JavaScript for browsers that don't support it (IE8 and IE9). In that case, you can customize how the placeholder is displayed by overriding the CSS class `xforms-placeholder`.
+
+_NOTE: The `xxf:placeholder` appearance is deprecated. It has the same effect as the `minimal` appearance. The latter is standardized in XForms 2.0._
+
+#### Per-form properties
+
+[SINCE Orbeon Forms 2016.2]
+
+The XForms `oxf.xforms.label.appearance` or `oxf.xforms.hint.appearance` (or the corresponding `xxf:label.appearance` and `xxf:hint.appearance` attributes on the first `<xf:model>` element) allow setting a default for the labels and hint appearances for the entire form.
+
+The defaul values are `full`:
+
+```xml
+<property
+    as="xs:string"  
+    name="oxf.xforms.label.appearance"                            
+    value="full"/>
+    
+<property
+    as="xs:string"  
+    name="oxf.xforms.hint.appearance"                             
+    value="full"/>
+```
+
+Supported values for `oxf.xforms.label.appearance`:
+
+- `full`: labels show inline above the control (the default)
+- `full minimal`: labels show inline above the control, but for text, date, and time input fields only, labels show as an HTML *placeholder* within the field when the field is empty
+
+Supported values for `oxf.xforms.hint.appearance`:
+
+- `full`: hints show inline below the control (the default)
+- `full minimal`: hints show inline below the control, but for text, date, and time input fields only, hints show as an HTML *placeholder* within the field when the field is empty
+- `tooltip`: hints show as tooltips upon mouseover
+- `tooltip minimal`: hints show as tooltips upon mouseover, but for input fields only, hints show as an HTML *placeholder* within the field when the field is empty
+
+When the global property includes `minimal`, it is possible to override the appearance on the control with `appearance="full"`:
+
+```xml
+<xf:input ref=".">
+    <xf:label appearance="full">Your name</xf:label>
+    <xf:hint>Hint</xf:hint>
+</xf:input>
+
+<xf:input ref=".">
+    <xf:label>Your name</xf:label>
+    <xf:hint appearance="full">Hint</xf:hint>
+</xf:input>
+```
 
 ## Appearance based on type and appearance
 
@@ -203,6 +253,10 @@ Sanitation applies to:
 * text areas
 
 You can also use the `xxf:sanitize` attribute on the XForms model to set a filter local to a given page.
+
+## See also
+
+- Blog post: [Use HTML5 placeholders, in XForms](http://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html)
 
 [3]: ../../configuration/properties/xforms.html#navigator
 [4]: ../../configuration/properties/xforms.html#for-xfinput
