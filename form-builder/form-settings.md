@@ -23,6 +23,18 @@ General settings allow you to set:
 
 Form options include options which apply to the entire form definition.
 
+- [Singleton Form](../form-runner/advanced/singleton-form.md) 
+- [Wizard View](../form-runner/feature/wizard-view.md)
+- Appearance of Control Labels
+    - Use Default: use the `oxf.xforms.label.appearance` property
+    - Inline: labels show inline above the control
+- Use Placeholder for Text Fields: labels show inline above the control, but for text, date, and time input fields only, labels show as an HTML *placeholder* within the field when the field is empty
+- Appearance of Control Hints
+    - Use Default: use the `oxf.xforms.hint.appearance` property
+    - Inline: hints show inline below the control
+    - Tooltips: hints show as tooltips upon mouseover
+- Use Placeholder for Text Fields: hints show inline or as tooltips upon mouseover, but for input fields only, hints show as an HTML *placeholder* within the field when the field is empty
+
 ![](images/form-settings-options.png)
 
 ## Form Statistics
