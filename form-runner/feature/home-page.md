@@ -181,16 +181,10 @@ In addition, if the latest modification time of the form definitions differ, a *
 
 When upgrading to 2016.2, if using the Form Runner built-in implementation for relational databases, you'll need to reindex your database. After you've upgraded and done the initial reindexing, you shouldn't need to reindex the database manually, as Form Runner will incrementally update the index when needed.
 
-- The reindexing operation can take a while, depending on how much data you have.
-- Since 2016.2 only adds 
-- While reindexing, some features of Orbeon Forms 2016.2, like Form Runner summary pages, won't work as expected.
-- However,
+Depending on how much data you have, the reindexing operation can take a while, and during reindexing some features of Orbeon Forms 2016.2, like Form Runner summary pages and the [search API](../api/persistence/search.md), won't work as expected. As such:
 
-[TO BE COMPLETED]
-
-When upgrading to 2016.2, if you have forms in productions using the database, since , we recommend:
-
-1. 
+- If you're not relying on those features in production, you can upgrade Orbeon Forms as you normally would when you need to make changes to the database: take the previous version of Orbeon Forms offline, run the [relevant DDL to upgrade your database schema](../persistence/relational-db.md), and take the new version of Orbeon Forms online. This requires Orbeon Forms to be offline, but this, typically, only for a matter of a few minutes.
+- If you're relying on those features in production, since reindexing can take a while and you can't run Orbeon Forms 2016.2 while reindexing, we suggest you start by cloning your database, run the [relevant DDL to upgrade your database schema](../persistence/relational-db.md) on that cloned database, run 2016.2 on another server, and have it reindex the cloned database. This will give you an idea of how long reindexing takes, and how long of a offline window you need. With this information in mind, schedule an offline window of the appropriate length, and at that time, do the upgrade procedure again, but this time on the production database.
 
 #### UI
 
