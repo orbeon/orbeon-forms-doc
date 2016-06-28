@@ -175,7 +175,34 @@ In addition, if the latest modification time of the form definitions differ, a *
 
 ### Reindexing
 
-[SINCE Orbeon Forms 2016.2] After upgrading to 2016.2, [TO BE COMPLETED].
+[SINCE Orbeon Forms 2016.2]
+
+#### Upgrading to 2016.2
+
+When upgrading to 2016.2, if using the Form Runner built-in implementation for relational databases, you'll need to reindex your database. After you've upgraded and done the initial reindexing, you shouldn't need to reindex the database manually, as Form Runner will incrementally update the index when needed.
+
+- The reindexing operation can take a while, depending on how much data you have.
+- Since 2016.2 only adds 
+- While reindexing, some features of Orbeon Forms 2016.2, like Form Runner summary pages, won't work as expected.
+- However,
+
+[TO BE COMPLETED]
+
+When upgrading to 2016.2, if you have forms in productions using the database, since , we recommend:
+
+1. 
+
+#### UI
+
+In admin view, the Form Runner home page shows a reindex button:
+
+![Reindex button](../images/home-reindex-button.png)
+
+After you click it, and confirm you want to go ahead, if this is indeed the what you want to do (see above paragraph for more information about what happens during reindexing), the home page shows the reindexing status:
+
+![Reindex status](../images/home-reindex-status.png)
+
+If, for some reason, you want to stop reindexing, you can do so by clicking on the *Stop reindexing* button. When doing so,the index is left in an incoherent state, and you should restart indexing at a latter time.
 
 ## Configuration properties
 
