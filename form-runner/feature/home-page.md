@@ -200,7 +200,7 @@ If, for some reason, you want to stop reindexing, you can do so by clicking on t
 
 ![Reindex stopping](../images/home-reindex-stopping.png)
 
-Finally, once reindex is done, you'll see:
+Finally, once reindexing is done, you'll see:
 
 ![Reindex done](../images/home-reindex-done.png)
 
