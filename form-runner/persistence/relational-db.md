@@ -19,11 +19,11 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 1. Make sure that Oracle's Database Character Set is set to `AL32UTF8`, also as [recommended by Oracle][2].  You can see you database parameters by running the following query: `select * from nls_database_parameters`,  and the Database Character Set is identified by `nls_characterset`.
 2. Create a user/schema in Oracle, for instance with the commands below. In this example "all privileges" are granted to the newly created user/schema, which is not strictly required. You might want to fine-tune permissions on your system as appropriate. If you had already created this schema and that the definition changed, or that you want to restart from scratch for some other reason, you can first delete the schema with all the data it contains with `drop user orbeon cascade`.
 
-```sql
-> sqlplus sys/password as sysdba
-SQL> create user orbeon identified by password ;
-SQL> grant all privileges to orbeon ;
-```
+    ```sql
+    > sqlplus sys/password as sysdba
+    SQL> create user orbeon identified by password ;
+    SQL> grant all privileges to orbeon ;
+    ```
 3. Create the tables and indexes used by Orbeon Forms:
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
