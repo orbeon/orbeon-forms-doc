@@ -179,12 +179,12 @@ In addition, if the latest modification time of the form definitions differ, a *
 
 #### Upgrading to 2016.2
 
-When upgrading to 2016.2, if using the Form Runner built-in implementation for relational databases, you'll need to reindex your database. After you've upgraded and done the initial reindexing, you shouldn't need to reindex the database manually, as Form Runner will incrementally update the index when needed.
+Orbeon Forms 2016.2 adds two index tables: `orbeon_i_current` and `orbeon_i_control_text`, so when upgrading to 2016.2, for Form Runner to work properly, you'll need to initially populate those tables in an operation referred to as *reindexing*. After you've upgraded and done the initial reindexing, you shouldn't need to reindex the database manually, as Form Runner will incrementally update the index when needed.
 
 Depending on how much data you have, the reindexing operation can take a while, and during reindexing some features of Orbeon Forms 2016.2, like Form Runner summary pages and the [search API](../api/persistence/search.md), won't work as expected. As such:
 
 - If you're not relying on those features in production, you can upgrade Orbeon Forms as you normally would when you need to make changes to the database: take the previous version of Orbeon Forms offline, run the [relevant DDL to upgrade your database schema](../persistence/relational-db.md), and take the new version of Orbeon Forms online. This requires Orbeon Forms to be offline, but this, typically, only for a matter of a few minutes.
-- If you're relying on those features in production, since reindexing can take a while and you can't run Orbeon Forms 2016.2 while reindexing, we suggest you start by cloning your database, run the [relevant DDL to upgrade your database schema](../persistence/relational-db.md) on that cloned database, run 2016.2 on another server, and have it reindex the cloned database. This will give you an idea of how long reindexing takes, and how long of a offline window you need. With this information in mind, schedule an offline window of the appropriate length, and at that time, do the upgrade procedure again, but this time on the production database.
+- If you're relying on those features in production, since reindexing can take a while and you can't run Orbeon Forms 2016.2 while reindexing, we suggest you start by cloning your database, run the [relevant DDL to upgrade your database schema](../persistence/relational-db.md) on that cloned database, run 2016.2 on another server, and have it reindex the cloned database. This will give you an idea of how long reindexing takes, and how long of an offline window you need. With this information in mind, schedule an offline window of the appropriate length, and at that time, do the upgrade procedure again, but this time on the production database.
 
 #### UI
 
@@ -196,7 +196,13 @@ After you click it, and confirm you want to go ahead, if this is indeed the what
 
 ![Reindex status](../images/home-reindex-status.png)
 
-If, for some reason, you want to stop reindexing, you can do so by clicking on the *Stop reindexing* button. When doing so,the index is left in an incoherent state, and you should restart indexing at a latter time.
+If, for some reason, you want to stop reindexing, you can do so by clicking on the *Stop reindexing* button. When doing so, the index is left in an incoherent state, and you should restart indexing at a latter time. While reindexing stops, you'll see the following message:
+
+![Reindex stopping](../images/home-reindex-stopping.png)
+
+Finally, once reindex is done, you'll see:
+
+![Reindex done](../images/home-reindex-done.png)
 
 ## Configuration properties
 
