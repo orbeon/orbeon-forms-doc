@@ -26,19 +26,27 @@ SQL> grant all privileges to orbeon ;
 ```
 3. Create the tables and indexes used by Orbeon Forms:
 
-    - With Orbeon Forms 4.6, 4.7, 4.8, 4.9, and 4.10:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_10.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.5](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5-to-4_6.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.6](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_6-to-4_10.sql)
-        - *NOTE: The schema is unchanged between 4.6 and 4.10 included, but `oracle-4_10.sql` includes the fix for issue [#2289](https://github.com/orbeon/orbeon-forms/issues/2289) and can be used for versions 4.6, 4.7, 4.8, and 4.9 as well.*
-    - With Orbeon Forms 4.5:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.4](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4-to-4_5.sql)
-    - With Orbeon Forms 4.4:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4.sql)
-        - [DDL to upgrade your database created for Orbeon Forms 4.3 or earlier](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3-to-4_4.sql)
-    - With Orbeon Forms 4.3 or earlier:
-        - [DDL to create the tables from scratch](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3.sql)
+| Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
+| ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2016.2                   | 2016.2                         | [oracle-2016_2.sql]        | [oracle-4_10-to-2016_2.sql]         |
+| 4.10, 2016.1             | 4.10                           | [oracle-4_10.sql]          | [oracle-4_6-to-4_10.sql]            |
+| 4.6, 4.7, 4.8, 4.9       | 4.6                            | [oracle-4_6.sql]           | [oracle-4_5-to-4_6.sql]             |
+| 4.5                      | 4.5                            | [oracle-4_5.sql]           | [oracle-4_4-to-4_5.sql]             |
+| 4.4                      | 4.4                            | [oracle-4_4.sql]           | [oracle-4_3-to-4_4.sql]             |
+| 4.3                      | 4.3                            | [oracle-4_3.sql]           | -                                   |
+
+[oracle-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_2.sql
+[oracle-4_10-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_10-to-2016_2.sql
+[oracle-4_10.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_10.sql
+[oracle-4_6-to-4_10.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_6-to-4_10.sql
+[oracle-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_6.sql
+[oracle-4_5-to-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5-to-4_6.sql
+[oracle-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5.sql
+[oracle-4_4-to-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4-to-4_5.sql
+[oracle-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4.sql
+[oracle-4_3-to-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3-to-4_4.sql
+[oracle-4_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3.sql
+
 
 With Oracle 11.2, `XMLType` values are stored by default using the binary XML storage. The binary XML storage has numerous benefits over the basic file storage. In many respect, it is the "proper" way to store XML. However, we found that Oracle fails to properly save some documents when the binary XML storage is used. In particular, when documents have attributes with long values (several thousands of characters), when retrieving the document, the value of some attributes is missing. For this reason, until this issue is solved by Oracle, we recommend you store `XMLType` values as "basic file", per the above DDL.
 
