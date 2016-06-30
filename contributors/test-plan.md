@@ -8,21 +8,23 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ### Distribution \[2016.2 TODO\]
 
-- [x] README.md is up to date
+- [x] `README.md` is up to date
   - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
   - [x] latest release year
   - [x] version number is correct
   - [x] links to release notes (include link to new version even if blog post not up yet)
 - [x] file layout is correct in zip and wars
-- [x] check WAR files have reasonable sizes (sizes as of 2016.1)
-  - orbeon-auth.war (< 10 KB)
-  - orbeon-embedding.war (1-2 MB)
-  - proxy-portlet.war (1-2 MB)
-  - orbeon.war (65 MB)
-- [x] check CE zip doesn't have
-  - orbeon-embedding.war
-  - proxy-portlet.war
-- [x] dropping the WAR file (with license included or in ~/.orbeon/license.xml) into Tomcat and Liferay works - out of the box
+- [x] check WAR files have reasonable sizes (sizes as of 2016.2)
+  - `orbeon-auth.war` (4 KB)
+  - `orbeon-embedding.war` (1.4 MB)
+  - `proxy-portlet.war` (2.1 MB)
+  - `orbeon.war` (67.4 MB)
+- [ ] check CE zip doesn't have
+  - `orbeon-embedding.war`
+  - `proxy-portlet.war`
+- [ ] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
+    - [ ] Tomcat
+    - [ ] Liferay
 - [x] make sure the PE license is not included
 
 ### Landing Page \[2016.2 TODO\]
@@ -39,19 +41,19 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 check that all PE features are available in PE, but not in CE:
 
 - features which are checked
-    - [x] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
-    - [x] FB: no "Add Language" button
-    - [x] FB: check with CE that a PE dialog shows for
+    - [ ] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
+    - [ ] FB: no "Add Language" button
+    - [ ] FB: check with CE that a PE dialog shows for
         - Services
         - Actions
         - Attach PDF
         - Attach Schema
         - Permissions
-    - [x] FB: no Signature control in toolbox
-    - [x] FR: PDF Template button doesn't show for DMV-14 and W-9
-    - [x] FR: TIFF button doesn't show even if configured \[SINCE 2016.1\]
-    - [x] FR: Import page returns 404
-    - [x] FR: No remote server support in Form Runner home page
+    - [ ] FB: no Signature control in toolbox
+    - [ ] FR: PDF Template button doesn't show for DMV-14 and W-9
+    - [ ] FR: TIFF button doesn't show even if configured \[SINCE 2016.1\]
+    - [ ] FR: Import page returns 404
+    - [ ] FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml`
             ```xml
@@ -1436,17 +1438,17 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 Features to test, with all supported browsers:
 
-- [x] give CE version a quick run
-- [x] XForms filter
+- [ ] give CE version a quick run
+- [ ] XForms filter
     - `http://localhost:8080/2016.1-pe/xforms-jsp/guess-the-number/`
     - `http://localhost:8080/2016.1-pe/xforms-jsp/flickr-search/`
-- [x] examples-cli in distribution work (fix/remove them if not)
+- [ ] examples-cli in distribution work (fix/remove them if not)
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
     - `unzip -d orbeon orbeon.war`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/simple/stdout.xpl`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/transform/transform.xpl`
-- [x] check logs
+- [ ] check logs
     - no debug information
     - no unwanted information
     - be aware of [#849](https://github.com/orbeon/orbeon-forms/issues/849)
