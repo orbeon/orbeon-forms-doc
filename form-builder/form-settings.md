@@ -23,6 +23,8 @@ General settings allow you to set:
 
 Form options include options which apply to the entire form definition.
 
+![](images/form-settings-options.png)
+
 - [Singleton Form](../form-runner/advanced/singleton-form.md) 
 - [Wizard View](../form-runner/feature/wizard-view.md)
 - Appearance of Control Labels
@@ -35,7 +37,9 @@ Form options include options which apply to the entire form definition.
     - Tooltips: hints show as tooltips upon mouseover
 - Use Placeholder for Text Fields: hints show inline or as tooltips upon mouseover, but for input fields only, hints show as an HTML *placeholder* within the field when the field is empty
 
-![](images/form-settings-options.png)
+Here is how hints appear depending on the type of control they are associated with:
+
+![](../form-runner/images/placeholder-and-inline-hints.png)
 
 ## Form Statistics
 

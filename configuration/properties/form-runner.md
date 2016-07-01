@@ -318,6 +318,10 @@ Allowed values:
 - `tooltip`: hints show as tooltips upon mouseover
 - `tooltip minimal`: hints show as tooltips upon mouseover, but for input fields only, hints show as an HTML *placeholder* within the field when the field is empty
 
+Here is how hints appear depending on the type of control they are associated with:
+
+![](../../form-runner/images/placeholder-and-inline-hints.png)
+
 *LIMITATION: The `minimal` appearance is not supported on combined "Date and Time" fields and on text fields with "Character Counter" appearance.* 
 
 *NOTE: Only one `minimal` appearance can be used between `oxf.xforms.label.appearance` and `oxf.xforms.hint.appearance`. If both include `minimal`, the label wins.*
