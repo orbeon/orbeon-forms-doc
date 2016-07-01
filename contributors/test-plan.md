@@ -23,11 +23,11 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
   - `orbeon-embedding.war`
   - `proxy-portlet.war`
 - [ ] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
-    - [ ] Tomcat
+    - [x] Tomcat
     - [ ] Liferay
 - [x] make sure the PE license is not included
 
-### Landing Page \[2016.2 TODO\]
+### Landing Page \[2016.2 DONE\]
 
 - version number is correct in logs when starting
 - landing page
