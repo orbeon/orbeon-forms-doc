@@ -34,3 +34,15 @@ The `/fr/clerk/marriage-registration/new` in our example is what is referred to 
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/pdf/[DOCUMENT_ID]`
 * Read-only TIFF view: [SINCE Orbeon Forms 2016.1]
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/tiff/[DOCUMENT_ID]`
+
+## URL parameters
+
+### New empty form data
+
+When using versioning, you can pass the `form-version` URL parameter:
+
+```
+/fr/[APPLICATION_NAME]/[FORM_NAME]/new?form-version=2
+```
+
+By default, the latest available form definition version is used.
