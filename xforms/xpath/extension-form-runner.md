@@ -106,6 +106,26 @@ fr:is-wizard-body-shown() as xs:boolean
 
 Whether the wizard's body is visible.
 
+### fr:is-wizard-first-page()
+
+[SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:is-wizard-first-page() as xs:boolean
+```
+
+Whether the currently-shown wizard page is the first relevant page.
+
+### fr:is-wizard-last-page()
+
+[SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:is-wizard-last-page() as xs:boolean
+```
+
+Whether the currently-shown wizard page is the last relevant page.
+
 ### fr:is-wizard-toc-shown()
 
 ```xpath

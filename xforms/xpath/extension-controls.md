@@ -146,6 +146,18 @@ The `xxf:index()` function behaves like the standard XForms `index()` function, 
 </xf:repeat>
 ```
 
+## xxf:is-control-relevant()
+
+[SINCE Orbeon Forms 2016.3]
+
+```xpath
+xxf:is-control-relevant(
+    $control-id as xs:string
+) as xs:boolean
+```
+
+The `xxf:is-control-relevant()` function returns `true()` if and only if the controlled specified by `$control-id` exists and is relevant.
+
 ## xxf:itemset()
 
 ```xpath
