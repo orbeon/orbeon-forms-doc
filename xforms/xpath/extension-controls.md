@@ -398,7 +398,7 @@ See also: [Upload control][?]
 
 ## xxf:repeat-current()
 
-_NOTE: You can often use [`xxf:context()`][2] or the XForms 1.1 `context()` function instead._
+_NOTE: You can often use [`xxf:context()`](#xxfcontext) or the XForms 1.1 `context()` function instead._
 
 ```xpath
 xxf:repeat-current(
