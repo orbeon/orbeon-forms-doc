@@ -12,15 +12,16 @@ Form Builder has localization support. This means that your form's titles, label
 
 By default, only one language is present, typically English. The default language is configurable by the Form Builder system administrator. By pressing the "+" icon, a dropdown dialog shows. The dropdown list allows you to pick a new language to add to the list of languages of the form.
 
+![Adding a language](images/language-add.png)
+
 When a new language is added:
 
 - It appears in the list of languages at the top right corner of the WYSIWYG area
 - All the resources of the previously selected language are copied into the new language
 
-You switch between languages by clicking on the language to select:
+You switch between languages by clicking on the language selector.  All localizable resources edits impact the currently selected language.
 
-- The currently selected language is recognizable because it does not appear like an underlined link.
-- All localizable resources edits impact the currently selected language.
+![Selecting a language](images/language-select.png)
 
 You can remove the currently selected language by pressing the "-" icon. This will remove all the resources associated with that language, so you must be careful before proceeding. A warning dialog will appear before the deletion is completed.
 
