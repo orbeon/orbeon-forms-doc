@@ -2,7 +2,11 @@
 
 The "Edit Source" button in the toolbox opens the "Edit Source" dialog.
 
-Form Builder uses XHTML+XForms as form definition representation. The format must be well-formed XML. The dialog shows a text area containing that representation.
+![Edit Source button](images/edit-source-button.png)
+
+Form Builder uses XHTML+XForms as form definition representation. The format must be well-formed XML. The dialog shows a text editor containing that representation.
+
+![Source editor](images/edit-source-editor.png)
 
 It is possible to edit the XML representation in the dialog, or to copy/paste it to an external editor for further changes. After saving changes from the dialog, those are immediately taken into account by Form Builder.
 
