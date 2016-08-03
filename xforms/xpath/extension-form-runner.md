@@ -217,5 +217,8 @@ fr:username() as xs:string?
 
 Return the current user's username if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
-
 *NOTE: This function is also available as `xxf:username()`. Prefer the Form Runner function with the `fr:` namespace prefix.*
+
+## See also
+
+- Blog post: [A stable function library for Form Runner](http://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)

@@ -114,6 +114,7 @@ As of 2016-04-19 this page is still being updated.
 - Captcha: [properties doc](configuration/properties/form-runner.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 - Appearance of repeated sections: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-repeated-sections), [component doc](http://doc.orbeon.com/form-runner/component/grid.html#repeated-mode)
 - Appearance of repeated grids: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-grids-sections), [component doc](http://doc.orbeon.com/form-runner/component/section.html#repeated-mode)
+- Stable function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](http://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
 
 ### Form controls
 
