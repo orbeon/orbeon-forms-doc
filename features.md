@@ -29,6 +29,7 @@ As of 2016-04-19 this page is still being updated.
 - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
 - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
     - overwriting of existing version
+    - associating a comment with a given form version
 - Form field validation: [doc](form-builder/validation.md), [blog post](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
     - required fields (also via formula, see [blog post](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html))
     - whitespace trimming: [doc](form-builder/validation.md#trimming-leading-and-trailing-spaces), [blog post](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
@@ -96,6 +97,9 @@ As of 2016-04-19 this page is still being updated.
         - validated mode: [blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
         - highlighting of sections in error/accessible sections
         - buttons appearing only on the wizard's last page
+        - status information for each section
+        - subsection navigation
+        - optional separate table of contents 
 - Home Page: [doc](form-runner/feature/home-page.md), [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
 - Buttons and Processes: [doc](form-runner/advanced/buttons-and-processes/README.md), [blog post](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
 - Autosave: [doc](form-runner/persistence/autosave.md), [blog post](http://blog.orbeon.com/2013/10/autosave.html)

@@ -38,7 +38,9 @@ You can overwrite not only the latest published version, but any previous versio
 
 [SINCE Orbeon Forms 2016.2]
 
-You can add or update a textual comment associated with the given published version. Adding a comment is not required. When creating a new version, the field is initially empty:
+You can add or update a textual comment associated with the given published version. Adding a comment is not required, but setting a comment can help the form author understand what changes a given form version includes.
+
+When creating a new version, the field is initially empty:
 
 ![Empty comment](images/publish-comment-1.png)
 
