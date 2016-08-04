@@ -119,6 +119,19 @@ The following buttons are automatically hidden until the wizard shows the last t
 - `tiff`
 - `email`
 
+## Section status
+
+[SINCE Orbeon Forms 2016.2]
+
+The wizard indicates, in the table of contents, the status of each section:
+
+- __Not Started:__ the user hasn't visited the section yet.
+- __Incomplete:__ the user has visited the section but some required fields are not filled.
+- __Errors:__ the user has visited the section and some fields have been filled but contain errors.
+- __Complete:__ the user has visited the section and all the required fields for the section have been filled. 
+
+![Wizard validated mode](../images/wizard-status.png)
+
 ## Separate table of contents
 
 [SINCE Orbeon Forms 2016.2]
