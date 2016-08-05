@@ -4,6 +4,8 @@
 
 ## Overview
 
+A lot can happen when you interact with an XForms page: events are dispatched, actions executed, submissions sent, and more. While you can have some visibility on those by enabling [XForms logging](../../configuration/advanced/xforms-logging.md) in Orbeon Forms, an important part of the state of an XForms page is simply contained in the various XForms instances that you define in your page.
+
 The XForms Inspector allows you to:
 
 1. See the "live" content of your instances as you interact with the form.
@@ -11,6 +13,14 @@ The XForms Inspector allows you to:
 3. See what is logged by your form to the XForms inspector console (_experimental_).
 
 ![](images/xbl-xforms-inspector.png)
+
+## Configuration
+
+You can enable the XForms Inspector in one of two ways:
+
+- For a specific page, by adding the following code in your XForms: `<fr:xforms-inspector/>`. If you don't have the "fr" prefix in scope, instead of declaring that prefix globally, you can declare it locally: `<fr:xforms-inspector xmlns:fr="http://orbeon.org/oxf/xml/form-runner"/>`.
+- For all your pages, by setting the following property to `true`:
+`<property as="xs:boolean" name="oxf.epilogue.xforms.inspector" value="true"/>`.
 
 ## The console
 
