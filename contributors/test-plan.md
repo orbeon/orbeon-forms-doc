@@ -70,7 +70,7 @@ check that all PE features are available in PE, but not in CE:
             </property>
              ```
         - in `web.xml` uncomment authentication section
-        - access `http://localhost:8080/2016.1-ce/fr/`
+        - access `http://localhost:8080/2016.2-ce/fr/`
         - login with user with the `orbeon-user` role
         - check doesn't ask user for remote servers and only loads local form definitions
 - features which are not checked yet but should be
@@ -85,7 +85,7 @@ check that all PE features are available in PE, but not in CE:
         - in `properties-local.xml` add
             - `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
             - the properties for the private/public key
-        - access http://localhost:8080/2016.1-pe/fr/orbeon/bookshelf/new
+        - access http://localhost:8080/2016.2-pe/fr/orbeon/bookshelf/new
         - check the captcha isn't shown
 - Check other features listed on the [web site](http://www.orbeon.com/download)
 
@@ -117,7 +117,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
     - then change app name
 - Pages
     - FB: create form, publish
-    - FR: check it shows on http://localhost:8080/2016.1-pe/fr/
+    - FR: check it shows on http://localhost:8080/2016.2-pe/fr/
     - FR: create new form, review, back to edit ([#1643](https://github.com/orbeon/orbeon-forms/issues/1643))
     - FR: enter data, save
     - FR: check it shows in the summary page
@@ -424,7 +424,7 @@ Setup permissions e.g. in `tomcat-users.xml`:
 Authorize on:
 
 ```
-http://localhost:8080/2016.1-pe/fr/auth
+http://localhost:8080/2016.2-pe/fr/auth
 ```
 
 - Autosave with permissions
@@ -612,15 +612,15 @@ drop table orbeon_form_data_attach ;
     - [x] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
         - add lang not fully supported (e.g. Afrikaans) , remove all other languages, enter some labels
         - Test and Publish/new -> must show Afrikaans labels, not blank
-- FB Summary page
+- [x] FB Summary page
     - check that search in Summary page updates title/description when FR language is changed (e.g. on Bookshelf)
     - be aware of [#2348](https://github.com/orbeon/orbeon-forms/issues/2348)
-- set form title/description
-- test form
-- save
-- publish form
+- [x] set form title/description
+- [x] test form
+- [x] save
+- [x] publish form
     - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
-- warning dialog if attempt to close page when unsaved
+- [x] warning dialog if attempt to close page when unsaved
 - serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
     - set properties
     ```xml
@@ -633,9 +633,9 @@ drop table orbeon_form_data_attach ;
         name="oxf.xforms.cache.static-state.size"
         value="1"/>
     ```
-    - in 1st tab, visit http://localhost:8080/2016.1-pe/fr/orbeon/builder/new
+    - in 1st tab, visit http://localhost:8080/2016.2-pe/fr/orbeon/builder/new
     - enter a/a to go to editor
-    - in 2nd tab, visit http://localhost:8080/2016.1-pe/fr/orbeon/contact/new
+    - in 2nd tab, visit http://localhost:8080/2016.2-pe/fr/orbeon/contact/new
     - back to 1st tab
     - insert control
     - check there is no JS error
@@ -827,7 +827,7 @@ drop table orbeon_form_data_attach ;
     ```
 - browser 1
     - clear cookies
-    - `http://localhost:8080/2016.1-pe/fr/orbeon/builder/new`
+    - `http://localhost:8080/2016.2-pe/fr/orbeon/builder/new`
     - login as `orbeon-sales`
     - must see guest and sales as app names
     - create sales/my-sales-form
@@ -836,8 +836,8 @@ drop table orbeon_form_data_attach ;
         - orbeon-sales → Read and Update
     - save and publish
     - can access
-        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/summary
-        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new
+        - http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/summary
+        - http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/new
     - new
         - enter data and save
     - summary
@@ -845,7 +845,7 @@ drop table orbeon_form_data_attach ;
         - check can edit and duplicate
         - check Delete button is disabled
         - check PDF works
-    - `http://localhost:8080/2016.1-pe/fr/`
+    - `http://localhost:8080/2016.2-pe/fr/`
         - sales/my-sales-form shows on the home page
         - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
@@ -855,19 +855,19 @@ drop table orbeon_form_data_attach ;
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
-    - `http://localhost:8080/2016.1-pe/fr/orbeon/builder/summary`
+    - `http://localhost:8080/2016.2-pe/fr/orbeon/builder/summary`
         - open structured search (be aware of  [#878](https://github.com/orbeon/orbeon-forms/issues/878))
         - check only guest and sales forms are available
 - browser 2
     - clear cookies
     - login as orbeon-user
     - can access
-        - `http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new`
+        - `http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/new`
     - can't access
-        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/summary (403)
-        - http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/edit/... (403)
+        - http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/summary (403)
+        - http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
-    - `http://localhost:8080/2016.1-pe/fr/`
+    - `http://localhost:8080/2016.2-pe/fr/`
         - NO admin ops for sales/my-sales-form
         - BUT admin ops for `guest/*` (create a `guest/test-guest` form)
         - CAN click on line and takes to `/new`
@@ -877,8 +877,8 @@ drop table orbeon_form_data_attach ;
     - check can still new/edit/view
 - browser 2
     - can't access
-        - `http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/new` (403)
-    - http://localhost:8080/2016.1-pe/fr/
+        - `http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/new` (403)
+    - http://localhost:8080/2016.2-pe/fr/
         - form not visible
 - browser 1
     - re-add Anyone → Create
@@ -886,7 +886,7 @@ drop table orbeon_form_data_attach ;
     - check nothing changed
         - well, can do `/new` from Home
 - browser 2
-    - can access `http://localhost:8080/2016.1-pe/fr/sales/my-sales-form/summary`, but only see own data as readonly
+    - can access `http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/summary`, but only see own data as readonly
     - /new, save
     - Summary shows forms in readonly mode
 - access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
@@ -1134,7 +1134,7 @@ drop table orbeon_form_data_attach ;
 
 *See also Form Builder permissions above which already tests some of this.*
 
-- `http://localhost:8080/2016.1-pe/fr/` lists deployed forms
+- `http://localhost:8080/2016.2-pe/fr/` lists deployed forms
 - comment all roles in form-builder-permissions.xml
 - no admin buttons/actions show
 - changing language to French works
@@ -1200,7 +1200,7 @@ drop table orbeon_form_data_attach ;
 
 ### Summary Page \[2016.2 TODO\]
 
-- e.g. `http://localhost:8080/2016.1-pe/fr/orbeon/bookshelf/summary`
+- e.g. `http://localhost:8080/2016.2-pe/fr/orbeon/bookshelf/summary`
 - list forms
 - paging
   - create more than 10 instances if necessary
@@ -1219,7 +1219,7 @@ drop table orbeon_form_data_attach ;
 
 ### Excel Import \[2016.2 TODO\]
 
-- `http://localhost:8080/2016.1-pe/fr/orbeon/contact/import`
+- `http://localhost:8080/2016.2-pe/fr/orbeon/contact/import`
 - import small doc first (`contact5.xlsx` on Dropbox)
   - check 2 out of  5 docs invalid
   - continue and check import passes: 3 documents were imported
@@ -1284,10 +1284,10 @@ drop table orbeon_form_data_attach ;
     ```xml
     <init-param>
         <param-name>form-runner-url</param-name>
-        <param-value>http://localhost:8080/2016.1-pe</param-value>
+        <param-value>http://localhost:8080/2016.2-pe</param-value>
     </init-param>
     ````
-- navigate to `http://localhost:8080/2016.1-pe-embedding/`
+- navigate to `http://localhost:8080/2016.2-pe-embedding/`
 - go through demo forms and test
   - enter data
   - Save
@@ -1326,7 +1326,7 @@ drop table orbeon_form_data_attach ;
             value="2000"/>
         ```
     - open
-        - `http://localhost:8080/2016.1-pe/xforms-sandbox/sample/dispatch-delay`
+        - `http://localhost:8080/2016.2-pe/xforms-sandbox/sample/dispatch-delay`
         - in Chrome, open the Dev Tools, go to the Network tab (or use HttpScoop or Charles)
         - hit the *Manual save* button
         - check after ~10 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 10 s have elapsed)
@@ -1375,11 +1375,11 @@ drop table orbeon_form_data_attach ;
     - check the client re-executes the request
 5. File upload
     - setup
-        - enable breakpoint on response for `/2016.1-pe/xforms-server/upload`
+        - enable breakpoint on response for `/2016.2-pe/xforms-server/upload`
         - enable throttling in Charles per the following configuration
           ![](images/test-charles-throttling.png)
         - download [this image](http://placekitten.com/g/2000/2000) (~200 KB)
-    - `http://localhost:8080/2016.1-pe/xforms-upload/`
+    - `http://localhost:8080/2016.2-pe/xforms-upload/`
     - select image, and upload start in the background
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
@@ -1403,15 +1403,17 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 ### Other Browsers \[2016.2 TODO\]
 
 - main tests above with Google Chrome
-  - 2016.1: latest is 49.0.2623.112
-  - 4.10: latest is ??? and 46.0.2490.4 dev
-  - 4.9: latest is 42.0.2311.135
-  - 4.8: latest is 39.0.2171.95 and 41.0.2267.0 dev
-  - 4.7: latest is 37.0.2062.122
-  - 4.6: latest is 37.0.2062.0 dev
-  - 4.5: latest is 35.0.1897.8 dev
+  - 2016.2: TODO
+  - 2016.1: 49.0.2623.112
+  - 4.10: ??? and 46.0.2490.4 dev
+  - 4.9: 42.0.2311.135
+  - 4.8: 39.0.2171.95 and 41.0.2267.0 dev
+  - 4.7: 37.0.2062.122
+  - 4.6: 37.0.2062.0 dev
+  - 4.5: 35.0.1897.8 dev
 - Form Builder / Form Runner run with
     - latest Firefox
+      - 2016.2: 48.0
       - 2016.1: 45.0.2
       - 4.10: 40.0.2
       - 4.8: 37.0.1
@@ -1420,6 +1422,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - 4.6: 30
       - 4.5: 27.0.1 and 28
     - latest Safari
+      - 2016.2: 9.1.1 (11601.6.17)
       - 2016.1: 9.1 (11601.5.17.1)
       - 4.9: 8.0.5 (10600.5.17)
       - 4.8: 8.0.2 (10600.2.5)
@@ -1428,6 +1431,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - 4.5: 7.0.2
     - IE11 (since 4.5)
     - Edge
+        - 2016.2
+            - TODO
         - 2016.1
             - Edge 25.10586.0.0
             - EdgeHTML 123.10586
@@ -1442,8 +1447,8 @@ Features to test, with all supported browsers:
 
 - [ ] give CE version a quick run
 - [ ] XForms filter
-    - `http://localhost:8080/2016.1-pe/xforms-jsp/guess-the-number/`
-    - `http://localhost:8080/2016.1-pe/xforms-jsp/flickr-search/`
+    - `http://localhost:8080/2016.2-pe/xforms-jsp/guess-the-number/`
+    - `http://localhost:8080/2016.2-pe/xforms-jsp/flickr-search/`
 - [ ] examples-cli in distribution work (fix/remove them if not)
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
