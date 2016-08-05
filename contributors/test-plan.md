@@ -568,17 +568,17 @@ drop table orbeon_form_data_attach ;
     - [x] insert/move/remove iterations
     - [x] set min/max as ints
     - [x] set min/max as XPath expressions, e.g. `1 + 2`
-- set control label, hint, items
+- [x] set control label, hint, items
     - [x] plain
     - [x] HTML
     - [x] check HTML label appears correct in summary page / search
     - [x] placeholder labels
     - [x] placeholder hints
-- set control help ([lorem ipsum](http://www.lipsum.com/))
+- [x] set control help ([lorem ipsum](http://www.lipsum.com/))
     - [x] plain
     - [x] HTML
     - [x] check help icon appears when help is set, and disappears when help is blanked
-- set section help
+- [x] set section help
     - [x] check help icon appears when help is set, and disappears when help is blanked ([#1160](https://github.com/orbeon/orbeon-forms/issues/1160) is a known issue)
 - [x] cut/copy/paste
     - copy control with help, required, constraint, and warning
@@ -586,7 +586,7 @@ drop table orbeon_form_data_attach ;
     - check in source that all elements have been renamed
       - including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
       - including `@validation` and `xf:constraint/@id` (see [#1785](https://github.com/orbeon/orbeon-forms/issues/1785))
-  - check that form runs and new control validates constraints properly
+    - check that form runs and new control validates constraints properly
 - [x] set control validation
     - set custom error constraint and alert
     - set custom warning constraint and alert
@@ -621,7 +621,7 @@ drop table orbeon_form_data_attach ;
 - [x] publish form
     - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
 - [x] warning dialog if attempt to close page when unsaved
-- serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
+- [x] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
     - set properties
     ```xml
     <property
