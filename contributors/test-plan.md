@@ -19,7 +19,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
   - `orbeon-embedding.war` (1.4 MB)
   - `proxy-portlet.war` (2.1 MB)
   - `orbeon.war` (67.4 MB)
-- [ ] check CE zip doesn't have
+- [x] check CE zip doesn't have
   - `orbeon-embedding.war`
   - `proxy-portlet.war`
 - [ ] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
