@@ -552,7 +552,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder
 
-### Basic Features \[2016.2 TODO\]
+### Basic Features \[2016.2 DONE\]
 
 - [x] create new form
 - [x] insert sections, grids, repeated grids
