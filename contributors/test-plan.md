@@ -662,7 +662,7 @@ drop table orbeon_form_data_attach ;
     - check that validation is working as per the types
     - check schema types are reloaded in Control Settings dialog
 
-### Database service \[2016.2 TODO\]
+### Database service \[2016.2 TODO ERIK\]
 
 - setup db
     - use MySQL on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
@@ -697,7 +697,7 @@ drop table orbeon_form_data_attach ;
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service \[2016.2 TODO\]
+### HTTP service \[2016.2 TODO ERIK\]
 
 - using echo service is ok
     - POST to `/fr/service/custom/orbeon/echo`
@@ -716,7 +716,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2016.2 TODO\]
+### Section Templates \[2016.2 TODO ERIK\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
@@ -752,7 +752,7 @@ drop table orbeon_form_data_attach ;
 - make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10, works as of 2016.1)
 - makes invalid controls in section template prevent saving
 
-### PDF Automatic \[2016.2 TODO\]
+### PDF Automatic \[2016.2 TODO ERIK\]
 
 - Controls and Bookshelf: input field and text areas have highlighted and clickable links
 - Controls: image annotation shows in PDF
@@ -761,7 +761,7 @@ drop table orbeon_form_data_attach ;
 - page numbering/total at bottom center
 - PDF looks good overall
 
-### PDF Template \[2016.2 TODO\]
+### PDF Template \[2016.2 TODO ERIK\]
 
 - attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - add field "name" in section "applicant"
