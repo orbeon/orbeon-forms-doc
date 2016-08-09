@@ -931,7 +931,7 @@ drop table orbeon_form_data_attach ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2016.2 TODO ERIK\]
+### Process buttons \[2016.2 DONE\]
 
 - create and publish guest/test
     - 1 required field
@@ -950,7 +950,7 @@ drop table orbeon_form_data_attach ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2016.2 TODO ERIK\]
+### Attachments/uploads \[2016.2 DONE\]
 
 - basic upload works
 - removing uploaded file works
