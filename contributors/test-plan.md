@@ -972,28 +972,27 @@ drop table orbeon_form_data_attach ;
     - cancel midway works
     - progress indicator works
 
-### Submit \[2016.2 TODO ERIK\]
+### Submit \[2016.2 DONE\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.submit.go.uri-xpath.*.*"
-    value="'http://xformstest.org/cgi-bin/echo.sh'"/>
-<property
-    as="xs:string"
-    name="oxf.fr.detail.buttons.*.*"
-    value="home summary review save-draft save-final save submit workflow-send"/>
-```
+    ```xml
+    <property
+        as="xs:string"
+        name="oxf.fr.detail.submit.go.uri-xpath.*.*"
+        value="'http://xformstest.org/cgi-bin/echo.sh'"/>
+    <property
+        as="xs:string"
+        name="oxf.fr.detail.buttons.*.*"
+        value="home summary review save-draft save-final save submit workflow-send"/>
+    ```
 - FR: in new page, click Submit then
     - clear and close
     - keep values and close
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2016.2 TODO ERIK\]
+### Email \[2016.2 DONE\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1022,28 +1021,37 @@ drop table orbeon_form_data_attach ;
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2016.2 TODO ERIK\]
+### Misc \[2016.2 DONE\]
 
 - switch language
-- open/close sections
+- open/close sections (but not with wizard)
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode \[2016.2 TODO ERIK\]
+### Noscript mode \[2016.2 DONE\]
+
+*NOTE: The noscript mode still works mostly, but has an increasing number of issues. We might consider simply deprecating it. *
 
 - orbeon/contact
+- Contact form
+    - property
+        ```xml
+        <property as="xs:string"
+            name="oxf.fr.detail.buttons.orbeon.contact"
+            value="refresh clear save pdf review"/>
+        ```
+    - Clear clears right away
+    - PDF stays in tab
+        - *NOTE: PDF not showing with 2016.2 (was it also with 2016.1?). [#2869](https://github.com/orbeon/orbeon-forms/issues/2869)*
+    - errors prevent saving
+    - Refresh icon works
+    - go to form with `?fr-noscript=true`
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
-- go to form with ?fr-noscript=true
 - test w/ new form w/ image & file attachments
     - attachments work [NOTE: be aware of [#1405](https://github.com/orbeon/orbeon-forms/issues/1405)]
 - be aware of
     - [#2355](https://github.com/orbeon/orbeon-forms/issues/2355)
     - [#2356](https://github.com/orbeon/orbeon-forms/issues/2356)
-- Contact form
-    - Clear clears right away
-    - PDF stays in tab
-    - errors prevent saving
-    - Refresh icon works
 
 ### Wizard \[2016.2 TODO ERIK\]
 
