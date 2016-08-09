@@ -899,7 +899,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Runner
 
-### Sample forms \[2016.2 TODO\]
+### Sample forms \[2016.2 TODO ERIK\]
 
 - load all
 - Controls
@@ -920,7 +920,7 @@ drop table orbeon_form_data_attach ;
 - DMV-14
   - PDF template works
 
-### Errors and warnings \[2016.2 TODO\]
+### Errors and warnings \[2016.2 TODO ERIK\]
 
 - FB: create form
     - required field
@@ -933,7 +933,7 @@ drop table orbeon_form_data_attach ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2016.2 TODO\]
+### Process buttons \[2016.2 TODO ERIK\]
 
 - create and publish guest/test
     - 1 required field
@@ -952,7 +952,7 @@ drop table orbeon_form_data_attach ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2016.2 TODO\]
+### Attachments/uploads \[2016.2 TODO ERIK\]
 
 - basic upload works
 - removing uploaded file works
@@ -974,7 +974,7 @@ drop table orbeon_form_data_attach ;
     - cancel midway works
     - progress indicator works
 
-### Submit \[2016.2 TODO\]
+### Submit \[2016.2 TODO ERIK\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -995,7 +995,7 @@ drop table orbeon_form_data_attach ;
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2016.2 TODO\]
+### Email \[2016.2 TODO ERIK\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1024,14 +1024,14 @@ drop table orbeon_form_data_attach ;
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2016.2 TODO\]
+### Misc \[2016.2 TODO ERIK\]
 
 - switch language
 - open/close sections
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode \[2016.2 TODO\]
+### Noscript mode \[2016.2 TODO ERIK\]
 
 - orbeon/contact
 - create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
@@ -1047,8 +1047,9 @@ drop table orbeon_form_data_attach ;
     - errors prevent saving
     - Refresh icon works
 
-### Wizard \[2016.2 TODO\]
+### Wizard \[2016.2 TODO ERIK\]
 
+- `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
 - validated mode
     - `/fr/orbeon/w9/new`
     - check cannot click in TOC
@@ -1058,8 +1059,29 @@ drop table orbeon_form_data_attach ;
 - /fr/orbeon/controls/new
     - test errors in section template are highlighted in TOC
 - check that Form Builder's Wizard option enables/disables the wizard
+- separate TOC
+    ```xml
+    <property 
+        as="xs:boolean" 
+        name="oxf.xforms.xbl.fr.wizard.separate-toc.wizard.*"    
+        value="true"/>
+    ```
+- subsection navigation 
+    ```xml
+    <property 
+        as="xs:boolean" 
+        name="oxf.xforms.xbl.fr.wizard.subsections-nav.wizard.*" 
+        value="true"/>
+    ```
+- TOC subsections
+    ```xml
+    <property 
+        as="xs:string"  
+        name="oxf.xforms.xbl.fr.wizard.subsections-toc.wizard.*" 
+        value="all"/>
+    ```
 
-### Captcha \[2016.2 TODO\]
+### Captcha \[2016.2 TODO ERIK\]
 
 - enable with property
 
