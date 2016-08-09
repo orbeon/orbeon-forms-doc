@@ -773,7 +773,7 @@ drop table orbeon_form_data_attach ;
 - change
 - remove PDF
   - publish and test, must see notemplate PDF/TIFF
-- check that DMV-14 PDF is filled out
+- check that DMV-14 PDF works and is filled out
   - check Vote and Leased checkboxes
 - W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
@@ -899,10 +899,10 @@ drop table orbeon_form_data_attach ;
 
 ## Form Runner
 
-### Sample forms \[2016.2 TODO ERIK\]
+### Sample forms \[2016.2 DONE\]
 
-- load all
-- Controls
+- [x] load all
+- [x] Controls
     - wizard navigation
     - autocomplete works
     - dynamic data dropdown loads data
@@ -910,15 +910,13 @@ drop table orbeon_form_data_attach ;
     - check wrapping in view/pdf modes
         - enter [Lorum Ipsum](http://www.lipsum.com/feed/html) in input field
         - enter long text without space in input field and textarea
-- Bookshelf
-    - Summary: see Summary page tests
+- [x] Bookshelf
     - Detail
         - help works
         - review and back works
         - add/remove repeats works
+            - also with keyboard
         - change lang works
-- DMV-14
-  - PDF template works
 
 ### Errors and warnings \[2016.2 TODO ERIK\]
 
