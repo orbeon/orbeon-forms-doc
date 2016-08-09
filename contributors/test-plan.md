@@ -918,7 +918,7 @@ drop table orbeon_form_data_attach ;
             - also with keyboard
         - change lang works
 
-### Errors and warnings \[2016.2 TODO ERIK\]
+### Errors and warnings \[2016.2 DONE\]
 
 - FB: create form
     - required field
