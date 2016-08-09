@@ -752,27 +752,29 @@ drop table orbeon_form_data_attach ;
 - make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10, works as of 2016.1)
 - makes invalid controls in section template prevent saving
 
-### PDF Automatic \[2016.2 TODO ERIK\]
+### PDF Automatic \[2016.2 DONE\]
 
-- Controls and Bookshelf: input field and text areas have highlighted and clickable links
-- Controls: image annotation shows in PDF
+- Controls and Bookshelf
+    - input field and text areas have highlighted and clickable links
+    - try TIFF output as well
+- Controls
+    - image annotation shows in PDF
+        - *NOTE: Disabled in 2016.1 and 2016.2.* 
 - form title in header/footer
 - logo in title
 - page numbering/total at bottom center
 - PDF looks good overall
 
-### PDF Template \[2016.2 TODO ERIK\]
+### PDF Template \[2016.2 DONE\]
 
 - attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - add field "name" in section "applicant"
-- publish and test that name appears in PDF
+- publish and test that name appears in PDF and TIFF
 - change
 - remove PDF
-  - publish and test, must see notemplate PDF
+  - publish and test, must see notemplate PDF/TIFF
 - check that DMV-14 PDF is filled out
   - check Vote and Leased checkboxes
-- email PDF
-  - check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
 - W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
@@ -1019,6 +1021,7 @@ drop table orbeon_form_data_attach ;
 - hit Email button
   - check email received
   - contains attachments, XML, PDF and TIFF [SINCE 2016.1]
+  - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
 ### Misc \[2016.2 TODO\]
