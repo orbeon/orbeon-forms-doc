@@ -1110,7 +1110,7 @@ drop table orbeon_form_data_attach ;
     - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2016.2 TODO\]
+### Help popups/hint tooltips positioning \[2016.2 TODO ERIK\]
 
 - create form to test general positioning
   - help on all elements
@@ -1121,7 +1121,7 @@ drop table orbeon_form_data_attach ;
 - test Bookshelf help
 - create form with fields, including checkboxes/radio buttons
 
-### Mobile and Responsive \[2016.2 TODO\]
+### Mobile and Responsive \[2016.2 TODO ERIK\]
 
 *NOTE: Summary and Home are not responsive as of 2016.1.*
 
