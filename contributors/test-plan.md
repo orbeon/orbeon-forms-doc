@@ -716,7 +716,7 @@ drop table orbeon_form_data_attach ;
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2016.2 TODO ERIK\]
+### Section Templates \[2016.2 DONE\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
