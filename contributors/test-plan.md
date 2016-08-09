@@ -662,7 +662,7 @@ drop table orbeon_form_data_attach ;
     - check that validation is working as per the types
     - check schema types are reloaded in Control Settings dialog
 
-### Database service \[2016.2 TODO ERIK\]
+### Database service \[2016.2 DONE\]
 
 - setup db
     - use MySQL on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
@@ -697,7 +697,7 @@ drop table orbeon_form_data_attach ;
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service \[2016.2 TODO ERIK\]
+### HTTP service \[2016.2 DONE\]
 
 - using echo service is ok
     - POST to `/fr/service/custom/orbeon/echo`
