@@ -130,17 +130,11 @@ Do the following for eXist and DB2. We do not test other relational databases he
     - FR: deployed form loads image
     - FR: attach file, save, edit
 - Search
-    - FB: check summary/search field, save and deploy
     - FR: create new form data, see in summary
     - FR: search free-text and structured
     - FR: delete data in summary page works
 - Duplicate
     - FR: Summary: Duplicate button works
-        - data for latest form
-        - older data
-- Home page, with all persistence layers active
-    - go to /fr/
-    - check that form definitions from all persistence layers show
 
 ### Versioning \[2016.2 TODO ALEX\]
 
