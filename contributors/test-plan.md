@@ -91,7 +91,7 @@ check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-###  Basic Persistence \[2016.2 Alex TODO\]
+###  Basic Persistence \[2016.2 TODO ALEX\]
 
 Do the following for eXist and DB2. We do not test other relational databases here, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases.
 
@@ -141,7 +141,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
     - go to /fr/
     - check that form definitions from all persistence layers show
 
-### Versioning \[2016.2 TODO\]
+### Versioning \[2016.2 TODO ALEX\]
 
 Do the following on DB2.
 
@@ -269,7 +269,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite
 
-### Data Capture Permissions \[2016.2 TODO\]
+### Data Capture Permissions \[2016.2 TODO ALEX\]
 
 ####  Setup
 
@@ -367,7 +367,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - delete button enabled and works
                 - on open data, can edit data
 
-### Autosave and Permissions Test \[2016.2 TODO\]
+### Autosave and Permissions Test \[2016.2 TODO ALEX\]
 
 Repeat what follows with Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
 
@@ -482,7 +482,7 @@ http://localhost:8080/2016.2-pe/fr/auth
     1. Go back to /edit
     1. Dialog must propose loading draft
 
-### DB2 DDL \[2016.2 TODO\]
+### DB2 DDL \[2016.2 TODO ALEX\]
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
@@ -498,7 +498,7 @@ drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
 ```
 
-### Flat View \[2016.2 TODO\]
+### Flat View \[2016.2 TODO ALEX\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
