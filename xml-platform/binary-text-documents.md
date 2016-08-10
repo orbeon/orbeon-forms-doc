@@ -90,7 +90,7 @@ Processors can stream binary and text documents by issuing a number of short cha
 [2]: http://www.ietf.org/rfc/rfc2045.txt
 [3]: processors/url-generator.md
 [4]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-converters
-[5]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-serializers-http
+[5]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-http-serializer
 [6]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-email
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-xslt-jaxp
   
