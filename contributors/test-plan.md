@@ -112,7 +112,8 @@ Do the following for eXist and DB2. We do not test other relational databases he
         value="GET HEAD"/>
     ```
 - Create forms: same form in all apps: `exist/a`, `db2/a`
-    - add static image
+    - change the input field to be shown in summary and search
+    - add a static image, attach and image
     - use Duplicate button in FB Summary
     - then change app name
 - Pages
@@ -122,10 +123,10 @@ Do the following for eXist and DB2. We do not test other relational databases he
     - FR: enter data, save
     - FR: check it shows in the summary page
 - Attachments
-    - FB: attach static image to form
     - FB: add file attachment field
     - FB: save and publish
         - DB2: be aware of [#1409](https://github.com/orbeon/orbeon-forms/issues/1409)
+	- \[TODO: arrived here\]
     - FR: deployed form loads image
     - FR: attach file, save, edit
 - Search
