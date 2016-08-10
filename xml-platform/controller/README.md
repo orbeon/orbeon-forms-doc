@@ -30,4 +30,4 @@ Starting Orbeon Forms 4.0, the following elements and attributes are introduced:
 If you are using builds prior to that date, including Orbeon Forms 3.9 and 3.9.1, you must use the old attributes. Starting Orbeon Forms 4.0, you should use the new attributes.
 
 [1]: ../../images/legacy/reference-controller-oxf-app.png
-[2]: http://wiki.orbeon.com/forms/doc/developer-guide/integration-packaging#main-processor
+[2]: http://wiki.orbeon.com/forms/doc/developer-guide/packaging-and-deployment#main-processor

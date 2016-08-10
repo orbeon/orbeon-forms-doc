@@ -201,10 +201,10 @@ Then an XSLT view can display the content of the `<name>` element as follows:
 </html>
 ```
 
-[3]: http://wiki.orbeon.com/forms/doc/developer-guide/integration-packaging
+[3]: http://wiki.orbeon.com/forms/doc/developer-guide/packaging-and-deployment
 [4]: #page-navigation
 [5]: authorization-of-pages-and-services.md
 [6]: ../resources/resource-managers.md
 [7]: ../../images/legacy/reference-controller-mvc.png
-[8]: http://wiki.orbeon.com/forms/doc/developer-guide/reference-epilogue
-[9]: http://wiki.orbeon.com/forms/doc/developer-guide/reference-xpl-pipelines
+[8]: http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue
+[9]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl

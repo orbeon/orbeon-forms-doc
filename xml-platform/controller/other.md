@@ -109,9 +109,9 @@ Other errors (#2 above) are not directly handled by the PFC. Instead, they are h
 
 See [Packaging and Deployment][3] for more information about configuring error processors.
 
-[3]: http://wiki.orbeon.com/forms/doc/developer-guide/integration-packaging
-[8]: http://wiki.orbeon.com/forms/doc/developer-guide/reference-epilogue
-[9]: http://wiki.orbeon.com/forms/doc/developer-guide/reference-xpl-pipelines
+[3]: http://wiki.orbeon.com/forms/doc/developer-guide/packaging-and-deployment
+[8]: http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue
+[9]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl
 [11]: #matchers
 [22]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-other#resource-server
 [23]: ../../images/legacy/reference-controller-epilogue.png

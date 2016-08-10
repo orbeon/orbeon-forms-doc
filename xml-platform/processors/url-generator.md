@@ -414,5 +414,5 @@ In this case, the URL resolves to: `oxf:/documents/claim.xml`.
 [1]: ../resources/resource-managers.md
 [2]: ../binary-text-documents.md#text-documents
 [3]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-sql#binary-data
-[4]: processors-serializers-http
+[4]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-http-serializer
 [5]: ../binary-text-documents.md#binary-documents

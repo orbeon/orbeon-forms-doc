@@ -175,7 +175,7 @@ Finally, `<setvalue>` supports setting a literal value:
 
 _NOTE: If a page actually uses an XML submission, which means either having `<action>` elements, or reading the instance in the page model or page view, it must not expect to be able to read the HTTP request body separately using the [Request generator][12]._
 
-[9]: http://wiki.orbeon.com/forms/doc/developer-guide/reference-xpl-pipelines
+[9]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl
 [10]: #action-element
 [11]: #matchers
 [12]: ../processors/request-generator.md
