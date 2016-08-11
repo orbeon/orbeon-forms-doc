@@ -569,7 +569,7 @@ drop table orbeon_form_data_attach ;
     - [x] check HTML label appears correct in summary page / search
     - [x] placeholder labels
     - [x] placeholder hints
-- [x] set control help ([lorem ipsum](http://www.lipsum.com/))
+- [x] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
     - [x] plain
     - [x] HTML
     - [x] check help icon appears when help is set, and disappears when help is blanked
@@ -1048,7 +1048,7 @@ drop table orbeon_form_data_attach ;
     - [#2355](https://github.com/orbeon/orbeon-forms/issues/2355)
     - [#2356](https://github.com/orbeon/orbeon-forms/issues/2356)
 
-### Wizard \[2016.2 TODO ERIK\]
+### Wizard \[2016.2 DONE\]
 
 - [x] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
 - [x] validated mode
@@ -1060,7 +1060,7 @@ drop table orbeon_form_data_attach ;
 - [x] `/fr/orbeon/controls/new`
     - test errors in section template are highlighted in TOC
 - [x] check that Form Builder's Wizard option enables/disables the wizard
-- [ ] separate TOC
+- [x] separate TOC
     ```xml
     <property 
         as="xs:boolean" 
@@ -1105,16 +1105,15 @@ drop table orbeon_form_data_attach ;
     - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2016.2 TODO ERIK\]
+### Help popups/hint tooltips positioning \[2016.2 DONE\]
 
 - create form to test general positioning
-  - help on all elements
+  - help on all elements ([Lorum Ipsum](http://www.lipsum.com/feed/html))
   - repeats
-  - hints on checkboxes/radios
-- help: see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637)
-- hints: see [#1649](https://github.com/orbeon/orbeon-forms/issues/1649)
-- test Bookshelf help
-- create form with fields, including checkboxes/radio buttons
+  - checkboxes/radios
+    - add hints (see [#1649](https://github.com/orbeon/orbeon-forms/issues/1649))
+- Bookshelf
+    - try all helps (see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637))
 
 ### Mobile and Responsive \[2016.2 TODO ERIK\]
 
