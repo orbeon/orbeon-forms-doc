@@ -635,14 +635,14 @@ drop table orbeon_form_data_attach ;
     - insert control
     - check there is no JS error
 
-### Singleton forms \[2016.2 TODO\]
+### Singleton forms \[2016.2 TODO ERIK\]
 
 - test that the features works as [documented](../form-runner/advanced/singleton-form.md)
     - no form data
     - one instance of form data
     - more than one instance of form data
 
-### Schema Support \[2016.2 TODO\]
+### Schema Support \[2016.2 TODO ERIK\]
 
 - attach Schema
     - attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd)
@@ -773,7 +773,7 @@ drop table orbeon_form_data_attach ;
 - W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2016.2 TODO\]
+### Form Builder Permissions \[2016.2 TODO ERIK\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -1156,7 +1156,7 @@ drop table orbeon_form_data_attach ;
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
-### Home Page \[2016.2 TODO\]
+### Home Page \[2016.2 TODO ERIK\]
 
 *See also Form Builder permissions above which already tests some of this.*
 
@@ -1224,7 +1224,7 @@ drop table orbeon_form_data_attach ;
   - upgrade remote
   - make sure forms still work
 
-### Summary Page \[2016.2 TODO\]
+### Summary Page \[2016.2 TODO ERIK\]
 
 - e.g. `http://localhost:8080/2016.2-pe/fr/orbeon/bookshelf/summary`
 - list forms
@@ -1243,7 +1243,7 @@ drop table orbeon_form_data_attach ;
 - delete
 - view
 
-### Excel Import \[2016.2 TODO\]
+### Excel Import \[2016.2 TODO ERIK\]
 
 - `http://localhost:8080/2016.2-pe/fr/orbeon/contact/import`
 - import small doc first (`contact5.xlsx` on Dropbox)
@@ -1255,7 +1255,7 @@ drop table orbeon_form_data_attach ;
 - check % and ETA progress during validation and import
 - check import completes
 
-### Liferay Support \[2016.2 TODO\]
+### Liferay Support \[2016.2 TODO ERIK\]
 
 - versions as of Orbeon Forms 2016.1
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
@@ -1302,7 +1302,7 @@ drop table orbeon_form_data_attach ;
   - ~~Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay*
 
-### Embedding \[2016.2 TODO\]
+### Embedding \[2016.2 TODO ERIK\]
 
 - deploy `orbeon-embedding.war` into Tomcat
 - update `web.xml`:
