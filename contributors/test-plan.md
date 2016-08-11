@@ -1229,7 +1229,7 @@ drop table orbeon_form_data_attach ;
   - upgrade remote
   - make sure forms still work
 
-### Summary Page \[2016.2 TODO ERIK\]
+### Summary Page \[2016.2 DONE\]
 
 - e.g. `http://localhost:8080/2016.2-pe/fr/orbeon/bookshelf/summary`
 - list forms
@@ -1248,7 +1248,7 @@ drop table orbeon_form_data_attach ;
 - delete
 - view
 
-### Excel Import \[2016.2 TODO ERIK\]
+### Excel Import \[2016.2 DONE\]
 
 - `http://localhost:8080/2016.2-pe/fr/orbeon/contact/import`
 - import small doc first (`contact5.xlsx` on Dropbox)
@@ -1308,7 +1308,7 @@ drop table orbeon_form_data_attach ;
   - ~~Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay*
 
-### Embedding \[2016.2 TODO ERIK\]
+### Embedding \[2016.2 DONE\]
 
 - deploy `orbeon-embedding.war` into Tomcat
 - update `web.xml`:
