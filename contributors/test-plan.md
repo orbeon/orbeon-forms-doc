@@ -22,9 +22,8 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - [x] check CE zip doesn't have
   - `orbeon-embedding.war`
   - `proxy-portlet.war`
-- [ ] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
+- [x] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
     - [x] Tomcat
-    - [ ] Liferay
 - [x] make sure the PE license is not included
 
 ### Landing Page \[2016.2 DONE\]
@@ -1166,11 +1165,11 @@ drop table orbeon_form_data_attach ;
 
 *See also Form Builder permissions above which already tests some of this.*
 
-- `http://localhost:8080/2016.2-pe/fr/` lists deployed forms
-- comment all roles in form-builder-permissions.xml
-- no admin buttons/actions show
-- changing language to French works
-- set all Form Builder permissions
+- [x] `http://localhost:8080/2016.2-pe/fr/` lists deployed forms
+- [x] comment all roles in form-builder-permissions.xml
+- [x] no admin buttons/actions show
+- [x] changing language to French works
+- [x] set all Form Builder permissions
     ```xml
     <role name="*" app="*" form="*"/>
     ```
@@ -1261,50 +1260,51 @@ drop table orbeon_form_data_attach ;
 - check % and ETA progress during validation and import
 - check import completes
 
-### Liferay Support \[2016.2 TODO ERIK\]
+### Liferay Support \[2016.2 DONE\]
 
 - versions as of Orbeon Forms 2016.1
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
   - Liferay Portal Community Edition 6.1.2 CE GA3 (August 2013)
-  - Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
-    - *NOTE: Not officially supported by Orbeon as of 2016.1. Things work, but see [#2728](https://github.com/orbeon/orbeon-forms/issues/2728)*
+  - ~~Liferay Portal Community Edition 6.2 CE GA6 (January 2016)~~
+    - *NOTE: Not officially supported by Orbeon as of 2016.2. Things work, but see [#2728](https://github.com/orbeon/orbeon-forms/issues/2728)*
 - setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present
   - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
   - start Liferay: `./liferay-portal-6.1.2-ce-ga3/tomcat-7.0.40/bin/catalina.sh ru`
   - try `http://localhost:9090/` from Firefox
   - login
+    - test@liferay.com/liferay
     - *NOTE: Cannot seem to login with Chrome anymore. Tried removing JSESSIONID, still issue.*
 - proxy portlet
-  - set to point to http://localhost:9090/orbeon/ or separate Tomcat install
-  - try out pages
+  - [x] set to point to `http://localhost:8080/2016.2-pe/`
+  - [x] try out pages
     - New page
     - Summary page
     - Home page
-  - set Send Liferay language
-    - check that language picker in FR is gone on 3 pages
+  - [x] set Send Liferay language
+    - check that language picker in FR doesn't show on 3 pages
     - change My Account → Display Settings → French
     - check that all 3 pages now show in French (be aware of [#1628](https://github.com/orbeon/orbeon-forms/issues/1628))
-  - set Send Liferay user
+  - [x] set Send Liferay user
     - check w/ HttpScoop that user headers are sent to Form Runner
       - `Orbeon-Liferay-User-*`
-  - readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
-  - edit/review/back
-  - send to external page
-  - PDF loads
+  - [x] readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
+  - [x] edit/review/back
+  - [ ] send to external page
+  - [x] PDF loads
     - check that checkboxes appear correctly (see [#2046](https://github.com/orbeon/orbeon-forms/issues/2046))
-  - check that TinyMCE (rich text) appears ok, including with IE9 (icons)
-  - upload works
-  - attach image and save
-  - check singleton form works
+  - [x] check that TinyMCE (rich text) appears ok, including with IE9 (icons)
+  - [x] upload works
+  - [x] attach image and save
+  - [x] check singleton form works
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 - full portlet
-  - all examples and Form Runner
-  - upload works
-  - PDF works
+  - [x] all examples and Form Runner
+  - [x] upload works
+  - [x] PDF works
     - check that checkboxes appear correctly
     - *NOTE: Hit issue of double JSESSIONID once, check cookies if problems.*
-  - attach image and save, make sure image shows properly
+  - [x] attach image and save, make sure image shows properly
   - ~~Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay*
 
