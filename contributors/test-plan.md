@@ -6,7 +6,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ## Misc
 
-### Distribution \[2016.2 TODO\]
+### Distribution \[2016.2 DONE\]
 
 - [x] `README.md` is up to date
   - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
@@ -125,7 +125,6 @@ Do the following for eXist and DB2. We do not test other relational databases he
     - FB: add file attachment field
     - FB: save and publish
         - DB2: be aware of [#1409](https://github.com/orbeon/orbeon-forms/issues/1409)
-	- \[TODO: arrived here\]
     - FR: deployed form loads image
     - FR: attach file, save, edit
 - Search
@@ -1333,7 +1332,7 @@ drop table orbeon_form_data_attach ;
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
 
-### XForms Retry \[2016.2 TODO\]
+### XForms Retry \[2016.2 TODO ERIK\]
 
 1. Retry happens
     - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
@@ -1416,7 +1415,7 @@ drop table orbeon_form_data_attach ;
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2016.2 TODO\]
+### Error Dialog \[2016.2 TODO ERIK\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
@@ -1473,7 +1472,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
 
-### Other \[2016.2 TODO\]
+### Other \[2016.2 TODO ERIK\]
 
 Features to test, with all supported browsers:
 
