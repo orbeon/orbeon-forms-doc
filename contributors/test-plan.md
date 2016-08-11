@@ -635,14 +635,14 @@ drop table orbeon_form_data_attach ;
     - insert control
     - check there is no JS error
 
-### Singleton forms \[2016.2 TODO ERIK\]
+### Singleton forms \[2016.2 DONE\]
 
 - test that the features works as [documented](../form-runner/advanced/singleton-form.md)
     - no form data
     - one instance of form data
     - more than one instance of form data
 
-### Schema Support \[2016.2 TODO ERIK\]
+### Schema Support \[2016.2 DONE\]
 
 - attach Schema
     - attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd)
@@ -656,6 +656,7 @@ drop table orbeon_form_data_attach ;
     - assign types to controls
     - check that validation is working as per the types
     - check schema types are reloaded in Control Settings dialog
+        - *NOTE: This is note the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
 
 ### Database service \[2016.2 DONE\]
 
@@ -773,7 +774,7 @@ drop table orbeon_form_data_attach ;
 - W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2016.2 TODO ERIK\]
+### Form Builder Permissions \[2016.2 DONE\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -822,27 +823,27 @@ drop table orbeon_form_data_attach ;
         <role name="orbeon-sales" app="sales" form="*"/>
     </roles>
     ```
-- browser 1
+- [x] browser 1
     - clear cookies
-    - `http://localhost:8080/2016.2-pe/fr/orbeon/builder/new`
-    - login as `orbeon-sales`
-    - must see guest and sales as app names
-    - create sales/my-sales-form
-    - set permissions
-        - Anyone → Create
-        - orbeon-sales → Read and Update
-    - save and publish
-    - can access
+    - [x] `http://localhost:8080/2016.2-pe/fr/orbeon/builder/new`
+        - login as `orbeon-sales`
+        - must see guest and sales as app names
+    - [x] create sales/my-sales-form
+        - set permissions
+            - Anyone → Create
+            - orbeon-sales → Read and Update
+        - save and publish
+    - [x] can access
         - http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/summary
         - http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/new
-    - new
+    - [x] new
         - enter data and save
-    - summary
+    - [x] summary
         - check that saved in summary
         - check can edit and duplicate
         - check Delete button is disabled
         - check PDF works
-    - `http://localhost:8080/2016.2-pe/fr/`
+    - [x] `http://localhost:8080/2016.2-pe/fr/`
         - sales/my-sales-form shows on the home page
         - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
@@ -852,42 +853,47 @@ drop table orbeon_form_data_attach ;
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
-    - `http://localhost:8080/2016.2-pe/fr/orbeon/builder/summary`
+    - [x] `http://localhost:8080/2016.2-pe/fr/orbeon/builder/summary`
         - open structured search (be aware of  [#878](https://github.com/orbeon/orbeon-forms/issues/878))
         - check only guest and sales forms are available
-- browser 2
-    - clear cookies
-    - login as orbeon-user
-    - can access
+- [x] browser 2
+    - [x] clear cookies
+    - [x] login as orbeon-user
+    - [x] can access
         - `http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/new`
-    - can't access
+    - [x] can't access
         - http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/summary (403)
         - http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
-    - `http://localhost:8080/2016.2-pe/fr/`
+    - [x] `http://localhost:8080/2016.2-pe/fr/`
         - NO admin ops for sales/my-sales-form
         - BUT admin ops for `guest/*` (create a `guest/test-guest` form)
         - CAN click on line and takes to `/new`
         - CAN do Review/Edit/PDF
-- browser 1
-    - remove all permissions for Anyone for this form, re-add Create for orbeon-sales, save, publish
+- [x] browser 1
+    - remove all permissions for Anyone for this form, re-add Create for orbeon-sales, publish
     - check can still new/edit/view
-- browser 2
+- [x] browser 2
     - can't access
         - `http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/new` (403)
     - http://localhost:8080/2016.2-pe/fr/
         - form not visible
-- browser 1
+- [x] browser 1
     - re-add Anyone → Create
     - add Owner → Read
     - check nothing changed
         - well, can do `/new` from Home
-- browser 2
+- [x] browser 2
     - can access `http://localhost:8080/2016.2-pe/fr/sales/my-sales-form/summary`, but only see own data as readonly
     - /new, save
     - Summary shows forms in readonly mode
-- access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
-    - setup `dummy` role only in `form-builder-permissions.xml` e.g. `<role name="dummy" app="sales" form="*"/>`
+- [x] access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
+    - in `form-builder-permissions.xml`:
+        ```xml
+        <role name="dummy" app="sales" form="*"/>
+        <!--<role name="*"            app="guest" form="*"/>-->
+        ```
+    - clear cookies
     - access to FB Summary page is rejected
     - access to FB New page is rejected
     - access to FB Edit page is rejected if form doesn't have matching role
