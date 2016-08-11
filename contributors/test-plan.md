@@ -1115,45 +1115,46 @@ drop table orbeon_form_data_attach ;
 - Bookshelf
     - try all helps (see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637))
 
-### Mobile and Responsive \[2016.2 TODO ERIK\]
+### Mobile and Responsive \[2016.2 DONE\]
 
 *NOTE: Summary and Home are not responsive as of 2016.1.*
 
-- setup
+- [x] setup
     - iPhone 6S or 6S Plus
     - can also test more using simulator
-- default layout
-    - Contact Form / Bookshelf Form
-        - looks ok
-        - can navigate to `view` and back
-        - PDF shows
-        - upload book cover in Bookshelf
-- wizard layout
-    - general
-        - looks ok
-        - can navigate sections via TOC at top (click and buttons)
-        - buttons at bottom work
-    - Control Form
-        - can enter data, select checkboxes/radio buttons
-        - date picker works
-        - can quickly select radio buttons/checkboxes (zoom in if needed, touch areas are small)
-        - signature works
-        - PDF
-        - NOTE: Repeat not handled nicely.
-    - DMV-14 Form
-        - NOTE: Repeat not handled nicely.
-        - PDF
-    - W-9 Form
-        - PDF
-- zoom
+- [x] default layout (Contact Form / Bookshelf Form)
+    - looks ok
+    - can navigate to `view` and back
+    - PDF shows
+    - upload book cover in Bookshelf
+- [x] wizard layout (Controls form)
+    - looks ok (TOC at top, buttons at bottom)
+    - can navigate sections via TOC at top (click and buttons)
+    - Next/Prev buttons at bottom work
+- [x] Control Form
+    - can enter data, select checkboxes/radio buttons
+    - date picker works
+    - can quickly select radio buttons/checkboxes (zoom in if needed, touch areas are small)
+    - signature works
+    - PDF
+    - NOTE: Repeat not handled nicely.
+- [x] DMV-14 Form
+    - NOTE: Repeat not handled nicely.
+    - PDF / TIFF
+- [x] W-9 Form
+    - Review looks good
+    - PDF looks good with signature
+- [x] zoom
     - can pinch zoom
     - add error, save, must de-zoom before showing Error dialog
     - same for Clear dialog
-- Number field
+- [x] Number field
     - test that non-negative integers show keypad
     - other numbers show number pane
     - if decimal separator is `,`, show regular pane (if US settings)
+        - set attributes by hand: `decimal-separator="," grouping-separator="'"`
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
+- be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
 ### Home Page \[2016.2 TODO\]
 
