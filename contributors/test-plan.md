@@ -1050,31 +1050,31 @@ drop table orbeon_form_data_attach ;
 
 ### Wizard \[2016.2 TODO ERIK\]
 
-- `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
-- validated mode
+- [x] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
+- [x] validated mode
     - `/fr/orbeon/w9/new`
     - check cannot click in TOC
     - check cannot navigate forward with error in current section
     - once all sections visited, can freely navigate
     - check back to edit allows navigating all sections
-- /fr/orbeon/controls/new
+- [x] `/fr/orbeon/controls/new`
     - test errors in section template are highlighted in TOC
-- check that Form Builder's Wizard option enables/disables the wizard
-- separate TOC
+- [x] check that Form Builder's Wizard option enables/disables the wizard
+- [ ] separate TOC
     ```xml
     <property 
         as="xs:boolean" 
         name="oxf.xforms.xbl.fr.wizard.separate-toc.wizard.*"    
         value="true"/>
     ```
-- subsection navigation 
+- [x] subsection navigation 
     ```xml
     <property 
         as="xs:boolean" 
         name="oxf.xforms.xbl.fr.wizard.subsections-nav.wizard.*" 
         value="true"/>
     ```
-- TOC subsections
+- [x] TOC subsections
     ```xml
     <property 
         as="xs:string"  
@@ -1082,7 +1082,7 @@ drop table orbeon_form_data_attach ;
         value="all"/>
     ```
 
-### Captcha \[2016.2 TODO ERIK\]
+### Captcha \[2016.2 DONE\]
 
 - enable with property
 
