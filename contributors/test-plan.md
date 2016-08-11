@@ -1161,7 +1161,7 @@ drop table orbeon_form_data_attach ;
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
-### Home Page \[2016.2 TODO ERIK\]
+### Home Page \[2016.2 DONE\]
 
 *See also Form Builder permissions above which already tests some of this.*
 
@@ -1176,7 +1176,7 @@ drop table orbeon_form_data_attach ;
   - admin actions show
   - Available/Unavailable/Library labels show
   - publish/unpublish works
-- "publish to production"
+- [x] "publish to production"
   - configure  remote server and production-server-uri
     - e.g. remote in Liferay Tomcat
     ```xml
@@ -1198,13 +1198,13 @@ drop table orbeon_form_data_attach ;
         value="/orbeon-auth"/>
     ```
   - server asks for credentials if user has admin role
-      - `orbeon-service/x*`
+      - `orbeon-admin/x*` (with `liferay-portal-6.1.2-ce-ga3/tomcat-7.0.40`, `orbeon-admin` has `orbeon-service` role)
   - Cancel  → loads local forms
   - Connect → loads local and remote forms, sorted by mod date desc
   - Select menu works
   - Operation menu works
       - push/pull forms
-      - check available on /fr/ page on remote (e.g. in Liferay)
+      - check available on `/fr/` page on remote (e.g. in Liferay)
   -   add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
       ```xml
       <property as="xs:string"  name="oxf.fr.home.remote-servers">
@@ -1219,12 +1219,12 @@ drop table orbeon_form_data_attach ;
     - publish locally
     - push to remote
     - check attachment is pushed
-    - load form /new on remote, make sure works and attachment is there
+    - load form `/new` on remote, make sure works and attachment is there
     - *NOTE: `/summary` should do 403 if user is not `orbeon-sales` on remote. For this, make sure form has permissions enabled and e.g. `orbeon-sales` only can read.*
     - pull back form
-    - load form /new on local, make sure works and attachment is there
+    - load form `/new` on local, make sure works and attachment is there
   - no checkbox for forms w/o admin access (e.g. set `<role name="*" app="orbeon" form="*"/>`)
-- upgrade form definitions
+- [x] upgrade form definitions
   - upgrade local
   - upgrade remote
   - make sure forms still work
