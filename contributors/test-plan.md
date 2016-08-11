@@ -136,7 +136,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
 - Duplicate
     - FR: Summary: Duplicate button works
 
-### Versioning \[2016.2 TODO ALEX\]
+### Versioning \[2016.2 DONE\]
 
 Do the following on DB2.
 
@@ -183,7 +183,7 @@ Do the following on DB2.
     - create form `db2/versioning`
         - fields
             - Name section `personal-information`
-            - 1 email field with "Email Recipient", say e.g. `erik at bruchez dot org`
+            - 1 email field with "Email Recipient", say `gaga@orbeon.com` (use the proper ID)
             - 1 input field "First name"
                 - Name it `first-name`
             - 1 static Image with image statically attached
@@ -207,7 +207,7 @@ Do the following on DB2.
         - save
     - edit the form definition
         - remove "Email Recipient" from 1st email field and clear it
-        - add "Email Recipient" to 2nd email field and add e.g. `ebruchez at orbeon dot com`
+        - add "Email Recipient" to 2nd email field and add say `gaga@gmail.com` (use the proper ID)
         - change static Image
         - change static Image Attachment
         - publish as version 2
