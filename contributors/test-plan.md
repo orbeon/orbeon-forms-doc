@@ -325,9 +325,15 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
 #### Tests
 
 - in Form Builder
-    - create new form `exist/permissions`, `oracle/permissions`, `mysql/permissions`, `postgresql/permissions`, `sqlserver/permissions`, `db2/permissions` (create 1 form then use Duplicate button)
-    - save and publish
-    - enable permissions for form and configure like on [doc page](../form-runner/access-control/deployed-forms.md#example)
+    - create new form `exist/permissions`
+        - save and publish
+        - enable permissions for form and configure like on [doc page](../form-runner/access-control/deployed-forms.md#example)
+    - use Duplicate button to create
+        - `oracle/permissions`
+        - `mysql/permissions`
+        - `postgresql/permissions`
+        - `sqlserver/permissions`
+        - `db2/permissions`
 - make sure permissions are followed
     - anonymous user
         - home page: link goes to new page (not summary)
@@ -479,16 +485,26 @@ http://localhost:8080/2016.2-pe/fr/auth
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
-1. Run the [4.3 DDL](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql) and [4.3 to 4.4 DDL](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_3-to-4_4.sql).
-2. Run the [4.4 DDL](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_4.sql
-) and [4.4 to 4.6 DDL](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_4-to-4_6.sql).
-3. Run the [4.6 DDL](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_6.sql).
+- In a tab, open the doc with the [table linking to the DB2 DDL](../form-runner/persistence/relational-db.md#db2-database-setup)
+- Initial setup
+    - Start DB2 instance on EC2
+    - Connect to DB2, e.g. with SQLWorkbenchJ, using the new IP of the instance from the EC2 Console
+- Test initial creations; for each version:
+    - Run the `DROP TABLE` DDL below
+    - Run the "from scratch DDL" for that version
+    - Check there are errors in the console
+- Test upgrade DDL
+    - Run the `DROP TABLE` DDL below
+    - Run the 4.3 "from scratch" DDL
+    - In sequence run all the "upgrade" DDL, checking there are no errors
 
 ```sql
 drop table orbeon_form_definition ;
 drop table orbeon_form_definition_attach ;
 drop table orbeon_form_data ;
 drop table orbeon_form_data_attach ;
+drop table orbeon_i_current ;
+drop table orbeon_i_control_text ;
 ```
 
 ### Flat View \[2016.2 TODO ALEX\]
