@@ -1434,43 +1434,44 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
 
-### Other Browsers \[2016.2 TODO ERIK\]
+### Other Browsers \[2016.2 DONE\]
 
-- main tests above with Google Chrome
-  - 2016.2: TODO
-  - 2016.1: 49.0.2623.112
-  - 4.10: ??? and 46.0.2490.4 dev
-  - 4.9: 42.0.2311.135
-  - 4.8: 39.0.2171.95 and 41.0.2267.0 dev
-  - 4.7: 37.0.2062.122
-  - 4.6: 37.0.2062.0 dev
-  - 4.5: 35.0.1897.8 dev
-- Form Builder / Form Runner run with
-    - latest Firefox
-      - 2016.2: 48.0
-      - 2016.1: 45.0.2
-      - 4.10: 40.0.2
-      - 4.8: 37.0.1
-      - 4.8: 34
-      - 4.7: 32
-      - 4.6: 30
-      - 4.5: 27.0.1 and 28
-    - latest Safari
-      - 2016.2: 9.1.1 (11601.6.17)
-      - 2016.1: 9.1 (11601.5.17.1)
-      - 4.9: 8.0.5 (10600.5.17)
-      - 4.8: 8.0.2 (10600.2.5)
-      - 4.7: 7.0.6
-      - 4.6: 7.0.4
-      - 4.5: 7.0.2
-    - IE11 (since 4.5)
-    - Edge
-        - 2016.2
-            - TODO
-        - 2016.1
-            - Edge 25.10586.0.0
-            - EdgeHTML 123.10586
-- Form Runner run with
+- [x] main tests above with Google Chrome
+    - 2016.2: 52.0.2743.82 and 53.0.2785.57 beta
+    - 2016.1: 49.0.2623.112
+    - 4.10: ??? and 46.0.2490.4 dev
+    - 4.9: 42.0.2311.135
+    - 4.8: 39.0.2171.95 and 41.0.2267.0 dev
+    - 4.7: 37.0.2062.122
+    - 4.6: 37.0.2062.0 dev
+    - 4.5: 35.0.1897.8 dev
+- [x] Form Builder / Form Runner tests with latest Firefox
+    - 2016.2: 48.0
+    - 2016.1: 45.0.2
+    - 4.10: 40.0.2
+    - 4.9: 37.0.1
+    - 4.8: 34
+    - 4.7: 32
+    - 4.6: 30
+    - 4.5: 27.0.1 and 28
+- [x] Form Builder / Form Runner tests with latest Safari
+    - 2016.2: 9.1.1 (11601.6.17)
+    - 2016.1: 9.1 (11601.5.17.1)
+    - 4.10: 8.x.x
+    - 4.9: 8.0.5 (10600.5.17)
+    - 4.8: 8.0.2 (10600.2.5)
+    - 4.7: 7.0.6
+    - 4.6: 7.0.4
+    - 4.5: 7.0.2
+- [x] Form Builder / Form Runner tests with IE11 (since 4.5)
+- [x] Form Builder / Form Runner tests with latest Edge
+    - 2016.2
+        - Edge 25.10586.0.0
+        - EdgeHTML 13.10586
+    - 2016.1
+        - Edge 25.10586.0.0
+        - EdgeHTML 13.10586
+- [x] Form Runner run with
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
