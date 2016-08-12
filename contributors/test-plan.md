@@ -507,7 +507,7 @@ drop table orbeon_i_current ;
 drop table orbeon_i_control_text ;
 ```
 
-### Flat View \[2016.2 TODO ALEX\]
+### Flat View \[2016.2 DONE\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -529,7 +529,6 @@ drop table orbeon_i_control_text ;
         as="xs:boolean"
         name="oxf.fr.persistence.db2.create-flat-view"
         value="true"/>
-
     <property
         as="xs:string"
         name="oxf.fr.persistence.provider.postgresql.*.*"
@@ -548,15 +547,15 @@ drop table orbeon_i_control_text ;
         value="db2"/>
     ```
 - Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [flat view documentation](../form-runner/persistence/flat-view.md)
-  - Rename app name to `postgresql`, `oracle`, `sqlserver`, or `db2` depending
+  - Rename app name to `oracle`, `sqlserver`, `postgresql`, or `db2` depending
   - Publish, check that a view with the appropriate column names is created with the `SELECT` statement below.
   - Go to `/new` of the form, enter values, save, run the SQL again, and check that the value entered show in the view.
 
     ```sql
-    SELECT * FROM orbeon_f_postgresql_a;
-    SELECT * FROM orbeon_f_db2_a;
     SELECT * FROM orbeon_f_oracle_a;
     SELECT * FROM orbeon_f_sqlserver_a;
+    SELECT * FROM orbeon_f_postgresql_a;
+    SELECT * FROM orbeon_f_db2_a;
     ```
 
 ## Form Builder
