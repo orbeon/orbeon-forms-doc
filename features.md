@@ -28,8 +28,8 @@ As of 2016-04-19 this page is still being updated.
 - Section Templates: [doc](form-builder/section-templates.md)
 - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
 - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
-    - overwriting of existing version
-    - associating a comment with a given form version
+    - overwriting of existing version: [doc](form-builder/publishing.html#versioning)
+    - associating a comment with a given form version: [doc](form-builder/publishing.html#versioning)
 - Form field validation: [doc](form-builder/validation.md), [blog post](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
     - required fields (also via formula, see [blog post](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html))
     - whitespace trimming: [doc](form-builder/validation.md#trimming-leading-and-trailing-spaces), [blog post](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
@@ -46,6 +46,7 @@ As of 2016-04-19 this page is still being updated.
 - Persistence (databases)
     - persistence API: [doc](form-runner/api/persistence/README.md)
     - persistence implementations: [doc](form-runner/persistence/db-support.md)
+    - relational database support: [doc](form-runner/persistence/relational-db.md), [blog post about new indexes](http://blog.orbeon.com/2016/06/new-indexes-boost-performance-with.html)
 
 ### Form Builder
 
@@ -54,6 +55,11 @@ As of 2016-04-19 this page is still being updated.
     - features: [doc](form-builder/toolbox.md)
     - configurability: [doc](form-builder/metadata.md)
     - XBL components: [doc](xforms/xbl/README.md)
+- Form Settings: [doc](form-builder/form-settings.md)
+    - General Settings
+    - Form Options: [doc](form-builder/form-settings.html#form-options)
+        - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
+        - Wizard view: [doc](form-runner/feature/wizard-view.md)
 - Control Settings: [doc](form-builder/control-settings.md)
     - control name
     - Summary page options
@@ -110,6 +116,7 @@ As of 2016-04-19 this page is still being updated.
     - Automatic highlighting of links [blog post](http://blog.orbeon.com/2015/04/automatic-web-links-in-pdf-files.html)
     - customizable file name: [doc](configuration/properties/form-runner.md#custom-pdf-filename)
     - TIFF production: [doc](form-runner/feature/tiff-production.md)
+    - Ability to send to services: [blog post](http://blog.orbeon.com/2016/08/submitting-pdf-file-to-external-service.html)
 - Validation
     - as-you-type validation
     - centralized error summary showing currently relevant errors: [component doc](form-runner/component/images/xbl-error-summary-errors.png), [blog post on warnings/infos enhancements](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
@@ -118,7 +125,9 @@ As of 2016-04-19 this page is still being updated.
 - Captcha: [properties doc](configuration/properties/form-runner.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 - Appearance of repeated sections: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-repeated-sections), [component doc](http://doc.orbeon.com/form-runner/component/grid.html#repeated-mode)
 - Appearance of repeated grids: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-grids-sections), [component doc](http://doc.orbeon.com/form-runner/component/section.html#repeated-mode)
-- Stable function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](http://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
+- Function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](http://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
+- Grids
+    - HTML tables-free layout: [blog post](http://blog.orbeon.com/2016/06/saying-farewell-to-html-tables.html)) 
 
 ### Form controls
 
