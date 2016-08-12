@@ -40,7 +40,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 check that all PE features are available in PE, but not in CE:
 
 - features which are checked
-    - [ ] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
+    - [x] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
     - [ ] FB: no "Add Language" button
     - [ ] FB: check with CE that a PE dialog shows for
         - Services
@@ -1332,38 +1332,39 @@ drop table orbeon_form_data_attach ;
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
 
-### XForms Retry \[2016.2 TODO ERIK\]
+### XForms Retry \[2016.2 DONE\]
 
-1. Retry happens
-    - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
-        - change sleep service to use `sleep?delay=10` (sleep 10 s)
-        - add to model
-        ```xml
-        <xf:setvalue
-            event="xforms-submit-done"
-            ref="/instance/count"
-            value=". + 1"/>
-        ```
-    - set the following properties
-
-        ```xml
-        <property
-            as="xs:integer"
-            name="oxf.xforms.delay-before-ajax-timeout"
-            value="2000"/>
-        <property
-            as="xs:integer"
-            name="oxf.xforms.retry.delay-increment"
-            value="2000"/>
-        ```
-    - open
-        - `http://localhost:8080/2016.2-pe/xforms-sandbox/sample/dispatch-delay`
+1. [x] Retry happens
+    - [x] setup
+        - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
+            - change sleep service to use `sleep?delay=10` (sleep 10 s)
+            - add to model
+            ```xml
+            <xf:setvalue
+                event="xforms-submit-done"
+                ref="/instance/count"
+                value=". + 1"/>
+            ```
+        - set the following properties
+    
+            ```xml
+            <property
+                as="xs:integer"
+                name="oxf.xforms.delay-before-ajax-timeout"
+                value="2000"/>
+            <property
+                as="xs:integer"
+                name="oxf.xforms.retry.delay-increment"
+                value="2000"/>
+            ```
+    - [x] test
+        - open `http://localhost:8080/2016.2-pe/xforms-sandbox/sample/dispatch-delay`
         - in Chrome, open the Dev Tools, go to the Network tab (or use HttpScoop or Charles)
         - hit the *Manual save* button
         - check after ~10 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 10 s have elapsed)
         - can also hit the *Start* button, and notice the number incrementing after ~10s
         - (the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114](https://github.com/orbeon/orbeon-forms/issues/1114))
-2. Request not reaching server
+2. [x] Request not reaching server
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - set the following properties
 
@@ -1386,28 +1387,30 @@ drop table orbeon_form_data_attach ;
             value="8888"/>
         ```
     - load page again
-    - using Charles, go in Proxy / Breakpoints, enable breakpoints, and add:
+    - using Charles, go in Proxy / Breakpoints (⌘⇧K), enable breakpoints, and add:
       ![](images/test-charles-request.png)
     - click on *Manual save*
-    - the request is intercepted by Charles where you click on Abort, check that the client retries the request right away and that the request doesn't show in the server logs
-    - finally click on *Execute*, and check the request runs on the server, and the response reaches the browser after 5 s
-3. Response not reaching client
+    - the request is intercepted by Charles
+    - when you click on Abort, check that the client retries the request right away and that the request doesn't show in the server logs
+    - finally click on *Execute*, and check the request runs on the server, and the response reaches the browser after 5 s with a 200
+3. [x] Response not reaching client
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - in Charles, edit the breakpoint set above (see screenshot), and this time break on the response, i.e. uncheck the "request" checkbox and check the "response" checkbox
     - click on *Manual save*
-      - check after 5 s the breakpoint is hit
-      - Abort (make sure to abort Ajax response, not call to sleep service - no longer an issue with 4.7+)
-      - check the request is made again right away by the browser and replayed right away by the server
-      - *Execute*
-      - check the response reaches the client
-4. Unexpected HTML response
+    - check after 5 s the breakpoint is hit
+    - Abort (make sure to abort Ajax response, not call to sleep service - no longer an issue with 4.7+)
+    - check the request is made again right away by the browser and replayed right away by the server
+    - *Execute*
+    - check the response reaches the client
+4. [x] Unexpected HTML response
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
+    - click on *Manual save*
     - edit the response to contain non-valid XML, and *Execute*
     - check the client re-executes the request
-5. File upload
+5. [x] File upload
     - setup
         - enable breakpoint on response for `/2016.2-pe/xforms-server/upload`
-        - enable throttling in Charles per the following configuration
+        - enable throttling in Charles (⌘⇧T) per the following configuration
           ![](images/test-charles-throttling.png)
         - download [this image](http://placekitten.com/g/2000/2000) (~200 KB)
     - `http://localhost:8080/2016.2-pe/xforms-upload/`
@@ -1415,7 +1418,7 @@ drop table orbeon_form_data_attach ;
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2016.2 TODO ERIK\]
+### Error Dialog \[2016.2 DONE\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
