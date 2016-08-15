@@ -262,7 +262,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite
 
-### Data Capture Permissions \[2016.2 TODO ALEX\]
+### Data Capture Permissions \[2016.2 DONE\]
 
 ####  Setup
 
@@ -317,7 +317,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
     - `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
     - set rewriting rules with Charles (⌘⇧E)
         - for user clerk ([gist](https://gist.github.com/ebruchez/10079296))
-        - for user admin ([gist]()https://gist.github.com/ebruchez/10079254)
+        - for user admin ([gist](https://gist.github.com/ebruchez/10079254))
     - to switch between users in below steps
         - enable rewrite for clerk or admin headers, or disable rewrite
         - remove JSESSIONID when switching users
@@ -349,7 +349,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
             - summary page
                 - sees data previously entered by anonymous user, cannot delete
                 - click on existing data created by anonymous user shows read-only view
-                - replace `view` with `edit` in URL shows 404
+                - replace `view` with `edit`, getting an "Unauthorized" page
                 - PDF works
                 - click on new button opens new page
             - new/edit
@@ -358,7 +358,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - cannot delete from Summary because no `delete` permission
         - check permissions as admin/admin
             - remove `JSESSIONID` (i.e. with Dev Tools)
-            - switch user
+            - switch to `admin`/`admin` user
             - on click goes to summary page
             - on summary page
                 - click on new opens new page
