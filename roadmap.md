@@ -44,14 +44,14 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
-- [ ] customer-requested improvements
+- [x] customer-requested improvements
 - [ ] tests automation
 - [x] maintenance candidates
   - [x] Move build to sbt, phase 1 [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
 
 Issues:
 
-- [ ] [all Orbeon Forms 2016.2 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2016.2)
+- [x] [all Orbeon Forms 2016.2 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2016.2)
 
 Please remember that the following schedule is a plan, not a promise:
 
@@ -73,4 +73,18 @@ Issues:
 
 Please remember that the following schedule is a plan, not a promise:
 
-- 2016-10-31: tentative release date
+- 2016-11-30: tentative release date
+
+### Orbeon Forms 2017.1
+
+Focus:
+
+- TBD
+
+Issues:
+
+- [ ] [all Orbeon Forms 2017.1 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2017.1)
+
+Please remember that the following schedule is a plan, not a promise:
+
+- 2017-03-31: tentative release date
