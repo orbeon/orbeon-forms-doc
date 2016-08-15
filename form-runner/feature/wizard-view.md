@@ -182,11 +182,19 @@ When `true`:
 - the "Next" and "Prev" buttons go to the next or previous first-level subsection if any, and then to the next or previous top-level section's first subsection if any
 - the validated mode, if enabled, still applies only to top-level sections, which means that
     - it is possible to freely navigate through subsections within a given top-level section
-    - however when attempting to navigate to the next top-level section, validation contraints apply
+    - however when attempting to navigate to the next top-level section, validation constraints apply
 
-*NOTE: Grids directly nested within top-level sections which have any subsections are ignored in this mode. The recommendation is to avoid this situation when using subsections navigation and not place grids directly at the same level of first-level subsections.*
+*NOTE: Grids directly nested within top-level sections which have any subsections are ignored in this mode. The recommendation is to avoid this situation when using subsections navigation and not place grids directly at the same level of first-level subsections. This restriction is lifted in Orbeon Forms 2016.3.*
+
+*NOTE: Top-level repeated sections are not supported. The recommendation is to avoid this situation when using subsections navigation and not use top-level repeated sections. This is improved in Orbeon Forms 2016.3 where top-level repeated sections disable subsection navigation for themselves.*
 
 <!-- TODO: screenshot -->
+
+[SINCE Orbeon Forms 2016.3]
+
+Grids directly nested within top-level sections which have any subsections are also part of the navigation. Each grid is navigated independently from the other grids.
+
+The `subsections-nav` attribute on top-level `fr:section` elements can be used to explicitly disable subsection navigation. See [Wizard Component](../component/wizard.md#the-subsections-nav-attribute).
 
 ### Visibility in the table of contents
 

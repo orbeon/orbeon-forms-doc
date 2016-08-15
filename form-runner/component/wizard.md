@@ -39,6 +39,18 @@ When the wizard shows for the first time, the current section value is read from
 
 The section name is obtained from the section id by removing its `-section` or `-control` suffix. So in this example, the value stored will be `personal-data` or `comments`.
 
+## The subsections-nav attribute
+
+[SINCE Orbeon Forms 2016.3]
+
+The `subsections-nav` attribute on top-level `fr:section` elements can be used to explicitly disable subsection navigation with:
+   
+```xml
+<fr:section subsections-nav="false">
+```
+
+Top-level repeated sections do no support subsection navigation and behave as if they have `subsections-nav="false"`.
+
 ## Events supported by fr:wizard
 
 ### fr-prev and fr-next
