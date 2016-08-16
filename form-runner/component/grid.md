@@ -103,7 +103,10 @@ Attributes:
   - if the constraint returns `false()`, the current row cannot be removed
 - `freeze`
   - optional number of rows at the top which cannot be removed or moved
-  - this cannot be an AVT
+  - can be an AVT [SINCE Orbeon Forms 2016.3]
+  - evaluation context
+    - with `repeat="content"`: context of the binding (`bind` or `ref`)
+    - with `repeat="true"`: context of the `fr:grid element`
 - `readonly`
   - force the grid to be readonly when set to `true`
   - this cannot be an AVT

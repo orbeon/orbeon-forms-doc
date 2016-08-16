@@ -45,6 +45,9 @@ TODO:
 
 TODO
 
+- `freeze`
+  - optional number of rows at the top which cannot be removed or moved
+  - can be an AVT [SINCE Orbeon Forms 2016.3]
 - `appearance` [SINCE Orbeon Forms 2016.1]
   - `full`
     - the default appearance, as with Orbeon Forms 4.10 and earlier
