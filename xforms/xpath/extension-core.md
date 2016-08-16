@@ -24,7 +24,10 @@ This function is similar to `saxon:evaluate()` or `xxf:evaluate()`, but instead 
 
 ```xml
 <xf:output
-    value="xxf:evalute-avt('/xforms-sandbox/service/zip-zips?state-abbreviation={state}&amp;city={city}')"/>
+    value="
+        xxf:evaluate-avt(
+            '/xforms-sandbox/service/zip-zips?state-abbreviation={state}&amp;city={city}'
+        )"/>
 ```
 
 ## xxf:format-message()
