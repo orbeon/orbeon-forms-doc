@@ -433,6 +433,7 @@ http://localhost:8080/2016.2-pe/fr/auth
             ![Permissions dialog](images/test-permissions.png)
         - duplicate for all providers and publish
     2. Logged in as user `b1` in group `b`:
+        - With header-based authentication, make sure to clear the `JSESSIONID` after switching user, as Orbeon Forms stores the user credentials in the sessions and doesn't recompute them if they change.
         - `$PROVIDER/autosave/new`, type *Ned*, save, change to *Ned2*, tab out, after 6s go to the summary page, check it shows *Ned2* as draft
     3. Logged in as user `a1` in group `a`:
         - Can see data of other users, but in readonly mode (since everyone can read)
