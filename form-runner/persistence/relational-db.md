@@ -427,6 +427,12 @@ The relational persistence implementations never deletes old form definitions or
 
 Note however that, Orbeon Forms at this point doesn't provide a user interface for this feature.
 
+In order to remove data, see [Purging Old Data](purging-old-data.md)
+
+## See also 
+
+- [Purging Old Data](purging-old-data.md)
+
 [1]: http://www.orbeon.com/pricing
 [2]: http://docs.oracle.com/cd/B19306_01/appdev.102/b14259/xdb03usg.htm#sthref263
 [3]: http://dev.mysql.com/doc/refman/5.5/en/xml-functions.html
