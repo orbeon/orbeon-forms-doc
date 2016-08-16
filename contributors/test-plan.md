@@ -774,6 +774,17 @@ drop table orbeon_i_control_text ;
 - logo in title
 - page numbering/total at bottom center
 - PDF looks good overall
+- send PDF binary works
+    ```xml
+    <property
+        as="xs:string"
+        name="oxf.fr.detail.buttons.orbeon.bookshelf"
+        value="pdf email send"/>
+
+    <property as="xs:string" name="oxf.fr.detail.process.send.orbeon.bookshelf">
+        send(uri = 'http://posttestserver.com/post.php?a=b', method = 'post', replace = 'all', content = 'pdf')
+    </property>
+    ```
 
 ### PDF Template \[2016.2 DONE\]
 
