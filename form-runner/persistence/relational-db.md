@@ -53,7 +53,14 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
 ### MySQL database setup
 
-The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer. However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].
+
+#### MySQL versions
+
+- __Minimum version__: The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer.
+- __Recommended versions__: However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].
+- __MySQL 5.7__: With MySQL 5.7, as of Orbeon Forms 2016.2, you must set the `sql_mode` to [`ALLOW_INVALID_DATES`](http://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_allow_invalid_dates), or you might get errors while creating the database schema.
+
+#### Setting up users and schema
 
 1. Create a new user `orbeon`. Orbeon Forms will connect to MySQL as that user.
 
