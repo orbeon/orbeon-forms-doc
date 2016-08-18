@@ -66,7 +66,12 @@ The MySQL persistence layer relies on [XML functions][3] that have been introduc
     ```sql
     mysql> CREATE schema orbeon;
     ```
-3. Run the following DDL to create or update your Orbeon database, and note that uf upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+3. If needed, grant permissions, for example:
+   
+   ```sql
+   mysql> GRANT ALL ON orbeon.* TO 'orbeon'@'%';
+   ```
+4. Run the following DDL to create or update your Orbeon database, and note that uf upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
