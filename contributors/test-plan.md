@@ -368,9 +368,15 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
 
 ### Autosave and Permissions Test \[2016.2 TODO ALEX\]
 
-Repeat what follows with Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
+Repeat what follows with:
 
-*NOTE: As of Orbeon Forms 2016.1, autosave is not supported with eXist.*
+- \[2016.2 DONE\] Oracle
+- \[2016.2 TODO ALEX\] MySQL
+- \[2016.2 TODO ALEX\] PostgreSQL
+- \[2016.2 TODO ALEX\] SQL Server
+- \[2016.2 TODO ALEX\] DB2
+
+Use the following in your `properties-local.xml`:
 
 ```xml
 <property
