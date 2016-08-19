@@ -434,53 +434,48 @@ http://localhost:8080/2016.2-pe/fr/auth
         - duplicate for all providers and publish
     2. Logged in as user `b1` in group `b`:
         - With header-based authentication, make sure to clear the `JSESSIONID` after switching user, as Orbeon Forms stores the user credentials in the sessions and doesn't recompute them if they change.
-        - `$PROVIDER/autosave/new`, type *Ned*, save, change to *Ned2*, tab out, after 6s go to the summary page, check it shows *Ned2* as draft
+        - `$PROVIDER/autosave/new`, type *b1 Ned*, save, change to *b1 Ned draft*, tab out, after 6s go to the summary page, check it shows *b1 Ned draft* as draft
     3. Logged in as user `a1` in group `a`:
         - Can see data of other users, but in readonly mode (since everyone can read)
             - Load `$PROVIDER/autosave/summary`
-            - Check *Ned* shows, but has the readonly "label"
-            - Check *Ned2* shows, but has the readonly "label"
-            - Check that clicking on *Ned* and *Ned2* brings up the data in readonly mode
+            - Check *b1 Ned* and *b1 Ned draft* show, but has the readonly "label"
+            - Check that clicking on *b1 Ned* and *b1 Ned draft* brings up the data in readonly mode
             - Edit the URL to have `edit` instead of `view`, check a 403 is returned
         - Drafts for saved
             - Load `$PROVIDER/autosave/new`
-                - Check we don't get a prompt to edit the draft created by b1 (since we only have read access to it).
-                - Type *Homer*, hit save, edit into *Homer2*, after 6s go to summary page, check it shows *Homer* and *Homer2* as draft
-            - `$PROVIDER/autosave/summary`, click on *Homer2*, check the draft comes up
-            - `$PROVIDER/autosave/summary`, click on *Homer*, check prompt comes up, try both options and see that *Homer*/*Homer2* comes up
-            - editing one of the form data (*Homer* or *Homer2*), hit save, back on the summary check the draft was removed
+                - Check we don't get a prompt to edit the draft created by `b1` (since we only have read access to it).
+                - Type *a1 Homer*, hit save, edit into *a1 Homer draft*, after 6s go to summary page, check it shows *a1 Homer* and *a1 Homer draft* as draft
+            - `$PROVIDER/autosave/summary`, click on *a1 Homer draft*, check the draft comes up
+            - `$PROVIDER/autosave/summary`, click on *a1 Homer*, check prompt comes up, try both options and see that *a1 Homer*/*a1 Homer draft* comes up
+            - editing one of the form data, hit save, back on the summary check the draft was removed
         - Drafts for new
-            - `$PROVIDER/autosave/new`, type *Bart*, after 6s go to summary page, check it shows *Bart* as draft
+            - `$PROVIDER/autosave/new`, type *a1 Bart draft*, after 6s go to summary page, check it shows *a1 Bart draft* as draft
             - `$PROVIDER/autosave/new`, check prompt, and try both options
-            - `$PROVIDER/autosave/new`, on prompt start from scratch, type *Lisa*, after 6s go to summary, check it shows *Bart* and *Lisa* as draft
+            - `$PROVIDER/autosave/new`, on prompt start from scratch, type *a1 Lisa draft*, after 6s go to summary, check it shows *a1 Bart draft* and *a1 Lisa draft* as draft
             - `$PROVIDER/autosave/new`, check prompt, try both options, in particular the one showing the drafts for new
         - Summary
-            - Edit *Homer*, change to *Homer4*, after 6s go back to summary page.
-            - Delete *Homer*, check *Homer4* is deleted as well
-            - Check *Lisa*, then view, check in view mode without prompt
-            - Delete *Bart*, check *Lisa* not deleted
+            - Edit *a1 Homer*, change to *a1 Homer draft*, after 6s go back to summary page.
+            - Delete *a1 Homer*, check *a1 Homer draft* is deleted as well
+            - Check *a1 Lisa draft*, then review, check in view mode without prompt
+            - Delete *a1 Bart draft*, check *a1 Lisa draft* not deleted
     4. With anonymous user:
         - `$PROVIDER/autosave/summary` only shows saved data, not drafts
         - change form definition to remove the read permission form anyone
         - `$PROVIDER/autosave/summary` returns 403 (since anonymous users don't have the read permission)
-        - `$PROVIDER/autosave/new`, type *Homer*, tab out, after 6s check that no autosave was done (e.g. with Charles that no PUT was made to the persistence layer)
+        - `$PROVIDER/autosave/new`, type *guest Maggie*, tab out, after 6s check that no autosave was done (e.g. with Charles that no PUT was made to the persistence layer)
     5. Permissions of drafts in summary page
         - Log in as user `a1` in group `a`.
         - `$PROVIDER/autosave/summary`, delete everything (to clean things up).
-        - As user `a1` in group `a`, go to `$PROVIDER/autosave/new`, type *Homer*, hit save, edit into *Homer2*, after 6s go to `$PROVIDER/autosave/summary`, check it shows *Homer* and *Homer2* as draft.
-        - As user `a2` in group `a`, go to `$PROVIDER/autosave/summary`, check it shows *Homer* and *Homer2* as draft.
-        - As user `b1` in group `b`, go to `$PROVIDER/autosave/summary`, check it shows neither *Homer* nor *Homer2*.
-
-- Autosave without permissions (tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858))
-    1. User is authenticated
-    1. Create form without permissions
-    1. Go to /new, enter text in field, tab out, wait for autosave
-    1. Go to /new again
-    1. Dialog must propose loading draft
-    1. Save
-    1. Make change to text in field, tab out, wait for autosave
-    1. Go back to /edit
-    1. Dialog must propose loading draft
+        - As user `a1` in group `a`, go to `$PROVIDER/autosave/new`, type *a1 Homer*, hit save, edit into *a1 Homer draft*, after 6s go to `$PROVIDER/autosave/summary`, check it shows *a1 Homer* and *a1 Homer draft* as draft.
+        - As user `a2` in group `a`, go to `$PROVIDER/autosave/summary`, check it shows *a1 Homer* and *a1 Homer draft* as draft.
+        - As user `b1` in group `b`, go to `$PROVIDER/autosave/summary`, check it shows neither *a1 Homer* nor *a1 Homer2 draft*.
+    6. Autosave without permissions (tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858))
+        - Edit the form definition, uncheck *Enable permissions for this form*, publish
+        - Log in as user `a1` of group `a`
+        - Go to /new, enter `a1 Marge draft`, tab out, wait for autosave
+        - Go to /new again, dialog must propose loading draft
+        - Choose to open the draft, edit it into `a1 Marge`, save, change to `a1 Marge draft`, wait for autosave
+        - Go to the summary page, click on `a1 Marge`, dialog must propose loading draft
 
 ### DB2 DDL \[2016.2 DONE\]
 
