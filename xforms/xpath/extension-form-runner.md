@@ -189,6 +189,30 @@ Example:
 
 ## Authentication functions
 
+### fr:can-create()
+
+[SINCE Orbeon Forms 2016.3]
+
+Whether the current user has the `create` permission for the current app/form name (detail page only).
+
+### fr:can-delete()
+
+[SINCE Orbeon Forms 2016.3]
+
+Whether the current user has the `delete` permission for the current form data (detail page only).
+
+### fr:can-read()
+
+[SINCE Orbeon Forms 2016.3]
+
+Whether the current user has the `read` permission for the current app/form name (detail page only).
+
+### fr:can-update()
+
+[SINCE Orbeon Forms 2016.3]
+
+Whether the current user has the `update` permission for the current form data (detail page only).
+
 ### fr:user-group()
 
 ```xpath
