@@ -193,11 +193,19 @@ Example:
 
 [SINCE Orbeon Forms 2016.3]
 
+```xpath
+fr:can-create() as xs:boolean
+```
+
 Whether the current user has the `create` permission for the current app/form name (detail page only).
 
 ### fr:can-delete()
 
 [SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:can-delete() as xs:boolean
+```
 
 Whether the current user has the `delete` permission for the current form data (detail page only).
 
@@ -205,11 +213,19 @@ Whether the current user has the `delete` permission for the current form data (
 
 [SINCE Orbeon Forms 2016.3]
 
+```xpath
+fr:can-read() as xs:boolean
+```
+
 Whether the current user has the `read` permission for the current app/form name (detail page only).
 
 ### fr:can-update()
 
 [SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:can-update() as xs:boolean
+```
 
 Whether the current user has the `update` permission for the current form data (detail page only).
 
