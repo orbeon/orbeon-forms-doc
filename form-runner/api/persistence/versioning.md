@@ -30,3 +30,7 @@ The value of the parameter is the id of the form data (document) being edited. T
 ## Auditing trail
 
 In addition, the relational database implementations support an auditing trail, keeping older versions of form definitions and form data. However this is not visible at the level of the REST API.
+
+## See also 
+
+- Blog post: [Form versioning](http://blog.orbeon.com/2014/02/form-versioning.html)

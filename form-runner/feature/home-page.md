@@ -55,9 +55,9 @@ When the user has access to admin operations, new information is shown:
 - whether the form is available or unavailable ("unpublished")
 - whether the form is a library form
 
-Unavailable forms remain on the server, but any user access to an unavailable form behaves as if the form had never been published.
+Unavailable forms remain on the server, but any user access to an unavailable form behaves as if the form definition had never been published. Data associated with the form definition is not touched, but cannot be read or updated via the form definition when it is unavailable.
 
-Admins can select forms in two ways:
+Administrators can select forms in two ways:
 
 - by using the checkboxes next to the form
 - by using the *Select* menu to automatically select all forms matching a certain condition
@@ -68,12 +68,49 @@ The operations listed in the Operations menu are then available depending on the
 
 ![Operations Menu](../images/home-operation-menu.png)
 
-The main operations available are:
+### Making published form definitions available/unavailable
 
-- Publish local forms: make an unavailable form available again
-- Unpublish local forms: make a published form unavailable
+- __Publish local forms:__ make an unavailable form definition available again.
+- __Unpublish local forms:__ make a published form definitionunavailable.
+
+Initially, when publishing a form definition with Form Builder, the form definition is available.
 
 ![Unavailable](../images/home-unavailable.png)
+
+### Upgrading form definitions
+
+#### Introduction
+
+[SINCE Orbeon Forms 4.6]
+
+- __Upgrade local form definitions:__ upgrade the selected form definitions, including using the latest published section templates.
+ 
+Specifically, this operation, for each selected form definition:
+
+1. Reads the latest version of the published form definition, whether it is available or unavailable.
+1. Loads the latest versions of the published section templates that might be associated with that form definition.
+1. Upgrades the form definition markup to the latest format, as if loading it in Form Builder and saving it again.
+1. Includes the latest section templates loaded above into the form definition.
+1. Saves back the form definition, either as a new version or as the same version (see below for details).
+
+#### Upgrading with section templates and versioning
+
+Important notes when [form definition versioning](http://blog.orbeon.com/2014/02/form-versioning.html) is used:
+
+- From Orbeon Forms 4.6 (included) to 2016.1 (excluded): a *new* form definition version is created when the form definition is upgraded.
+- From Orbeon Forms 2016.1 (included): the upgraded form definition *overrides* the previously-published form definition. 
+
+When form definition versioning is used section templates are in use, you have to be very careful because the format of the data covered by section templates might have changed and might make the upgraded form incompatible with existing data. See also [Publishing](http://doc.orbeon.com/form-builder/publishing.html#versioning).
+
+We advise that you only republish form definitions which use both form definition versioning and section templates if you know that the format of the data covered by the section templates remains compatible.
+
+#### Upgrading section templates
+
+Here is how you can use this operation to update your form definitions' section template to the latest published section templates:
+
+1. Publish your section templates from Form Builder (see [Section templates](http://doc.orbeon.com/form-builder/section-templates.html)). 
+2. In the Home page, select which forms you want to update.
+3. Run the "Upgrade local form definitions" action.
 
 ### Remote server operations
 
@@ -158,10 +195,11 @@ When the remote server is configured as above, the first time you go to the Form
 
 Once the credentials are correct, the Home page retrieves the remote server's list of deployed forms and metadata, which appears in a new *Remote* column group. You then have access to new operations:
 
-- Publish remote form: make an unavailable form available again on the remote server
-- Unpublish remote form: make a previously published form unavailable on the remote server
-- Push to remote: copy a form definition and its attachments from the local to the remote server
-- Pull from remote: copy a form definition and its attachments from the remote to the local server
+- __Publish remote form:__ make an unavailable form available again on the remote server.
+- __Unpublish remote form:__ make a previously published form unavailable on the remote server.
+- __Push to remote:__ copy a form definition and its attachments from the local to the remote server.
+- __Pull from remote:__ copy a form definition and its attachments from the remote to the local server.
+- __Upgrade remote form definitions:__ upgrade the remote form definition (see [Upgrading form definitions](#upgrading-form-definitions)).
 
 ![Push to Remote](../images/home-push.png)
 
