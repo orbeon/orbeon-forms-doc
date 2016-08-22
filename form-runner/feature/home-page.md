@@ -68,7 +68,7 @@ The operations listed in the Operations menu are then available depending on the
 
 ![Operations Menu](../images/home-operation-menu.png)
 
-### Making published form definitions available/unavailable
+### Controlling form definitions availability
 
 - __Publish local forms:__ make an unavailable form definition available again.
 - __Unpublish local forms:__ make a published form definitionunavailable.
