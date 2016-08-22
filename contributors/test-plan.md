@@ -371,7 +371,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
 Repeat what follows with:
 
 - \[2016.2 DONE\] Oracle
-- \[2016.2 TODO ALEX\] MySQL
+- \[2016.2 DONE\] MySQL
 - \[2016.2 TODO ALEX\] PostgreSQL
 - \[2016.2 TODO ALEX\] SQL Server
 - \[2016.2 TODO ALEX\] DB2
