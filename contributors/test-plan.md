@@ -366,15 +366,15 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - delete button enabled and works
                 - on open data, can edit data
 
-### Autosave and Permissions Test \[2016.2 TODO ALEX\]
+### Autosave and Permissions Test \[2016.2 DONE\]
 
 Repeat what follows with:
 
 - \[2016.2 DONE\] Oracle
 - \[2016.2 DONE\] MySQL
 - \[2016.2 DONE\] PostgreSQL
-- \[2016.2 TODO ALEX\] SQL Server
-- \[2016.2 TODO ALEX\] DB2
+- \[2016.2 DONE\] SQL Server
+- \[2016.2 DONE\] DB2
 
 Use the following in your `properties-local.xml`:
 
