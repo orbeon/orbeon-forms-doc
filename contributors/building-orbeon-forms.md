@@ -11,10 +11,10 @@ The following instructions are known to work as of 2014-05-20, which is between 
 
 ## What the Orbeon Forms developers use
 
-As of 2016-06-02:
+As of 2016-08:
 
 - OS X El Capitan
-- IntelliJ IDEA 2016.1
+- IntelliJ IDEA 2016.2
 
 ## With sbt from the command-line
 
