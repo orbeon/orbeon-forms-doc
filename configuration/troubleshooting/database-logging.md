@@ -10,7 +10,7 @@ In case of issues when using Orbeon Forms with a relational database, you might 
 
 [Download](https://github.com/arthurblake/log4jdbc/releases) and [install](https://code.google.com/p/log4jdbc/) [log4jdbc](https://github.com/arthurblake/log4jdbc).
 
-Then update your datasource configuration. For example, with Tomcat:
+Then update your datasource configuration. For example, with Tomcat and Oracle:
 
 ```xml
 <Resource
@@ -30,3 +30,7 @@ Then update your datasource configuration. For example, with Tomcat:
 ```
 
 Note the `driverClassName` set to `net.sf.log4jdbc.DriverSpy`, and the `url` starting with `jdbc:log4jdbc:`, followed by the usual driver prefix, here `oracle:`.
+
+## See also
+
+- [Using Form Runner with a Relational Database](../../form-runner/persistence/relational-db.md)

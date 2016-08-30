@@ -1,4 +1,4 @@
-# Use Form Runner with a Relational Database
+# Using Form Runner with a Relational Database
 
 <!-- toc -->
 
@@ -154,6 +154,19 @@ Run the following DDL to create or update your Orbeon database, and note that uf
 
 ## Application server setup
 
+### Tomcat datasource configuration
+
+When using Tomcat, you setup a JDBC data source for your database instance either:
+
+- in `server.xml`
+- or in a separate context XML file (such as `orbeon.xml`) for the web app.
+
+In both cases, you define a `Resource` element containing several configuration attributes. We provide examples below for all the databases covered, but for more about Tomcat datasource configuration options, see:
+ 
+- Tomcat documentation: [The Tomcat JDBC Connection Pool](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)
+- Apache Commons documentation: [BasicDataSource Configuration Parameters](http://commons.apache.org/proper/commons-dbcp/configuration.html)
+- External blog post: [Configuring jdbc-pool for high-concurrency](http://www.tomcatexpert.com/blog/2010/04/01/configuring-jdbc-pool-high-concurrency)
+
 ### Oracle application server setup
 
 #### General
@@ -161,7 +174,7 @@ Run the following DDL to create or update your Orbeon database, and note that uf
 Assuming:
 
 - `${HOST}`: the host Oracle server is running on, for example `oracle.acme.com`
-- ``${PORT}`: the port the Oracle server is running on, for example `1521`
+- `${PORT}`: the port the Oracle server is running on, for example `1521`
 - `${INSTANCE}`: the instance name, for example `orcl`
 - `${USERNAME}`: the user/schema, for example `orbeon`
 - `${PASSWORD}`: the password, for example `password`
@@ -170,21 +183,26 @@ Assuming:
 
 Put the Oracle jar file that contains the JDBC driver (e.g. `ojdbc6_g.jar`, `xdb.jar`, and `xmlparserv2.jar`) in the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version). If you don't already have it, you can download the Oracle JDBC driver from the Oracle site.
 
-Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in `server.xml`, where you define a `Resource` pointing to the your Oracle instance. In the example below, the Oracle server is running on `localhost`, the instance name is `globaldb`, and the user/schema is `orbeon` with password `orbeon`. Those values are highlighted in the configuration below, and you'll most likely want to change them to fit your setup.
+Your `Resource` element pointing to the your Oracle instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). In the example below, the Oracle server is running on `localhost`, the instance name is `globaldb`, and the user/schema is `orbeon` with password `orbeon`. Those values are highlighted in the configuration below, and you'll most likely want to change them to fit your setup.
 
 ```xml
 <Resource
     name="jdbc/oracle"
+    driverClassName="oracle.jdbc.OracleDriver"
+    
     auth="Container"
     type="javax.sql.DataSource"
+    
     initialSize="3"
     maxActive="10"
     maxIdle="20"
     maxWait="30000"
-    driverClassName="oracle.jdbc.OracleDriver"
+    
     poolPreparedStatements="true"
-    validationQuery="select * from dual"
+
     testOnBorrow="true"
+    validationQuery="select * from dual"
+    
     username="orbeon"
     password="orbeon"
     url="jdbc:oracle:thin:@//localhost:1521/globaldb"/>
@@ -226,21 +244,26 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
 
 1. [Download the MySQL JDBC driver][6], called Connector/J, e.g. `mysql-connector-java-5.1.39-bin.jar` (latest version as of 2016-06-20)
 2. Copy it in the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
-3. Setup a JDBC data source for your MySQL schema. With Tomcat, you can do this in `conf/server.xml`, where you define a `Resource` pointing to your MySQL database and schema. In the example below, the MySQL server is running on `localhost` port 3306, the schema is `orbeon`, the username/password is `orbeon`/`orbeon`. Those values are highlighted in the configuration below, and you'll most likely want to change them to fit your setup. Also, on the JDBC URL you're telling the MySQL driver to use Unicode and the UTF-8 encoding when talking to the database, which we highly recommend you to do in order to avoid encoding issues with non-ASCII characters.
+3. Setup a JDBC data source for your MySQL schema (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). In the example below, the MySQL server is running on `localhost` port 3306, the schema is `orbeon`, the username/password is `orbeon`/`orbeon`. Those values are highlighted in the configuration below, and you'll most likely want to change them to fit your setup. Also, on the JDBC URL you're telling the MySQL driver to use Unicode and the UTF-8 encoding when talking to the database, which we highly recommend you to do in order to avoid encoding issues with non-ASCII characters.
 
     ```xml
     <Resource
         name="jdbc/mysql"
+        driverClassName="com.mysql.jdbc.Driver"
+     
         auth="Container"
         type="javax.sql.DataSource"
+     
         initialSize="3"
         maxActive="10"
         maxIdle="20"
         maxWait="30000"
-        driverClassName="com.mysql.jdbc.Driver"
+     
         poolPreparedStatements="true"
-        validationQuery="select 1 from dual"
+     
         testOnBorrow="true"
+        validationQuery="select 1"
+        
         username="orbeon"
         password="orbeon"
         url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
@@ -252,21 +275,26 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
 
 1. [Download the Microsoft JDBC driver for SQL Server][7].
 2. Uncompress the zip file, and copy the `sqljdbc4.jar` it contains to the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
-3. Setup the JDBC data source for your DB2 instance. On Tomcat, you typically do this by editing Tomcat's `server.xml`, and within the `<context>` for Orbeon Forms adding a `<resource>` element similar to the one that follows.
+3. Setup the JDBC data source for your SQL Server instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). Example:
 
     ```xml
     <Resource
         name="jdbc/sqlserver"
+        driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+  
         auth="Container"
         type="javax.sql.DataSource"
+     
         initialSize="3"
         maxActive="10"
         maxIdle="20"
         maxWait="30000"
-        driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+        
         poolPreparedStatements="true"
+     
         validationQuery="select 1"
         testOnBorrow="true"
+     
         username="orbeon"
         password="orbeon"
         url="jdbc:sqlserver://server"/>
@@ -278,21 +306,26 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
 
 1. [Download the PostgreSQL JDBC driver][8].
 2. Copy the driver jar to the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
-3. Setup the JDBC data source for your PostgreSQL instance. On Tomcat, you typically do this by editing Tomcat's `server.xml`, and within the `<context>` for Orbeon Forms adding a `<resource>` element similar to the one that follows.
+3. Setup the JDBC data source for your PostgreSQL instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). Example:
 
     ```xml
     <Resource
         name="jdbc/postgresql"
+        driverClassName="org.postgresql.Driver"
+     
         auth="Container"
         type="javax.sql.DataSource"
+     
         initialSize="3"
         maxActive="10"
         maxIdle="20"
         maxWait="30000"
-        driverClassName="org.postgresql.Driver"
+     
+        poolPreparedStatements="true"
+        
         validationQuery="select 1"
         testOnBorrow="true"
-        poolPreparedStatements="true"
+        
         username="orbeon"
         password="orbeon"
         url="jdbc:postgresql://server:5432/database?useUnicode=true&amp;characterEncoding=UTF8&amp;socketTimeout=30&amp;tcpKeepAlive=true"/>
@@ -310,21 +343,26 @@ Setup a JDBC data source for your Oracle instance. With Tomcat, this is done in 
 
 1. [Download the DB2 JDBC driver][9] for the version of DB2 you're using.
 2. Uncompress the zip file, and copy the `db2jcc4.jar` it contains to the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
-3. Setup the JDBC data source for your DB2 instance. On Tomcat, you typically do this by editing Tomcat's `server.xml`, and within the `<context>` for Orbeon Forms adding a `<resource>` element similar to the one that follows.
+3. Setup the JDBC data source for your DB2 instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). Example:
 
     ```xml
     <Resource
         name="jdbc/db2"
+        driverClassName="com.ibm.db2.jcc.DB2Driver"
+     
         auth="Container"
         type="javax.sql.DataSource"
+     
         initialSize="3"
         maxActive="10"
         maxIdle="20"
         maxWait="30000"
-        driverClassName="com.ibm.db2.jcc.DB2Driver"
+        
         poolPreparedStatements="true"
+     
         validationQuery="select 1 from sysibm.sysdummy1"
         testOnBorrow="true"
+     
         username="db2inst1"
         password="password"
         url="jdbc:db2://localhost:50000/sample"/>
@@ -444,6 +482,7 @@ In order to remove data, see [Purging Old Data](purging-old-data.md).
 ## See also 
 
 - [Purging Old Data](purging-old-data.md)
+- [Relational Database Logging](../../configuration/troubleshooting/database-logging.md)
 
 [1]: http://www.orbeon.com/pricing
 [2]: http://docs.oracle.com/cd/B19306_01/appdev.102/b14259/xdb03usg.htm#sthref263
