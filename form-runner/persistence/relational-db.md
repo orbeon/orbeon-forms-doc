@@ -161,11 +161,38 @@ When using Tomcat, you setup a JDBC data source for your database instance eithe
 - in `server.xml`
 - or in a separate context XML file (such as `orbeon.xml`) for the web app.
 
-In both cases, you define a `Resource` element containing several configuration attributes. We provide examples below for all the databases covered, but for more about Tomcat datasource configuration options, see:
+In both cases, you define a `Resource` element containing several configuration attributes. We provide examples below for all the databases covered, but for more about Tomcat datasource configuration options
+
+Here is a typical example:
+
+```xml
+<Resource
+    name="jdbc/mysql"
+    driverClassName="com.mysql.jdbc.Driver"
+ 
+    auth="Container"
+    type="javax.sql.DataSource"
+ 
+    initialSize="3"
+    maxActive="10"
+    maxIdle="20"
+    maxWait="30000"
+ 
+    poolPreparedStatements="true"
+ 
+    testOnBorrow="true"
+    validationQuery="select 1"
+    
+    username="orbeon"
+    password="orbeon"
+    url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
+```
+
+See also the following external links:
  
 - Tomcat documentation: [The Tomcat JDBC Connection Pool](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)
 - Apache Commons documentation: [BasicDataSource Configuration Parameters](http://commons.apache.org/proper/commons-dbcp/configuration.html)
-- External blog post: [Configuring jdbc-pool for high-concurrency](http://www.tomcatexpert.com/blog/2010/04/01/configuring-jdbc-pool-high-concurrency)
+- Blog post: [Configuring jdbc-pool for high-concurrency](http://www.tomcatexpert.com/blog/2010/04/01/configuring-jdbc-pool-high-concurrency)
 
 ### Oracle application server setup
 

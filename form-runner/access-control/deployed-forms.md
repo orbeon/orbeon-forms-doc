@@ -77,4 +77,4 @@ Which operations the current user can perform drives what page they can access, 
 
 ## See also
 
-- [Owner and Group Member Permissions](../../form-runner/access-control/owner-group.md)
+- [Owner and group member permissions](../../form-runner/access-control/owner-group.md)

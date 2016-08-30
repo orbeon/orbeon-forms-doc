@@ -1,4 +1,4 @@
-# Owner-group permissions
+# Owner and group member permissions
 
 <!-- toc -->
 

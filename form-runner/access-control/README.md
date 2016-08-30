@@ -1,4 +1,6 @@
-# Access Control
+# Access control and permissions
+
+<!-- toc -->
 
 In this section, we'll go over how you can secure Form Runner and Form Builder. For access control, Orbeon Forms leverages and delegates some work to external security infrastructure. In particular, you define users and their roles/group outside of Orbeon Forms.
 
@@ -11,7 +13,7 @@ Access control touches on the following:
 The following pages address specific topics:
 
 - [Setup users](users.md) - How to setup Orbeon Forms so that users and roles are provided.
-- [Editing Forms](editing-forms.md) - How to control access to Form Builder.
-- [Deployed Forms](deployed-forms.md) - How to control access to deployed forms.
-  - [Owner and Group Member permissions](owner-group.md) - How to control access based on ownership and groups.
-- [Form Fields](form-fields.md) - How to control access to specific form fields, grids or sections.
+- [Editing forms](editing-forms.md) - How to control access to Form Builder.
+- [Deployed forms](deployed-forms.md) - How to control access to deployed forms.
+  - [Owner and group member permissions](owner-group.md) - How to control access based on ownership and groups.
+- [Form fields](form-fields.md) - How to control access to specific form fields, grids or sections.
