@@ -47,9 +47,14 @@ Actions involving controls in a given section are automatically included with th
 
 When you open Form Builder, the latest version of the controls and section templates is retrieved from the database and shown in the toolbox.
 
-If you make changes to section templates by modifying and publishing a library form, you can refresh the toolbox in your form to reflect the latest changes using the "Reload Toolbox" icon at the top of the toolbox. After reloading :
+If you make changes to section templates by modifying and publishing a library form, you must reload the toolbox in your form to reflect the latest changes using the "Reload Toolbox" icon at the top of the toolbox.
 
-- The list of controls and section templates in the toolbox updates.
-- Section templates used in your form also update to their latest version.
+![Reloading the toolbox](images/toolbox-reload.png)
+
+For more about reloading, see [Reloading the toolbox](toolbox.md#reloading-the-toolbox)
 
 Note that when you publish your form, the section templates *currently* loaded in Form Builder at the time of publishing are included with the published form. This means that changes to section templates after the deployment of a form do not affect the deployed form. If you need to update a deployed form with a new version of controls, you must re-publish the form.
+
+## See also
+
+- [Toolbox](toolbox.md)

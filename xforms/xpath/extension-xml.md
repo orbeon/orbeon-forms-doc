@@ -56,7 +56,7 @@ This function lets you call an XPL pipeline.
 
 The function returns a sequence of document nodes corresponding the output of the pipeline. The returned sequence will have the same length as `$outputNames` and will correspond to the pipeline output with the name specified on `$outputNames` based on position.
 
-The example below shows a call to the `xxf:call-xpl` function, calling a pipeline with two inputs and one output :
+The example below shows a call to the `xxf:call-xpl` function, calling a pipeline with two inputs and one output:
 
 ```xpath
 xxf:call-xpl(

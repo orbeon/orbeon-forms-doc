@@ -88,7 +88,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
 
         1. If you haven't done so already, create a user in the `ManagementRealm` by running `bin/add-user.sh`, and creating a new user, say `admin`/`password`.
         2. Go to `http://127.0.0.1:9990/console/`. Choose _Profile_ on to top right of the page. Click on _Connector / Datasources_ in the left sidebar. Check that you have an enabled datasource with JNDI name `java:/comp/env/jdbc/mysql`. In the _Connection_ tab, click on _Test Connection_, and a dialog the message "Successfully created JDBC connection" should show.
-    3. (Requires Orbeon Forms PE) Check you can create a database service in Form Builder :
+    3. (Requires Orbeon Forms PE) Check you can create a database service in Form Builder:
         1. Create a new form in Form Builder, give it any app/form name.
         2. In the sidebar, add a _Database service_. Assuming you have an `employee` table in your database, name the service `employees`, use `db` for the datasource, and `select emp_no, first_name from employees limit 10` for the SQL query. (If you need sample data to populate your database, you can use data from these [demo scripts][3].)
         3. Add a _Dropdown Menu_ control to the form (not _Dynamic Data Dropdown_), click on the gear icon, and name it `employees`.

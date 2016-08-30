@@ -48,6 +48,18 @@ The following control information is copied and pasted:
 
 When the control is pasted, if the control name of the clipboard control is currently not in use in the form, it is used. Otherwise, a new name is chosen by Form Builder.
 
+
+## Reloading the toolbox
+
+The "Reload Toolbox" icon reloads all the components in the toolbox:
+
+![Reloading the toolbox](images/toolbox-reload.png)
+
+After reloading:
+
+- The list of controls and section templates in the toolbox updates.
+- Section templates used in your form also update to their latest published version.
+
 ## Form structure
 
 ![](images/form-structure.png)
