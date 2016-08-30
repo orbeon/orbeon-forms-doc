@@ -15,15 +15,21 @@ Then update your datasource configuration. For example, with Tomcat and Oracle:
 ```xml
 <Resource
     name="jdbc/oracle"
+    driverClassName="net.sf.log4jdbc.DriverSpy"
+    
     auth="Container"
     type="javax.sql.DataSource"
+    
     initialSize="3"
     maxActive="10"
     maxIdle="20"
     maxWait="30000"
-    validationQuery="select * from dual"
-    driverClassName="net.sf.log4jdbc.DriverSpy"
+    
     poolPreparedStatements="true"
+    
+    testOnBorrow="true"
+    validationQuery="select * from dual"
+    
     username="orbeon"
     password="**password**"
     url="jdbc:log4jdbc:oracle:thin:@//localhost:1521/globaldb"/>
