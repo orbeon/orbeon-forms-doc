@@ -1,4 +1,4 @@
-# Using Form Runner with a Relational Database
+# Using Form Runner with a relational database
 
 <!-- toc -->
 

@@ -4,7 +4,7 @@
 
 ## Availability
 
-_This is an Orbeon Forms PE feature._
+This is an Orbeon Forms PE feature.
 
 ## Rationale
 

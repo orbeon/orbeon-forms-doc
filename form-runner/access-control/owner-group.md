@@ -1,4 +1,4 @@
-# Owner-Group Permissions
+# Owner-group permissions
 
 <!-- toc -->
 
@@ -12,7 +12,7 @@ Owner-based and group-based permissions are useful when you want users to only s
 
 To use this feature for a form, in Form Builder, when editing a form, open the *Permissions* dialog, and check boxes on the *Owner* and *Group member* lines as appropriate for your situation.
 
-![Permissions dialog](../images/permissions-dialog.png)
+![The Permissions dialog](../../form-builder/images/permissions-dialog.png)
 
 ## Configuration
 
@@ -43,3 +43,4 @@ With Orbeon Forms 4.3, owner/group-based permissions were not enabled by default
 ## See also
 
 - [Owner/group-based permissions AKA "See your own data"](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html) blog post
+- [Access control for deployed forms](deployed-forms.md)
