@@ -57,8 +57,8 @@ The "Reload Toolbox" icon reloads all the components in the toolbox:
 
 After reloading:
 
-- The list of controls and section templates in the toolbox updates.
-- Section templates used in your form also update to their latest published version.
+- The list of controls and [section templates](section-templates.md) in the toolbox updates.
+- [Section templates](section-templates.md) used in your form also update to their latest published version.
 
 ## Form structure
 
@@ -262,3 +262,10 @@ The autocomplete control is a single item selection control that loads a list of
 ```
 /xforms-controls/services/countries?country-name={`encode-for-uri($fr-search-value)}
 ```
+
+## See also
+
+- [Section templates](section-templates.md)
+- [Documented XBL components](../form-runner/component/README.md)
+- [XBL components](../xforms/xbl/README.md)
+
