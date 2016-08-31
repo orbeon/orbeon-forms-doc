@@ -1,4 +1,4 @@
-# XBL Components Metadata
+# Toolbox component metadata
 
 <!-- toc -->
 

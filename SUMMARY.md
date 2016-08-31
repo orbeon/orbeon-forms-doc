@@ -42,7 +42,7 @@
         * [PDF production](form-builder/pdf-production.md)
         * [PDF templates](form-builder/pdf-templates.md)
         * [XML Schemas support](form-builder/xml-schema-support.md)
-        * [Metadata](form-builder/metadata.md)
+        * [Toolbox component metadata](form-builder/metadata.md)
         * [Section templates](form-builder/section-templates.md)
 * Form Runner
     * Overview
