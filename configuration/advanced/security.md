@@ -10,7 +10,7 @@ Orbeon Forms is used by health care, financial companies, government entities, a
 
 ### Buffer overflows
 
-Until recently, the most publicly reported security flaws were [buffer overflows][1]. The server-side code in Orbeon Forms is entirely written in Java and Scala, languages which performs bounds checking and takes other measures to shields programs from similar issues.  
+Until recently, the most publicly reported security flaws were [buffer overflows][1]. The server-side code in Orbeon Forms is entirely written in Java and Scala, languages which performs bounds checking and other measures to shield programs from similar issues.
 
 ### Cross-site scripting (XSS)
 
