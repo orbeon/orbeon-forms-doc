@@ -78,4 +78,4 @@ This ensures that the data captured is machine-readable even if the user interfa
 
 ## See also
 
-- [Hints for checkboxes and radio buttons](http://blog.orbeon.com/2014/02/hints-for-checkboxes-and-radio-buttons.html) blog post
+- Blog post: [Hints for checkboxes and radio buttons](http://blog.orbeon.com/2014/02/hints-for-checkboxes-and-radio-buttons.html)
