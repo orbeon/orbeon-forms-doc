@@ -175,7 +175,7 @@ Here is a typical example:
  
     initialSize="3"
     maxActive="10"
-    maxIdle="20"
+    maxIdle="10"
     maxWait="30000"
  
     poolPreparedStatements="true"
@@ -222,7 +222,7 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
     
     initialSize="3"
     maxActive="10"
-    maxIdle="20"
+    maxIdle="10"
     maxWait="30000"
     
     poolPreparedStatements="true"
@@ -283,7 +283,7 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
      
         initialSize="3"
         maxActive="10"
-        maxIdle="20"
+        maxIdle="10"
         maxWait="30000"
      
         poolPreparedStatements="true"
@@ -314,7 +314,7 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
      
         initialSize="3"
         maxActive="10"
-        maxIdle="20"
+        maxIdle="10"
         maxWait="30000"
         
         poolPreparedStatements="true"
@@ -345,7 +345,7 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
      
         initialSize="3"
         maxActive="10"
-        maxIdle="20"
+        maxIdle="10"
         maxWait="30000"
      
         poolPreparedStatements="true"
@@ -382,7 +382,7 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
      
         initialSize="3"
         maxActive="10"
-        maxIdle="20"
+        maxIdle="10"
         maxWait="30000"
         
         poolPreparedStatements="true"

@@ -35,10 +35,23 @@ You can setup the Tomcat context directly within the Orbeon Forms WAR under `TOM
 
 ```xml
 <Context>
-    <Resource name="jdbc/mysql" auth="Container" type="javax.sql.DataSource"
-        initialSize="3" maxActive="10" maxIdle="20" maxWait="30000"
+    <Resource
+        name="jdbc/mysql"
         driverClassName="com.mysql.jdbc.Driver"
+        
+        auth="Container" 
+        type="javax.sql.DataSource"
+        
+        initialSize="3" 
+        maxActive="10" 
+        maxIdle="10" 
+        maxWait="30000"
+        
         poolPreparedStatements="true"
+        
+        testOnBorrow="true"
+        validationQuery="select 1"
+        
         username="orbeon"
         password="password"
         url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
@@ -75,10 +88,23 @@ Note that if you have a JDBC datasource, you can also place it inside:
     reloadable="false"
     override="true"
     allowLinking="true">
-    <Resource name="jdbc/mysql" auth="Container" type="javax.sql.DataSource"
-        initialSize="3" maxActive="10" maxIdle="20" maxWait="30000"
+    <Resource 
+        name="jdbc/mysql"
         driverClassName="com.mysql.jdbc.Driver"
+        
+        auth="Container" 
+        type="javax.sql.DataSource"
+        
+        initialSize="3" 
+        maxActive="10" 
+        maxIdle="10" 
+        maxWait="30000"
+        
         poolPreparedStatements="true"
+        
+        testOnBorrow="true"
+        validationQuery="select 1"
+        
         username="orbeon"
         password="password"
         url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>

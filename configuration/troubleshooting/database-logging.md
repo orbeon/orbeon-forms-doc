@@ -22,7 +22,7 @@ Then update your datasource configuration. For example, with Tomcat and Oracle:
     
     initialSize="3"
     maxActive="10"
-    maxIdle="20"
+    maxIdle="10"
     maxWait="30000"
     
     poolPreparedStatements="true"
