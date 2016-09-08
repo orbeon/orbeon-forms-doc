@@ -1,3 +1,5 @@
+# Dropdown Date Component
+
 This component allows users to select a date with 3 drop-downs, for the year, month, and day.
 
 ![Dropdown date component](images/xbl-dropdown-date.png)
