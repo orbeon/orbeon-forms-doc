@@ -279,9 +279,15 @@ _NOTE: This event doesn't bubble, so event listeners must directly observe the c
 - __Bubbles:__ Yes
 - __Cancelable:__ Yes
 - __Context Info:__
-    - `event('filename') as xs:string`: the *untrusted* filename sent by the browser (for example `MyImage.png`)
-    - `event('content-type') as xs:string`: the *untrusted* content type sent by the browser (for example `image/png`)
-    - `event('content-length') as xs:string`: the *untrusted* content length sent by the browser (for example `33270`)
+    - `event('filename') as xs:string`
+        - the *untrusted* filename sent by the browser
+        - for example `MyImage.png`
+    - `event('content-type') as xs:string`
+        - the *untrusted* content type sent by the browser
+        - for example `image/png`
+    - `event('content-length') as xs:string`
+        - the *untrusted* content length sent by the browser
+        - for example `33270`
 
 ### xxforms-upload-error
 
