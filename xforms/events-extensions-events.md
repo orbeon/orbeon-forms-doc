@@ -17,7 +17,7 @@ This page documents extension events, that is events which are not part of the X
 - __Context Info:__
     - `event('node') as node()`: element or attribute node whose value has changed
     - `event('old-value') as xs:string`: previous value
-    - `event('new-value') as `xs:string: new value
+    - `event('new-value') as xs:string`: new value
 
 The `xxforms-value-changed` event is dispatched to an instance when an element or attribute value is changed in that instance, namely through the following mechanisms:
 
@@ -55,7 +55,7 @@ Example:
 - __Target:__ `<xf:instance>` element  
 - __Bubbles:__ Yes  
 - __Cancelable:__ Yes  
-- __Context Info:__ none
+- __Context Info:__ None
 
 The `xxforms-valid` event is dispatched to an instance after validation if it is valid.  
 
@@ -65,7 +65,7 @@ The `xxforms-valid` event is dispatched to an instance after validation if it is
 - __Target:__ `<xf:instance>` element  
 - __Bubbles:__ Yes  
 - __Cancelable:__ Yes  
-- __Context Info:__ none
+- __Context Info:__ None
 
 The `xxforms-invalid` event is dispatched to an instance after validation if it is invalid.  
 
@@ -77,7 +77,7 @@ The `xxforms-invalid` event is dispatched to an instance after validation if it 
 - __Target:__ `<xxf:dialog>` element  
 - __Bubbles:__ Yes  
 - __Cancelable:__ Yes  
-- __Context Info:__ none
+- __Context Info:__ None
 
 The `xxforms-dialog-open` event is dispatched to a dialog in response to running the  `<xxf:show>` action targeting that dialog.
 
@@ -112,7 +112,7 @@ When the dialog opens upon receiving the `xxforms-dialog-open` event, it sets th
 - __Target:__ `<xxf:dialog>` element  
 - __Bubbles:__ Yes  
 - __Cancelable:__ Yes  
-- __Context Info:__ none
+- __Context Info:__ None
 
 The `xxforms-dialog-close` event is dispatched to a dialog in response to:
 
@@ -230,7 +230,7 @@ The `xxforms-index-changed` event is not dispatched during control creation, onl
 - __Target:__ control element  
 - __Bubbles:__ No  
 - __Cancelable:__ Yes  
-- __Context Info:__ none
+- __Context Info:__ None
 
 The `xxforms-iteration-moved` event is dispatched during refresh, just after `xforms-value-changed` (if dispatched).
 
@@ -278,7 +278,10 @@ _NOTE: This event doesn't bubble, so event listeners must directly observe the c
 - __Target:__ `<xf:upload>` element
 - __Bubbles:__ Yes
 - __Cancelable:__ Yes
-- __Context Info:__ None
+- __Context Info:__
+    - `event('filename') as xs:string`: the *untrusted* filename sent by the browser (for example `MyImage.png`)
+    - `event('content-type') as xs:string`: the *untrusted* content type sent by the browser (for example `image/png`)
+    - `event('content-length') as xs:string`: the *untrusted* content length sent by the browser (for example `33270`)
 
 ### xxforms-upload-error
 
