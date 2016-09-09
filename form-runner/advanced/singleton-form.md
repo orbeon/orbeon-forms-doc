@@ -1,4 +1,4 @@
-# Singleton Form
+# Singleton form
 
 <!-- toc -->
 
