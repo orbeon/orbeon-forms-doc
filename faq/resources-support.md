@@ -29,10 +29,10 @@ Usually an issue gets fixed or a feature gets implemented in Orbeon Forms when:
 - It is very easy to implement, so we just implement it along the way to make everybody happy.
 - We have put it on our [roadmap](../roadmap.md) and scheduled it because we think it is a crucial feature for Orbeon Forms.
 - We need it for a project we are currently working on.
-- Somebody sponsors it.
-- Somebody sends a patch for it.
+- Somebody [sponsors](http://www.orbeon.com/services) it.
+- Somebody sends a [patch or pull request](https://github.com/orbeon/orbeon-forms/pulls) for it.
 
-For a list of open issues/features, see the [issue tracker](https://github.com/orbeon/orbeon-forms/issues).
+For a list of open issues and RFEs (Requests For Enhancements), see the [issue tracker](https://github.com/orbeon/orbeon-forms/issues).
 
 We need help on Orbeon Forms by the way, and we definitely appreciate outside contributions. So check out the [source code][6] and start hacking away. You can ask your questions on the [Orbeon Forms forum][1].
 
