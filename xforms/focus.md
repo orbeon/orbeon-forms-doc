@@ -6,7 +6,7 @@
 
 In user interfaces, the _focus_ usually refers to _keyboard focus._ A control is said to have focus when it currently receives keyboard input, whether for text entry or for manipulating the control itself (like using cursor keys to open a dropdown). Browsers usually indicate focus with a highlight:
 
-![][1]
+![](images/xforms-focus-textarea.png)
 
 XForms supports focus with a few constructs:
 
@@ -278,7 +278,6 @@ Orbeon Forms implements the following XForms 1.1-compatible behavior when receiv
 
 _NOTE: the `xforms-focus` event does not bubble._
 
-[1]: http://wiki.orbeon.com/forms/_/rsrc/1331664103653/doc/developer-guide/xforms-focus/focused-input-shadow.png
 [2]: http://www.w3.org/TR/xforms11/#action-setfocus
 [3]: http://www.w3.org/TR/xforms11/#idref-resolve
 [4]: http://www.w3.org/TR/xforms11/#evt-focus
