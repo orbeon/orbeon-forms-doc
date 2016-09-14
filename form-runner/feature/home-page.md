@@ -242,6 +242,35 @@ Finally, once reindexing is done, you'll see:
 
 ![Reindex done](../images/home-reindex-done.png)
 
+#### Logging
+
+While reindexing happens, the indexer writes to the log:
+
+- When indexing starts and ends.
+- Which providers it will reindex.
+- For each provider how many document it will reindex.
+- A "progress message" for each document being reindexed.
+
+The last message is logged at the `debug` level, to avoid your log growing unnecessarily in case you have lots of documents, while all the other messages are logged at the `info` level. For instance, you'll see something along those lines in your `orbeon.log`:
+
+```
+INFO  - Reindex status - Starting, will index [oracle_dev, oracle_staging]
+INFO  - Reindex status - Indexing oracle_dev 1/2
+INFO  - Reindex status - Indexing oracle_dev 1/2, 21 documents
+DEBUG - Reindex status - Indexing oracle_dev 1/2, document 1/8475
+DEBUG - Reindex status - Indexing oracle_dev 1/2, document 2/8475
+…
+INFO  - Reindex status - Stopped
+```
+
+If you'd like to enable logging at the `debug` level, add the following to your `log4j.xml`:
+
+```xml
+<category name="org.orbeon.relational">
+    <priority value="debug"/>
+</category>
+```
+
 ## Configuration properties
 
 ### Page size
