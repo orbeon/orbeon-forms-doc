@@ -256,7 +256,7 @@ The last message is logged at the `debug` level, to avoid your log growing unnec
 ```
 INFO  - Reindex status - Starting, will index [oracle_dev, oracle_staging]
 INFO  - Reindex status - Indexing oracle_dev 1/2
-INFO  - Reindex status - Indexing oracle_dev 1/2, 21 documents
+INFO  - Reindex status - Indexing oracle_dev 1/2, 8475 documents
 DEBUG - Reindex status - Indexing oracle_dev 1/2, document 1/8475
 DEBUG - Reindex status - Indexing oracle_dev 1/2, document 2/8475
 …
