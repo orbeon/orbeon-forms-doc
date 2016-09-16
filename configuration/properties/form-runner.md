@@ -374,6 +374,34 @@ This property controls whether Form Runner attempts to set focus on the first co
 
 In some cases, such as [embedding](../../form-runner/link-embed/java-api.md), it can be desirable to disable this by setting the property to `false`.
 
+### Focusable controls
+
+[SINCE Orbeon Forms 2016.3]
+
+The following properties determine which control types are focusable in in the following scenarios:
+
+- initial focus (if enabled by  `oxf.fr.detail.initial-focus`)
+- switching sections in the table of contents
+- switching sections in the wizard table of contents or navigation
+- clearing the form data with the "Clear" button
+- moving, inserting, or deleting iterations in repeated grids and sections
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.focus.includes.*.*"
+    value=""/>
+    
+<property
+    as="xs:string"
+    name="oxf.fr.detail.focus.excludes.*.*"
+    value="xf:trigger"/>
+```
+
+Until Orbeon Forms 2016.2, only Text Fields (`<xf:input>`) were focusable in these cases. Since Orbeon Forms 2016.3, the default is to allow focus on any input control, including text fields, text areas, dropdown menus, and more. However, buttons are explicitly excluded.
+  
+The values of these properties follow the [`include` and `exclude` attributes](../../xforms/focus.md#includes-and-excludes) on the `<xf:setfocus>` action.
+
 ### PDF
 
 #### Custom PDF filename
