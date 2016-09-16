@@ -67,6 +67,8 @@ As a user, you can impact the focus in the following ways:
 
 ### xf:setfocus
 
+#### Basic usage
+
 The XForms [`<xf:setfocus>`][2] action allows the form author to change the focus to a particular control. It is similar to the HTML `focus()` function, with handling of grouping controls as a nice bonus feature.
 
 Here is a basic use of the action:
@@ -79,6 +81,8 @@ Here is a basic use of the action:
     <xf:setfocus event="DOMActivate" control="name-input"/>
 </xf:trigger>
 ```
+
+#### Grouping controls
 
 You can also use the action on grouping controls, in which case it will set the focus to the first nested control able to accept focus:
 
@@ -108,17 +112,55 @@ When the grouping control is a switch or a repeat, the focus naturally follows t
 </xf:trigger>
 ```
 
-`<xf:setfocus>` supports an extension attribute, `input-only`. When set to true, this attribute changes the behavior of the action by allowing focus only on controls which support input. This means that buttons (triggers) in particular are excluded.
+#### Focusing only on xf:input
+
+[DEPRECATED with Orbeon Forms 2016.3. Use `includes` and `excludes` instead.]
+
+The `input-only` extension attribute, when set to `true`, changes the behavior of the action by allowing focus only on the `<xf:input>` control. This means that buttons (`<xf:trigger>`) in particular are excluded.
 
 This is convenient in particular to focus on the first control supporting input under a grouping control:
 
 ```xml
-<xf:setfocus control="my-group" input-only="true"/>
+<xf:setfocus 
+    control="my-group" 
+    input-only="true"/>
 ```
 
 This way, the user can use the keyboard right away, yet the programmer does not have to be specific as to which control must receive focus.
 
 The attribute is an AVT.
+
+#### Includes and excludes
+
+[SINCE Orbeon Forms 2016.3]
+
+The `includes` and `excludes` attribute allow filtering which controls are allowed to receive focus when using `<xf:setfocus>`.
+
+- `includes`
+    - list of control QNames to include
+    - include all controls if missing or blank
+- `excludes`
+    - list of control QNames to exclude
+    - exclude no controls if missing or blank
+
+These attributes deprecate `input-only="true"` which is equivalent to `includes="xf:input"`.
+
+This allows focus on all controls except `<xf:trigger>`:
+
+```xml
+<xf:setfocus 
+    control="my-group" 
+    excludes="xf:trigger"/>
+```
+
+This allows focus on `<xf:input>` and `<xf:textarea>` only:
+
+```xml
+<xf:setfocus 
+    control="my-group" 
+    includes="xf:input xf:textarea"/>
+```
+
 
 ### xf:setindex
 
