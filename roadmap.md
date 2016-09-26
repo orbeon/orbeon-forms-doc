@@ -40,23 +40,6 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ## Upcoming releases
 
-### Orbeon Forms 2016.2
-
-Focus:
-
-- [x] customer-requested improvements
-- [ ] ~~tests automation~~
-- [x] maintenance candidates
-  - [x] Move build to sbt, phase 1 [#2232](https://github.com/orbeon/orbeon-forms/issues/2232)
-
-Issues:
-
-- [x] [all Orbeon Forms 2016.2 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2016.2)
-
-Please remember that the following schedule is a plan, not a promise:
-
-- 2016-06-30: tentative release date
-
 ### Orbeon Forms 2016.3
 
 Focus:
@@ -65,9 +48,7 @@ Focus:
     - [ ] Support Liferay 7/DXP [#2843](https://github.com/orbeon/orbeon-forms/issues/2843)
     - [ ] Ability to specify is-manager-of permissions [#2792](https://github.com/orbeon/orbeon-forms/issues/2792)
     - [ ] P2: progress on Versioning: support basic data migration [#1523](https://github.com/orbeon/orbeon-forms/issues/1523)
-- [ ] one of:
-    - [ ] Form Builder usability: prime candidates would be introducing DnD and/or improved layout
-    - [ ] basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
+- [ ] basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 - [ ] [maintenance candidates](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+milestone%3A2016.3+label%3AMaintenance)
     - [ ] Pain point: Move build to sbt, phase 2 [#2805](https://github.com/orbeon/orbeon-forms/issues/2805)
 - [ ] [test automation](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+milestone%3A2016.3+label%3ATests)
@@ -85,6 +66,8 @@ Please remember that the following schedule is a plan, not a promise:
 
 Focus:
 
+- [ ] Form Builder usability
+    - [ ] Form Builder usability: prime candidates would be introducing DnD and/or improved layout
 - TBD
 
 Issues:
