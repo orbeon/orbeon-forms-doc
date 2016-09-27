@@ -24,7 +24,7 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
     SQL> create user orbeon identified by password ;
     SQL> grant all privileges to orbeon ;
     ```
-3. Run the following DDL to create or update your Orbeon database, and note that uf upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+3. Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
@@ -78,7 +78,7 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
    ```sql
    mysql> GRANT ALL ON orbeon.* TO 'orbeon'@'%';
    ```
-4. Run the following DDL to create or update your Orbeon database, and note that uf upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+4. Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
@@ -104,7 +104,7 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
 Orbeon Forms relies on SQL Server's full-text search, which is included out-of-the-box in all SQL Server editions, except the Express and Express with Tools. If you're using one of those two editions of SQL Server, you might want to look into getting Express with Advanced Services.
 
-Run the following DDL to create or update your Orbeon database, and note that uf upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
@@ -119,7 +119,7 @@ Run the following DDL to create or update your Orbeon database, and note that uf
 
 [SINCE Orbeon Forms 4.8]
 
-Run the following DDL to create or update your Orbeon database, and note that uf upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
@@ -134,7 +134,7 @@ Run the following DDL to create or update your Orbeon database, and note that uf
 
 [SINCE Orbeon Forms 4.3]
 
-Run the following DDL to create or update your Orbeon database, and note that uf upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
