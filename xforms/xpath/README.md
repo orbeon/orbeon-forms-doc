@@ -16,6 +16,7 @@ This page and sub-pages describe XPath usage and the Orbeon Forms XPath function
     - [Validation functions](extension-validation.md)
     - [Controls functions](extension-controls.md)
     - [XML functions](extension-xml.md)
+    - [JSON functions](extension-json.md)
     - [HTTP functions](extension-http.md)
     - [Other functions](extension-other.md)
     - [Deprecated functions](deprecated-functions.md)
