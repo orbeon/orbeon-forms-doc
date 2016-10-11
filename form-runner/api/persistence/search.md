@@ -54,7 +54,7 @@ The `query` element is the most complex element. It is used for full-text and st
 
 ### Full-text search
 
-If the user is performing a full-text search, the first `<query>` element (which does not have attributes) contains the text of the search. The result details to return is still determined by the subsequent `<query>` elements with summary-field set to `true`. See below for more information about the response format. The exact semantic of the full-text search is implementation-dependent.
+The first `<query>` element is used for free text search: its attributes, if any, are ignored, and its text content, if present, it taken to be the text of the search. The result details to return is still determined by the subsequent `<query>` elements with summary-field set to `true`. See below for more information about the response format. The exact semantic of the full-text search is implementation-dependent.
 
 ### Structured search
 
