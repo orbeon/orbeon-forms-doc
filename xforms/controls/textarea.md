@@ -1,4 +1,4 @@
-# Text Area Control
+# Text area control
 
 <!-- toc -->
 

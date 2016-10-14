@@ -176,6 +176,7 @@
     * Controls
         * [Input](xforms/controls/input.md)
         * [Text area](xforms/controls/textarea.md)
+        * [Button](xforms/controls/trigger.md)
         * [Upload](xforms/controls/upload.md)
         * [Dialog](xforms/controls/dialog.md)
     * Submission

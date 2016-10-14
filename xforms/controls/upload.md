@@ -1,4 +1,4 @@
-# Upload Control
+# Upload control
 
 <!-- toc -->
 

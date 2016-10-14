@@ -1,4 +1,4 @@
-# Dialog Control
+# Dialog control
 
 <!-- toc -->
 

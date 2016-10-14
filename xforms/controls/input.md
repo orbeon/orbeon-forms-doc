@@ -1,4 +1,4 @@
-# Input Control
+# Input control
 
 <!-- toc -->
 
