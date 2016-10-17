@@ -176,6 +176,43 @@ This is used as follows (confirmed for Orbeon Forms 4.5 to 4.10):
     value="[true|false]"/>
 ```
 
+## Multiple databases of the same type
+
+Say you have two MySQL databases (or a single MySQL database with different schemas and users configured) and you would like to configure Orbeon Forms to store form definitions and form data to one or the other of the databases. Assume the following JDBC datasources:
+
+- `mysql_foo`
+- `mysql_bar` 
+
+You associate each datasource with a Form Runner *persistence provider* with the following properties:
+ 
+```
+<property as="xs:anyURI"  name="oxf.fr.persistence.mysql_foo.uri"         value="/fr/service/mysql"/>
+<property as="xs:string"  name="oxf.fr.persistence.mysql_foo.datasource"  value="mysql_foo"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.autosave"    value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.permissions" value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.versioning"  value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.active"      value="true"/>
+
+<property as="xs:anyURI"  name="oxf.fr.persistence.mysql_bar.uri"         value="/fr/service/mysql"/>
+<property as="xs:string"  name="oxf.fr.persistence.mysql_bar.datasource"  value="mysql_bar"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.autosave"    value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.permissions" value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.versioning"  value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.active"      value="true"/>
+```
+
+Then if you would like:
+
+- form definitions and form data for the Form Runner app `foo` to go to `mysql_foo` 
+- form definitions and form data for the Form Runner app `bar` to go to `mysql_bar`
+ 
+Add:
+
+```
+<property as="xs:string"  name="oxf.fr.persistence.provider.foo.*.*"      value="mysql_foo"/>
+<property as="xs:string"  name="oxf.fr.persistence.provider.bar.*.*"      value="mysql_bar"/>
+```
+
 ## Configuration properties for specific persistence providers
 
 Each provider may have specific configuration properties. For the latest settings, see
