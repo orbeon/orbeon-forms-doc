@@ -132,6 +132,20 @@ This controls which buttons appear on the Form Builder detail page.
 
 This controls which Form Builder user interface languages appear in the language selector.
 
+## Permissions dialog
+
+The permissions dialog allows form authors, amongst other things, to assign permissions to users having a specific roles. In that dialog, form authors can type in a text field the name of the role(s) they want to assign those permissions to. If you're systematically using certain roles, want to save form authors from having to type them, and prevent possible mistakes in the process, you can use the following property to list the role names you want the Form Builder permissions dialog to always show in that dialog:
+
+```xml
+<property as="xs:string" name="oxf.fb.permissions.role.always-show">
+    ["Organization owner"]
+</property>
+```
+
+The value of this property is an array of strings in the JSON format. For instance, the following screenshot shows the dialog with the above property set (see the line for "Organization owner"), and where the form author added a line for an "admin" role.
+
+![Permissions dialog with Organization owner role](../images/fb-permissions-organization-owner.png)
+
 ## Access control 
 
 If you'd like to have multiple classes of Form Builder users where some can edit, say, forms in the `hr` app, while others can edit forms in the `sales` app, see [Access control for editing forms](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control#TOC-Access-control-for-editing-forms).
