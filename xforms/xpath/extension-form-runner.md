@@ -234,10 +234,12 @@ Whether the current user has the `update` permission for the current form data (
 [SINCE Orbeon Forms 2016.3]
 
 ```xpath
-fr:user-ancestor-organizations($leaf-org as xs:string) as xs:string*
+fr:user-ancestor-organizations(
+    $leaf-org as xs:string
+) as xs:string*
 ```
 
-Return the current user's organizations which are the ancestors of the leaf organization passed if any. This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
+See[`xxf:user-ancestor-organizations()`](extension-http.md#xxfuser-ancestor-organizations).
 
 ### fr:user-group()
 
@@ -245,9 +247,7 @@ Return the current user's organizations which are the ancestors of the leaf orga
 fr:user-group() as xs:string?
 ```
 
-Return the current user's group if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
-
-*NOTE: This function is also available as `xxf:user-group()`. Prefer the Form Runner function with the `fr:` namespace prefix.*
+See[`xxf:user-group()`](extension-http.md#xxfuser-group).
 
 ### fr:user-organizations()
 
@@ -257,7 +257,7 @@ Return the current user's group if available. This function works with container
 fr:user-organizations() as xs:string*
 ```
 
-Return the current user's leaf organizations if any. This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
+See[`xxf:user-organizations()`](extension-http.md#xxfuser-organizations).
 
 ### fr:user-roles()
 
@@ -265,9 +265,7 @@ Return the current user's leaf organizations if any. This function only works wi
 fr:user-roles() as xs:string*
 ```
 
-Return the current user's groups if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
-
-*NOTE: This function is also available as `xxf:user-roles()`. Prefer the Form Runner function with the `fr:` namespace prefix.*
+See[`xxf:user-roles()`](extension-http.md#xxfuser-roles).
 
 ### fr:username()
 
@@ -275,9 +273,7 @@ Return the current user's groups if available. This function works with containe
 fr:username() as xs:string?
 ```
 
-Return the current user's username if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
-
-*NOTE: This function is also available as `xxf:username()`. Prefer the Form Runner function with the `fr:` namespace prefix.*
+See[`xxf:username()`](extension-http.md#xxfusername).
 
 ## See also
 
