@@ -211,7 +211,7 @@ The `xxf:set-session-attribute()` function stores the given value as a session a
   origin="xxf:set-session-attribute('document', instance('my-instance'))"/>
 ```
 
-### xxf:user-ancestor-organizations()
+## xxf:user-ancestor-organizations()
 
 [SINCE Orbeon Forms 2016.3]
 
@@ -269,7 +269,7 @@ xxf:user-group() as xs:string?
 
 Return the current user's group if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
-### xxf:user-organizations()
+## xxf:user-organizations()
 
 [SINCE Orbeon Forms 2016.3]
 
