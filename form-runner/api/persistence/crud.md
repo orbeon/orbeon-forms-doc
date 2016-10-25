@@ -4,7 +4,7 @@
 
 ## Basics
 
-When using `GET`, `PUT` and `DELETE` to deal with resources, the body of HTTP requests just contains the resource to handle.
+When using `GET` and `PUT` to deal with resources, the body of HTTP requests contains the resource to handle.
 
 - `GET`
     - The request body is empty and response body contains resource.
@@ -32,6 +32,16 @@ curl
   -H "Content-Type: application/xml"
   -H "Orbeon-Form-Definition-Version: 1"
   -X PUT
+  http://localhost:8080/orbeon/fr/service/persistence/crud/orbeon/builder/data/7b55c9d6f9b058376293e61d9f0d4442e379f717/data.xml
+```
+
+The following retrieves the data (the `GET` method is used implicitly):
+
+```
+curl 
+  -v 
+  -k 
+  -H "Orbeon-Form-Definition-Version: 1" 
   http://localhost:8080/orbeon/fr/service/persistence/crud/orbeon/builder/data/7b55c9d6f9b058376293e61d9f0d4442e379f717/data.xml
 ```
 
