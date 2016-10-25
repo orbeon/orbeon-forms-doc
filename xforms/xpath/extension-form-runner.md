@@ -229,6 +229,16 @@ fr:can-update() as xs:boolean
 
 Whether the current user has the `update` permission for the current form data (detail page only).
 
+### fr:user-ancestor-organizations()
+
+[SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:user-ancestor-organizations($leaf-org as xs:string) as xs:string*
+```
+
+Return the current user's organizations which are the ancestors of the leaf organization passed if any. This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
+
 ### fr:user-group()
 
 ```xpath
@@ -238,6 +248,16 @@ fr:user-group() as xs:string?
 Return the current user's group if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
 *NOTE: This function is also available as `xxf:user-group()`. Prefer the Form Runner function with the `fr:` namespace prefix.*
+
+### fr:user-organizations()
+
+[SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:user-organizations() as xs:string*
+```
+
+Return the current user's leaf organizations if any. This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
 ### fr:user-roles()
 
