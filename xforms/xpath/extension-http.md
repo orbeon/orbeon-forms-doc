@@ -221,7 +221,43 @@ xxf:user-ancestor-organizations(
 ) as xs:string*
 ```
 
-Return the current user's organizations which are the ancestors of the leaf organization passed if any. This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
+Return the current user's organizations which are the ancestors of the leaf organization passed if any, from leaf to root. The leaf organization itself is not returned.
+
+Say you have:
+
+```
+Orbeon, Inc.
+└── Orbeon California
+    └── Orbeon San Mateo
+
+```
+
+Then:
+
+```xpath
+xxf:user-ancestor-organizations('Orbeon San Mateo')
+```
+
+returns:
+
+```
+'Orbeon California', 'Orbeon, Inc.'
+```
+
+This:
+ 
+```xpath
+for $org in 'Orbeon San Mateo'
+    return ($org, xxf:user-ancestor-organizations($org))
+```
+
+returns:
+
+```
+'Orbeon San Mateo', Orbeon California', 'Orbeon, Inc.'
+```
+
+This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
 ## xxf:user-group()
 
