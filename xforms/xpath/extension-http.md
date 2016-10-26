@@ -277,7 +277,26 @@ Return the current user's group if available. This function works with container
 xxf:user-organizations() as xs:string*
 ```
 
-Return the current user's leaf organizations if any. This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
+Return the current user's leaf organizations if any.
+
+Say you have these organizations:
+
+```
+Orbeon, Inc.
+└── Orbeon California
+    └── Orbeon San Mateo
+
+California Department of Education
+└── Local School District
+```
+
+`xxf:user-organizations()` returns:
+
+```
+'Orbeon San Mateo', 'Local School District'
+```
+
+This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
 ## xxf:user-roles()
 
