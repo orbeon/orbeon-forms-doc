@@ -12,7 +12,7 @@ Orbeon Forms supports several embedding methods:
 - [Form Runner proxy portlet](liferay-proxy-portlet.md)
 - [Form Runner full portlet](liferay-full-portlet.md)
 
-## Portals
+## Liferay
 
 ### Supported Liferay versions
 
@@ -27,19 +27,19 @@ The following versions of Liferay are supported:
 
 _NOTE: Support for Liferay 7.0/Liferay DXP is planned (see [#2843](https://github.com/orbeon/orbeon-forms/issues/2843) for details)._
 
-### Servlet vs. portlet deployment
+### Servlet vs. Liferay portal deployment
 
 In addition to deploying Orbeon Forms into a servlet container such as Tomcat, you can deploy it into the Liferay portal using the Orbeon Forms portlets.
 
-Portals provide features such as:
+Portals such as Liferay provide features such as:
 
 * __Content aggregation__:  A single web page aggregates the output or user interface of several data sources or applications.
-* __Personalization__: Users or administrators of the portal can customize the user interface. This often means not only customizing the look and feel, but also selecting a certain set of available functionalities within the application.
+* __Personalization__: Users or administrators of the portal can customize the user interface. This often means not only customizing the look and feel, but also selecting a certain set of available functionality within the application.
 * __Single sign-On__: The user logs in only once to access several applications in the portal.
 
 ### Known limitations
 
-The following Form Runner limitations are known within portals:
+The following Form Runner limitations are known within Liferay:
 
 * Form Builder proper is not supported (but you can run forms designed with Form Builder).
 * The (deprecated) "noscript" mode is not supported.
@@ -54,14 +54,16 @@ You can configure the proxy portlet via UI, making it is easier to create a setu
 
 Here is a comparison of the two options:
 
-|                                      |Proxy Portlet|Full Portlet
-|--------------------------------------|-------------|------------
-|Runs Form Runner forms                |yes          |yes
-|Runs custom XForms applications       |no           |yes
-|Requires custom landing page          |no           |yes
-|Specifically designed for Form Runner |yes          |no
-|Allows remote Form Runner             |yes          |no
-|Options configurable via UI           |yes          |no
-|Form selection via UI                 |yes          |no
-|Form selection via URL parameters     |yes          |no
-|Can use portal language preference    |yes          |no
+|                                      |Proxy Portlet|Full Portlet|Since Version|
+|--------------------------------------|-------------|------------|-------------|
+|Runs Form Runner forms                |yes          |yes         |             |
+|Specifically designed for Form Runner |yes          |no          |             |
+|Allows remote Form Runner             |yes          |no          |             |
+|Options configurable via UI           |yes          |no          |             |
+|Form selection via UI                 |yes          |no          |             |
+|Form selection via URL parameters     |yes          |no          |4.7          |
+|Can use portal user information       |yes          |no          |4.4          |
+|Can use portal language preference    |yes          |no          |4.4          |
+|Supports Liferay organizations        |yes          |no          |2016.3       |
+|Runs custom XForms applications       |no           |yes         |             |
+|Requires custom landing page          |no           |yes         |             |
