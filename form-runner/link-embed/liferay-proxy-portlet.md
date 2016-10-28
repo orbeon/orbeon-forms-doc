@@ -2,9 +2,13 @@
 
 <!-- toc -->
 
-### Availability
+## Availability
 
 This is an Orbeon Forms PE feature.
+
+## Supported Liferay versions
+
+See [Supported Liferay versions](README.md#supported-liferay-versions).
 
 ## Introduction
 
@@ -17,8 +21,6 @@ Form Runner can be deployed [directly](../../form-runner/link-embed/liferay-full
 If you only need Form Runner and are happy with deploying only one form per portlet, and if you want a simple configuration UI to set this up, then the proxy portlet is for you. Otherwise, you will have to look into the [full portlet](../../form-runner/link-embed/liferay-full-portlet.md).
 
 This guide describes how to install, administer and use the Form Runner proxy portlet.
-
-_NOTE: As of Orbeon Forms 4.0, this feature has been tested with Liferay 6.0 and 6.1._
 
 ![Controls form through the Liferay proxy portlet](images/liferay-proxy-controls.png)
 

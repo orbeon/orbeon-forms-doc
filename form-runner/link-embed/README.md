@@ -8,11 +8,24 @@
 
 Orbeon Forms supports several embedding methods:
 
-- with the [Form Runner server-side Java embedding API](java-api.md)
-- with the [Form Runner proxy portlet](liferay-proxy-portlet.md)
-- with the [Form Runner full portlet](liferay-full-portlet.md)
+- [Form Runner server-side Java embedding API](java-api.md)
+- [Form Runner proxy portlet](liferay-proxy-portlet.md)
+- [Form Runner full portlet](liferay-full-portlet.md)
 
 ## Portals
+
+### Supported Liferay versions
+
+The following versions of Liferay are supported:
+
+|Orbeon Forms Version|Tested Liferay Version    |
+|--------------------|--------------------------|
+|4.9                 |Liferay 6.0               |
+|                    |Liferay 6.1.2 CE GA3      |
+|2016.2              |Liferay 6.1.2 CE GA3      |
+|                    |Liferay 6.2 CE GA6 / 6.2.5|
+
+_NOTE: Support for Liferay 7.0/Liferay DXP is planned (see [#2843](https://github.com/orbeon/orbeon-forms/issues/2843) for details)._
 
 ### Servlet vs. portlet deployment
 
@@ -24,14 +37,12 @@ Portals provide features such as:
 * __Personalization__: Users or administrators of the portal can customize the user interface. This often means not only customizing the look and feel, but also selecting a certain set of available functionalities within the application.
 * __Single sign-On__: The user logs in only once to access several applications in the portal.
 
-### Status of portlet support in Orbeon Forms
-
-As of Orbeon Forms 4.9, portlet support is tested with Liferay 6.0 and 6.1. We recommend Liferay 6.1 GA2 or newer.
+### Known limitations
 
 The following Form Runner limitations are known within portals:
 
 * Form Builder proper is not supported (but you can run forms designed with Form Builder).
-* The "noscript" mode is not supported.
+* The (deprecated) "noscript" mode is not supported.
 
 ### Form Runner proxy portlet or full portlet?
 

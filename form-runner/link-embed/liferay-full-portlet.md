@@ -10,6 +10,10 @@ for a comparison of portlet deployments.
 
 This is an Orbeon Forms PE feature.
 
+## Supported Liferay versions
+
+See [Supported Liferay versions](README.md#supported-liferay-versions).
+
 ## Deploying into Liferay
 
 ### Configuration

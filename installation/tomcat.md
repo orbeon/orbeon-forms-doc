@@ -2,9 +2,9 @@
 
 <!-- toc -->
 
-## Supported versions
+## Supported Tomcat versions
 
-As of Orbeon Forms 2016.1 and 2016.2, those are:
+As of Orbeon Forms 2016.1 and 2016.2, the following versions of Tomcat are supported:
 
 - Tomcat 6 (not recommended, see below)
 - Tomcat 7
