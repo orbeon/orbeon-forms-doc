@@ -16,15 +16,14 @@ Orbeon Forms is an open source solution to build and deploy web forms. For more 
 
 ### Prerequisites
 
-To go through this tutorial, you don't need much: any reasonably modern computer on which you can install Java 6 or 7 should do. You should be comfortable with installing new software on your computer, including uncompressing zip or gzip archives. You will also have to edit XML files. If you are familiar with HTML, this should not be a problem.
+To go through this tutorial, you don't need much: any reasonably modern computer on which you can install Java (7 or 8 are current versions as of November 2016). You should be comfortable with installing new software on your computer, including uncompressing zip or gzip archives. You will also have to edit XML files. If you are familiar with HTML, this should not be a problem.
 
 You also need a reasonably recent web browser. We recommend one of the following browsers:
 
-* Mozilla Firefox
-* Safari 4 or greater
 * Google Chrome
-* Opera 10 or greater
-* Internet Explorer 8 or greater
+* Safari
+* Mozilla Firefox
+* Internet Explorer 10, 11, or Microsoft Edge
 
 You will _not_ have to:
 
