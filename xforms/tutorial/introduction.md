@@ -4,17 +4,15 @@
 
 ## What is this?
 
-This is the tutorial for Orbeon Forms's XForms features. It is aimed at programmers who want to program Orbeon Forms, as opposed to users who want to use [Form Builder][3].
+This is the tutorial for Orbeon Forms's XForms features. It is aimed at programmers who either:
+ 
+- want to make changes to the Orbeon Forms source code, which relies in part on XForms
+- use [Form Builder][3] but want to add some custom processing to those forms 
+- want to write their own XForms applications, as opposed to users who want to use [Form Builder][3]
 
 If you have questions, issues or suggestions related to this tutorial, please send a message to the [Orbeon forum][2].
 
-## A little bit of background
-
-### What Orbeon Forms does for you
-
-Orbeon Forms is an open source solution to build and deploy web forms. For more information, please visit the [Orbeon home page][1].
-
-### Prerequisites
+## Prerequisites
 
 To go through this tutorial, you don't need much: any reasonably modern computer on which you can install Java (7 or 8 are current versions as of November 2016). You should be comfortable with installing new software on your computer, including uncompressing zip or gzip archives. You will also have to edit XML files. If you are familiar with HTML, this should not be a problem.
 
@@ -31,7 +29,7 @@ You will _not_ have to:
 * Use a compiler or other complicated build tool.
 * Install browser plugins or any other client-side software, besides your regular web browser!
 
-### Principles of Orbeon Forms
+## Principles of Orbeon Forms
 
 Orbeon Forms follows a few principles:
 

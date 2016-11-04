@@ -8,8 +8,7 @@ Java provides the cross-platform environment in which Orbeon Forms runs.
 
 If you don't have Java installed yet, download it from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
-_NOTE: If you use a Mac with Mac OS X, you probably have Java already installed on your machine, but if not, follow the instructions
-in this [knowledge base article](https://support.apple.com/kb/DL1572).
+_NOTE: If you use a Mac with Mac OS X, you probably have Java already installed on your machine, but if not, follow the instructions in this [knowledge base article](https://support.apple.com/kb/DL1572)._
 
 ## Downloading and installing Apache Tomcat
 

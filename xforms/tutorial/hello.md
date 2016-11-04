@@ -111,7 +111,7 @@ A few things to point out:
 * The `concat` function concatenates all its parameters into a resulting string. It is like the JavaScript `+` operator on strings.
 * Note the use of the single quote `'` around strings. This is needed because the XPath expression is put within double quotes `"` in the `value` attribute.
 
-## Page flow
+## Page Flow
 
 If you look at your browser's URL bar when showing the example, you notice that it looks like this:
 
