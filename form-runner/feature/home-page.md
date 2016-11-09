@@ -71,7 +71,7 @@ The operations listed in the Operations menu are then available depending on the
 ### Controlling form definitions availability
 
 - __Publish local forms:__ make an unavailable form definition available again.
-- __Unpublish local forms:__ make a published form definitionunavailable.
+- __Unpublish local forms:__ make a published form definition unavailable.
 
 Initially, when publishing a form definition with Form Builder, the form definition is available.
 
