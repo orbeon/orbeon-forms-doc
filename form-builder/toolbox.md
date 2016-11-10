@@ -190,8 +190,9 @@ _NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 2016.1 and
 | Name | Description |
 | --- | --- |
 | **File Attachment**       | - file which can be attached to the form at design time or at runtime<br>- the file can also be replaced or downloaded once attached |
-| **Image Attachment**      | - image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached. |
+| **Image Attachment**      | - image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached |
 | **Image**                 | - image attached to the form at design time<br>- it is not possible to change the image at runtime |
+| **Image Annotation**      | - image which can be attached to the form at design time or at runtime<br>- the image can then be annotated with graphic objects |
 | **Handwritten Signature** | signature drawn with a mouse or touch screen |
 
 <!--
