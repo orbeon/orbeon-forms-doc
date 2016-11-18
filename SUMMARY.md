@@ -91,7 +91,7 @@
         * [Flat view](form-runner/persistence/flat-view.md)
     * [Linking and embedding](form-runner/link-embed/README.md)
         * [Linking](form-runner/link-embed/linking.md)
-        * [Embedding Java API](form-runner/link-embed/java-api.md)
+        * [Java Embedding API](form-runner/link-embed/java-api.md)
         * [Liferay full portlet](form-runner/link-embed/liferay-full-portlet.md)
         * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
     * [Access control and permissions](form-runner/access-control/README.md)
