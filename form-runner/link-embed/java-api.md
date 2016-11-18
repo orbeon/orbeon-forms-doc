@@ -20,10 +20,13 @@ The intent is to allow Java (and other Java Virtual Machine (JVM)-based language
 
 Your own web app does the following:
 
-1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`. Both are included in `orbeon-embedding.war` which is shipped 
-   in Orbeon Professional Edition(PE) only.  
+1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`. Both are included in `orbeon-embedding.war` which ships 
+   with Orbeon Professional Edition (PE) only.  
 2. Setup the filter in your `web.xml` per the snippet below.
 3. Call the embedding API when producing a page, as done in the example below.
+
+
+_IMPORTANT: Make sure that you application uses the UTF-8 character encoding for the HTML response._
 
 This is a typical filter configuration:
 
