@@ -132,7 +132,7 @@ A control is concrete if it meets the conditions for relevance:
 
 Concrete controls are created at the following times:
 
-- during processing of the default action for [xforms-model-construct-done][2] event, if they meet the conditions for relevance
+- during processing of the default action for [`xforms-model-construct-done`][2] event, if they meet the conditions for relevance
 - when a new repeat iteration is inserted into a repeat container, if they meet the conditions for relevance
     - either during `xf:insert` processing
     - or during refresh
