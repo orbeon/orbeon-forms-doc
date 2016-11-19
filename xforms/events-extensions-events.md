@@ -1,4 +1,4 @@
-# Extension Events
+# Extension events
 
 <!-- toc -->
 
