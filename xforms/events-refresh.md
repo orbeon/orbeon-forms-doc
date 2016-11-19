@@ -8,7 +8,7 @@
 
 We call refresh events the following UI events defined in XForms, as they can occur during UI refresh:
 
-* `xforms-value` / `changed`
+* `xforms-value-changed`
 * `xforms-enabled` / `xforms-disabled`
 * `xforms-readwrite` / `xforms-readonly`
 * `xforms-optional` / `xforms-required`
