@@ -228,6 +228,8 @@
             * [Database access](xforms/tutorial/bookcast/database.md)
             * [Polishing the app](xforms/tutorial/bookcast/polishing.md)
             * [Adding a feed](xforms/tutorial/bookcast/feed.md)
+    * HOWTOs
+        * [Loading initial form data](xforms/howtos/initial-data.md)
     * [Using XForms from Java apps](xforms/filter.md)
 * XML Platform
     * [Page Flow Controller](xml-platform/controller/README.md)
