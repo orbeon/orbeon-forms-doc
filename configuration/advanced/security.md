@@ -34,11 +34,9 @@ Your XForms manipulates on a number of XML documents called _instances_ in XForm
 
 #### Direct access to XForms instance data
 
-You can configure Orbeon Forms to keep XForms instances in particular, and the state of your XForms page in general, either on the server or on the client.
+XForms state is kept on the server, so it is just not exposed to users. Only the values that are displayed to users are sent the browsers, and only values the user is authorized to change will be taken into account when received from the browser.
 
-_NOTE: Client state is rarely used, and the default is to store state on the server._
-
-When the state is kept on the server, it is just not exposed to users. When it is kept on the client, it is encrypted with a password you set; the password doesn't leave the server, and even if the encrypted value is visible to the client, it cannot be decrypted by users and can only decrypted on the server with a valid key. In both cases you are secure. Only the values that are displayed to users are sent the browsers, and only values the user is authorized to change will be taken into account when received from the browser.
+_NOTE: There is a deprecated option to keep state on the client. In this case, it is encrypted with a password you set. The password doesn't leave the server, and even if the encrypted value is visible to the client, it cannot be decrypted by users and can only be decrypted on the server with a valid key._
 
 #### Indirect access to XForms instance data via Ajax
 
