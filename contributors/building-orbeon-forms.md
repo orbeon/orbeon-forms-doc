@@ -2,21 +2,180 @@
 
 <!-- toc -->
 
-This page explains how to build Orbeon Forms:
+This page explains how to build Orbeon Forms.
 
-- [With IntelliJ](#with-intellij)
-- [From the command line](#from-the-command-line)
+Please note that the build system has changed over time. Building a full distribution with `ant orbeon-dist` has remained a constant though.
 
-The following instructions are known to work as of 2014-05-20, which is between the Orbeon Forms 4.5 and 4.6 releases. If something is broken, please [let us know](https://twitter.com/intent/tweet?in_reply_to=orbeon&in_reply_to_status_id=261900968369729536&source=webclient&text=%40orbeon+)!
+If something is broken, please [let us know](https://twitter.com/intent/tweet?in_reply_to=orbeon&in_reply_to_status_id=261900968369729536&source=webclient&text=%40orbeon+)!
 
-## What the Orbeon Forms developers use
+## Prerequisites
 
-As of 2016-08:
+You need to have already installed:
 
-- OS X El Capitan
-- IntelliJ IDEA 2016.2
+- [git](http://git-scm.com/)
+- [ant](http://ant.apache.org/)
+- [sbt](http://www.scala-sbt.org/)
+- [Tomcat 7](http://tomcat.apache.org/download-70.cgi)
+- Java 1.7 or 1.8
 
-## With sbt from the command-line
+On OS X, you can install the following easily if you have [Homebrew](http://brew.sh/):
+
+```bash
+brew install git
+brew install ant
+brew install sbt
+```
+
+## Getting the source
+
+If you have never obtained the Orbeon Forms source code, you need to get it [from github](https://github.com/orbeon/orbeon-forms). To get the latest code from the `master` branch, run the following command line:
+
+```bash
+git clone git@github.com:orbeon/orbeon-forms.git ~/my/projects/orbeon-forms
+```
+
+where `~/my/projects` is an existing directory on your system where you want to place the Orbeon Forms source code.
+
+This clones the git repository into a child directory called `orbeon-forms`.
+
+*NOTE: There is no guarantee that the master branch is stable, as it contains some of the latest changes to Orbeon Forms!*
+
+## Instructions starting December 2016
+
+### What the Orbeon Forms developers use
+
+You don't have to use the following, but in case you care, the Orbeon Forms developers use:
+
+- OS X Sierra
+- IntelliJ IDEA 2016.3
+
+### Building
+
+More of the build is now done with [sbt](http://www.scala-sbt.org/).
+
+To build files for development:
+
+- `sbt`: launch sbt
+- `project root`: this is the default
+- `package`: compile Scala, Java and assets, create JARs, and create the exploded WAR 
+
+The exploded WAR is available under:
+
+    orbeon-war/target/webapp
+
+To run all the tests:
+
+- `sbt`: launch sbt
+- `project root`: this is the default
+- `test:test`: run unit tests
+- `db:test`: run database tests
+
+To create a distribution:
+
+- `ant orbeon-dist`
+
+### Using IntelliJ
+
+You need:
+
+- [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html).
+- the Scala plugin for Scala source code support
+
+Currently, compiling and packaging is done via `sbt` and not from IntelliJ. You use IntelliJ for: 
+
+- editing
+- debugging
+
+To open the Orbeon Forms project:
+
+- Go to the "File" → "Open Project" menu and  select the `orbeon-forms` directory.
+- IntelliJ then indexes the project, which can take a minute the first time you do it.
+- Open `build.sbt` and click "Refresh" to let IntelliJ create modules based on the sbt build.
+
+### Running
+
+Create a new context in Tomcat's `server.xml`:
+
+```xml
+<Context
+    path="/orbeon"
+    docBase="/path/to/orbeon-forms/orbeon-war/target/webapp"
+    reloadable="false"
+    override="true"
+    crossContext="true"
+    allowLinking="true">
+
+    <Parameter
+        override="false"
+        name="oxf.resources.priority.0"
+        value="org.orbeon.oxf.resources.FilesystemResourceManagerFactory"/>
+    <Parameter
+        override="false"
+        name="oxf.resources.priority.0.oxf.resources.filesystem.sandbox-directory"
+        value="/path/to/orbeon-forms/resources-local"/>
+        
+</Context>
+```
+
+Then set `JAVA_OPTS` for Tomcat:
+
+```bash
+ORBEON_MEMORY_OPTS="-Xms300m -Xmx3g -XX:MaxPermSize=256m -verbosegc -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCDetails"
+
+ORBEON_DEBUG_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=61155"
+
+JAVA_OPTS="-ea $ORBEON_MEMORY_OPTS -Dapple.awt.UIElement=true $ORBEON_DEBUG_OPTS"
+
+export JAVA_OPTS
+```
+
+*NOTE: You don't have to set `-verbosegc -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCDetails` if you are not interested in garbage collector output.*
+
+Finally, you can start Tomcat with:
+
+```bash
+ ./apache-tomcat-7.0.53/bin/catalina.sh run
+```
+
+And test by going to:
+
+`http://localhost:8080/orbeon/`
+
+This will show the Orbeon Forms landing page.
+
+### Running without debugging or profiling
+
+Alternatively, for running without debugging, set instead:
+
+```bash
+export JAVA_OPTS="$ORBEON_MEMORY_OPTS -Dapple.awt.UIElement=true  -server"
+```
+
+### Debugging
+
+The settings above start Tomcat in debug mode. This means that you can debug the Java and Scala code from IntelliJ. Select the "Tomcat" configuration in IntelliJ, then "Run" → "Debug". IntelliJ opens the debugging window and connects to Tomcat. You can then set breakpoints and do the usual things one does with a debugger!
+
+### Making changes
+
+If you modify Java or Scala files, you need to recompile. You do this from the command-line with sbt, which can let run the compile task incrementally with:
+
+```
+~compile
+```
+
+TODO: document making changes to resources or assets.
+
+## About building Orbeon Forms PE
+
+Orbeon does not provide public instructions or code to build Orbeon Forms PE, which is a commercial, supported build of the product. If you are a PE customer, contact Orbeon at info@orbeon.com.
+
+The idea is just that we want to ensure that something called "Orbeon Forms PE" in fact comes from Orbeon.
+
+---
+
+## Historical
+
+### With sbt from the command-line
 
 As of 2016-06-02:
 
@@ -75,9 +234,9 @@ NOTES:
 
 - compiling from IntelliJ doesn't work properly yet: files compile, but won't be copied to the exploded WAR
 
-## With IntelliJ
+### With IntelliJ
 
-### Prerequisites
+#### Prerequisites
 
 You need to have already installed:
 
@@ -85,7 +244,7 @@ You need to have already installed:
 - [sbt](http://www.scala-sbt.org/) [SINCE 2015-08]
 - [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html) 14 (previous versions may or may not work)
 - [Tomcat 7](http://tomcat.apache.org/download-70.cgi)
-- Java 1.6
+- Java 1.7
 
 On OS X, you can install git and sbt easily if you have [Homebrew](http://brew.sh/):
 
@@ -100,28 +259,14 @@ With IntelliJ, you need the following plugins, which you can download and enable
 - Scala: to compile Scala source code
 - File Watchers: to compile `.less` files to CSS (if you make changes to those)
 
-### Getting the source
-
-If you have never obtained the Orbeon Forms source code, you need to get it [from github](https://github.com/orbeon/orbeon-forms). To get the latest code from the `master` branch, run the following command line:
-
-```bash
-git clone git@github.com:orbeon/orbeon-forms.git ~/my/projects/orbeon-forms
-```
-
-where `~/my/projects` is an existing directory on your system where you want to place the Orbeon Forms source code.
-
-This clones the git repository into a child directory called `orbeon-forms`.
-
-*NOTE: There is no guarantee that the master branch is stable, as it contains some of the latest changes to Orbeon Forms!*
-
-### Opening the project
+#### Opening the project
 
 To open Orbeon Forms in IntelliJ:
 
 - Go to the "File" → "Open Project" menu and  select the `orbeon-forms` directory.
 - IntelliJ then indexes the project, which can take a minute the first time you do it.
 
-### Building the project
+#### Building the project
 
 - Go to the "Build" → "Make Project" (this takes about 1 mn 10 seconds on a recent laptop).
 - Go to the "Ant Build" pane and run the `orbeon-war` target.
@@ -131,7 +276,7 @@ This builds Orbeon Forms in development mode, where the Java/Scala class files a
 
 In this mode, running the `orbeon-war` ant target skips compilation but processes resources and creates an "exploded" WAR file which Tomcat can point to.
 
-### Running Orbeon Forms
+#### Running Orbeon Forms
 
 Create a new context in Tomcat's `server.xml`:
 
@@ -167,11 +312,7 @@ And test by going to:
 
 This will show the Orbeon Forms landing page.
 
-### Debugging
-
-The settings above start Tomcat in debug mode. This means that you can debug the Java and Scala code from IntelliJ. Select the "Tomcat" configuration in IntelliJ, then "Run" → "Debug". IntelliJ opens the debugging window and connects to Tomcat. You can then set breakpoints and do the usual things one does with a debugger!
-
-### Profiling
+#### Profiling
 
 Alternatively, for running with the YourKit profiler, you need to set `DYLD_LIBRARY_PATH` and use a different `JAVA_OPTS` variable:
 
@@ -182,15 +323,7 @@ export JAVA_OPTS="$ORBEON_MEMORY_OPTS -agentlib:yjpagent"
 
 Note that the debugging and profiling settings above are different: you either run in debug mode, or in profiling mode.
 
-### Running without debugging or profiling
-
-Alternatively, for running without debugging, set instead:
-
-```bash
-export JAVA_OPTS="$ORBEON_MEMORY_OPTS -server"
-```
-
-### Making changes
+#### Making changes
 
 If you modify Java or Scala files, you need to recompile. Go to menu "Build" → "Make Module 'Orbeon Forms'", or use the keyboard shortcut (`F7`).
 
@@ -208,7 +341,7 @@ brew install lessc
 
 This installs the less compiler to `/usr/local/bin/lessc`, which is where the included IntelliJ "File Watchers" configuration points to. If it's in a different location, you'll need to adjust the path.
 
-### Running the tests
+#### Running the tests
 
 Select the "Unit Tests" configuration in IntelliJ, and run it. This should take about a minute.
 
@@ -221,9 +354,9 @@ The tests that fail are the following:
 
 We hope to provide instructions to run these in the future.
 
-## From the command line
+### From the command line
 
-### Initial build
+#### Initial build
 
 From the command line, you need [ant](http://ant.apache.org/) installed. Building should work with ant 1.8.x or 1.9.x.
 
@@ -239,7 +372,7 @@ A related known issue, from the command-line, is that running `ant classes` twic
 
 *NOTE: With ant, class files are produced under `build/classes`, but with IntelliJ they are produced under `build/orbeon-war/WEB-INF/classes`. You should be aware of this is you switch between building from IntelliJ and building with ant.*
 
-### Building a distribution
+#### Building a distribution
 
 *WARNING: `ant clean` deletes everything under the `build` directory. This includes the data for the embedded eXist database. If you have some test data, including form definitions and data in there, backup `build/orbeon-war/WEB-INF/exist-data` first!*
 
@@ -249,9 +382,3 @@ A related known issue, from the command-line, is that running `ant classes` twic
 Alternatively:
 
 - run `ant teamcity-release` to clean, test, and build the entire release
-
-## About building Orbeon Forms PE
-
-Orbeon does not provide public instructions or code to build Orbeon Forms PE, which is a commercial, supported build of the product. If you are a PE customer, contact Orbeon at info@orbeon.com.
-
-The idea is just that we want to ensure that something called "Orbeon Forms PE" in fact comes from Orbeon.
