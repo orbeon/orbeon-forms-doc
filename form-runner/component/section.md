@@ -40,6 +40,14 @@ TODO:
     - allow section to be collapsed
   - `false`
     - don't allow section to be collapsed
+- `level` [SINCE Orbeon Forms 2016.3]
+    - level of the section, from `1` to `6`
+    - default: `2`
+    - alongside `base-level`, this value translates into an HTML heading `h1`  to `h6`
+- `base-level` [SINCE Orbeon Forms 2016.3]
+    - base level of the section, from `0` to `5`
+    - default: `0`
+    - when set to a non-zero value, this value is added to the value of `level` to produce the actual section level
 
 ### Repeated mode
 
