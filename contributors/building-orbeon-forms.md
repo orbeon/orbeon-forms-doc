@@ -2,6 +2,8 @@
 
 <!-- toc -->
 
+## Introduction
+
 This page explains how to build Orbeon Forms.
 
 Please note that the build system has changed over time. Building a full distribution with `ant orbeon-dist` has remained a constant though.
