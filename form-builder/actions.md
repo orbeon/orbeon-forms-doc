@@ -36,20 +36,48 @@ Like for services, once your action is defined, the Save buttons saves it to the
 
 ## Handling the service request
 
-### Passing parameters to the service
+### Passing parameters to the service's XML request
 
-- **Set Service Request Values.**
-    - Used with HTTP services only
-    - Function: uses the value of a control and stores that value into the body of the XML service request.
-        - **Source Control.** Specifies the control whose value must be used.
-        - **Destination XPath Expression.** The expression must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body"
-    - You can add as many such rows as you want using the "+" button, and remove existing entries with the trashcan icon.
-- **Set Database Service Parameters.**
-    - Used with database services only.
-    - Function: uses the value of a control and sets that value as the Nth query parameter of the database service.
-        - **Source Control.** Specifies the control whose value must be used.
-        - **Parameter Number.** To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
-    - You can add as many such rows as you want using the "+" button, and remove existing entries with the trashcan icon.
+#### With HTTP services
+
+Use "Set Service Request Values".
+
+Each row instructs the action to take the value of a form control and store it into the body of the XML service request.
+
+- **Source Control.** Specifies the control whose value must be used.
+- **Destination XPath Expression.** The XPath expression, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
+
+You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
+    
+#### With Database services
+
+Use "Set Database Service Parameters".
+
+Each row instructs the action to take the value of a control and set that value as the Nth query parameter of the database service.
+
+- **Source Control.** Specifies the control whose value must be used.
+- **Parameter Number.** To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
+
+You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
+    
+#### Passing URL parameters to GET and DELETE methods
+
+[SINCE Orbeon Forms 2016.1]
+
+
+The HTTP Service Editor [allows you to define URL parameters](https://doc.orbeon.com/form-builder/http-services.html#url-parameters)  when using the GET and DELETE HTTP methods. In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, for example:  
+
+```xml
+<params>
+    <userId>1</userId>
+    <userName>test</userName>
+</params>
+```
+
+The Actions Editor doesn't yet support specifying URL parameters directly by name in this case. Instead, you use XPath expressions under "Set Service Request Values". For example:
+  
+- to set the `userId` parameter: `/*/userId`
+- to set the `userName` parameter: `/*/userName`
 
 ## Handling the service response
 
