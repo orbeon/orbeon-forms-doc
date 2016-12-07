@@ -176,6 +176,7 @@
         * [Extensions](xforms/actions/extensions.md)
     * Controls
         * [Input](xforms/controls/input.md)
+        * [Output](xforms/controls/output.md)
         * [Text area](xforms/controls/textarea.md)
         * [Button](xforms/controls/trigger.md)
         * [Upload](xforms/controls/upload.md)
