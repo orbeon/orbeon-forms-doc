@@ -200,6 +200,20 @@ As of Orbeon Forms 4.7, the embedded form cannot navigate in place to another fo
 
 However, it can save form or send form data as it does in the standalone case. It can also run custom [processes](../../form-runner/advanced/buttons-and-processes/README.md) which can redirect the entire embedding page with `navigate`, or run JavaScript functions with `navigate(uri = "javascript:alert('Done!')")`. This allows communicating with the embedding application.
 
+## Form Builder embedding
+
+[SINCE Orbeon Forms 2016.3]
+
+In addition to published forms, you can embed Form Builder.
+ 
+The embedding application can set the size the embedded Form Builder `<div>` element via CSS or JavaScript, and Form Builder will adjust its size accordingly:
+
+```html
+<div class="orbeon orbeon-portlet-div ...>
+```
+
+_NOTE: This includes the Form Builder editor, but not navigation to and from the Form Builder Summary page._
+
 ## How it works
 
 The embedding implementation:
@@ -213,6 +227,5 @@ The embedding implementation:
 
 - navigation between pages, such as the Form Runner Edit and Review pages, is not supported
 - the `send` action within a process does not support `replace="all"`
-- embedding Form Builder is currently not supported
 - embedding multiple forms is known to work in some cases, but has known issues so we don't recommend doing this (see [#1854](https://github.com/orbeon/orbeon-forms/issues/1854))
 - `oxf.xforms.combine-resources` must be set to `true`
