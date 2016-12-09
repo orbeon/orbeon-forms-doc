@@ -212,7 +212,7 @@ The embedding application can set the size the embedded Form Builder `<div>` ele
 <div class="orbeon orbeon-portlet-div ...>
 ```
 
-_NOTE: This includes the Form Builder editor, but not navigation to and from the Form Builder Summary page._
+The Form Builder "New" and "Summary" buttons are hidden when Form Builder is embedded, as navigating between pages is not yet supported when embedding.
 
 ## How it works
 
