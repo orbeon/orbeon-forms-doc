@@ -1362,6 +1362,13 @@ drop table orbeon_i_control_text ;
       - number
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
+- [ ] Form Builder
+    - layout is ok
+    - hover icons
+    - dialogs
+    - inserting controls
+    - view source
+    - Test button 
 
 ### XForms Retry \[2016.3 TODO\]
 
