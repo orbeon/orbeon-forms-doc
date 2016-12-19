@@ -402,6 +402,31 @@ Until Orbeon Forms 2016.2, only Text Fields (`<xf:input>`) were focusable in the
   
 The values of these properties follow the [`include` and `exclude` attributes](../../xforms/focus.md#includes-and-excludes) on the `<xf:setfocus>` action.
 
+### Validation mode
+
+[SINCE Orbeon Forms 2016.3]
+
+The following property controls whether validation happens as the user types or explicitly when activating a button:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.validation-mode.*.*"
+    value="explicit"/>
+```
+
+Values:
+
+- `incremental`: validate as the user types (default)
+- `explicit`: validate upon explicit activation of a button
+
+The main purpose of the `explicit` mode is to mimic old-style forms, where validation traditionally happened upon pressing a "Submit" button.
+
+By default, in `explicit` mode, validation occurs:
+
+- when the `validate` Form Runner action runs
+- with the Wizard view, in validated mode, when the user attempts to navigate to the next page or select a page in the wizard's table of contents  
+
 ### PDF
 
 #### Custom PDF filename

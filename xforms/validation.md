@@ -199,6 +199,36 @@ Example:
 </xf:input>
 ```
 
+### Validation mode
+
+[SINCE Orbeon Forms 2016.3]
+
+Single-node controls support the `xxf:validation-mode` attribute, with the following values:
+
+- `incremental`: upon refresh, update the control's validity information (default)
+- `explicit`: upon refresh, don't update the control's validity information
+
+When used on grouping controls, descendant controls inherit the value.
+
+With the `explicit` mode, the following action allows explicitly updating the validity information on a control or subtree of controls:
+
+```xml
+<xxf:update-validity
+    control="control1 control2"
+    recurse="true"/>
+```
+
+The action:
+ 
+- makes sure the UI is up to date
+- updates the validity of the selected controls which have `xxf:validation-mode` set to `explicit`
+- marks the UI for a subsequent refresh
+
+Attributes:
+
+- `control`: space-separated list of controls to update
+- `recurse`: when set to `true`, check all descendant controls of the specified controls as well
+
 ### xxforms-valid and xxforms-invalid events
 
 Orbeon Forms supports extensions events dispatched to an instance when it becomes valid or invalid:

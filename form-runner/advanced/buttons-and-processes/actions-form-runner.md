@@ -16,6 +16,16 @@ Validate form data.
 - result
     - success if data is valid
     - failure if data is invalid
+    
+[SINCE Orbeon Forms 2016.3]
+
+When the validation mode is set to `explicit`, first update the validity of all controls with `explicit` validation and perform a refresh.
+
+## wizard-update-validity
+
+[SINCE Orbeon Forms 2016.3]
+
+When the validation mode is set to `explicit`, first update the validity of all wizard pages up to the current wizard page included.
 
 ## pending-uploads
 
