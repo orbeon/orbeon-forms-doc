@@ -959,7 +959,7 @@ drop table orbeon_i_control_text ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2016.3 TODO\]
+### Process buttons \[2016.3 ERIK TODO\]
 
 - create and publish guest/test
     - 1 required field
@@ -978,7 +978,7 @@ drop table orbeon_i_control_text ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2016.3 TODO\]
+### Attachments/uploads \[2016.3 ERIK TODO\]
 
 - basic upload works
 - removing uploaded file works
@@ -1000,7 +1000,7 @@ drop table orbeon_i_control_text ;
     - cancel midway works
     - progress indicator works
 
-### Submit \[2016.3 TODO\]
+### Submit \[2016.3 ERIK TODO\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -1020,7 +1020,7 @@ drop table orbeon_i_control_text ;
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2016.3 TODO\]
+### Email \[2016.3 ERIK TODO\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1049,16 +1049,16 @@ drop table orbeon_i_control_text ;
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2016.3 TODO\]
+### Misc \[2016.3 ERIK TODO\]
 
 - switch language
 - open/close sections (but not with wizard)
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode \[2016.3 TODO\]
+### Noscript mode \[2016.3 ERIK TODO\]
 
-*NOTE: The noscript mode still works mostly, but has an increasing number of issues. We might consider simply deprecating it. *
+*NOTE: The noscript mode still works mostly, but has an increasing number of issues and is now deprecated.*
 
 - orbeon/contact
 - Contact form
@@ -1081,7 +1081,7 @@ drop table orbeon_i_control_text ;
     - [#2355](https://github.com/orbeon/orbeon-forms/issues/2355)
     - [#2356](https://github.com/orbeon/orbeon-forms/issues/2356)
 
-### Wizard \[2016.3 TODO\]
+### Wizard \[2016.3 ERIK TODO\]
 
 - [ ] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
 - [ ] validated mode
@@ -1117,7 +1117,7 @@ drop table orbeon_i_control_text ;
         value="all"/>
     ```
 
-### Captcha \[2016.3 TODO\]
+### Captcha \[2016.3 ERIK TODO\]
 
 - enable with property
 
