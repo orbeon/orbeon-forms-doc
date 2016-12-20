@@ -563,7 +563,7 @@ drop table orbeon_i_control_text ;
 
 ## Form Builder
 
-### Basic Features \[2016.3 TODO ERIK\]
+### Basic Features \[2016.3 DONE ERIK\]
 
 - [x] create new form
 - [x] insert sections, grids, repeated grids
@@ -591,6 +591,12 @@ drop table orbeon_i_control_text ;
     - [x] check help icon appears when help is set, and disappears when help is blanked
 - [x] set section help
     - [x] check help icon appears when help is set, and disappears when help is blanked
+- [x] set control validation
+    - set custom error constraint and alert
+    - set custom warning constraint and alert
+    - set required
+    - check that if control is required but empty, generic message shows, not constraint message ([#1829](https://github.com/orbeon/orbeon-forms/issues/1829))
+    - check that if control is required but empty and there is an unmet constraint, generic message shows ([#1830](https://github.com/orbeon/orbeon-forms/issues/1830))
 - [x] cut/copy/paste
     - copy control with help, required, constraint, and warning
     - paste control
@@ -598,41 +604,34 @@ drop table orbeon_i_control_text ;
       - including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
       - including `@validation` and `xf:constraint/@id` (see [#1785](https://github.com/orbeon/orbeon-forms/issues/1785))
     - check that form runs and new control validates constraints properly
-- [ ] set control validation
-    - set custom error constraint and alert
-    - set custom warning constraint and alert
-    - set required
-    - check that if control is required but empty, generic message shows, not constraint message ([#1829](https://github.com/orbeon/orbeon-forms/issues/1829))
-    - check that if control is required but empty and there is an unmet constraint, generic message shows ([#1830](https://github.com/orbeon/orbeon-forms/issues/1830))
-- [ ] set control MIPs and properties
+- [x] set control MIPs and properties
     - check required star appears with required set to `true()`
     - check Show in Summary/Search work when form deployed
-- [ ] set section MIPs
+- [x] set section MIPs
     - check show/hide based on control value e.g. `$fortytwo = '42'`
-- [ ] edit/modify source
+- [x] edit/modify source
     - change e.g. control label
-- ~~image annotation control~~
+- [x] image annotation control
   - create simple form and test works, saves, loads
-- [ ] i18n (PE)
-    - [ ] check en/fr/es/it/de (languages with full support)
-    - [ ] switch FB language and check language changes
-    - [ ] add language
-    - [ ] edit label and items and switch languages
-    - [ ] edit source and change top-level language, make sure language selector switches
-    - [ ] remove language
-    - [ ] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
+- [x] i18n (PE)
+    - [x] check en/fr/es/it/de (languages with full support)
+    - [x] switch FB language and check language changes
+    - [x] add language
+    - [x] edit label and items and switch languages
+    - [x] edit source and change top-level language, make sure language selector switches
+    - [x] remove language
+    - [x] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
         - add lang not fully supported (e.g. Afrikaans) , remove all other languages, enter some labels
         - Test and Publish/new -> must show Afrikaans labels, not blank
-- [ ] FB Summary page
-    - check that search in Summary page updates title/description when FR language is changed (e.g. on Bookshelf)
-    - be aware of [#2348](https://github.com/orbeon/orbeon-forms/issues/2348)
-- [ ] set form title/description
-- [ ] test form
-- [ ] save
-- [ ] publish form
+- [x] Form Builder Summary page
+    - check that search in Summary page updates title/description when FR language is changed
+- [x] set form title/description
+- [x] test form
+- [x] save
+- [x] publish form
     - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
-- [ ] warning dialog if attempt to close page when unsaved
-- [ ] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
+- [x] warning dialog if attempt to close page when unsaved
+- [x] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
     - set properties
     ```xml
     <property
@@ -644,6 +643,7 @@ drop table orbeon_i_control_text ;
         name="oxf.xforms.cache.static-state.size"
         value="1"/>
     ```
+    - restart Tomcat
     - in 1st tab, visit http://localhost:8080/2016.3-pe/fr/orbeon/builder/new
     - enter a/a to go to editor
     - in 2nd tab, visit http://localhost:8080/2016.3-pe/fr/orbeon/contact/new
