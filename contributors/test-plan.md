@@ -27,7 +27,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [x] Tomcat
 - [x] make sure the PE license is not included
 
-### Landing Page \[2016.3 TODO\]
+### Landing Page \[2016.3 DONE\]
 
 - version number is correct in logs when starting
 - landing page
@@ -563,35 +563,35 @@ drop table orbeon_i_control_text ;
 
 ## Form Builder
 
-### Basic Features \[2016.3 TODO\]
+### Basic Features \[2016.3 TODO ERIK\]
 
-- [ ] create new form
-- [ ] insert sections, grids, repeated grids
-- [ ] rename sections and controls
+- [x] create new form
+- [x] insert sections, grids, repeated grids
+- [x] rename sections and controls
     - check renamed in source
-- [ ] move sections
+- [x] move sections
     - up/down
     - right/left (subsections) (be aware of [#2031](https://github.com/orbeon/orbeon-forms/issues/2031))
-- [ ] repeated grid
-    - [ ] set min/max as ints
-    - [ ] set min/max as XPath expressions, e.g. `1 + 2`
-- [ ] make section repeated
-    - [ ] insert/move/remove iterations
-    - [ ] set min/max as ints
-    - [ ] set min/max as XPath expressions, e.g. `1 + 2`
-- [ ] set control label, hint, items
-    - [ ] plain
-    - [ ] HTML
-    - [ ] check HTML label appears correct in summary page / search
-    - [ ] placeholder labels
-    - [ ] placeholder hints
-- [ ] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
-    - [ ] plain
-    - [ ] HTML
-    - [ ] check help icon appears when help is set, and disappears when help is blanked
-- [ ] set section help
-    - [ ] check help icon appears when help is set, and disappears when help is blanked ([#1160](https://github.com/orbeon/orbeon-forms/issues/1160) is a known issue)
-- [ ] cut/copy/paste
+- [x] repeated grid
+    - [x] set min/max as ints
+    - [x] set min/max as XPath expressions, e.g. `1 + 2`
+- [x] make section repeated
+    - [x] insert/move/remove iterations
+    - [x] set min/max as ints
+    - [x] set min/max as XPath expressions, e.g. `1 + 2`
+- [x] set control label, hint, items
+    - [x] plain
+    - [x] HTML
+    - [x] check HTML label appears correct in summary page / search
+    - [x] placeholder labels
+    - [x] placeholder hints
+- [x] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
+    - [x] plain
+    - [x] HTML
+    - [x] check help icon appears when help is set, and disappears when help is blanked
+- [x] set section help
+    - [x] check help icon appears when help is set, and disappears when help is blanked
+- [x] cut/copy/paste
     - copy control with help, required, constraint, and warning
     - paste control
     - check in source that all elements have been renamed
