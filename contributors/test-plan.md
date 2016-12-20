@@ -1327,6 +1327,19 @@ drop table orbeon_i_control_text ;
   - [ ] upload works
   - [ ] attach image and save
   - [ ] check singleton form works
+  - [ ] organizations
+    - hierarchy:
+        ```
+        World
+            └── California
+                ├── orbeoncaliforniauser1@orbeon.com (org owner/admin)
+                ├── Foster City
+                │   ├── orbeonfostercityuser1@orbeon.com (org owner/admin)
+                │   └── orbeonfostercityuser2@orbeon.com
+                └── Foster City
+                    ├── orbeonsancarlosuser1@orbeon.com (org owner/admin)
+                    └── orbeonsancarlosuser2@orbeon.com            
+        ```
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 - full portlet
   - [ ] all examples and Form Runner
