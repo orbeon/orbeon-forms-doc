@@ -6,26 +6,26 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ## Misc
 
-### Distribution \[2016.3 TODO\]
+### Distribution \[2016.3 DONE\]
 
-- [ ] `README.md` is up to date
-  - [ ] links not broken (use Marked to save HTML, then check w/ Integrity)
-  - [ ] latest release year
-  - [ ] version number is correct
-  - [ ] links to release notes (include link to new version even if blog post not up yet)
-- [ ] file layout is correct in zip and wars
-- [ ] check WAR files have reasonable sizes (sizes as of 2016.2)
-  - `orbeon-auth.war` (4 KB)
-  - `orbeon-embedding.war` (1.4 MB)
-  - `proxy-portlet.war` (2.1 MB)
-  - `orbeon.war` (67.4 MB)
-  - `orbeon-xforms-filter.jar` (600 KB)
-- [ ] check CE zip doesn't have
+- [x] `README.md` is up to date
+  - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
+  - [x] latest release year
+  - [x] version number is correct
+  - [x] links to release notes (include link to new version even if blog post not up yet)
+- [x] file layout is correct in zip and wars
+- [x] check WAR files have reasonable sizes (sizes as of 2016.3)
+  - `orbeon-auth.war` (3 KB)
+  - `orbeon-embedding.war` (1.3 MB)
+  - `proxy-portlet.war` (1.7 MB)
+  - `orbeon.war` (85 MB as of 2016.3)
+  - `orbeon-xforms-filter.jar` (474 KB)
+- [x] check CE zip doesn't have
   - `orbeon-embedding.war`
   - `proxy-portlet.war`
-- [ ] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
-    - [ ] Tomcat
-- [ ] make sure the PE license is not included
+- [x] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
+    - [x] Tomcat
+- [x] make sure the PE license is not included
 
 ### Landing Page \[2016.3 TODO\]
 
