@@ -728,7 +728,7 @@ drop table orbeon_i_control_text ;
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2016.3 TODO\]
+### Section Templates \[2016.3 ERIK TODO\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
@@ -764,7 +764,7 @@ drop table orbeon_i_control_text ;
 - make sure Clear works (see [#807](https://github.com/orbeon/orbeon-forms/issues/807), broken as of 4.0-4.10, works as of 2016.1)
 - makes invalid controls in section template prevent saving
 
-### PDF Automatic \[2016.3 TODO\]
+### PDF Automatic \[2016.3 ERIK TODO\]
 
 - Controls and Bookshelf
     - input field and text areas have highlighted and clickable links
@@ -788,7 +788,7 @@ drop table orbeon_i_control_text ;
     </property>
     ```
 
-### PDF Template \[2016.3 TODO\]
+### PDF Template \[2016.3 ERIK TODO\]
 
 - attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - add field "name" in section "applicant"
@@ -927,26 +927,26 @@ drop table orbeon_i_control_text ;
 
 ## Form Runner
 
-### Sample forms \[2016.3 TODO\]
+### Sample forms \[2016.3 ERIK DONE\]
 
-- [ ] load all
-- [ ] Controls
-    - wizard navigation
-    - autocomplete works
-    - dynamic data dropdown loads data
-    - review/PDF look ok
-    - check wrapping in view/pdf modes
+- [x] load all
+- [x] Controls
+    - [x] wizard navigation
+    - [x] autocomplete works
+    - [x] dynamic data dropdown loads data
+    - [x] review/PDF look ok
+    - [x] check wrapping in view/pdf modes
         - enter [Lorum Ipsum](http://www.lipsum.com/feed/html) in input field
         - enter long text without space in input field and textarea
-- [ ] Bookshelf
+- [x] Bookshelf
     - Detail
-        - help works
-        - review and back works
-        - add/remove repeats works
+        - [x] help works
+        - [x] review and back works
+        - [x] add/remove repeats works
             - also with keyboard
-        - change lang works
+        - [x] change lang works
 
-### Errors and warnings \[2016.3 TODO\]
+### Errors and warnings \[2016.3 ERIK DONE\]
 
 - FB: create form
     - required field
