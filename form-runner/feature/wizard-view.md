@@ -60,6 +60,10 @@ When using the free mode, you can freely:
 
 ### Validated mode
 
+### Lax validated mode
+
+[SINCE Orbeon Forms 4.9]
+
 When using the validated mode:
 
 - you can freely go back to the preceding page
@@ -72,7 +76,9 @@ When using the validated mode:
 - you should generally use the "Prev" or "Next" buttons for navigation
 - any attempt to navigate to the next page marks all the fields of the preceding pages as well as the current page as visited, ensuring that errors on those pages, if any, show in the error summary
 
-The following property enables the validated mode:
+[FROM Orbeon Forms Forms 4.9 to 2016.2]
+
+The following property enables the lax validated mode:
 
 ```xml
 <property
@@ -81,9 +87,37 @@ The following property enables the validated mode:
   value="true"/>
 ```
 
+[SINCE Orbeon Forms 2016.3]
+
+The following property enables the lax validated mode:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.xforms.xbl.fr.wizard.validate.*.*"
+  value="lax"/>
+```
+
+Setting the value to `true` is still supported for backward compatibility.
+
 You can see in the following picture that the sections in the table of contents which have not yet been visited are grayed out:
 
 ![Wizard validated mode](../images/wizard-validated.png)
+
+#### Strict validated mode
+
+[SINCE Orbeon Forms 2016.3]
+
+The following property enables the strict validated mode:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.xforms.xbl.fr.wizard.validate.*.*"
+  value="strict"/>
+```
+
+This mode behaves the same as the lax validated mode, except that it doesn't matter if a forward section has been visited or not: if there are errors in the current or preceding wizard pages, it is not possible to navigate with the "Next" button or via the table of contents.  
 
 ## Buttons
 
