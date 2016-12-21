@@ -157,14 +157,31 @@ This is useful for example to set custom security headers in the proxy portlet:
 
 [SINCE Orbeon Forms 4.4]
 
-When "Send Liferay user" is enabled, you can configure Form Runner to use the HTTP headers sent by the proxy portlet to handle forms access control. For this, you must use the "Header-driven method". Set the following properties:
+When "Send Liferay user" is enabled, you can configure Form Runner to use the HTTP headers sent by the proxy portlet to handle forms access control. For this, you must use the "Header-driven method". Set the following property:
 
 ```xml
 <property
     as="xs:string"
     name="oxf.fr.authentication.method"
     value="header"/>
-    
+```
+
+In addition to this, depending on the version of Orbeon Forms you're using, set the properties listed in the following sections.
+
+#### Since Orbeon Forms 2016.3
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.header.credentials"
+    value="Orbeon-Liferay-User-Credentials"/>
+```
+
+In Liferay, you can configure whether users authenticate using their email, user id, or screen name. The Orbeon Forms proxy portlet takes the username to be the user's email, user id, or screen name, depending on that configuration.
+
+#### From Orbeon Forms 4.4 to 2016.2
+
+```xml
 <property
     as="xs:string"
     name="oxf.fr.authentication.header.username"
@@ -187,7 +204,7 @@ For the `oxf.fr.authentication.header.username` header, you can choose any of th
 - `Orbeon-Liferay-User-Screen-Name`
 - or possibly `Orbeon-Liferay-User-Email`
 
-_NOTE: Prior to Orbeon Forms 4.9, you need the following configuration in your [../../configuration/properties/README.md):_
+Prior to Orbeon Forms 4.9, you need the following configuration in your [../../configuration/properties/README.md):_
 
 ```xml
 <property
