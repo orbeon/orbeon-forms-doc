@@ -100,7 +100,7 @@ As of 2016-04-19 this page is still being updated.
         - show numeric keypad/numbers and punctuation" keyboard pane when possible: [doc](http://doc.orbeon.com/form-runner/component/number.html#mobile-support), [blog post](http://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
     - Review mode (printable)
     - Wizard view: [doc](form-runner/feature/wizard-view.md), [introduction blog post](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
-        - validated mode: [blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
+        - validated mode: [blog post](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html), [doc](https://doc.orbeon.com/form-runner/feature/wizard-view.html#validated-mode)
         - highlighting of sections in error/accessible sections
         - buttons appearing only on the wizard's last page
         - status information for each section
@@ -119,6 +119,7 @@ As of 2016-04-19 this page is still being updated.
     - Ability to send to services: [blog post](http://blog.orbeon.com/2016/08/submitting-pdf-file-to-external-service.html)
 - Validation
     - as-you-type validation
+    - explicit validation: [doc](https://doc.orbeon.com/configuration/properties/form-runner.html#validation-mode)
     - centralized error summary showing currently relevant errors: [component doc](form-runner/component/images/xbl-error-summary-errors.png), [blog post on warnings/infos enhancements](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
     - controlling which attachments are included: [Form Builder doc](http://doc.orbeon.com/form-builder/control-settings.html#basic-options), [Form Runner doc](http://doc.orbeon.com/configuration/properties/form-runner.html#email-settings)
