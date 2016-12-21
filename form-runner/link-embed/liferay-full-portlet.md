@@ -167,6 +167,8 @@ You can disable that filter in your `portal-ext.properties` with:
 ```
 com.liferay.portal.servlet.filters.strip.StripFilter=false
 ```
+_NOTE: `portal-ext.properties` is a standard Liferay configuration file you place under the [Liferay Home directory](https://dev.liferay.com/discover/deployment/-/knowledge_base/6-2/liferay-home)._
+
 
 ## Creating a new landing page for the portlet
 
