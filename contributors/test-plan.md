@@ -766,19 +766,19 @@ drop table orbeon_i_control_text ;
     - fail https://github.com/orbeon/orbeon-forms/issues/3052
 - makes invalid controls in section template prevent saving
 
-### PDF Automatic \[2016.3 ERIK TODO\]
+### PDF Automatic \[2016.3 ERIK DONE\]
 
-- Controls and Bookshelf
+- [x] Controls and Bookshelf
     - input field and text areas have highlighted and clickable links
     - try TIFF output as well
-- Controls
-    - image annotation shows in PDF
-        - *NOTE: Disabled in 2016.1 and 2016.2.* 
-- form title in header/footer
-- logo in title
-- page numbering/total at bottom center
-- PDF looks good overall
-- send PDF binary works
+- [x] Controls
+    - [x] image annotation shows in PDF
+    - *NOTE: Disabled in 2016.1 and 2016.2, re-enabled in 2016.3 but not re-added to Controls form.* 
+- [x] form title in header/footer
+- [x] logo in title
+- [x] page numbering/total at bottom center
+- [x] PDF looks good overall
+- [x] send PDF binary works
     ```xml
     <property
         as="xs:string"
@@ -790,17 +790,18 @@ drop table orbeon_i_control_text ;
     </property>
     ```
 
-### PDF Template \[2016.3 ERIK TODO\]
+### PDF Template \[2016.3 ERIK DONE\]
 
-- attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
-- add field "name" in section "applicant"
-- publish and test that name appears in PDF and TIFF
-- change
-- remove PDF
+- [x] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
+- [x] add field "name" in section "applicant"
+- [x] publish and test that name appears in PDF and TIFF
+- [x] change
+- [x] remove PDF
   - publish and test, must see notemplate PDF/TIFF
-- check that DMV-14 PDF works and is filled out
+- [x] check that DMV-14 PDF works and is filled out
   - check Vote and Leased checkboxes
-- W9 form
+  - check that state appears ([#3053](https://github.com/orbeon/orbeon-forms/issues/3053))
+- [x] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
 ### Form Builder Permissions \[2016.3 TODO\]
