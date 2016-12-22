@@ -1056,7 +1056,7 @@ drop table orbeon_i_control_text ;
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2016.3 ERIK TODO\]
+### Misc \[2016.3 ERIK DONE\]
 
 - switch language
 - open/close sections (but not with wizard)
@@ -1124,7 +1124,7 @@ drop table orbeon_i_control_text ;
         value="all"/>
     ```
 
-### Captcha \[2016.3 ERIK TODO\]
+### Captcha \[2016.3 ERIK DONE\]
 
 - enable with property
 
@@ -1198,7 +1198,7 @@ drop table orbeon_i_control_text ;
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
-### Home Page \[2016.3 TODO\]
+### Home Page \[2016.3 ERIK TODO\]
 
 *See also Form Builder permissions above which already tests some of this.*
 
@@ -1266,7 +1266,7 @@ drop table orbeon_i_control_text ;
   - upgrade remote
   - make sure forms still work
 
-### Summary Page \[2016.3 TODO\]
+### Summary Page \[2016.3 ERIK TODO\]
 
 - e.g. `http://localhost:8080/2016.3-pe/fr/orbeon/bookshelf/summary`
 - list forms
@@ -1285,7 +1285,7 @@ drop table orbeon_i_control_text ;
 - delete
 - view
 
-### Excel Import \[2016.3 TODO\]
+### Excel Import \[2016.3 ERIK TODO\]
 
 - `http://localhost:8080/2016.3-pe/fr/orbeon/contact/import`
 - import small doc first (`contact5.xlsx` on Dropbox)
@@ -1297,7 +1297,7 @@ drop table orbeon_i_control_text ;
 - check % and ETA progress during validation and import
 - check import completes
 
-### Liferay Support \[2016.3 TODO\]
+### Liferay Support \[2016.3 ERIK TODO\]
 
 - versions as of Orbeon Forms 2016.1
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
