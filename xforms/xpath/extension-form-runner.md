@@ -32,6 +32,16 @@ fr:app-name() as xs:string
 
 Return the form's application name.
 
+### fr:created-date()
+
+[SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:created-date() as xs:dateTime?
+```
+
+Return the creation date of the current form data *as of the last read from the database* if available, and the empty sequence otherwise (such as in "new" mode).
+
 ### fr:document-id()
 
 ```xpath
@@ -228,6 +238,16 @@ fr:can-update() as xs:boolean
 ```
 
 Whether the current user has the `update` permission for the current form data (detail page only).
+
+### fr:modified-date()
+
+[SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:modified-date() as xs:dateTime?
+```
+
+Return the modification date of the current form data *as of the last read from the database* if available, and the empty sequence otherwise (such as in "new" mode).
 
 ### fr:user-ancestor-organizations()
 
