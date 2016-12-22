@@ -1003,7 +1003,7 @@ drop table orbeon_i_control_text ;
     - cancel midway works
     - progress indicator works
 
-### Submit \[2016.3 ERIK TODO\]
+### Submit \[2016.3 ERIK DONE\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
