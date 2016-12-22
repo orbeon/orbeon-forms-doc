@@ -981,15 +981,15 @@ drop table orbeon_i_control_text ;
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2016.3 ERIK TODO\]
+### Attachments/uploads \[2016.3 ERIK DONE\]
 
-- basic upload works
-- removing uploaded file works
-- large uploads fail (> 100 MB by default)
+- [x] basic upload works
+- [x] removing uploaded file works
+- [x] large uploads fail (> 100 MB by default)
     - FR error dialog shows
     - control is back to empty
-- very small (a few KB) upload works multiple times in a row
-- with throttling (with Charles) (*NOTE: Proxy settings not really useful as we are looking at browser/server traffic.*)
+- [x] very small (a few KB) upload works multiple times in a row
+- [x] with throttling (with Charles) (*NOTE: Proxy settings not useful as we are looking at browser/server traffic.*)
     ```xml
     <property
         as="xs:string"
