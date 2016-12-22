@@ -1023,7 +1023,7 @@ drop table orbeon_i_control_text ;
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2016.3 ERIK TODO\]
+### Email \[2016.3 ERIK DONE\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1039,14 +1039,18 @@ drop table orbeon_i_control_text ;
 <property as="xs:string"  name="oxf.fr.email.smtp.encryption.*.*"    value="tls"/>
 
 <property as="xs:string"  name="oxf.fr.detail.buttons.orbeon.controls">
-    refresh pdf email wizard-prev wizard-next review
+    email
+</property>
+
+<property as="xs:string"  name="oxf.fr.detail.buttons.orbeon.dmv-14">
+    email
 </property>
 
 <property as="xs:boolean" name="oxf.fr.email.attach-pdf.orbeon.controls"  value="true"/>
 <property as="xs:boolean" name="oxf.fr.email.attach-tiff.orbeon.controls" value="true"/>
 ```
-- /fr/orbeon/controls/new
-- hit Email button
+- `/fr/orbeon/controls/new`
+- hit Email button from Controls and DMV-14
   - check email received
   - contains attachments, XML, PDF and TIFF [SINCE 2016.1]
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
