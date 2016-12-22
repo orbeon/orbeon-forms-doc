@@ -962,7 +962,7 @@ drop table orbeon_i_control_text ;
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2016.3 ERIK TODO\]
+### Process buttons \[2016.3 ERIK DONE\]
 
 - create and publish guest/test
     - 1 required field
