@@ -10,7 +10,7 @@ Since Orbeon Forms 4.7.
 
 The intent is to allow Java (and other Java Virtual Machine (JVM)-based languages) applications to easily embed forms produced with Form Builder within other pages.
 
-![A form embedded in a simple page with a top banner](images/embedding.png)
+![A form embedded in a simple page with a top banner](images/embedding-bookshelf.png)
 
 ## Configuration
 
@@ -213,6 +213,8 @@ The embedding application can set the size the embedded Form Builder `<div>` ele
 ```
 
 The Form Builder "New" and "Summary" buttons are hidden when Form Builder is embedded, as navigating between pages is not yet supported when embedding.
+
+![Embedding Form Builder](images/embedding-builder-dialog.png)
 
 ## How it works
 
