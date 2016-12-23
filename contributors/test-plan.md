@@ -709,7 +709,7 @@ drop table orbeon_i_control_text ;
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service \[2016.3 TODO\]
+### HTTP service \[2016.3 ERIK TODO\]
 
 - using echo service is ok
     - POST to `/fr/service/custom/orbeon/echo`
@@ -804,7 +804,7 @@ drop table orbeon_i_control_text ;
 - [x] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2016.3 TODO\]
+### Form Builder Permissions \[2016.3 ERIK TODO\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -1147,7 +1147,7 @@ drop table orbeon_i_control_text ;
     - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2016.3 TODO\]
+### Help popups/hint tooltips positioning \[2016.3 ERIK TODO\]
 
 - create form to test general positioning
   - help on all elements ([Lorum Ipsum](http://www.lipsum.com/feed/html))
@@ -1476,11 +1476,11 @@ drop table orbeon_i_control_text ;
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2016.3 ERIK TODO\]
+### Error Dialog \[2016.3 ERIK DONE\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
-- [ ] scenario 1
+- [x] scenario 1
   - load page
   - remove JSESSIONID
   - do Ajax update
