@@ -1285,7 +1285,7 @@ drop table orbeon_i_control_text ;
 - delete
 - view
 
-### Excel Import \[2016.3 ERIK TODO\]
+### Excel Import \[2016.3 ERIK DONE\]
 
 - `http://localhost:8080/2016.3-pe/fr/orbeon/contact/import`
 - import small doc first (`contact5.xlsx` on Dropbox)
@@ -1358,10 +1358,10 @@ drop table orbeon_i_control_text ;
   - ~~Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay*
 
-### Embedding \[2016.3 TODO\]
+### Embedding \[2016.3 ERIK DONE\]
 
-- deploy `orbeon-embedding.war` into Tomcat
-- update `web.xml`:
+- [x] deploy `orbeon-embedding.war` into Tomcat
+- [x] update `web.xml`:
 
     ```xml
     <init-param>
@@ -1369,8 +1369,8 @@ drop table orbeon_i_control_text ;
         <param-value>http://localhost:8080/2016.3-pe</param-value>
     </init-param>
     ````
-- navigate to `http://localhost:8080/2016.3-pe-embedding/`
-- go through demo forms and test
+- [x] navigate to `http://localhost:8080/2016.3-pe-embedding/`
+- [x] go through demo forms and test
   - enter data
   - Save
   - PDF
@@ -1382,7 +1382,7 @@ drop table orbeon_i_control_text ;
       - number
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
-- [ ] Form Builder
+- [x] Form Builder
     - layout is ok
     - hover icons
     - dialogs
