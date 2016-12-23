@@ -64,19 +64,9 @@ Installation steps:
 
     The host name (`localhost`), port (`8080`), and context path (`orbeon`) must be updated to match your local configuration.
 
-4. __Add the Orbeon Forms portlet:__ Log into the portal, go to the Add menu and create a new page, for example _Orbeon Page_:
-
-    ![](images/liferay-add-page.png)
-
-    Go to the Add menu again and select _More…_:
-
-    ![](images/liferay-add-more.png)
-
-    Select the _Orbeon Forms Portlet_ entry:
+4. __Add the Orbeon Forms portlet:__ Log into the portal, go to the Add menu and create a new page, for example _Orbeon Page_. Then go to the Applications tab and click or drag "Orbeon Forms Portlet" to the page. The Orbeon Forms home page will show.
 
     ![](images/liferay-applications.png)
-
-    Drag the portlet to the page. The Orbeon Forms home page will show.
 
 NOTE:
 
