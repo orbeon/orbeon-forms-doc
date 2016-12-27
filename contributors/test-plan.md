@@ -91,7 +91,7 @@ check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-###  Basic Persistence \[2016.3 TODO\]
+###  Basic Persistence \[2016.3 ALEX TODO\]
 
 Do the following for eXist and DB2. We do not test other relational databases here, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases.
 
@@ -135,7 +135,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
 - Duplicate
     - FR: Summary: Duplicate button works
 
-### Versioning \[2016.3 TODO\]
+### Versioning \[2016.3 ALEX TODO\]
 
 Do the following on DB2.
 
@@ -263,7 +263,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite
 
-### Data Capture Permissions \[2016.3 TODO\]
+### Data Capture Permissions \[2016.3 ALEX TODO\]
 
 ####  Setup
 
@@ -367,7 +367,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - delete button enabled and works
                 - on open data, can edit data
 
-### Autosave and Permissions Test \[2016.3 TODO\]
+### Autosave and Permissions Test \[2016.3 ALEX TODO\]
 
 Repeat what follows with:
 
@@ -484,7 +484,7 @@ http://localhost:8080/2016.3-pe/fr/auth
         - Choose to open the draft, edit it into `a1 Marge`, save, change to `a1 Marge draft`, wait for autosave
         - Go to the summary page, click on `a1 Marge`, dialog must propose loading draft
 
-### DB2 DDL \[2016.3 TODO\]
+### DB2 DDL \[2016.3 ALEX TODO\]
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
@@ -510,7 +510,7 @@ drop table orbeon_i_current ;
 drop table orbeon_i_control_text ;
 ```
 
-### Flat View \[2016.3 TODO\]
+### Flat View \[2016.3 ALEX TODO\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -773,7 +773,7 @@ drop table orbeon_i_control_text ;
     - try TIFF output as well
 - [x] Controls
     - [x] image annotation shows in PDF
-    - *NOTE: Disabled in 2016.1 and 2016.2, re-enabled in 2016.3 but not re-added to Controls form.* 
+    - *NOTE: Disabled in 2016.1 and 2016.2, re-enabled in 2016.3 but not re-added to Controls form.*
 - [x] form title in header/footer
 - [x] logo in title
 - [x] page numbering/total at bottom center
@@ -1104,23 +1104,23 @@ drop table orbeon_i_control_text ;
 - [ ] check that Form Builder's Wizard option enables/disables the wizard
 - [ ] separate TOC
     ```xml
-    <property 
-        as="xs:boolean" 
+    <property
+        as="xs:boolean"
         name="oxf.xforms.xbl.fr.wizard.separate-toc.wizard.*"    
         value="true"/>
     ```
-- [ ] subsection navigation 
+- [ ] subsection navigation
     ```xml
-    <property 
-        as="xs:boolean" 
-        name="oxf.xforms.xbl.fr.wizard.subsections-nav.wizard.*" 
+    <property
+        as="xs:boolean"
+        name="oxf.xforms.xbl.fr.wizard.subsections-nav.wizard.*"
         value="true"/>
     ```
 - [ ] TOC subsections
     ```xml
-    <property 
+    <property
         as="xs:string"  
-        name="oxf.xforms.xbl.fr.wizard.subsections-toc.wizard.*" 
+        name="oxf.xforms.xbl.fr.wizard.subsections-toc.wizard.*"
         value="all"/>
     ```
 
@@ -1349,7 +1349,7 @@ drop table orbeon_i_control_text ;
 
 ### Organizations \[2016.3 ERIK TODO\]
 
-Do this just after general Liferay testing (above). 
+Do this just after general Liferay testing (above).
 
 Setup hierarchy:
 
@@ -1396,7 +1396,7 @@ Setup hierarchy:
     - dialogs
     - inserting controls
     - view source
-    - Test button 
+    - Test button
 
 ### XForms Retry \[2016.3 TODO\]
 
@@ -1412,7 +1412,7 @@ Setup hierarchy:
                 value=". + 1"/>
             ```
         - set the following properties
-    
+
             ```xml
             <property
                 as="xs:integer"
