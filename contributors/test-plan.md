@@ -484,7 +484,7 @@ http://localhost:8080/2016.3-pe/fr/auth
         - Choose to open the draft, edit it into `a1 Marge`, save, change to `a1 Marge draft`, wait for autosave
         - Go to the summary page, click on `a1 Marge`, dialog must propose loading draft
 
-### DB2 DDL \[2016.3 ALEX TODO\]
+### DB2 DDL \[2016.3 DONE\]
 
 Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is done by the unit tests. Before each test, run the `drop table` statements below.
 
