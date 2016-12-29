@@ -135,7 +135,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
 - Duplicate
     - FR: Summary: Duplicate button works
 
-### Versioning \[2016.3 ALEX TODO\]
+### Versioning \[2016.3 DONE\]
 
 Do the following on DB2.
 
