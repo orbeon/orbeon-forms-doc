@@ -263,7 +263,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite
 
-### Data Capture Permissions \[2016.3 ALEX TODO\]
+### Data Capture Permissions \[2016.3 DONE\]
 
 ####  Setup
 
