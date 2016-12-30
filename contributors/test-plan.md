@@ -644,12 +644,27 @@ drop table orbeon_i_control_text ;
     - insert control
     - check there is no JS error
 
-### Singleton forms \[2016.3 TODO\]
+### Singleton forms \[2016.3 DONE\]
 
-- test that the features works as [documented](../form-runner/advanced/singleton-form.md)
-    - no form data
-    - one instance of form data
-    - more than one instance of form data
+Test that the features works as [documented](../form-runner/advanced/singleton-form.md):
+
+- create form `mysql/singleton` 
+    - 1 field
+    - permissions: anybody can create, owner can do all
+    - publish
+- login as user `a1`
+    - can do new
+    - enter "abc"
+    - save
+    - new gone from Summary page
+    - `/new` in URL redirects to '/edit/...'
+- 2nd browser: login as user `a2` or `b1`
+    - can do new
+    - enter "def"
+    - save
+    - new gone from Summary page
+    - only see "def" in Summary
+    - `/new` in URL redirects to '/edit/...'
 
 ### Schema Support \[2016.3 DONE\]
 
