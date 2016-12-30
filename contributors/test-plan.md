@@ -667,10 +667,10 @@ drop table orbeon_i_control_text ;
     - check schema types are reloaded in Control Settings dialog
         - *NOTE: This is not the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
 
-### Database service \[2016.3 TODO\]
+### Database service \[2016.3 DONE\]
 
 - setup db
-    - use MySQL on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
+    - use MySQL, local or on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
     - set datasource in `server.xml`
     - create test table + data row if doesn't exist (can use IntelliJ Database tools)
 
@@ -685,17 +685,18 @@ drop table orbeon_i_control_text ;
     insert into orbeon_address_book values(2, "Mary", "Smith", "5551111111");
     ```
 - setup form
-  - 1 input field
-  - 1 output field
-  - 1 selection control
-- create db service
+  - 1 Text Field (`input`)
+  - 1 Calculated Value (`output`)
+  - 1 Radio Buttons (`radios`)
+- create `address` db service
 
     ```sql
     SELECT * FROM orbeon_address_book
     WHERE id = <sql:param type="xs:string" select=""/>
     ```
 - create action
-    - sets service value on request for param `1`
+    - on form load and control appearing, call service
+    - sets service value from input on request for param `1`
     - sets control values on response, e.g. `concat(/*/*/first, ' ', /*/*/last)`
     - set itemset values on response
         - `/*/*`
