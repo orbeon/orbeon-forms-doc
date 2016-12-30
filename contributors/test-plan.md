@@ -367,7 +367,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - delete button enabled and works
                 - on open data, can edit data
 
-### Autosave and Permissions Test \[2016.3 ERIK TODO\]
+### Autosave and Permissions Test \[2016.3 ERIK DONE\]
 
 Repeat what follows with:
 
@@ -404,14 +404,6 @@ Use the following in your `properties-local.xml`:
     as="xs:string"
     name="oxf.fr.authentication.container.roles"
     value="a b"/>
-<property
-    as="xs:string"
-    name="oxf.http.proxy.host"
-    value="localhost"/>
-<property
-    as="xs:integer"
-    name="oxf.http.proxy.port"
-    value="8888"/>
 ```
 
 In `web.xml`:
@@ -469,7 +461,8 @@ http://localhost:8080/2016.3-pe/fr/auth
         - `$PROVIDER/autosave/summary` only shows saved data, not drafts
         - change form definition to remove the read permission form anyone
         - `$PROVIDER/autosave/summary` returns 403 (since anonymous users don't have the read permission)
-        - `$PROVIDER/autosave/new`, type *guest Maggie*, tab out, after 6s check that no autosave was done (e.g. with Charles that no PUT was made to the persistence layer)
+        - `$PROVIDER/autosave/new`, type *guest Maggie*, tab out, after 6s check that no autosave was done
+            - NOTE: Can't check with Charles anymore now that we have internal requests. But check logs or db.
     5. Permissions of drafts in summary page
         - Log in as user `a1` in group `a`.
         - `$PROVIDER/autosave/summary`, delete everything (to clean things up).
