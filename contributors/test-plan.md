@@ -1166,40 +1166,43 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - Bookshelf
     - try all helps (see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637))
 
-### Mobile and Responsive \[2016.3 TODO\]
+### Mobile and Responsive \[2016.3 DONE\]
 
 *NOTE: Summary and Home are not responsive as of 2016.1.*
 
-- [ ] setup
+- [x] setup
     - iPhone 6S or 6S Plus
     - can also test more using simulator
-- [ ] default layout (Contact Form / Bookshelf Form)
+- [x] default layout (Contact Form / Bookshelf Form)
     - looks ok
     - can navigate to `view` and back
     - PDF shows
     - upload book cover in Bookshelf
-- [ ] wizard layout (Controls form)
+- [x] wizard layout (Controls form)
     - looks ok (TOC at top, buttons at bottom)
     - can navigate sections via TOC at top (click and buttons)
     - Next/Prev buttons at bottom work
-- [ ] Control Form
+- [x] Control Form
     - can enter data, select checkboxes/radio buttons
     - date picker works
     - can quickly select radio buttons/checkboxes (zoom in if needed, touch areas are small)
     - signature works
+    - autocomplete works
     - PDF
     - NOTE: Repeat not handled nicely.
-- [ ] DMV-14 Form
-    - NOTE: Repeat not handled nicely.
+- [x] DMV-14 Form
+    - repeat menu works
+        - _NOTE: Repeat doest not appear nicely._
     - PDF / TIFF
-- [ ] W-9 Form
+- [x] W-9 Form
     - Review looks good
     - PDF looks good with signature
-- [ ] zoom
+- [x] zoom
+    - see regression [#3062](https://github.com/orbeon/orbeon-forms/issues/3062)
     - can pinch zoom
     - add error, save, must de-zoom before showing Error dialog
     - same for Clear dialog
-- [ ] Number field
+- [x] Number field
     - test that non-negative integers show keypad
     - other numbers show number pane
     - if decimal separator is `,`, show regular pane (if US settings)
