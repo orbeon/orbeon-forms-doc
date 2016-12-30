@@ -1,6 +1,14 @@
 # Automated Tests
 
-## Removing leftover databases on SQL Server
+<!-- toc -->
+
+## Levels of tests
+
+xxx
+
+## Misc
+
+### Removing leftover databases on SQL Server
 
 ```sql
 BEGIN

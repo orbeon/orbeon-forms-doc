@@ -367,7 +367,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - delete button enabled and works
                 - on open data, can edit data
 
-### Autosave and Permissions Test \[2016.3 ALEX TODO\]
+### Autosave and Permissions Test \[2016.3 ERIK TODO\]
 
 Repeat what follows with:
 
