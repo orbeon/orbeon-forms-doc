@@ -1168,7 +1168,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ### Mobile and Responsive \[2016.3 DONE\]
 
-*NOTE: Summary and Home are not responsive as of 2016.1.*
+*NOTE: Summary and Home are not responsive as of 2016.3.*
 
 - [x] setup
     - iPhone 6S or 6S Plus
@@ -1210,22 +1210,22 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
-### Home Page \[2016.3 ERIK TODO\]
+### Home Page \[2016.3 ERIK DONE\]
 
 *See also Form Builder permissions above which already tests some of this.*
 
-- [ ] `http://localhost:8080/2016.3-pe/fr/` lists deployed forms
-- [ ] comment all roles in form-builder-permissions.xml
-- [ ] no admin buttons/actions show
-- [ ] changing language to French works
-- [ ] set all Form Builder permissions
+- [x] `http://localhost:8080/2016.3-pe/fr/` lists deployed forms
+- [x] comment all roles in form-builder-permissions.xml
+- [x] no admin buttons/actions show
+- [x] changing language to French works
+- [x] set all Form Builder permissions
     ```xml
     <role name="*" app="*" form="*"/>
     ```
   - admin actions show
   - Available/Unavailable/Library labels show
   - publish/unpublish works
-- [ ] "publish to production"
+- [x] "publish to production"
   - configure  remote server and production-server-uri
     - e.g. remote in Liferay Tomcat
     ```xml
@@ -1247,7 +1247,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         value="/orbeon-auth"/>
     ```
   - server asks for credentials if user has admin role
-      - `orbeon-admin/x*` (with `liferay-portal-6.1.2-ce-ga3/tomcat-7.0.40`, `orbeon-admin` has `orbeon-service` role)
+      - `orbeon-admin/x*` (with `liferay-portal-6.2-ce-ga6/tomcat-7.0.62`, `orbeon-admin` has `orbeon-service` role)
   - Cancel  → loads local forms
   - Connect → loads local and remote forms, sorted by mod date desc
   - Select menu works
@@ -1273,10 +1273,11 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - pull back form
     - load form `/new` on local, make sure works and attachment is there
   - no checkbox for forms w/o admin access (e.g. set `<role name="*" app="orbeon" form="*"/>`)
-- [ ] upgrade form definitions
+- [x] upgrade form definitions
   - upgrade local
   - upgrade remote
   - make sure forms still work
+- [x] reindex database works (make sure relational provider is enabled)
 
 ### Summary Page \[2016.3 ERIK DONE\]
 
