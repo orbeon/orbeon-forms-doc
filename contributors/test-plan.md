@@ -372,7 +372,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
 Repeat what follows with:
 
 - \[2016.3 TODO\] Oracle
-- \[2016.3 TODO\] MySQL
+- \[2016.3 DONE\] MySQL
 - \[2016.3 TODO\] PostgreSQL
 - \[2016.3 TODO\] SQL Server
 - \[2016.3 TODO\] DB2
@@ -1156,10 +1156,10 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2016.3 ERIK TODO\]
+### Help popups/hint tooltips positioning \[2016.3 ERIK DONE\]
 
 - create form to test general positioning
-  - help on all elements ([Lorum Ipsum](http://www.lipsum.com/feed/html))
+  - help on all controls ([Lorum Ipsum](http://www.lipsum.com/feed/html))
   - repeats
   - checkboxes/radios
     - add hints (see [#1649](https://github.com/orbeon/orbeon-forms/issues/1649))
