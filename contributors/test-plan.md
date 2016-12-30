@@ -503,7 +503,7 @@ drop table orbeon_i_current ;
 drop table orbeon_i_control_text ;
 ```
 
-### Flat View \[2016.3 ALEX TODO\]
+### Flat View \[2016.3 ERIK TODO\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -651,21 +651,21 @@ drop table orbeon_i_control_text ;
     - one instance of form data
     - more than one instance of form data
 
-### Schema Support \[2016.3 TODO\]
+### Schema Support \[2016.3 DONE\]
 
 - attach Schema
-    - attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/schema.xsd)
+    - attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/schema.xsd)
         - available types contains `rating`, `language`, `link`
     - change to the [XForms types schema](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
         - available types contains `card-number`, `dayTimeDuration`, `yearMonthDuration`
     - delete schema, check removed from model, be aware of
         - Delete attached XML Schema causes error if type in use [#694](https://github.com/orbeon/orbeon-forms/issues/694))
         - When removing schema, type from previously selected schema are showing [#2733](https://github.com/orbeon/orbeon-forms/issues/2733)
-    - re-add schema
+    - re-add Bookcast schema
     - assign types to controls
     - check that validation is working as per the types
     - check schema types are reloaded in Control Settings dialog
-        - *NOTE: This is note the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
+        - *NOTE: This is not the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
 
 ### Database service \[2016.3 TODO\]
 
