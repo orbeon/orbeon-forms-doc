@@ -14,7 +14,7 @@ For Liferay's user information to be passed to Orbeon Forms, you need to:
 4. Add to your `properties-local.xml` the following property, so form authors can assign rights to user designated as Organization Owner in Liferay:
 ```xml
 <property as="xs:string" name="oxf.fb.permissions.role.always-show">
-    ["Organization owner"]
+    ["Organization Owner"]
 </property>
 ```
     
