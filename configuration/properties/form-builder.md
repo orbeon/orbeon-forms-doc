@@ -138,13 +138,13 @@ The permissions dialog allows form authors, amongst other things, to assign perm
 
 ```xml
 <property as="xs:string" name="oxf.fb.permissions.role.always-show">
-    ["Organization owner"]
+    ["Organization Owner"]
 </property>
 ```
 
 The value of this property is an array of strings in the JSON format. For instance, the following screenshot shows the dialog with the above property set (see the line for "Organization owner"), and where the form author added a line for an "admin" role.
 
-![Permissions dialog with Organization owner role](../images/fb-permissions-organization-owner.png)
+![Permissions dialog with Organization Owner role](../images/fb-permissions-organization-owner.png)
 
 ## Access control 
 

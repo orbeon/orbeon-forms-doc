@@ -1361,7 +1361,6 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - [x] upload works
   - [x] attach image and save
   - [x] check singleton form works
-  - [ ] organizations
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 - [x] full portlet
   - [x] all examples and Form Runner
@@ -1373,24 +1372,60 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
-### Organizations \[2016.3 ERIK TODO\]
+### Organizations \[2016.3 ERIK DONE\]
 
 Do this just after general Liferay testing (above).
 
 Setup hierarchy:
 
-    ```
-    World
-        └── California
-            ├── orbeoncaliforniauser1@orbeon.com (org owner/admin)
-            ├── Foster City
-            │   ├── orbeonfostercityuser1@orbeon.com (org owner/admin)
-            │   └── orbeonfostercityuser2@orbeon.com
-            └── Foster City
-                ├── orbeonsancarlosuser1@orbeon.com (org owner/admin)
-                └── orbeonsancarlosuser2@orbeon.com            
-    ```
-- TODO
+```
+World
+    └── California
+        ├── orbeoncaliforniauser1@orbeon.com (org owner/admin)
+        ├── Foster City
+        │   ├── orbeonfostercityuser1@orbeon.com (org owner/admin)
+        │   └── orbeonfostercityuser2@orbeon.com
+        └── Foster City
+            ├── orbeonsancarlosuser1@orbeon.com (org owner/admin)
+            └── orbeonsancarlosuser2@orbeon.com            
+```
+    
+
+Properties:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.fr.authentication.method"              
+    value="header"/>
+<property 
+    as="xs:string" 
+    name="oxf.fr.authentication.header.credentials"  
+    value="orbeon-liferay-user-credentials"/>
+<property as="xs:string" name="oxf.fb.permissions.role.always-show">
+   ["Organization Owner"]
+</property>
+```
+
+- create `test/organizations` form
+     - enable permissions
+        - Anyone can Create
+        - Owner can Update
+        - Organization Owner can Read/Update/Delete
+    - publish
+- from Liferay
+    - as admin (e.g. `test@liferay.com` user)
+        - set proxy portlet to `test/organizations`
+        - check send user information
+    - login as `orbeonfostercityuser2@orbeon.com`
+        - enter and save data
+        - check summary has data
+    - login as `orbeonfostercityuser1@orbeon.com`
+        - check data includes data from `orbeonfostercityuser2@orbeon.com`
+        - enter and save data
+        - check summary has data
+    - login as `orbeoncaliforniauser1@orbeon.com`
+        - check data includes data from `orbeonfostercityuser1@orbeon.com` and `orbeonfostercityuser2@orbeon.com`
 
 ### Embedding \[2016.3 ERIK DONE\]
 
