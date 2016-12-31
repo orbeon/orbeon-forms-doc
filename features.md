@@ -43,6 +43,7 @@ As of 2016-04-19 this page is still being updated.
     - custom alert messages per validation
 - Access control
     - Owner / group permissions: [doc](form-runner/access-control/owner-group.md), [blog post](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)
+    - Organizations: [doc](form-runner/access-control/organization.md)
 - Persistence (databases)
     - persistence API: [doc](form-runner/api/persistence/README.md)
     - persistence implementations: [doc](form-runner/persistence/db-support.md)
