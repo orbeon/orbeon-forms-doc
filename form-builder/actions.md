@@ -48,7 +48,7 @@ Each row instructs the action to take the value of a form control and store it i
 - **Destination XPath Expression.** The XPath expression, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
 
 You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
-    
+
 #### With Database services
 
 Use "Set Database Service Parameters".
@@ -59,7 +59,7 @@ Each row instructs the action to take the value of a control and set that value 
 - **Parameter Number.** To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
 
 You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
-    
+
 #### Passing URL parameters to GET and DELETE methods
 
 [SINCE Orbeon Forms 2016.1]
@@ -75,7 +75,7 @@ The HTTP Service Editor [allows you to define URL parameters](https://doc.orbeon
 ```
 
 The Actions Editor doesn't yet support specifying URL parameters directly by name in this case. Instead, you use XPath expressions under "Set Service Request Values". For example:
-  
+
 - to set the `userId` parameter: `/*/userId`
 - to set the `userName` parameter: `/*/userName`
 
@@ -160,12 +160,12 @@ Your service should return localized labels for all the languages supported by y
     <row>
         <value>ch</value>
         <lang>fr</lang>
-        <label>Swiss</label>
+        <label>Suisse</label>
     </row>
 </response>
 ```
 
-After the service is called, the *items*, *label*, and *value* XPath expressions you wrote when defining the action are executed once per language supported by the form, and for each execution the `$fr-lang` variable is set to current language. So in the case of our hypothetical service returning a list of countries, you will define the *items* as `/response/row[@lang = $fr-lang]`, the *value* simply as `value`, and *label* as `label`.
+After the service is called, the *items*, *label*, and *value* XPath expressions you wrote when defining the action are executed once per language supported by the form, and for each execution the `$fr-lang` variable is set to current language. So in the case of our hypothetical service returning a list of countries, you will define the *items* as `/response/row[lang = $fr-lang]`, the *value* simply as `value`, and *label* as `label`.
 
 While in theory this allows you to have the *values* depend on the language, to avoid unexpected behavior when users switch languages or different users look at the same data using a different language, you should make sure that values are the same for all languages, and only the *labels* differ between languages.
 
