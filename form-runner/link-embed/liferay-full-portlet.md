@@ -3,7 +3,7 @@
 <!-- toc -->
 
 Please make sure to check the [Form Runner Liferay Proxy Portlet Guide](../../form-runner/link-embed/liferay-proxy-portlet.md)
-as well, as that is the recommended way to deploy Orbeon Forms into Liferay, and [Form Runner Embedding](../../form-runner/link-embed/images/embedding.png)
+as well, as that is the recommended way to deploy Orbeon Forms into Liferay, and [Form Runner Embedding](../../form-runner/link-embed/images/embedding-bookshelf.png)
 for a comparison of portlet deployments.
 
 ## Availability
@@ -209,3 +209,7 @@ Finally, to change the Orbeon portlet theme to the plain theme, set this propert
   name="oxf.epilogue.theme.embeddable"
   value="oxf:/config/theme-embeddable.xsl"/>
 ```
+
+
+https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml
+https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml

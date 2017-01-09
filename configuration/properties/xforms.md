@@ -4,7 +4,7 @@
 
 ## Default values
 
-For the latest default values of XForms properties, see [`properties-xforms.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-xforms.xml).
+For the latest default values of XForms properties, see [`properties-xforms.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-xforms.xml).
 
 ## XForms properties documented elsewhere
 

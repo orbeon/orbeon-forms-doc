@@ -50,7 +50,7 @@ When form authors add an instance of your component from Form Builder, Form Buil
 
 - Inside `<fb:view>`, the markup that goes in the view, e.g. `<xf:input>` for a plain XForms input.
 - Optionally, on `<fb:bind>`, attributes you might want to add to the `<xf:bind>` Form Builder adds for your component.
-- Optionally, and this is rare, inside `<fb:resources>`, additional resource elements the component might use, in addition to the `label`, `help`, `hint`, and `alert`. E.g. this is used in [explanation.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/explanation/explanation.xbl).
+- Optionally, and this is rare, inside `<fb:resources>`, additional resource elements the component might use, in addition to the `label`, `help`, `hint`, and `alert`. E.g. this is used in [explanation.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/explanation/explanation.xbl).
 
 ```xml
 <fb:templates>
@@ -200,10 +200,11 @@ The text for control `<xf:label>`, `<xf:hint>`, `<xf:help>`, and `<xf:alert>`, c
 - Inline, with a `lang` attribute indicating the language. This is what the author of the  Dynamic Data Dropdown control did for the first `<xf:input>` above.
 - Taken from the [Form Builder resource file][6], which is typically useful when your control uses resources that already exists elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the Dynamic Data Dropdown control did for the second `<xf:input>` above.
 
-[1]: https://github.com/orbeon/orbeon-forms/blob/master/form-builder/src/main/resources/forms/orbeon/builder/xbl/text-controls.xbl
+[1]: https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-controls.xbl
 [2]: http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components#TOC-Date-Picker
-[3]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/date-picker/date-picker.xbl
-[6]: https://github.com/orbeon/orbeon-forms/blob/master/form-builder/src/main/resources/forms/orbeon/builder/form/resources.xml
+[3]: https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/date-picker/date-picker.xbl
+     https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/date-picker/date-picker.xbl
+[6]: https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/form/resources.xml
 
 ## See also
 

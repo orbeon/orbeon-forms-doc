@@ -63,6 +63,6 @@ You can rely on the value in the `itemset-empty` attribute to hide the control w
 
 You can of course use the `itemset-empty` attribute for other things. For instance, you can make the control required only if the itemset isn't empty, by adding, on the `xf:bind,` the attribute `required="@itemset-empty = 'false'"`.
 
-[2]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-sandbox/services/zip-states.xpl
-[3]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-sandbox/services/zip-cities.xpl
-[4]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/databound-select1/databound-select1-unittest.xhtml
+[2]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-sandbox/services/zip-states.xpl
+[3]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-sandbox/services/zip-cities.xpl
+[4]: https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/databound-select1/databound-select1-unittest.xhtml

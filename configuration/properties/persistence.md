@@ -216,7 +216,7 @@ Add:
 ## Configuration properties for specific persistence providers
 
 Each provider may have specific configuration properties. For the latest settings, see
-[`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml#L17).
+[`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml#L17).
 
 ## See also
 

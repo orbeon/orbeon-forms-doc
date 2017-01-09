@@ -4,7 +4,7 @@
 
 ## Default values
 
-For the latest default values of general properties, see [`properties-base.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-base.xml).
+For the latest default values of general properties, see [`properties-base.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-base.xml).
 
 ## URL rewriting
 
@@ -649,5 +649,5 @@ _NOTE: You don't usually need to enable this property._
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning
 [3]: http://docs.oracle.com/javase/6/docs/technotes/guides/security/jsse/JSSERefGuide.html#X509TrustManager
-[8]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/config/log4j.xml
+[8]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/config/log4j.xml
 [9]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl

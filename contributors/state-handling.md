@@ -57,7 +57,7 @@ This property should be set to a number equal to or greater than the number of d
 
 When entries are evicted from the XForms document cache or the XForms static state cache, they are migrated to the XForms state store.
 
-The XForms state store is configured via [`oxf:/config/ehcache.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/ehcache.xml).
+The XForms state store is configured via [`oxf:/config/ehcache.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/ehcache.xml).
 
 ## Session heartbeat
 

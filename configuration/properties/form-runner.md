@@ -4,7 +4,7 @@
 
 ## Default values
 
-For the latest default values of Form Runner properties, see [properties-form-runner.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/config/properties-form-runner.xml).
+For the latest default values of Form Runner properties, see [properties-form-runner.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml).
 
 ## Form Runner properties documented elsewhere
 

@@ -16,7 +16,7 @@ See also [Supported Languages](../form-runner/feature/localization.md#form-build
 See these 2 files:
 
 - [Form Runner's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/i18n/resources.xml)
-- [Form Builder's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/src/main/resources/forms/orbeon/builder/form/resources.xml)
+- [Form Builder's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/form/resources.xml)
 
 Each file has as series of `<resource>` elements each with an `xml:lang`
 attribute. You need to add your own element. Say you want to localize to
@@ -68,7 +68,7 @@ question](http://stackoverflow.com/questions/11449195/orbeon-4-0-0-m6-how-to-set
 
 ### Calendar resources
 
-See [`CalendarResources.js`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/ops/javascript/orbeon/xforms/control/CalendarResources.js).
+See [`CalendarResources.js`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/assets/ops/javascript/orbeon/xforms/control/CalendarResources.js).
 
 Similar idea here, but this is in JavaScript, for client-side calendar
 support.
@@ -81,7 +81,7 @@ Orbeon Forms XBL components are located as subdirectories here:
 
 Each subdirectory has a .xbl file with some metadata. For example:
 
-- [`us-phone.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/us-phone/us-phone.xbl)
+- [`us-phone.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/us-phone/us-phone.xbl)
 
 As of Orbeon Forms 2016.1, the following controls need help:
 
@@ -105,7 +105,7 @@ To get started search for the English version in all files for both:
 Then add the corresponding resources for the new language.
 
 *NOTE: Makes sure also to localize
-[`dialog-select-resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/xbl/orbeon/dialog-select/dialog-select-resources.xml),
+[`dialog-select-resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/dialog-select/dialog-select-resources.xml),
 which is easily missed.*
 
 ### Pseudo-XBL components
