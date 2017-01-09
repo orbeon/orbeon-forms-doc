@@ -24,6 +24,8 @@ The following versions of Liferay are supported:
 |                    |Liferay 6.1.2 CE GA3      |
 |2016.2              |Liferay 6.1.2 CE GA3      |
 |                    |Liferay 6.2 CE GA6 / 6.2.5|
+|2016.3              |Liferay 6.1.2 CE GA3      |
+|                    |Liferay 6.2 CE GA6 / 6.2.5|
 
 _NOTE: Support for Liferay 7.0/Liferay DXP is planned (see [#2843](https://github.com/orbeon/orbeon-forms/issues/2843) for details)._
 
