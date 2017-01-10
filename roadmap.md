@@ -50,6 +50,7 @@ Focus:
 - [ ] [test automation](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+milestone%3A2016.3+label%3ATests)
     - [ ] at least one important test part of the manual test plan has been automated
 - [ ] [maintenance candidates](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+milestone%3A2016.3+label%3AMaintenance)
+- [ ] deprecate IE8 support ([#2651](https://github.com/orbeon/orbeon-forms/issues/2651))
 - TBD
 
 Issues:
@@ -64,6 +65,7 @@ Please remember that the following schedule is a plan, not a promise:
 
 Focus:
 
+- [ ] remove IE8 support ([#2651](https://github.com/orbeon/orbeon-forms/issues/2651))
 - TBD
 
 Issues:
