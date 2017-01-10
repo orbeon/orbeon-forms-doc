@@ -147,7 +147,43 @@ _NOTE: The priority resource manager is more efficient when most resources are f
 
 ### Examples
 
-This is the standard configuration as of Orbeon Forms 4.10: 
+#### Single configuration as of Orbeon Forms 2016.3
+
+```xml
+<context-param>
+    <param-name>oxf.resources.factory</param-name>
+    <param-value>org.orbeon.oxf.resources.PriorityResourceManagerFactory</param-value>
+</context-param>
+<context-param>
+    <param-name>oxf.resources.priority.2</param-name>
+    <param-value>org.orbeon.oxf.resources.WebAppResourceManagerFactory</param-value>
+</context-param>
+<context-param>
+    <param-name>oxf.resources.priority.2.oxf.resources.webapp.rootdir</param-name>
+    <param-value>/WEB-INF/resources</param-value>
+</context-param>
+<context-param>
+    <param-name>oxf.resources.priority.6</param-name>
+    <param-value>org.orbeon.oxf.resources.ClassLoaderResourceManagerFactory</param-value>
+</context-param>
+```
+
+With Tomcat, you can add local resources by adding the following to the context configuration:
+
+```xml
+<Parameter
+    override="false"
+    name="oxf.resources.priority.0"
+    value="org.orbeon.oxf.resources.FilesystemResourceManagerFactory"/>
+<Parameter
+    override="false"
+    name="oxf.resources.priority.0.oxf.resources.filesystem.sandbox-directory"
+    value="$PATH_TO_ORBEON/resources-local"/>
+```
+
+where `$PATH_TO_ORBEON` must be updated to point to your Orbeon Forms source directory.
+
+#### Production configuration as of Orbeon Forms 4.10 
 
 ```xml
 <context-param>
@@ -168,7 +204,7 @@ This is the standard configuration as of Orbeon Forms 4.10:
 </context-param>
 ```
 
-This is the configuration for developers as of Orbeon Forms 4.10:
+#### Configuration for developers as of Orbeon Forms 4.10
 
 ```xml
 <context-param>

@@ -77,7 +77,7 @@ support.
 
 Orbeon Forms XBL components are located as subdirectories here:
 
-- https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon
+- https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon
 
 Each subdirectory has a .xbl file with some metadata. For example:
 
@@ -85,15 +85,15 @@ Each subdirectory has a .xbl file with some metadata. For example:
 
 As of Orbeon Forms 2016.1, the following controls need help:
 
-- [character-counter.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/character-counter/character-counter.xbl)
-- [checkbox-input.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/checkbox-input/checkbox-input.xbl)
-- [dialog-select.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/dialog-select/dialog-select.xbl)
-- [dialog-select1.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/dialog-select1/dialog-select1.xbl)
-- [explanation.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/explanation/explanation.xbl)
+- [character-counter.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/character-counter/character-counter.xbl)
+- [checkbox-input.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/checkbox-input/checkbox-input.xbl)
+- [dialog-select.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/dialog-select/dialog-select.xbl)
+- [dialog-select1.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/dialog-select1/dialog-select1.xbl)
+- [explanation.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/explanation/explanation.xbl)
 - [handwritten-signature.xbl](https://github.com/orbeon/orbeon-forms-pe/blob/master/src/resources-packaged/xbl/orbeon/handwritten-signature/handwritten-signature.xbl) (link needs authorization)
-- [number.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/number/number.xbl)
-- [open-select1.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/open-select1/open-select1.xbl)
-- [yesno-input.xbl](https://github.com/orbeon/orbeon-forms/tree/master/src/resources-packaged/xbl/orbeon/yesno-input/yesno-input.xbl)
+- [number.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/number/number.xbl)
+- [open-select1.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/open-select1/open-select1.xbl)
+- [yesno-input.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/yesno-input/yesno-input.xbl)
 
 In there, you will notice the localization in English, French, etc. Add your own language.
 

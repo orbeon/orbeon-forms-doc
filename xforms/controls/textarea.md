@@ -40,7 +40,7 @@ When using the attribute `mediatype="text/html"`, the HTML area will clean-up th
 The cleanup is performed in two stages:
 
 1. The HTML goes through TagSoup and converted into a well-formed XML fragment.
-2. The XML fragment goes through an XSLT transformation, which removes all the `<script>` and their content, and only keeps well-known elements in the HTML (such as `<b>`, `<p>`, `<a>`...). This is done in [`clean-html.xsl`](https://github.com/orbeon/orbeon-forms/blob/master/src/resources-packaged/ops/xforms/clean-html.xsl), which is bundled in `orbeon-resources-private.jar`. Should you want to change the way HTML is cleaned, you can override this file by placing your copy under the same path in your resources (typically `WEB-INF/resources/ops/xforms/clean-html.xsl`).
+2. The XML fragment goes through an XSLT transformation, which removes all the `<script>` and their content, and only keeps well-known elements in the HTML (such as `<b>`, `<p>`, `<a>`...). This is done in [`clean-html.xsl`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/ops/xforms/clean-html.xsl), which is bundled in `orbeon-core.jar` (prior to Orbeon Forms 2016.3, in `orbeon-resources-private.jar`). Should you want to change the way HTML is cleaned, you can override this file by placing your copy under the same path in your resources (typically `WEB-INF/resources/ops/xforms/clean-html.xsl`).
 
 ### Limitations
 
