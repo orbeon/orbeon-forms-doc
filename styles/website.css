@@ -1,8 +1,13 @@
 .book .book-summary ul.summary > li:first-child {
     background-image: url(http://www.orbeon.com/img/orbeon-logo-trimmed-transparent-42.png);
     background-repeat: no-repeat;
-    background-position-x: 16px; 
+    background-position-x: 16px;
     background-position-y: 12px;
-    padding-left: 1000px; 
+    padding-left: 1000px;
     line-height: 42px
+}
+
+/* Hide confusing and not very useful anchors to navigate to the previous/next page */
+.navigation-prev, .navigation-next {
+    display: none;
 }
