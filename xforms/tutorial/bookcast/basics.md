@@ -397,6 +397,6 @@ By now you probably get the gist of it!
 [14]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/09.png
 [15]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/11.png
 [16]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/12.png
-[17]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/view.xhtml
-[18]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/apps/xforms-bookcast/page-flow.xml
+[17]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/view.xhtml
+[18]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/page-flow.xml
 [19]: https://www.w3.org/TR/2006/REC-xforms-20060314/slice6.html

@@ -75,7 +75,7 @@ support.
 
 ### XBL components
 
-Orbeon Forms XBL components are located as subdirectories here:
+Orbeon Forms XBL components are located as subdirectories here:;
 
 - https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon
 
@@ -110,16 +110,16 @@ which is easily missed.*
 
 ### Pseudo-XBL components
 
-- https://github.com/orbeon/orbeon-forms/tree/master/form-builder/src/main/resources/forms/orbeon/builder/xbl
+- https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl
 
 These files are used by the Form Builder toolbox for built-in XForms controls.
 
 As of Orbeon Forms 2016.1, the following files need help:
 
-- [attachment-controls.xbl](https://github.com/orbeon/orbeon-forms/tree/master/form-builder/src/main/resources/forms/orbeon/builder/xbl/attachment-controls.xbl)
-- [output-controls.xbl](https://github.com/orbeon/orbeon-forms/tree/master/form-builder/src/main/resources/forms/orbeon/builder/xbl/output-controls.xbl)
-- [text-output.xbl](https://github.com/orbeon/orbeon-forms/tree/master/form-builder/src/main/resources/forms/orbeon/builder/xbl/text-output.xbl)
-- [text-textarea-autosize.xbl](https://github.com/orbeon/orbeon-forms/tree/master/form-builder/src/main/resources/forms/orbeon/builder/xbl/text-textarea-autosize.xbl)
+- [attachment-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/attachment-controls.xbl)
+- [output-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/output-controls.xbl)
+- [text-output.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-output.xbl)
+- [text-textarea-autosize.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-textarea-autosize.xbl)
 
 ### Dates and times
 
