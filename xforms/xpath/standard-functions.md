@@ -2,80 +2,69 @@
 
 <!-- toc -->
 
-## XForms 1.1 functions
+## XPath 2.0 functions and constructors
 
-### Boolean functions
+### Functions
 
-* `boolean-from-string()`
-* `is-card-number()`
+Orbeon Forms supports the XPath functions from [XQuery 1.0 and XPath 2.0 Functions and Operators (Second Edition)](https://www.w3.org/TR/xpath-functions/).
 
-### Number functions
+Example of use:
 
-* `avg()`, `min()`, `max()`
-    * availble from XPath 2.0
-* `count-non-empty()`
-* `index()`
-* `power()`
-* `random()`
+```xpath
+string-join(('cat', 'dog', 'alligator'), ', ')
+```
 
-### String functions
+Namespaces:
 
-* `if()`
-    * available as `xf:if()`
-    * _NOTE: Prefer the native XPath 2.0 `if (...) then ... else ...` construct._
-* `property()`
-    * This function supports extension property names in the `http://orbeon.org/oxf/xml/xforms` namespace (usually mapped to the `xxf` prefix). Any such property name will return the value of an XForms engine property. Example:
+- These functions are available in the default function namespace.
+- These function are also available in the XPath functions namespace (`http://www.w3.org/2005/xpath-functions`), usually associated with the `fn` prefix.
 
-        ```xml
-        <xf:output value="property('xxf:noscript')"/>
-        ```
+This means that it is usually not necessary to declare a namespace for these functions, nor is it necessary to use a prefix in calls to these functions.
 
-    * NOTE: The standard XForms function returns an XPath 1.0 `string`. The Orbeon Forms implementation returns the following:
-        * empty sequence (if the property is not found)
-        * `xs:string`, `xs:integer`, `xs:boolean` or `xs:anyURI` depending on the type of the property
-* `digest()`
-* `hmac()`
+We recommend *not prefixing* calls to the standard XPath functions.
 
-### Date and time functions
+### Constructors
 
-_NOTE: Prefer the XPath 2.0 date and time functions when possible._
+Orbeon Forms supports the XPath constructors from [XQuery 1.0 and XPath 2.0 Functions and Operators (Second Edition)](https://www.w3.org/TR/xpath-functions/).
 
-* `local-date()`
-* `local-dateTime()`
-* `now()`
-* `days-from-date()`
-* `days-to-date()`
-* `seconds-from-dateTime()`
-    * available as `xf:seconds-from-dateTime()`
-* `seconds-to-dateTime()`
-* `seconds()`
-* `months()`
+Example of use:
 
-### Node-set functions
+```xpath
+xs:dateTime('2016-01-11T12:00:00Z')
+```
 
-* `instance()`
-* `current()`
-* `context()`
+These constructors are in the `http://www.w3.org/2001/XMLSchema` namespace, usually associated with the `xs` prefix. This means that using a prefix is required.
 
-### Object functions
+## XForms functions
 
-* `choose()`
-    * _NOTE: Prefer the native XPath 2.0 `if (...) then ... else ...` construct._
-* `event()`
+### Namespaces
 
-### Functions not yet implemented
+- These functions are available in the default function namespace. 
+- These function are also available in the XForms namespace (`http://www.w3.org/2002/xforms`), usually associated with the `xf` prefix.
 
-The following XForms 1.1 functions are NOT supported as of February 2010:
+<!--
+- These function are also available in the XForms functions namespace (`http://www.w3.org/2002/xforms-functions`), which doesn't have a standard prefix. [SINCE Orbeon Forms 2017.1]
+-->
+ 
+This means that it is usually not necessary to declare a namespace for these functions in the form, nor is it necessary to use a prefix in calls to the core XPath functions:
+ 
+```xpath
+valid(element)
+```
 
-* `id()`
-* `adjust-dateTime-to-timezone()` (prefer the [XPath 2.0 Timezone Adjustment Functions on Dates and Time Values][2] functions)
+For extra clarity, you can prefix calls to XForms functions. For example:
 
+```xpath
+xf:valid(element)
+```
 
-## XForms 2.0 functions
+These functions are documented in XForms 2.0's [XPath Expressions Module](https://www.w3.org/community/xformsusers/wiki/XPath_Expressions_Module).
 
 ### xf:valid()
 
 [SINCE Orbeon Forms 4.3]
+
+This is an XForms 2.0 function.
 
 ```xpath
 xf:valid() as xs:boolean
@@ -90,14 +79,99 @@ The `valid()` function returns the validity of XPath items, including instance d
 
 [SINCE Orbeon Forms 4.5]
 
+This is an XForms 2.0 function.
+
 ```xpath
 xf:bind($id as xs:string) as node()*
 ```
 
 This function returns the sequence of nodes associated with the bind specified by the `id` parameter.
 
+### Unsupported and obsolete XForms 1.1 functions
+
+The following functions from XForms 1.1 are obsolete:
+
+- `xf:adjust-dateTime-to-timezone()`
+    - use the [XPath 2.0 Timezone Adjustment Functions on Dates and Time Values](https://www.w3.org/TR/xpath-functions/#timezone.functions), which offer similar functionality
+- `xf:avg()`
+    - use the standard XPath 2.0 function instead (`avg()`)
+    - the XForms 1.1 version of this function is not implemented in Orbeon Forms
+- `xf:choose()`
+    - use the native XPath 2.0 `if (...) then ... else ...` construct instead
+- `xf:id()`
+    - use the native XPath 2.0 `id()` function instead
+- `xf:if()`
+    - available as `xf:if()` only
+    - use the native XPath 2.0 `if (...) then ... else ...` construct instead
+- `xf:min()`, `xf:max()`
+    - use the standard XPath 2.0 functions instead (`min()` and `max()`)
+    - the XForms 1.1 versions of these functions are not implemented in Orbeon Forms
+
+### Boolean functions
+
+- `xf:boolean-from-string()`
+- `xf:is-card-number()`
+
+### Number functions
+
+- `xf:count-non-empty()`
+- `xf:index()`
+- `xf:power()`
+- `xf:random()`
+
+### String functions
+
+- `property()`
+    * This function supports extension property names in the `http://orbeon.org/oxf/xml/xforms` namespace (usually mapped to the `xxf` prefix). Any such property name will return the value of an XForms engine property. Example:
+
+        ```xml
+        <xf:output value="property('xxf:noscript')"/>
+        ```
+
+    * NOTE: The standard XForms function returns an XPath 1.0 `string`. The Orbeon Forms implementation returns the following:
+        * empty sequence (if the property is not found)
+        * `xs:string`, `xs:integer`, `xs:boolean` or `xs:anyURI` depending on the type of the property
+- `digest()`
+- `hmac()`
+
+### Date and time functions
+
+_NOTE: Prefer the XPath 2.0 date and time functions when possible._
+
+- `xf:local-date()`
+- `xf:local-dateTime()`
+- `xf:now()`
+- `xf:days-from-date()`
+- `xf:days-to-date()`
+- `xf:seconds-from-dateTime()`
+    - available as `xf:seconds-from-dateTime()` only
+- `xf:seconds-to-dateTime()`
+- `xf:seconds()`
+- `xf:months()`
+
+### Node-set functions
+
+- `xf:instance()`
+- `xf:current()`
+- `xf:context()`
+
+### Object functions
+
+- `event()`
 
 ## XSLT 2.0 functions
+
+### Namespaces
+
+These functions are available in the default function namespace.
+ 
+Example:
+ 
+```xpath
+format-number(xs:integer(year), '0000')
+```
+
+### Functions
 
 The following functions from XSLT 2.0 are  available:
 
@@ -108,13 +182,21 @@ The following functions from XSLT 2.0 are  available:
 
 ## eXforms functions
 
-eXForms was a suggested set of extensions to XForms 1.0, grouped into different modules. Orbeon Forms supports the `exf:mip` module, which includes the following functions:
+### Namespaces
+
+These functions are available in the `http://www.exforms.org/exf/1-0` namespace, usually associated with the `exf` prefix.
+
+### Functions
+
+eXForms was a suggested set of extensions to XForms 1.0, grouped into different modules.
+
+Orbeon Forms supports the `exf:mip` module, which includes the following functions:
 
 - `exf:relevant()`
 - `exf:readonly()`
 - `exf:required()`
 
-_NOTE: These functions will be available as part of XForms 2.0 support._
+_NOTE: XPath 2.0-compatible versions of these functions will be available as part of XForms 2.0._
 
 Orbeon Forms also supports the following from the *sorting module*:
 
@@ -136,4 +218,4 @@ Note that the second argument is interpreted as a string, unlike with `xxf:sort(
 </xf:itemset>
 ```
 
-eXForms functions live in the `http://www.exforms.org/exf/1-0` namespace, usually bound to the prefix `exf` or `exforms`.
+
