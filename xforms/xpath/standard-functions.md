@@ -121,7 +121,7 @@ The following functions from XForms 1.1 are obsolete:
 
 ### String functions
 
-- `property()`
+- `xf:property()`
     * This function supports extension property names in the `http://orbeon.org/oxf/xml/xforms` namespace (usually mapped to the `xxf` prefix). Any such property name will return the value of an XForms engine property. Example:
 
         ```xml
@@ -131,8 +131,8 @@ The following functions from XForms 1.1 are obsolete:
     * NOTE: The standard XForms function returns an XPath 1.0 `string`. The Orbeon Forms implementation returns the following:
         * empty sequence (if the property is not found)
         * `xs:string`, `xs:integer`, `xs:boolean` or `xs:anyURI` depending on the type of the property
-- `digest()`
-- `hmac()`
+- `xf:digest()`
+- `xf:hmac()`
 
 ### Date and time functions
 
@@ -157,7 +157,7 @@ _NOTE: Prefer the XPath 2.0 date and time functions when possible._
 
 ### Object functions
 
-- `event()`
+- `xf:event()`
 
 ## XSLT 2.0 functions
 
