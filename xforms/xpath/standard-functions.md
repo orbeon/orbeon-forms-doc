@@ -4,6 +4,10 @@
 
 ## XPath 2.0 functions and constructors
 
+### Standard documentation
+
+These functions are documented in [XQuery 1.0 and XPath 2.0 Functions and Operators (Second Edition)](https://www.w3.org/TR/xpath-functions/).
+
 ### Functions
 
 Orbeon Forms supports the XPath functions from [XQuery 1.0 and XPath 2.0 Functions and Operators (Second Edition)](https://www.w3.org/TR/xpath-functions/).
@@ -37,6 +41,9 @@ These constructors are in the `http://www.w3.org/2001/XMLSchema` namespace, usua
 
 ## XForms functions
 
+### Standard documentation
+These functions are documented in XForms 2.0's [XPath Expressions Module](https://www.w3.org/community/xformsusers/wiki/XPath_Expressions_Module).
+
 ### Namespaces
 
 - These functions are available in the default function namespace. 
@@ -58,13 +65,21 @@ For extra clarity, you can prefix calls to XForms functions. For example:
 xf:valid(element)
 ```
 
-These functions are documented in XForms 2.0's [XPath Expressions Module](https://www.w3.org/community/xformsusers/wiki/XPath_Expressions_Module).
+### XForms 2.0 functions
 
-### xf:valid()
+#### xf:bind()
+
+[SINCE Orbeon Forms 4.5]
+
+```xpath
+xf:bind($id as xs:string) as node()*
+```
+
+This function returns the sequence of nodes associated with the bind specified by the `id` parameter.
+
+#### xf:valid()
 
 [SINCE Orbeon Forms 4.3]
-
-This is an XForms 2.0 function.
 
 ```xpath
 xf:valid() as xs:boolean
@@ -74,38 +89,6 @@ xf:valid($items as item()*, $relevant as xs:boolean, $recurse as xs:boolean) as 
 ```
 
 The `valid()` function returns the validity of XPath items, including instance data nodes.
-
-### xf:bind()
-
-[SINCE Orbeon Forms 4.5]
-
-This is an XForms 2.0 function.
-
-```xpath
-xf:bind($id as xs:string) as node()*
-```
-
-This function returns the sequence of nodes associated with the bind specified by the `id` parameter.
-
-### Unsupported and obsolete XForms 1.1 functions
-
-The following functions from XForms 1.1 are obsolete:
-
-- `xf:adjust-dateTime-to-timezone()`
-    - use the [XPath 2.0 Timezone Adjustment Functions on Dates and Time Values](https://www.w3.org/TR/xpath-functions/#timezone.functions), which offer similar functionality
-- `xf:avg()`
-    - use the standard XPath 2.0 function instead (`avg()`)
-    - the XForms 1.1 version of this function is not implemented in Orbeon Forms
-- `xf:choose()`
-    - use the native XPath 2.0 `if (...) then ... else ...` construct instead
-- `xf:id()`
-    - use the native XPath 2.0 `id()` function instead
-- `xf:if()`
-    - available as `xf:if()` only
-    - use the native XPath 2.0 `if (...) then ... else ...` construct instead
-- `xf:min()`, `xf:max()`
-    - use the standard XPath 2.0 functions instead (`min()` and `max()`)
-    - the XForms 1.1 versions of these functions are not implemented in Orbeon Forms
 
 ### Boolean functions
 
@@ -158,6 +141,26 @@ _NOTE: Prefer the XPath 2.0 date and time functions when possible._
 ### Object functions
 
 - `xf:event()`
+
+### Unsupported and obsolete XForms 1.1 functions
+
+The following functions from XForms 1.1 are obsolete:
+
+- `xf:adjust-dateTime-to-timezone()`
+    - use the [XPath 2.0 Timezone Adjustment Functions on Dates and Time Values](https://www.w3.org/TR/xpath-functions/#timezone.functions), which offer similar functionality
+- `xf:avg()`
+    - use the standard XPath 2.0 function instead (`avg()`)
+    - the XForms 1.1 version of this function is not implemented in Orbeon Forms
+- `xf:choose()`
+    - use the native XPath 2.0 `if (...) then ... else ...` construct instead
+- `xf:id()`
+    - use the native XPath 2.0 `id()` function instead
+- `xf:if()`
+    - available as `xf:if()` only
+    - use the native XPath 2.0 `if (...) then ... else ...` construct instead
+- `xf:min()`, `xf:max()`
+    - use the standard XPath 2.0 functions instead (`min()` and `max()`)
+    - the XForms 1.1 versions of these functions are not implemented in Orbeon Forms
 
 ## XSLT 2.0 functions
 
@@ -217,5 +220,3 @@ Note that the second argument is interpreted as a string, unlike with `xxf:sort(
     ...
 </xf:itemset>
 ```
-
-
