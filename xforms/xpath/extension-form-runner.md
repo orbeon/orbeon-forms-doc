@@ -55,7 +55,7 @@ Return the root element of the XML document containing the given dataset.
 
 If the dataset does not exist, return the empty sequence. 
 
-For more on datasets, see [Datasets](../.../form-runner/feature/datasets.md).
+For more on datasets, see [Datasets](../../form-runner/feature/datasets.md).
 
 ### fr:document-id()
 
