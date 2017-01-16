@@ -48,6 +48,7 @@ As of 2016-04-19 this page is still being updated.
     - persistence API: [doc](form-runner/api/persistence/README.md)
     - persistence implementations: [doc](form-runner/persistence/db-support.md)
     - relational database support: [doc](form-runner/persistence/relational-db.md), [blog post about new indexes](http://blog.orbeon.com/2016/06/new-indexes-boost-performance-with.html)
+- Datasets: [doc](form-runner/feature/datasets.md)
 
 ### Form Builder
 
