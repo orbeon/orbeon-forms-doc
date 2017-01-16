@@ -42,6 +42,21 @@ fr:created-dateTime() as xs:dateTime?
 
 Return the creation date of the current form data *as of the last read from the database* if available, and the empty sequence otherwise (such as in "new" mode).
 
+
+### fr:dataset()
+
+[SINCE Orbeon Forms 2017.1]
+
+```xpath
+fr:dataset($dataset-name as xs:string) as xs:string?
+```
+
+Return the root element of the XML document containing the given dataset.
+
+If the dataset does not exist, return the empty sequence. 
+
+For more on datasets, see [Datasets](../.../form-runner/feature/datasets.md).
+
 ### fr:document-id()
 
 ```xpath

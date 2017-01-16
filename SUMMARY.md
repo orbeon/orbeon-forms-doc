@@ -82,6 +82,7 @@
         * [Localization](form-runner/feature/localization.md)
         * [TIFF production](form-runner/feature/tiff-production.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
+        * [Datasets](form-runner/feature/datasets.md)
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
         * [Purging old data](form-runner/persistence/purging-old-data.md)

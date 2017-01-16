@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The Form Builder action editor is an [Orbeon Forms PE](http://www.orbeon.com/pricing) feature and allows you to implement simple actions in your form. The basic philosophy goes as follows:
+The Form Builder Action Editor is an [Orbeon Forms PE](http://www.orbeon.com/pricing) feature and allows you to implement simple actions in your form. The basic philosophy goes as follows:
 
 1. React to an event occurring on the form, such as the form being loaded or a user action.
 2. Call an HTTP or database service:
@@ -13,6 +13,12 @@ The Form Builder action editor is an [Orbeon Forms PE](http://www.orbeon.com/pri
 3. Use the returned parameters to update the form
 
 Actions are tightly coupled with services. In the future, support might be added for actions which do not require services.
+
+[SINCE Orbeon Forms 2017.1]
+
+![Actions Editor General Settings](images/actions-general-settings.png)
+
+[UNTIL Orbeon Forms 2016.3]
 
 ![Actions Editor](images/actions.png)
 
@@ -81,9 +87,22 @@ The Actions Editor doesn't yet support specifying URL parameters directly by nam
 
 ## Handling the service response
 
+### User interface
+
+[SINCE Orbeon Forms 2017.1]
+
+You access the response in the Service Response Actions tab. This allows adding, removing, and moving response actions:
+
+![Actions Editor Service Response Actions](images/actions-response.png)
+
 ### Setting the value of a control
 
-As a result of running an action, you can set a form control's value from data returned by a service using "Set Response Control Values".
+As a result of running an action, you can set a form control's value from data returned by a service using:
+ 
+- [SINCE Orbeon Forms 2017.1] the "Set Control Value" action
+- [UNTIL Orbeon Forms 2016.3] the "Set Response Control Values" section 
+
+Parameters:
 
 - __Destination Control.__
     - Specifies the control whose value must be set.
@@ -98,18 +117,21 @@ As a result of running an action, you can set a form control's value from data r
 
 #### Basics
 
-As a result of running an action, you can set a selection control's set of items (AKA "itemset") using "Set response Selection Control Items".
+As a result of running an action, you can set a selection control's set of items (AKA "itemset") using:
+
+- [SINCE Orbeon Forms 2017.1] the "Set Control Itemset" action
+- [UNTIL Orbeon Forms 2016.3] the "Set response Selection Control Items" section
 
 Selection controls include dropdown menus, checkboxes, and more.
 
 - __Destination Selection Control.__
     - Specifies the selection control whose items must be set. Only selection controls appear in this list.
     - Depending on the relative position of the source of the action and the target selection controls, one or more "closest" controls can be selected (see the detailed explanation of the behavior below).
-- __Items.__
+- __Items XPath expression.__
     - The XPath expression must point to a set of element or attribute nodes of the response body returned by the service.
     - For each node returned, an item is created.
-- __Label.__ The XPath expression must return the text of the label for an item. It is relative to the current item node.
-- __Value.__ The XPath expression must return the text of the value for an item. It is relative to the current item node.
+- __Label XPath expression.__ The XPath expression must return the text of the label for an item. It is relative to the current item node.
+- __Value XPath expression.__ The XPath expression must return the text of the value for an item. It is relative to the current item node.
 
 #### Adjustment of control values
 
@@ -169,9 +191,33 @@ After the service is called, the *items*, *label*, and *value* XPath expressions
 
 While in theory this allows you to have the *values* depend on the language, to avoid unexpected behavior when users switch languages or different users look at the same data using a different language, you should make sure that values are the same for all languages, and only the *labels* differ between languages.
 
+### Storing the response to a dataset
+
+[SINCE Orbeon Forms 2017.1]
+
+As a result of running an action, you can store the entire set of data returned by the service into a [dataset](../form-runner/feature/datasets.md):
+ 
+- use the "Save to Dataset" action
+- enter a dataset name
+
+Each dataset name identifies a unique dataset for the form. Depending on the use case, dataset names can be reused or be unique.
+
+A dataset name must: 
+
+- start with a letter or `_`
+- continue with letters, digits, `.`, `-` or `_` (if the name has more than one character)
+
+You access data from a dataset using the [`fr:dataset()`](../xforms/xpath/extension-form-runner#frdataset) function.
+
+For more on datasets, see [Datasets](../form-runner/feature/datasets.md).
+ 
+_NOTE: Section templates keep their own local datasets, separate from the main form._
+
+Simply enter a dataset name 
+
 ## Namespace handling
 
-At this point, you can't declare custom namespace mappings in the action editor. So say you have a response looking like this:
+At this point, you can't declare custom namespace mappings in the Action Editor. So say you have a response looking like this:
 
 ```xml
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
