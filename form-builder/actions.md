@@ -207,7 +207,7 @@ A dataset name must:
 - start with a letter or `_`
 - continue with letters, digits, `.`, `-` or `_` (if the name has more than one character)
 
-You access data from a dataset using the [`fr:dataset()`](../xforms/xpath/extension-form-runner#frdataset) function.
+You access data from a dataset using the [`fr:dataset()`](../xforms/xpath/extension-form-runner.md#frdataset) function.
 
 For more on datasets, see [Datasets](../form-runner/feature/datasets.md).
  

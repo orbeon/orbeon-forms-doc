@@ -37,4 +37,4 @@ fr:dataset('activity-dataset')/foo/bar
 - [Action Editor](../../form-builder/actions.md)
 - [HTTP Services](../../form-builder/http-services.md)
 - [Database Services](../../form-builder/database-services.md)
-- [`fr:dataset()`](../../xforms/xpath/extension-form-runner#frdataset) function
+- [`fr:dataset()`](../../xforms/xpath/extension-form-runner.md#frdataset) function
