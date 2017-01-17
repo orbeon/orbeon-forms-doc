@@ -226,7 +226,7 @@ Example:
 
 ### fr:can-create()
 
-[SINCE Orbeon Forms 2016.3]
+[SINCE Orbeon Forms 2017.1]
 
 ```xpath
 fr:can-create() as xs:boolean
@@ -236,7 +236,7 @@ Whether the current user has the `create` permission for the current app/form na
 
 ### fr:can-delete()
 
-[SINCE Orbeon Forms 2016.3]
+[SINCE Orbeon Forms 2017.1]
 
 ```xpath
 fr:can-delete() as xs:boolean
@@ -246,7 +246,7 @@ Whether the current user has the `delete` permission for the current form data (
 
 ### fr:can-read()
 
-[SINCE Orbeon Forms 2016.3]
+[SINCE Orbeon Forms 2017.1]
 
 ```xpath
 fr:can-read() as xs:boolean
@@ -256,7 +256,7 @@ Whether the current user has the `read` permission for the current app/form name
 
 ### fr:can-update()
 
-[SINCE Orbeon Forms 2016.3]
+[SINCE Orbeon Forms 2017.1]
 
 ```xpath
 fr:can-update() as xs:boolean
