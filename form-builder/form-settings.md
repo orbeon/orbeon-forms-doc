@@ -30,12 +30,18 @@ Form options include options which apply to the entire form definition.
 - Appearance of Control Labels
     - Use Default: use the `oxf.xforms.label.appearance` property
     - Inline: labels show inline above the control
-- Use Placeholder for Text Fields: labels show inline above the control, but for text, date, and time input fields only, labels show as an HTML *placeholder* within the field when the field is empty
+- Use Placeholder for Text Fields and Text Areas
+    - Labels show inline above the control for most fields.
+    - For text, date, and time input fields, labels show as an HTML *placeholder* within the field when the field is empty.
+    - For text areas, labels show as an HTML *placeholder* within the field when the field is empty. [SINCE Orbeon Forms 2017.1]
 - Appearance of Control Hints
     - Use Default: use the `oxf.xforms.hint.appearance` property
     - Inline: hints show inline below the control
     - Tooltips: hints show as tooltips upon mouseover
-- Use Placeholder for Text Fields: hints show inline or as tooltips upon mouseover, but for input fields only, hints show as an HTML *placeholder* within the field when the field is empty
+- Use Placeholder for Text Fields and Text Areas
+    - Hints show inline or as tooltips upon mouseover.
+    - For text, date, and time input fields, hints show as an HTML *placeholder* within the field when the field is empty.
+    - For text areas, hints show as an HTML *placeholder* within the field when the field is empty. [SINCE Orbeon Forms 2017.1]
 
 Here is how hints appear depending on the type of control they are associated with:
 
