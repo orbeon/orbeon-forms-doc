@@ -18,8 +18,6 @@ _Examples of input fields_
 
 ### Attributes
 
-#### HTML attributes
-
 With the standard appearance, the following attributes are available and forwarded to the corresponding HTML element:
 
 - `xxf:maxlength`
@@ -70,7 +68,7 @@ _NOTE: The `xxf:placeholder` appearance is deprecated. It has the same effect as
 
 The XForms `oxf.xforms.label.appearance` or `oxf.xforms.hint.appearance` (or the corresponding `xxf:label.appearance` and `xxf:hint.appearance` attributes on the first `<xf:model>` element) allow setting a default for the labels and hint appearances for the entire form.
 
-The defaul values are `full`:
+The default value is `full`:
 
 ```xml
 <property
@@ -94,7 +92,7 @@ Supported values for `oxf.xforms.hint.appearance`:
 - `full`: hints show inline below the control (the default)
 - `full minimal`: hints show inline below the control, but for text, date, and time input fields only, hints show as an HTML *placeholder* within the field when the field is empty
 - `tooltip`: hints show as tooltips upon mouseover
-- `tooltip minimal`: hints show as tooltips upon mouseover, but for input fields only, hints show as an HTML *placeholder* within the field when the field is empty
+- `tooltip minimal`: hints show as tooltips upon mouseover, but for text, date, and time input fields only, hints show as an HTML *placeholder* within the field when the field is empty
 
 When the global property includes `minimal`, it is possible to override the appearance on the control with `appearance="full"`:
 
