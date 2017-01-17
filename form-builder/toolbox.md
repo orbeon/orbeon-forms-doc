@@ -212,7 +212,7 @@ And this is the Signature control ( which of course you usually leave blank at d
 | **Button**      | standard button |
 | **Link Button** | button appearing as a link |
 
-Buttons do not allow entering data, and by default do nothing significant, but they can be used to trigger actions with the Action Editor.
+Buttons do not allow entering data, and by default do nothing significant, but they can be used to trigger actions with the Actions Editor.
 
 _NOTE: Buttons do not appear at all in preview mode._
 

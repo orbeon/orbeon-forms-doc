@@ -48,7 +48,7 @@ Say that when users enter a value in *employee number*, you want to lookup the c
 
 ### 1. Set a service parameter
 
-Your SQL query can contain *parameters*. Those look like: `<sql:param type="xs:string" select=""/>`. The `type` attribute corresponds to the SQL type to use (e.g. `xs:string`, `xs:decimal`, …). The `select` attribute must be left blank; it is filled-out by the action editor when the service is called.
+Your SQL query can contain *parameters*. Those look like: `<sql:param type="xs:string" select=""/>`. The `type` attribute corresponds to the SQL type to use (e.g. `xs:string`, `xs:decimal`, …). The `select` attribute must be left blank; it is filled-out by the Actions Editor when the service is called.
 
 When the query runs, the value of each parameter is set to the current value of a form field, and you define the mapping between parameter in the SQL query and form field when you create an action. That mapping is done by position; e.g. in the above query, you'll want to set parameter 1 to the control containing an employee id.
 

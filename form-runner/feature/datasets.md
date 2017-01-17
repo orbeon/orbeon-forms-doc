@@ -17,7 +17,7 @@ Instead, a dataset lives as long as the user stays on the given form page.
 
 ## Creating a dataset
 
-You create a dataset using the [Action Editor](../../form-builder/actions.md). The data returned by the service is stored into the dataset in XML format.
+You create a dataset using the [Actions Editor](../../form-builder/actions.md). The data returned by the service is stored into the dataset in XML format.
 
 A dataset is identified by a name. Multiple actions calling services can store data into the same dataset. The action which last updates the dataset overwrites the entire content of the dataset. 
 
@@ -34,7 +34,7 @@ fr:dataset('activity-dataset')/foo/bar
 
 ## See also
 
-- [Action Editor](../../form-builder/actions.md)
+- [Actions Editor](../../form-builder/actions.md)
 - [HTTP Services](../../form-builder/http-services.md)
 - [Database Services](../../form-builder/database-services.md)
 - [`fr:dataset()`](../../xforms/xpath/extension-form-runner.md#frdataset) function

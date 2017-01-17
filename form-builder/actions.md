@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The Form Builder Action Editor is an [Orbeon Forms PE](http://www.orbeon.com/pricing) feature and allows you to implement simple actions in your form. The basic philosophy goes as follows:
+The Form Builder Actions Editor is an [Orbeon Forms PE](http://www.orbeon.com/pricing) feature and allows you to implement simple actions in your form. The basic philosophy goes as follows:
 
 1. React to an event occurring on the form, such as the form being loaded or a user action.
 2. Call an HTTP or database service:
@@ -217,7 +217,7 @@ Simply enter a dataset name
 
 ## Namespace handling
 
-At this point, you can't declare custom namespace mappings in the Action Editor. So say you have a response looking like this:
+At this point, you can't declare custom namespace mappings in the Actions Editor. So say you have a response looking like this:
 
 ```xml
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
