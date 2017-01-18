@@ -29,8 +29,15 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
 
 1. Setup Orbeon Forms to use a JBoss datasource (configured in the following steps):
     1. Unzip `orbeon.war`,
-    2. Edit `WEB-INF/web.xml` to uncomment the `<resource-ref>`.
-    3. Edit `WEB-INF/jboss-web.xml` to uncomment the `<resource-ref>`. Change the `<jndi-name>` to `java:/comp/env/jdbc/oracle`.
+    2. Edit `WEB-INF/web.xml` to add the following `<resource-ref>`, replacing `oracle` by the name of your database:
+    
+    ```xml
+    <resource-ref>
+        <res-ref-name>java:comp/jdbc/oracle</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <lookup-name>java:jboss/datasources/oracle</lookup-name>
+    </resource-ref>
+    ```
 2. In JBoss, install the JDBC driver:
     1. Download the MySQL JDBC driver, say `oracle-driver.jar`, and place it in the `standalone/deployments` directory.
     2. Start the server, and check you see the message `Deployed "oracle-driver.jar" (runtime-name : "oracle-driver.jar")`.
@@ -47,9 +54,10 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
             </security>
         </datasource>
         ```
-    2. In `<connection-url>`, put the JDBC URL to your database.
-    3. In `<driver>`, put the "runtime-name" of your driver as it shows in the log (it was `oracle-driver.jar` our example above).
-    3. In `<security>`, fill in the proper username and password.
+    2. In the `jndi-name` attribute, replace `oracle` by the name of your database. The value of this attribute must match the value you set earlier inside `<lookup-name>` when editing the `web.xml`.
+    3. In `<connection-url>`, put the JDBC URL to your database.
+    4. In `<driver>`, put the "runtime-name" of your driver as it shows in the log (it was `oracle-driver.jar` our example above).
+    5. In `<security>`, fill in the proper username and password.
 4. (Optional) Check that the driver and datasource are configured properly:
     1. Starting JBoss (bin/standalone.sh), make sure you don't see any errors, and that you find a message stating that data source was deployed, like `Bound data source [java:jboss/datasources/oracle]`.
     2. Check the datasource properly shows in the JBoss Management console:
