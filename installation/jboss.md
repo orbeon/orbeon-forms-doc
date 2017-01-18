@@ -29,7 +29,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
 
 1. Setup Orbeon Forms to use a JBoss datasource (configured in the following steps):
     1. Unzip `orbeon.war`,
-    2. Edit `WEB-INF/web.xml` to add the following `<resource-ref>`, replacing `oracle` by the name of your database:
+    2. Editing `WEB-INF/web.xml`, inside `<web-app>` add the following:
     
         ```xml
         <resource-ref>
@@ -38,6 +38,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
             <lookup-name>java:jboss/datasources/oracle</lookup-name>
         </resource-ref>
         ```
+    3. Inside `<resource-ref>`, replace `oracle` by the name of your database.
 2. In JBoss, install the JDBC driver:
     1. Download the MySQL JDBC driver, say `oracle-driver.jar`, and place it in the `standalone/deployments` directory.
     2. Start the server, and check you see the message `Deployed "oracle-driver.jar" (runtime-name : "oracle-driver.jar")`.
