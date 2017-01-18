@@ -1,4 +1,4 @@
-# JBoss 7 and JBoss EAP 6
+# JBoss 7, JBoss EAP 6
 
 <!-- toc -->
 
@@ -30,62 +30,29 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
 1. Setup Orbeon Forms to use a JBoss datasource (configured in the following steps):
     1. Unzip `orbeon.war`,
     2. Edit `WEB-INF/web.xml` to uncomment the `<resource-ref>`.
-    3. Edit `WEB-INF/jboss-web.xml` to uncomment the `<resource-ref>`. Change the `<jndi-name>` to `java:/comp/env/jdbc/mysql`.
-2. In JBoss, install the JDBC driver as a module:
-    1. In `modules/com`, create a directory `mysql/main`.
-    2. [Download the MySQL JDBC driver][2], say `mysql-connector-java-5.1.39-bin.jar` (latest as of 2016-06-20), and place it in the `main` directory.
-    3. In the `main` directory, create a file named `module.xml` with the following content. Update the value of the `path` attribute to match the name of the file you download in the previous step.
-
-        ```xml
-        <module xmlns="urn:jboss:module:1.0" name="com.mysql">
-            <resources>
-                <resource-root path="mysql-connector-java-5.1.22-bin.jar"/>
-            </resources>
-            <dependencies>
-                <module name="javax.api"/>
-            </dependencies>
-        </module>
-        ```
+    3. Edit `WEB-INF/jboss-web.xml` to uncomment the `<resource-ref>`. Change the `<jndi-name>` to `java:/comp/env/jdbc/oracle`.
+2. In JBoss, install the JDBC driver:
+    1. Download the MySQL JDBC driver, say `oracle-driver.jar`, and place it in the `standalone/deployments` directory.
+    2. Start the server, and check you see the message `Deployed "oracle-driver.jar" (runtime-name : "oracle-driver.jar")`.
 3. In JBoss, define the datasource:
-    1. Editing `standalone/configuration/standalone.xml`, and replace the `<datasources>` with the following.
+    1. Editing `standalone/configuration/standalone.xml`, inside the `<datasources>` add the following:
 
         ```xml
-        <datasources>
-            <datasource jndi-name="java:/comp/env/jdbc/mysql" pool-name="mysql" enabled="true">
-                <connection-url>jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8</connection-url>
-                <driver>com.mysql</driver>
-                <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
-                <pool>
-                    <min-pool-size>10</min-pool-size>
-                    <max-pool-size>100</max-pool-size>
-                    <prefill>true</prefill>
-                </pool>
-                <security>
-                    <user-name>orbeon</user-name>
-                    <password>orbeon</password>
-                </security>
-                <statement>
-                    <prepared-statement-cache-size>32</prepared-statement-cache-size>
-                    <share-prepared-statements>true</share-prepared-statements>
-                </statement>
-            </datasource>
-            <drivers>
-                <driver name="com.mysql" module="com.mysql">
-                    <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
-                </driver>
-            </drivers>
-        </datasources>
+        <datasource jndi-name="java:jboss/datasources/oracle" pool-name="oracle" enabled="true">
+            <connection-url>…</connection-url>
+            <driver>…</driver>
+            <security>
+                <user-name>…</user-name>
+                <password>…</password>
+            </security>
+        </datasource>
         ```
-    2. In `<connection-url>`, change the host and database name, and under `<security>` the user name and password as appropriate.
-4. (Optional) Check that the module and datasource are configured properly:
-    1. Starting JBoss (bin/standalone.sh) and verifying you see the following two lines in the console:
-
-    ```
-    [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010404: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
-    [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) JBAS010400: Bound data source [java:/comp/env/jdbc/mysql]
-    ```
+    2. In `<connection-url>`, put the JDBC URL to your database.
+    3. In `<driver>`, put the "runtime-name" of your driver as it shows in the log (it was `oracle-driver.jar` our example above).
+    3. In `<security>`, fill in the proper username and password.
+4. (Optional) Check that the driver and datasource are configured properly:
+    1. Starting JBoss (bin/standalone.sh), make sure you don't see any errors, and that you find a message stating that data source was deployed, like `Bound data source [java:jboss/datasources/oracle]`.
     2. Check the datasource properly shows in the JBoss Management console:
-
         1. If you haven't done so already, create a user in the `ManagementRealm` by running `bin/add-user.sh`, and creating a new user, say `admin`/`password`.
         2. Go to `http://127.0.0.1:9990/console/`. Choose _Profile_ on to top right of the page. Click on _Connector / Datasources_ in the left sidebar. Check that you have an enabled datasource with JNDI name `java:/comp/env/jdbc/mysql`. In the _Connection_ tab, click on _Test Connection_, and a dialog the message "Successfully created JDBC connection" should show.
     3. (Requires Orbeon Forms PE) Check you can create a database service in Form Builder:
@@ -165,7 +132,6 @@ Orbeon Forms doesn't come by default with this file, so deployment on JBoss does
     4. Edit `WEB-INF/jboss-web.xml`. In that file you should have `<res-ref-name>jdbc/my-datasource</res-ref-name>` (the same name you use to configure the SQL Processor and that you have in the `web.xml`) and `<jndi-name>java:/my-database</jndi-name>` (the same name you declared in the `...-ds.xml` file).
     5. Copy the JAR files with the JDBC driver for your database in `JBOSS_HOME/server/default/lib`.
 
-[2]: http://dev.mysql.com/downloads/connector/j/
 [3]: https://code.google.com/p/adf-samples-demos/downloads/detail?name=demoscripts.zip&amp;can=2&amp;q=
 [4]: http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/oracle-and-mysql-persistence-layers#TOC-Oracle
 [5]: http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/oracle-and-mysql-persistence-layers#TOC-With-Orbeon-Forms-4.0
