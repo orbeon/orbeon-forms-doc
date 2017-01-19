@@ -257,7 +257,7 @@ returns:
 'Orbeon San Mateo', Orbeon California', 'Orbeon, Inc.'
 ```
 
-This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
+This function only works with the header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
 ## xxf:user-group()
 
@@ -296,7 +296,7 @@ California Department of Education
 'Orbeon San Mateo', 'Local School District'
 ```
 
-This function only works with header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
+This function only works with the header-driven method. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
 ## xxf:user-roles()
 
