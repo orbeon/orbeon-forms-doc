@@ -213,8 +213,6 @@ For more on datasets, see [Datasets](../form-runner/feature/datasets.md).
  
 _NOTE: Section templates keep their own local datasets, separate from the main form._
 
-Simply enter a dataset name 
-
 ## Namespace handling
 
 At this point, you can't declare custom namespace mappings in the Actions Editor. So say you have a response looking like this:
