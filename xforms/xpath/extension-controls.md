@@ -183,6 +183,10 @@ The resulting tree represents the itemset hierarchy as seen by the control, with
 * item label
 * item value
 * item help and hint if present [SINCE: Orbeon Forms 4.5]
+* item attributes (JSON only)
+    * `class` attribute if present
+    * `style` attribute if present
+    * `xxforms-open` attribute if `xxf:open` is present
 * which are the currently selected items, if `$selected-items` is `true()`
 
 _NOTE: Because itemsets re-evaluate during refresh, it is recommended that this function be used only within action handlers responding to refresh events to ensure consistency._
@@ -365,6 +369,49 @@ Example of JSON result with `xxf:itemset('my-select1', 'json', true())` (formatt
          ]
       ]
    ]
+]
+```
+
+Example of JSON result with attributes:
+
+```json
+[
+  {
+    "label": "Apple",
+    "hint": "Green",
+    "value": "1",
+    "attributes": {
+      "class": "my-class-1",
+      "xxforms-open": "true"
+    }
+  },
+  {
+    "label": "Banana",
+    "hint": "Yellow",
+    "value": "2",
+    "attributes": {
+      "class": "my-class-2",
+      "xxforms-open": "false"
+    }
+  },
+  {
+    "label": "Orange",
+    "hint": "Orange",
+    "value": "3",
+    "attributes": {
+      "class": "my-class-3",
+      "xxforms-open": "true"
+    }
+  },
+  {
+    "label": "Kiwi",
+    "hint": "Green",
+    "value": "4",
+    "attributes": {
+      "class": "my-class-4",
+      "xxforms-open": "false"
+    }
+  }
 ]
 ```
 
