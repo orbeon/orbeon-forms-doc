@@ -12,17 +12,14 @@ Orbeon Forms runs on any platform that supports:
 
 ## Hardware requirements
 
-Orbeon Forms is best installed on hardware with the following minimal requirements:
+We recomemnd you run Orbeon Forms on a dedicated server or instance, with the following requirements:
 
-* CPU
-    * 4-core (or more) Intel Core i7 or better (desktop-grade)
-    * 4-core (or more) Intel Xeon (server-grade)
-* RAM
-    * 2 GB of RAM (or more) available to the Java Virtual Machine (JVM heap size)
+* CPU: recent 4-core (or more) Intel Xeon or Core i7. We don't recommend AMD CPUs, which, as of 2015, tend to be 2-4 times slower than Intel CPUs per core.
+* RAM: 2 GB of RAM (or more) available to the Java Virtual Machine (JVM heap size).
 
-These are indicative, as the amount of CPU and RAM needed varies depending on the number of forms, their size, as well as the number of concurrent users.
+If using AWS EC2, we recommend you start with a c4.2xlarge instance. For most projects, it is safe to start with a configuration along those lines, but you might want to have more powerful or multiple servers or instances (or equivalent) for situations calling for high availability, or to handle more load. When running Orbeon Forms PE on multiple servers or instances, you need one [PE subscription](http://www.orbeon.com/pricing) per server or instance. 
 
-_NOTE: As of 2015, we don't recommend AMD CPUs, which tend to be 2-4 times slower than Intel CPUs per core._
+For more details on sizing, see the section on [how much load Orbeon Forms can handle](../faq/form-builder-runner.md#how-much-load-can-orbeon-forms-handle).
 
 ## Java virtual machine configuration
 
