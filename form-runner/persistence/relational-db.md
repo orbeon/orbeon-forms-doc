@@ -69,7 +69,7 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
     ```sql
     mysql -u root
-    mysql> CREATE USER orbeon IDENTIFIED BY ${PASSWORD};
+    mysql> CREATE USER 'orbeon'@'localhost' IDENTIFIED BY 'orbeon';
     ```
 2. Create a new schema `orbeon`. This schema will contains the tables used to store your forms definitions and form data.
 
@@ -79,7 +79,7 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 3. If needed, grant permissions, for example:
    
    ```sql
-   mysql> GRANT ALL ON orbeon.* TO 'orbeon'@'%';
+   mysql> GRANT ALL PRIVILEGES ON *.* TO 'orbeon'@'localhost' WITH GRANT OPTION;
    ```
 4. Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
