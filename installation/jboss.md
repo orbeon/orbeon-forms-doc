@@ -13,14 +13,11 @@ These steps have been tested with:
 
 To install Orbeon Forms:
 
-1. For Orbeon Forms PE only
-    - either place your license file under `~/.orbeon/license.xml` (see [License installation](README.md#license-installation-orbeon-forms-pe-only))
-    - or
-        - unzip `orbeon.war`
-        - place your `license.xml` file under `WEB-INF/resources/config/license.xml`
-        - re-zip `orbeon.war`
+1. For Orbeon Forms PE only, either:
+    - place your license file under `~/.orbeon/license.xml` (see [License installation](README.md#license-installation-orbeon-forms-pe-only)),
+    - or add your `license.xml` to the `orbeon.war` under `WEB-INF/resources/config/license.xml`
 2. Start a standalone server with `bin/standalone.sh`
-3. Drop `orbeon.war` into the JBoss `standalone/deployments` folder
+3. Move the `orbeon.war` file into the JBoss `standalone/deployments` folder
 4. Check whether the deployment was successful by watching `standalone/log/server.log`
 
 ## Setup a JDBC datasource
