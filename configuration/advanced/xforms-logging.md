@@ -132,6 +132,7 @@ During XForms development, you might want to enable a more aggressive debug conf
         server
         server-body
         html
+        process
         submission-details
         submission-body
     </property>
