@@ -1,4 +1,4 @@
-# High Availability and Clustering
+# Clustering and High Availability
 
 In certain environments calling for high availability, or when one server running Orbeon Forms isn't enough to handle the load, you will want to deploy Orbeon Forms on multiple servers. Those servers are often called *cluster*. When deploying Orbeon Forms in a cluster, you'll want to make sure that:
 
