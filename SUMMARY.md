@@ -150,6 +150,7 @@
        * [Limiter filter](configuration/advanced/limiter-filter.md)
        * [Run modes](configuration/advanced/run-modes.md)
        * [Environments](configuration/advanced/environments.md)
+       * [Clustering and High Availability](configuration/advanced/clustering.md)
        * [Configuring a Form Runner eXist database](configuration/advanced/exist-db.md)
        * [Client-side error handling](configuration/advanced/client-error-handling.md)
    * Troubleshooting
