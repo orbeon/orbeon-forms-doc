@@ -37,7 +37,7 @@ Two properties in `WEB-INF/resources/config/properties-local.xml` control exactl
     </property>
 ```
 
-The first property controls what is logged at debug level:
+`oxf.xforms.logging.debug` controls what is logged at debug level:
 
 * Related to a particular XForms document:
     * `model`
@@ -93,7 +93,7 @@ The first property controls what is logged at debug level:
         * requires `server`
         * outputs the full Ajax request and response bodies
 
-The second property controls what is logged at error level:
+`oxf.xforms.logging.error` controls what is logged at error level:
 
 * `submission-error-body`
     * Whether to attempt to output a submission response body when a submission error occurs
