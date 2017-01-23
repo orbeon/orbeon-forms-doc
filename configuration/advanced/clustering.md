@@ -1,7 +1,7 @@
-# High Availabilty and Clustering
+# High Availability and Clustering
 
-In certain envrionments calling for high availability, or in which one server running Orbeon Forms isn't enough to handle the load, you will want to deploy Orbeon Forms on multiple servers, often called *cluster*. When deployed in a cluster, you'll want to make sure that:
+In certain environments calling for high availability, or when one server running Orbeon Forms isn't enough to handle the load, you will want to deploy Orbeon Forms on multiple servers. Those servers are often called *cluster*. When deploying Orbeon Forms in a cluster, you'll want to make sure that:
 
-1. Only caches and session information is maintained at the level of each Orbeon Forms instance, and critical informatin is stored on a separate server, or servers, typically a database server. For forms you create with Form Builder, you'll want to make sure not to use the internal eXist database to store data, but instead to [setup Form Runner to point to a separate relational database](../form-runner/persistence/relational-db.md) or separate instance of eXist.
+1. Only caches and session information is maintained at the level of each Orbeon Forms instance, and critical information is stored on a separate server, or servers, typically a database server. If using Form Runner, you'll want to set it up to [point to a separate relational database](../form-runner/persistence/relational-db.md) or separate eXist database, running on another server, or servers.
 
-2. That you setup your reverse proxy, which determine to which server 
+2. You setup your load balancer to use **sticky sessions**. Whether you're using a hardware or software load balancer, it will decide for each HTTP request coming in, which server in the cluster should handle it. Using sticky sessions ensures that all the requests for each specific session are sent to the same Orbeon Forms instance, which is essential since Orbeon Forms keeps track of session information on the server, and doesn't support session replication. For instance, see how to [setup sticky session with AWS Elastic Load Balancing](http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html).
