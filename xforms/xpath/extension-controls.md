@@ -377,40 +377,92 @@ Example of JSON result with attributes:
 ```json
 [
   {
-    "label": "Apple",
-    "hint": "Green",
-    "value": "1",
+    "label": "Encyclopedia",
+    "value": "en1",
     "attributes": {
       "class": "my-class-1",
       "xxforms-open": "true"
-    }
+    },
+    "children": [
+      {
+        "label": "Science",
+        "value": "sc1",
+        "attributes": {
+          "class": "my-class-2",
+          "xxforms-open": "true"
+        }
+      },
+      {
+        "label": "Culture",
+        "value": "cu1",
+        "attributes": {
+          "class": "my-class-3",
+          "xxforms-open": "true"
+        },
+        "children": [
+          {
+            "label": "Art",
+            "value": "ar1",
+            "attributes": {
+              "class": "my-class-4",
+              "xxforms-open": "true"
+            }
+          },
+          {
+            "label": "Craft",
+            "value": "cr1",
+            "attributes": {
+              "class": "my-class-5",
+              "xxforms-open": "true"
+            }
+          }
+        ]
+      }
+    ]
   },
   {
-    "label": "Banana",
-    "hint": "Yellow",
-    "value": "2",
+    "label": "Encyclopedia",
+    "value": "en2",
     "attributes": {
-      "class": "my-class-2",
-      "xxforms-open": "false"
-    }
-  },
-  {
-    "label": "Orange",
-    "hint": "Orange",
-    "value": "3",
-    "attributes": {
-      "class": "my-class-3",
+      "class": "my-class-6",
       "xxforms-open": "true"
-    }
-  },
-  {
-    "label": "Kiwi",
-    "hint": "Green",
-    "value": "4",
-    "attributes": {
-      "class": "my-class-4",
-      "xxforms-open": "false"
-    }
+    },
+    "children": [
+      {
+        "label": "Science",
+        "value": "sc2",
+        "attributes": {
+          "class": "my-class-7",
+          "xxforms-open": "true"
+        }
+      },
+      {
+        "label": "Culture",
+        "value": "cu2",
+        "attributes": {
+          "class": "my-class-8",
+          "xxforms-open": "true"
+        },
+        "children": [
+          {
+            "label": "Art",
+            "value": "ar2",
+            "attributes": {
+              "class": "my-class-9",
+              "xxforms-open": "true"
+            }
+          },
+          {
+            "label": "Craft",
+            "value": "cr2",
+            "attributes": {
+              "class": "my-class-10",
+              "xxforms-open": "true"
+            }
+          }
+        ]
+      }
+    ]
   }
 ]
 ```
