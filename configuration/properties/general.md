@@ -335,13 +335,13 @@ This enables a secure connection between Orbeon Forms and the servlet container.
 
 ### Headers forwarding
 
-When Orbeon Forms performs XForms submissions, or retrieves documents in XPL over HTTP, it has the ability to forward incoming HTTP headers. For example, if you want to forward the `Orbeon-Client` and the `Authorization` header to your services:
+When Orbeon Forms performs XForms submissions, or retrieves documents in XPL over HTTP, it has the ability to forward incoming HTTP headers. For example, if you want to forward the `Authorization` header to your services:
 
 ```xml
 <property
     as="xs:string"
     name="oxf.http.forward-headers"
-    value="Orbeon-Client Authorization"/>
+    value="Authorization"/>
 ```
 
 _WARNING: For security reasons, you should be careful with header forwarding, as this might cause non trusted services to receive client headers._
