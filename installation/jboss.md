@@ -68,7 +68,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
             </security>
         </datasource>
         ```
-    2. In the `jndi-name` attribute, replace `oracle` by the name of your database. The value of this attribute must match the value you set earlier inside `<lookup-name>` when editing the `web.xml`.
+    2. In the `jndi-name` attribute, replace `oracle` by the name of your database. The value of this attribute must match the value you set earlier inside `<jndi-name>` when editing the `jboss-web.xml`.
     3. In `<connection-url>`, put the JDBC URL to your database.
     4. In `<driver>`, put the "runtime-name" of your driver as it shows in the log (it was `oracle-driver.jar` our example above).
     5. In `<security>`, fill in the proper username and password.
