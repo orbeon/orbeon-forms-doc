@@ -22,7 +22,7 @@ To install Orbeon Forms:
 
 ## Setup a JDBC datasource
 
-To setup a datasource, if you'd like Orbeon Forms to connect to your relational database, here for MySQL:
+To setup a datasource, if you'd like Orbeon Forms to connect to your relational database, do the following:
 
 1. Setup Orbeon Forms to use a JBoss datasource (configured in the following steps):
     1. Set the `oxf.fr.persistence.provider.*.*.*` property to your `properties-local.xml`
