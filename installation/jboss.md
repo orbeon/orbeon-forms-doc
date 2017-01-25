@@ -86,6 +86,10 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
     4. In `<driver>`, put the "runtime-name" of your driver as it shows in the log (it was `oracle-driver.jar` in our example above).
     5. In `<security>`, fill in the proper username and password.
 
+Finally, you might want to double check the configuration you just did, ensuring names match across files, per the following diagram.
+
+![Configuration files that need to be in sync](images/jboss.png)
+
 ## With JBoss 6
 
 1. Assuming that `JBOSS_HOME` represents the location of your JBoss installation: create a new `JBOSS_HOME/server/default/deploy/orbeon.war` directory.
