@@ -73,30 +73,6 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
     4. In `<driver>`, put the "runtime-name" of your driver as it shows in the log (it was `oracle-driver.jar` our example above).
     5. In `<security>`, fill in the proper username and password.
 
-## Using the Oracle persistence layer
-
-1. Follow the steps in the previous section, using the Oracle driver instead of the MySQL driver.
-2. Add to the `orbeon.war`, in the `WEB-INF` directory, a file named `jboss-deployment-structure.xml` with the content that follows. This assumes, that in the previous step, you named the module `com.oracle`.
-
-    ```xml
-    <jboss-deployment-structure>
-        <deployment>
-            <dependencies>
-                <module name="com.oracle"/>
-                <module name="org.jboss.ironjacamar.jdbcadapters"/>
-            </dependencies>
-        </deployment>
-    </jboss-deployment-structure>
-    ```
-Orbeon Forms doesn't come by default with this file, so deployment on JBoss doesn't fail for those who are not using the Oracle persistence layer, and thus haven't create a `com.oracle` module.
-3. Create the [Orbeon tables][4] in Oracle.
-4. Setup Orbeon Forms to [use the Oracle persistence layer][5]. At the minimun, you'll need to add the following two properties to your `properties-local.xml`:
-
-    ```xml
-    <property as="xs:string"  name="oxf.fr.persistence.provider.*.*.*"     value="oracle"/>
-    <property as="xs:string"  name="oxf.fr.persistence.oracle.datasource"  value="db"/>
-    ```
-
 ## With JBoss 6
 
 1. Assuming that `JBOSS_HOME` represents the location of your JBoss installation: create a new `JBOSS_HOME/server/default/deploy/orbeon.war` directory.
