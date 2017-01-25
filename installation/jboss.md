@@ -25,7 +25,7 @@ To install Orbeon Forms:
 To setup a datasource, if you'd like Orbeon Forms to connect to your relational database, do the following:
 
 1. Setup Orbeon Forms to use a JBoss datasource (configured in the following steps):
-    1. Set the `oxf.fr.persistence.provider.*.*.*` property to your `properties-local.xml`
+    1. Set the `oxf.fr.persistence.provider.*.*.*` property in your `properties-local.xml`
         1. If you already created a `WEB-INF/resources/config/properties-local.xml` unzip it and add the property per the example below. Otherwise create that file with the following content:
 
             ```xml
@@ -83,7 +83,7 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
         ```
     2. In the `jndi-name` attribute, replace `oracle` by the name of your database. The value of this attribute must match the value you set earlier inside `<jndi-name>` when editing the `jboss-web.xml`.
     3. In `<connection-url>`, put the JDBC URL to your database.
-    4. In `<driver>`, put the "runtime-name" of your driver as it shows in the log (it was `oracle-driver.jar` our example above).
+    4. In `<driver>`, put the "runtime-name" of your driver as it shows in the log (it was `oracle-driver.jar` in our example above).
     5. In `<security>`, fill in the proper username and password.
 
 ## With JBoss 6
