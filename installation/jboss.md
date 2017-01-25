@@ -25,7 +25,20 @@ To install Orbeon Forms:
 To setup a datasource, if you'd like Orbeon Forms to connect to your relational database, here for MySQL:
 
 1. Setup Orbeon Forms to use a JBoss datasource (configured in the following steps):
-    1. Update the `web.xml` 
+    1. Set the `oxf.fr.persistence.provider.*.*.*` property to your `properties-local.xml`
+        1. If you already created a `WEB-INF/resources/config/properties-local.xml` unzip it and add the property per the example below. Otherwise create that file with the following content:
+
+            ```xml
+            <properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                        xmlns:oxf="http://www.orbeon.com/oxf/processors">
+                <property as="xs:string"
+                          name="oxf.fr.persistence.provider.*.*.*"
+                          value="oracle"/>
+            </properties>
+            ```
+        2. Change the value of the property according to the database you're using, setting it either to `oracle`, `mysql`, `sqlserver`, `postgresql`, or `db2`.
+        3. Update `WEB-INF/resources/config/properties-local.xml` inside the `orbeon.war` with the version you edited.
+    2. Update the `web.xml` 
         1. Unzip the `WEB-INF/web.xml` inside the `orbeon.war`.
         2. Editing `WEB-INF/web.xml`, towards the end of the file, uncomment the following:
 
@@ -37,9 +50,9 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
                 <res-auth>Container</res-auth>
             </resource-ref>
             ```
-        3. Inside `<resource-ref>`, replace `oracle` by the name of your database you're using: `oracle`, `mysql`, `sqlserver`, `postgresql`, or `db2`.
+        3. Inside `<resource-ref>`, replace `oracle` by the name of your database.
         4. Update `WEB-INF/web.xml` inside the `orbeon.war` with the version you edited.
-   2. Update the `jboss-web.xml`
+   3. Update the `jboss-web.xml`
         1. Unzip the `WEB-INF/jboss-web.xml` inside the `orbeon.war`.
         2. Editing `WEB-INF/jboss-web.xml`, uncomment the following:
 
