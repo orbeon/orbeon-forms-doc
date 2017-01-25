@@ -1,13 +1,6 @@
-# JBoss 7, JBoss EAP 6
+# JBoss 7, WildFly 8 to 10.1
 
 <!-- toc -->
-
-## Status
-
-These steps have been tested with:
- 
-- JBoss AS 7.1.1.Final "Brontes"
-- JBoss EAP 6.4.0.GA (AS 7.5.0.Final) with Orbeon Forms 2016.1
 
 ## Deploy Orbeon Forms
 
@@ -17,14 +10,14 @@ To install Orbeon Forms:
     - place your license file under `~/.orbeon/license.xml` (see [License installation](README.md#license-installation-orbeon-forms-pe-only)),
     - or add your `license.xml` to the `orbeon.war` under `WEB-INF/resources/config/license.xml`
 2. Start a standalone server with `bin/standalone.sh`
-3. Move the `orbeon.war` file into the JBoss `standalone/deployments` folder
+3. Move the `orbeon.war` file into the WildFly `standalone/deployments` folder
 4. Check whether the deployment was successful by watching `standalone/log/server.log`
 
 ## Setup a JDBC datasource
 
 To setup a datasource, if you'd like Orbeon Forms to connect to your relational database, do the following:
 
-1. Setup Orbeon Forms to use a JBoss datasource (configured in the following steps):
+1. Setup Orbeon Forms to use a WildFly datasource (configured in the following steps):
     1. Set the `oxf.fr.persistence.provider.*.*.*` property in your `properties-local.xml`
         1. If you already created a `WEB-INF/resources/config/properties-local.xml` unzip it and add the property per the example below. Otherwise create that file with the following content:
 
@@ -65,10 +58,10 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
         3. Change the `<res-ref-name>` to match what the `<res-ref-name> in your `web.xml`.
         4. Change the `<jndi-name>` to `java:jboss/datasources/oracle`, replacing `oracle` by the database name you used in `<res-ref-name>`.
         4. Update `WEB-INF/jboss-web.xml` inside the `orbeon.war` with the version you edited.
-2. In JBoss, install the JDBC driver:
+2. In WildFly, install the JDBC driver:
     1. Download the MySQL JDBC driver, say `oracle-driver.jar`, and place it in the `standalone/deployments` directory.
     2. Start the server, and check you see the message `Deployed "oracle-driver.jar" (runtime-name : "oracle-driver.jar")`.
-3. In JBoss, define the datasource:
+3. In WildFly, define the datasource:
     1. Editing `standalone/configuration/standalone.xml`, inside the `<datasources>` add the following:
 
         ```xml
