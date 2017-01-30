@@ -71,6 +71,7 @@
         * [Repeater](form-runner/component/repeater.md)
         * [Rich text editor](form-runner/component/rich-text-editor.md)
         * [Section](form-runner/component/section.md)
+        * [Single-selection tree](form-runner/component/tree-select1.md)
         * [Source code editor](form-runner/component/source-code-editor.md)
         * [US state](form-runner/component/us-state.md)
         * [Wizard](form-runner/component/wizard.md)
