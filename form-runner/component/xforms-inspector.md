@@ -18,9 +18,16 @@ The XForms Inspector allows you to:
 
 You can enable the XForms Inspector in one of two ways:
 
-- For a specific page, by adding the following code in your XForms: `<fr:xforms-inspector/>`. If you don't have the "fr" prefix in scope, instead of declaring that prefix globally, you can declare it locally: `<fr:xforms-inspector xmlns:fr="http://orbeon.org/oxf/xml/form-runner"/>`.
 - For all your pages, by setting the following property to `true`:
-`<property as="xs:boolean" name="oxf.epilogue.xforms.inspector" value="true"/>`.
+
+    ```xml
+    <property as="xs:boolean" name="oxf.epilogue.xforms.inspector" value="true"/>
+    ```
+- For a specific page, by adding the following code in your XForms: `<fr:xforms-inspector/>`. If you don't have the "fr" prefix in scope, instead of declaring that prefix globally, you can declare it locally:
+
+    ```xml
+    <fr:xforms-inspector xmlns:fr="http://orbeon.org/oxf/xml/form-runner"/>
+    ```
 
 ## The console
 
