@@ -720,10 +720,28 @@ If you use two `*` wildcards, as in the example above, the property also sets th
 <property
     as="xs:string"
     name="oxf.fr.css.custom.uri.*.*"
-    value="/config/acme.css"/>
+    value="/forms/acme/assets/acme.css"/>
 ```
 
 You can add more than one file, and just separate the paths by whitespace in the property.
+
+[SINCE Orbeon Forms 2017.1]
+
+In addition to `oxf.fr.css.custom.uri`, you can also use the following properties, which apply only to the Summary and Detail pages respectively:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.summary.css.custom.uri.*.*"
+    value="/forms/acme/assets/acme-summary.css"/>
+```
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.css.custom.uri.*.*"
+    value="/forms/acme/assets/acme-detail.css"/>
+```
 
 ### Authoring CSS
 
@@ -764,6 +782,24 @@ You can add more than one file, and just separate the paths by whitespace in the
 ```
 
 You can add more than one file, and just separate the paths by whitespace in the property.
+
+[SINCE Orbeon Forms 2017.1]
+
+In addition to `oxf.fr.js.custom.uri`, you can also use the following properties, which apply only to the Summary and Detail pages respectively:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.summary.js.custom.uri.*.*"
+    value="/forms/acme/assets/acme-summary.js"/>
+```
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.js.custom.uri.*.*"
+    value="/forms/acme/assets/acme-detail.js"/>
+```
 
 ## Overriding resources
 
