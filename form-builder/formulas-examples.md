@@ -218,13 +218,28 @@ See [Form Fields](../form-runner/access-control/form-fields.md).
 
 ## Check the Form Runner mode
 
-A special XPath variable named `$fr-mode` is exposed by Form Runner to all XPath expressions. Its value can be one of:
+### Modes
 
+The Form Runner detail page can have the following modes: 
+ 
 - `new`
 - `edit`
 - `view`
 - `pdf`
 - `email`
+- 'test' (when Form Builder is in test mode)
+
+### With Orbeon Forms 2016.2 and newer
+
+You can use the [`fr:mode()` XPath function](../xforms/xpath/extension-form-runner.md#frmode) exposed by Form Runner to all XPath expressions.
+
+```xpath
+fr:mode() = 'edit'
+```
+
+### With Orbeon Forms 2016.1.x and earlier
+
+A special XPath variable named `$fr-mode` is exposed by Form Runner to all XPath expressions. 
 
 You can test the mode as follows, for example in a Visibility expression:
 
