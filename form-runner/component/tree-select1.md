@@ -6,6 +6,8 @@
 
 [SINCE Orbeon Forms 2017.1]
 
+_NOTE: As of Orbeon Forms 2017.1, this control is not present in the Form Builder toolbox because Form Builder lacks the ability to created hierarchical itemsets, making this control less useful in that context.__
+
 ## What it does
 
 This control allows the user to select a single item from a hierarchical tree representation.
