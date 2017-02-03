@@ -185,6 +185,10 @@ The JSON mode is selected when:
 
 In this mode, the URL generator uses the [XForms 2.0 conversion scheme](../../xforms/submission-json.md) to convert the incoming JSON content to XML.
 
+[SINCE Orbeon Forms 2017.1]
+
+In addition to the `application/json` mediatype, mediatypes of the form `a/b+json` are recognized.
+
 ## Binary mode
 
 The binary mode is selected when:

@@ -58,7 +58,11 @@ An external XML submission must refer to the URL of the page accepting the submi
 
 It is possible to submit JSON to a page or service with the `application/json` mediatype.
 
-The JSON received is automatically converted to XML using the [XForms 2.0 conversion scheme](../../xforms/submission-json.md). 
+The JSON received is automatically converted to XML using the [XForms 2.0 conversion scheme](../../xforms/submission-json.md).
+
+[SINCE Orbeon Forms 2017.1]
+
+In addition to the `application/json` mediatype, mediatypes of the form `a/b+json` are recognized.
 
 ## Default submission
 

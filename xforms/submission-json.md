@@ -14,6 +14,10 @@ When a submission returns an `application/json` mediatype, the submission parses
 
 *NOTE: This is also supported with `xf:instance` when using the `src` or `resource` attributes, when the content is received with an `application/json` mediatype.*
 
+[SINCE Orbeon Forms 2017.1]
+
+In addition to the `application/json` mediatype, mediatypes of the form `a/b+json` are recognized.
+
 ### Conversion examples
 
 The following JSON object:
