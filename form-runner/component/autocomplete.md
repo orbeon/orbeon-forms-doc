@@ -52,7 +52,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
     ```xml
     <fr:autocomplete
             ref="country-name"
-            labelref="country-name/@label"
+            labelref="@label"
             resource="/fr/service/custom/orbeon/controls/countries?country-name={$fr-search-value}"
             max-results-displayed="4">
         <xf:label>Country code: </xf:label>
@@ -65,7 +65,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
     ```
 
     * `ref`: binds the autocomplete to a node that will that the autocomplete will populate with the selected item's value.
-    * `labelref`: binds the autocomplete to a node that will that the autocomplete will populate with the selected item's label. This attribute is optional, but if you don't specify it, when loading a form where an autocomplete already has a value, then autocomplete will show empty, which most likely will be seen as incorrect behavior by users. This is because in _resource_ mode, as well as in _dynamic_ mode (see below), the autocomplete doesn't know about all the items, and thus can't automatically infer the label it needs to show users based on a value stored in the instance. `labelref` solves this problem by also storing the label in the instance.
+    * `labelref`: binds the autocomplete to a node that will that the autocomplete will populate with the selected item's label. The XPath expression in `labelref` is evaluated in the context of the node to which the control is bound to. This attribute is optional, but if you don't specify it, when loading a form where an autocomplete already has a value, then autocomplete will show empty, which most likely will be seen as incorrect behavior by users. This is because in _resource_ mode, as well as in _dynamic_ mode (see below), the autocomplete doesn't know about all the items, and thus can't automatically infer the label it needs to show users based on a value stored in the instance. `labelref` solves this problem by also storing the label in the instance.
     * `resource`: points to an HTTP service responding with an XML document. It is interpreted as an AVT, and you can use the `$fr-search-value` to refer to the value users typed so far in the search field, as done in the above example.
     * `<xf:itemset>`: points to the items in the XML returned by the service, and for each item to its label and value.
     * Whenever the result of the `resource` AVT evaluates to a different URI, a request is made by the autocomplete to that new URI to retrieve the a new itemset. Typically, your `resource` AVT will use `$fr-search-value`, and thus whenever users change the value in the search field, your service will be called. But this mechanism is general, and should your AVT, say, refer to a node in an instance that can change, then the service will we called again every time a change occurs.
