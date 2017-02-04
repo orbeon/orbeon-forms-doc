@@ -54,6 +54,12 @@ See the [Form Builder](../form-builder/README.md).
 
 ## Questions about specific features
 
+### Are the forms created with Form Builder compliant with Disability Discrimination Act (DDA), the W3C WCAG, or Section 508?
+
+Orbeon is committed to accessibility: we make sustained effort to ensure that Orbeon Forms complies with relevant accessibility standards, and consider any instance of noncompliance with an accessibility standard such as WCAG 2.0 as a bug.
+
+Also, throughout the years, a number of customers have conducted accessibility audits for Orbeon Forms, and we work closely with those customers to solve possible compliance issues.
+
 ### How can I create forms which users can fill out offline?
 
 Offline support is not a feature of  Orbeon Forms as of December 2014.
