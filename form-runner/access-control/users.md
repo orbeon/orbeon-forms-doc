@@ -81,8 +81,6 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
 
 ### Header driven method
 
-You want to use header-driven method if you have a servlet filter, single sign-on software, or other system that sets the roles for the current user in an HTTP header.
-
 #### 1. Enable header-driven method
 
 Set the following property in your `properties-local.xml`:
