@@ -79,11 +79,24 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
     </security-role>
     ```
 
-### Header driven method
+### Header-driven method
 
-#### 1. Enable header-driven method
+#### Individual headers or single header with JSON?
 
-Set the following property in your `properties-local.xml`:
+You can pass information about the user either using:
+
+- 3 headers, one for the username, one for the user's roles, and one for user's group.
+- 1 header, that contains the user's information in a JSON format specified below.
+
+The following should help you choose whether to use individual headers or a single header with JSON:
+
+1. If using Orbeon Forms 2016.2 or earlier, go for individual headers. (The single header with JSON was introduced in Orbeon Forms 2016.3.)
+2. If using [organization-based permissions](organization.md) you'll need to use the single header with JSON, as this is the only way to pass organization-related information to Orbeon Forms.
+3. Otherwise, you can whichever technique is more convenient for you, and in most cases using individial headers might be simpler.
+
+#### Enable header-driven method
+
+Whether using individual headers or a single header with JSON, in all cases you need to enable header-based permissions with the following property in your `properties-local.xml`:
 
 ```xml
 <property
@@ -92,7 +105,9 @@ Set the following property in your `properties-local.xml`:
     value="header"/>
 ```
 
-#### 2. Header names
+#### If using individual headers
+
+##### Header names
 
 Tell Orbeon Forms the name of the HTTP headers that contain the username, group, and roles for the current user.
 
@@ -132,7 +147,7 @@ In addition or alternatively, multiple role headers can be provided, and each of
     value="(\s*[,\|]\s*)+"/>
 ```
 
-#### 3. Forwarding headers (Orbeon Forms 4.6 and earlier)
+##### Forwarding headers (Orbeon Forms 4.6 and earlier)
 
 *NOTE: This step is not necessary for Orbeon Forms 4.7 and newer.*
 
@@ -145,7 +160,7 @@ When using header-based authentication, in addition to defining the name of the 
     value="My-Username-Header My-Group-Header My-Roles-Header"/>
 ```
 
-#### 4. LDAP-style header syntax (Optional)
+##### LDAP-style header syntax (Optional)
 
 The value of the header is a list of roles separated by spaces, commas, or pipes (`|`). Furthermore, they can optionally be composed of properties in the form of `name=value`, where `name` is specified by a configuration property, and `value` is the value of the role. This is typically useful the value if the header follows an LDAP-style syntax, for instance:
 
@@ -161,6 +176,56 @@ If your header follows a LDAP-style syntax, set the following property to config
     name="oxf.fr.authentication.header.roles.property-name"
     value="cn"/>
 ```
+
+#### If using a single header with JSON
+
+Tell Orbeon Forms the name of the HTTP header that contain the user's information in JSON format:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.authentication.header.credentials"
+    value="My-Credentials-Header"/>
+```
+
+The value of the header must be valid JSON, and follow the format described below. An example 
+
+```json
+{
+  "username": "linda@company.com",
+  "groups": [ "employee" ],
+  "roles": [
+    {
+      "name": "Power User"
+    },
+    {
+      "name": "Full-time"
+    },
+    {
+      "name": "Manager",
+      "organization": "iOS"
+    },
+    {
+      "name": "Scrum master",
+      "organization": "Engineering"
+    }
+  ],
+  "organizations": [
+    [
+      "Acme",
+      "Engineering",
+      "iOS"
+    ],
+    [
+      "Acme",
+      "Support"
+    ]
+  ]
+}
+```
+
+- `username` is mandatory.
+- `groups` is optional, and if present it value must be an array with one string, representing the user's group.
 
 ## Accessing username, group and roles in Orbeon Forms
 
