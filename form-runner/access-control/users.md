@@ -4,6 +4,8 @@
 
 ## Providing information about the user
 
+### Why Orbeon Forms might need user's information?
+
 Form Runner can use information about the user to control whether that user can access:
 
 - Form Builder to edit forms – for more on this, see [access control for editing forms](editing-forms.md);
