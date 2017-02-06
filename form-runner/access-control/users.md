@@ -14,7 +14,7 @@ Form Runner can obtain this information either by:
 - Calling a standard servlet API implemented by your application server, referred to as _container-driven method_.
 - Using HTTP headers set by a reverse proxy or a servlet filter, referred to as _header-driver method_.
 
-## Container-driven or header-driven, which to choose?
+### Container-driven or header-driven, which to choose?
 
 1. Are you using the Liferay proxy portlet? In this case, you'll be using the header-driven method, since the Orbeon Forms Liferay proxy portlet [uses headers to pass information about the user to Form Runner](../link-embed/liferay-proxy-portlet.md#configuring-form-runner-to-use-liferay-user-information).
 2. Otherwise, are your permissions dependent on more than users being authenticated and on their roles? In this case you need to use header-based permissions. This would for instance be the case if:
