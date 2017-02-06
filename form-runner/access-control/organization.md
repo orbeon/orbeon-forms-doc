@@ -1,5 +1,27 @@
 # Organization-based permissions
 
+## Rationale
+
+Let's consider that your company has the following hierarchical organizational structure. We refer to each box in this diagram as an *organizations*, e.g the *Engineering organization*.
+
+![Organization hierarchy](../images/organization-hierarchy.png)
+
+### A role can be tied to an organization
+
+With organization-based permissions. Users can have roles that are not just *global*, but tied to an organization. For instance, consider that a form author defines that for a given form, users with the role `admin` can read, update, and delete any form data. You might have admins who should get this permission company-wide. But you might also want to restict that permissions to form data created by users in certain parts of the company; for instance, a given user might be "admin for the Engineering department", and she should only have the aformentioned permissions on form data created by users who are either directly in the Engineering organization, or any of its children organizations. This is particularly relevant for roles that inherently tied to an organization, like "manager", where you're likely to want to say that the permissions you grant to a manager are limited to the data created by the people they manage.
+
+### Permissions apply to sub-organizations
+
+As alluded to in the previous section, if the form author grants permissions for a given role, and that a user has this role for a given organization, then the user is granted those permissions on data created by users in that organization, as well as users in all its sub-organizations.
+
+Say you have an "expense report" form, and that the form author granted the right to managers to access data created with that form. Say, Tom, in the iOS organization creates an expense report. Then, his manager, Mary will be able to access it, and so will John, the VP of engineering, defined in the system as manager of the "Engineering" organization, and so will Carla, the CEO, defined in the system as manager of Acme, which sits at the root of the organizational structure.
+
+![Transitive permissions](../images/organization-transitive.png)
+
+### Users are member of zero-or-more organizations
+
+
+
 ## How Orbeon Forms knows about organizations
 
 ### With the Liferay proxy portlet
