@@ -1,16 +1,14 @@
 # Organization-based permissions
 
-## Rationale
-
 Let's consider that your company has the following hierarchical organizational structure. We refer to each box in this diagram as an *organizations*, e.g the *Engineering organization*.
 
 ![Organization hierarchy](../images/organization-hierarchy.png)
 
-### A role can be tied to an organization
+## Roles can be tied to organizations
 
 With organization-based permissions. Users can have roles that are not just *global*, but tied to an organization. For instance, consider that a form author defines that for a given form, users with the role `admin` can read, update, and delete any form data. You might have admins who should get this permission company-wide. But you might also want to restict that permissions to form data created by users in certain parts of the company; for instance, a given user might be "admin for the Engineering department", and she should only have the aformentioned permissions on form data created by users who are either directly in the Engineering organization, or any of its children organizations. This is particularly relevant for roles that inherently tied to an organization, like "manager", where you're likely to want to say that the permissions you grant to a manager are limited to the data created by the people they manage.
 
-### Permissions apply to sub-organizations
+## Permissions apply to sub-organizations
 
 As alluded to in the previous section, if the form author grants permissions for a given role, and that a user has this role for a given organization, then the user is granted those permissions on data created by users in that organization, as well as users in all its sub-organizations.
 
@@ -18,11 +16,16 @@ Say you have an "expense report" form, and that the form author granted the righ
 
 ![Transitive permissions](../images/organization-transitive.png)
 
-### Users are member of zero-or-more organizations
+## Information about users
+
+To be able to apply permissions defined by form authors, Orbeon Forms needs to know, for each user:
+
+- What organizations this user is a member of. Orbeon Forms supports users being a member of zero, one, or more organizations. For instance, Linda could be a member of the "iOS" and "Support" organizations.
+- What organization roles a user has. Here again, a user can have zero, one, or more organization roles. Also, those roles don't need to be tied to the organizations the user is a member of. For instance, a user in the "IT" organization could have the role `admin` for the "HR" organization.
+
+## How information about users is passed to Orbeon Forms
 
 
-
-## How Orbeon Forms knows about organizations
 
 ### With the Liferay proxy portlet
 
