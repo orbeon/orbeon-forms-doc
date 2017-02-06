@@ -190,7 +190,7 @@ As of 2016-04-19 this page is still being updated.
 
 ### Embedding
 
-- Server side Embedding: [doc](form-runner/link-embed/java-api.md), [blog post](http://blog.orbeon.com/2014/09/embedding-support-in-orbeon-forms-47.html)
+- Server side Embedding: [doc](form-runner/link-embed/java-api.md), [blog post](http://blog.orbeon.com/2014/09/embedding-support-in-orbeon-forms-47.html), [Form Builder embedding blog post](http://blog.orbeon.com/2017/02/form-builder-embedding.html)
 - Liferay proxy portlet: [doc](form-runner/link-embed/liferay-proxy-portlet.md)
 - Liferay full portlet: [doc](form-runner/link-embed/liferay-full-portlet.md)
 

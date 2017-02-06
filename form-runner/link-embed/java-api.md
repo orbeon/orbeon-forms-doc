@@ -234,3 +234,7 @@ The embedding implementation:
 - the `send` action within a process does not support `replace="all"`
 - embedding multiple forms is known to work in some cases, but has known issues so we don't recommend doing this (see [#1854](https://github.com/orbeon/orbeon-forms/issues/1854))
 - `oxf.xforms.combine-resources` must be set to `true`
+
+## See also 
+
+- Blog post: [Form Builder embedding](http://blog.orbeon.com/2017/02/form-builder-embedding.html)
