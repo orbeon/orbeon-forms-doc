@@ -25,7 +25,7 @@ To be able to apply permissions defined by form authors, Orbeon Forms needs to k
 
 ## How information about users is passed to Orbeon Forms
 
-
+How does Orbeon Forms know what organizations a user is a member of, and what organization roles that user has? This information is passed to Orbeon Forms in JSON format through an HTTP header.
 
 ### With the Liferay proxy portlet
 
