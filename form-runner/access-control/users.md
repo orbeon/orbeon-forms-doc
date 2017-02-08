@@ -192,7 +192,7 @@ The value of the header must be valid JSON, and follow the format described belo
 
 ```json
 {
-  "username": "linda@company.com",
+  "username": "ljohnson",
   "groups": [ "employee" ],
   "roles": [
     {
@@ -225,7 +225,9 @@ The value of the header must be valid JSON, and follow the format described belo
 ```
 
 - `username` is mandatory.
-- `groups` is optional, and if present it value must be an array with one string, representing the user's group.
+- `groups` is optional. If present, its value must be an array with one string, representing the user's group. (An array is used here as we can envision futures version of Orbeon Forms supporting users being part of more than one group.)
+- `roles` is optional. If present, its value must be an array of *roles*. Each *role* is an object with a mandatory `name` attribute, and an optional `organization` attribute. When the later is present, it ties the role to the specified organization, for instance: "Linda is the manager of the iOS organization". For more on the latter, see [Organization-based permissions](organization.md).
+- `organizations` is optional. If present, its value must be an array. Each element of the array must in turn be an array, in which the last element is the organization the user is a member of, and preceding elements list where that organization is in the organization hierarchy. For instance, `["Acme", "Engineering", "iOS"]` signifies that the user is a member of the "iOS" organization, and that, in the organization hierarchy, "iOS" is a child organization of "Engineering", and "Engineering" is a child organization of "Acme".
 
 ## Accessing username, group and roles in Orbeon Forms
 
