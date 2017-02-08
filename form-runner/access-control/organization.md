@@ -48,3 +48,17 @@ For Liferay's user information to be passed to Orbeon Forms, you need to:
 ### With other systems
 
 If your information about users and organizations is stored in a system other than Liferay, it is then up to you to produce the JSON and pass it to Orbeon Forms through a header. For more about the JSON format expected by Form Runner, and how to tell Form Runner the name of the header you are using, see the section about [using a single header with JSON](users.md#if-using-a-single-header-with-json).
+
+## Constraints
+
+When a user fills out a form, when data for that form is saved, Form Runner also stores, along with the data, information about the user. This includes the username, but also the organizations the user is a member of, and the ancestors of those organizations. For instance, say Linda saves data, and the name of the organizations she is a member of, the `Support` and `iOS` organizations, along with their ancestors in the organizational structure, are stored in the database:
+
+![Owner information stored with the form data](../images/organization-constraints.png)
+
+If the form definition grants access to managers, and a user is a "manager of Engineering", because of the information available and the way it is stored, Form Runner can efficiently determine what data the user has access to, and in this example the manager should is granted access to Linda's data.
+
+The way organizations are used and  stored has the following consequences:
+
+- If an organization name changes, for instance `Support` is renamed `Customer satisfaction`, then data in the database needs to be changed.
+- If the organization structure changes, say `Support` isn't under `Engineering` but under `Operations`, then information in the database needs to be changed.
+- Form Runner captures the user's organizations at the time she creates the data. Should that user switch to another organization, existing data will still be tied to her previous organizations. Another way to look at it is that, by default, data stays with the organizations where it was created, irrelevant of where the user who created that data moves. This may or may not be what you want, depending on the scenario. For instance, say a user in organization A submits an expense report, and shortly after that moves to organization B. By default, it will still be the manager in organization A who will be in charge of approving that expense report. If instead you want to data to move along with the user, it is up to you to change the organization associated with the data for that user in the database.
