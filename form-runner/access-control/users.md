@@ -192,35 +192,18 @@ The value of the header must be valid JSON, and follow the format described belo
 
 ```json
 {
-  "username": "ljohnson",
-  "groups": [ "employee" ],
-  "roles": [
-    {
-      "name": "Power User"
-    },
-    {
-      "name": "Full-time"
-    },
-    {
-      "name": "Manager",
-      "organization": "iOS"
-    },
-    {
-      "name": "Scrum master",
-      "organization": "Engineering"
-    }
-  ],
-  "organizations": [
-    [
-      "Acme",
-      "Engineering",
-      "iOS"
-    ],
-    [
-      "Acme",
-      "Support"
-    ]
-  ]
+  "username"      : "ljohnson",
+  "groups"        : [ "employee" ],
+  "roles"         : [
+                      { "name": "Power User"                                  },
+                      { "name": "Full-time"                                   },
+                      { "name": "Manager",      "organization": "iOS"         },
+                      { "name": "Scrum master", "organization": "Engineering" }
+                    ],
+  "organizations" : [
+                      [ "Acme", "Engineering", "iOS" ],
+                      [ "Acme", "Support"            ]
+                    ]
 }
 ```
 
