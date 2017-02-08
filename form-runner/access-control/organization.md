@@ -1,10 +1,12 @@
 # Organization-based permissions
 
+<!-- toc -->
+
+## Roles can be tied to organizations
+
 Let's consider that your company has the following hierarchical organizational structure. We refer to each box in this diagram as an *organization*, e.g the *Engineering organization*.
 
 ![Organization hierarchy](../images/organization-hierarchy.png)
-
-## Roles can be tied to organizations
 
 With organization-based permissions. Users can have roles that are not just *global*, but *tied to an organization*. For instance, consider that a form author defines that for a given form, users with the role `admin` can read, update, and delete any form data. You might have admins who should get this permission company-wide. But you might also want to restict that permissions to form data created by users in certain parts of the company; for instance, a given user might be "admin for the Engineering organization", and she should only have the aformentioned permissions on form data created by users who are either directly in the Engineering organization, or any of its children organizations. This is particularly relevant for roles that are inherently tied to an organization, like "manager", where you're likely to want to say that the permissions you grant to a manager are limited to the data created by the people they manage.
 
