@@ -43,3 +43,6 @@ For Liferay's user information to be passed to Orbeon Forms, you need to:
 </property>
 ```
     
+### With other systems
+
+If your information about users and organizations is stored in a system other than Liferay, it is then up to you to produce the JSON and pass it to Orbeon Forms through a header. For more about the JSON format expected by Form Runner, and how to tell Form Runner the name of the header you are using, see the section about [using a single header with JSON](users.md#if-using-a-single-header-with-json).
