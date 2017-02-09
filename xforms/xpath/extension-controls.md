@@ -146,6 +146,18 @@ The `xxf:index()` function behaves like the standard XForms `index()` function, 
 </xf:repeat>
 ```
 
+## xxf:is-control-readonly()
+
+[SINCE Orbeon Forms 2017.1]
+
+```xpath
+xxf:is-control-readonly(
+    $control-id as xs:string
+) as xs:boolean
+```
+
+The `xxf:is-control-readonly()` function returns `true()` if and only if the controlled specified by `$control-id` exists, is relevant, and is readonly.
+
 ## xxf:is-control-relevant()
 
 [SINCE Orbeon Forms 2016.3]
@@ -157,6 +169,30 @@ xxf:is-control-relevant(
 ```
 
 The `xxf:is-control-relevant()` function returns `true()` if and only if the controlled specified by `$control-id` exists and is relevant.
+
+## xxf:is-control-required()
+
+[SINCE Orbeon Forms 2017.1]
+
+```xpath
+xxf:is-control-required(
+    $control-id as xs:string
+) as xs:boolean
+```
+
+The `xxf:is-control-required()` function returns `true()` if and only if the controlled specified by `$control-id` exists, is relevant, and is required.
+
+## xxf:is-control-valid()
+
+[SINCE Orbeon Forms 2017.1]
+
+```xpath
+xxf:is-control-valid(
+    $control-id as xs:string
+) as xs:boolean
+```
+
+The `xxf:is-control-valid()` function returns `true()` if and only if the controlled specified by `$control-id` exists, is relevant, and is valid.
 
 ## xxf:itemset()
 
