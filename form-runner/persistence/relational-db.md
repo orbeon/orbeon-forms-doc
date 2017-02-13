@@ -37,21 +37,21 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 | 4.4                      | 4.4                            | [oracle-4_4.sql]           | [oracle-4_3-to-4_4.sql]             |
 | 4.3                      | 4.3                            | [oracle-4_3.sql]           | -                                   |
 
-[oracle-2016_3-to-2017_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_3-to-2017_1.sql
-[oracle-2017_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2017_1.sql
-[oracle-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_2-to-2016_3.sql
-[oracle-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_3.sql
-[oracle-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_2.sql
-[oracle-4_10-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_10-to-2016_2.sql
-[oracle-4_10.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_10.sql
-[oracle-4_6-to-4_10.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_6-to-4_10.sql
-[oracle-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_6.sql
-[oracle-4_5-to-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5-to-4_6.sql
-[oracle-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5.sql
-[oracle-4_4-to-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4-to-4_5.sql
-[oracle-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4.sql
-[oracle-4_3-to-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3-to-4_4.sql
-[oracle-4_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3.sql
+[oracle-2016_3-to-2017_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_3-to-2017_1.sql
+[oracle-2017_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2017_1.sql
+[oracle-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_2-to-2016_3.sql
+[oracle-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_3.sql
+[oracle-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_2.sql
+[oracle-4_10-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_10-to-2016_2.sql
+[oracle-4_10.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_10.sql
+[oracle-4_6-to-4_10.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_6-to-4_10.sql
+[oracle-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_6.sql
+[oracle-4_5-to-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5-to-4_6.sql
+[oracle-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5.sql
+[oracle-4_4-to-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4-to-4_5.sql
+[oracle-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4.sql
+[oracle-4_3-to-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3-to-4_4.sql
+[oracle-4_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3.sql
 
 #### Oracle binary XML storage
 
@@ -80,7 +80,7 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
     mysql> CREATE schema orbeon;
     ```
 3. If needed, grant permissions, for example:
-   
+
    ```sql
    mysql> GRANT ALL PRIVILEGES ON *.* TO 'orbeon'@'localhost' WITH GRANT OPTION;
    ```
@@ -95,17 +95,17 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 | 4.4                      | 4.4                            | [mysql-4_4.sql]            | [mysql-4_3-to-4_4.sql]              |
 | 4.3                      | 4.3                            | [mysql-4_3.sql]            | -                                   |
 
-[mysql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_2-to-2016_3.sql
-[mysql-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_3.sql
-[mysql-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_2.sql
-[mysql-4_6-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_6-to-2016_2.sql
-[mysql-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_6.sql
-[mysql-4_5-to-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_5-to-4_6.sql
-[mysql-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_5.sql
-[mysql-4_4-to-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_4-to-4_5.sql
-[mysql-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_4.sql
-[mysql-4_3-to-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql
-[mysql-4_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_3.sql
+[mysql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_2-to-2016_3.sql
+[mysql-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_3.sql
+[mysql-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_2.sql
+[mysql-4_6-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_6-to-2016_2.sql
+[mysql-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_6.sql
+[mysql-4_5-to-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_5-to-4_6.sql
+[mysql-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_5.sql
+[mysql-4_4-to-4_5.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_4-to-4_5.sql
+[mysql-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_4.sql
+[mysql-4_3-to-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql
+[mysql-4_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_3.sql
 
 ### SQL Server database setup
 
@@ -121,11 +121,11 @@ Run the following DDL to create or update your Orbeon database, and note that if
 | 2016.2                   | 2016.2                         | [sqlserver-2016_2.sql]     | [sqlserver-4_6-to-2016_2.sql]       |
 | 4.6 to 4.16, 2016.2      | 4.6                            | [sqlserver-4_6.sql]        | -                                   |
 
-[sqlserver-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_2-to-2016_3.sql
-[sqlserver-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_3.sql
-[sqlserver-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_2.sql
-[sqlserver-4_6-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-4_6-to-2016_2.sql
-[sqlserver-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-4_6.sql
+[sqlserver-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_2-to-2016_3.sql
+[sqlserver-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_3.sql
+[sqlserver-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_2.sql
+[sqlserver-4_6-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-4_6-to-2016_2.sql
+[sqlserver-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-4_6.sql
 
 ### PostgreSQL database setup
 
@@ -139,11 +139,11 @@ Run the following DDL to create or update your Orbeon database, and note that if
 | 2016.2                   | 2016.2                         | [postgresql-2016_2.sql]    | [postgresql-4_8-to-2016_2.sql]      |
 | 4.8 to 4.16, 2016.2      | 4.8                            | [postgresql-4_8.sql]       | -                                   |
 
-[postgresql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_2-to-2016_3.sql
-[postgresql-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_3.sql
-[postgresql-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_2.sql
-[postgresql-4_8-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-4_8-to-2016_2.sql
-[postgresql-4_8.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-4_8.sql
+[postgresql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_2-to-2016_3.sql
+[postgresql-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_3.sql
+[postgresql-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_2.sql
+[postgresql-4_8-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-4_8-to-2016_2.sql
+[postgresql-4_8.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-4_8.sql
 
 ### DB2 database setup
 
@@ -160,15 +160,15 @@ Run the following DDL to create or update your Orbeon database, and note that if
 | 4.4                      | 4.4                            | [db2-4_4.sql]              | [db2-4_3-to-4_4.sql]                |
 | 4.3                      | 4.3                            | [db2-4_3.sql]              | -                                   |
 
-[db2-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_2-to-2016_3.sql
-[db2-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_3.sql
-[db2-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_2.sql
-[db2-4_6-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_6-to-2016_2.sql
-[db2-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_6.sql
-[db2-4_4-to-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_4-to-4_6.sql
-[db2-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_4.sql
-[db2-4_3-to-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_3-to-4_4.sql
-[db2-4_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql
+[db2-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_2-to-2016_3.sql
+[db2-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_3.sql
+[db2-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_2.sql
+[db2-4_6-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_6-to-2016_2.sql
+[db2-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_6.sql
+[db2-4_4-to-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_4-to-4_6.sql
+[db2-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_4.sql
+[db2-4_3-to-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_3-to-4_4.sql
+[db2-4_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-4_3.sql
 
 ## Application server setup
 
@@ -187,27 +187,27 @@ Here is a typical example:
 <Resource
     name="jdbc/mysql"
     driverClassName="com.mysql.jdbc.Driver"
- 
+
     auth="Container"
     type="javax.sql.DataSource"
- 
+
     initialSize="3"
     maxActive="10"
     maxIdle="10"
     maxWait="30000"
- 
+
     poolPreparedStatements="true"
- 
+
     testOnBorrow="true"
     validationQuery="select 1"
-    
+
     username="orbeon"
     password="orbeon"
     url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
 ```
 
 See also the following external links:
- 
+
 - Tomcat documentation: [The Tomcat JDBC Connection Pool](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)
 - Apache Commons documentation: [BasicDataSource Configuration Parameters](http://commons.apache.org/proper/commons-dbcp/configuration.html)
 - Blog post: [Configuring jdbc-pool for high-concurrency](http://www.tomcatexpert.com/blog/2010/04/01/configuring-jdbc-pool-high-concurrency)
@@ -234,20 +234,20 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
 <Resource
     name="jdbc/oracle"
     driverClassName="oracle.jdbc.OracleDriver"
-    
+
     auth="Container"
     type="javax.sql.DataSource"
-    
+
     initialSize="3"
     maxActive="10"
     maxIdle="10"
     maxWait="30000"
-    
+
     poolPreparedStatements="true"
 
     testOnBorrow="true"
     validationQuery="select * from dual"
-    
+
     username="orbeon"
     password="orbeon"
     url="jdbc:oracle:thin:@//localhost:1521/globaldb"/>
@@ -295,20 +295,20 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
     <Resource
         name="jdbc/mysql"
         driverClassName="com.mysql.jdbc.Driver"
-     
+
         auth="Container"
         type="javax.sql.DataSource"
-     
+
         initialSize="3"
         maxActive="10"
         maxIdle="10"
         maxWait="30000"
-     
+
         poolPreparedStatements="true"
-     
+
         testOnBorrow="true"
         validationQuery="select 1"
-        
+
         username="orbeon"
         password="orbeon"
         url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
@@ -326,20 +326,20 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
     <Resource
         name="jdbc/sqlserver"
         driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-  
+
         auth="Container"
         type="javax.sql.DataSource"
-     
+
         initialSize="3"
         maxActive="10"
         maxIdle="10"
         maxWait="30000"
-        
+
         poolPreparedStatements="true"
-     
+
         validationQuery="select 1"
         testOnBorrow="true"
-     
+
         username="orbeon"
         password="orbeon"
         url="jdbc:sqlserver://server"/>
@@ -357,20 +357,20 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
     <Resource
         name="jdbc/postgresql"
         driverClassName="org.postgresql.Driver"
-     
+
         auth="Container"
         type="javax.sql.DataSource"
-     
+
         initialSize="3"
         maxActive="10"
         maxIdle="10"
         maxWait="30000"
-     
+
         poolPreparedStatements="true"
-        
+
         validationQuery="select 1"
         testOnBorrow="true"
-        
+
         username="orbeon"
         password="orbeon"
         url="jdbc:postgresql://server:5432/database?useUnicode=true&amp;characterEncoding=UTF8&amp;socketTimeout=30&amp;tcpKeepAlive=true"/>
@@ -394,20 +394,20 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
     <Resource
         name="jdbc/db2"
         driverClassName="com.ibm.db2.jcc.DB2Driver"
-     
+
         auth="Container"
         type="javax.sql.DataSource"
-     
+
         initialSize="3"
         maxActive="10"
         maxIdle="10"
         maxWait="30000"
-        
+
         poolPreparedStatements="true"
-     
+
         validationQuery="select 1 from sysibm.sysdummy1"
         testOnBorrow="true"
-     
+
         username="db2inst1"
         password="password"
         url="jdbc:db2://localhost:50000/sample"/>
@@ -524,7 +524,7 @@ Note however that, Orbeon Forms at this point doesn't provide a user interface f
 
 In order to remove data, see [Purging Old Data](purging-old-data.md).
 
-## See also 
+## See also
 
 - [Purging Old Data](purging-old-data.md)
 - [Relational Database Logging](../../configuration/troubleshooting/database-logging.md)
