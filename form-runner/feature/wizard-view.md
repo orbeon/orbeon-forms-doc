@@ -1,4 +1,4 @@
-# Wizard View
+# Wizard view
 
 <!-- toc -->
 
@@ -60,7 +60,7 @@ When using the free mode, you can freely:
 
 ### Validated mode
 
-### Lax validated mode
+#### Lax validated mode
 
 [SINCE Orbeon Forms 4.9]
 
