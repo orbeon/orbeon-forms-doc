@@ -92,7 +92,7 @@ In order to validate the number to have a specific number of decimal digits, the
 
 On iOS, when the control identifies that the value is a non-negative integer, it shows a numeric keypad:
 
-![iOS numeric keypad](images/xbl-number-numeric-keypad.png)
+<img alt="iOS numeric keypad" src="images/xbl-number-numeric-keypad.png" width="308">
 
 This is the case if:
 
@@ -101,7 +101,7 @@ This is the case if:
 
 Otherwise, the control shows the numeric pane of the regular keyboard:
 
-![iOS numeric keypad](images/xbl-number-numeric-pane.png)
+<img alt="iOS numeric keypad" src="images/xbl-number-numeric-pane.png" width="308">
 
 ## Examples
 
@@ -109,7 +109,7 @@ Otherwise, the control shows the numeric pane of the regular keyboard:
 
 Here is an example with a suffix:
 
-![](images/xbl-number.png)
+<img alt="Number field with suffix" src="images/xbl-number.png" width="185">
 
 ```xml
 <fr:number ref="my-number" suffix="m/s">
