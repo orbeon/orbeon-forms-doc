@@ -21,8 +21,9 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 
     ```sql
     > sqlplus sys/password as sysdba
-    SQL> create user orbeon identified by password ;
-    SQL> grant all privileges to orbeon ;
+    SQL> CREATE USER ORBEON IDENTIFIED BY password ;
+    SQL> GRANT ALL PRIVILEGES TO orbeon ;
+    SQL> GRANT UNLIMITED TABLESPACE TO orbeon ;
     ```
 3. Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
 
