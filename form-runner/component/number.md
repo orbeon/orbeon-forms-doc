@@ -6,7 +6,7 @@
 
 The number component is designed to enter integer or decimal numbers. See [Currency](../../form-runner/component/currency.md) for a similar component designed to enter currency amounts.
 
-![](images/xbl-number.png)
+<img alt="Number field with unit" src="images/xbl-number.png" width="185">
 
 ## Basic usage
 
