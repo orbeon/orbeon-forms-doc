@@ -14,11 +14,11 @@ You can restrict which users can access which forms, and what operations they ca
 
 By default, no restriction is imposed on _who_ can do _what_ with forms you create in Form Builder. You enable permissions by going to the Form Builder sidebar, and under _Advanced_, clicking on _Set Permissions_.
 
-![](../../form-builder/images/advanced-menu.png)
+<img src="../../form-builder/images/advanced-menu.png" width="189">
 
 This shows the following dialog:
 
-![](../../form-builder/images/permissions-enable.png)
+<img src="../../form-builder/images/permissions-enable.png" width="452">
 
 After you click on the checkbox, you'll be able to set access restrictions on the _create_, _read, update_, and _delete_ operations.
 
@@ -34,7 +34,7 @@ In the example below:
 - Users with the role _clerk_ can read any form data.
 - Users with the role _admin_ can do any operation, including deleting form data.
 
-![The Permissions dialog](../../form-builder/images/permissions-dialog.png)
+<img alt="The Permissions dialog" src="../../form-builder/images/permissions-dialog.png" width="502">
 
 ### Role types
 
