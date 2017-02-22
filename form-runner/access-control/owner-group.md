@@ -12,7 +12,7 @@ Owner-based and group-based permissions are useful when you want users to only s
 
 To use this feature for a form, in Form Builder, when editing a form, open the *Permissions* dialog, and check boxes on the *Owner* and *Group member* lines as appropriate for your situation.
 
-![The Permissions dialog](../../form-builder/images/permissions-dialog.png)
+<img alt="The Permissions dialog" src="../../form-builder/images/permissions-dialog.png" width="502">
 
 ## Configuration
 
