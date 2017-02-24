@@ -69,6 +69,24 @@ The `xxforms-valid` event is dispatched to an instance after validation if it is
 
 The `xxforms-invalid` event is dispatched to an instance after validation if it is invalid.  
 
+## Model events
+
+### xxforms-instances-ready
+
+[SINCE Orbeon Forms 2017.1]
+
+- __Dispatched in response to:__ model initialization
+- __Target:__ `<xf:model>` element  
+- __Bubbles:__ Yes  
+- __Cancelable:__ No
+- __Context Info:__ None
+
+The `xxforms-instances-ready` event is dispatched to a model upon model initialization, after all model instances are
+loaded but before the initial rebuild, recalculate and revalidate. Therefore this event takes place after a model's
+`xforms-model-construct` but before a model's `xforms-model-construct-done`.
+
+This event should rarely be needed.
+
 ## Dialog control events
 
 ### xxforms-dialog-open
