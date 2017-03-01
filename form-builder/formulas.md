@@ -28,16 +28,20 @@ In the Control Details dialog, XPath expressions are used to specify the followi
 
 ![Formulas](images/control-settings-formulas.png)
 
-* **Visibility:** Boolean expression specifying whether the control is visible.
-    * If this field is left blank, then the control is always visible, unless the section is not visible.
-    * Otherwise, it is visible only if the result of the Boolean expression is `true()`.
-* **Read-Only:** Boolean expression specifying whether the control is read-only (not editable).
-    * If this field is left blank, then the control is editable unless the section is read-only.
-    * Otherwise, the field is editable only if the result of the Boolean expression is `false()`.
-* **Initial value:** string expression returning the initial value of the control when the form first shows.
-    * Default: the value set into the field at design time (usually a blank value).
-* **Calculated Value:** string expression specifying a calculated value of the control which updates while the form user interacts with the form.
-    * Default: the default value of the control, or the value entered by the form user.
+- **Visibility:** 
+    - Boolean expression specifying whether the control is visible.
+    - If this field is left blank, then the control is always visible, unless the section is not visible.
+    - Otherwise, it is visible only if the result of the boolean expression is `true()`.
+- **Read-Only:** 
+    - Boolean expression specifying whether the control is read-only (not editable).
+    - If this field is left blank, then the control is editable unless the section is read-only.
+    - Otherwise, the field is editable only if the result of the Boolean expression is `false()`.
+- **Initial value:** 
+    - String expression returning the initial value of the control when the form first shows. This is only applied in `new` mode.
+    - Default: the value set into the field at design time (usually a blank value).
+- **Calculated Value:** 
+    - String expression specifying a calculated value of the control which updates while the form user interacts with the form.
+    - Default: the default value of the control, or the value entered by the form user.
 
 ### Section/Grid Settings dialog
 
