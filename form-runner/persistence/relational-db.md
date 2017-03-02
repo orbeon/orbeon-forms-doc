@@ -420,19 +420,11 @@ What follows applies to Orbeon Forms 4.0 and newer. For Orbeon Forms 3.9, see th
 
 ### With a single schema
 
-In your `properties-local.xml`:
+In your `properties-local.xml`, you map an app / form / form type to the implementation of the persistence API you're using with the `oxf.fr.persistence.provider.*.*.*` [wildcard property](../../configuration/properties/README.md). For instance, if using Oracle, set the property to:
 
-1. Map an app, form, form type to the Oracle or MySQL persistence layer using the `oxf.fr.persistence.provider.*.*.*` [wildcard property](../../configuration/properties/README.md), For instance, the following indicates that all the form definition and form data in the `acme` "app" are stored using the Oracle provider, use:
-
-    ```xml
-    <property as="xs:string" name="oxf.fr.persistence.provider.acme.*.*" value="oracle"/>
-    ```
-
-2. Set the value of the property `oxf.fr.persistence.oracle.datasource` for Oracle or `oxf.fr.persistence.mysql.datasource` for MySQL to match the name of the resource you setup in `server.xml`. For instance, if in `server.xml` the resource name is `jdbc/oracle`, then the property should be set to just `oracle`, as in:
-
-    ```xml
-    <property as="xs:string" name="oxf.fr.persistence.oracle.datasource" value="oracle"/>
-    ```
+```xml
+<property as="xs:string" name="oxf.fr.persistence.provider.acme.*.*" value="oracle"/>
+```
 
 ### With multiple schemas
 
