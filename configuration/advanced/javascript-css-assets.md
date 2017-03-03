@@ -91,6 +91,8 @@ Some CSS and JavaScript files are never included into aggregated resources:
 
 ### Configuration
 
+#### Basic configuration
+
 You enable this feature in `properties-local.xml` as follows:
 
 ```xml
@@ -108,6 +110,87 @@ Default:
 * `dev` mode: `false`
 
 Mappings between resources URLs and the resources are stored in the `xforms.resources` cache, configured in [`RESOURCES/config/ehcache.xml][1]`.
+
+#### Baseline of XForms assets
+
+[SINCE Orbeon Forms 2017.1]
+
+The default baseline of XForms assets is configured with the `oxf.xforms.assets.baseline` property. Here is an example:
+
+```xml
+<property as="xs:string"  name="oxf.xforms.assets.baseline">
+    {
+      "css": [
+        { "full": "/ops/yui/container/assets/skins/sam/container.css",                   "min": false },
+        { "full": "/ops/yui/progressbar/assets/skins/sam/progressbar.css",               "min": false },
+
+        { "full": "/ops/yui/calendar/assets/skins/sam/calendar.css",                     "min": false },
+
+        { "full": "/apps/fr/style/bootstrap/css/bootstrap.css",                          "min": true  },
+        { "full": "/apps/fr/style/form-runner-bootstrap-override.css",                   "min": false },
+        { "full": "/config/theme/xforms.css",                                            "min": false },
+        { "full": "/config/theme/error.css",                                             "min": false },
+        { "full": "/ops/nprogress-0.2.0/nprogress.css",                                  "min": false }
+      ],
+
+      "js": [
+        { "full": "/ops/jquery/jquery-1.12.0.js",                                        "min": true  },
+        { "full": "/ops/jquery/jquery-browser-mobile.js",                                "min": true  },
+        { "full": "/apps/fr/style/bootstrap/js/bootstrap.js",                            "min": true  },
+        { "full": "/ops/javascript/orbeon/util/jquery-orbeon.js",                        "min": true  },
+        { "full": "/ops/javascript/autosize/autosize.js",                                "min": true  },
+        { "full": "/ops/nprogress-0.2.0/nprogress.js",                                   "min": true  },
+
+        { "full": "/ops/yui/yahoo/yahoo.js",                                             "min": true  },
+        { "full": "/ops/yui/event/event.js",                                             "min": true  },
+        { "full": "/ops/yui/dom/dom.js",                                                 "min": true  },
+        { "full": "/ops/yui/connection/connection.js",                                   "min": true  },
+        { "full": "/ops/yui/element/element.js",                                         "min": true  },
+        { "full": "/ops/yui/animation/animation.js",                                     "min": true  },
+        { "full": "/ops/yui/progressbar/progressbar.js",                                 "min": true  },
+        { "full": "/ops/yui/dragdrop/dragdrop.js",                                       "min": true  },
+        { "full": "/ops/yui/container/container.js",                                     "min": true  },
+        { "full": "/ops/yui/examples/container/assets/containerariaplugin.js",           "min": true  },
+        { "full": "/ops/yui/calendar/calendar.js",                                       "min": true  },
+        { "full": "/ops/yui/slider/slider.js",                                           "min": true  },
+
+        { "full": "/ops/javascript/underscore/underscore.js",                            "min": true  },
+
+        { "full": "/ops/javascript/xforms.js",                                           "min": true  },
+        { "full": "/ops/javascript/orbeon/util/fQuery.js",                               "min": true  },
+        { "full": "/ops/javascript/orbeon/util/StringOps.js",                            "min": true  },
+        { "full": "/ops/javascript/orbeon/util/ExecutionQueue.js",                       "min": true  },
+        { "full": "/ops/javascript/orbeon/util/FiniteStateMachine.js",                   "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/server/Server.js",                      "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/server/AjaxServer.js",                  "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/server/AjaxServer/AjaxServerEvent.js",  "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/server/AjaxServer/nextAjaxResponse.js", "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/server/UploadServer.js",                "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/LoadingIndicator.js",                   "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/Document.js",                           "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/Form.js",                               "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/Page.js",                               "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/control/Control.js",                    "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/control/CalendarResources.js",          "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/control/Calendar.js",                   "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/control/Upload.js",                     "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/action/Message.js",                     "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/control/Placeholder.js",                "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/controls/Placement.js",                 "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/controls/Help.js",                      "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/controls/Hint.js",                      "min": true  },
+        { "full": "/ops/javascript/orbeon/xforms/controls/Textarea.js",                  "min": true  }
+      ]
+    }
+</property>
+```
+
+Minimal versions:
+ 
+- are enabled when `"min"` is set to `true` and
+- assume that an asset named `file.min.css` is the minimal version for `file.css`.
+
+#### Baseline of XBL components assets
 
 The baseline of resources is configured as follows:
 
@@ -144,7 +227,10 @@ This feature is enabled by default.
 The following property, if enabled, places external and inline JavaScript at the bottom of the page:
 
 ```xml
-<property as="xs:boolean" name="oxf.xforms.resources.javascript-at-bottom" value="true"/>
+<property
+    as="xs:boolean"
+    name="oxf.xforms.resources.javascript-at-bottom"
+    value="true"/>
 ```
 
 See Yahoo’s [Best Practices for Speeding Up Your Website][2]
@@ -318,6 +404,8 @@ In case you use Apache, you can in addition configure a rewriting rule with [mod
 _NOTE: We recommend restarting Orbeon Forms after changing the `oxf.resources.versioned` property, as data in Orbeon Forms caches may not be made aware of the change until the next restart._
 
 ## Examples of Apache configurations
+
+_WARNING: As of 2017-03-03, these configuration are likely out of date._
 
 Here is how you can configure Apache to serve Orbeon Forms resources. This assumes the following:
 
