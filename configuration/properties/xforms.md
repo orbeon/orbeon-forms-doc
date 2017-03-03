@@ -188,11 +188,12 @@ Note that for any optimized submission or inclusion to occur, the following is r
 
 ## JavaScript and CSS Resources
 
-The following properties are documented in a [separate page](http://wiki.orbeon.com/forms/doc/developer-guide/xforms-javascript-css-resources):
+The following properties are documented in [JavaScript and CSS assets](../advanced/javascript-css-assets.md):
 
 - `oxf.xforms.minimal-resources`
 - `oxf.xforms.combine-resources`
 - `oxf.xforms.resources.baseline`
+- `oxf.xforms.assets.baseline`
 - `oxf.xforms.cache-combined-resources`
 
 ## Noscript mode
