@@ -293,7 +293,7 @@ The Orbeon Forms version number is not exposed by default to users in the `prod`
 
 When this is set to `true`, the version number is HMAC-encoded with the configured password. This means the version number is stable, but cannot be guessed.
 
-#### Behavior
+### Behavior
 
 With versioned resources enabled, resources are served with URLs  as follows:
 
