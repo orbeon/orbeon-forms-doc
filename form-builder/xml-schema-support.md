@@ -2,7 +2,7 @@
 
 ## Availability
 
-This is an [Orbeon Forms PE](http://www.orbeon.com/pricing) feature.
+This is an [Orbeon Forms PE](http://www.orbeon.com/download) feature.
 
 ## Working with an XML Schema
 

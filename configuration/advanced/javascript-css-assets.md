@@ -237,13 +237,13 @@ See Yahoo’s [Best Practices for Speeding Up Your Website][2]
 
 ## Versioned asset resources
 
-### **Availability**
+### Availability
 
-This is an [Orbeon Forms PE][3] feature.
+This is an [Orbeon Forms PE](http://www.orbeon.com/download) feature.
 
 This feature is enabled by default in Orbeon Forms PE.  
 
-With the introduction of [run modes][4],  the feature is disabled by default in `dev` mode but enabled by default in `prod` mode.
+With the introduction of [run modes](run-modes.md),  the feature is disabled by default in `dev` mode but enabled by default in `prod` mode.
 
 ### Rationale
 
@@ -414,7 +414,7 @@ Here is how you can configure Apache to serve Orbeon Forms resources. This assum
 * `orbeon-resources-public.jar` unziped under `/home/orbeon/war/WEB-INF/orbeon-resources-public/`
 * `oxf.xforms.cache-combined-resources` set to `true` in `properties-local.xml`
 
-Without [resources versioning][7]:
+Without [resources versioning](#versioned-asset-resources):
 
 ```
 RewriteEngine on
@@ -431,7 +431,7 @@ RewriteRule ^/orbeon/((ops|config/theme|xbl/orbeon)/.*\.(gif|css|pdf|json|js|png
 RewriteRule ^/orbeon/(.*\.(gif|css|pdf|json|js|png|jpg|xsd|htc|ico|swf))$ /home/orbeon/war/WEB-INF/resources/$1 [L]
 ```
 
-With [resources versioning][7]:
+With [resources versioning](#versioned-asset-resources):
 
 ```
 RewriteEngine on
@@ -467,14 +467,6 @@ All in all, the rules above perform the following:
 * Marking all versioned resources with an expiration date in the far future
 
 
-[1]: https://github.com/orbeon/orbeon-forms/blob/master/src/resources/config/ehcache.xml
+[1]: https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/ehcache.xml
 [2]: http://developer.yahoo.com/performance/rules.html#js_bottom
-[3]: http://www.orbeon.com/support-services/professional
-[4]: http://wiki.orbeon.com/forms/system/errors/NodeNotFound?suri=wuid:gx:64e4734a281d402a
 [6]: http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html
-[7]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-javascript-css-resources#versioned-resources
-
-
-
-
-
