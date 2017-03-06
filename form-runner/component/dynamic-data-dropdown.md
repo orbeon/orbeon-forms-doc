@@ -65,4 +65,4 @@ You can of course use the `itemset-empty` attribute for other things. For instan
 
 [2]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-sandbox/services/zip-states.xpl
 [3]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-sandbox/services/zip-cities.xpl
-[4]: https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/databound-select1/databound-select1-unittest.xhtml
+[4]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/databound-select1/databound-select1-unittest.xhtml

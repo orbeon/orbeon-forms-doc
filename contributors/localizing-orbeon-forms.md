@@ -14,8 +14,7 @@ See also [Supported Languages](../form-runner/feature/localization.md#form-build
 ### Form Runner and Form Builder resources
 
 See these 2 files:
-
-- [Form Runner's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/i18n/resources.xml)
+- [Form Runner's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/i18n/resources.xml)
 - [Form Builder's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/form/resources.xml)
 
 Each file has as series of `<resource>` elements each with an `xml:lang`
@@ -77,23 +76,23 @@ support.
 
 Orbeon Forms XBL components are located as subdirectories here:;
 
-- https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon
+- https://github.com/orbeon/orbeon-forms/tree/master/form-runner/jvm/src/main/resources/xbl/orbeon
 
 Each subdirectory has a .xbl file with some metadata. For example:
 
-- [`us-phone.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/us-phone/us-phone.xbl)
+- [`us-phone.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/us-phone/us-phone.xbl)
 
 As of Orbeon Forms 2016.1, the following controls need help:
 
-- [character-counter.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/character-counter/character-counter.xbl)
-- [checkbox-input.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/checkbox-input/checkbox-input.xbl)
-- [dialog-select.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/dialog-select/dialog-select.xbl)
-- [dialog-select1.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/dialog-select1/dialog-select1.xbl)
-- [explanation.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/explanation/explanation.xbl)
+- [character-counter.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/character-counter/character-counter.xbl)
+- [checkbox-input.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/checkbox-input/checkbox-input.xbl)
+- [dialog-select.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/dialog-select/dialog-select.xbl)
+- [dialog-select1.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/dialog-select1/dialog-select1.xbl)
+- [explanation.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/explanation/explanation.xbl)
 - [handwritten-signature.xbl](https://github.com/orbeon/orbeon-forms-pe/blob/master/src/main/resources/xbl/orbeon/handwritten-signature/handwritten-signature.xbl) (link needs authorization)
-- [number.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/number/number.xbl)
-- [open-select1.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/open-select1/open-select1.xbl)
-- [yesno-input.xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/yesno-input/yesno-input.xbl)
+- [number.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/number/number.xbl)
+- [open-select1.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/open-select1/open-select1.xbl)
+- [yesno-input.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/yesno-input/yesno-input.xbl)
 
 In there, you will notice the localization in English, French, etc. Add your own language.
 
@@ -105,7 +104,7 @@ To get started search for the English version in all files for both:
 Then add the corresponding resources for the new language.
 
 *NOTE: Makes sure also to localize
-[`dialog-select-resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/dialog-select/dialog-select-resources.xml),
+[`dialog-select-resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/dialog-select/dialog-select-resources.xml),
 which is easily missed.*
 
 ### Pseudo-XBL components

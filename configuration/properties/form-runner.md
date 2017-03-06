@@ -1073,4 +1073,4 @@ Whether forms in noscript mode are allowed to use a layout based on tables. If `
 [16]: http://getfirebug.com/
 [17]: http://wiki.orbeon.com/forms/doc/contributor-guide/browser#TOC-IE-limit-of-31-CSS-files
 [18]: https://github.com/orbeon/orbeon-forms/issues/635
-[19]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/resources/apps/fr/i18n/resources.xml
+[19]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/i18n/resources.xml

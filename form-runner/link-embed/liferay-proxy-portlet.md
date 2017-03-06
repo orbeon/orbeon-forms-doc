@@ -150,7 +150,7 @@ You can forward portlet request properties as headers to Form Runner.
 
 This is useful for example to set custom security headers in the proxy portlet:
 
-- create a portlet filter overriding `getPropertyNames`, `getProperty`, and `getProperties` to add custom properties (see an example of wrapper in Scala [here](https://github.com/orbeon/orbeon-forms/blob/master/portlet-support/src/main/scala/org/orbeon/oxf/portlet/wrappers.scala) and examples of filters [here](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/src/main/scala/org/orbeon/oxf/portlet/liferay/FormRunnerAuthFilter.scala))
+- create a portlet filter overriding `getPropertyNames`, `getProperty`, and `getProperties` to add custom properties (see an example of wrapper in Scala [here](https://github.com/orbeon/orbeon-forms/blob/master/portlet-support/src/main/scala/org/orbeon/oxf/portlet/wrappers.scala) and examples of filters [here](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/scala/org/orbeon/oxf/portlet/liferay/FormRunnerAuthFilter.scala))
 - use the `forward-properties` parameter to specify that the proxy portlet must send the names and values of these properties as headers to Form Runner
 
 ### Configuring Form Runner to use Liferay user information

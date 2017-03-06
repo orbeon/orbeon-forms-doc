@@ -193,7 +193,7 @@ When the [`external-value` mode](modes.md#the-externalvalue-mode) is enabled, th
 - `xformsUpdateValue()`
 - `xformsGetValue()`
 
-For an example, see [the implementation of the `fr:code-mirror` component](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/code-mirror/code-mirror.xbl).
+For an example, see [the implementation of the `fr:code-mirror` component](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/code-mirror/code-mirror.xbl).
 
 ### The xformsUpdateValue method
 
@@ -246,7 +246,7 @@ When the [`javascript-lifecycle` mode](modes.md#the-javascriptlifecycle-mode) is
 
 On the JavaScript side, the lifecycle of a companion instance does not exactly follow that of the XForms controls when repeats are involved.
 
-For an example, see [the implementation of the `fr:code-mirror` component](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl/orbeon/code-mirror/code-mirror.xbl).
+For an example, see [the implementation of the `fr:code-mirror` component](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/code-mirror/code-mirror.xbl).
 
 ### The init method
 

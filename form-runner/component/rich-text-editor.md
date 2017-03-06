@@ -44,7 +44,7 @@ The component supports being bound to a node which can be read-only or non-relev
 
 [1]: http://www.tinymce.com/
 [4]: http://www.tinymce.com/wiki.php/Configuration
-[5]: https://github.com/orbeon/orbeon-forms/blob/master/src/main/assets/xbl/orbeon/tinymce/tinymce-config.js
+[5]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/xbl/orbeon/tinymce/tinymce-config.js
 [6]: http://thebigreason.com/blog/2008/09/29/thebigreason-tinymce-skin
 [7]: http://www.tinymce.com/wiki.php/API3:event.tinymce.Editor.onChange
 [8]: https://github.com/orbeon/orbeon-forms/issues/23

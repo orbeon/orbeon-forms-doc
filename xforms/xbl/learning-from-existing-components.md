@@ -6,8 +6,8 @@
 
 A good thing to do is to look at existing components:
 
-* If you are working with the Orbeon Forms sources, they are located under:
-    * [src/resources-packaged/xbl](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/xbl)
+* If you are working with the Orbeon Forms sources, most components are located under:
+    * [form-runner/jvm/src/main/resources/xbl](https://github.com/orbeon/orbeon-forms/tree/master/form-runner/jvm/src/main/resources/xbl)
 * If you are working with a binary distribution:
     * unzip `orbeon-resources-private.jar`
     * the components are under the `xbl` directory
