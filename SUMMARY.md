@@ -139,11 +139,11 @@
         * [Monitoring HTTP requests](form-runner/advanced/monitoring-http-requests.md)
 * Configuration
    * [Properties](configuration/properties/README.md)
-       * [General](configuration/properties/general.md)
-       * [Persistence](configuration/properties/persistence.md)
-       * [Form Runner](configuration/properties/form-runner.md)
-       * [Form Builder](configuration/properties/form-builder.md)
-       * [XForms](configuration/properties/xforms.md)
+        * [General](configuration/properties/general.md)
+        * [Form Runner](configuration/properties/form-runner.md)
+            * [Persistence](configuration/properties/persistence.md)
+        * [Form Builder](configuration/properties/form-builder.md)
+        * [XForms](configuration/properties/xforms.md)
    * Advanced
        * [Client-side error handling](configuration/advanced/client-error-handling.md)
        * [Clustering and High Availability](configuration/advanced/clustering.md)
