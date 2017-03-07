@@ -115,6 +115,8 @@ Mappings between resources URLs and the resources are stored in the `xforms.reso
 
 [SINCE Orbeon Forms 2017.1]
 
+_NOTE: These properties are mainly intended for internal use. Proceed with caution._
+
 The default baseline of XForms assets is configured with the `oxf.xforms.assets.baseline` property. Here is an example:
 
 ```xml
@@ -189,6 +191,14 @@ Minimal versions:
  
 - are enabled when `"min"` is set to `true` and
 - assume that an asset named `file.min.css` is the minimal version for `file.css`.
+
+The `oxf.xforms.assets.baseline.excludes` property can be used to exclude assets.
+
+It doesn't make much sense to use this property in a properties file. Instead, it should be used via an attribute on `xf:model`.
+
+```xml
+xxf:assets.baseline.excludes="/ops/javascript/scalajs/orbeon-xforms.js /ops/javascript/scalajs/orbeon-xforms-launcher.js"
+```
 
 #### Baseline of XBL components assets
 
