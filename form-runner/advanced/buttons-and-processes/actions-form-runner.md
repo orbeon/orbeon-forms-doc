@@ -394,7 +394,7 @@ This action can be useful in conjunction with `send`. Upon successfully sending 
 Navigate to an external page via client-side GET.
 
 - parameters
-    - `uri`: specifies the URL to navigate to
+    - `uri`: an XPath value template which specifies the URL to navigate to
     - `property`: specifies a property containing the URL to navigate to
     - by default, try to guess based on the parameter
 
@@ -416,11 +416,11 @@ navigate(uri = "http://example.org/{xxf:get-request-parameter('bar')}/{.//code}"
 
 - `success-message`: show a success message
     - parameters
-        - `message`: message to show
+        - `message`: message to show (is an XPath value template)
         - `resource`: resource key pointing to the message
 - `error-message`: show an error message
     - parameters
-        - `message`: message to show
+        - `message`: message to show (is an XPath value template)
         - `resource`: resource key pointing to the message
 
 [SINCE Orbeon Forms 4.7] The value of the `message` parameter and the message to which points the resource key in the `resource` parameter are interpreted as an XPath Value Template.
@@ -434,7 +434,7 @@ Show a confirmation dialog. If the user selects "No", the current process is abo
 ![Confirmation dialog](../../images/confirm.png)
 
 - parameters
-    - `message`: message to show
+    - `message`: message to show (is an XPath value template)
     - `resource`: resource key pointing to the message
 
 Example of use:
