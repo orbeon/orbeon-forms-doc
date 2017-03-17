@@ -29,6 +29,18 @@ Starting Orbeon Forms 2016.1, the recommended way to pass parameters is to use t
 
 ## Calling XForms from JavaScript
 
+### Public API
+  
+The following objects are publicly exposed:
+ 
+- `ORBEON.xforms.Document`
+- `ORBEON.xforms.Events.orbeonLoadedEvent`
+- `ORBEON.xforms.Events.errorEvent`
+
+Associated functions are described in more details below.
+
+In addition, `ORBEON.jQuery` exposes the version of jQuery used by Orbeon Forms.
+
 ### Getting and setting controls value
 
 ```javascript
