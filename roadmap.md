@@ -44,7 +44,6 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
-- [ ] basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 - [ ] support Liferay 7/DXP [#2843](https://github.com/orbeon/orbeon-forms/issues/2843)
 - [ ] Form Builder usability: prime candidates would be introducing DnD and/or improved layout
 - [ ] [test automation](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+milestone%3A2016.3+label%3ATests)
@@ -65,7 +64,7 @@ Please remember that the following schedule is a plan, not a promise:
 
 Focus:
 
-- [ ] remove IE8 support ([#2651](https://github.com/orbeon/orbeon-forms/issues/2651))
+- [ ] basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 - TBD
 
 Issues:
