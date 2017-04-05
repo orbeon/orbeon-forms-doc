@@ -8,24 +8,24 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ### Distribution \[2017.1 TODO\]
 
-- [x] `README.md` is up to date
-  - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
-  - [x] latest release year
-  - [x] version number is correct
-  - [x] links to release notes (include link to new version even if blog post not up yet)
-- [x] file layout is correct in zip and wars
-- [x] check WAR files have reasonable sizes (sizes as of 2016.3)
+- [ ] `README.md` is up to date
+  - [ ] links not broken (use Marked to save HTML, then check w/ Integrity)
+  - [ ] latest release year
+  - [ ] version number is correct
+  - [ ] links to release notes (include link to new version even if blog post not up yet)
+- [ ] file layout is correct in zip and wars
+- [ ] check WAR files have reasonable sizes (sizes as of 2016.3)
   - `orbeon-auth.war` (3 KB)
   - `orbeon-embedding.war` (1.3 MB)
   - `proxy-portlet.war` (1.7 MB)
   - `orbeon.war` (85 MB as of 2016.3)
   - `orbeon-xforms-filter.jar` (474 KB)
-- [x] check CE zip doesn't have
+- [ ] check CE zip doesn't have
   - `orbeon-embedding.war`
   - `proxy-portlet.war`
-- [x] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
-    - [x] Tomcat
-- [x] make sure the PE license is not included
+- [ ] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
+    - [ ] Tomcat
+- [ ] make sure the PE license is not included
 
 ### Landing Page \[2017.1 TODO\]
 
@@ -40,20 +40,20 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 check that all PE features are available in PE, but not in CE:
 
-- [x] features which are checked
-    - [x] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
-    - [x] FB: no "Add Language" button
-    - [x] FB: check with CE that a PE dialog shows for
+- [ ] features which are checked
+    - [ ] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
+    - [ ] FB: no "Add Language" button
+    - [ ] FB: check with CE that a PE dialog shows for
         - Services
         - Actions
         - Attach PDF
         - Attach Schema
         - Permissions
-    - [x] FB: no Signature control in toolbox
-    - [x] FR: PDF Template button doesn't show for DMV-14 and W-9
-    - [x] FR: TIFF button doesn't show even if configured \[SINCE 2016.1\]
-    - [x] FR: Import page returns 404
-    - [x] FR: No remote server support in Form Runner home page
+    - [ ] FB: no Signature control in toolbox
+    - [ ] FR: PDF Template button doesn't show for DMV-14 and W-9
+    - [ ] FR: TIFF button doesn't show even if configured \[SINCE 2016.1\]
+    - [ ] FR: Import page returns 404
+    - [ ] FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml`
             ```xml
@@ -558,73 +558,73 @@ drop table orbeon_i_control_text ;
 
 ### Basic Features \[2017.1 TODO\]
 
-- [x] create new form
-- [x] insert sections, grids, repeated grids
-- [x] rename sections and controls
+- [ ] create new form
+- [ ] insert sections, grids, repeated grids
+- [ ] rename sections and controls
     - check renamed in source
-- [x] move sections
+- [ ] move sections
     - up/down
     - right/left (subsections) (be aware of [#2031](https://github.com/orbeon/orbeon-forms/issues/2031))
-- [x] repeated grid
-    - [x] set min/max as ints
-    - [x] set min/max as XPath expressions, e.g. `1 + 2`
-- [x] make section repeated
-    - [x] insert/move/remove iterations
-    - [x] set min/max as ints
-    - [x] set min/max as XPath expressions, e.g. `1 + 2`
-- [x] set control label, hint, items
-    - [x] plain
-    - [x] HTML
-    - [x] check HTML label appears correct in summary page / search
-    - [x] placeholder labels
-    - [x] placeholder hints
-- [x] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
-    - [x] plain
-    - [x] HTML
-    - [x] check help icon appears when help is set, and disappears when help is blanked
-- [x] set section help
-    - [x] check help icon appears when help is set, and disappears when help is blanked
-- [x] set control validation
+- [ ] repeated grid
+    - [ ] set min/max as ints
+    - [ ] set min/max as XPath expressions, e.g. `1 + 2`
+- [ ] make section repeated
+    - [ ] insert/move/remove iterations
+    - [ ] set min/max as ints
+    - [ ] set min/max as XPath expressions, e.g. `1 + 2`
+- [ ] set control label, hint, items
+    - [ ] plain
+    - [ ] HTML
+    - [ ] check HTML label appears correct in summary page / search
+    - [ ] placeholder labels
+    - [ ] placeholder hints
+- [ ] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
+    - [ ] plain
+    - [ ] HTML
+    - [ ] check help icon appears when help is set, and disappears when help is blanked
+- [ ] set section help
+    - [ ] check help icon appears when help is set, and disappears when help is blanked
+- [ ] set control validation
     - set custom error constraint and alert
     - set custom warning constraint and alert
     - set required
     - check that if control is required but empty, generic message shows, not constraint message ([#1829](https://github.com/orbeon/orbeon-forms/issues/1829))
     - check that if control is required but empty and there is an unmet constraint, generic message shows ([#1830](https://github.com/orbeon/orbeon-forms/issues/1830))
-- [x] cut/copy/paste
+- [ ] cut/copy/paste
     - copy control with help, required, constraint, and warning
     - paste control
     - check in source that all elements have been renamed
       - including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
       - including `@validation` and `xf:constraint/@id` (see [#1785](https://github.com/orbeon/orbeon-forms/issues/1785))
     - check that form runs and new control validates constraints properly
-- [x] set control MIPs and properties
+- [ ] set control MIPs and properties
     - check required star appears with required set to `true()`
     - check Show in Summary/Search work when form deployed
-- [x] set section MIPs
+- [ ] set section MIPs
     - check show/hide based on control value e.g. `$fortytwo = '42'`
-- [x] edit/modify source
+- [ ] edit/modify source
     - change e.g. control label
-- [x] image annotation control
+- [ ] image annotation control
   - create simple form and test works, saves, loads
-- [x] i18n (PE)
-    - [x] check en/fr/es/it/de (languages with full support)
-    - [x] switch FB language and check language changes
-    - [x] add language
-    - [x] edit label and items and switch languages
-    - [x] edit source and change top-level language, make sure language selector switches
-    - [x] remove language
-    - [x] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
+- [ ] i18n (PE)
+    - [ ] check en/fr/es/it/de (languages with full support)
+    - [ ] switch FB language and check language changes
+    - [ ] add language
+    - [ ] edit label and items and switch languages
+    - [ ] edit source and change top-level language, make sure language selector switches
+    - [ ] remove language
+    - [ ] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
         - add lang not fully supported (e.g. Afrikaans) , remove all other languages, enter some labels
         - Test and Publish/new -> must show Afrikaans labels, not blank
-- [x] Form Builder Summary page
+- [ ] Form Builder Summary page
     - check that search in Summary page updates title/description when FR language is changed
-- [x] set form title/description
-- [x] test form
-- [x] save
-- [x] publish form
+- [ ] set form title/description
+- [ ] test form
+- [ ] save
+- [ ] publish form
     - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
-- [x] warning dialog if attempt to close page when unsaved
-- [x] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
+- [ ] warning dialog if attempt to close page when unsaved
+- [ ] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
     - set properties
     ```xml
     <property
@@ -777,17 +777,17 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ### PDF Automatic \[2017.1 TODO\]
 
-- [x] Controls and Bookshelf
+- [ ] Controls and Bookshelf
     - input field and text areas have highlighted and clickable links
     - try TIFF output as well
-- [x] Controls
-    - [x] image annotation shows in PDF
+- [ ] Controls
+    - [ ] image annotation shows in PDF
     - *NOTE: Disabled in 2016.1 and 2016.2, re-enabled in 2016.3 but not re-added to Controls form.*
-- [x] form title in header/footer
-- [x] logo in title
-- [x] page numbering/total at bottom center
-- [x] PDF looks good overall
-- [x] send PDF binary works
+- [ ] form title in header/footer
+- [ ] logo in title
+- [ ] page numbering/total at bottom center
+- [ ] PDF looks good overall
+- [ ] send PDF binary works
     ```xml
     <property
         as="xs:string"
@@ -799,19 +799,20 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     </property>
     ```
 - [ ] Form for [issue #3105](https://github.com/orbeon/orbeon-forms/issues/3105) renders PDF well. 
+- [ ] "Page break before section" checkbox works 
 
 ### PDF Template \[2017.1 TODO\]
 
-- [x] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
-- [x] add field "name" in section "applicant"
-- [x] publish and test that name appears in PDF and TIFF
-- [x] change
-- [x] remove PDF
+- [ ] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
+- [ ] add field "name" in section "applicant"
+- [ ] publish and test that name appears in PDF and TIFF
+- [ ] change
+- [ ] remove PDF
   - publish and test, must see notemplate PDF/TIFF
-- [x] check that DMV-14 PDF works and is filled out
+- [ ] check that DMV-14 PDF works and is filled out
   - check Vote and Leased checkboxes
   - check that state appears ([#3053](https://github.com/orbeon/orbeon-forms/issues/3053))
-- [x] W9 form
+- [ ] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
 ### Form Builder Permissions \[2017.1 TODO\]
@@ -863,28 +864,28 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         <role name="orbeon-sales" app="sales" form="*"/>
     </roles>
     ```
-- [x] browser 1
+- [ ] browser 1
     - clear cookies
-    - [x]
+    - [ ]
         - login on `/fr/auth` as `orbeon-sales`
         - `http://localhost:8080/2017.1-pe/fr/orbeon/builder/new`
         - must see guest and sales as app names
-    - [x] create sales/my-sales-form
+    - [ ] create sales/my-sales-form
         - set permissions
             - Anyone → Create
             - orbeon-sales → Read and Update
         - save and publish
-    - [x] can access
+    - [ ] can access
         - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/summary
         - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/new
-    - [x] new
+    - [ ] new
         - enter data and save
-    - [x] summary
+    - [ ] summary
         - check that saved in summary
         - check can edit and duplicate
         - check Delete button is disabled
         - check PDF works
-    - [x] `http://localhost:8080/2017.1-pe/fr/`
+    - [ ] `http://localhost:8080/2017.1-pe/fr/`
         - sales/my-sales-form shows on the home page
         - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
@@ -894,41 +895,41 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
-    - [x] `http://localhost:8080/2017.1-pe/fr/orbeon/builder/summary`
+    - [ ] `http://localhost:8080/2017.1-pe/fr/orbeon/builder/summary`
         - open structured search (be aware of  [#878](https://github.com/orbeon/orbeon-forms/issues/878))
         - check only guest and sales forms are available
-- [x] browser 2
-    - [x] clear cookies
-    - [x] login as orbeon-user
-    - [x] can access
+- [ ] browser 2
+    - [ ] clear cookies
+    - [ ] login as orbeon-user
+    - [ ] can access
         - `http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/new`
-    - [x] can't access
+    - [ ] can't access
         - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/summary (403)
         - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
-    - [x] `http://localhost:8080/2017.1-pe/fr/`
+    - [ ] `http://localhost:8080/2017.1-pe/fr/`
         - NO admin ops for sales/my-sales-form
         - BUT admin ops for `guest/*` (create a `guest/test-guest` form)
         - CAN click on for sales/my-sales-form line and takes to `/new`
         - CAN do Review/Edit/PDF
-- [x] browser 1
+- [ ] browser 1
     - remove all permissions for Anyone for this form, re-add Create for orbeon-sales, publish
     - check can still new/edit/view
-- [x] browser 2
+- [ ] browser 2
     - can't access
         - `http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/new` (403)
     - http://localhost:8080/2017.1-pe/fr/
         - form not visible
-- [x] browser 1
+- [ ] browser 1
     - re-add Anyone → Create
     - add Owner → Read
     - check nothing changed
         - well, can do `/new` from Home
-- [x] browser 2
+- [ ] browser 2
     - can access `http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/summary`, but only see own data as readonly
     - /new, save
     - Summary shows forms in readonly mode
-- [x] access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
+- [ ] access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
     - in `form-builder-permissions.xml`:
         ```xml
         <role name="dummy" app="sales" form="*"/>
@@ -943,22 +944,22 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ### Sample forms \[2017.1 TODO\]
 
-- [x] load all
-- [x] Controls
-    - [x] wizard navigation
-    - [x] autocomplete works
-    - [x] dynamic data dropdown loads data
-    - [x] review/PDF look ok
-    - [x] check wrapping in view/pdf modes
+- [ ] load all
+- [ ] Controls
+    - [ ] wizard navigation
+    - [ ] autocomplete works
+    - [ ] dynamic data dropdown loads data
+    - [ ] review/PDF look ok
+    - [ ] check wrapping in view/pdf modes
         - enter [Lorum Ipsum](http://www.lipsum.com/feed/html) in input field
         - enter long text without space in input field and textarea
-- [x] Bookshelf
+- [ ] Bookshelf
     - Detail
-        - [x] help works
-        - [x] review and back works
-        - [x] add/remove repeats works
+        - [ ] help works
+        - [ ] review and back works
+        - [ ] add/remove repeats works
             - also with keyboard
-        - [x] change lang works
+        - [ ] change lang works
 
 ### Errors and warnings \[2017.1 TODO\]
 
@@ -994,13 +995,13 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ### Attachments/uploads \[2017.1 TODO\]
 
-- [x] basic upload works
-- [x] removing uploaded file works
-- [x] large uploads fail (> 100 MB by default)
+- [ ] basic upload works
+- [ ] removing uploaded file works
+- [ ] large uploads fail (> 100 MB by default)
     - FR error dialog shows
     - control is back to empty
-- [x] very small (a few KB) upload works multiple times in a row
-- [x] with throttling (with Charles) (*NOTE: Proxy settings not useful as we are looking at browser/server traffic.*)
+- [ ] very small (a few KB) upload works multiple times in a row
+- [ ] with throttling (with Charles) (*NOTE: Proxy settings not useful as we are looking at browser/server traffic.*)
     ```xml
     <property
         as="xs:string"
@@ -1101,9 +1102,9 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ### Wizard \[2017.1 TODO\]
 
-- [x] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
+- [ ] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
     - or use FB setting for form
-- [x] validated mode
+- [ ] validated mode
     - `/fr/orbeon/w9/new`
     - check cannot click in TOC
     - check cannot navigate forward with error in current section
@@ -1122,24 +1123,24 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             name="oxf.fr.detail.validation-mode.orbeon.w9"     
             value="explicit"/>
         ```
-- [x] `/fr/orbeon/controls/new`
+- [ ] `/fr/orbeon/controls/new`
     - test errors in section template are highlighted in TOC
-- [x] check that Form Builder's Wizard option enables/disables the wizard
-- [x] separate TOC
+- [ ] check that Form Builder's Wizard option enables/disables the wizard
+- [ ] separate TOC
     ```xml
     <property
         as="xs:boolean"
         name="oxf.xforms.xbl.fr.wizard.separate-toc.wizard.*"    
         value="true"/>
     ```
-- [x] subsection navigation
+- [ ] subsection navigation
     ```xml
     <property
         as="xs:boolean"
         name="oxf.xforms.xbl.fr.wizard.subsections-nav.wizard.*"
         value="true"/>
     ```
-- [x] TOC subsections
+- [ ] TOC subsections
     ```xml
     <property
         as="xs:string"  
@@ -1184,19 +1185,19 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 *NOTE: Summary and Home are not responsive as of 2016.3.*
 
-- [x] setup
+- [ ] setup
     - iPhone 6S or 6S Plus
     - can also test more using simulator
-- [x] default layout (Contact Form / Bookshelf Form)
+- [ ] default layout (Contact Form / Bookshelf Form)
     - looks ok
     - can navigate to `view` and back
     - PDF shows
     - upload book cover in Bookshelf
-- [x] wizard layout (Controls form)
+- [ ] wizard layout (Controls form)
     - looks ok (TOC at top, buttons at bottom)
     - can navigate sections via TOC at top (click and buttons)
     - Next/Prev buttons at bottom work
-- [x] Control Form
+- [ ] Control Form
     - can enter data, select checkboxes/radio buttons
     - date picker works
     - can quickly select radio buttons/checkboxes (zoom in if needed, touch areas are small)
@@ -1204,19 +1205,19 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - autocomplete works
     - PDF
     - NOTE: Repeat not handled nicely.
-- [x] DMV-14 Form
+- [ ] DMV-14 Form
     - repeat menu works
         - _NOTE: Repeat doest not appear nicely._
     - PDF / TIFF
-- [x] W-9 Form
+- [ ] W-9 Form
     - Review looks good
     - PDF looks good with signature
-- [x] zoom
+- [ ] zoom
     - see regression [#3062](https://github.com/orbeon/orbeon-forms/issues/3062)
     - can pinch zoom
     - add error, save, must de-zoom before showing Error dialog
     - same for Clear dialog
-- [x] Number field
+- [ ] Number field
     - test that non-negative integers show keypad
     - other numbers show number pane
     - if decimal separator is `,`, show regular pane (if US settings)
@@ -1228,18 +1229,18 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 *See also Form Builder permissions above which already tests some of this.*
 
-- [x] `http://localhost:8080/2017.1-pe/fr/` lists deployed forms
-- [x] comment all roles in form-builder-permissions.xml
-- [x] no admin buttons/actions show
-- [x] changing language to French works
-- [x] set all Form Builder permissions
+- [ ] `http://localhost:8080/2017.1-pe/fr/` lists deployed forms
+- [ ] comment all roles in form-builder-permissions.xml
+- [ ] no admin buttons/actions show
+- [ ] changing language to French works
+- [ ] set all Form Builder permissions
     ```xml
     <role name="*" app="*" form="*"/>
     ```
   - admin actions show
   - Available/Unavailable/Library labels show
   - publish/unpublish works
-- [x] "publish to production"
+- [ ] "publish to production"
   - configure  remote server and production-server-uri
     - e.g. remote in Liferay Tomcat
     ```xml
@@ -1287,11 +1288,11 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - pull back form
     - load form `/new` on local, make sure works and attachment is there
   - no checkbox for forms w/o admin access (e.g. set `<role name="*" app="orbeon" form="*"/>`)
-- [x] upgrade form definitions
+- [ ] upgrade form definitions
   - upgrade local
   - upgrade remote
   - make sure forms still work
-- [x] reindex database works (make sure relational provider is enabled)
+- [ ] reindex database works (make sure relational provider is enabled)
 
 ### Summary Page \[2017.1 TODO\]
 
@@ -1330,7 +1331,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
   - Liferay Portal Community Edition 6.1.2 CE GA3 (August 2013)
   - Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
-- [x] setup
+- [ ] setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present
   - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
   - start Liferay:
@@ -1340,36 +1341,36 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - login
     - test@liferay.com/liferay
     - *NOTE: Cannot seem to login with Chrome anymore. Tried removing JSESSIONID, still issue.*
-- [x] proxy portlet
-  - [x] set to point to `http://localhost:8080/2017.1-pe/`
-  - [x] try out pages
+- [ ] proxy portlet
+  - [ ] set to point to `http://localhost:8080/2017.1-pe/`
+  - [ ] try out pages
     - New page
     - Summary page
     - Home page
-  - [x] set Send Liferay language
+  - [ ] set Send Liferay language
     - check that language picker in FR doesn't show on 3 pages
     - change My Account → Display Settings → French
     - check that all 3 pages now show in French (be aware of [#1628](https://github.com/orbeon/orbeon-forms/issues/1628))
-  - [x] set Send Liferay user
+  - [ ] set Send Liferay user
     - check w/ HttpScoop that user headers are sent to Form Runner
       - `Orbeon-Liferay-User-*`
-  - [x] readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
-  - [x] edit/review/back
-  - [x] send to external page
-  - [x] PDF loads
+  - [ ] readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
+  - [ ] edit/review/back
+  - [ ] send to external page
+  - [ ] PDF loads
     - check that checkboxes appear correctly (see [#2046](https://github.com/orbeon/orbeon-forms/issues/2046))
-  - [x] check that TinyMCE (rich text) appears ok, including with IE9 (icons)
-  - [x] upload works
-  - [x] attach image and save
-  - [x] check singleton form works
+  - [ ] check that TinyMCE (rich text) appears ok, including with IE9 (icons)
+  - [ ] upload works
+  - [ ] attach image and save
+  - [ ] check singleton form works
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
-- [x] full portlet
-  - [x] all examples and Form Runner
-  - [x] upload works
-  - [x] PDF works
+- [ ] full portlet
+  - [ ] all examples and Form Runner
+  - [ ] upload works
+  - [ ] PDF works
     - check that checkboxes appear correctly
     - *NOTE: Hit issue of double JSESSIONID once, check cookies if problems.*
-  - [x] attach image and save, make sure image shows properly
+  - [ ] attach image and save, make sure image shows properly
   - ~~Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
@@ -1430,8 +1431,8 @@ Properties:
 
 ### Embedding \[2017.1 TODO\]
 
-- [x] deploy `orbeon-embedding.war` into Tomcat
-- [x] update `web.xml`:
+- [ ] deploy `orbeon-embedding.war` into Tomcat
+- [ ] update `web.xml`:
 
     ```xml
     <init-param>
@@ -1439,8 +1440,8 @@ Properties:
         <param-value>http://localhost:8080/2017.1-pe</param-value>
     </init-param>
     ````
-- [x] navigate to `http://localhost:8080/2017.1-pe-embedding/`
-- [x] go through demo forms and test
+- [ ] navigate to `http://localhost:8080/2017.1-pe-embedding/`
+- [ ] go through demo forms and test
   - enter data
   - Save
   - PDF
@@ -1452,7 +1453,7 @@ Properties:
       - number
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
-- [x] Form Builder
+- [ ] Form Builder
     - layout is ok
     - hover icons
     - dialogs
@@ -1550,7 +1551,7 @@ Properties:
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
-- [x] scenario 1
+- [ ] scenario 1
   - load page
   - remove JSESSIONID
   - do Ajax update
@@ -1564,7 +1565,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 ### Other Browsers \[2017.1 TODO\]
 
-- [x] main tests above with Google Chrome
+- [ ] main tests above with Google Chrome
     - 2016.3: 55.x and 56.0.2924.28 beta
     - 2016.2: 52.0.2743.82 and 53.0.2785.57 beta
     - 2016.1: 49.0.2623.112
@@ -1574,7 +1575,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 37.0.2062.122
     - 4.6: 37.0.2062.0 dev
     - 4.5: 35.0.1897.8 dev
-- [x] Form Builder / Form Runner tests with latest Firefox
+- [ ] Form Builder / Form Runner tests with latest Firefox
     - 2016.3: 50.1.0
     - 2016.2: 48.0
     - 2016.1: 45.0.2
@@ -1584,7 +1585,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 32
     - 4.6: 30
     - 4.5: 27.0.1 and 28
-- [x] Form Builder / Form Runner tests with latest Safari
+- [ ] Form Builder / Form Runner tests with latest Safari
     - 2016.3: 10.0.2 (12602.3.12.0.1)
     - 2016.2: 9.1.1 (11601.6.17)
     - 2016.1: 9.1 (11601.5.17.1)
@@ -1594,8 +1595,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 7.0.6
     - 4.6: 7.0.4
     - 4.5: 7.0.2
-- [x] Form Builder / Form Runner tests with IE11 (since 4.5)
-- [x] Form Builder / Form Runner tests with latest Edge
+- [ ] Form Builder / Form Runner tests with IE11 (since 4.5)
+- [ ] Form Builder / Form Runner tests with latest Edge
     - 2016.3
         - Edge 38.14393.0.0
         - EdgeHTML 14.14393
@@ -1605,7 +1606,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 2016.1
         - Edge 25.10586.0.0
         - EdgeHTML 13.10586
-- [x] Form Runner run with
+- [ ] Form Runner run with
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
     - IE8: FB has warning, FR works and looks ok
@@ -1614,17 +1615,17 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 Features to test, with all supported browsers:
 
-- [x] give CE version a quick run
-- [x] XForms filter
+- [ ] give CE version a quick run
+- [ ] XForms filter
     - `http://localhost:8080/2017.1-pe/xforms-jsp/guess-the-number/`
     - `http://localhost:8080/2017.1-pe/xforms-jsp/flickr-search/`
-- [x] examples-cli in distribution work (fix/remove them if not)
+- [ ] examples-cli in distribution work (fix/remove them if not)
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
     - `unzip -d orbeon orbeon.war`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/simple/stdout.xpl`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/transform/transform.xpl`
-- [x] check logs are clean
+- [ ] check logs are clean
     - no debug information
     - no unwanted information
     - be aware of [#849](https://github.com/orbeon/orbeon-forms/issues/849)
