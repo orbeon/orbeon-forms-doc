@@ -1000,6 +1000,16 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [ ] large uploads fail (> 100 MB by default)
     - FR error dialog shows
     - control is back to empty
+- [ ] constraints on upload size and mediatype
+    - [ ] set `oxf.fr.detail.attachment.max-size.*.*`, check limits upload
+    - [ ] same from Form Builder UI for form
+    - [ ] set `oxf.fr.detail.attachment.max-size-aggregate.*.*`, create form with repeat, check limits upload
+    - [ ] same from Form Builder UI for form
+    - [ ] set `oxf.fr.detail.attachment.mediatypes.*.*` to `image/jpeg application/pdf`, check limits upload
+    - [ ] same from Form Builder UI for form
+    - [ ] same with `image/* application/pdf`
+    - [ ] form with 2+ attachments: set different max size for each using common constraint 
+    - [ ] form with 2+ attachments: set different mediatypes for each using common constraint 
 - [ ] very small (a few KB) upload works multiple times in a row
 - [ ] with throttling (with Charles) (*NOTE: Proxy settings not useful as we are looking at browser/server traffic.*)
     ```xml
