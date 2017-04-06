@@ -2,10 +2,6 @@
 
 <!-- toc -->
 
-## Introduction
-
-Orbeon Forms *form definitions* and *form data* are stored via an an abstraction called the **persistence API**. This allows storing form definitions and form data for all or specific forms in different places. For example, you could store your form definitions into Oracle, and your form data into your own, custom database.
-
 ## Children pages
 
 - [CRUD](crud.md)
@@ -15,6 +11,10 @@ Orbeon Forms *form definitions* and *form data* are stored via an an abstraction
 - [Caching](caching.md)
 - [Versioning](versioning.md)
 - [Implementing a persistence service](implementing-a-persistence-service.md)
+
+## Introduction
+
+Orbeon Forms *form definitions* and *form data* are stored via an an abstraction called the **persistence API**. This allows storing form definitions and form data for all or specific forms in different places. For example, you could store your form definitions into Oracle, and your form data into your own, custom database.
 
 ## Built-in support
 
