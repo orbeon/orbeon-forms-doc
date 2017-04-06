@@ -15,6 +15,11 @@ These functions are typically used on the `constraint` attribute of the `xf:bind
     constraint="xxf:fraction-digits(2)"/>
 ```
 
+All these functions annotate the context instance data node (element or attribute) with:
+
+- a custom MIP of the same name
+- with a value set to the single parameter to the function  
+
 ## xxf:fraction-digits()
 
 [SINCE Orbeon Forms 2016.1]
@@ -107,3 +112,33 @@ xxf:positive() as xs:boolean
 
 - return `true()` if the context item converted to a string via the `string()` function parses as an `xs:decimal` which is positive
 - return `false()` otherwise
+
+## xxf:upload-max-size()
+
+[SINCE Orbeon Forms 2017.1]
+
+```xpath
+xxf:upload-max-size($bytes as xs:integer?) as xs:boolean
+```
+
+- `$bytes`
+   - non-negative value: limited upload file size
+   - `-1`: unlimited upload file size
+   - `-2` or lower: ignored for the purpose of checking the upload file size
+- always return `true()`, as the validation is only used at the time of upload
+
+## xxf:upload-mediatypes()
+
+[SINCE Orbeon Forms 2017.1]
+
+```xpath
+xxf:upload-mediatypes($mediatypes as xs:string?) as xs:boolean
+```
+
+- `$mediatypes`
+    - the value is a list of space- or comma-separated mediatype ranges
+    - a mediatype range is one of:
+      - `*/*`: all mediatypes allowed
+      - `type/*`: all mediatypes with prefix `type` are allowed (for example `image/*`)
+      - `type/subtype`: specific mediatype such as `image/jpeg`, `application/atom+xml`, `video/mp4`, etc.
+- always return `true()`, as the validation is only used at the time of upload
