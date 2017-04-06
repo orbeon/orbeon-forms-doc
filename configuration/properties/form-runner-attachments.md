@@ -53,7 +53,6 @@ The value of `oxf.fr.detail.attachment.max-size-aggregate` can be overridden:
 
 The following property specifies which file types (also known as "mediatypes") are allowed for attachments. For example, the following values of `image/png image/jpeg` specify that JPEG images and PDF files are allowed but no other files.
 
-
 ```xml
 <property 
     as="xs:string"  
@@ -63,6 +62,7 @@ The following property specifies which file types (also known as "mediatypes") a
 
 The format is as follows:
 
+<!-- TODO: Duplicated from xforms.md -->
 - the value is a list of space- or comma-separated mediatype ranges
 - a mediatype range is one of:
   - `*/*`: all mediatypes allowed

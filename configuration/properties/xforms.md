@@ -332,6 +332,94 @@ You disable the navigator by setting the following property to `false` (it is `t
 
 ### Upload
 
+#### Maximum upload size
+
+[SINCE Orbeon Forms 2017.1]
+
+The following property sets the maximum size in bytes of an uploaded file. For example, if you set it to `1000000` (1 MB), and the user attempts to upload a larger file, an error is reported.
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.xforms.upload.max-size"                             
+    value="1000000"/>
+```
+
+If `oxf.xforms.upload.max-size` is blank or missing (the default), then the value of the following backward compatibility property is used:
+
+```xml
+<property
+    as="xs:integer" 
+    processor-name="oxf:request"   
+    name="max-upload-size"          
+    value="100000000"/>
+```
+
+The value of `oxf.xforms.upload.max-size` can be overridden for a specific control using the `xxf:upload-max-size()` validation function.
+
+See also [`oxf.fr.detail.attachment.max-size`](form-runner-attachment.md#maximum-attachment-size)
+
+#### Maximum aggregate upload size
+
+[SINCE Orbeon Forms 2017.1]
+
+The following property sets the maximum aggregate size in bytes of all uploaded files for a given instance of form data. For example, if you set it to `1000000` (1 MB), and the form has two upload controls, and you upload a 600 KB upload using the first control, then only 400 KB can be uploaded using the second control, even if a larger maximum size per control was set using the `oxf.xforms.upload.max-size` property or the `xxf:upload-max-size()` validation function. If you attempt to upload a larger file, an error is reported.
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.xforms.upload.max-size-aggregate"                   
+    value="1000000"/>
+```
+
+In order for `oxf.xforms.upload.max-size-aggregate` to work, the XForms processor must have a way to compute the total size of uploaded files. Because this can be different per form, you must provide an XPath expression to use to perform this sum. For example, Form Runner uses:
+
+```xml
+<property as="xs:string" name="oxf.xforms.upload.max-size-aggregate-expression">
+    sum(
+        xxf:instance('fr-form-instance')//*[
+            @filename and @mediatype and @size
+        ]/@size[
+            . castable as xs:integer
+        ]/xs:integer(.),
+        0
+    )
+</property>
+```
+
+If `oxf.xforms.upload.max-size-aggregate` is specified and not blank, then `oxf.xforms.upload.max-size-aggregate-expression` must also be specified or an error is raised.
+
+See also [`oxf.fr.detail.attachment.max-size-aggregate`](form-runner-attachment.md#maximum-aggregate-attachment-size)
+
+#### Allowed file types
+
+[SINCE Orbeon Forms 2017.1]
+
+The following property specifies which file types (also known as "mediatypes") are allowed for uploaded files. For example, the following values of `image/png image/jpeg` specify that JPEG images and PDF files are allowed but no other files.
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.xforms.upload.mediatypes"                           
+    value="image/jpeg application/pdf"/>
+```
+
+The format is as follows:
+
+- the value is a list of space- or comma-separated mediatype ranges
+- a mediatype range is one of:
+  - `*/*`: all mediatypes allowed
+  - `type/*`: all mediatypes with prefix `type` are allowed (for example `image/*`)
+  - `type/subtype`: specific mediatype such as `image/jpeg`, `application/atom+xml`, `video/mp4`, etc.
+  
+If `oxf.xforms.upload.mediatypes` is blank or missing, all mediatypes are allowed. 
+  
+The value of `oxf.xforms.upload.mediatypes` can be overridden for a specific control using the `xxf:upload-mediatypes()` validation function.
+
+See also [`oxf.fr.detail.attachment.mediatypes`](form-runner-attachment.md#allowed-file-types)
+
+#### Upload progress
+
 When you use an `<xf:upload>` control, as soon users select a file, the file is uploaded in the background from the browser to Orbeon Forms. While the file is
  uploaded, a progress bar is show in the browser, in place of the file selection control, as in this screenshot:
 

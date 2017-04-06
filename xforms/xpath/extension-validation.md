@@ -20,12 +20,12 @@ All these functions annotate the context instance data node (element or attribut
 - a custom MIP of the same name
 - with a value set to the single parameter to the function  
 
-## xxf:attachment-max-size()
+## xxf:upload-max-size()
 
 [SINCE Orbeon Forms 2017.1]
 
 ```xpath
-xxf:attachment-max-size($bytes as xs:integer?) as xs:boolean
+xxf:upload-max-size($bytes as xs:integer?) as xs:boolean
 ```
 
 - `$bytes`
@@ -34,15 +34,15 @@ xxf:attachment-max-size($bytes as xs:integer?) as xs:boolean
    - `-2` or lower: ignored for the purpose of checking the upload file size
 - always return `true()`, as the validation is only used at the time of upload
 
-## xxf:attachment-mediatypes()
+## xxf:upload-mediatypes()
 
 [SINCE Orbeon Forms 2017.1]
 
 ```xpath
-xxf:attachment-mediatypes($mediatypes as xs:string?) as xs:boolean
+xxf:upload-mediatypes($mediatypes as xs:string?) as xs:boolean
 ```
 
-- `$mediatypes`
+- `$mediatypes` <!-- TODO: Duplicated from xforms.md -->
     - the value is a list of space- or comma-separated mediatype ranges
     - a mediatype range is one of:
       - `*/*`: all mediatypes allowed
