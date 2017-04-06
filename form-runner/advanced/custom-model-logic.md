@@ -10,13 +10,19 @@
 
 ## Introduction
 
-It can be useful to be able to define custom model logic, either for a particular form or shared among a number of forms. The `oxf.fr.detail.model.custom` property allows you to do just that:
+It can be useful to be able to define custom model logic, either for a particular form or shared among a number of forms. For this:
+
+1. Place your XML file with your custom model logic under one of the following recommended locations:
+    - WEB-INF/resources/forms/resources: custom model logic for all forms
+    - WEB-INF/resources/forms/APP/resources: custom model logic for app name APP
+    - WEB-INF/resources/forms/APP/FORM/resources: custom model logic for app name APP and form name FORM
+2. Define the `oxf.fr.detail.model.custom` property to point to the file(s) you added.
 
 ```xml
 <property
   as="xs:anyURI"
   name="oxf.fr.detail.model.custom.*.*"
-  value="oxf:/forms/acme/whizz.xml"/>
+  value="oxf:/forms/resources/whizz.xml"/>
 ```
 
 The value of the property is a URL which points to a file containing the custom logic. The format of the file is that of an XForms model. The custom content is included in your form's main model, which is identified by `fr-form-model`. This means that you have access to your form data in instance `fr-form-instance`, for example.
