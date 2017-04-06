@@ -1,4 +1,4 @@
-# Form Runner attachments configuration properties
+# Attachments configuration properties
 
 <!-- toc -->
 
@@ -34,7 +34,7 @@ The value of `oxf.fr.detail.attachment.max-size` can be overridden:
 
 [SINCE Orbeon Forms 2017.1]
 
-The following property sets the maximum aggregate size in bytes of all uploaded attachments for a given instance of form data. For example, if you set it to `1000000` (1 MB), and the form has two attachment controls, and you upload a 600 KB attachment using the first control, then only 400 KB can be uploaded using the second control. If you attempt to upload a larger attachment, an error is reported.
+The following property sets the maximum aggregate size in bytes of all uploaded attachments for a given instance of form data. For example, if you set it to `1000000` (1 MB), and the form has two attachment controls, and you upload a 600 KB attachment using the first control, then only 400 KB can be uploaded using the second control, even if a larger maximum size per control was set using the `oxf.fr.detail.attachment.max-size` property or a Form Builder setting. If you attempt to upload a larger attachment, an error is reported.
 
 ```xml
 <property 
