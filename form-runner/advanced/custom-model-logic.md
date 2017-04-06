@@ -18,14 +18,14 @@ It can be useful to be able to define custom model logic, either for a particula
     - WEB-INF/resources/forms/APP/FORM/resources: custom model logic for app name APP and form name FORM
 2. Define the `oxf.fr.detail.model.custom` property to point to the file(s) you added.
 
-```xml
-<property
-  as="xs:anyURI"
-  name="oxf.fr.detail.model.custom.*.*"
-  value="oxf:/forms/resources/whizz.xml"/>
-```
+    ```xml
+    <property
+      as="xs:anyURI"
+      name="oxf.fr.detail.model.custom.*.*"
+      value="oxf:/forms/resources/whizz.xml"/>
+    ```
 
-The value of the property is a URL which points to a file containing the custom logic. The format of the file is that of an XForms model. The custom content is included in your form's main model, which is identified by `fr-form-model`. This means that you have access to your form data in instance `fr-form-instance`, for example.
+    The value of the property is a URL which points to a file containing the custom logic. The format of the file is that of an XForms model. The custom content is included in your form's main model, which is identified by `fr-form-model`. This means that you have access to your form data in instance `fr-form-instance`, for example.
 
 ## Separate file vs. logic directly within the form definition
 
