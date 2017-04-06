@@ -142,6 +142,7 @@
         * [General](configuration/properties/general.md)
         * [Form Runner](configuration/properties/form-runner.md)
             * [Persistence](configuration/properties/persistence.md)
+            * [Attachments](configuration/properties/form-runner-attachments.md)
         * [Form Builder](configuration/properties/form-builder.md)
         * [XForms](configuration/properties/xforms.md)
    * Advanced
