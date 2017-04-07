@@ -60,6 +60,8 @@ The following property specifies which file types (also known as "mediatypes") a
     value="image/jpeg application/pdf"/>
 ```
 
+*NOTE: This property impacts regular Form Runner file attachments, but also Form Runner image attachments. If you have image attachments and they were created with a build of Orbeon Forms prior to 2017.1, make sure to include `image/*` in that property as well or new image attachments entered by users will be rejected. Image attachments created with 2017.1 or newer limit the mediatypes to `image/*` out of the box. You can also edit the form definition and set explicitly, on each image attachment control, the "Supported File Types" validation.*
+
 The format is as follows:
 
 <!-- TODO: Duplicated from xforms.md -->
