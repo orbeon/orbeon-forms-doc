@@ -357,7 +357,7 @@ If `oxf.xforms.upload.max-size` is blank or missing (the default), then the valu
 
 The value of `oxf.xforms.upload.max-size` can be overridden for a specific control using the `xxf:upload-max-size()` validation function.
 
-See also [`oxf.fr.detail.attachment.max-size`](form-runner-attachment.md#maximum-attachment-size)
+See also [`oxf.fr.detail.attachment.max-size`](form-runner-attachments.md#maximum-attachment-size)
 
 #### Maximum aggregate upload size
 
@@ -389,7 +389,7 @@ In order for `oxf.xforms.upload.max-size-aggregate` to work, the XForms processo
 
 If `oxf.xforms.upload.max-size-aggregate` is specified and not blank, then `oxf.xforms.upload.max-size-aggregate-expression` must also be specified or an error is raised.
 
-See also [`oxf.fr.detail.attachment.max-size-aggregate`](form-runner-attachment.md#maximum-aggregate-attachment-size)
+See also [`oxf.fr.detail.attachment.max-size-aggregate`](form-runner-attachments.md#maximum-aggregate-attachment-size)
 
 #### Allowed file types
 
@@ -416,7 +416,7 @@ If `oxf.xforms.upload.mediatypes` is blank or missing, all mediatypes are allowe
   
 The value of `oxf.xforms.upload.mediatypes` can be overridden for a specific control using the `xxf:upload-mediatypes()` validation function.
 
-See also [`oxf.fr.detail.attachment.mediatypes`](form-runner-attachment.md#allowed-file-types)
+See also [`oxf.fr.detail.attachment.mediatypes`](form-runner-attachments.md#allowed-file-types)
 
 #### Upload progress
 

@@ -172,4 +172,4 @@ However you can look at the markup produced by Fancytree with your browser's dev
 </ul>
 ```
 
-See [`tree-select1.less`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner-components/jvm/src/main/assets/xbl/orbeon/tree-select1/tree-select1.less) for the style applied by Orbeon Forms as of version 2017.1.
+See [`tree-select1.less`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/xbl/orbeon/tree-select1/tree-select1.less) for the style applied by Orbeon Forms as of version 2017.1.

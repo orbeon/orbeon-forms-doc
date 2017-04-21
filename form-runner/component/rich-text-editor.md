@@ -34,7 +34,7 @@ The component supports being bound to a node which can be read-only or non-relev
 
 ### Update heuristic
 
-* Update of the bound node with the text typed by users — As users types in the editor, the TinyMCE generates [change events][7], upon which the latest text is stored in the bound node. This happens when the editor loses the focus, but also at other key points while editing, for instance when changing formatting, or starting a new paragraph.
+* Update of the bound node with the text typed by users — As users types in the editor, the TinyMCE generates change events, upon which the latest text is stored in the bound node. This happens when the editor loses the focus, but also at other key points while editing, for instance when changing formatting, or starting a new paragraph.
 * Update of the editor with a new value stored in the bound node — Whenever the value of the bound node is changed, for instance with an `<xf:setvalue>`, the content of the editor is update accordingly, _unless_ the editor has the focus. This prevents the cursor moving back to the top of the editor in the middle of users entering text, for instance if you have XForms code that updates the HTML to perform cleanup.
 
 ## Limitations
@@ -46,5 +46,4 @@ The component supports being bound to a node which can be read-only or non-relev
 [4]: http://www.tinymce.com/wiki.php/Configuration
 [5]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/xbl/orbeon/tinymce/tinymce-config.js
 [6]: http://thebigreason.com/blog/2008/09/29/thebigreason-tinymce-skin
-[7]: http://www.tinymce.com/wiki.php/API3:event.tinymce.Editor.onChange
 [8]: https://github.com/orbeon/orbeon-forms/issues/23
