@@ -25,6 +25,7 @@ Here:
  
 - The font file is called `ARIALUNI.TTF` and the path `/path/to/font/ARIALUNI.TTF` points to it.
 - The family is set to "Helvetica Neue" so that it matches the font set via CSS.
+- The `arial-unicode` token is arbitrary and is used to link the two properties.
 
 ## See also
 
