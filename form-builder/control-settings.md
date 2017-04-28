@@ -23,10 +23,20 @@ If no control name is explicitly specified, Form Builder assigns a default name,
 
 The following options are available:
 
-- __Show in Summary:__ when selected, the control value is visible as a summary page column
-- __Show in Search:__ when selected, the control value is searchable in the summary page
-- __Email Recipient:__ when selected, the control is used to determine an email recipient when the form data is sent by email
-- __Show in Email Subject:__ when selected, the control value is used as part of the subject of the email when the form data is sent by email
+- __Show in Summary:__
+    - When selected, the control value is visible as a Summary page column.
+- __Show in Search:__
+    - When selected, the control value is searchable in the Summary page.
+- __Show in Email Subject:__
+    - When selected, the control value is used as part of the subject of the email when the form data is sent by email.
+    - If more than one non-blank values are found, they are all included in the email subject, comma-separated.
+- __Email Recipient:__
+    - When selected, the control is used to determine an email recipient ("To:") when the form data is sent by email.
+    - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.to` property is used.
+- __Email Sender:__
+    - SINCE Orbeon Forms 2017.1
+    - When selected, the control is used to determine an email sender ("From:") when the form data is sent by email.
+    - Only *one* "From:" email address is used, specifically the first non-blank address selected in the form. If no such address is found the `oxf.fr.email.from` property is used.
 - __Include as Email Attachment__:
     - SINCE Orbeon Forms 2016.1
     - this option only shows for file and image attachments
