@@ -33,6 +33,14 @@ The following options are available:
 - __Email Recipient:__
     - When selected, the control is used to determine an email recipient ("To:") when the form data is sent by email.
     - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.to` property is used.
+- __Email Carbon Copy:__
+    - SINCE Orbeon Forms 2017.1
+    - When selected, the control is used to determine a carbon copy email recipient ("Cc:") when the form data is sent by email.
+    - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.cc` property is used.
+- __Email Blind Carbon Copy:__
+    - SINCE Orbeon Forms 2017.1
+    - When selected, the control is used to determine a blind carbon copy email recipient ("Bcc:") when the form data is sent by email.
+    - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.bcc` property is used.
 - __Email Sender:__
     - SINCE Orbeon Forms 2017.1
     - When selected, the control is used to determine an email sender ("From:") when the form data is sent by email.
