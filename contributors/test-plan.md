@@ -1072,6 +1072,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 <property as="xs:boolean" name="oxf.fr.email.attach-tiff.orbeon.controls" value="true"/>
 ```
 - `/fr/orbeon/controls/new`
+- create/update form with "Email Carbon Copy Recipient", "Email Bind Carbon Copy Recipient", "Email Sender" and check that From/Cc/Bcc work
 - hit Email button from Controls and DMV-14
   - check email received
   - contains attachments, XML, PDF and TIFF [SINCE 2016.1]
