@@ -109,15 +109,15 @@ A parameter is specified by:
 - an attribute on the XBL bound node (which can be an attribute value template (AVT))
 - or, if not found, a property of the form `oxf.xforms.xbl.$PREFIX.$NAME.$PARAMETER`
  
-This function is for XBL component implementors.
+This function is intended for XBL component implementors.
 
-The user of the component would write:
+If the user of the component writes:
 
 ```xml
-<fr:number suffix="'Bytes'" .../>
+<fr:number suffix="Bytes" .../>
 ```
 
-And the implementor of the component:
+The implementor of the component can use the parameter with:
  
 ```xml
 <xf:var 
