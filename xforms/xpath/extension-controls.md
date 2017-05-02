@@ -92,6 +92,39 @@ Return the empty sequence if the resolution fails.
 <xh:div id="my-element" xxf:control="true">...</xh:div>
 ```
 
+## xxf:component-param-value()
+
+[SINCE Orbeon Forms 2017.1]
+
+```xpath
+xxf:component-param-value(
+    $name as xs:string
+) as xs:string?
+```
+
+The `xxf:component-param-value()` function returns the string value of the given parameter of the current XBL component's bound node.
+
+A parameter is specified by:
+
+- an attribute on the XBL bound node (which can be an attribute value template (AVT))
+- or, if not found, a property of the form `oxf.xforms.xbl.$PREFIX.$NAME.$PARAMETER`
+ 
+This function is for XBL component implementors.
+
+The user of the component would write:
+
+```xml
+<fr:number suffix="'Bytes'" .../>
+```
+
+And the implementor of the component:
+ 
+```xml
+<xf:var 
+    name="suffix" 
+    value="xxf:component-param-value('suffix')"/>
+```
+
 ## xxf:context()
 
 ```xpath
