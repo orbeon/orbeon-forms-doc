@@ -41,6 +41,8 @@ The following options are available:
     - SINCE Orbeon Forms 2017.1
     - When selected, the control is used to determine a blind carbon copy email recipient ("Bcc:") when the form data is sent by email.
     - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.bcc` property is used.
+    
+        ![Email Blind Carbon Copy](images/control-settings-email-bcc.png)    
 - __Email Sender:__
     - SINCE Orbeon Forms 2017.1
     - When selected, the control is used to determine an email sender ("From:") when the form data is sent by email.
@@ -49,8 +51,8 @@ The following options are available:
     - SINCE Orbeon Forms 2016.1
     - this option only shows for file and image attachments
     - when the property `oxf.fr.email.attach-files` is set to `selected`, only file and image attachments with this option checked are attached to the email
-
-![Attachment Settings](images/attachment-settings.png)
+    
+        ![Include as Email Attachment](images/attachment-settings.png)
 
 The "Custom CSS Classes" field allows adding CSS classes which will be placed on the control in the resulting HTML. This can be used for custom styling.
 
