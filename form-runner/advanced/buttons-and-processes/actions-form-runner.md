@@ -470,7 +470,9 @@ You can also override the default confirmation message:
 
 - `review`, `edit`: navigate to these Form Runner pages
 - `summary`: navigate to this Form Runner page (a predefined process since 4.7)
-- `visit-all`: mark all controls as visited
+- `visit-all`:
+    - mark all controls as visited
+    - [SINCE Orbeon Forms 2017.1] When using the [wizard view](../../feature/wizard-view.md) in `lax` and strict` mode, this marks all controls up to and including the latest visited page as visited. Controls on further, non-visited pages are not marked as visited.
 - `unvisit-all`: mark all controls as not visited
 - `expand-all`: expand all sections
 - `collapse-all`: collapse all sections
