@@ -75,3 +75,7 @@ The value of `oxf.fr.detail.attachment.mediatypes` can be overridden:
 
 - for a specific form, from the Form Builder "Form Settings} dialog
 - for a specific control, using a common constraint the Form Builder "Control Settings" dialog
+
+## See also
+
+- Blog post: [Improved constraints on attachments uploads](http://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)

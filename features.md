@@ -169,6 +169,7 @@ As of 2016-04-19 this page is still being updated.
     - Static image
     - Handwritten signature: [doc](http://doc.orbeon.com/form-runner/component/handwritten-signature.html)
     - Image annotation: [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)
+    - Control maximum size and file types: [blog post](http://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
 - Buttons
     - Button
     - Link button
