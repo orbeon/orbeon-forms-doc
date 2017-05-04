@@ -106,4 +106,5 @@ See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/im
     - [Improving how we show help messages](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
     - [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
     - [Improved constraints on attachments uploads](http://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
+    - [More flexible email senders and recipients](http://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)
      

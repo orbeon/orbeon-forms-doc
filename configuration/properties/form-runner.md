@@ -860,9 +860,24 @@ These properties control email sending in Form Runner:
     name="oxf.fr.email.from.*.*"
     value="john@example.org"/>
 
+<!-- The list of emails is space- or comma- separated -->
 <property
     as="xs:string"
     name="oxf.fr.email.to.*.*"
+    value="mary@example.org,nancy@example.org"/>
+    
+<!-- The list of emails is space- or comma- separated -->
+<!-- [SINCE Orbeon Forms 2017.1] -->
+<property
+    as="xs:string"
+    name="oxf.fr.email.cc.*.*"
+    value="mary@example.org,nancy@example.org"/>
+
+<!-- The list of emails is space- or comma- separated -->
+<!-- [SINCE Orbeon Forms 2017.1] -->
+<property
+    as="xs:string"
+    name="oxf.fr.email.bcc.*.*"
     value="mary@example.org,nancy@example.org"/>
 
 <property

@@ -262,7 +262,7 @@ Refresh events in XForms 1.1 are based on:
 - checking those markings during refresh
 - dispatching events based on that check
 
-This mechanism is not satisfying because we think that it goes against the expectations of the form author and it does not produce events reliably ([see email sent to public-forms mailing-listo on June 12, 2007][1]). Therefore Orbeon Forms does not strictly follow XForms 1.1 on this topic.
+This mechanism is not satisfying because we think that it goes against the expectations of the form author and it does not produce events reliably ([see email sent to public-forms mailing-list on June 12, 2007][1]). Therefore Orbeon Forms does not strictly follow XForms 1.1 on this topic.
 
 
 [1]: http://lists.w3.org/Archives/Public/public-forms/2007Jun/0030.html
