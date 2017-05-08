@@ -31,9 +31,7 @@ Installation steps:
 
 1. __Deploy orbeon.war:__ Start Liferay. When it is fully started move the `orbeon.war` into the Liferay deploy directory (e.g. `~/liferay/deploy`). At this point, you should see message indicating that Orbeon is being deployed. Monitor the Liferay output as well as the `logs/orbeon.log` for possible errors.
 
-
 2. __Enable dynamic resource reloading (optional):__ Remove the file `webapps/orbeon/META-INF/context.xml` and restart Liferay. For more information on what this does, see note 2 below.
-
 
 3. __Configuration for Form Runner (optional):__ You can skip this step if you do not intend to use Form Runner or Form Builder in a portlet. Otherwise, create a file `WEB-INF/resources/config/properties-local.xml` which declares the following properties (and other properties you might want to override):
 
