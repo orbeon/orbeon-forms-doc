@@ -131,6 +131,7 @@
             * [Syntax](form-runner/advanced/buttons-and-processes/syntax.md)
             * [Core actions](form-runner/advanced/buttons-and-processes/actions-core.md)
             * [Form Runner actions](form-runner/advanced/buttons-and-processes/actions-form-runner.md)
+                * [Send action](form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)
             * [XForms actions](form-runner/advanced/buttons-and-processes/actions-xforms.md)
             * [Predefined processes and dialogs](form-runner/advanced/buttons-and-processes/predefined.md)
         * [Custom model logic](form-runner/advanced/custom-model-logic.md)
