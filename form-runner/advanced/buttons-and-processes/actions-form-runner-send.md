@@ -90,6 +90,14 @@ The following parameters can be used:
         - `application/pdf` when `content` is set to `pdf`
         - `image/tiff` when `content` is set to `tiff`
 
+- <a name="send_parameter_show_progress"></a>`show-progress`:
+
+    [SINCE Orbeon Forms 2017.1]
+
+    - if `replace` is set to `all`, whether to continue showing the loading the indicator while the browser navigates away from the current page
+    - typically, you'll only want to set this parameter to `false` if you know that URL the browser navigates to won't replace the current page, say because the page will be opened in another window, or be downloaded by the browser
+    - default: `true`
+
 ### Using properties
 
 The following example refers in the `send` action to the properties with the common
