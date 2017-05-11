@@ -21,15 +21,36 @@ For more information, please visit the [XForms 1.1 specification][1].
 
 See [JSON support](submission-json.md).
 
-## Disabling Validation and relevance checks
+## Disabling Validation and relevance handling
 
-Orbeon Forms supports the XForms 1.1 `validate` and `relevant` attributes on `<xf:submission>`. These boolean attributes disable processing of validation and relevance respectively for a given submission:
+Orbeon Forms supports the XForms 1.1 `validate` and `relevant` attributes on `<xf:submission>`. These boolean attributes disable processing of validation and relevance pruning respectively for a given submission:
 
 ```xml
 <xf:submission id="my-submission"
     method="post"
     validate="false"
     relevant="false"
+    resource="http://example.org/rest/draft/"
+    replace="none"/>
+```
+
+XForms 2.0 introduces `nonrelevant` (while keeping `relevant` for backward compatibility) for clarity:
+
+```xml
+<xf:submission id="my-submission"
+    method="post"
+    validate="false"
+    nonrelevant="keep"
+    resource="http://example.org/rest/draft/"
+    replace="none"/>
+```
+
+`nonrelevant` takes values `keep`, `remove` and `empty`, which empties non-relevant elements and attributes:
+
+```xml
+<xf:submission id="my-submission"
+    method="post"
+    nonrelevant="empty"
     resource="http://example.org/rest/draft/"
     replace="none"/>
 ```

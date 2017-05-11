@@ -184,32 +184,36 @@ On an `<xf:submission>` element with `replace="instance"`, the optional `xxf:xin
 
 ## Preventing recalculation before a submission
 
+_NOTE: As of Orbeon Forms 4.7, `recalculate` and `revalidate` are unified in Orbeon Forms. This means that this
+attribute is no longer needed._
+
 XForms 1.1 provides two attributes to control pre-submission tasks:
 
-* `validate`: "indicates whether or not the data validation checks of the submission are performed".
-* `relevant`: "indicates whether or not the relevance pruning of the submission is performed"
+- `validate`: "indicates whether or not the data validation checks of the submission are performed".
+- `relevant`: "indicates whether or not the relevance pruning of the submission is performed"
+    - _NOTE: XForms 2.0 introduces instead `nonrelevant`._ 
 
 Orbeon Forms adds the following attribute:
 
-* `xxf:calculate`: indicates whether or not recalculation must take place
+- `xxf:calculate`: indicates whether or not recalculation must take place
 
-The default value is "false" if the value of serialization is "none" and "true" otherwise.
+The default value is `false` if the value of serialization is `none` and `true` otherwise.
 
-The purpose of the attribute is to improve performance when multiple submission are called serially. The form author can this way completely prevent the `rebuild`, recalculate and revalidate flags from being checked before submitting data:
+The purpose of the attribute is to improve performance when multiple submission are called serially. The form author can this way completely prevent the `rebuild`, `recalculate` and `revalidate` flags from being checked before submitting data:
 
 ```xml
 <xf:submission 
     ref="instance()" 
     method="post"
     validate="false" 
-    relevant="false" 
     xxf:calculate="false"
+    nonrelevant="keep" 
     .../>
 ```
 
 _WARNING: This attribute must be used with caution, as using it might mean you submit information that is out of date._
 
-Here is how Orbeon Forms performs the rebuild, recalculate and revalidate operations before a submission:
+Here is how Orbeon Forms performs the `rebuild`, `recalculate` and `revalidate` operations before a submission:
 
 * Perform rebuild if:
     * the deferred flag for `rebuild` is set
@@ -224,7 +228,7 @@ Here is how Orbeon Forms performs the rebuild, recalculate and revalidate operat
     * and the data to submit belongs to an instance (as opposed to a non-instance XML node)
     * and the final effective of the validate attribute is true
 
-The "effective value" for the validate, relevant and xxf:calculate attributes is the value after considering:
+The "effective value" for the `validate`, `relevant` and `xxf:calculate` attributes is the value after considering:
 
 * each attribute's default value
 * resolution of AVTs
