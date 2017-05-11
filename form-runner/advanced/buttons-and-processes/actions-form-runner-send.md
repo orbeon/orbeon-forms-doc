@@ -29,7 +29,17 @@ The following parameters can be used:
 - <a name="send_parameter_property"></a>`property`: specifies an optional property prefix
 - <a name="send_parameter_uri"></a>`uri`: URL to which to send the data
 - <a name="send_parameter_method"></a>`method`: `GET`, `POST`(default), or `PUT`
-- <a name="send_parameter_prune"></a>`prune`: whether to prune non-relevant nodes (`true` by default)
+- <a name="send_parameter_nonrelevant"></a>`nonrelevant`
+    - [SINCE Orbeon Forms 2017.1]
+    - values
+        - `keep`: all values are serialized, 
+        - `remove`: non-relevant values are not serialised 
+        - `empty`: non-relevant nodes are serialized as empty values
+    - default: `remove`
+- <a name="send_parameter_prune"></a>`prune`
+    - [DEPRECATED SINCE Orbeon Forms 2017.1]
+    - use `nonrelevant` instead
+    - whether to prune non-relevant nodes (`true` by default)
 - <a name="send_parameter_annotate"></a>`annotate`: space-separated list of levels to annotate elements (the empty string by default)
 - <a name="send_parameter_replace"></a>`replace`: `all` to load the resulting response in the browser, or `none` (default)
 
@@ -129,6 +139,7 @@ The following properties can be used to configure a `send` action with propertie
 
 - property prefix + `.uri`: see [`uri` parameter](#send_parameter_property)
 - property prefix + `.method`: see [`method` parameter](#send_parameter_method)
+- property prefix + `.nonrelevant`: see [`prune` parameter](#send_parameter_nonrelevant)
 - property prefix + `.prune`: see [`prune` parameter](#send_parameter_prune)
 - property prefix + `.annotate`: see [`annotate` parameter](#send_parameter_annotate)
 - property prefix + `.replace`: see [`replace` parameter](#send_parameter_replace)
