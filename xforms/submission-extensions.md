@@ -138,21 +138,13 @@ Prior to Orbeon Forms 4.9, the two properties were looked at in order:
 
 When an `<xf:submission>` with `replace="all"` is executed, in general, the browser will load another page. While this happens, the loading indicator, by default shown in red at the top right of the window, is displayed. However, when the browser is served not a web page but say a ZIP file, the browser might ask you in you want to download it, and then stay in the current page. When this happens, the loading indicator does not go away.
 
-In those cases where you know that the target page does not replace the current page, you can prevent the loading indicator from being displayed by adding the `xxf:show-progress="false"`attribute:
+In those cases where you know that the target page does not replace the current page, you can prevent the loading indicator from being displayed by adding the `xxf:show-progress="false"`attribute. [Since Orbeon Forms 2017.1] The value of the `xxf:target` attribute is interpreted as an AVT.
 
-```xml
-<xf:submission xxf:show-progress="false"/>
-```
+Similarly the `xxf:show-progress="false"` attribute can be used with the `xf:load` action.
 
-Similarly the `xxf:show-progress="false"` attribute can be used with the `xf:load` action:
+## Target window or frame
 
-```xml
-<xf:load xxf:show-progress="false"/>
-```
-
-## Specifying an HTML target window or frame with the xxf:target attribute
-
-You can use the `xxf:target` attribute on both `<xf:submission>` and `xf:load`. It behaves just like the [HTML target attribute][5]. When used on `<xf:submission>`, it only makes sense to use this attribute when you have `replace="all"`. Using this attribute to load a page in a new page is a case where you should add the `xxf:show-progress="false" `attribute.
+You can use the `xxf:target` attribute on both `<xf:submission>` and `xf:load`. It behaves just like the [HTML target attribute][5]. When used on `<xf:submission>`, it only makes sense to use this attribute when you have `replace="all"`. Using this attribute to load a page in a new page is a case where you should add the `xxf:show-progress="false" `attribute. The value of the `xxf:target` attribute is interpreted as an AVT.
 
 ## Replacing other instances with the xxf:instance attribute
 
