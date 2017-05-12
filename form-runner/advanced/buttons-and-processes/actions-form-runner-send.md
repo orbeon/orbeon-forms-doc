@@ -107,6 +107,14 @@ The following parameters can be used:
     - if `replace` is set to `all`, whether to continue showing the loading the indicator while the browser navigates away from the current page
     - typically, you'll only want to set this parameter to `false` if you know that URL the browser navigates to won't replace the current page, say because the page will be opened in another window, or be downloaded by the browser
     - default: `true`
+    
+- <a name="send_parameter_target"></a>`target`:
+
+    [SINCE Orbeon Forms 2017.1]
+
+    - if `replace` is set to `all`, specifies the name of the window where to display the result from the `send()`, with same semantic as the [HTML `target` attribute on `<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target)
+    - typically, if setting a `target`, you'll also want to add a `replace = "false"` attribute, so the loading indicator on the current page doesn't stay after the content in the target page has been loaded
+    - default: none
 
 ### Using properties
 
