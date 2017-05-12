@@ -84,13 +84,14 @@ In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use
 
 Each provider supports standard properties, as follows:
 
-Property                                                                    | Explanation
-----------------------------------------------------------------------------|-------------------------------------------------------
-[`oxf.fr.persistence.[provider].uri`](#property_uri)                        | specifies the location, via HTTP, of the provider implementation.
-[`oxf.fr.persistence.[provider].active`](#property_active)                  | specifies whether the provider is active
-[`oxf.fr.persistence.[provider].autosave`](#property_autosave)              | specifies whether [autosave](../../form-runner/persistence/autosave.md) is supported.
-[`oxf.fr.persistence.[provider].permissions`](#property_permissions)        | specifies whether user/group permissions are supported
-[`oxf.fr.persistence.[provider].versioning`](#property_versioning)          | specifies whether versioning is supported
+Property                                                                             | Explanation
+-------------------------------------------------------------------------------------|-------------------------------------------------------
+[`oxf.fr.persistence.[provider].uri`](#property_uri)                                 | specifies the location, via HTTP, of the provider implementation.
+[`oxf.fr.persistence.[provider].active`](#property_active)                           | specifies whether the provider is active
+[`oxf.fr.persistence.[provider].autosave`](#property_autosave)                       | specifies whether [autosave](../../form-runner/persistence/autosave.md) is supported.
+[`oxf.fr.persistence.[provider].permissions`](#property_permissions)                 | specifies whether user/group permissions are supported
+[`oxf.fr.persistence.[provider].versioning`](#property_versioning)                   | specifies whether versioning is supported
+[`oxf.fr.persistence.[provider].data-format-version`](#property_data-format-version) | specifies the data format version used in the database
 
 ### <a name="property_uri"></a> `uri` property
 
@@ -175,6 +176,32 @@ This is used as follows (confirmed for Orbeon Forms 4.5 to 4.10):
     name="oxf.fr.persistence.[provider].versioning"
     value="[true|false]"/>
 ```
+
+### <a name="property_data-format-version"></a> `data-format-version` property
+
+[SINCE Orbeon Forms 2017.1]
+
+The `data-format-version` property specifies which data format version is in the database.
+
+Allowed values:
+
+- `4.0.0`
+- `4.8.0`
+
+The values must match exactly.
+
+The default is `4.0.0` for backward compatibility.
+
+This property must be changed very carefully. All form data in the database for a given provider must be in the same format and it is not possible, at this point, to change the value of this property if there is existing data in the database.
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.fr.persistence.*.data-format-version"
+    value="4.8.0"/>
+```
+
+_NOTE: As of Orbeon Forms 2017.1, the `oxf.fr.detail.new.service.enable` property always assumes data in `4.0.0` format even if the property above is set to a different value._
 
 ## Multiple databases of the same type
 

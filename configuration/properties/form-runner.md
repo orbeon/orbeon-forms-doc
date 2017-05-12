@@ -32,6 +32,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.persistence.[provider].autosave`
     * `oxf.fr.persistence.[provider].permissions`
     * `oxf.fr.persistence.[provider].versioning`
+    * `oxf.fr.persistence.[provider].data-format-version`
 * [Form Runner Access Control](../../form-runner/access-control/README.md)
     * `oxf.fr.support-owner-group`
     * `oxf.fr.authentication.method`
@@ -637,6 +638,10 @@ Use the authorization mechanism for services (see [Authorization of pages and se
 * Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when POSTing to Form Runner.
 * Your authorizer service must validate those credentials.
 
+[SINCE Orbeon Forms 2017.1]
+
+If `data-format-version=edge` is *not* specified, then the data POSTed is assumed to be in the same format as the form's database provider.
+
 #### Initial data from service
 
 With the following properties, you can configure Form Runner to call a service instead of using the default instance provided as part of the form:
@@ -665,6 +670,8 @@ The following property defines a space-separated list of request parameters to b
 ```
 
 *NOTE: Enabling `oxf.fr.detail.new.service.enable` doesn't change the behavior with regard to POSTed instance: even if you are calling a service to get the initial instance, the POSTed instance will be used when a document is POSTed to the corresponding "new form" page.*
+
+_NOTE: As of Orbeon Forms 2017.1, the `oxf.fr.persistence.*.data-format-version` property does not affect `oxf.fr.detail.new.service.enable` and the data returned by the service must still be in `4.0.0` format in all cases._
 
 ## View page
 
