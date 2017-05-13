@@ -53,7 +53,7 @@ where:
 
 ## Optional features
 
-[SINCE: Orbeon Forms 4.4]
+[SINCE Orbeon Forms 4.4]
 
 If your persistence provider does not support drafts, you can specifically turn off the autosave feature for that persistence layer with the `oxf.fr.persistence.*.autosave` property. See [Autosave](../../persistence/autosave.md) and [persistence layer configuration](../../../configuration/properties/persistence.md) for details.
 

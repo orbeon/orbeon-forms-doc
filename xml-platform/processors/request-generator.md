@@ -139,7 +139,7 @@ When the request includes `/request/body`, the Request generator retrieves the b
 * If the attribute `stream-type` on the `config` element is set to `xs:anyURI`, an URI is returned as the value of the `/request/body` element.
 * If the attribute `stream-type` on the `config` element is set to `xs:base64Binary`, the content of the request encoded as Base64 is returned as the value of the `/request/body` element.
 * Otherwise, the content of the `/request/body` is set as either `xs:anyURI` if the request body is large (as set by the `max-upload-memory-size` property, by default larger than 10 KB), or `xs:base64Binary` if the request body is small.
-* The URL stored as the value of the request body is only valid for the duration of the current request, unless the `stream-scope` attribute is set to `session`, in which case it is valid for the duration of the session. [SINCE: 2010-12-09]
+* The URL stored as the value of the request body is only valid for the duration of the current request, unless the `stream-scope` attribute is set to `session`, in which case it is valid for the duration of the session. [SINCE 2010-12-09]
 
 Examples of configuration:
 

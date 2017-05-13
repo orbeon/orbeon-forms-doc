@@ -251,7 +251,7 @@ The resulting tree represents the itemset hierarchy as seen by the control, with
 * hierarchy of the itemset
 * item label
 * item value
-* item help and hint if present [SINCE: Orbeon Forms 4.5]
+* item help and hint if present [SINCE Orbeon Forms 4.5]
 * item attributes (JSON only)
     * `class` attribute if present
     * `style` attribute if present
@@ -609,7 +609,7 @@ The `xxf:repeat-current()` function allows you to obtain a reference to an enclo
 The `xxf:repeat-current()` function must be called from within an `xf:repeat` element.
 ## xxf:repeat-items()
 
-[SINCE: Orbeon Forms 4.5]
+[SINCE Orbeon Forms 4.5]
 
 _NOTE: This function is also available in previous versions of Orbeon Forms as xxf:repeat-nodeset()._
 

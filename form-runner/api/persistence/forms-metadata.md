@@ -28,7 +28,7 @@ Finally it aggregates the results returned by each implementation.
 
 #### Restricting by app/form name
 
-[SINCE: Orbeon Forms 4.3]
+[SINCE Orbeon Forms 4.3]
 
 Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about published forms in that specific app, or that specific app and form is returned.
 

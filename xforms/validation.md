@@ -38,7 +38,7 @@ Orbeon Forms performs validation of a node in the following order:
 
 ### Multiple constraints and alerts
 
-[SINCE: Orbeon Forms 4.3]
+[SINCE Orbeon Forms 4.3]
 
 XForms allows a single `constraint` attribute on the `xf:bind` element. Orbeon Forms extends this to support any number of nested `xf:constraint` elements, each specifying a single validation:
 
@@ -78,7 +78,7 @@ If there is a single error constraint, the following binds are equivalent:
 
 ### Validation levels
 
-[SINCE: Orbeon Forms 4.3]
+[SINCE Orbeon Forms 4.3]
 
 Orbeon Forms supports the following validation levels:
 
@@ -100,7 +100,7 @@ A warning or info level does not make the control value invalid and it is still 
 
 ### Nested validation elements
 
-[SINCE: Orbeon Forms 4.9]
+[SINCE Orbeon Forms 4.9]
 
 Instead of `type` and `required` attributes, you can use `xf:type` and `xf:required` elements nested within `xf:bind`.
 
@@ -132,7 +132,7 @@ This allows having distinct alerts for indicating:
 
 ### Multiple alerts
 
-[SINCE: Orbeon Forms 4.3]
+[SINCE Orbeon Forms 4.3]
 
 A control can have more than one `xf:alert` element. By default, an `xf:alert` is considered the *default* alert for the control and is active for all validation levels and constraints:
 
@@ -265,7 +265,7 @@ These events are dispatched just before `xforms-revalidate` completes, to all in
 
 ### xxforms-constraints-changed event
 
-[SINCE: Orbeon Forms 4.3]
+[SINCE Orbeon Forms 4.3]
 
 This event is dispatched to a control whenever the list of failed constraints associated with the control's bound node change.
 
