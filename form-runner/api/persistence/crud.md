@@ -47,11 +47,31 @@ curl
 
 ## URL parameters
 
-[SINCE: Orbeon Forms 4.2]
+### Supported by the persistence implementation
 
-When data is stored using PUT, the following URL parameter is set:
+[SINCE Orbeon Forms 2017.1]
 
-* `valid`: whether the data sent satisfies validation rules
+- `nonrelevant`
+    - when using GET for data only
+    - values
+        - `remove`: remove all XML data elements with attribute `fr:relevant="false"`
+        - missing: do not remove XML data elements
+        
+_NOTE: This property only operates properly on data stored with Orbeon Forms 2017.1 and newer, as only Orbeon Forms 2017.1 and newer stores data with the `fr:relevant="false"` annotation._
+
+### Passed by Form Runner
+
+[SINCE Orbeon Forms 4.2]
+
+The following URL parameters are set by Form Runner:
+
+- `valid`
+    - passed when data is stored using PUT only
+    - values
+        - `true`: data sent satisfies validation rules
+        - `false`: data sent does not satisfy validation rules
+    
+This allows a persistence implementation to store this information if desired.
 
 Example:
 
