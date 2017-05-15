@@ -39,6 +39,7 @@ As of 2016-04-19 this page is still being updated.
         - minimum/maximum length
         - positive, positive or zero, negative or zero, or negative value
         - maximum fractional digits
+        - attachment sizes and file types
     - errors, warnings, and informational validations
     - custom alert messages per validation
 - Access control
