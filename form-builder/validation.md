@@ -163,6 +163,14 @@ A common constraint consists of the following:
   - SINCE Orbeon Forms 2016.1
   - applies to "Decimal" type only
   - the constraint fails if the decimal number has more than the specified number of significant digits (trailing zeros are ignored)
+- "Maximum Attachment Size"
+  - SINCE Orbeon Forms 2017.1
+  - applies to attachment types only ("URI")
+  - the constraint fails if the attachment size is larger than the specified size
+- "Supported File Types"
+  - SINCE Orbeon Forms 2017.1
+  - applies to attachment types only ("URI")
+  - the constraint fails if the attachment mediatype doest not match one of the included mediatypes or mediatype wildcards
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
 
