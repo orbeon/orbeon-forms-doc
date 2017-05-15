@@ -2,6 +2,109 @@
 
 <!-- toc -->
 
+## Annotating submitted XML data with xxf:annotate
+
+### Introduction
+
+The optional `xxf:annotate` may contain tokens which specify whether to annotate some elements in the submitted XML data.
+ 
+This only allows annotating elements, not attributes.
+
+### Errors, warnings and informational messages
+
+[SINCE Orbeon Forms 4.6]
+
+The `xxf:annotate` attribute's `error`, `warning` and `info` tokens specify that elements with failed error, warning
+or information constraints must be annotated. For example, the following annotates failed error and warnings:
+
+```xml
+<xf:submission
+    id="my-submission"
+    method="post"
+    xxf:annotate="error warning"
+    .../>
+```
+
+By default, the attributes are called `xxf:error`, `xxf:warning` and `xxf:info` and are in the `http://orbeon.org/oxf/xml/xforms` namespace.
+
+The resulting XML will contain annotations like this:
+
+```
+<my-data>
+    <text xxf:error="The value must contain at most 140 characters"/>
+    <number xxf:warning="The value should probably be larger"/>
+</my-data>
+```
+
+[SINCE Orbeon Forms 2017.1]
+
+You can specify a custom attribute name. For example:
+
+```xml
+<xf:submission
+    id="my-submission"
+    method="post"
+    xxf:annotate="foo:error bar:warning"
+    .../>
+```
+
+In this example, the `foo` and `bar` prefixes must be in scope on the `<xf:submission>` element or one of its ancestors.
+
+### Element relevance information
+
+[SINCE Orbeon Forms 2017.1]
+
+The `xxf:annotate` attribute's `relevant` token specifies that elements in the submitted XML data must be annotated with
+an attribute when the element is not relevant.
+
+- This only applies when the `nonrelevant` attribute on the submission is set to `keep` or `empty` (or when the backward
+compatibility `relevant` attribute is set to `false`).
+- The attribute is only placed when elements are not relevant. This means that the value of the attribute is always `false`.
+- By default, the attribute is called `xxf:relevant` and is in the `http://orbeon.org/oxf/xml/xforms` namespace.
+  
+Basic example:
+
+```xml
+<xf:submission
+    id="my-submission"
+    method="post"
+    nonrelevant="keep"
+    xxf:annotate="relevant"
+    ...>
+```
+
+The resulting XML will contain annotations like this for non-relevant elements:
+
+```xml
+```
+<my-data>
+    <street xxf:relevant="false">Main Street</street>
+</my-data>
+```
+
+You can specify a custom attribute name. For example, Form Runner uses:
+
+```xml
+<xf:submission
+    xmlns:fr="http://orbeon.org/oxf/xml/form-runner"
+    id="my-submission"
+    nonrelevant="keep"
+    xxf:annotate="relevant=fr:relevant"
+    method="post"
+    ...>
+```
+
+In this example, the `fr` prefix must be in scope on the `<xf:submission>` element or one of its ancestors.
+
+The resulting XML will contain annotations like this:
+
+```xml
+<street fr:relevant="false">Main Street</street>
+```
+
+Before the document is annotated, any occurrence of the `xxf:relevant` (or custom) attribute is removed to ensure
+consistency.
+
 ## Read-only XForms instances with xxf:readonly
 
 Orbeon Forms supports an extension attribute, `xxf:readonly`, on the `<xf:instance>` and <xf:submission> elements. When set to `true`, this attribute signals that once loaded, the instance is read-only, with the following consequences:
@@ -26,7 +129,6 @@ The `xxf:readonly` attribute on `<xf:instance>` determines if the instance is re
 After an instance is replaced, it can be read-only or not irrelevant of the of `xxf:readonly` on `<xf:instance>`. When the instance is replaced, the replaced instance is read-only if and only if the `<xf:submission>` that does the replacement has a attribute `xxf:readonly="true"`.
 
 When this attribute is set to true on `<xf:submission>` and if the `targetref` attribute is specified, the replacement target must be an instance's root element.
-
 
 ## HTTP authentication
 
