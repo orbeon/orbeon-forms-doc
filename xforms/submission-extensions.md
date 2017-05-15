@@ -30,7 +30,7 @@ By default, the attributes are called `xxf:error`, `xxf:warning` and `xxf:info` 
 The resulting XML will contain annotations like this:
 
 ```
-<my-data>
+<my-data xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
     <text xxf:error="The value must contain at most 140 characters"/>
     <number xxf:warning="The value should probably be larger"/>
 </my-data>
@@ -44,7 +44,7 @@ You can specify a custom attribute name. For example:
 <xf:submission
     id="my-submission"
     method="post"
-    xxf:annotate="foo:error bar:warning"
+    xxf:annotate="error=foo:error warning=bar:warning"
     .../>
 ```
 
@@ -77,7 +77,7 @@ The resulting XML will contain annotations like this for non-relevant elements:
 
 ```xml
 ```
-<my-data>
+<my-data xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
     <street xxf:relevant="false">Main Street</street>
 </my-data>
 ```
@@ -99,7 +99,9 @@ In this example, the `fr` prefix must be in scope on the `<xf:submission>` eleme
 The resulting XML will contain annotations like this:
 
 ```xml
-<street fr:relevant="false">Main Street</street>
+<my-data xmlns:fr="http://orbeon.org/oxf/xml/form-runner">
+    <street fr:relevant="false">Main Street</street>
+</my-data>
 ```
 
 Before the document is annotated, any occurrence of the `xxf:relevant` (or custom) attribute is removed to ensure
