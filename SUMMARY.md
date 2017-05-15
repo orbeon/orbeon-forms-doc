@@ -54,6 +54,7 @@
         * [Terminology](form-runner/overview/terminology.md)
     * [Components](form-runner/component/README.md)
         * [Alert dialog](form-runner/component/alert-dialog.md)
+        * [Attachment](form-runner/component/attachment.md)
         * [Autocomplete](form-runner/component/autocomplete.md)
         * [Captcha](form-runner/component/captcha.md)
         * [Character counter](form-runner/component/character-counter.md)

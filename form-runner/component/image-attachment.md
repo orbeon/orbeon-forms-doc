@@ -15,3 +15,14 @@ By default the component accepts `image/*` mediatypes.
 
 If an [`upload-mediatypes` custom constraint](../../xforms/xpath/extension-validation.md#xxfupload-mediatypes) is
 present and not blank, it is used applied to the enclosed upload control. If missing, the default is `image/*`.
+
+## Events
+
+[SINCE Orbeon Forms 2017.1]
+
+This component dispatches the following events following the enclosed upload control:
+
+- `xxforms-upload-start`
+- `xxforms-upload-cancel`
+- `xxforms-upload-done`
+- `xxforms-upload-error`
