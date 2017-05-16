@@ -2,6 +2,23 @@
 
 <!-- toc -->
 
+## Children pages
+
+- [FAQ](faq.md)
+- Guide
+    - [Tutorial](tutorial.md)
+    - [Bindings](bindings.md)
+    - [XForms models](xforms-models.md)
+    - [Including content](including-content.md)
+    - [Event handling](event-handling.md)
+    - [Conventions](conventions.md)
+    - [Learning from existing components](learning-from-existing-components.md)
+- Advanced topics
+    - [Modes](modes.md)
+    - [JavaScript companion classes](javascript.md)
+    - [XBL library](library.md)
+    - [Extensions](extensions.md)
+
 ## Why are components needed?
 
 The Orbeon Forms XForms engine proposes out of the box a set of controls, including input fields, radio buttons, etc. Those are typically implemented natively within the XForms engine.
