@@ -357,11 +357,40 @@ Similar to general headers forwarding, cookies can be forwarded. By default, the
     value="JSESSIONID JSESSIONIDSSO"/>
 ```
 
-This is typically used to forward session cookies to the same application server.
-
-Be sure to place the main session cookie name first in the list, as special handling takes place with that cookie.
-
-_NOTE: When a username for HTTP Basic authentication is specified, cookies are not forwarded._
+When a username for HTTP Basic authentication is specified, cookies are not forwarded. The first cookie in the list, typically `JSESSIONID`, is interpreted by Orbeon Forms to be the session cookie. If the value of the session cookie doesn't match the current session, say because the provided `JSESSIONID` has expired or is invalid, then the value of the cookie from the incoming request isn't forwarded. Instead, in that case, the new value of the session cookie is:
+ 
+- [UP TO Orbeon Forms 2016.3] The session id.
+- [SINCE Orbeon Forms 2017.1] The concatenation of the following 3 values: 
+ 
+     1. The value of the `oxf.http.forward-cookies.session.prefix` property
+     2. The session id
+     3. The value of the `oxf.http.forward-cookies.session.suffix` property
+     
+    By default, the value of the prefix and suffix properties is empty, as shown below, which works well with application servers like Tomcat that set the `JSESSIONID` directly to the session id.   
+    
+    ```xml
+    <property 
+        as="xs:string"
+        name="oxf.http.forward-cookies.session.prefix"         
+        value=""/>
+    <property
+        as="xs:string"
+        name="oxf.http.forward-cookies.session.suffix"
+        value=""/>
+    ```
+    
+    On the other hand, some application servers, add a prefix and suffix to the session id. For instance, WebSphere uses the *cache id* as prefix, and the colon character (`:`) followed by the *clone id* as suffix. So, on WebSphere, assuming that in your situation the *cache id* is always `0000`, and the *client id* (found in WebSphere's `plugin-cfg.xml`) is `123`, you will want to set those properties as shown below. Note how the value of the *client id* follows the colon character in the value of the suffix property.
+    
+    ```xml
+    <property 
+        as="xs:string"
+        name="oxf.http.forward-cookies.session.prefix"         
+        value="0000"/>
+    <property
+        as="xs:string"
+        name="oxf.http.forward-cookies.session.suffix"
+        value=":123"/>
+    ```
 
 _WARNING: For security reasons, you should be careful with cookies forwarding, as this might cause non trusted services to receive client cookies._
 
