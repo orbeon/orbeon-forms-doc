@@ -387,7 +387,7 @@ The following property allows you to show hints in the `view` an `pdf` modes. By
     value="true"/>
 ```
 
-## PDF
+## PDF mode
 
 ### Custom PDF filename
 
