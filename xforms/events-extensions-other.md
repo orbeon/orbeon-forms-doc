@@ -55,7 +55,7 @@ _NOTE: In the future, the XBL 2 default action phase could be integrated if cons
 
 _NOTE: In most cases, the `ev:phase` attribute can be omitted, in which case the `target` or `bubbling` phase is matched. This allows placing a handler directly within a target element, or any of its ancestors, which are the most common use cases in XForms._  
 
-## Enhanced xf:dispatch support
+## Adding context information to events 
 
 Orbeon Forms supports passing event context attributes with the XForms 2.0 `<xf:property>` child element. The actions supported are actions which directly cause an event to be dispatched:
 
@@ -95,6 +95,26 @@ Context attributes passed this way can be retrieved using the `event()` function
 ```
  
 _NOTE: At the moment, with, `<xf:dispatch>`, only custom events support passing context attributes this way. Built-in events, such as `xforms-value-changed`, or `DOMActivate`, ignore nested `<xf:property>` elements._
+
+## Allowing duplicate event in the event queue
+ 
+[SINCE Orbeon Forms 2017.1]
+
+Prior to Orbeon Forms 2017.1, the `<xf:dispatch>` action used with a `delay` value would always add all events to the event queue. This was not per the XForms specification, which says that events with the same name and effective target as ones already in the event queue are skipped.
+ 
+Orbeon Forms 2017.1 rectifies that to follow XForms and skips duplicates. This change of default is usually not a problem.
+
+To allow duplicates, the `xxf:allow-duplicates="true"` attribute is supported:
+
+```xml
+<xf:dispatch
+    name="my-event"
+    targetid="my-targetid"
+    delay="10"
+    xxf:allow-duplicates="true"/>
+```
+
+`xxf:allow-duplicates` is an AVT.
 
 ## Enhanced support for xforms-select and xforms-deselect
 
