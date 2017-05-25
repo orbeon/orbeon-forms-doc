@@ -20,7 +20,7 @@ Actions are tightly coupled with services. In the future, support might be added
 
 [UNTIL Orbeon Forms 2016.3]
 
-![Actions Editor](images/actions.png)
+![Actions Editor](images/actions-notabs.png)
 
 ## Basic action configuration
 
@@ -48,6 +48,8 @@ Like for services, once your action is defined, the Save buttons saves it to the
 
 Use "Set Service Request Values".
 
+![Actions Editor Service Request Actions](images/actions-request.png)
+
 Each row instructs the action to take the value of a form control and store it into the body of the XML service request.
 
 - **Source Control.** Specifies the control whose value must be used.
@@ -69,7 +71,6 @@ You can add as many such rows as you want using the "+" button, and remove exist
 #### Passing URL parameters to GET and DELETE methods
 
 [SINCE Orbeon Forms 2016.1]
-
 
 The HTTP Service Editor [allows you to define URL parameters](https://doc.orbeon.com/form-builder/http-services.html#url-parameters)  when using the GET and DELETE HTTP methods. In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, for example:  
 
