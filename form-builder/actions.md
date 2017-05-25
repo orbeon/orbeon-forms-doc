@@ -14,31 +14,69 @@ The Form Builder Actions Editor is an [Orbeon Forms PE](http://www.orbeon.com/do
 
 Actions are tightly coupled with services. In the future, support might be added for actions which do not require services.
 
+## Basic action configuration
+
+### With Orbeon Forms 2017.1 or newer
+
 [SINCE Orbeon Forms 2017.1]
 
 ![Actions Editor General Settings](images/actions-general-settings.png)
+
+This is the meaning of the fields of the dialog:
+
+- __Action Name__
+    - This is the name of the action, as seen by Form Builder.
+    - Must start with a letter, and may not contain spaces.
+- __Condition__
+    - __Run always__: Run the action independently from the form mode.
+    - __Run on creation only__: Run the action only in creation mode, that is when the user creates new data, as opposed to editing, viewing, emailing, or generating a PDF.
+- __Run action when__
+    - Specifies a phrase built of the following parts:
+        - "the control"
+            - label / name of the control
+                - "changes its value"
+                - or "appears or changes its value"
+                - or "is activated" (a button is activated or the "Enter" key is pressed in a text line)
+        - or "the form loads"
+            - "after the controls are ready"
+                - This is the default.
+                - The action runs when controls are "live", which means you can set their values and list of choices.
+            - "after the data is ready"
+                - The action runs when the data is ready:
+                    - It has been loaded from the database if needed.
+                    - Its initial values and calculations are up to date.
+                - You cannot set control values and list of choices as a result.
+                - You can store datasets as a result.
+            - "before the data's initial values are calculated"
+                - The action runs before the data is ready.
+                - You cannot set control values and list of choices as a result.
+                - You can store datasets as a result.
+- __Service to Call.__
+    - The service to call as once the action is triggered.
+
+Like for services, once your action is defined, the Save buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the action name. You can also delete the action using the Remove button.
+
+### With Orbeon Forms 2016.3 or earlier
 
 [UNTIL Orbeon Forms 2016.3]
 
 ![Actions Editor](images/actions-notabs.png)
 
-## Basic action configuration
-
 This is the meaning of the fields of the dialog:
 
-- **Action Name.** This is the name of the action, as seen by Form Builder. Must start with a letter, and may not contain spaces.
-- **React to.** The event which starts the action. Can be one of the following:
-    - **Value Change.** A control's value has changed.
-    - **Value Change or Form Load.** A control's value has changed OR the form just finished loading.
-    - **Activation.** A button has been clicked, or the "Enter" key has been pressed in a text line.
-    - **Form Load.** The form just finished loading.
-- **Condition.**
-    - **Run always.** Run the action independently from the form mode.</span></font>
-    - **Run on creation only.** Run the action only in creation mode, that is when the user creates new data, as opposed to editing, viewing, emailing, or generating a PDF.
-- **Control.** Except for the Form Load event which does not depend on a particular control, this specifies which control the action reacts to.
-- **Service to Call.** The service to call as a response to the action.
+- __Action Name.__ This is the name of the action, as seen by Form Builder. Must start with a letter, and may not contain spaces.
+- __React to.__ The event which starts the action. Can be one of the following:
+    - __Value Change.__ A control's value has changed.
+    - __Value Change or Form Load.__ A control's value has changed OR the form just finished loading.
+    - __Activation.__ A button has been clicked, or the "Enter" key has been pressed in a text line.
+    - __Form Load.__ The form just finished loading.
+- __Condition.__
+    - __Run always.__ Run the action independently from the form mode.
+    - __Run on creation only.__ Run the action only in creation mode, that is when the user creates new data, as opposed to editing, viewing, emailing, or generating a PDF.
+- __Control.__ Except for the Form Load event which does not depend on a particular control, this specifies which control the action reacts to.
+- __Service to Call.__ The service to call as a response to the action.
 
-Like for services, once your action is defined, the Save buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the action name. You can also delete the action using the trashcan icon.
+Like for services, once your action is defined, the Save buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the action name. You can also delete the action using the Remove button.
 
 ## Handling the service request
 
@@ -52,8 +90,8 @@ Use "Set Service Request Values".
 
 Each row instructs the action to take the value of a form control and store it into the body of the XML service request.
 
-- **Source Control.** Specifies the control whose value must be used.
-- **Destination XPath Expression.** The XPath expression, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
+- __Source Control.__ Specifies the control whose value must be used.
+- __Destination XPath Expression.__ The XPath expression, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
 
 You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
 
@@ -63,8 +101,8 @@ Use "Set Database Service Parameters".
 
 Each row instructs the action to take the value of a control and set that value as the Nth query parameter of the database service.
 
-- **Source Control.** Specifies the control whose value must be used.
-- **Parameter Number.** To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
+- __Source Control.__ Specifies the control whose value must be used.
+- __Parameter Number.__ To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
 
 You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
 
@@ -114,13 +152,13 @@ Parameters:
     - The expression is evaluated in the context of root element of the XML data returned by the service.
     - The expression can point to an element or attribute node of the response body, but can also be a more complex expression. Its result is converted to a string.
 
-### Setting the items of a selection control
+### Setting the choices of a selection control
 
 #### Basics
 
 As a result of running an action, you can set a selection control's set of items (AKA "itemset") using:
 
-- [SINCE Orbeon Forms 2017.1] the "Set Control Itemset" action
+- [SINCE Orbeon Forms 2017.1] the "Set Control Choices" action
 - [UNTIL Orbeon Forms 2016.3] the "Set response Selection Control Items" section
 
 Selection controls include dropdown menus, checkboxes, and more.
