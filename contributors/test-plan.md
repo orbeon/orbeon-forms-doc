@@ -1,4 +1,4 @@
-# Test Plan
+ # Test Plan
 
 For each release of Orbeon Forms, we follow this test plan, which tests functionality in addition to the ~800 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this](https://github.com/orbeon/orbeon-forms/issues/227).
 
@@ -8,32 +8,32 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ### Distribution \[2017.1 TODO\]
 
-- [ ] `README.md` is up to date
-  - [ ] links not broken (use Marked to save HTML, then check w/ Integrity)
-  - [ ] latest release year
-  - [ ] version number is correct
-  - [ ] links to release notes (include link to new version even if blog post not up yet)
-- [ ] file layout is correct in zip and wars
-- [ ] check WAR files have reasonable sizes (sizes as of 2016.3)
-  - `orbeon-auth.war` (3 KB)
-  - `orbeon-embedding.war` (1.3 MB)
-  - `proxy-portlet.war` (1.7 MB)
-  - `orbeon.war` (85 MB as of 2016.3)
-  - `orbeon-xforms-filter.jar` (474 KB)
+- [x] `README.md` is up to date
+  - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
+  - [x] latest release year
+  - [x] version number is correct
+  - [x] links to release notes (include link to new version even if blog post not up yet)
+- [x] file layout is correct in zip and wars
+- [x] check WAR files have reasonable sizes
+  - `orbeon-auth.war` (3 KB 2016.3/2017.1)
+  - `orbeon-embedding.war` (1.3 MB 2016.3/2017.1)
+  - `proxy-portlet.war` (1.7 MB 2016.3/2.2 MB 2017.1)
+  - `orbeon.war` (85 MB 2016.3/2017.1)
+  - `orbeon-xforms-filter.jar` (474 KB 2016.3/491 KB 2017.1)
 - [ ] check CE zip doesn't have
   - `orbeon-embedding.war`
   - `proxy-portlet.war`
 - [ ] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
     - [ ] Tomcat
-- [ ] make sure the PE license is not included
+- [x] make sure the PE license is not included
 
-### Landing Page \[2017.1 TODO\]
+### Landing Page \[2017.1 DONE\]
 
-- version number is correct in logs when starting
-- landing page
+- [x] version number is correct in logs when starting
+- [x] landing page
   - layout of FR examples
   - layout of XForms examples
-- XForms examples
+- [x] XForms examples
   - load, look reasonable, and work
 
 ### PE Features Availability \[2017.1 TODO\]
@@ -1088,7 +1088,9 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ### Noscript mode \[2017.1 TODO\]
 
-*NOTE: The noscript mode still works mostly, but has an increasing number of issues and is now deprecated.*
+[UNTIL Orbeon Forms 2016.3]
+
+*NOTE: The noscript mode still works mostly, but has an increasing number of issues and is now deprecated. We no longer need to test it thoroughly.*
 
 - orbeon/contact
 - Contact form
