@@ -182,15 +182,18 @@ You can also override the default confirmation message:
 
 ## Other actions
 
-- `review`, `edit`: navigate to these Form Runner pages
-- `summary`: navigate to this Form Runner page (a predefined process since 4.7)
+- `captcha`: Trigger the captcha.
+- `collapse-all`: Collapse all sections (when not using the wizard view).
+- `expand-all`: Expand all sections (when not using the wizard view).
+- `new-to-edit`:
+    - [SINCE Orbeon Forms 2017.1]
+    - If possible, switch the detail page's URL from new mode to edit mode. Before this action, this was done automatically as part of the `save` action.
+- `result-dialog`: Show the result dialog.
+- `review`, `edit`: Navigate to these Form Runner pages.
+- `summary`: Navigate to this Form Runner page (a predefined process since 4.7).
+- `unvisit-all`: Mark all controls as not visited.
 - `visit-all`:
-    - mark all controls as visited
+    - Mark all controls as visited.
     - [SINCE Orbeon Forms 2017.1] When using the [wizard view](../../feature/wizard-view.md) in `lax` and strict` mode, this marks all controls up to and including the latest visited page as visited. Controls on further, non-visited pages are not marked as visited.
-- `unvisit-all`: mark all controls as not visited
-- `expand-all`: expand all sections
-- `collapse-all`: collapse all sections
-- `result-dialog`: show the result dialog
-- `captcha`: trigger the captcha
-- `wizard-prev`: navigate the wizard to the previous page
-- `wizard-next`: navigate the wizard to the next page
+- `wizard-prev`: Navigate the wizard to the previous page.
+- `wizard-next`: Navigate the wizard to the next page.
