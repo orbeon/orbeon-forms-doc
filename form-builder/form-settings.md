@@ -57,13 +57,13 @@ Form options include options which apply to the entire form definition.
 
 Here is how hints appear depending on the type of control they are associated with:
 
-![](../form-runner/images/placeholder-and-inline-hints.png)
+<img alt="" src="../form-runner/images/placeholder-and-inline-hints.png" width="932">
 
 ## Form Statistics
 
 Form statistics show various counts of form elements.
 
-![](images/form-settings-stats.png)
+<img alt="" src="images/form-settings-stats.png" width="602">
 
 ## See also
 
