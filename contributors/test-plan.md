@@ -1,4 +1,4 @@
- # Test Plan
+# Test Plan
 
 For each release of Orbeon Forms, we follow this test plan, which tests functionality in addition to the ~800 automatic unit tests which run with every build of Orbeon Forms. In the future, we want to [automate most of this](https://github.com/orbeon/orbeon-forms/issues/227).
 
@@ -556,7 +556,7 @@ drop table orbeon_i_control_text ;
 
 ## Form Builder
 
-### Basic Features \[2017.1 TODO\]
+### Basic Features \[2017.1 TODO Alex\]
 
 - [ ] create new form
 - [ ] insert sections, grids, repeated grids
