@@ -15,7 +15,7 @@ General settings allow you to set:
 - the form title in the current language
 - the form description in the current language
 
-![](images/form-settings-general.png)
+<img alt="" src="images/form-settings-general.png" width="602">
 
 ## Form Options
 
