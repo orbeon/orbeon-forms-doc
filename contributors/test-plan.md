@@ -558,20 +558,20 @@ drop table orbeon_i_control_text ;
 
 ### Basic Features \[2017.1 TODO Alex\]
 
-- [ ] create new form
-- [ ] insert sections, grids, repeated grids
-- [ ] rename sections and controls
+- [x] create new form
+- [x] insert sections, grids, repeated grids
+- [x] rename sections and controls
     - check renamed in source
-- [ ] move sections
+- [x] move sections
     - up/down
     - right/left (subsections) (be aware of [#2031](https://github.com/orbeon/orbeon-forms/issues/2031))
-- [ ] repeated grid
-    - [ ] set min/max as ints
-    - [ ] set min/max as XPath expressions, e.g. `1 + 2`
-- [ ] make section repeated
-    - [ ] insert/move/remove iterations
-    - [ ] set min/max as ints
-    - [ ] set min/max as XPath expressions, e.g. `1 + 2`
+- [x] repeated grid
+    - [x] set min/max as ints
+    - [x] set min/max as XPath expressions, e.g. `1 + 2`
+- [x] make section repeated
+    - [x] insert/move/remove iterations
+    - [x] set min/max as ints
+    - [x] set min/max as XPath expressions, e.g. `1 + 2`
 - [ ] set control label, hint, items
     - [ ] plain
     - [ ] HTML
