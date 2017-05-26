@@ -39,7 +39,7 @@ Form options include options which apply to the entire form definition.
     - Use Default: use the [`oxf.fr.detail.attachment.mediatypes` property](../configuration/properties/form-runner-attachments.md#allowed-file-types)
     - Other: the maximum size allowed in bytes
 - Appearance of Control Labels
-    - Use Default: use the `oxf.xforms.label.appearance` property
+    - Use Default: use the [`oxf.xforms.label.appearance` property](../xforms/controls/input.md#per-form-properties)
     - Inline: labels show inline above the control
     - Other: a space-separated list of mediatypes or wildcard mediatypes
 - Use Placeholder for Text Fields and Text Areas
