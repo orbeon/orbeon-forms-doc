@@ -23,7 +23,7 @@ General settings allow you to set:
 
 Form options include options which apply to the entire form definition.
 
-![](images/form-settings-options.png)
+<img alt="" src="images/form-settings-options.png" width="602">
 
 - [Singleton Form](../form-runner/advanced/singleton-form.md) 
 - [Wizard View](../form-runner/feature/wizard-view.md)
