@@ -265,7 +265,7 @@ Do the following on DB2.
 
 ### Data Capture Permissions \[2017.1 TODO\]
 
-####  Setup
+#### Setup
 
 Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
 
@@ -801,7 +801,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [ ] Form for [issue #3105](https://github.com/orbeon/orbeon-forms/issues/3105) renders PDF well. 
 - [ ] "Page break before section" checkbox works 
 
-### PDF Template \[2017.1 TODO\]
+### PDF Template \[2017.1 TODO Erik\]
 
 - [ ] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - [ ] add field "name" in section "applicant"
@@ -942,7 +942,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ## Form Runner
 
-### Sample forms \[2017.1 TODO\]
+### Sample forms \[2017.1 TODO Erik\]
 
 - [ ] load all
 - [ ] Controls
@@ -1113,7 +1113,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - [#2355](https://github.com/orbeon/orbeon-forms/issues/2355)
     - [#2356](https://github.com/orbeon/orbeon-forms/issues/2356)
 
-### Wizard \[2017.1 TODO\]
+### Wizard \[2017.1 TODO Erik\]
 
 - [ ] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
     - or use FB setting for form
@@ -1161,7 +1161,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         value="all"/>
     ```
 
-### Captcha \[2017.1 TODO\]
+### Captcha \[2017.1 TODO Erik\]
 
 - enable with property
 
@@ -1184,7 +1184,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2017.1 TODO\]
+### Help popups/hint tooltips positioning \[2017.1 TODO Erik\]
 
 - create form to test general positioning
   - help on all controls ([Lorum Ipsum](http://www.lipsum.com/feed/html))
@@ -1238,7 +1238,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
-### Home Page \[2017.1 TODO\]
+### Home Page \[2017.1 TODO \]
 
 *See also Form Builder permissions above which already tests some of this.*
 
@@ -1326,7 +1326,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - delete
 - view
 
-### Excel Import \[2017.1 TODO\]
+### Excel Import \[2017.1 TODO Erik\]
 
 - `http://localhost:8080/2017.1-pe/fr/orbeon/contact/import`
 - import small doc first (`contact5.xlsx` on Dropbox)
@@ -1338,7 +1338,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - check % and ETA progress during validation and import
 - check import completes
 
-### Liferay Support \[2017.1 TODO\]
+### Liferay \[2017.1 TODO Erik\]
 
 - versions as of Orbeon Forms 2016.3
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
