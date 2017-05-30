@@ -10,7 +10,7 @@
 
 The `fr:checkbox-input` component displays a single checkbox and by default stores a value of `true` when selected and `false` when deselected.
 
-![Appearance](images/xbl-checkbox-input.png)
+<img alt="" src="images/xbl-checkbox-input.png" width="133">
 
 *NOTE: It differs from the (deprecated in Orbeon Forms 2016.1) Boolean Input field (obtained by binding an `xf:input` to a field of `xs:boolean` type) in that the Checkbox Input displays the label right next to the checkbox.*
 
