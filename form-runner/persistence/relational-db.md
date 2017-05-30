@@ -423,7 +423,10 @@ What follows applies to Orbeon Forms 4.0 and newer. For Orbeon Forms 3.9, see th
 In your `properties-local.xml`, you map an app / form / form type to the implementation of the persistence API you're using with the `oxf.fr.persistence.provider.*.*.*` [wildcard property](../../configuration/properties/README.md). For instance, if using Oracle, set the property to:
 
 ```xml
-<property as="xs:string" name="oxf.fr.persistence.provider.acme.*.*" value="oracle"/>
+<property 
+    as="xs:string" 
+    name="oxf.fr.persistence.provider.acme.*.*" 
+    value="oracle"/>
 ```
 
 ### With multiple schemas
@@ -457,8 +460,14 @@ The single schema configuration described in the previous section uses the prede
 3. Still in `properties-local.xml`, you map the `hr` and `finance` app to the respective provider:
 
     ```xml
-    <property as="xs:string" name="oxf.fr.persistence.provider.hr.*.*"      value="hr"/>
-    <property as="xs:string" name="oxf.fr.persistence.provider.finance.*.*" value="finance"/>
+    <property 
+        as="xs:string" 
+        name="oxf.fr.persistence.provider.hr.*.*"      
+        value="hr"/>
+    <property 
+        as="xs:string" 
+        name="oxf.fr.persistence.provider.finance.*.*" 
+        value="finance"/>
     ```
 
 ## Flat view or table
