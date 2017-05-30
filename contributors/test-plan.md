@@ -68,7 +68,7 @@ check that all PE features are available in PE, but not in CE:
                     { "label": "Local Liferay", "url": "http://localhost:9090/orbeon" }
                 ]
             </property>
-             ```
+            ```
         - in `web.xml` uncomment authentication section
         - access `http://localhost:8080/2016.2-ce/fr/`
         - login with `orbeon-user` (or any user with the `orbeon-user` role)
@@ -803,16 +803,27 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ### PDF Template \[2017.1 TODO Erik\]
 
-- [ ] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
-- [ ] add field "name" in section "applicant"
-- [ ] publish and test that name appears in PDF and TIFF
-- [ ] change
-- [ ] remove PDF
+- [x] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
+- [x] add field "name" in section "applicant"
+- [x] publish and test that name appears in PDF and TIFF
+- [x] remove PDF
   - publish and test, must see notemplate PDF/TIFF
-- [ ] check that DMV-14 PDF works and is filled out
+- [ ] check that custom filename works
+    ```xml
+    <property
+        as="xs:string"
+        name="oxf.fr.detail.tiff.filename.a.a"
+        value="'abc'"/>
+
+    <property
+        as="xs:string"
+        name="oxf.fr.detail.pdf.filename.a.a"
+        value="'abc'"/>
+    ```
+- [x] check that DMV-14 PDF works and is filled out
   - check Vote and Leased checkboxes
   - check that state appears ([#3053](https://github.com/orbeon/orbeon-forms/issues/3053))
-- [ ] W9 form
+- [x] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
 ### Form Builder Permissions \[2017.1 TODO\]
