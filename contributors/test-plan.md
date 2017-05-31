@@ -1125,11 +1125,11 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - [#2355](https://github.com/orbeon/orbeon-forms/issues/2355)
     - [#2356](https://github.com/orbeon/orbeon-forms/issues/2356)
 
-### Wizard \[2017.1 TODO Erik\]
+### Wizard \[2017.1 DONE \]
 
-- [ ] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
+- [x] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
     - or use FB setting for form
-- [ ] validated mode
+- [x] validated mode
     - `/fr/orbeon/w9/new`
     - check cannot click in TOC
     - check cannot navigate forward with error in current section
@@ -1148,24 +1148,24 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             name="oxf.fr.detail.validation-mode.orbeon.w9"     
             value="explicit"/>
         ```
-- [ ] `/fr/orbeon/controls/new`
+- [x] `/fr/orbeon/controls/new`
     - test errors in section template are highlighted in TOC
-- [ ] check that Form Builder's Wizard option enables/disables the wizard
-- [ ] separate TOC
+- [x] check that Form Builder's Wizard option enables/disables the wizard
+- [x] separate TOC
     ```xml
     <property
         as="xs:boolean"
         name="oxf.xforms.xbl.fr.wizard.separate-toc.wizard.*"    
         value="true"/>
     ```
-- [ ] subsection navigation
+- [x] subsection navigation
     ```xml
     <property
         as="xs:boolean"
         name="oxf.xforms.xbl.fr.wizard.subsections-nav.wizard.*"
         value="true"/>
     ```
-- [ ] TOC subsections
+- [x] TOC subsections
     ```xml
     <property
         as="xs:string"  
