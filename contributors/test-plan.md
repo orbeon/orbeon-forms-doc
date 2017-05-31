@@ -808,7 +808,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] publish and test that name appears in PDF and TIFF
 - [x] remove PDF
   - publish and test, must see notemplate PDF/TIFF
-- [ ] check that custom filename works
+- [ ] check that custom filename works [2017.1: regressed, pending fix and new test]
     ```xml
     <property
         as="xs:string"
@@ -1173,7 +1173,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         value="all"/>
     ```
 
-### Captcha \[2017.1 TODO Erik\]
+### Captcha \[2017.1 DONE\]
 
 - enable with property
 
@@ -1196,14 +1196,14 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2017.1 TODO Erik\]
+### Help popups/hint tooltips positioning \[2017.1 DONE\]
 
-- create form to test general positioning
-  - help on all controls ([Lorum Ipsum](http://www.lipsum.com/feed/html))
-  - repeats
-  - checkboxes/radios
+- [x] create form to test general positioning
+  - [x] help on all controls ([Lorum Ipsum](http://www.lipsum.com/feed/html))
+  - [x] repeats
+  - [x] checkboxes/radios
     - add hints (see [#1649](https://github.com/orbeon/orbeon-forms/issues/1649))
-- Bookshelf
+- [x] Bookshelf
     - try all helps (see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637))
 
 ### Mobile and Responsive \[2017.1 TODO\]
