@@ -1338,10 +1338,10 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - delete
 - view
 
-### Excel Import \[2017.1 TODO Erik\]
+### Excel Import \[2017.1 DONE\]
 
 - `http://localhost:8080/2017.1-pe/fr/orbeon/contact/import`
-- import small doc first (`contact5.xlsx` on Dropbox)
+- import small doc first (`contact5.xlsx` on Google Drive)
   - check 2 out of  5 docs invalid
   - continue and check import passes: 3 documents were imported
 - import larger document (`contact300.xlsx`)
