@@ -50,5 +50,5 @@ In case the app and/or form name are missing or invalid, Form Builder presents t
 
 ## See also
 
-- [Form Runner Integration](../form-builder/integration.md)
+- [Form Runner Integration](../form-runner/overview/integration.md)
 - [Form Builder Permissions](../form-runner/access-control/editing-forms.md)
