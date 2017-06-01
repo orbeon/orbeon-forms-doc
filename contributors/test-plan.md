@@ -1336,12 +1336,12 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - try `?fr-language=en` vs. `?fr-language=fr` on PDF URL
 - duplicate
 - delete
-- view
 
 ### Excel Import \[2017.1 DONE\]
 
 - `http://localhost:8080/2017.1-pe/fr/orbeon/contact/import`
-- import small doc first (`contact5.xlsx` on Google Drive)
+- import small doc first (- view
+`contact5.xlsx` on Google Drive)
   - check 2 out of  5 docs invalid
   - continue and check import passes: 3 documents were imported
 - import larger document (`contact300.xlsx`)
@@ -1352,11 +1352,13 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ### Liferay \[2017.1 TODO Erik\]
 
+- versions as of Orbeon Forms 2017.1
+  - Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
 - versions as of Orbeon Forms 2016.3
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
   - Liferay Portal Community Edition 6.1.2 CE GA3 (August 2013)
   - Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
-- [ ] setup
+- [x] setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present
   - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
   - start Liferay:
@@ -1367,28 +1369,27 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - test@liferay.com/liferay
     - *NOTE: Cannot seem to login with Chrome anymore. Tried removing JSESSIONID, still issue.*
 - [ ] proxy portlet
-  - [ ] set to point to `http://localhost:8080/2017.1-pe/`
-  - [ ] try out pages
+  - [x] set to point to `http://localhost:8080/2017.1-pe/`
+  - [x] try out pages
     - New page
     - Summary page
     - Home page
-  - [ ] set Send Liferay language
+  - [x] set Send Liferay language
     - check that language picker in FR doesn't show on 3 pages
     - change My Account → Display Settings → French
     - check that all 3 pages now show in French (be aware of [#1628](https://github.com/orbeon/orbeon-forms/issues/1628))
-  - [ ] set Send Liferay user
+  - [x] set Send Liferay user
     - check w/ HttpScoop that user headers are sent to Form Runner
       - `Orbeon-Liferay-User-*`
-  - [ ] readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
-  - [ ] edit/review/back
+  - [x] readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
+  - [x] edit/review/back
   - [ ] send to external page
   - [ ] PDF loads
     - check that checkboxes appear correctly (see [#2046](https://github.com/orbeon/orbeon-forms/issues/2046))
-  - [ ] check that TinyMCE (rich text) appears ok, including with IE9 (icons)
-  - [ ] upload works
-  - [ ] attach image and save
+  - [x] check that TinyMCE (rich text) appears ok
+  - [x] upload works
+  - [x] attach image and save
   - [ ] check singleton form works
-  - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 - [ ] full portlet
   - [ ] all examples and Form Runner
   - [ ] upload works
