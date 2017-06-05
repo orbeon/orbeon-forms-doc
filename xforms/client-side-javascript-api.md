@@ -124,6 +124,27 @@ For those, you have to go search for the nested core XForms control which holds 
 ORBEON.xforms.Document.getValue(ORBEON.jQuery(this).find('.xforms-select1')[0])
 ```
 
+### Setting focus on a control
+
+[SINCE Orbeon Forms 2017.1]
+
+```javascript
+ORBEON.xforms.Document.focus(controlIdOrElement, form)
+```
+
+This function sets keyboard focus on the given control and lets the server know about the focus change if needed.
+
+| Name | Required | Type | Description |
+| ---- | -------- | ---- | ----------- |
+| **controlIdOrElement** |  Yes |  `String` or `HTMLElement` | Either the id of the control *without namespace* (in the case of portal or embedding), or the control element.
+| **form** |  No | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in a portal and you have multiple portlets using XForms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used.
+
+Example:
+
+```javascript
+ORBEON.xforms.Document.focus('fr-view-component≡text-controls-section≡xf-788≡input-control')
+```
+
 ### Dispatching events
 
 #### Basic usage
