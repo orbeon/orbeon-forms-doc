@@ -142,7 +142,9 @@ This function sets keyboard focus on the given control and lets the server know 
 Example:
 
 ```javascript
-ORBEON.xforms.Document.focus('fr-view-component≡text-controls-section≡xf-788≡input-control')
+ORBEON.xforms.Document.focus(
+    'fr-view-component≡text-controls-section≡xf-788≡input-control'
+)
 ```
 
 ### Dispatching events
