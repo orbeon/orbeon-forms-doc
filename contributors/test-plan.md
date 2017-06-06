@@ -1385,20 +1385,20 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - [x] readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
   - [x] edit/review/back
   - [ ] send to external page
-  - [ ] PDF loads
+  - [x] PDF loads
     - check that checkboxes appear correctly (see [#2046](https://github.com/orbeon/orbeon-forms/issues/2046))
   - [x] check that TinyMCE (rich text) appears ok
   - [x] upload works
   - [x] attach image and save
   - [ ] check singleton form works
-- [ ] full portlet
-  - [ ] all examples and Form Runner
-  - [ ] upload works
-  - [ ] PDF works
+- [x] full portlet
+  - [x] all examples and Form Runner
+  - [x] upload works
+  - [x] PDF works
     - check that checkboxes appear correctly
     - *NOTE: Hit issue of double JSESSIONID once, check cookies if problems.*
-  - [ ] attach image and save, make sure image shows properly
-  - [ ] Image annotation control works (in Controls form)
+  - [x] attach image and save, make sure image shows properly
+  - ~~[ ] Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
 ### Organizations \[2017.1 TODO\]
@@ -1456,10 +1456,10 @@ Properties:
     - login as `orbeoncaliforniauser1@orbeon.com`
         - check data includes data from `orbeonfostercityuser1@orbeon.com` and `orbeonfostercityuser2@orbeon.com`
 
-### Embedding \[2017.1 TODO ERIK\]
+### Embedding \[2017.1 DONE\]
 
-- [ ] deploy `orbeon-embedding.war` into Tomcat
-- [ ] update `web.xml`:
+- [x] deploy `orbeon-embedding.war` into Tomcat
+- [x] update `web.xml`:
 
     ```xml
     <init-param>
@@ -1467,20 +1467,20 @@ Properties:
         <param-value>http://localhost:8080/2017.1-pe</param-value>
     </init-param>
     ````
-- [ ] navigate to `http://localhost:8080/2017.1-pe-embedding/`
-- [ ] go through demo forms and test
-  - enter data
-  - Save
-  - PDF
-  - repeats
-  - help/hints
-  - controls to check
+- [x] navigate to `http://localhost:8080/2017.1-pe-embedding/`
+- [x] go through demo forms and test
+  - [x] enter data
+  - [x] Save
+  - [x] PDF
+  - [x] repeats
+  - [x] help/hints
+  - [x] controls to check
       - upload
       - signature
       - number
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
-- [ ] Form Builder
+- [x] Form Builder
     - layout is ok
     - hover icons
     - dialogs
