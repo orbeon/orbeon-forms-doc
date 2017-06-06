@@ -1351,10 +1351,10 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - check % and ETA progress during validation and import
 - check import completes
 
-### Liferay \[2017.1 TODO Erik\]
+### Liferay \[2017.1 DONE\]
 
 - versions as of Orbeon Forms 2017.1
-  - Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
+  - [x] Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
 - versions as of Orbeon Forms 2016.3
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
   - Liferay Portal Community Edition 6.1.2 CE GA3 (August 2013)
@@ -1369,7 +1369,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - login
     - test@liferay.com/liferay
     - *NOTE: Cannot seem to login with Chrome anymore. Tried removing JSESSIONID, still issue.*
-- [ ] proxy portlet
+- [x] proxy portlet
   - [x] set to point to `http://localhost:8080/2017.1-pe/`
   - [x] try out pages
     - New page
@@ -1390,7 +1390,11 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - [x] check that TinyMCE (rich text) appears ok
   - [x] upload works
   - [x] attach image and save
-  - [ ] check singleton form works
+  - [x] check singleton form works
+    - create test/singleton singleton form in Form Builder, publish
+    - point to test/singleton from proxy portlet in `new` mode
+    - load portlet, enter data, save
+    - load again, check data shows (switched to `edit` mode)
 - [x] full portlet
   - [x] all examples and Form Runner
   - [x] upload works
