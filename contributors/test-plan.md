@@ -577,6 +577,7 @@ drop table orbeon_i_control_text ;
     - [ ] HTML
     - [ ] check HTML label appears correct in summary page / search
     - [ ] placeholder labels
+        - check with Controls form and look at all controls (sse [#3213](https://github.com/orbeon/orbeon-forms/issues/3213)) 
     - [ ] placeholder hints
 - [ ] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
     - [ ] plain
@@ -1397,7 +1398,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - check that checkboxes appear correctly
     - *NOTE: Hit issue of double JSESSIONID once, check cookies if problems.*
   - [ ] attach image and save, make sure image shows properly
-  - ~~Image annotation control works (in Controls form)~~
+  - [ ] Image annotation control works (in Controls form)
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
 ### Organizations \[2017.1 TODO\]
@@ -1455,7 +1456,7 @@ Properties:
     - login as `orbeoncaliforniauser1@orbeon.com`
         - check data includes data from `orbeonfostercityuser1@orbeon.com` and `orbeonfostercityuser2@orbeon.com`
 
-### Embedding \[2017.1 TODO\]
+### Embedding \[2017.1 TODO ERIK\]
 
 - [ ] deploy `orbeon-embedding.war` into Tomcat
 - [ ] update `web.xml`:
