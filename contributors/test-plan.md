@@ -23,8 +23,8 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - [ ] check CE zip doesn't have
   - `orbeon-embedding.war`
   - `proxy-portlet.war`
-- [ ] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
-    - [ ] Tomcat
+- [x] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
+    - [x] Tomcat
 - [x] make sure the PE license is not included
 
 ### Landing Page \[2017.1 DONE\]
@@ -719,7 +719,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service \[2017.1 TODO\]
+### HTTP service \[2017.1 TODO Erik\]
 
 - using echo service is ok
     - POST to `/fr/service/custom/orbeon/echo`
@@ -738,7 +738,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2017.1 TODO\]
+### Section Templates \[2017.1 TODO Erik\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
@@ -776,19 +776,19 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - fail https://github.com/orbeon/orbeon-forms/issues/3052
 - makes invalid controls in section template prevent saving
 
-### PDF Automatic \[2017.1 TODO\]
+### PDF Automatic \[2017.1 DONE\]
 
-- [ ] Controls and Bookshelf
+- [x] Controls and Bookshelf
     - input field and text areas have highlighted and clickable links
     - try TIFF output as well
-- [ ] Controls
+- [x] Controls
     - [ ] image annotation shows in PDF
     - *NOTE: Disabled in 2016.1 and 2016.2, re-enabled in 2016.3 but not re-added to Controls form.*
-- [ ] form title in header/footer
-- [ ] logo in title
-- [ ] page numbering/total at bottom center
-- [ ] PDF looks good overall
-- [ ] send PDF binary works
+- [x] form title in header/footer
+- [x] logo in title
+- [x] page numbering/total at bottom center
+- [x] PDF looks good overall
+- [x] send PDF binary works
     ```xml
     <property
         as="xs:string"
@@ -799,8 +799,8 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         send(uri = 'http://posttestserver.com/post.php?a=b', method = 'post', replace = 'all', content = 'pdf')
     </property>
     ```
-- [ ] Form for [issue #3105](https://github.com/orbeon/orbeon-forms/issues/3105) renders PDF well. 
-- [ ] "Page break before section" checkbox works 
+- [x] Form for [issue #3105](https://github.com/orbeon/orbeon-forms/issues/3105) renders PDF well. 
+- [x] "Page break before section" checkbox works 
 
 ### PDF Template \[2017.1 TODO Erik\]
 
@@ -1405,7 +1405,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~[ ] Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
-### Organizations \[2017.1 TODO\]
+### Organizations \[2017.1 TODO Erik\]
 
 Do this just after general Liferay testing (above).
 
