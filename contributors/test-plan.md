@@ -719,9 +719,9 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service \[2017.1 TODO Erik\]
+### HTTP service \[2017.1 DONE\]
 
-- using echo service is ok
+- [x] create echo service with POST
     - POST to `/fr/service/custom/orbeon/echo`
     - body:
         ```xml
@@ -730,11 +730,14 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             <item label="Bar" value="bar"/>
         </items>
         ```
-- test
-    - call service upon form load and set control value upon response
-    - same with button activation
-    - same but set service values on request from control
-    - set itemset values on response, e.g. use
+- [x] test
+    - [x] call service upon form load and set control value upon response, for example:
+        ```xpath
+        string-join(//@label, ', ')
+        ```
+    - [x] same with button activation
+    - [x] same but set service values on request from control
+    - [x] set itemset values on response
 
 ## Form Builder / Form Runner
 
