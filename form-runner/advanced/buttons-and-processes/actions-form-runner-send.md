@@ -49,7 +49,7 @@ The following parameters can be used:
 
     *SECURITY NOTE: If `replace` is set to `all`, the content of resources or redirection URLs accessible by the Orbeon Forms server are forwarded to the web browser. Care must be taken to forward only resources that users of the application are allowed to see.*
 
-- <a name="send_parameter_content"></a>`content`:`
+- <a name="send_parameter_content"></a>`content`:
     - `xml` to send the XML data (default)
     - `metadata` to send form metadata, see [details](#sending-form-metadata) [SINCE Orbeon Forms 4.7]
     - `pdf` to send the PDF binary, see [details](#sending-a-pdf-binary) [SINCE Orbeon Forms 2016.2]
