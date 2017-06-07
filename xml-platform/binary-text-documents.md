@@ -15,11 +15,14 @@ Orbeon Forms addresses this question by defining two standard XML document forma
 
 A binary document consist of a `document` root node containing character data encoded with Base64. The following attributes are supported:
 
-* `xsi:type`: mandatory, specifies the content as `xs:base64Binary`
-* `content-type`: optional, provides a content-type which may be used by the consumer
-* `last-modified`: optional, provides a last modification date which may be used by the consumer
-* `status-code`: optional, provides a status code which may be used by the consumer
-* `filename`: optional, provides a file name which may be used by the consumer
+- `xsi:type`: mandatory, specifies the content as `xs:base64Binary`
+- `content-type`: optional, provides a content-type which may be used by the consumer
+- `last-modified`: optional, provides a last modification date which may be used by the consumer
+- `status-code`: optional, provides a status code which may be used by the consumer
+- `filename`: optional, provides a file name which may be used by the consumer
+- `disposition-type`: [SINCE Orbeon Forms 2017.1] optional, when `filename` is specified:
+    - `attachment` the default, if the browser should download the document
+    - `inline` if the browser should display the document inline
 
 Example:
 
