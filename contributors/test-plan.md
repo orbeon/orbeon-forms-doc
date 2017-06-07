@@ -683,7 +683,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - check schema types are reloaded in Control Settings dialog
         - *NOTE: This is not the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
 
-### Database service \[2017.1 TODO\]
+### Database service \[2017.1 Erik TODO\]
 
 - setup db
     - use MySQL, local or on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
