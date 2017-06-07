@@ -250,7 +250,7 @@ Similarly the `xxf:show-progress="false"` attribute can be used with the `xf:loa
 
 You can use the `xxf:target` attribute on both `<xf:submission>` and `xf:load`. It behaves just like the [HTML target attribute][5]. When used on `<xf:submission>`, it only makes sense to use this attribute when you have `replace="all"`. Using this attribute to load a page in a new page is a case where you should add the `xxf:show-progress="false" `attribute. The value of the `xxf:target` attribute is interpreted as an AVT.
 
-[SINCE Orbeon Forms 2017.1] When using Safari on iOS, Orbeon Forms will ignore the value of `xxf:target` a `<xf:submission>`, as otherwise the submission is blocked by Safari's popup blocker. Consequently, with Safari on iOS, when using a `<xf:submission replace="all">` the target resource will always replace the current the current page.
+[SINCE Orbeon Forms 2017.1] When using Safari, Orbeon Forms will ignore the value of `xxf:target` a `<xf:submission>`, as otherwise the submission is blocked by Safari's popup blocker. Consequently, with Safari, when using a `<xf:submission replace="all">` the target resource will always replace the current the current page.
 
 ## Replacing other instances with the xxf:instance attribute
 
