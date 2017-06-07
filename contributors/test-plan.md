@@ -741,12 +741,12 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2017.1 TODO Erik\]
+### Section Templates \[2017.1 DONE\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
     - https://gist.github.com/ebruchez/6187704
-- create acme/library
+- [x] create acme/library
     - 3 sections
     - S1
         - 2 fields, readonly or visibility dependency from one field on the other
@@ -762,22 +762,24 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - set itemset
             - @english-name
             - @code
-    - test/save/publish
-- insert components from library into acme/test-library
+    - test/publish
+- [x] insert components from library into acme/test-library
     - insert S1 and S2 twice, S3
     - add French language
     - check language changes in builder (be aware of [#690](https://github.com/orbeon/orbeon-forms/issues/690))
     - publish
-        - check control visibility change
-        - check language changes
-        - check services load in both languages (same labels)
-        - enter data, save, check that data loads back in all fields
-        - test that repeated grid in section template shows ([#1370](https://github.com/orbeon/orbeon-forms/issues/1370)) in the builder and nicely
-        - check review, PDF
-- make sure Clear works
-    - pass [#807](https://github.com/orbeon/orbeon-forms/issues/807)
-    - fail https://github.com/orbeon/orbeon-forms/issues/3052
-- makes invalid controls in section template prevent saving
+    - test
+        - [x] check control visibility change
+        - [x] check language changes
+        - [x] check services load in both languages (same labels)
+        - [x] enter data, save, check that data loads back in all fields
+        - [x] test that repeated grid in section template shows ([#1370](https://github.com/orbeon/orbeon-forms/issues/1370)) in the builder and nicely
+        - [x] check review, PDF
+- [x] make sure Clear works
+    - [x] pass [#807](https://github.com/orbeon/orbeon-forms/issues/807)
+    - [x] fail [#3052](https://github.com/orbeon/orbeon-forms/issues/3052)
+- [x] makes invalid controls in section template prevent saving
+- [x] check all labels appear and repeats work ([#3243](https://github.com/orbeon/orbeon-forms/issues/3243))
 
 ### PDF Automatic \[2017.1 DONE\]
 
@@ -1408,7 +1410,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~[ ] Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
-### Organizations \[2017.1 DONE\]
+### Organizations \[2017.1 Erik TODO\]
 
 Do this just after general Liferay testing (above).
 
@@ -1518,6 +1520,8 @@ Properties:
         - check summary has data for `orbeonfostercityuser2@orbeon.com` only
     - [x] login as `orbeoncaliforniauser1@orbeon.com`
         - check data includes data from `orbeonfostercityuser1@orbeon.com` and `orbeonfostercityuser2@orbeon.com`
+- [x] run tests above with eXist
+- [ ] run tests above with relational
 
 ### Embedding \[2017.1 DONE\]
 
