@@ -1405,7 +1405,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~[ ] Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
-### Organizations \[2017.1 TODO Erik\]
+### Organizations \[2017.1 DONE\]
 
 Do this just after general Liferay testing (above).
 
@@ -1422,7 +1422,6 @@ World
             ├── orbeonsancarlosuser1@orbeon.com (org owner/admin)
             └── orbeonsancarlosuser2@orbeon.com            
 ```
-    
 
 Properties:
 
@@ -1440,24 +1439,81 @@ Properties:
 </property>
 ```
 
-- create `test/organizations` form
+- [x] create `test/organizations` form
      - enable permissions
         - Anyone can Create
         - Owner can Update
         - Organization Owner can Read/Update/Delete
     - publish
-- from Liferay
-    - as admin (e.g. `test@liferay.com` user)
+- [x] from Liferay proxy portlet
+    - [x] as admin (e.g. `test@liferay.com` user)
         - set proxy portlet to `test/organizations`
-        - check send user information
-    - login as `orbeonfostercityuser2@orbeon.com`
+    - [x] login as `orbeonfostercityuser2@orbeon.com`
         - enter and save data
         - check summary has data
-    - login as `orbeonfostercityuser1@orbeon.com`
+        - check with HTTP monitor that user information is in `Orbeon-Liferay-User-Credentials`:
+            ```json
+            {
+                "username":"orbeonfostercityuser2%40orbeon.com",
+                "groups":[
+                    "orbeonfostercityuser2"
+                ],
+                "roles":[
+                    {
+                        "name":"Power User"
+                    },
+                    {
+                        "name":"User"
+                    }
+                ],
+                "organizations":[
+                    [
+                        "Orbeon World",
+                        "Orbeon California",
+                        "Orbeon Foster City"
+                    ]
+                ]
+            }
+            ```
+    - [x] login as `orbeonfostercityuser1@orbeon.com`
         - check data includes data from `orbeonfostercityuser2@orbeon.com`
         - enter and save data
-        - check summary has data
-    - login as `orbeoncaliforniauser1@orbeon.com`
+        - check with HTTP monitor that user information is in `Orbeon-Liferay-User-Credentials`:
+            ```json
+                {
+                "username":"orbeonfostercityuser1%40orbeon.com",
+                "groups":[
+                    "orbeonfostercityuser1"
+                ],
+                "roles":[
+                    {
+                        "name":"Power User"
+                    },
+                    {
+                        "name":"User"
+                    },
+                    {
+                        "name":"Organization Owner",
+                        "organization":"Orbeon Foster City"
+                    },
+                    {
+                        "name":"Organization Administrator",
+                        "organization":"Orbeon Foster City"
+                    }
+                ],
+                "organizations":[
+                    [
+                        "Orbeon World",
+                        "Orbeon California",
+                        "Orbeon Foster City"
+                    ]
+                ]
+            }
+            ```
+        - check summary has data for both
+    - [x] login as `orbeonfostercityuser2@orbeon.com` again
+        - check summary has data for `orbeonfostercityuser2@orbeon.com` only
+    - [x] login as `orbeoncaliforniauser1@orbeon.com`
         - check data includes data from `orbeonfostercityuser1@orbeon.com` and `orbeonfostercityuser2@orbeon.com`
 
 ### Embedding \[2017.1 DONE\]
