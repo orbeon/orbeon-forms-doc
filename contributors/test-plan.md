@@ -683,7 +683,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - check schema types are reloaded in Control Settings dialog
         - *NOTE: This is not the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
 
-### Database service \[2017.1 Erik TODO\]
+### Database service \[2017.1 TODO Erik\]
 
 - setup db
     - use MySQL, local or on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
@@ -1256,7 +1256,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
-### Home Page \[2017.1 TODO \]
+### Home Page \[2017.1 TODO Erik \]
 
 *See also Form Builder permissions above which already tests some of this.*
 
@@ -1410,7 +1410,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~[ ] Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
-### Organizations \[2017.1 Erik TODO\]
+### Organizations \[2017.1 TODO Erik\]
 
 Do this just after general Liferay testing (above).
 
