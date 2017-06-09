@@ -194,10 +194,10 @@ This action will attempt to have the browser show the generated PDF or TIFF, and
     - PDF – All browsers will show the PDF inline directly, except Edge which will first ask users if they want to save or open it.
     - TIFF – Browsers other than Safari don't know how to show a TIFF file inline, and thus will just download the file.
 - Opening the PDF or TIFF in a new tab or browser window:
-    - Background – When users click on a button that runs the `open-rendered-format`, an Ajax request is sent to the server, where the action runs, and the window is opened by JavaScript code based on the Ajax response received from the server. Browsers implement popup blocker that prevent attempt made by JavaScript to open new windows, unless the [JavaScript code is trusted](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted) because the it runs in response to a user's action, such as clicking on a button. It is the case here, as the PDF or TIFF is opened in response to users having clicked on the corresponding button, however, since an Ajax request ran in the process, some browser lose track that it was started by a trusted event. On those browsers, the PDF or TIFF will replace the form, and users can use the browser back to get back to the form.
-     - Browser-specific behavior
+    - Background – When users click on a button that runs the `open-rendered-format`, an Ajax request is sent to the server, where the action runs, and the window is opened by JavaScript code based on the Ajax response received from the server. Browsers implement popup blockers that prevent attempt made by JavaScript to open new windows, unless the [JavaScript code is trusted](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted) because the it runs in response to a user's action, such as clicking on a button. It is the case here, as the PDF or TIFF is opened in response to users having clicked on the corresponding button. However, since an Ajax request ran in the process, some browsers lose track that it was started by a trusted event. On those browsers, the PDF or TIFF will replace the form, and users can use the browser back to get back to the form.
+    - Browser-specific behavior
         - With Chrome, IE, and Edge the PDF or TIFF will show in a new window.
-        - With Safari (iOS and macOS) and Firefox the PDF or TIFF will show in the current window.
+        - With Safari and Firefox the PDF or TIFF will show in the current window.
 
 ## Other actions
 
