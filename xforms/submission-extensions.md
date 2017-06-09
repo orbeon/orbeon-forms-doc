@@ -250,8 +250,11 @@ Similarly the `xxf:show-progress="false"` attribute can be used with the `xf:loa
 
 You can use the `xxf:target` attribute on both `<xf:submission>` and `xf:load`. It behaves just like the [HTML target attribute][5]. When used on `<xf:submission>`, it only makes sense to use this attribute when you have `replace="all"`. Using this attribute to load a page in a new page is a case where you should add the `xxf:show-progress="false" `attribute. The value of the `xxf:target` attribute is interpreted as an AVT.
 
-[SINCE Orbeon Forms 2017.1] When using Safari, Orbeon Forms will ignore the value of `xxf:target` a `<xf:submission>`, as otherwise the submission is blocked by Safari's popup blocker. Consequently, with Safari, when using a `<xf:submission replace="all">` the target resource will always replace the current the current page.
+When a submission runs in response to a user action, say a click on a button, an Ajax request is sent by the browser to the server. Then, based on the Ajax response, JavaScript runs submitting a `<form>` with a `target` attribute . Browsers implement popup blockers that prevent attempt made by JavaScript to open new windows, and this unless the [JavaScript code run in response to a trusted event](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted). A trusted event is one that happened in response to a user action, such as clicking on a button. However, even if your submission runs in response a user action, as it happens in response to an Ajax request, some browsers lose track that it was started by a trusted event, and those browsers might prevent the form submission. This is the case with Safari and Firefox (but not with Chrome, IE, and Edge).
 
+- [UP TO Orbeon Forms 2016.3] On those browsers, the new tab or window will fail to open.
+- [SINCE Orbeon Forms 2017.1] Orbeon Forms detects that the browser prevents it from opening a new tab or window, and instead loads the resource in the current tab or window.   
+ 
 ## Replacing other instances with the xxf:instance attribute
 
 On an `<xf:submission>` element with `replace="instance"`, the optional `instance` attribute specifies a destination instance for the result. That attribute is processed like the `instance()`function, which means that the instance specified must be in the current model.
