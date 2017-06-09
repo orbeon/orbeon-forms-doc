@@ -44,7 +44,7 @@ Here the following buttons get associated with processes of the same name define
 - `wizard-next`
 - `review`
 
-The `clear` button is not implemented as processes but handled directly by Form Runner. This is also the case of the `pdf` and `tiff` buttons, until Orbeon Forms 2016.3. [SINCE Orbeon Forms 2017.1] The `pdf` and `tiff` buttons are implemented using the `open-rendered-format` action.
+The `clear` button is not implemented as processes but handled directly by Form Runner. This is also the case of the `pdf` and `tiff` buttons, until Orbeon Forms 2016.3. [SINCE Orbeon Forms 2017.1] The `pdf` and `tiff` buttons are implemented using the [`open-rendered-format` action](actions-form-runner.md#open-rendered-format).
 
 ## Customizing existing processes
 
