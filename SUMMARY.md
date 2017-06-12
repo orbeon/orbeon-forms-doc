@@ -159,6 +159,7 @@
        * [Limiter filter](configuration/advanced/limiter-filter.md)
        * [Run modes](configuration/advanced/run-modes.md)
        * [Security](configuration/advanced/security.md)
+       * [SAP Hybris Module](configuration/advanced/sap-hybris.md)
        * [Upgrading from older versions](configuration/advanced/upgrading.md)
        * [XForms logging](configuration/advanced/xforms-logging.md)
    * Troubleshooting
