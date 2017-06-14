@@ -10,6 +10,13 @@ This is an Orbeon Forms PE feature.
 
 See [Supported Liferay versions](README.md#supported-liferay-versions).
 
+## Known issues with Liferay 7/DXP in Orbeon Forms 2017.1
+
+- The Form Runner language selector doesn't work ([#3257](https://github.com/orbeon/orbeon-forms/issues/3257))
+    - Workaround: Select the "Send Liferay language" option. When this option is sent, the Form Runner language selector doesn't show. Orbeon Forms uses instead the current Liferay user's language preference.
+- The navigation menu doesn't disable SPA ([#3256])(https://github.com/orbeon/orbeon-forms/issues/3256)
+    - Workaround: don't use the Liferay navigation menu to reach the Form Runner proxy portlet.
+
 ## Introduction
 
 Form Runner can be deployed [directly](../../form-runner/link-embed/liferay-full-portlet.md) into Liferay. However in some cases, it is desirable to deploy Form Runner *separately*. The Form Runner proxy portlet provides this type of deployment, with the following benefits:

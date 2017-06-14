@@ -18,15 +18,15 @@ Orbeon Forms supports several embedding methods:
 
 The following versions of Liferay are supported:
 
-|Orbeon Forms Version|Tested Liferay Version    |
-|--------------------|--------------------------|
-|4.9                 |Liferay 6.0               |
-|                    |Liferay 6.1.2 CE GA3      |
-|2016.2              |Liferay 6.1.2 CE GA3      |
-|                    |Liferay 6.2 CE GA6 / 6.2.5|
-|2016.3              |Liferay 6.2 CE GA6 / 6.2.5|
-
-_NOTE: Support for Liferay 7.0/Liferay DXP is planned (see [#2843](https://github.com/orbeon/orbeon-forms/issues/2843) for details)._
+|Orbeon Forms Version|Tested Liferay Version    |Proxy Portlet|Full Portlet|
+|--------------------|--------------------------|-------------|------------|
+|4.9                 |Liferay 6.0               |yes          |yes         |
+|                    |Liferay 6.1.2 CE GA3      |yes          |yes         |
+|2016.2              |Liferay 6.1.2 CE GA3      |yes          |yes         |
+|                    |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
+|2016.3              |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
+|2017.1              |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
+|                    |Liferay 7.0 CE GA3 / 7.0.2|yes          |no          |
 
 ### Servlet vs. Liferay portal deployment
 
@@ -42,8 +42,7 @@ Portals such as Liferay provide features such as:
 
 The following Form Runner limitations are known within Liferay:
 
-* Form Builder proper is not supported (but you can run forms designed with Form Builder).
-* The (deprecated) "noscript" mode is not supported.
+* With Liferay 7/DXP, as of Orbeon Forms 2017.1, the full portlet is not supported.
 
 ### Form Runner proxy portlet or full portlet?
 
@@ -55,7 +54,7 @@ You can configure the proxy portlet via UI, making it is easier to create a setu
 
 Here is a comparison of the two options:
 
-|                                      |Proxy Portlet|Full Portlet|Since Version|
+|Feature                               |Proxy Portlet|Full Portlet|Since Version|
 |--------------------------------------|-------------|------------|-------------|
 |Runs Form Runner forms                |yes          |yes         |             |
 |Specifically designed for Form Runner |yes          |no          |             |
