@@ -12,10 +12,16 @@ See [Supported Liferay versions](README.md#supported-liferay-versions).
 
 ## Known Liferay 7/DXP issues with Orbeon Forms 2017.1
 
-- The Form Runner language selector doesn't work ([#3257](https://github.com/orbeon/orbeon-forms/issues/3257))
+- __The Form Runner language selector doesn't work__
+    - See [issue #3257](https://github.com/orbeon/orbeon-forms/issues/3257)
     - Workaround: Select the "Send Liferay language" option. When this option is sent, the Form Runner language selector doesn't show. Orbeon Forms uses instead the current Liferay user's language preference.
-- The navigation menu doesn't disable SPA ([#3256])(https://github.com/orbeon/orbeon-forms/issues/3256))
-    - Workaround: Don't use the Liferay navigation menu to reach the Form Runner proxy portlet.
+- __The Liferay navigation menu doesn't navigate to Form Runner__
+    - See [issue #3256](https://github.com/orbeon/orbeon-forms/issues/3256)
+    - Workarounds:
+        1. Don't use the Liferay navigation menu to reach the Form Runner proxy portlet.
+        2. Or disable Liferay's SPA support portal-wide (see the [Disabling SPA](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-0/automatic-single-page-applications#disabling-spa)).
+        
+*NOTE: We plan to lift these limitations in a future release of Orbeon Forms.*
 
 ## Introduction
 
