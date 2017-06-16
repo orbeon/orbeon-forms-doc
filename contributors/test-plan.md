@@ -807,14 +807,14 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] Form for [issue #3105](https://github.com/orbeon/orbeon-forms/issues/3105) renders PDF well. 
 - [x] "Page break before section" checkbox works 
 
-### PDF Template \[2017.1 TODO Erik\]
+### PDF Template \[2017.1 DONE\]
 
 - [x] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - [x] add field "name" in section "applicant"
 - [x] publish and test that name appears in PDF and TIFF
 - [x] remove PDF
   - publish and test, must see notemplate PDF/TIFF
-- [ ] check that custom filename works [2017.1: regressed, pending fix and new test]
+- [x] check that custom filename works [2017.1: regressed, pending fix and new test]
     ```xml
     <property
         as="xs:string"
@@ -832,7 +832,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2017.1 TODO\]
+### Form Builder Permissions \[2017.1 TODO Erik\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -887,7 +887,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - login on `/fr/auth` as `orbeon-sales`
         - `http://localhost:8080/2017.1-pe/fr/orbeon/builder/new`
         - must see guest and sales as app names
-    - [ ] create sales/my-sales-form
+    - [x] create sales/my-sales-form
         - set permissions
             - Anyone → Create
             - orbeon-sales → Read and Update
@@ -1260,19 +1260,19 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 *See also Form Builder permissions above which already tests some of this.*
 
-- [ ] `http://localhost:8080/2017.1-pe/fr/` lists deployed forms
-- [ ] comment all roles in form-builder-permissions.xml
-- [ ] no admin buttons/actions show
-- [ ] changing language to French works
-- [ ] set all Form Builder permissions
+- [x] `http://localhost:8080/2017.1-pe/fr/` lists deployed forms
+- [x] comment all roles in form-builder-permissions.xml
+    - no admin buttons/actions show
+- [x] changing language to French works
+- [x] set all Form Builder permissions
     ```xml
     <role name="*" app="*" form="*"/>
     ```
   - admin actions show
   - Available/Unavailable/Library labels show
   - publish/unpublish works
-- [ ] "publish to production"
-  - configure  remote server and production-server-uri
+- [x] "publish to production"
+  - [x] configure  remote server and production-server-uri
     - e.g. remote in Liferay Tomcat
     ```xml
     <property as="xs:string" name="oxf.fr.home.remote-servers">
@@ -1292,24 +1292,24 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         name="authorizer"
         value="/orbeon-auth"/>
     ```
-  - server asks for credentials if user has admin role
+  - [x] server asks for credentials if user has admin role
       - `orbeon-admin/x*` (with `liferay-portal-6.2-ce-ga6/tomcat-7.0.62`, `orbeon-admin` has `orbeon-service` role)
-  - Cancel  → loads local forms
-  - Connect → loads local and remote forms, sorted by mod date desc
-  - Select menu works
-  - Operation menu works
+  - [x] Cancel  → loads local forms
+  - [x] Connect → loads local and remote forms, sorted by mod date desc
+  - [x] Select menu works
+  - [x] Operation menu works
       - push/pull forms
       - check available on `/fr/` page on remote (e.g. in Liferay)
-  -   add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
+  - [x] add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
       ```xml
       <property as="xs:string"  name="oxf.fr.home.remote-servers">
           [
-            { "label": "Public Demo Server", "url": "http://demo.orbeon.com/orbeon" },
+            { "label": "Demo Server", "url": "http://demo.orbeon.com/demo" },
             { "label": "Local Liferay", "url": "http://Eriks-MacBook-Pro.local:9090/orbeon/" }
           ]
       </property>
       ```
-  - take form (could be previous `sales/my-sales-form` (see [Form Builder Permissions](../form-builder/images/permissions-enable.png)) but doesn't have to be)
+  - [x] take form (could be previous `sales/my-sales-form` (see [Form Builder Permissions](../form-builder/images/permissions-enable.png)) but doesn't have to be)
     - attach static image
     - publish locally
     - push to remote
@@ -1319,7 +1319,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - pull back form
     - load form `/new` on local, make sure works and attachment is there
   - no checkbox for forms w/o admin access (e.g. set `<role name="*" app="orbeon" form="*"/>`)
-- [ ] upgrade form definitions
+- [x] upgrade form definitions
   - upgrade local
   - upgrade remote
   - make sure forms still work
