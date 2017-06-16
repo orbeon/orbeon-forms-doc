@@ -683,9 +683,9 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - check schema types are reloaded in Control Settings dialog
         - *NOTE: This is not the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
 
-### Database service \[2017.1 TODO Erik\]
+### Database service \[2017.1 DONE\]
 
-- setup db
+- [x] setup db
     - use MySQL, local or on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
     - set datasource in `server.xml`
     - create test table + data row if doesn't exist (can use IntelliJ Database tools)
@@ -700,21 +700,21 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     insert into orbeon_address_book values(1, "John", "Smith", "5551231234");
     insert into orbeon_address_book values(2, "Mary", "Smith", "5551111111");
     ```
-- setup form
+- [x] setup form
   - 1 Text Field (`input`)
   - 1 Calculated Value (`output`)
   - 1 Radio Buttons (`radios`)
-- create `address` db service
+- [x] create `address` db service
 
     ```sql
     SELECT * FROM orbeon_address_book
     WHERE id = <sql:param type="xs:string" select=""/>
     ```
-- create action
-    - on form load and control appearing, call service
+- [x] create `get-address` action
+    - on `input` control appearing or changing its value, call service
     - sets service value from input on request for param `1`
     - sets control values on response, e.g. `concat(/*/*/first, ' ', /*/*/last)`
-    - set itemset values on response
+    - set Control Choices on response
         - `/*/*`
         - `concat(first, ' ', last)`
         - `id`
@@ -1256,7 +1256,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
-### Home Page \[2017.1 TODO Erik \]
+### Home Page \[2017.1 DONE \]
 
 *See also Form Builder permissions above which already tests some of this.*
 
@@ -1323,7 +1323,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - upgrade local
   - upgrade remote
   - make sure forms still work
-- [ ] reindex database works (make sure relational provider is enabled)
+- [x] reindex database works (make sure relational provider is enabled)
 
 ### Summary Page \[2017.1 TODO\]
 
