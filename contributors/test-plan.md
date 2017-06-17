@@ -832,11 +832,13 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2017.1 TODO Erik\]
+### Form Builder Permissions \[2017.1 DONE\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
-- Do eXist AND relational as code is a bit different.
+- 2 environments
+    - [x] eXist
+    - [x] relational
 - setup
     - "Uncomment this for the Form Runner authentication" in `web.xml`
     - `tomcat-users.xml`
@@ -881,28 +883,28 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         <role name="orbeon-sales" app="sales" form="*"/>
     </roles>
     ```
-- [ ] browser 1
+- [x] browser 1
     - clear cookies
-    - [ ]
+    - [x]
         - login on `/fr/auth` as `orbeon-sales`
         - `http://localhost:8080/2017.1-pe/fr/orbeon/builder/new`
-        - must see guest and sales as app names
+        - must see `guest` and `sales` as app names
     - [x] create sales/my-sales-form
         - set permissions
             - Anyone → Create
             - orbeon-sales → Read and Update
         - save and publish
-    - [ ] can access
+    - [x] can access
         - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/summary
         - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/new
-    - [ ] new
+    - [x] new
         - enter data and save
-    - [ ] summary
+    - [x] summary
         - check that saved in summary
         - check can edit and duplicate
         - check Delete button is disabled
         - check PDF works
-    - [ ] `http://localhost:8080/2017.1-pe/fr/`
+    - [x] `http://localhost:8080/2017.1-pe/fr/`
         - sales/my-sales-form shows on the home page
         - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
@@ -912,47 +914,48 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
-    - [ ] `http://localhost:8080/2017.1-pe/fr/orbeon/builder/summary`
+    - [x] `http://localhost:8080/2017.1-pe/fr/orbeon/builder/summary`
         - open structured search (be aware of  [#878](https://github.com/orbeon/orbeon-forms/issues/878))
         - check only guest and sales forms are available
-- [ ] browser 2
-    - [ ] clear cookies
-    - [ ] login as orbeon-user
-    - [ ] can access
+- [x] browser 2
+    - [x] clear cookies
+    - [x] login as orbeon-user
+    - [x] can access
         - `http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/new`
-    - [ ] can't access
+    - [x] can't access
         - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/summary (403)
         - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
-    - [ ] `http://localhost:8080/2017.1-pe/fr/`
+    - [x] `http://localhost:8080/2017.1-pe/fr/`
         - NO admin ops for sales/my-sales-form
         - BUT admin ops for `guest/*` (create a `guest/test-guest` form)
-        - CAN click on for sales/my-sales-form line and takes to `/new`
+        - CAN click on sales/my-sales-form line and takes to `/new`
         - CAN do Review/Edit/PDF
-- [ ] browser 1
+- [x] browser 1
     - remove all permissions for Anyone for this form, re-add Create for orbeon-sales, publish
     - check can still new/edit/view
-- [ ] browser 2
+- [x] browser 2
     - can't access
         - `http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/new` (403)
     - http://localhost:8080/2017.1-pe/fr/
         - form not visible
-- [ ] browser 1
+- [x] browser 1
     - re-add Anyone → Create
     - add Owner → Read
     - check nothing changed
         - well, can do `/new` from Home
-- [ ] browser 2
+- [x] browser 2
     - can access `http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/summary`, but only see own data as readonly
     - /new, save
     - Summary shows forms in readonly mode
-- [ ] access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
+- [x] access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
     - in `form-builder-permissions.xml`:
         ```xml
         <role name="dummy" app="sales" form="*"/>
         <!--<role name="*"            app="guest" form="*"/>-->
         ```
     - clear cookies
+    - log in as `orbeon-admin`
     - access to FB Summary page is rejected
     - access to FB New page is rejected
     - access to FB Edit page is rejected if form doesn't have matching role
