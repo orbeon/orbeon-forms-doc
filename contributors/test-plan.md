@@ -1413,7 +1413,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~[ ] Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
-### Organizations \[2017.1 TODO Erik\]
+### Organizations \[2017.1 DONE\]
 
 Do this just after general Liferay testing (above).
 
@@ -1447,6 +1447,7 @@ Properties:
 </property>
 ```
 
+- [x] comment out container auth in web.xml
 - [x] create `test/organizations` form
      - enable permissions
         - Anyone can Create
@@ -1524,7 +1525,7 @@ Properties:
     - [x] login as `orbeoncaliforniauser1@orbeon.com`
         - check data includes data from `orbeonfostercityuser1@orbeon.com` and `orbeonfostercityuser2@orbeon.com`
 - [x] run tests above with eXist
-- [ ] run tests above with relational
+- [x] run tests above with relational
 
 ### Embedding \[2017.1 DONE\]
 
