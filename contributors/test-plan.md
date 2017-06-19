@@ -645,21 +645,21 @@ drop table orbeon_i_control_text ;
     - insert control
     - check there is no JS error
 
-### Singleton forms \[2017.1 TODO Erik\]
+### Singleton forms \[2017.1 DONE\]
 
 Test that the features works as [documented](../form-runner/advanced/singleton-form.md):
 
-- create form `mysql/singleton` 
+- [x] create form `mysql/singleton` 
     - 1 field
     - permissions: anybody can create, owner can do all
     - publish
-- login as user `a1`
+- [x] login as user `a1`
     - can do new
     - enter "abc"
     - save
     - new gone from Summary page
     - `/new` in URL redirects to '/edit/...'
-- 2nd browser: login as user `a2` or `b1`
+- [x] 2nd browser: login as user `a2` or `b1`
     - can do new
     - enter "def"
     - save
