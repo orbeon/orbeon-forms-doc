@@ -135,7 +135,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
 - Duplicate
     - FR: Summary: Duplicate button works
 
-### Versioning \[2017.1 TODO\]
+### Versioning \[2017.1 TODO Erik\]
 
 Do the following on DB2.
 
@@ -263,7 +263,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite
 
-### Data Capture Permissions \[2017.1 TODO\]
+### Data Capture Permissions \[2017.1 TODO Erik\]
 
 #### Setup
 
@@ -503,7 +503,7 @@ drop table orbeon_i_current ;
 drop table orbeon_i_control_text ;
 ```
 
-### Flat View \[2017.1 TODO\]
+### Flat View \[2017.1 TODO Erik\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -645,7 +645,7 @@ drop table orbeon_i_control_text ;
     - insert control
     - check there is no JS error
 
-### Singleton forms \[2017.1 TODO\]
+### Singleton forms \[2017.1 TODO Erik\]
 
 Test that the features works as [documented](../form-runner/advanced/singleton-form.md):
 
@@ -1328,7 +1328,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - make sure forms still work
 - [x] reindex database works (make sure relational provider is enabled)
 
-### Summary Page \[2017.1 TODO\]
+### Summary Page \[2017.1 TODO Erik\]
 
 - e.g. `http://localhost:8080/2017.1-pe/fr/orbeon/bookshelf/summary`
 - list forms
