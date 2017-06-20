@@ -583,7 +583,7 @@ drop table orbeon_i_control_text ;
     - [ ] HTML
     - [ ] check HTML label appears correct in summary page / search
     - [ ] placeholder labels
-        - check with Controls form and look at all controls (sse [#3213](https://github.com/orbeon/orbeon-forms/issues/3213)) 
+        - check with Controls form and look at all controls (see [#3213](https://github.com/orbeon/orbeon-forms/issues/3213)) 
     - [ ] placeholder hints
 - [ ] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
     - [ ] plain
