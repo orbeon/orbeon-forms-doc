@@ -673,7 +673,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - only see "def" in Summary
     - `/new` in URL redirects to '/edit/...'
 
-### Schema Support \[2017.1 TODO\]
+### Schema Support \[2017.1 TODO Erik\]
 
 - attach Schema
     - attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/schema.xsd)
