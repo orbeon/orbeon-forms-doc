@@ -673,20 +673,20 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - only see "def" in Summary
     - `/new` in URL redirects to '/edit/...'
 
-### Schema Support \[2017.1 TODO Erik\]
+### Schema Support \[2017.1 DONE\]
 
 - attach Schema
-    - attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/schema.xsd)
+    - [x] attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/schema.xsd)
         - available types contains `rating`, `language`, `link`
-    - change to the [XForms types schema](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
+    - [x] change to the [XForms types schema](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
         - available types contains `card-number`, `dayTimeDuration`, `yearMonthDuration`
-    - delete schema, check removed from model, be aware of
+    - [x] delete schema, check removed from model, be aware of
         - Delete attached XML Schema causes error if type in use [#694](https://github.com/orbeon/orbeon-forms/issues/694))
         - When removing schema, type from previously selected schema are showing [#2733](https://github.com/orbeon/orbeon-forms/issues/2733)
-    - re-add Bookcast schema
-    - assign types to controls
-    - check that validation is working as per the types
-    - check schema types are reloaded in Control Settings dialog
+    - [x] re-add Bookcast schema
+    - [x] assign types to controls
+    - [x] check that validation is working as per the types
+    - [x] check schema types are reloaded in Control Settings dialog
         - *NOTE: This is not the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
 
 ### Database service \[2017.1 DONE\]
