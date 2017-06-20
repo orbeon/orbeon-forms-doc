@@ -91,7 +91,7 @@ check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-###  Basic Persistence \[2017.1 TODO\]
+### Basic Persistence \[2017.1 TODO\]
 
 Do the following for eXist and DB2. We do not test other relational databases here, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases.
 
@@ -988,7 +988,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             - also with keyboard
         - [x] change lang works
 
-### Errors and warnings \[2017.1 TODO\]
+### Errors and warnings \[2017.1 TODO Erik\]
 
 - FB: create form
     - required field
@@ -1001,7 +1001,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2017.1 TODO\]
+### Process buttons \[2017.1 TODO Erik\]
 
 - create and publish guest/test
     - 1 required field
@@ -1020,7 +1020,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2017.1 TODO\]
+### Attachments/uploads \[2017.1 TODO Erik\]
 
 - [ ] basic upload works
 - [ ] removing uploaded file works
@@ -1106,14 +1106,14 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2017.1 TODO\]
+### Misc \[2017.1 TODO Erik\]
 
 - switch language
 - open/close sections (but not with wizard)
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Noscript mode \[2017.1 TODO\]
+### Noscript mode \[2017.1 NOT DONE\]
 
 [UNTIL Orbeon Forms 2016.3]
 
@@ -1221,17 +1221,17 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] Bookshelf
     - try all helps (see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637))
 
-### Mobile and Responsive \[2017.1 TODO\]
+### Mobile and Responsive \[2017.1 DONE\]
 
 *NOTE: Summary and Home are not responsive as of 2016.3.*
 
 - [x] setup
     - iPhone 6S or 6S Plus
     - can also test more using simulator
-- [ ] default layout (Contact Form / Bookshelf Form)
+- [x] default layout (Contact Form / Bookshelf Form)
     - [x] looks ok
     - [x] can navigate to `view` and back
-    - [ ] PDF shows [2017.1: REGRESSION #3224]
+    - [x] PDF shows [2017.1: REGRESSION #3224]
     - [x] upload book cover in Bookshelf
 - [x] wizard layout (Controls form)
     - looks ok (TOC at top, buttons at bottom)
