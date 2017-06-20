@@ -578,19 +578,19 @@ drop table orbeon_i_control_text ;
     - [x] insert/move/remove iterations
     - [x] set min/max as ints
     - [x] set min/max as XPath expressions, e.g. `1 + 2`
-- [ ] set control label, hint, items
-    - [ ] plain
-    - [ ] HTML
-    - [ ] check HTML label appears correct in summary page / search
-    - [ ] placeholder labels
+- [x] set control label, hint, items
+    - [x] plain
+    - [x] HTML
+    - [x] check HTML label appears correct in summary page / search
+    - [x] placeholder labels
         - check with Controls form and look at all controls (see [#3213](https://github.com/orbeon/orbeon-forms/issues/3213)) 
-    - [ ] placeholder hints
-- [ ] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
-    - [ ] plain
-    - [ ] HTML
-    - [ ] check help icon appears when help is set, and disappears when help is blanked
-- [ ] set section help
-    - [ ] check help icon appears when help is set, and disappears when help is blanked
+    - [x] placeholder hints
+- [x] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
+    - [x] plain
+    - [x] HTML
+    - [x] check help icon appears when help is set, and disappears when help is blanked
+- [x] set section help
+    - [x] check help icon appears when help is set, and disappears when help is blanked
 - [ ] set control validation
     - set custom error constraint and alert
     - set custom warning constraint and alert
