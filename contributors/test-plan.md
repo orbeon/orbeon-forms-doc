@@ -135,7 +135,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
 - Duplicate
     - FR: Summary: Duplicate button works
 
-### Versioning \[2017.1 TODO Erik\]
+### Versioning \[2017.1 DONE\]
 
 Do the following on DB2.
 
@@ -205,7 +205,7 @@ Do the following on DB2.
         - review and back to edit works
         - save
         - summary
-    - [ ] edit the form definition
+    - [x] edit the form definition
         - make changes in form definition to make it clear it's v2 (field labels, names, title, etc.)
         - remove "Email Recipient" from 1st email field and clear it
         - add "Email Recipient" to 2nd email field and add say `gaga@gmail.com` (use the proper ID)
@@ -235,36 +235,39 @@ Do the following on DB2.
                 [ #2372](https://github.com/orbeon/orbeon-forms/issues/2372),
                 [ #2367](https://github.com/orbeon/orbeon-forms/issues/2367),
                 [ #2330](https://github.com/orbeon/orbeon-forms/issues/2330)
-    - [ ] XML Schema production
+    - [x] XML Schema production
         - `/fr/service/db2/versioning/schema`
             - Check this is the schema for first form published earlier
         - `/fr/service/db2/versioning/schema?form-version=1`
             - *NOTE: Adjust version numbers depending on which versions were published.*
             - Check this is the schema for the second form published earlier
-    - [ ] go to the summary page, click on first row (created last)
+    - [x] go to the summary page, click on first row (created last)
         - check the data shows with the correct version of the form
         - check PDF
-    - [ ] go to the summary page, click on second row (created first)
+    - [x] go to the summary page, click on second row (created first)
         - check field A/value a and attachment show
         - check PDF
-    - [ ] Form Builder Publish dialog options (new in 4.6)
+    - [x] Form Builder Publish dialog options (new in 4.6)
         - with persistence layer which supports versioning (db2)
             - if `db2/a` has never been published
                 - no options and no messages are shown
                 - latest version shows "-"
+                - add comment
                 - publish message says version 1 was created
             - if `db2/a` form has been published
                 - latest version shows correct number
                 - option to create new version or overwrite (check version numbers)
                 - switch option shows different message
+                - add comment & publish
                 - publish message says which version was created/updated
+                - versioning comment switches when switchng for example between v1 and v2
         - with persistence layer which doesn't support versioning (exist)
-            - latest version line doesn't show
+            - latest version line doesn't show, comment field doesn't show
             - if no `exist/a` form has been published
                 - no options and no messages are shown
             - if exist/a form has been published
                 - no options are shown
-                - message about overwrite
+                - message about overwrite (see [ #3071](https://github.com/orbeon/orbeon-forms/issues/3071))
 
 ### Data Capture Permissions \[2017.1 TODO Erik\]
 
