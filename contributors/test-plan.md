@@ -135,7 +135,7 @@ Do the following for eXist and DB2. We do not test other relational databases he
 - Duplicate
     - FR: Summary: Duplicate button works
 
-### Versioning \[2017.1 DONE\]
+### Versioning \[2017.1 DONE with MySQL\]
 
 Do the following on DB2.
 
@@ -269,7 +269,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite (see [ #3071](https://github.com/orbeon/orbeon-forms/issues/3071))
 
-### Data Capture Permissions \[2017.1 TODO Erik\]
+### Data Capture Permissions \[2017.1 DONE MySQL/eXist\]
 
 #### Setup
 
@@ -310,8 +310,8 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
     value="orbeon-user orbeon-sales orbeon-admin clerk admin"/>
 ```
 
-- restore `form-builder-permissions.xml` to default
-- for container auth:
+- [x] restore `form-builder-permissions.xml` to default
+- [x] for container auth:
     - in `web.xml`
         - uncomment security section towards the end
         - change first `<url-pattern>` from `/fr/*` to `/auth` (it doesn't matter that page doesn't exist, it's just a path to force authentication)
@@ -320,7 +320,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
         <user username="clerk" password="clerk" roles="clerk,orbeon-user"/>
         <user username="admin" password="admin" roles="admin,orbeon-user"/>
         ```
-- for headers-based auth:
+- [ ] for headers-based auth:
     - `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
     - set rewriting rules with Charles (⌘⇧E)
         - for user clerk ([gist](https://gist.github.com/ebruchez/10079296))
@@ -331,39 +331,39 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
 
 #### Tests
 
-- in Form Builder
+- [x] in Form Builder
     - create new form `exist/permissions`
         - save and publish
         - enable permissions for form and configure like on [doc page](../form-runner/access-control/deployed-forms.md#example)
-    - use Duplicate button to create
+    - use Duplicate button to create and publish
         - `oracle/permissions`
         - `mysql/permissions`
         - `postgresql/permissions`
         - `sqlserver/permissions`
         - `db2/permissions`
-- make sure permissions are followed
+- [x] make sure permissions are followed
     - anonymous user
-        - home page: link goes to new page (not summary)
-        - summary page: unauthorized (fixed regression with [#1201](https://github.com/orbeon/orbeon-forms/issues/1201))
-        - detail page: only `new` accepted, `edit`, `view`, `pdf` are unauthorized
-        - enter and save data on `new`
-        - check URL doesn't change to `edit`
+        - [x] home page: link goes to new page (not summary)
+        - [x] summary page: unauthorized (fixed regression with [#1201](https://github.com/orbeon/orbeon-forms/issues/1201))
+        - [ ] detail page: only `new` accepted, `edit`, `view`, `pdf` are unauthorized
+        - [x] enter and save data on `new`
+        - [x] check URL doesn't change to `edit`
     - logged in user
-        - check permissions as clerk/clerk
-            - remove `JSESSIONID` (i.e. with Dev Tools)
-            - switch user
-            - home page: link goes to the summary page
-            - summary page
+        - [x] check permissions as clerk/clerk
+            - [x] remove `JSESSIONID` (i.e. with Dev Tools)
+            - [x] login/switch user
+            - [x] home page: link goes to the summary page
+            - [x] summary page
                 - sees data previously entered by anonymous user, cannot delete
                 - click on existing data created by anonymous user shows read-only view
                 - replace `view` with `edit`, getting an "Unauthorized" page
                 - PDF works
                 - click on new button opens new page
-            - new/edit
+            - [x] new/edit
                 - save data works
                 - user is owner so can edit his own data
                 - cannot delete from Summary because no `delete` permission
-        - check permissions as admin/admin
+        - [x] check permissions as admin/admin
             - remove `JSESSIONID` (i.e. with Dev Tools)
             - switch to `admin`/`admin` user
             - on click goes to summary page
