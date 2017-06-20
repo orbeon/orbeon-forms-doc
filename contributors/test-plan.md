@@ -179,7 +179,7 @@ Do the following on DB2.
         Also add the email properties (starting with `oxf.fr.email`) from your own `properties-local.xml`.
 
 - Steps
-    - create form `db2/versioning`
+    - [x] create form `db2/versioning`
         - fields
             - Name section `personal-information`
             - 1 email field with "Email Recipient", say `gaga@orbeon.com` (use the proper ID)
@@ -204,7 +204,9 @@ Do the following on DB2.
                 - load path in browser shows PDF with image attachment
         - review and back to edit works
         - save
-    - edit the form definition
+        - summary
+    - [ ] edit the form definition
+        - make changes in form definition to make it clear it's v2 (field labels, names, title, etc.)
         - remove "Email Recipient" from 1st email field and clear it
         - add "Email Recipient" to 2nd email field and add say `gaga@gmail.com` (use the proper ID)
         - change static Image
@@ -226,25 +228,26 @@ Do the following on DB2.
         - go to new page with `?form-version=1`
             - check all the steps work like before v2 was created
             - relevant issues:
-                [#2363](https://github.com/orbeon/orbeon-forms/issues/2363),
-                [#1911](https://github.com/orbeon/orbeon-forms/issues/1911),
-                [#2371](https://github.com/orbeon/orbeon-forms/issues/2371),
-                [#2372](https://github.com/orbeon/orbeon-forms/issues/2372),
-                [#2367](https://github.com/orbeon/orbeon-forms/issues/2367),
-                [#2330](https://github.com/orbeon/orbeon-forms/issues/2330)
-    - XML Schema production
+                [ #2363](https://github.com/orbeon/orbeon-forms/issues/3270) (found testing 2017.1!),
+                [ #2363](https://github.com/orbeon/orbeon-forms/issues/2363),
+                [ #1911](https://github.com/orbeon/orbeon-forms/issues/1911),
+                [ #2371](https://github.com/orbeon/orbeon-forms/issues/2371),
+                [ #2372](https://github.com/orbeon/orbeon-forms/issues/2372),
+                [ #2367](https://github.com/orbeon/orbeon-forms/issues/2367),
+                [ #2330](https://github.com/orbeon/orbeon-forms/issues/2330)
+    - [ ] XML Schema production
         - `/fr/service/db2/versioning/schema`
             - Check this is the schema for first form published earlier
         - `/fr/service/db2/versioning/schema?form-version=1`
             - *NOTE: Adjust version numbers depending on which versions were published.*
             - Check this is the schema for the second form published earlier
-    - go to the summary page, click on first row (created last)
+    - [ ] go to the summary page, click on first row (created last)
         - check the data shows with the correct version of the form
         - check PDF
-    - go to the summary page, click on second row (created first)
+    - [ ] go to the summary page, click on second row (created first)
         - check field A/value a and attachment show
         - check PDF
-    - Form Builder Publish dialog options (new in 4.6)
+    - [ ] Form Builder Publish dialog options (new in 4.6)
         - with persistence layer which supports versioning (db2)
             - if `db2/a` has never been published
                 - no options and no messages are shown
