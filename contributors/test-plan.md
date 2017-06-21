@@ -956,7 +956,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             - also with keyboard
         - [x] change lang works
 
-### Errors and warnings \[2017.1 TODO Erik\]
+### Errors and warnings \[2017.1 DONE]
 
 - FB: create form
     - required field
@@ -969,7 +969,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2017.1 TODO Erik\]
+### Process buttons \[2017.1 DONE\]
 
 - create and publish guest/test
     - 1 required field
@@ -988,35 +988,25 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2017.1 TODO Erik\]
+### Attachments/uploads \[2017.1 DONE\]
 
-- [ ] basic upload works
-- [ ] removing uploaded file works
-- [ ] large uploads fail (> 100 MB by default)
+- [x] basic upload works
+- [x] removing uploaded file works
+- [x] large uploads fail (> 100 MB by default)
     - FR error dialog shows
     - control is back to empty
-- [ ] constraints on upload size and mediatype
-    - [ ] set `oxf.fr.detail.attachment.max-size.*.*`, check limits upload
-    - [ ] same from Form Builder UI for form
-    - [ ] set `oxf.fr.detail.attachment.max-size-aggregate.*.*`, create form with repeat, check limits upload
-    - [ ] same from Form Builder UI for form
-    - [ ] set `oxf.fr.detail.attachment.mediatypes.*.*` to `image/jpeg application/pdf`, check limits upload
-    - [ ] same from Form Builder UI for form
-    - [ ] same with `image/* application/pdf`
-    - [ ] form with 2+ attachments: set different max size for each using common constraint 
-    - [ ] form with 2+ attachments: set different mediatypes for each using common constraint 
-- [ ] very small (a few KB) upload works multiple times in a row
-- [ ] with throttling (with Charles) (*NOTE: Proxy settings not useful as we are looking at browser/server traffic.*)
-    ```xml
-    <property
-        as="xs:string"
-        name="oxf.http.proxy.host"
-        value="localhost"/>
-    <property
-        as="xs:integer"
-        name="oxf.http.proxy.port"
-        value="8888"/>
-    ```
+- [x] constraints on upload size and mediatype
+    - [x] set `oxf.fr.detail.attachment.max-size.*.*`, check limits upload
+    - [x] same from Form Builder UI for form
+    - [x] set `oxf.fr.detail.attachment.max-size-aggregate.*.*`, create form with repeat, check limits upload
+    - [x] same from Form Builder UI for form
+    - [x] set `oxf.fr.detail.attachment.mediatypes.*.*` to `image/jpeg application/pdf`, check limits upload
+    - [x] same from Form Builder UI for form
+    - [x] same with `image/* application/pdf`
+    - [x] form with 2+ attachments: set different max size for each using common constraint 
+    - [x] form with 2+ attachments: set different mediatypes for each using common constraint 
+- [x] very small (a few KB) upload works multiple times in a row
+- [x] with throttling (with Charles)
     - cancel midway works
     - progress indicator works
 
