@@ -477,7 +477,7 @@ http://localhost:8080/2017.1-pe/fr/auth
         - Choose to open the draft, edit it into `a1 Marge`, save, change to `a1 Marge draft`, wait for autosave
         - Go to the summary page, click on `a1 Marge`, dialog must propose loading draft
 
-### Flat View \[2017.1 TODO Erik\]
+### Flat View \[2017.1 TODO Alex\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
