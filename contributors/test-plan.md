@@ -91,7 +91,7 @@ check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-### Basic Persistence \[2017.1 TODO\]
+### Basic eXist Persistence \[2017.1 TODO Alex\]
 
 Do the following for eXist and DB2. We do not test other relational databases here, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases.
 
@@ -103,19 +103,13 @@ Do the following for eXist and DB2. We do not test other relational databases he
         value="exist"/>
     <property
         as="xs:string"
-        name="oxf.fr.persistence.provider.db2.*.*"
-        value="db2"/>
-    <property
-        as="xs:string"
         processor-name="oxf:page-flow"
         name="service-public-methods"
         value="GET HEAD"/>
     ```
-- Create forms: same form in all apps: `exist/a`, `db2/a`
+- Create form
     - change the input field to be shown in summary and search
     - add a static image, attach and image
-    - use Duplicate button in FB Summary
-    - then change app name
 - Pages
     - FB: create form, publish
     - FR: check it shows on http://localhost:8080/2017.1-pe/fr/
