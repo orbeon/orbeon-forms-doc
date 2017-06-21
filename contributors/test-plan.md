@@ -1010,7 +1010,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - cancel midway works
     - progress indicator works
 
-### Submit \[2017.1 TODO Erik\]
+### Submit \[2017.1 DONE\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
