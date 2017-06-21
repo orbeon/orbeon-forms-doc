@@ -591,36 +591,36 @@ drop table orbeon_i_control_text ;
     - [x] check help icon appears when help is set, and disappears when help is blanked
 - [x] set section help
     - [x] check help icon appears when help is set, and disappears when help is blanked
-- [ ] set control validation
+- [x] set control validation
     - set custom error constraint and alert
     - set custom warning constraint and alert
     - set required
     - check that if control is required but empty, generic message shows, not constraint message ([#1829](https://github.com/orbeon/orbeon-forms/issues/1829))
     - check that if control is required but empty and there is an unmet constraint, generic message shows ([#1830](https://github.com/orbeon/orbeon-forms/issues/1830))
-- [ ] cut/copy/paste
+- [x] cut/copy/paste
     - copy control with help, required, constraint, and warning
     - paste control
     - check in source that all elements have been renamed
       - including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
       - including `@validation` and `xf:constraint/@id` (see [#1785](https://github.com/orbeon/orbeon-forms/issues/1785))
     - check that form runs and new control validates constraints properly
-- [ ] set control MIPs and properties
+- [x] set control MIPs and properties
     - check required star appears with required set to `true()`
     - check Show in Summary/Search work when form deployed
-- [ ] set section MIPs
+- [x] set section MIPs
     - check show/hide based on control value e.g. `$fortytwo = '42'`
-- [ ] edit/modify source
+- [x] edit/modify source
     - change e.g. control label
-- [ ] image annotation control
+- [x] image annotation control
   - create simple form and test works, saves, loads
-- [ ] i18n (PE)
-    - [ ] check en/fr/es/it/de (languages with full support)
-    - [ ] switch FB language and check language changes
-    - [ ] add language
-    - [ ] edit label and items and switch languages
-    - [ ] edit source and change top-level language, make sure language selector switches
-    - [ ] remove language
-    - [ ] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
+- [x] i18n (PE)
+    - [x] check en/fr/es/it/de (languages with full support)
+    - [x] switch FB language and check language changes
+    - [x] add language
+    - [x] edit label and items and switch languages
+    - [x] edit source and change top-level language, make sure language selector switches
+    - [x] remove language
+    - [x] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
         - add lang not fully supported (e.g. Afrikaans) , remove all other languages, enter some labels
         - Test and Publish/new -> must show Afrikaans labels, not blank
 - [ ] Form Builder Summary page
