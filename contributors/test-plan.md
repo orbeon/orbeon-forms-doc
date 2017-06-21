@@ -6,7 +6,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ## Misc
 
-### Distribution \[2017.1 TODO\]
+### Distribution \[2017.1 DONE\]
 
 - [x] `README.md` is up to date
   - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
@@ -20,7 +20,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
   - `proxy-portlet.war` (1.7 MB 2016.3/2.2 MB 2017.1)
   - `orbeon.war` (85 MB 2016.3/2017.1)
   - `orbeon-xforms-filter.jar` (474 KB 2016.3/491 KB 2017.1)
-- [ ] check CE zip doesn't have
+- [x] check CE zip doesn't have
   - `orbeon-embedding.war`
   - `proxy-portlet.war`
 - [x] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
