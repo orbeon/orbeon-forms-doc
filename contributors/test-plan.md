@@ -91,9 +91,9 @@ check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-### Basic eXist Persistence \[2017.1 TODO Alex\]
+### Basic Persistence \[2017.1 DONE\]
 
-Do the following for eXist and DB2. We do not test other relational databases here, as automated tests already test most of this, and the code running for DB2 is almost identical to the code running for other relational databases.
+Do the following for eXist and SQL Server. We do not test other relational databases here, as automated tests already test most of this, and the code running for SQL Server is almost identical to the code running for other relational databases.
 
 - Setup: in `properties-local.xml`, add:
     ```xml
@@ -103,13 +103,20 @@ Do the following for eXist and DB2. We do not test other relational databases he
         value="exist"/>
     <property
         as="xs:string"
+        name="oxf.fr.persistence.provider.sqlserver.*.*"
+        value="sqlserver"/>
+    <property
+        as="xs:string"
         processor-name="oxf:page-flow"
         name="service-public-methods"
         value="GET HEAD"/>
     ```
 - Create form
+    - name it `exist/a`
     - change the input field to be shown in summary and search
     - add a static image, attach and image
+    - publish
+    - duplicate to `sqlserver/a`
 - Pages
     - FB: create form, publish
     - FR: check it shows on http://localhost:8080/2017.1-pe/fr/
