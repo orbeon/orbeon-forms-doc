@@ -1529,10 +1529,10 @@ Properties:
     - view source
     - Test button
 
-### XForms Retry \[2017.1 TODO Erik\]
+### XForms Retry \[2017.1 DONE\]
 
-1. [ ] Retry happens
-    - [ ] setup
+1. [x] Retry happens
+    - [x] setup
         - edit `resources/apps/xforms-sandbox/samples/dispatch-delay.xhtml`
             - change sleep service to use `sleep?delay=10` (sleep 10 s)
             - add to model
@@ -1554,14 +1554,14 @@ Properties:
                 name="oxf.xforms.retry.delay-increment"
                 value="2000"/>
             ```
-    - [ ] test
+    - [x] test
         - open `http://localhost:8080/2017.1-pe/xforms-sandbox/sample/dispatch-delay`
         - in Chrome, open the Dev Tools, go to the Network tab (or use HttpScoop or Charles)
         - hit the *Manual save* button
         - check after ~10 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 10 s have elapsed)
         - can also hit the *Start* button, and notice the number incrementing after ~10s
         - (the loading indicator doesn't show while a retry is not in progress, which is somewhat unintuitive, but we'll fix this as part of [#1114](https://github.com/orbeon/orbeon-forms/issues/1114))
-2. [ ] Request not reaching server
+2. [x] Request not reaching server
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - set the following properties
 
@@ -1590,7 +1590,7 @@ Properties:
     - the request is intercepted by Charles
     - when you click on Abort, check that the client retries the request right away and that the request doesn't show in the server logs
     - finally click on *Execute*, and check the request runs on the server, and the response reaches the browser after 5 s with a 200
-3. [ ] Response not reaching client
+3. [x] Response not reaching client
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - in Charles, edit the breakpoint set above (see screenshot), and this time break on the response, i.e. uncheck the "request" checkbox and check the "response" checkbox
     - click on *Manual save*
@@ -1599,12 +1599,12 @@ Properties:
     - check the request is made again right away by the browser and replayed right away by the server
     - *Execute*
     - check the response reaches the client
-4. [ ] Unexpected HTML response
+4. [x] Unexpected HTML response
     - change back  sleep service to use `sleep?delay=5` (sleep 5 s)
     - click on *Manual save*
     - edit the response to contain non-valid XML, and *Execute*
     - check the client re-executes the request
-5. [ ] File upload
+5. [x] File upload
     - setup
         - enable breakpoint on response for `/2017.1-pe/xforms-server/upload`
         - enable throttling in Charles (⌘⇧T) per the following configuration
