@@ -484,7 +484,7 @@ http://localhost:8080/2017.1-pe/fr/auth
         - Choose to open the draft, edit it into `a1 Marge`, save, change to `a1 Marge draft`, wait for autosave
         - Go to the summary page, click on `a1 Marge`, dialog must propose loading draft
 
-### Flat View \[2017.1 TODO Erik\]
+### Flat View \[2017.1 TODO Alex\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -963,7 +963,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             - also with keyboard
         - [x] change lang works
 
-### Errors and warnings \[2017.1 TODO Erik\]
+### Errors and warnings \[2017.1 DONE]
 
 - FB: create form
     - required field
@@ -976,7 +976,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2017.1 TODO Erik\]
+### Process buttons \[2017.1 DONE\]
 
 - create and publish guest/test
     - 1 required field
@@ -995,39 +995,29 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2017.1 TODO Erik\]
+### Attachments/uploads \[2017.1 DONE\]
 
-- [ ] basic upload works
-- [ ] removing uploaded file works
-- [ ] large uploads fail (> 100 MB by default)
+- [x] basic upload works
+- [x] removing uploaded file works
+- [x] large uploads fail (> 100 MB by default)
     - FR error dialog shows
     - control is back to empty
-- [ ] constraints on upload size and mediatype
-    - [ ] set `oxf.fr.detail.attachment.max-size.*.*`, check limits upload
-    - [ ] same from Form Builder UI for form
-    - [ ] set `oxf.fr.detail.attachment.max-size-aggregate.*.*`, create form with repeat, check limits upload
-    - [ ] same from Form Builder UI for form
-    - [ ] set `oxf.fr.detail.attachment.mediatypes.*.*` to `image/jpeg application/pdf`, check limits upload
-    - [ ] same from Form Builder UI for form
-    - [ ] same with `image/* application/pdf`
-    - [ ] form with 2+ attachments: set different max size for each using common constraint 
-    - [ ] form with 2+ attachments: set different mediatypes for each using common constraint 
-- [ ] very small (a few KB) upload works multiple times in a row
-- [ ] with throttling (with Charles) (*NOTE: Proxy settings not useful as we are looking at browser/server traffic.*)
-    ```xml
-    <property
-        as="xs:string"
-        name="oxf.http.proxy.host"
-        value="localhost"/>
-    <property
-        as="xs:integer"
-        name="oxf.http.proxy.port"
-        value="8888"/>
-    ```
+- [x] constraints on upload size and mediatype
+    - [x] set `oxf.fr.detail.attachment.max-size.*.*`, check limits upload
+    - [x] same from Form Builder UI for form
+    - [x] set `oxf.fr.detail.attachment.max-size-aggregate.*.*`, create form with repeat, check limits upload
+    - [x] same from Form Builder UI for form
+    - [x] set `oxf.fr.detail.attachment.mediatypes.*.*` to `image/jpeg application/pdf`, check limits upload
+    - [x] same from Form Builder UI for form
+    - [x] same with `image/* application/pdf`
+    - [x] form with 2+ attachments: set different max size for each using common constraint 
+    - [x] form with 2+ attachments: set different mediatypes for each using common constraint 
+- [x] very small (a few KB) upload works multiple times in a row
+- [x] with throttling (with Charles)
     - cancel midway works
     - progress indicator works
 
-### Submit \[2017.1 TODO\]
+### Submit \[2017.1 DONE\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -1047,7 +1037,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2017.1 TODO\]
+### Email \[2017.1 DONE\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1073,15 +1063,14 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 <property as="xs:boolean" name="oxf.fr.email.attach-pdf.orbeon.controls"  value="true"/>
 <property as="xs:boolean" name="oxf.fr.email.attach-tiff.orbeon.controls" value="true"/>
 ```
-- `/fr/orbeon/controls/new`
-- create/update form with "Email Carbon Copy Recipient", "Email Bind Carbon Copy Recipient", "Email Sender" and check that From/Cc/Bcc work
-- hit Email button from Controls and DMV-14
+- [x] create/update form with "Email Carbon Copy Recipient", "Email Bind Carbon Copy Recipient", "Email Sender" and check that From/Cc/Bcc work
+- [x] hit Email button from Controls and DMV-14
   - check email received
   - contains attachments, XML, PDF and TIFF [SINCE 2016.1]
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2017.1 TODO Erik\]
+### Misc \[2017.1 DONE\]
 
 - switch language
 - open/close sections (but not with wizard)
@@ -1540,7 +1529,7 @@ Properties:
     - view source
     - Test button
 
-### XForms Retry \[2017.1 TODO\]
+### XForms Retry \[2017.1 TODO Erik\]
 
 1. [ ] Retry happens
     - [ ] setup
@@ -1626,11 +1615,11 @@ Properties:
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2017.1 TODO\]
+### Error Dialog \[2017.1 DONE\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
-- [ ] scenario 1
+- [x] scenario 1
   - load page
   - remove JSESSIONID
   - do Ajax update
@@ -1644,7 +1633,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 ### Other Browsers \[2017.1 TODO\]
 
-- [ ] main tests above with Google Chrome
+- [x] main tests above with Google Chrome
+    - 2017.1: 60.0.3112.32 beta
     - 2016.3: 55.x and 56.0.2924.28 beta
     - 2016.2: 52.0.2743.82 and 53.0.2785.57 beta
     - 2016.1: 49.0.2623.112
@@ -1654,7 +1644,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 37.0.2062.122
     - 4.6: 37.0.2062.0 dev
     - 4.5: 35.0.1897.8 dev
-- [ ] Form Builder / Form Runner tests with latest Firefox
+- [x] Form Builder / Form Runner tests with latest Firefox
+    - 2017.1: 54.0
     - 2016.3: 50.1.0
     - 2016.2: 48.0
     - 2016.1: 45.0.2
@@ -1664,7 +1655,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 32
     - 4.6: 30
     - 4.5: 27.0.1 and 28
-- [ ] Form Builder / Form Runner tests with latest Safari
+- [x] Form Builder / Form Runner tests with latest Safari
+    - 2017.1: 10.1 (12603.1.30.0.34)
     - 2016.3: 10.0.2 (12602.3.12.0.1)
     - 2016.2: 9.1.1 (11601.6.17)
     - 2016.1: 9.1 (11601.5.17.1)
@@ -1688,14 +1680,13 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 - [ ] Form Runner run with
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
-    - IE8: FB has warning, FR works and looks ok
 
 ### Other \[2017.1 TODO\]
 
 Features to test, with all supported browsers:
 
 - [ ] give CE version a quick run
-- [ ] XForms filter
+- [x] XForms filter
     - `http://localhost:8080/2017.1-pe/xforms-jsp/guess-the-number/`
     - `http://localhost:8080/2017.1-pe/xforms-jsp/flickr-search/`
 - [ ] examples-cli in distribution work (fix/remove them if not)
