@@ -20,9 +20,6 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
   - `proxy-portlet.war` (1.7 MB 2016.3/2.2 MB 2017.1)
   - `orbeon.war` (85 MB 2016.3/2017.1)
   - `orbeon-xforms-filter.jar` (474 KB 2016.3/491 KB 2017.1)
-- [x] check CE zip doesn't have
-  - `orbeon-embedding.war`
-  - `proxy-portlet.war`
 - [x] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
     - [x] Tomcat
 - [x] make sure the PE license is not included
@@ -36,24 +33,24 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - [x] XForms examples
   - load, look reasonable, and work
 
-### PE Features Availability \[2017.1 TODO\]
+### PE Features Availability \[2017.1 DONE\]
 
 check that all PE features are available in PE, but not in CE:
 
-- [ ] features which are checked
-    - [ ] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
-    - [ ] FB: no "Add Language" button
-    - [ ] FB: check with CE that a PE dialog shows for
+- [x] features which are checked
+    - [x] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
+    - [x] FB: no "Add Language" button
+    - [x] FB: check with CE that a PE dialog shows for
         - Services
         - Actions
         - Attach PDF
         - Attach Schema
         - Permissions
-    - [ ] FB: no Signature control in toolbox
-    - [ ] FR: PDF Template button doesn't show for DMV-14 and W-9
-    - [ ] FR: TIFF button doesn't show even if configured \[SINCE 2016.1\]
-    - [ ] FR: Import page returns 404
-    - [ ] FR: No remote server support in Form Runner home page
+    - [x] FB: no Signature control in toolbox
+    - [x] FR: PDF Template button doesn't show for DMV-14 and W-9
+    - [x] FR: TIFF button doesn't show even if configured (Controls form) \[SINCE 2016.1\]
+    - [x] FR: Import page returns 404
+    - [x] FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml`
             ```xml
@@ -1076,33 +1073,6 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - open/close sections (but not with wizard)
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
-
-### Noscript mode \[2017.1 NOT DONE\]
-
-[UNTIL Orbeon Forms 2016.3]
-
-*NOTE: The noscript mode still works mostly, but has an increasing number of issues and is now deprecated. We no longer need to test it thoroughly.*
-
-- orbeon/contact
-- Contact form
-    - property
-        ```xml
-        <property as="xs:string"
-            name="oxf.fr.detail.buttons.orbeon.contact"
-            value="refresh clear save pdf review"/>
-        ```
-    - Clear clears right away
-    - PDF stays in tab
-        - *NOTE: PDF not showing with 2016.2 (was it also with 2016.1?). [#2869](https://github.com/orbeon/orbeon-forms/issues/2869)*
-    - errors prevent saving
-    - Refresh icon works
-    - go to form with `?fr-noscript=true`
-- create form with `xxf:noscript-support="true"` in FB (just property doesn't work!)
-- test w/ new form w/ image & file attachments
-    - attachments work [NOTE: be aware of [#1405](https://github.com/orbeon/orbeon-forms/issues/1405)]
-- be aware of
-    - [#2355](https://github.com/orbeon/orbeon-forms/issues/2355)
-    - [#2356](https://github.com/orbeon/orbeon-forms/issues/2356)
 
 ### Wizard \[2017.1 DONE \]
 
