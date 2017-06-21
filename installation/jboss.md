@@ -51,12 +51,12 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
 
             ```xml
             <resource-ref>
-                <res-ref-name>jdbc/db</res-ref-name>
-                <jndi-name>java:/my-database</jndi-name>
+                <res-ref-name>jdbc/oracle</res-ref-name>
+                <jndi-name>java:jboss/datasources/oracle</jndi-name>
             </resource-ref>
             ```
         3. Change the `<res-ref-name>` to match what the `<res-ref-name> in your `web.xml`.
-        4. Change the `<jndi-name>` to `java:jboss/datasources/oracle`, replacing `oracle` by the database name you used in `<res-ref-name>`.
+        4. In `<jndi-name>java:jboss/datasources/oracle</jndi-name>`, replace `oracle` by the database name you used in `<res-ref-name>`.
         4. Update `WEB-INF/jboss-web.xml` inside the `orbeon.war` with the version you edited.
 2. In WildFly, install the JDBC driver:
     1. Download the MySQL JDBC driver, say `oracle-driver.jar`, and place it in the `standalone/deployments` directory.
