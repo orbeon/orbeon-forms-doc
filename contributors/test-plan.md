@@ -1064,7 +1064,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2017.1 TODO Erik\]
+### Misc \[2017.1 DONE\]
 
 - switch language
 - open/close sections (but not with wizard)
