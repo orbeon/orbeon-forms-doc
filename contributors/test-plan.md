@@ -1631,7 +1631,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
 
-### Other Browsers \[2017.1 TODO\]
+### Other Browsers \[2017.1 TODO Alex\]
 
 - [x] main tests above with Google Chrome
     - 2017.1: 60.0.3112.32 beta
