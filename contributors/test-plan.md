@@ -477,32 +477,6 @@ http://localhost:8080/2017.1-pe/fr/auth
         - Choose to open the draft, edit it into `a1 Marge`, save, change to `a1 Marge draft`, wait for autosave
         - Go to the summary page, click on `a1 Marge`, dialog must propose loading draft
 
-### DB2 DDL \[2017.1 TODO\]
-
-Do the following just with DB2; there is no need to test this with Oracle, MySQL, and SQL Server as this is TODO by the unit tests. Before each test, run the `drop table` statements below.
-
-- In a tab, open the doc with the [table linking to the DB2 DDL](../form-runner/persistence/relational-db.md#db2-database-setup)
-- Initial setup
-    - Start DB2 instance on EC2
-    - Connect to DB2, e.g. with SQLWorkbenchJ, using the new IP of the instance from the EC2 Console
-- Test initial creations; for each version:
-    - Run the `DROP TABLE` DDL below
-    - Run the "from scratch DDL" for that version
-    - Check there are errors in the console
-- Test upgrade DDL
-    - Run the `DROP TABLE` DDL below
-    - Run the 4.3 "from scratch" DDL
-    - In sequence run all the "upgrade" DDL, checking there are no errors
-
-```sql
-drop table orbeon_form_definition ;
-drop table orbeon_form_definition_attach ;
-drop table orbeon_form_data ;
-drop table orbeon_form_data_attach ;
-drop table orbeon_i_current ;
-drop table orbeon_i_control_text ;
-```
-
 ### Flat View \[2017.1 TODO Erik\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
