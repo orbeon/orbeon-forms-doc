@@ -1522,7 +1522,7 @@ Properties:
     - view source
     - Test button
 
-### XForms Retry \[2017.1 TODO\]
+### XForms Retry \[2017.1 TODO Erik\]
 
 1. [ ] Retry happens
     - [ ] setup
@@ -1608,11 +1608,11 @@ Properties:
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2017.1 TODO\]
+### Error Dialog \[2017.1 DONE\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
-- [ ] scenario 1
+- [x] scenario 1
   - load page
   - remove JSESSIONID
   - do Ajax update
