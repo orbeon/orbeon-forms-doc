@@ -562,7 +562,7 @@ drop table orbeon_i_control_text ;
 
 ## Form Builder
 
-### Basic Features \[2017.1 TODO Alex\]
+### Basic Features \[2017.1 DONE\]
 
 - [x] create new form
 - [x] insert sections, grids, repeated grids
@@ -623,15 +623,15 @@ drop table orbeon_i_control_text ;
     - [x] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
         - add lang not fully supported (e.g. Afrikaans) , remove all other languages, enter some labels
         - Test and Publish/new -> must show Afrikaans labels, not blank
-- [ ] Form Builder Summary page
+- [x] Form Builder Summary page
     - check that search in Summary page updates title/description when FR language is changed
-- [ ] set form title/description
-- [ ] test form
-- [ ] save
-- [ ] publish form
+- [x] set form title/description
+- [x] test form
+- [x] save
+- [x] publish form
     - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
-- [ ] warning dialog if attempt to close page when unsaved
-- [ ] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
+- [x] warning dialog if attempt to close page when unsaved
+- [x] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
     - set properties
     ```xml
     <property
