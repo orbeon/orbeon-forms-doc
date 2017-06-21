@@ -1010,7 +1010,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - cancel midway works
     - progress indicator works
 
-### Submit \[2017.1 TODO\]
+### Submit \[2017.1 TODO Erik\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -1030,7 +1030,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2017.1 TODO\]
+### Email \[2017.1 TODO Erik\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1627,7 +1627,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 ### Other Browsers \[2017.1 TODO\]
 
-- [ ] main tests above with Google Chrome
+- [x] main tests above with Google Chrome
+    - 2017.1: 60.0.3112.32 beta
     - 2016.3: 55.x and 56.0.2924.28 beta
     - 2016.2: 52.0.2743.82 and 53.0.2785.57 beta
     - 2016.1: 49.0.2623.112
@@ -1637,7 +1638,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 37.0.2062.122
     - 4.6: 37.0.2062.0 dev
     - 4.5: 35.0.1897.8 dev
-- [ ] Form Builder / Form Runner tests with latest Firefox
+- [x] Form Builder / Form Runner tests with latest Firefox
+    - 2017.1: 54.0
     - 2016.3: 50.1.0
     - 2016.2: 48.0
     - 2016.1: 45.0.2
@@ -1647,7 +1649,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 32
     - 4.6: 30
     - 4.5: 27.0.1 and 28
-- [ ] Form Builder / Form Runner tests with latest Safari
+- [x] Form Builder / Form Runner tests with latest Safari
+    - 2017.1: 10.1 (12603.1.30.0.34)
     - 2016.3: 10.0.2 (12602.3.12.0.1)
     - 2016.2: 9.1.1 (11601.6.17)
     - 2016.1: 9.1 (11601.5.17.1)
@@ -1671,14 +1674,13 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 - [ ] Form Runner run with
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
-    - IE8: FB has warning, FR works and looks ok
 
 ### Other \[2017.1 TODO\]
 
 Features to test, with all supported browsers:
 
 - [ ] give CE version a quick run
-- [ ] XForms filter
+- [x] XForms filter
     - `http://localhost:8080/2017.1-pe/xforms-jsp/guess-the-number/`
     - `http://localhost:8080/2017.1-pe/xforms-jsp/flickr-search/`
 - [ ] examples-cli in distribution work (fix/remove them if not)
