@@ -1655,11 +1655,12 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 Features to test, with all supported browsers:
 
-- [ ] give CE version a quick run
+- [x] give CE version a quick run
 - [x] XForms filter
     - `http://localhost:8080/2017.1-pe/xforms-jsp/guess-the-number/`
     - `http://localhost:8080/2017.1-pe/xforms-jsp/flickr-search/`
 - [ ] examples-cli in distribution work (fix/remove them if not)
+    - *NOT in Orbeon Forms 2017.1*
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
     - `unzip -d orbeon orbeon.war`
