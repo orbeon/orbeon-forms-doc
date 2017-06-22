@@ -1601,7 +1601,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
 
-### Other Browsers \[2017.1 TODO Alex\]
+### Other Browsers \[2017.1 DONE\]
 
 - [x] main tests above with Google Chrome
     - 2017.1: 60.0.3112.32 beta
@@ -1636,8 +1636,11 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 7.0.6
     - 4.6: 7.0.4
     - 4.5: 7.0.2
-- [ ] Form Builder / Form Runner tests with IE11 (since 4.5)
-- [ ] Form Builder / Form Runner tests with latest Edge
+- [x] Form Builder / Form Runner tests with IE11 (since 4.5)
+- [x] Form Builder / Form Runner tests with latest Edge
+    - 2017.1
+        - Edge 40.15063.0.0
+        - EdgeHTML 15.15063
     - 2016.3
         - Edge 38.14393.0.0
         - EdgeHTML 14.14393
@@ -1647,7 +1650,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 2016.1
         - Edge 25.10586.0.0
         - EdgeHTML 13.10586
-- [ ] Form Runner run with
+- [x] Form Runner run with
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
 
