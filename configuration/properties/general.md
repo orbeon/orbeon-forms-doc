@@ -366,31 +366,31 @@ When a username for HTTP Basic authentication is specified, cookies are not forw
      2. The session id
      3. The value of the `oxf.http.forward-cookies.session.suffix` property
      
-    By default, the value of the prefix and suffix properties is empty, as shown below, which works well with application servers like Tomcat that set the `JSESSIONID` directly to the session id.   
-    
-    ```xml
-    <property 
-        as="xs:string"
-        name="oxf.http.forward-cookies.session.prefix"         
-        value=""/>
-    <property
-        as="xs:string"
-        name="oxf.http.forward-cookies.session.suffix"
-        value=""/>
-    ```
-    
-    On the other hand, some application servers, add a prefix and suffix to the session id. For instance, WebSphere uses the *cache id* as prefix, and the colon character (`:`) followed by the *clone id* as suffix. So, on WebSphere, assuming that in your situation the *cache id* is always `0000`, and the *client id* (found in WebSphere's `plugin-cfg.xml`) is `123`, you will want to set those properties as shown below. Note how the value of the *client id* follows the colon character in the value of the suffix property.
-    
-    ```xml
-    <property 
-        as="xs:string"
-        name="oxf.http.forward-cookies.session.prefix"         
-        value="0000"/>
-    <property
-        as="xs:string"
-        name="oxf.http.forward-cookies.session.suffix"
-        value=":123"/>
-    ```
+By default, the value of the prefix and suffix properties is empty, as shown below, which works well with application servers like Tomcat that set the `JSESSIONID` directly to the session id.   
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.http.forward-cookies.session.prefix"         
+    value=""/>
+<property
+    as="xs:string"
+    name="oxf.http.forward-cookies.session.suffix"
+    value=""/>
+```
+
+On the other hand, some application servers, add a prefix and suffix to the session id. For instance, WebSphere uses the *cache id* as prefix, and the colon character (`:`) followed by the *clone id* as suffix. So, on WebSphere, assuming that in your situation the *cache id* is always `0000`, and the *client id* (found in WebSphere's `plugin-cfg.xml`) is `123`, you will want to set those properties as shown below. Note how the value of the *client id* follows the colon character in the value of the suffix property.
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.http.forward-cookies.session.prefix"         
+    value="0000"/>
+<property
+    as="xs:string"
+    name="oxf.http.forward-cookies.session.suffix"
+    value=":123"/>
+```
 
 _WARNING: For security reasons, you should be careful with cookies forwarding, as this might cause non trusted services to receive client cookies._
 
