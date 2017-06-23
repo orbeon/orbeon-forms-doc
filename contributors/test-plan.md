@@ -1654,7 +1654,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
 
-### Other \[2017.1 TODO\]
+### Other \[2017.1 DONE\]
 
 Features to test, with all supported browsers:
 
@@ -1662,14 +1662,14 @@ Features to test, with all supported browsers:
 - [x] XForms filter
     - `http://localhost:8080/2017.1-pe/xforms-jsp/guess-the-number/`
     - `http://localhost:8080/2017.1-pe/xforms-jsp/flickr-search/`
-- [ ] examples-cli in distribution work (fix/remove them if not)
+- [x] ~~examples-cli in distribution work (fix/remove them if not)~~
     - *NOT in Orbeon Forms 2017.1*
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
     - `unzip -d orbeon orbeon.war`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/simple/stdout.xpl`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/transform/transform.xpl`
-- [ ] check logs are clean
+- [x] check logs are clean
     - no debug information
     - no unwanted information
     - be aware of [#849](https://github.com/orbeon/orbeon-forms/issues/849)
