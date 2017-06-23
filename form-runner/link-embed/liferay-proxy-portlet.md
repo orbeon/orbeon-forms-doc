@@ -35,7 +35,7 @@ If you only need Form Runner and are happy with deploying only one form per port
 
 This guide describes how to install, administer and use the Form Runner proxy portlet.
 
-![Controls form through the Liferay proxy portlet](images/liferay-proxy-controls.png)
+![Controls form through the Liferay proxy portlet](images/liferay-proxy-controls-liferay7.png)
 
 ## Architecture
 
