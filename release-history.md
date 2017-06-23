@@ -17,6 +17,7 @@ Since 2013 we have had three (sometimes four) major releases a year, and we plan
 Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 
 - 2017
+    - 2017.1 PE and 2017.1 CE: June 22, 2017 ([blog post](http://blog.orbeon.com/2017/06/orbeon-forms-20171.html))
     - 2016.3.1 PE: May 18, 2017 ([blog post](http://blog.orbeon.com/2017/05/orbeon-forms-201631.html))
 - 2016
     - 2016.3 PE: December 30, 2016 ([blog post](http://blog.orbeon.com/2016/12/orbeon-forms-20163.html))
