@@ -40,40 +40,20 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ## Upcoming releases
 
-### Orbeon Forms 2017.1
-
-Focus:
-
-- [ ] support Liferay 7/DXP [#2843](https://github.com/orbeon/orbeon-forms/issues/2843)
-- [ ] Form Builder usability: prime candidates would be introducing DnD and/or improved layout
-- [ ] [test automation](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+milestone%3A2016.3+label%3ATests)
-    - [ ] at least one important test part of the manual test plan has been automated
-- [ ] [maintenance candidates](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+milestone%3A2016.3+label%3AMaintenance)
-- [ ] deprecate IE8 support ([#2651](https://github.com/orbeon/orbeon-forms/issues/2651))
-- TBD
-
-Issues:
-
-- [ ] [all Orbeon Forms 2017.1 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2017.1)
-
-Please remember that the following schedule is a plan, not a promise:
-
-- 2017-04-31: tentative release date
-
 ### Orbeon Forms 2017.2
 
 Focus:
 
-- [ ] basic workflow feature [#2256](https://github.com/orbeon/orbeon-forms/issues/2256)
+- Form Builder usability
+- Test automation
+- Customer requests
 - TBD
 
-Issues:
+For detailed status of issues, see the [GitHub project for Orbeon Forms 2017.2](https://github.com/orbeon/orbeon-forms/projects/2).
 
-- [ ] [all Orbeon Forms 2017.2 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2017.2)
+__Please remember that the following schedule is a plan, not a promise:__
 
-Please remember that the following schedule is a plan, not a promise:
-
-- 2017-08-31: tentative release date
+- 2017-09-30: tentative release date
 
 ### Orbeon Forms 2017.3
 
@@ -81,11 +61,19 @@ Focus:
 
 - TBD
 
-Issues:
+For detailed status of issues, see the [GitHub project for Orbeon Forms 2017.3](https://github.com/orbeon/orbeon-forms/projects/3).
 
-- [ ] [all Orbeon Forms 2017.3 issues and pull requests](https://github.com/orbeon/orbeon-forms/milestones/2017.3)
+__Please remember that the following schedule is a plan, not a promise:__
 
-Please remember that the following schedule is a plan, not a promise:
+- 2017-12-20: tentative release date
 
-- 2017-12-15: tentative release date
 
+### Orbeon Forms 2018.1
+
+Focus:
+
+- TBD
+
+__Please remember that the following schedule is a plan, not a promise:__
+
+- 2018-04-30: tentative release date
