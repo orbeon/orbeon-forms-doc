@@ -154,7 +154,7 @@ The following functions from XForms 1.1 are obsolete:
 - `xf:choose()`
     - use the native XPath 2.0 `if (...) then ... else ...` construct instead
 - `xf:id()`
-    - use the native XPath 2.0 `id()` function instead
+    - use the native [XPath 2.0 `id()` function](https://www.w3.org/TR/xpath-functions/#func-id) instead
 - `xf:if()`
     - available as `xf:if()` only
     - use the native XPath 2.0 `if (...) then ... else ...` construct instead
