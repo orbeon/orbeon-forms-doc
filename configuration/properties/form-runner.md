@@ -478,7 +478,7 @@ The following property allows you to select where new iterations are added when 
 ```xml
 <property
     as="xs:string"
-    name="oxf.xforms.xbl.fr.section.repeat.insert.*.*"
+    name="oxf.xforms.xbl.fr.section.insert.*.*"
     value="index"/>
 ```
 
@@ -493,7 +493,7 @@ The following property allows you to select where new iterations are added when 
 ```xml
 <property
     as="xs:string"
-    name="oxf.xforms.xbl.fr.grid.repeat.insert.*.*"
+    name="oxf.xforms.xbl.fr.grid.insert.*.*"
     value="index"/>
 ```
 
