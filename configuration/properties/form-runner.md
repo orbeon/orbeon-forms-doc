@@ -448,7 +448,7 @@ The following property allows you to set the appearance of repeated sections to 
 ```xml
 <property
     as="xs:string"
-    name="oxf.xforms.xbl.fr.section.repeat.appearance.*.*"
+    name="oxf.xforms.xbl.fr.section.appearance.*.*"
     value="minimal"/>
 ```
 
@@ -463,7 +463,7 @@ The following property allows you to set the appearance of repeated grids to `fu
 ```xml
 <property
     as="xs:string"
-    name="oxf.xforms.xbl.fr.grid.repeat.appearance.*.*"
+    name="oxf.xforms.xbl.fr.grid.appearance.*.*"
     value="minimal"/>
 ```
 
