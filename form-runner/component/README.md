@@ -9,11 +9,8 @@ See the left sidebar for the list of documented XBL components.
 - Explanation
 - Fields Date
 - File Attachment
-- [Image Attachment](image-attachment.md)
-- [Repeater](repeater.md)
-- [Section](section.md)
+- [Section](section.md) (incomplete documentation)
 - Tabbable
-- US Phone
 
 ## See also
 

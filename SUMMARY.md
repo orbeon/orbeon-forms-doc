@@ -76,6 +76,7 @@
         * [Section](form-runner/component/section.md)
         * [Single-selection tree](form-runner/component/tree-select1.md)
         * [Source code editor](form-runner/component/source-code-editor.md)
+        * [US phone](form-runner/component/us-phone.md)
         * [US state](form-runner/component/us-state.md)
         * [Wizard](form-runner/component/wizard.md)
         * [XForms inspector](form-runner/component/xforms-inspector.md)
