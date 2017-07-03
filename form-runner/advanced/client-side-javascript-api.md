@@ -14,7 +14,10 @@ A Form Runner control name is the name entered by the form author in Form Builde
 - `street-address`
 
 ```javascript
-ORBEON.fr.API.findControlsByName(name: string, formElem?: HTMLElement): HTMLElement[]
+ORBEON.fr.API.findControlsByName(
+    name      : string, 
+    formElem? : HTMLElement
+): HTMLElement[]
 ```
 
 | Name | Required | Type | Description |
@@ -27,4 +30,8 @@ If no control is found, an empty array is returned.
 If there are multiple controls with the same name, the array will contain multiple elements. This can happen in the following cases:
  
 - when controls are repeated, for example in a repeated grid or section
-- when controls appear in the maine form and section template and/or in different section templates
+- when controls appear in the main form and section template and/or in different section templates
+
+## See also
+
+- [XForms client-side JavaScript API](../../xforms/client-side-javascript-api.md)
