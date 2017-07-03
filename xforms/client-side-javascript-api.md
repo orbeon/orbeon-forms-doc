@@ -283,3 +283,7 @@ To deregister (unsubscribe) your event listener on, say `orbeonLoadedEvent`, you
 ```javascript
 ORBEON.xforms.Events.orbeonLoadedEvent.unsubscribe(myListener);
 ```
+
+## See also
+
+- [Form Runner client-side JavaScript API](../form-runner/advanced/client-side-javascript-api.md)
