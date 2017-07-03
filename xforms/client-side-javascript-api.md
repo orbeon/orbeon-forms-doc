@@ -52,7 +52,7 @@ ORBEON.xforms.Document.setValue(controlIdOrElement, newValue, form)
 | ---- | -------- | ---- | ----------- |
 | **controlIdOrElement** |  Yes |  `String` or `HTMLElement` | Either the id of the control *without namespace* (in the case of portal or embedding), or the control element.
 | **newValue** |  Yes | Any value convertible with `toString()` | Value to set on the control (for `setValue()` only).
-| **form** |  No | `HTMLElement` | [SINCE Orbeon Forms 2016.1] The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in a portal and you have multiple portlets using XForms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used.
+| **form** |  No | `HTMLElement` | [SINCE Orbeon Forms 2016.1] The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used.
 
 
 - To get a control value, use: `var value = ORBEON.xforms.Document.getValue(myControl)`.
@@ -137,7 +137,7 @@ This function sets keyboard focus on the given control and lets the server know 
 | Name | Required | Type | Description |
 | ---- | -------- | ---- | ----------- |
 | **controlIdOrElement** |  Yes |  `String` or `HTMLElement` | Either the id of the control *without namespace* (in the case of portal or embedding), or the control element.
-| **form** |  No | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in a portal and you have multiple portlets using XForms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used.
+| **form** |  No | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used.
 
 Example:
 
@@ -190,7 +190,7 @@ An event handler for the custom event can be in an XForms model or control, and 
 | ---- | -------- | ----------- |
 | **targetId** |  Yes |  Id of the target element. The element must be an element in the XForms namespace: you cannot dispatch events to HTML elements. In addition, the id must identify either a relevant and non-readonly XForms control, or a model object that supports event handlers such as `<xf:model>`, `<xf:instance>`, or `<xf:submission>`. |
 | **eventName** |  Yes |  Name of the event.
-| **form** |  No |  The form object that corresponds to the XForms form you want to dispatch the event to. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in a portal and you have multiple portlets using XForms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
+| **form** |  No |  The form object that corresponds to the XForms form you want to dispatch the event to. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
 | **bubbles** |  No |  Boolean indicating if this event bubbles, as defined in DOM2 Events. The default value depends on the definition of the custom event. |
 | **cancelable** |  No |  Boolean indicating if this event is cancelable, as defined in DOM2 Events. The default value depends on the definition of the custom event. |
 | **incremental** |  No |  When `false` the event is sent to the XForms server right away. When `true` the event is sent after a small delay, giving the opportunity for other events that would occur during that time span to be aggregated with the current event.

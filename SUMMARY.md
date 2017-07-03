@@ -136,6 +136,7 @@
                 * [Send action](form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)
             * [XForms actions](form-runner/advanced/buttons-and-processes/actions-xforms.md)
             * [Predefined processes and dialogs](form-runner/advanced/buttons-and-processes/predefined.md)
+        * [Client-side JavaScript API](form-runner/advanced/client-side-javascript-api.md)
         * [Custom model logic](form-runner/advanced/custom-model-logic.md)
         * [Excel import](form-runner/advanced/excel.md)
         * [Services](form-runner/advanced/services.md)
