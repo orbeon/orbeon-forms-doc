@@ -20,60 +20,24 @@ As of Orbeon Forms 2016.1 and 2016.2, the following versions of Tomcat are suppo
 
 We assume below that `TOMCAT_HOME` represents the location of your Tomcat installation.
 
-If using Orbeon Forms PE, make sure the `license.xml` file is in place.
+If using Orbeon Forms PE, make sure the `license.xml` file is [in place](./README.md#license-installation-orbeon-forms-pe-only).
 
 ### Quick setup
 
 1. Create a new `TOMCAT_HOME/webapps/orbeon` directory.
-2. Unzip `orbeon.war` in the `orbeon` directory you just created.
+2. Unzip `orbeon.war` in the `orbeon` directory you just created. So now you should have a directory `TOMCAT_HOME/webapps/orbeon/WEB-INF`. 
 3. You can now start Tomcat, and access `http://localhost:8080/orbeon/` to test your installation (replacing `localhost` and `8080` with the host name and port number of your Tomcat installation if different from the default).
 
-
-### Custom context
-
-You can setup the Tomcat context directly within the Orbeon Forms WAR under `TOMCAT_HOME/webapps/orbeon/META-INF/context.xml`. For example, to add a datasource:
-
-```xml
-<Context>
-    <Resource
-        name="jdbc/mysql"
-        driverClassName="com.mysql.jdbc.Driver"
-        
-        auth="Container" 
-        type="javax.sql.DataSource"
-        
-        initialSize="3" 
-        maxActive="10" 
-        maxIdle="10" 
-        maxWait="30000"
-        
-        poolPreparedStatements="true"
-        
-        testOnBorrow="true"
-        validationQuery="select 1"
-        
-        username="orbeon"
-        password="password"
-        url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
-</Context>
-```
+## Optional steps
 
 ### Custom context within server.xml
 
-This is an alternate way of deploying with Tomcat, which gives you more control as to where the Orbeon Forms files are located.
-
-First, unzip the Orbeon Forms WAR file into a directory of your choice, for example:
-
-    /path/to/orbeon-war
-
-This means that under the `orbeon-war` directory, you should have a `WEB-INF` directory.
-
-Then create a context in Tomcat's `server.xml`, for example:
+Edit `TOMCAT_HOME/conf/server.xml`, and inside the `<Host>` create a `<Context>` as follows, changing the value of the `docBase` attribute as appropriate on your system:
 
 ```xml
 <Context
     path="/orbeon"
-    docBase="/path/to/orbeon-war"
+    docBase="TOMCAT_HOME/webapps/orbeon"
     reloadable="false"
     override="true"
     allowLinking="true"/>
@@ -110,8 +74,6 @@ Note that if you have a JDBC datasource, you can also place it inside:
         url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
 </Context>
 ```
-
-## Optional steps
 
 ### URIEncoding
 
