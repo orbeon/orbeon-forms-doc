@@ -68,7 +68,7 @@ For Orbeon Forms 4.0 and newer, no particular configuration is needed.
 1. Deploy `proxy-portlet.war` (formerly `orbeon-PE-proxy-portlet.war`) into Liferay
 2. Add an instance of Orbeon Forms → Form Runner to a page:
 
-    ![](images/liferay-applications.png)
+    <img alt="" src="liferay-applications.png" width="350">
 
 3. The portlet will load with its default configuration. If Orbeon Forms is deployed at the default address, a form shows.
 
