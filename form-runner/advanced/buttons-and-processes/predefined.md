@@ -21,10 +21,10 @@ The following buttons are predefined and associated with the processes of the sa
 | `email` | validate then email data | 4.2 |
 | `collapse-all` | run the action of the same name | 4.2 |
 | `expand-all` | run the action of the same name | 4.2 |
-| `refresh` | visit all controls and update the page (noscript mode only) | 4.2 |
 | `wizard-prev` | run the action of the same name | 4.2 |
 | `wizard-next` | run the action of the same name | 4.2 |
 | `close` | navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page<br>*NOTE: The button in fact navigates to a page, but doesn't just close the current window/tab, as there is no cross-browser way to do this.* | 4.2 |
+| ~~`refresh`~~ | visit all controls and update the page (noscript mode only) | 4.2 to 2016.3 |
 
 In fact all buttons except the `pdf` and `tiff` buttons can do the same tasks if they are configured appropriately! But
 by default the buttons above are preconfigured to do different tasks, for convenience.
