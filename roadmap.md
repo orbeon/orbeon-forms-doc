@@ -44,9 +44,12 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
-- Form Builder usability
+- Form Builder usability and flexibility
+    - Ability to move controls with drag and drop [#1479](https://github.com/orbeon/orbeon-forms/issues/1479)
+    - 12-column grid layout [#2738](https://github.com/orbeon/orbeon-forms/issues/2738)
+- Scalability
+    - Session/state replication [#1529](https://github.com/orbeon/orbeon-forms/issues/1529)
 - Test automation
-- Customer requests
 - TBD
 
 For detailed status of issues, see the [GitHub project for Orbeon Forms 2017.2](https://github.com/orbeon/orbeon-forms/projects/2).
