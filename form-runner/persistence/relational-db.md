@@ -89,9 +89,9 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2016.3                   | 2016.3                         | [mysql-2016_3.sql]         | [mysql-2016_2-to-2016_3.sql]        |
+| 2016.3 to 2017.1         | 2016.3                         | [mysql-2016_3.sql]         | [mysql-2016_2-to-2016_3.sql]        |
 | 2016.2                   | 2016.2                         | [mysql-2016_2.sql]         | [mysql-4_6-to-2016_2.sql]           |
-| 4.6 to 4.16, 2016.2      | 4.6                            | [mysql-4_6.sql]            | [mysql-4_5-to-4_6.sql]              |
+| 4.6 to 4.10, 2016.2      | 4.6                            | [mysql-4_6.sql]            | [mysql-4_5-to-4_6.sql]              |
 | 4.5                      | 4.5                            | [mysql-4_5.sql]            | [mysql-4_4-to-4_5.sql]              |
 | 4.4                      | 4.4                            | [mysql-4_4.sql]            | [mysql-4_3-to-4_4.sql]              |
 | 4.3                      | 4.3                            | [mysql-4_3.sql]            | -                                   |
@@ -118,9 +118,9 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2016.3                   | 2016.3                         | [sqlserver-2016_3.sql]     | [sqlserver-2016_2-to-2016_3.sql]    |
+| 2016.3 to 2017.1         | 2016.3                         | [sqlserver-2016_3.sql]     | [sqlserver-2016_2-to-2016_3.sql]    |
 | 2016.2                   | 2016.2                         | [sqlserver-2016_2.sql]     | [sqlserver-4_6-to-2016_2.sql]       |
-| 4.6 to 4.16, 2016.2      | 4.6                            | [sqlserver-4_6.sql]        | -                                   |
+| 4.6 to 2016.1            | 4.6                            | [sqlserver-4_6.sql]        | -                                   |
 
 [sqlserver-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_2-to-2016_3.sql
 [sqlserver-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_3.sql
@@ -136,9 +136,9 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2016.3                   | 2016.3                         | [postgresql-2016_3.sql]    | [postgresql-2016_2-to-2016_3.sql]   |
+| 2016.3 to 2017.1         | 2016.3                         | [postgresql-2016_3.sql]    | [postgresql-2016_2-to-2016_3.sql]   |
 | 2016.2                   | 2016.2                         | [postgresql-2016_2.sql]    | [postgresql-4_8-to-2016_2.sql]      |
-| 4.8 to 4.16, 2016.2      | 4.8                            | [postgresql-4_8.sql]       | -                                   |
+| 4.8 to 2016.1            | 4.8                            | [postgresql-4_8.sql]       | -                                   |
 
 [postgresql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_2-to-2016_3.sql
 [postgresql-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_3.sql
@@ -155,9 +155,9 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2016.3                   | 2016.3                         | [db2-2016_3.sql]           | [db2-2016_2-to-2016_3.sql]          |
+| 2016.3 to 2017.1         | 2016.3                         | [db2-2016_3.sql]           | [db2-2016_2-to-2016_3.sql]          |
 | 2016.2                   | 2016.2                         | [db2-2016_2.sql]           | [db2-4_6-to-2016_2.sql]             |
-| 4.6 to 4.16, 2016.2      | 4.6                            | [db2-4_6.sql]              | [db2-4_4-to-4_6.sql]                |
+| 4.6 to 2016.1            | 4.6                            | [db2-4_6.sql]              | [db2-4_4-to-4_6.sql]                |
 | 4.4                      | 4.4                            | [db2-4_4.sql]              | [db2-4_3-to-4_4.sql]                |
 | 4.3                      | 4.3                            | [db2-4_3.sql]              | -                                   |
 
