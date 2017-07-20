@@ -305,20 +305,19 @@ When this is set to `true`, the version number is HMAC-encoded with the configur
 
 ### Behavior
 
-With versioned resources enabled, resources are served with URLs  as follows:
+With versioned resources enabled, resources are served with URLs as follows:
 
 ```xml
-http://localhost:8080/orbeon/xforms-server/4.0.0.M19.201212120146/orbeon-6307e1dcf5...2c.js
+http://localhost:8080/orbeon/xforms-server/58a8724010cd6fbe3ae7298de0a5c6e9dafc990b/orbeon-aa144f9fcd394054c18536a679b02ad4553e0048.js
 ```
 
 The XForms Server component, which serves the resource in this case, sets an expiration date far in the future. For example, this is the description of the cache entry in the Firefox `about:cache` page:
 
 ```
-Key: http://localhost:8080/orbeon/xforms-server/4.0.0.M19.201212120146/orbeon-6307e1dcf5...2c.js  
-Data size: 22524 bytes  
-Fetch count: 2  
-Last modified: 2008-03-01 17:04:25  
-Expires: 2011-12-25 17:10:42
+Key: http://localhost:8080/orbeon/xforms-server/58a8724010cd6fbe3ae7298de0a5c6e9dafc990b/orbeon-aa144f9fcd394054c18536a679b02ad4553e0048.js  
+Fetch count: 2
+Last-Modified: Fri, 23 Jun 2017 06:23:34 GMT
+Expires: Fri, 20 Jul 2018 09:35:03 GMT
 ```
 
 This means that the resource can effectively be cached "for ever" by a client. In case the client visits Orbeon Forms pages often, the resources will be available from cache, therefore reducing page loading times and server load as well.
@@ -334,10 +333,10 @@ http://localhost:8080/orbeon/ops/images/xforms/error.png
 With resource versioning enabled, the URL becomes:
 
 ```xml
-http://localhost:8080/orbeon/4.0.0.M19.201212120146/ops/images/xforms/error.png
+http://localhost:8080/orbeon/58a8724010cd6fbe3ae7298de0a5c6e9dafc990b/ops/images/xforms/error.png
 ```
 
-When resource versioning is enabled, the Page Flow Controller by default serves all the resources defined in `` elements by first checking the `oxf.resources.versioned` property. If versioning is enabled, the PFC removes the version number from the URL before searching for the resource on disk. It is possible to turn this behavior on and off selectively with the `versioned` attribute. Here is how to turn off versioning for PDF files in `page-flow.xml`:
+When resource versioning is enabled, the Page Flow Controller by default serves all the resources defined in `<files>` elements by first checking the `oxf.resources.versioned` property. If versioning is enabled, the PFC removes the version number from the URL before searching for the resource on disk. It is possible to turn this behavior on and off selectively with the `versioned` attribute. Here is how to turn off versioning for PDF files in `page-flow.xml`:
 
 ```xml
 <config xmlns="http://www.orbeon.com/oxf/controller" xmlns:oxf="http://www.orbeon.com/oxf/processors">
