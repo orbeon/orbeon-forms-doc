@@ -89,6 +89,7 @@ Each grid cell can contain a single form control, or no control at all. If a con
 
 When your mouse pointer hovers over a grid cell containing a control, some icons allowing for further actions appear:
 
+* **Move or Copy Control icon:** [SINCE 2017.2] a handle for you to drag & drop the control to another grid cell. Press the *shift* key before you start the drag & drop motion to create a copy of the current control in the target cell, instead of moving it there.
 * **Delete Control icon:** deletes the control.
     * This also removes information associated with the control, including validation properties and XML representation.
 * **Control Settings icon:** opens the Control Settings dialog.
