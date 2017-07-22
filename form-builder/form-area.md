@@ -71,7 +71,7 @@ You can perform the following operations on grids:
 
 For delete operations, a warning dialog shows if controls will be deleted as a result.
 
-![](../form-runner/component/images/xbl-alert-dialog.png)
+<img alt="Column confirmation dialog" src="../form-runner/component/images/xbl-alert-dialog.png" width="504">
 
 ## Grid cells and controls
 
