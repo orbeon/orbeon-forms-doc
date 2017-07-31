@@ -2,7 +2,7 @@
 
 <!-- toc -->
 
-### Adding your own CSS files
+## Adding your own CSS files
 
 [SINCE Orbeon Forms 2017.1]
 
@@ -17,7 +17,7 @@ In addition to `oxf.fr.css.custom.uri`, you can also use the following property,
 
 See also [Adding your own CSS](form-runner.md#adding-your-own-css).
 
-### Adding your own JavaScript files
+## Adding your own JavaScript files
 
 [SINCE Orbeon Forms 2017.1]
 
