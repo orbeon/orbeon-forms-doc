@@ -7,6 +7,7 @@
 - [Attachments](form-runner-attachments.md)
 - [Detail page](form-runner-detail-page.md)
 - [Persistence](persistence.md)
+- [Summary page](form-runner-summary-page.md)
 
 ## Default values
 
@@ -118,77 +119,11 @@ For pages which don't involve a specific form, such as the Form Runner Home Page
 
 ## Summary Page
 
-### Summary Page size
-
-```xml
-<property
-    as="xs:integer"
-    name="oxf.fr.summary.page-size.*.*"
-    value="10"/>
-```
-
-Number of rows shown in the Summary Page.
-
-### Created and Last Modified columns
-
-By default, the Summary Page shows a Created and Modified columns:
-
-![](/form-runner/images/summary-created-last-modified.png)
-
-You can remove either one of those columns by setting the value appropriate property to `false`:
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.summary.show-created.*.*"
-    value="true"/>
-
-<property
-    as="xs:boolean"
-    name="oxf.fr.summary.show-last-modified.*.*"
-    value="true"/>
-```
-
-### Buttons on the Summary Page
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.summary.buttons.*.*"
-    value="home review pdf delete duplicate new"/>
-```
-
-The property configures which buttons are included on the Summary Page, and in what order they are shown. Possible buttons are:
-
-* `home`
-    * Label: "Home"
-    * Action: Navigate to the Form Runner Home Page.
-* review
-    * Label: "Review"
-    * Action: Navigate to the Detail Page in "view" mode to review the selected form data.
-* `pdf`
-    * Label: "PDF"
-    * Action: Create a PDF file for the selected form data.
-* `tiff` [SINCE Orbeon Forms 2016.1]
-    * Label: "TIFF"
-    * Action: Create a TIFF image file for the selected form data.
-* `delete`
-    * Label: "Delete"
-    * Action: Delete the selected form data.
-* `import`
-    * Label: "Import"
-    * Action: Import data via the [Excel import page](../../form-runner/advanced/excel.md).
-* `duplicate` [SINCE Orbeon Forms 4.5]
-    * Label: "Duplicate"
-    * Action: Duplicate the selected form data (or form definition on the Form Builder Summary Page), including attachments.
-    * Usage: Select one or more checkboxes and press the "Duplicate" button. When the operation completes the Summary Page refreshes with the new duplicated form data.
-* `new`
-    * Label: "New"
-    * Action: Navigate to the Detail Page in "new" mode to create new form data.
+See [Summary page configuration properties](form-runner-summary-page.md).
 
 ## Detail page
 
-xxx
+See [Detail page configuration properties](form-runner-detail-page.md).
 
 ## Show Orbeon Forms version
 

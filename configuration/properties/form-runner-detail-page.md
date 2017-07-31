@@ -2,6 +2,36 @@
 
 <!-- toc -->
 
+### Adding your own CSS files
+
+[SINCE Orbeon Forms 2017.1]
+
+In addition to `oxf.fr.css.custom.uri`, you can also use the following property, which apply only to the Detail page:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.css.custom.uri.*.*"
+    value="/forms/acme/assets/acme-detail.css"/>
+```
+
+See also [Adding your own CSS](form-runner.md#adding-your-own-css).
+
+### Adding your own JavaScript files
+
+[SINCE Orbeon Forms 2017.1]
+
+In addition to `oxf.fr.js.custom.uri`, you can also use the following property, which apply only to the Detail page:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.js.custom.uri.*.*"
+    value="/forms/acme/assets/acme-detail.js"/>
+```
+
+See also [Adding your own CSS](form-runner.md#adding-your-own-javascript).
+
 ## Show table of contents
 
 ```xml
