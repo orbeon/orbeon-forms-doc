@@ -174,19 +174,8 @@ You can add more than one file, and just separate the paths by whitespace in the
 
 In addition to `oxf.fr.css.custom.uri`, you can also use the following properties, which apply only to the Summary and Detail pages respectively:
 
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.summary.css.custom.uri.*.*"
-    value="/forms/acme/assets/acme-summary.css"/>
-```
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.css.custom.uri.*.*"
-    value="/forms/acme/assets/acme-detail.css"/>
-```
+- [`oxf.fr.summary.css.custom.uri`](form-runner-summary-page.md#adding-your-own-css-files)
+- [`oxf.fr.detail.css.custom.uri`](form-runner-detail-page.md#adding-your-own-css-files)
 
 ### Authoring CSS
 
@@ -232,19 +221,8 @@ You can add more than one file, and just separate the paths by whitespace in the
 
 In addition to `oxf.fr.js.custom.uri`, you can also use the following properties, which apply only to the Summary and Detail pages respectively:
 
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.summary.js.custom.uri.*.*"
-    value="/forms/acme/assets/acme-summary.js"/>
-```
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.js.custom.uri.*.*"
-    value="/forms/acme/assets/acme-detail.js"/>
-```
+- [`oxf.fr.summary.js.custom.uri`](form-runner-summary-page.md#adding-your-own-javascript-files)
+- [`oxf.fr.detail.js.custom.uri`](form-runner-detail-page.md#adding-your-own-javascript-files)
 
 ## Overriding resources
 
