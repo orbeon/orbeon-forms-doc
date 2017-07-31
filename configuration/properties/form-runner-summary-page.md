@@ -30,7 +30,7 @@ In addition to `oxf.fr.js.custom.uri`, you can also use the following property, 
     value="/forms/acme/assets/acme-summary.js"/>
 ```
 
-See also [Adding your own CSS](form-runner.md#adding-your-own-javascript).
+See also [Adding your own JavaScript](form-runner.md#adding-your-own-javascript).
 
 ## Summary page size
 
