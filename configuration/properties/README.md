@@ -18,7 +18,10 @@ Each Orbeon Forms subsystem defines its own properties. They are documented in t
 
 - [General properties](general.md)
 - [Form Runner properties](form-runner.md)
-    - [Persistence properties](persistence.md)
+    - [Attachments](form-runner-attachments.md)
+    - [Detail page](form-runner-detail-page.md)
+    - [Persistence](persistence.md)
+    - [Summary page](form-runner-summary-page.md)
 - [Form Builder properties](form-builder.md)
 - [XForms properties](xforms.md)
 
