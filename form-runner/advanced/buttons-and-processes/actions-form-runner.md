@@ -41,6 +41,43 @@ Check whether there are pending uploads.
     - success if there are no pending uploads
     - failure if there are pending uploads
 
+## rollback
+
+[SINCE Orbeon Forms 2017.2]
+
+Rollback some of the changes that have taken place during the current process.
+
+- parameters
+    - `changes`: must be "in-memory-form-data" as of Orbeon Forms 2017.2
+    
+At the beginning of a top-level process, the current state of:
+
+- in-memory form data
+- data status (see the `set-data-status` action)
+
+is temporarily saved.
+
+Upon running the `rollback` action, that stat is restored.
+ 
+This means, for example, that if the instance data was changed due to actions such as:
+
+- `xf:setvalue`
+- `save` (which updates paths to attachments)
+
+then the state of the data is restored to what it was prior to running the current top-level process.
+
+Example:
+
+```
+xf:setvalue(ref = "my-section/my-name", value = "'Sam'")
+then rollback(changes = "in-memory-form-data")
+```
+
+Limitations:
+
+- This does not work across `suspend` / `resume` boundaries.
+- There is no rollback at the database level.
+
 ## save
 
 Save data and attachments via the persistence layer.
@@ -98,7 +135,7 @@ This documentation is on a [separate page](actions-form-runner-send.md).
 
 [SINCE Orbeon Forms 4.7]
 
-Set the status of the form data in memory.
+Set the status of the in-memory form data.
 
 - parameters
     - `status`: specifies the status of the data
