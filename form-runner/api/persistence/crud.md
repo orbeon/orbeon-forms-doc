@@ -28,7 +28,7 @@ The following uses the [curl](https://curl.haxx.se/) command-line utility to `PU
 curl
   -v
   -k
-  -d @form.xhtml
+  -d @mydata.xml
   -H "Content-Type: application/xml"
   -H "Orbeon-Form-Definition-Version: 1"
   -X PUT
