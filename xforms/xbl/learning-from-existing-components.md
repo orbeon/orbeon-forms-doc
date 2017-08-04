@@ -24,7 +24,7 @@ The "meat" of most components is in files ending with the `.xbl` extension.
 
 Then:
 
-* copy into your XBL file the content of a simple existing component, like `xbl/orbeon/tutorial-simple/tutorial-simple.xbl`
+* copy into your XBL file the content of a simple existing component, like [`tutorial-input.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/tutorial-input/tutorial-input.xbl)
 * modify the binding rule (`fr|tutorial-simple`) into something that matches your component name (`fr|cool-stuff`)
 * within an XForms page
     * declare `xmlns:fr="http://orbeon.org/oxf/xml/form-runner"`

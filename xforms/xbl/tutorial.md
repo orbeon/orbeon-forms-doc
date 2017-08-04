@@ -121,8 +121,8 @@ With this mode, no markup is output, and the component author can access the LHH
 
 You can find the component discussed in this section in the Orbeon Forms distribution:
 
-* XBL: xbl/orbeon/tutorial-input/tutorial-input.xbl
-* Example: apps/xforms-sandbox/samples/xbl-tutorial-input.xhtml
+* XBL: [`tutorial-input.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/tutorial-input/tutorial-input.xbl)
+* Example: [`xbl-tutorial-input.xhtml`](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-sandbox/samples/xbl-tutorial-input.xhtml)
 
 Orbeon Forms modes make this very simple:
 
