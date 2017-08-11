@@ -7,7 +7,7 @@
 If your forms are created with Form Builder, to upgrade to a new version of Orbeon Forms you'll want to:
 
 1. Apply any changes you've done to the old Orbeon Forms web app to the new Orbeon Forms web app. Often, the only file you need to modify is the `properties-local.xml` (inside `WEB-INF/resources/config`), but you might have created or made changes to other files.
-2. If you're using the internal eXist and want to keep the forms you created, and corresponding data captured with those forms, you'll want to move the `WEB-INF/exist-data` directory to the new web app. If using a relational database, you might have to run some upgrade DDL at the database level. Search for "upgrade" in the [relational database configuration documentation](../../form-runner/persistence/relational-db.md), and check if there is some DDL you need to run to upgrade your database schema.
+2. If you're using the internal eXist and want to keep the forms you created, and corresponding data captured with those forms, you'll want to move the `WEB-INF/exist-data` directory to the new web app. If using a relational database, you might have to run some upgrade DDL at the database level. Search for "upgrade" in the [relational database configuration documentation](form-runner/persistence/relational-db.md), and check if there is some DDL you need to run to upgrade your database schema.
 3. Thoroughly test that everything is working as expected with the new version of Orbeon Forms.
 
 ## Compatibility policy
@@ -56,7 +56,7 @@ When about to upgrade, we recommend you go through the release notes for all ver
 - [4.0](http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/40#TOC-Compatibility-notes)
 - [3.9](http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/39#TOC-Compatibility-notes)
 
-See also [Orbeon Forms release history](../../release-history.md).
+See also [Orbeon Forms release history](release-history.md).
 
 ## Reliance on Orbeon Forms internals
 
@@ -65,8 +65,8 @@ Our users sometimes customize Orbeon Forms by relying on the internals of Orbeon
 When this happens, we consider the reasons changes relying upon Orbeon Forms internals, and evaluate how this could be improved in the future. Examples include:
 
 - Available
-  - [Form Runner: Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md)
-  - [Form Runner: Custom Model Logic](../../form-runner/advanced/custom-model-logic.md)
+  - [Form Runner: Buttons and Processes](form-runner/advanced/buttons-and-processes/README.md)
+  - [Form Runner: Custom Model Logic](form-runner/advanced/custom-model-logic.md)
 - Considered
   - [Stable API for Form Runner](https://github.com/orbeon/orbeon-forms/issues/1095)
 
@@ -88,7 +88,7 @@ Each new version brings:
 
 In addition, we can support newer version of Orbeon Forms much better than older versions.
 
-See the [release notes of all the versions](../../release-history.md) for more details.
+See the [release notes of all the versions](release-history.md) for more details.
 
 In addition, if you are on the 3.x series of Orbeon Forms, the 4.x series brings:
 

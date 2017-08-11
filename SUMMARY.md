@@ -12,6 +12,7 @@
 * [Index of features](features.md)
 * [Release history](release-history.md)
 * [Product roadmap](roadmap.md)
+* [Upgrading from older versions](upgrading.md)
 * [FAQ](faq/README.md)
     * [Licensing](faq/licensing.md)
     * [PE and Dev Support](faq/pe-dev-support.md)
@@ -163,7 +164,6 @@
        * [Run modes](configuration/advanced/run-modes.md)
        * [Security](configuration/advanced/security.md)
        * [SAP Hybris Module](configuration/advanced/sap-hybris.md)
-       * [Upgrading from older versions](configuration/advanced/upgrading.md)
        * [XForms logging](configuration/advanced/xforms-logging.md)
    * Troubleshooting
        * [Relational database logging](configuration/troubleshooting/database-logging.md)
