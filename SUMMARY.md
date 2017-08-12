@@ -8,6 +8,7 @@
     * [WebSphere](installation/websphere.md)
     * [WebLogic](installation/weblogic.md)
     * [GlassFish](installation/glassfish.md)
+    * [Replication](installation/replication.md)
 * [Use cases](use-cases.md)
 * [Index of features](features.md)
 * [Release history](release-history.md)
