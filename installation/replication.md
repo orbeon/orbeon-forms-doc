@@ -47,6 +47,8 @@ might have failed or are being brought back, and ensuring session affinity.
 
 ### Orbeon Forms configuration
 
+#### Properties
+
 Orbeon Forms has a single property enabling replication:
 
 ```xml
@@ -69,6 +71,7 @@ through the load balancer:
     value="http://localhost:8080/orbeon"/>
 ```
 
+#### web.xml
 
 The application's `web.xml` must contain:
 
@@ -78,6 +81,102 @@ The application's `web.xml` must contain:
 
 In addition, the `ReplicationServletContextListener` must be enabled. This is the case by default in the `web.xml`
 that ships with Orbeon Forms.
+
+#### Ehcache
+
+The Orbeon Forms `WEB-INF/resources/config/ehcache.xml` must be modified to included replication settings, which are
+turned off by default. This is similar to Tomcat session replication.
+
+*NOTE: There isn't as single set of settings to replicate the Tomcat servlet session and Ehcache, as the two products
+use different libraries for replication. But the idea is that both configuration should behave as closely as possible
+from each other.* 
+
+The keys to tis configuration are:
+
+- for relevant caches
+    - `RMICacheReplicatorFactory` as `<cacheEventListenerFactory>`
+    - `RMIBootstrapCacheLoaderFactory` as `<bootstrapCacheLoaderFactory>`
+- global
+    - `RMICacheManagerPeerProviderFactory` as `<cacheManagerPeerProviderFactory>`
+    - `RMICacheManagerPeerListenerFactory` as `<cacheManagerPeerListenerFactory>`
+
+Here is an example configuration: [[TODO: This must be refined.]]
+
+```xml
+<ehcache updateCheck="false" monitoring="off" dynamicConfig="true">
+
+    <!-- Where the disk store will go -->
+    <diskStore path="java.io.tmpdir/orbeon/cache"/>
+
+    <!-- Default cache (not used by Orbeon) -->
+    <defaultCache
+        maxElementsInMemory="10000"
+        eternal="false"
+        timeToIdleSeconds="120"
+        timeToLiveSeconds="120"
+        overflowToDisk="true"
+        diskSpoolBufferSizeMB="30"
+        maxElementsOnDisk="10000000"
+        diskPersistent="false"
+        diskExpiryThreadIntervalSeconds="120"
+        memoryStoreEvictionPolicy="LRU"
+        statistics="false"/>
+
+    <!-- XForms state store configuration. Only modify if you know what you are doing! -->
+    <!-- NOTE: We set this as a disk cache, but follow the Ehcache doc and set maxElementsInMemory to 1 instead of 0. -->
+    <cache name="xforms.state"
+           maxElementsInMemory="0"
+           memoryStoreEvictionPolicy="LFU"
+           overflowToDisk="false"
+           diskSpoolBufferSizeMB="10"
+           eternal="false"
+           timeToLiveSeconds="0"
+           timeToIdleSeconds="18000">
+
+        <cacheEventListenerFactory
+            class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"/>
+
+        <bootstrapCacheLoaderFactory
+            class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory"
+            properties="bootstrapAsynchronously=false" />
+    </cache>
+
+    <!-- XForms resources. Only modify if you know what you are doing! -->
+    <cache name="xforms.resources"
+           maxElementsInMemory="200"
+           memoryStoreEvictionPolicy="LFU"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="1"
+           eternal="true"
+           timeToLiveSeconds="0"
+           timeToIdleSeconds="0"
+           diskPersistent="true"
+           maxElementsOnDisk="0"
+           diskExpiryThreadIntervalSeconds="120"/>
+
+    <!-- XForms XBL cache. Only modify if you know what you are doing! -->
+    <cache name="xforms.xbl"
+           maxElementsInMemory="200"
+           memoryStoreEvictionPolicy="LFU"
+           overflowToDisk="false"
+           eternal="false"
+           timeToLiveSeconds="0"
+           timeToIdleSeconds="0"/>
+
+    <cacheManagerPeerProviderFactory
+        class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
+        properties="
+            peerDiscovery=automatic,
+            multicastGroupAddress=228.0.0.5,
+            multicastGroupPort=4446,
+            timeToLive=1"
+    />
+
+    <cacheManagerPeerListenerFactory
+        class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory"/>
+
+</ehcache>
+```
 
 ### Servlet container configuration
 
