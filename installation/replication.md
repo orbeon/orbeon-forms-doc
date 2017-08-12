@@ -4,14 +4,17 @@
 
 ## Availability
 
-This feature is available since Orbeon Forms 2017.2. Currently, this feature has only been tested with Apache Tomcat.
+This feature is available since Orbeon Forms 2017.2. This feature has been tested with the following software:
+
+- Apache Tomcat 8.0.45
+- HAProxy 1.7.4
 
 ## Introduction
 
 The purpose of replication is to provide high-availability of Orbeon Forms with as little disruption as possible to
 users currently filling out forms. This is achieved by replicating state between servers.
 
-Consider a simple scenario of load-balancing with two servers, with sticky sessions (that is, a user's requests always
+Consider a simple scenario of load-balancing with two servers, with sticky sessions (that is, a given user's requests always
 reach the same server). If one of the servers fails, new users will be assigned to the other server. So the system
 remains operational from that point of view. However, users with active sessions will have their current work lost, as
 the content will still in the failed server-memory.
@@ -28,7 +31,7 @@ needed.
 
 Sessions are still sticky for performance reasons. Because Orbeon Forms stores a lot of information in memory, and there
 are data structures associated with that information, there is a cost to recreate all necessary data structures at each
-request. Therefore, usually, requests for a given user must constantly reach the same server. However, if a server
+request. Therefore, requests for a given user must constantly reach the same server. However, if a server
 fails, then there is a one-time cost to recreating data structures on the new server for the given user (in fact, for
 a given form in use by that user).
 
@@ -37,6 +40,8 @@ physical or virtual.
 
 A load balancer is required. It is in charge of proxying client requests to specific servers, detect which servers
 might have failed or are being brought back, and ensuring session affinity.
+
+<!-- TODO: diagram -->
 
 ## Configuration
 
@@ -51,11 +56,11 @@ Orbeon Forms has a single property enabling replication:
     value="true"/>
 ```
 
-By default, this property is `false`, because there is a cost to serializing the state of forms after each update in
+By default, this property is set to `false`, because there is a cost to serializing the state of forms after each update in
 memory.
 
-In addition, because there is a proxy, if you are using the embedded eXist database in particular, you might need to set
-the following property to point to the local Orbeon Forms instance without going through the load balancer:
+In addition you might need to set the following property to point to the local Orbeon Forms instance without going
+through the load balancer:
 
 ```xml
 <property
@@ -65,7 +70,7 @@ the following property to point to the local Orbeon Forms instance without going
 ```
 
 
-The application's web.xml must contain:
+The application's `web.xml` must contain:
 
 ```xml
 <distributable/> 
@@ -122,6 +127,13 @@ With Tomcat, this is done in `server.xml` within the `<Engine>` element:
 </Cluster>
 ``` 
 
+In that configuration, the following can be changed:
+
+- the IP multicast address, here `address="228.0.0.4"`
+- the IP multicast port, here `port="45564`
+
+For details about the Tomcat configuration, see [Clustering/Session Replication HOW-TO](https://tomcat.apache.org/tomcat-8.0-doc/cluster-howto.html).
+
 ### Load balancer configuration
 
 With HAProxy, a simple configuration looks like this:
@@ -158,6 +170,9 @@ For testing, you can start HAProxy with the following command:
 ```
 haproxy -db -f haproxy.conf
 ```
+
+For details about the HAProxy configuration, see the [HAProxy Configuration Manual](https://cbonte.github.io/haproxy-dconv/1.7/configuration.html).
+
 
 <!--
 ## See also
