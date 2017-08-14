@@ -91,7 +91,7 @@ turned off by default. This is similar to Tomcat session replication.
 use different libraries for replication. But the idea is that both configuration should behave as closely as possible
 from each other.* 
 
-The keys to tis configuration are:
+The keys to this configuration are:
 
 - for relevant caches
     - `RMICacheReplicatorFactory` as `<cacheEventListenerFactory>`
