@@ -126,7 +126,7 @@ ORBEON.xforms.Document.getValue(ORBEON.jQuery(this).find('.xforms-select1')[0])
 
 ### Setting focus on a control
 
-[SINCE Orbeon Forms 2017.1]
+[SINCE Orbeon Forms 2017.2]
 
 ```javascript
 ORBEON.xforms.Document.focus(controlIdOrElement, form)
@@ -146,6 +146,8 @@ ORBEON.xforms.Document.focus(
     'fr-view-component≡text-controls-section≡xf-788≡input-control'
 )
 ```
+
+Actual focus only takes place if the control is focusable, not readonly, and not hidden within a hidden `switch`/`case` or `dialog`. 
 
 ### Dispatching events
 
