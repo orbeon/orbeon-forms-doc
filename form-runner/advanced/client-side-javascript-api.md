@@ -15,15 +15,15 @@ A Form Runner control name is the name entered by the form author in Form Builde
 
 ```javascript
 ORBEON.fr.API.findControlsByName(
-    name      : string, 
-    formElem? : HTMLElement
+    controlName : string, 
+    formElem?   : HTMLElement
 ): HTMLElement[]
 ```
 
 | Name | Required | Type | Description |
 | ---- | -------- | ---- | ----------- |
-| **name**     |  Yes |  `String`| The name of the Form Runner control.
-| **formElem** |  No | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used.
+| **controlName** |  Yes |  `String`     | The name of the Form Runner control. |
+| **formElem**    |  No  | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
 
 If no control is found, an empty array is returned.
 
@@ -31,6 +31,32 @@ If there are multiple controls with the same name, the array will contain multip
  
 - when controls are repeated, for example in a repeated grid or section
 - when controls appear in the main form and section template and/or in different section templates
+
+## Focusing on a control
+
+[SINCE Orbeon Forms 2017.2]
+
+The `wizard.focus()` function sets keyboard focus on a Form Runner control by name, including toggling wizard pages
+first if needed.
+
+```javascript
+ORBEON.fr.API.wizard.focus(
+    controlName : String
+)
+```
+
+| Name | Required | Type | Description |
+| ---- | -------- | ---- | ----------- |
+| **controlName** |  Yes |  `String` | The name of the Form Runner control. |
+
+Example:
+
+```javascript
+ORBEON.fr.API.wizard.focus('street-address')
+```
+
+*NOTE: This only supports the wizard's `free` validation mode. `lax` and `strict` are not yet supported.*
+
 
 ## See also
 
