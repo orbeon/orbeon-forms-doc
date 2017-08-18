@@ -4,7 +4,9 @@
 
 ## Availability
 
-This feature is available since Orbeon Forms 2017.2. This feature has been tested with the following software:
+This is an [Orbeon Forms PE][1] feature.
+
+This feature is available since Orbeon Forms 2017.2. It has been tested with the following software:
 
 - Apache Tomcat 8.0.45
 - HAProxy 1.7.4
@@ -278,3 +280,5 @@ For details about the HAProxy configuration, see the [HAProxy Configuration Manu
 
 - xxx
 -->
+
+[1]: http://www.orbeon.com/download
