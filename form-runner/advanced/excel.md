@@ -37,9 +37,10 @@ _NOTE: Only the Excel 2007 .xlsx format (Office Open XML) is supported. The olde
 You enable the import button on the Summary page by adding the import token to the `oxf.fr.summary.buttons.*.*` property. Here for the Orbeon Contact form:
 
 ```xml
-<property as="xs:string"
-  name="oxf.fr.summary.buttons.orbeon.contact"
-  value="new import edit print pdf delete"/>
+<property
+    as="xs:string"
+    name="oxf.fr.summary.buttons.orbeon.contact"
+    value="new import edit print pdf delete"/>
 ```
 
 ## Mapping between form controls and spreadsheet
@@ -59,6 +60,28 @@ Here is an example spreadsheet for the sample Orbeon Contact form:
 ![]![](../images/excel-import-sheet.png)
 
 _NOTE: Only characters allowed in XML names are allowed as control names in Form Builder. In case your Excel header row requires names with non-XML characters (Form Builder will tell you the name is not allowed), simply replace them by "_" in Form Builder._
+
+## Allowing invalid data
+
+[SINCE Orbeon Forms 2017.2]
+
+By default, invalid data is skipped during import.
+
+You can enable the optional import of invalid data with the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.import.allow-invalid-documents.*.*"
+    value="true"/>
+``` 
+
+By default, it is set to `false` and the user is not provided with an option to skip invalid data.
+
+When set to `true`, the user is provided with an option to skip invalid data at the time of import:
+
+![](../images/excel-import-validate-allow-invalid.png)
+
 
 ## Limitations
 
