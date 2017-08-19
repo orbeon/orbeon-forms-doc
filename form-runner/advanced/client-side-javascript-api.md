@@ -41,19 +41,41 @@ first if needed.
 
 ```javascript
 ORBEON.fr.API.wizard.focus(
-    controlName : String
+    controlName   : String,
+    repeatIndexes : Int[]?
 )
 ```
 
 | Name | Required | Type | Description |
 | ---- | -------- | ---- | ----------- |
-| **controlName** |  Yes |  `String` | The name of the Form Runner control. |
+| **controlName**   |  Yes |  `String` | The name of the Form Runner control. |
+| **repeatIndexes** |  No  |  array of `Int` | Repeat indexes. |
+
+This function doesn't have any effect if the control is readonly or non-relevant.
 
 Example:
 
 ```javascript
 ORBEON.fr.API.wizard.focus('street-address')
 ```
+
+The optional `repeatIndexes` parameter allows reaching controls within repeats. For example, with one level of
+repeat:
+
+```javascript
+ORBEON.fr.API.wizard.focus('comment', [ 2 ])
+```
+
+accesses the second iteration of the `comment` field.
+
+Similarly, for nested repeats, you add as many elements in the array as there are nested repeats:
+
+```javascript
+ORBEON.fr.API.wizard.focus('comment', [ 3, 2 ])
+```
+
+When `repeatIndexes` is not specified, if the field is repeated, a single field is selected following the current
+repeat indexes.  
 
 *NOTE: This only supports the wizard's `free` validation mode. `lax` and `strict` are not yet supported.*
 
