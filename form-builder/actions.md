@@ -90,23 +90,12 @@ Use "Set Service Request Values".
 
 Each row instructs the action to take the value of a form control and store it into the body of the XML service request.
 
-- __Source Control.__ Specifies the control whose value must be used.
+- __Source Control.__ See the [relevant section below](#source-control).
 - __Destination XPath Expression.__ The XPath expression, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
 
 You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
 
-#### With Database services
-
-Use "Set Database Service Parameters".
-
-Each row instructs the action to take the value of a control and set that value as the Nth query parameter of the database service.
-
-- __Source Control.__ Specifies the control whose value must be used.
-- __Parameter Number.__ To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
-
-You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
-
-#### Passing URL parameters to GET and DELETE methods
+##### Passing URL parameters to GET and DELETE methods
 
 [SINCE Orbeon Forms 2016.1]
 
@@ -123,6 +112,21 @@ The Actions Editor doesn't yet support specifying URL parameters directly by nam
 
 - to set the `userId` parameter: `/*/userId`
 - to set the `userName` parameter: `/*/userName`
+
+#### With Database services
+
+Use "Set Database Service Parameters".
+
+Each row instructs the action to take the value of a control and set that value as the Nth query parameter of the database service.
+
+- __Source Control.__ See the [relevant section below](#source-control).
+- __Parameter Number.__ To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
+
+You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
+
+#### Source control
+
+Specifies the control whose value must be used. If the control is repeated, because it occurs in a repeated grid or repeated section, then the value of the first "instance" of that control is used and passed to the service.
 
 ## Handling the service response
 
