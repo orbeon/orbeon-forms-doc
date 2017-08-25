@@ -127,20 +127,23 @@ Here is an example configuration: [[TODO: This must be refined.]]
     <!-- XForms state store configuration. Only modify if you know what you are doing! -->
     <!-- NOTE: We set this as a disk cache, but follow the Ehcache doc and set maxElementsInMemory to 1 instead of 0. -->
     <cache name="xforms.state"
-           maxElementsInMemory="0"
+           maxElementsInMemory="1"
            memoryStoreEvictionPolicy="LFU"
-           overflowToDisk="false"
+           overflowToDisk="true"
            diskSpoolBufferSizeMB="10"
            eternal="false"
            timeToLiveSeconds="0"
-           timeToIdleSeconds="18000">
+           timeToIdleSeconds="18000"
+           diskPersistent="false"
+           maxElementsOnDisk="0"
+           diskExpiryThreadIntervalSeconds="120">
 
         <cacheEventListenerFactory
             class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"/>
 
         <bootstrapCacheLoaderFactory
             class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory"
-            properties="bootstrapAsynchronously=false" />
+            properties="bootstrapAsynchronously=false"/>
     </cache>
 
     <!-- XForms resources. Only modify if you know what you are doing! -->
@@ -154,16 +157,16 @@ Here is an example configuration: [[TODO: This must be refined.]]
            timeToIdleSeconds="0"
            diskPersistent="true"
            maxElementsOnDisk="0"
-           diskExpiryThreadIntervalSeconds="120"/>
+           diskExpiryThreadIntervalSeconds="120">
 
-    <!-- XForms XBL cache. Only modify if you know what you are doing! -->
-    <cache name="xforms.xbl"
-           maxElementsInMemory="200"
-           memoryStoreEvictionPolicy="LFU"
-           overflowToDisk="false"
-           eternal="false"
-           timeToLiveSeconds="0"
-           timeToIdleSeconds="0"/>
+        <cacheEventListenerFactory
+            class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"/>
+
+        <bootstrapCacheLoaderFactory
+            class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory"
+            properties="bootstrapAsynchronously=false"/>
+
+    </cache>
 
     <cacheManagerPeerProviderFactory
         class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
