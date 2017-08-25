@@ -274,6 +274,26 @@ haproxy -db -f haproxy.conf
 
 For details about the HAProxy configuration, see the [HAProxy Configuration Manual](https://cbonte.github.io/haproxy-dconv/1.7/configuration.html).
 
+## Limitations
+
+### Uploaded files
+
+Uploaded files which are not yet saved to a database are currently not replicated. If a use is switched from one server
+to another, Form Runner:
+
+- checks all unsaved attachments
+- if there are any
+  - clears the associated temporary file path
+  - shows an alert to the user
+  
+### Loss of state
+
+If a server fails instantly before it had the chance to replicate the latest modifications to a form, and after an
+Ajax response has been sent to the client, then state might be lost. The user is redirected by the load balancer
+to another server, but state will be missing from that server. In such cases, the user will see an error, and won't
+be able to continue working with the form. Unsaved data will be lost.
+
+In such cases, enabling the [autosave feature][2] can alleviate the issue. 
 
 <!--
 ## See also
@@ -282,3 +302,4 @@ For details about the HAProxy configuration, see the [HAProxy Configuration Manu
 -->
 
 [1]: http://www.orbeon.com/download
+[2]: ../form-runner/persistence/autosave.md
