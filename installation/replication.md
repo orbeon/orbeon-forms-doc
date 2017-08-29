@@ -332,11 +332,9 @@ In such cases, enabling the [autosave feature][2] can alleviate the issue.
 The `ehcache.xml` configuration provided above attempts to minimize this kind of issues by adding
 `replicateAsynchronously=false`. 
 
-<!--
 ## See also
 
-- xxx
--->
+- [Installation](README.md)
 
 [1]: http://www.orbeon.com/download
 [2]: ../form-runner/persistence/autosave.md
