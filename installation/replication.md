@@ -112,17 +112,17 @@ Here is an example configuration: [[TODO: This must be refined.]]
 
     <!-- Default cache (not used by Orbeon) -->
     <defaultCache
-        maxElementsInMemory="10000"
-        eternal="false"
-        timeToIdleSeconds="120"
-        timeToLiveSeconds="120"
-        overflowToDisk="true"
-        diskSpoolBufferSizeMB="30"
-        maxElementsOnDisk="10000000"
-        diskPersistent="false"
-        diskExpiryThreadIntervalSeconds="120"
-        memoryStoreEvictionPolicy="LRU"
-        statistics="false"/>
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            diskSpoolBufferSizeMB="30"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+            statistics="false"/>
 
     <!-- XForms state store configuration. Only modify if you know what you are doing! -->
     <!-- NOTE: We set this as a disk cache, but follow the Ehcache doc and set maxElementsInMemory to 1 instead of 0. -->
@@ -139,7 +139,8 @@ Here is an example configuration: [[TODO: This must be refined.]]
            diskExpiryThreadIntervalSeconds="120">
 
         <cacheEventListenerFactory
-            class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"/>
+            class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+            properties="replicateAsynchronously=false"/>
 
         <bootstrapCacheLoaderFactory
             class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory"
@@ -160,13 +161,23 @@ Here is an example configuration: [[TODO: This must be refined.]]
            diskExpiryThreadIntervalSeconds="120">
 
         <cacheEventListenerFactory
-            class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"/>
+            class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+            properties="replicateAsynchronously=false"/>
 
         <bootstrapCacheLoaderFactory
             class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory"
             properties="bootstrapAsynchronously=false"/>
 
     </cache>
+
+    <!-- XForms XBL cache. Only modify if you know what you are doing! -->
+    <cache name="xforms.xbl"
+           maxElementsInMemory="200"
+           memoryStoreEvictionPolicy="LFU"
+           overflowToDisk="false"
+           eternal="false"
+           timeToLiveSeconds="0"
+           timeToIdleSeconds="0"/>
 
     <cacheManagerPeerProviderFactory
         class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
@@ -246,6 +257,7 @@ With HAProxy, a simple configuration looks like this:
 global
     daemon
     maxconn 256
+    debug
 
 defaults
     mode http
@@ -277,6 +289,20 @@ haproxy -db -f haproxy.conf
 
 For details about the HAProxy configuration, see the [HAProxy Configuration Manual](https://cbonte.github.io/haproxy-dconv/1.7/configuration.html).
 
+## Load considerations
+
+Consider a scenario where you have two servers with replication enabled, and one of them fails. This means that users
+from the failed server are redirected by the load balancer to the server which is still working. If, at the time of
+failure, both servers were nearing their full capacity, then suddenly the only remaining server will have to handle
+all the load.
+
+This means that the load balanced servers should not be allowed to reach full capacity so that, in case of failure of
+a single server, the remaining server can handle all the load. Theoretically, this means that each server, in normal
+use, should be at under 50 % of total capacity.
+
+Using more than 2 replicated servers allows using more of the available capacity of all servers in the case of a single
+server failure.     
+
 ## Limitations
 
 ### Uploaded files
@@ -296,7 +322,10 @@ Ajax response has been sent to the client, then state might be lost. The user is
 to another server, but state will be missing from that server. In such cases, the user will see an error, and won't
 be able to continue working with the form. Unsaved data will be lost.
 
-In such cases, enabling the [autosave feature][2] can alleviate the issue. 
+In such cases, enabling the [autosave feature][2] can alleviate the issue.
+
+The `ehcache.xml` configuration provided above attempts to minimize this kind of issues by adding
+`replicateAsynchronously=false`. 
 
 <!--
 ## See also
