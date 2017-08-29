@@ -289,7 +289,9 @@ haproxy -db -f haproxy.conf
 
 For details about the HAProxy configuration, see the [HAProxy Configuration Manual](https://cbonte.github.io/haproxy-dconv/1.7/configuration.html).
 
-## Load considerations
+## Other considerations
+
+### Individual server load
 
 Consider a scenario where you have two servers with replication enabled, and one of them fails. This means that users
 from the failed server are redirected by the load balancer to the server which is still working. If, at the time of
@@ -314,6 +316,9 @@ to another, Form Runner:
 - if there are any
   - clears the associated temporary file path
   - shows an alert to the user
+  
+This requires users with unsaved attachments to re-upload their attachments. This is not ideal but it is likely that
+the user still have the attachment or attachments available. 
   
 ### Loss of state
 
