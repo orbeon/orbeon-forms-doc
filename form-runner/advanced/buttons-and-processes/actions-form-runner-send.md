@@ -222,17 +222,17 @@ Example:
 
 [SINCE Orbeon Forms 2016.2]
 
-When `pdf` is specified, the PDF binary is sent with a `Content-Type` set to `application/pdf`.
+When `content = "pdf"` is specified, the PDF binary is sent with a `Content-Type` set to `application/pdf`.
 
 ## Sending a TIFF binary
 
 [SINCE Orbeon Forms 2016.2]
 
-When `tiff` is specified, the TIFF binary is sent with a `Content-Type` set to `image/tiff`.
+When `content = "tiff"` is specified, the TIFF binary is sent with a `Content-Type` set to `image/tiff`.
 
 ## Sending a PDF URL
 
-When `pdf-url` is specified, the XML document sent has the following format:
+When `content = "pdf-url"` is specified, the XML document sent has the following format:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -243,13 +243,13 @@ The PDF can be retrieved by accessing that path with the proper session cookie.
 
 A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the PDF.
 
-*NOTE: When the PDF must be sent to a remote service, it is better to send the PDF binary directly using `pdf`.*
+*NOTE: When the PDF must be sent to a remote service, it is better to send the PDF binary directly using `content = "pdf"` .*
 
 ## Sending a TIFF URL
 
 [SINCE Orbeon Forms 2016.1]
 
-When `tiff-url` is specified, the XML document sent has the following format:
+When `content =  "tiff-url"` is specified, the XML document sent has the following format:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -266,7 +266,7 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 [SINCE Orbeon Forms 4.7]
 
-When `metadata` is specified, the XML document sent contains metadata per control. [This page](https://gist.github.com/orbeon/3684806b0a30a9a5ace9) shows examples based on the Orbeon Forms sample forms.
+When `content = "metadata"` is specified, the XML document sent contains metadata per control. [This page](https://gist.github.com/orbeon/3684806b0a30a9a5ace9) shows examples based on the Orbeon Forms sample forms.
 
 *NOTE: The `<value>` element is present only since Orbeon Forms 4.7.1.*
 
