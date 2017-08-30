@@ -16,7 +16,7 @@ The notion of _publishing_ is central to Form Builder/Form Runner.
 
 When you start publishing a form with the Publish button at the bottom of Form Builder, a dialog opens to confirm the application name form name:
 
-![Creating a new version](images/publish-initial-no-versioning.png)
+<img alt="Creating a new version" src="images/publish-initial-no-versioning.png" width="385">
 
 If you decide to go ahead with publishing, simply use the Publish button.
 
@@ -26,9 +26,9 @@ If you decide to go ahead with publishing, simply use the Publish button.
 
 When versioning is enabled, you have a choice, when publishing, of whether to create a new form version or to override an existing one.
 
-![Creating a new version](images/publish-version-next.png)
+<img alt="Creating a new version" src="images/publish-version-next.png" width="385">
 
-![Overwriting an existing version](images/publish-version-overwrite.png)
+<img alt="Overwriting an existing version" src="images/publish-version-overwrite.png" width="385">
 
 [SINCE Orbeon Forms 2016.1]
 
@@ -42,7 +42,7 @@ You can add or update a textual comment associated with the given published vers
 
 When creating a new version, the field is initially empty:
 
-![Empty comment](images/publish-comment-1.png)
+<img alt="Empty comment" src="images/publish-comment-1.png" width="385">
 
 You can set an explanatory comment:
  
