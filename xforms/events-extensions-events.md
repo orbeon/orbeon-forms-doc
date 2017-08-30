@@ -6,6 +6,38 @@
 
 This page documents extension events, that is events which are not part of the XForms specifications. Such events, by convention, start with the prefix `xxforms-`.
 
+## Document events
+
+### xxforms-state-restored
+
+[SINCE Orbeon Forms 2017.2]
+
+- __Dispatched in response to:__ form state restored from the XForm state store 
+- __Target:__ `#document`
+- __Bubbles:__ No
+- __Cancelable:__ No
+- __Context Info:__ None
+
+The `xxforms-state-restored` event is dispatched to the `#document` element when the form state is restored from the 
+XForm state store. This can happen in the following case:
+
+1. The form hasn't received updates from the client for a long time, has been evicted from the memory cache and stored
+   into the state store, and is finally restored from the state store when the client issues a new update.
+2. The form has been [replicated](../installation/replication.md) to another server.
+
+Example: 
+
+```xml
+<xf:action
+    event="xxforms-state-restored"
+    observer="#document"
+    target="#document">
+
+    <xf:message>State restored.</xf:message>
+
+</xf:action>
+```
+
 ## Instance events
 
 ### xxforms-value-changed
