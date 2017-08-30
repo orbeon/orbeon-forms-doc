@@ -42,15 +42,15 @@ You can add or update a textual comment associated with the given published vers
 
 When creating a new version, the field is initially empty:
 
-<img alt="Empty comment" src="images/publish-comment-1.png" width="385">
+<img alt="Empty comment" src="images/publish-comment-1.png" width="502">
 
 You can set an explanatory comment:
  
-![Empty comment](images/publish-comment-2.png)
+<img alt="Empty comment" src="images/publish-comment-2.png" width="502">
 
 When overriding an existing form version, the existing comment, if any, is read back from the published form definition and you can update it before publishing:
 
-![Empty comment](images/publish-comment-5.png)
+<img alt="Empty comment" src="images/publish-comment-5.png" width="502">
 
 ## See also
 
