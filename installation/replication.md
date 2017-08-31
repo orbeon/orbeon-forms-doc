@@ -16,12 +16,12 @@ This feature is available since Orbeon Forms 2017.2. It has been tested with the
 The purpose of replication is to provide high-availability of Orbeon Forms with as little disruption as possible to
 users currently filling out forms. This is achieved by replicating state between servers.
 
-Consider a simple scenario of load-balancing with two servers, with sticky sessions (that is, a given user's requests always
+Consider a simple scenario of load balancing with two servers, with sticky sessions (that is, a given user's requests always
 reach the same server). If one of the servers fails, new users will be assigned to the other server. So the system
 remains operational from that point of view. However, users with active sessions will have their current work lost, as
 the content will still in the failed server-memory.
 
-Replication changes that by replicating state to one or more additional servers. So if a server goes down, the load-
+Replication changes that by replicating state to one or more additional servers. So if a server goes down, the load
 balancer can redirect users with active sessions to other servers, and because state was replicated there, users can
 continue their work.
 

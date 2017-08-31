@@ -266,7 +266,7 @@ You can disable the use of short namespaces by setting the `use-short-namespaces
 
 By default (and this was the case in previous Orbeon Forms versions as well), short namespaces are enabled to reduce the size of the resulting HTML page and browser DOM.
 
-However, in some cases of load-balancing, this can be an issue. In such cases, you can disable short namespaces with this option. See [issue #2764](https://github.com/orbeon/orbeon-forms/issues/2764) for details.
+However, in some cases of load balancing, this can be an issue. In such cases, you can disable short namespaces with this option. See [issue #2764](https://github.com/orbeon/orbeon-forms/issues/2764) for details.
 
 ### HTTP client configuration
 
