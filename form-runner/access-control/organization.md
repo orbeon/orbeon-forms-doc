@@ -62,3 +62,7 @@ The way organizations are used and  stored has the following consequences:
 - If an organization name changes, for instance `Support` is renamed `Customer satisfaction`, then data in the database needs to be changed.
 - If the organization structure changes, say `Support` isn't under `Engineering` but under `Operations`, then information in the database needs to be changed.
 - Form Runner captures the user's organizations at the time she creates the data. Should that user switch to another organization, existing data will still be tied to her previous organizations. Another way to look at it is that, by default, data stays with the organizations where it was created, irrelevant of where the user who created that data moves. This may or may not be what you want, depending on the scenario. For instance, say a user in organization A submits an expense report, and shortly after that moves to organization B. By default, it will still be the manager in organization A who will be in charge of approving that expense report. If instead you want to data to move along with the user, it is up to you to change the organization associated with the data for that user in the database.
+
+## See also
+
+- [Form Runner Liferay Proxy Portlet](../../form-runner/link-embed/liferay-proxy-portlet.md)
