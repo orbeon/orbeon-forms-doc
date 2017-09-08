@@ -6,7 +6,7 @@
 
 You've created forms with Form Builder, published those forms, and setup Orbeon Forms so it [stores data captured by the forms in your relational database](../persistence/relational-db.md). Now, how can another app of yours access this data?
 
-![Accessing data - How](https://orbeon.mybalsamiq.com/mockups/3495508.png?key=409bf6fda74861c325ab1cbb3f99d1ac269a20b6)
+![Accessing data - How](../images/overview-accessing-data-how.png)
 
 In what follows, you'll see  3 techniques for doing so:
 
@@ -20,7 +20,7 @@ In what follows, you'll see  3 techniques for doing so:
 
 In most cases, this is the best option, and the one we recommend. In essence, you setup Orbeon Forms so when users fill out a form and submit it, Orbeon Forms sends the data users entered to your app. Your app can do whatever it wants with this data, and if needed, in the response to Orbeon Forms, your app can tell Orbeon Forms which page the user should go to next.
 
-![Doc - Accessing data - Process - Overview](https://orbeon.mybalsamiq.com/mockups/3496362.png?key=0de5fdf28d9bff939a0bef381754c6bf57a271a7)
+![Doc - Accessing data - Process - Overview](../images/overview-accessing-data-process-overview.png)
 
 Let's see in more details what this entails:
 
@@ -29,13 +29,13 @@ Let's see in more details what this entails:
 3. Your app can do what it wants with the data it receives: perform some operation in a database, call a service, etc.
 4. If you passed the `replace = "all"` parameter to `send()`, then what your app sends back to Orbeon Forms in the HTTP response will be sent/proxied back to the browser by Orbeon Forms. This allows you to send a custom confirmation page, or issue a redirect to another page or form that users should go to next.
 
-![Doc - Accessing data - Process - How](https://orbeon.mybalsamiq.com/mockups/3496409.png?key=8c133721c5ab53800f4a0ba422730f4f020dd695)
+![Doc - Accessing data - Process - How](../images/overview-accessing-data-process-how.png)
 
 ### 2. Call the REST API
 
 Your second option is to have your app call the Orbeon Forms [persistence API](../api/persistence/README.md) to retrieve the data saved by Orbeon Forms in the database. This is a simple REST API, and you'll want to make a first call to the [search API](../api/persistence/search.md) to *list* data submitted or saved with a specific form, and then a call to the [CRUD API](../api/persistence/crud.md) to *retrieve* any piece of data you're interested in.
 
-![Doc - Accessing data - REST - Overview](https://orbeon.mybalsamiq.com/mockups/3496368.png?key=74ab13a5b0003ab944d0242d8f70f51c6293ce35)
+![Doc - Accessing data - REST - Overview](../images/overview-accessing-data-rest-overview.png)
 
 As mentioned, the API provided by Orbeon Forms is quite simple, but there are a few complications to keep in mind when calling such an API, which often make [option 1](#1-send-data-on-submit) above more desirable:
 
@@ -47,10 +47,10 @@ As mentioned, the API provided by Orbeon Forms is quite simple, but there are a 
 
 Accessing data in the database rather than through an API, per [option 2](#2-call-the-rest-api) above, increases the chances that changes to your code will be needed when you upgrade Orbeon Forms, as the format of the Orbeon tables is more likely to change than the API. Despite this caveat, we've found that it is often more practical for customers to access data in a database rather than through an API.
 
-![Doc - Accessing data - DB - Overview](https://orbeon.mybalsamiq.com/mockups/3496415.png?key=78c6cf5202454498bc2560e8ea8bc7e593e5fce1)
+![Doc - Accessing data - DB - Overview](../images/overview-accessing-data-db-overview.png)
 
 The table you'll be the most interested in is `orbeon_form_data`, where the data users save or submit goes. In that table, a given "form data" (i.e. instance of a user filling out a form), is identified with a `document_id`. The actual data, i.e. values of the fields, is stored as XML in the `xml` column. For more details on the table format, see the DDL creating those tables for your database in the [Relational Database Setup](../persistence/relational-db.md), as it varies slightly depending on the database you're using.
 
 One way to access the data in `orbeon_form_data` is through a database trigger that copies the data you're interested in from the XML in `orbeon_form_data` every time new data is saved; for instance see an [example of such a trigger for MySQL](../persistence/relational-db.md).
 
-![Doc - Accessing data - DB - How](https://orbeon.mybalsamiq.com/mockups/3496425.png?key=1865cc9145143beea62ed382102edddf24de1b03)
+![Doc - Accessing data - DB - How](../images/overview-accessing-data-db-how.png)

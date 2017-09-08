@@ -1,0 +1,49 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="396" measuredH="231" mockupW="356" mockupH="190">
+  <controls>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::IconLabel" x="279" y="41" w="-1" h="-1" measuredW="117" measuredH="63" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>database%7Clarge</icon>
+        <text>Relational%20database</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::IconLabel" x="56" y="41" w="-1" h="-1" measuredW="85" measuredH="63" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>server%7Clarge</icon>
+        <text>Orbeon%20Forms</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::IconLabel" x="181" y="117" w="-1" h="-1" measuredW="53" measuredH="63" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>adn%7Clarge</icon>
+        <text>Your%20app</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Arrow" x="105" y="110" w="61" h="33" measuredW="150" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <curvature>-1</curvature>
+        <leftArrow>true</leftArrow>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Arrow" x="156" y="63" w="119" h="10" measuredW="150" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>-1</curvature>
+        <leftArrow>false</leftArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="197" y="41" w="-1" h="-1" measuredW="32" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Store</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Paragraph" x="40" y="151" w="126" h="80" measuredW="275" measuredH="80" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <text>When%20desired%20your%20app%20calls%20the%20Orbeon%20Forms%20REST%20API%20to%20retrieve%20data</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

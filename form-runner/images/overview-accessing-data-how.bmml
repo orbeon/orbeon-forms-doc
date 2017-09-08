@@ -1,0 +1,40 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="347" measuredH="200" mockupW="306" mockupH="159">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::IconLabel" x="290" y="41" w="-1" h="-1" measuredW="57" measuredH="63" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>database%7Clarge</icon>
+        <text>Database</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::IconLabel" x="41" y="41" w="-1" h="-1" measuredW="85" measuredH="63" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>server%7Clarge</icon>
+        <text>Orbeon%20Forms</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::IconLabel" x="166" y="137" w="-1" h="-1" measuredW="53" measuredH="63" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>adn%7Clarge</icon>
+        <text>Your%20app</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Arrow" x="141" y="63" w="119" h="10" measuredW="150" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>-1</curvature>
+        <leftArrow>false</leftArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="182" y="41" w="-1" h="-1" measuredW="32" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Store</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Title" x="182" y="98" w="23" h="-1" measuredW="23" measuredH="43" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <text>%3F</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
