@@ -60,6 +60,8 @@ oxf.fr.detail.process.
   $form
 ```
 
+where `$app` and `$form` represent a Form Runner application name and/or form name or `*` wildcards, as is usual with Form Runner configuration properties.
+
 The following process names apply:
 
 - `after-controls`: run after the controls are ready:
@@ -71,18 +73,22 @@ The following process names apply:
     - The process runs before the data is ready.
     - You cannot set control values and list of choices as a result.
     
-The following example saves new instance data to the database when the service is called with `/new``:
+The following example saves new instance data to the database when the service is called with `/fr/service/$app/$form/new`:
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.process.after-controls.background.new.acme.sales">
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.process.after-controls.background.new.acme.sales">
     save
 </property>
 ```
 
-The following example updates existing instance data with the current time and saves it to the database when the service is called with `/edit/$document`:
+The following example updates existing instance data with the current time and saves it to the database when the service is called with `/fr/service/$app/$form//edit/$document`, where `$document` represents an existing form data document id:
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.process.after-controls.background.edit.acme.sales">
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.process.after-controls.background.edit.acme.sales">
     xf:setvalue(ref ="//current-time", value = "current-dateTime()") then save
 </property>
 ```
