@@ -49,7 +49,7 @@ Example response body:
 
 ## Running processes
 
-The following property controls what process(s) to run:
+The following property controls what process(es) to run:
 
 ```
 oxf.fr.detail.process.

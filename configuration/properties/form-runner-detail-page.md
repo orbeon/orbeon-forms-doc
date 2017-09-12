@@ -315,6 +315,40 @@ With those properties in place, your forms will show a captcha as illustrated by
 
 [LIMITATION] The Form Runner captcha uses the [captcha XBL components](../../form-runner/component/captcha.md), which doesn't support the noscript mode. Hence,  enabling this feature will have no effect in noscript mode.
 
+## Running processes upon page load
+
+The following property controls what process(es) to run when the page loads in "new" or "edit" mode:
+
+```
+oxf.fr.detail.process.
+  after-controls|after-data|before-data.
+  background|foreground.
+  new|edit.
+  $app.
+  $form
+```
+
+The following process names apply:
+
+- `after-controls`: run after the controls are ready:
+    - The process runs when controls are "live", which means you can set their values and list of choices.
+- `after-data`: run when the data is ready:
+    - It has been loaded from the database if needed ("edit" mode).
+    - Its initial values and calculations are up to date.
+- `before-data`: run before the data's initial values are calculated:
+    - The process runs before the data is ready.
+    - You cannot set control values and list of choices as a result.
+    
+The `background` and `foreground` options:
+
+- `background`: run only in the background, that is within a service such as the ["run form in the background"](../../form-runner/api/other/run-form-background.md) service
+- `foreground`: run only in the foreground, that is when the user is interacting with the page
+- `*`: run in both cases
+
+See also [Run form in the background](../../form-runner/api/other/run-form-background.md).
+
+where `$app` and `$form` represent a Form Runner application name and/or form name or `*` wildcards, as is usual with Form Runner configuration properties.
+
 ## Initial data
 
 When creating a new form (for instance going to the URL `http://localhost:8080/orbeon/fr/orbeon/bookshelf/new`), the initial form data (also known as "form instance" or "form instance data") can come from 3 different places:
