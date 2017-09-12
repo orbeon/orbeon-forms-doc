@@ -323,10 +323,12 @@ The following property controls what process(es) to run when the page loads in "
 oxf.fr.detail.process.
   after-controls|after-data|before-data.
   background|foreground.
-  new|edit.
+  new|edit|view|pdf|email.
   $app.
   $form
 ```
+
+where `$app` and `$form` represent a Form Runner application name and/or form name or `*` wildcards, as is usual with Form Runner configuration properties.
 
 The following process names apply:
 
@@ -339,15 +341,22 @@ The following process names apply:
     - The process runs before the data is ready.
     - You cannot set control values and list of choices as a result.
     
-The `background` and `foreground` options:
+Background options:
 
 - `background`: run only in the background, that is within a service such as the ["run form in the background"](../../form-runner/api/other/run-form-background.md) service
 - `foreground`: run only in the foreground, that is when the user is interacting with the page
 - `*`: run in both cases
 
-See also [Run form in the background](../../form-runner/api/other/run-form-background.md).
+Mode options:
 
-where `$app` and `$form` represent a Form Runner application name and/or form name or `*` wildcards, as is usual with Form Runner configuration properties.
+- `new`: run in "new" mode only
+- `edit`: run in "edit" mode only
+- etc.
+- `*`: run in all modes
+
+*NOTE: When running in the background, only the `new` and `edit` modes are supported as of Orbeon Forms 2017.2.*
+
+See also [Run form in the background](../../form-runner/api/other/run-form-background.md).
 
 ## Initial data
 
