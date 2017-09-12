@@ -1,4 +1,4 @@
-# Duplicate Form Data
+# Duplicate form data
 
 <!-- toc -->
 

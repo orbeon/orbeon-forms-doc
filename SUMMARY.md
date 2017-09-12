@@ -124,8 +124,9 @@
             * [Versioning](form-runner/api/persistence/versioning.md)
             * [Implementing a persistence service](form-runner/api/persistence/implementing-a-persistence-service.md)
         * Other APIs
-            * [XML Schema generation](form-runner/api/other/xml-schema-generation.md)
+            * [Generate XML Schema](form-runner/api/other/xml-schema-generation.md)
             * [Duplicate form data](form-runner/api/other/duplicate-form-data.md)
+            * [Run form in the background](form-runner/api/other/run-form-background.md)
         * Data formats
             * [Form data](form-runner/data-format/form-data.md)
             * [Date and time](form-runner/data-format/date-and-time.md)

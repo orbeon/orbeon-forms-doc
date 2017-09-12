@@ -132,7 +132,12 @@ As of 2016-04-19 this page is still being updated.
 - Appearance of repeated grids: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-grids-sections), [component doc](http://doc.orbeon.com/form-runner/component/section.html#repeated-mode)
 - Function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](http://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
 - Grids
-    - HTML tables-free layout: [blog post](http://blog.orbeon.com/2016/06/saying-farewell-to-html-tables.html)) 
+    - HTML tables-free layout: [blog post](http://blog.orbeon.com/2016/06/saying-farewell-to-html-tables.html))
+- Services and APIs
+    - [Duplicate form data](form-runner/api/other/duplicate-form-data.md)
+    - [Generate XML Schema](form-runner/api/other/duplicate-form-data.md)
+    - [List form data attachments](form-runner/api/persistence/list-form-data-attachments.md)
+    - [Run form in the background](form-runner/api/other/run-form-background.md)
 
 ### Form controls
 

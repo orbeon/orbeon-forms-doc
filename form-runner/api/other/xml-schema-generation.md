@@ -1,4 +1,4 @@
-# XML Schema Generation
+# Generate XML Schema
 
 <!-- toc -->
 
