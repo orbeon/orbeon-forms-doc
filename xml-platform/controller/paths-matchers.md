@@ -48,6 +48,26 @@ A matcher can also be specified on a `<page>` element:
 
 When using a matcher that allows for groups, the part of the path matched by those groups can be extracted as documented above with the `<setvalue>` element. This is only supported with the regexp matcher.
 
+## Restricting HTTP methods
+
+[SINCE Orbeon Forms 2017.2]
+
+The `methods` attribute restricts which HTTP methods are allowed on the page or service. It is a space-separated list of HTTP method names. `#all` can be explicitly used to indicate that all HTTP methods are allowed.
+
+By default, all HTTP methods are allowed.
+
+This example requires that the incoming request be an HTTP `POST`, or the controller returns a "404 Not Found" status code:
+
+```xml
+<service
+    path="/fr/service/([^/^.]+)/([^/^.]+)/(duplicate)"
+    methods="POST"
+    model="request-parameters.xpl"
+    view="services/duplicate.xhtml"/>
+ ```
+
+*NOTE: This is independent from page or service authorization.* 
+
 ## Parametrizing the `model` and `view` attributes
 
 The result of matches can be referred to directly in the `model` and `view` attributes using the notation `${_group-number_}`:
