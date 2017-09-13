@@ -481,6 +481,8 @@ Section collapsing animation:
 
 ## Noscript properties
 
+[DEPRECATED SINCE Orbeon Forms 2016.3]
+
 ### Show noscript link
 
 ```xml

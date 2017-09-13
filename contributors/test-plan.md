@@ -74,7 +74,7 @@ check that all PE features are available in PE, but not in CE:
     - Proxy portlet
     - Embedding
     - Oracle/DB2/SQL Server
-    - Noscript mode (deprecated)
+    - Noscript mode [DEPRECATED SINCE Orbeon Forms 2016.3]
         - [#1043](https://github.com/orbeon/orbeon-forms/issues/1043)
         - [#1407](https://github.com/orbeon/orbeon-forms/issues/1407)
     - XML Schema generation

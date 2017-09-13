@@ -199,6 +199,8 @@ The following properties are documented in [JavaScript and CSS assets](../advanc
 
 ## Noscript mode
 
+[DEPRECATED SINCE Orbeon Forms 2016.3]
+
 The following property controls whether noscript mode is enabled:
 
 ```xml
@@ -207,7 +209,6 @@ The following property controls whether noscript mode is enabled:
     name="oxf.xforms.noscript" 
     value="false"/>
 ```
-
 
 The following property controls whether noscript mode is supported:
 
