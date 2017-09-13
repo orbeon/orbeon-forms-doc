@@ -425,7 +425,7 @@ In your `properties-local.xml`, you map an app / form / form type to the impleme
 ```xml
 <property 
     as="xs:string" 
-    name="oxf.fr.persistence.provider.acme.*.*" 
+    name="oxf.fr.persistence.provider.*.*.*" 
     value="oracle"/>
 ```
 
