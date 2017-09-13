@@ -29,10 +29,9 @@ A process is automatically associated with a button by name when using the follo
 For example:
 
 ```xml
-<property
-  as="xs:string"
-  name="oxf.fr.detail.buttons.orbeon.controls"
-  value="refresh summary clear pdf save-final wizard-prev wizard-next review"/>
+<property as="xs:string" name="oxf.fr.detail.buttons.orbeon.controls">
+    summary clear pdf save-final wizard-prev wizard-next review
+</property>
 ```
 
 Here the following buttons get associated with processes of the same name defined in separate properties:
@@ -51,10 +50,9 @@ The `clear` button is not implemented as processes but handled directly by Form 
 So how do you customize processes? Say you want to specify a couple of buttons on your "acme/hr" form. Like above, you define a property:
 
 ```xml
-<property
-  as="xs:string"
-  name="oxf.fr.detail.buttons.acme.hr"
-  value="save-draft send"/>
+<property as="xs:string" name="oxf.fr.detail.buttons.acme.hr">
+    save-draft send
+</property>
 ```
 
 This places a `save-draft` and `send` button on the page. Their default labels are "Save" and "Send". Each button is automatically associated with processes of the same names, `save-draft` and `send`. These particular button and process names are standard, but we can customize them specifically for our form. Again, this is done with a property:
