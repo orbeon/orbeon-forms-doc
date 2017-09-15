@@ -6,7 +6,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ## Misc
 
-### Distribution \[2017.1 DONE\]
+### Distribution \[2017.2 TODO\]
 
 - [x] `README.md` is up to date
   - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
@@ -24,7 +24,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
     - [x] Tomcat
 - [x] make sure the PE license is not included
 
-### Landing Page \[2017.1 DONE\]
+### Landing Page \[2017.2 TODO\]
 
 - [x] version number is correct in logs when starting
 - [x] landing page
@@ -33,7 +33,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - [x] XForms examples
   - load, look reasonable, and work
 
-### PE Features Availability \[2017.1 DONE\]
+### PE Features Availability \[2017.2 TODO\]
 
 check that all PE features are available in PE, but not in CE:
 
@@ -82,13 +82,13 @@ check that all PE features are available in PE, but not in CE:
         - in `properties-local.xml` add
             - `<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>`
             - the properties for the private/public key
-        - access http://localhost:8080/2017.1-pe/fr/orbeon/bookshelf/new
+        - access http://localhost:8080/2017.2-pe/fr/orbeon/bookshelf/new
         - check the captcha isn't shown
 - Check other features listed on the [web site](http://www.orbeon.com/download)
 
 ## Persistence
 
-### Basic Persistence \[2017.1 DONE\]
+### Basic Persistence \[2017.2 TODO\]
 
 Do the following for eXist and SQL Server. We do not test other relational databases here, as automated tests already test most of this, and the code running for SQL Server is almost identical to the code running for other relational databases.
 
@@ -116,7 +116,7 @@ Do the following for eXist and SQL Server. We do not test other relational datab
     - duplicate to `sqlserver/a`
 - Pages
     - FB: create form, publish
-    - FR: check it shows on http://localhost:8080/2017.1-pe/fr/
+    - FR: check it shows on http://localhost:8080/2017.2-pe/fr/
     - FR: create new form, review, back to edit ([#1643](https://github.com/orbeon/orbeon-forms/issues/1643))
     - FR: enter data, save
     - FR: check it shows in the summary page
@@ -133,7 +133,7 @@ Do the following for eXist and SQL Server. We do not test other relational datab
 - Duplicate
     - FR: Summary: Duplicate button works
 
-### Versioning \[2017.1 DONE with MySQL\]
+### Versioning \[2017.2 TODO with MySQL\]
 
 Do the following on DB2.
 
@@ -267,7 +267,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite (see [ #3071](https://github.com/orbeon/orbeon-forms/issues/3071))
 
-### Data Capture Permissions \[2017.1 DONE MySQL/eXist\]
+### Data Capture Permissions \[2017.2 TODO MySQL/eXist\]
 
 #### Setup
 
@@ -371,15 +371,15 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - delete button enabled and works
                 - on open data, can edit data
 
-### Autosave and Permissions Test \[2017.1 DONE MySQL\]
+### Autosave and Permissions Test \[2017.2 TODO MySQL\]
 
 Repeat what follows with:
 
-- \[2017.1 TODO\] Oracle
-- \[2017.1 TODO\] MySQL
-- \[2017.1 TODO\] PostgreSQL
-- \[2017.1 TODO\] SQL Server
-- \[2017.1 TODO\] DB2
+- \[2017.2 TODO\] Oracle
+- \[2017.2 TODO\] MySQL
+- \[2017.2 TODO\] PostgreSQL
+- \[2017.2 TODO\] SQL Server
+- \[2017.2 TODO\] DB2
 
 Use the following in your `properties-local.xml`:
 
@@ -426,7 +426,7 @@ Setup permissions e.g. in `tomcat-users.xml`:
 Authorize on:
 
 ```
-http://localhost:8080/2017.1-pe/fr/auth
+http://localhost:8080/2017.2-pe/fr/auth
 ```
 
 - Autosave with permissions
@@ -481,7 +481,7 @@ http://localhost:8080/2017.1-pe/fr/auth
         - Choose to open the draft, edit it into `a1 Marge`, save, change to `a1 Marge draft`, wait for autosave
         - Go to the summary page, click on `a1 Marge`, dialog must propose loading draft
 
-### Flat View \[2017.1 DONE\]
+### Flat View \[2017.2 TODO\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
@@ -534,7 +534,7 @@ http://localhost:8080/2017.1-pe/fr/auth
 
 ## Form Builder
 
-### Basic Features \[2017.1 DONE\]
+### Basic Features \[2017.2 TODO\]
 
 - [x] create new form
 - [x] insert sections, grids, repeated grids
@@ -616,14 +616,14 @@ http://localhost:8080/2017.1-pe/fr/auth
         value="1"/>
     ```
     - restart Tomcat
-    - in 1st tab, visit http://localhost:8080/2017.1-pe/fr/orbeon/builder/new
+    - in 1st tab, visit http://localhost:8080/2017.2-pe/fr/orbeon/builder/new
     - enter a/a to go to editor
-    - in 2nd tab, visit http://localhost:8080/2017.1-pe/fr/orbeon/contact/new
+    - in 2nd tab, visit http://localhost:8080/2017.2-pe/fr/orbeon/contact/new
     - back to 1st tab
     - insert control
     - check there is no JS error
 
-### Singleton forms \[2017.1 DONE\]
+### Singleton forms \[2017.2 TODO\]
 
 Test that the features works as [documented](../form-runner/advanced/singleton-form.md):
 
@@ -645,7 +645,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - only see "def" in Summary
     - `/new` in URL redirects to '/edit/...'
 
-### Schema Support \[2017.1 DONE\]
+### Schema Support \[2017.2 TODO\]
 
 - attach Schema
     - [x] attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/schema.xsd)
@@ -661,7 +661,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - [x] check schema types are reloaded in Control Settings dialog
         - *NOTE: This is not the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
 
-### Database service \[2017.1 DONE\]
+### Database service \[2017.2 TODO\]
 
 - [x] setup db
     - use MySQL, local or on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
@@ -697,7 +697,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service \[2017.1 DONE\]
+### HTTP service \[2017.2 TODO\]
 
 - [x] create echo service with POST
     - POST to `/fr/service/custom/orbeon/echo`
@@ -719,7 +719,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2017.1 DONE\]
+### Section Templates \[2017.2 TODO\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
@@ -759,7 +759,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] makes invalid controls in section template prevent saving
 - [x] check all labels appear and repeats work ([#3243](https://github.com/orbeon/orbeon-forms/issues/3243))
 
-### PDF Automatic \[2017.1 DONE\]
+### PDF Automatic \[2017.2 TODO\]
 
 - [x] Controls and Bookshelf
     - input field and text areas have highlighted and clickable links
@@ -785,7 +785,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] Form for [issue #3105](https://github.com/orbeon/orbeon-forms/issues/3105) renders PDF well. 
 - [x] "Page break before section" checkbox works 
 
-### PDF Template \[2017.1 DONE\]
+### PDF Template \[2017.2 TODO\]
 
 - [x] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - [x] add field "name" in section "applicant"
@@ -810,7 +810,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2017.1 DONE\]
+### Form Builder Permissions \[2017.2 TODO\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -865,7 +865,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - clear cookies
     - [x]
         - login on `/fr/auth` as `orbeon-sales`
-        - `http://localhost:8080/2017.1-pe/fr/orbeon/builder/new`
+        - `http://localhost:8080/2017.2-pe/fr/orbeon/builder/new`
         - must see `guest` and `sales` as app names
     - [x] create sales/my-sales-form
         - set permissions
@@ -873,8 +873,8 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             - orbeon-sales → Read and Update
         - save and publish
     - [x] can access
-        - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/summary
-        - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/new
+        - http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/summary
+        - http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/new
     - [x] new
         - enter data and save
     - [x] summary
@@ -882,7 +882,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - check can edit and duplicate
         - check Delete button is disabled
         - check PDF works
-    - [x] `http://localhost:8080/2017.1-pe/fr/`
+    - [x] `http://localhost:8080/2017.2-pe/fr/`
         - sales/my-sales-form shows on the home page
         - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
@@ -892,19 +892,19 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
-    - [x] `http://localhost:8080/2017.1-pe/fr/orbeon/builder/summary`
+    - [x] `http://localhost:8080/2017.2-pe/fr/orbeon/builder/summary`
         - open structured search (be aware of  [#878](https://github.com/orbeon/orbeon-forms/issues/878))
         - check only guest and sales forms are available
 - [x] browser 2
     - [x] clear cookies
     - [x] login as orbeon-user
     - [x] can access
-        - `http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/new`
+        - `http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/new`
     - [x] can't access
-        - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/summary (403)
-        - http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/edit/... (403)
+        - http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/summary (403)
+        - http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
-    - [x] `http://localhost:8080/2017.1-pe/fr/`
+    - [x] `http://localhost:8080/2017.2-pe/fr/`
         - NO admin ops for sales/my-sales-form
         - BUT admin ops for `guest/*` (create a `guest/test-guest` form)
         - CAN click on sales/my-sales-form line and takes to `/new`
@@ -914,8 +914,8 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - check can still new/edit/view
 - [x] browser 2
     - can't access
-        - `http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/new` (403)
-    - http://localhost:8080/2017.1-pe/fr/
+        - `http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/new` (403)
+    - http://localhost:8080/2017.2-pe/fr/
         - form not visible
 - [x] browser 1
     - re-add Anyone → Create
@@ -923,7 +923,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - check nothing changed
         - well, can do `/new` from Home
 - [x] browser 2
-    - can access `http://localhost:8080/2017.1-pe/fr/sales/my-sales-form/summary`, but only see own data as readonly
+    - can access `http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/summary`, but only see own data as readonly
     - /new, save
     - Summary shows forms in readonly mode
 - [x] access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
@@ -940,7 +940,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ## Form Runner
 
-### Sample forms \[2017.1 DONE\]
+### Sample forms \[2017.2 TODO\]
 
 - [x] load all
 - [x] Controls
@@ -960,7 +960,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             - also with keyboard
         - [x] change lang works
 
-### Errors and warnings \[2017.1 DONE]
+### Errors and warnings \[2017.2 TODO]
 
 - FB: create form
     - required field
@@ -973,7 +973,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2017.1 DONE\]
+### Process buttons \[2017.2 TODO\]
 
 - create and publish guest/test
     - 1 required field
@@ -992,7 +992,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2017.1 DONE\]
+### Attachments/uploads \[2017.2 TODO\]
 
 - [x] basic upload works
 - [x] removing uploaded file works
@@ -1014,7 +1014,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - cancel midway works
     - progress indicator works
 
-### Submit \[2017.1 DONE\]
+### Submit \[2017.2 TODO\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -1034,7 +1034,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2017.1 DONE\]
+### Email \[2017.2 TODO\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1067,14 +1067,14 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2017.1 DONE\]
+### Misc \[2017.2 TODO\]
 
 - switch language
 - open/close sections (but not with wizard)
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Wizard \[2017.1 DONE \]
+### Wizard \[2017.2 TODO \]
 
 - [x] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
     - or use FB setting for form
@@ -1122,7 +1122,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         value="all"/>
     ```
 
-### Captcha \[2017.1 DONE\]
+### Captcha \[2017.2 TODO\]
 
 - enable with property
 
@@ -1145,7 +1145,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2017.1 DONE\]
+### Help popups/hint tooltips positioning \[2017.2 TODO\]
 
 - [x] create form to test general positioning
   - [x] help on all controls ([Lorum Ipsum](http://www.lipsum.com/feed/html))
@@ -1155,7 +1155,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] Bookshelf
     - try all helps (see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637))
 
-### Mobile and Responsive \[2017.1 DONE\]
+### Mobile and Responsive \[2017.2 TODO\]
 
 *NOTE: Summary and Home are not responsive as of 2016.3.*
 
@@ -1199,11 +1199,11 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
-### Home Page \[2017.1 DONE \]
+### Home Page \[2017.2 TODO \]
 
 *See also Form Builder permissions above which already tests some of this.*
 
-- [x] `http://localhost:8080/2017.1-pe/fr/` lists deployed forms
+- [x] `http://localhost:8080/2017.2-pe/fr/` lists deployed forms
 - [x] comment all roles in form-builder-permissions.xml
     - no admin buttons/actions show
 - [x] changing language to French works
@@ -1268,9 +1268,9 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - make sure forms still work
 - [x] reindex database works (make sure relational provider is enabled)
 
-### Summary Page \[2017.1 DONE\]
+### Summary Page \[2017.2 TODO\]
 
-- e.g. `http://localhost:8080/2017.1-pe/fr/orbeon/bookshelf/summary`
+- e.g. `http://localhost:8080/2017.2-pe/fr/orbeon/bookshelf/summary`
 - list forms
 - paging
   - create more than 10 instances if necessary
@@ -1286,9 +1286,9 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - duplicate
 - delete
 
-### Excel Import \[2017.1 DONE\]
+### Excel Import \[2017.2 TODO\]
 
-- `http://localhost:8080/2017.1-pe/fr/orbeon/contact/import`
+- `http://localhost:8080/2017.2-pe/fr/orbeon/contact/import`
 - import small doc first (- view
 `contact5.xlsx` on Google Drive)
   - check 2 out of  5 docs invalid
@@ -1299,7 +1299,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - check % and ETA progress during validation and import
 - check import completes
 
-### Liferay \[2017.1 DONE\]
+### Liferay \[2017.2 TODO\]
 
 - versions as of Orbeon Forms 2017.1
   - [x] Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
@@ -1318,7 +1318,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - test@liferay.com/liferay
     - *NOTE: Cannot seem to login with Chrome anymore. Tried removing JSESSIONID, still issue.*
 - [x] proxy portlet
-  - [x] set to point to `http://localhost:8080/2017.1-pe/`
+  - [x] set to point to `http://localhost:8080/2017.2-pe/`
   - [x] try out pages
     - New page
     - Summary page
@@ -1353,7 +1353,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~[ ] Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
-### Organizations \[2017.1 DONE\]
+### Organizations \[2017.2 TODO\]
 
 Do this just after general Liferay testing (above).
 
@@ -1467,7 +1467,7 @@ Properties:
 - [x] run tests above with eXist
 - [x] run tests above with relational
 
-### Embedding \[2017.1 DONE\]
+### Embedding \[2017.2 TODO\]
 
 - [x] deploy `orbeon-embedding.war` into Tomcat
 - [x] update `web.xml`:
@@ -1475,10 +1475,10 @@ Properties:
     ```xml
     <init-param>
         <param-name>form-runner-url</param-name>
-        <param-value>http://localhost:8080/2017.1-pe</param-value>
+        <param-value>http://localhost:8080/2017.2-pe</param-value>
     </init-param>
     ````
-- [x] navigate to `http://localhost:8080/2017.1-pe-embedding/`
+- [x] navigate to `http://localhost:8080/2017.2-pe-embedding/`
 - [x] go through demo forms and test
   - [x] enter data
   - [x] Save
@@ -1499,7 +1499,7 @@ Properties:
     - view source
     - Test button
 
-### XForms Retry \[2017.1 DONE\]
+### XForms Retry \[2017.2 TODO\]
 
 1. [x] Retry happens
     - [x] setup
@@ -1525,7 +1525,7 @@ Properties:
                 value="2000"/>
             ```
     - [x] test
-        - open `http://localhost:8080/2017.1-pe/xforms-sandbox/sample/dispatch-delay`
+        - open `http://localhost:8080/2017.2-pe/xforms-sandbox/sample/dispatch-delay`
         - in Chrome, open the Dev Tools, go to the Network tab (or use HttpScoop or Charles)
         - hit the *Manual save* button
         - check after ~10 seconds that the Ajax response succeeds with 200 (retry will return with 503 until the 10 s have elapsed)
@@ -1576,16 +1576,16 @@ Properties:
     - check the client re-executes the request
 5. [x] File upload
     - setup
-        - enable breakpoint on response for `/2017.1-pe/xforms-server/upload`
+        - enable breakpoint on response for `/2017.2-pe/xforms-server/upload`
         - enable throttling in Charles (⌘⇧T) per the following configuration
           ![](images/test-charles-throttling.png)
         - download [this image](http://placekitten.com/g/2000/2000) (~200 KB)
-    - `http://localhost:8080/2017.1-pe/xforms-upload/`
+    - `http://localhost:8080/2017.2-pe/xforms-upload/`
     - select image, and upload start in the background
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2017.1 DONE\]
+### Error Dialog \[2017.2 TODO\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
@@ -1601,7 +1601,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
 
-### Other Browsers \[2017.1 DONE\]
+### Other Browsers \[2017.2 TODO\]
 
 - [x] main tests above with Google Chrome
     - 2017.1: 60.0.3112.32 beta
@@ -1654,14 +1654,14 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
 
-### Other \[2017.1 DONE\]
+### Other \[2017.2 TODO\]
 
 Features to test, with all supported browsers:
 
 - [x] give CE version a quick run
 - [x] XForms filter
-    - `http://localhost:8080/2017.1-pe/xforms-jsp/guess-the-number/`
-    - `http://localhost:8080/2017.1-pe/xforms-jsp/flickr-search/`
+    - `http://localhost:8080/2017.2-pe/xforms-jsp/guess-the-number/`
+    - `http://localhost:8080/2017.2-pe/xforms-jsp/flickr-search/`
 - [x] ~~examples-cli in distribution work (fix/remove them if not)~~
     - *NOT in Orbeon Forms 2017.1*
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
