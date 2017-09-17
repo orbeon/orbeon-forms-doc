@@ -6,6 +6,8 @@
 
 Since Orbeon Forms 2017.2.
 
+This is an Orbeon Forms PE feature.
+
 ## Purpose
 
 The purpose of this service is to run a form definition, either in "new" mode or in "edit" mode, but in the background,
