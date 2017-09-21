@@ -284,6 +284,19 @@ The number of forms shown on a given page can be set with the following property
     value="20"/>
 ```
 
+### Link to the `summary` or `new` page
+
+The table listing the forms links, for each form, either to the `summary` or the `new` page, based on which page the user has access to. If the user has access to both, then it links to the `summary` page, in essence giving the priority to the `summary` page. [SINCE Orbeon Forms 2017.2] You can also change this priority by setting the value of the following property, of which the default is shown below.
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.home.table.link-to"
+    value="summary new"/>
+```
+
+For instance, if you set it to `new summary`, the priority will be given to the `new` instead of the `summary` page. If you list only one page, say `new`, then entries in the table will only link to the `new` page, of course if the user has access to it. If you leave the value blank, the forms will only be listed, with no link.
+
 ## Orbeon Forms 4.0 to 4.2
 
 For each form definition the current user has access to, the following links are shown if allowed:
