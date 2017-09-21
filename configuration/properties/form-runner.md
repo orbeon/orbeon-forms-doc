@@ -47,6 +47,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.authentication.header.roles.property-name`
 * [Form Runner Home Page](../../form-runner/feature/home-page.md)
     * `oxf.fr.home.page-size`
+    * `oxf.fr.home.table.link-to`
     * `oxf.fr.home.remote-servers`
 * [TIFF Production](../../form-runner/feature/tiff-production.md)
     * `oxf.fr.detail.tiff.compression.type`
