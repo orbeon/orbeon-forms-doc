@@ -349,6 +349,20 @@ Attachment properties:
     - `all`: all form attachments are included (this is the default)
     - `none`: no form attachments is included
     - `selected`: only form attachments selected in the Form Builder with "Include as Email Attachment" are included
+    
+Email subject and body:
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.fr.resource.*.*.en.email.subject"
+    value="Here is your confirmation: "/>
+
+<property 
+    as="xs:string"
+    name="oxf.fr.resource.*.*.en.email.body"
+    value="Hi, here is an email from Orbeon Forms!"/>
+```
 
 ## Sections and grids
 
