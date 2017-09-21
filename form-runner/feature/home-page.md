@@ -284,7 +284,7 @@ The number of forms shown on a given page can be set with the following property
     value="20"/>
 ```
 
-### Link to the `summary` or `new` page
+### Link to the summary or new page
 
 The table listing the forms links, for each form, either to the `summary` or the `new` page, based on which page the user has access to. If the user has access to both, then it links to the `summary` page, in essence giving the priority to the `summary` page. [SINCE Orbeon Forms 2017.2] You can also change this priority by setting the value of the following property, of which the default is shown below.
 
