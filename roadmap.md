@@ -47,6 +47,8 @@ Focus:
 - Form Builder usability and flexibility
     - Ability to move controls with drag and drop [#1479](https://github.com/orbeon/orbeon-forms/issues/1479)
     - 12-column grid layout [#2738](https://github.com/orbeon/orbeon-forms/issues/2738)
+    - Ability to copy/paste grids and sections [#2437](https://github.com/orbeon/orbeon-forms/issues/2437)
+    - "Merge" or "copy" option for section templates [#3195](https://github.com/orbeon/orbeon-forms/issues/3195)
 - Scalability
     - Session/state replication [#1529](https://github.com/orbeon/orbeon-forms/issues/1529)
 - Test automation
@@ -56,20 +58,7 @@ For detailed status of issues, see the [GitHub project for Orbeon Forms 2017.2](
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2017-09-30: tentative release date
-
-### Orbeon Forms 2017.3
-
-Focus:
-
-- TBD
-
-For detailed status of issues, see the [GitHub project for Orbeon Forms 2017.3](https://github.com/orbeon/orbeon-forms/projects/3).
-
-__Please remember that the following schedule is a plan, not a promise:__
-
-- 2017-12-20: tentative release date
-
+- 2017-12-15: tentative release date
 
 ### Orbeon Forms 2018.1
 
