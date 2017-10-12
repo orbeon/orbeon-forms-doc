@@ -54,9 +54,9 @@ See the [Form Builder](../form-builder/README.md).
 
 ## Questions about specific features
 
-### Are the forms created with Form Builder compliant with Disability Discrimination Act (DDA), the W3C WCAG, or Section 508?
+### What accessibility guidelines are forms created with Form Builder compliant with?
 
-Orbeon is committed to accessibility: we make sustained effort to ensure that Orbeon Forms complies with relevant accessibility standards, and consider any instance of noncompliance with an accessibility standard such as WCAG 2.0 as a bug.
+We are committed to accessibility: we make sustained effort to ensure that Orbeon Forms complies with the Disability Discrimination Act (DDA), the W3C WCAG, and Section 508. As part of this effort, we consider any instance of noncompliance with one of the affordmentioned aforementioned standard as a bug.
 
 Also, throughout the years, a number of customers have conducted accessibility audits for Orbeon Forms, and we work closely with those customers to solve possible compliance issues.
 
