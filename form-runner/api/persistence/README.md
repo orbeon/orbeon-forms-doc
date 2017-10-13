@@ -36,14 +36,16 @@ Following the REST philosophy, HTTP methods are used to determine what CRUD oper
 
 For example, to deal with form data:
 
+/fr/service/persistence
+
 | Operation | HTTP Method | URL |
 | --------- | ----------- | --- |
-| Create    | PUT         | <code>/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Read      | GET         | <code>/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Update    | PUT         | <code>/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Delete    | DELETE      | <code>/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Search    | POST        | `/search/$app/$form` |
-| Metadata  | GET         | `/form` |
+| Create    | PUT         | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Read      | GET         | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Update    | PUT         | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Delete    | DELETE      | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Search    | POST        | `/fr/service/persistence/search/$app/$form` |
+| Metadata  | GET         | `/fr/service/persistence/form` |
 
 where:
 
