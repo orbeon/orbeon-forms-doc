@@ -31,7 +31,9 @@ If using Orbeon Forms PE, make sure the `license.xml` file is [in place](./READM
 
 ### Custom context within server.xml
 
-Edit `TOMCAT_HOME/conf/server.xml`, and inside the `<Host>` create a `<Context>` as follows, changing the value of the `docBase` attribute as appropriate on your system:
+Edit `TOMCAT_HOME/conf/server.xml`, and inside the `<Host>` create a `<Context>` as follows, changing the value of the `docBase` attribute as appropriate on your system.
+
+__IMPORTANT NOTE: Make sure the `<Context>` element is *within* the `<Host>` element. Tomcat will not report an error if your context is misplaced in the file, and that will cause it to be ignored and, in particular, datasources might not be taken into account.__
 
 ```xml
 <Context
