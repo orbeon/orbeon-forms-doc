@@ -22,7 +22,7 @@ When the resource is an XML file (e.g. form.xhtml, data.xml), the persistence la
 
 ## Examples using curl
 
-The following examples use the [curl](https://curl.haxx.se/) command-line utility.
+The following examples use the [curl](https://curl.haxx.se/) command-line utility. They are indented on multiple lines for clarity but in practice each command must be written on a single line.
 
 The general format of the a path to access form data is:
 
@@ -65,7 +65,7 @@ The same API is used by Form Builder to store in-progress (unpublished) form def
 - form name (`$form`): `builder`
 - document id (`$doc`): `7b55c9d6f9b058376293e61d9f0d4442e379f717`
 
-then you can `PUT` a form definition so that it's available to Form Builder (indented for clarity):
+then you can `PUT` a form definition so that it's available to Form Builder:
 
 ```
 curl
