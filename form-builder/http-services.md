@@ -41,6 +41,8 @@ The "Definition" tab allows you to set the basic service parameters:
 - A non-blank URL parameter specifies a default value for the parameter.
 - An action can set the value of a parameter.
 
+Here is [how to set URL parameters from an action](actions.md#passing-url-parameters-to-get-and-delete-methods).
+
 ### JSON support
 
 \[SINCE Orbeon Forms 2016.1\]
