@@ -163,20 +163,20 @@ Date formats:
 
 | Example | Note | Regular expression |
 |---|---|---|
-| today |    | ^tod |
-| tomorrow |    | ^tom |
-| yesterday |   | ^yes |
-| 4th | The 4th of the current year and month | ^(d{1,2})(st&#124;nd&#124;rd&#124;th)?$ |
-| 4th Jan |   | ^(d{1,2})(?:st&#124;nd&#124;rd&#124;th)? (w+)$ |
-| 4th Jan 2003 |   | ^(d{1,2})(?:st&#124;nd&#124;rd&#124;th)? (w+),? (d{2,4})$ |
-| Jan 4th |   | ^(w+) (d{1,2})(?:st&#124;nd&#124;rd&#124;th)?$ |
-| Jan 4th 2003 |   | ^(w+) (d{1,2})(?:st&#124;nd&#124;rd&#124;th)?,? (d{2,4})$ |
-| When the `oxf.xforms.format.input.date`  property starts with `[M`: e.g. 10/20/2000  | "US format" (month first) with the year specified | ^(d{1,2}).(d{1,2}).(d{2,4})$ |
-| When the `oxf.xforms.format.input.date`  property starts with `[D`: e.g. 20/10/2000 | "European format" (day first) with the year specified | ^(d{1,2}).(d{1,2}).(d{2,4})$ |
-| When the `oxf.xforms.format.input.date`  property starts with `[M`: e.g. 10/20 | "US format" (month first) with no year specified | ^(d{1,2}).(d{1,2})$ |
-| When the `oxf.xforms.format.input.date`  property starts with `[D`: e.g. 20/10 | "European format" (day first) with no year specified | ^(d{1,2}).(d{1,2})$ |
-| 2000-10-20 | ISO or "Asian" format | (^d{4})-(d{1,2})-(d{1,2})(Z&#124;([+-]d{2}:d{2}))?$ |
+| today |    | `^tod` |
+| tomorrow |    | `^tom` |
+| yesterday |   | `^yes` |
+| 4th | The 4th of the current year and month | `^(d{1,2})(st&#124;nd&#124;rd&#124;th)?$` |
+| 4th Jan |   | `^(d{1,2})(?:st&#124;nd&#124;rd&#124;th)? (w+)$` |
+| 4th Jan 2003 |   | `^(d{1,2})(?:st&#124;nd&#124;rd&#124;th)? (w+),? (d{2,4})$` |
+| Jan 4th |   | `^(w+) (d{1,2})(?:st&#124;nd&#124;rd&#124;th)?$` |
+| Jan 4th 2003 |   | `^(w+) (d{1,2})(?:st&#124;nd&#124;rd&#124;th)?,? (d{2,4})$` |
+| 10/20/2000 ("US format") or 20/10/2000 ("European format")  | | `^(\d{1,2})[./\-\s]?(\d{1,2})[./\-\s]?(\d{2,4})$` |
+| 10/20 ("US format") or 20/10 ("European format")|  | `^(\d{1,2})[./\-\s](\d{1,2})$` |
+| 10202000 ("US format") or 20102000 ("European format")  | [SINCE Orbeon Forms 2017.2] | `^(\d{2})(\d{2})(\d{4})$` |
+| 2000-10-20 | ISO or "Asian" format | `(^d{4})-(d{1,2})-(d{1,2})(Z&#124;([+-]d{2}:d{2}))?$` |
 
+In the table above, the "US format" applies the `oxf.xforms.format.input.date`  property starts with `[M`, and the "European format" when that property starts with `[D`.
 
 ### Two digits years
 
