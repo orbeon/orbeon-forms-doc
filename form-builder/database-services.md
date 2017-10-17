@@ -59,3 +59,8 @@ When the query runs, the value of each parameter is set to the current value of 
 Finally, you use the *Set Response Control Values* section of the *Actions Editor* dialog to extract the information you're interested in from the XML produced based on the result from the query, and populate fields in the form.
 
 ![Set control values](images/database-services-set-control-values.png)
+
+## See also
+
+- [HTTP services](http-services.md)
+- [Actions](actions.md)

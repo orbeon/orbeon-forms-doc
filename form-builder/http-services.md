@@ -107,3 +107,8 @@ Once your service is defined, the "Save" buttons saves it to the form. You can c
 ## Deleting a service
 
 You can delete a saved service using the "Remove" button.
+
+## See also
+
+- [Actions](actions.md)
+- [Database services](database-services.md)

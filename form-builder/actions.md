@@ -318,3 +318,8 @@ You can even use shorter variations if element names are use consistently, for e
 - Value: `*:value`
 
 These expressions with wildcards ignore namespace information completely, so you have to be careful if your XML document contains elements with the same name but in different namespaces.
+
+## See also
+
+- [HTTP services](http-services.md)
+- [Database services](database-services.md)
