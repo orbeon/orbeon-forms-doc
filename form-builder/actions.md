@@ -68,7 +68,7 @@ This is the meaning of the fields of the dialog:
 - __React to.__ The event which starts the action. Can be one of the following:
     - __Value Change.__ The control's value has changed.
     - __Value Change or Form Load.__ The control's value has changed OR the control has just become visible.
-        - *NOTE: The field description in the user interface does not accurately describes the behavior, which is that the action will run upon the control becoming visible, whether upon form load or at a later time. The action can happen multiple times for the control if the control hides and shows multiple times.*  
+        - *NOTE: The field description in the user interface does not accurately describe the behavior, which is that the action will run upon the control becoming visible, whether upon form load or at a later time. The action can happen multiple times for the control if the control hides and shows multiple times.*  
     - __Activation.__ The button has been clicked, or the "Enter" key has been pressed in a text line.
     - __Form Load.__ The form just finished loading.
 - __Condition.__
