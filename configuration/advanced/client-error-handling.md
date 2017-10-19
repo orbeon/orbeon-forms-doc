@@ -45,7 +45,10 @@ By default, the source markup for this dialog is available under:
 oxf:/config/error-dialog.xml
 ```
 
-This file is located in `orbeon-resources-private.jar`.
+This file is located inside the following jar file:
+
+- [SINCE Orbeon Forms 2016.3] `WEB-INF/lib/orbeon-core.jar`
+- [UP TO Orbeon Forms 2016.2] `WEB-INF/lib/orbeon-resources-private.jar`
 
 You can override it in two ways:
 
