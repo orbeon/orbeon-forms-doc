@@ -45,9 +45,9 @@ repeat appears more than once. This is useful, for example, to place a label in 
 In the resulting HTML, Orbeon Forms generates ARIA attributes to link repeated controls to the external label, hint or
 alert:
 
-- `aria-labelledby` for the label
-- `aria-describedby` for the hint
-- `aria-details` for the help
+- label: `aria-labelledby` 
+- hint: `aria-describedby` 
+- help: `aria-details` 
 
 
 ## See also 
