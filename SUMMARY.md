@@ -192,6 +192,7 @@
         * [Scripting actions](xforms/actions/scripting.md)
         * [Extensions](xforms/actions/extensions.md)
     * Controls
+        * [Label, hint, help](xforms/controls/lhh.md)
         * [Input](xforms/controls/input.md)
         * [Output](xforms/controls/output.md)
         * [Text area](xforms/controls/textarea.md)
