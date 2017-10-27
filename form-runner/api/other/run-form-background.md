@@ -95,6 +95,27 @@ The following example updates existing instance data with the current time and s
 </property>
 ```
 
+## Example using curl
+
+The following example uses the [curl](https://curl.haxx.se/) command-line utility:
+
+```
+curl -v  -k -X POST http://localhost:9090/orbeon/fr/service/acme/order/new
+```
+
+Provided access to the service is open, this will run the `acme/order` form in `new` mode in the background, and
+run the configured processes if any.
+
+Here is an example XML response:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+    <document-id>eb9a48f2bae8919139c117c3424a3498f71c3d6f</document-id>
+    <process-success>true</process-success>
+</response>
+```
+
 ## Permissions
 
 - The caller must either call the service internally or have [authorized the service](/xml-platform/controller/authorization-of-pages-and-services.md).
