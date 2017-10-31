@@ -17,7 +17,7 @@ You need to have already installed:
 - [git](http://git-scm.com/)
 - [ant](http://ant.apache.org/)
 - [sbt](http://www.scala-sbt.org/)
-- [Tomcat 7](http://tomcat.apache.org/download-70.cgi)
+- [Tomcat 7](http://tomcat.apache.org/download-70.cgi) or better [Tomcat 8](http://tomcat.apache.org/download-80.cgi)
 - Java 1.7 or 1.8
 
 On OS X, you can install the following easily if you have [Homebrew](http://brew.sh/):
@@ -48,8 +48,8 @@ This clones the git repository into a child directory called `orbeon-forms`.
 
 You don't have to use the following, but in case you care, the Orbeon Forms developers use:
 
-- OS X Sierra
-- IntelliJ IDEA 2016.3
+- OS X Sierra or High Sierra
+- IntelliJ IDEA 2016.3 - 2017.2
 
 ### Building
 
@@ -63,7 +63,7 @@ To build files for development:
 
 The exploded WAR is available under:
 
-    orbeon-war/target/webapp
+    orbeon-war/jvm/target/webapp
 
 To run all the tests:
 
@@ -166,6 +166,14 @@ If you modify Java or Scala files, you need to recompile. You do this from the c
 ```
 
 TODO: document making changes to resources or assets.
+
+### Sbt tips
+
+The following runs only tests within `FormBuilderFunctionsTest` which contain the string `my test` and show full stack traces in case of exception: 
+
+```
+testOnly *FormBuilderFunctionsTest -- -z "my test" -oF
+```
 
 ## About building Orbeon Forms PE
 
