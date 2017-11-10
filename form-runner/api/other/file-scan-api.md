@@ -58,8 +58,8 @@ is unused, the provider must return an `ACCEPT` `FileScanStatus` (see below). Th
 of a file.
 
 When the file is completely uploaded and stored into a temporary file, but not yet attached to the user's form, the
-`complete()` method is called with a pointer to the temporary file. The scanner can use this method to complete the
-entirely of the scan in case `bytesReceived()` is not used.
+`complete()` method is called with a pointer to the temporary file. The scanner can use this method to perform the
+entirety of the scan in case `bytesReceived()` is not used.
 
 Upon processing the `complete()` method, resources associated with the file scan must be cleared by the provider, whether
 `REJECT` or `ERROR` is returned, or if any exception is thrown as part of the processing of `complete()`.
