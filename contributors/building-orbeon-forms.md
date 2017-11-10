@@ -48,8 +48,8 @@ This clones the git repository into a child directory called `orbeon-forms`.
 
 You don't have to use the following, but in case you care, the Orbeon Forms developers use:
 
-- OS X Sierra or High Sierra
-- IntelliJ IDEA 2016.3 - 2017.2
+- the latest version of MacOS (High Sierra as of 2017-11)  
+- the latest version of IntelliJ IDEA (2017.2 as of 2017-11) and the Scala plugin
 
 ### Building
 
