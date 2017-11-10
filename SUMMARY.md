@@ -126,6 +126,7 @@
         * Other APIs
             * [Generate XML Schema](form-runner/api/other/xml-schema-generation.md)
             * [Duplicate form data](form-runner/api/other/duplicate-form-data.md)
+            * [File scan API](form-runner/api/other/file-scan-api.md)
             * [Run form in the background](form-runner/api/other/run-form-background.md)
         * Data formats
             * [Form data](form-runner/data-format/form-data.md)
