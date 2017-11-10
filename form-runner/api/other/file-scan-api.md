@@ -80,6 +80,8 @@ public enum FileScanStatus { ACCEPT, REJECT, ERROR }
 If `REJECT` or `ERROR` is returned, or if any exception is thrown as part of `startStream()`, `bytesReceived()`, or
 `complete()`, the uploaded file is rejected and an error is shown to the user.
 
+![File scan error](../../images/file-scan.png)
+
 If the user cancels the upload, or if any other error occurs on the Orbeon Forms side, the `abort()` method is called.
 In this case, the file scan for the given file must be stopped and associated resources must be cleared, if any.
 
@@ -98,7 +100,7 @@ The provider must:
 ## Example
 
 [`AcmeFileScanProvider`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-example/src/main/java/acme/filescan/AcmeFileScanProvider.java)
-is an example of a provider which does nothing but:
+is a Java example of a provider which does nothing but:
 
 - log method calls
 - reject files which contain in their name the string "virus"
@@ -106,3 +108,5 @@ is an example of a provider which does nothing but:
 *NOTE: This obviously is not the right way to determine whether a file contains a virus or not.*
 
 The service provider is described with this [`META-INF/services/org.orbeon.oxf.xforms.upload.api.FileScanProvider`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-example/src/main/resources/META-INF/services/org.orbeon.oxf.xforms.upload.api.FileScanProvider) file. 
+
+The example project is provided [here](https://github.com/orbeon/orbeon-forms/tree/master/file-scan-example).
