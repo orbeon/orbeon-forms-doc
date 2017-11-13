@@ -317,6 +317,10 @@ With those properties in place, your forms will show a captcha as illustrated by
 
 ## Running processes upon page load
 
+[Since Orbeon Forms 2017.2.]
+
+Running processes in the background is an Orbeon Forms PE feature.
+
 The following property controls what process(es) to run when the page loads in "new" or "edit" mode:
 
 ```
