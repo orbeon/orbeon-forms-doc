@@ -96,6 +96,7 @@ The provider must:
 
 - be a public class
 - have a public no-arguments constructor
+- implement the `FileScanProvider` Java interface
 
 To enable a provider with Orbeon Forms:
 
