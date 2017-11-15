@@ -31,6 +31,9 @@ this API must be used.
 If the form definition is provided in the request:
 
 - URL: `/fr/service/publish`
+- Optional URL parameter:
+    - Name: `document-id`
+    - Value: Form Builder document id for retrieval of attachments
 - Method: `POST`
 - Request body: XHTML+XForms
 
@@ -52,11 +55,13 @@ Example response body:
 <response>
     <app>acme</app>
     <form>sales</form>
+    <published-attachments>2</published-attachments>
+    <published-version>1</published-version>
 </response>
 ```
 
 _NOTE: When the form definition is POSTed as XML, form definition attachments such as PDF, XML Schema, or image attachments
-may not be published reliably._
+will not be published reliably if a `document-id` is not passed._
 
 ## Example using curl
 
