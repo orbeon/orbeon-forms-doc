@@ -24,6 +24,9 @@ When the resource is an XML file (e.g. form.xhtml, data.xml), the persistence la
 
 The following examples use the [curl](https://curl.haxx.se/) command-line utility. They are indented on multiple lines for clarity but in practice each command must be written on a single line.
 
+The service must be open for these examples to work.
+See [Authorization of pages and services](../../../xml-platform/controller/authorization-of-pages-and-services.md).
+
 The general format of the a path to access form data is:
 
 ```

@@ -55,20 +55,39 @@ Example response body:
 </response>
 ```
 
+_NOTE: When the form definition is POSTed as XML, form definition attachments such as PDF, XML Schema, or image attachments
+may not be published reliably._
+
 ## Example using curl
 
-The following example uses the [curl](https://curl.haxx.se/) command-line utility:
+The following examples use the [curl](https://curl.haxx.se/) command-line utility. They are indented on multiple lines for clarity but in practice each command must be written on a single line.
+
+### Publish a form definition stored in Form Builder
+
+The following publishes the form definition saved with Form Builder under the `ef8b20715f447ef1ed6f2479161dc663b23f7cdc` document id:
 
 ```
-curl -v -k -X POST http://localhost:9090/orbeon/fr/service/orbeon/builder/publish/ef8b20715f447ef1ed6f2479161dc663b23f7cdc
+curl
+  -v
+  -k
+  -X POST
+  http://localhost:9090/orbeon/fr/service/orbeon/builder/publish/ef8b20715f447ef1ed6f2479161dc663b23f7cdc
 ``` 
 
-Provided access to the service is open, this will publish the form definition edited at:
+### Publish a form definition provided via HTTP POST
+
+The following publishes the form definition provided in the file `form.xhtml`:
 
 ```
-http://localhost:9090/orbeon/fr/orbeon/builder/edit/ef8b20715f447ef1ed6f2479161dc663b23f7cdc
-``` 
+curl
+  -v
+  -k
+  -d @form.xhtml
+  -H "Content-Type: application/xml"
+  -X POST http://localhost:9090/orbeon/fr/service/publish
+```
 
 ## Permissions
 
-The caller must either call the service internally or have proper credentials to access the data (username, group, roles).
+- The caller must either call the service internally or have [authorized the service](/xml-platform/controller/authorization-of-pages-and-services.md).
+- Appropriate container or permission headers must also be set to allow accessing the form definition and data.  

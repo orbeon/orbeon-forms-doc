@@ -121,7 +121,7 @@ Orbeon Forms ships with a very simple WAR file: `orbeon-auth.war`. This war file
     <display-name>Optional authorizer for Orbeon Forms</display-name>
     <description>
         See "Authorization of pages and services" in the Orbeon Forms doc:
-        http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-controller/authorization
+        https://doc.orbeon.com/xml-platform/controller/authorization-of-pages-and-services.html
     </description>
     <servlet>
         <servlet-name>orbeon-authorizer-servlet</servlet-name>

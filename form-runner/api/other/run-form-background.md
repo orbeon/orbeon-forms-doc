@@ -97,14 +97,18 @@ The following example updates existing instance data with the current time and s
 
 ## Example using curl
 
-The following example uses the [curl](https://curl.haxx.se/) command-line utility:
+The following examples use the [curl](https://curl.haxx.se/) command-line utility. They are indented on multiple lines for clarity but in practice each command must be written on a single line.
 
 ```
-curl -v  -k -X POST http://localhost:9090/orbeon/fr/service/acme/order/new
+curl
+  -v
+  -k
+  -X POST
+  http://localhost:9090/orbeon/fr/service/acme/order/new
 ```
 
-Provided access to the service is open, this will run the `acme/order` form in `new` mode in the background, and
-run the configured processes if any.
+This runs the `acme/order` form in `new` mode in the background, and
+runs the configured processes if any.
 
 Here is an example XML response:
 
