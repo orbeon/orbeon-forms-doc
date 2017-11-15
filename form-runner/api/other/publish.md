@@ -55,6 +55,20 @@ Example response body:
 </response>
 ```
 
+## Example using curl
+
+The following example uses the [curl](https://curl.haxx.se/) command-line utility:
+
+```
+curl -v -k -X POST http://localhost:9090/orbeon/fr/service/orbeon/builder/publish/ef8b20715f447ef1ed6f2479161dc663b23f7cdc
+``` 
+
+Provided access to the service is open, this will publish the form definition edited at:
+
+```
+http://localhost:9090/orbeon/fr/orbeon/builder/edit/ef8b20715f447ef1ed6f2479161dc663b23f7cdc
+``` 
+
 ## Permissions
 
 The caller must either call the service internally or have proper credentials to access the data (username, group, roles).
