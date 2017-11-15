@@ -138,6 +138,7 @@ As of 2016-04-19 this page is still being updated.
     - [Duplicate form data](form-runner/api/other/duplicate-form-data.md)
     - [Generate XML Schema](form-runner/api/other/duplicate-form-data.md)
     - [List form data attachments](form-runner/api/persistence/list-form-data-attachments.md)
+    - [Publish form definition](form-runner/api/other/publish.md)
     - [Run form in the background](form-runner/api/other/run-form-background.md)
 
 ### Form controls
