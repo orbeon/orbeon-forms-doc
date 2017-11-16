@@ -14,6 +14,8 @@ When a user uploads files via one of the Form Runner attachment controls, a viru
 
 Orbeon Forms provides a simple Java API which allows integrating with virus scanning solutions.
 
+_NOTE: At this time Orbeon doesn't provide integrations with specific virus scanning solutions._
+
 ## API
 
 Orbeon Forms provide the following `FileScanProvider` abstract class as a base for concrete providers:
