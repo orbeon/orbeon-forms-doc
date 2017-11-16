@@ -8,6 +8,10 @@ Since Orbeon Forms 2017.2.
 
 This is an Orbeon Forms PE feature.
 
+## Internal uses
+
+The API is also used internally by Form Builder and by the Form Runner Home page.
+
 ## Purpose
 
 The purpose of the `publish` API is to publish a form definition.
