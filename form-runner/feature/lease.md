@@ -23,3 +23,33 @@ If the lease feature is enabled, when non-authenticated users try to edit the da
     name="oxf.fr.detail.lease.enabled.*.*"
     value="true"/>
 ```
+## Configure lease duration and thresholds
+
+When users get a lease, by default its duration is of 10 minutes. You can change this default by setting the property below. The timeout can be set for all the form in a given app by replacing the second `*` by the name of that app, or even more specifically for a specific form of that app by also replacing the third `*` by the name of that form.
+
+The first `*` can be replaced by a role name if you want the duration of the lease to be higher for users having that role. If in a given situation multiple properties apply to the current form and current user, then the highest duration is used. For instance, say you leave the default to 10 minutes, but add a property `oxf.fr.detail.lease.duration.admin.*.*` set to 20 minutes. Then users with the role `admin` will get 20 minutes, while other users will get 10 minutes.
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.fr.detail.lease.duration.*.*.*"
+    value="10"/>
+```
+
+As mentioned earlier, when user change values in the form, the lease gets automatically renewed. However, minimize hits to the database this isn't done during the first minute after the lease was first obtained or renewed. If you wish to even even further minimize hits to the database, you can increase the value of the value of the following property.
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.fr.detail.lease.renew-threshold.*.*"
+    value="1"/>
+```
+
+Two minutes before the lease expires, Form Runner will tell users that the lease is about to expire, and offer the option to renew the lease. If you wish users to be warned earlier, you can increase the value of the following property.
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.fr.detail.lease.alert-threshold.*.*"
+    value="2"/>
+```
