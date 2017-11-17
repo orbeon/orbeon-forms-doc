@@ -15,8 +15,9 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 
 ## Form Runner properties documented elsewhere
 
-* [Custom Model Logic](../../form-runner/advanced/custom-model-logic.md)
+* [Custom dialogs and model Logic](../../form-runner/advanced/custom.md)
     * `oxf.fr.detail.model.custom`
+    * `oxf.fr.detail.dialogs.custom`
 * [Wizard View](../../form-runner/component/wizard.md)
     * `oxf.fr.detail.view.appearance`
     * `oxf.fr.detail.buttons.inner`
