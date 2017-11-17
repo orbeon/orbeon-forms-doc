@@ -66,7 +66,7 @@ When this happens, we consider the reasons changes relying upon Orbeon Forms int
 
 - Available
   - [Form Runner: Buttons and Processes](form-runner/advanced/buttons-and-processes/README.md)
-  - [Form Runner: Custom Model Logic](form-runner/advanced/custom-model-logic.md)
+  - [Form Runner: Custom dialogs and model logic](form-runner/advanced/custom.md)
 - Considered
   - [Stable API for Form Runner](https://github.com/orbeon/orbeon-forms/issues/1095)
 
