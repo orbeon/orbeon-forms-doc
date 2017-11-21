@@ -27,6 +27,21 @@ to infer how to reach itself when calling some service URLs (see below for which
 Forms version). But in some cases, Orbeon Forms cannot reach to itself this way and an explicit base URL must be
 specified with this property.
 
+Such cases include:
+
+- accessing the server through different host names (like `https://foo/orbeon` and `https://bar/orbeon` reaching the same Orbeon Forms instance)
+- accessing the embedded eXist database (for demo purposes) when the request goes through a reverse proxy
+
+When you are in such configurations, please make sure to set `oxf.url-rewriting.service.base-uri` to point to the local
+servlet container instance, for example:
+
+```xml
+<property
+    as="xs:anyURI"  
+    name="oxf.url-rewriting.service.base-uri"              
+    value="http://localhost:8080/orbeon"/>
+``` 
+
 #### Orbeon Forms 4.7 and newer
 
 Since Orbeon Forms 4.7, this property is only used for the following:
