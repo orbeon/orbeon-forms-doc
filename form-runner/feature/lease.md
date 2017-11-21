@@ -13,7 +13,7 @@
 By default, the lease feature is disabled. It is enabled when both conditions below are met:
 
 - You've set the property `oxf.fr.detail.lease.enabled.*.*` to `true`, as shown below.
-- The implementation of the persistence API used by the current supports the lease feature. As of Orbeon Forms 2017.2, this is the case of all the built-in implementations of the persistence API for relational databases, but not of the implementation of the persistence API for eXist.
+- The implementation of the persistence API used by the current app/form supports the lease feature. As of Orbeon Forms 2017.2, this is the case of all the built-in implementations of the persistence API for relational databases, but not of the implementation of the persistence API for eXist.
 
 If the lease feature is enabled, when non-authenticated users try to edit the data, they receive receive a [403 Forbidden](https://en.wikipedia.org/wiki/HTTP_403).
 
