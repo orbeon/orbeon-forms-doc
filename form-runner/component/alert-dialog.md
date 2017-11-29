@@ -124,7 +124,7 @@ Depending on the number of buttons you place in your dialog, a different icon is
 
 * When you have 2 or 3 buttons, the dialog is considered to be a **question**. The CSS class is `xbl-fr-alert-dialog-question` and the dialog looks like:
 
-    ![](images/xbl-alert-dialog.png)
+    <img alt="" src="images/xbl-alert-dialog.png" width="502">
 
 * When you have 1 button, the dialog is considered to be **informational**. The CSS class is `xbl-fr-alert-dialog-info` and the dialog looks like:
 
