@@ -53,3 +53,37 @@ Two minutes before the lease expires, Form Runner will tell users that the lease
     name="oxf.fr.detail.lease.alert-threshold.*.*"
     value="2"/>
 ```
+
+## Hiding buttons
+
+Most of the buttons typically shown at the bottom of the form when editing data, such as "Save" or "Submit", shouldn't be shown when users don't currently own the lease on the document. However, other buttons, such as "Home" or "Summary" that are only used for navigation, can be shown even when users don't currently own the lease.
+
+To discriminate between those cases, you can use the `fr:owns-lease-or-none-required()` XPath function. By default, buttons are only shown if users own the lease or no lease is required; you could change this default by modifying the value of the following property, but we don't recommend you do so.
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.button.*.visible.*.*"
+    value="fr:owns-lease-or-none-required()"/>
+```
+
+If you have a button, that should be shown even if users don't own the lease, you'll want to add the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.button.[button-name].visible.*.*"
+    value="true()"/>
+```
+
+If you have a button displayed upon some condition being true, that is for which you have defined a `oxf.fr.detail.button.[button-name].visible.*.*` property, if that button shouldn't be displayed when users don't own the lease, you'll want to add `and fr:owns-lease-or-none-required()` to your XPath expression:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.button.[button-name].visible.*.*"
+    value="
+        [your conditional XPath expression]
+        and fr:owns-lease-or-none-required()
+    "/>
+```
