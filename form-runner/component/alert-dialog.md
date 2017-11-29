@@ -10,7 +10,7 @@ The alert dialog allows you to build simple dialogs for those cases where you ne
 
 Let's assume that you want to ask a yes/no question which produces a dialog as shown below, and that you want to react to users choosing _Yes_ .
 
-![](images/xbl-alert-dialog.png)
+<img alt="" src="images/xbl-alert-dialog.png" width="502">
 
 First declare the dialog, with:
 
