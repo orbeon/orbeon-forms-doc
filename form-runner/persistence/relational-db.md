@@ -29,6 +29,7 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2017.2                   | 2017.2                         | [oracle-2017_2.sql]        | [oracle-2017_1-to-2017_2.sql]       |
 | 2017.1                   | 2017.1                         | [oracle-2017_1.sql]        | [oracle-2016_3-to-2017_1.sql]       |
 | 2016.3                   | 2016.3                         | [oracle-2016_3.sql]        | [oracle-2016_2-to-2016_3.sql]       |
 | 2016.2                   | 2016.2                         | [oracle-2016_2.sql]        | [oracle-4_10-to-2016_2.sql]         |
