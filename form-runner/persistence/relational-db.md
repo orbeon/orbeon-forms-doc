@@ -39,6 +39,8 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 | 4.4                      | 4.4                            | [oracle-4_4.sql]           | [oracle-4_3-to-4_4.sql]             |
 | 4.3                      | 4.3                            | [oracle-4_3.sql]           | -                                   |
 
+[oracle-2017_1-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2017_1-to-2017_2.sql
+[oracle-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2017_2.sql
 [oracle-2016_3-to-2017_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_3-to-2017_1.sql
 [oracle-2017_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2017_1.sql
 [oracle-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_2-to-2016_3.sql
