@@ -92,13 +92,16 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2016.3 to 2017.1         | 2016.3                         | [mysql-2016_3.sql]         | [mysql-2016_2-to-2016_3.sql]        |
+| 2017.2                   | 2017.2                         | [mysql-2017_2.sql]         | [mysql-2016_3-to-2017_2.sql]        |
+| 2016.3, 2017.1           | 2016.3                         | [mysql-2016_3.sql]         | [mysql-2016_2-to-2016_3.sql]        |
 | 2016.2                   | 2016.2                         | [mysql-2016_2.sql]         | [mysql-4_6-to-2016_2.sql]           |
 | 4.6 to 4.10, 2016.2      | 4.6                            | [mysql-4_6.sql]            | [mysql-4_5-to-4_6.sql]              |
 | 4.5                      | 4.5                            | [mysql-4_5.sql]            | [mysql-4_4-to-4_5.sql]              |
 | 4.4                      | 4.4                            | [mysql-4_4.sql]            | [mysql-4_3-to-4_4.sql]              |
 | 4.3                      | 4.3                            | [mysql-4_3.sql]            | -                                   |
 
+[mysql-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_3-to-2017_2.sql
+[mysql-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2017_2.sql
 [mysql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_2-to-2016_3.sql
 [mysql-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_3.sql
 [mysql-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_2.sql
