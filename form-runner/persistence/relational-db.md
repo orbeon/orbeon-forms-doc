@@ -124,10 +124,13 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2017.2                   | 2017.2                         | [sqlserver-2017_2.sql]     | [sqlserver-2016_3-to-2017_2.sql]    |
 | 2016.3 to 2017.1         | 2016.3                         | [sqlserver-2016_3.sql]     | [sqlserver-2016_2-to-2016_3.sql]    |
 | 2016.2                   | 2016.2                         | [sqlserver-2016_2.sql]     | [sqlserver-4_6-to-2016_2.sql]       |
 | 4.6 to 2016.1            | 4.6                            | [sqlserver-4_6.sql]        | -                                   |
 
+[sqlserver-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_3-to-2017_2.sql
+[sqlserver-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2017_2.sql
 [sqlserver-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_2-to-2016_3.sql
 [sqlserver-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_3.sql
 [sqlserver-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_2.sql
@@ -142,10 +145,13 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2017.2                   | 2017.2                         | [postgresql-2017_2.sql]    | [postgresql-2016_3-to-2017_2.sql]   |
 | 2016.3 to 2017.1         | 2016.3                         | [postgresql-2016_3.sql]    | [postgresql-2016_2-to-2016_3.sql]   |
 | 2016.2                   | 2016.2                         | [postgresql-2016_2.sql]    | [postgresql-4_8-to-2016_2.sql]      |
 | 4.8 to 2016.1            | 4.8                            | [postgresql-4_8.sql]       | -                                   |
 
+[postgresql-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_3-to-2017_2.sql
+[postgresql-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2017_2.sql
 [postgresql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_2-to-2016_3.sql
 [postgresql-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_3.sql
 [postgresql-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_2.sql
@@ -161,12 +167,15 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2017.2                   | 2017.2                         | [db2-2017_2.sql]           | [db2-2016_3-to-2017_2.sql]          |
 | 2016.3 to 2017.1         | 2016.3                         | [db2-2016_3.sql]           | [db2-2016_2-to-2016_3.sql]          |
 | 2016.2                   | 2016.2                         | [db2-2016_2.sql]           | [db2-4_6-to-2016_2.sql]             |
 | 4.6 to 2016.1            | 4.6                            | [db2-4_6.sql]              | [db2-4_4-to-4_6.sql]                |
 | 4.4                      | 4.4                            | [db2-4_4.sql]              | [db2-4_3-to-4_4.sql]                |
 | 4.3                      | 4.3                            | [db2-4_3.sql]              | -                                   |
 
+[db2-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_3-to-2017_2.sql
+[db2-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2017_2.sql
 [db2-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_2-to-2016_3.sql
 [db2-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_3.sql
 [db2-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_2.sql
