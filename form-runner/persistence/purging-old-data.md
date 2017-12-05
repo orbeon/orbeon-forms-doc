@@ -10,6 +10,10 @@ While there are benefits to keeping data marked as deleted, there are cases wher
 
 This is done in 2 steps, starting by removing form data, and then the corresponding attachments. We recommend you follow the steps below only if you are familiar with SQL. Also, especially if you are going to run this on a production database, we highly recommend you first create a backup of that database.
 
+## Form Builder data
+
+The following queries purge data that users manually deleted. However, should you want to adapt those queries to also purge "historical data", keep in mind that forms you edit in Form Builder are also stored in the `orbeon_form_data` and `orbeon_form_data_attach` tables. This means that you might want to avoid rows with with `app = 'orbeon' AND form = 'builder'` in queries, or you might loose the ability to open forms from the Form Builder summary page.
+
 ## Removing form data
 
 The following statement is for Oracle (if you're using another database, replace `ADD_MONTHS(SYSDATE, -1)` by an equivalent function on that database). It will return the data marked for deletion more than 1 month ago. If you want to delete that data, replace `SELECT *` by `DELETE` in the statement, and run it again.
