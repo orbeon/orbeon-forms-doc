@@ -288,4 +288,5 @@ ORBEON.xforms.Events.orbeonLoadedEvent.unsubscribe(myListener);
 
 ## See also
 
+- [Adding your own JavaScript](../configuration/properties/form-runner.md#adding-your-own-javascript)
 - [Form Runner client-side JavaScript API](../form-runner/advanced/client-side-javascript-api.md)

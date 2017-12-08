@@ -55,7 +55,7 @@ Some actions, such as the `email` action, don't have or don't require any parame
     email
 </property>
 ```
-Sending emails is configured [with properties](../../../configuration/properties/form-runner.html#email-settings). To send a form `my_app/my_form` to an email address `form-recipient@example.org` using for instance the SMTP server `smtp.example.org` you can add the following properties to [`properties-local.xml`](../../../configuration/properties/README.md):
+Sending emails is configured [with properties](../../../configuration/properties/form-runner.md#email-settings). To send a form `my_app/my_form` to an email address `form-recipient@example.org` using for instance the SMTP server `smtp.example.org` you can add the following properties to [`properties-local.xml`](../../../configuration/properties/README.md):
 ```xml
 <property as="xs:string"  
     name="oxf.fr.email.smtp.host.my_app.my_form"          

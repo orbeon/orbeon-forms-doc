@@ -123,14 +123,14 @@ As of 2016-04-19 this page is still being updated.
     - Ability to send to services: [blog post](http://blog.orbeon.com/2016/08/submitting-pdf-file-to-external-service.html)
 - Validation
     - as-you-type validation
-    - explicit validation: [doc](https://doc.orbeon.com/configuration/properties/form-runner.html#validation-mode)
+    - explicit validation: [doc](https://doc.orbeon.com/configuration/properties/form-runner.md#validation-mode)
     - centralized error summary showing currently relevant errors: [component doc](form-runner/component/images/xbl-error-summary-errors.png), [blog post on warnings/infos enhancements](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
-    - controlling which attachments are included: [Form Builder doc](http://doc.orbeon.com/form-builder/control-settings.html#basic-options), [Form Runner doc](http://doc.orbeon.com/configuration/properties/form-runner.html#email-settings)
+    - controlling which attachments are included: [Form Builder doc](http://doc.orbeon.com/form-builder/control-settings.html#basic-options), [Form Runner doc](http://doc.orbeon.com/configuration/properties/form-runner.md#email-settings)
     - controlling To, Cc, Bcc, From: [doc](form-builder/control-settings.md), [blog post](http://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)
 - Captcha: [properties doc](configuration/properties/form-runner.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
-- Appearance of repeated sections: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-repeated-sections), [component doc](http://doc.orbeon.com/form-runner/component/grid.html#repeated-mode)
-- Appearance of repeated grids: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.html#appearance-of-grids-sections), [component doc](http://doc.orbeon.com/form-runner/component/section.html#repeated-mode)
+- Appearance of repeated sections: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.md#appearance-of-repeated-sections), [component doc](http://doc.orbeon.com/form-runner/component/grid.html#repeated-mode)
+- Appearance of repeated grids: [properties doc](http://doc.orbeon.com/configuration/properties/form-runner.md#appearance-of-grids-sections), [component doc](http://doc.orbeon.com/form-runner/component/section.html#repeated-mode)
 - Function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](http://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
 - Grids
     - HTML tables-free layout: [blog post](http://blog.orbeon.com/2016/06/saying-farewell-to-html-tables.html))

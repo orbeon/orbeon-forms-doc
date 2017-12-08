@@ -142,3 +142,7 @@ Here are the differences between the two:
     * without a `type` attribute, the default is to run client-side JavaScript
     * with a `type` attribute, this can run nested client-side JavaScript or server-side XPath scripts
 
+## See also
+
+- [Adding your own JavaScript](../../configuration/properties/form-runner.md#adding-your-own-javascript)
+- [Form Runner client-side JavaScript API](../form-runner/advanced/client-side-javascript-api.md)
