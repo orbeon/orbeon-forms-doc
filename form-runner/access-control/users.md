@@ -147,7 +147,7 @@ In addition or alternatively, multiple role headers can be provided, and each of
     value="(\s*[,\|]\s*)+"/>
 ```
 
-##### Forwarding headers (Orbeon Forms 4.6 and earlier)
+##### Forwarding headers with 4.6 and earlier
 
 *NOTE: This step is not necessary for Orbeon Forms 4.7 and newer.*
 
@@ -160,7 +160,7 @@ When using header-based authentication, in addition to defining the name of the 
     value="My-Username-Header My-Group-Header My-Roles-Header"/>
 ```
 
-##### LDAP-style header syntax (Optional)
+##### LDAP-style header syntax
 
 The value of the header is a list of roles separated by spaces, commas, or pipes (`|`). Furthermore, they can optionally be composed of properties in the form of `name=value`, where `name` is specified by a configuration property, and `value` is the value of the role. This is typically useful the value if the header follows an LDAP-style syntax, for instance:
 
