@@ -13,11 +13,11 @@ Implementations of the persistence API may support the lease feature, but they a
     value="true"/>
 ```
 
-If your implementation advertises itself as supporting the lease feature, it must implement 2 additional methods, `LOCK` and `UNLOCK`, as described below. The `LOCK` and `UNLOCK` are seen as an extension of the CRUD operations, so are issued to `/crud/[app]/[form]/data/[document-id]/data.xml`.
+If your implementation advertises itself as supporting the lease feature, it must implement 2 additional methods, `LOCK` and `UNLOCK`, as described below. `LOCK` and `UNLOCK` are seen as an extension of the CRUD operations, so are issued to `/crud/[app]/[form]/data/[document-id]/data.xml`.
 
 ## The LOCK method
 
-Before assigning a lease on a document to a user, Form Runner issues a `LOCK` for that document.
+Before assigning a lease for a document to a user, Form Runner issues a `LOCK` for that document.
 
 ### Request
 
@@ -37,7 +37,7 @@ Before assigning a lease on a document to a user, Form Runner issues a `LOCK` fo
 
 ### Response
 
-Your implementation keeps track of what lease is assigned to what user, for what document, for what duration. Your implementation can grant a lease per the request if any of the following conditions are met:
+Your implementation keeps track of what lease is assigned to what user, for what document, and until when the lease is granted. Your implementation can grant a lease per the request if any of the following conditions are met:
 
 - No existing lease was previously granted for this document.
 - A lease was granted for this document, and it was granted to the same user.
@@ -46,7 +46,7 @@ Your implementation keeps track of what lease is assigned to what user, for what
 If the lease:
 
 - Can be granted, then your implementation responds with a 200.
-- Cannot be granted, then it responds with a 423, per RFC 2518 section 8.10.7. The response must contain a `<d:lockinfo>` document with information about the owner of the lease (same document that was provided when the lease was acquired), and a `Timeout` header telling the caller for how much longer the lease is expected to stay in place. This timeout value is only indicative as the lease can be canceled by the user (see `UNLOCK` below) or renewed (by issuing another `LOCK`).
+- Cannot be granted, then it responds with a 423, per RFC 2518 section 8.10.7. The response must contain a `<d:lockinfo>` document with information about the owner of the lease (same document that was provided when the lease was acquired), and a `Timeout` header telling the caller for how much longer the lease is expected to stay in place. This timeout value is only indicative as after your response the lease can be canceled by the user (see `UNLOCK` below) or renewed (by issuing another `LOCK`).
 
 ## The UNLOCK method
 
