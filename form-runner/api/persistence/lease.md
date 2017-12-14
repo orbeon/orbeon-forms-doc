@@ -1,6 +1,6 @@
 # Lease
 
-This page describes what you'll want to do to support the lease feature in your own implementation of the persistence API. If instead you'd like to *use* that feature, see the documentation on the [lease feature](https://doc.orbeon.com/form-runner/feature/lease.html).
+[SINCE Orbeon Forms 2017.2] This page describes what you'll want to do to support the lease feature in your own implementation of the persistence API. If instead you'd like to *use* that feature, see the documentation on the [lease feature](https://doc.orbeon.com/form-runner/feature/lease.html).
 
 ## Enabling support
 
