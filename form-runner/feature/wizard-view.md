@@ -155,6 +155,8 @@ The following buttons are automatically hidden until the wizard shows the last t
 
 ## Section status
 
+### Status indication
+
 [SINCE Orbeon Forms 2016.2]
 
 The wizard indicates, in the table of contents, the status of each section:
@@ -165,6 +167,15 @@ The wizard indicates, in the table of contents, the status of each section:
 - __Complete:__ the user has visited the section and all the required fields for the section have been filled. 
 
 ![Wizard validated mode](../images/wizard-status.png)
+
+### Wizard status persistence
+
+[SINCE Orbeon Forms 2017.2]
+
+The wizard status is persisted when the data is saved to the database. This means that if the user saves incomplete 
+data and comes back to it, information about visited or changed wizard pages is restored.
+
+The wizard shows the last possible page upon loading data.  
 
 ## Separate table of contents
 
