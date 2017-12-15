@@ -82,4 +82,5 @@ repeat indexes.
 
 ## See also
 
+- [Adding your own JavaScript](../../configuration/properties/form-runner.md#adding-your-own-javascript)
 - [XForms client-side JavaScript API](../../xforms/client-side-javascript-api.md)
