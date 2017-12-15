@@ -371,6 +371,32 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - delete button enabled and works
                 - on open data, can edit data
 
+### Lease \[2017.2 TODO\]
+
+- [ ] Setup
+    - On Chrome, install the [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj) extension
+    - In ModHeader, setup the following headers:
+        - `My-Username-Header: hsimpson`
+        - `My-Roles-Header: manager`
+        - `My-Username-Header: msimpson`
+    - Add the following to your `properties-local.xml`: `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
+    - In Form Builder, create a form, publish it, open `/new` for that form, save
+ - [ ] Lease duration
+    - Enable `My-Username-Header: hsimpson` header
+    - Load form data, check we get the lease, time counts down from 10 minutes
+    - Add `<property as="xs:integer" name="oxf.fr.detail.lease.duration.manager.*.*" value="5"/>`, reload page, check time still counts down from 10 minutes
+    - Enable `My-Roles-Header: manager` header, reload page, check time counts down from 5 minutes
+- [ ] Dialog 2 min before the end
+    - Change value lease duration property to `3` (so we don't have to wait too much)
+    - Load form data, wait for 1 minute, check the dialog show, click button to renew, check the time goes back to 3 minutes
+    - Wait for 1 minute, when the dialog shows ignore it, wait 2 minutes, check the dialog closes and the message telling us we don't have the lease anymore shows
+- [ ] Auto-renewal
+    - Remove lease duration property
+    - Load form, wait 1 minute, change field value, tab out, check countdown goes back to 10 minutes
+- [ ] Other user blocked until relinquished
+    - As `hsimpson` load document to acquire lease, as `msimpson` load form again, check we're told `hsimpson` has the lease, try to acquire it, check it fails
+    - As `hsimpson` load document, check we have the lease, click on button to relinquish, as `msimpson` load form again, check we got the lease
+
 ### Autosave and Permissions Test \[2017.2 TODO MySQL\]
 
 Repeat what follows with:
