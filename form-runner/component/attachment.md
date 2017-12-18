@@ -1,4 +1,4 @@
-# Attachment Component
+# Attachment component
 
 <!-- toc -->
 
@@ -45,3 +45,8 @@ This component dispatches the following events following the enclosed upload con
 - `xxforms-upload-cancel`
 - `xxforms-upload-done`
 - `xxforms-upload-error`
+
+## See also
+
+- [Image component](image.md)
+- [Image attachment component](image-attachment.md)

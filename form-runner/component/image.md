@@ -1,4 +1,4 @@
-# Image Component
+# Image component
 
 <!-- toc -->
 
@@ -8,7 +8,7 @@
 
 ## What it does
 
-The `fr:image` component shows an image. Unlike [fr:image-attachment](../../form-runner/component/image-attachment.md), `fr:image` doesn't have an associated upload control and cannot be changed by the end-user of a form.
+The `fr:image` component shows an image. Unlike [fr:image-attachment](image-attachment.md), `fr:image` doesn't have an associated upload control and cannot be changed by the end-user of a form.
 
 In addition, when in the Form Runner context, `fr:image` retrieves the resource while passing the `Orbeon-Form-Definition-Version` HTTP header when available.
 
@@ -23,3 +23,8 @@ In addition, when in the Form Runner context, `fr:image` retrieves the resource 
 ```
 
 The URL of the image is stored in instance data via a single-node binding, here using `bind`.
+
+## See also
+
+- [Image attachment component](image-attachment.md)
+- [Attachment component](attachment.md)
