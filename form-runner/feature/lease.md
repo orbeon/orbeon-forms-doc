@@ -1,8 +1,16 @@
 # Lease
 
+<!-- toc -->
+
+## Availability
+
+Since Orbeon Forms 2017.2.
+
+This is an Orbeon Forms PE feature.
+
 ## Overview
 
-[SINCE Orbeon Forms 2017.2] When the lease feature is enabled, Form Runner prevents multiple users from concurrently editing the same form instance:
+When the lease feature is enabled, Form Runner prevents multiple users from concurrently editing the same form instance:
 
 1. When a first user, let's call him Homer, opens a form instance for editing, Homer is assigned a *lease* on that form instance for a given duration, say 10 minutes. The lease gets automatically extended when Homer updates the form, say by changing the value of a field, or when Homer clicks on a button to request a lease extension (more on this below).
     ![](../images/lease-own.png)
