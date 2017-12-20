@@ -46,8 +46,8 @@ Form definitions, as well as form data, can also be searched and deleted.
 A few useful terms used in this document:
 
 * **Form control.** A form control is a form user interface element such as a text line, text field, group of radio buttons, email or currency field, etc.
-* **Form definition.** A form definition (often simply called a form) includes a set of form controls, a layout of these controls on the screen, a representation of the data to capture (e.g. an XML document format), and optionally events and actions defining behavior when the user interacts with the controls, as well as rules that can apply to the data.
-* **Form data.** Form data is data that is captured or edited by a form definition.
+* **Form definition.** A form definition (often simply called a *form*) includes a set of form controls, a layout of these controls on the screen, a representation of the data to capture (e.g. an XML document format), and optionally events and actions defining behavior when the user interacts with the controls, as well as rules that can apply to the data.
+* **Form data.** Form data (often also called a *document*) is data that is captured or edited by a form definition.
 * **Form author.** The form author is the person creating a form definition (either using a visual tool, or by writing code).
 * **Data entry.** Act of entering data into a form.
 * **Form user.** As opposed to the form _author_, the form _user_ is the person entering data into a form.
