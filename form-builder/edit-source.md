@@ -1,8 +1,22 @@
 # Editing the source code of the form definition
 
-The "Edit Source" button in the toolbox opens the "Edit Source" dialog.
+<!-- toc -->
+
+## With Orbeon Forms 2017.2 and newer
+
+The "Edit Source" button under the "Advanced" tab in the toolbox opens the "Edit Source" dialog.
+
+![Edit Source button](images/advanced-menu.png)
+
+## With Orbeon Forms 2017.1 and earlier
+
+The "Edit Source" icon in the top right corner of the form area opens the "Edit Source" dialog.
 
 ![Edit Source button](images/edit-source-button.png)
+
+## Functionality
+
+This is an advanced feature and it must be used very carefully.
 
 Form Builder uses XHTML+XForms as form definition representation. The format must be well-formed XML. The dialog shows a text editor containing that representation.
 

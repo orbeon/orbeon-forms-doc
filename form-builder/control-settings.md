@@ -1,10 +1,10 @@
-# Control Settings
+# Control settings
 
 <!-- toc -->
 
 ## Introduction
 
-The Control Details dialog allows controlling all the aspects the a control besides its label and hint. The dialog
+The Control Settings dialog allows controlling all the aspects the a control besides its label and hint. The dialog
 has several tabs, detailed below.
 
 ### Basic Settings
@@ -85,6 +85,16 @@ See [Form Builder Validation](validation.md) for details.
 ![Formulas tab](images/control-settings-formulas.png)
 
 See [Formulas](formulas.md) for details.
+
+### Label and Hint
+
+[SINCE Orbeon Forms 2017.2]
+
+In addition to setting a control's label and hint in place in the form area, you can also set and update them in this
+tab. You can switch between plain text and HTML text as well. The "Previous" and "Next" buttons allow quick navigation
+between controls.
+
+![Help tab](images/control-settings-label-hint.png)
 
 ### Help Message
 

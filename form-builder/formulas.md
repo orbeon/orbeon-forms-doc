@@ -12,7 +12,7 @@ In general you don't need to know about XPath in Form Builder, with the exceptio
 
 ## Where do formulas appear?
 
-In the Control Details dialog, XPath expressions are used to specify the following aspects of a control.
+In the Control Settings dialog, XPath expressions are used to specify the following aspects of a control.
 
 ### Control Settings dialog
 

@@ -31,6 +31,7 @@ This mechanism is how you edit:
 * Section title
 * Control label
 * Control hint
+* Explanation text
 
 ## Sections and grids
 
