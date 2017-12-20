@@ -10,7 +10,7 @@
 
 The toolbox shows familiar undo and redo icons.
 
-<img src="../../form-builder/images/advanced-menu.png" width="189">
+![](images/advanced-menu.png)
 
 ## Using undo and redo
 
