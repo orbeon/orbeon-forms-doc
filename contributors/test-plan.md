@@ -6,36 +6,36 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 
 ## Misc
 
-### Distribution \[2017.2 TODO\]
+### Distribution \[2017.2 DONE\]
 
-- [ ] `README.md` is up to date
-  - [ ] links not broken (use Marked to save HTML, then check w/ Integrity)
-  - [ ] latest release year
-  - [ ] version number is correct
-  - [ ] links to release notes (include link to new version even if blog post not up yet)
-- [ ] file layout is correct in zip and wars
-- [ ] check WAR files have reasonable sizes
-  - `orbeon-auth.war` (3 KB 2016.3/2017.1)
-  - `orbeon-embedding.war` (1.3 MB 2016.3/2017.1)
-  - `proxy-portlet.war` (1.7 MB 2016.3/2.2 MB 2017.1)
-  - `orbeon.war` (85 MB 2016.3/2017.1)
-  - `orbeon-xforms-filter.jar` (474 KB 2016.3/491 KB 2017.1)
-- [ ] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
-    - [ ] Tomcat
-- [ ] make sure the PE license is not included
+- [x] `README.md` is up to date
+  - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
+  - [x] latest release year
+  - [x] version number is correct
+  - [x] links to release notes (include link to new version even if blog post not up yet)
+- [x] file layout is correct in zip and wars
+- [x] check WAR files have reasonable sizes
+  - `orbeon-auth.war` (3 KB 2016.3-2017.2)
+  - `orbeon-embedding.war` (1.3 MB 2016.3-2017.2)
+  - `proxy-portlet.war` (1.7 MB 2016.3/2.2 MB 2017.1/2017.2)
+  - `orbeon.war` (85 MB 2016.3/2017.1, 82 MB 2017.2)
+  - `orbeon-xforms-filter.jar` (474 KB 2016.3/491 KB 2017.1/2017.2)
+- [x] dropping the WAR file (with license included or in `~/.orbeon/license.xml`) works out of the box
+    - [x] Tomcat
+- [x] make sure the PE license is not included
 
-### Landing Page \[2017.2 TODO\]
+### Landing Page \[2017.2 DONE\]
 
-- [ ] version number is correct in logs when starting
-- [ ] landing page
+- [x] version number is correct in logs when starting
+- [x] landing page
   - layout of FR examples
   - layout of XForms examples
-- [ ] XForms examples
+- [x] XForms examples
   - load, look reasonable, and work
 
 ### PE Features Availability \[2017.2 TODO\]
 
-check that all PE features are available in PE, but not in CE:
+Check that all PE features are available in PE, but not in CE:
 
 - [ ] features which are checked
     - [ ] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
@@ -70,6 +70,10 @@ check that all PE features are available in PE, but not in CE:
         - access `http://localhost:8080/2016.2-ce/fr/`
         - login with `orbeon-user` (or any user with the `orbeon-user` role)
         - check doesn't ask user for remote servers and only loads local form definitions
+    - [ ] FR: replication
+    - [ ] FR: document leases
+    - [ ] FR: virus scanner API
+    - [ ] FR: form publish API
 - features which are not checked yet but should be
     - Proxy portlet
     - Embedding
@@ -560,7 +564,7 @@ http://localhost:8080/2017.2-pe/fr/auth
 
 ## Form Builder
 
-### Basic Features \[2017.2 TODO\]
+### Basic Features \[2017.2 TODO ERIK\]
 
 - [ ] create new form
 - [ ] insert sections, grids, repeated grids
@@ -569,6 +573,11 @@ http://localhost:8080/2017.2-pe/fr/auth
 - [ ] move sections
     - up/down
     - right/left (subsections) (be aware of [#2031](https://github.com/orbeon/orbeon-forms/issues/2031))
+- [ ] DnD control
+  - [ ] between grids, sections
+  - [ ] use shift to copy
+- [ ] undo/redo
+  - [ ] undo/redo insets, deletes, section template merge, settings changes, DnD, etc.
 - [ ] repeated grid
     - [ ] set min/max as ints
     - [ ] set min/max as XPath expressions, e.g. `1 + 2`
