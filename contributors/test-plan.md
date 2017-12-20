@@ -794,7 +794,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [ ] makes invalid controls in section template prevent saving
 - [ ] check all labels appear and repeats work ([#3243](https://github.com/orbeon/orbeon-forms/issues/3243))
 
-### PDF Automatic \[2017.2 TODO\]
+### PDF Automatic \[2017.2 TODO ERIK\]
 
 - [ ] Controls and Bookshelf
     - input field and text areas have highlighted and clickable links
@@ -820,7 +820,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [ ] Form for [issue #3105](https://github.com/orbeon/orbeon-forms/issues/3105) renders PDF well. 
 - [ ] "Page break before section" checkbox works 
 
-### PDF Template \[2017.2 TODO\]
+### PDF Template \[2017.2 TODO ERIK\]
 
 - [ ] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
 - [ ] add field "name" in section "applicant"
@@ -845,7 +845,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [ ] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2017.2 TODO\]
+### Form Builder Permissions \[2017.2 TODO ERIK\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
@@ -975,7 +975,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ## Form Runner
 
-### Sample forms \[2017.2 TODO\]
+### Sample forms \[2017.2 TODO ERIK\]
 
 - [ ] load all
 - [ ] Controls
@@ -995,7 +995,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             - also with keyboard
         - [ ] change lang works
 
-### Errors and warnings \[2017.2 TODO]
+### Errors and warnings \[2017.2 TODO ERIK\]
 
 - FB: create form
     - required field
@@ -1008,7 +1008,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2017.2 TODO\]
+### Process buttons \[2017.2 TODO ERIK\]
 
 - create and publish guest/test
     - 1 required field
@@ -1027,7 +1027,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2017.2 TODO\]
+### Attachments/uploads \[2017.2 TODO ERIK\]
 
 - [ ] basic upload works
 - [ ] removing uploaded file works
@@ -1049,7 +1049,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - cancel midway works
     - progress indicator works
 
-### Submit \[2017.2 TODO\]
+### Submit \[2017.2 TODO ERIK\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -1069,7 +1069,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - OK: goes to echo page
     - close window [NOTE: Only if window was open with JS.]
 
-### Email \[2017.2 TODO\]
+### Email \[2017.2 TODO ERIK\]
 
 - NOTE: if using 2-factor auth w/ GMail, must use app-specific password for SMTP
     - https://accounts.google.com/b/0/IssuedAuthSubTokens#accesscodes
@@ -1102,14 +1102,14 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2017.2 TODO\]
+### Misc \[2017.2 TODO ERIK\]
 
 - switch language
 - open/close sections (but not with wizard)
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Wizard \[2017.2 TODO \]
+### Wizard \[2017.2 TODO ERIK\]
 
 - [ ] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
     - or use FB setting for form
@@ -1157,7 +1157,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         value="all"/>
     ```
 
-### Captcha \[2017.2 TODO\]
+### Captcha \[2017.2 TODO ERIK\]
 
 - enable with property
 
@@ -1303,7 +1303,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - make sure forms still work
 - [ ] reindex database works (make sure relational provider is enabled)
 
-### Summary Page \[2017.2 TODO\]
+### Summary Page \[2017.2 TODO ERIK\]
 
 - e.g. `http://localhost:8080/2017.2-pe/fr/orbeon/bookshelf/summary`
 - list forms
@@ -1321,7 +1321,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - duplicate
 - delete
 
-### Excel Import \[2017.2 TODO\]
+### Excel Import \[2017.2 TODO ERIK\]
 
 - `http://localhost:8080/2017.2-pe/fr/orbeon/contact/import`
 - import small doc first (- view
@@ -1334,7 +1334,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - check % and ETA progress during validation and import
 - check import completes
 
-### Liferay \[2017.2 TODO\]
+### Liferay \[2017.2 TODO ERIK\]
 
 - versions as of Orbeon Forms 2017.1
   - [ ] Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
@@ -1502,7 +1502,7 @@ Properties:
 - [ ] run tests above with eXist
 - [ ] run tests above with relational
 
-### Embedding \[2017.2 TODO\]
+### Embedding \[2017.2 TODO ERIK\]
 
 - [ ] deploy `orbeon-embedding.war` into Tomcat
 - [ ] update `web.xml`:
