@@ -30,6 +30,7 @@
         * [Itemset editor](form-builder/itemset-editor.md)
         * [Publishing](form-builder/publishing.md)
         * [Toolbox](form-builder/toolbox.md)
+        * [Undo and redo](form-builder/undo-redo.md)
         * [Repeated grids](form-builder/repeated-grids.md)
     * [Formulas](form-builder/formulas.md)
         * [Examples](form-builder/formulas-examples.md)
