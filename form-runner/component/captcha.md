@@ -1,4 +1,4 @@
-# Captcha Component
+# Captcha components
 
 <!-- toc -->
 
