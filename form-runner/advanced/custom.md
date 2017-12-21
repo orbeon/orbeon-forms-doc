@@ -1,4 +1,6 @@
-# Custom dialogs and model logic 
+# Custom dialogs and model logic
+
+<!-- toc --> 
 
 ## Introduction
 
