@@ -58,6 +58,7 @@ As of 2016-04-19 this page is still being updated.
     - features: [doc](form-builder/toolbox.md)
     - configurability: [doc](form-builder/metadata.md)
     - XBL components: [doc](xforms/xbl/README.md)
+    - Undo and redo: [doc](form-builder/undo-redo.md), [blog post](http://blog.orbeon.com/2017/12/new-orbeon-forms-20172-feature-undo-and.html)
 - Form Settings: [doc](form-builder/form-settings.md)
     - General Settings
     - Form Options: [doc](form-builder/form-settings.html#form-options)
