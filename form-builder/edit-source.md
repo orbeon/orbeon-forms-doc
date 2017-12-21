@@ -6,7 +6,7 @@
 
 The "Edit Source" button under the "Advanced" tab in the toolbox opens the "Edit Source" dialog.
 
-![Edit Source button](images/advanced-menu.png)
+<img src="images/advanced-menu.png" width="245">
 
 ## With Orbeon Forms 2017.1 and earlier
 
