@@ -2,6 +2,16 @@
 
 <!-- toc -->
 
+## Children pages
+
+You can learn more about:
+
+- [Syntax](syntax.md)
+- [Core actions](actions-core.md)
+- [Form Runner actions](actions-form-runner.md)
+- [XForms actions](actions-xforms.md)
+- [Predefined processes and dialogs](predefined.md)
+
 ## Availability
 
 This feature is available with Orbeon Forms 4.2 and newer.
@@ -86,17 +96,6 @@ Another approach would be to create an entirely custom button instead of reusing
 - define a process for `foo`
 
 NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource.*.*.en.detail.buttons.send`. With Orbeon Forms 4.6 and newer, the `detail` token can and should be omitted.
-
-## What next?
-
-You can learn more about:
-
-- the [process syntax](syntax.md)
-- the actions you can use, including:
-    - [core actions](actions-core.md)
-    - [Form Runner actions](actions-form-runner.md)
-    - [XForms actions](actions-xforms.md)
-- [predefined buttons, processes and dialogs](predefined.md)
 
 ## See also
 
