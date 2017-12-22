@@ -116,26 +116,20 @@ Do the following for eXist and relational database of your choice. We do not nee
     - name it `exist/a`
     - change the input field to be shown in summary and search
     - add a static image, attach and image
+    - add Image Attachment
     - publish
     - duplicate to `sqlserver/a`
 - Pages
     - FB: create form, publish
     - FR: check it shows on http://localhost:8080/2017.2-pe/fr/
     - FR: create new form, review, back to edit ([#1643](https://github.com/orbeon/orbeon-forms/issues/1643))
-    - FR: enter data, save
+    - FR: enter data, select image, save
     - FR: check it shows in the summary page
-- Attachments
-    - FB: add file attachment field
-    - FB: save and publish
-        - DB2: be aware of [#1409](https://github.com/orbeon/orbeon-forms/issues/1409)
-    - FR: deployed form loads image
-    - FR: attach file, save, edit
-- Search
-    - FR: create new form data, see in summary
-    - FR: search free-text and structured
+    - FR: when editing, check the image shows
+- Search / summary
+    - FR: in summary, search free-text and structured
     - FR: delete data in summary page works
-- Duplicate
-    - FR: Summary: Duplicate button works
+    - FR: duplicate button works
 
 ### Versioning \[2017.2 TODO ALEX\]
 
