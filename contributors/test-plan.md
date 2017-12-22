@@ -94,7 +94,7 @@ Check that all PE features are available in PE, but not in CE:
 
 ### Basic Persistence \[2017.2 TODO ALEX\]
 
-Do the following for eXist and SQL Server. We do not test other relational databases here, as automated tests already test most of this, and the code running for SQL Server is almost identical to the code running for other relational databases.
+Do the following for eXist and relational database of your choice. We do not need to test all relational databases here, as automated tests already test most of this on all supported relational databases.
 
 - Setup: in `properties-local.xml`, add:
     ```xml
