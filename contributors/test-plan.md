@@ -571,7 +571,7 @@ http://localhost:8080/2017.2-pe/fr/auth
   - [ ] between grids, sections
   - [ ] use shift to copy
 - [ ] undo/redo
-  - [ ] undo/redo insets, deletes, section template merge, settings changes, DnD, etc.
+  - [ ] undo/redo all documented operations
 - [ ] repeated grid
     - [ ] set min/max as ints
     - [ ] set min/max as XPath expressions, e.g. `1 + 2`
@@ -598,40 +598,44 @@ http://localhost:8080/2017.2-pe/fr/auth
     - set required
     - check that if control is required but empty, generic message shows, not constraint message ([#1829](https://github.com/orbeon/orbeon-forms/issues/1829))
     - check that if control is required but empty and there is an unmet constraint, generic message shows ([#1830](https://github.com/orbeon/orbeon-forms/issues/1830))
-- [ ] cut/copy/paste
-    - copy control with help, required, constraint, and warning
-    - paste control
-    - check in source that all elements have been renamed
-      - including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
-      - including `@validation` and `xf:constraint/@id` (see [#1785](https://github.com/orbeon/orbeon-forms/issues/1785))
-    - check that form runs and new control validates constraints properly
-- [ ] set control MIPs and properties
+- [x] cut/copy/paste
+    - control
+        - cut/copy control with help, required, constraint, and warning
+        - paste control
+        - check in source that all elements have been renamed
+          - including `$form-resources` references (see [#1820](https://github.com/orbeon/orbeon-forms/issues/1820))
+          - including `@validation` and `xf:constraint/@id` (see [#1785](https://github.com/orbeon/orbeon-forms/issues/1785))
+        - check that form runs and new control validates constraints properly
+    - grid and section
+        - cut/copy
+        - paste multiple times
+- [x] set control MIPs and properties
     - check required star appears with required set to `true()`
     - check Show in Summary/Search work when form deployed
-- [ ] set section MIPs
+- [x] set section MIPs
     - check show/hide based on control value e.g. `$fortytwo = '42'`
-- [ ] edit/modify source
+- [x] edit/modify source
     - change e.g. control label
-- [ ] image annotation control
+- [x] image annotation control
   - create simple form and test works, saves, loads
-- [ ] i18n (PE)
-    - [ ] check en/fr/es/it/de (languages with full support)
-    - [ ] switch FB language and check language changes
-    - [ ] add language
-    - [ ] edit label and items and switch languages
-    - [ ] edit source and change top-level language, make sure language selector switches
-    - [ ] remove language
-    - [ ] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
+- [x] i18n (PE)
+    - [x] check en/fr/es/it/de (languages with full support)
+    - [x] switch FB language and check language changes
+    - [x] add language
+    - [x] edit label and items and switch languages
+    - [x] edit source and change top-level language, make sure language selector switches
+    - [x] remove language
+    - [x] [#1223](https://github.com/orbeon/orbeon-forms/issues/1223)
         - add lang not fully supported (e.g. Afrikaans) , remove all other languages, enter some labels
         - Test and Publish/new -> must show Afrikaans labels, not blank
-- [ ] Form Builder Summary page
+- [x] Form Builder Summary page
     - check that search in Summary page updates title/description when FR language is changed
-- [ ] set form title/description
-- [ ] test form
-- [ ] save
-- [ ] publish form
+- [x] set form title/description
+- [x] test form
+- [x] save
+- [x] publish form
     - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
-- [ ] warning dialog if attempt to close page when unsaved
+- [x] warning dialog if attempt to close page when unsaved
 - [ ] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
     - set properties
     ```xml
@@ -1297,7 +1301,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - make sure forms still work
 - [ ] reindex database works (make sure relational provider is enabled)
 
-### Summary Page \[2017.2 TODO ERIK\]
+### Summary Page \[2017.2 DONE\]
 
 - e.g. `http://localhost:8080/2017.2-pe/fr/orbeon/bookshelf/summary`
 - list forms
@@ -1315,7 +1319,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - duplicate
 - delete
 
-### Excel Import \[2017.2 TODO ERIK\]
+### Excel Import \[2017.2 DONE\]
 
 - `http://localhost:8080/2017.2-pe/fr/orbeon/contact/import`
 - import small doc first (- view
@@ -1330,44 +1334,47 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ### Liferay \[2017.2 TODO ERIK\]
 
+- versions as of Orbeon Forms 2017.2
+  - [x] Liferay Portal Community Edition 7.0 CE GA5 / 7.0.4
 - versions as of Orbeon Forms 2017.1
-  - [ ] Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
+  - Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
 - versions as of Orbeon Forms 2016.3
   - ~~Liferay Portal Community Edition 6.1.1 CE GA2 (Paton / Build 6101 / July 31, 2012)~~
   - Liferay Portal Community Edition 6.1.2 CE GA3 (August 2013)
   - Liferay Portal Community Edition 6.2 CE GA6 (January 2016)
-- [ ] setup
+- [x] setup
   - remove existing `orbeon` and `proxy-portlet.war` webapps if present
   - copy `orbeon.war` and `proxy-portlet.war` to `deploy` folder
   - start Liferay:
-    - `./liferay-portal-6.1.2-ce-ga3/tomcat-7.0.40/bin/catalina.sh run`
-    - `./liferay-portal-6.2-ce-ga6/tomcat-7.0.62/bin/catalina.sh run`
-  - try `http://localhost:9090/` from Firefox
+    - `./liferay-ce-portal-7.0-ga5/tomcat-8.0.32/bin/catalina.sh run`
+    - ~~`./liferay-portal-6.1.2-ce-ga3/tomcat-7.0.40/bin/catalina.sh run`~~
+    - ~~`./liferay-portal-6.2-ce-ga6/tomcat-7.0.62/bin/catalina.sh run`~~
+  - try `http://localhost:9090/` from Firefox (or Chrome)
   - login
     - test@liferay.com/liferay
     - *NOTE: Cannot seem to login with Chrome anymore. Tried removing JSESSIONID, still issue.*
 - [ ] proxy portlet
-  - [ ] set to point to `http://localhost:8080/2017.2-pe/`
-  - [ ] try out pages
+  - [x] set to point to `http://localhost:8080/2017.2-pe/`
+  - [x] try out pages
     - New page
     - Summary page
     - Home page
-  - [ ] set Send Liferay language
+  - [x] set Send Liferay language
     - check that language picker in FR doesn't show on 3 pages
     - change My Account → Display Settings → French
     - check that all 3 pages now show in French (be aware of [#1628](https://github.com/orbeon/orbeon-forms/issues/1628))
-  - [ ] set Send Liferay user
+  - [x] set Send Liferay user
     - check w/ HttpScoop that user headers are sent to Form Runner
       - `Orbeon-Liferay-User-*`
-  - [ ] readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
-  - [ ] edit/review/back
+  - [x] readonly mode (be aware of [#884](https://github.com/orbeon/orbeon-forms/issues/884))
+  - [x] edit/review/back
   - [ ] send to external page
-  - [ ] PDF loads
+  - [x] PDF loads
     - check that checkboxes appear correctly (see [#2046](https://github.com/orbeon/orbeon-forms/issues/2046))
-  - [ ] check that TinyMCE (rich text) appears ok
-  - [ ] upload works
-  - [ ] attach image and save
-  - [ ] check singleton form works
+  - [x] check that TinyMCE (rich text) appears ok
+  - [x] upload works
+  - [x] attach image and save
+  - [x] check singleton form works
     - create test/singleton singleton form in Form Builder, publish
     - point to test/singleton from proxy portlet in `new` mode
     - load portlet, enter data, save
