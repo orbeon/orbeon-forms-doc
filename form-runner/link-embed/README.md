@@ -20,13 +20,14 @@ The following versions of Liferay are supported:
 
 |Orbeon Forms Version|Tested Liferay Version    |Proxy Portlet|Full Portlet|
 |--------------------|--------------------------|-------------|------------|
-|4.9                 |Liferay 6.0               |yes          |yes         |
-|                    |Liferay 6.1.2 CE GA3      |yes          |yes         |
-|2016.2              |Liferay 6.1.2 CE GA3      |yes          |yes         |
-|                    |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
-|2016.3              |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
+|2017.2              |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
 |2017.1              |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
 |                    |Liferay 7.0 CE GA3 / 7.0.2|yes          |no          |
+|2016.3              |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
+|2016.2              |Liferay 6.1.2 CE GA3      |yes          |yes         |
+|                    |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
+|4.9                 |Liferay 6.0               |yes          |yes         |
+|                    |Liferay 6.1.2 CE GA3      |yes          |yes         |
 
 ### Servlet vs. Liferay portal deployment
 
