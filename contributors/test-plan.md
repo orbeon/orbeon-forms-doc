@@ -133,7 +133,7 @@ Do the following for eXist and relational database of your choice. We do not nee
 
 ### Versioning \[2017.2 TODO ALEX\]
 
-Do the following on DB2.
+Do the following on commercial relational database.
 
 - Setup
     - Properties
@@ -172,22 +172,20 @@ Do the following on DB2.
         <property as="xs:string"  processor-name="oxf:page-flow" name="page-public-methods"     value="GET HEAD POST PUT DELETE"/>
         ```
 
-        Also add the email properties (starting with `oxf.fr.email`) from your own `properties-local.xml`.
+        Also add your "personal" email properties (starting with `oxf.fr.email`).
 
 - Steps
-    - [ ] create form `db2/versioning`
+    - [x] create form `db2/versioning`
         - fields
             - Name section `personal-information`
             - 1 email field with "Email Recipient", say `gaga@orbeon.com` (use the proper ID)
-            - 1 input field "First name"
-                - Name it `first-name`
-            - 1 static Image with image statically attached
+            - 1 input field "First name", named `first-name`
+            - 1 Static Image with image statically attached
             - 1 Image Attachment with image statically attached
-            - Attach PDF template
-                - Use `src/resources/forms/orbeon/dmv-14/form/dmv14.pdf`
+            - Download `.bin` file in [DMV-14 folder](https://github.com/orbeon/orbeon-forms/tree/master/data/orbeon/fr/orbeon/dmv-14/form), attach as PDF template
         - publish as version 1
         - go to new page
-            - image and image attachment show
+            - static image and image attachment show
             - check PDF template works
             - check TIFF works
             - check save works
