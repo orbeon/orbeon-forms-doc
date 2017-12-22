@@ -92,7 +92,7 @@ Check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-### Basic Persistence \[2017.2 TODO\]
+### Basic Persistence \[2017.2 TODO ALEX\]
 
 Do the following for eXist and SQL Server. We do not test other relational databases here, as automated tests already test most of this, and the code running for SQL Server is almost identical to the code running for other relational databases.
 
@@ -137,7 +137,7 @@ Do the following for eXist and SQL Server. We do not test other relational datab
 - Duplicate
     - FR: Summary: Duplicate button works
 
-### Versioning \[2017.2 TODO with MySQL\]
+### Versioning \[2017.2 TODO ALEX\]
 
 Do the following on DB2.
 
@@ -271,7 +271,7 @@ Do the following on DB2.
                 - no options are shown
                 - message about overwrite (see [ #3071](https://github.com/orbeon/orbeon-forms/issues/3071))
 
-### Data Capture Permissions \[2017.2 TODO MySQL/eXist\]
+### Data Capture Permissions \[2017.2 TODO ALEX\]
 
 #### Setup
 
@@ -375,7 +375,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
                 - delete button enabled and works
                 - on open data, can edit data
 
-### Lease \[2017.2 TODO\]
+### Lease \[2017.2 TODO ALEX\]
 
 - [ ] Setup
     - On Chrome, install the [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj) extension
@@ -401,7 +401,7 @@ Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with 
     - As `hsimpson` load document to acquire lease, as `msimpson` load form again, check we're told `hsimpson` has the lease, try to acquire it, check it fails
     - As `hsimpson` load document, check we have the lease, click on button to relinquish, as `msimpson` load form again, check we got the lease
 
-### Autosave and Permissions Test \[2017.2 TODO MySQL\]
+### Autosave and Permissions Test \[2017.2 TODO ALEX\]
 
 Repeat what follows with:
 
@@ -511,7 +511,7 @@ http://localhost:8080/2017.2-pe/fr/auth
         - Choose to open the draft, edit it into `a1 Marge`, save, change to `a1 Marge draft`, wait for autosave
         - Go to the summary page, click on `a1 Marge`, dialog must propose loading draft
 
-### Flat View \[2017.2 TODO\]
+### Flat View \[2017.2 TODO ALEX\]
 
 - Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
 - Enable the flat view option, adding:
