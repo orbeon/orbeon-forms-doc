@@ -92,7 +92,7 @@ Check that all PE features are available in PE, but not in CE:
 
 ## Persistence
 
-### Basic Persistence \[2017.2 TODO ALEX\]
+### Basic Persistence \[2017.2 DONE\]
 
 Do the following for eXist and relational database of your choice. We do not need to test all relational databases here, as automated tests already test most of this on all supported relational databases.
 
