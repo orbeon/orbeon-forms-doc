@@ -792,19 +792,19 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] makes invalid controls in section template prevent saving
 - [x] check all labels appear and repeats work ([#3243](https://github.com/orbeon/orbeon-forms/issues/3243))
 
-### PDF Automatic \[2017.2 TODO ERIK\]
+### PDF Automatic \[2017.2 DONE\]
 
-- [ ] Controls and Bookshelf
+- [x] Controls and Bookshelf
     - input field and text areas have highlighted and clickable links
     - try TIFF output as well
-- [ ] Controls
+- [x] Controls
     - [ ] image annotation shows in PDF
     - *NOTE: Disabled in 2016.1 and 2016.2, re-enabled in 2016.3 but not re-added to Controls form.*
-- [ ] form title in header/footer
-- [ ] logo in title
-- [ ] page numbering/total at bottom center
-- [ ] PDF looks good overall
-- [ ] send PDF binary works
+- [x] form title in header/footer
+- [x] logo in title
+- [x] page numbering/total at bottom center
+- [x] PDF looks good overall
+- [x] send PDF binary works
     ```xml
     <property
         as="xs:string"
@@ -815,8 +815,9 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         send(uri = 'http://posttestserver.com/post.php?a=b', method = 'post', replace = 'all', content = 'pdf')
     </property>
     ```
-- [ ] Form for [issue #3105](https://github.com/orbeon/orbeon-forms/issues/3105) renders PDF well. 
-- [ ] "Page break before section" checkbox works 
+- [x] Form for [issue #3105](https://github.com/orbeon/orbeon-forms/issues/3105) renders PDF well.
+    - Doesn't work well for 5 columns. Entered [#3423](https://github.com/orbeon/orbeon-forms/issues/3423) 
+- [x] "Page break before section" checkbox works 
 
 ### PDF Template \[2017.2 TODO ERIK\]
 
