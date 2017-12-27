@@ -654,21 +654,22 @@ http://localhost:8080/2017.2-pe/fr/auth
     - insert control
     - check there is no JS error
 
-### Singleton forms \[2017.2 TODO\]
+### Singleton forms \[2017.2 DONE\]
 
 Test that the features works as [documented](../form-runner/advanced/singleton-form.md):
 
-- [ ] create form `mysql/singleton` 
+- [x] create form `mysql/singleton` 
+    - check singleton checkbox
     - 1 field
     - permissions: anybody can create, owner can do all
     - publish
-- [ ] login as user `a1`
+- [x] login as user `a1`
     - can do new
     - enter "abc"
     - save
     - new gone from Summary page
     - `/new` in URL redirects to '/edit/...'
-- [ ] 2nd browser: login as user `a2` or `b1`
+- [x] 2nd browser: login as user `a2` or `b1`
     - can do new
     - enter "def"
     - save
@@ -676,25 +677,25 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - only see "def" in Summary
     - `/new` in URL redirects to '/edit/...'
 
-### Schema Support \[2017.2 TODO\]
+### Schema Support \[2017.2 DONE\]
 
 - attach Schema
-    - [ ] attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/schema.xsd)
+    - [x] attach the [Bookcast schema](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/schema.xsd)
         - available types contains `rating`, `language`, `link`
-    - [ ] change to the [XForms types schema](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
+    - [x] change to the [XForms types schema](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/org/orbeon/oxf/xforms/xforms-types.xsd)
         - available types contains `card-number`, `dayTimeDuration`, `yearMonthDuration`
-    - [ ] delete schema, check removed from model, be aware of
+    - [x] delete schema, check removed from model, be aware of
         - Delete attached XML Schema causes error if type in use [#694](https://github.com/orbeon/orbeon-forms/issues/694))
         - When removing schema, type from previously selected schema are showing [#2733](https://github.com/orbeon/orbeon-forms/issues/2733)
-    - [ ] re-add Bookcast schema
-    - [ ] assign types to controls
-    - [ ] check that validation is working as per the types
-    - [ ] check schema types are reloaded in Control Settings dialog
+    - [x] re-add Bookcast schema
+    - [x] assign types to controls
+    - [x] check that validation is working as per the types
+    - [x] check schema types are reloaded in Control Settings dialog
         - *NOTE: This is not the case with `xforms-types.xsd`, probably because the types are in the `xf:` namespace. Use the Bookcast `schema.xsd` instead.*
 
-### Database service \[2017.2 TODO\]
+### Database service \[2017.2 DONE\]
 
-- [ ] setup db
+- [x] setup db
     - use MySQL, local or on RDS (`jdbc:mysql://mysql.c4pgtxbv1cuq.us-east-1.rds.amazonaws.com:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`)
     - set datasource in `server.xml`
     - create test table + data row if doesn't exist (can use IntelliJ Database tools)
@@ -709,17 +710,17 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     insert into orbeon_address_book values(1, "John", "Smith", "5551231234");
     insert into orbeon_address_book values(2, "Mary", "Smith", "5551111111");
     ```
-- [ ] setup form
+- [x] setup form
   - 1 Text Field (`input`)
   - 1 Calculated Value (`output`)
   - 1 Radio Buttons (`radios`)
-- [ ] create `address` db service
+- [x] create `address` db service
 
     ```sql
     SELECT * FROM orbeon_address_book
     WHERE id = <sql:param type="xs:string" select=""/>
     ```
-- [ ] create `get-address` action
+- [x] create `get-address` action
     - on `input` control appearing or changing its value, call service
     - sets service value from input on request for param `1`
     - sets control values on response, e.g. `concat(/*/*/first, ' ', /*/*/last)`
@@ -728,7 +729,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - `concat(first, ' ', last)`
         - `id`
 
-### HTTP service \[2017.2 TODO\]
+### HTTP service \[2017.2 DONE\]
 
 - [ ] create echo service with POST
     - POST to `/fr/service/custom/orbeon/echo`
@@ -739,18 +740,18 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             <item label="Bar" value="bar"/>
         </items>
         ```
-- [ ] test
-    - [ ] call service upon form load and set control value upon response, for example:
+- [x] test
+    - [x] call service upon form load and set control value upon response, for example:
         ```xpath
         string-join(//@label, ', ')
         ```
-    - [ ] same with button activation
-    - [ ] same but set service values on request from control
-    - [ ] set itemset values on response
+    - [x] same with button activation
+    - [x] same but set service values on request from control
+    - [x] set itemset values on response
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2017.2 TODO ERIK\]
+### Section Templates \[2017.2 DONE\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
@@ -760,6 +761,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - S1
         - 2 fields, readonly or visibility dependency from one field on the other
     - S2
+        - dropdown
         - repeated grid
     - S3
         - nest repeated section with repeated grid inside
@@ -772,23 +774,23 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             - @english-name
             - @code
     - test/publish
-- [ ] insert components from library into acme/test-library
+- [x] insert components from library into acme/test-library
     - insert S1 and S2 twice, S3
     - add French language
     - check language changes in builder (be aware of [#690](https://github.com/orbeon/orbeon-forms/issues/690))
     - publish
     - test
-        - [ ] check control visibility change
-        - [ ] check language changes
-        - [ ] check services load in both languages (same labels)
-        - [ ] enter data, save, check that data loads back in all fields
-        - [ ] test that repeated grid in section template shows ([#1370](https://github.com/orbeon/orbeon-forms/issues/1370)) in the builder and nicely
-        - [ ] check review, PDF
-- [ ] make sure Clear works
-    - [ ] pass [#807](https://github.com/orbeon/orbeon-forms/issues/807)
-    - [ ] fail [#3052](https://github.com/orbeon/orbeon-forms/issues/3052)
-- [ ] makes invalid controls in section template prevent saving
-- [ ] check all labels appear and repeats work ([#3243](https://github.com/orbeon/orbeon-forms/issues/3243))
+        - [x] check control visibility change
+        - [x] check language changes
+        - [x] check services load in both languages (same labels)
+        - [x] enter data, save, check that data loads back in all fields
+        - [x] test that repeated grid in section template shows ([#1370](https://github.com/orbeon/orbeon-forms/issues/1370)) in the builder and nicely
+        - [x] check review, PDF
+- [x] make sure Clear works
+    - [x] pass [#807](https://github.com/orbeon/orbeon-forms/issues/807)
+    - [x] fail [#3052](https://github.com/orbeon/orbeon-forms/issues/3052)
+- [x] makes invalid controls in section template prevent saving
+- [x] check all labels appear and repeats work ([#3243](https://github.com/orbeon/orbeon-forms/issues/3243))
 
 ### PDF Automatic \[2017.2 TODO ERIK\]
 
