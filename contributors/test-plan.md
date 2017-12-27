@@ -556,41 +556,41 @@ http://localhost:8080/2017.2-pe/fr/auth
 
 ## Form Builder
 
-### Basic Features \[2017.2 TODO ERIK\]
+### Basic Features \[2017.2 DONE\]
 
-- [ ] create new form
-- [ ] insert sections, grids, repeated grids
-- [ ] rename sections and controls
+- [x] create new form
+- [x] insert sections, grids, repeated grids
+- [x] rename sections and controls
     - check renamed in source
-- [ ] move sections
+- [x] move sections
     - up/down
     - right/left (subsections) (be aware of [#2031](https://github.com/orbeon/orbeon-forms/issues/2031))
-- [ ] DnD control
-  - [ ] between grids, sections
-  - [ ] use shift to copy
-- [ ] undo/redo
-  - [ ] undo/redo all documented operations
-- [ ] repeated grid
-    - [ ] set min/max as ints
-    - [ ] set min/max as XPath expressions, e.g. `1 + 2`
-- [ ] make section repeated
-    - [ ] insert/move/remove iterations
-    - [ ] set min/max as ints
-    - [ ] set min/max as XPath expressions, e.g. `1 + 2`
-- [ ] set control label, hint, items
-    - [ ] plain
-    - [ ] HTML
-    - [ ] check HTML label appears correct in summary page / search
+- [x] DnD control
+  - [x] between grids, sections
+  - [x] use shift to copy
+- [x] undo/redo
+  - [x] undo/redo all documented operations
+- [x] repeated grid
+    - [x] set min/max as ints
+    - [x] set min/max as XPath expressions, e.g. `1 + 2`
+- [x] make section repeated
+    - [x] insert/move/remove iterations
+    - [x] set min/max as ints
+    - [x] set min/max as XPath expressions, e.g. `1 + 2`
+- [x] set control label, hint, items
+    - [x] plain
+    - [x] HTML
+    - [x] check HTML label appears correct in summary page / search
     - [ ] placeholder labels
         - check with Controls form and look at all controls (see [#3213](https://github.com/orbeon/orbeon-forms/issues/3213)) 
-    - [ ] placeholder hints
-- [ ] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
-    - [ ] plain
-    - [ ] HTML
-    - [ ] check help icon appears when help is set, and disappears when help is blanked
-- [ ] set section help
-    - [ ] check help icon appears when help is set, and disappears when help is blanked
-- [ ] set control validation
+    - [x] placeholder hints
+- [x] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
+    - [x] plain
+    - [x] HTML
+    - [x] check help icon appears when help is set, and disappears when help is blanked
+- [x] set section help
+    - [x] check help icon appears when help is set, and disappears when help is blanked
+- [x] set control validation
     - set custom error constraint and alert
     - set custom warning constraint and alert
     - set required
@@ -634,7 +634,7 @@ http://localhost:8080/2017.2-pe/fr/auth
 - [x] publish form
     - check that attachments are published too (e.g. attach static img, dynamic img, and PDF file attachment)
 - [x] warning dialog if attempt to close page when unsaved
-- [ ] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
+- [x] serialization/deserialization [#1894](https://github.com/orbeon/orbeon-forms/issues/1894)
     - set properties
     ```xml
     <property
@@ -750,7 +750,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ## Form Builder / Form Runner
 
-### Section Templates \[2017.2 TODO\]
+### Section Templates \[2017.2 TODO ERIK\]
 
 - examples here but create new to make sure builder works!
     - https://gist.github.com/ebruchez/6187690
