@@ -974,25 +974,25 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 ## Form Runner
 
-### Sample forms \[2017.2 TODO ERIK\]
+### Sample forms \[2017.2 DONE\]
 
-- [ ] load all
-- [ ] Controls
-    - [ ] wizard navigation
-    - [ ] autocomplete works
-    - [ ] dynamic data dropdown loads data
-    - [ ] review/PDF look ok
-      - [ ] check Yes/No checkboxe have enough spacing
-    - [ ] check wrapping in view/pdf modes
+- [x] load all
+- [x] Controls
+    - [x] wizard navigation
+    - [x] autocomplete works
+    - [x] dynamic data dropdown loads data
+    - [x] review/PDF look ok
+      - [x] check Yes/No checkboxes have enough spacing
+    - [x] check wrapping in view/pdf modes
         - enter [Lorum Ipsum](http://www.lipsum.com/feed/html) in input field
         - enter long text without space in input field, textarea, and formatted text
-- [ ] Bookshelf
+- [x] Bookshelf
     - Detail
-        - [ ] help works
-        - [ ] review and back works
-        - [ ] add/remove repeats works
+        - [x] help works
+        - [x] review and back works
+        - [x] add/remove repeats works
             - also with keyboard
-        - [ ] change lang works
+        - [x] change lang works
 
 ### Errors and warnings \[2017.2 TODO ERIK\]
 
