@@ -48,17 +48,30 @@ The following control information is copied and pasted:
 
 When the control is pasted, if the control name of the clipboard control is currently not in use in the form, it is used. Otherwise, a new name is chosen by Form Builder.
 
-
 ## Reloading the toolbox
 
-The "Reload Toolbox" icon reloads all the components in the toolbox:
+### Function
 
-![Reloading the toolbox](images/toolbox-reload.png)
-
-After reloading:
+The "Reload Toolbox" icon or button reloads all the components in the toolbox. After reloading:
 
 - The list of controls and [section templates](section-templates.md) in the toolbox updates.
 - [Section templates](section-templates.md) used in your form also update to their latest published version.
+
+### Orbeon Forms 2017.2 and newer
+
+The "Reload Toolbox" button is located at the top of the "Advanced" tab.
+
+<img src="images/advanced-menu.png" width="245">
+
+<!--
+![Reloading the toolbox](images/advanced-menu.png)
+-->
+
+### Orbeon Forms 2017.1 and earlier 
+
+The "Reload Toolbox" icon is located at the top of the toolbox: 
+
+![Reloading the toolbox](images/toolbox-reload.png)
 
 ## Form structure
 
