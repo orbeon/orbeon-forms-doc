@@ -1337,7 +1337,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - check % and ETA progress during validation and import
 - check import completes
 
-### Liferay \[2017.2 TODO ERIK\]
+### Liferay \[2017.2 DONE\]
 
 - versions as of Orbeon Forms 2017.2
   - [x] Liferay Portal Community Edition 7.0 CE GA5 / 7.0.4
@@ -1384,7 +1384,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - point to test/singleton from proxy portlet in `new` mode
     - load portlet, enter data, save
     - load again, check data shows (switched to `edit` mode)
-- [ ] full portlet
+- [ ] full portlet [only if supported; not supportd with Liferay DXP/and Orbeon Forms 2017.2]
   - [ ] all examples and Form Runner
   - [ ] upload works
   - [ ] PDF works
