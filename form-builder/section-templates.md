@@ -16,7 +16,7 @@ For example, you can create a generic "US Address" section and reuse it in multi
 
 ![Defining a section template in Form Builder](images/section-template.png)
 
-Sections can contain:
+Section templates can contain:
 
 - nested grids, with or without repeats
 - nested subsections, with or without repeats

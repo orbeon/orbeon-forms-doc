@@ -25,7 +25,9 @@ As of 2016-04-19 this page is still being updated.
     - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)
     - Options for new repeat iterations: [blog post](http://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
     - Minimal appearances of repeated grids and sections: [blog post](http://blog.orbeon.com/2015/12/leaner-repeated-sections-and-grids.html)
-- Section Templates: [doc](form-builder/section-templates.md)
+- Section Templates:
+    - main feature: [doc](form-builder/section-templates.md)
+    - merging: [doc](form-builder/section-templates.md#merging-section-templates)
 - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
 - Versioning of form definitions: [blog post about concept](http://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
     - overwriting of existing version: [doc](form-builder/publishing.html#versioning)
