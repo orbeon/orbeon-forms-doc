@@ -25,6 +25,7 @@
     * [Form editor](form-builder/form-editor.md)
         * [Form area](form-builder/form-area.md)
         * [Control settings](form-builder/control-settings.md)
+        * [Cut, copy and paste](form-builder/cut-copy-paste.md)
         * [Section settings](form-builder/section-settings.md)
         * [Validation](form-builder/validation.md)
         * [Itemset editor](form-builder/itemset-editor.md)

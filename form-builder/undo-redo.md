@@ -10,7 +10,7 @@
 
 The toolbox shows familiar undo and redo icons.
 
-<img src="images/advanced-menu.png" width="245">
+<img alt="Undo and redo icons" src="images/xcv.png" width="210">
 
 ## Using undo and redo
 

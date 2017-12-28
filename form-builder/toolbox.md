@@ -6,15 +6,23 @@
 
 The Form Builder toolbox provides the following:
 
-* **Global buttons.** Global cut/copy/paste and "reload toolbox" icon buttons
-* **Form structure**
-    * New Section
-    * New Grid
-    * New Repeated Grid
-* **Form controls**. Form control (AKA form fields) you can add to your form to capture and/or show data.
-* **Metadata.** Allows you to modify the application name and form name.
-* **Advanced.** Includes advanced features like XML Schema, PDF and source code view.
-* **Services and Actions.** Editors for simple services and actions.
+- **Global icons:**
+    - Form Settings [SINCE Orbeon Forms 2017.2]
+    - Cut/copy/paste
+    - Undo/redo [SINCE Orbeon Forms 2017.2]
+    - "Reload toolbox" [UNTIL Orbeon Forms 2017.1]
+- **Form structure:**
+    - New Section
+    - New Grid
+    - New Repeated Grid
+- **Form controls:**
+    - Form control (also known as form fields) you can add to your form.
+- **Metadata:**
+    - Allows you to modify the application name and form name.
+- **Advanced:**
+    - Includes advanced features like XML Schema, PDF and source code view.
+- **Services and Actions:**
+    - Editors for simple services and actions.
 
 Depending on your monitor or browser size, you can use the scrollbar to the right of the toolbox to see more toolbox content.
 
@@ -24,29 +32,11 @@ The toolbox can be configured via properties and component metadata.
 
 ## Cut, copy and paste
 
-The Cut, Copy and Paste icons are located at the top of the toolbox:
+See [Cut, copy and paste](form-builder/cut-copy-paste.md).
 
-![](images/xcv.png)
+## Undo and redo
 
-They allow performing the usual cut/copy/paste operations on form controls.
-
-* **Copy:** copies the control in the currently selected table cell to the Form Builder clipboard. If the cell is empty, nothing happens.
-* **Cut:** same as Copy, but removes the control from the current grid cell. If the cell is empty, nothing happens.
-* **Paste:** pastes the control in the Form Builder clipboard to the next available grid cell. If there is no control in the clipboard, nothing happens.
-
-_NOTE: These operations are restricted to the currently running instance of Form Builder. They do not apply between different Form Builder windows or tabs, or between edition sessions._
-
-The following control information is copied and pasted:
-
-* Control type
-* Name
-* Label, hint, and help
-* Itemset
-* Validations, including datatype, constraints, and alerts
-* Formulas
-* All associated localized resources
-
-When the control is pasted, if the control name of the clipboard control is currently not in use in the form, it is used. Otherwise, a new name is chosen by Form Builder.
+See [Undo and redo](form-builder/undo-redo.md).
 
 ## Reloading the toolbox
 
@@ -73,17 +63,17 @@ The "Reload Toolbox" icon is located at the top of the toolbox:
 
 ![](images/form-structure.png)
 
-### New section button
+### New Section button
 
 Pressing this button inserts a new section into the form. The section is inserted after the currently selected section, that is the section containing the currently selected control.
 
 After insertion, the new section has an empty title. You can change the section title by clicking on it.
 
-### New grid button
+### New Grid button
 
 Pressing this button inserts a new grid into the form. The grid is inserted after the currently selected grid within the currently selected section, that is the section and grid containing the currently selected control.
 
-### New repeated grid button
+### New Repeated Grid button
 
 Pressing this button inserts a new repeated grid into the form. The grid is inserted after the currently selected grid within the currently selected section, that is the section and grid containing the currently selected control.
 
@@ -93,27 +83,24 @@ After insertion, the new grid has one column and one cell. You can change the di
 
 The toolbox contains the user interface controls you can insert into your form, grouped by category:
 
-* **Text controls.** Controls that just capture or show text.
-* **Typed controls.** Controls that have type information associated, like email, phone number, attachments, etc.
-* **Date and time controls.** Controls for capturing a date or a time or both.
-* **Selection controls.** Controls that allow selecting one or more values, like dropdown menus, radio buttons, etc.
-* **Attachment controls.** Controls to attach images or files.
-* **Button controls.** Action buttons.
+| Category | Description |
+| --- | --- |
+| **Text Controls**      | for capturing text |
+| **Output Controls**    | for showing text |
+| **Typed Controls**     | for capturing other data like numbers, emails, phone numbers, etc. |
+| **Date and Time**      | for capturing a date, a time or both |
+| **Selection Controls** | for selecting one or more values, like dropdown menus, radio buttons, etc. |
+| **Attachments**        | for attaching images or files |
+| **Buttons**            | for action buttons |
 
 To add a control to your form, simply click on the control. The following insertion logic is implemented:
 
-* If the currently selected grid cell is empty, the control is inserted there.
-* Otherwise, if the cell to the right of the currently selected grid cell is empty, the control is inserted there.
-* Otherwise, if the control is the last control of the grid, a new grid row is inserted and the control is inserted in the first cell of the new row.
-* Otherwise, the controls in the toolbox are disabled and you cannot insert a new control.
+- If the currently selected grid cell is empty, the control is inserted there.
+- Otherwise, if the cell to the right of the currently selected grid cell is empty, the control is inserted there.
+- Otherwise, if the control is the last control of the grid, a new grid row is inserted and the control is inserted in the first cell of the new row.
+- Otherwise, the controls in the toolbox are disabled and you cannot insert a new control.
 
-Controls appear in the grid in two ways:
-
-* Most of the controls appear in a WYSIWYG manner.
-* Some controls are represented just with an icon. This is the case of some controls such as phone number, currency fields, etc.
-Orbeon is expecting feedback from users on the controls marked _experimental_ below.
-
-### Text controls
+### Text Controls
 
 ![](images/text-controls.png)
 
@@ -128,7 +115,7 @@ The controls appear like this at design time:
 
 ![](images/text-controls-design-time.png)
 
-### Output controls
+### Output Controls
 
 ![](images/output-controls.png)
 
@@ -137,7 +124,7 @@ The controls appear like this at design time:
 | **Explanatory Text** | Explanatory text which does not capture a value ([blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
 | **Calculated Value** | Like most other controls, the Calculated Value has a label and hint, but unlike most controls it is not used to enter a value. Instead, it just *shows* a value, either fixed or calculated with a formula. |
 
-### Typed controls
+### Typed Controls
 
 ![](images/typed-controls.png)
 
@@ -153,7 +140,7 @@ The controls appear like this at design time:
 
 ![](images/typed-controls-design-time.png)
 
-### Date and time controls
+### Date and time Controls
 
 ![](images/date-time-controls.png)
 
@@ -169,7 +156,7 @@ The controls appear like this at design time:
 
 ![](images/date-time-controls-design-time.png)
 
-### Selection controls
+### Selection Controls
 
 ![](images/selection-controls.png)
 
@@ -192,7 +179,7 @@ The controls appear like this at design time:
 
 _NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 2016.1 and removed from the toolbox._
 
-### Attachment controls
+### Attachment Controls
 
 ![](images/attachment-controls.png)
 
@@ -212,7 +199,7 @@ And this is the Signature control ( which of course you usually leave blank at d
 
 ![](images/signature-design-time.png)
 
-### Button controls
+### Button Controls
 
 ![](images/button-controls.png)
 
