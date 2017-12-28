@@ -1160,7 +1160,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         value="all"/>
     ```
 
-### Captcha \[2017.2 TODO ERIK\]
+### Captcha \[2017.2 DONE\]
 
 - enable with property
 
@@ -1193,23 +1193,23 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [ ] Bookshelf
     - try all helps (see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637))
 
-### Mobile and Responsive \[2017.2 TODO\]
+### Mobile and Responsive \[2017.2 DONE\]
 
 *NOTE: Summary and Home are not responsive as of 2016.3.*
 
-- [ ] setup
-    - iPhone 6S or 6S Plus
+- [x] setup
+    - iPhone 6S or 6S Plus or X
     - can also test more using simulator
-- [ ] default layout (Contact Form / Bookshelf Form)
-    - [ ] looks ok
-    - [ ] can navigate to `view` and back
-    - [ ] PDF shows [2017.1: REGRESSION #3224]
-    - [ ] upload book cover in Bookshelf
-- [ ] wizard layout (Controls form)
+- [x] default layout (Contact Form / Bookshelf Form)
+    - [x] looks ok
+    - [x] can navigate to `view` and back
+    - [x] PDF shows
+    - [x] upload book cover in Bookshelf
+- [x] wizard layout (Controls form)
     - looks ok (TOC at top, buttons at bottom)
     - can navigate sections via TOC at top (click and buttons)
     - Next/Prev buttons at bottom work
-- [ ] Control Form
+- [x] Control Form
     - can enter data, select checkboxes/radio buttons
     - date picker works
     - can quickly select radio buttons/checkboxes (zoom in if needed, touch areas are small)
@@ -1217,23 +1217,23 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - autocomplete works
     - PDF
     - NOTE: Repeat not handled nicely.
-- [ ] DMV-14 Form
+- [x] DMV-14 Form
     - repeat menu works
         - _NOTE: Repeat doest not appear nicely._
     - PDF / TIFF
-- [ ] W-9 Form
+- [x] W-9 Form
     - Review looks good
     - PDF looks good with signature
-- [ ] zoom
+- [x] zoom
     - see regression [#3062](https://github.com/orbeon/orbeon-forms/issues/3062) [confirmed with 2017.1]
     - can pinch zoom
     - add error, save, must de-zoom before showing Error dialog
     - same for Clear dialog
-- [ ] Number field
-    - [ ] non-negative *integers* show keypad
-    - [ ] other numbers show number pane
-    - [ ] if decimal separator is `,`, show regular pane (if US settings)
-        - set attributes by hand: `decimal-separator="," grouping-separator="'"`
+- [x] Number field
+    - [x] non-negative *integers* show keypad
+    - [x] other numbers show number pane
+    - [x] if decimal separator is `,`, show regular pane (if US settings)
+        - set attributes by hand: `decimal-separator="," grouping-separator="'"` (e.g. if phone is in French mode)
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
