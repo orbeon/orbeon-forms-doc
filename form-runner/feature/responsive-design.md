@@ -1,4 +1,4 @@
-# Responsive Design
+# Responsive design
 
 <!-- toc -->
 

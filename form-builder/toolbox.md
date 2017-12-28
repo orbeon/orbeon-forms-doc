@@ -63,15 +63,11 @@ The "Reload Toolbox" button is located at the top of the "Advanced" tab.
 
 <img src="images/advanced-menu.png" width="245">
 
-<!--
-![Reloading the toolbox](images/advanced-menu.png)
--->
-
 ### Orbeon Forms 2017.1 and earlier 
 
 The "Reload Toolbox" icon is located at the top of the toolbox: 
 
-![Reloading the toolbox](images/toolbox-reload.png)
+<img src="images/toolbox-reload.png" width="275">
 
 ## Form structure
 
