@@ -61,6 +61,22 @@ When hovering over a grid or section, "Cut" and "Copy" icons are available:
 
 You paste a cut or copied grid or section using the toolbox's "Paste" icon (see above).
 
+If pasting the grid or section can cause name conflicts, a dialog shows:
+
+![Control Names dialog](images/section-template-merge-dialog.png)
+
+The dialog shows a list of all control names within the grid or section and how they will be changed after pasting.
+Since control names are unique within a form definition, two controls cannot have the same name. Names that are available
+show in green. Names that conflict show in yellow and an automatic name is generated.
+
+You can optionally set a prefix and/or a suffix for all names. This can help prevent automatic generation of names. For 
+example, you could paste a US Address twice:
+
+- first, with all control names prefixed by `shipping-` 
+- second, with all control names prefixed by `billing-`
+
+![Control Names dialog with prefix](images/section-template-merge-dialog-prefix.png)
+
 ## Undoing and redoing cut and paste operations
 
 [SINCE Orbeon Forms 2017.2]
@@ -75,3 +91,4 @@ The "Cut" and "Paste" operations are undoable in the following way:
 ## See also 
 
 - [Undo and redo](undo-redo.md)
+- [Section templates](section-templates.md)

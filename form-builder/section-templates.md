@@ -66,7 +66,7 @@ the section:
 
 After activating the icon, a dialog shows:
 
-![Merge dialog](images/section-template-merge-dialog.png)
+![Control Names dialog](images/section-template-merge-dialog.png)
 
 The dialog shows a list of all control names within the section template and how they will be changed after the merge.
 Since control names are unique within a form definition, two controls cannot have the same name. Names that are available
@@ -78,7 +78,7 @@ example, you could insert a US Address twice:
 - first, with all control names prefixed by `shipping-` 
 - second, with all control names prefixed by `billing-`
 
-![Merge dialog](images/section-template-merge-dialog-prefix.png)
+![Control Names dialog with prefix](images/section-template-merge-dialog-prefix.png)
 
 *NOTE: The enclosing section name itself is not part of this renaming process, as the section was already part of the
 containing form definition and therefore its name was already unique.* 
