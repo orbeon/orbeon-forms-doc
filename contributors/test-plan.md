@@ -372,6 +372,7 @@ Do the following on a commercial relational database.
     - sbt
         - `project orbeonWarJS`
         - `test`
+        - *NOTE: Getting "Futures timed out after [2 minutes]" in the end, but tests have completed.*
 
 ### Autosave and Permissions Test \[2017.2 TODO ALEX\]
 
@@ -800,14 +801,14 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - Doesn't work well for 5 columns. Entered [#3423](https://github.com/orbeon/orbeon-forms/issues/3423) 
 - [x] "Page break before section" checkbox works 
 
-### PDF Template \[2017.2 TODO ERIK\]
+### PDF Template \[2017.2 DONE\]
 
-- [ ] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
-- [ ] add field "name" in section "applicant"
-- [ ] publish and test that name appears in PDF and TIFF
-- [ ] remove PDF
+- [x] attach e.g. [831113e3ef799f2c9f57ee0b10f789a8951360ba.bin](https://github.com/orbeon/orbeon-forms/blob/master/data/orbeon/fr/orbeon/w9/form/831113e3ef799f2c9f57ee0b10f789a8951360ba.bin?raw=true) (W9 example)
+- [x] add field "name" in section "applicant"
+- [x] publish and test that name appears in PDF and TIFF
+- [x] remove PDF
   - publish and test, must see notemplate PDF/TIFF
-- [ ] check that custom filename works [2017.1: regressed, pending fix and new test]
+- [x] check that custom filename works [2017.1: regressed, pending fix and new test; works with 2017.2]
     ```xml
     <property
         as="xs:string"
@@ -819,10 +820,10 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         name="oxf.fr.detail.pdf.filename.a.a"
         value="'abc'"/>
     ```
-- [ ] check that DMV-14 PDF works and is filled out
+- [x] check that DMV-14 PDF works and is filled out
   - check Vote and Leased checkboxes
   - check that state appears ([#3053](https://github.com/orbeon/orbeon-forms/issues/3053))
-- [ ] W9 form
+- [x] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
 ### Form Builder Permissions \[2017.2 TODO ERIK\]
@@ -1706,9 +1707,9 @@ Features to test, with all supported browsers:
         - localizing-orbeon-forms.md
     - [x] update FR/FB properties with full / almost full languages lists
 - [ ] doc/test plan
-    - [ ] go through all new features (github issues also) and make sure test plan or automated tests cover them
+    - [x] go through all new features (github issues also) and make sure test plan or automated tests cover them
     - [ ] take note of which features could be blog worthy
-    - [ ] check all (most) screenshots on http://doc.orbeon.com/ are up to date
+    - [x] check all (most) screenshots on http://doc.orbeon.com/ are up to date
 - [ ] make sure [DDL doc](../form-runner/persistence/relational-db.md) is up to date:
 - [x] decide whether XBL components/other features need to be deprecated/removed
     - go over all existing XBL components
