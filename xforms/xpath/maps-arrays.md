@@ -4,7 +4,7 @@
 
 ## Introduction
 
-XPath 3.1 introduces [arrays](https://www.w3.org/TR/xpath-31/#id-arrays) and [maps](https://www.w3.org/TR/xpath-31/#id-maps). Orbeon Forms does not support XPath 3.1 yet, however it implements a subset of operations on maps and arrays. 
+XPath 3.1 introduces [maps](https://www.w3.org/TR/xpath-31/#id-maps) and [arrays](https://www.w3.org/TR/xpath-31/#id-arrays). Orbeon Forms does not support XPath 3.1 yet, however it implements a subset of operations on maps and arrays. 
 
 ## Availability
 
