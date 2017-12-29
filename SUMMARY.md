@@ -217,6 +217,7 @@
         * [Tips](xforms/xpath/tips.md)
         * [Compatibility](xforms/xpath/compatibility.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
+        * [Maps and arrays Functions](xforms/xpath/maps-arrays.md)
         * Extension functions
             * [Core functions](xforms/xpath/extension-core.md)
             * [Utility functions](xforms/xpath/extension-util.md)
