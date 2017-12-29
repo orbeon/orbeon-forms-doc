@@ -91,6 +91,11 @@ Save data and attachments via the persistence layer.
 - parameters
     - `draft`: "true" if must be saved as a draft [SINCE Orbeon Forms 4.4]
     - `query`: additional query parameters to pass the persistence layer (is an XPath value template) [SINCE Orbeon Forms 4.6.1]
+    - `prune-metadata`:
+        - [SINCE Orbeon Forms 2017.2]
+        - "true" if any `fr:*` metadata must be pruned before saving
+        - the default is "false"
+        - this must be used with care 
 
 Example of use of the `query` parameter:
 
