@@ -18,16 +18,15 @@ layout.
 
 ## Sections
 
-Form Builder represents every form as a series of _sections_:
+Form Builder represents every form as a series of _sections_. A section is a logical grouping of form controls which has a *title* and an optional *help*. For example, your form may have an "Address" section, and a "Personal Details" section.
 
-- A section is a logical grouping of form controls. For example, your form may have an "Address" section, and a "Personal Details" section.
-- Sections are by default presented in order, on top of each other in the page.
+Sections are by default presented in order, on top of each other in the page. But when using the [wizard view](../form-runner/feature/wizard-view.md), each top-level section, and optionally the next level of subsections, becomes a wizard page at runtime.
+
+In addition:
+
 - Every form has at least one section.
 - There is no maximum number of sections within a form.
 - Sections can have *subsections*, which are sections nested within other sections.
-
-When using the [wizard view](../form-runner/feature/wizard-view.md), each top-level section, and optionally the next
-level of subsections, becomes a wizard page at runtime.
 
 You can perform the following operations on sections.
 
@@ -35,7 +34,7 @@ You can perform the following operations on sections.
   selector at the top right of the form area.
 - Delete the section by clicking on the Trashcan icon. If the section contains controls, a confirmation dialog appears.
 - Set an optional help message for the section by clicking on the help icon. The help is localizable.
-- Set other section properties.
+- Set other [section settings](section-settings.md).
 - Open or collapse the section by clicking on the arrow to the left of the section title.
 - Move the section up or down by clicking on the up/down arrows. These appear as needed if there is more than one section.
 - Move the section left or right by clicking on the left/right arrows. These appear as needed if there is more than one section and if
@@ -44,10 +43,12 @@ You can perform the following operations on sections.
 
 ## Grids
 
-Each section contains one or more _grids_:
+Each section contains one or more _grids_. A grid is a logical grouping of form controls organized in rows and columns of cells. Unlike sections, a grid doesn't have a title or help.
 
-- A grid is a logical grouping of form controls organized in rows and columns of cells.
-- A grid may be a regular grid or a *repeated* grid, which repeats one or more rows.
+A grid may be a regular grid or a [repeated grid](repeated-grids.md), which repeats a group of one or more rows. A repeated grid may have from no iteration (or repetition) to any number of iterations. A repeated grid also has settings, but regular grids do not have settings as of Orbeon Forms 2017.2.
+
+In addition:
+
 - A grid may have any number of rows (but at least one).
 - Each grid cell may contain a single form control, or remain empty.
 - A grid cell might span multiple rows.
@@ -157,5 +158,11 @@ This mechanism is how you edit:
 - control labels
 - control hints
 - explanation texts
+
+## See also 
+
+- [Section settings](section-settings.md)
+- [Repeated grids](repeated-grids.md)
+- [Responsive design](../form-runner/feature/responsive-design.md)
 
 [^1]: What was known in the old days as "What You See is What You Get" or "WYSIWYG".
