@@ -363,6 +363,16 @@ Do the following on a commercial relational database.
     - As `hsimpson` load document to acquire lease, as `msimpson` load form again, check we're told `hsimpson` has the lease, try to acquire it, check it fails
     - As `hsimpson` load document, check we have the lease, click on button to relinquish, as `msimpson` load form again, check we got the lease
 
+### Replication \[2017.2 ERIK DONE\]
+
+- [x] locally run replication test
+    - dependencies (check `.travis.yml`)
+        - `docker pull tomcat:8.0` 
+        - `docker pull haproxy:1.7`
+    - sbt
+        - `project orbeonWarJS`
+        - `test`
+
 ### Autosave and Permissions Test \[2017.2 TODO ALEX\]
 
 Repeat what follows with:
@@ -532,10 +542,11 @@ http://localhost:8080/2017.2-pe/fr/auth
 - [x] insert sections, grids, repeated grids
 - [x] rename sections and controls
     - check renamed in source
+- [x] expand/shrink cells right and down
 - [x] move sections
     - up/down
     - right/left (subsections) (be aware of [#2031](https://github.com/orbeon/orbeon-forms/issues/2031))
-- [x] DnD control
+- [x] drag and drop (DnD) controls
   - [x] between grids, sections
   - [x] use shift to copy
 - [x] undo/redo
@@ -551,7 +562,7 @@ http://localhost:8080/2017.2-pe/fr/auth
     - [x] plain
     - [x] HTML
     - [x] check HTML label appears correct in summary page / search
-    - [ ] placeholder labels
+    - [x] placeholder labels
         - check with Controls form and look at all controls (see [#3213](https://github.com/orbeon/orbeon-forms/issues/3213)) 
     - [x] placeholder hints
 - [x] set control help ([Lorum Ipsum](http://www.lipsum.com/feed/html))
@@ -1687,30 +1698,30 @@ Features to test, with all supported browsers:
 
 ## Release process
 
-- [ ] maybe: choose and create a new demo form from scratch to integrate with this release or next
+- [-] maybe: choose and create a new demo form from scratch to integrate with this release or next
 - [ ] i18n
     - [ ] ping people who have provided i18n resources ([spreadsheet](https://docs.google.com/a/orbeon.com/spreadsheets/d/1U8HQj_l2n-hEgTaBT5aOkmNKezXZE1wFW_Lb94dATZs/edit#gid=0))
     - [ ] update "Localizing Orbeon Forms" and "Supported-Languages":
         - ../form-runner/feature/localization.md
         - localizing-orbeon-forms.md
-    - [ ] update FR/FB properties with full / almost full languages lists
+    - [x] update FR/FB properties with full / almost full languages lists
 - [ ] doc/test plan
     - [ ] go through all new features (github issues also) and make sure test plan or automated tests cover them
     - [ ] take note of which features could be blog worthy
     - [ ] check all (most) screenshots on http://doc.orbeon.com/ are up to date
 - [ ] make sure [DDL doc](../form-runner/persistence/relational-db.md) is up to date:
-- [ ] decide whether XBL components/other features need to be deprecated/removed
+- [x] decide whether XBL components/other features need to be deprecated/removed
     - go over all existing XBL components
-- [ ] update readme and build.xml version number
+- [x] update readme and build.xml version number
     - do on master branches too
     - create branches + track + push
-- [ ] complete blog post with list of new features and compatibility notes [NOTE: don't release x.y.1 for CE]
+- [x] complete blog post with list of new features and compatibility notes [NOTE: don't release x.y.1 for CE]
 - [ ] testing
     - [ ] testing according to test plan
     - [ ] SQL Server: need to test against RDS Web edition
         - use M1 small instance
     - [ ] test `/register` and `/license` forms
-    - [ ] client-side tests
+    - [-] client-side tests
         - run through all
         - see if failing ones are reasonable
 - [ ] upload build to github
