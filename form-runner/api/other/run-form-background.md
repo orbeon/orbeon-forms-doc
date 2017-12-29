@@ -95,6 +95,8 @@ The following example updates existing instance data with the current time and s
 </property>
 ```
 
+See also [Running processes upon page load](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load).
+
 ## Example using curl
 
 The following examples use the [curl](https://curl.haxx.se/) command-line utility. They are indented on multiple lines for clarity but in practice each command must be written on a single line.
@@ -124,3 +126,7 @@ Here is an example XML response:
 
 - The caller must either call the service internally or have [authorized the service](/xml-platform/controller/authorization-of-pages-and-services.md).
 - Appropriate container or permission headers must also be set to allow accessing the form definition and data.  
+
+## See also 
+
+- [Running processes upon page load](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load)
