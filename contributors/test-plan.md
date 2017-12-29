@@ -263,104 +263,66 @@ Do the following on a commercial relational database.
                 - no options are shown
                 - message about overwrite (see [ #3071](https://github.com/orbeon/orbeon-forms/issues/3071))
 
-### Data Capture Permissions \[2017.2 TODO ALEX\]
+### Data Capture Permissions \[2017.2 DONE\]
 
-#### Setup
-
-Repeat what follows with eXist, Oracle, MySQL, PostgreSQL, SQL Server, DB2 with the following settings:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.exist.*.*"
-    value="exist"/>
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.oracle.*.*"
-    value="oracle"/>
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.mysql.*.*"
-    value="mysql"/>
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.postgresql.*.*"
-    value="postgresql"/>
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.sqlserver.*.*"
-    value="sqlserver"/>
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.db2.*.*"
-    value="db2"/>
-<property
-    as="xs:string"
-    name="oxf.fr.authentication.method"
-    value="container"/><!-- change to header for header-based auth -->
-<property
-    as="xs:string"
-    name="oxf.fr.authentication.container.roles"
-    value="orbeon-user orbeon-sales orbeon-admin clerk admin"/>
-```
-
-- [ ] restore `form-builder-permissions.xml` to default
-- [ ] for container auth:
-    - in `web.xml`
-        - uncomment security section towards the end
-        - change first `<url-pattern>` from `/fr/*` to `/auth` (it doesn't matter that page doesn't exist, it's just a path to force authentication)
-    - in `tomcat-users.xml`, setup users:
+- [x] Setup
+    - Properties
         ```xml
-        <user username="clerk" password="clerk" roles="clerk,orbeon-user"/>
-        <user username="admin" password="admin" roles="admin,orbeon-user"/>
+        <property
+            as="xs:string"
+            name="oxf.fr.persistence.provider.exist.*.*"
+            value="exist"/>
+        <property
+            as="xs:string"
+            name="oxf.fr.persistence.provider.sqlserver.*.*"
+            value="sqlserver"/>
+        <property
+            as="xs:string"
+            name="oxf.fr.authentication.method"
+            value="header"/>
+        <property
+            as="xs:string"
+            name="oxf.fr.authentication.container.roles"
+            value="orbeon-user orbeon-sales orbeon-admin clerk admin"/>
         ```
-- [ ] for headers-based auth:
-    - `<property as="xs:string"  name="oxf.fr.authentication.method" value="header"/>`
-    - set rewriting rules with Charles (⌘⇧E)
-        - for user clerk ([gist](https://gist.github.com/ebruchez/10079296))
-        - for user admin ([gist](https://gist.github.com/ebruchez/10079254))
-    - to switch between users in below steps
-        - enable rewrite for clerk or admin headers, or disable rewrite
-        - remove JSESSIONID when switching users
-
-#### Tests
-
-- [ ] in Form Builder
+    - On Chrome, install the [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj) extension
+    - In ModHeader, setup the following headers:
+        - `My-Username-Header: clerk`
+        - `My-Roles-Header: clerk`
+        - `My-Username-Header: admin`
+        - `My-Roles-Header: admin`
+- [x] Create form in Form Builder
     - create new form `exist/permissions`
         - save and publish
         - enable permissions for form and configure like on [doc page](../form-runner/access-control/deployed-forms.md#example)
-    - use Duplicate button to create and publish
-        - `oracle/permissions`
-        - `mysql/permissions`
-        - `postgresql/permissions`
-        - `sqlserver/permissions`
-        - `db2/permissions`
-- [ ] make sure permissions are followed
+    - use Duplicate button to create
+    - edit the new form, and publish as `sqlserver/permissions`
+- [x] Make sure permissions are followed
     - anonymous user
-        - [ ] home page: link goes to new page (not summary)
-        - [ ] summary page: unauthorized (fixed regression with [#1201](https://github.com/orbeon/orbeon-forms/issues/1201))
-        - [ ] detail page: only `new` accepted, `edit`, `view`, `pdf` are unauthorized
-        - [ ] enter and save data on `new`
-        - [ ] check URL doesn't change to `edit`
+        - home page: link goes to new page (not summary)
+        - summary page: unauthorized (fixed regression with [#1201](https://github.com/orbeon/orbeon-forms/issues/1201))
+        - detail page: only `new` accepted, `edit`, `view`, `pdf` are unauthorized
+        - enter and save data on `new`
+        - check URL doesn't change to `edit`
     - logged in user
-        - [ ] check permissions as clerk/clerk
-            - [ ] remove `JSESSIONID` (i.e. with Dev Tools)
-            - [ ] login/switch user
-            - [ ] home page: link goes to the summary page
-            - [ ] summary page
+        - check permissions as clerk/clerk
+            - remove `JSESSIONID` (i.e. with Dev Tools)
+            - login/switch user
+            - home page: link goes to the summary page
+            - summary page
                 - sees data previously entered by anonymous user, cannot delete
                 - click on existing data created by anonymous user shows read-only view
                 - replace `view` with `edit`, getting an "Unauthorized" page
                 - PDF works
                 - click on new button opens new page
-            - [ ] new/edit
+            - new/edit
                 - save data works
                 - user is owner so can edit his own data
                 - cannot delete from Summary because no `delete` permission
-        - [ ] check permissions as admin/admin
+        - check permissions as admin/admin
             - remove `JSESSIONID` (i.e. with Dev Tools)
             - switch to `admin`/`admin` user
-            - on click goes to summary page
+            - home page: on click goes to summary page
             - on summary page
                 - click on new opens new page
                 - sees data previously entered by anonymous user and clerk
