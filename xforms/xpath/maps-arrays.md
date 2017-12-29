@@ -6,6 +6,10 @@
 
 XPath 3.1 introduces [arrays](https://www.w3.org/TR/xpath-31/#id-arrays) and [maps](https://www.w3.org/TR/xpath-31/#id-maps). Orbeon Forms does not support XPath 3.1 yet, however it implements a subset of operations on maps and arrays. 
 
+## Availability
+
+[SINCE Orbeon Forms 2017.2]
+
 ### Maps
 
 #### Introduction
