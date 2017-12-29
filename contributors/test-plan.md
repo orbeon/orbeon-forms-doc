@@ -131,9 +131,9 @@ Do the following for eXist and relational database of your choice. We do not nee
     - FR: delete data in summary page works
     - FR: duplicate button works
 
-### Versioning \[2017.2 TODO ALEX\]
+### Versioning \[2017.2 DONE\]
 
-Do the following on commercial relational database.
+Do the following on a commercial relational database.
 
 - Setup
     - Properties
@@ -144,20 +144,20 @@ Do the following on commercial relational database.
             value="exist"/>
         <property
             as="xs:string"
-            name="oxf.fr.persistence.provider.db2.*.*"
-            value="db2"/>
+            name="oxf.fr.persistence.provider.sqlserver.*.*"
+            value="sqlserver"/>
         <property
             as="xs:boolean"
-            name="oxf.fr.email.attach-pdf.db2.versioning"
+            name="oxf.fr.email.attach-pdf.sqlserver.versioning"
             value="true"/>
         <property
             as="xs:boolean"
-            name="oxf.fr.email.attach-tiff.db2.versioning"
+            name="oxf.fr.email.attach-tiff.sqlserver.versioning"
             value="true"/>
-        <property as="xs:string" name="oxf.fr.detail.buttons.db2.versioning">
+        <property as="xs:string" name="oxf.fr.detail.buttons.sqlserver.versioning">
             pdf tiff email save review send
         </property>
-        <property as="xs:string" name="oxf.fr.detail.process.send.db2.versioning">
+        <property as="xs:string" name="oxf.fr.detail.process.send.sqlserver.versioning">
             send(
                 uri     = '/fr/service/custom/orbeon/echo',
                 replace = 'all',
@@ -166,7 +166,7 @@ Do the following on commercial relational database.
         </property>
         <property
             as="xs:string"
-            name="oxf.fr.email.to.db2.versioning"
+            name="oxf.fr.email.to.sqlserver.versioning"
             value=""/>
         <property as="xs:string"  processor-name="oxf:page-flow" name="service-public-methods"  value="GET HEAD POST PUT DELETE"/>
         <property as="xs:string"  processor-name="oxf:page-flow" name="page-public-methods"     value="GET HEAD POST PUT DELETE"/>
@@ -175,9 +175,9 @@ Do the following on commercial relational database.
         Also add your "personal" email properties (starting with `oxf.fr.email`).
 
 - Steps
-    - [x] create form `db2/versioning`
+    - [x] create form `sqlserver/versioning`
         - fields
-            - Name section `personal-information`
+            - name section `personal-information`
             - 1 email field with "Email Recipient", say `gaga@orbeon.com` (use the proper ID)
             - 1 input field "First name", named `first-name`
             - 1 Static Image with image statically attached
@@ -199,7 +199,7 @@ Do the following on commercial relational database.
         - review and back to edit works
         - save
         - summary
-    - [ ] edit the form definition
+    - [x] edit the form definition
         - make changes in form definition to make it clear it's v2 (field labels, names, title, etc.)
         - remove "Email Recipient" from 1st email field and clear it
         - add "Email Recipient" to 2nd email field and add say `gaga@gmail.com` (use the proper ID)
@@ -229,32 +229,32 @@ Do the following on commercial relational database.
                 [ #2372](https://github.com/orbeon/orbeon-forms/issues/2372),
                 [ #2367](https://github.com/orbeon/orbeon-forms/issues/2367),
                 [ #2330](https://github.com/orbeon/orbeon-forms/issues/2330)
-    - [ ] XML Schema production
-        - `/fr/service/db2/versioning/schema`
+    - [x] XML Schema production
+        - `/fr/service/sqlserver/versioning/schema`
             - Check this is the schema for first form published earlier
-        - `/fr/service/db2/versioning/schema?form-version=1`
+        - `/fr/service/sqlserver/versioning/schema?form-version=1`
             - *NOTE: Adjust version numbers depending on which versions were published.*
             - Check this is the schema for the second form published earlier
-    - [ ] go to the summary page, click on first row (created last)
+    - [x] go to the summary page, click on first row (created last)
         - check the data shows with the correct version of the form
         - check PDF
-    - [ ] go to the summary page, click on second row (created first)
+    - [x] go to the summary page, click on second row (created first)
         - check field A/value a and attachment show
         - check PDF
-    - [ ] Form Builder Publish dialog options (new in 4.6)
-        - with persistence layer which supports versioning (db2)
-            - if `db2/a` has never been published
+    - [x] Form Builder Publish dialog options (new in 4.6)
+        - with persistence layer which supports versioning (sqlserver)
+            - if `sqlserver/a` has never been published
                 - no options and no messages are shown
                 - latest version shows "-"
                 - add comment
                 - publish message says version 1 was created
-            - if `db2/a` form has been published
+            - if `sqlserver/a` form has been published
                 - latest version shows correct number
                 - option to create new version or overwrite (check version numbers)
                 - switch option shows different message
                 - add comment & publish
                 - publish message says which version was created/updated
-                - versioning comment switches when switchng for example between v1 and v2
+                - versioning comment switches when switching for example between v1 and v2
         - with persistence layer which doesn't support versioning (exist)
             - latest version line doesn't show, comment field doesn't show
             - if no `exist/a` form has been published
