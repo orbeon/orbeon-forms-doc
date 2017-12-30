@@ -883,17 +883,17 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - login on `/fr/auth` as `orbeon-sales`
         - `http://localhost:8080/2017.2-pe/fr/orbeon/builder/new`
         - must see `guest` and `sales` as app names
-    - [ ] create sales/my-sales-form
+    - [x] create sales/my-sales-form
         - set permissions
             - Anyone → Create
             - orbeon-sales → Read and Update
         - save and publish
-    - [ ] can access
+    - [x] can access
         - http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/summary
         - http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/new
-    - [ ] new
+    - [x] new
         - enter data and save
-    - [ ] summary
+    - [x] summary
         - check that saved in summary
         - check can edit and duplicate
         - check Delete button is disabled
@@ -976,7 +976,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             - also with keyboard
         - [x] change lang works
 
-### Errors and warnings \[2017.2 TODO ERIK\]
+### Errors and warnings \[2017.2 DONE\]
 
 - FB: create form
     - required field
@@ -989,7 +989,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - FR: review page shows review dialog if warning or info
 - FR: come back to edit page
 
-### Process buttons \[2017.2 TODO ERIK\]
+### Process buttons \[2017.2 DONE\]
 
 - create and publish guest/test
     - 1 required field
