@@ -33,7 +33,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - [x] XForms examples
   - load, look reasonable, and work
 
-### PE Features Availability \[2017.2 DONE ERIK\]
+### PE Features Availability \[2017.2 DONE\]
 
 Check that all PE features are available in PE, but not in CE:
 
@@ -366,7 +366,7 @@ Do the following on a commercial relational database.
     - As `hsimpson` load document to acquire lease, as `msimpson` load form again, check we're told `hsimpson` has the lease, try to acquire it, check it fails
     - As `hsimpson` load document, check we have the lease, click on button to relinquish, as `msimpson` load form again, check we got the lease
 
-### Replication \[2017.2 ERIK DONE\]
+### Replication \[2017.2 DONE\]
 
 - [x] locally run replication test
     - dependencies (check `.travis.yml`)
