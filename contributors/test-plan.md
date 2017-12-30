@@ -446,54 +446,14 @@ Do the following on a commercial relational database.
 
 ### Flat View \[2017.2 TODO ALEX\]
 
-- Make sure PostgreSQL, Oracle, SQL Server, and DB2 datasources are  setup in `server.xml`.
-- Enable the flat view option, adding:
-
+- Use the following properties in `properties-local.xml`:
     ```xml
-    <property
-        as="xs:boolean"
-        name="oxf.fr.persistence.postgresql.create-flat-view"
-        value="true"/>
-    <property
-        as="xs:boolean"
-        name="oxf.fr.persistence.oracle.create-flat-view"
-        value="true"/>
-    <property
-        as="xs:boolean"
-        name="oxf.fr.persistence.sqlserver.create-flat-view"
-        value="true"/>
-    <property
-        as="xs:boolean"
-        name="oxf.fr.persistence.db2.create-flat-view"
-        value="true"/>
-    <property
-        as="xs:string"
-        name="oxf.fr.persistence.provider.postgresql.*.*"
-        value="postgresql"/>
-    <property
-        as="xs:string"
-        name="oxf.fr.persistence.provider.oracle.*.*"
-        value="oracle"/>
-    <property
-        as="xs:string"
-        name="oxf.fr.persistence.provider.sqlserver.*.*"
-        value="sqlserver"/>
-    <property
-        as="xs:string"
-        name="oxf.fr.persistence.provider.db2.*.*"
-        value="db2"/>
+    <property as="xs:boolean" name="oxf.fr.persistence.sqlserver.create-flat-view" value="true"/>
+    <property as="xs:string"  name="oxf.fr.persistence.provider.*.*.*"             value="sqlserver"/>
     ```
 - Create a new form from [this source](https://gist.github.com/avernet/ff343c6a5e6c3be077d2), which has the sections and controls named as in the table in the [flat view documentation](../form-runner/persistence/flat-view.md)
-  - Rename app name to `oracle`, `sqlserver`, `postgresql`, or `db2` depending
-  - Publish, check that a view with the appropriate column names is created with the `SELECT` statement below.
+  - Publish, check that a view with the appropriate column names is created with the `SELECT * FROM orbeon_f_a_a` statement.
   - Go to `/new` of the form, enter values, save, run the SQL again, and check that the value entered show in the view.
-
-    ```sql
-    SELECT * FROM orbeon_f_oracle_a;
-    SELECT * FROM orbeon_f_sqlserver_a;
-    SELECT * FROM orbeon_f_postgresql_a;
-    SELECT * FROM orbeon_f_db2_a;
-    ```
 
 ## Form Builder
 
