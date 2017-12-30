@@ -1296,7 +1296,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~[ ] Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
-### Organizations \[2017.2 TODO\]
+### Organizations \[2017.2 ERIK TODO\]
 
 Do this just after general Liferay testing (above).
 
