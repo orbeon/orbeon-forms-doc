@@ -377,109 +377,66 @@ Do the following on a commercial relational database.
         - `test`
         - *NOTE: Getting "Futures timed out after [2 minutes]" in the end, but tests have completed.*
 
-### Autosave and Permissions Test \[2017.2 TODO ALEX\]
+### Autosave and Permissions Test \[2017.2 DONE\]
 
-Repeat what follows with:
-
-- \[2017.2 TODO\] Oracle
-- \[2017.2 TODO\] MySQL
-- \[2017.2 TODO\] PostgreSQL
-- \[2017.2 TODO\] SQL Server
-- \[2017.2 TODO\] DB2
-
-Use the following in your `properties-local.xml`:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.oracle.*.*"
-    value="oracle"/>
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.mysql.*.*"
-    value="mysql"/>
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.postgresql.*.*"
-    value="postgresql"/>
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.sqlserver.*.*"
-    value="sqlserver"/>
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.db2.*.*"
-    value="db2"/>
-<property
-    as="xs:string"
-    name="oxf.fr.authentication.container.roles"
-    value="a b"/>
-```
-
-In `web.xml`:
-
-- uncomment security section towards the end
-- change first `<url-pattern>` from `/fr/*` to `/auth` (it doesn't matter that page doesn't exist, it's just a path to force authentication)
-
-Setup permissions e.g. in `tomcat-users.xml`:
-
-```xml
-<user username="a1" password="a1" roles="a,orbeon-user"/>
-<user username="a2" password="a2" roles="a,orbeon-user"/>
-<user username="b1" password="b1" roles="b,orbeon-user"/>
-```
-
-Authorize on:
-
-```
-http://localhost:8080/2017.2-pe/fr/auth
-```
-
-- Autosave with permissions
-    - 1. [ ] In FB, create form `mysql/autosave`.
+- Setup
+    - Use the following in your `properties-local.xml`:
+        ```xml
+        <property as="xs:string"  name="oxf.fr.persistence.provider.*.*.*" value="sqlserver"/>
+        <property as="xs:string"  name="oxf.fr.authentication.method"      value="header"/>
+        ```
+    - On Chrome, install the [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj) extension
+    - In ModHeader, setup the following headers:
+        - `My-Username-Header: a1`
+        - `My-Username-Header: a2`
+        - `My-Username-Header: b1`
+        - `My-Group-Header: a`
+        - `My-Group-Header: b`
+- Test
+    - [x] In FB, create form `sqlserver/autosave`.
         - Create a field *first name*, marked as shown on summary page.
         - Enable permissions as shown below and publish.
             ![Permissions dialog](images/test-permissions.png)
-        - duplicate for all providers and publish
-    - 2. [ ] Logged in as user `b1` in group `b`:
+        - Publish
+    - [x] Logged in as user `b1` in group `b`:
         - With header-based authentication, make sure to clear the `JSESSIONID` after switching user, as Orbeon Forms stores the user credentials in the sessions and doesn't recompute them if they change.
-        - [ ] `$PROVIDER/autosave/new`, type *b1 Ned*, save, change to *b1 Ned draft*, tab out, after 6s go to the summary page, check it shows *b1 Ned draft* as draft
-    3. [ ] Logged in as user `a1` in group `a`:
-        - [ ] Can see data of other users, but in readonly mode (since everyone can read)
-            - Load `$PROVIDER/autosave/summary`
+        - `sqlserver/autosave/new`, type *b1 Ned*, save, change to *b1 Ned draft*, tab out, after 6s go to the summary page, check it shows *b1 Ned draft* as draft
+    - [x] Logged in as user `a1` in group `a`:
+        - Can see data of other users, but in readonly mode (since everyone can read)
+            - Load `sqlserver/autosave/summary`
             - Check *b1 Ned* and *b1 Ned draft* show, but has the readonly "label"
             - Check that clicking on *b1 Ned* and *b1 Ned draft* brings up the data in readonly mode
             - Edit the URL to have `edit` instead of `view`, check a 403 is returned
-        - [ ] Drafts for saved
-            - Load `$PROVIDER/autosave/new`
+        - Drafts for saved
+            - Load `sqlserver/autosave/new`
                 - Check we don't get a prompt to edit the draft created by `b1` (since we only have read access to it).
                 - Type *a1 Homer*, hit save, edit into *a1 Homer draft*, after 6s go to summary page, check it shows *a1 Homer* and *a1 Homer draft* as draft
-            - `$PROVIDER/autosave/summary`, click on *a1 Homer draft*, check the draft comes up
-            - `$PROVIDER/autosave/summary`, click on *a1 Homer*, check prompt comes up, try both options and see that *a1 Homer*/*a1 Homer draft* comes up
+            - `sqlserver/autosave/summary`, click on *a1 Homer draft*, check the draft comes up
+            - `sqlserver/autosave/summary`, click on *a1 Homer*, check prompt comes up, try both options and see that *a1 Homer*/*a1 Homer draft* comes up
             - editing one of the form data, hit save, back on the summary check the draft was removed
-        - [ ] Drafts for new
-            - `$PROVIDER/autosave/new`, type *a1 Bart draft*, after 6s go to summary page, check it shows *a1 Bart draft* as draft
-            - `$PROVIDER/autosave/new`, check prompt, and try both options
-            - `$PROVIDER/autosave/new`, on prompt start from scratch, type *a1 Lisa draft*, after 6s go to summary, check it shows *a1 Bart draft* and *a1 Lisa draft* as draft
-            - `$PROVIDER/autosave/new`, check prompt, try both options, in particular the one showing the drafts for new
-        - [ ] Summary
+        - Drafts for new
+            - `sqlserver/autosave/new`, type *a1 Bart draft*, after 6s go to summary page, check it shows *a1 Bart draft* as draft
+            - `sqlserver/autosave/new`, check prompt, and try both options
+            - `sqlserver/autosave/new`, on prompt start from scratch, type *a1 Lisa draft*, after 6s go to summary, check it shows *a1 Bart draft* and *a1 Lisa draft* as draft
+            - `sqlserver/autosave/new`, check prompt, try both options, in particular the one showing the drafts for new
+        - Summary
             - Edit *a1 Homer*, change to *a1 Homer draft*, after 6s go back to summary page.
             - Delete *a1 Homer*, check *a1 Homer draft* is deleted as well
             - Check *a1 Lisa draft*, then review, check in view mode without prompt
             - Delete *a1 Bart draft*, check *a1 Lisa draft* not deleted
-    4. [ ] With anonymous user:
-        - `$PROVIDER/autosave/summary` only shows saved data, not drafts
+    - [x] With anonymous user:
+        - `sqlserver/autosave/summary` only shows saved data, not drafts
         - change form definition to remove the read permission form anyone
-        - `$PROVIDER/autosave/summary` returns 403 (since anonymous users don't have the read permission)
-        - `$PROVIDER/autosave/new`, type *guest Maggie*, tab out, after 6s check that no autosave took place
+        - `sqlserver/autosave/summary` returns 403 (since anonymous users don't have the read permission)
+        - `sqlserver/autosave/new`, type *guest Maggie*, tab out, after 6s check that no autosave took place
             - NOTE: Can't check with Charles anymore now that we have internal requests. But check logs or db.
-    5. [ ] Permissions of drafts in summary page
+    - [x] Permissions of drafts in summary page
         - Log in as user `a1` in group `a`.
-        - `$PROVIDER/autosave/summary`, delete everything (to clean things up).
-        - As user `a1` in group `a`, go to `$PROVIDER/autosave/new`, type *a1 Homer*, hit save, edit into *a1 Homer draft*, after 6s go to `$PROVIDER/autosave/summary`, check it shows *a1 Homer* and *a1 Homer draft* as draft.
-        - As user `a2` in group `a`, go to `$PROVIDER/autosave/summary`, check it shows *a1 Homer* and *a1 Homer draft* as draft.
-        - As user `b1` in group `b`, go to `$PROVIDER/autosave/summary`, check it shows neither *a1 Homer* nor *a1 Homer2 draft*.
-    6. [ ] Autosave without permissions (tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858))
+        - `sqlserver/autosave/summary`, delete everything (to clean things up).
+        - As user `a1` in group `a`, go to `sqlserver/autosave/new`, type *a1 Homer*, hit save, edit into *a1 Homer draft*, after 6s go to `sqlserver/autosave/summary`, check it shows *a1 Homer* and *a1 Homer draft* as draft.
+        - As user `a2` in group `a`, go to `sqlserver/autosave/summary`, check it shows *a1 Homer* and *a1 Homer draft* as draft.
+        - As user `b1` in group `b`, go to `sqlserver/autosave/summary`, check it shows neither *a1 Homer* nor *a1 Homer2 draft*.
+    - [x] Autosave without permissions (tests for [#1858](https://github.com/orbeon/orbeon-forms/issues/1858))
         - Edit the form definition, uncheck *Enable permissions for this form*, publish
         - Log in as user `a1` of group `a`
         - Go to /new, enter `a1 Marge draft`, tab out, wait for autosave
