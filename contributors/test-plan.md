@@ -33,7 +33,7 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - [x] XForms examples
   - load, look reasonable, and work
 
-### PE Features Availability \[2017.2 TODO\]
+### PE Features Availability \[2017.2 TODO ERIK\]
 
 Check that all PE features are available in PE, but not in CE:
 
@@ -826,12 +826,12 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - [x] W9 form
   - check that signature appears in the PDF and doesn't go over background PDF lines
 
-### Form Builder Permissions \[2017.2 TODO ERIK\]
+### Form Builder Permissions \[2017.2 DONE\]
 
 - *NOTES 2014-03-20*
     - *Would be really nice to have automated for this!*
 - 2 environments
-    - [ ] eXist
+    - [x] eXist
     - [ ] relational
 - setup
     - "Uncomment this for the Form Runner authentication" in `web.xml`
@@ -877,7 +877,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         <role name="orbeon-sales" app="sales" form="*"/>
     </roles>
     ```
-- [ ] browser 1
+- [x] browser 1
     - clear cookies
     - [x]
         - login on `/fr/auth` as `orbeon-sales`
@@ -898,7 +898,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - check can edit and duplicate
         - check Delete button is disabled
         - check PDF works
-    - [ ] `http://localhost:8080/2017.2-pe/fr/`
+    - [x] `http://localhost:8080/2017.2-pe/fr/`
         - sales/my-sales-form shows on the home page
         - *NOTE: Be careful in case sales/my-sales-form is also read from existing e.g. MySQL, etc.*
         - admin ops for sales/my-sales-form
@@ -908,41 +908,41 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         - now that sales/my-sales-form is unavailable
             - check the link is disabled
             - check that /new returns 404
-    - [ ] `http://localhost:8080/2017.2-pe/fr/orbeon/builder/summary`
+    - [x] `http://localhost:8080/2017.2-pe/fr/orbeon/builder/summary`
         - open structured search (be aware of  [#878](https://github.com/orbeon/orbeon-forms/issues/878))
         - check only guest and sales forms are available
-- [ ] browser 2
-    - [ ] clear cookies
-    - [ ] login as orbeon-user
-    - [ ] can access
+- [x] browser 2
+    - [x] clear cookies
+    - [x] login as orbeon-user
+    - [x] can access
         - `http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/new`
-    - [ ] can't access
+    - [x] can't access
         - http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/summary (403)
         - http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/edit/... (403)
             - *NOTE: with eXist, can save, even repeatedly, but can't load /edit/…*
-    - [ ] `http://localhost:8080/2017.2-pe/fr/`
+    - [x] `http://localhost:8080/2017.2-pe/fr/`
         - NO admin ops for sales/my-sales-form
         - BUT admin ops for `guest/*` (create a `guest/test-guest` form)
         - CAN click on sales/my-sales-form line and takes to `/new`
         - CAN do Review/Edit/PDF
-- [ ] browser 1
+- [x] browser 1
     - remove all permissions for Anyone for this form, re-add Create for orbeon-sales, publish
     - check can still new/edit/view
-- [ ] browser 2
+- [x] browser 2
     - can't access
         - `http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/new` (403)
     - http://localhost:8080/2017.2-pe/fr/
         - form not visible
-- [ ] browser 1
+- [x] browser 1
     - re-add Anyone → Create
     - add Owner → Read
     - check nothing changed
-        - well, can do `/new` from Home
-- [ ] browser 2
+        - well, can do `/new` from Home with menu
+- [x] browser 2
     - can access `http://localhost:8080/2017.2-pe/fr/sales/my-sales-form/summary`, but only see own data as readonly
     - /new, save
     - Summary shows forms in readonly mode
-- [ ] access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
+- [x] access is rejected if user doesn't have any matching roles ([#1963](https://github.com/orbeon/orbeon-forms/issues/1963))
     - in `form-builder-permissions.xml`:
         ```xml
         <role name="dummy" app="sales" form="*"/>
@@ -1008,29 +1008,29 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - set acme.submit.replace to none
     - must not navigate after submit
 
-### Attachments/uploads \[2017.2 TODO ERIK\]
+### Attachments/uploads \[2017.2 DONE\]
 
-- [ ] basic upload works
-- [ ] removing uploaded file works
-- [ ] large uploads fail (> 100 MB by default)
+- [x] basic upload works
+- [x] removing uploaded file works
+- [x] large uploads fail (> 100 MB by default)
     - FR error dialog shows
     - control is back to empty
 - [ ] constraints on upload size and mediatype
-    - [ ] set `oxf.fr.detail.attachment.max-size.*.*`, check limits upload
+    - [x] set `oxf.fr.detail.attachment.max-size.*.*`, check limits upload
     - [ ] same from Form Builder UI for form
-    - [ ] set `oxf.fr.detail.attachment.max-size-aggregate.*.*`, create form with repeat, check limits upload
+    - [x] set `oxf.fr.detail.attachment.max-size-aggregate.*.*`, create form with repeat, check limits upload
     - [ ] same from Form Builder UI for form
-    - [ ] set `oxf.fr.detail.attachment.mediatypes.*.*` to `image/jpeg application/pdf`, check limits upload
-    - [ ] same from Form Builder UI for form
-    - [ ] same with `image/* application/pdf`
-    - [ ] form with 2+ attachments: set different max size for each using common constraint 
-    - [ ] form with 2+ attachments: set different mediatypes for each using common constraint 
-- [ ] very small (a few KB) upload works multiple times in a row
+    - [x] set `oxf.fr.detail.attachment.mediatypes.*.*` to `image/jpeg application/pdf`, check limits upload
+    - [x] same from Form Builder UI for form
+    - [x] same with `image/* application/pdf`
+    - [x] form with 2+ attachments: set different max size for each using common constraint 
+    - [x] form with 2+ attachments: set different mediatypes for each using common constraint 
+- [x] very small (a few KB) upload works multiple times in a row
 - [ ] with throttling (with Charles)
     - cancel midway works
     - progress indicator works
 
-### Submit \[2017.2 TODO ERIK\]
+### Submit \[2017.2 DONE\]
 
 - comment out custom submit button process (`oxf.fr.detail.process.submit`) in properties
 - config
@@ -1087,7 +1087,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - PDF: check fields are filled [#2207](https://github.com/orbeon/orbeon-forms/issues/2207)
   - check attached PDF looks like PDF generated from detail page, including checkboxes/radio buttons, and images
 
-### Misc \[2017.2 TODO ERIK\]
+### Misc \[2017.2 DONE\]
 
 - switch language
 - open/close sections (but not with wizard)
