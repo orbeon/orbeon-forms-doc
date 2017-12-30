@@ -1528,18 +1528,18 @@ Properties:
     - abort the response to the background upload
     - check it interrupts the download (we're not retrying uploads) and message says "There was an error during the upload."
 
-### Error Dialog \[2017.2 TODO\]
+### Error Dialog \[2017.2 DONE\]
 
 See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
-- [ ] scenario 1
+- [x] scenario 1
   - load page
   - remove JSESSIONID
   - do Ajax update
   - server must respond with XML error document (be aware of [#2212](https://github.com/orbeon/orbeon-forms/issues/2212))
   - client must show error dialog
   - check logs don't show full exception
-- [ ] scenario 2
+- [-] scenario 2
   - same but with other error
       - WHICH ONE?
   - same result except that exception must be logged
@@ -1602,7 +1602,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - IE10: FB has warning, FR works and looks ok
     - IE9: FB has warning, FR works and looks ok
 
-### Other \[2017.2 TODO\]
+### Other \[2017.2 DONE\]
 
 Features to test, with all supported browsers:
 
@@ -1610,14 +1610,14 @@ Features to test, with all supported browsers:
 - [x] XForms filter
     - `http://localhost:8080/2017.2-pe/xforms-jsp/guess-the-number/`
     - `http://localhost:8080/2017.2-pe/xforms-jsp/flickr-search/`
-- [ ] ~~examples-cli in distribution work (fix/remove them if not)~~
-    - *NOT in Orbeon Forms 2017.1*
+- [-] ~~examples-cli in distribution work (fix/remove them if not)~~
+    - *NOT in Orbeon Forms 2017.1 and 2017.2*
     - `unzip orbeon-4.7.0.201409262231-PE.zip`
     - `cd orbeon-4.7.0.201409262231-PE`
     - `unzip -d orbeon orbeon.war`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/simple/stdout.xpl`
     - `java -jar orbeon/WEB-INF/orbeon-cli.jar examples-cli/transform/transform.xpl`
-- [ ] check logs are clean
+- [-] check logs are clean
     - no debug information
     - no unwanted information
     - be aware of [#849](https://github.com/orbeon/orbeon-forms/issues/849)
