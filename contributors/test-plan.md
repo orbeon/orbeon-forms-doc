@@ -1296,11 +1296,11 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - ~~[ ] Image annotation control works (in Controls form)~~
   - *NOTE: noscript broken in Liferay* [#1041](https://github.com/orbeon/orbeon-forms/issues/1041)
 
-### Organizations \[2017.2 ERIK TODO\]
+### Organizations \[2017.2 DONE\]
 
 Do this just after general Liferay testing (above).
 
-Setup hierarchy:
+Setup hierarchy using Liferay UI:
 
 ```
 World
@@ -1309,7 +1309,7 @@ World
         ├── Foster City
         │   ├── orbeonfostercityuser1@orbeon.com (org owner/admin)
         │   └── orbeonfostercityuser2@orbeon.com
-        └── Foster City
+        └── San Carlos
             ├── orbeonsancarlosuser1@orbeon.com (org owner/admin)
             └── orbeonsancarlosuser2@orbeon.com            
 ```
@@ -1330,17 +1330,17 @@ Properties:
 </property>
 ```
 
-- [ ] comment out container auth in web.xml
-- [ ] create `test/organizations` form
+- [x] comment out container auth in web.xml
+- [x] create `test/organizations` form
      - enable permissions
         - Anyone can Create
         - Owner can Update
         - Organization Owner can Read/Update/Delete
     - publish
 - [ ] from Liferay proxy portlet
-    - [ ] as admin (e.g. `test@liferay.com` user)
+    - [x as admin (e.g. `test@liferay.com` user)
         - set proxy portlet to `test/organizations`
-    - [ ] login as `orbeonfostercityuser2@orbeon.com`
+    - [x] login as `orbeonfostercityuser2@orbeon.com`
         - enter and save data
         - check summary has data
         - check with HTTP monitor that user information is in `Orbeon-Liferay-User-Credentials`:
@@ -1367,7 +1367,7 @@ Properties:
                 ]
             }
             ```
-    - [ ] login as `orbeonfostercityuser1@orbeon.com`
+    - [x] login as `orbeonfostercityuser1@orbeon.com`
         - check data includes data from `orbeonfostercityuser2@orbeon.com`
         - enter and save data
         - check with HTTP monitor that user information is in `Orbeon-Liferay-User-Credentials`:
@@ -1403,12 +1403,12 @@ Properties:
             }
             ```
         - check summary has data for both
-    - [ ] login as `orbeonfostercityuser2@orbeon.com` again
+    - [x] login as `orbeonfostercityuser2@orbeon.com` again
         - check summary has data for `orbeonfostercityuser2@orbeon.com` only
-    - [ ] login as `orbeoncaliforniauser1@orbeon.com`
+    - [x] login as `orbeoncaliforniauser1@orbeon.com`
         - check data includes data from `orbeonfostercityuser1@orbeon.com` and `orbeonfostercityuser2@orbeon.com`
-- [ ] run tests above with eXist
-- [ ] run tests above with relational
+- [x] run tests above with eXist
+- [x] run tests above with relational
 
 ### Embedding \[2017.2 DONE\]
 
