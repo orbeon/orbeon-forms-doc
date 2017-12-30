@@ -1139,7 +1139,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - be aware of [open issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMobile)
 - be aware of [#2875](https://github.com/orbeon/orbeon-forms/issues/2875)
 
-### Home Page \[2017.2 TODO \]
+### Home Page \[2017.2 DONE\]
 
 *See also Form Builder permissions above which already tests some of this.*
 
@@ -1154,9 +1154,9 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - admin actions show
   - Available/Unavailable/Library labels show
   - publish/unpublish works
-- [ ] "publish to production"
-  - [ ] configure  remote server and production-server-uri
-    - e.g. remote in Liferay Tomcat
+- [x] "publish to production"
+  - [x] configure  remote server and production-server-uri
+    - e.g. remote in `/orbeon`
     ```xml
     <property as="xs:string" name="oxf.fr.home.remote-servers">
         [
@@ -1167,7 +1167,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         ]
     </property>
     ```
-    - use orbeon-auth.war on remote
+    - deploy `orbeon-auth.war` on remote
     ```xml
     <property
         as="xs:anyURI"
@@ -1175,15 +1175,15 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
         name="authorizer"
         value="/orbeon-auth"/>
     ```
-  - [ ] server asks for credentials if user has admin role
+  - [x] server asks for credentials if user has admin role
       - `orbeon-admin/x*` (with `liferay-portal-6.2-ce-ga6/tomcat-7.0.62`, `orbeon-admin` has `orbeon-service` role)
-  - [ ] Cancel  → loads local forms
-  - [ ] Connect → loads local and remote forms, sorted by mod date desc
-  - [ ] Select menu works
-  - [ ] Operation menu works
+  - [x] Cancel  → loads local forms
+  - [x] Connect → loads local and remote forms, sorted by mod date desc
+  - [x] Select menu works
+  - [x] Operation menu works
       - push/pull forms
-      - check available on `/fr/` page on remote (e.g. in Liferay)
-  - [ ] add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
+      - check available on `/fr/` page on remote (e.g. `/orbeon/fr/`)
+  - [-] add 2nd remote server to `oxf.fr.home.remote-servers` property and check user is asked when loading page
       ```xml
       <property as="xs:string"  name="oxf.fr.home.remote-servers">
           [
@@ -1192,7 +1192,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
           ]
       </property>
       ```
-  - [ ] take form (could be previous `sales/my-sales-form` (see [Form Builder Permissions](../form-builder/images/permissions-enable.png)) but doesn't have to be)
+  - [x] take form (could be previous `sales/my-sales-form` (see [Form Builder Permissions](../form-builder/images/permissions-enable.png)) but doesn't have to be)
     - attach static image
     - publish locally
     - push to remote
@@ -1206,7 +1206,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
   - upgrade local
   - upgrade remote
   - make sure forms still work
-- [ ] reindex database works (make sure relational provider is enabled)
+- [x] reindex database works (make sure relational provider is enabled)
 
 ### Summary Page \[2017.2 DONE\]
 
