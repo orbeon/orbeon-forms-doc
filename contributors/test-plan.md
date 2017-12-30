@@ -1095,12 +1095,12 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 - repeats
     - check can access repeated grid/section button and menu via keyboard navigation
 
-### Wizard \[2017.2 TODO ERIK\]
+### Wizard \[2017.2 DONE\]
 
-- [ ] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
+- [x] `<property as="xs:string" name="oxf.fr.detail.view.appearance.wizard.*" value="wizard"/>`
     - or use FB setting for form
-- [ ] validated mode
-    - `/fr/orbeon/w9/new`
+- [x] validated mode
+    - `/fr/orbeon/w9/new` (lax)
     - check cannot click in TOC
     - check cannot navigate forward with error in current section
     - once all sections visited, can freely navigate
@@ -1118,24 +1118,24 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
             name="oxf.fr.detail.validation-mode.orbeon.w9"     
             value="explicit"/>
         ```
-- [ ] `/fr/orbeon/controls/new`
+- [x] `/fr/orbeon/controls/new`
     - test errors in section template are highlighted in TOC
-- [ ] check that Form Builder's Wizard option enables/disables the wizard
-- [ ] separate TOC
+- [x] check that Form Builder's Wizard option enables/disables the wizard
+- [x] separate TOC
     ```xml
     <property
         as="xs:boolean"
         name="oxf.xforms.xbl.fr.wizard.separate-toc.wizard.*"    
         value="true"/>
     ```
-- [ ] subsection navigation
+- [x] subsection navigation
     ```xml
     <property
         as="xs:boolean"
         name="oxf.xforms.xbl.fr.wizard.subsections-nav.wizard.*"
         value="true"/>
     ```
-- [ ] TOC subsections
+- [x] TOC subsections
     ```xml
     <property
         as="xs:string"  
@@ -1166,14 +1166,14 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - *NOTE: had to fix 2 bugs with 4.5.*
 - test SimpleCaptcha
 
-### Help popups/hint tooltips positioning \[2017.2 TODO\]
+### Help popups/hint tooltips positioning \[2017.2 DONE\]
 
-- [ ] create form to test general positioning
+- [-] create form to test general positioning
   - [ ] help on all controls ([Lorum Ipsum](http://www.lipsum.com/feed/html))
   - [ ] repeats
   - [ ] checkboxes/radios
     - add hints (see [#1649](https://github.com/orbeon/orbeon-forms/issues/1649))
-- [ ] Bookshelf
+- [x] Bookshelf
     - try all helps (see [#1637](https://github.com/orbeon/orbeon-forms/issues/1637))
 
 ### Mobile and Responsive \[2017.2 DONE\]
@@ -1224,11 +1224,11 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
 
 *See also Form Builder permissions above which already tests some of this.*
 
-- [ ] `http://localhost:8080/2017.2-pe/fr/` lists deployed forms
-- [ ] comment all roles in form-builder-permissions.xml
+- [x] `http://localhost:8080/2017.2-pe/fr/` lists deployed forms
+- [x] comment all roles in form-builder-permissions.xml
     - no admin buttons/actions show
-- [ ] changing language to French works
-- [ ] set all Form Builder permissions
+- [x] changing language to French works
+- [x] set all Form Builder permissions
     ```xml
     <role name="*" app="*" form="*"/>
     ```
@@ -1283,7 +1283,7 @@ Test that the features works as [documented](../form-runner/advanced/singleton-f
     - pull back form
     - load form `/new` on local, make sure works and attachment is there
   - no checkbox for forms w/o admin access (e.g. set `<role name="*" app="orbeon" form="*"/>`)
-- [ ] upgrade form definitions
+- [x] upgrade form definitions
   - upgrade local
   - upgrade remote
   - make sure forms still work
@@ -1491,10 +1491,10 @@ Properties:
 - [ ] run tests above with eXist
 - [ ] run tests above with relational
 
-### Embedding \[2017.2 TODO ERIK\]
+### Embedding \[2017.2 DONE\]
 
-- [ ] deploy `orbeon-embedding.war` into Tomcat
-- [ ] update `web.xml`:
+- [x] deploy `orbeon-embedding.war` into Tomcat
+- [x] update `web.xml`:
 
     ```xml
     <init-param>
@@ -1502,20 +1502,20 @@ Properties:
         <param-value>http://localhost:8080/2017.2-pe</param-value>
     </init-param>
     ````
-- [ ] navigate to `http://localhost:8080/2017.2-pe-embedding/`
+- [x] navigate to `http://localhost:8080/2017.2-pe-embedding/`
 - [ ] go through demo forms and test
-  - [ ] enter data
-  - [ ] Save
-  - [ ] PDF
-  - [ ] repeats
-  - [ ] help/hints
-  - [ ] controls to check
+  - [x] enter data
+  - [x] Save
+  - [x] PDF
+  - [x] repeats
+  - [x] help/hints
+  - [x] controls to check
       - upload
       - signature
       - number
       - autocomplete
   - *NOTE: There are limitations, for example navigation (Summary, Review) won't work.*
-- [ ] Form Builder
+- [x ] Form Builder
     - layout is ok
     - hover icons
     - dialogs
