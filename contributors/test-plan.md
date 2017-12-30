@@ -444,7 +444,7 @@ Do the following on a commercial relational database.
         - Choose to open the draft, edit it into `a1 Marge`, save, change to `a1 Marge draft`, wait for autosave
         - Go to the summary page, click on `a1 Marge`, dialog must propose loading draft
 
-### Flat View \[2017.2 TODO ALEX\]
+### Flat View \[2017.2 DONE\]
 
 - Use the following properties in `properties-local.xml`:
     ```xml
