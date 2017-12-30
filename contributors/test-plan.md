@@ -33,24 +33,26 @@ For each release of Orbeon Forms, we follow this test plan, which tests function
 - [x] XForms examples
   - load, look reasonable, and work
 
-### PE Features Availability \[2017.2 TODO ERIK\]
+### PE Features Availability \[2017.2 DONE ERIK\]
 
 Check that all PE features are available in PE, but not in CE:
 
-- [ ] features which are checked
-    - [ ] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
-    - [ ] FB: no "Add Language" button
-    - [ ] FB: check with CE that a PE dialog shows for
+- [x] features which are checked
+    - [x] distribution: `orbeon-embedding.war` and `proxy-portlet.war` are not present
+    - [x] FB: no "Add Language" button
+    - [x] FB: check with CE that a PE dialog shows for
         - Services
         - Actions
         - Attach PDF
         - Attach Schema
         - Permissions
-    - [ ] FB: no Signature control in toolbox
-    - [ ] FR: PDF Template button doesn't show for DMV-14 and W-9
-    - [ ] FR: TIFF button doesn't show even if configured (Controls form) \[SINCE 2016.1\]
-    - [ ] FR: Import page returns 404
-    - [ ] FR: No remote server support in Form Runner home page
+    - [x] FB: no Signature control in toolbox
+    - [x] FR: PDF Template button doesn't show for DMV-14 and W-9
+        - REGRESSION: https://github.com/orbeon/orbeon-forms/issues/3434
+    - [x] FR: TIFF button doesn't show even if configured (Controls form) \[SINCE 2016.1\]
+        - REGRESSION: https://github.com/orbeon/orbeon-forms/issues/3434
+    - [x] FR: Import page returns 404
+    - [x] FR: No remote server support in Form Runner home page
         - in `form-builder-permissions.xml` add `<role name="orbeon-user" app="*" form="*"/>`
         - in `properties-local.xml`
             ```xml
@@ -70,10 +72,10 @@ Check that all PE features are available in PE, but not in CE:
         - access `http://localhost:8080/2016.2-ce/fr/`
         - login with `orbeon-user` (or any user with the `orbeon-user` role)
         - check doesn't ask user for remote servers and only loads local form definitions
-    - [ ] FR: replication
-    - [ ] FR: document leases
-    - [ ] FR: virus scanner API
-    - [ ] FR: form publish API
+    - [-] FR: replication
+    - [-] FR: document leases
+    - [-] FR: virus scanner API
+    - [-] FR: form publish API
 - features which are not checked yet but should be
     - Proxy portlet
     - Embedding
@@ -1627,7 +1629,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 ### Other Browsers \[2017.2 TODO\]
 
-- [ ] main tests above with Google Chrome
+- [x] main tests above with Google Chrome
+    - 2017.2: 64.0.3282.39 beta
     - 2017.1: 60.0.3112.32 beta
     - 2016.3: 55.x and 56.0.2924.28 beta
     - 2016.2: 52.0.2743.82 and 53.0.2785.57 beta
@@ -1638,7 +1641,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 37.0.2062.122
     - 4.6: 37.0.2062.0 dev
     - 4.5: 35.0.1897.8 dev
-- [ ] Form Builder / Form Runner tests with latest Firefox
+- [x] Form Builder / Form Runner tests with latest Firefox
+    - 2017.2: 57.0.3
     - 2017.1: 54.0
     - 2016.3: 50.1.0
     - 2016.2: 48.0
@@ -1649,7 +1653,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.7: 32
     - 4.6: 30
     - 4.5: 27.0.1 and 28
-- [ ] Form Builder / Form Runner tests with latest Safari
+- [x] Form Builder / Form Runner tests with latest Safari
+    - 2017.2: 11.0.2 (13604.4.7.1.3)
     - 2017.1: 10.1 (12603.1.30.0.34)
     - 2016.3: 10.0.2 (12602.3.12.0.1)
     - 2016.2: 9.1.1 (11601.6.17)
@@ -1662,6 +1667,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
     - 4.5: 7.0.2
 - [ ] Form Builder / Form Runner tests with IE11 (since 4.5)
 - [ ] Form Builder / Form Runner tests with latest Edge
+    - 2017.2
+        - EdgeHTML 16.x
     - 2017.1
         - Edge 40.15063.0.0
         - EdgeHTML 15.15063
@@ -1682,8 +1689,8 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
 
 Features to test, with all supported browsers:
 
-- [ ] give CE version a quick run
-- [ ] XForms filter
+- [x] give CE version a quick run
+- [x] XForms filter
     - `http://localhost:8080/2017.2-pe/xforms-jsp/guess-the-number/`
     - `http://localhost:8080/2017.2-pe/xforms-jsp/flickr-search/`
 - [ ] ~~examples-cli in distribution work (fix/remove them if not)~~
