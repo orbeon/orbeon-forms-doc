@@ -1544,7 +1544,7 @@ See [#1938](https://github.com/orbeon/orbeon-forms/issues/1938).
       - WHICH ONE?
   - same result except that exception must be logged
 
-### Other Browsers \[2017.2 TODO\]
+### Other Browsers \[2017.2 DONE\]
 
 - [x] main tests above with Google Chrome
     - 2017.2: 64.0.3282.39 beta
@@ -1625,9 +1625,9 @@ Features to test, with all supported browsers:
 ## Release process
 
 - [-] maybe: choose and create a new demo form from scratch to integrate with this release or next
-- [ ] i18n
-    - [ ] ping people who have provided i18n resources ([spreadsheet](https://docs.google.com/a/orbeon.com/spreadsheets/d/1U8HQj_l2n-hEgTaBT5aOkmNKezXZE1wFW_Lb94dATZs/edit#gid=0))
-    - [ ] update "Localizing Orbeon Forms" and "Supported-Languages":
+- [x] i18n
+    - [-] ping people who have provided i18n resources ([spreadsheet](https://docs.google.com/a/orbeon.com/spreadsheets/d/1U8HQj_l2n-hEgTaBT5aOkmNKezXZE1wFW_Lb94dATZs/edit#gid=0))
+    - [-] update "Localizing Orbeon Forms" and "Supported-Languages":
         - ../form-runner/feature/localization.md
         - localizing-orbeon-forms.md
     - [x] update FR/FB properties with full / almost full languages lists
@@ -1643,25 +1643,25 @@ Features to test, with all supported browsers:
     - create branches + track + push
 - [x] complete blog post with list of new features and compatibility notes [NOTE: don't release x.y.1 for CE]
 - [ ] testing
-    - [ ] testing according to test plan
-    - [ ] SQL Server: need to test against RDS Web edition
+    - [x] testing according to test plan
+    - [-] SQL Server: need to test against RDS Web edition
         - use M1 small instance
     - [ ] test `/register` and `/license` forms
     - [-] client-side tests
         - run through all
         - see if failing ones are reasonable
-- [ ] upload build to github
-    - [ ] tag release on 4.x.-pe/4.x-ce branches and push tags
-    - [ ] use CE tag in github release, create CE branch/tag if needed
-    - [ ] upload CE and PE files to release, including .md5
-- [ ] put PE sources in Dropbox
-- [ ] link new release from orbeon.com/downloads and home page [NOTE: don't release x.y.1 for CE]
-- [ ] publish blog post
-- [ ] updates to doc
-    - [ ] update [List of features](../features.md)
-    - [ ] update [Release history](../release-history.md)
-    - [ ] update [Upgrading from older versions](../configuration/advanced/upgrading.md)
-    - [ ] upgrade [Database support matrix](../form-runner/persistence/db-support.md)
+- [x] upload build to github
+    - [x] tag release on 4.x.-pe/4.x-ce branches and push tags
+    - [x] use CE tag in github release, create CE branch/tag if needed
+    - [x] upload CE and PE files to release, including .md5
+- [x] put PE sources in Google Drive
+- [x] link new release from orbeon.com/downloads and home page [NOTE: don't release x.y.1 for CE]
+- [x] publish blog post
+- [x] updates to doc
+    - [x] update [List of features](../features.md)
+    - [x] update [Release history](../release-history.md)
+    - [x] update [Upgrading from older versions](../configuration/advanced/upgrading.md)
+    - [x] upgrade [Database support matrix](../form-runner/persistence/db-support.md)
 - [ ] announce: twitter, orbeon forum, XForms mailing-lists
 - [ ] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
     - [ ] test register/license
