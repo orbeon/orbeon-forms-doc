@@ -1662,7 +1662,7 @@ Features to test, with all supported browsers:
     - [x] update [Release history](../release-history.md)
     - [x] update [Upgrading from older versions](../configuration/advanced/upgrading.md)
     - [x] upgrade [Database support matrix](../form-runner/persistence/db-support.md)
-- [ ] announce: twitter, orbeon forum, XForms mailing-lists
+- [x] announce: twitter, orbeon forum, XForms mailing-lists
 - [ ] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
     - [ ] test register/license
     - [ ] import latest form data using source on demo.orbeon.com
