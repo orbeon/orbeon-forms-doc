@@ -1422,7 +1422,7 @@ Properties:
     </init-param>
     ````
 - [x] navigate to `http://localhost:8080/2017.2-pe-embedding/`
-- [ ] go through demo forms and test
+- [x] go through demo forms and test
   - [x] enter data
   - [x] Save
   - [x] PDF
@@ -1663,12 +1663,12 @@ Features to test, with all supported browsers:
     - [x] update [Upgrading from older versions](../configuration/advanced/upgrading.md)
     - [x] upgrade [Database support matrix](../form-runner/persistence/db-support.md)
 - [x] announce: twitter, orbeon forum, XForms mailing-lists
-- [ ] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
-    - [ ] test register/license
-    - [ ] import latest form data using source on demo.orbeon.com
-    - [ ] Maybe: check [these JVM options](http://blog.sokolenko.me/2014/11/javavm-options-production.html)
+- [x] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
+    - [x] test register/license
+    - [-] Maybe: check [these JVM options](http://blog.sokolenko.me/2014/11/javavm-options-production.html)
 - [ ] after release tasks
     - [ ] brainstorm, bug review, and planning of next release <!--  what we would do with the product if we didn't have customer pressure (RESOLUTION from 2013-08-06) -->
     - [ ] review all issues marked as Top Issue/Top RFE
-    - [ ] review [Product goals for 2018](https://docs.google.com/document/d/1YjKHZyJgWqr1xkR_RmcWmgbzRFPLtomqpLiKPhhafj8/edit#)
-    - [ ] update [Roadmap](../roadmap.md) and tweet:
+    - [ ] review [Product goals for 2018](https://docs.google.com/document/d/15NEQEEQbRxdOZ1ki-ruGsgi8kZFDFKKlwWhpLOz7lro/edit)
+    - [ ] update [Roadmap](../roadmap.md) and tweet
+    
