@@ -18,14 +18,17 @@ You need to have already installed:
 - [ant](http://ant.apache.org/)
 - [sbt](http://www.scala-sbt.org/)
 - [Tomcat 7](http://tomcat.apache.org/download-70.cgi) or better [Tomcat 8](http://tomcat.apache.org/download-80.cgi)
+- [Node.js](https://nodejs.org/en/)
 - Java 1.7 or 1.8
 
-On OS X, you can install the following easily if you have [Homebrew](http://brew.sh/):
+On macOS, you can install the following easily if you have [Homebrew](http://brew.sh/):
 
 ```bash
 brew install git
 brew install ant
 brew install sbt
+brew install nvm
+nvm install node
 ```
 
 ## Getting the source
@@ -68,9 +71,9 @@ The exploded WAR is available under:
 To run all the tests:
 
 - `sbt`: launch sbt
-- `project root`: this is the default
-- `test:test`: run unit tests
-- `db:test`: run database tests
+    - `project root`: this is the default
+    - `test:test`: run unit tests
+    - `db:test`: run database tests
 
 To create a distribution:
 
@@ -256,7 +259,7 @@ You need to have already installed:
 - [Tomcat 7](http://tomcat.apache.org/download-70.cgi)
 - Java 1.7
 
-On OS X, you can install git and sbt easily if you have [Homebrew](http://brew.sh/):
+On macOS, you can install git and sbt easily if you have [Homebrew](http://brew.sh/):
 
 ```bash
 brew install git
