@@ -22,7 +22,7 @@ You:
 - generally use an `<xf:itemset>` element to point to items which are organized in a hierarchy
 
 ```xml
-<xf:select1 appearance="tree" ref="instance('tree-items')">
+<xf:select1 appearance="tree" ref="value">
     <xf:itemset ref="instance('tree-items')//item">
         <xf:label ref="@label"/>
         <xf:value ref="@value"/>
