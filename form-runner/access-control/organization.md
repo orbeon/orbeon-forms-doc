@@ -55,9 +55,24 @@ When a user fills out a form, when data for that form is saved, Form Runner also
 
 ![Owner information stored with the form data](../images/organization-constraints.png)
 
-If the form definition grants access to managers, and a user is a "manager of Engineering", because of the information available and the way it is stored, Form Runner can efficiently determine what data the user has access to, and in this example the manager should is granted access to Linda's data.
+If the form definition grants access to managers, and John is a "manager of Engineering", because of the information available and the way it is stored, Form Runner can efficiently determine what data John has access to. In this example, John can be granted access to Linda's data as Linda is a member of the `iOS` organization, which is under the `Engineering` organization, of which John is a manager.
 
-The way organizations are used and  stored has the following consequences:
+The built-in implementation of the persistence API for relational databases stores information about organizations in the `orbeon_organization` table. Each organization has a unique `id` and is represented in `orbeon_organization` by as many rows as the depth of the organization. For instance, the `iOS` could be stored with id `123` as follows:
+
+| id  | depth | pos | name        |
+| --- | ----- | --- | ----------- |
+| 123 | 3     | 1   | Acme        |
+| 123 | 3     | 2   | Engineering |
+| 123 | 3     | 3   | iOS         |
+
+Organizations are created as needed when users save data. So if an entry for the `iOS` organization didn't already exist, the first time Linda saves data, the above rows will be created. However no id will be generated for the parent organizations; this will only happen when, say, John, the manager of the `Engineering` organization saves data, at which point rows for the `Engineering` organization will be created, for instance as follows:
+
+| id  | depth | pos | name        |
+| --- | ----- | --- | ----------- |
+| 456 | 2     | 1   | Acme        |
+| 456 | 2     | 2   | Engineering |
+
+The way organizations are used and stored has the following consequences:
 
 - If an organization name changes, for instance `Support` is renamed `Customer satisfaction`, then data in the database needs to be changed.
 - If the organization structure changes, say `Support` isn't under `Engineering` but under `Operations`, then information in the database needs to be changed.
