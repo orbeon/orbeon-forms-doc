@@ -49,7 +49,6 @@ Focus:
 - Form Builder usability
     - [FB: Improve expand/shrink UI #3345](https://github.com/orbeon/orbeon-forms/issues/3345)
 - TBD
-- [all Orbeon Forms 2018.1 issues](https://github.com/orbeon/orbeon-forms/projects/4)
 
 For detailed status of issues, see the [GitHub project for Orbeon Forms 2018.1](https://github.com/orbeon/orbeon-forms/projects/4).
 
