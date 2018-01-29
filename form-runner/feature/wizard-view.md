@@ -168,6 +168,26 @@ The wizard indicates, in the table of contents, the status of each section:
 
 ![Wizard validated mode](../images/wizard-status.png)
 
+### CSS classes
+
+CSS classes are available on table of content entries to reflect the status of each section:
+
+- `disabled`
+- `active`
+- `started`
+- `changed`
+- `incomplete`
+- `invalid`
+
+[SINCE Orbeon Forms 2018.1]
+
+The following classes indicate the first and last sections:
+
+- `first-page`: the first visible page
+- `last-top-level-page`: the first visible top-level page 
+- `last-page`: the last visible page
+    - this can be different from `last-top-level-page` when using subsection navigation
+
 ### Wizard status persistence
 
 [SINCE Orbeon Forms 2017.2]
