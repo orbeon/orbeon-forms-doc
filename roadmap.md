@@ -66,3 +66,13 @@ Focus:
 __Please remember that the following schedule is a plan, not a promise:__
 
 - 2018-08-30: tentative release date
+
+### Orbeon Forms 2018.3
+
+Focus:
+
+- TBD
+
+__Please remember that the following schedule is a plan, not a promise:__
+
+- 2018-12: tentative release date
