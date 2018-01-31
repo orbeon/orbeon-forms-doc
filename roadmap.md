@@ -44,7 +44,7 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 Focus:
 
-- performance
+- Performance
     - [Slow large form in Form Builder #3442](https://github.com/orbeon/orbeon-forms/issues/3442)
 - Form Builder usability
     - [FB: Improve expand/shrink UI #3345](https://github.com/orbeon/orbeon-forms/issues/3345)
@@ -61,7 +61,8 @@ __Please remember that the following schedule is a plan, not a promise:__
 
 Focus:
 
-- [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256))
+- Major new features
+    - [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256))
 
 __Please remember that the following schedule is a plan, not a promise:__
 
