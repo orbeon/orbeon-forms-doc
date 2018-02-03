@@ -50,6 +50,7 @@ Focus:
     - [FB: Improve expand/shrink UI #3345](https://github.com/orbeon/orbeon-forms/issues/3345)
 - Major new features
     - [Dynamic labels, hints, help messages, and alerts #1342](https://github.com/orbeon/orbeon-forms/issues/1342)
+    - [Ability to attach multiple PDF templates and select one dynamically #3316](https://github.com/orbeon/orbeon-forms/issues/3316)
 
 For detailed status of issues, see the [GitHub project for Orbeon Forms 2018.1](https://github.com/orbeon/orbeon-forms/projects/4).
 
