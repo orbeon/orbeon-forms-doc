@@ -172,6 +172,12 @@ The URL value, whether directly or via a property, can be an XPath Value Templat
 navigate(uri = "http://example.org/{xxf:get-request-parameter('bar')}/{.//code}")
 ```
 
+## relinquish-lease
+
+The `relinquish-lease` action will, if the current user has a lease on the data being  currently edited, relinquish that lease. The action has no effect if the [lease isn't enabled](https://doc.orbeon.com/form-runner/feature/lease.html#enabling-the-lease-feature), or if the current user doesn't own the lease.
+
+In most cases you'll want to use this action in conjunction with [`navigate`](#navigate) or [`send(replace ="all")`](actions-form-runner-send.md) to release a potential lease the user might have before you take the user to another page. This way other users will be able to access the current data without having to wait for the lease to expire.
+
 ## success-message and error-message
 
 - `success-message`: show a success message
