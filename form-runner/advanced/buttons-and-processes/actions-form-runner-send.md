@@ -220,7 +220,7 @@ Example:
 
 ## Sending PDF and TIFF content 
 
-## Controlling the format
+### Controlling the format
 
 [SINCE Orbeon Forms 2018.1]
 
