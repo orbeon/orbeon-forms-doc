@@ -174,7 +174,7 @@ navigate(uri = "http://example.org/{xxf:get-request-parameter('bar')}/{.//code}"
 
 ## relinquish-lease
 
-[Since Orbeon Forms 2017.2.1]
+[SINCE Orbeon Forms 2017.2.1]
 
 The `relinquish-lease` action will, if the current user has a lease on the data being  currently edited, relinquish that lease. The action has no effect if the [lease isn't enabled](https://doc.orbeon.com/form-runner/feature/lease.html#enabling-the-lease-feature), or if the current user doesn't own the lease.
 
