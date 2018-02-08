@@ -218,19 +218,42 @@ Example:
         form-version=1&
         language=en
 
-## Sending a PDF binary
+## Sending PDF and TIFF content 
+
+## Controlling the format
+
+[SINCE Orbeon Forms 2018.1]
+
+When using PDF templates and `content = "pdf"` or `content = "tiff"`, you can control the PDF processing with the
+following:
+
+- `use-pdf-template`
+    - default: `true`
+    - If at least one PDF template is available, the default is to use one of the PDF templates. But if
+      `use-pdf-template = "false"`, then use of any PDF template is disabled and the automatic PDF is produced.  
+- `pdf-template-name`
+    - When at least one of the PDF templates has a name, if `pdf-template-name` specifies a name, such as with
+      `pdf-template-name = "archive"`, the list of available PDF templates is reduced to those having an exactly
+      matching name. If no matching name is found, an error is raised. 
+- `lang` 
+    - When at least one of the PDF templates has a language, if `lang` specifies a language, such as with
+      `lang = "fr"`, among the list of available PDF templates, the one with a matching name is chosen if possible.
+      Otherwise, the one with the current form language is used. Finally, if there is no match, the first available
+      PDF template is used.
+
+### Sending a PDF binary
 
 [SINCE Orbeon Forms 2016.2]
 
 When `content = "pdf"` is specified, the PDF binary is sent with a `Content-Type` set to `application/pdf`.
 
-## Sending a TIFF binary
+### Sending a TIFF binary
 
 [SINCE Orbeon Forms 2016.2]
 
 When `content = "tiff"` is specified, the TIFF binary is sent with a `Content-Type` set to `image/tiff`.
 
-## Sending a PDF URL
+### Sending a PDF URL
 
 When `content = "pdf-url"` is specified, the XML document sent has the following format:
 
@@ -245,7 +268,7 @@ A use case for this is to submit the URL to a local confirmation page. The page 
 
 *NOTE: When the PDF must be sent to a remote service, it is better to send the PDF binary directly using `content = "pdf"` .*
 
-## Sending a TIFF URL
+### Sending a TIFF URL
 
 [SINCE Orbeon Forms 2016.1]
 
