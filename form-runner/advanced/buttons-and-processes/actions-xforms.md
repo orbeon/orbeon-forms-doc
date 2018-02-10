@@ -15,7 +15,9 @@ Set a value in the form data.
 - parameters
     - `ref`: required XPath expression, relative to the root element of the form data, points to the nodes to set.
     - `value`: optional XPath expression, relative to the node to set, specifies the value to set.
-    - `all`: [SINCE Orbeon Forms 2018.1] optional boolean, if `"false"` (the default) the First-item rule is applied: if the `ref` XPath expression returns a sequence of size greater than 1, the first item in the sequence is used; if `"true"`, all the items in the sequence are used.
+    - `all`: [SINCE Orbeon Forms 2018.1] optional boolean
+        - If `"false"` (the default) the First-item rule is applied: if the `ref` XPath expression returns a sequence of size greater than 1, the first item in the sequence is used.
+        - If `"true"`, all the items in the sequence are used.
 
 If `value` is omitted, the value selected is the empty string.
 
