@@ -250,6 +250,7 @@ You can also override the default confirmation message:
 - `captcha`: Trigger the captcha.
 - `collapse-all`: Collapse all sections (when not using the wizard view).
 - `expand-all`: Expand all sections (when not using the wizard view).
+- `expand-invalid`: [SINCE Orbeon Forms 2018.1] This action expands all the sections that contain an error. Out-of-the-box, this action is used by the `require-valid` process, in turn called when validating data, say before save, so users can see all the sections that contain an error.
 - `new-to-edit`:
     - [SINCE Orbeon Forms 2017.1]
     - If possible, switch the detail page's URL from new mode to edit mode. Before this action, this was done automatically as part of the `save` action.
