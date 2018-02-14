@@ -29,7 +29,7 @@ You can use Orbeon Forms without using the Form Runner or Form Builder component
 
 Specific requirements will depend on how much load Orbeon Forms needs to handle, but as a starting point:
 
-- **Memory** - We recommend you have enough memory on the server to be able to comfortably allocate about 2 GB to the JVM.
+- **Memory** - We recommend you have enough memory on the server to be able to comfortably allocate about 4 GB to the JVM.
 - **CPU** - We recommend you use a server with a modern Intel Xeon or Core i7 CPU (2013+, with a Geekbench single-core score of at least 3000). We strongly recommend you avoid servers with AMD or Sparc CPUs, as they have significantly slower single-core performance, which isn't appropriate for running Orbeon Forms.
 
 ### How much load can Orbeon Forms handle?
