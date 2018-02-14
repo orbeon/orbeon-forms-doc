@@ -14,7 +14,7 @@ Orbeon Forms runs on any platform that supports:
 We recommend you run Orbeon Forms on a dedicated server or instance that satisfies the following requirements:
 
 * CPU: recent 4-core, or more, Intel Xeon or Core i7. We don't recommend AMD CPUs, which, as of 2015, tend to be 2-4 times slower than Intel CPUs per core.
-* RAM: 2 GB of RAM, or more, available to the Java Virtual Machine (JVM heap size).
+* RAM: 4 GB of RAM, or more, available to the Java Virtual Machine (JVM heap size).
 
 If using AWS EC2, we recommend you start with a c4.2xlarge instance. For most projects, it is safe to start with a configuration along those lines, but you might want to have more powerful or multiple servers or instances (or equivalent) for situations calling for high availability, or to handle more load. When running Orbeon Forms PE on multiple servers or instances, you need one [PE subscription](http://www.orbeon.com/pricing) per server or instance. 
 
@@ -25,9 +25,9 @@ For more details on sizing, see the section on [how much load Orbeon Forms can h
 Configure the Java VM with:
 
 * `-Xmx` option for dedicated Java heap memory:
-    * on a development machine: at least 1 GB of Java heap: `-Xmx1024m`
-    * on a production machine: at least 2 GB of Java heap: `-Xmx2048m`
-* ` -XX:MaxPermSize` for "permgen" space:
+    * on a development machine: at least 1 GB of Java heap: `-Xmx1g`
+    * on a production machine: at least 4 GB of Java heap: `-Xmx4g`
+* ` -XX:MaxPermSize` for "permgen" space (Java 1.7):
     * use at least: `-XX:MaxPermSize=256m`
 
 Also, make sure that you do *not* have tiered compilation when using Java 7. See [A dangerous Java 7 JVM option: TieredCompilation
