@@ -90,7 +90,7 @@
         * [Responsive design](form-runner/feature/responsive-design.md)
         * [Localization](form-runner/feature/localization.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
-        * [Lease](form-runner/feature/lease.md)
+        * [Lease Feature](form-runner/feature/lease.md)
         * [Datasets](form-runner/feature/datasets.md)
         * [TIFF production](form-runner/feature/tiff-production.md)
     * Persistence
@@ -125,7 +125,7 @@
             * [Form metadata](form-runner/api/persistence/forms-metadata.md)
             * [Caching](form-runner/api/persistence/caching.md)
             * [Versioning](form-runner/api/persistence/versioning.md)
-            * [Lease](form-runner/api/persistence/lease.md)
+            * [Lease API](form-runner/api/persistence/lease.md)
             * [Implementing a persistence service](form-runner/api/persistence/implementing-a-persistence-service.md)
         * Other APIs
             * [Duplicate form data](form-runner/api/other/duplicate-form-data.md)
