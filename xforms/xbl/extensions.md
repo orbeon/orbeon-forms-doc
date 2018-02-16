@@ -177,3 +177,21 @@ Example:
     </xbl:implementation>
 </xbl:binding>
 ```
+
+## xxbl:use-if-attr attribute
+
+[SINCE Orbeon Forms 2018.1]
+
+This attribute allows including a part of the resulting tree only if a particular attribute is present on the bound node.
+
+Example:
+
+```xml
+<xf:group xxbl:use-if-attr="prefix" class="add-on" ref=".[xxf:non-blank($prefix)]">
+    <xf:output value="$prefix"/>
+</xf:group>
+
+``` 
+
+That `xf:group` element will ony be included if the bound node contains an attribute named `prefix`. Otherwise the entire
+subtree will be omitted.
