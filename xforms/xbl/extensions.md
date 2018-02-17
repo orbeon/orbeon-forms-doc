@@ -195,3 +195,6 @@ Example:
 
 That `xf:group` element will ony be included if the bound node contains an attribute named `prefix`. Otherwise the entire
 subtree will be omitted.
+
+This also checks properties such as `oxf.xforms.xbl.fr.currency.prefix` and if the value of the property is found
+and not empty, it is as if the attribute was present on the bound node.
