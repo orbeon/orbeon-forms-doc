@@ -54,7 +54,7 @@
   - set the `create` permission for all users
   - set all permissions for the role `orbeon-admin`
   - republish your forms
-  - see also [#1860](https://github.com/orbeon/orbeon-forms/issues/1860))
+  - see also [#1860](https://github.com/orbeon/orbeon-forms/issues/1860)
 1. Configure forms' buttons
   - You will want only a "Send" or "Submit" button, as a plain "Save" button doesn't make sense in this case.
 
