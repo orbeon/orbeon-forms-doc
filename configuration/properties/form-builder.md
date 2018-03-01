@@ -159,7 +159,7 @@ To enable form authors to edit text with formatting shown by the Explanatory Tex
 ```xml
 <property as="xs:string"  name="oxf.fb.tinymce.config">
     {
-        "mode":		  "exact",
+        "mode":	      "exact",
         "language":   "en",
         "statusbar":  false,
         "menubar":    false,
