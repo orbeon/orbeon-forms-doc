@@ -149,3 +149,23 @@ The value of this property is an array of strings in the JSON format. For instan
 ## Access control 
 
 If you'd like to have multiple classes of Form Builder users where some can edit, say, forms in the `hr` app, while others can edit forms in the `sales` app, see [Access control for editing forms](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/access-control#TOC-Access-control-for-editing-forms).
+
+## Explanatory Text TinyMCE configuration
+
+[SINCE Orbeon Forms 2018.1]
+
+To enable form authors to edit text with formatting shown by the Explanatory Text control, Form Builder uses the TinyMCE component. You can [configure the TinyMCE](https://www.tinymce.com/docs/configure/) by providing your own config as JSON as the value of the `oxf.fb.tinymce.config` property, as in the example below.
+
+```xml
+<property as="xs:string"  name="oxf.fb.tinymce.config">
+    {
+        "mode":		  "exact",
+        "language":   "en",
+        "statusbar":  false,
+        "menubar":    false,
+        "plugins":    "lists link",
+        "toolbar":    "bold italic | bullist numlist outdent indent | fontselect fontsizeselect",
+        "encoding":   "xml"
+    }
+</property>
+```
