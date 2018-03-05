@@ -6,6 +6,37 @@
 
 This page documents extension events, that is events which are not part of the XForms specifications. Such events, by convention, start with the prefix `xxforms-`.
 
+## Control events
+
+### xxforms-visible
+
+[SINCE Orbeon Forms 2018.1]
+
+- __Dispatched in response to:__ control becoming relevant and not hidden, or control becoming visible following `xf:toggle`  
+- __Target:__ control
+- __Bubbles:__ Yes
+- __Cancelable:__ No
+- __Context Info:__ Same as other UI events
+
+When using `<xf:switch>` without also setting the `xxf:xforms11-switch` attribute or property to `true`, controls in
+non-visible switch cases remain relevant. This means that one cannot rely on `xforms-enabled` or `xforms-disabled` to
+track whether the control is really active for the user. `xxforms-visible` and `xxforms-hidden` (below) allow making
+that distinction.  
+
+See also [UI refresh events](events-refresh.md).
+
+### xxforms-hidden
+
+[SINCE Orbeon Forms 2018.1]
+
+- __Dispatched in response to:__ control becoming non-relevant while not hidden, or control becoming hidden following `xf:toggle`  
+- __Target:__ control
+- __Bubbles:__ Yes
+- __Cancelable:__ No
+- __Context Info:__ Same as other UI events
+
+See also [UI refresh events](events-refresh.md).
+
 ## Document events
 
 ### xxforms-state-restored

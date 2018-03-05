@@ -171,6 +171,9 @@ The following occurs:
 
 - The control's state, including value and MIPs, is acquired through its binding and other attributes.
 - `xforms-enabled` is dispatched
+- `xxforms-visible` is dispatched if the control is not in a hidden switch case
+    - SINCE Orbeon Forms 2018.1
+    - See also [`xxforms-visible`](xforms/events-extensions-events.md#xxforms-visible). 
 - non-default MIP events are dispatched (in order to reduce the number of events dispatched)  
     - `xforms-invalid`
     - `xforms-required`
@@ -198,8 +201,11 @@ Just before a control becomes non-relevant, whether during:
 
 The following occurs:  
 
-* `xforms-disabled` is dispatched
-* no other events are dispatched  
+- `xxforms-hidden` is dispatched if the control is not in a hidden switch case
+    - SINCE Orbeon Forms 2018.1
+    - See also [`xxforms-visible`](xforms/events-extensions-events.md#xxforms-hidden).
+- `xforms-disabled` is dispatched
+- no other events are dispatched  
 
 ### Changes during the lifetime of the control
 
