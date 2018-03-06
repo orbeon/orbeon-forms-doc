@@ -1,6 +1,6 @@
 # Reindexing API
 
-[SINCE Orbeon Forms 2018.1 and 2017.2.1 PE] This page describes what you'll want to do if you are writing your own implementation of the persistence API, and your implementation supports its own internal index. If instead you want to *use* this feature and reindex your database, see how to [reindex your database from the Form Runner home page](https://doc.orbeon.com/form-runner/feature/home-page.html#reindexing).
+[SINCE Orbeon Forms 2018.1 and 2017.2.1 PE] This page describes what you'll want to do if you are writing your own implementation of the persistence API, and your implementation supports its own internal index. If instead you want to *use* this feature and reindex your database, see how to [reindex your database from the Form Runner home page](../../feature/home-page.md#reindexing).
 
 ## Declaring an implementation supports reindexing
 
