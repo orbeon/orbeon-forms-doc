@@ -126,6 +126,7 @@
             * [Caching](form-runner/api/persistence/caching.md)
             * [Versioning](form-runner/api/persistence/versioning.md)
             * [Lease API](form-runner/api/persistence/lease.md)
+            * [Reindexing API](form-runner/api/persistence/reindexing.md)
             * [Implementing a persistence service](form-runner/api/persistence/implementing-a-persistence-service.md)
         * Other APIs
             * [Duplicate form data](form-runner/api/other/duplicate-form-data.md)
