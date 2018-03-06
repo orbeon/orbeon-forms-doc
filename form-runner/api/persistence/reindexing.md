@@ -19,4 +19,4 @@ If you declared that your implementation supports reindexing, when admins reques
 
 ## Limitations
 
-The Form Runner home page supports stopping the reindexing, and showing a progress while the reindexing happens. For now, while those features are implemented by the built-in implementation of the persistence API for relational databases, they are not exposed through the API, and can't yet be implemented by a 3rd-party implementation.
+The Form Runner home page supports stopping the reindexing, and showing a progress while the reindexing happens. For now, while those features are implemented by the built-in implementation of the persistence API for relational databases, they are not exposed through the API, and can't yet be implemented by 3rd-parties.
