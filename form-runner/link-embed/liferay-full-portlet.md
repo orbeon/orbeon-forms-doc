@@ -134,6 +134,9 @@ The first filter, `AddLiferayUserHeadersFilter`, extracts Liferay user informati
 - `Orbeon-Liferay-User-Id`
 - `Orbeon-Liferay-User-Screen-Name`
 - `Orbeon-Liferay-User-Full-Name`
+- `Orbeon-Liferay-User-First-Name` [SINCE Orbeon Forms 2018.1]
+- `Orbeon-Liferay-User-Middle-Name` [SINCE Orbeon Forms 2018.1]
+- `Orbeon-Liferay-User-Last-Name` [SINCE Orbeon Forms 2018.1]
 - `Orbeon-Liferay-User-Email`
 - `Orbeon-Liferay-User-Group-Id`
 - `Orbeon-Liferay-User-Group-Name`
