@@ -32,7 +32,7 @@ For Orbeon Forms to operate normally, for a given web page loaded by the browser
 
 ![Which HTTP requests/responses we are interested in](../images/session-where.png)
 
-Note that those requirements apply to the HTTP requests and responses sent to and coming from Orbeon Forms. As illustrated in the above diagrams, if you have reverse proxy or embedding code those will be different than the HTTP requests and responses made by and received by the browser, and the `JSESSIONID` (or equivalent) used between the browser and the proxy / embedding code is likely to be different than the `JSESSIONID` used between the proxy / embedding code and Orbeon Forms. Again, Orbeon Forms requirement apply to the latter.
+Note that those requirements apply to the HTTP requests and responses sent to and coming from Orbeon Forms. As illustrated in the above diagrams, if you have reverse proxy or embedding code those will be different than the HTTP requests and responses made by and received by the browser, and the `JSESSIONID` (or equivalent) used between the browser and the proxy / embedding code is likely to be different than the `JSESSIONID` used between the proxy / embedding code and Orbeon Forms. Again, Orbeon Forms' requirement apply to the latter.
 
 ## HTTP 403 / "An error has occurred" dialog
 
@@ -45,7 +45,7 @@ The following 2 cases can happen, and if they they do getting a 403 response and
 1. The user's session has expired – As long as users keep a form open in their browser, by default the Orbeon Forms client-side code makes sure to send a "session heartbeat" Ajax request before the session expires to keep it alive. However:
     - It's possible for you to disable the [session heartbeat](https://doc.orbeon.com/contributors/state-handling.html#session-heartbeat) feature. If you do, it is possible for the session to expire even if users keep a browser window with the form open.
     - In situations where the browser looses connectivity to the server for an extended period of time, the session heartbeat mechanism might not be able to contact the server before the session expires. For instance, this could happen if a user were to load a form on her laptop, close the lid, commute home, open the lid, and try to continue filling out the same form.
- 2. A user loads the form, the server running Orbeon Forms is restarted, and then the user tries to interact with the form.
+2. A user loads the form, the server running Orbeon Forms is restarted, and then the user tries to interact with the form.
 
 In both cases, if, after getting the error, users reload the form and get the error again, then you might have hit one of the "problematic cases" described in the section below.
 
