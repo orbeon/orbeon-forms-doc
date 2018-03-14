@@ -1,5 +1,7 @@
 # Session Management
 
+<!-- toc -->
+
 ## Who should read this
 
 You'll most likely be interested in the information on this page if:
