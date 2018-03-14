@@ -17,6 +17,21 @@ The following URL patterns are followed:
 
 _NOTE: All paths above are relative to the deployment context, e.g the actual URLs start with `http://localhost:8080/orbeon/fr/...`_
 
+### Specifying the initial language of the form
+
+[SINCE Orbeon Forms 4.10]
+
+When navigating to `/fr/orbeon/builder/new`, Form Builder picks as default form language the language of the Form Builder
+user interface. For example, if the Form Builder language is English, by default the new form's language is set to
+English as well.
+
+You can override this default by specifying the `fb-language` URL parameter (not to be confused with `fr-language`). For
+example this sets the language of the form to Italian:
+
+```
+/fr/orbeon/builder/new?fb-language=it
+``` 
+
 ### Bypassing the New Form dialog
 
 [SINCE Orbeon Forms 4.10]

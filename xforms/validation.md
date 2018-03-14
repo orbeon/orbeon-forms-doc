@@ -283,6 +283,9 @@ Context information:
 - `added-infos`: ids of current infos added since the last refresh
 - `removed-infos`: ids of current infos removed since the last refresh
 
+*NOTE: A [bug](https://github.com/orbeon/orbeon-forms/issues/3498) until Orbeon Forms 2017.2 caused the event to be 
+dispatched to all controls during the first refresh.*.
+
 ### xxf:valid() and xxf:invalid() XPath functions
 
 `xxf:valid()` returns the validity of a instance data node or of a subtree of instance data.
