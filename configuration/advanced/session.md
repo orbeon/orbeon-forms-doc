@@ -6,23 +6,33 @@ You'll most likely be interested in the information on this page if:
 
 - You are able to load a form produced by Orbeon Forms, but then Ajax requests sent by the browser occasionally or systematically get an HTTP 403 response, causing the "An error has occurred" dialog to show up.
 - In your environment, requests from the browser don't immediately reach the app server running Orbeon Forms, but instead go through some other software. For instance, this is the case if you're using a reverse proxy or have your own code embedding forms produced by Orbeon Forms in your web pages.
-- Want to learn more about session management in Orbeon Forms.
+- You want to learn more about session management in Orbeon Forms.
 
 ## `JSESSIONID` and `UUID`
 
-1. The first time a browser requests a web page from Orbeon Forms, Orbeon Forms creates a session, and the response has a header with `Set-Cookie: JSESSIONID=123`, where `123` is a unique identifier. (The specific cookie name may differ depending on how you configured your app server, but typically `JSESSIONID` is the default and for simplicity we'll use that name in the rest of this document.) From that point, any subsequent requests issued by the browser will have a header that looks like `Cookie: JSESSIONID=123`.
+### Normal operation
 
-2. When Orbeon Forms generates the web page for a form, it produces a unique UUID, and stores *state* in the session related to this UUID. If the user reloads the form, Orbeon Forms generated a different UUID. You can see that UUID in the HTML sent by the browser, looking for the HTML hidden field named `$uuid`:
+1. The first time a browser requests a web page from Orbeon Forms, Orbeon Forms creates a session, and the HTTP response has a header with `Set-Cookie: JSESSIONID=123`, where `123` is a unique identifier. (The specific cookie name may differ depending on how you configured your app server, but typically `JSESSIONID` is the default and for simplicity we'll use that name in the rest of this document.) From that point, any subsequent requests issued by the browser will have a header that looks like `Cookie: JSESSIONID=123`.
+
+2. When Orbeon Forms generates a web page for a form, it produces a unique UUID, and stores *state* in the session related to this UUID. If the user reloads the form, Orbeon Forms generated a different UUID. You can see that UUID in the HTML sent by the browser, looking for the HTML hidden field named `$uuid`:
 
    ```html
    <input type="hidden" name="$uuid" value="abc">
    ```
 
-3. When the Orbeon Forms client-side code sends a Ajax request, it includes that UUID in the body of the request, and the browser will pass the `JSESSIONID`. On the server, Orbeon Forms uses that information to find the *state* it stored in step 1. You can see the UUID in the Ajax request, and will look as follows:
+3. When the Orbeon Forms client-side code sends a Ajax request, it includes that UUID in the body of the request, and the browser passes the `JSESSIONID`. On the server, Orbeon Forms uses that information to find the *state* it stored in step 1. The UUID sent by Orbeon Forms in the Ajax request looks like:
 
     ```xml
     <xxf:uuid>abc</xxf:uuid>
     ```
+    
+### Orbeon Forms requirement
+
+For Orbeon Forms to operate normally, for a given web page loaded by the browser from Orbeon Forms, the `JSESSIONID` set in the HTTP response produced by Orbeon Forms (with `Set-Cookie: …`), or if none is set the `JSESSIONID` on in the HTTP request received by Orbeon Forms must also be the one Orbeon Forms receives in all subsequent Ajax requests for the same page.
+
+![Which HTTP requests/responses we are interested in](images/session-where.png)
+
+Note that those requirements apply to the HTTP requests and responses sent to and coming from Orbeon Forms. As illustrated in the above diagrams, those will be different than the HTTP requests and responses made by and received by the browser, and if you have reverse proxy or embedding code the `JSESSIONID` (or equivalent) used between the browser and the proxy / embedding code is likely to be different than the `JSESSIONID` used between the proxy / embedding code and Orbeon Forms.
 
 ## HTTP 403 / "An error has occurred" dialog
 
