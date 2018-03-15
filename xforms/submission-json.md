@@ -2,21 +2,15 @@
 
 <!-- toc -->
 
-## Availability
-
 [SINCE Orbeon Forms 2016.1]
 
 ## Receiving JSON
 
 ### Introduction
 
-When a submission returns an `application/json` mediatype, the submission parses the received JSON and converts it to an XML representation friendly to XPath expressions.
+When an `xf:submission` or by an `xf:instance` with a `src` or `resource` attribute receives content with the `application/json` mediatype, Orbeon Forms parses the received JSON and converts it to an XML representation friendly to XPath expressions.
 
-*NOTE: This is also supported with `xf:instance` when using the `src` or `resource` attributes, when the content is received with an `application/json` mediatype.*
-
-[SINCE Orbeon Forms 2017.1]
-
-In addition to the `application/json` mediatype, mediatypes of the form `a/b+json` are recognized.
+[SINCE Orbeon Forms 2017.1] In addition to the `application/json` mediatype, mediatypes of the form `a/b+json` are recognized.
 
 ### Conversion examples
 
@@ -102,6 +96,16 @@ converts to:
 ```
 
 Here is a link to [more examples](https://github.com/orbeon/orbeon-forms/blob/master/src/test/scala/org/orbeon/oxf/json/ConverterTest.scala) as part of the test suite.
+
+### Seeing the converted XML
+
+You can visualize the XML converted from JSON with Form Builder as follows:
+
+1. Create a new form.
+2. In the Advanced tab, create a new HTTP service, name it `my-service`, provide the URL to your JSON, and save.
+3. In the Advanced tab, create a new Action, name it `show-result`, run it on form load after the controls are ready, have it call `my-service`. 
+4. Still while editing the new action, in the Service Response Actions tab set the value of "(control-1)" to `saxon:serialize(., 'xml')`.
+4. Hit the Text button, and you'll find the XML in the text field. To make it easier to read, copy the XML in the text field, and paste it in an [XML formatting tool](https://www.freeformatter.com/xml-formatter.html).
 
 ## Sending JSON
 
