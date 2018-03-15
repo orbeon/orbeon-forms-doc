@@ -103,13 +103,13 @@ You can visualize the XML converted from JSON with Form Builder as follows:
 
 1. Create a new form.
 2. In the Advanced tab, create a new HTTP service, name it `my-service`, provide the URL to your JSON, and save.
-    ![HTTP Service Editor dialog](images/submission-json-service.png)
+    <img alt="HTTP Service Editor dialog" src="images/submission-json-service.png" width="502">
 3. In the Advanced tab, create a new Action, name it `show-result`, run it on form load after the controls are ready, have it call `my-service`.
-    ![Actions Editor dialog](images/submission-json-action-general.png)
+    <img alt="Actions Editor dialog" src="images/submission-json-action-general.png" width="803">
 4. Still while editing the new action, in the Service Response Actions tab set the value of "(control-1)" to `saxon:serialize(., 'xml')`.
-    ![Actions Editor dialog](images/submission-json-action-response.png)
+    <img alt="Actions Editor dialog" src="images/submission-json-action-response.png" width="803">
 5. Hit the Text button, and you'll find the XML in the text field. To make it easier to read, copy the XML in the text field, and paste it in an [XML formatting tool](https://www.freeformatter.com/xml-formatter.html).
-    ![Response in text field](images/submission-json-response.png)
+    <img alt="Response in text field" src="images/submission-json-result.png" width="464">
 
 ## Sending JSON
 
