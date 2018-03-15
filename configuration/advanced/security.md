@@ -12,9 +12,9 @@ Orbeon Forms is used by health care, financial companies, government entities, a
 
 Until recently, the most publicly reported security flaws were [buffer overflows][1]. The server-side code in Orbeon Forms is entirely written in Java and Scala, languages which performs bounds checking and other measures to shield programs from similar issues.
 
-### Cross-site scripting (XSS)
+### Cross site scripting
 
-[XSS][2] attacks come from the application taking some users' input, through form elements, request parameters, or otherwise, and displaying it on the page without proper escaping, thus allowing a malicious user to inject code into the page. To prevent this, Orbeon Forms:  
+Cross-site scripting ([XSS][2]) attacks come from the application taking some users' input, through form elements, request parameters, or otherwise, and displaying it on the page without proper escaping, thus allowing a malicious user to inject code into the page. To prevent this, Orbeon Forms:  
 
 * always encodes content provided by the user
 * the content is stored in a safe container: XML
@@ -22,11 +22,11 @@ Until recently, the most publicly reported security flaws were [buffer overflows
 * when users can enter rich content (HTML), Orbeon Forms automatically performs [HTML cleanup][3] on the data provided by users even before it reaches your application, so only HTML known to be safe is kept
 * control values sent to the server are never inserted literally into queries  
 
-### Authentication, cookie security
+### Authentication and cookie security
 
 Orbeon Forms doesn't handle aspects of the infrastructure that can be handled in a better, more versatile, and more secure way by your application server. For instance, Orbeon Forms doesn't do user authentication itself, but relies on your application server. In a similar manner, it doesn't keep track of users' sessions, but leaves that to the application server, which, say, you could be setup to tie cookies to IP addresses to prevent cookie stealing.  
 
-### Modification of the internal state (XForms)
+### Modification of the internal state
 
 #### Rationale
 
@@ -48,9 +48,9 @@ The Orbeon Forms XForms engine typically interacts with the client using Ajax re
 * Each Ajax request has a unique sequence number. The server rejects incorrect sequence numbers. This prevents simply replaying incoming requests.
 * Only requests via POST can have a side-effect on Orbeon Forms internal state. This excludes attacks via simply loading a URL via an image or a link.
 
-### Cross-site request forgery (XSRF)
+### Cross site request forgery
 
-This can be understood in 2 ways.
+Cross-site request forgery (XSRF) can be understood in 2 ways.
 
 The first way is the risk of using Orbeon to perform CSRF attacks on another site. This relies on the ability for users to inject content into an Orbeon Forms page. Orbeon takes steps to protect pages against this, as documented above.
 
@@ -65,13 +65,13 @@ The [Wikipedia page about CSRF][4] confirms that some of the measures above are 
 * "Requiring a secret, user-specific token in all form submissions and side-effect URLs prevents CSRF; the attacker's site cannot put the right token in its submissions"  This is handled by the unique UUID and request number used by Orbeon in all requests.
 * "GET requests never have a permanent effect" is implemented by Orbeon Forms.
 
-### Communication with services (XForms)
+### Communication with services
 
 XForms pages communicate with the "outside world", say to load data initially shown in your page or to save data entered by users, by calling _services_. Services are usually HTTP services, such as REST or web services. These services typically implement your application backend logic: they provide data to your form and receive data from your form. With some XForms implementations, the calls to those services are made from the browser. This can potentially pose a significant security risk: it means you can't keep those services behind your firewall, and that the user can doctor the data sent to the services.
 
 With Orbeon Forms, call to services are made from the Orbeon Forms server. You can keep the services running behind your firewall, and users won't be able to doctor the data sent to the services, or even see what that data is.  
 
-### Constraints on drop-downs, lists, radio buttons, and checkboxes
+### Constraints on selection controls
 
 Forms often constraint the values that can be entered by users with drop-downs, lists, radio buttons, or checkboxes. Say users need to rate a service and you provide a radio buttons they can select to choose a grade from 1 to 5. The values for the radio buttons will be 1, 2, 3, 4, and 5. In most web applications, users can easily doctor the value they send back to the server, and send, say 100. If you don't perform in your server-side code an additional check on the value received from the browser, you will take the 100 at face value, and users will be able to game an average of all the ratings you later compute based on that value.
 
