@@ -1624,51 +1624,73 @@ Features to test, with all supported browsers:
 
 ## Release process
 
-- [-] maybe: choose and create a new demo form from scratch to integrate with this release or next
-- [x] i18n
-    - [-] ping people who have provided i18n resources ([spreadsheet](https://docs.google.com/a/orbeon.com/spreadsheets/d/1U8HQj_l2n-hEgTaBT5aOkmNKezXZE1wFW_Lb94dATZs/edit#gid=0))
-    - [-] update "Localizing Orbeon Forms" and "Supported-Languages":
+### Major release
+
+- [ ] maybe: choose and create a new demo form from scratch to integrate with this release or next
+- [ ] i18n
+    - [ ] ping people who have provided i18n resources ([spreadsheet](https://docs.google.com/a/orbeon.com/spreadsheets/d/1U8HQj_l2n-hEgTaBT5aOkmNKezXZE1wFW_Lb94dATZs/edit#gid=0))
+    - [ ] update "Localizing Orbeon Forms" and "Supported-Languages":
         - ../form-runner/feature/localization.md
         - localizing-orbeon-forms.md
-    - [x] update FR/FB properties with full / almost full languages lists
+    - [ ] update FR/FB properties with full / almost full languages lists
+- [ ] check diff of `-ce`/`-pe` branches, see if missed commits
 - [ ] doc/test plan
-    - [x] go through all new features (github issues also) and make sure test plan or automated tests cover them
+    - [ ] go through all new features (github issues also) and make sure test plan or automated tests cover them
     - [ ] take note of which features could be blog worthy
-    - [x] check all (most) screenshots on http://doc.orbeon.com/ are up to date
+    - [ ] check all (most) screenshots on http://doc.orbeon.com/ are up to date
 - [ ] make sure [DDL doc](../form-runner/persistence/relational-db.md) is up to date:
-- [x] decide whether XBL components/other features need to be deprecated/removed
+- [ ] decide whether XBL components/other features need to be deprecated/removed
     - go over all existing XBL components
-- [x] update readme and build.xml version number
+- [ ] update README and `build.xml` version number
     - do on master branches too
-    - create branches + track + push
-- [x] complete blog post with list of new features and compatibility notes [NOTE: don't release x.y.1 for CE]
+    - create branches
+- [ ] complete blog post with list of new features and compatibility notes
 - [ ] testing
-    - [x] testing according to test plan
-    - [-] SQL Server: need to test against RDS Web edition
+    - [ ] testing according to test plan
+    - [ ] SQL Server: need to test against RDS Web edition
         - use M1 small instance
     - [ ] test `/register` and `/license` forms
-    - [-] client-side tests
+    - [ ] client-side tests
         - run through all
         - see if failing ones are reasonable
-- [x] upload build to github
-    - [x] tag release on 4.x.-pe/4.x-ce branches and push tags
-    - [x] use CE tag in github release, create CE branch/tag if needed
-    - [x] upload CE and PE files to release, including .md5
-- [x] put PE sources in Google Drive
-- [x] link new release from orbeon.com/downloads and home page [NOTE: don't release x.y.1 for CE]
-- [x] publish blog post
-- [x] updates to doc
-    - [x] update [List of features](../features.md)
-    - [x] update [Release history](../release-history.md)
-    - [x] update [Upgrading from older versions](../configuration/advanced/upgrading.md)
-    - [x] upgrade [Database support matrix](../form-runner/persistence/db-support.md)
-- [x] announce: twitter, orbeon forum, XForms mailing-lists
-- [x] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
-    - [x] test register/license
-    - [-] Maybe: check [these JVM options](http://blog.sokolenko.me/2014/11/javavm-options-production.html)
+- [ ] tag `-ce`/`-pe` branches and push tags
+- [ ] upload build to github
+    - [ ] use CE tag in github release, create CE branch/tag if needed
+    - [ ] upload CE and PE files to release, including .md5
+- [ ] put PE sources in Google Drive
+- [ ] link new release from orbeon.com/downloads and home page
+- [ ] publish blog post
+- [ ] updates to doc
+    - [ ] update [List of features](../features.md)
+    - [ ] update [Release history](../release-history.md)
+    - [ ] update [Upgrading from older versions](../configuration/advanced/upgrading.md)
+    - [ ] upgrade [Database support matrix](../form-runner/persistence/db-support.md)
+- [ ] announce: twitter, orbeon forum, XForms mailing-lists
+- [ ] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
+    - [ ] test register/license
+    - [ ] Maybe: check [these JVM options](http://blog.sokolenko.me/2014/11/javavm-options-production.html)
 - [ ] after release tasks
     - [ ] brainstorm, bug review, and planning of next release <!--  what we would do with the product if we didn't have customer pressure (RESOLUTION from 2013-08-06) -->
     - [ ] review all issues marked as Top Issue/Top RFE
     - [ ] review [Product goals for 2018](https://docs.google.com/document/d/15NEQEEQbRxdOZ1ki-ruGsgi8kZFDFKKlwWhpLOz7lro/edit)
     - [ ] update [Roadmap](../roadmap.md) and tweet
+
+### Minor release
+
+- [x] quickly test fixes in build
+- [x] check diff of `-ce`/`-pe` branches, see if missed commits
+- [x] update README and `build.xml` version number
+    - do on master branches too
+- [x] complete blog post with list of new features and compatibility notes for PE only
+- [x] tag `-ce`/`-pe` branches and push tags
+- [x] upload build to github
+    - [x] upload PE files to release, including .md5
+- [x] put PE sources in Google Drive
+- [x] link new release from orbeon.com/downloads and home page [NOTE: don't release for CE]
+- [x] quick review and publish blog post
+- [x] updates to doc
+    - [x] update [Release history](../release-history.md)
+- [x] announce: twitter, orbeon forum, XForms mailing-lists
+- [ ] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
+    - [ ] test register/license
     
