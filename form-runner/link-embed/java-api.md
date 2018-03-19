@@ -103,24 +103,26 @@ Form runner must use "combined resources" to work. This is the case by default i
 
 ### Passing information about the current user
 
-You can pass information about the current user to Orbeon Forms through headers. For this, enable header-based authentication by editing the `properties-local.xml` in the Orbeon Forms web app and adding:
+You can pass information about the current user to Orbeon Forms through headers. For this:
 
-```xml
-<property 
-    as="xs:string"
-    name="oxf.fr.authentication.method"
-    value="header"/>
-```
+1. Enable header-based authentication by editing the `properties-local.xml` in your Orbeon Forms web app, adding:
 
-Then, pass the current user's username as the value of the `My-Username-Header` header, through a map provided as the last argument to your call to `API.embedFormJava()`:
+    ```xml
+    <property 
+        as="xs:string"
+        name="oxf.fr.authentication.method"
+        value="header"/>
+    ```
 
-```java
-Map<String, String> headers = new HashMap<String, String>();
-headers.put("My-Username-Header", request.getRemoteUser());
-API.embedFormJava(…, headers);
-```
+2. Back to your web app, pass the current user's username as the value of the `My-Username-Header` header, through a map you provide as the last argument to your call to `API.embedFormJava()`:
 
-If needed, you can also use additional headers to [pass the user's roles and group](../access-control/users.md#if-using-individual-headers).
+    ```java
+    Map<String, String> headers = new HashMap<String, String>();
+    headers.put("My-Username-Header", request.getRemoteUser());
+    API.embedFormJava(…, headers);
+    ```
+
+If needed, you can also [pass the user's roles and group through additional headers](../access-control/users.md#if-using-individual-headers).
 
 ### Logging configuration
 
