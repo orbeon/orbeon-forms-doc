@@ -87,7 +87,6 @@ And here is an example of embedding a form from a JSP page:
 ```
 
 The `Map<String, String>` allows passing a Java `Map` of HTTP header name/value pairs. These are passed to Form Runner when loading a form. Form Runner can access HTTP headers using the [`xxf:get-request-header()` XPath function](https://doc.orbeon.com/xforms/xpath/extension-http.html#xxfget-request-header).
- 
 
 #### Form Runner configuration
 
@@ -101,6 +100,27 @@ Form runner must use "combined resources" to work. This is the case by default i
     name="oxf.xforms.combine-resources"
     value="true"/>
 ```
+
+### Passing information about the current user
+
+You can pass information about the current user to Orbeon Forms through headers. For this, enable header-based authentication by editing the `properties-local.xml` in the Orbeon Forms web app and adding:
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.fr.authentication.method"
+    value="header"/>
+```
+
+Then, pass the current user's username as the value of the `My-Username-Header` header, through a map provided as the last argument to your call to `API.embedFormJava()`:
+
+```java
+Map<String, String> headers = new HashMap<String, String>();
+headers.put("My-Username-Header", request.getRemoteUser());
+API.embedFormJava(…, headers);
+```
+
+If needed, you can also use additional headers to [pass the user's roles and group](../access-control/users.md#if-using-individual-headers).
 
 ### Logging configuration
 
