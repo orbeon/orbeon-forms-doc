@@ -1683,6 +1683,7 @@ Features to test, with all supported browsers:
     - do on master branches too
 - [x] complete blog post with list of new features and compatibility notes for PE only
 - [x] tag `-ce`/`-pe` branches and push tags
+    - NOTE: We don't cherry-pick commits on `-ce` anymore. We can create a "fake" tag just for the release.
 - [x] upload build to github
     - [x] upload PE files to release, including .md5
 - [x] put PE sources in Google Drive
@@ -1693,4 +1694,3 @@ Features to test, with all supported browsers:
 - [x] announce: twitter, orbeon forum, XForms mailing-lists
 - [ ] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
     - [ ] test register/license
-    
