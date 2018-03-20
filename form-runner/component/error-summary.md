@@ -121,6 +121,24 @@ You can dispatch the `fr-unvisit-all` event to the error summary. This:
 * makes the summary consider all controls under the configured observer(s) as not visited
 * marks all controls under the configured observer(s) as not visited by removing the `xforms-visited` and `xforms-alert-active-visited` classes
 
+### Setting a page size
+
+[SINCE Orbeon Forms 2018.1]
+
+When forms have a large number of errors, the Error Summary can become too large to be very useful. By default, the
+Error Summary only shows 20 errors, and link buttons appear to show more or less errors if needed.
+
+To change the default, you can set the following property:
+
+```xml
+<property 
+    as="xs:integer" 
+    name="oxf.xforms.xbl.fr.error-summary.page-size"
+    value="10"/>
+```
+
+The `page-size` attribute can also be used on the component when used outside of Form Runner.
+
 ### Adding a header and a footer
 
 When there are no visible errors, the entire body of the error summary is hidden. You can had your own header and footer content within that body so it hides and shows depending on whether there are errors or not. Just add the `<fr:header>` and `<fr:footer>` elements:
