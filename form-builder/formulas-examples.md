@@ -2,21 +2,22 @@
 
 <!-- toc -->
 
-## Testing on a Yes/No Answer field
+## Testing on a Yes No Answer field
 
 Say you have a *Yes/No Answer* field (before 2016.1 called *Boolean Input*), named `yes-no`, and if the answer is *Yes*, you would like to show another field. In the *Visibility* expression for this other field, you should write:
 
 ```xpath
-$yes-no = true()
+$yes-no/string() = 'true'
 ```
 
-But why not just write `$yes-no`? If you do, the expression will always evaluate to true, because Orbeon Forms evaluates `boolean($yes-no)`. Since `$yes-no` points to a node, the `boolean` function [always returns true](https://www.w3.org/TR/xpath-functions-3/#func-boolean). Instead, when you're doing `$yes-no = true()`, `$yes-no` is [atomized](https://www.w3.org/TR/xpath-30/#id-atomization), and since it is a node its typed value is returned, which is the boolean you want.
+- Why not just write `$yes-no`? If you do, the expression will always evaluate to true, because Orbeon Forms evaluates `boolean($yes-no)`: since `$yes-no` points to a node, the `boolean` function [always returns true](https://www.w3.org/TR/xpath-functions-3/#func-boolean).
+- Why not write `$yes-no = true()`? In this case, since `$yes-no` compared to boolean value, it is [atomized](https://www.w3.org/TR/xpath-30/#id-atomization). The node pointed to by `$yes-no` is of type boolean, so the atomization process takes the node typed value. When the node contains the string `true` or `false`, this expression works as expected. However, if it contains an empty string, which up to Orbeon Forms 2017.2 is the default value for that field, then the expression fails. For the purpose of determining whether a field is valid, read-only, or visible, when the expression fails the result will be considered to be `false`, so it will work if the expression is used on its own. However, if the expression is used in an `or` clause (`$yes-no = true() or something`), if the `$yes-no = true()` part is evaluated first, the expression as a whole will fail and return false, which is incorrect in case the other part of the `or` clause is true. Also, in the case of a calculated value, the result will be the empty string, instead of `false`.
 
 ## Sum of values in a repeat
 
 ### With Orbeon Forms 4.5 and newer
 
-Scenario: compute the sum of values in multiple repeat itefrations.
+Scenario: compute the sum of values in multiple repeat iterations.
 Say you have:
 
 * a repeated grid
