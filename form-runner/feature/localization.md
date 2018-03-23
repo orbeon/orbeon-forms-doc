@@ -210,12 +210,19 @@ Spanish   | F | F | P | P | P
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
 
+## Right to left languages
+
+[SINCE Orbeon Forms 2017.2] If in Form Builder you create a form in Arabic or Hebrew, then at runtime the direction is automatically set to right-to-left, and the browser renders the page accordingly. However, note that:
+
+- Form Runner itself isn't localized in Arabic or Hebrew, which means that labels of standard interface elements, like the "Save" button, will show in English. If you need to create forms in one of those 2 languages, you will also want to [provide translations for those resources](../../contributors/localizing-orbeon-forms.md) in Arabic or Hebrew.
+- As an exception to the rule, section titles will still be shown to the left, instead of the right (see [issue #3306](https://github.com/orbeon/orbeon-forms/issues/3306)).
+
 ## Known limitations
 
 Form Builder (Orbeon Forms PE only) lets you create forms in multiple languages. Most world languages are available, with some limitations described below.
 
 1. PDF output: There are some  known issues with ligatures in some Indian languages such as Hindi or Tamil.
-2. Right-to-left languages are not officially supported.
+2. See the previous section for limitations specific to right-to-left languages.
 
 We are glad to get help to address these two limitations.
 
