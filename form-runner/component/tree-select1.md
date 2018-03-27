@@ -113,6 +113,21 @@ class="my-class-{position()}"
 
 When used in Form Runner's readonly modes, the control doesn't show a tree but a field with the label associated with the user selection.
 
+## Usage from plain XForms
+
+You need the following configuration to use from a plain XForms (non-Form Runner) page, as the component's JavaScript is part of Form Runner:
+
+
+```xml
+<xh:script type="text/javascript" src="/apps/fr/resources/scalajs/orbeon-form-runner.js"/>
+```
+
+And then, on your main XForms model, put the `xxf:assets.baseline.excludes` attribute like this:
+
+```xml
+<xf:model xxf:assets.baseline.excludes="/ops/javascript/scalajs/orbeon-xforms.js">
+```  
+
 ## Custom styling
 
 As of Orbeon Forms 2017.1, the implementation of the `tree` appearance uses the [Fancytree](https://github.com/mar10/fancytree) JavaScript library.
