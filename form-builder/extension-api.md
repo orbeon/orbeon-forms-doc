@@ -42,7 +42,7 @@ In order to add a custom Form Settings tab, the following property must be set t
 
 ```xml
 <property
-  as="xs:string
+  as="xs:string"
   name="oxf.fb.extension.form-settings"
   value="acme:form-settings"/>
 ```
