@@ -232,9 +232,17 @@ One benefit of this mechanism is that it allows making such combined files to be
 
 ## JavaScript at the bottom of the page
 
-This feature is enabled by default.
+### With Orbeon Forms 2018.1 and newer
 
-The following property, if enabled, places external and inline JavaScript at the bottom of the page:
+With Orbeon Forms 2018.1 and newer, this feature is deprecated and scripts are by default placed within the `<head>` section
+with the `defer` attribute. 
+
+### With Orbeon Forms 2017.2 and older
+
+With Orbeon Forms 2017.2 and older, this feature is enabled by default.
+
+The following property, if enabled, places external and inline JavaScript at the bottom of the page for performanc
+reasons:
 
 ```xml
 <property
