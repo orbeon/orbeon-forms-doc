@@ -10,7 +10,7 @@ When you publish the form, assuming you have Orbeon Forms deployed on a server o
 
 In a typical deployment, users will access this page from another part of your web site or web application that contains a link to form served by Orbeon Forms. For instance, a city government might have on its web site a page listing forms citizen can fill out, which links to the marriage registration form on `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
 
-<object data="../images/linking-page-with-link.pdf" width="491"></object>
+<img alt="Page on your web site/app linking to a form" src="../images/linking-page-with-link.png" width="491">
 
 ## Technology agnostic
 
