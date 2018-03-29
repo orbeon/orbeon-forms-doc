@@ -10,13 +10,13 @@ When you publish the form, assuming you have Orbeon Forms deployed on a server o
 
 In a typical deployment, users will access this page from another part of your web site or web application that contains a link to form served by Orbeon Forms. For instance, a city government might have on its web site a page listing forms citizen can fill out, which links to the marriage registration form on `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
 
-<img alt="Page on your web site/app linking to a form" src="../images/linking-page-with-link.png" width="491">
+<img alt="Page on your web site/app linking to a form" src="../images/linking-page-with-link.png" width="484">
 
 ## Technology agnostic
 
 Linking doesn't make any assumption on the technology used by the web site or application you're linking from. Your site could use Drupal, WordPress, be served by IIS, using .NET, or any other technology. For instance, the diagram below is for a situation where your web site is served by Microsoft IIS, implemented in .NET, and links to forms served by Orbeon Forms.
 
-<img alt="IIS front-end" src="../images/linking-iis-net.png" width="398">
+<img alt="IIS front-end" src="../images/linking-iis-net.png" width="441">
 
 ## Paths
 
