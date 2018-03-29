@@ -43,7 +43,8 @@ physical or virtual.
 A load balancer is required. It is in charge of proxying client requests to specific servers, detect which servers
 might have failed or are being brought back, and ensuring session affinity.
 
-<!-- TODO: diagram -->
+
+![Replication architecture](images/replication.png)
 
 ## Configuration
 
@@ -335,6 +336,7 @@ The `ehcache.xml` configuration provided above attempts to minimize this kind of
 ## See also
 
 - [Installation](README.md)
+- Blog post: [High-Availability Thanks to State Replication](http://blog.orbeon.com/2018/03/high-availability-thanks-to-state.html)
 
 [1]: http://www.orbeon.com/download
 [2]: ../form-runner/persistence/autosave.md
