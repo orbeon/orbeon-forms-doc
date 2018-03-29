@@ -1,6 +1,7 @@
 {
     "plugins": [
         "toc",
+        "embed-pdf",
         "-sharing"
     ],
     "pluginsConfig": {}
