@@ -31,22 +31,51 @@ The `fr:grid` component organizes contained controls in a grid of rows and colum
 
 ## Basic usage
 
+### Format of rows and cells
+
+#### Starting Orbeon Forms 2017.2
+
+With Orbeon Forms 2017.2 and newer, the format for grid rows and cells produced by Form Builder has changed. Instead of using `<xh:tr>` and `<xh:td>`, it uses `<fr:c>`. `<xh:tr>` and `<xh:td>` are still supported for backward compatibility.
+
+With `<fr:c>`, the following attributes are supported:
+
+- `x`:
+    - x position
+    - required
+    - minimum: 1
+    - maximum: 12
+- `y`:
+    - y position
+    - required
+    - minimum: 1
+    - maximum: none 
+- `w`:
+    - width of the cell
+    - required
+    - minimum: 1
+    - maximum: 12
+- `h`:
+    - height of the cell
+    - optional, defaults to 1
+    - minimum: 1
+    - maximum: none 
+    
+The following must hold:
+
+- cells must not overlap
+- cells must not extend beyond column 12
+
+In other words, the grid must be well-formed.
+
+However, the grid may have holes, and not all cells need be present.
+
+#### Until Orbeon Forms 2017.1
+
+`<xh:tr>` and `<xh:td>` are used to indicate rows and cells, following the HTML tables 
+
 ### Non-repeated mode
 
-```xml
-<fr:grid id="note-grid">
-    <xh:tr>
-        <xh:td>
-            <xf:textarea id="note-text-control" bind="note-text-bind">
-                <xf:label ref="$form-resources/note-text/label"/>
-                <xf:hint ref="$form-resources/note-text/hint"/>
-                <xf:help ref="$form-resources/note-text/help"/>
-                <xf:alert ref="$form-resources/note-text/alert"/>
-            </xf:textarea>
-        </xh:td>
-    </xh:tr>
-</fr:grid>
-```
+#### General information
 
 Attributes:
 
@@ -55,27 +84,50 @@ Attributes:
 
 _NOTE: In the future `bind` and `ref` should be supported._
 
-### Repeated mode
+#### Starting Orbeon Forms 2017.2
 
 ```xml
-<fr:grid
-    id="note-grid"
-    repeat="content"
-    bind="note-bind"
-    template="instance('note-template')"
-    min="0">
+<fr:grid id="note-grid">
+    <fr:c y="1" x="1" w="12">
+        <!-- A form control will be placed here -->
+    </fr:c>
+</fr:grid>
+```
+
+Example with multiple cells spanning rows and columns:
+
+```xml
+<fr:grid id="grid-1-grid">
+    <fr:c y="1" x="1" w="6">
+        <!-- A form control will be placed here -->
+    </fr:c>
+    <fr:c y="1" x="7" w="6" h="2">
+        <!-- A form control will be placed here -->
+    </fr:c>
+    <fr:c x="1" y="2" w="3">
+        <!-- A form control will be placed here -->
+    </fr:c>
+    <fr:c x="4" y="2" w="3">
+        <!-- A form control will be placed here -->
+    </fr:c>
+</fr:grid>
+```
+
+#### Until Orbeon Forms 2017.1
+
+```xml
+<fr:grid id="note-grid">
     <xh:tr>
         <xh:td>
-            <xf:textarea id="note-text-control" bind="note-text-bind">
-                <xf:label ref="$form-resources/note-text/label"/>
-                <xf:hint ref="$form-resources/note-text/hint"/>
-                <xf:help ref="$form-resources/note-text/help"/>
-                <xf:alert ref="$form-resources/note-text/alert"/>
-            </xf:textarea>
+            <!-- A form control will be placed here -->
         </xh:td>
     </xh:tr>
 </fr:grid>
 ```
+
+### Repeated mode
+
+#### General information
 
 Attributes:
 
@@ -133,6 +185,38 @@ Attributes:
   - `bottom`
     - the "Add Another" or "+" button adds a new repetition after the last iteration
     - this is the default in `minimal` appearance
+
+#### Starting Orbeon Forms 2017.2
+
+```xml
+<fr:grid
+    id="note-grid"
+    repeat="content"
+    bind="note-bind"
+    template="instance('note-template')"
+    min="0">
+    <fr:c y="1" x="1" w="12">
+        <!-- A form control will be placed here -->
+    </fr:c>
+</fr:grid>
+```
+
+#### Until Orbeon Forms 2017.1
+
+```xml
+<fr:grid
+    id="note-grid"
+    repeat="content"
+    bind="note-bind"
+    template="instance('note-template')"
+    min="0">
+    <xh:tr>
+        <xh:td>
+            <!-- A form control will be placed here -->
+        </xh:td>
+    </xh:tr>
+</fr:grid>
+```
 
 ## Data format
 
