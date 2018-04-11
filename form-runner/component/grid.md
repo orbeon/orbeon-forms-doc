@@ -37,7 +37,7 @@ The `fr:grid` component organizes contained controls in a grid of rows and colum
 
 With Orbeon Forms 2017.2 and newer, the format for grid rows and cells produced by Form Builder has changed. Instead of using `<xh:tr>` and `<xh:td>`, it uses `<fr:c>`. `<xh:tr>` and `<xh:td>` are still supported for backward compatibility.
 
-With `<fr:c>`, the following attributes are supported:
+The following attributes are supported on `<fr:c>`:
 
 - `x`:
     - x position
@@ -71,7 +71,18 @@ However, the grid may have holes, and not all cells need be present.
 
 #### Until Orbeon Forms 2017.1
 
-`<xh:tr>` and `<xh:td>` are used to indicate rows and cells, following the HTML tables 
+`<xh:tr>` and `<xh:td>` are used to indicate rows and cells, following the HTML tables `<tr>` and `<td>` scheme.
+
+The following attributes are supported on `<xh:td>`:
+
+- `rowspan`
+    - optional, defaults to 1
+    - as in HTML
+    - supported in Form Builder
+- `colspan`
+    - optional, defaults to 1
+    - as in HTML
+    - NOT supported in Form Builder
 
 ### Non-repeated mode
 
