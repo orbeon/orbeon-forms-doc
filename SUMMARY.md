@@ -105,7 +105,7 @@
         * [Java Embedding API](form-runner/link-embed/java-api.md)
         * [Liferay full portlet](form-runner/link-embed/liferay-full-portlet.md)
         * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
-        * [Securing Form Runner access when embedding](form-runner/link-embed/securing.md)
+        * [Securing Form Runner access](form-runner/link-embed/securing.md)
     * [Access control and permissions](form-runner/access-control/README.md)
         * [Users](form-runner/access-control/users.md)
         * [Deployed forms](form-runner/access-control/deployed-forms.md)
