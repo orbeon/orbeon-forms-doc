@@ -33,7 +33,17 @@ If both your application or portal and Form Runner run on the same server, you c
 
 ### Using HTTPS
 
-The connection between the embedding API and Form Runner uses HTTP or HTTPS. As in all cases with HTTP/HTTPS, it is better to use HTTPS so that the connection cannot be snooped on and so that the client knows it is connecting to the desired endpoint. To enable HTTPS, just use a URL starting with `https://` in the `form-runner-url` parameter in `web.xml`. The server or container on which Form Runner runs must have a proper SSL certificate installed.
+#### Introduction
+
+The connection between the embedding API and Form Runner uses HTTP or HTTPS. As in all cases with HTTP/HTTPS, it is better to use HTTPS so that the connection cannot be snooped on and so that the client knows it is connecting to the desired endpoint.
+
+#### Client setup
+
+To enable HTTPS, just use a URL starting with `https://` in the `form-runner-url` parameter in `web.xml`.
+
+#### Server setup
+
+The server or container on which Form Runner runs must have a proper SSL certificate installed and listen on the standard HTTPS port (443), unless a port is explicitly set by the client.
 
 ### Using BASIC authentication
 
@@ -46,7 +56,7 @@ There are two ways to set username and password using the embedding API:
 - statically, within `web.xml`
 - dynamically, by passing the `Authorization` when calling the API
 
-#### Statically setting the username and password
+#### Client setup with static username and password
 
 This can be done in the `form-runner-url` parameter in `web.xml` by adding a username and password to the URL:
 
@@ -59,7 +69,7 @@ This can be done in the `form-runner-url` parameter in `web.xml` by adding a use
 
 The drawback of this solution is that the username and password are in clear in the `web.xml` file, which means that you have to properly secure access to that file.
 
-#### Passing the username and password with the Authorization header
+#### Client setup with dynamic username and password
 
 Another way is to pass the `Authorization` header directly from the embedding code, for example, assuming Java 8 which includes `java.util.Base64`:
 
@@ -95,7 +105,7 @@ Another way is to pass the `Authorization` header directly from the embedding co
 </html>
 ```
 
-#### Form Runner setup
+#### Server setup
 
 On the Form Runner side, BASIC authentication must be set up. `web.xml` must use the `BASIC` `auth-method`:
 
