@@ -4,20 +4,34 @@
 
 ## Introduction
 
-When Form Runner embedding is used, the system has two parts:
+When the [Form Runner Java Embedding API](java-api.md) or the [Form Runner Liferay Proxy Portlet](liferay-proxy-portlet.md) is used, the system has two parts:
 
-- the embedding client, which runs within your application and uses the embedding API
+- the *embedding client*, which runs within your application (using embedding API) or within a portal
 - the Form Runner server, which runs Form Runner and/or Form Builder
 
-In this case not only your application needs to be properly secured, but the Form Runner server also needs to be secured.
+In this case not only does your application or the portal need to be secured, but the separate Form Runner server also needs to be properly secured. If that is not the case, then a user or attacker might, inadvertently or intentionally, manage to access the Form Runner server directly without going through your application or portal, possibly gaining access to forms or operations that must be disallowed. 
+
+The main idea is that the Form Runner server must only respond to requests coming from your application or the proxy portlet, but not from direct HTTP requests.
+
+This page describes a few solution which are not mutually exclusive:
+
+- IP filter
+- HTTPS and BASIC Authentication
+- Client certificate
 
 ## IP filter
 
-TODO
+A simple security step consists in setting up an IP filter on the Form Runner side. You can do this for example  with the third-party [UrlRewriteFilter](http://tuckey.org/urlrewrite/) servlet filter.
 
-## HTTPS and BASIC Authentication 
+This is the Swiss Army knife of servlet filters. In particular, it allows you to filter requests based on on a number of factors, including the IP address of the originating host. In this case, that IP address would be that of the server on which your application or portal runs. That IP address would typically be local to your network.
 
-First, the connection between the embedding API and Form Runner uses HTTP or HTTPS. As in all cases with HTTP/HTTPS, it is better to use HTTPS so that the connection cannot be snooped on and so that the client knows it is connecting to the desired endpoint. To enable HTTPS, just use a URL starting with `https://` in the `form-runner-url` parameter in `web.xml`. The server / container on which Form Runner runs must have a proper SSL certificate installed.
+If both your application or portal and Form Runner run on the same server, you can even restrict access to requests coming from `localhost`.
+
+*WARNING: Using an IP filter does not protect access to users who have any kind of access to the host machine. For example, a user with rights to `ssh` into that machine will likely be able to connect to Form Runner via HTTP. So using an IP filter is only a solution in cases where the servers and network are trusted.*
+
+## HTTPS and BASIC Authentication
+
+First, the connection between the embedding API and Form Runner uses HTTP or HTTPS. As in all cases with HTTP/HTTPS, it is better to use HTTPS so that the connection cannot be snooped on and so that the client knows it is connecting to the desired endpoint. To enable HTTPS, just use a URL starting with `https://` in the `form-runner-url` parameter in `web.xml`. The server or container on which Form Runner runs must have a proper SSL certificate installed.
 
 Second, Form Runner must know that the request comes from the embedding application and not somebody else. For this, one way is to use BASIC HTTP authentication. This too can be done in the `form-runner-url` parameter in `web.xml` by adding a username and password to the URL:
 
@@ -63,6 +77,18 @@ Another way is to pass the `Authorization` header directly from the embedding co
 </body>
 </html>
 ```
+
+On the Form Runner side, BASIC authentication must be set up. `web.xml` must use the `BASIC` `auth-method`:
+
+```xml
+<login-config>
+    <auth-method>BASIC</auth-method>
+</login-config>
+```
+
+In addition, a user and password must be configured in the container. With Tomcat, the easiest way is to use [`tomcat-users.xml`](https://tomcat.apache.org/tomcat-8.5-doc/realm-howto.html#UserDatabaseRealm).
+
+*NOTE: `web.xml` only supports one `auth-method`. This means that if you configure Form Runner with the `BASIC` method to authenticate your application, and you attempt to access Form Runner directly with a web browser, you will also have to use the `BASIC` authentication. You cannot, at the same time, use the `FORM` authentication.*
 
 ## Client certificate
 
