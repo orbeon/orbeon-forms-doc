@@ -16,7 +16,7 @@ The main idea is that the Form Runner server must only respond to requests comin
 This page describes a few solution which are not mutually exclusive:
 
 - IP filter
-- HTTPS and BASIC Authentication
+- HTTPS and BASIC authentication
 - Client certificate
 
 ## IP filter
@@ -29,11 +29,26 @@ If both your application or portal and Form Runner run on the same server, you c
 
 *WARNING: Using an IP filter does not protect access to users who have any kind of access to the host machine. For example, a user with rights to `ssh` into that machine will likely be able to connect to Form Runner via HTTP. So using an IP filter is only a solution in cases where the servers and network are trusted.*
 
-## HTTPS and BASIC Authentication
+## HTTPS and BASIC authentication
 
-First, the connection between the embedding API and Form Runner uses HTTP or HTTPS. As in all cases with HTTP/HTTPS, it is better to use HTTPS so that the connection cannot be snooped on and so that the client knows it is connecting to the desired endpoint. To enable HTTPS, just use a URL starting with `https://` in the `form-runner-url` parameter in `web.xml`. The server or container on which Form Runner runs must have a proper SSL certificate installed.
+### Using HTTPS
 
-Second, Form Runner must know that the request comes from the embedding application and not somebody else. For this, one way is to use BASIC HTTP authentication. This too can be done in the `form-runner-url` parameter in `web.xml` by adding a username and password to the URL:
+The connection between the embedding API and Form Runner uses HTTP or HTTPS. As in all cases with HTTP/HTTPS, it is better to use HTTPS so that the connection cannot be snooped on and so that the client knows it is connecting to the desired endpoint. To enable HTTPS, just use a URL starting with `https://` in the `form-runner-url` parameter in `web.xml`. The server or container on which Form Runner runs must have a proper SSL certificate installed.
+
+### Using BASIC authentication
+
+#### Introduction
+
+Form Runner must know that the request comes from the embedding application and not somebody else. For this, one way is to use [BASIC HTTP authentication](https://en.wikipedia.org/wiki/Basic_access_authentication), a standard HTTP-based way of passing a username and password.
+
+There are two ways to set username and password using the embedding API:
+
+- statically, within `web.xml`
+- dynamically, by passing the `Authorization` when calling the API
+
+#### Statically setting the username and password
+
+This can be done in the `form-runner-url` parameter in `web.xml` by adding a username and password to the URL:
 
 ```xml
 <init-param>
@@ -43,6 +58,8 @@ Second, Form Runner must know that the request comes from the embedding applicat
 ```
 
 The drawback of this solution is that the username and password are in clear in the `web.xml` file, which means that you have to properly secure access to that file.
+
+#### Passing the username and password with the Authorization header
 
 Another way is to pass the `Authorization` header directly from the embedding code, for example, assuming Java 8 which includes `java.util.Base64`:
 
@@ -78,6 +95,8 @@ Another way is to pass the `Authorization` header directly from the embedding co
 </html>
 ```
 
+#### Form Runner setup
+
 On the Form Runner side, BASIC authentication must be set up. `web.xml` must use the `BASIC` `auth-method`:
 
 ```xml
@@ -93,3 +112,8 @@ In addition, a user and password must be configured in the container. With Tomca
 ## Client certificate
 
 TODO
+
+## See also
+
+- [Form Runner Java Embedding API](java-api.md)
+- [Form Runner Liferay Proxy Portlet](liferay-proxy-portlet.md) 
