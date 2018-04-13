@@ -46,3 +46,15 @@ When using versioning, you can pass the `form-version` URL parameter:
 ```
 
 By default, the latest available form definition version is used.
+
+### PDF and TIFF views
+
+- `fr-language`
+    - xxx
+
+[SINCE Orbeon Forms 2018.1]
+
+- `fr-use-pdf-template`
+    - xxx
+- `fr-pdf-template-name`
+    - xxx
