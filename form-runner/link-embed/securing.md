@@ -119,9 +119,17 @@ In addition, a user and password must be configured in the container. With Tomca
 
 *NOTE: `web.xml` only supports one `auth-method`. This means that if you configure Form Runner with the `BASIC` method to authenticate your application, and you attempt to access Form Runner directly with a web browser, you will also have to use the `BASIC` authentication. You cannot, at the same time, use the `FORM` authentication.*
 
+<!--
+
 ## Client certificate
 
 TODO
+
+## Secret token passing
+
+TODO
+
+-->
 
 ## See also
 
