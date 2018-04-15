@@ -31,11 +31,15 @@ Both the `fr:recaptcha` and `fr:simple-captcha` components support the same even
 
 ## reCAPTCHA
 
+### Supported version
+
+Orbeon Forms supports the reCAPTCHA v2 since Orbeon Forms 2018.1 and 2017.2.2. Google stopped supporting the reCAPTCHA v1 used by earlier versions of Orbeon Forms after March 31, 2018. Hence, if you're using the reCAPTCHA, and are using an older version of Orbeon Forms, you'll want to upgrade to a newer version which supports reCAPTCHA v2.
+
 ### Usage
 
 You can use this component to show users a captcha, like the one shown in the following screen shot:
 
-![](images/xbl-recaptcha.png)
+![](images/xbl-recaptcha.gif)
 
 1. First, you need to [sign up with reCAPTCHA][4] to get your own public/private key pair.
 2. Store your public and private keys in an instance:
@@ -74,13 +78,15 @@ You can use this component to show users a captcha, like the one shown in the fo
 
 You can configure:
 
-* The theme, with the `theme` property.
-* The language, with the `lang` property.
+- The theme, with the `theme` property.
+- The language:
+    - [reCAPTCHA v2] with the `lang` attribute on the `<html>` element.
+    - [reCAPTCHA v1] with the `lang` property.
 
 See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties. Just as with other properties, you can provide a static value using attributes:
 
 ```xml
-<fr:recaptcha theme="white" lang="fr">
+<fr:recaptcha theme="white">
 ```
 
 Or you can use nested elements if the values come from an instance:
@@ -88,7 +94,6 @@ Or you can use nested elements if the values come from an instance:
 ```xml
 <fr:recaptcha id="recaptcha">
     <fr:theme ref="instance('config')/theme"/>
-    <fr:lang ref="instance('config')/lang"/>
 </fr:recaptcha>
 ```
 
