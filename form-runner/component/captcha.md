@@ -33,13 +33,13 @@ Both the `fr:recaptcha` and `fr:simple-captcha` components support the same even
 
 ### Supported version
 
-Orbeon Forms supports the reCAPTCHA v2 since Orbeon Forms 2018.1 and 2017.2.2. Google stopped supporting the reCAPTCHA v1 used by earlier versions of Orbeon Forms after March 31, 2018. Hence, if you're using the reCAPTCHA, and are using an older version of Orbeon Forms, you'll want to upgrade to a newer version which supports reCAPTCHA v2.
+Orbeon Forms supports the reCAPTCHA v2 since Orbeon Forms 2018.1 and 2017.2.2. Google [stopped supporting the reCAPTCHA v1](https://developers.google.com/recaptcha/docs/faq#what-happens-to-recaptcha-v1) used by earlier versions of Orbeon Forms after March 31, 2018. Hence, if you're using the reCAPTCHA, and are using an older version of Orbeon Forms, you'll want to upgrade to a newer version which supports reCAPTCHA v2.
 
 ### Usage
 
 You can use this component to show users a captcha, like the one shown in the following screen shot:
 
-![](images/xbl-recaptcha.gif)
+<img alt="" src="images/xbl-recaptcha.gif" width="308">
 
 1. First, you need to [sign up with reCAPTCHA][4] to get your own public/private key pair.
 2. Store your public and private keys in an instance:
