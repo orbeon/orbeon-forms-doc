@@ -85,6 +85,18 @@ On the other hand, the following actions run:
 
 ```
 
+For backward compatibility, if you need a non-relevant event handler to run, you can use the `xxf:if-non-relevant="true"`
+attribute:
+
+```xml
+<xxf:dialog>
+    ...
+    <xf:message
+        event="xxforms-dialog-closed"
+        xxf:if-non-relevant="true">I just got closed!</xf:message>
+</xxf:dialog>
+
+```
 
 ### Using the ev:observer and ev:target attributes
 
