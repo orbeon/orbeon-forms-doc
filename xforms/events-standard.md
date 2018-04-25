@@ -51,17 +51,20 @@ not run. Previously, such handlers would run. For example the following `<xf:mes
         event="xforms-ready" 
         observer="my-model">Hello!</xf:message>
 <xf:group>
+```
 
+```xml
 <xf:input ...>
     ...
     <xf:message event="xforms-disabled">I just got disabled!</xf:message>
 </xf:input
+```
 
+```xml
 <xxf:dialog>
     ...
     <xf:message event="xxforms-dialog-closed">I just got closed!</xf:message>
 </xxf:dialog>
-
 ```
 
 On the other hand, the following actions run:
@@ -74,7 +77,9 @@ On the other hand, the following actions run:
 <xf:input id="my-input" ...>
     ...   
 </xf:input
+```
 
+```xml
 <xf:message 
     event="xxforms-dialog-closed" 
     observer="my-dialog">I just got closed!</xf:message>
@@ -82,7 +87,6 @@ On the other hand, the following actions run:
 <xxf:dialog id="my-dialog">
     ...
 </xxf:dialog>
-
 ```
 
 For backward compatibility, if you need a non-relevant event handler to run, you can use the `xxf:if-non-relevant="true"`
@@ -95,8 +99,10 @@ attribute:
         event="xxforms-dialog-closed"
         xxf:if-non-relevant="true">I just got closed!</xf:message>
 </xxf:dialog>
-
 ```
+
+But please note that running event handlers in non-relevant contexts can be tricky. In particular, the XPath
+context might be empty, and XPath variables might be undefined.
 
 ### Using the ev:observer and ev:target attributes
 
