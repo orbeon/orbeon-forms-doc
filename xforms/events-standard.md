@@ -38,6 +38,54 @@ Example without prefix:
 
 [TODO: basic placement and ev:event support]
 
+### Non-relevant event handlers
+
+[SINCE Orbeon Forms 2018.1]
+
+Orbeon Forms now considers that non-relevant event handlers, that is handlers which are within non-relevant content, do
+not run. Previously, such handlers would run. For example the following `<xf:message>` actions never run:
+
+```xml
+<xf:group ref="()">
+    <xf:message 
+        event="xforms-ready" 
+        observer="my-model">Hello!</xf:message>
+<xf:group>
+
+<xf:input ...>
+    ...
+    <xf:message event="xforms-disabled">I just got disabled!</xf:message>
+</xf:input
+
+<xxf:dialog>
+    ...
+    <xf:message event="xxforms-dialog-closed">I just got closed!</xf:message>
+</xxf:dialog>
+
+```
+
+On the other hand, the following actions run:
+
+```xml
+<xf:message 
+    event="xforms-disabled" 
+    observer="my-input">I just got disabled!</xf:message>
+
+<xf:input id="my-input" ...>
+    ...   
+</xf:input
+
+<xf:message 
+    event="xxforms-dialog-closed" 
+    observer="my-dialog">I just got closed!</xf:message>
+
+<xxf:dialog id="my-dialog">
+    ...
+</xxf:dialog>
+
+```
+
+
 ### Using the ev:observer and ev:target attributes
 
 The `ev:observer` attribute  allows you to register event handlers by specifying an element identifier, instead of embedding the event handler within that element. This is particularly useful to register event handlers on elements, which do not allow you to directly embed XML event handlers.
