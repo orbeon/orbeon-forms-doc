@@ -12,9 +12,10 @@ Access control touches on the following:
 
 The following pages address specific topics:
 
-- [Setup users](users.md) - How to setup Orbeon Forms so that users and roles are provided.
-- [Editing forms](editing-forms.md) - How to control access to Form Builder.
-- [Deployed forms](deployed-forms.md) - How to control access to deployed forms.
-  - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
-  - [Organization-based permissions](organization.md) – Access based on organizational structure.
-- [Form fields](form-fields.md) - How to control access to specific form fields, grids or sections.
+- [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
+- [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
+- [Form fields](form-fields.md) - How to control access to specific form fields based on the user user's roles.
+- [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
+    - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
+    - [Organization-based permissions](organization.md) – Access based on organizational structure.
+- [Scenarios](scenarios.md)

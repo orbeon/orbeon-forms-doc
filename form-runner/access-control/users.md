@@ -1,4 +1,4 @@
-# Setup Users for Access Control
+# Setup users for access control
 
 <!-- toc -->
 
