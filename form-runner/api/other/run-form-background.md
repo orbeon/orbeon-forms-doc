@@ -97,7 +97,7 @@ The following example updates existing instance data with the current time and s
 
 See also [Running processes upon page load](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load).
 
-## Example of process to validate form data in the background
+## Example: validate form data in the background
 
 The following process allows you to POST XML data to the page:
 
@@ -109,7 +109,7 @@ The following process allows you to POST XML data to the page:
 
 *NOTE: Make sure you use `validate("error")` instead of `require-valid`, as the latter always returns a success value.* 
 
-## Example using curl
+## Example: using curl
 
 The following examples use the [curl](https://curl.haxx.se/) command-line utility. They are indented on multiple lines for clarity but in practice each command must be written on a single line.
 
