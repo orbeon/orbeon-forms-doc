@@ -43,6 +43,8 @@ The following sub-processes are predefined and can be reused from other processe
 | `form-runner-home` | navigate to '/fr' | 4.2 |
 | `summary` | navigate to this Form Runner page | 4.7 |
 
+*NOTE: If you want to just check data for validity in a background process, instead of `require-valid`, use `validate("error")` instead. See also [Run form in the background](../../api/other/run-form-background.md).*
+
 ## Processes that apply to services
 
 ### oxf.fr.service.duplicate.transform

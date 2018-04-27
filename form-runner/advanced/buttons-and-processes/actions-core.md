@@ -8,7 +8,7 @@ Core actions are actions directly supported by the process interpreter. They rel
 
 ## success
 
-Complete the process right away successfully.
+Complete the top-level process right away and return a success value.
 
 ## process
 
