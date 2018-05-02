@@ -263,7 +263,11 @@ This allows authors of XBL components:
 
 - To replace an existing call to `xxf:component-param-value()` by `fr:component-param-value()` while maintaining backward compatibility.
 - To enable users of the component to have different values for the property by app/form, should they need to.
-- To still allow the component to be used outside of Form Runner.
+- To still allow the component to be used outside of Form Runner. For this, the user of the XBL component needs to import the Form Runner function library by adding the following attribute on their first `<xf:model>`:
+
+  ```
+  xxf:function-library="org.orbeon.oxf.fr.library.FormRunnerFunctionLibrary"
+  ```
 
 ## Authentication functions
 
