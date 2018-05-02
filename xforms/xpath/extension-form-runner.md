@@ -167,7 +167,6 @@ fr:lang() as xs:string
 
 Return the form's current language.
 
-
 ### fr:mode()
 
 ```xpath
@@ -200,6 +199,18 @@ Return the list of section templates associate with the current form definition.
 - `path`: the path to the PDF template in the persistence layer
 - `name`: the name of the PDF template, or the empty sequence if none was provided
 - `lang`: the language of the PDF template, or the empty sequence if none was provided
+
+This example shows a dropdown menu which lists the templates with a name:
+
+```
+<xf:select1 xmlns:map="http://www.w3.org/2005/xpath-functions/map">
+    <xf:label>PDF templates</xf:label>
+    <xf:itemset ref="fr:pdf-templates()[exists(map:get(., 'name'))]">
+        <xf:label ref="map:get(., 'name')"/>
+        <xf:value ref="map:get(., 'path')"/>
+    </xf:itemset>
+</xf:select1>
+```
 
 See also [PDF templates](../../form-builder/pdf-templates.md).
 
