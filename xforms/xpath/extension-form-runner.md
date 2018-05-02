@@ -48,7 +48,7 @@ Return the creation date of the current form data *as of the last read from the 
 [SINCE Orbeon Forms 2017.1]
 
 ```xpath
-fr:dataset($dataset-name as xs:string) as xs:string?
+fr:dataset($dataset-name as xs:string) as node()?
 ```
 
 Return the root element of the XML document containing the given dataset.
@@ -185,6 +185,23 @@ fr:modified-dateTime() as xs:dateTime?
 ```
 
 Return the modification date of the current form data *as of the last read from the database* if available, and the empty sequence otherwise (such as in "new" mode).
+
+### fr:pdf-templates()
+
+[SINCE Orbeon Forms 2018.1]
+
+```xpath
+fr:pdf-templates() as map(xs:string, xs:string?)*
+```
+
+Return the list of section templates associate with the current form definition. The return value is a sequence of
+`map(xs:string, xs:string?)`, where keys map to values as follows:
+
+- `path`: the path to the PDF template in the persistence layer
+- `name`: the name of the PDF template, or the empty sequence if none was provided
+- `lang`: the language of the PDF template, or the empty sequence if none was provided
+
+See also [PDF templates](../../form-builder/pdf-templates.md).
 
 ### fr:run-process()
 
