@@ -42,60 +42,37 @@ You can use this component to show users a captcha, like the one shown in the fo
 <img alt="" src="images/xbl-recaptcha.gif" width="308">
 
 1. First, you need to [sign up with reCAPTCHA][4] to get your own public/private key pair.
-2. Store your public and private keys in an instance:
+2. Store your public and private keys in your properties, as follows:
 
     ```xml
-    <xf:instance id="config">
-        <config>
-            <public-key>6Lesx...</public-key>
-            <private-key>6Lesx...</private-key>
-        </config>
-    </xf:instance>
+    <property as="xs:string"  name="oxf.xforms.xbl.fr.recaptcha.public-key"    value="6Lesx..."/>
+    <property as="xs:string"  name="oxf.xforms.xbl.fr.recaptcha.private-key"   value="6Lesx..."/>
     ```
-
-    If you are using a captcha in multiple forms, you might want to store your public and private key in a separate "config" file which you include into your form.
 
 3. Add the reCAPTCHA component to your form:
 
-    ```xml
-    <fr:recaptcha id="my-recaptcha">
-        <fr:public-key ref="instance('config')/public-key"/>
-        <fr:private-key ref="instance('config')/private-key"/>
-        <!-- Event handlers for fr-verify-done and fr-verify-error; see section above -->
-    </fr:recaptcha>
-    ```
+	- For forms you're creating in Form Builder, enable the reCAPTCHA by setting the following property:
 
-4. Add a way for users to trigger the verification of the text typed. For more on events, see the section above.
+		```xml
+		<property as="xs:string"  name="oxf.fr.detail.captcha.*.*"                                  value="reCAPTCHA"/>
+		```
 
-    ```xml
-    <xf:trigger>
-        <xf:label>Verify</xf:label>
-        <xf:dispatch ev:event="DOMActivate" target="recaptcha" name="fr-verify"/>
-    </xf:trigger>
-    ```
+	- For forms you're creating by writing XForms "by hand", add the component to your form as follows. You'll also want to add handlers for the `fr-verify-done` and maybe `fr-verify-error` events.
+
+    	```xml
+    	<fr:recaptcha id="my-recaptcha"/>
+    	```
 
 ### Configuration
 
 You can configure:
 
-- The theme, with the `theme` property.
-- The language:
-    - [reCAPTCHA v2] with the `lang` attribute on the `<html>` element.
-    - [reCAPTCHA v1] with the `lang` property.
+- The theme, either:
+	- For forms you're creating with Form Builder, with the `oxf.xforms.xbl.fr.recaptcha.theme.*.*` property.
+	- For forms you're creating by writing XForms "by hand", with the `oxf.xforms.xbl.fr.recaptcha.theme` property.
+- The language with the `lang` attribute on the `<html>` element.
 
-See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties. Just as with other properties, you can provide a static value using attributes:
-
-```xml
-<fr:recaptcha theme="white">
-```
-
-Or you can use nested elements if the values come from an instance:
-
-```xml
-<fr:recaptcha id="recaptcha">
-    <fr:theme ref="instance('config')/theme"/>
-</fr:recaptcha>
-```
+See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties.
 
 ### SimpleCaptcha
 
