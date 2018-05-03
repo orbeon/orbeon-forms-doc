@@ -45,8 +45,8 @@ You can use this component to show users a captcha, like the one shown in the fo
 2. Store your public and private keys in your properties, as follows:
 
     ```xml
-    <property as="xs:string"  name="oxf.xforms.xbl.fr.recaptcha.public-key"    value="6Lesx..."/>
-    <property as="xs:string"  name="oxf.xforms.xbl.fr.recaptcha.private-key"   value="6Lesx..."/>
+    <property as="xs:string" name="oxf.xforms.xbl.fr.recaptcha.public-key"  value="6Lesx..."/>
+    <property as="xs:string" name="oxf.xforms.xbl.fr.recaptcha.private-key" value="6Lesx..."/>
     ```
 
 3. Add the reCAPTCHA component to your form:
@@ -54,7 +54,7 @@ You can use this component to show users a captcha, like the one shown in the fo
 	- For forms you're creating in Form Builder, enable the reCAPTCHA by setting the following property:
 
 		```xml
-		<property as="xs:string"  name="oxf.fr.detail.captcha.*.*"                                  value="reCAPTCHA"/>
+		<property as="xs:string" name="oxf.fr.detail.captcha.*.*" value="reCAPTCHA"/>
 		```
 
 	- For forms you're creating by writing XForms "by hand", add the component to your form as follows. You'll also want to add handlers for the `fr-verify-done` and maybe `fr-verify-error` events.
@@ -67,9 +67,15 @@ You can use this component to show users a captcha, like the one shown in the fo
 
 You can configure:
 
-- The theme, either:
-	- For forms you're creating with Form Builder, with the `oxf.xforms.xbl.fr.recaptcha.theme.*.*` property.
-	- For forms you're creating by writing XForms "by hand", with the `oxf.xforms.xbl.fr.recaptcha.theme` property.
+- The theme using properties, either:
+	- For forms you're creating with Form Builder, with:
+		```xml
+		<property as="xs:string" name="oxf.xforms.xbl.fr.recaptcha.theme.*.*" value="light"/>
+		```
+	- For forms you're creating by writing XForms "by hand", with:
+		```xml
+		<property as="xs:string" name="oxf.xforms.xbl.fr.recaptcha.theme" value="light"/>
+		```
 - The language with the `lang` attribute on the `<html>` element.
 
 See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties.
@@ -95,4 +101,4 @@ Most likely, you'll want to add code dispatching an `fr-verify` event to your co
 [1]: http://en.wikipedia.org/wiki/ReCAPTCHA
 [2]: https://developers.google.com/recaptcha/docs/verify?csw=1
 [4]: https://www.google.com/recaptcha/admin#list
-[5]: https://developers.google.com/recaptcha/old/docs/customization
+[5]: https://developers.google.com/recaptcha/docs/display
