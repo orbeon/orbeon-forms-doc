@@ -74,7 +74,7 @@ You can configure:
 		```
 	- For forms you're creating by writing XForms "by hand", with:
 		```xml
-		<property as="xs:string" name="oxf.xforms.xbl.fr.recaptcha.theme" value="light"/>
+		<property as="xs:string" name="oxf.xforms.xbl.fr.recaptcha.theme"     value="light"/>
 		```
 - The language with the `lang` attribute on the `<html>` element.
 
