@@ -28,6 +28,23 @@ Then:
     value="oxf:/forms/resources/my-dialog.xml"/>
 ```
 
+Make sure that the dialog's root element has the proper XML namespaces, for example:
+
+```xml
+<xxf:dialog
+    xmlns:xh="http://www.w3.org/1999/xhtml"
+    xmlns:xf="http://www.w3.org/2002/xforms"
+    xmlns:xxf="http://orbeon.org/oxf/xml/xforms"
+    
+    id="custom-dialog"
+    class="dialog"
+    close="true"
+    draggable="true">
+
+    <!-- Content of the dialog here -->
+</xxf:dialog>
+```
+
 ## Separate file vs. code included within the form definition
 
 The properties mentioned earlier make your dialogs and custom model logic separate from the rest of your form definition. This has the following benefits:
