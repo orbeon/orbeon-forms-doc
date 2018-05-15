@@ -63,17 +63,6 @@ oxf.fr.detail.process.
 ```
 
 where `$app` and `$form` represent a Form Runner application name and/or form name or `*` wildcards, as is usual with Form Runner configuration properties.
-
-The following process names apply:
-
-- `after-controls`: run after the controls are ready:
-    - The process runs when controls are "live", which means you can set their values and list of choices.
-- `after-data`: run when the data is ready:
-    - It has been loaded from the database if needed ("edit" mode).
-    - Its initial values and calculations are up to date.
-- `before-data`: run before the data's initial values are calculated:
-    - The process runs before the data is ready.
-    - You cannot set control values and list of choices as a result.
     
 The following example saves new instance data to the database when the service is called with `/fr/service/$app/$form/new`:
 
@@ -95,7 +84,8 @@ The following example updates existing instance data with the current time and s
 </property>
 ```
 
-See also [Running processes upon page load](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load).
+For detail on the process names and more, see [Running processes upon page load
+](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load).
 
 ## Example: validate form data in the background
 
