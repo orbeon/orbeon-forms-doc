@@ -169,6 +169,20 @@ This is useful for example to set custom security headers in the proxy portlet:
 - create a portlet filter overriding `getPropertyNames`, `getProperty`, and `getProperties` to add custom properties (see an example of wrapper in Scala [here](https://github.com/orbeon/orbeon-forms/blob/master/portlet-support/src/main/scala/org/orbeon/oxf/portlet/wrappers.scala) and examples of filters [here](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/scala/org/orbeon/oxf/portlet/liferay/FormRunnerAuthFilter.scala))
 - use the `forward-properties` parameter to specify that the proxy portlet must send the names and values of these properties as headers to Form Runner
 
+### Preserving portal parameters
+
+[SINCE Orbeon Forms 2018.1]
+
+Portal URL parameters specified with the `keep-parameters` portlet init parameter are read from the portal URL and
+re-appended to action, render and resource URLs produced by the proxy portlet: 
+
+```xml
+<init-param>
+    <name>keep-parameters</name>
+    <value>param1 param2</value>
+</init-param>
+```
+
 ### Configuring Form Runner to use Liferay user information
 
 [SINCE Orbeon Forms 4.4]
