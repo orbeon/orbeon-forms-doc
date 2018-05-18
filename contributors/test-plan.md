@@ -1669,6 +1669,8 @@ Features to test, with all supported browsers:
 - [ ] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
     - [ ] test register/license
     - [ ] Maybe: check [these JVM options](http://blog.sokolenko.me/2014/11/javavm-options-production.html)
+- [ ] notify users who asked to be notified
+    - https://3.basecamp.com/3600924/buckets/1966480/messages/1059881673#__recording_1074912525
 - [ ] after release tasks
     - [ ] brainstorm, bug review, and planning of next release <!--  what we would do with the product if we didn't have customer pressure (RESOLUTION from 2013-08-06) -->
     - [ ] review all issues marked as Top Issue/Top RFE
@@ -1677,10 +1679,12 @@ Features to test, with all supported browsers:
 
 ### Minor release
 
-- [x] quickly test fixes in build
-- [x] check diff of `-ce`/`-pe` branches, see if missed commits
 - [x] update README and `build.xml` version number
+    - [x] links not broken (use Marked to save HTML, then check w/ Integrity)
     - do on master branches too
+- [x] quickly test fixes in build
+- ~~check diff of `-ce`/`-pe` branches, see if missed commits~~
+      → not needed as we don't cherry-pick on the `-ce` branches anymore
 - [x] complete blog post with list of new features and compatibility notes for PE only
 - [x] tag `-ce`/`-pe` branches and push tags
     - NOTE: We don't cherry-pick commits on `-ce` anymore. We can create a "fake" tag just for the release.
@@ -1691,6 +1695,6 @@ Features to test, with all supported browsers:
 - [x] quick review and publish blog post
 - [x] updates to doc
     - [x] update [Release history](../release-history.md)
-- [x] announce: twitter, orbeon forum, XForms mailing-lists
+- [ ] announce: twitter, orbeon forum, XForms mailing-lists
 - [ ] install PE on `demo.orbeon.com` and `prod.orbeon.com` ([document](https://docs.google.com/document/d/1cZe8xjjiwWpQmirdvdBTi0ZNAvAMG1aoRwTQsX7A3lA/edit#heading=h.qj7jhhq3kz9n))
     - [ ] test register/license
