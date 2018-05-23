@@ -55,6 +55,7 @@ As of 2016-04-19 this page is still being updated.
 
 ### Form Builder
 
+- 12-column layout: [doc](form-builder/form-area.md#the-12-column-layout), [blog post](https://blog.orbeon.com/2018/05/the-12-column-layout.html)
 - Summary page: [doc](form-builder/summary-page.md)
 - Toolbox:
     - features: [doc](form-builder/toolbox.md)

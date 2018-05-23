@@ -85,6 +85,8 @@ At runtime, controls have a little more space within grid cells as the Form Buil
 Destructive operations do not ask for confirmation but add the operation to the Undo stack, allowing you to
 undo the operation from the toolbox. See [Undo and redo](undo-redo.md).
 
+See also [the blog post](https://blog.orbeon.com/2018/05/the-12-column-layout.html).
+
 ### Until Orbeon Forms 2017.1
 
 A grid has between 1 and 4 columns, but it is possible to make Form Builder support more than 4 via a configuration
@@ -161,6 +163,7 @@ This mechanism is how you edit:
 
 ## See also 
 
+- Blog post: [The 12-column layout](https://blog.orbeon.com/2018/05/the-12-column-layout.html)
 - [Section settings](section-settings.md)
 - [Repeated grids](repeated-grids.md)
 - [Responsive design](../form-runner/feature/responsive-design.md)
