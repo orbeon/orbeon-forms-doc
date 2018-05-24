@@ -73,6 +73,16 @@ fr:form-name() as xs:string
 
 Return the form's form name.
 
+### fr:form-title()
+
+[SINCE Orbeon Forms 2018.1]
+
+```xpath
+fr:form-title() as xs:string?
+```
+
+Return the form's title for the current form language.
+
 ### fr:form-version()
 
 ```xpath
