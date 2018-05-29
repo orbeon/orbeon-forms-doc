@@ -250,12 +250,6 @@ For instance, to change the label of the submit button to be "Send" in English f
 
 See [Email](form-runner-email.md).
 
-### Custom PDF, TIFF and XML attachment filenames
-
-[SINCE Orbeon Forms 2018.1]
-
-The following properties control the name of the PDF, TIFF and XML attachments
-
 ## Sections and grids
 
 ### Appearance of repeated sections
