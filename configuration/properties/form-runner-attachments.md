@@ -1,4 +1,4 @@
-# Attachments configuration properties
+# Form Runner attachments configuration properties
 
 <!-- toc -->
 

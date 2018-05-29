@@ -1,4 +1,4 @@
-# Detail page configuration properties
+# Form Runner Detail page configuration properties
 
 <!-- toc -->
 
@@ -495,7 +495,7 @@ Example:
     value="//customer-id"/>
 ```
 
-If the form contains a `customer-id` field, the PDF filename will be the value of that field followed by `.pdf`. If the field is blank, the default, random id filename is used, as if the property had not been specified.
+If the form contains a `customer-id` field, the PDF filename will be the value of that field followed by `.pdf`. If the field is blank, the default, random id filename is used, as if the property had not been specified. 
 
 ### Hyperlinks in automatic mode
 

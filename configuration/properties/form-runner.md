@@ -4,8 +4,9 @@
 
 ## Children pages
 
-- [Attachments](form-runner-attachments.md)
 - [Detail page](form-runner-detail-page.md)
+    - [Attachments](form-runner-attachments.md)
+    - [Email](form-runner-email.md)
 - [Persistence](persistence.md)
 - [Summary page](form-runner-summary-page.md)
 
@@ -247,124 +248,13 @@ For instance, to change the label of the submit button to be "Send" in English f
 
 ## Email settings
 
-These properties control email sending in Form Runner:
+See [Email](form-runner-email.md).
 
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.email.smtp.host.*.*"
-    value="my.outgoing.smtp.server.org"/>
+### Custom PDF, TIFF and XML attachment filenames
 
-<property
-    as="xs:string"
-    name="oxf.fr.email.smtp.port.*.*"
-    value="587"/>
+[SINCE Orbeon Forms 2018.1]
 
-<property
-    as="xs:string"
-    name="oxf.fr.email.smtp.encryption.*.*"
-    value="tls"/>
-
-<property
-    as="xs:string"
-    name="oxf.fr.email.smtp.username.*.*"
-    value="jdoe"/>
-
-<property
-    as="xs:string"
-    name="oxf.fr.email.smtp.credentials.*.*"
-    value="secret"/>
-
-<property
-    as="xs:string"
-    name="oxf.fr.email.from.*.*"
-    value="john@example.org"/>
-
-<!-- The list of emails is space- or comma- separated -->
-<property
-    as="xs:string"
-    name="oxf.fr.email.to.*.*"
-    value="mary@example.org,nancy@example.org"/>
-    
-<!-- The list of emails is space- or comma- separated -->
-<!-- [SINCE Orbeon Forms 2017.1] -->
-<property
-    as="xs:string"
-    name="oxf.fr.email.cc.*.*"
-    value="mary@example.org,nancy@example.org"/>
-
-<!-- The list of emails is space- or comma- separated -->
-<!-- [SINCE Orbeon Forms 2017.1] -->
-<property
-    as="xs:string"
-    name="oxf.fr.email.bcc.*.*"
-    value="mary@example.org,nancy@example.org"/>
-
-<property
-    as="xs:boolean"
-    name="oxf.fr.email.attach-pdf.*.*"
-    value="true"/>
-
-<property
-    as="xs:boolean"
-    name="oxf.fr.email.attach-tiff.*.*"
-    value="true"/>
-
-<property
-    as="xs:boolean"
-    name="oxf.fr.email.attach-xml.*.*"
-    value="true"/>
-
-<property
-    as="xs:string"
-    name="oxf.fr.email.attach-files.*.*"
-    value="all"/>
-```
-
-The following properties control the connection to the SMTP server.
-
-- `host`: required SMTP host name
-- `port`: optional SMTP port override. If not specified, the defaults are:
-    * plain SMTP: 25
-    * TLS: 587
-    * SSL: 465
-- `encryption`:
-    * blank: none (plain SMTP)
-    * `tls`: use TLS
-    * `ssl`: use SSL
-- `username`: SMTP username (required if TLS or SSL is used, optional otherwise)
-- `credentials`: SMTP password
-
-Email addresses properties:
-
-- `from`: sender email address(es) appearing in the email sent
-- `to`: recipient email address(es) of the email sent
-
-Attachment properties:
-
-- `attach-pdf`: whether the PDF representation is attached to the email
-- `attach-tiff`: whether the TIFF representation is attached to the email
-- `attach-xml`:  whether the XML data is attached to the email
-- `attach-files`:
-    - SINCE Orbeon Forms 2016.1
-    - whether file and image form attachments are attached to the email
-    - `all`: all form attachments are included (this is the default)
-    - `none`: no form attachments is included
-    - `selected`: only form attachments selected in the Form Builder with "Include as Email Attachment" are included
-    
-Email subject and body:
-
-```xml
-<property 
-    as="xs:string"
-    name="oxf.fr.resource.*.*.en.email.subject"
-    value="Here is your confirmation: "/>
-
-<property 
-    as="xs:string"
-    name="oxf.fr.resource.*.*.en.email.body"
-    value="Hi, here is an email from Orbeon Forms!"/>
-```
+The following properties control the name of the PDF, TIFF and XML attachments
 
 ## Sections and grids
 
