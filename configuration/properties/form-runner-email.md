@@ -1,4 +1,4 @@
-# Form Runner email configuration properties
+# Email configuration properties
 
 <!-- toc -->
 

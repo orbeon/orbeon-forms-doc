@@ -1,4 +1,4 @@
-# Form Runner Detail page configuration properties
+# Detail page configuration properties
 
 <!-- toc -->
 
