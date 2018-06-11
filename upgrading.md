@@ -2,11 +2,11 @@
 
 <!-- toc -->
 
-## When using Form Builder and Form Runner
+## Upgrade steps
 
 To upgrade to a new version of Orbeon Forms you'll want to:
 
-1. Review the compatibility notes (see [Compatibility notes for previous versions](#compatibility-notes-for-previous-versions).
+1. Review the compatibility notes (see [Compatibility notes for previous versions](#compatibility-notes-for-previous-versions)).
 1. Make sure you have a backup of your current environments, including:
     - databases
     - containers
