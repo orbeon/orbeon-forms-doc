@@ -1,1 +1,1 @@
-![Orbeon Forms architecture](images/architecture.svg)
+![Orbeon Forms architecture](images/architecture.png)
