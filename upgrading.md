@@ -21,10 +21,12 @@ If your forms are created with Form Builder, to upgrade to a new version of Orbe
 
 ## Difficulty of upgrades
 
-- Between any two subsequent 4.x releases, upgrades are expected to be fairly straightforward.
+*NOTE: As a reminder, starting with Orbeon Forms 2016.1, we are using a versioning scheme with the number of the year first followed by the number of the major release during that year. See [Release History](release-history.md) for details. *
+
+- Between any two subsequent 4.x releases, or 201x.x releases, upgrades are expected to be fairly straightforward.
 - The longer the interval of time between two release, the harder the upgrade might be. For example, it can be harder to upgrade between 4.0 and 4.6 than between 4.5 and 4.6.
-- Orbeon Forms 4.0 was a large release with many changes. In general upgrading between pre-4.0 releases and 4.x releases is more difficult than upgrades between two 4.x releases.
-- Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x releases.
+- Orbeon Forms 4.0 was a large release with many changes. In general upgrading between pre-4.0 releases and 4.x releases is more difficult than upgrades between two 4.x or 201x.x releases.
+- Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x or 201x.x releases.
 
 ## Areas of compatibility
 
