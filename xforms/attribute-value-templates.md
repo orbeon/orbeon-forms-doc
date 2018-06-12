@@ -16,7 +16,9 @@ Consider this example:
 
 ```xml
 <xf:load
-    resource="/forms/detail/{instance('documents-instance')/documents/document[index('documents-repeat')]/id}"/>
+    resource="/forms/detail/{
+        instance('documents-instance')/documents/document[index('documents-repeat')]/id
+    }"/>
 ```
 
 When `<xf:load>` is executed, the `resource` attribute is evaluated. The results is the concatenation of `/forms/detail/` and of the result of the expression within brackets:
@@ -166,7 +168,10 @@ AVTs are also usable on HTML elements within `<xf:label>`, `<xf:hint>`, `<xf:hel
 ```xml
 <xf:input ref="foobar">
     <xf:label>
-        <xh:span class="{if (. = 'green') then 'green' else 'red'}-label">Inverted label</xh:span>
+        <xh:span 
+            class="{
+                if (. = 'green') then 'green' else 'red'
+            }-label">Inverted label</xh:span>
     </xf:label>
 </xf:input>
 ``` 
