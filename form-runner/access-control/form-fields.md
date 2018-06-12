@@ -24,4 +24,4 @@ Due to the logic of XPath comparison on sequences, this expression returns `true
 
 TODO: more examples (in particular using `xxf:get-header('Orbeon-Username')`, etc.).
 
-[2]: http://wiki.orbeon.com/forms/doc/user-guide/form-builder-user-guide/control-validation-dialog
+[2]: ../../form-builder/validation.md
