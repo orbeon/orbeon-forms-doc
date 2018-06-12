@@ -77,7 +77,7 @@ By default, the error dialog is enabled. You can disable it entirely by setting 
   value="false"/>
 ```
 
-If you disable the default error dialog, you might want to provide an alternative way of reporting the issue to the user. You can do this in JavaScript by registering an event listener on [ORBEON.xforms.Events.errorEvent][3].
+If you disable the default error dialog, you might want to provide an alternative way of reporting the issue to the user. You can do this in JavaScript by registering an event listener on [`ORBEON.xforms.Events.errorEvent`][3].
 
 ![Noscript error panel](images/xforms-error-dialog.png)
 
@@ -150,5 +150,4 @@ Once an error occurs when the user is interacting with the form, the XForms engi
 * In particular, `xforms-compute-exception` and `xforms-binding-exception` can be dispatched and are fatal.
 * The user sees an error dialog on the client but typically cannot recover from errors.
 
-[3]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-extensions#TOC-Custom-Events
-[4]: http://wiki.orbeon.com/forms/_/rsrc/1320697168699/welcome/xforms-error-handling/noscript-panel.png
+[3]: ../configuration/advanced/client-error-handling.md#javascript-event-handler

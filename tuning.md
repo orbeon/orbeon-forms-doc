@@ -297,12 +297,6 @@ Some operations in XSLT or XPath can be very expensive. This in particular the c
 
 If you can, also try to avoid running many XSLT transformations. In particular, you may be able to avoid running a theme stylesheet entirely. See also [Customize the standard epilogue][11].
 
-### Enable XPL profiling
-
-XPL profiling has been introduced with Orbeon Forms 3.0 to give you detailed information on how much time is being spent in each processor involved to generate a web page. When enabled, for each HTTP request, the XPL profiler will output a tree with all the processor calls. Each node of the tree represents the execution of a processor. When a processor starts other processors, those are represented as child nodes in the tree. With each node, the profiler outputs 2 numbers: the first is for the time spent specifically by this processor; the second is for the time spent cumulatively by this processor and all its children; both are in <strike>milliseconds</strike> nanoseconds.
-
-By default, XPL profiling is disabled. To enable XPL profiling, configure `processor.trace`, `processor.trace.host`, and `processor.trace.port` as described in the [properties documentation][12].
-
 ### Customize the standard epilogue
 
 The standard Orbeon Forms epilogue can be optimized for your own needs. For example:
@@ -492,8 +486,7 @@ If you are testing the performance of an application that talks to a database or
 [9]: http://httpd.apache.org/docs/2.0/programs/ab.html
 [10]: http://wiki.orbeon.com/forms/_/rsrc/1278373666668/doc/developer-guide/admin/performance-tuning/jmeter-concurrent.png
 [11]: http://wiki.orbeon.com/forms/doc/developer-guide/admin-tuning#TOC-Customize-the-standard-epilogue
-[12]: http://www.orbeon.com/ops/doc/reference-properties#trace
 [13]: http://blog.orbeon.com/2006/12/configuring-apache-front-end-for-orbeon_27.html
 [14]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-performance-settings
-[15]: http://www.orbeon.com/ops/doc/reference-xforms-configuration#xforms-state-handling
+[15]: contributors/state-handling.md
 [16]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-logging

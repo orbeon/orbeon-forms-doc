@@ -19,7 +19,15 @@ You can disable this behavior by adding this property to your `properties-local.
 
 ## JavaScript event handler
 
-Orbeon Forms exposes a custom JavaScript event: `ORBEON.xforms.Events.errorEvent`. You can register your own listener on that event, and when fired, send users to a page you choose, as done in the following snippet, which sends users to the Orbeon home page:
+Orbeon Forms exposes a custom JavaScript event: `ORBEON.xforms.Events.errorEvent`.
+
+By default a dialog is shown to the user when an error is intercepted. If you prefer to show your own dialog or to
+implement some other behavior in case of error,  most likely you will want to:
+
+- Disable the default error dialog by setting the [`oxf.xforms.show-error-dialog`](../../xforms/error-handling.md#error-dialog) property to `false`.
+- Register your own listener on `ORBEON.xforms.Events.errorEvent`.
+
+You can register your own listener on that event, and when fired, send users to a page you choose, as done in the following snippet, which sends users to the Orbeon home page:
 
 ```javascript
 ORBEON.xforms.Events.errorEvent.subscribe(function(eventName, eventData) {
