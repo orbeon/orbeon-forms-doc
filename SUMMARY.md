@@ -183,6 +183,7 @@
        * [Misc](configuration/troubleshooting/misc.md)
 * XForms
     * Core
+        * [Attribute Value Templates (AVTs)](xforms/attribute-value-templates.md)
         * [Binds](xforms/binds.md)
         * [Validation](xforms/validation.md)
         * [Variables](xforms/variables.md)

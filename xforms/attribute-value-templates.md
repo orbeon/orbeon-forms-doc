@@ -1,4 +1,4 @@
-# XForms - Attribute Value Templates
+# Attribute Value Templates (AVTs)
 
 <!-- toc -->
 
