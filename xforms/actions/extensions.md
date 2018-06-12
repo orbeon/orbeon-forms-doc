@@ -57,4 +57,4 @@ Examples:
 
 [2]: https://www.w3.org/TR/xforms11/#action
 [4]: https://www.w3.org/TR/xforms/#action-deferred-update-behavior
-[5]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-attribute-value-templates
+[5]: ../attribute-value-templates.md
