@@ -1,6 +1,6 @@
 # Setting up an external resources directory
 
-<!-- toc -->
+
 
 ## Rationale
 

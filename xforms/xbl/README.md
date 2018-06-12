@@ -1,6 +1,6 @@
 # XBL components
 
-<!-- toc -->
+
 
 ## Children pages
 

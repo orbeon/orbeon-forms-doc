@@ -1,6 +1,6 @@
 # Paths and matchers
 
-<!-- toc -->
+
 
 ## Patterns
 

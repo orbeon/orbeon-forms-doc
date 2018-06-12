@@ -1,6 +1,6 @@
 # Implementing a Persistence Service
 
-<!-- toc -->
+
 
 ## Scenario
 

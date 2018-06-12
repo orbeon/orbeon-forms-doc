@@ -1,6 +1,6 @@
 # Actions
 
-<!-- toc -->
+
 
 ## Introduction
 

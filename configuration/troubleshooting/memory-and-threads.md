@@ -1,6 +1,6 @@
 # Memory and threads
 
-<!-- toc -->
+
 
 ## Memory
 

@@ -1,6 +1,6 @@
 # Building Orbeon Forms
 
-<!-- toc -->
+
 
 ## Introduction
 

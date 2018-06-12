@@ -1,6 +1,6 @@
 # Linking and Embedding
 
-<!-- toc -->
+
 
 ## Rationale
 

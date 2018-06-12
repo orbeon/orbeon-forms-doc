@@ -1,6 +1,6 @@
 # Error Summary Component
 
-<!-- toc -->
+
 
 ## What it does
 

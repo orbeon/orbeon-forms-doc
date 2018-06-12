@@ -1,6 +1,6 @@
 # XForms actions
 
-<!-- toc -->
+
 
 ## Introduction
 

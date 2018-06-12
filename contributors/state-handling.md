@@ -1,6 +1,6 @@
 # State Handling
 
-<!-- toc -->
+
 
 ## Audience
 

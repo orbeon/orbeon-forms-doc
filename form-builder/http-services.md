@@ -1,6 +1,6 @@
 # HTTP services
 
-<!-- toc -->
+
 
 ## Introduction
 

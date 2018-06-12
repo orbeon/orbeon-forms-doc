@@ -1,6 +1,6 @@
 # Basics
 
-<!-- toc -->
+
 
 ## Page flow configuration
 

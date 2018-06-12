@@ -1,6 +1,6 @@
 # Publishing
 
-<!-- toc -->
+
 
 ## Introduction
 

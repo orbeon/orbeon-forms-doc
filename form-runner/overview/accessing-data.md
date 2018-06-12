@@ -1,6 +1,6 @@
 # Accessing Data
 
-<!-- toc -->
+
 
 ## Situation
 

@@ -1,6 +1,6 @@
 # Localization
 
-<!-- toc -->
+
 
 ## Introduction
 

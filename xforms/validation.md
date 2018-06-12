@@ -1,6 +1,6 @@
 # XForms Validation
 
-<!-- toc -->
+
 
 See also [Form Builder Validation](../form-builder/validation.md).
 

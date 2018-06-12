@@ -1,6 +1,6 @@
 # Orbeon Forms XForms Tutorial - forms
 
-<!-- toc -->
+
 
 ## What is this?
 

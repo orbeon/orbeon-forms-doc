@@ -1,6 +1,6 @@
 # Image attachment component
 
-<!-- toc -->
+
 
 ## What it does
 

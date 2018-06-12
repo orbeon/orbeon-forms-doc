@@ -1,6 +1,6 @@
 # Index of Features
 
-<!-- toc -->
+
 
 ## Purpose
 

@@ -1,6 +1,6 @@
 # Using XForms from Java apps
 
-<!-- toc -->
+
 
 ## What this page is about
 

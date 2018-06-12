@@ -1,6 +1,6 @@
 # File scan API
 
-<!-- toc -->
+
 
 ## Availability
 

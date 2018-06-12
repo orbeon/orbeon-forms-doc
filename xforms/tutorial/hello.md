@@ -1,6 +1,6 @@
 # The Hello application
 
-<!-- toc -->
+
 
 ## Running the Hello application
 

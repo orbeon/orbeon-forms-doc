@@ -1,6 +1,6 @@
 # Versioning
 
-<!-- toc -->
+
 
 ## Form definition versioning support
 

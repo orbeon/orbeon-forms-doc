@@ -1,6 +1,6 @@
 # XML functions
 
-<!-- toc -->
+
 
 ## xf:attribute() / xxf:attribute()
 

@@ -1,6 +1,6 @@
 # Upgrading
 
-<!-- toc -->
+
 
 ## Upgrade steps
 

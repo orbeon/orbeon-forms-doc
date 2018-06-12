@@ -1,6 +1,6 @@
 # The form editor
 
-<!-- toc -->
+
 
 ## Creating your first form definition
 

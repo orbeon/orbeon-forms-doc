@@ -1,6 +1,6 @@
 # Singleton form
 
-<!-- toc -->
+
 
 ## Use case
 

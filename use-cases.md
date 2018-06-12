@@ -1,6 +1,6 @@
 # Use Cases
 
-<!-- toc -->
+
 
 ## Rationale
 

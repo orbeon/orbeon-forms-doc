@@ -1,6 +1,6 @@
 # Responsive design
 
-<!-- toc -->
+
 
 ## Fields in one column
 

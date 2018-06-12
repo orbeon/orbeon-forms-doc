@@ -1,6 +1,6 @@
 # Section templates
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Form Runner Liferay Full Portlet
 
-<!-- toc -->
+
 
 Please make sure to check the [Form Runner Liferay Proxy Portlet Guide](../../form-runner/link-embed/liferay-proxy-portlet.md)
 as well, as that is the recommended way to deploy Orbeon Forms into Liferay, and [Form Runner Embedding](../../form-runner/link-embed/images/embedding-bookshelf.png)

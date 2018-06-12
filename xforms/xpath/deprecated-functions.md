@@ -1,6 +1,6 @@
 # Deprecated functions
 
-<!-- toc -->
+
 
 ## xxf:event()
 

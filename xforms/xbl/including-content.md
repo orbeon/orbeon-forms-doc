@@ -1,6 +1,6 @@
 # Including content
 
-<!-- toc -->
+
 
 ## Using xbl:content
 

@@ -1,6 +1,6 @@
 # Navigating between pages
 
-<!-- toc -->
+
 
 ## Page flow
 

@@ -1,6 +1,6 @@
 # XBL Tutorial
 
-<!-- toc -->
+
 
 ## Encapsulation
 

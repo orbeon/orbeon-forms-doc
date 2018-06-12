@@ -1,6 +1,6 @@
 # Keyboard Focus
 
-<!-- toc -->
+
 
 ## What is the focus?
 

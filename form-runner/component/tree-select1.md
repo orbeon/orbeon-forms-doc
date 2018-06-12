@@ -1,6 +1,6 @@
 # Single-selection tree
 
-<!-- toc -->
+
 
 ## Availability
 

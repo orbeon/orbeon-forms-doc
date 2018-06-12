@@ -1,6 +1,6 @@
 # Validation functions
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Cut, copy and paste
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Linking to Your Forms
 
-<!-- toc -->
+
 
 ## Rationale
 

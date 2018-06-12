@@ -1,6 +1,6 @@
 # JBoss 7, WildFly 8 to 10.1
 
-<!-- toc -->
+
 
 ## Deploy Orbeon Forms
 

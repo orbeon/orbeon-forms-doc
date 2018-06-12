@@ -1,6 +1,6 @@
 # Extension API
 
-<!-- toc -->
+
 
 ## Availability
 

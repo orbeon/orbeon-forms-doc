@@ -1,6 +1,6 @@
 # Loading initial form data
 
-<!-- toc -->
+
 
 ## The problem   
 

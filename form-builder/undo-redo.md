@@ -1,6 +1,6 @@
 # Undo and redo
 
-<!-- toc -->
+
 
 ## Availability
 

@@ -1,6 +1,6 @@
 # Process syntax
 
-<!-- toc -->
+
 
 ## Defining a process
 

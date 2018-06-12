@@ -1,6 +1,6 @@
 # Dialog control
 
-<!-- toc -->
+
 
 ## Declaring a dialog control
 

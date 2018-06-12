@@ -1,6 +1,6 @@
 # JSON support
 
-<!-- toc -->
+
 
 [SINCE Orbeon Forms 2016.1]
 

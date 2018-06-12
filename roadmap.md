@@ -1,6 +1,6 @@
 # Product roadmap
 
-<!-- toc -->
+
 
 ## Past releases
 

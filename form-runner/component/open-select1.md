@@ -1,6 +1,6 @@
 # Open Selection Component
 
-<!-- toc -->
+
 
 ## Availability
 

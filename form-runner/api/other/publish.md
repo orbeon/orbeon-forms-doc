@@ -1,6 +1,6 @@
 # Publish form definition
 
-<!-- toc -->
+
 
 ## Availability
 

@@ -1,6 +1,6 @@
 # CRUD
 
-<!-- toc -->
+
 
 ## Basics
 

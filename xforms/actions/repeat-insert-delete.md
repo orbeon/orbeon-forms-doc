@@ -1,6 +1,6 @@
 # Repeat, Insert, and Delete XForms Actions
 
-<!-- toc -->
+
 
 ## Basics
 

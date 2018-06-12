@@ -1,6 +1,6 @@
 # Purging Old Data
 
-<!-- toc -->
+
 
 ## Rationale
 

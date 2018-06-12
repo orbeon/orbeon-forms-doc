@@ -1,6 +1,6 @@
 # Detail page configuration properties
 
-<!-- toc -->
+
 
 ## Adding your own CSS files
 

@@ -1,6 +1,6 @@
 # Section Component
 
-<!-- toc -->
+
 
 ## What it does
 

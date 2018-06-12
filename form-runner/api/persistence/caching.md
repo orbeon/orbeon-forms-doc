@@ -1,6 +1,6 @@
 # Caching
 
-<!-- toc -->
+
 
 ## Rationale
 fAllowing Form Runner to cache form definitions is important to help with performance. Form Runner interfaces with the persistence layer through a [REST API](../../../form-runner/api/persistence/README.md). Standard HTTP caching mechanisms are introduced to allow caching at that level.

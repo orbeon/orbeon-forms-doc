@@ -1,6 +1,6 @@
 # Buttons and processes
 
-<!-- toc -->
+
 
 ## Children pages
 

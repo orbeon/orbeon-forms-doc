@@ -1,6 +1,6 @@
 # Automatic PDF
 
-<!-- toc -->
+
 
 ## Context
 

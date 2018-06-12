@@ -1,6 +1,6 @@
 # Monitoring HTTP Requests
 
-<!-- toc -->
+
 
 ## Introduction
 

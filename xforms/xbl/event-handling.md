@@ -1,6 +1,6 @@
 # XBL Event handling
 
-<!-- toc -->
+
 
 ## Event propagation
 

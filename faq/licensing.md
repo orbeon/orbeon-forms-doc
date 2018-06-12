@@ -1,6 +1,6 @@
 # FAQ - Licensing
 
-<!-- toc -->
+
 
 ## Is there any cost associated with using Orbeon Forms?
 

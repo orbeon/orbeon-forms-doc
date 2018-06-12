@@ -1,6 +1,6 @@
 # XForms Inspector Component
 
-<!-- toc -->
+
 
 ## Overview
 

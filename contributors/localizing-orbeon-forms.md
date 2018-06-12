@@ -1,6 +1,6 @@
 # Localizing Orbeon Forms
 
-<!-- toc -->
+
 
 ## Introduction
 

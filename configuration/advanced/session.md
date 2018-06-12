@@ -1,6 +1,6 @@
 # Session Management
 
-<!-- toc -->
+
 
 ## Who should read this
 

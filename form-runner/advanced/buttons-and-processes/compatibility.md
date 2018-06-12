@@ -1,6 +1,6 @@
 # Compatibility notes
 
-<!-- toc -->
+
 
 ## Starting with Orbeon Forms 4.2
 

@@ -1,6 +1,6 @@
 # Currency Component
 
-<!-- toc -->
+
 
 ## What it does
 

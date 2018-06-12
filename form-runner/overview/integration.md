@@ -1,6 +1,6 @@
 # Integration
 
-<!-- toc -->
+
 
 ## Introduction
 

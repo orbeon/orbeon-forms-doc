@@ -1,6 +1,6 @@
 # Character Counter Component
 
-<!-- toc -->
+
 
 ## Availability
 

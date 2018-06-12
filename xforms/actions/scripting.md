@@ -1,6 +1,6 @@
 # Scripting Actions
 
-<!-- toc -->
+
 
 ## Calling client-side JavaScript
 

@@ -1,6 +1,6 @@
 # TIFF Production
 
-<!-- toc -->
+
 
 ## Introduction
 

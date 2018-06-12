@@ -1,6 +1,6 @@
 # Learning from existing components
 
-<!-- toc -->
+
 
 ## Finding existing components
 

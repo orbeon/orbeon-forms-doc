@@ -1,6 +1,6 @@
 # URL Generator
 
-<!-- toc -->
+
 
 ## Introduction
 

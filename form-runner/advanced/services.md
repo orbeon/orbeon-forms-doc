@@ -1,6 +1,6 @@
 # Implementing services
 
-<!-- toc -->
+
 
 ## Introduction
 

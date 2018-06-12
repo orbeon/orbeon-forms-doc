@@ -1,6 +1,6 @@
 # Persistence configuration properties
 
-<!-- toc -->
+
 
 ## Levels of configuration
 

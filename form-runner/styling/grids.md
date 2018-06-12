@@ -1,6 +1,6 @@
 # Grids CSS
 
-<!-- toc -->
+
 
 ## HTML markup
 

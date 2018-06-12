@@ -1,6 +1,6 @@
 # Client-side error handling
 
-<!-- toc -->
+
 
 ## Disabling the standard error dialog
 

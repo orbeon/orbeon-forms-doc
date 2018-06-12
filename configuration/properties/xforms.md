@@ -1,6 +1,6 @@
 # XForms configuration properties
 
-<!-- toc -->
+
 
 ## Default values
 

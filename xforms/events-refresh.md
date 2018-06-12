@@ -1,6 +1,6 @@
 # UI refresh events
 
-<!-- toc -->
+
 
 ## Introduction
 

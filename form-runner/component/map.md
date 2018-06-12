@@ -1,6 +1,6 @@
 # Map Component
 
-<!-- toc -->
+
 
 ## What it does
 

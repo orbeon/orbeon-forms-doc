@@ -1,6 +1,6 @@
 # Adding an Atom feed
 
-<!-- toc -->
+
 
 ## What is it?
 

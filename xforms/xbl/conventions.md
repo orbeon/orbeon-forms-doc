@@ -1,6 +1,6 @@
 # Conventions
 
-<!-- toc -->
+
 
 ## Following XForms
 

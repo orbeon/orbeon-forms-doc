@@ -1,6 +1,6 @@
 # JavaScript Companion Classes
 
-<!-- toc -->
+
 
 ## Rationale
 

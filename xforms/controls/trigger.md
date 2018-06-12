@@ -1,6 +1,6 @@
 # Button control
 
-<!-- toc -->
+
 
 ## Introduction
 

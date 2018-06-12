@@ -1,6 +1,6 @@
 # US Phone Component
 
-<!-- toc -->
+
 
 ## What it does
 

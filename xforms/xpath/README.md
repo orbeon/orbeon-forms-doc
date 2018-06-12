@@ -1,6 +1,6 @@
 ## XPath expressions
 
-<!-- toc -->
+
 
 Orbeon Forms uses [XPath 2.0](https://www.w3.org/TR/xpath20/) as expression language.
 

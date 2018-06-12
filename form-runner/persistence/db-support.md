@@ -1,6 +1,6 @@
 # Database Support
 
-<!-- toc -->
+
 
 ## Categories of databases
 

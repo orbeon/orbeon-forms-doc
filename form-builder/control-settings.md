@@ -1,6 +1,6 @@
 # Control settings
 
-<!-- toc -->
+
 
 ## Introduction
 

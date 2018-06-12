@@ -1,6 +1,6 @@
 # Actions Extensions
 
-<!-- toc -->
+
 
 ## Extension actions
 

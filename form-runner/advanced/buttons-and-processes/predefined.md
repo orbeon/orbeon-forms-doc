@@ -1,6 +1,6 @@
 # Predefined buttons, processes and dialogs
 
-<!-- toc -->
+
 
 ## Predefined buttons
 

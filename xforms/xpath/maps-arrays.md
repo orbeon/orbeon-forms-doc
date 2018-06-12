@@ -1,6 +1,6 @@
 # Maps and arrays functions
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Section settings
 
-<!-- toc -->
+
 
 ## Basic settings
 

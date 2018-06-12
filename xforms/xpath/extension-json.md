@@ -1,6 +1,6 @@
 # JSON functions
 
-<!-- toc -->
+
 
 ## xxf:json-to-xml()
 
