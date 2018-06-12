@@ -54,5 +54,5 @@ You should see the Orbeon Forms welcome page:
 ![][5]
 
 [3]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/01.png
-[4]: http://www.orbeon.com/download
+[4]: https://www.orbeon.com/download
 [5]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/02.png

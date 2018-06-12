@@ -29,7 +29,7 @@ Usually an issue gets fixed or a feature gets implemented in Orbeon Forms when:
 - It is very easy to implement, so we just implement it along the way to make everybody happy.
 - We have put it on our [roadmap](../roadmap.md) and scheduled it because we think it is a crucial feature for Orbeon Forms.
 - We need it for a project we are currently working on.
-- Somebody [sponsors](http://www.orbeon.com/services) it.
+- Somebody [sponsors](https://www.orbeon.com/services) it.
 - Somebody sends a [patch or pull request](https://github.com/orbeon/orbeon-forms/pulls) for it.
 
 For a list of open issues and RFEs (Requests For Enhancements), see the [issue tracker](https://github.com/orbeon/orbeon-forms/issues).
@@ -67,7 +67,7 @@ You can help by:
 
 - Subscribing to the [discussion forum][1], and helping other people in community.
 - Contributing to the open source effort. If you have a feature in mind and think it would benefit Orbeon Forms, you can implement it and contribute it. The best place to get started is to discuss your idea on the Orbeon Forms forum.
-- Get a [PE subscription](http://www.orbeon.com/pricing) or a [Dev Support plan](http://www.orbeon.com/services) with Orbeon. If Orbeon Forms is what it is today, it is in great part thanks to companies who have financially supported Orbeon, allowing Orbeon developers to be paid to work on Orbeon Forms and make it a better product. For more, contact Orbeon at [info@orbeon.com][4].
+- Get a [PE subscription](https://www.orbeon.com/pricing) or a [Dev Support plan](https://www.orbeon.com/services) with Orbeon. If Orbeon Forms is what it is today, it is in great part thanks to companies who have financially supported Orbeon, allowing Orbeon developers to be paid to work on Orbeon Forms and make it a better product. For more, contact Orbeon at [info@orbeon.com][4].
 
 Your support is greatly appreciated!
 
@@ -79,10 +79,8 @@ In general, we recommend you do not add bugs or RFEs in the tracker yourself, as
 
 ## Is there a wiki?
 
-Yes, in fact we have two (which we plan to unify):
-
-- the new one on [GitHub](https://github.com/orbeon/orbeon-forms/wiki)
-- the old one on [Google Sites](http://wiki.orbeon.com/forms/)
+- There is an old wiki on [Google Sites](http://wiki.orbeon.com/forms/).
+- But all the new documentation as [at this location](https://doc.orbeon.com/).
 
 Feel free to add or make changes to the contents there. You can do so after creating a user (anonymous changes are not allowed). But please be considerate. You may want to discuss changes on the forum first.
 
@@ -93,9 +91,9 @@ We regularly publish a [status message like this one](http://discuss.orbeon.com/
 See also our [roadmap](../roadmap.md).
 
 [1]: http://discuss.orbeon.com/
-[2]: http://www.orbeon.com/pricing
-[3]: http://www.orbeon.com/services
+[2]: https://www.orbeon.com/pricing
+[3]: https://www.orbeon.com/services
 [4]: mailto:info%40orbeon.com
-[5]: http://www.orbeon.com/community
-[6]: http://wiki.orbeon.com/forms/doc/contributor-guide/development-environment/orbeon-source-code-repository
+[5]: https://www.orbeon.com/community
+[6]: ../contributors/building-orbeon-forms.md
 [7]: https://github.com/orbeon/orbeon-forms/issues

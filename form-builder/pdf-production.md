@@ -18,7 +18,7 @@ Form Builder and Form Runner can produce PDF output in two ways:
 ## Availability
 
 - Automatic PDF generation is available in Orbeon Forms CE and PE
-- Templates are an [Orbeon Forms PE](http://www.orbeon.com/download) feature.
+- Templates are an [Orbeon Forms PE](https://www.orbeon.com/download) feature.
 
 ## Setup
 

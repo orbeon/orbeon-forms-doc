@@ -107,7 +107,7 @@ The API has a number of implementations. The default implementation is the embed
 There is no built-in integration with  CMS or workflow engines. However you can integrate with systems in a few ways:
 
 - Form Runner is built around a [REST API for persistence](../form-runner/api/persistence/README.md), which allows you to integrate yourself with any system by providing an implementation of that API.
-- [Simple processes](https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Buttons-and-Processes) allow you to send data to external systems.
+- [Simple processes](../form-runner/advanced/buttons-and-processes.md) allow you to send data to external systems.
 
 ### Is it possible to edit and update a published form?
 
@@ -148,7 +148,7 @@ Form Builder requires JavaScript to work, but forms built with the builder which
 
 Form Runner by default stores data in XML into eXist and relational databases. This does not require creating new tables, as we use generic tables.
 
-Some relational persistence layers support a "flat view", which is created at form publication time. See [Database Support](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-Features-~-Database-Support).
+Some relational persistence layers support a "flat view", which is created at form publication time. See [Flat view](../form-runner/persistence/flat-view.md).
 
 ### If I write my own persistence layer, do I need to recompile Orbeon Forms?
 
@@ -178,7 +178,7 @@ You can't just put the files produced by Form Builder or the HTML produced by th
 
 If you have installed the Form Runner runtime on a server, then you can run Form Runner alongside your other web pages or applications. Please note that Form Runner requires a Java servlet container.
 
-Orbeon Forms 4.7 and newer supports [server side embedding](https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-APIs-~-Server-side-Embedding).
+Orbeon Forms 4.7 and newer supports [server side embedding](../form-runner/link-embed/java-api.md).
 
 ### Can I use Form Builder to create a form, paste the form in a JSP, and use separate deployment?
 

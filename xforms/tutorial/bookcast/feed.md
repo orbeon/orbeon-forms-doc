@@ -91,14 +91,14 @@ Now look at the page view:
     <title>Orbeon Forms Bookcast</title>
     <subtitle>An Orbeon Forms tutorial example</subtitle>
     <updated><xsl:value-of select="current-dateTime()"/></updated>
-    <id>http://www.orbeon.com/ops/my-bookcast/</id>
-    <link href="http://www.orbeon.com/"/>
-    <generator uri="http://www.orbeon.com/ops/my-bookcast/" version="1.0">Orbeon Forms Bookcast</generator>
+    <id>https://www.orbeon.com/ops/my-bookcast/</id>
+    <link href="https://www.orbeon.com/"/>
+    <generator uri="https://www.orbeon.com/ops/my-bookcast/" version="1.0">Orbeon Forms Bookcast</generator>
 
     <xsl:for-each select="/books/book">
         <entry>
             <title><xsl:value-of select="concat(author, ' - ', title)"/></title>
-            <id>http://www.orbeon.com/ops/my-bookcast/<xsl:value-of select="concat(author, ' - ', title)"/>"/</id>
+            <id>https://www.orbeon.com/ops/my-bookcast/<xsl:value-of select="concat(author, ' - ', title)"/>"/</id>
             <updated><xsl:value-of select="current-dateTime()"/></updated>
             <content type="xhtml" xml:lang="en">
                 <div xmlns="http://www.w3.org/1999/xhtml">

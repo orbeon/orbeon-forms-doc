@@ -20,7 +20,7 @@ You enable an asynchronous submission with `mode="asynchronous"`:
     id="call-service" 
     mode="asynchronous"
     method="get" 
-    resource="http://www.orbeon.com/ops/xforms-sandbox/service/zip-states"
+    resource="https://www.orbeon.com/ops/xforms-sandbox/service/zip-states"
     serialization="none" 
     xxf:cache="true"
     replace="instance" 
@@ -96,5 +96,5 @@ The polling delay in milliseconds can be configured with the following property:
     value="10000"/>
 ```
 
-[1]: http://www.orbeon.com/download
+[1]: https://www.orbeon.com/download
 

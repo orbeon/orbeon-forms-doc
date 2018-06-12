@@ -48,7 +48,7 @@
     <role name="orbeon-admin" app="*" form="*"/>
     ```
 1. Remove demo forms and apps from Orbeon Forms.
-  - See [Creating a Production WAR](https://github.com/orbeon/orbeon-forms/wiki/Installation-~-Creating-a-Production-WAR).
+  - See [Creating a Production WAR](../../configuration/advanced/production-war.md).
 1. Within Form Builder
   - make sure that all your forms have permissions enabled (PE feature only)
   - set the `create` permission for all users

@@ -546,7 +546,7 @@ In order to remove data, see [Purging Old Data](purging-old-data.md).
 - [Purging Old Data](purging-old-data.md)
 - [Relational Database Logging](../../configuration/troubleshooting/database-logging.md)
 
-[1]: http://www.orbeon.com/pricing
+[1]: https://www.orbeon.com/pricing
 [2]: http://docs.oracle.com/cd/B19306_01/appdev.102/b14259/xdb03usg.htm#sthref263
 [3]: http://dev.mysql.com/doc/refman/5.5/en/xml-functions.html
 [4]: http://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html

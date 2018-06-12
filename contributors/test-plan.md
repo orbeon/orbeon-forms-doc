@@ -90,7 +90,7 @@ Check that all PE features are available in PE, but not in CE:
             - the properties for the private/public key
         - access http://localhost:8080/2017.2-pe/fr/orbeon/bookshelf/new
         - check the captcha isn't shown
-- Check other features listed on the [web site](http://www.orbeon.com/download)
+- Check other features listed on the [web site](https://www.orbeon.com/download)
 
 ## Persistence
 

@@ -12,7 +12,7 @@ If you have questions, issues or suggestions related to this tutorial, please se
 
 ### What Orbeon Forms does for you
 
-Orbeon Forms is an open source solution to build and deploy web forms. For more information, please visit the Orbeon home page at http://www.orbeon.com.
+Orbeon Forms is an open source solution to build and deploy web forms. For more information, please visit the Orbeon home page at https://www.orbeon.com.
 
 ### Prerequisites
 
@@ -1365,14 +1365,14 @@ Now look at the page view:
     <title>Orbeon Forms Bookcast</title>
     <subtitle>An Orbeon Forms tutorial example</subtitle>
     <updated><xsl:value-of select="current-dateTime()"/></updated>
-    <id>http://www.orbeon.com/ops/my-bookcast/</id>
-    <link href="http://www.orbeon.com/"/>
-    <generator uri="http://www.orbeon.com/ops/my-bookcast/" version="1.0">Orbeon Forms Bookcast</generator>
+    <id>https://www.orbeon.com/ops/my-bookcast/</id>
+    <link href="https://www.orbeon.com/"/>
+    <generator uri="https://www.orbeon.com/ops/my-bookcast/" version="1.0">Orbeon Forms Bookcast</generator>
 
     <xsl:for-each select="/books/book">
         <entry>
             <title><xsl:value-of select="concat(author, ' - ', title)"/></title>
-            <id>http://www.orbeon.com/ops/my-bookcast/<xsl:value-of select="concat(author, ' - ', title)"/>"/&gt;</id>
+            <id>https://www.orbeon.com/ops/my-bookcast/<xsl:value-of select="concat(author, ' - ', title)"/>"/&gt;</id>
             <updated><xsl:value-of select="current-dateTime()"/></updated>
             <content type="xhtml" xml:lang="en">
                 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -1472,10 +1472,10 @@ So far you have seen:
 
 You have now covered a good part of the basics of Orbeon Forms. You can now look at the [Orbeon Forms example applications][27] and the [rest of the Orbeon Forms documentation](http://doc.orbeon.com/)!
 
-[1]: http://www.orbeon.com/
-[2]: http://www.orbeon.com/community
+[1]: https://www.orbeon.com/
+[2]: https://www.orbeon.com/community
 [3]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/01.png
-[4]: http://www.orbeon.com/download
+[4]: https://www.orbeon.com/download
 [5]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/02.png
 [6]: http://demo.orbeon.com/orbeon/xforms-hello/
 [7]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/03.png

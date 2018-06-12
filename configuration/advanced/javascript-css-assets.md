@@ -257,7 +257,7 @@ See Yahoo’s [Best Practices for Speeding Up Your Website][2]
 
 ### Availability
 
-This is an [Orbeon Forms PE](http://www.orbeon.com/download) feature.
+This is an [Orbeon Forms PE](https://www.orbeon.com/download) feature.
 
 This feature is enabled by default in Orbeon Forms PE.  
 

@@ -339,5 +339,5 @@ The `ehcache.xml` configuration provided above attempts to minimize this kind of
 - Blog post: [High-Availability Thanks to State Replication](http://blog.orbeon.com/2018/03/high-availability-thanks-to-state.html)
 - [Clustering and High Availability](../configuration/advanced/clustering.md)
 
-[1]: http://www.orbeon.com/download
+[1]: https://www.orbeon.com/download
 [2]: ../form-runner/persistence/autosave.md

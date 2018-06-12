@@ -4,7 +4,7 @@
 
 ## Overview
 
-By using *database services*, a [PE feature](http://www.orbeon.com/pricing), you can use data stored in any table of a relational database, for instance to dynamically populate a dropdown, or to pre-populate fields based on a value entered by users.
+By using *database services*, a [PE feature](https://www.orbeon.com/pricing), you can use data stored in any table of a relational database, for instance to dynamically populate a dropdown, or to pre-populate fields based on a value entered by users.
 
 ## Populating a dropdown
 

@@ -16,7 +16,7 @@ We recommend you run Orbeon Forms on a dedicated server or instance that satisfi
 * CPU: recent 4-core, or more, Intel Xeon or Core i7. We don't recommend AMD CPUs, which, as of 2015, tend to be 2-4 times slower than Intel CPUs per core.
 * RAM: 4 GB of RAM, or more, available to the Java Virtual Machine (JVM heap size).
 
-If using AWS EC2, we recommend you start with a c4.2xlarge instance. For most projects, it is safe to start with a configuration along those lines, but you might want to have more powerful or multiple servers or instances (or equivalent) for situations calling for high availability, or to handle more load. When running Orbeon Forms PE on multiple servers or instances, you need one [PE subscription](http://www.orbeon.com/pricing) per server or instance. 
+If using AWS EC2, we recommend you start with a c4.2xlarge instance. For most projects, it is safe to start with a configuration along those lines, but you might want to have more powerful or multiple servers or instances (or equivalent) for situations calling for high availability, or to handle more load. When running Orbeon Forms PE on multiple servers or instances, you need one [PE subscription](https://www.orbeon.com/pricing) per server or instance. 
 
 For more details on sizing, see the section on [how much load Orbeon Forms can handle](../faq/form-builder-runner.md#how-much-load-can-orbeon-forms-handle).
 

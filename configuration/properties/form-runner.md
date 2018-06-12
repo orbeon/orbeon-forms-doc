@@ -408,7 +408,7 @@ Whether forms in noscript mode are allowed to use a layout based on tables. If `
 
 [6]: https://sites.google.com/a/orbeon.com/forms/doc/developer-guide/configuration-properties/configuration-properties-base
 [11]: https://www.google.com/recaptcha/admin/create
-[14]: https://github.com/orbeon/orbeon-forms/wiki/Form-Runner-~-Buttons-and-Processes#send
+[14]: ../../form-runner/advanced/buttons-and-processes/form-runner-actions/send-action.md
 [15]: https://developer.chrome.com/devtools
 [16]: http://getfirebug.com/
 [17]: http://wiki.orbeon.com/forms/doc/contributor-guide/browser#TOC-IE-limit-of-31-CSS-files

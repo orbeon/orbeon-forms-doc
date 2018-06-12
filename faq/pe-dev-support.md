@@ -30,14 +30,14 @@ However, we do provide custom patches to PE customers on a case by case basis.
 * Often such patches are backports of commits publicly available in the public source code repository.
 * Sometimes, they are created specifically to address issues you report.
 
-Some patches are also available in the latest stable release of Orbeon Forms PE, which you can find from the [downloads page](http://www.orbeon.com/download).
+Some patches are also available in the latest stable release of Orbeon Forms PE, which you can find from the [downloads page](https://www.orbeon.com/download).
 
 If you are interested to know what kind of issues and features are being worked on, please make sure to check the following:
 
 - [Commits to the public source code repository](https://github.com/orbeon/orbeon-forms/commits/master)
 - [Recently closed issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aclosed+sort%3Aupdated-desc)
 - [Orbeon on Twitter](https://twitter.com/orbeon)
-- [Orbeon Forms roadmap](https://github.com/orbeon/orbeon-forms/wiki/Orbeon-Forms-Roadmap)
+- [Orbeon Forms roadmap](../roadmap.md)
 - [Orbeon Forms blog](http://blog.orbeon.com/)
 
 ## Does Orbeon Forms contact a license server over the internet?
