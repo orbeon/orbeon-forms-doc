@@ -80,7 +80,9 @@ The following dialog can be opened with the `xf:show` action:
 
 Example:
 
-    xf:show("fr-validation-dialog") then suspend
+```
+xf:show(dialog = "fr-validation-dialog") then suspend
+```
 
 ### The result dialog
 
