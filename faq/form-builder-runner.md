@@ -1,7 +1,5 @@
 # FAQ - Form Builder and Form Runner
 
-<!-- toc -->
-
 ## General questions
 
 ### What is Orbeon Form Builder?
@@ -59,6 +57,18 @@ See the [Form Builder](../form-builder/README.md).
 We are committed to accessibility: we make sustained effort to ensure that Orbeon Forms complies with Section 508, the W3C WCAG, and the Disability Discrimination Act (DDA). As part of this effort, we consider any instance of noncompliance with one of the aforementioned standards as a bug.
 
 Also, throughout the years, a number of customers have conducted accessibility audits for Orbeon Forms, and we work closely with those customers to solve possible compliance issues.
+
+### How can I pass a token a new page and have it saved with the data?
+
+Say you've created a form, deployed it, and would like to take users to the `/new` page for that form, but would like to pass along some information to the form (let's call that piece of information "token"), and have that token saved with the data, so you can then find back the data based on the token.
+
+1. You can do this by passing the token to the form:
+	- On the URL, as a request parameter, if the token doesn't need to be private;
+	- As a request header, set in a reverse proxy, if the token needs to remain private, and shouldn't be exposed to users.
+2. In the form, add a hidden field to store the value of the token. You do this in Form Builder: create a section, which you can name "Internal" for your own reference, and in the Section Settings dialog, under Visibility put `false()`, so the section is never visible to end users. In that section add a text field, name it `token`, and in the field Control Settings, in Formulas, set its Initial Value to:
+	- [`xxl:get-request-parameter('token')`](/xforms/xpath/extension-functions/http-functions#xxf-get-request-parameter), if you're passing the value with a request parameter named `token`.
+	- [`xxl:get-request-header('token')`](/xforms/xpath/extension-functions/http-functions#xxf-get-request-header), if you're passing the value with a request header named `token`.
+3. When users enter data in the form and save it, the value of the token will be saved with the data, just as if the field was visible to users, and they had entered the value of the token.
 
 ### How can I create forms which users can fill out offline?
 
