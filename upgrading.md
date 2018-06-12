@@ -22,7 +22,7 @@ To upgrade to a new version of Orbeon Forms you'll want to:
     - If using a relational database, you might have to run some upgrade DDL at the database level. Search for "upgrade" in the [relational database configuration documentation](form-runner/persistence/relational-db.md), and check if there is some DDL you need to run to upgrade your database schema. This means running the `*-to-*.sql` DDL files from the older version to the new version.
 1. Thoroughly test that everything is working as expected with the new version of Orbeon Forms.
 
-Finally, let us know if you encounter issues while upgrading, via the [commmunity](http://www.orbeon.com/community), by email, or via professional support.
+Finally, let us know if you encounter issues while upgrading, via the [community](https://www.orbeon.com/community), by email, or via professional support.
 
 ## Compatibility policy
 
