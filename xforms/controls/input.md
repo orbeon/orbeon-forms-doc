@@ -144,7 +144,7 @@ When using the date picker, you can choose whether you want 2 months to be displ
 
 The date and time fields allow you to type a date and a time in a number of formats, as listed below. When the field looses the focus, the value you entered is parsed and, if recognized, replaced with a value in a a "canonical format".
 
-You can choose what canonical format is used by changing the value of the [oxf.xforms.format.input.date and oxf.xforms.format.input.time properties][4].
+You can choose what canonical format is used by changing the value of the [`oxf.xforms.format.input.date` and `oxf.xforms.format.input.time` properties][4].
 
 Time formats:
 
