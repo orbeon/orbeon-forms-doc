@@ -1,6 +1,6 @@
 # Organization-based permissions
 
-<!-- toc -->
+
 
 ## Roles can be tied to organizations
 

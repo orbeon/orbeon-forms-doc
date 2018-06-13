@@ -1,6 +1,6 @@
 # Typical combinations of page model and page view
 
-<!-- toc -->
+
 
 The sections below show how page model and page view are often combined.
 

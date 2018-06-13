@@ -1,6 +1,6 @@
 # Client-side JavaScript API
 
-<!-- toc -->
+
 
 ## Finding a Form Runner control by name
 

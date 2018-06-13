@@ -1,6 +1,6 @@
 # Replication
 
-<!-- toc -->
+
 
 ## Availability
 

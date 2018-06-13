@@ -1,6 +1,6 @@
 # The Summary page
 
-<!-- toc -->
+
 
 ## Purpose
 

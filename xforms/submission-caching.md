@@ -1,6 +1,6 @@
 # Submissions Caching
 
-<!-- toc -->
+
 
 ## Availability
 

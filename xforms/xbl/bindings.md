@@ -1,6 +1,6 @@
 # XBL Bindings
 
-<!-- toc -->
+
 
 ## Introduction
 

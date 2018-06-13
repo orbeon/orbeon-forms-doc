@@ -1,6 +1,6 @@
 # Utility functions
 
-<!-- toc -->
+
 
 ## xxf:is-blank()
 

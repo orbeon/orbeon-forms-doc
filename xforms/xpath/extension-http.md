@@ -1,6 +1,6 @@
 # HTTP request functions
 
-<!-- toc -->
+
 
 ## xxf:get-portlet-mode()
 

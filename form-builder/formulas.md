@@ -1,6 +1,6 @@
 # Formulas
 
-<!-- toc -->
+
 
 ## Formulas and XPath
 

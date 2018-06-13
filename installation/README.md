@@ -1,6 +1,6 @@
 # Installation
 
-<!-- toc -->
+
 
 ## Software requirements
 

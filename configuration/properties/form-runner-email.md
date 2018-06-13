@@ -1,6 +1,6 @@
 # Email configuration properties
 
-<!-- toc -->
+
 
 ## Connection to the SMTP server
 

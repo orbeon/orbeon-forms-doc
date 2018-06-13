@@ -1,6 +1,6 @@
 # Form Runner Liferay Proxy Portlet
 
-<!-- toc -->
+
 
 ## Availability
 

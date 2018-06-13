@@ -1,6 +1,6 @@
 # Wizard view
 
-<!-- toc -->
+
 
 ## Introduction
 

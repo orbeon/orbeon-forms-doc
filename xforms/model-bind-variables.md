@@ -1,6 +1,6 @@
 # Model-Bind Variables
 
-<!-- toc -->
+
 
 ## Overview
 

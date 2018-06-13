@@ -1,6 +1,6 @@
 # Attachments configuration properties
 
-<!-- toc -->
+
 
 ## Maximum attachment size
 

@@ -1,6 +1,6 @@
 # Examples
 
-<!-- toc -->
+
 
 ## Redirection with the PFC
 

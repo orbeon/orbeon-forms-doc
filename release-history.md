@@ -1,6 +1,6 @@
 # Release History
 
-<!-- toc -->
+
 
 ## Upcoming releases
 

@@ -1,6 +1,6 @@
 # Core actions
 
-<!-- toc -->
+
 
 ## Introduction
 

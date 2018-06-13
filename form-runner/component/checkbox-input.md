@@ -1,6 +1,6 @@
 # Checkbox Input Component
 
-<!-- toc -->
+
 
 ## Availability
 

@@ -1,6 +1,6 @@
 # XBL Library
 
-<!-- toc -->
+
 
 ## Introduction
 

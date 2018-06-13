@@ -1,6 +1,6 @@
 # General configuration properties
 
-<!-- toc -->
+
 
 ## Default values
 

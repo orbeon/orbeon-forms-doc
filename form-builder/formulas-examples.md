@@ -1,6 +1,6 @@
 # Examples of formulas
 
-<!-- toc -->
+
 
 ## Testing on a Yes No Answer field
 

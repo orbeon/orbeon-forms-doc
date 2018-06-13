@@ -1,6 +1,6 @@
 # Search
 
-<!-- toc -->
+
 
 ## Example query
 

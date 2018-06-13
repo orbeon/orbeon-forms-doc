@@ -1,6 +1,6 @@
 # XForms Binds
 
-<!-- toc -->
+
 
 ## Introduction
 

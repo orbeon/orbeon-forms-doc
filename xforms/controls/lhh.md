@@ -1,6 +1,6 @@
 # Label, hint, help
 
-<!-- toc -->
+
 
 ## External label, hint, help
 

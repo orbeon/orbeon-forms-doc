@@ -1,6 +1,6 @@
 # Core functions
 
-<!-- toc -->
+
 
 ## xxf:document-id()
 

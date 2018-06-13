@@ -1,6 +1,6 @@
 # Standard Submissions Support
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Form Localization
 
-<!-- toc -->
+
 
 ## Availability
 

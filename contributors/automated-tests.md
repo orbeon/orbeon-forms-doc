@@ -1,6 +1,6 @@
 # Automated Tests
 
-<!-- toc -->
+
 
 ## Levels of tests
 

@@ -1,6 +1,6 @@
 # Autocomplete Component
 
-<!-- toc -->
+
 
 ## Overview
 

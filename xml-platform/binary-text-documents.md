@@ -1,6 +1,6 @@
 # Non-XML Documents
 
-<!-- toc -->
+
 
 ## Introduction
 

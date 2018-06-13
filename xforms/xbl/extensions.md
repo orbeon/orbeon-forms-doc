@@ -1,6 +1,6 @@
 # XBL Extensions
 
-<!-- toc -->
+
 
 ## Namespaces
 

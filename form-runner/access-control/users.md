@@ -1,6 +1,6 @@
 # Setup users for access control
 
-<!-- toc -->
+
 
 ## Providing information about the user
 

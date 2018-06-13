@@ -1,6 +1,6 @@
 # Performance, Tuning, and Sizing
 
-<!-- toc -->
+
 
 NOTE: Not linked yet.
 

@@ -1,6 +1,6 @@
 # Asynchronous Submissions
 
-<!-- toc -->
+
 
 ## Rationale
 

@@ -1,6 +1,6 @@
 # Generate XML Schema
 
-<!-- toc -->
+
 
 ## Availability
 

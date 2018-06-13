@@ -1,6 +1,6 @@
 # XForms models
 
-<!-- toc -->
+
 
 ## Placement of local models
 

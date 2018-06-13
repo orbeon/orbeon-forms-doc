@@ -1,6 +1,6 @@
 # Properties
 
-<!-- toc -->
+
 
 ## Overview
 

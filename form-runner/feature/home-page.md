@@ -1,6 +1,6 @@
 # Home Page
 
-<!-- toc -->
+
 
 ## Introduction
 

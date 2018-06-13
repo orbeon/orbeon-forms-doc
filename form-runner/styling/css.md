@@ -1,6 +1,6 @@
 # CSS
 
-<!-- toc -->
+
 
 ## Rationale
 

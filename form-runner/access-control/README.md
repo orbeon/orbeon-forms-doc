@@ -1,6 +1,6 @@
 # Access control and permissions
 
-<!-- toc -->
+
 
 In this section, we'll go over how you can secure Form Runner and Form Builder. For access control, Orbeon Forms leverages and delegates some work to external security infrastructure. In particular, you define users and their roles/group outside of Orbeon Forms.
 

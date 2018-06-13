@@ -1,6 +1,6 @@
 # PDF to Image Converter
 
-<!-- toc -->
+
 
 ## Availability
 

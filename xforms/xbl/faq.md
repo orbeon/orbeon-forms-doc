@@ -1,6 +1,6 @@
 # XBL FAQ
 
-<!-- toc -->
+
 
 ## What can component do?
 

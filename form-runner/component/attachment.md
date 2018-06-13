@@ -1,6 +1,6 @@
 # Attachment component
 
-<!-- toc -->
+
 
 ## What it does
 

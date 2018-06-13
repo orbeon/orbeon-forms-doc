@@ -1,6 +1,6 @@
 # Lease Feature
 
-<!-- toc -->
+
 
 ## Availability
 

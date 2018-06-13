@@ -1,6 +1,6 @@
 # Standard functions
 
-<!-- toc -->
+
 
 ## XPath 2.0 functions and constructors
 

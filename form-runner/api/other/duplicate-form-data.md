@@ -1,6 +1,6 @@
 # Duplicate form data
 
-<!-- toc -->
+
 
 ## Availability
 

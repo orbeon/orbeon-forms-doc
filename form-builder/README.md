@@ -1,6 +1,6 @@
 # Orbeon Form Builder
 
-<!-- toc -->
+
 
 ## Introduction
 

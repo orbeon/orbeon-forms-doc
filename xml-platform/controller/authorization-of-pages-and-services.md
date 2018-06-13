@@ -1,6 +1,6 @@
 # Authorization of Pages and Services
 
-<!-- toc -->
+
 
 ## Availability
 

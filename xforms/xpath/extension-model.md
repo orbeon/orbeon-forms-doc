@@ -1,6 +1,6 @@
 # Model functions
 
-<!-- toc -->
+
 
 ## xxf:bind()
 

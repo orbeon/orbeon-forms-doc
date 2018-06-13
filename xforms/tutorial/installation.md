@@ -1,6 +1,6 @@
 # Installation
 
-<!-- toc -->
+
 
 ## Downloading and installing Java
 

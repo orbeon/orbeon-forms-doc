@@ -1,6 +1,6 @@
 ## XPath tips
 
-<!-- toc -->
+
 
 ## Boolean comparisons
 

@@ -1,6 +1,6 @@
 # Tomcat
 
-<!-- toc -->
+
 
 ## Supported Tomcat versions
 

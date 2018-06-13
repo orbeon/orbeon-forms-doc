@@ -1,6 +1,6 @@
 # Standard event support
 
-<!-- toc -->
+
 
 ## Events in XForms
 

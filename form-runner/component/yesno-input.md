@@ -1,6 +1,6 @@
 # Yes/No Answer Component
 
-<!-- toc -->
+
 
 ## Availability
 

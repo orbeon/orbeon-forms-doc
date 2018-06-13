@@ -1,6 +1,6 @@
 # Introduction
 
-<!-- toc -->
+
 
 ## What is this?
 

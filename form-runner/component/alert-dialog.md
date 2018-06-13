@@ -1,6 +1,6 @@
 # Alert Dialog Component
 
-<!-- toc -->
+
 
 ## Rationale
 

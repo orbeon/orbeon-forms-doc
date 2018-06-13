@@ -1,6 +1,6 @@
 # Input control
 
-<!-- toc -->
+
 
 ## Basic Usage
 

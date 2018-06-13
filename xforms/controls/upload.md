@@ -1,6 +1,6 @@
 # Upload control
 
-<!-- toc -->
+
 
 ## Appearance
 

@@ -1,6 +1,6 @@
 # Text area control
 
-<!-- toc -->
+
 
 ## Basic usage
 

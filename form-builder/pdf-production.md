@@ -1,6 +1,6 @@
 # PDF production
 
-<!-- toc -->
+
 
 ## Introduction
 

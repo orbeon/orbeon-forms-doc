@@ -1,6 +1,6 @@
 # XPath expression analysis
 
-<!-- toc -->
+
 
 ## Availability
 

@@ -1,6 +1,6 @@
 # Database services
 
-<!-- toc -->
+
 
 ## Overview
 

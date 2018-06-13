@@ -1,6 +1,6 @@
 # Other configuration elements
 
-<!-- toc -->
+
 
 ## Overview
 

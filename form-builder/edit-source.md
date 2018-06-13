@@ -1,6 +1,6 @@
 # Editing the source code of the form definition
 
-<!-- toc -->
+
 
 ## With Orbeon Forms 2017.2 and newer
 

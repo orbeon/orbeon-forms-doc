@@ -1,6 +1,6 @@
 # XML submission
 
-<!-- toc -->
+
 
 ## Rationale
 

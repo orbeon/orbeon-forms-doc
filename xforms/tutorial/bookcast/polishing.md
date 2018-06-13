@@ -1,6 +1,6 @@
 # Polishing the app
 
-<!-- toc -->
+
 
 ## Making things look nicer
 

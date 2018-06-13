@@ -1,6 +1,6 @@
 # Grid Component
 
-<!-- toc -->
+
 
 ## What it does
 

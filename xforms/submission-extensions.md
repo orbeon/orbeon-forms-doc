@@ -1,6 +1,6 @@
 # Submissions Extensions
 
-<!-- toc -->
+
 
 ## Annotating submitted XML data with xxf:annotate
 

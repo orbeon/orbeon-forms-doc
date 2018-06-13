@@ -1,6 +1,6 @@
 # Handwritten Signature Component
 
-<!-- toc -->
+
 
 ## Rationale
 

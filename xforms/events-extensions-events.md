@@ -1,6 +1,6 @@
 # Extension events
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Compatibility
 
-<!-- toc -->
+
 
 ## Support for let expressions
 

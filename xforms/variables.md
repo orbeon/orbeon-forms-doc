@@ -1,6 +1,6 @@
 # XForms - Variables
 
-<!-- toc -->
+
 
 ## Rationale
 

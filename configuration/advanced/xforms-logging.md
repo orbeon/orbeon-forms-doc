@@ -1,6 +1,6 @@
 # XForms Logging
 
-<!-- toc -->
+
 
 ## Enabling XForms logging
 

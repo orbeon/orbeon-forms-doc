@@ -1,6 +1,6 @@
 # Persistence API
 
-<!-- toc -->
+
 
 ## Children pages
 

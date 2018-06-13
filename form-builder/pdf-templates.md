@@ -1,6 +1,6 @@
 # PDF templates
 
-<!-- toc -->
+
 
 ## How PDF templates work
 

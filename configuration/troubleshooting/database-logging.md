@@ -1,6 +1,6 @@
 # Relational Database Logging
 
-<!-- toc -->
+
 
 ## Introduction
 

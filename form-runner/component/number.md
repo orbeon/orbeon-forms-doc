@@ -1,6 +1,6 @@
 # Number Component
 
-<!-- toc -->
+
 
 ## What it does
 

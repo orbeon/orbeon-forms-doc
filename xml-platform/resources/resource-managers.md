@@ -1,6 +1,6 @@
 # Resource Managers
 
-<!-- toc -->
+
 
 ## Introduction
 

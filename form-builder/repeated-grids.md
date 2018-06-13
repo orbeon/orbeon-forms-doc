@@ -1,6 +1,6 @@
 # Repeated grids
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Other functions
 
-<!-- toc -->
+
 
 ## xxf:decode-iso9075-14()
 

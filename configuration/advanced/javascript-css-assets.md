@@ -1,6 +1,6 @@
 # JavaScript and CSS assets
 
-<!-- toc -->
+
 
 ## Minimal asset resources
 

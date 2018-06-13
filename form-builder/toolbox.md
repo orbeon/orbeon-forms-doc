@@ -1,6 +1,6 @@
 # Toolbox
 
-<!-- toc -->
+
 
 ## Introduction
 

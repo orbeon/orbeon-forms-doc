@@ -1,6 +1,6 @@
 # Controls functions
 
-<!-- toc -->
+
 
 ## xxf:binding()
 

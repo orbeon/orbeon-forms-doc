@@ -1,6 +1,6 @@
 # Security
   
-<!-- toc -->
+
 
 ## Rationale
 

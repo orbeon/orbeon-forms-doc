@@ -1,6 +1,6 @@
 # XBL Modes
 
-<!-- toc -->
+
 
 ## Introduction
 

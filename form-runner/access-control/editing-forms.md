@@ -1,6 +1,6 @@
 # Access control for editing forms
 
-<!-- toc -->
+
 
 ## Form Builder permissions
 

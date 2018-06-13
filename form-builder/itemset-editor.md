@@ -1,6 +1,6 @@
 # Itemset editor
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Toolbox component metadata
 
-<!-- toc -->
+
 
 ## Rationale
 

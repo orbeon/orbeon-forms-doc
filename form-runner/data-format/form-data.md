@@ -1,6 +1,6 @@
 # Form Data Format
 
-<!-- toc -->
+
 
 ## Introduction
 

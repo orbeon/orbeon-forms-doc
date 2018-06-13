@@ -1,6 +1,6 @@
 # Production WAR
 
-<!-- toc -->
+
 
 
 ## Rationale

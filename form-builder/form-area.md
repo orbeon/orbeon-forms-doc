@@ -1,6 +1,6 @@
 # Form area
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Database access
 
-<!-- toc -->
+
 
 ## Adding a "save" button
 

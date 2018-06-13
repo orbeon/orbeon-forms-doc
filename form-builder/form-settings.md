@@ -1,6 +1,6 @@
 # Form Settings
 
-<!-- toc -->
+
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # Dynamic Data Dropdown Component
 
-<!-- toc -->
+
 
 ## Overview
 This components behaves very much like an `<xf:select1>`, except that the data populating the control doesn't come from an instance, but from a service. You specify the URI of the service and the data-bound select1 component takes care of calling it when necessary, retrieving the data, and using that data to populate a drop-down, list, or radio buttons.

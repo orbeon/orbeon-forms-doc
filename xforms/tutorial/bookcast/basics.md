@@ -1,6 +1,6 @@
 # The basic app
 
-<!-- toc -->
+
 
 ## Getting started
 

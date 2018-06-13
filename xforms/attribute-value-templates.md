@@ -1,6 +1,6 @@
 # Attribute Value Templates (AVTs)
 
-<!-- toc -->
+
 
 ## Introduction
 

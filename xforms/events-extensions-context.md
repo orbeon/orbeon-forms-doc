@@ -1,6 +1,6 @@
 # Extension event context information
 
-<!-- toc -->
+
 
 ## Introduction
 

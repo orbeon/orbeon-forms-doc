@@ -1,6 +1,6 @@
 # Other event extensions
 
-<!-- toc -->
+
 
 ## Creating keyboard shortcuts with the keypress event
 

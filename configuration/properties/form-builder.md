@@ -1,6 +1,6 @@
 # Form Builder configuration properties
 
-<!-- toc -->
+
 
 ## Default values
 

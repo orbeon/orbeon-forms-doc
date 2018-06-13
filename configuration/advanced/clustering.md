@@ -1,6 +1,6 @@
 # Clustering and High Availability
 
-<!-- toc -->
+
 
 ## Rationale
 

@@ -1,6 +1,6 @@
 # Architecture
 
-<!-- toc -->
+
 
 ## Basics
 
