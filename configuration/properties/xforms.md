@@ -1,7 +1,5 @@
 # XForms configuration properties
 
-
-
 ## Default values
 
 For the latest default values of XForms properties, see [`properties-xforms.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-xforms.xml).
@@ -553,8 +551,14 @@ An `<xf:input>` bound to a node of type `xs:dateTime` is shown as two text field
 uses the formatting defined by `oxf.xforms.format.input.date` and the time text field uses the formatting defined by `oxf.xforms.format.input.time`.
 
 ```xml
-<property as="xs:string" name="oxf.xforms.format.input.date" value="[M]/[D]/[Y]"/>
-<property as="xs:string" name="oxf.xforms.format.input.time" value="[h]:[m]:[s] [P]"/>
+<property 
+    as="xs:string"
+    name="oxf.xforms.format.input.date"
+    value="[M]/[D]/[Y]"/>
+<property
+    as="xs:string"
+    name="oxf.xforms.format.input.time"
+    value="[h]:[m]:[s] [P]"/>
 ```
 
 ##  Error handling
