@@ -256,8 +256,8 @@ You can also use the `xxf:sanitize` attribute on the XForms model to set a filte
 
 - Blog post: [Use HTML5 placeholders, in XForms](http://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html)
 
-[3]: ../../configuration/properties/xforms.html#navigator
-[4]: ../../configuration/properties/xforms.html#for-xfinput
+[3]: ../../configuration/properties/xforms.md#navigator
+[4]: ../../configuration/properties/xforms.md#for-xf-input
 [5]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 [7]: ../../form-runner/feature/localization.html
 [8]: ../images/xforms-ios-date.png
