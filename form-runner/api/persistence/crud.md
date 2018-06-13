@@ -101,6 +101,7 @@ curl
     - when using GET for data only
     - values
         - `remove`: remove all XML data elements with attribute `fr:relevant="false"`
+        - `keep`: [SINCE Orbeon Forms 2018.1] do not remove XML data elements
         - missing: do not remove XML data elements
         
 _NOTE: This property only operates properly on data stored with Orbeon Forms 2017.1 and newer, as only Orbeon Forms 2017.1 and newer stores data with the `fr:relevant="false"` annotation._
