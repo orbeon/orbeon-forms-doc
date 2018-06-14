@@ -1,7 +1,5 @@
 # Detail page configuration properties
 
-
-
 ## Adding your own CSS files
 
 [SINCE Orbeon Forms 2017.1]
@@ -295,25 +293,7 @@ You can set this property to either:
 - `reCAPTCHA` or `SimpleCaptcha`, to use one the two captcha implementations built in Orbeon Forms (see also: [Which captcha is right for you](../../form-runner/component/captcha.md))
 - [SINCE Orbeon Forms 2017.2] The qualified name of an XBL component you created and that implements a captcha, say `acme:custom-captcha`. When doing so, you need to have a namespace defined in your property file for the component prefix you're using, say `xmlns:acme="http://acme.org/"`.
 
-If using the reCAPTCHA, also add the following properties to specify your reCAPTCHA public and private keys. You can get those by [signing up for reCAPTCHA][11].
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.xforms.xbl.fr.recaptcha.public-key"
-    value="..."/>
-
-<property
-    as="xs:string"
-    name="oxf.xforms.xbl.fr.recaptcha.private-key"
-    value="..."/>
-```
-
-With those properties in place, your forms will show a captcha as illustrated by the following screenshot.
-
-![](/form-runner/images/recaptcha.png)
-
-[LIMITATION] The Form Runner captcha uses the [captcha XBL components](../../form-runner/component/captcha.md), which doesn't support the noscript mode. Hence,  enabling this feature will have no effect in noscript mode.
+If using the reCAPTCHA, you'll also need to add properties to specify your reCAPTCHA public and private keys. For more on this, see how to setup the [reCAPTCHA component](../../form-runner/component/captcha.md#recaptcha).
 
 ## Running processes upon page load
 
