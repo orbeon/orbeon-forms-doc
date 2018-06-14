@@ -290,7 +290,7 @@ If you are creating a public form, you might want to add a captcha to avoid spam
 You can set this property to either:
 
 - Blank (empty string), to not have captcha added to your form, which is the default.
-- `reCAPTCHA` or `SimpleCaptcha`, to use one the two captcha implementations built in Orbeon Forms (see also [which captcha is right for you](../../form-runner/component/captcha.md#which-captcha-is-right-for-you))
+- `reCAPTCHA` or `SimpleCaptcha`, to use one the two captcha implementations built in Orbeon Forms. Also see [which captcha is right for you](../../form-runner/component/captcha.md#which-captcha-is-right-for-you).
 - [SINCE Orbeon Forms 2017.2] The qualified name of an XBL component you created and that implements a captcha, say `acme:custom-captcha`. When doing so, you need to have a namespace defined in your property file for the component prefix you're using, say `xmlns:acme="http://acme.org/"`.
 
 If using the reCAPTCHA, you'll also need to add properties to specify your reCAPTCHA public and private keys. For more on this, see how to setup the [reCAPTCHA component](../../form-runner/component/captcha.md#recaptcha).
