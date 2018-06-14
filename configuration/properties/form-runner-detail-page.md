@@ -297,7 +297,7 @@ If using the reCAPTCHA, you'll also need to add properties to specify your reCAP
 
 ## Running processes upon page load
 
-[Since Orbeon Forms 2017.2.]
+[SINCE Orbeon Forms 2017.2.]
 
 Running processes in the background is an Orbeon Forms PE feature.
 
