@@ -37,10 +37,11 @@
         * [Examples](form-builder/formulas-examples.md)
     * [Summary page](form-builder/summary-page.md)
     * [Form localization](form-builder/localization.md)
-    * Advanced
+    * Services and actions
         * [HTTP services](form-builder/http-services.md)
         * [Database services](form-builder/database-services.md)
         * [Actions](form-builder/actions.md)
+    * Advanced
         * [Edit source](form-builder/edit-source.md)
         * [Extension API](form-builder/extension-api.md)
         * [Integration](form-builder/integration.md)
