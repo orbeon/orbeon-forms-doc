@@ -28,6 +28,7 @@ The following options are available:
 - __Show in Search:__
     - When selected, the control value is searchable in the Summary page.
 - __Show in Email Subject:__
+    - DEPRECATED with Orbeon Forms 2018.1: Use a *template* for the subject instead.
     - When selected, the control value is used as part of the subject of the email when the form data is sent by email.
     - If more than one non-blank values are found, they are all included in the email subject, comma-separated.
 - __Email Recipient:__
