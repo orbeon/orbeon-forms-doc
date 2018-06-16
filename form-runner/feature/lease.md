@@ -1,7 +1,5 @@
 # Lease Feature
 
-
-
 ## Availability
 
 Since Orbeon Forms 2017.2.

@@ -37,20 +37,22 @@
         * [Examples](form-builder/formulas-examples.md)
     * [Summary page](form-builder/summary-page.md)
     * [Form localization](form-builder/localization.md)
-    * Services and actions
-        * [HTTP services](form-builder/http-services.md)
-        * [Database services](form-builder/database-services.md)
-        * [Actions](form-builder/actions.md)
     * Advanced
         * [Edit source](form-builder/edit-source.md)
-        * [Extension API](form-builder/extension-api.md)
-        * [Integration](form-builder/integration.md)
+        * Services and actions
+            * [HTTP services](form-builder/http-services.md)
+            * [Database services](form-builder/database-services.md)
+            * [Actions](form-builder/actions.md)
         * [PDF production](form-builder/pdf-production.md)
             * [Automatic PDF](form-builder/pdf-automatic.md)
             * [PDF templates](form-builder/pdf-templates.md)
-        * [XML Schemas support](form-builder/xml-schema-support.md)
-        * [Toolbox component metadata](form-builder/metadata.md)
+        * [Field-level encryption](form-builder/field-level-encryption.md)
         * [Section templates](form-builder/section-templates.md)
+        * [XML Schemas support](form-builder/xml-schema-support.md)
+        * Extensibility
+            * [Extension API](form-builder/extension-api.md)
+            * [Integration](form-builder/integration.md)
+            * [Toolbox component metadata](form-builder/metadata.md)
 * Form Runner
     * Overview
         * [Architecture](form-runner/overview/architecture.md)
