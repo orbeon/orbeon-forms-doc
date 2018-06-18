@@ -18,7 +18,7 @@ The Form Builder specific extensions are in an namespace::
 
 ## Group metadata for the toolbox
 
-In XBL, each component is defined in an `<xbl:binding>` element and multiple `<xbl:binding>` can be grouped under an `<xbl:xbl>` element. The Form Builder toolbox shows components, grouped by "types of components", e.g. "Text Controls", as shown at the right of this text. To instruct Form Builder that multiple component should be grouped together in the toolbar, place then inside the same `<xbl:xbl>`. Then, as a child element of `<xbl:xbl>`, you provide the title for the group inside an `<fb:metadata>`, as in (see the [full source][1]):
+In XBL, each component is defined in an `<xbl:binding>` element and multiple `<xbl:binding>` can be grouped under an `<xbl:xbl>` element. The Form Builder toolbox shows components, grouped by "types of components", e.g. "Text Controls", as shown at the right of this text. To instruct Form Builder that multiple component should be grouped together in the toolbar, place then inside the same `<xbl:xbl>`. Then, as a child element of `<xbl:xbl>`, you provide the title for the group inside an `<fb:metadata>`, as in (see the [full source](https://github.com/orbeon/orbeon-forms/blob/1f92ad665d15de2eda212a0d6a59694529970cb9/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-controls.xbl) as of Orbeon Forms 2018.1):
 
 ```xml
 <fb:metadata>
@@ -29,17 +29,65 @@ In XBL, each component is defined in an `<xbl:binding>` element and multiple `<x
 
 ## Control metadata for the toolbox
 
-To be used in Form Builder, your XBL component must have an additional `<fb:metadata>` section inside the `<xbl:binding>` of your component. That `<fb:metadata>` provides to Form Builder the localized display name for the component, an icon, and the markup to be inserted by Form Builder into the form when the component is used. For instance, the `<metadata>` section for the [date picker][2] component look like (see the [full source][3]):
+### Introduction
+
+To be used in Form Builder, your XBL component must have an additional `<fb:metadata>` section inside the `<xbl:binding>` of your component. That `<fb:metadata>` provides to Form Builder the localized display name for the component, an icon, and the markup to be inserted by Form Builder into the form when the component is used. For instance, the `<metadata>` section for the Explanatory Text component look like (see the [full source](https://github.com/orbeon/orbeon-forms/blob/1f92ad665d15de2eda212a0d6a59694529970cb9/form-runner/jvm/src/main/resources/xbl/orbeon/explanation/explanation.xbl) as of Orbeon Forms 2018.1):
 
 ```xml
-<fb:metadata xmlns="http://orbeon.org/oxf/xml/form-builder">
-    <fb:display-name lang="en">Date Picker</fb:display-name>
-    <fb:display-name lang="fr">Sélecteur de date</fb:display-name>
-    <fb:icon lang="en">
-        <fb:small-icon>/apps/fr/style/images/silk/date.png</fb:small-icon>
-        <fb:large-icon>/apps/fr/style/images/silk/date.png</fb:large-icon>
+<fb:metadata>
+    <fb:display-name lang="en">Explanatory Text</fb:display-name>
+    <fb:display-name lang="es">Explicación</fb:display-name>
+    <fb:display-name lang="fi" todo="true">[Explanation]</fb:display-name>
+    <fb:display-name lang="fr">Text explicatif</fb:display-name>
+    <fb:display-name lang="ru" todo="true">[Explanation]</fb:display-name>
+    <fb:display-name lang="de">Erklärung</fb:display-name>
+    <fb:display-name lang="it">Spiegazione</fb:display-name>
+    <fb:display-name lang="nl">Uitleg</fb:display-name>
+    <fb:display-name lang="sv">Förklaring</fb:display-name>
+    <fb:icon>
+        <fb:icon-class>fa fa-fw fa-comment</fb:icon-class>
     </fb:icon>
-    <!-- Other metadata information -->
+    <fb:templates>
+        <fb:resources>
+            <text/>
+        </fb:resources>
+        <fb:view>
+            <fr:explanation>
+                <fr:text ref=""/>
+            </fr:explanation>
+        </fb:view>
+    </fb:templates>
+</fb:metadata>
+```
+
+Prior to Orbeon Forms 2018.1, you would use `<fb:small-icon>` to point to an image file:
+
+```xml
+<fb:icon>
+    <fb:small-icon>/apps/fr/style/images/silk/layout.png</fb:small-icon>
+</fb:icon>
+```
+
+*NOTE: `<fb:large-icon>` was present in a number of XBL components but never used by Form Builder. We recommend,
+starting with Orbeon Forms 2018.1, using `<fb:icon-class>` which allows for scalable icons.*
+
+### Icons
+
+[SINCE Orbeon Forms 2018.1]
+
+The new `<fb:icon-class>` element allows you to specify a set of CSS classes used in the toolbox to show a scalable font
+icon. This is useful with icons from [Font Awesome](https://fontawesome.com/) and similar. In that case, don't use
+`<fb:small-icon>`. For example:
+
+```xml
+<fb:metadata>
+    <fb:display-name lang="en">Explanatory Text</fb:display-name>
+    <fb:display-name lang="fr">Text explicatif</fb:display-name>
+    ...
+    <fb:icon>
+        <fb:icon-class>fa fa-fw fa-comment</fb:icon-class>
+    </fb:icon>
+    ...
 </fb:metadata>
 ```
 
@@ -201,9 +249,6 @@ The text for control `<xf:label>`, `<xf:hint>`, `<xf:help>`, and `<xf:alert>`, c
 - Taken from the [Form Builder resource file][6], which is typically useful when your control uses resources that already exists elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the Dynamic Data Dropdown control did for the second `<xf:input>` above.
 
 [1]: https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-controls.xbl
-[2]: http://wiki.orbeon.com/forms/doc/developer-guide/xbl-components#TOC-Date-Picker
-[3]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/date-picker/date-picker.xbl
-     https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/date-picker/date-picker.xbl
 [6]: https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/form/resources.xml
 
 ## See also
