@@ -1,7 +1,5 @@
 # Auditing
 
-
-
 ## Rationale
 
 Auditing guarantees that all the operations on the database:
@@ -38,5 +36,5 @@ When you use the Oracle or MySQL persistence layer:
 ## See also
 
 - [Access Control](../../form-runner/access-control/README.md)
-- [Relational Database Setup](../../form-runner/persistence/relational-db.md)
-- [Database Support](../../form-runner/persistence/db-support.md)
+- [Relational Database Setup](relational-db.md)
+- [Database Support](db-support.md)

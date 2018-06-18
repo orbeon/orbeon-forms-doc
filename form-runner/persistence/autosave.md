@@ -1,7 +1,5 @@
 # Autosave
 
-
-
 ## Support
 
 See [Database Support](../../form-runner/persistence/db-support.md) for the detail of which persistence layers and Orbeon Forms versions support the autosave feature.

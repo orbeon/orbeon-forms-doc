@@ -1,6 +1,4 @@
-# Database Support
-
-
+# Database support
 
 ## Categories of databases
 
@@ -10,6 +8,8 @@ We have two categories of databases:
 - __Relational__: Oracle, MySQL, SQL Server, PostgreSQL, DB2
 
 Since Orbeon Forms 4.4, the implementation of relational support is common to all databases. There used to be separate implementation for each relational database.
+
+For setup instructions, see [Using Form Runner with a relational database](relational-db.md).
 
 ## Feature matrix
 
@@ -36,3 +36,7 @@ A third-party [MarkLogic persistence layer for Orbeon Form Runner](https://gitla
 
 [blog1]: http://blog.orbeon.com/2014/01/repeated-sections.html
 [blog2]: http://blog.orbeon.com/2014/02/form-versioning.html
+
+## See also 
+
+- [Using Form Runner with a relational database](relational-db.md)

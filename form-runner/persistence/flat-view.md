@@ -1,7 +1,5 @@
 # Flat view
 
-
-
 ## Usage
 
 ### Rationale
