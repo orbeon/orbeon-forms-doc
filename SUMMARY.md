@@ -290,5 +290,3 @@
     * [Building Orbeon Forms](contributors/building-orbeon-forms.md)
     * [Localizing Orbeon Forms](contributors/localizing-orbeon-forms.md)
     * [State handling](contributors/state-handling.md)
-    * [Test plan](contributors/test-plan.md)
-
