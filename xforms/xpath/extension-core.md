@@ -187,7 +187,7 @@ This function fills a string template with values passed separately.
 
 - `$template`: template of the form:
     ```
-    My name is {$name}. I am {$aqe} year-old. 
+    My name is {$name}. I am {$age} year-old. 
     ```
 - `$lang`: language for formatting of parameters
 - `$params`: name → value XPath `map`
