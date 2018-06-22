@@ -175,6 +175,12 @@ to provide a function for that purpose.*
     
 ## Email subject and body
 
+NOTE: Since Orbeon Forms 2018.1, you can set a form's email subject and body in the Form Builder user interface. You can
+also use template placeholders. See [Email settings](../../form-builder/email-settings.md).
+
+With any Orbeon Forms version, the following properties can be used to set default and per app/form email subject and
+body templates. 
+
 ```xml
 <property 
     as="xs:string"
@@ -186,3 +192,7 @@ to provide a function for that purpose.*
     name="oxf.fr.resource.*.*.en.email.body"
     value="Hi, here is an email from Orbeon Forms!"/>
 ```
+
+## See also 
+
+- [Email settings](../../form-builder/email-settings.md)

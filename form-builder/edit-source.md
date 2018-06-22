@@ -1,7 +1,5 @@
 # Editing the source code of the form definition
 
-
-
 ## With Orbeon Forms 2017.2 and newer
 
 The "Edit Source" button under the "Advanced" tab in the toolbox opens the "Edit Source" dialog.
