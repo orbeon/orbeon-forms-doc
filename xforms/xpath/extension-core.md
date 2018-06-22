@@ -173,6 +173,40 @@ Example:
 </xbl:xbl>
 ```
 
+## xxf:process-template()
+
+```
+xxf:process-template(
+    $template as xs:string,
+    $lang     as xs:string,
+    $params   as map(*)?
+) as xs:string?
+```
+
+This function fills a string template with values passed separately. 
+
+- `$template`: template of the form:
+    ```
+    My name is {$name}. I am {$aqe} year-old. 
+    ```
+- `$lang`: language for formatting of parameters
+- `$params`: name → value XPath `map`
+
+Example with `xmlns:map="http://www.w3.org/2005/xpath-functions/map"` in scope:
+
+```xpath
+xxf:process-template(
+    'My name is {$name}. I am {$age} year-old.',
+    'en',
+    map:merge(
+        (
+            map:entry('name', 'Marco Polo'),
+            map:entry('age',  42)
+        )
+    )
+)
+```
+
 ## xxf:property()
 
 ```
