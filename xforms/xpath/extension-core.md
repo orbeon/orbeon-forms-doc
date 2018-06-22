@@ -196,16 +196,21 @@ Example with `xmlns:map="http://www.w3.org/2005/xpath-functions/map"` in scope:
 
 ```xpath
 xxf:process-template(
-    'My name is {$name}. I am {$age} year-old.',
+    'My name is {$name}. I am {$age} year-old. I own $ {$amount}.',
     'en',
     map:merge(
         (
-            map:entry('name', 'Marco Polo'),
-            map:entry('age',  42)
+            map:entry('name',    'Marco Polo'),
+            map:entry('age',     42),
+            map:entry('amount',  12.99)
         )
     )
 )
 ```
+
+This evaluates to:
+
+> My name is Marco Polo. I am 42 year-old. I own $ 12.99.
 
 ## xxf:property()
 
