@@ -6,7 +6,7 @@
 
 You just created a nice form with XForms. But how do you get it to load initial data, for example coming from a database or a service? You have two ways of doing this, depending on whether a _push_ or _pull_ method is more suitable to your situation.
 
-If you design your forms with Form Builder, rather than writing XForms by hand, see how to [load an initial instance in Form Runner](../../configuration/properties/form-runner-detail-page.html#initial-data).
+If you design your forms with Form Builder, rather than writing XForms by hand, see how to [load an initial instance in Form Runner](../../configuration/properties/form-runner-detail-page.md#initial-data).
 
 ## The "push" solution 
 
