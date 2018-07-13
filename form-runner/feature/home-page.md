@@ -211,6 +211,10 @@ In addition, if the latest modification time of the form definitions differ, a *
 
 ![Newer](../images/home-newer.png)
 
+### Re-encrypting
+
+[SINCE Orbeon Forms 2018.1]
+
 ### Reindexing
 
 [SINCE Orbeon Forms 2016.2]
