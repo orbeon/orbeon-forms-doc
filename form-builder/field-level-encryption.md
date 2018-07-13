@@ -14,7 +14,7 @@ In Form Builder, to mark a field for encryption, open the "Control Settings" dia
 
 When storing form data, encryption is done before it is sent to the implementation of persistence API. When retrieving form data, decryption is done after it is received from the implementation of the persistence API. This means that implementations of the persistence API don't need to worry about encrypting or decrypting data when storing or reading form data. Also, it means that values of fields marked for encryption will be encrypted on the wire on the way to and from your database, even further increasing the security of your solution.
 
-![Checkbox to mark field for encryption](images/field-level-encryption-ssn.png)
+![Data encryption in Form Runner, before it reaches the implementation of the persistence API](images/field-level-encryption-when.png)
 
 ## Making changes to what needs to be encrypted
 
@@ -27,4 +27,4 @@ Say you edit an existing form definition in Form Builder and change the fields t
 
 This means that, from the perspective of fields encryption, overwriting an existing form definition at publication time doesn't cause any problem. This is because encrypted fields are marked as such in the form data, so Orbeon Forms can decrypt them even if the list of fields to be encrypted has changed since the last time the form data was saved.
 
-However, overwriting an existing form definition at publication time won't re-encrypt existing data. For this to happen, you need to [trigger a re-encryption](../form-runner/feature/home-page.md) from the Form Runner home page.
+However, overwriting an existing form definition at publication time won't re-encrypt existing data. For this to happen, you need to [trigger a re-encryption](../form-runner/feature/home-page.md#re-encrypting) from the Form Runner home page.
