@@ -38,13 +38,13 @@ However, overwriting an existing form definition at publication time won't re-en
 1. Currently, the search API isn't able to handle encrypted fields.
 	- This has the following consequences:
 		- You can't search values of encrypted fields, whether from a [summary page](summary-page.md) or using the [search API](../form-runner/apis/persistence-api/search.md).
-		- Neither the summary page or the search API is able to show or return the values of encrypted fields (it will show/return the encrypted value).
+		- Neither the summary page or the search API is able to show or return the values of encrypted fields (it will instead show/return the encrypted values).
 	- Consequently, fields marked for encryptions shouldn't be marked to be shown on the search page summary, or to show in search.
 2. Re-encryption doesn't support changing the encryption key, that is decrypting with a first key (the old key) and encrypting with a second key (the new key). If you need to change the encryption key, for now you need to:
-	1. For any published form with encrypted for which data exists, edit the form to unmark all encrypted fields, and re-publish the form overwriting the relevant version.
-	2. Form the Form Runner home page, trigger a re-encryption for all the forms that had encrypted fields.
-	3. Change the key in your properties. After this, none of fields in your form data will be encrypted in your database.
+	1. For any published form, with encrypted field, for which data exists, edit the form to unmark all encrypted fields, and re-publish the form overwriting the relevant version.
+	2. From the Form Runner home page, trigger a re-encryption for all the forms that had encrypted fields.
+	3. Change the key in your properties. After this, none of the fields in your form data will be encrypted in your database.
 	4. Repeat step 1, but this time marking fields for encryption.
 	5. Repeat step 2, after which the relevant fields will be encrypted with the new key.
 
-We expect these limitations to be be lifted in future versions of Orbeon Forms.
+We expect these limitations to be lifted in future versions of Orbeon Forms.
