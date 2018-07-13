@@ -211,21 +211,21 @@ In addition, if the latest modification time of the form definitions differ, a *
 
 ![Newer](../images/home-newer.png)
 
-### Re-encrypting
+### Re-encryption
 
 [SINCE Orbeon Forms 2018.1]
 
-#### Limitations to re-encryptions
+#### Limitations to re-encryption
 
 Currently, re-encryption is only supported in the built-in implementation of the persistence API for relational databases. The built-in implementation of the persistence API for eXist doesn't support re-encryption, and custom implementations can't yet support re-encryption.
 
 #### Creating a database backup before re-encryption
 
-Unlike typical update and delete operations that are performed at the database level by adding a new row, thus keeping the old data, re-encryption is done *in-place*. All data is being re-encrypted, including historical (non-current) data. This means that you could loose data if something were to go wrong during re-encryption. As such, we strongly recommend you create a backup of your data before re-encryption.
+Unlike typical update and delete operations that are performed at the database level by adding a new row, thus keeping the old data, re-encryption is done *in-place*. All data is being re-encrypted, including historical data that is part of the "journal". This means that you could loose data if something were to go wrong during re-encryption. As such, we strongly recommend you create a backup of your data before re-encryption.
 
 #### Starting re-encryption
 
-To re-encrypt all the data for certain forms:
+To re-encrypt all the data for certain forms, from the Form Runner home page in admin view:
 
 1. Mark the checkboxes corresponding to the relevant forms.
 2. Click on the "Operations" button, and in the menu click on "Re-encrypt form definitions". If that entry is greyed out, make sure that you haven't selected a form for which data is stored with a persistence layer that doesn't support re-encryption.
