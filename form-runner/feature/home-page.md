@@ -213,7 +213,7 @@ In addition, if the latest modification time of the form definitions differ, a *
 
 ### Re-encryption
 
-[SINCE Orbeon Forms PE 2018.1] Also see [Field-level encryption](../form-builder/advanced/field-level-encryption.md).
+[SINCE Orbeon Forms PE 2018.1] Also see [Field-level encryption](../../form-builder/advanced/field-level-encryption.md).
 
 #### Limitations to re-encryption
 
