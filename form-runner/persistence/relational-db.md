@@ -518,8 +518,8 @@ create trigger bookshelf_trigger before insert on orbeon_form_data for each row 
         delete from bookshelf where document_id = new.document_id;
         if new.deleted = 'N' and new.draft = 'N' then
             insert into bookshelf set document_id = new.document_id,
-                title = extractValue(new.xml, '/book/details/title'),
-                author = extractValue(new.xml, '/book/details/author');
+                title = extractValue(new.xml, '/form/details/title'),
+                author = extractValue(new.xml, '/form/details/author');
         end if;
     end if;
 end;
