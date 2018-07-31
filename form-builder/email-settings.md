@@ -52,7 +52,7 @@ The email body can be set in plain text or in rich text (HTML) with the relevant
 
 ## Dynamic email subject and body
 
-An email subject or body can be dynamic and include the value of form controls or formulas.
+An email subject or body can be dynamic and include the value of form controls or formulas, as shown in the examples above.
 
 For more, see [Template syntax](template-syntax.md).
 

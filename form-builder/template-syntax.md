@@ -49,7 +49,7 @@ When the form definition has more than one language:
 - Each language has its own localized template.
 - Template parameters are not localized and are available no matter what language is selected.
 
-## Example
+## Examples
 
 In the following example of a dynamic control label, the `$name` variable refers to the subsequent `name` parameter. The Template Parameters section declares that `name` parameter to refer to the `name` control.
 
@@ -58,6 +58,10 @@ In the following example of a dynamic control label, the `$name` variable refers
 This is how this would appear in the running form:
 
 ![Dynamic label at runtime](images/control-settings-label-dynamic-runtime.png)
+
+In the following example of dynamic email subject, the `$title` and `$author` variables refer also to the subsequent parameters.
+
+![Email Subject](images/email-settings-subject.png)
 
 The text of the template is localized as usual when the form definition has more than one language.
 
