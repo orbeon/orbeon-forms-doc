@@ -1,7 +1,5 @@
 # Form Runner functions
 
-
-
 ## Availability
 
 [SINCE Orbeon Forms 2016.2]
@@ -31,6 +29,62 @@ fr:app-name() as xs:string
 ```
 
 Return the form's application name.
+
+## fr:control-string-value()
+
+[SINCE Orbeon Forms 2018.1]
+
+```xpath
+fr:control-string-value(
+    $control-name   as xs:string,
+    $follow-indexes as xs:boolean = false()
+) as xs:string?
+```
+
+- `$control-name`
+    - must correspond to an existing value control (statically)
+- `$follow-indexes`
+    - if missing, takes the value `false()`.
+    - if `false()`
+        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat
+          iterations, the first repeat iteration is chosen. 
+    - if `true()`
+        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
+          iterations, the iteration matching the enclosing repeat's current index is chosen. 
+
+This function returns the value of a Form Runner control by name as a string, or an empty sequence if the control or
+value is not found.
+
+## fr:control-typed-value()
+
+[SINCE Orbeon Forms 2018.1]
+
+```xpath
+fr:control-typed-value(
+    $control-name   as xs:string,
+    $follow-indexes as xs:boolean = false()
+) as array(xs:anyAtomicType)
+```
+
+Like `fr:control-string-value()` (see above), but it returns:
+
+- an XPath `array()` of all the values found 
+- each value has an XPath type when possible, including:
+    - `xs:string`
+    - `xs:boolean`
+    - `xs:integer`
+    - `xs:decimal`
+    - `xs:date`
+    - `xs:time`
+    - `xs:dateTime`
+- `$follow-indexes`
+    - if missing, takes the value `false()`.
+    - if `false()`
+        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat
+          iterations, all repeat iterations is chosen. 
+    - if `true()`
+        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
+          iterations, the iteration matching the enclosing repeat's current index is chosen.
 
 ### fr:created-dateTime()
 
