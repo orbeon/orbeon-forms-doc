@@ -14,13 +14,13 @@ Templates, as of Orbeon Forms 2018.1, apply to:
     - Hint
     - Help Message
 
-## Template
+## Templates
 
-You set a template placeholder by using the exact syntax:
+You define a template by setting a placeholder with the following exact syntax:
 
 ```
 {$foo}
-``` 
+```
 
 where `foo` is a name which must match one of the template parameters configured below.
 
@@ -37,26 +37,27 @@ The following options are available for each template parameter:
     - __All Control Values:__ the value of all form controls.
         - This is only available for the email body.
         - This is experimental as of Orbeon Forms 2018.1. 
-    
-*NOTE: An XPath expression runs in the context of the form data's root element. However, the [Form Runner function library](../xforms/xpath/extension-form-runner.md) is not yet available to the expressions as of Orbeon Forms 2018.1.*
+
+*NOTE: For the email subject and body, an XPath expression runs in the context of the form data's root element. However, the [Form Runner function library](../xforms/xpath/extension-form-runner.md) is not yet available to expressions as of Orbeon Forms 2018.1. For labels, hints and help messages, the Form Runner function library is available.*
+
+A template may omit references to any or all template parameters.
 
 ## Localization
 
-When the form definition has more than one language, a language selector appears and allows switching between
-languages for setting a subject or body in the given language.
+When the form definition has more than one language:
 
-Note that template parameters are not localized and are available no matter what language is selected. However, a template
-in a given language may omit references to any or all template parameters.
+- Each language has its own localized template.
+- Template parameters are not localized and are available no matter what language is selected.
 
 ## Example
 
-In the following example, the `$name` variable refers to the subsequent `name` parameter. The Template Parameters section declares that `name` parameter to refer to the `name` control.
+In the following example of a dynamic control label, the `$name` variable refers to the subsequent `name` parameter. The Template Parameters section declares that `name` parameter to refer to the `name` control.
 
 ![Dynamic label configuration](images/control-settings-label-dynamic.png)
 
 This is how this would appear in the running form:
 
-![Dynamic label](images/control-settings-label-dynamic-runtime.png)
+![Dynamic label at runtime](images/control-settings-label-dynamic-runtime.png)
 
 The text of the template is localized as usual when the form definition has more than one language.
 
