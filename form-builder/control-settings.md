@@ -135,6 +135,11 @@ This is how this would appear in the running form:
 
 ![Dynamic label](images/control-settings-label-dynamic-runtime.png)
 
+The text of the label, hint or help template is localized as usual when the form definition has more than one language. 
+
+Note that template parameters are not localized and are available no matter what language is selected. However, a template
+in a given language may omit references to any or all template parameters.
+
 ## See also
 
 - [Control metadata for the Control Settings dialog](metadata.md#control-metadata-for-the-control-settings-dialog)

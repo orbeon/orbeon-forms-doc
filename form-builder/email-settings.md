@@ -79,7 +79,7 @@ The following options are available for each template parameter:
 When the form definition has more than one language, a language selector appears and allows switching between
 languages for setting a subject or body in the given language.
 
-Note that template parameters are not localized and are used no matter what language is selected. However, a template
+Note that template parameters are not localized and are available no matter what language is selected. However, a template
 in a given language may omit references to any or all template parameters.
 
 ## See also
