@@ -30,7 +30,7 @@ fr:app-name() as xs:string
 
 Return the form's application name.
 
-## fr:control-string-value()
+### fr:control-string-value()
 
 [SINCE Orbeon Forms 2018.1]
 
@@ -55,7 +55,7 @@ fr:control-string-value(
 This function returns the value of a Form Runner control by name as a string, or an empty sequence if the control or
 value is not found.
 
-## fr:control-typed-value()
+### fr:control-typed-value()
 
 [SINCE Orbeon Forms 2018.1]
 
