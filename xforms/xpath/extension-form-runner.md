@@ -46,11 +46,9 @@ fr:control-string-value(
 - `$follow-indexes`
     - if missing, takes the value `false()`.
     - if `false()`
-        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat
-          iterations, the first repeat iteration is chosen. 
+        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat iterations, the first repeat iteration is chosen. 
     - if `true()`
-        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
-          iterations, the iteration matching the enclosing repeat's current index is chosen. 
+        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat iterations, the iteration matching the enclosing repeat's current index is chosen. 
 
 This function returns the value of a Form Runner control by name as a string, or an empty sequence if the control or
 value is not found.
