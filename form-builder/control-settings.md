@@ -95,9 +95,7 @@ See [Formulas](formulas.md) for details.
 
 [SINCE Orbeon Forms 2017.2]
 
-In addition to setting a control's label and hint in place in the form area, you can also set and update them in this
-tab. You can switch between plain text and HTML text as well. The "Previous" and "Next" buttons allow quick navigation
-between controls.
+In addition to setting a control's label and hint in place in the form area, you can also set and update them in this tab. You can switch between plain text and HTML text as well. The "Previous" and "Next" buttons allow quick navigation between controls.
 
 ![Label tab](images/control-settings-label-hint.png)
 
@@ -112,6 +110,30 @@ The help message is available at runtime through a help icon positioned next to 
 The help text is localizable.
 
 See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html).
+
+### Dynamic labels, hints and help messages
+
+[SINCE Orbeon Forms 2018.1]
+
+Orbeon Forms supports *dynamic* labels, hints, and help messages. This means that, instead of being specified once and for all at form design time, labels, hints and help messages can incorporate dynamic parts such as control values and other custom expressions.
+
+To enable a dynamic label, for example, you need to:
+
+- Include one or more `{$param}` sections in the text, where `param` is the name of a parameter specified in the subsequent Template Parameters section. The text becomes a template.
+- Add one or more parameters in the Template Parameters section.
+
+A template parameter value can be one of:
+
+- A reference to another control value.
+- A formula expressed with XPath.
+
+In the following example, the `$name` variable refers to the subsequent `name` parameter. The Template Parameters section declares that `name` parameter to refer to the `name` control.
+
+![Dynamic label configuration](images/control-settings-label-dynamic.png)
+
+This is how this would appear in the running form:
+
+![Dynamic label](images/control-settings-label-dynamic-runtime.png)
 
 ## See also
 
