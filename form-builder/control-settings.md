@@ -99,7 +99,7 @@ In addition to setting a control's label and hint in place in the form area, you
 tab. You can switch between plain text and HTML text as well. The "Previous" and "Next" buttons allow quick navigation
 between controls.
 
-![Help tab](images/control-settings-label-hint.png)
+![Label tab](images/control-settings-label-hint.png)
 
 ### Help Message
 
