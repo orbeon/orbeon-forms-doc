@@ -1,7 +1,5 @@
 # Control settings
 
-
-
 ## Introduction
 
 The Control Settings dialog allows controlling all the aspects the a control besides its label and hint. The dialog
@@ -117,28 +115,7 @@ See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/im
 
 Orbeon Forms supports *dynamic* labels, hints, and help messages. This means that, instead of being specified once and for all at form design time, labels, hints and help messages can incorporate dynamic parts such as control values and other custom expressions.
 
-To enable a dynamic label, for example, you need to:
-
-- Include one or more `{$param}` sections in the text, where `param` is the name of a parameter specified in the subsequent Template Parameters section. The text becomes a template.
-- Add one or more parameters in the Template Parameters section.
-
-A template parameter value can be one of:
-
-- A reference to another control value.
-- A formula expressed with XPath.
-
-In the following example, the `$name` variable refers to the subsequent `name` parameter. The Template Parameters section declares that `name` parameter to refer to the `name` control.
-
-![Dynamic label configuration](images/control-settings-label-dynamic.png)
-
-This is how this would appear in the running form:
-
-![Dynamic label](images/control-settings-label-dynamic-runtime.png)
-
-The text of the label, hint or help template is localized as usual when the form definition has more than one language. 
-
-Note that template parameters are not localized and are available no matter what language is selected. However, a template
-in a given language may omit references to any or all template parameters.
+For more, see [Template syntax](template-syntax.md).
 
 ## See also
 
@@ -151,4 +128,3 @@ in a given language may omit references to any or all template parameters.
     - [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
     - [Improved constraints on attachments uploads](http://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
     - [More flexible email senders and recipients](http://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)
-     

@@ -37,7 +37,6 @@ You can specify an email subject by deselecting the "Template from Properties" c
 
 ## Email body
 
-
 You can specify an email body by deselecting the "Template from Properties" checkbox. When that checkbox is selected, the body template [comes from a property](../configuration/properties/form-runner/detail-page/email.md#email-subject-and-body). This is the default for backward compatibility.
 
 ```xml
@@ -51,37 +50,17 @@ The email body can be set in plain text or in rich text (HTML) with the relevant
 
 ![Email Body](images/email-settings-body.png)
 
-## Template syntax
+## Dynamic email subject and body
 
-You set a template placeholder in the subject by using the exact syntax:
+An email subject or body can be dynamic and include the value of form controls or formulas.
 
-```
-{$foo}
-``` 
-
-where `foo` is a name which must match one of the template parameters configured below. You can add new parameters
-with the "+" icon and remove them with the "-" icon.
-
-The following options are available for each template parameter:
-
-- Parameter name: this must be unique among parameters.
-- Parameter value:
-    - __Control Value:__ get the value of a control.
-    - __XPath Expression:__ calculated expression.
-    - __All Control Values:__ the value of all form controls.
-        - This is only available for the email body.
-        - This is experimental as of Orbeon Forms 2018.1. 
-    
-*NOTE: An XPath expression runs in the context of the form data's root element. However, the [Form Runner function library](../xforms/xpath/extension-form-runner.md) is not yet available to the expressions as of Orbeon Forms 2018.1.*
+For more, see [Template syntax](template-syntax.md).
 
 ## Localization
 
-When the form definition has more than one language, a language selector appears and allows switching between
-languages for setting a subject or body in the given language.
-
-Note that template parameters are not localized and are available no matter what language is selected. However, a template
-in a given language may omit references to any or all template parameters.
+When the form definition has more than one language, a language selector appears and allows switching between languages for setting a subject or body in the given language. Note that template parameters are not localizable.
 
 ## See also
 
 - [Email subject and body](../configuration/properties/form-runner/detail-page/email.md#email-subject-and-body)
+- [Template syntax](template-syntax.md)

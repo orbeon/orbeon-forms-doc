@@ -49,6 +49,7 @@
             * [PDF templates](form-builder/pdf-templates.md)
         * [Field-level encryption](form-builder/field-level-encryption.md)
         * [Section templates](form-builder/section-templates.md)
+        * [Template syntax](form-builder/template-syntax.md)
         * [XML Schemas support](form-builder/xml-schema-support.md)
         * Extensibility
             * [Extension API](form-builder/extension-api.md)
