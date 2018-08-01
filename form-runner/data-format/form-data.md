@@ -1,4 +1,4 @@
-# Form Data Format
+# Form data format
 
 ## Introduction
 
