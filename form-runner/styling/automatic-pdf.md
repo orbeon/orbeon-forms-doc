@@ -38,6 +38,53 @@ With Chrome, in particular, you can also put the browser in `@media print` emula
 
 With that setting enabled, the main remaining difference between the Review page and the PDF is how browsers and the PDF library Orbeon Forms uses interpret CSS, as there are differences. Often you have to go by trial and error.
 
+## PDF-specific CSS
+
+In addition to the `@page` directive, the PDF layout supports positioning on items at the top and bottom of the page. 
+
+Here is the rough CSS as of Orbeon Forms 2018.1:
+
+```css
+@page {
+    @top-left {
+        content: element(logo);
+        ... more CSS here ...
+    }
+
+    @top-center {
+        content: element(header-title);
+        ... more CSS here ...
+    }
+
+    @top-right {
+        ... more CSS here ...
+    }
+
+    @bottom-left {
+        content: element(footer-title);
+        ... more CSS here ...
+    }
+    @bottom-center {
+        content: counter(page) " / " counter(pages);
+        ... more CSS here ...
+    }
+
+    @bottom-right {
+        ... more CSS here ...
+    }
+}
+```
+
+You can influence the content of the top and bottom parts of the PDF by overriding those rules. For example:
+
+```css
+@page {
+    @top-left {
+        content: none;
+    }
+}
+```
+
 ## See also
 
 - [CSS](css.md)
