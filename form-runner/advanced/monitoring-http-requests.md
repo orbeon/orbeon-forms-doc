@@ -1,14 +1,11 @@
 # Monitoring HTTP Requests
 
-
-
 ## Introduction
 
 When investigating issues, you often need to look at what goes "over the wire", in the HTTP requests between the client and the server. You may want to look at the HTTP requests as sent/received on the browser, on the application server, or somewhere in between. This page lists a few tool which might be of use in these cases.
 
 ### On the browser, the server, or in between:
 
-* On OS X, [HTTP Scoop][1] ($15) is both simple and efficient. If you're on OS X, look no further.
 * [Charles][2] (see also this [blog post][3])
 * [WireShark][4] is a workhorse. It can do a lot more than monitoring HTTP requests, but can also be intimidating. Lately, usability, including the installing process, has improved significantly. (See below for more details on WireShark.)
 * [Apache TCPMon][5] is very versatile tool; highly recommended; see the [TCPMon tutorial][6]
@@ -23,7 +20,6 @@ When investigating issues, you often need to look at what goes "over the wire", 
 
 * Use the browser's dev tools (AKA "F12 Developer Tools" on IE)
 * On Firefox, use [Firebug][8]'s Net tab, or the Console tab for Ajax requests.
-* On the Mac (any browser), use [HTTPScoop][1]
 
 ## WireShark
 
@@ -77,7 +73,6 @@ The Request Dumper Valve doesn't log the body of POSTs, it can only be used on T
 
 - [Let Charles help you monitor HTTP requests](http://blog.orbeon.com/2013/04/let-charles-help-you-monitor-http.html)
 
-[1]: http://www.tuffcode.com/
 [2]: http://www.charlesproxy.com/
 [3]: http://blog.orbeon.com/2013/04/let-charles-help-you-monitor-http.html
 [4]: http://www.wireshark.org/
