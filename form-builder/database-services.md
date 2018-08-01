@@ -1,10 +1,22 @@
 # Database services
 
-
-
 ## Overview
 
 By using *database services*, a [PE feature](https://www.orbeon.com/pricing), you can use data stored in any table of a relational database, for instance to dynamically populate a dropdown, or to pre-populate fields based on a value entered by users.
+
+## Format of database query responses
+
+A SQL query, when successful, returns an XML document with the following format:
+
+- A root element which is always `<response>`.
+- It contains one nested `<row>` element per row.
+- Each such element in turn contains one element per selected column, derived from the column name:
+    - The name is converted to lowercase.
+    - Underscores (`_`) replaced by dashes (`-`).     
+     
+For example, values for the `dept_no` column end up in `<dept-no>`.
+
+See below for concrete examples.
 
 ## Populating a dropdown
 
@@ -24,21 +36,50 @@ If you're using Tomcat, the simplest way of setting up a datasource is to edit T
 
 ### 2. Write the SQL query
 
-Still in the *Database Service Editor*, you write the SQL query to run in the database. When that query runs, Orbeon Forms creates an XML document with the returned data, and you'll be referring to parts of that document when linking the database service to a specific dropdown. In essence, that document has a root element which is always `<response>`, it contains one nested `<row>` per row, which in turn contains one element per column, with the element name being derived from the column name converted in lowercase and underscores replaced by dashes. So values for the `dept_no` column end up in `<dept-no>`.
+Still in the *Database Service Editor*, you write the SQL query to run in the database. When that query runs, Orbeon Forms creates an XML document with the returned data, and you'll be referring to parts of that document when linking the database service to a specific dropdown.
 
-![Run a query](images/database-services-run-query.png)
+The user interface in Form Builder looks like this:
+
+![Database Service Editor](images/database-services-example.png)
+
+Example response:
+
+```xml
+<response>
+    <row>
+        <dept-no>d009</dept-no>
+        <dept-name>Customer Service</dept-name>
+    </row>
+    <row>
+        <dept-no>d005</dept-no>
+        <dept-name>Development</dept-name>
+    </row>
+</response>
+```
+
+This diagram summarizes the mapping:
+
+![Mapping of columns to XML elements](images/database-services-run-query.png)
 
 ### 3. Link the dropdown
 
-To "link" the service to the dropdown, you create a new action, set it to run on *Form Load*, call the service you earlier named `list-departments`. With the result of the service you want to set the list of possible values of an a *Department* dropdown you have in the form. This is where you extract data from the XML document seen earlier, and you do this with 3 XPath expressions. The first points to the "rows", and will almost always be `/response/row`. Next, you need to tell Orbeon Forms where it can find, inside the `<row>`, the label (the text shown to users) and the value (what is stored in data when users make a selection).
+To "link" the service to the dropdown, you create a new action, set it to run on *Form Load*, call the service you earlier named `list-departments`. Here is how the user interface looks like:
+
+![Action general settings](images/action-itemset-example-general.png) 
+
+With the result of the service you want to set the list of possible values of an a *Department* dropdown you have in the form. This is where you extract data from the XML document seen earlier, and you do this with 3 XPath expressions. The first points to the "rows", and will almost always be `/response/row`. Next, you need to tell Orbeon Forms where it can find, inside the `<row>`, the label (the text shown to users) and the value (what is stored in data when users make a selection).
+
+Here is how the user interface looks like:
+
+![Action response](images/action-itemset-example-response.png)
+
+This diagram summarizes the mapping:
 
 ![Link to the dropdown](images/database-services-link-to-dropdown.png)
 
 ### 4. Select a value
 
-Finally, when your form runs and users make a selection in the dropdown, what you defined to be the *value*, here the content of the `<dept-no>` element is used to populate the element corresponding to the field in the form data.
-
-![User selects value](images/database-services-link-to-dropdown.png)
+Finally, when your form runs and users make a selection in the dropdown, the *value*, here the content of the `<dept-no>` element, is used to populate the element corresponding to the field in the form data.
 
 ## Populating fields using another field value
 
