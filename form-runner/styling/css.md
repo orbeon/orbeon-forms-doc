@@ -1,7 +1,5 @@
 # CSS
 
-
-
 ## Rationale
 
 Form Runner has a built-in theme for forms. This page documents how you can change that default.
@@ -78,25 +76,12 @@ The [default width with Bootstrap][4] is 940px, but you can change this by overr
 
 ## Configuring the presentation of automatic PDF output
 
-_NOTE: This doesn't apply if you associate a PDF template with a form. This only applies to the automatic PDF output feature of Form Runner._
-
-The automatic PDF output feature of Form Runner uses the Flying Saucer library, which is based on HTML and CSS. This means that you can configure the PDF appearance by adding your own CSS to Form Runner, very much in the same way you configure the appearance of Form Runner in your web browser.
-
-First, add your own CSS file to the list of Form Runner CSS files, with the `oxf.fr.css.custom.uri` property.
-
-In your CSS file, write CSS specific to the print format, under a section like this:
-
-```css
-@media print {
-    .. your CSS here...
-}
-```
-
-This way you can write CSS that only impact the appearance of the PDF, not that of the HTML.
+See [Automatic PDF](automatic-pdf.md).
 
 ## See also
 
 - [Grids CSS](grids.md)
+- [Automatic PDF](automatic-pdf.md)
 
 [1]: http://getbootstrap.com/2.3.2/
 [2]: ../../configuration/properties/form-runner.md#adding-your-own-css
