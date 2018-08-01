@@ -49,12 +49,14 @@ You style specific controls in your form, say to set the width of an input field
 
 The CSS class you use can either be one you define, or one of the following classes provided for convenience in `form-runner-base.css`:
 
-- `fr-width-2em``:` sets the field with to 2 em
-- `fr-width-3em``:` sets the field with to 3 em
-- `fr-width-5em``:` sets the field with to 5 em
-- `fr-width-7em``:` sets the field with to 7 em
-- `fr-width-10em``:` sets the field with to 10 em
-- `fr-width-15em``:` sets the field with to 15 em
+- `fr-width-2em`: sets the field with to 2 em
+- `fr-width-3em`: sets the field with to 3 em
+- `fr-width-5em`: sets the field with to 5 em
+- `fr-width-7em`: sets the field with to 7 em
+- `fr-width-10em`: sets the field with to 10 em
+- `fr-width-15em`: sets the field with to 15 em
+
+_NOTE: As of Orbeon Forms 2018.1, it is no longer recommended to use those CSS classes. Instead, vary the width of the 12-column grid cell in Form Builder to the desired size._
 
 If you define your own CSS class, then write a CSS rule for that class. Make sure to use a strong selector, so its precedence is higher than CSS provide by Orbeon Forms, e.g. something like:
 
@@ -64,8 +66,7 @@ If you define your own CSS class, then write a CSS rule for that class. Make sur
 }
 ```
 
-When doing CSS work, make sure to use a tool like Firebug that shows what CSS rules apply to an element. This will be your best friend for CSS development (in general, not only for Orbeon Forms!).
-
+When doing CSS work, make sure to use a tool like the Chrome Dev Tools (or other browsers' similar tools) that shows what CSS rules apply to an element. This will be your best friend for CSS development (in general, not only for Orbeon Forms!).
 
 ## Changing the page width
 
