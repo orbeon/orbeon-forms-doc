@@ -10,7 +10,9 @@ Form Runner has a built-in theme for forms. This page documents how you can chan
 
 ### Twitter Bootstrap
 
-Since Orbeon Forms 4.0, Form Runner uses [Twitter Bootstrap][1]. If you have custom CSS which works with Orbeon Forms 3.9, it is likely that you will have to update it to work with Orbeon Forms 4.0.
+Since Orbeon Forms 4.0, Form Runner uses [Twitter Bootstrap][1] for some aspects of its layout and styling.
+
+_NOTE: If you have custom CSS which works with Orbeon Forms 3.9, it is likely that you will have to update it to work with Orbeon Forms 4.0._
 
 ### Strength of CSS rules
 
@@ -24,7 +26,7 @@ You can either:
 
 1. Store your CSS is a separate CSS file, which you either provide in addition or that overrides the default CSS provided by Orbeon Forms. For more on this, see the [`oxf.fr.css.custom.uri`][2] configuration property. This is the recommended technique if your CSS is intended to be shared by several forms.
 
-2. Put your CSS inline, in the form. This is the recommended technique if your CSS is quite short, and specific to a given form (not to be shared amongst forms). For this, put the rules within your own `<style>` section of the form:
+2. Put your CSS inline, in the form. Uf your CSS is quite short, and specific to a given form (not to be shared amongst forms), this is a possibility. For this, put the rules within your own `<style>` section of the form:
     ```xml
     <xh:title>My Form Title</xh:title>
     <xh:style type="text/css">
@@ -33,6 +35,8 @@ You can either:
         }
     </xh:style>
     ```
+    
+_NOTE: As of Orbeon Forms 2018.1, it is no longer recommended to place any inline CSS, as some servers use the [`Content-Security-Policy` header](https://en.wikipedia.org/wiki/Content_Security_Policy) to disable inline scripts and CSS. Orbeon Forms 2018.1 doesn't include any inline scripts and CSS anymore by default._
 
 ### Styling specific controls
 
