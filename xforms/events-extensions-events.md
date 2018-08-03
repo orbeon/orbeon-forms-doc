@@ -1,7 +1,5 @@
 # Extension events
 
-
-
 ## Introduction
 
 This page documents extension events, that is events which are not part of the XForms specifications. Such events, by convention, start with the prefix `xxforms-`.
@@ -38,6 +36,28 @@ See also [UI refresh events](events-refresh.md).
 See also [UI refresh events](events-refresh.md).
 
 ## Document events
+
+### xxforms-refresh-done
+
+[SINCE Orbeon Forms 2018.1]
+
+- __Dispatched in response to:__ UI refresh has completed, including dispatching refresh events 
+- __Target:__ `#document`
+- __Bubbles:__ Yes
+- __Cancelable:__ No
+- __Context Info:__ None
+
+This event is dispatched to `#document` as the last action performed during a UI refresh.
+
+You can listen to it with:
+
+```xml
+<xf:action 
+    event="xxforms-refresh-done" 
+    observer="#document">
+    ...
+</xf:action>
+``` 
 
 ### xxforms-state-restored
 
