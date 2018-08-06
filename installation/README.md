@@ -1,7 +1,5 @@
 # Installation
 
-
-
 ## Software requirements
 
 Orbeon Forms runs on any platform that supports:

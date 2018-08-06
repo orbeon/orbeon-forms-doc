@@ -1,7 +1,5 @@
 # Security
   
-
-
 ## Rationale
 
 Orbeon Forms is used by health care, financial companies, government entities, and other organizations for which security is paramount. So we take security very seriously and believe Orbeon Forms provides a solid foundation in terms of security. What follows goes through common attacks and what Orbeon Forms is doing to counter those attacks.  
