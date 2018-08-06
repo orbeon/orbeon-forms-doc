@@ -1,7 +1,5 @@
 # Publish form definition
 
-
-
 ## Availability
 
 Since Orbeon Forms 2017.2.
@@ -43,9 +41,22 @@ If the form definition is provided in the request:
 
 If the form definition is NOT provided in the request:
 
-- URL: `/fr/service/orbeon/builder/publish/$document`
+- URL: `/fr/service/orbeon/builder/publish/$document-id`
+    - `$document-id`: Form Builder document id for retrieval of attachments
 - Method: `POST`
 - Request body: empty
+
+The following URL parameters apply in both cases:
+
+- `form-definition-version`:
+    - missing: indicates the latest published version, or `1` if there is no published version 
+    - `next`: to indicate that the form definition must be published under the next available version
+    - or a specific version number: to indicate that the form definition must replace the given version
+- `available`:
+    - when `false`: make or keep the form definition unavailable
+    - when `true` or missing: make or keep the form definition available
+- `version-comment`:
+    - when present, a [versioning comment](../../../form-builder/publishing.md#versioning-comments) to store with the form definition
 
 Response body:
 
@@ -100,3 +111,7 @@ curl
 
 - The caller must either call the service internally or have [authorized the service](/xml-platform/controller/authorization-of-pages-and-services.md).
 - Appropriate container or permission headers must also be set to allow accessing the form definition and data.  
+
+## See also
+
+- [Form Builder publishing](../../../form-builder/publishing.md)
