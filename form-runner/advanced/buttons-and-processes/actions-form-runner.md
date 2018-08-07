@@ -256,10 +256,15 @@ You can also override the default confirmation message:
     - If possible, switch the detail page's URL from new mode to edit mode. Before this action, this was done automatically as part of the `save` action.
 - `result-dialog`: Show the result dialog.
 - `review`, `edit`: Navigate to these Form Runner pages.
+- `show-relevant-errors`:
+    - [SINCE Orbeon Forms 2018.1]
+    - This is the new name for the `visit-all` action.
+    - This shows all "relevant errors". When using the [wizard view](../../feature/wizard-view.md) in `lax` and strict` mode, this shows errors to show for all available wizard pages. Errors for controls on non-available pages are not shown.
 - `summary`: Navigate to this Form Runner page (a predefined process since 4.7).
-- `unvisit-all`: Mark all controls as not visited.
+- `unvisit-all`:
+    - Mark all controls as not visited.
 - `visit-all`:
-    - Mark all controls as visited.
-    - [SINCE Orbeon Forms 2017.1] When using the [wizard view](../../feature/wizard-view.md) in `lax` and strict` mode, this marks all controls up to and including the latest visited page as visited. Controls on further, non-visited pages are not marked as visited.
+    - [DEPRECATED SINCE Orbeon Forms 2018.1]
+    - See `show-relevant-errors` instead.
 - `wizard-prev`: Navigate the wizard to the previous page.
 - `wizard-next`: Navigate the wizard to the next page.
