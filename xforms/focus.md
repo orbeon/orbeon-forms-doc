@@ -114,7 +114,7 @@ When the grouping control is a switch or a repeat, the focus naturally follows t
 
 #### Focusing only on xf:input
 
-[DEPRECATED with Orbeon Forms 2016.3. Use `includes` and `excludes` instead.]
+[DEPRECATED SINCE Orbeon Forms 2016.3. Use `includes` and `excludes` instead.]
 
 The `input-only` extension attribute, when set to `true`, changes the behavior of the action by allowing focus only on the `<xf:input>` control. This means that buttons (`<xf:trigger>`) in particular are excluded.
 

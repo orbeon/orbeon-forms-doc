@@ -53,7 +53,7 @@ The following options are available:
     - this option only shows for file and image attachments
     - when the property `oxf.fr.email.attach-files` is set to `selected`, only file and image attachments with this option checked are attached to the email
 - __Show in Email Subject:__
-    - DEPRECATED with Orbeon Forms 2018.1: Use a [template for the subject](email-settings.md) instead.
+    - DEPRECATED SINCE Orbeon Forms 2018.1: Use a [template for the subject](email-settings.md) instead.
     - When selected, the control value is used as part of the subject of the email when the form data is sent by email.
     - If more than one non-blank values are found, they are all included in the email subject, comma-separated.
 
