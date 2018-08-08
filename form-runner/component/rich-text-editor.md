@@ -43,11 +43,8 @@ The component supports being bound to a node which can be read-only or non-relev
 
 ## Limitations
 
-- Unlike the `<xf:textarea mediatype="text/html">`, the TinyMCE [doesn't automatically cleanup the HTML][8].
 - Because of the update heuristic (see above), by design the TinyMCE won't update if the value of the bound node changes while the focus is on the TinyMCE.
 
 [1]: https://www.tiny.cloud/
 [4]: https://www.tiny.cloud/docs/configure/
 [5]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/xbl/orbeon/tinymce/tinymce-config.js
-[8]: https://github.com/orbeon/orbeon-forms/issues/23
-
