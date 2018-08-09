@@ -113,7 +113,7 @@ See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/im
 
 [SINCE Orbeon Forms 2018.1]
 
-Orbeon Forms supports *dynamic* labels, hints, and help messages. This means that, instead of being specified once and for all at form design time, labels, hints and help messages can incorporate dynamic parts such as control values and other custom expressions.
+Controls support *dynamic* labels, hints, and help messages. This means that, instead of being specified once and for all at form design time, labels, hints and help messages can incorporate dynamic parts such as control values and other custom expressions.
 
 For more, see [Template syntax](template-syntax.md).
 

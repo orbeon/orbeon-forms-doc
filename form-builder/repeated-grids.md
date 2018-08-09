@@ -1,7 +1,5 @@
 # Repeated grids
 
-
-
 ## Introduction
 
 Form Builder supports grids with repeated rows. You can repeat a single row (which is the most common case), or multiple heterogeneous (that is with different controls) rows.
