@@ -306,7 +306,7 @@ This function only works with the header-driven method. See [Form Runner Access 
 xxf:user-roles() as xs:string*
 ```
 
-Return the current user's groups if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
+Return the current user's roles if available. This function works with container- and header-driven methods. See [Form Runner Access Control Setup](../../form-runner/access-control/README.md).
 
 ## xxf:username()
 
