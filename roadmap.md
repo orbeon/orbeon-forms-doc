@@ -56,18 +56,19 @@ For detailed status of issues, see the [GitHub project for Orbeon Forms 2018.1](
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2018-04-30: tentative release date
+- ~~2018-04-30: tentative release date~~
+- 2018-08-31: tentative release date
 
 ### Orbeon Forms 2018.2
 
 Focus:
 
 - Major new features
-    - [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256))
+    - [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2018-08-30: tentative release date
+- 2018-12: tentative release date
 
 ### Orbeon Forms 2018.3
 
