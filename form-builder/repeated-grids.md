@@ -90,6 +90,7 @@ Example:
 
 ## See also
 
+- [Section settings](section-settings.md)
 - Support for repeats lands in Form Builder: [older blog post](http://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
 - Inserting and reordering grid rows: [blog post](http://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
 - Repeated sections: [blog post](http://blog.orbeon.com/2014/01/repeated-sections.html)

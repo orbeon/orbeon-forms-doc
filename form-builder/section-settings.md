@@ -41,7 +41,7 @@ The "Custom CSS Classes" field allows adding CSS classes which will be placed on
 
 XPath expressions are described in more details in [Formulas](formulas.md).
 
-## Repeated Content
+## Repeated content
 
 Like [repeated grids](repeated-grids.md), section content can also be repeated. The section titles appears only once, but
 the content of the section can have multiple repetitions. The same settings that apply to repeated grids apply to
