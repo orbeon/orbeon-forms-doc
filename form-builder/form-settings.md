@@ -6,12 +6,12 @@ Some settings apply to the entire form definition. You access these settings wit
 
 ## General Settings
 
-General settings allow you to set:
+General settings allow you to set the following form definition metadata:
 
-- the Application Name
-- the Form Name
-- the form title in the current language
-- the form description in the current language
+- Application name
+- Form name
+- Form title in the current language
+- Form description in the current language
 
 ![General Settings](images/form-settings-general.png)
 
@@ -23,10 +23,9 @@ Form options include options which apply to the entire form definition.
 
 ![Form Options](images/form-settings-options.png)
 
-![Wizard Options](images/form-settings-wizard.png)
-
-- [Singleton Form](../form-runner/advanced/singleton-form.md) 
-
+- Singleton Form
+    - Enable or disable singleton form behavior. 
+    - See [Singleton Form](../form-runner/advanced/singleton-form.md)
 - Maximum Attachment Size per Control
     - [SINCE Orbeon Forms 2017.1]
     - Use Default: use the [`oxf.fr.detail.attachment.max-size` property](../configuration/properties/form-runner-attachments.md#maximum-attachment-size)
@@ -65,6 +64,8 @@ Here is how hints appear depending on the type of control they are associated wi
 ## Wizard Options
 
 [SINCE Orbeon Forms 2018.1] These options are now in a separate tab.
+
+![Wizard Options](images/form-settings-wizard.png)
 
 For details, see [Wizard View](../form-runner/feature/wizard-view.md).
 
