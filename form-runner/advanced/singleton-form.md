@@ -1,7 +1,5 @@
 # Singleton form
 
-
-
 ## Use case
 
 Most forms are filled out for a given purpose, and then submitted. When the initial purpose comes up again, the form is filled and submitted one more time. For instance, a *car registration* form would be such an example. However, certain forms are often used more like "documents", that users create, and then come back to update, without creating another instance of that form/document. Those forms are here referred to as *singleton forms*.
@@ -10,7 +8,7 @@ Most forms are filled out for a given purpose, and then submitted. When the init
 
 As a form author, you can mark a form as *singleton* in Form Builder by opening the *Form Settings* dialog, and clicking on the *Singleton form* checkbox.
 
-<img alt="" src="../../form-builder/images/form-settings-options.png" width="602">
+![Form Options](../../form-builder/images/form-settings-options.png)
 
 ## In Form Runner
 

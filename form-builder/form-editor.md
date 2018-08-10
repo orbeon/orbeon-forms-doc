@@ -1,7 +1,5 @@
 # The form editor
 
-
-
 ## Creating your first form definition
 
 After pressing the "New" button on the [summary page](../form-builder/summary-page.md), you reach the form editor (also known as form designer) proper. Form Builder requires that you provide two small pieces of information before starting:
@@ -10,7 +8,7 @@ After pressing the "New" button on the [summary page](../form-builder/summary-pa
 _NOTE: Depending on your permissions, the application name might have been picked for you already, or you might have the choice of a restricted set of application names._
 * **Form Name.** Each form definition also has a _form name_, which identifies a unique form name within a particular application.
 
-![](images/form-settings-new.png)
+![Form Settings for a New Form Definition](images/form-settings-new.png)
 
 Both application name and form name must respect a certain format:
 
@@ -33,7 +31,7 @@ Form Builder's form editor is organized in 4 areas:
 * **Bottom:** status icons and buttons.
 * **Center:** WYSIWYG [form area](../form-builder/form-area.md) where you actually edit your form definition. This area might scroll vertically depending on your browser or monitor size or the size of the form you are editing.
 
-![](images/general-layout.png)
+![General Layout of Form Builder](images/general-layout.png)
 
 ## The top bar
 
@@ -43,7 +41,7 @@ Changing the language immediately updates the Form Builder user interface: you d
 
 _NOTE: This feature controls the language of the Form Builder user interface only. For localization of the form definition you are currently editing, see documentation below.
 
-![](images/top.png)
+![Form Builder's Top Bar](images/top.png)
 
 ## The bottom bar
 
@@ -57,6 +55,6 @@ The bottom bar of Form Builder shows the following buttons:
 * **Publish button.** Publish the current form. If the form contains errors or has unsaved changes, this button is disabled. You must fix errors and save the form before you can publish it.
 * **Save button.** Save the form to the database.
 
-![](images/bottom.png)
+![Form Builder's Bottom Bar](images/bottom.png)
 
 In addition, the bottom bar displays status information, such as whether the current form definition was successfully saved.
