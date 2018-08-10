@@ -50,11 +50,18 @@ By default, the latest available form definition version is used.
 ### PDF and TIFF views
 
 - `fr-language`
-    - xxx
+    - With automatic PDF, selects the language to use when producing the PDF.
 
 [SINCE Orbeon Forms 2018.1]
 
 - `fr-use-pdf-template`
-    - xxx
+    - Whether to use the PDF template or not. Defaults to `true` if there is one or more PDF templates.
 - `fr-pdf-template-name`
-    - xxx
+    - Selects a PDF template by name.
+- `fr-pdf-template-lang`
+    - Select a PDF template by language.
+
+## See also
+
+- [Sending PDF and TIFF content: Controlling the format](../advanced/buttons-and-processes/actions-form-runner-send.md)
+- [PDF templates](../../form-builder/pdf-templates.md)
