@@ -344,3 +344,7 @@ If the property is missing or empty, no annotation takes place. For example:
         </my-section>
     </form>
 ```
+
+## See also
+
+- [PDF templates](../../../form-builder/pdf-templates.md)

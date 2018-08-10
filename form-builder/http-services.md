@@ -1,7 +1,5 @@
 # HTTP services
 
-
-
 ## Introduction
 
 The HTTP Service Editor allows you to create simple REST services. The idea is that a form can call a service, typically passing XML back and forth.
