@@ -1,7 +1,5 @@
 # PDF templates
 
-
-
 ## How PDF templates work
 
 The purpose of this feature is to allow using existing PDF forms and using Form Runner to fill them out. This has the benefit that your organization can reuse existing forms, which might have been designed carefully for printing or archival purposes.
@@ -11,6 +9,22 @@ A PDF template must include Acrobat form fields. You can create these with Acrob
 - read the PDF template
 - read the filled-out form data
 - fill out the fields in the PDF template based on the data
+
+## Attaching a PDF template
+
+You attach one or more PDF templates to a form definition in Form Builder using the "PDF Templates" button in the "Advanced" tab of the toolbox.
+
+![Attach PDF templates dialog](images/pdf-templates-dialog.png)
+
+[SINCE Orbeon Forms 2018.1]
+
+You can attach more than one PDF template. Templates are differentiated by name and/or language. It is not possible to have duplicate name/language combinations. The idea is that you can create separate PDF templates:
+
+- per language
+- and/or per a given name, selected when creating the PDF
+
+The rules that govern which of the available PDF templates is selected when sending a PDF document are documented   
+[here](../form-runner/advanced/buttons-and-processes/actions-form-runner-send.md).
 
 ## Creating a PDF template for use with Form Builder
 
@@ -34,7 +48,7 @@ Form Runner identifies the PDF fields to fill-out based on their name. Those nam
 - Let's assume you the name of a field to `my-field` and the name of the section in which that field is to `my-section`.
 - The name of the PDF field must be: `my-section$my-field`.
 
-[LIMITATION] It has been [reported](http://discuss.orbeon.com/Creating-a-PDF-template-for-use-with-Form-Builder-td931856.html) that Adobe Livecycle Designer does not support the `$` character in field names.
+[LIMITATION] It has been [reported](http://discuss.orbeon.com/Creating-a-PDF-template-for-use-with-Form-Builder-td931856.html) that Adobe LiveCycle Designer does not support the `$` character in field names.
 
 ## Controls
 
@@ -101,3 +115,4 @@ The field names must look like:
 - [PDF Production](pdf-production.md).
 - [Automatic PDF](pdf-automatic.md).
 - [TIFF Production](../form-runner/feature/tiff-production.md).
+- [Sending PDF and TIFF content: Controlling the format](../form-runner/advanced/buttons-and-processes/actions-form-runner-send.md).

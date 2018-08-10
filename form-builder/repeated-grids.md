@@ -44,13 +44,13 @@ The "Visibility" and "Read-Only" formulas control whether the entire grid (inclu
 
 *NOTE: Since Orbeon Forms 4.8, these settings properly apply to the entire grid. Previously, the grid's repeat headers did not hide properly for example when the grid was hidden. See issue [#635](https://github.com/orbeon/orbeon-forms/issues/635).*
 
-![Grid Settings](images/repeated-grid-settings-basic.png)
+![Basic Settings and Formulas](images/repeated-grid-settings-basic.png)
 
 ### Repeat settings
 
 The repeat settings control whether to use a custom iteration name (not recommended in most cases), and the minimum/maximum number of repeat iterations allowed.
 
-![Grid Settings](images/repeated-grid-settings-repeat.png)
+![Repeated Content](images/repeated-grid-settings-repeat.png)
 
 [SINCE Orbeon Forms 2016.1]
 

@@ -1,7 +1,5 @@
 # PDF production
 
-
-
 ## Introduction
 
 Form Builder and Form Runner can produce PDF output in two ways:

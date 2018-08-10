@@ -241,6 +241,8 @@ following:
     - If `pdf-template-lang` is empty or missing:
         - The PDF template with the current form language is used, if there is a match.
         - If there is no match, the first available PDF template is used.
+        
+See also [PDF templates](../../../form-builder/pdf-templates.md)
 
 ### Sending a PDF binary
 
