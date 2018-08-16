@@ -2,15 +2,15 @@
 
 ## Rationale
 
-Calculated values or initial values can depend on the value of other form controls. In turn, those form controls can be calculated from yet other form controls. Such controls may appear further down in the form, or, in fact, in any place.
+Calculated and initial values expressed with formulas can depend on the value of other form controls. In turn, those form controls can be calculated from yet other form controls. Such controls may appear further down in the form, or, in fact, in any place.
 
-It is therefore important to compute calculated values in an order based on the *dependencies* of that value, not just in the order in which the controls appear in the form. This is very similar to what happens in a spreadsheet.
+It is therefore important to compute calculated and initial values in an order based on the *dependencies* of that value, not just in the order in which the controls appear in the form. This is very similar to what happens in a spreadsheet.
 
 ## Availability
 
 [SINCE Orbeon Forms 4.10]
 
-Form Runner supports dependencies of calculated values when calculated values formulas refer to other controls via *variables* (such as `$units`, where `units` is the *name* of a control on the form).
+Form Runner supports dependencies of calculated and initial values when the associated formulas refer to other controls via *variables* (such as `$units`, where `units` is the *name* of a control on the form).
 
 This is done by adding the `xxf:analysis.calculate="true"` attribute on the first model of the form, via the "Edit Source" feature as there was no user interface for this settings yet.
 
