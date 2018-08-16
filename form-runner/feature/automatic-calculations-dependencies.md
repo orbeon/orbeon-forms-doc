@@ -10,11 +10,13 @@ It is therefore important to compute calculated values in an order based on the 
 
 [SINCE Orbeon Forms 4.10]
 
-Form Runner supports dependencies of calculated values when calculated values refer to other controls via variables, such as `$`. This is done by adding the `xxf:analysis.calculate="true"` attribute on the first model of the form. This must be done via the "Edit Source" feature as there is no user interface for this.  
+Form Runner supports dependencies of calculated values when calculated values formulas refer to other controls via *variables* (such as `$units`, where `units` is the *name* of a control on the form).
+
+This is done by adding the `xxf:analysis.calculate="true"` attribute on the first model of the form, via the "Edit Source" feature as there was no user interface for this settings yet.
 
 [SINCE Orbeon Forms 2018.1]
 
-Orbeon Forms add an option to enable and disable automatic calculations dependencies in the "Form Settings" dialog.
+Orbeon Forms add an user interface option to enable and disable automatic calculations dependencies in the "Form Settings" dialog.
 
 In addition, for new form definitions, the "Automatic Calculations Dependencies" option is enabled by default starting with Orbeon Forms 2018.1.
 
@@ -28,13 +30,13 @@ Consider the following grid, where the totals must appear, on one hand, on each 
 
 ![Grid with calcuations](../images/calculations-dependencies-grid.png)
 
-Row totals are expressed as:
+Row totals are expressed with the following calculated value formula:
 
 ```xpath
 $units * $unit-price
 ```
 
-And the global totals as:
+And the global totals with the following calculated value formula:
 
 ```xpath
 sum($units)
@@ -47,6 +49,8 @@ sum($row-total)
 ```
 
 Automatic calculations dependencies ensure that, even if the totals show in the form before the grid, their values update correctly as the user modifies the "Units" and "Unit Price" fields.
+
+_NOTE: It is important to note that using *variable* is key for the dependencies to work. Using other expressions referring to form data, such as `/form/my-section/my-control`, or `//my-control`, will not work for the purpose of dependencies._
 
 ## See also 
 
