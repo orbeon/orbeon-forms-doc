@@ -100,6 +100,7 @@ As of 2016-04-19 this page is still being updated.
 ### Form Runner
 
 - Standard look & feel
+- Automatic calculations dependencies: [doc](form-runner/feature/automatic-calculations-dependencies.md)
 - Custom XBL components: [doc](xforms/xbl/README.md)
 - Summary Page: [blog post](http://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
     - search
@@ -122,8 +123,9 @@ As of 2016-04-19 this page is still being updated.
     - Production: [doc](form-builder/pdf-production.md)
         - Automatic
         - Template-based: [doc](form-builder/pdf-templates.md)
+            - multiple PDF templates
     - Automatic highlighting of links [blog post](http://blog.orbeon.com/2015/04/automatic-web-links-in-pdf-files.html)
-    - customizable file name: [doc](configuration/properties/form-runner.md#custom-pdf-filename)
+    - Customizable file name: [doc](configuration/properties/form-runner.md#custom-pdf-filename)
     - TIFF production: [doc](form-runner/feature/tiff-production.md)
     - Ability to send to services: [blog post](http://blog.orbeon.com/2016/08/submitting-pdf-file-to-external-service.html)
 - Validation
