@@ -91,6 +91,7 @@
         * [XForms inspector](form-runner/component/xforms-inspector.md)
         * [Yes/No answer](form-runner/component/yesno-input.md)
     * Features
+        * [Automatic calculations dependencies](form-runner/feature/automatic-calculations-dependencies.md)
         * [Datasets](form-runner/feature/datasets.md)
         * [Home page](form-runner/feature/home-page.md)
         * [Lease Feature](form-runner/feature/lease.md)
