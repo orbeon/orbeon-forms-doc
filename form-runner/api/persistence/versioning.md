@@ -1,7 +1,5 @@
 # Versioning
 
-
-
 ## Form definition versioning support
 
 Since Orbeon Forms 4.5, Form Runner and Form Builder support versioning of _form definitions_ ([blog post](http://blog.orbeon.com/2014/02/form-versioning.html)).
@@ -29,8 +27,9 @@ The value of the parameter is the id of the form data (document) being edited. T
 
 ## Auditing trail
 
-In addition, the relational database implementations support an auditing trail, keeping older versions of form definitions and form data. However this is not visible at the level of the REST API.
+In addition to explicit versioning of form definitions, the relational database implementations support an [auditing trail](../../persistence/auditing.md), keeping older versions of form definitions and form data. However this is not visible at the level of the REST API.
 
 ## See also 
 
 - Blog post: [Form versioning](http://blog.orbeon.com/2014/02/form-versioning.html)
+- [Auditing](../../persistence/auditing.md)
