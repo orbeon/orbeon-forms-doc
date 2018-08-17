@@ -103,7 +103,11 @@ The keys to this configuration are:
     - `RMICacheManagerPeerProviderFactory` as `<cacheManagerPeerProviderFactory>`
     - `RMICacheManagerPeerListenerFactory` as `<cacheManagerPeerListenerFactory>`
 
-Here is an example configuration: [[TODO: This must be refined.]]
+Here is an example configuration:
+ 
+<!--
+[[TODO: This must be refined.]]
+-->
 
 ```xml
 <ehcache updateCheck="false" monitoring="off" dynamicConfig="true">
