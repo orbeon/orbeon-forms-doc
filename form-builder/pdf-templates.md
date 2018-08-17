@@ -107,6 +107,8 @@ The field names must look like:
 - `my-section$my-repeat$my-input$2` for the second iteration
 - etc.
 
+When using a PDF template, Orbeon Forms can only fill out fields that are already present in the PDF template. It cannot add new iterations. This means that the maximum number of allowed iterations in the form must match the number of iterations present in the PDF template.
+
 ![Example of repeated fields](images/pdf-template-repeat.png)
 
 ## See also
