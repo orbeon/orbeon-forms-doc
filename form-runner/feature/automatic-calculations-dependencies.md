@@ -28,13 +28,15 @@ _NOTE: Existing form definitions which do not have the `xxf:analysis.calculate="
 
 Consider the following grid, where the totals must appear, on one hand, on each line item row, but where the global totals are present *before* the grid.
 
-![Grid with calcuations](../images/calculations-dependencies-grid.png)
+![Grid with calculations](../images/calculations-dependencies-grid.png)
 
 Row totals are expressed with the following calculated value formula:
 
 ```xpath
 $units * $unit-price
 ```
+
+![Row totals](../images/calculations-dependencies-row-total.png)
 
 And the global totals with the following calculated value formula:
 
@@ -47,6 +49,8 @@ and:
 ```xpath
 sum($row-total)
 ```
+
+![Global totals](../images/calculations-dependencies-global-total.png)
 
 Automatic calculations dependencies ensure that, even if the totals show in the form before the grid, their values update correctly as the user modifies the "Units" and "Unit Price" fields.
 
