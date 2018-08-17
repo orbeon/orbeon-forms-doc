@@ -70,7 +70,7 @@ __Please remember that the following schedule is a plan, not a promise:__
 
 - 2018-12: tentative release date
 
-### Orbeon Forms 2018.3
+### Orbeon Forms 2019.1
 
 Focus:
 
