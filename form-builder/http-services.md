@@ -20,7 +20,7 @@ The "Definition" tab allows you to set the basic service parameters:
     - This is the name of the service, as seen by Form Builder. Must start with a letter, and may not contain spaces.
 - **Resource URL**
     - `HTTP` or `HTTPS` URL to which the service must be called.
-    - The value is an XPath Value Templates, which means that the URL can be dynamic. For example, with Orbeon Forms 2018.1's `fr:control-string-value()` function:
+    - The value is an XPath Value Template, which means that the URL can be dynamic. For example, with Orbeon Forms 2018.1's `fr:control-string-value()` function:
       ```xpath
       https://example.org/{fr:control-string-value('control-1')}
       ```
