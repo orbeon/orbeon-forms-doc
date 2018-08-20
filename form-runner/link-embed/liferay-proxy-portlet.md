@@ -270,6 +270,19 @@ When this is enabled, the following portal URL parameters are propagated to Orbe
 
 ### Disabling short namespaces
 
+[SINCE Orbeon Forms 2017.2.3 and 2018.1]
+
+Short namespaces are disabled by default in `portlet.xml`:
+
+```xml
+<init-param>
+    <name>use-short-namespaces</name>
+    <value>false</value>
+</init-param>
+```
+
+We recommend disabling this feature as it is known to cause issues. See [#3682](https://github.com/orbeon/orbeon-forms/issues/3682).
+
 [SINCE Orbeon Forms 2016.2]
 
 You can disable the use of short namespaces by setting the `use-short-namespaces` portlet parameter in `portlet.xml` to `false`:
