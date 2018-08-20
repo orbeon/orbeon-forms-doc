@@ -20,6 +20,10 @@ The "Definition" tab allows you to set the basic service parameters:
     - This is the name of the service, as seen by Form Builder. Must start with a letter, and may not contain spaces.
 - **Resource URL**
     - `HTTP` or `HTTPS` URL to which the service must be called.
+    - The value is an XPath Value Templates, which means that the URL can be dynamic. For example:
+      ```xpath
+      https://example.org/{fr:control-string-value('control-1')}
+      ```
 - **Method**
     - The HTTP method to use: `GET`, `POST`, `PUT` or `DELETE`.
 - **Serialization**
