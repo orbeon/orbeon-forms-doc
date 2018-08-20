@@ -173,6 +173,23 @@ If you use two `*` wildcards, as in the example above, the property also sets th
 
 You can add more than one file, and just separate the paths by whitespace in the property.
 
+Note that the locations suggested are just about how to organize the files for clarity. In addition, if some CSS files apply to specific app or form names, you must specify the app and form name in the property or properties. For example:
+
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.css.custom.uri.APP.*"
+    value="/forms/APP/assets/my-app.css"/>
+
+<property
+    as="xs:string"
+    name="oxf.fr.css.custom.uri.APP.FORM"
+    value="/forms/APP/FORM/assets/my-app-and-form.css "/>
+```
+
+The names `APP`, `FORM`, `my-app.css` and `my-app-and-form.css` are just placeholders for your own app name, form name, and CSS files names.
+
 [SINCE Orbeon Forms 2017.1]
 
 In addition to `oxf.fr.css.custom.uri`, you can also use the following properties, which apply only to the Summary and Detail pages respectively:
