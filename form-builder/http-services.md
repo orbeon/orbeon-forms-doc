@@ -86,7 +86,7 @@ The "Advanced" tab allows you to set advanced service parameters:
     - **Username:** Username to use.
     - **Password:** Password to use.
 
-![Advanced parameters](images/service-advanced.png)
+![Advanced parameters](images/service-definition-advanced.png)
 
 ## Testing a service
 
@@ -100,7 +100,7 @@ The Test button allows you to test the service. Before doing this, you have to s
 
 This helps you troubleshoot the service call.
 
-![Testing a service](images/service-test.png)
+![Testing a service](images/service-definition-test.png)
 
 ## Saving the service
 
