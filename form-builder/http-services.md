@@ -8,7 +8,7 @@ To create a new HTTP service, click the Add icon under "HTTP Services". The HTTP
 
 The following screenshot shows an example of filled-out service:
 
-![Service Definition](images/service-definition.png)
+![Definition tab](images/service-definition.png)
 
 ## Service definition
 
@@ -86,7 +86,7 @@ The "Advanced" tab allows you to set advanced service parameters:
     - **Username:** Username to use.
     - **Password:** Password to use.
 
-![Advanced parameters](images/service-definition-advanced.png)
+![Advanced tab](images/service-definition-advanced.png)
 
 ## Testing a service
 
@@ -100,7 +100,7 @@ The Test button allows you to test the service. Before doing this, you have to s
 
 This helps you troubleshoot the service call.
 
-![Testing a service](images/service-definition-test.png)
+![Test Results tab](images/service-definition-test.png)
 
 ## Saving the service
 
