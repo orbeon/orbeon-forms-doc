@@ -178,6 +178,8 @@ Example:
 
 ## xxf:process-template()
 
+[SINCE Orbeon Forms 2018.1]
+
 ```
 xxf:process-template(
     $template as xs:string,
@@ -214,6 +216,8 @@ xxf:process-template(
 This evaluates to:
 
 > My name is Marco Polo. I am 42 year-old. I own $ 12.99.
+
+*NOTE: As Orbeon Forms 2018.1, parameters are formatted per Java's `MessageFormat`. It is expected that in the future, these values will be formatted as they are with `xf:output`, and possibly configurable. If the exact format is important, instead of passing `xs:integer`, `xs:date`, etc. types, format the value as an `xs:string` first before passing it as parameter.*
 
 ## xxf:property()
 
