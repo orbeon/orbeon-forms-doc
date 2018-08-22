@@ -77,7 +77,7 @@ With Orbeon Forms, the values you choose to use to represent the different items
 
 When the option of not encoding such values is chosen, the server still checks that the incoming value is allowed and rejects it if that is not the case. 
 
-[1]: http://en.wikipedia.org/wiki/Buffer_overflow
-[2]: http://en.wikipedia.org/wiki/Cross-site_scripting
+[1]: https://en.wikipedia.org/wiki/Buffer_overflow
+[2]: https://en.wikipedia.org/wiki/Cross-site_scripting
 [3]: ../../xforms/controls/textarea.md#html-cleanup
-[4]: http://en.wikipedia.org/wiki/Cross-site_request_forgery
+[4]: https://en.wikipedia.org/wiki/Cross-site_request_forgery
