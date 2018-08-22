@@ -1,6 +1,5 @@
 # Content-Security-Policy header
 
-
 ## Availability
 
 [SINCE Orbeon Forms 2018.1]
@@ -11,7 +10,7 @@ The [`Content-Security-Policy` HTTP header](https://developer.mozilla.org/en-US/
 
 Some organizations set that header to strict values which disallow inline JavaScript and CSS within HTML pages.
 
-Up until Orbeon Forms 2017.2, Orbeon Forms included some inline scripts and CSS in the HTML served to the browser. With Orbeon Forms 2018.1 and newer, Orbeon Forms no longer does this by default. This makes Orbeon Forms safer by default if you set the `Content-Security-Policy` header to disable such inline content.
+Up until Orbeon Forms 2017.2, Orbeon Forms included some inline scripts and CSS in the HTML served to the browser. With Orbeon Forms 2018.1 and newer, Orbeon Forms no longer does this by default. This can make Orbeon Forms safer by default if you set the `Content-Security-Policy` header to disable such inline content.
 
 ## Configuration property
 
@@ -41,8 +40,6 @@ But Orbeon Forms is able to produce that header as well, whether just for testin
 ```
 
 You can set the `param-value` to any legal value supported by web browsers. In this example, `default-src 'self'` "Refers to the origin from which the protected document is being served, including the same URL scheme and port number. You must include the single quotes." ([Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src))
-
-
 
 *NOTE: The `content-security-policy` name must remain in lowercase. It is a configuration parameter name, not the actual header name.*
 
