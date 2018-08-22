@@ -33,7 +33,10 @@ This function is similar to `saxon:evaluate()` or `xxf:evaluate()`, but instead 
 ## xxf:format-message()
 
 ```xpath
-xxf:format-message($template as xs:string, $parameters as item()*) as xs:string
+xxf:format-message(
+    $template as xs:string, 
+    $params   as item()*
+) as xs:string
 ```
 
 The `xxf:format-message()` function allows you to format a localized message based on a template and parameters.
@@ -179,7 +182,7 @@ Example:
 xxf:process-template(
     $template as xs:string,
     $lang     as xs:string,
-    $params   as map(*)?
+    $params   as map(*)
 ) as xs:string?
 ```
 
@@ -261,6 +264,20 @@ Example:
 
 <xf:label value="xxf:r('buttons.download')"/>
 ```
+
+[SINCE Orbeon Forms 2018.1]
+
+The function supports filling a template with parameters when the `$params` is supplied:
+
+```xpath
+xxf:r(
+    $resource-name as xs:string, 
+    $instance-name as xs:string,
+    $params        as map(*)
+) as xs:string
+```
+
+In this case, the function fills the template as with the [`xxf:process-template()`](#xxf-process-template) function.
 
 ## xxf:rewrite-resource-uri()
 
