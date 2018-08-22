@@ -4,15 +4,21 @@
 
 [SINCE Orbeon Forms 2018.1]
 
-## Rationale
+## What is the Content-Security-Policy header?
 
-The [`Content-Security-Policy` HTTP header](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) is a relatively recent HTTP header which "helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks".
+The [`Content-Security-Policy` HTTP header](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) is a relatively recent HTTP header which "helps to detect and mitigate certain types of attacks, including [Cross Site Scripting (XSS)](https://en.wikipedia.org/wiki/Cross-site_scripting) and data injection attacks".
 
-Some organizations set that header to strict values which disallow inline JavaScript and CSS within HTML pages.
+## Disabling inline scripts and CSS
 
-Up until Orbeon Forms 2017.2, Orbeon Forms included some inline scripts and CSS in the HTML served to the browser. With Orbeon Forms 2018.1 and newer, Orbeon Forms no longer does this by default. This can make Orbeon Forms safer by default if you set the `Content-Security-Policy` header to disable such inline content.
+### Introduction
 
-## Configuration property
+Some organizations set the `Content-Security-Policy` header to strict values which disallow inline JavaScript and CSS within HTML pages, for example with `default-src 'self'`.
+
+Up until Orbeon Forms 2017.2, Orbeon Forms included some inline scripts and CSS in the HTML served to the browser. Disabling inline scripts and CSS with `Content-Security-Policy` with those Orbeon Forms versions will prevent Orbeon Forms from working correctly.
+ 
+With Orbeon Forms 2018.1 and newer, Orbeon Forms no longer produces inline scripts and CSS by default, which allows for these strict values of the `Content-Security-Policy` header. While Orbeon Forms already [takes measures](security.md) against XSS and data injection, disabling the use of inline scripts can make Orbeon Forms even safer by default.
+
+### Configuration property
 
 The following XForms property allows you to re-enable inline scripts and CSS. The default is `false`:
 
@@ -30,7 +36,6 @@ We recommend leaving the value to the default of `false`.
 In many cases, the `Content-Security-Policy` header is generated more globally by a reverse proxy or server.
 
 But Orbeon Forms is able to produce that header as well, whether just for testing or for deployment. To enable this, simply uncomment the following entry in the Orbeon Forms WAR file's `web.xml`:
-
 
 ```xml
 <init-param>
