@@ -51,3 +51,4 @@ You can set the `param-value` to any legal value supported by web browsers. In t
 ## See also 
 
 - [Security](security.md)
+- Blog post: [Improving security with the Content-Security-Policy header](https://blog.orbeon.com/2018/08/improving-security-with-content.html)
