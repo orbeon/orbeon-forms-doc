@@ -201,6 +201,8 @@ The following properties are documented in [JavaScript and CSS assets](../advanc
 
 [DEPRECATED SINCE Orbeon Forms 2016.3]
 
+[UNTIL Orbeon Forms 2018.1]
+
 The following property controls whether noscript mode is enabled:
 
 ```xml

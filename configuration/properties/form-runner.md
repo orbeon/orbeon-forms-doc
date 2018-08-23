@@ -346,6 +346,8 @@ By default, sections are allowed to collapse.
 
 The following property controls the same behavior in noscript mode:
 
+[UNTIL Orbeon Forms 2018.1]
+
 ```xml
 <property
     as="xs:boolean"
@@ -379,6 +381,8 @@ Before Orbeon Forms 2016.1, you could use the following properties, deprecated s
 
 Section collapsing in noscript mode:
 
+[UNTIL Orbeon Forms 2018.1]
+
 
 ```xml
 <property
@@ -399,6 +403,8 @@ Section collapsing animation:
 ## Noscript properties
 
 [DEPRECATED SINCE Orbeon Forms 2016.3]
+
+[UNTIL Orbeon Forms 2018.1]
 
 ### Show noscript link
 

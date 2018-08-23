@@ -205,6 +205,7 @@ The full URL is composed of:
     - `valid`: whether the data sent satisfies validation rules
     - `language`: the language of the form at the time it was submitted [SINCE Orbeon Forms 4.5]
     - `noscript`: whether the noscript mode was in use [SINCE Orbeon Forms 4.6]
+        - *NOTE: Starting with Orbeon Forms 2018.1, this always returns `false`.*
     - `process`: unique process id for the currently running process [SINCE Orbeon Forms 4.7]
 
 Example:

@@ -177,6 +177,8 @@ Return whether the form is in noscript mode.
 fr:is-noscript() as xs:boolean
 ```
 
+*NOTE: Starting with Orbeon Forms 2018.1, this always returns `false`.*
+
 ### fr:is-readonly-mode()
 
 ```xpath

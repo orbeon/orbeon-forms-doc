@@ -129,15 +129,13 @@ _NOTE: Running Form Builder also requires `orbeon-form-runner.jar`._
 Regular web technologies:
 
 - AJAX mode: HTML, CSS and JavaScript
-- Noscript mode: HTML and CSS
+- Noscript mode: HTML and CSS [UNTIL Orbeon Forms 2017.2]
 
 ### Does JavaScript need to be enabled in the browser to use Orbeon Forms?
 
-The short answer: In general, yes. But if you use the "noscript" mode (which has limitations), you can use clients which don't have JavaScript.
+Yes. Orbeon Forms is designed to work with JavaScript enabled.
 
-The long answer: Orbeon Forms is designed to work best with JavaScript enabled. This is where you get the most features of the platform. Functionality in noscript mode is limited, in particular there is no dynamic validation, certain events (focus events) are not available, and some widgets are not available (dialogs, etc.).
-
-Form Builder requires JavaScript to work, but forms built with the builder which don't use features that require JavaScript will work in noscript mode.
+*NOTE: Orbeon Forms used to support a mode called *noscript*, which is removed starting with Orbeon Forms 2018.1. With earlier versions of Orbeon Forms, and with the "noscript" mode enabled, it was possible to run Orbeon Forms without JavaScript in the browser.*
 
 ### What format is used to archive data?
 

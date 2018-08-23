@@ -103,7 +103,7 @@ In addition to setting a control's label and hint in place in the form area, you
 
 This allows specifying some help text, which can be plain text or rich text when the "Use HTML" checkbox is selected.
 
-The help message is available at runtime through a help icon positioned next to the control. By default, the icon opens a pop-up containing the help text. In *noscript* mode, the icon links to a help section at the bottom of the form.
+The help message is available at runtime through a help icon positioned next to the control. By default, the icon opens a pop-up containing the help text. In *noscript* mode (removed since Orbeon Forms 2018.1), the icon links to a help section at the bottom of the form.
 
 The help text is localizable.
 
