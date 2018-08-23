@@ -1,3 +1,7 @@
+# Field-level encryption
+
+## Availability
+
 [SINCE Orbeon Forms PE 2018.1]
 
 ## Overview
@@ -48,3 +52,7 @@ However, overwriting an existing form definition at publication time won't re-en
 	5. Repeat step 2, after which the relevant fields will be encrypted with the new key.
 
 We expect these limitations to be lifted in future versions of Orbeon Forms.
+
+## See also 
+
+- [Re-encryption](../form-runner/features/home-page#re-encryption)
