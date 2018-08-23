@@ -58,10 +58,16 @@ When your mouse pointer hovers over a grid, the grid boundaries, cells and icons
 
 ### The 12-column layout
 
+#### Introduction
+
 [SINCE Orbeon Forms 2017.2]
 
 A grid always has 12 columns when shown on a wide display. Note that on narrower displays, grids still collapse to a vertical
 layout (see [Responsive design](../form-runner/feature/responsive-design.md)).
+
+See also [the blog post](https://blog.orbeon.com/2018/05/the-12-column-layout.html).
+
+#### Operations
  
 You can perform the following operations on grids:
 
@@ -71,21 +77,27 @@ You can perform the following operations on grids:
 - Expand/shrink grid cells horizontally or vertically.
 
 Expanding/shrinking cells horizontally makes grid cells span *columns*. This allows grid cells to have a width of 1, 2,
-and up to 12 columns.
+and up to 12 columns. 
+
+![Grid cell widths at runtime](../form-runner/images/runtime-grid-cell-widths.png)
+
+With Orbeon Forms 2017.2, you use the arrow icons within the grid to expand into empty adjacent cells.
+
+![Expanding cell boundaries](images/grid-icons-cell-boundaries.png)
+
+With Orbeon Forms 2018.1 and newer, you drag the cell boundary to expand into empty adjacent cells.
+
+![Dragging cell boundaries horizontally](images/grid-dragging-cell-boundaries-horizontally.png)
 
 Expanding/shrinking cells vertically makes grid cells span *rows*. This allows making some cells taller when next to
 other cells, for example to allow for taller radio buttons lists.
 
-![All possible grid cell widths](images/grid-cell-widths.png)
+![Dragging cell boundaries vertically](images/grid-dragging-cell-boundaries-vertically.png)
 
-At runtime, controls have a little more space within grid cells as the Form Builder icons are absent: 
-
-![Grid cell widths at runtime](../form-runner/images/runtime-grid-cell-widths.png)
+#### Undoing operations
 
 Destructive operations do not ask for confirmation but add the operation to the Undo stack, allowing you to
 undo the operation from the toolbox. See [Undo and redo](undo-redo.md).
-
-See also [the blog post](https://blog.orbeon.com/2018/05/the-12-column-layout.html).
 
 ### Until Orbeon Forms 2017.1
 
