@@ -6,7 +6,7 @@
 
 ## What is the Content-Security-Policy header?
 
-The [`Content-Security-Policy` HTTP header](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) is a relatively recent HTTP header which "helps to detect and mitigate certain types of attacks, including [Cross Site Scripting (XSS)](https://en.wikipedia.org/wiki/Cross-site_scripting) and data injection attacks".
+The [`Content-Security-Policy` HTTP header](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP), also known as CSP header, is a relatively recent HTTP header which "helps to detect and mitigate certain types of attacks, including [Cross Site Scripting (XSS)](https://en.wikipedia.org/wiki/Cross-site_scripting) and data injection attacks".
 
 ## Disabling inline scripts and CSS
 
