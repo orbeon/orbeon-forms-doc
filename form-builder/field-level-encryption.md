@@ -6,7 +6,7 @@
 
 ## Overview
 
-This feature allows form authors to mark certain fields so any data entered by users in those fields is encrypted when stored in he database. This is typically useful for fields used to capture personal information, also referred to as "personally identifiable information" (PII), "sensitive personal information" (SPI), or "personal information," depending on the context. Encrypting such information can help you with compliance with privacy laws, such as GDPR.
+This feature allows form authors to mark certain fields so any data entered by users in those fields is encrypted when stored in the database. This is typically useful for fields used to capture personal information, also referred to as "personally identifiable information" (PII), "sensitive personal information" (SPI), or "personal information," depending on the context. Encrypting such information can help you with compliance with privacy laws, such as GDPR.
 
 ## Marking fields for encryption
 
