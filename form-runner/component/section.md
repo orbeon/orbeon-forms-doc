@@ -1,7 +1,5 @@
 # Section Component
 
-
-
 ## What it does
 
 The `fr:section` component organizes [grids](grid.md) under a header or title. Features:
@@ -14,15 +12,25 @@ The `fr:section` component organizes [grids](grid.md) under a header or title. F
 
 ## Appearance
 
+### Non-repeated appearance
+
+An open, collapsible section shows a "collapse" icon at the left of the heading.
+
+![Open section](images/xbl-section-open.png)
+
+The same section when closed just shows the heading.
+
+![Closed or collapsed section](images/xbl-section-closed.png)
+
 ### Full repeat appearance
 
-![Full appearance](images/xbl-section-full.png)
+![Full appearance](images/xbl-section-repeat-full.png)
 
 ### Minimal repeat appearance
 
 [SINCE Orbeon Forms 2016.1]
 
-![Minimal appearance](images/xbl-section-minimal.png)
+![Minimal appearance](images/xbl-section-repeat-minimal.png)
 
 ## Basic usage
 
@@ -94,7 +102,7 @@ These attributes are supported in addition to the non-repeated mode attributes w
 
 You move, insert, and remove iterations using the left menu:
 
-![Menu](images/xbl-section-menu.png)
+![Menu](images/xbl-section-repeat-menu.png)
 
 ## Data format
 
