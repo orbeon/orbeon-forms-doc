@@ -9,7 +9,6 @@ See the left sidebar for the list of documented XBL components.
 - Explanation
 - Fields Date
 - File Attachment
-- [Section](section.md) (incomplete documentation)
 - Tabbable
 
 ## See also
