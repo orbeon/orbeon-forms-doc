@@ -98,7 +98,7 @@ You move, insert, and remove iterations using the left menu:
 
 ## Data format
 
-TODO
+See [Form data format](../data-format/form-data.md#repeated-sections).
 
 ## Events
 
@@ -125,3 +125,4 @@ These events are not dispatched if the number of iterations changes by other mea
 ## See also
 
 - [Grid component](grid.md)
+- [Form data format](../data-format/form-data.md)
