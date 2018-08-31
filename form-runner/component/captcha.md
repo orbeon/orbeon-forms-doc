@@ -42,7 +42,7 @@ You can use this component to show users a captcha, like the one shown in the fo
 <img alt="" src="images/xbl-recaptcha.gif" width="308">
 
 1. First, you need to [sign up with reCAPTCHA][4] to get your own public/private key pair.
-2. Store your public and private keys in your properties, as follows:
+2. Store your public key ("now called site key") and private key in your properties, as follows:
 
     ```xml
     <property
