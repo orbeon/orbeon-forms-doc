@@ -167,7 +167,7 @@ You can set the Form Builder logo specifically with:
     - `WEB-INF/resources/forms/assets`: logo for all forms
     - `WEB-INF/resources/forms/APP/assets`: logo for app name APP
     - `WEB-INF/resources/forms/APP/FORM/assets`: logo for app name APP and form name FORM
-2. Define the `oxf.fr.default-logo.uri.*.*` property to point to the file(s) you added.
+2. Define the `oxf.fr.default-logo.uri.*.*` property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
 
 For example, to change the default logo for all forms and pages to an image called `my-logo.png`, place the image at the proper location and use the following property:
 
@@ -185,7 +185,7 @@ For example, to change the default logo for all forms and pages to an image call
     - `WEB-INF/resources/forms/assets`: CSS for all forms
     - `WEB-INF/resources/forms/APP/assets`: CSS for app name APP
     - `WEB-INF/resources/forms/APP/FORM/assets`: CSS for app name APP and form name FORM
-2. Define the `oxf.fr.css.custom.uri.*.*` property to point to the file(s) you added.
+2. Define the `oxf.fr.css.custom.uri.*.*` property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
 
 ```xml
 <property
@@ -249,7 +249,7 @@ Change the width of a column | `.fr-grid-invoice .fr-grid-col-1 { width: 40px }`
     * `WEB-INF/resources/forms/assets`: scripts for all forms
     * `WEB-INF/resources/forms/APP/assets`: scripts for app name APP
     * `WEB-INF/resources/forms/APP/FORM/assets`: scripts for app name APP and form name FORM
-2. Define the `oxf.fr.js.custom.uri.*.*` property to point to the file(s) you added.
+2. Define the `oxf.fr.js.custom.uri.*.*` property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
 
 ```xml
 <property
