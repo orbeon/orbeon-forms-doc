@@ -143,25 +143,48 @@ Whether to show the Orbeon Forms version at the bottom.
 
 ## Default logo
 
+With this property, you can set the default logo URI. This logo appears on the Summary, Detail and Home pages for a given form. You can omit (or comment out) this property or set its value to the empty string if you don't want a default logo at all.
+
+This is the default value of the property:
+
 ```xml
-<property
-    as="xs:anyURI"
-    name="oxf.fr.default-logo.uri.*.*"
-    value="/apps/fr/style/orbeon-logo-trimmed-transparent-42.png"/>
+<property as="xs:anyURI"  name="oxf.fr.default-logo.uri.*.*">
+    /apps/fr/style/orbeon-navbar-logo.png
+</property>
 ```
 
-With this property, you can set the default logo URI. This logo appears on the summary and Detail Pages for a given form. You can omit (or comment out) this property or set its value to `""` (empty string) if you don't want a default logo at all.
-
 If you use two `*` wildcards, as in the example above, the property also sets the logo on the [Form Runner Home page](../../form-runner/feature/home-page.md).
+
+You can set the Form Builder logo specifically with:
+
+```xml
+<property as="xs:anyURI"  name="oxf.fr.default-logo.uri.orbeon.builder">
+    /apps/fr/style/orbeon-navbar-logo.png
+</property>
+```
+
+1. Place your logo file(s) under one of the following recommended locations:
+    - `WEB-INF/resources/forms/assets`: logo for all forms
+    - `WEB-INF/resources/forms/APP/assets`: logo for app name APP
+    - `WEB-INF/resources/forms/APP/FORM/assets`: logo for app name APP and form name FORM
+2. Define the `oxf.fr.default-logo.uri.*.*` property to point to the file(s) you added.
+
+For example, to change the default logo for all forms and pages to an image called `my-logo.png`, place the image at the proper location and use the following property:
+
+```xml
+<property as="xs:anyURI"  name="oxf.fr.default-logo.uri.*.*">
+    /forms/assets/my-logo.png
+</property>
+```
 
 ## Adding your own CSS
 
 ### Adding your own CSS files
 
 1. Place your CSS file(s) under one of the following recommended locations:
-    * `WEB-INF/resources/forms/assets`: CSS for all forms
-    * `WEB-INF/resources/forms/APP/assets`: CSS for app name APP
-    * `WEB-INF/resources/forms/APP/FORM/assets`: CSS for app name APP and form name FORM
+    - `WEB-INF/resources/forms/assets`: CSS for all forms
+    - `WEB-INF/resources/forms/APP/assets`: CSS for app name APP
+    - `WEB-INF/resources/forms/APP/FORM/assets`: CSS for app name APP and form name FORM
 2. Define the `oxf.fr.css.custom.uri.*.*` property to point to the file(s) you added.
 
 ```xml
