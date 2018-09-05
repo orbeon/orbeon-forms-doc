@@ -65,17 +65,17 @@ Orbeon Forms 4.5 introduces a new truncation algorithm so names are not cut shor
 
 Examples:
 
-Section name             | Control name                                 | Column name
------------------------- | -------------------------------------------- | --------------------------------
-`personal-information`   | `first-name`                                 | `PERSONAL_INFORMATIO_FIRST_NAME`
-                         | `last-name`                                  | `PERSONAL_INFORMATION_LAST_NAME`
-                         | `address`	                                | `PERSONAL_INFORMATION_ADDRESS`
-`company`                | `name`                                       | `COMPANY_NAME`
-                         | `industry`                                   | `COMPANY_INDUSTRY`
-`section-with-long-name` | `my-control-with-a-pretty-long-name`	        | `SECTION_WITH_L_MY_CONTROL_WITH`
-                         | `my-control-with-a-pretty-long-name-too`     | `SECTION_WITH_L_MY_CONTROL_WIT1`
-                         | `my-control-with-a-pretty-long-name-really`	| `SECTION_WITH_L_MY_CONTROL_WIT2`
-
+- Section name: `personal-information`
+    - Control name: `first-name` ⇒ column name: `PERSONAL_INFORMATIO_FIRST_NAME`
+    - Control name: `last-name` ⇒ column name: `PERSONAL_INFORMATION_LAST_NAME`
+    - Control name: `address` ⇒ column name: `PERSONAL_INFORMATION_ADDRESS`
+- Section name: `company`
+    - Control name: `name` ⇒ column name: `COMPANY_NAME`
+    - Control name: `industry` ⇒ column name: `COMPANY_INDUSTRY`
+- Section name: `section-with-long-name`
+    - Control name: `my-control-with-a-pretty-long-name` ⇒ column name: `SECTION_WITH_L_MY_CONTROL_WITH`
+    - Control name: `my-control-with-a-pretty-long-name-too` ⇒ column name: `SECTION_WITH_L_MY_CONTROL_WIT1`
+    - Control name: `my-control-with-a-pretty-long-name-really` ⇒ column name: `SECTION_WITH_L_MY_CONTROL_WIT2`
 
 #### With Orbeon Forms 4.4 and earlier
 
