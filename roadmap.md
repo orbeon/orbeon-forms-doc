@@ -56,7 +56,7 @@ Focus:
 
 - usability and small "dogfood" features in Form Builder and Form Runner
 - sponsored features
-    - [Versioning: support basic data migration #1523] (https://github.com/orbeon/orbeon-forms/issues/1523)
+    - [Versioning: support basic data migration #1523](https://github.com/orbeon/orbeon-forms/issues/1523)
     - [New `date.xbl` that can be used by default in Form Builder #3657](https://github.com/orbeon/orbeon-forms/issues/3657)
     - [fr:date: ability to disable certain dates for selection in calendar #3721](https://github.com/orbeon/orbeon-forms/issues/3721)
     - [Standard logout page #2522](https://github.com/orbeon/orbeon-forms/issues/2522)
