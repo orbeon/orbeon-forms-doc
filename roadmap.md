@@ -40,25 +40,6 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ## Upcoming releases
 
-### Orbeon Forms 2018.1
-
-Focus:
-
-- Performance
-    - [Slow large form in Form Builder #3442](https://github.com/orbeon/orbeon-forms/issues/3442)
-- Form Builder usability
-    - [FB: Improve expand/shrink UI #3345](https://github.com/orbeon/orbeon-forms/issues/3345)
-- Major new features
-    - [Dynamic labels, hints, help messages, and alerts #1342](https://github.com/orbeon/orbeon-forms/issues/1342)
-    - [Ability to attach multiple PDF templates and select one dynamically #3316](https://github.com/orbeon/orbeon-forms/issues/3316)
-
-For detailed status of issues, see the [GitHub project for Orbeon Forms 2018.1](https://github.com/orbeon/orbeon-forms/projects/4).
-
-__Please remember that the following schedule is a plan, not a promise:__
-
-- ~~2018-04-30: tentative release date~~
-- 2018-08-31: tentative release date
-
 ### Orbeon Forms 2018.2
 
 Focus:
