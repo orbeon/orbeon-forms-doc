@@ -42,10 +42,21 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ### Orbeon Forms 2018.2
 
+Consider:
+
+- [low-hanging fruits](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Low-Hanging+Fruit%22)
+- [dogfood items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3ADogfood)
+- [maintenance items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMaintenance)
+- [spare time items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Spare+Time+Feature%22)
+- [2018.2 items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+project%3Aorbeon%2Forbeon-forms%2F6)
+- [top issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+issue%22)
+- [top RFEs](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+RFE%22)
+
 Focus:
 
-- Major new features
-    - [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256)
+- usability small "dogfood" features in Form Builder and Form Runner
+- [Versioning: support basic data migration #1523] (https://github.com/orbeon/orbeon-forms/issues/1523)
+- Small set towards [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 
 __Please remember that the following schedule is a plan, not a promise:__
 
@@ -56,6 +67,7 @@ __Please remember that the following schedule is a plan, not a promise:__
 Focus:
 
 - TBD
+- More work on [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256)
 
 __Please remember that the following schedule is a plan, not a promise:__
 
