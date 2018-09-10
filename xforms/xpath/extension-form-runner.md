@@ -184,7 +184,7 @@ fr:is-noscript() as xs:boolean
 [SINCE Orbeon Forms 2018.2]
 
 ```xpath
-fr:is-is-pe() as xs:boolean
+fr:is-pe() as xs:boolean
 ```
 
 Return whether the current version Orbeon Forms is the Professional Edition (PE).
