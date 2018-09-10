@@ -179,6 +179,16 @@ fr:is-noscript() as xs:boolean
 
 *NOTE: Starting with Orbeon Forms 2018.1, this always returns `false`.*
 
+### fr:is-pe()
+
+[SINCE Orbeon Forms 2018.2]
+
+```xpath
+fr:is-is-pe() as xs:boolean
+```
+
+Return whether the current version Orbeon Forms is the Professional Edition (PE).
+
 ### fr:is-readonly-mode()
 
 ```xpath
