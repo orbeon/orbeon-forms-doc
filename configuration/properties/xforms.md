@@ -201,7 +201,7 @@ The following properties are documented in [JavaScript and CSS assets](../advanc
 
 [DEPRECATED SINCE Orbeon Forms 2016.3]
 
-[UNTIL Orbeon Forms 2018.1]
+[UNTIL Orbeon Forms 2017.2]
 
 The following property controls whether noscript mode is enabled:
 
@@ -254,6 +254,29 @@ NOTE: In the future, it is expected that:
 
 - This will be enabled by default to be XForms 1.1-compliant out of the box.
 - Setting the property to `false` will revert to the pre-March 2010 behavior, as there are cases where keeping hidden cases relevant makes sense.
+
+### XForms repeat updates upon xf:insert and xf:delete
+
+See also [#3503](https://github.com/orbeon/orbeon-forms/issues/3503).
+
+[SINCE Orbeon Forms 2018.1]
+
+The `xf:insert` and `xf:delete` actions do not attempt to update repeats immediately after completion. Repeats, like any other UI controls, update during the following UI refresh.
+
+Temporarily, the following property can be used to restore the Orbeon Forms 2017.2 behavior:
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.xforms.update-repeats"
+    value="true"/>
+```
+
+However, please note that the behavior is deprecated and support for the Orbeon Forms 2017.2 behavior is expected to be removed altogether in a subsequent Orbeon Forms release.
+
+[UNTIL Orbeon Forms 2017.2]
+
+`xf:insert` and `xf:delete` actions attempted to update repeats immediately after completion, independently from regular UI refreshes.
 
 ### Label, help, hint, alert (LHHA) elements
 
