@@ -243,9 +243,9 @@ a property allows enabling XForms 1.1-compatible behavior. (Orbeon Forms did not
 You can also set this property on a per-switch basis:
 
 ```xml
-<xforms:switch xxforms:xforms11-switch="true">
+<xf:switch xxf:xforms11-switch="true">
     ...
-</xforms:switch>
+</xf:switch>
 ```
 
 This property also applies in a similar way to hidden dialogs.
@@ -541,7 +541,7 @@ Here are some examples of outputs with the default properties:
     - `xs:float` or `xs:double`
     - 123,456.789
 
-The default formatting properties for `date`, `time`, and `dateTime` now use the current language by the `xxforms:lang()` function, for example:
+The default formatting properties for `date`, `time`, and `dateTime` now use the current language by the `xxf:lang()` function, for example:
 
 ```xml
 <property as="xs:string" name="oxf.xforms.format.output.date">
