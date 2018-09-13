@@ -81,7 +81,7 @@ The property without wildcards can also be used to control the default language 
     value="en">
 ```
 
-For more details, see [Language selection at runtime](../../form-runner/feature/localization.html#language-selection-at-runtime)
+For more details, see [Language selection at runtime](../../form-runner/feature/localization.md#language-selection-at-runtime)
 
 ### Available languages
 
@@ -118,7 +118,7 @@ For pages which don't involve a specific form, such as the Form Runner Home Page
   value="en fr"/>
 ```
 
- For more details, see [Language selection at runtime](../../form-runner/feature/localization.html#language-selection-at-runtime)
+ For more details, see [Language selection at runtime](../../form-runner/feature/localization.md#language-selection-at-runtime)
 
 ## Summary Page
 
@@ -305,7 +305,7 @@ The following property allows you to set the appearance of repeated sections to 
     value="minimal"/>
 ```
 
-See also the [`appearance`](../../form-runner/component/section.html#repeated-mode) attribute of the [section component](../../form-runner/component/section.html).
+See also the [`appearance`](../../form-runner/component/section.md#repeated-mode) attribute of the [section component](../../form-runner/component/section.md).
 
 ### Appearance of repeated grids
 
@@ -320,7 +320,7 @@ The following property allows you to set the appearance of repeated grids to `fu
     value="minimal"/>
 ```
 
-See also the [`appearance`](../../form-runner/component/grid.html#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.html).
+See also the [`appearance`](../../form-runner/component/grid.md#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.md).
 
 ### Insert position of repeated sections
 
@@ -335,7 +335,7 @@ The following property allows you to select where new iterations are added when 
     value="index"/>
 ```
 
-See also the [`insert`](../../form-runner/component/section.html#repeated-mode) attribute of the [section component](../../form-runner/component/section.html).
+See also the [`insert`](../../form-runner/component/section.md#repeated-mode) attribute of the [section component](../../form-runner/component/section.md).
 
 ### Insert position of repeated grids
 
@@ -350,7 +350,7 @@ The following property allows you to select where new iterations are added when 
     value="index"/>
 ```
 
-See also the [`insert`](../../form-runner/component/grid.html#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.html).
+See also the [`insert`](../../form-runner/component/grid.md#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.md).
 
 ### Section collapsing
 
