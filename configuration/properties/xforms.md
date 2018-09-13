@@ -257,8 +257,6 @@ NOTE: In the future, it is expected that:
 
 ### XForms repeat updates upon xf:insert and xf:delete
 
-See also [#3503](https://github.com/orbeon/orbeon-forms/issues/3503).
-
 [SINCE Orbeon Forms 2018.1]
 
 The `xf:insert` and `xf:delete` actions do not attempt to update repeats immediately after completion. Repeats, like any other UI controls, update during the following UI refresh.
@@ -273,6 +271,8 @@ Temporarily, the following property can be used to restore the Orbeon Forms 2017
 ```
 
 However, please note that the behavior is deprecated and support for the Orbeon Forms 2017.2 behavior is expected to be removed altogether in a subsequent Orbeon Forms release.
+
+See also [#3503](https://github.com/orbeon/orbeon-forms/issues/3503).
 
 [UNTIL Orbeon Forms 2017.2]
 
