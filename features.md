@@ -1,7 +1,5 @@
 # Index of Features
 
-
-
 ## Purpose
 
 The purpose of this page is to index features, their documentation and [blog posts](https://blog.orbeon.com/) in a central location so that you can get an idea of what Orbeon Forms offers at a glance.
@@ -68,7 +66,7 @@ As of 2016-04-19 this page is still being updated.
     - cut, copy and paste: [doc](form-builder/cut-copy-paste.md)
 - Form Settings: [doc](form-builder/form-settings.md)
     - General Settings
-    - Form Options: [doc](form-builder/form-settings.html#form-options)
+    - Form Options: [doc](form-builder/form-settings.md#form-options)
         - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
         - Wizard view: [doc](form-runner/feature/wizard-view.md)
 - Control Settings: [doc](form-builder/control-settings.md)
@@ -128,18 +126,18 @@ As of 2016-04-19 this page is still being updated.
         - Template-based: [doc](form-builder/pdf-templates.md)
             - multiple PDF templates
     - Automatic highlighting of links [blog post](https://blog.orbeon.com/2015/04/automatic-web-links-in-pdf-files.html)
-    - Customizable file name: [doc](configuration/properties/form-runner/form-runner-detail-page#custom-pdf-filename)
+    - Customizable file name: [doc](configuration/properties/form-runner/form-runner-detail-page/README.md#custom-pdf-filename)
     - TIFF production: [doc](form-runner/feature/tiff-production.md)
     - Ability to send to services: [blog post](https://blog.orbeon.com/2016/08/submitting-pdf-file-to-external-service.html)
 - Validation
     - as-you-type validation
-    - explicit validation: [doc](configuration/properties/form-runner/form-runner-detail-page#validation-mode)
+    - explicit validation: [doc](configuration/properties/form-runner/form-runner-detail-page/README.md#validation-mode)
     - centralized error summary showing currently relevant errors: [component doc](form-runner/component/images/xbl-error-summary-errors.png), [blog post on warnings/infos enhancements](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
     - controlling which attachments are included: [Form Builder doc](form-builder/control-settings.md#basic-options), [Form Runner doc](configuration/properties/form-runner/form-runner-detail-page/form-runner-email#attachment-properties)
     - controlling To, Cc, Bcc, From: [doc](form-builder/control-settings.md), [blog post](https://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)
-- Captcha: [properties doc](configuration/properties/form-runner/form-runner-detail-page#captcha), [component doc](form-runner/component/captcha.md), [blog post](https://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
-- Appearance of repeated sections: [properties doc](configuration/properties/form-runner#appearance-of-repeated-sections), [component doc](form-runner/component/grid.md#repeated-mode)
+- Captcha: [properties doc](configuration/properties/form-runner/form-runner-detail-page/README.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](https://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
+- Appearance of repeated sections: [properties doc](configuration/properties/form-runner/README.md#appearance-of-repeated-sections), [component doc](form-runner/component/grid.md#repeated-mode)
 - Appearance of repeated grids: [properties doc](configuration/properties/form-runner/README.md#appearance-of-grids-sections), [component doc](form-runner/component/section.md#repeated-mode)
 - Function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
 - Grids
