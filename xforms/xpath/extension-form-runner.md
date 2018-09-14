@@ -433,4 +433,4 @@ See[`xxf:username()`](extension-http.md#xxfusername).
 
 ## See also
 
-- Blog post: [A stable function library for Form Runner](http://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
+- Blog post: [A stable function library for Form Runner](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)

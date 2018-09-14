@@ -121,7 +121,7 @@ The controls appear like this at design time:
 
 | Name | Description |
 | --- | --- |
-| **Explanatory Text** | Explanatory text which does not capture a value ([blog post](http://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
+| **Explanatory Text** | Explanatory text which does not capture a value ([blog post](https://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
 | **Calculated Value** | Like most other controls, the Calculated Value has a label and hint, but unlike most controls it is not used to enter a value. Instead, it just *shows* a value, either fixed or calculated with a formula. |
 
 ### Typed Controls
@@ -188,7 +188,7 @@ _NOTE: The "Scrollable List" control is deprecated as of Orbeon Forms 2016.1 and
 | **File Attachment**       | - file which can be attached to the form at design time or at runtime<br>- the file can also be replaced or downloaded once attached |
 | **Image Attachment**      | - image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached |
 | **Image**                 | - image attached to the form at design time<br>- it is not possible to change the image at runtime |
-| **Image Annotation**      | - image which can be attached to the form at design time or at runtime<br>- the image can then be annotated with graphic objects<br>- see also the [blog post](http://blog.orbeon.com/2013/08/new-image-annotation-control.html)<br>- SINCE Orbeon Forms 2016.3 |
+| **Image Annotation**      | - image which can be attached to the form at design time or at runtime<br>- the image can then be annotated with graphic objects<br>- see also the [blog post](https://blog.orbeon.com/2013/08/new-image-annotation-control.html)<br>- SINCE Orbeon Forms 2016.3 |
 | **Handwritten Signature** | signature drawn with a mouse or touch screen |
 
 The controls appear like this at design time:

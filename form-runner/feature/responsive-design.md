@@ -21,4 +21,4 @@ Version 4.10 introduces responsive design to the "detail page", i.e. the page us
 ## See also
 
 - [Mobile support](mobile.md)
-- Blog post: [Responsive design](http://blog.orbeon.com/2015/08/responsive-design.html)
+- Blog post: [Responsive design](https://blog.orbeon.com/2015/08/responsive-design.html)

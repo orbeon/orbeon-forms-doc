@@ -94,4 +94,4 @@ Form statistics show various counts of form elements.
 ## See also
 
 - [Wizard View](../form-runner/feature/wizard-view.md)
-- Blog post: [Improved constraints on attachments uploads](http://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
+- Blog post: [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)

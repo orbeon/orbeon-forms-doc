@@ -254,7 +254,7 @@ You can also use the `xxf:sanitize` attribute on the XForms model to set a filte
 
 ## See also
 
-- Blog post: [Use HTML5 placeholders, in XForms](http://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html)
+- Blog post: [Use HTML5 placeholders, in XForms](https://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html)
 
 [3]: ../../configuration/properties/xforms.md#navigator
 [4]: ../../configuration/properties/xforms.md#for-xf-input

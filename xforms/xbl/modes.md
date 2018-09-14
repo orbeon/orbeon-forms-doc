@@ -1,7 +1,5 @@
 # XBL Modes
 
-
-
 ## Introduction
 
 The XBL component binding defined with `<xbl:binding>` supports the `xxbl:mode` attribute, which contains an optional space-separated list of tokens. Each token enables a mode, as described below. Modes change the behavior of the component.
@@ -45,7 +43,7 @@ The `xxf:binding-context()` function returns the XPath evaluation context of the
 xxf:binding-context('fr-foo')
 ```
 
-For an example, see [Creating a single-node binding](http://doc.orbeon.com/xforms/xbl/tutorial.html#creating-a-single-node-binding).
+For an example, see [Creating a single-node binding](tutorial.md#creating-a-single-node-binding).
 
 ## The value mode
 
@@ -53,7 +51,7 @@ The `value` mode makes the component hold a value through its binding. This mean
 
 You use this mode in addition to `binding`.
 
-For an example, see [Adding support for a value](http://doc.orbeon.com/xforms/xbl/tutorial.html#adding-support-for-a-value).
+For an example, see [Adding support for a value](tutorial.md#adding-support-for-a-value).
 
 ## The external-value mode
 
@@ -88,7 +86,7 @@ The `lhha` mode allows the component to support the `<xh:label>`, `<xh:hint>`, `
 
 By default, markup is output for the LHHA elements. You can disable this with the additional `custom-lhha` mode.
 
-For an example, see [Adding LHHA elements](http://doc.orbeon.com/xforms/xbl/tutorial.html#adding-lhha-elements).
+For an example, see [Adding LHHA elements](tutorial.md#adding-lhha-elements).
 
 [SINCE Orbeon Forms 4.5]
 
@@ -119,4 +117,4 @@ The JavaScript companion class's `setFocus()` method is called if present.
 
 The `nohandlers` mode disables automatic processing of nested event handlers. You should only need this for very special components.
 
-For an example and more details, see [Component user: attaching event handlers to the bound node](http://doc.orbeon.com/xforms/xbl/event-handling.html#component-user-attaching-event-handlers-to-the-bound-node).
+For an example and more details, see [Component user: attaching event handlers to the bound node](event-handling.md#component-user-attaching-event-handlers-to-the-bound-node).

@@ -6,7 +6,7 @@ See [Database Support](../../form-runner/persistence/db-support.md) for the deta
 
 ## See also
 
-- [Blog post](http://blog.orbeon.com/2013/10/autosave.html).
+- [Blog post](https://blog.orbeon.com/2013/10/autosave.html).
 
 ## Enabling autosave
 

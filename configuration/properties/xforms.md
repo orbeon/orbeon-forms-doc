@@ -700,9 +700,9 @@ If your forms leverage dialogs and your users are likely to use a screen reader,
 ```
 
 [7]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xforms-inspector
-[8]: http://blog.orbeon.com/2014/03/review-and-pdf-improvements.html
+[8]: https://blog.orbeon.com/2014/03/review-and-pdf-improvements.html
 [9]: http://java.sun.com/javase/6/docs/api/java/text/SimpleDateFormat.html
-[10]: http://blog.orbeon.com/2013/12/detecting-login-pages-in-ajax-requests.html
+[10]: https://blog.orbeon.com/2013/12/detecting-login-pages-in-ajax-requests.html
 [11]: http://www.w3.org/TR/wai-aria/
 
 ## See also 

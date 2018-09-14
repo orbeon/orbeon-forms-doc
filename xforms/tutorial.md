@@ -1470,7 +1470,7 @@ So far you have seen:
 * How to build your own application that allows editing and persisting a form.
 * How to create an Atom feed from form data.
 
-You have now covered a good part of the basics of Orbeon Forms. You can now look at the [Orbeon Forms example applications][27] and the [rest of the Orbeon Forms documentation](http://doc.orbeon.com/)!
+You have now covered a good part of the basics of Orbeon Forms. You can now look at the [Orbeon Forms example applications][27] and the [rest of the Orbeon Forms documentation](https://doc.orbeon.com/)!
 
 [1]: https://www.orbeon.com/
 [2]: https://www.orbeon.com/community

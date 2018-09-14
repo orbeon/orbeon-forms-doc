@@ -2,7 +2,7 @@
 
 ## Form definition versioning support
 
-Since Orbeon Forms 4.5, Form Runner and Form Builder support versioning of _form definitions_ ([blog post](http://blog.orbeon.com/2014/02/form-versioning.html)).
+Since Orbeon Forms 4.5, Form Runner and Form Builder support versioning of _form definitions_ ([blog post](https://blog.orbeon.com/2014/02/form-versioning.html)).
 
 ## Previous support
 
@@ -31,5 +31,5 @@ In addition to explicit versioning of form definitions, the relational database 
 
 ## See also 
 
-- Blog post: [Form versioning](http://blog.orbeon.com/2014/02/form-versioning.html)
+- Blog post: [Form versioning](https://blog.orbeon.com/2014/02/form-versioning.html)
 - [Auditing](../../persistence/auditing.md)

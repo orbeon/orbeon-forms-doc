@@ -99,5 +99,5 @@ NOTE: With Orbeon Forms 4.5.x and earlier, the property must be `oxf.fr.resource
 
 ## See also
 
-- This blog post for an introduction to the feature: [More powerful buttons](http://blog.orbeon.com/2013/04/more-powerful-buttons.html)
+- This blog post for an introduction to the feature: [More powerful buttons](https://blog.orbeon.com/2013/04/more-powerful-buttons.html)
 - The predefined configuration properties in [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml)

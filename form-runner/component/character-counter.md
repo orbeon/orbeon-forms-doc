@@ -48,8 +48,8 @@ By default, `fr-charcounter-over` places a minus sign in front of the number of 
 
 ## Form Builder support
 
-The CSS bindings allow Form Builder to propose the "Character Counter" appearance to the user automatically. See [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html) for details.
+The CSS bindings allow Form Builder to propose the "Character Counter" appearance to the user automatically. See [How the new Form Builder Appearance Selector Works](https://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html) for details.
 
 ## See also
 
-- [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
+- [How the new Form Builder Appearance Selector Works](https://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)

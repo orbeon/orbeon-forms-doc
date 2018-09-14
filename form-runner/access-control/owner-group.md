@@ -42,5 +42,5 @@ With Orbeon Forms 4.3, owner/group-based permissions were not enabled by default
 
 ## See also
 
-- [Owner/group-based permissions AKA "See your own data"](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html) blog post
+- [Owner/group-based permissions AKA "See your own data"](https://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html) blog post
 - [Access control for deployed forms](deployed-forms.md)

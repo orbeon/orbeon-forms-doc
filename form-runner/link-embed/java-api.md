@@ -86,7 +86,7 @@ And here is an example of embedding a form from a JSP page:
 </html>
 ```
 
-The `Map<String, String>` allows passing a Java `Map` of HTTP header name/value pairs. These are passed to Form Runner when loading a form. Form Runner can access HTTP headers using the [`xxf:get-request-header()` XPath function](https://doc.orbeon.com/xforms/xpath/extension-http.html#xxfget-request-header).
+The `Map<String, String>` allows passing a Java `Map` of HTTP header name/value pairs. These are passed to Form Runner when loading a form. Form Runner can access HTTP headers using the [`xxf:get-request-header()` XPath function](../../xforms/xpath/extension-http.md#xxfget-request-header).
 
 #### Form Runner configuration
 
@@ -259,4 +259,4 @@ The embedding implementation:
 
 ## See also 
 
-- Blog post: [Form Builder embedding](http://blog.orbeon.com/2017/02/form-builder-embedding.html)
+- Blog post: [Form Builder embedding](https://blog.orbeon.com/2017/02/form-builder-embedding.html)

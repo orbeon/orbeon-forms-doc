@@ -47,12 +47,12 @@ Explanation:
 - the `total` calculation is outside the repeat, and when it refers to `$row-total`, all `row-total` values are returned
 - `sum()` is a standard XPath function to compute the sum of a sequence of items
 - the predicate `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
-- see this [blog post](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html) for the use of `string()` within the predicate
+- see this [blog post](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html) for the use of `string()` within the predicate
 - `sum()` supports a second argument which is the value to return in case no value satisfies the predicate (this makes sure that we return a decimal value, as we are using a literal decimal 0.0)
 
 See also:
 
-- [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
+- [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
 - [Unexpected result with variable inside an `<xf:bind>` iteration #152](https://github.com/orbeon/orbeon-forms/issues/152)
 
 ### From Orbeon Forms 4.0 to 4.4.x
@@ -325,7 +325,7 @@ Explanation:
 
 - [Formulas](formulas.md)
 - [Form Builder Validation](validation.md)
-- [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
-- [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
-- [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
+- [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
+- [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
+- [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
 - [XForms Validation](../xforms/validation.md)

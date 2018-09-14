@@ -59,7 +59,7 @@ When used in conjunction with the Required validation, this allows making sure t
 
 This option is also useful for non-required fields which must not contain leading or trailing spaces. For example if the user enters "  Sam", the value is automatically converted into "Sam" as the user focuses out of the field.
 
-See also [Required fields: more subtle than you might think](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html).
+See also [Required fields: more subtle than you might think](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html).
 
 ![Whitespace trimming](images/whitespace-trimming.png)
 
@@ -86,7 +86,7 @@ Built-in types include:
 
 ![Built-in Types](images/built-in-types.png)
 
-*COMPATIBILITY NOTE: Until Orbeon Forms 4.10, there was also a "Double-precision floating point" exposed, which was removed as explained in this [blog post](http://blog.orbeon.com/2016/01/removing-double-datatype.html). And prior to Orbeon Forms 4.3, the list was longer, as explained in [this other blog post](http://blog.orbeon.com/2013/07/simplifying-list-of-data-types-in-form.html)*
+*COMPATIBILITY NOTE: Until Orbeon Forms 4.10, there was also a "Double-precision floating point" exposed, which was removed as explained in this [blog post](https://blog.orbeon.com/2016/01/removing-double-datatype.html). And prior to Orbeon Forms 4.3, the list was longer, as explained in [this other blog post](https://blog.orbeon.com/2013/07/simplifying-list-of-data-types-in-form.html)*
 
 At runtime, if the value is required and does not match the specified datatype, the value is marked as invalid.
 
@@ -263,9 +263,9 @@ Optionally, it is possible to annotate the XML data submitted with error, warnin
 
 ## See also
 
-- [Better formulas with XPath type annotations](http://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
-- [Formulas for summing values, done right](http://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
-- [Control required values with formulas in Orbeon Forms 4.7](http://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
-- [How Common Constraints Work](http://blog.orbeon.com/2015/07/how-common-constraints-work.html)
+- [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
+- [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
+- [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
+- [How Common Constraints Work](https://blog.orbeon.com/2015/07/how-common-constraints-work.html)
 - [XForms Validation](../xforms/validation.md)
-- [Required fields: more subtle than you might think](http://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
+- [Required fields: more subtle than you might think](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)

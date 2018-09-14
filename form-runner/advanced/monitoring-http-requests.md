@@ -71,10 +71,10 @@ The Request Dumper Valve doesn't log the body of POSTs, it can only be used on T
 
 ## See also
 
-- [Let Charles help you monitor HTTP requests](http://blog.orbeon.com/2013/04/let-charles-help-you-monitor-http.html)
+- [Let Charles help you monitor HTTP requests](https://blog.orbeon.com/2013/04/let-charles-help-you-monitor-http.html)
 
 [2]: http://www.charlesproxy.com/
-[3]: http://blog.orbeon.com/2013/04/let-charles-help-you-monitor-http.html
+[3]: https://blog.orbeon.com/2013/04/let-charles-help-you-monitor-http.html
 [4]: http://www.wireshark.org/
 [5]: http://ws.apache.org/commons/tcpmon/
 [6]: http://ws.apache.org/commons/tcpmon/tcpmontutorial.html

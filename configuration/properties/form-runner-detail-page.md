@@ -145,7 +145,7 @@ Allowed values:
 
 *NOTE: Only one `minimal` appearance can be used between `oxf.xforms.label.appearance` and `oxf.xforms.hint.appearance`. If both include `minimal`, the label wins.*
 
-For more about placeholders, see [Use HTML5 placeholders, in XForms](http://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html).
+For more about placeholders, see [Use HTML5 placeholders, in XForms](https://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html).
 
 ## Controlling the appearance of control hints
 
@@ -175,7 +175,7 @@ Here is how hints appear depending on the type of control they are associated wi
 
 *NOTE: Only one `minimal` appearance can be used between `oxf.xforms.label.appearance` and `oxf.xforms.hint.appearance`. If both include `minimal`, the label wins.*
 
-For more about placeholders, see [Use HTML5 placeholders, in XForms](http://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html).
+For more about placeholders, see [Use HTML5 placeholders, in XForms](https://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html).
 
 ## Display hints inline
 

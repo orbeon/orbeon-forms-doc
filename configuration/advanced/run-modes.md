@@ -7,7 +7,7 @@
 
 It is often necessary to have slightly different settings between development and production. Run modes provide a way to create two separate sets of settings targeting the two environments.
 
-For a quick introduction, see also this [blog post](http://blog.orbeon.com/2012/05/run-modes.html).
+For a quick introduction, see also this [blog post](https://blog.orbeon.com/2012/05/run-modes.html).
 
 ## Configuration
 
@@ -73,4 +73,4 @@ In addition, depending on the mode, the following local file is used:
 ## See also
 
 - [Configuration Properties](../../configuration/properties/README.md)
-- Blog post: [Run modes](http://blog.orbeon.com/2012/05/run-modes.html)
+- Blog post: [Run modes](https://blog.orbeon.com/2012/05/run-modes.html)

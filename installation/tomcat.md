@@ -18,7 +18,7 @@ The following versions of Tomcat are supported:
 About Tomcat 6:
 
 - Tomcat 6 isn't supported by Orbeon Forms starting with version 2017.2 as the Apache Tomcat team has [announced](https://tomcat.apache.org/tomcat-60-eol.html) that support for Apache Tomcat 6.0.x ended on December 31, 2016.
-- [TIFF support](http://doc.orbeon.com/form-runner/feature/tiff-production.html) is not available when using Tomcat 6 (see [#2717](https://github.com/orbeon/orbeon-forms/issues/2717)).
+- [TIFF support](../form-runner/feature/tiff-production.md) is not available when using Tomcat 6 (see [#2717](https://github.com/orbeon/orbeon-forms/issues/2717)).
 
 ## Setup
 

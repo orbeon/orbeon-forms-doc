@@ -281,7 +281,7 @@ The boolean attribute `xxf:show-progress` allows specifying whether the client m
     xxf:show-progress="false"/>
 ```
 
-[UP TO 4.10] The `xxf:progress-message` attribute allows specifying a custom progress message when `xxf:show-progress` is `true`. By default, the standard progres message is used. [SINCE 2016.1] Orbeon Forms switched to using a [slim loading bar](http://blog.orbeon.com/2016/04/how-do-you-tell-users-something-is.html) instead of a loading indicator message, and as a result specifying a "progress message" does not make sense anymore. The `xxf:progress-message` attribute is deprecated: specifying it has no effect, and might be considered as an error in future versions.
+[UP TO 4.10] The `xxf:progress-message` attribute allows specifying a custom progress message when `xxf:show-progress` is `true`. By default, the standard progres message is used. [SINCE 2016.1] Orbeon Forms switched to using a [slim loading bar](https://blog.orbeon.com/2016/04/how-do-you-tell-users-something-is.html) instead of a loading indicator message, and as a result specifying a "progress message" does not make sense anymore. The `xxf:progress-message` attribute is deprecated: specifying it has no effect, and might be considered as an error in future versions.
 
 For more information, see the [XForms specification](https://www.w3.org/TR/xforms11/#action-dispatch).
 

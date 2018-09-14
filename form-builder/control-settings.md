@@ -67,7 +67,7 @@ Some controls support more than one appearance. For example, a single selection 
 or as radio buttons. When available, the "Control Appearance" selector allows selecting and changing the appearance of
 the control.
 
-See also [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html).
+See also [How the new Form Builder Appearance Selector Works](https://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html).
 
 #### Custom control settings
 
@@ -107,7 +107,7 @@ The help message is available at runtime through a help icon positioned next to 
 
 The help text is localizable.
 
-See also [Improving how we show help messages](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html).
+See also [Improving how we show help messages](https://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html).
 
 ### Dynamic labels, hints and help messages
 
@@ -124,8 +124,8 @@ For more, see [Template syntax](template-syntax.md).
 - [Formulas](formulas.md)
 - [Template syntax](template-syntax.md)
 - Blog posts
-    - [Enhanced validation in Form Builder and Form Runner](http://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
-    - [Improving how we show help messages](http://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
-    - [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
-    - [Improved constraints on attachments uploads](http://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
-    - [More flexible email senders and recipients](http://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)
+    - [Enhanced validation in Form Builder and Form Runner](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
+    - [Improving how we show help messages](https://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
+    - [How the new Form Builder Appearance Selector Works](https://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
+    - [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
+    - [More flexible email senders and recipients](https://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)

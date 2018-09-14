@@ -39,4 +39,4 @@ Orbeon Forms follows a few principles:
 
 [1]: https://www.orbeon.com/
 [2]: http://discuss.orbeon.com/
-[3]: http://doc.orbeon.com/form-builder/index.html
+[3]: https://doc.orbeon.com/form-builder/

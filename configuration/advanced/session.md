@@ -45,7 +45,7 @@ When Orbeon Forms receives an Ajax request (see the third step in the previous s
 The following 2 cases can happen, and if they they do getting a 403 response and the corresponding "An error has occurred" dialog is expected, but those situations should happen very rarely:
 
 1. The user's session has expired – As long as users keep a form open in their browser, by default the Orbeon Forms client-side code makes sure to send a "session heartbeat" Ajax request before the session expires to keep it alive. However:
-    - It's possible for you to disable the [session heartbeat](https://doc.orbeon.com/contributors/state-handling.html#session-heartbeat) feature. If you do, it is possible for the session to expire even if users keep a browser window with the form open.
+    - It's possible for you to disable the [session heartbeat](../../contributors/state-handling.md#session-heartbeat) feature. If you do, it is possible for the session to expire even if users keep a browser window with the form open.
     - In situations where the browser looses connectivity to the server for an extended period of time, the session heartbeat mechanism might not be able to contact the server before the session expires. For instance, this could happen if a user were to load a form on her laptop, close the lid, commute home, open the lid, and try to continue filling out the same form.
 2. A user loads the form, the server running Orbeon Forms is restarted, and then the user tries to interact with the form.
 
@@ -60,7 +60,7 @@ If you're getting 403 errors more regularly, and you have software sitting betwe
 
 In those cases, you can solve the issue by either:
 
-- If you have own Java code to embed forms created with Form Builder, switch to using the built-in [Form Runner Java Embedding API](https://doc.orbeon.com/form-runner/link-embed/java-api.html), which will handle cookies properly.
+- If you have own Java code to embed forms created with Form Builder, switch to using the built-in [Form Runner Java Embedding API](../../form-runner/link-embed/java-api.md), which will handle cookies properly.
 - Debug and fix the issue is the said software, armed with a better understanding of the Orbeon Forms' requirements when it comes to cookies, based on this information on this page.
 - If using Tomcat, in Tomcat's directory edit `conf/context.xml`, and add `sessionCookiePath="/"` on the root element, so it looks as follows: `<Context sessionCookiePath="/">`. This will make the job of any reverse proxy or embedding code you might have much simpler, and could help you get around bugs in that code.
 

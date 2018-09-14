@@ -91,4 +91,4 @@ For example, you can:
 
 ### See also
 
-- Blog post: [Owner/group-based permissions AKA "See your own data"](http://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)
+- Blog post: [Owner/group-based permissions AKA "See your own data"](https://blog.orbeon.com/2013/09/ownergroup-based-permissions-aka-see.html)

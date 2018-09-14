@@ -36,4 +36,4 @@ In this initial version, it is not yet possible to undo changes to the form defi
 
 ## See also 
 
-- Blog post: [New Orbeon Forms 2017.2 feature: undo and redo](http://blog.orbeon.com/2017/12/new-orbeon-forms-20172-feature-undo-and.html)
+- Blog post: [New Orbeon Forms 2017.2 feature: undo and redo](https://blog.orbeon.com/2017/12/new-orbeon-forms-20172-feature-undo-and.html)

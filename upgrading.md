@@ -1,7 +1,5 @@
 # Upgrading
 
-
-
 ## Upgrade steps
 
 To upgrade to a new version of Orbeon Forms you'll want to:
@@ -56,20 +54,20 @@ Finally, let us know if you encounter issues while upgrading, via the [community
 When about to upgrade, we recommend you go through the release notes for all versions between the version you are using and the one you are upgrading to, paying particular attention to the compatibility notes sections. Here are the releases which contain backward compatibility notes:
 
 - [2018.1](https://blog.orbeon.com/2018/09/orbeon-forms-20181.html)
-- [2017.1](http://blog.orbeon.com/2017/06/orbeon-forms-20171.html)
-- [2016.2](http://blog.orbeon.com/2016/08/orbeon-forms-20162.html)
-- [2016.1](http://blog.orbeon.com/2016/04/orbeon-forms-20161.html)
-- [4.10](http://blog.orbeon.com/2015/08/orbeon-forms-410.html)
-- [4.9](http://blog.orbeon.com/2015/05/orbeon-forms-49.html)
-- [4.8](http://blog.orbeon.com/2015/01/orbeon-forms-48.html)
-- [4.7](http://blog.orbeon.com/2014/09/orbeon-forms-47.html)
-- [4.6.2](http://blog.orbeon.com/2014/08/orbeon-forms-462.html)
-- [4.6.1](http://blog.orbeon.com/2014/07/orbeon-forms-461.html)
-- [4.6](http://blog.orbeon.com/2014/06/orbeon-forms-46.html)
-- [4.5](http://blog.orbeon.com/2014/04/orbeon-forms-45.html)
-- [4.4](http://blog.orbeon.com/2013/11/orbeon-forms-44.html)
-- [4.3](http://blog.orbeon.com/2013/08/orbeon-forms-43.html)
-- [4.2](http://blog.orbeon.com/2013/05/orbeon-forms-42.html)
+- [2017.1](https://blog.orbeon.com/2017/06/orbeon-forms-20171.html)
+- [2016.2](https://blog.orbeon.com/2016/08/orbeon-forms-20162.html)
+- [2016.1](https://blog.orbeon.com/2016/04/orbeon-forms-20161.html)
+- [4.10](https://blog.orbeon.com/2015/08/orbeon-forms-410.html)
+- [4.9](https://blog.orbeon.com/2015/05/orbeon-forms-49.html)
+- [4.8](https://blog.orbeon.com/2015/01/orbeon-forms-48.html)
+- [4.7](https://blog.orbeon.com/2014/09/orbeon-forms-47.html)
+- [4.6.2](https://blog.orbeon.com/2014/08/orbeon-forms-462.html)
+- [4.6.1](https://blog.orbeon.com/2014/07/orbeon-forms-461.html)
+- [4.6](https://blog.orbeon.com/2014/06/orbeon-forms-46.html)
+- [4.5](https://blog.orbeon.com/2014/04/orbeon-forms-45.html)
+- [4.4](https://blog.orbeon.com/2013/11/orbeon-forms-44.html)
+- [4.3](https://blog.orbeon.com/2013/08/orbeon-forms-43.html)
+- [4.2](https://blog.orbeon.com/2013/05/orbeon-forms-42.html)
 - [4.0](http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/40#TOC-Compatibility-notes)
 - [3.9](http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/39#TOC-Compatibility-notes)
 

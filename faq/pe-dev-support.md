@@ -38,7 +38,7 @@ If you are interested to know what kind of issues and features are being worked 
 - [Recently closed issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aclosed+sort%3Aupdated-desc)
 - [Orbeon on Twitter](https://twitter.com/orbeon)
 - [Orbeon Forms roadmap](../roadmap.md)
-- [Orbeon Forms blog](http://blog.orbeon.com/)
+- [Orbeon Forms blog](https://blog.orbeon.com/)
 
 ## Does Orbeon Forms contact a license server over the internet?
 

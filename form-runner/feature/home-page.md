@@ -95,12 +95,12 @@ Specifically, this operation, for each selected form definition:
 
 #### Upgrading with section templates and versioning
 
-Important notes when [form definition versioning](http://blog.orbeon.com/2014/02/form-versioning.html) is used:
+Important notes when [form definition versioning](https://blog.orbeon.com/2014/02/form-versioning.html) is used:
 
 - From Orbeon Forms 4.6 (included) to 2016.1 (excluded): a *new* form definition version is created when the form definition is upgraded.
 - From Orbeon Forms 2016.1 (included): the upgraded form definition *overrides* the previously-published form definition. 
 
-When form definition versioning is used section templates are in use, you have to be very careful because the format of the data covered by section templates might have changed and might make the upgraded form incompatible with existing data. See also [Publishing](http://doc.orbeon.com/form-builder/publishing.html#versioning).
+When form definition versioning is used section templates are in use, you have to be very careful because the format of the data covered by section templates might have changed and might make the upgraded form incompatible with existing data. See also [Publishing](../../form-builder/publishing.md#versioning).
 
 We advise that you only republish form definitions which use both form definition versioning and section templates if you know that the format of the data covered by the section templates remains compatible.
 
@@ -108,7 +108,7 @@ We advise that you only republish form definitions which use both form definitio
 
 Here is how you can use this operation to update your form definitions' section template to the latest published section templates:
 
-1. Publish your section templates from Form Builder (see [Section templates](http://doc.orbeon.com/form-builder/section-templates.html)). 
+1. Publish your section templates from Form Builder (see [Section templates](../../form-builder/section-templates.md)). 
 2. In the Home page, select which forms you want to update.
 3. Run the "Upgrade local form definitions" action.
 

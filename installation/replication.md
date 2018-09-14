@@ -340,7 +340,7 @@ The `ehcache.xml` configuration provided above attempts to minimize this kind of
 ## See also
 
 - [Installation](README.md)
-- Blog post: [High-Availability Thanks to State Replication](http://blog.orbeon.com/2018/03/high-availability-thanks-to-state.html)
+- Blog post: [High-Availability Thanks to State Replication](https://blog.orbeon.com/2018/03/high-availability-thanks-to-state.html)
 - [Clustering and High Availability](../configuration/advanced/clustering.md)
 
 [1]: https://www.orbeon.com/download

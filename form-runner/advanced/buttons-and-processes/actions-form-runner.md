@@ -176,7 +176,7 @@ navigate(uri = "http://example.org/{xxf:get-request-parameter('bar')}/{.//code}"
 
 [SINCE Orbeon Forms 2017.2.1]
 
-The `relinquish-lease` action will, if the current user has a lease on the data being  currently edited, relinquish that lease. The action has no effect if the [lease isn't enabled](https://doc.orbeon.com/form-runner/feature/lease.html#enabling-the-lease-feature), or if the current user doesn't own the lease.
+The `relinquish-lease` action will, if the current user has a lease on the data being  currently edited, relinquish that lease. The action has no effect if the [lease isn't enabled](../../feature/lease.md#enabling-the-lease-feature), or if the current user doesn't own the lease.
 
 In most cases you'll want to use this action in conjunction with [`navigate`](#navigate) or [`send(replace ="all")`](actions-form-runner-send.md) to release a potential lease the user might have before you take that user to another page. This way other users will be able to access the current data without having to wait for the lease to expire.
 

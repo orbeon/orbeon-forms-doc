@@ -34,8 +34,8 @@ Orbeon Forms CE support                                                 |Y      
 
 A third-party [MarkLogic persistence layer for Orbeon Form Runner](https://gitlab.dyomedea.com/marklogic/orbeon-form-runner-persistence-layer/tree/master) is available. As of 2015-03-02, this does not support versioning and owner/group-based permissions. Also please note that this is currently not officially supported by Orbeon.
 
-[blog1]: http://blog.orbeon.com/2014/01/repeated-sections.html
-[blog2]: http://blog.orbeon.com/2014/02/form-versioning.html
+[blog1]: https://blog.orbeon.com/2014/01/repeated-sections.html
+[blog2]: https://blog.orbeon.com/2014/02/form-versioning.html
 
 ## See also 
 

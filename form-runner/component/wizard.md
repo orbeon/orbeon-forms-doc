@@ -95,4 +95,4 @@ In separate table of contents mode, this event can be dispatched multiple times 
 ## See also
 
 - [Form Runner Wizard View](../feature/wizard-view.md): the relevant Form Runner documentation
-- [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, with a video
+- [Form Runner Wizard View](https://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, with a video

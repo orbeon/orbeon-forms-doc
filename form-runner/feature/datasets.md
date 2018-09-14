@@ -34,7 +34,7 @@ fr:dataset('activity-dataset')/foo/bar
 
 ## See also
 
-- Blog post: [Datasets](http://blog.orbeon.com/2017/01/datasets.html)
+- Blog post: [Datasets](https://blog.orbeon.com/2017/01/datasets.html)
 - [Actions Editor](../../form-builder/actions.md)
 - [HTTP Services](../../form-builder/http-services.md)
 - [Database Services](../../form-builder/database-services.md)

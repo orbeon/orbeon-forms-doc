@@ -8,7 +8,7 @@ When using `GET` and `PUT` to deal with resources, the body of HTTP requests con
 
 - `GET`
     - The request body is empty and response body contains resource.
-    - [SINCE Orbeon Forms 4.5] The `Orbeon-Operations` response header lists the operations that the user can perform on the data (see [Supporting permissions in your persistence API implementation](http://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)).
+    - [SINCE Orbeon Forms 4.5] The `Orbeon-Operations` response header lists the operations that the user can perform on the data (see [Supporting permissions in your persistence API implementation](https://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)).
     - [SINCE Orbeon Forms 4.5] If the implementation of the persistence API supports form versioning, and the request is for a form definition, the `Orbeon-Form-Definition-Version` request header tells which version of the form definition is requested.
 - `PUT`
     - The request body contains the resource to store.

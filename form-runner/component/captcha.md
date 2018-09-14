@@ -111,7 +111,7 @@ Most likely, you'll want to add code dispatching an `fr-verify` event to your co
 
 ## See also
 
-- [Stop spammers by adding a CAPTCHA to your forms](http://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
+- [Stop spammers by adding a CAPTCHA to your forms](https://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 
 [1]: http://en.wikipedia.org/wiki/ReCAPTCHA
 [2]: https://developers.google.com/recaptcha/docs/verify?csw=1

@@ -292,5 +292,5 @@ When `none`:
 
 - [Wizard XBL component](../component/wizard.md)
 - [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md)
-- [Form Runner Wizard View](http://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, with a video
-- [New wizard validated mode](http://blog.orbeon.com/2015/03/new-wizard-validated-mode.html): a blog post which introduces thew validated mode.
+- [Form Runner Wizard View](https://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, with a video
+- [New wizard validated mode](https://blog.orbeon.com/2015/03/new-wizard-validated-mode.html): a blog post which introduces thew validated mode.

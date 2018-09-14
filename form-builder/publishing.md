@@ -54,6 +54,6 @@ When overriding an existing form version, the existing comment, if any, is read 
 
 ## See also
 
-- [Form versioning](http://blog.orbeon.com/2014/02/form-versioning.html) blog post
-- [Choosing the best versioning option when publishing a form](http://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html) blog post
-- [Versioning comments](http://blog.orbeon.com/2016/09/versioning-comments.html) blog post
+- [Form versioning](https://blog.orbeon.com/2014/02/form-versioning.html) blog post
+- [Choosing the best versioning option when publishing a form](https://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html) blog post
+- [Versioning comments](https://blog.orbeon.com/2016/09/versioning-comments.html) blog post

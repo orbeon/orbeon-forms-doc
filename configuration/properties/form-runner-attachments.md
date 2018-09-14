@@ -78,4 +78,4 @@ The value of `oxf.fr.detail.attachment.mediatypes` can be overridden:
 
 ## See also
 
-- Blog post: [Improved constraints on attachments uploads](http://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
+- Blog post: [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)

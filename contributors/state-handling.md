@@ -65,7 +65,7 @@ The XForms state store is configured via [`oxf:/config/ehcache.xml`](https://git
 
 ## Session heartbeat
 
-See also the [blog post](http://blog.orbeon.com/2008/01/keeping-your-session-alive_29.html).
+See also the [blog post](https://blog.orbeon.com/2008/01/keeping-your-session-alive_29.html).
 
 If you happen to leave a browser window open on your computer, chances are that you will get back to that window and keep using the application. The last thing you want to happen when you come back is lose your session and therefore your data.
 

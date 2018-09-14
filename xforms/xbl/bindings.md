@@ -191,4 +191,4 @@ This selector associates, for example the following element to the `fr:character
 
 ## See also
 
-- [How the new Form Builder Appearance Selector Works](http://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
+- [How the new Form Builder Appearance Selector Works](https://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
