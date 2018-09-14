@@ -17,7 +17,7 @@ This serves the following functions:
   - apply calculations to the data (formulas)
   - export variables used in calculations (see [Model Bind Variables](model-bind-variables.md))
 - in the model and in the view
-  - as an indirection to the data model, with the `bind` attribute or the `xxf:bind()` function
+  - as an indirection to the data model, with the `bind` attribute or the `bind()` function
 
 ## Extensions
 
@@ -106,6 +106,7 @@ _NOTE: This is the behavior with Orbeon Forms 3.9 onwards. With Orbeon Forms 3.8
 ### Extension XPath functions
 
 - The `xxf:bind()` function returns the node-set of a given bind.
+    - *NOTE: This is also available as a plain `bind()` function since it is proposed for XForms 2.0.*
 - The `xxf:evaluate-bind-property()` function evaluates a property of a given bind.
 - The `xxf:type()` function returns the type of the instance data node passed as parameter.
 

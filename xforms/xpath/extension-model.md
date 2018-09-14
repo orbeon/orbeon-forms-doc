@@ -10,7 +10,15 @@ xxf:bind(
 ) as node()*
 ```
 
-The `xxf:bind()` function returns the node-set of a given bind:
+Or, with its XForms 2.0 definition:
+
+```xpath
+bind(
+    $bind-id as xs:string
+) as node()*
+```
+
+The `bind()` function returns the node-set of a given bind:
 
 ```xml
 <!-- The following... -->
@@ -18,7 +26,7 @@ The `xxf:bind()` function returns the node-set of a given bind:
 ...
 </xf:input>
 <!-- ...is equivalent to this: -->
-<xf:input ref="xxf:bind('my-bind')">
+<xf:input ref="bind('my-bind')">
 ...
 </xf:input>
 ```
@@ -28,7 +36,7 @@ The `xxf:bind()` function returns the node-set of a given bind:
 ```xml
 <xf:hint
     ref="
-        for $bind in xxf:bind('my-hint') return
+        for $bind in bind('my-hint') return
             if (normalize-space($bind) = '') then
                 instance('default-hint')
             else
