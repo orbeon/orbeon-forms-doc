@@ -1,7 +1,5 @@
 # Controls functions
 
-
-
 ## xxf:binding()
 
 ```xpath
@@ -154,6 +152,21 @@ See also the XForms 1.1 `context()` function, which returns the current evaluati
     <xf:setvalue ref="instance('foo')/name" value="context()/name"/>
 </xf:group>
 ```
+
+## xxf:focusable()
+
+[SINCE Orbeon Forms 4.6]
+
+```xpath
+xxf:focusable($static-or-absolute-id) as xs:boolean
+```
+
+For the given control id, return whether the control is currently focusable.
+
+- To be focusable, a control must be relevant and not readonly.
+- For container controls, the function returns `true()` only if it contains at least one focusable control.
+- For `xf:switch`, the search only takes place in the current `xf:case`.
+- Some controls are never focusable, like controls with appearance `xxf:internal` or `xf:var`.  
 
 ## xxf:index()
 
