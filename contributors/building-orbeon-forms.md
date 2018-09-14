@@ -340,7 +340,7 @@ Note that the debugging and profiling settings above are different: you either r
 
 If you modify Java or Scala files, you need to recompile. Go to menu "Build" → "Make Module 'Orbeon Forms'", or use the keyboard shortcut (`F7`).
 
-If you are connected to Tomcat via the debugger AND you are lucky, changed classes will reload in the JVM via HotSwap. See also the IntelliJ doc on [Reloading Classes](http://www.jetbrains.com/idea/webhelp/reloading-classes.html). Otherwise, you need to restart Tomcat to see your changes.
+If you are connected to Tomcat via the debugger AND you are lucky, changed classes will reload in the JVM via HotSwap. See also the IntelliJ doc on [Reloading Classes](https://www.jetbrains.com/help/idea/2017.3/reloading-classes.html). Otherwise, you need to restart Tomcat to see your changes.
 
 *NOTE: HotSwap has limitations, especially with Scala code which produces and modifies more class files. It is not a silver bullet and there will be cases where you will need to redeploy the web application or restart the application server. But you will spare yourself a redeployment or restart in the cases where your modification to the Java or Scala code does not significantly change the structure of classes.*
 
