@@ -53,6 +53,7 @@ As of 2016-04-19 this page is still being updated.
     - persistence implementations: [doc](form-runner/persistence/db-support.md)
     - relational database support: [doc](form-runner/persistence/relational-db.md), [blog post about new indexes](https://blog.orbeon.com/2016/06/new-indexes-boost-performance-with.html)
 - Datasets: [doc](form-runner/feature/datasets.md), [blog post](https://blog.orbeon.com/2017/01/datasets.html)
+- Multitenancy: [doc](/form-runner/feature/multitenancy.md)
 
 ### Form Builder
 
