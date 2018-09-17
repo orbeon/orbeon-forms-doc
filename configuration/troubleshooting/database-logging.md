@@ -39,4 +39,4 @@ Note the `driverClassName` set to `net.sf.log4jdbc.DriverSpy`, and the `url` sta
 
 ## See also
 
-- [Using Form Runner with a Relational Database](../../form-runner/persistence/relational-db.md)
+- [Using Form Runner with a Relational Database](/form-runner/persistence/relational-db.md)
