@@ -1,7 +1,5 @@
 # Terminology
 
-
-
 ## Rationale
 
 This page explains some terms which occur often in the Orbeon Forms documentation.
@@ -23,7 +21,7 @@ In Form Builder, a form definition is identified by a two-level hierarchy of nam
   - a project name such as "mercury", "foobar"
 - __Form name__: a name which is local to an application name, for example "address" or "claim".
 
-This two-level hierarchy allows for easy grouping of forms, and allows using a single instance of Form Builder to host distinct applications.
+This two-level hierarchy allows for easy grouping of forms, and allows using a single instance of Form Builder to host distinct applications. See [Multitenancy](../feature/multitenancy.md).
 
 Form data is identified by a three-level hierarchy which includes:
 
@@ -58,3 +56,8 @@ Form Runner and Form Builder have a few pages (or screens) which are referred to
     - See [Form Runner Home Page](../../form-runner/feature/home-page.md) for more.
 
 See also [The Form Builder summary page and Form Runner home page](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html).
+
+## See also 
+
+- [Multitenancy](/form-runner/feature/multitenancy.md)
+

@@ -1,7 +1,5 @@
 # Linking to Your Forms
 
-
-
 ## Rationale
 
 When you create a form with Form Builder, you pick an *application name* and *form name* for that form. For instance, for a marriage registration, you might choose `clerk` as the application name, and `marriage-registration` as the form name.
@@ -63,5 +61,6 @@ By default, the latest available form definition version is used.
 
 ## See also
 
+- [Multitenancy](/form-runner/feature/multitenancy.md)
 - [Sending PDF and TIFF content: Controlling the format](../advanced/buttons-and-processes/actions-form-runner-send.md)
 - [PDF templates](../../form-builder/pdf-templates.md)

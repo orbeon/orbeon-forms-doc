@@ -116,6 +116,7 @@
         * [Lease Feature](form-runner/feature/lease.md)
         * [Localization](form-runner/feature/localization.md)
         * [Mobile support](form-runner/feature/mobile.md)
+        * [Multitenancy](form-runner/feature/multitenancy.md)
         * [Responsive design](form-runner/feature/responsive-design.md)
         * [TIFF production](form-runner/feature/tiff-production.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
