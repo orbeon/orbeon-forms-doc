@@ -4,7 +4,7 @@
 
 ## Situation
 
-You've created forms with Form Builder, published those forms, and setup Orbeon Forms so it [stores data captured by the forms in your relational database](../persistence/relational-db.md). Now, how can another app of yours access this data?
+You've created forms with Form Builder, published those forms, and setup Orbeon Forms so it [stores data captured by the forms in your relational database](/form-runner/persistence/relational-db.md). Now, how can another app of yours access this data?
 
 ![Accessing data - How](../images/overview-accessing-data-how.png)
 
@@ -49,8 +49,8 @@ Accessing data in the database rather than through an API, per [option 2](#2-cal
 
 ![Doc - Accessing data - DB - Overview](../images/overview-accessing-data-db-overview.png)
 
-The table you'll be the most interested in is `orbeon_form_data`, where the data users save or submit goes. In that table, a given "form data" (i.e. instance of a user filling out a form), is identified with a `document_id`. The actual data, i.e. values of the fields, is stored as XML in the `xml` column. For more details on the table format, see the DDL creating those tables for your database in the [Relational Database Setup](../persistence/relational-db.md), as it varies slightly depending on the database you're using.
+The table you'll be the most interested in is `orbeon_form_data`, where the data users save or submit goes. In that table, a given "form data" (i.e. instance of a user filling out a form), is identified with a `document_id`. The actual data, i.e. values of the fields, is stored as XML in the `xml` column. For more details on the table format, see the DDL creating those tables for your database in the [Relational Database Setup](/form-runner/persistence/relational-db.md), as it varies slightly depending on the database you're using.
 
-One way to access the data in `orbeon_form_data` is through a database trigger that copies the data you're interested in from the XML in `orbeon_form_data` every time new data is saved; for instance see an [example of such a trigger for MySQL](../persistence/relational-db.md).
+One way to access the data in `orbeon_form_data` is through a database trigger that copies the data you're interested in from the XML in `orbeon_form_data` every time new data is saved; for instance see an [example of such a trigger for MySQL](/form-runner/persistence/relational-db.md).
 
 ![Doc - Accessing data - DB - How](../images/overview-accessing-data-db-how.png)
