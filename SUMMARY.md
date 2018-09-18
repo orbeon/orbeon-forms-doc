@@ -36,6 +36,7 @@
        * [SAP Hybris Module](configuration/advanced/sap-hybris.md)
        * [XForms logging](configuration/advanced/xforms-logging.md)
    * Troubleshooting
+       * [Troubleshooting with the `orbeon.log`][configuration/troubleshooting/orbeon-logging.md]
        * [Memory and threads](configuration/troubleshooting/memory-and-threads.md)
        * [Relational database logging](configuration/troubleshooting/database-logging.md)
        * [Misc](configuration/troubleshooting/misc.md)
