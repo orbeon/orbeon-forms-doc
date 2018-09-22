@@ -20,7 +20,7 @@ Consider the case of a city government who wants to put on their website a form 
 
 In Form Builder, in the left sidebar, switch to the Advanced tab, click on Permissions, and fill out the dialog as follows:
 
-![Permissions for pothole submission workflow]()
+![Permissions for pothole submission workflow](/configuration/images/workflows-pothole.png)
 
 This will ensure that only users with the role `public-works-staff` can see any of the submitted data. Next, you’ll want to requires users accessing submissions to be authenticated. Say the form app name is `public-works` and form name `report-pothole`. Then:
 
