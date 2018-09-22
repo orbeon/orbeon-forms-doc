@@ -22,6 +22,7 @@
         * [Form Builder](configuration/properties/form-builder.md)
         * [XForms](configuration/properties/xforms.md)
    * Advanced
+       * [Workflows](configuration/advanced/workflows.md)
        * [Session management](configuration/advanced/session.md)
        * [Client-side error handling](configuration/advanced/client-error-handling.md)
        * [Clustering and High Availability](configuration/advanced/clustering.md)
