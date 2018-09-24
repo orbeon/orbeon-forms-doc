@@ -2,14 +2,14 @@
 
 ## About workflows
 
-Forms are often participate in a *workflow*, allowing collaboration between different users often having different tasks to perform depending on their role. In Orbeon Forms, workflows are implemented using a combination of the following capabilities:
+Forms often participate in *workflows*, allowing collaboration between different users often having different tasks to perform depending on their role. Workflows are implemented using a combination of Orbeon Forms' capabilities:
 
-- [Authentication](/form-runner/access-control/users.md) can be required to access certain forms.
-- [Permissions](/form-runner/access-control/deployed-forms.md) can be defined, in Form Builder, to limit access to a given form.
-- [Buttons on the form can be enabled or disabled](/configuration/properties/form-runner/form-runner-detail-page.md#hiding-and-disabling-buttons) depending on the role of the user viewing the form.
-- [Formulas](/form-builder/formulas.md) can be used to decide whether certain fields should be hidden or made read-only, for instance based on who the user is. The same can be done not just for fields, but for entire sections of the form.
+- You can require [authentication](/form-runner/access-control/users.md) for certain pages. This way, should users try to access those pages without being logged in, they will be redirected to a login page. You can also require users not only to be logged in but to have a specific role.
+- In Form Builder, using the [Permissions dialog](/form-runner/access-control/deployed-forms.md), you can define what actions (such as filling out a new form, reading or updating data), can perform be performed by which users.
+- You can [enable or disable some of the buttons shown at the bottom of the form](/configuration/properties/form-runner/form-runner-detail-page.md#hiding-and-disabling-buttons), say depending on the role of the user viewing the form.
+- In Form Builder, with [formulas](/form-builder/formulas.md), you can decide whether certain fields should be hidden or made read-only, for instance based on who the user is. You can do the same for entire sections of the form.
 
-As an example, in the following section we’ll explore how those features to implement a specific simple workflow.
+As an example, in the following section we’ll explore how to use some of those features to implement a specific simple workflow.
 
 ## Form filled by the public, reviewed by staff
 
@@ -22,7 +22,7 @@ In Form Builder, in the left sidebar, switch to the Advanced tab, click on Permi
 
 ![Permissions for pothole submission workflow](/configuration/images/workflows-pothole.png)
 
-This will ensure that only users with the role `public-works-staff` can see any of the submitted data. Next, you’ll want to requires users accessing submissions to be authenticated. Say the form app name is `public-works` and form name `report-pothole`. Then:
+This will ensure that only users with the role `public-works-staff` can see any of the submitted data. Next, you’ll want to require users accessing submissions to be authenticated. Say the form app name is `public-works` and form name `report-pothole`. Then:
 
 - The page to fill out a new instance of the form, often called the *new page*, is at `/fr/public-works/report-pothole/new`.
 - The page to access all the submissions, often call the *summary page*, is at  `/fr/public-works/report-pothole/summary`.
