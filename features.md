@@ -30,7 +30,7 @@ As of 2016-04-19 this page is still being updated.
     - main feature: [doc](form-builder/section-templates.md)
     - merging: [doc](form-builder/section-templates.md#merging-section-templates)
 - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
-- Versioning of form definitions: [blog post about concept](https://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](https://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
+- Versioning of form definitions: [doc](/form-runner/feature/versioning.md), [blog post about concept](https://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](https://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
     - overwriting of existing version: [doc](form-builder/publishing.md#versioning)
     - associating a comment with a given form version: [doc](form-builder/publishing.md#versioning), [blog post](https://blog.orbeon.com/2016/09/versioning-comments.html)
 - Form field validation: [doc](form-builder/validation.md), [blog post](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)

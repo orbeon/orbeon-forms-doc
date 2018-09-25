@@ -53,6 +53,9 @@ Form options include options which apply to the entire form definition.
     - Hints show inline or as tooltips upon mouseover.
     - For text, date, and time input fields, hints show as an HTML *placeholder* within the field when the field is empty.
     - For text areas, hints show as an HTML *placeholder* within the field when the field is empty. [SINCE Orbeon Forms 2017.1]
+- Simple Data Migration
+    - [SINCE Orbeon Forms 2018.2]
+    - For details, see [Simple data migration](/form-runner/feature/versioning.md#simple-data-migration).
 - Automatic Calculations Dependencies
     - [SINCE Orbeon Forms 2018.1]
     - For details, see [Automatic calculations dependencies](../form-runner/feature/automatic-calculations-dependencies.md). 
@@ -94,4 +97,6 @@ Form statistics show various counts of form elements.
 ## See also
 
 - [Wizard View](../form-runner/feature/wizard-view.md)
+- [Simple data migration](/form-runner/feature/versioning.md#simple-data-migration)
+- [Automatic calculations dependencies](../form-runner/feature/automatic-calculations-dependencies.md)
 - Blog post: [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)

@@ -29,3 +29,7 @@ When accessing the *summary* page for a singleton form, the *New* button won't s
 The simplest use case, described above, calls for having at most 1 form data per user, However, since the *singleton* aspect is driven by what users can see, you can use permissions to control whether you want to have one form per user, per group, per users having a given role, or even in the whole system.
 
 This also means that it might still be possible for certain users to see multiple forms, hence the third case above (*2 or more* form data), e.g. if you setup permissions so regular users can only see their own data, hence they will be able to create at most 1 form data, but someone with the `admin` role can view all the data.
+
+## See also
+
+- [Form Settings](/form-builder/form-settings.md)

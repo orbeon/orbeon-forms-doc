@@ -129,7 +129,7 @@ By default, as shown in the below video:
  
 By default, with Form Runner, control labels appear *inline* above the control. The following property allows overriding this behavior:
  
- ```xml
+```xml
 <property
     as="xs:string"
     name="oxf.xforms.label.appearance.*.*"
@@ -153,7 +153,7 @@ For more about placeholders, see [Use HTML5 placeholders, in XForms](https://blo
  
 By default, with Form Runner, control hints appear *inline* under the control. The following property allows overriding this behavior:
  
- ```xml
+```xml
 <property
     as="xs:string"
     name="oxf.xforms.hint.appearance.*.*"

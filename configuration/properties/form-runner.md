@@ -29,6 +29,8 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 * [Autosave](../../form-runner/persistence/autosave.md)
     * `oxf.fr.detail.autosave-delay`
     * `oxf.fr.persistence.*.autosave`
+* [Simple data migration](/form-runner/feature/versioning.md#simple-data-migration)
+    * `oxf.fr.detail.data-migration`
 * [Configuration Properties ~ Persistence](persistence.md)
     * `oxf.fr.persistence.provider`
     * `oxf.fr.persistence.[provider].uri`
