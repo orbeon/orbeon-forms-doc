@@ -30,7 +30,9 @@ Examples of compatible changes:
 
 - updating labels, hints, help messages, and explanatory texts
 - adding items to selection controls
-- changing the initial value of a control, either directly with the control or via an *Initial Value* formula  
+- changing the initial value of a control, either directly with the control or via an *Initial Value* formula
+- moving a control within the same grid or section
+- changing grid column widths  
 - adding a language
 - updating permissions
 - updating email settings
@@ -40,6 +42,7 @@ Examples of incompatible changes:
 - adding a control, grid, or section
 - removing a control, grid, or section
 - renaming a control, grid, or section
+- moving a control between grids or sections
 - changing the nesting of grids or section within subsections
 
 ## Simple data migration
