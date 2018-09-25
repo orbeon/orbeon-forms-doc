@@ -121,6 +121,7 @@
         * [Multitenancy](form-runner/feature/multitenancy.md)
         * [Responsive design](form-runner/feature/responsive-design.md)
         * [TIFF production](form-runner/feature/tiff-production.md)
+        * [Versioning](form-runner/feature/versioning.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
