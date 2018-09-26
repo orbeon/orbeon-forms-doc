@@ -39,6 +39,7 @@ Examples of compatible changes:
 
 Examples of incompatible changes:
 
+- renaming a control
 - adding a control, grid, or section
 - removing a control, grid, or section
 - renaming a control, grid, or section
@@ -91,5 +92,6 @@ The `oxf.fr.detail.data-migration` is set as follows by default:
     - [Form versioning](https://blog.orbeon.com/2014/02/form-versioning.html)
     - [Choosing the best versioning option when publishing a form](https://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
     - [Versioning comments](https://blog.orbeon.com/2016/09/versioning-comments.html)
+    - [Simple data migration](https://blog.orbeon.com/2018/09/simple-data-migration.html)
 - [Persistence API and versioning](/form-runner/api/persistence/versioning.md)
 - [Form Settings](/form-builder/form-settings.md)
