@@ -20,7 +20,7 @@ Below, you'll find a summary of the steps you can follow to install and configur
     customLogMessageFormat=%(currentTime)|%(executionTime)|%(category)|connection%(connectionId)\n%(sql)
     ```
     
-4. Where you define the datasource for Orbeon Forms, replace the driver class name by `com.p6spy.engine.spy.P6SpyDriver` and prefix the URL by `jdbc:p6spy:`. On Tomcat, this is done by editing Tomcat's `server.xml` file, and in that file, inside the `Context` you have defined for Orbeon Forms, change the `Resource` setting the value of the `driverClassName` attribute to `com.p6spy.engine.spy.P6SpyDriver`, and prefixing the value of the `url` attribute by `jdbc:p6spy:`, as in:
+4. Where you define the datasource for Orbeon Forms, replace the driver class name by `com.p6spy.engine.spy.P6SpyDriver` and prefix the URL by `jdbc:p6spy:`. On Tomcat, this is done by editing Tomcat's `server.xml`, and in that file, inside the `Context` you have defined for Orbeon Forms, change the `Resource` setting the value of the `driverClassName` attribute to `com.p6spy.engine.spy.P6SpyDriver`, and prefixing the value of the `url` attribute by `jdbc:p6spy:`, as in:
 
     ```xml
     <Resource
