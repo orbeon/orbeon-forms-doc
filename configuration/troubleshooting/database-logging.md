@@ -2,14 +2,14 @@
 
 ## Introduction
 
-In case of issues when using Orbeon Forms with a relational database, you might want to see what's happening between Orbeon Forms and said database. We have found that [p6spy](https://github.com/p6spy/p6spy) is a useful tool for troubleshooting this scenario.
+In case of issues when using Orbeon Forms with a relational database, you might want to see what's happening between Orbeon Forms and said database. We have found that [P6Spy](https://github.com/p6spy/p6spy) is a useful tool for troubleshooting this scenario.
 
 ## Configuration
 
-Below, you'll find a summary of the steps you can follow to install and configure p6spy. For more options, or if you're using an application server  other than Tomcat, you'll most likely want to refer to the p6spy documentation, and specifically their [installation](http://p6spy.readthedocs.io/en/latest/install.html) and [configuration](http://p6spy.readthedocs.io/en/latest/configandusage.html) instructions.
+Below, you'll find a summary of the steps you can follow to install and configure P6Spy. For more options, or if you're using an application server  other than Tomcat, you'll most likely want to refer to the P6Spy documentation, and specifically their [installation](http://p6spy.readthedocs.io/en/latest/install.html) and [configuration](http://p6spy.readthedocs.io/en/latest/configandusage.html) instructions.
 
-1. [Download](https://search.maven.org/search?q=g:p6spy) the p6spy jar file.
-2. Move the p6spy jar file to Tomcat's `lib` directory, or the equivalent directory on your application server. This should be the same directory where you installed your database driver jar file.
+1. [Download](https://search.maven.org/search?q=g:p6spy) the P6Spy jar file.
+2. Move the P6Spy jar file to Tomcat's `lib` directory, or the equivalent directory on your application server. This should be the same directory where you installed your database driver jar file.
 3. In the same directory, create a `spy.properties` as follows. On the first line replace `/var/log/tomcat` by the directory where your log files are stored. If you're using a database other than MySQL, on the second line replace `com.mysql.cj.jdbc.Driver` by the corresponding JDBC driver class name for your database.
 
     ```
