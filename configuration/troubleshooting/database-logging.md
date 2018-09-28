@@ -1,41 +1,27 @@
 # Relational Database Logging
 
-
-
 ## Introduction
 
-In case of issues when using Orbeon Forms with a relational database, you might want to see what's happening between Orbeon Forms and said database. We have found that [log4jdbc](https://github.com/arthurblake/log4jdbc) is a useful tool for troubleshooting this scenario.
+In case of issues when using Orbeon Forms with a relational database, you might want to see what's happening between Orbeon Forms and said database. We have found that [p6spy](https://github.com/p6spy/p6spy) is a useful tool for troubleshooting this scenario.
 
 ## Configuration
 
-[Download](https://github.com/arthurblake/log4jdbc/releases) and [install](https://code.google.com/p/log4jdbc/) [log4jdbc](https://github.com/arthurblake/log4jdbc).
+What follows is a summary of the steps you'll want to follow to install and configure p6spy. For more options, or if you're using an application server  other than Tomcat, you'll most likely want to refer to the p6spy documentation, and specifically their [installation](http://p6spy.readthedocs.io/en/latest/install.html) and [configuration](http://p6spy.readthedocs.io/en/latest/configandusage.html) instructions.
 
-Then update your datasource configuration. For example, with Tomcat and Oracle:
+1. [Download](https://search.maven.org/search?q=g:p6spy) the p6spy jar file.
+2. Move the p6spy jar file to Tomcat's `lib` directory, or the equivalent directory on your application server. This should be the same directory where you installed your database driver jar file.
+3. In the same directory, create a `spy.properties` as follows. On the first line replace `/var/log/tomcat` by the directory where your log files are stored. If you're using a database other than MySQL, on the second line replace `com.mysql.cj.jdbc.Driver` by JDBC driver class for your database.
 
-```xml
-<Resource
-    name="jdbc/oracle"
-    driverClassName="net.sf.log4jdbc.DriverSpy"
+    ```
+    logfile=/var/log/tomcat/spy.log
+    driverlist=com.mysql.cj.jdbc.Driver
+    dateformat=MM-dd-yy HH:mm:ss:SS
+    logMessageFormat=com.p6spy.engine.spy.appender.CustomLineFormat
+    customLogMessageFormat=%(currentTime)|%(executionTime)|%(category)|connection%(connectionId)\n%(sql)
+    ```
     
-    auth="Container"
-    type="javax.sql.DataSource"
-    
-    initialSize="3"
-    maxActive="10"
-    maxIdle="10"
-    maxWait="30000"
-    
-    poolPreparedStatements="true"
-    
-    testOnBorrow="true"
-    validationQuery="select * from dual"
-    
-    username="orbeon"
-    password="**password**"
-    url="jdbc:log4jdbc:oracle:thin:@//localhost:1521/globaldb"/>
-```
-
-Note the `driverClassName` set to `net.sf.log4jdbc.DriverSpy`, and the `url` starting with `jdbc:log4jdbc:`, followed by the usual driver prefix, here `oracle:`.
+4. Where you define the datasource for Orbeon Forms, replace the driver class name by `com.p6spy.engine.spy.P6SpyDriver` and prefix the URL by `jdbc:p6spy:`. On Tomcat, this is done by editing Tomcat's `server.xml` file, and in that file, inside the `Context` you have defined for Orbeon Forms, change the `Resource` setting the value of the `driverClassName` attribute to `com.p6spy.engine.spy.P6SpyDriver`, and prefixing the value of the `url` attribute by `jdbc:p6spy:`, as in `mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8`.
+5. Restart Tomcat or the application server you're using. Check that no error messages show on the console, `catalina.out`, or equivalent on system. If none show and Orbeon Forms starts properly, run `tail -f spy.log` in a terminal window, or equivalent on your operating system, and check that as you access, say, the Form Builder summary page, SQL statement are properly being logged.
 
 ## See also
 
