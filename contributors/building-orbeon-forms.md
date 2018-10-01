@@ -17,9 +17,9 @@ You need to have already installed:
 - [git](http://git-scm.com/)
 - [ant](http://ant.apache.org/)
 - [sbt](http://www.scala-sbt.org/)
-- [Tomcat 7](http://tomcat.apache.org/download-70.cgi) or better [Tomcat 8](http://tomcat.apache.org/download-80.cgi)
+- [Tomcat 8](http://tomcat.apache.org/download-80.cgi) ([Tomcat 7](http://tomcat.apache.org/download-70.cgi) still works as of 2018-10-01 but is deprecated)
 - [Node.js](https://nodejs.org/en/)
-- Java 1.7 or 1.8
+- Java 1.8 or Java 10 (Java 1.7 still works as of 2018-10-01 but is deprecated)
 
 On macOS, you can install the following easily if you have [Homebrew](http://brew.sh/):
 
@@ -51,8 +51,8 @@ This clones the git repository into a child directory called `orbeon-forms`.
 
 You don't have to use the following, but in case you care, the Orbeon Forms developers use:
 
-- the latest version of MacOS (High Sierra as of 2017-11)  
-- the latest version of IntelliJ IDEA (2017.2 as of 2017-11) and the Scala plugin
+- the latest version of MacOS (Mohave as of 2018-10)  
+- the latest version of IntelliJ IDEA (2018.2 as of 2018-09) and the Scala plugin
 
 ### Building
 
@@ -95,7 +95,11 @@ To open the Orbeon Forms project:
 
 - Go to the "File" → "Open Project" menu and  select the `orbeon-forms` directory.
 - IntelliJ then indexes the project, which can take a minute the first time you do it.
-- Open `build.sbt` and click "Refresh" to let IntelliJ create modules based on the sbt build.
+- open the "sbt" tab which should appear on the right side of IntelliJ
+- do "Refresh all sbt projects"
+- ~~Open `build.sbt` and click "Refresh" to let IntelliJ create modules based on the sbt build.~~
+
+![IntelliJ sbt module import](images/building-intellij-sbt.png)
 
 ### Running
 
