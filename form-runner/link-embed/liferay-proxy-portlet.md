@@ -234,7 +234,7 @@ For the `oxf.fr.authentication.header.username` header, you can choose any of th
 - `Orbeon-Liferay-User-Screen-Name`
 - or possibly `Orbeon-Liferay-User-Email`
 
-Prior to Orbeon Forms 4.9, you need the following configuration in your [properties](../../configuration/properties/README.md):_
+Prior to Orbeon Forms 4.9, you need the following configuration in your [properties](../../configuration/properties/README.md):
 
 ```xml
 <property
