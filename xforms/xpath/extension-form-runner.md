@@ -84,6 +84,8 @@ Like `fr:control-string-value()` (see above), but it returns:
         - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
           iterations, the iteration matching the enclosing repeat's current index is chosen.
 
+For indexes in the array where it is not possible to return a typed value, the empty sequence is returned instead. 
+
 ### fr:created-dateTime()
 
 [SINCE Orbeon Forms 2016.3]
