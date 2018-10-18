@@ -1,7 +1,5 @@
 # Standard event support
 
-
-
 ## Events in XForms
 
 The event model of XForms is based on the [Document Object Model (DOM) Level 2 Events][1] specification. This is the same specification that defines how your web browser handles events in HTML documents. This is good news because it means that his knowledge is reusable between XForms and HTML/JavaScript development!
@@ -57,7 +55,7 @@ not run. Previously, such handlers would run. For example the following `<xf:mes
 <xf:input ...>
     ...
     <xf:message event="xforms-disabled">I just got disabled!</xf:message>
-</xf:input
+</xf:input>
 ```
 
 ```xml
