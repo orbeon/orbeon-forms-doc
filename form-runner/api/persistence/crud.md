@@ -162,6 +162,37 @@ When Form Builder publishes a form definition, if versioning is supported by the
 - `next`: to indicate that the form definition must be published under the next available version
 - or a specific version number: to indicate that the form definition must replace the given version
 
+## Handling attachments
+
+Form data supports *attachments*. These are usually binary data attached by the user via an Attachment or Image attachment control. Attachments are stored separately from the XML data.
+
+In order to save an attachment, you have to use a separate `PUT` request for each attachment. The format of the attachment path is:
+
+```
+/fr/service/persistence/crud/$app/$form/(data|draft)/$doc/$attachment.bin
+```
+
+where `$attachment` is a random id for the attachment. The `.bin` extension is expected.
+
+Then, the XML data must point to the attachment using that same path. For example:
+
+```xml
+<form>
+    <my-section>
+        <my-image
+            filename="MyImage.jpg"
+            mediatype="image/jpeg" 
+            size="22143">/fr/service/persistence/crud/orbeon/bookshelf/data/16ab5903c7f0deb74fdc51dbdf705375/26abcf492f64db9808f2b13847e0cf8b.bin</my-image>    
+    </my-section>
+</form>
+```
+
+Note that in the case of attachments, the XML data contains attributes indicating:
+
+- the file name
+- the mediatype
+- the file size 
+
 ## Deleting all data for an existing form
 
 To remove all instances of form data, issue a DELETE to:
