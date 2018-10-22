@@ -85,7 +85,7 @@ With Orbeon Forms 2017.2, you use the arrow icons within the grid to expand into
 
 ![Expanding cell boundaries](images/grid-icons-cell-boundaries.png)
 
-With Orbeon Forms 2018.1 and newer, you drag the cell boundary to expand into empty adjacent cells.
+With Orbeon Forms 2018.1 and newer, you drag the cell boundary to expand into empty adjacent cells. See also the [blog post](https://blog.orbeon.com/2018/10/resizing-cells-with-drag-drop-in-form.html).
 
 ![Dragging cell boundaries horizontally](images/grid-dragging-cell-boundaries-horizontally.png)
 
@@ -176,6 +176,7 @@ This mechanism is how you edit:
 ## See also 
 
 - Blog post: [The 12-column layout](https://blog.orbeon.com/2018/05/the-12-column-layout.html)
+- Blog post: [Resizing cells with drag & drop in Form Builder](https://blog.orbeon.com/2018/10/resizing-cells-with-drag-drop-in-form.html)
 - [Section settings](section-settings.md)
 - [Repeated grids](repeated-grids.md)
 - [Responsive design](../form-runner/feature/responsive-design.md)
