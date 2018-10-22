@@ -48,9 +48,13 @@ Examples of incompatible changes:
 
 ## Simple data migration
 
-### Rationale
+### Availability
 
-[SINCE Orbeon Forms 2018.2]
+This feature is available since Orbeon Forms 2018.2.
+
+This is an Orbeon Forms PE feature.
+
+### Rationale
 
 Simple data migration is an option which sits between "overwrite an existing form definition in an incompatible way" and "create a whole new form definition version". When enabled, simple data migration allows you to overwrite a form definition, but keep certain changes compatible, namely, the updated form definition can:
 
