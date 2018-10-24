@@ -1,7 +1,5 @@
 # Form Runner configuration properties
 
-
-
 ## Children pages
 
 - [Detail page](form-runner-detail-page.md)
@@ -120,7 +118,7 @@ For pages which don't involve a specific form, such as the Form Runner Home Page
   value="en fr"/>
 ```
 
- For more details, see [Language selection at runtime](../../form-runner/feature/localization.md#language-selection-at-runtime)
+For more details, see [Language selection at runtime](../../form-runner/feature/localization.md#language-selection-at-runtime)
 
 ## Summary Page
 
