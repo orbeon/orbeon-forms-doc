@@ -362,7 +362,9 @@ In some cases, in particular when [embedding a form](/form-runner/link-embed/jav
     as="xs:boolean" 
     name="oxf.fr.detail.warn-when-data-unsafe.*.*"
     value="false"/>
-```  
+```
+
+See also [the `set-data-status` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status).
 
 ## Initial data
 
