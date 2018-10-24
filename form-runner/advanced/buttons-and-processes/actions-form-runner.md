@@ -149,6 +149,8 @@ Set the status of the in-memory form data.
 
 This action can be useful in conjunction with `send`. Upon successfully sending the data, if the data is not in addition saved to the local database, this action can be used to indicate to the user that the data is safe.
 
+See also [the `oxf.fr.detail.warn-when-data-unsafe` property](/configuration/properties/form-runner-detail-page.md#warning-the-user-when-data-is-unsafe).
+
 ## navigate
 
 Navigate to an external page via client-side GET.
