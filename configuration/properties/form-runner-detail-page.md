@@ -355,7 +355,7 @@ When data is *unsafe*, meaning that is has been modified but not saved yet, Form
 
 ![Chrome warning when leaving a page](../images/chrome-leave-site.png)
 
-In some cases, in particular when [embedding a form](/form-runner/link-embed/java-api.md),this can be an inconvenience. The following property allows disabling this behavior.
+In some cases, in particular when [embedding a form](/form-runner/link-embed/java-api.md), this can be an inconvenience. The following property allows disabling this behavior.
 
 ```xml
 <property 
