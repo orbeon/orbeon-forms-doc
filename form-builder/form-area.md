@@ -18,6 +18,8 @@ layout.
 
 ## Sections
 
+### Introduction
+
 Form Builder represents every form as a series of _sections_. A section is a logical grouping of form controls which has a *title* and an optional *help*. For example, your form may have an "Address" section, and a "Personal Details" section.
 
 Sections are by default presented in order, on top of each other in the page. But when using the [wizard view](../form-runner/feature/wizard-view.md), each top-level section, and optionally the next level of subsections, becomes a wizard page at runtime.
@@ -27,6 +29,8 @@ In addition:
 - Every form has at least one section.
 - There is no maximum number of sections within a form.
 - Sections can have *subsections*, which are sections nested within other sections.
+
+### Operations on sections
 
 You can perform the following operations on sections.
 
@@ -40,6 +44,12 @@ You can perform the following operations on sections.
 - Move the section left or right by clicking on the left/right arrows. These appear as needed if there is more than one section and if
   it is possible to move a section *into* another section ("right"), or out of its container section ("left"). This allows making
   sections *subsections* of other sections. 
+  
+### Subsections
+
+xxx
+
+xxxx TODO screenshots, etc. (short screencast would be good!)
 
 ## Grids
 

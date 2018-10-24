@@ -1,4 +1,18 @@
-# Performance, Tuning, and Sizing
+# Performance tuning
+
+
+## xxxx
+
+[SINCE Orbeon Forms 2018.1]
+
+xxx very large forms: use wizard
+
+Large forms (with hundreds or thousands of fields) using the wizard view now use much less HTML markup, as only the content of the visible page is sent to the web browser (lazy page load). In order for this to be effective, your form should be split into sections and subsections.
+
+## xxxx
+
+
+
 
 
 
@@ -486,7 +500,7 @@ If you are testing the performance of an application that talks to a database or
 [9]: http://httpd.apache.org/docs/2.0/programs/ab.html
 [10]: http://wiki.orbeon.com/forms/_/rsrc/1278373666668/doc/developer-guide/admin/performance-tuning/jmeter-concurrent.png
 [11]: http://wiki.orbeon.com/forms/doc/developer-guide/admin-tuning#TOC-Customize-the-standard-epilogue
-[13]: http://blog.orbeon.com/2006/12/configuring-apache-front-end-for-orbeon_27.html
+[13]: https://blog.orbeon.com/2006/12/configuring-apache-front-end-for-orbeon_27.html
 [14]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-performance-settings
 [15]: contributors/state-handling.md
 [16]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-logging

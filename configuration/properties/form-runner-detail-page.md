@@ -347,6 +347,23 @@ Mode options:
 
 See also [Run form in the background](../../form-runner/api/other/run-form-background.md).
 
+## Warning the user when data is unsafe
+
+[SINCE Orbeon Forms 2018.2]
+
+When data is *unsafe*, meaning that is has been modified but not saved yet, Form Runner by default shows a warning when attempting to navigate a way from the current page or to close the current browser tab or window.
+
+![Chrome warning when leaving a page](../images/chrome-leave-site.png)
+
+In some cases, in particular when [embedding a form](/form-runner/link-embed/java-api.md),this can be an inconvenience. The following property allows disabling this behavior.
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.warn-when-data-unsafe.*.*"
+    value="false"/>
+```  
+
 ## Initial data
 
 When creating a new form (for instance going to the URL `http://localhost:8080/orbeon/fr/orbeon/bookshelf/new`), the initial form data (also known as "form instance" or "form instance data") can come from 3 different places:
