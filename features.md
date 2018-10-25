@@ -223,6 +223,5 @@ As of 2016-04-19 this page is still being updated.
 
 - Loading indicator and spinners: [blog post](https://blog.orbeon.com/2016/04/how-do-you-tell-users-something-is.html)
 - Namespaced jQuery to avoid conflicts with other jQuery versions
-- Run modes: [doc](configuration/advanced/run-modes.md
-), [blog](https://blog.orbeon.com/2012/05/run-modes.html)
+- Run modes: [doc](configuration/advanced/run-modes.md), [blog](https://blog.orbeon.com/2012/05/run-modes.html)
 
