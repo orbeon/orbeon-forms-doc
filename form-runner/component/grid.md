@@ -157,8 +157,9 @@ Attributes:
   - can be an AVT
   - evaluation context
     - with `repeat="content"`: context of the binding (`bind` or `ref`)
-    - with `repeat="true"`: context of the `fr:grid element`
+    - with `repeat="true"` (deprecated): context of the `fr:grid` element
   - are checked when the user attempts to add/remove iterations with the UI
+  - `max` can also take the explicit value `none`
 - `remove-constraint`
   - optional XPath expression
   - evaluation context
