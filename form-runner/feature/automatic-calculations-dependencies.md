@@ -58,5 +58,6 @@ _NOTE: It is important to note that using *variable* is key for the dependencies
 
 ## See also 
 
+- Blog post: [Automatic calculation dependencies](https://blog.orbeon.com/2018/10/automatic-calculation-dependencies.html)
 - [Formulas](../../form-builder/formulas.md)
 - [Control settings](../../form-builder/control-settings.md)
