@@ -21,14 +21,19 @@ If no control name is explicitly specified, Form Builder assigns a default name,
 
 The following options are available:
 
-- __Show in Summary:__
+- __Show on Summary page:__
     - When selected, the control value is visible as a Summary page column.
 - __Show in Search:__
     - When selected, the control value is searchable in the Summary page.
 - __Encrypt data at rest:__
     - SINCE Orbeon Forms 2018.1
     - This is an Orbeon Forms PE feature.
-    - TODO
+    - See [Field-level encryption](/form-builder/field-level-encryption.md) for details.
+    
+The following email options are available:
+
+*NOTE: SINCE Orbeon Forms 2018.2, these options are in a separate list.*
+    
 - __Email Recipient:__
     - When selected, the control is used to determine an email recipient ("To:") when the form data is sent by email.
     - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.to` property is used.
@@ -57,6 +62,16 @@ The following options are available:
     - When selected, the control value is used as part of the subject of the email when the form data is sent by email.
     - If more than one non-blank values are found, they are all included in the email subject, comma-separated.
 
+#### Name of the PDF field
+
+[SINCE Orbeon Forms 2018.2]
+
+This informational field shows the name of the field to use when using a PDF template.
+
+See also [PDF templates](/form-builder/pdf-templates.md).
+
+#### Custom CSS classes
+
 The "Custom CSS Classes" field allows adding CSS classes which will be placed on the control in the resulting HTML. This can be used for custom styling.
 
 #### Control appearance
@@ -73,7 +88,7 @@ See also [How the new Form Builder Appearance Selector Works](https://blog.orbeo
 
 Some controls have custom settings. For example:
 
-![Custom Control Settings](images/custom-properties.png)
+![Custom Control Settings](images/control-settings-custom-properties.png)
 
 See also [Control metadata for the Control Settings dialog](metadata.md#control-metadata-for-the-control-settings-dialog)
 

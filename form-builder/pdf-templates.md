@@ -51,7 +51,24 @@ Form Runner identifies the PDF fields to fill-out based on their name. Those nam
 
 [SINCE Orbeon Forms 2018.2]
 
-The PDF field name is shown in the ["Control Settings"](/form-builder/control-settings.md) dialog.
+The PDF field name is shown in the ["Control Settings"](/form-builder/control-settings.md) dialog under "Name of the PDF field".
+
+In the case of repeated fields, note that the name shows an example *suffix* containing the repeat iterations, such as `$1` or `$1-1`. To target individual iterations, use the appropriate repetition number, for example:
+
+- `section-1$location$1`
+- `section-1$location$2`
+
+or, for a control in a nested repeated section or grid:
+
+- `section-1$location$1-1`
+- `section-1$location$1-2`
+- `section-1$location$1-3`
+- `section-1$location$2-1`
+- `section-1$location$2-2`
+
+etc.
+
+![Name of the PDF field](images/control-settings.png)
 
 ## Controls
 

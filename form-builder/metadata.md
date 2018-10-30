@@ -150,7 +150,7 @@ See also [Custom control settings](control-settings.md#custom-control-settings).
 
 `<fb:control-details>` can contain any XForms control. This allows for more flexible layouts:
 
-![Custom Control Settings](images/custom-properties.png)
+![Custom Control Settings](images/control-settings-custom-properties.png)
 
 In addition, you can place an `<xf:model>`, which can be used for:
 

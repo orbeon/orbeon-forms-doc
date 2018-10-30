@@ -20,6 +20,7 @@ As of 2016-04-19 this page is still being updated.
 - Security features
     - Protecting against attacks: [doc](configuration/advanced/security.md)
     - Content-Security-Policy header: [doc](configuration/advanced/content-security-policy.md), [blog post](https://blog.orbeon.com/2018/08/improving-security-with-content.html)
+    - Field-level encryption: [doc](form-builder/field-level-encryption.md)
 - Inserting and reordering grid rows: [blog post](https://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
 - Repeated grids and sections
     - Repeated grids: [doc](form-builder/repeated-grids.md), [older blog post](https://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
