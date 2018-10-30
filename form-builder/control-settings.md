@@ -104,6 +104,10 @@ See [Form Builder Validation](validation.md) for details.
 
 See [Formulas](formulas.md) for details.
 
+[SINCE Orbeon Forms 2018.2]
+
+The "Yes" and "No" options have their own radio button. Select "Formula" to enter a dynamic "Visibility" or "Read-Only" formula.
+
 ### Label and Hint
 
 [SINCE Orbeon Forms 2017.2]
