@@ -56,4 +56,4 @@ We expect these limitations to be lifted in future versions of Orbeon Forms.
 ## See also 
 
 - [Basic Settings](/form-builder/control-settings.md)
-- [Re-encryption](/form-runner/features/home-page#re-encryption)
+- [Re-encryption](/form-runner/features/home-page.md#re-encryption)
