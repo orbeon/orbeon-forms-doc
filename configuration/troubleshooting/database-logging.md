@@ -26,12 +26,23 @@ Below, you'll find a summary of the steps you can follow to install and configur
     <Resource
         name="jdbc/mysql"
         driverClassName="com.p6spy.engine.spy.P6SpyDriver"
-        auth="Container" type="javax.sql.DataSource"
-        initialSize="3" maxActive="10" maxIdle="10" maxWait="30000"
+    
+        auth="Container"
+        type="javax.sql.DataSource"
+    
+        initialSize="3"
+        maxActive="10"
+        maxIdle="10"
+        maxWait="30000"
+    
         poolPreparedStatements="true"
-        testOnBorrow="true" validationQuery="select 1"
-        username="orbeon" password=""
-        url="jdbc:p6spy:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>    
+    
+        testOnBorrow="true"
+        validationQuery="select 1"
+    
+        username="orbeon"
+        password=""
+        url="jdbc:p6spy:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
     ````
 
 5. Restart Tomcat or the application server you're using. Check that no error messages show on the console, `catalina.out`, or equivalent with your setup. If none show and Orbeon Forms starts properly, run `tail -f spy.log` in a terminal window, or equivalent on your operating system, and check that as you access, say, the Form Builder summary page, SQL statement are properly being logged.
