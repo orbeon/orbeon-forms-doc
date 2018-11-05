@@ -139,6 +139,7 @@ As of 2016-04-19 this page is still being updated.
 - Sending emails
     - controlling which attachments are included: [Form Builder doc](form-builder/control-settings.md#basic-options), [Form Runner doc](configuration/properties/form-runner/form-runner-detail-page/form-runner-email#attachment-properties)
     - controlling To, Cc, Bcc, From: [doc](form-builder/control-settings.md), [blog post](https://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)
+    - Email templates: [doc](https://doc.orbeon.com/form-builder/advanced/email-settings), [blog post](https://blog.orbeon.com/2018/11/email-templates.html)
 - Captcha: [properties doc](configuration/properties/form-runner/form-runner-detail-page.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](https://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 - Appearance of repeated sections: [properties doc](configuration/properties/form-runner.md#appearance-of-repeated-sections), [component doc](form-runner/component/grid.md#repeated-mode)
 - Appearance of repeated grids: [properties doc](configuration/properties/form-runner.md#appearance-of-grids-sections), [component doc](form-runner/component/section.md#repeated-mode)
