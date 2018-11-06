@@ -1,7 +1,5 @@
 # Search
 
-
-
 ## Example query
 
 A search query uses HTTP POST to provide an XML document containing the search criteria as well as information about the response to provide.
@@ -247,6 +245,20 @@ And in `new` mode, zero or more documents can be returned:
     </document>
 </documents>
 ```
+
+## Versioning
+
+[SINCE Orbeon Forms 2018.2]
+
+If the implementation of the persistence API supports form versioning, the `Orbeon-Form-Definition-Version` request header tells which version of the form definition is requested. Possible values are:
+
+- missing: indicates the latest published version
+- a specific version number: to indicate that the form definition with that version must be searched
+    - *NOTE: The version number must be a positive integer.*  
+
+[UNTIL Orbeon Forms 2018.1]
+
+The search is done across all versions of the form definition. This can lead to unexpected results as different form definition versions may not have the same fields.
 
 ## Query response
 

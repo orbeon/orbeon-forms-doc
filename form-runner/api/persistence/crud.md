@@ -161,6 +161,7 @@ When Form Builder publishes a form definition, if versioning is supported by the
 - missing: indicates the latest published version, or `1` if there is no published version
 - `next`: to indicate that the form definition must be published under the next available version
 - or a specific version number: to indicate that the form definition must replace the given version
+    - *NOTE: The version number must be a positive integer.*
 
 ## Handling attachments
 
