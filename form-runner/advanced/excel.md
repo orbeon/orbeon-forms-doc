@@ -10,15 +10,17 @@ This feature allows you to import batches of data from a source Excel spreadshee
 
 ## How it works
 
-It's pretty simple!
+In order to import an Excel file, you follow a process in the Excel Import page as described below.
 
-### Accessing the Excel Import page 
+_NOTE: Until Orbeon Forms 2018.1 the import wizard looked a little bit different from the screenshots below, but the steps are the same except for the selection of the form definition version._
+
+### Access the Excel Import page 
 
 You start the import from the Form Runner Import page, accessible from the Summary page.
 
 ![](../images/excel-import-summary.png)
 
-### Select the form definition version
+### Select the form version
 
 [SINCE Orbeon Forms 2018.2]
 
