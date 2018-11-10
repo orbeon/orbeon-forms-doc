@@ -12,41 +12,51 @@ This feature allows you to import batches of data from a source Excel spreadshee
 
 It's pretty simple!
 
-1. You start the import from the Form Runner Import page, accessible from the Summary page.
+### Accessing the Excel Import page 
 
-    ![](../images/excel-import-summary.png)
+You start the import from the Form Runner Import page, accessible from the Summary page.
+
+![](../images/excel-import-summary.png)
+
+### Select the form definition version
+
+[SINCE Orbeon Forms 2018.2]
+
+If form definition versioning is supported, you select the form definition version. The dropdown menu shows all published versions for the given form name and application name.
+
+Selecting a version shows the versioning comment, if any, associated with the version, as well as the number of data records available in the database for that version.
     
-2. If form definition versioning is supported, you select the form definition version. The dropdown menu shows all published versions for the given form name and application name.
+![](../images/excel-import-version.png)
 
-    Selecting a version shows the versioning comment, if any, associated with the version, as well as the number of data records available in the database for that version.
+### Upload the file
 
-    [SINCE Orbeon Forms 2018.2]
+You navigate to the Upload section and select the Excel 2007 file to upload and import.
+
+![](../images/excel-import-select.png)
+
+### Validate the data
     
-    ![](../images/excel-import-version.png)
+You navigate to the Validation section. From there, you can start data validation.
 
-2. You navigate to the Upload section and select the Excel 2007 file to upload and import.
+![](../images/excel-import-validate.png)
+    
+Validation takes place and gives you an indication of the progress.
 
-    ![](../images/excel-import-select.png)
+![](../images/excel-import-validating.png)
     
-3. You navigate to the Validation section. From there, you can start data validation.
+![](../images/excel-import-validated.png)
 
-    ![](../images/excel-import-validate.png)
+### Import the data
     
-4. Validation takes place and gives you an indication of the progress.
+Once validation is terminated, you navigate to the Import section. From there, you can start the data import. You ahve the option to add to existing data for the given form, or remove all existing data first.
 
-    ![](../images/excel-import-validating.png)
+![](../images/excel-import-import.png)
     
-    ![](../images/excel-import-validated.png)
-    
-5. Once validation is terminated, you navigate to the Import section. From there, you can start the data import. You ahve the option to add to existing data for the given form, or remove all existing data first.
+Import takes place and gives you an indication of the progress.
 
-    ![](../images/excel-import-import.png)
+![](../images/excel-import-importing.png)
     
-6. Import takes place and gives you an indication of the progress.
-
-    ![](../images/excel-import-importing.png)
-    
-    ![](../images/excel-import-imported.png)
+![](../images/excel-import-imported.png)
 
 _NOTE: Only the Excel 2007 `.xlsx` format (Office Open XML) is supported. The older, `.xls` format is not supported._
 
