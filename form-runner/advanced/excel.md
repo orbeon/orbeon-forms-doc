@@ -1,7 +1,5 @@
 # Excel Import
 
-
-
 ## Availability
 
 This is an Orbeon Forms PE feature.
@@ -14,33 +12,52 @@ This feature allows you to import batches of data from a source Excel spreadshee
 
 It's pretty simple!
 
-1. You start the import from the Form Runner import page, accessible from the summary page
+1. You start the import from the Form Runner Import page, accessible from the Summary page.
 
     ![](../images/excel-import-summary.png)
+    
+2. If form definition versioning is supported, you select the form definition version. The dropdown menu shows all published versions for the given form name and application name.
 
-2. You select the Excel 2007 file to upload and import
+    Selecting a version shows the versioning comment, if any, associated with the version, as well as the number of data records available in the database for that version.
+
+    [SINCE Orbeon Forms 2018.2]
+    
+    ![](../images/excel-import-version.png)
+
+2. You navigate to the Upload section and select the Excel 2007 file to upload and import.
 
     ![](../images/excel-import-select.png)
-
-3. Form Runner validates the Excel file and give you the option to add to existing data for the given form, or remove all existing data first
+    
+3. You navigate to the Validation section. From there, you can start data validation.
 
     ![](../images/excel-import-validate.png)
+    
+4. Validation takes place and gives you an indication of the progress.
 
-4. Form Runner imports valid data from the Excel file
+    ![](../images/excel-import-validating.png)
+    
+    ![](../images/excel-import-validated.png)
+    
+5. Once validation is terminated, you navigate to the Import section. From there, you can start the data import. You ahve the option to add to existing data for the given form, or remove all existing data first.
 
     ![](../images/excel-import-import.png)
+    
+6. Import takes place and gives you an indication of the progress.
 
-_NOTE: Only the Excel 2007 .xlsx format (Office Open XML) is supported. The older, .xls format is not supported._
+    ![](../images/excel-import-importing.png)
+    
+    ![](../images/excel-import-imported.png)
+
+_NOTE: Only the Excel 2007 `.xlsx` format (Office Open XML) is supported. The older, `.xls` format is not supported._
 
 ## Enabling the import button
 
 You enable the import button on the Summary page by adding the import token to the `oxf.fr.summary.buttons.*.*` property. Here for the Orbeon Contact form:
 
 ```xml
-<property
-    as="xs:string"
-    name="oxf.fr.summary.buttons.orbeon.contact"
-    value="new import edit print pdf delete"/>
+<property as="xs:string" name="oxf.fr.summary.buttons.orbeon.contact">
+    home review pdf delete duplicate import new
+</property>
 ```
 
 ## Mapping between form controls and spreadsheet
@@ -57,7 +74,7 @@ In your form, you create controls with names that match the names in the first r
 
 Here is an example spreadsheet for the sample Orbeon Contact form:
 
-![]![](../images/excel-import-sheet.png)
+![](../images/excel-import-sheet.png)
 
 _NOTE: Only characters allowed in XML names are allowed as control names in Form Builder. In case your Excel header row requires names with non-XML characters (Form Builder will tell you the name is not allowed), simply replace them by "_" in Form Builder._
 
