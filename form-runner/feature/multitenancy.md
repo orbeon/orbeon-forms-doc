@@ -136,7 +136,6 @@ By setting roles and the appropriate Form Runner, Form Builder and database conf
 
 ## See also 
 
-- [Terminology](/form-runner/overview/multitenancy.md)
-- [Access control and permissions](/form-runner/access-control.md)
+- [Access control and permissions](/form-runner/access-control/README.md)
 - [Linking](/form-runner/link-embed/linking.md)
 - [Using Form Runner with a relational database](/form-runner/persistence/relational-db.md)
