@@ -41,7 +41,7 @@ Let's look at the details:
     (Because it is inconvenient for you to always write absolute URLs when you want to address an URL handle by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
 
     The path starts with `/exist/rest/`, which maps to the built-in eXist database. The rest of the path (`/db/orbeon/my-bookcast/books.xml`) specifies the _collection_ and _document_ to access. Here, we decide to save the data to a document called `books` within a collection called `/db/orbeon/my-bookcast/`.
-* The `method` attribute specifies what HTTP method to use. Here, you use the value `put`, which translates into using the HTTP PUT method. (You may not be very familiar with the PUT method (HTML forms, for example, always use GET and POST), but PUT is getting used more and more with REST interfaces. In just a few words, PUT allows you to store a resource to a particular location on an HTTP server.)
+* The `method` attribute specifies what HTTP method to use. Here, you use the value `put`, which translates into using the HTTP `PUT` method. (You may not be very familiar with the `PUT` method (HTML forms, for example, always use `GET` and `POST`), but `PUT` is getting used more and more with REST interfaces. In just a few words, `PUT` allows you to store a resource to a particular location on an HTTP server.)
 * Finally, the `replace` attribute specifies what to do with the response sent by the server (here the server is the eXist database). Specifying a value of `none` tells the XForms engine to discard the content of the response from the database.
 
 This is great, but specifying a submission does not do anything until you _send_ (execute) that submission. A simple way to do this is to use the submit control:
@@ -78,7 +78,7 @@ So go ahead and:
     http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
     ```
 
-    This is the exact same URL to which your submission has done an HTTP PUT. By entering it in your browser, you tell it to do an HTTP GET instead, and the eXist database simply sends the XML document to your browser. You should see this:
+    This is the exact same URL to which your submission has done an HTTP `PUT`. By entering it in your browser, you tell it to do an HTTP `GET` instead, and the eXist database simply sends the XML document to your browser. You should see this:
 
     ![][18]
 
@@ -110,7 +110,7 @@ There are a few differences with this `<xf:submission>`:
 
 * The `id` attribute is different: `list-submission`. (All the `id` attributes in a given XForms document must be different.)
 * The `serialization="none"` attribute specifies that you don't want to send XML data with this submission.
-* The `get` method specifies that you want to do an HTTP GET, like when you pointed your web browser at the URL to read the document from eXist.
+* The `get` method specifies that you want to do an HTTP `GET`, like when you pointed your web browser at the URL to read the document from eXist.
 * The `replace="instance"` attribute specifies that the result of the submission has to be stored into an instance. The `instance="books-instance"` attribute specifies the identifier of the instance into which the result must be stored.
 
 Add this element after the previous `<xf:submission>` element which has an id value of `save-submission, `i.e. one submission follows the other.
@@ -144,7 +144,7 @@ The following is an overview of what has just happened:
 * `view.xhtml` goes through the XForms engine, which does a few bits of magic: it goes through an initialization phase, where it creates the objects you have defined such as as model, instance, and controls.
 * Once this is done, the XForms engine sends the `xforms-ready` event to the model.
 * Because you have defined an event handler for `xforms-ready`, that handler is called. This caused the `<xf:send>` action to be run and, therefore, the `list-submission` submission to be sent.
-* The submission performs an HTTP GET to the URL you have specified. The connection reaches the built-in eXist database, which returns the document called `books.xml`. The content of that document reaches back the XForms engine, which stores it into the `books-instance` instance.
+* The submission performs an HTTP `GET` to the URL you have specified. The connection reaches the built-in eXist database, which returns the document called `books.xml`. The content of that document reaches back the XForms engine, which stores it into the `books-instance` instance.
 * The XForms engine updates the XForms controls bound to the instance with the values now contained in the instance. For example, the "title" and "author" input fields are now updated with the values that came from the database.
 * The XForms engine sends an HTML page to your web browser. You see the page with all the correct data as saved earlier into the database.
 

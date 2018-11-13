@@ -40,12 +40,12 @@ For example, to deal with form data:
 
 | Operation | HTTP Method | URL |
 | --------- | ----------- | --- |
-| Create    | PUT         | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Read      | GET         | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Update    | PUT         | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Delete    | DELETE      | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Search    | POST        | `/fr/service/persistence/search/$app/$form` |
-| Metadata  | GET         | `/fr/service/persistence/form` |
+| Create    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Read      | `GET`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Update    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Delete    | `DELETE`    | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Search    | `POST`      | `/fr/service/persistence/search/$app/$form` |
+| Metadata  | `GET`       | `/fr/service/persistence/form` |
 
 where:
 

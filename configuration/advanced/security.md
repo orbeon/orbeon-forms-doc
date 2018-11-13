@@ -44,7 +44,7 @@ The Orbeon Forms XForms engine typically interacts with the client using Ajax re
 * Ajax requests are only allowed to modify visible, read-write controls.
 * Each page has a unique UUID generated each time the page is produced. The page has a finite lifetime, typically expiring with the user's session. Once the session has expired, any attempt to use that UUID fails.
 * Each Ajax request has a unique sequence number. The server rejects incorrect sequence numbers. This prevents simply replaying incoming requests.
-* Only requests via POST can have a side-effect on Orbeon Forms internal state. This excludes attacks via simply loading a URL via an image or a link.
+* Only requests via `POST` can have a side-effect on Orbeon Forms internal state. This excludes attacks via simply loading a URL via an image or a link.
 
 ### Cross site request forgery
 
@@ -56,7 +56,7 @@ The second way is the risk of using another site to trick Orbeon into doing some
 
 The key trick with CSRF is that the third-party site contains URLs, or is able to control a form submission, that can target Orbeon Forms into performing actions that otherwise would only be possible by the user of Orbeon Forms.
 
-Based on our understanding of CSRF, the measures above appear to make an XSRF attack difficult. The user would need to be able to POST Ajax or an HTML form, and to guess a valid UUID and sequence number. Even so, in this case only actions that the user of the form could perform would be possible. Note that such some actions could be dangerous: for example a "delete" button on the page could do harm. However again this would require the attacker to guess a lot about the possible requests first.
+Based on our understanding of CSRF, the measures above appear to make an XSRF attack difficult. The user would need to be able to `POST` Ajax or an HTML form, and to guess a valid UUID and sequence number. Even so, in this case only actions that the user of the form could perform would be possible. Note that such some actions could be dangerous: for example a "delete" button on the page could do harm. However again this would require the attacker to guess a lot about the possible requests first.
 
 The [Wikipedia page about CSRF][4] confirms that some of the measures above are effective:
 

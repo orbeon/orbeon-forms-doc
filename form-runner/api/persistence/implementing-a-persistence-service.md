@@ -26,9 +26,9 @@ You must then implement a server component responding to the `/my-persistence` p
 
 * Check the HTTP method to determine the operation to perform (which CRUD operation or search operation)
 * Check the requested path to determine the location of the resource
-* In the case of PUT, read the request body and store it appropriately. This might require writing data into a CLOB or XML type column in a relational database, for example.
-* In the case of GET, read the storage and return the appropriate resource.
-* In the case of DELETE, delete the appropriate resource in storage
-* In the case of POST, perform a search. This might require generating an SQL query, for example.
+* In the case of `PUT`, read the request body and store it appropriately. This might require writing data into a CLOB or XML type column in a relational database, for example.
+* In the case of `GET`, read the storage and return the appropriate resource.
+* In the case of `DELETE`, delete the appropriate resource in storage
+* In the case of `POST`, perform a search. This might require generating an SQL query, for example.
 
 Depending on the type of storage chosen, storage operations may be more or less complex.

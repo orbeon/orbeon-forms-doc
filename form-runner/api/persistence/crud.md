@@ -27,7 +27,7 @@ When the resource is an XML file (e.g. `form.xhtml`, `data.xml`), the persistenc
 
 ### Form Builder version number
 
-When PUTting data under the path `/orbeon/builder/data/`, which means storing unpublished form definitions and form definition attachments, always set `Orbeon-Form-Definition-Version` to the value `1`. This is because Form Builder stores its unpublished form definitions like a regular published form would, but in effect there is only one "version" of Form Builder.
+When `PUT`ting data under the path `/orbeon/builder/data/`, which means storing unpublished form definitions and form definition attachments, always set `Orbeon-Form-Definition-Version` to the value `1`. This is because Form Builder stores its unpublished form definitions like a regular published form would, but in effect there is only one "version" of Form Builder.
 
 ### Updating a resource
 
@@ -137,7 +137,7 @@ curl
 [SINCE Orbeon Forms 2017.1]
 
 - `nonrelevant`
-    - when using GET for data only
+    - when using `GET` for data only
     - values
         - `remove`: remove all XML data elements with attribute `fr:relevant="false"`
         - `keep`: [SINCE Orbeon Forms 2018.1] do not remove XML data elements
@@ -152,7 +152,7 @@ _NOTE: This property only operates properly on data stored with Orbeon Forms 201
 The following URL parameters are set by Form Runner:
 
 - `valid`
-    - passed when data is stored using PUT only
+    - passed when data is stored using `PUT` only
     - values
         - `true`: data sent satisfies validation rules
         - `false`: data sent does not satisfy validation rules
@@ -235,7 +235,7 @@ Note that in the case of attachments, the XML data contains attributes indicatin
 
 ## Deleting all data for an existing form
 
-To remove all instances of form data, issue a DELETE to:
+To remove all instances of form data, issue a `DELETE` to:
 
 ```
 /crud/[APPLICATION_NAME]/[FORM_NAME]/data/

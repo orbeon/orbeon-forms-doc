@@ -100,7 +100,7 @@ You can add as many such rows as you want using the "+" button, and remove exist
 
 [SINCE Orbeon Forms 2016.1]
 
-The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters)  when using the GET and DELETE HTTP methods. In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, for example:  
+The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters)  when using the `GET` and `DELETE` HTTP methods. In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, for example:  
 
 ```xml
 <params>

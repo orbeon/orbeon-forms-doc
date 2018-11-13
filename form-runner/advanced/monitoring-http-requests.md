@@ -63,7 +63,7 @@ Note that the Request Dumper Filter only shows information about the HTTP header
 
 ## Request Dumper Valve
 
-The Request Dumper Valve doesn't log the body of POSTs, it can only be used on Tomcat, and we found its output to be less readable than what you get with the Request Dumper Filter. But if you still want to experiment with the Request Dumper Valve, add the following in server.xml inside <engine>:
+The Request Dumper Valve doesn't log the body of `POST`s, it can only be used on Tomcat, and we found its output to be less readable than what you get with the Request Dumper Filter. But if you still want to experiment with the Request Dumper Valve, add the following in server.xml inside <engine>:
 
 ```xml
 <valve classname="org.apache.catalina.valves.RequestDumperValve">

@@ -5,7 +5,7 @@
 ## Rationale
 fAllowing Form Runner to cache form definitions is important to help with performance. Form Runner interfaces with the persistence layer through a [REST API](../../../form-runner/api/persistence/README.md). Standard HTTP caching mechanisms are introduced to allow caching at that level.
 
-The idea is that when Form Runner requests a form definition, it is able, if it holds the form definition in its local cache, to perform a so-called HTTP conditional GET. This is exactly the same thing that web browsers do to revalidate some resources that they cache on the client. But here it is about Form Runner caching form definitions obtained from the persistence layer.
+The idea is that when Form Runner requests a form definition, it is able, if it holds the form definition in its local cache, to perform a so-called HTTP conditional `GET`. This is exactly the same thing that web browsers do to revalidate some resources that they cache on the client. But here it is about Form Runner caching form definitions obtained from the persistence layer.
 
 ## Audience
 
@@ -13,7 +13,7 @@ This page is intended for programmers implementing their own persistence layer (
 
 ## Status
 
-There is minimal support in Form Runner for conditional GETs with the `Last-Modified` and `If-Modified-Since` HTTP headers. However the built-in eXist and relational persistence layer implementations do not support these headers properly yet.
+There is minimal support in Form Runner for conditional `GET`s with the `Last-Modified` and `If-Modified-Since` HTTP headers. However the built-in eXist and relational persistence layer implementations do not support these headers properly yet.
 
 As we work towards the improvements described in issue [#1239](https://github.com/orbeon/orbeon-forms/issues/1239), we hope to see even better performance when the persistence layer supports these headers. We also plan to add support for `ETag` and `If-None-Match`, which will be required for persistence layers that support versioning.
 

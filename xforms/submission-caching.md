@@ -10,7 +10,7 @@ This is an [Orbeon Forms PE](https://www.orbeon.com/download) feature.
 
 Orbeon Forms supports a boolean extension attribute, `xxf:cache`, on the `<xf:instance>` and `<xf:submission>` elements. This attribute can be used with instances that are read-only or read-write. When set to true:
 
-* The instance can be shared at the application level. It is identified by its source URL and, in the case of a submission with POST or PUT method, by the body of the request sent.
+* The instance can be shared at the application level. It is identified by its source URL and, in the case of a submission with `POST` or `PUT` method, by the body of the request sent.
 * The instance is not stored into the XForms document's state, but in a global cache, therefore potentially saving memory. If, upon loading an XForms instance or running a submission, the instance is found in the cache, it is directly retrieved from the cache. This can save time especially if the URL can take significant time to load.
 * The instance stored in cache is read-only. If the `xxf:readonly` attribute is set to true (on `<xf:instance>` or `<xf:submission>`), a single copy of the instance is used in memory. Otherwise, a read-write copy is made.
 * In general, the URL should refer to a constant or rarely-changing XML document, and authorization credentials such as username and password should not cause different data to be loaded.
@@ -40,7 +40,7 @@ When used on `<xf:submission>`, the submission has to use `method="get"`, `metho
   xxf:cache="true"/>
 ```
 
-_NOTE: Since POST and PUT are not meant to be idempotent methods, you should use `xxf:cache="true"` with these methods carefully, typically for calls to services you know are idempotent. Otherwise, incorrect or stale data might be returned by the submission._
+_NOTE: Since `POST` and `PUT` are not meant to be idempotent methods, you should use `xxf:cache="true"` with these methods carefully, typically for calls to services you know are idempotent. Otherwise, incorrect or stale data might be returned by the submission._
 
 You set the size of the shared instances cache using a property in `properties.xm`l:
 

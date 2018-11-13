@@ -18,7 +18,7 @@ When a request for a page or service reaches the controller, the following takes
 
 1. The controller checks whether the request is an _internal request_, that is, a request from a local Orbeon Forms application. If that's the case, the request is allowed (this is based on a mechanism of private tokens).
 2. If the request is not internal, the controller then checks whether the request has a _public method_. If so, the request is allowed.
-    * For pages, the public methods are GET and HEAD by default.
+    * For pages, the public methods are `GET` and HEAD by default.
     * For services, there are no public methods by default.
 3. If the method is not public, the controller then delegates to an _authorization_ service.
 
@@ -95,7 +95,7 @@ This means that the authorization service can reside within the same container a
 
 ## How the authorization service works
 
-It's pretty simple: Orbeon Forms _forwards_ the incoming request to that service. This includes: HTTP method, headers, and requested path. Note, that even in the case of a POST or PUT, the request body is _not_ forwarded. The requested path is appended to the path of the authorization service. For example, if the request was for the following service:
+It's pretty simple: Orbeon Forms _forwards_ the incoming request to that service. This includes: HTTP method, headers, and requested path. Note, that even in the case of a `POST` or `PUT`, the request body is _not_ forwarded. The requested path is appended to the path of the authorization service. For example, if the request was for the following service:
 
     /fr/service/exist/crud/acme/gaga/form/form.xhtml
 

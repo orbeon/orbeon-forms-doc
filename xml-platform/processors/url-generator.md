@@ -334,9 +334,9 @@ When the local cache is disabled, the document is never revalidated and always f
 
 ### Conditional GET
 
-Usually, the URL generator does forced GET requests. You can enable conditional GETs with the `cache-control/conditional-get` element.
+Usually, the URL generator does forced `GET` requests. You can enable conditional `GET`s with the `cache-control/conditional-get` element.
 
-When `conditional-get` is set to true, and if the URL generator finds a corresponding resource in its local cache, it sends a conditional HTTP GET using the `If-Modified-Since` header. If the server responds with a code 304, the URL generator uses the resource it holds in cache, following usual HTTP semantics.
+When `conditional-get` is set to true, and if the URL generator finds a corresponding resource in its local cache, it sends a conditional HTTP `GET` using the `If-Modified-Since` header. If the server responds with a code 304, the URL generator uses the resource it holds in cache, following usual HTTP semantics.
 
 Example of configuration:
 

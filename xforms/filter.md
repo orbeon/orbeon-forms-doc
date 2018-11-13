@@ -271,9 +271,9 @@ This allows you to implement scenarios like this one:
     2. XForms is processed by the Orbeon filter and XForms engine
     3. HTML is sent to the browser
 2. User performs action on page
-    1. XForms server performs a submission to another JSP page, submitting XML through the HTTP POST or PUT method
+    1. XForms server performs a submission to another JSP page, submitting XML through the HTTP `POST` or `PUT` method
 
-3. New JSP page is accessed through HTTP POST or PUT
+3. New JSP page is accessed through HTTP `POST` or `PUT`
     1. Page generates XForms
     2. XForms is processed by the Orbeon filter and XForms engine
     3. XForms engine has access to the submitted XML data through the `input:instance` URI

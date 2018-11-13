@@ -15,7 +15,7 @@ The Form Runner home page allows admins to "reindex the database", however this 
 
 ## Reindexing endpoint
 
-If you declared that your implementation supports reindexing, when admins request reindexing from the Form Runner home page, your implementation will get a GET request at `/reindex`, and is expected to respond with a 200 OK when the reindexing is done.
+If you declared that your implementation supports reindexing, when admins request reindexing from the Form Runner home page, your implementation will get a `GET` request at `/reindex`, and is expected to respond with a 200 OK when the reindexing is done.
 
 ## Limitations
 

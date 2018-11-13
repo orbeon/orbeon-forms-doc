@@ -10,8 +10,8 @@ The Orbeon Forms PFC uses the concept of _XML submission_ to provide page config
 
 There are different ways to produce an XML submission:
 
-* **Internal XForms submission.** The built-in Orbeon Forms XForms engine uses an HTTP POST XForms submission to submit an XForms instance.
-* **External submission.** An external application or a client-side XForms engine uses HTTP POST to submit an XML document directly to a page.
+* **Internal XForms submission.** The built-in Orbeon Forms XForms engine uses an HTTP `POST` XForms submission to submit an XForms instance.
+* **External submission.** An external application or a client-side XForms engine uses HTTP `POST` to submit an XML document directly to a page.
 * **PFC page navigation.** The PFC, based on a user configuration, produces an XML document to submit internally to a given page.
 * **Default submission.** Each page can refer to a _default submission document_ containing an XML document automatically submitted to the page if no other submission is done.
 
@@ -93,7 +93,7 @@ If no submission has taken place, the XML submission document is an Orbeon Forms
 
 ## Extracting data from the URL
 
-XML submission using HTTP POST convenient in many cases, however there are other ways page developers would like to configure the way a page behaves:
+XML submission using HTTP `POST` convenient in many cases, however there are other ways page developers would like to configure the way a page behaves:
 
 * **Using URL parameters.** URL parameters are specified in a query string after a question mark in the URL, explained above.
 * **Using URL path elements.** URL paths can be hierarchical, and the elements of the paths can have a user-defined meaning.

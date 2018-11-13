@@ -153,7 +153,7 @@ See also [the `oxf.fr.detail.warn-when-data-unsafe` property](/configuration/pro
 
 ## navigate
 
-Navigate to an external page via client-side GET.
+Navigate to an external page via client-side `GET`.
 
 - parameters
     - `uri`: an XPath value template which specifies the URL to navigate to

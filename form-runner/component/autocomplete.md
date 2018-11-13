@@ -45,7 +45,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
 
 * When to use the _resource_ mode?
 
-    When you have a service responding to an HTTP GET, that, given the current value users typed in the search field, returns an XML document with the list of suggestions.
+    When you have a service responding to an HTTP `GET`, that, given the current value users typed in the search field, returns an XML document with the list of suggestions.
 
 * What does the syntax look like?
 
@@ -75,7 +75,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
 
 * When to use the _dynamic_ mode?
 
-    When you want the list of suggestions to change dynamically and that the _resource_ mode doesn't offer the flexibility you need. (Say, the suggestions are not retrieved from a service, or a service that takes a POST rather than a GET.)
+    When you want the list of suggestions to change dynamically and that the _resource_ mode doesn't offer the flexibility you need. (Say, the suggestions are not retrieved from a service, or a service that takes a `POST` rather than a `GET`.)
 
 * How to update the itemset?
 

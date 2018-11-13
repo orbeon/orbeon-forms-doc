@@ -93,9 +93,9 @@ The above submission passes through to the called service a parameter called `cu
 - It reads it from the current request parameter using the `xxf:get-request-parameter()` function.  
 - It appends it to the submission URL so that the service can return data specific to the given customer.  
 
-_NOTE: In the submission, you are not limited to using the HTTP GET method and request parameters: you can configure the submission to obtain data through POST, for example._
+_NOTE: In the submission, you are not limited to using the HTTP `GET` method and request parameters: you can configure the submission to obtain data through `POST`, for example._
 
-If all the submission is doing is using HTTP GET and if the URL of the service is static, you can get by with a simple `src` or `resource` attribute on `<xf:instance>`:
+If all the submission is doing is using HTTP `GET` and if the URL of the service is static, you can get by with a simple `src` or `resource` attribute on `<xf:instance>`:
 
 ```xml
 <xf:instance 
@@ -109,7 +109,7 @@ _NOTE: In that case, you cannot append dynamic request parameters as with `<xf:s
 
 ## The "POST" solution
 
-If your XForms page responds to an HTTP POST containing XML, then it can access the content of the POST data with a special URL called `input:instance`:
+If your XForms page responds to an HTTP `POST` containing XML, then it can access the content of the `POST` data with a special URL called `input:instance`:
 
 ```xml
 <xf:instance 

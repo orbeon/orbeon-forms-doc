@@ -19,7 +19,7 @@ The form definition is:
 - either provided as XHTML+XForms in the Orbeon Forms form definition format
 - or stored in the database under the `orbeon/builder` app/form name
 
-It is important to note that you cannot simply take a form definition and PUT it via the [persistence REST API](../persistence/README.md).
+It is important to note that you cannot simply take a form definition and `PUT` it via the [persistence REST API](../persistence/README.md).
 The reason for this is that publishing requires adding some information to the form definition, such as:
 
 - data migration information for repeated grids

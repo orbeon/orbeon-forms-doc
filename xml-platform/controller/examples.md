@@ -24,7 +24,7 @@ Note that you do not have to use `redirect`, but that doing so will cause the us
 
 ## Implementing XML services with the PFC
 
-The PFC allows you to very easily receive an XML document submitted, for example with an HTTP POST, and to generate an XML response. This can be useful to implement XML services such as XML-RPC, SOAP, or any XML-over-HTTP service. The following PFC configuration defines a simple XML service:
+The PFC allows you to very easily receive an XML document submitted, for example with an HTTP `POST`, and to generate an XML response. This can be useful to implement XML services such as XML-RPC, SOAP, or any XML-over-HTTP service. The following PFC configuration defines a simple XML service:
 
 ```xml
 <page path="/xmlrpc" model="xml-rpc.xpl">  

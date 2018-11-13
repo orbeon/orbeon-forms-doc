@@ -28,9 +28,9 @@ This allows scenarios such as:
 Optional request body when using `/new`:
 
 - `Content-Type: application/xml`
-- XML data to POST to the form, like when [POSTing to the detail page](/configuration/properties/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page)
+- XML data to `POST` to the form, like when [`POST`ing to the detail page](/configuration/properties/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page)
 
-When not POSTing any XML data, just POST an empty request body to the service.
+When not `POST`ing any XML data, just `POST` an empty request body to the service.
 
 Response body:
 
@@ -89,7 +89,7 @@ For detail on the process names and more, see [Running processes upon page load
 
 ## Example: validate form data in the background
 
-The following process allows you to POST XML data to the page:
+The following process allows you to `POST` XML data to the page:
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.after-controls.background.new.*.*">

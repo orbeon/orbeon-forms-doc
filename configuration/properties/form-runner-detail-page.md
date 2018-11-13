@@ -380,8 +380,8 @@ The instance provided in the form is used by default and the POSTed XML document
 
 The document can be POSTed in two ways:
 
-1. As a direct POST of the XML document
-2. As an HTML form POST parameter called fr-form-data
+1. As a direct `POST` of the XML document
+2. As an HTML form `POST` parameter called fr-form-data
 
 For #2, this behaves as if a browser was submitting an HTML form that looks like the following, with the value of the `fr-form-data` request parameter being the Base64-encoded XML document.:
 
@@ -393,11 +393,11 @@ For #2, this behaves as if a browser was submitting an HTML form that looks like
 
 [SINCE Orbeon Forms 4.8]
 
-The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to POST data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a [`send()` action](../../form-runner/advanced/buttons-and-processes/actions-form-runner.md#send) using `data-format-version = "edge"`.
+The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to `POST` data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a [`send()` action](../../form-runner/advanced/buttons-and-processes/actions-form-runner.md#send) using `data-format-version = "edge"`.
 
 Use the authorization mechanism for services (see [Authorization of pages and services](../../xml-platform/controller/authorization-of-pages-and-services.md), to enable submitting initial instances to the new page:
 
-* Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when POSTing to Form Runner.
+* Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when `POST`ing to Form Runner.
 * Your authorizer service must validate those credentials.
 
 [SINCE Orbeon Forms 2017.1]
@@ -422,7 +422,7 @@ With the following properties, you can configure Form Runner to call a service i
 
 Set the first property above to `true` to enable this behavior and have the second property point to your service.
 
-The following property defines a space-separated list of request parameters to be passed to the service. Say the new page was invoke with request parameters `foo=42` and `bar=84`, if you set the value of this property to `foo bar`, these two request parameters will be passed along as request parameters to the service. The request parameters can either get to the new page in a POST or GET request. The service is always called with a GET, consequently request parameters will be passed on the URI.
+The following property defines a space-separated list of request parameters to be passed to the service. Say the new page was invoke with request parameters `foo=42` and `bar=84`, if you set the value of this property to `foo bar`, these two request parameters will be passed along as request parameters to the service. The request parameters can either get to the new page in a `POST` or `GET` request. The service is always called with a `GET`, consequently request parameters will be passed on the URI.
 
 ```xml
 <property
