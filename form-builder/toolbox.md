@@ -245,7 +245,7 @@ If the data in the dropdown depends on a value entered by users in another form 
 /xforms-sandbox/service/zip-cities?state-abbreviation={$state}
 ```
 
-*Limitation: you can't yet use a variable as shown in the above example, to refer to another fields value. Instead, if the control is in the same section use `{state}`. If in a different section with name other-section, use `{../other-section/state}`. See [#431](https://github.com/orbeon/orbeon-forms/issues/431).*
+*Limitation: you can't yet use a variable as shown in the above example, to refer to another fields value. Instead, if the control is in the same section use `{../state}`. If in a different section with name other-section, use `{../../other-section/state}`. See [#431](https://github.com/orbeon/orbeon-forms/issues/431).*
 
 
 ### Autocomplete

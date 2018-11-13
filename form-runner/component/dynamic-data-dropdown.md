@@ -35,7 +35,7 @@ So far so good: assuming you have such a service that returns the data you need,
 <fr:databound-select1
     ref="city"
     appearance="minimal"
-    resource="/xforms-sandbox/service/zip-cities?state-abbreviation={state}">
+    resource="/xforms-sandbox/service/zip-cities?state-abbreviation={../state}">
     <xf:label>City</xf:label>
     <xf:itemset ref="/cities/city">
         <xf:label ref="@name"/>
