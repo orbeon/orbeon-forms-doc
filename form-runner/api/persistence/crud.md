@@ -1,7 +1,5 @@
 # CRUD
 
-
-
 ## Basics
 
 When using `GET` and `PUT` to deal with resources, the body of HTTP requests contains the resource to handle.
@@ -19,6 +17,8 @@ When using `GET` and `PUT` to deal with resources, the body of HTTP requests con
     - Both request and response bodies are empty.
 
 When the resource is an XML file (e.g. form.xhtml, data.xml), the persistence layer must return an appropriate XML content-type: `application/xml`, or `application/xhtml+xml`.
+
+_NOTE: When PUTting data under the path `/orbeon/builder/data/`, which means storing unpublished form definitions and form definition attachments, always set `Orbeon-Form-Definition-Version` to the value `1`. This is because Form Builder stores its unpublished form definitions like a regular published form would, but in effect there is only one "version" of Form Builder._
 
 ## Examples using curl
 
