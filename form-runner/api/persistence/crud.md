@@ -2,23 +2,62 @@
 
 ## Basics
 
-When using `GET` and `PUT` to deal with resources, the body of HTTP requests contains the resource to handle.
+The following HTTP methods apply: `GET`, `PUT`, and `DELETE`.
 
-- `GET`
-    - The request body is empty and response body contains resource.
-    - [SINCE Orbeon Forms 4.5] The `Orbeon-Operations` response header lists the operations that the user can perform on the data (see [Supporting permissions in your persistence API implementation](https://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)).
-    - [SINCE Orbeon Forms 4.5] If the implementation of the persistence API supports form versioning, and the request is for a form definition, the `Orbeon-Form-Definition-Version` request header tells which version of the form definition is requested.
-- `PUT`
-    - The request body contains the resource to store.
-    - The `Content-Type` must contain the content-type of the resource to store. For XML in particular, pass `application/xml`.
-    - The request response is empty.
-    - If your implementation of the persistence API supports form versioning, then when storing a new document, you need to tell the persistence what version of the form definition was used to create this data, so the same version can then be used to subsequently edit the data. This is done by specifying the version in the `Orbeon-Form-Definition-Version` header.
-- `DELETE`
-    - Both request and response bodies are empty.
+### GET
 
-When the resource is an XML file (e.g. form.xhtml, data.xml), the persistence layer must return an appropriate XML content-type: `application/xml`, or `application/xhtml+xml`.
+- The request body is empty and response body contains resource.
+- [SINCE Orbeon Forms 4.5] The `Orbeon-Operations` response header lists the operations that the user can perform on the data (see [Supporting permissions in your persistence API implementation](https://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)).
+- [SINCE Orbeon Forms 4.5] If the implementation of the persistence API supports form versioning, and the request is for a form definition, the `Orbeon-Form-Definition-Version` request header tells which version of the form definition is requested.
+    
+### PUT
 
-_NOTE: When PUTting data under the path `/orbeon/builder/data/`, which means storing unpublished form definitions and form definition attachments, always set `Orbeon-Form-Definition-Version` to the value `1`. This is because Form Builder stores its unpublished form definitions like a regular published form would, but in effect there is only one "version" of Form Builder._
+- The request body contains the resource to store.
+- The `Content-Type` must contain the content-type of the resource to store. For XML in particular, pass `application/xml`.
+- The request response is empty.
+- If your implementation of the persistence API supports form versioning, then when storing a new document, you need to tell the persistence what version of the form definition was used to create this data, so the same version can then be used to subsequently edit the data. This is done by specifying the version in the `Orbeon-Form-Definition-Version` header.
+
+### DELETE
+
+- Both request and response bodies are empty.
+
+### Content-Types
+
+When the resource is an XML file (e.g. `form.xhtml`, `data.xml`), the persistence layer must return an appropriate XML content-type: `application/xml`, or `application/xhtml+xml`.
+
+### Form Builder version number
+
+When PUTting data under the path `/orbeon/builder/data/`, which means storing unpublished form definitions and form definition attachments, always set `Orbeon-Form-Definition-Version` to the value `1`. This is because Form Builder stores its unpublished form definitions like a regular published form would, but in effect there is only one "version" of Form Builder.
+
+### Updating a resource
+
+When using `PUT` to update a resource (whether form data or attachment), the built-in relational persistence layer checks that the version number provided matches the existing version number in the database. For example, if you `PUT` an attachment with path (indented for legibility):
+
+```
+/fr/service/persistence/crud
+    /acme
+    /order
+    /data
+    /fc4c32532e8d35a2d0b84e2cf076bb070e9c1e8e
+    /8bf211aef805f1354129ee47cc0964d256ba7cae.bin
+```
+
+and pass the header:
+
+```
+`Orbeon-Form-Definition-Version: 3
+``` 
+
+and there is already, in the database, such an attachment that was created with version 3, the request is successful and the resource is updated.
+
+On the other hand if, for the same resource, you pass the header:
+
+```
+`Orbeon-Form-Definition-Version: 3
+```
+
+the persistence layer returns a `400` "Bad Request" HTTP status code.
+  
 
 ## Examples using curl
 
