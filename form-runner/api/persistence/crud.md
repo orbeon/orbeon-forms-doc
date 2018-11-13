@@ -29,6 +29,10 @@ When the resource is an XML file (e.g. `form.xhtml`, `data.xml`), the persistenc
 
 For callers, when `PUT`ting data under the path `/orbeon/builder/data/`, which means storing unpublished form definitions and form definition attachments, always set `Orbeon-Form-Definition-Version` to the value `1`, or omit the versioning header (which defaults to 1 for new data, and to the latest version of the resource for existing data). This is because Form Builder stores its unpublished form definitions like a regular published form would, but in effect there is only one "version" of Form Builder.
 
+### Constraints
+
+For a particular application name and form name, the document id must be unique. The document id cannot be reused across form definition versions. This allows the document id to be used to infer the form definition version number when retrieving data for a given application name and form name.
+
 ### Updating a resource
 
 When using `PUT` to update a resource (whether form data or attachment), the built-in relational persistence layer checks that the version number provided matches the existing version number in the database. Custom persistence layers should do the same.
