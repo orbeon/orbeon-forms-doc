@@ -173,36 +173,40 @@ http://example.org/orbeon/fr/service/persistence/crud/
 
 ## Publishing from Form Builder
 
-When you create, edit, or read form definition with Form Builder, form definitions are stored as Form Builder _data_. That is, they are stored under:
+When you create, edit, or read form definition with Form Builder, those are considered *unpublished* form definitions and are stored as Form Builder *data*. Those are . They are stored under the path:
 
-`/crud/orbeon/builder/data/[FORM_DATA_ID]`
+`/crud/orbeon/builder/data/$doc`
 
-On the other hand, when Form Builder _publishes_ a form definition, it stores it where Form Runner will find it, that is under:
+On the other hand, when Form Builder *publishes* a form definition, Form Builder first makes modifications to the form definition (such as adding section templates) and stores it where Form Runner will find it, under the path:
 
 ```
-/crud/[APPLICATION_NAME]/[FORM_NAME]/form
+/crud/$app/$form/form
 ```
 
-For example, this is what happens when saving and publishing a form definition `acme/order` with a single attachment:
+For example, this is what happens when saving and publishing a form definition `acme/order` with a single attachment (for example for a PDF template or static image):
 
 Save:
 
-- PUT /crud/orbeon/builder/data/7b55c9d6f9b058376293e61d9f0d4442e379f717/a29fd47011b2957ef44a62d92995adfdbae03fa9.bin
-- PUT /crud/orbeon/builder/data/7b55c9d6f9b058376293e61d9f0d4442e379f717/data.xml
+- `PUT /crud/orbeon/builder/data/7b55c9d6f9b058376293e61d9f0d4442e379f717/a29fd47011b2957ef44a62d92995adfdbae03fa9.bin`
+- `PUT /crud/orbeon/builder/data/7b55c9d6f9b058376293e61d9f0d4442e379f717/data.xml`
 
 Publish:
 
-- PUT /crud/acme/order/form/a29fd47011b2957ef44a62d92995adfdbae03fa9.bin
-- PUT /crud/acme/order/form/form.xhtml?document=7b55c9d6f9b058376293e61d9f0d4442e379f717
+- `PUT /crud/acme/order/form/a29fd47011b2957ef44a62d92995adfdbae03fa9.bin`
+- `PUT /crud/acme/order/form/form.xhtml?document=7b55c9d6f9b058376293e61d9f0d4442e379f717`
 
 [SINCE Orbeon Forms 4.6]
 
-When Form Builder publishes a form definition, if versioning is supported by the target persistence layer, it passes a `Orbeon-Form-Definition-Version` header with values:
+When Form Builder publishes a form definition, if versioning is supported by the target persistence layer, it passes an `Orbeon-Form-Definition-Version` header with values:
 
 - missing: indicates the latest published version, or `1` if there is no published version
 - `next`: to indicate that the form definition must be published under the next available version
 - or a specific version number: to indicate that the form definition must replace the given version
     - *NOTE: The version number must be a positive integer.*
+    
+[SINCE Orbeon Forms 2017.2.]
+
+Orbeon Forms implements, exposes, and internally uses the [Publish form definition API](/form-runner/api/other/publish.md) to publish form definitions. Orbeon recommends using that API to publish form definitions.
 
 ## Handling attachments
 
