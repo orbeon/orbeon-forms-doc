@@ -55,7 +55,7 @@ and there is already, in the database, such an attachment that was created with 
 On the other hand if, for the same resource, you pass the header:
 
 ```
-`Orbeon-Form-Definition-Version: 3
+`Orbeon-Form-Definition-Version: 4
 ```
 
 the persistence layer returns a `400` "Bad Request" HTTP status code.
