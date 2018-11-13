@@ -61,7 +61,7 @@ Based on our understanding of CSRF, the measures above appear to make an XSRF at
 The [Wikipedia page about CSRF][4] confirms that some of the measures above are effective:
 
 * "Requiring a secret, user-specific token in all form submissions and side-effect URLs prevents CSRF; the attacker's site cannot put the right token in its submissions"  This is handled by the unique UUID and request number used by Orbeon in all requests.
-* "GET requests never have a permanent effect" is implemented by Orbeon Forms.
+* "`GET` requests never have a permanent effect" is implemented by Orbeon Forms.
 
 ### Communication with services
 
