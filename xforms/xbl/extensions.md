@@ -1,10 +1,76 @@
 # XBL Extensions
 
-
-
 ## Namespaces
 
 All the generic extensions are in the namespace `http://orbeon.org/oxf/xml/xbl`, and the usual mapping of this namespace is `xmlns:xxbl="http://orbeon.org/oxf/xml/xbl"`.
+
+## Configuration
+
+[SINCE Orbeon Forms 2018.2]
+
+Element filtering can be configured by providing a custom object or class.
+
+The following property allows adding a custom extension XPath function library:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl-support" 
+    value="org.orbeon.oxf.fr.xbl.FormRunnerXblSupport"/>
+```
+
+When this property is present, the XForms engine attempts to load an extension XBL support implementation. It does this in two ways:
+
+1. First, it tries to access a Scala object extending `org.orbeon.oxf.xforms.xbl.XBLSupport`.
+2. If that fails, it tries to access a Java class and calls a static `instance()` method on it to obtain an `org.orbeon.oxf.xforms.xbl.XBLSupport`.
+
+Scala example:
+
+```scala
+object FormRunnerXblSupport extends XBLSupport {
+  
+  override def keepElement(
+    partAnalysis  : PartAnalysisImpl,
+    boundElement  : Element,
+    directNameOpt : Option[QName],
+    elem          : Element
+  ): Boolean = {
+    // Implementation here 
+    false
+  }
+}
+```
+
+Java example:
+
+```java
+class FormRunnerXblSupport {
+
+    private static XBLSupport _instance = null;
+
+    public static synchronized XBLSupport instance() {
+        if (_instance == null)
+            _instance = new FormRunnerXblSupport();
+        return _instance;
+    }
+  
+    public boolean keepElement(
+        PartAnalysisImpl partAnalysis,
+        Element boundElement,
+        scala.Option<QName> directNameOpt,
+        Element elem
+    ) {
+        // Implementation here
+        return false;
+    }
+}
+```
+
+You can also turn specify this property specifically for a given form by adding an `xxf:xbl-support` attribute on the first model:
+
+```xml
+xxf:xbl-support="org.orbeon.oxf.fr.xbl.FormRunnerXblSupport"
+```
 
 ## xxbl:container attribute
 
