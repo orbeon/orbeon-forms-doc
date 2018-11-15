@@ -196,5 +196,26 @@ Example:
 That `xf:group` element will ony be included if the bound node contains an attribute named `prefix`. Otherwise the entire
 subtree will be omitted.
 
-This also checks properties such as `oxf.xforms.xbl.fr.currency.prefix` and if the value of the property is found
+[Orbeon Forms 2018.1 ONLY] This also checks properties such as `oxf.xforms.xbl.fr.currency.prefix` and if the value of the property is found
 and not empty, it is as if the attribute was present on the bound node.
+
+In the context of Form Runner, use instead the `fr:use-if-param-non-blank` attribute.
+
+## fr:use-if-param-non-blank
+
+[SINCE Orbeon Forms 2018.2]
+
+In the context of Form Runner, this attribute allows including a part of the resulting tree only if at least one of the following applies:
+ 
+- The specified parameter has a corresponding attribute on the bound node which is present and non-blank .
+    - _NOTE: This does not evaluate AVTs. Only the static value of the attribute is checked._
+- There is a corresponding form definition metadata element with a non-blank value.
+- There is a corresponding configuration property with the current app name/form name which is present and non-blank.
+- There is a corresponding configuration property without app name/form name which is present and non-blank.
+
+```xml
+<xf:group fr:use-if-param-non-blank="prefix" class="add-on" ref=".[xxf:non-blank($prefix)]">
+    <xf:output value="$prefix"/>
+</xf:group>
+
+```
