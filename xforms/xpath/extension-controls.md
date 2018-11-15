@@ -97,7 +97,7 @@ Return the empty sequence if the resolution fails.
 ```xpath
 xxf:component-param-value(
     $name as xs:string
-) as xs:string?
+) as xs:anyAtomicType?
 ```
 
 The `xxf:component-param-value()` function returns the string value of the given parameter of the current XBL component's bound node.
@@ -106,6 +106,11 @@ A parameter is specified by:
 
 - an attribute on the XBL bound node (which can be an attribute value template (AVT))
 - or, if not found, a property of the form `oxf.xforms.xbl.$PREFIX.$NAME.$PARAMETER`
+
+When not returning an empty sequence, the function returns:
+
+- an `xs:string` if the value comes from an attribute
+- `xs:string`, `xs:integer`, `xs:boolean` or `xs:anyURI` depending on the actual type of the property when the value comes from a property
  
 This function is intended for XBL component implementors.
 
