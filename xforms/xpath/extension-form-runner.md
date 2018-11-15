@@ -6,6 +6,16 @@
 
 These functions are only available within the context of Form Runner.
 
+## Configuration
+
+These functions are automatically available from Form Runner.
+
+For plain XForms, the user needs to import the Form Runner function library by adding the following attribute on the first `<xf:model>`:
+
+```
+xxf:function-library="org.orbeon.oxf.fr.library.FormRunnerFunctionLibrary"
+```
+
 ## Namespace
 
 These functions are in the Form Runner namespace:
@@ -330,20 +340,38 @@ Example:
 
 [SINCE Orbeon Forms 2018.1]
 
-This function is in a way similar to `xxf:component-param-value()`, but is designed to be used in XBL components that are expected to run in the context of Form Runner:
+This function is similar to `xxf:component-param-value()`, but is designed to be used in XBL components that are expected to run in the context of Form Runner. It searches parameters in this order:
 
-1. The function starts by searching for a property taking into account the current app/form name. For instance, `xxf:component-param-value('theme')` called from the `fr:recaptcha` component uses the value of the `oxf.xforms.xbl.fr.recaptcha.theme.*.*`, following wildcard rules.
-2. If it can't find such a property, it falls back to using the value of the `oxf.xforms.xbl.fr.recaptcha.theme` property, as done by `xxf:component-param-value()`.
+1. The string value of the given parameter of the current XBL component's bound node, which can be an AVT.
+2. [SINCE Orbeon Forms 2018.2] The current form's metadata instance (see below).   
+2. The value of a property, taking into account the current app/form name. For instance, `xxf:component-param-value('theme')` called from the `fr:recaptcha` component uses the value of the `oxf.xforms.xbl.fr.recaptcha.theme.*.*`, following wildcard rules.
+3. The value of a property without taking into account the current app/form name. For example `oxf.xforms.xbl.fr.recaptcha.theme` property, as done by `xxf:component-param-value()`.
 
 This allows authors of XBL components:
 
 - To replace an existing call to `xxf:component-param-value()` by `fr:component-param-value()` while maintaining backward compatibility.
 - To enable users of the component to have different values for the property by app/form, should they need to.
-- To still allow the component to be used outside of Form Runner. For this, the user of the XBL component needs to import the Form Runner function library by adding the following attribute on their first `<xf:model>`:
+- To still allow the component to be used outside of Form Runner.
 
-  ```
-  xxf:function-library="org.orbeon.oxf.fr.library.FormRunnerFunctionLibrary"
-  ```
+The Form Runner metadata instance looks like this:
+
+```xml
+<xf:instance xxf:readonly="true" id="fr-form-metadata" xxf:exclude-result-prefixes="#all">
+    <metadata>
+        <application-name>acme</application-name>
+        <form-name>order</form-name>
+        <title xml:lang="en">ACME Order Form</title>
+        <description xml:lang="en"/>
+        <xbl>
+            <fr:number>
+                <grouping-separator>"</grouping-separator>
+            </fr:number>
+        </xbl>
+    </metadata>
+</xf:instance>
+```
+
+_NOTE: The Form Runner metadata instance is maintained by Form Builder. We do not recommend making changes to that instance._  
 
 ## Authentication functions
 
