@@ -201,7 +201,7 @@ This property must be changed very carefully. All form data in the database for 
     value="4.8.0"/>
 ```
 
-_NOTE: As of Orbeon Forms 2017.1, the `oxf.fr.detail.new.service.enable` property always assumes data in `4.0.0` format even if the property above is set to a different value._
+_NOTE: Since Orbeon Forms 2017.1, the `oxf.fr.detail.new.service.enable` property always assumes data in `4.0.0` format even if the property above is set to a different value._
 
 ## Multiple databases of the same type
 

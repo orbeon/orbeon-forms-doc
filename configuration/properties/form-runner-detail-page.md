@@ -179,7 +179,7 @@ For more about placeholders, see [Use HTML5 placeholders, in XForms](https://blo
 
 ## Display hints inline
 
-[DEPRECATED as of Orbeon Forms 2016.2]
+[DEPRECATED since Orbeon Forms 2016.2]
 
 This property set whether the control hints are shown inline, rather than as tool-tips. The default is `true`.
 
@@ -190,7 +190,7 @@ This property set whether the control hints are shown inline, rather than as too
     value="true"/>
 ```
 
-As of Orbeon Forms 2016.2, this property is deprecated. Use `oxf.fr.detail.hint.appearance` instead. For backward compatibility, when this property is present, it overrides `oxf.xforms.hint.appearance` and sets it to:
+Since Orbeon Forms 2016.2, this property is deprecated. Use `oxf.fr.detail.hint.appearance` instead. For backward compatibility, when this property is present, it overrides `oxf.xforms.hint.appearance` and sets it to:
 
 - `full` if set to `true`
 - `tooltip` if set to `false`
@@ -343,7 +343,7 @@ Mode options:
 - etc.
 - `*`: run in all modes
 
-*NOTE: When running in the background, only the `new` and `edit` modes are supported as of Orbeon Forms 2017.2.*
+*NOTE: When running in the background, only the `new` and `edit` modes are supported.*
 
 See also [Run form in the background](../../form-runner/api/other/run-form-background.md).
 
@@ -433,7 +433,7 @@ The following property defines a space-separated list of request parameters to b
 
 *NOTE: Enabling `oxf.fr.detail.new.service.enable` doesn't change the behavior with regard to POSTed instance: even if you are calling a service to get the initial instance, the POSTed instance will be used when a document is POSTed to the corresponding "new form" page.*
 
-_NOTE: As of Orbeon Forms 2017.1, the `oxf.fr.persistence.*.data-format-version` property does not affect `oxf.fr.detail.new.service.enable` and the data returned by the service must still be in `4.0.0` format in all cases._
+_NOTE: The `oxf.fr.persistence.*.data-format-version` property does not affect `oxf.fr.detail.new.service.enable` and the data returned by the service must still be in `4.0.0` format in all cases._
 
 ## View mode
 

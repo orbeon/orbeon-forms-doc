@@ -106,7 +106,7 @@ With actions and combinators, the syntax becomes:
 - The process must start with an action or a sub-process.
 - The process must also end with an action or a sub-process.
 - Two actions or sub-processes must be separated by a combinator.
-- Some actions have parameters (NOTE: As of Orbeon Forms 4.2, only a single, unnamed parameter is supported.).
+- Some actions have parameters
 
 For example, the behavior of the "Save" button, associated with the `save-final` process, is specified this way:
 

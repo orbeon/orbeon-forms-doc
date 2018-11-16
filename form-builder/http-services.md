@@ -51,7 +51,7 @@ Here is [how to set URL parameters from an action](actions.md#passing-url-parame
 
 A JSON *response* from a service is processed and converted to an XML document following the XForms 2.0 scheme (see [JSON support](../xforms/submission-json.md)).
 
-As of Orbeon Forms 2016.1, it is not yet possible to *send* JSON to a service. See [#2480](https://github.com/orbeon/orbeon-forms/issues/2480) for details.
+See [#2480](https://github.com/orbeon/orbeon-forms/issues/2480) for details about sending JSON to services.
 
 ### URL Parameters before Orbeon Forms 2016.1
 

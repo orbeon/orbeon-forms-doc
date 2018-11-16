@@ -104,7 +104,7 @@ You specify an XPath script either with:
 </xf:action>
 ```
 
-Or (deprecated as of Orbeon Forms 2016.1):
+Or (deprecated since Orbeon Forms 2016.1):
 
 ```xml
 <xxf:script type="xpath">
@@ -127,7 +127,7 @@ XPath scripts have access to the current XPath context, including the focus and 
 
 ## `<xxf:script>` or `<xf:action>`?
 
-Orbeon Forms first introduced JavaScript with the `<xxf:script>` action. This action is deprecated as of Orbeon Forms 2016.1 and it is recommended to use `<xf:action type="javascript">` and `<xf:action type="xpath">` instead.
+Orbeon Forms first introduced JavaScript with the `<xxf:script>` action. This action is deprecated since Orbeon Forms 2016.1 and it is recommended to use `<xf:action type="javascript">` and `<xf:action type="xpath">` instead.
 
 Here are the differences between the two:
 

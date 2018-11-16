@@ -148,7 +148,7 @@ If the persistence layer is able to run XPath expressions (as eXist or other XML
     - All the previously deprecated elements mentioned below have been removed, and are not sent to the search API.
 - 2011-11-22: Deprecation
     - app and form elements:
-        - these elements are deprecated and will be removed in the future. As of Orbeon Forms 3.9, they are present but empty
+        - these elements are deprecated and will be removed in the future. Since Orbeon Forms 3.9, they are present but empty
         - to obtain the app and form name being queried, extract them instead from the search URL
     - `sort-key` element:
         - this element was present but never used and will be removed in the future

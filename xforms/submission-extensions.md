@@ -218,7 +218,7 @@ getHeaders(String name)
 
 ### Compatibility notes
 
-As of Orbeon Forms 4.9, `oxf.xforms.forward-submission-headers` is deprecated. Use `oxf.http.forward-headers` instead. For backward compatibility, header names from both properties are combined into a single set of header names. It is no longer possible to specify per-form forwarding headers using `xxf:forward-submission-headers`.
+Since Orbeon Forms 4.9, `oxf.xforms.forward-submission-headers` is deprecated. Use `oxf.http.forward-headers` instead. For backward compatibility, header names from both properties are combined into a single set of header names. It is no longer possible to specify per-form forwarding headers using `xxf:forward-submission-headers`.
 
 Prior to Orbeon Forms 4.9, the two properties were looked at in order:
 
@@ -285,8 +285,7 @@ On an `<xf:submission>` element with `replace="instance"`, the optional `xxf:xin
 
 ## Preventing recalculation before a submission
 
-_NOTE: As of Orbeon Forms 4.7, `recalculate` and `revalidate` are unified in Orbeon Forms. This means that this
-attribute is no longer needed._
+_NOTE: Since Orbeon Forms 4.7, `recalculate` and `revalidate` are unified in Orbeon Forms. This means that this attribute is no longer needed._
 
 XForms 1.1 provides two attributes to control pre-submission tasks:
 
@@ -449,7 +448,7 @@ Example:
 
 ### Status
 
-As of Orbeon Forms 4.7 and newer, this feature is usually not relevant as Orbeon Forms handles service requests internally. See [issue #1363](https://github.com/orbeon/orbeon-forms/issues/1363).
+Since Orbeon Forms 4.7 and newer, this feature is usually not relevant as Orbeon Forms handles service requests internally. See [issue #1363](https://github.com/orbeon/orbeon-forms/issues/1363).
 
 ### Rationale
 

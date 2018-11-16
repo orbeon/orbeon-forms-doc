@@ -48,7 +48,7 @@ Check whether there are pending uploads.
 Rollback some of the changes that have taken place during the current process.
 
 - parameters
-    - `changes`: must be "in-memory-form-data" as of Orbeon Forms 2017.2
+    - `changes`: must be "in-memory-form-data"
     
 At the beginning of a top-level process, the current state of:
 

@@ -8,7 +8,7 @@ Orbeon Forms has a number of features to help with mobile support:
 
 ## Limitations
 
-As of Orbeon Forms 2018.1, mobile support has the following limitations:
+As of Orbeon Forms 2018.2, mobile support has the following limitations:
 
 - The Summary and Home pages are not yet responsive.
 - There is no mobile application for Orbeon Forms: when using a mobile device, the user must have a connection.

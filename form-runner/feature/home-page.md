@@ -156,7 +156,7 @@ With Orbeon Forms 4.4 to 4.6, use the `oxf.fr.production-server-uri` property:
   value="http://remote.server:8080/orbeon/"/>
 ```
 
-*NOTE: As of Orbeon Forms 4.7, the `oxf.fr.production-server-uri` is deprecated. With Orbeon Forms 4.7 and newer, if the `oxf.fr.production-server-uri` is set and not empty, it takes precedence over the new `oxf.fr.home.remote-servers` property, for backward compatibility.*
+*NOTE: Since Orbeon Forms 4.7, the `oxf.fr.production-server-uri` is deprecated. Since Orbeon Forms 4.7 and newer, if the `oxf.fr.production-server-uri` is set and not empty, it takes precedence over the new `oxf.fr.home.remote-servers` property, for backward compatibility.*
 
 #### Configuration on the remote server
 

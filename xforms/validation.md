@@ -96,7 +96,7 @@ If a control doesn't have a warning level, it can have an *info* level. This is 
 
 A warning or info level does not make the control value invalid and it is still possible to submit form data.
 
-*NOTE: As of Orbeon Forms 4.3, it is only possible to associate a warning or info validation level to a constraint specified with `xf:constraint/@value`. It is not possible to associate these levels to the required or data type validations: they always use the error level.*
+*NOTE: As of Orbeon Forms 2018.2, it is only possible to associate a warning or info validation level to a constraint specified with `xf:constraint/@value`. It is not possible to associate these levels to the required or data type validations: they always use the error level. See also [issue #3571](https://github.com/orbeon/orbeon-forms/issues/3571)*
 
 ### Nested validation elements
 
@@ -128,7 +128,7 @@ This allows having distinct alerts for indicating:
 - that the value must be of the given datatype
 - that the value must satisfy constraints expressed in XPath
 
-*LIMITATION: As of Orbeon Forms 4.9, only the first `type` and the first `required` attribute or element associated with an `xf:bind` element are taken into account. On the other hand, all `constraint` elements are handled.*
+*LIMITATION: As of Orbeon Forms 2018.2, only the first `type` and the first `required` attribute or element associated with an `xf:bind` element are taken into account. On the other hand, all `constraint` elements are handled.*
 
 ### Multiple alerts
 

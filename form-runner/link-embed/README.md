@@ -46,7 +46,7 @@ Portals such as Liferay provide features such as:
 
 The following Form Runner limitations are known within Liferay:
 
-* With Liferay 7/DXP, as of Orbeon Forms 2017.1, the full portlet is not supported.
+* With Liferay 7/DXP, since Orbeon Forms 2017.1, the full portlet is not supported.
 
 ### Form Runner proxy portlet or full portlet?
 

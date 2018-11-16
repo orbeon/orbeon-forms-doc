@@ -18,7 +18,7 @@ The following conditions must be met for autosave to happen:
 - The persistence layer must support autosave and have the `oxf.fr.persistence.$name.autosave` property set to `true` (`true` by default for the built-in relational databases).
 - The autosave delay (set with `oxf.fr.detail.autosave-delay`) must be greater than `0` (which is the case by default).
 
-*NOTE: Form Builder doesn't support autosave as of Orbeon Forms 4.8.*
+*NOTE: Form Builder doesn't support autosave as of Orbeon Forms 2018.2.*
 
 ## How autosave works
 

@@ -119,7 +119,7 @@ This means that elements called `fr:number` in the form will use this binding.
 
 ### Binding by datatype
 
-Form Builder, at design time only (as of Orbeon Forms 4.9), also supports bindings by name and XML datatype:
+Form Builder, at design time only (since Orbeon Forms 4.9), also supports bindings by name and XML datatype:
 
 ```css
 xf|input:xxf-type('xs:decimal')

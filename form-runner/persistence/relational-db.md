@@ -66,7 +66,7 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
 - __Minimum version__: The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer.
 - __Recommended versions__: However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].
-- __MySQL 5.7__: With MySQL 5.7, as of Orbeon Forms 2016.2, you must set the `sql_mode` to [`ALLOW_INVALID_DATES`](http://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_allow_invalid_dates), or you might get errors while creating the database schema.
+- __MySQL 5.7__: With MySQL 5.7, since Orbeon Forms 2016.2, you must set the `sql_mode` to [`ALLOW_INVALID_DATES`](http://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_allow_invalid_dates), or you might get errors while creating the database schema.
 
 #### Setting up users and schema
 
@@ -493,7 +493,7 @@ See [Flat View](../../form-runner/persistence/flat-view.md).
 
 ### Manual relational table setup with MySQL
 
-As of Orbeon Forms 4.8, Orbeon Forms doesn't provide a way to have a table or view automatically created for a form upon publishing in MySQL. However, you can do this manually. For instance, assume you want to create a "flat" `bookshelf` table for the sample [bookshelf form][11]. You want that table to have 3 columns:
+Orbeon Forms doesn't provide a way to have a table or view automatically created for a form upon publishing in MySQL. However, you can do this manually. For instance, assume you want to create a "flat" `bookshelf` table for the sample [bookshelf form][11]. You want that table to have 3 columns:
 
 - `title` corresponds to the title form field;
 - `author` corresponds to the author form field;

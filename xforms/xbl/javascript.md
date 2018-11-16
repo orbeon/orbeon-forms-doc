@@ -263,7 +263,7 @@ The `destroy()` method is called when the control becomes non-relevant, includin
 
 - when the control becomes non-relevant after the page has loaded
 
-As of Orbeon Forms 2016.1, it is *not* called:
+Since Orbeon Forms 2016.1, it is *not* called:
 
 - when a repeat iteration is removed
 - when `xxf:full-update` or `xxf:dynamic` replace an entire block of HTML on the client

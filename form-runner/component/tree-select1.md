@@ -1,12 +1,10 @@
 # Single-selection tree
 
-
-
 ## Availability
 
 [SINCE Orbeon Forms 2017.1]
 
-_NOTE: As of Orbeon Forms 2017.1, this control is not present in the Form Builder toolbox because Form Builder lacks the ability to created hierarchical itemsets, making this control less useful in that context._
+_NOTE: As of Orbeon Forms 2018.2, this control is not present in the Form Builder toolbox because Form Builder lacks the ability to created hierarchical itemsets, making this control less useful in that context._
 
 ## What it does
 
@@ -130,7 +128,7 @@ And then, on your main XForms model, put the `xxf:assets.baseline.excludes` attr
 
 ## Custom styling
 
-As of Orbeon Forms 2017.1, the implementation of the `tree` appearance uses the [Fancytree](https://github.com/mar10/fancytree) JavaScript library.
+Starting with Orbeon Forms 2017.1, the implementation of the `tree` appearance uses the [Fancytree](https://github.com/mar10/fancytree) JavaScript library.
 
 _NOTE: This is subject to change in new versions of Orbeon Forms._
 

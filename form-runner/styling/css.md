@@ -34,7 +34,7 @@ You can either:
     </xh:style>
     ```
     
-_NOTE: As of Orbeon Forms 2018.1, it is no longer recommended to place any inline CSS, as some servers use the [`Content-Security-Policy` header](https://en.wikipedia.org/wiki/Content_Security_Policy) to disable inline scripts and CSS. Orbeon Forms 2018.1 doesn't include any inline scripts and CSS anymore by default._
+_NOTE: Since 2018.1, it is no longer recommended to place any inline CSS, as some servers use the [`Content-Security-Policy` header](https://en.wikipedia.org/wiki/Content_Security_Policy) to disable inline scripts and CSS. Orbeon Forms 2018.1 doesn't include any inline scripts and CSS anymore by default._
 
 ### Styling specific controls
 
@@ -54,7 +54,7 @@ The CSS class you use can either be one you define, or one of the following clas
 - `fr-width-10em`: sets the field with to 10 em
 - `fr-width-15em`: sets the field with to 15 em
 
-_NOTE: As of Orbeon Forms 2018.1, it is no longer recommended to use those CSS classes. Instead, vary the width of the 12-column grid cell in Form Builder to the desired size._
+_NOTE: Since Orbeon Forms 2018.1, it is no longer recommended to use those CSS classes. Instead, vary the width of the 12-column grid cell in Form Builder to the desired size._
 
 If you define your own CSS class, then write a CSS rule for that class. Make sure to use a strong selector, so its precedence is higher than CSS provide by Orbeon Forms, e.g. something like:
 

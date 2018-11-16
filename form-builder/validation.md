@@ -194,7 +194,7 @@ If a control doesn't have a warning level, it can have an *info* level. This is 
 
 A warning or info level does not make the control value invalid and it is still possible to submit form data.
 
-*NOTE: As of Orbeon Forms 4.3, it is not possible to associate a validation level to the required or data type validations: they always use the error level.*
+*NOTE: It is not possible to associate a validation level to the required or data type validations: they always use the error level.*
 
 ## Localization of messages
 
@@ -231,7 +231,7 @@ When the user enters data, if the value is invalid or if the control has a warni
     - The specific alert message is used.
     - More than one message can show is several info validations have failed.
 
-*NOTE: As of Orbeon Forms 4.3, it is not possible to associate specific alert message to the required or data type validations: they always use the default or global alert message.*
+*NOTE: It is not possible to associate specific alert message to the required or data type validations: they always use the default or global alert message.*
 
 Alert messages appear:
 
