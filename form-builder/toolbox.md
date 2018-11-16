@@ -86,7 +86,7 @@ The toolbox contains the user interface controls you can insert into your form, 
 | Category | Description |
 | --- | --- |
 | **Text Controls**      | for capturing text |
-| **Output Controls**    | for showing text |
+| **Utility Controls**   | for descriptions and calculations |
 | **Typed Controls**     | for capturing other data like numbers, emails, phone numbers, etc. |
 | **Date and Time**      | for capturing a date, a time or both |
 | **Selection Controls** | for selecting one or more values, like dropdown menus, radio buttons, etc. |
@@ -115,14 +115,15 @@ The controls appear like this at design time:
 
 ![](images/text-controls-design-time.png)
 
-### Output Controls
+### Utility Controls
 
 ![](images/output-controls.png)
 
 | Name | Description |
 | --- | --- |
 | **Explanatory Text** | Explanatory text which does not capture a value ([blog post](https://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
-| **Calculated Value** | Like most other controls, the Calculated Value has a label and hint, but unlike most controls it is not used to enter a value. Instead, it just *shows* a value, either fixed or calculated with a formula. |
+| **Calculated Value** | Like most other controls, this control has a label and hint, but unlike most controls it is not used to enter a value. Instead, it just *shows* a value, either fixed or calculated with a formula. |
+| **Hidden Field** | This control supports most features of regular controls, but doesn't show in the form at runtime. See [Hidden field component](/form-runner/component/hidden.md). |
 
 ### Typed Controls
 

@@ -94,6 +94,7 @@
         * [Error summary](form-runner/component/error-summary.md)
         * [Grid](form-runner/component/grid.md)
         * [Handwritten signature](form-runner/component/handwritten-signature.md)
+        * [Hidden field](form-runner/component/hidden.md)
         * [Image](form-runner/component/image.md)
         * [Image annotation](form-runner/component/image-annotation.md)
         * [Image attachment](form-runner/component/image-attachment.md)
