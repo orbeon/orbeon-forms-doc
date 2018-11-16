@@ -160,9 +160,10 @@ As of 2016-04-19 this page is still being updated.
     - Plain text area
     - Formatted text area
     - Password field
-- Output controls
+- Utility controls
     - Explanatory text
     - Calculated value
+    - Hidden field: [doc](/form-runner/component/hidden.md)
 - Typed controls
     - Number
         - control of rounding when formatting/capturing data
