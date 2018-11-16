@@ -265,9 +265,9 @@ subtree will be omitted.
 [Orbeon Forms 2018.1 ONLY] This also checks properties such as `oxf.xforms.xbl.fr.currency.prefix` and if the value of the property is found
 and not empty, it is as if the attribute was present on the bound node.
 
-In the context of Form Runner, use instead the `fr:use-if-param-non-blank` attribute.
+In the context of Form Runner, use instead the `fr:keep-if-param-non-blank` attribute.
 
-## fr:use-if-param-non-blank
+## fr:keep-if-param-non-blank
 
 [SINCE Orbeon Forms 2018.2]
 
@@ -280,7 +280,7 @@ In the context of Form Runner, this attribute allows including a part of the res
 - There is a corresponding configuration property without app name/form name which is present and non-blank.
 
 ```xml
-<xf:group fr:use-if-param-non-blank="prefix" class="add-on" ref=".[xxf:non-blank($prefix)]">
+<xf:group fr:keep-if-param-non-blank="prefix" class="add-on" ref=".[xxf:non-blank($prefix)]">
     <xf:output value="$prefix"/>
 </xf:group>
 
