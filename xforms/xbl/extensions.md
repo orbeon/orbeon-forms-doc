@@ -30,7 +30,7 @@ Scala example:
 object FormRunnerXblSupport extends XBLSupport {
   
   override def keepElement(
-    partAnalysis  : PartAnalysisImpl,
+    partAnalysis  : PartAnalysis,
     boundElement  : Element,
     directNameOpt : Option[QName],
     elem          : Element
@@ -55,7 +55,7 @@ class FormRunnerXblSupport {
     }
   
     public boolean keepElement(
-        PartAnalysisImpl partAnalysis,
+        PartAnalysis partAnalysis,
         Element boundElement,
         scala.Option<QName> directNameOpt,
         Element elem
