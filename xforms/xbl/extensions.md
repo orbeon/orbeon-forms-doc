@@ -267,13 +267,33 @@ and not empty, it is as if the attribute was present on the bound node.
 
 In the context of Form Runner, use instead the `fr:keep-if-param-non-blank` attribute.
 
+## fr:keep-if-design-time
+
+[SINCE Orbeon Forms 2018.2]
+
+In the context of Form Runner and Form Builder, this attribute allows including a part of the resulting tree only if the form is shown at design-time or runtime.
+
+The value of the attribute must be either:
+ 
+- `true`: keep the element only if the form is displayed in Form Builder at design-time (this does *not* include the `test` mode)
+- `false`: keep the element only if the form is displayed in Form Runner at runtime (this includes the `test` mode)
+
+```xml
+<xbl:template>
+    <xh:i class="fa fa-fw fa-eye-slash" fr:keep-if-design-time="true"/>
+</xbl:template>
+
+```
+
 ## fr:keep-if-param-non-blank
 
 [SINCE Orbeon Forms 2018.2]
 
 In the context of Form Runner, this attribute allows including a part of the resulting tree only if at least one of the following applies:
+
+The value of the attribute is the name of the parameter to check.
  
-- The specified parameter has a corresponding attribute on the bound node which is present and non-blank .
+- The specified parameter has a corresponding attribute on the bound node which is present and non-blank.
     - _NOTE: This does not evaluate AVTs. Only the static value of the attribute is checked._
 - There is a corresponding form definition metadata element with a non-blank value.
 - There is a corresponding configuration property with the current app name/form name which is present and non-blank.
@@ -285,3 +305,4 @@ In the context of Form Runner, this attribute allows including a part of the res
 </xf:group>
 
 ```
+
