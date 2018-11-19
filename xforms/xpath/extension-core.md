@@ -290,8 +290,14 @@ In this case, the function fills the template as with the [`xxf:process-template
 Like `xxf:r()`, The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources. The difference is that this function resolves to resource elements instead of resolving to a resource string.
 
 ```xpath
-xxf:resource-elements($resource-name as xs:string) as element()*
-xxf:resource-elements($resource-name as xs:string, $instance-name as xs:string) as element()*
+xxf:resource-elements(
+    $resource-name as xs:string
+) as element()*
+
+xxf:resource-elements(
+    $resource-name as xs:string, 
+    $instance-name as xs:string
+) as element()*
 ```
 
 - `$resource-name`: resource path of the form `foo.bar.baz`. The path is relative to the `resource` element corresponding to the current language in the resources instance.
@@ -300,7 +306,7 @@ xxf:resource-elements($resource-name as xs:string, $instance-name as xs:string) 
 Example:
 
 ```xml
-<xf:itemset ref="xxf:resource-element('default-always-never.item')">
+<xf:itemset ref="xxf:resource-elements('default-always-never.item')">
     <xf:label ref="."/>
     <xf:value ref="if (@id = 0) then 'default' else if (@id = 1) then 'true' else 'false'"/>
 </xf:itemset>
