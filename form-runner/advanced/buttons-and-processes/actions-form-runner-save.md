@@ -4,22 +4,29 @@
 
 This action saves data and attachments via the persistence layer.
 
-- steps
-    - dispatch `fr-data-save-prepare` to `fr-form-model`
-    - save attachments
-    - save XML
-    - switch to `edit` mode (be aware of [#1653](https://github.com/orbeon/orbeon-forms/issues/1653))
-    - dispatch `fr-data-save-done` to `fr-form-model`
-- parameters
-    - `draft`: "true" if must be saved as a draft [SINCE Orbeon Forms 4.4]
-    - `query`: additional query parameters to pass the persistence layer (is an XPath value template) [SINCE Orbeon Forms 4.6.1]
-    - `prune-metadata`:
-        - [SINCE Orbeon Forms 2017.2]
-        - "true" if any `fr:*` metadata must be pruned before saving
-        - the default is "false"
-        - this must be used with care
+## Behavior
+
+The `save` actions performs the following, in order:
+
+- dispatch `fr-data-save-prepare` to `fr-form-model`
+- save attachments
+- save XML
+- dispatch `fr-data-save-done` to `fr-form-model`
+- switch to `edit` mode
+    - [UNTIL Orbeon Forms 2016.3] This is part of the `save` action. 
+    - [SINCE Orbeon Forms 2017.1] This is done using the separate `new-to-edit` action.
+
+## Parameters
+
+- `draft`: "true" if must be saved as a draft [SINCE Orbeon Forms 4.4]
+- `query`: additional query parameters to pass the persistence layer (is an XPath value template) [SINCE Orbeon Forms 4.6.1]
+- `prune-metadata`:
+    - [SINCE Orbeon Forms 2017.2]
+    - "true" if any `fr:*` metadata must be pruned before saving
+    - the default is "false"
+    - this must be used with care
         
-## Configuration
+## Examples
 
 Example of use of the `query` parameter:
 
