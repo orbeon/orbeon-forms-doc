@@ -1,7 +1,5 @@
 # Form Runner send action
 
-
-
 ##  Introduction
 
 This action sends data to an HTTP URL.
@@ -348,4 +346,6 @@ If the property is missing or empty, no annotation takes place. For example:
 
 ## See also
 
-- [PDF templates](../../../form-builder/pdf-templates.md)
+- [Form Runner actions](actions-form-runner.md)
+- [Form Runner save action](actions-form-runner-save.md)
+- [PDF templates](/form-builder/pdf-templates.md)
