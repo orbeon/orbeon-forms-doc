@@ -18,7 +18,7 @@ Linking doesn't make any assumption on the technology used by the web site or ap
 
 ## Paths
 
-The `/fr/clerk/marriage-registration/new` in our example is what is referred to below as a *path*, and for a given form, multiple such paths exist. Knowing what those paths are is particulary important as this allows you to link from your web site or web application to forms your created with Form Builder. All the paths are relative to the *deployment context*, i.e. where you've deloyed Orbeon Forms, which in our example was `http://www.city.gov/forms`.
+The `/fr/clerk/marriage-registration/new` in our example is what is referred to below as a *path*, and for a given form, multiple such paths exist. Knowing what those paths are is particulary important as this allows you to link from your web site or web application to forms your created with Form Builder. All the paths are relative to the *deployment context*, i.e. where you've deployed Orbeon Forms, which in our example was `http://www.city.gov/forms`.
 
 * Summary page for a given form definition:
     `/fr/[APPLICATION_NAME]/[FORM_NAME]/summary`
@@ -44,6 +44,14 @@ When using versioning, you can pass the `form-version` URL parameter:
 ```
 
 By default, the latest available form definition version is used.
+
+### Modes that load data
+
+This applies to `edit`, `view`, `pdf`, and `tiff` modes.
+
+- `draft`
+    - `true`: loads the data for a draft
+    - `false` (default): loads the data for a final document
 
 ### PDF and TIFF views
 
