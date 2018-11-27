@@ -138,10 +138,10 @@ Concrete controls are created at the following times:
     - or during refresh
 - during refresh, when the condition for relevance goes from non-relevant to relevant
 
-Concrete controls as destroyed at the following times:
+Concrete controls are destroyed at the following times:
 
 - when a repeat iteration is removed from a repeat container
-    - either during `xf:delete` processing
+    - either during `xf:delete` processing [UNTIL Orbeon Forms 2017.2 included, see [#3503](https://github.com/orbeon/orbeon-forms/issues/3503)]
     - or during refresh
 - during refresh, when the condition for relevance goes from relevant to non-relevant
 
