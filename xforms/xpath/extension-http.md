@@ -55,9 +55,25 @@ _NOTE: This function can only be called during page initialization, otherwise it
 xxf:get-request-header(
     $header-name as xs:string
 ) as xs:string*
+
+xxf:get-request-header(
+    $header-name as xs:string,
+    $encoding    as xs:string
+) as xs:string*
 ```
 
 The `xxf:get-request-header()` function returns the value(s) of the given request HTTP header.
+
+- `$header-name`
+    - required header name
+    - The case is ignored.
+- `$encoding`
+    - [SINCE Orbeon Forms 2018.2]
+    - optional encoding name
+    - values
+        - `ISO-8859-1` (the default): each byte in the header value represents an ISO-8859-1 character
+        - `UTF-8`: each byte in the header value represents a UTF-8 byte
+    - *NOTE: The only supported standard for header names is ISO-8859-1. But in practice, headers can be encoded with other character encodings. The callee must then know which character encoding is passed.*
 
 ```xml
 <!-- Remember the User-Agent header -->
