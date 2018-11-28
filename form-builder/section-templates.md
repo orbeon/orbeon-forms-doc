@@ -57,10 +57,13 @@ Note that when you publish your form, the section templates *currently* loaded i
 
 ## Merging section templates
 
+### Availability
+
 [SINCE Orbeon Forms 2017.2]
 
-You can merge section templates into your current form definition with the "Merge Section Template" icon associated with
-the section:
+### Merging
+
+You can merge section templates into your current form definition with the "Merge Section Template" icon associated with the section:
 
 ![Unmerged section template](images/section-template-unmerged.png)
 
@@ -90,7 +93,11 @@ the form definition:
 ![Merged section template](images/section-template-merged.png)
 
 This also means that if you make changes to the section templates library and reload the toolbox, the merged section template
-does not update.   
+does not update.
+
+### Limitations
+
+Services and actions in the section template are *not* merged into the enclosing form. 
 
 ## See also
 
