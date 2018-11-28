@@ -22,7 +22,7 @@ TIFF files can be accessed directly from the Form Runner Summary Page and Detail
 Example for the Detail Page:
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.buttons.orbeon.controls">
+<property as="xs:string" name="oxf.fr.detail.buttons.acme.order">
     summary wizard-prev wizard-next pdf tiff save review
 </property>
 ```
@@ -30,7 +30,7 @@ Example for the Detail Page:
 Example for the Summary Page:
 
 ```xml
-<property as="xs:string"  name="oxf.fr.summary.buttons.orbeon.controls">
+<property as="xs:string"  name="oxf.fr.summary.buttons.acme.order">
     home review pdf tiff delete duplicate new
 </property>
 ```

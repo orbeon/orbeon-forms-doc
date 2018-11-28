@@ -39,7 +39,7 @@ A process is automatically associated with a button by name when using the follo
 For example:
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.buttons.orbeon.controls">
+<property as="xs:string" name="oxf.fr.detail.buttons.acme.order">
     summary clear pdf save-final wizard-prev wizard-next review
 </property>
 ```
