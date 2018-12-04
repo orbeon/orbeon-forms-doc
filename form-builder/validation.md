@@ -184,6 +184,8 @@ In the future, it is expected that more common constraints will be added (see [#
 
 #### Dates to Exclude constraint
 
+[SINCE Orbeon Forms 2018.2]
+
 The "Dates to Exclude" common constraint takes a list (sequence) of dates to exclude, provided by a formula.
 
 You might have a service storing a the list of dates to exclude in a [dataset](/form-runner/feature/datasets.md), for example. From that dataset, you can extract and convert the dates to XPath dates.
