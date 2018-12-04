@@ -204,7 +204,9 @@ You can pass the following expression as parameter to the "Dates to Exclude" com
 
 ```xpath
 for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
-``` 
+```
+
+Note that the dates strings passed to the `xs:date()` constructor must be in ISO format (`yyyy-mm-dd`), as is the standard in XML.
 
 ## Control validity
 
