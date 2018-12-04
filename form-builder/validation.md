@@ -133,6 +133,8 @@ Each formula can have a *level* associated with it and a custom alert message.
 
 ### Common constraints
 
+#### List of common constraints
+
 A common constraint consists of the following:
 
 - "Maximum Length"
@@ -179,6 +181,28 @@ A common constraint consists of the following:
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
 
 ![Min and max length constraints](images/min-max-constraints.png)
+
+#### Dates to Exclude constraint
+
+The "Dates to Exclude" common constraint takes a list (sequence) of dates to exclude, provided by a formula.
+
+You might have a service storing a the list of dates to exclude in a [dataset](/form-runner/feature/datasets.md), for example. From that dataset, you can extract and convert the dates to XPath dates.
+ 
+For example, assuming the following `my-excluded-dates` dataset:
+
+```xml
+<result>
+  <date>2018-12-31</date>
+  <date>2019-01-15</date>
+  <date>2019-01-31</date>
+</result>
+```
+
+You can pass the following expression as parameter to the "Dates to Exclude" common constraint:
+
+```xpath
+for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
+``` 
 
 ## Control validity
 
