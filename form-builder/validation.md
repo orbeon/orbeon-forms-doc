@@ -171,6 +171,10 @@ A common constraint consists of the following:
   - SINCE Orbeon Forms 2017.1
   - applies to attachment types only ("URI")
   - the constraint fails if the attachment mediatype doest not match one of the included mediatypes or mediatype wildcards
+- "Dates to Exclude"
+    - SINCE Orbeon Forms 2018.2
+    - applies to date types only (`xs:date`)
+    - the constraint fails if the date is in the list of supplied dates to exclude
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
 
