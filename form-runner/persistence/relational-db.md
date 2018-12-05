@@ -61,12 +61,20 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
 ### MySQL database setup
 
-
 #### MySQL versions
 
 - __Minimum version__: The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer.
 - __Recommended versions__: However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].
 - __MySQL 5.7__: With MySQL 5.7, since Orbeon Forms 2016.2, you must set the `sql_mode` to [`ALLOW_INVALID_DATES`](http://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_allow_invalid_dates), or you might get errors while creating the database schema.
+
+#### Unicode support
+
+By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-charsets.html) the character encoding and character collation set on the server. [Up to MySQL 5.7](https://dev.mysql.com/doc/refman/5.7/en/charset-server.html) (included), the default character set was `latin1` and the default collation `latin1_swedish_ci`. [Since MySQL 8](https://dev.mysql.com/doc/refman/8.0/en/charset-server.html), the default character set is `utf8mb4` and the default collation `utf8mb4_0900_ai_ci`. So, if you're using MySQL 5.7 or earlier, you must specify the following 2 parameters when starting MySQL:
+
+```
+--character-set-server=utf8mb4
+--collation-server=utf8mb4_0900_ai_ci
+``` 
 
 #### Setting up users and schema
 
@@ -220,7 +228,7 @@ Here is a typical example:
 
     username="orbeon"
     password="orbeon"
-    url="jdbc:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
+    url="jdbc:mysql://localhost:3306/orbeon"/>
 ```
 
 See also the following external links:
