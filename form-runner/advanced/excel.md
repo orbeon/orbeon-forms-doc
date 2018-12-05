@@ -111,6 +111,20 @@ When set to `true`, the user is provided with an option to skip invalid data at 
 
 ![](../images/excel-import-validate-allow-invalid.png)
 
+## Restricting to the latest version
+
+[SINCE Orbeon Forms 2018.2]
+
+With Orbeon Forms 2018.2, you can select which form definition version to import to.
+
+You can disable the ability for the user doing the import to select a version and always automatically select the latest form definition version with the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.import.restrict-to-latest-version.*.*"
+    value="true"/>
+``` 
 
 ## Limitations
 
