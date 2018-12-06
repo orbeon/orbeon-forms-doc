@@ -69,7 +69,7 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
 #### Unicode support
 
-By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-charsets.html) the character encoding and character collation set on the server. [Up to MySQL 5.7](https://dev.mysql.com/doc/refman/5.7/en/charset-server.html) (included), the default character set was `latin1` and the default collation `latin1_swedish_ci`. [Since MySQL 8](https://dev.mysql.com/doc/refman/8.0/en/charset-server.html), the default character set is `utf8mb4` and the default collation `utf8mb4_0900_ai_ci`. So, if you're using MySQL 5.7 or earlier, you must specify the following 2 parameters when starting MySQL:
+By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-charsets.html) the *character encoding* and *character collation* set on the server. [Up to MySQL 5.7](https://dev.mysql.com/doc/refman/5.7/en/charset-server.html) (included), the default character encoding is `latin1` and the default collation `latin1_swedish_ci`. [Since MySQL 8](https://dev.mysql.com/doc/refman/8.0/en/charset-server.html), the default character encoding is `utf8mb4` and the default collation `utf8mb4_0900_ai_ci`. So, if you're using MySQL 5.7 or earlier, you must specify the following 2 parameters when starting MySQL:
 
 ```
 --character-set-server=utf8mb4
