@@ -1,6 +1,4 @@
-# Submissions Extensions
-
-
+# Other Extensions
 
 ## Annotating submitted XML data with xxf:annotate
 
@@ -131,6 +129,54 @@ The `xxf:readonly` attribute on `<xf:instance>` determines if the instance is re
 After an instance is replaced, it can be read-only or not irrelevant of the of `xxf:readonly` on `<xf:instance>`. When the instance is replaced, the replaced instance is read-only if and only if the `<xf:submission>` that does the replacement has a attribute `xxf:readonly="true"`.
 
 When this attribute is set to true on `<xf:submission>` and if the `targetref` attribute is specified, the replacement target must be an instance's root element.
+
+## Using attributes to indicate relevance with xxf:relevant-attribute
+
+[SINCE Orbeon Forms 2018.2]
+
+The `xxf:relevant-attribute` attribute allows specifying the name of an attribute used to indicate relevance *in addition to* the `relevant` Model Item Property (MIP). The attribute indicates a qualified name:
+
+```xml
+<xf:submission
+    ...
+    xxf:relevant-attribute="my:relevant"
+    nonrelevant="remove"
+    xmlns:my="http://example.org/my"/>
+```
+
+Submitting the following data:
+
+```xml
+<form xmlns:my="http://example.org/my">
+    <e1 my:relevant="false">e1</e1>
+    <e2/>
+    <e3 my:relevant="true"/>
+    <e4/>
+    <e5>
+        <e5-iteration my:relevant="false">
+            <e6 my:relevant="true">e61</e6>
+        </e5-iteration>
+        <e5-iteration>
+            <e6 my:relevant="false">e62</e6>
+        </e5-iteration>
+    </e5>
+</form>
+```
+
+produces the following XML:
+
+```xml
+<form xmlns:my="http://example.org/my">
+    <e2/>
+    <e3/>
+    <e4/>
+    <e5>
+        <e5-iteration/>
+    </e5>
+</form>
+```
+
+All existing instances of the attribute, irrelevant from its value, are removed from the resulting XML document.
 
 ## HTTP authentication
 
