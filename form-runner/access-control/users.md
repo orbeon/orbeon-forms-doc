@@ -1,7 +1,5 @@
 # Setup users for access control
 
-
-
 ## Providing information about the user
 
 ### Why Orbeon Forms might need user's information?
@@ -22,7 +20,8 @@ Form Runner can obtain this information either by:
 2. Otherwise, are your permissions dependent on more than users being authenticated and on their roles? In this case you need to use header-based permissions. This would for instance be the case if:
     - You are using [group-based permissions](owner-group.md) and you need finer-grained control over what the user's group is. More specifically, with container-based permissions, users information is obtained through the servlet API, which doesn't have a notion of user's group. So in that case, Form Runner takes the first role to be the group, which is fine in certain use cases, but not in others that require more control over what the user's group is.
     - You are using [organization-based permissions](organization.md), as the servlet API doesn't have any support for organizations.
-3. Otherwise, you can use either container-based or header-based permissions, going with the one that is the most convenient for you. If your information about users is stored in a system supported by your application server, e.g. you are using LDAP and Tomcat, then container-based is most likely the simplest option. If not, you could do such an intergration, e.g. creating a custom secruity realm for Tomcat, and user container-based permissions, but it is in that case most likely simpler for you to go with header-based permissions and set headers in servlet filter or reverse proxy.
+3. Otherwise, do you want to use the [login and logout pages](login-logout.md) provided by Form Runner? If so, you'll want to go with container-based permissions, as those pages rely on facilities provided by the container to do the authentication.
+4. Otherwise, you can use either container-based or header-based permissions, going with the one that is the most convenient for you. If your information about users is stored in a system supported by your application server, e.g. you are using LDAP and Tomcat, then container-based is most likely the simplest option. If not, you could do such an intergration, e.g. creating a custom secruity realm for Tomcat, and user container-based permissions, but it is in that case most likely simpler for you to go with header-based permissions and set headers in servlet filter or reverse proxy.
 
 ### Container driven method
 

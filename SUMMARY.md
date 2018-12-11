@@ -123,6 +123,7 @@
         * [TIFF production](form-runner/feature/tiff-production.md)
         * [Versioning](form-runner/feature/versioning.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
+        * [Wizard view](form-runner/feature/wizard-view.md)
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
         * [Purging old data](form-runner/persistence/purging-old-data.md)
@@ -138,6 +139,7 @@
         * [Securing Form Runner access](form-runner/link-embed/securing.md)
     * [Access control and permissions](form-runner/access-control/README.md)
         * [Users](form-runner/access-control/users.md)
+        * [Login & Logout](form-runner/access-control/login-logout.md)
         * [Deployed forms](form-runner/access-control/deployed-forms.md)
         * [Form fields](form-runner/access-control/form-fields.md)
         * [Editing forms](form-runner/access-control/editing-forms.md)
