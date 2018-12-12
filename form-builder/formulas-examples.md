@@ -330,11 +330,11 @@ Explanation:
 
 ```xpath
 for
-    $start in xs:date('2018-12-15'),
-    $end in xs:date('2018-12-26'),
-    $startW in number(format-date($start, '[F1]')),
-    $endW in number(format-date($end, '[F1]')),
-    $days in days-from-duration($end - $start),
+    $start          in xs:date('2018-12-15'),
+    $end            in xs:date('2018-12-26'),
+    $startW         in number(format-date($start, '[F1]')),
+    $endW           in number(format-date($end, '[F1]')),
+    $days           in days-from-duration($end - $start),
     $daysNoWeekends in $days - (floor($days div 7) * 2)
 return
     if ($days mod 7 != 0 and ($startW = 7 or $endW = 7)) then $daysNoWeekends - 1
