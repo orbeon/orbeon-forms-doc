@@ -1,7 +1,5 @@
 ## XPath tips
 
-
-
 ## Boolean comparisons
 
 Consider:
