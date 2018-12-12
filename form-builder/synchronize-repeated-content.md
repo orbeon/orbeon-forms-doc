@@ -13,11 +13,9 @@ A way of doing this with Orbeon Forms consists in:
 - using a [repeated grid](repeated-grids.md) for the basic information
 - using a [repeated section](section-settings.md#repeated-content), later in the form, for the details
 
-The difficulty is how to synchronize the two. This is doable with custom XForms code, but it is difficult and error-prone.
+The difficulty is how to synchronize the two. This is doable with custom XForms code, but it is difficult and error-prone. So Orbeon Forms 2018.2 and newer includes a component which does this synchronization automatically for you.
 
-So with Orbeon Forms 2018.2, Orbeon Forms includes a special component which does this synchronization automatically.
-
-## How it works
+## Configuration
 
 With Orbeon Forms 2018.2, there is no user interface for this yet. You insert the component by editing the source of the form definition with the ["Edit Source"](edit-source.md) toolbox button, and insert a piece of XML in the source.
 
@@ -42,7 +40,7 @@ In addition, it can automatically copy the value of controls from the source to 
 
 Names are as you see them in the Form Builder user interface with the ["Control Settings"](control-settings.md#basic-options) dialog.
 
-## When does synchronization happen
+## How synchronization works
 
 The synchronization takes place from "left" to "right":
 
@@ -61,10 +59,10 @@ The synchronization takes place from "left" to "right":
 
 ## Full example
 
-The following example means the following:
+The following example does the following:
 
-- synchronize repeated iterations between repeated grid `master-grid` and repeated section `detail-section`
-- for each iteration, also copy over the value of the `traveler-name` and `traveler-birth-date` form controls
+- Synchronize repeated iterations between repeated grid `master-grid` and repeated section `detail-section`.
+- For each iteration, copy over the value of the `traveler-name` and `traveler-birth-date` form controls.
 
 ```xml
     <!-- other Form Builder code here -->
@@ -78,15 +76,15 @@ The following example means the following:
 </xf:model>
 ```
 
-The following screenshots show how the form can look like when using the wizard view:
+The following screenshots show how the form looks like when using the wizard view:
 
 ![Master view](images/sync-master.png)
 
-![Detail view](images/sync-master.png)
+![Detail view](images/sync-detail.png)
 
 ## Limitations
 
-With Orbeon Forms 2018.2, the  `<fr:synchronize-repeated-content>` has limitations:
+With Orbeon Forms 2018.2, the  `<fr:synchronize-repeated-content>` has the following limitations:
 
 - The *source* grid or section must be visible for the synchronization to work. The destination, on the other hand, can be hidden.
 - Both repeated content must be at the top-level: they cannot be nested within other repeated sections.
