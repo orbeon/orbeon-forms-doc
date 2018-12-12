@@ -294,6 +294,11 @@ The following events are dispatched to the `fr:grid` element:
 
 These events are not dispatched if the number of iterations changes by other means, for examle if the data is replaced, or inserts/deletes happen outside of the component.
 
+[SINCE Orbeon Forms 2018.2]
+
+Both events take an `index` context information: 
+
+- `event('index') as xs:integer`: the index of the row added or removed
 
 ## See also
 
