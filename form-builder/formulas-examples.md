@@ -323,7 +323,9 @@ Explanation:
 
 ## Number of weekdays between 2 dates
 
-In the following XPath expression, the start and end dates are inline, so you'll most likely want to modify it to refer to, say, dates entered by users in a form fields. The expression takes Saturday and Sunday to be part of the weekend. Credits: this is a translation to XPath of [Java code written by Roland](https://stackoverflow.com/a/44942039/5295).
+- **Input** – In the following XPath expression, the start and end dates are inline, so you'll most likely want to modify it to refer to, say, dates entered by users in a form fields.
+- **Weekends** – The expression takes Saturday and Sunday to be part of the weekend.
+- **Credits** – This is a translation to XPath of [Java code written by Roland](https://stackoverflow.com/a/44942039/5295).
 
 ```xpath
 for
