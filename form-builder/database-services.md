@@ -105,3 +105,4 @@ Finally, you use the *Set Response Control Values* section of the *Actions Edito
 
 - [HTTP services](http-services.md)
 - [Actions](actions.md)
+- [Synchronizing repeated content](synchronize-repeated-content.md)

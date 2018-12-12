@@ -323,3 +323,4 @@ These expressions with wildcards ignore namespace information completely, so you
 
 - [HTTP services](http-services.md)
 - [Database services](database-services.md)
+- [Synchronizing repeated content](synchronize-repeated-content.md)

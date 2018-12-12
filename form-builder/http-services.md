@@ -114,3 +114,4 @@ You can delete a saved service using the "Remove" button.
 
 - [Actions](actions.md)
 - [Database services](database-services.md)
+- [Synchronizing repeated content](synchronize-repeated-content.md)

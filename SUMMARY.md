@@ -63,6 +63,7 @@
             * [HTTP services](form-builder/http-services.md)
             * [Database services](form-builder/database-services.md)
             * [Actions](form-builder/actions.md)
+            - [Synchronizing repeated content](form-builder/synchronize-repeated-content.md)
         * [PDF production](form-builder/pdf-production.md)
             * [Automatic PDF](form-builder/pdf-automatic.md)
             * [PDF templates](form-builder/pdf-templates.md)
