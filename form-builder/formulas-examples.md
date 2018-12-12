@@ -321,6 +321,24 @@ Explanation:
 - the number of tokens obtained with `count()` corresponds to the number of selected checkboxes
 - then this makes sure the number of tokens is lower than or equal to 3
 
+## Number of weekdays between 2 dates
+
+In the following XPath expression, the start and end dates are inline, so you'll most likely want to modify it to refer to, say, dates entered by users in a form fields. The expression takes Saturday and Sunday to be part of the weekend. Credits: this is a translation to XPath of [Java code written by Roland](https://stackoverflow.com/a/44942039/5295).
+
+```xpath
+for
+    $start in xs:date('2018-12-15'),
+    $end in xs:date('2018-12-26'),
+    $startW in number(format-date($start, '[F1]')),
+    $endW in number(format-date($end, '[F1]')),
+    $days in days-from-duration($end - $start),
+    $daysNoWeekends in $days - (floor($days div 7) * 2)
+return
+    if ($days mod 7 != 0 and ($startW = 7 or $endW = 7)) then $daysNoWeekends - 1
+    else if ($endW < $startW) then $daysNoWeekends - 2
+    else $daysNoWeekends
+```
+
 ## See also
 
 - [Formulas](formulas.md)
