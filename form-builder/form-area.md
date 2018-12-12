@@ -1,7 +1,5 @@
 # Form area
 
-
-
 ## Introduction
 
 The Form Builder form area is meant to looks as much as possible like the published form. [^1] 
@@ -45,11 +43,12 @@ You can perform the following operations on sections.
   it is possible to move a section *into* another section ("right"), or out of its container section ("left"). This allows making
   sections *subsections* of other sections. 
   
+<!--
 ### Subsections
 
-xxx
-
 xxxx TODO screenshots, etc. (short screencast would be good!)
+
+-->
 
 ## Grids
 
