@@ -323,9 +323,10 @@ Explanation:
 
 ## Number of weekdays between 2 dates
 
-- **Input** – In the following XPath expression, the start and end dates are inline, so you'll most likely want to modify it to refer to, say, dates entered by users in a form fields.
-- **Weekends** – The expression takes Saturday and Sunday to be part of the weekend.
-- **Credits** – This is a translation to XPath of [Java code written by Roland](https://stackoverflow.com/a/44942039/5295).
+- *Input* – In the following XPath expression, the start and end dates are inline, so you'll most likely want to modify it to refer to, say, dates entered by users in a form fields.
+- *Weekends* – The expression takes Saturday and Sunday to be part of the weekend.
+- *First day of the week* – The expression assumes Monday is the first day of the week. For instance check that on your system `format-date(xs:date('2018-12-10'), '[F1]')` returns 1. If not, you'll need to change the expressions for `$startW` and `$endW`.
+- *Credits* – This is a translation to XPath of [Java code written by Roland](https://stackoverflow.com/a/44942039/5295).
 
 ```xpath
 for
