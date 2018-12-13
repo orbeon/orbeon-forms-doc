@@ -29,6 +29,10 @@ You do so using the [`fr:dataset()`](/xforms/xpath/extension-form-runner.md#frda
 fr:dataset('activity-dataset')/foo/bar
 ```
 
+## Limitations
+
+Datasets do not work in section templates yet, see [issue #3132](https://github.com/orbeon/orbeon-forms/issues/3132).
+
 ## See also
 
 - Blog post: [Datasets](https://blog.orbeon.com/2017/01/datasets.html)
