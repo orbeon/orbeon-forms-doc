@@ -19,6 +19,25 @@ In addition to the features available through the ["Actions" dialog](actions.md)
 - Clear repeated grid or repeated section iterations.
 - Add repeated grid or repeated section iterations.
 
+## Updating the form definition
+
+You place listeners and actions within the source code, preferably before the end of the main `<xf:model>` content. For example: 
+
+```xml
+    <!-- other Form Builder code here -->
+
+    <<fr:listener
+        version="2018.2"
+        .../>
+        
+    <fr:action name="my-action" version="2018.2">
+        ...
+    </fr:action
+    
+    <!-- Put `<fr:listener>` and `<fr:action>` just above this. -->
+</xf:model>
+``` 
+
 ## Example
 
 The following example:
@@ -35,34 +54,39 @@ The following example:
     - finally, all the `result-dropdown` dropdown control items are updated
 
 ```xml
-<fr:listener
-    version="2018.2"
-    events="activate"
-    controls="my-button"
-    actions="my-action"/>
+    <!-- other Form Builder code here -->
+    
+    <fr:listener
+        version="2018.2"
+        events="activate"
+        controls="my-button"
+        actions="my-action"/>
+    
+    <fr:action name="my-action" version="2018.2">
+    
+        <fr:service-call service="my-service">
+            <fr:value control="foo" ref="/*/request/foo"/>
+            <fr:value control="bar" ref="/*/request/bar"/>
+        </fr:service-call>
+    
+        <fr:repeat-clear repeat="my-repeated-grid"/>
+    
+        <fr:data-iterate ref="/*/response/row">
+            <fr:repeat-add-iteration repeat="my-repeated-grid" at="end"/>
+            <fr:control-setvalue value="@field" control="result-field" at="end"/>
+            <fr:control-setvalue value="@dropdown" control="result-dropdown" at="end"/>
+        </fr:data-iterate>
+    
+        <fr:control-setitems
+            items="/*/response/item"
+            label="@label"
+            value="@value"
+            control="result-dropdown"/>
+    
+    </fr:action>
 
-<fr:action name="my-action" version="2018.2">
-
-    <fr:service-call service="my-service">
-        <fr:value control="foo" ref="/*/request/foo"/>
-        <fr:value control="bar" ref="/*/request/bar"/>
-    </fr:service-call>
-
-    <fr:repeat-clear repeat="my-repeated-grid"/>
-
-    <fr:data-iterate ref="/*/response/row">
-        <fr:repeat-add-iteration repeat="my-repeated-grid" at="end"/>
-        <fr:control-setvalue value="@field" control="result-field" at="end"/>
-        <fr:control-setvalue value="@dropdown" control="result-dropdown" at="end"/>
-    </fr:data-iterate>
-
-    <fr:control-setitems
-        items="/*/response/item"
-        label="@label"
-        value="@value"
-        control="result-dropdown"/>
-
-</fr:action>
+    <!-- Put `<fr:listener>` and `<fr:action>` just above this. -->
+</xf:model>
 ```
 
 ## Syntax
@@ -71,6 +95,8 @@ The following example:
 
 TODO
 
+A listener looks like this:
+
 ```xml
 <fr:listener>
 ```
@@ -78,6 +104,12 @@ TODO
 ### Actions
 
 TODO
+
+An action looks like this:
+
+```xml
+<fr:action>
+```
 
 ```xml
 <fr:service-call>
