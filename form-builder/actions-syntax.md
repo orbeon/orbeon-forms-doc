@@ -16,8 +16,8 @@ In addition to the features available through the ["Actions" dialog](actions.md)
 - Call an arbitrary number of services.
 - Run actions without calling services.
 - Iterate over service responses.
-- Clear repeated grid or repeated sections iterations.
-- Add repeated grid or repeated sections iterations.
+- Clear repeated grid or repeated section iterations.
+- Add repeated grid or repeated section iterations.
 
 ## Example
 
@@ -71,9 +71,45 @@ The following example:
 
 TODO
 
+```xml
+<fr:listener>
+```
+
 ### Actions
 
 TODO
+
+```xml
+<fr:service-call>
+```
+
+```xml
+<fr:data-iterate>
+```
+
+```xml
+<fr:repeat-clear>
+```
+
+```xml
+<fr:repeat-add-iteration>
+```
+
+```xml
+<fr:control-setvalue>
+```
+
+```xml
+<fr:control-setitems>
+```
+
+```xml
+<fr:control-setitems>
+```
+
+```xml
+<fr:dataset-write>
+```
 
 ## See also
 
