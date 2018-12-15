@@ -13,6 +13,7 @@ Orbeon Forms supports services and actions. With Orbeon Forms 2018.2, a first st
 In addition to the features available through the ["Actions" dialog](actions.md), the following enhancements are available:
 
 - Call an action in response to multiple events.
+- Support more event types.
 - Call an arbitrary number of services.
 - Run actions without calling services.
 - Iterate over service responses.
@@ -100,6 +101,27 @@ A listener looks like this:
 ```xml
 <fr:listener>
 ```
+
+#### Events supported
+
+Controls:
+
+- `enabled`: the control has become enabled
+- `disabled`: the control has become disabled
+- `visible`: the control has become visible (for example in a wizard page)
+- `hidden`: the control has become hidden (for example in a wizard page)
+- `value-changed`: the value of an enabled control has changed
+- `activated`: the control has been activated (clicked, or enter in text field) 
+- `item-selected`: an item of an enabled control has been selected
+- `item-deselected`: an item of an enabled control has been deselected
+
+Form load:
+
+- `form-load-before-data`: run before the data's initial values are calculated:
+- `form-load-after-data`: run when the data is ready:
+- `form-load-after-controls`: run after the controls are ready:
+
+See also [Running processes upon page load](/configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load) for the detail of these events.
 
 ### Actions
 

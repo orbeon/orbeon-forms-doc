@@ -1,7 +1,5 @@
 # Form Runner Liferay Proxy Portlet
 
-
-
 ## Availability
 
 This is an Orbeon Forms PE feature.

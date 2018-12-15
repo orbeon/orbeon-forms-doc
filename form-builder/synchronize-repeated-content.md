@@ -4,6 +4,8 @@
 
 This is available since Orbeon Forms 2018.2.
 
+This is an Orbeon Forms PE feature.
+
 ## Rationale
 
 Often, forms require some kind of [master-detail interface](https://en.wikipedia.org/wiki/Master%E2%80%93detail_interface), where you first enter a list of initial information, and then complete the information for each item of the list in more details on a separate screen.
