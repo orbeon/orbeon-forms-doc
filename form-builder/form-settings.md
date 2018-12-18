@@ -64,6 +64,18 @@ Here is how hints appear depending on the type of control they are associated wi
 
 <img alt="" src="../form-runner/images/placeholder-and-inline-hints.png" width="932">
 
+## Control Settings
+
+[SINCE Orbeon Forms 2018.2]
+
+This tab shows settings for specific controls. Those settings apply to all control on the form except when they are overridden by individual settings in the "Control Settings" dialog.
+
+For example, you can set a "Digits After Decimal" setting global to the form, and then override it on specific number controls as needed. 
+
+![Number Control Settings](images/form-settings-controls-number.png) 
+
+![Date Control Settings](images/form-settings-controls-date.png)
+
 ## Wizard Options
 
 [SINCE Orbeon Forms 2018.1] These options are now in a separate tab.
@@ -88,11 +100,26 @@ For details, see [Wizard View](../form-runner/feature/wizard-view.md).
     - Use Default: use the [`oxf.xforms.xbl.fr.wizard.subsections-toc` property](../configuration/properties/form-runner.md)
     - "Show subsections for the active section only", "Show subsections for all sections", "Don't show subsections": use the given setting for this form definition, no matter how the property is configured.
 
-## Form Statistics
+## About this Form
 
-Form statistics show various counts of form elements.
+![About this Form](images/form-settings-about.png)
 
-![Form Statistics](images/form-settings-stats.png)
+### Versions
+
+[SINCE Orbeon Forms 2018.2]
+
+This area shows relevant Orbeon Forms versions:
+
+- "Created with Version": version with which this form definition was created.
+    - *NOTE: This is blank for forms created prior to Orbeon Forms 2018.1.*
+- "Updated with Versions": versions with which this form definition was updated This is updated:
+    - when saving the form definition
+    - when upgrading the form definition from the Form Runner Home page.
+- "Current Version": the current Orbeon Forms version.
+
+### Form Statistics
+
+Form statistics show counts of various form elements.
 
 ## See also
 
