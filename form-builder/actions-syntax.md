@@ -99,8 +99,17 @@ TODO
 A listener looks like this:
 
 ```xml
-<fr:listener>
+<fr:listener
+    version="2018.2"
+    events="..."
+>
 ```
+
+- `version`
+    - mandatory action format version
+    - must always be `2018.2`
+- `events`
+    - mandatory list of space-separated event tokens
 
 #### Events supported
 
@@ -130,8 +139,14 @@ TODO
 An action looks like this:
 
 ```xml
-<fr:action>
+<fr:action version="2018.2">
 ```
+
+- `version`
+    - mandatory action format version
+    - must always be `2018.2`
+    
+    
 
 ```xml
 <fr:service-call>
@@ -147,6 +162,10 @@ An action looks like this:
 
 ```xml
 <fr:repeat-add-iteration>
+```
+
+```xml
+<fr:repeat-remove-iteration>
 ```
 
 ```xml
