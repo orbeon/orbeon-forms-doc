@@ -145,6 +145,7 @@ A common constraint consists of the following:
   - SINCE Orbeon Forms 4.10
   - applies to "String" and "Email" types only
   - the constraint fails if the length of the value converted to a string is smaller than the specified integer value
+  ![Min and max length constraints](images/min-max-constraints.png)
 - "Positive"
   - SINCE Orbeon Forms 2016.1
   - applies to "Decimal" and "Integer" types only
@@ -176,11 +177,10 @@ A common constraint consists of the following:
 - "Dates to Exclude"
     - SINCE Orbeon Forms 2018.2
     - applies to date types only (`xs:date`)
-    - the constraint fails if the date is in the list of supplied dates to exclude
+    - the constraint fails if the date is in the list of supplied dates to exclude and the dates are also marked as excluded in the date picker, as is the case of the 18th and 20th in the screenshot below
+    ![Dates disabled in date picker](images/validation-excluded-dates.png)
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
-
-![Min and max length constraints](images/min-max-constraints.png)
 
 #### Dates to Exclude constraint
 
