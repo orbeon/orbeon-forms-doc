@@ -18,7 +18,7 @@ In Form Builder, a form definition is identified by a two-level hierarchy of nam
 - __Application name__: a name which allows grouping form together. The application name (or app name) can be, for example:
   - a company name such as "orbeon" or "acme"
   - a company entity such as "hr" or "sales" or "engineering"
-  - a project name such as "mercury", "foobar"
+  - a project name such as "mercury" or "phoenix"
 - __Form name__: a name which is local to an application name, for example "address" or "claim".
 
 This two-level hierarchy allows for easy grouping of forms, and allows using a single instance of Form Builder to host distinct applications. See [Multitenancy](../feature/multitenancy.md).
