@@ -1,7 +1,5 @@
 # Validation
 
-
-
 ## Introduction
 
 An important part of designing a form is to prevent incorrect data from being captured. For example:
@@ -131,11 +129,35 @@ There can be more than one formulas applied to a given control. You add formulas
 
 Each formula can have a *level* associated with it and a custom alert message.
 
-### Common constraints
+### Dates to Exclude constraint
 
-#### List of common constraints
+[SINCE Orbeon Forms 2018.2]
 
-A common constraint consists of the following:
+The "Dates to Exclude" constraint takes a list (sequence) of dates to exclude, provided by a formula. The constraint fails if users type a date is in the list of supplied dates to be excluded. Also, dates in that list are disabled in the date picker, as is the case of the 18th and 20th in the screenshot below.
+
+![Dates disabled in date picker](images/validation-excluded-dates.png)
+
+You might have a service storing a the list of dates to exclude in a [dataset](/form-runner/feature/datasets.md), for example. From that dataset, you can extract and convert the dates to XPath dates.
+ 
+For example, assuming the following `my-excluded-dates` dataset:
+
+```xml
+<result>
+  <date>2018-12-31</date>
+  <date>2019-01-15</date>
+  <date>2019-01-31</date>
+</result>
+```
+
+You can pass the following expression as parameter to the "Dates to Exclude" common constraint:
+
+```xpath
+for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
+```
+
+Note that the dates strings passed to the `xs:date()` constructor must be in ISO format (`yyyy-mm-dd`), as is the standard in XML.
+
+### Other common constraints
 
 - "Maximum Length"
   - SINCE Orbeon Forms 4.10
@@ -145,7 +167,6 @@ A common constraint consists of the following:
   - SINCE Orbeon Forms 4.10
   - applies to "String" and "Email" types only
   - the constraint fails if the length of the value converted to a string is smaller than the specified integer value
-  ![Min and max length constraints](images/min-max-constraints.png)
 - "Positive"
   - SINCE Orbeon Forms 2016.1
   - applies to "Decimal" and "Integer" types only
@@ -174,39 +195,10 @@ A common constraint consists of the following:
   - SINCE Orbeon Forms 2017.1
   - applies to attachment types only ("URI")
   - the constraint fails if the attachment mediatype doest not match one of the included mediatypes or mediatype wildcards
-- "Dates to Exclude"
-    - SINCE Orbeon Forms 2018.2
-    - applies to date types only (`xs:date`)
-    - the constraint fails if the date is in the list of supplied dates to exclude and the dates are also marked as excluded in the date picker, as is the case of the 18th and 20th in the screenshot below
-    ![Dates disabled in date picker](images/validation-excluded-dates.png)
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
 
-#### Dates to Exclude constraint
-
-[SINCE Orbeon Forms 2018.2]
-
-The "Dates to Exclude" common constraint takes a list (sequence) of dates to exclude, provided by a formula.
-
-You might have a service storing a the list of dates to exclude in a [dataset](/form-runner/feature/datasets.md), for example. From that dataset, you can extract and convert the dates to XPath dates.
- 
-For example, assuming the following `my-excluded-dates` dataset:
-
-```xml
-<result>
-  <date>2018-12-31</date>
-  <date>2019-01-15</date>
-  <date>2019-01-31</date>
-</result>
-```
-
-You can pass the following expression as parameter to the "Dates to Exclude" common constraint:
-
-```xpath
-for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
-```
-
-Note that the dates strings passed to the `xs:date()` constructor must be in ISO format (`yyyy-mm-dd`), as is the standard in XML.
+![Min and max length constraints](images/min-max-constraints.png)
 
 ## Control validity
 
