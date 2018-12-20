@@ -313,3 +313,12 @@ For each of the documents found, a `<document>` element is returned:
     - a space separated subset of the following token: `read`, `write`, `update`, and `delete`, whichever operations the user is allowed to perform; also see [Supporting permissions in your persistence API implementation](https://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)
 
 Each document contains one <detail> element in the order determined by the `<query>` elements with a summary-field set to `true` in the request. The text value of the `<detail>` element is the value of the field in the document found.
+
+## See also
+
+- [CRUD](crud.md)
+- [List form data attachments](list-form-data-attachments.md)
+- [Form metadata](forms-metadata.md)
+- [Caching](caching.md)
+- [Versioning](versioning.md)
+- [Implementing a persistence service](implementing-a-persistence-service.md)

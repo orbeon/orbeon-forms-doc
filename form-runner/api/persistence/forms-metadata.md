@@ -48,6 +48,32 @@ Optionally, you can pass the URL parameter `all-versions`:
 
 ### Response
 
+#### Response format 
+
+Each `<form>` element contains:
+
+- `<application-name>`
+- `<form-name>`
+- All the elements inside the *form metadata* instance of the corresponding form definition
+    - This can be retrieved with the following XPath expression:  
+      `/xh:html/xh:head/xf:model/xf:instance[@id = 'fr-form-metadata']/metadata/*`
+    - [SINCE Orbeon Forms 2016.1]
+        - The `<description>` and `<migration>` elements are excluded.
+- `<last-modified-time>`
+    - [SINCE Orbeon Forms 4.4]
+    - [UNTIL Orbeon Forms 4.10.x]
+        - last modification date/time for the app/form combination
+    - [SINCE Orbeon Forms 2016.1]
+        - last modification date/time for the app/form/version combination
+- `<form-version>`
+    - [SINCE Orbeon Forms 2016.1]
+    - contains the version number of the given `<form>`
+    - *NOTE: This is only returned when using a relational database, as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524).*
+- `<available>`
+    - set to `false` when the form definition is marked as not available
+
+#### Latest published version
+
 The document returned by this API looks like this:
 
 ```xml
@@ -87,23 +113,69 @@ The document returned by this API looks like this:
 </forms>
 ```
 
-Each `<form>` element contains:
+#### All versions
 
-- `<application-name>`
-- `<form-name>`
-- All the elements inside the *form metadata* instance of the corresponding form definition
-    - This can be retrieved with the following XPath expression:  
-      `/xh:html/xh:head/xf:model/xf:instance[@id = 'fr-form-metadata']/metadata/*`
-    - [SINCE Orbeon Forms 2016.1]
-        - The `<description>` and `<migration>` elements are excluded.
-- `<last-modified-time>`
-    - [SINCE Orbeon Forms 4.4]
-    - [UNTIL Orbeon Forms 4.10.x]
-        - last modification date/time for the app/form combination
-    - [SINCE Orbeon Forms 2016.1]
-        - last modification date/time for the app/form/version combination
-- `<form-version>`
-    - [SINCE Orbeon Forms 2016.1]
-    - contains the version number of the given `<form>`
-    - *NOTE: This is only returned when using a relational database, as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524).*
-    
+The document returned by this API looks like this, here for the `acme/order` form:
+
+```xml
+<forms>
+    <form operations="admin *">
+        <application-name>acme</application-name>
+        <form-name>order</form-name>
+        <last-modified-time>2018-11-02T21:52:46.173Z</last-modified-time>
+        <form-version>1</form-version>
+        <title xml:lang="en">Contact</title>
+        <title xml:lang="fr">Contact</title>
+    </form>
+    <form operations="admin *">
+        <application-name>acme</application-name>
+        <form-name>order</form-name>
+        <last-modified-time>2018-11-02T21:54:22.481Z</last-modified-time>
+        <form-version>2</form-version>
+        <title xml:lang="en">Contact</title>
+        <title xml:lang="fr">Contact</title>
+    </form>
+    <form operations="admin *">
+        <application-name>acme</application-name>
+        <form-name>order</form-name>
+        <last-modified-time>2018-12-05T23:31:33.320Z</last-modified-time>
+        <form-version>3</form-version>
+        <title xml:lang="en">Contact</title>
+        <title xml:lang="fr">Contact</title>
+    </form>
+    <form operations="admin *">
+        <application-name>acme</application-name>
+        <form-name>order</form-name>
+        <last-modified-time>2018-12-13T00:12:11.650Z</last-modified-time>
+        <form-version>4</form-version>
+        <title xml:lang="en">Contact</title>
+        <title xml:lang="fr">Contact</title>
+    </form>
+    <form operations="admin *">
+        <application-name>acme</application-name>
+        <form-name>order</form-name>
+        <last-modified-time>2018-12-20T19:30:10.435Z</last-modified-time>
+        <form-version>5</form-version>
+        <title xml:lang="en">Contact</title>
+        <title xml:lang="fr">Contact</title>
+        <available>false</available>
+    </form>
+</forms>
+```
+
+Note that the versions do not have to be in order and some versions can be missing.
+
+Here note that version 5 is marked as not available with:
+
+```xml
+<available>false</available>
+```
+
+## See also
+
+- [CRUD](crud.md)
+- [Search](search.md)
+- [Form metadata](forms-metadata.md)
+- [Caching](caching.md)
+- [Versioning](versioning.md)
+- [Implementing a persistence service](implementing-a-persistence-service.md)

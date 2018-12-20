@@ -1,7 +1,5 @@
 # Implementing a Persistence Service
 
-
-
 ## Scenario
 
 This scenario describes how company Acme can go about implementing their own persistence service.
@@ -32,3 +30,12 @@ You must then implement a server component responding to the `/my-persistence` p
 * In the case of `POST`, perform a search. This might require generating an SQL query, for example.
 
 Depending on the type of storage chosen, storage operations may be more or less complex.
+
+## See also
+
+- [CRUD](crud.md)
+- [Search](search.md)
+- [List form data attachments](list-form-data-attachments.md)
+- [Form metadata](forms-metadata.md)
+- [Caching](caching.md)
+- [Versioning](versioning.md)

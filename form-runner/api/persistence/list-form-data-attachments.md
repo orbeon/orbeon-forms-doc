@@ -52,3 +52,12 @@ Example response body:
 ## Permissions
 
 The caller must either call the service internally or have proper credentials to access the data (username, group, roles).
+
+## See also
+
+- [CRUD](crud.md)
+- [Search](search.md)
+- [Form metadata](forms-metadata.md)
+- [Caching](caching.md)
+- [Versioning](versioning.md)
+- [Implementing a persistence service](implementing-a-persistence-service.md)

@@ -1,7 +1,5 @@
 # Persistence API
 
-
-
 ## Children pages
 
 - [CRUD](crud.md)
