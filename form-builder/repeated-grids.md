@@ -48,9 +48,27 @@ The "Visibility" and "Read-Only" formulas control whether the entire grid (inclu
 
 ### Repeat settings
 
+#### Overview
+
 The repeat settings control whether to use a custom iteration name (not recommended in most cases), and the minimum/maximum number of repeat iterations allowed.
 
 ![Repeated Content](images/repeated-grid-settings-repeat.png)
+
+#### Minimum and maximum number of iterations
+
+These settings can be predefined numbers, or formulas.
+
+#### Freeze repetitions
+
+[SINCE Orbeon Forms 2018.2]
+
+This setting can be a predefined number, or a formula.
+
+This allows *freezing* the first *n* iterations of a repeated grid or repeated section. Frozen iterations cannot be removed or moved by the user. The grid menus and buttons reflect that those operations are not possible.
+
+The number of frozen iterations must be at most the number of minimal iterations.
+
+#### Initial value formulas
 
 [SINCE Orbeon Forms 2016.1]
 
@@ -61,6 +79,8 @@ With Orbeon Forms 2016.1, the option is enabled by default for new forms and new
 With the option enabled, new iterations can have dynamic initial values:
 
 ![Initial Values](images/iterations-initial-values.png)
+
+#### Initial number of iterations uses template
 
 [SINCE Orbeon Forms 2016.1]
 
