@@ -216,6 +216,10 @@ Example:
         form=invoice&
         form-version=1&
         language=en
+        
+[SINCE Orbeon Forms 2018.2]
+        
+If a parameter name is already present on the URL, the parameter initially on the URL takes precedence. 
 
 ## Sending PDF and TIFF content 
 
