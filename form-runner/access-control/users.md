@@ -228,3 +228,13 @@ The value of the header must be valid JSON, and follow the format described belo
 * __Persistence__ — These headers are forwarded to the persistence layer, which can make use of them. In particular, the [relational persistence layers](../../form-runner/persistence/relational-db.md) store the current username when doing any database update.
 
 See also [Accessing liferay users and roles](../../form-runner/link-embed/liferay-full-portlet.md#accessing-liferay-users-and-roles).
+
+## See also
+
+- [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
+- [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
+- [Form fields](form-fields.md) - How to control access to specific form fields based on the user user's roles.
+- [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
+    - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
+    - [Organization-based permissions](organization.md) – Access based on organizational structure.
+- [Scenarios](scenarios.md)
