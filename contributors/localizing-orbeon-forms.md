@@ -113,10 +113,13 @@ which is easily missed.*
 
 These files are used by the Form Builder toolbox for built-in XForms controls.
 
-As of Orbeon Forms 2016.1, the following files need help:
+As of Orbeon Forms 2018.2, the following files need help:
 
 - [attachment-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/attachment-controls.xbl)
 - [output-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/output-controls.xbl)
+    - UNTIL Orbeon Forms 2018.1
+- [utility-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/utility-controls.xbl)
+    - SINCE Orbeon Forms 2018.2
 - [text-output.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-output.xbl)
 - [text-textarea-autosize.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-textarea-autosize.xbl)
 
