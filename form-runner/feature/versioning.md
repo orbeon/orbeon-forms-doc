@@ -92,6 +92,7 @@ The `oxf.fr.detail.data-migration` is set as follows by default:
 - [Publishing](/form-builder/publishing.md)
     - [Overwriting of existing version](/form-builder/publishing.md#versioning)
     - [Versioning comments](/form-builder/publishing.md#versioning-comments)
+- [Summary Page](/form-builder/summary-page.md#versioning)
 - Blog posts:
     - [Form versioning](https://blog.orbeon.com/2014/02/form-versioning.html)
     - [Choosing the best versioning option when publishing a form](https://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)

@@ -27,6 +27,7 @@ As of 2016-04-19 this page is still being updated.
     - Repeated sections: [blog post](https://blog.orbeon.com/2014/01/repeated-sections.html)
     - Options for new repeat iterations: [blog post](https://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
     - Minimal appearances of repeated grids and sections: [blog post](https://blog.orbeon.com/2015/12/leaner-repeated-sections-and-grids.html)
+    - Frozen iterations
 - Section Templates:
     - main feature: [doc](form-builder/section-templates.md)
     - merging: [doc](form-builder/section-templates.md#merging-section-templates)
@@ -34,6 +35,7 @@ As of 2016-04-19 this page is still being updated.
 - Versioning of form definitions: [doc](/form-runner/feature/versioning.md), [blog post about concept](https://blog.orbeon.com/2014/02/form-versioning.html), [blog post about publish options](https://blog.orbeon.com/2015/01/choosing-best-versioning-option-when.html)
     - overwriting of existing version: [doc](form-builder/publishing.md#versioning)
     - associating a comment with a given form version: [doc](form-builder/publishing.md#versioning), [blog post](https://blog.orbeon.com/2016/09/versioning-comments.html)
+    - simple data migration: [doc](/form-runner/feature/versioning.md#simple-data-migration), [blog post](https://blog.orbeon.com/2018/09/simple-data-migration.html)
 - Form field validation: [doc](form-builder/validation.md), [blog post](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
     - required fields (also via formula, see [blog post](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html))
     - whitespace trimming: [doc](form-builder/validation.md#trimming-leading-and-trailing-spaces), [blog post](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
@@ -55,6 +57,7 @@ As of 2016-04-19 this page is still being updated.
     - relational database support: [doc](form-runner/persistence/relational-db.md), [blog post about new indexes](https://blog.orbeon.com/2016/06/new-indexes-boost-performance-with.html)
 - Datasets: [doc](form-runner/feature/datasets.md), [blog post](https://blog.orbeon.com/2017/01/datasets.html)
 - Multitenancy: [doc](/form-runner/feature/multitenancy.md)
+- User menu: [doc](/form-runner/access-control/login-logout)
 
 ### Form Builder
 
@@ -72,6 +75,9 @@ As of 2016-04-19 this page is still being updated.
     - Form Options: [doc](form-builder/form-settings.md#form-options)
         - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
         - Wizard view: [doc](form-runner/feature/wizard-view.md)
+    - Control Settings
+    - Wizard Options
+    - About this Form
 - Control Settings: [doc](form-builder/control-settings.md)
     - control name
     - Summary page options
@@ -121,6 +127,7 @@ As of 2016-04-19 this page is still being updated.
         - optional separate table of contents
 - File scan API: [doc](form-runner/api/other/file-scan-api.md) 
 - Home Page: [doc](form-runner/feature/home-page.md), [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
+- Excel Import: [doc](/form-runner/advanced/excel.md)
 - Buttons and Processes: [doc](form-runner/advanced/buttons-and-processes/README.md), [blog post](https://blog.orbeon.com/2013/04/more-powerful-buttons.html)
 - Autosave: [doc](form-runner/persistence/autosave.md), [blog post](https://blog.orbeon.com/2013/10/autosave.html)
 - PDF
@@ -144,6 +151,7 @@ As of 2016-04-19 this page is still being updated.
 - Appearance of repeated sections: [properties doc](configuration/properties/form-runner.md#appearance-of-repeated-sections), [component doc](form-runner/component/grid.md#repeated-mode)
 - Appearance of repeated grids: [properties doc](configuration/properties/form-runner.md#appearance-of-grids-sections), [component doc](form-runner/component/section.md#repeated-mode)
 - Function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
+- Repeated content synchronization: [doc](/form-builder/synchronize-repeated-content.md)
 - Grids
     - HTML tables-free layout: [blog post](https://blog.orbeon.com/2016/06/saying-farewell-to-html-tables.html))
 - Services and APIs
@@ -173,6 +181,8 @@ As of 2016-04-19 this page is still being updated.
     - US state
 - Date and time controls
     - Date, time, date and time
+        - date picker
+        - option to exclude dates from the date picker: [doc](/form-builder/validation.md#dates-to-exclude-constraint) 
     - Dropdown date
     - Fields date
 - Selection controls [doc](form-builder/toolbox.md#selection-controls)
