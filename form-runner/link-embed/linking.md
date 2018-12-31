@@ -35,6 +35,20 @@ The `/fr/clerk/marriage-registration/new` in our example is what is referred to 
 
 ## URL parameters
 
+### Summary page
+
+[SINCE Orbeon Forms 2018.2]
+
+You can pass the `form-version` URL parameter:
+
+```
+/fr/[APPLICATION_NAME]/[FORM_NAME]/summary?form-version=2
+```
+
+The page will return a "Not Found" error if the specified version is not found.
+
+By default, the latest available version is selected.
+
 ### New empty form data
 
 When using versioning, you can pass the `form-version` URL parameter:
