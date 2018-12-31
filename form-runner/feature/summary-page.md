@@ -12,11 +12,18 @@ The Form Runner Summary page shows, for a given published form, the list of acce
 - Navigating to the Home page and Import page
 - Opening a PDF or TIFF version of the form
 
+![Summary Page for the Bookshelf form](../images/summary-bookshelf.png)
+
 ## Columns
 
-- Created: This is the data's creation date. 
-- Last Modified: This is the data's last modification date. 
-- Custom columns: You specify those when editing the form definition, using the [Control Settings dialog](/form-builder/control-settings.md).
+- __Created:__
+    - This is the data's creation date.
+    - You can optionally remove this column via [configuration](/configuration/properties/form-runner-summary-page.md).
+- __Last Modified:__
+    - This is the data's last modification date.
+    - You can optionally remove this column via [configuration](/configuration/properties/form-runner-summary-page.md). 
+- __Custom columns:__
+    - You specify those when editing the form definition, using the [Control Settings dialog](/form-builder/control-settings.md).
 
 <!-- 
 
