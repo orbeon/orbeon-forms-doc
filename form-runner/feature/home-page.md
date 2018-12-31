@@ -1,7 +1,5 @@
 # Home Page
 
-
-
 ## Introduction
 
 The Form Runner Home page is a start page for accessing forms deployed in Form Runner.
@@ -333,5 +331,6 @@ For each form definition the current user has access to, the following links are
 
 ## See also
 
+- [Summary Page](summary-page.md)
 - [Access control and permissions](../access-control-and-permissions.md)
 - [Form Builder permissions](../access-control/editing-forms.md#form-builder-permissions)

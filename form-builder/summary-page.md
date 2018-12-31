@@ -1,16 +1,13 @@
 # The Summary page
 
-
-
 ## Purpose
 
 The Form Builder summary page is your starting point when you work with Form Builder. It allows:
 
-* Listing, searching and navigating form definitions
+* Listing and searching form definitions
 * Creating new form definitions
-* Editing form definitions
+* Editing existing form definitions
 * Deleting form definitions
-* Testing form definitions
 
 _NOTE: Form definitions are usually stored in a database on the server. You do not usually keep them on your own computer._
 
@@ -26,7 +23,7 @@ _NOTE: The exact URL might be provided by your IT organization._
 
 Once you reach the summary page, you will either see an empty list, or a list containing existing form definitions, as shown in this screenshot.
 
-![](images/summary.png)
+![The Summary page](images/summary.png)
 
 For each form definition, the list shows:
 

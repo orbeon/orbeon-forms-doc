@@ -1,7 +1,5 @@
 # Summary page configuration properties
 
-
-
 ## Adding your own CSS files
 
 [SINCE Orbeon Forms 2017.1]
@@ -47,7 +45,7 @@ Number of rows shown in the Summary page.
 
 By default, the Summary page shows a Created and Modified columns:
 
-![](/form-runner/images/summary-created-last-modified.png)
+![Created and Last Modified](/form-runner/images/summary-created-last-modified.png)
 
 You can remove either one of those columns by setting the value appropriate property to `false`:
 

@@ -122,6 +122,7 @@
         * [Mobile support](form-runner/feature/mobile.md)
         * [Multitenancy](form-runner/feature/multitenancy.md)
         * [Responsive design](form-runner/feature/responsive-design.md)
+        * [Summary page](form-runner/feature/summary-page.md)
         * [TIFF production](form-runner/feature/tiff-production.md)
         * [Versioning](form-runner/feature/versioning.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
