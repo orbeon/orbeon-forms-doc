@@ -1,7 +1,5 @@
 # Release History
 
-
-
 ## Upcoming releases
 
 See the [Orbeon Forms roadmap](roadmap.md).
@@ -10,13 +8,14 @@ See the [Orbeon Forms roadmap](roadmap.md).
 
 Starting with Orbeon Forms 2016.1, Orbeon Forms uses a versioning scheme with the number of the year first followed by the number of the major release during that year.
 
-Since 2013 we have had between two and four major releases a year. As of 2018, we plan to continue having at least two major releases per year. Minor releases, when needed, have an extra digit like 2016.1.1, 2016.1.2, etc. This doesn't change anything to subscriptions or support.
+Since 2013 we have had between two and four major releases a year. As of 2019, we plan to continue having at least two major releases per year. Minor releases, when needed, have an extra digit like 2018.1.1, 2018.1.2, etc. This doesn't change anything to subscriptions or support.
 
 ## Orbeon Forms 4.x and newer
 
 Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 
 - 2018
+    - 2018.2 PE and 2018.2 CE: December 31, 2018 ([blog post](https://blog.orbeon.com/2018/12/orbeon-forms-20182.html))
     - 2018.1.3 PE: November 13, 2018 ([blog post](https://blog.orbeon.com/2018/11/orbeon-forms-201813-pe.html))
     - 2018.1.2 PE: October 5, 2018 ([blog post](https://blog.orbeon.com/2018/10/orbeon-forms-201812-pe.html))
     - 2018.1.1 PE and 2018.1.1 CE: September 18, 2018 ([blog post](https://blog.orbeon.com/2018/09/orbeon-forms-201811-pe-and-ce.html))

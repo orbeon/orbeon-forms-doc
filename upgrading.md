@@ -53,6 +53,7 @@ Finally, let us know if you encounter issues while upgrading, via the [community
 
 When about to upgrade, we recommend you go through the release notes for all versions between the version you are using and the one you are upgrading to, paying particular attention to the compatibility notes sections. Here are the releases which contain backward compatibility notes:
 
+- [2018.2](https://blog.orbeon.com/2018/12/orbeon-forms-20182.html)
 - [2018.1](https://blog.orbeon.com/2018/09/orbeon-forms-20181.html)
 - [2017.1](https://blog.orbeon.com/2017/06/orbeon-forms-20171.html)
 - [2016.2](https://blog.orbeon.com/2016/08/orbeon-forms-20162.html)
