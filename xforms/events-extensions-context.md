@@ -58,11 +58,11 @@ The following extension attributes are supported:
 | Context | Type | Description |
 | --- | --- | --- |
 | `xxf:control-position` | `xs:integer` | event target's position in the user interface. This is the control's static position, i.e. this does not reflect  possible repeat iterations |
-| `xxf:binding` | `node()?` | event target's single-node binding if any |
-| `xxf:label` | `xs:string?` | event target's label value if any |
-| `xxf:hint` | `xs:string?` | event target's hint value if any |
-| `xxf:help` | `xs:string?` | event target's help value if any |
-| `xxf:alert` | `xs:string?` | event target's alert value if any |
+| `xxf:binding` | `node()*`    | event target's single-item or repeat binding if any |
+| `xxf:label`   | `xs:string?` | event target's label value if any |
+| `xxf:hint`    | `xs:string?` | event target's hint value if any |
+| `xxf:help`    | `xs:string?` | event target's help value if any |
+| `xxf:alert`   | `xs:string?` | event target's alert value if any |
 
 On `xforms-value-changed`, the following extension attributes are supported:
 
@@ -74,6 +74,10 @@ On `xforms-select`, the following extension attributes are supported:
 
 - `event('xxf:item-value')`
   When this event is dispatched to in response to a selection control item being selected, returns the value of the selected item.
+
+[SINCE Orbeon Forms 2018.2]
+
+`xxf:binding` also returns the binding if the control has a binding but is non-relevant. In previous versions, if the control was non-relevant, `xxf:binding` always returned the empty sequence.
 
 ## Other events
 
