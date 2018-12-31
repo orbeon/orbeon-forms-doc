@@ -1,8 +1,6 @@
 # Accessing Data
 
-
-
-## Situation
+## Scenario
 
 You've created forms with Form Builder, published those forms, and setup Orbeon Forms so it [stores data captured by the forms in your relational database](/form-runner/persistence/relational-db.md). Now, how can another app of yours access this data?
 
