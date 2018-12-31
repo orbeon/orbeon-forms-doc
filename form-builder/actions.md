@@ -181,7 +181,7 @@ Selection controls include dropdown menus, checkboxes, and more.
 - __Destination Selection Control.__
     - Specifies the selection control whose items must be set. Only selection controls appear in this list.
     - Depending on the relative position of the source of the action and the target selection controls, one or more "closest" controls can be selected (see the detailed explanation of the behavior below).
-- __Items XPath expression.__
+- __Choices XPath expression.__
     - The XPath expression must point to a set of element or attribute nodes of the response body returned by the service.
     - For each node returned, an item is created.
 - __Label XPath expression.__ The XPath expression must return the text of the label for an item. It is relative to the current item node.
