@@ -40,6 +40,12 @@ You can configure what page users will be taken to when they select "Login", "Lo
 
 *NOTE: Orbeon Forms does not provide an out of the box system to create and manage users. The `register` menu is intended instead to link to your existing user management system.*
 
+## Default login page
+
+Form Runner comes with a simple default login page which can be used with container-based authentication.
+
+![Default login page](../images/login-page.png)
+
 ## See also
 
 - [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
