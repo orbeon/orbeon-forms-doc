@@ -17,6 +17,10 @@ The `xxf:binding()` function returns a control's binding, that is the item or it
 
 _NOTE: This function can return not only nodes, but also atomic items._
 
+[SINCE Orbeon Forms 2018.2]
+
+This function also returns the binding if the control has a binding but is non-relevant. In previous versions, if the control was non-relevant, this function always returned the empty sequence.
+
 ## xxf:binding-context()
 
 ```xpath
