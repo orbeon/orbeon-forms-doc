@@ -1,7 +1,5 @@
 # Actions
 
-
-
 ## Introduction
 
 The Form Builder Actions Editor is an [Orbeon Forms PE](https://www.orbeon.com/download) feature and allows you to implement simple actions in your form. The basic philosophy goes as follows:
@@ -15,6 +13,18 @@ The Form Builder Actions Editor is an [Orbeon Forms PE](https://www.orbeon.com/d
 Actions are tightly coupled with services. In the future, support might be added for actions which do not require services.
 
 ## Basic action configuration
+
+### Creating or updating an action
+
+You create a new action or update an existing action in the "Advanced" tab of the toolbox. This opens the Actions Editor.
+
+### Reordering actions
+
+[SINCE Orbeon Forms 2018.2]
+
+You can reorder actions by drag and drop in the toolbox. Sometimes, the specific order of actions is important, or you might just want to organize them in a way that makes sense for your form.
+
+![List of actions in the toolbox](images/toolbox-actions.png) 
 
 ### With Orbeon Forms 2017.1 or newer
 
