@@ -77,7 +77,14 @@ You don't need to do anything special to use this feature.
 
 [SINCE Orbeon Forms 4.4]
 
-If the value of `oxf.fr.detail.autosave-delay` is 0 or negative, autosaving is disabled.
+If the value of `oxf.fr.detail.autosave-delay` is 0 or negative, autosaving is disabled:
+
+```xml
+<property 
+    as="xs:integer" 
+    name="oxf.fr.detail.autosave-delay.*.*" 
+    value="0"/>
+```
 
 The following property enables or disable autosave for a given persistence provider, as autosave requires support from the persistence provider.
 
