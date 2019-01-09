@@ -38,7 +38,7 @@ The idea is, as some of those tasks are large, to do it incrementally when possi
 
 ## Upcoming releases
 
-### Orbeon Forms 2018.2
+### Orbeon Forms 2019.1
 
 Consider:
 
@@ -46,24 +46,9 @@ Consider:
 - [dogfood items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3ADogfood)
 - [maintenance items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMaintenance)
 - [spare time items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Spare+Time+Feature%22)
-- [2018.2 items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+project%3Aorbeon%2Forbeon-forms%2F6)
 - [top issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+issue%22)
 - [top RFEs](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+RFE%22)
-
-Focus:
-
-- Usability and "dogfood" features in Form Builder and Form Runner
-- Sponsored features
-    - [Versioning: support basic data migration #1523](https://github.com/orbeon/orbeon-forms/issues/1523)
-    - [New `date.xbl` that can be used by default in Form Builder #3657](https://github.com/orbeon/orbeon-forms/issues/3657)
-    - [fr:date: ability to disable certain dates for selection in calendar #3721](https://github.com/orbeon/orbeon-forms/issues/3721)
-    - [Standard logout page #2522](https://github.com/orbeon/orbeon-forms/issues/2522)
-
-__Please remember that the following schedule is a plan, not a promise:__
-
-- 2018-12-21: tentative release date
-
-### Orbeon Forms 2019.1
+- [2019.1 items](https://github.com/orbeon/orbeon-forms/projects/11)
 
 Focus:
 
@@ -73,3 +58,7 @@ Focus:
 __Please remember that the following schedule is a plan, not a promise:__
 
 - 2019-06: tentative release date
+
+### Orbeon Forms 2019.2
+
+TBD
