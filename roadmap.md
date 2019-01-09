@@ -62,3 +62,7 @@ __Please remember that the following schedule is a plan, not a promise:__
 ### Orbeon Forms 2019.2
 
 TBD
+
+__Please remember that the following schedule is a plan, not a promise:__
+
+- 2019-12: tentative release date
