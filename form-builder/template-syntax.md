@@ -13,6 +13,7 @@ Templates, as of Orbeon Forms 2018.1, apply to:
     - Label
     - Hint
     - Help Message
+    - Explanatory Text [SINCE Orbeon Forms 2019.1] 
 
 ## Templates
 

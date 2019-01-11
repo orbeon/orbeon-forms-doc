@@ -108,6 +108,12 @@ See [Formulas](formulas.md) for details.
 
 The "Yes" and "No" options have their own radio button. Select "Formula" to enter a dynamic "Visibility" or "Read-Only" formula.
 
+### Explanatory Text
+
+[SINCE Orbeon Forms 2019.1]
+
+For the Explanatory Text control only, you can modify the text in this location, including making the text dynamic using templates as is the case for the Label, Hint and Help Message.
+
 ### Label and Hint
 
 [SINCE Orbeon Forms 2017.2]
