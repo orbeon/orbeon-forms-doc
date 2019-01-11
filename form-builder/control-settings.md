@@ -114,6 +114,8 @@ The "Yes" and "No" options have their own radio button. Select "Formula" to ente
 
 For the Explanatory Text control only, you can modify the text in this location, including making the text dynamic using templates as is the case for the Label, Hint and Help Message.
 
+![Explanatory Text tab](images/control-settings-explanatory-text.png)
+
 ### Label and Hint
 
 [SINCE Orbeon Forms 2017.2]
