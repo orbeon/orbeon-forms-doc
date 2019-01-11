@@ -306,3 +306,11 @@ There are differences between some events specifications, in particular with reg
 [2]: https://www.w3.org/TR/2010/NOTE-xml-events2-20101216/
 [3]: https://www.w3.org/TR/DOM-Level-3-Events/
 [4]: https://www.w3.org/TR/xbl/
+
+## See also
+
+- [UI refresh events](events-refresh.md)
+- [Keyboard events](events-extensions-keyboard.md)
+- [Extension events](events-extensions-events.md)
+- [Extension context information](events-extensions-context.md)
+- [Other extensions](events-extensions-other.md)

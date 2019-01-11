@@ -203,7 +203,8 @@
         * [XForms 2.0 support](xforms/xforms-2-0.md)
     * Events
         * [Standard support](xforms/events-standard.md)
-        * [UI Refresh Events](xforms/events-refresh.md)
+        * [UI refresh events](xforms/events-refresh.md)
+        * [Keyboard events](xforms/events-extensions-keyboard.md)
         * [Extension events](xforms/events-extensions-events.md)
         * [Extension context information](xforms/events-extensions-context.md)
         * [Other extensions](xforms/events-extensions-other.md)

@@ -405,3 +405,11 @@ _NOTE: This event doesn't bubble, so event listeners must directly observe the c
         - if `size-error`, and if known, maximum upload size allowed by configuration
     - `event('xxf:actual') as xs:integer?`
         - if `size-error`, and if known, actual upload size detected
+
+## See also
+
+- [Standard support](events-standard.md)
+- [UI refresh events](events-refresh.md)
+- [Keyboard events](events-extensions-keyboard.md)
+- [Extension context information](events-extensions-context.md)
+- [Other extensions](events-extensions-other.md)

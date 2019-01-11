@@ -87,3 +87,11 @@ On `xforms-submit-serialize`, the following extension attributes are supported:
 | --- | --- | --- |
 | `xxf:binding` | `node()?` |submission's single-node binding if any |
 | `xxf:serialization` | `xs:string` |submission's requested serialization, e.g. `application/xml`, `application/x-www-form-urlencoded`, etc |
+
+## See also
+
+- [Standard support](events-standard.md)
+- [UI refresh events](events-refresh.md)
+- [Keyboard events](events-extensions-keyboard.md)
+- [Extension events](events-extensions-events.md)
+- [Other extensions](events-extensions-other.md)
