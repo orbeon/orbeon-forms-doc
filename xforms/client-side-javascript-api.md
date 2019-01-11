@@ -36,7 +36,7 @@ The following objects are publicly exposed:
 - `ORBEON.xforms.Document`
 - `ORBEON.xforms.Events.orbeonLoadedEvent`
 - `ORBEON.xforms.Events.errorEvent`
-    - See [JavaScript Event Handler](../configuration/advanced/client-error-handling.md#javascript-event-handler).
+    - See [JavaScript Event Handler](/configuration/advanced/client-error-handling.md#javascript-event-handler).
 
 Associated functions are described in more details below.
 
