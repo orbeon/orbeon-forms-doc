@@ -1,18 +1,25 @@
 # Other event extensions
 
-
-
 ## Creating keyboard shortcuts with the keypress event
 
-You can, by listening to the `keypress` event, run actions as users type a certain key combination. Your listener can be registered on:
+### Support events
 
-* **The whole document**, in which case it will run whenever users press the key combination you specified. You can register a listener on the whole document either by declaring you listener directly under the `xh:body` as in:
+- UNTIL Orbeon Forms 2018.2
+    - `keypress`
+- SINCE Orbeon Forms 2019.1
+    - `keypress`, `keydown` and `keyup`
+
+### Basic usage
+
+You can, by listening to the `keypress`, `keydown` and `keyup` events, run actions as users type a certain key combination. Your listener can be registered on:
+
+- __The whole document__, in which case it will run whenever users press the key combination you specified. You can register a listener on the whole document either by declaring you listener directly under the `xh:body` as in:
 
     ```xml
     <xh:body>
         <xf:action 
-            ev:event="keypress" 
-            xxf:modifiers="Control" 
+            event="keydown" 
+            xxf:modifiers="ctrl" 
             xxf:text="y">
             ...
         </xf:action>
@@ -24,27 +31,39 @@ You can, by listening to the `keypress` event, run actions as users type a certa
     
     ```xml
     <xf:action 
-        ev:event="keypress" 
-        ev:observer="#document" 
-        xxf:modifiers="Control"
+        event="keydown" 
+        observer="#document" 
+        xxf:modifiers="ctrl"
         xxf:text="y">
         ...
     </xf:action>
     ```
+- __Part of the document__, in which case you set your actions to listen on a XForms control such as a `xf:group` or an `xf:input`. Note that in this case, your listener will be called only if a form control (either the one you have specified, or form control inside the one you have specified for container form controls) has the focus when users press the key combination.
+- __A dialog__, in which case your listener will be called only when users press the key combination while the dialog is open. In this case, the only requirement for the listener to be called is for the dialog to be open; the focus does not necessarily need to be on a form control inside the dialog.
 
-* **Part of the document**, in which case you set your actions to listen on a XForms control such as a `xf:group` or an `xf:input`. Note that in this case, your listener will be called only if a form control (either the one you have specified, or form control inside the one you have specified for container form controls) has the focus when users press the key combination.
-* **A dialog**, in which case your listener will be called only when users press the key combination while the dialog is open. In this case, the only requirement for the listener to be called is for the dialog to be open; the focus does not necessarily need to be on a form control inside the dialog.
+You specify what key stroke(s) you want to listen to with the following two attributes:
 
-You specify what key stroke you want to listen to with the following two attributes:
-
-* `xxf:text` specifies the key you want to listen to. This attribute is mandatory: if you have a `ev:event="keypress"` on an action, then you need to specify an `xxf:text`.
-* `xxf:modifier` specifies what key modifier needs to be pressed in addition to the key. This is a space separated list of values, where the values can be `Control`, `Shift`, and `Alt`. This attribute is optional: leave it out to listener to a key press with no modifier.
-
+- `xxf:text`:
+    - mandatory for `keypress`, `keydown` and `keyup` handlers
+    - the key you want to listen to
+    - SINCE Orbeon Forms 2019.1
+        - special keys are supported: `backspace`, `tab`, `enter`, `return`, `capslock`, `esc`, `escape`, `space`, `pageup`, `pagedown`, `end`, `home`, `left`, `up`, `right`, `down`, `ins`, `del`, `plus`
+- `xxf:modifier`
+    - optional
+    - space-separated list of key modifiers that need to be pressed in addition to the key
+    - UNTIL Orbeon Forms 2018.2
+        - values can be `Control`, `Shift`, and `Alt`
+    - SINCE Orbeon Forms 2019.1
+        - values are no longer case-sensitive, but lowercase is recommended
+        - `shift`, `ctrl` (`control` is supported for backward compatibility), `alt`/`option`, `meta`/`command`
+        
+*NOTE: When using modifiers, the event name should be `keydown`. For backward compatibility, `keypress` is still supported but translated to `keydown`.* 
+        
 ## Filtering on the event phase
 
 XML Events 1 only supports filtering event handlers on a subset of the DOM Level 2 Events phases. Orbeon Forms extends that behavior and supports registering handlers that match on one of the 3 main event phases specified by DOM Level 2 Events: `capture`, `target`, and `bubbling`.
 
-Orbeon Forms supports the following values for the `ev:phase` attribute:  
+Orbeon Forms supports the following values for the `phase` attribute:  
 
 * `capture`: only activate the handler during the capture phase (this is compatible with all the specifications)
 * `default` or unspecified: only activate the handler during the target or bubbling phase (this is compatible with XML Events 1 but not included in the current XBL 2 proposal)
@@ -53,7 +72,7 @@ Orbeon Forms supports the following values for the `ev:phase` attribute:
 
 _NOTE: In the future, the XBL 2 default action phase could be integrated if considered desirable. It is hoped that the `target` and `bubbling` values will be supported in XML Events 2._
 
-_NOTE: In most cases, the `ev:phase` attribute can be omitted, in which case the `target` or `bubbling` phase is matched. This allows placing a handler directly within a target element, or any of its ancestors, which are the most common use cases in XForms._  
+_NOTE: In most cases, the `phase` attribute can be omitted, in which case the `target` or `bubbling` phase is matched. This allows placing a handler directly within a target element, or any of its ancestors, which are the most common use cases in XForms._  
 
 ## Adding context information to events 
 
@@ -89,7 +108,7 @@ In order to avoid confusion with standard XForms names, we recommend you use pre
 Context attributes passed this way can be retrieved using the `event()` function:
 
 ```xml
-<xf:action ev:event="rename-control">
+<xf:action event="rename-control">
     <xf:setvalue ref="event('control')/@name" value="event('control-name')"/>
 </xf:action>
 ```
@@ -145,36 +164,36 @@ When that control is within a repeat iteration, the actual control targetted is 
 <xf:trigger>
     <xf:label>Toggle Me!</xf:label>
     <!-- Toggle the case within the 5th todo item of the 3rd todo list -->
-    <xf:toggle ev:event="DOMActivate" case="edit-case" xxf:repeat-indexes="3 5"/>
+    <xf:toggle event="DOMActivate" case="edit-case" xxf:repeat-indexes="3 5"/>
 </xf:trigger>
 ```
 
 ## Multiple event names, observers and targets on event handlers
 
-The `ev:event`, `ev:observer` and `ev:target` attributes, defined by the [XML Events specification][2], only support one event name, observer, or target respectively. Orbeon Forms supports as an extension a list of space-separated values. The behavior is as follows:
+The `event`, `observer` and `target` attributes, defined by the [XML Events specification][2], only support one event name, observer, or target respectively. Orbeon Forms supports as an extension a list of space-separated values. The behavior is as follows:
 
-* For `ev:event`: the handler is called if any of the specified events matches.
+* For `event`: the handler is called if any of the specified events matches.
 
     ```xml
-    <xf:action ev:event="DOMFocusIn DOMFocusOut">
+    <xf:action event="DOMFocusIn DOMFocusOut">
         <!-- Reacting to either the "DOMFocusIn" and "DOMFocusOut" events -->
         ...
     </xf:action>
     ```
 
-* For `ev:observer`: the event handler is attached to all the observers specified.
+* For `observer`: the event handler is attached to all the observers specified.
 
     ```xml
-    <xf:action ev:event="DOMActivate" ev:observer="my-input my-trigger">
+    <xf:action event="DOMActivate" observer="my-input my-trigger">
         <!-- Observing both the "my-input" and "my-trigger" controls -->
         ...
     </xf:action>
     ```
 
-* For `ev:target`: the handler is called if any of the specified targets matches.
+* For `target`: the handler is called if any of the specified targets matches.
 
     ```xml
-    <xf:action ev:event="xforms-submit-done" ev:target="create-submission update-submission">
+    <xf:action event="xforms-submit-done" target="create-submission update-submission">
         <!-- Checking that either the "create-submission" and "update-submission" controls is a target -->
         ...
     </xf:action>
@@ -184,24 +203,24 @@ The extensions above have been [requested][8] for inclusion in XML Events 2.
 
 ## Catching all events  
 
-The special `#all` event name on `ev:event` can be used to catch all events:
+The special `#all` event name on `event` can be used to catch all events:
 
 ```xml
 <xf:group>
     <!-- Stop propagation of all events -->
-    <xf:action ev:event="#all" ev:propagate="stop"/>
+    <xf:action event="#all" propagate="stop"/>
     ...
 </xf:group>
 ```
 
 ## Specifying the current observer as target restriction
 
-The special `#observer` target name on `ev:target` can be used to specify that the listener must be activated only if the event target is the listener's observer:
+The special `#observer` target name on `target` can be used to specify that the listener must be activated only if the event target is the listener's observer:
 
 ```xml
 <xf:group>
     <!-- Restrict activation to events dispatched to the group -->
-    <xf:action ev:event="my-event" ev:target="#observer"/>
+    <xf:action event="my-event" target="#observer"/>
     ...
 </xf:group>
 ```
@@ -211,14 +230,14 @@ In this example, this is identical to:`
 ```xml
 <xf:group>
     <!-- Restrict activation to events dispatched to the group -->
-    <xf:action ev:event="my-event" ev:phase="target"/>
+    <xf:action event="my-event" phase="target"/>
     ...
 </xf:group>
 ```
 
 ## Observing the preceding sibling element
 
-The `ev:observer` attribute can be set to the value `#preceding-sibling`:
+The `observer` attribute can be set to the value `#preceding-sibling`:
 
 ```xml
 <xf:repeat ref="...">
@@ -226,9 +245,9 @@ The `ev:observer` attribute can be set to the value `#preceding-sibling`:
 </xf:repeat
 
 <xf:action
-  ev:event="xforms-enabled xforms-disabled xxforms-index-changed xxforms-ref-changed"
-  ev:observer="#preceding-sibling"
-  ev:target="#observer">
+  event="xforms-enabled xforms-disabled xxforms-index-changed xxforms-ref-changed"
+  observer="#preceding-sibling"
+  target="#observer">
     
 </xf:action>
 ```
@@ -245,8 +264,8 @@ XForms events flow along XBL boundaries and are fully encapsulated. This attribu
 
 ```xml
 <xf:action
-  ev:observer="my-observer"
-  ev:event="xforms-enabled"
+  observer="my-observer"
+  event="xforms-enabled"
   xxf:phantom="true">
 ```
 
