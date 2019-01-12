@@ -2,7 +2,7 @@
 
 ## Creating keyboard shortcuts with the keypress event
 
-See [Keyboard events](events-extensions-keyboard.md)/
+See [Keyboard events](events-extensions-keyboard.md).
         
 ## Filtering on the event phase
 
