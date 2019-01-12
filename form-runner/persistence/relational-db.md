@@ -66,9 +66,12 @@ With Oracle 11.2, `XMLType` values are stored by default using the binary XML st
 
 #### MySQL versions
 
-- __Minimum version__: The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer.
-- __Recommended versions__: However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].
-- __MySQL 5.7__: With MySQL 5.7, since Orbeon Forms 2016.2, you must set the `sql_mode` to [`ALLOW_INVALID_DATES`](http://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_allow_invalid_dates), or you might get errors while creating the database schema.
+- [SINCE Orbeon Forms 2018.2]
+	- __MySQL 5.7__: Since version 2018.2, Orbeon Forms uses the `utf8mb4` character set instead of the `utf8` character set. The reason being that MySQL's `utf8` character set can only store UTF-8-encoded symbols that consist of 1 to 3 bytes, that is characters in the Unicode [Basic Multilingual Plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), which means that none of the characters in the [Supplementary Multilingual Plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Supplementary_Multilingual_Plane), which include Emojis, could stored. However, the switch to the `utf8mb4` character set will prevent you from creating some indexes on MySQL 5.6 where default key prefix limit is 767 bytes. Hence we recommend you use MySQL 5.7, which raised the index key prefix length limit to 3072 bytes for InnoDB tables. If in your situation upgrading to MySQL 5.7 isn't an option, you can explore [enabling the `innodb_large_prefix` configuration option on your MySQL 5.6](https://dev.mysql.com/doc/refman/5.6/en/innodb-restrictions.html), or changing the DDL that ships with Orbeon Forms to use `utf8` instead of `utf8mb4`.
+- [UP TO Orbeon Forms 2018.1]
+	- __Minimum version__: The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer.
+	- __Recommended versions__: However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].
+	- __MySQL 5.7__: With MySQL 5.7, since Orbeon Forms 2016.2, you must set the `sql_mode` to [`ALLOW_INVALID_DATES`](http://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_allow_invalid_dates), or you might get errors while creating the database schema.
 
 #### Unicode support
 
