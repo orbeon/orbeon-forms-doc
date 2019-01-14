@@ -4,25 +4,24 @@
 
 Auditing (also known as the *auditing trail*) guarantees that all the operations on the database:
 
-- Are performed in a non-destructive manner – This means that it is always possible for a DBA to revert changes that have been made.
+- Are performed in a non-destructive manner.
+    - This means that it is possible for a DBA to revert changes that have been made.
 - Every change has indication of when that change was made and who did that change (if the user is known by the system).
+    - This means that you can see who did what and when.
 
-This means that a DBA can always revert changes, and see who did what and when.
+This feature is only available when using a [relational persistence layer](relational-db.md).
 
-This feature is only available when using the relational persistence layer.
+Note that Orbeon Forms as of Orbeon Forms 2018.2 doesn't provide a user interface for this feature.
 
 ## Usage
 
-For  auditing to work, Form Runner needs to know who is presently using the application. There are two ways in which Form Runner can determine the current username:
+For auditing to work meaningfully, Form Runner needs to know who is presently using the application.
 
-- **Container** - It can ask the container (i.e. servlet container or application server). This is typically useful when users log into the application using basic or form-based authentication.
-- **Header** - It can get the username from an HTTP header. This is typically useful when you are using some type of front-end which "knows" who the user is and thus can pass this information to Form Runner through a header.
-
-For more details on this configuration, see [Access Control](../../form-runner/access-control/README.md).
+For details, see [Setup users for access control](/form-runner/access-control/users.md)/
 
 ## Implementation for relational databases
 
-When you use the Oracle or MySQL persistence layer:
+When you use a relational persistence layer:
 
 - Every table has the following 4 columns:
     - `created` tells you when given the data (e.g. attachment to a form for the `orbeon_form_data_attach`).
@@ -33,9 +32,15 @@ When you use the Oracle or MySQL persistence layer:
 - When data is first added to a table, `created` and `last_modified` have the same value. Then, when this data is modified, another row is added: `created` is copied over and `last_modified` is set to the current time stamp.
 - When data is deleted by users, a new row is added. This row is a copy of the latest row for the data that is being deleted, except for `last_modified` which is set to the current time stamp and `deleted` which is set to `Y`.
 
+## Disabling auditing
+
+As of Orbeon Forms 2018.2, it is not possible to disable this feature. However, you can regularly [purge old data](/form-runner/persistence/purging-old-data.md) as needed.
+
 ## See also
 
-- [Access Control](../../form-runner/access-control/README.md)
-- [Relational Database Setup](relational-db.md)
+- [Purging old data](/form-runner/persistence/purging-old-data.md)
+- [Access Control](/form-runner/access-control/README.md)
+- [Setup users for access control](/form-runner/access-control/users.md)/
+- [Using Form Runner with a relational database](relational-db.md)
 - [Database Support](db-support.md)
-- [Versioning](../api/persistence/versioning.md)
+- [Versioning](/form-runner/feature/versioning.md)
