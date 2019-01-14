@@ -94,7 +94,7 @@ The following example:
 
 ### Listeners
 
-TODO
+#### Basic syntax
 
 A listener looks like this:
 
@@ -102,6 +102,8 @@ A listener looks like this:
 <fr:listener
     version="2018.2"
     events="..."
+    controls="..."
+    actions="..."
 >
 ```
 
@@ -109,7 +111,17 @@ A listener looks like this:
     - mandatory action format version
     - must always be `2018.2`
 - `events`
-    - mandatory list of space-separated event tokens
+    - mandatory
+    - space-separated list of event names
+    - When more than one event name is present, the listener reacts if *any* of the listed events is present.
+- `controls`
+    - only mandatory for events which relate to a particular control, like `enabled` or `value-changed`
+    - space-separated list of control names
+    - When more than one control name is present, the listener reacts if an event is dispatched to *any* of the listed controls.
+- `actions`
+    - optional, but nothing will happen if there is not at least one action referenced
+    - space-separated list of action names
+    - When more than one action name is present, *all* the specified actions are called when the listener reacts to an event. 
 
 #### Events supported
 
@@ -126,11 +138,11 @@ Controls:
 
 Form load:
 
-- `form-load-before-data`: run before the data's initial values are calculated:
-- `form-load-after-data`: run when the data is ready:
-- `form-load-after-controls`: run after the controls are ready:
+- `form-load-before-data`: run before the data's initial values are calculated
+- `form-load-after-data`: run when the data is ready
+- `form-load-after-controls`: run after the controls are ready
 
-See also [Running processes upon page load](/configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load) for the detail of these events.
+See also [Running processes upon page load](/configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load) for the detail of the form load events.
 
 ### Actions
 
