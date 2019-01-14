@@ -107,21 +107,14 @@ A listener looks like this:
 >
 ```
 
-- `version`
-    - mandatory action format version
-    - must always be `2018.2`
-- `events`
-    - mandatory
-    - space-separated list of event names
-    - When more than one event name is present, the listener reacts if *any* of the listed events is present.
-- `controls`
-    - only mandatory for events which relate to a particular control, like `enabled` or `value-changed`
-    - space-separated list of control names
-    - When more than one control name is present, the listener reacts if an event is dispatched to *any* of the listed controls.
-- `actions`
-    - optional, but nothing will happen if there is not at least one action referenced
-    - space-separated list of action names
-    - When more than one action name is present, *all* the specified actions are called when the listener reacts to an event. 
+Attribute|Mandatory|Value|Comment
+---------|---------|---------|---------
+`version`|Yes|format version|always `2018.2`
+`events`|Yes|space-separated list of event names|When more than one event name is present, the listener reacts if *any* of the listed events is present.
+`controls`|Yes for events which relate to a particular control, like `enabled` or `value-changed`|space-separated list of control names|When more than one control name is present, the listener reacts if an event is dispatched to *any* of the listed controls.
+`actions`|No, but nothing will happen if there is not at least one action referenced|space-separated list of action names|When more than one action name is present, *all* the specified actions are called when the listener reacts to an event.
+    
+*NOTE: It is not recommended to mix and match, in a single listener, events for which a control name is required and events for which a control name is not required. Instead, use multiple listeners.* 
 
 #### Events supported
 
@@ -146,7 +139,9 @@ See also [Running processes upon page load](/configuration/properties/form-runne
 
 ### Actions
 
-TODO
+TODO: Details of the actions.
+
+#### Basic syntax
 
 An action looks like this:
 
@@ -157,40 +152,59 @@ An action looks like this:
 - `version`
     - mandatory action format version
     - must always be `2018.2`
-    
-    
+
+#### Calling a service
+   
 
 ```xml
 <fr:service-call>
 ```
 
+#### Iterating over data
+
 ```xml
 <fr:data-iterate>
 ```
+
+#### Removing all iterations of a repeat
 
 ```xml
 <fr:repeat-clear>
 ```
 
+#### Adding iterations to a repeat
+
 ```xml
 <fr:repeat-add-iteration>
 ```
+
+#### Removing iterations from a repeat
 
 ```xml
 <fr:repeat-remove-iteration>
 ```
 
+#### Setting the value of a control
+
 ```xml
-<fr:control-setvalue>
+<fr:control-setvalue 
+    value="..." 
+    control="..."/>
 ```
+
+- `value`
+    - mandatory
+- `control`
+    - mandatory
+    
+
+#### Setting the choices of a selection control
 
 ```xml
 <fr:control-setitems>
 ```
 
-```xml
-<fr:control-setitems>
-```
+#### Writing to a dataset
 
 ```xml
 <fr:dataset-write>
