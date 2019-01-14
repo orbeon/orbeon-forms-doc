@@ -139,8 +139,6 @@ See also [Running processes upon page load](/configuration/properties/form-runne
 
 ### Actions
 
-TODO: Details of the actions.
-
 #### Basic syntax
 
 An action looks like this:
@@ -187,16 +185,8 @@ An action looks like this:
 #### Setting the value of a control
 
 ```xml
-<fr:control-setvalue 
-    value="..." 
-    control="..."/>
-```
-
-- `value`
-    - mandatory
-- `control`
-    - mandatory
-    
+<fr:control-setvalue/>
+``` 
 
 #### Setting the choices of a selection control
 
