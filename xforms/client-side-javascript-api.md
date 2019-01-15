@@ -1,7 +1,5 @@
 # Client-side JavaScript API
 
-
-
 ## Rationale
 
 While XForms gets you a long way towards creating a dynamic user-friendly user interface, there are some dynamic behaviors of the user interface that cannot be implemented easily or at all with XForms, or you might already have some JavaScript code that you would like to reuse. A JavaScript API is provided to handle those cases, or other use cases involving JavaScript.
@@ -255,25 +253,37 @@ When properties are provided, the code handling the event can access the propert
 
 Passing properties is only supported when calling `dispatchEvent()` with a single object parameter; it isn't supported when calling it with multiple parameters.
 
-### Custom events
-
-You can listen in your code on the following events:
+### The orbeonLoaded event
 
 - `ORBEON.xforms.Events.orbeonLoadedEvent`
     – Fired when the form is fully loaded and initialized.
-- `ORBEON.xforms.Events.errorEvent`
-    – Fired when the JavaScript code catches an error.
-    - See [JavaScript Event Handler](../configuration/advanced/client-error-handling.md#javascript-event-handler).
 
-To register (subscribe) your event listener on, say `orbeonLoadedEvent`, write:
+To add your event listener on, say `orbeonLoadedEvent`, write:
 
 ```javascript
-ORBEON.xforms.Events.orbeonLoadedEvent.subscribe(function(eventName, eventData) {
-    // Code of your listener
-});
+(function () {
+    addEventListener("DOMContentLoaded", function () {
+        ORBEON.xforms.Events.orbeonLoadedEvent.subscribe(function () {
+            alert("Hello!");
+        });
+    });
+}).call(this);
 ```
 
-The arguments of your listener are as follows:
+The above does a few things:
+
+- Add an event listener upon `DOMContentLoaded` (similar to jQuery's "ready"). When this event fires, the global `ORBEON` object exists.
+- Add your event handler for "orbeonLoaded".
+
+*NOTE: In some cases, if the Orbeon Forms initialization happened *before* adding the event handler, it was possible that the event could not fire. This is fixed with issue [#3891](https://github.com/orbeon/orbeon-forms/issues/3891).* 
+
+### The error event
+
+- `ORBEON.xforms.Events.errorEvent`
+    – Fired when the JavaScript code catches an error.
+    - See [JavaScript Event Handler](/configuration/advanced/client-error-handling.md#javascript-event-handler).
+
+The arguments of the listener for `errorEvent` are as follows:
 
 1. The first argument is the name of the event (the string `errorEvent`), which most likely you don't need to know about if that listener is explicitly registered to this event.
 2. The second argument contains information about the error. Assuming you defined your second argument to be named `eventData`, inside your listener you can access:
@@ -282,7 +292,9 @@ The arguments of your listener are as follows:
         - If it happened in JavaScript: information of where the error happened (such as the file name and the line number).
         - If if happened on the server: detailed information about where the error happened (such as the invalid XPath expression and the file where that expression is found).
 
-To deregister (unsubscribe) your event listener on, say `orbeonLoadedEvent`, you'll need to implement your listener in a named function, say `myListener`:
+### Removing event listeners
+
+To remove your event listener on, say `orbeonLoadedEvent`, you'll need to implement your listener in a named function, say `myListener`:
 
 ```javascript
 ORBEON.xforms.Events.orbeonLoadedEvent.unsubscribe(myListener);
@@ -290,5 +302,5 @@ ORBEON.xforms.Events.orbeonLoadedEvent.unsubscribe(myListener);
 
 ## See also
 
-- [Adding your own JavaScript](../configuration/properties/form-runner.md#adding-your-own-javascript)
-- [Form Runner client-side JavaScript API](../form-runner/advanced/client-side-javascript-api.md)
+- [Adding your own JavaScript](/configuration/properties/form-runner.md#adding-your-own-javascript)
+- [Form Runner client-side JavaScript API](/form-runner/advanced/client-side-javascript-api.md)
