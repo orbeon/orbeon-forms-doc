@@ -255,8 +255,7 @@ Passing properties is only supported when calling `dispatchEvent()` with a singl
 
 ### The orbeonLoaded event
 
-- `ORBEON.xforms.Events.orbeonLoadedEvent`
-    – Fired when the form is fully loaded and initialized.
+The `ORBEON.xforms.Events.orbeonLoadedEvent` fires when the form is fully loaded and initialized.
 
 To add your event listener on, say `orbeonLoadedEvent`, write:
 
@@ -279,9 +278,9 @@ The above does a few things:
 
 ### The error event
 
-- `ORBEON.xforms.Events.errorEvent`
-    – Fired when the JavaScript code catches an error.
-    - See [JavaScript Event Handler](/configuration/advanced/client-error-handling.md#javascript-event-handler).
+The `ORBEON.xforms.Events.errorEvent` fires when the JavaScript code catches an error.
+
+See also [JavaScript Event Handler](/configuration/advanced/client-error-handling.md#javascript-event-handler).
 
 The arguments of the listener for `errorEvent` are as follows:
 
