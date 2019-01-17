@@ -94,6 +94,7 @@ With Orbeon Forms 2018.2, the  `<fr:synchronize-repeated-content>` has the follo
 
 ## See also
 
+- Blog post: [Synchronized master-detail views](https://blog.orbeon.com/2019/01/synchronized-master-detail-views.html)
 - [Actions](actions.md)
 - [HTTP services](http-services.md)
 - [Database services](database-services.md)
