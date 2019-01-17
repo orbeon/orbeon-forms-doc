@@ -27,7 +27,7 @@ If the value is blank (the default), then the value of the following backward co
 
 The value of `oxf.fr.detail.attachment.max-size` can be overridden:
 
-- for a specific form, from the Form Builder "Form Settings} dialog
+- for a specific form, from the Form Builder "Form Settings" dialog
 - for a specific control, using a common constraint the Form Builder "Control Settings" dialog 
 
 ## Maximum aggregate attachment size
