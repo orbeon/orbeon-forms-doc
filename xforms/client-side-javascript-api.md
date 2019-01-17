@@ -280,7 +280,7 @@ The above does a few things:
 
 The `ORBEON.xforms.Events.errorEvent` fires when the JavaScript code catches an error.
 
-See also [JavaScript Event Handler](/configuration/advanced/client-error-handling.md#javascript-event-handler).
+See also [JavaScript event handler](/configuration/advanced/client-error-handling.md#javascript-event-handler).
 
 The arguments of the listener for `errorEvent` are as follows:
 
