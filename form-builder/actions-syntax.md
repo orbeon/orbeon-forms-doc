@@ -27,13 +27,13 @@ You place listeners and actions within the source code, preferably before the en
 ```xml
     <!-- other Form Builder code here -->
 
-    <<fr:listener
+    <fr:listener
         version="2018.2"
         .../>
         
     <fr:action name="my-action" version="2018.2">
         ...
-    </fr:action
+    </fr:action>
     
     <!-- Put `<fr:listener>` and `<fr:action>` just above this. -->
 </xf:model>
