@@ -187,6 +187,10 @@ Selection controls include dropdown menus, checkboxes, and more.
 - __Label XPath expression.__ The XPath expression must return the text of the label for an item. It is relative to the current item node.
 - __Value XPath expression.__ The XPath expression must return the text of the value for an item. It is relative to the current item node.
 
+
+
+xxxxx show example with screenshot
+
 #### Adjustment of control values
 
 [SINCE Orbeon Forms 4.3]

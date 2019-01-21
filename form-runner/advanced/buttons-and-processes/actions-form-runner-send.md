@@ -2,7 +2,7 @@
 
 ##  Introduction
 
-This action sends data to an HTTP URL.
+The `send` action is one of the most important actions that Orbeon Forms can perform with form data: it sends data to an HTTP (or HTTPS) service. The following sections detail the possible configuration parameters of this action. 
 
 ## Configuration
 

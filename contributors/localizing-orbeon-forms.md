@@ -123,6 +123,8 @@ As of Orbeon Forms 2018.2, the following files need help:
 - [text-output.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-output.xbl)
 - [text-textarea-autosize.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-textarea-autosize.xbl)
 
+TODO: more files,
+
 ### Dates and times
 
 For formatting of dates and times, a Java class usually needs to be added. See the example for Norwegian:
