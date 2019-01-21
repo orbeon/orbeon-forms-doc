@@ -72,7 +72,9 @@ Say you've created a form, deployed it, and would like to take users to the `/ne
 
 ### How can I create forms which users can fill out offline?
 
-Offline support is not a feature of  Orbeon Forms as of December 2014.
+Orbeon Forms doesn't support filling forms offline. Forms created with Orbeon Forms are filled through a browser, whether on a mobile device or laptop/desktop, and users need to have a connection to the server to load the form, fill out the form, and submit the form.
+
+Note however that the server on which Orbeon Forms runs doesn't itself need to be connected to the Internet, so some situations can be handled by deploying Orbeon Forms close to the end users. For instance, if you have users who need to fill out forms with measurements on a boat in an Arctic expedition, then you could have Orbeon Forms deployed on that server, and users will be able to access the local server, even without an Internet connection.
 
 See this [issue](https://github.com/orbeon/orbeon-forms/issues/1221) for discussion.
 
