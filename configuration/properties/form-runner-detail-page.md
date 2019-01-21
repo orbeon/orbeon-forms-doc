@@ -381,7 +381,7 @@ The instance provided in the form is used by default and the POSTed XML document
 The document can be POSTed in two ways:
 
 1. As a direct `POST` of the XML document
-2. As an HTML form `POST` parameter called fr-form-data
+2. As an HTML form `POST` parameter called `fr-form-data`
 
 For #2, this behaves as if a browser was submitting an HTML form that looks like the following, with the value of the `fr-form-data` request parameter being the Base64-encoded XML document.:
 
