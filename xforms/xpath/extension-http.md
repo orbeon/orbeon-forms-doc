@@ -125,6 +125,17 @@ _NOTE: By default, most if not all servlet containers do not use the UTF-8 encod
 * [http://www.mail-archive.com/users@tomcat.apache.org/msg48593.html](http://www.mail-archive.com/users@tomcat.apache.org/msg48593.html)
 * [http://tomcat.apache.org/tomcat-6.0-doc/config/http.html](http://tomcat.apache.org/tomcat-6.0-doc/config/http.html)
 
+## xxf:get-request-context-path()
+
+[SINCE Orbeon Forms 2018.2.1]
+
+```xpath
+xxf:get-request-context-path() as xs:string
+```
+
+The `xxf:get-request-context-path()` function returns the context path of the incoming HTTP request.
+
+This function can be used even after page initialization, and can be used everywhere other XPath functions are supported.
 
 ## xxf:get-request-path()
 
