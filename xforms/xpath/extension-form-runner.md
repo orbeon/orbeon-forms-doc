@@ -341,6 +341,8 @@ _NOTE: The Form Runner metadata instance is maintained by Form Builder. We do no
 
 ### fr:is-wizard-body-shown()
 
+[SINCE Orbeon Forms 2016.2]
+
 ```xpath
 fr:is-wizard-body-shown() as xs:boolean
 ```
@@ -368,6 +370,8 @@ fr:is-wizard-last-page() as xs:boolean
 Whether the currently-shown wizard page is the last relevant page.
 
 ### fr:is-wizard-toc-shown()
+
+[SINCE Orbeon Forms 2016.2]
 
 ```xpath
 fr:is-wizard-toc-shown() as xs:boolean
