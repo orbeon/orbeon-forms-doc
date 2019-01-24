@@ -461,6 +461,16 @@ fr:username() as xs:string?
 
 See[`xxf:username()`](extension-http.md#xxfusername).
 
+### fr:wizard-current-page-name()
+
+[SINCE Orbeon Forms 2019.1]
+
+```xpath
+fr:wizard-current-page-name() as xs:string?
+```
+
+Return the name of the current wizard page, or the empty sequence if there is no wizard current page.
+
 ## See also
 
 - Blog post: [A stable function library for Form Runner](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
