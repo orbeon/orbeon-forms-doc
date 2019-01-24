@@ -209,42 +209,6 @@ fr:is-readonly-mode() as xs:boolean
 
 Return whether the current page is in a readonly mode such as `view`, `pdf`, or `email`.
 
-### fr:is-wizard-body-shown()
-
-```xpath
-fr:is-wizard-body-shown() as xs:boolean
-```
-
-Whether the wizard's body is visible.
-
-### fr:is-wizard-first-page()
-
-[SINCE Orbeon Forms 2016.3]
-
-```xpath
-fr:is-wizard-first-page() as xs:boolean
-```
-
-Whether the currently-shown wizard page is the first relevant page.
-
-### fr:is-wizard-last-page()
-
-[SINCE Orbeon Forms 2016.3]
-
-```xpath
-fr:is-wizard-last-page() as xs:boolean
-```
-
-Whether the currently-shown wizard page is the last relevant page.
-
-### fr:is-wizard-toc-shown()
-
-```xpath
-fr:is-wizard-toc-shown() as xs:boolean
-```
-
-Whether the wizard's table of content is visible.
-
 ### fr:lang()
 
 ```xpath
@@ -373,6 +337,56 @@ The Form Runner metadata instance looks like this:
 
 _NOTE: The Form Runner metadata instance is maintained by Form Builder. We do not recommend making changes to that instance._  
 
+## Wizard functions
+
+### fr:is-wizard-body-shown()
+
+```xpath
+fr:is-wizard-body-shown() as xs:boolean
+```
+
+Whether the wizard's body is visible.
+
+### fr:is-wizard-first-page()
+
+[SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:is-wizard-first-page() as xs:boolean
+```
+
+Whether the currently-shown wizard page is the first relevant page.
+
+### fr:is-wizard-last-page()
+
+[SINCE Orbeon Forms 2016.3]
+
+```xpath
+fr:is-wizard-last-page() as xs:boolean
+```
+
+Whether the currently-shown wizard page is the last relevant page.
+
+### fr:is-wizard-toc-shown()
+
+```xpath
+fr:is-wizard-toc-shown() as xs:boolean
+```
+
+Whether the wizard's table of content is visible.
+
+### fr:wizard-current-page-name()
+
+[SINCE Orbeon Forms 2019.1]
+
+```xpath
+fr:wizard-current-page-name() as xs:string?
+```
+
+Return the name of the current wizard page, or the empty sequence if there is no wizard current page.
+
+The page name corresponds to the section name used in Form Builder.
+
 ## Authentication functions
 
 ### fr:can-create()
@@ -460,18 +474,6 @@ fr:username() as xs:string?
 ```
 
 See[`xxf:username()`](extension-http.md#xxfusername).
-
-### fr:wizard-current-page-name()
-
-[SINCE Orbeon Forms 2019.1]
-
-```xpath
-fr:wizard-current-page-name() as xs:string?
-```
-
-Return the name of the current wizard page, or the empty sequence if there is no wizard current page.
-
-The page name corresponds to the section name used in Form Builder.
 
 ## See also
 
