@@ -471,6 +471,8 @@ fr:wizard-current-page-name() as xs:string?
 
 Return the name of the current wizard page, or the empty sequence if there is no wizard current page.
 
+The page name corresponds to the section name used in Form Builder.
+
 ## See also
 
 - Blog post: [A stable function library for Form Runner](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
