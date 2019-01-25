@@ -199,7 +199,9 @@ Since Orbeon Forms 2016.2, this property is deprecated. Use `oxf.fr.detail.hint.
 
 [SINCE Orbeon Forms 2016.2]
 
-This property sets the respective order, in the generated HTML markup, of label/help/hint/alert and the control element. It is not recommended to change the default value of this property.
+This property sets the respective order, in the generated HTML markup, of label/help/hint/alert and the control element.
+
+*NOTE: It is not recommended to change the default value of this property, which was introduced in the days where CSS couldn't do all it can do now. We recommend styling using CSS instead.*
 
 ```xml
 <property 
