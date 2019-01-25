@@ -300,7 +300,7 @@ If an element is configured to be a label, a `for` attribute pointing to the con
 
 ### Order of control and LHHA elements
 
-*NOTE: For Form Runner, see the [`oxf.fr.detail.lhha-order` property](configuration/properties/form-runner-detail-page.md#order-of-lhha-elements) instead.*
+*NOTE: For Form Runner, see the [`oxf.fr.detail.lhha-order` property](form-runner-detail-page.md#order-of-lhha-elements) instead.*
 
 The following property controls the order of label, help, hint, alert, and control elements output by the XForms engine:
 
