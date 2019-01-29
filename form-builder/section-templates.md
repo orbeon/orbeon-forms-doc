@@ -69,7 +69,9 @@ When [versioning](/form-runner/feature/versioning.md) is available:
 
 For example, if you versions 1, 2 and 3 of the `acme` library form, the toolbox shows a dropdown with those versions.
 
-When you select a particular version, the toolbox reloads with the latest published form definition with that version.  
+When you select a particular version, the toolbox reloads with the latest published form definition with that version.
+
+For more about reloading, see [Reloading the toolbox](toolbox.md#reloading-the-toolbox)  
 
 ## Merging section templates
 
