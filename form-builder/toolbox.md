@@ -1,7 +1,5 @@
 # Toolbox
 
-
-
 ## Introduction
 
 The Form Builder toolbox provides the following:
@@ -44,8 +42,14 @@ See [Undo and redo](form-builder/undo-redo.md).
 
 The "Reload Toolbox" icon or button reloads all the components in the toolbox. After reloading:
 
-- The list of controls and [section templates](section-templates.md) in the toolbox updates.
+- The list of controls in the toolbox updates to reflect changes to the [`oxf.fb.toolbox.group` properties](/configuration/properties/form-builder.md#groups-of-controls).
+- The [section templates](section-templates.md) libraries update.
 - [Section templates](section-templates.md) used in your form also update to their latest published version.
+
+[SINCE Orbeon Forms 2019.1]
+
+- The list of all available (published) *versions* of section templates is updated.
+- The currently-selected versions of section templates, if still available, are updated to reflect their latest published.
 
 ### Orbeon Forms 2017.2 and newer
 

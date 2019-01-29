@@ -1,16 +1,24 @@
 # Section templates
 
+## Section template libraries
 
+Form Builder supports defining reusable sections called *section templates*.
 
-## Introduction
+Section templates are grouped within *section template libraries*. There can be one library per application name. In addition, a global section template library with the `orbeon` application name is available. This library is made available to all form definitions, no matter what their application name is. 
 
-Form Builder supports defining reusable sections called section templates. Here is how they work:
+## How section templates work
 
-- You create sections in a special form with name `library`.
-- You publish this form.
-- For each section in that form, Form Builder creates a reusable section component.
-- The component is made available in the Form Builder toolbox under "Library" groups.
-- The title of the section is used as the title of the component in the toolbox.
+You create, edit, and publish a section template library from Form Builder as you do with a regular form definition. The only difference is that the form name for a section template library is `library`. This is a special name recognized by Form Builder.
+
+When you publish a section template library form definition, all top-level sections in that form definition are made available to other form definitions created in Form Builder, depending on their application name, and appear in the Form Builder toolbox, which shows:
+
+- __Global section templates.__
+    - Those are created and updated with the `orbeon/library` form definition.
+- __Application section templates.__
+    - Those are created in the current application's `library` form definition.
+    - For example all form definitions with app name `acme` can use section templates defined in the `acme/library` form definition in addition to the global `orbeon/library` section templates. 
+
+The title of the section in the section template library form definition is used as the title of the section template that shows in the toolbox.
 
 For example, you can create a generic "US Address" section and reuse it in multiple forms:
 
@@ -21,11 +29,6 @@ Section templates can contain:
 - nested grids, with or without repeats
 - nested subsections, with or without repeats
 - services and actions (see below)
-
-When creating a form, the toolbox shows the available sections templates:
-
-- Global templates, created in `orbeon/library` form.
-- Application templates, created in the current application's `library` form.
 
 When you click on a given section template, the section is inserted into the form after the currently selected section. You can then select a new title for the section. It is possible to include a section template more than once.
 
@@ -54,6 +57,19 @@ If you make changes to section templates by modifying and publishing a library f
 For more about reloading, see [Reloading the toolbox](toolbox.md#reloading-the-toolbox)
 
 Note that when you publish your form, the section templates *currently* loaded in Form Builder at the time of publishing are included with the published form. This means that changes to section templates after the deployment of a form do not affect the deployed form. If you need to update a deployed form with a new version of controls, you must re-publish the form.
+
+## Versioning of section templates
+
+[SINCE Orbeon Forms 2019.1]
+
+When [versioning](/form-runner/feature/versioning.md) is available:
+
+- Form Builder allows you to publish multiple versions of a section templates library.
+- Form Builder allows you to select which version of a section templates library you want to use in a particular form definition.
+
+For example, if you versions 1, 2 and 3 of the `acme` library form, the toolbox shows a dropdown with those versions.
+
+When you select a particular version, the toolbox reloads with the latest published form definition with that version.  
 
 ## Merging section templates
 
