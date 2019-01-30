@@ -69,7 +69,13 @@ When [versioning](/form-runner/feature/versioning.md) is available:
 
 For example, if you have published versions 1, 2 and 3 of the `acme` library form, the toolbox shows a dropdown with those versions.
 
+![Version 2 of the section templates library](images/section-templates-v2.png)
+
 When you select a particular version, the toolbox reloads with the latest published form definition with that version.
+
+A section templates library may contain different versions of a given section template, identified by section name, or add or remove section templates compared with other versions of the library.
+
+If the form definition currently being edited is using a section template which is not present in the section template library chosen, the section content appears empty.
 
 For more about reloading, see [Reloading the toolbox](toolbox.md#reloading-the-toolbox)  
 
