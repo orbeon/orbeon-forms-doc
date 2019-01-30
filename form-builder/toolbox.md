@@ -51,6 +51,8 @@ The "Reload Toolbox" icon or button reloads all the components in the toolbox. A
 - The list of all available (published) *versions* of section templates is updated.
 - The currently-selected versions of section templates, if still available, are updated to reflect their latest published.
 
+For more, see [Versioning of section templates](/form-builder/advanced/section-templates.md#versioning-of-section-templates).
+
 ### Orbeon Forms 2017.2 and newer
 
 The "Reload Toolbox" button is located at the top of the "Advanced" tab.
