@@ -67,7 +67,7 @@ When [versioning](/form-runner/feature/versioning.md) is available:
 - Form Builder allows you to publish multiple versions of a section templates library.
 - Form Builder allows you to select which version of a section templates library you want to use in a particular form definition.
 
-For example, if you versions 1, 2 and 3 of the `acme` library form, the toolbox shows a dropdown with those versions.
+For example, if you have published versions 1, 2 and 3 of the `acme` library form, the toolbox shows a dropdown with those versions.
 
 When you select a particular version, the toolbox reloads with the latest published form definition with that version.
 
