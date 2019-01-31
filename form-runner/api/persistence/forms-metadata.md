@@ -48,6 +48,8 @@ Optionally, you can pass the URL parameter `all-versions`:
 - when omitted or set to `false`
     - Only the form definition with the highest published version number is returned.
 
+#### Returning all form definitions
+
 [SINCE Orbeon Forms 2019.1, 2018.2.1, 2018.1.4, 2017.2.3]
 
 Optionally, you can pass the URL parameter `all-forms`:
