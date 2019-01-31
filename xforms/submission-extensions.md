@@ -376,8 +376,8 @@ Here is how Orbeon Forms performs the `rebuild`, `recalculate` and `revalidate` 
 
 The "effective value" for the `validate`, `relevant` and `xxf:calculate` attributes is the value after considering:
 
-* each attribute's default value
-* resolution of AVTs
+- each attribute's default value
+- resolution of AVTs
 
 ## Submitting non-XML content
 
@@ -385,8 +385,8 @@ The "effective value" for the `validate`, `relevant` and `xxf:calculate` attribu
 
 Orbeon Forms supports sending the text content of an XML document as per [XSLT 2.0 and XQuery 1.0 Serialization][6]. To perform a text submission:
 
-* The `post` or `put` method is required.
-* You must use a the `text/plain` value for the `serialization` attribute.
+- The `post` or `put` method is required.
+- You must use a the `text/plain` value for the `serialization` attribute.
 
 
 ```xml
@@ -439,10 +439,10 @@ Orbeon Forms supports sending an XML document as HTML or XHTML as per [XSLT 2.0 
 
 XForms 1.1 does not explicitly support submitting binary content, but does not prohibit it either. Orbeon Forms supports sending the content of a binary resource specified by a URI. Such resources are easily obtained with `<xf:upload>`, for example. To perform a binary submission:
 
-* The `post` or `put` method is required.
-* You must use `application/octet-stream` as `serialization` attribute.
-* The node referred to by the submission must be of type `xs:anyURI`.
-* Relative URLs are supported and resolved as service URLs against the `<xf:submission>` element.
+- The `post` or `put` method is required.
+- You must use `application/octet-stream` as `serialization` attribute.
+- The node referred to by the submission must be of type `xs:anyURI`.
+- Relative URLs are supported and resolved as service URLs against the `<xf:submission>` element.
 
 ```xml
 <xf:instance id="attachment">
@@ -450,7 +450,9 @@ XForms 1.1 does not explicitly support submitting binary content, but does not p
         file:/Users/jdoe/Applications/apache-tomcat-5.5.20/temp/xforms_upload_30877.tmp
     </attachment>
 </xf:instance>
-<xf:bind ref="instance('attachment')" type="xs:anyURI"/>
+<xf:bind
+    ref="instance('attachment')"
+    type="xs:anyURI"/>
 ...
 <xf:submission 
     id="save-submission" 
@@ -575,6 +577,6 @@ This may cause some application which rely on the "servlet path" information to 
 
 Local forwards are not subject to that limitation.
 
-[3]: http://hc.apache.org/httpclient-3.x/authentication.html
+[3]: https://hc.apache.org/httpclient-3.x/authentication.html
 [5]: https://www.w3.org/TR/html401/present/frames.html#adef-target
 [6]: https://www.w3.org/TR/xslt-xquery-serialization/
