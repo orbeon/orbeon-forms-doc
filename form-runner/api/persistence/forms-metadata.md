@@ -43,8 +43,24 @@ Optionally, an app name or both an app name and form name can be specified on th
 
 Optionally, you can pass the URL parameter `all-versions`:
 
-- when set to `true`, all form definition versions are returned
-- when omitted or set to `false`, only the highest published version number is returned
+- when set to `true`
+    - All form definition versions are returned.
+- when omitted or set to `false`
+    - Only the form definition with the highest published version number is returned.
+
+[SINCE Orbeon Forms 2019.1, 2018.2.1, 2018.1.4, 2017.2.3]
+
+Optionally, you can pass the URL parameter `all-forms`:
+
+- when set to `true`
+    - all forms are returned without checking for permissions or other criteria
+- when omitted or set to `false` (which was the behavior before `all-forms` was supported)
+    - Only forms to which the user has "access" are returned.
+    - If the user has access as per `form-builder-permissions.xml`, then all form definitions are returned.
+    - Otherwise:
+        - `library` form definitions are excluded 
+        - forms which have permissions defined and for which the user has no permissions at all are excluded
+        - unavailable form definitions are excluded
 
 ### Response
 
