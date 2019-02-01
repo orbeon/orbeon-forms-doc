@@ -177,6 +177,8 @@ This is used as follows (confirmed for Orbeon Forms 4.5 to 4.10):
     value="[true|false]"/>
 ```
 
+See also [Limitations](/form-runner/feature/versioning.md#limitations).
+
 ### <a name="property_data-format-version"></a> `data-format-version` property
 
 [SINCE Orbeon Forms 2017.1]
