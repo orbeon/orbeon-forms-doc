@@ -1,5 +1,7 @@
 # Performance tuning
 
+NOTE: Not linked yet.
+
 
 ## xxxx
 
@@ -15,8 +17,6 @@ Large forms (with hundreds or thousands of fields) using the wizard view now use
 
 
 
-
-NOTE: Not linked yet.
 
 TODO: separate items which are useful to Form Runner/Form Builder user deployments first. Make plain XForms/XSLT/XPL separate.
 

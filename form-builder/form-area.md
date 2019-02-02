@@ -46,7 +46,7 @@ You can perform the following operations on sections.
 <!--
 ### Subsections
 
-xxxx TODO screenshots, etc. (short screencast would be good!)
+TODO: screenshots, etc. (short screencast would be good!)
 
 -->
 
