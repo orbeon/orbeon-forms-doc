@@ -408,7 +408,7 @@ If `data-format-version=edge` is *not* specified, then the data POSTed is assume
 
 ### Initial data from service
 
-With the following properties, you can configure Form Runner to call a service instead of using the default instance provided as part of the form:
+With the following properties, you can configure Form Runner to call an HTTP service instead of using the default instance provided as part of the form:
 
 ```xml
 <property
@@ -424,18 +424,26 @@ With the following properties, you can configure Form Runner to call a service i
 
 Set the first property above to `true` to enable this behavior and have the second property point to your service.
 
+The service is called with a `GET` HTTP method.
+
+The service must either:
+
+- return a successful HTTP response containing XML data in the `4.0.0` format for the given form
+- return an empty body, in which case no error is produced (see also issue [\#3935](https://github.com/orbeon/orbeon-forms/issues/3935))
+- return an error HTTP response or malformed XML response, in which case an error is produced and the form doesn't initialize
+
 The following property defines a space-separated list of request parameters to be passed to the service. Say the new page was invoke with request parameters `foo=42` and `bar=84`, if you set the value of this property to `foo bar`, these two request parameters will be passed along as request parameters to the service. The request parameters can either get to the new page in a `POST` or `GET` request. The service is always called with a `GET`, consequently request parameters will be passed on the URI.
 
 ```xml
 <property
     as="xs:string"
     name="oxf.fr.detail.new.service.passing-request-parameters.*.*"
-    value=""/>
+    value=foo bar"/>
 ```
 
 *NOTE: Enabling `oxf.fr.detail.new.service.enable` doesn't change the behavior with regard to POSTed instance: even if you are calling a service to get the initial instance, the POSTed instance will be used when a document is POSTed to the corresponding "new form" page.*
 
-_NOTE: The `oxf.fr.persistence.*.data-format-version` property does not affect `oxf.fr.detail.new.service.enable` and the data returned by the service must still be in `4.0.0` format in all cases._
+*NOTE: The `oxf.fr.persistence.*.data-format-version` property does not affect `oxf.fr.detail.new.service.enable` and the data returned by the service must still be in `4.0.0` format in all cases.*
 
 ## View mode
 
