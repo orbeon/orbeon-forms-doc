@@ -213,8 +213,7 @@ returns a new XML document rooted at the `<book>` element:
 xxf:form-urlencode($document as node()) as xs:string
 ```
 
-Performs `application/x-www-form-urlencoded` encoding on an XML document.
-
+Performs `application/x-www-form-urlencoded` encoding on an XML document as per the [XForms specification](https://www.w3.org/community/xformsusers/wiki/XForms_2.0#Serialization_as_application.2Fx-www-form-urlencoded).
 
 ## xxf:has-class()
 
