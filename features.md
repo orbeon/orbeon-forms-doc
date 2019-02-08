@@ -83,7 +83,7 @@ As of 2016-04-19 this page is still being updated.
     - Summary page options
     - custom CSS classes
     - easy switching of control appearances: [blog post](https://blog.orbeon.com/2015/06/how-new-form-builder-appearance.html)
-    - validation: [doc](form-builder/images/validation.png)
+    - validation: [doc](form-builder/validation.md)
     - formulas: [doc](form-builder/formulas.md)
     - help text (plain text and rich text)
         - appearance of help messages: [blog post](https://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
@@ -142,7 +142,7 @@ As of 2016-04-19 this page is still being updated.
 - Validation
     - as-you-type validation
     - explicit validation: [doc](configuration/properties/form-runner/form-runner-detail-page.md#validation-mode)
-    - centralized error summary showing currently relevant errors: [component doc](form-runner/component/images/xbl-error-summary-errors.png), [blog post on warnings/infos enhancements](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
+    - centralized error summary showing currently relevant errors: [component doc](form-runner/component/error-summary.md), [blog post on warnings/infos enhancements](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
     - controlling which attachments are included: [Form Builder doc](form-builder/control-settings.md#basic-options), [Form Runner doc](configuration/properties/form-runner/form-runner-detail-page/form-runner-email#attachment-properties)
     - controlling To, Cc, Bcc, From: [doc](form-builder/control-settings.md), [blog post](https://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)
