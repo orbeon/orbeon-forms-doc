@@ -220,3 +220,8 @@ XForms server - start handling external events
   XForms server - end handling external event {time (ms): "33"}
 XForms server - end handling external events {time (ms): "33"}
 ```
+
+## See also
+
+- [Logging](/installation/logging.md)
+- [Relational database logging](/configuration/troubleshooting/database-logging.md)

@@ -83,36 +83,11 @@ For more information about how to set configuration properties, see [Configurati
 
 This step is optional.
 
-Orbeon Forms has a logging configuration file under `WEB-INF/resources/config/log4j.xml`. By default, logging information is output to a file path relative to the directory where you start your application server.
-
-```xml
-<appender name="SingleFileAppender" class="org.apache.log4j.FileAppender">
-    <param name="File" value="../logs/orbeon.log"/>
-    <param name="Append" value="false" />
-    <param name="Encoding" value="UTF-8"/>
-    <layout class="org.apache.log4j.PatternLayout">
-        <param name="ConversionPattern" value="%d{ISO8601} %-5p %c{1} %x - %m%n"/>
-    </layout>
-</appender>
-```
-
-You can change this by modifying the file parameter. Notes that on Windows, you must use forward slashes:
-
-```xml
-<appender name="SingleFileAppender" class="org.apache.log4j.FileAppender">
-    <param name="File" value="C:/My Path/To/Logs/orbeon.log"/>
-    <param name="Append" value="false" />
-    <param name="Encoding" value="UTF-8"/>
-    <layout class="org.apache.log4j.PatternLayout">
-        <param name="ConversionPattern" value="%d{ISO8601} %-5p %c{1} %x - %m%n"/>
-    </layout>
-</appender>
-```
-
-The benefit of changing this configuration is that you know exactly where the file is stored. This can be really handy when trying to troubleshoot issues.
+See [Logging](logging.md).
 
 ## Specific steps for your container / app server
 
+- [Logging](logging.md)
 - [Tomcat](tomcat.md)
 - [JBoss](jboss.md)
 - [WebLogic](weblogic.md)

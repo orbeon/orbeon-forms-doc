@@ -2,6 +2,7 @@
 
 * [Getting started](README.md)
 * [Installation](installation/README.md)
+    * [Logging](installation/logging.md)
     * [Tomcat](installation/tomcat.md)
     * [JBoss](installation/jboss.md)
     * [WebSphere](installation/websphere.md)

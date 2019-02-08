@@ -51,3 +51,5 @@ Below, you'll find a summary of the steps you can follow to install and configur
 
 - [Using Form Runner with a Relational Database](/form-runner/persistence/relational-db.md)
 - [Troubleshooting with the orbeon.log](/configuration/troubleshooting/orbeon-log)
+- [Logging](/installation/logging.md)
+- [XForms logging](/configuration/advanced/xforms-logging.md)
