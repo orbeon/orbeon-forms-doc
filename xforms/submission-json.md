@@ -1,7 +1,5 @@
 # JSON support
 
-
-
 [SINCE Orbeon Forms 2016.1]
 
 ## Receiving JSON

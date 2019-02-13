@@ -100,7 +100,19 @@ The Test button allows you to test the service. Before doing this, you have to s
 
 This helps you troubleshoot the service call.
 
-![Test Results tab](images/service-definition-test.png)
+![Test Results tab with response headers](images/service-definition-test.png)
+
+![Test Results tab with response body](images/service-definition-test-original-response-body.png)
+
+[SINCE Orbeon Forms 2019.1]
+
+When the service response is in JSON format, you can view the JSON response *translated into XML* following [XForms 2.0](https://www.w3.org/community/xformsusers/wiki/XForms_2.0#External_JSON_values).
+
+This is useful when you want to use XPath expressions to access a JSON response, for example with [datasets](/form-runner/feature/datasets.md) or [item choices](actions.md#setting-the-choices-of-a-selection-control).
+
+See also [JSON support](/xforms/submission-json.md).
+
+![Test Results tab with XML response body](images/service-definition-test-xml-response-body.png) 
 
 ## Saving the service
 
@@ -115,3 +127,5 @@ You can delete a saved service using the "Remove" button.
 - [Actions](actions.md)
 - [Database services](database-services.md)
 - [Synchronizing repeated content](synchronize-repeated-content.md)
+- [Datasets](/form-runner/feature/datasets.md)
+- [JSON support](/xforms/submission-json.md)

@@ -1,7 +1,5 @@
 # JSON functions
 
-
-
 ## xxf:json-to-xml()
 
 [SINCE Orbeon Forms 2016.3]
