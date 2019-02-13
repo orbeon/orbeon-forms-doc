@@ -90,7 +90,9 @@ The "Advanced" tab allows you to set advanced service parameters:
 
 ## Testing a service
 
-The Test button allows you to test the service. Before doing this, you have to set data in the request body for a `POST` or `PUT` request, or you might want to set URL parameters for a `GET` or `DELETE`. Form Builder executes the service, and then provides information about the response returned, including:
+### Basics
+
+The "Test" button allows you to test the service. Before doing this, you have to set data in the request body for a `POST` or `PUT` request, or you might want to set URL parameters for a `GET` or `DELETE`. Form Builder executes the service, and then provides information about the response returned, including:
 
 - Whether an error occurred (green or red highlight)
 - URL called
@@ -103,6 +105,8 @@ This helps you troubleshoot the service call.
 ![Test Results tab with response headers](images/service-definition-test.png)
 
 ![Test Results tab with response body](images/service-definition-test-original-response-body.png)
+
+### XML view of JSON responses
 
 [SINCE Orbeon Forms 2019.1]
 
