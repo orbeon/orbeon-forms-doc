@@ -1,5 +1,36 @@
 # Product roadmap
 
+## Upcoming releases
+
+### Orbeon Forms 2019.1
+
+Consider:
+
+- [low-hanging fruits](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Low-Hanging+Fruit%22)
+- [dogfood items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3ADogfood)
+- [maintenance items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMaintenance)
+- [spare time items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Spare+Time+Feature%22)
+- [top issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+issue%22)
+- [top RFEs](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+RFE%22)
+- [2019.1 items](https://github.com/orbeon/orbeon-forms/projects/11)
+
+Focus:
+
+- Progress towards [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256)
+
+__Please remember that the following schedule is a plan, not a promise:__
+
+- 2019-06: tentative release date
+
+### Orbeon Forms 2019.2
+
+TBD
+
+__Please remember that the following schedule is a plan, not a promise:__
+
+- 2019-12: tentative release date
+
+
 ## Past releases
 
 See the [Orbeon Forms release history](release-history.md).
@@ -35,33 +66,3 @@ For each release we would like to:
 - pick one [maintenance task](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=Refactoring&milestone=&page=1&sort=updated&state=open) (build system, refactoring, …)
 
 The idea is, as some of those tasks are large, to do it incrementally when possible, so that some progress is made.
-
-## Upcoming releases
-
-### Orbeon Forms 2019.1
-
-Consider:
-
-- [low-hanging fruits](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Low-Hanging+Fruit%22)
-- [dogfood items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3ADogfood)
-- [maintenance items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMaintenance)
-- [spare time items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Spare+Time+Feature%22)
-- [top issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+issue%22)
-- [top RFEs](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+RFE%22)
-- [2019.1 items](https://github.com/orbeon/orbeon-forms/projects/11)
-
-Focus:
-
-- Progress towards [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256)
-
-__Please remember that the following schedule is a plan, not a promise:__
-
-- 2019-06: tentative release date
-
-### Orbeon Forms 2019.2
-
-TBD
-
-__Please remember that the following schedule is a plan, not a promise:__
-
-- 2019-12: tentative release date
