@@ -171,7 +171,7 @@ As of 2016-04-19 this page is still being updated.
 - Utility controls
     - Explanatory text
     - Calculated value
-    - Hidden field: [doc](/form-runner/component/hidden.md)
+    - Hidden field: [doc](/form-runner/component/hidden.md), [blog post](https://blog.orbeon.com/2019/02/hidden-fields.html)
 - Typed controls
     - Number
         - control of rounding when formatting/capturing data
