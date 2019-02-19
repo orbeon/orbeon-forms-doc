@@ -22,7 +22,7 @@ Bootstrap, XForms engine, Form Runner and Form Builder rules are contained withi
 
 You can either:
 
-1. Store your CSS is a separate CSS file, which you either provide in addition or that overrides the default CSS provided by Orbeon Forms. For more on this, see the [`oxf.fr.css.custom.uri`][2] configuration property. This is the recommended technique if your CSS is intended to be shared by several forms.
+1. Store your CSS is a separate CSS file, which you either provide in addition or that overrides the default CSS provided by Orbeon Forms. For more on this, see the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) configuration property. This is the recommended technique if your CSS is intended to be shared by several forms.
 
 2. Put your CSS inline, in the form. Uf your CSS is quite short, and specific to a given form (not to be shared amongst forms), this is a possibility. For this, put the rules within your own `<style>` section of the form:
     ```xml
@@ -84,6 +84,5 @@ See [Automatic PDF](automatic-pdf.md).
 - [Automatic PDF](automatic-pdf.md)
 
 [1]: http://getbootstrap.com/2.3.2/
-[2]: ../../configuration/properties/form-runner.md#adding-your-own-css
 [4]: http://getbootstrap.com/2.3.2/scaffolding.html
 [5]: https://developer.chrome.com/devtools

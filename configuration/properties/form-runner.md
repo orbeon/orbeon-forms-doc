@@ -155,14 +155,6 @@ This is the default value of the property:
 
 If you use two `*` wildcards, as in the example above, the property also sets the logo on the [Form Runner Home page](../../form-runner/feature/home-page.md).
 
-You can set the Form Builder logo specifically with:
-
-```xml
-<property as="xs:anyURI"  name="oxf.fr.default-logo.uri.orbeon.builder">
-    /apps/fr/style/orbeon-navbar-logo.png
-</property>
-```
-
 1. Place your logo file(s) under one of the following recommended locations:
     - `WEB-INF/resources/forms/assets`: logo for all forms
     - `WEB-INF/resources/forms/APP/assets`: logo for app name APP
@@ -176,6 +168,16 @@ For example, to change the default logo for all forms and pages to an image call
     /forms/assets/my-logo.png
 </property>
 ```
+
+NOTE: Since Orbeon Forms 4.0, this property doesn't have an impact on the Form Builder logo. To override the Form Builder logo, you can use custom CSS (see the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) configuration).
+
+<!--
+```xml
+<property as="xs:anyURI"  name="oxf.fr.default-logo.uri.orbeon.builder">
+    /apps/fr/style/orbeon-navbar-logo.png
+</property>
+```
+-->
 
 ## Adding your own CSS
 
