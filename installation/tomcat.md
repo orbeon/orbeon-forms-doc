@@ -123,7 +123,7 @@ To setup Form Runner authentication:
 
 ### BASIC authentication
 
-If you are using BASIC authentication on Tomcat 6.0.21 or newer, or on Tomcat 7, then you need to add the following valve inside the `<Context>` corresponding to the Orbeon Forms web app in Tomcat's configuration:
+If you are using BASIC authentication on Tomcat 6.0.21 or newer you might have to add the following `<Valve>` element inside the `<Context>` corresponding to the Orbeon Forms web app in Tomcat's configuration:
 
 ```xml
 <Valve
