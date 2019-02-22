@@ -492,6 +492,37 @@ Example:
     instance="result"/>
 ```
 
+## Receiving binary content
+
+[SINCE Orbeon Forms 2019.1]
+
+The extension `replace="xxf:binary"` attribute allows storing the content of a response in binary form.
+
+The content of a successful response is read and stored as a temporary URI. The value of the URI is stored into the node pointed to by the `targetref` attribute.
+
+```xml
+<xf:submission
+    id="get-image-submission"
+    method="get"
+    serialization="none"
+    resource="https://httpbin.org/image/png"
+    replace="xxf:binary"
+    targetref="instance()/my-image"/>
+```
+
+The content of the element stored might look like this:
+
+```xml
+<my-image>file:/tmp/file/path.tmp?mediatype=image%2Fpng&amp;size=8090&amp;mac=9419ea0d078c05e8138df613b2a82318d3ccbba9</my-image>
+```
+
+The `file:` URI contains parameters when possible:
+
+- `mediatype`: the `Content-Type` received with the response
+- `size`: the size in bytes of the temporary file
+- `mac`: an internally-produced MAC to check the file path has not been tampered with
+    - This is so that `xf:output` in particular can access temporary files uploaded and retrieved by `xf:submission` but not other temporary files.
+
 ## Local submissions (deprecated)
 
 ### Status
