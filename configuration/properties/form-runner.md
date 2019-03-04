@@ -190,10 +190,9 @@ NOTE: Since Orbeon Forms 4.0, this property doesn't have an impact on the Form B
 2. Define the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
 
 ```xml
-<property
-    as="xs:string"
-    name="oxf.fr.css.custom.uri.*.*"
-    value="/forms/acme/assets/acme.css"/>
+<property as="xs:string" name="oxf.fr.css.custom.uri.*.*">
+    /forms/acme/assets/acme.css
+</property>
 ```
 
 You can add more than one file, and just separate the paths by whitespace in the property.
@@ -202,18 +201,19 @@ Note that the locations suggested are just about how to organize the files for c
 
 
 ```xml
-<property
-    as="xs:string"
-    name="oxf.fr.css.custom.uri.APP.*"
-    value="/forms/APP/assets/my-app.css"/>
+<property as="xs:string" name="oxf.fr.css.custom.uri.APP.*">
+    /forms/APP/assets/my-app.css
+</property>
 
-<property
-    as="xs:string"
-    name="oxf.fr.css.custom.uri.APP.FORM"
-    value="/forms/APP/FORM/assets/my-app-and-form.css "/>
+<property as="xs:string" name="oxf.fr.css.custom.uri.APP.FORM">
+    /forms/APP/assets/my-app.css
+    /forms/APP/FORM/assets/my-app-and-form.css
+</property>
 ```
 
 The names `APP`, `FORM`, `my-app.css` and `my-app-and-form.css` are just placeholders for your own app name, form name, and CSS files names.
+
+If a specific property is defined for an app/form, such as `oxf.fr.css.custom.uri.APP.FORM`, only that property is considered and other properties defined only for a given app but without a specific form, such as `oxf.fr.css.custom.uri.APP.*`, will be ignored. This means that you must repeat references to CSS resources in the more specific property if desired. For example above `/forms/APP/assets/my-app.css` is repeated.
 
 [SINCE Orbeon Forms 2017.1]
 
@@ -254,10 +254,10 @@ Change the width of a column | `.fr-grid-invoice .fr-grid-col-1 { width: 40px }`
 2. Define the [`oxf.fr.js.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-adding-your-own-javascript-files) property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
 
 ```xml
-<property
-    as="xs:string"
-    name="oxf.fr.js.custom.uri.*.*"
-    value="/forms/acme/assets/acme.js forms/acme/sales/assets/acme-sales.js"/>
+<property as="xs:string" name="oxf.fr.js.custom.uri.*.*">
+    /forms/acme/assets/acme.js
+    /forms/acme/sales/assets/acme-sales.js
+</property>
 ```
 
 You can add more than one file, and just separate the paths by whitespace in the property.

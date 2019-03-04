@@ -7,10 +7,9 @@
 In addition to `oxf.fr.css.custom.uri`, you can also use the following property, which apply only to the Detail page:
 
 ```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.css.custom.uri.*.*"
-    value="/forms/acme/assets/acme-detail.css"/>
+<property as="xs:string" name="oxf.fr.detail.css.custom.uri.*.*">
+    /forms/acme/assets/acme-detail.css"
+</property>
 ```
 
 See also [Adding your own CSS](form-runner.md#adding-your-own-css).
@@ -22,10 +21,10 @@ See also [Adding your own CSS](form-runner.md#adding-your-own-css).
 In addition to `oxf.fr.js.custom.uri`, you can also use the following property, which apply only to the Detail page:
 
 ```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.js.custom.uri.*.*"
-    value="/forms/acme/assets/acme-detail.js"/>
+<property as="xs:string" name="oxf.fr.detail.js.custom.uri.*.*">
+    /forms/acme/assets/acme-detail.js"
+</property>
+    
 ```
 
 See also [Adding your own JavaScript](form-runner.md#adding-your-own-javascript).
