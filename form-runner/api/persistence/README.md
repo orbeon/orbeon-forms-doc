@@ -55,9 +55,8 @@ where:
 
 [SINCE Orbeon Forms 4.4]
 
-If your persistence provider does not support drafts, you can specifically turn off the autosave feature for that persistence layer with the `oxf.fr.persistence.*.autosave` property. See [Autosave](../../persistence/autosave.md) and [persistence layer configuration](../../../configuration/properties/persistence.md) for details.
-
-Similarly, if your persistence provider does not support user/group permissions, you can specifically turn off the permissions feature for that persistence layer with the `oxf.fr.persistence.*.permissions` property. See [persistence layer configuration](../../../configuration/properties/persistence.md) for details.
+- Drafts – If your persistence provider does not support drafts, you can specifically turn off the autosave feature for that persistence layer with the `oxf.fr.persistence.*.autosave` property. See [Autosave](../../persistence/autosave.md) and [persistence layer configuration](../../../configuration/properties/persistence.md) for details.
+- User/group permissions – Similarly, if your persistence provider does not support user/group permissions, you can specifically turn off the permissions feature for that persistence layer with the `oxf.fr.persistence.*.permissions` property. See [persistence layer configuration](../../../configuration/properties/persistence.md) for details.
 
 ## Virtual hierarchy of data
 

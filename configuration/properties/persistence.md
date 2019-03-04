@@ -1,7 +1,5 @@
 # Persistence configuration properties
 
-
-
 ## Levels of configuration
 
 Storage for the persistence hierarchy can be configured at multiple levels:
