@@ -469,7 +469,7 @@ You can use all the buttons available on the Detail Page. In addition, the follo
 
 [SINCE Orbeon Forms 2017.1]
 
-The following property allows you to show hints in the `view` an `pdf` modes. By default, the value is `false` and the hints do not show. 
+The following property allows you to show hints in the `view` and `pdf` modes. By default, the value is `false` and the hints do not show. 
 
 ```xml
 <property 
