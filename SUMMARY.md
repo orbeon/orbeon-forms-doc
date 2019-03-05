@@ -261,7 +261,7 @@
             * [JavaScript companion classes](xforms/xbl/javascript.md)
             * [XBL library](xforms/xbl/library.md)
             * [Extensions](xforms/xbl/extensions.md)
-            * [Attachment controls]/xforms/xbl/attachments.md
+            * [Attachment controls](/xforms/xbl/attachments.md)
     * XForms tutorial
         * [Introduction](xforms/tutorial/introduction.md)
         * [Installation](xforms/tutorial/installation.md)
