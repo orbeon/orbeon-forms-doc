@@ -18,6 +18,7 @@
     - [JavaScript companion classes](javascript.md)
     - [XBL library](library.md)
     - [Extensions](extensions.md)
+    - [Attachment controls](attachments.md)
 
 ## Why are components needed?
 
