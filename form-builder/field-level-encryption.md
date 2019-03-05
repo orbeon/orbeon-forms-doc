@@ -2,7 +2,7 @@
 
 ## Availability
 
-[SINCE Orbeon Forms PE 2018.1]
+[SINCE Orbeon Forms PE 2018.2.2]
 
 ## Overview
 
