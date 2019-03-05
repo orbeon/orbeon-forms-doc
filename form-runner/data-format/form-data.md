@@ -174,4 +174,4 @@ Exclicitely marking fields that have been encrypted in the data allows form auth
 ## See also
 
 - [Form Definition Format](/form-runner/data-format/form-definition.md)
-- [Field-level encryption](/form-builder/advanced/field-level-encryption.md)
+- [Field-level encryption](/form-builder/field-level-encryption.md)
