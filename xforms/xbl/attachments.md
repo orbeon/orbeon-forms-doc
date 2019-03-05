@@ -1,4 +1,4 @@
-# Attachments controls
+# Attachment controls
 
 ## Encryption
 
