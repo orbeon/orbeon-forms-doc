@@ -57,3 +57,4 @@ We expect these limitations to be lifted in future versions of Orbeon Forms.
 
 - [Basic Settings](/form-builder/control-settings.md)
 - [Re-encryption](/form-runner/features/home-page.md#re-encryption)
+- [Encryption in the form data format](/form-runner/data-format/form-data.md#encryption)
