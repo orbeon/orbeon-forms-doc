@@ -94,6 +94,24 @@ Once a language is selected, it is stored as the `fr-language` session attribute
 
 See also [Localizing Orbeon Forms](../../contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form runner in additional languages. Your contributions are welcome!
 
+### As of Orbeon Forms 2019.1
+
+Language  | Calendar | Numberer | XBL components | Form Runner    | Form Builder
+----------|:--------:|:--------:|:--------------:|:--------------:|:-------------:
+English   | F        | F        | F              | F              | F
+French    | F        | F        | F              | F              | F
+Swedish   | F        | F        | F [^1]         | F [^1]         | F [^1]
+Portuguese| F        | F        | F [^1]         | F [^1]         | F [^1]
+Italian   | F        | F        | F [^1]         | F [^1]         | F [^1]
+German    | F        | F        | F [^1]         | F [^1]         | F [^1]
+Spanish   | F        | F        | F [^1]         | P              | P
+Finnish   | F        | F        | P              | F [^1]         | F [^1]
+Dutch     | F        | F        | F [^1]         | F [^1]         | F [^1]
+Norwegian | F        | F        | P              | P              | P
+Russian   | F        | F        | P              | P              | P
+Polish    | N        | F        | N              | N              | N
+Danish    | N        | F        | P              | F [^1]         | N
+
 ### As of Orbeon Forms 2018.2
 
 Language  | Calendar | Numberer | XBL components | Form Runner    | Form Builder
