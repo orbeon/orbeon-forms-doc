@@ -200,6 +200,34 @@ An action looks like this:
 <fr:dataset-write>
 ```
 
+#### Calling a process
+
+[SINCE Orbeon Forms 2019.1]
+
+```xml
+<fr:process-call
+    scope="oxf.fr.detail.process"
+    name="send"/>
+```
+
+Attribute|Mandatory|Value|Comment
+---------|---------|---------|---------
+`scope`|Yes|property scope|
+`name`|Yes|process name|
+
+#### Navigating to a page or URL
+
+[SINCE Orbeon Forms 2019.1]
+
+```xml
+<fr:navigate
+    location="https://www.bbc.com/news"/>
+```
+
+Attribute|Mandatory|Value|Comment
+---------|---------|---------|---------
+`location`|Yes|path or URL|
+
 ## See also
 
 - [Actions](actions.md)
