@@ -227,7 +227,7 @@ Attribute|Mandatory|Value|Comment
 Attribute|Mandatory|Value|Comment
 ---------|---------|---------|---------
 `location`|Yes|path or URL|
-`target`  |No |`_self|_blank` or name of the browsing context|where to display the location
+`target`  |No |`_self` or `_blank` or name of the browsing context|where to display the location
 
 ## See also
 
