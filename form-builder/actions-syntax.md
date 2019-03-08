@@ -213,7 +213,7 @@ An action looks like this:
 Attribute|Mandatory|Value|Comment
 ---------|---------|---------|---------
 `scope`|Yes|property scope|
-`name`|Yes|process name|
+`name` |Yes|process name  |
 
 #### Navigating to a page or URL
 
@@ -227,6 +227,7 @@ Attribute|Mandatory|Value|Comment
 Attribute|Mandatory|Value|Comment
 ---------|---------|---------|---------
 `location`|Yes|path or URL|
+`target`  |No |`_self|_blank` or name of the browsing context|where to display the location
 
 ## See also
 

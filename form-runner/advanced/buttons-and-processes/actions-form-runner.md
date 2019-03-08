@@ -116,6 +116,10 @@ Navigate to an external page via client-side `GET`.
     - `uri`: an XPath value template which specifies the URL to navigate to
     - `property`: specifies a property containing the URL to navigate to
     - by default, try to guess based on the parameter
+    - `target`
+        - SINCE Orbeon Forms 2019.1
+        - where to display the location
+        - `_self|_blank` or name of the browsing context
 
 You can also use the `navigate` action to execute JavaScript:
 
