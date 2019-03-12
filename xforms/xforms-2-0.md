@@ -40,3 +40,8 @@ XForms 2.0 features added with Orbeon Forms 2017.1:
     - The values are `keep`, `remove`, and `empty`.
 
 For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=XForms+2.0&page=1&sort=updated&state=open).
+
+XForms 2.0 features added with Orbeon Forms 2019.1:
+
+- `target` on `<xf:load>`
+    - This deprecates the `xxf:target` attribute.
