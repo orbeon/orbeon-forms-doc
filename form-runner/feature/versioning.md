@@ -4,54 +4,15 @@
 
 This feature is available since Orbeon Forms 4.5. It is available with all supported relational databases but not the eXist database.
 
-## Limitations
+## What is form definition versioning?
 
-When using form definition versioning, form definitions and form data *must* both be stored in the same persistence provider, which must support versioning. See issue [\#3926](https://github.com/orbeon/orbeon-forms/issues/3926).
-
-For example:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.*"
-    value="mysql"/>
-```
-
-or:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.form"
-    value="mysql"/>
-    
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.data"
-    value="mysql"/>
-```
-
-However, the following does *not* work:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.form"
-    value="mysql"/>
-    
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.data"
-    value="oracle"/>
-```
-
-## Without form definition versioning
+### Without form definition versioning
 
 Without form definition versioning, Orbeon Forms only keeps track of a single [published](/form-builder/publishing.md) form definition for a given application name/form name (see [terminology](/form-runner/overview/terminology.md#application-name-and-form-name)). This means that if you republish a form, the previously-published form definition gets overwritten (although there is an [auditing trail](/form-runner/api/persistence/versioning.md#auditing-trail)).
 
 This also means that when opening existing data for editing or viewing, Orbeon Forms always uses the latest published version of the form definition. This can lead to unexpected results, as fields might have been added, removed, or renamed in the new form definition. In fact, the form definition could be completely different from the form definition used to create and save the data currently stored in the database!
 
-## With form definition versioning
+### With form definition versioning
 
 Form definition versioning introduces the idea that published form definitions for a given application name/form name also have a version number. When creating a *new* version upon publishing, the version number is "1", and when publishing again with a new version the number increases: "2", "3", etc. So you can talk about "version 2 of the Acme Order form".
 
@@ -126,6 +87,47 @@ The `oxf.fr.detail.data-migration` is set as follows by default:
 ```  
 
 ![Form Options](../../form-builder/images/form-settings-options.png)
+
+## Limitations
+
+When using form definition versioning, form definitions and form data *must* both be stored in the same persistence provider, which must support versioning. See issue [\#3926](https://github.com/orbeon/orbeon-forms/issues/3926).
+
+For example:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.acme.*.*"
+    value="mysql"/>
+```
+
+or:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.acme.*.form"
+    value="mysql"/>
+    
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.acme.*.data"
+    value="mysql"/>
+```
+
+However, the following does *not* work:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.acme.*.form"
+    value="mysql"/>
+    
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.acme.*.data"
+    value="oracle"/>
+```
 
 ## See also
 
