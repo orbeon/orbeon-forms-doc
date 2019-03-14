@@ -48,6 +48,8 @@ Examples of incompatible changes:
 - moving a control between grids or sections
 - changing the nesting of grids or section within subsections
 
+See also [Simple data migration](#simple-data-migration) below.
+
 ## Simple data migration
 
 ### Availability
