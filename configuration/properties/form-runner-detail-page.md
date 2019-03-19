@@ -463,6 +463,20 @@ You can use all the buttons available on the Detail Page. In addition, the follo
     * Label: "Edit"
     * Action: Navigate back to the Detail Page in "edit" mode.
 
+### Showing alerts in view and PDF modes
+
+[SINCE Orbeon Forms 2019.1]
+
+The following property allows you to show alerts in the `view` and `pdf` modes. By default, the value is `false` and the alerts do not show.
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.static-readonly-alert.*.*"
+    value="true"/>
+```
+
+_NOTE: Alerts show under the fields as usual. Setting this property to `true` doesn't cause the Error Summary to show._
 
 ### Showing hints in view and PDF modes
 
