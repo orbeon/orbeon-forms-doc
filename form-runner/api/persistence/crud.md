@@ -212,19 +212,27 @@ When Form Builder publishes a form definition, if versioning is supported by the
 
 Orbeon Forms implements, exposes, and internally uses the [Publish form definition API](/form-runner/api/other/publish.md) to publish form definitions. Orbeon recommends using that API to publish form definitions.
 
-## Handling attachments
+## Attachments
 
 Form data supports *attachments*. These are usually binary data attached by the user via an Attachment or Image attachment control. Attachments are stored separately from the XML data.
 
-In order to save an attachment, you have to use a separate `PUT` request for each attachment. The format of the attachment path is:
+### `PUT` and `GET`
+
+In order to save an attachment, you have to use a separate `PUT` request for each attachment. Conversly, to read an attachment that has been saved, use a `GET` to the attachment path. The format of the attachment path is as follows, on a single line (here split in multiple lines for readability):
 
 ```
-/fr/service/persistence/crud/$app/$form/(data|draft)/$doc/$attachment.bin
+/fr/service/persistence/crud
+    /$app/$form
+    /(data|draft)
+    /$doc
+    /$attachment.bin
 ```
 
 where `$attachment` is a random id for the attachment. The `.bin` extension is expected.
 
-Then, the XML data must point to the attachment using that same path. For example:
+### Attachment metadata
+
+The XML data must point to the attachment using that same path. For example:
 
 ```xml
 <form>
@@ -241,7 +249,18 @@ Note that in the case of attachments, the XML data contains attributes indicatin
 
 - the file name
 - the mediatype
-- the file size 
+- the file size
+
+### Encrypted attachments
+
+[SINCE Orbeon Forms 2019.1] Implementations of the persistence API don't need to do anything special to handle encrypted attachments, and they can just save the data they received and serve the data they saved. Conversely, consumers of the persistence API will always receive decrypted data when issuing a `GET` and aren't expected to do the encryption themselves when issuing a `PUT`. This ensures that the persistence API is as simple as possible to both implementers and users of the persistence API.
+
+For this to work, a component we call the *persistence proxy* sits between consumers and implementations of the API. It is the persistence proxy that takes care of encrypting and decrypting attachments as necessary. However, for the persistence proxy to be able to do this, as a consumer of the API:
+
+- When storing an attachment (`PUT`), you must "tell" the persistence proxy what field this attachment corresponds to, so the persistence proxy can figure out whether it needs to be encrypted based on the form definition. This is done by adding an `Orbeon-Path-To-Holder` header to your `PUT` request. The value of the header is the path to the element in the XML data that corresponds to the attachment currently being stored. The path should skip the root element name (`/form`). For instance:
+    - If you have a section named `personal-information` with an attachment field `photo`, then the value of the header should be `personal-information/photo`.
+    - If you have a section named `children` with a repeated grid named `child`, with an attachment field `photo`, then the value of the header should be `children/child/child-iteration/photo`.
+- When reading an attachment (`GET`), you must "tell" the persistence proxy whether the attachment was encrypted. You can know this by checking whether the element in the XML data that corresponds to the attachment has an attribute `fr:attachment-encrypted = 'true'`. If so, you need to add the header `Orbeon-Decrypt: true` to your `GET` request.
 
 ## Deleting all data for an existing form
 
