@@ -64,6 +64,8 @@ Here is how hints appear depending on the type of control they are associated wi
 
 <img alt="" src="../form-runner/images/placeholder-and-inline-hints.png" width="932">
 
+See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-level-settings.html).
+
 ## Control Settings
 
 [SINCE Orbeon Forms 2018.2]
@@ -127,3 +129,4 @@ Form statistics show counts of various form elements.
 - [Simple data migration](/form-runner/feature/versioning.md#simple-data-migration)
 - [Automatic calculations dependencies](../form-runner/feature/automatic-calculations-dependencies.md)
 - Blog post: [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
+- Blog post: [Form-level and control-level settings](https://blog.orbeon.com/2019/03/form-level-and-control-level-settings.html)
