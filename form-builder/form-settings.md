@@ -64,8 +64,6 @@ Here is how hints appear depending on the type of control they are associated wi
 
 <img alt="" src="../form-runner/images/placeholder-and-inline-hints.png" width="932">
 
-See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-level-settings.html).
-
 ## Control Settings
 
 [SINCE Orbeon Forms 2018.2]
@@ -77,6 +75,8 @@ For example, you can set a "Digits After Decimal" setting global to the form, an
 ![Number Control Settings](images/form-settings-controls-number.png) 
 
 ![Date Control Settings](images/form-settings-controls-date.png)
+
+See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-level-settings.html).
 
 ## Wizard Options
 
