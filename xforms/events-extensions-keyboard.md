@@ -15,7 +15,7 @@ The main idea behind supporting keyboard events is to allow creating keyboard sh
 
 You can, by listening to the `keypress`, `keydown` and `keyup` events, run actions as users type a certain key combination. Your listener can be registered on:
 
-- __The whole document__, in which case it will run whenever users press the key combination you specified. You can register a listener on the whole document either by declaring you listener directly under the `xh:body` as in:
+- __The whole document__, in which case it will run whenever users press the key combination you specified. You can register a listener on the whole document either by declaring your listener directly under the `xh:body` as in:
 
     ```xml
     <xh:body>
