@@ -107,6 +107,12 @@ You can visualize the XML converted from JSON with Form Builder as follows:
 
 ![How to see the converted XML](images/submission-json-see-xml.png)
 
+[SINCE Orbeon Forms 2019.1]
+
+The Form Builder HTTP Service dialog supports viewing JSON response translated into XML.
+
+See [XML view of JSON responses](/form-builder/http-services.md#xml-view-of-json-responses).
+
 ## Sending JSON
 
 When setting `serialization="application/json"` on `xf:submission`, the source XML is converted to JSON. The source XML must be compatible with the XForms XML representation of JSON shown above to be meaningful.
