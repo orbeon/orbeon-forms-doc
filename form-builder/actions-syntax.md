@@ -229,6 +229,65 @@ Attribute|Mandatory|Value|Comment
 `location`|Yes|path or URL|
 `target`  |No |`_self` or `_blank` or name of the browsing context|where to display the location
 
+#### Setting the value of an attachment control
+
+[SINCE Orbeon Forms 2019.1]
+
+When the response of a service is binary, this action allows setting the value of an attachment control to the content of the service response:
+
+```xml
+<fr:control-setattachment
+    control="my-attachment"/>
+``` 
+
+This supports the following controls:
+
+- `<fr:attachment>`
+- `<fr:image-attachment>`
+
+The mediatype and received by the service and the actual size of the attachment are automatically set. However, the filename is not set automatically.
+
+See also the following actions:
+ 
+- `<fr:control-setfilename>`
+- `<fr:control-setmediatype>`
+
+#### Setting the filename of an attachment control
+
+[SINCE Orbeon Forms 2019.1]
+
+This action allows setting the filename of an attachment control:
+
+```xml
+<fr:control-setfilename
+    control="my-attachment"
+    value="'My Image.png'"/>
+```
+
+This supports the following controls:
+
+- `<fr:attachment>`
+- `<fr:image-attachment>`
+
+#### Setting the mediatype of an attachment control
+
+[SINCE Orbeon Forms 2019.1]
+
+This action allows setting the mediatype of an attachment control:
+
+```xml
+<fr:control-setmediatype
+    control="my-attachment"
+    value="'image/png'"/>
+```
+
+This supports the following controls:
+
+- `<fr:attachment>`
+- `<fr:image-attachment>`
+
+Note that the `<fr:control-setattachment>` action automatically sets a mediatype.
+
 ## See also
 
 - [Actions](actions.md)
