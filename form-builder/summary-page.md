@@ -62,3 +62,7 @@ To create a new form definition, press the "New" button at the bottom of the pag
 ## Deleting a form definition
 
 Using the checkboxes that appear on each row, select the form definitions you wish to delete, then press the "Delete" button.
+
+## Permissions
+
+The Summary page follows the [access control rules for deployed forms](form-runner/access-control/deployed-forms.md). This means that a user accessing the Summary page will only see the data to which she has access to.
