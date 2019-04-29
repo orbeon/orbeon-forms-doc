@@ -288,6 +288,22 @@ For instance, to change the label of the submit button to be "Send" in English f
     value='&lt;i class="icon-arrow-right"/&gt; Send'/>
 ```
 
+This also works for resources that don't exist yet. For your own resources, start with a prefix specific to your company or project. For example:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.resource.*.*.en.acme.my-resource-1"
+  value="Resource 1 in English"/>
+
+<property
+  as="xs:string"
+  name="oxf.fr.resource.*.*.fr.acme.my-resource-1"
+  value="Resource 1 en français"/>
+```
+
+*NOTE: You can add new resources as shown above, but you cannot create new languages.*
+
 ## Email settings
 
 See [Email](form-runner-email.md).
