@@ -197,6 +197,29 @@ You can also override the default confirmation message:
   value="Are you sure you want to proceed?"/>
 ```
 
+You can also use a path to a resource, including a custom resource. For example" 
+
+```xml
+save
+then confirm(resource = "acme.my-resource-1")
+then suspend
+then send("oxf.fr.detail.send.success")'/>
+```
+
+If you have defined custom resources as follows:
+
+```xml
+<property
+  as="xs:string"
+  name="oxf.fr.resource.*.*.en.acme.my-resource-1"
+  value="Resource 1 in English"/>
+
+<property
+  as="xs:string"
+  name="oxf.fr.resource.*.*.fr.acme.my-resource-1"
+  value="Resource 1 en français"/>
+```
+
 ## open-rendered-format
 
 [SINCE Orbeon Forms 2017.1] This action takes a `format` parameter, whose value must be either `pdf` or `tiff`, as in `open-rendered-format(format = "pdf")`. Depending on the value of the parameter, it generates a view of the current form in the specified format, and sends the generated PDF or TIFF to the browser. This action will attempt to have the browser show the generated PDF or TIFF, and do so in a new browser tab or window. However, not all browsers support this completely:
