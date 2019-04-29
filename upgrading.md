@@ -1,5 +1,28 @@
 # Upgrading
 
+## Why upgrade to newer versions of Orbeon Forms?
+
+### Minor releases
+
+Orbeon Forms minor releases (or "dot releases", or "point releases"), for example Orbeon Forms 2018.2.1, 2018.2.2, etc., contain important bug-fixes but no new features (in some rare cases, minor features can be introduced). We recommend upgrading to newer minor releases in all cases. 
+
+### Major releases
+
+Major releases contain new features and bug-fixes. In some cases, bug-fixes cannot be backported to earlier versions of Orbeon Forms, for example in the case where the fix required an important change in the internal architecture of the software. 
+
+The only sure way to keep up to date is to eventually update to a newer major version of Orbeon Forms. We acknowledge that upgrading, while it should always be smooth, comes with some risks, as with any software upgrade.
+
+You can reduce that risk by *not upgrading* to the first published major release, and wait until a subsequent dot release. For example, instead of immediately upgrading to Orbeon Forms 2018.2, wait until Orbeon Forms 2018.2.1 or 2018.2.2.  
+
+## Where do bug-fixes go?
+
+The way we handle fixes, generally, is as follows:
+
+- All new fixes go into the branch for the next major version of Orbeon Forms (for example the future Orbeon Forms 2019.1).
+- Most fixes (as opposed to new features) go into the previous major version of Orbeon Forms as well (for example Orbeon Forms 2018.2), and are released as a dot release at a later time (for example Orbeon Forms 2018.2.3).
+- Some important fixes are backported to earlier versions of Orbeon Forms (for example 2018.1.x) at Orbeon's discretion.
+- We backport certain features to customer branches on demand. But the more time passes between versions, the harder and riskier it becomes to backport fixes. This is because the codebase is more likely to change over time.
+
 ## Upgrade steps
 
 To upgrade to a new version of Orbeon Forms you'll want to:
@@ -34,10 +57,10 @@ Finally, let us know if you encounter issues while upgrading, via the [community
 
 *NOTE: As a reminder, starting with Orbeon Forms 2016.1, we are using a versioning scheme with the number of the year first followed by the number of the major release during that year. See [Release History](release-history.md) for details. *
 
-- Between any two subsequent 4.x releases, or 201x.x releases, upgrades are expected to be fairly straightforward.
-- The longer the interval of time between two release, the harder the upgrade might be. For example, it can be harder to upgrade between 4.0 and 4.6 than between 4.5 and 4.6.
-- Orbeon Forms 4.0 was a large release with many changes. In general upgrading between pre-4.0 releases and 4.x releases is more difficult than upgrades between two 4.x or 201x.x releases.
-- Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x or 201x.x releases.
+- Between any two subsequent 4.x releases, or 20xx.x releases, upgrades are expected to be fairly straightforward.
+- The longer the interval of time between two release, the harder the upgrade might be. For example, it can be harder to upgrade between 2016.1 and 2018.2 than between 2018.1 and 2018.2.
+- Orbeon Forms 4.0 was a large release with many changes. In general upgrading between pre-4.0 releases and 4.x releases is more difficult than upgrades between two 4.x or 20xx.x releases.
+- Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x or 20xx.x releases.
 
 ## Areas of compatibility
 
@@ -76,6 +99,14 @@ See also [Orbeon Forms release history](release-history.md).
 
 ## Reliance on Orbeon Forms internals
 
+### Recommendation 
+
+In general we *strongly recommend* that you do not rely on Orbeon Forms internals, but only on published APIs.
+
+This includes not modifying the content of any JAR files present in Orbeon Forms.  
+
+### When it happens
+
 Our users sometimes customize Orbeon Forms by relying on the internals of Orbeon Forms. This might even be on Orbeon's advice, when no better solution are available at a given time. In such cases, upgrading can be more difficult, because the internals of Orbeon Forms are subject to change, and backward compatibility of look and feel is difficult to achieve with only CSS.
 
 When this happens, we consider the reasons changes relying upon Orbeon Forms internals, and evaluate how this could be improved in the future. Examples include:
@@ -85,7 +116,7 @@ When this happens, we consider the reasons changes relying upon Orbeon Forms int
   - [Form Runner: Custom dialogs and model logic](form-runner/advanced/custom.md)
 - Considered
   - [Stable API for Form Runner](https://github.com/orbeon/orbeon-forms/issues/1095)
-
+  
 ## What are the benefits of upgrading Orbeon Forms versions?
 
 Each new version brings:
