@@ -450,6 +450,34 @@ _NOTE: These two headers are computed values and it is only possible to override
     value="false"/>
 ```
 
+### Expired and idle connections
+
+[SINCE Orbeon Forms 2019.1]
+
+Since the HTTP client uses connection pooling, some connections can be come stale, which can cause errors at inopportune times. Enabling expired and idle connections checking can help reduce this issue.
+
+The `oxf.http.expired-connections-polling-delay` property sets the expired connection checking polling delay. The default is 5,000 milliseconds (5 seconds). 
+
+```xml
+<property 
+    as="xs:integer" 
+    name="oxf.http.expired-connections-polling-delay"      
+    value="5000"/>
+```
+
+The `oxf.http.idle-connections-delay` property sets the idle connection time to live. The default is 30,000 milliseconds (30 seconds).
+
+```xml
+<property 
+    as="xs:integer" 
+    name="oxf.http.idle-connections-delay"
+    value="30000"/> 
+```
+
+If `oxf.http.expired-connections-polling-delay` is commented out or not present, neither checks are performed.
+
+If `oxf.http.idle-connections-delay` is commented out or not present, but `oxf.http.expired-connections-polling-delay` is present, then only the check for expired connections takes place.
+
 ## Epilogue and theme properties
 
 ### oxf.epilogue.theme

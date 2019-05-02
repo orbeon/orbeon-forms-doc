@@ -1,7 +1,5 @@
 # Form Runner Java Embedding API
 
-
-
 ## Availability
 
 Since Orbeon Forms 4.7.
@@ -128,7 +126,10 @@ If needed, you can also [pass the user's roles and group through additional head
 
 The embedding JAR uses SLF4J for logging. If your application already uses SLF4J and already has slf4j-api.jar, you can remove the one provided by Orbeon under `WEB-INF/lib`. Otherwise, you must keep slf4j-api.jar in your application's `WEB-INF/lib` folder.
 
-*OPTIONAL: In addition, if you want to actually configure logging for the embedding library, you must add a logging adapter for SLF4j and the appropriate configuration file, for example for log4j. See the sample configuration file under `WEB-INF/classes/log4j.properties.template`.*
+Optionally, and in addition, if you want to actually configure logging for the embedding library, you must add a logging adapter for SLF4j and the appropriate configuration file, for example for log4j. See the sample configuration file under `WEB-INF/classes/log4j.properties.template`. Here are example JAR files which work with Orbeon Forms 2018.2:
+
+- `slf4j-log4j12-1.7.25.jar`
+- `log4j-1.2.17.jar`
 
 ### HTTP client configuration
 
@@ -191,9 +192,19 @@ The embedding implementation communicates with the rest of Orbeon Forms via HTTP
     <param-name>oxf.http.proxy.ntlm.domain</param-name>
     <param-value/>
 </init-param>
+<!-- SINCE: Orbeon Forms 2019.1 -->
+<init-param>
+    <param-name>oxf.http.expired-connections-polling-delay</param-name>
+    <param-value>5000</param-value>
+</init-param>
+<!-- SINCE: Orbeon Forms 2019.1 -->
+<init-param>
+    <param-name>oxf.http.idle-connections-delay</param-name>
+    <param-value>30000</param-value>
+</init-param>
 ```
 
-Details about the meaning of these parameters are [available here](../../configuration/properties/general.md).
+Details about the meaning of these parameters are [available here](/configuration/properties/general.md).
 
 ### HTTP server configuration
 
