@@ -201,7 +201,7 @@ You can also use a path to a resource, including a custom resource. For example"
 
 ```xml
 save
-then confirm(resource = "acme.my-resource-1")
+then confirm(resource = "acme-resource-1")
 then suspend
 then send("oxf.fr.detail.send.success")'/>
 ```
@@ -211,14 +211,16 @@ If you have defined custom resources as follows:
 ```xml
 <property
   as="xs:string"
-  name="oxf.fr.resource.*.*.en.acme.my-resource-1"
+  name="oxf.fr.resource.*.*.en.detail.messages.acme-resource-1"
   value="Resource 1 in English"/>
 
 <property
   as="xs:string"
-  name="oxf.fr.resource.*.*.fr.acme.my-resource-1"
+  name="oxf.fr.resource.*.*.fr.detail.messages.acme-resource-1"
   value="Resource 1 en français"/>
 ```
+
+Note that only resources under `detail.messages` are searched, and the resource name cannot contain further `.`s.
 
 ## open-rendered-format
 
