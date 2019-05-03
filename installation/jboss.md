@@ -18,7 +18,9 @@ To install Orbeon Forms:
 To setup a datasource, if you'd like Orbeon Forms to connect to your relational database, do the following:
 
 1. Setup Orbeon Forms to use a WildFly datasource (configured in the following steps):
+
     1. Set the `oxf.fr.persistence.provider.*.*.*` property in your `properties-local.xml`
+    
         1. If you already created a `WEB-INF/resources/config/properties-local.xml` unzip it and add the property per the example below. Otherwise create that file with the following content:
 
             ```xml
@@ -31,7 +33,9 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
             ```
         2. Change the value of the property according to the database you're using, setting it either to `oracle`, `mysql`, `sqlserver`, `postgresql`, or `db2`.
         3. Update `WEB-INF/resources/config/properties-local.xml` inside the `orbeon.war` with the version you edited.
-    2. Update the `web.xml` 
+        
+    2. Update the `web.xml`
+     
         1. Unzip the `WEB-INF/web.xml` inside the `orbeon.war`.
         2. Editing `WEB-INF/web.xml`, towards the end of the file, uncomment the following:
 
@@ -45,7 +49,9 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
             ```
         3. Inside `<resource-ref>`, replace `oracle` by the name of your database.
         4. Update `WEB-INF/web.xml` inside the `orbeon.war` with the version you edited.
+        
    3. Update the `jboss-web.xml`
+   
         1. Unzip the `WEB-INF/jboss-web.xml` inside the `orbeon.war`.
         2. Editing `WEB-INF/jboss-web.xml`, uncomment the following:
 
@@ -57,11 +63,15 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
             ```
         3. Change the `<res-ref-name>` to match what the `<res-ref-name> in your `web.xml`.
         4. In `<jndi-name>java:jboss/datasources/oracle</jndi-name>`, replace `oracle` by the database name you used in `<res-ref-name>`.
-        4. Update `WEB-INF/jboss-web.xml` inside the `orbeon.war` with the version you edited.
+        5. Update `WEB-INF/jboss-web.xml` inside the `orbeon.war` with the version you edited.
+        
 2. In WildFly, install the JDBC driver:
+
     1. Download the MySQL JDBC driver, say `oracle-driver.jar`, and place it in the `standalone/deployments` directory.
     2. Start the server, and check you see the message `Deployed "oracle-driver.jar" (runtime-name : "oracle-driver.jar")`.
+    
 3. In WildFly, define the datasource:
+
     1. Editing `standalone/configuration/standalone.xml`, inside the `<datasources>` add the following:
 
         ```xml
