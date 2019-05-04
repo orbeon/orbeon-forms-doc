@@ -302,7 +302,7 @@ When `content = "metadata"` is specified, the XML document sent contains metadat
 The metadata is linked to the data with the `for` attribute:
 
 - The value of the `for` attribute can contain multiple ids separated by a space. This associates the given piece of metadata with multiple values in the form data. This typically happens where there are repeated fields in the form, so that there is no duplication of identical metadata.
-- Ids in the `for` attribute match the ids you get on the data when asking `send()` to annotate the data with ids, and using the `edge` format, that is with a `send(annotate = "id", data-format-version = "edge")`.
+- Ids in the `for` attribute match the ids you get on the data when asking `send()` to annotate the data with ids using the `edge` format, that is with a `send(annotate = "id", data-format-version = "edge")`.
 
 Here is an example of `send` process which sends XML data to a service, followed by sending metadata:
 
