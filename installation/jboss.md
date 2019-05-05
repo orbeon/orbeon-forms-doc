@@ -1,7 +1,5 @@
 # JBoss 7, WildFly 8 to 10.1
 
-
-
 ## Deploy Orbeon Forms
 
 To install Orbeon Forms:
@@ -12,6 +10,27 @@ To install Orbeon Forms:
 2. Start a standalone server with `bin/standalone.sh`
 3. Move the `orbeon.war` file into the WildFly `standalone/deployments` folder
 4. Check whether the deployment was successful by watching `standalone/log/server.log`
+
+## Creating an jboss-deployment-structure.xml
+
+With Orbeon Forms 2018.2.2 and earlier, with some versions of WildFly, a `jboss-deployment-structure.xml` under the Orbeon Forms WAR's `WEB-INF` directory is needed: 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.1">
+    <deployment>
+        <dependencies>
+            <system export="true">
+                <paths>
+                    <path name="org/w3c/dom/css"/>             
+                </paths>
+            </system>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>
+```
+
+Orbeon Forms 2018.2.3 and later, as well as Orbeon Forms 2019.1, already include this descriptor.
 
 ## Setup a JDBC datasource
 
