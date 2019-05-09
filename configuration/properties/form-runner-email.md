@@ -1,7 +1,5 @@
 # Email configuration properties
 
-
-
 ## Connection to the SMTP server
 
 The following properties control the connection to the SMTP server:
@@ -176,7 +174,7 @@ to provide a function for that purpose.*
 ## Email subject and body
 
 NOTE: Since Orbeon Forms 2018.1, you can set a form's email subject and body in the Form Builder user interface. You can
-also use template placeholders. See [Email settings](../../form-builder/email-settings.md).
+also use template placeholders. See [Email settings](/form-builder/email-settings.md).
 
 With any Orbeon Forms version, the following properties can be used to set default and per app/form email subject and
 body templates. 
@@ -193,6 +191,20 @@ body templates.
     value="Hi, here is an email from Orbeon Forms!"/>
 ```
 
+## Styling HTML emails
+
+[SINCE Orbeon Forms 2019.1]
+
+When using HTML for an email body template in [Email settings](/form-builder/email-settings.md), you can provide inline CSS that will be included in the email messages. For example"
+
+```xml
+<property as="xs:string" name="oxf.fr.email.css.custom.inline.*.*">
+    ul li { list-style-type: none; margin-left: 0; }
+</property>
+```
+
+This is known to work with Gmail at least.  
+
 ## See also 
 
-- [Email settings](../../form-builder/email-settings.md)
+- [Email settings](/form-builder/email-settings.md)
