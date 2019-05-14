@@ -514,8 +514,8 @@ containing the value which will be shown to the user.
 
 ```xml
 <property as="xs:string" name="oxf.xforms.format.output.date"     value="..."/>
-<property as="xs:string" name="oxf.xforms.format.output.dateTime" value="..."/>
 <property as="xs:string" name="oxf.xforms.format.output.time"     value="..."/>
+<property as="xs:string" name="oxf.xforms.format.output.dateTime" value="..."/>
 <property as="xs:string" name="oxf.xforms.format.output.decimal"  value="..."/>
 <property as="xs:string" name="oxf.xforms.format.output.integer"  value="..."/>
 <property as="xs:string" name="oxf.xforms.format.output.float"    value="..."/>

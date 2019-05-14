@@ -47,11 +47,62 @@ For an example, see [Creating a single-node binding](tutorial.md#creating-a-sing
 
 ## The value mode
 
+### Introduction
+
 The `value` mode makes the component hold a value through its binding. This means the component behaves like `<xf:input>` and other controls and dispatches `xforms-value-changed` events.
 
 You use this mode in addition to `binding`.
 
 For an example, see [Adding support for a value](tutorial.md#adding-support-for-a-value).
+
+### Formatted value
+
+[SINCE Orbeon Forms 2019.1]
+
+When the `value` mode is present, the components also has an associated *formatted value*. By default, this formatted value is based on the datatype of the bound item. Like `xf:output`, the following properties are used to format the value:
+
+- `oxf.xforms.format.output.date`
+- `oxf.xforms.format.output.time`
+- `oxf.xforms.format.output.dateTime`
+- `oxf.xforms.format.output.decimal`
+- `oxf.xforms.format.output.integer`
+- `oxf.xforms.format.output.float`
+- `oxf.xforms.format.output.double`
+
+The component can override the formatted value with the `xxbl:format` attribute on `xbl:binding`, for example:
+
+```xml
+<xbl:binding
+    ...
+    xxbl:mode="lhha binding value"
+    xxbl:format="
+        for $v in string(.) return
+            if (matches($v, '^\d+$')) then
+                concat(
+                    '(',
+                    substring($v, 1, 3),
+                    ') ',
+                    substring($v, 4, 3),
+                    if (string-length($v) gt 6) then
+                        '-'
+                    else
+                        '',
+                    substring($v, 7)
+                )
+            else
+                $v"
+>
+```
+
+The formatted value is used by:
+
+- the view mode
+- the PDF mode
+- the "All Control Values" option in email templates
+
+The formatted value can be accessed with the `xxf:formatted-value()` function.  
+
+See also [XLB modes](/xforms/xpath/extension-controls.md#xxf-formatted-value).
 
 ## The external-value mode
 

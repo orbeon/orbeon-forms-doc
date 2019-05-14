@@ -684,6 +684,22 @@ The `xxf:value()` function returns a control's value, it is has any. If the cont
 
 _NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
 
+## xxf:formatted-value()
+
+[SINCE Orbeon Forms 2019.1]
+
+```xpath
+xxf:formatted-value(
+    $control-id as xs:string
+) as xs:string?
+```
+
+The `xxf:formatted-value()` function returns a control's formatted value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
+
+_NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
+
+See also [XLB modes](/xforms/xbl/modes.md#formatted-value).
+
 ## xxf:visited
 
 ```xpath
