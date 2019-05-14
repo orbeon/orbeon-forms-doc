@@ -100,9 +100,7 @@ The formatted value is used by:
 - the PDF mode
 - the "All Control Values" option in email templates
 
-The formatted value can be accessed with the `xxf:formatted-value()` function.  
-
-See also [XLB modes](/xforms/xpath/extension-controls.md#xxf-formatted-value).
+The formatted value can be accessed with the [`xxf:formatted-value()`](/xforms/xpath/extension-controls.md#xxf-formatted-value) function.  
 
 ## The external-value mode
 
