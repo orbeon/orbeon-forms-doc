@@ -37,7 +37,7 @@ TODO
 
 [SINCE Orbeon Forms 2018.2]
 
-When more than one form version is available, the user has the choice of the version to access. Different versions can behave like very different forms.
+When more than one [form version]((/form-runner/feature/versioning.md)) is available, the user has the choice of the version to access. Different versions can behave like very different forms.
 
 ![Summary Page for version 1 of the form](../images/summary-version-1.png)
 
@@ -47,6 +47,7 @@ When more than one form version is available, the user has the choice of the ver
 
 - [Home Page](home-page.md)
 - [Summary page configuration properties](/configuration/properties/form-runner-summary-page.md)
-- [Versioning](/form-runner/feature/versioning.md) 
+- [Versioning](/form-runner/feature/versioning.md)
 - [Form Builder Summary Page](/form-builder/summary-page.md)
 - [Control Settings dialog](/form-builder/control-settings.md)
+- Blog post: [Summary page versioning support](https://blog.orbeon.com/2019/05/summary-page-versioning-support.html)
