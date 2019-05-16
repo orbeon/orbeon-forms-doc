@@ -47,5 +47,6 @@ When more than one form version is available, the user has the choice of the ver
 
 - [Home Page](home-page.md)
 - [Summary page configuration properties](/configuration/properties/form-runner-summary-page.md)
+- [Versioning](/form-runner/feature/versioning.md) 
 - [Form Builder Summary Page](/form-builder/summary-page.md)
 - [Control Settings dialog](/form-builder/control-settings.md)
