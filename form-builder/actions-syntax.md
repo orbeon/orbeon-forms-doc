@@ -118,6 +118,13 @@ Attribute|Mandatory|Value|Comment
     
 *NOTE: It is not recommended to mix and match, in a single listener, events for which a control name is required and events for which a control name is not required. Instead, use multiple listeners.* 
 
+#### Modes supported
+
+- `new`
+- `edit`
+- `view`
+- `pdf`
+
 #### Events supported
 
 Controls:
