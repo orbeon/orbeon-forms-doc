@@ -101,6 +101,7 @@ A listener looks like this:
 ```xml
 <fr:listener
     version="2018.2"
+    modes="..."
     events="..."
     controls="..."
     actions="..."
@@ -110,6 +111,7 @@ A listener looks like this:
 Attribute|Mandatory|Value|Comment
 ---------|---------|---------|---------
 `version`|Yes|format version|always `2018.2`
+`modes`|No|space-separated list of modes|The listener is enabled for each mode listed only. If absent, the listener is enabled for all modes.
 `events`|Yes|space-separated list of event names|When more than one event name is present, the listener reacts if *any* of the listed events is present.
 `controls`|Yes for events which relate to a particular control, like `enabled` or `value-changed`|space-separated list of control names|When more than one control name is present, the listener reacts if an event is dispatched to *any* of the listed controls.
 `actions`|No, but nothing will happen if there is not at least one action referenced|space-separated list of action names|When more than one action name is present, *all* the specified actions are called when the listener reacts to an event.
