@@ -59,7 +59,7 @@ The following example:
     
     <fr:listener
         version="2018.2"
-        events="activate"
+        events="activated"
         controls="my-button"
         actions="my-action"/>
     
