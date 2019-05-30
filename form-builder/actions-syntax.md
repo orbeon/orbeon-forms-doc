@@ -63,7 +63,9 @@ You can iterate over data and call a given service multiple times. Consider a se
     </fr:data-iterate>
 
 </fr:action>
-``` 
+```
+
+Currently, this is only supported with one level of nesting within `<fr:data-iterate>`.
 
 ## Example
 
