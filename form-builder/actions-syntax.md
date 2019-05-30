@@ -37,6 +37,32 @@ You place listeners and actions within the source code, preferably before the en
     
     <!-- Put `<fr:listener>` and `<fr:action>` just above this. -->
 </xf:model>
+```
+
+## Repeated calls to services
+
+[SINCE Orbeon Forms 2019.1]
+
+You can iterate over data and call a given service multiple times. Consider a service returning a list of images ids, and a service returning the content of an image by id, for example. Here is an example that does just that:
+
+```xml
+<fr:action name="populate-attachments" version="2018.2">
+
+    <fr:service-call service="get-attachments-list"/>
+    
+    <fr:repeat-clear repeat="attachments-grid"/>
+
+    <fr:data-iterate ref="/response/text">
+
+        <fr:service-call service="get-attachment">
+            <fr:url-param name="text" value="."/>
+        </fr:service-call>
+
+        <fr:repeat-add-iteration  repeat="attachments-grid"  at="end"/>
+        <fr:control-setattachment control="image-attachment" at="end"/>
+    </fr:data-iterate>
+
+</fr:action>
 ``` 
 
 ## Example
