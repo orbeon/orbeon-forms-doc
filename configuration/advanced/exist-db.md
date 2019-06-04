@@ -1,4 +1,4 @@
-# Configuring a Form Runner eXist-db database
+# Configuring an eXist-db database
 
 ## Rationale
 
