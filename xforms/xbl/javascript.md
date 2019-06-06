@@ -149,7 +149,7 @@ $(this.container).find('.acme-my-input')[0]
 
 | Method                 | Description              | Mode                                 | Since              | Status |
 |------------------------|--------------------------|--------------------------------------|--------------------|--------|
-| `init`                 | initialize               | `javascript-lifecycle`<sup>1</sup>   | 2016.1<sup>1</sup> | fresh  |
+| `init`                 | initialize               | `javascript-lifecycle`               | 2016.1             | fresh  |
 | `destroy`              | clean-up                 | `javascript-lifecycle`               | 2016.1             | fresh  |
 | `xformsUpdateReadonly` | change readonly status   | `javascript-lifecycle`               | 2016.1             | fresh  |
 | `xformsUpdateValue`    | update value             | `external-value`                     | 2016.1             | fresh  |
@@ -158,7 +158,7 @@ $(this.container).find('.acme-my-input')[0]
 | `setFocus`             | hand focus               | `focus`                              | 4.0                | legacy |
 | `enabled`              | enable after full update |                                      | 4.0                | legacy |
 
-1. The `init()` method is not new in Orbeon Forms 2016.1, but when using the `javascript-lifecycle` mode it is called automatically. Prior to Orbeon Forms 2016.1, or when not using the `javascript-lifecycle`  mode, it is called either via XForms event handlers, or as a side-effect of calls to `setFocus()` or `enabled()`.
+The `init()` method is not new in Orbeon Forms 2016.1, but when using the `javascript-lifecycle` mode it is called automatically. Prior to Orbeon Forms 2016.1, or when not using the `javascript-lifecycle`  mode, it is called either via XForms event handlers, or as a side-effect of calls to `setFocus()` or `enabled()`.
 
 ## Calling methods upon XForms events
 
