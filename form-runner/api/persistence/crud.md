@@ -51,7 +51,7 @@ For example, if you `PUT` an attachment with path (indented for legibility):
 and pass the header:
 
 ```
-`Orbeon-Form-Definition-Version: 3
+Orbeon-Form-Definition-Version: 3
 ``` 
 
 and there is already, in the database, such an attachment that was created with version 3, the request is successful and the resource is updated.
@@ -59,7 +59,7 @@ and there is already, in the database, such an attachment that was created with 
 On the other hand if, for the same resource, you pass the header:
 
 ```
-`Orbeon-Form-Definition-Version: 4
+Orbeon-Form-Definition-Version: 4
 ```
 
 the persistence layer returns a `400` "Bad Request" HTTP status code.
