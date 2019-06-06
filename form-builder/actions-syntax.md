@@ -234,8 +234,15 @@ An action looks like this:
 #### Writing to a dataset
 
 ```xml
-<fr:dataset-write>
+<fr:dataset-write
+    name="dataset-name"/>
 ```
+
+Attribute|Mandatory|Value|Comment
+---------|---------|---------|---------
+`name`|Yes|dataset name|
+
+This action takes the latest service result and saves it to the dataset specified by name.
 
 #### Calling a process
 
