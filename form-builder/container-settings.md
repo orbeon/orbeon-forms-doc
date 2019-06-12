@@ -2,7 +2,8 @@
 
 ## Availability
 
-For non-repeated grids: [SINCE Orbeon Forms 2019.1].
+- Sections and repeated grids: [SINCE Orbeon Forms 3.8 or earlier].
+- Non-repeated grids: [SINCE Orbeon Forms 2019.1].
 
 ## Basic settings and formulas
 

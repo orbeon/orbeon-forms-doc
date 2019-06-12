@@ -16,9 +16,9 @@ See [Section and grid settings](container-settings.md).
 
 The following only applies when the form doesn't use the [Wizard view](../form-runner/feature/wizard-view.md).
 
-A section can be open or closed (collapsed). By default, sections are open when the form loads, unless the "Initially Open" checkbox is *deselected*.
+A section can be open/expanded or closed/collapsed. By default, sections are open when the form loads, unless the "Initially open" checkbox is *deselected*.
 
-The "Collapsible" radio buttons control whether the user can collapse sections:
+The "Collapsible" radio buttons control whether the user can collapse and expand sections:
 
 - __Use property:__ use  the configuration specified with the `oxf.xforms.xbl.fr.section.collapsible` property
 - __Always:__ the section is collapsible no matter what the `oxf.xforms.xbl.fr.section.collapsible` property specifies
