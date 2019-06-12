@@ -81,9 +81,13 @@ Pressing this button inserts a new grid into the form. The grid is inserted afte
 
 ### New Repeated Grid button
 
-Pressing this button inserts a new repeated grid into the form. The grid is inserted after the currently selected grid within the currently selected section, that is the section and grid containing the currently selected control.
+Pressing this button inserts a new repeated grid into the form. The grid is inserted after the currently selected grid within the currently selected section (the section and grid containing the currently selected control).
 
-After insertion, the new grid has one column and one cell. You can change the dimensions of the grid using the grid icons. You can change the grid settings with the Grid Settings icon.
+See also [Repeated grids](repeated-grids.md).
+
+[SINCE Orbeon Forms 2019.1]
+
+You can also switch a regular grid to be repeated. See [Repeat settings](repeat-settings.md).
 
 ## Form controls
 

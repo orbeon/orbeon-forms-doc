@@ -23,6 +23,7 @@ As of 2016-04-19 this page is still being updated.
     - Field-level encryption: [doc](form-builder/field-level-encryption.md)
 - Inserting and reordering grid rows: [blog post](https://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
 - Repeated grids and sections
+    - Repeat settings: [doc](form-builder/container-settings.md)
     - Repeated grids: [doc](form-builder/repeated-grids.md), [older blog post](https://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
     - Repeated sections: [blog post](https://blog.orbeon.com/2014/01/repeated-sections.html)
     - Options for new repeat iterations: [blog post](https://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)

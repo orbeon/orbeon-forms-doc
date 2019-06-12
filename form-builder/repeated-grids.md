@@ -1,9 +1,5 @@
 # Repeated grids
 
-## Introduction
-
-Form Builder supports grids with repeated rows. You can repeat a single row (which is the most common case), or multiple heterogeneous (that is with different controls) rows.
-
 ## Creating a repeated grid
 
 You insert a new repeated grid with the "New Repeated Grid" toolbox button.
@@ -38,80 +34,21 @@ Once a grid is inserted, you can edit its properties with the "Grid Settings" ic
 
 ![Grid Settings](images/repeated-grid-settings-icon.png)
 
-### Formulas
-
-The "Visibility" and "Read-Only" formulas control whether the entire grid (including it's headers if any) is visible at all or whether its content is entirely readonly.
-
-*NOTE: Since Orbeon Forms 4.8, these settings properly apply to the entire grid. Previously, the grid's repeat headers did not hide properly for example when the grid was hidden. See issue [#635](https://github.com/orbeon/orbeon-forms/issues/635).*
+*NOTE: Since Orbeon Forms 4.8, these settings (correctly) apply to the entire grid. Previously, the grid's repeat headers did not hide properly for example when the grid was hidden. See issue [#635](https://github.com/orbeon/orbeon-forms/issues/635).*
 
 ![Basic Settings and Formulas](images/repeated-grid-settings-basic.png)
 
+[SINCE Orbeon Forms 2019.1]
+
+These settings also apply to non-repeated grids.
+
 ### Repeat settings
 
-#### Overview
-
-The repeat settings control whether to use a custom iteration name (not recommended in most cases), and the minimum/maximum number of repeat iterations allowed.
-
-![Repeated Content](images/repeated-grid-settings-repeat.png)
-
-#### Minimum and maximum number of iterations
-
-These settings can be predefined numbers, or formulas.
-
-#### Freeze repetitions
-
-[SINCE Orbeon Forms 2018.2]
-
-This setting can be a predefined number, or a formula.
-
-This allows *freezing* the first *n* iterations of a repeated grid or repeated section. Frozen iterations cannot be removed or moved by the user. The grid menus and buttons reflect that those operations are not possible.
-
-The number of frozen iterations must be at most the number of minimal iterations.
-
-#### Initial value formulas
-
-[SINCE Orbeon Forms 2016.1]
-
-The "Apply Initial Value Formulas when Adding Iterations" option specifies whether the "Initial Value" formulas for controls within the grid are evaluated for new iterations.
-
-With Orbeon Forms 2016.1, the option is enabled by default for new forms and new repeated grids. The option is disabled by default for grids created with previous versions of Orbeon Forms.
-
-With the option enabled, new iterations can have dynamic initial values:
-
-![Initial Values](images/iterations-initial-values.png)
-
-#### Initial number of iterations uses template
-
-[SINCE Orbeon Forms 2016.1]
-
-The "Initial Number of Iterations Uses Template" option specifies, when an *enclosing repeated section* creates a new iteration, how many iterations this repeated grid will contains:
-
-- when enabled: the number of iterations shown in Form Builder (which can be no iterations at all, one iteration, two iterations, etc.)
-- when disabled: exactly one iteration
-
-The following screenshot shows a case with a repeated grid within nested repeated sections. At first, when the form shows, there are two iterations of the repeated grid.
-
-![](images/iterations-initial.png)
-
-With the option enabled on the grid, adding a new iteration of _Repeated section 2_ causes the new iteration to contain a new repeated grid with two iterations:
-
-![](images/iterations-template.png)
-
-While, with the option disabled on the grid, adding a new iteration of _Repeated section 2_ causes the new iteration to contain a new repeated grid a single iterations:
-
-![](images/iterations-single.png)
-
-<!--
-
-Example:
-
-![Initial Iterations](images/)
--->
+See [Repeat settings](repeat-settings.md).
 
 ## See also
 
+- [Repeat settings](repeat-settings.md)
 - [Section settings](section-settings.md)
-- Support for repeats lands in Form Builder: [older blog post](https://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
-- Inserting and reordering grid rows: [blog post](https://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
-- Repeated sections: [blog post](https://blog.orbeon.com/2014/01/repeated-sections.html)
-- Repeated grids and sections just got more subtle: [blog post](https://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
+- [Formulas](formulas.md)
+- [Grid component](/form-runner/component/grid.md)
