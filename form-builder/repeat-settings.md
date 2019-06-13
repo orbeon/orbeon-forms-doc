@@ -29,6 +29,8 @@ This allows *freezing* the first *N* iterations of a repeated grid or repeated s
 
 The number of frozen iterations must be at most the minimal number of iterations. If that's not the case, the number of frozen iterations will be reset to the minimal number of iterations.
 
+See also [Freezing rows in repeated grids or sections](https://blog.orbeon.com/2019/06/freezing-rows-in-repeated-grids-or.html).
+
 ## Simplified appearance
 
 [SINCE Orbeon Forms 2019.1]
