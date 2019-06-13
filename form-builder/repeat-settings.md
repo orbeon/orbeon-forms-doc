@@ -25,9 +25,9 @@ These settings can be predefined numbers or formulas when selecting "Other".
 
 This setting can be a predefined number or a formula.
 
-This allows *freezing* the first *n* iterations of a repeated grid or repeated section. Frozen iterations cannot be removed or moved by the user. The grid menus and buttons reflect that those operations are not possible.
+This allows *freezing* the first *N* iterations of a repeated grid or repeated section. Frozen iterations cannot be removed or moved by the user. The grid menus and buttons reflect that those operations are not possible.
 
-The number of frozen iterations must be at most the number of minimal iterations.
+The number of frozen iterations must be at most the minimal number of iterations. If that's not the case, the number of frozen iterations will be reset to the minimal number of iterations.
 
 ## Simplified appearance
 
@@ -99,3 +99,4 @@ Example:
 - Inserting and reordering grid rows: [blog post](https://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
 - Repeated sections: [blog post](https://blog.orbeon.com/2014/01/repeated-sections.html)
 - Repeated grids and sections just got more subtle: [blog post](https://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
+- Freezing rows in repeated grids or sections: [blog post](https://blog.orbeon.com/2019/06/freezing-rows-in-repeated-grids-or.html)
