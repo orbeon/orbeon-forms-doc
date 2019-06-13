@@ -157,7 +157,7 @@ This allows you to decouple the variable definition (name) from its evaluation:
 </xf:var>
 ```
 
-This is particularly useful for XBL component implementors, where this can be used in combination with the xxbl:scope attribute:
+This is particularly useful for XBL component implementors, where this can be used in combination with the `xxbl:scope` attribute:
 
 ```xml
 <xf:var name="result" as="node()?">
