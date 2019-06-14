@@ -6,7 +6,7 @@ Orbeon Forms uses log4j for logging and has a logging configuration file under `
 
 ## Selecting a specific file path
 
-By default, logging information is output to a file path relative to the directory where you start your application server.
+By default, logging information is output to a file path relative to the directory where you start your application server. This is usually not what you want, as that makes it hard to know where the log file is.
 
 ```xml
 <appender name="SingleFileAppender" class="org.apache.log4j.FileAppender">
@@ -19,7 +19,7 @@ By default, logging information is output to a file path relative to the directo
 </appender>
 ```
 
-You can change this by modifying the `File` parameter:
+You can change this by modifying the `File` parameter and set an _absolute file path_ to the log file:
 
 ```xml
 <appender name="SingleFileAppender" class="org.apache.log4j.FileAppender">
