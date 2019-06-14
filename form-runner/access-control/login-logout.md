@@ -13,7 +13,7 @@ Form Runner can show a *user menu* in the navigation bar, allowing users to logi
     value="true"/>
 ```
 
-When enabled, before users login, the can contain 2 entries: "Login" and "Register", as shown in the screenshot below.
+When enabled, before users login, the menu contain 2 entries: "Login" and "Register", as shown in the screenshot below.
 
 ![User menu when logged out](../images/logout-logout-menu-logged-out.png)
 
