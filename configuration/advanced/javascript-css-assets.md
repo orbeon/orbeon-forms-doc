@@ -1,7 +1,5 @@
 # JavaScript and CSS assets
 
-
-
 ## Minimal asset resources
 
 Most JavaScript and CSS assets used by the XForms engine are available in two versions:
@@ -109,7 +107,7 @@ Default:
 * `prod` mode: `true`
 * `dev` mode: `false`
 
-Mappings between resources URLs and the resources are stored in the `xforms.resources` cache, configured in [`RESOURCES/config/ehcache.xml][1]`.
+Mappings between resources URLs and the resources are stored in the `xforms.resources` cache, configured in [`RESOURCES/config/ehcache.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/ehcache.xml).
 
 #### Baseline of XForms assets
 
@@ -229,31 +227,6 @@ WEB-INF/resources/xforms-server/
 ```
 
 One benefit of this mechanism is that it allows making such combined files to be served by an Apache front-end.
-
-## JavaScript at the bottom of the page
-
-### With Orbeon Forms 2018.1 and newer
-
-With Orbeon Forms 2018.1 and 2018.2, this feature is deprecated and scripts are by default placed within the `<head>` section
-with the `defer` attribute. 
-
-With Orbeon Forms 2019.1, this feature is removed from Orbeon Forms and the `oxf.xforms.resources.javascript-at-bottom` property doesn't have any effect.
-
-### With Orbeon Forms 2017.2 and older
-
-With Orbeon Forms 2017.2 and older, this feature is enabled by default.
-
-The following property, if enabled, places external and inline JavaScript at the bottom of the page for performanc
-reasons:
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.xforms.resources.javascript-at-bottom"
-    value="true"/>
-```
-
-See Yahoo’s [Best Practices for Speeding Up Your Website][2]
 
 ## Versioned asset resources
 
@@ -418,7 +391,7 @@ var version = ORBEON.util.Utils.getProperty(APPLICATION_RESOURCES_VERSION_PROPER
 
 Versioned resources served by the PFC (that is all the resources except the XForms engine's CSS and JavaScript resources) also get an aggressive expiration date.
 
-In case you use Apache, you can in addition configure a rewriting rule with [mod_rewrite][6] to allow Apache to directly load resources containing a version number, as shown below.
+In case you use Apache, you can in addition configure a rewriting rule with [mod_rewrite](https://httpd.apache.org/docs/2.2/mod/mod_rewrite.html) to allow Apache to directly load resources containing a version number, as shown below.
 
 _NOTE: We recommend restarting Orbeon Forms after changing the `oxf.resources.versioned` property, as data in Orbeon Forms caches may not be made aware of the change until the next restart._
 
@@ -485,7 +458,27 @@ All in all, the rules above perform the following:
 * Serving of other resources under `RESOURCES`
 * Marking all versioned resources with an expiration date in the far future
 
+## JavaScript at the bottom of the page
 
-[1]: https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/ehcache.xml
-[2]: http://developer.yahoo.com/performance/rules.html#js_bottom
-[6]: http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html
+### With Orbeon Forms 2018.1 and newer
+
+With Orbeon Forms 2018.1 and 2018.2, this feature is deprecated and scripts are by default placed within the `<head>` section
+with the `defer` attribute. 
+
+With Orbeon Forms 2019.1, this feature is removed from Orbeon Forms and the `oxf.xforms.resources.javascript-at-bottom` property doesn't have any effect.
+
+### With Orbeon Forms 2017.2 and older
+
+With Orbeon Forms 2017.2 and older, this feature is enabled by default.
+
+The following property, if enabled, places external and inline JavaScript at the bottom of the page for performanc
+reasons:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.resources.javascript-at-bottom"
+    value="true"/>
+```
+
+See Yahoo’s [Best Practices for Speeding Up Your Website](https://developer.yahoo.com/performance/rules.html#js_bottom)
