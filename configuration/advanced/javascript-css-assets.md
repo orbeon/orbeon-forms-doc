@@ -460,12 +460,14 @@ All in all, the rules above perform the following:
 
 ## JavaScript at the bottom of the page
 
-### With Orbeon Forms 2018.1 and newer
+### With Orbeon Forms 2019.1
+
+With Orbeon Forms 2019.1, this feature is removed from Orbeon Forms and the `oxf.xforms.resources.javascript-at-bottom` property doesn't have any effect.
+
+### With Orbeon Forms 2018.1 and 2018.2
 
 With Orbeon Forms 2018.1 and 2018.2, this feature is deprecated and scripts are by default placed within the `<head>` section
 with the `defer` attribute. 
-
-With Orbeon Forms 2019.1, this feature is removed from Orbeon Forms and the `oxf.xforms.resources.javascript-at-bottom` property doesn't have any effect.
 
 ### With Orbeon Forms 2017.2 and older
 
