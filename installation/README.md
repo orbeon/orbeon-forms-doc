@@ -89,7 +89,7 @@ See [Logging](logging.md).
 
 - [Logging](logging.md)
 - [Tomcat](tomcat.md)
-- [JBoss](jboss.md)
+- [WildFly](wildfly.md)
 - [WebLogic](weblogic.md)
 - [WebSphere](websphere.md)
 - [GlassFish](glassfish.md)

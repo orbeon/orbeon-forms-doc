@@ -4,7 +4,7 @@
 * [Installation](installation/README.md)
     * [Logging](installation/logging.md)
     * [Tomcat](installation/tomcat.md)
-    * [JBoss](installation/jboss.md)
+    * [WildFly](installation/wildfly.md)
     * [WebSphere](installation/websphere.md)
     * [WebLogic](installation/weblogic.md)
     * [GlassFish](installation/glassfish.md)
