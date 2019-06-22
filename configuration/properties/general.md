@@ -369,6 +369,15 @@ Similar to general headers forwarding, cookies can be forwarded. By default, the
 <property
     as="xs:string"
     name="oxf.http.forward-cookies"
+    value=""/>
+```
+
+If you need to forward, say, `JSESSIONID` and `JSESSIONIDSSO` to services, set this in properties-local.xml:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.http.forward-cookies"
     value="JSESSIONID JSESSIONIDSSO"/>
 ```
 
