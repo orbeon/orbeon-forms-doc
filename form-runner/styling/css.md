@@ -6,39 +6,72 @@ Form Runner has a built-in theme for forms. This page documents how you can chan
 
 CSS stands for [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS), and is the standard technology to add style to web pages and web applications. Orbeon Forms supports custom CSS files which allows you to change your forms' appearance. This assumes that you have some CSS knowledge.
 
-## The default
+## Adding your own CSS files
 
-### Twitter Bootstrap
+1. Place your CSS file(s) under one of the following recommended locations:
+    - `WEB-INF/resources/forms/assets`: CSS for all forms
+    - `WEB-INF/resources/forms/APP/assets`: CSS for app name APP
+    - `WEB-INF/resources/forms/APP/FORM/assets`: CSS for app name APP and form name FORM
+2. Define the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
 
-Since Orbeon Forms 4.0, Form Runner uses [Twitter Bootstrap][1] for some aspects of its layout and styling.
+```xml
+<property as="xs:string" name="oxf.fr.css.custom.uri.*.*">
+    /forms/acme/assets/acme.css
+</property>
+```
 
-_NOTE: If you have custom CSS which works with Orbeon Forms 3.9, it is likely that you will have to update it to work with Orbeon Forms 4.0._
+You can add more than one file, and just separate the paths by whitespace in the property.
 
-### Strength of CSS rules
+Note that the locations suggested are just about how to organize the files for clarity. In addition, if some CSS files apply to specific app or form names, you must specify the app and form name in the property or properties. For example:
 
-Bootstrap, XForms engine, Form Runner and Form Builder rules are contained within an enclosing `.orbeon` CSS class. This ensures that the Orbeon CSS rules only apply within an element with that class. It also makes Orbeon CSS rules a bit stronger than before. You might have to update your custom CSS to take this into account.
 
-## Writing your own CSS
+```xml
+<property as="xs:string" name="oxf.fr.css.custom.uri.APP.*">
+    /forms/APP/assets/my-app.css
+</property>
 
-### Where to put your CSS
+<property as="xs:string" name="oxf.fr.css.custom.uri.APP.FORM">
+    /forms/APP/assets/my-app.css
+    /forms/APP/FORM/assets/my-app-and-form.css
+</property>
+```
 
-You can either:
+The names `APP`, `FORM`, `my-app.css` and `my-app-and-form.css` are just placeholders for your own app name, form name, and CSS files names.
 
-1. Store your CSS is a separate CSS file, which you either provide in addition or that overrides the default CSS provided by Orbeon Forms. For more on this, see the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) configuration property. This is the recommended technique if your CSS is intended to be shared by several forms.
+If a specific property is defined for an app/form, such as `oxf.fr.css.custom.uri.APP.FORM`, only that property is considered and other properties defined only for a given app but without a specific form, such as `oxf.fr.css.custom.uri.APP.*`, will be ignored. This means that you must repeat references to CSS resources in the more specific property if desired. For example above `/forms/APP/assets/my-app.css` is repeated.
 
-2. Put your CSS inline, in the form. Uf your CSS is quite short, and specific to a given form (not to be shared amongst forms), this is a possibility. For this, put the rules within your own `<style>` section of the form:
+[SINCE Orbeon Forms 2017.1]
+
+In addition to [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css), you can also use the following properties, which apply only to the Summary and Detail pages respectively:
+
+- [`oxf.fr.summary.css.custom.uri`](form-runner-summary-page.md#adding-your-own-css-files)
+- [`oxf.fr.detail.css.custom.uri`](form-runner-detail-page.md#adding-your-own-css-files)
+
+## Authoring CSS
+
+1. **Disable the minimal and combined resources**. When working on your CSS, you might want to temporarily set the following properties in your `properties-local.xml`, which  will disable the combined and minimized resources, so the files and line numbers you see in your browser correspond to what you have on disk.
+
     ```xml
-    <xh:title>My Form Title</xh:title>
-    <xh:style type="text/css">
-        #fr-view .fr-grid .fr-grid-content .my-class input.xforms-input-input {
-            width: 8em
-        }
-    </xh:style>
+    <property
+        as="xs:boolean"
+        name="oxf.xforms.minimal-resources"
+        value="false"/>
+
+    <property
+        as="xs:boolean"
+        name="oxf.xforms.combine-resources"
+        value="false"/>
     ```
     
-_NOTE: Since 2018.1, it is no longer recommended to place any inline CSS, as some servers use the [`Content-Security-Policy` header](https://en.wikipedia.org/wiki/Content_Security_Policy) to disable inline scripts and CSS. Orbeon Forms 2018.1 doesn't include any inline scripts and CSS anymore by default._
+    Note that with the [Form Runner Liferay Proxy Portlet](/form-runner/link-embed/liferay-proxy-portlet.md), you cannot disable combined resources as URL rewriting does not work in that case. 
+    
+2. **Know which class names to use in your CSS selectors**. We strongly recommend you use the [Chrome Dev Tools](https://developer.chrome.com/devtools) to check which classes are generated by Orbeon Forms. Look specifically for classes that start with `fr-`. Once you have your CSS working with Chrome and/or Firefox, it is likely that the CSS will work with other modern browsers.
 
-### Styling specific controls
+**Use case** |  **Sample CSS** |  **Description**
+-----|-----|-----
+Change the width of a column | `.fr-grid-invoice .fr-grid-col-1 { width: 40px }` | 1. In Form Builder, you can name grids (for now [only repeated grids can be named][18]). When doing so, the table element corresponding to your grid gets a `fr-grid-my-name` class, where `my-name` is the name you choose for the grid. In the example, the name was `invoice`.<br>2. Each column gets a class `fr-grid-col-1`, `fr-grid-col-2` and so on, starting with the number 1.
+
+## Styling specific controls
 
 You style specific controls in your form, say to set the width of an input field, by adding a CSS class on that control. To do so:
 
@@ -70,11 +103,41 @@ When doing CSS work, make sure to use a tool like the Chrome Dev Tools (or other
 
 ## Changing the page width
 
-The [default width with Bootstrap][4] is 940px, but you can change this by overriding the Bootstrap/Orbeon CSS. As usual, to do so, we recommend you use a tool like the [Chrome DevTools][5] to find the exact rules you need to override in your environment. For instance, with an out-of-the-box Orbeon Forms deployed as a servlet, you can set the width to 720px with:
+The [default width with Bootstrap](http://getbootstrap.com/2.3.2/scaffolding.html) is 940px, but you can change this by overriding the Bootstrap/Orbeon CSS. As usual, to do so, we recommend you use a tool like the [Chrome DevTools](https://developer.chrome.com/devtools) to find the exact rules you need to override in your environment. For instance, with an out-of-the-box Orbeon Forms deployed as a servlet, you can set the width to 720px with:
 
 ```css
 .orbeon .container, .orbeon .span12 { width: 720px }
 ```
+
+## Other considerations
+
+### Separate vs. inline CSS
+
+You can either:
+
+1. Store your CSS is a separate CSS file, which you either provide in addition or that overrides the default CSS provided by Orbeon Forms. For more on this, see the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) configuration property. This is the recommended technique if your CSS is intended to be shared by several forms.
+
+2. Put your CSS inline, in the form. Uf your CSS is quite short, and specific to a given form (not to be shared amongst forms), this is a possibility. For this, put the rules within your own `<style>` section of the form:
+    ```xml
+    <xh:title>My Form Title</xh:title>
+    <xh:style type="text/css">
+        #fr-view .fr-grid .fr-grid-content .my-class input.xforms-input-input {
+            width: 8em
+        }
+    </xh:style>
+    ```
+    
+_NOTE: Since 2018.1, it is no longer recommended to place any inline CSS, as some servers use the [`Content-Security-Policy` header](https://en.wikipedia.org/wiki/Content_Security_Policy) to disable inline scripts and CSS. Orbeon Forms 2018.1 doesn't include any inline scripts and CSS anymore by default._
+
+### Strength of CSS rules
+
+Bootstrap, XForms engine, Form Runner and Form Builder CSS rules are contained within an enclosing `.orbeon` CSS class. This ensures that the Orbeon CSS rules only apply within an element with that class. It also makes Orbeon CSS rules a bit stronger than before. You might have to update your custom CSS to take this into account.
+
+### Twitter Bootstrap
+
+Since Orbeon Forms 4.0, Form Runner uses [Twitter Bootstrap](http://getbootstrap.com/2.3.2/) for some aspects of its layout and styling.
+
+_NOTE: If you have custom CSS which works with Orbeon Forms 3.9, it is likely that you will have to update it to work with Orbeon Forms 4.0._
 
 ## Configuring the presentation of automatic PDF output
 
@@ -84,7 +147,3 @@ See [Automatic PDF](automatic-pdf.md).
 
 - [Grids CSS](grids.md)
 - [Automatic PDF](automatic-pdf.md)
-
-[1]: http://getbootstrap.com/2.3.2/
-[4]: http://getbootstrap.com/2.3.2/scaffolding.html
-[5]: https://developer.chrome.com/devtools
