@@ -4,7 +4,7 @@
 
 Form Runner has a built-in theme for forms. This page documents how you can change that default.
 
-CSS stands for Cascading Style Sheets, and is the standard technology to add style to web pages and web applications. Orbeon Forms supports custom CSS files which allows you to change your forms' appearance. This assumes that you have some CSS knowledge.
+CSS stands for [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS), and is the standard technology to add style to web pages and web applications. Orbeon Forms supports custom CSS files which allows you to change your forms' appearance. This assumes that you have some CSS knowledge.
 
 ## The default
 
