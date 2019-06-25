@@ -129,7 +129,6 @@
         * [TIFF production](form-runner/feature/tiff-production.md)
         * [Versioning](form-runner/feature/versioning.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
-        * [Wizard view](form-runner/feature/wizard-view.md)
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
         * [Purging old data](form-runner/persistence/purging-old-data.md)
