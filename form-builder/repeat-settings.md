@@ -15,6 +15,14 @@ Both repeated grids and repeated sections have *repeat settings* in the "Section
 
 Select this checkbox to enable repeated content.
 
+## Allow the user to add, remove, or move repetitions
+
+[SINCE Orbeon Forms 2019.1]
+
+Select the "Allow the user to add, remove, or move repetitions" checkbox to allow this behavior. When the checkbox is deselected, the user does not have direct access to buttons, icons or menus to change repetitions.
+
+When this option is deselected, the minimum, maximum and frozen repetitions settings do not apply.
+
 ## Minimum and maximum number of iterations
 
 These settings can be predefined numbers or formulas when selecting "Other".
@@ -91,12 +99,21 @@ Example:
 ![Initial Iterations](images/)
 -->
 
+## Show one repetition at a time in the wizard
+
+[SINCE Orbeon Forms 2019.1]
+
+This option can be selected only when the "Allow the user to add, remove, or move repetitions" option is deselected.
+
+For details, see [Paging large repeated sections](/form-runner/feature/wizard-view.md#paging-large-repeated-sections).
+
 ## See also
 
 - [Repeated grids](repeated-grids.md)
 - [Section settings](section-settings.md)
 - [Grid component](/form-runner/component/grid.md)
 - [Section component](/form-runner/component/section.md)
+- [Paging large repeated sections](/form-runner/feature/wizard-view.md#paging-large-repeated-sections)
 - Support for repeats lands in Form Builder: [older blog post](https://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
 - Inserting and reordering grid rows: [blog post](https://blog.orbeon.com/2013/11/inserting-and-reordering-grid-rows.html)
 - Repeated sections: [blog post](https://blog.orbeon.com/2014/01/repeated-sections.html)

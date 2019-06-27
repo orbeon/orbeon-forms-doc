@@ -1,7 +1,5 @@
 # Wizard view
 
-
-
 ## Introduction
 
 By default with Form Runner all the form sections appear in the same page, on top of each other. If your form is large that means that you have to scroll to fill out the entire form.
@@ -287,6 +285,22 @@ When `none`:
 
 <!-- TODO: screenshot -->
 
+## Paging large repeated sections
+
+By default, top-level repeated sections appear as a single entry in the table of contents. The section's repeated content appears within the section, each repetition on top of the other, as is the case when the wizard is not used.
+
+[SINCE Orbeon Forms 2019.1]
+
+It is now possible to make each iteration of a top-level repeated section that is the target of [synchronized repeated content](/form-builder/synchronize-repeated-content.md) appear as a separate entry in the table of contents. The benefit of this is that, if the repeated section content is large, then less content appears on screen at the same time. This is better for usability and for performance. 
+
+To enable this, got to the relevant section settings, and:
+
+- Uncheck "Allow the user to add, remove, or move repetitions"
+- Check "Show one iteration at a time in the wizard"
+
+
+
+<!-- TODO: screenshot -->
 
 ## See also
 
