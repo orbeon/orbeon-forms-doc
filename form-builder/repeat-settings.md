@@ -23,6 +23,12 @@ Select the "Allow the user to add, remove, or move repetitions" checkbox to allo
 
 When this option is deselected, the minimum, maximum and frozen repetitions settings do not apply.
 
+Deselecting this option makes sense in particular when the number of repetitions:
+
+- is defined at design-time,
+- is controlled via [actions](/form-builder/actions-syntax.md),
+- or is controlled via [synchronization](/form-builder/synchronize-repeated-content.md).
+
 ## Minimum and maximum number of iterations
 
 These settings can be predefined numbers or formulas when selecting "Other".
