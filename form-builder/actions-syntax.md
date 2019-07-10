@@ -39,13 +39,13 @@ You place listeners and actions within the source code, preferably before the en
 </xf:model>
 ```
 
-## Context of XPath expressions
+## Evaluation context of XPath expressions
 
-The context item, used for XPath evaluations, is set as follows:
+The context item used for XPath evaluations is set as follows:
 
 - At the beginning of an action, it is the root element of the form data.
 - Within an `<fr:data-iterate>`, and until a service response is available, it is the current iteration item.
-- After a service call, it is the root element of the action response.
+- After a service call, whether at the top-level or within an `<fr:data-iterate>`, it is the root element of the preceding action response.
 
 [SINCE Orbeon Forms 2019.1]
 
@@ -56,10 +56,15 @@ In the following example, without the `context="current-iteration"` attribute, t
 ```xml
 <fr:data-iterate ref="/response/row">
     <fr:service-call service="my-first-service">
-        <fr:value value="result-1" ref="/value"/>
+        <fr:value
+            value="foo"
+            ref="/some/path"/>
     </fr:service-call>
     <fr:service-call service="my-second-service">
-        <fr:value context="current-iteration" value="result-2" ref="/value"/>
+        <fr:value
+            context="current-iteration"
+            value="bar"
+            ref="/some/other/path"/>
     </fr:service-call>
 </fr:data-iterate>
 ```
@@ -69,12 +74,19 @@ To be more explicit, the attribute can also be set on the first `<fr:value>`:
 ```xml
 <fr:data-iterate ref="/response/row">
     <fr:service-call service="my-first-service">
-        <fr:value context="current-iteration" value="result-1" ref="/value"/>
+        <fr:value
+            context="current-iteration"
+            value="foo"
+            ref="/some/path"/>
     </fr:service-call>
     <fr:service-call service="my-second-service">
-        <fr:value context="current-iteration" value="result-2" ref="/value"/>
+        <fr:value
+            context="current-iteration"
+            value="bar"
+            ref="/some/other/path"/>
     </fr:service-call>
-</fr:d
+</fr:data-iterate>
+```
 
 ## Repeated calls to services
 
