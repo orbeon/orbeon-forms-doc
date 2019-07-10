@@ -39,6 +39,43 @@ You place listeners and actions within the source code, preferably before the en
 </xf:model>
 ```
 
+## Context of XPath expressions
+
+The context item, used for XPath evaluations, is set as follows:
+
+- At the beginning of an action, it is the root element of the form data.
+- Within an `<fr:data-iterate>`, and until a service response is available, it is the current iteration item.
+- After a service call, it is the root element of the action response.
+
+[SINCE Orbeon Forms 2019.1]
+
+You can explicitly set the XPath evaluation context to the current iteration item within a `<fr:data-iterate>` with the `context` attribute set to `current-iteration`.
+
+In the following example, without the `context="current-iteration"` attribute, the second `<fr:value>` would evaluate within the context of the first service call's response.
+
+```xml
+<fr:data-iterate ref="/response/row">
+    <fr:service-call service="my-first-service">
+        <fr:value value="result-1" ref="/value"/>
+    </fr:service-call>
+    <fr:service-call service="my-second-service">
+        <fr:value context="current-iteration" value="result-2" ref="/value"/>
+    </fr:service-call>
+</fr:data-iterate>
+```
+
+To be more explicit, the attribute can also be set on the first `<fr:value>`:
+
+```xml
+<fr:data-iterate ref="/response/row">
+    <fr:service-call service="my-first-service">
+        <fr:value context="current-iteration" value="result-1" ref="/value"/>
+    </fr:service-call>
+    <fr:service-call service="my-second-service">
+        <fr:value context="current-iteration" value="result-2" ref="/value"/>
+    </fr:service-call>
+</fr:d
+
 ## Repeated calls to services
 
 [SINCE Orbeon Forms 2019.1]
