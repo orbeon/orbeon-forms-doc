@@ -35,7 +35,7 @@ xxf:get-request-attribute(
 
 The `xxf:get-request-attribute()` function returns the value of the given request attribute. The attribute may have been previously placed in the request through Java code, or using `xxf:set-request-attribute()`, for example.
 
-The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-request-attribute()`.
+The types of attribute objects supported are the same types supported by the Scope generator, plus types stored with `xxf:set-request-attribute()`.
 
 If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is return as an `xs:string` instead of being parsed as XML.
 
@@ -166,7 +166,7 @@ xxf:get-session-attribute(
 
 The `xxf:get-session-attribute()` function returns the value of the given session attribute.
 
-The types of attribute objects supported are the same [types supported by the Scope generator][3], plus types stored with `xxf:set-session-attribute()`.
+The types of attribute objects supported are the same types supported by the Scope generator, plus types stored with `xxf:set-session-attribute()`.
 
 If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is return as an `xs:string` instead of being parsed as XML.
 
