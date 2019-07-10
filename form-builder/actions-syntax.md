@@ -49,9 +49,9 @@ The context item used for XPath evaluations is set as follows:
 
 [SINCE Orbeon Forms 2019.1]
 
-You can explicitly set the XPath evaluation context to the current iteration item within a `<fr:data-iterate>` with the `context` attribute set to `current-iteration`.
+You can explicitly set the XPath evaluation context to the current iteration item within a `<fr:data-iterate>` with the `expression-context` attribute set to `current-iteration`.
 
-In the following example, without the `context="current-iteration"` attribute, the second `<fr:value>` would evaluate within the context of the first service call's response.
+In the following example, without the `expression-context="current-iteration"` attribute, the second `<fr:value>` would evaluate within the context of the first service call's response.
 
 ```xml
 <fr:data-iterate ref="/response/row">
@@ -62,7 +62,7 @@ In the following example, without the `context="current-iteration"` attribute, t
     </fr:service-call>
     <fr:service-call service="my-second-service">
         <fr:value
-            context="current-iteration"
+            expression-context="current-iteration"
             value="bar"
             ref="/some/other/path"/>
     </fr:service-call>
@@ -75,13 +75,13 @@ To be more explicit, the attribute can also be set on the first `<fr:value>`:
 <fr:data-iterate ref="/response/row">
     <fr:service-call service="my-first-service">
         <fr:value
-            context="current-iteration"
+            expression-context="current-iteration"
             value="foo"
             ref="/some/path"/>
     </fr:service-call>
     <fr:service-call service="my-second-service">
         <fr:value
-            context="current-iteration"
+            expression-context="current-iteration"
             value="bar"
             ref="/some/other/path"/>
     </fr:service-call>
