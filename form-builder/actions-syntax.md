@@ -39,6 +39,25 @@ You place listeners and actions within the source code, preferably before the en
 </xf:model>
 ```
 
+## Error handling
+
+With Orbeon Forms 2018.2, errors when running services are silently ignored and the action continues.
+
+With Orbeon Forms 2019.1, errors:
+
+1. cause the entire action to stop.
+2. run the `oxf.fr.detail.process.action-service-error` process
+
+The default implementation of the service error process is as follows:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.process.action-service-error.*.*">
+    error-message("service-error")
+</property>
+```
+
+You can provide your own service error process in properties-local.xml.     
+
 ## Evaluation context of XPath expressions
 
 The context item used for XPath evaluations is set as follows:
