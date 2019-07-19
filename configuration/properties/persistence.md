@@ -187,6 +187,7 @@ Allowed values:
 
 - `4.0.0`
 - `4.8.0`
+- `2019.1.0` [SINCE Orbeon Forms 2019.1]
 
 The values must match exactly.
 
