@@ -57,6 +57,8 @@ The following parameters can be used:
 
 - <a name="send_parameter_data-format-version"></a>`data-format-version` [SINCE Orbeon Forms 4.8]:
     - `edge`: send the data in the latest internal format
+    - `2019.1.0`: send the data in the Orbeon Forms 2019.1-compatible format [SINCE Orbeon Forms 2019.1]
+    - `4.8.0`: send the data in the Orbeon Forms 4.8-compatible format
     - `4.0.0`: send the data in the Orbeon Forms 4.0-compatible format (the default)
 - <a name="send_parameter_parameters"></a>`parameters`: name of parameters sent to the service end point, in addition to the
     form content
