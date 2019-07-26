@@ -107,6 +107,16 @@ The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BU
 - `modal`, greys out the background, shows a spinner in the center of the screen, and prevents any user input as long as the action triggered by the button is being processed.
 - `inline`, shows a spinner inside the button itself.
 
+
+In the following example, the `send` button is made modal:
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.fr.detail.loading-indicator.send.*.*"                 
+    value="modal"/>
+```
+
 In general, we would expect this property to be used as follows:
 
 - `modal` for buttons performing actions for which allowing users to change the value of fields after the button is pressed wouldn't make any sense, would be confusing, or outright dangerous. This would for instance be the case for *submit* or *publish* buttons.
