@@ -57,7 +57,11 @@ WHERE  document_id NOT IN
 
 ## Removing other content
 
-The `orbeon_i_current` and `orbeon_i_control_text` may contains references, via their `data_id` column, to entries in `orbeon_form_data`. If that is the case, the relevant rows must also be deleted.
+The `orbeon_i_current` and `orbeon_i_control_text` tables may contains references, via the `data_id` column, to entries in `orbeon_form_data`.
+
+If the [lease feature](/form-runner/feature/lease.md) is enabled and in use, the `orbeon_form_data_lease` table may also contains references, via the `document_id` column, to entries in `orbeon_form_data`.
+
+If that is the case, the relevant rows must also be deleted.
 
 ## See also 
 
