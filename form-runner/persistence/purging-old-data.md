@@ -55,6 +55,10 @@ WHERE  document_id NOT IN
        )
 ```
 
+## Removing other content
+
+The `orbeon_i_current` and `orbeon_i_control_text` may contains references, via their `data_id` column, to entries in `orbeon_form_data`. If that is the case, the relevant rows must also be deleted.
+
 ## See also 
 
 - [Auditing](auditing.md)
