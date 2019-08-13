@@ -8,22 +8,23 @@ The following buttons are predefined and associated with the processes of the sa
 
 | Name | Description | Since |
 | ---- | ----------- | ----- |
-| `home` | navigate to `/` | 4.2 |
-| `summary` | navigate to the summary page | 4.2 |
-| `save-final` | save the form data if it is valid | 4.2 |
-| `save-draft` | save the form data even if it isn't valid | 4.2 |
-| `validate` | run `validate-all` | 4.2 |
-| `review` | navigate to the review page if the data is valid | 4.2 |
-| `edit` | navigate to the edit page from the review page | 4.2 |
-| `send` | validate then send data to a service | 4.2 |
-| `pdf` | generate a PDF version of the current form | 4.2 |
-| `tiff` | generate a TIFF version of the current form (see [TIFF Production](../../feature/tiff-production.md)) | 4.2 |
-| `email` | validate then email data | 4.2 |
-| `collapse-all` | run the action of the same name | 4.2 |
-| `expand-all` | run the action of the same name | 4.2 |
-| `wizard-prev` | run the action of the same name | 4.2 |
-| `wizard-next` | run the action of the same name | 4.2 |
+| `clear` | reset the form data to the default initial form data | 4.2 |
 | `close` | navigate to the URL specified by `oxf.fr.detail.close.uri` or, if not specified, to the summary page<br>*NOTE: The button in fact navigates to a page, but doesn't just close the current window/tab, as there is no cross-browser way to do this.* | 4.2 |
+| `collapse-all` | run the action of the same name | 4.2 |
+| `edit` | navigate to the edit page from the review page | 4.2 |
+| `email` | validate then email data | 4.2 |
+| `expand-all` | run the action of the same name | 4.2 |
+| `home` | navigate to `/` | 4.2 |
+| `pdf` | generate a PDF version of the current form | 4.2 |
+| `review` | navigate to the review page if the data is valid | 4.2 |
+| `save-draft` | save the form data even if it isn't valid | 4.2 |
+| `save-final` | save the form data if it is valid | 4.2 |
+| `send` | validate then send data to a service | 4.2 |
+| `summary` | navigate to the summary page | 4.2 |
+| `tiff` | generate a TIFF version of the current form (see [TIFF Production](../../feature/tiff-production.md)) | 4.2 |
+| `validate` | run `validate-all` | 4.2 |
+| `wizard-next` | run the action of the same name | 4.2 |
+| `wizard-prev` | run the action of the same name | 4.2 |
 | ~~`refresh`~~ | visit all controls and update the page (noscript mode only) | 4.2 to 2016.3 |
 
 In fact all buttons except the `pdf` and `tiff` buttons can do the same tasks if they are configured appropriately! But
