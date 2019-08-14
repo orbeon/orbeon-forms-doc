@@ -8,6 +8,8 @@
 
 The `findControlsByName()` function returns the HTML element(s) corresponding to the given Form Runner control name.
 
+*NOTE: The control must be visible or it will not be found. In particular, if the control is in a hidden wizard page, the control will not be found.*
+
 A Form Runner control name is the name entered by the form author in Form Builder. Examples:
 
 - `first-name`
@@ -31,6 +33,33 @@ If there are multiple controls with the same name, the array will contain multip
  
 - when controls are repeated, for example in a repeated grid or section
 - when controls appear in the main form and section template and/or in different section templates
+
+On the other hand, if the control exists but is not shown at a given time, for example if it is in a hidden wizard page, the array will be empty.
+
+## Setting a control's value
+
+You can set a control's value using the [XForms client-side JavaScript API](/xforms/client-side-javascript-api.md).
+
+For example, here is how to set the value of a text field called `my-field` to the value "Hello!":
+
+
+```javascript
+ORBEON.xforms.Document.setValue(
+    ORBEON.fr.API.findControlsByName('my-field')[0],
+    'Hello!'
+)
+```
+
+NOTE: For dropdowns created with Form Builder, the API does not provide direct support as of Orbeon Forms 2019.1. You can do it with the following JavaScript:
+
+```javascript
+ORBEON.xforms.Document.setValue(
+    ORBEON.jQuery(ORBEON.fr.API.findControlsByName('my-dropdown')).find('.xforms-select1')[0],
+    1
+)
+```
+
+Where the value  you pass corresponds to the position of the item starting at `0`.
 
 ## Focusing on a control
 
@@ -82,5 +111,5 @@ repeat indexes.
 
 ## See also
 
-- [Adding your own JavaScript](../../configuration/properties/form-runner.md#adding-your-own-javascript)
-- [XForms client-side JavaScript API](../../xforms/client-side-javascript-api.md)
+- [Adding your own JavaScript](/configuration/properties/form-runner.md#adding-your-own-javascript)
+- [XForms client-side JavaScript API](/xforms/client-side-javascript-api.md)
