@@ -20,6 +20,8 @@ The following versions of Liferay are supported:
 
 |Orbeon Forms Version|Tested Liferay Version    |Proxy Portlet|Full Portlet|
 |--------------------|--------------------------|-------------|------------|
+|2018.2              |Liferay 7.1.2 CE GA3      |yes          |no          |
+|                    |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
 |2018.1              |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
 |2017.2              |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
 |2017.1              |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
