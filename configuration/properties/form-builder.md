@@ -154,18 +154,48 @@ If you'd like to have multiple classes of Form Builder users where some can edit
 
 [SINCE Orbeon Forms 2018.1]
 
-To enable form authors to edit text with formatting shown by the Explanatory Text control, Form Builder uses the TinyMCE component. You can [configure the TinyMCE](https://www.tinymce.com/docs/configure/) by providing your own config as JSON as the value of the `oxf.fb.tinymce.config` property, as in the example below.
+To enable form authors to edit text with formatting shown by the Explanatory Text control, Form Builder uses the TinyMCE component. You can [configure the TinyMCE](https://www.tinymce.com/docs/configure/) by providing your own config as JSON as the value of the `oxf.fb.tinymce.config` property The example below shows the default configuration as of Orbeon Forms 2018.2.
 
 ```xml
 <property as="xs:string"  name="oxf.fb.tinymce.config">
     {
-        "mode":	      "exact",
-        "language":   "en",
-        "statusbar":  false,
-        "menubar":    false,
-        "plugins":    "lists link",
-        "toolbar":    "bold italic | bullist numlist outdent indent | fontselect fontsizeselect",
-        "encoding":   "xml"
+        "mode"              : "exact",
+        "language"          : "en",
+        "statusbar"         : false,
+        "menubar"           : false,
+        "plugins"           : "lists link",
+        "toolbar"           : "bold italic | bullist numlist outdent indent | link",
+        "gecko_spellcheck"  : true,
+        "doctype"           : "&lt;!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
+        "encoding"          : "xml",
+        "entity_encoding"   : "raw",
+        "forced_root_block" : "div",
+        "verify_html"       : true,
+        "visual_table_class": "fr-tinymce-table",
+        "skin"              : false
+    }
+</property>
+```
+
+For example, to remove the `link` button but add font selection:
+
+```xml
+<property as="xs:string"  name="oxf.fb.tinymce.config">
+    {
+        "mode"              : "exact",
+        "language"          : "en",
+        "statusbar"         : false,
+        "menubar"           : false,
+        "plugins"           : "lists link",
+        "toolbar"           : "bold italic | bullist numlist outdent indent | fontselect fontsizeselect",
+        "gecko_spellcheck"  : true,
+        "doctype"           : "&lt;!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
+        "encoding"          : "xml",
+        "entity_encoding"   : "raw",
+        "forced_root_block" : "div",
+        "verify_html"       : true,
+        "visual_table_class": "fr-tinymce-table",
+        "skin"              : false
     }
 </property>
 ```
