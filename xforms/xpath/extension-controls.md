@@ -671,7 +671,6 @@ The `xxf:repeat-position()` function returns an enclosing `xf:repeat`'s current 
 
 The `xxf:repeat-current()` function must be called from within an `xf:repeat` element.
 
-
 ## xxf:value()
 
 ```xpath
@@ -683,6 +682,28 @@ xxf:value(
 The `xxf:value()` function returns a control's value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
 
 _NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
+
+[SINCE Orbeon Forms 2019.2]
+
+```xpath
+xxf:value(
+    $control-id     as xs:string,
+    $follow-indexes as xs:boolean
+) as xs:string*
+```
+
+The two-argument function adds the `$follow-indexes` argument.
+
+- `$follow-indexes`
+    - if missing, takes the value `true()`.
+    - if `false()`
+        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat
+          iterations, all repeat iterations are chosen. 
+        - Zero, one, or more values can be returned.
+    - if `true()`
+        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
+          iterations, the iteration matching the enclosing repeat's current index is chosen.
+        - At most one value is returned.
 
 ## xxf:formatted-value()
 
