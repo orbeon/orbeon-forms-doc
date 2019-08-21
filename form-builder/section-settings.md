@@ -14,7 +14,7 @@ See [Section and grid settings](container-settings.md).
 
 \[SINCE Orbeon Forms 2016.1\]
 
-The following only applies when the form doesn't use the [Wizard view](../form-runner/feature/wizard-view.md).
+The following only applies when the form doesn't use the [Wizard view](/form-runner/feature/wizard-view.md).
 
 A section can be open/expanded or closed/collapsed. By default, sections are open when the form loads, unless the "Initially open" checkbox is *deselected*.
 
@@ -38,13 +38,25 @@ The help message is configured in the "Help Message" tab. Similarly, the help me
 
 [SINCE Orbeon Forms 2018.1]
 
-Sections support *dynamic* labels and help messages. This means that, instead of being specified once and for all at form design time, labels and help messages can incorporate dynamic parts such as control values and other custom expressions.
+In most cases, labels and help are simply localized messages without dynamic parts.
+
+However, sections also support *dynamic* labels and help messages. This means that, instead of being specified once and for all at form design time, labels and help messages can incorporate dynamic parts such as control values and other custom expressions.
 
 For more, see [Template syntax](template-syntax.md).
 
 ![](images/section-settings-label.png)
 
 ![](images/section-settings-help.png)
+
+### Dynamic iteration label
+
+[SINCE Orbeon Forms 2019.2]
+
+For sections with repeated content, the "Repetition Label" tab allows you to set a label that applies to individual repetitions. Typically this label will use a templates so that values from the repeated content can be used.
+
+When using the [Wizard view](/form-runner/feature/wizard-view.md), repetition labels will show in the Wizard's table of contents.
+
+![](images/section-settings-repetition-label.png)
 
 ## See also
 

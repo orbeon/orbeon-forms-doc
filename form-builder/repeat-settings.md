@@ -9,7 +9,7 @@ Form Builder supports grids and sections with repeated content.
 
 Both repeated grids and repeated sections have *repeat settings* in the "Section/Grids Settings" dialog's "Repeated Content" tab.
 
-![Repeated Content](images/repeat-settings.png)
+![Repeated Content](images/section-settings-repeated-content.png)
 
 ## Repeat Content
 
