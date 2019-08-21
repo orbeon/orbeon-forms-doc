@@ -50,7 +50,7 @@ For more, see [Template syntax](template-syntax.md).
 
 ### Dynamic iteration label
 
-[SINCE Orbeon Forms 2019.2]
+[SINCE Orbeon Forms 2019.1]
 
 For sections with repeated content, the "Repetition Label" tab allows you to set a label that applies to individual repetitions. Typically this label will use a templates so that values from the repeated content can be used.
 
