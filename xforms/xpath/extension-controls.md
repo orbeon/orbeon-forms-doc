@@ -679,11 +679,11 @@ xxf:value(
 ) as xs:string?
 ```
 
-The `xxf:value()` function returns a control's value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
+The `xxf:value()` function returns the value for one or more controls. If a control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns an empty sequence for that control.
 
 _NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
 
-[SINCE Orbeon Forms 2019.2]
+[SINCE Orbeon Forms 2019.1]
 
 ```xpath
 xxf:value(
@@ -694,6 +694,9 @@ xxf:value(
 
 The two-argument function adds the `$follow-indexes` argument.
 
+- `$control-id`
+    - the id of the control or controls to find
+    - the id may refer to zero, one, or multiple controls in the case of controls within `xf:repeat`
 - `$follow-indexes`
     - if missing, takes the value `true()`.
     - if `false()`
@@ -711,11 +714,26 @@ The two-argument function adds the `$follow-indexes` argument.
 
 ```xpath
 xxf:formatted-value(
-    $control-id as xs:string
+    $control-id     as xs:string,
+    $follow-indexes as xs:boolean
 ) as xs:string?
 ```
 
-The `xxf:formatted-value()` function returns a control's formatted value, it is has any. If the control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns the empty sequence.
+The `xxf:formatted-value()` function returns the formatted value for one or more controls. If a control is non-relevant or cannot hold a value (like `xf:group` or `xf:repeat`), the function returns an empty sequence for that control.
+
+- `$control-id`
+    - the id of the control or controls to find
+    - the id may refer to zero, one, or multiple controls in the case of controls within `xf:repeat`
+- `$follow-indexes`
+    - if missing, takes the value `true()`.
+    - if `false()`
+        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat
+          iterations, all repeat iterations are chosen. 
+        - Zero, one, or more values can be returned.
+    - if `true()`
+        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
+          iterations, the iteration matching the enclosing repeat's current index is chosen.
+        - At most one value is returned.
 
 _NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
 
