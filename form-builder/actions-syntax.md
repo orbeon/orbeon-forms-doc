@@ -19,6 +19,8 @@ In addition to the features available through the ["Actions" dialog](actions.md)
 - Iterate over service responses.
 - Clear repeated grid or repeated section iterations.
 - Add repeated grid or repeated section iterations.
+- Repeatedly run parts of an action. [SINCE Orbeon Forms 2019.1]
+- Conditionally run parts of an action. [SINCE Orbeon Forms 2019.1]
 
 ## Updating the form definition
 
@@ -73,7 +75,7 @@ You can explicitly set the XPath evaluation context to the current iteration ite
 In the following example, without the `expression-context="current-iteration"` attribute, the second `<fr:value>` would evaluate within the context of the first service call's response.
 
 ```xml
-<fr:data-iterate ref="/response/row">
+<fr:data-iterate ref="/*/row">
     <fr:service-call service="my-first-service">
         <fr:value
             value="foo"
@@ -91,7 +93,7 @@ In the following example, without the `expression-context="current-iteration"` a
 To be more explicit, the attribute can also be set on the first `<fr:value>`:
 
 ```xml
-<fr:data-iterate ref="/response/row">
+<fr:data-iterate ref="/*/row">
     <fr:service-call service="my-first-service">
         <fr:value
             expression-context="current-iteration"
@@ -256,17 +258,76 @@ An action looks like this:
     - mandatory action format version
     - must always be `2018.2`
 
-#### Calling a service
-   
-
-```xml
-<fr:service-call>
-```
-
 #### Iterating over data
 
 ```xml
-<fr:data-iterate>
+<fr:data-iterate ref="...expression...">
+    ...
+</fr:data-iterate>
+```
+
+`<fr:data-iterate>` allows you to iterate over data. The contained actions are executed once for each value returned by the expression.
+
+- `ref`: an XPath sequence expression which runs in the current XPath evaluation context
+
+In the following example, each repetition adds a row to the grid, calls a service, passing the attachment id, and sets the attachment value on the last row.
+
+```xml
+<fr:action name="populate-attachments" version="2018.2">
+
+    <fr:service-call service="get-attachments-list"/>
+    <fr:repeat-clear repeat="my-grid"/>
+
+    <fr:data-iterate ref="/*/row">
+        <fr:repeat-add-iteration repeat="my-grid" at="end"/>
+        <fr:service-call service="get-attachment">
+            <fr:url-param name="text" value="attachment-id"/>
+        </fr:service-call>
+        <fr:control-setattachment control="my-attachment" at="end"/>
+    </fr:data-iterate>
+
+</fr:action>
+```
+
+#### Conditions
+
+[SINCE Orbeon Forms 2019.1]
+
+```xml
+<fr:if condition="...boolean expression...">
+    ...
+</fr:if>
+```
+
+`<fr:if>` allows you to conditionally run a block of actions.
+
+- `condition`: a boolean XPath expression which runs in the current XPath evaluation context
+
+In the following example, with the repetition performed by `<fr:data-iterate>`, the call to the service that retrieves an attachment depends on whether there is a non-blank attachment id provided. 
+
+```xml
+<fr:action name="populate-attachments" version="2018.2">
+
+    <fr:service-call service="get-attachments-list"/>
+    <fr:repeat-clear repeat="my-grid"/>
+
+    <fr:data-iterate ref="/*/row">
+        <fr:repeat-add-iteration repeat="my-grid" at="end"/>
+        <fr:if condition="xxf:non-blank(attachment-id)">
+            <fr:service-call service="get-attachment">
+                <fr:url-param name="text" value="attachment-id"/>
+            </fr:service-call>
+            <fr:control-setattachment control="my-attachment" at="end"/>
+        </fr:if>
+    </fr:data-iterate>
+
+</fr:action>
+```
+
+#### Calling a service
+
+```xml
+<fr:service-call>
 ```
 
 #### Removing all iterations of a repeat
