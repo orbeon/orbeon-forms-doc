@@ -67,8 +67,8 @@ The following example:
     <fr:action name="my-action" version="2018.2">
     
         <fr:service-call service="my-service">
-            <fr:value control="foo" ref="/*/request/foo"/>
-            <fr:value control="bar" ref="/*/request/bar"/>
+            <fr:value control="foo" ref="/*/foo"/>
+            <fr:value control="bar" ref="/*/bar"/>
         </fr:service-call>
     
         <fr:repeat-clear repeat="my-repeated-grid"/>
@@ -246,9 +246,9 @@ In the following example, with the repetition performed by `<fr:data-iterate>`, 
 ### Calling a service
 
 ```xml
-<fr:service-call service="...service name...>
+<fr:service-call service="...service name...">
     <fr:value value="..." ref="..."/>
-</fr:sevice-call>
+</fr:service-call>
 ```
 
 `<fr:service-call>` calls a service by name.
