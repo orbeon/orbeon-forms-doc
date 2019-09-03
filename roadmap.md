@@ -20,7 +20,8 @@ Focus:
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2019-06: tentative release date
+- ~~2019-06: tentative release date~~
+- 2019-09: updated tentative release date
 
 ### Orbeon Forms 2019.2
 
