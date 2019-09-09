@@ -189,7 +189,7 @@ In persistence implementations that don't support XPath, this kind of queries ar
 
 ## Drafts
 
-The `<drafts>` element is used to tell the implementation of the persistence API which documents we're interested in, and thus which documents it must return:
+The `<drafts>` element is used to tell the implementation of the persistence API which documents to return with respect to drafts:
 
 - If the element is present, it must contain one of the following values:
     - `exclude`: don't include drafts. This value isn't used by Form Runner, but could be used in the future, and [SINCE 2016.2] is supported by the persistence for relational databases.
@@ -245,6 +245,13 @@ And in `new` mode, zero or more documents can be returned:
     </document>
 </documents>
 ```
+
+<!--
+## Operations
+
+[SINCE Orbeon Forms 2019.1] The `<operations>` element is used to tell the implementation of the persistence API which documents to return with respect to operations the:
+-->
+
 
 ## Versioning
 
