@@ -1,7 +1,5 @@
 # JavaScript Companion Classes
 
-
-
 ## Rationale
 
 Some components do not require any custom JavaScript code, for example components which combine other controls (such as a date components made of separate input fields or dropdown menus). In such cases, you implement all the logic with XForms.
@@ -229,6 +227,41 @@ The XForms engine calls this method when:
 - and in response to calls to `ORBEON.xforms.Document.getValue()`.
 
 `xformsGetValue()` returns a string obtained from the associated JavaScript control.
+
+### External value serialization/deserialization
+
+[SINCE Orbeon Forms 2019.1]
+
+By default, the external value exchanged with the client is identical to the storage value of the component.
+
+By using the `xxbl:serialize-external-value` and `xxbl:deserialize-external-value` attributes on `<xbl:binding>`, you can create XPath expressions that transform the external value back and forth.
+
+This is useful if the value must contain more than the storage value of the component. For example the `fr:number` component uses this to communicate a display value, an edit value and a decimal separator to the client.
+
+```xml
+<xbl:binding
+    id="fr-number"
+    element="
+        fr|number,
+        xf|input:xxf-type('xs:decimal'),
+        xf|input:xxf-type('xs:integer')"
+        
+    xxbl:mode="... value external-value javascript-lifecycle ..."
+    xxbl:serialize-external-value="... expression serializing the value to the client... "
+    xxbl:deserialize-external-value="... expression deserializing the external value from the client... "
+>
+... rest of the binding...
+```
+
+For `xxbl:serialize-external-value`:
+
+- XPath context item: XPath string of the control's storage value
+- Expression result: XPath string to send to the client's companion class's `xformsUpdateValue()` method
+
+For `xxbl:deserialize-external-value`:
+ 
+- XPath context item: XPath string provided by the client's companion class's `xformsGetValue()` method
+- Expression result: XPath string to use as the control's storage value  
 
 ## Support for the javascript-lifecycle mode
 
