@@ -1,5 +1,7 @@
 # Organization-based permissions
 
+[SINCE Orbeon Forms 2016.3]
+
 ## Roles can be tied to organizations
 
 Let's consider that your company has the following hierarchical organizational structure. We refer to each box in this diagram as an *organization*, e.g the *Engineering organization*.
