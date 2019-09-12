@@ -25,13 +25,15 @@ The Form Runner Summary page shows, for a given published form, the list of acce
 - __Custom columns:__
     - You specify those when editing the form definition, using the [Control Settings dialog](/form-builder/control-settings.md).
 
-<!-- 
+## Search 
 
-## Search
+By default, the Summary page shows a single search box which does a full-text search in the form data.1
 
-TODO
+You can open the search options using the "Show Search Options" button. The search options area contains individual search fields which allow performing a structured search, or search by field.
 
--->
+![Search Options](../images/summary-bookshelf-search.png)
+
+You specify which fields appear in the search options area when editing the form definition, using the [Control Settings dialog](/form-builder/control-settings.md).
 
 ## Versioning
 
