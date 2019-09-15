@@ -246,12 +246,12 @@ And in `new` mode, zero or more documents can be returned:
 </documents>
 ```
 
-<!--
 ## Operations
 
-[SINCE Orbeon Forms 2019.1] The `<operations>` element is used to tell the implementation of the persistence API which documents to return with respect to operations the:
--->
+[SINCE Orbeon Forms 2019.1] The `<operations>` element is used to tell the implementation of the persistence API which documents to return with respect to operations the user can perform. 
 
+- When the element isn't present, or before Orbeon Forms 2019.1 (when it wasn't supported), the search API returns any document the user can either read, update, or delete.
+- When specified, the element must take the form `<operations any-of="update delete"/>`, where the value of the `any-of` attribute is a space-separated list of one or more operations. In this example, the search API will only return documents the user can either update or delete, but not documents the user can only read.
 
 ## Versioning
 
