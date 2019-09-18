@@ -293,22 +293,16 @@ By default, top-level repeated sections appear as a single entry in the table of
 
 It is now possible to make each iteration of a top-level repeated section that is the target of [synchronized repeated content](/form-builder/synchronize-repeated-content.md) appear as a separate entry in the table of contents. The benefit of this is that, if the repeated section content is large, then less content appears on screen at the same time. This is better for usability and for performance. 
 
-To enable this, got to the relevant [section settings](/form-builder/repeat-settings.md), and:
+To enable this, got to the relevant [section repeat settings](/form-builder/repeat-settings.md), and:
 
 - Uncheck "Allow the user to add, remove, or move repetitions"
 - Check "Show one repetition at a time in the wizard"
 
 ![Repeated Content Configuration](../../form-builder/images/section-settings-repeated-content-one-repetition.png)
 
-See [Repeat settings](/form-builder/repeat-settings.md) for details.
-
-In addition, each repetition can have an individual label.
+In addition, each repetition can have an individual [repetition label](/form-builder/form-editor/section-settings.md#dynamic-iteration-label).
 
 ![](../../form-builder/images/section-settings-repetition-label.png)
-
-See [Dynamic iteration label](/form-builder/form-editor/section-settings.md#dynamic-iteration-label) for details.
-
-<!-- TODO: screenshot -->
 
 ## See also
 

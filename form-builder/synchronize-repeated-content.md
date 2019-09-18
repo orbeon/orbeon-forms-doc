@@ -111,6 +111,7 @@ With Orbeon Forms 2018.2, the  `<fr:synchronize-repeated-content>` has the follo
 - [Database services](database-services.md)
 - [Repeated grids](repeated-grids.md)
 - [Repeated sections](section-settings.md#repeated-content)
+- [Paging large repeated sections](/form-runner/feature/wizard-view.md#paging-large-repeated-sections)
 - Blog posts
     - [Synchronized master-detail views](https://blog.orbeon.com/2019/01/synchronized-master-detail-views.html)
     - [Repeated sections](https://blog.orbeon.com/2014/01/repeated-sections.html)
