@@ -293,18 +293,32 @@ By default, top-level repeated sections appear as a single entry in the table of
 
 It is now possible to make each iteration of a top-level repeated section that is the target of [synchronized repeated content](/form-builder/synchronize-repeated-content.md) appear as a separate entry in the table of contents. The benefit of this is that, if the repeated section content is large, then less content appears on screen at the same time. This is better for usability and for performance. 
 
-To enable this, got to the relevant section settings, and:
+To enable this, got to the relevant [section settings](/form-builder/repeat-settings.md), and:
 
 - Uncheck "Allow the user to add, remove, or move repetitions"
-- Check "Show one iteration at a time in the wizard"
+- Check "Show one repetition at a time in the wizard"
 
+![Repeated Content Configuration](../../form-builder/images/section-settings-repeated-content-one-repetition.png)
 
+See [Repeat settings](/form-builder/repeat-settings.md) for details.
+
+In addition, each repetition can have an individual label.
+
+![](../../form-builder/images/section-settings-repetition-label.png)
+
+See [Dynamic iteration label](/form-builder/form-editor/section-settings.md#dynamic-iteration-label) for details.
 
 <!-- TODO: screenshot -->
 
 ## See also
 
+- [Synchronizing repeated content](/form-builder/synchronize-repeated-content.md)
+- [Repeat settings](/form-builder/repeat-settings.md)
+- [Dynamic iteration label](/form-builder/form-editor/section-settings.md#dynamic-iteration-label)
 - [Wizard XBL component](../component/wizard.md)
 - [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md)
-- [Form Runner Wizard View](https://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, with a video
-- [New wizard validated mode](https://blog.orbeon.com/2015/03/new-wizard-validated-mode.html): a blog post which introduces thew validated mode.
+- Blog posts
+    - [Form Runner Wizard View](https://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
+    - [New wizard validated mode](https://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
+    - [Synchronized master-detail views](https://blog.orbeon.com/2019/01/synchronized-master-detail-views.html)
+    

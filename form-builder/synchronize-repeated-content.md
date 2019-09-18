@@ -84,6 +84,18 @@ The following screenshots show how the form looks like when using the wizard vie
 
 ![Detail view](images/sync-detail.png)
 
+## Paging large repeated sections 
+
+[SINCE Orbeon Forms 2019.1]
+
+When paging of large repeated sections is enabled, optionally with a repetition label, each master repetition appears as its own wizard page. This reduces the size of wizard pages and makes it easier to fill out a form.
+
+![Detail view](images/sync-detail-paging-alice.png)
+
+![Detail view](images/sync-detail-paging-bob.png)
+
+See [Paging large repeated sections](/form-runner/feature/wizard-view.md#paging-large-repeated-sections) for detail of the configuration.
+
 ## Limitations
 
 With Orbeon Forms 2018.2, the  `<fr:synchronize-repeated-content>` has the following limitations:
@@ -94,10 +106,11 @@ With Orbeon Forms 2018.2, the  `<fr:synchronize-repeated-content>` has the follo
 
 ## See also
 
-- Blog post: [Synchronized master-detail views](https://blog.orbeon.com/2019/01/synchronized-master-detail-views.html)
 - [Actions](actions.md)
 - [HTTP services](http-services.md)
 - [Database services](database-services.md)
 - [Repeated grids](repeated-grids.md)
 - [Repeated sections](section-settings.md#repeated-content)
-- Blog post: [Repeated sections](https://blog.orbeon.com/2014/01/repeated-sections.html)
+- Blog posts
+    - [Synchronized master-detail views](https://blog.orbeon.com/2019/01/synchronized-master-detail-views.html)
+    - [Repeated sections](https://blog.orbeon.com/2014/01/repeated-sections.html)

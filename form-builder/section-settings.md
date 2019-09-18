@@ -52,7 +52,7 @@ For more, see [Template syntax](template-syntax.md).
 
 [SINCE Orbeon Forms 2019.1]
 
-For sections with repeated content, the "Repetition Label" tab allows you to set a label that applies to individual repetitions. Typically this label will use a templates so that values from the repeated content can be used.
+For sections with repeated content, the "Repetition Label" tab allows you to set a label that applies to individual repetitions. Typically this label will use a template so that values from the repeated content can be used.
 
 When using the [Wizard view](/form-runner/feature/wizard-view.md), repetition labels will show in the Wizard's table of contents.
 
