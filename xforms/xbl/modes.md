@@ -112,7 +112,7 @@ You use this mode when the component implementation is mostly done in JavaScript
 
 By default, `value` doesn't expose the control's value to the client. By adding the `external-value` mode, the control's value is made available to the client and accessible via JavaScript.
 
-For more details, see [Support for the external-value mode](javascript.md#support-for-the-externalvalue-mode).
+See also [Support for the external-value mode](javascript.md#support-for-the-externalvalue-mode).
 
 ## The javascript-lifecycle mode
 
@@ -147,6 +147,20 @@ The value of the attribute must be the id of a nested XForms control or a nested
 
 For examples, see [some of the Orbeon Forms XBL components](https://github.com/orbeon/orbeon-forms/tree/master/form-runner/jvm/src/main/resources/xbl/orbeon).
                                                             https://github.com/orbeon/orbeon-forms/tree/master/form-runner/jvm/src/main/resources/xbl/orbeon
+
+[SINCE Orbeon Forms 2019.1]
+
+You can now specify custom label, hint, help and alerts individually using `-` and `+` prefixes and the LHHA name as suffix. For example to remove the custom alert and keep its standard handling:
+
+```
+lhha custom-lhha -custom-alert
+```
+
+or:
+
+```
+lhha +custom-label +custom-hint +custom-help
+```
 
 ## The focus mode
 
