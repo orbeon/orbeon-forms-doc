@@ -146,7 +146,6 @@ You enable this with the `xxbl:label-for` attribute.
 The value of the attribute must be the id of a nested XForms control or a nested HTML control element.
 
 For examples, see [some of the Orbeon Forms XBL components](https://github.com/orbeon/orbeon-forms/tree/master/form-runner/jvm/src/main/resources/xbl/orbeon).
-                                                            https://github.com/orbeon/orbeon-forms/tree/master/form-runner/jvm/src/main/resources/xbl/orbeon
 
 [SINCE Orbeon Forms 2019.1]
 
