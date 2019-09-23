@@ -1,7 +1,5 @@
 # Form Builder configuration properties
 
-
-
 ## Default values
 
 For the latest default values of Form Builder properties, see [properties-form-builder.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-builder.xml).

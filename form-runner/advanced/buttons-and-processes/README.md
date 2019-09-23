@@ -1,7 +1,5 @@
 # Buttons and processes
 
-
-
 ## Children pages
 
 You can learn more about:

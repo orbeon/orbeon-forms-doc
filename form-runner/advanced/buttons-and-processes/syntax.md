@@ -1,7 +1,5 @@
 # Process syntax
 
-
-
 ## Defining a process
 
 A process is defined with some text following a specific syntax. For example:
