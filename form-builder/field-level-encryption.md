@@ -2,7 +2,8 @@
 
 ## Availability
 
-[SINCE Orbeon Forms PE 2018.2.2]
+- [SINCE Orbeon Forms PE 2018.2.2]
+- [SINCE Orbeon Forms PE 2019.1] Encryption of attachments is also supported
 
 ## Overview
 
