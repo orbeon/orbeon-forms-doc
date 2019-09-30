@@ -91,6 +91,8 @@ You can perform the following operations on grids:
         - *NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids.* 
     - Cut or copy the entire grid to the clipboard (scissors or copy icons)
         - *NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids.*
+        
+![Grid icons](images/grid-icons.png)
 
 Expanding/shrinking cells horizontally makes grid cells span *columns*. This allows grid cells to have a width of 1, 2,
 and up to 12 columns. 
