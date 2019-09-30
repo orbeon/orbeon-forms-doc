@@ -82,8 +82,15 @@ You can perform the following operations on grids:
 
 - Add grid rows by clicking on the up and down arrows on the left of each row.
 - Delete a row by clicking on the "minus" icon on the left of a row.
-- Delete the entire grid by clicking on the "minus" icon to the left of the grid.
 - Expand/shrink grid cells horizontally or vertically.
+- Using icons to the left of the grid
+    - Open the Grid Settings dialog (cogwheel icon)
+        - *NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids.*
+    - Delete the entire grid (minus icon)
+    - Moving a grid relative to its sibling grids (arrow icons)
+        - *NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids.* 
+    - Cut or copy the entire grid to the clipboard (scissors or copy icons)
+        - *NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids.*
 
 Expanding/shrinking cells horizontally makes grid cells span *columns*. This allows grid cells to have a width of 1, 2,
 and up to 12 columns. 
