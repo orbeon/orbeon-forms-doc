@@ -95,7 +95,7 @@
         * [Checkbox input](form-runner/component/checkbox-input.md)
         * [Currency](form-runner/component/currency.md)
         * [Dropdown date](form-runner/component/dropdown-date.md)
-        * [Dynamic data dropdown](form-runner/component/dynamic-data-dropdown.md)
+        * [Static and dynamic dropdown](form-runner/component/static-dynamic-dropdown.md)
         * [Error summary](form-runner/component/error-summary.md)
         * [Grid](form-runner/component/grid.md)
         * [Handwritten signature](form-runner/component/handwritten-signature.md)
