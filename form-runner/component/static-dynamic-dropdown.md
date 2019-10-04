@@ -68,3 +68,13 @@ In most cases, it will be simpler to have your service return all the possible v
 With this, Orbeon Forms will automatically call your service repeatedly as users type in the field, this to retrieve a new list of possible choices, and update the dropdown.
 
 ![Service performing search](images/dynamic-data-dropdown-service-search.png)
+
+### Paging
+
+Services that implement their own search can also implement paging. This is useful for cases where the number of possible values is so large, that you don't want your service to return all the possible values even filtered down by what the user has typed so far, but instead want to return the first, say, 20 choices, and only show the following 20 after users scroll down in the dropdown past the first 20 choices. To do so:
+
+- Setup your service as described in the previous section about [services performing search](#services-performing-the-search).
+- Add a request parameter `{$fr-search-page}` to the URL. The first time the service is called, the value will be `1`. If users scroll down in the dropdown, and reach the bottom, they will see a message informing them that more results will be loaded, and your service will be called with the parameter set to 2, and so on.
+- At some point, users might reach the last page, as your service doesn't have choices to list for the given search string. You'll want to include some information in your response as to whether the last page has been reached, and provide an XPath expression under "Is last page XPath expression" returning `true` when on the last page.
+
+![Service performing paging](images/dynamic-data-dropdown-service-paging.png)
