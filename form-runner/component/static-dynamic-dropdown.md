@@ -18,7 +18,7 @@ Typically, you'll want to use the Static Dropdown for cases where the number of 
 
 You can choose to have each one of your Static or Dynamic Dropdown show as a regular dropdown native to the browser, or as a dropdown with search. You make that choice in the Control Settings dialog, as highlighted in the screenshot below.
 
-![Choosing between a regular dropdown and a dropdown with search](images/dynamic-data-dropdown-with-without-search.png)
+<img alt="Choosing between a regular dropdown and a dropdown with search" src="images/dynamic-data-dropdown-with-without-search.png" width="987">
 
 The dropdown "with search" doesn't use the native browser dropdown, but instead uses a dropdown implemented in JavaScript that allows users to search for the choice they want to select by typing part of the label, which is typically useful when the list of choices can be pretty long, and it is thus hard for users to visually just pick one of the choices offered when the dropdown opens.
 
