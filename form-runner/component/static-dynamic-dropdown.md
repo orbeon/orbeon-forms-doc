@@ -6,6 +6,8 @@
 
 ## Overview
 
+![](images/dynamic-data-dropdown-combinations.svg)
+
 ### Static vs. Dynamic
 
 In the Form Builder Toolbox you'll find 2 dropdown components, as shown in the screenshot below. The *Static Dropdown* is for cases when you, as a form author, want to provide, ahead of time, in Form Builder, the list of all the different choices users will be able to choose from. This is in contrast with the *Dynamic Dropdown* where the list of choices will be loaded at runtime from a service you provide.
@@ -23,5 +25,3 @@ You can choose to have each one of your Static or Dynamic Dropdown show as a reg
 The dropdown "with search" doesn't use the native browser dropdown, but instead uses a dropdown implemented in JavaScript that allows users to search for the choice they want to select by typing part of the label, which is typically useful when the list of choices can be pretty long, and it is thus hard for users to visually just pick one of the choices offered when the dropdown opens.
 
 <img alt="Doing a search to select a country" src="images/dynamic-data-dropdown-search-country.gif" width="478">
-
-xxx
