@@ -4,9 +4,9 @@
 
 [SINCE Orbeon Forms 2019.1]
 
-## Overview
+## Possible combinations
 
-![](images/dynamic-data-dropdown-combinations.png)
+![Combinations of static vs. dynamic, with vs. without search](images/dynamic-data-dropdown-combinations.png)
 
 ### Static vs. Dynamic
 
@@ -25,3 +25,35 @@ You can choose to have each one of your Static or Dynamic Dropdown show as a reg
 The dropdown "with search" doesn't use the native browser dropdown, but instead uses a dropdown implemented in JavaScript that allows users to search for the choice they want to select by typing part of the label, which is typically useful when the list of choices can be pretty long, and it is thus hard for users to visually just pick one of the choices offered when the dropdown opens.
 
 <img alt="Doing a search to select a country" src="images/dynamic-data-dropdown-search-country.gif" width="478">
+
+## Dynamic dropdowns
+
+### Extracting choices from your service response
+
+Your service must either return XML or JSON. (If it returns JSON the result will first be [converted to XML](/xforms/submission-json.md), so Orbeon Forms can run XPath expression on it.) Say your service returns a list of countries as follows, here including just the first 3 countries:
+
+```xml
+<countries>
+    <country>
+        <name>Afghanistan</name>
+        <us-code>af</us-code>
+    </country>
+    <country>
+        <name>Akrotiri</name>
+        <us-code>ax</us-code>
+    </country>
+    <country>
+        <name>Albania</name>
+        <us-code>al</us-code>
+    </country>
+</countries>
+```
+
+You specify how to extract the necessary information to populate the dropdown through 3 XPath expressions, which you enter in the Control Settings dialog:
+
+- The "Choices XPath expression" must return one item per choice in the dropdown, or in our example, per country, which is done with `/countries/country`.
+- The "Label XPath expression" is relative to the a given choice, and must return the label shown to users in the dropdown. In our example, this will point to the `name` element.
+- The "Value XPath expression" is similar to the "Label XPath expression" but points to the value stored in the data when users make a selection.
+
+![Combinations of static vs. dynamic, with vs. without search](images/dynamic-data-dropdown-exact.png)
+
