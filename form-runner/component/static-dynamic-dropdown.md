@@ -12,7 +12,7 @@ In the Form Builder Toolbox you'll find 2 dropdown components, as shown in the s
 
 Typically, you'll want to use the Static Dropdown for cases where the number of choices is limited, and doesn't change much over time, and the Dynamic Dropdown for cases where you have a long list of choices and/or those choices can change over time.
 
-![Static Dropdown and Dynamic Dropdown in the Toolbox](images/dynamic-data-dropdown-components.png)
+<img alt="Static Dropdown and Dynamic Dropdown in the Toolbox" src="images/dynamic-data-dropdown-components.png" width="193">
 
 ### With vs. without search
 
