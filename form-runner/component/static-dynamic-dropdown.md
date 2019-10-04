@@ -6,7 +6,7 @@
 
 ## Overview
 
-![](images/dynamic-data-dropdown-combinations.svg)
+![](images/dynamic-data-dropdown-combinations.png)
 
 ### Static vs. Dynamic
 
