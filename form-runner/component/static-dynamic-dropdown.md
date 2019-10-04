@@ -55,5 +55,16 @@ You specify how to extract the necessary information to populate the dropdown th
 - The "Label XPath expression" is relative to the a given choice, and must return the label shown to users in the dropdown. In our example, this will point to the `name` element.
 - The "Value XPath expression" is similar to the "Label XPath expression" but points to the value stored in the data when users make a selection.
 
-![Combinations of static vs. dynamic, with vs. without search](images/dynamic-data-dropdown-exact.png)
+![Extracting choices with XPath in Control Settings](images/dynamic-data-dropdown-exact.png)
 
+### Services performing the search
+
+In most cases, it will be simpler to have your service return all the possible values. But in some cases, the list of all possible values could be extremely large, and returning all them to Orbeon Forms would be prohibitively expensive, or outright impossible. In those cases you'll want the service to only return a subset of all possible choices, based on what users have typed so far. To do so:
+
+- Make sure you've checked the "With Search" appearance.
+- Select the "Yes" radio button under "Service performs search".
+- Pass the value typed by users as a request parameter to your service by adding `{$fr-search-value}` as appropriate on the URL, for instance: `/my-service?search={$fr-search-value}`.
+
+With this, Orbeon Forms will automatically call your service repeatedly as users type in the field, this to retrieve a new list of possible choices, and update the dropdown.
+
+![Service performing search](images/dynamic-data-dropdown-service-search.png)
