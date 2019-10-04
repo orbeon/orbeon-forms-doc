@@ -22,5 +22,4 @@ You can choose to have each one of your Static or Dynamic Dropdown show as a reg
 
 The dropdown "with search" doesn't use the native browser dropdown, but instead uses a dropdown implemented in JavaScript that allows users to search for the choice they want to select by typing part of the label, which is typically useful when the list of choices can be pretty long, and it is thus hard for users to visually just pick one of the choices offered when the dropdown opens.
 
-![Doing a search to select a country](images/dynamic-data-dropdown-search-country.gif)
-
+<img alt="Doing a search to select a country" src="images/dynamic-data-dropdown-search-country.gif" width="478">
