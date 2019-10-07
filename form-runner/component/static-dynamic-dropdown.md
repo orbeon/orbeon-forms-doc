@@ -30,7 +30,7 @@ The dropdown "with search" doesn't use the native browser dropdown, but instead 
 
 ### Extracting choices from your service response
 
-Your service must either return XML or JSON. (If it returns JSON the result will first be [converted to XML](/xforms/submission-json.md), so Orbeon Forms can run XPath expression on it.) Say your service returns a list of countries as follows, here including just the first 3 countries:
+Your service must either return XML or JSON. (If it returns JSON the result will first be [converted to XML](/xforms/submission-json.md), so Orbeon Forms can run XPath expressions on it.) Say your service returns a list of countries as follows, here including just the first 3 countries:
 
 ```xml
 <countries>
@@ -52,7 +52,7 @@ Your service must either return XML or JSON. (If it returns JSON the result will
 You specify how to extract the necessary information to populate the dropdown through 3 XPath expressions, which you enter in the Control Settings dialog:
 
 - The "Choices XPath expression" must return one item per choice in the dropdown, or in our example, per country, which is done with `/countries/country`.
-- The "Label XPath expression" is relative to the a given choice, and must return the label shown to users in the dropdown. In our example, this will point to the `name` element.
+- The "Label XPath expression" is relative to a given choice as returned by the first expression, and must return the label shown to users in the dropdown. In our example, this will point to the `name` element.
 - The "Value XPath expression" is similar to the "Label XPath expression" but points to the value stored in the data when users make a selection.
 
 ![Extracting choices with XPath in Control Settings](images/dynamic-data-dropdown-exact.png)
@@ -75,6 +75,6 @@ Services that implement their own search can also implement paging. This is usef
 
 - Setup your service as described in the previous section about [services performing search](#services-performing-the-search).
 - Add a request parameter `{$fr-search-page}` to the URL. The first time the service is called, the value will be `1`. If users scroll down in the dropdown, and reach the bottom, they will see a message informing them that more results will be loaded, and your service will be called with the parameter set to 2, and so on.
-- At some point, users might reach the last page, as your service doesn't have choices to list for the given search string. You'll want to include some information in your response as to whether the last page has been reached, and provide an XPath expression under "Is last page XPath expression" returning `true` when on the last page.
+- At some point, users might reach the last page, as your service doesn't have more choices to list for the given search string. You'll want to include some information in your response as to whether the last page has been reached, and provide an XPath expression under "Is last page XPath expression" returning `true` when on the last page.
 
 ![Service performing paging](images/dynamic-data-dropdown-service-paging.png)
