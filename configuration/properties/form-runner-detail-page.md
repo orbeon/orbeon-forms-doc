@@ -447,7 +447,7 @@ The following property defines a space-separated list of request parameters to b
 <property
     as="xs:string"
     name="oxf.fr.detail.new.service.passing-request-parameters.*.*"
-    value=foo bar"/>
+    value="foo bar"/>
 ```
 
 The `oxf.fr.persistence.*.data-format-version` property does not affect `oxf.fr.detail.new.service.enable` and the data returned by the service must still be in `4.0.0` format in all cases.
@@ -581,11 +581,13 @@ a[href] {
 
 These properties allow specifying fonts to embed in PDF files. The `oxf.fr.pdf.font.path` property ends with an identifier for the font (here `vera`). It specifies the path to the font file. Optionally, the oxf.fr.pdf.font.family property ending with the same identifier (here `vera`) allows overriding the font family.
 
+*NOTE: The path to the font file must be an absolute path on the filesystem. It cannot be just a relative path pointing to the Orbeon Forms resources, as is the case with for example CSS files.*
+
 ```xml
 <property
     as="xs:string"
     name="oxf.fr.pdf.font.path.vera"
-    value="/path/to/font.ttf"/>
+    value="/absolute/path/to/font-file.ttf"/>
 
 <property
     as="xs:string"
