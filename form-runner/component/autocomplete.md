@@ -1,6 +1,6 @@
 # Autocomplete Component
 
-
+[SINCE 2019.1] This component is deprecated and we recommend you update your forms to use the new [dynamic dropdown](static-dynamic-dropdown.md), as the autocomplete control isn't maintained anymore, and is slated to be removed from future versions of Orbeon Forms.
 
 ## Overview
 
