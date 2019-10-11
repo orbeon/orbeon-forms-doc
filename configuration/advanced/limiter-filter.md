@@ -79,7 +79,11 @@ The number of threads which can run concurrently is based on the number of CPUs 
 
 In the configuration, `x1` means the advertised number of CPUs, `x2` means twice that, `.5x` means half that, etc. A fixed integer number can also be set.
 
-The filter ensures that the effective number of concurrent threads specified with `num-threads` is not less than that specified by `min-threads` and not larger than `max-threads`.
+The effective maximum number of concurrent threads allowed by the filter is:
+
+- `min-threads` if `num-threads` is smaller than `min-threads`
+- `max-threads` if `num-threads` is bigger than `max-threads`
+- `num-threads` in all other cases 
 
 ## Disabling the filter
 
