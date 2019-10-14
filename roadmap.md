@@ -4,6 +4,15 @@
 
 ### Orbeon Forms 2019.1
 
+__Please remember that the following schedule is a plan, not a promise:__
+
+- ~~2019-06: tentative release date~~
+- 2019-09: updated tentative release date
+
+### Orbeon Forms 2019.2
+
+For this release and/or 2020.1, we'd like to address some dogfood/customers usability issues. See the tentative [2019.2 items](https://github.com/orbeon/orbeon-forms/projects/17) for details.
+
 Consider:
 
 - [low-hanging fruits](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Low-Hanging+Fruit%22)
@@ -12,25 +21,15 @@ Consider:
 - [spare time items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Spare+Time+Feature%22)
 - [top issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+issue%22)
 - [top RFEs](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+RFE%22)
-- [2019.1 items](https://github.com/orbeon/orbeon-forms/projects/11)
-
-Focus:
-
-- Progress towards [Basic Workflow #2256](https://github.com/orbeon/orbeon-forms/issues/2256)
-
-__Please remember that the following schedule is a plan, not a promise:__
-
-- ~~2019-06: tentative release date~~
-- 2019-09: updated tentative release date
-
-### Orbeon Forms 2019.2
-
-TBD
+- [2019.2 items](https://github.com/orbeon/orbeon-forms/projects/17)
 
 __Please remember that the following schedule is a plan, not a promise:__
 
 - 2019-12: tentative release date
 
+### Orbeon Forms 2020.1
+
+TODO
 
 ## Past releases
 
