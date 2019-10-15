@@ -1,7 +1,5 @@
 # Localizing Orbeon Forms
 
-
-
 ## Introduction
 
 This document explains how to localize Orbeon Forms
@@ -139,7 +137,7 @@ You can go about this in various ways.
 2. Send them to us
    1. with a github pull request
    2. by sending the files to us separately
-3. Either way, we need the [CLA](http://wiki.orbeon.com/forms/community/cla) signed.
+3. Either way, we need the [CLA](cla.md) signed.
 
 But you will want to see the results yourself first. Here you can either work with
 - the source [from github](https://github.com/orbeon/orbeon-forms)
@@ -157,5 +155,6 @@ If working with a binary build, you can override built-in files by creating your
 
 ## See also
 
-- [Form Localization in Form Builder](../form-builder/localization.md)
-- [Localization](../form-runner/feature/localization.md)
+- [Form Localization in Form Builder](/form-builder/localization.md)
+- [Localization](/form-runner/feature/localization.md)
+- [Contributor License Agreements (CLA)](cla.md)

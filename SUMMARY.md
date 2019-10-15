@@ -305,6 +305,7 @@
     * [Building Orbeon Forms](contributors/building-orbeon-forms.md)
     * [Localizing Orbeon Forms](contributors/localizing-orbeon-forms.md)
     * [State handling](contributors/state-handling.md)
+    * [Contributor License Agreements (CLA)](contributors/cla.md)
 * [Use cases](use-cases.md)
 * [Index of features](features.md)
 * [Release history](release-history.md)

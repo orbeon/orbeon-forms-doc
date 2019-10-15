@@ -1,7 +1,5 @@
 # Building Orbeon Forms
 
-
-
 ## Introduction
 
 This page explains how to build Orbeon Forms.
@@ -188,7 +186,7 @@ Orbeon does not provide public instructions or code to build Orbeon Forms PE, wh
 
 The idea is just that we want to ensure that something called "Orbeon Forms PE" in fact comes from Orbeon.
 
----
+----
 
 ## Historical
 
@@ -399,3 +397,8 @@ A related known issue, from the command-line, is that running `ant classes` twic
 Alternatively:
 
 - run `ant teamcity-release` to clean, test, and build the entire release
+
+## See also
+
+- [Contributor License Agreements (CLA)](cla.md) 
+- [Localizing Orbeon Forms](localizing-orbeon-forms.md)
