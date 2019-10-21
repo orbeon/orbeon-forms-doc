@@ -263,7 +263,7 @@ The following property allows you to set the appearance of repeated sections to 
     value="minimal"/>
 ```
 
-See also the [`appearance`](../../form-runner/component/section.md#repeated-mode) attribute of the [section component](../../form-runner/component/section.md).
+See also the [`appearance`](/form-runner/component/section.md#repeated-mode) attribute of the [section component](/form-runner/component/section.md).
 
 ### Appearance of repeated grids
 
@@ -278,7 +278,7 @@ The following property allows you to set the appearance of repeated grids to `fu
     value="minimal"/>
 ```
 
-See also the [`appearance`](../../form-runner/component/grid.md#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.md).
+See also the [`appearance`](/form-runner/component/grid.md#repeated-mode) attribute of the [grid component](/form-runner/component/grid.md).
 
 ### Insert position of repeated sections
 
@@ -293,7 +293,7 @@ The following property allows you to select where new iterations are added when 
     value="index"/>
 ```
 
-See also the [`insert`](../../form-runner/component/section.md#repeated-mode) attribute of the [section component](../../form-runner/component/section.md).
+See also the [`insert`](/form-runner/component/section.md#repeated-mode) attribute of the [section component](/form-runner/component/section.md).
 
 ### Insert position of repeated grids
 
@@ -308,7 +308,7 @@ The following property allows you to select where new iterations are added when 
     value="index"/>
 ```
 
-See also the [`insert`](../../form-runner/component/grid.md#repeated-mode) attribute of the [grid component](../../form-runner/component/grid.md).
+See also the [`insert`](/form-runner/component/grid.md#repeated-mode) attribute of the [grid component](/form-runner/component/grid.md).
 
 ### Section collapsing
 
