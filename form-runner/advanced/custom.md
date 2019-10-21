@@ -23,7 +23,7 @@ Then:
     name="oxf.fr.detail.model.custom.*.*"
     value="oxf:/forms/resources/my-model.xml"/>
 <property
-    as="xs:anyURI"
+    as="xs:string"
     name="oxf.fr.detail.dialogs.custom.*.*"
     value="oxf:/forms/resources/my-dialog.xml"/>
 ```
