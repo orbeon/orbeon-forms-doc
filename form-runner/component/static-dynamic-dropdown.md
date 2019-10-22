@@ -6,7 +6,12 @@
 
 ## Possible combinations
 
-![Combinations of static vs. dynamic, with vs. without search](images/dynamic-data-dropdown-combinations.png)
+Combinations of static vs. dynamic, with vs. without search:
+
+|   |Static|Dynamic|
+|---|------|-------|
+|Without search|Static dropdown without search|Dynamic dropdown without search|
+|With search   |Static dropdown with search   |Dynamic dropdown with search   |
 
 ### Static vs. Dynamic
 
