@@ -1,7 +1,5 @@
 # General configuration properties
 
-
-
 ## Default values
 
 For the latest default values of general properties, see [`properties-base.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-base.xml).
@@ -486,6 +484,8 @@ The `oxf.http.idle-connections-delay` property sets the idle connection time to 
 If `oxf.http.expired-connections-polling-delay` is commented out or not present, neither checks are performed.
 
 If `oxf.http.idle-connections-delay` is commented out or not present, but `oxf.http.expired-connections-polling-delay` is present, then only the check for expired connections takes place.
+
+Keeping expired and idle connections checking enabled can improve the reliability of connections to remote servers.
 
 ## Epilogue and theme properties
 
