@@ -10,19 +10,35 @@ In general you don't need to know about XPath in Form Builder, with the exceptio
 
 *NOTE: Incorrect XPath expressions may cause the form to behave improperly, so caution must be applied.*
 
+## Referring to control values from formulas
+
+To refer to a control value from a formula, use the notation `$foo` where `foo` is the control name. For example:
+
+```xpath
+$price * $quantity
+```
+
+See also [Examples of formulas](formulas-examples.md).
+
+## Renaming of controls and formulas
+
+[SINCE Orbeon Forms 2019.1]
+
+When a control or section or grid is renamed, dependent formulas which use the notation `$foo` where `foo` is the control name, are automatically updated.
+
 ## Where do formulas appear?
 
-In the Control Settings dialog, XPath expressions are used to specify the following aspects of a control.
-
 ### Control Settings dialog
+
+In the Control Settings dialog, XPath expressions are used to specify the following aspects of a control.
 
 #### Validations and alerts
 
 ![Validations](images/control-settings-validations.png)
 
-* **Constraint:** Boolean expression specifying whether the control is valid.
-    * If this field is left blank, then the validity of the control depends on the data type and the "Required" option.
-    * Otherwise, the control is valid if in addition to all the other constraint being met, the result of the Boolean expression is `true()`.
+- **Constraint:** Boolean expression specifying whether the control is valid.
+    - If this field is left blank, then the validity of the control depends on the data type and the "Required" option.
+    - Otherwise, the control is valid if in addition to all the other constraint being met, the result of the Boolean expression is `true()`.
 
 #### Formulas
 

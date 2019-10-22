@@ -14,10 +14,12 @@ has several tabs, detailed below.
 The control *name* specifies a identifier for the control, unique in the entire form (except [Section Templates](section-templates.md)). The
 identifier is used for the following:
 
-- to refer to the control value from formulas
-- to determine the name when the form data is represented as XML
+- to refer to the control value from formulas, using the notation `$foo` where `foo` is the control name
+- to determine an XML element name when the form data is represented as XML
 
-If no control name is explicitly specified, Form Builder assigns a default name, such as `control-42`.
+If a control name is not explicitly specified, Form Builder assigns a default name, such as `control-42`.
+
+A control name can be changed, provided it doesn't collide with another control name (an error will show otherwise). [SINCE Orbeon Forms 2019.1] When renaming a control, all dependent [formulas](formulas.md) that use the `$foo` notation, as well as all dependent [templates](template-syntax.md) and [actions](actions.md), including [when using the new syntax](actions-syntax.md).
 
 The following options are available:
 
