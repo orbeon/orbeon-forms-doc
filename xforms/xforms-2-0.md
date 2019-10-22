@@ -49,8 +49,6 @@ XForms 2.0 features added with Orbeon Forms 2017.1:
     - This deprecates the `relevant` attribute.
     - The values are `keep`, `remove`, and `empty`.
 
-For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=XForms+2.0&page=1&sort=updated&state=open).
-
 ## Orbeon Forms 2019.1
 
 XForms 2.0 features added with Orbeon Forms 2019.1:
@@ -69,3 +67,7 @@ XForms 2.0 features added with Orbeon Forms 2019.1:
     - `xf:uri-fragment($uri as xs:string, $raw as xs:boolean) as xs:string?`
     - `xf:uri-param-names($uri as xs:string) as xs:string*`
     - `xf:uri-param-values($uri as xs:string, $name as xs:string) as xs:string*`
+
+## Remaining features
+
+For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=XForms+2.0&page=1&sort=updated&state=open).
