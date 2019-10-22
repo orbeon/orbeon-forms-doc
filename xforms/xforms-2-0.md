@@ -70,4 +70,4 @@ XForms 2.0 features added with Orbeon Forms 2019.1:
 
 ## Remaining features
 
-For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?direction=desc&labels=XForms+2.0&page=1&sort=updated&state=open).
+For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+sort%3Aupdated-desc+label%3A%22Area%3A+XForms+2.0%22).
