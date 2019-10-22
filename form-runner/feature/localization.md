@@ -109,7 +109,7 @@ Finnish   | F        | F        | P              | F [^1]         | F [^1]
 Dutch     | F        | F        | F [^1]         | F [^1]         | F [^1]
 Norwegian | F        | F        | P              | P              | P
 Russian   | F        | F        | P              | P              | P
-Polish    | N        | F        | N              | N              | N
+Polish    | F        | F        | N              | N              | N
 Danish    | N        | F        | P              | F [^1]         | N
 
 ### As of Orbeon Forms 2018.2
@@ -127,7 +127,7 @@ Finnish   | F        | F        | P              | F [^1]         | F [^1]
 Dutch     | F        | F        | F [^1]         | F [^1]         | F [^1]
 Norwegian | F        | F        | P              | P              | P
 Russian   | F        | F        | P              | P              | P
-Polish    | N        | F        | N              | N              | N
+Polish    | F        | F        | N              | N              | N
 
 ### As of Orbeon Forms 2016.1 and 2016.2
 
@@ -144,7 +144,7 @@ Finnish   | F        | F        | P              | F [^1]         | F [^1]
 Dutch     | F        | F        | F [^1]         | F [^1]         | N
 Norwegian | F        | F        | P              | P              | P
 Russian   | F        | F        | P              | P              | P
-Polish    | N        | F        | N              | N              | N
+Polish    | F        | F        | N              | N              | N
 
 ### As of Orbeon Forms 4.10
 
@@ -161,7 +161,7 @@ Finnish   | F        | F        | P              | F [^1]         | F [^1]
 Dutch     | F        | F        | F [^1]         | F [^1]         | N
 Norwegian | F        | F        | P              | P              | P
 Russian   | F        | F        | P              | P              | P
-Polish    | N        | F        | N              | N              | N
+Polish    | F        | F        | N              | N              | N
 
 ### As of Orbeon Forms 4.9
 
@@ -178,7 +178,7 @@ Finnish   | F        | F        | P              | F[^1]         | F[^1]
 Dutch     | F        | F        | F              | F             | N
 Norwegian | F        | F        | P              | P             | P
 Russian   | F        | F        | P              | P             | P
-Polish    | N        | F        | N              | N             | N
+Polish    | F        | F        | N              | N             | N
 
 ### As of Orbeon Forms 4.6.2, 4.7 and 4.8
 
@@ -195,7 +195,7 @@ Finnish   | F        | F        | P              | F[^1]         | F[^1]
 Dutch     | F        | F        | F              | F             | N
 Norwegian | F        | F        | P              | P             | P
 Russian   | F        | F        | P              | P             | P
-Polish    | N        | F        | N              | N             | N
+Polish    | F        | F        | N              | N             | N
 
 1. In 4.8, a few resources related to the new "singleton form" feature are missing.
 
@@ -214,7 +214,7 @@ German    | F | F | F | P | P
 Finnish   | F | F | P | P | P
 Norwegian | F | F | P | P | P
 Russian   | F | F | P | P | P
-Polish    | N | F | N | N | N
+Polish    | F | F | N | N | N
 
 ### As of Orbeon Forms 4.3
 
