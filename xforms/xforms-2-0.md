@@ -58,14 +58,14 @@ XForms 2.0 features added with Orbeon Forms 2019.1:
 - `target` on `<xf:load>`
     - This deprecates the `xxf:target` attribute.
 - URI functions:
-    - `xf:uri-scheme($uri as xs:string) as xs:string?``
-    - `xf:uri-scheme-specific-part($uri as xs:string, $raw as xs:boolean) as xs:string?``
-    - `xf:uri-authority($uri as xs:string, $raw as xs:boolean) as xs:string?``
-    - `xf:uri-user-info($uri as xs:string, $raw as xs:boolean) as xs:string?``
-    - `xf:uri-host($uri as xs:string) as xs:string?``
-    - `xf:uri-port($uri as xs:string) as xs:integer?``
-    - `xf:uri-path($uri as xs:string, $raw as xs:boolean) as xs:string?``
-    - `xf:uri-query($uri as xs:string, $raw as xs:boolean) as xs:string?``
-    - `xf:uri-fragment($uri as xs:string, $raw as xs:boolean) as xs:string?``
-    - `xf:uri-param-names($uri as xs:string) as xs:string*``
-    - `xf:uri-param-values($uri as xs:string, $name as xs:string) as xs:string*``
+    - `xf:uri-scheme($uri as xs:string) as xs:string?`
+    - `xf:uri-scheme-specific-part($uri as xs:string, $raw as xs:boolean) as xs:string?`
+    - `xf:uri-authority($uri as xs:string, $raw as xs:boolean) as xs:string?`
+    - `xf:uri-user-info($uri as xs:string, $raw as xs:boolean) as xs:string?`
+    - `xf:uri-host($uri as xs:string) as xs:string?`
+    - `xf:uri-port($uri as xs:string) as xs:integer?`
+    - `xf:uri-path($uri as xs:string, $raw as xs:boolean) as xs:string?`
+    - `xf:uri-query($uri as xs:string, $raw as xs:boolean) as xs:string?`
+    - `xf:uri-fragment($uri as xs:string, $raw as xs:boolean) as xs:string?`
+    - `xf:uri-param-names($uri as xs:string) as xs:string*`
+    - `xf:uri-param-values($uri as xs:string, $name as xs:string) as xs:string*`
