@@ -9,6 +9,14 @@ Form data is represented by Form Runner using XML. There are two different usage
 
 This page describes the formats used.
 
+## When the internal data format matters
+
+In most cases, the internal data format does not matter to form authors.
+
+However, XPath formulas or custom XForms code have full access to the form data represented using the internal data format. It is possible to write such formulas or XForms in ways that make them depend on the specific data format. For example, you might assume that a non-repeated grid has, or does not have, an enclosing element. If and when the internal data format changes due to an Orbeon Forms upgrade, the given formula might break.
+
+When XPath formulas or custom XForms code are required, we recommend making sure that those do not depend on the specifics of the internal data format.  
+
 ## Formats in use
 
 |Format version|Orbeon Forms version introduced|Description|Internal data format|Default external data format|
@@ -21,9 +29,9 @@ This page describes the formats used.
 
 There is no option to change the version of the internal data format. This is a fixed format for a given version of Orbeon Forms.
 
-- When using the `send` action, the `data-format-version` parameter can be used to specify the format. See [Send action](/form-runner/advanced/buttons-and-processes/actions-form-runner/actions-form-runner-send.md).
-- When POSTing data to a form page, the `data-format-version` parameter can be used to specify the format. See [Initial data posted to the New Form page](/configuration/properties/form-runner/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page).
-- The `oxf.fr.persistence.[provider].data-format-version` property specifies the data format version used in the database. See [`data-format-version` property](/configuration/properties/form-runner/persistence.md#data-format-version-property).
+- When using the `send` action, the `data-format-version` parameter can be used to specify the format. See [Send action](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md).
+- When POSTing data to a form page, the `data-format-version` parameter can be used to specify the format. See [Initial data posted to the New Form page](/configuration/properties/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page).
+- The `oxf.fr.persistence.[provider].data-format-version` property specifies the data format version used in the database. See [`data-format-version` property](/configuration/properties/persistence.md#data-format-version-property).
 
 ## 4.0.0 format
 
@@ -252,6 +260,6 @@ Explicitly marking fields that have been encrypted in the data allows form autho
 - [Grid data format](/component/grid.md#data-format)
 - [Form Definition Format](/form-runner/data-format/form-definition.md)
 - [Field-level encryption](/form-builder/field-level-encryption.md)
-- [Send action](/form-runner/advanced/buttons-and-processes/actions-form-runner/actions-form-runner-send.md)
-- [Initial data posted to the New Form page](/configuration/properties/form-runner/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page)
-- [`data-format-version` property](/configuration/properties/form-runner/persistence.md#data-format-version-property)
+- [Send action](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md) (`data-format-version` parameter)
+- [Initial data posted to the New Form page](/configuration/properties/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page) (`data-format-version` parameter)
+- [The `data-format-version` property](/configuration/properties/persistence.md#data-format-version-property)
