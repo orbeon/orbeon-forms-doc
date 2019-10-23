@@ -97,3 +97,16 @@ The property configures which buttons are included on the Summary page, and in w
 * `new`
     * Label: "New"
     * Action: Navigate to the Detail page in "new" mode to create new form data.
+    
+### New button: version of the form
+
+[SINCE Orbeon Forms 2019.2]
+
+By default, the "New" button takes users to the current version of the form, that is, the one selected in the dropdown at the top of the page. You can change this behavior by setting the property below to either `latest` to use the latest published version of the form, or an integer value to always used that specific version. The default value of the property is `current`, which corresponds to the default behavior.
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.fr.summary.new.form-version.*.*"
+    value="latest"/> 
+```
