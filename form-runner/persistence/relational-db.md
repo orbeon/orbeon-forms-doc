@@ -27,6 +27,7 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2019.1                   | 2019.1                         | [oracle-2019_1.sql]        | [oracle-2018_2-to-2019_1.sql]       |
 | 2018.2                   | 2018.2                         | [oracle-2018_2.sql]        | [oracle-2017_2-to-2018_2.sql]       |
 | 2017.2, 2018.1           | 2017.2                         | [oracle-2017_2.sql]        | [oracle-2017_1-to-2017_2.sql]       |
 | 2017.1                   | 2017.1                         | [oracle-2017_1.sql]        | [oracle-2016_3-to-2017_1.sql]       |
@@ -38,6 +39,7 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 | 4.4                      | 4.4                            | [oracle-4_4.sql]           | [oracle-4_3-to-4_4.sql]             |
 | 4.3                      | 4.3                            | [oracle-4_3.sql]           | -                                   |
 
+[oracle-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2019_1.sql
 [oracle-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2018_2.sql
 [oracle-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2017_2.sql
 [oracle-2017_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2017_1.sql
@@ -48,6 +50,7 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 [oracle-4_5.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_5.sql
 [oracle-4_4.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_4.sql
 [oracle-4_3.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-4_3.sql
+[oracle-2018_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2018_2-to-2019_1.sql
 [oracle-2017_2-to-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2017_2-to-2018_2.sql
 [oracle-2017_1-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2017_1-to-2017_2.sql
 [oracle-2016_3-to-2017_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/oracle-2016_3-to-2017_1.sql
@@ -104,6 +107,7 @@ By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2019.1                   | 2019.1                         | [mysql-2019_1.sql]         | [mysql-2018_2-to-2019_1.sql]        |
 | 2018.2                   | 2018.2                         | [mysql-2018_2.sql]         | [mysql-2017_2-to-2018_2.sql]        |
 | 2017.2, 2018.1           | 2017.2                         | [mysql-2017_2.sql]         | [mysql-2016_3-to-2017_2.sql]        |
 | 2016.3, 2017.1           | 2016.3                         | [mysql-2016_3.sql]         | [mysql-2016_2-to-2016_3.sql]        |
@@ -113,6 +117,8 @@ By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5
 | 4.4                      | 4.4                            | [mysql-4_4.sql]            | [mysql-4_3-to-4_4.sql]              |
 | 4.3                      | 4.3                            | [mysql-4_3.sql]            | -                                   |
 
+[mysql-2018_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2018_2-to-2019_1.sql
+[mysql-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2019_1.sql
 [mysql-2017_2-to-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2017_2-to-2018_2.sql
 [mysql-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2018_2.sql
 [mysql-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-2016_3-to-2017_2.sql
@@ -139,11 +145,14 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2019.1                   | 2019.1                         | [sqlserver-2019_1.sql]     | [sqlserver-2017_2-to-2019_1.sql]    |
 | 2017.2                   | 2017.2                         | [sqlserver-2017_2.sql]     | [sqlserver-2016_3-to-2017_2.sql]    |
 | 2016.3 to 2017.1         | 2016.3                         | [sqlserver-2016_3.sql]     | [sqlserver-2016_2-to-2016_3.sql]    |
 | 2016.2                   | 2016.2                         | [sqlserver-2016_2.sql]     | [sqlserver-4_6-to-2016_2.sql]       |
 | 4.6 to 2016.1            | 4.6                            | [sqlserver-4_6.sql]        | -                                   |
 
+[sqlserver-2017_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2017_2-to-2019_1.sql
+[sqlserver-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2019_1.sql
 [sqlserver-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_3-to-2017_2.sql
 [sqlserver-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2017_2.sql
 [sqlserver-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/sqlserver-2016_2-to-2016_3.sql
@@ -160,17 +169,20 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2019.1                   | 2019.1                         | [postgresql-2019_1.sql]    | [postgresql-2018_2-to-2019_1.sql]   |
 | 2018.2                   | 2018.2                         | [postgresql-2018_2.sql]    | [postgresql-2017_2-to-2018_2.sql]   |
 | 2017.2, 2018.1           | 2017.2                         | [postgresql-2017_2.sql]    | [postgresql-2016_3-to-2017_2.sql]   |
 | 2016.3 to 2017.1         | 2016.3                         | [postgresql-2016_3.sql]    | [postgresql-2016_2-to-2016_3.sql]   |
 | 2016.2                   | 2016.2                         | [postgresql-2016_2.sql]    | [postgresql-4_8-to-2016_2.sql]      |
 | 4.8 to 2016.1            | 4.8                            | [postgresql-4_8.sql]       | -                                   |
 
+[postgresql-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2019_1.sql
 [postgresql-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2018_2.sql
 [postgresql-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2017_2.sql
 [postgresql-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_3.sql
 [postgresql-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_2.sql
 [postgresql-4_8.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-4_8.sql
+[postgresql-2018_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2018_2-to-2019_1.sql
 [postgresql-2017_2-to-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2017_2-to-2018_2.sql
 [postgresql-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_3-to-2017_2.sql
 [postgresql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/postgresql-2016_2-to-2016_3.sql
@@ -185,6 +197,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
+| 2019.1                   | 2019.1                         | [db2-2019_1.sql]           | [db2-2017_2-to-2019_1.sql]          |
 | 2017.2                   | 2017.2                         | [db2-2017_2.sql]           | [db2-2016_3-to-2017_2.sql]          |
 | 2016.3 to 2017.1         | 2016.3                         | [db2-2016_3.sql]           | [db2-2016_2-to-2016_3.sql]          |
 | 2016.2                   | 2016.2                         | [db2-2016_2.sql]           | [db2-4_6-to-2016_2.sql]             |
@@ -192,6 +205,8 @@ Run the following DDL to create or update your Orbeon database, and note that if
 | 4.4                      | 4.4                            | [db2-4_4.sql]              | [db2-4_3-to-4_4.sql]                |
 | 4.3                      | 4.3                            | [db2-4_3.sql]              | -                                   |
 
+[db2-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2019_1.sql
+[db2-2017_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2017_2-to-2019_1.sql
 [db2-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_3-to-2017_2.sql
 [db2-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2017_2.sql
 [db2-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/db2-2016_2-to-2016_3.sql
