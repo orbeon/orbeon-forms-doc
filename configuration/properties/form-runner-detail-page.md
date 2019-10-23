@@ -404,9 +404,9 @@ For #2, this behaves as if a browser was submitting an HTML form that looks like
 
 [SINCE Orbeon Forms 4.8]
 
-The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to `POST` data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a [`send()` action](../../form-runner/advanced/buttons-and-processes/actions-form-runner.md#send) using `data-format-version = "edge"`.
+The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to `POST` data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a [`send()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#send) using `data-format-version = "edge"`.
 
-Use the authorization mechanism for services (see [Authorization of pages and services](../../xml-platform/controller/authorization-of-pages-and-services.md), to enable submitting initial instances to the new page:
+Use the authorization mechanism for services (see [Authorization of pages and services](/xml-platform/controller/authorization-of-pages-and-services.md), to enable submitting initial instances to the new page:
 
 * Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when `POST`ing to Form Runner.
 * Your authorizer service must validate those credentials.

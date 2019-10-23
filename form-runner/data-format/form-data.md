@@ -14,8 +14,16 @@ This page describes the formats used.
 |Format version|Orbeon Forms version introduced|Description|Internal data format|Default external data format|
 |---|---|---|---|---|
 |4.0.0|3.x|Base format|Yes|Yes|
-|4.8.0|4.8|Change to repeated grids format|Yes|No|
-|2019.1.0|2019.1.0|Change to non-repeated grids format|Yes|No| 
+|4.8.0|4.8|Update repeated grids format|Yes|No|
+|2019.1.0|2019.1.0|Update non-repeated grids format|Yes|No| 
+
+## Formats configuration
+
+There is no option to change the version of the internal data format. This is a fixed format for a given version of Orbeon Forms.
+
+- When using the `send` action, the `data-format-version` parameter can be used to specify the format. See [Send action](/form-runner/advanced/buttons-and-processes/actions-form-runner/actions-form-runner-send.md).
+- When POSTing data to a form page, the `data-format-version` parameter can be used to specify the format. See [Initial data posted to the New Form page](/configuration/properties/form-runner/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page).
+- The `oxf.fr.persistence.[provider].data-format-version` property specifies the data format version used in the database. See [`data-format-version` property](/configuration/properties/form-runner/persistence.md#data-format-version-property).
 
 ## 4.0.0 format
 
@@ -244,3 +252,6 @@ Explicitly marking fields that have been encrypted in the data allows form autho
 - [Grid data format](/component/grid.md#data-format)
 - [Form Definition Format](/form-runner/data-format/form-definition.md)
 - [Field-level encryption](/form-builder/field-level-encryption.md)
+- [Send action](/form-runner/advanced/buttons-and-processes/actions-form-runner/actions-form-runner-send.md)
+- [Initial data posted to the New Form page](/configuration/properties/form-runner/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page)
+- [`data-format-version` property](/configuration/properties/form-runner/persistence.md#data-format-version-property)
