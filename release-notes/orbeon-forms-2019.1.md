@@ -1,5 +1,7 @@
 # Orbeon Forms 2019.1
 
+__Wednesday, October 23, 2019__
+
 Today we released Orbeon Forms 2019.1! This release is packed with new features and enhancements which should help form authors and form users be more productive.  
 
 ## Major features and enhancement
@@ -34,13 +36,7 @@ In this version, when a form control, section, or grid is renamed, formulas, tem
 
 The "Autocomplete" control is deprecated and replaced with new options for the "Static Dropdown" and "Dynamic Dropdown" controls. You can now, for each of these controls, select a "With Search" option, which allows the user to type in a search box to restrict the number of entries in the dropdown before selecting one.  
 
-<!-- ![Example of search within a dropdown](images/dropdown-with-search.png) -->
-
-<!-- <img src="images/dropdown-with-search.png" style="width: 300px; margin-left: auto; margin-right: auto; display: block" alt="Example of search within a dropdown" title="Example of search within a dropdown"/> -->
-
-<figure>
-    <img src="images/dropdown-with-search.png" alt="Example of search within a dropdown" title="Example of search within a dropdown"/>
-</figure>
+![Example of search within a dropdown](images/dropdown-with-search.png)
 
 ![Form Builder options to enable dropdown search](images/dynamic-data-dropdown-with-without-search.png)
 
