@@ -2,19 +2,30 @@
 
 ## Introduction
 
-Form Runner loads and saves data in XML format. This page describes the format used.
+Form data is represented by Form Runner using XML. There are two different usages of the data format:
 
-## Basics
+- *Internally*: when a user is actively working with a form and Form Runner performs operations such as calculations, validations, actions, and so on. This is referred to as the *internal data format*.
+- *Externally*: when Form Runner loads and saves data to and from a database or external services. This is referred to as the *external data format*.
 
-As you create a form definition with Form Builder, an XML representation for the data to capture is automatically created. It is organized as follows:
+This page describes the formats used.
 
-* A root element:
+## 4.0.0 format
+
+### Introduction
+ 
+The 4.0.0 format is the default *external data format*.
+
+### Basics
+
+The data is organized as follows:
+
+- A root element:
     `<form>`
-* Within that element, for each section, a sub-element named after the section name:
+- Within that element, for each section, a sub-element named after the section name:
     `<details>`
-* Within a section element, a sub-element for each control in the section, named after the control name:
+- Within a section element, a sub-element for each control in the section, named after the control name:
     `<author>`
-* Within each control element, the value of the control is stored:
+- Within each control element, the value of the control is stored:
     `<author>J. K. Rowling</author>`
 
 Example:
@@ -37,7 +48,7 @@ Example:
 </form>
 ```
 
-## Nested sections
+### Nested sections
 
 Each nested section is represented by a nested element within its enclosing section.
 
@@ -59,12 +70,11 @@ In this example, `my-nested-section` is nested within `my-section-1`:
 </form>
 ```
 
-## Repeated sections
+### Repeated sections
 
-Each repeated section has an containing element with the name of the section, like for regular sections.
+Each repeated section has an enclosing element with the name of the section, like for regular sections.
 
-In addition, each iteration of the section has a nested element suffixed by `-iteration`. By default, that element has
-the name of the section as prefix:
+In addition, each iteration of the section has a nested element suffixed by `-iteration`. By default, that element has the name of the section as prefix:
 
 ```xml
 <form>
@@ -94,43 +104,15 @@ However, the form author can provide a custom name for the nested iteration, her
 </form>
 ```
 
-## Repeated grids
+### Non-repeated grids
 
-See also [Grid data format](../component/grid.md#data-format).
+Non-repeated grids do not have a representation in XML. 
 
-_NOTE: Non-repeated grids do not create containing elements as of Orbeon Forms 2018.1._
+### Repeated grids
 
-### Starting Orbeon Forms 4.8
+See also [Grid data format](/component/grid.md#data-format).
 
-Newly-published form definitions place a containing element within its enclosing section, exactly like for nested sections.
-
-```xml
-<note>
-    <note-iteration>
-        <note-text/>
-    </note-iteration>
-    <note-iteration>
-        <note-text/>
-    </note-iteration>
-</note>
-```
-
-However, the form author can provide a custom name for the nested iteration, here `my-iteration-name`:
-
-```xml
-<note>
-    <my-iteration-name>
-        <note-text/>
-    </my-iteration-name>
-    <my-iteration-name>
-        <note-text/>
-    </my-iteration-name>
-</note>
-```
-
-### Until Orbeon Forms 4.7
-
-Each iteration is represented by an element with the name of the repeated section. There is no containing element:
+Each iteration is represented by an element with the name of the repeated section. There is no enclosing element:
 
 ```xml
 <note>
@@ -141,7 +123,7 @@ Each iteration is represented by an element with the name of the repeated sectio
 </note>
 ```
 
-## Attachments
+###Attachments
 
 For attachments, the control element is slightly different:
 
@@ -159,6 +141,84 @@ Example:
 </my-attachment>
 ```
 
+## 4.8.0 format
+
+### Introduction
+
+With Orbeon Forms 4.8, the 4.8.0 data format is introduced. It changes the way repeated grids are represented to be in line with the format for repeated sections.
+
+- The default external data format remains 4.0.0 unless explicitly changed via configuration.
+- The 4.8.0 format is the new *internal data format*. There is no option to change the version of the internal data format.
+
+### Repeated grids
+
+An enclosing element with the name of the repeated grid is added, exactly like for sections. Nested iteration elements, named with a `-iteration` suffix, enclose each iteration content: 
+
+```xml
+<note>
+    <note-iteration>
+        <note-text/>
+    </note-iteration>
+    <note-iteration>
+        <note-text/>
+    </note-iteration>
+</note>
+```
+
+With Form Builder, the form author can provide a custom name for the nested iteration, here `my-iteration-name`:
+
+```xml
+<note>
+    <my-iteration-name>
+        <note-text/>
+    </my-iteration-name>
+    <my-iteration-name>
+        <note-text/>
+    </my-iteration-name>
+</note>
+```
+
+## 2019.1.0 format
+
+### Introduction
+
+With Orbeon Forms 2019.1, the 2019.1 data format is introduced. It changes the way non-repeated grids are represented to be in line with the format for non-repeated sections, repeated grids and repeated sections.
+
+- The default external data format remains 4.0.0 unless explicitly changed via configuration.
+- The 2019.1.0 format is the new *internal data format*. There is no option to change the version of the internal data format.
+
+### Non-repeated grids
+
+An enclosing element with the name of the non-repeated grid is added, exactly like for sections. Elements for nested controls directly under that enclosing element.
+
+In the following example, the `<details-grid>` and `<review-grid>` elements are added, compared to the 4.8.0 and 4.0.0 data formats:
+
+```xml
+<form>
+    <details>
+        <details-grid>
+            <title>Harry Potter and the Sorcerer's Stone</title>
+            <author>J. K. Rowling</author>
+            <image filename="" mediatype="" size=""/>
+            <language>en</language>
+            <link>https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone</link>
+            <rating/>
+            <publication-year>1997</publication-year>
+        </details-grid>
+        <review-grid>
+            <review/>
+        </review-grid>
+    </details>
+    <notes>
+        <note>
+            <note-iteration>
+                <note-text/>
+            </note-iteration>
+        </note>
+    </notes>
+</form>
+```
+
 ## Encryption
 
 If in your form you have fields marked to be encrypted at rest, an attribute is added on the element corresponding to those fields, as follows:
@@ -169,9 +229,10 @@ If in your form you have fields marked to be encrypted at rest, an attribute is 
 - Update to Orbeon Forms 2018.2
     - `encrypted="true"`
     
-Exclicitely marking fields that have been encrypted in the data allows form authors to change a form definition adding or removing fields to be encrypted without having to create a new version of that form definition, should form authors want to do so.
+Explicitly marking fields that have been encrypted in the data allows form authors to change a form definition adding or removing fields to be encrypted without having to create a new version of that form definition, should form authors want to do so.
 
 ## See also
 
+- [Grid data format](/component/grid.md#data-format)
 - [Form Definition Format](/form-runner/data-format/form-definition.md)
 - [Field-level encryption](/form-builder/field-level-encryption.md)

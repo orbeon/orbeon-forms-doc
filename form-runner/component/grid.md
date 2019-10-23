@@ -176,7 +176,7 @@ Attributes:
   - `true`: dynamic initial values (via the `xxf:default` MIP) apply to new iterations
   - missing or `false: dynamic initial values do not apply to new iterations
   - can be an AVT
-  - see also: [Evaluation of initial values upon insert](../../xforms/actions/repeat-insert-delete.md#evaluation-of-initial-values-upon-insert)
+  - see also: [Evaluation of initial values upon insert](/xforms/actions/repeat-insert-delete.md#evaluation-of-initial-values-upon-insert)
 - `appearance` [SINCE Orbeon Forms 2016.1]
   - `full`
     - the default appearance, as with Orbeon Forms 4.10 and earlier
@@ -301,7 +301,7 @@ Both events take an `index` context information:
 ## See also
 
 - [Section component](section.md)
-- [Form data format](../data-format/form-data.md)
-- [Form Builder: Repeated Grids ](../../form-builder/repeated-grids.md)
+- [Form data format](/form-runner/data-format/form-data.md)
+- [Form Builder: Repeated Grids ](/form-builder/repeated-grids.md)
 - Example of use outside of Form Runner: [gist](https://gist.github.com/orbeon/5d592bfa4640569b116f)
-- [Evaluation of initial values upon insert](../../xforms/actions/repeat-insert-delete.md#evaluation-of-initial-values-upon-insert)
+- [Evaluation of initial values upon insert](/xforms/actions/repeat-insert-delete.md#evaluation-of-initial-values-upon-insert)
