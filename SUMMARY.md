@@ -122,6 +122,7 @@
         * [Home page](form-runner/feature/home-page.md)
         * [Lease Feature](form-runner/feature/lease.md)
         * [Localization](form-runner/feature/localization.md)
+        * [Supported languages](form-runner/feature/supported-languages.md)
         * [Mobile support](form-runner/feature/mobile.md)
         * [Multitenancy](form-runner/feature/multitenancy.md)
         * [Responsive design](form-runner/feature/responsive-design.md)
