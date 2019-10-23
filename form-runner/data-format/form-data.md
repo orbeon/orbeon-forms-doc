@@ -9,6 +9,14 @@ Form data is represented by Form Runner using XML. There are two different usage
 
 This page describes the formats used.
 
+## Formats in use
+
+|Format version|Orbeon Forms version introduced|Description|Internal data format|Default external data format|
+|---|---|---|---|---|
+|4.0.0|3.x|Base format|Yes|Yes|
+|4.8.0|4.8|Change to repeated grids format|Yes|No|
+|2019.1.0|2019.1.0|Change to non-repeated grids format|Yes|No| 
+
 ## 4.0.0 format
 
 ### Introduction
