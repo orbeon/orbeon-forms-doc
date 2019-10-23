@@ -1,7 +1,5 @@
 # Compatibility
 
-
-
 ## Support for let expressions
 
 [SINCE Orbeon Forms 2016.2]
