@@ -189,7 +189,7 @@ For details, see the documentation on [form data and data formats](/form-runner
 
 The date, time, and date/time output formats have changed to match the input formats as this was a frequently-mentioned inconsistency. This impacts the review and PDF modes, and the formatting of values in emails. For example, previously a date/time would show "Friday October 16, 2009 17:48:03" in review and PDF modes. Now it shows "10/16/2009 5:48:03 pm" like for the input format.  
 
-You can easily restore the old formats by adding the following to your properties-local.xml file:  
+You can easily restore the old formats by adding the following to your [`properties-local.xml`](/configuration/properties/README.md) file:  
 
 ```xml
 <property as="xs:string"  name="oxf.xforms.format.output.date">  
@@ -205,11 +205,11 @@ You can easily restore the old formats by adding the following to your properti
 
 ### JavaScript placement at the bottom
 
-The `oxf.xforms.resources.javascript-at-bottom` property, deprecated with Orbeon Forms 2018.1, no longer has any effect. ([doc](/configuration/advanced/javascript-css-assets.md#javascript-at-the-bottom-of-the-page))
+The `oxf.xforms.resources.javascript-at-bottom` property, which was deprecated with Orbeon Forms 2018.1, no longer has any effect. ([doc](/configuration/advanced/javascript-css-assets.md#javascript-at-the-bottom-of-the-page))
 
 ### Removal of oxf.xforms.update-repeats option
 
-The `oxf.xforms.update-repeats` option, deprecated with Orbeon Forms 2018.1, is now removed. ([doc](/configuration/properties/xforms.md#xforms-repeat-updates-upon-xf-insert-and-xf-delete))
+The `oxf.xforms.update-repeats` property, which was deprecated with Orbeon Forms 2018.1, is now removed. ([doc](/configuration/properties/xforms.md#xforms-repeat-updates-upon-xf-insert-and-xf-delete))
 
 ## Download and feedback
 

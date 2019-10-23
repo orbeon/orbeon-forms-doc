@@ -1,7 +1,5 @@
 # Properties
 
-
-
 ## Overview
 
 Orbeon Forms is configured via _configuration properties_. They are usually setup in a file called `properties-local.xml` and stored in the Orbeon Forms WAR file as:
