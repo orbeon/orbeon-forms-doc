@@ -34,13 +34,12 @@ In this version, when a form control, section, or grid is renamed, formulas, tem
 
 The "Autocomplete" control is deprecated and replaced with new options for the "Static Dropdown" and "Dynamic Dropdown" controls. You can now, for each of these controls, select a "With Search" option, which allows the user to type in a search box to restrict the number of entries in the dropdown before selecting one.  
 
-![Example of search within a dropdown](images/dropdown-with-search.png)
+<!-- ![Example of search within a dropdown](images/dropdown-with-search.png) -->
 
-<img src="images/dropdown-with-search.png" style="width: 300px; margin-left: auto; margin-right: auto; display: block" alt="Example of search within a dropdown" title="Example of search within a dropdown"/>
+<!-- <img src="images/dropdown-with-search.png" style="width: 300px; margin-left: auto; margin-right: auto; display: block" alt="Example of search within a dropdown" title="Example of search within a dropdown"/> -->
 
 <figure>
-    <img src="images/dropdown-with-search.png" style="width: 300px; margin-left: auto; margin-right: auto; display: block" alt="Example of search within a dropdown" title="Example of search within a dropdown"/>
-    <figcaption>Example of search within a dropdown</figcaption>
+    <img src="images/dropdown-with-search.png" alt="Example of search within a dropdown" title="Example of search within a dropdown"/>
 </figure>
 
 ![Form Builder options to enable dropdown search](images/dynamic-data-dropdown-with-without-search.png)
