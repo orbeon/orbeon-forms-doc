@@ -1,6 +1,6 @@
 # Orbeon Forms 2019.1
 
-__Wednesday, October 23, 2019__
+__Wednesday, October 24, 2019__
 
 Today we released Orbeon Forms 2019.1! This release is packed with new features and enhancements which should help form authors and form users be more productive.  
 
