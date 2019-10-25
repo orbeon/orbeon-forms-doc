@@ -165,6 +165,10 @@ See also:
 
 ## Compatibility notes
 
+### DDL changes
+
+When using a relational database, you need to run [database upgrade scripts](/form-runner/persistence/relational-db.md).
+
 ### Autocomplete control
 
 The "Autocomplete" control is deprecated. See "Improved selection dropdowns" above for details. At this time, the "Autocomplete" is still supported but we recommend using the newer controls instead. See also the [documentation](/form-runner/component/static-dynamic-dropdown.md).
