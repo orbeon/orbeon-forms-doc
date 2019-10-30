@@ -37,7 +37,7 @@ To upgrade to a new version of Orbeon Forms you'll want to:
 1. Do a "clean Install" of the new version of Orbeon Forms.
     - Don't install it "over" the old version, or try to just update some `jar` files or any other files in the old version (unless directed to do so by Orbeon support). 
     - Check that that your clean install works as expected out of the box.
-    - Often, the only file you need to modify is the `properties-local.xml` (inside `WEB-INF/resources/config`), but you might have created or made changes to other files, such as `WEB-INF/resources/form-builder-permissions.xml`, `WEB-INF/resources/log4j.xml` or even `WEB-INF/web.xml`.
+    - Often, the only file you need to modify is `WEB-INF/resources/config/properties-local.xml`, but you might have created or made changes to other files, such as `WEB-INF/resources/config/form-builder-permissions.xml`, `WEB-INF/resources/config/log4j.xml` or even `WEB-INF/web.xml`.
 1. Migrate your database if needed.
     - If you're using the internal eXist and want to keep the forms you created, and corresponding data captured with those forms, you'll want to move the `WEB-INF/exist-data` directory to the new web app.
     - If using a relational database, you might have to run some upgrade DDL at the database level. Search for "upgrade" in the [relational database configuration documentation](form-runner/persistence/relational-db.md), and check if there is some DDL you need to run to upgrade your database schema. This means running the `*-to-*.sql` DDL files from the older version to the new version.
