@@ -169,6 +169,8 @@ Attribute|Mandatory|Value|Comment
 
 [SINCE Orbeon Forms 2019.1]
 
+#### Basic usage
+
 ```xml
 <fr:data-iterate ref="...expression...">
     ...
@@ -202,7 +204,32 @@ In the following example, each repetition adds a row to the grid, calls a servi
 </fr:action>
 ```
 
-*NOTE: Currently, this is only supported with one level of nesting within `<fr:data-iterate>`.*
+#### Nesting of iterations
+
+[SINCE Orbeon Forms 2019.2]
+
+Calls to `<fr:data-iterate>` can be nested. This allows, for example, filling nested repeated sections and/or grids with the result of a service call that returns hierarchical data.
+
+Example:
+
+```xml
+<fr:action name="my-action" version="2018.2">
+    <fr:service-call service="get-nobel-prizes"/>
+    <fr:repeat-clear repeat="prizes"/>
+    <fr:data-iterate ref="/*/prizes/_">
+        <fr:repeat-add-iteration repeat="prizes"/>
+        <fr:control-setvalue value="year"     control="year"     at="end"/>
+        <fr:control-setvalue value="category" control="category" at="end"/>
+        <fr:repeat-clear repeat="laureates"/>
+        <fr:data-iterate ref="laureates/_">
+            <fr:repeat-add-iteration repeat="laureates"/>
+            <fr:control-setvalue value="firstname"  control="firstname"  at="end"/>
+            <fr:control-setvalue value="surname"    control="surname"    at="end"/>
+            <fr:control-setvalue value="motivation" control="motivation" at="end"/>
+        </fr:data-iterate>
+    </fr:data-iterate>
+</fr:action>
+``` 
 
 ### Conditions
 
