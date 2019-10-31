@@ -16,8 +16,8 @@ In addition to the features available through the ["Actions" dialog](actions.md)
 - Support *more event types*.
 - Call an *arbitrary number* of services.
 - Run actions *without* calling services.
-- Clear repeated grid or repeated section iterations.
-- Add repeated grid or repeated section iterations.
+- Clear repeated grid or repeated section repetitions.
+- Add repeated grid or repeated section repetitions.
 - *Repeatedly run* parts of an action. [SINCE Orbeon Forms 2019.1]
 - *Conditionally run* parts of an action. [SINCE Orbeon Forms 2019.1]
 
@@ -51,8 +51,8 @@ The following example:
 - when the service call completes
     - the `my-repeated-grid` repeated grid is cleared
     - iterating over the XML response, for each iteration
-        - adds an iteration at the end of the `my-repeated-grid` repeated grid
-        - sets the value of controls on the new iteration
+        - adds a repetition at the end of the `my-repeated-grid` repeated grid
+        - sets the value of controls on the new repetition
     - finally, all the `result-dropdown` dropdown control items are updated
 
 ```xml
@@ -299,23 +299,127 @@ Attribute|Mandatory|Value|Comment
 `value`|No|value expression|either this or `control` must be specified
 `index`|Yes|positive integer|SQL query parameter index
 
-### Removing all iterations of a repeat
+### Removing all repetitions of a repeat
 
 ```xml
-<fr:repeat-clear>
+<fr:repeat-clear
+    repeat="..."
+    at="..."/>
 ```
 
-### Adding iterations to a repeat
+Attribute|Mandatory|Value|Comment
+---------|---------|---------|---------
+`repeat`|Yes|repeated grid or repeated section name| |
+`at`|No|space-delimited position tokens: `start`, `end`, or a positive integer|missing leading tokens default to `end`|
+
+This action starts by identifying a single repeated grid or section with the `repeat` attribute. See `<fr:repeat-add-iteration>` for details. The only difference is that with this action, `at` is only used to identify the ancestor repeated sections if any.
+
+With `my-repeated-grid` nested within `my-repeated-section`:
+
+- Remove all repetitions of `my-repeated-section`:
+    ```xml
+    <fr:repeat-clear repeat="my-repeated-section"/>
+    ```
+- Remove all repetitions of the last `my-repeated-grid`:
+    ```xml
+    <fr:repeat-clear repeat="my-repeated-grid" at="end"/>
+    ```
+- Remove all repetitions of the first `my-repeated-grid`:
+    ```xml
+    <fr:repeat-clear repeat="my-repeated-grid" at="start"/>
+    ```
+- Remove all repetitions of the second `my-repeated-grid`:
+    ```xml
+    <fr:repeat-clear repeat="my-repeated-grid" at="2"/>
+    ```
+
+### Adding repetitions to a repeat
 
 ```xml
-<fr:repeat-add-iteration>
+<fr:repeat-add-iteration
+    repeat="..."
+    at="..."/>
 ```
 
-### Removing iterations from a repeat
+Attribute|Mandatory|Value|Comment
+---------|---------|---------|---------
+`repeat`|Yes|repeated grid or repeated section name| |
+`at`|No|space-delimited position tokens: `start`, `end`, or a positive integer|missing leading tokens default to `end`|
+
+This action starts by identifying a single repeated grid or section with the `repeat` attribute. If the repeated grid or section is at the top-level, there is only one possible match. If the repeated grid or section is *nested* within one or more repeated sections, then a single repetition of the ancestor repeated sections is determined using the optional `at` attribute.
+
+With `my-repeated-grid` nested within `my-repeated-section`:
+
+- Insert a new repetition at the end of the last `my-repeated-grid`:
+    ```xml
+    <fr:repeat-add-iteration repeat="my-repeated-grid" at="end end"/>
+    ```
+    or:
+    ```xml
+    <fr:repeat-add-iteration repeat="my-repeated-grid" at="end"/>
+    ```
+    or:
+    ```xml
+    <fr:repeat-add-iteration repeat="my-repeated-grid"/>
+    ```
+- Insert a new repetition at the end of the first `my-repeated-grid`:
+    ```xml
+    <fr:repeat-add-iteration repeat="my-repeated-grid" at="start end"/>
+    ```
+- Insert a new repetition at the start of the first `my-repeated-grid`:
+    ```xml
+    <fr:repeat-add-iteration repeat="my-repeated-grid" at="start start"/>
+    ```
+- Insert a new repetition after repetition 2 of the third `my-repeated-grid`:
+    ```xml
+    <fr:repeat-add-iteration repeat="my-repeated-grid" at="3 2"/>
+    ```
+- Insert a new repetition at the end of `my-repeated-section`:
+    ```xml
+    <fr:repeat-add-iteration repeat="my-repeated-section" at="end"/>
+    ```
+    or:
+    ```xml
+    <fr:repeat-add-iteration repeat="my-repeated-section"/>
+    ```
+
+### Removing repetitions from a repeat
 
 ```xml
-<fr:repeat-remove-iteration>
+<fr:repeat-remove-iteration
+    repeat="..."
+    at="..."/>
 ```
+
+Attribute|Mandatory|Value|Comment
+---------|---------|---------|---------
+`repeat`|Yes|repeated grid or repeated section name| |
+`at`|No|space-delimited position tokens: `start`, `end`, or a positive integer|missing leading tokens default to `end`|
+
+This action starts by identifying a single repeated grid or section with the `repeat` attribute. See `<fr:repeat-add-iteration>` for details.
+
+With `my-repeated-grid` nested within `my-repeated-section`:
+
+- Remove the last repetition of the last `my-repeated-grid`:
+    ```xml
+    <fr:repeat-remove-iteration repeat="my-repeated-grid" at="end end"/>
+    ```
+    or:
+    ```xml
+    <fr:repeat-remove-iteration repeat="my-repeated-grid" at="end"/>
+    ```
+    or:
+    ```xml
+    <fr:repeat-remove-iteration repeat="my-repeated-grid"/>
+    ```
+- Remove the last repetition of the first `my-repeated-grid`:
+    ```xml
+    <fr:repeat-remove-iteration repeat="my-repeated-grid" at="start end"/>
+    ```
+- Remove repetition 2 of the third `my-repeated-grid`:
+    ```xml
+    <fr:repeat-remove-iteration repeat="my-repeated-grid" at="3 2"/>
+    ``` 
 
 ### Setting the value of a control
 
