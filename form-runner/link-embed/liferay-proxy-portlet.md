@@ -8,7 +8,9 @@ This is an Orbeon Forms PE feature.
 
 See [Supported Liferay versions](README.md#supported-liferay-versions).
 
-## Known Liferay 7/DXP issues with Orbeon Forms 2017.1
+## Known Liferay 7/DXP issues
+
+These issues apply to Orbeon Forms 2017.1 to 2019.1.
 
 - __The Form Runner language selector doesn't work__
     - See [issue #3257](https://github.com/orbeon/orbeon-forms/issues/3257)
