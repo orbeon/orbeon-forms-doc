@@ -84,13 +84,13 @@ See this [issue](https://github.com/orbeon/orbeon-forms/issues/1221) for discuss
 
 Make sure your Java virtual machine (JVM) is configured with enough heap, as the default is sometimes too low.
 
-This is the `-Xmx` option of Java. Set it to at least 500 MB of heap for local testing (e.g. `-Xmx=500m`), and [more for production][7].
+This is the `-Xmx` option of Java. Set it to at least 500 MB of heap for local testing (e.g. `-Xmx=500m`), and more for production.
 
 ### Can the forms designed with Form Builder run in other XForms engines?
 
 No, for multiple reasons:
 
-- The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [XBL](/xforms/xbl/faq.md), and [extension functions](/xforms/xpath/README.md) not available in other XForms engines.
+- The Orbeon XForms engine relies on advanced features, including [XPath 2.0](/xforms/xpath/README.md), [XBL](/xforms/xbl/faq.md), and [extension functions](/xforms/xpath/README.md) not available in other XForms engines.
 - Forms designed with Form Builder assume some standard components provided by Form Runner, like sections and grids.
 - A lot of the functionality of the form is handled by the Form Runner runtime, including: saving and retrieving data from a database, autosave, permissions, services and actions, and more. The form itself mainly contains the data model, controls, and descriptions of actions and services.
 
@@ -194,6 +194,3 @@ No, this is not supported, sorry. Forms created with Form Builder require Form R
 
 1. You can change fonts, colors, and other styling by creating your own CSS stylesheet, to [supplement or override the default CSS](../form-runner/styling/css.md).
 1. For changes that you can't do with CSS and that require modifications to the HTML sent by Orbeon Forms to browser, you can change the Form Runner XBL and XSLT stylesheets. But this is hard work and we discourage it.
-
-[7]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning
-[8]: ..//xforms/xpath/README.md
