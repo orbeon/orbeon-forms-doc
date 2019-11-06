@@ -6,7 +6,7 @@
 
 Orbeon Form Builder is a visual form designer which allows you to build and deploy forms in minutes right from your web browser.
 
-For a list of Form Builder features, see [Orbeon Forms Features](../form-runner/feature/responsive-design.md).
+For a list of Form Builder features, see [Orbeon Forms Features](/form-runner/feature/responsive-design.md).
 
 ### What is Orbeon Form Runner?
 
@@ -14,21 +14,23 @@ Orbeon Form Runner is the Orbeon Forms runtime environment which usually runs fo
 Form Runner manages form definitions and form data, handles search, validation, and takes care of the plumbing
 necessary to capture, save, import and export form data.
 
-For a list of Form Runner features, see [Orbeon Forms Features](../form-runner/feature/responsive-design.md).
+For a list of Form Runner features, see [Orbeon Forms Features](/form-runner/feature/responsive-design.md).
 
 ### What is the difference between Orbeon Forms, Form Runner and Form Builder?
 
 - Orbeon Forms is the name for the whole forms solution developed by Orbeon.
 - Form Runner and Form Builder are components part of the Orbeon Forms solution.
 
-You can use Orbeon Forms without using the Form Runner or Form Builder components if all you are interested in is the XForms engine or the pipeline engine.
-
 ### What are the hardware requirements for Orbeon Forms?
 
 Specific requirements will depend on how much load Orbeon Forms needs to handle, but as a starting point:
 
-- **Memory** - We recommend you have enough memory on the server to be able to comfortably allocate about 4 GB to the JVM.
-- **CPU** - We recommend you use a server with a modern Intel Xeon or Core i7 CPU (2013+, with a Geekbench single-core score of at least 3000). We strongly recommend you avoid servers with AMD or Sparc CPUs, as they have significantly slower single-core performance, which isn't appropriate for running Orbeon Forms.
+- **Memory**
+    - We recommend you have enough memory on the server to be able to comfortably allocate at least 4 GB to the JVM.
+- **CPU**
+     - As of 2019, we recommend you use a server with a modern Intel Xeon or Core i5/i7/i9 CPU with a **Geekbench 5 single-core** score of at least 800.
+     - We strongly recommend you avoid servers with older AMD CPUs (prior to the Ryzen line), as they have significantly slower single-core performance, which isn't fit for running Orbeon Forms.
+     - Similarly, we strongly recommend you avoid servers with older Sparc CPUs.
 
 ### How much load can Orbeon Forms handle?
 
@@ -48,7 +50,7 @@ If you're looking to run Orbeon Forms in the cloud, make sure to pick a configur
 
 ### Where is the Form Builder documentation?
 
-See the [Form Builder](../form-builder/README.md).
+See the [Form Builder](/form-builder/README.md).
 
 ## Questions about specific features
 
@@ -66,8 +68,8 @@ Say you've created a form, deployed it, and would like to take users to the `/ne
 	- On the URL, as a request parameter, if the token doesn't need to be private;
 	- As a request header, set in a reverse proxy, if the token needs to remain private, and shouldn't be exposed to users.
 2. In the form, add a hidden field to store the value of the token. You do this in Form Builder: create a section, which you can name "Internal" for your own reference, and in the Section Settings dialog, under Visibility put `false()`, so the section is never visible to end users. In that section add a text field, name it `token`, and in the field Control Settings, in Formulas, set its Initial Value to:
-	- [`xxl:get-request-parameter('token')`](../xforms/xpath/extension-http.md#xxf-get-request-parameter), if you're passing the value with a request parameter named `token`.
-	- [`xxl:get-request-header('token')`](../xforms/xpath/extension-http.md#xxf-get-request-header), if you're passing the value with a request header named `token`.
+	- [`xxl:get-request-parameter('token')`](/xforms/xpath/extension-http.md#xxf-get-request-parameter), if you're passing the value with a request parameter named `token`.
+	- [`xxl:get-request-header('token')`](/xforms/xpath/extension-http.md#xxf-get-request-header), if you're passing the value with a request header named `token`.
 3. When users enter data in the form and save it, the value of the token will be saved with the data, just as if the field was visible to users, and they had entered the value of the token.
 
 ### How can I create forms which users can fill out offline?
@@ -88,7 +90,7 @@ This is the `-Xmx` option of Java. Set it to at least 500 MB of heap for local t
 
 No, for multiple reasons:
 
-- The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [XBL](../xforms/xbl/faq.md), and [extension functions](../xforms/xpath/README.md) not available in other XForms engines.
+- The Orbeon XForms engine relies on advanced features, including [XPath 2.0][8], [XBL](/xforms/xbl/faq.md), and [extension functions](/xforms/xpath/README.md) not available in other XForms engines.
 - Forms designed with Form Builder assume some standard components provided by Form Runner, like sections and grids.
 - A lot of the functionality of the form is handled by the Form Runner runtime, including: saving and retrieving data from a database, autosave, permissions, services and actions, and more. The form itself mainly contains the data model, controls, and descriptions of actions and services.
 
@@ -100,7 +102,7 @@ Form Builder produces XHTML+XForms files as output, but it follows a number of c
 
 ### Where is my Form Builder form stored?
 
-When you save or publish a form definition, it is stored through the [Form Runner persistence API](../form-runner/api/persistence/README.md).
+When you save or publish a form definition, it is stored through the [Form Runner persistence API](/form-runner/api/persistence/README.md).
 
 The API has a number of implementations. The default implementation is the embedded eXist XML database, but you can also use relational or your own implementation of the API.
 
@@ -108,8 +110,8 @@ The API has a number of implementations. The default implementation is the embed
 
 There is no built-in integration with  CMS or workflow engines. However you can integrate with systems in a few ways:
 
-- Form Runner is built around a [REST API for persistence](../form-runner/api/persistence/README.md), which allows you to integrate yourself with any system by providing an implementation of that API.
-- [Simple processes](../form-runner/advanced/buttons-and-processes.md) allow you to send data to external systems.
+- Form Runner is built around a [REST API for persistence](/form-runner/api/persistence/README.md), which allows you to integrate yourself with any system by providing an implementation of that API.
+- [Simple processes](/form-runner/advanced/buttons-and-processes.md) allow you to send data to external systems.
 
 ### Is it possible to edit and update a published form?
 
@@ -148,7 +150,7 @@ Yes. Orbeon Forms is designed to work with JavaScript enabled.
 
 Form Runner by default stores data in XML into eXist and relational databases. This does not require creating new tables, as we use generic tables.
 
-Some relational persistence layers support a "flat view", which is created at form publication time. See [Flat view](../form-runner/persistence/flat-view.md).
+Some relational persistence layers support a "flat view", which is created at form publication time. See [Flat view](/form-runner/persistence/flat-view.md).
 
 ### If I write my own persistence layer, do I need to recompile Orbeon Forms?
 
@@ -178,7 +180,7 @@ You can't just put the files produced by Form Builder or the HTML produced by th
 
 If you have installed the Form Runner runtime on a server, then you can run Form Runner alongside your other web pages or applications. Please note that Form Runner requires a Java servlet container.
 
-Orbeon Forms 4.7 and newer supports [server side embedding](../form-runner/link-embed/java-api.md).
+Orbeon Forms 4.7 and newer supports [server side embedding](/form-runner/link-embed/java-api.md).
 
 ### Can I use Form Builder to create a form, paste the form in a JSP, and use separate deployment?
 

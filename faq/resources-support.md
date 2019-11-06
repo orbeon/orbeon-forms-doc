@@ -1,7 +1,5 @@
 # FAQ - Resources and Support
 
-
-
 ## How can I get support for Orbeon Forms?
 
 - You can get support from the Orbeon Forms community on the [Orbeon Forms forum][1] which is the hub of the Orbeon Forms community, and this is the best place to ask questions, share your experience, or post issues and requests for enhancements.
