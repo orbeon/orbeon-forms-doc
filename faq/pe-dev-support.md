@@ -3,20 +3,6 @@
 ## What is the difference between the Development and Production subscriptions?
 
 See [this page for details](https://www.orbeon.com/pricing).
-<!--
-1. __Intended use__ — _Development subscriptions_ are for laptops, workstations, or servers on which you install Orbeon Forms PE for development, that are not accessed by end users of the forms or application you are creating. _Production subscriptions_ are for the servers on which you install Orbeon Forms PE and that will be accessed by end users.
-2. __Expiration__ — The license you get with Development subscriptions expires at the end of the subscription, while the license you get with a Production subscription doesn't and is sometime referred to as _perpetual_. Production licenses are perpetual, to give you a choice on whether you want to renew your subscription. If you decide to renew, you'll continue to get support, security patches, and free upgrades to major releases of the software. If you don't, you won't get those benefits, but your existing software will continue to run.
-
-## Can I use a Development subscription for staging or test server?
-
-You can use Development subscriptions for staging or test server, as long as those servers are not accessed by end users (see _intended use_ on the previous question). If your staging or test servers are only used during development, we recommend you get a Development subscription. If it they run along your production servers, and you're planning to keep using them after going in production, we recommend you get Production subscription to have perpetual license on those server (see _expiration_ on the previous question).
-
-## What do you mean by "server" and "computer"?
-
-1. __Server vs. computer__ — Production subscriptions are said to be per server, while Development subscription are per computer. The term "computer" is used to convey the fact that Development subscriptions are often used on laptops or workstations, which people wouldn't describe as "servers".
-2. __Physical hardware__ — In both cases, subscriptions are _per hardware machine_. It doesn't matter how many CPUs, cores, users, or forms you have on a given machine: you just need one subscription per machine.
-3. __Virtualization__ — If you are using virtualization and run two or more VMs on the same server, you just need one subscription for that physical server. However, if you use virtualization across multiple physical servers, then you need one PE subscription per server.
--->
 
 ## Do you provide free or discounted non-profit and/or educational licenses?
 
@@ -44,14 +30,3 @@ If you are interested to know what kind of issues and features are being worked 
 ## Does Orbeon Forms contact a license server over the internet?
 
 No, Orbeon Forms doesn't contact a license server.
-
-<!--
-## What versions of Orbeon Forms are covered by subscriptions?
-
-* Development licenses cover all versions, however they expire at the end of one year (or the number of years purchased) and need to be renewed if still in use.
-* Production licenses are produced for the latest version of Orbeon Forms at the time of purchase and cover that version and all earlier versions.
-
-## Are new licence files required when upgrading to a new version of Orbeon Forms?
-
-For development licenses, no upgrade is necessary. For production licenses, as long as you maintain production support, you get free license upgrades to any new major version upon request (minor versions updates, such as 4.8.0 to 4.8.1, do not require a license upgrade).
--->
