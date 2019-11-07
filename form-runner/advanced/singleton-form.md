@@ -18,7 +18,9 @@ When accessing the *new* page of a singleton form, the following will happen dep
 
 - 0: if she can't access any existing data for the current form, then she stays on the *new* page for the form.
 - 1: if she can access exactly one form data, she is redirected to the *edit* page for that form.
-- 2 or more: a dialog warns her she can't create any additional form data, and links to the *summary* page for that form, which she can use to pick the form data she wants to edit.
+- 2 or more: a message, as warns her she can't create any additional form data, and links to the *summary* page for that form, which she can use to pick the form data she wants to edit.
+
+![Message when multiple documents are found](../images/singleton-form-multiple.png)
 
 ### Summary page
 
