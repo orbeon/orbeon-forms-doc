@@ -16,8 +16,10 @@ Each Orbeon Forms subsystem defines its own properties. They are documented in t
 
 - [General properties](general.md)
 - [Form Runner properties](form-runner.md)
-    - [Attachments](form-runner-attachments.md)
     - [Detail page](form-runner-detail-page.md)
+        - [Attachments](form-runner-attachments.md)
+        - [Email](form-runner-email.md)
+        - [PDF](form-runner-pdf.md)
     - [Persistence](persistence.md)
     - [Summary page](form-runner-summary-page.md)
 - [Form Builder properties](form-builder.md)
@@ -181,12 +183,10 @@ In general, you can define all your custom properties in `properties-local.xml`.
 
 ## For contributors: properties subsystem initialization
 
-The properties sub-system is initialized after the [Resource Manager][2] (the properties being read like any other Orbeon Forms resources). By default, the following top-level URL is loaded:
+The properties sub-system is initialized after the [Resource Manager](/xml-platform/resources/resource-managers.md) (the properties being read like any other Orbeon Forms resources). By default, the following top-level URL is loaded:
 
 * web app in `prod` mode:  `oxf:/config/properties-prod.xml`
 * web app in  `dev`  mode:  `oxf:/config/properties-dev.xml`
 * command-line:  `oxf:/properties.xml`
 
 Property files support inclusions via XInclude. This is the mechanism used by Orbeon Forms to load  all the secondary property files.
-
-[2]: ../../xml-platform/resources/resource-managers.md
