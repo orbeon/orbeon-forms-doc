@@ -136,7 +136,7 @@ The PDF button is always enabled, allowing users to generate a PDF for the curre
 
 ## Automatic PDF page size and orientation
 
-[SINCE Orbeon Forms 2019.1]
+[SINCE Orbeon Forms 2019.2]
 
 Available page orientations:
 

@@ -1,5 +1,29 @@
 # Detail page configuration properties
 
+## Children pages
+
+- [Attachments](form-runner-attachments.md)
+- [Email](form-runner-email.md)
+- [PDF](form-runner-pdf.md)
+
+## HTML page layout
+
+[SINCE Orbeon Forms 2019.2]
+
+Available modes:
+
+- `fixed` (default)
+- `fluid`
+
+When in `fluid` mode, the form sections and grids take the entire web browser's viewport size. This also applies when using the []wizard view](/form-runner/feature/wizard-view.md). 
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.html-page-layout.*.*"
+    value="fixed"/>
+```
+
 ## Adding your own CSS files
 
 [SINCE Orbeon Forms 2017.1]
