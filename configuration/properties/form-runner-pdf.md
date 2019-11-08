@@ -163,7 +163,7 @@ Available page sizes:
     value="letter"/>
 ```
 
-These can also be set in Form Builder's Form Settings dialog.
+These can also be configured for a particular form in Form Builder's Form Settings dialog.
 
 ## See also
  

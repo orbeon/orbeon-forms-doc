@@ -15,7 +15,9 @@ Available modes:
 - `fixed` (default)
 - `fluid`
 
-When in `fluid` mode, the form sections and grids take the entire web browser's viewport size. This also applies when using the []wizard view](/form-runner/feature/wizard-view.md). 
+When in `fluid` mode, the form sections and grids take the entire web browser's viewport size. This also applies when using the []wizard view](/form-runner/feature/wizard-view.md).
+
+This can also be configured for a particular form in Form Builder's Form Settings dialog. 
 
 ```xml
 <property
