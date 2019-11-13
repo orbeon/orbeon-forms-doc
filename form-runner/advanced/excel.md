@@ -111,6 +111,12 @@ When set to `true`, the user is provided with an option to skip invalid data at 
 
 ![](../images/excel-import-validate-allow-invalid.png)
 
+## Handling dates and times
+
+[SINCE Orbeon Forms 2019.2]
+
+Cells that contain values formatted as date/time, date, or time in the Excel spreadsheet are automatically converted to their respective ISO formats before being stored as form data. 
+
 ## Restricting to the latest version
 
 [SINCE Orbeon Forms 2018.2]
