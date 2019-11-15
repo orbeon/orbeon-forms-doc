@@ -13,11 +13,15 @@ Orbeon Forms runs on any platform that supports:
 
 | Orbeon Forms Version | Java Versions|Comment        |
 |----------------------|--------------|---------------|
-| Up to 2018.1         |7             |not recommended|
-| Up to 2018.1         |8             |recommended    |
-| 2018.2               |7             |not recommended|
-| 2018.2               |8, 10         |recommended    |
 | 2019.1               |8, 10, 11     |               |
+| 2018.2               |8, 10         |recommended    |
+| 2018.2               |7             |not recommended|
+| Up to 2018.1         |8             |recommended    |
+| Up to 2018.1         |7             |not recommended|
+
+### Tomcat versions
+
+See [Tomcat](tomcat.md).    
 
 ## Hardware requirements
 

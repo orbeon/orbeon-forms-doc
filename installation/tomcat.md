@@ -4,20 +4,13 @@
 
 The following versions of Tomcat are supported:
 
-- With Orbeon Forms 2019.1
-    - Tomcat 8.5
-    - Tomcat 9
-- With Orbeon Forms 2018.1 and 2018.2
-    - Tomcat 8.0 and 8.5
-    - Tomcat 9
-- With Orbeon Forms 2017.2:
-    - Tomcat 7
-    - Tomcat 8.0 and 8.5
-    - Tomcat 9
-- With Orbeon Forms 2017.1:
-    - Tomcat 6 (not recommended, see note below)
-    - Tomcat 7
-    - Tomcat 8.0 and 8.5
+| Orbeon Forms Version | Tomcat Versions|Comment                                    |
+|----------------------|----------------|-------------------------------------------|
+| 2019.1               | 8.5, 9         |                                           |
+| 2018.2               | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below      |
+| 2018.1               | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below      |
+| 2017.2               | 7, 8.0, 8.5, 9 |Tomcat 8.0 not recommended, see below      |
+| 2017.1               | 6, 7, 8.0, 8.5 |Tomcat 6 nad 8.0 not recommended, see below|
 
 Notes about older versions of Tomcat:
 
@@ -53,6 +46,8 @@ Edit `TOMCAT_HOME/conf/server.xml`, and inside the `<Host>` create a `<Context>`
     override="true"
     allowLinking="true"/>
 ```
+
+## Datasource setup
 
 If you have a JDBC datasource, add it **inside** the `<Context>`, as in the following example:
 
