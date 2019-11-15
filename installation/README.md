@@ -2,10 +2,22 @@
 
 ## Software requirements
 
+### Basic requirements
+
 Orbeon Forms runs on any platform that supports:
 
-* Java 6 (not recommended), 7, or 8
+* A Java runtime
 * a Servlet 2.5 (or greater) container such as [Apache Tomcat](http://tomcat.apache.org/). For versions supported, see [Tomcat](tomcat.md).
+
+### Java versions
+
+| Orbeon Forms Version | Java Versions|Comment        |
+|----------------------|--------------|---------------|
+| Up to 2018.1         |7             |not recommended|
+| Up to 2018.1         |8             |recommended    |
+| 2018.2               |7             |not recommended|
+| 2018.2               |8, 10         |recommended    |
+| 2019.1               |8, 10, 11     |               |
 
 ## Hardware requirements
 
