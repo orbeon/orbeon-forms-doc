@@ -10,7 +10,7 @@ The following versions of Tomcat are supported:
 | 2018.2               | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below      |
 | 2018.1               | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below      |
 | 2017.2               | 7, 8.0, 8.5, 9 |Tomcat 8.0 not recommended, see below      |
-| 2017.1               | 6, 7, 8.0, 8.5 |Tomcat 6 nad 8.0 not recommended, see below|
+| 2017.1               | 6, 7, 8.0, 8.5 |Tomcat 6 and 8.0 not recommended, see below|
 
 Notes about older versions of Tomcat:
 
