@@ -23,9 +23,10 @@ Your own web app does the following:
 2. Setup the filter in your `web.xml` per the snippet below.
 3. Call the embedding API when producing a page, as done in the example below.
 
+The page you do the embedding from must:
 
-_IMPORTANT: Make sure that you application uses the UTF-8 character encoding for the HTML response._
-
+- Start with `<!DOCTYPE html>`, so your page is in [full standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Without this, you will notice that some CSS fails to apply as it should.
+- Use the UTF-8 character encoding for the HTML response.
 This is a typical filter configuration:
 
 ```xml
