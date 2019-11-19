@@ -270,6 +270,10 @@ When this is enabled, the following portal URL parameters are propagated to Orbe
 
 ### Disabling short namespaces
 
+[SINCE Orbeon Forms 2019.2]
+
+Short namespaces are no longer supported and therefore entirely disabled.
+
 [SINCE Orbeon Forms 2017.2.3 and 2018.1]
 
 Short namespaces are disabled by default in `portlet.xml`:
