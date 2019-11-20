@@ -193,12 +193,16 @@ An event handler for the custom event can be in an XForms model or control, and 
 | ---- | -------- | ----------- |
 | **targetId** |  Yes |  Id of the target element. The element must be an element in the XForms namespace: you cannot dispatch events to HTML elements. In addition, the id must identify either a relevant and non-readonly XForms control, or a model object that supports event handlers such as `<xf:model>`, `<xf:instance>`, or `<xf:submission>`. |
 | **eventName** |  Yes |  Name of the event.
+| **properties** |  No |  Allows you to attach custom properties to the event.
 | **form** |  No |  The form object that corresponds to the XForms form you want to dispatch the event to. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
-| **bubbles** |  No |  Boolean indicating if this event bubbles, as defined in DOM2 Events. The default value depends on the definition of the custom event. |
-| **cancelable** |  No |  Boolean indicating if this event is cancelable, as defined in DOM2 Events. The default value depends on the definition of the custom event. |
 | **incremental** |  No |  When `false` the event is sent to the XForms server right away. When `true` the event is sent after a small delay, giving the opportunity for other events that would occur during that time span to be aggregated with the current event.
 | **ignoreErrors** |  No |  When set to `true`, errors happening while the event is dispatched to the server are ignored. This is in particular useful when you are using a JavaScript timer (e.g. `window.setInterval()`) that runs a JavaScript function on a regular interval to dispatch an event to the server, maybe to have part of the UI updated. In some cases, you might not want to alert the user when a there is a maybe temporary communication error while the event is being dispatched to the server. In those cases, you call `dispatchEvent()` with `ignoreErrors` set to `true`. |
-| **properties** |  No |  Allows you to attach custom properties to the event.
+
+
+The following parameters were previously documented but had no effect. They are ignored and you should not use them:
+
+- `bubbles`
+- `cancelable`
 
 #### Security considerations
 
