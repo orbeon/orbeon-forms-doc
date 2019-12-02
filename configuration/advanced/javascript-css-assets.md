@@ -198,6 +198,18 @@ It doesn't make much sense to use this property in a properties file. Instead, i
 xxf:assets.baseline.excludes="/ops/javascript/scalajs/orbeon-xforms.js /ops/javascript/scalajs/orbeon-xforms-launcher.js"
 ```
 
+[SINCE Orbeon Forms 2019.2]
+
+The `xxf:assets.baseline.updates` property can be used to exclude and add assets.
+
+It doesn't make much sense to use this property in a properties file. Instead, it should be used via an attribute on `xf:model`.
+
+Each asset must be prefixed with a `+` or a `-` to indicate whether the asset as removed from or added to the baseline. 
+
+```xml
+xxf:assets.baseline.updates="-/ops/javascript/scalajs/orbeon-xforms.js +/apps/fr/resources/scalajs/orbeon-form-runner.js"
+```
+
 #### Baseline of XBL components assets
 
 The baseline of resources is configured as follows:
