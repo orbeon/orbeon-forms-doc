@@ -123,23 +123,23 @@ The default baseline of XForms assets is configured with the `oxf.xforms.assets.
       "css": [
         { "full": "/ops/yui/container/assets/skins/sam/container.css",                   "min": false },
         { "full": "/ops/yui/progressbar/assets/skins/sam/progressbar.css",               "min": false },
-
         { "full": "/ops/yui/calendar/assets/skins/sam/calendar.css",                     "min": false },
-
         { "full": "/apps/fr/style/bootstrap/css/bootstrap.css",                          "min": true  },
         { "full": "/apps/fr/style/form-runner-bootstrap-override.css",                   "min": false },
+        { "full": "/apps/fr/style/font-awesome/css/font-awesome.css",                    "min": true  },
         { "full": "/config/theme/xforms.css",                                            "min": false },
         { "full": "/config/theme/error.css",                                             "min": false },
         { "full": "/ops/nprogress-0.2.0/nprogress.css",                                  "min": false }
       ],
 
       "js": [
-        { "full": "/ops/jquery/jquery-1.12.0.js",                                        "min": true  },
+        { "full": "/ops/jquery/jquery-3.3.1.js",                                         "min": true  },
         { "full": "/ops/jquery/jquery-browser-mobile.js",                                "min": true  },
         { "full": "/apps/fr/style/bootstrap/js/bootstrap.js",                            "min": true  },
         { "full": "/ops/javascript/orbeon/util/jquery-orbeon.js",                        "min": true  },
-        { "full": "/ops/javascript/autosize/autosize.js",                                "min": true  },
         { "full": "/ops/nprogress-0.2.0/nprogress.js",                                   "min": true  },
+        { "full": "/ops/bowser/bowser.js",                                               "min": true  },
+        { "full": "/ops/mousetrap/mousetrap.min.js",                                     "min": false },
 
         { "full": "/ops/yui/yahoo/yahoo.js",                                             "min": true  },
         { "full": "/ops/yui/event/event.js",                                             "min": true  },
@@ -157,29 +157,16 @@ The default baseline of XForms assets is configured with the `oxf.xforms.assets.
         { "full": "/ops/javascript/underscore/underscore.js",                            "min": true  },
 
         { "full": "/ops/javascript/xforms.js",                                           "min": true  },
-        { "full": "/ops/javascript/orbeon/util/fQuery.js",                               "min": true  },
         { "full": "/ops/javascript/orbeon/util/StringOps.js",                            "min": true  },
-        { "full": "/ops/javascript/orbeon/util/ExecutionQueue.js",                       "min": true  },
-        { "full": "/ops/javascript/orbeon/util/FiniteStateMachine.js",                   "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/server/Server.js",                      "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/server/AjaxServer.js",                  "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/server/AjaxServer/AjaxServerEvent.js",  "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/server/AjaxServer/nextAjaxResponse.js", "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/server/UploadServer.js",                "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/LoadingIndicator.js",                   "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/Document.js",                           "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/Form.js",                               "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/Page.js",                               "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/control/Control.js",                    "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/control/CalendarResources.js",          "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/control/Calendar.js",                   "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/control/Upload.js",                     "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/action/Message.js",                     "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/control/Placeholder.js",                "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/controls/Placement.js",                 "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/controls/Help.js",                      "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/controls/Hint.js",                      "min": true  },
-        { "full": "/ops/javascript/orbeon/xforms/controls/Textarea.js",                  "min": true  }
+
+        { "full": "/ops/javascript/scalajs/orbeon-xforms.js",                            "min": false }
       ]
     }
 </property>
