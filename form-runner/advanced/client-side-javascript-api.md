@@ -61,12 +61,31 @@ ORBEON.xforms.Document.setValue(
 
 Where the value  you pass corresponds to the position of the item starting at `0`.
 
+## Telling whether the form data is safe
+
+[SINCE Orbeon Forms 2019.2]
+
+```javascript
+ORBEON.fr.API.isFormDataSafe(
+    formElem?   : HTMLElement
+): boolean
+```
+
+| Name | Required | Type | Description |
+| ---- | -------- | ---- | ----------- |
+| **formElem**    |  No  | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
+
+Orbeon Forms supports the notion that form data can be "safe" or not: specifically, it is safe if it's been saved to a database.
+
+This function allows you to tell whether the data is safe or not.
+
+See also [the `set-data-status` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status).
+
 ## Focusing on a control
 
 [SINCE Orbeon Forms 2017.2]
 
-The `wizard.focus()` function sets keyboard focus on a Form Runner control by name, including toggling wizard pages
-first if needed.
+The `wizard.focus()` function sets keyboard focus on a Form Runner control by name, including toggling wizard pages first if needed.
 
 ```javascript
 ORBEON.fr.API.wizard.focus(
