@@ -131,7 +131,10 @@ _NOTE: Since 2018.1, it is no longer recommended to place any inline CSS, as som
 
 ### Strength of CSS rules
 
-Bootstrap, XForms engine, Form Runner and Form Builder CSS rules are contained within an enclosing `.orbeon` CSS class. This ensures that the Orbeon CSS rules only apply within an element with that class. It also makes Orbeon CSS rules a bit stronger than before. You might have to update your custom CSS to take this into account.
+Bootstrap, XForms engine, Form Runner and Form Builder CSS rules are contained within an enclosing `.orbeon` CSS class. This ensures that the Orbeon CSS rules only apply within an element with that class. It also makes Orbeon CSS rules a bit stronger (more *specific*) than before. You might have to update your custom CSS to take this into account.
+
+See [here for more on CSS specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity). 
+
 
 ### Twitter Bootstrap
 
