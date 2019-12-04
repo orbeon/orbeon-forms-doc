@@ -20,6 +20,26 @@ The following conditions must be met for autosave to happen:
 
 *NOTE: Form Builder doesn't support autosave as of Orbeon Forms 2018.2.*
 
+## Disabling autosave
+
+If the following conditions above are met, autosave will be enabled. In this case, if you wish to disable autosave, you can set the `oxf.fr.detail.autosave-delay` to 0:
+
+```xml
+<property 
+    as="xs:integer" 
+    name="oxf.fr.detail.autosave-delay.*.*" 
+    value="0"/>
+```
+
+You can as usual disable it for specific forms only, for example:
+
+```xml
+<property 
+    as="xs:integer" 
+    name="oxf.fr.detail.autosave-delay.acme.order" 
+    value="0"/>
+```
+
 ## How autosave works
 
 When autosave is enabled and you are an authenticated user, form data is automatically saved as *drafts* in the background as you enter and modify form data. This reduces the chance that you will lose data if something goes wrong and you haven't explicitly saved the data.
