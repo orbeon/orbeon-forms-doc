@@ -120,8 +120,11 @@ The following parameters can be used:
 
     [SINCE Orbeon Forms 2019.2]
 
-    - specifies one or more custom HTTP headers to send in the HTTP request
-    - a single header has the form `Header-Name: Value of the header`, as is usual with HTTP
+    - specifies one or more custom HTTP headers to add to the HTTP request
+    - a single header has the usual HTTP format:
+        ```
+        headers = "Foo: value of foo"
+        ```
     - multiple headers can be separated with a `\n` newline escape sequence, as in:
         ```
         headers = "Foo: value of foo\nBar: value of bar"
