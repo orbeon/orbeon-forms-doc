@@ -115,6 +115,22 @@ The following parameters can be used:
     - if `replace` is set to `all`, specifies the name of the window where to display the result from the `send()`, with same semantic as the [HTML `target` attribute on `<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target)
     - typically, if setting a `target`, you'll also want to add a `replace = "false"` attribute, so the loading indicator on the current page doesn't stay after the content in the target page has been loaded
     - default: none
+    
+- <a name="send_parameter_headers"></a>`headers`:
+
+    [SINCE Orbeon Forms 2019.2]
+
+    - specifies one or more custom HTTP headers to send in the HTTP request
+    - a single header has the form `Header-Name: Value of the header`, as is usual with HTTP
+    - multiple headers can be separated with a `\n` newline escape sequence, as in:
+        ```
+        headers = "Foo: value of foo\nBar: value of bar"
+        ```
+    - a value template may be used, with the caveat about character encodings below:
+        ```
+        headers = "Foo: {//my-control}"
+        ```
+    - *NOTE: HTTP headers typically do not support all Unicode characters as header values.* 
 
 ### Using properties
 
@@ -155,6 +171,10 @@ The following properties can be used to configure a `send` action with propertie
 - property prefix + `.parameters`: see [`parameters` parameter](#send_parameter_parameters)
 - property prefix + `.serialization`: see [`serialization` parameter](#send_parameter_serialization)
 - property prefix + `.prune-metadata`: see [`prune-metadata` parameter](#send_parameter_prune_metadata)
+- property prefix + `.content-type`: see [`content-type` parameter](#send_parameter_content_type)
+- property prefix + `.show-progress`: see [`show-progress` parameter](#send_parameter_show_progress)
+- property prefix + `.target`: see [`target` parameter](#send_parameter_target)
+- property prefix + `.headers`: see [`headers` parameter](#send_parameter_headers)
 
 #### Properties and XPath Value Templates
 
@@ -164,6 +184,7 @@ The following properties are XPath Value Templates evaluating in the context of 
 
 - `uri`
 - `method`
+- `headers`
 - `prune`
 - `annotate`
 - `content`
