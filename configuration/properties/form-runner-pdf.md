@@ -76,46 +76,11 @@ a[href] {
 
 ## Font embedding in automatic mode
 
-These properties allow specifying fonts to embed in PDF files. The `oxf.fr.pdf.font.path` property ends with an identifier for the font (here `vera`). It specifies the path to the font file. Optionally, the oxf.fr.pdf.font.family property ending with the same identifier (here `vera`) allows overriding the font family.
-
-*NOTE: The path to the font file must be an absolute path on the filesystem. It cannot be just a relative path pointing to the Orbeon Forms resources, as is the case with for example CSS files.*
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.pdf.font.path.vera"
-    value="/absolute/path/to/font-file.ttf"/>
-
-<property
-    as="xs:string"
-    name="oxf.fr.pdf.font.family.vera"
-    value="Arial"/>
-```
-
-To change the main font, you must map to the Helvetica Neue font. For example;
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.pdf.font.path.my-font"
-    value="/path/to/font.ttf"/>
-
-<property
-    as="xs:string"
-    name="oxf.fr.pdf.font.family.my-font"
-    value="Helvetica Neue"/>
-```
+See [Automatic PDF](/form-builder/pdf-automatic.md).
 
 ## Font embedding in template mode
 
-In template mode, fonts can be specified to provide glyphs which are not present in the PDF's original font(s). Several fonts can be specified, separated by spaces:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.pdf.template.font.paths"
-    value="/path/to/font1.ttf /path/to/font2.ttf"/>
-```
+See [PDF templates](/form-builder/pdf-templates.md).
 
 ## Disabling the PDF button when form is invalid
 

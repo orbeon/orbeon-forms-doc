@@ -132,6 +132,17 @@ When using a PDF template, Orbeon Forms can only fill out fields that are alread
 
 ![Example of repeated fields](images/pdf-template-repeat.png)
 
+## Font configuration and embedding
+
+In template mode, fonts can be specified to provide glyphs which are not present in the PDF's original font(s). Several fonts can be specified, separated by spaces:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.pdf.template.font.paths"
+    value="/path/to/font1.ttf /path/to/font2.ttf"/>
+```
+
 ## See also
 
 - [PDF Production](pdf-production.md)

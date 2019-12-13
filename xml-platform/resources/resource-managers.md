@@ -1,7 +1,5 @@
 # Resource Managers
 
-
-
 ## Introduction
 
 A _resource manager_ is an Orbeon Forms component responsible for reading and writing XML and other resources like binary and text documents. A resource manager abstracts the actual mechanisms used to store resources. An important benefit of using such an abstraction is that it is possible to store all your application files in a sandbox which can be moved at will within a filesystem or between storage mechanisms. For instance, resources can be stored:
@@ -147,7 +145,7 @@ _NOTE: The priority resource manager is more efficient when most resources are f
 
 ### Examples
 
-#### Single configuration as of Orbeon Forms 2016.3
+#### Configuration from Orbeon Forms 2016.3 to 2019.2 
 
 ```xml
 <context-param>
