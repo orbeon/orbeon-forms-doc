@@ -195,7 +195,6 @@ The following properties are documented in [JavaScript and CSS assets](../advanc
 - `oxf.xforms.resources.baseline`
 - `oxf.xforms.assets.baseline`
 - `oxf.xforms.assets.baseline.excludes`
-- `oxf.xforms.cache-combined-resources`
 
 ## Noscript mode
 

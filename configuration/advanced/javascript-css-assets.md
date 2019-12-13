@@ -400,69 +400,6 @@ In case you use Apache, you can in addition configure a rewriting rule with [mod
 
 _NOTE: We recommend restarting Orbeon Forms after changing the `oxf.resources.versioned` property, as data in Orbeon Forms caches may not be made aware of the change until the next restart._
 
-## Examples of Apache configurations
-
-_WARNING: As of 2017-03-03, these configuration are likely out of date._
-
-Here is how you can configure Apache to serve Orbeon Forms resources. This assumes the following:
-
-* Orbeon Forms deployed under the `/orbeon` context
-* Orbeon Forms exploded WAR file under `/home/orbeon/war/`
-* `orbeon-resources-public.jar` unziped under `/home/orbeon/war/WEB-INF/orbeon-resources-public/`
-* `oxf.xforms.cache-combined-resources` set to `true` in `properties-local.xml`
-
-Without [resources versioning](#versioned-asset-resources):
-
-```
-RewriteEngine on
-# Rewrite CSS and JavaScript resources served by the XForms Server
-# -> make sure "oxf.xforms.cache-combined-resources" is set to "true" in properties-local.xml
-RewriteRule ^/orbeon/(xforms-server/.*\.(css|js))$ /home/orbeon/war/WEB-INF/resources/$1 [L]
-# Serve /config/theme resources
-# -> make sure orbeon-resources-public.jar is unzipped under "orbeon-resources-public"
-RewriteRule ^/orbeon/(config/theme/.*\.(css|png|gif))$ /home/orbeon/war/WEB-INF/orbeon-resources-public/$1 [L]
-# Serve /ops resources
-# -> make sure orbeon-resources-public.jar is unzipped under "orbeon-resources-public"
-RewriteRule ^/orbeon/((ops|config/theme|xbl/orbeon)/.*\.(gif|css|pdf|json|js|png|jpg|xsd|htc|ico|swf))$ /home/orbeon/war/WEB-INF/orbeon-resources-public/$1 [L]
-# Serve remaining resources
-RewriteRule ^/orbeon/(.*\.(gif|css|pdf|json|js|png|jpg|xsd|htc|ico|swf))$ /home/orbeon/war/WEB-INF/resources/$1 [L]
-```
-
-With [resources versioning](#versioned-asset-resources):
-
-```
-RewriteEngine on
-# Rewrite CSS and JavaScript resources served by the XForms Server
-# -> make sure "oxf.xforms.cache-combined-resources" is set to "true" in properties-local.xml
-RewriteRule ^/orbeon/xforms-server/[^/]+/(.*\.(css|js))$ /home/orbeon/war/WEB-INF/resources/xforms-server/$1 [L]
-# Set far expiration date
-<LocationMatch "^/orbeon/xforms-server/([^/]+/.*\.(css|js))$">
-  Header set Expires "Wed, 1 Jan 2020 12:00:00 GMT"
-</LocationMatch>
-
-# Serve /ops resources
-# -> make sure orbeon-resources-public.jar is unzipped under "orbeon-resources-public"
-RewriteRule ^/orbeon/[^/]+/((ops|config/theme|xbl/orbeon)/.*\.(gif|css|pdf|json|js|png|jpg|xsd|htc|ico|swf))$ /home/orbeon/war/WEB-INF/orbeon-resources-public/$1 [L]
-# Set far expiration date
-<LocationMatch "^/orbeon/[^/]+/((ops|config/theme|xbl/orbeon)/.*\.(gif|css|pdf|json|js|png|jpg|xsd|htc|ico|swf))$">
-  Header set Expires "Wed, 1 Jan 2020 12:00:00 GMT"
-</LocationMatch>
-# Serve remaining resources
-RewriteRule ^/orbeon/[^/]+/(.*\.(gif|css|pdf|json|js|png|jpg|xsd|htc|ico|swf))$ /home/orbeon/war/WEB-INF/resources/$1 [L]
-# Set far expiration date
-<LocationMatch "^/orbeon/[^/]+/(.*\.(gif|css|pdf|json|js|png|jpg|xsd|htc|ico|swf))$">
-  Header set Expires "Wed, 1 Jan 2020 12:00:00 GMT"
-</LocationMatch>
-```
-
-All in all, the rules above perform the following:
-
-* Special handling for XForms JavaScript and CSS files (using the cached/combined/minimized resources)
-* Serving of `/config/theme` resources originally in `orbeon-resources-public.jar`
-* Serving of other `/ops` resources originally in `orbeon-resources-public.jar`
-* Serving of other resources under `RESOURCES`
-* Marking all versioned resources with an expiration date in the far future
-
 ## JavaScript at the bottom of the page
 
 ### With Orbeon Forms 2019.1
