@@ -210,6 +210,10 @@ The baseline of resources is configured as follows:
 
 The value consists of a list of qualified names referring to XBL components. Resources for the components specified are always included in every page, whether the component is used by the page or not.
 
+#### Disk caching of combined resources
+
+[UNTIL Orbeon Forms 2019.1]
+
 In addition, you can enable caching on disk of combined resources with:
 
 ```xml
@@ -226,6 +230,8 @@ WEB-INF/resources/xforms-server/
 ```
 
 One benefit of this mechanism is that it allows making such combined files to be served by an Apache front-end.
+
+*NOTE: This property is removed with Orbeon Forms 2019.2. HTTP reverse proxies can cache resources without having access to a file on disk, which makes this feature obsolete.*
 
 ## Versioned asset resources
 
