@@ -238,40 +238,6 @@ When there is a performance issue, it's a good idea to start by trying to figure
 
 By default, events produced by users' interactions with a form are sent by the browser to the server right after the interaction happens. Events are sent by the browser to the server through Ajax requests. A combination of large forms and high traffic can result in a high number of Ajax requests hitting your server, which in turn can impact your site performance.
 
-#### Filtering out specific events
-
-[DEPRECATED: This feature is deprecated as of Orbeon Forms 4.5, as it is incompatible with forms created with Form Builder or executed by Form Runner.]
-
-You may be able to reduce the number of Ajax events by filtering out the `xforms-focus` event. Obviously, you shouldn't filter out this event if your form relies on it to function properly. This is the case of forms created with Form Builder or executed by Form Runner, as these forms rely on xforms-focus to keep track of the fields that have been visited, and show only errors for those fields. So if you are using Form Builder or Form Runner, you should _not_ change the default value of this property.
-
-Filtering out the `xforms-focus` event will:  
-
-* Reduce the number of Ajax requests, as you will avoid having requests made in cases where users just tab through fields without changing any value.
-* Reduce the size of the Ajax requests, which in turn reduces bandwidth usage between the browser and the server, and CPU usage on the server.
-
-You configure this by setting the `oxf.xforms.client.events.filter` property. Its value is a space-separated list of event names to be filtered. By default that list is empty. To filter the xforms-focus event, set it to:
-
-```xml
-<property as="xs:string"  name="oxf.xforms.client.events.filter" value="xforms-focus"/>
-```
-
-If you don't want this property to act globally for all your forms, you can also set this property specifically on your form's `<xf:model>` element, i.e. `<xf:model ...="" xxf:client.events.filter="xforms-focus">.`
-
-#### Indicate for what controls events should be sent to the server
-
-A more aggressive step consists in setting the _client events mode_ to _differed_. By default, every time users change a value and tab to another field, an Ajax event is sent to server. Those events are useful is something else in the form can change based on the new value; for instance, you might enable a set of fields when users click on a checkbox. But for some forms, most of the values entered by users have no impact on the rest of the form. If this is the case for your form, and you notice that the load from Ajax requests impacts performance, then:  
-
-1. Set _client events mode_ to _differed_. You can do this either by:
-    * Setting the `oxf.xforms.client.events.mode` property to `deferred` in your `properties-local.xml`.
-    * Adding the following attribute on the first `<xf:model>` of your form: `xxf:client.events.mode="deferred"`.
-2. Add the class `xxforms-events-mode-default` on every control for which a value change can impact the rest of the form.  
-
-Note:  
-
-* If you have a group of controls for which Ajax requests need to be sent, instead of adding `xxforms-events-mode-default` on every one of those controls, you can put that class on a parent of those control.
-* You don't need to add the class `xxforms-events-mode-default` to triggers; Ajax requests will be sent to the server when users click on buttons and links.
-* This class is a hint you're giving to the XForms engine. This hint might become deprecated in the future as the XForms engine becomes "smarter" and manages to figure this out without you having to add this hint.
-
 ### Tune the Orbeon Forms cache size
 
 One way to increase the performance of your application is to increase the size of the Orbeon Forms cache. You setup the size of the Orbeon Forms cache with the oxf.cache.size property. Due to limitations of the JVM, you cannot set the size of the Orbeon Forms cache in MB. Instead, the value you specify the maximum number of objects that Orbeon Forms can store in cache. As the size of each object stored in cache is different and the average size of those objects can change widely depending on your application, we can't give you an equivalence between number of objects and memory used. Instead, we recommend you follow the suggestions below to tune your Orbeon Forms cache size.
