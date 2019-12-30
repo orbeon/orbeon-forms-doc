@@ -154,7 +154,7 @@ See also:
 
 - **Form Builder (creating forms)**
     - Chrome 77 (latest stable version)
-    - Firefox 70 (latest stable version) and the current [Firefox ESR](http://www.mozilla.org/en-US/firefox/organizations/faq/)
+    - Firefox 70 (latest stable version) and the current [Firefox ESR](https://www.mozilla.org/en-US/firefox/enterprise/)
     - Microsoft Edge 17 and 18
     - Safari 13 (latest stable version)
 - **Form Runner (accessing form)**
