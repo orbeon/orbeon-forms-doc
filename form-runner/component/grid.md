@@ -33,7 +33,7 @@ A menu is available to perform operations on or around a line. Not all operation
 - Remove Line
     - When allowed, remove the current repetition.
 
-![Grid menu](images/xbl-grid-menu.png)
+![Repeated grid menu](images/xbl-grid-menu.png)
 
 #### Single-line
 

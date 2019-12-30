@@ -42,7 +42,7 @@ A menu is available to perform operations on or around a line. Not all operation
 - Remove Line
     - When allowed, remove the current repetition.
     
-![Section menu](images/xbl-grid-menu.png)
+![Repeated section menu](images/xbl-grid-menu.png)
 
 #### Appearance
 

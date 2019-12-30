@@ -38,7 +38,7 @@ This release adds the new option of *clearing* (or *resetting*) a repetition. Wh
 
 ## Other features and enhancements
 
-Including the features and enhancements above, we [closed over 180 issues](https://github.com/orbeon/orbeon-forms/issues?page=7&q=is%3Aissue+is%3Aclosed+project%3Aorbeon%2Forbeon-forms%2F11) since [Orbeon Forms 2019.1](https://blog.orbeon.com/2019/10/orbeon-forms-20191.html).
+Including the features and enhancements above, we [closed over 180 issues](https://github.com/orbeon/orbeon-forms/issues?page=7&q=is%3Aissue+is%3Aclosed+project%3Aorbeon%2Forbeon-forms%2F11) since [Orbeon Forms 2019.1](orbeon-forms-2019.1.md).
 
 - New features
     - Ability for "new" button on summary page to always use the latest version of the form ([doc](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-summary-page#new-button-version-of-the-form))
