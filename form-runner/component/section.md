@@ -24,6 +24,28 @@ The same section when closed just shows the heading.
 
 ### Full repeat appearance
 
+#### Menu
+
+A menu is available to perform operations on or around a line. Not all operations are always available, depending on the position of the line or the `freeze` setting. When the entire grid is made readonly, the menu is not present.  
+
+- Insert Above
+    - When allowed, insert a new repetition above the current one.
+- Insert Below
+    - When allowed, insert a new repetition below the current one.
+- Move Up
+    - When allowed, move the current repetition one level above.
+- Move Down
+    - When allowed, move the current repetition one level below.
+- Clear Line
+    - [SINCE Orbeon Forms 2019.2]
+    - Clear or reset all the values in the current repetition. 
+- Remove Line
+    - When allowed, remove the current repetition.
+    
+![Section menu](images/xbl-grid-menu.png)
+
+#### Appearance
+
 ![Full appearance](images/xbl-section-repeat-full.png)
 
 ### Minimal repeat appearance
