@@ -84,13 +84,19 @@ See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-
 
 ![View Options](images/form-settings-view-options.png)
 
-For details, see [Wizard View](/form-runner/feature/wizard-view.md).
+### Browser page layout
 
-- Browser page layout:
-    - [SINCE Orbeon Forms 2019.2]
-    - Use property: use the [`oxf.fr.detail.html-page-layout` property](/configuration/properties/form-runner-detail-page.md#html-page-layout)
-    - Fixed width: the form sections and grids take a fixed and predefined width of approximately 940px for large displays (the layout becomes responsive for smaller displays sizes).
-    - Fluid width: the form sections and grids take the entire web browser's viewport size. 
+- [SINCE Orbeon Forms 2019.2]
+- Use property: use the [`oxf.fr.detail.html-page-layout` property](/configuration/properties/form-runner-detail-page.md#html-page-layout)
+- Fixed width: the form sections and grids take a fixed and predefined width of approximately 940px for large displays (the layout becomes responsive for smaller displays sizes).
+- Fluid width: the form sections and grids take the entire web browser's viewport size.
+
+See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html).
+
+### Wizard options
+
+For details, see [Wizard View](/form-runner/feature/wizard-view.md).
+ 
 - Wizard View:
     - Use property: use the [`oxf.fr.detail.view.appearance` property](/form-runner/feature/wizard-view.md#using-a-property)
     - Always or Never: enable or disable the wizard view for this form definition, no matter how the property is configured.
@@ -111,7 +117,7 @@ For details, see [Wizard View](/form-runner/feature/wizard-view.md).
 
 [SINCE Orbeon Forms 2019.2]
 
-![View Options](images/form-settings-pdf-options.png)
+![PDF Options](images/form-settings-pdf-options.png)
 
 - PDF page orientation
     - Use property: use the [`oxf.fr.detail.rendered-page-orientation` property](/configuration/properties/form-runner-pdf.md#automatic-pdf-page-size-and-orientation)
@@ -122,6 +128,8 @@ For details, see [Wizard View](/form-runner/feature/wizard-view.md).
     - Letter: US letter size.
     - A4: standard A4 size.
     - Legal: US legal size.
+    
+See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html).
 
 ## About this Form
 
@@ -149,5 +157,7 @@ Form statistics show counts of various form elements.
 - [Wizard View](../form-runner/feature/wizard-view.md)
 - [Simple data migration](/form-runner/feature/versioning.md#simple-data-migration)
 - [Automatic calculations dependencies](../form-runner/feature/automatic-calculations-dependencies.md)
-- Blog post: [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
-- Blog post: [Form-level and control-level settings](https://blog.orbeon.com/2019/03/form-level-and-control-level-settings.html)
+- Blog posts
+    - [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
+    - [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
+    - [Form-level and control-level settings](https://blog.orbeon.com/2019/03/form-level-and-control-level-settings.html)
