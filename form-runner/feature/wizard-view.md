@@ -35,7 +35,7 @@ You can enable or disable the wizard view for a specific form definition directl
 - __Always:__ enable the wizard view no matter what the `oxf.fr.detail.view.appearance` property specifies
 - __Never:__ disable the wizard view no matter what the `oxf.fr.detail.view.appearance` property specifies
 
-![](../../form-builder/images/form-settings-wizard.png)
+![](../../form-builder/images/form-settings-view-options.png)
 
 ## Modes
 

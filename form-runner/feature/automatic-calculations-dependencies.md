@@ -22,7 +22,7 @@ In addition, for new form definitions, the "Automatic Calculations Dependencies"
 
 _NOTE: Existing form definitions which do not have the `xxf:analysis.calculate="true"` attribute set in the form definition source are not automatically upgraded to enable automatic calculations dependencies. You must enable dependencies explicitly in the "Form Settings" dialog._
 
-![Form Options](../../form-builder/images/form-settings-options.png)
+![Form Options](../../form-builder/images/form-settings-form-options.png)
 
 ## Renaming of controls and formulas
 

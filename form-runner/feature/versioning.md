@@ -88,7 +88,7 @@ The `oxf.fr.detail.data-migration` is set as follows by default:
     value="disabled"/>
 ```  
 
-![Form Options](../../form-builder/images/form-settings-options.png)
+![Form Options](../../form-builder/images/form-settings-form-options.png)
 
 ## Limitations
 

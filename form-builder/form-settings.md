@@ -21,7 +21,7 @@ General settings allow you to set the following form definition metadata:
 
 Form options include options which apply to the entire form definition.
 
-![Form Options](images/form-settings-options.png)
+![Form Options](images/form-settings-form-options.png)
 
 - Singleton Form
     - Enable or disable singleton form behavior. 
@@ -78,29 +78,50 @@ For example, you can set a "Digits After Decimal" setting global to the form, an
 
 See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-level-settings.html).
 
-## Wizard Options
+## View Options
 
 [SINCE Orbeon Forms 2018.1] These options are now in a separate tab.
 
-![Wizard Options](images/form-settings-wizard.png)
+![View Options](images/form-settings-view-options.png)
 
-For details, see [Wizard View](../form-runner/feature/wizard-view.md).
+For details, see [Wizard View](/form-runner/feature/wizard-view.md).
 
+- Browser page layout:
+    - [SINCE Orbeon Forms 2019.2]
+    - Use property: use the [`oxf.fr.detail.html-page-layout` property](/configuration/properties/form-runner-detail-page.md#html-page-layout)
+    - Fixed width: the form sections and grids take a fixed and predefined width of approximately 940px for large displays (the layout becomes responsive for smaller displays sizes).
+    - Fluid width: the form sections and grids take the entire web browser's viewport size. 
 - Wizard View:
-    - Use property: use the [`oxf.fr.detail.view.appearance` property](../configuration/properties/form-runner-attachments.md#maximum-aggregate-attachment-size)
+    - Use property: use the [`oxf.fr.detail.view.appearance` property](/form-runner/feature/wizard-view.md#using-a-property)
     - Always or Never: enable or disable the wizard view for this form definition, no matter how the property is configured.
 - Wizard Navigation Validation Mode
     - Form Builder setting [SINCE Orbeon Forms 2018.1]
-    - Use property: use the [`oxf.xforms.xbl.fr.wizard.validate` property](../configuration/properties/form-runner.md)
+    - Use property: use the [`oxf.xforms.xbl.fr.wizard.validate` property](/form-runner/feature/wizard-view.md#lax-validated-mode)
     - Free, Lax or Strict: use the given validation mode for this form definition, no matter how the property is configured.
 - Wizard Subsections Navigation
     - Form Builder setting [SINCE Orbeon Forms 2018.1]
-    - Use property: use the [`oxf.xforms.xbl.fr.wizard.subsections-nav` property](../configuration/properties/form-runner.md)
+    - Use property: use the [`oxf.xforms.xbl.fr.wizard.subsections-nav` property](/form-runner/feature/wizard-view.md#subsections-navigation)
     - Always or Never: enable or disable subsection navigation for this form definition, no matter how the property is configured.
 - Wizard Subsections Table of Contents
     - Form Builder setting [SINCE Orbeon Forms 2018.1]
-    - Use property: use the [`oxf.xforms.xbl.fr.wizard.subsections-toc` property](../configuration/properties/form-runner.md)
+    - Use property: use the [`oxf.xforms.xbl.fr.wizard.subsections-toc` property](/form-runner/feature/wizard-view.md#visibility-in-the-table-of-contents)
     - "Show subsections for the active section only", "Show subsections for all sections", "Don't show subsections": use the given setting for this form definition, no matter how the property is configured.
+
+## PDF Options
+
+[SINCE Orbeon Forms 2019.2]
+
+![View Options](images/form-settings-pdf-options.png)
+
+- PDF page orientation
+    - Use property: use the [`oxf.fr.detail.rendered-page-orientation` property](/configuration/properties/form-runner-pdf.md#automatic-pdf-page-size-and-orientation)
+    - Portrait: use the portrait (vertical) orientation.
+    - Landscape: use the landscape (horizontal) orientation.
+- PDF page size
+    - Use property: use the [`oxf.fr.detail.rendered-page-size` property](/configuration/properties/form-runner-pdf.md#automatic-pdf-page-size-and-orientation)
+    - Letter: US letter size.
+    - A4: standard A4 size.
+    - Legal: US legal size.
 
 ## About this Form
 

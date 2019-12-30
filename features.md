@@ -77,7 +77,8 @@ As of 2016-04-19 this page is still being updated.
         - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
         - Wizard view: [doc](form-runner/feature/wizard-view.md)
     - Control Settings
-    - Wizard Options
+    - View Options
+    - PDF Options
     - About this Form
 - Control Settings: [doc](form-builder/control-settings.md)
     - control name
