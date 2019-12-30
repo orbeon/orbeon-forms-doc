@@ -2,16 +2,9 @@
 
 ## Upcoming releases
 
-### Orbeon Forms 2019.1
+### Orbeon Forms 2020.1
 
-__Please remember that the following schedule is a plan, not a promise:__
-
-- ~~2019-06: tentative release date~~
-- 2019-09: updated tentative release date
-
-### Orbeon Forms 2019.2
-
-For this release and/or 2020.1, we'd like to address some dogfood/customers usability issues. See the tentative [2019.2 items](https://github.com/orbeon/orbeon-forms/projects/17) for details.
+See the tentative [2020.1 items](https://github.com/orbeon/orbeon-forms/projects/20) for details.
 
 Consider:
 
@@ -25,11 +18,7 @@ Consider:
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2019-12: tentative release date
-
-### Orbeon Forms 2020.1
-
-TODO
+- 2020-06: tentative release date
 
 ## Past releases
 
