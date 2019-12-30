@@ -234,6 +234,14 @@ To re-encrypt all the data for certain forms, from the Form Runner home page in 
 	- "Re-encrypting 392/2401," while the re-encryption is in progress, here assuming it has already re-encrypted 391 documents out of 2401 it needs to re-encrypt.
 	- "Re-encryption finished," when the re-encryption is done for that form.
 
+### Reloading resources
+
+[SINCE Orbeon Forms 2019.2]
+
+Because Orbeon Forms caches form resources, if you override resources with the [`oxf.fr.resource` properties](/configuration/properties/form-runner.md#overriding-resources), those resources are not updated until the server restarts.    
+
+Using the "Reload resources" action will invalidate the cached resources of all the selected forms immediately. The next time the form is loaded, it will use up to date resources including those overridden in properties. 
+
 ### Reindexing
 
 [SINCE Orbeon Forms 2016.2]
