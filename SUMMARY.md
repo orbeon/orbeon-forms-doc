@@ -309,6 +309,7 @@
     * [State handling](contributors/state-handling.md)
     * [Contributor License Agreements (CLA)](contributors/cla.md)
 * Release notes
+    * [Orbeon Forms 2019.2](/release-notes/orbeon-forms-2019.2.md)
     * [Orbeon Forms 2019.1](/release-notes/orbeon-forms-2019.1.md)
     * [Orbeon Forms 2018.2.4](/release-notes/orbeon-forms-2018.2.4.md)
 * [Use cases](use-cases.md)
