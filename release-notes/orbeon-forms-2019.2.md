@@ -47,6 +47,7 @@ Including the features and enhancements above, we [closed over 180 issues](http
     - JavaScript API to obtain the data status ([doc](https://doc.orbeon.com/form-runner/advanced/client-side-javascript-api#telling-whether-the-form-data-is-safe))
     - Ability to pass headers to the `send()` action ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner/actions-form-runner-send#using-parameters))
     - Font embedding: support path relative to resources ([doc](https://doc.orbeon.com/form-builder/advanced/pdf-production/pdf-automatic))
+    - New low-level [`assets.baseline.updates` property](/configuration/advanced/javascript-css-assets.md#baseline-of-xforms-assets)
 - Other fixes and enhancements
     - Allow clearing the value of drodpowns with search ([\#4240](https://github.com/orbeon/orbeon-forms/issues/4240))
     - Lower-level `reset-form-data` action ([\#4221](https://github.com/orbeon/orbeon-forms/issues/4221))
@@ -86,6 +87,12 @@ See also:
     - Chrome for Android (stable channel)
 
 ## Compatibility notes
+
+### Removal of short namespaces support for the proxy portlet
+
+This was disabled by default since 2017.2.3 and 2018.1. See the [documentation](/form-runner/link-embed/liferay-proxy-portlet.md).
+
+There should be no impact unless you have client-side code which specifically looks for hardcoded short prefixes.
 
 ### Removed properties
 
