@@ -6,6 +6,11 @@
 
 See the tentative [2020.1 items](https://github.com/orbeon/orbeon-forms/projects/20) for details.
 
+Tentative focus:
+
+- Client-side embedding ([#1577](https://github.com/orbeon/orbeon-forms/issues/1577)
+- Setup client-side test infrastructure ()[#2743](https://github.com/orbeon/orbeon-forms/issues/2743)
+
 Consider:
 
 - [low-hanging fruits](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Low-Hanging+Fruit%22)
