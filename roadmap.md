@@ -10,6 +10,7 @@ Tentative focus:
 
 - Client-side embedding ([#1577](https://github.com/orbeon/orbeon-forms/issues/1577))
 - Setup client-side test infrastructure ([#2743](https://github.com/orbeon/orbeon-forms/issues/2743))
+- Workflow steps ([#3463](https://github.com/orbeon/orbeon-forms/issues/3463))
 
 Consider:
 
