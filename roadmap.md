@@ -8,8 +8,8 @@ See the tentative [2020.1 items](https://github.com/orbeon/orbeon-forms/projects
 
 Tentative focus:
 
-- Client-side embedding ([#1577](https://github.com/orbeon/orbeon-forms/issues/1577)
-- Setup client-side test infrastructure ()[#2743](https://github.com/orbeon/orbeon-forms/issues/2743)
+- Client-side embedding ([#1577](https://github.com/orbeon/orbeon-forms/issues/1577))
+- Setup client-side test infrastructure ([#2743](https://github.com/orbeon/orbeon-forms/issues/2743))
 
 Consider:
 
