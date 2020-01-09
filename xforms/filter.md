@@ -1,12 +1,10 @@
 # Using XForms from Java apps
 
-
-
 ## What this page is about
 
 This page relates to the use of _plain XForms applications_. If you use Form Builder and Form Runner, the content of this page is probably not relevant.
 
-See the [Form Runner Java Embedding API](../form-runner/link-embed/java-api.md) for integration with Form Runner.
+Orbeon doesn't recommend you write new code using this technology. Instead, Orbeon recommends that you use you use Form Builder and Form Runner, including the [Form Runner Java Embedding API](/form-runner/link-embed/java-api.md) for integration of Java applications with Form Runner.
 
 ## Introduction
 
@@ -355,4 +353,3 @@ _NOTE: In general, you do not need to know about these properties to use the Orb
 [10]: http://tomcat.apache.org/tomcat-7.0-doc/config/host.html#Single%20Sign%20On
 [11]: http://docs.oracle.com/javaee/5/tutorial/doc/bnajb.html
 [12]: http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue
-
