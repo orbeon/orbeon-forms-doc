@@ -11,20 +11,6 @@ Every build of Orbeon Forms runs a series of automated tests.
     
 See also [RFE #2743](https://github.com/orbeon/orbeon-forms/issues/2743) for further plans.
 
-## Misc
+## See also
 
-### Removing leftover databases on SQL Server
-
-*Q: Is this relevant anymore?*
-
-```sql
-BEGIN
-    DECLARE @qry nvarchar(max);
-    SELECT @qry = 
-        (SELECT 'DROP DATABASE ' + name + '; ' 
-         FROM sys.databases 
-         WHERE name LIKE 'orbeon_%_tomcat'
-         FOR XML PATH(''));
-    EXEC sp_executesql @qry;
-END;  
-```
+- [CE builds on Travis CI](https://travis-ci.org/orbeon/orbeon-forms/builds)
