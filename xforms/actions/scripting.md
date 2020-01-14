@@ -145,4 +145,4 @@ Here are the differences between the two:
 ## See also
 
 - [Adding your own JavaScript](../../configuration/properties/form-runner.md#adding-your-own-javascript)
-- [Form Runner client-side JavaScript API](../form-runner/advanced/client-side-javascript-api.md)
+- [Form Runner JavaScript API](/form-runner/api/other/form-runner-javascript-api.md)

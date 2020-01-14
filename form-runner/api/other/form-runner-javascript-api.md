@@ -1,6 +1,4 @@
-# Client-side JavaScript API
-
-
+# Form Runner JavaScript API
 
 ## Finding a Form Runner control by name
 
