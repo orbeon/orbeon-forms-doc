@@ -141,6 +141,7 @@
     * [Linking and embedding](form-runner/link-embed/README.md)
         * [Linking](form-runner/link-embed/linking.md)
         * [Java Embedding API](form-runner/link-embed/java-api.md)
+        * [JavaScript Embedding API](form-runner/link-embed/javascript-api.md)
         * [Liferay full portlet](form-runner/link-embed/liferay-full-portlet.md)
         * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
         * [Securing Form Runner access](form-runner/link-embed/securing.md)
