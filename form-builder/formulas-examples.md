@@ -330,8 +330,8 @@ Explanation:
 for
     $start          in xs:date('2018-12-15'),
     $end            in xs:date('2018-12-26'),
-    $startW         in number(format-date($start, '[F1]')),
-    $endW           in number(format-date($end, '[F1]')),
+    $startW         in xs:integer(format-date($start, '[F1]')),
+    $endW           in xs:integer(format-date($end, '[F1]')),
     $days           in days-from-duration($end - $start),
     $daysNoWeekends in $days - (floor($days div 7) * 2)
 return
