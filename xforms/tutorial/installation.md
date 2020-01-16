@@ -1,7 +1,5 @@
 # Installation
 
-
-
 ## Downloading and installing Java
 
 Java provides the cross-platform environment in which Orbeon Forms runs.

@@ -53,22 +53,22 @@ Some actions, such as the `email` action, don't have or don't require any parame
     email
 </property>
 ```
-Sending emails is configured [with properties](../../../configuration/properties/form-runner.md#email-settings). To send a form `my_app/my_form` to an email address `form-recipient@example.org` using for instance the SMTP server `smtp.example.org` you can add the following properties to [`properties-local.xml`](../../../configuration/properties/README.md):
+Sending emails is configured [with properties](../../../configuration/properties/form-runner.md#email-settings). To send a form `my-app/my-form` to an email address `form-recipient@example.org` using for instance the SMTP server `smtp.example.org` you can add the following properties to [`properties-local.xml`](../../../configuration/properties/README.md):
 ```xml
 <property as="xs:string"  
-    name="oxf.fr.email.smtp.host.my_app.my_form"          
+    name="oxf.fr.email.smtp.host.my-app.my-form"          
     value="smtp.example.org"/>
 <property as="xs:string"  
-    name="oxf.fr.email.from.my_app.my_form"               
+    name="oxf.fr.email.from.my-app.my-form"               
     value="noreply@example.org"/>
 <property as="xs:string"  
-    name="oxf.fr.email.to.my_app.my_form"                 
+    name="oxf.fr.email.to.my-app.my-form"                 
     value="form-recipient@example.org"/>
 <property as="xs:string"  
-    name="oxf.fr.email.smtp.username.my_app.my_form"      
+    name="oxf.fr.email.smtp.username.my-app.my-form"      
     value="user@example.org"/>
 <property as="xs:string"  
-    name="oxf.fr.email.smtp.credentials.my_app.my_form"   
+    name="oxf.fr.email.smtp.credentials.my-app.my-form"   
     value="******"/> <!-- replace with the password to access the SMTP server-->
 ```
 

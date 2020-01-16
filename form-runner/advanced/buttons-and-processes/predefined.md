@@ -1,7 +1,5 @@
 # Predefined buttons, processes and dialogs
 
-
-
 ## Predefined buttons
 
 The following buttons are predefined and associated with the processes of the same name:
@@ -119,4 +117,3 @@ The `result-dialog` action shows a configurable dialog. You can customize:
       name="oxf.fr.detail.submit.go.uri-xpath.*.*"
       value="/book/details/link"/>
     ```
-

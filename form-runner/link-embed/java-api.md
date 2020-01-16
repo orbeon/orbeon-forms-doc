@@ -73,8 +73,8 @@ And here is an example of embedding a form from a JSP page:
         API.embedFormJava(
             request,            // HttpServletRequest: incoming HttpServletRequest
             out,                // Writer: where the embedded form is written
-            "my_application",   // String: Form Runner app name
-            "my_form",          // String: Form Runner form name
+            "my-application",   // String: Form Runner app name
+            "my-form",          // String: Form Runner form name
             "new",              // String: Form Runner action name
             null,               // String: Form Runner document id (optional)
             null,               // String: query string (optional)

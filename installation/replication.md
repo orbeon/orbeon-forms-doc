@@ -1,7 +1,5 @@
 # Replication
 
-
-
 ## Availability
 
 This is an [Orbeon Forms PE][1] feature.

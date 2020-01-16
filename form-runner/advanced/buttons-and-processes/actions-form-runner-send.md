@@ -10,10 +10,10 @@ The `send` action is one of the most important actions that Orbeon Forms can per
 
 [SINCE Orbeon Forms 4.4 except `property`]
 
-The following example uses three parameters in the `send` action for the form `my_app/my_form`:
+The following example uses three parameters in the `send` action for the form `my-app/my-form`:
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.process.send.my_app.my_form" >
+<property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
     send(
         uri        = "http://example.org/accept-form",
         method     = "PUT",
@@ -138,26 +138,26 @@ The following parameters can be used:
 ### Using properties
 
 The following example refers in the `send` action to the properties with the common
-prefix `oxf.fr.detail.process.send.my_app.my_form`. It configures the URL, the method,
+prefix `oxf.fr.detail.process.send.my-app.my-form`. It configures the URL, the method,
 and the type of content using three additional sub-properties.
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.process.send.my_app.my_form" >
-    send("oxf.fr.detail.process.send.my_app.my_form")
+<property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
+    send("oxf.fr.detail.process.send.my-app.my-form")
 </property>
 <property
     as="xs:string"
-    name="oxf.fr.detail.process.send.my_app.my_form.uri"
+    name="oxf.fr.detail.process.send.my-app.my-form.uri"
     value="http://example.org/accept-form"
     />
 <property
     as="xs:string"
-    name="oxf.fr.detail.process.send.my_app.my_form.method"
+    name="oxf.fr.detail.process.send.my-app.my-form.method"
     value="PUT"
     />
 <property
     as="xs:string"
-    name="oxf.fr.detail.process.send.my_app.my_form.content"
+    name="oxf.fr.detail.process.send.my-app.my-form.content"
     value="metadata"
     />
 ```
@@ -197,7 +197,7 @@ The following properties are XPath Value Templates evaluating in the context of 
 **Example**
 
 ```xml
-<property as="xs:string" name="oxf.fr.detail.send.success.uri.*.*">
+<property as="xs:string" name="oxf.fr.detail.send.success.uri.my-app.my-form">
     /fr/service/custom/orbeon/echo?action=submit&amp;foo={
         encode-for-uri(xxf:instance("fr-form-instance")//foo)
     }&amp;bar={
@@ -333,7 +333,7 @@ The metadata is linked to the data with the `for` attribute:
 Here is an example of `send` process which sends XML data to a service, followed by sending metadata:
 
 ```xml
-<property as="xs:string"  name="oxf.fr.detail.process.send.orbeon.*">
+<property as="xs:string"  name="oxf.fr.detail.process.send.my-app.my-form">
     require-uploads
     then validate-all
     then send(
@@ -364,7 +364,7 @@ If the property is missing or empty, no annotation takes place. For example:
 ```xml
     <property
       as="xs:string"
-      name="oxf.fr.detail.send.success.annotate.acme.hr"
+      name="oxf.fr.detail.send.success.annotate.my-app.my-form"
       value="warning info"/>
 ```
 
@@ -376,6 +376,37 @@ If the property is missing or empty, no annotation takes place. For example:
         </my-section>
     </form>
 ```
+
+## Debugging the `send` action
+
+The `send` action operates on the server, so you won't see the data submitted in your browser's dev tools, in particular.
+
+There are a few ways to debug those requests:
+
+1. Setup the service you are calling to log requests, if it can do that.
+1. Use the built-in `echo` service, and modify your `send` process to look like this:
+    ```xml
+    <property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form">
+        send(
+            uri = "/fr/service/custom/orbeon/echo",
+            method="POST",
+            content="xml",
+            replace="all"
+        )
+    </property>
+    ```
+    This will send the payload to your browser window.
+1. Enable XForms logging and the [`submission-details`](/configuration/advanced/xforms-logging.md) token. The payloads will be logged to orbeon.log. This will log all Orbeon Forms submissions, however.
+1. Enable logging of http wire in `log4j.xml` with:
+    ```xml
+    <category name="org.apache.http.wire">
+        <priority value="debug"/>
+    </category>
+    ```
+    The information will be logged to orbeon.log. This will log all HTTP requests, however, and can be very verbose.
+1. Use an HTTP proxy like [Charles](https://www.charlesproxy.com/).
+
+The easiest ways are probably options 1 and 2 above.
 
 ## See also
 
