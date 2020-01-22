@@ -144,7 +144,7 @@ Explanation:
 
 ## Validating with a regular expression for an optional value
 
-Scenario: check that a given number value is either blank or has exactly 5 digits".
+Scenario: check that a given number value is either blank or has exactly 5 digits.
 
 ```xpath
 matches(string(.), '\d{5}') or xxf:is-blank(string(.))
