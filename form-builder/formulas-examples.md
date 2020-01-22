@@ -132,7 +132,7 @@ xxf:min-length(2) and xxf:max-length(140)
 
 ## Validating with a regular expression
 
-Scneario: check that a given value matches a regular expression, for example "only ASCII letters and digits, the dash, and underscore character".
+Scenario: check that a given value matches a regular expression, for example "only ASCII letters and digits, the dash, and underscore character".
 
 ```xpath
 matches(., '^[A-Za-z0-9\-_]+$')
@@ -141,6 +141,20 @@ matches(., '^[A-Za-z0-9\-_]+$')
 Explanation:
 
 - the standard `matches()` function applies the regular expression passed as second argument to the first argument, and returns true if it does match
+
+## Validating with a regular expression for an optional value
+
+Scenario: check that a given number value is either blank or has exactly 5 digits".
+
+```xpath
+matches(string(.), '\d{5}') or xxf:is-blank(string(.))
+```
+
+Explanation:
+
+- the standard `matches()` function applies the regular expression passed as second argument to the first argument, and returns true if it does match
+- the built-in `xxf:is-blank()` function returns `true()` if the value passed is blank
+- since the data is a number, we use the `string(.)` function to convert the value to a string before passing it to functions
 
 ## Make a control read-only based on the value of another control
 
