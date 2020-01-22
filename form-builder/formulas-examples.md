@@ -163,14 +163,13 @@ Scenario: Make a control read-only if the value of the `first-name` control is b
 Expression:
 
 ```xpath
-normalize-space($first-name) = ''
+xxf:is-blank($first-name)
 ```
 
 Explanation:
 
-* `$first-name` returns the value of the control with name "first-name"
-* `normalize-space()` is a standard XPath function which removes all leading and trailing white space and combine internal white space. Using this function ensures that, even if the value contains spaces, it resolves to an empty string.
-* `= ''` compares the result of the function to the empty string
+- `$first-name` returns the value of the control with name "first-name"
+- the built-in `xxf:is-blank()` function returns `true()` if the value passed is blank
 
 ## Setting a dynamic initial value
 
