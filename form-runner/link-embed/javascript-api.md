@@ -6,7 +6,11 @@ Since Orbeon Forms PE 2020.1. As of 2020.1, this feature is *experimental*: the 
 
 ## Rationale
 
-Server-side application using Java can use the 
+If you have your own application and would like to embed a form created with Form Builder:
+
+- If you have a Java web app, we recommend you use the [Java Embedding API](java-api.md).
+- If you are using Liferay, we recommend you use the [Liferay proxy portlet](liferay-proxy-portlet.md).
+- In all other cases, we recommend you use the JavaScript Embedding API, which offers the most flexibility, and will work irrelevant of the server-side technology or client-side libraries you are using.
 
 ## Usage
 
@@ -52,11 +56,11 @@ ORBEON.fr.API.embedForm(
   action,     
   documentId, 
   queryString
-)
+);
 ```
 
 | Parameter   | Optional  | Type         | Example             | Description                                                   |
-| ----------- | --------- | ------------ | -----------         | ------------------------------------------------------------- |
+| ----------- | --------- | ------------ | ------------------- | ------------------------------------------------------------- |
 | container   | No        | HTML element |                     | DOM element you want the form to be placed in                 |
 | context     | No        | String       | `"/orbeon"`         | Context where Orbeon Forms is deployed, typically             |
 | app         | No        | String       | `"human-resources"` | App name                                                      |
@@ -66,3 +70,13 @@ ORBEON.fr.API.embedForm(
 | queryString | Yes       | String       | `"job=clerk"`       | Additional parameters to pass to the form as query parameters |    
 
 The `documentId` parameter is mandatory for actions other than `new`, and must be `undefined` when the action is `new`. For `new`, if you don't need to pass a `queryString`, you can just omit the last 2 parameters in your call to `ORBEON.fr.API.embedForm()`, and if you need to pass a `queryString` then you must explicitly pass `undefined` as the value of `documentId`.
+
+### `destroyForm()` API
+
+To remove a form that you embedded earlier, call:
+
+```
+ORBEON.fr.API.destroyForm(container);
+```
+
+If you want to replace a form A shown in a given container by an other form B, you can just do so by calling `ORBEON.fr.API.embedForm()` a second time for form B, and don't need to explicitly first call `destroyForm()`.
