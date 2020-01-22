@@ -2,7 +2,7 @@
 
 ## Availability
 
-Since Orbeon Forms PE 2020.1. As of 2020.1, this feature is *experimental*: the API is very much subject to change, and we're interested in your feedback so we can continue to improve this feature.
+The Form Runner JavaScript Embedding API first shipped with Orbeon Forms PE 2020.1, and as of 2020.1, this feature is *experimental*: the API is very much subject to change, and we're interested in your feedback so we can continue to improve this feature.
 
 ## Rationale
 
@@ -10,15 +10,18 @@ If you have your own application and would like to embed a form created with For
 
 - If you have a Java web app, we recommend you use the [Java Embedding API](java-api.md).
 - If you are using Liferay, we recommend you use the [Liferay proxy portlet](liferay-proxy-portlet.md).
-- In all other cases, we recommend you use the JavaScript Embedding API, which offers the most flexibility, and will work irrelevant of the server-side technology or client-side libraries you are using.
+- In all other cases, we recommend you use the JavaScript Embedding API described on this page. It offers the most flexibility, and will work irrelevant of the server-side technology or client-side libraries you are using.
 
 ## Usage
 
 ### Forwarding
 
-If you're using the JavaScript embedding API, chances are that your application isn't running on Java. This means that Orbeon Forms and your application might be running on different servers, and if on the same server, will be running on different ports.
+If you're using the JavaScript embedding API, chances are that your application isn't Java on the server. This means that Orbeon Forms and your application might be running on different servers, and if on the same server, will be running on different ports.
 
-All the requests made by browser, whether for the page of your app that uses the embedding API, or for Orbeon Forms resources, will made to the same server and port. So it is your responsibility to setup that server so requests to Orbeon Forms are forwarded to the Orbeon Forms server, as shown in the diagram below.
+All browser requests, whether for the page of your app that uses the embedding API, or for Orbeon Forms resources, will made to the same server and port. It is your responsibility to setup that server so requests to Orbeon Forms are forwarded to the Orbeon Forms server, as shown in the diagram below. Exactly how to do so will depend on the server-side technology you are using. For instance:
+ 
+- If you're using the Apache HTTP Server, this can be done with the [mod_rewrite module](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
+- If you're using Microsoft IIS, you configure this with the IIS Manager, by creating a Reverse Proxy rule. 
 
 ![Network setup](images/javascript-api-network.png)
 
