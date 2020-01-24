@@ -1,7 +1,5 @@
 # Rich Text Editor Component
 
-
-
 ## Rationale
 
 This components wraps the [TinyMCE][1] rich text editor.
