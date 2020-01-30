@@ -14,6 +14,8 @@ Since 2013 we have had between two and four major releases a year. As of 2019, w
 
 Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 
+- 2020
+    - Orbeon Forms 2019.1.1: January 29, 2020 ([release notes](/release-notes/orbeon-forms-2019.1.1.md))
 - 2019
     - 2019.2 PE and 2019.2 CE: December 30, 2019 ([release notes](/release-notes/orbeon-forms-2019.2.md))
     - 2018.2.4 PE: November 21, 2019 ([release notes](/release-notes/orbeon-forms-2018.2.4.md))
