@@ -10,6 +10,21 @@ WEB-INF/resources/config/properties-local.xml
 
 Orbeon Forms will do a certain number of things out of the box without you having to setup anything in your `properties-local.xml`. But if you want to change the default behavior (and it is likely you will want to in order to setup access control, database access, configure buttons, etc.), you will need to make changes to that file. This page describes the basics of that process.
 
+## Setting and overriding properties
+
+You can change properties by editing `properties-local.xml`. That file goes in the directory `WEB-INF/resources/config`, inside the Orbeon Forms web app.
+
+If that file doesn't exist yet in your installation of Orbeon Forms, you can create it by renaming or copying the file `properties-local.xml.template` into `properties-local.xml`. At this point, your `properties-local.xml` will only contain an opening `<properties>` tag and closing `</properties>` tag, and you'll want to edit it to add properties between those two tags, as in:
+
+```xml
+<properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:oxf="http://www.orbeon.com/oxf/processors">
+    <property as="xs:string"
+              name="oxf.fr.persistence.provider.*.*.*"
+              value="oracle"/>
+</properties>
+```
+
 ## Documentation for specific properties
 
 Each Orbeon Forms subsystem defines its own properties. They are documented in the following pages:
@@ -76,21 +91,6 @@ In general, here is how you deal with properties:
 
 - you look up the documentation for a given property
 - if needed, you set or override the property in `properties-local.xml`
-
-## Setting and overriding properties
-
-You can change properties by editing `properties-local.xml`. That file goes in the directory `WEB-INF/resources/config`, inside the Orbeon Forms web app.
-
-If that file doesn't exist yet in your installation of Orbeon Forms, you can create it by renaming or copying the file `properties-local.xml.template` into `properties-local.xml`. At this point, your `properties-local.xml` will only contain an opening `<properties>` tag and closing `</properties>` tag, and you'll want to edit it to add properties between those two tags, as in:
-
-```xml
-<properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
-            xmlns:oxf="http://www.orbeon.com/oxf/processors">
-    <property as="xs:string"
-              name="oxf.fr.persistence.provider.*.*.*"
-              value="oracle"/>
-</properties>
-```
 
 ## Wildcards in properties
 
