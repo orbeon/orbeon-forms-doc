@@ -25,6 +25,8 @@ Default:
 
 ## Combined asset resources
 
+Starting with Orbeon Forms 2020.1, disabling combined resources deprecated. Disabling combined resources already doesn't work when embedding forms, whether with the [Java embedding API](../../form-runner/link-embed/java-api.md), the [JavaScript embedding API](../../form-runner/link-embed/javascript-api), or the [Liferay proxy portlet](../../form-runner/link-embed/liferay-proxy-portlet.md), and future versions of Orbeon Forms are likely to completely drop the support for non-combined resources.
+
 ### Rationale
 
 Serving external CSS and JavaScript assets can have a high performance cost on page loads. This is particularly important with the intensive use of JavaScript in Orbeon Forms. In particular, it can be shown that serving many small files is slower than serving a single large file.
@@ -91,7 +93,7 @@ Some CSS and JavaScript files are never included into aggregated resources:
 
 #### Basic configuration
 
-Starting with Orbeon Forms 2020.1, setting the value of this property to `false` is deprecated. Setting this property to `false` already doesn't work when embedding forms, whether with the [Java embedding API](../../form-runner/link-embed/java-api.md), the [JavaScript embedding API](../../form-runner/link-embed/javascript-api), or the [Liferay proxy portlet](../../form-runner/link-embed/liferay-proxy-portlet.md), and future versions of Orbeon Forms are likely to completely drop the support for non-combined resources.
+You enable this feature in `properties-local.xml` as follows:
 
 ```xml
 <property
