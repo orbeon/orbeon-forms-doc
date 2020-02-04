@@ -55,6 +55,7 @@
         * [Cut, copy and paste](form-builder/cut-copy-paste.md)
         * [Section and grid settings](form-builder/container-settings.md)                
         * [Section settings](form-builder/section-settings.md)
+        * [Grid settings](form-builder/grid-settings.md)
         * [Repeat settings](form-builder/repeat-settings.md)
         * [Repeated grids](form-builder/repeated-grids.md)
         * [Undo and redo](form-builder/undo-redo.md)

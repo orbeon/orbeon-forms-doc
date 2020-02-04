@@ -48,6 +48,7 @@ See [Section settings](section-settings.md).
 
 - [Repeat settings](repeat-settings.md)
 - [Section settings](section-settings.md)
+- [Grid settings](grid-settings.md)
 - [Repeated grids](repeated-grids.md)
 - [Formulas](formulas.md)
 - [Grid component](/form-runner/component/grid.md)

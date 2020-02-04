@@ -61,6 +61,7 @@ When using the [Wizard view](/form-runner/feature/wizard-view.md), repetition la
 ## See also
 
 - [Section and grid settings](container-settings.md)
+- [Grid settings](grid-settings.md)
 - [Repeat settings](repeat-settings.md)
 - [Repeated grids](repeated-grids.md)
 - [Formulas](formulas.md)
