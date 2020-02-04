@@ -1,6 +1,6 @@
 # Grid settings
 
-## Settings shared with grids
+## Settings shared with sections
 
 See [Section and grid settings](container-settings.md).
 
