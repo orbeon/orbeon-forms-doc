@@ -68,7 +68,7 @@ If the value has a space in it, say `chocolate chip`, then the result would be:
 
     chocolate chip strawberry
 
-and it would be unclear which value is selected.
+and it would be unclear which values are selected.
 
 ## Localization
 
