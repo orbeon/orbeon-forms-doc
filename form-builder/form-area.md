@@ -155,7 +155,7 @@ If a control is present, the following actions related to the control are possib
     - Simply enter text or select a value.
     - You can also set a calculated initial value from the ["Control Settings" dialog](control-settings.md).
 - **Edit the control's items:**
-    - Click on the "Edit Items" icon or test to open the [Itemset Editor dialog](itemset-editor.md) (for selection controls only).
+    - Click on the "Edit Items" icon or test to open the [Choices editor](itemset-editor.md) (for selection controls only).
 
 When your mouse pointer hovers over a grid cell containing a control, some icons allowing for further actions appear:
 

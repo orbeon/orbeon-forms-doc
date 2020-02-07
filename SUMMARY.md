@@ -50,7 +50,7 @@
         * [Toolbox](form-builder/toolbox.md)
         * [Control settings](form-builder/control-settings.md)
         * [Validation](form-builder/validation.md)
-        * [Itemset editor](form-builder/itemset-editor.md)
+        * [Choices editor](form-builder/itemset-editor.md)
         * [Publishing](form-builder/publishing.md)
         * [Cut, copy and paste](form-builder/cut-copy-paste.md)
         * [Section and grid settings](form-builder/container-settings.md)                

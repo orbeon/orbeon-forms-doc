@@ -89,7 +89,7 @@ As of 2016-04-19 this page is still being updated.
     - formulas: [doc](form-builder/formulas.md)
     - help text (plain text and rich text)
         - appearance of help messages: [blog post](https://blog.orbeon.com/2014/01/improving-how-we-show-help-messages.html)
-- Itemset Editor: [doc](form-builder/itemset-editor.md)
+- Choices editor: [doc](form-builder/itemset-editor.md)
     - Hints for checkboxes and radio buttons: [blog post](https://blog.orbeon.com/2014/02/hints-for-checkboxes-and-radio-buttons.html)
 - Section Settings: [doc](form-builder/section-settings.md)
     - whether section is collapsible

@@ -1,6 +1,4 @@
-# Itemset editor
-
-
+# Choices editor
 
 ## Introduction
 
@@ -35,13 +33,13 @@ You move, insert and remove items using the menu to the left of each row. For ex
 
 ## Selected items
 
-You can select a default value for a radio button directly in the Form Builder editor simply by clicking the desired radio button or checkbox. You can also do this in the itemset editor by clicking the radio button or checkbox associated with an item.
+You can select a default value for a radio button directly in the Form Builder editor simply by clicking the desired radio button or checkbox. You can also do this in the choices editor by clicking the radio button or checkbox associated with an item.
 
-For radio buttons, the itemset editor allows you to clear the  selected value with the "Clear Value" button.
+For radio buttons, the choices editor allows you to clear the  selected value with the "Clear Value" button.
  
 ## Internationalization
 
-When the form has more than one language, the itemset editor opens in the language selected in Form Builder. You can switch between languages directly in the itemset editor. Switching the language allow you to localize labels and hints. However, values are shared between all languages. 
+When the form has more than one language, the choices editor opens in the language selected in Form Builder. You can switch between languages directly in the choices editor. Switching the language allow you to localize labels and hints. However, values are shared between all languages. 
 
 ![](images/itemset-editor-language.png)
 
@@ -49,7 +47,7 @@ When the form has more than one language, the itemset editor opens in the langua
 
 [SINCE Orbeon Forms 2016.3]
 
-The "Remove All" button removes all the items in the itemset. This is particularly useful when opening the itemset editor for the first time for a given control, since by default itemsets contain default values.
+The "Remove All" button removes all the items in the itemset. This is particularly useful when opening the choices editor for the first time for a given control, since by default itemsets contain default values.
 
 ## Usability notes
 

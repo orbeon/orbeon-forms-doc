@@ -182,7 +182,7 @@ The controls appear like this at design time:
 | **Dynamic Data Dropdown**      | single   | dynamic dropdown bound to a REST service |
 | **Autocomplete**               | single   | autocompletion |
 
-You edit the choices of most selection controls with the [Itemset Editor](itemset-editor.md).
+You edit the choices of most selection controls with the [Choices editor](itemset-editor.md).
 
 The controls appear like this at design time:
 
@@ -229,7 +229,9 @@ The controls appear like this at design time:
 
 ### Choices
 
-See the [Itemset Editor](itemset-editor.md).
+Choices (sometimes called options) refer to the items which are part of a selection control such as a dropdown menu or checkboxes.
+
+For more, see the [Itemset Editor](itemset-editor.md).
 
 ### Data dropdown
 
