@@ -56,12 +56,21 @@ The "Remove All" button removes all the items in the itemset. This is particular
     - "Wax Apple" becomes "wax-apple"
 - When in a value field, pressing the "enter" key automatically adds a new item after the current item.
 
-## Constraints
+## Constraints on multiple selection controls values
 
-A value has constraints:
+While for *single selection controls* (e.g. radio buttons), the value can be any string of characters, for *multiple selection controls* (e.g. checkboxes), the value must __not contain spaces__.
 
-- For single selection controls (e.g. radio buttons), the value can be any string of characters.
-- For multiple selection controls (e.g. checkboxes), the value must not contain spaces.
+The reason for this restriction is that, in the data, the values of checkboxes are stored as *space-separated tokens*. So if you have values `chocolate` and `strawberry` selected, you'll have in the data:
+
+    chocolate strawberry
+
+If the value has a space in it, say `chocolate chip`, then the result would be:
+
+    chocolate chip strawberry
+
+and it would be unclear which value is selected.
+
+## Localization
 
 Item values are not localizable: they remain the same for each language. On the other hand, item labels can be localized. For example:
 
