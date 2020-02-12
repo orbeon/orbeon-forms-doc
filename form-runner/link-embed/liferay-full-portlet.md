@@ -10,7 +10,7 @@ for a comparison of portlet deployments.
 
 This is an Orbeon Forms PE feature.
 
-__The full portlet is no longer supported as of Orbeon Forms 2017.2 and newer.__
+__The full portlet is no longer supported as of Orbeon Forms 2017.2 and newer. Instead, please see the [Liferay proxy portlet](liferay-proxy-portlet.md).__
 
 ## Supported Liferay versions
 
