@@ -255,7 +255,7 @@
     * [XBL components](xforms/xbl/README.md)
         * [FAQ](xforms/xbl/faq.md)
         * Guide
-            * [Tutorial](xforms/xbl/tutorial.md)
+            * [XBL Tutorial](xforms/xbl/tutorial.md)
             * [Bindings](xforms/xbl/bindings.md)
             * [XForms models](xforms/xbl/xforms-models.md)
             * [Including content](xforms/xbl/including-content.md)
