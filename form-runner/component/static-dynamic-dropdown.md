@@ -68,7 +68,7 @@ In most cases, it will be simpler to have your service return all the possible v
 
 - Make sure you've checked the "With Search" appearance.
 - Select the "Yes" radio button under "Service performs search".
-- Pass the value typed by users as a request parameter to your service by adding `{$fr-search-value}` as appropriate on the URL, for instance: `/my-service?search={$fr-search-value}`.
+- Pass the value typed by users as a request parameter to your service by adding `{$fr-search-value}` as appropriate on the URL, for instance: `/fr/service/custom/orbeon/controls/countries?country-name={$fr-search-value}`.
 
 With this, Orbeon Forms will automatically call your service repeatedly as users type in the field, this to retrieve a new list of possible choices, and update the dropdown.
 
