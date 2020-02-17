@@ -6,6 +6,7 @@ The following versions of Tomcat are supported:
 
 | Orbeon Forms Version | Tomcat Versions|Comment                                    |
 |----------------------|----------------|-------------------------------------------|
+| 2019.2               | 8.5, 9         |                                           |
 | 2019.1               | 8.5, 9         |                                           |
 | 2018.2               | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below      |
 | 2018.1               | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below      |
