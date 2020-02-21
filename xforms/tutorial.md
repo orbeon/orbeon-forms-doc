@@ -1,7 +1,5 @@
 # Orbeon Forms XForms Tutorial - forms
 
-
-
 ## What is this?
 
 This is the tutorial for Orbeon Forms's XForms features. It is aimed at programmers who want to program Orbeon Forms, as opposed to analysis who want to use [Form Builder][1].
@@ -47,8 +45,6 @@ Orbeon Forms follows a few principles:
 Java provides the cross-platform environment in which Orbeon Forms runs.
 
 If you don't have Java installed yet, download it from http://www.oracle.com/technetwork/java/javase/downloads/index.html.
-
-_NOTE: If you use a Mac with Mac OS X, you probably have Java already installed on your machine, but if not visit <http: support.apple.com="" kb="" dl1572="">. Then follow the instructions to install Java._
 
 ### Downloading and installing Apache Tomcat
 
