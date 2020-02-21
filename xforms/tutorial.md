@@ -44,7 +44,7 @@ Orbeon Forms follows a few principles:
 
 Java provides the cross-platform environment in which Orbeon Forms runs.
 
-If you don't have Java installed yet, download it from http://www.oracle.com/technetwork/java/javase/downloads/index.html.
+If you don't have Java installed yet, download it from https://www.oracle.com/java/technologies/javase-downloads.html.
 
 ### Downloading and installing Apache Tomcat
 
