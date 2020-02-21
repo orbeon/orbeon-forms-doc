@@ -94,4 +94,5 @@ Section name           | Control name | Column name
 ## Limitations
 
 - Repeated grids and repeated sections are not supported, see [issue 1069](https://github.com/orbeon/orbeon-forms/issues/1069).
+- Only the default [form data format](https://doc.orbeon.com/form-runner/api/data-formats/form-data) is supported, see [issue 4440](https://github.com/orbeon/orbeon-forms/issues/4440). 
 - [SINCE Orbeon Forms 2016.1] Orbeon Forms handles fields inside nested sections and nested section templates. Such fields used to be ignored with Orbeon Forms 4.10 and earlier.
