@@ -452,7 +452,19 @@ With `my-repeated-grid` nested within `my-repeated-section`:
 
 ```xml
 <fr:control-setvalue/>
-``` 
+```
+
+Attribute|Mandatory|Value|Comment
+---------|---------|---------|---------
+`control`|Yes|control name| |
+`value`|Yes|value expression|value to set| |
+`at`|No|space-delimited position tokens: `start`, `end`, or a positive integer|missing leading tokens default to `end`|
+ 
+```xml
+<fr:control-setvalue
+    control="my-control"
+    value="current-date()"/>
+```
 
 ### Clearing the value of a control
 
