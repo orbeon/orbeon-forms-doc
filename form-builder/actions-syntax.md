@@ -287,7 +287,7 @@ Attribute|Mandatory|Value|Comment
 #### Passing a value
 
 ```xml
-<fr:value value="..." ref="...">
+<fr:value value="..." ref="..."/>
 ```
 
 When calling an [HTTP service](/form-builder/http-services.md), you can set XML request body values using nested `<fr:value>` elements.
@@ -301,7 +301,7 @@ Attribute|Mandatory|Value|Comment
 #### Passing a URL parameter
 
 ```xml
-<fr:url-param name="..." value="...">
+<fr:url-param name="..." value="..."/>
 ```
 
 When calling an [HTTP service](/form-builder/http-services.md), you can pass URL parameters using nested `<fr:url-param>` elements.
@@ -315,7 +315,7 @@ Attribute|Mandatory|Value|Comment
 #### Passing a SQL parameter
 
 ```xml
-<fr:sql-param index="..." value="...">
+<fr:sql-param index="..." value="..."/>
 ```
 
 When calling a [database service](/form-builder/database-services.md), you can pass parameters using nested `<fr:sql-param>` elements.
@@ -454,6 +454,8 @@ With `my-repeated-grid` nested within `my-repeated-section`:
 <fr:control-setvalue/>
 ```
 
+`<fr:control-setvalue/>` sets the value of a form control.
+
 Attribute|Mandatory|Value|Comment
 ---------|---------|---------|---------
 `control`|Yes|control name| |
@@ -474,6 +476,8 @@ Attribute|Mandatory|Value|Comment
 <fr:control-clear/>
 ``` 
 
+`<fr:control-clear/>` clears the value of a control. For attachment controls, this clears the file but also the file metadata (filename, mediatype, and size).
+
 Attribute|Mandatory|Value|Comment
 ---------|---------|---------|---------
 `control`|Yes|control name| |
@@ -488,7 +492,7 @@ Example:
 ### Setting the choices of a selection control
 
 ```xml
-<fr:control-setitems>
+<fr:control-setitems/>
 ```
 
 ### Writing to a dataset
