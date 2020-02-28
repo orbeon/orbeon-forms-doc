@@ -454,6 +454,25 @@ With `my-repeated-grid` nested within `my-repeated-section`:
 <fr:control-setvalue/>
 ``` 
 
+### Clearing the value of a control
+
+[SINCE Orbeon Forms 2020.1]
+
+```xml
+<fr:control-clear/>
+``` 
+
+Attribute|Mandatory|Value|Comment
+---------|---------|---------|---------
+`control`|Yes|control name| |
+`at`|No|space-delimited position tokens: `start`, `end`, or a positive integer|missing leading tokens default to `end`|
+
+Example:
+
+```xml
+<fr:control-clear control="my-control"/>
+```
+
 ### Setting the choices of a selection control
 
 ```xml
