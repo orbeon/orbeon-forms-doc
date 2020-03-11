@@ -70,11 +70,57 @@ XForms 2.0 features added with Orbeon Forms 2019.1:
 
 ## Orbeon Forms 2020.1
 
+### Features
+
 XForms 2.0 features added with Orbeon Forms 2020.1:
 
 - `xf:copy`
-    - Orbeon Forms implements XForms 2.0 enhancements to `xf:copy` including support for attributes, XPath 2 support, and clarifications.
-    - *NOTE: While `xf:copy` is an XForms 1.0 feature, Orbeon Forms didn't support it until version 2020.1.*   
+    - Orbeon Forms implements XForms 2.0 enhancements to `xf:copy` including support for `xf:item`, attributes, XPath 2 support, and clarifications.
+    - *NOTE: While `xf:copy` is an XForms 1.0 feature, Orbeon Forms didn't support it until version 2020.1.*
+    
+### Example of `xf:copy` attributes support 
+
+Let's say we an XML representation which proposes a discriminated union based on a `type` attribute. We have, in the data, either:
+
+```xml
+<label type="PredefinedButtonLabel"/>
+```
+
+or:
+
+```xml
+<label type="CustomButtonLabel">
+    <name type="object">
+        <values type="object">
+            <en>Custom Button</en>
+        </values>
+    </name>
+</label>
+```
+
+With `xf:copy`, the selection is written as follows:
+
+```xml
+<xf:select1 ref="label" appearance="full">
+    <xf:item>
+        <xf:label>Predefined</xf:label>
+        <xf:copy ref="xf:attribute('type', 'PredefinedButtonLabel')"/>
+    </xf:item>
+    <xf:item>
+        <xf:label>Custom</xf:label>
+        <xf:copy
+            ref="
+                xf:attribute('type', 'CustomButtonLabel'),
+                if (@type = 'CustomButtonLabel') then
+                    *
+                else
+                    instance('my-custom-button-label-template')"/>
+    </xf:item>
+</xf:select1>
+<xf:input ref="label/name/values/en"/>
+```
+
+The `if ... then ... else` pattern in the second `xf:copy` is there so that, in case the user has already selected a `CustomButtonLabel` and edited the value of the button label (here "Custom Button" initially), there will still be an exact match and the item shows as selected.
 
 ## Remaining features
 
