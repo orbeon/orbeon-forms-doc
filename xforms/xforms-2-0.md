@@ -75,7 +75,10 @@ XForms 2.0 features added with Orbeon Forms 2019.1:
 XForms 2.0 features added with Orbeon Forms 2020.1:
 
 - `xf:copy`
-    - Orbeon Forms implements XForms 2.0 enhancements to `xf:copy` including support for `xf:item`, attributes, XPath 2 support, and clarifications.
+    - Orbeon Forms implements XForms 2.0 enhancements to `xf:copy` including support for:
+        - `xf:item`
+        - attributes and other node types
+        - XPath 2
     - *NOTE: While `xf:copy` is an XForms 1.0 feature, Orbeon Forms didn't support it until version 2020.1.*
     
 ### Example of `xf:copy` attributes support 
