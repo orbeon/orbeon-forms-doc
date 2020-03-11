@@ -46,7 +46,7 @@ Here is how you pass context attributes when executing an action:
 | `name` |  Mandatory | Name of the context attribute. |
 | `value` |  Mandatory |  XPath 2.0 expression determining the value of the context attribute.  |
 
-Note that the context attribute name cannot be a qualified name (QName), because this would not be compatible with [DOM 2 Events][1]. However, a QName can be used as custom event name.
+Note that the context attribute name cannot be a qualified name (QName), because this would not be compatible with [DOM 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/events.html). However, a QName can be used as custom event name.
 
 In order to avoid confusion with standard XForms names, we recommend you use prefixed names if you use custom context information with standard event names (when supported). However, with custom event names, prefixing is not necessary.
 
@@ -115,7 +115,7 @@ When that control is within a repeat iteration, the actual control targetted is 
 
 ## Multiple event names, observers and targets on event handlers
 
-The `event`, `observer` and `target` attributes, defined by the [XML Events specification][2], only support one event name, observer, or target respectively. Orbeon Forms supports as an extension a list of space-separated values. The behavior is as follows:
+The `event`, `observer` and `target` attributes, defined by the [XML Events specification](https://www.w3.org/TR/2010/NOTE-xml-events2-20101216/), only support one event name, observer, or target respectively. Orbeon Forms supports as an extension a list of space-separated values. The behavior is as follows:
 
 * For `event`: the handler is called if any of the specified events matches.
 
@@ -144,7 +144,7 @@ The `event`, `observer` and `target` attributes, defined by the [XML Events spec
     </xf:action>
     ```
 
-The extensions above have been [requested][8] for inclusion in XML Events 2.
+The extensions above have been [requested](https://lists.w3.org/Archives/Public/www-html-editor/2008JanMar/0012.html) for inclusion in XML Events 2.
 
 ## Catching all events  
 
@@ -218,11 +218,9 @@ In this example, the handler will catch events that happen not only in the curre
 
 This is an advanced feature and should be used wisely. It is used in Orbeon Forms by the error summary (`fr:error-summary`) and by Form Builder.
 
-[1]: https://www.w3.org/TR/DOM-Level-2-Events/events.html
-[2]: https://www.w3.org/TR/2010/NOTE-xml-events2-20101216/
-[3]: https://www.w3.org/TR/DOM-Level-3-Events/
-[6]: https://www.w3.org/TR/2003/NOTE-DOM-Level-3-Events-20031107/keyset.html
-[8]: https://lists.w3.org/Archives/Public/www-html-editor/2008JanMar/0012.html
+[SINCE Orbeon Forms 2020.1]
+
+`xxf:phantom="true"` handlers can be placed within repeats. This was not previously allowed. 
 
 ## See also
 
