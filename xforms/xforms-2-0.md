@@ -68,6 +68,14 @@ XForms 2.0 features added with Orbeon Forms 2019.1:
     - `xf:uri-param-names($uri as xs:string) as xs:string*`
     - `xf:uri-param-values($uri as xs:string, $name as xs:string) as xs:string*`
 
+## Orbeon Forms 2020.1
+
+XForms 2.0 features added with Orbeon Forms 2020.1:
+
+- `xf:copy`
+    - Orbeon Forms implements XForms 2.0 enhancements to `xf:copy` including support for attributes, XPath 2 support, and clarifications.
+    - *NOTE: While `xf:copy` is an XForms 1.0 feature, Orbeon Forms didn't support it until version 2020.1.*   
+
 ## Remaining features
 
 For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+sort%3Aupdated-desc+label%3A%22Area%3A+XForms+2.0%22).
