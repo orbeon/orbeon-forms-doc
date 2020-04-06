@@ -38,6 +38,7 @@ In this view:
 
 - Each line shows only forms that are *published and available*.
 - For each form, the app name, form name and title in the current language are shown.
+- The form version is also shown. [SINCE Orbeon Forms 2020.1]
 - You can navigate to the form's Summary, New or View page, depending on permissions, by clicking on a line.
 - Forms are sorted by last modification time.
 - Libraries are never shown in this view.
@@ -50,7 +51,7 @@ In this view:
 
 When the user has access to admin operations, new information is shown:
 
-- whether the form is available or unavailable ("unpublished")
+- whether the form is available or unavailable
 - whether the form is a library form
 
 Unavailable forms remain on the server, but any user access to an unavailable form behaves as if the form definition had never been published. Data associated with the form definition is not touched, but cannot be read or updated via the form definition when it is unavailable.
@@ -68,12 +69,18 @@ The operations listed in the Operations menu are then available depending on the
 
 ### Controlling form definitions availability
 
-- __Publish local forms:__ make an unavailable form definition available again.
-- __Unpublish local forms:__ make a published form definition unavailable.
-
-Initially, when publishing a form definition with Form Builder, the form definition is available.
+- __Make available local forms:__ make an unavailable form definition available again.
+- __Make unavailable local forms:__ make a published form definition unavailable.
 
 ![Unavailable](../images/home-unavailable.png)
+
+Initially, when publishing a form definition with Form Builder, the form definition is made available, unless you choose the option "Make published form available" to "No".
+
+![](../../form-builder/images/publish-version-next.png)
+
+[SINCE Orbeon Forms 2020.1]
+
+Making a form definition available or unavailable also takes into account the *version* of the form definition(s) selected.  
 
 ### Upgrading form definitions
 
@@ -85,8 +92,9 @@ Initially, when publishing a form definition with Form Builder, the form definit
  
 Specifically, this operation, for each selected form definition:
 
-1. Reads the latest version of the published form definition, whether it is available or unavailable.
+1. Reads the latest version (or selected version [SINCE Orbeon Forms 2020.1]) of the published form definition, whether it is available or unavailable.
 1. Loads the latest versions of the published section templates that might be associated with that form definition.
+    - TODO: this needs fixing, see #3885
 1. Upgrades the form definition markup to the latest format, as if loading it in Form Builder and saving it again.
 1. Includes the latest section templates loaded above into the form definition.
 1. Saves back the form definition, either as a new version or as the same version (see below for details).
@@ -98,7 +106,7 @@ Important notes when [form definition versioning](https://blog.orbeon.com/2014/0
 - From Orbeon Forms 4.6 (included) to 2016.1 (excluded): a *new* form definition version is created when the form definition is upgraded.
 - From Orbeon Forms 2016.1 (included): the upgraded form definition *overrides* the previously-published form definition. 
 
-When form definition versioning is used section templates are in use, you have to be very careful because the format of the data covered by section templates might have changed and might make the upgraded form incompatible with existing data. See also [Publishing](../../form-builder/publishing.md#versioning).
+When form definition versioning is used section templates are in use, you have to be very careful because the format of the data covered by section templates might have changed and might make the upgraded form incompatible with existing data. See also [Publishing](/form-builder/publishing.md#versioning).
 
 We advise that you only republish form definitions which use both form definition versioning and section templates if you know that the format of the data covered by the section templates remains compatible.
 
@@ -106,7 +114,7 @@ We advise that you only republish form definitions which use both form definitio
 
 Here is how you can use this operation to update your form definitions' section template to the latest published section templates:
 
-1. Publish your section templates from Form Builder (see [Section templates](../../form-builder/section-templates.md)). 
+1. Publish your section templates from Form Builder (see [Section templates](/form-builder/section-templates.md)). 
 2. In the Home page, select which forms you want to update.
 3. Run the "Upgrade local form definitions" action.
 
@@ -118,7 +126,7 @@ This is an Orbeon Forms PE feature.
 
 #### Introduction
 
-This feature allows you to configure access to a remote server and to publish, unpublish, and transfer forms between the local and remote server.
+This feature allows you to configure access to a remote server and to make available, make unavailable, and transfer (push/pull) forms between the local and remote server.
 
 #### Configuration on the local server
 
@@ -193,8 +201,8 @@ When the remote server is configured as above, the first time you go to the Form
 
 Once the credentials are correct, the Home page retrieves the remote server's list of deployed forms and metadata, which appears in a new *Remote* column group. You then have access to new operations:
 
-- __Publish remote form:__ make an unavailable form available again on the remote server.
-- __Unpublish remote form:__ make a previously published form unavailable on the remote server.
+- __Make available remote form:__ make an unavailable form available again on the remote server.
+- __Make unavailable remote form:__ make a previously published form unavailable on the remote server.
 - __Push to remote:__ copy a form definition and its attachments from the local to the remote server.
 - __Pull from remote:__ copy a form definition and its attachments from the remote to the local server.
 - __Upgrade remote form definitions:__ upgrade the remote form definition (see [Upgrading form definitions](#upgrading-form-definitions)).
