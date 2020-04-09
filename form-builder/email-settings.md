@@ -24,7 +24,7 @@ If the form definition has more than one language, subject and body are specifie
 
 ## Email subject
 
-You can specify an email subject by deselecting the "Template from Properties" checkbox. When that checkbox is selected, the subject template [comes from a property](../configuration/properties/form-runner/detail-page/email.md#email-subject-and-body). This is the default for backward compatibility.
+You can specify an email subject by deselecting the "Template from Properties" checkbox. When that checkbox is selected, the subject template [comes from a property](/configuration/properties/form-runner-email.md#email-subject-and-body). This is the default for backward compatibility.
 
 ```xml
 <property 
@@ -37,7 +37,7 @@ You can specify an email subject by deselecting the "Template from Properties" c
 
 ## Email body
 
-You can specify an email body by deselecting the "Template from Properties" checkbox. When that checkbox is selected, the body template [comes from a property](../configuration/properties/form-runner/detail-page/email.md#email-subject-and-body). This is the default for backward compatibility.
+You can specify an email body by deselecting the "Template from Properties" checkbox. When that checkbox is selected, the body template [comes from a property](/configuration/properties/form-runner-email.md#email-subject-and-body). This is the default for backward compatibility.
 
 ```xml
 <property 
@@ -62,5 +62,5 @@ When the form definition has more than one language, a language selector appears
 
 ## See also
 
-- [Email subject and body](../configuration/properties/form-runner/detail-page/email.md#email-subject-and-body)
+- [Email subject and body](/configuration/properties/form-runner-email.md#email-subject-and-body)
 - [Template syntax](template-syntax.md)
