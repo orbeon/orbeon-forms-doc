@@ -31,6 +31,8 @@ You can add new parameters with the "+" icon and remove them with the "-" icon.
 
 The following options are available for each template parameter:
 
+![Template parameter options](images/template-parameter-options.png)
+
 - Parameter name: this must be unique among parameters.
 - Parameter value:
     - __Control Value:__ the value of a form control.
@@ -62,6 +64,8 @@ A template may omit references to any or all template parameters.
 [SINCE Orbeon Forms 2020.1]
 
 Links are intended to point to some Orbeon Forms pages or resources (namely, the PDF file). The end user might see such links in explanatory text and email bodies, in particular.
+
+![Links in an email template](images/template-parameter-links-example.png)
 
 For this purpose, Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty: 
 
