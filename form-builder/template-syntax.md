@@ -37,11 +37,48 @@ The following options are available for each template parameter:
     - __XPath Expression:__ calculated expression.
     - __All Control Values:__ the value of all form controls.
         - This is only available for the email body.
-        - This is experimental as of Orbeon Forms 2018.1. 
+        - This is experimental as of Orbeon Forms 2018.1.
+    - Links [SINCE Orbeon Forms 2020.1]
+        - This is available for
+            - Email Body
+            - Label
+            - Hint
+            - Help Message
+            - Explanatory Text 
+        - Link to the "edit" page
+        - Link to the "view" page
+        - Link to the "new" page
+        - Link to the "summary" page
+        - Link to the "home" page
+        - Link to the PDF file 
 
-*NOTE: For the email subject and body, an XPath expression runs in the context of the form data's root element. However, the [Form Runner function library](../xforms/xpath/extension-form-runner.md) is not yet available to expressions as of Orbeon Forms 2018.1. For labels, hints and help messages, the Form Runner function library is available.*
+*NOTE: For the email subject and body, an XPath expression runs in the context of the form data's root element. However, the [Form Runner function library](/xforms/xpath/extension-form-runner.md) is not yet available to expressions as of Orbeon Forms 2018.1. For labels, hints and help messages, the Form Runner function library is available.*
 
 A template may omit references to any or all template parameters.
+
+## Links
+
+[SINCE Orbeon Forms 2020.1]
+
+Links are intended to point to some Orbeon Forms pages or resources (namely, the PDF file). The end user might see such links in explanatory text and email bodies, in particular.
+
+For this purpose, Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty: 
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.fr.external-base-url"
+    value=""/>
+```
+
+You typically set it to an absolute URL as follows:
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.fr.external-base-url"
+    value="https://orbeon.acme.org/forms"/>
+```  
 
 ## Localization
 
