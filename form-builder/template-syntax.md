@@ -38,19 +38,20 @@ The following options are available for each template parameter:
     - __All Control Values:__ the value of all form controls.
         - This is only available for the email body.
         - This is experimental as of Orbeon Forms 2018.1.
-    - Links [SINCE Orbeon Forms 2020.1]
-        - This is available for
+    - __Links__ [SINCE Orbeon Forms 2020.1]
+        - Links are available for the following:
             - Email Body
             - Label
             - Hint
             - Help Message
             - Explanatory Text 
-        - Link to the "edit" page
-        - Link to the "view" page
-        - Link to the "new" page
-        - Link to the "summary" page
-        - Link to the "home" page
-        - Link to the PDF file 
+        - Links include:
+            - Link to the "edit" page
+            - Link to the "view" page
+            - Link to the "new" page
+            - Link to the "summary" page
+            - Link to the "home" page
+            - Link to the PDF file 
 
 *NOTE: For the email subject and body, an XPath expression runs in the context of the form data's root element. However, the [Form Runner function library](/xforms/xpath/extension-form-runner.md) is not yet available to expressions as of Orbeon Forms 2018.1. For labels, hints and help messages, the Form Runner function library is available.*
 
