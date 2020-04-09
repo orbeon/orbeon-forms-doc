@@ -79,7 +79,9 @@ You typically set it to an absolute URL as follows:
     as="xs:string"
     name="oxf.fr.external-base-url"
     value="https://orbeon.acme.org/forms"/>
-```  
+```
+
+*NOTE: As of Orbeon Forms 2020.1, links cannot point back to Form Runner when used with [embedding](/form-runner/link-embed/java-api.md) or the [ [Form Runner proxy portlet](/form-runner/link-embed/liferay-proxy-portlet.md).*
 
 ## Localization
 
