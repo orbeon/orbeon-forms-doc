@@ -54,3 +54,4 @@ See [Section settings](section-settings.md).
 - [Grid component](/form-runner/component/grid.md)
 - [Section component](/form-runner/component/section.md)
 - [Wizard view](/form-runner/feature/wizard-view.md)
+- Blog post: [Dynamic loading of closed sections](https://blog.orbeon.com/2020/04/dynamic-loading-of-closed-sections.html)

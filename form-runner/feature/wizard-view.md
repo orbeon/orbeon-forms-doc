@@ -308,11 +308,11 @@ In addition, each repetition can have an individual [repetition label](/form-bui
 
 - [Synchronizing repeated content](/form-builder/synchronize-repeated-content.md)
 - [Repeat settings](/form-builder/repeat-settings.md)
-- [Dynamic iteration label](/form-builder/form-editor/section-settings.md#dynamic-iteration-label)
-- [Wizard XBL component](../component/wizard.md)
-- [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md)
+- [Dynamic iteration label](/form-builder/section-settings.md#dynamic-iteration-label)
+- [Wizard XBL component](/form-runner/component/wizard.md)
+- [Buttons and Processes](/form-runner/advanced/buttons-and-processes/README.md)
 - Blog posts
     - [Form Runner Wizard View](https://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
     - [New wizard validated mode](https://blog.orbeon.com/2015/03/new-wizard-validated-mode.html)
     - [Synchronized master-detail views](https://blog.orbeon.com/2019/01/synchronized-master-detail-views.html)
-    
+    - [Dynamic loading of closed sections](https://blog.orbeon.com/2020/04/dynamic-loading-of-closed-sections.html)
