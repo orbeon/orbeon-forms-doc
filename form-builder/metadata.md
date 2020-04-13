@@ -1,7 +1,5 @@
 # Toolbox component metadata
 
-
-
 ## Rationale
 
 XBL components can be loaded by the Form Builder toolbox. In order for Form Builder to have information about those components, metadata can be added to each XBL binding.
@@ -254,3 +252,4 @@ The text for control `<xf:label>`, `<xf:hint>`, `<xf:help>`, and `<xf:alert>`, c
 ## See also
 
 - [Custom control settings](control-settings.md#custom-control-settings)
+- [Form Builder toolbox properties](/configuration/properties/form-builder.md#toolbox)

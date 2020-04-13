@@ -26,7 +26,10 @@ Depending on your monitor or browser size, you can use the scrollbar to the righ
 
 ## Configuration of the toolbox
 
-The toolbox can be configured via properties and component metadata.
+The toolbox can be configured via:
+ 
+- [Properties](/configuration/properties/form-builder.md#toolbox): for selecting and ordering the components that show in the toolbox. 
+- [Component metadata](form-builder/metadata.md): for the component names.
 
 ## Cut, copy and paste
 
@@ -274,4 +277,5 @@ The autocomplete control is a single item selection control that loads a list of
 - [Section templates](section-templates.md)
 - [Documented XBL components](../form-runner/component/README.md)
 - [XBL components](../xforms/xbl/README.md)
-
+- [Form Builder toolbox properties](/configuration/properties/form-builder.md#toolbox)
+- [Component metadata](form-builder/metadata.md): for the component names.

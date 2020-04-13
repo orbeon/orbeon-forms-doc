@@ -4,7 +4,7 @@
 
 For the latest default values of Form Builder properties, see [properties-form-builder.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-builder.xml).
 
-## Toolbox 
+## Toolbox
 
 ### Groups of controls
 
@@ -170,7 +170,8 @@ To enable form authors to edit text with formatting shown by the Explanatory Tex
         "forced_root_block" : "div",
         "verify_html"       : true,
         "visual_table_class": "fr-tinymce-table",
-        "skin"              : false
+        "skin"              : false,
+        "theme"             : "modern"
     }
 </property>
 ```
@@ -193,7 +194,12 @@ For example, to remove the `link` button but add font selection:
         "forced_root_block" : "div",
         "verify_html"       : true,
         "visual_table_class": "fr-tinymce-table",
-        "skin"              : false
+        "skin"              : false,
+        "theme"             : "modern"
     }
 </property>
 ```
+
+## See also
+
+- [Form Builder toolbox properties](/configuration/properties/form-builder.md#toolbox)
