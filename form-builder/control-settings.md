@@ -36,33 +36,37 @@ The following email options are available:
 
 *NOTE: SINCE Orbeon Forms 2018.2, these options are in a separate list.*
     
-- __Email Recipient:__
+- __Email recipient:__
     - When selected, the control is used to determine an email recipient ("To:") when the form data is sent by email.
     - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.to` property is used.
     - A single control value can contain more than one email address, separated by commas (`,`) or spaces.
-- __Email Carbon Copy Recipient:__
+- __Email carbon copy recipient:__
     - SINCE Orbeon Forms 2017.1
     - When selected, the control is used to determine a carbon copy email recipient ("Cc:") when the form data is sent by email.
     - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.cc` property is used.
     - A single control value can contain more than one email address, separated by commas (`,`) or spaces.
-- __Email Blind Carbon Copy Recipient:__
+- __Email blind carbon copy recipient:__
     - SINCE Orbeon Forms 2017.1
     - When selected, the control is used to determine a blind carbon copy email recipient ("Bcc:") when the form data is sent by email.
     - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.bcc` property is used.
     - A single control value can contain more than one email address, separated by commas (`,`) or spaces.
-- __Email Sender:__
+- __Email sender:__
     - SINCE Orbeon Forms 2017.1
     - When selected, the control is used to determine an email sender ("From:") when the form data is sent by email.
     - Only *one* "From:" email address is used, specifically the first non-blank address selected in the form. If no such address is found the `oxf.fr.email.from` property is used.
-- __Exclude from Email Body:__
+- __Email reply-to:__
+    - SINCE Orbeon Forms 2020.1
+    - When selected, the control is used to determine a reply-to address ("Reply-To:") when the form data is sent by email.
+    - Only *one* "Reply-To:" email address is used, specifically the first non-blank address selected in the form. If no such address is found the `oxf.fr.email.reply-to` property is used.
+- __Exclude from email body:__
     - SINCE Orbeon Forms 2018.1
     - When using "All Control Values" in an [email body template](email-settings.md), controls selected with this checkbox will be
       *excluded* and omitted from the email body.
-- __Include as Email Attachment__:
+- __Include as email attachment__:
     - SINCE Orbeon Forms 2016.1
     - this option only shows for file and image attachments
     - when the property `oxf.fr.email.attach-files` is set to `selected`, only file and image attachments with this option checked are attached to the email
-- __Show in Email Subject:__
+- __Show in email subject:__
     - DEPRECATED SINCE Orbeon Forms 2018.1: Use a [template for the subject](email-settings.md) instead.
     - When selected, the control value is used as part of the subject of the email when the form data is sent by email.
     - If more than one non-blank values are found, they are all included in the email subject, comma-separated.

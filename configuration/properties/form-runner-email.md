@@ -45,8 +45,13 @@ The following properties control the connection to the SMTP server:
 
 ## Email addresses properties
 
-- `from`: sender email address(es) appearing in the email sent
-- `to`: recipient email address(es) of the email sent
+- `from`: 
+    - sender email address(es) appearing in the email sent
+- `reply-to`:
+    - SINCE Orbeon Forms 2020.1
+    - message `Reply-To` address(es)
+- `to`: 
+    - recipient email address(es) of the email sent
 - `cc`:
     - SINCE Orbeon Forms 2017.1
     - carbon copy recipient email address(es) of the email sent
@@ -61,6 +66,11 @@ List of emails are space- or comma- separated.
     as="xs:string"
     name="oxf.fr.email.from.*.*"
     value="john@example.org"/>
+
+<property
+    as="xs:string"
+    name="oxf.fr.email.reply-to.*.*"
+    value="john@acme.org"/>
 
 <property
     as="xs:string"
