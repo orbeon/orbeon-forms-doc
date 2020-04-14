@@ -21,6 +21,8 @@ If a control name is not explicitly specified, Form Builder assigns a default na
 
 A control name can be changed, provided it doesn't collide with another control name (an error will show otherwise). [SINCE Orbeon Forms 2019.1] When renaming a control, all dependent [formulas](formulas.md) that use the `$foo` notation, as well as all dependent [templates](template-syntax.md) and [actions](actions.md), including [when using the new syntax](actions-syntax.md).
 
+##### Main options
+
 The following options are available:
 
 - __Show on Summary page:__
@@ -31,6 +33,8 @@ The following options are available:
     - SINCE Orbeon Forms 2018.1
     - This is an Orbeon Forms PE feature.
     - See [Field-level encryption](/form-builder/field-level-encryption.md) for details.
+
+##### Email options
     
 The following email options are available:
 
