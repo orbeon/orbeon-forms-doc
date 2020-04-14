@@ -162,11 +162,11 @@ Class Name          |Comment   |
 
 Class Name          |Element            |Comment   |
 ----------          |----------         |----------|
-`xforms-label`      |                   | a label element
-`xforms-help`       |                   | a help element
-`xforms-hint`       |                   | a hint element
-`xforms-alert`      | `.xforms-alert`   | an alert element
-`xforms-active`     |                   | an active alert
+`xforms-label`      |                   | a label
+`xforms-help`       |                   | a help
+`xforms-hint`       |                   | a hint
+`xforms-alert`      |                   | an alert
+`xforms-active`     | `.xforms-alert`   | an active alert
 `xforms-items`      |                   | radio/checkbox items
 `xforms-selected`   |                   | wrapper around a selected checkbox/radio button
 `xforms-deselected` |                   | wrapper around a deselected checkbox/radio button
