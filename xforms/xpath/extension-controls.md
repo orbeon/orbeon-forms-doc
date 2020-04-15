@@ -132,7 +132,7 @@ The implementor of the component can use the parameter with:
     value="xxf:component-param-value('suffix')"/>
 ```
 
-See also [`fr:component-param-value()`](/xforms/xpath/extension-functions/extension-form-runner.md#fr-component-param-value).
+See also [`fr:component-param-value()`](/xforms/xpath/extension-form-runner.md#fr-component-param-value).
 
 ## xxf:context()
 

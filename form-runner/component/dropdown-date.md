@@ -14,7 +14,7 @@ By default, the years show from 1970 to the current year.
 
 ### From Orbeon Forms 2020.1
 
-The values for the start and end year are determined as with the [`fr:component-param-value()`](/xforms/xpath/extension-functions/extension-form-runner.md#fr-component-param-value) function, in the following order:
+The values for the start and end year are determined as with the [`fr:component-param-value()`](/xforms/xpath/extension-form-runner.md#fr-component-param-value) function, in the following order:
 
 1. `start-year` and `end-year` attributes on the control
 2. Form-level settings (in the `fr-form-metadata` instance)
