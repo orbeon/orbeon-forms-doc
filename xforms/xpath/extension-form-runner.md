@@ -304,18 +304,26 @@ Example:
 
 [SINCE Orbeon Forms 2018.1]
 
+```xpath
+fr:component-param-value(
+    $name as xs:string
+) as xs:anyAtomicType?
+```
+
 This function is similar to `xxf:component-param-value()`, but is designed to be used in XBL components that are expected to run in the context of Form Runner. It searches parameters in this order:
 
-1. The string value of the given parameter of the current XBL component's bound node, which can be an AVT.
-2. [SINCE Orbeon Forms 2018.2] The current form's metadata instance (see below).   
-2. The value of a property, taking into account the current app/form name. For instance, `xxf:component-param-value('theme')` called from the `fr:recaptcha` component uses the value of the `oxf.xforms.xbl.fr.recaptcha.theme.*.*`, following wildcard rules.
-3. The value of a property without taking into account the current app/form name. For example `oxf.xforms.xbl.fr.recaptcha.theme` property, as done by `xxf:component-param-value()`.
+|#  |What|Used When|Comment
+|---|---|---|---|
+|1  |string value of the attribute of the current XBL component's bound node with a name matching the parameter|attribute present| |
+|2  |current form's metadata instance (see below)|element present|\[SINCE Orbeon Forms 2018.2\]|
+|3  |value of a property, taking into account the current app/form name. For instance, `xxf:component-param-value('theme')` called from the `fr:recaptcha` component uses the value of the `oxf.xforms.xbl.fr.recaptcha.theme.*.*`, following wildcard rules|property defined| |
+|4  |value of a property without taking into account the current app/form name. For example `oxf.xforms.xbl.fr.recaptcha.theme` property, as done by `xxf:component-param-value()`|property defined| |
 
-This allows authors of XBL components:
+This allows authors of XBL components to:
 
-- To replace an existing call to `xxf:component-param-value()` by `fr:component-param-value()` while maintaining backward compatibility.
-- To enable users of the component to have different values for the property by app/form, should they need to.
-- To still allow the component to be used outside of Form Runner.
+- replace an existing call to `xxf:component-param-value()` by `fr:component-param-value()` while maintaining backward compatibility.
+- enable users of the component to have different values for the property by app/form, should they need to.
+- still allow the component to be used outside of Form Runner.
 
 The Form Runner metadata instance looks like this:
 
@@ -335,7 +343,11 @@ The Form Runner metadata instance looks like this:
 </xf:instance>
 ```
 
-_NOTE: The Form Runner metadata instance is maintained by Form Builder. We do not recommend making changes to that instance._  
+_NOTE: The Form Runner metadata instance is maintained by Form Builder. We do not recommend making changes to that instance._
+
+[SINCE Orbeon Forms 2018.2]
+
+The resulting value is always evaluated as an AVT.
 
 ## Wizard functions
 
