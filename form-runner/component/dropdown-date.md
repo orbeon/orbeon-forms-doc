@@ -2,11 +2,35 @@
 
 ## What it does
 
-This component allows users to select a date with 3 drop-downs, for the year, month, and day.
+This component allows users to select a date with 3 drop-downs, for the month, day, and year.
 
 ![Dropdown date component](images/xbl-dropdown-date.png)
 
+## Default
+
+By default, the years show from 1970 to the current year.
+
 ## Configuration
+
+### From Orbeon Forms 2020.1
+
+The values for the start and end year are determined as with the [`fr:component-param-value()`](/xforms/xpath/extension-functions/extension-form-runner.md#fr-component-param-value) function, in the following order:
+
+1. `start-year` and `end-year` attributes on the control
+2. Form-level settings (in the `fr-form-metadata` instance)
+3. `oxf.xforms.xbl.fr.dropdown-date.start-year.*.*` property with app/form wildcards
+4. `oxf.xforms.xbl.fr.dropdown-date.start-year` property
+
+All values are evaluated as AVTs.
+
+For backward compatibility, a value can be an XPath expression, as follows:
+ 
+- The value is evaluated as an AVT. If the result is castable as an integer, the value is used as an integer.
+- The value is evaluated as an XPath expression.
+
+Starting Orbeon Forms 2020.1, dynamic values should be written as AVTs and not plain XPath expressions.
+
+### Until Orbeon Forms 2019.2
 
 The values for the start and end year are determined as follows:
 
@@ -20,7 +44,7 @@ The values for the start and end year are determined as follows:
     <property 
        as="xs:string" 
        name="oxf.xforms.xbl.fr.dropdown-date.end-year.*.*"
-       value="2030"/>
+       value="year-from-date(current-date()) + 10"/>
     ```
 2. [SINCE 4.2] If the conditions in point 1 don't apply, but you're on Orbeon Forms 4.2 or newer, and you defined a global property setting the start or end date, as in the example below, then the value of this property is used.
 
