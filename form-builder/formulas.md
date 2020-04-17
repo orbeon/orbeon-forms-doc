@@ -18,7 +18,10 @@ To refer to a control value from a formula, use the notation `$foo` where `foo` 
 $price * $quantity
 ```
 
-See also [Examples of formulas](formulas-examples.md).
+See also:
+
+- [When the internal data format matters](/form-runner/data-format/form-data.md#when-the-internal-data-format-matters)
+- [Examples of formulas](formulas-examples.md).
 
 ## Renaming of controls and formulas
 
@@ -91,4 +94,4 @@ See [examples of formulas](formulas-examples.md).
 - [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
 - [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
-- [XForms Validation](../xforms/validation.md)
+- [XForms Validation](/xforms/validation.md)

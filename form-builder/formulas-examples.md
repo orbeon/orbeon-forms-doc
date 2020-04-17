@@ -222,11 +222,11 @@ Given [this form](https://gist.github.com/orbeon/e7272c1b2499c3a5fb5f) and a con
 
 *NOTE: This works when the expression is outside repeat iterations. For expressions within the same repeat, `$name` returns the closest control.*
 
-See also [Model bind variables](../xforms/model-bind-variables.md) and this [StackOverflow question](http://stackoverflow.com/questions/27820641/access-to-iterated-controls-in-repeated-sections-in-orbeon/27830585?noredirect=1#comment44118606_27830585).
+See also [Model bind variables](/xforms/model-bind-variables.md) and this [StackOverflow question](http://stackoverflow.com/questions/27820641/access-to-iterated-controls-in-repeated-sections-in-orbeon/27830585?noredirect=1#comment44118606_27830585).
 
 ## Check the role(s) of the current user
 
-See [Form Fields](../form-runner/access-control/form-fields.md).
+See [Form Fields](/form-runner/access-control/form-fields.md).
 
 ## Check the Form Runner mode
 
@@ -243,7 +243,7 @@ The Form Runner detail page can have the following modes:
 
 ### With Orbeon Forms 2016.2 and newer
 
-You can use the [`fr:mode()` XPath function](../xforms/xpath/extension-form-runner.md#frmode) exposed by Form Runner to all XPath expressions.
+You can use the [`fr:mode()` XPath function](/xforms/xpath/extension-form-runner.md#frmode) exposed by Form Runner to all XPath expressions.
 
 ```xpath
 fr:mode() = 'edit'
@@ -360,4 +360,4 @@ return
 - [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
 - [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
-- [XForms Validation](../xforms/validation.md)
+- [XForms Validation](/xforms/validation.md)
