@@ -15,7 +15,19 @@ In most cases, the internal data format does not matter to form authors.
 
 However, XPath formulas or custom XForms code have full access to the form data represented using the internal data format. It is possible to write such formulas or XForms in ways that make them depend on the specific data format. For example, you might assume that a non-repeated grid has, or does not have, an enclosing element. If and when the internal data format changes due to an Orbeon Forms upgrade, the given formula might break.
 
-When XPath formulas or custom XForms code are required, we recommend making sure that those do not depend on the specifics of the internal data format.  
+When XPath formulas or custom XForms code are required, we recommend making sure that those do not depend on the specifics of the internal data format.
+
+On way to avoid issues is to avoid referring to data in the form using relative XPath expressions, such as:
+ 
+```xpath
+../my-other-control
+```
+
+Instead, use the variable notation with `$`:
+
+```xpath
+$my-other-control
+``` 
 
 ## Formats in use
 
