@@ -21,7 +21,7 @@ $price * $quantity
 See also:
 
 - [When the internal data format matters](/form-runner/data-format/form-data.md#when-the-internal-data-format-matters)
-- [Examples of formulas](formulas-examples.md).
+- [Examples of formulas](formulas-examples.md)
 
 ## Renaming of controls and formulas
 
