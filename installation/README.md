@@ -13,6 +13,7 @@ Orbeon Forms runs on any platform that supports:
 
 | Orbeon Forms Version | Java Versions|Comment        |
 |----------------------|--------------|---------------|
+| 2019.2               |8, 10, 11     |               |
 | 2019.1               |8, 10, 11     |               |
 | 2018.2               |8, 10         |recommended    |
 | 2018.2               |7             |not recommended|
@@ -44,8 +45,9 @@ Configure the Java VM with:
 * ` -XX:MaxPermSize` for "permgen" space (Java 1.7):
     * use at least: `-XX:MaxPermSize=256m`
 
-Also, make sure that you do *not* have tiered compilation when using Java 7. See [A dangerous Java 7 JVM option: TieredCompilation
-](https://blog.orbeon.com/2015/08/a-dangerous-java-7-jvm-option.html).
+Also, make sure that you do *not* have tiered compilation when using Java 7. See [A dangerous Java 7 JVM option: TieredCompilation](https://blog.orbeon.com/2015/08/a-dangerous-java-7-jvm-option.html).
+
+xxx
 
 *NOTE: On Unix systems, GIJ / GCG is not supported as there are reports of issues with that runtime environment and Orbeon Forms. Instead, we recommend you use the Oracle runtime Java environment.*
 
