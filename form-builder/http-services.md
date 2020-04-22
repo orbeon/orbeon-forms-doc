@@ -26,13 +26,27 @@ The "Definition" tab allows you to set the basic service parameters:
       ```
 - **Method**
     - The HTTP method to use: `GET`, `POST`, `PUT` or `DELETE`.
-- **Serialization**
-    - This applies to the `POST` and `PUT` methods.
-    - **XML:** Sends the request body as XML (`application/xml`)
-    - **HTML Form:** Sends the request body as HTML form data (`application/x-www-form-urlencoded`)
 - **Request Body**
     - This applies to the `POST` and `PUT` methods.
-    - The XML document to send to the service.
+    - The XML document to send to the service. When using the "HTML Form" serialization, this is converted to name/value pairs.
+
+### Serializations
+
+#### Basics
+
+Serializations apply to the `POST` and `PUT` methods only.
+
+#### XML serialization
+    
+With the "XML" serialization, the XML data is passed using the [external data format](/form-runner/data-format/form-data.md).
+
+On the wire, this serialization uses the `application/xml` content type.
+
+#### HTML Form serialization
+
+With the "HTML Form" serialization, leaf XML elements in the XML request body are converted to name/value pairs.
+
+On the wire, this serialization uses the `application/x-www-form-urlencoded` encoding, like for standard web forms.
 
 ### URL parameters
 
