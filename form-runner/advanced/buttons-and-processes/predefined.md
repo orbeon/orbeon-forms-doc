@@ -117,3 +117,9 @@ The `result-dialog` action shows a configurable dialog. You can customize:
       name="oxf.fr.detail.submit.go.uri-xpath.*.*"
       value="/book/details/link"/>
     ```
+
+You use the action like a regular process action, for example:
+
+```
+save-final then result-dialog
+``` 
