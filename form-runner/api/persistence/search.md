@@ -1,5 +1,13 @@
 # Search
 
+## Service endpoint
+
+HTTP `POST` to the following path:
+
+```
+/fr/service/persistence/search/$app/$form
+```
+
 ## Example query
 
 A search query uses HTTP `POST` to provide an XML document containing the search criteria as well as information about the response to provide.
