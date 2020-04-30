@@ -1,6 +1,12 @@
 # Form Metadata
 
+## Service endpoint
 
+HTTP `GET` to the following path:
+
+```
+/fr/service/persistence/form
+```
 
 ## Purpose
 
@@ -13,9 +19,11 @@ This is the API used, in particular, by the [Form Runner Home page](../../featur
 #### Basics
 
 You get the list of all the published forms with a `GET` on:
- 
-    /fr/service/persistence/form
-    
+
+``` 
+/fr/service/persistence/form
+```
+
 This, in turn, calls the corresponding API for each persistence API implementation defined in the properties as [*active*](../../../configuration/properties/persistence.md#property_active), since different forms can be published on different persistence implementations. For example, this might call MySQL implementation doing a `GET` on:
  
     /fr/service/mysql/form
