@@ -18,7 +18,7 @@ Here is an example of a very simple query:
 
 ```xml
 <search>
-    <query path="details/title" control="input">Peace</query>
+    <query path="details/title">Peace</query>
     <page-size>10</page-size>
     <page-number>1</page-number>
 </search>
@@ -31,9 +31,9 @@ The following shows for example a search from the demo Bookshelf form:
     <!-- Free-text search query -->
     <query/>
     <!-- Structured search query -->
-    <query path="details/title"    control="input">Peace</query>
-    <query path="details/author"   control="input"/>
-    <query path="details/language" control="select1"/>
+    <query path="details/title">Peace</query>
+    <query path="details/author"/>
+    <query path="details/language" match="exact">en</query>
     <drafts>include</drafts>
     <!-- Paging -->
     <page-size>10</page-size>
@@ -79,9 +79,9 @@ Historical attributes, which were informative only:
 [SINCE Orbeon Forms 2020.1] for relational databases
  
 The `match` attribute can have the following values:
- 
+
+- `substring`: a substring match is requested (default)
 - `exact`: an exact match is requested
-- `substring`: a substring match is requested
 - `token`: a token match is requested (for multiple selection controls)
 
 _NOTE: The exact semantics for `substring` is not specified at the moment (the search implementation may use a "starts-with", a "contains" logic, or something else)._
