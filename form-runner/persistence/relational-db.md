@@ -400,7 +400,7 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
 
 [SINCE Orbeon Forms 4.6]
 
-1. [Download the Microsoft JDBC driver for SQL Server][7].
+1. [Download the Microsoft JDBC driver for SQL Server](https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15) (as of 2020-05-04, this is version 8.2 of the driver)
 2. Uncompress the zip file, and copy the `sqljdbc4.jar` it contains to the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib` with newer Tomcat version).
 3. When using Java 11 or newer, you might need to add the JAXB API, which was present in earlier versions of Java. Download the JAR file from [Maven](https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar) and place it in the same directory you placed the JDBC driver.
 4. Setup the JDBC data source for your SQL Server instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). Example:
@@ -614,7 +614,6 @@ See [Auditing](form-runner/persistence/auditing.md).
 [4]: http://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html
 [5]: http://docs.jboss.org/jbossas/docs/Installation_And_Getting_Started_Guide/5/html/Using_other_Databases.html#Configuring_a_datasource_for_Oracle_DB
 [6]: http://dev.mysql.com/downloads/connector/j/
-[7]: http://www.microsoft.com/en-us/download/details.aspx?id=11774
 [8]: http://jdbc.postgresql.org/download.html
 [9]: http://www-01.ibm.com/support/docview.wss?uid=swg21363866
 [11]: http://demo.orbeon.com/orbeon/fr/orbeon/bookshelf/summary
