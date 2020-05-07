@@ -11,6 +11,8 @@ This page describes the formats used.
 
 ## When the internal data format matters
 
+__TL;DR: The internal format is different from the external format, it is subject to change between versions, and it is not something you should rely on. If you do, things will break in the future.__
+
 In most cases, the internal data format does not matter to form authors.
 
 However, XPath formulas or custom XForms code have full access to the form data represented using the internal data format. It is possible to write such formulas or XForms in ways that make them depend on the specific data format. For example, you might assume that a non-repeated grid has, or does not have, an enclosing element. If and when the internal data format changes due to an Orbeon Forms upgrade, the given formula might break.
@@ -28,8 +30,6 @@ Instead, use the variable notation with `$`:
 ```xpath
 $my-other-control
 ```
-
-__THE BOTTOM LINE IS THIS: The internal format is different from the external format, it is subject to change between versions, and it is not something you should rely on. If you do, things will break in the future.__
 
 ## Formats in use
 
