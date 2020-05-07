@@ -27,7 +27,9 @@ Instead, use the variable notation with `$`:
 
 ```xpath
 $my-other-control
-``` 
+```
+
+__THE BOTTOM LINE IS THIS: The internal format is different from the external format, it is subject to change between versions, and it is not something you should rely on. If you do, things will break in the future.__
 
 ## Formats in use
 
