@@ -702,6 +702,7 @@ To be more explicit, the attribute can also be set on the first `<fr:value>`:
 
 ## See also
 
+- [Editing the source code of the form definition](/form-builder/edit-source.md)
 - [Actions](actions.md)
 - [HTTP services](http-services.md)
 - [Database services](database-services.md)
