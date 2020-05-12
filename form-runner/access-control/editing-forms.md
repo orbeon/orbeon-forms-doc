@@ -1,7 +1,5 @@
 # Access control for editing forms
 
-
-
 ## Form Builder permissions
 
 Specific Form Builder permissions are configured with `WEB-INF/resources/config/form-builder-permissions.xml`.
