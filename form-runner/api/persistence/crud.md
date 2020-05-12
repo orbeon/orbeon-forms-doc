@@ -1,4 +1,4 @@
-# CRUD
+# CRUD API
 
 ## Service endpoint
 

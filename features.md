@@ -159,7 +159,7 @@ As of 2016-04-19 this page is still being updated.
 - Services and APIs
     - [Duplicate form data API](form-runner/api/other/duplicate-form-data.md)
     - [Generate XML Schema API](form-runner/api/other/duplicate-form-data.md)
-    - [List form data attachments](form-runner/api/persistence/list-form-data-attachments.md)
+    - [List form data attachments API](form-runner/api/persistence/list-form-data-attachments.md)
     - [Publish form definition API](form-runner/api/other/publish.md)
     - [Run form in the background API](form-runner/api/other/run-form-background.md)
 

@@ -1,4 +1,4 @@
-# Search
+# Search API
 
 ## Service endpoint
 
