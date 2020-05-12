@@ -173,11 +173,11 @@
             * [Implementing a persistence service](form-runner/api/persistence/implementing-a-persistence-service.md)
         * Other APIs
             * [Form Runner JavaScript API](form-runner/api/other/form-runner-javascript-api.md)
-            * [Duplicate form data](form-runner/api/other/duplicate-form-data.md)
+            * [Duplicate form data API](form-runner/api/other/duplicate-form-data.md)
             * [File scan API](form-runner/api/other/file-scan-api.md)
-            * [Generate XML Schema](form-runner/api/other/xml-schema-generation.md)
+            * [Generate XML Schema API](form-runner/api/other/xml-schema-generation.md)
             * [Publish form definition API](form-runner/api/other/publish.md)
-            * [Run form in the background](form-runner/api/other/run-form-background.md)
+            * [Run form in the background API](form-runner/api/other/run-form-background.md)
         * Data formats
             * [Form data](form-runner/data-format/form-data.md)
             * [Date and time](form-runner/data-format/date-and-time.md)

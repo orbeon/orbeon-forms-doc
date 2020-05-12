@@ -1,6 +1,4 @@
-# Duplicate form data
-
-
+# Duplicate form data API
 
 ## Availability
 

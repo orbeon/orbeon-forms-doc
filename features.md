@@ -157,11 +157,11 @@ As of 2016-04-19 this page is still being updated.
 - Grids
     - HTML tables-free layout: [blog post](https://blog.orbeon.com/2016/06/saying-farewell-to-html-tables.html))
 - Services and APIs
-    - [Duplicate form data](form-runner/api/other/duplicate-form-data.md)
-    - [Generate XML Schema](form-runner/api/other/duplicate-form-data.md)
+    - [Duplicate form data API](form-runner/api/other/duplicate-form-data.md)
+    - [Generate XML Schema API](form-runner/api/other/duplicate-form-data.md)
     - [List form data attachments](form-runner/api/persistence/list-form-data-attachments.md)
-    - [Publish form definition](form-runner/api/other/publish.md)
-    - [Run form in the background](form-runner/api/other/run-form-background.md)
+    - [Publish form definition API](form-runner/api/other/publish.md)
+    - [Run form in the background API](form-runner/api/other/run-form-background.md)
 
 ### Form controls
 

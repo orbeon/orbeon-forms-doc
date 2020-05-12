@@ -1,4 +1,4 @@
-# Generate XML Schema
+# Generate XML Schema API
 
 ## Availability
 
