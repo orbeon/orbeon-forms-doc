@@ -201,23 +201,23 @@ The XForms engine calls this method:
 - when the internal value of the control changes,
 - and in response to calls to `ORBEON.xforms.Document.setValue()`.
 
+
 `xformsUpdateValue()` receives a string and must update the associated JavaScript control, making the value accessible to the user.
 
 `xformsUpdateValue()` must return:
 
-- If it sets value is synchronously: `undefined` (or not return anything). `xformsUpdateValue()` must return `undefined` (or not return anything). If the  a deferred object whose `done()` method must be called once the value is known to have been fully applied. For example, using jQuery:
-
-```javascript
-var editor   = this.editor;
-var deferred = $.Deferred();
-setTimeout(function() {
-    editor.setValue(newValue);
-    deferred.resolve();
-}, 0);
-return deferred.promise();
-```
-
-This allows the XForms engine to know when it is safe to call `xformsGetValue()` after a new value has been set.
+- If it sets value is synchronously: `undefined` (or not return anything).
+- If it sets value is asynchronously: a jQuery deferred object whose `done()` method must be called once the value is known to have been fully applied. For instance:
+	```javascript
+	var editor   = this.editor;
+	var deferred = $.Deferred();
+	setTimeout(function() {
+	    editor.setValue(newValue);
+	    deferred.resolve();
+	}, 0);
+	return deferred.promise();
+	```
+    This allows the XForms engine to know when it is safe to call `xformsGetValue()` after a new value has been set.
 
 When updating the value is synchronous, `xformsUpdateValue()` must simply return `undefined` (which is the default for JavaScript functions).
 
@@ -368,5 +368,5 @@ You can dispatch custom events to bindings from JavaScript using the `ORBEON.xfo
 </xbl:binding>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjQ1MTI3M119
+eyJoaXN0b3J5IjpbLTEzMDk5NjU1NTBdfQ==
 -->
