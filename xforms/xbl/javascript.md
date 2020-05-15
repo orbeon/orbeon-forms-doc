@@ -201,8 +201,11 @@ The XForms engine calls this method:
 - when the internal value of the control changes,
 - and in response to calls to `ORBEON.xforms.Document.setValue()`.
 
+#### Method parameters
 
 `xformsUpdateValue()` receives a string and must update the associated JavaScript control, making the value accessible to the user.
+
+#### Method return value
 
 `xformsUpdateValue()` must return:
 
@@ -218,8 +221,6 @@ The XForms engine calls this method:
 	return deferred.promise();
 	```
     This allows the XForms engine to know when it is safe to call `xformsGetValue()` after a new value has been set.
-
-When updating the value is synchronous, `xformsUpdateValue()` must simply return `undefined` (which is the default for JavaScript functions).
 
 ### The xformsGetValue method
 
@@ -368,5 +369,5 @@ You can dispatch custom events to bindings from JavaScript using the `ORBEON.xfo
 </xbl:binding>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDk5NjU1NTBdfQ==
+eyJoaXN0b3J5IjpbMTE3NDg1NjM5Nl19
 -->
