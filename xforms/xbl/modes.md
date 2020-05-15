@@ -112,7 +112,7 @@ You use this mode when the component implementation is mostly done in JavaScript
 
 By default, `value` doesn't expose the control's value to the client. By adding the `external-value` mode, the control's value is made available to the client and accessible via JavaScript.
 
-See also [Support for the external-value mode](javascript.md#support-for-the-externalvalue-mode).
+See also [Support for the external-value mode](javascript.md#support-for-the-external-value-mode).
 
 ## The javascript-lifecycle mode
 
