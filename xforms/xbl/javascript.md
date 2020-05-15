@@ -203,7 +203,9 @@ The XForms engine calls this method:
 
 `xformsUpdateValue()` receives a string and must update the associated JavaScript control, making the value accessible to the user.
 
-If the value is set synchronously, `xformsUpdateValue()` must return `undefined` (or not return anything).  a deferred object whose `done()` method must be called once the value is known to have been fully applied. For example, using jQuery:
+`xformsUpdateValue()` must return:
+
+- If it sets value is synchronously: `undefined` (or not return anything). `xformsUpdateValue()` must return `undefined` (or not return anything). If the  a deferred object whose `done()` method must be called once the value is known to have been fully applied. For example, using jQuery:
 
 ```javascript
 var editor   = this.editor;
@@ -366,5 +368,5 @@ You can dispatch custom events to bindings from JavaScript using the `ORBEON.xfo
 </xbl:binding>
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNjcyMDExMV19
+eyJoaXN0b3J5IjpbLTYwNjQ1MTI3M119
 -->
