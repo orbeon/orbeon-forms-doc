@@ -197,13 +197,13 @@ For an example, see the implementation of the `fr:code-mirror` component: [`code
 
 The XForms engine calls this method:
 
-- if the `javascript-lifecycle` mode is enabled, just after the control is initialized,
+- if the `javascript-lifecycle` and the `external-value` modes are enabled, just after the control is initialized,
 - when the internal value of the control changes,
 - and in response to calls to `ORBEON.xforms.Document.setValue()`.
 
 `xformsUpdateValue()` receives a string and must update the associated JavaScript control, making the value accessible to the user.
 
-If the value is not set synchronously, `xformsUpdateValue()` must return a deferred object whose `done()` method must be called once the value is known to have been fully applied. For example, using jQuery:
+If the value is set synchronously, `xformsUpdateValue()` must return `undefined` (or not return anything).  a deferred object whose `done()` method must be called once the value is known to have been fully applied. For example, using jQuery:
 
 ```javascript
 var editor   = this.editor;
@@ -365,3 +365,6 @@ You can dispatch custom events to bindings from JavaScript using the `ORBEON.xfo
     ...
 </xbl:binding>
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjEwNjcyMDExMV19
+-->
