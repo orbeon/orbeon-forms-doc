@@ -174,10 +174,35 @@ For attachments, the control element is slightly different:
 Example:
 
 ```xml
-<my-attachment filename="book.png" mediatype="image/png" size="13245">
-/fr/service/exist/crud/orbeon/builder/data/5277.../book.png
-</my-attachment>
+<my-single-attachment filename="cat.jpg" mediatype="image/jpeg" size="2494208">
+    /fr/service/persistence/crud/acme/registration/data/c15ed6664c41714f4c33e31126a98357a03b3aac/032e3d4ba1a9578eccfecff0f88d33bf9da9ba4e.bin
+</my-single-attachment>
 ```
+
+### Multiple attachments
+
+[SINCE Orbeon Forms 2020.1]
+
+Controls that support multiple attachments contain nested `<_/>` (anonymous) elements, as follows:
+
+```xml
+<my-multiple-attachment>
+    <_ filename="screenshot.png" mediatype="image/png" size="202422">
+        /fr/service/persistence/crud/acme/registration/data/c15ed6664c41714f4c33e31126a98357a03b3aac/ec1b860e3e0d0224ca2d153a016fd3a83e5c2bf4.bin
+    </_>
+    <_ filename="cat.jpg" mediatype="image/jpeg" size="2494208">
+        /fr/service/persistence/crud/acme/registration/data/c15ed6664c41714f4c33e31126a98357a03b3aac/032e3d4ba1a9578eccfecff0f88d33bf9da9ba4e.bin
+    </_>
+    <_ filename="Presentation.pdf" mediatype="application/pdf" size="1617993">
+        /fr/service/persistence/crud/acme/registration/data/c15ed6664c41714f4c33e31126a98357a03b3aac/dfafa33289158b34c9c63e7c16f6b425b76fae43.bin
+    </_>
+    <_ filename="User's Manual (complete).pdf" mediatype="application/pdf" size="731131">
+        /fr/service/persistence/crud/acme/registration/data/c15ed6664c41714f4c33e31126a98357a03b3aac/d42d5f46b20f04876c7ef36fb7c6a8089d68363a.bin
+    </_>
+</my-multiple-attachment>
+```
+
+The meaning of the attributes and the content of the element is the same as in the case of a single file attachment.
 
 ## 4.8.0 format
 
