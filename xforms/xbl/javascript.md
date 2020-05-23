@@ -222,6 +222,10 @@ The XForms engine calls this method:
 	```
     This allows the XForms engine to know when it is safe to call `xformsGetValue()` after a new value has been set.
 
+[SINCE Orbeon Forms 2020.1]
+
+In addition to a jQuery deferred object (with a `done()` method), you can also return a JavaScript `Promise` object (with a `then()` method). The latter is the recommended way since JavaScript promises are implemented natively by all major browsers (except IE 11, but Orbeon Forms includes a polyfill for IE 11). 
+
 ### The xformsGetValue method
 
 The XForms engine calls this method when:
