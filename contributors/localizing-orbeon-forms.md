@@ -119,7 +119,7 @@ As of Orbeon Forms 2018.2, the following files need help:
 - [utility-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/utility-controls.xbl)
     - SINCE Orbeon Forms 2018.2
 - [text-output.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-output.xbl)
-- [text-textarea-autosize.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-textarea-autosize.xbl)
+- [autosize-textarea.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/autosize-textarea/autosize-textarea.xbl)
 
 TODO: more files,
 
