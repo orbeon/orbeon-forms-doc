@@ -12,11 +12,11 @@ When the lease feature is enabled, Form Runner prevents multiple users from conc
 
 ![Message showing the user owns the lease](../images/lease-own.png)
 
-If a second user, let's call her Marge, opens the same form instance for editing while Homer has a lease, Marge will be told she can't edit this form right now, has Homer has a lease. She can click on a button to try to acquire the lease again.
+If a second user, let's call her Marge, opens the same form instance for editing while Homer has a lease, Marge will be told she can't edit this form right now, has Homer has a lease. She can click on the first button to try to acquire the lease again, or [SINCE Orbeon Forms 2020.1] on the second to view data in read-only mode.
 
 ![Message showing another user owns the lease](../images/lease-other.png)
 
-The lease given to Homer will end either because it expires without being renewed, or because Homer clicked on a button to explicitly relinquish the lease.
+The lease given to Homer will end either because it expires without being renewed, or because Homer clicked on a button to explicitly relinquish the lease. At this point, Homer can click on the first button to try acquire the lease again, or [SINCE Orbeon Forms 20202.1] on the second to view the data in read-only mode.
 
 ![Message showing the user relinquished the lease](../images/lease-relinquished.png)
 
