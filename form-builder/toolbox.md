@@ -130,7 +130,7 @@ The controls appear like this at design time:
 
 ### Utility Controls
 
-![](images/output-controls.png)
+![](images/utility-controls.png)
 
 | Name | Description |
 | --- | --- |
