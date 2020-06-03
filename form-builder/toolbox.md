@@ -199,17 +199,18 @@ _NOTE: The "Scrollable List" control is deprecated since Orbeon Forms 2016.1 and
 
 | Name | Description |
 | --- | --- |
-| **File Attachment**       | - file which can be attached to the form at design time or at runtime<br>- the file can also be replaced or downloaded once attached |
-| **Image Attachment**      | - image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached |
-| **Image**                 | - image attached to the form at design time<br>- it is not possible to change the image at runtime |
-| **Image Annotation**      | - image which can be attached to the form at design time or at runtime<br>- the image can then be annotated with graphic objects<br>- see also the [blog post](https://blog.orbeon.com/2013/08/new-image-annotation-control.html)<br>- SINCE Orbeon Forms 2016.3 |
-| **Handwritten Signature** | signature drawn with a mouse or touch screen |
+| **Single File Attachment**   | - file which can be attached to the form at design time or at runtime<br>- the file can also be replaced or downloaded once attached |
+| **Multiple File Attachments**| - [SINCE Orbeon Forms 2020.1]<br>- files which can be attached to the form at design time or at runtime<br>- the files can also be replaced or downloaded once attached |
+| **Image Attachment**         | - image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached |
+| **Image**                    | - image attached to the form at design time<br>- it is not possible to change the image at runtime |
+| **Image Annotation**         | - image which can be attached to the form at design time or at runtime<br>- the image can then be annotated with graphic objects<br>- see also the [blog post](https://blog.orbeon.com/2013/08/new-image-annotation-control.html)<br>- SINCE Orbeon Forms 2016.3 |
+| **Handwritten Signature**    | signature drawn with a mouse or touch screen |
 
 The controls appear like this at design time:
 
 ![](images/attachment-controls-design-time.png)
 
-And this is the Signature control ( which of course you usually leave blank at design time):
+This is the Handwritten Signature control (which of course you usually leave blank at design time):
 
 ![](images/signature-design-time.png)
 
