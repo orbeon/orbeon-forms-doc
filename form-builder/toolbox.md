@@ -280,3 +280,4 @@ The autocomplete control is a single item selection control that loads a list of
 - [XBL components](../xforms/xbl/README.md)
 - [Form Builder toolbox properties](/configuration/properties/form-builder.md#toolbox)
 - [Component metadata](form-builder/metadata.md): for the component names.
+- Blog post: [The new Multiple File Attachments control](https://blog.orbeon.com/2020/05/the-new-multiple-file-attachments.html)
