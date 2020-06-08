@@ -210,6 +210,12 @@ The controls appear like this at design time:
 
 ![](images/attachment-controls-design-time.png)
 
+Here is an example of attachment control with multiple selection enabled:
+
+![The attachment control with mulltiple selection enabled](/form-runner/component/images/attachment-controls-design-time.png)
+
+/form-runner/component/images/xbl-attachment-multiple.png
+
 This is the Handwritten Signature control (which of course you usually leave blank at design time):
 
 ![](images/signature-design-time.png)

@@ -4,6 +4,8 @@
 
 This component represents an attachment to a form.
 
+![The attachment control with multiple selection enabled](images/xbl-attachment-multiple.png)
+
 ## Accepted mediatypes
 
 By default the component accepts any mediatype. 
