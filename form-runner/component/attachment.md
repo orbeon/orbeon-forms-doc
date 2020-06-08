@@ -82,3 +82,4 @@ This component dispatches the following events following the enclosed upload con
 
 - [Image component](image.md)
 - [Image attachment component](image-attachment.md)
+- Blog post: [The new Multiple File Attachments control](https://blog.orbeon.com/2020/05/the-new-multiple-file-attachments.html)
