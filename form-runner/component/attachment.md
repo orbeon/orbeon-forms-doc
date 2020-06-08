@@ -1,7 +1,5 @@
 # Attachment component
 
-
-
 ## What it does
 
 This component represents an attachment to a form.
@@ -12,11 +10,10 @@ By default the component accepts any mediatype.
 
 [SINCE Orbeon Forms 2017.1]
 
-If an [`upload-mediatypes` custom constraint](../../xforms/xpath/extension-validation.md#xxfupload-mediatypes) is
+If an [`upload-mediatypes` custom constraint](/xforms/xpath/extension-validation.md#xxfupload-mediatypes) is
 present and not blank, it is applied to the enclosed upload control.
 
-Otherwise, if an `accept` attribute or associated `oxf.xforms.xbl.fr.attachment.accept` property is defined and not
-blank, it is used. Example of system-wide property:
+Otherwise, if an `accept` attribute or associated `oxf.xforms.xbl.fr.attachment.accept` property is defined and not blank, it is used. Example of system-wide property:
 
 ```xml
 <property
@@ -34,6 +31,39 @@ Example of attribute on the control:
 ```
 
 Otherwise, any mediatype is allowed.
+
+## Support for multiple files
+
+[SINCE Orbeon Forms 2020.1]
+
+The `multiple="true"` attribute enables support for multiple files:
+
+- The file selector allows multiple selection.
+- The drop area (see below) allows multiple file being dropped at the same time or serially.
+- A reorderable list of multiple files shows.
+
+## Drag and drop of files
+
+[SINCE Orbeon Forms 2020.1]
+
+On supported browsers, you can drag and drop files from other applications (typically an operating system file explorer) to the drop area instead of selecting files with the file selector button.
+
+As of Orbeon Forms 2020.1 the following browsers are known not to support drag and drop and the drop area is hidden:
+
+- IE11
+- Safari on iOS/iPadOS
+
+## Mediatype determination
+
+Web browsers determine a mediatype (AKA content type or MIME type) for uploaded files. This determination is platform-dependent, not necessarily precise, and sometimes missing.
+
+In all cases, the mediatype provided by the browser cannot be trusted and is indicative only. You can use the [file scan API](/form-runner/api/other/file-scan-api.md) to reject files that do not satisfy the indicated mediatype.
+
+[SINCE Orbeon Forms 2020.1]
+
+When the browser does not provide a mediatype, or provides a generic mediatype such as `application/octet-stream`, Orbeon Forms uses the file extension, when present, to guess a mediatype.
+
+This means for example that a `.docx` file will map to `application/vnd.openxmlformats-officedocument.wordprocessingml.document` even if the browser is unaware of Microsoft Word files.    
 
 ## Events
 
