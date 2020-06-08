@@ -1,7 +1,5 @@
 # Cut, copy and paste
 
-
-
 ## Introduction
 
 ## Cut, copy and paste from the toolbox
@@ -26,8 +24,6 @@ They allow performing the usual cut/copy/paste operations on form controls.
     - If the clipboard contains a grid or section (see below), it is inserted in the next available position.
     - If the clipboard is empty, nothing happens.
 
-_NOTE: These operations are restricted to the currently running instance of Form Builder. They do not apply between different Form Builder windows or tabs, or between edition sessions._
-
 The following control information is copied and pasted:
 
 - type and appearance
@@ -40,6 +36,19 @@ The following control information is copied and pasted:
 - any associated localized resources
 
 When a control is pasted, if the control name of the clipboard control is currently not in use in the form, it is used. Otherwise, a new automatically-generated name is chosen by Form Builder.
+
+## Copying and pasting between forms
+
+[SINCE Orbeon Forms 2020.1]
+
+Before Orbeon Forms 2020.1, the cut, copy, and paste operations were restricted to the currently running instance of Form Builder and did not apply between different Form Builder windows or tabs, or between edition sessions of a same form.
+
+With Orbeon Forms 2020.1, these operations are shared between forms belonging to the same user session. For example, the following scenarios work:
+
+1. You can copy an item, go back to the Form Builder Summary page, reopen the same form or open a different form, and paste the item just copied.
+2. You can open several forms with Form Builder in different tabs or windows of the same browser (and the same browser user), and copy/paste items between these forms.
+
+_NOTE: It is for now *not possible* to copy and paste items between different browsers, different users, or different user sessions (for example after logging out and logging back in)._
 
 ## Cut, copy and paste of grids and sections
 
