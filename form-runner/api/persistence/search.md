@@ -57,11 +57,18 @@ For each such control found, a `<query>` element is added to the request, with t
 
 As of Orbeon Forms 2020.1:
 
-|XML Node        |Required|Function|
-|----------------|--------|--------|
-|`path` attribute|Yes     |path to the XML element (see *Search paths* below)|
-|`match`         |No      |match type: `substring`, `exact`, `token` (see *Match types* below)|
-|text value      |No      |search string|
+|XML Node           |Required|Function|
+|-------------------|--------|--------|
+|`path` attribute   |Yes     |path to the XML element (see *Search paths* below)|
+|`match` attribute  |No      |match type: `substring`, `exact`, `token` (see *Match types* below)|
+|`control` attribute|No      |control type (`input`, `textarea`, `select`, etc.), used if `match` is absent|
+|text value         |No      |search string|
+
+If the `match` attribute is absent, the `control` attribute is used to determine the match type:
+
+- `input` or `textarea`: imply `match="substring"`
+- `select`: implies `match="token"`
+- any other value: implies `match="exact"`
 
 Historical attributes, which were informative only:
 
@@ -70,7 +77,6 @@ Historical attributes, which were informative only:
 |`name`         |control name as entered in Form Builder|
 |`label`        |control label as entered in Form Builder|
 |`type`         |datatype associated with the field in Form Builder|
-|`control`      attribute|control type (`input`, `textarea`, `select`, etc.)|
 |`search-field` |indicate whether the field must show as Summary page search|
 |`summary-field`|indicate whether the field must show as Summary page column|
 
