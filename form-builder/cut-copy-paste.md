@@ -101,3 +101,4 @@ The "Cut" and "Paste" operations are undoable in the following way:
 
 - [Undo and redo](undo-redo.md)
 - [Section templates](section-templates.md)
+- Blog post: [Copying and pasting across forms](https://blog.orbeon.com/2020/06/copying-and-pasting-across-forms.html)

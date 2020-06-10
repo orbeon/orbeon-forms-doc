@@ -287,3 +287,4 @@ The autocomplete control is a single item selection control that loads a list of
 - [Form Builder toolbox properties](/configuration/properties/form-builder.md#toolbox)
 - [Component metadata](form-builder/metadata.md): for the component names.
 - Blog post: [The new Multiple File Attachments control](https://blog.orbeon.com/2020/05/the-new-multiple-file-attachments.html)
+- Blog post: [Copying and pasting across forms](https://blog.orbeon.com/2020/06/copying-and-pasting-across-forms.html)
