@@ -502,8 +502,11 @@ Attribute|Mandatory|Value|Comment
 `control`|Yes|control name| |
 `items`|Yes|XPath expression returning one XPath item for each choice| |
 `label`|Yes|relative XPath expression returning the label for the current choice| |
+`hint`|No|relative XPath expression returning the hint for the current choice|\[SINCE Orbeon Forms 2020.1\]|
 `value`|Yes|relative XPath expression returning the value for the current choice| |
 `at`|No|space-delimited position tokens: `start`, `end`, or a positive integer|missing leading tokens default to `end`|
+
+_NOTE: Hints are only supported for checkboxes and radio buttons as of Orbeon Forms 2020.1._
 
 ### Writing to a dataset
 
