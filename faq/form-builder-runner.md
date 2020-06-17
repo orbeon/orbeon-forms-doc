@@ -68,8 +68,8 @@ Say you've created a form, deployed it, and would like to take users to the `/ne
 	- On the URL, as a request parameter, if the token doesn't need to be private;
 	- As a request header, set in a reverse proxy, if the token needs to remain private, and shouldn't be exposed to users.
 2. In the form, add a hidden field to store the value of the token. You do this in Form Builder: create a section, which you can name "Internal" for your own reference, and in the Section Settings dialog, under Visibility put `false()`, so the section is never visible to end users. In that section add a text field, name it `token`, and in the field Control Settings, in Formulas, set its Initial Value to:
-	- [`xxl:get-request-parameter('token')`](/xforms/xpath/extension-http.md#xxf-get-request-parameter), if you're passing the value with a request parameter named `token`.
-	- [`xxl:get-request-header('token')`](/xforms/xpath/extension-http.md#xxf-get-request-header), if you're passing the value with a request header named `token`.
+	- [`xxf:get-request-parameter('token')`](/xforms/xpath/extension-http.md#xxf-get-request-parameter), if you're passing the value with a request parameter named `token`.
+	- [`xxf:get-request-header('token')`](/xforms/xpath/extension-http.md#xxf-get-request-header), if you're passing the value with a request header named `token`.
 3. When users enter data in the form and save it, the value of the token will be saved with the data, just as if the field was visible to users, and they had entered the value of the token.
 
 ### How can I create forms which users can fill out offline?
