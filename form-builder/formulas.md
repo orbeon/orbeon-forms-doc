@@ -12,16 +12,49 @@ In general you don't need to know about XPath in Form Builder, with the exceptio
 
 ## Referring to control values from formulas
 
+### Basic usage
+
 To refer to a control value from a formula, use the notation `$foo` where `foo` is the control name. For example:
 
 ```xpath
 $price * $quantity
 ```
 
-See also:
-
 - [When the internal data format matters](/form-runner/data-format/form-data.md#when-the-internal-data-format-matters)
 - [Examples of formulas](formulas-examples.md)
+
+### Resolution of repeated controls
+
+When referring to controls that are repeated, for example within repeated grids or repeated sections, a variable can return a sequence of multiple values. Each value corresponds to a repeated control.
+
+However, not all controls in the form are necessarily selected. Instead, the "closest" controls are selected, as follows:
+
+- The closest enclosing repeat iteration between the location of the formula and the control identified by the variable is identified. If there is none, then this is the top-level of the form.
+- Then all the controls within that iteration, or within the entire form when there is no such iteration, are selected.
+
+For example, consider
+
+- a repeated grid
+- a decimal field called `price` on each row
+- an integer field called `quantity` on each row
+- a decimal text output field called `row-total` on each row
+- a decimal text output field called `total` below the grid
+
+Calculated value expression for `row-total`:
+
+```xpath
+$price * $quantity
+```
+
+The `row-total` calculated value applies to the closest `price` and `quantity` controls, that is, those on the same row, and each row gets its own row total.
+
+Calculated value expression for `total`:
+
+```xpath
+sum($row-total[string() castable as xs:decimal], 0.0)
+```
+
+On the other hand, the `total` calculation is outside the repeat, and when it refers to `$row-total`, all `row-total` values are returned. Therefore, the sum applies to all the `row-total` values (assuming they can be cast as `xs:decimal`, in this example).
 
 ## Renaming of controls and formulas
 

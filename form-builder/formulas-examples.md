@@ -18,11 +18,11 @@ $yes-no/string() = 'true'
 Scenario: compute the sum of values in multiple repeat iterations.
 Say you have:
 
-* a repeated grid
-* a decimal field called `price` on each row
-* an integer field called `quantity` on each row
-* a decimal text output field called `row-total` on each row
-* a decimal text output field called `total` below the grid
+- a repeated grid
+- a decimal field called `price` on each row
+- an integer field called `quantity` on each row
+- a decimal text output field called `row-total` on each row
+- a decimal text output field called `total` below the grid
 
 You want to compute the row totals and athe general total.
 
@@ -50,6 +50,7 @@ Explanation:
 
 See also:
 
+- [Resolution of repeated controls](formulas.md#resolution-of-repeated-controls)
 - [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
 - [Unexpected result with variable inside an `<xf:bind>` iteration #152](https://github.com/orbeon/orbeon-forms/issues/152)
 
