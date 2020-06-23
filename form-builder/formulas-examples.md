@@ -240,7 +240,7 @@ The Form Runner detail page can have the following modes:
 - `view`
 - `pdf`
 - `email`
-- 'test' (when you are testing a form within Form Builder)
+- `test` (when you are testing a form within Form Builder)
 
 ### With Orbeon Forms 2016.2 and newer
 
