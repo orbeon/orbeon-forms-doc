@@ -67,7 +67,11 @@ Links are intended to point to some Orbeon Forms pages or resources (namely, the
 
 ![Links in an email template](images/template-parameter-links-example.png)
 
-For this purpose, Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty: 
+To insert the URL, you use the template syntax within the "URL" field of the link dialog:
+
+![Editing a link URL](images/template-parameter-link-editor.png)
+
+Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty: 
 
 ```xml
 <property 
