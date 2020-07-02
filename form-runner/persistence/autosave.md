@@ -70,18 +70,6 @@ When multiple drafts are available, choosing the "View auto-saved drafts" button
 
 ## Configuration
 
-### With Orbeon Forms 4.3
-
-With Orbeon Forms 4.3 specifically, you need to:
-
-- If using MySQL, update your database by running [this  DDL](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql). (The tables for DB2 on 4.3 already contain the required changes out-of-the-box.)
-- Set the following properties:
-
-```xml
-<property as="xs:boolean" name="oxf.fr.support-owner-group" value="true"/>
-<property as="xs:boolean" name="oxf.fr.support-autosave"    value="true"/>
-```
-
 ### With Orbeon Forms 4.4 and newer
 
 You don't need to do anything special to use this feature.
@@ -95,18 +83,9 @@ You don't need to do anything special to use this feature.
   value="5000"/>
 ```
 
-[SINCE Orbeon Forms 4.4]
+The value of `oxf.fr.detail.autosave-delay` sets the maximum time, in milliseconds, after which a change done by the user will be auto-saved. If 0 or negative, autosaving is disabled. Out of the box, this property is set to `5000`, that is 5 seconds. If your server experiences a lot of load, you might want to make that value higher to reduce the number of requests made by Orbeon Forms to your database.
 
-If the value of `oxf.fr.detail.autosave-delay` is 0 or negative, autosaving is disabled:
-
-```xml
-<property 
-    as="xs:integer" 
-    name="oxf.fr.detail.autosave-delay.*.*" 
-    value="0"/>
-```
-
-The following property enables or disable autosave for a given persistence provider, as autosave requires support from the persistence provider.
+The following property enables or disable autosave for a given persistence provider, as autosave requires support from the persistence provider. For database support, see [Database Support](../../form-runner/persistence/db-support.md).
 
 ```xml
 <property
@@ -115,13 +94,14 @@ The following property enables or disable autosave for a given persistence provi
   value="false"/>
 ```
 
-For example, as of Orbeon Forms 4.4, the `exist` provider does not support autosave yet. But the `oracle` provider does:
+### With Orbeon Forms 4.3
+
+With Orbeon Forms 4.3 specifically, you need to:
+
+- If using MySQL, update your database by running [this  DDL](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql). (The tables for DB2 on 4.3 already contain the required changes out-of-the-box.)
+- Set the following properties:
 
 ```xml
-<property
-  as="xs:boolean"
-  name="oxf.fr.persistence.oracle.autosave"
-  value="true"/>
+<property as="xs:boolean" name="oxf.fr.support-owner-group" value="true"/>
+<property as="xs:boolean" name="oxf.fr.support-autosave"    value="true"/>
 ```
-
-For database support, see [Database Support](../../form-runner/persistence/db-support.md).
