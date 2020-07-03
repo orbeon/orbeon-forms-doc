@@ -302,6 +302,14 @@ This types checks that the value is well-formed XML:
 
 Note that this checks the string value of the node, which means that the node must contain *escaped* XML.
 
+[SINCE Orbeon Forms 2020.1]
+
+The `xxf:XML` capitalization is supported and preferred, for consistency with `xxf:XPath2ValueTemplate`.
+
+```xml
+<xf:bind ref="my-xml" type="xxf:XML"/>
+```
+
 ### xxf:xpath2 type
 
 This types checks that the value is well-formed XPath 2.0. Any variable used by the expression is assumed to be in scope:
@@ -315,6 +323,10 @@ This types checks that the value is well-formed XPath 2.0. Any variable used by 
 [SINCE Orbeon Forms 2020.1]
 
 The `xxf:XPath2` capitalization is supported and preferred, for consistency with `xxf:XPath2ValueTemplate`.
+
+```xml
+<xf:bind ref="my-xpath" type="xxf:XPath2"/>
+```
 
 ### xxf:XPath2ValueTemplate type
 
