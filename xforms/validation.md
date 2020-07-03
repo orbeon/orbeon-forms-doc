@@ -310,7 +310,21 @@ This types checks that the value is well-formed XPath 2.0. Any variable used by 
 <xf:bind ref="my-xpath" type="xxf:xpath2"/>
 ```
 
-*NOTE: In both these cases, Orbeon Forms checks for the required MIP: if it evaluates to `false()` and the value is the empty string, then the instance data node is considered valid. This is contrary to XForms 1.1.*
+*NOTE: In both these cases, Orbeon Forms checks for the required MIP: if it evaluates to `false()` and the value is the empty string, then the instance data node is considered valid. This is contrary to XForms 1.1 but follows XForms 2.0.*
+
+[SINCE Orbeon Forms 2020.1]
+
+The `xxf:XPath2` capitalization is supported and preferred, for consistency with `xxf:XPath2ValueTemplate`.
+
+### xxf:XPath2ValueTemplate type
+
+[SINCE Orbeon Forms 2020.1]
+
+This types checks that the value is a well-formed XPath 2.0 value template. Any variable used by the expression is assumed to be in scope:
+
+```xml
+<xf:bind ref="my-xpath" type="xxf:XPath2ValueTemplate"/>
+```
 
 ### Controlling the XML Schema validation mode
 
