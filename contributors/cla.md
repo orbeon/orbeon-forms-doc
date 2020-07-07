@@ -1,17 +1,12 @@
-# Contributor License Agreements (CLA)
+# Contributor License Agreement (CLA)
 
 ## Rationale
 
-In order to clarify the intellectual property license granted with Contributions from any person or entity, Orbeon must have a Contributor License Agreement ("CLA") on file that has been signed by each Contributor, indicating agreement to the license terms below. This license is for your protection as a Contributor as well as the protection of Orbeon and its users; it does not change your rights to use your own Contributions for any other purpose.
-
-CLAs are common practice for many open source projects, and the Orbeon CLA follows the terms of the [Apache CLA](http://apache.org/licenses/icla.pdf).
+In order to clarify the intellectual property license granted with Contributions from any person or entity, Orbeon must have a Contributor License Agreement (CLA) on file that has been signed by each Contributor, indicating agreement to the license terms below. This license is for your protection as a Contributor as well as the protection of Orbeon and its users; it does not change your rights to use your own Contributions for any other purpose.
 
 ## What you should do
 
-If you plan to submit contributions to Orbeon, please download, review, sign and return one of the contributor agreements below:
-
-- [Individual Contributor License Agreement](files/OrbeonIndividualContributorLicenseAgreement1.0.pdf)
-- [Corporate Contributor License Agreement](files/OrbeonCorporateContributorLicenseAgreement1.0.pdf)
+If you plan to submit contributions to Orbeon, please download, review, sign and return a copy of the [Orbeon Contributor License Agreement](files/Orbeon Contributor License Agreement.pdf).
 
 ## But isn't the open source license enough?
 
