@@ -55,6 +55,31 @@ As of Orbeon Forms 2020.1 the following browsers are known not to support drag a
 - IE11
 - Safari on iOS/iPadOS
 
+## Disallowing attachment download
+
+[SINCE Orbeon Forms 2020.1]
+
+By default, the user can download back the attadched files. In some cases, this is not desirable. The `allow-download="false"` attribute allows disabling downloads.
+
+```xml
+<fr:attachment
+    id="attachments-control"
+    bind="attachments-bind"
+    multiple="true"
+    allow-download="false"
+    class="fr-attachment">
+    ...
+</fr:attachment>
+```
+
+Form Builder offers an option in the "Control Settings" dialog.
+
+![Allow download option](images/xbl-attachment-control-settings.png) 
+
+![With download allowed](images/xbl-attachment-multiple.png)
+
+![With download disallowed](images/xbl-attachment-multiple-nodownload.png)
+
 ## Mediatype determination
 
 Web browsers determine a mediatype (AKA content type or MIME type) for uploaded files. This determination is platform-dependent, not necessarily precise, and sometimes missing.
