@@ -74,7 +74,7 @@ By default, the user can download back the attached files. In some cases, this i
 
 Form Builder offers an option in the "Control Settings" dialog.
 
-![Allow download option](images/xbl-attachment-control-settings.png) 
+![Allow download option](images/xbl-attachment-control-settings.png)
 
 ![With download allowed](images/xbl-attachment-multiple.png)
 
