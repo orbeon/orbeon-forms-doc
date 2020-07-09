@@ -59,7 +59,7 @@ As of Orbeon Forms 2020.1 the following browsers are known not to support drag a
 
 [SINCE Orbeon Forms 2020.1]
 
-By default, the user can download back the attadched files. In some cases, this is not desirable. The `allow-download="false"` attribute allows disabling downloads.
+By default, the user can download back the attached files. In some cases, this is not desirable. The `allow-download="false"` attribute allows disabling downloads.
 
 ```xml
 <fr:attachment
