@@ -15,6 +15,12 @@ General settings allow you to set the following form definition metadata:
 
 ![General Settings](images/form-settings-general.png)
 
+[SINCE Orbeon Forms 2020.1]
+
+The description can optionally use rich text.
+
+![Form description with rich text](images/form-settings-general-html.png)
+
 ## Form Options
 
 [SINCE Orbeon Forms 2016.2]
