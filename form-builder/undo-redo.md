@@ -1,7 +1,5 @@
 # Undo and redo
 
-
-
 ## Availability
 
 [SINCE Orbeon Forms 2017.2]
@@ -17,6 +15,22 @@ The toolbox shows familiar undo and redo icons.
 When hovering over the icons, a tooltip tells you which operation is undone or redone.
 
 You can undo most operations which change important aspects of the form:
+
+## Keyboard shortcuts
+
+[SINCE Orbeon Forms 2020.1]
+
+You can use the following keyboard shortcuts:
+
+macOS:
+
+- `⌘-Z`: undo the last operation
+- `⌘-⇧-Z`: redo the last operation
+
+All operating systems:
+
+- `⌃-Z`: undo the last operation
+- `⌃-Y`: redo the last operation
 
 ## Supported undo/redo actions
 

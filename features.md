@@ -73,6 +73,7 @@ As of 2016-04-19 this page is still being updated.
     - cut, copy and paste: [doc](form-builder/cut-copy-paste.md)
 - Form Settings: [doc](form-builder/form-settings.md)
     - General Settings
+    - HTML form description
     - Form Options: [doc](form-builder/form-settings.md#form-options)
         - Singleton forms: [doc](form-runner/advanced/singleton-form.md)
         - Wizard view: [doc](form-runner/feature/wizard-view.md)
@@ -108,6 +109,10 @@ As of 2016-04-19 this page is still being updated.
 - XML Schema Support: [doc](form-builder/xml-schema-support.md)
 - Source code editor: [doc](form-runner/component/source-code-editor.md)whether section is collapsible
 - Extension API: [doc](form-builder/extension-api.md)
+- Basic keyboard shortcuts
+    - Cut/Copy/Paste: [doc](form-builder/cut-copy-paste.md#keyboard-shortcuts)
+    - Undo/Redo: [doc](form-builder/undo-redo.md#keyboard-shortcuts)
+    - Save button: [doc](form-builder/form-editor.md#keyboard-shortcuts)
 
 ### Form Runner
 

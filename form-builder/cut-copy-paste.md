@@ -37,6 +37,24 @@ The following control information is copied and pasted:
 
 When a control is pasted, if the control name of the clipboard control is currently not in use in the form, it is used. Otherwise, a new automatically-generated name is chosen by Form Builder.
 
+## Keyboard shortcuts
+
+[SINCE Orbeon Forms 2020.1]
+
+You can use the following keyboard shortcuts:
+
+macOS:
+
+- `⌘-X`: cut the current control
+- `⌘-C`: copy the current control
+- `⌘-V`: paste from the toolbox
+
+All operating systems:
+
+- `⌃-X`: cut the current control
+- `⌃-C`: copy the current control
+- `⌃-V`: paste from the toolbox
+
 ## Copying and pasting between forms
 
 [SINCE Orbeon Forms 2020.1]

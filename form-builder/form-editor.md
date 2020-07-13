@@ -39,11 +39,13 @@ On the top right corner of the top bar, you can change the Form Builder user int
 
 Changing the language immediately updates the Form Builder user interface: you do not even need to save your form prior to using this feature.
 
-_NOTE: This feature controls the language of the Form Builder user interface only. For localization of the form definition you are currently editing, see documentation below.
+_NOTE: This feature controls the language of the Form Builder user interface only. For localization of the form definition you are currently editing, see documentation below._
 
 ![Form Builder's Top Bar](images/top.png)
 
 ## The bottom bar
+
+### Buttons
 
 The bottom bar of Form Builder shows the following buttons:
 
@@ -56,5 +58,21 @@ The bottom bar of Form Builder shows the following buttons:
 * **Save button.** Save the form to the database.
 
 ![Form Builder's Bottom Bar](images/bottom.png)
+
+## Keyboard shortcuts
+
+[SINCE Orbeon Forms 2020.1]
+
+You can use the following keyboard shortcuts:
+
+macOS:
+
+- `⌘-S`: save the form definition (like the "Save" button)
+
+All operating systems:
+
+- `⌃-S`: save the form definition (like the "Save" button)
+
+### Other functions
 
 In addition, the bottom bar displays status information, such as whether the current form definition was successfully saved.
