@@ -2,7 +2,7 @@
 
 ## Availability
 
-The Form Runner JavaScript Embedding API first shipped with Orbeon Forms PE 2020.1, and as of 2020.1, this feature is *experimental*: the API is very much subject to change, and we're interested in your feedback so we can continue to improve this feature.
+The Form Runner JavaScript Embedding API first shipped with Orbeon Forms PE 2020.1.
 
 ## Rationale
 
@@ -10,15 +10,15 @@ If you have your own application and would like to embed a form created with For
 
 - If you have a Java web app, we recommend you use the [Java Embedding API](java-api.md).
 - If you are using Liferay, we recommend you use the [Liferay proxy portlet](liferay-proxy-portlet.md).
-- In all other cases, we recommend you use the JavaScript Embedding API described on this page. It offers the most flexibility, and will work irrelevant of the server-side technology or client-side libraries you are using.
+- In all other cases, we recommend you use the JavaScript Embedding API described on this page. It offers the most flexibility, and will work irrelevant of the server-side technology you are using.
 
 ## Usage
 
 ### Forwarding
 
-If you're using the JavaScript embedding API, chances are that your application isn't Java on the server. This means that Orbeon Forms and your application might be running on different servers, and if on the same server, will be running on different ports.
+If you're using the JavaScript embedding API, chances are that your application isn't Java-based. This means that Orbeon Forms and your application are likely to be running on a different server or different port.
 
-All browser requests, whether for the page of your app that uses the embedding API, or for Orbeon Forms resources, will made to the same server and port. It is your responsibility to setup that server so requests to Orbeon Forms are forwarded to the Orbeon Forms server, as shown in the diagram below. Exactly how to do so will depend on the server-side technology you are using. For instance:
+All browser requests, whether for the page of your app that uses the embedding API, or for Orbeon Forms resources, need to be made to the same server and port. It is your responsibility to setup that server so requests to Orbeon Forms are forwarded to the Orbeon Forms server, as shown in the diagram below. Exactly how to do so will depend on the server-side technology you are using. For instance:
  
 - If you're using the Apache HTTP Server, this can be done with the [mod_rewrite module](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
 - If you're using Microsoft IIS, you configure this with the IIS Manager, by creating a Reverse Proxy rule. 
@@ -27,7 +27,7 @@ All browser requests, whether for the page of your app that uses the embedding A
 
 #### Requests to forward
 
-You can identify the requests made to Orbeon Forms based on their path, which is typically `/orbeon`. (With Java web apps, that first part of the path is referred to as the "context", and you can deploy Orbeon Forms on context other than `/orbeon`, say `/forms`. However, in what follows, we'll just assume you've kept `/orbeon`.)
+You can identify the requests made to Orbeon Forms based on their path, which is typically `/orbeon`. (With Java web apps, that first part of the path is referred to as the "context", and you can deploy Orbeon Forms on a context other than `/orbeon`, say `/forms`. However, in what follows, we'll just assume you've kept `/orbeon`.)
 
 #### Forwarding the `JSESSIONID` cookie
 
@@ -83,3 +83,7 @@ ORBEON.fr.API.destroyForm(container);
 ```
 
 If you want to replace a form A shown in a given container by an other form B, you can just do so by calling `ORBEON.fr.API.embedForm()` a second time for form B, and don't need to explicitly first call `destroyForm()`.
+
+## Limitations
+
+The JavaScript embedding API has the same [limitations as the Java embedding API](java-api.md#limitations).
