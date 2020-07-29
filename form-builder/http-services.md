@@ -30,9 +30,6 @@ The "Definition" tab allows you to set the basic service parameters:
 - **Request Body**
     - This applies to the `POST` and `PUT` methods.
     - The XML document to send to the service. When using the "HTML Form" serialization, this is converted to name/value pairs.
-- **Service Response has Binary Content**
-    - [SINCE Orbeon Forms 2020.1]
-    - Check this if you know that the service returns binary content, such as an image. This is necessary if the [`<fr:control-setattachment>`](/form-builder/actions-syntax.md#setting-the-value-of-an-attachment-control) action makes use of the response.
 
 ### Serializations
 
@@ -95,14 +92,17 @@ Make sure to select `HTML Form` in the `Serialization` dropdown, otherwise the U
 
 The "Advanced" tab allows you to set advanced service parameters:
 
-- **SOAP Service**
-    - Whether this is a SOAP service
-- **SOAP Action**
-    - If selected, the value of the `SOAPAction` header.
+- **Service Response has Binary Content**
+    - [SINCE Orbeon Forms 2020.1]
+    - Check this if you know that the service returns binary content, such as an image. This is necessary if the [`<fr:control-setattachment>`](/form-builder/actions-syntax.md#setting-the-value-of-an-attachment-control) action makes use of the response.
 - **HTTP Authentication**
     - Whether to use HTTP authentication.
     - **Username:** Username to use.
     - **Password:** Password to use.
+- **SOAP Service**
+    - Whether this is a SOAP service
+- **SOAP Action**
+    - If selected, the value of the `SOAPAction` header.
 
 ![Advanced tab](images/service-definition-advanced.png)
 
