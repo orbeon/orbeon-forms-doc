@@ -18,6 +18,7 @@ The "Definition" tab allows you to set the basic service parameters:
 
 - **Service Name**
     - This is the name of the service, as seen by Form Builder. Must start with a letter, and may not contain spaces.
+    - [SINCE Orbeon Forms 2020.1] The service can be renamed, and actions that use the service are automatically updated.
 - **Resource URL**
     - `HTTP` or `HTTPS` URL to which the service must be called.
     - The value is an XPath Value Template, which means that the URL can be dynamic. For example, with Orbeon Forms 2018.1's `fr:control-string-value()` function:
@@ -29,6 +30,9 @@ The "Definition" tab allows you to set the basic service parameters:
 - **Request Body**
     - This applies to the `POST` and `PUT` methods.
     - The XML document to send to the service. When using the "HTML Form" serialization, this is converted to name/value pairs.
+- **Service Response has Binary Content**
+    - [SINCE Orbeon Forms 2020.1]
+    - Check this if you know that the service returns binary content, such as an image. This is necessary if the [`<fr:control-setattachment>`](/form-builder/actions-syntax.md#setting-the-value-of-an-attachment-control) action makes use of the response.
 
 ### Serializations
 
@@ -139,6 +143,10 @@ Once your service is defined, the "Save" buttons saves it to the form. You can c
 ## Deleting a service
 
 You can delete a saved service using the "Remove" button.
+
+[SINCE Orbeon Forms 2020.1]
+
+Orbeon Forms warns you if there are existing actions that refer to the service. 
 
 ## See also
 
