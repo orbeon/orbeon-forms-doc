@@ -27,12 +27,12 @@ The "Custom CSS classes" field allows adding CSS classes which will be placed on
 
 ### Formulas
 
-* **Visibility:** Boolean expression specifying whether the section or grid is visible.
-    * If this field is left blank, then the section or grid is always visible, unless an enclosing section is not visible.
-    * Otherwise, it is visible only if the result of the Boolean expression is `true()`.
-* **Read-Only:** Boolean expression specifying whether the section or grid is read-only (not editable).
-    * If this field is left blank, then the section or grid is editable unless an enclosing section is read-only.
-    * Otherwise, it is editable only if the result of the Boolean expression is `false()`.
+- **Visibility:** Boolean expression specifying whether the section or grid is visible.
+    - If this field is left blank, then the section or grid is always visible, unless an enclosing section is not visible.
+    - Otherwise, it is visible only if the result of the Boolean expression is `true()`.
+- **Read-Only:** Boolean expression specifying whether the section or grid is read-only (not editable).
+    - If this field is left blank, then the section or grid is editable unless an enclosing section is read-only.
+    - Otherwise, it is editable only if the result of the Boolean expression is `false()`.
 
 XPath expressions are described in more details in [Formulas](formulas.md).
 

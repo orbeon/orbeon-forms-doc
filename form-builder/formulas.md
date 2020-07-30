@@ -101,12 +101,16 @@ In the Control Settings dialog, XPath expressions are used to specify the follow
 
 In the Section/Grid Settings dialog, XPath expressions are used to specify the following aspects of a section or grid:
 
-* **Visibility:** Boolean expression specifying whether the section is visible or not.
-    * If this field is left blank, then the section is always visible.
-    * Otherwise, it is visible only if the result of the Boolean expression is true().
-* **Read-Only:** Boolean expression specifying whether the section is shown as read-only or not.
-    * If this field is left blank, then the section content is always editable.
-    * Otherwise, the section content is editable only if the result of the Boolean expression is false().
+- **Visibility:** Boolean expression specifying whether the section is visible or not.
+    - If this field is left blank, then the section is always visible.
+    - Otherwise, it is visible only if the result of the Boolean expression is true().
+- **Read-Only:** Boolean expression specifying whether the section is shown as read-only or not.
+    - If this field is left blank, then the section content is always editable.
+    - Otherwise, the section content is editable only if the result of the Boolean expression is false().
+
+[SINCE Orbeon Forms 2020.1]
+
+In the Form Settings dialog, an XPath expression can be used to specify whether the entire form is read-only (not editable).
 
 ### Actions
 

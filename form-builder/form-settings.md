@@ -137,6 +137,16 @@ For details, see [Wizard View](/form-runner/feature/wizard-view.md).
     
 See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html).
 
+## Formulas
+
+[SINCE Orbeon Forms 2020.1]
+
+![Readonly formula](images/form-settings-formulas.png)
+
+- **Read-Only:** Boolean expression specifying whether the entire form is read-only (not editable).
+    * If this field is left blank, then the form is editable.
+    * Otherwise, it is editable only if the result of the Boolean expression is `false()`.
+
 ## About this Form
 
 ![About this Form](images/form-settings-about.png)
