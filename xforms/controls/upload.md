@@ -1,7 +1,5 @@
 # Upload control
 
-
-
 ## Appearance
 
 Example of the upload control before selection:
