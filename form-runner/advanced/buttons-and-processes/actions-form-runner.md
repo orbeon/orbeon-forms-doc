@@ -109,6 +109,15 @@ This action can be useful in conjunction with `send`. Upon successfully sending 
 
 See also [the `oxf.fr.detail.warn-when-data-unsafe` property](/configuration/properties/form-runner-detail-page.md#warning-the-user-when-data-is-unsafe).
 
+## set-workflow-stage
+
+[SINCE Orbeon Forms 2020.1]
+
+- parameters
+    - `name`: the new workflow stage (is an XPath value template)
+
+For instance, you can have an `approve` process that set the current workflow stage `set-workflow-stage(name = "approved")`. You can also use [value templates](/xforms/core/attribute-value-templates.md) to dynamically determine the name of the stage, as in `set-workflow-stage(name = "{if (//expense > 10000) then 'review-needed' else 'approved'}")`.
+
 ## navigate
 
 Navigate to an external page via client-side `GET`.
