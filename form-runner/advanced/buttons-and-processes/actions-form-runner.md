@@ -121,7 +121,7 @@ For instance:
 - You can have an `approve` process that sets the current workflow stage with `set-workflow-stage(name = "approved")`
 - You can also use a [value template](/xforms/attribute-value-templates.md) to dynamically determine the name of the workflow stage, as in `set-workflow-stage(name = "{if (//expense > 10000) then 'review-needed' else 'approved'}")`
 
-Also see the [`fr:workflow-stage() function`](/xforms/xpath/extension-form-runner.md#fr-workflow-stage).
+Also see the [`fr:workflow-stage-value() function`](/xforms/xpath/extension-form-runner.md#fr-workflow-stage-value).
 
 ## navigate
 
