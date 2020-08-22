@@ -106,16 +106,17 @@ fr:created-dateTime() as xs:dateTime?
 
 Return the creation date of the current form data *as of the last read from the database* if available, and the empty sequence otherwise (such as in "new" mode).
 
-### fr:workflow-stage()
+### fr:workflow-stage-value()
 
 [SINCE Orbeon Forms 2020.1]
 
 ```xpath
-fr:workflow-stage() as xs:string?
+fr:workflow-stage-value() as xs:string?
 ```
 
 If a workflow stage has been set for the current form data, then the function returns that workflow stage, as a string. And if no workflow stage has been set, the function returns an empty sequence. Also see the [`set-workflow-stage` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-workflow-stage).
 
+The function name has a `value` suffix as we anticipate future versions of Orbeon Forms to associate to the workflow stage a *label*, and also possibly a *description*, for cases when the workflow stage needs to be made visible to users. Thus the *value* will be only used to keep track of the current workflow stage, while the *label* and *description* will be user facing, and if needed localized.
 
 ### fr:dataset()
 
