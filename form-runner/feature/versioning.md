@@ -2,7 +2,7 @@
 
 ## Availability
 
-This feature is available since Orbeon Forms 4.5. It is available with all supported relational databases but not the eXist database.
+This an Orbeon Forms PE feature available since Orbeon Forms 4.5. It is available with all supported relational databases but not the eXist database.
 
 ## What is form definition versioning?
 
