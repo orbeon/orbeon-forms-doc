@@ -577,7 +577,9 @@ The following masks are supported:
     - As a variation, you can write `[M01]` and `[D01]` if you want day and months on one digit to be prefixed with a `0`, e.g. 11/05/2008
 - For times (property `oxf.xforms.format.input.time`):
     - `[h]:[m]:[s] [P]` e.g. 2:05:12 p.m. with dots in a.m. and p.m.
+    - `[h]:[m] [P]` same without seconds [SINCE Orbeon Forms 2020.1]
     - `[h]:[m]:[s] [P,2-2]` e.g. 2:05:12 pm without dots in am and pm
+    - `[h]:[m] [P,2-2]` same without seconds [SINCE Orbeon Forms 2020.1]
     - `[H]:[m]:[s]` e.g. 14:05:12
     - `[H]:[m]` e.g. 14:05 (without seconds)
 
