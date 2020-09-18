@@ -47,6 +47,8 @@ ORBEON.xforms.Events.errorEvent.subscribe(function(eventName, eventData) {
 
 ## Providing your own dialog
 
+### File location
+
 By default, the source markup for this dialog is available under:
 
 ```
@@ -62,6 +64,10 @@ You can override it in two ways:
 
 * Globally, by placing your own `error-dialog.xml` file under `WEB-INF/resources/config`.
 * Per application, by placing your own `error-dialog.xml` file under `WEB-INF/resources/apps/$app`, where `$app` stands for the name of your application.
+
+### Localization
+
+[SINCE Orbeon Forms 2020.1] Should you need to provide multiple versions of the error dialog in different languages, you can do so by having multiple `<div class="xforms-error-panel">` each with its own `lang` attribute (see below for the full structure of the HTML you need to provide). Orbeon Forms will try to get the error panel with the `lang` attribute matching the current language, and if it can't find one it will pick the first error panel.
 
 ### Example: default dialog
 
