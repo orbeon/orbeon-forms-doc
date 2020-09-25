@@ -47,6 +47,51 @@ Example response body:
 </response>
 ```
 
+## Returning form data
+
+[SINCE Orbeon Forms 2020.2]
+
+This must first be enabled with the following property:
+
+```xml
+<property 
+    as="xs:boolean"
+    name="oxf.fr.detail.service.background.enable-return-data.*.*" 
+    value="true"/>
+```
+
+Then, if you pass the URL parameter `return-data=true` to the service, form data is returned:
+
+```xml
+<response>
+    <document-id>9eff349bfd95aab8d4d5e048bd25a815</document-id>
+    <data>
+        <form>
+            <my-section>
+                <my-control>Cat</my-control>
+            </my-section>
+        </form>
+    </data>
+    <process-success>true</process-success>
+</response>
+```
+
+By default, the data is returned in the 4.0.0 data format. You can override this by passing the `data-format-version` parameter:
+
+- `data-format-version`
+    - `edge`: send the data in the latest internal format
+    - `2019.1.0`: send the data in the Orbeon Forms 2019.1-compatible format
+    - `4.8.0`: send the data in the Orbeon Forms 4.8-compatible format
+    - `4.0.0`: send the data in the Orbeon Forms 4.0-compatible format (the default)
+
+The `prune-metadata` parameter can be used to control production of metadata:
+
+- `true` to remove all occurrences of `fr:`-prefixed elements and attributes
+- `false` to leave such occurrences
+- default
+    - `false` when `data-format-version` is set to `edge`
+    - `true` otherwise 
+
 ## Running processes
 
 The following property controls what process(es) to run:
