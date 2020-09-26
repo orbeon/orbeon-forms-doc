@@ -82,14 +82,15 @@ In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use
 
 Each provider supports standard properties, as follows:
 
-Property                                                                             | Explanation
--------------------------------------------------------------------------------------|-------------------------------------------------------
-[`oxf.fr.persistence.[provider].uri`](#property_uri)                                 | specifies the location, via HTTP, of the provider implementation.
-[`oxf.fr.persistence.[provider].active`](#property_active)                           | specifies whether the provider is active
-[`oxf.fr.persistence.[provider].autosave`](#property_autosave)                       | specifies whether [autosave](../../form-runner/persistence/autosave.md) is supported.
-[`oxf.fr.persistence.[provider].permissions`](#property_permissions)                 | specifies whether user/group permissions are supported
-[`oxf.fr.persistence.[provider].versioning`](#property_versioning)                   | specifies whether versioning is supported
-[`oxf.fr.persistence.[provider].data-format-version`](#property_data-format-version) | specifies the data format version used in the database
+Property                                                                                             | Explanation
+-----------------------------------------------------------------------------------------------------|-------------------------------------------------------
+[`oxf.fr.persistence.[provider].uri`](#property_uri)                                                 | The location, via HTTP, of the provider implementation.
+[`oxf.fr.persistence.[provider].active`](#property_active)                                           | Whether the provider is active
+[`oxf.fr.persistence.[provider].autosave`](#property_autosave)                                       | Whether [autosave](../../form-runner/persistence/autosave.md) is supported.
+[`oxf.fr.persistence.[provider].permissions`](#property_permissions)                                 | Whether user/group permissions are supported
+[`oxf.fr.persistence.[provider].versioning`](#property_versioning)                                   | Whether versioning is supported
+[`oxf.fr.persistence.[provider].data-format-version`](#property_data-format-version)                 | The data format version used in the database
+[`oxf.fr.persistence.[provider].escape-non-ascii-characters`](#property_escape-non-ascii-characters) | Whether non-ASCII characters should be escaped
 
 ### <a name="property_uri"></a> `uri` property
 
@@ -196,7 +197,7 @@ The default is `4.0.0` for backward compatibility.
 This property must be changed very carefully. All form data in the database for a given provider must be in the same format and it is not possible, at this point, to change the value of this property if there is existing data in the database.
 
 ```xml
-<property 
+<property
     as="xs:string"
     name="oxf.fr.persistence.*.data-format-version"
     value="4.8.0"/>
@@ -204,15 +205,32 @@ This property must be changed very carefully. All form data in the database for 
 
 _NOTE: Since Orbeon Forms 2017.1, the `oxf.fr.detail.new.service.enable` property always assumes data in `4.0.0` format even if the property above is set to a different value._
 
+### <a name="property_escape-non-ascii-characters"></a> `escape-non-ascii-characters` property
+
+[SINCE Orbeon Forms 2020.2]
+
+We recommend you set up your database to store text as Unicode, to avoid potential problems when users enter non-ASCII characters, like accents, characters from non-latin languages, or even emojis. In cases when this isn't possible, you can sets the following property to `true`, to instruct Orbeon Forms to escape all non-ASCII characters in form data before they are sent to the database.
+
+This escaping only applies to form data, and not to indices created based on this data, which means that if you are using the Form Runner summary page, or the search API, and that a field value shown in the summary page or returned by the search API contains a character that your database is unable to store, while your data is still safe, the summary page or the result of the search API might contain an incorrect value.
+
+For instance, say a user enters the character `é` in a field, and that you have this property enabled, then the form data will contain `&#233;`, which is the escaped version of `é`, however, if that field is indexed (because you've enabled *Show on Summary page* or *Show in search* in the *Control Settings* for that field), then the character `é` will be stored in the index table, which might be a problem if your database encoding cannot accommodate the storage of this character.
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.persistence.*.escape-non-ascii-characters"
+    value="false"/>
+```
+
 ## Multiple databases of the same type
 
 Say you have two MySQL databases (or a single MySQL database with different schemas and users configured) and you would like to configure Orbeon Forms to store form definitions and form data to one or the other of the databases. Assume the following JDBC datasources:
 
 - `mysql_foo`
-- `mysql_bar` 
+- `mysql_bar`
 
 You associate each datasource with a Form Runner *persistence provider* with the following properties:
- 
+
 ```
 <property as="xs:anyURI"  name="oxf.fr.persistence.mysql_foo.uri"         value="/fr/service/mysql"/>
 <property as="xs:string"  name="oxf.fr.persistence.mysql_foo.datasource"  value="mysql_foo"/>
@@ -231,9 +249,9 @@ You associate each datasource with a Form Runner *persistence provider* with the
 
 Then if you would like:
 
-- form definitions and form data for the Form Runner app `foo` to go to `mysql_foo` 
+- form definitions and form data for the Form Runner app `foo` to go to `mysql_foo`
 - form definitions and form data for the Form Runner app `bar` to go to `mysql_bar`
- 
+
 Add:
 
 ```
