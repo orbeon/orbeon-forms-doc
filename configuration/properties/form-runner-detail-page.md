@@ -78,6 +78,8 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
 
 ## Buttons on the Detail Page
 
+### Choosing which buttons are shown
+
 ```xml
 <property
     as="xs:string"
@@ -87,7 +89,7 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
 
 The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md).
 
-## Hiding and disabling buttons
+### Hiding and disabling buttons
 
 [SINCE Orbeon Forms 2016.2]
 
@@ -121,7 +123,7 @@ The value of these properties is an XPath expression. For example the following 
 </property>
 ```
 
-## Loading indicator for buttons
+### Loading indicator for buttons
 
 [SINCE Orbeon Forms 2016.1]
 
