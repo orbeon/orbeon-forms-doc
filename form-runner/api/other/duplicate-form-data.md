@@ -10,7 +10,7 @@ The API is also used internally by the Summary page via the Duplicate button.
 
 ## Purpose
 
-The purpose of the `duplicate` API is to duplicate form data, including form data attachments.
+The purpose of the `duplicate` API is to duplicate form data, including form data attachments. This API cannot be used to duplicate [auto-saved data](/form-runner/persistence/autosave.md), as it doesn't provide a way for the caller to specify whether the data to duplicate was auto-saved or not.
 
 ## Interface
 
