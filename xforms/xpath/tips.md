@@ -1,5 +1,9 @@
 ## XPath tips
 
+## XForms requested type vs. XPath typed value
+
+When type annotations are enabled and an XPath expression requires access to a typed value, if the value is not of the specified type, the expression  stops its evaluation. This behavior is different from 3.9, where an untyped value would be returned instead.
+
 ## Boolean comparisons
 
 Consider:
@@ -31,6 +35,6 @@ Or:
 
 This latter expression works whether type annotations are enabled or not.
 
-## XForms requested type vs. XPath typed value
+## See also
 
-When type annotations are enabled and an XPath expression requires access to a typed value, if the value is not of the specified type, the expression  stops its evaluation. This behavior is different from 3.9, where an untyped value would be returned instead.
+- [Form Builder forumlas examples](/form-builder/formulas/formulas-examples.md)
