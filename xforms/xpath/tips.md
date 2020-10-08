@@ -37,4 +37,4 @@ This latter expression works whether type annotations are enabled or not.
 
 ## See also
 
-- [Form Builder forumlas examples](/form-builder/formulas/formulas-examples.md)
+- [Form Builder forumlas examples](/form-builder/formulas-examples.md)
