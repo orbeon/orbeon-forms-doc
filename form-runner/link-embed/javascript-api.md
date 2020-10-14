@@ -40,7 +40,7 @@ When forwarding HTTP requests, you need to make sure the `JSESSIONID` cookie is 
 
 #### Authentication
 
-Users will be accessing your application, so you can continue to authenticate them as usual. If you are only requiring authentication for certain paths, you'll just want to make sure you also include everything under `/orbeon`. (If you don't require users to be authenticated to access that path, they might be able to bypass the authentication you've put in place for your app, say under `/app`, and instead access directly Orbeon Forms making requests to paths under `/orbeon`.)
+Users will be accessing your application, so you can continue to authenticate them as usual. If you are only requiring authentication for certain paths, you'll just want to make sure you also include everything under `/orbeon`. If you don't require users to be authenticated to access that path, they might be able to bypass the authentication you've put in place for your app, say under `/app`, and instead access directly Orbeon Forms making requests to paths under `/orbeon`.
 
 #### User information
 
