@@ -36,6 +36,16 @@ When forwarding HTTP requests, you need to make sure the `JSESSIONID` cookie is 
 1. The first time the browser makes a request to Orbeon Forms, that is with a path starting with `/orbeon`, the response sets `JSESSIONID` cookie.
 2. In every subsequent request made to Orbeon Forms, that `JSESSIONID` cookie set earlier is sent by the browser, and the server doesn't in turn set another `JSESSIONID` in the response. (I.e. the value of the `JSESSIONID` cookie sent by the browser to the server shouldn't change for the duration of the session.)
 
+### Users
+
+#### Authentication
+
+Users will be accessing your application, so you can continue to authenticate them as usual. If you are only requiring authentication for certain paths, you'll just want to make sure you also include everything under `/orbeon`. (If you don't require users to be authenticated to access that path, they might be able to bypass the authentication you've put in place for your app, say under `/app`, and instead access directly Orbeon Forms making requests to paths under `/orbeon`.)
+
+#### User information
+
+If your users are authenticated, you'll most likely want or need to have Orbeon Forms know about who the current user is, so Orbeon Forms can [control the access to forms and enforce permissions](/form-runner/access-control.md). In the context of the JavaScript embedding API, this is typically done by your having your forwarding code pass information about the current user to Orbeon Forms using headers, and setting up Orbeon Forms to use this information it receives in what is called the [header-driven method](/form-runner/access-control/users.md#header-driven-method).
+
 ### JavaScript to include
 
 In the page where you want to embed a form, include the following JavaScript by adding this element inside the page's `<head>`:
