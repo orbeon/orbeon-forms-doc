@@ -44,7 +44,7 @@ Users will be accessing your application, so you can continue to authenticate th
 
 #### User information
 
-If your users are authenticated, you'll most likely want or need to have Orbeon Forms know about who the current user is, so Orbeon Forms can [control the access to forms and enforce permissions](/form-runner/access-control.md). In the context of the JavaScript embedding API, this is typically done by your having your forwarding code pass information about the current user to Orbeon Forms using headers, and setting up Orbeon Forms to use this information it receives in what is called the [header-driven method](/form-runner/access-control/users.md#header-driven-method).
+If your users are authenticated, you'll most likely want or need to have Orbeon Forms know about who the current user is, so Orbeon Forms can [control the access to forms and enforce permissions](/form-runner/access-control/README.md). In the context of the JavaScript embedding API, this is typically done by your having your forwarding code pass information about the current user to Orbeon Forms using headers, and setting up Orbeon Forms to use this information it receives in what is called the [header-driven method](/form-runner/access-control/users.md#header-driven-method).
 
 ### JavaScript to include
 
