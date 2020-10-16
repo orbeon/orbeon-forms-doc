@@ -49,9 +49,9 @@ The following example:
     - sets values from controls into the `my-service` service request
     - calls the `my-service` service
 - when the service call completes
-    - the `my-repeated-grid` repeated grid is cleared
+    - the `my-table` repeated grid is cleared
     - iterating over the XML response, for each iteration
-        - adds a repetition at the end of the `my-repeated-grid` repeated grid
+        - adds a repetition at the end of the `my-table` repeated grid
         - sets the value of controls on the new repetition
     - finally, all the `result-dropdown` dropdown control items are updated
 
@@ -71,10 +71,10 @@ The following example:
             <fr:value control="bar" ref="/*/bar"/>
         </fr:service-call>
     
-        <fr:repeat-clear repeat="my-repeated-grid"/>
+        <fr:repeat-clear repeat="my-table"/>
     
         <fr:data-iterate ref="/*/row">
-            <fr:repeat-add-iteration repeat="my-repeated-grid" at="end"/>
+            <fr:repeat-add-iteration repeat="my-table" at="end"/>
             <fr:control-setvalue value="@field" control="result-field" at="end"/>
             <fr:control-setvalue value="@dropdown" control="result-dropdown" at="end"/>
         </fr:data-iterate>
