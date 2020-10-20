@@ -47,8 +47,6 @@ Configure the Java VM with:
 
 Also, make sure that you do *not* have tiered compilation when using Java 7. See [A dangerous Java 7 JVM option: TieredCompilation](https://blog.orbeon.com/2015/08/a-dangerous-java-7-jvm-option.html).
 
-xxx
-
 *NOTE: On Unix systems, GIJ / GCG is not supported as there are reports of issues with that runtime environment and Orbeon Forms. Instead, we recommend you use the Oracle runtime Java environment.*
 
 ## Database setup
