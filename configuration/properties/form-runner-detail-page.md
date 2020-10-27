@@ -337,19 +337,19 @@ If you are creating a public form, you might want to add a captcha to avoid spam
     value="reCAPTCHA"/>
 ```
 
-The property name changed in Orbeon Forms 2020.1 with the introduction of new captcha-related properties (more on this below). The old property name, without the `component` part, is still supported but deprecated. You can set this property to either:
+The property name changed in Orbeon Forms 2020.1 with the introduction of new captcha-related properties (more on this below). The old property name, without the `component` part, is still supported, but deprecated. You can set this property to either:
 
-- Blank (empty string), to not have captcha added to your form, which is the default.
+- Blank (empty string), to not have captcha added to your form. This is the default.
 - `reCAPTCHA` or `SimpleCaptcha`, to use one the two captcha implementations built in Orbeon Forms. Also see [which captcha is right for you](../../form-runner/component/captcha.md#which-captcha-is-right-for-you).
 - [SINCE Orbeon Forms 2017.2] The qualified name of an XBL component you created and that implements a captcha, say `acme:custom-captcha`. When doing so, you need to have a namespace defined in your property file for the component prefix you're using, say `xmlns:acme="http://acme.org/"`.
 
 If using the reCAPTCHA, you'll also need to add properties to specify your reCAPTCHA public and private keys. For more on this, see how to set up the [reCAPTCHA component](../../form-runner/component/captcha.md#recaptcha).
 
-### Showing in the wizard
+### Showing inside the wizard
 
 [SINCE Orbeon Forms 2020.1] The following property allows you to configure where the captcha is shown (when enabled). The two possible values are:
-- `form-bottom` to show the captcha at the bottom of the form, which is the default.
-- `inside-wizard` to show the captcha inside the wizard. Only use this if your form is using a wizard, otherwise the captcha won't show.
+- `form-bottom` (the default value), to show the captcha at the bottom of the form.
+- `inside-wizard` to show the captcha inside the wizard. Only use this if your form is using the [wizard view](/form-runner/feature/wizard-view.md), otherwise the captcha won't show.
 
 ```xml
 <property 
@@ -360,7 +360,9 @@ If using the reCAPTCHA, you'll also need to add properties to specify your reCAP
 
 ### Captcha visibility
 
-[SINCE Orbeon Forms 2020.1] When the captcha is enabled, you can control its visibility with the following property. The default value is `true` (shown below), and you can use a [value template](/xforms/attribute-value-templates.md), to make it dynamic. For instance, you can use the above [location property](#showing-in-the-wizard) to have the captcha only show on the last page of the wizard by using `{fr:is-wizard-last-page()}`. Even when not visible, if enabled, solving the captcha is required; so this property isn't intended to be used to dynamically decide whether to have a captcha on a page or not, but it is to decide at what point of the form filling process you want the captcha to show.
+[SINCE Orbeon Forms 2020.1] When the captcha is enabled, you can control its visibility with the following property. The default value is `true` (shown below), and you can use a [value template](/xforms/attribute-value-templates.md), to make it dynamic. For instance, you can have the captcha only show on the last page of the wizard by setting the above [location property](#showing-inside-the-wizard) to `inside-wizard`, and this `visible` property to `{fr:is-wizard-last-page()}`.
+
+Even when not visible according this property (i.e. your value template returns `false`), as long as the captcha is enabled, solving it is required; so this property isn't intended to be used to dynamically decide whether to have a captcha on a page or not, but it is to decide at what point during the form filling process you want the captcha to show.
 
 ```xml
 <property 
