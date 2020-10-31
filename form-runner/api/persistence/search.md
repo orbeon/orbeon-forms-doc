@@ -246,17 +246,11 @@ And in `new` mode, zero or more documents can be returned:
 
 ## Versioning
 
-[SINCE Orbeon Forms 2018.2]
-
-If the implementation of the persistence API supports form versioning, the `Orbeon-Form-Definition-Version` request header tells which version of the form definition is requested. Possible values are:
-
-- missing: indicates the latest published version
-- a specific version number: to indicate that the form definition with that version must be searched
-    - *NOTE: The version number must be a positive integer.*  
-
-[UNTIL Orbeon Forms 2018.1]
-
-The search is done across all versions of the form definition. This can lead to unexpected results as different form definition versions may not have the same fields.
+- [SINCE Orbeon Forms 2018.2] If the implementation of the persistence API supports form versioning, the `Orbeon-Form-Definition-Version` request header tells which version of the form definition is requested. Possible values are:
+    - missing: indicates the latest published version
+    - a specific version number (must be a positive integer): to indicate that the form definition with that version must be searched
+    - `all`: [SINCE Orbeon Forms 2020.1 and 2019.2.3] to do a search across all versions of the form definition, which used to be what was done until Orbeon Forms 2018.1; while this can lead to unexpected results (see below), callers of the API who relied on this behavior might find this backward compatible mode useful
+- [UNTIL Orbeon Forms 2018.1] The search is done across all versions of the form definition. This can lead to unexpected results as different form definition versions may not have the same fields.
 
 ## Query response
 

@@ -110,3 +110,11 @@ By default, the "New" button takes users to the current version of the form, tha
     name="oxf.fr.summary.new.form-version.*.*"
     value="latest"/> 
 ```
+## Versioning
+
+[SINCE Orbeon Forms 2020.1 and 2019.2.3] The following property allows you to configure whether the [summary page](form-runner/feature/summary-page.md) shows data:
+ 
+- if set to `true`: for one version at a time, which is the default;
+- if set to `false`: for all data across form definition versions, as it used to be the case up until Orbeon Forms 2018.1.
+
+Even when set to `false`, if the `form-version` request parameter is passed to the summary page, it will will not ignore the request parameter and will only show data created with that version of the form definition. 
