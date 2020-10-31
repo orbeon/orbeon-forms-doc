@@ -358,6 +358,20 @@ If using the reCAPTCHA, you'll also need to add properties to specify your reCAP
     value="inside-wizard"/>
 ```
 
+#### Limitations
+
+When all the following conditions are met:
+ 
+- The captcha is shown inside the wizard.
+- You have set the `oxf.fr.detail.captcha.visible.*.*` property (see below) to have the captcha show only on certain pages.
+- Users attempt to save or submit the form, or otherwise perform an action that requires data to be valid.
+- The captcha hasn't been solved yet.
+
+Then:
+
+- While an error will show in the error summary to inform users that the captcha needs to be solved, when users click on the error message, Form Runner will not switch to the page where the captcha appears. (The situation here is somewhat different relative to what happens with normal fields, as depending on how you set the `oxf.fr.detail.captcha.visible.*.*` property, the captcha could appear on multiple pages.)
+- The page or pages in which the captcha appear won't be highlighted, as is the case for other invalid fields. 
+
 ### Captcha visibility
 
 [SINCE Orbeon Forms 2020.1] When the captcha is enabled, you can control its visibility with the following property. The default value is `true` (shown below), and you can use a [value template](/xforms/attribute-value-templates.md), to make it dynamic. For instance, you can have the captcha only show on the last page of the wizard by setting the above [location property](#showing-inside-the-wizard) to `inside-wizard`, and this `visible` property to `{fr:is-wizard-last-page()}`.
