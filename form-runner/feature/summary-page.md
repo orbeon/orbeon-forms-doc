@@ -37,9 +37,7 @@ You specify which fields appear in the search options area when editing the form
 
 ## Versioning
 
-[SINCE Orbeon Forms 2018.2]
-
-When more than one [form version](/form-runner/feature/versioning.md) is available, the user has the choice of the version to access. Different versions can behave like very different forms.
+[SINCE Orbeon Forms 2018.2] When more than one [form version](/form-runner/feature/versioning.md) is available, the user has the choice of the version to access. Different versions can behave like very different forms. Also see the [properties to configuring the behavior of the summary page with regards to versioning](/configuration/properties/form-runner-summary-page.md#versioning).
 
 ![Summary Page for version 1 of the form](../images/summary-version-1.png)
 
