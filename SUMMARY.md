@@ -49,7 +49,7 @@
         * [Form area](form-builder/form-area.md)
         * [Toolbox](form-builder/toolbox.md)
         * [Control settings](form-builder/control-settings.md)
-        * [Dependant fields and sections](-builder/dependant-fields-sections.md)
+        * [Dependant fields and sections](form-builder/dependant-fields-sections.md)
         * [Validation](form-builder/validation.md)
         * [Choices editor](form-builder/itemset-editor.md)
         * [Publishing](form-builder/publishing.md)
