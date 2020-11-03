@@ -325,7 +325,7 @@ Example of XML result with `xxf:itemset('my-select1', 'xml', true())` (formatted
             <label>Apple</label>
             <value>1</value>
         </item>
-        <items>
+        <item>
             <label>Banana</label>
             <value>2</value>
         </item>
