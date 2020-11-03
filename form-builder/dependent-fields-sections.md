@@ -1,4 +1,4 @@
-# Dependant fields and sections
+# Dependent fields and sections
 
 ## Rationale
 
@@ -19,7 +19,7 @@ The visibility, read-only, initial value, and calculated value are set using [fo
 
 Say you want to show a textarea when users check a checkbox to indicate they want to provide more details:
 
-![Textarea shown if checkbox is checked](images/dependant-fields-sections-checkbox.png)
+![Textarea shown if checkbox is checked](images/dependent-fields-sections-checkbox.png)
 
 1. Add a Single Checkbox control, open its Control Settings, name it `provide-additional-details`.
 2. Add a Plain Text Area control, open its Control Settings, open the Formulas tab, set the Visibility to Formula, an enter `$provide-additional-details/string() = 'true'`.
