@@ -23,7 +23,7 @@ Form Runner can obtain this information either by:
 3. Otherwise, do you want to use the [login and logout pages](login-logout.md) provided by Form Runner? If so, you'll want to go with container-based permissions, as those pages rely on facilities provided by the container to do the authentication.
 4. Otherwise, you can use either container-based or header-based permissions, going with the one that is the most convenient for you. If your information about users is stored in a system supported by your application server, e.g. you are using LDAP and Tomcat, then container-based is most likely the simplest option. If not, you could do such an intergration, e.g. creating a custom secruity realm for Tomcat, and user container-based permissions, but it is in that case most likely simpler for you to go with header-based permissions and set headers in servlet filter or reverse proxy.
 
-### Container driven method
+## Container driven method
 
 With the container-driven method, Orbeon Forms uses a standard API to ask the container, typically Tomcat, about the current user. Users are typically setup in a directory service, like Active Directory or LDAP, and you setup the container to interface with that directory service. With Tomcat:
 
@@ -78,9 +78,9 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
     </security-role>
     ```
 
-### Header-driven method
+## Header-driven method
 
-#### Individual headers or single header with JSON?
+### Individual headers or single header with JSON?
 
 You can pass information about the user either using:
 
@@ -91,9 +91,21 @@ The following should help you choose whether to use individual headers or a sing
 
 1. If using Orbeon Forms 2016.2 or earlier, go for individual headers. (The single header with JSON was introduced in Orbeon Forms 2016.3.)
 2. If using [organization-based permissions](organization.md) you'll need to use the single header with JSON, as this is the only way to pass organization-related information to Orbeon Forms.
-3. Otherwise, you can whichever technique is more convenient for you, and in most cases using individial headers might be simpler.
+3. Otherwise, you can whichever technique is more convenient for you, and in most cases using individual headers might be simpler.
 
-#### Enable header-driven method
+### When to set the headers
+
+- [SINCE Orbeon Forms 2020.1] You should provide the headers with every request made to Orbeon Forms for which you want the user to be authenticated, including Ajax requests. If you set the authentication headers for some requests, and then stop passing them, Orbeon Forms will assume the user has logged out, and clear the user's session. You can get the behavior implemented until Orbeon Forms 2019.2 (described below), by setting the `oxf.fr.authentication.header.sticky` property to `true`.
+- [UNTIL Orbeon Forms 2019.2] When you provide information about the user through headers, Orbeon Forms stores that information in the session. So for any subsequent request in the same session, you don't need to provide the headers anymore, and in fact even if you do they will be ignored.
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.authentication.header.sticky"
+    value="true"/>
+```
+
+### Enable header-driven method
 
 Whether using individual headers or a single header with JSON, in all cases you need to enable header-based permissions with the following property in your `properties-local.xml`:
 
@@ -104,9 +116,9 @@ Whether using individual headers or a single header with JSON, in all cases you 
     value="header"/>
 ```
 
-#### If using individual headers
+### If using individual headers
 
-##### Header names
+#### Header names
 
 Tell Orbeon Forms the name of the HTTP headers that contain the username, group, and roles for the current user.
 
@@ -146,7 +158,7 @@ In addition or alternatively, multiple role headers can be provided, and each of
     value="(\s*[,\|]\s*)+"/>
 ```
 
-##### Forwarding headers with 4.6 and earlier
+#### Forwarding headers with 4.6 and earlier
 
 *NOTE: This step is not necessary for Orbeon Forms 4.7 and newer.*
 
@@ -159,7 +171,7 @@ When using header-based authentication, in addition to defining the name of the 
     value="My-Username-Header My-Group-Header My-Roles-Header"/>
 ```
 
-##### LDAP-style header syntax
+#### LDAP-style header syntax
 
 The value of the header is a list of roles separated by spaces, commas, or pipes (`|`). Furthermore, they can optionally be composed of properties in the form of `name=value`, where `name` is specified by a configuration property, and `value` is the value of the role. This is typically useful the value if the header follows an LDAP-style syntax, for instance:
 
@@ -176,7 +188,7 @@ If your header follows a LDAP-style syntax, set the following property to config
     value="cn"/>
 ```
 
-#### If using a single header with JSON
+### If using a single header with JSON
 
 Tell Orbeon Forms the name of the HTTP header that contain the user's information in JSON format:
 

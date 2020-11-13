@@ -48,6 +48,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.authentication.header.roles`
     * `oxf.fr.authentication.header.roles.split`
     * `oxf.fr.authentication.header.roles.property-name`
+    * `oxf.fr.authentication.header.sticky`
 * [Form Runner Home Page](../../form-runner/feature/home-page.md)
     * `oxf.fr.home.page-size`
     * `oxf.fr.home.table.link-to`
