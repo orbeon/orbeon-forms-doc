@@ -2,7 +2,8 @@
 
 ## Availability
 
-[SINCE Orbeon Forms 4.7] The Form Runner Java Embedding API is a PE feature.
+- [SINCE Orbeon Forms 4.7]
+- The Form Runner Java Embedding API is a PE feature.
 
 ## Rationale
 

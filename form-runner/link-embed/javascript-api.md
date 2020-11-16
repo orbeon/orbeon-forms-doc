@@ -2,7 +2,8 @@
 
 ## Availability
 
-[SINCE Orbeon Forms 2020.1] The Form Runner JavaScript Embedding API is a PE feature.
+- [SINCE Orbeon Forms 2020.1]
+- The Form Runner JavaScript Embedding API is a PE feature.
 
 ## Rationale
 
