@@ -32,7 +32,7 @@ See the [Orbeon Forms release history](release-history.md).
 
 ## Release strategy
 
-- __How often do we release?__ Since 2013, starting with version 4.0, we have had 2-3 major releases per year, with point releases as needed.
+- __How often do we release?__ Since 2013, starting with version 4.0, we have had about 2 major releases per year, with point releases as needed.
 - __Why do we release often?__ We think more frequent releases are better because features and bug-fixes reach users faster. They also keep us almost always ready to ship, rather than having very large work in progress which can destabilize the product and then take weeks or months to fix. In short, we think that incremental development and releases are much better for everyone! Based on our experience since early 2013 when we introduced the new release schedule, we are so far (2019) very happy with the change.
 - __What do releases contain?__ Releases address both new features and bug-fixes. Point-releases (2018.1.1, 2018.1.2, etc.) essentially contain bug-fixes and sometimes very small features. They are done only when necessary, and only for the PE version of the product. Bigger features are left to the major releases (2017.1, 2017.2, 2018.1, 2018.2, etc.), and we strive to do those on a regular schedule.
 
