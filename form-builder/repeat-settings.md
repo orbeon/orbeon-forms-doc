@@ -81,7 +81,7 @@ With Orbeon Forms 2016.1, the option is enabled by default for new forms and new
 
 [SINCE Orbeon Forms 2016.1]
 
-The "Initial Number of Iterations Uses Template" option specifies, when an *enclosing repeated section* creates a new iteration, how many iterations this repeated grid will contains:
+The "Initial Number of Iterations Uses Template" option specifies, when an *enclosing repeated section* creates a new iteration, how many iterations this repeated grid will contain:
 
 - when enabled: the number of iterations shown in Form Builder (which can be no iterations at all, one iteration, two iterations, etc.)
 - when disabled: exactly one iteration
