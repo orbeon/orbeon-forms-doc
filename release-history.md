@@ -24,7 +24,7 @@ Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 |      | Oct 24 | 2019.1   | 🟨 Upgrade to 2019.1.1 | [Release notes](/release-notes/orbeon-forms-2019.1.md)                              |
 |      | May 20 | 2018.2.3 | 🟨 Upgrade to 2018.2.4 | [Release notes](https://blog.orbeon.com/2019/05/orbeon-forms-201823-pe.html)        |
 |      | Mar 4  | 2018.2.2 | 🟨 Upgrade to 2018.2.4 | [Release notes](https://blog.orbeon.com/2019/03/orbeon-forms-201822-pe.html)        |
-|      | Feb 7  | 2018.2.1 | 🟨 Upgrade to 2018.2.4 | [PE][2018.2.1-pe], [CE][2018.2.1-ce]                                                |
+|      | Feb 7  | 2018.2.1 | 🟨 Upgrade to 2018.2.4 | [PE](https://blog.orbeon.com/2019/02/orbeon-forms-201821-pe.html), [CE](https://blog.orbeon.com/2019/02/orbeon-forms-201821-ce.html) |
 | 2018 | Dec 31 | 2018.2   | 🟨 Upgrade to 2018.2.4 | [Release notes](https://blog.orbeon.com/2018/12/orbeon-forms-20182.html)            |
 |      | Nov 13 | 2018.1.3 | 🟩 Until Sep 5, 2021   | [Release notes](https://blog.orbeon.com/2018/11/orbeon-forms-201813-pe.html)        |
 |      | Oct 5  | 2018.1.2 | 🟨 Upgrade to 2018.1.3 | [Release notes](https://blog.orbeon.com/2018/10/orbeon-forms-201812-pe.html)        |
@@ -95,6 +95,3 @@ For the curious, these are releases of the Orbeon XML platform before it was ope
 - 2.1: September 16, 2003
 - 2.0: July 10, 2003
 - 1.5: March 17, 2003
-
-    [2018.2.1-pe]: https://blog.orbeon.com/2019/02/orbeon-forms-201821-pe.html
-    [2018.2.1-ce]: https://blog.orbeon.com/2019/02/orbeon-forms-201821-ce.html
