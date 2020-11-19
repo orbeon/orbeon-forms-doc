@@ -36,39 +36,35 @@ Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 |      | Sep 12 | 2017.1.1 | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2017/09/orbeon-forms-201711-pe.html)        |
 |      | Jun 22 | 2017.1   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2017/06/orbeon-forms-20171.html)            |
 |      | May 18 | 2016.3.1 | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2017/05/orbeon-forms-201631.html)           |
-
-- 2016
-    - 2016.3 PE: December 30, 2016 ([release notes](https://blog.orbeon.com/2016/12/orbeon-forms-20163.html))
-    - 2016.2.2 PE: November 17, 2016 ([release notes](https://blog.orbeon.com/2016/11/orbeon-forms-201622-pe.html))
-    - 2016.1.1 PE: October 14, 2016 ([release notes](https://blog.orbeon.com/2016/10/orbeon-forms-201611-pe.html))
-    - 2016.2.1 PE: September 27, 2016 ([release notes](https://blog.orbeon.com/2016/09/orbeon-forms-201621.html))
-    - 2016.2 PE and 2016.2 CE: August 23, 2016 ([release notes](https://blog.orbeon.com/2016/08/orbeon-forms-20162.html))
-    - 2016.1 PE and 2016.1 CE: April 20, 2016 ([release notes](https://blog.orbeon.com/2016/04/orbeon-forms-20161.html))
-- 2015
-    - 4.10.2 PE: December 2, 2015 ([release notes](https://blog.orbeon.com/2015/12/orbeon-forms-4102.html))
-    - 4.10.1 PE: November 16, 2015 ([release notes](https://blog.orbeon.com/2015/11/orbeon-forms-4101.html))
-    - 4.10 PE and 4.10 CE: August 26, 2015 ([release notes](https://blog.orbeon.com/2015/08/orbeon-forms-410.html))
-    - 4.9 PE and 4.9 CE: May 5, 2015 ([release notes](https://blog.orbeon.com/2015/05/orbeon-forms-49.html))
-    - 4.8.2 PE: March 31, 2015 ([release notes](https://blog.orbeon.com/2015/03/orbeon-forms-482.html))
-    - 4.8.1 PE: February 2, 2015 ([release notes](https://blog.orbeon.com/2015/02/orbeon-forms-481.html))
-    - 4.8 PE and 4.8 CE: January 8, 2015 ([release notes](https://blog.orbeon.com/2015/01/orbeon-forms-48.html))
-- 2014
-    - 4.7.1 PE: December 1, 2014 ([release notes](https://blog.orbeon.com/2014/12/orbeon-forms-471.html))
-    - 4.7 PE and 4.7 CE: September 26, 2014 ([release notes](https://blog.orbeon.com/2014/09/orbeon-forms-47.html))
-    - 4.6.2 PE: August 7, 2014 ([release notes](https://blog.orbeon.com/2014/08/orbeon-forms-462.html)).
-    - 4.6.1 PE: July 10, 2014 ([release notes](https://blog.orbeon.com/2014/07/orbeon-forms-461.html)).
-    - 4.6 PE and 4.6 CE: June 24, 2014 ([release notes](https://blog.orbeon.com/2014/06/orbeon-forms-46.html)).
-    - 4.5.1 PE: May 13, 2014 ([release notes](https://blog.orbeon.com/2014/05/orbeon-forms-451.html)).
-    - 4.5 PE and 4.5 CE: April 7, 2014 ([release notes](https://blog.orbeon.com/2014/04/orbeon-forms-45.html)).
-    - 4.4.1 PE: January 15, 2014 ([release notes](https://blog.orbeon.com/2014/01/orbeon-forms-441-pe.html)).
-- 2013
-    - 4.4 PE: November 4, 2013 ([release notes](https://blog.orbeon.com/2013/11/orbeon-forms-44.html)).
-    - 4.3.1 PE: August 29, 2013 ([release notes](https://blog.orbeon.com/2013/08/orbeon-forms-431-pe.html)).
-    - 4.3 PE and 4.3 CE: August 14, 2013 ([release notes](https://blog.orbeon.com/2013/08/orbeon-forms-43.html)).
-    - 4.2 PE and 4.2 CE: May 30, 2013 ([release notes](https://blog.orbeon.com/2013/05/orbeon-forms-42.html)).
-    - 4.1 PE and 4.1 CE: April 18, 2013 ([release notes](https://blog.orbeon.com/2013/04/orbeon-forms-41.html)).
-    - 4.0.1 PE: March 18, 2013 ([release notes](https://blog.orbeon.com/2013/03/orbeon-forms-401.html)).
-    - 4.0.0 PE and 4.0.0 CE: February 22, 2013 ([release notes](https://blog.orbeon.com/2013/03/announcing-orbeon-forms-40.html)).
+| 2016 | Dec 30 | 2016.3   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2016/12/orbeon-forms-20163.html)            |
+|      | Nov 17 | 2016.2.2 | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2016/12/orbeon-forms-20163.html)            |
+|      | Oct 14 | 2016.1.1 | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2016/10/orbeon-forms-201611-pe.html)        |
+|      | Sep 27 | 2016.2.1 | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2016/09/orbeon-forms-201621.html)           |
+|      | Aug 23 | 2016.2   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2016/08/orbeon-forms-20162.html)            |
+|      | Apr 20 | 2016.1   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2016/04/orbeon-forms-20161.html)            |
+| 2015 | Dec 2  | 4.10.2   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/12/orbeon-forms-4102.html)             |
+|      | Nov 16 | 4.10.1   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/11/orbeon-forms-4101.html)             |
+|      | Aug 26 | 4.10     | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/08/orbeon-forms-410.html)              |
+|      | May 5  | 4.9      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/05/orbeon-forms-49.html)               |
+|      | Mar 31 | 4.8.2    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/03/orbeon-forms-482.html)              |
+|      | Feb 2  | 4.8.1    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/02/orbeon-forms-481.html)              |
+|      | Jan 8  | 4.8      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/01/orbeon-forms-48.html)               |
+|      | Jan 8  | 4.8      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/01/orbeon-forms-48.html)               |
+| 2014 | Dec 1  | 4.7.1    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/12/orbeon-forms-471.html)              |
+|      | Sep 26 | 4.7      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/09/orbeon-forms-47.html)               |
+|      | Aug 7  | 4.6.2    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/08/orbeon-forms-462.html)              |
+|      | Jul 10 | 4.6.1    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/07/orbeon-forms-461.html)              |
+|      | Jun 24 | 4.6      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/06/orbeon-forms-46.html)               |
+|      | May 13 | 4.5.1    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/05/orbeon-forms-451.html)              |
+|      | Apr 7  | 4.5      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/04/orbeon-forms-45.html)               |
+|      | Jan 15 | 4.4.1    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/01/orbeon-forms-441-pe.html)           |
+| 2013 | Nov 4  | 4.4      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2013/11/orbeon-forms-44.html)               |
+|      | Aug 29 | 4.3.1    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2013/08/orbeon-forms-431-pe.html)           |
+|      | Aug 14 | 4.3      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2013/08/orbeon-forms-43.html)               |
+|      | May 30 | 4.2      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2013/05/orbeon-forms-42.html)               |
+|      | Apr 18 | 4.1      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2013/04/orbeon-forms-41.html)               |
+|      | Mar 18 | 4.0.1    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2013/03/orbeon-forms-401.html)              |
+|      | Feb 22 | 4.0.0    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2013/03/announcing-orbeon-forms-40.html)    |
 
 ## Earlier Orbeon Forms releases
 
