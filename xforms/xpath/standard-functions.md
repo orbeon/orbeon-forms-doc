@@ -1,6 +1,6 @@
 # Standard functions
 
-## XPath 2.0 functions and constructors
+## XPath 2.0 functions
 
 ### Standard documentation
 
@@ -37,7 +37,7 @@ xs:dateTime('2016-01-11T12:00:00Z')
 
 These constructors are in the `http://www.w3.org/2001/XMLSchema` namespace, usually associated with the `xs` prefix. This means that using a prefix is required.
 
-## XPath 3.0 functions and constructors
+## XPath 3.0 functions
 
 [SINCE Orbeon Forms 2020.1]
 
