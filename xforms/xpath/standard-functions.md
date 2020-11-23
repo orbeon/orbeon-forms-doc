@@ -1,7 +1,5 @@
 # Standard functions
 
-
-
 ## XPath 2.0 functions and constructors
 
 ### Standard documentation
@@ -38,6 +36,25 @@ xs:dateTime('2016-01-11T12:00:00Z')
 ```
 
 These constructors are in the `http://www.w3.org/2001/XMLSchema` namespace, usually associated with the `xs` prefix. This means that using a prefix is required.
+
+## XPath 3.0 functions and constructors
+
+[SINCE Orbeon Forms 2020.1]
+
+This version doesn't yet support XPath 3.0, but it supports a subset of XPath 3.0 math functions. These functions are in the `http://www.w3.org/2005/xpath-functions/math` namespace, which maps to the `math` prefix:
+
+- `math:log()`
+- `math:sin()`
+- `math:cos()`
+- `math:tan()`
+- `math:asin()`
+- `math:acos()`
+- `math:atan()`
+- `math:atan2()`
+- `math:log()`
+- `math:exp()`
+
+For more information, see [Trigonometric and exponential functions](https://www.w3.org/TR/xpath-functions-31/#trigonometry).
 
 ## XForms functions
 
