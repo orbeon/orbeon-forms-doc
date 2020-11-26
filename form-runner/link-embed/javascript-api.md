@@ -55,7 +55,7 @@ In the page where you want to embed a form, include the following JavaScript by 
 <script 
     type="text/javascript" 
     src="/orbeon/xforms-server/baseline.js?updates=fr"></script>
-````
+```
 
 ### `embedForm()` API
 
