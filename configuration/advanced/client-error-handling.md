@@ -14,7 +14,7 @@ You can disable this behavior by adding this property to your `properties-local.
 <property
     as="xs:boolean"
     name="oxf.xforms.show-error-dialog"
-    value="false">
+    value="false"/>
 ```
 
 ## JavaScript event handler
