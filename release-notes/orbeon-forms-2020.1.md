@@ -15,6 +15,10 @@
 
 ## Compatibility notes
 
+### With header-based authentication, provide header on every request
+
+Starting with Orbeon Forms 2020.1, if using header-based authentication, you should provide the headers with every request made to Orbeon Forms for which you want the user to be authenticated. You can get the old behavior, by setting the `oxf.fr.authentication.header.sticky` property to `true`. For more on this, see [when to set the headers](form-runner/access-control/users.md#when-to-set-the-headers).
+
 ### Navigation from the `view` to the `edit` page
 
 When users load the `view` page for a form and click on the "Edit" button, to edit the data they are currently viewing, starting with Orbeon Forms 2020.1, the browser loads the `edit` page as if users were to paste the URL of the edit page in the location bar of their browser, while up to Orbeon Forms 2019.2, the data loaded by the `view` page was sent to the `edit` page. In general, this won't make a difference, but it could, if:
