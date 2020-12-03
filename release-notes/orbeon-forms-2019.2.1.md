@@ -10,7 +10,6 @@ This release addresses the following issues since [Orbeon Forms 2019.2 PE](orbeo
 - Resource patcher adds brackets for overridden resources ([\#4396](https://github.com/orbeon/orbeon-forms/issues/4396))
 - IE11 error "Object doesn't support property or method 'contains'" ([\#4399](https://github.com/orbeon/orbeon-forms/issues/4399))
 - Add missing CSS ([\#4402](https://github.com/orbeon/orbeon-forms/issues/4402))
-- Don't send `xxforms-blur` to the server when the dropdown is opened ([\#4401](https://github.com/orbeon/orbeon-forms/issues/4401))
 - Empty custom control settings after changing id and appearance ([\#4403](https://github.com/orbeon/orbeon-forms/issues/4403))
 - Excel import: exception when validating data ([\#4408](https://github.com/orbeon/orbeon-forms/issues/4408))
 - Allow dropdown to show ([\#4406](https://github.com/orbeon/orbeon-forms/issues/4406))
