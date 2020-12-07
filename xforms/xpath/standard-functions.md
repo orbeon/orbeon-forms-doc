@@ -39,6 +39,8 @@ These constructors are in the `http://www.w3.org/2001/XMLSchema` namespace, usua
 
 ## XPath 3.0 functions
 
+### Math functions
+
 [SINCE Orbeon Forms 2020.1]
 
 This version doesn't yet support XPath 3.0, but it supports a subset of XPath 3.0 math functions. These functions are in the `http://www.w3.org/2005/xpath-functions/math` namespace, which maps to the `math` prefix:
@@ -55,6 +57,16 @@ This version doesn't yet support XPath 3.0, but it supports a subset of XPath 3.
 - `math:exp()`
 
 For more information, see [Trigonometric and exponential functions](https://www.w3.org/TR/xpath-functions-31/#trigonometry).
+
+### Environment variables
+
+[SINCE Orbeon Forms 2020.1]
+
+This function returns the value the specified environment variable. Before using this function, you'll want to set the [`oxf.xpath.environment-variable.enabled` property](/configuration/properties/general.md#oxf-xpath-environment-variable-enabled) to `true`. If that property isn't set to true, or the variable isn't defined, or the Java security doesn't allow access to environment variables, then the function returns an empty sequence. 
+
+```xpath
+environment-variable('SERVICE_HOST')
+```
 
 ## XForms functions
 
