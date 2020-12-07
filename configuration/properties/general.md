@@ -160,7 +160,7 @@ Orbeon Forms uses an efficient caching system. Orbeon Forms automatically determ
 
 ### oxf.xpath.environment-variable.enabled 
 
-Access to environment variables with the `environment-variable()` function is disabled by default. If you wish to make this XPath function available, set the following property to `true`.
+Access to environment variables with the [`environment-variable()` function](/xforms/xpath/standard-functions.md#environment-variable) is disabled by default. If you wish to make this XPath function available, set the following property to `true`.
 
 ```xml
 <property 

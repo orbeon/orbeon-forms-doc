@@ -58,7 +58,7 @@ This version doesn't yet support XPath 3.0, but it supports a subset of XPath 3.
 
 For more information, see [Trigonometric and exponential functions](https://www.w3.org/TR/xpath-functions-31/#trigonometry).
 
-### Environment variables
+### environment-variable()
 
 [SINCE Orbeon Forms 2020.1]
 
