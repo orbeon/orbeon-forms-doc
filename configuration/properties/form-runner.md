@@ -122,6 +122,41 @@ For pages which don't involve a specific form, such as the Form Runner Home Page
 
 For more details, see [Language selection at runtime](../../form-runner/feature/localization.md#language-selection-at-runtime)
 
+## Timezone
+
+[SINCE Orbeon Forms 2021.1]
+
+The Summary and Home pages display timestamps showing the created and last modified dates of forms and data.
+
+You can configure an explicit timezone to display these timestamps:
+
+```xml
+<property
+      as="xs:string"
+      name="oxf.fr.default-timezone"
+      value="-08:00"/>
+```
+
+```xml
+<property
+      as="xs:string"
+      name="oxf.fr.default-timezone"
+      value="+05:30"/>
+```
+
+If the property is blank (the default), the Java environment's default timezone is used.
+
+The timezone offset is expressed in as an offset from UTC in the following format:
+
+- mandatory '+' or "-" prefix
+- two-digit hour
+- mandatory ':'
+- two-digit minutes (most often '00')
+
+[UNTIL Orbeon Forms 2020.1]
+
+The Java environment's default timezone is used.
+
 ## Summary Page
 
 See [Summary page configuration properties](form-runner-summary-page.md).
