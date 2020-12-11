@@ -151,7 +151,7 @@ The timezone offset is expressed in as an offset from UTC in the following forma
 - mandatory `+` or `-` prefix
 - two-digit hour
 - mandatory `:`
-- two-digit minutes (most often '00')
+- two-digit minutes (most often `00`)
 
 [UNTIL Orbeon Forms 2020.1]
 
