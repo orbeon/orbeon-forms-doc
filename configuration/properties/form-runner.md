@@ -134,14 +134,14 @@ You can configure an explicit timezone to display these timestamps:
 <property
       as="xs:string"
       name="oxf.fr.default-timezone"
-      value="-08:00"/>
+      value="America/Los_Angeles"/>
 ```
 
 ```xml
 <property
       as="xs:string"
       name="oxf.fr.default-timezone"
-      value="+05:30"/>
+      value="Asia/Kolkata"/>
 ```
 
 If the property is blank (the default), the Java environment's default timezone is used.
