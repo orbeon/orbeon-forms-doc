@@ -146,13 +146,6 @@ You can configure an explicit timezone to display these timestamps:
 
 If the property is blank (the default), the Java environment's default timezone is used.
 
-The timezone offset is expressed in as an offset from UTC in the following format:
-
-- mandatory `+` or `-` prefix
-- two-digit hour
-- mandatory `:`
-- two-digit minutes (most often `00`)
-
 [UNTIL Orbeon Forms 2020.1]
 
 The Java environment's default timezone is used.
