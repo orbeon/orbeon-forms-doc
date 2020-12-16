@@ -239,7 +239,9 @@ Note that only resources under `detail.messages` are searched, and the resource 
 
 ## open-rendered-format
 
-[SINCE Orbeon Forms 2017.1] This action takes a `format` parameter, whose value must be either `pdf` or `tiff`, as in `open-rendered-format(format = "pdf")`. Depending on the value of the parameter, it generates a view of the current form in the specified format, and sends the generated PDF or TIFF to the browser. This action will attempt to have the browser show the generated PDF or TIFF, and do so in a new browser tab or window. However, not all browsers support this completely:
+[SINCE Orbeon Forms 2017.1] This action takes a `format` parameter, whose value must be either `pdf` or `tiff`, as in `open-rendered-format(format = "pdf")`. In addition to the `content` parameter, this action supports the parameters documented in [Controlling the format](actions-form-runner-send.md#controlling-the-format). 
+
+Depending on the value of the parameter, it generates a view of the current form in the specified format, and sends the generated PDF or TIFF to the browser. This action will attempt to have the browser show the generated PDF or TIFF, and do so in a new browser tab or window. However, not all browsers support this completely:
 
 - Showing the PDF or TIFF inline:
     - PDF – All browsers will show the PDF inline directly, except Edge which will first ask users if they want to save or open it.
