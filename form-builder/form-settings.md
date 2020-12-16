@@ -32,7 +32,7 @@ Form options include options which apply to the entire form definition.
 - Singleton Form
     - Enable or disable singleton form behavior. 
     - See [Singleton Form](../form-runner/advanced/singleton-form.md)
-- Maximum Attachment Size per Control
+- Maximum Attachment Size per File
     - [SINCE Orbeon Forms 2017.1]
     - Use property: use the [`oxf.fr.detail.attachment.max-size` property](../configuration/properties/form-runner-attachments.md#maximum-attachment-size)
 - Maximum Aggregate Attachment Size
