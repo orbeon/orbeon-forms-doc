@@ -32,11 +32,7 @@ However, the closest from the PDF is the Form Runner Review (or `view`) mode (no
 Note that in particular, the `view` mode does not have `input` or other HTML form fields. Instead, you can
 target nested `.xforms-field` elements.
 
-With Chrome, in particular, you can also put the browser in `@media print` emulation:
-
-![Chrome emulation settings](../images/chrome-media-emulation.png)
-
-With that setting enabled, the main remaining difference between the Review page and the PDF is how browsers and the PDF library Orbeon Forms uses interpret CSS, as there are differences. Often you have to go by trial and error.
+You can do some prototype by instructing your browser emulate `@media print` after you load the Review page. With that setting enabled in your browser, the main remaining difference between the Review page and the PDF is how browsers and the PDF library Orbeon Forms uses interpret CSS, as there are differences. Often you have to go by trial and error. [This article](https://css-tricks.com/can-you-view-print-stylesheets-applied-directly-in-the-browser/) covers how to enable `@media print` on Chrome, Safari, Firefox, and Edge. 
 
 ## PDF-specific CSS
 
