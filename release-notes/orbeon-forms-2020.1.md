@@ -121,7 +121,7 @@ See also:
 - **Form Builder (creating forms)**
     - Chrome 87 (latest stable version)
     - Firefox 84 (latest stable version) and the current [Firefox ESR](https://www.mozilla.org/en-US/firefox/enterprise/)
-    - Microsoft Edge 8 (latest stable version)
+    - Microsoft Edge 87 (latest stable version)
     - Safari 14 (latest stable version)
 - **Form Runner (accessing form)**
     - All browsers supported by Form Builder (see above)
