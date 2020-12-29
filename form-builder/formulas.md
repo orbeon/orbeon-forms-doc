@@ -60,7 +60,7 @@ On the other hand, the `total` calculation is outside the repeat, and when it re
 
 [SINCE Orbeon Forms 2019.1]
 
-When a control or section or grid is renamed, dependent formulas which use the notation `$foo` where `foo` is the control name, are automatically updated.
+When a control or section or grid is renamed, dependent formulas which use the notation `$foo` (where `foo` is the control name) are automatically updated.
 
 ## Where do formulas appear?
 

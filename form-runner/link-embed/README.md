@@ -21,6 +21,7 @@ The following versions of Liferay are supported:
 
 |Orbeon Forms Version|Tested Liferay Version    |Proxy Portlet|Full Portlet|
 |--------------------|--------------------------|-------------|------------|
+|2020.1              |Liferay 7.2.1 CE GA2      |yes          |no          |
 |2019.2.2            |Liferay 7.2.1 CE GA2      |yes          |no          |
 |                    |Liferay 7.1.3 CE GA4      |yes          |no          |
 |2019.2              |Liferay 7.1.3 CE GA4      |yes          |no          |

@@ -49,7 +49,7 @@ Example response body:
 
 ## Returning form data
 
-[SINCE Orbeon Forms 2020.2]
+[SINCE Orbeon Forms 2021.1]
 
 This must first be enabled with the following property:
 

@@ -207,7 +207,7 @@ _NOTE: Since Orbeon Forms 2017.1, the `oxf.fr.detail.new.service.enable` propert
 
 ### <a name="property_escape-non-ascii-characters"></a> `escape-non-ascii-characters` property
 
-[SINCE Orbeon Forms 2020.2]
+[SINCE Orbeon Forms 2021.1]
 
 We recommend you set up your database to store text as Unicode, to avoid potential problems when users enter non-ASCII characters, like accents, characters from non-latin languages, or even emojis. In cases when this isn't possible, you can sets the following property to `true`, to instruct Orbeon Forms to escape all non-ASCII characters in form data before they are sent to the database.
 
