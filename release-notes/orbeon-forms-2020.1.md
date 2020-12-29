@@ -51,7 +51,7 @@ The concept of *stage* is introduced at the database level and can be controlled
 
 In addition, you can now set an entire form as readonly based on a formula. This can be used in conjunction with the `fr:workflow-stage-value()` function, for example, to make the form readonly in certain conditions.
 
-See the [documentation](/form-builder/form-settings#formula) for details.
+See the [documentation](/form-builder/form-settings.md#formula) for details.
 
 ### Automatic renaming of actions
 
@@ -73,42 +73,39 @@ Including the features and enhancements above, we [closed over 180 issues](https
 
 ### Form Builder and Form Runner
 
-- Actions Editor to support setting hint for control choices ([\#4566](https://github.com/orbeon/orbeon-forms/issues/4566))
-- Ability for emails to include link back to the form ([\#4461](https://github.com/orbeon/orbeon-forms/issues/4461))
-- Email: support `Reply-To` ([\#4480](https://github.com/orbeon/orbeon-forms/issues/4480))
-- Expose math functions in formulas ([\#4508](https://github.com/orbeon/orbeon-forms/issues/4508))
-- Improve choices for Calculated Values appearances ([\#4531](https://github.com/orbeon/orbeon-forms/issues/4531))
-- Add checkbox to make the service response as binary ([\#4280](https://github.com/orbeon/orbeon-forms/issues/4280))
-- Automatically migrate older `fr:autocomplete` ([\#4242](https://github.com/orbeon/orbeon-forms/issues/4242))
+- The [Actions Editor](/form-builder/actions.md) supports setting a hint for control choices. ([\#4566](https://github.com/orbeon/orbeon-forms/issues/4566))
+- Emails can include a link back to the form. ([\#4461](https://github.com/orbeon/orbeon-forms/issues/4461)) ([doc](/form-builder/advanced/template-syntax.md#links))
+- Emails support `Reply-To`. ([\#4480](https://github.com/orbeon/orbeon-forms/issues/4480)) ([doc](/form-builder/control-settings.md#email-options))
+- Some math functions are now exposed in formulas. ([\#4508](https://github.com/orbeon/orbeon-forms/issues/4508)) ([doc](/xforms/xpath/standard-functions.md#xpath-3-0-functions))
+- We improved the choices for the appearance of Calculated Values. ([\#4531](https://github.com/orbeon/orbeon-forms/issues/4531))
+- We added a checkbox to mark the service response as binary. ([\#4280](https://github.com/orbeon/orbeon-forms/issues/4280)) ([doc](/form-builder/advanced/services-and-actions/http-services.md#advanced-parameters))
+- We automatically migrate older `fr:autocomplete` uses. ([\#4242](https://github.com/orbeon/orbeon-forms/issues/4242))
 
 ### Form Runner
 
 - We've made some improvements in the SQL Orbeon Forms sends to your relational database, improving performance in high throughput environments, in particular when using MySQL.
 - Rotating image attachments in PDF files to match the orientation indication present in images taken on mobile phones. ([\#4442](https://github.com/orbeon/orbeon-forms/issues/4442))
-- Allow users to view form data if they can't edit it because of a lease. ([blog post](https://blog.orbeon.com/2020/07/allowing-users-to-view-form-data-if.html))
-- Control when and where the captcha is shown. ([\#4651](https://github.com/orbeon/orbeon-forms/issues/4651))
+- Allow users to view form data if they can't edit it because of a lease. ([blog](https://blog.orbeon.com/2020/07/allowing-users-to-view-form-data-if.html))
+- Control when and where the captcha is shown. ([\#4651](https://github.com/orbeon/orbeon-forms/issues/4651)) ([doc](/configuration/properties/form-runner-detail-page.md#captcha))
 - Allow the Summary page to show data across all versions. ([\#4699](https://github.com/orbeon/orbeon-forms/issues/4699))
 - Structured search on Summary page supports multiple selection controls. ([\#4479](https://github.com/orbeon/orbeon-forms/issues/4479))
-- Action syntax: action to clear a control, including attachment controls ([\#4427](https://github.com/orbeon/orbeon-forms/issues/4427))
+- Action to clear a control, including attachment controls ([\#4427](https://github.com/orbeon/orbeon-forms/issues/4427)) ([doc](/form-builder/advanced/services-and-actions/actions-syntax.md#clearing-the-value-of-a-control))
 
 ### Accessibility
 
-
-
-- Voice Over in Safari reads required "star" ([\#4628](https://github.com/orbeon/orbeon-forms/issues/4628))
-- Wizard: TOC should be first in the markup for accessibility ([\#4211](https://github.com/orbeon/orbeon-forms/issues/4211))
-- Readonly input fields should be focusable ([\#3816](https://github.com/orbeon/orbeon-forms/issues/3816))
-- Labels for dropdowns "with search" are not tied to the dropdown ([\#4713](https://github.com/orbeon/orbeon-forms/issues/4713))
-- Link Buttons (buttons that show as a link), will behave more like other buttons: on Safari they'll be reachable with the tab key, and users will be able to activate them using the space key, in addition to enter, where supported by the browser.
-  https://twitter.com/orbeon/status/1288634524641894400
+- Voice Over in Safari no longer reads the required "star". ([\#4628](https://github.com/orbeon/orbeon-forms/issues/4628))
+- The Wizard table of contents (TOC) is first in the markup for accessibility. ([\#4211](https://github.com/orbeon/orbeon-forms/issues/4211))
+- Readonly input fields are now focusable. ([\#3816](https://github.com/orbeon/orbeon-forms/issues/3816))
+- Labels for dropdowns "with search" are tied to the dropdown. ([\#4713](https://github.com/orbeon/orbeon-forms/issues/4713))
+- Link Buttons (buttons that show as a link), behave more like other buttons: on Safari they are reachable with the tab key, and users are able to activate them using the space key, in addition to enter, where supported by the browser. ([Tweet](https://twitter.com/orbeon/status/1288634524641894400))
 
 ### Other
 
-- Implement the XForms `xf:copy` element ([\#4438](https://github.com/orbeon/orbeon-forms/issues/4438))
+- We implemented the XForms `xf:copy` element. ([\#4438](https://github.com/orbeon/orbeon-forms/issues/4438))
 - We updated the default favicon to show nicely on high dpi monitors. ([Tweet](https://twitter.com/orbeon/status/1274053039062540288))
-- Support XPath 3 `environment-variable()` ([\#4718](https://github.com/orbeon/orbeon-forms/issues/4718))
-- Upgrade to TinyMCE 5 ([\#4382](https://github.com/orbeon/orbeon-forms/issues/4382)) ([Blog](https://blog.orbeon.com/2020/01/upgrading-to-tinymce-5.html))
-- Refactored and moved a lot of the client-side code to Scala.js.
+- We added the XPath 3 `environment-variable()` function. ([\#4718](https://github.com/orbeon/orbeon-forms/issues/4718))
+- We upgraded to TinyMCE 5. ([\#4382](https://github.com/orbeon/orbeon-forms/issues/4382)) ([blog](https://blog.orbeon.com/2020/01/upgrading-to-tinymce-5.html))
+- We refactored and moved a lot of the client-side code to Scala.js as part of our ongoing plan to [keep our code current](https://blog.orbeon.com/2019/12/keeping-our-code-current.html).
 
 ## Internationalization
 

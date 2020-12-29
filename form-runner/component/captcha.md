@@ -1,7 +1,5 @@
 # Captcha components
 
-
-
 ## Which captcha is right for you
 
 [reCAPTCHA][1] is almost a de facto standard on the web: more than a million reCAPTCHA are solved every day, it is used by a large number of mainstream sites, like Facebook, and is constantly updated providing a high level of security. Since 2009, this service is owned by Google.
