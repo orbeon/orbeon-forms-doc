@@ -419,7 +419,6 @@ The following process names apply:
 on controls being present, data validation does not function in this case. If you need to validate data, for example
 before saving it or sending it, you must use the `after-controls` process name.*
 
-
 Background options:
 
 - `background`: run only in the background, that is within a service such as the ["run form in the background"](../../form-runner/api/other/run-form-background.md) service

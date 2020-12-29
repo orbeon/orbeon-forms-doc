@@ -38,7 +38,7 @@ This release adds the new option of *clearing* (or *resetting*) a repetition. Wh
 
 ## Other features and enhancements
 
-Including the features and enhancements above, we [closed over 180 issues](https://github.com/orbeon/orbeon-forms/issues?page=7&q=is%3Aissue+is%3Aclosed+project%3Aorbeon%2Forbeon-forms%2F11) since [Orbeon Forms 2019.1](orbeon-forms-2019.1.md).
+Including the features and enhancements above, we [closed over 180 issues](https://github.com/orbeon/orbeon-forms/issues?page=7&q=is%3Aissue+is%3Aclosed+project%3Aorbeon%2Forbeon-forms%2F11) since [Orbeon Forms 2019.1](orbeon-forms-2019.1.md).
 
 - New features
     - Ability for "new" button on summary page to always use the latest version of the form ([doc](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-summary-page#new-button-version-of-the-form))
@@ -71,7 +71,7 @@ Including the features and enhancements above, we [closed over 180 issues](http
 See also:  
 
 *   [Supported languages](/form-runner/feature/supported-languages.md) for the list of supported languages.
-*   [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form runner in additional languages. Localization depends on volunteers, so please let us know if you want to help!
+*   [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form runner in additional languages. Localization depends on volunteers, so please let us know if you want to help!
 
 ## Browser support
 
@@ -120,6 +120,6 @@ You can download the latest version of Orbeon Forms from the [downloads](https:/
 
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
-Please send feedback via [Twitter](https://twitter.com/orbeon) or the [forum](https://www.orbeon.com/community).
+Please send feedback via [Twitter](https://twitter.com/orbeon) or the [forum](https://www.orbeon.com/community).
 
 We hope you enjoy this release!
