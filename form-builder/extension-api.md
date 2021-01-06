@@ -1,7 +1,5 @@
 # Extension API
 
-
-
 ## Availability
 
 Since Orbeon Forms 2016.1.
@@ -164,6 +162,8 @@ You then create the file implementing the component under:
 ```
 WEB-INF/resources/xbl/acme/control-settings/control-settings.xbl
 ```
+
+For instance, see [`control-settings.xbl`](https://gist.github.com/orbeon/f327f6b1b336dc5f8be841c86fe08d81), an example of custom Control Settings that lets form authors enter, for each control, a "question identifier", which value is stored in an attribute of the form data, on the element corresponding that corresponds to the current control. 
 
 For an example template, see above for `acme:form-settings`.
 
