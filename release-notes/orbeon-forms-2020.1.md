@@ -133,7 +133,7 @@ See also:
 
 ### With header-based authentication, provide header on every request
 
-Starting with Orbeon Forms 2020.1, if using header-based authentication, you should provide the headers with every request made to Orbeon Forms for which you want the user to be authenticated. You can get the old behavior, by setting the `oxf.fr.authentication.header.sticky` property to `true`. For more on this, see [when to set the headers](form-runner/access-control/users.md#when-to-set-the-headers).
+Starting with Orbeon Forms 2020.1, if using header-based authentication, you should provide the headers with every request made to Orbeon Forms for which you want the user to be authenticated. You can get the old behavior, by setting the `oxf.fr.authentication.header.sticky` property to `true`. For more on this, see [when to set the headers](/form-runner/access-control/users.md#when-to-set-the-headers).
 
 ### Navigation from the `view` to the `edit` page
 
