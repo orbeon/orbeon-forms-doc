@@ -51,9 +51,9 @@ The concept of *stage* is introduced at the database level and can be controlled
 - The [`set-workflow-stage` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-workflow-stage) allows you to set a specific workflow stage.
 - The [`fr:workflow-stage-value()`](/xforms/xpath/extension-form-runner.md#fr-workflow-stage-value) function allows you to read the current workflow stage.
 
-In addition, you can now set an entire form as readonly based on a formula. This can be used in conjunction with the `fr:workflow-stage-value()` function, for example, to make the form readonly in certain conditions.
+In addition, you can now set an [entire form as readonly based on a formula](/form-builder/form-settings.md#formulas). This can be used in conjunction with the `fr:workflow-stage-value()` function, for example, to make the form readonly in certain conditions.
 
-See the [blog post](https://blog.orbeon.com/2021/01/new-workflow-capabilities-in-orbeon.html) and [documentation](/form-builder/form-settings.md#formula) for details.
+See the [blog post](https://blog.orbeon.com/2021/01/new-workflow-capabilities-in-orbeon.html) and the documentation linked in the above text for details.
 
 ### Automatic renaming of actions
 
