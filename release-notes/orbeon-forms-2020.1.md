@@ -53,7 +53,7 @@ The concept of *stage* is introduced at the database level and can be controlled
 
 In addition, you can now set an entire form as readonly based on a formula. This can be used in conjunction with the `fr:workflow-stage-value()` function, for example, to make the form readonly in certain conditions.
 
-See the [documentation](/form-builder/form-settings.md#formula) for details.
+See the [blog post](https://blog.orbeon.com/2021/01/new-workflow-capabilities-in-orbeon.html) and [documentation](/form-builder/form-settings.md#formula) for details.
 
 ### Automatic renaming of actions
 
