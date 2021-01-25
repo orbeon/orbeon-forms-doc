@@ -10,7 +10,7 @@ Today we released Orbeon Forms 2020.1! This release introduces new features and 
 
 This version of Orbeon Forms introduces a new *Multiple File Attachments* control, which includes reordering attached files, a localized "Attached Files" buttons, and more. The existing *File Attachment* control also got updated and is now called *Single File Attachment*.
 
-![The new *Multiple File Attachments* control](/form-runner/component/images/xbl-attachment-multiple.png)
+<img src="/form-runner/component/images/xbl-attachment-multiple.png" alt="The new Multiple File Attachments control" width="402">
 
 See the [blog post](https://blog.orbeon.com/2020/05/the-new-multiple-file-attachments.html) for details.
 
