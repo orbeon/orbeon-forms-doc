@@ -92,44 +92,8 @@ The `oxf.fr.detail.data-migration` is set as follows by default:
 
 ## Limitations
 
-When using form definition versioning, form definitions and form data *must* both be stored in the same persistence provider, which must support versioning. See issue [\#3926](https://github.com/orbeon/orbeon-forms/issues/3926).
-
-For example:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.*"
-    value="mysql"/>
-```
-
-or:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.form"
-    value="mysql"/>
-    
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.data"
-    value="mysql"/>
-```
-
-However, the following does *not* work:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.form"
-    value="mysql"/>
-    
-<property
-    as="xs:string"
-    name="oxf.fr.persistence.provider.acme.*.data"
-    value="oracle"/>
-```
+- [SINCE Orbeon Forms 2021.1] If you are using the built-in implementation of the persistence API for relational databases to store data, if you want to use another implementation to store your forms, then that implementation needs to support versioning.
+- [UP TO Orbeon Forms 2020.1] You are using a provider that uses the built-in implementation of the persistence API for relational databases to store data, then you also need to use the same provider to store forms (see [\#3926](https://github.com/orbeon/orbeon-forms/issues/3926)). This limitation is lifted starting in Orbeon Forms 2021.1.
 
 ## See also
 
