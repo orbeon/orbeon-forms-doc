@@ -126,7 +126,7 @@ The following example saves new instance data to the database for the form `acme
 </property>
 ```
 
-### Update field in existing data
+### Update existing data
 
 The following example updates existing instance data with the current time for the form `acme/sales` and saves it to the database when the service is called with `/fr/service/acme/sales/edit/$document`, where `$document` represents an existing form data document id:
 
@@ -138,7 +138,7 @@ The following example updates existing instance data with the current time for t
 </property>
 ```
 
-### Validate form data in the background
+### Validate data
 
 The following process allows you to `POST` XML data to the page:
 
