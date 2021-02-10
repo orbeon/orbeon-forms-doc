@@ -387,7 +387,7 @@ Even when not visible according this property (i.e. your value template returns 
 
 ## Running processes upon page load
 
-[SINCE Orbeon Forms 2017.2.]
+[SINCE Orbeon Forms 2017.2]
 
 Running processes in the background is an Orbeon Forms PE feature.
 
