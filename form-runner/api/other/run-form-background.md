@@ -16,7 +16,9 @@ This allows scenarios such as:
 - create new form data in the database
 - read, modify and update existing form data 
 
-## Interface
+## Usage
+
+### HTTP request and response
 
 - URLs:
     - `/fr/service/$app/$form/new`
@@ -47,7 +49,45 @@ Example response body:
 </response>
 ```
 
-## Returning form data
+### Running processes
+
+The following property controls what process(es) to run:
+
+```
+oxf.fr.detail.process.
+  after-controls|after-data|before-data.
+  background.
+  new|edit.
+  $app.
+  $form
+```
+
+where `$app` and `$form` represent a Form Runner application name and/or form name or `*` wildcards, as is usual with Form Runner configuration properties.
+    
+The following example saves new instance data to the database when the service is called with `/fr/service/$app/$form/new`:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.process.after-controls.background.new.acme.sales">
+    save
+</property>
+```
+
+The following example updates existing instance data with the current time and saves it to the database when the service is called with `/fr/service/$app/$form//edit/$document`, where `$document` represents an existing form data document id:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.process.after-controls.background.edit.acme.sales">
+    xf:setvalue(ref ="//current-time", value = "current-dateTime()") then save
+</property>
+```
+
+For detail on the process names and more, see [Running processes upon page load
+](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load).
+
+### Returning form data
 
 [SINCE Orbeon Forms 2021.1]
 
@@ -92,45 +132,9 @@ The `prune-metadata` parameter can be used to control production of metadata:
     - `false` when `data-format-version` is set to `edge`
     - `true` otherwise 
 
-## Running processes
+## Examples
 
-The following property controls what process(es) to run:
-
-```
-oxf.fr.detail.process.
-  after-controls|after-data|before-data.
-  background.
-  new|edit.
-  $app.
-  $form
-```
-
-where `$app` and `$form` represent a Form Runner application name and/or form name or `*` wildcards, as is usual with Form Runner configuration properties.
-    
-The following example saves new instance data to the database when the service is called with `/fr/service/$app/$form/new`:
-
-```xml
-<property 
-    as="xs:string" 
-    name="oxf.fr.detail.process.after-controls.background.new.acme.sales">
-    save
-</property>
-```
-
-The following example updates existing instance data with the current time and saves it to the database when the service is called with `/fr/service/$app/$form//edit/$document`, where `$document` represents an existing form data document id:
-
-```xml
-<property 
-    as="xs:string" 
-    name="oxf.fr.detail.process.after-controls.background.edit.acme.sales">
-    xf:setvalue(ref ="//current-time", value = "current-dateTime()") then save
-</property>
-```
-
-For detail on the process names and more, see [Running processes upon page load
-](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load).
-
-## Example: validate form data in the background
+### Validate form data in the background
 
 The following process allows you to `POST` XML data to the page:
 
@@ -142,7 +146,7 @@ The following process allows you to `POST` XML data to the page:
 
 *NOTE: Make sure you use `validate("error")` instead of `require-valid`, as the latter always returns a success value.* 
 
-## Example: using curl
+### Using curl
 
 The following examples use the [curl](https://curl.haxx.se/) command-line utility. They are indented on multiple lines for clarity but in practice each command must be written on a single line.
 
