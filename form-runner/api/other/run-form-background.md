@@ -116,7 +116,7 @@ The `prune-metadata` parameter can be used to control production of metadata:
 
 ### Create initial data
 
-The following example saves new instance data to the database when the service is called with `/fr/service/$app/$form/new`:
+The following example saves new instance data to the database for the form `acme/sales` when the service is called with `/fr/service/acme/sales/new`:
 
 ```xml
 <property 
@@ -128,7 +128,7 @@ The following example saves new instance data to the database when the service i
 
 ### Update field in existing data
 
-The following example updates existing instance data with the current time and saves it to the database when the service is called with `/fr/service/$app/$form/edit/$document`, where `$document` represents an existing form data document id:
+The following example updates existing instance data with the current time for the form `acme/sales` and saves it to the database when the service is called with `/fr/service/acme/sales/edit/$document`, where `$document` represents an existing form data document id:
 
 ```xml
 <property 
