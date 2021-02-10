@@ -74,7 +74,7 @@ The following example saves new instance data to the database when the service i
 </property>
 ```
 
-The following example updates existing instance data with the current time and saves it to the database when the service is called with `/fr/service/$app/$form//edit/$document`, where `$document` represents an existing form data document id:
+The following example updates existing instance data with the current time and saves it to the database when the service is called with `/fr/service/$app/$form/edit/$document`, where `$document` represents an existing form data document id:
 
 ```xml
 <property 
