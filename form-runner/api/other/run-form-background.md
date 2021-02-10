@@ -64,26 +64,6 @@ oxf.fr.detail.process.
 
 where `$app` and `$form` represent a Form Runner application name and/or form name or `*` wildcards, as is usual with Form Runner configuration properties.
     
-The following example saves new instance data to the database when the service is called with `/fr/service/$app/$form/new`:
-
-```xml
-<property 
-    as="xs:string" 
-    name="oxf.fr.detail.process.after-controls.background.new.acme.sales">
-    save
-</property>
-```
-
-The following example updates existing instance data with the current time and saves it to the database when the service is called with `/fr/service/$app/$form/edit/$document`, where `$document` represents an existing form data document id:
-
-```xml
-<property 
-    as="xs:string" 
-    name="oxf.fr.detail.process.after-controls.background.edit.acme.sales">
-    xf:setvalue(ref ="//current-time", value = "current-dateTime()") then save
-</property>
-```
-
 For detail on the process names and more, see [Running processes upon page load
 ](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load).
 
@@ -133,6 +113,30 @@ The `prune-metadata` parameter can be used to control production of metadata:
     - `true` otherwise 
 
 ## Examples
+
+### Create initial data
+
+The following example saves new instance data to the database when the service is called with `/fr/service/$app/$form/new`:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.process.after-controls.background.new.acme.sales">
+    save
+</property>
+```
+
+### Update field in existing data
+
+The following example updates existing instance data with the current time and saves it to the database when the service is called with `/fr/service/$app/$form/edit/$document`, where `$document` represents an existing form data document id:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.fr.detail.process.after-controls.background.edit.acme.sales">
+    xf:setvalue(ref ="//current-time", value = "current-dateTime()") then save
+</property>
+```
 
 ### Validate form data in the background
 
