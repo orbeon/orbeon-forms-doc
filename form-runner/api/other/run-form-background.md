@@ -152,28 +152,10 @@ The following process allows you to `POST` XML data to the page:
 
 ### Using curl
 
-The following examples use the [curl](https://curl.haxx.se/) command-line utility. They are indented on multiple lines for clarity but in practice each command must be written on a single line.
+The following examples use the [curl](https://curl.haxx.se/) command-line utility, on a form `a/a` (i.e. with app name = `a` and form name = `a`), and where relevant document id `123`. Along with using the appropriate server name, you'll want to replace those by your actual form name, app name, and document id.
 
-```
-curl
-  -v
-  -k
-  -X POST
-  http://localhost:9090/orbeon/fr/service/acme/order/new
-```
-
-This runs the `acme/order` form in `new` mode in the background, and
-runs the configured processes if any.
-
-Here is an example XML response:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<response>
-    <document-id>eb9a48f2bae8919139c117c3424a3498f71c3d6f</document-id>
-    <process-success>true</process-success>
-</response>
-```
+- The `new` background service: `curl -X POST http://localhost:8080/orbeon/fr/service/a/a/new`
+- The `edit` background service: `curl -X POST http://localhost:8080/orbeon/fr/service/a/a/edit/123`
 
 ## Permissions
 
