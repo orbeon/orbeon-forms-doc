@@ -24,6 +24,16 @@ This release addresses the following issues since [Orbeon Forms 2019.2.2 PE](orb
 - Wizard always sets the focus on the first control, doesn't honor `oxf.fr.detail.initial-focus.*.*` ([\#4711](https://github.com/orbeon/orbeon-forms/issues/4711))
 - Required static dropdown with search shows as invalid on click ([\#4401](https://github.com/orbeon/orbeon-forms/issues/4401))
 - Consider issuing DELETE to `orbeon_i_control_text` only after checking we know we have something to delete ([\#4487](https://github.com/orbeon/orbeon-forms/issues/4487))
+- Control is reset upon selection in Actions Editor / Service Response Action ([\#4568](https://github.com/orbeon/orbeon-forms/issues/4568))
+- Uploading a file of zero bytes causes an error ([\#4466](https://github.com/orbeon/orbeon-forms/issues/4466))
+- Java 11: new isBlank method conflicts with our extension isBlank ([\#4490](https://github.com/orbeon/orbeon-forms/issues/4490))
+- On file upload, URL in data is not change from URL to temp file to URL to persistence API ([\#4684](https://github.com/orbeon/orbeon-forms/issues/4684))
+- Backward compatible mode for the summary to show data across all versions ([\#4699](https://github.com/orbeon/orbeon-forms/issues/4699))
+- List of checkboxes inelegantly split between 2 pages in PDF ([\#4715](https://github.com/orbeon/orbeon-forms/issues/4715))
+- Confirmation dialog stays open on second run of the process ([\#4741](https://github.com/orbeon/orbeon-forms/issues/4741))
+- Incorrect tooltip positioning for single checkbox ([\#4672](https://github.com/orbeon/orbeon-forms/issues/4672))
+- `File` with incorrect path passed to `FileScan.complete()` ([\#4745](https://github.com/orbeon/orbeon-forms/issues/4745))
+
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
