@@ -68,7 +68,7 @@ Selecting a particular mode selects different properties files. By default, the 
 In addition, depending on the mode, the following local file is used:
 
 - `prod`: `properties-local-prod.xml`
-- `dev`: properties-local-dev.xml
+- `dev`: `properties-local-dev.xml`
 
 ## See also
 
