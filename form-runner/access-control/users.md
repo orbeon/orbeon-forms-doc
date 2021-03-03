@@ -220,8 +220,16 @@ The value of the header must be valid JSON, and follow the format described belo
 
 - `username` is mandatory.
 - `groups` is optional. If present, its value must be an array with one string, representing the user's group. (An array is used here as we can envision futures version of Orbeon Forms supporting users being part of more than one group.)
-- `roles` is optional. If present, its value must be an array of *roles*. Each *role* is an object with a mandatory `name` attribute, and an optional `organization` attribute. When the later is present, it ties the role to the specified organization, for instance: "Linda is the manager of the iOS organization". For more on the latter, see [Organization-based permissions](organization.md).
+- `roles` is optional. If present, its value must be an array of *roles*. Each *role* is an object with a mandatory `name` attribute, and an optional `organization` attribute. When the latter is present, it ties the role to the specified organization, for instance: "Linda is the manager of the iOS organization". For more on the latter, see [Organization-based permissions](organization.md).
 - `organizations` is optional. If present, its value must be an array. Each element of the array must in turn be an array, in which the last element is the organization the user is a member of, and preceding elements list where that organization is in the organization hierarchy. For instance, `["Acme", "Engineering", "iOS"]` signifies that the user is a member of the "iOS" organization, and that, in the organization hierarchy, "iOS" is a child organization of "Engineering", and "Engineering" is a child organization of "Acme".
+
+### Beware of ModHeader
+
+If using the ModHeader extension to test sending custom headers to Orbeon Forms, you also need to disable both JavaScript and CSS source maps in Chrome, or you'll get the following error:
+
+> `SessionListeners` object not found in session. `OrbeonSessionListener` might be missing from web.xml.
+
+This is because, out-of-the-box, that is unless you set `oxf.fr.authentication.header.sticky` to `true`, you are expected to send the authentication headers with every request. Orbeon Forms takes missing authentication headers as a sign that you want to tell Orbeon Forms that the user logged out, and consequently Orbeon Forms kills the "previous" user's session. ModHeader sends the headers you specified with every request, except for source maps. So after Chrome makes a request for a source maps, the session is cleared, and you'll have a problem on the next request that relies on a session, like an Ajax request.
 
 ## Accessing username, group and roles in Orbeon Forms
 
@@ -245,8 +253,8 @@ See also [Accessing liferay users and roles](../../form-runner/link-embed/lifera
 
 - [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
 - [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
-- [Form fields](form-fields.md) - How to control access to specific form fields based on the user user's roles.
+- [Form fields](form-fields.md) - How to control access to specific form fields based on the user's roles.
 - [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
     - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
-    - [Organization-based permissions](organization.md) – Access based on organizational structure.
+    - [Organization-based permissions](organization.md) – Access based on organizational structure.
 - [Scenarios](scenarios.md)
