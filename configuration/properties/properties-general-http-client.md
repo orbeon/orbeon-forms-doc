@@ -78,7 +78,7 @@ Typically, you'll leave this property to its default value (`strict`). However, 
 
 ## 2-way SSL
 
-When using HTTPS, you might need Orbeon Forms to authenticate itself by presenting a client certificate. For this, you need the client to have a key and certificate in a keystore, and point Orbeon Forms to that keystore using the property below.
+When using HTTPS, you might want Orbeon Forms to authenticate itself by presenting a client certificate. For this, you need the client to have a key and certificate in a keystore, and point Orbeon Forms to that keystore using the propertied below.
 
 ```xml
 <property
@@ -93,8 +93,8 @@ When using HTTPS, you might need Orbeon Forms to authenticate itself by presenti
 ```
 
 - `oxf.http.ssl.keystore.uri`
-    - Specifies the URL of the keystore file.
-    - This can use the `file:` or [SINCE Orbeon Forms 2021.1] `oxf:` protocol.
+    - Specifies the URI of the keystore file.
+    - The URI can use the `file:` or [SINCE Orbeon Forms 2021.1] `oxf:` protocol.
     - Relationship to the truststore:
         - [SINCE Orbeon Forms 2021.1] Whether this property is specified or not, the server certificate is verified using the default truststore, which you override by setting the `javax.net.ssl.trustStore` property (more on this in the [JSSE Reference Guide](https://docs.oracle.com/en/java/javase/11/security/java-secure-socket-extension-jsse-reference-guide.html)).
         - [UNTIL Orbeon Forms 2020.1] If you specify a keystore, it is also used as a truststore. This is the case even if connecting to server whose key is signed by a recognized certificate authority (CA), which means that you need to add the certificate of the CA who signed the key of the server you want to connect to the keystore.  
@@ -105,7 +105,7 @@ When using HTTPS, you might need Orbeon Forms to authenticate itself by presenti
 You might also want to:
 
 - For Orbeon Forms to accept incoming connections using the same certificate, set up your servlet container, on Tomcat in the `server.xml` on the `<Connector>` used for HTTPS, to point to same keystore.
-- [SINCE Orbeon Forms 2021.1] Set the `oxf.http.ssl.keystore.*` system property to point to a truststore that contain the certificate of the certificate authority who signed the certificate of the server you want to connect to. 
+- [SINCE Orbeon Forms 2021.1] Set the `oxf.http.ssl.keystore.*` system property to point to a truststore that contains the certificate of the certificate authority who signed the certificate of the server you want to connect to. 
 
 ## Headers forwarding
 
