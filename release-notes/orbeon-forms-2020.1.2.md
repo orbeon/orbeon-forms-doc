@@ -12,6 +12,7 @@ This release addresses the following issues since [Orbeon Forms 2020.1.1 PE](orb
 - Error summary produces multiple elements with the same id ([\#4782](https://github.com/orbeon/orbeon-forms/issues/4782))
 - Currency label not pointing to input with embedding ([\#4785](https://github.com/orbeon/orbeon-forms/issues/4785))
 - Announce new error messages in the error summary ([\#4795](https://github.com/orbeon/orbeon-forms/issues/4795))
+- When section template is present, list of controls in template is empty ([\#4786](https://github.com/orbeon/orbeon-forms/issues/4786))
 
 We also released a point update of Orbeon Forms CE containing the following fixes only:
 
