@@ -53,7 +53,6 @@ Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 |      | Mar 31 | 4.8.2    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/03/orbeon-forms-482.html)              |
 |      | Feb 2  | 4.8.1    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/02/orbeon-forms-481.html)              |
 |      | Jan 8  | 4.8      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/01/orbeon-forms-48.html)               |
-|      | Jan 8  | 4.8      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2015/01/orbeon-forms-48.html)               |
 | 2014 | Dec 1  | 4.7.1    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/12/orbeon-forms-471.html)              |
 |      | Sep 26 | 4.7      | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/09/orbeon-forms-47.html)               |
 |      | Aug 7  | 4.6.2    | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2014/08/orbeon-forms-462.html)              |
