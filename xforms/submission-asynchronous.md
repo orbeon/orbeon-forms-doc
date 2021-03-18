@@ -1,7 +1,5 @@
 # Asynchronous Submissions
 
-
-
 ## Rationale
 
 * Asynchronous submissions are specified in XForms 1.1.
