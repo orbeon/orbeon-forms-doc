@@ -101,6 +101,27 @@ Finally, you use the *Set Response Control Values* section of the *Actions Edito
 
 ![Set control values](images/database-services-set-control-values.png)
 
+## Example: fields pre-population
+
+Say you will be passing a request parameter `employee-id=100` to your form, and want to load data from a relational database about the employee with specified id, this to pre-populate some fields, such their first name, last name, hire data, and department, as shown in the screenshot below.
+
+![Pre-populated fields](images/database-services-pre-population.png)
+
+You can do this as follows, in Form Builder:
+
+1. Create a field to hold the employee id passed through the request parameter. You might want to put this field in another section, for instance named "(Internal)", that you hide from end users by setting in its Section Settings dialog, the Visibility to No. For the field, you can use a Hidden Field, or a Calculated Value if you'd like to see its value at runtime when debugging the form.
+2. In the Control Settings for that field, name it `employee-id`, and in the Formulas tab, set its Initial Value to `xxf:get-request-parameter('employee-id')`.
+3. Create a database service that retrieves the information about the employee, with a statement like the one below.
+4. Create an action that, on form load, runs the database service, passing the value of the `employee-id` field, and setting the value of the first name, last name, hire data, and department fields to values returned by the SQL query.
+
+```sql
+SELECT *
+  FROM employees
+ WHERE employee_id = <sql:param type="xs:string" select=""/>
+```
+
+You can get the [source of the form described above](https://gist.github.com/orbeon/1e25851b7219f765a2cde373a72e9dea), and run it for yourself on the instance of Orbeon Forms deployed on demo.orbeon.orbeon, which has the `employees` table used by the above query. After you publish the form, try opening its `/new` page, passing the request parameter `?employee-id=100`.
+
 ## See also
 
 - [HTTP services](http-services.md)
