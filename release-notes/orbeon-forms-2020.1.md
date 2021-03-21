@@ -44,9 +44,7 @@ In the future, we plan to add more keyboard shortcuts.
 
 ### Workflow
 
-This release takes baby steps towards supporting *workflow* features.
-
-The concept of *stage* is introduced at the database level and can be controlled with the following:
+This release takes baby steps towards supporting *workflow* features. The concept of *stage* is introduced, and supported for all relational databases. It can be controlled with the following:
 
 - The [`set-workflow-stage` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-workflow-stage) allows you to set a specific workflow stage.
 - The [`fr:workflow-stage-value()`](/xforms/xpath/extension-form-runner.md#fr-workflow-stage-value) function allows you to read the current workflow stage.
