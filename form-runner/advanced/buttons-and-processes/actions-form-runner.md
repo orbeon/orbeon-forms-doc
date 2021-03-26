@@ -168,6 +168,9 @@ In most cases you'll want to use this action in conjunction with [`navigate`](#n
     - parameters
         - `message`: message to show (is an XPath value template)
         - `resource`: resource key pointing to the message
+        - `appearance`: [SINCE Orbeon Forms 2021.1] this is an optional parameter. If present, the value must be either `dialog` or `ephemeral`. Is missing, the `dialog` is implied.
+            - `dialog`: the message is shown in the model dialog
+            - `ephemeral`: the message is shown at the bottom of the screen, and disappears when users perform an action
 
 [SINCE Orbeon Forms 4.7] The value of the `message` parameter and the message to which points the resource key in the `resource` parameter are interpreted as an XPath Value Template.
 
