@@ -45,7 +45,7 @@ The following property sets the maximum aggregate size in bytes of all uploaded 
 
 The value of `oxf.fr.detail.attachment.max-size-aggregate` can be overridden:
 
-- for a specific form, from the Form Builder "Form Settings} dialog
+- for a specific form, from the Form Builder "Form Settings" dialog
 
 ## Allowed file types
 
