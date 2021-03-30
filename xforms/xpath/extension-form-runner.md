@@ -390,7 +390,14 @@ Whether the currently-shown wizard page is the first relevant page.
 fr:is-wizard-last-page() as xs:boolean
 ```
 
-Whether the currently-shown wizard page is the last relevant page.
+Whether the currently-shown wizard page is the last relevant page. For instance, when using the wizard view, you can use this function to disable buttons until users have reached the last page of the wizard; the following property does so for the "Send" button:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.button.send.visible.*.*" 
+    value="fr:is-wizard-last-page()"/>
+```
 
 ### fr:is-wizard-toc-shown()
 
