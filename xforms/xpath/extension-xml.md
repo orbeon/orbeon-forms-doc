@@ -1,7 +1,5 @@
 # XML functions
 
-
-
 ## xf:attribute() / xxf:attribute()
 
 _NOTE: This function is also allowed in the XForms namespace, as it is being standardized in XForms 2.0. Prior to this date, it must be in the Orbeon `xxf` extension namespace._
@@ -99,7 +97,7 @@ The `xxf:create-document()` creates a new empty XML document. You can then inser
 
 ## xf:element() / xxf:element()
 
-_NOTE: This function is also allowed in the XForms namespace, as it is being standardized in XForms 2.0. Prior to this date, it must be in the Orbeon `xxf` extension namespace._
+This function is available in both the `xf` and `xxf` namespaces, and we recommend you use it with the `xf` namespace.
 
 ```xpath
 xf:element(
