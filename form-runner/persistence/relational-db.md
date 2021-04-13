@@ -27,7 +27,7 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2019.1                   | 2019.1                         | [oracle-2019_1.sql]        | [oracle-2018_2-to-2019_1.sql]       |
+| 2019.1 and newer         | 2019.1                         | [oracle-2019_1.sql]        | [oracle-2018_2-to-2019_1.sql]       |
 | 2018.2                   | 2018.2                         | [oracle-2018_2.sql]        | [oracle-2017_2-to-2018_2.sql]       |
 | 2017.2, 2018.1           | 2017.2                         | [oracle-2017_2.sql]        | [oracle-2017_1-to-2017_2.sql]       |
 | 2017.1                   | 2017.1                         | [oracle-2017_1.sql]        | [oracle-2016_3-to-2017_1.sql]       |
@@ -107,7 +107,7 @@ By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2019.1                   | 2019.1                         | [mysql-2019_1.sql]         | [mysql-2018_2-to-2019_1.sql]        |
+| 2019.1  and newer        | 2019.1                         | [mysql-2019_1.sql]         | [mysql-2018_2-to-2019_1.sql]        |
 | 2018.2                   | 2018.2                         | [mysql-2018_2.sql]         | [mysql-2017_2-to-2018_2.sql]        |
 | 2017.2, 2018.1           | 2017.2                         | [mysql-2017_2.sql]         | [mysql-2016_3-to-2017_2.sql]        |
 | 2016.3, 2017.1           | 2016.3                         | [mysql-2016_3.sql]         | [mysql-2016_2-to-2016_3.sql]        |
@@ -145,7 +145,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2019.1                   | 2019.1                         | [sqlserver-2019_1.sql]     | [sqlserver-2017_2-to-2019_1.sql]    |
+| 2019.1  and newer        | 2019.1                         | [sqlserver-2019_1.sql]     | [sqlserver-2017_2-to-2019_1.sql]    |
 | 2017.2                   | 2017.2                         | [sqlserver-2017_2.sql]     | [sqlserver-2016_3-to-2017_2.sql]    |
 | 2016.3 to 2017.1         | 2016.3                         | [sqlserver-2016_3.sql]     | [sqlserver-2016_2-to-2016_3.sql]    |
 | 2016.2                   | 2016.2                         | [sqlserver-2016_2.sql]     | [sqlserver-4_6-to-2016_2.sql]       |
@@ -169,7 +169,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2019.1                   | 2019.1                         | [postgresql-2019_1.sql]    | [postgresql-2018_2-to-2019_1.sql]   |
+| 2019.1  and newer        | 2019.1                         | [postgresql-2019_1.sql]    | [postgresql-2018_2-to-2019_1.sql]   |
 | 2018.2                   | 2018.2                         | [postgresql-2018_2.sql]    | [postgresql-2017_2-to-2018_2.sql]   |
 | 2017.2, 2018.1           | 2017.2                         | [postgresql-2017_2.sql]    | [postgresql-2016_3-to-2017_2.sql]   |
 | 2016.3 to 2017.1         | 2016.3                         | [postgresql-2016_3.sql]    | [postgresql-2016_2-to-2016_3.sql]   |
@@ -197,7 +197,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s)  | Orbeon database format version | DDL to create from scratch | DDL to upgrade from previous format |
 | ------------------------ | ------------------------------ | -------------------------- | ----------------------------------- |
-| 2019.1                   | 2019.1                         | [db2-2019_1.sql]           | [db2-2017_2-to-2019_1.sql]          |
+| 2019.1  and newer        | 2019.1                         | [db2-2019_1.sql]           | [db2-2017_2-to-2019_1.sql]          |
 | 2017.2                   | 2017.2                         | [db2-2017_2.sql]           | [db2-2016_3-to-2017_2.sql]          |
 | 2016.3 to 2017.1         | 2016.3                         | [db2-2016_3.sql]           | [db2-2016_2-to-2016_3.sql]          |
 | 2016.2                   | 2016.2                         | [db2-2016_2.sql]           | [db2-4_6-to-2016_2.sql]             |
