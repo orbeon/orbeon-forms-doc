@@ -21,7 +21,22 @@ The service assumes that the data model of the form is standard XML data model a
 
 ### Form version
 
-If the persistence layer on which your form is published supports versioning, by default the latest version of the form is used. Instead, you'd like to produce the schema for a specific form version, you can pass that version number with the `form-version` request parameter, e.g. in 4.4+ `/fr/service/[app]/[form]/schema?form-version=42`.
+If the persistence layer on which your form is published supports versioning, by default the latest version of the form is used. If instead, you'd like to produce the schema for a specific form version, you can pass that version number with the `form-version` request parameter:
+
+    ?form-version=42
+
+### Data format version
+
+The [XML form data format](/form-runner/data-format/form-data.md) used in the database, and by the various Orbeon Forms APIs, is typically always the same, irrelevant of the Orbeon Forms version you are on. This format is referred as the *4.0.0 format*.
+
+- Because of this [UNTIL Orbeon Forms 2020.1], the schema API always produced a schema for data in the 4.0.0 format.
+- Should you want this API to produce a schema corresponding to another format, [SINCE Orbeon Forms 2021.1], you can specify the format you want through the `data-format-version` request parameter. The accepted values are:
+    - `4.0.0` (this is equivalent to not having a `data-format-version` request parameter but allows you to be explicit)
+    - `4.8.0`
+    - `2019.1.0`
+    - `edge` (this means "use the latest data version", which is currently equivalent to `2019.1.0`; in most cases, it is better to explicitly specify the version you want, to avoid the possibility of the format changing in case a new data format is introduced by a future version of Orbeon Forms)  
+
+    ?data-format-version=2019.1.0
 
 ### Type for maybe non-relevant elements
 
@@ -33,7 +48,7 @@ Consequently, when producing a schema from a form definition, Orbeon Forms doesn
 
 However, in some cases, you might still want to have that type information in the schema. This could be because you're not using the schema to validate data, but to extract some information from it. If you are in one of those situation, you can instruct Orbeon Forms to always generate the type for elements in the schema, even if the corresponding field might, under some condition, not be shown. This is done by adding the following request attribute to the URL:
 
-    produce-type-for-maybe-nonrelevant=true
+    ?produce-type-for-maybe-nonrelevant=true
 
 ## Limitations
 
