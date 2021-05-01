@@ -16,9 +16,10 @@ Since Orbeon Forms 4.0, we have a fairly fast release schedule:
 
 | Year | Date   | Version  | PE support             | Release notes                                                                       |
 |------|--------|----------|------------------------|-------------------------------------------------------------------------------------|
-| 2021 | Mar 4  | 2020.1.2 | 🟩 Until Dec 30, 2023  | [Release notes](/release-notes/orbeon-forms-2020.1.2.md)                            | 
+| 2021 | Apr 30 | 2020.1.3 | 🟩 Until Dec 30, 2023  | [Release notes](/release-notes/orbeon-forms-2020.1.3.md)                            | 
+|      | Mar 4  | 2020.1.2 | 🟨 Upgrade to 2020.1.3 | [Release notes](/release-notes/orbeon-forms-2020.1.2.md)                            | 
 |      | Feb 15 | 2019.2.3 | 🟩 Until Dec 29, 2022  | [Release notes](/release-notes/orbeon-forms-2019.2.3.md)                            | 
-|      | Feb 1  | 2020.1.1 | 🟨 Upgrade to 2020.1.2 | [Release notes](/release-notes/orbeon-forms-2020.1.1.md)                            | 
+|      | Feb 1  | 2020.1.1 | 🟨 Upgrade to 2020.1.3 | [Release notes](/release-notes/orbeon-forms-2020.1.1.md)                            | 
 | 2020 | Dec 30 | 2020.1   | 🟨 Upgrade to 2020.1.2 | [Release notes](/release-notes/orbeon-forms-2020.1.md)                              | 
 |      | Mar 31 | 2019.2.2 | 🟨 Upgrade to 2019.2.3 | [Release notes](/release-notes/orbeon-forms-2019.2.2.md)                            | 
 |      | Feb 28 | 2019.2.1 | 🟨 Upgrade to 2019.2.2 | [Release notes](/release-notes/orbeon-forms-2019.2.1.md)                            |
