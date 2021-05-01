@@ -2,11 +2,10 @@
 
 __Friday, April 30, 2021__
 
-Today we released Orbeon Forms 2020.1.3 PE. This update to [Orbeon Forms 2020.1.2 PE](orbeon-forms-2020.1.2.md), [Orbeon Forms 2020.1.1 PE](orbeon-forms-2020.1.1.md) and [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md) contains bug-fixes and is recommended for all [Orbeon Forms 2020.1.2 PE](orbeon-forms-2020.1.2.md),[Orbeon Forms 2020.1.1 PE](orbeon-forms-2020.1.1.md) and [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md) users.
+Today we released Orbeon Forms 2020.1.3 PE. This update to [Orbeon Forms 2020.1.2 PE](orbeon-forms-2020.1.2.md), [Orbeon Forms 2020.1.1 PE](orbeon-forms-2020.1.1.md) and [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md) contains bug-fixes and is recommended for all [Orbeon Forms 2020.1.2 PE](orbeon-forms-2020.1.2.md), [Orbeon Forms 2020.1.1 PE](orbeon-forms-2020.1.1.md) and [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md) users.
 
 This release addresses the following issues since [Orbeon Forms 2020.1.2 PE](orbeon-forms-2020.1.2.md):
 
-- Form Builder library version doesn't stick ([\#4875](https://github.com/orbeon/orbeon-forms/issues/4875))
 - When sessions are destroyed, we get: `java.lang.ClassCastException: class scala.Some cannot be cast to class org.orbeon.oxf.webapp.SessionListeners` ([\#4830](https://github.com/orbeon/orbeon-forms/issues/4830))
 - Support for spaces and other non-ASCII characters in filename when serving files ([\#4818](https://github.com/orbeon/orbeon-forms/issues/4818))
 - Click on the same line as a button activates it ([\#4834](https://github.com/orbeon/orbeon-forms/issues/4834))
@@ -28,6 +27,7 @@ This release addresses the following issues since [Orbeon Forms 2020.1.2 PE](orb
 - `data-format-version` parameter should be optional when database is not in 4.0.0 format ([\#4861](https://github.com/orbeon/orbeon-forms/issues/4861))
 - XML Schema produced doesn't validate correctly against data ([\#4838](https://github.com/orbeon/orbeon-forms/issues/4838))
 - NPE in `LHHAElementVisitorListener` when called by `getStaticChildElementValue` ([\#4870](https://github.com/orbeon/orbeon-forms/issues/4870))
+- Form Builder library version doesn't stick ([\#4875](https://github.com/orbeon/orbeon-forms/issues/4875))
 - Update bcmail-jdk15on to 1.68 ([\#4737](https://github.com/orbeon/orbeon-forms/issues/4737))
 - Update shapeless to 2.3.4 ([\#4851](https://github.com/orbeon/orbeon-forms/issues/4851))
 - Update mysql-connector-java to 8.0.24 ([\#4858](https://github.com/orbeon/orbeon-forms/issues/4858))
