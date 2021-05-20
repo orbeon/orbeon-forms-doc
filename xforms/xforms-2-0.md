@@ -125,6 +125,10 @@ With `xf:copy`, the selection is written as follows:
 
 The `if ... then ... else` pattern in the second `xf:copy` is there so that, in case the user has already selected a `CustomButtonLabel` and edited the value of the button label (here "Custom Button" initially), there will still be an exact match and the item shows as selected.
 
+## Orbeon Forms 2021.1
+
+- `parse()` function
+
 ## Remaining features
 
 For what remains to be implemented, see the [issues tagged "XForms 2.0"](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+sort%3Aupdated-desc+label%3A%22Area%3A+XForms+2.0%22).
