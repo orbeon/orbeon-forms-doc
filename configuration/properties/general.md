@@ -176,7 +176,7 @@ Access to environment variables with the [`environment-variable()` function](/xf
 | Name | `oxf.cache.xpath.size` |
 | Purpose | set the size of the Orbeon Forms XPath cache |
 | Type | `xs:integer` |
-| Default Value | 2000 |
+| Default Value | 5000 |
 
 This property configures the maximum number of compiled XPath expressions to keep in the XPath cache. To tune the cache size, see the suggestions in the [Performance and Tuning][1] section.
 
