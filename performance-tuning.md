@@ -13,11 +13,6 @@ Large forms (with hundreds or thousands of fields) using the wizard view now use
 
 ## xxxx
 
-
-
-
-
-
 TODO: separate items which are useful to Form Runner/Form Builder user deployments first. Make plain XForms/XSLT/XPL separate.
 
 ## Sizing
@@ -192,24 +187,24 @@ Assuming you set the maximum number of concurrent processing threads to 2, you w
 ```xml
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5042 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5042 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5042
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5042
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5035 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5034 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5035
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5034
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5031 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5025 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5031
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5025
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5035 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5041 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5035
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5041
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5031 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
-INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5044 - Cache hits for cache.main: 289, fault: 1, adds: 0, expirations: 0, success rate: 99%
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5031
+INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Timing: 5044
 ```
 
 If you are using JMeter, it will also show you that while all the requests have been sent at the same time, the results come back 2 by 2 at 5 seconds interval:
