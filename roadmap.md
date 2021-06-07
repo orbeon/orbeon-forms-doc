@@ -26,6 +26,18 @@ __Please remember that the following schedule is a plan, not a promise:__
 
 - 2021-08: tentative release date
 
+### Orbeon Forms 2021.2
+
+See the tentative [2021.2 items](https://github.com/orbeon/orbeon-forms/projects/32) for details.
+
+Tentative focus:
+
+- TBD
+
+__Please remember that the following schedule is a plan, not a promise:__
+
+- 2021-12: tentative release date
+
 ## Past releases
 
 See the [Orbeon Forms release history](release-history.md).
