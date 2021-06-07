@@ -2,15 +2,15 @@
 
 ## Upcoming releases
 
-### Orbeon Forms 2020.1
+### Orbeon Forms 2021.1
 
-See the tentative [2020.1 items](https://github.com/orbeon/orbeon-forms/projects/20) for details.
+See the tentative [2021.1 items](https://github.com/orbeon/orbeon-forms/projects/26) for details.
 
 Tentative focus:
 
-- Client-side embedding ([#1577](https://github.com/orbeon/orbeon-forms/issues/1577))
-- Setup client-side test infrastructure ([#2743](https://github.com/orbeon/orbeon-forms/issues/2743))
-- Workflow steps ([#3463](https://github.com/orbeon/orbeon-forms/issues/3463))
+- [Progress on offline support](https://github.com/orbeon/orbeon-forms/issues/1221)
+- [Excel export/import](https://github.com/orbeon/orbeon-forms/issues/2840)
+- [Form Builder Formula inspector](https://github.com/orbeon/orbeon-forms/issues/4825)
 
 Consider:
 
@@ -24,7 +24,7 @@ Consider:
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2020-06: tentative release date
+- 2021-08: tentative release date
 
 ## Past releases
 
