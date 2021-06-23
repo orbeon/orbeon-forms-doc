@@ -36,7 +36,9 @@ The [XML form data format](/form-runner/data-format/form-data.md) used in the da
     - `2019.1.0`
     - `edge` (this means "use the latest data version", which is currently equivalent to `2019.1.0`; in most cases, it is better to explicitly specify the version you want, to avoid the possibility of the format changing in case a new data format is introduced by a future version of Orbeon Forms)
 
-    ?data-format-version=2019.1.0
+```
+?data-format-version=2019.1.0
+```
 
 ### Type for maybe non-relevant elements
 
