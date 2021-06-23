@@ -43,7 +43,7 @@ The [XML form data format](/form-runner/data-format/form-data.md) used in the da
 
 [SINCE Orbeon Forms 2018.2.3]
 
-When you create a form in Form Builder, if you specify a type for a field, and also make that field only show when some condition is met, should that condition not be met, then the type constraint isn't enforced, since users have no way of fixing the value for a field that isn't shown.
+When you create a form in Form Builder, if you specify a type for a field, and also make that field only show when some condition is met, should that condition not be met, then the type constraint isn't enforced as users have no way of fixing the value for a field that isn't shown.
 
 Consequently, when producing a schema from a form definition, Orbeon Forms doesn't specify the type for fields that under some condition might not be shown. Doing so would mean that, in some cases, form data that passes the Orbeon Forms validation wouldn't be considered valid according to the generated schema.
 
