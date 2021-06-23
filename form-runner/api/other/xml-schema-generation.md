@@ -47,7 +47,7 @@ When you create a form in Form Builder, if you specify a type for a field, and a
 
 Consequently, when producing a schema from a form definition, Orbeon Forms doesn't specify the type for fields that under some condition might not be shown. Doing so would mean that, in some cases, form data that passes the Orbeon Forms validation wouldn't be considered valid according to the generated schema.
 
-However, in some cases, you might still want to have that type information in the schema. This could be because you're not using the schema to validate data, but to extract some information from it. If you are in one of those situation, you can instruct Orbeon Forms to always generate the type for elements in the schema, even if the corresponding field might, under some condition, not be shown. This is done by adding the following request attribute to the URL:
+However, in some cases, you might still want to have that type information in the schema. This could be because you're not using the schema to validate data, but to extract some information from it. If you are in one of those situation, you can instruct Orbeon Forms to always generate the type for elements in the schema, even if the corresponding field might, under some condition, not be shown. This is done by adding the following request parameter to the URL:
 
     ?produce-type-for-maybe-nonrelevant=true
 
