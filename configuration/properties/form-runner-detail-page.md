@@ -440,15 +440,17 @@ See also [Run form in the background](../../form-runner/api/other/run-form-backg
 
 [SINCE Orbeon Forms 2018.2]
 
-When data is *unsafe*, meaning that is has been modified but not saved yet, Form Runner by default shows a warning when attempting to navigate a way from the current page or to close the current browser tab or window.
+When data is *unsafe*, meaning that is has been modified but not saved yet, Form Runner by default shows a warning when attempting to navigate away from the current page or to close the current browser tab or window.
 
 ![Chrome warning when leaving a page](../images/chrome-leave-site.png)
 
 In some cases, in particular when [embedding a form](/form-runner/link-embed/java-api.md), this can be an inconvenience. The following property allows disabling this behavior.
 
+[SINCE Orbeon Forms 2021.1] The value of the property is an [AVT](/xforms/core/attribute-value-templates.md), so you dynamically disable the warning. For instance the following would only warns users if they've made changes to the form and they have entered more than 50 characters in the field named "description": `{string-length(fr:control-string-value('description')) > 100}`. [UNTIL Orbeon Forms 2020.1] The type of the property must be `xs:boolean`, and, conseqently, the value must be either `true` or `false`.
+
 ```xml
 <property 
-    as="xs:boolean" 
+    as="xs:string" 
     name="oxf.fr.detail.warn-when-data-unsafe.*.*"
     value="false"/>
 ```
