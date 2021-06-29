@@ -446,14 +446,24 @@ When data is *unsafe*, meaning that is has been modified but not saved yet, Form
 
 In some cases, in particular when [embedding a form](/form-runner/link-embed/java-api.md), this can be an inconvenience. The following property allows disabling this behavior.
 
-[SINCE Orbeon Forms 2021.1] The value of the property is an [AVT](/xforms/core/attribute-value-templates.md), so you can dynamically disable the warning. For instance the following would only warn users if the content of the field named `description` has more than 50 characters and if users have made changes to the form since it was loaded: `{string-length(fr:control-string-value('description')) > 50}`. [UNTIL Orbeon Forms 2020.1] The type of the property must be `xs:boolean`, and, consequently, the value must be either `true` or `false`.
+[SINCE Orbeon Forms 2021.1] In addition to `true` or `false`, since the value of the property is an [AVT](/xforms/core/attribute-value-templates.md), you can also, when needed, dynamically disable the warning by providing an expression between curly braces. For instance the following would only warn users if the content of the field named `description` has more than 50 characters and if users have made changes to the form since it was loaded:
 
 ```xml
 <property 
     as="xs:string" 
     name="oxf.fr.detail.warn-when-data-unsafe.*.*"
+    value="{string-length(fr:control-string-value('description')) > 50}"/>
+```
+
+[UNTIL Orbeon Forms 2020.1] The type of the property must be `xs:boolean`, and, consequently, the value must be either `true` or `false`.
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.warn-when-data-unsafe.*.*"
     value="false"/>
 ```
+
 
 See also [the `set-data-status` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status).
 
