@@ -417,9 +417,17 @@ Whether the wizard's table of content is visible.
 fr:wizard-current-page-name() as xs:string?
 ```
 
-Return the name of the current wizard page, or the empty sequence if there is no wizard current page.
+- If a wizard page is being shown, the function returns the name of the current wizard page name, which is the section name used in Form Builder.
+- Otherwise, it returns the empty sequence. So an empty sequence is returned if the form is not using the wizard view. This can be used as follows to show a button, say the Submit button, only the last page of the wizard if the form is using the wizard view, but to always show that Submit button if the form isn't using the wizard view.
 
-The page name corresponds to the section name used in Form Builder.
+```xml
+<property
+        as="xs:string" 
+        name="oxf.fr.detail.button.submit.enabled.*.*">
+    xxf:is-blank(fr:wizard-current-page-name()) or
+    fr:is-wizard-last-page()
+</property>
+```
 
 ## Authentication functions
 
