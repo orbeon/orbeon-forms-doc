@@ -116,10 +116,6 @@ In the Form Settings dialog, an XPath expression can be used to specify whether 
 
 TODO
 
-## Referring to control values
-
-XPath expressions may refer to the value of other controls in the page, using variables named after the name of the controls to use.
-
 ## Examples
 
 See [examples of formulas](formulas-examples.md).
