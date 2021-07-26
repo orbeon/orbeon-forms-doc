@@ -93,7 +93,7 @@ The property configures which buttons are included on the Detail Page, and in wh
 
 [SINCE Orbeon Forms 2016.2]
 
-The following properties, where you replace `BUTTON` by a specific button name, control whether a particular button is visible or disabled:
+The following properties, where you replace `BUTTON` by a specific button name, control whether a particular button is visible (button visibility) or disabled (or "readonly"):
 
 ```xml
 oxf.fr.detail.button.BUTTON.visible.*.*
