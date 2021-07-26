@@ -94,7 +94,9 @@ Like `fr:control-string-value()` (see above), but it returns:
         - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
           iterations, the iteration matching the enclosing repeat's current index is chosen.
 
-For indexes in the array where it is not possible to return a typed value, the empty sequence is returned instead. 
+For indexes in the array where it is not possible to return a typed value, the empty sequence is returned instead.
+
+*NOTE: The reason this returns an XPath array and not an XPath sequence is that this lets the caller know which values are the empty sequence. This wouldn't be possible with an XPath sequence.* 
 
 ### fr:created-dateTime()
 
