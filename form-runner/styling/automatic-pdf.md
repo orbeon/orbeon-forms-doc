@@ -10,7 +10,7 @@ _NOTE: This doesn't apply if you associate a PDF template with a form. This only
 
 ## How to add custom CSS
 
-See [CSS](css.md) and the [`oxf.fr.css.custom.uri` property](../../configuration/properties/form-runner.md#adding-your-own-css) and related.
+See [CSS](css.md) and the [`oxf.fr.css.custom.uri` property](/form-runner/styling/css#adding-your-own-css-files) and related.
 
 In your CSS file, write CSS specific to the print format, under a section like this:
 

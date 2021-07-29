@@ -199,7 +199,7 @@ For example, to change the default logo for all forms and pages to an image call
 </property>
 ```
 
-NOTE: Since Orbeon Forms 4.0, this property doesn't have an impact on the Form Builder logo. To override the Form Builder logo, you can use custom CSS (see the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) configuration).
+NOTE: Since Orbeon Forms 4.0, this property doesn't have an impact on the Form Builder logo. To override the Form Builder logo, you can use custom CSS (see the [`oxf.fr.css.custom.uri`](/form-runner/styling/css#adding-your-own-css-files) configuration).
 
 <!--
 ```xml

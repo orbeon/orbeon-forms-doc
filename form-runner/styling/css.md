@@ -12,7 +12,7 @@ CSS stands for [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs
     - `WEB-INF/resources/forms/assets`: CSS for all forms
     - `WEB-INF/resources/forms/APP/assets`: CSS for app name APP
     - `WEB-INF/resources/forms/APP/FORM/assets`: CSS for app name APP and form name FORM
-2. Define the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
+2. Define the [`oxf.fr.css.custom.uri`](/form-runner/styling/css#adding-your-own-css-files) property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
 
 ```xml
 <property as="xs:string" name="oxf.fr.css.custom.uri.*.*">
