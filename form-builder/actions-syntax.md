@@ -290,6 +290,12 @@ Attribute|Mandatory|Value|Comment
 <fr:value value="..." ref="..."/>
 ```
 
+or:
+
+```xml
+<fr:value control="..." ref="..."/>
+```
+
 When calling an [HTTP service](/form-builder/http-services.md), you can set XML request body values using nested `<fr:value>` elements.
 
 Attribute|Mandatory|Value|Comment
