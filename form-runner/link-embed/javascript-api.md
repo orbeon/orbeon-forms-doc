@@ -98,3 +98,7 @@ If you want to replace a form A shown in a given container by an other form B, y
 ## Limitations
 
 The JavaScript embedding API has the same [limitations as the Java embedding API](java-api.md#limitations).
+
+## See also
+
+- [Client-side JavaScript API](/xforms/client-side-javascript-api.md)
