@@ -222,6 +222,23 @@ fr:is-readonly-mode() as xs:boolean
 
 Return whether the current page is in a readonly mode such as `view`, `pdf`, or `email`.
 
+### fr:is-embedded()
+
+[SINCE Orbeon Forms 2021.1]
+
+```xpath
+fr:is-embedded()
+```
+
+Returns whether the form is running in embedded mode. This includes embedding with:
+
+- the [Form Runner Java embedding API](/form-runner/link-embed/java-api.md)
+- the [Form Runner JavaScript Embedding API](/form-runner/link-embed/javascript-api.md)
+- the [Form Runner Liferay Proxy Portlet](/form-runner/link-embed/liferay-proxy-portlet.md)
+- the Offline mode [EXPERIMENTAL SINCE Orbeon Forms 2021.1]
+
+This can, for example, be used to show and hide buttons or form sections only when the form is embedded. 
+
 ### fr:lang()
 
 ```xpath
