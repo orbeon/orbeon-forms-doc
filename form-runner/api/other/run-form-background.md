@@ -110,7 +110,13 @@ The `prune-metadata` parameter can be used to control production of metadata:
 - `false` to leave such occurrences
 - default
     - `false` when `data-format-version` is set to `edge`
-    - `true` otherwise 
+    - `true` otherwise
+
+### Testing whether the form is running in the background
+
+[SINCE Orbeon Forms 2021.1]
+
+See the [`fr:is-background()`](/xforms/xpath/extension-form-runner.md#fr-is-background) function.
 
 ## Examples
 
@@ -164,4 +170,5 @@ The following examples use the [curl](https://curl.haxx.se/) command-line utilit
 
 ## See also 
 
-- [Running processes upon page load](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load)
+- [Running processes upon page load](/configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load)
+- [`fr:is-background()`](/xforms/xpath/extension-form-runner.md#fr-is-background)
