@@ -64,3 +64,49 @@ Close an XForms dialog by id.
 
 - parameters
     - `dialog`: specifies the id of the dialog to close
+
+## xf:insert
+
+[SINCE Orbeon Forms 2021.1]
+
+Insert data in an XML document.
+
+- parameters
+    - `origin`: required XPath expression, relative to the root element of the form data, points to the nodes to insert.
+    - `before`: optional XPath expression, relative to the root element of the form data, points to a node to insert *before*.
+    - `after`: optional XPath expression, relative to the root element of the form data, points to a node to insert *after*.
+    - `into`: optional XPath expression, relative to the root element of the form data, points to a node to insert *into*.
+
+Only one of `into`, `before`, or `after` is used, as follows:
+
+- If `before` is specified and contains at least one node, then insertion occurs *before* that node.
+- Or else, if `after` is specified and contains at least one node, then insertion occurs *after* that node.
+- Or else, if `into` is specified and contains at least one node, then insertion occurs *into* that node.
+
+xxx
+
+Examples:
+
+```xpath
+xf:insert(
+    into  = "xxxx",
+    orign = "xxxx"
+)
+```
+
+## xf:delete
+
+[SINCE Orbeon Forms 2021.1]
+
+Delete data from an XML document.
+
+- parameters
+    - `ref`: required XPath expression, relative to the root element of the form data, points to the nodes to delete.
+
+Examples:
+
+```xpath
+xf:delete(
+    ref = "xxxx"
+)
+```

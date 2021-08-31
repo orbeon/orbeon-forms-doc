@@ -6,7 +6,6 @@ Today we released Orbeon Forms 2020.1.4 PE. This update contains bug-fixes and i
 
 This release addresses the following issues since [Orbeon Forms 2020.1.3 PE](orbeon-forms-2020.1.3.md):
 
-
 - XPath errors are logged but do not show the expression and location ([\#3351](https://github.com/orbeon/orbeon-forms/issues/3351))
 - Can't use `xxf:property()` in Resource URL AVT ([\#4749](https://github.com/orbeon/orbeon-forms/issues/4749))
 - Legacy date field not initialized on iOS ([\#4859](https://github.com/orbeon/orbeon-forms/issues/4859))
@@ -28,6 +27,7 @@ This release addresses the following issues since [Orbeon Forms 2020.1.3 PE](orb
 - Number/currency on mobile and non-English language shows value as invalid ([\#4936](https://github.com/orbeon/orbeon-forms/issues/4936))
 - `fr:databound-select1` doesn't initialize in new iteration ([\#4945](https://github.com/orbeon/orbeon-forms/issues/4945))
 - For ([\#3814](https://github.com/orbeon/orbeon-forms/issues/3814)): add process to modify published form
+- Embedding: better logging/error message when Orbeon Forms doesn't send a mediatype ([\#4917](https://github.com/orbeon/orbeon-forms/issues/4917))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
