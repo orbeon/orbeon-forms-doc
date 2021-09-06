@@ -1,6 +1,6 @@
 # Orbeon Forms 2020.1.4 PE
 
-__xxxx, August xx, 2021__
+__Monday, September 6, 2021__
 
 Today we released Orbeon Forms 2020.1.4 PE. This update contains bug-fixes and is recommended for all [Orbeon Forms 2020.1.3 PE](orbeon-forms-2020.1.3.md), [Orbeon Forms 2020.1.2 PE](orbeon-forms-2020.1.2.md), [Orbeon Forms 2020.1.1 PE](orbeon-forms-2020.1.1.md) and [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md) users.
 
@@ -28,6 +28,14 @@ This release addresses the following issues since [Orbeon Forms 2020.1.3 PE](orb
 - `fr:databound-select1` doesn't initialize in new iteration ([\#4945](https://github.com/orbeon/orbeon-forms/issues/4945))
 - For ([\#3814](https://github.com/orbeon/orbeon-forms/issues/3814)): add process to modify published form
 - Embedding: better logging/error message when Orbeon Forms doesn't send a mediatype ([\#4917](https://github.com/orbeon/orbeon-forms/issues/4917))
+- Simple processes: add `xf:insert` and `xf:delete` actions ([\#4676](https://github.com/orbeon/orbeon-forms/issues/4676))
+- File scan error message shows `{0}` ([\#4961](https://github.com/orbeon/orbeon-forms/issues/4961))
+- Incorrect section template bind during reindex crash interrupts the process ([\#4972](https://github.com/orbeon/orbeon-forms/issues/4972))
+- Section to pass `index` to `fr-iteration-removed` ([\#4973](https://github.com/orbeon/orbeon-forms/issues/4973))
+- First field not to show as invalid with separate TOC ([\#4975](https://github.com/orbeon/orbeon-forms/issues/4975))
+- User with organization-based permission to be able to access the summary page ([\#4979](https://github.com/orbeon/orbeon-forms/issues/4979))
+- Always return 404 when data doesn't exist ([\#4979](https://github.com/orbeon/orbeon-forms/issues/4979))
+- Allow user to org-based perms to create data ([\#4978](https://github.com/orbeon/orbeon-forms/issues/4978))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
