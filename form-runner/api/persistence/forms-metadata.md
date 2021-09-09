@@ -72,6 +72,21 @@ Optionally, you can pass the URL parameter `all-forms`:
         - forms which have permissions defined and for which the user has no permissions at all are excluded
         - unavailable form definitions are excluded
 
+#### Filtering by date
+
+[SINCE Orbeon Forms 2021.1]
+
+Optionally, you can pass the URL parameter `modified-since`:
+
+- this must be an ISO date/time
+- when passed, only form definitions which have been modified since the given date are returned
+
+For example:
+
+```
+/fr/service/persistence/form?modified-since=2021-09-09T04:56:42.257Z
+```
+
 ### Response
 
 #### Response format 
