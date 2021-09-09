@@ -212,7 +212,7 @@ The following functions from XSLT 2.0 and XPath 3 are available:
 - `format-time()` ([external documentation](https://www.w3.org/TR/xpath-functions-31/#func-format-time))
 - `format-number()` ([external documentation](https://www.w3.org/TR/xpath-functions-31/#func-format-number))
 
-*NOTE: Orbeon Forms, as of version 2021.1, still uses XPath 2.0. Even so, these functions above are available.*
+*NOTE: Orbeon Forms, as of version 2021.1, still uses XPath 2.0. Even so, the functions above are available.*
 
 For an example, see [Converting a date/time to a named timezone](/form-builder/formulas-examples.md#converting-a-date-time-to-a-named-timezone).
 
