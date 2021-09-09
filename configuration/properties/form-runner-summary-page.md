@@ -47,7 +47,7 @@ By default, the Summary page shows a Created and Modified columns:
 
 ![Created and Last Modified](/form-runner/images/summary-created-last-modified.png)
 
-You can remove either one of those columns by setting the value appropriate property to `false`:
+You can remove either one of those columns by setting the appropriate property value to `false`:
 
 ```xml
 <property
@@ -58,6 +58,36 @@ You can remove either one of those columns by setting the value appropriate prop
 <property
     as="xs:boolean"
     name="oxf.fr.summary.show-last-modified.*.*"
+    value="true"/>
+```
+
+## Show the workflow stage
+
+[SINCE Orbeon Forms 2020.1]
+
+You can add this column by setting the following property value to `true`:
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.summary.show-workflow-stage.*.*"                           
+    value="true"/>
+```
+
+## Show created by and last modified by users
+
+[SINCE Orbeon Forms 2021.1]
+
+You can add either one of those columns by setting the appropriate property value to `true`:
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.summary.show-username.*.*"                           
+    value="true"/>
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.summary.show-last-modified-by.*.*"                   
     value="true"/>
 ```
 
