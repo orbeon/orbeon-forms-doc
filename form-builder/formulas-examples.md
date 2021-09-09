@@ -354,6 +354,22 @@ return
     else $daysNoWeekends
 ```
 
+## Converting a date/time to a named timezone
+
+The following formula formats the current date/time to an ISO date/time in a specific named timezone: 
+
+```xpath
+format-dateTime(
+  current-dateTime(),
+  '[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]',
+  'en',
+  (),
+  'Europe/Paris'
+) 
+```
+
+*NOTE: See [issue #4981](https://github.com/orbeon/orbeon-forms/issues/4981) for availability of a fix that impacts this example.*
+
 ## See also
 
 - [Formulas](formulas.md)
