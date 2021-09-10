@@ -70,9 +70,9 @@ When using HTTPS, you can specify how the hostname of the server is checked agai
 
 The possible values are:
 
-- `strict` — (the default) See [`StrictHostnameVerifier`](http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/conn/ssl/StrictHostnameVerifier.html).
-- `browser-compatible` — See [`BrowserCompatHostnameVerifier`](http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/conn/ssl/BrowserCompatHostnameVerifier.html).
-- `allow-all` — See [`AllowAllHostnameVerifier`](http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/conn/ssl/AllowAllHostnameVerifier.html).
+- `strict` — (the default) See [`StrictHostnameVerifier`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/conn/ssl/StrictHostnameVerifier.html).
+- `browser-compatible` — See [`BrowserCompatHostnameVerifier`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/conn/ssl/BrowserCompatHostnameVerifier.html).
+- `allow-all` — See [`AllowAllHostnameVerifier`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/conn/ssl/AllowAllHostnameVerifier.html).
 
 Typically, you'll leave this property to its default value (`strict`). However, you might need to set it to `allow-all` to be able to connect to a server with a self-signed certificate if the `cn` in the certificate doesn't match the hostname you're using to connect to that server.
 
