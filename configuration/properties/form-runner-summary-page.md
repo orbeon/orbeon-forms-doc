@@ -83,7 +83,7 @@ You can add either one of those columns by setting the appropriate property valu
 ```xml
 <property 
     as="xs:boolean" 
-    name="oxf.fr.summary.show-username.*.*"                           
+    name="oxf.fr.summary.show-created-by.*.*"                           
     value="true"/>
 <property 
     as="xs:boolean" 

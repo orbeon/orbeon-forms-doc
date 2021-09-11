@@ -290,21 +290,33 @@ The root element contains these attributes:
 - \[Up to 2016.1\] `page-number` attribute: echos of the query's attribute.
 - \[Up to 2016.1\] `query` attribute: echos of the full-text query text.
 
-For each of the documents found, a `<document>` element is returned:
+For each of the documents found, a `<document>` element is returned with the following attributes:
 
-- created attribute:
+- `created`
     - creation date in ISO format
-- last-modified attribute:
+- `last-modified`
     - last modification date in ISO format
-- name attribute:
+- `name`
     - document identifier,
     - this must match the identifier created by Form Runner when saving the data
-- `draft` attribute:
+- `draft`
     - `true` or `false`, depending on whether the form data is a draft (autosaved) or not
-- `operations` attribute:
+- `operations`
     - a space separated subset of the following token: `read`, `write`, `update`, and `delete`, whichever operations the user is allowed to perform; also see [Supporting permissions in your persistence API implementation](https://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)
+- `created-by`
+    - [SINCE Orbeon Forms 2021.1] 
+    - username of the user who created the data, or missing if there is no user information
+- `created-by-groupname`
+    - [SINCE Orbeon Forms 2021.1] 
+    - group name of the user who created the data, or missing if there is no user information
+- `last-modified-by`
+    - [SINCE Orbeon Forms 2021.1] 
+    - username of the user who last modified the data, or missing if there is no user information
+- `workflow-stage`
+    - [SINCE Orbeon Forms 2020.1]
+    - name of the workflow stage associated with the data, or missing if there is no stage information
 
-Each document contains one <detail> element in the order determined by the `<query>` elements with a summary-field set to `true` in the request. The text value of the `<detail>` element is the value of the field in the document found.
+Each document contains one `<detail>` element in the order determined by the `<query>` elements with a summary-field set to `true` in the request. The text value of the `<detail>` element is the value of the field in the document found.
 
 ## See also
 
