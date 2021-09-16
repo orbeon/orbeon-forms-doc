@@ -24,7 +24,7 @@ You create a new action or update an existing action in the "Advanced" tab of th
 
 You can reorder actions by drag and drop in the toolbox. Sometimes, the specific order of actions is important, or you might just want to organize them in a way that makes sense for your form.
 
-![List of actions in the toolbox](images/toolbox-actions.png) 
+<img alt="List of actions in the toolbox" src="images/toolbox-actions.png" width="181">
 
 ### With Orbeon Forms 2017.1 or newer
 
