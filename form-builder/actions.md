@@ -30,7 +30,7 @@ You can reorder actions by drag and drop in the toolbox. Sometimes, the specific
 
 [SINCE Orbeon Forms 2017.1]
 
-![Actions Editor General Settings](images/actions-general-settings.png)
+<img alt="images/actions-general-settings.png" src="Actions Editor General Settings" width="802">
 
 This is the meaning of the fields of the dialog:
 
