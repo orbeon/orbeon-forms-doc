@@ -40,7 +40,7 @@ This is the meaning of the fields of the dialog:
 - __Run condition__
     - __Always__: Run the action independently from the form mode.
     - __In "new" mode only__: Run the action only in creation mode, that is when the user creates new data, as opposed to editing, viewing, emailing, or generating a PDF.
-    - __When formula evaluates to true__: [SINCE Orbeon Forms 2021.1] Allows you to enter your own condition using XPath, which, if it evaluates to `false`, will prevent the service from running (see [video](https://www.youtube.com/watch?v=_3mIk0OS6G8&).
+    - __When formula evaluates to true__: [SINCE Orbeon Forms 2021.1] Allows you to enter your own condition using XPath, which, if it evaluates to `false`, will prevent the service from running (see [video](https://www.youtube.com/watch?v=_3mIk0OS6G8&)).
 - __Run action when__
     - Specifies a phrase built of the following parts:
         - "the control"
