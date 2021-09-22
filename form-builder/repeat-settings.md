@@ -35,9 +35,13 @@ Deselecting this option makes sense in particular when the number of repetitions
 
 [SINCE Orbeon Forms 2021.1]
 
-Selecting this option automatically shows a row number at the beginning of each grid repetition.
+For grids only, selecting this option automatically shows a row number at the beginning of each grid repetition.
 
-!["Show repetition number" option](images/container-settings-repeated-content-show-repetition-number-highlighted.png)
+![Show repetition number](images/container-settings-repeated-content-show-repetition-number-highlighted.png)
+
+This is how the repetition number appears at runtime. 
+
+![Repetition number at runtime](images/container-settings-repeated-content-repetition-number-runtimep-highlighted.png)
 
 ## Minimum and maximum number of repetitions
 
