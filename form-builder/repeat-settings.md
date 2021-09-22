@@ -9,17 +9,19 @@ Form Builder supports grids and sections with repeated content.
 
 Both repeated grids and repeated sections have *repeat settings* in the "Section/Grids Settings" dialog's "Repeated Content" tab.
 
-![Repeated Content](images/section-settings-repeated-content.png)
+![Repeated Content](images/container-settings-repeated-content.png)
 
 ## Repeat Content
 
-Select this checkbox to enable repeated content.
+Select this checkbox to enable repeated content. This enables a series of detailed options below in the same dialog.
 
 ## Allow the user to add, remove, or move repetitions
 
 [SINCE Orbeon Forms 2019.1]
 
-Select the "Allow the user to add, remove, or move repetitions" checkbox to allow this behavior. When the checkbox is deselected, the user does not have direct access to buttons, icons or menus to change repetitions.
+By default, the form user is allowed to add, remove, or move repetitions. To disable this behavior, deselect the "Allow the user to add, remove, or move repetitions" option. When the checkbox is deselected, the user does not have direct access to buttons, icons or menus to change repetitions.
+
+![Allow the user to add, remove, or move repetitions](images/container-settings-repeated-content-one-repetition-highlighted.png)
 
 When this option is deselected, the minimum, maximum and frozen repetitions settings do not apply.
 
@@ -29,9 +31,19 @@ Deselecting this option makes sense in particular when the number of repetitions
 - is controlled via [actions](/form-builder/actions-syntax.md),
 - or is controlled via [synchronization](/form-builder/synchronize-repeated-content.md).
 
-## Minimum and maximum number of iterations
+## Show repetition number
 
-These settings can be predefined numbers or formulas when selecting "Other".
+[SINCE Orbeon Forms 2021.1]
+
+Selecting this option automatically shows a row number at the beginning of each grid repetition.
+
+!["Show repetition number" option](images/container-settings-repeated-content-show-repetition-number-highlighted.png)
+
+## Minimum and maximum number of repetitions
+
+These settings can be predefined numbers or formulas when selecting "Other". Here is an example of using a firmula for the maximum number of repetitions.
+
+![Formula for the maximum number of repetitions](images/container-settings-repeated-content-maximum-other-highlighted.png)
 
 ## Freeze repetitions
 
@@ -41,7 +53,7 @@ This setting can be a predefined number or a formula.
 
 This allows *freezing* the first *N* iterations of a repeated grid or repeated section. Frozen iterations cannot be removed or moved by the user. The grid menus and buttons reflect that those operations are not possible.
 
-The number of frozen iterations must be at most the minimal number of iterations. If that's not the case, the number of frozen iterations will be reset to the minimal number of iterations.
+The number of frozen iterations must be at most the minimal number of repetitions. If that's not the case, the number of frozen iterations will be reset to the minimal number of repetitions.
 
 See also [Freezing rows in repeated grids or sections](https://blog.orbeon.com/2019/06/freezing-rows-in-repeated-grids-or.html).
 

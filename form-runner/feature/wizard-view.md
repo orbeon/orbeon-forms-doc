@@ -298,7 +298,7 @@ To enable this, got to the relevant [section repeat settings](/form-builder/repe
 - Uncheck "Allow the user to add, remove, or move repetitions"
 - Check "Show one repetition at a time in the wizard"
 
-![Repeated Content Configuration](../../form-builder/images/section-settings-repeated-content-one-repetition.png)
+![Repeated Content Configuration](../../form-builder/images/container-settings-repeated-content-one-repetition.png)
 
 In addition, each repetition can have an individual [repetition label](/form-builder/form-editor/section-settings.md#dynamic-iteration-label).
 
