@@ -79,7 +79,7 @@ When the option of not encoding such values is chosen, the server still checks t
 
 [1]: https://en.wikipedia.org/wiki/Buffer_overflow
 [2]: https://en.wikipedia.org/wiki/Cross-site_scripting
-[3]: ../../xforms/controls/textarea.md#html-cleanup
+[3]: /xforms/controls/textarea.md#html-cleanup
 [4]: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 ## See also 
