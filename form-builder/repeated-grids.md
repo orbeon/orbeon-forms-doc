@@ -36,7 +36,7 @@ Once a grid is inserted, you can edit its properties with the "Grid Settings" ic
 
 *NOTE: Since Orbeon Forms 4.8, these settings (correctly) apply to the entire grid. Previously, the grid's repeat headers did not hide properly for example when the grid was hidden. See issue [#635](https://github.com/orbeon/orbeon-forms/issues/635).*
 
-![Basic Settings and Formulas](images/repeated-grid-settings-basic.png)
+![Basic Settings and Formulas](images/grid-settings.png)
 
 [SINCE Orbeon Forms 2019.1]
 
