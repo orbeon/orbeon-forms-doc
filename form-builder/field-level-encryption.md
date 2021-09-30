@@ -42,7 +42,7 @@ However, overwriting an existing form definition at publication time won't re-en
 
 1. Currently, the search API isn't able to handle encrypted fields.
 	- This has the following consequences:
-		- You can't search values of encrypted fields, whether from a [summary page](summary-page.md) or using the [search API](../form-runner/apis/persistence-api/search.md).
+		- You can't search values of encrypted fields, whether from a [summary page](summary-page.md) or using the [search API](../form-runner/api/persistence/search.md).
 		- Neither the summary page or the search API is able to show or return the values of encrypted fields (it will instead show/return the encrypted values).
 	- Consequently, fields marked for encryptions shouldn't be marked to be shown on the summary page, or to show in search.
 2. Re-encryption doesn't support changing the encryption key, that is decrypting with a first key (the old key) and encrypting with a second key (the new key). If you need to change the encryption key, for now you need to:
