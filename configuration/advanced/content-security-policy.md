@@ -40,7 +40,7 @@ But Orbeon Forms is able to produce that header as well, whether just for testin
 ```xml
 <init-param>
     <param-name>content-security-policy</param-name>
-    <param-value>default-src 'self'</param-value>
+    <param-value>default-src 'self'; img-src 'self' data:</param-value>
 </init-param>
 ```
 
