@@ -29,6 +29,9 @@ The following options are available:
     - When selected, the control value is visible as a Summary page column.
 - __Show in Search:__
     - When selected, the control value is searchable in the Summary page.
+- __Index control:__
+    - SINCE Orbeon Forms 2021.1
+    - Index the value of this control even if it's not shown or searchable from the Summary page. This makes the control accessible from the [search API](../form-runner/apis/persistence-api/search.md).
 - __Encrypt data at rest:__
     - SINCE Orbeon Forms 2018.1
     - This is an Orbeon Forms PE feature.
