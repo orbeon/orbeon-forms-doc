@@ -265,10 +265,11 @@ The embedding implementation:
 
 ## Limitations
 
-- navigation between pages, such as the Form Runner Edit and Review pages, is not supported
-- the `send` action within a process does not support `replace="all"`
-- embedding multiple forms is known to work in some cases, but has known issues so we don't recommend doing this (see [#1854](https://github.com/orbeon/orbeon-forms/issues/1854))
-- `oxf.xforms.combine-resources` must be set to `true`
+- Using non-combined resources is not supported (so `oxf.xforms.combine-resources` must be set to `true`, which is the default).
+- Embedding multiple forms is known to work in some cases, but has known issues so we don't recommend doing this (see [#1854](https://github.com/orbeon/orbeon-forms/issues/1854))
+- Navigation between pages, such as the Form Runner Edit and Review pages, is not supported. Because of this:
+    - The `send` action within a process does not support `replace="all"`.
+    - Autosave is not supported, as the prompts made to users, whether when [creating data](https://doc.orbeon.com/form-runner/persistence/autosave#new-page) or [editing existing data](https://doc.orbeon.com/form-runner/persistence/autosave#edit-page), make use of page navigation. If some of the users are logged in, you should probably [disable the autosave feature](https://doc.orbeon.com/form-runner/persistence/autosave#disabling-autosave).
 
 ## See also 
 
