@@ -63,7 +63,7 @@ a[href] {
 }
 ```
 
-## Avoiding fields to be split across pages
+## Avoiding fields being cut across pages
 
 [SINCE Orbeon Forms 2020.1.5] When a field can be partially, but not entirely, shown at the bottom of a page, instead of showing part of the field on one page and part on the other page ("cutting" the field), it is often better to move that field along with its label to the next page. However, in some cases, when the field contains a lot of text, moving the whole field to the next page means that the "previous page" ends up with a lot of blank space, which is a suboptimal use of the page, and can even be confusing.
 
