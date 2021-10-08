@@ -63,6 +63,19 @@ a[href] {
 }
 ```
 
+## Avoiding fields to be split across pages
+
+[SINCE Orbeon Forms 2020.1.5] When a field can be partially, but not entirely, shown at the bottom of a page, instead of showing part of the field on one page and part on the other page ("cutting" the field), it is often better to move that field along with its label to the next page. However, in some cases, when the field contains a lot of text, moving the whole field to the next page means that the "previous page" ends up with a lot of blank space, which is a suboptimal use of the page, and can even be confusing.
+
+So Orbeon Forms implements the following heuristic in cases where the whole field can't fit on the current page: if the field's content is "short", the whole field is pushed to the next page, and if the content is "longer" the field is "cut", with part of the field on one page, and part on the next page. The threshold separating what is considered to be "short" and "longer" is defined with the following property, in the number of characters, and the default value is 512.
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.fr.detail.pdf.long-content-threshold.*.*"
+    value="512"/>
+```
+
 ## Barcode
 
 [Orbeon Forms PE] The following property specifies whether a barcode must be included on PDF files produced from a PDF template. Adding a barcode to a PDF produced without a PDF template isn't supported at this point (see [RFE #2190](https://github.com/orbeon/orbeon-forms/issues/2190)).
