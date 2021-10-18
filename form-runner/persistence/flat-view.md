@@ -30,13 +30,14 @@ For instance, if using  Oracle, you set:
 
 ### View name
 
-When you enable this property, upon publishing a form, the persistence layer creates a view specific to that form. The name of the view is based on your app and form name, and has the form:
+When you enable this property, upon publishing a form, the persistence layer creates a view specific to that form. The name of the view is based on the app name, form name, and [SINCE Orbeon Forms 2021.1] form version. It has the form:
 
 ```
-orbeon_f_#{app}_#{form}
+[SINCE Orbeon Forms 2021.1] orbeon_f_#{app}_#{form}_#{form_version}
+[UP TO Orbeon Forms 2020.1] orbeon_f_#{app}_#{form}
 ```
  
-For instance, if your app is `hr` and you form is `expense`, then the view is named `orbeon_f_hr_expense`. If upon publishing, there is already a view with that name, the persistence layer deletes it before recreating a new view.
+For instance, on Orbeon Forms 2021.1 and newer, if your app is `hr`, your form is `expense`, and you are publishing version 2 of that form, then the view is named `orbeon_f_hr_expense_2`. If upon publishing, there is already a view with that name, the persistence layer deletes it before recreating a new view.
 
 ### Metadata column names
 
