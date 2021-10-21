@@ -114,6 +114,15 @@ You can pass information about the current user to Orbeon Forms through headers.
         value="header"/>
     ```
 
+2. [SINCE Orbeon Forms 2020.1] You need to enable [sticky authentication headers](../access-control/users.md#when-to-set-the-headers), adding:
+
+    ```xml
+    <property
+        as="xs:boolean"
+        name="oxf.fr.authentication.header.sticky"
+        value="true"/>
+    ```
+
 2. Back to your web app, pass the current user's username as the value of the `My-Username-Header` header, through a map you provide as the last argument to your call to `API.embedFormJava()`:
 
     ```java
