@@ -92,53 +92,24 @@ Like for services, once your action is defined, the Save buttons saves it to the
 
 ## Handling the service request
 
-### Passing parameters to the service's XML request
-
-#### With HTTP services
-
-Use "Set Service Request Values".
+Each row instructs the action to take value and pass it to the service, and you can add as many such rows as needed using the "+" button, and remove existing entries with the dropdown menu.
 
 ![Actions Editor Service Request Actions](images/actions-request.png)
 
-Each row instructs the action to take the value of a form control and store it into the body of the XML service request.
+- The value can come from
+    - A control value, which you select in the dropdown. If the control is repeated, because it occurs in a repeated grid or repeated section, then the value of the first "instance" of that control is used and passed to the service.
+    - [SINCE Orbeon Forms 2021.1] Selecting "Formula" in the first column's dropdown, and enter your formula in the text field showing the second column.
+- How the value is provided to the service
+    - With HTTP services doing POST – The XPath expression, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
+    - With HTTP services doing GET or DELETE – The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters)  when using the `GET` and `DELETE` HTTP methods. In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, as in the following example. The Actions Editor doesn't yet support specifying URL parameters directly by name in this case. Instead, you use XPath expressions under "Set Service Request Values", like `//userId` or `//userName`.
 
-- __Source Control.__ See the [relevant section below](#source-control).
-- __Destination XPath Expression.__ The XPath expression, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
-
-You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
-
-##### Passing URL parameters to GET and DELETE methods
-
-[SINCE Orbeon Forms 2016.1]
-
-The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters)  when using the `GET` and `DELETE` HTTP methods. In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, for example:  
-
-```xml
-<params>
-    <userId>1</userId>
-    <userName>test</userName>
-</params>
-```
-
-The Actions Editor doesn't yet support specifying URL parameters directly by name in this case. Instead, you use XPath expressions under "Set Service Request Values". For example:
-
-- to set the `userId` parameter: `/*/userId`
-- to set the `userName` parameter: `/*/userName`
-
-#### With Database services
-
-Use "Set Database Service Parameters".
-
-Each row instructs the action to take the value of a control and set that value as the Nth query parameter of the database service.
-
-- __Source Control.__ See the [relevant section below](#source-control).
-- __Parameter Number.__ To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
-
-You can add as many such rows as you want using the "+" button, and remove existing entries with the dropdown menu.
-
-#### Source control
-
-Specifies the control whose value must be used. If the control is repeated, because it occurs in a repeated grid or repeated section, then the value of the first "instance" of that control is used and passed to the service.
+    ```xml
+    <params>
+        <userId>1</userId>
+        <userName>test</userName>
+    </params>
+    ```
+    - With Database services – To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
 
 ## Handling the service response
 
