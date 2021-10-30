@@ -92,23 +92,23 @@ Like for services, once your action is defined, the Save buttons saves it to the
 
 ## Handling the service request
 
-Each row instructs the action to take value and pass it to the service, and you can add as many such rows as needed using the "+" button, and remove existing entries with the dropdown menu.
+Each row instructs the action to take a value and pass it to the service, and you can add as many such rows as needed using the "+" button, and remove existing entries with the dropdown menu.
 
 ![Actions Editor Service Request Actions](images/actions-request.png)
 
-- The value can come from
+- The value can come from either:
     - A control value, which you select in the dropdown. If the control is repeated, because it occurs in a repeated grid or repeated section, then the value of the first "instance" of that control is used and passed to the service.
-    - [SINCE Orbeon Forms 2021.1] Selecting "Formula" in the first column's dropdown, and enter your formula in the text field showing the second column.
-- How the value is provided to the service
-    - With HTTP services doing POST – The XPath expression, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
-    - With HTTP services doing GET or DELETE – The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters)  when using the `GET` and `DELETE` HTTP methods. In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, as in the following example. The Actions Editor doesn't yet support specifying URL parameters directly by name in this case. Instead, you use XPath expressions under "Set Service Request Values", like `//userId` or `//userName`.
+    - [SINCE Orbeon Forms 2021.1] Selecting "Formula" in the first column's dropdown, and entering your formula in the text field showing the second column.
+- How the value is provided to the service:
+    - With HTTP services doing a POST – You provide a formula, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
+    - With HTTP services doing a GET or DELETE – The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters)  when using the `GET` and `DELETE` HTTP methods. In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, as in the example below. The Actions Editor doesn't yet support specifying URL parameters directly by name; instead, you need to enter a formula under "Set Service Request Values", like `//userId` or `//userName`.
 
-    ```xml
-    <params>
-        <userId>1</userId>
-        <userName>test</userName>
-    </params>
-    ```
+        ```xml
+        <params>
+            <userId>1</userId>
+            <userName>test</userName>
+        </params>
+        ```
     - With Database services – To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
 
 ## Handling the service response
