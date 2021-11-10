@@ -88,11 +88,9 @@ Like `fr:control-string-value()` (see above), but it returns:
 - `$follow-indexes`
     - if missing, takes the value `false()`.
     - if `false()`
-        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat
-          iterations, all repeat iterations are chosen. 
+        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat iterations, all repeat iterations are chosen. 
     - if `true()`
-        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
-          iterations, the iteration matching the enclosing repeat's current index is chosen.
+        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat iterations, the iteration matching the enclosing repeat's current index is chosen.
 
 For indexes in the array where it is not possible to return a typed value, the empty sequence is returned instead.
 

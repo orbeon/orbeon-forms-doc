@@ -702,12 +702,10 @@ The two-argument function adds the `$follow-indexes` argument.
 - `$follow-indexes`
     - if missing, takes the value `true()`.
     - if `false()`
-        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat
-          iterations, all repeat iterations are chosen. 
+        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat iterations, all repeat iterations are chosen. 
         - Zero, one, or more values can be returned.
     - if `true()`
-        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
-          iterations, the iteration matching the enclosing repeat's current index is chosen.
+        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat iterations, the iteration matching the enclosing repeat's current index is chosen.
         - At most one value is returned.
 
 ## xxf:formatted-value()
@@ -729,12 +727,10 @@ The `xxf:formatted-value()` function returns the formatted value for one or more
 - `$follow-indexes`
     - if missing, takes the value `true()`.
     - if `false()`
-        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat
-          iterations, all repeat iterations are chosen. 
+        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat iterations, all repeat iterations are chosen. 
         - Zero, one, or more values can be returned.
     - if `true()`
-        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat
-          iterations, the iteration matching the enclosing repeat's current index is chosen.
+        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat iterations, the iteration matching the enclosing repeat's current index is chosen.
         - At most one value is returned.
 
 _NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
