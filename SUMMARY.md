@@ -75,6 +75,7 @@
         * [PDF production](form-builder/pdf-production.md)
             * [Automatic PDF](form-builder/pdf-automatic.md)
             * [PDF templates](form-builder/pdf-templates.md)
+            * [Testing PDF production](form-builder/pdf-test.md)
         * [Email settings](form-builder/email-settings.md)
         * [Field-level encryption](form-builder/field-level-encryption.md)
         * [Section templates](form-builder/section-templates.md)
