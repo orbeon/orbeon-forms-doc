@@ -68,6 +68,7 @@ In this example, the path `/forms/resources/arialuni.ttf` is relative to the Orb
 
 ## See also
 
-- [PDF Production](pdf-production.md).
-- [PDF Templates](pdf-templates.md).
-- [TIFF Production](/form-runner/feature/tiff-production.md).
+- [PDF Production](pdf-production.md)
+- [PDF Templates](pdf-templates.md)
+- [Testing PDF production](pdf-test.md)
+- [TIFF Production](/form-runner/feature/tiff-production.md)

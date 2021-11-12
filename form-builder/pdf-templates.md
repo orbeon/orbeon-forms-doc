@@ -147,5 +147,6 @@ In template mode, fonts can be specified to provide glyphs which are not present
 
 - [PDF Production](pdf-production.md)
 - [Automatic PDF](pdf-automatic.md)
+- [Testing PDF production](pdf-test.md)
 - [TIFF Production](../form-runner/feature/tiff-production.md)
 - [Sending PDF and TIFF content: Controlling the format](../form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)
