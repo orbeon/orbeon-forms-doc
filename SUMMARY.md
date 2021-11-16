@@ -9,7 +9,7 @@
     * [WebLogic](installation/weblogic.md)
     * [GlassFish](installation/glassfish.md)
     * [Replication](installation/replication.md)
-    * [Upgrading from older versions](upgrading.md)
+    * [Upgrading](upgrading.md)
 * Configuration
    * [Properties](configuration/properties/README.md)
         * [General](configuration/properties/general.md)
