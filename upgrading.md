@@ -6,12 +6,13 @@ We recommend you test your upgrade in a non-production environment, and only upg
 once you've validated the upgrade. Also, before upgrading, we recommend you have a current backup of your database. 
 Once done: 
 
-1. Stop your application server or servlet container (e.g. Tomcat).
+1. Stop your application server (e.g. Tomcat).
 2. Move your existing Orbeon Forms install to a temporary directory. For instance, with Tomcat, in Tomcat's 
    `webapps` directory, move any existing `orbeon` folder or `orbeon.war` file out of the way before proceeding. 
 3. Install the new `orbeon.war`. With Tomcat, this is often done by uncompressing the `orbeon.war` into an `orbeon` 
    directory (`unzip -d orbeon orbeon.war`), and moving the `orbeon` directory inside the Tomcat `webapps` directory.
-4. Test that your clean install works as expected "out of the box" (i.e. without any of your configurations).
+4. Restart your application server and test that your clean install works as expected "out of the box", that is 
+   without any of your custom configurations.
 5. Put back configurations you had with your previous installation. Often, the only file you need to modify is 
    `WEB-INF/resources/config/properties-local.xml`, but you might have created or made changes to other files, such as
    `WEB-INF/resources/config/form-builder-permissions.xml`, `WEB-INF/resources/config/log4j.xml` or 
@@ -23,9 +24,10 @@ Once done:
       "upgrade" in the [relational database configuration documentation](form-runner/persistence/relational-db.md), 
       and check if there is some DDL you need to run to upgrade your database schema. This means running the 
       `*-to-*.sql` DDL files from the older version to the new version. 
-7. Test that everything is working as expected with the new version of Orbeon Forms. While, or before doing so, you 
-   might also want to review the [compatibility notes](#compatibility-notes-for-previous-versions) which might give 
-   you some indication of what you might to pay especially attention to when testing.
+7. Restart your application server and test that everything is working as expected with the new version of Orbeon 
+   Forms. While, or before doing so, you might also want to review the
+   [compatibility notes](#compatibility-notes-for-previous-versions) which might give you some indication of what 
+   you might to pay especially attention to when testing.
 
 Finally, let us know if you encounter issues while upgrading, via the [community](https://www.orbeon.com/community), 
 by email, or via professional support.
