@@ -1,5 +1,35 @@
 # Upgrading
 
+## Steps
+
+We recommend you test your upgrade in a non-production environment, and only upgrade your production environment 
+once you've validated the upgrade. Also, before upgrading, we recommend you have a current backup of your database. 
+Once done: 
+
+1. Stop your application server or servlet container (e.g. Tomcat).
+2. Move your existing Orbeon Forms install to a temporary directory. For instance, with Tomcat, in Tomcat's 
+   `webapps` directory, move any existing `orbeon` folder or `orbeon.war` file out of the way before proceeding. 
+3. Install the new `orbeon.war`. With Tomcat, this is often done by uncompressing the `orbeon.war` into an `orbeon` 
+   directory (`unzip -d orbeon orbeon.war`), and moving the `orbeon` directory inside the Tomcat `webapps` directory.
+4. Test that your clean install works as expected "out of the box" (i.e. without any of your configurations).
+5. Put back configurations you had with your previous installation. Often, the only file you need to modify is 
+   `WEB-INF/resources/config/properties-local.xml`, but you might have created or made changes to other files, such as
+   `WEB-INF/resources/config/form-builder-permissions.xml`, `WEB-INF/resources/config/log4j.xml` or 
+   `WEB-INF/web.xml`.
+6. Migrate your database if needed.
+    - If you're using the internal eXist and want to keep the forms you created, and corresponding data captured with
+      those forms, you'll want to move the `WEB-INF/exist-data` directory to the new web app.
+    - If using a relational database, you might have to run some upgrade DDL at the database level. Search for 
+      "upgrade" in the [relational database configuration documentation](form-runner/persistence/relational-db.md), 
+      and check if there is some DDL you need to run to upgrade your database schema. This means running the 
+      `*-to-*.sql` DDL files from the older version to the new version. 
+7. Test that everything is working as expected with the new version of Orbeon Forms. While, or before doing so, you 
+   might also want to review the [compatibility notes](#compatibility-notes-for-previous-versions) which might give 
+   you some indication of what you might to pay especially attention to when testing.
+
+Finally, let us know if you encounter issues while upgrading, via the [community](https://www.orbeon.com/community), 
+by email, or via professional support.
+
 ## Why upgrade to newer versions of Orbeon Forms?
 
 ### Minor releases
@@ -22,28 +52,6 @@ The way we handle fixes, generally, is as follows:
 - Most fixes (as opposed to new features) go into the previous major version of Orbeon Forms as well (for example Orbeon Forms 2018.2), and are released as a dot release at a later time (for example Orbeon Forms 2018.2.3).
 - Some important fixes are backported to earlier versions of Orbeon Forms (for example 2018.1.x) at Orbeon's discretion.
 - We backport certain features to customer branches on demand. But the more time passes between versions, the harder and riskier it becomes to backport fixes. This is because the codebase is more likely to change over time.
-
-## Upgrade steps
-
-To upgrade to a new version of Orbeon Forms you'll want to:
-
-1. Review the compatibility notes (see [Compatibility notes for previous versions](#compatibility-notes-for-previous-versions)).
-1. Make sure you have a backup of your current environments, including:
-    - databases
-    - containers
-    - Orbeon Forms WARs
-    - all Orbeon Forms configurations
-1. Make sure to first upgrade in a safe test environment.
-1. Do a "clean Install" of the new version of Orbeon Forms.
-    - Don't install it "over" the old version, or try to just update some `jar` files or any other files in the old version (unless directed to do so by Orbeon support). 
-    - Check that that your clean install works as expected out of the box.
-    - Often, the only file you need to modify is `WEB-INF/resources/config/properties-local.xml`, but you might have created or made changes to other files, such as `WEB-INF/resources/config/form-builder-permissions.xml`, `WEB-INF/resources/config/log4j.xml` or even `WEB-INF/web.xml`.
-1. Migrate your database if needed.
-    - If you're using the internal eXist and want to keep the forms you created, and corresponding data captured with those forms, you'll want to move the `WEB-INF/exist-data` directory to the new web app.
-    - If using a relational database, you might have to run some upgrade DDL at the database level. Search for "upgrade" in the [relational database configuration documentation](form-runner/persistence/relational-db.md), and check if there is some DDL you need to run to upgrade your database schema. This means running the `*-to-*.sql` DDL files from the older version to the new version.
-1. Thoroughly test that everything is working as expected with the new version of Orbeon Forms.
-
-Finally, let us know if you encounter issues while upgrading, via the [community](https://www.orbeon.com/community), by email, or via professional support.
 
 ## Compatibility policy
 
