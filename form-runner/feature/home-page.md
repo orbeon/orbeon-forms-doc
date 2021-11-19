@@ -63,9 +63,9 @@ Administrators can select forms in two ways:
 
 ![Select Menu](../images/home-select-menu.png)
 
-The operations listed in the Operations menu are then available depending on the current selection:
+The operations listed in the Operation menu are then available depending on the current selection:
 
-![Operations Menu](../images/home-operation-menu.png)
+![Operation Menu](../images/home-operation-menu.png)
 
 ### Controlling form definitions availability
 
