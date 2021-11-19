@@ -82,6 +82,22 @@ Initially, when publishing a form definition with Form Builder, the form definit
 
 Making a form definition available or unavailable also takes into account the *version* of the form definition(s) selected.  
 
+### Deleting published form definitions
+
+[SINCE Orbeon Forms 2021.1]
+
+- __Delete local forms:__ delete a locally-published form definition.
+- __Delete remote forms:__ delete a remotely-published form definition.
+
+Unlike the "Make unavailable" operations, this operation removes the selected published form definitions. Once this is done, the form definitions are no longer visible in the Admin page and they can no longer be accessed.
+
+This feature is useful in cases a form definition was published by mistake, for testing, or if at a later time the form definition is deemed unnecessary.
+
+Important notes:
+
+1. This does not cause any data entered using this form definition to be removed. The data will remain in the database. However, that data is no longer accessible by a form definition. If a form definition with the same application name, form name, and form version is later published, then it will have access to that data again.
+2. This action cannot be undone. However, the [auditing trail](/form-runner/persistence/auditing.md) in the database might allow recovery of a deleted form definition at the database level.
+
 ### Upgrading form definitions
 
 #### Introduction
