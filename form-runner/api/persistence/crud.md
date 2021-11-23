@@ -70,7 +70,80 @@ Orbeon-Form-Definition-Version: 4
 ```
 
 the persistence layer returns a `400` "Bad Request" HTTP status code.
+
+## Migrating a form definition for integration purposes
+
+[SINCE Orbeon Forms 2021.1]
+
+Some Orbeon Forms integrators retrieve form definitions using the CRUD API to analyze them and, for example, to perform operations on the data with the knowledge of the form structure acquired from those form definitions.
+
+However, the format form definitions has evolved over time, in particular to follow changes to the data format (see [formats in use](/form-runner/data-format/form-data.md#formats-in-use)). This is because the form definition uses the *internal data format*. This means that retrieving a form definition with a newer version of Orbeon Forms can yield a form definition that is different from the format used in earlier versions. In particular, extra XML elements and `<xf:bind>` elements can be present.
+
+To alleviate this issue, a new URL parameter, `form-definition-format-version`, is provided. It applies for the `GET` method only, in the following cases:
+
+- To retrieve a *published form definition* (also include the `Orbeon-Form-Definition-Version` header to specify the form definition version):
+    ```
+    /fr/service/persistence/crud/$app/$form/form/form.xhtml
+    ```
+- To retrieve an *unpublished form definition* from the Form Builder data:
+    ```
+    /fr/service/persistence/crud/orbeon/builder/(data|draft)/$doc/data.xml
+    ```
   
+By default, without this parameter, a form definition is returned unchanged from the database.
+
+However, if `form-definition-format-version` is used, the form definition is partially migrated to match the specified destination data format:
+
+- `form-definition-format-version=4.0.0`: target the 4.0.0 data format
+- `form-definition-format-version=4.8.0`: target the 4.8.0 data format
+- `form-definition-format-version=2019.1.0`: target the 2019.1.0 data format
+
+The internal data format version associated with form definition retrieved is determined as follows:
+
+- If the form definition includes `updated-with-version` or `created-with-version` metadata, that information is used to infer the data format associated with the given Orbeon Forms version.
+- Else the form definition was last updated with a version older than Orbeon Forms 2018.2, and the data format version associated with the form definition is assumed to be 4.8.0.
+
+__WARNING: This means that this feature does not currently work to migrate a form definition published with a version older than Orbeon Forms 4.8.0, if the definition has not been republished or upgraded with a newer version of Orbeon Forms. Or rather, the migration might fail in unexpected ways.__ 
+
+More specifically, the form definition read from the database is transformed as follows to adjust to match the specified data format:
+
+- inline instance data, under `fr-form-instance`
+- repeat templates (`-template` instances)
+- binds and controls hierarchy
+
+Other aspects of the form definition, including names of form controls and various attributes, are left unchanged.
+
+For example, if the form definition has been published with Orbeon Forms 2020.1, instance data might look like this:
+
+```xml
+<xf:instance id="fr-form-instance">
+    <form fr:data-format-version="2019.1.0">
+        <text-controls>
+            <grid-1>
+                <input>Alice</input>
+                <textarea>Lorem ipsum...</textarea>
+            </grid-1>
+        </text-controls>
+        ...
+    </form>
+</xf:instance>
+```
+
+Data migrated to the 4.8.0 format will look like the following, since elements representing non-repeated grids are missing:
+
+```xml
+<xf:instance id="fr-form-instance">
+    <form fr:data-format-version="4.8.0">
+        <text-controls>
+            <input>Alice</input>
+            <textarea>Lorem ipsum...</textarea>
+        </text-controls>
+        ...
+    </form>
+</xf:instance>
+```
+
+*NOTE: The use of this feature should be rare.* 
 
 ## Examples using curl
 
