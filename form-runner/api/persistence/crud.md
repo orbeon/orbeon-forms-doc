@@ -77,9 +77,9 @@ the persistence layer returns a `400` "Bad Request" HTTP status code.
 
 Some Orbeon Forms integrators retrieve form definitions using the CRUD API to analyze them and, for example, to perform operations on the data with the knowledge of the form structure acquired from those form definitions.
 
-However, the format form definitions has evolved over time, in particular to follow changes to the data format (see [formats in use](/form-runner/data-format/form-data.md#formats-in-use)). This is because the form definition uses the *internal data format*. This means that retrieving a form definition with a newer version of Orbeon Forms can yield a form definition that is different from the format used in earlier versions. In particular, extra XML elements and `<xf:bind>` elements can be present.
+However, the format of Orbeon Forms form definitions has evolved over time, in particular to follow changes to the [data format](/form-runner/data-format/form-data.md). This is because a form definition follows the so-called *internal data format*. This means that retrieving a form definition with a newer version of Orbeon Forms can yield a form definition that is different from the format obtained in earlier versions. In particular, extra XML elements and `<xf:bind>` elements can be present.
 
-To alleviate this issue, a new URL parameter, `form-definition-format-version`, is provided. It applies for the `GET` method only, in the following cases:
+To alleviate this issue, a URL parameter, `form-definition-format-version`, is provided. It applies to the `GET` method only, in the following cases:
 
 - To retrieve a *published form definition* (also include the `Orbeon-Form-Definition-Version` header to specify the form definition version):
     ```
@@ -90,9 +90,7 @@ To alleviate this issue, a new URL parameter, `form-definition-format-version`, 
     /fr/service/persistence/crud/orbeon/builder/(data|draft)/$doc/data.xml
     ```
   
-By default, without this parameter, a form definition is returned unchanged from the database.
-
-However, if `form-definition-format-version` is used, the form definition is partially migrated to match the specified destination data format:
+By default, without this parameter, a form definition is returned unchanged from the database. But if `form-definition-format-version` is used, the form definition is partially migrated to match the specified destination data format:
 
 - `form-definition-format-version=4.0.0`: target the 4.0.0 data format
 - `form-definition-format-version=4.8.0`: target the 4.8.0 data format
@@ -103,7 +101,7 @@ The internal data format version associated with form definition retrieved is de
 - If the form definition includes `updated-with-version` or `created-with-version` metadata, that information is used to infer the data format associated with the given Orbeon Forms version.
 - Else the form definition was last updated with a version older than Orbeon Forms 2018.2, and the data format version associated with the form definition is assumed to be 4.8.0.
 
-__WARNING: This means that this feature does not currently work to migrate a form definition published with a version older than Orbeon Forms 4.8.0, if the definition has not been republished or upgraded with a newer version of Orbeon Forms. Or rather, the migration might fail in unexpected ways.__ 
+__WARNING: This means that this feature does not currently work to migrate a form definition published with a version older than Orbeon Forms 4.8.0, if the definition has not been republished or upgraded with Orbeon Forms 4.8.0 or newer. Or rather, the migration might fail in unexpected ways.__ 
 
 More specifically, the form definition read from the database is transformed as follows to adjust to match the specified data format:
 
@@ -142,6 +140,8 @@ Data migrated to the 4.8.0 format will look like the following, since elements r
     </form>
 </xf:instance>
 ```
+
+__WARNING: It is important that the form definition obtained this way be used only to infer form structure, and not to be stored again in the Form Runner database.__ 
 
 *NOTE: The use of this feature should be rare.* 
 
