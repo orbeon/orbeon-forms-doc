@@ -12,7 +12,7 @@ See [Scripting Actions](actions/scripting.md).
 
 ### The javascript: protocol
 
-[DEPRECATED as of Orbeon Forms 2016.1]
+[DEPRECATED SINCE Orbeon Forms 2016.1]
 
 In addition to `<xxf:script>` / `<xf:action>`, you can also use the `javascript:` protocol from the `<xf:load>` action to run scripts:
 

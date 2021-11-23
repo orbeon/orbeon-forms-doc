@@ -236,7 +236,7 @@ For more about placeholders, see [Use HTML5 placeholders, in XForms](https://blo
 
 ## Display hints inline
 
-[DEPRECATED since Orbeon Forms 2016.2]
+[DEPRECATED SINCE Orbeon Forms 2016.2]
 
 This property set whether the control hints are shown inline, rather than as tool-tips. The default is `true`.
 
