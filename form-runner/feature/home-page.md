@@ -104,27 +104,28 @@ Important notes:
 
 [SINCE Orbeon Forms 4.6]
 
-- __Upgrade local form definitions:__ upgrade the selected form definitions, including using the latest published section templates.
+- __Upgrade local form definitions:__ upgrade the selected published form definitions, including using published section templates.
  
 Specifically, this operation, for each selected form definition:
 
 1. Reads the latest version (or selected version [SINCE Orbeon Forms 2020.1]) of the published form definition, whether it is available or unavailable.
-1. Loads the latest versions of the published section templates that might be associated with that form definition.
-    - TODO: this needs fixing, see #3885
+1. Loads published section templates used by the form definition if needed:
+    - With 2020.1 and earlier: loads the *latest* versions of the published section templates that are associated with that form definition.
+    - With 2021.1 and newer: loads the *specific versions* of the published section templates that are associated with that form definition.
 1. Upgrades the form definition markup to the latest format, as if loading it in Form Builder and saving it again.
 1. Includes the latest section templates loaded above into the form definition.
-1. Saves back the form definition, either as a new version or as the same version (see below for details).
+1. Publishes back the form definition, either as a new version or as the same version (see below for details).
+
+In general, it is not required to run this function even after upgrading to a new version of Orbeon Forms, since form definitions are backward compatible. However, this function is useful after republishing a library form with section templates with minor changes so that the changes are visible in existing published form definitions.
 
 #### Upgrading with section templates and versioning
 
 Important notes when [form definition versioning](https://blog.orbeon.com/2014/02/form-versioning.html) is used:
 
 - From Orbeon Forms 4.6 (included) to 2016.1 (excluded): a *new* form definition version is created when the form definition is upgraded.
-- From Orbeon Forms 2016.1 (included): the upgraded form definition *overrides* the previously-published form definition. 
+- From Orbeon Forms 2016.1 (included): the upgraded form definition *overrides* the previously-published form definition (which means that it has the same application name, form name, and form definition version). 
 
-When form definition versioning is used section templates are in use, you have to be very careful because the format of the data covered by section templates might have changed and might make the upgraded form incompatible with existing data. See also [Publishing](/form-builder/publishing.md#versioning).
-
-We advise that you only republish form definitions which use both form definition versioning and section templates if you know that the format of the data covered by the section templates remains compatible.
+We advise that you only republish form definitions which use section templates if you know that the format of the data covered by the section templates remains compatible, or that [Simple Data Migration](/form-runner/feature/versioning.md#simple-data-migration) is enabled and expected to cover changes such as adding fields.
 
 #### Upgrading section templates
 
