@@ -95,6 +95,27 @@ The session heartbeat should help prevent many occurrences of "session expired" 
 
 ## Browser navigation (back and forward) handling
 
+[DEPRECATED SINCE Orbeon Forms 2021.1]
+
+### Deprecation
+
+The way web browsers should handle history, in particular "back" and "forward", is subject to interpretation. However, one consistent such interpretation is that going "back" or "forward" in the browser history should take the user to something as close as possible as what the user saw last, whether for web "pages" or web "apps".
+
+As of late 2021, the way web browsers handle history confirms this interpretation. In particular, the so-called ["bfcache"](https://web.dev/bfcache/) helps restore the state of pages and applications as they were last seen by the user.  
+
+One of the purpose of the `xxf:revisit-handling="reload"` setting described below was to prevent the possibility that a user could navigate back, see again data that was entered into a form, and resubmit it. Forcing a reload of the page upon browser back alleviated that issue, as the form would then be cleared. However, this also goes against the more accepted philosophy of navigation in history described above.
+
+Since Orbeon Forms 2020.1, we recommend instead using workflow features to help with this. The idea is as follows: when saving or submitting form data:
+
+1. Set the workflow stage to a value such as `saved` or `submitted`.
+2. In the form definition, set the global "Read-only" formula to mark the form as read only when it is in `saved` or `submitted` stage.
+ 
+This means that even if the user navigate to a confirmation page upon submission, and then navigate back to the form, the form will be shown (and if necessary restored) in a readonly mode. This achieves the intent without breaking the philosophy of navigation.
+
+See [workflow features](/release-notes/orbeon-forms-2020.1.md#workflow) from the Orbeon Forms 2020.1 release notes for more details.
+
+### How it works
+
 When visiting an XForms page by using your browser's Back and Forward buttons, or other browser-history mechanisms, Orbeon Forms by default restores the appearance of that page as it was when you left it. (Browsers don't automatically handle this behavior with Ajax applications!) This behavior best matches the usual user experience obtained when navigating regular web pages.
 
 In certain situations, it can be useful instead to ask the XForms page to reload entirely. You control this by using the `xxf:revisit-handling` attribute on the first XForms model of the page you want to reload. This attribute supports two values: `restore` (the default) and `reload`. Example:
