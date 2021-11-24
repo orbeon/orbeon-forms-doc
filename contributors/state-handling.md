@@ -105,12 +105,12 @@ As of late 2021, the way web browsers handle history confirms this interpretatio
 
 One of the purpose of the `xxf:revisit-handling="reload"` setting described below was to prevent the possibility that a user could navigate back, see again data that was entered into a form, and resubmit it. Forcing a reload of the page upon browser back alleviated that issue, as the form would then be cleared. However, this also goes against the more accepted philosophy of navigation in history described above.
 
-Since Orbeon Forms 2020.1, we recommend instead using workflow features to help with this. The idea is as follows: when saving or submitting form data:
+Since Orbeon Forms 2020.1, we recommend instead using workflow features to help with this. When saving or submitting form data:
 
 1. Set the workflow stage to a value such as `saved` or `submitted`.
 2. In the form definition, set the global "Read-only" formula to mark the form as read only when it is in `saved` or `submitted` stage.
  
-This means that even if the user navigate to a confirmation page upon submission, and then navigate back to the form, the form will be shown (and if necessary restored) in a readonly mode. This achieves the intent without breaking the philosophy of navigation.
+This means that even if the user navigate to a confirmation page upon submission, and then navigates back to the form, the form will be shown (and if necessary restored) in a readonly mode. This achieves the intent without breaking the philosophy of navigation.
 
 See [workflow features](/release-notes/orbeon-forms-2020.1.md#workflow) from the Orbeon Forms 2020.1 release notes for more details.
 
