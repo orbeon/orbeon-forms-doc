@@ -104,28 +104,22 @@ Important notes:
 
 [SINCE Orbeon Forms 4.6]
 
-- __Upgrade local form definitions:__ upgrade the selected published form definitions, including using published section templates.
+- __Upgrade local form definitions:__ upgrade the selected local published form definitions, including using published section templates.
+- __Upgrade remote form definitions:__ upgrade the selected remote published form definitions, including using published section templates.
  
-Specifically, this operation, for each selected form definition:
+This operation, for each selected form definition:
 
-1. Reads the latest version (or selected version [SINCE Orbeon Forms 2020.1]) of the published form definition, whether it is available or unavailable.
-1. Loads published section templates used by the form definition if needed:
+1. Reads the latest version (or the selected version [SINCE Orbeon Forms 2020.1]) of the published form definition, whether it is marked available or unavailable.
+2. Loads published section templates used by the form definition if needed:
     - With 2020.1 and earlier: loads the *latest* versions of the published section templates that are associated with that form definition.
     - With 2021.1 and newer: loads the *specific versions* of the published section templates that are associated with that form definition.
-1. Upgrades the form definition markup to the latest format, as if loading it in Form Builder and saving it again.
-1. Includes the latest section templates loaded above into the form definition.
-1. Publishes back the form definition, either as a new version or as the same version (see below for details).
+3. Upgrades the form definition markup to the latest format, as if loading it in Form Builder and saving it again.
+4. Includes the latest section templates loaded above into the form definition.
+5. Publishes back the form definition, either as a new version or as the same version:
+    - From Orbeon Forms 4.6 (included) to 2016.1 (excluded): a *new* form definition version is created when the form definition is upgraded.
+    - From Orbeon Forms 2016.1 (included): the upgraded form definition *overrides* the previously-published form definition (which means that it has the same application name, form name, and form definition version). 
 
-In general, it is not required to run this function even after upgrading to a new version of Orbeon Forms, since form definitions are backward compatible. However, this function is useful after republishing a library form with section templates with minor changes so that the changes are visible in existing published form definitions.
-
-#### Upgrading with section templates and versioning
-
-Important notes when [form definition versioning](https://blog.orbeon.com/2014/02/form-versioning.html) is used:
-
-- From Orbeon Forms 4.6 (included) to 2016.1 (excluded): a *new* form definition version is created when the form definition is upgraded.
-- From Orbeon Forms 2016.1 (included): the upgraded form definition *overrides* the previously-published form definition (which means that it has the same application name, form name, and form definition version). 
-
-We advise that you only republish form definitions which use section templates if you know that the format of the data covered by the section templates remains compatible, or that [Simple Data Migration](/form-runner/feature/versioning.md#simple-data-migration) is enabled and expected to cover changes such as adding fields.
+In general, it is not required to run this function even after upgrading to a new version of Orbeon Forms, since form definitions are backward compatible.
 
 #### Upgrading section templates
 
@@ -134,6 +128,8 @@ Here is how you can use this operation to update your form definitions' section 
 1. Publish your section templates from Form Builder (see [Section templates](/form-builder/section-templates.md)). 
 2. In the Home page, select which forms you want to update.
 3. Run the "Upgrade local form definitions" action.
+
+We advise that you only republish form definitions which use section templates if you know that the format of the data covered by the section templates remains compatible, or that [Simple Data Migration](/form-runner/feature/versioning.md#simple-data-migration) is enabled and expected to cover changes such as adding fields.
 
 ### Remote server operations
 
