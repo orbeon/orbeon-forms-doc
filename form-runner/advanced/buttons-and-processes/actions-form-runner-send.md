@@ -231,6 +231,7 @@ The full URL is composed of:
     - `noscript`: whether the noscript mode was in use [SINCE Orbeon Forms 4.6]
         - *NOTE: Starting with Orbeon Forms 2018.1, this always returns `false`.*
     - `process`: unique process id for the currently running process [SINCE Orbeon Forms 4.7]
+    - `workflow-stage`: the current workflow stage associated with the data, as returned by the [`fr:workflow-stage-value()`](/xforms/xpath/extension-form-runner.md#fr-workflow-stage-value) function [SINCE Orbeon Forms 2021.1]
 
 Example:
 
