@@ -285,6 +285,20 @@ These processes are entirely configurable. See [Buttons and Processes](../form-r
 
 Optionally, it is possible to annotate the XML data submitted with error, warning or informational messages. See [Buttons and Processes](../form-runner/advanced/buttons-and-processes/README.md) for more information.
 
+## Using an external validation service
+
+You can validate a field using an external validation service as follows:
+
+1. In your form, you'll want to have:
+    - (a) the field you want to validate,
+    - (b) a [hidden field](../form-runner/component/hidden.md) used to store the result from the validation.
+2. You create (c) an HTTP Service for your validation service
+3. You create an action, which, when the value of the field you want to validate (a) changes, calls the service
+   (c), passing the value of the field (a), and stores the result from the validation in the hidden field (b). That 
+   result is typically be a boolean, `true` if valid, and `false` if invalid.
+4. In the Control Settings for the field you want to validate (a), in the Validations and Alerts tab, you use a 
+   formula to declare that the field is valid only of the value of the hidden field (b) is `true`.
+
 ## See also
 
 - [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
