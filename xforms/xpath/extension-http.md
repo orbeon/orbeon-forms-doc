@@ -37,7 +37,7 @@ The `xxf:get-request-attribute()` function returns the value of the given reques
 
 The types of attribute objects supported are the same types supported by the Scope generator, plus types stored with `xxf:set-request-attribute()`.
 
-If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is return as an `xs:string` instead of being parsed as XML.
+If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is returned as an `xs:string` instead of being parsed as XML.
 
 ```xml
 <!-- Get the "document" attribute and use it to replace instance "my-instance" -->
@@ -45,9 +45,6 @@ If present, the second parameter can specify the `text/plain` content type. In t
   ref="instance('my-instance')"
   origin="xxf:get-request-attribute('document')"/>
 ```
-
-_NOTE: This function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
-
 
 ## xxf:get-request-header()
 
@@ -84,8 +81,6 @@ The `xxf:get-request-header()` function returns the value(s) of the given reques
 
 This function can be used even after page initialization, and can be used everywhere other XPath functions are supported.
 
-_NOTE: With Orbeon Forms 3.8 and 3.9, this function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
-
 ## xxf:get-request-method()
 
 [SINCE Orbeon Forms 4.2]
@@ -116,8 +111,6 @@ The `xxf:get-request-parameter()` function returns the value(s) of the given req
 ```
 
 This function can be used even after page initialization, and can be used everywhere other XPath functions are supported.
-
-_NOTE: With Orbeon Forms 3.8 and 3.9, this function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
 
 _NOTE: By default, most if not all servlet containers do not use the UTF-8 encoding but use ISO-8859-1 instead to decode__ URL parameters__. You can configure your servlet container to support UTF-8 instead. See the following resources:_
 
@@ -153,8 +146,6 @@ The `xxf:get-request-path()` function returns the path of the incoming HTTP requ
 
 This function can be used even after page initialization, and can be used everywhere other XPath functions are supported.
 
-_NOTE: With Orbeon Forms 3.8 and 3.9, this function can only be called during page initialization, otherwise it will throw an error. We recommend you use it only within event handlers called as a result of processing `xforms-model-construct-done` or `xforms-ready`, or from the `xxf:default` MIP._
-
 ## xxf:get-session-attribute()
 
 ```xpath
@@ -168,7 +159,7 @@ The `xxf:get-session-attribute()` function returns the value of the given sessio
 
 The types of attribute objects supported are the same types supported by the Scope generator, plus types stored with `xxf:set-session-attribute()`.
 
-If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is return as an `xs:string` instead of being parsed as XML.
+If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is returned as an `xs:string` instead of being parsed as XML.
 
 ```xml
 <!-- Get the "document" attribute and use it to replace instance "my-instance" -->
