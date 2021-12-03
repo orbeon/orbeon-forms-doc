@@ -63,6 +63,23 @@ fr:control-string-value(
 This function returns the value of a Form Runner control by name as a string, or an empty sequence if the control or
 value is not found.
 
+[SINCE Orbeon Forms 2021.1]
+
+```xpath
+fr:control-string-value(
+    $control-name   as xs:string,
+    $follow-indexes as xs:boolean = false(),
+    $library-name   as xs:string
+) as xs:string?
+```
+
+- `$library-name`
+    - specifies the name of a library identifying one or more section template instances included in the form
+    - the search is limited to searching within those section template instances
+    - this is supported whether the function is called
+        - at the top-level of the form
+        - or within the any section template instance 
+
 ### fr:control-typed-value()
 
 [SINCE Orbeon Forms 2018.1]
@@ -95,6 +112,23 @@ Like `fr:control-string-value()` (see above), but it returns:
 For indexes in the array where it is not possible to return a typed value, the empty sequence is returned instead.
 
 *NOTE: The reason this returns an XPath array and not an XPath sequence is that this lets the caller know which values are the empty sequence. This wouldn't be possible with an XPath sequence.* 
+
+[SINCE Orbeon Forms 2021.1]
+
+```xpath
+fr:control-typed-value(
+    $control-name   as xs:string,
+    $follow-indexes as xs:boolean = false(),
+    $library-name   as xs:string
+) as array(xs:anyAtomicType)
+```
+
+- `$library-name`
+    - specifies the name of a library identifying one or more section template instances included in the form
+    - the search is limited to searching within those section template instances
+    - this is supported whether the function is called
+        - at the top-level of the form
+        - or within the any section template instance
 
 ### fr:created-dateTime()
 
