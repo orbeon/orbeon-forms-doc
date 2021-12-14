@@ -92,24 +92,57 @@ Like for services, once your action is defined, the Save buttons saves it to the
 
 ## Handling the service request
 
+### User interface
+
 Each row instructs the action to take a value and pass it to the service, and you can add as many such rows as needed using the "+" button, and remove existing entries with the dropdown menu.
 
 ![Actions Editor Service Request Actions](images/actions-request.png)
 
-- The value can come from either:
-    - A control value, which you select in the dropdown. If the control is repeated, because it occurs in a repeated grid or repeated section, then the value of the first "instance" of that control is used and passed to the service.
-    - [SINCE Orbeon Forms 2021.1] Selecting "Formula" in the first column's dropdown, and entering your formula in the text field showing the second column.
-- How the value is provided to the service:
-    - With HTTP services doing a POST – You provide a formula, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
-    - With HTTP services doing a GET or DELETE – The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters)  when using the `GET` and `DELETE` HTTP methods. In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, as in the example below. The Actions Editor doesn't yet support specifying URL parameters directly by name; instead, you need to enter a formula under "Set Service Request Values", like `//userId` or `//userName`.
+### How a value is provided to the service
 
-        ```xml
-        <params>
-            <userId>1</userId>
-            <userName>test</userName>
-        </params>
-        ```
-    - With Database services – To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
+- With HTTP services doing a POST:
+    -You provide a formula, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
+- With HTTP services doing a GET or DELETE:
+    - The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters) when using the `GET` and `DELETE` HTTP methods.
+    - In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, as in the example below. The Actions Editor doesn't yet support specifying URL parameters directly by name; instead, you need to enter a formula under "Set Service Request Values", like `//userId` or `//userName`.
+
+    ```xml
+    <params>
+        <userId>1</userId>
+        <userName>test</userName>
+    </params>
+    ```
+- With Database services:
+    - To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
+
+### Passing a control value
+
+Select "Control Value" in the first dropdown.
+
+Parameters:
+
+- __Control__:
+    - Specifies the control whose value must be used.
+    - A single "closest" control will be selected:
+        - If the control is not within a repeated grid or section, then that unique control is updated.
+        - Otherwise, the control which is the closest by following repetitions and repeat indexes is chosen.
+- __Destination XPath Expression__:
+    - The expression is evaluated in the context of root element of the XML request data to send to the service.
+    - The expression must point to an element or attribute node of the request body. If multiple nodes are returned, only the first one is considered.
+
+### Passing a value from a formula
+
+[SINCE Orbeon Forms 2021.1]
+
+Select "Formula" in the first dropdown.
+
+Parameters:
+
+- __Formula__:
+    - The given formula is evaluated and converted to a string.
+- __Destination XPath Expression__:
+    - The expression is evaluated in the context of root element of the XML request data to send to the service.
+    - The expression must point to an element or attribute node of the request body. If multiple nodes are returned, only the first one is considered.
 
 ## Handling the service response
 
@@ -130,12 +163,12 @@ As a result of running an action, you can set a form control's value from data r
 
 Parameters:
 
-- __Destination Control.__
+- __Destination Control:__
     - Specifies the control whose value must be set.
-    - A single "closest" control will be selected.
-        - If the destination selection control is not within a repeated grid or section, then the single destination control is updated.
-        - Otherwise the control which is the closest by following repeat iterations and repeat indexes is chosen.
-- __Source XPath Expression.__
+    - A single "closest" control will be selected:
+        - If the destination control is not within a repeated grid or section, then that unique control is updated.
+        - Otherwise, the control which is the closest by following repetitions and repeat indexes is chosen.
+- __Source XPath Expression:__
     - The expression is evaluated in the context of root element of the XML data returned by the service.
     - The expression can point to an element or attribute node of the response body, but can also be a more complex expression. Its result is converted to a string.
 
@@ -177,8 +210,8 @@ In the presence of repeated grids or sections, the destination selection control
 The way this works is that the "closest" controls are searched. This means:
 
 - If the destination selection control is not within a repeated grid or section, then the single destination control is updated.
-- If the source of the action is *within the same repeated iteration* as the destination selection control, then that single destination control is updated. Occurrences of the selection control on other repeat iterations are not updated.
-- If the source of the action is at a higher level compared to the destination selection control, then all iterations of the selection control are updated, and subsequent new iterations added will also use the new itemset.
+- If the source of the action is *within the same repeated iteration* as the destination selection control, then that single destination control is updated. Occurrences of the selection control on other repeat repetitions are not updated.
+- If the source of the action is at a higher level compared to the destination selection control, then all repetitions of the selection control are updated, and subsequent new repetitions added will also use the new itemset.
 
 #### Behavior up to Orbeon Forms 4.10 included
 
