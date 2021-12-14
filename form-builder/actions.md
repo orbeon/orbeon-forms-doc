@@ -101,7 +101,7 @@ Each row instructs the action to take a value and pass it to the service, and yo
 ### How a value is provided to the service
 
 - With HTTP services doing a POST:
-    -You provide a formula, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
+    - You provide a formula, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
 - With HTTP services doing a GET or DELETE:
     - The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters) when using the `GET` and `DELETE` HTTP methods.
     - In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, as in the example below. The Actions Editor doesn't yet support specifying URL parameters directly by name; instead, you need to enter a formula under "Set Service Request Values", like `//userId` or `//userName`.
