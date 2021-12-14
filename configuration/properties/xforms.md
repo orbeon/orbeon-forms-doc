@@ -583,8 +583,9 @@ The following masks are supported:
     - `[H]:[m]:[s]` e.g. 14:05:12
     - `[H]:[m]` e.g. 14:05 (without seconds)
 
-An `<xf:input>` bound to a node of type `xs:dateTime` is shown as two text fields: one for the date and one for the time. In that case, the date text field
-uses the formatting defined by `oxf.xforms.format.input.date` and the time text field uses the formatting defined by `oxf.xforms.format.input.time`.
+An `<xf:input>` bound to a node of type `xs:dateTime` is shown as two text fields: one for the date and one for the time. In that case, the date text field uses the formatting defined by `oxf.xforms.format.input.date` and the time text field uses the formatting defined by `oxf.xforms.format.input.time`.
+
+The format is set as follows by default, which covers, in particular, US date and time formats:
 
 ```xml
 <property 
@@ -595,6 +596,19 @@ uses the formatting defined by `oxf.xforms.format.input.date` and the time text 
     as="xs:string"
     name="oxf.xforms.format.input.time"
     value="[h]:[m]:[s] [P]"/>
+```
+
+To change to a European style days-first format for the date and a 24-hour time, you can set the following:
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.xforms.format.input.date"
+    value="[D]/[M]/[Y]"/>
+<property
+    as="xs:string"
+    name="oxf.xforms.format.input.time"
+    value="[H]:[m]:[s]"/>
 ```
 
 ##  Error handling
