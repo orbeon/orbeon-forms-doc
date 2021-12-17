@@ -4,12 +4,10 @@ __Friday, December 17, 2021__
 
 Today we released Orbeon Forms 2018.1.4 PE. This update contains security updates and bug-fixes and is recommended for all users of:
 
-xxx
-- [Orbeon Forms 2018.2.4 PE](orbeon-forms-2018.2.4.md)
-- [Orbeon Forms 2018.2.3 PE](https://blog.orbeon.com/2019/05/orbeon-forms-201823-pe.html)
-- [Orbeon Forms 2018.2.2 PE](https://blog.orbeon.com/2019/03/orbeon-forms-201822-pe.html)
-- [Orbeon Forms 2018.2.1 PE](https://blog.orbeon.com/2019/02/orbeon-forms-201821-pe.html)
-- [Orbeon Forms 2018.2 PE](https://blog.orbeon.com/2018/12/orbeon-forms-20182.html)
+- [Orbeon Forms 2018.1.3 PE](https://blog.orbeon.com/2018/11/orbeon-forms-201813-pe.html)
+- [Orbeon Forms 2018.1.2 PE](https://blog.orbeon.com/2018/10/orbeon-forms-201812-pe.html)
+- [Orbeon Forms 2018.1.1 PE and CE](https://blog.orbeon.com/2018/09/orbeon-forms-201811-pe-and-ce.html)
+- [Orbeon Forms 2018.1 PE](https://blog.orbeon.com/2018/09/orbeon-forms-20181.html)
 
 This release addresses the following issues since [Orbeon Forms 2018.2.3 PE](https://blog.orbeon.com/2019/05/orbeon-forms-201823-pe.html):
 
