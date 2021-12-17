@@ -37,6 +37,7 @@ This release addresses the following issues since [Orbeon Forms 2018.2.3 PE](htt
 - Email template with "All controls": attachment should show filename ([\#3947](https://github.com/orbeon/orbeon-forms/issues/3947))
 - Occasionally getting empty page ([\#3893](https://github.com/orbeon/orbeon-forms/issues/3893))
 - fr:section: setting `readonly="true"` still shows "Insert" action ([\#3846](https://github.com/orbeon/orbeon-forms/issues/3846))
+- Third-party library upgrades
 
 For more on the Log4j vulnerability issue, see our [blog post](https://blog.orbeon.com/2021/12/vulnerability-in-log4j-library.html).
 

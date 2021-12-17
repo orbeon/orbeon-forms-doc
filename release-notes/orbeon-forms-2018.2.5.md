@@ -19,7 +19,8 @@ This release addresses the following issues since [Orbeon Forms 2018.2.3 PE](htt
 - `javascript-lifecycle`'s `destroy()` is not called as expected ([\#4541](https://github.com/orbeon/orbeon-forms/issues/4541))
 - Deadlock in MySQL ([\#4706](https://github.com/orbeon/orbeon-forms/issues/4706))
 - Use DOM serialization directly ([\#4093](https://github.com/orbeon/orbeon-forms/issues/4093))
-
+- Third-party library upgrades
+ 
 For more on the Log4j vulnerability issue, see our [blog post](https://blog.orbeon.com/2021/12/vulnerability-in-log4j-library.html).
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  

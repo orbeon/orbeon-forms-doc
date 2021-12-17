@@ -20,6 +20,7 @@ This release addresses the following issues since [Orbeon Forms 2019.2.3 PE](orb
 - Error when publishing a form with attached files from Form Builder ([\#4765](https://github.com/orbeon/orbeon-forms/issues/4765))
 - Form without migrations doesn't set `fr:relevant` attributes ([\#4911](https://github.com/orbeon/orbeon-forms/issues/4911))
 - Upload field shown as empty at the end of an upload ([\#5035](https://github.com/orbeon/orbeon-forms/issues/5035))
+- Third-party library upgrades
 
 For more on the Log4j vulnerability issue, see our [blog post](https://blog.orbeon.com/2021/12/vulnerability-in-log4j-library.html).
 
