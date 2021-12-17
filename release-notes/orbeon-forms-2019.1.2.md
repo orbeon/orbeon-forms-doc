@@ -4,7 +4,7 @@ __Friday, December 17, 2021__
 
 Today we released Orbeon Forms 2019.1.2 PE. This update contains security updates and bug-fixes and is recommended for all users of:
 
-- [Orbeon Forms 2019.1 PE](orbeon-forms-2019.1.1.md)
+- [Orbeon Forms 2019.1.1 PE](orbeon-forms-2019.1.1.md)
 - [Orbeon Forms 2019.1 PE](orbeon-forms-2019.1.md)
 
 This release addresses the following issues since [Orbeon Forms 2019.1 PE](orbeon-forms-2019.1.md):
