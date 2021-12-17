@@ -299,6 +299,17 @@ fr:mode() as xs:string
 
 Return the Form Runner mode.
 
+### fr:is-draft()
+
+[SINCE Orbeon Forms 2020.1.6]
+
+```xpath
+fr:mode() as xs:boolean
+```
+
+Returns `true` if the user is currently editing a draft, `false` otherwise.
+
+
 ### fr:modified-dateTime()
 
 [SINCE Orbeon Forms 2016.3]
