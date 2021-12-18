@@ -26,6 +26,9 @@ This release addresses the following issues since [Orbeon Forms 2020.1.5 PE](orb
 - Don't log passwords when debug logging all properties ([\#5090](https://github.com/orbeon/orbeon-forms/issues/5090))
 - HTTP Service Editor misses request params column labels ([\#5093](https://github.com/orbeon/orbeon-forms/issues/5093))
 - Make `xforms.resources` cache non-disk-persistent ([\#5092](https://github.com/orbeon/orbeon-forms/issues/5092))
+- Form Runner function returning whether we are editing a draft ([\#5060](https://github.com/orbeon/orbeon-forms/issues/5060))
+- `fr:mode()` to return `edit` when editing autosaved data ([\#5066](https://github.com/orbeon/orbeon-forms/issues/5066))
+- New filter to log the body of incoming requests ([\#5098](https://github.com/orbeon/orbeon-forms/issues/5098))
 - Third-party library upgrades
 
 For more on the Log4j vulnerability issue, see our [blog post](https://blog.orbeon.com/2021/12/vulnerability-in-log4j-library.html).
