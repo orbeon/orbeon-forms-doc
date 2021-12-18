@@ -12,9 +12,12 @@ When investigating issues, you often need to look at what goes "over the wire", 
 
 ### On the server:
 
-* [XForms logging][7]
-* Request Dumper Filter; see below
-* On Tomcat, you can use the Request Dumper Valve; see below
+- [XForms logging][7]
+- [SINCE Orbeon Forms 2020.1.6]
+    - [Orbeon Forms `HttpLoggingFilter`](#orbeon-forms-httploggingfilter)
+- [UNTIL Orbeon Forms 2020.1.5]
+    - [Request Dumper Filter](#request-dumper-filter)
+    - [Tomcat Request Dumper Valve](#tomcat-request-dumper-valve)
 
 ### On the browser-side
 
@@ -32,6 +35,22 @@ Click Start, and since you only interested about HTTP (versus TCP) traffic, in _
 ![](../images/wireshark-filter.png)
 
 Next WireShark will show you all the HTTP traffic that goes through the machine it is running on, to the port you specified (here 8080).
+
+## Orbeon Forms `HttpLoggingFilter`
+
+To enable, add the following to your `web.xml`, before all the other filters.
+
+```xml
+<filter>
+    <filter-name>orbeon-http-logging-filter</filter-name>
+    <filter-class>org.orbeon.oxf.servlet.HttpLoggingFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>orbeon-http-logging-filter</filter-name>
+    <url-pattern>/xforms-server</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+</filter-mapping>
+```
 
 ## Request Dumper Filter
 
@@ -61,7 +80,7 @@ Note that the Request Dumper Filter only shows information about the HTTP header
 * Restart your application server (e.g. Tomcat).
 * On Tomcat, requests will be logged to the logs/localhost log file.
 
-## Request Dumper Valve
+## Tomcat Request Dumper Valve
 
 The Request Dumper Valve doesn't log the body of `POST`s, it can only be used on Tomcat, and we found its output to be less readable than what you get with the Request Dumper Filter. But if you still want to experiment with the Request Dumper Valve, add the following in server.xml inside <engine>:
 
