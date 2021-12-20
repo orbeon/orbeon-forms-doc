@@ -2,7 +2,11 @@
 
 __Monday, February 15, 2021__
 
-Today we released Orbeon Forms 2019.2.3 PE. This update to [Orbeon Forms 2019.2.2 PE](orbeon-forms-2019.2.2.md) contains bug-fixes and is recommended for all [Orbeon Forms 2019.2 PE](orbeon-forms-2019.2.md), [Orbeon Forms 2019.2.1 PE](orbeon-forms-2019.2.1.md), and [Orbeon Forms 2019.2.2 PE](orbeon-forms-2019.2.2.md) users.
+Today we released Orbeon Forms 2019.2.3 PE. This update contains bug-fixes and is recommended for all users of:
+
+- [Orbeon Forms 2019.2.2 PE](orbeon-forms-2019.2.2.md)
+- [Orbeon Forms 2019.2.1 PE](orbeon-forms-2019.2.1.md)
+- [Orbeon Forms 2019.2 PE](orbeon-forms-2019.2.md)
 
 This release addresses the following issues since [Orbeon Forms 2019.2.2 PE](orbeon-forms-2019.2.2.md):
 
