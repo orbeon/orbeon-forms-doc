@@ -2,7 +2,13 @@
 
 __Thursday, November 11, 2021__
 
-Today we released Orbeon Forms 2020.1.5 PE. This update contains bug-fixes and is recommended for all [Orbeon Forms 2020.1.4 PE](orbeon-forms-2020.1.4.md), [Orbeon Forms 2020.1.3 PE](orbeon-forms-2020.1.3.md), [Orbeon Forms 2020.1.2 PE](orbeon-forms-2020.1.2.md), [Orbeon Forms 2020.1.1 PE](orbeon-forms-2020.1.1.md) and [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md) users.
+Today we released Orbeon Forms 2020.1.5 PE. This update contains bug-fixes and is recommended for all users of:
+
+- [Orbeon Forms 2020.1.4 PE](orbeon-forms-2020.1.4.md)
+- [Orbeon Forms 2020.1.3 PE](orbeon-forms-2020.1.3.md)
+- [Orbeon Forms 2020.1.2 PE](orbeon-forms-2020.1.2.md)
+- [Orbeon Forms 2020.1.1 PE](orbeon-forms-2020.1.1.md) 
+- [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md)
 
 This release addresses the following issues since [Orbeon Forms 2020.1.4 PE](orbeon-forms-2020.1.4.md):
 

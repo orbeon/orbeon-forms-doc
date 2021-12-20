@@ -2,7 +2,9 @@
 
 __Monday, February 1, 2021__
 
-Today we released Orbeon Forms 2020.1.1 PE. This update to [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md) contains bug-fixes and is recommended for all [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md) users.
+Today we released Orbeon Forms 2020.1.1 PE. This update contains bug-fixes and is recommended for all users of:
+
+- [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md)
 
 This release addresses the following issues since [Orbeon Forms 2020.1 PE](orbeon-forms-2020.1.md):
 
