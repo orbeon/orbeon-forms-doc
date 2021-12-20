@@ -178,7 +178,7 @@ The "Autocomplete" control is deprecated. See "Improved selection dropdowns" abo
 Support for the [eXist](https://exist-db.org/) database is deprecated. We recommend using an external [relational database](/form-runner/persistence/relational-db.md) instead. This means that:
 
 - We don't recommend using eXist for production.
-- We don't plan for ad new features that target eXist.
+- We don't plan to add new features that target eXist.
 - As of Orbeon Forms 2019.1, eXist is still used for demo forms.
 
 ### Internal data format
