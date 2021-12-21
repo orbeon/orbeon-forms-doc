@@ -33,6 +33,8 @@ This release addresses the following issues since [Orbeon Forms 2020.1.5 PE](orb
 
 For more on the Log4j vulnerability issue, see our [blog post](https://blog.orbeon.com/2021/12/vulnerability-in-log4j-library.html).
 
+__UPDATE: On Monday, December 20, 2021, we replaced 2020.1.6 with 2020.1.6.1 to address a regression introduced with the fix for #5066.__
+
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
