@@ -102,10 +102,23 @@ This property is used to create a private key used for encryption. It is recomme
   value="CHANGE THIS PASSWORD"/>
 ```
 
-Orbeon forms uses encryption in a few cases, including:
+As of Orbeon Forms 2021.1, this property is used for:
 
-- to send confidential XForms events to the browser
-- for the client state mode of the XForms engine (which is not the default)
+- [field-level encryption](/form-builder/field-level-encryption.md)
+- [encrypting the Orbeon Forms version](/configuration/advanced/javascript-css-assets.md#oxf.xforms.resources.encode-version) for cached assets URLs if `oxf.xforms.resources.encode-version` is `true`
+- [encrypting upload events](https://github.com/orbeon/orbeon-forms/issues/4624)
+- [creating hashes for the `metadata` format](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md#sending-form-metadata)
+- hashing internal upload URLs to prevent against tampering
+- encrypting form data for the ["Test PDF" feature](/form-builder/pdf-test.md) 
+    - SINCE Orbeon Forms 2021.1 
+- the [XForms `hmac()` function](https://www.w3.org/TR/xforms11/#fn-hmac)
+
+<!-- `annotateWithHashes` ? -->
+
+The following uses are considered legacy and not in use by default in Orbeon Forms anymore:
+
+- encrypting the `$instance` URL parameter
+- encrypting form static/dynamic state with client state handling
 
 _NOTE: If the backwards compatibility property `oxf.xforms.password` is defined, then it is used first._
 
