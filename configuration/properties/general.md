@@ -104,21 +104,19 @@ This property is used to create a private key used for encryption. It is recomme
 
 As of Orbeon Forms 2021.1, this property is used for:
 
-- [field-level encryption](/form-builder/field-level-encryption.md)
-- [encrypting the Orbeon Forms version](/configuration/advanced/javascript-css-assets.md#oxf.xforms.resources.encode-version) for cached assets URLs if `oxf.xforms.resources.encode-version` is `true`
-- [encrypting upload events](https://github.com/orbeon/orbeon-forms/issues/4624)
-- [creating hashes for the `metadata` format](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md#sending-form-metadata)
-- hashing internal upload URLs to prevent against tampering
-- encrypting form data for the ["Test PDF" feature](/form-builder/pdf-test.md) 
+- [Field-level encryption](/form-builder/field-level-encryption.md)
+- [Orbeon Forms version encryption](/configuration/advanced/javascript-css-assets.md#oxf.xforms.resources.encode-version) for cached assets URLs if `oxf.xforms.resources.encode-version` is `true`
+- [Upload events encryption](https://github.com/orbeon/orbeon-forms/issues/4624)
+- [Hashes for the `metadata` format](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md#sending-form-metadata)
+- Hashing internal upload URLs to prevent against tampering
+- Form data encryption for the ["Test PDF"](/form-builder/pdf-test.md) feature 
     - SINCE Orbeon Forms 2021.1 
-- the [XForms `hmac()` function](https://www.w3.org/TR/xforms11/#fn-hmac)
-
-<!-- `annotateWithHashes` ? -->
+- The [XForms `hmac()` function](https://www.w3.org/TR/xforms11/#fn-hmac)
 
 The following uses are considered legacy and not in use by default in Orbeon Forms anymore:
 
-- encrypting the `$instance` URL parameter
-- encrypting form static/dynamic state with client state handling
+- The `$instance` URL parameter encryption
+- Form static/dynamic state with client state handling encryption
 
 _NOTE: If the backwards compatibility property `oxf.xforms.password` is defined, then it is used first._
 
