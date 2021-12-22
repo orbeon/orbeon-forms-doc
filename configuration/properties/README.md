@@ -2,7 +2,7 @@
 
 ## Overview
 
-Orbeon Forms is configured via _configuration properties_. They are usually setup in a file called `properties-local.xml` and stored in the Orbeon Forms WAR file as:
+Orbeon Forms is configured via _configuration properties_. They are setup in a file called `properties-local.xml` and stored in the Orbeon Forms WAR file as:
 
 ```
 WEB-INF/resources/config/properties-local.xml
@@ -25,6 +25,10 @@ If that file doesn't exist yet in your installation of Orbeon Forms, you can cre
 </properties>
 ```
 
+## Properties you should configure
+
+You should set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
+
 ## Documentation for specific properties
 
 Each Orbeon Forms subsystem defines its own properties. They are documented in the following pages:
@@ -42,7 +46,7 @@ Each Orbeon Forms subsystem defines its own properties. They are documented in t
 
 ## What's in a property
 
- A property is made of:
+A property is made of:
 
 - a _type_, such as `xs:boolean`
 - a _name_, such as `oxf.resources.versioned`
