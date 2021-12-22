@@ -80,6 +80,12 @@ The benefit of this approach is that you don't have to find where the WAR file i
 
 _NOTE:  Orbeon Forms uses Java's `System.getProperty("user.home")` to identify the user's home directory.__  This corresponds to the user running the servlet container and not necessarily to the user of the developer or system administrator._
 
+## Configuration properties
+
+You should at least create a default `properties-local.xml` file. See [Properties](/configuration/properties/README.md).
+
+In addition, you should set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
+
 ## Base URL for internal services
 
 This step is sometimes optional.
@@ -97,17 +103,9 @@ Often, it is enough to set it to the following (adjusting for port and prefix):
 
 For more information about how to set configuration properties, see [Configuration Properties](../configuration/properties/README.md).
 
-## Configuration properties
-
-You should at least create a default `properties-local.xml` file. See [Properties](/configuration/properties.md).
-
-In addition, you should set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
-
 ## Logging configuration
 
-This step is optional.
-
-See [Logging](logging.md).
+This step is optional. See [Logging](logging.md).
 
 ## Specific steps for your container / app server
 
