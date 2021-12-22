@@ -105,7 +105,8 @@ This property is used to create a private key used for encryption. It is recomme
 As of Orbeon Forms 2021.1, this property is used for:
 
 - [Field-level encryption](/form-builder/field-level-encryption.md)
-- [Orbeon Forms version encryption](/configuration/advanced/javascript-css-assets.md#oxf.xforms.resources.encode-version) for cached assets URLs if `oxf.xforms.resources.encode-version` is `true`
+- [Orbeon Forms version encryption](/configuration/advanced/javascript-css-assets.md#oxf.xforms.resources.encode-version) for cached assets URLs
+    - if `oxf.xforms.resources.encode-version` is `true`, which is the default
 - [Upload events encryption](https://github.com/orbeon/orbeon-forms/issues/4624)
 - [Hashes for the `metadata` format](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md#sending-form-metadata)
 - Hashing internal upload URLs to prevent against tampering
