@@ -97,6 +97,12 @@ Often, it is enough to set it to the following (adjusting for port and prefix):
 
 For more information about how to set configuration properties, see [Configuration Properties](../configuration/properties/README.md).
 
+## Configuration properties
+
+You should at least create a default `properties-local.xml` file. See [Properties](/configuration/properties.md).
+
+In addition, you should set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
+
 ## Logging configuration
 
 This step is optional.
