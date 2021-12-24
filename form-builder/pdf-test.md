@@ -13,24 +13,37 @@ There are two ways to access the "Test PDF" function:
 
 ![The "Test" menu](images/test-pdf-button.png)
 
-In either case, selecting "Test PDF" shows the following dialog:
+When accessed directly, "Test PDF" shows the following dialog:
 
-![The "Test PDF Production" dialog](images/test-pdf-show-dynamic.png)
+![The "Test PDF Production" dialog](images/test-pdf-no-data.png)
+
+When accessed from the "Test Form" window, "Test PDF" shows the following dialog:
+
+![The "Test PDF Production" dialog](images/test-pdf-use-data.png)
 
 You have access to the following options: 
 
-- "Disable the evaluation of "Initial Values" formulas": when selected, all "Initial Value" formulas are disabled, as if they were not present.
-- "Disable the evaluation of "Calculated Values" formulas": when selected, all "Calculated Value" formulas are disabled, as if they were not present.
-- "Show controls, grids, and sections with dynamic visibility": when selected, all controls, grids, and sections that can be dynamically shown are shown. This means that those with visibility "Yes" or "Formula" are always shown. Controls with visibility "No" remain not visible.
+- Use entered form data
+  - This option only shows when accessed from the "Test Form" window.
+  - When selected, any data currently entered in the form will be used to produce the PDF.
+- "Disable the evaluation of "Initial Values" formulas"
+  - If "Use entered form data" is selected, this option is disabled as the form data takes precedence.
+  - When selected, all "Initial Value" formulas are disabled, as if they were not present.
+- "Disable the evaluation of "Initial Values" formulas"
+  - When selected, all "Initial Value" formulas are disabled, as if they were not present.
+- "Disable the evaluation of "Calculated Values" formulas"
+  - When selected, all "Calculated Value" formulas are disabled, as if they were not present.
+- "Show controls, grids, and sections with dynamic visibility"
+  - When selected, all controls, grids, and sections that can be dynamically shown are shown.
+  - This means that those with visibility "Yes" or "Formula" are always shown. Controls with visibility "No" remain not visible.
+  - Use cases include:
+    - Verifying that every control, grid, or section that can appear in the PDF appears correctly.
+    - Exporting the PDF file for printing and manual filling.
+- "Use PDF template"
+  - This only shows if the form has attached PDF templates.
+  - See below for details.
 
-Use cases for enabling the last option include:
-
-- Verifying that every control, grid, or section that can appear in the PDF appears correctly.
-- Exporting the PDF file for printing and manual filling.
-
-Selecting "Continue" simply opens the resulting PDF, which will show in your browser window.
-
-When you access the "Test PDF" feature from Form Builder's "Test Form" window, any data currently entered in the form will show in the PDF.
+Selecting "Continue" opens the resulting PDF, which will show in your browser window.
 
 ## PDF templates
 
