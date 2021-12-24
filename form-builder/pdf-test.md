@@ -23,23 +23,23 @@ When accessed from the "Test Form" window, "Test PDF" shows the following dialog
 
 You have access to the following options: 
 
-- Use entered form data
+- __Use entered form data__
   - This option only shows when accessed from the "Test Form" window.
   - When selected, any data currently entered in the form will be used to produce the PDF.
-- "Disable the evaluation of "Initial Values" formulas"
+- __Disable the evaluation of "Initial Values" formulas__
   - If "Use entered form data" is selected, this option is disabled as the form data takes precedence.
   - When selected, all "Initial Value" formulas are disabled, as if they were not present.
-- "Disable the evaluation of "Initial Values" formulas"
+- __Disable the evaluation of "Initial Values" formulas__
   - When selected, all "Initial Value" formulas are disabled, as if they were not present.
-- "Disable the evaluation of "Calculated Values" formulas"
+- __Disable the evaluation of "Calculated Values" formulas__
   - When selected, all "Calculated Value" formulas are disabled, as if they were not present.
-- "Show controls, grids, and sections with dynamic visibility"
+- __Show controls, grids, and sections with dynamic visibility__
   - When selected, all controls, grids, and sections that can be dynamically shown are shown.
   - This means that those with visibility "Yes" or "Formula" are always shown. Controls with visibility "No" remain not visible.
   - Use cases include:
     - Verifying that every control, grid, or section that can appear in the PDF appears correctly.
     - Exporting the PDF file for printing and manual filling.
-- "Use PDF template"
+- __Use PDF template__
   - This only shows if the form has attached PDF templates.
   - See below for details.
 
