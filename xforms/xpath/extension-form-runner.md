@@ -304,11 +304,10 @@ Return the Form Runner mode.
 [SINCE Orbeon Forms 2020.1.6]
 
 ```xpath
-fr:mode() as xs:boolean
+fr:is-draft() as xs:boolean
 ```
 
 Returns `true` if the user is currently editing a draft, `false` otherwise.
-
 
 ### fr:modified-dateTime()
 
