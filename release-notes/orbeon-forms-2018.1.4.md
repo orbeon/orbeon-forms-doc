@@ -39,7 +39,11 @@ This release addresses the following issues since [Orbeon Forms 2018.2.3 PE](htt
 
 For more on the Log4j vulnerability issue, see our [blog post](https://blog.orbeon.com/2021/12/vulnerability-in-log4j-library.html).
 
-You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
+UPDATES:
+
+- 2018.1.4.1 upgrades Log4j to version 2.17.1 to address the latest vulnerabilities
+
+- You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
 Please send feedback via [Twitter](https://twitter.com/orbeon) or the [forum](https://www.orbeon.com/community).
