@@ -154,7 +154,7 @@ First, the Grid Settings dialog now shows the number of grid rows in the grid.
 
 Second, for repeated grids only, an option allows you to automatically show a row number at the beginning of each grid repetition.
 
-![Number of grid rows](/form-builder/images/grid-settings-show-repetition-number.png)
+![Show repetition number](/form-builder/images/grid-settings-show-repetition-number.png)
 
 For more details:
 
@@ -168,7 +168,7 @@ Until now, Orbeon Forms would index fields marked as "Show on Summary page" or "
 
 It is now possible to tell Form Runner to index fields independently from whether they show in the Summary page. This allows indexed fields to be searchable via the [Search API](/form-runner/api/persistence/search.md).
 
-![Number of grid rows](/form-builder/images/control-settings.png)
+![Index control](/form-builder/images/control-settings.png)
 
 ### Add double type again as a user choice
 
@@ -180,50 +180,90 @@ However, for scientific calculations, for example using `cos()` and other functi
 
 ### Dropdowns to support hint on items
 
-xxx #5054
+Hints were already supported, among selection controls, on "Radio Buttons" and "Checkboxes" controls. They are now used on the "Static Dropdown" as well. This allows browsers to show hints when the user hovers over an entry. Screen readers also read the hint, represented as a `title` attribute in HTML.
 
-### PDF: Option to show all dropdown control values in automatic PDF #5026
+!["Static Dropdown" hint](/form-runner/images/dropdown-hint.png)
 
-### 
+This also works with the "Dropdown with Search" control.
 
-Option not to run calculation in readonly modes #3672
-Background API: ability to disable calculations #4977
+!["Dropdown with Search" hint](/form-runner/images/dropdown-search-hint.png)
 
+### Option to show all dropdown control values in automatic PDF
+
+When producing a PDF file, single-selection controls like the "Static Dropdown" would just output the selected value. However, in some cases, it is useful for the user to see all the available options. You can now achieve this with a new option in the "Control Settings" dialog for single-selection controls. This option is hierarchical: you can set it at the field level, form level, or globally.
+
+![PDF options](/form-builder/images/control-settings-pdf-options.png)
+
+### More find-grained control over calculations
+
+Sometimes calculations should not run in readonly modes, such as the View page. This can now be configured at the form level.
+
+![Formula options](/form-builder/images/form-settings-formulas.png)
 
 ### XForms 2.0 support
 
-- xforms-dialog-shown/xforms-dialog-hidden #5078
-- Implement xf:parse() #3699
+Underlying Orbeon Forms lies an XForms processor. We have added two features from the XForms 2.0 specification:  
+
+- the `xforms-dialog-shown`/`xforms-dialog-hidden` events
+- the `xf:parse()` function 
 
 ### Accessibility
 
-- Announce new error messages in the error summary #4795
-- Avoid invalid `role="navigation"` on `<ul>` #5079
-- Improve reading of labels for date-time control #4831
+We regularly make enhancements to accessibility. In this version:
+
+- The Error Summary now announces new error messages.
+- We avoid invalid `role="navigation"` on `<ul>` elements.
+- We improved reading of labels for "Date and Time" controls.
 
 ### New XPath functions
 
-- XPath function returning whether a form is embedded #4976
-- Add XPath function to tell whether the form is running in the background #4958
-- Function to access the value of a control within a section template #2471
-- Form Runner function returning whether we are editing a draft #5060
+The following new XPath functions were added:
+
+- [`fr:is-embedded()`](/xforms/xpath/extension-form-runner.md#fr-is-embedded): tells whether the form is embedded
+- [`fr:is-background()`](/xforms/xpath/extension-form-runner.md#fr-is-background): tells whether the form is running in the background
+- [`fr:is-draft()`](/xforms/xpath/extension-form-runner.md#fr-is-draft): tells whether the user is currently editing a draft
+
+In addition, the [`fr:control-string-value()`](/xforms/xpath/extension-form-runner.md#fr-control-string-value) and [`fr:control-typed-value()`](/xforms/xpath/extension-form-runner.md#fr-control-typed-value) support a new argument to take a library name. This allows accessing control values from section templates. 
 
 ### API improvements
 
-- Form metadata API: ability to filter by modified-since date #4987
+The [Form metadata API](form-runner/api/persistence/forms-metadata.md) now has the ability to filter by `modified-since` date.
+
+The [Run form in the background API](/form-runner/api/other/run-form-background.md) supports the following new parameters:
+
+- `disable-default`: disable the evaluation of initial values 
+- `disable-calculate`: disable the evaluation of calculated values
+- `disable-relevant`: disable the evaluation of visibility values
+
+The [Search API](form-runner/api/persistence/search.md) returns new metadata: 
+
+- `created-by`
+- `created-by-groupname`
+- `last-modified-by`
+- `workflow-stage`
 
 ### Flat view to support form versions
 
-xxx #5037
+The [Flat view](/form-runner/persistence/flat-view.md) now supports form definition versions.
 
 ### Home page: ability to delete (unpublish) published form definition
 
-xxx #3597
+The [Home page](form-runner/feature/home-page.md) now supports completely deleting a published form definition. Until now, you could mark a form definition as unavailabe, but not delete it completely.
+
+*NOTE: For [auditing](/form-runner/persistence/auditing.md) purposes, deleted form definitions are still present in the database unless explicitly removed there.* 
 
 ### Summary page improvements
 
-Summary page: ability to show the created-by/last-modified-by users #4986
-Summary/Home to show timestamps in a configurable timezone #1101\
+The [Summary page](/configuration/properties/form-runner-summary-page.md) can be configured to show the "created by" and "last modified by" users with the following properties: 
+
+- `oxf.fr.summary.show-created-by`
+- `oxf.fr.summary.show-last-modified-by`
+
+TODO:
+
+https://doc.orbeon.com/configuration/properties/form-runner#timezone
+
+Summary/Home to show timestamps in a configurable timezone #1101
 
 ### xxx
 
