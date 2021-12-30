@@ -127,7 +127,8 @@ The `if ... then ... else` pattern in the second `xf:copy` is there so that, in 
 
 ## Orbeon Forms 2021.1
 
-- `parse()` function
+- the `xforms-dialog-shown`/`xforms-dialog-hidden` events
+- `xf:parse()` function
 
 ## Remaining features
 

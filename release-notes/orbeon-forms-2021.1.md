@@ -8,7 +8,7 @@ Today we released Orbeon Forms 2021.1! This release introduces new features and 
 
 ## Notable features and enhancement
 
-### Test PDF
+### Ability to test PDF production
 
 Orbeon Forms 2021.1 allows you to test PDF production without publishing your form.
 
@@ -36,7 +36,7 @@ If the "Open Settings Dialog" option is selected, the "Control Settings" dialog 
 
 ![The quick search dialog](/form-builder/images/quick-search.png)
 
-### Excel export/import
+### Excel export and import
 
 Orbeon Forms 2021.1 includes a new feature to import and export Excel files.
 
@@ -59,17 +59,18 @@ For more details:
 
 - [blog post](https://blog.orbeon.com/2021/09/excel-export-and-import.html)
 
-### XML format for import/export
+### XML format for export and import
 
 Similarly to the import and export of Excel files, Orbeon Forms 2021.1 allows you to export form data and description to an XML file, and to reimport the data back.
 
 Orbeon Forms internally represents form data as XML. However, this import/export feature doesn't directly export that data. It exports:
 
-- metadata about the form (title, etc.)
-- information about the structure of the form, including sections, grids, their labels, and more
-- the data proper, but only data that is not always hidden
+- export metadata (export date, etc.)
+- metadata about the form (title, etc.): `<form-metadata>` element
+- information about the structure of the form, including sections, grids, their labels, and more: `<form-structure>` element
+- the data proper, but only data that is not always hidden: `<form-data>` element
 
-TODO: doc, blog
+This is [an example](https://gist.github.com/orbeon/99d75c9f624d68db07493ae508540de3) of XML export.
 
 ### Experimental offline mode
 
@@ -95,17 +96,15 @@ From the user's perspective, this works almost exactly like the "Test" button wh
 
 [screenshot]
 
-As of Orbeon Forms 2021.1, there are limitations, which is why we consider the feature still experimental:
+As of Orbeon Forms 2021.1, there are limitations, including the following:
  
-- Services do not run offline and will return errors.
-- There is no Summary page, Home page, or navigation between pages.
-- Some controls are not fully supported, including the Formatted Text Area as well as attachment controls.
-- Some formulas might fail.
-- There is no XML Schema support for datatype validation.
 - The APIs to compile and embed forms are not yet documented.
-- TODO
+- Some controls are not fully supported, including the Formatted Text Area as well as attachment controls.
+- Some formulas might not work.
+- Performance needs some improvements.
+- There is no XML Schema support for datatype validation (although this is rarely used).
 
-### Inspect formulas
+### Inspection of formulas
 
 With Orbeon Forms, formulas are very important: they are used for calculating values, making parts of the form visible or readonly, and more. However, they can be difficult to debug, and so far Form Builder didn't have a way to show all formulas in a central location.
 
@@ -127,7 +126,7 @@ The following example show dependencies between "Calculated Value" formulas and 
 
 We consider this features still experimental, but only because it is still fairly basic! However, it is still useful and we hope to improve it in newer versions of Orbeon Forms.
 
-### Actions Editor
+### Actions Editor improvements
 
 The Actions Editor features two new enhancements:
 
@@ -170,7 +169,7 @@ It is now possible to tell Form Runner to index fields independently from whethe
 
 ![Index control](/form-builder/images/control-settings.png)
 
-### Add double type again as a user choice
+### Double-precision floating-point type
 
 The double-precision floating-point type was removed a long time ago in the list of selectable types in the "Control Settings" dialog. The reason for this was that for the vast majority of cases, this is not the appropriate type (but "Integer" or "Decimal" are), and users would often select the incorrect type and then get rounding errors in fields such as the Currency field.
 
@@ -178,7 +177,7 @@ However, for scientific calculations, for example using `cos()` and other functi
 
 ![Built-in Types](/form-builder/images/built-in-types.png)
 
-### Dropdowns to support hint on items
+### Hints for dropdown control choices
 
 Hints were already supported, among selection controls, on "Radio Buttons" and "Checkboxes" controls. They are now used on the "Static Dropdown" as well. This allows browsers to show hints when the user hovers over an entry. Screen readers also read the hint, represented as a `title` attribute in HTML.
 
@@ -194,7 +193,7 @@ When producing a PDF file, single-selection controls like the "Static Dropdown" 
 
 ![PDF options](/form-builder/images/control-settings-pdf-options.png)
 
-### More find-grained control over calculations
+### More fine-grained control over calculations
 
 Sometimes calculations should not run in readonly modes, such as the View page. This can now be configured at the form level.
 
@@ -235,22 +234,43 @@ The [Run form in the background API](/form-runner/api/other/run-form-background.
 - `disable-calculate`: disable the evaluation of calculated values
 - `disable-relevant`: disable the evaluation of visibility values
 
-The [Search API](form-runner/api/persistence/search.md) returns new metadata: 
+The same API now supports [returning form data](/form-runner/api/other/run-form-background.md#returning-form-data).
+
+The [Search API](form-runner/api/persistence/search.md) returns new metadata for each form definition: 
 
 - `created-by`
 - `created-by-groupname`
 - `last-modified-by`
-- `workflow-stage`
+
+The XML Schema API allows [selecting the data format](/form-runner/api/other/xml-schema-generation.md#data-format-version) for which to produce the XML Schema.
+
+The CRUD API supports [migrating a form definition for integration purposes](/form-runner/api/persistence/crud.md#migrating-a-form-definition-for-integration-purposes).
+
+### Process actions
+
+The `send` action supports [passing the current workflow stage](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md#url-format).
+
+The `error-message()` process action supports [a new `appearance` parameter](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message).
+
+Low-level `xf:insert` and `xf:delete` actions are now available in processes. 
+
+### Misc
+
+The [`oxf.fr.detail.warn-when-data-unsafe` property](/configuration/properties/form-runner-detail-page.md#warning-the-user-when-data-is-unsafe) supports a formula (AVT).
+
+The `oxf.http.ssl.keystore` properties can point to resources within Orbeon Forms (`oxf:` protocol). The handling of the keystore vs. the trustore has been clarified. See the [documentation](/configuration/properties/properties-general-http-client.md#2-way-ssl).
 
 ### Flat view to support form versions
 
 The [Flat view](/form-runner/persistence/flat-view.md) now supports form definition versions.
 
-### Home page: ability to delete (unpublish) published form definition
+### Home page improvements
 
 The [Home page](form-runner/feature/home-page.md) now supports completely deleting a published form definition. Until now, you could mark a form definition as unavailabe, but not delete it completely.
 
 *NOTE: For [auditing](/form-runner/persistence/auditing.md) purposes, deleted form definitions are still present in the database unless explicitly removed there.* 
+
+You can configure an [explicit timezone](/configuration/properties/form-runner.md#timezone) for creation and last modification timestamps.
 
 ### Summary page improvements
 
@@ -259,26 +279,21 @@ The [Summary page](/configuration/properties/form-runner-summary-page.md) can be
 - `oxf.fr.summary.show-created-by`
 - `oxf.fr.summary.show-last-modified-by`
 
-TODO:
+You can configure an [explicit timezone](/configuration/properties/form-runner.md#timezone) for creation and last modification timestamps.
 
-https://doc.orbeon.com/configuration/properties/form-runner#timezone
+### Section templates improvements
 
-Summary/Home to show timestamps in a configurable timezone #1101
+Form Builder now shows the library/section name at the top of the section at design-time. 
 
-### xxx
+TODO: screenshot
 
-send action to support a workflow-stage parameter #5070
+We added minimal support for allowing section templates from the same library to communicate via actions.
 
-### xxx
+This in particular allows an action triggered by an event in a given section to update form controls in another section, if these two sections are included in the same destination form. 
 
-Allow section templates to communicate when included in same form #5005
+### Filter to log the body of incoming requests
 
-### xxx
-Section template: show name of library/section #1700
-
-### xxx
-
-New filter to log the body of incoming requests #5098
+See the [documentation](/form-runner/advanced/monitoring-http-requests.md##orbeon-forms-httploggingfilter).
 
 ## Internationalization
 
@@ -294,14 +309,15 @@ See also:
 TODO
 
 - **Form Builder (creating forms)**
-    - Chrome 87 (latest stable version)
-    - Firefox 84 (latest stable version) and the current [Firefox ESR](https://www.mozilla.org/en-US/firefox/enterprise/)
-    - Microsoft Edge 87 (latest stable version)
-    - Safari 14 (latest stable version)
+    - Chrome 97 (latest stable version)
+    - Firefox 95 (latest stable version) and the current [Firefox ESR](https://www.mozilla.org/en-US/firefox/enterprise/)
+    - Microsoft Edge 98 (latest stable version)
+    - Safari 15.1 (latest stable version)
 - **Form Runner (accessing form)**
     - All browsers supported by Form Builder (see above)
     - IE11, Edge 18
-    - Safari Mobile on iOS 13
+        - NOTE: This is probably the latest version of Orbeon Forms to support IE11. 
+    - Safari Mobile on iOS 15
     - Chrome for Android (stable channel)
 
 ## Compatibility notes
