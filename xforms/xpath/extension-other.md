@@ -1,7 +1,5 @@
 # Other functions
 
-
-
 ## xxf:decode-iso9075-14()
 
 ```xpath
