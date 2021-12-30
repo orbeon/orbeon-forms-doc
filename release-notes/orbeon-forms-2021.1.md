@@ -57,7 +57,7 @@ The export feature produces Excel files that look like this:
 
 For more details:
 
-- [blog] post(https://blog.orbeon.com/2021/09/excel-export-and-import.html)
+- [blog post](https://blog.orbeon.com/2021/09/excel-export-and-import.html)
 
 ### XML format for import/export
 
@@ -95,7 +95,7 @@ From the user's perspective, this works almost exactly like the "Test" button wh
 
 [screenshot]
 
-As of Orbeon Forms 2021.1, there are limitations:
+As of Orbeon Forms 2021.1, there are limitations, which is why we consider the feature still experimental:
  
 - Services do not run offline and will return errors.
 - There is no Summary page, Home page, or navigation between pages.
@@ -115,17 +115,17 @@ A new, still experimental feature allows you to inspect formulas. You access it 
 
 This allows you to see, in a table, the following formulas used in the form for:
 
-- Initial values
-- Calculated values
+- Initial Value
+- Calculated Value
 - Visibility
 - Required
 - Read-Only
 
-![Example showing Calculated Value dependencies](/form-builder/images/inspect-formulas-example.png)
+The following example show dependencies between "Calculated Value" formulas and controls. A color scheme indicates the dependency relationships between controls via formulas.
 
-In addition, the dependencies between these formulas is shown with colors so that, for complex forms, you can know which values impact a formula, and the other way around.
+![Example showing "Calculated Value" dependencies](/form-builder/images/inspect-formulas-example.png)
 
-Inspect Formulas: first phase #4825
+We consider this features still experimental, but only because it is still fairly basic! However, it is still useful and we hope to improve it in newer versions of Orbeon Forms.
 
 ### Actions Editor
 
@@ -162,49 +162,81 @@ For more details:
 
 ## Other
 
-Form Builder: option to index fields separately from Summary page #5018
-Add double type again as a user choice #4847
-Dropdowns to support hint on items #5054
+### Option to index fields separately from Summary page
 
-PDF: Option to show all dropdown control values in automatic PDF #5026
+Until now, Orbeon Forms would index fields marked as "Show on Summary page" or "Show in search" in the "Control Settings" dialog.
+
+It is now possible to tell Form Runner to index fields independently from whether they show in the Summary page. This allows indexed fields to be searchable via the [Search API](/form-runner/api/persistence/search.md).
+
+![Number of grid rows](/form-builder/images/control-settings.png)
+
+### Add double type again as a user choice
+
+The double-precision floating-point type was removed a long time ago in the list of selectable types in the "Control Settings" dialog. The reason for this was that for the vast majority of cases, this is not the appropriate type (but "Integer" or "Decimal" are), and users would often select the incorrect type and then get rounding errors in fields such as the Currency field.
+
+However, for scientific calculations, for example using `cos()` and other functions, a floating-point type is appropriate. For this reason, we have reintroduced this type in the list of selectable types, with a name that we hope is as clear as possible. 
+
+![Built-in Types](/form-builder/images/built-in-types.png)
+
+### Dropdowns to support hint on items
+
+xxx #5054
+
+### PDF: Option to show all dropdown control values in automatic PDF #5026
+
+### 
+
 Option not to run calculation in readonly modes #3672
 Background API: ability to disable calculations #4977
 
 
-XForms 2.0:
+### XForms 2.0 support
 
 - xforms-dialog-shown/xforms-dialog-hidden #5078
 - Implement xf:parse() #3699
 
-A11y:
+### Accessibility
 
 - Announce new error messages in the error summary #4795
-- Avoid invalid role="navigation" on <ul> #5079
+- Avoid invalid `role="navigation"` on `<ul>` #5079
 - Improve reading of labels for date-time control #4831
 
-New functions:
+### New XPath functions
 
 - XPath function returning whether a form is embedded #4976
 - Add XPath function to tell whether the form is running in the background #4958
 - Function to access the value of a control within a section template #2471
 - Form Runner function returning whether we are editing a draft #5060
 
-API:
+### API improvements
 
 - Form metadata API: ability to filter by modified-since date #4987
 
-Flat view to support form versions #5037
+### Flat view to support form versions
 
-Home page: ability to delete (unpublish) published form definition #3597
+xxx #5037
+
+### Home page: ability to delete (unpublish) published form definition
+
+xxx #3597
+
+### Summary page improvements
 
 Summary page: ability to show the created-by/last-modified-by users #4986
 Summary/Home to show timestamps in a configurable timezone #1101\
 
+### xxx
+
 send action to support a workflow-stage parameter #5070
+
+### xxx
 
 Allow section templates to communicate when included in same form #5005
 
+### xxx
 Section template: show name of library/section #1700
+
+### xxx
 
 New filter to log the body of incoming requests #5098
 
