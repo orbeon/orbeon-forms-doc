@@ -94,8 +94,6 @@ When you do this:
 
 From the user's perspective, this works almost exactly like the "Test" button which has always been present in Form Builder.
 
-[screenshot]
-
 As of Orbeon Forms 2021.1, there are limitations, including the following:
  
 - The APIs to compile and embed forms are not yet documented.
@@ -173,9 +171,9 @@ It is now possible to tell Form Runner to index fields independently from whethe
 
 The double-precision floating-point type was removed a long time ago in the list of selectable types in the "Control Settings" dialog. The reason for this was that for the vast majority of cases, this is not the appropriate type (but "Integer" or "Decimal" are), and users would often select the incorrect type and then get rounding errors in fields such as the Currency field.
 
-However, for scientific calculations, for example using `cos()` and other functions, a floating-point type is appropriate. For this reason, we have reintroduced this type in the list of selectable types, with a name that we hope is as clear as possible. 
+However, for scientific calculations, for example using `cos()` and other functions, a floating-point type is appropriate. For this reason, we have reintroduced this type in the list of selectable types, with a name that we hope is as clear as possible. This said, we recommend its use only in very specific circumstances. 
 
-![Built-in Types](/form-builder/images/built-in-types.png)
+![Built-in Types](/form-builder/images/built-in-types-double.png)
 
 ### Hints for dropdown control choices
 
