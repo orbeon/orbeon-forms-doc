@@ -1,6 +1,6 @@
 # Orbeon Forms 2021.1
 
-__TODO, December 31, 2020__
+__Friday, December 31, 2021__
 
 [RELEASE NOTES WORK IN PROGRESS]
 
@@ -30,7 +30,7 @@ In large forms, it is often difficult to navigate to a specific form control. Or
 - ⌘J (macOS)
 - ⌃J (other operating systems)
 
-The short cuts open a small dialog. Clicking or pressing the Enter key and then typing a search term allows you to search from the list of available controls. Upon selection, Form Builder highlights and scrolls to the control selected.
+The shortcuts open a small dialog. Clicking or pressing the Enter key and then typing a search term allows you to search from the list of available controls. Upon selection, Form Builder highlights and scrolls to the control selected.
 
 If the "Open Settings Dialog" option is selected, the "Control Settings" dialog for the control also opens right away.
 
@@ -70,7 +70,7 @@ Orbeon Forms internally represents form data as XML. However, this import/export
 - information about the structure of the form, including sections, grids, their labels, and more: `<form-structure>` element
 - the data proper, but only data that is not always hidden: `<form-data>` element
 
-This is [an example](https://gist.github.com/orbeon/99d75c9f624d68db07493ae508540de3) of XML export.
+Here is [an example](https://gist.github.com/orbeon/99d75c9f624d68db07493ae508540de3) of XML export.
 
 ### Experimental offline mode
 
@@ -283,13 +283,11 @@ You can configure an [explicit timezone](/configuration/properties/form-runner.m
 
 ### Section templates improvements
 
-Form Builder now shows the library/section name at the top of the section at design-time. 
+Form Builder now shows the library/section names and version at the top of the section at design-time.
 
-TODO: screenshot
+![Section template information](/form-builder/images/section-template-info.png)
 
-We added minimal support for allowing section templates from the same library to communicate via actions.
-
-This in particular allows an action triggered by an event in a given section to update form controls in another section, if these two sections are included in the same destination form. 
+We added initial support for allowing section templates from the same library to communicate via actions. This in particular allows an action triggered by an event in a given section to update form controls in another section, if these two sections are included in the same destination form. 
 
 ### Filter to log the body of incoming requests
 
@@ -297,16 +295,12 @@ See the [documentation](/form-runner/advanced/monitoring-http-requests.md##orbeo
 
 ## Internationalization
 
-TODO
-
 See also:  
 
 - [Supported languages](/form-runner/feature/supported-languages.md) for the list of supported languages.
 - [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form runner in additional languages. Localization depends on volunteers, so please let us know if you want to help!
 
 ## Browser support
-
-TODO
 
 - **Form Builder (creating forms)**
     - Chrome 97 (latest stable version)
@@ -316,7 +310,7 @@ TODO
 - **Form Runner (accessing form)**
     - All browsers supported by Form Builder (see above)
     - IE11, Edge 18
-        - NOTE: This is probably the latest version of Orbeon Forms to support IE11. 
+        - NOTE: IE11 support is now deprecated. 
     - Safari Mobile on iOS 15
     - Chrome for Android (stable channel)
 
