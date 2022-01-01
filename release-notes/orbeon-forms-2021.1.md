@@ -2,8 +2,6 @@
 
 __Friday, December 31, 2021__
 
-[RELEASE NOTES WORK IN PROGRESS]
-
 Today we released Orbeon Forms 2021.1! This release introduces new features and bug-fixes.
 
 ## Notable features and enhancement
