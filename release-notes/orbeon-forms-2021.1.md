@@ -334,6 +334,10 @@ Orbeon Forms no longer ships with a `log4j.xml` configuration file, but it ships
     
 If you are creating or updating a `log4j2.xml` file, you cannot simply copy the contents of an existing `log4j.xml` to `log4j2.xml` as the two formats are incompatible! Instead, start with the `log4j2.xml` provided, and visit the [Log4j 2 configuration](https://logging.apache.org/log4j/2.x/manual/configuration.html) online to understand and make changes.
 
+_WARNING: With version of Orbeon Forms that use Log4j 2.x, and whether you are using `log4j.xml` or `log4j2.xml`, you must make sure that you do not have __duplicate log file names in the configuration__, even if some of them are unused, or Log4j 2.x will complain about that and ignore the configuration. Log4j 1.x did not use to consider this an error, but Log4j 2.x does._
+
+For more, see [Logging](/installation/logging.md).
+
 ### Combining custom and built-in relational persistence
 
 If you are using the following unlikely combination:

@@ -4,7 +4,8 @@
 
 Most applications support some form of [*logging*](https://en.wikipedia.org/wiki/Logging_(software)). Orbeon Forms is no different.
 
-Internally, the Orbeon Forms web application uses the [SLF4J](http://www.slf4j.org/) API, which allows using various Java logging implementations such as Log4j or logback. Out of the box, however, Orbeon Forms uses Log4j as logging implementation.
+- Internally, the Orbeon Forms web application uses the [SLF4J](http://www.slf4j.org/) API, which allows using various Java logging implementations such as Log4j or logback.
+- Out of the box, Orbeon Forms uses [Log4j](https://logging.apache.org/log4j/2.x/) as logging implementation.
 
 ## Version of Log4j
 
@@ -36,13 +37,12 @@ Here is the location and names of the configuration files:
 
 Versions of Orbeon Forms that support Log4j 2.x no longer ship with a `log4j.xml` configuration file, but ship with a `log4j2.xml` configuration file.
 
-- If you have pre-existing `log4j.xml` configuration file, for example because you are upgrading from an older version, you can still use that configuration file, which will take precedence over the new `log4j2.xml` file. However:
-    - You must make sure that you do not have duplicate log file names in the configuration, or Log4j 2.x will complain about that and ignore the configuration.
-    - We do recommend that you consider moving to a `log4j2.xml` configuration file.
-- If you do not yet have an existing `log4j.xml` file:
-    - We recommend that you update the  `log4j2.xml` configuration file that ships with Orbeon Forms.
+- If you have pre-existing `log4j.xml` configuration file, for example because you are upgrading from an older version, you can still use that configuration file, which will take precedence over the new `log4j2.xml` file. However we do recommend that you consider moving to a `log4j2.xml` configuration file.
+- If you do not yet have an existing `log4j.xml` file, we recommend that you update the `log4j2.xml` configuration file that ships with Orbeon Forms and that you do not create a `log4j.xml`.
     
-If you are creating or updating a `log4j2.xml` file, you __cannot__ simply copy the contents of an existing `log4j.xml` to `log4j2.xml` as the two formats are incompatible! Instead, start with the `log4j2.xml` provided, and visit the [Log4j 2 configuration](https://logging.apache.org/log4j/2.x/manual/configuration.html) online to understand and make changes.
+_WARNING: With version of Orbeon Forms that use Log4j 2.x, and whether you are using `log4j.xml` or `log4j2.xml`, you must make sure that you do not have __duplicate log file names in the configuration__, even if some of them are unused, or Log4j 2.x will complain about that and ignore the configuration. Log4j 1.x did not use to consider this an error, but Log4j 2.x does._
+
+_WARNING: If you are creating or updating a `log4j2.xml` file, you __cannot__ simply copy the contents of an existing `log4j.xml` to `log4j2.xml` as the two formats are incompatible! Instead, start with the `log4j2.xml` provided, and visit the [Log4j 2 configuration](https://logging.apache.org/log4j/2.x/manual/configuration.html) online to understand and make changes._
 
 ## How Orbeon Forms initializes logging
 
@@ -93,7 +93,7 @@ Log4j 1.x (`WEB-INF/resources/config/log4j.xml`):
 </appender>
 ```
 
-You can change this by modifying the `File` parameter and set an _absolute file path_ to the log file.
+You can change this by modifying the `fileName` (Log4j 2.x) or `File` (Log4j 1.x) parameter and set an _absolute file path_ to the log file.
 
 Log4j 2.x (`WEB-INF/resources/config/log4j2.xml`):
 
@@ -149,7 +149,7 @@ The benefit of changing this configuration is that you know exactly where the fi
 
 ## Reducing the amount of logging
 
-By default, Orbeon Forms logs quite a lot of information at the `info` level. In case this is too much, you can set the level to `warning` or even `error`.
+By default, Orbeon Forms logs quite a lot of information at the `info` level. In case this is too much, you can set the level to `warning` or even `error`. Similarly, for debugging, you can set the level to the more verbose `debug`.
 
 Log4j 2.x (`WEB-INF/resources/config/log4j2.xml`):
 
