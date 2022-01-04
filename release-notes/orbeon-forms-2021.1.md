@@ -314,7 +314,7 @@ See also:
 
 ### Log4j2
 
-Due to December 2021 Log4j vulnerabilities, Orbeon Forms now uses the latest Log4j 2 libraries. Until Orbeon Forms 2020.1.5, Orbeon Forms used older Log4j 1 libraries. While Orbeon Forms was not vulnerable to these specific attacks, we decided to migrate Orbeon Forms to Log4j 2 in order to respond faster to future vulnerabilities should they arise.
+Due to December 2021 Log4j vulnerabilities, Orbeon Forms now uses the latest Log4j 2.x libraries. Until Orbeon Forms 2020.1.5, Orbeon Forms used older Log4j 1.x libraries. While Orbeon Forms was not vulnerable to these specific attacks, we decided to migrate Orbeon Forms to Log4j 2.x in order to respond faster to future vulnerabilities should they arise.
 
 For details, see the following blog posts;
 
@@ -322,12 +322,12 @@ For details, see the following blog posts;
 - [Orbeon Forms PE Log4j maintenance releases](https://blog.orbeon.com/2021/12/orbeon-forms-pe-log4j-maintenance.html)
 - [More Orbeon Forms PE Log4j maintenance releases](https://blog.orbeon.com/2021/12/more-orbeon-forms-pe-log4j-maintenance.html)
 
-Log4j 2 uses different configuration files than Log4j 1. However, we provide backward compatibility support for the older Log4j 1 configuration file. This means that in most cases, you do not have to update your configuration file immediately.
+Log4j 2.x uses different configuration files than Log4j 1.x. However, we provide backward compatibility support for the older Log4j 1.x configuration file. This means that in most cases, you do not have to update your configuration file immediately.
 
 Orbeon Forms no longer ships with a `log4j.xml` configuration file, but it ships with a `log4j2.xml` configuration file.
 
 - If you have pre-existing `log4j.xml` configuration file, for example because you are upgrading to Orbeon Forms 2021.1 from an older version, you can still use that configuration file, which will take precedence over the new `log4j2.xml` file. However:
-    - You must make sure that you do not have duplicate log file names in the configuration, or Log4j 2 will complain about that and ignore the configuration.
+    - You must make sure that you do not have duplicate log file names in the configuration, or Log4j 2.x will complain about that and ignore the configuration.
     - We recommend that you consider moving to a `log4j2.xml` configuration file.
 - If you do not yet have an existing `log4j.xml` file:
     - We recommend that you update the  `log4j2.xml` configuration file that ships with Orbeon Forms.
