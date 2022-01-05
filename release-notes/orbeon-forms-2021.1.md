@@ -169,7 +169,7 @@ It is now possible to tell Form Runner to index fields independently from whethe
 
 The double-precision floating-point type was removed with Orbeon Forms 2016.1 (see the [blog post](https://blog.orbeon.com/2016/01/removing-double-datatype.html)) from the list of selectable types in the "Control Settings" dialog. The reason for this was that for the vast majority of cases, this is not the appropriate type (but "Integer" or "Decimal" are), and users would often select the incorrect type and then get rounding errors in fields such as the Currency field.
 
-However, for scientific calculations, for example using `cos()` and other functions, a floating-point type is appropriate. For this reason, we have reintroduced this type in the list of selectable types, with a name that we hope is as clear as possible. This said, we recommend its use only in very specific circumstances. 
+However, for scientific calculations, a floating-point type is appropriate. For this reason, we have reintroduced this type in the list of available types. This said, we recommend its use only in very specific circumstances. 
 
 ![Built-in Types](/form-builder/images/built-in-types-double.png)
 
