@@ -77,7 +77,9 @@ Built-in types include:
 - Number Types
     - Decimal: positive or negative decimal number, which can be fractional with an optional decimal point `.`
     - Integer: positive or negative integer decimal number
-    - Double-precision floating-point [UNTIL Orbeon Forms 4.10] [SINCE Orbeon Forms 2021.1]
+    - Double-precision floating-point
+        - [UNTIL Orbeon Forms 4.10]
+        - [SINCE Orbeon Forms 2021.1] (again, see below)
 - Date and Time Types
     - Date: date stored in ISO format
     - Time: time stored in ISO format
