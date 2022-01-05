@@ -298,21 +298,22 @@ Explicitly marking fields that have been encrypted in the data allows form autho
 
 When using the [Wizard](/form-runner/component/wizard.md), annotations are added to the XML elements, in the form data, that represent the form sections shown as Wizard pages. The purpose of this is so that the Wizard can restore the status of sections when reloading incomplete data from a draft in the database.
 
-Specifically, the `fr:section-status` attribute is added to these XML elements, as follows:
+Specifically, the `fr:section-status` attribute is added to these XML elements and contains a list of unordered, space-separated tokens, as follows:
 
-- missing attribute: the section has not been visited by the user yet
-- `changed`: 
-    - the section has been visited and at least one field value was changed by the user
-- `incomplete`: 
-    - the section has been visited and has incomplete fields (required fields that are empty)
-- `invalid`: 
-    - the section has been visited and has at least one invalid field (separately from incomplete fields)
-- `visible-incomplete`:
-    - the section has been visited and has incomplete fields shown to the user in the Error Summary;
-    - only present if `incomplete` is present as well
-- `visible-invalid`:
-    - the section has been visited and has visible error fields shown to the user in the Error Summary;
-    - only present if `invalid` is present as well
+- missing attribute:
+    - The section has not been visited by the user yet.
+- `changed` token:
+    - The section has been visited and at least one field value was changed by the user.
+- `incomplete` token:
+    - The section has been visited and has incomplete fields (required fields that are empty).
+- `invalid` token:
+    - The section has been visited and has at least one invalid field (separately from incomplete fields).
+- `visible-incomplete` token:
+    - The section has been visited and has incomplete fields shown to the user in the Error Summary.
+    - This token is only present if `incomplete` is present as well.
+- `visible-invalid` token:
+    - The section has been visited and has visible error fields shown to the user in the Error Summary.
+    - This token is only present if `invalid` is present as well.
 
 Example:
 
