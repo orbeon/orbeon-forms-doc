@@ -77,6 +77,7 @@ Built-in types include:
 - Number Types
     - Decimal: positive or negative decimal number, which can be fractional with an optional decimal point `.`
     - Integer: positive or negative integer decimal number
+    - Double-precision floating-point [UNTIL Orbeon Forms 4.10] [SINCE Orbeon Forms 2021.1]
 - Date and Time Types
     - Date: date stored in ISO format
     - Time: time stored in ISO format
@@ -84,7 +85,13 @@ Built-in types include:
 
 ![Built-in Types](images/built-in-types.png)
 
-*COMPATIBILITY NOTE: Until Orbeon Forms 4.10, there was also a "Double-precision floating point" exposed, which was removed as explained in this [blog post](https://blog.orbeon.com/2016/01/removing-double-datatype.html). And prior to Orbeon Forms 4.3, the list was longer, as explained in [this other blog post](https://blog.orbeon.com/2013/07/simplifying-list-of-data-types-in-form.html)*
+_NOTE: Prior to Orbeon Forms 4.3, the list of available types was longer, as explained in [this blog post](https://blog.orbeon.com/2013/07/simplifying-list-of-data-types-in-form.html)._
+
+_NOTE: Until Orbeon Forms 4.10, the "Double-precision floating point" data type was available. It was removed with Orbeon Forms 2016.1, as explained in this [blog post](https://blog.orbeon.com/2016/01/removing-double-datatype.html), and re-added with Orbeon Forms 2021.1._
+
+_The reason for the removal was that in the vast majority of cases, this is not the appropriate type ("Integer" or "Decimal" are), and users would often select the incorrect type and then get rounding errors in fields such as the Currency field._
+
+_The reason for re-adding the double-precisiong floating-point data type is that it is appropriate for certain scientific calculations. This said, we recommend its use only in very specific circumstances._
 
 At runtime, if the value is required and does not match the specified datatype, the value is marked as invalid.
 
