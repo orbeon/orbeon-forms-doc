@@ -294,6 +294,42 @@ If in your form you have fields marked to be encrypted at rest, an attribute is 
     
 Explicitly marking fields that have been encrypted in the data allows form authors to change a form definition adding or removing fields to be encrypted without having to create a new version of that form definition, should form authors want to do so.
 
+## Wizard section status
+
+When using the [Wizard](/form-runner/component/wizard.md), annotations are added to the XML elements, in the form data, that represent the form sections shown as Wizard pages. The purpose of this is so that the Wizard can restore the status of sections when reloading incomplete data from a draft in the database.
+
+Specifically, the `fr:section-status` attribute is added to these XML elements, as follows:
+
+- missing attribute: the section has not been visited by the user yet
+- `changed`: the section has been visited and at least one field value was changed by the user
+- `incomplete`: the section has been visited and has incomplete fields (required fields that are empty)
+- `invalid`: the section has been visited and has at least one invalid field (separately from incomplete fields)
+- `visible-incomplete`:
+    - the section has been visited and has incomplete fields shown to the user in the Error Summary;
+    - only present if `incomplete` is present as well
+- `visible-invalid`:
+    - the section has been visited and has visible error fields shown to the user in the Error Summary;
+    - only present if `invalid` is present as well
+
+Example:
+
+```xml
+<form xmlns:fr="http://orbeon.org/oxf/xml/form-runner">
+    <!-- Section is visited, has incomplete fields, and invalid fields -->
+    <my-section-1 fr:section-status="changed incomplete invalid visible-incomplete visible-invalid">
+        ...
+    </my-section-1>
+    <!-- Section is visited without changes -->
+    <my-section-2 fr:section-status="">
+        ...
+    </my-section-2>
+    <!-- Section is not visited -->
+    <my-section-3>
+        ...
+    </my-section-3>
+</form>
+```
+
 ## See also
 
 - [Grid data format](/component/grid.md#data-format)
