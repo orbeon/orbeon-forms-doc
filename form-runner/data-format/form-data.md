@@ -301,9 +301,12 @@ When using the [Wizard](/form-runner/component/wizard.md), annotations are added
 Specifically, the `fr:section-status` attribute is added to these XML elements, as follows:
 
 - missing attribute: the section has not been visited by the user yet
-- `changed`: the section has been visited and at least one field value was changed by the user
-- `incomplete`: the section has been visited and has incomplete fields (required fields that are empty)
-- `invalid`: the section has been visited and has at least one invalid field (separately from incomplete fields)
+- `changed`: 
+    - the section has been visited and at least one field value was changed by the user
+- `incomplete`: 
+    - the section has been visited and has incomplete fields (required fields that are empty)
+- `invalid`: 
+    - the section has been visited and has at least one invalid field (separately from incomplete fields)
 - `visible-incomplete`:
     - the section has been visited and has incomplete fields shown to the user in the Error Summary;
     - only present if `incomplete` is present as well
@@ -329,6 +332,8 @@ Example:
     </my-section-3>
 </form>
 ```
+
+_NOTE: When the Wizard is not in use, these annotations are not added as of Orbeon Forms 2021.1._
 
 ## See also
 
