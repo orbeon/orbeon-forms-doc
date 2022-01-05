@@ -179,6 +179,12 @@ Log4j 1.x (`WEB-INF/resources/config/log4j.xml`):
 </appender>
 ```
 
+## Client-side logging
+
+As more work is getting done on the client (web browser), Orbeon Forms has added logging abilities there as well. In general, Orbeon Forms doesn't log much except in case of error, and then it logs to the JavaScript console, which is usually not consulted by the end-user.
+
+As of Orbeon Forms 2021.1, Orbeon Forms uses [Log4s](https://github.com/Log4s/log4s) and [Scribe](https://github.com/outr/scribe) to log on the client. However, the logging configuration is currently not customizable by the user.  
+
 ## See also 
 
 - [XForms logging](/configuration/advanced/xforms-logging.md)
@@ -186,4 +192,3 @@ Log4j 1.x (`WEB-INF/resources/config/log4j.xml`):
 - Blog posts:
     - [Vulnerability in the log4j library](https://blog.orbeon.com/2021/12/vulnerability-in-log4j-library.html)
     - [Orbeon Forms PE Log4j maintenance releases](https://blog.orbeon.com/2021/12/orbeon-forms-pe-log4j-maintenance.html)
-    - [More Orbeon Forms PE Log4j maintenance releases](https://blog.orbeon.com/2021/12/more-orbeon-forms-pe-log4j-maintenance.html)
