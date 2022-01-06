@@ -120,7 +120,7 @@ You can achieve this with the "Automatic PDF" options in the "Control Settings" 
 - __Show the selected value only__: the label for the selected value shows
 - __Show all values as radio buttons__: all possible values show as radio buttons and the selected value, if any, shows selected 
 
-![PDF options](/form-builder/images/control-settings-pdf-options.png)
+![Automatic PDF options](/form-builder/images/control-settings-pdf-options.png)
 
 The supported properties are:
 
