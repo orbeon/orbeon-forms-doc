@@ -31,20 +31,20 @@ Form options include options which apply to the entire form definition.
 
 - Singleton Form
     - Enable or disable singleton form behavior. 
-    - See [Singleton Form](../form-runner/advanced/singleton-form.md)
+    - See [Singleton Form](/form-runner/advanced/singleton-form.md)
 - Maximum Attachment Size per File
     - [SINCE Orbeon Forms 2017.1]
-    - Use property: use the [`oxf.fr.detail.attachment.max-size` property](../configuration/properties/form-runner-attachments.md#maximum-attachment-size)
+    - Use property: use the [`oxf.fr.detail.attachment.max-size` property](/configuration/properties/form-runner-attachments.md#maximum-attachment-size)
 - Maximum Aggregate Attachment Size
     - [SINCE Orbeon Forms 2017.1]
-    - Use property: use the [`oxf.fr.detail.attachment.max-size-aggregate` property](../configuration/properties/form-runner-attachments.md#maximum-aggregate-attachment-size)
+    - Use property: use the [`oxf.fr.detail.attachment.max-size-aggregate` property](/configuration/properties/form-runner-attachments.md#maximum-aggregate-attachment-size)
     - Other: the maximum size allowed in bytes
 - Allowed File Types
     - [SINCE Orbeon Forms 2017.1]
-    - Use property: use the [`oxf.fr.detail.attachment.mediatypes` property](../configuration/properties/form-runner-attachments.md#allowed-file-types)
+    - Use property: use the [`oxf.fr.detail.attachment.mediatypes` property](/configuration/properties/form-runner-attachments.md#allowed-file-types)
     - Other: the maximum size allowed in bytes
 - Appearance of Control Labels
-    - Use property: use the [`oxf.xforms.label.appearance` property](../xforms/controls/input.md#per-form-properties)
+    - Use property: use the [`oxf.xforms.label.appearance` property](/xforms/controls/input.md#per-form-properties)
     - Inline: labels show inline above the control
     - Other: a space-separated list of mediatypes or wildcard mediatypes
 - Use Placeholder for Text Fields and Text Areas
@@ -64,7 +64,7 @@ Form options include options which apply to the entire form definition.
     - For details, see [Simple data migration](/form-runner/feature/versioning.md#simple-data-migration).
 - Automatic Calculations Dependencies
     - [SINCE Orbeon Forms 2018.1]
-    - For details, see [Automatic calculations dependencies](../form-runner/feature/automatic-calculations-dependencies.md). 
+    - For details, see [Automatic calculations dependencies](/form-runner/feature/automatic-calculations-dependencies.md). 
 
 Here is how hints appear depending on the type of control they are associated with:
 
@@ -150,7 +150,7 @@ See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-
 [SINCE Orbeon Forms 2021.1]
 
 - **Calculations in readonly modes (Review, PDF)**:
-   - Use property: use the [`oxf.fr.detail.readonly.disable-calculate` property](/configuration/properties/form-runner-detail-page.md#calculations-in-readonly-modes)
+   - Use property: use the [`oxf.fr.detail.readonly.disable-calculate` property](/configuration/properties/form-runner-detail-page.md#Calculations in readonlymodes)
    - Enable: Calculated Value formulas run in readonly modes.
    - Disable: Calculated Value formulas do not run in readonly modes.
 
@@ -179,9 +179,9 @@ Form statistics show counts of various form elements.
 
 ## See also
 
-- [Wizard View](../form-runner/feature/wizard-view.md)
+- [Wizard View](/form-runner/feature/wizard-view.md)
 - [Simple data migration](/form-runner/feature/versioning.md#simple-data-migration)
-- [Automatic calculations dependencies](../form-runner/feature/automatic-calculations-dependencies.md)
+- [Automatic calculations dependencies](/form-runner/feature/automatic-calculations-dependencies.md)
 - Blog posts
     - [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
     - [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)

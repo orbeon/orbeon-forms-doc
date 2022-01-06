@@ -209,7 +209,7 @@ _NOTE: Since Orbeon Forms 2017.1, the `oxf.fr.detail.new.service.enable` propert
 
 [SINCE Orbeon Forms 2021.1]
 
-We recommend you set up your database to store text as Unicode, to avoid potential problems when users enter non-ASCII characters, like accents, characters from non-latin languages, or even emojis. In cases when this isn't possible, you can sets the following property to `true`, to instruct Orbeon Forms to escape all non-ASCII characters in form data before they are sent to the database.
+We recommend you set up your database to store text as Unicode, to avoid potential problems when users enter non-ASCII characters, like accents, characters from non-latin languages, or even emojis. In cases when this isn't possible, you can set the following property to `true`, to instruct Orbeon Forms to escape all non-ASCII characters in form data before they are sent to the database.
 
 This escaping only applies to form data, and not to indices created based on this data, which means that if you are using the Form Runner summary page, or the search API, and that a field value shown in the summary page or returned by the search API contains a character that your database is unable to store, while your data is still safe, the summary page or the result of the search API might contain an incorrect value.
 
