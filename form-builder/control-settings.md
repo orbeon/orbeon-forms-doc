@@ -108,6 +108,41 @@ Some controls have custom settings. For example:
 
 See also [Control metadata for the Control Settings dialog](metadata.md#control-metadata-for-the-control-settings-dialog)
 
+#### Automatic PDF options
+
+[SINCE Orbeon Forms 2021.1]
+
+When producing a PDF file, single-selection controls like the "Static Dropdown" normally just output the selected value. However, in some cases, it is useful for the user to see all the available options. You can now achieve this with a new option in the "Control Settings" dialog for single-selection controls. This option is hierarchical: you can set it at the field level, form level, or globally.
+
+Automatic PDF:
+
+- Use default: use the form settings, and if they also have "Use default" use the property (see below)
+- Show the selected value only: 
+- Show all values as radio buttons:
+
+The supported properties are:
+
+- `oxf.xforms.xbl.fr.dropdown-select1.pdf-appearance.*.*`
+- `oxf.xforms.xbl.fr.'dropdown-select1-search'.pdf-appearance.*.*`
+
+The possible values are:
+
+- empty: show the selected value only
+- `full`: show all values as radio buttons
+
+Example to change the default the "Static Dropdown" control to showing all values in the automatic PDF:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.dropdown-select1.pdf-appearance.*.*"
+    value="full"/>
+```
+
+The global default is "Show the selected value only".
+
+![PDF options](/form-builder/images/control-settings-pdf-options.png)
+
 ### Validations and alerts
 
 ![Validations and alerts tab](images/control-settings-validations.png)

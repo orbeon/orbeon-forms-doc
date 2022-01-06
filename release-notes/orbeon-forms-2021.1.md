@@ -163,6 +163,8 @@ Until now, Orbeon Forms would index fields marked as "Show on Summary page" or "
 
 It is now possible to tell Form Runner to index fields independently from whether they show in the Summary page. This allows indexed fields to be searchable via the [Search API](/form-runner/api/persistence/search.md).
 
+For details, see [Control Settings](/form-builder/control-settings.md#main-options).
+
 ![Index control](/form-builder/images/control-settings.png)
 
 ### Double-precision floating-point type
@@ -170,6 +172,8 @@ It is now possible to tell Form Runner to index fields independently from whethe
 The double-precision floating-point type was removed with Orbeon Forms 2016.1 (see the [blog post](https://blog.orbeon.com/2016/01/removing-double-datatype.html)) from the list of selectable types in the "Control Settings" dialog. The reason for this was that for the vast majority of cases, this is not the appropriate type (but "Integer" or "Decimal" are), and users would often select the incorrect type and then get rounding errors in fields such as the Currency field.
 
 However, for scientific calculations, a floating-point type is appropriate. For this reason, we have reintroduced this type in the list of available types. This said, we recommend its use only in very specific circumstances. 
+
+For details, see [Control Settings](/form-builder/validation.md#data-type-validation).
 
 ![Built-in Types](/form-builder/images/built-in-types-double.png)
 
@@ -185,7 +189,9 @@ This also works with the "Dropdown with Search" control.
 
 ### Option to show all dropdown control values in automatic PDF
 
-When producing a PDF file, single-selection controls like the "Static Dropdown" would just output the selected value. However, in some cases, it is useful for the user to see all the available options. You can now achieve this with a new option in the "Control Settings" dialog for single-selection controls. This option is hierarchical: you can set it at the field level, form level, or globally.
+When producing a PDF file, single-selection controls like the "Static Dropdown" normally just output the selected value. However, in some cases, it is useful for the user to see all the available options. You can now achieve this with a new option in the "Control Settings" dialog for single-selection controls. This option is hierarchical: you can set it at the field level, form level, or globally.
+
+For more, see [Automatic PDF options](/form-builder/control-settings.md#automatic-pdf-options).
 
 ![PDF options](/form-builder/images/control-settings-pdf-options.png)
 
