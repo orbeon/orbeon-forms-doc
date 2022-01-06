@@ -19,7 +19,7 @@ For more information, see [Configuration Properties - Form Runner](../../../conf
 
 The following buttons are deprecated:
 
-- `save`: use `save-draft` or `save-final`
+- `save`: use `save-draft` (up to 2020.1.x), `save-progress` (2021.1 and newer) or `save-final`
 - `submit`: use the `send` button with the desired sequence of actions
 - `workflow-send`: use the `send` button with the desired sequence of actions
 - `workflow-review`: use `review` instead
@@ -67,4 +67,4 @@ The `validate` action no longer supports a `property` parameter. In particular, 
 
 This also means that the `maybe-require-valid` process is no longer available.
 
-Instead, use the `save-draft` process, or customize a process with the `save` action but no `require-valid`.
+Instead, use the `save-draft` (up to 2020.1.x) or `save-progress` (2021.1 and newer) process, or customize a process with the `save` action but no `require-valid`.

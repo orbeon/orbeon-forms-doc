@@ -59,11 +59,13 @@ So how do you customize processes? Say you want to specify a couple of buttons o
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.buttons.acme.hr">
-    save-draft send
+    save-progress send
 </property>
 ```
 
-This places a `save-draft` and `send` button on the page. Their default labels are "Save" and "Send". Each button is automatically associated with processes of the same names, `save-draft` and `send`. These particular button and process names are standard, but we can customize them specifically for our form. Again, this is done with a property:
+_NOTE: Prior to Orbeon Forms 2021.1, use the `save-draft` button/process name instead of `save-progress`._
+
+This places a `save-progress` and `send` button on the page. Their default labels are "Save" and "Send". Each button is automatically associated with processes of the same names, `save-progress` and `send`. These particular button and process names are standard, but we can customize them specifically for our form. Again, this is done with a property:
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.send.acme.hr">
