@@ -21,7 +21,7 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 |      | Dec 29 | 2019.2.4.1 | 🟩 Until Dec 29, 2022  | [Release notes](/release-notes/orbeon-forms-2019.2.4.md)                                                                             | 
 |      | Dec 29 | 2019.1.2.1 | 🟩 Until Oct 23, 2022  | [Release notes](/release-notes/orbeon-forms-2019.1.2.md)                                                                             | 
 |      | Dec 29 | 2018.2.5.1 | 🟩 Until Dec 30, 2021  | [Release notes](/release-notes/orbeon-forms-2018.2.5.md)                                                                             | 
-|      | Dec 29 | 2018.1.4.1 | 🟩 Until Sep 5, 2021   | [Release notes](/release-notes/orbeon-forms-2018.1.4.md)                                                                             | 
+|      | Dec 29 | 2018.1.4.1 | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2018.1.4.md)                                                                             | 
 |      | Nov 11 | 2020.1.5   | 🟨 Upgrade to 2020.1.6 | [Release notes](/release-notes/orbeon-forms-2020.1.5.md)                                                                             | 
 |      | Sep 06 | 2020.1.4   | 🟨 Upgrade to 2020.1.6 | [Release notes](/release-notes/orbeon-forms-2020.1.4.md)                                                                             | 
 |      | Apr 30 | 2020.1.3   | 🟨 Upgrade to 2020.1.6 | [Release notes](/release-notes/orbeon-forms-2020.1.3.md)                                                                             | 
@@ -39,10 +39,10 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 |      | Mar 4  | 2018.2.2   | 🟨 Upgrade to 2018.2.5 | [Release notes](https://blog.orbeon.com/2019/03/orbeon-forms-201822-pe.html)                                                         |
 |      | Feb 7  | 2018.2.1   | 🟨 Upgrade to 2018.2.5 | [PE](https://blog.orbeon.com/2019/02/orbeon-forms-201821-pe.html), [CE](https://blog.orbeon.com/2019/02/orbeon-forms-201821-ce.html) |
 | 2018 | Dec 31 | 2018.2     | 🟨 Upgrade to 2018.2.5 | [Release notes](https://blog.orbeon.com/2018/12/orbeon-forms-20182.html)                                                             |
-|      | Nov 13 | 2018.1.3   | 🟨 Upgrade to 2018.1.4 | [Release notes](https://blog.orbeon.com/2018/11/orbeon-forms-201813-pe.html)                                                         |
-|      | Oct 5  | 2018.1.2   | 🟨 Upgrade to 2018.1.4 | [Release notes](https://blog.orbeon.com/2018/10/orbeon-forms-201812-pe.html)                                                         |
-|      | Sep 18 | 2018.1.1   | 🟨 Upgrade to 2018.1.4 | [Release notes](https://blog.orbeon.com/2018/09/orbeon-forms-201811-pe-and-ce.html)                                                  |
-|      | Sep 6  | 2018.1     | 🟨 Upgrade to 2018.1.4 | [Release notes](https://blog.orbeon.com/2018/09/orbeon-forms-20181.html)                                                             |
+|      | Nov 13 | 2018.1.3   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2018/11/orbeon-forms-201813-pe.html)                                                         |
+|      | Oct 5  | 2018.1.2   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2018/10/orbeon-forms-201812-pe.html)                                                         |
+|      | Sep 18 | 2018.1.1   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2018/09/orbeon-forms-201811-pe-and-ce.html)                                                  |
+|      | Sep 6  | 2018.1     | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2018/09/orbeon-forms-20181.html)                                                             |
 |      | May 18 | 2017.2.2   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2018/05/orbeon-forms-201722-pe.html)                                                         |
 |      | Mar 16 | 2017.2.1   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2018/03/orbeon-forms-201721-pe.html)                                                         |
 | 2017 | Dec 31 | 2017.2     | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2017/12/orbeon-forms-20172.html)                                                             |
