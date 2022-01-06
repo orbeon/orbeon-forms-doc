@@ -132,6 +132,16 @@ The following example saves new instance data to the database for the form `acme
 </property>
 ```
 
+### Disabling formula evaluation  
+
+[SINCE Orbeon Forms 2021.1]
+
+The following URL parameters, passed to the service, allow disabling the evaluation of some categories of formulas when the form runs:
+
+- `disable-default=true`: disable the evaluation of initial values 
+- `disable-calculate=true`: disable the evaluation of calculated values
+- `disable-relevant=true`: disable the evaluation of visibility values
+
 ### Update existing data
 
 The following example updates existing instance data with the current time for the form `acme/sales` and saves it to the database when the service is called with `/fr/service/acme/sales/edit/$document`, where `$document` represents an existing form data document id:

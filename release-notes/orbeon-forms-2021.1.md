@@ -226,9 +226,9 @@ The [Form metadata API](form-runner/api/persistence/forms-metadata.md) now has t
 
 The [Run form in the background API](/form-runner/api/other/run-form-background.md) supports the following new parameters:
 
-- `disable-default`: disable the evaluation of initial values 
-- `disable-calculate`: disable the evaluation of calculated values
-- `disable-relevant`: disable the evaluation of visibility values
+- `disable-default=true`: disable the evaluation of initial values 
+- `disable-calculate=true`: disable the evaluation of calculated values
+- `disable-relevant=true`: disable the evaluation of visibility values
 
 The same API now supports [returning form data](/form-runner/api/other/run-form-background.md#returning-form-data).
 
