@@ -122,6 +122,8 @@ The following example show dependencies between "Calculated Value" formulas and 
 
 We consider this features still experimental, but only because it is still fairly basic! However, it is still useful and we hope to improve it in newer versions of Orbeon Forms.
 
+For details, see [Formulas inspector](/form-builder/formulas-inspector.md).
+
 ### Actions Editor improvements
 
 The Actions Editor features two new enhancements:

@@ -62,6 +62,7 @@
         * [Undo and redo](form-builder/undo-redo.md)
     * [Formulas](form-builder/formulas.md)
         * [Examples](form-builder/formulas-examples.md)
+        * [Formulas inspector](form-builder/formulas-inspector.md)
     * [Summary page](form-builder/summary-page.md)
     * [Form localization](form-builder/localization.md)
     * Advanced
