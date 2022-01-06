@@ -143,6 +143,12 @@ Available page sizes:
 
 These can also be configured for a particular form in Form Builder's Form Settings dialog.
 
+### Calculations in readonly modes
+
+[SINCE Orbeon Forms 2021.1]
+
+See the [`oxf.fr.detail.readonly.disable-calculate` property](form-runner-detail-page.md#calculations-in-readonly-modes).
+
 ## See also
  
 - Blog post: [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)

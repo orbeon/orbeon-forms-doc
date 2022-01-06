@@ -193,6 +193,11 @@ When producing a PDF file, single-selection controls like the "Static Dropdown" 
 
 Sometimes calculations should not run in readonly modes, such as the View page. This can now be configured at the form level.
 
+For more, see:
+
+- [Form Settings](/form-builder/form-settings.md#formulas)
+- the [`oxf.fr.detail.readonly.disable-calculate` property](/configuration/properties/form-runner-detail-page.md#calculations-in-readonly-modes)
+
 ![Formula options](/form-builder/images/form-settings-formulas.png)
 
 ### XForms 2.0 support

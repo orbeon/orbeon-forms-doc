@@ -613,6 +613,19 @@ The following property allows you to show hints in the `view` and `pdf` modes. B
     value="true"/>
 ```
 
+### Calculations in readonly modes
+
+The following property allows disabling Calculated Value formulas in readonly modes (Review, PDF): 
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.readonly.disable-calculate.*.*"
+    value="true"/>
+```
+
+It defaults to `false`.
+
 ## PDF mode
 
 See [PDF configuration properties](pdf.md).
