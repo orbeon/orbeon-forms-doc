@@ -136,9 +136,11 @@ A process which just saves the data without checking validity and shows success 
 
 ```sh
 save
-then success-message("save-draft-success")
+then success-message("save-progress-success")
 recover error-message("database-error")
 ```
+
+_NOTE: Prior to Orbeon Forms 2021.1, use the `save-draft-success` message name instead of `save-progress-success`._
 
 Validating and sending data to a service looks like this:
 
