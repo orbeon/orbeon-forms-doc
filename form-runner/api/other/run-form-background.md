@@ -118,6 +118,16 @@ The `prune-metadata` parameter can be used to control production of metadata:
 
 See the [`fr:is-background()`](/xforms/xpath/extension-form-runner.md#fr-is-background) function.
 
+### Disabling formula evaluation
+
+[SINCE Orbeon Forms 2021.1]
+
+The following URL parameters, passed to the service, allow disabling the evaluation of some categories of formulas when the form runs:
+
+- `disable-default=true`: disable the evaluation of initial values 
+- `disable-calculate=true`: disable the evaluation of calculated values
+- `disable-relevant=true`: disable the evaluation of visibility values
+
 ## Examples
 
 ### Create initial data
@@ -131,16 +141,6 @@ The following example saves new instance data to the database for the form `acme
     save
 </property>
 ```
-
-### Disabling formula evaluation  
-
-[SINCE Orbeon Forms 2021.1]
-
-The following URL parameters, passed to the service, allow disabling the evaluation of some categories of formulas when the form runs:
-
-- `disable-default=true`: disable the evaluation of initial values 
-- `disable-calculate=true`: disable the evaluation of calculated values
-- `disable-relevant=true`: disable the evaluation of visibility values
 
 ### Update existing data
 
