@@ -138,6 +138,7 @@ These two features were already supported by the [Action Syntax](/form-builder/a
 For more details:
 
 - [Passing a value from a formula](/form-builder/actions.md#passing-a-value-from-a-formula)
+- [Basic action configuration](/form-builder/actions.md#basic-action-configuration)
 - [Blog post](https://blog.orbeon.com/2021/10/enhancements-actions-editor-2021-1.html)
 
 ### Grids
