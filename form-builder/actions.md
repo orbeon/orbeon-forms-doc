@@ -144,6 +144,8 @@ Parameters:
     - The expression is evaluated in the context of root element of the XML request data to send to the service.
     - The expression must point to an element or attribute node of the request body. If multiple nodes are returned, only the first one is considered.
 
+![Action request formula](/form-builder/images/actions-request-formula.png)
+
 ## Handling the service response
 
 ### User interface
