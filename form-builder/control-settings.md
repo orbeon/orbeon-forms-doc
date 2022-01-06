@@ -14,7 +14,7 @@ has several tabs, detailed below.
 The control *name* specifies a identifier for the control, unique in the entire form (except [Section Templates](section-templates.md)). The
 identifier is used for the following:
 
-- to refer to the control value from formulas, using the notation `$foo` where `foo` is the control name
+- to refer to the control value from formulas, using the variable notation `$foo` where `foo` is the control name
 - to determine an XML element name when the form data is represented as XML
 
 If a control name is not explicitly specified, Form Builder assigns a default name, such as `control-42`.

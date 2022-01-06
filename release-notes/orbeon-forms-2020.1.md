@@ -57,7 +57,7 @@ See the [blog post](https://blog.orbeon.com/2021/01/new-workflow-capabilities-in
 
 When renaming an HTTP or database service, all actions using those services are automatically updated. If you attempt to delete a service, you are informed in case any actions are using that service.
 
-This is in addition to the [existing feature](/form-builder/formulas.md#renaming-of-controls-and-formulas) whereby when a control or section or grid is renamed, dependent formulas which use the notation `$foo` (where `foo` is the control name) are automatically updated.
+This is in addition to the [existing feature](/form-builder/formulas.md#renaming-of-controls-and-formulas) whereby when a control or section or grid is renamed, dependent formulas which use the variable notation `$foo` (where `foo` is the control name) are automatically updated.
 
 ### Rich text form description
 

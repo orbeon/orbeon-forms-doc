@@ -373,6 +373,7 @@ format-dateTime(
 ## See also
 
 - [Formulas](formulas.md)
+- [Formulas inspector](formulas-inspector.md)
 - [Form Builder Validation](validation.md)
 - [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
 - [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)

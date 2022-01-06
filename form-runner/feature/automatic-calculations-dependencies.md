@@ -28,7 +28,7 @@ _NOTE: Existing form definitions which do not have the `xxf:analysis.calculate="
 
 [SINCE Orbeon Forms 2019.1]
 
-When a control or section or grid is renamed, dependent formulas which use the notation `$foo` where `foo` is the control name, are automatically updated.
+When a control or section or grid is renamed, dependent formulas which use the variable notation `$foo` where `foo` is the control name, are automatically updated.
 
 ## Examples
 
