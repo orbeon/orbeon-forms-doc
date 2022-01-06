@@ -40,6 +40,14 @@ When deploying the form, section templates appear like regular editable sections
 
 ![Section templates in Form Runner](../form-runner/images/section-template.png)
 
+[SINCE Orbeon Forms 2021.1]
+
+In Form Builder, the inserted section templates show, at the top, the following information:
+
+- section template library name
+- section template section name
+- section template library version
+
 ## Services and actions
 
 Actions involving controls in a given section are automatically included with the section template, along with the services called by the actions.

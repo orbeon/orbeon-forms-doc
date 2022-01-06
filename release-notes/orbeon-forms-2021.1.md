@@ -286,6 +286,8 @@ You can configure an [explicit timezone](/configuration/properties/form-runner.m
 
 Form Builder now shows the library/section names and version at the top of the section at design-time.
 
+See also [Section template](/form-builder/section-templates.md).
+
 ![Section template information](/form-builder/images/section-template-info.png)
 
 We added initial support for allowing section templates from the same library to communicate via actions. This in particular allows an action triggered by an event in a given section to update form controls in another section, if these two sections are included in the same destination form. 
