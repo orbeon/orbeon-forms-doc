@@ -69,19 +69,21 @@ ORBEON.fr.API.embedForm(
   form,       
   action,     
   documentId, 
-  queryString
+  queryString,
+  headers
 );
 ```
 
-| Parameter   | Optional  | Type         | Example             | Description                                                   |
-| ----------- | --------- | ------------ | ------------------- | ------------------------------------------------------------- |
-| container   | No        | HTML element |                     | DOM element you want the form to be placed in                 |
-| context     | No        | String       | `"/orbeon"`         | Context where Orbeon Forms is deployed, typically             |
-| app         | No        | String       | `"human-resources"` | App name                                                      |
-| form        | No        | String       | `"job-application"` | Form name                                                     |
-| action      | No        | String       | `"new"`             | Either `"new"`, `"edit"`, or `"view"`                         |
-| documentId  | See below | String       |                     | For actions other than `new`, the document to be loaded       |
-| queryString | Yes       | String       | `"job=clerk"`       | Additional parameters to pass to the form as query parameters |    
+| Parameter   | Optional  | Type         | Example                         | Description                                             |
+| ----------- | --------- | ------------ | ------------------------------- | ------------------------------------------------------- |
+| container   | No        | HTML element |                                 | DOM element you want the form to be placed in           |
+| context     | No        | String       | `"/orbeon"`                     | Context where Orbeon Forms is deployed, typically       |
+| app         | No        | String       | `"human-resources"`             | App name                                                |
+| form        | No        | String       | `"job-application"`             | Form name                                               |
+| action      | No        | String       | `"new"`                         | Either `"new"`, `"edit"`, or `"view"`                   |
+| documentId  | See below | String       |                                 | For actions other than `new`, the document to be loaded |
+| queryString | Yes       | String       | `"job=clerk"`                   | Additional query parameters                             |
+| headers     | Yes       | [Headers][h] | `new Headers({ 'Foo': 'bar' })` | [SINCE Orbeon Forms 2021.1.1] Additional HTTP headers   |
 
 The `documentId` parameter is mandatory for actions other than `new`, and must be `undefined` when the action is `new`. For `new`, if you don't need to pass a `queryString`, you can just omit the last 2 parameters in your call to `ORBEON.fr.API.embedForm()`, and if you need to pass a `queryString` then you must explicitly pass `undefined` as the value of `documentId`.
 
@@ -103,3 +105,5 @@ The JavaScript embedding API has the same [limitations as the Java embedding API
 
 - [Client-side JavaScript API](/xforms/client-side-javascript-api.md)
 - [Form Runner JavaScript API](/form-runner/api/other/form-runner-javascript-api.md)
+
+[h]: https://developer.mozilla.org/en-US/docs/Web/API/Headers
