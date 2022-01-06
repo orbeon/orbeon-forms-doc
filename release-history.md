@@ -80,30 +80,34 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 
 ## Earlier Orbeon Forms releases
 
-Previously we had in general one major release per year:
-
-- 3.9.1 PE: February 8, 2012 ([release notes](https://blog.orbeon.com/2012/02/orbeon-forms-391-pe-released.html))
-- 3.9: May 15, 2011 ([release notes](https://blog.orbeon.com/2011/05/orbeon-forms-390-final.html))
-- 3.8: May 14, 2010
-- 3.7.1: June 1, 2009
-- 3.6: December 7, 2007
-- 3.5: February 20, 2007
+| Year | Date   | Version                                                                        | PE support      | Release notes                                                                      |
+|------|--------|--------------------------------------------------------------------------------|-----------------|------------------------------------------------------------------------------------|
+| 2012 | Feb 8  | 3.9.1 PE | 🟥 End of life | [release notes](https://blog.orbeon.com/2012/02/orbeon-forms-391-pe-released.html) |
+| 2011 | May 15 | 3.9      | 🟥 End of life | [release notes](https://blog.orbeon.com/2011/05/orbeon-forms-390-final.html)       |
+| 2010 | May 14 | 3.8      | 🟥 End of life |                                                                                    |
+| 2009 | Jun 1  | 3.7.1    | 🟥 End of life |                                                                                    |
+| 2007 | Dec 7  | 3.6      | 🟥 End of life |                                                                                    |
+|      | Feb 20 | 3.5      | 🟥 End of life |                                                                                    |
 
 ## Historical Orbeon PresentationServer releases
 
 Orbeon PresentationServer was an open source, general-purpose XML processing and presentation platform.
 
-- 3.0: January 17, 2006
-- 2.8: March 10, 2005
-- 2.7: January 21, 2005
-- 2.6: November 18, 2004
-- 2.5: July 13, 2004
+| Year | Date   | Version                                                                        | PE support      |
+|------|--------|--------------------------------------------------------------------------------|-----------------|
+| 2006 | Jan 17 | 3.0 | 🟥 End of life |
+| 2005 | Mar 10 | 2.8 | 🟥 End of life |
+| 2005 | Jan 21 | 2.7 | 🟥 End of life |
+| 2004 | Nov 18 | 2.6 | 🟥 End of life |
+| 2004 | Jul 13 | 2.5 | 🟥 End of life |
 
 ## Historical OXF releases
 
 For the curious, these are releases of the Orbeon XML platform before it was open sourced!
 
-- 2.2: November 17, 2003
-- 2.1: September 16, 2003
-- 2.0: July 10, 2003
-- 1.5: March 17, 2003
+| Year | Date   | Version | PE support |
+|------|--------|---------|------------|
+| 2003 | Nov 17 | 2.2     | 🟥 End of life |
+| 2003 | Sep 16 | 2.1     | 🟥 End of life |
+| 2003 | Jul 10 | 2.0     | 🟥 End of life |
+| 2003 | Mar 17 | 1.5     | 🟥 End of life |
