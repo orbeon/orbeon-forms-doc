@@ -124,32 +124,32 @@ The default baseline of XForms assets is configured with the `oxf.xforms.assets.
     {
       "css": [
         { "full": "/ops/yui/container/assets/skins/sam/container.css",                   "min": false },
-        { "full": "/ops/yui/progressbar/assets/skins/sam/progressbar.css",               "min": false },
         { "full": "/ops/yui/calendar/assets/skins/sam/calendar.css",                     "min": false },
         { "full": "/apps/fr/style/bootstrap/css/bootstrap.css",                          "min": true  },
         { "full": "/apps/fr/style/form-runner-bootstrap-override.css",                   "min": false },
         { "full": "/apps/fr/style/font-awesome/css/font-awesome.css",                    "min": true  },
         { "full": "/config/theme/xforms.css",                                            "min": false },
         { "full": "/config/theme/error.css",                                             "min": false },
-        { "full": "/ops/nprogress-0.2.0/nprogress.css",                                  "min": false }
+        { "full": "/ops/nprogress-0.2.0/nprogress.css",                                  "min": false },
+        { "full": "/ops/css-loader/css-loader.css",                                      "min": false }
       ],
 
       "js": [
-        { "full": "/ops/jquery/jquery-3.3.1.js",                                         "min": true  },
-        { "full": "/ops/jquery/jquery-browser-mobile.js",                                "min": true  },
+        { "full": "/ops/jquery/jquery-3.6.0.js",                                         "min": true  },
         { "full": "/apps/fr/style/bootstrap/js/bootstrap.js",                            "min": true  },
         { "full": "/ops/javascript/orbeon/util/jquery-orbeon.js",                        "min": true  },
         { "full": "/ops/nprogress-0.2.0/nprogress.js",                                   "min": true  },
         { "full": "/ops/bowser/bowser.js",                                               "min": true  },
         { "full": "/ops/mousetrap/mousetrap.min.js",                                     "min": false },
+        { "full": "/ops/fetch/promise-polyfill.min.js",                                  "min": false },
+        { "full": "/ops/fetch/fetch.umd.js",                                             "min": false },
+        { "full": "/ops/fetch/abortcontroller-umd-polyfill.js",                          "min": false },
 
         { "full": "/ops/yui/yahoo/yahoo.js",                                             "min": true  },
         { "full": "/ops/yui/event/event.js",                                             "min": true  },
         { "full": "/ops/yui/dom/dom.js",                                                 "min": true  },
-        { "full": "/ops/yui/connection/connection.js",                                   "min": true  },
         { "full": "/ops/yui/element/element.js",                                         "min": true  },
         { "full": "/ops/yui/animation/animation.js",                                     "min": true  },
-        { "full": "/ops/yui/progressbar/progressbar.js",                                 "min": true  },
         { "full": "/ops/yui/dragdrop/dragdrop.js",                                       "min": true  },
         { "full": "/ops/yui/container/container.js",                                     "min": true  },
         { "full": "/ops/yui/examples/container/assets/containerariaplugin.js",           "min": true  },
@@ -159,7 +159,6 @@ The default baseline of XForms assets is configured with the `oxf.xforms.assets.
         { "full": "/ops/javascript/underscore/underscore.js",                            "min": true  },
 
         { "full": "/ops/javascript/xforms.js",                                           "min": true  },
-        { "full": "/ops/javascript/orbeon/util/StringOps.js",                            "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/server/AjaxServer.js",                  "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/control/CalendarResources.js",          "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/control/Calendar.js",                   "min": true  },
@@ -168,7 +167,12 @@ The default baseline of XForms assets is configured with the `oxf.xforms.assets.
         { "full": "/ops/javascript/orbeon/xforms/controls/Help.js",                      "min": true  },
         { "full": "/ops/javascript/orbeon/xforms/controls/Hint.js",                      "min": true  },
 
-        { "full": "/ops/javascript/scalajs/orbeon-xforms.js",                            "min": false }
+        { "full": "/ops/javascript/scalajs/orbeon-xforms-web.js",                        "min": false }
+      ],
+
+      "xbl": [
+        "fr:number",
+        "fr:date"
       ]
     }
 </property>
@@ -179,6 +183,16 @@ Minimal versions:
 - are enabled when `"min"` is set to `true` and
 - assume that an asset named `file.min.css` is the minimal version for `file.css`.
 
+[SINCE Orbeon Forms 2021.1]
+
+The `"xbl"` key allows specifying a JSON array of XBL components, indicated by direct name (QName), whose assets must also be included.
+
+This capability renders the `oxf.xforms.resources.baseline` property deprecated.
+
+#### Excluding assets
+
+[DEPRECATED SINCE Orbeon Forms 2019.2]
+
 The `oxf.xforms.assets.baseline.excludes` property can be used to exclude assets.
 
 It doesn't make much sense to use this property in a properties file. Instead, it should be used via an attribute on `xf:model`.
@@ -187,9 +201,13 @@ It doesn't make much sense to use this property in a properties file. Instead, i
 xxf:assets.baseline.excludes="/ops/javascript/scalajs/orbeon-xforms.js /ops/javascript/scalajs/orbeon-xforms-launcher.js"
 ```
 
+This property is deprecated. Use `oxf.xforms.assets.baseline.updates` instead.
+
+#### Updating assets
+
 [SINCE Orbeon Forms 2019.2]
 
-The `xxf:assets.baseline.updates` property can be used to exclude and add assets.
+The `oxf.xforms.assets.baseline.updates` property can be used to exclude and add assets.
 
 It doesn't make much sense to use this property in a properties file. Instead, it should be used via an attribute on `xf:model`.
 
@@ -201,6 +219,8 @@ xxf:assets.baseline.updates="-/ops/javascript/scalajs/orbeon-xforms.js +/apps/fr
 
 #### Baseline of XBL components assets
 
+[DEPRECATED SINCE Orbeon Forms 2021.1]
+
 The baseline of resources is configured as follows:
 
 ```xml
@@ -211,6 +231,8 @@ The baseline of resources is configured as follows:
 ```
 
 The value consists of a list of qualified names referring to XBL components. Resources for the components specified are always included in every page, whether the component is used by the page or not.
+
+Starting Orbeon Forms 2021.1, use `oxf.xforms.assets.baseline` instead.
 
 #### Disk caching of combined resources
 
