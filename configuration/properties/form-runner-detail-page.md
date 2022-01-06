@@ -615,7 +615,7 @@ The following property allows you to show hints in the `view` and `pdf` modes. B
 
 ### Calculations in readonly modes
 
-The following property allows disabling Calculated Value formulas in readonly modes (Review, PDF): 
+The following property allows disabling Calculated Value formulas in readonly modes (Review, PDF). By default, the value is `false` and the calculations take place.
 
 ```xml
 <property 
@@ -624,7 +624,7 @@ The following property allows disabling Calculated Value formulas in readonly mo
     value="true"/>
 ```
 
-It defaults to `false`.
+See also [Form Settings](/form-builder/form-settings.md#formulas).
 
 ## PDF mode
 
