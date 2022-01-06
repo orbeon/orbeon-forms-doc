@@ -628,4 +628,4 @@ See also [Form Settings](/form-builder/form-settings.md#formulas).
 
 ## PDF mode
 
-See [PDF configuration properties](pdf.md).
+See [PDF configuration properties](form-runner-pdf.md).
