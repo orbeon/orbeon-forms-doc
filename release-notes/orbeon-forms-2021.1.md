@@ -34,6 +34,8 @@ If the "Open Settings Dialog" option is selected, the "Control Settings" dialog 
 
 ![The quick search dialog](/form-builder/images/quick-search.png)
 
+For details, see [Quick control search](/form-builder/quick-control-search.md).
+
 ### Excel export and import
 
 Orbeon Forms 2021.1 includes a new feature to import and export Excel files.
