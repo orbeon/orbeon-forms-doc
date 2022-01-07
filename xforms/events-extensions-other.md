@@ -220,7 +220,15 @@ This is an advanced feature and should be used wisely. It is used in Orbeon Form
 
 [SINCE Orbeon Forms 2020.1]
 
-`xxf:phantom="true"` handlers can be placed within repeats. This was not previously allowed. 
+`xxf:phantom="true"` handlers can be placed within repeats. This was not previously allowed.
+
+## Option to not toggle ancestors `<xf:toggle>` controls
+
+[SINCE Orbeon Forms 2021.1]
+
+With Orbeon Forms, the `<xf:toggle>` action also causes ancestor `<xf:switch>` controls, if present, to toggle so that every ancestor `<xf:case>` is visible.
+
+Orbeon Forms adds an extension attribute, `xxf:toggle-ancestors="false"`, which allows toggling only the given `<xf:switch>`, even if it is contained within ancestor `<xf:switch>`/`<xf:case>` controls that are not visible, without toggling those. 
 
 ## See also
 
