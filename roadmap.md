@@ -4,7 +4,9 @@
 
 ### Orbeon Forms 2022.1
 
-TODO
+Focus:
+
+- TBD
 
 See the tentative [2022.1 items](https://github.com/orbeon/orbeon-forms/projects/32) for details.
 
