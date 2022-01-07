@@ -65,7 +65,7 @@ The way we handle fixes, generally, is as follows:
 
 ## Difficulty of upgrades
 
-*NOTE: As a reminder, starting with Orbeon Forms 2016.1, we are using a versioning scheme with the number of the year first followed by the number of the major release during that year. See [Release History](release-history.md) for details. *
+*NOTE: As a reminder, starting with Orbeon Forms 2016.1, we are using a versioning scheme with the number of the year first followed by the number of the major release during that year. See [Release History](release-history.md) for details.*
 
 - Between any two subsequent 4.x releases, or 20xx.x releases, upgrades are expected to be fairly straightforward.
 - The longer the interval of time between two release, the harder the upgrade might be. For example, it can be harder to upgrade between 2020.1 and 2021.1 than between 2016.1 and 2020.1.
@@ -109,8 +109,6 @@ When about to upgrade, we recommend you go through the release notes for all ver
 - [4.0](http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/40#TOC-Compatibility-notes)
 - [3.9](http://wiki.orbeon.com/forms/doc/developer-guide/release-notes/39#TOC-Compatibility-notes)
 
-See also [Orbeon Forms release history](release-history.md).
-
 ## Reliance on Orbeon Forms internals
 
 ### Recommendation 
@@ -140,11 +138,13 @@ Each new version brings:
 
 In addition, we can support newer version of Orbeon Forms much better than older versions.
 
-See the [release notes of all the versions](release-history.md) for more details.
-
 In addition, if you are on the 3.x series of Orbeon Forms, the 4.x series brings:
 
 - an improved look and feel
 - a rewritten Form Builder relying on a better foundation
 - more configurable features
 - many new features
+
+## See also
+
+- [Orbeon Forms release history](release-history.md)
