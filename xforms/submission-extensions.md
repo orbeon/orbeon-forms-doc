@@ -1,4 +1,4 @@
-# Other Extensions
+# Other submission extensions
 
 ## Annotating submitted XML data with xxf:annotate
 
@@ -207,7 +207,7 @@ _NOTE: On  `<xf:instance>`, the attribute is statically-defined. On `<xf:submiss
 
 ### Preemptive authentication
 
-By default, the username and password are provided preemptively to the connection. In this mode, the HTTP client "will send the basic authentication response even before the server gives an unauthorized response in certain situations, thus reducing the overhead of making the connection" ([HttpClient documentation][3]).
+By default, the username and password are provided preemptively to the connection. In this mode, the HTTP client "will send the basic authentication response even before the server gives an unauthorized response in certain situations, thus reducing the overhead of making the connection" ([HttpClient documentation](https://hc.apache.org/httpclient-3.x/authentication.html)).
 
 The `xxf:preemptive-authentication` attribute on  `<xf:submission>` and `<xf:instance>` elements allows controlling this feature. You can disable this feature by setting the property to `false`:
 
@@ -294,7 +294,7 @@ Similarly the `xxf:show-progress="false"` attribute can be used with the `xf:loa
 
 ## Target window or frame
 
-You can use the `xxf:target` attribute on both `<xf:submission>` and `xf:load`. It behaves just like the [HTML target attribute][5]. When used on `<xf:submission>`, it only makes sense to use this attribute when you have `replace="all"`. Using this attribute to load a page in a new page is a case where you should add the `xxf:show-progress="false" `attribute. The value of the `xxf:target` attribute is interpreted as an AVT.
+You can use the `xxf:target` attribute on both `<xf:submission>` and `xf:load`. It behaves just like the [HTML target attribute](https://www.w3.org/TR/html401/present/frames.html#adef-target). When used on `<xf:submission>`, it only makes sense to use this attribute when you have `replace="all"`. Using this attribute to load a page in a new page is a case where you should add the `xxf:show-progress="false" `attribute. The value of the `xxf:target` attribute is interpreted as an AVT.
 
 When a submission runs in response to a user action, say a click on a button, an Ajax request is sent by the browser to the server. Then, based on the Ajax response, JavaScript runs submitting a `<form>` with a `target` attribute . Browsers implement popup blockers that prevent attempt made by JavaScript to open new windows, and this unless the [JavaScript code run in response to a trusted event](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted). A trusted event is one that happened in response to a user action, such as clicking on a button. However, even if your submission runs in response a user action, as it happens in response to an Ajax request, some browsers lose track that it was started by a trusted event, and those browsers might prevent the form submission. This is the case with Safari and Firefox (but not with Chrome, IE, and Edge).
 
@@ -383,7 +383,7 @@ The "effective value" for the `validate`, `relevant` and `xxf:calculate` attribu
 
 ### Submitting text content
 
-Orbeon Forms supports sending the text content of an XML document as per [XSLT 2.0 and XQuery 1.0 Serialization][6]. To perform a text submission:
+Orbeon Forms supports sending the text content of an XML document as per [XSLT 2.0 and XQuery 1.0 Serialization](https://www.w3.org/TR/xslt-xquery-serialization/). To perform a text submission:
 
 - The `post` or `put` method is required.
 - You must use a the `text/plain` value for the `serialization` attribute.
@@ -408,7 +408,7 @@ Orbeon Forms supports sending the text content of an XML document as per [XSLT 2
 
 ### Submitting HTML or XHTML content
 
-Orbeon Forms supports sending an XML document as HTML or XHTML as per [XSLT 2.0 and XQuery 1.0 Serialization][6]. To perform a HTML or XHTML submission:
+Orbeon Forms supports sending an XML document as HTML or XHTML as per [XSLT 2.0 and XQuery 1.0 Serialization](https://www.w3.org/TR/xslt-xquery-serialization/). To perform a HTML or XHTML submission:
 
 * The `post` or `put` method is required.
 * You must use a the `text/html` or the `application/xhtml+xml` value for the `serialization` attribute.
@@ -607,7 +607,3 @@ This may cause some application which rely on the "servlet path" information to 
 *NOTE: In short you must be careful when using local includes. The good news is that if you are using servlets which do not depend on path information as explained above, or if you have control over the implementation of the services you are calling, then you can most likely work around this limitation.*
 
 Local forwards are not subject to that limitation.
-
-[3]: https://hc.apache.org/httpclient-3.x/authentication.html
-[5]: https://www.w3.org/TR/html401/present/frames.html#adef-target
-[6]: https://www.w3.org/TR/xslt-xquery-serialization/
