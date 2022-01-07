@@ -217,7 +217,7 @@
         * [Keyboard events](xforms/events-extensions-keyboard.md)
         * [Extension events](xforms/events-extensions-events.md)
         * [Extension context information](xforms/events-extensions-context.md)
-        * [Other extensions](xforms/events-extensions-other.md)
+        * [Other event extensions](xforms/events-extensions-other.md)
     * Actions
         * [Repeat, insert and delete](xforms/actions/repeat-insert-delete.md)
         * [Scripting actions](xforms/actions/scripting.md)
@@ -235,7 +235,7 @@
         * [JSON support](xforms/submission-json.md)
         * [Asynchronous submissions](xforms/submission-asynchronous.md)
         * [Caching extension](xforms/submission-caching.md)
-        * [Other extensions](xforms/submission-extensions.md)
+        * [Other submission extensions](xforms/submission-extensions.md)
     * [XPath](xforms/xpath/README.md)
         * [Type annotations](xforms/xpath/type-annotations.md)
         * [Expression analysis](xforms/xpath/expression-analysis.md)

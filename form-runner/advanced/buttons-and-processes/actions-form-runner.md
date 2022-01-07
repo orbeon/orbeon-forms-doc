@@ -249,7 +249,7 @@ Depending on the value of the parameter, it generates a view of the current form
 - Showing the PDF or TIFF inline:
     - PDF – All browsers will show the PDF inline directly, except Edge which will first ask users if they want to save or open it.
     - TIFF – Browsers other than Safari don't know how to show a TIFF file inline, and thus will just download the file.
-- Opening the PDF or TIFF in a [new tab or browser window](../../../xforms/submission-extensions.md#target-window-or-frame):
+- Opening the PDF or TIFF in a [new tab or browser window](/xforms/submission-extensions.md#target-window-or-frame):
     - With Chrome, IE, and Edge the PDF or TIFF will show in a new window.
     - With Safari and Firefox the PDF or TIFF will show in the current window.
 

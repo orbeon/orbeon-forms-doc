@@ -67,4 +67,4 @@ You specify what key stroke(s) you want to listen to with the following two attr
 - [UI refresh events](events-refresh.md)
 - [Extension events](events-extensions-events.md)
 - [Extension context information](events-extensions-context.md)
-- [Other extensions](events-extensions-other.md)
+- [Other event extensions](events-extensions-other.md)

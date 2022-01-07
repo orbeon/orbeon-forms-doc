@@ -280,4 +280,4 @@ This mechanism is not satisfying because we think that it goes against the expec
 - [Keyboard events](events-extensions-keyboard.md)
 - [Extension events](events-extensions-events.md)
 - [Extension context information](events-extensions-context.md)
-- [Other extensions](events-extensions-other.md)
+- [Other event extensions](events-extensions-other.md)

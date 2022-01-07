@@ -412,4 +412,4 @@ _NOTE: This event doesn't bubble, so event listeners must directly observe the c
 - [UI refresh events](events-refresh.md)
 - [Keyboard events](events-extensions-keyboard.md)
 - [Extension context information](events-extensions-context.md)
-- [Other extensions](events-extensions-other.md)
+- [Other event extensions](events-extensions-other.md)

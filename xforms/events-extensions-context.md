@@ -94,4 +94,4 @@ On `xforms-submit-serialize`, the following extension attributes are supported:
 - [UI refresh events](events-refresh.md)
 - [Keyboard events](events-extensions-keyboard.md)
 - [Extension events](events-extensions-events.md)
-- [Other extensions](events-extensions-other.md)
+- [Other event extensions](events-extensions-other.md)
