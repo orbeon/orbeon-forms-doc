@@ -63,6 +63,58 @@ With Orbeon Forms, the `<xf:toggle>` action also causes ancestor `<xf:switch>` c
 
 Orbeon Forms adds an extension attribute, `xxf:toggle-ancestors="false"`, which allows toggling only the given `<xf:switch>`, even if it is contained within ancestor `<xf:switch>`/`<xf:case>` controls that are not visible, without toggling those.
 
+For example, with:
+
+```xml
+<xf:switch id="my-outer-switch">
+    <xf:case id="my-outer-case-1"/>
+    <xf:case id="my-outer-case-2">
+        <xf:switch id="my-inner-switch">
+            <xf:case id="my-inner-case-1"/>
+            <xf:case id="my-inner-case-2"/>
+        </xf:switch>
+    </xf:case>
+</xf:switch>
+```
+
+Assuming, initially:
+
+- `my-outer-case-1` is selected
+- `my-outer-case-2` is deselected
+- `my-inner-case-1` is selected
+- `my-inner-case-2` is deselected
+
+The following action:
+
+```xml
+<xf:toggle 
+    case="my-inner-case-2"
+    xxf:toggle-ancestors="false"/>
+```
+
+Produces the following result:
+
+- `my-outer-case-1` remains selected
+- `my-outer-case-2` remains deselected
+- `my-inner-case-1` is newly deselected
+- `my-inner-case-2` is newly selected
+
+While the default behavior, with action:
+
+```xml
+<xf:toggle 
+    case="my-inner-case-2"/>
+```
+
+Produces the following result:
+
+- `my-outer-case-1` is newly deselected
+- `my-outer-case-2` is newly selected 
+- `my-inner-case-1` is newly deselected
+- `my-inner-case-2` is newly selected 
+
+See also [XForms 1.1-compatible of switch/case](/configuration/properties/xforms.md#xforms-1.1-compatible-of-switch-case).
+
 ## See also
 
 - [Keyboard events](/xforms/events-extensions-keyboard.md)
