@@ -6,6 +6,8 @@
 
 Focus:
 
+- workflow improvements
+- maintenance upgrades (XPath processor, others)
 - TBD
 
 See the tentative [2022.1 items](https://github.com/orbeon/orbeon-forms/projects/32) for details.
@@ -14,11 +16,10 @@ Consider:
 
 - [low-hanging fruits](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Low-Hanging+Fruit%22)
 - [dogfood items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3ADogfood)
-- [maintenance items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3AMaintenance)
-- [spare time items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Spare+Time+Feature%22)
+- [maintenance items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Maintenance%22+)
+- [spare time items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue++label%3A%22Priority%3A+Spare+Time%22+)
 - [top issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+issue%22)
 - [top RFEs](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+RFE%22)
-- [2019.2 items](https://github.com/orbeon/orbeon-forms/projects/17)
 
 __Please remember that the following schedule is a plan, not a promise:__
 
