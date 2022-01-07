@@ -2,15 +2,11 @@
 
 ## Upcoming releases
 
-### Orbeon Forms 2021.1
+### Orbeon Forms 2022.1
 
-See the tentative [2021.1 items](https://github.com/orbeon/orbeon-forms/projects/26) for details.
+TODO
 
-Tentative focus:
-
-- [Progress on offline support](https://github.com/orbeon/orbeon-forms/issues/1221)
-- [Excel export/import](https://github.com/orbeon/orbeon-forms/issues/2840)
-- [Form Builder Formula inspector](https://github.com/orbeon/orbeon-forms/issues/4825)
+See the tentative [2022.1 items](https://github.com/orbeon/orbeon-forms/projects/32) for details.
 
 Consider:
 
@@ -24,19 +20,7 @@ Consider:
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2021-08: tentative release date
-
-### Orbeon Forms 2021.2
-
-See the tentative [2021.2 items](https://github.com/orbeon/orbeon-forms/projects/32) for details.
-
-Tentative focus:
-
-- TBD
-
-__Please remember that the following schedule is a plan, not a promise:__
-
-- 2021-12: tentative release date
+- 2022-08: tentative release date
 
 ## Past releases
 
@@ -44,9 +28,8 @@ See the [Orbeon Forms release history](release-history.md).
 
 ## Release strategy
 
-- __How often do we release?__ Since 2013, starting with version 4.0, we have had about 2 major releases per year, with point releases as needed.
-- __Why do we release often?__ We think more frequent releases are better because features and bug-fixes reach users faster. They also keep us almost always ready to ship, rather than having very large work in progress which can destabilize the product and then take weeks or months to fix. In short, we think that incremental development and releases are much better for everyone! Based on our experience since early 2013 when we introduced the new release schedule, we are so far (2019) very happy with the change.
-- __What do releases contain?__ Releases address both new features and bug-fixes. Point-releases (2018.1.1, 2018.1.2, etc.) essentially contain bug-fixes and sometimes very small features. They are done only when necessary, and only for the PE version of the product. Bigger features are left to the major releases (2017.1, 2017.2, 2018.1, 2018.2, etc.), and we strive to do those on a regular schedule.
+- __How often do we release?__ Since 2020 we have switched to one major release per year with point releases as needed.
+- __What do releases contain?__ Releases address both new features and bug-fixes. Point-releases (2020.1.1, 2020.1.2, etc.) essentially contain bug-fixes and sometimes very small features. They are done only when necessary, and only for the PE version of the product. Bigger features are left to the major releases (2019.1, 2019.2, 2020.1, 2021.1, etc.), and we strive to do those on a regular schedule.
 
 ## Planning strategy
 
@@ -55,7 +38,7 @@ See the [Orbeon Forms release history](release-history.md).
 
 ## Development tracks
 
-This are general development tracks which we consider from release to release: 
+These are general development tracks which we consider from release to release: 
 
 - __Mobile__ – Better support [responsive design](https://github.com/orbeon/orbeon-forms/issues/1181), and the ability to [run our form engine on the client](https://github.com/orbeon/orbeon-forms/issues/1221) to enable offline support and native apps.
 - __Performance__ – While Orbeon Forms has been proven to be able to sustain a [fair amount of load](faq/form-builder-runner.md#how-much-load-can-orbeon-forms-handle), we 're always striving to improve the product in that regard, including [reducing memory usage](https://github.com/orbeon/orbeon-forms/issues/1606), [reducing load time](https://github.com/orbeon/orbeon-forms/issues/1239), and [improving performance on MySQL](https://github.com/orbeon/orbeon-forms/issues/649).
