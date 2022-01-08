@@ -372,7 +372,7 @@ The following property controls the whether collapsing/opening of sections uses 
 
 ```xml
 <property
-    as="xs:boolean
+    as="xs:boolean"
     name="oxf.xforms.xbl.fr.section.animate.*.*"
     value="false"/>
 ```
@@ -381,9 +381,9 @@ A value of `false` can be more efficient with slower browsers or large forms.
 
 ### Grid markup
 
-At runtime, grids in your forms are rendered using HTML tables (with `table`, `tr`, `td` elements), instead of using the more modern [CSS grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) (with `div` elements), because older browsers, in particular IE11, only provides limited support for CSS grids.
+At runtime, grids in your forms are rendered using HTML tables, with elements such as `table`, `tr`, and `td`, this instead of using the more modern [CSS grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) (with `div` elements). This is because older browsers, in particular IE11, only provides limited support for CSS grids.
 
-[SINCE Orbeon Forms 2020.1.7 and 2021.1.1] As future versions of Orbeon Forms will drop support for IE11, we anticipate that Orbeon Forms will by default use the CSS grids layout instead of HTML tables. You can already make this choice today by adding the following property:
+[SINCE Orbeon Forms 2020.1.7 and 2021.1.1] As support for IE11 will be dropped in future versions of Orbeon Forms, we anticipate that Orbeon Forms will by default use the CSS grids layout instead of HTML tables. You can already make this choice today by adding the following property:
 
 ```xml
 <property
