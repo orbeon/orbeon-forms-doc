@@ -19,24 +19,25 @@ In all cases, also see [Securing Form Runner access when embedding](securing.md)
 
 The following versions of Liferay are supported:
 
-|Orbeon Forms Version|Tested Liferay Version    |Proxy Portlet|Full Portlet|
-|--------------------|--------------------------|-------------|------------|
-|2020.1              |Liferay 7.2.1 CE GA2      |yes          |no          |
-|2019.2.2            |Liferay 7.2.1 CE GA2      |yes          |no          |
-|                    |Liferay 7.1.3 CE GA4      |yes          |no          |
-|2019.2              |Liferay 7.1.3 CE GA4      |yes          |no          |
-|2019.1              |Liferay 7.1.3 CE GA4      |yes          |no          |
-|2018.2              |Liferay 7.1.2 CE GA3      |yes          |no          |
-|                    |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
-|2018.1              |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
-|2017.2              |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
-|2017.1              |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
-|                    |Liferay 7.0 CE GA3 / 7.0.2|yes          |no          |
-|2016.3              |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
-|2016.2              |Liferay 6.1.2 CE GA3      |yes          |yes         |
-|                    |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
-|4.9                 |Liferay 6.0               |yes          |yes         |
-|                    |Liferay 6.1.2 CE GA3      |yes          |yes         |
+| Orbeon Forms Version |Tested Liferay Version    |Proxy Portlet|Full Portlet|
+|----------------------|--------------------------|-------------|------------|
+| 2021.1               |Liferay 7.2.1 CE GA2      |yes          |no          |
+| 2020.1               |Liferay 7.2.1 CE GA2      |yes          |no          |
+| 2019.2.2             |Liferay 7.2.1 CE GA2      |yes          |no          |
+|                      |Liferay 7.1.3 CE GA4      |yes          |no          |
+| 2019.2               |Liferay 7.1.3 CE GA4      |yes          |no          |
+| 2019.1               |Liferay 7.1.3 CE GA4      |yes          |no          |
+| 2018.2               |Liferay 7.1.2 CE GA3      |yes          |no          |
+|                      |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
+| 2018.1               |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
+| 2017.2               |Liferay 7.0 CE GA5 / 7.0.4|yes          |no          |
+| 2017.1               |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
+|                      |Liferay 7.0 CE GA3 / 7.0.2|yes          |no          |
+| 2016.3               |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
+| 2016.2               |Liferay 6.1.2 CE GA3      |yes          |yes         |
+|                      |Liferay 6.2 CE GA6 / 6.2.5|yes          |yes         |
+| 4.9                  |Liferay 6.0               |yes          |yes         |
+|                      |Liferay 6.1.2 CE GA3      |yes          |yes         |
 
 ### Servlet vs. Liferay portal deployment
 
