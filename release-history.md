@@ -10,7 +10,7 @@ Starting with Orbeon Forms 2016.1, Orbeon Forms uses a versioning scheme with th
 
 Since 2020 we have switched to one major release per year. Minor releases, when needed, have an extra digit like 2018.1.1, 2018.1.2, etc. This doesn't impact subscriptions or support.
 
-## Orbeon Forms 4.x and newer
+## Orbeon Forms 4.0 and newer
 
 The following table lists all the release since Orbeon Forms 4.0 as well as the current status of support.
 
