@@ -23,8 +23,6 @@ This release addresses the following issues since [Orbeon Forms 2021.1 PE](orbeo
 - Admin page: "Select All" doesn't select forms on eXist ([\#5165](https://github.com/orbeon/orbeon-forms/issues/5165))
 - Publishing form with static attachment fails ([\#5173](https://github.com/orbeon/orbeon-forms/issues/5173))
 
-In addition, xxx CE xxxx
-
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
