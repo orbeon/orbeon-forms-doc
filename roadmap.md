@@ -6,9 +6,8 @@
 
 Focus:
 
-- workflow improvements
-- maintenance upgrades (XPath processor, others)
-- TBD
+- Product landing page and navigation enhancements
+- Automated testing
 
 See the tentative [2022.1 items](https://github.com/orbeon/orbeon-forms/projects/32) for details.
 
