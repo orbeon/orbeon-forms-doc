@@ -24,7 +24,7 @@ The lease given to Homer will end either because it expires without being renewe
 
 By default, the lease feature is disabled. It is enabled when the following conditions are met:
 
-- You've set the property `oxf.fr.detail.lease.enabled.*.*` to `true`, as shown below.
+- You've set the property `oxf.fr.detail.lease.enabled.*.*` to `true`, as shown below (the default is `false`, so you do need to set this property).
 - The user is authenticated.
 - The implementation of the persistence API used by the current app/form supports the lease feature. As of Orbeon Forms 2018.2, this is the case of all the built-in implementations of the persistence API for relational databases, but not of the implementation of the persistence API for eXist.
 
