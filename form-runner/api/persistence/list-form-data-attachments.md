@@ -17,6 +17,12 @@ The purpose of the `attachments` API is to return information about form data at
 - URL: `/fr/service/$app/$form/attachments?document=$document`
 - Method: `GET`
 
+Where:
+
+- `$app` is the form definition's application name
+- `$form` is the form definition's form name
+- `$document` is the form data's document id
+
 Request parameters:
 
 - `document`: the id of the document (form data) to retrieve

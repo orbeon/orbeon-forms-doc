@@ -18,20 +18,31 @@ Linking doesn't make any assumption on the technology used by the web site or ap
 
 ## Paths
 
-The `/fr/clerk/marriage-registration/new` in our example is what is referred to below as a *path*, and for a given form, multiple such paths exist. Knowing what those paths are is particulary important as this allows you to link from your web site or web application to forms your created with Form Builder. All the paths are relative to the *deployment context*, i.e. where you've deployed Orbeon Forms, which in our example was `http://www.city.gov/forms`.
+The `/fr/clerk/marriage-registration/new` in our example is what is referred to below as a *path*, and for a given form, multiple such paths exist. Knowing what those paths are is particulary important as this allows you to link from your web site or web application to forms your created with Form Builder. All the paths are relative to the *deployment context*, i.e. where you've deployed Orbeon Forms, which in our example was `https://www.city.gov/forms`.
 
-* Summary page for a given form definition:
-    `/fr/[APPLICATION_NAME]/[FORM_NAME]/summary`
-* New empty form data:
-    `/fr/[APPLICATION_NAME]/[FORM_NAME]/new`
-* Edit existing form data:
-    `/fr/[APPLICATION_NAME]/[FORM_NAME]/edit/[DOCUMENT_ID]`
-* Read-only HTML view:
-    `/fr/[APPLICATION_NAME]/[FORM_NAME]/view/[DOCUMENT_ID]`
-* Read-only PDF view:
-    `/fr/[APPLICATION_NAME]/[FORM_NAME]/pdf/[DOCUMENT_ID]`
-* Read-only TIFF view: [SINCE Orbeon Forms 2016.1]
-    `/fr/[APPLICATION_NAME]/[FORM_NAME]/tiff/[DOCUMENT_ID]`
+- Summary page for a given form definition:
+    `/fr/$app/$form/summary`
+- New empty form data:
+    `/fr/$app/$form/new`
+- Edit existing form data:
+    `/fr/$app/$form/edit/$document`
+- Read-only HTML view:
+    `/fr/$app/$form/view/$document`
+- Read-only PDF view:
+    `/fr/$app/$form/pdf/$document`
+- Read-only TIFF view: [SINCE Orbeon Forms 2016.1]
+    `/fr/$app/$form/tiff/$document`
+
+Where:
+
+- `$app` is the form definition's application name
+- `$form` is the form definition's form name
+- `$document` is the form data's document id
+
+By default, the latest published and available form definition version is used. You can request a specific form definition version using the `form-version` parameter. For example:
+
+- `/fr/acme/order/new?form-version=2`
+- `/fr/acme/order/edit/fc4c32532e8d35a2d0b84e2cf076bb070e9c1e8e?form-version=3`
 
 ## URL parameters
 
@@ -42,8 +53,14 @@ The `/fr/clerk/marriage-registration/new` in our example is what is referred to 
 You can pass the `form-version` URL parameter:
 
 ```
-/fr/[APPLICATION_NAME]/[FORM_NAME]/summary?form-version=2
+/fr/$app/$form/summary?form-version=$version
 ```
+
+Where:
+
+- `$app` is the form definition's application name
+- `$form` is the form definition's form name
+- `$version` is the form definition version number
 
 The page will return a "Not Found" error if the specified version is not found.
 
@@ -54,8 +71,14 @@ By default, the latest available version is selected.
 When using versioning, you can pass the `form-version` URL parameter:
 
 ```
-/fr/[APPLICATION_NAME]/[FORM_NAME]/new?form-version=2
+/fr/$app/$form/new?form-version=$version
 ```
+
+Where:
+
+- `$app` is the form definition's application name
+- `$form` is the form definition's form name
+- `$version` is the form definition version number
 
 By default, the latest available form definition version is used.
 

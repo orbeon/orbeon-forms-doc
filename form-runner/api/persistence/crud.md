@@ -2,12 +2,18 @@
 
 ## Service endpoint
 
-| Operation | HTTP Method | URL |
-| --------- | ----------- | --- |
-| Create    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Read      | `GET`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Update    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Delete    | `DELETE`    | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
+| Operation | HTTP Method | URL                                                                                       |
+| --------- | ----------- |-------------------------------------------------------------------------------------------|
+| Create    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+| Read      | `GET`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+| Update    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+| Delete    | `DELETE`    | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+
+Where:
+
+- `$app` is the form definition's application name
+- `$form` is the form definition's form name
+- `$document` is the form data's document id
 
 ## Basics
 

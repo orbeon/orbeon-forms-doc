@@ -17,6 +17,11 @@ The purpose of the `duplicate` API is to duplicate form data, including form dat
 - URL: `/fr/service/$app/$form/duplicate`
 - Method: `POST`
 
+Where:
+
+- `$app` is the form definition's application name
+- `$form` is the form definition's form name
+
 Request body:
 
 - `Content-Type: application/xml`

@@ -25,6 +25,12 @@ This allows scenarios such as:
     - `/fr/service/$app/$form/edit/$document`
 - Method: `POST`
 
+Where:
+
+- `$app` is the form definition's application name
+- `$form` is the form definition's form name
+- `$document` is the form data's document id
+
 Optional request body when using `/new`:
 
 - `Content-Type: application/xml`

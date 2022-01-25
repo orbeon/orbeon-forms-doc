@@ -36,20 +36,20 @@ For example, to deal with form data:
 
 /fr/service/persistence
 
-| Operation | HTTP Method | URL |
-| --------- | ----------- | --- |
-| Create    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Read      | `GET`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Update    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Delete    | `DELETE`    | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$doc/data.xml</code> |
-| Search    | `POST`      | `/fr/service/persistence/search/$app/$form` |
-| Metadata  | `GET`       | `/fr/service/persistence/form` |
+| Operation | HTTP Method | URL                                                                                       |
+| --------- | ----------- |-------------------------------------------------------------------------------------------|
+| Create    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+| Read      | `GET`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+| Update    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+| Delete    | `DELETE`    | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+| Search    | `POST`      | `/fr/service/persistence/search/$app/$form`                                               |
+| Metadata  | `GET`       | `/fr/service/persistence/form`                                                            |
 
 where:
 
 - `$app` is the form definition's application name
 - `$form` is the form definition's form name
-- `$doc` is the form definition's document id
+- `$document` is the form data's document id
 
 ## Optional features
 
