@@ -32,6 +32,11 @@ Optional request body when using `/new`:
 
 When not `POST`ing any XML data, just `POST` an empty request body to the service.
 
+By default, the latest published and available form definition version is used. You can request a specific form definition version using the `form-version` parameter. For example:
+
+- `/fr/service/acme/order/new?form-version=2`
+- `/fr/service/acme/order/edit/fc4c32532e8d35a2d0b84e2cf076bb070e9c1e8e?form-version=3`
+
 Response body:
 
 - `Content-Type: application/xml`
