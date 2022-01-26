@@ -53,6 +53,27 @@ The component can transform the uploaded image. The following attributes control
     - for JPEG compression only
     - value between 1 (worst) and 100 (best), but typically between 50 and 90
 
+The following matching properties allow setting global defaults. For example: 
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.image-attachment.transform-max-width.*.*"
+    value="1024"/>
+<property 
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.image-attachment.transform-max-height.*.*"
+    value="768"/>
+<property 
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.image-attachment.transform-format.*.*"
+    value="jpg"/>
+<property 
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.image-attachment.transform-quality.*.*"
+    value="90"/>
+```
+
 ## See also
 
 - [Image component](image.md)
