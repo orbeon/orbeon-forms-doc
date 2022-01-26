@@ -1,7 +1,5 @@
 # Input control
 
-
-
 ## Basic Usage
 
 ```xml
