@@ -1,7 +1,6 @@
 # Image attachment component
 
 
-
 ## What it does
 
 This component represents an attachment to a form which has to contain an image. The image is displayed by the component
@@ -26,6 +25,33 @@ This component dispatches the following events following the enclosed upload con
 - `xxforms-upload-cancel`
 - `xxforms-upload-done`
 - `xxforms-upload-error`
+
+## Image transformation
+
+[SINCE Orbeon Forms 2022.1]
+
+The component can transform the uploaded image. The following attributes control the transformation:
+
+- `transform-max-width`:
+    - no attribute: use the default (form-level then property) 
+    - blank attribute value: don't constrain the image width
+    - positive integer: scale the image width to the given value if the image is larger
+    - the image's aspect ratio is preserved when used in conjunction with `transform-max-height` 
+- `transform-max-height`:
+    - no attribute: use the default (form-level then property) 
+    - blank attribute value: don't constrain the image width
+    - positive integer: scale the image hight to the given value if the image is larger
+    - the image's aspect ratio is preserved when used in conjunction with `transform-max-width`
+- `transform-format`:
+    - no attribute: use the default (form-level then property) 
+    - blank attribute value: preserve the input format
+    - `jpg`: force the result to JPEG
+    - `png`: force the result to PNG
+- `transform-quality`:
+    - no attribute: use the default (form-level then property) 
+    - blank attribute value: use the default compression quality (80) 
+    - for JPEG compression only
+    - value between 1 (worst) and 100 (best), but typically between 50 and 90
 
 ## See also
 
