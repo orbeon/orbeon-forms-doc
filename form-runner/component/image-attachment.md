@@ -74,6 +74,12 @@ The following matching properties allow setting global defaults. For example:
     value="90"/>
 ```
 
+## Form Builder customer settings
+
+When used in Form Builder, the following custom settings for image transformation are available:
+
+![Custom settings](images/custom-settings-image-attachment.png)
+
 ## See also
 
 - [Image component](image.md)
