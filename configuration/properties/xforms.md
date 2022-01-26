@@ -290,14 +290,16 @@ By default, LHHA elements are represented as follows:
 - `<xf:label>` use the HTML `<label>` element
 - `<xf:hint>` use the HTML `<span>` element
 - `<xf:help>` use the HTML `<span>` element
-- `<xf:alert>` use the HTML `<span>` element
+- `<xf:alert>` 
+    - [SINCE Orbeon Forms 2022.1] Use the HTML `<button>` element; this is done so users can tab to the help icon, making it accessible to the keyboard to users who predominantly use a keyboard, either by choice or because they have difficulties using a pointing device.    
+    - [UP TO Orbeon Forms 2021.1] Use the HTML `<span>` element, and in Orbeon Forms 2021.1.2 and subsequent point releases, you can manually change the value of this property to `button` to make the help icon accessible with the keyboard.
 
-You can configure the following properties in your `properties-local.xml` to change the default configuration:
+You can configure the following properties in your `properties-local.xml` to change the default configuration.
 
 ```xml
 <property as="xs:string" name="oxf.xforms.label-element" value="label"/>
 <property as="xs:string" name="oxf.xforms.hint-element"  value="span"/>
-<property as="xs:string" name="oxf.xforms.help-element"  value="span"/>
+<property as="xs:string" name="oxf.xforms.help-element"  value="button"/>
 <property as="xs:string" name="oxf.xforms.alert-element" value="span"/>
 ```
 
