@@ -1,7 +1,6 @@
 # Currency Component
 
 
-
 ## What it does
 
 The currency component is an input field specialized to capture amounts in a particular currency.

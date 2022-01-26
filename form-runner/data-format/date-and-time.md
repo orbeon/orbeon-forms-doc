@@ -1,7 +1,6 @@
 # Date and Time Format
 
 
-
 ## Introduction
 
 There are two perspectives on dates and times with Orbeon Forms:

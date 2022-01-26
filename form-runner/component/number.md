@@ -1,7 +1,6 @@
 # Number Component
 
 
-
 ## What it does
 
 The number component is designed to enter integer or decimal numbers. See [Currency](../../form-runner/component/currency.md) for a similar component designed to enter currency amounts.

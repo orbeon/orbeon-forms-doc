@@ -106,6 +106,20 @@ Some controls have custom settings. For example:
 
 ![Custom Control Settings](images/control-settings-custom-properties.png)
 
+The following controls have custom settings:
+
+- [Number](/form-runner/component/number.md#form-builder-customer-settings)
+- [Currency](/form-runner/component/currency.md#form-builder-customer-settings)
+- [US Phone Number](/form-runner/component/us-phone.md#form-builder-customer-settings)
+- Date
+- Time
+- Date and Time
+- [Dropdown Date](/form-runner/component/dropdown-date.md#form-builder-customer-settings)
+- Dropdown
+- Dropdown with Search
+- [File Attachment](/form-runner/component/attachment.md#form-builder-customer-settings)
+- [Image Attachment](/form-runner/component/image-attachment.md#form-builder-customer-settings) [SINCE Orbeon Forms 2022.1]
+
 See also [Control metadata for the Control Settings dialog](metadata.md#control-metadata-for-the-control-settings-dialog)
 
 #### Automatic PDF options
