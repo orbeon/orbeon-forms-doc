@@ -9,6 +9,8 @@ This feature is available since Orbeon Forms 2017.2. It has been tested with the
 - Apache Tomcat 8.0.45
 - HAProxy 1.7.4
 
+We also have reports of this feature working with OpenLiberty and Hazelcast session replication.
+
 ## Introduction
 
 The purpose of replication is to provide high-availability of Orbeon Forms with as little disruption as possible to
@@ -159,7 +161,7 @@ Here is an example configuration:
            eternal="true"
            timeToLiveSeconds="0"
            timeToIdleSeconds="0"
-           diskPersistent="true"
+           diskPersistent="false"
            maxElementsOnDisk="0"
            diskExpiryThreadIntervalSeconds="120">
 
@@ -172,15 +174,6 @@ Here is an example configuration:
             properties="bootstrapAsynchronously=false"/>
 
     </cache>
-
-    <!-- XForms XBL cache. Only modify if you know what you are doing! -->
-    <cache name="xforms.xbl"
-           maxElementsInMemory="200"
-           memoryStoreEvictionPolicy="LFU"
-           overflowToDisk="false"
-           eternal="false"
-           timeToLiveSeconds="0"
-           timeToIdleSeconds="0"/>
 
     <cacheManagerPeerProviderFactory
         class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
@@ -196,6 +189,21 @@ Here is an example configuration:
 
 </ehcache>
 ```
+
+When using a firewall:
+
+1. The `multicastGroupPort` port might need an UDP firewall unlock.
+
+2. If you don't specify ports for `<cacheManagerPeerListenerFactory>`, the ports are chosen at random and might be blocked by the firewall. You can specify explicit ports to address this: 
+
+    ```xml
+    <cacheManagerPeerListenerFactory
+        class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory"
+        properties="
+            port=4501,
+            remoteObjectPort=4502"
+    />
+    ```
 
 ### Servlet container configuration
 
