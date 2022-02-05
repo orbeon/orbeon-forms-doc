@@ -76,7 +76,7 @@ And here is an example of embedding a form from a JSP page:
             out,                // Writer: where the embedded form is written
             "my-application",   // String: Form Runner app name
             "my-form",          // String: Form Runner form name
-            "new",              // String: Form Runner action name
+            "new",              // String: Form Runner mode (`new`, `edit`, `view`)
             null,               // String: Form Runner document id (optional)
             null,               // String: query string (optional)
             null                // Map<String, String>: custom HTTP headers (optional)

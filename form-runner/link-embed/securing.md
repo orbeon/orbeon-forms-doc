@@ -95,7 +95,7 @@ Another way is to pass the `Authorization` header directly from the embedding co
             out,                // Writer: where the embedded form is written
             "my-application",   // String: Form Runner app name
             "my-form",          // String: Form Runner form name
-            "new",              // String: Form Runner action name
+            "new",              // String: Form Runner mode (`new`, `edit`, `view`)
             null,               // String: Form Runner document id (optional)
             null,               // String: query string (optional)
             headers             // Map<String, String>: custom HTTP headers (optional)
