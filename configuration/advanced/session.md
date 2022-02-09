@@ -20,9 +20,9 @@ You'll most likely be interested in the information on this page if:
     <input type="hidden" name="$uuid" value="abc">
     ```
    
-    *NOTE: The hidden `$uuid` field is present until Orbeon Forms 2018.2, but is likely to be removed in the future.*
+    *NOTE: The hidden `$uuid` field is present until Orbeon Forms 2021.1, but may be removed in the future and shouldn't be relied upon.*
 
-3. When the Orbeon Forms client-side code sends a Ajax request, it includes that UUID in the body of the request, and the browser passes the `JSESSIONID`. On the server, Orbeon Forms uses that information to find the *state* it stored in step 1. The UUID sent by Orbeon Forms in the Ajax request looks like:
+3. When the Orbeon Forms client-side code sends an Ajax request, it includes that UUID in the body of the request, and the browser passes the `JSESSIONID`. On the server, Orbeon Forms uses that information to find the *state* it stored in step 1. The UUID sent by Orbeon Forms in the Ajax request looks like:
 
     ```xml
     <xxf:uuid>abc</xxf:uuid>
