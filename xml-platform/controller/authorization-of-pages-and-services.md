@@ -1,7 +1,5 @@
 # Authorization of Pages and Services
 
-
-
 ## Availability
 
 This feature is available since Orbeon Forms 4.0. Orbeon Forms 3.9 and earlier did *not* protect pages and services as described below.
@@ -29,7 +27,7 @@ When a request for a page or service reaches the controller, the following takes
 By default, the following applies for requests outside of Orbeon Forms:
 
 - Pages: the `GET` and `HEAD` HTTP methods are allowed and all other HTTP methods are disallowed. 
-- Servies: all HTTP methods are disallowed. 
+- Services: all HTTP methods are disallowed. 
 
 This matches the following default properties:
 
