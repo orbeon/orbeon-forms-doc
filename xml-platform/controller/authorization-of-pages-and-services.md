@@ -26,7 +26,28 @@ When a request for a page or service reaches the controller, the following takes
 
 ### Public methods
 
-Global properties for the controller allow changing the defaults:
+By default, the following applies for requests outside of Orbeon Forms:
+
+- Pages: the `GET` and `HEAD` HTTP methods are allowed and all other HTTP methods are disallowed. 
+- Servies: all HTTP methods are disallowed. 
+
+This matches the following default properties:
+
+```xml
+<property
+  as="xs:string"
+  processor-name="oxf:page-flow"
+  name="page-public-methods"
+  value="GET HEAD"/>
+
+<property
+  as="xs:string"
+  processor-name="oxf:page-flow"
+  name="service-public-methods"
+  value=""/>
+```
+
+In your properties-local.xml you can change those defaults, for example:
 
 ```xml
 <property
@@ -41,6 +62,8 @@ Global properties for the controller allow changing the defaults:
   name="service-public-methods"
   value="GET HEAD"/>
 ```
+
+__WARNING: Changing those defaults can introduce serious security risks. Please understand the impact that doing so might have.__
 
 On a per-controller basis, the `<controller>` element supports two attributes, `page-public-methods` and `service-public-methods`. These override the global properties:
 
