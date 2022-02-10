@@ -527,6 +527,43 @@ Use the authorization mechanism for services (see [Authorization of pages and se
 
 If `data-format-version=edge` is *not* specified, then the data `POST`ed is assumed to be in the same format as the form's database provider.
 
+[SINCE Orbeon Forms 2022.1]
+
+Whe `POST`ing data as described above, the data can now be incomplete. Say the 4.0.0 format of your form data is:
+
+```xml
+<form>
+  <contact>
+    <first-name/>
+    <last-name/>
+    <email/>
+    <phone/>
+  </contact>
+  <message>
+    <order-number/>
+    <topic/>
+    <comments/>
+  </message>
+</form>
+```
+
+Let's say that you just want to pass the `<last-name>` and `<order-number>` comments. You can now just `POST`:
+
+```xml
+<form>
+  <contact>
+    <last-name>Washington</last-name>
+  </contact>
+  <message>
+    <order-number>3141592</order-number>
+  </message>
+</form>
+```
+
+All other elements are automatically added.
+
+_NOTE: If the `POST`ed data contains extra XML elements not supported by the form, and error is returned._
+
 ### Initial data from service
 
 With the following properties, you can configure Form Runner to call an HTTP service instead of using the default instance provided as part of the form:
