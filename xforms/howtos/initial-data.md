@@ -117,7 +117,7 @@ If your XForms page responds to an HTTP `POST` containing XML, then it can acces
     src="input:instance"/>
 ```
   
-This results in the `user-data` instance being populated with the XML data posted to the XForms page. It's as easy as this!
+This results in the `user-data` instance being populated with the XML data `POST`ed to the XForms page. It's as easy as this!
 
 _NOTE: Nothing prevents you to combine this method with getting data from the request or a service._  
 

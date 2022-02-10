@@ -43,7 +43,7 @@ A service called `bar` is made available the following URL:
 
 The XPL has the following interface:
 
-- `instance` input: contains the XML data posted to the service URL
+- `instance` input: contains the XML data `POST`ed to the service URL
 - `data` output: XML data produced by the service
 
 The following example XPL just echoes the incoming data:

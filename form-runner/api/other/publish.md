@@ -75,7 +75,7 @@ Example response body:
 </response>
 ```
 
-_NOTE: When the form definition is POSTed as XML, form definition attachments such as PDF, XML Schema, or image attachments
+_NOTE: When the form definition is `POST`ed as XML, form definition attachments such as PDF, XML Schema, or image attachments
 will not be published reliably if a `document-id` is not passed._
 
 ## Example using curl

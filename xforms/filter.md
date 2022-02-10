@@ -280,7 +280,7 @@ _NOTE: In separate deployment, you can use `input:instance` only if your JSP or 
 
 ### Implementing XForms services with JSP
 
-The backend of your forms is usually best implemented with "services" which can be called with `<xf:submission>`. Most of the time, XML is being posted to the service and XML is returned by the service. Since services take XML as input and generate XML, [XML pipelines][2] are an ideal tool to implement services.
+The backend of your forms is usually best implemented with "services" which can be called with `<xf:submission>`. Most of the time, XML is being `POST`ed to the service and XML is returned by the service. Since services take XML as input and generate XML, [XML pipelines][2] are an ideal tool to implement services.
 
 However, you can also implement simple services directly with JSP. To produce XML output, your JSP page has to set the appropriate content type for the response with:
 

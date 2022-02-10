@@ -494,14 +494,14 @@ See also [the `set-data-status` action](/form-runner/advanced/buttons-and-proces
 When creating a new form (for instance going to the URL `http://localhost:8080/orbeon/fr/orbeon/bookshelf/new`), the initial form data (also known as "form instance" or "form instance data") can come from 3 different places:
 
 1. The initial instance provided in the form can be used.
-2. The Base64-encoded XML documented POSTed to the "new form" URI can be used.
+2. The Base64-encoded XML documented `POST`ed to the "new form" URI can be used.
 3. A service can be called to get the initial instance.
 
 ### Initial data posted to the New Form page
 
-The instance provided in the form is used by default and the POSTed XML document is used if there actually is an XML document being POSTed.
+The instance provided in the form is used by default and the `POST`ed XML document is used if there actually is an XML document being `POST`ed.
 
-The document can be POSTed in two ways:
+The document can be `POST`ed in two ways:
 
 1. As a direct `POST` of the XML document
 2. As an HTML form `POST` parameter called `fr-form-data`
@@ -518,14 +518,14 @@ For #2, this behaves as if a browser was submitting an HTML form that looks like
 
 The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to `POST` data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a [`send()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#send) using `data-format-version = "edge"`.
 
-Use the authorization mechanism for services (see [Authorization of pages and services](/xml-platform/controller/authorization-of-pages-and-services.md), to enable submitting initial instances to the new page:
+Use the authorization mechanism for services (see [Authorization of pages and services](/xml-platform/controller/authorization-of-pages-and-services.md)) to enable submitting initial instances to the new page:
 
 * Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when `POST`ing to Form Runner.
 * Your authorizer service must validate those credentials.
 
 [SINCE Orbeon Forms 2017.1]
 
-If `data-format-version=edge` is *not* specified, then the data POSTed is assumed to be in the same format as the form's database provider.
+If `data-format-version=edge` is *not* specified, then the data `POST`ed is assumed to be in the same format as the form's database provider.
 
 ### Initial data from service
 
@@ -564,7 +564,7 @@ The following property defines a space-separated list of request parameters to b
 
 The `oxf.fr.persistence.*.data-format-version` property does not affect `oxf.fr.detail.new.service.enable` and the data returned by the service must still be in `4.0.0` format in all cases.
 
-Enabling `oxf.fr.detail.new.service.enable` doesn't change the behavior with regard to POSTed instance: even if you are calling a service to get the initial instance, the POSTed instance will be used when a document is POSTed to the corresponding "new form" page.
+Enabling `oxf.fr.detail.new.service.enable` doesn't change the behavior with regard to `POST`ed instance: even if you are calling a service to get the initial instance, the `POST`ed instance will be used when a document is `POST`ed to the corresponding "new form" page.
 
 ## View mode
 
