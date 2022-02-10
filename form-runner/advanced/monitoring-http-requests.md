@@ -38,7 +38,7 @@ Next WireShark will show you all the HTTP traffic that goes through the machine 
 
 ## Orbeon Forms `HttpLoggingFilter`
 
-To enable, add the following to your `web.xml`, before all the other filters.
+[SINCE Orbeon Forms 2021.1, 2020.1.6] To enable, add the following to your `web.xml`, before all the other filters.
 
 ```xml
 <filter>
