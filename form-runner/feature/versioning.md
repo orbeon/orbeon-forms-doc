@@ -86,7 +86,13 @@ The `oxf.fr.detail.data-migration` is set as follows by default:
     as="xs:string"
     name="oxf.fr.detail.data-migration.*.*"
     value="disabled"/>
-```  
+```
+
+The possible tokens are:
+
+- __Enabled:__ `enabled`
+- __Disabled:__ `disabled`
+- __Raise an error:__ `error`
 
 ![Form Options](../../form-builder/images/form-settings-form-options.png)
 
