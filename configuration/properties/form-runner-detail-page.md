@@ -525,7 +525,7 @@ Use the authorization mechanism for services (see [Authorization of pages and se
 
 [SINCE Orbeon Forms 2017.1]
 
-If `data-format-version=edge` is *not* specified, then the data `POST`ed is assumed to be in the same format as the form's database provider.
+If `data-format-version=edge` is *not* specified, then the data `POST`ed is assumed to be in 4.0.0 format.
 
 [SINCE Orbeon Forms 2022.1]
 
@@ -563,6 +563,8 @@ Let's say that you just want to pass the `<last-name>` and `<order-number>` comm
 All other elements are automatically added.
 
 _NOTE: If the `POST`ed data contains extra XML elements not supported by the form, and error is returned._
+
+_Compatibility: If the data posted contains extra elements, those were ignored prior to Orbeon Forms 2022.1. With Orbeon Forms 2022.1 and newer, they cause an error._
 
 ### Initial data from service
 
