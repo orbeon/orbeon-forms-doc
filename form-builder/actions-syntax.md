@@ -51,7 +51,7 @@ The following example:
 - when the service call completes
     - the `my-table` repeated grid is cleared
     - iterating over the XML response, for each iteration
-        - adds a repetition at the end of the `my-table` repeated grid
+        - adds a repetition at the end of the `my-table` repeated grid
         - sets the value of controls on the new repetition
     - finally, all the `result-dropdown` dropdown control items are updated
 
@@ -650,6 +650,14 @@ This supports the following controls:
 - `<fr:image-attachment>`
 
 Note that the `<fr:control-setattachment>` action automatically sets a mediatype.
+
+### Alert for debugging
+
+[SINCE Orbeon Forms 2022.1, 2021.1.2, 2020.1.7] The `<fr:alert>` action is intended to be used for debugging, allowing you to get some visibility on the value of intermediary results, or more generally the value of any expression is at a given point. The value of the `message` attribute uses the [AVT syntax](/xforms/core/attribute-value-templates.md), so the example below would show a dialog with the message "The answer is 42".
+
+```xml
+<fr:alert message="The answer is {40+2}"/>
+```
 
 ## Error handling
 
