@@ -267,7 +267,7 @@
             * [Conventions](xforms/xbl/conventions.md)
             * [Learning from existing components](xforms/xbl/learning-from-existing-components.md)
         * Advanced topics
-            * [Modes](xforms/xbl/modes.md)
+            * [XBL Modes](xforms/xbl/modes.md)
             * [JavaScript companion classes](xforms/xbl/javascript.md)
             * [XBL library](xforms/xbl/library.md)
             * [Extensions](xforms/xbl/extensions.md)
