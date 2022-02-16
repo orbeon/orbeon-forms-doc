@@ -653,7 +653,7 @@ Note that the `<fr:control-setattachment>` action automatically sets a mediatype
 
 ### Alert for debugging
 
-[SINCE Orbeon Forms 2022.1, 2021.1.2, 2020.1.7] The `<fr:alert>` action is intended to be used for debugging, allowing you to get some visibility on the value of intermediary results, or more generally the value of any expression is at a given point. The value of the `message` attribute uses the [AVT syntax](/xforms/core/attribute-value-templates.md), so the example below would show a dialog with the message "The answer is 42".
+[SINCE Orbeon Forms 2022.1, 2021.1.2, 2020.1.7] The `<fr:alert>` action is intended to be used for debugging, allowing you to get some visibility on the value of intermediary results, or more generally the value of any expression is at a given point. The value of the `message` attribute uses the [AVT syntax](/xforms/attribute-value-templates.md), so the example below would show a dialog with the message "The answer is 42".
 
 ```xml
 <fr:alert message="The answer is {40+2}"/>
