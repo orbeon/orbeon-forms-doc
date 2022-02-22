@@ -212,6 +212,21 @@ Returns whether the form is running in the background.
 
 See also [Run form in the background API](/form-runner/api/other/run-form-background.md).
 
+### fr:is-browser-environment()
+
+[SINCE Orbeon Forms 2021.1]
+
+```xpath
+fr:is-browser-environment() as xs:boolean
+```
+
+Returns whether the form runtime is running entirely in a browser environment.
+
+As of Orbeon Forms 2021.1, this returns:
+
+- `true()`: when the form runs in offline mode (for example using the "Test Offline" Form Builder button) 
+- `false()`: in all other cases
+
 ### fr:is-design-time()
 
 ```xpath
@@ -298,6 +313,8 @@ fr:mode() as xs:string
 ```
 
 Return the Form Runner mode.
+
+xxxx link to new page explaining
 
 ### fr:is-draft()
 
