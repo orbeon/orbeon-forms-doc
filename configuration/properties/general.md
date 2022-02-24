@@ -438,18 +438,31 @@ This property can easily be commented out for deployment, or placed in `properti
 
 ### oxf.log4j-config
 
-| | |
-| --- | --- |
-| Name | `oxf.log4j-config` |
-| Purpose | configure the logging system |
-| Type | `xs:anyURI` |
-| Default Value | The logging system not initialized with a warning if this property is not present. |
+|                             |                                                              |
+|-----------------------------|--------------------------------------------------------------|
+| Name                        | `oxf.log4j-config`                                           |
+| Purpose                     | specify the location of the Log4j 1.x configuration file     |
+| Type                        | `xs:anyURI`                                                  |
+| Default Value in Properties | `oxf:/config/log4j.xml`                                      |
 
-Orbeon Forms uses the log4j logging framework. In Orbeon Forms, log4j is configured with an XML file. Here is the [default Orbeon Forms log4j configuration][8].
+For details about logging, see [Logging](/installation/logging.md).
 
-If this property is not set, the log4j initialization is skipped. This is useful if another subsystem of your application has already initialized log4j prior to the loading of Orbeon Forms.
+_NOTE: You don't usually need to modify this property and the default location for `log4j.xml` should be preserved._
 
-_NOTE: You don't usually need to modify this property._
+### oxf.log4j2-config
+
+[SINCE Orbeon Forms 2021.1, 2020.1.6, 2019.2.4, 2019.1.2, 2018.2.5, 2018.1.4]
+ 
+|                             |                                                              |
+|-----------------------------|--------------------------------------------------------------|
+| Name                        | `oxf.log4j2-config`                                          |
+| Purpose                     | specify the location of the Log4j 2.x configuration file     |
+| Type                        | `xs:anyURI`                                                  |
+| Default Value in Properties | `oxf:/config/log4j2.xml`                                     |
+
+For details about logging, see [Logging](/installation/logging.md).
+
+_NOTE: You don't usually need to modify this property and the default location for `log4j2.xml` should be preserved._
 
 ### oxf.pipeline.processors
 
@@ -508,5 +521,4 @@ _NOTE: You don't usually need to enable this property._
 
 [1]: http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning
 [3]: http://docs.oracle.com/javase/6/docs/technotes/guides/security/jsse/JSSERefGuide.html#X509TrustManager
-[8]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/config/log4j.xml
 [9]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl
