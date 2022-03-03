@@ -80,6 +80,7 @@
             * [Testing PDF production](form-builder/pdf-test.md)
         * [Email settings](form-builder/email-settings.md)
         * [Field-level encryption](form-builder/field-level-encryption.md)
+        * [Offline test](form-builder/offline-test.md)
         * [Section templates](form-builder/section-templates.md)
         * [Template syntax](form-builder/template-syntax.md)
         * [XML Schemas support](form-builder/xml-schema-support.md)
@@ -314,6 +315,7 @@
     * [State handling](contributors/state-handling.md)
     * [Contributor License Agreement](contributors/cla.md)
 * Release notes
+    * [Orbeon Forms 2021.1.2](/release-notes/orbeon-forms-2021.1.2.md)
     * [Orbeon Forms 2021.1.1](/release-notes/orbeon-forms-2021.1.1.md)
     * [Orbeon Forms 2021.1](/release-notes/orbeon-forms-2021.1.md)
     * [Orbeon Forms 2020.1.6](/release-notes/orbeon-forms-2020.1.6.md)
