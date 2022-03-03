@@ -1,8 +1,8 @@
-# Orbeon Forms 2021.1.1
+# Orbeon Forms 2021.1.
 
 __Friday, January 14, 2022__
 
-Today we released Orbeon Forms 2021.1.1! This release introduces bug-fixes. This update contains security updates and bug-fixes and is recommended for all users of:
+Today we released Orbeon Forms 2021.1.1 PE! This update contains security updates and bug-fixes and is recommended for all users of:
 
 - [Orbeon Forms 2021.1 PE](orbeon-forms-2021.1.md)
 
