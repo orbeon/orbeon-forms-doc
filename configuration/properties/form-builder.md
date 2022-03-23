@@ -58,7 +58,9 @@ In addition to controls, the toolbox has other features which you can enable or 
 <property as="xs:boolean" name="oxf.fb.menu.actions"           value="true"/>
 ```
 
-## Publish dialog actions
+## Publish dialog
+
+### Links to new and summary pages
 
 [SINCE Orbeon Forms 4.6]
 
@@ -73,6 +75,25 @@ This property allows specifying which of these actions are available:
     as="xs:string"
     name="oxf.fb.publish.buttons"
     value="new summary"/>
+```
+
+### Version
+
+[SINCE Orbeon Forms 2022.1, 2021.1.3]
+
+When versioning is supported, you can use the following property to control the behavior of the Version dropdown. If versioning isn't supported, this property has no effect. Also, the property has no effect if no version of this form has ever been published: in that case, version 1 will be published. The property can be set to:
+
+- `default-to-select` – The dropdown is enabled, and users need to select whether they want to create a new version or overwrite an existing version. This is the default.
+- `default-to-next` – The dropdown is enabled, and defaults to the choice to create a new version.
+- `default-to-latest` – The dropdown is enabled, and defaults to overwriting the latest version.
+- `force-next` – The dropdown is read-only, and a new version will be created on publish.
+- `force-latest` – The dropdown is read-only, and the latest published version will be overwritten on publish.
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fb.publish.version"
+    value="default-to-select"/>
 ```
 
 ## Maximum number of columns 
