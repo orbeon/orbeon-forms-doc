@@ -77,7 +77,7 @@ This property allows specifying which of these actions are available:
     value="new summary"/>
 ```
 
-### Version
+### The Version dropdown
 
 [SINCE Orbeon Forms 2022.1, 2021.1.3]
 
