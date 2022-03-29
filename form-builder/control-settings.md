@@ -90,6 +90,24 @@ See also [PDF templates](/form-builder/pdf-templates.md).
 
 The "Custom CSS Classes" field allows adding CSS classes which will be placed on the control in the resulting HTML. This can be used for custom styling.
 
+CSS classes don't directly control the style. Instead, they are space-separated tokens, which can then be referred to in [your own CSS files](/form-runner/styling/css.md).
+
+You could have for example:
+
+```
+my-name-field my-highlight
+```
+
+In your custom CSS file, you could refer to these classes with a selector, for example:
+
+```css
+.orbeon .my-name-field.my-highlight input {
+  border-color: blue;
+}
+```
+
+*NOTE: The above uses example `my-` prefixes as it is a good idea to prefix CSS classes to avoid clashes with other CSS classes on the page.*
+
 #### Control appearance
 
 [SINCE Orbeon Forms 4.10]

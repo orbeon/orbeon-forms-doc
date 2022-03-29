@@ -25,6 +25,8 @@ When producing PDF automatically, the "Page break before" checkbox, when enabled
 
 The "Custom CSS classes" field allows adding CSS classes which will be placed on the control in the resulting HTML. This can be used for custom styling.
 
+See [Control Settings](control-settings.md#custom-css-classes) for more about custom CSS classes. 
+
 ### Formulas
 
 - **Visibility:** Boolean expression specifying whether the section or grid is visible.
