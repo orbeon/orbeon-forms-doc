@@ -18,7 +18,8 @@ Here is an example of a very simple query:
 
 ```xml
 <search>
-    <query path="details/title">Peace</query>
+    <query/>
+    <query path="details/title" match="substring">Peace</query>
     <page-size>10</page-size>
     <page-number>1</page-number>
 </search>
@@ -31,7 +32,7 @@ The following shows for example a search from the demo Bookshelf form:
     <!-- Free-text search query -->
     <query/>
     <!-- Structured search query -->
-    <query path="details/title">Peace</query>
+    <query path="details/title" match="substring">Peace</query>
     <query path="details/author"/>
     <query path="details/language" match="exact">en</query>
     <drafts>include</drafts>
@@ -47,7 +48,11 @@ The `query` element is the most complex element. It is used for full-text and st
 
 ### Full-text search
 
-The first `<query>` element is used for free text search: its attributes, if any, are ignored, and its text content, if present, it taken to be the text of the search. The result details to return is still determined by the subsequent `<query>` elements with summary-field set to `true`. See below for more information about the response format. The exact semantic of the full-text search is implementation-dependent.
+The first `<query>` element is used for free text search: its attributes, if any, are ignored, and its text content, if present, is taken to be the text of the search. The result details to return is still determined by the subsequent `<query>` elements with summary-field set to `true`. See below for more information about the response format. The exact semantic of the full-text search is implementation-dependent.
+
+[SINCE Orbeon Forms 2022.1]
+
+The `<query>` element used for full-text search is no longer necessarily the first element. Instead, it is the first element that doesn't specify a `path` attribute. Similarly, `<query>` elements used for structured search are those with a `path` attribute. This means that it is no longer required to have an empty `<query>` element at the beginning. 
 
 ### Structured search
 
