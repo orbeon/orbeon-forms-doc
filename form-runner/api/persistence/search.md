@@ -391,8 +391,6 @@ Indexed fields are fields that are marked, in Form Builder, as:
 - "Show in Summary Page"
 - "Index control"
 
-## Query response with all indexed fields 
-
 ## See also
 
 - [CRUD](crud.md)
