@@ -143,11 +143,27 @@ If the persistence layer is able to run XPath expressions (as eXist or other XML
 - 2013-05-24: Removal
     - All the previously deprecated elements mentioned below have been removed, and are not sent to the search API.
 - 2011-11-22: Deprecation
-    - app and form elements:
+    - `app` and `form` elements:
         - these elements are deprecated and will be removed in the future. Since Orbeon Forms 3.9, they are present but empty
         - to obtain the app and form name being queried, extract them instead from the search URL
     - `sort-key` element:
         - this element was present but never used and will be removed in the future
+
+## Returning all indexed fields
+
+[SINCE Orbeon Forms 2022.1]
+
+You can return all the form's indexed fields, even if they don't have any matching `<query>` element, by specifying `return-all-indexed-fields="true"` on the root element of the query:
+
+```xml
+<search return-all-indexed-fields="true">
+    <query path="details/title" match="substring">Peace</query>
+    <page-size>10</page-size>
+    <page-number>1</page-number>
+</search>
+```
+
+For the search response in this case, see further below.
 
 ## Paging
 
@@ -259,14 +275,17 @@ And in `new` mode, zero or more documents can be returned:
 
 ## Query response
 
-The persistence layer must return a document of this form:
+### Example
+
+The persistence layer must return a document of this shape:
 
 ```xml
 <documents search-total="4" page-size="10" page-number="1" query="">
     <document created="2011-05-06T14:58:40.376-07:00"
               last-modified="2011-09-12T12:05:07.3-07:00"
               name="e8bfd3ba63fa12a8b59cdd5c08369a35"
-              draft="false">
+              draft="false"
+              operations="create read update delete">
         <details>
             <detail>The Terror</detail>
             <detail>Dan Simmons</detail>
@@ -276,7 +295,8 @@ The persistence layer must return a document of this form:
     <document created="2011-05-06T14:58:39.611-07:00"
               last-modified="2011-09-12T12:05:06.914-07:00"
               name="9531a191c77b75c417e9874427fa21f7"
-              draft="false">
+              draft="false" 
+              operations="create read update delete">
         <details>
             <detail>The Little Prince</detail>
             <detail>Antoine de Saint-Exupéry</detail>
@@ -287,6 +307,8 @@ The persistence layer must return a document of this form:
 </documents>
 ```
 
+### Root element
+
 The root element contains these attributes:
 
 - `search-total` attribute: number of documents matched by the current search.
@@ -294,6 +316,8 @@ The root element contains these attributes:
 - \[Up to 2016.1\] `page-size` attribute: echos of the query's attribute.
 - \[Up to 2016.1\] `page-number` attribute: echos of the query's attribute.
 - \[Up to 2016.1\] `query` attribute: echos of the full-text query text.
+
+### Document elements
 
 For each of the documents found, a `<document>` element is returned with the following attributes:
 
@@ -321,7 +345,53 @@ For each of the documents found, a `<document>` element is returned with the fol
     - [SINCE Orbeon Forms 2020.1]
     - name of the workflow stage associated with the data, or missing if there is no stage information
 
+### Detail elements
+
 Each document contains one `<detail>` element in the order determined by the `<query>` elements with a summary-field set to `true` in the request. The text value of the `<detail>` element is the value of the field in the document found.
+
+```xml
+<document created="2022-03-30T18:42:38.168Z" 
+          last-modified="2022-03-30T18:42:38.168Z" 
+          name="e8bfd3ba63fa12a8b59cdd5c08369a35" 
+          draft="false" 
+          operations="create read update delete">
+    <details>
+        <detail>The Terror</detail>
+        <detail>Dan Simmons</detail>
+        <detail>en</detail>
+    </details>
+</document>
+```
+
+[SINCE Orbeon Forms 2022.1]
+
+All elements contain a `path` attribute that identifies the field.
+
+```xml
+<document created="2022-03-30T18:42:38.168Z" 
+          last-modified="2022-03-30T18:42:38.168Z" 
+          name="e8bfd3ba63fa12a8b59cdd5c08369a35" 
+          draft="false" 
+          operations="create read update delete">
+    <details>
+        <detail path="details/title">The Terror</detail>
+        <detail path="details/author">Dan Simmons</detail>
+        <detail path="details/language">en</detail>
+    </details>
+</document>
+```
+
+Prior to Orbeon Forms 2022.1, the fields had to be identified by position.
+
+When `return-all-indexed-fields="true"` is specified in the search query, all indexed fields are returned as separate `<detail>` elements, and not only the fields specified in the search query with `<query>`, if any.
+
+Indexed fields are fields that are marked, in Form Builder, as:
+
+- "Show in search"
+- "Show in Summary Page"
+- "Index control"
+
+## Query response with all indexed fields 
 
 ## See also
 
