@@ -65,6 +65,16 @@ See also [Email properties](../configuration/properties/form-runner.md#email-set
 
 PDF files can be converted to TIFF images. See [TIFF Production](../form-runner/feature/tiff-production.md).
 
+## Third-party software requirements
+
+Orbeon Forms produces PDF files without the need for any third-party software installation.
+
+All modern web browsers are able to read and render PDF files, which means that you don't need any third-party software at all to read PDF files either.
+
+If you wish so, however, you can use [Adobe Acrobat Reader](https://www.adobe.com/acrobat/pdf-reader.html) to read PDF files. If you are on a Mac, the built-in [Preview](https://support.apple.com/guide/preview/welcome/mac) app also handles PDF files very well without the need for Adobe software.
+
+If you wish to create or update PDF files for [PDF templates](pdf-templates.md), then you need Adobe [Acrobat Pro DC](https://www.adobe.com/acrobat/free-trial-download.html?promoid=TY6XKZHL) or an alternative like [PDFpenPro](https://pdfpen.com/pdfpenpro/). However, if you use [automatic PDFs](pdf-automatic.md) then you don't need PDF authoring software.
+
 ## See also
 
 - [Automatic PDF](pdf-automatic.md)
