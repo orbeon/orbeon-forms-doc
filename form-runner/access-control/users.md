@@ -80,6 +80,17 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
 
 ## Header-driven method
 
+### Overview
+
+<img alt="" src="/form-runner/images/users-headers.png" width="519">
+
+With the header-driven method, you are responsible for, in the block labeled as "reverse proxy" in the above diagram, to:
+
+1. Authenticate users, preventing requests from going through to Orbeon Forms if unauthenticated access isn't authorized (e.g. redirecting users to a login page if they haven't logged in yet, or otherwise issuing a 403).
+2. Set the headers discussed below to pass information about the user to Orbeon Forms.
+
+When using the header-driven method, as it is your reverse proxy performing that performs user authentication, and not the container, you must remove or comment out the `<security-constraint>` in the `web.xml`.
+
 ### Individual headers or single header with JSON?
 
 You can pass information about the user either using:
