@@ -6,7 +6,7 @@
 
 Focus:
 
-- Product landing page and navigation enhancements
+- Product landing page and navigation enhancements ([#1410](https://github.com/orbeon/orbeon-forms/issues/1410))
 - Automated testing
 
 See the tentative [2022.1 items](https://github.com/orbeon/orbeon-forms/projects/32) for details.
