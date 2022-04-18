@@ -116,7 +116,7 @@ Two properties in `WEB-INF/resources/config/properties-local.xml` control exactl
 
 During XForms development, you might want to enable a more aggressive debug configuration.
 
-1. Change the path to the logging level in your Log4j2 or Log4j configuration. In your `WEB-INF/resources/config`, check if you have a file named `log4j2.xml` or `log4j.xml`:
+1. Change your Log4j2 or Log4j configuration. In your `WEB-INF/resources/config`, check if you have a file named `log4j2.xml` or `log4j.xml`:
  
     - If you have a file named `log4j2.xml` (with `2` in the file name), inside the element `<Loggers>`, add:
     
