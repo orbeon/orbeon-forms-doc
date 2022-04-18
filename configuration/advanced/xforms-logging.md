@@ -116,15 +116,27 @@ Two properties in `WEB-INF/resources/config/properties-local.xml` control exactl
 
 During XForms development, you might want to enable a more aggressive debug configuration.
 
-1. Add (or uncomment) the following in your `config/log4j.xml`:
+1. Change the path to the logging level in your Log4j2 or Log4j configuration. In your `WEB-INF/resources/config`, check if you have a file named `log4j2.xml` or `log4j.xml`:
+ 
+    - If you have a file named `log4j2.xml` (with `2` in the file name), inside the element `<Loggers>`, add:
+    
+        ```xml
+        <Logger name="org.orbeon.oxf.xforms.processor.XFormsServer" level="debug"/>
+        <Logger name="org.orbeon.oxf.processor.DebugProcessor"      level="debug"/>
+        <Logger name="org.orbeon.relational"                        level="debug"/>
+        <Logger name="org.orbeon.auth"                              level="debug"/>
+        <Logger name="org.orbeon.lifecycle"                         level="debug"/>
+        ```
+    
+    - If you have a file named `log4j.xml` (without `2` in the file name), uncomment the following: 
+    
+        ```xml
+        <category name="org.orbeon.oxf.xforms.processor.XFormsServer">
+            <priority value="debug"/>
+        </category>
+        ```
 
-    ```xml
-    <category name="org.orbeon.oxf.xforms.processor.XFormsServer">
-        <priority value="debug"/>
-    </category>
-    ```
-
-2. Configure the `oxf.xforms.logging.debug` property in your `config/properties-local.xml`. You can choose precisely what the XForms engine logs. The following is the most comprehensive configuration. It will log almost everything. In most cases, this is a good configuration during development, and while troubleshooting issues in staging:
+3. Configure the `oxf.xforms.logging.debug` property in your `config/properties-local.xml`. You can choose precisely what the XForms engine logs. The following is the most comprehensive configuration. It will log almost everything. In most cases, this is a good configuration during development, and while troubleshooting issues in staging:
 
     ```xml
     <property as="xs:NMTOKENS" name="oxf.xforms.logging.debug">
