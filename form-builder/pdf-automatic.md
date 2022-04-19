@@ -6,37 +6,33 @@ The PDF is produced based on the appearance of the form in your web browser. Thi
 
 ## Font configuration and embedding
 
-These properties allow specifying fonts to embed in PDF files. The `oxf.fr.pdf.font.path` property ends with an identifier for the font (here `vera`). It specifies the path to the font file. Optionally, the `oxf.fr.pdf.font.family` property ending with the same identifier (here `vera`) allows overriding the font family.
+### Overview
 
-*NOTE: The path to the font file must be an absolute path on the filesystem. It cannot be just a relative path pointing to the Orbeon Forms resources, as is the case with for example CSS files.*
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.pdf.font.path.vera"
-    value="/absolute/path/to/font-file.ttf"/>
-
-<property
-    as="xs:string"
-    name="oxf.fr.pdf.font.family.vera"
-    value="Arial"/>
-```
-
-To change the main font, you must map to the Helvetica Neue font. For example;
+These properties allow specifying fonts to embed in PDF files. You do this with 2 properties, which are tied together by a name you choose, and which doesn't have any significance outside the `properties-local.xml`. For instance, say you want to use the [Roboto](https://fonts.google.com/specimen/Roboto) font. You first map the family name, which you use in your CSS (here `Roboto`, with an uppercase `R`) to the name you chose (here `roboto`, with a lowercase `r`):
 
 ```xml
 <property
     as="xs:string"
-    name="oxf.fr.pdf.font.path.my-font"
-    value="/path/to/font.ttf"/>
-
-<property
-    as="xs:string"
-    name="oxf.fr.pdf.font.family.my-font"
-    value="Helvetica Neue"/>
+    name="oxf.fr.pdf.font.family.roboto"
+    value="Roboto"/>
 ```
 
-By default, the PDF engine picks standard fonts, which do not include all Unicode characters. This means for example that special characters, or Chinese characters, will not show by default in the resulting PDF file. To change this, you need to obtain a Unicode font and configure its usage. Here is an example of configuration properties which achieve this, assuming you have a Unicode font file called `arialuni.ttf`:
+Then you indicate where the TTF file for the name you chose is located on disk, using either one of the following two properties. Use the first [SINCE Orbeon Forms 2019.2] if you want to place your font inside the Orbeon Forms `WIB-INF/resources` directory, or use the second if you want to place it somewhere else, referring to the file using an absolute path.
+
+```xml
+<property
+     as="xs:string"  
+     name="oxf.fr.pdf.font.resource.roboto"                                  
+     value="/forms/resources/Roboto-Medium.ttf"/>
+<property
+    as="xs:string"
+    name="oxf.fr.pdf.font.path.roboto"
+    value="/absolute/path/to/Roboto-Medium.ttf"/>
+```
+
+### Changing the default font
+
+To change the main font, you must map your TTF file to the `Helvetica Neue` family. You often need to do this if you are using characters that are not included in the default font used by the PDF engine, for instance to have Chinese characters show in the PDF. To change this, you need to obtain a Unicode font, and configure it as follows, here assuming the file is named `arialuni.ttf`:
 
 ```xml
 <property
@@ -48,23 +44,6 @@ By default, the PDF engine picks standard fonts, which do not include all Unicod
     name="oxf.fr.pdf.font.family.arial-unicode"                            
     value="Helvetica Neue"/>
 ```
-
-[SINCE Orbeon Forms 2019.2]
-
-In addition to an absolute path to the font file, you can specify a path relative to the Orbeon Forms resources. Instead of `oxf.fr.pdf.font.path.*`, use `oxf.fr.pdf.font.resource.*`:
-
-```xml
-<property
-     as="xs:string"  
-     name="oxf.fr.pdf.font.resource.arial-unicode"                                  
-     value="/forms/resources/arialuni.ttf"/>
-<property 
-    as="xs:string"  
-    name="oxf.fr.pdf.font.family.arial-unicode"                            
-    value="Helvetica Neue"/>
-```
-
-In this example, the path `/forms/resources/arialuni.ttf` is relative to the Orbeon Forms [resources](/xml-platform/resources/resource-managers.md), for example under `WEB-INF/resources`.
 
 ## See also
 
