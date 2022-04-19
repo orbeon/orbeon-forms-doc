@@ -31,7 +31,7 @@ You can add new parameters with the "+" icon and remove them with the "-" icon.
 
 The following options are available for each template parameter:
 
-![Template parameter options](images/template-parameter-options.png)
+<img alt="Template parameter options" src="images/template-parameter-options.png">
 
 - Parameter name: this must be unique among parameters.
 - Parameter value:
