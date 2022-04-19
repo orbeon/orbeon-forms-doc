@@ -69,7 +69,7 @@ Links are intended to point to some Orbeon Forms pages or resources (namely, the
 
 To insert the URL, you use the template syntax within the "URL" field of the link dialog:
 
-![Editing a link URL](images/template-parameter-link-editor.png)
+<img alt="Editing a link URL" src="images/template-parameter-link-editor.png">
 
 Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty: 
 
@@ -102,15 +102,15 @@ When the form definition has more than one language:
 
 In the following example of a dynamic control label, the `$name` variable refers to the subsequent `name` parameter. The Template Parameters section declares that `name` parameter to refer to the `name` control.
 
-![Dynamic label configuration](images/control-settings-label-dynamic.png)
+<img alt="Dynamic label configuration" src="images/control-settings-label-dynamic.png">
 
 This is how this would appear in the running form:
 
-![Dynamic label at runtime](images/control-settings-label-dynamic-runtime.png)
+<img alt="Dynamic label at runtime" src="images/control-settings-label-dynamic-runtime.png">
 
 In the following example of dynamic email subject, the `$title` and `$author` variables refer also to the subsequent parameters.
 
-![Email Subject](images/email-settings-subject.png)
+<img alt="Email Subject" src="images/email-settings-subject.png">
 
 The text of the template is localized as usual when the form definition has more than one language.
 
