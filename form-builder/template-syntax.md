@@ -65,7 +65,7 @@ A template may omit references to any or all template parameters.
 
 Links are intended to point to some Orbeon Forms pages or resources (namely, the PDF file). The end user might see such links in explanatory text and email bodies, in particular.
 
-![Links in an email template](images/template-parameter-links-example.png)
+<img alt="Links in an email template" src="images/template-parameter-links-example.png">
 
 To insert the URL, you use the template syntax within the "URL" field of the link dialog:
 
