@@ -14,13 +14,13 @@ The notion of _publishing_ is central to Form Builder/Form Runner.
 
 When you start publishing a form with the Publish button at the bottom of Form Builder, a dialog opens to confirm the application name form name:
 
-<img src="images/publish-initial-no-versioning.png" width="502">
+<img alt="Creating a new version" src="images/publish-initial-no-versioning.png" width="502">
 
 If you decide to go ahead with publishing, simply use the Publish button.
 
 [SINCE Orbeon Forms 2017.2]
 
-You can decide whether the published form is *available* to end users with the "Make published form available" option. You can later change the availability of the published form either in Form Builder by re-publishing it, or from the [Form Runner runner Home page](/form-runner/feature/home-page.md#controlling-form-definitions-availability). By default the form is made available.   
+You can decide whether the published form is *available* to end users with the "Make published form available" option. You can later change the availability of the published form either in Form Builder by re-publishing it, or from the [Form Runner Home page](/form-runner/feature/home-page.md#controlling-form-definitions-availability). By default, the form is made available.   
 
 ## Versioning
 
@@ -34,7 +34,7 @@ When creating a new form version, publishing the form definition creates a new v
 
 <img alt="Overwriting an existing version" src="images/publish-version-overwrite.png" width="503">
 
-When overwriting an existing form definition, if the changes you have made to the form definition are small and non-structural, such as changing control labels only, the form definition will be compatible with existing form data. But if you have made structural changes, such as adding, removing, renaming, or moving controls, the form definition might be incompatible with existing data. We recommend being
+When overwriting an existing form definition, if the changes you have made to the form definition are small and non-structural, such as changing control labels only, the form definition will be compatible with existing form data. But if you have made structural changes, such as adding, removing, renaming, or moving controls, the form definition might be incompatible with existing data. We recommend being
 careful when overwriting an existing form definition version.
 
 See also [versioning](/form-runner/feature/versioning.md) for details about the implications of these options.
