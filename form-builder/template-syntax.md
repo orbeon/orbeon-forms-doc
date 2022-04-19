@@ -17,7 +17,7 @@ Templates, as of Orbeon Forms 2018.1, apply to:
 
 ## Templates
 
-You define a template by setting a placeholder with the following exact syntax:
+You define a template by setting a placeholder with the following syntax:
 
 ```
 {$foo}
