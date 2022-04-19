@@ -14,7 +14,7 @@ The notion of _publishing_ is central to Form Builder/Form Runner.
 
 When you start publishing a form with the Publish button at the bottom of Form Builder, a dialog opens to confirm the application name form name:
 
-<img alt="Creating a new version" src="images/publish-initial-no-versioning.png" width="502">
+<img src="images/publish-initial-no-versioning.png" width="502">
 
 If you decide to go ahead with publishing, simply use the Publish button.
 
