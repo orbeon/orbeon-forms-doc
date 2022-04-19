@@ -71,16 +71,7 @@ To insert the URL, you use the template syntax within the "URL" field of the lin
 
 <img alt="Editing a link URL" src="images/template-parameter-link-editor.png">
 
-Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty: 
-
-```xml
-<property 
-    as="xs:string"
-    name="oxf.fr.external-base-url"
-    value=""/>
-```
-
-You typically set it to an absolute URL as follows:
+Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty, and can set it to an absolute URL as follows:
 
 ```xml
 <property 
@@ -89,7 +80,7 @@ You typically set it to an absolute URL as follows:
     value="https://orbeon.acme.org/forms"/>
 ```
 
-*NOTE: As of Orbeon Forms 2020.1, links cannot point back to Form Runner when used with [embedding](/form-runner/link-embed/java-api.md) or the [ [Form Runner proxy portlet](/form-runner/link-embed/liferay-proxy-portlet.md).*
+You can't use links to point back to Form Runner when using [embedding](/form-runner/link-embed/java-api.md) or the [ [Form Runner proxy portlet](/form-runner/link-embed/liferay-proxy-portlet.md).
 
 ## Localization
 
