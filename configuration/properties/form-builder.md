@@ -64,7 +64,7 @@ In addition to controls, the toolbox has other features which you can enable or 
 
 [SINCE Orbeon Forms 4.6]
 
-By default the Publish dialog proposes, upon successful publication of a form definition, shortcuts to navigate to the published form's New or Summary pages.
+By default, the Publish dialog proposes, upon successful publication of a form definition, shortcuts to navigate to the published form's New or Summary pages.
 
 <img alt="" src="/form-builder/images/publish-initial-after.png" width="502">
 
