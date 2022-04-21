@@ -14,11 +14,13 @@ In general, you don't need to know about XPath in Form Builder, with the excepti
 
 ### Basic usage
 
-To refer to a control value from a formula, use the notation `$foo` where `foo` is the control name. For example:
+To refer to a form control value from a formula, use the variable notation `$foo` where `foo` is the control name. For example:
 
 ```xpath
 $price * $quantity
 ```
+
+This assumes a form control named "price" and another form control named "quantity". 
 
 ### Variables in depth
 
