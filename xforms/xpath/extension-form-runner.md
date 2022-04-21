@@ -68,7 +68,7 @@ value is not found.
 ```xpath
 fr:control-string-value(
     $control-name   as xs:string,
-    $follow-indexes as xs:boolean = false(),
+    $follow-indexes as xs:boolean,
     $section-name   as xs:string
 ) as xs:string?
 ```
@@ -116,7 +116,7 @@ For indexes in the array where it is not possible to return a typed value, the e
 ```xpath
 fr:control-typed-value(
     $control-name   as xs:string,
-    $follow-indexes as xs:boolean = false(),
+    $follow-indexes as xs:boolean,
     $section-name   as xs:string
 ) as array(xs:anyAtomicType)
 ```
