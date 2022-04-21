@@ -2,11 +2,11 @@
 
 ## Formulas and XPath
 
-Formulas in Orbeon Forms are expressed using *XPath*, a standard _expression language_ for XML. It does not allow you to _modify_ XML data, but it allows you to _query_ XML data and compute values.
+In Orbeon Forms, formulas are expressed using *XPath*, a standard _expression language_ for XML. It does not allow you to _modify_ XML data, but it allows you to _query_ XML data and compute values.
 
 For those familiar with Microsoft Excel or other spreadsheet software, you can think of formulas with Orbeon Forms as what follows the "=" sign in a spreadsheet. It is similar to that, but with a slightly different syntax and set of rules. 
 
-In general you don't need to know about XPath in Form Builder, with the exception of some properties in the Control Settings and Section Settings dialogs. XPath expressions are considered an advanced feature of Form Builder, which might require some programming knowledge.
+In general, you don't need to know about XPath in Form Builder, with the exception of some properties in the Control Settings and Section Settings dialogs. Formulas are considered an advanced feature of Form Builder, which might require some programming knowledge.
 
 *NOTE: Incorrect XPath expressions may cause the form to behave improperly, so caution must be applied.*
 
@@ -20,8 +20,42 @@ To refer to a control value from a formula, use the notation `$foo` where `foo` 
 $price * $quantity
 ```
 
-- [When the internal data format matters](/form-runner/data-format/form-data.md#when-the-internal-data-format-matters)
-- [Examples of formulas](formulas-examples.md)
+### Variables in depth
+
+In a formula, when referring to `$price`, the result is actually an XML node, as this is how Orbeon Forms stores data internally. Think of a node as a container for a value:
+
+```xml
+<price>4.99</price>
+```
+
+There are two ways to obtain a value from this node:
+
+- using the `string()` function
+  - this returns, of course, a value of type `string` 
+  - example: `$price/string()` or `string($price)`
+- using the `data()` function
+  - this returns a value of the type associated with the associated form control
+  - example: `$price/data(.)` or `data($price)`
+
+Now in many cases, XPath gets the value for you without calling `string()` or `data()`. For example when you perform a multiplication:
+
+```xpath
+$price * $quantity
+```
+
+Here, XPath "sees" that the multiplication cannot apply to nodes, and automatically fetches ("atomizes") the value from the nodes. In this case, if the associated form control has type "Decimal", then the values will be retrieved from the nodes and converted to decimal numbers as if you had used the `data()` function explicitly:
+
+```xpath
+data($price) * data($quantity)
+```
+
+Note that the multiplication will fail if the form controls do not contain valid decimal numbers.
+
+The `data()` function can be a little tricky because of this. Now say you'd like instead to *concatenate* the text of those nodes containing decimal values even if the don't contain valid decimal values. Then you have to explicitly use the `string()` function:
+
+```xpath
+concat('Price: ', string($price), 'Quantity: ', string($quantity))
+```
 
 ### Resolution of repeated controls
 
