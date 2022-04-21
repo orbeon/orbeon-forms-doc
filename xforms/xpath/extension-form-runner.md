@@ -63,22 +63,20 @@ fr:control-string-value(
 This function returns the value of a Form Runner control by name as a string, or an empty sequence if the control or
 value is not found.
 
-[SINCE Orbeon Forms 2021.1]
+[SINCE Orbeon Forms 2021.1.3]
 
 ```xpath
 fr:control-string-value(
     $control-name   as xs:string,
     $follow-indexes as xs:boolean = false(),
-    $library-name   as xs:string
+    $section-name   as xs:string
 ) as xs:string?
 ```
 
-- `$library-name`
-    - specifies the name of a library identifying one or more section template instances included in the form
-    - the search is limited to searching within those section template instances
-    - this is supported whether the function is called
-        - at the top-level of the form
-        - or within the any section template instance 
+- `$section-name`
+    - specifies the name of a form section identifying one or more (in case of repeated sections) section template instances included in the form
+    - the search is limited to searching within those sections
+    - if the section name does not identify a section containing a section template, the function returns the empty sequence
 
 ### fr:control-typed-value()
 
@@ -113,22 +111,20 @@ For indexes in the array where it is not possible to return a typed value, the e
 
 *NOTE: The reason this returns an XPath array and not an XPath sequence is that this lets the caller know which values are the empty sequence. This wouldn't be possible with an XPath sequence.* 
 
-[SINCE Orbeon Forms 2021.1]
+[SINCE Orbeon Forms 2021.1.3]
 
 ```xpath
 fr:control-typed-value(
     $control-name   as xs:string,
     $follow-indexes as xs:boolean = false(),
-    $library-name   as xs:string
+    $section-name   as xs:string
 ) as array(xs:anyAtomicType)
 ```
 
-- `$library-name`
-    - specifies the name of a library identifying one or more section template instances included in the form
-    - the search is limited to searching within those section template instances
-    - this is supported whether the function is called
-        - at the top-level of the form
-        - or within the any section template instance
+- `$section-name`
+    - specifies the name of a form section identifying one or more (in case of repeated sections) section template instances included in the form
+    - the search is limited to searching within those sections
+    - if the section name does not identify a section containing a section template, the function returns the empty sequence
 
 ### fr:created-dateTime()
 
