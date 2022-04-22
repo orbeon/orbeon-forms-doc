@@ -179,6 +179,25 @@ Log4j 1.x (`WEB-INF/resources/config/log4j.xml`):
 </appender>
 ```
 
+## Logging HTTP headers
+
+[SINCE Orbeon Forms 2022.1]
+
+You can set the following property to ask Orbeon Forms to add all HTTP headers to the [Log4j Thread Context](https://logging.apache.org/log4j/2.x/manual/thread-context.html).
+
+```xml
+<property 
+    as="xs:boolean"
+    name="oxf.log4j.thread-context.http-headers"                
+    value="true"/>
+```
+
+When this property is set, you can then log specific headers using the `%X{}` syntax in Log4j pattern, prefixing the header name in lower case by `orbeon-incoming-http-header-`. For instance, adding the following to your pattern will log the value of the `Host` header. 
+
+```
+%X{orbeon-incoming-http-header-host}
+```
+
 ## Client-side logging
 
 As more work is getting done on the client (web browser), Orbeon Forms has added logging abilities there as well. In general, Orbeon Forms doesn't log much except in case of error, and then it logs to the JavaScript console, which is usually not consulted by the end-user.
