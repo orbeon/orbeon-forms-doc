@@ -8,7 +8,7 @@ You can learn more about:
 - [Core actions](actions-core.md)
 - [Form Runner actions](actions-form-runner.md)
 - [XForms actions](actions-xforms.md)
-- [Predefined processes and dialogs](predefined.md)
+- [Predefined buttons, processes and dialogs](predefined.md)
 
 ## Availability
 
