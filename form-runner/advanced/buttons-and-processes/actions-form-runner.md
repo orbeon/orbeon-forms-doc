@@ -253,6 +253,19 @@ Depending on the value of the parameter, it generates a view of the current form
     - With Chrome, IE, and Edge the PDF or TIFF will show in a new window.
     - With Safari and Firefox the PDF or TIFF will show in the current window.
 
+[SINCE Orbeon Forms 2021.1.3]
+
+Two new formats are supported:
+
+- `xml-form-structure-and-data`
+    - Export an XML file containing information about the structure of the form as well as the current data.
+    - This file format can also be used for later import.
+    - The `excel-export` button and default process run `open-rendered-format(format = "xml-form-structure-and-data")`.
+- `excel-with-named-ranges`
+    - Export an Excel file approximating the structure of the form as well as the current data.
+    - This file format can also be used for later import.
+    - The `excel-export` button and default process run `open-rendered-format(format = "excel-with-named-ranges")`.
+
 ## Other actions
 
 - `captcha`: Trigger the captcha.
