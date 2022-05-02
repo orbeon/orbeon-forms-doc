@@ -60,7 +60,7 @@ This means that until that is addressed, or until we move to another host for pa
 
 If you have a GitHub account:
 
-- Create a PAT (Personal Access Token) with the Read Packages ability
+- Create a [PAT (Personal Access Token)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the Read Packages ability
 - Export that token before launching sbt:
 
 ```bash
