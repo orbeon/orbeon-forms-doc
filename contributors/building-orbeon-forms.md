@@ -54,11 +54,9 @@ You don't have to use the following, but in case you care, the Orbeon Forms deve
 
 ### GitHub token
 
-Start Orbeon Forms 2021.1, some packages are hosted by [GitHub Packages](https://github.com/features/packages). 
+Starting with Orbeon Forms 2021.1, some packages are hosted by [GitHub Packages](https://github.com/features/packages). Unfortunately, as of May 2022, there is no way to enable downloading these packages fully anonymously via tools like Maven or sbt. There is a now [multi-year thread on GitHub about this](https://github.community/t/download-from-github-package-registry-without-authentication/14407/146).
 
-Unfortunately, as of May 2022, there is no way to enable downloading these packages anonymously via tools like Maven or sbt. There is a now [multi-year thread on GitHub about this](https://github.community/t/download-from-github-package-registry-without-authentication/14407/146).
-
-Until that is addressed, or until we move to another host for packages, this means that a GitHub Token is needed to build Orbeon Forms.
+This means that until that is addressed, or until we move to another host for packages, a GitHub token is needed to build Orbeon Forms.
 
 If you have a GitHub account:
 
@@ -70,6 +68,8 @@ export GITHUB_TOKEN=ghp_...
 ```
 
 This can also be stored in your shell profile file.
+
+If you don't have a GitHub account, either create one or ask us for a token.
 
 ### Building
 
