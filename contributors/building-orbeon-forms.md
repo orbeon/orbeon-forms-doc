@@ -52,14 +52,33 @@ You don't have to use the following, but in case you care, the Orbeon Forms deve
 - the latest version of MacOS (Mohave as of 2018-10)  
 - the latest version of IntelliJ IDEA (2018.2 as of 2018-09) and the Scala plugin
 
+### GitHub token
+
+Start Orbeon Forms 2021.1, some packages are hosted by [GitHub Packages](https://github.com/features/packages). 
+
+Unfortunately, as of May 2022, there is no way to enable downloading these packages anonymously via tools like Maven or sbt. There is a now [multi-year thread on GitHub about this](https://github.community/t/download-from-github-package-registry-without-authentication/14407/146).
+
+Until that is addressed, or until we move to another host for packages, this means that a GitHub Token is needed to build Orbeon Forms.
+
+If you have a GitHub account:
+
+- Create a PAT (Personal Access Token) with the Read Packages ability
+- Export that token before launching sbt:
+
+```bash
+export GITHUB_TOKEN=ghp_...
+```
+
+This can also be stored in your shell profile file.
+
 ### Building
 
-More of the build is now done with [sbt](http://www.scala-sbt.org/).
+Most of the build is now done with [sbt](https://www.scala-sbt.org/).
 
 To build files for development:
 
 - `sbt`: launch sbt
-- `project root`: this is the default
+- `project /`: this is the default (with older versions of sbt: `project root`)
 - `package`: compile Scala, Java and assets, create JARs, and create the exploded WAR 
 
 The exploded WAR is available under:
@@ -69,9 +88,9 @@ The exploded WAR is available under:
 To run all the tests:
 
 - `sbt`: launch sbt
-    - `project root`: this is the default
-    - `test:test`: run unit tests
-    - `db:test`: run database tests
+    - `project /`: this is the default (with older versions of sbt: `project root`)
+    - `Test/test`: run unit tests (with older versions of sbt: `test:test`)
+    - `Db/test`: run database tests (with older versions of sbt: `db:test`)
 
 To create a distribution:
 
@@ -397,6 +416,9 @@ A related known issue, from the command-line, is that running `ant classes` twic
 Alternatively:
 
 - run `ant teamcity-release` to clean, test, and build the entire release
+
+xxxxx GITHUB_TOKEN
+xxx IntelliJ and GITHUB_TOKEN
 
 ## See also
 
