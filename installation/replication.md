@@ -340,8 +340,9 @@ be able to continue working with the form. Unsaved data will be lost.
 
 In such cases, enabling the [autosave feature][2] can alleviate the issue.
 
-The `ehcache.xml` configuration provided above attempts to minimize this kind of issues by adding
-`replicateAsynchronously=false`. 
+The `ehcache.xml` configuration provided above attempts to minimize this kind of issues by adding `replicateAsynchronously=false`.
+
+_NOTE: We have feedback from customers that if manual peer discovery (RMI TCP unicast) is enabled, setting `replicateAsynchronously="true"` works and helps reduce latency._
 
 ## See also
 
