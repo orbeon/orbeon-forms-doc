@@ -12,12 +12,12 @@ If something is broken, please [let us know](https://twitter.com/intent/tweet?in
 
 You need to have already installed:
 
-- [git](http://git-scm.com/)
-- [ant](http://ant.apache.org/)
-- [sbt](http://www.scala-sbt.org/)
-- [Tomcat 8](http://tomcat.apache.org/download-80.cgi) ([Tomcat 7](http://tomcat.apache.org/download-70.cgi) still works as of 2018-10-01 but is deprecated)
+- [git](https://git-scm.com/)
+- [ant](https://ant.apache.org/)
+- [sbt](https://www.scala-sbt.org/)
+- [Tomcat 8](http:s//tomcat.apache.org/download-80.cgi) ([Tomcat 7](http://tomcat.apache.org/download-70.cgi) still works as of 2018-10-01 but is deprecated)
 - [Node.js](https://nodejs.org/en/)
-- Java 1.8 or Java 10 (Java 1.7 still works as of 2018-10-01 but is deprecated)
+- Java 11 or newer
 
 On macOS, you can install the following easily if you have [Homebrew](http://brew.sh/):
 
