@@ -88,6 +88,45 @@ List of emails are space- or comma- separated.
     value="mary@example.org,nancy@example.org"/>
 ```
 
+## Format of email addresses
+
+In the examples above, only raw email addresses are shown. Multiple addresses must be separated by commas.
+
+[SINCE Orbeon Forms 2021.4]
+
+The configuration properties can now contain a name, following the standard syntax:
+
+```
+John Smith <john@example.org>
+```
+
+Keep in mind that if the addresses are stored in an XML attribute in your `properties-local.xml`, you need to escape some characters:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.email.from.*.*"
+    value="John Smith &lt;john@example.org&gt;"/>
+```
+
+Similarly, if you use quotes, you need to escape them:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.email.from.*.*"
+    value="&quot;John Smith&quot; &lt;john@example.org&gt;"/>
+```
+
+When more than one email was present, whitespace was previously allowed in additions to commas. This is no longer allowed, and you need to use the comma exclusively as a separator (with whitespace allowed around commas):
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.email.from.*.*"
+    value="&quot;John Smith&quot; &lt;john@example.org&gt;, Alice &lt;alice@acme.org&gt;"/>
+```
+
 ## Attachment properties
 
 - `attach-pdf`: whether the PDF representation is attached to the email
