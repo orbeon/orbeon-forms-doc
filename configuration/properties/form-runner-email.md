@@ -100,6 +100,12 @@ The configuration properties can now contain a name, following the standard synt
 John Smith <john@example.org>
 ```
 
+Or:
+
+```
+"John Smith" <john@example.org>
+```
+
 Keep in mind that if the addresses are stored in an XML attribute in your `properties-local.xml`, you need to escape some characters:
 
 ```xml
@@ -118,7 +124,7 @@ Similarly, if you use quotes, you need to escape them:
     value="&quot;John Smith&quot; &lt;john@example.org&gt;"/>
 ```
 
-When more than one email was present, whitespace was previously allowed in additions to commas. This is no longer allowed, and you need to use the comma exclusively as a separator (with whitespace allowed around commas):
+When more than one email is present, if you specify names, you must use commas exclusively as a separator (with whitespace allowed around commas):
 
 ```xml
 <property

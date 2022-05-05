@@ -46,17 +46,17 @@ The following email options are available:
 - __Email recipient:__
     - When selected, the control is used to determine an email recipient ("To:") when the form data is sent by email.
     - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.to` property is used.
-    - A single control value can contain more than one email address, separated by commas (`,`) ~~or spaces~~.
+    - A single control value can contain more than one email address, separated by commas (`,`) or spaces.
 - __Email carbon copy recipient:__
     - SINCE Orbeon Forms 2017.1
     - When selected, the control is used to determine a carbon copy email recipient ("Cc:") when the form data is sent by email.
     - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.cc` property is used.
-    - A single control value can contain more than one email address, separated by commas (`,`) ~~or spaces~~.
+    - A single control value can contain more than one email address, separated by commas (`,`) or spaces.
 - __Email blind carbon copy recipient:__
     - SINCE Orbeon Forms 2017.1
     - When selected, the control is used to determine a blind carbon copy email recipient ("Bcc:") when the form data is sent by email.
     - If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.bcc` property is used.
-    - A single control value can contain more than one email address, separated by commas (`,`) ~~or spaces~~.
+    - A single control value can contain more than one email address, separated by commas (`,`) or spaces.
 - __Email sender:__
     - SINCE Orbeon Forms 2017.1
     - When selected, the control is used to determine an email sender ("From:") when the form data is sent by email.
@@ -86,10 +86,22 @@ Email addresses can now contain a name, following the standard syntax:
 John Smith <john@example.org>
 ```
 
-When more than one email was present, whitespace was previously allowed in additions to commas. This is no longer allowed, and you need to use the comma exclusively as a separator (with whitespace allowed around commas):
+Or:
+
+```
+"John Smith" <john@example.org>
+```
+
+When more than one email is present, if you specify names, you must use commas exclusively as a separator (with whitespace allowed around commas):
 
 ```
 John Smith <john@example.org>, Alice <alice@acme.org>
+```
+
+Or:
+
+```
+"John Smith" <john@example.org>, "Alice" <alice@acme.org>
 ```
 
 #### Name of the PDF field
