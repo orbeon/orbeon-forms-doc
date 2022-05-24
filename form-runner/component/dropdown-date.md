@@ -1,4 +1,4 @@
-# Dropdown Date Component
+# Dropdown Date component
 
 ## What it does
 
@@ -65,3 +65,7 @@ The values for the start and end year are determined as follows:
 3. Finally, if none of the properties mentioned in points 1 and 2 above are usable, the start year is set to 1970, and the end year to the current year.
 
 The values of all the properties mentioned earlier are XPath expressions. In particular, this allows you to set an end year which isn't hard coded and instead allows you to set it to, say, "this year".
+
+## See also
+
+- [Date](date.md)

@@ -1,5 +1,4 @@
-# Number Component
-
+# Number component
 
 ## What it does
 
