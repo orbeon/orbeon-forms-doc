@@ -102,6 +102,7 @@
         * [Character counter](form-runner/component/character-counter.md)
         * [Checkbox input](form-runner/component/checkbox-input.md)
         * [Currency](form-runner/component/currency.md)
+        * [Date](form-runner/component/date.md)
         * [Dropdown date](form-runner/component/dropdown-date.md)
         * [Static and dynamic dropdown](form-runner/component/static-dynamic-dropdown.md)
         * [Error summary](form-runner/component/error-summary.md)
