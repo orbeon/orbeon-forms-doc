@@ -25,8 +25,9 @@ You use the date component like a regular input field, for example:
 `fr:date` supports parameters, which you can set via properties, Form Builder settings, or directly on `fr:date`:
 
 - `week-start-day`
-    - optional prefix shown before the number
+    - first day of the week
     - values: `sunday` or `monday`
+    - default: when not specified, the start day depends on the language (for example Sunday for English, Monday for French)
 
 These are the default values of the properties:
 
