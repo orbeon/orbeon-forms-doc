@@ -193,7 +193,7 @@ Return the form's title for the current form language.
 [SINCE Orbeon Forms 2022.1]
 
 ```xpath
-fr:form-runner-link($link-type) as xs:string
+fr:form-runner-link($link-type as xs:string) as xs:string
 ```
 
 - `$link-type`
