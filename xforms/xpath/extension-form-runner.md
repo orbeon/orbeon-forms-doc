@@ -339,7 +339,7 @@ fr:mode() as xs:string
 
 Return the Form Runner mode.
 
-xxxx link to new page explaining
+[//]: # (TODO link to new page explaining)
 
 ### fr:is-draft()
 
