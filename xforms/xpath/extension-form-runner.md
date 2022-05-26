@@ -188,6 +188,35 @@ fr:form-title() as xs:string?
 
 Return the form's title for the current form language.
 
+### fr:form-runner-link
+
+[SINCE Orbeon Forms 2022.1]
+
+```xpath
+fr:form-runner-link($link-type) as xs:string
+```
+
+- `$link-type`
+    - one of: "edit", "view", "new", "summary", "home", "pdf"
+
+<!-- TODO: "landing", "forms"? -->
+
+Create a link back to Form Runner for the given page type. If applicable, the current form's application name, form name, form version, and document id are used.
+
+Example:
+
+```xpath
+fr:form-runner-link('edit')
+```
+
+might return:
+
+```
+https://example.org/orbeon/fr/acme/sales/edit/3c67ec792809f100ec241d0341783a743fc0d7c1
+```
+
+The first part of the URL can be configured with the [`oxf.fr.external-base-url` property](/form-builder/template-syntax.md#links).
+
 ### fr:form-version()
 
 ```xpath
