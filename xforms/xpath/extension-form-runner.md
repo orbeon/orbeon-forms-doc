@@ -212,7 +212,7 @@ fr:form-runner-link('edit')
 might return:
 
 ```
-https://example.org/orbeon/fr/acme/sales/edit/3c67ec792809f100ec241d0341783a743fc0d7c1
+https://orbeon.acme.org/forms/fr/acme/sales/edit/3c67ec792809f100ec241d0341783a743fc0d7c1
 ```
 
 The first part of the URL can be configured with the [`oxf.fr.external-base-url` property](/form-builder/template-syntax.md#links).
