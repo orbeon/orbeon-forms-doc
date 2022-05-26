@@ -71,10 +71,10 @@ If the wizard cannot navigate, the event has no effect.
 
 When the wizard component shows a section, it dispatches the `fr-section-shown` event with the following properties:
  
-| Property | Type | Description |
-| --- | --- | --- |
-| `section-name` | `xs:string`  | name of the Form Runner section being shown |
-| `validate`     | `xs:boolean` | whether the wizard is in validated mode |
+| Property       | Type         | Description                                              |
+|----------------|--------------|----------------------------------------------------------|
+| `section-name` | `xs:string`  | name of the Form Runner section being shown              |
+| `validate`     | `xs:boolean` | whether the wizard is in validated mode                  |
 | `separate-toc` | `xs:boolean` | whether the wizard is in separate table of contents mode |
 
 In separate table of contents mode, if no section shows initially, this event is not dispatched until the first section shows. 
@@ -85,10 +85,10 @@ In separate table of contents mode, if no section shows initially, this event is
 
 When the wizard component shows its table of contents, it dispatches the `fr-toc-shown` event with the following properties:
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `validate`     | `xs:boolean` | whether the wizard is in validated mode |
-| `separate-toc` | `xs:boolean` | whether the wizard is in separate table of contents mode |
+| Property       | Type         | Description                                               |
+|----------------|--------------|-----------------------------------------------------------|
+| `validate`     | `xs:boolean` | whether the wizard is in validated mode                   |
+| `separate-toc` | `xs:boolean` | whether the wizard is in separate table of contents mode  |
 
 In separate table of contents mode, this event can be dispatched multiple times as the user goes back and forth to the table of contents.
 

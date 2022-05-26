@@ -438,12 +438,12 @@ fr:component-param-value(
 
 This function is similar to `xxf:component-param-value()`, but is designed to be used in XBL components that are expected to run in the context of Form Runner. It searches parameters in this order:
 
-|#  |What|Used When|Comment
-|---|---|---|---|
-|1  |string value of the attribute of the current XBL component's bound node with a name matching the parameter|attribute present| |
-|2  |current form's metadata instance (see below)|element present|\[SINCE Orbeon Forms 2018.2\]|
-|3  |value of a property, taking into account the current app/form name. For instance, `xxf:component-param-value('theme')` called from the `fr:recaptcha` component uses the value of the `oxf.xforms.xbl.fr.recaptcha.theme.*.*`, following wildcard rules|property defined| |
-|4  |value of a property without taking into account the current app/form name. For example `oxf.xforms.xbl.fr.recaptcha.theme` property, as done by `xxf:component-param-value()`|property defined| |
+|#  | What                                                                                                                                                                                                                                                    | Used When          | Comment                       
+|---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-------------------------------|
+|1  | string value of the attribute of the current XBL component's bound node with a name matching the parameter                                                                                                                                              | attribute present  |                               |
+|2  | current form's metadata instance (see below)                                                                                                                                                                                                            | element present    | \[SINCE Orbeon Forms 2018.2\] |
+|3  | value of a property, taking into account the current app/form name. For instance, `xxf:component-param-value('theme')` called from the `fr:recaptcha` component uses the value of the `oxf.xforms.xbl.fr.recaptcha.theme.*.*`, following wildcard rules | property defined   |                               |
+|4  | value of a property without taking into account the current app/form name. For example `oxf.xforms.xbl.fr.recaptcha.theme` property, as done by `xxf:component-param-value()`                                                                           | property defined   |                               |
 
 This allows authors of XBL components to:
 
