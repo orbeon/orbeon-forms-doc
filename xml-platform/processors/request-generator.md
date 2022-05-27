@@ -169,7 +169,7 @@ The resulting data type is always set on the body element, for example:
 </request>
 ```
 
-_WARNING: Reading the request body is incompatible with reading HTML forms posted with the `multipart/form-data` encoding, typically used when uploading files. In such a case, you should read either only the request body, or only the request parameters._
+_WARNING: Reading the request body is incompatible with reading HTML forms `POST`ed with the `multipart/form-data` encoding, typically used when uploading files. In such a case, you should read either only the request body, or only the request parameters._
 
 ## Request headers
 
