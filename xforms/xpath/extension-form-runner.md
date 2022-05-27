@@ -153,7 +153,9 @@ The function name has a `value` suffix as we anticipate future versions of Orbeo
 [SINCE Orbeon Forms 2017.1]
 
 ```xpath
-fr:dataset($dataset-name as xs:string) as node()?
+fr:dataset(
+    $dataset-name as xs:string
+) as node()?
 ```
 
 Return the root element of the XML document containing the given dataset.
@@ -193,11 +195,13 @@ Return the form's title for the current form language.
 [SINCE Orbeon Forms 2022.1]
 
 ```xpath
-fr:form-runner-link($link-type as xs:string) as xs:string
+fr:form-runner-link(
+    $link-type as xs:string
+) as xs:string
 ```
 
 - `$link-type`
-    - one of: "edit", "view", "new", "summary", "home", "pdf"
+    - one of: `'edit'`, `'view'`, `'new'`, `'summary'`, `'home'`, `'pdf'`
 
 <!-- TODO: "landing", "forms"? -->
 
@@ -393,7 +397,10 @@ See also [PDF templates](../../form-builder/pdf-templates.md).
 ### fr:run-process()
 
 ```xpath
-fr:run-process-by-name($scope as xs:string, $process as xs:string) as item()?
+fr:run-process-by-name(
+    $scope   as xs:string,
+    $process as xs:string
+) as item()?
 ```
 
 Run the given process given a scope and process content.
@@ -411,7 +418,10 @@ Example:
 ### fr:run-process-by-name()
 
 ```xpath
-fr:run-process-by-name($scope as xs:string, $process as xs:string) as item()?
+fr:run-process-by-name(
+    $scope   as xs:string,
+    $process as xs:string
+) as item()?
 ```
 
 Run the given process given a scope and process name.
