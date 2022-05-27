@@ -40,6 +40,10 @@ The `save-draft` button remains for backward compatibility. By default, it calls
 
 We recommend that you review whether you have customized the `save-draft` process and/or button resources in your `properties-local.xml` and udpate them to the new name as needed,
 
+[SINCE Orbeon Forms 2022.1]
+
+The `wizard-toc` button is included automatically by default when the wizard is configured with a separate table of contents. 
+
 ## Predefined reusable processes
 
 The following sub-processes are predefined and can be reused from other processes:
