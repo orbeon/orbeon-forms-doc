@@ -524,6 +524,16 @@ Whether the currently-shown wizard page is the last relevant page. For instance,
     value="fr:is-wizard-last-page()"/>
 ```
 
+### fr:is-wizard-separate-toc()
+
+[SINCE Orbeon Forms 2022.1]
+
+```xpath
+fr:is-wizard-separate-toc() as xs:boolean
+```
+
+Whether the wizard is configured to have a separate table of contents.
+
 ### fr:is-wizard-toc-shown()
 
 [SINCE Orbeon Forms 2016.2]
