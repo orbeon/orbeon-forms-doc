@@ -125,6 +125,43 @@ repeat indexes.
 
 *NOTE: This only supports the wizard's `free` validation mode. `lax` and `strict` are not yet supported.*
 
+## Listening for Error Summary navigation
+
+For analytics purposes, it can be useful to capture when the user is interacting with the Error Summary.
+
+You can do so with the `errorSummary.addNavigateToErrorListener()` function: 
+
+```typescript
+ORBEON.fr.API.errorSummary.addNavigateToErrorListener(
+    listener: (e: ErrorSummaryNavigateToErrorEvent) => void
+)
+```
+
+Example:
+
+```javascript
+ORBEON.fr.API.errorSummary.addNavigateToErrorListener(
+    function(e) { console.log(e); }
+)
+```
+
+The parameter to the function is an event object defined as follows:
+
+```typescript
+type ErrorSummaryNavigateToErrorEvent = {
+    readonly errorPosition    : number; // positive integer
+    readonly controlName      : string;
+    readonly label            : string;
+    readonly validationMessage: string;
+    readonly validationLevel  : string; // "error", "warning", or "info"
+}
+```
+
+The listener can be removed with `removeNavigateToErrorListener()` by passing the same function object as parameter.
+
+```javascript
+ORBEON.fr.API.errorSummary.removeNavigateToErrorListener(fn)
+```
 
 ## See also
 
