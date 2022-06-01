@@ -149,11 +149,14 @@ The parameter to the function is an event object defined as follows:
 
 ```typescript
 type ErrorSummaryNavigateToErrorEvent = {
-    readonly errorPosition    : number; // positive integer
-    readonly controlName      : string;
-    readonly label            : string;
-    readonly validationMessage: string;
-    readonly validationLevel  : string; // "error", "warning", or "info"
+    readonly elementId        : string;   // id of the element in the DOM (can be missing from the DOM!)
+    readonly errorPosition    : number;   // positive integer
+    readonly repetitions      : number[]; // 1-based repeat indexes if within repeated grids/sections
+    readonly controlName      : string;   // Form Runner control name
+    readonly label            : string;   // label in the current language
+    readonly validationMessage: string;   // validation message in the current language
+    readonly validationLevel  : string;   // "error", "warning", or "info"
+    readonly sectionNames     : string[]; // ancestor section names
 }
 ```
 
