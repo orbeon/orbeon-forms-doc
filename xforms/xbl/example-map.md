@@ -11,6 +11,12 @@
 <property as="xs:string" name="oxf.fb.toolbox.group.custom.uri.*.*" value="oxf:/xbl/acme/map/map.xbl"/>
 ```
 
+## Usage
+
+The map component show an address, but doesn't by itself allow users to enter an address. So, in Form Builder, you'll want to first create a text field for users to enter an address. Say you name this field `address`. Then add a map control, which you'll find after scrolling to the bottom of the left sidebar. 
+
+1.
+
 ## What it does
 
 This component renders a Google Maps widget in your form. It is bound to an address, locates the address using the Google Maps geolocation API, and shows a marker at that location on a map.
