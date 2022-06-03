@@ -12,6 +12,7 @@
     - [Including content](including-content.md)
     - [Event handling](event-handling.md)
     - [Conventions](conventions.md)
+    - [Map XBL example](example-map.md)
     - [Learning from existing components](learning-from-existing-components.md)
 - Advanced topics
     - [Modes](modes.md)
