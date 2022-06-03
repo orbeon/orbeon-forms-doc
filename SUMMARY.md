@@ -112,7 +112,6 @@
         * [Image](form-runner/component/image.md)
         * [Image annotation](form-runner/component/image-annotation.md)
         * [Image attachment](form-runner/component/image-attachment.md)
-        * [Map](form-runner/component/map.md)
         * [Number](form-runner/component/number.md)
         * [Open selection](form-runner/component/open-select1.md)
         * [Repeater](form-runner/component/repeater.md)
@@ -267,6 +266,7 @@
             * [Including content](xforms/xbl/including-content.md)
             * [Event handling](xforms/xbl/event-handling.md)
             * [Conventions](xforms/xbl/conventions.md)
+            * [Map XBL example](xforms/xbl/example-map.md)
             * [Learning from existing components](xforms/xbl/learning-from-existing-components.md)
         * Advanced topics
             * [XBL Modes](xforms/xbl/modes.md)
