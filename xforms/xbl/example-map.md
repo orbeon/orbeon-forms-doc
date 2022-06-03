@@ -13,12 +13,13 @@
 
 ## Usage
 
-The map component show an address, but doesn't by itself allow users to enter an address. So, in Form Builder, you'll want to first create a text field for users to enter an address. Say you name this field `address`. Then add a map control, which you'll find after scrolling to the bottom of the left sidebar. 
+The map component shows an address, but doesn't by itself allow users to enter an address. So, in Form Builder, you'll want to first create a text field for users to enter an address. Say you name this field `address`. Then add a map control, which you'll find after scrolling to the bottom of the left sidebar, open the Control Settings, and under Formulas set its Calculated Value as `$address`. If you test the form, the map will show the map of the world.
 
-1.
+<img src="example-map-world.png" width="469">
 
-## What it does
+Next, if you enter a location or address and press enter, if found, a marker will be added at that location.
 
-This component renders a Google Maps widget in your form. It is bound to an address, locates the address using the Google Maps geolocation API, and shows a marker at that location on a map.
+<img src="example-map-address.png" width="466">
 
-![Map component in action](../images/xbl-map.png)
+## Source
+
