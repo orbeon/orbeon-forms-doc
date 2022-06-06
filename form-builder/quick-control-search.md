@@ -22,3 +22,7 @@ The shortcut opens a small dialog. Clicking or pressing the Enter key and then t
 If the "Open Settings Dialog" option is selected, the "Control Settings" dialog for the control also opens right away.
 
 ![The quick search dialog](/form-builder/images/quick-search.png)
+
+## See also
+
+- Blog post: [Quickly navigate to fields in large forms](https://blog.orbeon.com/2022/06/navigate-to-fields-in-large-forms.html)
