@@ -333,9 +333,9 @@ Explanation:
 - the number of tokens obtained with `count()` corresponds to the number of selected checkboxes
 - then this makes sure the number of tokens is lower than or equal to 3
 
-## Validating a Legal Entity Identifer
+## Validating a Legal Entity Identifier
 
-You can use the following formula, Control Settings, Validation and Alerts, Formula, to validate the relevant [Legal Entity Identifer](https://en.wikipedia.org/wiki/Legal_Entity_Identifier) (LEI) field. Should you need to assess the validity of a LEI field that is somewhere else in the form, just replace `.` on the 3rd line of the expression as ppropriate, for instance by `$lei` if you want to refer to a field named `lei`.
+You can use the following formula, Control Settings, Validation and Alerts, Formula, to validate the relevant [Legal Entity Identifier](https://en.wikipedia.org/wiki/Legal_Entity_Identifier) (LEI) field. Should you need to assess the validity of a LEI field that is somewhere else in the form, just replace `.` on the 3rd line of the expression as appropriate, for instance by `$lei` if you want to refer to a field named `lei`.
 
 ```xpath
 xs:decimal(
