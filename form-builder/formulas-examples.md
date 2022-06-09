@@ -333,6 +333,29 @@ Explanation:
 - the number of tokens obtained with `count()` corresponds to the number of selected checkboxes
 - then this makes sure the number of tokens is lower than or equal to 3
 
+## Validating a Legal Entity Identifer
+
+You can use the following formula, Control Settings, Validation and Alerts, Formula, to validate the relevant [Legal Entity Identifer](https://en.wikipedia.org/wiki/Legal_Entity_Identifier) (LEI) field. Should you need to assess the validity of a LEI field that is somewhere else in the form, just replace `.` on the 3rd line of the expression as ppropriate, for instance by `$lei` if you want to refer to a field named `lei`.
+
+```xpath
+xs:decimal(
+  string-join(
+    for $code in string-to-codepoints(.)
+    return
+      if ($code>= string-to-codepoints('A') and $code <= string-to-codepoints('Z')) then
+        (: Letters A-Z :)
+        xs:string($code - string-to-codepoints('A') + 10)
+      else if ($code>= string-to-codepoints('0') and $code <= string-to-codepoints('9')) then
+        (: Digits 0-9 :)
+        xs:string($code - string-to-codepoints('0'))
+        (: Unrecognized characters :)
+      else
+        '',
+    ''
+  )
+) mod 97
+```
+
 ## Number of weekdays between 2 dates
 
 - *Input* – In the following XPath expression, the start and end dates are inline, so you'll most likely want to modify it to refer to, say, dates entered by users in a form fields.
