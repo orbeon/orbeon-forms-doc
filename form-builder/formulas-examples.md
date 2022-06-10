@@ -361,7 +361,11 @@ return
 
 ## Validating an International Securities Identification Number (ISIN)
 
-You can use the following formula, in Control Settings, Validation and Alerts, Formula, to validate the relevant [ISIN](https://en.wikipedia.org/wiki/International_Securities_Identification_Number) field. Should you need to assess the validity of a ISIN field that is somewhere else in the form, just replace `.` on the first line with the appropriate expression. Examples of valid ISIN are `US0378331005` (Apple, Inc.), `AU0000XVGZA3` (Treasury Corporation of Victoria), and `GB0002634946` (BAE Systems).
+You can use the following formula, in Control Settings, Validation and Alerts, Formula, to validate the relevant [ISIN](https://en.wikipedia.org/wiki/International_Securities_Identification_Number) field. Should you need to assess the validity of a ISIN field that is somewhere else in the form, just replace `.` on the first line with the appropriate expression. Examples of valid ISIN are:
+
+- `US0378331005` (Apple, Inc.)
+- `AU0000XVGZA3` (Treasury Corporation of Victoria)
+- `GB0002634946` (BAE Systems)
 
 ```xpath
 let $isin := .
