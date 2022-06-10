@@ -335,7 +335,11 @@ Explanation:
 
 ## Validating a Legal Entity Identifier (LEI)
 
-You can use the following formula, in Control Settings, Validation and Alerts, Formula, to validate the relevant [LEI](https://en.wikipedia.org/wiki/Legal_Entity_Identifier) field. Should you need to assess the validity of a LEI field that is somewhere else in the form, just replace `.` on the first line with the appropriate expression. An examples of valid LEI is `F50EOCWSQFAUVO9Q8Z97`. 
+You can use the following formula, in Control Settings, Validation and Alerts, Formula, to validate the relevant [LEI](https://en.wikipedia.org/wiki/Legal_Entity_Identifier) field. Should you need to assess the validity of a LEI field that is somewhere else in the form, just replace `.` on the first line with the appropriate expression. An examples of valid LEI are:
+
+- `F50EOCWSQFAUVO9Q8Z97` (examples in ISO/DIS 17442)
+- `549300Y7W34DK0WBPY51` (Google)
+- `98450054NFCE7A67C172` (ManagedLEI)
 
 ```xpath
 let $lei := .
@@ -345,10 +349,10 @@ return
     string-join(
       for $code in string-to-codepoints($lei)
       return
-        if ($code>= string-to-codepoints('A') and $code <= string-to-codepoints('Z')) then
+        if ($code >= string-to-codepoints('A') and string-to-codepoints('Z') >= $code) then
           (: Letters A-Z :)
           xs:string($code - string-to-codepoints('A') + 10)
-        else if ($code>= string-to-codepoints('0') and $code <= string-to-codepoints('9')) then
+        else if ($code >= string-to-codepoints('0') and string-to-codepoints('9') >= $code) then
           (: Digits 0-9 :)
           xs:string($code - string-to-codepoints('0'))
           (: Unrecognized characters :)
