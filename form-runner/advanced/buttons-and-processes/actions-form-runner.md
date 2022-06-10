@@ -1,7 +1,5 @@
 # Form Runner actions
 
-
-
 ## Children pages
 
 - [`save` action](actions-form-runner-save.md)
