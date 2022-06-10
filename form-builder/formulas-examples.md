@@ -333,9 +333,9 @@ Explanation:
 - the number of tokens obtained with `count()` corresponds to the number of selected checkboxes
 - then this makes sure the number of tokens is lower than or equal to 3
 
-## Validating a Legal Entity Identifier
+## Validating a Legal Entity Identifier (LEI)
 
-You can use the following formula, in Control Settings, Validation and Alerts, Formula, to validate the relevant [Legal Entity Identifier](https://en.wikipedia.org/wiki/Legal_Entity_Identifier) (LEI) field. Should you need to assess the validity of a LEI field that is somewhere else in the form, just replace `.` on the first line with the appropriate expression.
+You can use the following formula, in Control Settings, Validation and Alerts, Formula, to validate the relevant [LEI](https://en.wikipedia.org/wiki/Legal_Entity_Identifier) field. Should you need to assess the validity of a LEI field that is somewhere else in the form, just replace `.` on the first line with the appropriate expression. An examples of valid LEI is `F50EOCWSQFAUVO9Q8Z97`. 
 
 ```xpath
 let $lei := .
@@ -359,11 +359,55 @@ return
   ) mod 97 = 1
 ```
 
+## Validating an International Securities Identification Number (ISIN)
+
+You can use the following formula, in Control Settings, Validation and Alerts, Formula, to validate the relevant [ISIN](https://en.wikipedia.org/wiki/International_Securities_Identification_Number) field. Should you need to assess the validity of a ISIN field that is somewhere else in the form, just replace `.` on the first line with the appropriate expression. Examples of valid ISIN are `US0378331005` (Apple, Inc.), `AU0000XVGZA3` (Treasury Corporation of Victoria), and `GB0002634946` (BAE Systems).
+
+```xpath
+let $isin := .
+return
+  string-length($isin) = 12 and
+  (
+    let
+      $without-checksum := substring($isin, 1, 11),
+      $letter-as-numbers-string :=
+        string-join(
+          for $code in string-to-codepoints($without-checksum)
+          return
+            if ($code >= string-to-codepoints('A') and string-to-codepoints('Z') >= $code) then
+              (: Letters A-Z :)
+              xs:string($code - string-to-codepoints('A') + 10)
+            else if ($code >= string-to-codepoints('0') and string-to-codepoints('9') >= $code) then
+              (: Digits 0-9 :)
+              xs:string($code - string-to-codepoints('0'))
+              (: Unrecognized characters :)
+            else
+              '',
+          ''
+        ),
+      $letter-as-numbers-digits :=
+        for $code in string-to-codepoints($letter-as-numbers-string)
+        return xs:decimal(codepoints-to-string($code)),
+      $reversed-digits     := reverse($letter-as-numbers-digits),
+      $group-1-digits      := $reversed-digits[position() mod 2 = 1],
+      $group-2-digits      := $reversed-digits[position() mod 2 = 0],
+      $group-1-x2-decimals := for $d in $group-1-digits return $d * 2,
+      $group-1-x2-string   := string-join(for $d in $group-1-x2-decimals return string($d), ''),
+      $group-1-x2-digits   := for $code in string-to-codepoints($group-1-x2-string)
+                              return xs:decimal(codepoints-to-string($code)),
+      $sum-digits          := sum(($group-1-x2-digits, $group-2-digits)),
+      $checksum-computed   := string((10 - ($sum-digits mod 10)) mod 10),
+      $checksum-provided   := substring($isin, 12, 1)
+    return
+      $checksum-computed = $checksum-provided
+  )
+```
+
 ## Number of weekdays between 2 dates
 
 - *Input* – In the following XPath expression, the start and end dates are inline, so you'll most likely want to modify it to refer to, say, dates entered by users in a form fields.
 - *Weekends* – The expression takes Saturday and Sunday to be part of the weekend.
-- *First day of the week* – The expression assumes Monday is the first day of the week. For instance check that on your system `format-date(xs:date('2018-12-10'), '[F1]')` returns 1. If not, you'll need to change the expressions for `$startW` and `$endW`.
+- *First day of the week* – The expression assumes Monday is the first day of the week. For instance check that on your system `format-date(xs:date('2018-12-10'), '[F1]')` returns 1. If not, you'll need to change the expressions for `$startW` and `$endW`.
 - *Credits* – This is a translation to XPath of [Java code written by Roland](https://stackoverflow.com/a/44942039/5295).
 
 ```xpath
