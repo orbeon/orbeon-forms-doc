@@ -63,30 +63,53 @@ You embed a form in the page by calling the following API:
 
 ```javascript
 ORBEON.fr.API.embedForm(
-  container,  
-  context,    
-  app,        
-  form,       
-  mode,     
-  documentId, 
-  queryString,
-  headers
+    container,  
+    context,    
+    app,        
+    form,       
+    mode,     
+    documentId, 
+    queryString,
+    headers
 );
 ```
 
-| Parameter   | Optional          | Type         | Example                         | Description                                           |
-|-------------| ----------------- | ------------ | ------------------------------- |-------------------------------------------------------|
-| container   | No                | HTML element |                                 | DOM element you want the form to be placed in         |
-| context     | No                | String       | `"/orbeon"`                     | Context where Orbeon Forms is deployed, typically     |
-| app         | No                | String       | `"human-resources"`             | App name                                              |
-| form        | No                | String       | `"job-application"`             | Form name                                             |
-| mode        | No                | String       | `"new"`                         | Either `"new"`, `"edit"`, or `"view"`                 |
-| documentId  | See point 1 below | String       |                                 | For modes other than `new`, the document to be loaded |
-| queryString | Yes               | String       | `"job=clerk"`                   | Additional query parameters                           |
-| headers     | Yes               | [Headers][h] | `new Headers({ 'Foo': 'bar' })` | Additional HTTP headers; see point 2 below            |
+| Parameter   | Optional          | Type         | Example                         | Description                                                   |
+|-------------| ----------------- | ------------ | ------------------------------- |---------------------------------------------------------------|
+| container   | No                | HTML element |                                 | DOM element you want the form to be placed in                 |
+| context     | No                | String       | `"/orbeon"`                     | Context where Orbeon Forms is deployed, typically `"/orbeon"` |
+| app         | No                | String       | `"human-resources"`             | App name                                                      |
+| form        | No                | String       | `"job-application"`             | Form name                                                     |
+| mode        | No                | String       | `"new"`                         | Either `"new"`, `"edit"`, or `"view"`                         |
+| documentId  | See point 1 below | String       |                                 | For modes other than `new`, the document to be loaded         |
+| queryString | Yes               | String       | `"job=clerk"`                   | Additional query parameters                                   |
+| headers     | Yes               | [Headers][h] | `new Headers({ 'Foo': 'bar' })` | Additional HTTP headers; see point 2 below                    |
 
 1. The `documentId` parameter is mandatory for modes other than `new`, and must be `undefined` when the mode is `new`. For `new`, if you don't need to pass ny of parameters after `documentId`, you can just omit the `documentId` and all subsequent parameters in your call to `ORBEON.fr.API.embedForm()`; otherwise, you must explicitly pass `undefined` as the value of `documentId`.
 2. The `headers` parameter is supported [SINCE Orbeon Forms 2021.1.1]. You can also access the value of such headers in the form you're embedding with the function [`xxf:get-request-header()`](/xforms/xpath/extension-http.md#xxfget-request-header).
+
+[SINCE Orbeon Forms 2022.1]
+
+`embedForm()` returns a JavaScript `Promise` object. This allows you to know when the embedding has succeeded or failed. For example:
+
+```javascript
+ORBEON.fr.API.embedForm(
+    document.getElementById("my-container-element"),
+    "/orbeon",
+    "human-resources",
+    "job-application",
+    "new"
+)
+.then(() => {
+    console.log("`embedForm()` successfully loaded the form");
+})
+.catch((e) => {
+  console.log("`embedForm()` returned an error");
+  console.log(e);
+});
+```
+
+Note that with earlier versions, `embedForm()` always returned the JavaScript `undefined` value.
 
 ### `destroyForm()` API
 
