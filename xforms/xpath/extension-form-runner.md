@@ -271,7 +271,7 @@ This function is particularly useful for XBL components.
 [SINCE Orbeon Forms 2021.1]
 
 ```xpath
-fr:is-embedded()
+fr:is-embedded() as xs:boolean
 ```
 
 Returns whether the form is running in embedded mode. This includes embedding with:
@@ -282,6 +282,25 @@ Returns whether the form is running in embedded mode. This includes embedding wi
 - the Offline mode [EXPERIMENTAL SINCE Orbeon Forms 2021.1]
 
 This can, for example, be used to show and hide buttons or form sections only when the form is embedded.
+
+[SINCE Orbeon Forms 2021.1.4 and 2022.1]
+
+The function supports an optional parameter:
+
+```xpath
+fr:is-embedded($embedding-type as xs:string) as xs:boolean
+```
+
+Possible values:
+
+- `portlet`: if passed, returns true if embedding is done via the Form Runner proxy portlet
+- `java-api`: if passed, returns true if embedding is done via the Form Runner proxy portlet
+
+Example:
+
+```xpath
+fr:is-embedded('java-api')
+```
 
 ### fr:is-form-data-saved()
 
