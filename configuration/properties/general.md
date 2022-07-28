@@ -8,12 +8,12 @@ For the latest default values of general properties, see [`properties-base.xml`]
 
 ### oxf.url-rewriting.service.base-uri
 
-| | |
-| --- | --- |
-| Name | `oxf.url-rewriting.service.base-uri` |
-| Purpose | specify the base URL for rewriting some internal service URLs |
-| Type | `xs:anyURI` |
-| Default Value | Empty. Rewriting is done against the incoming request. |
+|               |                                                               |
+|---------------|---------------------------------------------------------------|
+| Name          | `oxf.url-rewriting.service.base-uri`                          |
+| Purpose       | specify the base URL for rewriting some internal service URLs |
+| Type          | `xs:anyURI`                                                   |
+| Default Value | Empty. Rewriting is done against the incoming request.        |
 
 Usually Orbeon Forms uses the host, port, and context name as seen by the browser, such as:
 
