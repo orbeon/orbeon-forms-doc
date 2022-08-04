@@ -15,7 +15,8 @@ You need to have already installed:
 - [git](https://git-scm.com/)
 - [ant](https://ant.apache.org/)
 - [sbt](https://www.scala-sbt.org/)
-- [Tomcat 8](http:s//tomcat.apache.org/download-80.cgi) ([Tomcat 7](http://tomcat.apache.org/download-70.cgi) still works as of 2018-10-01 but is deprecated)
+- [Tomcat 8](https://tomcat.apache.org/download-80.cgi) or [Tomcat 9](https://tomcat.apache.org/download-90.cgi)
+    - ([Tomcat 7](http://tomcat.apache.org/download-70.cgi) still works as of 2018-10-01 but is deprecated)
 - [Node.js](https://nodejs.org/en/)
 - Java 11 or newer
 
@@ -49,8 +50,8 @@ This clones the git repository into a child directory called `orbeon-forms`.
 
 You don't have to use the following, but in case you care, the Orbeon Forms developers use:
 
-- the latest version of MacOS (Mohave as of 2018-10)  
-- the latest version of IntelliJ IDEA (2018.2 as of 2018-09) and the Scala plugin
+- the latest version of MacOS (Monterey as of 2022)  
+- the latest version of IntelliJ IDEA (2022.2 as of 2022-08) and the Scala plugin
 
 ### GitHub token
 
@@ -100,7 +101,7 @@ To create a distribution:
 
 You need:
 
-- [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html).
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 - the Scala plugin for Scala source code support
 
 Currently, compiling and packaging is done via `sbt` and not from IntelliJ. You use IntelliJ for: 
@@ -112,15 +113,16 @@ To open the Orbeon Forms project:
 
 - Go to the "File" → "Open Project" menu and  select the `orbeon-forms` directory.
 - IntelliJ then indexes the project, which can take a minute the first time you do it.
-- open the "sbt" tab which should appear on the right side of IntelliJ
-- do "Refresh all sbt projects"
+- Open the "sbt" tab which should appear on the right side of IntelliJ.
+    - If this doesn't show, search for "sbt" in the list of commands (Ctrl-Shift-A).
+- Do "Refresh all sbt projects".
 - ~~Open `build.sbt` and click "Refresh" to let IntelliJ create modules based on the sbt build.~~
 
 ![IntelliJ sbt module import](images/building-intellij-sbt.png)
 
 ### Running
 
-Create a new context in Tomcat's `server.xml`:
+Create a new context in Tomcat's `conf/server.xml`:
 
 ```xml
 <Context
@@ -130,7 +132,7 @@ Create a new context in Tomcat's `server.xml`:
     override="true"
     crossContext="true"
     allowLinking="true">
-
+        
     <Parameter
         override="false"
         name="oxf.resources.priority.0"
@@ -138,16 +140,42 @@ Create a new context in Tomcat's `server.xml`:
     <Parameter
         override="false"
         name="oxf.resources.priority.0.oxf.resources.filesystem.sandbox-directory"
+        value="/path/to/orbeon-forms/form-runner/jvm/src/main/resources"/>
+    
+    <Parameter
+        override="false"
+        name="oxf.resources.priority.1"
+        value="org.orbeon.oxf.resources.FilesystemResourceManagerFactory"/>
+    <Parameter
+        override="false"
+        name="oxf.resources.priority.1.oxf.resources.filesystem.sandbox-directory"
+        value="/path/to/orbeon-forms/form-builder/jvm/src/main/resources"/>
+    
+    <Parameter
+        override="false"
+        name="oxf.resources.priority.2"
+        value="org.orbeon.oxf.resources.FilesystemResourceManagerFactory"/>
+    <Parameter
+        override="false"
+        name="oxf.resources.priority.2.oxf.resources.filesystem.sandbox-directory"
         value="/path/to/orbeon-forms/resources-local"/>
-        
+    
+    <Parameter
+        override="false"
+        name="oxf.resources.priority.3"
+        value="org.orbeon.oxf.resources.WebAppResourceManagerFactory"/>
+    <Parameter
+        override="false"
+        name="oxf.resources.priority.3.oxf.resources.webapp.rootdir"
+        value="/WEB-INF/resources"/>
+    
 </Context>
 ```
 
-Then set `JAVA_OPTS` for Tomcat:
+Tomcat has a file called `bin/setenv.sh` where you can set environment variables. In it, set the `JAVA_OPTS` for Tomcat. For Java 11:
 
 ```bash
-ORBEON_MEMORY_OPTS="-Xms300m -Xmx3g -XX:MaxPermSize=256m -verbosegc -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCDetails"
-
+ORBEON_MEMORY_OPTS="-Xms300m -Xmx3g -verbosegc -XX:+PrintGCDetails"
 ORBEON_DEBUG_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=61155"
 
 JAVA_OPTS="-ea $ORBEON_MEMORY_OPTS -Dapple.awt.UIElement=true $ORBEON_DEBUG_OPTS"
@@ -155,12 +183,16 @@ JAVA_OPTS="-ea $ORBEON_MEMORY_OPTS -Dapple.awt.UIElement=true $ORBEON_DEBUG_OPTS
 export JAVA_OPTS
 ```
 
-*NOTE: You don't have to set `-verbosegc -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCDetails` if you are not interested in garbage collector output.*
+*NOTE: You don't have to set `-verbosegc -XX:+PrintGCDetails` if you are not interested in garbage collector output.*
+
+*NOTE: The `-Djava.net.preferIPv4Stack=true` can help in some cases.*
+
+*NOTE: Older options for Java 8 included: `-XX:MaxPermSize=256m `, `-XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps`.*
 
 Finally, you can start Tomcat with:
 
 ```bash
- ./apache-tomcat-7.0.53/bin/catalina.sh run
+ ./apache-tomcat-9.0.56/bin/catalina.sh run
 ```
 
 And test by going to:
@@ -169,21 +201,21 @@ And test by going to:
 
 This will show the Orbeon Forms landing page.
 
-### Running without debugging or profiling
-
-Alternatively, for running without debugging, set instead:
-
-```bash
-export JAVA_OPTS="$ORBEON_MEMORY_OPTS -Dapple.awt.UIElement=true  -server"
-```
-
 ### Debugging
 
 The settings above start Tomcat in debug mode. This means that you can debug the Java and Scala code from IntelliJ. Select the "Tomcat" configuration in IntelliJ, then "Run" → "Debug". IntelliJ opens the debugging window and connects to Tomcat. You can then set breakpoints and do the usual things one does with a debugger!
 
+### Running without debugging or profiling
+
+Alternatively, for running without debugging enabled, set instead:
+
+```bash
+JAVA_OPTS="-ea $ORBEON_MEMORY_OPTS -Dapple.awt.UIElement=true"
+```
+
 ### Making changes
 
-If you modify Java or Scala files, you need to recompile. You do this from the command-line with sbt, which can let run the compile task incrementally with:
+If you modify Java or Scala files, you need to recompile. You do this from the command-line with sbt, which can let run the `compile` task incrementally with:
 
 ```
 ~compile
@@ -417,8 +449,8 @@ Alternatively:
 
 - run `ant teamcity-release` to clean, test, and build the entire release
 
-xxxxx GITHUB_TOKEN
-xxx IntelliJ and GITHUB_TOKEN
+[//]: # (xxx GITHUB_TOKEN)
+[//]: # (xxx IntelliJ and GITHUB_TOKEN)
 
 ## See also
 
