@@ -47,41 +47,40 @@ Permissions you set in the dialog are _additive_ – Say you defined permissions
 
 Operation on _Anyone_ apply to all other rows – When you select a checkbox for a given operation on the first _Anyone_ row, that checkbox will be automatically checked and disabled so you can't change it, for any additional row, since you wouldn't want to authorize users with additional roles to perform less operations.
 
-_Update_ implies _Read_ – On any row, if you check _update_, then _read_ will be automatically checked, as it wouldn't make sense to say that some users can update data, but can't read it, as when updating data, obviously, they must be shown the data they are updating.
+_Update_ implies _Read_ – On any row, if you check _Update_, then _Read_ will be automatically checked, as it wouldn't make sense to say that some users can update data, but can't read it, as when updating data, obviously, they must be shown the data they are updating.
 
-_Create_ can't be set for the _owner_ and _group members_ – The owner/group is a piece of information attached to existing form data, keeping track of the user who create the data, and the group in which this user is. This information is only known for existing data, so assigning the _create_ permission to the _owner_ or _group members_ doesn't make sense, and the dialog doesn't show that checkbox.
+_Create_ can't be set for the _owner_ and _group members_ – The owner/group is a piece of information attached to existing form data, keeping track of the user who create the data, and the group in which this user is. This information is only known for existing data, so assigning the _Create_ permission to the _owner_ or _group members_ doesn't make sense, and the dialog doesn't show that checkbox.
 
 Permissions for the _owner_ and _group members_ can be set independently – If you want data to be accessible only by people who created it, check read/update/delete for the owner but not for group members. If you want data to be accessible by all people in the same group,check read/update/delete for the group members and don't check them for the owner if you want the owner to lose access to that data in case the owner changes group. (The latter highlights the need for permissions owner and group member to be set independently.)
 
-### The "List" permission
+### The _List_ permission
 
 [SINCE Orbeon Forms 2022.1]
 
-The "List" permission allows specifying that the user can list form data on the Form Runner Summary page. If a user navigates to the Summary page of a form and the "List" permission is not granted to the user, the Summary page responds with an "Unauthorized" error.
+The _List_ permission allows specifying that the user can list form data on the Form Runner Summary page. If a user navigates to the Summary page of a form and the _List_ permission is not granted to the user, the Summary page responds with an "Unauthorized" error.
 
-With earlier versions of Orbeon Forms, the "List" permission was not checked separately. However, the ability to "Read" implied the ability to "List" on the Summary page.
+With earlier versions of Orbeon Forms, the _List_ permission was not checked separately. However, the ability to "Read" implied the ability to _List_ on the Summary page.
 
-The "List" permission implies the "Read" permission. Selecting "List" automatically selects the "Read" permission.
+The _List_ permission implies the "Read" permission. Selecting _List_ automatically selects the "Read" permission.
 
-Forms created and edited with earlier versions of Orbeon Forms that have the "Read" permission enabled also implicitly have the "List" permission enabled, for backward compatibility. Opening such a form in Form Builder will show both the "Read" and "List" permissions. If the form author deselects the "List" permission, and then publishes the form, then the form will not allow the "List" permission, as expected.
+Forms created and edited with earlier versions of Orbeon Forms that have the "Read" permission enabled also implicitly have the _List_ permission enabled, for backward compatibility. Opening such a form in Form Builder will show both the "Read" and _List_ permissions. If the form author deselects the _List_ permission, and then publishes the form, then the form will not allow the _List_ permission, as expected.
 
 ## How permissions affect Form Runner pages
 
 Which operations the current user can perform drives what page they can access, and on some pages which buttons are shown:
 
-* On the Form Runner _home_ page, all the forms on which the current user can perform at least one operation are displayed. Then, for each one of those forms:
-
-    * If they can perform the _create_ operation on the form, a link to the _new_ page is shown.
-    * If they can perform any of the _read_, _update_, or _delete_ operation on the form, a link to the _summary_ page for that form is shown.
-* For the _summary_ page:
-    * Access is completely denied if the current user can't perform any of the _read_, _update_, or _delete_ operations.
-    * The _delete_ button is disabled if the current user can't perform the _delete_ operation.
-    * The _review_ and _pdf_ button are disabled if the current user can't perform the _read_ operation.
-    * Clicking in a row of the table will open the form in _edit_ mode if the current user can perform the _update_ operation, in _view_ mode if they can perform the _read_ operation, and do nothing otherwise.
-
-* For the _view_ page, access is denied if the current user can't perform the _read_ operation.
-* For the _new_ page, access is denied if the current user can't perform the _create_ operation.
-* For the _edit_ page, access is denied if the current user can't perform the _update_ operation.
+* On the Form Runner _Home_ page, all the forms on which the current user can perform at least one operation are displayed. Then, for each one of those forms:
+    * If they can perform the _Create_ operation on the form, a link to the _new_ page is shown.
+    * If they can perform any of the _Read_, _Update_, or _Delete_ operation on the form, a link to the _summary_ page for that form is shown.
+* For the _Summary_ page:
+    * Access is completely denied if the current user can't perform any of the _Read_, _Update_, or _Delete_ operations.
+        * [SINCE Orbeon Forms 2022.1] Access is also completely denied if the user doesn't have the _List_ permission.
+    * The _Delete_ button is disabled if the current user can't perform the _Delete_ operation.
+    * The _review_ and _pdf_ button are disabled if the current user can't perform the _Read_ operation.
+    * Clicking in a row of the table will open the form in _edit_ mode if the current user can perform the _Update_ operation, in _view_ mode if they can perform the _Read_ operation, and do nothing otherwise.
+* For the _View_ page, access is denied if the current user can't perform the _Read_ operation.
+* For the _New_ page, access is denied if the current user can't perform the _Create_ operation.
+* For the _Edit_ page, access is denied if the current user can't perform the _Update_ operation.
 
 [SINCE 4.3] In Orbeon Forms 4.2 and earlier, role-based permissions set in Form Builder could only be driven by container-based roles and the value of the `oxf.fr.authentication.method` property was not taken into account. Since version 4.3, those permissions also apply if you are using header-driven roles.
 
