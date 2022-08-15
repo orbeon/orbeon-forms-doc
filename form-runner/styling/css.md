@@ -87,16 +87,16 @@ Orbeon Forms standardizes on the following prefixes for CSS classes:
 
 ### Form structure
 
-Class Name          |Element            |Comment   |
-----------          |----------         |----------|
-`orbeon`            | `<body>`          | body or enclosing embedding element
-`xforms-form`       | `<form>`          | enclosing `<form>` handled by Orbeon Forms
-`fr-view`           |                   | enclosing element for the Form Runner view
-`fr-mode-MODE`      | `.fr-view`        | `MODE`: `new`, `edit`, `view`
-`fr-body`           |                   | main form body
-`xbl-fr-section`    |                   | section
-`fr-section-title`  | `<h2>`, etc.      | section title
-`xbl-fr-grid`       |                   | grid
+| Class Name         |Element            | Comment                                    |
+|--------------------|----------         |--------------------------------------------|
+| `orbeon`           | `<body>`          | body or enclosing embedding element        |
+| `xforms-form`      | `<form>`          | enclosing `<form>` handled by Orbeon Forms |
+| `fr-view`          |                   | enclosing element for the Form Runner view |
+| `fr-mode-MODE`     | `.fr-view`        | `MODE`: `new`, `edit`, `view`              |
+| `fr-body`          |                   | main form body                             |
+| `xbl-fr-section`   |                   | section                                    |
+| `fr-section-title` | `<h2>`, etc.      | section title                              |
+| `xbl-fr-grid`      |                   | grid                                       |
 
 ### Grids
 
@@ -114,11 +114,11 @@ Class Name              |Element        |Comment   |
 
 ### Wizard
 
-Class Name              |Comment   |
-----------              |----------|
-`xbl-fr-wizard`         | enclosing wizard element
-`fr-wizard-toc`         | wizard table of contents
-`fr-wizard-body`        | wizard body
+Class Name              | Comment                  |
+----------              |--------------------------|
+`xbl-fr-wizard`         | enclosing wizard element |
+`fr-wizard-toc`         | wizard table of contents |
+`fr-wizard-body`        | wizard body              |
 
 ### Built-in controls and components
 
