@@ -20,16 +20,6 @@ This shows the following dialog:
 
 After you click on the checkbox, you'll be able to set access restrictions on the _create_, _read, update_, and _delete_ operations.
 
-## The `list` permission
-
-[SINCE Orbeon Forms 2022.1]
-
-The "List" permission allows specifying that the user can list form data on the Form Runner Summary page. If a user navigates to the Summary page of a form and the "List" permission is not granted to the user, the Summary page responds with an "Unauthorized" error.
-
-With earlier versions of Orbeon Forms, the "List" permission was not checked separately. However, the ability to "Read" implied the ability to "List" on the Summary page.
-
-Forms created and edited with earlier versions of Orbeon Forms that have the "Read" permission enabled also implicitly have the "List" permission enabled, for backward compatibility. Opening such a form in Form Builder will show both the "Read" and "List" permissions. If the form author deselects the "List" permission, and then publishes the form, then the form will not allow the "List" permission, as expected.
-
 ## Setting permissions
 
 ### An example
@@ -62,6 +52,16 @@ _Update_ implies _read_ – On any row, if you check _update_, then _read_ will 
 _Create_ can't be set for the _owner_ and _group members_ – The owner/group is a piece of information attached to existing form data, keeping track of the user who create the data, and the group in which this user is. This information is only known for existing data, so assigning the _create_ permission to the _owner_ or _group members_ doesn't make sense, and the dialog doesn't show that checkbox.
 
 Permissions for the _owner_ and _group members_ can be set independently– If you want data to be accessible only by people who created it, check read/update/delete for the owner but not for group members. If you want data to be accessible by all people in the same group,check read/update/delete for the group members and don't check them for the owner if you want the owner to lose access to that data in case the owner changes group. (The latter highlights the need for permissions owner and group member to be set independently.)
+
+### The "List" permission
+
+[SINCE Orbeon Forms 2022.1]
+
+The "List" permission allows specifying that the user can list form data on the Form Runner Summary page. If a user navigates to the Summary page of a form and the "List" permission is not granted to the user, the Summary page responds with an "Unauthorized" error.
+
+With earlier versions of Orbeon Forms, the "List" permission was not checked separately. However, the ability to "Read" implied the ability to "List" on the Summary page.
+
+Forms created and edited with earlier versions of Orbeon Forms that have the "Read" permission enabled also implicitly have the "List" permission enabled, for backward compatibility. Opening such a form in Form Builder will show both the "Read" and "List" permissions. If the form author deselects the "List" permission, and then publishes the form, then the form will not allow the "List" permission, as expected.
 
 ## How permissions affect Form Runner pages
 
