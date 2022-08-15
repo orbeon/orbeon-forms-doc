@@ -28,9 +28,9 @@ In the example below:
 
 - Any user (even anonymous) can fill out new form data.
 - A logged-in user who created form data can later read and update it.
-- A logged-in user member of the group of the user who created form data can read it but not updated it.
-- Users with the role _clerk_ can read any form data.
-- Users with the role _admin_ can do any operation, including deleting form data.
+- A logged-in user member of the group of the user who created form data can read it but not update it.
+- Users with the role _clerk_ can read any form data. They can also list data on the Summary page.
+- Users with the role _admin_ can do any operation, including deleting form data and listing data on the Summary page.
 
 ![Permissions dialog with explict permissions enabled](../../form-builder/images/permissions-dialog.png)
 
