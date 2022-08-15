@@ -37,5 +37,5 @@ TODO: more examples (in particular using `xxf:get-header('Orbeon-Username')`, et
 - [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
 - [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
     - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
-    - [Organization-based permissions](organization.md) – Access based on organizational structure.
+    - [Organization-based permissions](organization.md) – Access based on organizational structure.
 - [Scenarios](scenarios.md)

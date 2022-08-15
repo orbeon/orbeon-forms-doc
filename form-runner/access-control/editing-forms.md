@@ -79,5 +79,5 @@ Orbeon Forms does not specifically provide a mechanism to protect access based o
 - [Form fields](form-fields.md) - How to control access to specific form fields based on the user user's roles.
 - Access control for editing forms - How to control access to Form Builder.
     - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
-    - [Organization-based permissions](organization.md) – Access based on organizational structure.
+    - [Organization-based permissions](organization.md) – Access based on organizational structure.
 - [Scenarios](scenarios.md)

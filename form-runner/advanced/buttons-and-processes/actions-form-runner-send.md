@@ -407,7 +407,7 @@ There are a few ways to debug those requests:
     The information will be logged to orbeon.log. This will log all HTTP requests, however, and can be very verbose.
 1. Use an HTTP proxy like [Charles](https://www.charlesproxy.com/).
 
-The easiest ways are probably options 1 and 2 above.
+The easiest ways are probably options 1 and 2 above.
 
 ## See also
 

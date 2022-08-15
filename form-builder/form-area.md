@@ -199,4 +199,4 @@ This mechanism is how you edit:
 - [Repeated grids](repeated-grids.md)
 - [Responsive design](../form-runner/feature/responsive-design.md)
 
-[^1]: What was known in the old days as "What You See is What You Get" or "WYSIWYG".
+[^1]: What was known in the old days as "What You See is What You Get" or "WYSIWYG".

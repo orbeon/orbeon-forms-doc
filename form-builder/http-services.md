@@ -45,7 +45,7 @@ On the wire, this serialization uses the `application/xml` content type.
 
 #### HTML Form serialization
 
-With the "HTML Form" serialization, leaf XML elements in the XML request body are converted to name/value pairs.
+With the "HTML Form" serialization, leaf XML elements in the XML request body are converted to name/value pairs.
 
 On the wire, this serialization uses the `application/x-www-form-urlencoded` encoding, like for standard web forms.
 

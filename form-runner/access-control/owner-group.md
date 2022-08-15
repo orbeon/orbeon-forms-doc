@@ -48,5 +48,5 @@ With Orbeon Forms 4.3, owner/group-based permissions were not enabled by default
 - [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
 - [Form fields](form-fields.md) - How to control access to specific form fields based on the user user's roles.
 - [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
-    - [Organization-based permissions](organization.md) – Access based on organizational structure.
+    - [Organization-based permissions](organization.md) – Access based on organizational structure.
 - [Scenarios](scenarios.md)
