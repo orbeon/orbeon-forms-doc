@@ -18,6 +18,8 @@ This shows the following dialog:
 
 <img src="../../form-builder/images/permissions-enable.png">
 
+![Permissions dialog with no permissions enabled](../../form-builder/images/permissions-enable.png)
+
 After you click on the checkbox, you'll be able to set access restrictions on the _create_, _read, update_, and _delete_ operations.
 
 ## Setting permissions
