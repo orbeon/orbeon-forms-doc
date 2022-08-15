@@ -12,15 +12,13 @@ You can restrict which users can access which forms, and what operations they ca
 
 By default, no restriction is imposed on _who_ can do _what_ with forms you create in Form Builder. You enable permissions by going to the Form Builder toolbox, and under _Advanced_, clicking on _Permissions_.
 
-<img src="../../form-builder/images/advanced-menu.png">
+![Opening the Permissions dialog](../../form-builder/images/advanced-menu.png)
 
 This shows the following dialog:
 
-<img src="../../form-builder/images/permissions-enable.png">
-
 ![Permissions dialog with no permissions enabled](../../form-builder/images/permissions-enable.png)
 
-After you click on the checkbox, you'll be able to set access restrictions on the _create_, _read, update_, and _delete_ operations.
+After you click on the checkbox, you'll be able to set access restrictions on the _Create_, _Read_, _Update_, and _Delete_ operations.
 
 ## Setting permissions
 
@@ -34,7 +32,7 @@ In the example below:
 - Users with the role _clerk_ can read any form data.
 - Users with the role _admin_ can do any operation, including deleting form data.
 
-<img alt="The Permissions dialog" src="../../form-builder/images/permissions-dialog.png" width="502">
+![Permissions dialog with explict permissions enabled](../../form-builder/images/permissions-dialog.png)
 
 ### Role types
 
@@ -49,11 +47,11 @@ Permissions you set in the dialog are _additive_ – Say you defined permissions
 
 Operation on _Anyone_ apply to all other rows – When you select a checkbox for a given operation on the first _Anyone_ row, that checkbox will be automatically checked and disabled so you can't change it, for any additional row, since you wouldn't want to authorize users with additional roles to perform less operations.
 
-_Update_ implies _read_ – On any row, if you check _update_, then _read_ will be automatically checked, as it wouldn't make sense to say that some users can update data, but can't read it, as when updating data, obviously, they must be shown the data they are updating.
+_Update_ implies _Read_ – On any row, if you check _update_, then _read_ will be automatically checked, as it wouldn't make sense to say that some users can update data, but can't read it, as when updating data, obviously, they must be shown the data they are updating.
 
 _Create_ can't be set for the _owner_ and _group members_ – The owner/group is a piece of information attached to existing form data, keeping track of the user who create the data, and the group in which this user is. This information is only known for existing data, so assigning the _create_ permission to the _owner_ or _group members_ doesn't make sense, and the dialog doesn't show that checkbox.
 
-Permissions for the _owner_ and _group members_ can be set independently– If you want data to be accessible only by people who created it, check read/update/delete for the owner but not for group members. If you want data to be accessible by all people in the same group,check read/update/delete for the group members and don't check them for the owner if you want the owner to lose access to that data in case the owner changes group. (The latter highlights the need for permissions owner and group member to be set independently.)
+Permissions for the _owner_ and _group members_ can be set independently – If you want data to be accessible only by people who created it, check read/update/delete for the owner but not for group members. If you want data to be accessible by all people in the same group,check read/update/delete for the group members and don't check them for the owner if you want the owner to lose access to that data in case the owner changes group. (The latter highlights the need for permissions owner and group member to be set independently.)
 
 ### The "List" permission
 
@@ -62,6 +60,8 @@ Permissions for the _owner_ and _group members_ can be set independently– If y
 The "List" permission allows specifying that the user can list form data on the Form Runner Summary page. If a user navigates to the Summary page of a form and the "List" permission is not granted to the user, the Summary page responds with an "Unauthorized" error.
 
 With earlier versions of Orbeon Forms, the "List" permission was not checked separately. However, the ability to "Read" implied the ability to "List" on the Summary page.
+
+The "List" permission implies the "Read" permission. Selecting "List" automatically selects the "Read" permission.
 
 Forms created and edited with earlier versions of Orbeon Forms that have the "Read" permission enabled also implicitly have the "List" permission enabled, for backward compatibility. Opening such a form in Form Builder will show both the "Read" and "List" permissions. If the form author deselects the "List" permission, and then publishes the form, then the form will not allow the "List" permission, as expected.
 
