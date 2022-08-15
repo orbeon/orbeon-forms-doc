@@ -20,6 +20,16 @@ This shows the following dialog:
 
 After you click on the checkbox, you'll be able to set access restrictions on the _create_, _read, update_, and _delete_ operations.
 
+## The `list` permission
+
+[SINCE Orbeon Forms 2022.1]
+
+The "List" permission allows specifying that the user can list form data on the Form Runner Summary page. If a user navigates to the Summary page of a form and the "List" permission is not granted to the user, the Summary page responds with an "Unauthorized" error.
+
+With earlier versions of Orbeon Forms, the "List" permission was not checked separately. However, the ability to "Read" implied the ability to "List" on the Summary page.
+
+Forms created and edited with earlier versions of Orbeon Forms that have the "Read" permission enabled also implicitly have the "List" permission enabled, for backward compatibility. Opening such a form in Form Builder will show both the "Read" and "List" permissions. If the form author deselects the "List" permission, and then publishes the form, then the form will not allow the "List" permission, as expected.
+
 ## Setting permissions
 
 ### An example
