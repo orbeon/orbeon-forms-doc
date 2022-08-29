@@ -279,11 +279,13 @@ The [Flat view](/form-runner/persistence/flat-view.md) now supports form definit
 
 ### Home page improvements
 
-The [Home page](form-runner/feature/home-page.md) now supports completely deleting a published form definition. Until now, you could mark a form definition as unavailabe, but not delete it completely.
+The [Home page](form-runner/feature/home-page.md) now supports completely deleting a published form definition. Until now, you could mark a form definition as unavailable, but not delete it completely.
 
 *NOTE: For [auditing](/form-runner/persistence/auditing.md) purposes, deleted form definitions are still present in the database unless explicitly removed there.* 
 
 You can configure an [explicit timezone](/configuration/properties/form-runner.md#timezone) for creation and last modification timestamps.
+
+The [Home page](form-runner/feature/home-page.md) now lists published form definitions by application name, form name, and (which is new), by version number. This allows all operations to work on a specific form definition version. 
 
 ### Summary page improvements
 
