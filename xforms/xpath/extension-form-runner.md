@@ -48,7 +48,7 @@ Return the form's application name.
 fr:control-string-value(
     $control-name   as xs:string,
     $follow-indexes as xs:boolean = false()
-) as xs:string?
+) as xs:string*
 ```
 
 - `$control-name`
@@ -56,11 +56,11 @@ fr:control-string-value(
 - `$follow-indexes`
     - if missing, takes the value `false()`.
     - if `false()`
-        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat iterations, the first repeat iteration is chosen. 
+        - This finds the "closest" matching control without checking repeat indexes. When descending into repeat iterations, all repeat iterations are chosen.
     - if `true()`
-        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat iterations, the iteration matching the enclosing repeat's current index is chosen. 
+        - This finds the "closest" matching control by following repeat indexes when possible. When descending into repeat iterations, the iteration matching the enclosing repeat's current index is chosen.
 
-This function returns the value of a Form Runner control by name as a string, or an empty sequence if the control or
+This function returns the value or values of a Form Runner control by name as a sequence of strings, or an empty sequence if the control or
 value is not found.
 
 [SINCE Orbeon Forms 2021.1.3]
@@ -70,7 +70,7 @@ fr:control-string-value(
     $control-name   as xs:string,
     $follow-indexes as xs:boolean,
     $section-name   as xs:string
-) as xs:string?
+) as xs:string*
 ```
 
 - `$section-name`
