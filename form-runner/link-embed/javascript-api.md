@@ -119,7 +119,9 @@ To remove a form that you embedded earlier, call:
 ORBEON.fr.API.destroyForm(container);
 ```
 
-If you want to replace a form A shown in a given container by an other form B, you can just do so by calling `ORBEON.fr.API.embedForm()` a second time for form B, and don't need to explicitly first call `destroyForm()`.
+If you want to replace a form A shown in a given container by another form B, you can just do so by calling `ORBEON.fr.API.embedForm()` a second time for form B, and don't need to explicitly first call `destroyForm()`.
+
+[SINCE Orbeon Forms 2022.1] Like `embedForm()`, `destroyForm()` returns a JavaScript `Promise` object. See the above section about `embedForm()` for more information about how to use the returned `Promise`. 
 
 ## Limitations
 
