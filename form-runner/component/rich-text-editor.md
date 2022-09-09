@@ -26,9 +26,7 @@ Until Orbeon Forms 4.10 included, `<xf:textarea mediatype="text/html">` was usin
 
 You can also customize the TinyMCE editor by adding JavaScript code to your form that defines a [TinyMCE configuration][4] and assign it to the global `TINYMCE_CUSTOM_CONFIG` variable.
 
-If you don't set this variable, the component uses a [built-in default configuration][5]. The default configuration limits the number of buttons shown to users, and uses the ["modern" TinyMCE theme](https://www.tiny.cloud/docs/themes/modern/) with the ["lightgray" skin](https://www.tiny.cloud/docs/configure/editor-appearance/#skin).
-
-_NOTE: Until Orbeon Forms 2017.2, Orbeon Forms used TinyMCE 3 and the ["thebigreason" TinyMCE theme](https://thebigreason.com/blog/2008/09/29/thebigreason-tinymce-skin)._
+If you don't set this variable, the component uses a built-in default configuration. The default configuration limits the number of buttons shown to users.
 
 ### Read-only and relevant MIPs
 
@@ -45,4 +43,3 @@ The component supports being bound to a node which can be read-only or non-relev
 
 [1]: https://www.tiny.cloud/
 [4]: https://www.tiny.cloud/docs/configure/
-[5]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/xbl/orbeon/tinymce/tinymce-config.js
