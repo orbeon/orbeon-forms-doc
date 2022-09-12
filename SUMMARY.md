@@ -137,6 +137,7 @@
         * [Summary page](form-runner/feature/summary-page.md)
         * [TIFF production](form-runner/feature/tiff-production.md)
         * [Versioning](form-runner/feature/versioning.md)
+        * [Simple data migration](form-runner/feature/simple-data-migration.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
