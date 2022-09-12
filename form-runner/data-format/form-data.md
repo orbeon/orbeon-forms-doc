@@ -161,7 +161,7 @@ Each iteration is represented by an element with the name of the repeated sectio
 </note>
 ```
 
-###Attachments
+### Attachments
 
 For attachments, the control element is slightly different:
 
