@@ -44,7 +44,7 @@ This clones the git repository into a child directory called `orbeon-forms`.
 
 *NOTE: There is no guarantee that the master branch is stable, as it contains some of the latest changes to Orbeon Forms!*
 
-## Instructions starting December 2016
+## Current instructions
 
 ### What the Orbeon Forms developers use
 
@@ -239,7 +239,7 @@ The idea is just that we want to ensure that something called "Orbeon Forms PE" 
 
 ----
 
-## Historical
+## Historical instructions
 
 ### With sbt from the command-line
 
