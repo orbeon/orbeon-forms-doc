@@ -102,7 +102,7 @@ When a control or section or grid is renamed, dependent formulas which use the v
 
 ### Control Settings dialog
 
-In the Control Settings dialog, XPath expressions are used to specify the following aspects of a control.
+In the Control Settings dialog, formulas are used to specify the following aspects of a control.
 
 #### Validations and alerts
 
@@ -135,7 +135,7 @@ In the Control Settings dialog, XPath expressions are used to specify the follow
 
 ![Basic Settings and Formulas](images/section-settings.png)
 
-In the Section/Grid Settings dialog, XPath expressions are used to specify the following aspects of a section or grid:
+In the Section/Grid Settings dialog, formulas are used to specify the following aspects of a section or grid:
 
 - **Visibility:** Boolean expression specifying whether the section is visible or not.
     - If this field is left blank, then the section is always visible.
