@@ -57,7 +57,7 @@ update the following property in your `properties-local.xml`:
     value="en fr it"/>
 ```
 
-By default, Orbeon Forms 4.0 sets it to `en fr`. The updated property at
+By default, Orbeon Forms 4.0 sets it to `en fr`. The updated property at
 least needs to include the new language or languages that you are
 adding, in this case, `it`. For more details on this, see this [Stack
 Overflow

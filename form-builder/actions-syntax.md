@@ -185,7 +185,7 @@ Attribute|Mandatory|Value|Comment
 ---------|---------|---------|---------
 `ref`|Yes|sequence XPath expression|runs in the current XPath evaluation context
 
-In the following example, each repetition adds a row to the grid, calls a service, passing the attachment id, and sets the attachment value on the last row.
+In the following example, each repetition adds a row to the grid, calls a service, passing the attachment id, and sets the attachment value on the last row.
 
 ```xml
 <fr:action name="populate-attachments" version="2018.2">
