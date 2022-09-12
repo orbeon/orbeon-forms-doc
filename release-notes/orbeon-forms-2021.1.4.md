@@ -39,7 +39,7 @@ This release addresses the following issues since [Orbeon Forms 2021.1.3 PE](orb
     - Error with undeclared `$class-value` when `class` present on non-repeated `tr` or `td` of `fr:grid` ([\#5319](https://github.com/orbeon/orbeon-forms/issues/5319))
     - Incorrect wizard status classes ([\#5320](https://github.com/orbeon/orbeon-forms/issues/5320))
     - Value of custom attributes is reset when removing an attached file is removed ([\#5322](https://github.com/orbeon/orbeon-forms/issues/5322))
-    - Action running on form load fails to update data if auto-saved or manually-saved document is loaded ([\#5358](https://github.com/orbeon/orbeon-forms/issues/5358))
+    - Action running on form load fails to update data if autosaved or manually-saved document is loaded ([\#5358](https://github.com/orbeon/orbeon-forms/issues/5358))
     - Offline: data with some characters is not properly serialized ([\#5360](https://github.com/orbeon/orbeon-forms/issues/5360))
     - Action running "after data is ready" doesn't have access to the latest calculated values on `/edit` ([\#5378](https://github.com/orbeon/orbeon-forms/issues/5378))
     - Date picker shown for readonly date on iOS ([\#5376](https://github.com/orbeon/orbeon-forms/issues/5376))

@@ -64,7 +64,7 @@ If users started filling out a new form, but didn't save the data, if starting t
 
 ![New page, single draft](../images/autosave-new-multiple.png)
 
-When multiple drafts are available, choosing the "View auto-saved drafts" button takes you to the form's Summary page in a special mode where only the relevant drafts are visible:
+When multiple drafts are available, choosing the "View autosaved drafts" button takes you to the form's Summary page in a special mode where only the relevant drafts are visible:
 
 ![Summary page with drafts only](../images/autosave-summary-drafts-only.png)
 
@@ -83,7 +83,7 @@ You don't need to do anything special to use this feature.
   value="5000"/>
 ```
 
-The value of `oxf.fr.detail.autosave-delay` sets the maximum time, in milliseconds, after which a change done by the user will be auto-saved. If 0 or negative, autosaving is disabled. Out of the box, this property is set to `5000`, that is 5 seconds. If your server experiences a lot of load, you might want to make that value higher to reduce the number of requests made by Orbeon Forms to your database.
+The value of `oxf.fr.detail.autosave-delay` sets the maximum time, in milliseconds, after which a change done by the user will be autosaved. If 0 or negative, autosaving is disabled. Out of the box, this property is set to `5000`, that is 5 seconds. If your server experiences a lot of load, you might want to make that value higher to reduce the number of requests made by Orbeon Forms to your database.
 
 The following property enables or disable autosave for a given persistence provider, as autosave requires support from the persistence provider. For database support, see [Database Support](../../form-runner/persistence/db-support.md).
 

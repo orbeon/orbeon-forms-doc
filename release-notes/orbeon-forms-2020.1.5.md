@@ -27,7 +27,7 @@ This release addresses the following issues since [Orbeon Forms 2020.1.4 PE](orb
 - Minimal repeated grid and section: allow tabbing through "-" icons ([\#5010](https://github.com/orbeon/orbeon-forms/issues/5010))
 - Minimal repeated section: missing "Remove" icon title on hover ([\#5009](https://github.com/orbeon/orbeon-forms/issues/5009))
 - Don't run actions when user is being asked whether to open a draft ([\#5006](https://github.com/orbeon/orbeon-forms/issues/5006))
-- Auto-save to take organization-based permissions into account ([\#5004](https://github.com/orbeon/orbeon-forms/issues/5004))
+- Autosave to take organization-based permissions into account ([\#5004](https://github.com/orbeon/orbeon-forms/issues/5004))
 - Date picker to support Danish ([\#5002](https://github.com/orbeon/orbeon-forms/issues/5002))
 - reCAPTCHA not to log requests sent to Google ([\#4991](https://github.com/orbeon/orbeon-forms/issues/4991))
 - Summary page structure search for dropdown should use exact not substring search ([\#4989](https://github.com/orbeon/orbeon-forms/issues/4989))
