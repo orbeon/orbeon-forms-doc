@@ -129,7 +129,7 @@ Here is how you can use this operation to update your form definitions' section 
 2. In the Home page, select which forms you want to update.
 3. Run the "Upgrade local form definitions" action.
 
-We advise that you only republish form definitions which use section templates if you know that the format of the data covered by the section templates remains compatible, or that [Simple Data Migration](/form-runner/feature/versioning.md#simple-data-migration) is enabled and expected to cover changes such as adding fields.
+We advise that you only republish form definitions which use section templates if you know that the format of the data covered by the section templates remains compatible, or that [Simple Data Migration](/form-runner/feature/simple-data-migration.md) is enabled and expected to cover changes such as adding fields.
 
 ### Remote server operations
 

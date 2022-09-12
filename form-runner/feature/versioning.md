@@ -48,53 +48,7 @@ Examples of incompatible changes:
 - moving a control between grids or sections
 - changing the nesting of grids or section within subsections
 
-See also [Simple data migration](#simple-data-migration) below.
-
-## Simple data migration
-
-### Availability
-
-This feature is available since Orbeon Forms 2018.2.
-
-This is an Orbeon Forms PE feature.
-
-### Rationale
-
-Simple data migration is an option which sits between "overwrite an existing form definition in an incompatible way" and "create a whole new form definition version". When enabled, simple data migration allows you to overwrite a form definition, but keep certain changes compatible, namely, the updated form definition can:
-
-- add and remove controls
-- add and remove grids and sections
-
-When you load existing data with the updated form definition, the following happens:
-
-- If the data is *missing* placeholders for data associated with new controls, grids or sections, those are automatically added.
-- If the data has *extra* placeholders for data associated with removed controls, grids or sections, those are automatically removed. 
-
-### Configuration
-
-This option is disabled by default. You can enable it in the Form Settings's Form Options tab:
-
-- __Use property:__ Use the value set by the `oxf.fr.detail.data-migration` property.
-- __Enabled:__ Perform simple data migration when loading and receiving data.
-- __Disabled:__ Do not perform simple data migration when loading and receiving data.
-- __Raise an error:__ If the data is incompatible upon load, raise an error. The user will not be able to access the data.
-
-The `oxf.fr.detail.data-migration` is set as follows by default:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.data-migration.*.*"
-    value="disabled"/>
-```
-
-The possible tokens are:
-
-- __Enabled:__ `enabled`
-- __Disabled:__ `disabled`
-- __Raise an error:__ `error`
-
-![Form Options](../../form-builder/images/form-settings-form-options.png)
+See also [Simple data migration](simple-data-migration.md), which enables some of the incompatible changes listed above.
 
 ## Limitations
 
@@ -103,6 +57,7 @@ The possible tokens are:
 
 ## See also
 
+- [Simple data migration](simple-data-migration.md)
 - [Application name and form name](/form-runner/overview/terminology.md#application-name-and-form-name)
 - [Publishing](/form-builder/publishing.md)
     - [Overwriting of existing version](/form-builder/publishing.md#versioning)

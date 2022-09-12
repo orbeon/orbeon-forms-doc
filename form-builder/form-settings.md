@@ -61,7 +61,7 @@ Form options include options which apply to the entire form definition.
     - For text areas, hints show as an HTML *placeholder* within the field when the field is empty. [SINCE Orbeon Forms 2017.1]
 - Simple Data Migration
     - [SINCE Orbeon Forms 2018.2]
-    - For details, see [Simple data migration](/form-runner/feature/versioning.md#simple-data-migration).
+    - For details, see [Simple data migration](/form-runner/feature/simple-data-migration.md).
 - Automatic Calculations Dependencies
     - [SINCE Orbeon Forms 2018.1]
     - For details, see [Automatic calculations dependencies](/form-runner/feature/automatic-calculations-dependencies.md). 
@@ -180,7 +180,7 @@ Form statistics show counts of various form elements.
 ## See also
 
 - [Wizard View](/form-runner/feature/wizard-view.md)
-- [Simple data migration](/form-runner/feature/versioning.md#simple-data-migration)
+- [Simple data migration](/form-runner/feature/simple-data-migration.md)
 - [Automatic calculations dependencies](/form-runner/feature/automatic-calculations-dependencies.md)
 - Blog posts
     - [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
