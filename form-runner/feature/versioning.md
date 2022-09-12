@@ -48,7 +48,7 @@ Examples of incompatible changes:
 - moving a control between grids or sections
 - changing the nesting of grids or section within subsections
 
-See also [Simple data migration](simple-data-migration.md), which enables some of the incompatible changes listed above.
+See also [Simple data migration](/form-runner/feature/simple-data-migration.md), which enables some of the incompatible changes listed above.
 
 ## Limitations
 
@@ -57,7 +57,7 @@ See also [Simple data migration](simple-data-migration.md), which enables some o
 
 ## See also
 
-- [Simple data migration](simple-data-migration.md)
+- [Simple data migration](/form-runner/feature/simple-data-migration.md)
 - [Application name and form name](/form-runner/overview/terminology.md#application-name-and-form-name)
 - [Publishing](/form-builder/publishing.md)
     - [Overwriting of existing version](/form-builder/publishing.md#versioning)
