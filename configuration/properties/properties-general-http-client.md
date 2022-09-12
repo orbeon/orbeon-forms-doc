@@ -118,6 +118,8 @@ When Orbeon Forms performs XForms submissions, or retrieves documents in XPL ove
     value="Authorization"/>
 ```
 
+For more, see [HTTP headers forwarding](/xforms/submission-extensions.md#http-headers-forwarding).
+
 _WARNING: For security reasons, you should be careful with header forwarding, as this might cause non trusted services to receive client headers._
 
 ## Cookies forwarding
