@@ -210,7 +210,7 @@ When set to `true`, the following property enables showing the table of contents
 When `false` (the default):
 
 - the table of contents appears to the left (wide desktop layout) or the top (narrow mobile layout)
-- the section content appears to the right (wide desktop layout) or under the table of conents (narrow mobile layout)
+- the section content appears to the right (wide desktop layout) or under the table of contents (narrow mobile layout)
 
 When `true`:
 
