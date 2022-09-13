@@ -31,6 +31,12 @@ Instead, use the variable notation with `$`:
 $my-other-control
 ```
 
+## Data compatibility
+
+The *publishing* of a form definition determines the data format that is supported by that form definition.
+
+However, some limited changes to a form definition allow for the data to remain compatible. For more, see [Simple data migration](form-runner/feature/simple-data-migration.md).
+
 ## Formats in use
 
 |Format version|Orbeon Forms version introduced|Description|Internal data format|Default external data format|
