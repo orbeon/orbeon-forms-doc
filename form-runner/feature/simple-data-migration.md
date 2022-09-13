@@ -8,7 +8,7 @@ This is an Orbeon Forms PE feature.
 
 ## Rationale
 
-Simple data migration is an option which sits between "overwrite an existing form definition in an incompatible way" and "create a whole new form definition version". When enabled, simple data migration allows you to overwrite a form definition version, but keep more changes compatible than simply changing control labels, etc. (as described in [Versioning](versioning.md)), namely, the updated form definition can:
+Simple data migration is an option which sits between "overwrite an existing form definition in an incompatible way" and "create a whole new form definition version". When enabled, simple data migration allows you to overwrite a form definition version, but keep more changes data-compatible than simply changing control labels, etc. (as described in [Versioning](versioning.md)), namely, the updated form definition can:
 
 - add and remove controls
 - add and remove grids and sections
@@ -54,6 +54,10 @@ With this enhancement, the updated form definition can now move (without renamin
 - Move controls within a given level of repeated grids or repeated sections, even across nested grids.
 
 Simply moving a form control this way allows you to reorganize your form while keeping access to existing data.
+
+When you load existing data with the updated form definition, the following happens:
+
+- If the data is both *missing* a placeholder and has an *extra* placeholder with the same name, and the placeholder doesn't cross repeated grids or section boundaries, then Form Runner considers that the form control moved and automatically moves the data that was read from the database. 
 
 ## Limitations
 
