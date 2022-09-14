@@ -131,25 +131,6 @@ The following property allows specifying which buttons are presented *inside* th
 
 ![](../../form-runner/images/wizard-buttons.png)
 
-### Buttons visibility
-
-[SINCE Orbeon Forms 2016.1]
-
-When the following conditions are met:
-
-1. You are using inner buttons.
-2. You are using the validated mode.
-
-The following buttons are automatically hidden until the wizard shows the last top-level form section:
-
-- `save-final`
-- `submit`
-- `send`
-- `review`
-- `pdf`
-- `tiff`
-- `email`
-
 ## Section status
 
 ### Status indication
