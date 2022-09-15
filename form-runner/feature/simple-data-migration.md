@@ -55,6 +55,8 @@ With this enhancement, the updated form definition can now move (without renamin
 
 Simply moving a form control this way allows you to reorganize your form while keeping access to existing data.
 
+![Moving a control across section boundaries](../images/simple-data-migration-move.png)
+
 When you load existing data with the updated form definition, the following happens:
 
 - If the data is both *missing* a placeholder and has an *extra* placeholder with the same name, and the placeholder doesn't cross repeated grids or section boundaries, then Form Runner considers that the form control moved and automatically moves the data that was read from the database. 
@@ -71,3 +73,4 @@ The following operations in particular are not supported:
 - [Versioning](versioning.md)
 - Blog posts:
     - [Simple data migration](https://blog.orbeon.com/2018/09/simple-data-migration.html)
+    - [Improved simple data migration](https://blog.orbeon.com/2022/09/improved-simple-data-migration.html)
