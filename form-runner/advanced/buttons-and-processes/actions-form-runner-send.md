@@ -353,6 +353,89 @@ Here is an example of `send` process which sends XML data to a service, followed
 </property>
 ```
 
+## Sending attachments and multiple items
+
+[SINCE Orbeon Forms 2022.1]
+
+You can send multiple items in a single `send` request. In this case, the items are sent using the `multipart/related` `Content-Type`. This allows the recipient of the request to access all the items at the same time.
+
+In order to do so, you pass the `content` parameter one or more of the following tokens:
+
+- `xml`:
+- `metadata`:
+- `attachments`:
+- `pdf`:
+- `tiff`:
+- `excel-with-named-ranges`:
+- `xml-form-structure-and-data`:
+
+For example, to send form data with its attachments:
+
+```
+<property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
+    send(
+        uri     = "http://example.org/accept-form",
+        method  = "POST",
+        content = "xml attachments"
+    )
+</property>
+```
+
+To send form data, attachments, and the PDF file:
+
+```
+<property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
+    send(
+        uri     = "http://example.org/accept-form",
+        method  = "POST",
+        content = "xml attachments pdf"
+    )
+</property>
+```
+
+The recipient will need the ability to decode a multipart request. This is usually done with a utility library. For example [Apache Commons FileUpload](https://commons.apache.org/proper/commons-fileupload/).  
+
+When sending XML data and attachments in the same request, paths to attachments in the XML data are replaced with `cid:` URIs. Each attachment part is given a `Content-ID` header with the corresponding id.
+
+The `Content-Type` header sent by Orbeon Forms looks like this (the boundary parameter will change for each request):
+
+```
+Content-Type: multipart/related; boundary=CHZ6Pogx-A1VVuDgU22pcJASumg8S0CrOZhooqlw
+``` 
+
+The content body looks like this:
+
+```
+--CHZ6Pogx-A1VVuDgU22pcJASumg8S0CrOZhooqlw
+Content-Disposition: form-data
+Content-Type: application/xml; charset=UTF-8
+Content-Transfer-Encoding: binary
+
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:fr="http://orbeon.org/oxf/xml/form-runner" fr:data-format-version="4.0.0">
+    <my-main-section>
+        <first-name>Bob</first-name>
+        <pet-picture filename="cat.jpg" mediatype="image/jpeg" size="56803">cid:94b0e57e87fa8f42cb494fdc2808f58c5b31be41</pet-picture>
+    </my-main-section>
+</form>
+--CHZ6Pogx-A1VVuDgU22pcJASumg8S0CrOZhooqlw
+Content-ID: <94b0e57e87fa8f42cb494fdc2808f58c5b31be41>
+Content-Disposition: attachment; filename*=UTF-8''cat.jpg
+Content-Type: image/jpeg
+Content-Transfer-Encoding: binary
+
+...binary image content here...
+--CHZ6Pogx-A1VVuDgU22pcJASumg8S0CrOZhooqlw
+Content-ID: <7a361b305064d3a95511da35a8c53edbabe3af8b>
+Content-Disposition: attachment; filename*=UTF-8''My%20demo%20multipart%20form%20-%20ce85cc4b7be9975d.pdf
+Content-Type: application/pdf
+Content-Transfer-Encoding: binary
+
+...binary PDF content here...
+
+--CHZ6Pogx-A1VVuDgU22pcJASumg8S0CrOZhooqlw--
+```
+
 ## Annotating XML data
 
 `annotate` can contain the following tokens:
@@ -363,19 +446,19 @@ Here is an example of `send` process which sends XML data to a service, followed
 If the property is missing or empty, no annotation takes place. For example:
 
 ```xml
-    <property
-      as="xs:string"
-      name="oxf.fr.detail.send.success.annotate.my-app.my-form"
-      value="warning info"/>
+<property
+  as="xs:string"
+  name="oxf.fr.detail.send.success.annotate.my-app.my-form"
+  value="warning info"/>
 ```
 
 ```xml
-    <form xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
-        <my-section>
-            <number xxf:info="Nice, greater than 1000!">2001</number>
-            <text xxf:warning="Should be shorter than 10 characters">This is a bit too long!</text>
-        </my-section>
-    </form>
+<form xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
+    <my-section>
+        <number xxf:info="Nice, greater than 1000!">2001</number>
+        <text xxf:warning="Should be shorter than 10 characters">This is a bit too long!</text>
+    </my-section>
+</form>
 ```
 
 ## Debugging the `send` action
