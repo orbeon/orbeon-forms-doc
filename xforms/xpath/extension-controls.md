@@ -341,7 +341,7 @@ Example of XML result with `xxf:itemset('my-select1', 'xml', true())` (formatted
 </itemset>
 ```
 
-In this example, you can access the label of the selected item with `xxf:itemset('my-select1', 'xml', true())/itemset/choices/item[@selected = 'true']/value`. The following is an example of JSON result with `xxf:itemset('my-select1', 'json', true())` (formatted for readability):
+In this example, you can access the label of the selected item with `xxf:itemset('my-select1', 'xml', true())//item[@selected = 'true']/label`. The following is an example of JSON result with `xxf:itemset('my-select1', 'json', true())` (formatted for readability):
 
 ```json
 [
