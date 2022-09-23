@@ -361,13 +361,13 @@ You can send multiple items in a single `send` request. In this case, the items 
 
 In order to generate a multipart request, you pass the `content` parameter one or more of the following tokens:
 
-- `xml`:
-- `metadata`:
-- `attachments`:
-- `pdf`:
-- `tiff`:
-- `excel-with-named-ranges`:
-- `xml-form-structure-and-data`:
+- `xml`: form data in XML format
+- `metadata`: [form metadata](#sending-form-metadata) in XML format
+- `attachments`: all attachments associated with the form data (but not those associated with the form definition) 
+- `pdf`: [PDF binary](#sending-a-pdf-binar)
+- `tiff`: [TIFF binary](#sending-a-tiff-binary)
+- `excel-with-named-ranges`: [Excel export](https://blog.orbeon.com/2021/09/excel-export-and-import.html) 
+- `xml-form-structure-and-data`: XML form structure and data export (not yet documented)
 
 For example, to send form data with its attachments:
 
