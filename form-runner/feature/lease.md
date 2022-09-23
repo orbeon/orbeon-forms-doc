@@ -16,7 +16,7 @@ If a second user, let's call her Marge, opens the same form instance for editing
 
 ![Message showing another user owns the lease](../images/lease-other.png)
 
-The lease given to Homer will end either because it expires without being renewed, or because Homer clicked on a button to explicitly relinquish the lease. At this point, Homer can click on the first button to try acquire the lease again, or [SINCE Orbeon Forms 20202.1] on the second to view the data in read-only mode.
+The lease given to Homer will end either because it expires without being renewed, or because Homer clicked on a button to explicitly relinquish the lease. At this point, Homer can click on the first button to try to acquire the lease again, or [SINCE Orbeon Forms 2020.1] on the second to view the data in read-only mode. [SINCE Orbeon Forms 2021.1.5 and 2022.1] As the "Show in read-only mode" button does a page navigation, and as page navigations aren't supported by the JavaScript or Java embedding API, that button is hidden in those cases. You can override this behavior through the `oxf.fr.detail.button.lease.show-in-view-mode.visible.*.*` property.   
 
 ![Message showing the user relinquished the lease](../images/lease-relinquished.png)
 
