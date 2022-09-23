@@ -357,9 +357,9 @@ Here is an example of `send` process which sends XML data to a service, followed
 
 [SINCE Orbeon Forms 2022.1]
 
-You can send multiple items in a single `send` request. In this case, the items are sent using the `multipart/related` `Content-Type`. This allows the recipient of the request to access all the items at the same time.
+You can send multiple items in a single `send` request. In this case, the items are sent using a multipart request (with a `Content-Type: multipart/related` header). This allows the recipient of the request to access all the items without performing multiple requests.
 
-In order to do so, you pass the `content` parameter one or more of the following tokens:
+In order to generate a multipart request, you pass the `content` parameter one or more of the following tokens:
 
 - `xml`:
 - `metadata`:
@@ -371,7 +371,7 @@ In order to do so, you pass the `content` parameter one or more of the following
 
 For example, to send form data with its attachments:
 
-```
+```xml
 <property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
     send(
         uri     = "http://example.org/accept-form",
@@ -383,7 +383,7 @@ For example, to send form data with its attachments:
 
 To send form data, attachments, and the PDF file:
 
-```
+```xml
 <property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
     send(
         uri     = "http://example.org/accept-form",
