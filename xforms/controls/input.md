@@ -241,12 +241,28 @@ Input sanitation allows you to apply a filter on the data entered by the user, b
 </property>
 ```
 
-The configuration is a JSON map of string to string.  Each replacement is applied in the order in which it appears in the map. If the configuration is blank string, sanitation is turned off.
+The configuration is a JSON map of string to string. The algorithm is as follows:
 
-Sanitation applies to:
+- If the configuration is blank string, sanitation is turned off.
+- If not blank, then the JSON configuration is parsed and sanitation is turned on.
+- Each mapping contains a search string on the left, and a replacement string on the right.
+- For each mapping, all instances of the search string in the input data are replaced with the replacement string.
+- Each replacement is applied in the order in which it appears in the JSON map.
 
-* input fields bound to string data
-* text areas
+Although this would be probably useless, and is definitely not recommended, the following would replace all instances of "Hello!" with "Hi!":
+
+```xml
+<property as="xs:string" name="oxf.xforms.sanitize">
+    {
+        "Hello!": "Hi!"
+    }
+</property>
+```
+
+Sanitation applies only to:
+
+- input fields bound to string data
+- text areas
 
 You can also use the `xxf:sanitize` attribute on the XForms model to set a filter local to a given page.
 
