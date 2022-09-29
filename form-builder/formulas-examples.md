@@ -374,7 +374,6 @@ You can use the following formula, in Control Settings, Validation and Alerts, F
 ```xpath
 let $isin := .
 return
-  string-length($isin) = 12 and
   (
     let
       $without-checksum := substring($isin, 1, 11),
@@ -405,9 +404,11 @@ return
                               return xs:decimal(codepoints-to-string($code)),
       $sum-digits          := sum(($group-1-x2-digits, $group-2-digits)),
       $checksum-computed   := string((10 - ($sum-digits mod 10)) mod 10),
-      $checksum-provided   := substring($isin, 12, 1)
+      $checksum-provided   := substring($isin, 12, 1),
+      $proper-checksum     := $checksum-computed = $checksum-provided,
+      $proper-length       := string-length($isin) = 12
     return
-      $checksum-computed = $checksum-provided
+      $proper-checksum and $proper-length
   )
 ```
 
