@@ -62,12 +62,12 @@ For each such control found, a `<query>` element is added to the request, with t
 
 As of Orbeon Forms 2020.1:
 
-|XML Node           |Required|Function|
-|-------------------|--------|--------|
-|`path` attribute   |Yes     |path to the XML element (see *Search paths* below)|
-|`match` attribute  |No      |match type: `substring`, `exact`, `token` (see *Match types* below)|
-|`control` attribute|No      |control type (`input`, `textarea`, `select`, etc.), used if `match` is absent|
-|text value         |No      |search string|
+| XML Node            | Required | Function                                                                      |
+|---------------------|----------|-------------------------------------------------------------------------------|
+| `path` attribute    | Yes      | path to the XML element (see *Search paths* below)                            |
+| `match` attribute   | No       | match type: `substring`, `exact`, `token` (see *Match types* below)           |
+| `control` attribute | No       | control type (`input`, `textarea`, `select`, etc.), used if `match` is absent |
+| text value          | No       | search string                                                                 |
 
 If the `match` attribute is absent, the `control` attribute is used to determine the match type:
 
@@ -77,13 +77,13 @@ If the `match` attribute is absent, the `control` attribute is used to determine
 
 Historical attributes, which were informative only:
 
-|Attribute      |Function|
-|---------------|--------|
-|`name`         |control name as entered in Form Builder|
-|`label`        |control label as entered in Form Builder|
-|`type`         |datatype associated with the field in Form Builder|
-|`search-field` |indicate whether the field must show as Summary page search|
-|`summary-field`|indicate whether the field must show as Summary page column|
+| Attribute      | Function                                                     |
+|----------------|--------------------------------------------------------------|
+| `name`         | control name as entered in Form Builder                      |
+| `label`        | control label as entered in Form Builder                     |
+| `type`         | datatype associated with the field in Form Builder           |
+| `search-field` | indicate whether the field must show as Summary page search  |
+| `summary-field`| indicate whether the field must show as Summary page column  |
 
 ### Match types
 
