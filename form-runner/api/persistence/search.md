@@ -71,8 +71,8 @@ As of Orbeon Forms 2020.1:
 
 If the `match` attribute is absent, the `control` attribute is used to determine the match type:
 
-- `input` or `textarea`: imply `match="substring"`
-- `select`: implies `match="token"`
+- `input` or `textarea`: implies `match="substring"`
+- `select` or end with `-select`: implies `match="token"`
 - any other value: implies `match="exact"`
 
 Historical attributes, which were informative only:
