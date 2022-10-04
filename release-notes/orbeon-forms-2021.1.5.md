@@ -29,6 +29,7 @@ This release addresses the following issues since [Orbeon Forms 2021.1.4 PE](orb
 - Form Builder
     - Search Controls only opens the top-level section ([\#5348](https://github.com/orbeon/orbeon-forms/issues/5348))
     - Split/merge icons stop working after inserting new section ([\#5361](https://github.com/orbeon/orbeon-forms/issues/5361))
+    - Offline test: "Unknown time-zone ID: America/Los_Angeles" error ([\#5472](https://github.com/orbeon/orbeon-forms/issues/5472))
 - Form Runner
     - `fr:control-clear` doesn't clear multiple attachments ([\#5471](https://github.com/orbeon/orbeon-forms/issues/5471))
     - Summary search: "Dropdown with Other" only shows static options ([\#5408](https://github.com/orbeon/orbeon-forms/issues/5408))
