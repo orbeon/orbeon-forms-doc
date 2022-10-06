@@ -4,6 +4,7 @@
 
 Form Runner offers a number of integration APIs, including:
 
+- [Authentication of server-side service APIs](authentication.md)
 - [Persistence API](/form-runner/api/persistence/README.md)
     - [CRUD](/form-runner/api/persistence/crud.md)
     - [Search](/form-runner/api/persistence/search.md)

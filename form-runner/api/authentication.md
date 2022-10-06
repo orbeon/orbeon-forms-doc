@@ -48,7 +48,7 @@ With Orbeon Forms 2022.1, you can pass user credentials using Orbeon Forms HTTP 
 
 These headers work as described in [Header-driven method](/form-runner/access-control/users.md#header-driven-method).
 
-COMPATIBILITY NOTE: If, with earlier versions of Orbeon Forms, you were calling service APIs and passing headers, they had to match the headers configured with the header-driven method. Starting Orbeon Forms 2022.1, the headers can only be the `Orbeon-*` headers as specified above.
+*COMPATIBILITY NOTE: If, with earlier versions of Orbeon Forms, you were calling service APIs and passing headers, they had to match the headers configured with the header-driven method. Starting Orbeon Forms 2022.1, the headers can only be the `Orbeon-*` headers as specified above.*
 
 ## See also
 
