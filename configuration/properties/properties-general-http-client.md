@@ -98,9 +98,9 @@ When using HTTPS, you might want Orbeon Forms to authenticate itself by presenti
     - Relationship to the truststore:
         - [SINCE Orbeon Forms 2021.1] Whether this property is specified or not, the server certificate is verified using the default truststore, which you override by setting the `javax.net.ssl.trustStore` property (more on this in the [JSSE Reference Guide](https://docs.oracle.com/en/java/javase/11/security/java-secure-socket-extension-jsse-reference-guide.html)).
         - [UNTIL Orbeon Forms 2020.1] If you specify a keystore, it is also used as a truststore. This is the case even if connecting to server whose key is signed by a recognized certificate authority (CA), which means that you need to add the certificate of the CA who signed the key of the server you want to connect to the keystore.  
-        - If this property is blank, the default JSSE algorithm to find a trust store applies.
+        - If this property is blank, the default JSSE algorithm to find a truststore applies.
 - `oxf.http.ssl.keystore.password`
-    - Specifies the password needed to access the key store file.
+    - Specifies the password needed to access the keystore file.
 
 You might also want to:
 
