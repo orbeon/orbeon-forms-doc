@@ -138,7 +138,7 @@ Navigate to an external page via client-side `GET`.
         - Boolean indicating whether to keep the loading indicator while the navigation is in progress
         - Optional, if missing defaults to `false`
         - Can be an XPath Value Template
-        - Setting this parameter to `true` is particularly useful if you have enabled the [modal indicator](/configuration/properties/form-runner-detail-page.md#loading-indicator-for-buttons) for the button that triggers this process, and you would like to prevent double submissions or users from editing the form while the browser loads the target URI
+        - Setting this parameter to `true` is particularly useful if you have enabled the [modal indicator](/configuration/properties/form-runner-detail-page.md#loading-indicator-for-buttons) for the button that triggers this process, and you would like to prevent double submissions or users from editing the form while the navigation is in progress
 
 You can also use the `navigate` action to execute JavaScript:
 
