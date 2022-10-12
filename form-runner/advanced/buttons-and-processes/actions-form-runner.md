@@ -133,6 +133,12 @@ Navigate to an external page via client-side `GET`.
         - SINCE Orbeon Forms 2019.1
         - where to display the location
         - `_self|_blank` or name of the browsing context
+    - `show-progress`
+        - [SINCE Orbeon Forms 2022.1]
+        - Boolean indicating whether to keep the loading indicator while the navigation is in progress
+        - Optional, if missing defaults to `false`
+        - Can be an XPath Value Template
+        - Setting this parameter to `true` is particularly useful if you have enabled the [modal indicator](/configuration/properties/form-runner-detail-page.md#loading-indicator-for-buttons) for the button that triggers this process, and you would like to prevent double submissions or users from editing the form while the browser loads the target URI
 
 You can also use the `navigate` action to execute JavaScript:
 
