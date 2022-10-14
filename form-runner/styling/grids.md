@@ -29,54 +29,54 @@ It is possible to change the default back to using HTML tables at runtime with t
 ### Non-repeated grids without column or row spanning
 
 ```html
-<div id="my-section-section≡grid-1-grid" class="xbl-component xbl-fr-grid-single xbl-fr-grid">
+<div id="my-section-section≡my-grid-grid" class="xbl-component xbl-fr-grid-single xbl-fr-grid">
     <div class="fr-grid fr-grid-12 fr-grid-css fr-grid-grid-1 fr-norepeat">
         <div class="fr-grid-body">
-            <div id="my-section-section≡grid-1-grid≡xf-633" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="1">
+            <div id="my-section-section≡my-grid-grid≡xf-633" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="1">
                 <!-- Control -->
             </div>
-            <div id="my-section-section≡grid-1-grid≡xf-638" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="1">
+            <div id="my-section-section≡my-grid-grid≡xf-638" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="1">
                 <!-- Control -->
             </div>
-            <div id="my-section-section≡grid-1-grid≡xf-640" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="2">
+            <div id="my-section-section≡my-grid-grid≡xf-640" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="2">
                 <!-- Control -->
             </div>
-            <div id="my-section-section≡grid-1-grid≡xf-642" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="2">
+            <div id="my-section-section≡my-grid-grid≡xf-642" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="2">
                 <!-- Control -->
             </div>
-            <div id="my-section-section≡grid-1-grid≡xf-644" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="3">
+            <div id="my-section-section≡my-grid-grid≡xf-644" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="3">
                 <!-- Control -->
             </div>
-            <div id="my-section-section≡grid-1-grid≡xf-646" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="3">
+            <div id="my-section-section≡my-grid-grid≡xf-646" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="3">
                 <!-- Control -->
             </div>
         </div>
     </div>
-    <div class="fr-grid-non-empty" id="my-section-section≡grid-1-grid≡xf-648"></div>
+    <div class="fr-grid-non-empty" id="my-section-section≡my-grid-grid≡xf-648"></div>
 </div>
 ```
 
 ### Non-repeated grids with column or row spanning
 
 ```html
-<div id="my-section-section≡grid-1-grid" class="xbl-component xbl-fr-grid-single xbl-fr-grid">
+<div id="my-section-section≡my-grid-grid" class="xbl-component xbl-fr-grid-single xbl-fr-grid">
     <div class="fr-grid fr-grid-12 fr-grid-css fr-grid-grid-1 fr-norepeat">
         <div class="fr-grid-body">
-            <div id="my-section-section≡grid-1-grid≡xf-633" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="1">
+            <div id="my-section-section≡my-grid-grid≡xf-633" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="1">
                 <!-- Control -->
             </div>
-            <div id="my-section-section≡grid-1-grid≡xf-638" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="1" data-fr-h="3">
+            <div id="my-section-section≡my-grid-grid≡xf-638" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="1" data-fr-h="3">
                 <!-- Control -->
             </div>
-            <div id="my-section-section≡grid-1-grid≡xf-640" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="2">
+            <div id="my-section-section≡my-grid-grid≡xf-640" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="2">
                 <!-- Control -->
             </div>
-            <div id="my-section-section≡grid-1-grid≡xf-642" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-y="3" data-fr-x="1">
+            <div id="my-section-section≡my-grid-grid≡xf-642" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-y="3" data-fr-x="1">
                 <!-- Control -->
             </div>
         </div>
     </div>
-    <div class="fr-grid-non-empty" id="my-section-section≡grid-1-grid≡xf-644"></div>
+    <div class="fr-grid-non-empty" id="my-section-section≡my-grid-grid≡xf-644"></div>
 </div>
 ```
 
@@ -85,82 +85,82 @@ It is possible to change the default back to using HTML tables at runtime with t
 ```html
 <div class="fr-grid fr-grid-12 fr-grid-css fr-grid-grid-2 fr-repeat fr-repeat-single-row">
     <div class="fr-grid-repeat-top-row">
-        <div id="section-1-section≡grid-2-grid≡xf-739" class="fr-repeat-column-left xforms-group xforms-readonly">
+        <div id="section-1-section≡my-grid-grid≡xf-739" class="fr-repeat-column-left xforms-group xforms-readonly">
             <!-- Button to add a new row -->
         </div>
         <div class="fr-grid-head">
             <div class="fr-grid-th" data-fr-w="6" data-fr-x="1" data-fr-y="1">
                 <label
-                    id="section-1-section≡grid-2-grid≡xf-744"
+                    id="section-1-section≡my-grid-grid≡xf-744"
                     class="xforms-control xforms-label xforms-readonly">Foo</label>
-                <span id="section-1-section≡grid-2-grid≡xf-745" class="xforms-control xforms-hint xforms-readonly"></span>
+                <span id="section-1-section≡my-grid-grid≡xf-745" class="xforms-control xforms-hint xforms-readonly"></span>
             </div>
             <div class="fr-grid-th" data-fr-w="6" data-fr-x="7" data-fr-y="1">
                 <label
-                    id="section-1-section≡grid-2-grid≡xf-748"
+                    id="section-1-section≡my-grid-grid≡xf-748"
                     class="xforms-control xforms-label xforms-readonly">Bar</label>
-                <span id="section-1-section≡grid-2-grid≡xf-749" class="xforms-control xforms-hint xforms-readonly"></span>
+                <span id="section-1-section≡my-grid-grid≡xf-749" class="xforms-control xforms-hint xforms-readonly"></span>
             </div>
         </div>
     </div>
-    <div id="repeat-begin-section-1-section≡grid-2-grid≡grid-2-grid-repeat" class="xforms-repeat-begin-end xforms-update-full"></div>
+    <div id="repeat-begin-section-1-section≡my-grid-grid≡my-grid-grid-repeat" class="xforms-repeat-begin-end xforms-update-full"></div>
     <div class="xforms-repeat-delimiter"></div>
     <span class="xforms-repeat-selected-item-1 xforms-update-full"></span>
-    <div class="fr-grid-repeat-iteration can-insert-above can-insert-below can-clear xforms-repeat-selected-item-1 xforms-update-full" id="section-1-section≡grid-2-grid≡xf-756⊙1">
-        <div id="section-1-section≡grid-2-grid≡xf-782⊙1" class="fr-repeat-column-left xforms-group xforms-readonly">
+    <div class="fr-grid-repeat-iteration can-insert-above can-insert-below can-clear xforms-repeat-selected-item-1 xforms-update-full" id="section-1-section≡my-grid-grid≡xf-756⊙1">
+        <div id="section-1-section≡my-grid-grid≡xf-782⊙1" class="fr-repeat-column-left xforms-group xforms-readonly">
             <div class="dropdown"><!-- Dropdown menu --></div>
         </div>
         <div class="fr-grid-body">
-            <div id="section-1-section≡grid-2-grid≡xf-785⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="1">
+            <div id="section-1-section≡my-grid-grid≡xf-785⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="1">
                 <!-- Control -->
             </div>
-            <div id="section-1-section≡grid-2-grid≡xf-788⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="1">
+            <div id="section-1-section≡my-grid-grid≡xf-788⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="1">
                 <!-- Control -->
             </div>
         </div>
     </div>
     <span class="xforms-repeat-selected-item-1 xforms-update-full"></span>
-    <div id="repeat-end-section-1-section≡grid-2-grid≡grid-2-grid-repeat" class="xforms-repeat-begin-end"></div>
+    <div id="repeat-end-section-1-section≡my-grid-grid≡my-grid-grid-repeat" class="xforms-repeat-begin-end"></div>
 </div>
 ```
 
 ### Repeated grids over two or more rows
 
 ```html
-<div id="my-section-section≡grid-1-grid" class="xbl-component xbl-fr-grid-multiple xbl-javascript-lifecycle xbl-fr-grid">
+<div id="my-section-section≡my-grid-grid" class="xbl-component xbl-fr-grid-multiple xbl-javascript-lifecycle xbl-fr-grid">
     <div class="fr-grid fr-grid-12 fr-grid-css fr-grid-grid-1 fr-repeat fr-repeat-multiple-rows">
         <div class="fr-grid-repeat-top-row">
-            <div id="my-section-section≡grid-1-grid≡xf-653" class="fr-repeat-column-left xforms-group xforms-readonly">
+            <div id="my-section-section≡my-grid-grid≡xf-653" class="fr-repeat-column-left xforms-group xforms-readonly">
                 <!-- Button to add a new row -->
             </div>
             <div class="fr-grid-head"></div>
         </div>
-        <div id="repeat-begin-my-section-section≡grid-1-grid≡grid-1-grid-repeat" class="xforms-repeat-begin-end xforms-update-full"></div>
+        <div id="repeat-begin-my-section-section≡my-grid-grid≡my-grid-grid-repeat" class="xforms-repeat-begin-end xforms-update-full"></div>
         <div class="xforms-repeat-delimiter"></div>
         <span class="xforms-repeat-selected-item-1 xforms-update-full"></span>
-        <div class="fr-grid-repeat-iteration can-insert-above can-insert-below can-clear xforms-repeat-selected-item-1 xforms-update-full" id="my-section-section≡grid-1-grid≡xf-662⊙1">
-            <div id="my-section-section≡grid-1-grid≡xf-688⊙1" class="fr-repeat-column-left xforms-group xforms-readonly">
+        <div class="fr-grid-repeat-iteration can-insert-above can-insert-below can-clear xforms-repeat-selected-item-1 xforms-update-full" id="my-section-section≡my-grid-grid≡xf-662⊙1">
+            <div id="my-section-section≡my-grid-grid≡xf-688⊙1" class="fr-repeat-column-left xforms-group xforms-readonly">
                 <div class="dropdown"><!-- Dropdown menu --></div>
             </div>
             <div class="fr-grid-body">
-                <div id="my-section-section≡grid-1-grid≡xf-691⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="1">
+                <div id="my-section-section≡my-grid-grid≡xf-691⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="1">
                     <!-- Control -->
                 </div>
-                <div id="my-section-section≡grid-1-grid≡xf-696⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="1" data-fr-h="3">
+                <div id="my-section-section≡my-grid-grid≡xf-696⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="7" data-fr-y="1" data-fr-h="3">
                     <!-- Control -->
                 </div>
-                <div id="my-section-section≡grid-1-grid≡xf-698⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="2">
+                <div id="my-section-section≡my-grid-grid≡xf-698⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-x="1" data-fr-y="2">
                     <!-- Control -->
                 </div>
-                <div id="my-section-section≡grid-1-grid≡xf-700⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-y="3" data-fr-x="1">
+                <div id="my-section-section≡my-grid-grid≡xf-700⊙1" class="fr-grid-td xforms-group" data-fr-w="6" data-fr-y="3" data-fr-x="1">
                     <!-- Control -->
                 </div>
             </div>
         </div>
         <span class="xforms-repeat-selected-item-1 xforms-update-full"></span>
-        <div id="repeat-end-my-section-section≡grid-1-grid≡grid-1-grid-repeat" class="xforms-repeat-begin-end"></div>
+        <div id="repeat-end-my-section-section≡my-grid-grid≡my-grid-grid-repeat" class="xforms-repeat-begin-end"></div>
     </div>
-    <div class="fr-grid-non-empty" id="my-section-section≡grid-1-grid≡xf-702"></div>
+    <div class="fr-grid-non-empty" id="my-section-section≡my-grid-grid≡xf-702"></div>
 </div>
 ```
 
