@@ -2,15 +2,14 @@
 
 ## HTML tables or CSS grids?
 
-- Until Orbeon Forms 2016.1
-    - All grids use `<table>`.
-- From Orbeon Forms 2016.2 until 2017.1
-    - Grids which are not repeated and do not include `rowpan`s do not use a `<table>` element but use instead `<div>`s.
-- From Orbeon Forms 2017.2 to 2021.1
-    - At design-time, CSS grids are used in all cases.
-    - At runtime, same as in previous versions.
-- From Orbeon Forms 2022.1
-    - All grids use CSS grids. No more `<table>` elements are used (except if the `oxf.xforms.xbl.fr.grid.markup` property is used to force backward compatibility).
+The HTML markup for grids has changed over time. The following table summarizes the changes.
+
+| Orbeon Forms Version | Not repeated (no spanning) | Not repeated (spanning) | Repeated  | Design-Time     |
+|----------------------|----------------------------|-------------------------|-----------|-----------------|
+| Until 2016.1         | `<table>`                  | `<table>`               | `<table>` | `<table>`       |
+| 2016.2 until 2017.1  | `<div>`                    | `<table>`               | `<table>` | Same as runtime |
+| 2017.2 to 2021.1     | `<div>`                    | `<table>`               | `<table>` | CSS grids       |
+| From 2022.1          | CSS grids                  | CSS grids               | CSS grids | CSS grids       |
 
 ## Starting Orbeon Forms 2022.1
 
@@ -18,7 +17,7 @@
 
 Starting with Orbeon Forms 2022.1, by default, Orbeon Forms uses [CSS grids](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for all grids, repeated or not repeated, at runtime as well as at design-time. Previously, the default was to use HTML tables at runtime except for non-repeated grids without rowspans. This is made possible with the drop of Internet Explorer support.
 
-It is possible to change the default back to HTML tables with the following property:
+It is possible to change the default back to using HTML tables at runtime with the following property:
 
 ```xml
 <property
