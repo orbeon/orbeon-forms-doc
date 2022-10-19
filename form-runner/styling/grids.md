@@ -4,12 +4,18 @@
 
 The HTML markup for grids has changed over time. The following table summarizes the changes.
 
-| Orbeon Forms Version | Not repeated (no spanning) | Not repeated (spanning) | Repeated  | Design-Time     |
-|----------------------|----------------------------|-------------------------|-----------|-----------------|
-| Until 2016.1         | `<table>`                  | `<table>`               | `<table>` | `<table>`       |
-| 2016.2 until 2017.1  | `<div>`                    | `<table>`               | `<table>` | Same as runtime |
-| 2017.2 to 2021.1     | `<div>`                    | `<table>`               | `<table>` | CSS grids       |
-| From 2022.1          | CSS grids                  | CSS grids               | CSS grids | CSS grids       |
+| Orbeon Forms Version                     | Runtime: not repeated (no spanning) | Runtime: not repeated (spanning) | Runtime: repeated      | Design-Time            | PDF             |
+|------------------------------------------|-------------------------------------|----------------------------------|------------------------|------------------------|-----------------|
+| Until 2016.1                             | `<table>`                           | `<table>`                        | `<table>`              | `<table>`              | `<table>`       |
+| 2016.2 until 2017.1                      | `<div>`                             | `<table>`                        | `<table>`              | Same as runtime        | Same as runtime |
+| 2017.2 to 2019.2                         | `<div>`                             | `<table>`                        | `<table>`              | `<div>` with CSS grids | Same as runtime |
+| 2020.1 to 2021.1                         | `<table>`                           | `<table>`                        | `<table>`              | `<div>` with CSS grids | `<table>`       |
+| From 2022.1                              | `<div>` with CSS grids              | `<div>` with CSS grids           | `<div>` with CSS grids | `<div>` with CSS grids | `<table>`       |
+| From 2022.1 (`grid-markup="html-table"`) | `<table>`                           | `<table>`                        | `<table>`              | `<div>` with CSS grids | `<table>`       |
+
+[//]: # (12 columns: Orbeon Forms 2017.2)
+
+[//]: # (24 columns: 2020.1)
 
 ## Starting Orbeon Forms 2022.1
 
