@@ -44,19 +44,18 @@ To properly show up in the toolbox, XBL files need to include the appropriate [c
 In addition to controls, the toolbox has other features which you can enable or disable with the following properties:
 
 ```xml
-<property as="xs:boolean" name="oxf.fb.menu.schema"            value="true"/>
-<property as="xs:boolean" name="oxf.fb.menu.pdf"               value="true"/>
-<property as="xs:boolean" name="oxf.fb.menu.edit-source"       value="true"/>
-<property as="xs:boolean" name="oxf.fb.menu.permissions"       value="true"/>
+<property as="xs:boolean" name="oxf.fb.menu.schema"                  value="true"/>
+<property as="xs:boolean" name="oxf.fb.menu.pdf"                     value="true"/>
+<property as="xs:boolean" name="oxf.fb.menu.edit-source"             value="true"/>
+<property as="xs:boolean" name="oxf.fb.menu.permissions"             value="true"/>
+<property as="xs:boolean" name="oxf.fb.menu.permissions.owner-group" value="true"/>
+<!-- [SINCE Orbeon Forms 4.6] -->
+<property as="xs:boolean" name="oxf.fb.menu.services.http"           value="true"/>
+<property as="xs:boolean" name="oxf.fb.menu.services.database"       value="true"/>
+<property as="xs:boolean" name="oxf.fb.menu.actions"                 value="true"/>
 ```
 
-[SINCE Orbeon Forms 4.6] The following properties are also supported:
-
-```xml
-<property as="xs:boolean" name="oxf.fb.menu.services.http"     value="true"/>
-<property as="xs:boolean" name="oxf.fb.menu.services.database" value="true"/>
-<property as="xs:boolean" name="oxf.fb.menu.actions"           value="true"/>
-```
+- [SINCE Orbeon Forms 2022.1 and 2021.1.6] `oxf.fb.menu.permissions.owner-group` allows you, by setting the value of the property to `false`, to disable the two lines in the permissions dialog related to owner and group permissions. This is useful if you're always using a custom implementation of the persistence API that doesn't support owner and group permissions and you prefer to hide those options from form authors to avoid possible confusions.
 
 ## Publish dialog
 
