@@ -187,6 +187,12 @@ Attributes:
   - evaluation context
     - context of the iteration item
   - if the constraint returns `false()`, the current row cannot be removed
+- `clear-constraint`
+  - [SINCE Orbeon Forms 2022.1] 
+  - optional XPath expression
+  - evaluation context
+    - context of the iteration item
+  - if the constraint returns `false()`, the "Clear Line" menu item is disabled
 - `freeze`
   - optional number of rows at the top which cannot be removed or moved
   - can be an AVT [SINCE Orbeon Forms 2016.3]
