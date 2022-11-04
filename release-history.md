@@ -16,7 +16,7 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 
 | Year | Date   | Version    | PE support             | Release notes                                                                                                                        |
 |------|--------|------------|------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| 2022 | Nov xx | 2021.1.6   | 🟩 Until Dec 30, 2024  | [Release notes](/release-notes/orbeon-forms-2021.1.6.md)                                                                             | 
+| 2022 | Nov 7  | 2021.1.6   | 🟩 Until Dec 30, 2024  | [Release notes](/release-notes/orbeon-forms-2021.1.6.md)                                                                             | 
 |      | Oct 4  | 2021.1.5   | 🟨 Upgrade to 2021.1.6 | [Release notes](/release-notes/orbeon-forms-2021.1.5.md)                                                                             | 
 |      | Aug 1  | 2021.1.4   | 🟨 Upgrade to 2021.1.6 | [Release notes](/release-notes/orbeon-forms-2021.1.4.md)                                                                             | 
 |      | Apr 27 | 2021.1.3   | 🟨 Upgrade to 2021.1.6 | [Release notes](/release-notes/orbeon-forms-2021.1.3.md)                                                                             | 

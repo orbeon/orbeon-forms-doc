@@ -1,6 +1,6 @@
 # Orbeon Forms 2021.1.6
 
-__Tuesday, November x, 2022__
+__Tuesday, November 7, 2022__
 
 Today we released Orbeon Forms 2021.1.6 PE! This release introduces bug-fixes and is recommended for all users of:
 
@@ -22,7 +22,6 @@ This release addresses the following issues since [Orbeon Forms 2021.1.5 PE](orb
     - Repetition number not shown in repeated grid with appearance "minimal" ([\#5475](https://github.com/orbeon/orbeon-forms/issues/5475))
     - PDF: Checkboxes should be different from radio buttons ([\#5482](https://github.com/orbeon/orbeon-forms/issues/5482))
     - Enabling the reCAPTCHA leads to a `Cannot read properties of undefined (reading 'internalShortDelay')` ([\#5496](https://github.com/orbeon/orbeon-forms/issues/5496))
-    - No output in log file ([\#5498](https://github.com/orbeon/orbeon-forms/issues/5498))
     - `fr:datetime` shows labels for Date and Time ([\#5504](https://github.com/orbeon/orbeon-forms/issues/5504))
     - Misaligned label with required answer with HTML label ([\#5505](https://github.com/orbeon/orbeon-forms/issues/5505))
     - Entering invalid time doesn't cause control invalidity ([\#5474](https://github.com/orbeon/orbeon-forms/issues/5474))
