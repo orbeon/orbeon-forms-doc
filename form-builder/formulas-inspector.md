@@ -65,7 +65,7 @@ In addition, when selecting a given row in the results table, the row highlights
 
 When a given row is selected, checking the "Show related rows only" checkbox allows focusing the view on only the controls that depend on or are influenced by the selected row.
 
-Note that when you rename a control in Form Builder, all dependent formulas are automatically updated. See [Renaming of controls and formulas](/form-runner/feature/automatic-calculations-dependencies.md#renaming-of-controls-and-formulas).
+Note that when you rename a control in Form Builder, all dependent formulas are automatically updated. See [Renaming of controls and formulas](/form-builder/formulas.md#renaming-of-controls-and-formulas).
 
 ### Path dependencies
 

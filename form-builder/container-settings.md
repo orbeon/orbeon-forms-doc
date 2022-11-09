@@ -15,7 +15,11 @@
 
 Each section or grid has a _name_ or identifier, which determines how data is represented in XML. The name name specifies an identifier for the section or grid which is unique in the entire form. If no name is explicitly specified, Form Builder assigns a default name, such as "section-1" or "grid-1".
 
-A section or grid name can be changed, provided it doesn't collide with another control name (an error will show otherwise). [SINCE Orbeon Forms 2019.1] When renaming a section or grid, all dependent [formulas](formulas.md) that use the `$foo` notation, as well as all dependent [templates](template-syntax.md) and [actions](actions.md), including [when using the new syntax](actions-syntax.md).
+A section or grid name can be changed, provided it doesn't collide with another control name (an error will show otherwise).
+
+[SINCE Orbeon Forms 2019.1]
+
+See [Renaming of controls and formulas](/form-builder/formulas.md#renaming-of-controls-and-formulas).
 
 ### Page breaks
 

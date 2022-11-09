@@ -98,6 +98,30 @@ On the other hand, the `total` calculation is outside the repeat, and when it re
 
 When a control or section or grid is renamed, dependent formulas which use the variable notation `$foo` (where `foo` is the control name) are automatically updated.
 
+[SINCE Orbeon Forms 2022.1]
+
+In addition, other references which use the variable notation `$foo` where `foo` is the control name, are automatically updated, including:
+
+- Repeated grids and sections:
+    - Minimum Number of Repetitions
+    - Maximum Number of Repetitions
+    - Freeze Repetitions 
+- Number and Currency fields
+    - Prefix
+    - Suffix
+- Dynamic Dropdown:
+    - Resource URL
+    - Choices formula
+    - Label formula
+    - Value formula
+    - Hint formula
+- Actions
+    - [Legacy actions](actions.md)
+    - [Action syntax](actions-syntax.md)
+- [Template parameters](template-syntax.md)
+    - Control name
+    - Formula
+
 ## Where do formulas appear?
 
 ### Control Settings dialog

@@ -19,7 +19,11 @@ identifier is used for the following:
 
 If a control name is not explicitly specified, Form Builder assigns a default name, such as `control-42`.
 
-A control name can be changed, provided it doesn't collide with another control name (an error will show otherwise). [SINCE Orbeon Forms 2019.1] When renaming a control, all dependent [formulas](formulas.md) that use the `$foo` notation, as well as all dependent [templates](template-syntax.md) and [actions](actions.md), including [when using the new syntax](actions-syntax.md).
+A control name can be changed, provided it doesn't collide with another control name (an error will show otherwise).
+
+[SINCE Orbeon Forms 2019.1]
+
+See [Renaming of controls and formulas](/form-builder/formulas.md#renaming-of-controls-and-formulas).
 
 ##### Main options
 
