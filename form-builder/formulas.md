@@ -94,6 +94,8 @@ You can also use the variable notation in the following formulas:
     - Control name
     - Formula
 
+See also the blog post [Improvements to variables in formulas](https://blog.orbeon.com/2022/04/improvements-to-variables-in-formulas.html).
+
 ### Resolution of repeated controls
 
 When referring to controls that are repeated, for example within repeated grids or repeated sections, a variable can return a sequence of multiple values. Each value corresponds to a repeated control.
@@ -219,7 +221,9 @@ See [examples of formulas](formulas-examples.md).
 
 - [Examples of formulas](formulas-examples.md)
 - [Form Builder Validation](validation.md)
-- [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
-- [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
-- [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
+- Blog posts
+    - [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
+    - [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
+    - [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
+    - [Improvements to variables in formulas](https://blog.orbeon.com/2022/04/improvements-to-variables-in-formulas.html)
 - [XForms Validation](/xforms/validation.md)
