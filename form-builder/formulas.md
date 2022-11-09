@@ -59,6 +59,41 @@ The `data()` function can be a little tricky because of this. Now say you'd like
 concat('Price: ', string($price), 'Quantity: ', string($quantity))
 ```
 
+### Where you can use variables
+
+You can use the variable notation in the following formulas in the Control Settings dialog:
+
+- Required
+- Validation
+- Calculated Value
+- Initial Value
+- Visibility
+- Read-Only
+
+[SINCE Orbeon Forms 2022.1]
+
+You can also use the variable notation in the following formulas:
+
+- Repeated grids and sections:
+    - Minimum Number of Repetitions
+    - Maximum Number of Repetitions
+    - Freeze Repetitions
+- Number and Currency fields
+    - Prefix
+    - Suffix
+- Dynamic Dropdown:
+    - Resource URL
+    - Choices formula
+    - Label formula
+    - Value formula
+    - Hint formula
+- Actions
+    - [Legacy actions](actions.md)
+    - [Action syntax](actions-syntax.md)
+- [Template parameters](template-syntax.md)
+    - Control name
+    - Formula
+
 ### Resolution of repeated controls
 
 When referring to controls that are repeated, for example within repeated grids or repeated sections, a variable can return a sequence of multiple values. Each value corresponds to a repeated control.
