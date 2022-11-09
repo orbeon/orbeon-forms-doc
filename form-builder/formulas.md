@@ -10,6 +10,10 @@ In general, you don't need to know about XPath in Form Builder, with the excepti
 
 *NOTE: Incorrect XPath expressions may cause the form to behave improperly, so caution must be applied.*
 
+## Examples of formulas
+
+See [Examples of formulas](formulas-examples.md).
+
 ## Referring to control values from formulas
 
 ### Basic usage
@@ -129,6 +133,8 @@ sum($row-total[string() castable as xs:decimal], 0.0)
 
 On the other hand, the `total` calculation is outside the repeat, and when it refers to `$row-total`, all `row-total` values are returned. Therefore, the sum applies to all the `row-total` values (assuming they can be cast as `xs:decimal`, in this example).
 
+TODO: Is this the same as using `fr:control-string-value('$price', false())`, or is there a subtle difference?
+
 ## Renaming of controls and formulas
 
 [SINCE Orbeon Forms 2019.1]
@@ -211,6 +217,8 @@ In the Form Settings dialog, an XPath expression can be used to specify whether 
 
 ### Actions
 
+In the Section/Grid Settings dialog, formulas are used to specify the following aspects of a section or grid:
+
 TODO
 
 ## Examples
@@ -221,6 +229,7 @@ See [examples of formulas](formulas-examples.md).
 
 - [Examples of formulas](formulas-examples.md)
 - [Form Builder Validation](validation.md)
+- [When the internal data format matters](/form-runner/data-format/form-data.md#when-the-internal-data-format-matters)
 - Blog posts
     - [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
     - [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
