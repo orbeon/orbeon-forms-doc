@@ -452,9 +452,12 @@ format-dateTime(
 ## See also
 
 - [Formulas](formulas.md)
-- [Formulas inspector](formulas-inspector.md)
 - [Form Builder Validation](validation.md)
-- [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
-- [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
-- [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
+- [Formulas inspector](formulas-inspector.md)
+- [When the internal data format matters](/form-runner/data-format/form-data.md#when-the-internal-data-format-matters)
+- Blog posts
+    - [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
+    - [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
+    - [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
+    - [Improvements to variables in formulas](https://blog.orbeon.com/2022/04/improvements-to-variables-in-formulas.html)
 - [XForms Validation](/xforms/validation.md)

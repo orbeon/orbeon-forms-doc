@@ -229,6 +229,7 @@ See [examples of formulas](formulas-examples.md).
 
 - [Examples of formulas](formulas-examples.md)
 - [Form Builder Validation](validation.md)
+- [Formulas inspector](formulas-inspector.md)
 - [When the internal data format matters](/form-runner/data-format/form-data.md#when-the-internal-data-format-matters)
 - Blog posts
     - [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
