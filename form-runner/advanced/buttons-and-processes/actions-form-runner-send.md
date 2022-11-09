@@ -299,7 +299,7 @@ The PDF can be retrieved by accessing that path with the proper session cookie.
 
 A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the PDF.
 
-*NOTE: When the PDF must be sent to a remote service, it is better to send the PDF binary directly using `content = "pdf"` .*
+*NOTE: When the PDF must be sent to a remote service, send the PDF binary directly with `content = "pdf"` .*
 
 ### Sending a TIFF URL
 
@@ -316,7 +316,7 @@ The TIFF can be retrieved by accessing that path with the proper session cookie.
 
 A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the TIFF file.
 
-*NOTE: When the TIFF must be sent to a remote service, it is better to send the TIFF binary directly using `tiff`.*
+*NOTE: When the TIFF must be sent to a remote service, send the TIFF binary directly with `content = "tiff"` .*
 
 ## Sending form metadata
 
