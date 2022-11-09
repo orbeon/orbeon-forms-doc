@@ -35,7 +35,7 @@ $my-other-control
 
 The *publishing* of a form definition determines the data format that is supported by that form definition.
 
-However, some limited changes to a form definition allow for the data to remain compatible. For more, see [Simple data migration](form-runner/feature/simple-data-migration.md).
+However, some limited changes to a form definition allow for the data to remain compatible. For more, see [Simple data migration](form-runner/feature/simple-data-migration.md) and the [associated blog post](https://blog.orbeon.com/2018/09/simple-data-migration.html).
 
 ## Formats in use
 
