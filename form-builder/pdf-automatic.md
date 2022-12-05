@@ -45,6 +45,12 @@ To change the main font, you must map your TTF file to the `Helvetica Neue` fami
     value="Helvetica Neue"/>
 ```
 
+### New default font
+
+[SINCE Orbeon Forms 2022.1]
+
+Orbeon Forms now includes the [Inter font](https://rsms.me/inter/) by default. This provides more characters out of the box (see [Language support](https://rsms.me/inter/#languages)).
+
 ## See also
 
 - [PDF Production](pdf-production.md)
