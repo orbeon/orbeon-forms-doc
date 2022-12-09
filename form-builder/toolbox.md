@@ -113,6 +113,14 @@ To add a control to your form, simply click on the control. The following insert
 - Otherwise, if the control is the last control of the grid, a new grid row is inserted and the control is inserted in the first cell of the new row.
 - Otherwise, the controls in the toolbox are disabled and you cannot insert a new control.
 
+## Drag and drop of controls
+
+Once a form control is inserted into the form, you can drag it to a different grid cell in the form: simply click on the arrow icon that shows when you hover over the grid cell, and drag it to the new location.
+
+[SINCE Orbeon Forms 2022.1]
+
+You can also drag a control directly from the toolbox to a grid cell in the form.
+
 ### Text Controls
 
 ![](images/text-controls.png)
