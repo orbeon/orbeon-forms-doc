@@ -96,15 +96,15 @@ You can also switch a regular grid to be repeated. See [Repeat settings](repeat-
 
 The toolbox contains the user interface controls you can insert into your form, grouped by category:
 
-| Category | Description |
-| --- | --- |
-| **Text Controls**      | for capturing text |
-| **Utility Controls**   | for descriptions and calculations |
-| **Typed Controls**     | for capturing other data like numbers, emails, phone numbers, etc. |
-| **Date and Time**      | for capturing a date, a time or both |
+| Category               | Description                                                                |
+|------------------------|----------------------------------------------------------------------------|
+| **Text Controls**      | for capturing text                                                         |
+| **Utility Controls**   | for descriptions and calculations                                          |
+| **Typed Controls**     | for capturing other data like numbers, emails, phone numbers, etc.         |
+| **Date and Time**      | for capturing a date, a time or both                                       |
 | **Selection Controls** | for selecting one or more values, like dropdown menus, radio buttons, etc. |
-| **Attachments**        | for attaching images or files |
-| **Buttons**            | for action buttons |
+| **Attachments**        | for attaching images or files                                              |
+| **Buttons**            | for action buttons                                                         |
 
 To add a control to your form, simply click on the control. The following insertion logic is implemented:
 
@@ -125,11 +125,11 @@ You can also drag a control directly from the toolbox to a grid cell in the form
 
 ![](images/text-controls.png)
 
-| Name | Description |
-| --- | --- |
-| **Input Field**         | single-line input field |
-| **Plain Text Area**     | multi-line plain text area |
-| **Formatted Text Area** | formatted text area (AKA rich text editor) |
+| Name                    | Description                                    |
+|-------------------------|------------------------------------------------|
+| **Input Field**         | single-line input field                        |
+| **Plain Text Area**     | multi-line plain text area                     |
+| **Formatted Text Area** | formatted text area (AKA rich text editor)     |
 | **Password Field**      | input field that hides the characters you type |
 
 The controls appear like this at design time:
@@ -150,13 +150,13 @@ The controls appear like this at design time:
 
 ![](images/typed-controls.png)
 
-| Name | Description |
-| --- | --- |
-| **Number**          | number field with formatting, validation and rounding |
+| Name                | Description                                                     |
+|---------------------|-----------------------------------------------------------------|
+| **Number**          | number field with formatting, validation and rounding           |
 | **Email Address**   | text field which validates that the content is an email address |
-| **Currency**        | US dollar currency |
-| **US Phone Number** | US phone number with automatic formatting |
-| **US State**        | US state selector |
+| **Currency**        | US dollar currency                                              |
+| **US Phone Number** | US phone number with automatic formatting                       |
+| **US State**        | US state selector                                               |
 
 The controls appear like this at design time:
 
@@ -166,12 +166,12 @@ The controls appear like this at design time:
 
 ![](images/date-time-controls.png)
 
-| Name | Description |
-| --- | --- |
-| **Date**          | date field with date picker |
-| **Time**          | time field |
-| **Date and Time** | combined date and time field |
-| **Dropdown Date** | date chooser which uses dropdown menus |
+| Name              | Description                                  |
+|-------------------|----------------------------------------------|
+| **Date**          | date field with date picker                  |
+| **Time**          | time field                                   |
+| **Date and Time** | combined date and time field                 |
+| **Dropdown Date** | date chooser which uses dropdown menus       |
 | **Fields Date**   | date chooser which uses separate text fields |
 
 The controls appear like this at design time:
@@ -182,16 +182,16 @@ The controls appear like this at design time:
 
 ![](images/selection-controls.png)
 
-| Name | Selection | Description |
-| --- | --- | --- |
-| **Dropdown Menu**              | single   | dropdown menu |
-| **Radio Buttons**              | single   | radio buttons |
-| **Radio Buttons with "Other"** | single   | radio buttons with "Other" option to a enter a custom option |
-| **Checkboxes**                 | multiple | checkboxes |
-| **Scrollable Checkboxes**      | multiple | scrollable checkboxes |
-| **Yes/No Answer**              | single   | a simple "Yes" or "No" choice |
-| **Dynamic Data Dropdown**      | single   | dynamic dropdown bound to a REST service |
-| **Autocomplete**               | single   | autocompletion |
+| Name                           | Selection | Description                                                  |
+|--------------------------------|-----------|--------------------------------------------------------------|
+| **Dropdown Menu**              | single    | dropdown menu                                                |
+| **Radio Buttons**              | single    | radio buttons                                                |
+| **Radio Buttons with "Other"** | single    | radio buttons with "Other" option to a enter a custom option |
+| **Checkboxes**                 | multiple  | checkboxes                                                   |
+| **Scrollable Checkboxes**      | multiple  | scrollable checkboxes                                        |
+| **Yes/No Answer**              | single    | a simple "Yes" or "No" choice                                |
+| **Dynamic Data Dropdown**      | single    | dynamic dropdown bound to a REST service                     |
+| **Autocomplete**               | single    | autocompletion                                               |
 
 You edit the choices of most selection controls with the [Choices editor](itemset-editor.md).
 
@@ -205,14 +205,14 @@ _NOTE: The "Scrollable List" control is deprecated since Orbeon Forms 2016.1 and
 
 ![](images/attachment-controls.png)
 
-| Name | Description |
-| --- | --- |
-| **Single File Attachment**   | - file which can be attached to the form at design time or at runtime<br>- the file can also be replaced or downloaded once attached |
-| **Multiple File Attachments**| - [SINCE Orbeon Forms 2020.1]<br>- files which can be attached to the form at design time or at runtime<br>- the files can also be replaced or downloaded once attached |
-| **Image Attachment**         | - image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached |
-| **Image**                    | - image attached to the form at design time<br>- it is not possible to change the image at runtime |
-| **Image Annotation**         | - image which can be attached to the form at design time or at runtime<br>- the image can then be annotated with graphic objects<br>- see also the [blog post](https://blog.orbeon.com/2013/08/new-image-annotation-control.html)<br>- SINCE Orbeon Forms 2016.3 |
-| **Handwritten Signature**    | signature drawn with a mouse or touch screen |
+| Name                          | Description                                                                                                                                                                                                                                                      |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Single File Attachment**    | - file which can be attached to the form at design time or at runtime<br>- the file can also be replaced or downloaded once attached                                                                                                                             |
+| **Multiple File Attachments** | - [SINCE Orbeon Forms 2020.1]<br>- files which can be attached to the form at design time or at runtime<br>- the files can also be replaced or downloaded once attached                                                                                          |
+| **Image Attachment**          | - image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached                                                                                                                               |
+| **Image**                     | - image attached to the form at design time<br>- it is not possible to change the image at runtime                                                                                                                                                               |
+| **Image Annotation**          | - image which can be attached to the form at design time or at runtime<br>- the image can then be annotated with graphic objects<br>- see also the [blog post](https://blog.orbeon.com/2013/08/new-image-annotation-control.html)<br>- SINCE Orbeon Forms 2016.3 |
+| **Handwritten Signature**     | signature drawn with a mouse or touch screen                                                                                                                                                                                                                     |
 
 The controls appear like this at design time:
 
