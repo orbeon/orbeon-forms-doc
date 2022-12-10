@@ -67,6 +67,7 @@ Optionally, you can pass the URL parameter `all-forms`:
 - when omitted or set to `false` (which was the behavior before `all-forms` was supported)
     - Only forms to which the user has "access" are returned.
     - If the user has access as per `form-builder-permissions.xml`, then all form definitions are returned.
+        - [SINCE Orbeon Forms 2022.1], this logic is ignored if `ignore-admin-permissions` is set to `true`.
     - Otherwise:
         - `library` form definitions are excluded 
         - forms which have permissions defined and for which the user has no permissions at all are excluded
@@ -86,6 +87,19 @@ For example:
 ```
 /fr/service/persistence/form?modified-since=2021-09-09T04:56:42.257Z
 ```
+
+#### Ignoring admin permissions
+
+[SINCE Orbeon Forms 2022.1]
+
+Optionally, you can pass the URL parameter `ignore-admin-permissions`:
+
+- when set to `true`
+    - Even if the user has access to the form as per `form-builder-permissions.xml`, the forms are filtered as [documented](#returning-all-form-definitions).
+- when omitted or set to `false` (the default)
+    - The behavior is the same as before this parameter was supported.
+
+If the `all-forms` parameter is set to `true`, then this parameter is ignored, and all forms are returned without checking for permissions or other criteria as [documented](#returning-all-form-definitions).
 
 ### Response
 
