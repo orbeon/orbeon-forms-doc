@@ -69,8 +69,8 @@ With this release, Form Runner now automatically migrates forms at runtime to us
 
 Specifically, with plain XForms:
 
-- `xf:input` bound to an `xs:date`, `xs:time`, or `xs:dateTime` node don't work and show a plain input field instead.
-- `fr:date`, which worked outside of Form Runner with Orbeon Forms 2021.1, currently doesn't work either.
+- `xf:input` fields bound to an `xs:date`, `xs:time`, or `xs:dateTime` node don't work and show plain input fields instead.
+- `fr:date`, which worked outside of Form Runner with Orbeon Forms 2021.1, currently doesn't work.
 
 We plan to add support for the new date picker in plain XForms in a future point release. If you are using plain XForms and not Form Builder/Form Runner, we don't recommend upgrading until backward compatibility is added.
 
@@ -97,7 +97,7 @@ See [Initial data posted to the New Form page](/configuration/properties/form-ru
 
 ### Use of CSS grids
 
-Form Builder already used [CSS grids](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for rendering the form being edited. Starting with Orbeon Forms 2022.1, by default, Orbeon Forms also uses CSS grids for all grids at runtime as well. Previously, the default was to use HTML tables at runtime. This is made possible with the drop of Internet Explorer support. 
+Form Builder already used [CSS grids](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for rendering the form being edited. Starting with Orbeon Forms 2022.1, by default, Orbeon Forms also uses CSS grids for all grids at runtime as well. Previously, the default was to use HTML tables at runtime. This is made possible with the removal of Internet Explorer support. 
 
 There can be impact on custom CSS, since the markup now contains `<div>` elements instead of `<table>`, `<tr>`, `<td>`, etc., and the default CSS use `display: grid` and related CSS properties.
 
