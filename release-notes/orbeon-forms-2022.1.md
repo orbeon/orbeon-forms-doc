@@ -8,15 +8,102 @@ Today we released Orbeon Forms 2022.1! This release introduces new features and 
 
 ### Major new features
 
-- Better landing page ([\#1410](https://github.com/orbeon/orbeon-forms/issues/1410))
-- Form Builder: Drag and Drop of controls to grid cells ([\#5252](https://github.com/orbeon/orbeon-forms/issues/5252))
-- Per-app and global permissions configuration ([\#1860](https://github.com/orbeon/orbeon-forms/issues/1860))
-- Image attachment: ability to resize images upon upload ([\#3061](https://github.com/orbeon/orbeon-forms/issues/3061))
+#### Improved landing page and navigation
+
+Form Runner now features a new landing page, organized in cards which provides quick access to:
+
+- Quick links, including Form Builder and the Administration page
+- Your published forms
+- Your in-progress Form Builder forms
+- Demonstration forms
+
+[TODO: screenshot]
+
+Some cards directly list content, including the list of published forms and the list of in-progress Form Builder forms.
+
+[TODO: screenshot]
+
+You can configure whether you want to have a particular card on the landing page. For example, you can hide the demonstration forms for production deployment.
+
+All Form Runner and Form Builder navigation bars now provide a direct link to the landing page. This can be disabled if not needed.
+
+[TODO: screenshot]
+
+Finally, Form Runner buttons now are sticky, so that they are always visible when scrolling. This is particularly useful on the Summary and Forms pages, which can display long lists of forms or form data.
+
+Previously, Form Runner featured a static landing page, as well as a Home page, which doubled as an Admin page when the user was an administrator. The Home page is now replaced by a Forms page, which shows accessible published forms but no administration functions, and a separate Administration page, which is only accessible to administrators. 
+
+[TODO: screenshot]
+
+[//]: # (- Better landing page &#40;[\#1410]&#40;https://github.com/orbeon/orbeon-forms/issues/1410&#41;&#41;)
+
+#### Drag and drop of form controls to grid cells
+
+Form Builder has long supported drag and drop of form controls *between* grid cells. This release introduces drag and drop of form controls from the toolbox to grid cells, which is more intuitive to newcomers and also convenient for experienced users. You can still click on toolbox controls to add them to a grid cell, but you can now also drag and drop them.
+
+[TODO: screenshot]
+
+[//]: # (- Form Builder: Drag and Drop of controls to grid cells &#40;[\#5252]&#40;https://github.com/orbeon/orbeon-forms/issues/5252&#41;&#41;)
+
+#### Per-app and global permissions configuration
+
+Previously, Form Runner permissions were configured per form. This release introduces the ability to configure permissions per app, as well as globally. This is particularly useful when you have a large number of forms, and want to configure permissions for all of them at once.
+
+Per-app and global permissions are currently set using configuration properties. In the future, we plan to add a UI to configure them. 
+
+[//]: # (- Per-app and global permissions configuration &#40;[\#1860]&#40;https://github.com/orbeon/orbeon-forms/issues/1860&#41;&#41;)
+
+#### Resizable attached images
+
+The Image Attachment form control now supports resizing images. You can configure the maximum width and height of images, and the control will automatically resize images to fit within these dimensions.
+
+You can also choose the resulting image format, which can be PNG or JPEG, and the quality of the JPEG image. 
+
+[TODO: screenshot]
+
+[//]: # (- Image attachment: ability to resize images upon upload &#40;[\#3061]&#40;https://github.com/orbeon/orbeon-forms/issues/3061&#41;&#41;)
+
+#### Improved selection on the Summary, Forms, and Admin pages
+
+The Summary, Forms, and Admin pages now support quick selection of multiple form data or published forms. These pages already allowed you to perform operations on one or more rows, such as deleting data, publishing forms, etc. However, you had to check each checkbox individually. We have now implemented two new features that improve on this:
+
+- A menu to quickly select items on the Summary page (the Admin page already had such a menu).
+- The ability to “shift-click” checkboxes.
+
+The menu allows you to select all items, or to select only items that match a particular status. For example, you can select only published forms on the Admin page, or only form data that is not an in-progress draft in a form's Summary page. The number of selected 
+
+If you are familiar with for example Gmail, you might know that you can select a checkbox, and then shift-click another one, and all the checkboxes in the interval will be selected. Similarly, you can deselect a series of checkboxes. The exact logic is a little subtle, but we implemented something very similar in Form Runner.
+
+[TODO: screenshot]
+
+This doesn’t only apply to the Form Runner Summary, Forms, and Admin pages: it applies to any checkboxes in a repeated grid. And it also applies to the Checkboxes form control, so you can quickly select and deselect a range of checkboxes.
+
+[TODO: link to blog post]
+
+#### Improved simple data migration
+
+Orbeon Forms 2018.2 introduced Simple Data Migration (see also the original blog post). This feature allows the form author to make changes to a published form, including adding and removing form fields, grids, and sections, without creating a new form version.
+
+Simple Data Migration, introduced with Orbeon Forms 2018.2, is very useful, allowing the form author to make changes to a published form, including adding and removing form fields, grids, and sections, without creating a new form version. This release introduces a number of improvements to Simple Data Migration and with Orbeon Forms 2022.1, you can move form controls within the form as long as they remain within the same nesting of repeated content, republish the form over the existing version, and things will just work. For example:
+
+- Move controls at the top-level of a form, even across grids and sections.
+- Move controls within a given level of repeated grids or repeated sections, even across nested grids.
+- Simply moving a form control this way allows you to reorganize your form while keeping access to existing data.
+
+[TODO: screenshot]
+
+[Blog post: Improved simple data migration](https://blog.orbeon.com/2022/09/improved-simple-data-migration.html)
+
+#### Improved appearance of dialogs
+
+TODO
+
+#### TODO
+
 - File Scan API v2 ([\#4967](https://github.com/orbeon/orbeon-forms/issues/4967))
 - Ability to use variables for min, max, etc. ([\#309](https://github.com/orbeon/orbeon-forms/issues/309))
 - Admin page: add Selected badge and align ([\#5426](https://github.com/orbeon/orbeon-forms/issues/5426))
 - Summary: Button to select all drafts ([\#3582](https://github.com/orbeon/orbeon-forms/issues/3582))
-- Improved simple data migration ([\#5415](https://github.com/orbeon/orbeon-forms/issues/5415))
 - FR: send() to support multipart for attachments ([\#788](https://github.com/orbeon/orbeon-forms/issues/788))
 - New list permission to protect Summary pages ([\#5397](https://github.com/orbeon/orbeon-forms/issues/5397))
 - Support multiple email templates per form ([\#3912](https://github.com/orbeon/orbeon-forms/issues/3912))
@@ -26,6 +113,7 @@ Today we released Orbeon Forms 2022.1! This release introduces new features and 
 ### Other new features
 
 - Use of CSS grids by default
+- Improved dialog appearance (#xxxx)
 - JavaScript embedding API to support setting headers ([\#5142](https://github.com/orbeon/orbeon-forms/issues/5142))
 - Actions Editor to support passing URL parameters by name ([\#5094](https://github.com/orbeon/orbeon-forms/issues/5094))
 - Lots of a11y improvements
