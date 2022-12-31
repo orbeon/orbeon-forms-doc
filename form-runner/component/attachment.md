@@ -52,7 +52,7 @@ On supported browsers, you can drag and drop files from other applications (typi
 
 As of Orbeon Forms 2020.1 the following browsers are known not to support drag and drop and the drop area is hidden:
 
-- IE11
+- IE11 (not supported starting Orbeon Forms 2022.1)
 - Safari on iOS/iPadOS
 
 ## Disallowing attachment download
