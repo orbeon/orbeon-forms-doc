@@ -1,14 +1,12 @@
 # Orbeon Forms 2022.1 (Draft)
 
-__Friday, December 30, 2021__
+__Saturday, December 31, 2022__
 
-Today we released Orbeon Forms 2022.1! This release introduces new features and bug-fixes.
+Today we released Orbeon Forms 2022.1! This release is packed with new features and bug-fixes!
 
 ## New features
 
-### Major new features
-
-#### New Landing page and application navigation
+### New Landing page and application navigation
 
 Form Runner now features a new Landing page, organized in cards which provides quick access to:
 
@@ -27,9 +25,11 @@ All Form Runner and Form Builder navigation bars now provide a direct link to th
 
 ![Landing page navigation](images/summary-navigation.png)
 
+We have made the Summary page layout fluid, similar to the Forms/Admin page (previously known as the Home page).
+
 Finally, Form Runner buttons now are sticky, so that they are always visible when scrolling. This is particularly useful on the Summary and Forms pages, which can display long lists of forms or form data.
 
-#### Separation of the Admin page and Home page
+### Separation of the Admin page and Home page
 
 Previously, Form Runner featured a static landing page, as well as a Home page, which doubled as an Admin page when the user was an administrator. The Home page is now replaced by a Forms page, which shows published forms accessible to the user, but no administration functions, and a separate Administration page, which is only accessible to administrators.
 
@@ -39,7 +39,7 @@ The Admin page is very similar to the Forms page, but features additional admini
 
 ![The Admin page](images/form-runner-admin.png)
 
-#### Drag and drop of form controls to grid cells
+### Drag and drop of form controls to grid cells
 
 Form Builder has long supported drag and drop of form controls *between* grid cells. This release introduces drag and drop of form controls from the toolbox to grid cells, which is more intuitive to newcomers and also convenient for experienced users. You can still click on toolbox controls to add them to a grid cell as before, but you can now also drag and drop them.
 
@@ -47,7 +47,7 @@ Form Builder has long supported drag and drop of form controls *between* grid ce
 
 [//]: # (- Form Builder: Drag and Drop of controls to grid cells &#40;[\#5252]&#40;https://github.com/orbeon/orbeon-forms/issues/5252&#41;&#41;)
 
-#### Per-app and global permissions configuration
+### Per-app and global permissions configuration
 
 Previously, Form Runner permissions were configured per form. This release introduces the ability to configure permissions per app, as well as globally. This is particularly useful when you have a large number of forms, and want to configure permissions for all of them at once.
 
@@ -55,17 +55,28 @@ Per-app and global permissions are currently set using configuration properties.
 
 [//]: # (- Per-app and global permissions configuration &#40;[\#1860]&#40;https://github.com/orbeon/orbeon-forms/issues/1860&#41;&#41;)
 
-#### Improved look and feel
+### New _List_ permission
+
+The new _List_ permission allows specifying that the user can list form data on the Form Runner Summary page.
+
+With earlier versions of Orbeon Forms, the ability to "Read" implied the ability to _List_ on the Summary page.
+
+![Permissions dialog with `list` permission](../form-builder/images/permissions-dialog.png)
+
+For more details, see the [documentation](/form-runner/access-control/deployed-forms.md#the-_list_-permission).
+
+### Improved look and feel
 
 This version includes lots of improvements to the look and feel of Form Runner and Form Builder, including:
 
 - more modern wide navigation bar
 - more modern buttons
 - more modern dialogs
+- updated default font (which now is the system font when possible)
 
 [TODO: screenshot]
 
-#### Resizing of image attachments
+### Resizing of image attachments
 
 The Image Attachment form control now supports resizing images upon upload. You can configure the maximum width and height of images, and the control will automatically resize images to fit within these dimensions before storing the image in the persistence layer.
 
@@ -75,7 +86,7 @@ You can also choose the resulting image format, which can be PNG or JPEG, and th
 
 [//]: # (- Image attachment: ability to resize images upon upload &#40;[\#3061]&#40;https://github.com/orbeon/orbeon-forms/issues/3061&#41;&#41;)
 
-#### Improved selection on the Summary, Forms, and Admin pages
+### Improved selection on the Summary, Forms, and Admin pages
 
 The Summary, Forms, and Admin pages now support quick selection of multiple form data or published forms. These pages already allowed you to perform operations on one or more rows, such as deleting data, publishing forms, etc. However, you had to check each checkbox individually. We have now implemented two new features that improve on this:
 
@@ -92,9 +103,9 @@ If you are familiar with for example Gmail, you might know that you can select a
 
 This doesn’t only apply to the Form Runner Summary, Forms, and Admin pages: it applies to any checkboxes in a repeated grid. And it also applies to the Checkboxes form control, so you can quickly select and deselect a range of checkboxes.
 
-[//]: # ([TODO: link to blog post])
+[//]: # ([TODO: link to blog post when done])
 
-#### Improved simple data migration
+### Improved simple data migration
 
 Orbeon Forms 2018.2 introduced [Simple Data Migration](https://doc.orbeon.com/form-runner/features/simple-data-migration) (see also the [original blog post](https://blog.orbeon.com/2018/09/simple-data-migration.html)). This feature allows the form author to make changes to a published form, including adding and removing form fields, grids, and sections, without creating a new form version.
 
@@ -108,62 +119,157 @@ This release introduces a number of improvements to Simple Data Migration. With 
 
 [Blog post: Improved simple data migration](https://blog.orbeon.com/2022/09/improved-simple-data-migration.html)
 
-#### Multipart support for attachments and more
+### Multipart support for attachments and more
 
-- FR: send() to support multipart for attachments ([\#788](https://github.com/orbeon/orbeon-forms/issues/788))
+This release enhances the `send` action with the ability to send multiple items to a service endpoint in a single HTTP request using a so-called multipart request format. This allows sending form data along with its attachments, and even to add a PDF file or an Excel export to that. The configuration is simple as you just specified multiple `content` tokens:
 
-[//]: # (![Multipart support]&#40;images/multipart.jpg&#41;)
+```
+send(
+    uri     = "https://httpbin.org/anything",
+    method  = "POST",
+    content = "xml attachments pdf"
+)
+```
 
-[Improving the send action with multipart support](https://blog.orbeon.com/2022/10/improving-send-action-with-multipart.html)
+For more, see:
 
-#### Accessibility improvements
+- Blog post: [Improving the send action with multipart support](https://blog.orbeon.com/2022/10/improving-send-action-with-multipart.html)
+- [Documentation](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md#sending-attachments-and-multiple-items)
+
+### Accessibility improvements
 
 In this release, we have introduced many accessibility improvements. In particular:
 
 - Screen readers now read control labels for more complex form controls
+- Screen readers now read groups of radio buttons and checkboxes
 - Screen readers can now read form control hints
+- Control focus highlights are nicer and more consistent and supported on control groups
 
-[TODO: screenshot?]
+Focus highlights on groups can be disabled via configuration property and is enabled by default. The following illustrates highlights on selection controls and groups (in practice focus highlights are only shown on keyboard focus):
 
-#### TODO
+![Selection controls focus highlights](images/selection-focus-highlights.png)
 
-- File Scan API v2 ([\#4967](https://github.com/orbeon/orbeon-forms/issues/4967))
-- Ability to use variables for min, max, etc. ([\#309](https://github.com/orbeon/orbeon-forms/issues/309))
-- Admin page: add Selected badge and align ([\#5426](https://github.com/orbeon/orbeon-forms/issues/5426))
-- Summary: Button to select all drafts ([\#3582](https://github.com/orbeon/orbeon-forms/issues/3582))
-- New list permission to protect Summary pages ([\#5397](https://github.com/orbeon/orbeon-forms/issues/5397))
-- Support multiple email templates per form ([\#3912](https://github.com/orbeon/orbeon-forms/issues/3912))
-- Replace flying saucer with open html to pdf ([\#5342](https://github.com/orbeon/orbeon-forms/issues/5342))
-- Separate the Home page and the Admin page ([\#2753](https://github.com/orbeon/orbeon-forms/issues/2753))
+### Support for variables in more places
+
+Users of Orbeon Forms are used to using variable references in formulas to refer to the values of other form controls. However, you couldn't use variables in some places where you might have expected them to work. We have now improved this, and with this version you can use variables like before in the following formulas:
+
+- Required
+- Validation
+- Calculated Value
+- Initial Value
+- Visibility
+- Read-Only
+
+But you can also use them the following formulas:
+
+- Repeated grids and sections:
+    - Minimum Number of Repetitions
+    - Maximum Number of Repetitions
+    - Freeze Repetitions
+- Number and Currency fields
+    - Prefix
+    - Suffix
+- Dynamic Dropdown:
+    - Resource URL
+    - Choices formula
+    - Label formula
+    - Value formula
+    - Hint formula
+- Actions
+    - [Legacy actions](/form-builder/actions.md)
+    - [Action syntax](/form-builder/actions-syntax.md)
+- [Template parameters](/form-builder/template-syntax.md)
+    - Control name
+    - Formula
+
+![Example of new use of variable reference](images/container-max-items.png)
+
+Using variables also has the benefit that when renaming controls, the variable references are [automatically updated](/form-builder/formulas.md#renaming-of-controls-and-formulas).
+
+See also:
+
+- Blog post: [Improvements to variables in formulas](https://blog.orbeon.com/2022/04/improvements-to-variables-in-formulas.html)
+- [Documentation](/form-builder/formulas.md#where-you-can-use-variables)
+
+### Updated File Scan API
+
+The File Scan API has been updated with the following enhancements to the original version:
+
+- The provider can return a modified file name, content type, or even replace the entire content.
+- The provider can return custom error messages in the current language of the form.
+- An extension mechanism via hash maps is provided.
+
+See [the API documentation](/form-runner/api/other/file-scan-api.md).
+
+### Improved email templates
+
+It was already possible to attach multiple PDF templates to a form. It is now possible to create multiple *email templates* for a form. This allows you to send different emails to different recipients, with different content, and even with different attachments.
+
+When running the `email` action, you can now specify a new `template` parameter to select the email template to use. If you don’t specify a template, the default template is used.
+
+![Email templates](images/email-templates-custom.png)
+
+[//]: # (TODO: doc)
+
+### Form Builder shows control names in overlay
+
+Form Builder now shows the control names in overlay, which makes it easier to find the control you want to edit. The following screenshot shows the `submitter-pta-position` control names in the overlay:
+
+![Control names in overlay](images/builder-control-name-overlay.png)
+
+### Ability to change "Add Another Repetition" label
+
+For sections with repeated content, like for the "Repetition Label", the "Add Repetition Label" tab allows you to set a label that applies to the button used to add repetitions.
+
+![](../form-builder/images/section-settings-add-repetition-label.png)
+
+### PDF production enhancements
+
+The PDF output of Orbeon Forms has been improved in several ways:
+
+- Orbeon Forms now embeds the richer [Inter font](https://rsms.me/inter/) into PDF files by default, which supports more languages.
+- Checkboxes are different from radio buttons.
+- PDF bookmarks are now generated correctly for sections and allow quick navigation in the resulting PDF.
+- The PDF renderer library has been updated and provides bug-fixes and better CSS support.
+
+### New "Dropdown with Other" control
+
+Orbeon Forms already had a "Radio butons with Other" form control. The nwe "Dropdown with Other" control is similar to the existing "Dropdown" control, but it also allows the user to enter a custom value. ([\#5172](https://github.com/orbeon/orbeon-forms/issues/5172))
+
+### Use of CSS grids by default
+
+Form Builder already used [CSS grids](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for rendering the form being edited. Starting with Orbeon Forms 2022.1, by default, Orbeon Forms also uses CSS grids for all grids at runtime as well. Previously, the default was to use HTML tables at runtime. This is made possible with the removal of Internet Explorer support.
+
+### Wizard improvements
+
+Form Builder has a UI to specify whether the Wizard should have a separate table of contents (TOC). Previously, this was only configurable via properties.
+
+In addition, showing the section status is supported even when the TOC is not separate. There is also a Form Builder UI to control this. 
+
+![New Wizard Form Builder settings](../form-builder/images/form-settings-view-options.png)
+
+### Actions editor improvements
+
+The Actions editor now supports running an action when a control disappears.
+
+![Action running upon disappearing form control](../form-builder/images/actions-general-settings-disappears.png)
+
+In addition, when a service exposes URL parameters, an action can explicitly specify the value of the parameter.
+
+![Action setting a configured URL parameter](../form-builder/images/actions-request-param.png)
 
 ### Other new features
 
-- Use of CSS grids by default
-- Improved dialog appearance (#xxxx)
-- JavaScript embedding API to support setting headers ([\#5142](https://github.com/orbeon/orbeon-forms/issues/5142))
-- Actions Editor to support passing URL parameters by name ([\#5094](https://github.com/orbeon/orbeon-forms/issues/5094))
-- JavaScript Embedding improvements
-- File scan API: ability to return specific error message, mediatype, filename ([\#4960](https://github.com/orbeon/orbeon-forms/issues/4960))
-- File scan API: allow replacement of the file binary ([\#4962](https://github.com/orbeon/orbeon-forms/issues/4962))
-- Allow admins to configure the behavior of the Version dropdown of the Publish dialog ([\#5281](https://github.com/orbeon/orbeon-forms/issues/5281))
-- Ability to change "Add Another Repetition" label ([\#3911](https://github.com/orbeon/orbeon-forms/issues/3911))
-- Search API: option to return all indexed fields ([\#4968](https://github.com/orbeon/orbeon-forms/issues/4968))
-- Email addresses to support including a personal name ([\#5313](https://github.com/orbeon/orbeon-forms/issues/5313))
-- Make Summary page fluid by default ([\#5228](https://github.com/orbeon/orbeon-forms/issues/5228))
-- Date picker: option to select week start day ([\#5334](https://github.com/orbeon/orbeon-forms/issues/5334))
-- XPath function to obtain link back to Form Runner ([\#5338](https://github.com/orbeon/orbeon-forms/issues/5338))
-- Add support for shift-click for checkboxes ([\#1729](https://github.com/orbeon/orbeon-forms/issues/1729))
-- Summary search: "Dropdown with Other" only shows static options ([\#5408](https://github.com/orbeon/orbeon-forms/issues/5408))
-- Summary: align table headers depending on content ([\#1693](https://github.com/orbeon/orbeon-forms/issues/1693))
-- Actions Editor to support new "disappears" for controls ([\#5468](https://github.com/orbeon/orbeon-forms/issues/5468))
-- PDF: Checkboxes should be different from radio buttons ([\#5482](https://github.com/orbeon/orbeon-forms/issues/5482))
-- Wizard: Form Builder UI for separate TOC ([\#5321](https://github.com/orbeon/orbeon-forms/issues/5321))
-- Wizard: support section status even when TOC is not separate ([\#3379](https://github.com/orbeon/orbeon-forms/issues/3379))
-- "Dropdown with Other" component ([\#5172](https://github.com/orbeon/orbeon-forms/issues/5172))
-- Allow fr:drop-trigger to be used by Form Runner ([\#5546](https://github.com/orbeon/orbeon-forms/issues/5546))
-- Update function to access the value of a control within a section template ([\#5246](https://github.com/orbeon/orbeon-forms/issues/5246))
-- Ability to show control names in overlay on the form ([\#5545](https://github.com/orbeon/orbeon-forms/issues/5545))
-- Embed a richer font into PDF files by default ([\#5536](https://github.com/orbeon/orbeon-forms/issues/5536)) ([doc](https://doc.orbeon.com/form-builder/advanced/pdf-production/pdf-automatic#new-default-font))
+- The JavaScript API supports setting headers ([\#5142](https://github.com/orbeon/orbeon-forms/issues/5142))
+- Administrator can configure the behavior of the Version dropdown of the Publish dialog ([\#5281](https://github.com/orbeon/orbeon-forms/issues/5281))
+- The Search API has a new option to return all indexed fields ([\#4968](https://github.com/orbeon/orbeon-forms/issues/4968))
+- Email addresses support including a personal name ([\#5313](https://github.com/orbeon/orbeon-forms/issues/5313))
+- The date picker has a new option to select week start day ([\#5334](https://github.com/orbeon/orbeon-forms/issues/5334))
+- New XPath function to obtain link back to Form Runner ([\#5338](https://github.com/orbeon/orbeon-forms/issues/5338))
+- The Summary search supports the new "Dropdown with Other" form control ([\#5408](https://github.com/orbeon/orbeon-forms/issues/5408))
+- The Summary page aligns table headers depending on content ([\#1693](https://github.com/orbeon/orbeon-forms/issues/1693))
+- Combined "drop-up" buttons can now be configured for Form Runner ([\#5546](https://github.com/orbeon/orbeon-forms/issues/5546))
+- The `fr:control-string-value()` and `fr:control-typed-value()` function can access controls within section templates ([\#5246](https://github.com/orbeon/orbeon-forms/issues/5246))
 
 ## Compatibility notes
 
