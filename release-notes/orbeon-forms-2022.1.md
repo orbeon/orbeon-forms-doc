@@ -308,7 +308,7 @@ We plan to add support for the new date picker in plain XForms in a future point
 
 ### Number fields outside of Form Runner
 
-The `fr:number` field doesn't work outside of Form Runner, see [([\#5533](https://github.com/orbeon/orbeon-forms/issues/5533))](https://github.com/orbeon/orbeon-forms/issues/5533).
+The `fr:number` field doesn't work outside of Form Runner ([\#5533](https://github.com/orbeon/orbeon-forms/issues/5533)).
 
 We plan to add support for the new date picker in plain XForms in a future point release. If you are using plain XForms and not Form Builder/Form Runner, we don't recommend upgrading until backward compatibility is added. 
 
