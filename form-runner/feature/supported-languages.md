@@ -18,17 +18,17 @@ See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for
 |------------|:--------:|:--------:|:--------------:|:-----------:|:------------:|
 | English    |    F     |    F     |       F        |      F      |      F       |
 | French     |    F     |    F     |       F        |      F      |      F       |
-| Swedish    |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Portuguese |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Italian    |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| German     |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Spanish    |    F     |    F     |     F [^1]     |      P      |      P       |
-| Finnish    |    F     |    F     |       P        |   F [^1]    |    F [^1]    |
-| Dutch      |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
+| Swedish    |    F     |    F     |     F          |   F         |    F         |
+| Portuguese |    F     |    F     |     F          |   F         |    F         |
+| Italian    |    F     |    F     |     F          |   F         |    F         |
+| German     |    F     |    F     |     F          |   F         |    F         |
+| Spanish    |    F     |    F     |     F          |      P      |      P       |
+| Finnish    |    F     |    F     |       P        |   F         |    F         |
+| Dutch      |    F     |    F     |     F          |   F         |    F         |
 | Norwegian  |    F     |    F     |       P        |      P      |      P       |
 | Russian    |    F     |    F     |       P        |      P      |      P       |
 | Polish     |    F     |    F     |       N        |      N      |      N       |
-| Danish     |    N     |    F     |       P        |   F [^1]    |      N       |
+| Danish     |    N     |    F     |       P        |   F         |      N       |
 
 ## As of Orbeon Forms 2018.2
 
@@ -36,13 +36,13 @@ See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for
 |------------|:--------:|:--------:|:--------------:|:-----------:|:------------:|
 | English    |    F     |    F     |       F        |      F      |      F       |
 | French     |    F     |    F     |       F        |      F      |      F       |
-| Swedish    |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Portuguese |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Italian    |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| German     |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Spanish    |    F     |    F     |     F [^1]     |      P      |      P       |
-| Finnish    |    F     |    F     |       P        |   F [^1]    |    F [^1]    |
-| Dutch      |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
+| Swedish    |    F     |    F     |     F          |   F         |    F         |
+| Portuguese |    F     |    F     |     F          |   F         |    F         |
+| Italian    |    F     |    F     |     F          |   F         |    F         |
+| German     |    F     |    F     |     F          |   F         |    F         |
+| Spanish    |    F     |    F     |     F          |      P      |      P       |
+| Finnish    |    F     |    F     |       P        |   F         |    F         |
+| Dutch      |    F     |    F     |     F          |   F         |    F         |
 | Norwegian  |    F     |    F     |       P        |      P      |      P       |
 | Russian    |    F     |    F     |       P        |      P      |      P       |
 | Polish     |    F     |    F     |       N        |      N      |      N       |
@@ -53,13 +53,13 @@ See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for
 |------------|:--------:|:--------:|:--------------:|:-----------:|:------------:|
 | English    |    F     |    F     |       F        |      F      |      F       |
 | French     |    F     |    F     |       F        |      F      |      F       |
-| Swedish    |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Portuguese |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Italian    |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| German     |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Spanish    |    F     |    F     |     F [^1]     |      P      |      P       |
-| Finnish    |    F     |    F     |       P        |   F [^1]    |    F [^1]    |
-| Dutch      |    F     |    F     |     F [^1]     |   F [^1]    |      N       |
+| Swedish    |    F     |    F     |     F          |   F         |    F         |
+| Portuguese |    F     |    F     |     F          |   F         |    F         |
+| Italian    |    F     |    F     |     F          |   F         |    F         |
+| German     |    F     |    F     |     F          |   F         |    F         |
+| Spanish    |    F     |    F     |     F          |      P      |      P       |
+| Finnish    |    F     |    F     |       P        |   F         |    F         |
+| Dutch      |    F     |    F     |     F          |   F         |      N       |
 | Norwegian  |    F     |    F     |       P        |      P      |      P       |
 | Russian    |    F     |    F     |       P        |      P      |      P       |
 | Polish     |    F     |    F     |       N        |      N      |      N       |
@@ -71,12 +71,12 @@ See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for
 | English    |    F     |    F     |       F        |      F      |      F       |
 | French     |    F     |    F     |       F        |      F      |      F       |
 | Swedish    |    F     |    F     |       F        |      F      |      F       |
-| Portuguese |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Italian    |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| German     |    F     |    F     |     F [^1]     |   F [^1]    |    F [^1]    |
-| Spanish    |    F     |    F     |     F [^1]     |      P      |      P       |
-| Finnish    |    F     |    F     |       P        |   F [^1]    |    F [^1]    |
-| Dutch      |    F     |    F     |     F [^1]     |   F [^1]    |      N       |
+| Portuguese |    F     |    F     |     F          |   F         |    F         |
+| Italian    |    F     |    F     |     F          |   F         |    F         |
+| German     |    F     |    F     |     F          |   F         |    F         |
+| Spanish    |    F     |    F     |     F          |      P      |      P       |
+| Finnish    |    F     |    F     |       P        |   F         |    F         |
+| Dutch      |    F     |    F     |     F          |   F         |      N       |
 | Norwegian  |    F     |    F     |       P        |      P      |      P       |
 | Russian    |    F     |    F     |       P        |      P      |      P       |
 | Polish     |    F     |    F     |       N        |      N      |      N       |
@@ -88,11 +88,11 @@ See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for
 | English    |    F     |    F     |       F        |      F      |      F       |
 | French     |    F     |    F     |       F        |      F      |      F       |
 | Swedish    |    F     |    F     |       F        |      F      |      F       |
-| Portuguese |    F     |    F     |       F        |    F[^1]    |    F[^1]     |
-| Italian    |    F     |    F     |       F        |    F[^1]    |    F[^1]     |
-| German     |    F     |    F     |       F        |    F[^1]    |    F[^1]     |
+| Portuguese |    F     |    F     |       F        |    F        |    F         |
+| Italian    |    F     |    F     |       F        |    F        |    F         |
+| German     |    F     |    F     |       F        |    F        |    F         |
 | Spanish    |    F     |    F     |       F        |      P      |      P       |
-| Finnish    |    F     |    F     |       P        |    F[^1]    |    F[^1]     |
+| Finnish    |    F     |    F     |       P        |    F        |    F         |
 | Dutch      |    F     |    F     |       F        |      F      |      N       |
 | Norwegian  |    F     |    F     |       P        |      P      |      P       |
 | Russian    |    F     |    F     |       P        |      P      |      P       |
@@ -104,12 +104,12 @@ See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for
 |------------|:--------:|:--------:|:--------------:|:-----------:|:------------:|
 | English    |    F     |    F     |       F        |      F      |      F       |
 | French     |    F     |    F     |       F        |      F      |      F       |
-| Portuguese |    F     |    F     |       F        |    F[^1]    |    F[^1]     |
-| Italian    |    F     |    F     |       F        |    F[^1]    |    F[^1]     |
-| German     |    F     |    F     |       F        |    F[^1]    |    F[^1]     |
-| Swedish    |    F     |    F     |       F        |    F[^1]    |    F[^1]     |
+| Portuguese |    F     |    F     |       F        |    F        |    F         |
+| Italian    |    F     |    F     |       F        |    F        |    F         |
+| German     |    F     |    F     |       F        |    F        |    F         |
+| Swedish    |    F     |    F     |       F        |    F        |    F         |
 | Spanish    |    F     |    F     |       F        |      P      |      P       |
-| Finnish    |    F     |    F     |       P        |    F[^1]    |    F[^1]     |
+| Finnish    |    F     |    F     |       P        |    F        |    F         |
 | Dutch      |    F     |    F     |       F        |      F      |      N       |
 | Norwegian  |    F     |    F     |       P        |      P      |      P       |
 | Russian    |    F     |    F     |       P        |      P      |      P       |
@@ -161,5 +161,3 @@ See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for
 
 - [Form Localization in Form Builder](/form-builder/localization.md)
 - [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md)
-
-[^1]: A few resources are missing.
