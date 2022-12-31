@@ -1,7 +1,5 @@
 # XForms - Variables
 
-
-
 ## Rationale
 
 Orbeon Forms supports declaring variables which look and behave very much like XSLT variables. Variables are extremely useful, for example to avoid repeating long XPath expressions, or to give an XPath expression unambiguous access to data computed in enclosing `<xf:group>` or `<xf:repeat>` elements.
@@ -21,15 +19,15 @@ For backward compatibility, the following elements are still supported:
 
 The element supports the following attributes: 
 
-||||
-|---|---|---|
-|`name`   |mandatory|name of the variable|
-|`as`     |optional |type of the variable (ignored but can be used for documentation purposes)|
-|`model`  |optional |contributes to the variable's single-item binding|
-|`context`|optional |contributes to the variable's single-item binding|
-|`ref`    |optional |contributes to the variable's single-item binding|
-|`bind`   |optional |contributes to the variable's single-item binding|
-|`value`  |optional |XPath 2.0 expression determining the value of the variable|
+|           |           |                                                                           |
+|-----------|-----------|---------------------------------------------------------------------------|
+| `name`    | mandatory | name of the variable                                                      |
+| `as`      | optional  | type of the variable (ignored but can be used for documentation purposes) |
+| `model`   | optional  | contributes to the variable's single-item binding                         |
+| `context` | optional  | contributes to the variable's single-item binding                         |
+| `ref`     | optional  | contributes to the variable's single-item binding                         |
+| `bind`    | optional  | contributes to the variable's single-item binding                         |
+| `value`   | optional  | XPath 2.0 expression determining the value of the variable                |
 
 The expression is evaluated in the element's single-item binding if present, otherwise in the context of its parent.
 
