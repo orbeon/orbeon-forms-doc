@@ -61,9 +61,7 @@ The _List_ permission allows specifying that the user can list form data on the 
 
 With earlier versions of Orbeon Forms, the _List_ permission was not checked separately. However, the ability to "Read" implied the ability to _List_ on the Summary page.
 
-The _List_ permission implies the "Read" permission. Selecting _List_ automatically selects the "Read" permission.
-
-Forms created and edited with earlier versions of Orbeon Forms that have the "Read" permission enabled also implicitly have the _List_ permission enabled, for backward compatibility. Opening such a form in Form Builder will show both the "Read" and _List_ permissions. If the form author deselects the _List_ permission, and then publishes the form, then the form will not allow the _List_ permission, as expected.
+Forms created and edited with earlier versions of Orbeon Forms that have the _Read_ permission enabled also implicitly have the _List_ permission enabled, for backward compatibility. Opening such a form in Form Builder will show both the _Read_ and _List_ permissions. If the form author deselects the _List_ permission, and then publishes the form, then the form will not allow the _List_ permission, as expected.
 
 ## How permissions affect Form Runner pages
 
