@@ -1,4 +1,4 @@
-# Orbeon Forms 2022.1 (Draft)
+# Orbeon Forms 2022.1
 
 __Saturday, December 31, 2022__
 
@@ -69,12 +69,13 @@ For more details, see the [documentation](/form-runner/access-control/deployed-f
 
 This version includes lots of improvements to the look and feel of Form Runner and Form Builder, including:
 
-- more modern wide navigation bar
-- more modern buttons
+- wide navigation bar
+- flat buttons
+- use of the system font by default
+- lighter background and rounded corners
 - more modern dialogs
-- updated default font (which now is the system font when possible)
 
-[TODO: screenshot]
+![View of the detail page with Wizard](images/detail-look-and-feel.png)
 
 ### Resizing of image attachments
 
@@ -117,7 +118,9 @@ This release introduces a number of improvements to Simple Data Migration. With 
 
 ![Moving a control across section boundaries](images/form-builder-simple-data-migration.png)
 
-[Blog post: Improved simple data migration](https://blog.orbeon.com/2022/09/improved-simple-data-migration.html)
+See also:
+
+- Blog post: [Improved simple data migration](https://blog.orbeon.com/2022/09/improved-simple-data-migration.html)
 
 ### Multipart support for attachments and more
 
@@ -131,7 +134,7 @@ send(
 )
 ```
 
-For more, see:
+See also:
 
 - Blog post: [Improving the send action with multipart support](https://blog.orbeon.com/2022/10/improving-send-action-with-multipart.html)
 - [Documentation](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md#sending-attachments-and-multiple-items)
@@ -199,7 +202,9 @@ The File Scan API has been updated with the following enhancements to the origin
 - The provider can return custom error messages in the current language of the form.
 - An extension mechanism via hash maps is provided.
 
-See [the API documentation](/form-runner/api/other/file-scan-api.md).
+See also:
+
+- [API documentation](/form-runner/api/other/file-scan-api.md)
 
 ### Improved email templates
 
@@ -217,7 +222,7 @@ Form Builder now shows the control names in overlay, which makes it easier to fi
 
 ![Control names in overlay](images/builder-control-name-overlay.png)
 
-### Ability to change "Add Another Repetition" label
+### Ability to change the "Add Another Repetition" label
 
 For sections with repeated content, like for the "Repetition Label", the "Add Repetition Label" tab allows you to set a label that applies to the button used to add repetitions.
 
@@ -225,11 +230,19 @@ For sections with repeated content, like for the "Repetition Label", the "Add Re
 
 ### PDF production enhancements
 
-The PDF output of Orbeon Forms has been improved in several ways:
+The PDF output of Orbeon Forms has been improved in several ways.
 
-- Orbeon Forms now embeds the richer [Inter font](https://rsms.me/inter/) into PDF files by default, which supports more languages.
-- Checkboxes are different from radio buttons.
-- PDF bookmarks are now generated correctly for sections and allow quick navigation in the resulting PDF.
+Orbeon Forms now embeds the richer [Inter font](https://rsms.me/inter/) into PDF files by default.
+
+![The Inter font](https://rsms.me/inter/samples/img/regular-text@2x.png)
+
+PDF bookmarks are now generated correctly for sections and allow quick navigation in the resulting PDF.
+
+![PDF bookmarks](images/pdf-bookmarks.png)
+
+In addition:
+
+- Printed checkboxes now show differently from radio buttons for clarity.
 - The PDF renderer library has been updated and provides bug-fixes and better CSS support.
 
 ### New "Dropdown with Other" control
@@ -301,12 +314,12 @@ We plan to add support for the new date picker in plain XForms in a future point
 
 ### Form Runner Landing page
 
-TODO:
+With earlier Orbeon Forms versions, the landing page was at `/home/`. This was a static landing page, which mixed links to the Form Runner Home page, Form Builder, and demo forms. The new Landing page replaces this page and automatically redirects to the `/fr/` path. The `/home/` path now redirects to `/fr/`.
 
-- `/home/` vs. `/fr/`
-- `/fr/` now is the new Landing page
-- `/fr/forms` now points to published forms
-- `/fr/admin` now points to published forms and admin tasks
+The `/fr/` path pointed to the combined Home page. It how points to the Landing page. Instead, the Home page is now split into the Forms and Admin pages: 
+
+- `/fr/forms` now points to published forms (Forms page)
+- `/fr/admin` now points to published forms with administrative functions (Admin page)
 
 ### Extra elements in initial data POSTed to form
 
