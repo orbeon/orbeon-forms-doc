@@ -259,8 +259,7 @@ Example:
 
 ``` 
 
-That `xf:group` element will ony be included if the bound node contains an attribute named `prefix`. Otherwise the entire
-subtree will be omitted.
+That `xf:group` element will ony be included if the bound node contains a non-blank attribute named `prefix`. Otherwise, the entire subtree will be omitted.
 
 [Orbeon Forms 2018.1 ONLY] This also checks properties such as `oxf.xforms.xbl.fr.currency.prefix` and if the value of the property is found
 and not empty, it is as if the attribute was present on the bound node.
