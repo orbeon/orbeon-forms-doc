@@ -2,14 +2,13 @@
 
 ## Upcoming releases
 
-### Orbeon Forms 2022.1
+### Orbeon Forms 2023.1
 
 Focus:
 
-- Product landing page and navigation enhancements ([#1410](https://github.com/orbeon/orbeon-forms/issues/1410))
-- Automated testing
+- TBD
 
-See the tentative [2022.1 items](https://github.com/orbeon/orbeon-forms/projects/32) for details.
+See the tentative [2023.1 items](https://github.com/orbeon/orbeon-forms/projects/43) for details.
 
 Consider:
 
@@ -22,7 +21,7 @@ Consider:
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2022-08: tentative release date
+- 2023-08: tentative release date
 
 ## Past releases
 
