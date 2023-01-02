@@ -148,7 +148,7 @@ In this release, we have introduced many accessibility improvements. In particul
 - Screen readers can now read form control hints
 - Control focus highlights are nicer and more consistent and supported on control groups
 
-Focus highlights on groups can be disabled via configuration property and is enabled by default. The following illustrates highlights on selection controls and groups (in practice focus highlights are only shown on keyboard focus):
+Focus highlights on groups can be disabled via configuration property and are enabled by default. The following illustrates highlights on selection controls and groups (in practice focus highlights are only shown on keyboard focus):
 
 ![Selection controls focus highlights](images/selection-focus-highlights.png)
 
