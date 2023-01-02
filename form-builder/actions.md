@@ -30,7 +30,7 @@ You can reorder actions by drag and drop in the toolbox. Sometimes, the specific
 
 [SINCE Orbeon Forms 2017.1]
 
-<img alt="Actions Editor General Settings" src="images/actions-general-settings.png" width="802">
+![Actions Editor General Settings](images/actions-general-settings.png)
 
 This is the meaning of the fields of the dialog:
 
@@ -64,29 +64,6 @@ This is the meaning of the fields of the dialog:
                 - You can store datasets as a result.
 - __Service to Call.__
     - The service to call as once the action is triggered.
-
-Like for services, once your action is defined, the Save buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the action name. You can also delete the action using the Remove button.
-
-### With Orbeon Forms 2016.3 or earlier
-
-[UNTIL Orbeon Forms 2016.3]
-
-![Actions Editor](images/actions-notabs.png)
-
-This is the meaning of the fields of the dialog:
-
-- __Action Name.__ This is the name of the action, as seen by Form Builder. Must start with a letter, and may not contain spaces.
-- __React to.__ The event which starts the action. Can be one of the following:
-    - __Value Change.__ The control's value has changed.
-    - __Value Change or Form Load.__ The control's value has changed OR the control has just become visible.
-        - *NOTE: The field description in the user interface does not accurately describe the behavior, which is that the action will run upon the control becoming visible, whether upon form load or at a later time. The action can happen multiple times for the control if the control hides and shows multiple times.*  
-    - __Activation.__ The button has been clicked, or the "Enter" key has been pressed in a text line.
-    - __Form Load.__ The form just finished loading.
-- __Condition.__
-    - __Run always.__ Run the action independently from the form mode.
-    - __Run on creation only.__ Run the action only in creation mode, that is when the user creates new data, as opposed to editing, viewing, emailing, or generating a PDF.
-- __Control.__ Except for the Form Load event which does not depend on a particular control, this specifies which control the action reacts to.
-- __Service to Call.__ The service to call as a response to the action.
 
 Like for services, once your action is defined, the Save buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the action name. You can also delete the action using the Remove button.
 
