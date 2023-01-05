@@ -25,7 +25,7 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 |      | Jan 14 | 2021.1.1   | 🟨 Upgrade to 2021.1.6 | [Release notes](/release-notes/orbeon-forms-2021.1.1.md)                                                                             | 
 | 2021 | Dec 31 | 2021.1     | 🟨 Upgrade to 2021.1.6 | [Release notes](/release-notes/orbeon-forms-2021.1.md)                                                                               | 
 |      | Dec 29 | 2020.1.6.2 | 🟩 Until Dec 30, 2023  | [Release notes](/release-notes/orbeon-forms-2020.1.6.md)                                                                             | 
-|      | Dec 29 | 2019.2.4.1 | 🟩 Until Dec 29, 2022  | [Release notes](/release-notes/orbeon-forms-2019.2.4.md)                                                                             | 
+|      | Dec 29 | 2019.2.4.1 | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2019.2.4.md)                                                                             | 
 |      | Dec 29 | 2019.1.2.1 | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2019.1.2.md)                                                                             | 
 |      | Dec 29 | 2018.2.5.1 | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2018.2.5.md)                                                                             | 
 |      | Dec 29 | 2018.1.4.1 | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2018.1.4.md)                                                                             | 
@@ -33,13 +33,13 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 |      | Sep 06 | 2020.1.4   | 🟨 Upgrade to 2020.1.6 | [Release notes](/release-notes/orbeon-forms-2020.1.4.md)                                                                             | 
 |      | Apr 30 | 2020.1.3   | 🟨 Upgrade to 2020.1.6 | [Release notes](/release-notes/orbeon-forms-2020.1.3.md)                                                                             | 
 |      | Mar 4  | 2020.1.2   | 🟨 Upgrade to 2020.1.6 | [Release notes](/release-notes/orbeon-forms-2020.1.2.md)                                                                             | 
-|      | Feb 15 | 2019.2.3   | 🟨 Upgrade to 2019.2.4 | [Release notes](/release-notes/orbeon-forms-2019.2.3.md)                                                                             | 
+|      | Feb 15 | 2019.2.3   | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2019.2.3.md)                                                                             | 
 |      | Feb 1  | 2020.1.1   | 🟨 Upgrade to 2020.1.6 | [Release notes](/release-notes/orbeon-forms-2020.1.1.md)                                                                             | 
 | 2020 | Dec 30 | 2020.1     | 🟨 Upgrade to 2020.1.6 | [Release notes](/release-notes/orbeon-forms-2020.1.md)                                                                               | 
-|      | Mar 31 | 2019.2.2   | 🟨 Upgrade to 2019.2.4 | [Release notes](/release-notes/orbeon-forms-2019.2.2.md)                                                                             | 
-|      | Feb 28 | 2019.2.1   | 🟨 Upgrade to 2019.2.4 | [Release notes](/release-notes/orbeon-forms-2019.2.1.md)                                                                             |
+|      | Mar 31 | 2019.2.2   | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2019.2.2.md)                                                                             | 
+|      | Feb 28 | 2019.2.1   | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2019.2.1.md)                                                                             |
 |      | Jan 29 | 2019.1.1   | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2019.1.1.md)                                                                             |
-| 2019 | Dec 30 | 2019.2     | 🟨 Upgrade to 2019.2.4 | [Release notes](/release-notes/orbeon-forms-2019.2.md)                                                                               |
+| 2019 | Dec 30 | 2019.2     | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2019.2.md)                                                                               |
 |      | Nov 21 | 2018.2.4   | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2018.2.4.md)                                                                             |
 |      | Oct 24 | 2019.1     | 🟥 End of life         | [Release notes](/release-notes/orbeon-forms-2019.1.md)                                                                               |
 |      | May 20 | 2018.2.3   | 🟥 End of life         | [Release notes](https://blog.orbeon.com/2019/05/orbeon-forms-201823-pe.html)                                                         |
