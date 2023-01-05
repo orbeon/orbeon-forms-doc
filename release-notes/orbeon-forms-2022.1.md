@@ -104,7 +104,9 @@ If you are familiar with for example Gmail, you might know that you can select a
 
 This doesn’t only apply to the Form Runner Summary, Forms, and Admin pages: it applies to any checkboxes in a repeated grid. And it also applies to the Checkboxes form control, so you can quickly select and deselect a range of checkboxes.
 
-[//]: # ([TODO: link to blog post when done])
+See also:
+
+- Blog post: [Improved selection of multiple items](https://blog.orbeon.com/2023/01/improved-selection-of-multiple-items.html)
 
 ### Improved simple data migration
 
