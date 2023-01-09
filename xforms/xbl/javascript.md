@@ -240,10 +240,10 @@ The `init()` method is not new in Orbeon Forms 2016.1, but when using the `javas
 
 ### With Orbeon Forms 2016.1 and newer
 
-You can call a JavaScript method defined in your JavaScript class when an XForms event occurs. For example, to call the `myFunction()` method on `xforms-enabled`, write:
+You can call a JavaScript method defined in your JavaScript class when an XForms event occurs. For example, to call the `myFunction()` method on `xxforms-visible`, write:
 
 ```xml
-<xxf:action type="javascript" event="xforms-enabled">
+<xxf:action type="javascript" event="xxforms-visible">
     ORBEON.xforms.XBL.instanceForControl(this).myFunction();
 </xxf:action>
 ```
@@ -251,6 +251,8 @@ You can call a JavaScript method defined in your JavaScript class when an XForms
 `instanceForControl()` gets or creates the instance of the JavaScript class associated with the current component. It creates class instances as necessary, keeping track of existing instances and maintaining a 1-to-1 mapping between instances of the XBL component in the form and instances of your JavaScript class.
 
 __WARNING: You should use this only to call your own methods. Do not use this to call the `init()`, `destroy()`, or other lifecycle methods documented in this page.__
+
+Note that a component can be created on the server, and receive the `xforms-enabled` event, but its HTML/JavaScript representation might not be visible and in fact there might not be any markup yet available for that control. This is the case, for example, for hidden switch cases, which is the construct used for hidden wizard pages. Therefore, use [`xxforms-visible`](/xforms/events-extensions-events.md#xxforms-visible) and [`xxforms-hidden`](/xforms/events-extensions-events.md#xxforms-hidden) instead of `xforms-enabled`/`xforms-disabled` in conjunction with `instanceForControl()`.
 
 ### With Orbeon Forms 4.10 and earlier
 

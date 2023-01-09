@@ -203,7 +203,7 @@ The following occurs:
 
 - `xxforms-hidden` is dispatched if the control is not in a hidden switch case
     - SINCE Orbeon Forms 2018.1
-    - See also [`xxforms-visible`](xforms/events-extensions-events.md#xxforms-hidden).
+    - See also [`xxforms-hidden`](xforms/events-extensions-events.md#xxforms-hidden).
 - `xforms-disabled` is dispatched
 - no other events are dispatched  
 
