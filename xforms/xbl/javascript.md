@@ -54,7 +54,7 @@ The second parameter to `declareCompanion()` can either be a JavaScript object t
   var $ = ORBEON.jQuery;
 
   // Register your companion class by its binding name
-  ORBEON.xforms.XBL.declareCompanion('acme|multi-tool', class MultiTool {
+  ORBEON.xforms.XBL.declareCompanion("acme|multi-tool", class MultiTool {
 
     // Your custom data can go here
     myField: null;
@@ -114,7 +114,7 @@ Orbeon Forms 2016.1 and newer provide a simple way to declare a companion class 
   var $ = ORBEON.jQuery;
 
   // Register your companion class by its binding name
-  ORBEON.xforms.XBL.declareCompanion('acme|multi-tool', {
+  ORBEON.xforms.XBL.declareCompanion("acme|multi-tool", {
 
     // Your custom data can go here
     myField: null,
@@ -218,7 +218,7 @@ Whether you use the `declareCompanion()` method or the `declareClass()` method, 
 For example, if you know you have an input field with the class `acme-my-input` inside your component, you get the HTML element corresponding to that input with the following jQuery:
 
 ```javascript
-$(this.container).find('.acme-my-input')[0]
+this.container.querySelector(".acme-my-input")
 ```
 
 ### Summary of companion class methods
@@ -438,7 +438,7 @@ Then in JavaScript, you can access the current value of the property with:
 
 ```javascript
 var prefixElement =
-    $(this.container).find('.xbl-fr-currency-prefix')[0];
+    this.container.querySelector(".xbl-fr-currency-prefix");
 
 var prefix =
     ORBEON.xforms.Document.getValue(prefixElement.id);

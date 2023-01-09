@@ -52,7 +52,7 @@ NOTE: For dropdowns created with Form Builder, the API does not provide direct s
 
 ```javascript
 ORBEON.xforms.Document.setValue(
-    ORBEON.jQuery(ORBEON.fr.API.findControlsByName('my-dropdown')).find('.xforms-select1')[0],
+    ORBEON.fr.API.findControlsByName('my-dropdown')[0].querySelector(".xforms-select1"),
     1
 )
 ```

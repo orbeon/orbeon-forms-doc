@@ -122,7 +122,7 @@ Some XBL controls, like `<fr:dropdown>` AKA `<xf:select1 appearance="dropdown">`
 For those, you have to go search for the nested core XForms control which holds the value, in this case the `.xforms-select1` control:
 
 ```javascript
-ORBEON.xforms.Document.getValue(ORBEON.jQuery(this).find('.xforms-select1')[0])
+ORBEON.xforms.Document.getValue(this.querySelector(".xforms-select1"))
 ```
 
 ### Setting focus on a control
