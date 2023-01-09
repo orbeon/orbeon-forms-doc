@@ -355,3 +355,19 @@ See [Providing user information](/form-runner/api/authentication.md#providing-us
 Before Orbeon Forms 2022.1, when loading a `javascript:` URI, `xf:load` was ignoring the value of the `xxf:show-progress` attribute, and always behaving as if the attribute was set to `false`. Instead, starting with Orbeon Forms 2022.1, if you don't specify `xxf:show-progress`, it defaults to `false` for `javascript:` URIs, and to `true` otherwise.
 
 This allows you to keep the progress indicator when using `xf:load` to run JavaScript that loads a page. Conversely, in the unlikely case you had some code doing a `<xf:load resource="javascript: …" xxf:show-progress="true"/>` but didn't want the progress indicator to be kept, then you will need to either remove the `xxf:show-progress="true"` or change the value of the attributes to `false`.
+
+### JavaScript companion classes
+
+#### Deprecation of old API
+
+[JavaScript companion classes](/xforms/xbl/javascript.md) are very important with Orbeon Forms. Since Orbeon Forms 2016.1, the `javascript-lifecycle` mode provides an easy way to register custom JavaScript to provide behavior to custom components.
+
+The older way to associate companion classes, without the `javascript-lifecycle` mode, is deprecated in this version. Specifically, the following is deprecated:
+
+- use of `ORBEON.xforms.XBL.declareClass()` (use `ORBEON.xforms.XBL.declareCompanion` instead)
+- use of the `instance()` method on the component class (use `javascript-lifecycle` and `instanceForControl()` instead)
+- explicit calling of the `init()` and `destroy()` method on component instances (Orbeon Forms manages those calls instead)
+
+#### Removal of `xxbl:parameter()`
+
+The `xxbl:parameter()` XSLT function has been removed in this version of Orbeon Forms.

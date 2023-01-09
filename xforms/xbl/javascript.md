@@ -1,17 +1,16 @@
-# JavaScript Companion Classes
+# JavaScript companion classes
 
 ## Rationale
 
-Some components do not require any custom JavaScript code, for example components which combine other controls (such as a date components made of separate input fields or dropdown menus). In such cases, you implement all the logic with XForms.
+Some Orbeon Forms components do not require any custom JavaScript code, for example components which simply combine other controls (such as a date components made of separate input fields or dropdown menus). In such cases, you implement all the logic with XForms.
 
-On the other hand some components are introduced to encapsulate functionality mainly implemented in JavaScript. Orbeon Forms provides an easy way to interface with the JavaScript side. Each JavaScript-based component must define a JavaScript class used to handle the component's lifecycle as well as hold custom data and functions. This class is called the component's *companion class*. One instance of this class is created by Orbeon Forms for each instance of relevant (visible) control. We call these instances *companion instances*.
+On the other hand, some components encapsulate functionality mainly implemented in JavaScript. Orbeon Forms provides an easy way to interface with the JavaScript side: each JavaScript-based component must define a JavaScript class used to handle the component's lifecycle as well as hold custom data and functions. We call this class is called the component's *companion class*. One instance of this class is created by Orbeon Forms for each instance of relevant (visible) control. We call these instances *companion instances*.
 
 ## Directory layout
 
 You place your JavaScript files alongside your XBL file. See [Directory layout](bindings.md#directory-layout) for details.
 
 To include a companion JavaScript file, use the `<xbl:script>` element directly within the `<xbl:xbl>` element:
-
 
 ```xml
 <xbl:xbl
@@ -33,45 +32,116 @@ To include a companion JavaScript file, use the `<xbl:script>` element directly 
 
 ## Creating and declaring a companion class
 
-### With Orbeon Forms 2016.1 and newer
+### With Orbeon Forms 2022.1.1 and newer 
 
-Orbeon Forms 2016.1 provides a simple way to declare a companion class. Here is the overall structure:
+[SINCE Orbeon Forms 2022.1.1]
+
+The first parameter to `declareCompanion()` must match the component's binding name, for example:
+
+- if your component's binding is `acme|multi-tool`
+    - pass `acme|multi-tool`
+    - you place the JavaScript file under `/xbl/acme/multi-tool/multi-tool.js`
+- if your component's binding is `foo|bar`
+    - pass `foo|bar`
+    - you place the JavaScript file under `/xbl/foo/bar/bar.js`
+
+The second parameter to `declareCompanion()` can either be a JavaScript object that acts as the *prototype* for the companion class, or (and this is new with Orbeon Forms 2022.1.1) it can also be a [JavaScript *class*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) instead of a prototype. Note that this must not be an *instance* of the class (so don't use `new`), but the class itself. For example:
 
 ```javascript
 (function() {
 
-    // Optional shortcut to jQuery
-    var $ = ORBEON.jQuery;
+  // Optional shortcut to jQuery
+  var $ = ORBEON.jQuery;
 
-    // Register your companion class by its binding name
-    ORBEON.xforms.XBL.declareCompanion('acme|multi-tool', {
+  // Register your companion class by its binding name
+  ORBEON.xforms.XBL.declareCompanion('acme|multi-tool', class MultiTool {
 
-        // Your custom data goes here
-        myField: null,
+    // Your custom data can go here
+    myField: null;
+    containerElem; // initialized in constructor
+      
+    constructor(containerElem) {
+      // Remember the container element so that other methods can use it
+      this.containerElem = containerElem;
+    }
 
-        init: function() {
-            // Perform your JavaScript initialization here
-        },
-        destroy: function() {
-            // Perform your JavaScript clean-up here
-        },
-        xformsUpdateReadonly: function(readonly) {
-            // Orbeon Forms calls this when the control's readonly status changes
-        },
-        xformsUpdateValue: function(newValue) {
-            // Orbeon Forms calls this when the control's value changes
-        },
-        xformsGetValue: function() {
-            // Orbeon Forms calls this to obtain the control's value
-        },
-        xformsFocus: function() {
-            // Orbeon Forms calls this when the control is handed focus
-        },
-        // Your custom functions go here
-        myFunction: function() {
-            ...
-        },
-    });
+    init() {
+      // Perform your JavaScript initialization here
+    }
+
+    destroy() {
+      // Perform your JavaScript clean-up here
+    }
+
+    xformsUpdateReadonly(readonly) {
+      // Orbeon Forms calls this when the control's readonly status changes
+    }
+
+    xformsUpdateValue(newValue) {
+      // Orbeon Forms calls this when the control's value changes
+    }
+
+    xformsGetValue() {
+      // Orbeon Forms calls this to obtain the control's value
+    }
+
+    xformsFocus() {
+      // Orbeon Forms calls this when the control is handed focus
+    }
+
+    // Your custom functions can go here
+    myFunction() {
+      // ...
+    }
+  });
+})();
+```
+
+Advantages of passing a JavaScript class include:
+
+- Orbeon Forms directly passes the container element in the constructor, which provides clarity over the "magic" `this.container` field.
+- You can use inheritance easily to share code between components.
+- Classes have become mainstream in JavaScript since Web browsers support them natively.
+
+### With Orbeon Forms 2016.1 and newer
+
+Orbeon Forms 2016.1 and newer provide a simple way to declare a companion class by passing a JavaScript *prototype*. Here is the overall structure:
+
+```javascript
+(function() {
+
+  // Optional shortcut to jQuery
+  var $ = ORBEON.jQuery;
+
+  // Register your companion class by its binding name
+  ORBEON.xforms.XBL.declareCompanion('acme|multi-tool', {
+
+    // Your custom data can go here
+    myField: null,
+
+    init: function () {
+      // Perform your JavaScript initialization here
+    },
+    destroy: function () {
+      // Perform your JavaScript clean-up here
+    },
+    xformsUpdateReadonly: function (readonly) {
+      // Orbeon Forms calls this when the control's readonly status changes
+    },
+    xformsUpdateValue: function (newValue) {
+      // Orbeon Forms calls this when the control's value changes
+    },
+    xformsGetValue: function () {
+      // Orbeon Forms calls this to obtain the control's value
+    },
+    xformsFocus: function () {
+      // Orbeon Forms calls this when the control is handed focus
+    },
+    // Your custom functions can go here
+    myFunction: function () {
+        // ...
+    },
+  });
 })();
 
 ```
@@ -85,7 +155,11 @@ The first parameter to `declareCompanion()` must match the component's binding n
     - pass `foo|bar`
     - you place the JavaScript file under `/xbl/foo/bar/bar.js`
 
+The second parameter to `declareCompanion()` is a JavaScript object that acts as the *prototype* for the companion class. This is documented further below.
+
 ### With Orbeon Forms 4.10 and earlier
+
+[DEPRECATED SINCE Orbeon Forms 2022.1]
 
 In the JavaScript file corresponding to your component, declare a companion class as follows:
 
@@ -122,20 +196,24 @@ In the JavaScript file corresponding to your component, declare a companion clas
 })();
 ```
 
-* `YAHOO.namespace("xbl.acme")` defines a namespace for your class. All the XBL components components that ship with Orbeon Forms are in the `xbl.fr` namespace. If you are defining a component for your company or project named Acme, you could use the namespace `xbl.acme`.
+* `YAHOO.namespace("xbl.acme")` defines a namespace for your class. All the XBL components that ship with Orbeon Forms are in the `xbl.fr` namespace. If you are defining a component for your company or project named Acme, you could use the namespace `xbl.acme`.
 * ` ORBEON.xforms.XBL.declareClass()` defines your class as an XBL class:
     * It takes 2 parameters: your class, and the CSS class found on the outermost HTML element that contains the markup for your components. This element is generated by Orbeon Forms, and the class name is derived from the by-name binding of your `<xbl:binding>`. For example, if the binding is `acme|multi-tool`, the class name is `xbl-acme-multi-tool`.
 
 ### The companion class
 
-Both `declareCompanion()` and `declareClass()` create a JavaScript class and:
+Whether you use the `declareCompanion()` method or the `declareClass()` method, and whether you pass a JavaScript prototype object or a JavaScript class, Orbeon Forms internally creates a JavaScript class which derives from either the class passed or a class created from the prototype. That class:
 
-- add a static `instance()` method.
-    - This is a factory method, which you use to get or create an object corresponding to the "current" component.
-    - It returns an instance of the JavaScript class corresponding to the "current" component from which it is called.
-    - It creates class instances as necessary, keeping track of existing instances and maintaining a 1-to-1 mapping between instances of the XBL component in the form and instance of your JavaScript class.
-- add a `container` attribute.
-    - In your JavaScript code, you can refer to `this.container` to retrieve the outermost HTML element corresponding to your component.
+- adds a `container` property
+    - This points to the outermost container HTML element associated with the component.
+    - In your JavaScript code, you can refer to `this.container` to retrieve this element.
+    - [SINCE Orbeon Forms 2022.1.1] We recommend you use a JavaScript class's constructor instead, which is directly passed that container element. 
+- adds or overrides (if present) the `init()` and `destroy()` methods
+    - This provides finer internal control over these lifecycle methods.
+    - The overridden methods call your own `init()` and `destroy()` methods if present.
+    - In general, you don't have to worry about this. However, you shouldn't call `init()` and `destroy()` yourself in any case. 
+- adds a static `instance()` factory method to the class
+    - __WARNING: This is present for backward compatibility only and must no longer be relied on. Use `instanceForControl()` instead.__
 
 For example, if you know you have an input field with the class `acme-my-input` inside your component, you get the HTML element corresponding to that input with the following jQuery:
 
@@ -145,16 +223,16 @@ $(this.container).find('.acme-my-input')[0]
 
 ### Summary of companion class methods
 
-| Method                 | Description              | Mode                                 | Since              | Status |
-|------------------------|--------------------------|--------------------------------------|--------------------|--------|
-| `init`                 | initialize               | `javascript-lifecycle`               | 2016.1             | fresh  |
-| `destroy`              | clean-up                 | `javascript-lifecycle`               | 2016.1             | fresh  |
-| `xformsUpdateReadonly` | change readonly status   | `javascript-lifecycle`               | 2016.1             | fresh  |
-| `xformsUpdateValue`    | update value             | `external-value`                     | 2016.1             | fresh  |
-| `xformsGetValue`       | get value                | `external-value`                     | 2016.1             | fresh  |
-| `xformsFocus`          | hand focus               | `focus`                              | 2016.1             | fresh  |
-| `setFocus`             | hand focus               | `focus`                              | 4.0                | legacy |
-| `enabled`              | enable after full update |                                      | 4.0                | legacy |
+| Method                 | Description              | Mode                   | Since  | Status |
+|------------------------|--------------------------|------------------------|--------|--------|
+| `init`                 | initialize               | `javascript-lifecycle` | 2016.1 | fresh  |
+| `destroy`              | clean-up                 | `javascript-lifecycle` | 2016.1 | fresh  |
+| `xformsUpdateReadonly` | change readonly status   | `javascript-lifecycle` | 2016.1 | fresh  |
+| `xformsUpdateValue`    | update value             | `external-value`       | 2016.1 | fresh  |
+| `xformsGetValue`       | get value                | `external-value`       | 2016.1 | fresh  |
+| `xformsFocus`          | hand focus               | `focus`                | 2016.1 | fresh  |
+| `setFocus`             | hand focus               | `focus`                | 4.0    | legacy |
+| `enabled`              | enable after full update |                        | 4.0    | legacy |
 
 The `init()` method is not new in Orbeon Forms 2016.1, but when using the `javascript-lifecycle` mode it is called automatically. Prior to Orbeon Forms 2016.1, or when not using the `javascript-lifecycle`  mode, it is called either via XForms event handlers, or as a side-effect of calls to `setFocus()` or `enabled()`.
 
@@ -170,7 +248,13 @@ You can call a JavaScript method defined in your JavaScript class when an XForms
 </xxf:action>
 ```
 
+`instanceForControl()` gets or creates the instance of the JavaScript class associated with the current component. It creates class instances as necessary, keeping track of existing instances and maintaining a 1-to-1 mapping between instances of the XBL component in the form and instances of your JavaScript class.
+
+__WARNING: You should use this only to call your own methods. Do not use this to call the `init()`, `destroy()`, or other lifecycle methods documented in this page.__
+
 ### With Orbeon Forms 4.10 and earlier
+
+[DEPRECATED SINCE Orbeon Forms 2022.1]
 
 With Orbeon Forms 4.10 and earlier, you obtain the class using the JavaScript namespaces you declared alongside the class, and directly call the `instance()` factory function:
 
@@ -320,6 +404,8 @@ It is *not* called just after the control is initialized.
 
 ## Read-only parameters
 
+[UNTIL Orbeon Forms 2021.1]
+
 So your JavaScript can access the current value of parameters and be notified when their value changes, include the `oxf:/oxf/xslt/utils/xbl.xsl` XSL file, and call `xxbl:parameter()` function for each parameter, as in:
 
 ```xml
@@ -372,6 +458,3 @@ You can dispatch custom events to bindings from JavaScript using the `ORBEON.xfo
     ...
 </xbl:binding>
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NDg1NjM5Nl19
--->
