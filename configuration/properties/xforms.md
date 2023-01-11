@@ -572,18 +572,26 @@ to not only show a value coming from an instance in a text field, but also parse
 You can configure formatting for `<xf:input>` with the two properties below. The value is a "mask" and follows the syntax of the Java [SimpleDateFormat][9].
 The following masks are supported:
 
-- For dates (property `oxf.xforms.format.input.date`):
-    - `[M]/[D]/[Y]` e.g. 11/5/2008 (also called "North America format")
-    - `[D]/[M]/[Y]` e.g. 5/ 11/2008 (also called "European format")
-    - As a variation, you can use another separator such as a dot (e.g. `[D].[M].[Y]`) or dash (`[D]-[M]-[Y]`)
-    - As a variation, you can write `[M01]` and `[D01]` if you want day and months on one digit to be prefixed with a `0`, e.g. 11/05/2008
-- For times (property `oxf.xforms.format.input.time`):
-    - `[h]:[m]:[s] [P]` e.g. 2:05:12 p.m. with dots in a.m. and p.m.
-    - `[h]:[m] [P]` e.g. 2:05 p.m. [SINCE Orbeon Forms 2020.1]
-    - `[h]:[m]:[s] [P,2-2]` e.g. 2:05:12 pm without dots in am and pm
-    - `[h]:[m] [P,2-2]` e.g. 2:05 pm [SINCE Orbeon Forms 2020.1]
-    - `[H]:[m]:[s]` e.g. 14:05:12
-    - `[H]:[m]` e.g. 14:05 (without seconds)
+For dates (property `oxf.xforms.format.input.date`):
+
+| Format            | Example    | Description                         |
+|-------------------|------------|-------------------------------------|
+| `[M]/[D]/[Y]`     | 11/5/2023  | also called "North America format"  |
+| `[D]/[M]/[Y]`     | 5/11/2023  | also called "European format"       | 
+| `[D].[M].[Y]`     | 5.11.2023  | variation with dot                  |
+| `[D]-[M]-[Y]`     | 5-11-2023  | variation with dash                 |
+| `[M01]/[D01]/[Y]` | 11/05/2023 | force two digits for months an days | 
+
+For times (property `oxf.xforms.format.input.time`):
+
+| Format                | Example        | Description                 |
+|-----------------------|----------------|-----------------------------|
+| `[h]:[m]:[s] [P]`     | 2:05:12 p.m.   | with dots in a.m. and p.m.  |
+| `[h]:[m] [P]`         | 2:05 p.m.      | [SINCE Orbeon Forms 2020.1] | 
+| `[h]:[m]:[s] [P,2-2]` | 2:05:12 pm     | without dots in am and pm   |
+| `[h]:[m] [P,2-2]`     | 2:05 pm        | [SINCE Orbeon Forms 2020.1] |
+| `[H]:[m]:[s]`         | 14:05:12       |                             |
+| `[H]:[m]`             | 14:05          | (without seconds)           |
 
 An `<xf:input>` bound to a node of type `xs:dateTime` is shown as two text fields: one for the date and one for the time. In that case, the date text field uses the formatting defined by `oxf.xforms.format.input.date` and the time text field uses the formatting defined by `oxf.xforms.format.input.time`.
 
