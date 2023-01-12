@@ -146,22 +146,24 @@ You can choose what canonical format is used by changing the value of the [`oxf.
 
 Supported time formats:
 
-| Example       | Note                        |
-|---------------|-----------------------------|
-| now           | current time                |
-| 12:34:56 p.m. |                             |
-| 12:34:56 pm   |                             |
-| 12:34 p.m.    | equivalent to 12:34:00 p.m. |
-| 12:34 pm      |                             |
-| 12 p.m.       | equivalent to 12:00:00 p.m. |
-| 12 pm         |                             |
-| 12:34:56 a.m. |                             |
-| 12:34:56 am   |                             |
-| 12:34 a.m.    |                             |
-| 12:34 am      |                             |
-| 12 a.m.       |                             |
-| 12 am         |                             |
-| 21            | equivalent to 9:00:00 pm    |
+| Example       | Note                       |
+|---------------|----------------------------|
+| now           | current local time         |
+| 3:34:56 p.m.  | full time with seconds     |
+| 3:34:56 pm    | same as above              |
+| 3:34 p.m.     | equivalent to 3:34:00 p.m. |
+| 3:34 pm       | same as above              |
+| 3 p.m.        | equivalent to 3:00:00 p.m. |
+| 3 pm          | same as above              |
+| 3:34:56 a.m.  | full time with seconds     |
+| 3:34:56 am    | same as above              |
+| 3:34 a.m.     | equivalent to 3:34:00 a.m. |
+| 3:34 am       | same as above              |
+| 3 a.m.        | equivalent to 3:00:00 a.m. |
+| 3 am          | same as above              |
+| 12 a.m.       | midnight                   |
+| 12 p.m.       | noon                       |
+| 21            | equivalent to 9:00:00 pm   |
 
 Date formats:
 
