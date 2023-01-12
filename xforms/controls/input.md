@@ -140,39 +140,45 @@ When using the date picker, you can choose whether you want 2 months to be displ
 
 ### Smart date and time format
 
-The date and time fields allow you to type a date and a time in a number of formats, as listed below. When the field looses the focus, the value you entered is parsed and, if recognized, replaced with a value in a a "canonical format".
+The date and time fields allow you to type a date and a time in a number of formats, as listed below. When the field looses the focus, the value you entered is parsed and, if recognized, replaced with a value in a "canonical format".
 
-You can choose what canonical format is used by changing the value of the [`oxf.xforms.format.input.date` and `oxf.xforms.format.input.time` properties][4].
+You can choose what canonical format is used by changing the value of the [`oxf.xforms.format.input.date` and `oxf.xforms.format.input.time` properties](/configuration/properties/xforms.md#for-xf-input).
 
-Time formats:
+Supported time formats:
 
-| Example | Note | Regular expression |
-|---|---|---|
-| now | The current time | ^now$ |
-| 12:34:56 p.m. |   | ^(d{1,2}):(d{1,2}):(d{1,2}) ?(p&#124;pm&#124;p.m.)$ |
-| 12:34 p.m. | Is equivalent to 12:34:00 p.m. | ^(d{1,2}):(d{1,2}) ?(p&#124;pm&#124;p.m.)$ |
-| 12 p.m. | Is equivalent to 12:00:00 p.m.  | ^(d{1,2}) ?(p&#124;pm&#124;p.m.)$ |
-| 12:34:56 (a.m.) |    |  ^(d{1,2}):(d{1,2}):(d{1,2}) ?(a&#124;am&#124;a.m.)?$ |
-| 12:34 (a.m.) |   | ^(d{1,2}):(d{1,2}) ?(a&#124;am&#124;a.m.)?$ |
-| 12 (a.m.) |   | ^(d{1,2}) ?(a&#124;am&#124;a.m.)?$ |
-| 123456 | Is equivalent to 12:34:56 | ^(d{1,6})$ |
+| Example       | Note                        |
+|---------------|-----------------------------|
+| now           | current time                |
+| 12:34:56 p.m. |                             |
+| 12:34:56 pm   |                             |
+| 12:34 p.m.    | equivalent to 12:34:00 p.m. |
+| 12:34 pm      |                             |
+| 12 p.m.       | equivalent to 12:00:00 p.m. |
+| 12 pm         |                             |
+| 12:34:56 a.m. |                             |
+| 12:34:56 am   |                             |
+| 12:34 a.m.    |                             |
+| 12:34 am      |                             |
+| 12 a.m.       |                             |
+| 12 am         |                             |
+| 21            | equivalent to 9:00:00 pm    |
 
 Date formats:
 
-| Example | Note | Regular expression |
-|---|---|---|
-| today |    | `^tod` |
-| tomorrow |    | `^tom` |
-| yesterday |   | `^yes` |
-| 4th | The 4th of the current year and month | `^(d{1,2})(st&#124;nd&#124;rd&#124;th)?$` |
-| 4th Jan |   | `^(d{1,2})(?:st&#124;nd&#124;rd&#124;th)? (w+)$` |
-| 4th Jan 2003 |   | `^(d{1,2})(?:st&#124;nd&#124;rd&#124;th)? (w+),? (d{2,4})$` |
-| Jan 4th |   | `^(w+) (d{1,2})(?:st&#124;nd&#124;rd&#124;th)?$` |
-| Jan 4th 2003 |   | `^(w+) (d{1,2})(?:st&#124;nd&#124;rd&#124;th)?,? (d{2,4})$` |
-| 10/20/2000 ("US format") or 20/10/2000 ("European format")  | | `^(\d{1,2})[./\-\s]?(\d{1,2})[./\-\s]?(\d{2,4})$` |
-| 10/20 ("US format") or 20/10 ("European format")|  | `^(\d{1,2})[./\-\s](\d{1,2})$` |
-| 10202000 ("US format") or 20102000 ("European format")  | [SINCE Orbeon Forms 2017.2] | `^(\d{2})(\d{2})(\d{4})$` |
-| 2000-10-20 | ISO or "Asian" format | `(^d{4})-(d{1,2})-(d{1,2})(Z&#124;([+-]d{2}:d{2}))?$` |
+| Example                                                    | Note                                  |
+|------------------------------------------------------------|---------------------------------------|
+| today                                                      |                                       |
+| tomorrow                                                   |                                       |
+| yesterday                                                  |                                       |
+| 4th                                                        | The 4th of the current year and month |
+| 4th Jan                                                    |                                       |
+| 4th Jan 2003                                               |                                       |
+| Jan 4th                                                    |                                       |
+| Jan 4th 2003                                               |                                       |
+| 10/20/2000 ("US format") or 20/10/2000 ("European format") |                                       |
+| 10/20 ("US format") or 20/10 ("European format")           |                                       |
+| 10202000 ("US format") or 20102000 ("European format")     | [SINCE Orbeon Forms 2017.2]           |
+| 2000-10-20                                                 | ISO or "Asian" format                 |
 
 In the table above, the "US format" applies the `oxf.xforms.format.input.date`  property starts with `[M`, and the "European format" when that property starts with `[D`.
 
@@ -187,11 +193,11 @@ If you type in a date field a year with only two digits (say 5/20/10), the contr
 
 ### Date picker internationalization
 
-By default, the months and days of the week are in English in the date picker (as shown in the screenshot above). You can  change this by setting the value of the lang attribute on the  element of the page. The value of the attribute two-letter [ISO 639-1 language code][5]. For instance with  months and weekdays will be shown in French, for instance:
+By default, the months and days of the week are in English in the date picker (as shown in the screenshot above). You can  change this by setting the value of the lang attribute on the  element of the page. The value of the attribute two-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For instance with  months and weekdays will be shown in French, for instance:
 
 ![Localized date picker](../images/xforms-datepicker-french.png)
 
-For more on which languages are supported localized out-of-the-box, see [supported languages][7]. Note that the changing the language also changes which day of the week is shown first in the calendar: in English, Sunday is shown first; with French and Spanish, Monday is shown first.
+For more on which languages are supported localized out-of-the-box, see [supported languages](/form-runner/feature/localization.md). Note that the changing the language also changes which day of the week is shown first in the calendar: in English, Sunday is shown first; with French and Spanish, Monday is shown first.
 
 ### Date picker in scrollable area
 
@@ -205,9 +211,9 @@ If you are using the date picker in an area of your page which is scrollable (e.
 
 On iOS (iPhone, iPad, iPod touch), inputs bound to nodes of type `xs:date`, `xs:time`, or `xs:dateTime` are rendered using the iOS 5 browser native date or time widgets, which iOS users are accustomed to, and which provides a better usability, especially on the smaller screen iPhone and iPod touch.
 
-![iOS date picker][8]
+![iOS date picker](../images/xforms-ios-date.png)
 
-![iOS time picker][9]
+![iOS time picker](../images/xforms-ios-time.png)
 
 ### Limitations
 
@@ -270,9 +276,4 @@ You can also use the `xxf:sanitize` attribute on the XForms model to set a filte
 
 - Blog post: [Use HTML5 placeholders, in XForms](https://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html)
 
-[3]: ../../configuration/properties/xforms.md#navigator
-[4]: ../../configuration/properties/xforms.md#for-xf-input
-[5]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-[7]: ../../form-runner/feature/localization.html
-[8]: ../images/xforms-ios-date.png
-[9]: ../images/xforms-ios-time.png
+[3]: /configuration/properties/xforms.md#navigator
