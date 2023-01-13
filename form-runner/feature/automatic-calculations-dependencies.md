@@ -37,11 +37,11 @@ See [Renaming of controls and formulas](/form-builder/formulas.md#renaming-of-co
 
 ## Examples
 
-Consider the following grid, where the totals must appear, on one hand, on each line item row, but where the global totals are present *before* the grid.
+Consider the following grid, where the Total Total appear on each line item row:
 
 ![Grid with calculations](../images/calculations-dependencies-grid.png)
 
-Row totals are expressed with the following calculated value formula:
+Each Row Total is expressed with the following calculated value formula:
 
 ```xpath
 $units * $unit-price
@@ -49,7 +49,7 @@ $units * $unit-price
 
 ![Row totals](../images/calculations-dependencies-row-total.png)
 
-And the global totals with the following calculated value formula:
+And the Total Units and Total Price are expressed with the following calculated value formula:
 
 ```xpath
 sum($units)
@@ -61,9 +61,9 @@ and:
 sum($row-total)
 ```
 
-![Global totals](../images/calculations-dependencies-global-total.png)
+![Total price](../images/calculations-dependencies-global-total.png)
 
-Automatic calculations dependencies ensure that, even if the totals show in the form before the grid, their values update correctly as the user modifies the "Units" and "Unit Price" fields.
+Automatic calculations dependencies ensure that the totals update correctly as the user modifies the "Units" and "Unit Price" fields. This is the case whether the totals are positioned after or before the fields they depend on in the form.
 
 _NOTE: It is important to note that using *variable* is key for the dependencies to work. Using other expressions referring to form data, such as `/form/my-section/my-control`, or `//my-control`, will not work for the purpose of dependencies._
 
