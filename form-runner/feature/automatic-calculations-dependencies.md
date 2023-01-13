@@ -16,9 +16,11 @@ Orbeon Forms features a user interface option to enable and disable automatic ca
 
 In addition, for *new form definitions*, the "Automatic Calculations Dependencies" option is enabled by default starting with Orbeon Forms 2018.1.
 
-_NOTE: Existing form definitions which do not have the `xxf:analysis.calculate="true"` attribute set in the form definition source are not automatically upgraded to enable automatic calculations dependencies. You must enable dependencies explicitly in the "Form Settings" dialog._
+_NOTE: Existing form definitions which do not have the `xxf:analysis.calculate="true"` attribute set in the form definition source are not automatically upgraded to enable automatic calculations dependencies. You must enable dependencies explicitly in the "Form Settings" dialog's "Formulas" tab._
 
-![Form Options](../../form-builder/images/form-settings-form-options.png)
+![Form Options](../../form-builder/images/form-settings-formulas.png)
+
+_NOTE: Prior to Orbeon Forms 2022.1.1, this setting was under the "Form Options" tab of the "Form Settings" dialog._
 
 [SINCE Orbeon Forms 4.10]
 
