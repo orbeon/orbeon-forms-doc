@@ -12,15 +12,18 @@ Form Runner supports dependencies of calculated and initial values when the asso
 
 [SINCE Orbeon Forms 2018.1]
 
-Orbeon Forms features a user interface option to enable and disable automatic calculations dependencies in the "Form Settings" dialog.
+Orbeon Forms features a user interface option to enable and disable automatic calculations dependencies in the "Form Settings" dialog's "Formulas" tab.:
+
+- Use property: use the `oxf.xforms.analysis.calculate` property
+- Always or Never: enable or disable automatic calculation dependencies, no matter how the property is configured. 
 
 In addition, for *new form definitions*, the "Automatic Calculations Dependencies" option is enabled by default starting with Orbeon Forms 2018.1.
 
-_NOTE: Existing form definitions which do not have the `xxf:analysis.calculate="true"` attribute set in the form definition source are not automatically upgraded to enable automatic calculations dependencies. You must enable dependencies explicitly in the "Form Settings" dialog's "Formulas" tab._
+_NOTE: Existing form definitions which do not have the `xxf:analysis.calculate="true"` attribute set in the form definition source are not automatically upgraded to enable automatic calculations dependencies. You must enable dependencies explicitly in the "Form Settings" dialog._
 
 ![Form Options](../../form-builder/images/form-settings-formulas.png)
 
-_NOTE: Prior to Orbeon Forms 2022.1.1, this setting was under the "Form Options" tab of the "Form Settings" dialog._
+_NOTE: Prior to Orbeon Forms 2022.1.1, this setting was under the "Form Settings" dialog's "Form Options" tab._
 
 [SINCE Orbeon Forms 4.10]
 
