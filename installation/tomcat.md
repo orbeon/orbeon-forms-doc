@@ -4,14 +4,14 @@
 
 The following versions of Tomcat are supported:
 
-| Orbeon Forms Version | Tomcat Versions|Comment                                                                                                         |
-|----------------------|----------------|----------------------------------------------------------------------------------------------------------------|
-| 2019.2, 2020.1       | 8.5, 9         |Tomcat 10 is not backwards compatible with earlier versions, and at this point is not supported by Orbeon Forms |
-| 2019.1               | 8.5, 9         |                                                                                                                |
-| 2018.2               | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below                                                                           |
-| 2018.1               | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below                                                                           |
-| 2017.2               | 7, 8.0, 8.5, 9 |Tomcat 8.0 not recommended, see below                                                                           |
-| 2017.1               | 6, 7, 8.0, 8.5 |Tomcat 6 and 8.0 not recommended, see below                                                                     |
+| Orbeon Forms Version           | Tomcat Versions|Comment                                                                                                         |
+|--------------------------------|----------------|----------------------------------------------------------------------------------------------------------------|
+| 2019.2, 2020.1, 2021.1, 2022.1 | 8.5, 9         |Tomcat 10 is not backwards compatible with earlier versions, and at this point is not supported by Orbeon Forms |
+| 2019.1                         | 8.5, 9         |                                                                                                                |
+| 2018.2                         | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below                                                                           |
+| 2018.1                         | 8.0, 8.5, 9    |Tomcat 8.0 not recommended, see below                                                                           |
+| 2017.2                         | 7, 8.0, 8.5, 9 |Tomcat 8.0 not recommended, see below                                                                           |
+| 2017.1                         | 6, 7, 8.0, 8.5 |Tomcat 6 and 8.0 not recommended, see below                                                                     |
 
 Notes about older versions of Tomcat:
 
