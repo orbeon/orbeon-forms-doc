@@ -249,7 +249,7 @@ In addition:
 
 ### New "Dropdown with Other" control
 
-Orbeon Forms already had a "Radio butons with Other" form control. The nwe "Dropdown with Other" control is similar to the existing "Dropdown" control, but it also allows the user to enter a custom value. ([\#5172](https://github.com/orbeon/orbeon-forms/issues/5172))
+Orbeon Forms already had a "Radio buttons with Other" form control. The nwe "Dropdown with Other" control is similar to the existing "Dropdown" control, but it also allows the user to enter a custom value. ([\#5172](https://github.com/orbeon/orbeon-forms/issues/5172))
 
 ### Use of CSS grids by default
 
