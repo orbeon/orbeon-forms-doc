@@ -135,24 +135,24 @@ Class Name          |Element            |Comment   |
 
 Built-in controls and components can have extra CSS classes.
 
-Class Name          |Comment   |
-----------          |----------|
-`xforms-disabled`   | the control is not visible (non-relevant)
-`xforms-readonly`   | the control is readonly
-`xforms-type-TYPE`  | `TYPE`: `date`, `boolean`, `integer`, etc.
-`xforms-visited`    | the control has been visited by the user, i.e. tabbed out once
-`xforms-invalid`    | the control has an error level
-`xforms-warning`    | the control has a warning level
-`xforms-info`       | the control has an info level
-`xforms-required`   | the control is required
-`xforms-empty`      | the control is required and empty
-`xforms-filled`     | the control is required and filled
-`xforms-incremental`| the control is in incremental mode
-`xforms-select1-appearance-APPEARANCE`| `APPEARANCE`: `full`, etc.
-`xforms-mediatype-TYPE`               | `TYPE`: `image`, `text` etc.
-`xforms-mediatype-TYPE-SUBTYPE`       | `SUBTYPE`: `html`, etc.
-`xforms-static`     | the control is in static readonly mode
-`xforms-field`      | in static readonly mode only, outputs which look like fields [SINCE Orbeon Forms 4.5]
+| Class Name                             | Comment                                                                               |
+|----------------------------------------|---------------------------------------------------------------------------------------|
+| `xforms-disabled`                      | the control is not visible (non-relevant)                                             |
+| `xforms-readonly`                      | the control is readonly                                                               |
+| `xforms-type-TYPE`                     | `TYPE`: `date`, `boolean`, `integer`, etc.                                            |
+| `xforms-visited`                       | the control has been visited by the user, i.e. tabbed out once                        |
+| `xforms-invalid`                       | the control has an error level                                                        |
+| `xforms-warning`                       | the control has a warning level                                                       |
+| `xforms-info`                          | the control has an info level                                                         |
+| `xforms-required`                      | the control is required                                                               |
+| `xforms-empty`                         | the control is required and empty                                                     |
+| `xforms-filled`                        | the control is required and filled                                                    |
+| `xforms-incremental`                   | the control is in incremental mode                                                    |
+| `xforms-select1-appearance-APPEARANCE` | `APPEARANCE`: `full`, etc.                                                            |
+| `xforms-mediatype-TYPE`                | `TYPE`: `image`, `text` etc.                                                          |
+| `xforms-mediatype-TYPE-SUBTYPE`        | `SUBTYPE`: `html`, etc.                                                               |
+| `xforms-static`                        | the control is in static-readonly mode                                                |
+| `xforms-field`                         | in static-readonly mode only, outputs which look like fields [SINCE Orbeon Forms 4.5] |
 
 *NOTE: A data type is not present if the control is `xforms-disabled`.*
 
@@ -160,16 +160,16 @@ Class Name          |Comment   |
 
 ### Classes on other elements
 
-Class Name          |Element            |Comment   |
-----------          |----------         |----------|
-`xforms-label`      |                   | a label
-`xforms-help`       |                   | a help
-`xforms-hint`       |                   | a hint
-`xforms-alert`      |                   | an alert
-`xforms-active`     | `.xforms-alert`   | an active alert
-`xforms-items`      |                   | radio/checkbox items
-`xforms-selected`   |                   | wrapper around a selected checkbox/radio button
-`xforms-deselected` |                   | wrapper around a deselected checkbox/radio button
+| Class Name          | Element         | Comment                                             |
+|---------------------|-----------------|-----------------------------------------------------|
+| `xforms-label`      |                 | a label                                             |
+| `xforms-help`       |                 | a help                                              |
+| `xforms-hint`       |                 | a hint                                              |
+| `xforms-alert`      |                 | an alert                                            |
+| `xforms-active`     | `.xforms-alert` | an active alert                                     |
+| `xforms-items`      |                 | radio/checkbox items                                |
+| `xforms-selected`   |                 | wrapper around a selected checkbox/radio button     |
+| `xforms-deselected` |                 | wrapper around a deselected checkbox/radio button   |
 
 <!--
 ## Styling specific controls

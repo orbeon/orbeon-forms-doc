@@ -107,7 +107,7 @@ You can use an AVT in the the `class` attribute on the `<xf:itemset>` element to
 class="my-class-{position()}" 
 ```
 
-## Static readonly mode
+## Static-readonly mode
 
 When used in Form Runner's readonly modes, the control doesn't show a tree but a field with the label associated with the user selection.
 
