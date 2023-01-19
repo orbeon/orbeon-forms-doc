@@ -26,22 +26,23 @@ Here are examples of supported smart time formats:
 | Example      | Note                       |
 |--------------|----------------------------|
 | now          | current local time         |
+| 21           | equivalent to 9:00:00 pm   |
 | 3:34:56 p.m. | full time with seconds     |
 | 3:34:56 pm   | same as above              |
 | 3:34 p.m.    | equivalent to 3:34:00 p.m. |
 | 3:34 pm      | same as above              |
 | 3 p.m.       | equivalent to 3:00:00 p.m. |
 | 3 pm         | same as above              |
+| 3p           | equivalent to 3:00:00 pm   |
 | 3:34:56 a.m. | full time with seconds     |
 | 3:34:56 am   | same as above              |
 | 3:34 a.m.    | equivalent to 3:34:00 a.m. |
 | 3:34 am      | same as above              |
 | 3 a.m.       | equivalent to 3:00:00 a.m. |
 | 3 am         | same as above              |
+| 3a           | same as above              |
 | 12 a.m.      | midnight                   |
 | 12 p.m.      | noon                       |
-| 21           | equivalent to 9:00:00 pm   |
-| 3p           | equivalent to 3:00:00 pm   |
 
 ## Form Builder support
 
@@ -127,7 +128,7 @@ As usual, the property can use an app name and form name (with possible wildcard
 
 The value is in the same format as the global `oxf.xforms.format.input.time` property.
 
-By default, the `output-format` parameter is not set, and the global `oxf.xforms.format.input.time` property is used.
+By default, the `output-format` parameter is not set, and the global `oxf.xforms.format.input.time` property is used for backward compatibility.
 
 ## Output format in readonly modes
 
@@ -143,7 +144,9 @@ The default value is:
 
 [SINCE Orbeon Forms 2022.1.1]
 
-The Time components uses the `output-format` parameter to format the time in readonly modes, including `view` and `pdf`. The value of this parameter can come from the control, the form, or the global property `oxf.xforms.format.output.time`. The value is in the same format as the global `oxf.xforms.format.output.time` property.
+The Time components uses the `output-format` parameter to format the time in readonly modes, including `view` and `pdf`.
+
+This means that the `oxf.xforms.format.output.time` property is no longer used in readonly modes.
 
 ## Example usage
 

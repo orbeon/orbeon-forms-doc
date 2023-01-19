@@ -140,11 +140,11 @@ When using the date picker, you can choose whether you want 2 months to be displ
 
 ### Smart date and time format
 
-The date and time controls allow you to type a date and a time in a number of formats, as listed below. When the field loses the focus, the value you entered is parsed and, if recognized, replaced with a value in a "canonical format".
-
-You can choose what canonical format is used by changing the value of the [`oxf.xforms.format.input.date` and `oxf.xforms.format.input.time` properties](/configuration/properties/xforms.md#for-xf-input).
+The date and time controls allow you to type a date and a time in a number of formats, as listed below. When the field loses the focus, the value you entered is parsed and, if recognized, stored and then formatted according to a configurable format.
 
 For times, see [Time component](/form-runner/component/time.md).
+
+[//]: # (For dates, see [Date component]&#40;/form-runner/component/date.md&#41;.)
 
 Date formats:
 
