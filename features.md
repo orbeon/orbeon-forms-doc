@@ -190,6 +190,7 @@ As of 2016-04-19 this page is still being updated.
     - Date, time, date and time
         - date picker
         - option to exclude dates from the date picker: [doc](/form-builder/validation.md#dates-to-exclude-constraint) 
+        - time control: [doc](/form-runner/component/time.md)
     - Dropdown date
     - Fields date
 - Selection controls [doc](form-builder/toolbox.md#selection-controls)

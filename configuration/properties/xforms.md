@@ -510,10 +510,9 @@ These cause the radio buttons and checkboxes to display only the values selected
 
 ### For xf:output
 
-When an `<xf:output>` is bound to a node and that node has a type, the type influences the formatting of the value. For instance, if the node has a type
- `xs:date`, instead of being shown as "2009-03-11", the value might be shown as "Wednesday March 11, 2009".
+When an `<xf:output>` is bound to a node and that node has a type, the type influences the formatting of the value. For instance, if the node has a type `xs:date`, instead of being shown as "2009-03-11", the value might be shown as "Wednesday March 11, 2009".
 
-_NOTE: This also applies to `<xf:input>` in static readonly mode._
+_NOTE: This also applies to `<xf:input>` in readonly modes._
 
 Out of the box, Orbeon Forms formats differently values of different types. You can change how values are formatted by setting the properties below.
 The value of each property is an XPath expression executed on the node bound to the `<xf:output>`. The XPath expression is expected to return a string
@@ -539,7 +538,7 @@ Here are some examples of outputs with the default properties:
     - Wednesday January 7, 2004 04:38:35 UTC
 - `04:38:35.123`
     - `xs:time`
-    - 04:38:35 UTC
+    - 4:38:35 pm
 - `123456.789`
     - `xs:decimal`
     - 123,456.79
@@ -565,11 +564,15 @@ This means that the language that is used for the formatting is the language in 
 
 ### For xf:input
 
-As for `<xf:output>`, values shown by `<xf:input>` depend on the type of the node bound to the `<xf:input>`. In this case however the `<xf:input>` must be able
-to not only show a value coming from an instance in a text field, but also parse a new value in that format typed in by users in the text field. Because the
-`<xf:input>` is able to both format and parse values, what you can do with an `<xf:input>` is more restrictive compared to what you can do with an `<xf:output>`.
+*NOTE: With Orbeon Forms 2022.1, there is no longer support for binding `<xf:input>` to `xs:date`, `xs:time`, and `xs:dateTime` types. Instead, you should use the `<fr:date>`, `<fr:time>`, and `<fr:datetime>` controls.*
+
+When an `<xf:input>` is bound to a node and that node has a type, the type influences the formatting of the value. For instance, if the node has a type
+ `xs:date`, instead of being shown as "2009-03-11", the value might be shown as "Wednesday March 11, 2009".
+
+Like for `<xf:output>`, values shown by `<xf:input>` depend on the type of the node bound to the `<xf:input>`. In this case however the `<xf:input>` must be able to not only show a value coming from an instance in a text field, but also parse a new value in that format typed in by users in the text field. Because the `<xf:input>` is able to both format and parse values, what you can do with an `<xf:input>` is more restrictive compared to what you can do with an `<xf:output>`.
 
 You can configure formatting for `<xf:input>` with the two properties below. The value is a "mask" and follows the syntax of the Java [SimpleDateFormat][9].
+
 The following masks are supported:
 
 For dates (property `oxf.xforms.format.input.date`):
@@ -582,16 +585,7 @@ For dates (property `oxf.xforms.format.input.date`):
 | `[D]-[M]-[Y]`     | 5-11-2023  | variation with dash separator       |
 | `[M01]/[D01]/[Y]` | 11/05/2023 | force two digits for months an days | 
 
-For times (property `oxf.xforms.format.input.time`):
-
-| Format                | Example        | Description                 |
-|-----------------------|----------------|-----------------------------|
-| `[h]:[m]:[s] [P]`     | 2:05:12 p.m.   | with dots in a.m. and p.m.  |
-| `[h]:[m] [P]`         | 2:05 p.m.      | [SINCE Orbeon Forms 2020.1] | 
-| `[h]:[m]:[s] [P,2-2]` | 2:05:12 pm     | without dots in am and pm   |
-| `[h]:[m] [P,2-2]`     | 2:05 pm        | [SINCE Orbeon Forms 2020.1] |
-| `[H]:[m]:[s]`         | 14:05:12       |                             |
-| `[H]:[m]`             | 14:05          | (without seconds)           |
+For times, see [Time component](/form-runner/component/time.md) 
 
 An `<xf:input>` bound to a node of type `xs:dateTime` is shown as two text fields: one for the date and one for the time. In that case, the date text field uses the formatting defined by `oxf.xforms.format.input.date` and the time text field uses the formatting defined by `oxf.xforms.format.input.time`.
 
@@ -602,10 +596,6 @@ The format is set as follows by default, which covers, in particular, US date an
     as="xs:string"
     name="oxf.xforms.format.input.date"
     value="[M]/[D]/[Y]"/>
-<property
-    as="xs:string"
-    name="oxf.xforms.format.input.time"
-    value="[h]:[m]:[s] [P]"/>
 ```
 
 To change to a European style days-first format for the date and a 24-hour time, you can set the following:
@@ -615,10 +605,6 @@ To change to a European style days-first format for the date and a 24-hour time,
     as="xs:string"
     name="oxf.xforms.format.input.date"
     value="[D]/[M]/[Y]"/>
-<property
-    as="xs:string"
-    name="oxf.xforms.format.input.time"
-    value="[H]:[m]:[s]"/>
 ```
 
 ##  Error handling
