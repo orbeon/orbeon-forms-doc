@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Form Builder form area is meant to looks as much as possible like the published form. [^1] 
+The Form Builder form area is meant to look as much as possible like the published form. 
 
 Form Builder is built around as simple layout concept: _sections_ and _grids_. This is a good alternative to:
 

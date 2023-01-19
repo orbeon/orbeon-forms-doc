@@ -151,6 +151,7 @@ See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-
 
 - **Calculations in readonly modes (Review, PDF)**:
    - Use property: use the [`oxf.fr.detail.readonly.disable-calculate` property](/configuration/properties/form-runner-detail-page.md#calculations-in-readonly-modes)
+       - the property defaults to `false`, which means that Calculated Value formulas run in readonly modes
    - Enable: Calculated Value formulas run in readonly modes.
    - Disable: Calculated Value formulas do not run in readonly modes.
 

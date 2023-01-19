@@ -140,11 +140,11 @@ The controls appear like this at design time:
 
 ![](images/utility-controls.png)
 
-| Name | Description |
-| --- | --- |
-| **Explanatory Text** | Explanatory text which does not capture a value ([blog post](https://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html)) |
+| Name                 | Description                                                                                                                                                                                         |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Explanatory Text** | Explanatory text which does not capture a value ([blog post](https://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html))                                                           |
 | **Calculated Value** | Like most other controls, this control has a label and hint, but unlike most controls it is not used to enter a value. Instead, it just *shows* a value, either fixed or calculated with a formula. |
-| **Hidden Field** | This control supports most features of regular controls, but doesn't show in the form at runtime. See [Hidden field component](/form-runner/component/hidden.md). |
+| **Hidden Field**     | This control supports most features of regular controls, but doesn't show in the form at runtime. See [Hidden field component](/form-runner/component/hidden.md).                                   |
 
 ### Typed Controls
 
