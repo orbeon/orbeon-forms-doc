@@ -108,19 +108,19 @@ When the global property includes `minimal`, it is possible to override the appe
 
 ## Appearance based on type and appearance
 
-The way the XForms input control is be rendered on the page depends on the type of the node it is bound to, and possibly the control's appearance:
+The way the XForms input control is rendered on the page depends on the type of the node it is bound to, and possibly the control's appearance:
 
-| Type          | Appearance          | Description |
-| ------------- | ------------------- | ----------- |
-| `xs:string`   |                     | standard input field |
-| `xs:string`   | `character-counter` | input field with [character counter](../../form-runner/component/character-counter.md) |
-| `xs:boolean`  |                     | single checkbox |
-| `xs:date`     |                     | input field with date picker and date parsing and formatting |
-| `xs:date`     | `dropdowns`         | maps to `fr:dropdown-date` |
-| `xs:date`     | `fields`            | maps to `fr:fields-date` |
-| `xs:date`     | `minimal`           | icon with date picker without an input field |
-| `xs:time`     |                     | input field with time parsing and formatting |
-| `xs:dateTime` |                     | combined date and time fields |
+| Type          | Appearance          | Description                                                                       |
+|---------------|---------------------|-----------------------------------------------------------------------------------|
+| `xs:string`   |                     | standard input field                                                              |
+| `xs:string`   | `character-counter` | input field with [character counter](/form-runner/component/character-counter.md) |
+| `xs:boolean`  |                     | single checkbox                                                                   |
+| `xs:date`     |                     | input field with date picker and date parsing and formatting                      |
+| `xs:date`     | `dropdowns`         | maps to `fr:dropdown-date`                                                        |
+| `xs:date`     | `fields`            | maps to `fr:fields-date`                                                          |
+| `xs:date`     | `minimal`           | icon with date picker without an input field                                      |
+| `xs:time`     |                     | input field with time parsing and formatting                                      |
+| `xs:dateTime` |                     | combined date and time fields                                                     |
 
 ![Boolean input](../images/xforms-input-boolean.png)
 
@@ -140,30 +140,11 @@ When using the date picker, you can choose whether you want 2 months to be displ
 
 ### Smart date and time format
 
-The date and time fields allow you to type a date and a time in a number of formats, as listed below. When the field looses the focus, the value you entered is parsed and, if recognized, replaced with a value in a "canonical format".
+The date and time controls allow you to type a date and a time in a number of formats, as listed below. When the field loses the focus, the value you entered is parsed and, if recognized, replaced with a value in a "canonical format".
 
 You can choose what canonical format is used by changing the value of the [`oxf.xforms.format.input.date` and `oxf.xforms.format.input.time` properties](/configuration/properties/xforms.md#for-xf-input).
 
-Supported time formats:
-
-| Example       | Note                       |
-|---------------|----------------------------|
-| now           | current local time         |
-| 3:34:56 p.m.  | full time with seconds     |
-| 3:34:56 pm    | same as above              |
-| 3:34 p.m.     | equivalent to 3:34:00 p.m. |
-| 3:34 pm       | same as above              |
-| 3 p.m.        | equivalent to 3:00:00 p.m. |
-| 3 pm          | same as above              |
-| 3:34:56 a.m.  | full time with seconds     |
-| 3:34:56 am    | same as above              |
-| 3:34 a.m.     | equivalent to 3:34:00 a.m. |
-| 3:34 am       | same as above              |
-| 3 a.m.        | equivalent to 3:00:00 a.m. |
-| 3 am          | same as above              |
-| 12 a.m.       | midnight                   |
-| 12 p.m.       | noon                       |
-| 21            | equivalent to 9:00:00 pm   |
+For times, see [Time component](/form-runner/component/time.md).
 
 Date formats:
 
@@ -186,7 +167,7 @@ In the table above, the "US format" applies the `oxf.xforms.format.input.date`  
 
 ### Two digits years
 
-If you type in a date field a year with only two digits (say 5/20/10), the control will assume that you intended to type a year in the twentieth or twenty first century, rather than a year in the first century. It will convert the two-digit year you typed into a four digits year by taking the corresponding year in either the twentieth or twenty first century based on which one is closest to the current year. So for instance, if the current year is 2020:
+If you type in a date field a year with only two digits (say 5/20/10), the control will assume that you intended to type a year in the twentieth or twenty-first century, rather than a year in the first century. It will convert the two-digit year you typed into a four digits year by taking the corresponding year in either the twentieth or twenty first century based on which one is closest to the current year. So for instance, if the current year is 2020:
 
 * 10 is changed to 2010
 * 80 is changed to 1980

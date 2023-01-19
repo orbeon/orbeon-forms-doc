@@ -585,7 +585,7 @@ For dates (property `oxf.xforms.format.input.date`):
 | `[D]-[M]-[Y]`     | 5-11-2023  | variation with dash separator       |
 | `[M01]/[D01]/[Y]` | 11/05/2023 | force two digits for months an days | 
 
-For times, see [Time component](/form-runner/component/time.md) 
+For times, see [Time component](/form-runner/component/time.md). 
 
 An `<xf:input>` bound to a node of type `xs:dateTime` is shown as two text fields: one for the date and one for the time. In that case, the date text field uses the formatting defined by `oxf.xforms.format.input.date` and the time text field uses the formatting defined by `oxf.xforms.format.input.time`.
 

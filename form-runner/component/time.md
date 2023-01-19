@@ -19,6 +19,30 @@ The Time component allows the user to enter a time of day. The component has two
 
 The time is a local time, which does not contain a timezone, and stored in the data in ISO Format (`HH:mm:ss`).
 
+With smart input, when the field loses the focus, the value you entered is parsed and, if recognized, replaced with a value in a canonical format.
+
+Here are examples of supported smart time formats:
+
+| Example      | Note                       |
+|--------------|----------------------------|
+| now          | current local time         |
+| 3:34:56 p.m. | full time with seconds     |
+| 3:34:56 pm   | same as above              |
+| 3:34 p.m.    | equivalent to 3:34:00 p.m. |
+| 3:34 pm      | same as above              |
+| 3 p.m.       | equivalent to 3:00:00 p.m. |
+| 3 pm         | same as above              |
+| 3:34:56 a.m. | full time with seconds     |
+| 3:34:56 am   | same as above              |
+| 3:34 a.m.    | equivalent to 3:34:00 a.m. |
+| 3:34 am      | same as above              |
+| 3 a.m.       | equivalent to 3:00:00 a.m. |
+| 3 am         | same as above              |
+| 12 a.m.      | midnight                   |
+| 12 p.m.      | noon                       |
+| 21           | equivalent to 9:00:00 pm   |
+| 3p           | equivalent to 3:00:00 pm   |
+
 ## Form Builder support
 
 The Time component is directly accessible from the Form Builder toolbox.
