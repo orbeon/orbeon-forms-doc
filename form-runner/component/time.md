@@ -161,7 +161,7 @@ This means that the `oxf.xforms.format.output.time` property is no longer used i
 </fr:time>
 ```
 
-[//]: # (## See also)
+## See also
 
-[//]: # ()
-[//]: # (- Blog post: xxx)
+- [Date component](date.md)
+- Blog post: [Time form control improvements(https://blog.orbeon.com/2023/01/time-form-control-improvements.html)
