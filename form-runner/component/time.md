@@ -10,6 +10,12 @@ Prior to that, Form Builder was using `<xf:input>` bound to an `xs:time` type.
 
 There is no more support for `<xf:input>` bound to an `xs:time` type. Use this component directly instead.
 
+## Appearance
+
+![Regular appearance](images/xbl-time-controls.png)
+
+![Readonly modes appearance](images/xbl-time-controls-readonly.png)
+
 ## What it does
 
 The Time component allows the user to enter a time of day. The component has two major features:
