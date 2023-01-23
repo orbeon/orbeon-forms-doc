@@ -320,6 +320,7 @@
     * [Contributor License Agreement](contributors/cla.md)
 * Release notes
     * [Orbeon Forms 2022.1](/release-notes/orbeon-forms-2022.1.md)
+    * [Orbeon Forms 2021.1.7](/release-notes/orbeon-forms-2021.1.7.md)
     * [Orbeon Forms 2021.1.6](/release-notes/orbeon-forms-2021.1.6.md)
     * [Orbeon Forms 2021.1.5](/release-notes/orbeon-forms-2021.1.5.md)
     * [Orbeon Forms 2021.1.4](/release-notes/orbeon-forms-2021.1.4.md)
