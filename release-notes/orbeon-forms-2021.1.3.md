@@ -2,7 +2,7 @@
 
 __Wednesday, April 27, 2022__
 
-Today we released Orbeon Forms 2021.1.3 PE! This release introduces bug-fixes and accessibility enhancements and is recommended for all users of:
+Today we released Orbeon Forms 2021.1.3 PE! This maintenance release introduces bug-fixes and accessibility enhancements and is recommended for all users of:
 
 - [Orbeon Forms 2021.1.2 PE](orbeon-forms-2021.1.2.md)
 - [Orbeon Forms 2021.1.1 PE](orbeon-forms-2021.1.1.md)

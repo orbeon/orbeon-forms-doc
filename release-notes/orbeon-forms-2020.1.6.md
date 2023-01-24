@@ -2,7 +2,7 @@
 
 __Friday, December 17, 2021__
 
-Today we released Orbeon Forms 2020.1.6 PE. This update contains security updates and bug-fixes and is recommended for all users of:
+Today we released Orbeon Forms 2020.1.6 PE. This maintenance release contains security updates and bug-fixes and is recommended for all users of:
 
 - [Orbeon Forms 2020.1.5 PE](orbeon-forms-2020.1.5.md)
 - [Orbeon Forms 2020.1.4 PE](orbeon-forms-2020.1.4.md)

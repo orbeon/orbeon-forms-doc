@@ -2,7 +2,7 @@
 
 __Friday, February 28, 2020__
 
-Today we released Orbeon Forms 2019.2.1 PE. This update contains bug-fixes and is recommended for all users of:
+Today we released Orbeon Forms 2019.2.1 PE. This maintenance release contains bug-fixes and is recommended for all users of:
 
 - [Orbeon Forms 2019.2 PE](orbeon-forms-2019.2.md)
 

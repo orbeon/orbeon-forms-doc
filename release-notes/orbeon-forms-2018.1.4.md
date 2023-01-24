@@ -2,7 +2,7 @@
 
 __Friday, December 17, 2021__
 
-Today we released Orbeon Forms 2018.1.4 PE. This update contains security updates and bug-fixes and is recommended for all users of:
+Today we released Orbeon Forms 2018.1.4 PE. This maintenance release contains security updates and bug-fixes and is recommended for all users of:
 
 - [Orbeon Forms 2018.1.3 PE](https://blog.orbeon.com/2018/11/orbeon-forms-201813-pe.html)
 - [Orbeon Forms 2018.1.2 PE](https://blog.orbeon.com/2018/10/orbeon-forms-201812-pe.html)
