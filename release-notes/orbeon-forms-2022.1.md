@@ -344,6 +344,12 @@ Although we do not recommend it, it is possible to change the default back to HT
     value="html-table"/>
 ```
 
+### "Show in email subject" no longer supported
+
+The ability to mark a field as "Show in email subject", as highlighted in the screenshot below, taken from Orbeon Forms 2021.1, is no longer supported. Instead, you can specify what the subject of the email should be in the Email Settings dialog, and use template parameters to add the value of fields to the subject of the email.
+
+![Show in email subject](images/email-show-in-email-subject.png)
+
 ### User information when calling Orbeon Forms service APIs
 
 If, with earlier versions of Orbeon Forms, you were calling service APIs and passing headers, they had to match the headers configured with the header-driven method. Starting Orbeon Forms 2022.1, the headers can only be the `Orbeon-*` headers.
