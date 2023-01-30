@@ -348,7 +348,7 @@ Although we do not recommend it, it is possible to change the default back to HT
 
 The ability to mark a field as "Show in email subject", as highlighted in the screenshot below, taken from Orbeon Forms 2021.1, is no longer supported. Instead, you can specify what the subject of the email should be in the Email Settings dialog, and use template parameters to add the value of fields to the subject of the email.
 
-![Show in email subject](images/email-show-in-email-subject.png)
+![Show in email subject from Orbeon Forms 2021.1](images/email-show-in-email-subject.png)
 
 ### User information when calling Orbeon Forms service APIs
 
