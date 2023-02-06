@@ -89,11 +89,11 @@ So Orbeon Forms implements the following heuristic in cases where the whole fiel
 
 ## Font embedding in automatic mode
 
-See [Automatic PDF](/form-builder/pdf-automatic.md).
+See [Automatic PDF](/form-runner/feature/pdf-automatic.md).
 
 ## Font embedding in template mode
 
-See [PDF templates](/form-builder/pdf-templates.md).
+See [PDF templates](/form-runner/feature/pdf-templates.md).
 
 ## Disabling the PDF button when form is invalid
 

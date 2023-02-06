@@ -108,4 +108,4 @@ This applies to `edit`, `view`, `pdf`, and `tiff` modes.
 
 - [Multitenancy](/form-runner/feature/multitenancy.md)
 - [Sending PDF and TIFF content: Controlling the format](../advanced/buttons-and-processes/actions-form-runner-send.md)
-- [PDF templates](../../form-builder/pdf-templates.md)
+- [PDF templates](/form-runner/feature/pdf-templates.md)

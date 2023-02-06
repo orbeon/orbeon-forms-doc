@@ -138,9 +138,9 @@ As of 2016-04-19 this page is still being updated.
 - Buttons and Processes: [doc](form-runner/advanced/buttons-and-processes/README.md), [blog post](https://blog.orbeon.com/2013/04/more-powerful-buttons.html)
 - Autosave: [doc](form-runner/persistence/autosave.md), [blog post](https://blog.orbeon.com/2013/10/autosave.html)
 - PDF
-    - Production: [doc](form-builder/pdf-production.md)
+    - Production: [doc](form-runner/feature/pdf-production.md)
         - Automatic
-        - Template-based: [doc](form-builder/pdf-templates.md)
+        - Template-based: [doc](form-runner/feature/pdf-templates.md)
             - multiple PDF templates
     - Automatic highlighting of links [blog post](https://blog.orbeon.com/2015/04/automatic-web-links-in-pdf-files.html)
     - Customizable file name: [doc](configuration/properties/form-runner/form-runner-detail-page.md#custom-pdf-filename)

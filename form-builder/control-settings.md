@@ -114,7 +114,7 @@ Or:
 
 This informational field shows the name of the field to use when using a PDF template.
 
-See also [PDF templates](/form-builder/pdf-templates.md).
+See also [PDF templates](/form-runner/feature/pdf-templates.md).
 
 #### Custom CSS classes
 

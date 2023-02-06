@@ -411,7 +411,7 @@ This example shows a dropdown menu which lists the templates with a name:
 </xf:select1>
 ```
 
-See also [PDF templates](../../form-builder/pdf-templates.md).
+See also [PDF templates](/form-runner/feature/pdf-templates.md).
 
 ### fr:run-process()
 

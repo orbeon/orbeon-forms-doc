@@ -2,7 +2,7 @@
 
 ## Context
 
-Form Runner has two modes of [PDF production](../../form-builder/pdf-production.md). When using the automatic mode, the PDF is produced from HTML and CSS using the Flying Saucer PDF library.
+Form Runner has two modes of [PDF production](/form-runner/feature/pdf-production.md). When using the automatic mode, the PDF is produced from HTML and CSS using the Flying Saucer PDF library.
 
 It is sometimes desirable to modify the appearance of the PDF produced. This typically involves adding custom CSS. The CSS has an effect on the PDF output very much like CSS has an effect on the HTML which appears in your web browser.
 

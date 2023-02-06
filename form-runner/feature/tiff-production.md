@@ -4,8 +4,7 @@
 
 ## Introduction
 
-PDF files, whether produced automatically or via a [PDF template](../../form-builder/pdf-templates.md), can
-be converted to TIFF image files for download or email.
+PDF files, whether produced automatically or via a [PDF template](/form-runner/feature/pdf-templates.md), can be converted to TIFF image files for download or email.
 
 ## Availability
 

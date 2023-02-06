@@ -272,7 +272,7 @@ following:
         - The PDF template with the current form language is used, if there is a match.
         - If there is no match, the first available PDF template is used.
         
-See also [PDF templates](../../../form-builder/pdf-templates.md)
+See also [PDF templates](/form-runner/feature/pdf-templates.md)
 
 ### Sending a PDF binary
 
@@ -496,4 +496,4 @@ The easiest ways are probably options 1 and 2 above.
 
 - [Form Runner actions](actions-form-runner.md)
 - [Form Runner save action](actions-form-runner-save.md)
-- [PDF templates](/form-builder/pdf-templates.md)
+- [PDF templates](/form-runner/feature/pdf-templates.md)
