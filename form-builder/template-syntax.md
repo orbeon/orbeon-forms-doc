@@ -4,7 +4,7 @@
 
 [SINCE Orbeon Forms 2018.1]
 
-Templates, as of Orbeon Forms 2018.1, apply to:
+Templates apply to:
 
 - Email Settings
     - Subject
@@ -13,7 +13,7 @@ Templates, as of Orbeon Forms 2018.1, apply to:
     - Label
     - Hint
     - Help Message
-    - Explanatory Text [SINCE Orbeon Forms 2019.1] 
+    - Explanatory Text [SINCE Orbeon Forms 2019.1]
 
 ## Templates
 
@@ -53,7 +53,12 @@ The following options are available for each template parameter:
             - Link to the "new" page
             - Link to the "summary" page
             - Link to the "home" page
-            - Link to the PDF file 
+            - Link to the PDF file
+    - __Automatic PDF only__ [SINCE Orbeon Forms 2023.1]
+        - Image (form logo by default)
+        - Form title
+        - Page number
+        - Page count
 
 *NOTE: For the email subject and body, an XPath expression runs in the context of the form data's root element. However, the [Form Runner function library](/xforms/xpath/extension-form-runner.md) is not yet available to expressions as of Orbeon Forms 2018.1. For labels, hints and help messages, the Form Runner function library is available.*
 

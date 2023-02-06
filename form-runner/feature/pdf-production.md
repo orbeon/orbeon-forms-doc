@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Form Builder and Form Runner can produce PDF output in two ways:
+Orbeon Forms can produce PDF output in two ways:
 
 - __Automatically__
     - The PDF is produced based on the appearance of the form in your web browser. This is similar to printing a read-only version of your form.
@@ -40,11 +40,11 @@ Example for the Summary Page:
 </property>
 ```
 
-See also [Predefined buttons](../form-runner/advanced/buttons-and-processes/README.md#predefined buttons).
+See also [Predefined buttons](/form-runner/advanced/buttons-and-processes/README.md#predefined buttons).
 
 ### Sending
 
-You can *send* the URL of a PDF file using the `content = "pdf-url"` parameter. See [Sending a PDF URL](../form-runner/advanced/buttons-and-processes/actions-form-runner.md#sending-a-pdf-url).
+You can *send* the URL of a PDF file using the `content = "pdf-url"` parameter. See [Sending a PDF URL](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#sending-a-pdf-url).
 
 ### Email
 
@@ -63,7 +63,7 @@ See also [Email properties](../configuration/properties/form-runner.md#email-set
 
 [SINCE Orbeon Forms 2016.1]
 
-PDF files can be converted to TIFF images. See [TIFF Production](../form-runner/feature/tiff-production.md).
+PDF files can be converted to TIFF images. See [TIFF Production](/form-runner/feature/tiff-production.md).
 
 ## Third-party software requirements
 
@@ -79,5 +79,8 @@ If you wish to create or update PDF files for [PDF templates](pdf-templates.md),
 
 - [Automatic PDF](pdf-automatic.md)
 - [PDF templates](pdf-templates.md)
-- [Testing PDF production](pdf-test.md)
+- [PDF configuration properties](/configuration/properties/form-runner-pdf.md)
+- [Testing PDF production](/form-builder/pdf-test.md)
 - [TIFF Production](/form-runner/feature/tiff-production.md)
+- [Sending PDF and TIFF content: Controlling the format](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)
+- Blog post: [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)

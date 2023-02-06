@@ -147,6 +147,8 @@ In template mode, fonts can be specified to provide glyphs which are not present
 
 - [PDF Production](pdf-production.md)
 - [Automatic PDF](pdf-automatic.md)
-- [Testing PDF production](pdf-test.md)
-- [TIFF Production](../form-runner/feature/tiff-production.md)
-- [Sending PDF and TIFF content: Controlling the format](../form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)
+- [PDF configuration properties](/configuration/properties/form-runner-pdf.md)
+- [Testing PDF production](/form-builder/pdf-test.md)
+- [TIFF Production](/form-runner/feature/tiff-production.md)
+- [Sending PDF and TIFF content: Controlling the format](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)
+- Blog post: [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
