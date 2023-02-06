@@ -1,7 +1,5 @@
 # TIFF Production
 
-
-
 ## Introduction
 
 PDF files, whether produced automatically or via a [PDF template](/form-runner/feature/pdf-templates.md), can be converted to TIFF image files for download or email.
@@ -119,4 +117,7 @@ You can *email* the TIFF file using the following property:
     value="true"/>
 ```
 
-See also [Email properties](../../configuration/properties/form-runner.md#email-settings).
+## See also
+
+- [PDF Production](/form-runner/feature/pdf-production.md)
+- [Email properties](/configuration/properties/form-runner.md#email-settings)
