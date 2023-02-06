@@ -4,6 +4,8 @@
 
 The PDF is produced based on the appearance of the form in your web browser. This is similar to printing a read-only version of your form. As a form author, you do not need to take any action to enable this mode. In addition, a header and footer is provided by default.
 
+[//]: # (TODO: Add a screenshot.)
+
 ## Header and footer configuration
 
 ### Introduction
@@ -14,6 +16,8 @@ By default, Form Runner produces automatic PDF files with the following header a
 
 - Header: Form Runner logo, form title
 - Footer: Form title, page number
+
+[//]: # (TODO: Add a screenshot.)
 
 Starting Orbeon Forms 2023.1, header and footers are entirely configurable and you can control exactly what is shown in all six header or footer positions:
 
@@ -106,8 +110,8 @@ The following is an example of custom configuration that updates the default con
       },
       "parameters": {
         "current-dateTime": {
-          "type": "expression",
-          "expression": "format-dateTime(current-dateTime(), '[D]/[M]/[Y] [h]:[m]:[s] [P,*-2]', xxf:lang(), (), ())"
+          "type": "formula",
+          "value": "format-dateTime(current-dateTime(), '[D]/[M]/[Y] [h]:[m]:[s] [P,*-2]', xxf:lang(), (), ())"
         }
       }
     }
@@ -155,7 +159,7 @@ The `"parameters"` property is a JSON object with the following properties:
 - each property name represents a unique parameter name
 - each property value is a JSON object with the following properties:
     - `"type"`: the type of parameter, one of:
-        - `"expression"`: the parameter value is an XPath expression (with the required `"expression"` parameter)
+        - `"formula"`: the parameter value is a formula (XPath expression) (with the required `"value"` parameter)
         - `"control-value"`: the parameter value is the value of a control (with the required `"control-name"` parameter)
         - `"form-title"`: show the form title (no additional parameters)
         - `"image"`: show an image (the form logo, no additional parameters)
@@ -170,7 +174,7 @@ The `"parameters"` property is a JSON object with the following properties:
             - `"link-to-forms-page"`
             - `"link-to-admin-page"`
             - `"link-to-pdf"` 
-    - `"expression"`: the required XPath expression to evaluate, if the type is `"expression"`
+    - `"value"`: the required formula (XPath expression) to evaluate, if the type is `"formula"`
     - `"control-name"`: the required name of the control to use, if the type is `"control-value"`
     - `"format"`: the optional format to use, if the type is `"page-count"` or `"page-number"`
         - defaults to `"decimal"` 
