@@ -1,5 +1,19 @@
 # PDF configuration properties
 
+## Header and footer configuration
+
+[SINCE Orbeon Forms 2023.1]
+
+The following property controls the header and footer configuration for automatic PDF files. The property is in JSON format. For details, see [Header and footer configuration](/form-runner/feature/pdf-automatic.md#header-and-footer-configuration).
+
+```xml
+<property as="xs:string" name="oxf.fr.detail.pdf.header-footer.*.*">
+    {
+      ...
+    }
+</property>
+```
+
 ## Custom PDF filename
 
 [SINCE Orbeon Forms 4.9]
@@ -24,7 +38,24 @@ Example:
     value="//customer-id"/>
 ```
 
-If the form contains a `customer-id` field, the PDF filename will be the value of that field followed by `.pdf`. If the field is blank, the default, random id filename is used, as if the property had not been specified. 
+If the form contains a `customer-id` field, the PDF filename will be the value of that field followed by `.pdf`. If the field is blank, the default, random id filename is used, as if the property had not been specified.
+
+[SINCE Orbeon Forms 2022.1 and 2021.1.5]
+
+The property has the following default:
+
+```xml
+<property as="xs:string" name="oxf.fr.detail.pdf.filename.*.*">
+    concat(
+        fr:form-title(),
+        ' - ',
+        substring(fr:document-id(), 1, 16),
+        '.pdf'
+    )
+</property>
+```
+
+A similar default is present for other types of exports (TIFF, Excel, XML, etc.). 
 
 ## Hyperlinks in automatic mode
 

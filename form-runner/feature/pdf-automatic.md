@@ -147,6 +147,7 @@ Each position configuration is:
 
 - `"none"`: the position is blank
 - `"inherit"`: the position is the same as the default
+    - this is the same behavior if the position is not specified, but it is more explicit 
 - a JSON object with the following properties:
     - `"values"`: a JSON object with the following properties:
         - each property name represents a language code
