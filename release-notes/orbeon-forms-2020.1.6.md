@@ -41,6 +41,6 @@ UPDATES:
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
-Please send feedback via [Twitter](https://twitter.com/orbeon) or the [forum](https://www.orbeon.com/community).
+Please send feedback via [Twitter](https://twitter.com/orbeon), [Mastodon](https://mastodon.social/@orbeon), or the [forum](https://www.orbeon.com/community).
 
 We hope you enjoy this release!
