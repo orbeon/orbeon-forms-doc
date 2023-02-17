@@ -20,12 +20,11 @@ This release also addresses the following issues since [Orbeon Forms 2022.1 PE](
     - Error migrating email templates in customer form ([\#5597](https://github.com/orbeon/orbeon-forms/issues/5597))
     - Email attachments are missing when `oxf.fr.email.attach-files.*.*` is set to `selected` ([\#5603](https://github.com/orbeon/orbeon-forms/issues/5603))
     - New email dialog: email body cleared when changing attached files in dialog ([\#5602](https://github.com/orbeon/orbeon-forms/issues/5602))
+- Performance improvements
+    - `unload` handler disables bfcache ([\#5643](https://github.com/orbeon/orbeon-forms/issues/5643))
 - Offline mode fixes
     - Companion classes don't work in offline mode ([\#5635](https://github.com/orbeon/orbeon-forms/issues/5635))
     - Offline: can't return JSON from `SubmissionProvider` ([\#5636](https://github.com/orbeon/orbeon-forms/issues/5636))
-- Other fixes
-    - JavaScript error when login page detected ([\#5638](https://github.com/orbeon/orbeon-forms/issues/5638))
-    - Actions in section template only using fields with a `.` are not running ([\#5648](https://github.com/orbeon/orbeon-forms/issues/5648))
 - UI fixes
     - Radio/checkbox alignment relative to Single Checkbox ([\#5640](https://github.com/orbeon/orbeon-forms/issues/5640))
     - Make settings dialog more compact ([\#5607](https://github.com/orbeon/orbeon-forms/issues/5607))
@@ -35,9 +34,13 @@ This release also addresses the following issues since [Orbeon Forms 2022.1 PE](
     - Not enough padding at top of offline test ([\#5601](https://github.com/orbeon/orbeon-forms/issues/5601))
     - Readonly fields background remains white ([\#5600](https://github.com/orbeon/orbeon-forms/issues/5600))
     - Orbeon logo is low-resolution ([\#5594](https://github.com/orbeon/orbeon-forms/issues/5594))
-- Performance improvements
-    - `unload` handler disables bfcache ([\#5643](https://github.com/orbeon/orbeon-forms/issues/5643)) 
+    - Incorrect simplified repeated grid border between iterations ([\#5685](https://github.com/orbeon/orbeon-forms/issues/5685))
+    - Error Summary: long error message doesn' wrap ([\#5681](https://github.com/orbeon/orbeon-forms/issues/5681))
 - Other fixes
+    - JavaScript error when login page detected ([\#5638](https://github.com/orbeon/orbeon-forms/issues/5638))
+    - Actions in section template only using fields with a `.` are not running ([\#5648](https://github.com/orbeon/orbeon-forms/issues/5648))
+    - Error Summary doesn't update error with nested repeats ([\#5682](https://github.com/orbeon/orbeon-forms/issues/5682))
+    - Localize static dropdown in Chinese ([\#5680](https://github.com/orbeon/orbeon-forms/issues/5680))
     - Improve handling of time without seconds ([\#5630](https://github.com/orbeon/orbeon-forms/issues/5630)) 
     - Result dialog: support AVT in resource ([\#5598](https://github.com/orbeon/orbeon-forms/issues/5598)) 
     - `fr:component-param-value()`: add `componentId` parameter ([\#5639](https://github.com/orbeon/orbeon-forms/issues/5639))
