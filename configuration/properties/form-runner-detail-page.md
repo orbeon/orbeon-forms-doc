@@ -103,24 +103,24 @@ oxf.fr.detail.button.BUTTON.visible.*.*
 oxf.fr.detail.button.BUTTON.enabled.*.*
 ```
 
-The value of these properties is an XPath expression. For example the following properties hide, show, and disable buttons depending on whether the wizard shows its table of contents or its body:
+The value of these properties is an XPath expression. For example the following properties hide, show, and disable buttons depending on whether the wizard shows its table of contents or its body (as of Orbeon Forms 2022.1):
 
 ```xml
-<property as="xs:string"  name="oxf.fr.detail.button.wizard-next.visible.*.*">
-    fr:is-wizard-body-shown()
-</property>
-
-<property as="xs:string"  name="oxf.fr.detail.button.wizard-prev.visible.*.*">
-    fr:is-wizard-body-shown()
-</property>
-
-<property as="xs:string"  name="oxf.fr.detail.button.wizard-toc.visible.*.*">
-    fr:is-wizard-body-shown()
-</property>
-
-<property as="xs:string"  name="oxf.fr.detail.button.save-final.enabled.*.*">
-    fr:is-wizard-toc-shown()
-</property>
+  <property as="xs:string"  name="oxf.fr.detail.button.wizard-prev.visible.*.*"               >
+      fr:owns-lease-or-none-required() and fr:is-wizard-body-shown()
+  </property>
+  <property as="xs:string"  name="oxf.fr.detail.button.wizard-prev.enabled.*.*">
+      not(fr:is-wizard-first-page())
+  </property>
+  <property as="xs:string"  name="oxf.fr.detail.button.wizard-next.visible.*.*">
+      fr:owns-lease-or-none-required() and fr:is-wizard-body-shown()
+  </property>
+  <property as="xs:string"  name="oxf.fr.detail.button.wizard-next.enabled.*.*">
+      not(fr:is-wizard-last-page())
+  </property>
+  <property as="xs:string"  name="oxf.fr.detail.button.wizard-toc.visible.*.*">
+      fr:owns-lease-or-none-required() and fr:is-wizard-separate-toc() and fr:is-wizard-body-shown()
+  </property>
 ```
 
 You can access control values in the data in one of two ways, where `foo` is the name of the control:
@@ -292,7 +292,7 @@ The following properties determine which control types are focusable in in the f
 - switching sections in the table of contents
 - switching sections in the wizard table of contents or navigation
 - clearing the form data with the "Clear" button
-- moving, inserting, or deleting iterations in repeated grids and sections
+- moving, inserting, or deleting repetitions in repeated grids and sections
 
 ```xml
 <property

@@ -124,6 +124,8 @@ Attribute|Mandatory|Value|Comment
 - `view`
 - `pdf`
 
+xxx link to new modes page with explanations
+
 ### Events supported
 
 Controls:

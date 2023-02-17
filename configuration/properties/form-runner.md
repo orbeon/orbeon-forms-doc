@@ -23,6 +23,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.detail.buttons.inner`
     * `oxf.xforms.xbl.fr.wizard.validate`
     * `oxf.xforms.xbl.fr.wizard.separate-toc`
+    * `oxf.xforms.xbl.fr.wizard.section-status`
     * `oxf.xforms.xbl.fr.wizard.subsections-nav`
     * `oxf.xforms.xbl.fr.wizard.subsections-toc`
 * [Autosave](../../form-runner/persistence/autosave.md)
@@ -314,7 +315,7 @@ See also the [`appearance`](/form-runner/component/grid.md#repeated-mode) attrib
 
 [SINCE Orbeon Forms 2016.2]
 
-The following property allows you to select where new iterations are added when using the "Add Another" or "+" button. Allowed values are `index` (default for the `full` appearance) and `bottom` (default for the `minimal` appearance):
+The following property allows you to select where new repetitions are added when using the "Add Another" or "+" button. Allowed values are `index` (default for the `full` appearance) and `bottom` (default for the `minimal` appearance):
 
 ```xml
 <property
@@ -329,7 +330,7 @@ See also the [`insert`](/form-runner/component/section.md#repeated-mode) attribu
 
 [SINCE Orbeon Forms 2016.2]
 
-The following property allows you to select where new iterations are added when using the "Add Another" or "+" button. Allowed values are `index` (default for the `full` appearance) and `bottom` (default for the `minimal` appearance):
+The following property allows you to select where new repetitions are added when using the "Add Another" or "+" button. Allowed values are `index` (default for the `full` appearance) and `bottom` (default for the `minimal` appearance):
 
 ```xml
 <property

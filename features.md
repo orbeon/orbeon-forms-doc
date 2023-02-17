@@ -26,9 +26,9 @@ As of 2016-04-19 this page is still being updated.
     - Repeat settings: [doc](form-builder/container-settings.md)
     - Repeated grids: [doc](form-builder/repeated-grids.md), [older blog post](https://blog.orbeon.com/2012/04/support-for-repeats-lands-in-form.html)
     - Repeated sections: [blog post](https://blog.orbeon.com/2014/01/repeated-sections.html)
-    - Options for new repeat iterations: [blog post](https://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
+    - Options for new repeat repetitions: [blog post](https://blog.orbeon.com/2015/10/repeated-grids-and-sections-just-got.html)
     - Minimal appearances of repeated grids and sections: [blog post](https://blog.orbeon.com/2015/12/leaner-repeated-sections-and-grids.html)
-    - Frozen iterations
+    - Frozen repetitions
 - Section Templates:
     - main feature: [doc](form-builder/section-templates.md)
     - merging: [doc](form-builder/section-templates.md#merging-section-templates)
@@ -181,7 +181,8 @@ As of 2016-04-19 this page is still being updated.
     - Hidden field: [doc](/form-runner/component/hidden.md), [blog post](https://blog.orbeon.com/2019/02/hidden-fields.html)
 - Typed controls
     - Number
-        - control of rounding when formatting/capturing data
+        - control rounding when formatting/capturing data
+        - left/right alignment
     - Email address
     - Currency
     - US phone number
@@ -190,6 +191,7 @@ As of 2016-04-19 this page is still being updated.
     - Date, time, date and time
         - date picker
         - option to exclude dates from the date picker: [doc](/form-builder/validation.md#dates-to-exclude-constraint) 
+        - date control: [doc](/form-runner/component/date.md)
         - time control: [doc](/form-runner/component/time.md)
     - Dropdown date
     - Fields date

@@ -54,7 +54,7 @@ TODO: screenshots, etc. (short screencast would be good!)
 
 Each section contains one or more _grids_. A grid is a logical grouping of form controls organized in rows and columns of cells. Unlike sections, a grid doesn't have a title or help.
 
-A grid may be a regular grid or a [repeated grid](repeated-grids.md), which repeats a group of one or more rows. A repeated grid may have from no iteration (or repetition) to any number of iterations. A repeated grid also has settings, but regular grids do not have settings as of Orbeon Forms 2018.2.
+A grid may be a regular grid or a [repeated grid](repeated-grids.md), which repeats a group of one or more rows. A repeated grid may have from no iteration (or repetition) to any number of repetitions. A repeated grid also has settings, but regular grids do not have settings as of Orbeon Forms 2018.2.
 
 In addition:
 
@@ -198,5 +198,3 @@ This mechanism is how you edit:
 - [Section settings](section-settings.md)
 - [Repeated grids](repeated-grids.md)
 - [Responsive design](../form-runner/feature/responsive-design.md)
-
-[^1]: What was known in the old days as "What You See is What You Get" or "WYSIWYG".

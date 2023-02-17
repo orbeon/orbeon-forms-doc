@@ -57,6 +57,12 @@ If you don't need an eXist database at all, in `properties-local.xml`, add the f
     value="false"/>
 ```
 
+xxx 2022-08-10: this is used for:
+
+- /fr/service/persistence/form
+- reindex
+- reencrypt
+
 Then set a property to select the persistence implementation you are using, for example, for SQL Server:
 
 ```xml

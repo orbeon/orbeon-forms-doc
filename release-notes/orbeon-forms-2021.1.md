@@ -42,12 +42,12 @@ Orbeon Forms 2021.1 includes a new feature to import and export Excel files.
 
 Previous Orbeon Forms versions already supported an Excel import feature. Here are the main differences between the two types of Excel imports:
 
-|Existing import feature|New import feature|
-|---                                      |---                        |
-|multiple form documents at a time (batch)|one form document at a time|
-|row and column-based                     |named range based          |
-|no repeat support                        |repeat support             |
-|fixed layout                             |customizable layout        |
+| Existing import feature                   | New import feature          |
+|-------------------------------------------|-----------------------------|
+| multiple form documents at a time (batch) | one form document at a time |
+| row and column-based                      | named range based           |
+| no repeat support                         | repeat support              |
+| fixed layout                              | customizable layout         |
 
 The new document-based import feature does not replace the previous one but complements it. Each feature might be improved in the future.
 

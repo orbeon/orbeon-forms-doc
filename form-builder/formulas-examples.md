@@ -15,7 +15,7 @@ $yes-no/string() = 'true'
 
 ### With Orbeon Forms 4.5 and newer
 
-Scenario: compute the sum of values in multiple repeat iterations.
+Scenario: compute the sum of values in multiple repeat repetitions.
 Say you have:
 
 - a repeated grid
@@ -56,7 +56,7 @@ See also:
 
 ### From Orbeon Forms 4.0 to 4.4.x
 
-Scenario: compute the sum of values in multiple repeat iterations.
+Scenario: compute the sum of values in multiple repeat repetitions.
 
 Say you have:
 
@@ -221,7 +221,7 @@ Given [this form](https://gist.github.com/orbeon/e7272c1b2499c3a5fb5f) and a con
 - `string-join($name, ', ')`: join all values with commas
 - `count($name)`: return the number of values
 
-*NOTE: This works when the expression is outside repeat iterations. For expressions within the same repeat, `$name` returns the closest control.*
+*NOTE: This works when the expression is outside repeat repetitions. For expressions within the same repeat, `$name` returns the closest control.*
 
 See also [Model bind variables](/xforms/model-bind-variables.md) and this [StackOverflow question](http://stackoverflow.com/questions/27820641/access-to-iterated-controls-in-repeated-sections-in-orbeon/27830585?noredirect=1#comment44118606_27830585).
 

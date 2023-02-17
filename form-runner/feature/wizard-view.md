@@ -200,6 +200,27 @@ When `true`:
 
 <!-- TODO: screenshot -->
 
+[SINCE Orbeon Forms 2022.1]
+
+The Form Settings in Form Builder allow overriding the default set by configuration properties at the form level.
+
+## Section status
+
+[SINCE Orbeon Forms 2022.1]
+
+When enabling the separate table of contents of the wizard (see above), the status of each individual section is shown. However, by default, the status of the section is not shown in the wizard table of contents. Setting the `section-status` property to `true` allows changing this default: 
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.wizard.section-status.*.*"
+    value="true"/>
+```
+
+The Form Settings in Form Builder allow overriding the default set by configuration properties at the form level. 
+
+<!-- TODO: screenshot -->
+
 ## Subsections
 
 ### Subsections navigation
