@@ -23,6 +23,8 @@ In Form Builder, a form definition is identified by a two-level hierarchy of nam
 
 This two-level hierarchy allows for easy grouping of forms, and allows using a single instance of Form Builder to host distinct applications. See [Multitenancy](../feature/multitenancy.md).
 
+Application names and form names don't have to be human-readable, although it is generally convenient to make them human-readable.
+
 Form data is identified by a three-level hierarchy which includes:
 
 - the __application name/form name__ couple that identifies the form definition
