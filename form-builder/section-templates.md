@@ -50,9 +50,37 @@ In Form Builder, the inserted section templates show, at the top, the following 
 
 ## Services and actions
 
+### Introduction
+
 Actions involving controls in a given section are automatically included with the section template, along with the services called by the actions.
 
-*NOTE: If an action involves controls in more than one section, the action will not properly work at runtime.*
+### Cross-section actions
+
+[SINCE Orbeon Forms 2021.1]
+
+When editing a library form, you can define actions involving controls present in more than one section. For example, you can define an action that sets the value of a control in one section based on the value of a control in another section, and that is triggered by the activation of a button that is in a third section.
+
+However, when using sections from the library in a form, nothing prevents you from only including one of the sections. What should then happen with cross-section actions?
+
+With Orbeon Forms 2021.1, there is limited support for this kind of scenarios. For each section template:
+
+1. Orbeon Forms gathers actions that:
+    - can update at least one control of the current section (for example with "Set control value" result)
+    - or update no control at all but are triggered by a control of the current section (for example with a button activation)
+2. Gathers the services that are used by the actions kept in step 1. 
+
+A resulting section template will include the actions and services gathered above in steps 1 and 2.
+
+Following this logic, a given action or service can get included in multiple sections.
+
+Limitations:
+
+- In general, an action can update controls in multiple sections. If that's the case, then that action will be included in all sections that include the controls that are updated by the action. This means that the action and associated service can run more than once.
+- If a section template includes cross-section actions, and the related sections are all included in the destination form, they will be automatically connected. If a section is missing, however, then the behavior might be unexpected. It is up to the form author to ensure that the resulting form includes the required section templates.
+
+[SINCE Orbeon Forms 2022.1.2]
+
+Actions following the [Action Syntax](actions-syntax.md) are also included in section templates.
 
 ## Updating section templates
 
