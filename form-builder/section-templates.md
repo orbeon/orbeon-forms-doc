@@ -80,7 +80,7 @@ Limitations:
 
 [SINCE Orbeon Forms 2022.1.2]
 
-Actions following the [Action Syntax](actions-syntax.md) are also included in section templates.
+Actions and related listeners using the [Action Syntax](actions-syntax.md) are also included in section templates.
 
 ## Updating section templates
 
