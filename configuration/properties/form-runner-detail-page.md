@@ -562,7 +562,7 @@ Let's say that you just want to pass the `<last-name>` and `<order-number>` comm
 
 All other elements are automatically added.
 
-_NOTE: If the `POST`ed data contains extra XML elements not supported by the form, and error is returned._
+_NOTE: If the `POST`ed data contains extra XML elements not supported by the form, an error is returned._
 
 _Compatibility: If the data posted contains extra elements, those were ignored prior to Orbeon Forms 2022.1. With Orbeon Forms 2022.1 and newer, they cause an error._
 
