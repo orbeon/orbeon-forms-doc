@@ -534,6 +534,26 @@ This action takes the latest service result and saves it to the dataset specifie
     name="my-dataset"/>
 ```
 
+### Clearing a dataset
+
+[SINCE Orbeon Forms 2022.1.2]
+
+```xml
+<fr:dataset-clear
+    name="..."/>
+```
+
+| Attribute | Mandatory | Value        | Comment |
+|-----------|-----------|--------------|---------|
+| `name`    | Yes       | dataset name |         |
+
+This action clears the content of the dataset with the given name. Specifically, it replaces it with a single anonymous root element (`<_/>`). Example:
+
+```xml
+<fr:dataset-clear
+    name="my-dataset"/>
+```
+
 ### Calling a process
 
 [SINCE Orbeon Forms 2019.1]
