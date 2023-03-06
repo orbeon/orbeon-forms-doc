@@ -374,4 +374,4 @@ The `save-draft` button is now called `save-progress`. The button label is also 
 
 The `save-draft` button remains for backward compatibility. By default, it calls the `process("save-progress")` process.
 
-We recommend that you review whether you have customized the `save-draft` process and/or button resources in your `properties-local.xml` and udpate them to the new name as needed,
+We recommend that you review whether you have customized the `save-draft` process and/or button resources in your `properties-local.xml` and update them to the new name as needed,
