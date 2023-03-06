@@ -39,7 +39,8 @@ This release addresses the following issues since [Orbeon Forms 2019.2.2 PE](orb
 - `File` with incorrect path passed to `FileScan.complete()` ([\#4745](https://github.com/orbeon/orbeon-forms/issues/4745))
 
 
-You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
+You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
+
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
 Please send feedback via [Twitter](https://twitter.com/orbeon), [Mastodon](https://mastodon.social/@orbeon), or the [forum](https://www.orbeon.com/community).

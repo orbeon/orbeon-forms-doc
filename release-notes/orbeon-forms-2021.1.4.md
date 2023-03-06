@@ -44,7 +44,8 @@ This release addresses the following issues since [Orbeon Forms 2021.1.3 PE](orb
     - Action running "after data is ready" doesn't have access to the latest calculated values on `/edit` ([\#5378](https://github.com/orbeon/orbeon-forms/issues/5378))
     - Date picker shown for readonly date on iOS ([\#5376](https://github.com/orbeon/orbeon-forms/issues/5376))
 
-You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
+You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
+
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
 Please send feedback via [Twitter](https://twitter.com/orbeon), [Mastodon](https://mastodon.social/@orbeon), or the [forum](https://www.orbeon.com/community).

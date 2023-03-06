@@ -32,7 +32,8 @@ This release addresses the following issues since [Orbeon Forms 2021.1.2 PE](orb
 - Update function to access the value of a control within a section template ([\#5246](https://github.com/orbeon/orbeon-forms/issues/5246))
 - Excel/XML export button on detail page ([\#5263](https://github.com/orbeon/orbeon-forms/issues/5263))
 
-You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
+You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
+
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
 Please send feedback via [Twitter](https://twitter.com/orbeon), [Mastodon](https://mastodon.social/@orbeon), or the [forum](https://www.orbeon.com/community).

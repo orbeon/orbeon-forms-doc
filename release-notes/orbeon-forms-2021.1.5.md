@@ -52,7 +52,8 @@ This release addresses the following issues since [Orbeon Forms 2021.1.4 PE](orb
     - Broken test due to external service down ([\#5425](https://github.com/orbeon/orbeon-forms/issues/5425))
     - Error when switching between HTTP/HTTPS on the same app ([\#5395](https://github.com/orbeon/orbeon-forms/issues/5395))
 
-You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
+You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
+
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
 Please send feedback via [Twitter](https://twitter.com/orbeon), [Mastodon](https://mastodon.social/@orbeon), or the [forum](https://www.orbeon.com/community).

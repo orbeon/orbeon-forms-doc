@@ -22,7 +22,8 @@ We also released a point update of Orbeon Forms CE containing the following fixe
 - Error when publishing a form with attached files from Form Builder ([\#4765](https://github.com/orbeon/orbeon-forms/issues/4765))
 - "`SessionListeners` object not found in session" error ([\#4766](https://github.com/orbeon/orbeon-forms/issues/4766))
 
-You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
+You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
+
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
 Please send feedback via [Twitter](https://twitter.com/orbeon), [Mastodon](https://mastodon.social/@orbeon), or the [forum](https://www.orbeon.com/community).

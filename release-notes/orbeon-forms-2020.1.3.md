@@ -37,7 +37,8 @@ This release addresses the following issues since [Orbeon Forms 2020.1.2 PE](orb
 - Update mysql-connector-java to 8.0.24 ([\#4858](https://github.com/orbeon/orbeon-forms/issues/4858))
 - Update scala-logging to 3.9.3 ([\#4815](https://github.com/orbeon/orbeon-forms/issues/4815))
 
-You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.  
+You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
+
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
 Please send feedback via [Twitter](https://twitter.com/orbeon), [Mastodon](https://mastodon.social/@orbeon), or the [forum](https://www.orbeon.com/community).
