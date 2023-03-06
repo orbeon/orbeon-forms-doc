@@ -673,6 +673,53 @@ This supports the following controls:
 
 Note that the `<fr:control-setattachment>` action automatically sets a mediatype.
 
+### Setting the focus on a form control
+
+[SINCE Orbeon Forms 2022.1.2]
+
+```xml
+<fr:control-setfocus
+    control="..."/>
+```
+
+| Attribute | Mandatory | Value            | Comment |
+|-----------|-----------|------------------|---------|
+| `control` | Yes       | control name     |         |
+
+This action allows setting the focus on a form control. Example:
+
+```xml
+<fr:control-setfocus
+    control="my-text-field"/>
+```
+
+### Marking a form control visited or unvisited 
+
+[SINCE Orbeon Forms 2022.1.2]
+
+```xml
+<fr:control-setvisited
+    control="..."
+    visited=""/>
+```
+
+| Attribute | Mandatory | Value             | Comment            |
+|-----------|-----------|-------------------|--------------------|
+| `control` | Yes       | control name      |                    |
+| `visited` | No        | `true` or `false` | defaults to `true` |
+
+This action allows setting whether a form control is visited or not. Example:
+
+```xml
+<fr:control-setvisited
+    control="my-text-field"
+    visited="false"/>
+```
+
+In Orbeon Forms, a form control can be *visited* or not. Visited controls have been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control.
+
+When working with actions, some form controls can benefit from having their "visited" status reset so that the user doesn't see extra errors appear. The `<fr:control-setvisited>` action allows doing that.
+
 ### Alert for debugging
 
 [SINCE Orbeon Forms 2022.1, 2021.1.2, 2020.1.7] The `<fr:alert>` action is intended to be used for debugging, allowing you to get some visibility on the value of intermediary results, or more generally the value of any expression is at a given point. The value of the `message` attribute uses the [AVT syntax](/xforms/attribute-value-templates.md), so the example below would show a dialog with the message "The answer is 42".
