@@ -1,6 +1,6 @@
 # Orbeon Forms 2022.1.2
 
-__xxx, March xxx, 2023__
+__Wednesday, March 8, 2023__
 
 Today we released Orbeon Forms 2022.1.2 PE! This maintenance release contains bug-fixes and minor new features and is recommended for all users of:
 
@@ -14,6 +14,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.1 PE
     - Dynamic dropdown with a service doing the search shows empty ([\#5705](https://github.com/orbeon/orbeon-forms/issues/5705))
     - Async submission must not keep hold initial servlet request ([\#5696](https://github.com/orbeon/orbeon-forms/issues/5696))
     - Permissions dialog checkboxes are no longer centered ([\#5703](https://github.com/orbeon/orbeon-forms/issues/5703))
+    - Time field fails in offline ([\#5711](https://github.com/orbeon/orbeon-forms/issues/5711))
 - Features
     - Add `fr:control-setfocus` action ([\#5697](https://github.com/orbeon/orbeon-forms/issues/5697))
     - Add `fr:control-setvisited` action ([\#5694](https://github.com/orbeon/orbeon-forms/issues/5694))
