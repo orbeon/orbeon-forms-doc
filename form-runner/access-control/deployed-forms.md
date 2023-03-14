@@ -104,10 +104,11 @@ Or whether it applies to a specific app:
 </property>
 ```
 
+### Precedence of permissions configurations
+
 If a form definition includes a Form Builder-defined set of permissions, then those permissions are used and the permissions set in `properties-local.xml` are ignored.
 
 There is no merging of permissions between a Form Builder-defined set of permissions and properties-defined permissions, or between global and per-app permissions.
-
 
 ### Configuration detail
 
