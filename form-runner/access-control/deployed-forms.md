@@ -65,20 +65,34 @@ Forms created and edited with earlier versions of Orbeon Forms that have the _Re
 
 ## How permissions affect Form Runner pages
 
-Which operations the current user can perform drives what page they can access, and on some pages which buttons are shown:
+### Introduction
 
-* On the Form Runner _Home_ page, all the forms on which the current user can perform at least one operation are displayed. Then, for each one of those forms:
-    * If they can perform the _Create_ operation on the form, a link to the _new_ page is shown.
-    * If they can perform any of the _Read_, _Update_, or _Delete_ operation on the form, a link to the _summary_ page for that form is shown.
-* For the _Summary_ page:
-    * Access is completely denied if the current user can't perform any of the _Read_, _Update_, or _Delete_ operations.
-        * [SINCE Orbeon Forms 2022.1] Access is also completely denied if the user doesn't have the _List_ permission.
-    * The _Delete_ button is disabled if the current user can't perform the _Delete_ operation.
-    * The _review_ and _pdf_ button are disabled if the current user can't perform the _Read_ operation.
-    * Clicking in a row of the table will open the form in _edit_ mode if the current user can perform the _Update_ operation, in _view_ mode if they can perform the _Read_ operation, and do nothing otherwise.
+Which operations the current user can perform drives what page they can access, and on some pages which buttons are shown.
+
+### Forms page
+
+This was formerly known as the _Home_ page.
+
+On the Form Runner Forms page, all the forms on which the current user can perform at least one operation are displayed. Then, for each one of those forms:
+
+- If they can perform the _Create_ operation on the form, a link to the _New_ page is shown.
+- If they can perform any of the _Read_, _Update_, or _Delete_ operation on the form, a link to the _Summary_ page for that form is shown.
+
+### Summary page
+
+- Access is completely denied if the current user can't perform any of the _Read_, _Update_, or _Delete_ operations.
+  -[SINCE Orbeon Forms 2022.1] Access is also completely denied if the user doesn't have the _List_ permission.
+- The _Delete_ button is disabled if the current user can't perform the _Delete_ operation.
+- The _review_ and _pdf_ button are disabled if the current user can't perform the _Read_ operation.
+- Clicking in a row of the table will open the form in _Edit_ mode if the current user can perform the _Update_ operation, in _View_ mode if they can perform the _Read_ operation, and do nothing otherwise.
+
+### View, New, and Edit pages
+
 * For the _View_ page, access is denied if the current user can't perform the _Read_ operation.
 * For the _New_ page, access is denied if the current user can't perform the _Create_ operation.
 * For the _Edit_ page, access is denied if the current user can't perform the _Update_ operation.
+
+## Compatibility note
 
 [SINCE 4.3] In Orbeon Forms 4.2 and earlier, role-based permissions set in Form Builder could only be driven by container-based roles and the value of the `oxf.fr.authentication.method` property was not taken into account. Since version 4.3, those permissions also apply if you are using header-driven roles.
 
