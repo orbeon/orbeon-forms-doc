@@ -152,7 +152,7 @@ To indicate that no operation is allowed:
 
 For permissions defined in Form Builder, the permissions are stored in the form definition, and this means that you can have multiple form versions published with different permissions.
 
-However, for permissions defined in `properties-local.xml`, the permissions are per app/form name, and will apply to all published versions of the form.
+However, for permissions defined in `properties-local.xml`, the permissions are per app/form name, and will apply to all published versions of the form under that app/form name.
 
 ## How permissions affect Form Runner pages
 
