@@ -111,7 +111,7 @@ There is no merging of permissions between a Form Builder-defined set of permiss
 
 ### Configuration detail
 
-For each property, the configuration is a JSON format that follows the layout of the Form Builder user interface (see ;screenshot above):
+For each property, the configuration is a JSON format that follows the layout of the Form Builder user interface (see screenshot above):
 
 ```json
 {
