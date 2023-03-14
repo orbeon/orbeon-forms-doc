@@ -53,7 +53,7 @@ Previously, Form Runner permissions were configured per form. This release intro
 
 Per-app and global permissions are currently set using configuration properties. In the future, we plan to add a UI to configure them. 
 
-[//]: # (- Per-app and global permissions configuration &#40;[\#1860]&#40;https://github.com/orbeon/orbeon-forms/issues/1860&#41;&#41;)
+See also the [documentation](/form-runner/access-control/deployed-forms.md#per-app-and-global-permissions).
 
 ### New _List_ permission
 
