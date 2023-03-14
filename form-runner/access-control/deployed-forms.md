@@ -108,6 +108,7 @@ If a form definition includes a Form Builder-defined set of permissions, then th
 
 There is no merging of permissions between a Form Builder-defined set of permissions and properties-defined permissions, or between global and per-app permissions.
 
+
 ### Configuration detail
 
 For each property, the configuration is a JSON format that follows the layout of the Form Builder user interface (see ;screenshot above):
@@ -145,6 +146,12 @@ To indicate that no operation is allowed:
 
 - use an empty array
 - or omit the property
+
+### Impact on versioning
+
+For permissions defined in Form Builder, the permissions are stored in the form definition, and this means that you can have multiple form versions published with different permissions.
+
+However, for permissions defined in `properties-local.xml`, the permissions are per app/form name, and will apply to all published versions of the form.
 
 ## How permissions affect Form Runner pages
 
