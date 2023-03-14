@@ -63,6 +63,89 @@ With earlier versions of Orbeon Forms, the _List_ permission was not checked sep
 
 Forms created and edited with earlier versions of Orbeon Forms that have the _Read_ permission enabled also implicitly have the _List_ permission enabled, for backward compatibility. Opening such a form in Form Builder will show both the _Read_ and _List_ permissions. If the form author deselects the _List_ permission, and then publishes the form, then the form will not allow the _List_ permission, as expected.
 
+## Per-app and global permissions
+
+### Introduction
+
+[SINCE Orbeon Forms 2022.1]
+
+You can configure permissions per app, as well as globally. This is particularly useful when you have a large number of forms, and want to configure permissions for all of them at once.
+Per-app and global permissions are currently set using configuration properties in `properties-local.xml`.
+
+### Properties
+
+You configure permissions with the `oxf.fr.permissions.$app.$form` properties. For example: 
+
+```xml
+<property as="xs:string"  name="oxf.fr.permissions.acme.sales">
+  {
+    ...
+  }
+</property>
+```
+
+As usual, you can use wildcards to specify whether the configuration is global:
+
+```xml
+<property as="xs:string"  name="oxf.fr.permissions.*.*">
+  {
+    ...
+  }
+</property>
+```
+
+Or whether it applies to a specific app:
+
+```xml
+<property as="xs:string"  name="oxf.fr.permissions.acme.*">
+  {
+    ...
+  }
+</property>
+```
+
+If a form definition includes a Form Builder-defined set of permissions, then those permissions are used and the permissions set in `properties-local.xml` are ignored.
+
+There is no merging of permissions between a Form Builder-defined set of permissions and properties-defined permissions, or between global and per-app permissions.
+
+### Configuration detail
+
+For each property, the configuration is a JSON format that follows the layout of the Form Builder user interface (see ;screenshot above):
+
+```json
+{
+  "anyone":         [ "create" ],
+  "owner":          [ "read", "update" ],
+  "group-member":   [ "read", "update" ],
+  "roles": {
+    "orbeon-user":  [ "read", "update", "list" ],
+    "orbeon-admin": [ "read", "update", "delete", "list" ]
+  }
+}
+```
+
+The configuration is a JSON object with the following properties:
+
+- `anyone`: an array of operations that are allowed for all users
+- `owner`: an array of operations that are allowed for the user who created the data
+- `group-member`: an array of operations that are allowed for users in the same group as the owner of the data
+- `roles`: a JSON object with the following properties:
+    - each key is a role name
+    - each value is an array of operations that are allowed for users with the given role
+
+The operations are the same as the ones in the Form Builder user interface:
+
+- `create`: create new data
+- `read`: read data
+- `update`: update data
+- `delete`: delete data
+- `list`: list data on the Summary page
+
+To indicate that no operation is allowed:
+
+- use an empty array
+- or omit the property
+
 ## How permissions affect Form Runner pages
 
 ### Introduction
