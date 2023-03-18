@@ -728,6 +728,40 @@ When working with actions, some form controls can benefit from having their "vis
 <fr:alert message="The answer is {40+2}"/>
 ```
 
+### Copying repeated control content
+
+[SINCE Orbeon Forms 2023.1]
+
+The `<fr:copy-content>` action allows you to copy *repeated* content from one repeated grid or section to another.
+
+In the following example, each `<fr:map>` expresses that all repeated controls denoted by the `left` attribute are copied to the corresponding repeated controls denoted by the `right` attribute.
+
+```xml
+<fr:copy-content warn="true">
+    <fr:map left="control-1" right="control-3"/>
+    <fr:map left="control-2" right="control-4"/>
+</fr:copy-content>
+```
+
+The destination repeat's iterations are enforced, which means:
+
+- Extra iterations in the destination are removed from the end if needed, to match the number of iterations in the source.
+- New iterations in the destination are added at the end if needed, to match the number of iterations in the source.
+- For each iteration, the values of controls specified with `<fr:map>` are copied over.
+
+Each `<fr:map>` element can individually refer to separate repeated grids and sections. In other words, not all `left` need to be in the same repeated grid or section, and not all `right` need to be in the same repeated grid or section.
+
+When the `warn` attribute is set to `true`, the action will show a warning dialog if the action will overwrite existing content in the destination. An overwrite is considered when:
+
+- The destination has more iterations than the source.
+- The destination has the same number of iterations as the source or less, but the action would overwrite a non-blank destination value.
+
+The default is `false`.
+
+See also [Synchronizing repeated content](/form-builder/synchronize-repeated-content.md).
+
+*NOTE: In the future we plan to let this action copy content from and to non-repeated grids and sections as well.*.
+
 ## Error handling
 
 With Orbeon Forms 2018.2, errors when running services are silently ignored and the action continues.
@@ -799,6 +833,7 @@ To be more explicit, the attribute can also be set on the first `<fr:value>`:
 ## See also
 
 - [Editing the source code of the form definition](/form-builder/edit-source.md)
+- [Synchronizing repeated content](/form-builder/synchronize-repeated-content.md)
 - [Actions](actions.md)
 - [HTTP services](http-services.md)
 - [Database services](database-services.md)
