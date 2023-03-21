@@ -32,6 +32,10 @@ The `/fr/clerk/marriage-registration/new` in our example is what is referred to 
     `/fr/$app/$form/pdf/$document`
 - Read-only TIFF view: [SINCE Orbeon Forms 2016.1]
     `/fr/$app/$form/tiff/$document`
+- Excel export: [SINCE Orbeon Forms 2023.1]
+    `/fr/$app/$form/export/$document?export-format=excel-with-named-ranges`
+- XML export: [SINCE Orbeon Forms 2023.1]
+    `/fr/$app/$form/export/$document?export-format=xml-form-structure-and-data`
 
 Where:
 
@@ -90,10 +94,11 @@ This applies to `edit`, `view`, `pdf`, and `tiff` modes.
     - `true`: loads the data for a draft
     - `false` (default): loads the data for a final document
 
-### PDF and TIFF views
+### PDF, TIFF, and other export views
 
 - `fr-language`
-    - With automatic PDF, selects the language to use when producing the PDF.
+    - With automatic PDF and exports, selects the language to use when producing the PDF.
+    - With PDF templates, choose the template with the specified language if available.
 
 [SINCE Orbeon Forms 2018.1]
 
@@ -103,6 +108,8 @@ This applies to `edit`, `view`, `pdf`, and `tiff` modes.
     - Selects a PDF template by name.
 - `fr-pdf-template-lang`
     - Select a PDF template by language.
+
+
 
 ## See also
 
