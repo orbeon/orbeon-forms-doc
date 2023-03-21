@@ -237,6 +237,23 @@ To change the main font, you must map your TTF file to the `Helvetica Neue` fami
 
 Orbeon Forms now includes the [Inter font](https://rsms.me/inter/) by default. This provides more characters out of the box (see [Language support](https://rsms.me/inter/#languages)).
 
+## PDF color mode
+
+[SINCE Orbeon Forms 2023.1]
+
+By default, the PDF is output with most colors removed and a black-and-white scheme. With the `oxf.fr.detail.pdf.color-mode`, you can change that default to allow field colors to be used. This impacts the following form controls:
+
+- Explanatory Text
+- Formatted Text
+- Calculated Value (if the value is in HTML format)
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.pdf.color-mode.*.*"
+    value="keep-field-colors"/>
+```
+
 ## See also
 
 - [PDF Production](pdf-production.md)
