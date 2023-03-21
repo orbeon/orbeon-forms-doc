@@ -32,10 +32,14 @@ The `/fr/clerk/marriage-registration/new` in our example is what is referred to 
     `/fr/$app/$form/pdf/$document`
 - Read-only TIFF view: [SINCE Orbeon Forms 2016.1]
     `/fr/$app/$form/tiff/$document`
-- Excel export: [SINCE Orbeon Forms 2023.1]
+- Excel export with data: [SINCE Orbeon Forms 2023.1]
     `/fr/$app/$form/export/$document?export-format=excel-with-named-ranges`
-- XML export: [SINCE Orbeon Forms 2023.1]
+- Excel export without data: [SINCE Orbeon Forms 2023.1]
+    `/fr/$app/$form/export?export-format=excel-with-named-ranges`
+- XML export with data: [SINCE Orbeon Forms 2023.1]
     `/fr/$app/$form/export/$document?export-format=xml-form-structure-and-data`
+- XML export without data: [SINCE Orbeon Forms 2023.1]
+    `/fr/$app/$form/export?export-format=xml-form-structure-and-data`
 
 Where:
 
