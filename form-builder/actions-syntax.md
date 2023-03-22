@@ -746,8 +746,8 @@ See also [Synchronizing repeated content](/form-builder/synchronize-repeated-con
 
 Assuming that:
 
-- form controls with names `control-1`, `control-2`, `control-3`, and `control-4` are all within repeated grids or repeated sections
-- the form control with name `non-repeated-control` is non-repeated, and `control-5` is repeated
+- controls `control-1`, `control-2`, `control-3`, and `control-4` are all within repeated grids or repeated sections
+- control `non-repeated-control` is non-repeated, and `control-5` is repeated
 
 Then, in the following example, each `<fr:map>` expresses that all repeated controls denoted by the `left` attribute (source) are copied to the corresponding repeated controls denoted by the `right` attribute (destination).
 
