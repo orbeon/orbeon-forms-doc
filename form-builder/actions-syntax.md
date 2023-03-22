@@ -728,22 +728,42 @@ When working with actions, some form controls can benefit from having their "vis
 <fr:alert message="The answer is {40+2}"/>
 ```
 
-### Copying repeated control content
+### Copying control content
 
 [SINCE Orbeon Forms 2023.1]
 
-The `<fr:copy-content>` action allows you to copy *repeated* content from one repeated grid or section to another.
+#### Description
 
-In the following example, each `<fr:map>` expresses that all repeated controls denoted by the `left` attribute are copied to the corresponding repeated controls denoted by the `right` attribute.
+The `<fr:copy-content>` action allows you to copy form content:
+
+- from non-repeated form controls to other non-repeated form controls
+- from non-repeated form controls to repeated form controls
+- from repeated form controls to other repeated form controls
+
+See also [Synchronizing repeated content](/form-builder/synchronize-repeated-content.md).
+
+#### Example
+
+Assuming that:
+
+- form controls with names `control-1`, `control-2`, `control-3`, and `control-4` are all within repeated grids or repeated sections
+- the form control with name `non-repeated-control` is non-repeated, and `control-5` is repeated
+
+Then, in the following example, each `<fr:map>` expresses that all repeated controls denoted by the `left` attribute (source) are copied to the corresponding repeated controls denoted by the `right` attribute (destination).
 
 ```xml
 <fr:copy-content warn="true">
-    <fr:map left="control-1" right="control-3"/>
-    <fr:map left="control-2" right="control-4"/>
+    <fr:map left="control-1"            right="control-3"/>
+    <fr:map left="control-2"            right="control-4"/>
+    <fr:map left="non-repeated-control" right="control-5" right-at="all"/>
 </fr:copy-content>
 ```
 
-The destination repeat's iterations are enforced, which means:
+![Example form showing copied content](images/copy-content.png)
+
+#### Repeated source and destination
+
+When both the source and destination are repeated, the destination repeat's iterations are enforced, which means:
 
 - Extra iterations in the destination are removed from the end if needed, to match the number of iterations in the source.
 - New iterations in the destination are added at the end if needed, to match the number of iterations in the source.
@@ -751,16 +771,31 @@ The destination repeat's iterations are enforced, which means:
 
 Each `<fr:map>` element can individually refer to separate repeated grids and sections. In other words, not all `left` need to be in the same repeated grid or section, and not all `right` need to be in the same repeated grid or section.
 
+#### Non-repeated source and destination
+
+When the source is non-repeated and the destination is also non-repeated, the value of the control is simply copied.
+
+#### Non-repeated source and repeated destination
+
+When the source is non-repeated and the destination is repeated, the value of the control is copied to one or more of the destination controls. The `right-at` attribute can be used to control this behavior:
+
+- `start`: first control only
+- `end`: last control only
+- strictly positive integer: specific position
+- `all`: all controls
+
+#### Repeated source and non-repeated destination
+
+This scenario is not supported yet.
+
+#### Warning the user
+
 When the `warn` attribute is set to `true`, the action will show a warning dialog if the action will overwrite existing content in the destination. An overwrite is considered when:
 
 - The destination has more iterations than the source.
 - The destination has the same number of iterations as the source or less, but the action would overwrite a non-blank destination value.
 
 The default is `false`.
-
-See also [Synchronizing repeated content](/form-builder/synchronize-repeated-content.md).
-
-*NOTE: In the future we plan to let this action copy content from and to non-repeated grids and sections as well.*.
 
 ## Error handling
 
