@@ -276,6 +276,29 @@ Two new formats are supported:
     - This file format can also be used for later import.
     - The `excel-export` button and default process run `open-rendered-format(format = "excel-with-named-ranges")`.
 
+[SINCE Orbeon Forms 2023.1]
+
+The following parameters are supported:
+
+- `show-hints`: `"true"` or `"false"` (default is `"false"`)
+    - show hints in the generated PDF or TIFF 
+- `show-alerts`: `"true"` or `"false"` (default is `"false"`)
+    - show alerts in the generated PDF or TIFF 
+
+Example:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.process.pdf.*.*">
+    open-rendered-format(format = "pdf", show-alerts = "false", show-hints = "true")
+</property>
+```
+
+The output contains alerts and/or hints if one of the values is set to `"true"`. For example:
+
+![PDF output with alerts and hints](../../../form-builder/images/test-pdf-hints-alerts-result.png)
+
+See also [Testing PDF production](/form-builder/pdf-test.md).
+
 ## Other actions
 
 - `captcha`: Trigger the captcha.

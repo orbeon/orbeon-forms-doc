@@ -51,9 +51,24 @@ The "Test PDF" dialog lets you choose between the [automatic PDF](pdf-automatic.
 
 ![Selecting a PDF template for PDF testing](images/test-pdf-use-pdf-template.png)
 
+## Showing hints and alerts
+
+[SINCE Orbeon Forms 2023.1]
+
+Two options allow you to show controls hints and alerts in the resulting PDF:
+
+![Options to show hints and alerts](images/test-pdf-hints-alerts.png)
+
+This is an example of the resulting PDF with hints and alerts:
+
+![PDF output with alerts and hints](images/test-pdf-hints-alerts-result.png)
+
+See also [The `open-rendered-format()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format).
+
 ## See also 
 
 - Blog post: [Testing PDF production in Form Builder](https://blog.orbeon.com/2021/11/testing-pdf-production-in-form-builder.html)
 - [PDF Production](pdf-production.md)
 - [Automatic PDF](pdf-automatic.md)
 - [PDF templates](pdf-templates.md)
+- [The `open-rendered-format()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format)
