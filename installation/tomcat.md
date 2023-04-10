@@ -84,7 +84,7 @@ If you have a JDBC datasource, add it **inside** the `<Context>`, as in the foll
 
 ### URIEncoding
 
-We recommend you add the `URIEncoding="UTF-8"` attribute on the [`<Connector>`](http://tomcat.apache.org/tomcat-7.0-doc/config/http.html) element, in your `server.xml`, as [recommended in the Tomcat FAQ](http://wiki.apache.org/tomcat/FAQ/CharacterEncoding#Q8). This will ensure that all characters get properly decoded on the URL, which is especially important if you're using non-ASCII characters in the app or form name in Form Builder.
+We recommend you add the `URIEncoding="UTF-8"` attribute on the [`<Connector>`](http://tomcat.apache.org/tomcat-7.0-doc/config/http.html) element, in your `server.xml`, as [recommended in the Tomcat FAQ](https://cwiki.apache.org/confluence/display/TOMCAT/Character+Encoding). This will ensure that all characters get properly decoded on the URL, which is especially important if you're using non-ASCII characters in the app or form name in Form Builder.
 
 ### Form Runner authentication
 
