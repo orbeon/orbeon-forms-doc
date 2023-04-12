@@ -119,7 +119,7 @@ The following uses are considered legacy and not in use by default in Orbeon For
 - The `$instance` URL parameter encryption
 - Form static/dynamic state with client state handling encryption
 
-_NOTE: If the backwards compatibility property `oxf.xforms.password` is defined, then it is used first._
+_NOTE: If the backwards compatibility property `oxf.xforms.password` is defined, then it is used first. However, it is deprecated, and we advise not using it as support might be removed in a future Orbeon Forms version._
 
 ### oxf.crypto.key-length
 

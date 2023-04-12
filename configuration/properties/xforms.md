@@ -17,7 +17,7 @@ For the latest default values of XForms properties, see [`properties-xforms.xml`
 
 ### Encryption password
 
-Before Orbeon Forms 4.0, the `oxf.xforms.password` property was defined. It has since been renamed `oxf.crypto.password`. For more information, see [General Configuration Properties](../../configuration/properties/general.md). `oxf.xforms.password` is still supported for backward compatibility.
+Before Orbeon Forms 4.0, the `oxf.xforms.password` property was defined. It has since been renamed `oxf.crypto.password`. For more information, see [General Configuration Properties](/configuration/properties/general.md). `oxf.xforms.password` is still supported for backward compatibility. However, it is deprecated and we advise not using it as support might be removed in a future Orbeon Forms version.
 
 ### XForms items encoding
 
