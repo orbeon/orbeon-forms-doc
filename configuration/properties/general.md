@@ -136,16 +136,19 @@ Higher strength encryption is usually not enabled by default in the JVM. See [Ja
 
 ### oxf.crypto.hash-algorithm
 
-This property specifies the default hash algorithm. The default is SHA1. Higher strength encryption is usually not enabled by default in the JVM.
+This property specifies the default hash algorithm. The default is:
+
+- Until Orbeon Forms 2022.1.2: `SHA1`
+- Since Orbeon Forms 2022.1.3 and 2023.1: `SHA-256`
 
 ```xml
 <property
   as="xs:string"
   name="oxf.crypto.hash-algorithm"
-  value="SHA1"/
+  value="SHA-256"/>
 ```
 
-Higher strength encryption is usually not enabled by default in the JVM. See [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files](http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html). When higher strength encryption is available, this value can be changed to 256, for example.
+Not all encryption strengths are enabled by default in the JVM. See [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files](http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html).
 
 Orbeon forms uses hash algorithms in at least the following cases:
 
