@@ -93,7 +93,7 @@ Make sure to adjust the port and prefix as needed.
 
 ### oxf.crypto.password
 
-This property is used to create a private key used for encryption. It is recommended to change the default value of the password, even though a random seed is used.
+This property is used to create a private key used for encryption. You must change the default value of the password, even though a random seed is used.
 
 ```xml
 <property
@@ -120,6 +120,33 @@ The following uses are considered legacy and not in use by default in Orbeon For
 - Form static/dynamic state with client state handling encryption
 
 _NOTE: If the backwards compatibility property `oxf.xforms.password` is defined, then it is used first. However, it is deprecated, and we advise not using it as support might be removed in a future Orbeon Forms version._
+
+[SINCE Orbeon Forms 2023.1]
+
+Orbeon Forms will cause an error when starting if the default value for `oxf.crypto.password` is used. This is to prevent you from using the default value in production.
+
+In addition, a password strength checker will also cause an error if the password is too weak. Ideally, use a randomly-generated strong password.
+
+### oxf.crypto.check-password-strength
+
+[SINCE Orbeon Forms 2023.1]
+
+This property enables or disables the password strength checker. The default is `true`.
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.crypto.check-password-strength"
+    value="true"/>
+```
+
+WHen this is set to `true`, passwords are checked upon first use for strength. This is a baseline check only. In any case, you should use strong passwords and keep them secret, especially for production use.
+
+The following passwords are checked:
+
+- `oxf.crypto.password`
+- `oxf.fr.access-token.password`
+- `oxf.fr.field-encryption.password`
 
 ### oxf.crypto.key-length
 

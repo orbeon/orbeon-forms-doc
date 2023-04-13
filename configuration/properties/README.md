@@ -25,9 +25,15 @@ If that file doesn't exist yet in your installation of Orbeon Forms, you can cre
 </properties>
 ```
 
-## Properties you should configure
+## Properties you must configure
 
-You should set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
+You must set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
+
+[SINCE Orbeon Forms 2023.1]
+
+Orbeon Forms will cause an error when starting if the default value for `oxf.crypto.password` is used. This is to prevent you from using the default value in production.
+
+In addition, a password strength checker will also cause an error if the password is too weak. Ideally, use a randomly-generated strong password.
 
 ## Documentation for specific properties
 

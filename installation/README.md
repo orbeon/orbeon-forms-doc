@@ -83,9 +83,19 @@ _NOTE:  Orbeon Forms uses Java's `System.getProperty("user.home")` to identify t
 
 ## Configuration properties
 
-You should at least create a default `properties-local.xml` file. See [Properties](/configuration/properties/README.md).
+You must create a default `properties-local.xml` file. See [Properties](/configuration/properties/README.md).
 
-In addition, you should set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
+In addition, you must set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
+
+[SINCE Orbeon Forms 2023.1]
+
+Orbeon Forms will cause an error when starting if the default value for `oxf.crypto.password` is used. This is to prevent you from using the default value in production.
+
+In addition, a password strength checker will also cause an error if the password is too weak. Ideally, use a randomly-generated strong password.
+
+If you plan to use [Field-level encryption](/form-builder/field-level-encryption.md), also set `oxf.fr.field-encryption.password`. See [Field-level encryption configuration](/form-builder/field-level-encryption.md#configuration) for details.
+
+If you plan to use [Access tokens](/form-runner/access-token.md), also set `oxf.fr.access-token.password`. See [Access tokens configuration](/form-runner/access-token.md#configuration) for details.
 
 ## Base URL for internal services
 
