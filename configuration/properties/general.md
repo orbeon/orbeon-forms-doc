@@ -164,12 +164,12 @@ Orbeon forms uses hash algorithms in at least the following cases:
 
 ### oxf.cache.size
 
-| | |
-| --- | --- |
-| Name | `oxf.cache.size` |
-| Purpose | set the size of the Orbeon Forms object cache |
-| Type | `xs:integer` | |
-| Default Value | 1000 |
+|               |                                               |
+|---------------|-----------------------------------------------|
+| Name          | `oxf.cache.size`                              |
+| Purpose       | set the size of the Orbeon Forms object cache |
+| Type          | `xs:integer`                                  |
+| Default Value | 1000                                          |
 
 Orbeon Forms uses an efficient caching system. Orbeon Forms automatically determines what can be cached and when to expire objects. This size is reasonable for most applications. A bigger cache tends to make the application faster, but it uses more memory. To tune the cache size, see the suggestions in the [Performance and Tuning][1] section.
 
