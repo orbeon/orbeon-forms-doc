@@ -45,7 +45,7 @@ Configure the Java VM with:
 * `-Xmx` option for dedicated Java heap memory:
     * on a development machine: at least 1 GB of Java heap: `-Xmx1g`
     * on a production machine: at least 4 GB of Java heap: `-Xmx4g`
-* ` -XX:MaxPermSize` for "permgen" space (Java 1.7):
+* Java 1.7 only (Orbeon Forms 2018.2 and earlier only): ` -XX:MaxPermSize` for "permgen" space:
     * use at least: `-XX:MaxPermSize=256m`
 
 Also, make sure that you do *not* have tiered compilation when using Java 7. See [A dangerous Java 7 JVM option: TieredCompilation](https://blog.orbeon.com/2015/08/a-dangerous-java-7-jvm-option.html).

@@ -61,8 +61,8 @@ This logic ensures:
 
 The paths used by Form Builder look as follows:
 
-|Path|Description|
-|----|-----------|
+| Path                                  | Description                   |
+|---------------------------------------|-------------------------------|
 | `/orbeon/fr/orbeon/builder/new`       | Create a new form             |
 | `/orbeon/fr/orbeon/builder/edit/{id}` | Edit a form with the given id |
 | `/orbeon/fr/orbeon/builder/summary`   | View all the editable forms   |

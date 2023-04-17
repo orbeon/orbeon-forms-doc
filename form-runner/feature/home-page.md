@@ -10,7 +10,7 @@ You access the Form Runner Home page by adding `fr/` to the path on which you de
 
 [SINCE Orbeon Forms 4.3]
 
-If the user doesn't have any permissions set via `form-builder-permissions.xml`, as [documented here](../access-control/editing-forms.md#form-builder-permissions), a simple user view is presented:
+If the user doesn't have any permissions set via `form-builder-permissions.xml`, as [documented here](/form-runner/access-control/editing-forms.md#form-builder-permissions), a simple user view is presented:
 
 ![Home Page](../images/home-simple-view.png)
 
@@ -361,5 +361,5 @@ For each form definition the current user has access to, the following links are
 ## See also
 
 - [Summary Page](summary-page.md)
-- [Access control and permissions](../access-control-and-permissions.md)
-- [Form Builder permissions](../access-control/editing-forms.md#form-builder-permissions)
+- [Access control and permissions](/form-runner/access-control-and-permissions.md)
+- [Form Builder permissions](/form-runner/access-control/editing-forms.md#form-builder-permissions)

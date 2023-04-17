@@ -118,9 +118,9 @@ To setup Form Runner authentication:
 
     ```xml
     <property
-      as="xs:string"
-      name="oxf.fr.authentication.container.roles"
-      value="orbeon-user orbeon-admin"/>
+        as="xs:string"
+        name="oxf.fr.authentication.container.roles"
+        value="orbeon-user orbeon-admin"/>
     ```
 
 ### BASIC authentication
@@ -129,6 +129,6 @@ If you are using BASIC authentication on Tomcat 6.0.21 or newer you might have t
 
 ```xml
 <Valve
-	className="org.apache.catalina.authenticator.BasicAuthenticator"
-	changeSessionIdOnAuthentication="false"/>
+    className="org.apache.catalina.authenticator.BasicAuthenticator"
+    changeSessionIdOnAuthentication="false"/>
 ```
