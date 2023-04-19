@@ -41,3 +41,9 @@ If set, the `oxf.fr.field-encryption.password` property controls a separate encr
 - If you are upgrading from an earlier version of Orbeon Forms, and you already have data in your database that contains encrypted fields:
     - Set `oxf.fr.field-encryption.password` anyway, to the same value as `oxf.crypto.password`.
 - If you are not in the above case, set `oxf.fr.field-encryption.password` to a value different from `oxf.crypto.password`. 
+
+### CRUD API
+
+When calling the [CRUD API](/form-runner/api/persistence/crud), you can `PUT` data as well as form definitions and their attachments.
+
+When `PUT`ting data, Form Runner does a number of checks, including a check for permissions. In the past, in some cases, `PUT`ting data for a non-existent form definition could succeed. This is no longer the case, and you should make sure that the form definition exists before `PUT`ting data.
