@@ -66,7 +66,7 @@ You generate a link containing a token in one of two ways:
 
 ![Share icon and dialog](../images/dialog-share.png)
 
-The dialog allows the user to decide whether to share a readonly link or a read-write link (if the user itself has the "Update" permission). The link can simply be copied with the "Copy link" button.
+The dialog allows the user to decide whether to share a readonly link or a read-write link (if the user itself has the "Update" permission). The link can simply be copied with the "Copy link" icon button.
 
 Links use the `oxf.fr.external-base-url` to specify the external based URL to use: 
 
