@@ -37,6 +37,8 @@ In the example below:
 ### Role types
 
 1. On the _Anyone_ line, set the operations allowed to all users.
+2. [SINCE Orbeon Forms 2023.1] On the _Require Token_ line, 
+3. [SINCE Orbeon Forms 2023.1] On the _Any Authenticated User_ line,
 2. On the _Owner_ line, set the operations allowed to the user who created the data. See also [Owner and Group Member Permissions](../../form-runner/access-control/owner-group.md). [SINCE Orbeon Forms 4.3]
 3. On the _Group members_ line, set the operations allowed to users in the same group as the owner. See also [Owner and Group Member Permissions](../../form-runner/access-control/owner-group.md). [SINCE Orbeon Forms 4.3]
 4. On the following lines, you can enter a role name, and define what operations users with that role can perform.
@@ -129,6 +131,14 @@ For each property, the configuration is a JSON format that follows the layout of
 The configuration is a JSON object with the following properties:
 
 - `anyone`: an array of operations that are allowed for all users
+- `anyone-with-token`:
+    - [SINCE Orbeon Forms 2023.1]
+    - an array of operations that are allowed for users with a link including a token
+    - see [Token-based permissions](/form-runner/access-control/tokens.md)
+- `any-authenticated-user`
+    - [SINCE Orbeon Forms 2023.1]
+    - an array of operations that are allowed for users who are authenticated
+    - this excludes, therefore, anonymous users
 - `owner`: an array of operations that are allowed for the user who created the data
 - `group-member`: an array of operations that are allowed for users in the same group as the owner of the data
 - `roles`: a JSON object with the following properties:
@@ -195,4 +205,5 @@ On the Form Runner Forms page, all the forms on which the current user can perfo
 - [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
     - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
     - [Organization-based permissions](organization.md) – Access based on organizational structure.
+    - [Token-based permissions](tokens.md) - Token-based permissions
 - [Scenarios](scenarios.md)

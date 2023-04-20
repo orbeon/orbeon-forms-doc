@@ -18,3 +18,4 @@ The following pages address specific topics:
 - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
 - [Organization-based permissions](organization.md) – Access based on organizational structure.
 - [Scenarios](scenarios.md)
+- [Token-based permissions](tokens.md) - Token-based permissions

@@ -163,6 +163,7 @@
         * [Owner and group member](form-runner/access-control/owner-group.md)
         * [Organizations](form-runner/access-control/organization.md)
         * [Scenarios](form-runner/access-control/scenarios.md)
+        * [Token-based permissions](form-runner/access-control/tokens.md)
     * Styling
         * [CSS](form-runner/styling/css.md)
         * [Grids CSS](form-runner/styling/grids.md)
