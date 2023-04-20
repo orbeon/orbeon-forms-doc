@@ -79,7 +79,7 @@ When using a [template](/form-builder/template-syntax.md#links) (for an Explanat
 
 ![Linking to a page with a token](../images/control-settings-edit-link-token.png)
 
-### Using the Share dialog
+#### Using the Share dialog
 
 When enabled with the `oxf.fr.navbar.share-button.enable` property, you can use the "Share" icon in the Form Runner navbar. This opens a dialog allowing you to configure and share a link with a token.  
 
