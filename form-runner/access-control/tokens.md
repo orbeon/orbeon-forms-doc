@@ -54,19 +54,22 @@ You must change the default password or Form Runner will generate an error when 
 
 You generate a link containing a token in one of two ways:
 
-1. When using a template (for an Explanation control, label, email, or other), you can choose the "Generate token URL parameter" for "View page" or "Edit page" links.
+1. When using a [template](/form-builder/template-syntax.md#links) (for an Explanation control, label, email, or other), you can choose the "Generate token URL parameter" for "View page" or "Edit page" links.
+
+    ![Linking to a page with a token](../images/control-settings-edit-link-token.png)
+
 2. When enabled with the `oxf.fr.navbar.share-button.enable` property, you can use the "Share" icon in the Form Runner navbar. This opens a dialog allowing you to configure and share a link with a token.  
 
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.navbar.share-button.enable.*.*"
-    value="true"/>
-```
+    ```xml
+    <property
+        as="xs:boolean"
+        name="oxf.fr.navbar.share-button.enable.*.*"
+        value="true"/>
+    ```
+    
+    ![Share icon and dialog](../images/dialog-share.png)
 
-![Share icon and dialog](../images/dialog-share.png)
-
-The dialog allows the user to decide whether to share a readonly link or a read-write link (if the user itself has the "Update" permission). The link can simply be copied with the "Copy link" icon button.
+    The dialog allows the user to decide whether to share a readonly link or a read-write link (if the user itself has the "Update" permission). The link can simply be copied with the "Copy link" icon button.
 
 Links use the `oxf.fr.external-base-url` to specify the external based URL to use: 
 
