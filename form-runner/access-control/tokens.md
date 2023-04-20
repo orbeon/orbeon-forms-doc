@@ -12,6 +12,8 @@ This feature allows you to specify that a user can access form data with readonl
 
 ## Configuration
 
+### Permissions
+
 This feature is not enabled by default. To enable it for a given form, you must set form permissions that include at least one "Require token" permission ("Read" or "Update"), either from Form Builder or using global permission configuration properties.
 
 ![Form Builder Permissions](../images/dialog-permissions-token.png)
@@ -29,6 +31,8 @@ Here is an example of configuration property:
     }
 </property>
 ```
+
+### Password and validity
 
 In addition, a password must be configured for token encryption in your `properties-local.xml`. This is done with the `oxf.fr.access-token.password` property:
 
@@ -52,24 +56,9 @@ For security reasons, by default the validity is set to 0 and tokens will be gen
 
 You must change the default password or Form Runner will generate an error when attempting to use the password. You must also change it to a strong enough password if password strength checks are enabled, see [`oxf.crypto.check-password-strength`](/configuration/properties/general.md#oxf.crypto.check-password-strength).
 
-You generate a link containing a token in one of two ways:
+### Links
 
-1. When using a [template](/form-builder/template-syntax.md#links) (for an Explanation control, label, email, or other), you can choose the "Generate token URL parameter" for "View page" or "Edit page" links.
-
-    ![Linking to a page with a token](../images/control-settings-edit-link-token.png)
-
-2. When enabled with the `oxf.fr.navbar.share-button.enable` property, you can use the "Share" icon in the Form Runner navbar. This opens a dialog allowing you to configure and share a link with a token.  
-
-    ```xml
-    <property
-        as="xs:boolean"
-        name="oxf.fr.navbar.share-button.enable.*.*"
-        value="true"/>
-    ```
-    
-    ![Share icon and dialog](../images/dialog-share.png)
-
-    The dialog allows the user to decide whether to share a readonly link or a read-write link (if the user itself has the "Update" permission). The link can simply be copied with the "Copy link" icon button.
+#### General
 
 Links use the `oxf.fr.external-base-url` to specify the external based URL to use: 
 
@@ -81,6 +70,29 @@ Links use the `oxf.fr.external-base-url` to specify the external based URL to us
 ```
 
 See also [Template syntax - Links](/form-builder/template-syntax.md#links).
+
+You generate a link containing a token in one of two ways, described below.
+
+#### Using templates
+
+When using a [template](/form-builder/template-syntax.md#links) (for an Explanation control, label, email, or other), you can choose the "Generate token URL parameter" for "View page" or "Edit page" links.
+
+![Linking to a page with a token](../images/control-settings-edit-link-token.png)
+
+### Using the Share dialog
+
+When enabled with the `oxf.fr.navbar.share-button.enable` property, you can use the "Share" icon in the Form Runner navbar. This opens a dialog allowing you to configure and share a link with a token.  
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.navbar.share-button.enable.*.*"
+    value="true"/>
+```
+
+![Share icon and dialog](../images/dialog-share.png)
+
+The dialog allows the user to decide whether to share a readonly link or a read-write link (if the user itself has the "Update" permission). The link can simply be copied with the "Copy link" icon button.
 
 ## Token revocation
 
