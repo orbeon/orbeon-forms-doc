@@ -131,7 +131,7 @@ In addition, a password strength checker will also cause an error if the passwor
 
 [SINCE Orbeon Forms 2023.1]
 
-This property enables or disables the password strength checker. The default is `true`.
+This property enables or disables the password strength checker. The default is `true` and enables the checker.
 
 ```xml
 <property
@@ -140,13 +140,13 @@ This property enables or disables the password strength checker. The default is 
     value="true"/>
 ```
 
-WHen this is set to `true`, passwords are checked upon first use for strength. This is a baseline check only. In any case, you should use strong passwords and keep them secret, especially for production use.
+When this is set to `true`, passwords are checked upon first use for strength. This is a baseline check only. In any case, you should use strong passwords and keep them secret, especially for production use.
 
 The following passwords are checked:
 
-- `oxf.crypto.password`
-- `oxf.fr.access-token.password`
-- `oxf.fr.field-encryption.password`
+- [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password)
+- [`oxf.fr.access-token.password`](/form-runner/access-control/tokens.md)
+- [`oxf.fr.field-encryption.password`](/form-builder/field-level-encryption.md)
 
 ### oxf.crypto.key-length
 
