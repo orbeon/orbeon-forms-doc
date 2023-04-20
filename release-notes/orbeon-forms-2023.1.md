@@ -47,3 +47,7 @@ If set, the `oxf.fr.field-encryption.password` property controls a separate encr
 When calling the [CRUD API](/form-runner/api/persistence/crud), you can `PUT` data as well as form definitions and their attachments.
 
 When `PUT`ting data, Form Runner does a number of checks, including a check for permissions. In the past, in some cases, `PUT`ting data for a non-existent form definition could succeed. This is no longer the case, and you should make sure that the form definition exists before `PUT`ting data.
+
+### eXist DB removal
+
+This version of Orbeon Forms removes support for the eXist DB database. use of this database has been deprecated for a long time, and we have not been able to maintain it for a while. If you are using eXist DB, please migrate to a [relational database](/form-runner/persistence/relational-db.md).
