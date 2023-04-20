@@ -39,16 +39,16 @@ Each of those can be a wildcard (`*`). Wildcards allow you to setup Orbeon Forms
 
 The properties are interpreted hierarchically and you may specify the configuration more or less specifically:
 
-Property                                            | Explanation
-----------------------------------------------------|-------------------------------------------------------
-`oxf.fr.persistence.provider.*.*.*`                 | form definitions and form data for all applications
-`oxf.fr.persistence.provider.*.*.data`              | form data for all applications
-`oxf.fr.persistence.provider.*.*.form`              | form definitions for all applications
-`oxf.fr.persistence.provider.orbeon.*.form`         | form definitions for all forms in application "orbeon"
-`oxf.fr.persistence.provider.orbeon.*.data`         | form data for all forms in  application "orbeon"
-`oxf.fr.persistence.provider.orbeon.contact.*`      | form definitions and data for "orbeon/contact"
-`oxf.fr.persistence.provider.orbeon.contact.form`   | form definitions for "orbeon/contact"
-`oxf.fr.persistence.provider.orbeon.contact.data`   | form data for "orbeon/contact"
+| Property                                          | Explanation                                            |
+|---------------------------------------------------|--------------------------------------------------------|
+| `oxf.fr.persistence.provider.*.*.*`               | form definitions and form data for all applications    |
+| `oxf.fr.persistence.provider.*.*.data`            | form data for all applications                         |
+| `oxf.fr.persistence.provider.*.*.form`            | form definitions for all applications                  |
+| `oxf.fr.persistence.provider.orbeon.*.form`       | form definitions for all forms in application "orbeon" |
+| `oxf.fr.persistence.provider.orbeon.*.data`       | form data for all forms in  application "orbeon"       |
+| `oxf.fr.persistence.provider.orbeon.contact.*`    | form definitions and data for "orbeon/contact"         |
+| `oxf.fr.persistence.provider.orbeon.contact.form` | form definitions for "orbeon/contact"                  |
+| `oxf.fr.persistence.provider.orbeon.contact.data` | form data for "orbeon/contact"                         |
 
 _NOTE: This means that you can't name a persistence provider `provider`._
 
@@ -82,15 +82,15 @@ In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use
 
 Each provider supports standard properties, as follows:
 
-Property                                                                                             | Explanation
------------------------------------------------------------------------------------------------------|-------------------------------------------------------
-[`oxf.fr.persistence.[provider].uri`](#property_uri)                                                 | The location, via HTTP, of the provider implementation.
-[`oxf.fr.persistence.[provider].active`](#property_active)                                           | Whether the provider is active
-[`oxf.fr.persistence.[provider].autosave`](#property_autosave)                                       | Whether [autosave](../../form-runner/persistence/autosave.md) is supported.
-[`oxf.fr.persistence.[provider].permissions`](#property_permissions)                                 | Whether user/group permissions are supported
-[`oxf.fr.persistence.[provider].versioning`](#property_versioning)                                   | Whether versioning is supported
-[`oxf.fr.persistence.[provider].data-format-version`](#property_data-format-version)                 | The data format version used in the database
-[`oxf.fr.persistence.[provider].escape-non-ascii-characters`](#property_escape-non-ascii-characters) | Whether non-ASCII characters should be escaped
+| Property                                                                                             | Explanation                                                                 |
+|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| [`oxf.fr.persistence.[provider].uri`](#property_uri)                                                 | The location, via HTTP, of the provider implementation.                     |
+| [`oxf.fr.persistence.[provider].active`](#property_active)                                           | Whether the provider is active                                              |
+| [`oxf.fr.persistence.[provider].autosave`](#property_autosave)                                       | Whether [autosave](../../form-runner/persistence/autosave.md) is supported. |
+| [`oxf.fr.persistence.[provider].permissions`](#property_permissions)                                 | Whether user/group permissions are supported                                |
+| [`oxf.fr.persistence.[provider].versioning`](#property_versioning)                                   | Whether versioning is supported                                             |
+| [`oxf.fr.persistence.[provider].data-format-version`](#property_data-format-version)                 | The data format version used in the database                                |
+| [`oxf.fr.persistence.[provider].escape-non-ascii-characters`](#property_escape-non-ascii-characters) | Whether non-ASCII characters should be escaped                              |
 
 ### <a name="property_uri"></a> `uri` property
 
