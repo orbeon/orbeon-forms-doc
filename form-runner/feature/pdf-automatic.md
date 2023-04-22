@@ -154,6 +154,8 @@ Each position configuration is:
             - the language code can be `"_"` to represent any language
         - each property value is a template string
     - `"visible"`: a formula that determines whether the position is visible
+    - `"css"`: a CSS string that is applied to the position
+        - this is because custom CSS in a separate file doesn't impact positions in PDF headers and footers 
 
 The `"parameters"` property is a JSON object with the following properties:
 
@@ -176,7 +178,11 @@ The `"parameters"` property is a JSON object with the following properties:
             - `"link-to-admin-page"`
             - `"link-to-pdf"` 
     - `"value"`: the required formula (XPath expression) to evaluate, if the type is `"formula"`
-    - `"control-name"`: the required name of the control to use, if the type is `"control-value"`
+    - `"control-name"`: the name of the control to use, if the type is `"control-value"`
+        - either one of `"control-name"` or `"control-css-class"` is required for the type `"control-value"` 
+    - `"control-css-class"`: or the name of a custom CSS class for the control to use, if the type is `"control-value"`
+        - if multiple controls has this CSS class, the first one is used
+        - either one of `"control-name"` or `"control-css-class"` is required for the type `"control-value"`
     - `"format"`: the optional format to use, if the type is `"page-count"` or `"page-number"`
         - defaults to `"decimal"` 
 
