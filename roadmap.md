@@ -13,6 +13,7 @@ Focus:
 - export of form data (possibly import back)
 - history of form data
 - sharing using token-based permissions
+- time-windowed forms
 
 See the tentative [2023.1 items](https://github.com/orbeon/orbeon-forms/projects/43) for details.
 
