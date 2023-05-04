@@ -310,7 +310,7 @@ In addition, each repetition can have an individual [repetition label](/form-bui
 
 [SINCE Orbeon Forms 2022.1]
 
-On the browser, by default, only the HTML for the page of the wizard currently being displayed is present in the DOM. When user switch from to page A to page B, the HTML for page B is loaded and replaces in the DOM the HTML for page A. This makes the initial load of the form faster, as the HTML for just a single page is loaded, and the browser can then process the form more efficiently, having to deal with a much smaller DOM.
+On the browser, by default, only the HTML for the page of the wizard currently being displayed is present in the DOM. When users switch from page A to page B, the HTML for page B is loaded and replaces in the DOM the HTML for page A. This makes the initial load of the form faster, as the HTML for just a single page is loaded, and the browser can then process the form more efficiently, having to deal with a much smaller DOM.
 
 However, should you want to disable this behavior, and have the HTML for all the pages loaded at once, maybe because you have custom JavaScript for which it is convenient to access control values outside the current page, you can do so by setting the following property:
 
