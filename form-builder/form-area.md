@@ -34,7 +34,7 @@ You can perform the following operations on sections.
 
 - Set the section's localizable title by clicking on it. To select a different language, use the language
   selector at the top right of the form area.
-- Delete the section by clicking on the Trashcan icon. If the section contains controls, a confirmation dialog appears.
+- Delete the section by clicking on the trashcan icon. If the section contains controls, a confirmation dialog appears.
 - Set an optional help message for the section by clicking on the help icon. The help is localizable.
 - Set other [section settings](section-settings.md).
 - Open or collapse the section by clicking on the arrow to the left of the section title.
