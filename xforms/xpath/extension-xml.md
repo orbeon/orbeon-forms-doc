@@ -273,11 +273,14 @@ xxf:sort(
     $sort-key   as item(),
     $datatype   as xs:string?,
     $order      as xs:string?,
-    $case-order as xs:string?
+    $case-order as xs:string?,
+    $lang       as xs:string?,
+    $collation  as xs:string?,
+    $stable     as xs:string?
 ) as item()*
 ```
 
-Note that the second argument differs from the `exf:sort()` function: it does not take a plain string but a literal expression, for example:
+The second argument differs from the `exf:sort()` function in that it doesn't take a plain string but a literal expression, for example:
 
 ```xml
 <xf:itemset
@@ -291,3 +294,5 @@ Note that the second argument differs from the `exf:sort()` function: it does no
   ...
 </xf:itemset>
 ```
+
+The last 3 arguments are available since Orbeon Forms 2021.1.9, 2022.1.4, and 2023.1. They follow the XSLT 2.0 semantics for the corresponding attributes of `<xsl:sort>` (see [recommendation](https://www.w3.org/TR/xslt20/#xsl-sort)). Those additional arguments are of particular significance when you need the sorting to follow particular, often language-dependent, rules. For instance, `xxf:sort(//first-name, ., 'text', 'ascending', 'upper-first', 'pl')` sorts the `<first-name>` in the current document according to the rules of the Polish language.
