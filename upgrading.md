@@ -7,23 +7,15 @@ once you've validated the upgrade. Also, before upgrading, we recommend you have
 Once done: 
 
 1. Stop your application server (e.g. Tomcat).
-2. Move your existing Orbeon Forms install to a temporary directory. For instance, with Tomcat, in Tomcat's 
-   `webapps` directory, move any existing `orbeon` folder or `orbeon.war` file out of the way before proceeding. 
-3. Install the new `orbeon.war`. With Tomcat, this is often done by uncompressing the `orbeon.war` into an `orbeon` 
-   directory (`unzip -d orbeon orbeon.war`), and moving the `orbeon` directory inside the Tomcat `webapps` directory.
-4. Restart your application server and test that your clean install works as expected "out of the box", that is 
-   without any of your custom configurations.
-5. Put back configurations you had with your previous installation. Often, the only file you need to modify is 
-   `WEB-INF/resources/config/properties-local.xml`, but you might have created or made changes to other files, such as
-   `WEB-INF/resources/config/form-builder-permissions.xml`, `WEB-INF/resources/config/log4j.xml` or 
-   `WEB-INF/web.xml`.
+2. Move your existing Orbeon Forms install to a temporary directory. For instance, with Tomcat, in Tomcat's `webapps` directory, move any existing `orbeon` folder, as well as the `orbeon.war` file, if present, out of the way before proceeding. 
+3. Install the new `orbeon.war`. With Tomcat, this is often done by uncompressing the `orbeon.war` into an `orbeon` directory (`unzip -d orbeon orbeon.war`), and moving the `orbeon` directory inside the Tomcat `webapps` directory.
+4. Restart your application server and test that your clean install works as expected "out of the box", that is without any of your custom configurations.
+5. Put back configurations you had with your previous installation. Often, the only file you need to modify is `WEB-INF/resources/config/properties-local.xml`, but you might have created or made changes to other files, such as `WEB-INF/resources/config/form-builder-permissions.xml`, `WEB-INF/resources/config/log4j.xml` or `WEB-INF/web.xml`.
 6. Migrate your database if needed.
-    - If you're using the internal eXist and want to keep the forms you created, and corresponding data captured with
-      those forms, you'll want to move the `WEB-INF/exist-data` directory to the new web app.
-    - If using a relational database, you might have to run some upgrade DDL at the database level. Search for 
-      "upgrade" in the [relational database configuration documentation](form-runner/persistence/relational-db.md), 
-      and check if there is some DDL you need to run to upgrade your database schema. This means running the 
-      `*-to-*.sql` DDL files from the older version to the new version. 
+    - If you're using the internal eXist and want to keep the forms you created, and corresponding data captured with those forms, you'll want to move the `WEB-INF/exist-data` directory to the new web app.
+    - If using a relational database, open the page [Using Form Runner with a relational database](form-runner/persistence/relational-db.md), and:
+        - You might have to run some upgrade DDL at the database level. In the page linked above, find the section about the database you are using, and in the table with the DDL, given the version you are upgrading from and the version you are upgrading to, check if there is some DDL you need to run.
+        - Open the "DDL to create from scratch" for the version you are upgrading to, and check that your database has all the indexes mentioned in this file. Make sure to check this, even if you didn't have to run any upgrade DDL.
 7. Restart your application server and test that everything is working as expected with the new version of Orbeon 
    Forms. While, or before doing so, you might also want to review the
    [compatibility notes](#compatibility-notes-for-previous-versions) which might give you some indication of what 
