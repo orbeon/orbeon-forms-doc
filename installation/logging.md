@@ -17,6 +17,7 @@ Due to late 2021 security vulnerabilities with Log4j, and even though Orbeon For
 
 The following versions of Orbeon Forms use Log4j 2.x:
 
+- 2022.1 CE and PE and newer
 - 2021.1 CE and PE and newer
 - 2020.1.6 PE and newer
 - 2019.2.4 PE and newer
