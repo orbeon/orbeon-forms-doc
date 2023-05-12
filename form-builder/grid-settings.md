@@ -10,7 +10,7 @@ See [Section and grid settings](container-settings.md).
 
 ![](images/grid-settings.png)
 
-### Number of grid columns
+### Number of Grid Columns
 
 \[SINCE Orbeon Forms 2020.1\]
 
@@ -26,7 +26,7 @@ The default remains 12 columns. To change to 24 columns, choose the "24" option.
 
 When going from 12 to 24 columns, the grid cells positions and widths are adjusted so that the grid looks the same. Similarly, when going from 24 to 12 columns, the grid cells positions and widths are adjusted so that the grid looks the same. However, if the grid contains controls whose position or width does not allow migrating the grid back to 12 columns, the "12" option is disabled.
 
-### Number of grid rows
+### Number of Grid Rows
 
 [SINCE Orbeon Forms 2021.1]
 
