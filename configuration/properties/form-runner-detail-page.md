@@ -665,6 +665,23 @@ The following property allows disabling Calculated Value formulas in readonly mo
 
 See also [Form Settings](/form-builder/form-settings.md#formulas).
 
+### Grid tab order
+
+[SINCE Orbeon Forms 2023.1]
+
+You can configure the tab order in grids with the following property:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.grid.tab-order.*.*"
+    value="columns"/>
+```
+
+Valid values are 'rows' and 'columns'.
+
+See also [Grid Tab Order](/form-builder/grid-settings.md#grid-tab-order) in the Grid Settings dialog.
+
 ## PDF mode
 
 See [PDF configuration properties](form-runner-pdf.md).

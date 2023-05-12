@@ -64,7 +64,11 @@ Form options include options which apply to the entire form definition.
     - For details, see [Simple data migration](/form-runner/feature/simple-data-migration.md).
 - Automatic Calculations Dependencies
     - [SINCE Orbeon Forms 2018.1]
-    - For details, see [Automatic calculations dependencies](/form-runner/feature/automatic-calculations-dependencies.md). 
+    - For details, see [Automatic calculations dependencies](/form-runner/feature/automatic-calculations-dependencies.md).
+- Grid Tab Order
+    - [SINCE Orbeon Forms 2023.1]
+    - Use property: use the [`oxf.xforms.xbl.fr.grid.tab-order` property](/configuration/properties/form-runner-detail-page.md#grid-tab-order)
+    - For details, see [Grid Tab Order](/form-builder/grid-settings.md#grid-tab-order) in the Grid Settings dialog.
 
 Here is how hints appear depending on the type of control they are associated with:
 

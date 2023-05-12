@@ -34,6 +34,21 @@ The dialog shows the current number of grid rows. This is the "static" number of
 
 See also [Enhancements to grids](https://blog.orbeon.com/2021/09/enhancements-to-repeated-grids.html).
 
+### Grid Tab Order
+
+[SINCE Orbeon Forms 2023.1]
+
+Cells inside a grid can be ordered in two ways:
+
+- By row first, then by column
+- By column first, then by row
+
+Ordering the cells by row is the default behaviour.
+
+Ordering the cells by column impacts the tab order (i.e. the order in which cells are navigated using the tab key) and the order in which the cells are placed on devices with a narrow display (e.g. phones) when all cells are stacked up (responsive relayout).
+
+A default value can be set for all grids in the [Form Settings dialog](/form-builder/form-settings.md#form-options).
+
 ## See also
 
 - [Section and grid settings](container-settings.md)
