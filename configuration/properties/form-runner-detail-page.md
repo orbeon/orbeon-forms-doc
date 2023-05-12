@@ -678,7 +678,7 @@ You can configure the tab order in grids with the following property:
     value="columns"/>
 ```
 
-Valid values are 'rows' and 'columns'.
+Valid values are `rows` and `columns`.
 
 See also [Grid Tab Order](/form-builder/grid-settings.md#grid-tab-order) in the Grid Settings dialog.
 
