@@ -42,6 +42,8 @@ A short label can be configured in the "Short Label" tab. This short label is us
 
 ![](images/section-settings-short-label-2.png)
 
+![](images/section-settings-short-label-3.png)
+
 ### Dynamic label and help message
 
 [SINCE Orbeon Forms 2018.1]
