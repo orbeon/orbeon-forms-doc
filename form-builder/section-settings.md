@@ -38,9 +38,9 @@ The help message is configured in the "Help Message" tab. Similarly, the help me
 
 A short label can be configured in the "Short Label" tab. This short label is used instead of the regular label in the table of contents when using the [wizard view](/form-runner/feature/wizard-view.md).
 
-![](section-settings-short-label-1.png)
+![](images/section-settings-short-label-1.png)
 
-![](section-settings-short-label-2.png)
+![](images/section-settings-short-label-2.png)
 
 ### Dynamic label and help message
 
