@@ -12,7 +12,7 @@ See [Section and grid settings](container-settings.md).
 
 ### Section collapsing
 
-\[SINCE Orbeon Forms 2016.1\]
+[SINCE Orbeon Forms 2016.1]
 
 The following only applies when the form doesn't use the [Wizard view](/form-runner/feature/wizard-view.md).
 
@@ -28,17 +28,25 @@ The "Collapsible" radio buttons control whether the user can collapse and expand
 
 See [Repeat settings](repeat-settings.md).
 
-## Label and help message
+## Label, help message, and short labels
 
 The label can be configured directly in the form area, by clicking on the section title, or in the "Label" tab.
 
 The help message is configured in the "Help Message" tab. Similarly, the help message can be in plain text or use rich text (HTML). 
 
+[SINCE Orbeon Forms 2023.1]
+
+A short label can be configured in the "Short Label" tab. This short label is used instead of the regular label in the table of contents when using the [wizard view](/form-runner/feature/wizard-view.md).
+
+![](section-settings-short-label-1.png)
+
+![](section-settings-short-label-2.png)
+
 ### Dynamic label and help message
 
 [SINCE Orbeon Forms 2018.1]
 
-In most cases, labels and help are simply localized messages without dynamic parts.
+In most cases, labels and help messages are simply localized messages without dynamic parts.
 
 However, sections also support *dynamic* labels and help messages. This means that, instead of being specified once and for all at form design time, labels and help messages can incorporate dynamic parts such as control values and other custom expressions.
 
