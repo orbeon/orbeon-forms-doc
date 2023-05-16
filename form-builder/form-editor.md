@@ -43,7 +43,7 @@ _NOTE: This feature controls the language of the Form Builder user interface onl
 
 ![Form Builder's Top Bar](images/top.png)
 
-## The bottom bar
+## The buttons bar
 
 See [Buttons bar](buttons-bar.md).
 

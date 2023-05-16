@@ -2,11 +2,11 @@
 
 ## Introduction
 
-At the bottom of Form Builder, you have a buttons bar.
+The buttons bar sits at the bottom of the Form Builder screen.
 
 ![The buttons bar](images/buttons-bar.png)
 
-By default, this includes:
+By default, the bar includes the following buttons:
 
 - __"Home"__:
     - Go back to the Form Runner landing page.
@@ -53,6 +53,12 @@ The buttons are configurable with the `oxf.fr.detail.buttons.orbeon.builder` pro
 ```
 
 Buttons combined with the `|` character show as a combined "drop-up" button.
+
+## Messages area
+
+The buttons bar also includes transient messages, which appear in the messages area. Here is an example:
+
+![The buttons bar](images/buttons-bar-message.png)
 
 ## See also 
 
