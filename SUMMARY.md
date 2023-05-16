@@ -48,6 +48,7 @@
     * [Form editor](form-builder/form-editor.md)
         * [Form area](form-builder/form-area.md)
         * [Toolbox](form-builder/toolbox.md)
+        * [Buttons bar](form-builder/buttons-bar.md)
         * [Control settings](form-builder/control-settings.md)
         * [Dependent fields and sections](form-builder/dependent-fields-sections.md)
         * [Validation](form-builder/validation.md)
