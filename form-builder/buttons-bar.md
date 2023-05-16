@@ -12,7 +12,7 @@ By default, this includes:
     - Go back to the Form Runner landing page.
     - If the current form is not saved, you will be prompted to save it.
 - __Summary"__:
-    - Go back to the Form Builder Summary page.
+    - Go back to the [Form Builder Summary page](summary-page.md).
     - If the current form is not saved, you will be prompted to save it.
 - __New"__:
     - Close the current form and create a new one.
@@ -41,7 +41,7 @@ By default, this includes:
 The buttons are configurable with the `oxf.fr.detail.buttons.orbeon.builder` property. The default value is, for Orbeon Forms 2023.1 PE:
 
 ```xml
-<property as="xs:string"  name="oxf.fr.detail.buttons.orbeon.builder">
+<property as="xs:string" name="oxf.fr.detail.buttons.orbeon.builder">
     home
     summary
     new
@@ -51,3 +51,11 @@ The buttons are configurable with the `oxf.fr.detail.buttons.orbeon.builder` pro
     save
 </property>
 ```
+
+Buttons combined with the `|` character show as a combined "drop-up" button.
+
+## See also 
+
+- [Form editor](form-editor.md)
+- [Form area](form-area.md)
+- [Toolbox](toolbox.md)

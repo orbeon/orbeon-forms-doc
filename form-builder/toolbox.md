@@ -289,6 +289,9 @@ The autocomplete control is a single item selection control that loads a list of
 
 ## See also
 
+- [Form editor](form-editor.md)
+- [Form area](form-area.md)
+- [Buttons bar](buttons-bar.md)
 - [Section templates](section-templates.md)
 - [Documented XBL components](../form-runner/component/README.md)
 - [XBL components](../xforms/xbl/README.md)

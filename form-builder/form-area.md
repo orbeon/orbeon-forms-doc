@@ -195,6 +195,9 @@ This mechanism is how you edit:
 
 - Blog post: [The 12-column layout](https://blog.orbeon.com/2018/05/the-12-column-layout.html)
 - Blog post: [Resizing cells with drag & drop in Form Builder](https://blog.orbeon.com/2018/10/resizing-cells-with-drag-drop-in-form.html)
+- [Form editor](form-editor.md)
+- [Toolbox](toolbox.md)
+- [Buttons bar](buttons-bar.md)
 - [Section settings](section-settings.md)
 - [Repeated grids](repeated-grids.md)
 - [Responsive design](../form-runner/feature/responsive-design.md)

@@ -45,19 +45,7 @@ _NOTE: This feature controls the language of the Form Builder user interface onl
 
 ## The bottom bar
 
-### Buttons
-
-The bottom bar of Form Builder shows the following buttons:
-
-* **Summary button.** Takes you to the [Form Builder Summary page](../form-builder/summary-page.md).
-    * If the form has unsaved changes, a warning dialog shows first.
-    * Otherwise, the window/tab closes and takes you back to the Form Builder summary page.
-* **New button.** Create a new form.
-* **Test button.** Test the current form. If the form contains errors, this button is disabled.
-* **Publish button.** Publish the current form. If the form contains errors or has unsaved changes, this button is disabled. You must fix errors and save the form before you can publish it.
-* **Save button.** Save the form to the database.
-
-![Form Builder's Bottom Bar](images/bottom.png)
+See [Buttons bar](buttons-bar.md).
 
 ## Keyboard shortcuts
 
@@ -76,3 +64,9 @@ All operating systems:
 ### Other functions
 
 In addition, the bottom bar displays status information, such as whether the current form definition was successfully saved.
+
+## See also
+
+- [Form area](form-area.md)
+- [Toolbox](toolbox.md)
+- [Buttons bar](buttons-bar.md)
