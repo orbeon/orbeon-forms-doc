@@ -23,7 +23,8 @@ By default, the bar includes the following buttons:
     - XML Export: export the form in "XML with metadata" format
         - This is an Orbeon Forms PE feature. 
     - XHTML Export
-        - export the form definition in XHTML+XForms format
+        - Export the form definition in XHTML+XForms format (the Orbeon Forms form definition format).
+        - This produces a file with the same content shown by the ["Edit Source" dialog](edit-source.md).
         - [SINCE Orbeon Forms 2023.1] 
 - __Test functions"__: 
     - Test: open the form in test mode
