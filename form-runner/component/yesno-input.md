@@ -17,6 +17,10 @@ This control is generally recommended over the [Checkbox Input Component](checkb
 - A "Yes/No" choice is usually clearer to the user.
 - The control can be marked as "Required", in which case he user has to make a selection to pass validation. With a single checkbox, it is easier to miss making a selection.
 
+[SINCE Orbeon Forms 2023.1]
+
+A "Clear value" button is available in Form Builder to clear the value of the control without editing the source of the form definition or recreating the control.
+
 ## Basic usage
 
 You use `fr:yesno-input` like a regular XForms controls. Example:
