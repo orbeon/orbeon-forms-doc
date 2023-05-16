@@ -58,7 +58,7 @@ Buttons combined with the `|` character show as a combined "drop-up" button.
 
 The buttons bar also includes transient messages, which appear in the messages area. Here is an example:
 
-![The buttons bar](images/buttons-bar-message.png)
+![The buttons bar with a status message](images/buttons-bar-message.png)
 
 ## See also 
 
