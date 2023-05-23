@@ -197,6 +197,19 @@ See [Upload control events](../events-extensions-events.md#upload-control-events
 
 _NOTE: `xforms-select` is no longer dispatched when a file is selected._
 
+## Empty files
+
+[SINCE Orbeon Forms 2023.1]
+
+By default, empty uploaded files are rejected. This behavior can be changed using the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.upload.reject-empty-files"
+    value="false"/>
+```
+
 [3]: https://www.ietf.org/rfc/rfc2045.txt
 [4]: ../../xml-platform/processors/url-generator.md
 [5]: https://html.spec.whatwg.org/multipage/forms.html#file-upload-state-(type=file)
