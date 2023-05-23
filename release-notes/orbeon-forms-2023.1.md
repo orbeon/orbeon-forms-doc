@@ -51,3 +51,7 @@ When `PUT`ting data, Form Runner does a number of checks, including a check for 
 ### eXist DB removal
 
 This version of Orbeon Forms removes support for the eXist DB database. use of this database has been deprecated for a long time, and we have not been able to maintain it for a while. If you are using eXist DB, please migrate to a [relational database](/form-runner/persistence/relational-db.md).
+
+### Uploading empty files
+
+Starting with 2023.1, uploaded files that are empty are rejected out-of-the-box. Should you need to accept such files in your forms, you can [set a property to allow them](/xforms/controls/upload.md#empty-files).
