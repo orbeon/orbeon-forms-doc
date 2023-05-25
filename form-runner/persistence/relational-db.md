@@ -537,7 +537,7 @@ The single schema configuration described in the previous section uses the prede
     <property
         as="xs:string"
         name="oxf.fr.persistence.finance.datasource"
-        value="fiance-datasource"/>
+        value="finance-datasource"/>
     ```
 3. Still in `properties-local.xml`, you map the `hr` and `finance` app to the respective provider:
 
