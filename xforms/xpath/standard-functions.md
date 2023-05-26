@@ -62,7 +62,7 @@ For more information, see [Trigonometric and exponential functions](https://www.
 
 [SINCE Orbeon Forms 2020.1]
 
-This function returns the value the specified environment variable. Before using this function, you'll want to set the [`oxf.xpath.environment-variable.enabled` property](/configuration/properties/general.md#oxf-xpath-environment-variable-enabled) to `true`. If that property isn't set to true, or the variable isn't defined, or the Java security doesn't allow access to environment variables, then the function returns an empty sequence. 
+This function returns the value of the specified environment variable. Before using this function, you'll want to set the [`oxf.xpath.environment-variable.enabled` property](/configuration/properties/general.md#oxf-xpath-environment-variable-enabled) to `true`. If that property isn't set to true, or the variable isn't defined, or the Java security doesn't allow access to environment variables, then the function returns an empty sequence. 
 
 ```xpath
 environment-variable('SERVICE_HOST')
