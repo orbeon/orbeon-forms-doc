@@ -266,6 +266,7 @@ By default, the PDF is output with most colors removed and a black-and-white sch
 - [PDF Templates](pdf-templates.md)
 - [PDF configuration properties](/configuration/properties/form-runner-pdf.md)
 - [Testing PDF production](/form-builder/pdf-test.md)
+- [Automatic PDF styling and CSS](/form-runner/styling/automatic-pdf.md)
 - [TIFF Production](/form-runner/feature/tiff-production.md)
 - [Sending PDF and TIFF content: Controlling the format](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)
 - Blog post: [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)

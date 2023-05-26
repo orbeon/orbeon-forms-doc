@@ -1,4 +1,4 @@
-# Automatic PDF
+# Automatic PDF styling and CSS
 
 ## Context
 
@@ -83,5 +83,6 @@ You can influence the content of the top and bottom parts of the PDF by overridi
 
 ## See also
 
+- [Automatic PDF Header and footer configuration](/form-runner/feature/pdf-automatic.md#header-and-footer-configuration)
 - [CSS](css.md)
 - [Grids CSS](grids.md)
