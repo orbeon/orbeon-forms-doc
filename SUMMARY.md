@@ -168,7 +168,7 @@
     * Styling
         * [CSS](form-runner/styling/css.md)
         * [Grids CSS](form-runner/styling/grids.md)
-        * [Automatic PDF](form-runner/styling/automatic-pdf.md)
+        * [Automatic PDF styling and CSS](form-runner/styling/automatic-pdf.md)
     * [APIs](form-runner/api/README.md)
         * [Authentication of server-side service APIs](form-runner/api/authentication.md)
         * [Persistence API](form-runner/api/persistence/README.md)
