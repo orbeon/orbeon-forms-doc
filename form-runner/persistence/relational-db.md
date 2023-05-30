@@ -544,7 +544,7 @@ The single schema configuration described in the previous section uses the prede
     ```xml
     <property
         as="xs:string"
-        name="oxf.fr.persistence.provider.hr.*.*"      
+        name="oxf.fr.persistence.provider.hr.*.*"
         value="hr"/>
     <property
         as="xs:string"

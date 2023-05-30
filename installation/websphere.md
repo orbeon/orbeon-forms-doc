@@ -74,5 +74,5 @@ To setup a JDBC, for instance here for Oracle:
 4. **Setup Form Runner** – If you're doing this setup so Form Runner (i.e. the forms you create with Form Builder) stores data in a relational database, then you also need to add the following property to instruct Form Runner to use the appropriate persistence implementation. The value of the property will typically be `oracle`, `mysql`, or `db2`.
 
     ```xml
-    <property as="xs:string"  name="oxf.fr.persistence.provider.*.*.*" value="oracle"> `
+    <property as="xs:string" name="oxf.fr.persistence.provider.*.*.*" value="oracle">
     ```

@@ -34,16 +34,16 @@ example:*
 
 ```xml
 <required>
-    <label>Richiesto</label>
-    <hint>Se è necessario immettere i dati</hint>
-    <item>
-        <label>Sì</label>
-        <value>true</value>
-    </item>
-    <item>
-        <label>No</label>
-        <value>false</value>
-    </item>
+    <label>Richiesto</label>
+    <hint>Se è necessario immettere i dati</hint>
+    <item>
+        <label>Sì</label>
+        <value>true</value>
+    </item>
+    <item>
+        <label>No</label>
+        <value>false</value>
+    </item>
 </required>
 ```
 
@@ -52,9 +52,9 @@ update the following property in your `properties-local.xml`:
 
 ```xml
 <property
-    as="xs:string"
-    name="oxf.fr.available-languages.orbeon.builder"
-    value="en fr it"/>
+    as="xs:string"
+    name="oxf.fr.available-languages.orbeon.builder"
+    value="en fr it"/>
 ```
 
 By default, Orbeon Forms 4.0 sets it to `en fr`. The updated property at
