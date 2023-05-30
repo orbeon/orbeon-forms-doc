@@ -313,7 +313,7 @@ For example, if you need two different base directories for the Form Runner apps
 
 ### Dynamic base directory configuration
 
-In addition to static paths, you can also use an [AVT](/xforms/core/attribute-value-templates.md) to dynamically configure the base directory. For instance, the following would use a base directory specified by an environment variable:
+In addition to static paths, you can also use an [AVT](/xforms/attribute-value-templates.md) to dynamically configure the base directory. For instance, the following would use a base directory specified by an environment variable:
 
 ```xml
 <property
