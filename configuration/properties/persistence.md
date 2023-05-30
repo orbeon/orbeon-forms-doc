@@ -266,6 +266,64 @@ Add:
 Each provider may have specific configuration properties. For the latest settings, see
 [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml#L17).
 
+## Attachments
+
+[SINCE Orbeon Forms 2023.1]
+
+By default, attachments are stored in the database. You can configure Form Runner to store attachments in the file system instead. This is useful for larger attachments, for example. You can do so globally by setting the following property:
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.fr.persistence.provider.*.*.*.attachments"
+    value="filesystem"/>
+```
+
+The base directory where attachments are stored is configured with:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.filesystem.directory"
+    value="/path/to/attachments"/>
+```
+
+### Multiple attachment directories
+
+Multiple attachment directories can be configured, following the same principles as described [above](#multiple-databases-of-the-same-type)
+
+For example, if you need two different base directories for the Form Runner apps `foo` and `bar`, you can do so by using the following properties:
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.fr.persistence.provider.foo.*.*.attachments"
+    value="filesystem_foo"/>
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.bar.*.*.attachments"
+    value="filesystem_bar"/>
+
+<property as="xs:anyURI" name="oxf.fr.persistence.filesystem_foo.uri"       value="/fr/service/filesystem"/>
+<property as="xs:string" name="oxf.fr.persistence.filesystem_foo.directory" value="/path/to/foo_attachments"/>
+
+<property as="xs:anyURI" name="oxf.fr.persistence.filesystem_bar.uri"       value="/fr/service/filesystem"/>
+<property as="xs:string" name="oxf.fr.persistence.filesystem_bar.directory" value="/path/to/bar_attachments"/>
+```
+
+### Dynamic base directory configuration
+
+In addition to static paths, you can also use an [AVT](/xforms/core/attribute-value-templates.md) to dynamically configure the base directory. For instance, the following would use a base directory specified by an environment variable:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.filesystem.directory"
+    value="{environment-variable('ATTACHMENTS_BASE_DIRECTORY')}"/>
+```
+
+Note that, specifically in the context of the `oxf.fr.persistence.*.directory` property, it is not necessary to set `oxf.xpath.environment-variable.enabled` to true in order to use the `environment-variable()` function.
+
 ## See also
 
 - [Form Runner persistence API](/form-runner/api/persistence/README.md)
