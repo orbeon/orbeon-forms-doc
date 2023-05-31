@@ -25,6 +25,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.3 PE
     - Uploading a file of zero bytes causes an error (again) ([\#5827](https://github.com/orbeon/orbeon-forms/issues/5827))
     - French message for upload scan error shows "dun" instead of "d'un" and the placeholder may not be replaced ([\#5823](https://github.com/orbeon/orbeon-forms/issues/5823))
     - Readonly grid shows incorrectly ([\#5743](https://github.com/orbeon/orbeon-forms/issues/5743))
+    - Minimal read-write repeated grid doesn't show properly ([\#5840](https://github.com/orbeon/orbeon-forms/issues/5840))
     - Server sends date with timezone to client for date field ([\#5822](https://github.com/orbeon/orbeon-forms/issues/5822))
     - Dynamic Dropdown with Search doesn't show initial value in `/view` and PDF ([\#5806](https://github.com/orbeon/orbeon-forms/issues/5806))
     - Element bound to a dynamic dropdown with search to NOT always have a `@label` ([\#5816](https://github.com/orbeon/orbeon-forms/issues/5816))
