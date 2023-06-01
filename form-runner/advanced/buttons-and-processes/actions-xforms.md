@@ -90,7 +90,7 @@ Examples:
 ```xpath
 xf:insert(
     into  = "xxxx",
-    orign = "xxxx"
+    origin = "xxxx"
 )
 ```
 
