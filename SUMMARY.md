@@ -132,6 +132,7 @@
         * [Supported languages](form-runner/feature/supported-languages.md)
         * [Mobile support](form-runner/feature/mobile.md)
         * [Multitenancy](form-runner/feature/multitenancy.md)
+        * [Form Runner navigation bar](form-runner/feature/navbar.md)
         * [PDF production](form-runner/feature/pdf-production.md)
             * [Automatic PDF](form-runner/feature/pdf-automatic.md)
             * [PDF templates](form-runner/feature/pdf-templates.md)
