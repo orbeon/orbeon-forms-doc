@@ -4,6 +4,8 @@
 
 The Form Runner navigation bar shows at the top of the page when Orbeon Forms is not [embedded](/form-runner/link-embed/README.md) within another application.
 
+![Form Runner navigation bar](../images/navbar.png)
+
 It features the following elements:
 
 - The logo, which can be customized
