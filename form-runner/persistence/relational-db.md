@@ -41,11 +41,11 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 
 [oracle-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/oracle-2019_1.sql
 [oracle-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2018.2/oracle-2018_2.sql
-[oracle-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2017.2oracle-2017_2.sql
+[oracle-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2017.2/oracle-2017_2.sql
 [oracle-2017_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2017.1/oracle-2017_1.sql
 [oracle-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.3/oracle-2016_3.sql
 [oracle-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.2/oracle-2016_2.sql
-[oracle-4_10.sql]:   https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.10.oracle-4_10.sql
+[oracle-4_10.sql]:   https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.10/oracle-4_10.sql
 [oracle-4_6.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.6/oracle-4_6.sql
 [oracle-4_5.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.5/oracle-4_5.sql
 [oracle-4_4.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.4/oracle-4_4.sql
