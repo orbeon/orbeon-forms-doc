@@ -14,13 +14,18 @@ Orbeon Forms uses caches for the following purposes:
     - [SINCE Orbeon Forms 2023.1]
     - This is a true cache, which doesn't need to be replicated.
 
-## Cache implementations
+## Supported cache implementations
 
-Until Orbeon Forms 2022.1.x, Orbeon Forms uses Ehcache 2.x. This cache library also supports [replication](replication.md).
+Orbeon Forms has traditionally used Ehcache 2.x. In recent versions, JCache API (JSR-107) support has been added.
 
-Since Orbeon Forms 2021.1.9 PE, 2022.1.5 PE, and 2023.1, Orbeon Forms includes JCache API (JSR-107) support, so that other cache implementations can be used.
-
-With Orbeon Forms 2021.1.9 PE, 2022.1.5 PE, JCache is disabled by default and Ehcache 2.x is still used by default.
+| Orbeon Forms Version | Ehcache 2.x Support | JCache Support | Default     |
+|----------------------|---------------------|----------------|-------------|
+| 2023.1 and newer     | Yes                 | Yes            | Ehcache 2.x |
+| 2022.1.5 and newer   | Yes                 | Yes            | Ehcache 2.x |
+| 2021.1.9 and newer   | Yes                 | Yes            | Ehcache 2.x |
+| 2022.1.4 and earlier | Yes                 | No             | Ehcache 2.x |
+| 2021.1.8 and earlier | Yes                 | No             | Ehcache 2.x |
+| 2020.1 and earlier   | Yes                 | No             | Ehcache 2.x |
 
 ## Using the default Ehcache 2.x configuration
 
@@ -37,7 +42,7 @@ An internal `ehcache.xml` configuration file is used. Here is the [file as of Or
 
 You can update that configuration by placing your own `ehcache.xml` file in the `WEB-INF/resources/config` directory of your web app. This is rarely needed, except for enabling [replication](replication.md).
 
-## Enabling JCache support
+## Enabling JCache providers
 
 With the Orbeon Forms versions that support it, you can enable JCache support with the following:
 
