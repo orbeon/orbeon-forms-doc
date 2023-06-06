@@ -323,6 +323,7 @@
     * [State handling](contributors/state-handling.md)
     * [Contributor License Agreement](contributors/cla.md)
 * Release notes
+    * [Orbeon Forms 2021.1.9](/release-notes/orbeon-forms-2021.1.9.md)
     * [Orbeon Forms 2022.1.4](/release-notes/orbeon-forms-2022.1.4.md)
     * [Orbeon Forms 2022.1.3](/release-notes/orbeon-forms-2022.1.3.md)
     * [Orbeon Forms 2021.1.8](/release-notes/orbeon-forms-2021.1.8.md)
