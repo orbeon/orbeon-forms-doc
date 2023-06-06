@@ -25,7 +25,7 @@ Orbeon Forms has traditionally used Ehcache 2.x. In recent versions, JCache API 
 | 2021.1.9 and newer   | Yes                 | Yes            | Ehcache 2.x |
 | 2022.1.4 and earlier | Yes                 | No             | Ehcache 2.x |
 | 2021.1.8 and earlier | Yes                 | No             | Ehcache 2.x |
-| 2020.1 and earlier   | Yes                 | No             | Ehcache 2.x |
+| 2020.1.x and earlier | Yes                 | No             | Ehcache 2.x |
 
 ## Using the default Ehcache 2.x configuration
 
