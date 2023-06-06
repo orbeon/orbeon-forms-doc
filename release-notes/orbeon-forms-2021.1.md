@@ -102,6 +102,8 @@ As of Orbeon Forms 2021.1, there are limitations, including the following:
 - Performance needs some improvements.
 - There is no XML Schema support for datatype validation (although this is rarely used).
 
+For details, see [Offline test](/form-builder/offline-test.md).
+
 ### Inspection of formulas
 
 With Orbeon Forms, formulas are very important: they are used for calculating values, making parts of the form visible or readonly, and more. However, they can be difficult to debug, and so far Form Builder didn't have a way to show all formulas in a central location.
@@ -375,3 +377,7 @@ The `save-draft` button is now called `save-progress`. The button label is also 
 The `save-draft` button remains for backward compatibility. By default, it calls the `process("save-progress")` process.
 
 We recommend that you review whether you have customized the `save-draft` process and/or button resources in your `properties-local.xml` and update them to the new name as needed,
+
+### Use of `model` and `xxbl:scope` on `<xf:output>`
+
+xxx
