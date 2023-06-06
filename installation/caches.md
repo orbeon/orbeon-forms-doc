@@ -53,7 +53,7 @@ When this is set to `jcache`, Orbeon Forms uses the *default caching provider* a
 You can further specify the configuration to use with the following properties:
 
 ```xml
-<property as="xs:string"  name="oxf.xforms.cache.resource" value="/ehcache3.xml"/>
+<property as="xs:string"  name="oxf.xforms.cache.resource" value=""/>
 <property as="xs:string"  name="oxf.xforms.cache.uri"      value=""/>
 ```
 
@@ -62,7 +62,16 @@ You can further specify the configuration to use with the following properties:
 
 The `resource` property is checked first, then the `uri` property. A blank property is ignored.
 
-In the example above, an Ehcache 3.x configuration file is provided. If you are using a different JCache-compatible implementation, you might have to change the `oxf.xforms.cache.resource` and/or `oxf.xforms.cache.uri` properties.
+For example, to point to the built-in Ehcache 3.x configuration, set:
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.xforms.cache.resource" 
+    value="/ehcache3.xml"/>
+```
+
+If you are using a different JCache-compatible implementation, different values for the `oxf.xforms.cache.resource` and/or `oxf.xforms.cache.uri` properties might be needed.
 
 ## See also
 
