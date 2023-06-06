@@ -8,6 +8,7 @@
     * [WebSphere](installation/websphere.md)
     * [WebLogic](installation/weblogic.md)
     * [GlassFish](installation/glassfish.md)
+    * [Orbeon Forms Caches](installation/caches.md)
     * [Replication](installation/replication.md)
     * [Upgrading](upgrading.md)
 * Configuration

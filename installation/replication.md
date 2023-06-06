@@ -2,7 +2,7 @@
 
 ## Availability
 
-This is an [Orbeon Forms PE][1] feature.
+This is an [Orbeon Forms PE](https://www.orbeon.com/download) feature.
 
 This feature is available since Orbeon Forms 2017.2. It has been tested with the following software:
 
@@ -337,7 +337,7 @@ Ajax response has been sent to the client, then state might be lost. The user is
 to another server, but state will be missing from that server. In such cases, the user will see an error, and won't
 be able to continue working with the form. Unsaved data will be lost.
 
-In such cases, enabling the [autosave feature][2] can alleviate the issue.
+In such cases, enabling the [autosave feature](/form-runner/persistence/autosave.md) can alleviate the issue.
 
 The `ehcache.xml` configuration provided above attempts to minimize this kind of issues by adding `replicateAsynchronously=false`.
 
@@ -346,8 +346,6 @@ _NOTE: We have feedback from customers that if manual peer discovery (RMI TCP un
 ## See also
 
 - [Installation](README.md)
+- [Orbeon Forms Caches](caches.md)
 - Blog post: [High-Availability Thanks to State Replication](https://blog.orbeon.com/2018/03/high-availability-thanks-to-state.html)
 - [Clustering and High Availability](../configuration/advanced/clustering.md)
-
-[1]: https://www.orbeon.com/download
-[2]: ../form-runner/persistence/autosave.md
