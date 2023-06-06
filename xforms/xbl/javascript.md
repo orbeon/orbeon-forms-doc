@@ -240,8 +240,6 @@ The `init()` method is not new in Orbeon Forms 2016.1, but when using the `javas
 
 ### With Orbeon Forms 2016.1 and newer
 
-xxxx clarify that we actually don't want to use this, but the `init()` method instead!!!
-
 You can call a JavaScript method defined in your JavaScript class when an XForms event occurs. For example, to call the `myFunction()` method on `xxforms-visible`, write:
 
 ```xml
