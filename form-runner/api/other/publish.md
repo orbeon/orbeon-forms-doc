@@ -57,6 +57,14 @@ The following URL parameters apply in both cases:
     - when `true` or missing: make or keep the form definition available
 - `version-comment`:
     - when present, a [versioning comment](../../../form-builder/publishing.md#versioning-comments) to store with the form definition
+- `upgrade-form-definition`:
+    - when `true` or missing: upgrade the form definition 
+    - when `false`: do not upgrade the form definition
+    - This should usually be `true` or missing, in order to allow:
+        - form definition update to the latest format
+        - inclusion of data migration information
+        - embedding of section templates
+    - See also [Upgrading form definitions](https://doc.orbeon.com/form-runner/features/home-page#upgrading-form-definitions).
 
 Response body:
 
