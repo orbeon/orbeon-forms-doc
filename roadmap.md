@@ -6,14 +6,15 @@
 
 Focus:
 
+- revision history of form data
+- sharing using token-based permissions
 - configurable PDF headers and footer
 - Excel and XML exports from the Summary page
-- action for copying controls ([doc](/form-builder/actions-syntax.md#copying-control-content))
 - purging of old data in the database
-- export of form data (possibly import back)
-- history of form data
-- sharing using token-based permissions
+- action for copying controls ([doc](/form-builder/actions-syntax.md#copying-control-content))
+- bulk export of form definitions and form data (possibly import back)
 - time-windowed forms
+- usability improvements
 
 See the tentative [2023.1 items](https://github.com/orbeon/orbeon-forms/projects/43) for details.
 
