@@ -377,3 +377,26 @@ The older way to associate companion classes, without the `javascript-lifecycle`
 #### Removal of `xxbl:parameter()`
 
 The `xxbl:parameter()` XSLT function has been removed in this version of Orbeon Forms.
+
+### Return value of fr:workflow-stage-value() and other functions 
+
+The documentation for the following functions stated that an empty sequence was returned in some cases, but the implementation was not correct and returned an empty string instead. Starting with Orbeon Forms 2022.1, the implementation is correct and returns an empty sequence when appropriate. This affects the following functions:
+
+- `document-id()`
+- `form-title()`
+- `workflow-stage-value()`
+- `username()`
+- `user-group()`
+- `wizard-current-page-name()`
+
+Usually this change does not cause any problems. However, in some cases, the result can be different. For example the following condition:
+
+```xpath
+fr:workflow-stage-value() != 'foo'
+```
+
+This would work before Orbeon Forms 2022.1 and return `true()` when no workflow stage was set. However, with Orbeon Forms 2022.1, this will return `false()` because when no workflow is set, the function returns an empty sequence, and comparing an empty sequence with anything always returns `false()`. Instead, the formula above must be written as:
+
+```xpath
+not(fr:workflow-stage-value() = 'foo')
+```
