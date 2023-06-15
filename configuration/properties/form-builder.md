@@ -164,6 +164,8 @@ The value of this property is an array of strings in the JSON format. For instan
 
 ![Permissions dialog with Organization Owner role](../images/fb-permissions-organization-owner.png)
 
+See also [Access control for deployed forms](/form-runner/access-control/deployed-forms.md).
+
 ## Access control 
 
 If you'd like to have multiple classes of Form Builder users where some can edit, say, forms in the `hr` app, while others can edit forms in the `sales` app, see [Access control for editing forms](../../form-runner/access-control/editing-forms.md#form-builder-permissions).
