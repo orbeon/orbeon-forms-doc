@@ -382,12 +382,12 @@ The `xxbl:parameter()` XSLT function has been removed in this version of Orbeon 
 
 The documentation for the following functions stated that an empty sequence was returned in some cases, but the implementation was not correct and returned an empty string instead. Starting with Orbeon Forms 2022.1, the implementation is correct and returns an empty sequence when appropriate. This affects the following functions:
 
-- `document-id()`
-- `form-title()`
-- `workflow-stage-value()`
-- `username()`
-- `user-group()`
-- `wizard-current-page-name()`
+- `fr:document-id()`
+- `fr:form-title()`
+- `fr:workflow-stage-value()`
+- `fr:username()`
+- `fr:user-group()`
+- `fr:wizard-current-page-name()`
 
 Usually this change does not cause any problems. However, in some cases, the result can be different. For example the following condition:
 
