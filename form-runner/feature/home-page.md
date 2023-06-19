@@ -4,7 +4,7 @@
 
 The Form Runner Home page is a start page for accessing forms deployed in Form Runner.
 
-You access the Form Runner Home page by adding `fr/` to the path on which you deployed Orbeon Forms. If you deployed Orbeon Forms on `http://www.example.com/orbeon/`, then you can access the From Runner home page at `http://www.example.com/orbeon/fr/`.
+You access the Form Runner Home page by adding `fr/` to the path on which you deployed Orbeon Forms. If you deployed Orbeon Forms on `http://www.example.com/orbeon/`, then you can access the Form Runner home page at `http://www.example.com/orbeon/fr/`.
 
 ## User and admin views
 
