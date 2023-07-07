@@ -255,7 +255,7 @@ With Tomcat, this is done in `server.xml` within the `<Engine>` element:
 In that configuration, the following can be changed:
 
 - the IP multicast address, here `address="228.0.0.4"`
-- the IP multicast port, here `port="45564`
+- the IP multicast port, here `port="45564"`
 
 For details about the Tomcat configuration, see [Clustering/Session Replication HOW-TO](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html).
 
