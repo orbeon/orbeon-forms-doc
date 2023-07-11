@@ -319,6 +319,32 @@ Explanation:
     - so you get a sequence containing only the current value of the field
     - we take the first value of that sequence, so we get the current value of the control
 
+## Testing the values of a checkbox 
+
+Say:
+
+- a Checkboxes control is needed named `my-checkboxes`
+- the Checkboxes control contains several choices, including two choices with values `foo` and `bar`
+- you'd like to show another control if `my-checkboxes` has either `foo` or `bar` selected
+
+```xpath
+xxf:split($my-checkboxes) = ('foo', 'bar')
+```
+
+This works because:
+
+- `$my-checkboxes` refers to the XML element containing the checkbox values as a space-separated list of tokens, such as:
+    - ""
+    - "foo"
+    - "bar"
+    - "foo bar"
+    - "baz foo bar"
+    - etc. if you have more values
+- the `xxf:split()` function splits that value on spaces and returns an XPath sequence of string tokens
+- the `=` comparison will return `true()` if at least one value matches another value on the other side
+
+So in the end that formula returns `true()` if the field `my-checkboxes` has the `foo` or `bar` value selected.
+
 ## Constraint the number of selected checkboxes
 
 Scenario: For a given set of checkboxes, make sure the number of selected checkboxes is at most 3.
