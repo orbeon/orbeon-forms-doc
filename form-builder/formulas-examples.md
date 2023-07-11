@@ -331,7 +331,7 @@ Say:
 xxf:split($my-checkboxes) = ('foo', 'bar')
 ```
 
-This works because:
+Explanation:
 
 - `$my-checkboxes` refers to the XML element containing the checkbox values as a space-separated list of tokens, such as:
     - ""
