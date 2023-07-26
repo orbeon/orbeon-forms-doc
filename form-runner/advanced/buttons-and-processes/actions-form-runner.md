@@ -171,10 +171,12 @@ In most cases you'll want to use this action in conjunction with [`navigate`](#n
 - `success-message`: show a success message
     - parameters
         - `message`: message to show (is an XPath value template)
+        - `html`: [SINCE Orbeon Forms 2023.1] `"true"` if the message is HTML (default is `"false"`)
         - `resource`: resource key pointing to the message
 - `error-message`: show an error message
     - parameters
         - `message`: message to show (is an XPath value template)
+        - `html`: [SINCE Orbeon Forms 2023.1] `"true"` if the message is HTML (default is `"false"`)
         - `resource`: resource key pointing to the message
         - `appearance`: [SINCE Orbeon Forms 2021.1] This parameter is optional. If present, the value must be either `dialog` or `ephemeral`. If missing, the `dialog` is implied.
             - `dialog`: the message is shown in the modal dialog
@@ -192,6 +194,7 @@ Show a confirmation dialog. If the user selects "No", the current process is abo
 
 - parameters
     - `message`: message to show (is an XPath value template)
+    - `html`: [SINCE Orbeon Forms 2023.1] `"true"` if the message is HTML (default is `"false"`)
     - `resource`: resource key pointing to the message
 
 Example of use:
