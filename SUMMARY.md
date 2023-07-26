@@ -79,6 +79,7 @@
         * [Testing PDF production](form-builder/pdf-test.md)
         * [Email settings](form-builder/email-settings.md)
         * [Field-level encryption](form-builder/field-level-encryption.md)
+        * [Messages](form-builder/messages.md)
         * [Offline test](form-builder/offline-test.md)
         * [Section templates](form-builder/section-templates.md)
         * [Template syntax](form-builder/template-syntax.md)
