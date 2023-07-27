@@ -202,6 +202,7 @@
             * [Form Runner actions](form-runner/advanced/buttons-and-processes/actions-form-runner.md)
                 * [Save action](form-runner/advanced/buttons-and-processes/actions-form-runner-save.md)
                 * [Send action](form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)
+                * [Email action](form-runner/advanced/buttons-and-processes/actions-form-runner-email.md)
             * [XForms actions](form-runner/advanced/buttons-and-processes/actions-xforms.md)
             * [Predefined buttons, processes and dialogs](form-runner/advanced/buttons-and-processes/predefined.md)
         * [Custom dialogs/model logic](form-runner/advanced/custom.md)

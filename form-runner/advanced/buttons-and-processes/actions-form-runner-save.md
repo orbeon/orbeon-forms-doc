@@ -60,3 +60,4 @@ Example:
 
 - [Form Runner actions](actions-form-runner.md)
 - [Form Runner send action](actions-form-runner-send.md)
+- [Form Runner email action](actions-form-runner-email.md)

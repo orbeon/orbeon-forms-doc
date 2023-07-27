@@ -22,7 +22,7 @@ You can open the "Email Settings" by clicking on the "Email Settings" button, un
 
 <img src="images/advanced-menu.png" width="245">
 
-- Template name – Each email template must have a *name*. This name is not exposed to end users; it is only for your own use, to understand what each template is for, and to be able to refer to a specific template in the [`email(template = "my-template")` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#email).
+- Template name – Each email template must have a *name*. This name is not exposed to end users; it is only for your own use, to understand what each template is for, and to be able to refer to a specific template in the [`email(template = "my-template")` action](/form-runner/advanced/buttons-and-processes/actions-form-runner-email.md).
 - Dynamic email subject and body – An email subject or body can be dynamic and include the value of form controls or formulas, as shown in the examples above. For more, see [Template syntax](template-syntax.md).
 - Localization – If your form is available in multiple languages, a "Language" dropdown shows next to the template name, allowing you to select which language this template is for. When an email is sent, the template that corresponds to the user's language is automatically used.
 
