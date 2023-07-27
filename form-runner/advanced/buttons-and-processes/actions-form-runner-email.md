@@ -19,6 +19,23 @@ The `email` action sends an email with optionally XML form data, attachments, an
 
 See [Email configuration properties](/configuration/properties/form-runner-email.md).
 
+## Example
+
+Here is an example of a `submit` process for the `acme`/`order` form, which saves data and then sends an email while specifying the email template to use as well as the XML data format version to use for the attachment:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.process.submit.acme.order">
+    require-uploads
+    then validate-all
+    then save
+    then email(
+        data-format-version = "4.0.0",
+        template = "acme-order"
+    )
+    then success-message("email-success")
+</property>
+```
+
 ## See also
 
 - [Form Runner actions](actions-form-runner.md)
