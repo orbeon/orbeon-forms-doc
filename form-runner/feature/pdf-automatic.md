@@ -260,6 +260,37 @@ By default, the PDF is output with most colors removed and a black-and-white sch
     value="keep-field-colors"/>
 ```
 
+## Accessibility and PDF/A support
+
+[SINCE Orbeon Forms 2022.1.5 and 2023.1]
+
+Experimentally, the following properties allow enabling accessibility and PDF/A support:
+
+```xml
+<property as="xs:boolean" name="oxf.fr.pdf.accessibility" value="true"/>
+<property as="xs:string"  name="oxf.fr.pdf.pdf/a"         value="3u"/>
+```
+
+- `oxf.fr.pdf.accessibility`
+    - enable or disable accessibility support
+    - values: `true` or `false`
+    - default: `false`
+- `oxf.fr.pdf.pdf/a`
+    - enable or disable PDF/A support
+    - values:
+        - `none`: disabled
+        - `1a`: PDF/A-1a – Level A (accessible) conformance
+        - `1b`: PDF/A-1b – Level B (basic) conformance
+        - `2a`: PDF/A-2a
+        - `2b`: PDF/A-2b
+        - `2u`: PDF/A-2b plus Unicode
+        - `3a`: PDF/A-3a
+        - `3b`: PDF/A-3b
+        - `3u`: PDF/A-3b plus Unicode
+    - default: `none`
+
+Note that the values above are simply passed to the PDF renderer library used by Orbeon Forms. There is currently no guarantee of compliance with the PDF/A standard. 
+
 ## See also
 
 - [PDF Production](pdf-production.md)
