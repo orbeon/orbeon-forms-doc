@@ -55,10 +55,15 @@ Just like for search options, you can open the bulk edit area using the "Show Bu
 
 You specify which fields appear in the bulk edit area when editing the form definition, using the [Control Settings dialog](/form-builder/control-settings.md).
 
+## Summary page buttons and processes
+
+See [Summary page buttons and processes](/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md).
+
 ## See also 
 
 - [Home Page](home-page.md)
 - [Summary page configuration properties](/configuration/properties/form-runner-summary-page.md)
+- [Summary page buttons and processes](/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md)
 - [Versioning](/form-runner/feature/versioning.md)
 - [Form Builder Summary Page](/form-builder/summary-page.md)
 - [Control Settings dialog](/form-builder/control-settings.md)

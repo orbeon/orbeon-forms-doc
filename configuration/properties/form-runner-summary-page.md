@@ -93,53 +93,7 @@ You can add either one of those columns by setting the appropriate property valu
 
 ## Buttons on the Summary page
 
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.summary.buttons.*.*"
-    value="home review pdf delete duplicate new"/>
-```
-
-The property configures which buttons are included on the Summary page, and in what order they are shown. Possible buttons are:
-
-* `home`
-    * Label: "Home"
-    * Action: Navigate to the Form Runner Home page.
-* review
-    * Label: "Review"
-    * Action: Navigate to the Detail page in "view" mode to review the selected form data.
-* `pdf`
-    * Label: "PDF"
-    * Action: Create a PDF file for the selected form data.
-* `tiff` [SINCE Orbeon Forms 2016.1]
-    * Label: "TIFF"
-    * Action: Create a TIFF image file for the selected form data.
-* `delete`
-    * Label: "Delete"
-    * Action: Delete the selected form data.
-* `import`
-    * Label: "Import"
-    * Action: Import data via the [Excel import page](../../form-runner/advanced/excel.md).
-* `duplicate` [SINCE Orbeon Forms 4.5]
-    * Label: "Duplicate"
-    * Action: Duplicate the selected form data (or form definition on the Form Builder Summary page), including attachments.
-    * Usage: Select one or more checkboxes and press the "Duplicate" button. When the operation completes the Summary page refreshes with the new duplicated form data.
-* `new`
-    * Label: "New"
-    * Action: Navigate to the Detail page in "new" mode to create new form data.
-    
-### New button: version of the form
-
-[SINCE Orbeon Forms 2019.2]
-
-By default, the "New" button takes users to the current version of the form, that is, the one selected in the dropdown at the top of the page. You can change this behavior by setting the property below to either `latest` to use the latest published version of the form, or an integer value to always used that specific version. The default value of the property is `current`, which corresponds to the default behavior.
-
-```xml
-<property 
-    as="xs:string"
-    name="oxf.fr.summary.new.form-version.*.*"
-    value="latest"/> 
-```
+See [Configuring Summary page buttons](/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md#configuring-summary-page-buttons).
 
 ## Versioning
 

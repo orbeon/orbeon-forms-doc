@@ -205,6 +205,7 @@
                 * [Email action](form-runner/advanced/buttons-and-processes/actions-form-runner-email.md)
             * [XForms actions](form-runner/advanced/buttons-and-processes/actions-xforms.md)
             * [Predefined buttons, processes and dialogs](form-runner/advanced/buttons-and-processes/predefined.md)
+            * [Summary page buttons and processes](/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md)
         * [Custom dialogs/model logic](form-runner/advanced/custom.md)
         * [Excel import](form-runner/advanced/excel.md)
         * [Services](form-runner/advanced/services.md)
