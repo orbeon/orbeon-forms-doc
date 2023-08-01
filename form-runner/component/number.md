@@ -30,9 +30,12 @@ You use the number component like a regular input field, for example:
 * `prefix`: optional prefix shown before the number
 * `suffix`: optional suffix shown after the number
 * `digits-after-decimal`: digits to show after the decimal point (by default 0, which means the number is an integer)
-    * xxx TODO: default is probably not 0 but to show all digits
-    * xxx "means the number is an integer" is unclear; only for formatting, right?
-    * xxx use of 
+
+[//]: # (    * xxx TODO: default is probably not 0 but to show all digits)
+
+[//]: # (    * xxx "means the number is an integer" is unclear; only for formatting, right?)
+
+[//]: # (    * xxx use of )
 * `decimal-separator`: single character to use as decimal separator
     * use `.` or `,` only
 * `grouping-separator`: single character to use as thousands separator separator (can be blank)
