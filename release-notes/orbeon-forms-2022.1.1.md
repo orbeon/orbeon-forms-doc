@@ -8,8 +8,8 @@ Today we released Orbeon Forms 2022.1.1 PE! This maintenance release contains ne
 
 We don't usually include new features in maintenance releases, but we made an exception for this release, as we wanted to include the following:
 
-- Time form control improvements (see the [blog post](https://blog.orbeon.com/2023/01/time-form-control-improvements.html)) ([\#5534](https://github.com/orbeon/orbeon-forms/issues/5534))
-- Ability to right-align Number/Currency fields (see the [blog post](https://blog.orbeon.com/2023/08/right-aligning-number-and-currency.html)) ([\#3245](https://github.com/orbeon/orbeon-forms/issues/3245))
+- Time form control improvements ([blog post](https://blog.orbeon.com/2023/01/time-form-control-improvements.html)) ([\#5534](https://github.com/orbeon/orbeon-forms/issues/5534))
+- Ability to right-align Number/Currency fields ([doc](/form-runner/component/number.md), [blog post](https://blog.orbeon.com/2023/08/right-aligning-number-and-currency.html)) ([\#3245](https://github.com/orbeon/orbeon-forms/issues/3245))
 
 This release also addresses the following issues since [Orbeon Forms 2022.1 PE](orbeon-forms-2022.1.md):
 
