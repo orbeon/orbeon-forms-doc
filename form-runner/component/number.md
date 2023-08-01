@@ -215,3 +215,4 @@ Within a repeated grid:
 ## See also
 
 - Blog post: [Better numeric input on mobile](https://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
+- Blog post: [Right-aligning number and currency fields](https://blog.orbeon.com/2023/08/right-aligning-number-and-currency.html)
