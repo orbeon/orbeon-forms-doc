@@ -16,6 +16,16 @@ You use the number component like a regular input field, for example:
 </fr:number>
 ```
 
+### Form builder support
+
+Form builder shows extended control settings for Number and Currency fields:
+
+![Number and Currency field control settings](images/xbl-number-control-settings.png)
+
+These are also available at the form level:
+
+![Number and Currency field form settings](images/xbl-number-form-settings.png)
+
 ## Datatype
 
 `fr:number` must be bound to either of:
@@ -189,6 +199,18 @@ Scenario:
 *NOTE: Here rounding during formatting doesn't change the value since it was rounded when stored in the first place.*
 
 This is useful if you don't want to keep the full precision of decimal values in the data and want to force a maximum number of digits after the decimal point.
+
+### Right-aligned content
+
+[SINCE Orbeon Forms 2022.1.1]
+
+Regular controls:
+
+![Right-aligned content](images/xbl-number-right-aligned.png)
+
+Within a repeated grid:
+
+![Right-aligned content in a repeated grid](images/xbl-number-right-aligned-repeated-grid.png)
 
 ## See also
 
