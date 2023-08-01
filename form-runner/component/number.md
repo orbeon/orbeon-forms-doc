@@ -50,6 +50,10 @@ You use the number component like a regular input field, for example:
 * `pattern`
     * SINCE Orbeon Forms 2016.1
     * overrides the HTML `pattern` attribute
+* `field-align`: determines the alignment of the value in the field
+    * SINCE Orbeon Forms 2022.1.1 
+    * `left` (default): align content to the left
+    * `right`: align content to the right
 
 These are the default values of the properties:
 
