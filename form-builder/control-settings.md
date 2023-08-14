@@ -257,6 +257,14 @@ Controls support *dynamic* labels, hints, and help messages. This means that, in
 
 For more, see [Template syntax](template-syntax.md).
 
+### Language selector
+
+[SINCE Orbeon Forms 2023.1]
+
+When multiple languages are available for the form, a language selector allows selecting the language for which localizable texts are being edited (e.g. Validations and Alerts, Label, Hint, and Help Message) directly from the Control Settings dialog.
+
+![Language selector](images/control-settings-language.selector.png)
+
 ## See also
 
 - [Control metadata for the Control Settings dialog](metadata.md#control-metadata-for-the-control-settings-dialog)
