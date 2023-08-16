@@ -296,6 +296,58 @@ The output contains alerts and/or hints if one of the values is set to `"true"`.
 
 See also [Testing PDF production](/form-builder/pdf-test.md).
 
+## callback
+
+### Action
+
+[SINCE Orbeon Forms 2023.1]
+
+This action allows you to run a callback function on the client (in JavaScript) after the current process has completed.
+
+The following parameters are supported:
+
+- `name`: name with which the callback function or functions have been registered with
+
+Example:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.process.save-final.*.*">
+    require-uploads
+    then validate-all
+    then save
+    then new-to-edit
+    then callback(name = "my-saved-callback")
+    then success-message("save-success")
+    recover error-message("database-error")
+</property>
+```
+
+### Registering a callback function
+
+[SINCE Orbeon Forms 2023.1]
+
+You register a callback function on the client when embedding a form in a page. For example:
+
+```javascript
+ORBEON.fr.API.embedForm(
+    document.getElementById("my-container-element"),
+    "/orbeon",
+    "human-resources",
+    "job-application",
+    "new"
+)
+.then((form) => {
+    console.log("`embedForm()` successfully loaded the form");
+    form.addCallback("my-saved-callback", () => console.log("The data was successfully saved!"))
+})
+.catch((e) => {
+  console.log("`embedForm()` returned an error");
+  console.log(e);
+});
+```
+
+See also the [`embedForm()` API](/form-runner/link-embed/javascript-api.md#embedform-api).
+
 ## Other actions
 
 - `captcha`: Trigger the captcha.

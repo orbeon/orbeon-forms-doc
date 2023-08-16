@@ -111,6 +111,18 @@ ORBEON.fr.API.embedForm(
 
 Note that with earlier versions, `embedForm()` always returned the JavaScript `undefined` value.
 
+[SINCE Orbeon Forms 2023.1]
+
+`embedForm()` returns a JavaScript `Promise` object. The object supports the following functions:
+
+```javascript
+function addCallback(name: string, fn: () => void): void
+
+function removeCallback(name: String, fn: () => void): void
+```
+
+See also the [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback).
+
 ### `destroyForm()` API
 
 To remove a form that you embedded earlier, call:
