@@ -75,7 +75,7 @@ ORBEON.fr.API.embedForm(
 ```
 
 | Parameter   | Optional          | Type         | Example                         | Description                                                   |
-|-------------| ----------------- | ------------ | ------------------------------- |---------------------------------------------------------------|
+|-------------|-------------------|--------------|---------------------------------|---------------------------------------------------------------|
 | container   | No                | HTML element |                                 | DOM element you want the form to be placed in                 |
 | context     | No                | String       | `"/orbeon"`                     | Context where Orbeon Forms is deployed, typically `"/orbeon"` |
 | app         | No                | String       | `"human-resources"`             | App name                                                      |
