@@ -20,18 +20,20 @@ Linking doesn't make any assumption on the technology used by the web site or ap
 
 The `/fr/clerk/marriage-registration/new` in our example is what is referred to below as a *path*, and for a given form, multiple such paths exist. Knowing what those paths are is particulary important as this allows you to link from your web site or web application to forms your created with Form Builder. All the paths are relative to the *deployment context*, i.e. where you've deployed Orbeon Forms, which in our example was `https://www.city.gov/forms`.
 
-| Description                              | Path                                                                           | Availability |
-|------------------------------------------|--------------------------------------------------------------------------------|--------------|
-| Summary page for a given form definition | `/fr/$app/$form/summary`                                                       |              |
-| New empty form data                      | `/fr/$app/$form/new`                                                           |              |
-| Edit existing form data                  | `/fr/$app/$form/edit/$document`                                                |              |
-| Read-only HTML view                      | `/fr/$app/$form/view/$document`                                                |              |
-| Read-only PDF view                       | `/fr/$app/$form/pdf/$document`                                                 |              |
-| Read-only TIFF view                      | `/fr/$app/$form/tiff/$document`                                                | 2016.1       |
-| Excel export with data                   | `/fr/$app/$form/export/$document?export-format=excel-with-named-ranges`        | 2023.1       |
-| Excel export without data                | `/fr/$app/$form/export?export-format=excel-with-named-ranges`                  | 2023.1       |
-| XML export with data                     | `/fr/$app/$form/export/$document?export-format=xml-form-structure-and-data`    | 2023.1       |
-| XML export without data                  | `/fr/$app/$form/export?export-format=xml-form-structure-and-data`              | 2023.1       |
+| Description                              | Path                                                                        | Availability |
+|------------------------------------------|-----------------------------------------------------------------------------|--------------|
+| Summary page for a given form definition | `/fr/$app/$form/summary`                                                    |              |
+| New empty form data                      | `/fr/$app/$form/new`                                                        |              |
+| Edit existing form data                  | `/fr/$app/$form/edit/$document`                                             |              |
+| Read-only HTML view                      | `/fr/$app/$form/view/$document`                                             |              |
+| Read-only PDF view                       | `/fr/$app/$form/pdf/$document`                                              |              |
+| Read-only TIFF view                      | `/fr/$app/$form/tiff/$document`                                             | 2016.1       |
+| Excel export with data                   | `/fr/$app/$form/export/$document?export-format=excel-with-named-ranges`     | 2023.1       |
+| Excel export without data                | `/fr/$app/$form/export?export-format=excel-with-named-ranges`               | 2023.1       |
+| XML export with data                     | `/fr/$app/$form/export/$document?export-format=xml-form-structure-and-data` | 2023.1       |
+| XML export without data                  | `/fr/$app/$form/export?export-format=xml-form-structure-and-data`           | 2023.1       |
+| PDF export with data                     | `/fr/$app/$form/export/$document?export-format=pdf`                         | 2023.1       |
+| TIFF export with data                    | `/fr/$app/$form/export/$document?export-format=tiff`                        | 2023.1       |
 
 Where:
 
