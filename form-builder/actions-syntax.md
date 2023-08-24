@@ -747,7 +747,7 @@ This action allows setting whether a form control is visited or not. Example:
     visited="false"/>
 ```
 
-In Orbeon Forms, a form control can be *visited* or not. Visited controls have been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control.
+In Orbeon Forms, a form control can be *visited* or not. Visited controls have been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control. [SINCE Orbeon Forms 2023.1] Form controls can also be visited when they are calculated, visible, and their value changes.
 
 When working with actions, some form controls can benefit from having their "visited" status reset so that the user doesn't see extra errors appear. The `<fr:control-setvisited>` action allows doing that.
 

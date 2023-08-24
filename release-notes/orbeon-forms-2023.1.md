@@ -12,6 +12,21 @@ TODO
 
 TODO
 
+### Visiting of visible fields
+
+In Orbeon Forms, a form control can be *visited* or not. Visited controls have typically been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control.
+
+With Orbeon Forms 2023.1, form controls are also marked as visited when they are calculated, visible, and their value changes. This is useful to immediately show validation errors associated with such form controls, which are typically implemented with the Calculated Value form control.
+
+If you don't wish this behavior, you can turn it off globally with the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.error-summary.visit-value-changed"
+    value="false"/>
+```
+
 ### Password strength checker
 
 A [password strength checker](/configuration/properties/general.md#oxf.crypto.check-password-strength) will cause an error if one of the passwords configured in your `properties-local.xml` is too weak. Ideally, use randomly-generated strong passwords.
