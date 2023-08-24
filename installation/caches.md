@@ -58,12 +58,23 @@ When this is set to `jcache`, Orbeon Forms uses the *default caching provider* a
 You can further specify the configuration to use with the following properties:
 
 ```xml
-<property as="xs:string"  name="oxf.xforms.cache.resource" value=""/>
-<property as="xs:string"  name="oxf.xforms.cache.uri"      value=""/>
+<property as="xs:string"  name="oxf.xforms.cache.jcache.classname" value=""/>
+<property as="xs:string"  name="oxf.xforms.cache.jcache.resource"  value=""/>
+<property as="xs:string"  name="oxf.xforms.cache.jcache.uri"       value=""/>
 ```
 
-- `oxf.xforms.cache.resource` specifies the path to a webapp resource. The configuration can be stored under the web app's WEB-INF or a JAR file included in the webapp.
-- `oxf.xforms.cache.uri` specifies the URI to a configuration.
+- `oxf.xforms.cache.jcache.classname` specifies a regular expression that must match the provider fully-qualified class name. This is useful in case there is more than one cache provider in the classpath and you need to select a specific one.
+- `oxf.xforms.cache.jcache.resource` specifies the path to a webapp resource. The configuration can be stored under the web app's WEB-INF or a JAR file included in the webapp.
+- `oxf.xforms.cache.jcache.uri` specifies the URI to a configuration.
+
+Example:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.cache.jcache.classname"                
+    value=".*EhcacheCachingProvider"/>
+```
 
 The `resource` property is checked first, then the `uri` property. A blank property is ignored.
 
