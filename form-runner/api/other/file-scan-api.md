@@ -60,9 +60,9 @@ When Orbeon Forms is starting to receive an upload file, it calls the `startStre
 
 The `extension` hashmap contains the following keys and values:
 
-| Key           | Value type     | Description                                          | Orbeon Forms Version |
-|---------------|----------------|------------------------------------------------------|----------------------|
-| `request.uri` | `java.net.URI` | path and query of the form containing the attachment | 2022.1.5             |
+| Key           | Value type     | Description                                          | Since Orbeon Forms Version |
+|---------------|----------------|------------------------------------------------------|----------------------------|
+| `request.uri` | `java.net.URI` | path and query of the form containing the attachment | 2022.1.5                   |
 
 The `java.net.URI` associated with `request.uri` contains the following parts:
 
