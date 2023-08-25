@@ -91,6 +91,42 @@ The session heartbeat should help prevent many occurrences of "session expired" 
     value="true">
 ```
 
+## Session expiration dialog
+
+[SINCE Orbeon Forms 2023.1]
+
+When the session hearbeat feature is disabled, Orbeon Forms can display a dialog to the user when the session is about to expire. This dialog can be enabled with the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.session-expiration-dialog.enabled.*.*"
+    value="true"/>
+```
+
+The user can then manually renew the session if needed.
+
+![Session about to expire](images/session-about-to-expire.png)
+
+It is possible to configure when this dialog is shown using the following property, which is a percentage of the session expiration time, with a default value of 80%:
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.xforms.session-expiration.trigger"
+    value="80"/>
+```
+
+For example, if the session expiration time is one hour, the dialog will be shown 48 minutes after the last interaction with the server.
+
+If the user doesn't renew the session, the session will expire and the user will see the following dialog:
+
+![Session expired](images/session-expired.png)
+
+This dialog is also shown if the user logs out from another page/tab from the same session.
+
+If the session heartbeat feature is enabled, the dialog won't be shown, independently of the value of `oxf.fr.detail.session-expiration-dialog.enabled.*.*`. In that case, the `oxf.xforms.session-expiration.trigger` property determines when the session heartbeat is sent to the server.
+
 ## Browser navigation (back and forward) handling
 
 [DEPRECATED SINCE Orbeon Forms 2021.1]
