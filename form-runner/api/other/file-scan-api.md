@@ -55,7 +55,12 @@ When Orbeon Forms is starting to receive an upload file, it calls the `startStre
 - `filename`: a file name as provided by the web browser (which means that it must not be trusted)
 - `headers`: HTTP header name/values as they are received by Orbeon Forms
 - `language`: the current form language at the time the user started the upload
-- `extension`: an extension immutable hashmap (empty as of Orbeon Forms 2022.1) 
+- `extension`: an extension immutable hashmap
+    - This is empty from Orbeon Forms 2022.1.0 until 2022.1.4 included. 
+    - [SINCE Orbeon Forms 2022.1.5] The key `request.uri` maps to an instance of `java.net.URI` containing:
+        - `getPath()`: the Orbeon Forms path that loaded the form, for example `/fr/acme/order/new` or `/fr/acme/order/edit/1234`
+        - `getQuery()`: the query string, for example `form-version=2`
+        - *NOTE: The other elements of the `URI` are set to `null`.*
 
 The provider implementation must return an implementation of a `FileScan2`.
 
