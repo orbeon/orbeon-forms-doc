@@ -346,7 +346,10 @@ ORBEON.fr.API.embedForm(
 });
 ```
 
-See also the [`embedForm()` API](/form-runner/link-embed/javascript-api.md#embedform-api).
+See also:
+
+- [`embedForm()` API](/form-runner/link-embed/javascript-api.md#embedform-api)
+- [Adding and removing process callback functions](/form-runner/api/other/form-runner-javascript-api.md#adding-and-removing-process-callback-functions)
 
 ## Other actions
 
