@@ -237,6 +237,8 @@ repeat indexes.
 
 ## Listening for Error Summary navigation
 
+[SINCE Orbeon Forms 2022.1]
+
 For analytics purposes, it can be useful to capture when the user is interacting with the Error Summary.
 
 You can do so with the `errorSummary.addNavigateToErrorListener()` function: 
