@@ -1,8 +1,30 @@
 # Form Runner JavaScript API
 
-## Finding a Form Runner control by name
+## Getting a reference to a form
 
-[SINCE Orbeon Forms 2017.2]
+[SINCE Orbeon Forms 2023.1]
+
+You can get a reference to an object representing a Form Runner form with the `getForm()` function:
+
+```javascript
+ORBEON.fr.API.getForm(formIdOrElem: string | HTMLElement): FormRunnerForm
+```
+
+The parameter can be:
+
+- missing or `undefined`: this searches for the first Orbeon Forms form on the page
+- a `string`: this is the namespaced id of the form
+- an HTML element: this is the HTML form element, or a descendant or an HTML form element
+
+If the form is not found, `null` is returned. If found, an object is returned, which contains methods described below.
+
+## The `FormRunnerForm` object
+
+[SINCE Orbeon Forms 2023.1]
+
+### Finding a Form Runner control by name
+
+[SINCE Orbeon Forms 2023.1]
 
 The `findControlsByName()` function returns the HTML element(s) corresponding to the given Form Runner control name.
 
@@ -14,16 +36,14 @@ A Form Runner control name is the name entered by the form author in Form Builde
 - `street-address`
 
 ```javascript
-ORBEON.fr.API.findControlsByName(
-    controlName : string, 
-    formElem?   : HTMLElement
+function findControlsByName(
+    controlName : string
 ): HTMLElement[]
 ```
 
-| Name            | Required | Type          | Description |
-|-----------------|----------|---------------| ----------- |
-| **controlName** | Yes      | `String`      | The name of the Form Runner control. |
-| **formElem**    | No       | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
+| Name            | Required | Type     | Description                          |
+|-----------------|----------|----------|--------------------------------------|
+| **controlName** | Yes      | `string` | The name of the Form Runner control. |
 
 If no control is found, an empty array is returned.
 
@@ -34,12 +54,84 @@ If there are multiple controls with the same name, the array will contain multip
 
 On the other hand, if the control exists but is not shown at a given time, for example if it is in a hidden wizard page, the array will be empty.
 
+Example:
+
+```javascript
+ORBEON.fr.API.getFOrm().findControlsByName('street-address')
+```
+
+### Telling whether the form data is safe
+
+[SINCE Orbeon Forms 2023.1]
+
+```javascript
+function isFormDataSafe(): boolean
+```
+
+Orbeon Forms supports the notion that form data can be "safe" or not: specifically, it is safe if it's been saved to a database.
+
+This function allows you to tell whether the data is safe or not.
+
+Example:
+
+```javascript
+ORBEON.fr.API.getForm().isFormDataSafe()
+```
+
+See also [the `set-data-status` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status).
+
+### Adding and removing process callback functions
+
+[SINCE Orbeon Forms 2023.1]
+
+Form Runner simple processes now support a [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback) server action that allows client-side callback functions to be called.
+
+You add a callback function on the client using:
+
+```javascript
+function addCallback(name: string, fn: () => void): void
+```
+
+| Name     | Required | Type         | Description                                        |
+|----------|----------|--------------|----------------------------------------------------|
+| **name** | Yes      | `string`     | Name passed to the server-side `callback()` action |
+| **fn**   | Yes      | `() => void` | Callback function to be called on the client       |
+
+You remove a callback function on the client using:
+
+```javascript
+function removeCallback(name: String, fn: () => void): void
+```
+
+The `name` and `fn` parameters must be the same as those passed to `addCallback()`. 
+
+## Finding a Form Runner control by name
+
+[SINCE Orbeon Forms 2017.2]
+
+The `findControlsByName()` function returns the HTML element(s) corresponding to the given Form Runner control name.
+
+```javascript
+ORBEON.fr.API.findControlsByName(
+    controlName : string, 
+    formElem?   : HTMLElement
+): HTMLElement[]
+```
+
+| Name            | Required | Type          | Description |
+|-----------------|----------|---------------| ----------- |
+| **controlName** | Yes      | `string`      | The name of the Form Runner control. |
+| **formElem**    | No       | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
+
+[SINCE Orbeon Forms 2023.1]
+
+Prefer using first the `getForm()` function, and then, on the object returned, the `findControlsByName()` function.
+
 ## Setting a control's value
 
 You can set a control's value using the [XForms client-side JavaScript API](/xforms/client-side-javascript-api.md).
 
 For example, here is how to set the value of a text field called `my-field` to the value "Hello!":
-
 
 ```javascript
 ORBEON.xforms.Document.setValue(
@@ -73,11 +165,9 @@ ORBEON.fr.API.isFormDataSafe(
 | ---- | -------- | ---- | ----------- |
 | **formElem**    |  No  | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
 
-Orbeon Forms supports the notion that form data can be "safe" or not: specifically, it is safe if it's been saved to a database.
+[SINCE Orbeon Forms 2023.1]
 
-This function allows you to tell whether the data is safe or not.
-
-See also [the `set-data-status` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status).
+Prefer using first the `getForm()` function, and then, on the object returned, the `isFormDataSafe()` function.
 
 ## Focusing on a control
 
@@ -94,7 +184,7 @@ ORBEON.fr.API.wizard.focus(
 
 | Name              | Required | Type           | Description                          |
 |-------------------|----------|----------------|--------------------------------------|
-| **controlName**   | Yes      | `String`       | The name of the Form Runner control. |
+| **controlName**   | Yes      | `string`       | The name of the Form Runner control. |
 | **repeatIndexes** | No       | array of `Int` | Repeat indexes.                      |
 
 This function doesn't have any effect if the control is readonly or non-relevant.

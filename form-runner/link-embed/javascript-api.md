@@ -121,7 +121,12 @@ function addCallback(name: string, fn: () => void): void
 function removeCallback(name: String, fn: () => void): void
 ```
 
-See also the [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback).
+See also:
+
+- [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback)
+- [Adding and removing process callback functions](/form-runner/api/other/form-runner-javascript-api.md#adding-and-removing-process-callback-functions)
+
+xxx see doc
 
 ### `destroyForm()` API
 
