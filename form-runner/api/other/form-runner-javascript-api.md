@@ -84,6 +84,22 @@ ORBEON.fr.API.getForm().isFormDataSafe()
 
 See also [the `set-data-status` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status).
 
+### Activating a process button
+
+[SINCE Orbeon Forms 2023.1]
+
+```javascript
+function activateProcessButton(buttonName: string): void
+```
+
+Process buttons are typically buttons that are not directly part of the form, but placed at the bottom of the form. They include functions such as "Save", "Send", "Next", etc.
+
+You can activate a process button with this function by specifying the button name. Example:
+
+```javascript
+ORBEON.fr.API.getForm().activateProcessButton("wizard-next")
+```
+
 ### Adding and removing process callback functions
 
 [SINCE Orbeon Forms 2023.1]
