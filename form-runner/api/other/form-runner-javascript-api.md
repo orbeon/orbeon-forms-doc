@@ -10,7 +10,11 @@ You can get a reference to an object representing a Form Runner form with the `g
 ORBEON.fr.API.getForm(formIdOrElem: string | HTMLElement): FormRunnerForm
 ```
 
-The parameter can be:
+The `formIdOrElem` parameter is described [below](#identifying-a-form-by-id-or-element).
+
+## Identifying a form by id or element
+
+The `formIdOrElem` parameter used in APIs can be:
 
 - missing or `undefined`: this searches for the first Orbeon Forms form on the page
 - a `string`: this is the namespaced id of the form
@@ -113,15 +117,15 @@ The `findControlsByName()` function returns the HTML element(s) corresponding to
 
 ```javascript
 ORBEON.fr.API.findControlsByName(
-    controlName : string, 
-    formElem?   : HTMLElement
+    controlName  : string, 
+    formIdOrElem?: HTMLElement
 ): HTMLElement[]
 ```
 
-| Name            | Required | Type          | Description |
-|-----------------|----------|---------------| ----------- |
-| **controlName** | Yes      | `string`      | The name of the Form Runner control. |
-| **formElem**    | No       | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
+| Name             | Required | Type                                  | Description                                                                     |
+|------------------|----------|---------------------------------------|---------------------------------------------------------------------------------|
+| **controlName**  | Yes      | `string`                              | The name of the Form Runner control.                                            |
+| **formIdOrElem** | No       | `formIdOrElem: string \| HTMLElement` | See [Identifying a form by id or element](#identifying-a-form-by-id-or-element) |
 
 [SINCE Orbeon Forms 2023.1]
 
@@ -157,13 +161,13 @@ Where the value  you pass corresponds to the position of the item starting at `0
 
 ```javascript
 ORBEON.fr.API.isFormDataSafe(
-    formElem?   : HTMLElement
+    formIdOrElem: string | HTMLElement
 ): boolean
 ```
 
-| Name | Required | Type | Description |
-| ---- | -------- | ---- | ----------- |
-| **formElem**    |  No  | `HTMLElement` | The form object that corresponds to the XForms control you want to deal with. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
+| Name             | Required | Type                                  | Description                                                                     |
+|------------------|----------|---------------------------------------|---------------------------------------------------------------------------------|
+| **formIdOrElem** | No       | `formIdOrElem: string \| HTMLElement` | See [Identifying a form by id or element](#identifying-a-form-by-id-or-element) |
 
 [SINCE Orbeon Forms 2023.1]
 

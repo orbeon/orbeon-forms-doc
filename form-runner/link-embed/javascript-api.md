@@ -113,20 +113,13 @@ Note that with earlier versions, `embedForm()` always returned the JavaScript `u
 
 [SINCE Orbeon Forms 2023.1]
 
-`embedForm()` returns a JavaScript `Promise` object. The object supports the following functions:
-
-```javascript
-function addCallback(name: string, fn: () => void): void
-
-function removeCallback(name: String, fn: () => void): void
-```
+`embedForm()` returns a JavaScript `Promise` object representing the form. The object supports functions documented in [The `FormRunnerForm` object](/form-runner/api/other/form-runner-javascript-api.md#the-formrunnerform-object).
 
 See also:
 
+- [The `FormRunnerForm` object](/form-runner/api/other/form-runner-javascript-api.md#the-formrunnerform-object)
 - [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback)
-- [Adding and removing process callback functions](/form-runner/api/other/form-runner-javascript-api.md#adding-and-removing-process-callback-functions)
-
-xxx see doc
+- [`embedForm()` API](/form-runner/link-embed/javascript-api.md#embedform-api)
 
 ### `destroyForm()` API
 
