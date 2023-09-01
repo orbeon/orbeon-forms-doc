@@ -25,6 +25,12 @@ The property configures which buttons are included on the Summary page, and in w
 * `tiff` [SINCE Orbeon Forms 2016.1]
     * Label: "TIFF"
     * Action: Create a TIFF image file for the selected form data.
+* `excel-export` [SINCE Orbeon Forms 2023.1]
+    * Label: "Excel Export"
+    * Action: Export the selected form data in Excel format.
+* `xml-export` [SINCE Orbeon Forms 2023.1]
+    * Label: "XML Export"
+    * Action: Export the selected form data in XML format.
 * `delete`
     * Label: "Delete"
     * Action: Delete the selected form data.
