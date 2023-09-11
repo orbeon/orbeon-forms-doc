@@ -28,3 +28,4 @@ The URL of the image is stored in instance data via a single-node binding, here 
 
 - [Image attachment component](image-attachment.md)
 - [Attachment component](attachment.md)
+- [Video component](video.md)

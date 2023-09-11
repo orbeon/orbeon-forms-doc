@@ -122,6 +122,7 @@
         * [Time](form-runner/component/time.md)
         * [US phone](form-runner/component/us-phone.md)
         * [US state](form-runner/component/us-state.md)
+        * [Video](form-runner/component/video.md)
         * [Wizard](form-runner/component/wizard.md)
         * [XForms inspector](form-runner/component/xforms-inspector.md)
         * [Yes/No answer](form-runner/component/yesno-input.md)

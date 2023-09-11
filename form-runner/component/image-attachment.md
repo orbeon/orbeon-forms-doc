@@ -83,4 +83,5 @@ When used in Form Builder, the following custom settings for image transformatio
 ## See also
 
 - [Image component](image.md)
+- [Video component](video.md)
 - [Attachment component](attachment.md)

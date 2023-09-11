@@ -209,6 +209,7 @@ As of 2016-04-19 this page is still being updated.
     - File attachment
     - Image attachment
     - Static image
+    - Static video
     - Handwritten signature: [doc](form-runner/component/handwritten-signature.md)
     - Image annotation: [blog post](https://blog.orbeon.com/2013/08/new-image-annotation-control.html)
     - Control maximum size and file types: [blog post](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)
