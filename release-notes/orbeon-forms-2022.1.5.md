@@ -1,6 +1,6 @@
 # Orbeon Forms 2022.1.5
 
-__Wednesday, September xxx, 2023__
+__Friday, September 15, 2023__
 
 Today we released Orbeon Forms 2022.1.4 PE! This maintenance release contains bug-fixes and minor new features and is recommended for all users of:
 
@@ -26,11 +26,13 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.4 PE
     - "All Control Values" doesn't show in email template parameter dropdown ([\#5927](https://github.com/orbeon/orbeon-forms/issues/5927))
     - Form Builder not to add an empty `@xml:lang` on templates, and do support empty `@xml:lang` at runtime ([\#5908](https://github.com/orbeon/orbeon-forms/issues/5908))
     - References to `$form-resources` in formulas now considered invalid ([\#5909](https://github.com/orbeon/orbeon-forms/issues/5909))
+    - JavaScript error in Form Builder when copying a Formatted Text Area ([\#5963](https://github.com/orbeon/orbeon-forms/issues/5963))
 - Form Runner
     - Email
         - XML attached to email is always in `edge` data format ([\#5911](https://github.com/orbeon/orbeon-forms/issues/5911))
         - Possible issue with empty parameter name when sending email ([\#5900](https://github.com/orbeon/orbeon-forms/issues/5900))
         - `email` action support for new parameter `match = "all"` ([\#5938](https://github.com/orbeon/orbeon-forms/issues/5938))
+        - Possible incorrect email template conversion #5923
     - PDF
         - `fr:attachment` in PDF must not contain link to download ([\#5917](https://github.com/orbeon/orbeon-forms/issues/5917))
         - Properties to configure automatic PDF accessibility and PDF/A settings ([\#5914](https://github.com/orbeon/orbeon-forms/issues/5914))
@@ -55,6 +57,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.4 PE
         - Don't let buttons overflow grids ([\#5851](https://github.com/orbeon/orbeon-forms/issues/5851))
         - Minimal read-write repeated grid doesn't show properly ([\#5840](https://github.com/orbeon/orbeon-forms/issues/5840))
         - `content.css` pollutes top-level page ([\#5962](https://github.com/orbeon/orbeon-forms/issues/5962)) 
+        - Support cross-site embedding with the Form Runner JavaScript embedding API ([\#5974](https://github.com/orbeon/orbeon-forms/issues/5974))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
 
