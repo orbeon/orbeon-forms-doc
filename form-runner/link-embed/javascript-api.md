@@ -32,6 +32,8 @@ You can identify the requests you need to forward by their path, which is typica
 
 ### Option 2: Cross-origin
 
+[SINCE Orbeon Forms 2022.1.5]
+
 When calling `embedForm()`, the value of the `context` parameter must be the full URL of the Orbeon Forms server (like `https://forms.example.org/orbeon`), not a relative URL (like `/orbeon`).
 
 All responses from the Orbeon Forms server must include an `Access-Control-Allow-Origin` header that lists your app server's origin, for example `Access-Control-Allow-Origin: www.example.org`. It must also include the following three headers: `Access-Control-Allow-Credentials: true`, `Access-Control-Allow-Methods: *`, and `Access-Control-Allow-Headers: orbeon-client`.
