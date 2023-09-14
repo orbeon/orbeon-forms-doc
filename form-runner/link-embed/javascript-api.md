@@ -73,7 +73,9 @@ In the page where you want to embed a form, include the following JavaScript by 
     src="/orbeon/xforms-server/baseline.js?updates=fr"></script>
 ```
 
-## `embedForm()` API
+## API
+
+### `embedForm()`
 
 You embed a form in the page by calling the following API:
 
@@ -137,7 +139,7 @@ See also:
 - [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback)
 - [`embedForm()` API](/form-runner/link-embed/javascript-api.md#embedform-api)
 
-## `destroyForm()` API
+### `destroyForm()`
 
 To remove a form that you embedded earlier, call:
 
