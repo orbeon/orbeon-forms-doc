@@ -15,9 +15,9 @@ If you have your own application and would like to embed a form created with For
 
 ## Usage
 
-### Forwarding
-
 If you're using the JavaScript embedding API, chances are that your application isn't Java-based. This means that Orbeon Forms and your application are likely to be running on a different server or different port.
+
+### Option 1: forwarding
 
 All browser requests, whether for the page of your app that uses the embedding API, or for Orbeon Forms resources, need to be made to the same server and port. It is your responsibility to setup that server so requests to Orbeon Forms are forwarded to the Orbeon Forms server, as shown in the diagram below. Exactly how to do so will depend on the server-side technology you are using. For instance:
  
