@@ -13,33 +13,47 @@ If you have your own application and would like to embed a form created with For
 - If you are using Liferay, we recommend you use the [Liferay proxy portlet](liferay-proxy-portlet.md).
 - In all other cases, we recommend you use the JavaScript Embedding API described on this page. It offers the most flexibility, and will work irrelevant of the server-side technology you are using.
 
-## Usage
+## Deployment options
 
-If you're using the JavaScript embedding API, chances are that your application isn't Java-based. This means that Orbeon Forms and your application are likely to be running on a different server or different port.
-
-### Option 1: forwarding
-
-All browser requests, whether for the page of your app that uses the embedding API, or for Orbeon Forms resources, need to be made to the same server and port. It is your responsibility to setup that server so requests to Orbeon Forms are forwarded to the Orbeon Forms server, as shown in the diagram below. Exactly how to do so will depend on the server-side technology you are using. For instance:
- 
-- If you're using the Apache HTTP Server, this can be done with the [mod_rewrite module](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
-- If you're using Microsoft IIS, you configure this with the IIS Manager, by creating a Reverse Proxy rule. 
+When using the JavaScript embedding API, the browser must be able to communicate with both your app server running the web application from which you are doing the embedding, and the Orbeon Forms server. Your app server and the Orbeon Forms server are probably running on different servers or on different ports, so running on different origins (the combination of the scheme , e.g. `http`, `https`, the host and the port). Cross-origin requests, where a given web page makes requests to different origins, are possible but are restricted by browsers due to potential security risks such as cross-site request forgery and cross-site script inclusion. You can deal with this situation by either avoiding cross-origin requests by having the browser always talk to a single server and having that server forward requests to Orbeon Forms accordingly (see "Option 1: Forwarding" below), or by doing the necessary setup to allow cross-origin requests (see "Option 2: Cross-origin" below).
 
 ![Network setup](images/javascript-api-network.png)
 
-#### Requests to forward
+### Option 1: Forwarding
 
-You can identify the requests made to Orbeon Forms based on their path, which is typically `/orbeon`. (With Java web apps, that first part of the path is referred to as the "context", and you can deploy Orbeon Forms on a context other than `/orbeon`, say `/forms`. However, in what follows, we'll just assume you've kept `/orbeon`.)
+With this setup, all browser requests, whether for the page of your application using the embedding API or for Orbeon Forms, will be made to the same origin (scheme, server and port). It is your responsibility to configure this server so that requests to Orbeon Forms are forwarded to the Orbeon Forms server.
 
-#### Forwarding the `JSESSIONID` cookie
+Exactly how to do this depends on the server-side technology you are using. For example, if you're using the Apache HTTP Server, this can be done with the [mod_rewrite module](https://httpd.apache.org/docs/current/mod/mod_rewrite.html), and if you're using Microsoft IIS, you configure this using the IIS Manager by creating a Reverse Proxy rule.
 
-When forwarding HTTP requests, you need to make sure the `JSESSIONID` cookie is properly forwarded. You can for instance check this with the Chrome Dev Tools using the Network tab. Make sure that:
+You can identify the requests you need to forward by their path, which is typically `/orbeon`. In Java web applications, this first part of the path is called the "context", and you can deploy Orbeon Forms in a context other than `/orbeon`, such as `/forms`, but in the following we'll just assume that you've kept `/orbeon`. When forwarding HTTP requests, you need to make sure that the `JSESSIONID` cookie is forwarded correctly. You can check this using the Network tab in the Chrome Dev Tools. Make sure this is the case:
 
 1. The first time the browser makes a request to Orbeon Forms, that is with a path starting with `/orbeon`, the response sets `JSESSIONID` cookie.
 2. In every subsequent request made to Orbeon Forms, that `JSESSIONID` cookie set earlier is sent by the browser, and the server doesn't in turn set another `JSESSIONID` in the response. (I.e. the value of the `JSESSIONID` cookie sent by the browser to the server shouldn't change for the duration of the session.)
 
-### Users
+### Option 2: Cross-origin
 
-#### Authentication
+When calling `embedForm()`, the value of the `context` parameter must be the full URL of the Orbeon Forms server (like `https://forms.example.org/orbeon`), not a relative URL (like `/orbeon`).
+
+All responses from the Orbeon Forms server must include an `Access-Control-Allow-Origin` header that lists your app server's origin, for example `Access-Control-Allow-Origin: www.example.org`. It must also include the following three headers: `Access-Control-Allow-Credentials: true`, `Access-Control-Allow-Methods: *`, and `Access-Control-Allow-Headers: orbeon-client`.
+
+You can set these response headers in a reverse proxy. If you don't have a reverse proxy technology of your choice, we recommend using UrlRewriteFilter by adding the [`urlrewritefilter-4.0.3.jar`](https://repo1.maven.org/maven2/org/tuckey/urlrewritefilter/4.0.3/urlrewritefilter-4.0.3. jar) to the Orbeon Forms `WEB-INF/lib`, editing the `WEB-INF/web.xml` to add the `<filter>` and `<filter-mapping>` mentioned on the [UrlRewriteFilter home page](https://tuckey.org/urlrewrite/), and creating a `WEB-INF/urlrewrite.xml` file with the following content.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN" "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+    <rule>
+        <set type="response-header" name="Access-Control-Allow-Origin">http://localhost:8080</set>
+        <set type="response-header" name="Access-Control-Allow-Credentials">true</set>
+        <set type="response-header" name="Access-Control-Allow-Methods">*</set>
+        <set type="response-header" name="Access-Control-Allow-Headers">orbeon-client</set>
+    </rule>
+</urlrewrite>
+```
+
+## Users
+
+### Authentication
 
 Users will be accessing your application, so you can continue to authenticate them as usual. If you are only requiring authentication for certain paths, you'll just want to make sure you also include everything under `/orbeon`. If you don't require users to be authenticated to access that path, they might be able to bypass the authentication you've put in place for your app, say under `/app`, and instead access directly Orbeon Forms making requests to paths under `/orbeon`.
 
@@ -47,7 +61,7 @@ Users will be accessing your application, so you can continue to authenticate th
 
 If your users are authenticated, you'll most likely want Orbeon Forms to also know about who the current user is, so Orbeon Forms can [control the access to forms and enforce permissions](/form-runner/access-control/README.md). In the context of the JavaScript embedding API, this is typically done by your having your forwarding code pass information about the current user to Orbeon Forms using headers, and setting up Orbeon Forms to use this information it receives in what is called the [header-driven method](/form-runner/access-control/users.md#header-driven-method) (you will find all the details on what headers you need to pass, and how setup Orbeon Forms to use header-based authentication on that page).
 
-### JavaScript to include
+## JavaScript to include
 
 In the page where you want to embed a form, include the following JavaScript by adding this element inside the page's `<head>`:
 
@@ -57,7 +71,7 @@ In the page where you want to embed a form, include the following JavaScript by 
     src="/orbeon/xforms-server/baseline.js?updates=fr"></script>
 ```
 
-### `embedForm()` API
+## `embedForm()` API
 
 You embed a form in the page by calling the following API:
 
@@ -121,7 +135,7 @@ See also:
 - [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback)
 - [`embedForm()` API](/form-runner/link-embed/javascript-api.md#embedform-api)
 
-### `destroyForm()` API
+## `destroyForm()` API
 
 To remove a form that you embedded earlier, call:
 
