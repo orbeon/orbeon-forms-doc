@@ -13,13 +13,15 @@ If you have your own application and would like to embed a form created with For
 - If you are using Liferay, we recommend you use the [Liferay proxy portlet](liferay-proxy-portlet.md).
 - In all other cases, we recommend you use the JavaScript Embedding API described on this page. It offers the most flexibility, and will work irrelevant of the server-side technology you are using.
 
-## Deployment options
+## Options
 
 When using the JavaScript embedding API, the browser must be able to communicate with both your app server running the web application from which you are doing the embedding, and the Orbeon Forms server. Your app server and the Orbeon Forms server are probably running on different servers or on different ports, so running on different origins (the combination of the scheme , e.g. `http`, `https`, the host and the port). Cross-origin requests, where a given web page makes requests to different origins, are possible but are restricted by browsers due to potential security risks such as cross-site request forgery and cross-site script inclusion. You can deal with this situation by either avoiding cross-origin requests by having the browser always talk to a single server and having that server forward requests to Orbeon Forms accordingly (see "Option 1: Forwarding" below), or by doing the necessary setup to allow cross-origin requests (see "Option 2: Cross-origin" below).
 
 ![Network setup](images/javascript-api-network.png)
 
 ### Option 1: Forwarding
+
+#### Deployement
 
 With this setup, all browser requests, whether for the page of your application using the embedding API or for Orbeon Forms, will be made to the same origin (scheme, server and port). It is your responsibility to configure this server so that requests to Orbeon Forms are forwarded to the Orbeon Forms server.
 
@@ -30,9 +32,17 @@ You can identify the requests you need to forward by their path, which is typica
 1. The first time the browser makes a request to Orbeon Forms, that is with a path starting with `/orbeon`, the response sets `JSESSIONID` cookie.
 2. In every subsequent request made to Orbeon Forms, that `JSESSIONID` cookie set earlier is sent by the browser, and the server doesn't in turn set another `JSESSIONID` in the response. (I.e. the value of the `JSESSIONID` cookie sent by the browser to the server shouldn't change for the duration of the session.)
 
+## Users and authentication
+
+Users will be accessing your application, so you can continue to authenticate them as usual. If you're only requiring authentication for certain paths, make sure you include everything under `/orbeon`. If you don't require users to be authenticated to access that path, they may be able to bypass the authentication you've set up for your application, say under `/app`, and instead access Orbeon Forms directly, making requests to paths under `/orbeon`.
+
+If your users are authenticated, you'll probably also want Orbeon Forms to know who the current user is, so that Orbeon Forms can [control access to forms and enforce permissions](/form-runner/access-control/README.md). In the context of the JavaScript embedding API, this is typically done by having your redirect code pass information about the current user to Orbeon Forms using headers, and setting up Orbeon Forms to use this information it receives in what is called the [header-driven method](/form-runner/access-control/users.md#header-driven-method) (you will find all the details on which headers you need to pass, and how to set up Orbeon Forms to use header-based authentication on this page).
+
 ### Option 2: Cross-origin
 
 [SINCE Orbeon Forms 2022.1.5]
+
+#### Deployement
 
 When calling `embedForm()`, the value of the `context` parameter must be the full URL of the Orbeon Forms server (like `https://forms.example.org/orbeon`), not a relative URL (like `/orbeon`).
 
@@ -53,15 +63,12 @@ You can set these response headers in a reverse proxy. If you don't have a rever
 </urlrewrite>
 ```
 
-## Users
+#### Users and authentication
 
-### Authentication
+When users authenticate with your app server, it will typically set a cookie that allows it to keep track of who the user user, say `UserToken`. After authenticating successfully, the app server sets `UserToken` to given value, and receiving that token back on subsequent request, it knows the user has authenticated, and who the user is. That token will also be sent 
 
-Users will be accessing your application, so you can continue to authenticate them as usual. If you are only requiring authentication for certain paths, you'll just want to make sure you also include everything under `/orbeon`. If you don't require users to be authenticated to access that path, they might be able to bypass the authentication you've put in place for your app, say under `/app`, and instead access directly Orbeon Forms making requests to paths under `/orbeon`.
-
-#### User information
-
-If your users are authenticated, you'll most likely want Orbeon Forms to also know about who the current user is, so Orbeon Forms can [control the access to forms and enforce permissions](/form-runner/access-control/README.md). In the context of the JavaScript embedding API, this is typically done by your having your forwarding code pass information about the current user to Orbeon Forms using headers, and setting up Orbeon Forms to use this information it receives in what is called the [header-driven method](/form-runner/access-control/users.md#header-driven-method) (you will find all the details on what headers you need to pass, and how setup Orbeon Forms to use header-based authentication on that page).
+For users who are authenticated with your app server, a cookie will typically be set by
+When using cross-origin requests, requests going reach Orbeon Forms without going through your app server, If users need to be authenticated to be able to access Orbeon Forms, or you need Orbeon Forms to know who the current user is, 
 
 ## JavaScript to include
 
