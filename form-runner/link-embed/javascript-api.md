@@ -32,7 +32,7 @@ You can identify the requests you need to forward by their path, which is typica
 1. The first time the browser makes a request to Orbeon Forms, that is with a path starting with `/orbeon`, the response sets `JSESSIONID` cookie.
 2. In every subsequent request made to Orbeon Forms, that `JSESSIONID` cookie set earlier is sent by the browser, and the server doesn't in turn set another `JSESSIONID` in the response. (I.e. the value of the `JSESSIONID` cookie sent by the browser to the server shouldn't change for the duration of the session.)
 
-## Users and authentication
+#### Users and authentication
 
 Users will be accessing your application, so you can continue to authenticate them as usual. If you're only requiring authentication for certain paths, make sure you include everything under `/orbeon`. If you don't require users to be authenticated to access that path, they may be able to bypass the authentication you've set up for your application, say under `/app`, and instead access Orbeon Forms directly, making requests to paths under `/orbeon`.
 
