@@ -17,11 +17,11 @@ If you have your own application and would like to embed a form created with For
 
 When using the JavaScript embedding API, the browser must be able to communicate with both your app server running the web application from which you are doing the embedding, and the Orbeon Forms server. Your app server and the Orbeon Forms server are probably running on different servers or on different ports, so running on different origins (the combination of the scheme , e.g. `http`, `https`, the host and the port). Cross-origin requests, where a given web page makes requests to different origins, are possible but are restricted by browsers due to potential security risks such as cross-site request forgery and cross-site script inclusion. You can deal with this situation by either avoiding cross-origin requests by having the browser always talk to a single server and having that server forward requests to Orbeon Forms accordingly (see "Option 1: Forwarding" below), or by doing the necessary setup to allow cross-origin requests (see "Option 2: Cross-origin" below).
 
-![Network setup](images/javascript-api-network.png)
+<img alt="Network setup" src="images/javascript-api-network.png" width="600" />
 
 ### Option 1: Forwarding
 
-#### Deployement
+#### Deployment
 
 With this setup, all browser requests, whether for the page of your application using the embedding API or for Orbeon Forms, will be made to the same origin (scheme, server and port). It is your responsibility to configure this server so that requests to Orbeon Forms are forwarded to the Orbeon Forms server.
 
@@ -42,33 +42,50 @@ If your users are authenticated, you'll probably also want Orbeon Forms to know 
 
 [SINCE Orbeon Forms 2022.1.5]
 
-#### Deployement
+#### Deployment
 
 When calling `embedForm()`, the value of the `context` parameter must be the full URL of the Orbeon Forms server (like `https://forms.example.org/orbeon`), not a relative URL (like `/orbeon`).
 
-All responses from the Orbeon Forms server must include an `Access-Control-Allow-Origin` header that lists your app server's origin, for example `Access-Control-Allow-Origin: www.example.org`. It must also include the following three headers: `Access-Control-Allow-Credentials: true`, `Access-Control-Allow-Methods: *`, and `Access-Control-Allow-Headers: orbeon-client`.
+For the Orbeon Forms server to respond with the appropriate CORS headers, and to support preflight requests, install and configure the UrlRewriteFilter as follows. If you already have a piece of software active as a reverse proxy in front of Orbeon Forms, feel free to use it, to achieve the same result.  
 
-You can set these response headers in a reverse proxy. If you don't have a reverse proxy technology of your choice, we recommend using UrlRewriteFilter by adding the [`urlrewritefilter-4.0.3.jar`](https://repo1.maven.org/maven2/org/tuckey/urlrewritefilter/4.0.3/urlrewritefilter-4.0.3. jar) to the Orbeon Forms `WEB-INF/lib`, editing the `WEB-INF/web.xml` to add the `<filter>` and `<filter-mapping>` mentioned on the [UrlRewriteFilter home page](https://tuckey.org/urlrewrite/), and creating a `WEB-INF/urlrewrite.xml` file with the following content.
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN" "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
-<urlrewrite>
-    <rule>
-        <set type="response-header" name="Access-Control-Allow-Origin">https://forms.example.com/</set>
-        <set type="response-header" name="Access-Control-Allow-Credentials">true</set>
-        <set type="response-header" name="Access-Control-Allow-Methods">*</set>
-        <set type="response-header" name="Access-Control-Allow-Headers">orbeon-client</set>
-    </rule>
-</urlrewrite>
-```
+1. Place the [`urlrewritefilter-4.0.3.jar`](https://repo1.maven.org/maven2/org/tuckey/urlrewritefilter/4.0.3/urlrewritefilter-4.0.3.jar) file in the Orbeon Forms `WEB-INF/lib`.
+2. Edit the `WEB-INF/web.xml` to add the following `<filter>` and `<filter-mapping>`.
+    ```xml
+    <filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    ```
+3. Create a `WEB-INF/urlrewrite.xml` file with the following content.
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN" "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+    <urlrewrite>
+        <rule>
+            <set type="response-header" name="Access-Control-Allow-Origin">http://localhost:8080</set>
+            <set type="response-header" name="Access-Control-Allow-Credentials">true</set>
+            <set type="response-header" name="Access-Control-Allow-Methods">*</set>
+            <set type="response-header" name="Access-Control-Allow-Headers">orbeon-client, content-type</set>
+        </rule>
+        <rule>
+            <condition type="method">OPTIONS</condition>
+            <set type="status">200</set>
+            <to>null</to>
+        </rule>
+    </urlrewrite>
+    ```
 
 #### Users and authentication
 
-When users authenticate with your app server, it will typically set a cookie that allows it to keep track of who the user user, say `UserToken`. After authenticating successfully, the app server sets `UserToken` to given value, and receiving that token back on subsequent request, it knows the user has authenticated, and who the user is. That token will also be sent 
+When users authenticate to your application server, it will typically set a cookie, such as `UserToken`, that allows it to keep track of who the user is. After a user successfully authenticates, the application server will typically set `UserToken` to a given value, and when it gets that token back on a subsequent request, it can know that the user authenticated and who the user is.
 
-For users who are authenticated with your app server, a cookie will typically be set by
-When using cross-origin requests, requests going reach Orbeon Forms without going through your app server, If users need to be authenticated to be able to access Orbeon Forms, or you need Orbeon Forms to know who the current user is, 
+This token will also be sent by the browser to the Orbeon Forms server. If you want Orbeon Forms to know who the user is, or if you want to prevent it from handling unauthenticated requests, you will need to set up a component running before Orbeon Forms, such as a reverse proxy, to use the `UserToken` cookie and to pass information about the current user to Orbeon Forms, typically using the [header-driven method](/form-runner/access-control/users.md#header-driven-method). This component can be a servlet filter or a reverse proxy.
 
 ## JavaScript to include
 
