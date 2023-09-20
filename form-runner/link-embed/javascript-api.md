@@ -17,7 +17,7 @@ If you have your own application and would like to embed a form created with For
 
 When using the JavaScript embedding API, the browser must be able to communicate with both your app server running the web application from which you are doing the embedding, and the Orbeon Forms server. Your app server and the Orbeon Forms server are probably running on different servers or on different ports, so running on different origins (the combination of the scheme , e.g. `http`, `https`, the host and the port). Cross-origin requests, where a given web page makes requests to different origins, are possible but are restricted by browsers due to potential security risks such as cross-site request forgery and cross-site script inclusion. You can deal with this situation by either avoiding cross-origin requests by having the browser always talk to a single server and having that server forward requests to Orbeon Forms accordingly (see "Option 1: Forwarding" below), or by doing the necessary setup to allow cross-origin requests (see "Option 2: Cross-origin" below).
 
-<img alt="Network setup" src="images/javascript-api-network.png" width="600" />
+![Network setup](images/javascript-api-network.png)
 
 ### Option 1: Forwarding
 
