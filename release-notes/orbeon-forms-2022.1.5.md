@@ -58,6 +58,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.4 PE
         - Minimal read-write repeated grid doesn't show properly ([\#5840](https://github.com/orbeon/orbeon-forms/issues/5840))
         - `content.css` pollutes top-level page ([\#5962](https://github.com/orbeon/orbeon-forms/issues/5962)) 
         - Support cross-site embedding with the Form Runner JavaScript embedding API ([\#5974](https://github.com/orbeon/orbeon-forms/issues/5974))
+        - Workflow stage is lost when going to the view page ([\#5984](https://github.com/orbeon/orbeon-forms/issues/5984))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
 
