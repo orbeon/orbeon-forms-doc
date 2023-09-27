@@ -138,6 +138,12 @@ In your custom CSS file, you could refer to these classes with a selector, for e
 
 *NOTE: The above uses example `my-` prefixes as it is a good idea to prefix CSS classes to avoid clashes with other CSS classes on the page.*
 
+#### Autocomplete attribute
+
+[SINCE Orbeon Forms 2023.1]
+
+The "Autocomplete attribute" dropdown allows specifying an [HTML autocomplete value](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for controls for which it makes sense to do so. Such a value tells the browser that it can suggest values for the field or, in the case of the `off` value, that it shouldn't suggest any value.
+
 #### Control appearance
 
 [SINCE Orbeon Forms 4.10]
