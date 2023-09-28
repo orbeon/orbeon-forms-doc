@@ -350,6 +350,8 @@ For this to work, a component we call the *persistence proxy* sits between consu
 
 ## Deleting all data for an existing form
 
+__WARNING: This feature is not supported when using relational databases.__
+
 To remove all instances of form data, issue a `DELETE` to:
 
 ```
