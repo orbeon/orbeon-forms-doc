@@ -73,6 +73,8 @@ When using the validated mode:
 - you should generally use the "Prev" or "Next" buttons for navigation
 - any attempt to navigate to the next page marks all the fields of the preceding pages as well as the current page as visited, ensuring that errors on those pages, if any, show in the error summary
 
+__NOTE: This only applies to navigation between top-level sections. When subsection navigation is enabled, the validated mode applies only to top-level sections, while navigation within a given top-level section is always free.__
+
 [FROM Orbeon Forms Forms 4.9 to 2016.2]
 
 The following property enables the lax validated mode:
@@ -114,7 +116,9 @@ The following property enables the strict validated mode:
   value="strict"/>
 ```
 
-This mode behaves the same as the lax validated mode, except that it doesn't matter if a forward section has been visited or not: if there are errors in the current or preceding wizard pages, it is not possible to navigate with the "Next" button or via the table of contents.  
+This mode behaves the same as the lax validated mode, except that it doesn't matter if a forward section has been visited or not: if there are errors in the current or preceding wizard pages, it is not possible to navigate with the "Next" button or via the table of contents.
+
+__NOTE: This only applies to navigation between top-level sections. When subsection navigation is enabled, the validated mode applies only to top-level sections, while navigation within a given top-level section is always free.__
 
 ## Buttons
 
