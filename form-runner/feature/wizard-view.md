@@ -340,7 +340,8 @@ Requesting a specific wizard page may fail in case the page is non-existent or n
 When using paged repeated sections, the URL parameter indicates the repetition number, and requesting that URL parameter value shows the given repetition if it exists and is available. If the page name doesn't correspond to a repeated section, or if the index requested is out of bounds, the wizard displays the first available page of the wizard as if the parameter had not been provided. The index is 1-based and encoded after an encoded `/` character (`%2F`), for example:
 
 ```
-/fr/orbeon/travel/edit/28431b9fac9ba642a6bf8408a513538a97273483?fr-wizard-page=detail-section%2F2
+/fr/orbeon/travel/edit/28431b9fac9ba642a6bf8408a513538a97273483
+    ?fr-wizard-page=detail-section%2F2
 ```
 
 It is possible to disable this behavior by setting the following property to `false`:
