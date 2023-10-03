@@ -335,18 +335,24 @@ The URL of the form now contains a `fr-wizard-page` parameter, which indicates t
 
 Form Runner also reads this URL parameter to attempt initializing the wizard to the requested page. This is useful when you want to bookmark a specific page of the wizard, or when you want to send a link to a specific page of the wizard to someone else.
 
-Requesting a specific wizard page may fail in case the page is non-existent or not accessible to the current user. In that case, the wizard displays the first available page of the wizard as if the parameter had not been provided.
+Requesting a specific wizard page may fail in case the page is non-existent or not accessible to the current user. In particular, this is the case for non-available pages in validated modes. In that case, the wizard displays the first available page of the wizard as if the parameter had not been provided.
 
-When using paged repeated sections, the URL parameter indicates the repetition number, and requesting that URL parameter value shows the given repetition if it exists and is available.
+When using paged repeated sections, the URL parameter indicates the repetition number, and requesting that URL parameter value shows the given repetition if it exists and is available. If the page name doesn't correspond to a repeated section, or if the index requested is out of bounds, the wizard displays the first available page of the wizard as if the parameter had not been provided. The index is 1-based and encoded after an encoded `/` character (`%2F`), for example:
+
+```
+/fr/orbeon/travel/edit/28431b9fac9ba642a6bf8408a513538a97273483?fr-wizard-page=detail-section%2F2
+```
 
 It is possible to disable this behavior by setting the following property to `false`:
 
 ```xml
 <property 
     as="xs:boolean"
-    name="oxf.xforms.xbl.fr.wizard.allow-initial-url-param.*.*"                   
+    name="oxf.xforms.xbl.fr.wizard.allow-url-param.*.*"                   
     value="false"/>
 ```
+
+It is possible to read the current wizard page name using the 
 
 ## See also
 
