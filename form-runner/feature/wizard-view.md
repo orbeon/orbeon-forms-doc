@@ -352,7 +352,7 @@ It is possible to disable this behavior by setting the following property to `fa
     value="false"/>
 ```
 
-It is possible to read the current wizard page name using the 
+It is possible to read the current wizard page name using the [`fr:wizard-current-page-name()`](/xforms/xpath/extension-form-runner.md#fr-wizard-current-page-name) function. This can be used for example whe calling a process from a button to pass the current wizard page name as a parameter to the service URL.
 
 ## See also
 
