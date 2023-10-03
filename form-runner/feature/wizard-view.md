@@ -323,6 +323,31 @@ However, should you want to disable this behavior, and have the HTML for all the
     value="false"/>
 ```
 
+## Page name URL parameter
+
+[SINCE Orbeon Forms 2023.1]
+
+The URL of the form now contains a `fr-wizard-page` parameter, which indicates the page currently being displayed. For example:
+
+```
+/fr/orbeon/controls/new?fr-wizard-page=selection-controls
+```
+
+Form Runner also reads this URL parameter to attempt initializing the wizard to the requested page. This is useful when you want to bookmark a specific page of the wizard, or when you want to send a link to a specific page of the wizard to someone else.
+
+Requesting a specific wizard page may fail in case the page is non-existent or not accessible to the current user. In that case, the wizard displays the first available page of the wizard as if the parameter had not been provided.
+
+When using paged repeated sections, the URL parameter indicates the repetition number, and requesting that URL parameter value shows the given repetition if it exists and is available.
+
+It is possible to disable this behavior by setting the following property to `false`:
+
+```xml
+<property 
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.wizard.allow-initial-url-param.*.*"                   
+    value="false"/>
+```
+
 ## See also
 
 - [Synchronizing repeated content](/form-builder/synchronize-repeated-content.md)
