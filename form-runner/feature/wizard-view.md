@@ -135,50 +135,6 @@ The following property allows specifying which buttons are presented *inside* th
 
 ![](../../form-runner/images/wizard-buttons.png)
 
-## Section status
-
-### Status indication
-
-[SINCE Orbeon Forms 2016.2]
-
-The wizard indicates, in the table of contents, the status of each section:
-
-- __Not Started:__ the user hasn't visited the section yet.
-- __Incomplete:__ the user has visited the section but some required fields are not filled.
-- __Errors:__ the user has visited the section and some fields have been filled but contain errors.
-- __Complete:__ the user has visited the section and all the required fields for the section have been filled. 
-
-![Wizard validated mode](../images/wizard-status.png)
-
-### CSS classes
-
-CSS classes are available on table of content entries to reflect the status of each section:
-
-- `disabled`
-- `active`
-- `started`
-- `changed`
-- `incomplete`
-- `invalid`
-
-[SINCE Orbeon Forms 2018.1]
-
-The following classes indicate the first and last sections:
-
-- `first-page`: the first visible page
-- `last-top-level-page`: the first visible top-level page 
-- `last-page`: the last visible page
-    - this can be different from `last-top-level-page` when using subsection navigation
-
-### Wizard status persistence
-
-[SINCE Orbeon Forms 2017.2]
-
-The wizard status is persisted when the data is saved to the database. This means that if the user saves incomplete 
-data and comes back to it, information about visited or changed wizard pages is restored.
-
-The wizard shows the last possible page upon loading data.  
-
 ## Separate table of contents
 
 [SINCE Orbeon Forms 2016.2]
@@ -210,9 +166,22 @@ The Form Settings in Form Builder allow overriding the default set by configurat
 
 ## Section status
 
+### Status indication
+
+[SINCE Orbeon Forms 2016.2]
+
+When enabling the separate table of contents of the wizard (see above), the wizard automatically indicates, the status of each section:
+
+- __Not Started:__ the user hasn't visited the section yet.
+- __Incomplete:__ the user has visited the section but some required fields are not filled.
+- __Errors:__ the user has visited the section and some fields have been filled but contain errors.
+- __Complete:__ the user has visited the section and all the required fields for the section have been filled. 
+
+![Wizard validated mode](../images/wizard-status.png)
+
 [SINCE Orbeon Forms 2022.1]
 
-When enabling the separate table of contents of the wizard (see above), the status of each individual section is shown. However, by default, the status of the section is not shown in the wizard table of contents. Setting the `section-status` property to `true` allows changing this default: 
+By default, the status of each section is not shown in the regular (not separate) wizard table of contents. Setting the `section-status` property to `true` allows changing this default: 
 
 ```xml
 <property
@@ -224,6 +193,35 @@ When enabling the separate table of contents of the wizard (see above), the stat
 The Form Settings in Form Builder allow overriding the default set by configuration properties at the form level. 
 
 <!-- TODO: screenshot -->
+
+### CSS classes
+
+CSS classes are available on table of content entries to reflect the status of each section:
+
+- `disabled`
+- `active`
+- `started`
+- `changed`
+- `incomplete`
+- `invalid`
+
+[SINCE Orbeon Forms 2018.1]
+
+The following classes indicate the first and last sections:
+
+- `first-page`: the first visible page
+- `last-top-level-page`: the first visible top-level page 
+- `last-page`: the last visible page
+    - this can be different from `last-top-level-page` when using subsection navigation
+
+### Wizard status persistence
+
+[SINCE Orbeon Forms 2017.2]
+
+The wizard status is persisted when the data is saved to the database. This means that if the user saves incomplete 
+data and comes back to it, information about visited or changed wizard pages is restored.
+
+The wizard shows the last possible page upon loading data.
 
 ## Subsections
 
