@@ -213,7 +213,7 @@ We recommend you set up your database to store text as Unicode, to avoid potenti
 
 This escaping only applies to form data, and not to indices created based on this data, which means that if you are using the Form Runner summary page, or the search API, and that a field value shown in the summary page or returned by the search API contains a character that your database is unable to store, while your data is still safe, the summary page or the result of the search API might contain an incorrect value.
 
-For instance, say a user enters the character `é` in a field, and that you have this property enabled, then the form data will contain `&#233;`, which is the escaped version of `é`, however, if that field is indexed (because you've enabled *Show on Summary page* or *Show in search* in the *Control Settings* for that field), then the character `é` will be stored in the index table, which might be a problem if your database encoding cannot accommodate the storage of this character.
+For instance, say a user enters the character `é` in a field, and that you have this property enabled, then the form data will contain `&#233;`, which is the escaped version of `é`, however, if that field is indexed (because you've enabled *Show on Summary page* or *Allow bulk edit* in the *Control Settings* for that field), then the character `é` will be stored in the index table, which might be a problem if your database encoding cannot accommodate the storage of this character.
 
 Amongst the [built-in implementations of the persistence API](/form-runner/persistence/db-support.md), this property is supported for all relational databases, but not for eXist.
 

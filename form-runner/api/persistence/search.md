@@ -387,9 +387,9 @@ When `return-all-indexed-fields="true"` is specified in the search query, all in
 
 Indexed fields are fields that are marked, in Form Builder, as:
 
-- "Show in search"
-- "Show in Summary Page"
 - "Index control"
+- "Show on Summary page"
+- "Allow bulk edit"
 
 ## See also
 

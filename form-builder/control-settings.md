@@ -30,16 +30,24 @@ See [Renaming of controls and formulas](/form-builder/formulas.md#renaming-of-co
 The following options are available:
 
 - __Show on Summary page:__
-    - When selected, the control value is visible as a Summary page column.
-- __Show in Search:__
-    - When selected, the control value is searchable in the Summary page.
+    - When selected, the control value is visible as a Summary page column and searchable.
+- __Allow bulk edit:__
+    - When selected, the control value can be bulk edited from the Summary page.
 - __Index control:__
     - SINCE Orbeon Forms 2021.1
-    - Index the value of this control even if it's not shown or searchable from the Summary page. This makes the control accessible from the [search API](../form-runner/api/persistence/search.md).
+    - Index the value of this control even if it's not shown or searchable from the Summary page, or bulk editable. This makes the control accessible from the [search API](../form-runner/api/persistence/search.md).
 - __Encrypt data at rest:__
     - SINCE Orbeon Forms 2018.1
     - This is an Orbeon Forms PE feature.
     - See [Field-level encryption](/form-builder/field-level-encryption.md) for details.
+
+##### Role restriction
+
+[SINCE Orbeon Forms 2023.1]
+
+It is possible to restrict the "Show on Summary page" and "Allow bulk edit" options to one or more specific roles (i.e. group of users). When multiple roles are specified, the logic that applies can be chosen as well. If "All" is selected, then all specified roles must be present. If "Any" is selected, just one of the specified roles must be present.
+
+![Role restriction](images/control-settings-restrict-to-role.png)
 
 ##### Email options
     

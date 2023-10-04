@@ -165,9 +165,9 @@ For more details:
 
 ### Option to index fields separately from Summary page
 
-Until now, Orbeon Forms would index fields marked as "Show on Summary page" or "Show in search" in the "Control Settings" dialog.
+Until now, Orbeon Forms would index fields marked as "Show on Summary page" or "Allow bulk edit" in the "Control Settings" dialog.
 
-It is now possible to tell Form Runner to index fields independently from whether they show in the Summary page. This allows indexed fields to be searchable via the [Search API](/form-runner/api/persistence/search.md).
+It is now possible to tell Form Runner to index fields independently of whether they show in the Summary page. This allows indexed fields to be searchable via the [Search API](/form-runner/api/persistence/search.md).
 
 For details, see [Control Settings](/form-builder/control-settings.md#main-options).
 
