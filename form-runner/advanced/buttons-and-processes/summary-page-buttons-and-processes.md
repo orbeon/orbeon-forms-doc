@@ -66,11 +66,6 @@ Originally, Form Runner processes associated with buttons are [available for the
 
 This allows you to add custom buttons to the Summary page, and to configure what happens when users press those buttons.
 
-In general, you do not needed to configure processes for the Summary page. However, you can configure your own processes if you need to, either by:
-
-- adding new buttons to the Summary page, or
-- changing the behavior of existing buttons.
-
 You configure a Summary page process with properties starting with the `oxf.fr.summary.process` prefix. For example, to create a process for the `new` button:
 
 ```xml
@@ -81,9 +76,9 @@ You configure a Summary page process with properties starting with the `oxf.fr.s
 </property>
 ```
 
-Note that, unlike Detail page processes, Summary page processes currently don't have access to the form data associated with them. Therefore they are best used for navigation or similar simple tasks.  
+Note that, unlike Detail page processes, Summary page processes currently don't have access to the form data associated with them. Therefore, they are best used for navigation or similar simple tasks.  
 
-Like for Detail page processes, you can control button visibility and whether a button is disabled using properties starting with the `oxf.fr.summary.button` prefix. The following two properties apply to a hypothetical `acme` button:
+As with the Detail page processes, you can control button visibility and whether a button is disabled using properties starting with the `oxf.fr.summary.button` prefix. The following two properties apply to a hypothetical `acme` button:
 
 ```xml
 <property as="xs:string"  name="oxf.fr.summary.button.acme.visible.*.*">
