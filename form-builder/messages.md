@@ -22,4 +22,5 @@ When a message is defined in the Messages dialog, it overrides any message defin
 
 ## See also
 
-- [Form Runner actions](/form-runner/advanced/buttons-and-processes/actions-form-runner.md)
+- [`success-message()` and `error-message()` actions](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message)
+- Blog post: [Customizing Form Runner messages directly from Form Builder](khttps://blog.orbeon.com/2023/10/customizing-form-runner-messages.html)
