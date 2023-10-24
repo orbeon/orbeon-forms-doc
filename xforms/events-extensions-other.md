@@ -60,6 +60,45 @@ Context attributes passed this way can be retrieved using the `event()` function
  
 _NOTE: At the moment, with, `<xf:dispatch>`, only custom events support passing context attributes this way. Built-in events, such as `xforms-value-changed`, or `DOMActivate`, ignore nested `<xf:property>` elements._
 
+## Tunnelling of events properties
+
+[SINCE Orbeon Forms 2023.1]
+
+The `xxf:tunnel="true` attribute on `<xf:property>` allows the propagation, or tunnelling, of event properties in the following cases:
+
+- `<xf:send>`: the properties are tunneled to event handlers for the `xforms-submit-error` and `xforms-submit-done` events as well as event handlers for `xxforms-action-error` event dispatched while processing event handlers for those events
+- `<xf:dispatch>`: the properties are tunneled to event handlers for the `xxforms-action-error` event dispatched while processing event handlers for the event dispatched
+
+Example with `xforms-submit-done`:
+
+```xml
+<xf:send submission="my-submission">
+    <xf:property name="my-tunnel-property" value="42" xxf:tunnel="true"/>
+</xf:send>
+<xf:submission id="my-submission">
+    <xf:action event="xforms-submit-done">
+        <xf:message value="event('my-tunnel-property')"/>
+    </xf:action>
+</xf:submission>
+```
+
+Example with `xxforms-action-error`:
+
+```xml
+<xf:dispatch name="my-event" target="my-target">
+    <xf:property name="divisor" value="0" xxf:tunnel="true"/>
+</xf:dispatch>
+<xf:group id="my-target">
+    <xf:action event="my-event">
+        <!-- Cause an action error -->
+        <xf:setvalue ref="title" value="42 div event('divisor')"/>
+    </xf:action>
+    <xf:action event="xxforms-action-error">
+        <xf:message value="event('divisor')"/>
+    </xf:action>
+</xf:group>
+```
+
 ## Allowing duplicate event in the event queue
  
 [SINCE Orbeon Forms 2017.1]
