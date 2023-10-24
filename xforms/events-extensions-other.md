@@ -10,10 +10,10 @@ XML Events 1 only supports filtering event handlers on a subset of the DOM Level
 
 Orbeon Forms supports the following values for the `phase` attribute:  
 
-* `capture`: only activate the handler during the capture phase (this is compatible with all the specifications)
-* `default` or unspecified: only activate the handler during the target or bubbling phase (this is compatible with XML Events 1 but not included in the current XBL 2 proposal)
-* `target`: only activate the handler during the target phase (this is not present in XML Events 1)  
-* `bubbling`: only activate the handler during the bubbling phase (this is not present in XML Events 1)
+- `capture`: only activate the handler during the capture phase (this is compatible with all the specifications)
+- `default` or unspecified: only activate the handler during the target or bubbling phase (this is compatible with XML Events 1 but not included in the current XBL 2 proposal)
+- `target`: only activate the handler during the target phase (this is not present in XML Events 1)  
+- `bubbling`: only activate the handler during the bubbling phase (this is not present in XML Events 1)
 
 _NOTE: In the future, the XBL 2 default action phase could be integrated if considered desirable. It is hoped that the `target` and `bubbling` values will be supported in XML Events 2._
 
@@ -23,10 +23,10 @@ _NOTE: In most cases, the `phase` attribute can be omitted, in which case the `t
 
 Orbeon Forms supports passing event context attributes with the XForms 2.0 `<xf:property>` child element. The actions supported are actions which directly cause an event to be dispatched:
 
-* `<xf:dispatch>`
-* `<xf:send>`
-* `<xxf:show>`
-* `<xxf:hide>`
+- `<xf:dispatch>`
+- `<xf:send>`
+- `<xxf:show>`
+- `<xxf:hide>`
 
 Here is how you pass context attributes when executing an action:
 
@@ -41,10 +41,10 @@ Here is how you pass context attributes when executing an action:
 
 `<xf:property>` supports the following two attributes:
 
-||||
-|---|---|---|
-| `name` |  Mandatory | Name of the context attribute. |
-| `value` |  Mandatory |  XPath 2.0 expression determining the value of the context attribute.  |
+|         |           |                                                                      |
+|---------|-----------|----------------------------------------------------------------------|
+| `name`  | Mandatory | Name of the context attribute.                                       |
+| `value` | Mandatory | XPath 2.0 expression determining the value of the context attribute. |
 
 Note that the context attribute name cannot be a qualified name (QName), because this would not be compatible with [DOM 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/events.html). However, a QName can be used as custom event name.
 
@@ -88,10 +88,10 @@ To allow duplicates, the `xxf:allow-duplicates="true"` attribute is supported:
 
 The following actions all support attributes resolving to a particular control:
 
-* `<xf:dispatch>` (`target` attribute)
-* `<xf:setfocus>` (`control` attribute)
-* `<xf:toggle>` (`case` attribute)
-* `<xxf:show>` (`neighbor` attribute)
+- `<xf:dispatch>` (`target` attribute)
+- `<xf:setfocus>` (`control` attribute)
+- `<xf:toggle>` (`case` attribute)
+- `<xxf:show>` (`neighbor` attribute)
 
 When that control is within a repeat iteration, the actual control targetted is chosen based on the current set of repeat indexes. However, in some cases, it is useful to be able to target the control within a particular iteration. This is achieved with the `xxf:repeat-indexes` extension attribute on these actions. This attribute takes a space-separated list of repeat indexes, starting with the outermost repeat. Example:
 
@@ -117,7 +117,7 @@ When that control is within a repeat iteration, the actual control targetted is 
 
 The `event`, `observer` and `target` attributes, defined by the [XML Events specification](https://www.w3.org/TR/2010/NOTE-xml-events2-20101216/), only support one event name, observer, or target respectively. Orbeon Forms supports as an extension a list of space-separated values. The behavior is as follows:
 
-* For `event`: the handler is called if any of the specified events matches.
+- For `event`: the handler is called if any of the specified events matches.
 
     ```xml
     <xf:action event="DOMFocusIn DOMFocusOut">
@@ -126,7 +126,7 @@ The `event`, `observer` and `target` attributes, defined by the [XML Events spec
     </xf:action>
     ```
 
-* For `observer`: the event handler is attached to all the observers specified.
+- For `observer`: the event handler is attached to all the observers specified.
 
     ```xml
     <xf:action event="DOMActivate" observer="my-input my-trigger">
@@ -135,7 +135,7 @@ The `event`, `observer` and `target` attributes, defined by the [XML Events spec
     </xf:action>
     ```
 
-* For `target`: the handler is called if any of the specified targets matches.
+- For `target`: the handler is called if any of the specified targets matches.
 
     ```xml
     <xf:action event="xforms-submit-done" target="create-submission update-submission">
