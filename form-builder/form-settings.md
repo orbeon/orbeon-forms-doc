@@ -55,6 +55,11 @@ Form options include options which apply to the entire form definition.
     - Use property: use the `oxf.xforms.hint.appearance` property
     - Inline: hints show inline below the control
     - Tooltips: hints show as tooltips upon mouseover
+- Use automatic hints
+    - [SINCE Orbeon Forms 2023.1]
+    - Use property: use the `oxf.fr.detail.hint.automatic.*.*` property
+    - Yes/No: show or don't show the automatic hints for all controls on this form
+    - For details, see [Automatic hints](control-settings.md#automatic-hints)
 - Use Placeholder for Text Fields and Text Areas
     - Hints show inline or as tooltips upon mouseover.
     - For text, date, and time input fields, hints show as an HTML *placeholder* within the field when the field is empty.

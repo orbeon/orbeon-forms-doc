@@ -251,6 +251,21 @@ In addition to setting a control's label and hint in place in the form area, you
 
 ![Label tab](images/control-settings-label-hint.png)
 
+#### Automatic hints
+
+[SINCE Orbeon Forms 2023.1]
+
+For attachment controls, in addition to the hint you provide for the control, Orbeon Forms can add an automatic hint informing the user about the maximum allowed file size and the accepted file types, if you have specified such validations in the Validations and Alerts tab.
+
+Automatic hints are disabled by default, and you can enable them for a specific control in the Control Settings dialog, for all controls in a form in the Form Settings dialog, or globally using the property below. A setting other than "Default" in the Control Settings dialog box overrides a setting other than "Use property" in the Form Settings dialog box, which overrides the value of the property below.
+
+```xml
+<property 
+    as="xs:boolean"
+    name="oxf.fr.detail.hint.automatic.*.*"                           
+    value="true"/>
+```
+
 ### Help Message
 
 ![Help tab](images/control-settings-help.png)
