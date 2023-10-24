@@ -523,6 +523,30 @@ The `file:` URI contains parameters when possible:
 - `mac`: an internally-produced MAC to check the file path has not been tampered with
     - This is so that `xf:output` in particular can access temporary files uploaded and retrieved by `xf:submission` but not other temporary files.
 
+## Event properties with `replace="all"`
+
+[SINCE Orbeon Forms 2023.1]
+
+When passing properties to a submission with `replace="all"`, custom event properties were previously not usable to influence submission attributes, for example the following wouldn't work, unlike with other values of `replace`:
+
+```xml
+
+<xf:send submission="fr-send-submission-all">
+    <xf:property name="uri"    value="'http://example.org'"/>
+    <xf:property name="prune"  value="'true'"/>
+    <xf:property name="method" value="'post'"/>
+</xf:send>
+
+<xf:submission
+    id="fr-send-submission-all"
+    resource="{event('uri')}"
+    relevant="{event('prune')}"
+    validate="false"
+    method="{event('method')}"/>
+```
+
+Since Orbeon Forms 2023.1, this is now supported __provided the values of events are strings__. Other value types are discarded during the process and only strings are preserved.
+
 ## Local submissions (deprecated)
 
 ### Status

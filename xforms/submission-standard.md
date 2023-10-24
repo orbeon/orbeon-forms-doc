@@ -1,7 +1,5 @@
 # Standard Submissions Support
 
-
-
 ## Introduction
 
 Orbeon Forms supports most standard XForms features, including:
