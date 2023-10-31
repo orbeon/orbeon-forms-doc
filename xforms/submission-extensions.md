@@ -545,7 +545,7 @@ When passing properties to a submission with `replace="all"`, custom event prope
     method="{event('method')}"/>
 ```
 
-Since Orbeon Forms 2023.1, this is now supported __provided the values of events are strings__. Other value types are discarded during the process and only strings are preserved.
+Since Orbeon Forms 2023.1, this is now supported and event properties can be used to influence submission attributes.
 
 ## Local submissions (deprecated)
 
