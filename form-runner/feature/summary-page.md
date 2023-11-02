@@ -31,6 +31,12 @@ By default, the Summary page shows a single search box which does a full-text se
 
 You can open the search options using the "Show Search Options" button. The search options area contains individual search fields which allow performing a structured search, or search by field.
 
+### Dynamic dropdowns
+
+[SINCE Orbeon Forms 2023.1]
+
+For dynamic dropdowns, the original service used to populate the dropdown is not called again, but distinct values from accessible data are listed. This is also done in the bulk edit area if dynamic dropdowns are present.
+
 ![Search Options](../images/summary-bookshelf-search.png)
 
 You specify which fields appear in the search options area when editing the form definition, using the [Control Settings dialog](/form-builder/control-settings.md).
