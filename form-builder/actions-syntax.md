@@ -270,6 +270,46 @@ In the following example, with the repetition performed by `<fr:data-iterate>`, 
 </fr:action>
 ```
 
+## Asynchronous actions
+
+[SINCE Orbeon Forms 2023.1]
+
+Previously, actions were run synchronously. That is, they were blocking any other form processing until completed. It is now possible to run actions asynchronously. This means that the form processing can continue while the actions are running in the background. This is particularly useful when the actions call services.
+
+You can enable asynchronous actions:
+
+- at the action level, using the `async="true` attribute
+- at the form level, using the `oxf.fr.detail.actions.async.*.*` property
+
+Example of configuration property:
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.actions.async.*.*"                            
+    value="true"/>
+```
+
+It is currently not possible to mix and match synchronous and asynchronous service calls within a given action.
+
+An asynchronous action, by default, causes a response to the client (web browser) to wait for its completion. This is done to enhance the backward-compatibility of asynchronous actions. This can be disabled:
+
+- at the action level, using the `response-must-await="false"` attribute
+- at the form level, using the `oxf.fr.detail.actions.response-must-await.*.*` property
+
+Example of configuration property:
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.detail.actions.response-must-await.*.*"              
+    value="false"/>
+```
+
+If `response-must-await` is set to `false`, a response to the client doesn't wait for the completion of asynchronous actions. Instead, the response is sent immediately, and the action continues to run in the background. The client polls the server at regular intervals to check for the completion of such actions. This is useful when the action is long-running, and you don't want to keep the client waiting for its completion. 
+
+In the future, asynchronous actions will likely be enabled by default.
+
 ## Individual actions
 
 ### Calling a service
