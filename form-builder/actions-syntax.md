@@ -306,7 +306,7 @@ Example of configuration property:
     value="false"/>
 ```
 
-If `response-must-await` is set to `false`, a response to the client doesn't wait for the completion of asynchronous actions. Instead, the response is sent immediately, and the action continues to run in the background. The client polls the server at regular intervals to check for the completion of such actions. This is useful when the action is long-running, and you don't want to keep the client waiting for its completion. 
+If `response-must-await` is set to `false`, a response to the client doesn't wait for the completion of asynchronous actions. Instead, the response is sent immediately, and the pending action's service calls continue to wait in the background. The client polls the server at regular intervals to check for the completion of such pending services, and then resumes the processing of the actions. This is useful when an action calls long-running services, and you don't want to keep the client waiting for its completion.
 
 In the future, asynchronous actions will likely be enabled by default.
 
