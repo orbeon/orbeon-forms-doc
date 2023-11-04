@@ -38,9 +38,16 @@ These are the default values of the properties:
     value=""/>
 ```
 
-## Mobile support
+## Native date picker
 
-On iOS, the control uses the native date picker instead of presenting the field and custom date picker.
+On iOS, the native iOS date picker will be used unless you've selected Request Desktop Website in Safari. [SINCE Orbeon Forms 2023.1] As browser support for the native date picker on the desktop has improved over the year, and the native date picker is better supported by screen readers, you may want to always use the native date picker. You can do this by setting the following property: 
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.xforms.xbl.fr.date.native-picker.*.*"             
+    value="always"/>
+```
 
 ## See also
 
