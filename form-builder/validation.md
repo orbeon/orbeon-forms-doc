@@ -144,7 +144,7 @@ Each formula can have a *level* associated with it and a custom alert message.
 
 The Dates to Exclude constraint takes a list (sequence) of dates to exclude, provided by a formula. The constraint fails if users type a date that is in the supplied list of dates to exclude. Also, dates in this list are disabled in the non-native date picker, so users cannot select them, as in the case of the 18th and 20th in the screenshot below. When the date picker is native, the dates are not disabled because the native date picker doesn't support disabling specific dates, but the validation still applies. 
 
-![Dates disabled in date picker](images/validation-excluded-dates.png)
+<figure><img src="images/validation-excluded-dates.png" alt="Dates disabled in date picker" width="239"></figure>
 
 You might have a service storing a the list of dates to exclude in a [dataset](/form-runner/feature/datasets.md), for example. From that dataset, you can extract and convert the dates to XPath dates.
  
