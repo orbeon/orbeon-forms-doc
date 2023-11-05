@@ -308,9 +308,12 @@ You can validate a field using an external validation service as follows:
 
 ## See also
 
-- [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
-- [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
-- [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
-- [How Common Constraints Work](https://blog.orbeon.com/2015/07/how-common-constraints-work.html)
-- [XForms Validation](../xforms/validation.md)
-- [Required fields: more subtle than you might think](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
+- Documentation
+    - [XForms Validation](../xforms/validation.md)
+    - [Date component](/form-runner/component/date.md)
+- Blog posts
+    - [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
+    - [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
+    - [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
+    - [How Common Constraints Work](https://blog.orbeon.com/2015/07/how-common-constraints-work.html)
+    - [Required fields: more subtle than you might think](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
