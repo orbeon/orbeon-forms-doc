@@ -49,6 +49,11 @@ On iOS, the native iOS date picker will be used unless you've selected Request D
     value="always"/>
 ```
 
+<figure>
+    <img src="/form-runner/images/native-date-picker-chrome.png" width="270">
+    <figcaption>Native date picker on Chrome desktop</figcaption>
+</figure>
+
 ## See also
 
 - [Dropdown Date](dropdown-date.md)
