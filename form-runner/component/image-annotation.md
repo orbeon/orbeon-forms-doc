@@ -1,7 +1,5 @@
 # Image Annotation Component
 
-
-
 ## Rationale
 
 The image annotation component allows users to select an image and annotate it. Both the original image users select and the image with the annotation are saved as part of the data.
@@ -11,6 +9,17 @@ The image annotation component allows users to select an image and annotate it. 
 ## Browser support
 
 This component uses [wPaint][2], which requires support for the [HTML5 canvas][3] in the web browser. Most browsers have support for the canvas, but note that Internet Explorer [IE9 or later is required][4] (this feature will not work with IE7 and IE8).
+
+## Configuration
+
+[SINCE Orbeon Forms 2023.1] You can change the start stroke color with the following property:
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.xforms.xbl.fr.wpaint.start-stroke-color.*.*"      
+    value="#FF8C00"/>
+```
 
 ## In Form Builder
 
