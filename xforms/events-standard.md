@@ -269,7 +269,19 @@ Since Orbeon Forms 2016.1:
 
 [SINCE Orbeon Forms 2023.1]
 
-Event properties/context information of type `string` are now preserved and passed when the event is dispatched with a delay. Other types of event properties/context information are not supported and ignored.
+Event properties/context information of atomic types are now preserved and passed when the event is dispatched with a delay. Other types of event properties/context information (such as XML nodes) are not supported and will cause an error. The following types are supported:
+
+- `xs:string`
+- `xs:boolean`
+- `xs:decimal`
+- `xs:integer`
+- `xs:double`
+- `xs:float`
+- `xs:dateTime`
+- `xs:date` 
+- `xs:anyURI`: converted to a string representation
+- `xs:duration`: converted to a string representation
+- `xs:time`: converted to a string representation
 
 #### Extensions
 
