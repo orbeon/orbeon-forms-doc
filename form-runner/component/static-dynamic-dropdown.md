@@ -95,6 +95,6 @@ You can specify a minimum input length, in characters, before the dropdown start
 ```xml
 <property 
     as="xs:integer"
-    name="oxf.xforms.xbl.fr.databound-select1-search.min-input-length"
+    name="oxf.xforms.xbl.fr.databound-select1-search.min-input-length.*.*"
     value="2"/>
 ```
