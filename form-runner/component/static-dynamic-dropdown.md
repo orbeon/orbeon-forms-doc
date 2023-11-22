@@ -85,3 +85,16 @@ Services that implement their own search can also implement paging. This is usef
 - At some point, users might reach the last page, as your service doesn't have more choices to list for the given search string. You'll want to include some information in your response as to whether the last page has been reached, and provide an XPath expression under "Is last page XPath expression" returning `true` when on the last page.
 
 ![Service performing paging](images/dynamic-data-dropdown-service-paging.png)
+
+### Minimum input length
+
+[SINCE Orbeon Forms 2023.1]
+
+You can specify a minimum input length, in characters, before the dropdown starts displaying choices. This is useful if you have a large number of choices, and the subset of choices returned is unlikely to be useful if users don't type at least a few characters. This is configured by setting the following property.
+
+```xml
+<property 
+    as="xs:integer"
+    name="oxf.xforms.xbl.fr.databound-select1-search.min-input-length"
+    value="2"/>
+```
