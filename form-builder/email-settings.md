@@ -23,8 +23,27 @@ You can open the "Email Settings" by clicking on the "Email Settings" button, un
 <img src="images/advanced-menu.png" width="245">
 
 - Template name – Each email template must have a *name*. This name is not exposed to end users; it is only for your own use, to understand what each template is for, and to be able to refer to a specific template in the [`email(template = "my-template")` action](/form-runner/advanced/buttons-and-processes/actions-form-runner-email.md).
+Localization – If your form is available in multiple languages, a "Language" dropdown shows next to the template name, allowing you to select which language this template is for. When an email is sent, the template that corresponds to the user's language is automatically used.
+- [SINCE Orbeon Forms 2023.1] Enabling the template using a formula - An optional formula can be entered to allow the template to be conditionally sent or not.
+- [SINCE Orbeon Forms 2023.1] Dynamic email headers - Headers can be specified using form control values, formulas, or static texts. Custom headers are also supported (see below).
 - Dynamic email subject and body – An email subject or body can be dynamic and include the value of form controls or formulas, as shown in the examples above. For more, see [Template syntax](template-syntax.md).
-- Localization – If your form is available in multiple languages, a "Language" dropdown shows next to the template name, allowing you to select which language this template is for. When an email is sent, the template that corresponds to the user's language is automatically used.
+- Attachments - Attachment controls can be included in the email.
+- Excluded from All Control Values - It is possible to specify here which controls will be excluded from the "All Control Values" parameter value. See [Template syntax](template-syntax.md).
+
+## Custom headers
+
+[SINCE Orbeon Forms 2023.1]
+
+Custom headers can be added to the list of email headers by using the following property:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.fb.email.custom-headers.*.*"
+    value="X-Priority X-SMTPAPI"/>
+```
+
+The value is a space-separated list of custom header names.
 
 ## See also
 
