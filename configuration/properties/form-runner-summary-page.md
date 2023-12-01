@@ -102,7 +102,7 @@ See [Configuring Summary page buttons](/form-runner/advanced/buttons-and-process
 - if set to `true`: for one version at a time, which is the default;
 - if set to `false`: for all data across form definition versions, as it used to be the case up until Orbeon Forms 2018.1.
 
-Even when set to `false`, if the `form-version` request parameter is passed to the summary page, it will will not ignore the request parameter and will only show data created with that version of the form definition.
+Even when set to `false`, if the `form-version` request parameter is passed to the summary page, it will not ignore the request parameter and will only show data created with that version of the form definition.
 
 ```xml
 <property 
@@ -110,3 +110,7 @@ Even when set to `false`, if the `form-version` request parameter is passed to t
     name="oxf.fr.summary.show-version-selector.*.*"
     value="false"/>
 ```
+
+[SINCE Orbeon Forms 2023.1]
+
+When the property is set to `false`, links to the summary page from the Published Forms and Landing pages will not include the `form-version` request parameter.
