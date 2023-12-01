@@ -111,6 +111,4 @@ Even when set to `false`, if the `form-version` request parameter is passed to t
     value="false"/>
 ```
 
-[SINCE Orbeon Forms 2023.1]
-
-When the property is set to `false`, links to the summary page from the Published Forms and Landing pages will not include the `form-version` request parameter.
+[SINCE Orbeon Forms 2023.1] When the property is set to `false`, links to the summary page from the Published Forms and Landing pages will not include the `form-version` request parameter.
