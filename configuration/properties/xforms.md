@@ -718,11 +718,19 @@ If your forms leverage dialogs and your users are likely to use a screen reader,
     value="false"/>
 ```
 
-[7]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-xforms-inspector
-[8]: https://blog.orbeon.com/2014/03/review-and-pdf-improvements.html
-[9]: http://java.sun.com/javase/6/docs/api/java/text/SimpleDateFormat.html
-[10]: https://blog.orbeon.com/2013/12/detecting-login-pages-in-ajax-requests.html
-[11]: http://www.w3.org/TR/wai-aria/
+## Cache control
+
+The following properties, usually set as attributes, control server-side caching:
+
+- `xxf:no-updates`
+    - controls whether the dynamic state is cached
+    - default: `false`
+    - used to disable updating the cache for non-interactive XForms processing, such as when producing PDF output
+- `xxf:disable-static-state-cache`
+    - [SINCE Orbeon Forms 2023.1] 
+    - controls whether the static state is cached
+    - default: `false`
+    - used to disable updating the static state cache for one-time XForms processing, such as when testing a form
 
 ## See also 
 
