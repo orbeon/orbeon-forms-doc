@@ -153,7 +153,7 @@ The following two properties control optimized XForms submissions:
 ```
 
 - If set to `true` (the default), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) submissions with replace="all", by using the Java Servlet API's forward capability instead of actually performing an HTTP request.
-- If set to `false`, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
+- If set to `false`, Orbeon Forms always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
 
 ```xml
 <property 
