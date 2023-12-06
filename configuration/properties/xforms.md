@@ -163,8 +163,7 @@ The following two properties control optimized XForms submissions:
 ```
 
 - If set to `true` (the default is false), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) submissions with replace="instance", replace="text" or replace="none", by directly using the Java Servlet API's include capability instead of actually performing an HTTP request.
-- If set to `false`, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
-
+- If set to `false`, Orbeon Forms always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
 
 ## Instance inclusion
 
@@ -178,7 +177,7 @@ The following property controls optimized instance inclusion:
 ```
 
 - If set to `true` (the default is false), Orbeon Forms optimizes "local" (i.e. submissions performed to a URL controlled by Orbeon Forms itself) instance inclusions, by directly using the Java Servlet API's include capability instead of actually performing an HTTP request.
-- If set to `false`, Orbeon Forms always always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
+- If set to `false`, Orbeon Forms always uses the HTTP or HTTPS protocol (or other protocol specified), which is less efficient but more flexible.
 
 Note that for any optimized submission or inclusion to occur, the following is required:
 
@@ -473,7 +472,7 @@ To know how much of the file has been uploaded so far, the browser sends an Ajax
 
 ## XForms inspector
 
-You can enable the [XForms Inspector][7] for all the page in your site by setting the following property to `true` (the default is `false`):
+You can enable the [XForms Inspector](/form-runner/component/xforms-inspector.md) for all the page in your site by setting the following property to `true` (the default is `false`):
 
 ```xml
 <property 
@@ -486,7 +485,7 @@ You can enable the [XForms Inspector][7] for all the page in your site by settin
 
 [SINCE Orbeon Forms 4.6]
 
-Since Orbeon Forms 4.5, radio buttons and checkboxes in review and PDF modes (or for any static-readonly control appearance) shows all items as checkboxes (see the [blog post][8]).
+Since Orbeon Forms 4.5, radio buttons and checkboxes in review and PDF modes (or for any static-readonly control appearance) shows all items as checkboxes (see the [blog post](https://blog.orbeon.com/2014/03/review-and-pdf-improvements.html)).
 
 If you don't like this behavior, you can set the following two properties:
 
@@ -571,7 +570,7 @@ When an `<xf:input>` is bound to a node and that node has a type, the type influ
 
 Like for `<xf:output>`, values shown by `<xf:input>` depend on the type of the node bound to the `<xf:input>`. In this case however the `<xf:input>` must be able to not only show a value coming from an instance in a text field, but also parse a new value in that format typed in by users in the text field. Because the `<xf:input>` is able to both format and parse values, what you can do with an `<xf:input>` is more restrictive compared to what you can do with an `<xf:output>`.
 
-You can configure formatting for `<xf:input>` with the two properties below. The value is a "mask" and follows the syntax of the Java [SimpleDateFormat][9].
+You can configure formatting for `<xf:input>` with the two properties below. The value is a "mask" and follows the syntax of the Java [SimpleDateFormat](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/SimpleDateFormat.html).
 
 The following masks are supported:
 
@@ -680,7 +679,7 @@ execute it again, and instead resends the same response that was generated the f
 You can set the following property to a regexp. When set to a non-empty value, if an Ajax request get an unexpected page which isn't an Orbeon Forms error
 and matches the regexp, users will be notified, and Orbeon Forms will reload the form, which in turn is likely to take them to the login page. By default,
 this property is set to the empty string, meaning that Orbeon Forms doesn't try to detect login pages, and always retries Ajax requests met with an unexpected
- response that aren't Orbeon Forms error pages. For some background on this, see our blog post [Detecting login pages in Ajax requests][10].
+ response that aren't Orbeon Forms error pages. For some background on this, see our blog post [Detecting login pages in Ajax requests](https://blog.orbeon.com/2013/12/detecting-login-pages-in-ajax-requests.html).
 
 ```xml
 <property 
@@ -708,7 +707,7 @@ The second property must point to an XPL file with a `data` input and data outpu
 
 ## ARIA support in dialogs
 
-If your forms leverage dialogs and your users are likely to use a screen reader, you might want to enable the support for [ARIA][11] in dialogs by setting
+If your forms leverage dialogs and your users are likely to use a screen reader, you might want to enable the support for [ARIA](https://www.w3.org/TR/wai-aria/) in dialogs by setting
  the following property to `true`. By default, the property is set to `false`, as enabling it has a cost in performance on IE.
 
 ```xml
