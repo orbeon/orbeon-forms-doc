@@ -28,13 +28,19 @@ Typically, you'll want to use the Static Dropdown for cases where the number of 
 
 You can choose to have each one of your Static or Dynamic Dropdown show as a regular dropdown native to the browser, or as a dropdown with search. You make that choice in the Control Settings dialog, as highlighted in the screenshot below.
 
-<img alt="Choosing between a regular dropdown and a dropdown with search" src="images/dynamic-data-dropdown-with-without-search.png" width="987">
+<figure>
+    <img src="images/dynamic-data-dropdown-with-without-search.png" width="987">
+    <figcaption>Choosing between a regular dropdown and a dropdown with search</figcaption>
+</figure>
 
 The dropdown "with search" doesn't use the native browser dropdown, but instead uses a dropdown implemented in JavaScript that allows users to search for the choice they want to select by typing part of the label, which is typically useful when the list of choices can be pretty long, and it is thus hard for users to visually just pick one of the choices offered when the dropdown opens.
 
 ### Example with search
 
-<img alt="Doing a search to select a country" src="images/dynamic-data-dropdown-search-country.gif" width="478">
+<figure>
+    <img src="images/dynamic-data-dropdown-search-country.gif" width="478">
+    <figcaption>Doing a search to select a country</figcaption>
+</figure>
 
 ## Dynamic dropdowns
 
@@ -65,7 +71,10 @@ You specify how to extract the necessary information to populate the dropdown th
 - The "Label XPath expression" is relative to a given choice as returned by the first expression, and must return the label shown to users in the dropdown. In our example, this will point to the `name` element.
 - The "Value XPath expression" is similar to the "Label XPath expression" but points to the value stored in the data when users make a selection.
 
-![Extracting choices with XPath in Control Settings](images/dynamic-data-dropdown-exact.png)
+<figure>
+    <img src="images/dynamic-data-dropdown-exact.png" width="492">
+    <figcaption>Extracting choices with XPath in Control Settings</figcaption>
+</figure>
 
 ### Services performing the search
 
@@ -77,7 +86,10 @@ In most cases, it will be simpler to have your service return all the possible v
 
 With this, Orbeon Forms will automatically call your service repeatedly as users type in the field, this to retrieve a new list of possible choices, and update the dropdown.
 
-![Service performing search](images/dynamic-data-dropdown-service-search.png)
+<figure>
+    <img src="images/dynamic-data-dropdown-service-search.png" width="487">
+    <figcaption>Service performing search</figcaption>
+</figure>
 
 ### Paging
 
@@ -87,7 +99,16 @@ Services that implement their own search can also implement paging. This is usef
 - Add a request parameter `{$fr-search-page}` to the URL. The first time the service is called, the value will be `1`. If users scroll down in the dropdown, and reach the bottom, they will see a message informing them that more results will be loaded, and your service will be called with the parameter set to 2, and so on.
 - At some point, users might reach the last page, as your service doesn't have more choices to list for the given search string. You'll want to include some information in your response as to whether the last page has been reached, and provide an XPath expression under "Is last page XPath expression" returning `true` when on the last page.
 
-![Service performing paging](images/dynamic-data-dropdown-service-paging.png)
+<figure>
+    <img src="images/dynamic-data-dropdown-service-paging.png" width="488">
+    <figcaption>Service performing search</figcaption>
+</figure>
+
+### Open selection
+
+[SINCE Orbeon Forms 2023.1]
+
+
 
 ### Minimum input length
 
