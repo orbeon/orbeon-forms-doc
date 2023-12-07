@@ -114,7 +114,7 @@ In the Control Settings dialog box, open selection can be disabled (using the No
 
 <figure>
     <img src="images/dynamic-data-dropdown-open.png" width="488">
-    <figcaption>Service performing search</figcaption>
+    <figcaption>Open selection inside the Control Settings</figcaption>
 </figure>
 
 ### Minimum input length
