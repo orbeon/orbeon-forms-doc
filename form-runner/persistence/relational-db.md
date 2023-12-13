@@ -23,7 +23,7 @@ Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
     SQL> GRANT ALL PRIVILEGES TO orbeon ;
     SQL> GRANT UNLIMITED TABLESPACE TO orbeon ;
     ```
-3. Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+3. Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
@@ -103,7 +103,7 @@ By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5
    ```sql
    mysql> GRANT ALL PRIVILEGES ON *.* TO 'orbeon'@'%' WITH GRANT OPTION;
    ```
-4. Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+4. Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
@@ -141,7 +141,7 @@ By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5
 
 Orbeon Forms relies on SQL Server's full-text search, which is included out-of-the-box in all SQL Server editions, except the Express and Express with Tools. If you're using one of those two editions of SQL Server, you might want to look into getting Express with Advanced Services.
 
-Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
@@ -169,7 +169,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 [SINCE Orbeon Forms 4.8]
 
-Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
@@ -196,7 +196,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 [SINCE Orbeon Forms 4.3]
 
-Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](../feature/home-page.md#upgrading-to-20162).
+Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
 
 
 | Orbeon Forms version(s)  | DDL to create from scratch | DDL to upgrade from previous format |

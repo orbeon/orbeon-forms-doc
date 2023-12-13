@@ -64,7 +64,7 @@ The following URL parameters apply in both cases:
         - form definition update to the latest format
         - inclusion of data migration information
         - embedding of section templates
-    - See also [Upgrading form definitions](https://doc.orbeon.com/form-runner/features/home-page#upgrading-form-definitions).
+    - See also [Upgrading form definitions](/form-runner/feature/forms-admin-page.md#upgrading-form-definitions).
 
 Response body:
 

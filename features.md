@@ -133,7 +133,8 @@ As of 2016-04-19 this page is still being updated.
         - subsection navigation
         - optional separate table of contents
 - File scan API: [doc](form-runner/api/other/file-scan-api.md) 
-- Home Page: [doc](form-runner/feature/home-page.md), [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
+- Forms Admin Page: [doc](form-runner/feature/forms-admin-page.md), [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
+- Published Forms Page: [doc](form-runner/feature/published-forms-page.md), [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
 - Excel Import: [doc](/form-runner/advanced/excel.md)
 - Buttons and Processes: [doc](form-runner/advanced/buttons-and-processes/README.md), [blog post](https://blog.orbeon.com/2013/04/more-powerful-buttons.html)
 - Autosave: [doc](form-runner/persistence/autosave.md), [blog post](https://blog.orbeon.com/2013/10/autosave.html)

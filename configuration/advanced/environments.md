@@ -16,4 +16,4 @@ So you get the full benefit of having different environment, you should setup th
 
 ## Migration of form definitions
 
-At some point, you might want to graduate data, typically forms, from one environment to the next. For instance, when form authors are done, moving forms from the development to staging. Or once testing is done, from staging to production. This can be achieve with the [Form Runner home page](../../form-runner/feature/home-page.md).
+At some point, you might want to graduate data, typically forms, from one environment to the next. For instance, when form authors are done, moving forms from the development to staging. Or once testing is done, from staging to production. This can be achieved with the [Forms Admin page](/form-runner/feature/forms-admin-page.md).

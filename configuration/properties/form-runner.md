@@ -15,10 +15,10 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 
 ## Form Runner properties documented elsewhere
 
-* [Custom dialogs and model Logic](../../form-runner/advanced/custom.md)
+* [Custom dialogs and model Logic](/form-runner/advanced/custom.md)
     * `oxf.fr.detail.model.custom`
     * `oxf.fr.detail.dialogs.custom`
-* [Wizard View](../../form-runner/component/wizard.md)
+* [Wizard View](/form-runner/component/wizard.md)
     * `oxf.fr.detail.view.appearance`
     * `oxf.fr.detail.buttons.inner`
     * `oxf.xforms.xbl.fr.wizard.validate`
@@ -26,7 +26,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.xforms.xbl.fr.wizard.section-status`
     * `oxf.xforms.xbl.fr.wizard.subsections-nav`
     * `oxf.xforms.xbl.fr.wizard.subsections-toc`
-* [Autosave](../../form-runner/persistence/autosave.md)
+* [Autosave](/form-runner/persistence/autosave.md)
     * `oxf.fr.detail.autosave-delay`
     * `oxf.fr.persistence.*.autosave`
 * [Simple data migration](/form-runner/feature/simple-data-migration.md)
@@ -39,7 +39,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.persistence.[provider].permissions`
     * `oxf.fr.persistence.[provider].versioning`
     * `oxf.fr.persistence.[provider].data-format-version`
-* [Form Runner Access Control](../../form-runner/access-control/README.md)
+* [Form Runner Access Control](/form-runner/access-control/README.md)
     * `oxf.fr.support-owner-group`
     * `oxf.fr.authentication.method`
     * `oxf.fr.authentication.container.roles`
@@ -50,11 +50,11 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.authentication.header.roles.split`
     * `oxf.fr.authentication.header.roles.property-name`
     * `oxf.fr.authentication.header.sticky`
-* [Form Runner Home Page](../../form-runner/feature/home-page.md)
+* [Form Runner Published Forms Page](/form-runner/feature/published-forms-page.md)
     * `oxf.fr.home.page-size`
     * `oxf.fr.home.table.link-to`
     * `oxf.fr.home.remote-servers`
-* [TIFF Production](../../form-runner/feature/tiff-production.md)
+* [TIFF Production](/form-runner/feature/tiff-production.md)
     * `oxf.fr.detail.tiff.compression.type`
     * `oxf.fr.detail.tiff.compression.quality`
     * `oxf.fr.detail.tiff.scale`
@@ -84,7 +84,7 @@ The property without wildcards can also be used to control the default language 
     value="en">
 ```
 
-For more details, see [Language selection at runtime](../../form-runner/feature/localization.md#language-selection-at-runtime)
+For more details, see [Language selection at runtime](/form-runner/feature/localization.md#language-selection-at-runtime)
 
 ### Available languages
 
@@ -121,7 +121,7 @@ For pages which don't involve a specific form, such as the Form Runner Home Page
   value="en fr"/>
 ```
 
-For more details, see [Language selection at runtime](../../form-runner/feature/localization.md#language-selection-at-runtime)
+For more details, see [Language selection at runtime](/form-runner/feature/localization.md#language-selection-at-runtime)
 
 ## Timezone
 
@@ -184,7 +184,7 @@ This is the default value of the property:
 </property>
 ```
 
-If you use two `*` wildcards, as in the example above, the property also sets the logo on the [Form Runner Home page](../../form-runner/feature/home-page.md).
+If you use two `*` wildcards, as in the example above, the property also sets the logo on the [Published Forms page](/form-runner/feature/published-forms-page.md) and the [Forms Admin page](/form-runner/feature/forms-admin-page.md)
 
 1. Place your logo file(s) under one of the following recommended locations:
     - `WEB-INF/resources/forms/assets`: logo for all forms

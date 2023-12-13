@@ -51,7 +51,7 @@ Say you edit an existing form definition in Form Builder and change the fields t
 
 This means that, from the perspective of fields encryption, overwriting an existing form definition at publication time doesn't cause any problem. This is because encrypted fields are marked as such in the form data, so Orbeon Forms can decrypt them even if the list of fields to be encrypted has changed since the last time the form data was saved.
 
-However, overwriting an existing form definition at publication time won't re-encrypt existing data. For this to happen, you need to [trigger a re-encryption](../form-runner/feature/home-page.md#re-encryption) from the Form Runner home page.
+However, overwriting an existing form definition at publication time won't re-encrypt existing data. For this to happen, you need to [trigger a re-encryption](/form-runner/feature/forms-admin-page.md#re-encryption) from the Forms Admin page.
 
 ## Limitations
 
@@ -73,5 +73,5 @@ We expect these limitations to be lifted in future versions of Orbeon Forms.
 
 - Blog post: [Field-level encryption](https://blog.orbeon.com/2019/04/field-level-encryption.html)
 - [Basic Settings](/form-builder/control-settings.md)
-- [Re-encryption](/form-runner/features/home-page.md#re-encryption)
+- [Re-encryption](/form-runner/feature/forms-admin-page.md#re-encryption)
 - [Encryption in the form data format](/form-runner/data-format/form-data.md#encryption)

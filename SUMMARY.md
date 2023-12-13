@@ -129,7 +129,8 @@
     * Features
         * [Automatic calculations dependencies](form-runner/feature/automatic-calculations-dependencies.md)
         * [Datasets](form-runner/feature/datasets.md)
-        * [Home page](form-runner/feature/home-page.md)
+        * [Published Forms page](form-runner/feature/published-forms-page.md)
+        * [Forms Admin page](form-runner/feature/forms-admin-page.md)
         * [Export of form definitions and form data](form-runner/feature/exporting-form-definitions-and-form-data.md)
         * [Purging historical data](form-runner/feature/purging-historical-data.md)
         * [Lease Feature](form-runner/feature/lease.md)

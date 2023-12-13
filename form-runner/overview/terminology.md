@@ -50,12 +50,14 @@ Form Runner and Form Builder have a few pages (or screens) which are referred to
   - __Detail Page__:
     - This page is usually for *end users*.
     - This page allows creating, editing, viewing, saving, and submitting *form data*.
-  - __Home Page__:
+  - __Published Forms Page__:
     - This page shows *published form definitions*.
     - This page is useful for *end users* to see which *form definitions* they have access to.
     - It can be a starting point to create new form data or to access the Form Runner Summary page.
-    - This page is also useful for *administrators*, who can set form availability, move them between servers, and more.
-    - See [Form Runner Home Page](../../form-runner/feature/home-page.md) for more.
+    - See [Published Forms Page](/form-runner/feature/published-forms-page.md) for more.
+- __Forms Admin Page__:
+    - This page is useful for *admins*, who can set form availability, move forms between servers, and more.
+    - See [Forms Admin Page](/form-runner/feature/forms-admin-page.md) for more.
 
 See also [The Form Builder summary page and Form Runner home page](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html).
 

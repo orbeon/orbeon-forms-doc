@@ -90,7 +90,8 @@ As with the Detail page processes, you can control button visibility and whether
 ## See also 
 
 - [Buttons and processes](/form-runner/advanced/buttons-and-processes/README.md)
-- [Home Page](home-page.md)
+- [Published Forms page](/form-runner/feature/published-forms-page.md)
+- [Forms Admin page](/form-runner/feature/forms-admin-page.md)
 - [Summary page configuration properties](/configuration/properties/form-runner-summary-page.md)
 - [Summary page](/form-runner/feature/summary-page.md)
 - [Form Builder Summary Page](/form-builder/summary-page.md)

@@ -29,15 +29,15 @@ We have made the Summary page layout fluid, similar to the Forms/Admin page (pre
 
 Finally, Form Runner buttons now are sticky, so that they are always visible when scrolling. This is particularly useful on the Summary and Forms pages, which can display long lists of forms or form data.
 
-### Separation of the Admin page and Home page
+### Separation of the Forms Admin page and Published Forms page
 
-Previously, Form Runner featured a static landing page, as well as a Home page, which doubled as an Admin page when the user was an administrator. The Home page is now replaced by a Forms page, which shows published forms accessible to the user, but no administration functions, and a separate Administration page, which is only accessible to administrators.
+Previously, Form Runner featured a static landing page, as well as a Home page, which doubled as an Admin page when the user was an administrator. The Home page is now replaced by a Published Forms page, which shows published forms accessible to the user, but no administration functions, and a separate Forms Admin page, which is only accessible to administrators.
 
-![The Forms page](images/form-runner-forms.png)
+![The Published Forms page](images/form-runner-forms.png)
 
-The Admin page is very similar to the Forms page, but features additional administration functions and shows library forms. 
+The Forms Admin page is very similar to the Published Forms page, but features additional administration functions and shows library forms. 
 
-![The Admin page](images/form-runner-admin.png)
+![The Forms Admin page](images/form-runner-admin.png)
 
 ### Drag and drop of form controls to grid cells
 
@@ -110,7 +110,7 @@ See also:
 
 ### Improved simple data migration
 
-Orbeon Forms 2018.2 introduced [Simple Data Migration](https://doc.orbeon.com/form-runner/features/simple-data-migration) (see also the [original blog post](https://blog.orbeon.com/2018/09/simple-data-migration.html)). This feature allows the form author to make changes to a published form, including adding and removing form fields, grids, and sections, without creating a new form version.
+Orbeon Forms 2018.2 introduced [Simple Data Migration](/form-runner/feature/simple-data-migration.md) (see also the [original blog post](https://blog.orbeon.com/2018/09/simple-data-migration.html)). This feature allows the form author to make changes to a published form, including adding and removing form fields, grids, and sections, without creating a new form version.
 
 This release introduces a number of improvements to Simple Data Migration. With Orbeon Forms 2022.1, you can move form controls within the form as long as they remain within the same nesting of repeated content, republish the form over the existing version, and things will just work. For example:
 
