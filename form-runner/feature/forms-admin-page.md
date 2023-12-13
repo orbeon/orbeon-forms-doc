@@ -20,9 +20,7 @@ Until Orbeon Forms 2021.1, this page was combined with the [Published Forms page
 
 ## Permissions
 
-If the user has permissions set in `form-builder-permissions.xml`, the Forms Admin page shows and is linked from the Landing page:
-
-![Forms Admin Page](../images/home-admin-view.png)
+If the user has permissions set in `form-builder-permissions.xml`, the Forms Admin page shows and is linked from the Landing page.
 
 The list of forms listed depends on the roles set in `form-builder-permissions.xml`. For example, with:
 

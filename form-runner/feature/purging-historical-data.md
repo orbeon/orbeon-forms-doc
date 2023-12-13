@@ -25,3 +25,4 @@ At the moment, once the "Purge" button has been clicked, the dialog will be clos
 ## See also
 
 - [Export of form definitions and form data](exporting-form-definitions-and-form-data.md)
+- [Forms Admin page](forms-admin-page.md)

@@ -131,6 +131,7 @@
         * [Datasets](form-runner/feature/datasets.md)
         * [Published Forms page](form-runner/feature/published-forms-page.md)
         * [Forms Admin page](form-runner/feature/forms-admin-page.md)
+        * [Landing page](form-runner/feature/landing-page.md)
         * [Export of form definitions and form data](form-runner/feature/exporting-form-definitions-and-form-data.md)
         * [Purging historical data](form-runner/feature/purging-historical-data.md)
         * [Lease Feature](form-runner/feature/lease.md)

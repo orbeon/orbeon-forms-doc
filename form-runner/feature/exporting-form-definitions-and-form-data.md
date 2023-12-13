@@ -64,4 +64,5 @@ At the moment, once the "Export" button has been clicked, the dialog will be clo
 
 ## See also
 
-- [Historical data purge](purging-historical-data.md)
+- [Purging historical data](purging-historical-data.md)
+- [Forms Admin page](forms-admin-page.md)
