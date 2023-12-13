@@ -90,10 +90,12 @@
             * [Toolbox component metadata](form-builder/metadata.md)
 * Form Runner
     * Overview
-        * [Architecture](form-runner/overview/architecture.md)
-        * [Access form data](form-runner/overview/accessing-data.md)
-        * [Integration](form-runner/overview/integration.md)
         * [Terminology](form-runner/overview/terminology.md)
+    * Pages
+        * [Landing page](form-runner/feature/landing-page.md) 
+        * [Published Forms page](form-runner/feature/published-forms-page.md)
+        * [Forms Admin page](form-runner/feature/forms-admin-page.md)
+        * [Summary page](form-runner/feature/summary-page.md)
     * [Components](form-runner/component/README.md)
         * [Alert dialog](form-runner/component/alert-dialog.md)
         * [Attachment](form-runner/component/attachment.md)
@@ -126,11 +128,6 @@
         * [Wizard](form-runner/component/wizard.md)
         * [XForms inspector](form-runner/component/xforms-inspector.md)
         * [Yes/No answer](form-runner/component/yesno-input.md)
-    * Pages
-        * [Landing page](form-runner/feature/landing-page.md) 
-        * [Published Forms page](form-runner/feature/published-forms-page.md)
-        * [Forms Admin page](form-runner/feature/forms-admin-page.md)
-        * [Summary page](form-runner/feature/summary-page.md)
     * Features
         * [Automatic calculations dependencies](form-runner/feature/automatic-calculations-dependencies.md)
         * [Datasets](form-runner/feature/datasets.md)
@@ -201,6 +198,10 @@
             * [Form data](form-runner/data-format/form-data.md)
             * [Date and time](form-runner/data-format/date-and-time.md)
             * [Form definition](form-runner/data-format/form-definition.md)
+    * Architecture and integration
+        * [Architecture](form-runner/overview/architecture.md)
+        * [Access form data](form-runner/overview/accessing-data.md)
+        * [Integration](form-runner/overview/integration.md)
     * Advanced
         * [Buttons and processes](form-runner/advanced/buttons-and-processes/README.md)
             * [Syntax](form-runner/advanced/buttons-and-processes/syntax.md)
