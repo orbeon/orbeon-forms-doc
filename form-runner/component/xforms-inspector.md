@@ -1,7 +1,5 @@
 # XForms Inspector Component
 
-
-
 ## Overview
 
 A lot can happen when you interact with an XForms page: events are dispatched, actions executed, submissions sent, and more. While you can have some visibility on those by enabling [XForms logging](../../configuration/advanced/xforms-logging.md) in Orbeon Forms, an important part of the state of an XForms page is simply contained in the various XForms instances that you define in your page.
