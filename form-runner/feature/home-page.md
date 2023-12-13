@@ -325,11 +325,11 @@ If you'd like to enable logging at the `debug` level, add the following to your 
 
 ### Exporting form definitions and form data
 
-See [Exporting form definitions and form data](form-definition-data-export.md).
+See [Exporting form definitions and form data](exporting-form-definitions-and-form-data.md).
 
 ### Purging historical data
 
-See [Purging historical data](historical-data-purge.md).
+See [Purging historical data](purging-historical-data.md).
 
 ## Configuration properties
 
