@@ -95,7 +95,7 @@ The session heartbeat should help prevent many occurrences of "session expired" 
 
 [SINCE Orbeon Forms 2023.1]
 
-When the session hearbeat feature is disabled, Orbeon Forms can display a dialog to the user when the session is about to expire. This dialog can be enabled with the following property:
+When the session heartbeat feature is disabled, Orbeon Forms can display a dialog to the user when the session is about to expire. This dialog can be enabled with the following property:
 
 ```xml
 <property
