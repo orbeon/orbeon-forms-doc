@@ -137,6 +137,11 @@ As of 2016-04-19 this page is still being updated.
 - Excel Import: [doc](/form-runner/advanced/excel.md)
 - Buttons and Processes: [doc](form-runner/advanced/buttons-and-processes/README.md), [blog post](https://blog.orbeon.com/2013/04/more-powerful-buttons.html)
 - Autosave: [doc](form-runner/persistence/autosave.md), [blog post](https://blog.orbeon.com/2013/10/autosave.html)
+- Export
+    - [Export of form definitions and form data](form-runner/feature/exporting-form-definitions-and-form-data.md)
+    - Excel export
+    - XML export
+- [Purging historical data](form-runner/feature/purging-historical-data.md) 
 - PDF
     - Production: [doc](form-runner/feature/pdf-production.md)
         - Automatic
