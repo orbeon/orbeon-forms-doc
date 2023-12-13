@@ -725,11 +725,13 @@ The following properties, usually set as attributes, control server-side caching
     - controls whether the dynamic state is cached
     - default: `false`
     - used to disable updating the cache for non-interactive XForms processing, such as when producing PDF output
-- `xxf:disable-static-state-cache`
+- `xxf:single-use-static-state`
     - [SINCE Orbeon Forms 2023.1] 
-    - controls whether the static state is cached
-    - default: `false`
-    - used to disable updating the static state cache for one-time XForms processing, such as when testing a form
+    - controls whether the static state must be discarded after a single use
+        - if JavaScript resources are inline, the state is immediately discarded and not put in cache
+        - if JavaScript resources are not inline, the state is put in cache and discarded after the static JavaScript resources are accessed
+  - default: `false`
+  - used to disable updating the static state cache for one-time XForms processing, such as when testing a form
 
 ## See also 
 
