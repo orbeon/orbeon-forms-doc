@@ -23,6 +23,17 @@ All Form Runner and Form Builder navigation bars now provide a direct link to th
 
 ![Landing page navigation](/release-notes/images/summary-navigation.png)
 
+## Configuration properties
+
+The following properties control which cards are shown on the Landing page:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.landing.cards"
+    value="quick-links published-forms form-builder-forms demo-forms"/>
+```
+
 ## See also 
 
 - [Published Forms page](published-forms-page.md)
