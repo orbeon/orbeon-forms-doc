@@ -2,6 +2,14 @@
 
 This is the landing page for the [Orbeon Forms](https://www.orbeon.com/) documentation.
 
+[//]: # (![Orbeon Forms]&#40;/release-notes/images/landing.png&#41;)
+<figure>
+    <picture>
+        <img src="/release-notes/images/landing.png" width="50%">
+    </picture>
+    <figcaption>Orbeon Forms</figcaption>
+</figure>
+
 ## Things you can do from here
 
 - [Visit the Orbeon web site](https://www.orbeon.com/) and learn more about Orbeon Forms.
