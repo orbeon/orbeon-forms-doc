@@ -47,7 +47,7 @@ Names are as you see them in the Form Builder user interface with the ["Control 
 
 The synchronization takes place from "left" to "right":
 
-- Upon form initialization, the iterations and values are enforced, which means:
+- Upon form initialization, unless you specified `sync-on-form-load="none"` (see above), the iterations and values are enforced, which means:
    - Extra iterations in the destination are removed from the end if needed, to match the number of iterations in the source.
    - New iterations in the destination are added at the end if needed, to match the number of iterations in the source.
    - For each iteration, the values of controls specified with `<fr:map>` are copied over.
