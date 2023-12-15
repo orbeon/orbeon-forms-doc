@@ -31,7 +31,8 @@ It takes the following required XML attributes:
 
 - `left`: the name of the source (or "left") repeated grid or repeated section 
 - `right`: the name of the destination (or "right") repeated grid or repeated section
-- `version`: must be `2018.2`  
+- `sync-on-form-load` (optional): [SINCE Orbeon Forms 2023.1] can be set to `none` to disable right grid synchronization based on left grid on form load; disabling synchronization on load is a way to support having multiple lefts defined to synchronize with a single right, but only one left doing so at any given time, e.g. because the other lefts are irrelevant
+- `version`: must be `2018.2`
 
 Names are as you see them in the Form Builder user interface with the ["Grid Settings"](repeated-grids.md#grid-settings) or ["Section Settings"](section-settings.md#basic-settings) dialogs.
 
