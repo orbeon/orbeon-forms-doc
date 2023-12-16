@@ -96,3 +96,4 @@ See [Token-based permissions](/form-runner/access-control/tokens.md#using-the-sh
 - [Default logo](/configuration/properties/form-runner.md#default-logo)
 - [Login & Logout](/form-runner/access-control/login-logout.md)
 - [Token-based permissions](/form-runner/access-control/tokens.md#using-the-share-dialog)
+- [Revision history](/form-runner/feature/revision-history.md)
