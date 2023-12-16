@@ -17,7 +17,7 @@ Note that Orbeon Forms as of Orbeon Forms 2018.2 doesn't provide a user interfac
 
 For auditing to work meaningfully, Form Runner needs to know who is presently using the application.
 
-For details, see [Setup users for access control](/form-runner/access-control/users.md)/
+For details, see [Setup users for access control](/form-runner/access-control/users.md).
 
 ## Implementation for relational databases
 
