@@ -24,5 +24,7 @@ At the moment, once the "Purge" button has been clicked, the dialog will be clos
 
 ## See also
 
+- [Revision history](revision-history.md)
+- [Purging historical data](purging-historical-data.md)
 - [Export of form definitions and form data](exporting-form-definitions-and-form-data.md)
 - [Forms Admin page](forms-admin-page.md)

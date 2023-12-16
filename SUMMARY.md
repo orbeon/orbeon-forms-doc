@@ -150,7 +150,7 @@
         * [Wizard view](form-runner/feature/wizard-view.md)
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
-        * [Purging old data](form-runner/persistence/purging-old-data.md)
+        * [Purging old data using SQL](form-runner/persistence/purging-old-data.md)
         * [Auditing](form-runner/persistence/auditing.md)
         * [Autosave](form-runner/persistence/autosave.md)
         * [Database support](form-runner/persistence/db-support.md)

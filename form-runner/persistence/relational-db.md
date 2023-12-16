@@ -609,7 +609,9 @@ See [Auditing](form-runner/persistence/auditing.md).
 
 - [Database support](db-support.md)
 - [Auditing](auditing.md)
-- [Purging Old Data](purging-old-data.md)
+- [Revision history](/form-runner/feature/revision-history.md)
+- [Purging historical data](/form-runner/feature/purging-historical-data.md)
+- [Purging old data using SQL](/form-runner/persistence/purging-old-data.md)
 - [Relational Database Logging](/configuration/troubleshooting/database-logging.md)
 
 [1]: https://www.orbeon.com/pricing

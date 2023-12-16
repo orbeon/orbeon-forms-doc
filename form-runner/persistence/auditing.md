@@ -34,11 +34,17 @@ When you use a relational persistence layer:
 
 ## Disabling auditing
 
-As of Orbeon Forms 2018.2, it is not possible to disable this feature. However, you can regularly [purge old data](/form-runner/persistence/purging-old-data.md) as needed.
+As of Orbeon Forms 2018.2, it is not possible to disable this feature. However, you can [purge old data using SQL](/form-runner/persistence/purging-old-data.md) as needed.
+
+[SINCE Orbeon Forms 2023.1]
+
+You can also use the [Purge function](/form-runner/feature/purging-historical-data.md) from the Forms Admin page.
 
 ## See also
 
-- [Purging old data](/form-runner/persistence/purging-old-data.md)
+- [Revision history](/form-runner/feature/revision-history.md)
+- [Purging historical data](/form-runner/feature/purging-historical-data.md)
+- [Purging old data using SQL](/form-runner/persistence/purging-old-data.md)
 - [Access Control](/form-runner/access-control/README.md)
 - [Setup users for access control](/form-runner/access-control/users.md)/
 - [Using Form Runner with a relational database](relational-db.md)

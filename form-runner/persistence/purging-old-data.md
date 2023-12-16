@@ -1,4 +1,12 @@
-# Purging old data
+# Purging old data using SQL
+
+## Availability
+
+This is available to any version of Orbeon Forms.
+
+[SINCE Orbeon Forms 2023.1]
+
+There is now a [Purge function](/form-runner/feature/purging-historical-data.md) which allows you to purge data from the Forms Admin page. This is the recommended way to purge data.w
 
 ## Rationale
 
@@ -65,5 +73,8 @@ If that is the case, the relevant rows must also be deleted.
 
 ## See also 
 
+- [Revision history](/form-runner/feature/revision-history.md)
+- [Purging historical data](/form-runner/feature/purging-historical-data.md)
 - [Auditing](auditing.md)
+- [Forms Admin page](/form-runner/feature/forms-admin-page.md)
 - [Use Form Runner with a Relational Database](relational-db.md)
