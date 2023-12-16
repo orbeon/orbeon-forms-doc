@@ -37,6 +37,7 @@ As of 2016-04-19 this page is still being updated.
     - overwriting of existing version: [doc](form-builder/publishing.md#versioning)
     - associating a comment with a given form version: [doc](form-builder/publishing.md#versioning), [blog post](https://blog.orbeon.com/2016/09/versioning-comments.html)
     - simple data migration: [doc](/form-runner/feature/simple-data-migration.md), [blog post](https://blog.orbeon.com/2018/09/simple-data-migration.html)
+- Viewing data revision history: [doc](/form-runner/feature/revision-history.md) 
 - Form field validation: [doc](form-builder/validation.md), [blog post](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
     - required fields (also via formula, see [blog post](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html))
     - whitespace trimming: [doc](form-builder/validation.md#trimming-leading-and-trailing-spaces), [blog post](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
