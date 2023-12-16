@@ -141,6 +141,7 @@
         * [Form Runner navigation bar](form-runner/feature/navbar.md)
         * [PDF production](form-runner/feature/pdf-production.md)
             * [Automatic PDF](form-runner/feature/pdf-automatic.md)
+            * [Automatic PDF header and footer configuration](form-runner/feature/pdf-automatic-header-footer.md)
             * [PDF templates](form-runner/feature/pdf-templates.md)
         * [Responsive design](form-runner/feature/responsive-design.md)
         * [Revision history](form-runner/feature/revision-history.md)
