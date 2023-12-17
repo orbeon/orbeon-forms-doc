@@ -64,6 +64,104 @@ Example:
 ORBEON.fr.API.getFOrm().findControlsByName('street-address')
 ```
 
+### Setting a control's value
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+The `setControlValue()` function allows you to set the value of a Form Runner control.
+
+```javascript
+function setControlValue(
+    controlName: string,
+    controlValue: string | number | string[] | number[]
+): void
+```
+
+| Name            | Required | Type                                             | Description                         |
+|-----------------|----------|--------------------------------------------------|-------------------------------------|
+| **controlName** | Yes      | `string`                                         | The name of the Form Runner control |
+| **controlValue**| Yes      | `string` or `number` or `string[]` or `number[]` | The value of values to set          |
+
+Here is how to set the value of a text field called `my-field` to the value "Hello!":
+
+```javascript
+ORBEON.fr.API.getForm().setControlValue('my-field', 'Hello!')
+```
+
+For single selection controls, you pass the index of the value to select, either as a string or as a number:
+
+```javascript
+ORBEON.fr.API.getForm().setControlValue('my-single-selection', 2)
+```
+
+or:
+
+```javascript
+ORBEON.fr.API.getForm().setControlValue('my-single-selection', '2')
+```
+
+For multiple selection controls, you pass a space-separated string of indexes:
+
+[//]: # (or an array of indexes of the values to select:)
+
+[//]: # ()
+[//]: # (```javascript)
+
+[//]: # (ORBEON.fr.API.getForm&#40;&#41;.setControlValue&#40;'my-multiple-selection', '2 7 8'&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (or:)
+
+[//]: # ()
+[//]: # (```javascript)
+
+[//]: # (ORBEON.fr.API.getForm&#40;&#41;.setControlValue&#40;'my-multiple-selection', [2, 7, 8]&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (or:)
+
+[//]: # ()
+[//]: # (```javascript)
+
+[//]: # (ORBEON.fr.API.getForm&#40;&#41;.setControlValue&#40;'my-multiple-selection', ['2', '7', '8']&#41;)
+
+[//]: # (```)
+
+The following controls are supported:
+
+- Text field
+- Plain text area
+- Dropdown
+- Checkboxes
+- Radio buttons
+- Number
+- Currency
+- Date
+- Time
+
+### Activating a form control
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+The `activateControl()` function allows you to activate a Form Runner control. This is useful to activating buttons that are present within the form (as opposed to process buttons, which are typically placed at the bottom of the form). However, you can also activate other controls, in particular Text Fields.
+
+```javascript
+function activateControl(controlName: string): void
+```
+
+| Name            | Required | Type     | Description                         |
+|-----------------|----------|----------|-------------------------------------|
+| **controlName** | Yes      | `string` | The name of the Form Runner control |
+
+The following controls are supported:
+
+- Text field (as if the user presses the Return or Enter key)
+- Button
+
 ### Telling whether the form data is safe
 
 [SINCE Orbeon Forms 2023.1]
