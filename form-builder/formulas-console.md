@@ -20,6 +20,8 @@ Each entry shows:
 - the error message
 - the count of the number of times the error occurred
 
+The console automatically opens when the first error occurs. You can close and open the console with the icon in the top right of the console area.
+
 ## See also
 
 - [Formulas inspector](formulas-inspector.md)
