@@ -66,6 +66,7 @@
     * [Formulas](form-builder/formulas.md)
         * [Examples](form-builder/formulas-examples.md)
         * [Formulas inspector](form-builder/formulas-inspector.md)
+        * [Formulas console](form-builder/formulas-console.md)
     * [Summary page](form-builder/summary-page.md)
     * [Form localization](form-builder/localization.md)
     * Advanced

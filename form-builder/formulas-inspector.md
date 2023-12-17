@@ -78,5 +78,6 @@ If too many formulas, especially in a large form, cannot establish path dependen
 
 ## See also
 
+- [Formulas console](formulas-console.md)
 - [Examples of formulas](formulas-examples.md)
 - [Formulas](formulas.md)
