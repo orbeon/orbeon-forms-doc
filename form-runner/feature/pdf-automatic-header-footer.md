@@ -9,9 +9,9 @@ By default, Form Runner produces automatic PDF files with the following header a
 - Header: Form Runner logo, form title
 - Footer: Form title, page number
 
-[//]: # (TODO: Add a screenshot.)
+![PDF output with header and footer](../images/pdf-header-footer.png)
 
-Starting Orbeon Forms 2023.1, header and footers are entirely configurable and you can control exactly what is shown in all six header or footer positions:
+Starting Orbeon Forms 2023.1, header and footers are entirely configurable, and you can control exactly what is shown in all six header or footer positions:
 
 - Header left
 - Header center
