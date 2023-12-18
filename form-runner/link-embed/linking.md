@@ -107,6 +107,16 @@ This applies to `edit`, `view`, `pdf`, and `tiff` modes.
 - `fr-pdf-template-lang`
     - Select a PDF template by language.
 
+### Excel, XML, PDF, and TIFF exports
+
+For exports that use the `/export/` path:
+
+- `export-initialize-form`
+    - `true`: initializes and runs the form before exporting
+    - `false` (default): does not initialize and run the form before exporting
+- `language` 
+    - language preference, for example `en` or `fr` 
+
 ## See also
 
 - [Multitenancy](/form-runner/feature/multitenancy.md)
