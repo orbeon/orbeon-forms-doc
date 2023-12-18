@@ -15,7 +15,7 @@ This architecture has benefits, such as protecting the confidentiality of intern
 
 This is still the case with the Orbeon Forms 2021.1, however we made lots of internal changes to support running Form Runner in a pure JavaScript environment, and we sometimes refer to this mode as the "Offline mode", even though it doesn't always imply being offline. This should, however, in the future, allow running forms entirely offline, as well as embedded within mobile apps.
 
-For API details, see [Offline embedding API](/form-runner/api/other/offline-embedding-api.md).
+For API details, see [Form Runner offline embedding API](/form-runner/api/other/offline-embedding-api.md).
 
 ## Preview
 
@@ -40,4 +40,4 @@ As of Orbeon Forms 2023.1, there are limitations, including the following:
 
 ## See also
 
-- [Offline embedding API](/form-runner/api/other/offline-embedding-api.md)
+- [Form Runner offline embedding API](/form-runner/api/other/offline-embedding-api.md)

@@ -1,4 +1,4 @@
-# Linking to Your Forms
+# Linking to your forms
 
 ## Rationale
 

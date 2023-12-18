@@ -1,4 +1,4 @@
-# Offline embedding API
+# Form Runner offline embedding API
 
 ## Availability
 
@@ -14,7 +14,7 @@ See the [Offline test](/form-builder/offline-test.md) feature for a rationale an
 
 As of Orbeon Forms 2023.1:
 
-- The offline embedding API is mainly relevant for users who want to embed Orbeon Forms in another application, typically a web view within a mobile app.
+- The Form Runner offline embedding API is mainly relevant for users who want to embed Orbeon Forms in another application, typically a web view within a mobile app.
 - Orbeon Forms does not yet provide an offline mode for end users of the regular Form Runner web application. For more about this, see [this issue](https://github.com/orbeon/orbeon-forms/issues/5184).
 
 ## APIs
