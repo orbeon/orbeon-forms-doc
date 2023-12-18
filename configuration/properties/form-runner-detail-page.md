@@ -81,7 +81,7 @@ If the number of table of contents entries (that is, of form sections) is greate
 
 This can be omitted or set to -1 to never show the TOC.
 
-[DEPRECATED SINCE Orbeon Forms 2023.1]
+[\[DEPRECATED SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 The following property does the same as `oxf.fr.detail.toc.min-sections` but is deprecated. Use `oxf.fr.detail.toc.min-sections` instead since Orbeon Forms 2023.1.
 
