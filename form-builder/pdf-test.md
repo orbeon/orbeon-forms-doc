@@ -57,7 +57,7 @@ The "Test PDF" dialog lets you choose between the [automatic PDF](pdf-automatic.
 
 Two options allow you to show controls hints and alerts in the resulting PDF:
 
-![Options to show hints and alerts](images/test-pdf-hints-alerts.png)
+![Options to show hints, alerts, and required](images/test-pdf-hints-alerts-required.png)
 
 This is an example of the resulting PDF with hints and alerts:
 
