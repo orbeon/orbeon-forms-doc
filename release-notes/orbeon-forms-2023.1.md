@@ -81,9 +81,13 @@ For more information, see the [documentation](/form-runner/feature/pdf-automatic
 
 ### Video component
 
-You can now add static videos to a form. This is useful for illustrations, training, and other purposes.
+You can now add videos to a form. You can  use the "Video Attachment" control, which allows users to upload a video, or the "Static Video" control, which allows you to specify a static video. This mirrors what is possible with the "Image Attachment" and "Static Image" controls.
 
-![Video component](../form-runner/component/images/xbl-video.png)
+![Video attachment](../form-runner/component/images/xbl-video-attachment.png)
+
+The static video This is useful for illustrations, training, and other purposes.
+
+![Static video](../form-runner/component/images/xbl-video.png)
 
 The video player supports scrubbing thanks to changes to the Orbeon Forms persistence backend to retrieve byte ranges.
 
