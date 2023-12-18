@@ -268,7 +268,7 @@ Each provider may have specific configuration properties. For the latest setting
 
 ## Attachments
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 By default, attachments are stored in the database. You can configure Form Runner to store attachments in the file system instead. This is useful for larger attachments, for example. You can do so globally by setting the following property:
 

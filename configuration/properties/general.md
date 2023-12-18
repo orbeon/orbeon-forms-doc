@@ -121,7 +121,7 @@ The following uses are considered legacy and not in use by default in Orbeon For
 
 _NOTE: If the backwards compatibility property `oxf.xforms.password` is defined, then it is used first. However, it is deprecated, and we advise not using it as support might be removed in a future Orbeon Forms version._
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Orbeon Forms will cause an error when starting if the default value for `oxf.crypto.password` is used. This is to prevent you from using the default value in production.
 
@@ -129,7 +129,7 @@ In addition, a password strength checker will also cause an error if the passwor
 
 ### oxf.crypto.check-password-strength
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 This property enables or disables the password strength checker. The default is `true` and enables the checker.
 

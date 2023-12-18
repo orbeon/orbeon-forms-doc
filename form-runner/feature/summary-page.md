@@ -33,7 +33,7 @@ You can open the search options using the "Show Search Options" button. The sear
 
 ### Dynamic dropdowns
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 For dynamic dropdowns, the original service used to populate the dropdown is not called again, but distinct values from accessible data are listed. This is also done in the bulk edit area if dynamic dropdowns are present.
 
@@ -53,7 +53,7 @@ When more than one [form version](/form-runner/feature/versioning.md) is availab
 
 ## Bulk edit
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Just like for search options, you can open the bulk edit area using the "Show Bulk Edit" button. The bulk edit area contains individual fields which allow performing a bulk edit of multiple forms at once. 
 

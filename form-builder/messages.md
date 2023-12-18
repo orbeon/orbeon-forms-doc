@@ -1,6 +1,6 @@
 # Messages
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ![Messages dialog](images/messages.png)
 

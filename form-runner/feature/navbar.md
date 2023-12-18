@@ -19,11 +19,11 @@ It features the following elements:
     - [SINCE Orbeon Forms 2022.1]
     - this is enabled by default
 - The Revision History button
-    - [SINCE Orbeon Forms 2023.1]
+    - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
     - this is disabled by default
     - available only on the Detail page in Edit mode
 - The Share button
-    - [SINCE Orbeon Forms 2023.1]
+    - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
     - this is disabled by default
     - available only on the Detail page in Edit/View modes
 
@@ -65,7 +65,7 @@ This link points to the Landing page. It is enabled by default, but you can disa
 
 ### Revision History button
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 This button opens the Revision History pane. It is disabled by default, but you can enable it or disable it by app/form by setting the following property to `true`:
 
@@ -87,7 +87,7 @@ Form Builder explicitly disables it by default, so if you'd like to enable the R
 
 ### Share button
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 See [Token-based permissions](/form-runner/access-control/tokens.md#using-the-share-dialog) for details.
 

@@ -11,7 +11,7 @@ Orbeon Forms uses caches for the following purposes:
 - Mapping of some web resources
     - This must be replicated when [replication](replication.md) is enabled.
 - Caching of form definition metadata in the persistence layer
-    - [SINCE Orbeon Forms 2023.1]
+    - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
     - This is a true cache, which doesn't need to be replicated.
 
 ## Supported cache implementations

@@ -525,7 +525,7 @@ The `file:` URI contains parameters when possible:
 
 ## Event properties with `replace="all"`
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 When passing properties to a submission with `replace="all"`, custom event properties were previously not usable to influence submission attributes, for example the following wouldn't work, unlike with other values of `replace`:
 

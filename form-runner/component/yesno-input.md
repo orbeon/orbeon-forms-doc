@@ -17,7 +17,7 @@ This control is generally recommended over the [Checkbox Input Component](checkb
 - A "Yes/No" choice is usually clearer to the user.
 - The control can be marked as "Required", in which case he user has to make a selection to pass validation. With a single checkbox, it is easier to miss making a selection.
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 A "Clear value" button is available in Form Builder to clear the value of the control without editing the source of the form definition or recreating the control.
 

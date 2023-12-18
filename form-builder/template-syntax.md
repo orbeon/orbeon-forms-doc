@@ -54,7 +54,7 @@ The following options are available for each template parameter:
             - Link to the "summary" page
             - Link to the "home" page
             - Link to the PDF file
-    - __Automatic PDF only__ [SINCE Orbeon Forms 2023.1]
+    - __Automatic PDF only__ [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
         - Image (form logo by default)
         - Form title
         - Page number

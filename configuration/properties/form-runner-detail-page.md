@@ -68,7 +68,7 @@ Note the following:
 
 ### Show table of contents
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ```xml
 <property
@@ -94,7 +94,7 @@ The following property does the same as `oxf.fr.detail.toc.min-sections` but is 
 
 ### Position of the table of contents
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ```xml
 <property
@@ -109,7 +109,7 @@ In PDF mode, the `left` position is not supported and the table of contents is a
 
 ### Modes in which the table of contents is shown
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ```xml
 <property
@@ -722,7 +722,7 @@ See also [Form Settings](/form-builder/form-settings.md#formulas).
 
 ### Grid tab order
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 You can configure the tab order in grids with the following property:
 

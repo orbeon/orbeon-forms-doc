@@ -267,7 +267,7 @@ Since Orbeon Forms 2016.1:
 - A delay of `0` can be used to dispatch an event asynchronously with a guarantee that there will be no roundtrip to the client. This conforms to XForms 1.1.
 - A non-integer value causes the event to be dispatched *synchronously* right away. This conforms to XForms 1.1.
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Event properties/context information of atomic types are now preserved and passed when the event is dispatched with a delay. Other types of event properties/context information (such as XML nodes) are not supported and will cause an error. The following types are supported:
 

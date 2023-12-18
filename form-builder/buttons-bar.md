@@ -25,7 +25,7 @@ By default, the bar includes the following buttons:
     - XHTML Export
         - Export the form definition in XHTML+XForms format (the Orbeon Forms form definition format).
         - This produces a file with the same content shown by the ["Edit Source" dialog](edit-source.md).
-        - [SINCE Orbeon Forms 2023.1] 
+        - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) 
 - __Test functions"__: 
     - Test: open the form in test mode
     - Test PDF: open the "Test PDF" dialog for testing PDF output

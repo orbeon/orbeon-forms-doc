@@ -36,7 +36,7 @@ See also [Enhancements to grids](https://blog.orbeon.com/2021/09/enhancements-to
 
 ### Grid Tab Order
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Cells inside a grid can be ordered in two ways:
 

@@ -43,7 +43,7 @@ The following options are available:
 
 ##### Role restriction
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 It is possible to restrict the "Show on Summary page" and "Allow bulk edit" options to one or more specific roles (i.e. group of users). When multiple roles are specified, the logic that applies can be chosen as well. If "All" is selected, then all specified roles must be present. If "Any" is selected, just one of the specified roles must be present.
 
@@ -148,7 +148,7 @@ In your custom CSS file, you could refer to these classes with a selector, for e
 
 #### Autocomplete attribute
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 The "Autocomplete attribute" dropdown allows specifying an [HTML autocomplete value](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for controls for which it makes sense to do so. Such a value tells the browser that it can suggest values for the field or, in the case of the `off` value, that it shouldn't suggest any value.
 
@@ -253,7 +253,7 @@ In addition to setting a control's label and hint in place in the form area, you
 
 #### Automatic hints
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 For attachment controls, in addition to the hint you provide for the control, Orbeon Forms can add an automatic hint informing the user about the maximum allowed file size and the accepted file types, if you have specified such validations in the Validations and Alerts tab.
 
@@ -288,7 +288,7 @@ For more, see [Template syntax](template-syntax.md).
 
 ### Language selector
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 When multiple languages are available for the form, a language selector allows selecting the language for which localizable texts are being edited (e.g. Validations and Alerts, Label, Hint, and Help Message) directly from the Control Settings dialog.
 

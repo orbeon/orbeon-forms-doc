@@ -272,7 +272,7 @@ In the following example, with the repetition performed by `<fr:data-iterate>`, 
 
 ## Asynchronous actions
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Previously, actions were run synchronously. That is, they were blocking any other form processing until completed. It is now possible to run actions asynchronously. This means that the form processing can continue while the actions are running in the background. This is particularly useful when the actions call services.
 
@@ -716,7 +716,7 @@ Note that the `<fr:control-setattachment>` action automatically sets a mediatype
 
 ### Setting the size of an attachment control
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ```xml
 <fr:control-setsize
@@ -787,7 +787,7 @@ This action allows setting whether a form control is visited or not. Example:
     visited="false"/>
 ```
 
-In Orbeon Forms, a form control can be *visited* or not. Visited controls have been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control. [SINCE Orbeon Forms 2023.1] Form controls can also be visited when they are calculated, visible, and their value changes.
+In Orbeon Forms, a form control can be *visited* or not. Visited controls have been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control. [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) Form controls can also be visited when they are calculated, visible, and their value changes.
 
 When working with actions, some form controls can benefit from having their "visited" status reset so that the user doesn't see extra errors appear. The `<fr:control-setvisited>` action allows doing that.
 
@@ -801,7 +801,7 @@ When working with actions, some form controls can benefit from having their "vis
 
 ### Copying control content
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 #### Description
 

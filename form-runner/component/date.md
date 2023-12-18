@@ -40,7 +40,7 @@ These are the default values of the properties:
 
 ## Native date picker
 
-On iOS, the native iOS date picker will be used unless you've selected Request Desktop Website in Safari. [SINCE Orbeon Forms 2023.1] As browser support for the native date picker on the desktop has improved over the year, and the native date picker is better supported by screen readers, you may want to always use the native date picker. You can do this by setting the following property: 
+On iOS, the native iOS date picker will be used unless you've selected Request Desktop Website in Safari. [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) As browser support for the native date picker on the desktop has improved over the year, and the native date picker is better supported by screen readers, you may want to always use the native date picker. You can do this by setting the following property: 
 
 ```xml
 <property 

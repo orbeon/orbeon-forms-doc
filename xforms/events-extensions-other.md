@@ -62,7 +62,7 @@ _NOTE: At the moment, with, `<xf:dispatch>`, only custom events support passing 
 
 ## Tunnelling of events properties
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 The `xxf:tunnel="true` attribute on `<xf:property>` allows the propagation, or tunnelling, of event properties in the following cases:
 

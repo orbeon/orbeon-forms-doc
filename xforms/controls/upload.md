@@ -199,7 +199,7 @@ _NOTE: `xforms-select` is no longer dispatched when a file is selected._
 
 ## Empty files
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 By default, empty uploaded files are rejected. This behavior can be changed using the following property:
 

@@ -2,7 +2,7 @@
 
 ## Availability
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Form definitions and form data can be exported as a zip file. This can be done in two ways.
 

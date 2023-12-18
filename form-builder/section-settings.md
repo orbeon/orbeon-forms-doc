@@ -34,7 +34,7 @@ The label can be configured directly in the form area, by clicking on the sectio
 
 The help message is configured in the "Help Message" tab. Similarly, the help message can be in plain text or use rich text (HTML). 
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 A short label can be configured in the "Short Label" tab. This short label is used instead of the regular label in the table of contents when using the [wizard view](/form-runner/feature/wizard-view.md).
 

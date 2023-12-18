@@ -106,7 +106,7 @@ Services that implement their own search can also implement paging. This is usef
 
 ### Open selection
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 You can mark a dynamic search dropdown as *open* in cases where you want users to be able to enter a value that is not returned by the service. For example, you may use a service that returns all known addresses in a given city, but the service may not be aware of new developments.
 
@@ -119,7 +119,7 @@ In the Control Settings dialog box, open selection can be disabled (using the No
 
 ### Minimum input length
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 You can specify a minimum input length, in characters, before the dropdown starts displaying choices. This is useful if you have a large number of choices, and the subset of choices returned is unlikely to be useful if users don't type at least a few characters. This is configured by setting the following property.
 

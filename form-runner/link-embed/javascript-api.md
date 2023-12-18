@@ -153,7 +153,7 @@ ORBEON.fr.API.embedForm(
 
 Note that with earlier versions, `embedForm()` always returned the JavaScript `undefined` value.
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 `embedForm()` returns a JavaScript `Promise` object representing the form. The object supports functions documented in [The `FormRunnerForm` object](/form-runner/api/other/form-runner-javascript-api.md#the-formrunnerform-object).
 

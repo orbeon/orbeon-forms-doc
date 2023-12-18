@@ -4,7 +4,7 @@
 
 This is available to any version of Orbeon Forms.
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 There is now a [Purge function](/form-runner/feature/purging-historical-data.md) which allows you to purge data from the Forms Admin page. This is the recommended way to purge data.
 

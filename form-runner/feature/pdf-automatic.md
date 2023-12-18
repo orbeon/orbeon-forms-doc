@@ -59,7 +59,7 @@ Orbeon Forms now includes the [Inter font](https://rsms.me/inter/) by default. T
 
 ## PDF color mode
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 By default, the PDF is output with most colors removed and a black-and-white scheme. With the `oxf.fr.detail.pdf.color-mode`, you can change that default to allow field colors to be used. This impacts the following form controls:
 

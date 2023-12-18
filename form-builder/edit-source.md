@@ -32,6 +32,6 @@ It is possible to edit the XML representation in the dialog, or to copy/paste it
 
 _NOTE: You have to be cautious when doing so because it is possible to break the form by making changes! We recommend that you learn about XForms before making such changes._
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 There is also an ["XHTML Export"](buttons-bar.md) button in the buttons bar, which allows directly downloading the form definition.

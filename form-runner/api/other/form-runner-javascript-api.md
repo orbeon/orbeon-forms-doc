@@ -2,7 +2,7 @@
 
 ## Getting a reference to a form
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 You can get a reference to an object representing a Form Runner form with the `getForm()` function:
 
@@ -24,11 +24,11 @@ If the form is not found, `null` is returned. If found, an object is returned, w
 
 ## The `FormRunnerForm` object
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ### Finding a Form Runner control by name
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 The `findControlsByName()` function returns the HTML element(s) corresponding to the given Form Runner control name.
 
@@ -164,7 +164,7 @@ The following controls are supported:
 
 ### Telling whether the form data is safe
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ```javascript
 function isFormDataSafe(): boolean
@@ -184,7 +184,7 @@ See also [the `set-data-status` action](/form-runner/advanced/buttons-and-proces
 
 ### Activating a process button
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ```javascript
 function activateProcessButton(buttonName: string): void
@@ -200,7 +200,7 @@ ORBEON.fr.API.getForm().activateProcessButton("wizard-next")
 
 ### Adding and removing process callback functions
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Form Runner simple processes now support a [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback) server action that allows client-side callback functions to be called.
 
@@ -241,7 +241,7 @@ ORBEON.fr.API.findControlsByName(
 | **controlName**  | Yes      | `string`                              | The name of the Form Runner control.                                            |
 | **formIdOrElem** | No       | `formIdOrElem: string \| HTMLElement` | See [Identifying a form by id or element](#identifying-a-form-by-id-or-element) |
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Prefer using first the `getForm()` function, and then, on the object returned, the `findControlsByName()` function.
 
@@ -269,6 +269,10 @@ ORBEON.xforms.Document.setValue(
 
 Where the value  you pass corresponds to the position of the item starting at `0`.
 
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+Prefer using first the `getForm()` function, and then, on the object returned, the `setControlValue()` function.
+
 ## Telling whether the form data is safe
 
 [SINCE Orbeon Forms 2019.2]
@@ -283,7 +287,7 @@ ORBEON.fr.API.isFormDataSafe(
 |------------------|----------|---------------------------------------|---------------------------------------------------------------------------------|
 | **formIdOrElem** | No       | `formIdOrElem: string \| HTMLElement` | See [Identifying a form by id or element](#identifying-a-form-by-id-or-element) |
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Prefer using first the `getForm()` function, and then, on the object returned, the `isFormDataSafe()` function.
 

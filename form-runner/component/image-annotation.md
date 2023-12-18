@@ -12,7 +12,7 @@ This component uses [wPaint][2], which requires support for the [HTML5 canvas][3
 
 ## Configuration
 
-[SINCE Orbeon Forms 2023.1] You can change the start stroke color with the following property:
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) You can change the start stroke color with the following property:
 
 ```xml
 <property 

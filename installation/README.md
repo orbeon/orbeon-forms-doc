@@ -87,7 +87,7 @@ You must create a default `properties-local.xml` file. See [Properties](/configu
 
 In addition, you must set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Orbeon Forms will cause an error when starting if the default value for `oxf.crypto.password` is used. This is to prevent you from using the default value in production.
 

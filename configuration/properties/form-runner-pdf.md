@@ -2,7 +2,7 @@
 
 ## Header and footer configuration
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 The following property controls the header and footer configuration for automatic PDF files. The property is in JSON format. For details, see [Header and footer configuration](/form-runner/feature/pdf-automatic.md#header-and-footer-configuration).
 

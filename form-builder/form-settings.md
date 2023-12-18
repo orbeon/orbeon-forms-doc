@@ -56,7 +56,7 @@ Form options include options which apply to the entire form definition.
     - Inline: hints show inline below the control
     - Tooltips: hints show as tooltips upon mouseover
 - Use automatic hints
-    - [SINCE Orbeon Forms 2023.1]
+    - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
     - Use property: use the `oxf.fr.detail.hint.automatic.*.*` property
     - Yes/No: show or don't show the automatic hints for all controls on this form
     - For details, see [Automatic hints](control-settings.md#automatic-hints)
@@ -71,7 +71,7 @@ Form options include options which apply to the entire form definition.
     - [SINCE Orbeon Forms 2018.1]
     - For details, see [Automatic calculations dependencies](/form-runner/feature/automatic-calculations-dependencies.md).
 - Grid Tab Order
-    - [SINCE Orbeon Forms 2023.1]
+    - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
     - Use property: use the [`oxf.xforms.xbl.fr.grid.tab-order` property](/configuration/properties/form-runner-detail-page.md#grid-tab-order)
     - For details, see [Grid Tab Order](/form-builder/grid-settings.md#grid-tab-order) in the Grid Settings dialog.
 

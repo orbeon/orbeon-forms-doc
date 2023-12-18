@@ -25,10 +25,10 @@ The property configures which buttons are included on the Summary page, and in w
 * `tiff` [SINCE Orbeon Forms 2016.1]
     * Label: "TIFF"
     * Action: Create a TIFF image file for the selected form data.
-* `excel-export` [SINCE Orbeon Forms 2023.1]
+* `excel-export` [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
     * Label: "Excel Export"
     * Action: Export the selected form data in Excel format.
-* `xml-export` [SINCE Orbeon Forms 2023.1]
+* `xml-export` [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
     * Label: "XML Export"
     * Action: Export the selected form data in XML format.
 * `delete`
@@ -60,7 +60,7 @@ By default, the "New" button takes users to the current version of the form, tha
 
 ## Custom process configuration
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Originally, Form Runner processes associated with buttons were only [available for the Detail Page](/form-runner/advanced/buttons-and-processes/README.md). Since Orbeon Forms 2023.1, they are also available on the Form Runner [Summary page](/configuration/properties/form-runner-summary-page.md). This allows you to add custom buttons to the Summary page, and to configure what happens when users press those buttons.
 

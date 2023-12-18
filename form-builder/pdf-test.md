@@ -53,7 +53,7 @@ The "Test PDF" dialog lets you choose between the [automatic PDF](pdf-automatic.
 
 ## Showing hints and alerts
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Two options allow you to show controls hints and alerts in the resulting PDF:
 

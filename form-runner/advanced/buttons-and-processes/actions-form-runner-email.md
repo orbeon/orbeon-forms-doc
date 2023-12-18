@@ -11,12 +11,12 @@ The `email` action sends an email with optionally XML form data, attachments, an
     - If the `template` template parameter is present, all the templates whose name doesn't match the value of the `template` parameter are filtered out.
     - If exactly one template is left, then that template is used.
     - If no template is left, then a default title and body defined in the Form Runner resources is used.
-    - [SINCE Orbeon Forms 2023.1] If more than one template is left and the `match` parameter is set to `first` or absent, then the first template is used, following the order in which they are defined in the form. If the `match` parameter is set to `all`, then all remaining templates are used.
-- [SINCE Orbeon Forms 2023.1] `data-format-version`: The data format version for the XML data, if included as email attachment.
+    - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If more than one template is left and the `match` parameter is set to `first` or absent, then the first template is used, following the order in which they are defined in the form. If the `match` parameter is set to `all`, then all remaining templates are used.
+- [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) `data-format-version`: The data format version for the XML data, if included as email attachment.
     - `4.0.0`: the default (which matches the backward compatibility format of the data, as stored in the database)
     - `4.8.0`
     - `2019.1.0`
-- [SINCE Orbeon Forms 2023.1] `match`: The behaviour to use when multiple templates are found. Can be `first` (default) or `all`. If `all`, then all matching templates are used (i.e. one email per template is sent). 
+- [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) `match`: The behaviour to use when multiple templates are found. Can be `first` (default) or `all`. If `all`, then all matching templates are used (i.e. one email per template is sent). 
 
 ## Configuration properties
 

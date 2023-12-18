@@ -325,7 +325,7 @@ However, should you want to disable this behavior, and have the HTML for all the
 
 ## Page name URL parameter
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 The URL of the form now contains a `fr-wizard-page` parameter, which indicates the page currently being displayed. For example:
 

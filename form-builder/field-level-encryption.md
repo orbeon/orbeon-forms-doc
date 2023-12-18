@@ -19,7 +19,7 @@ In Form Builder, to mark a field for encryption, open the "Control Settings" dia
 
 The key and algorithm to use is configured through the [encryption properties](/configuration/properties/general.md#encryption-properties). Before you start using this feature, make sure to change the default password.
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 If set, the `oxf.fr.field-encryption.password` property controls a separate encryption password for field-level encryption. If not set, the `oxf.crypto.password` property is used instead for backward compatibility.
 

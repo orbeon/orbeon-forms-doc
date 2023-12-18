@@ -36,7 +36,7 @@ When you use a relational persistence layer:
 
 As of Orbeon Forms 2018.2, it is not possible to disable this feature. However, you can [purge old data using SQL](/form-runner/persistence/purging-old-data.md) as needed.
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 You can also use the [Purge function](/form-runner/feature/purging-historical-data.md) from the Forms Admin page.
 
