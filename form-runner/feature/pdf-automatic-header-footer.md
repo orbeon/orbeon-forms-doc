@@ -48,6 +48,11 @@ The default global configuration is expressed in JSON Format and is as follows:
           "values": {
             "_": "{$fr-form-title}"
           }
+        },
+        "right": {
+          "values": {
+            "_": ""
+          }
         }
       },
       "footer": {
@@ -59,6 +64,11 @@ The default global configuration is expressed in JSON Format and is as follows:
         "center": {
           "values": {
             "_": "{$fr-page-number} / {$fr-page-count}"
+          }
+        },
+        "right": {
+          "values": {
+            "_": ""
           }
         }
       }
@@ -103,12 +113,14 @@ The following is an example of custom configuration that updates the default con
       "parameters": {
         "current-dateTime": {
           "type": "formula",
-          "value": "format-dateTime(current-dateTime(), '[D]/[M]/[Y] [h]:[m]:[s] [P,*-2]', xxf:lang(), (), ())"
+          "value": "format-dateTime(current-dateTime(), '[M]/[D]/[Y] [h]:[m]:[s] [P,*-2]', xxf:lang(), (), ())"
         }
       }
     }
 </property>
 ```
+
+![PDF output with header and footer](../images/pdf-header-footer-submitted.png)
 
 ## Header and footer configuration JSON format
 
