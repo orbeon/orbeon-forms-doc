@@ -258,20 +258,22 @@ When using PDF templates and `content = "pdf"` or `content = "tiff"`, you can co
 following:
 
 - `use-pdf-template`
-    - default: `true`
+    - This defaults to `true` if there is at least one PDF template attached to the form, `false` otherwise.
     - If at least one PDF template is available, the default is to use one of the PDF templates. But if
       `use-pdf-template = "false"`, then use of any PDF template is disabled and the automatic PDF is produced.  
 - `pdf-template-name`
+    - This contributes to selecting a specific PDF template.
     - If `pdf-template-name` specifies a name, such as with `pdf-template-name = "archive"`, the list of available PDF
       templates is reduced to those having an exactly matching name. If no matching name is found, an error is raised. 
 - `pdf-template-lang` 
+    - This contributes to selecting a specific PDF template.
     - If `pdf-template-lang` specifies a language, such as with `pdf-template-lang = "fr"`, the list of available
       PDF templates as reduced by `pdf-template-name` is used to find a PDF template with a matching language.
       If no matching language is found, an error is raised.
     - If `pdf-template-lang` is empty or missing:
         - The PDF template with the current form language is used, if there is a match.
         - If there is no match, the first available PDF template is used.
-        
+
 See also [PDF templates](/form-runner/feature/pdf-templates.md)
 
 ### Sending a PDF binary
