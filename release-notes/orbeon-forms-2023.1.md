@@ -85,6 +85,8 @@ You can now add static videos to a form. This is useful for illustrations, train
 
 ![Video component](../form-runner/component/images/xbl-video.png)
 
+The video player supports scrubbing thanks to changes to the Orbeon Forms persistence backend to retrieve byte ranges.
+
 You can see the Video component in action in the [Controls form](https://demo.orbeon.com/demo/fr/orbeon/controls/new?form-version=2&fr-wizard-page=attachment-controls).
 
 For more information, see the [documentation](/form-runner/component/video.md).
@@ -98,6 +100,17 @@ For this to work, the form author must have enabled the "Allow bulk edit" option
 ![Bulk Edit](../form-runner/images/summary-bookshelf-bulk-edit.png)
 
 For more information, see the [documentation](/form-runner/feature/summary-page.md#bulk-edit).
+
+### Enhancements to email sending
+
+The user interface for email settings has been improved, in particular for attachments settings.
+
+In addition, the following enhancements to the email configuration are introduced:
+
+- You can now send an email conditionally for a specific template ([doc](/form-builder/email-settings.md#usage))
+- You can now specify custom email headers, even dynamically ([doc](/form-builder/email-settings.md#custom-headers))
+
+![Email Settings dialog](../form-builder/images/email-settings.png)
 
 ### Configurable messages and resources in Form Builder
 
@@ -139,14 +152,6 @@ For more information, see the [documentation](/configuration/properties/persiste
 Form Runner supports processes associated with buttons, but so far this was only available on the Detail page. You can now configure processes associated with buttons on the Summary page.
 
 For more information, see the [documentation](/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md).
-
-### Offline support for attachments
-
-Form Runner now includes support for attachments in the offline mode.
-
-Note that this feature is currently only usable when embedding Orbeon Forms within a native application. It is not available when using the Form Runner standalone web application. However, you can attach files in the "Test Offline" mode of Form Builder.
-
-For more information, see the [API documentation](/form-runner/api/other/offline-embedding-api.md), and the [Test offline](/form-builder/offline-test.md) feature.
 
 ### Security features
 
@@ -226,9 +231,9 @@ TODO:
     - New JavaScript API to activate a form control ([doc](/form-runner/api/other/form-runner-javascript-api.md#activating-a-form-control))
     - Improved JavaScript to set the value of a form control ([doc](/form-runner/api/other/form-runner-javascript-api.md#setting-a-controls-value))
 - Server-side APIs
-    - Pass page path and parameters information to FileScanProvider2 ([doc](/form-runner/api/other/file-scan-api.md#api))
-    - Export services to be exposed as pages #5382
-    - Service / API to produce PDF from data #3493
+    - Page path and parameters information are passed to the file scanner ([doc](/form-runner/api/other/file-scan-api.md#api))
+    - Export services are now also exposed as pages URLs ([doc](/form-runner/link-embed/linking.md))
+    - A new API allows you to produce PDF and TIFF exports using service URLs ([doc](/form-runner/api/other/pdf-api.md))
     - Consider enabling PDF parameters for service calls #5958
 
 ### Other features
@@ -236,9 +241,11 @@ TODO:
 TODO:
 
 - Improve handling of expired session on the client #5678
+- Show dialog warning users their session is about to expire #5890 ([doc](https://doc.orbeon.com/contributors/state-handling#session-expiration-dialog))
+
+
 - Ability to download the form definition #5608
   - [doc](https://doc.orbeon.com/form-builder/form-editor/buttons-bar)
-- Show dialog warning users their session is about to expire #5890 ([doc](https://doc.orbeon.com/contributors/state-handling#session-expiration-dialog))
 - "Show on Summary page" / "Restrict to role" to support multiple roles with and/or logic #5994 ([doc](https://doc.orbeon.com/form-builder/form-editor/control-settings#basic-settings))
 - Summary page field search to show values in dropdown for controls without static items #6014 ([doc](/form-runner/feature/summary-page.md#dynamic-dropdowns))
 - Open selection in dynamic dropdown with search #5858
@@ -249,7 +256,6 @@ TODO:
 - Improved Norwegian resources
 - Rich text: ability to preserve colors in PDF #4158 ([doc](/form-runner/feature/pdf-automatic.md#pdf-color-mode))
 - `xxf:sort()` to support `lang`, `collation`, and `stable` parameters #5794
-- Form Builder: search by form name yields unexpected results #5928
 - Form Runner `success-message()` and `error-message()` to support HTML #4964 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#success-message-and-error-message))
 - Excel/XML export button on Summary page #5264 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes#configuring-summary-page-buttons))
     - also on 2022.1.5 
@@ -257,15 +263,14 @@ TODO:
 - Form Runner XPath functions for permissions #2834 ([doc](https://doc.orbeon.com/xforms/xpath/extension-functions/extension-form-runner#authentication-functions))
 - Configuration for image annotation start stroke color #6042 ([doc](https://doc.orbeon.com/form-runner/component/image-annotation))
 - Ability to configure the databound dropdown with search with a minimum input length #6051 ([doc](https://doc.orbeon.com/form-runner/component/static-dynamic-dropdown#minimum-input-length))
-- Optionally allow required stars to show in PDF #5959 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#open-rendered-format))
+- You can now optionally show required stars in produced PDF files ([doc](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format))
 
-### Enhancements to email sending
-
-TODO: screenshot and move up
-
-- Improved user interface for email attachments settings
-- You can now send an email conditionally for a specific template ([doc](/form-builder/email-settings.md#usage))
-- You can now specify custom email headers, even dynamically ([doc](/form-builder/email-settings.md#custom-headers))
+<figure>
+    <picture>
+        <img src="../form-builder/images/test-pdf-hints-alerts-required.png" width="60%">
+    </picture>
+    <figcaption>Options to show hints, alerts, and required</figcaption>
+</figure>
 
 ### Enhancements to actions
 
@@ -282,15 +287,31 @@ TODO:
 - Action syntax: support concurrent actions #5725
 - Support action syntax in library forms / section templates #4814
 
-### Embedding and offline
+### Embedding and offline support
 
-TODO:
+#### Offline support for attachments
 
-- Support cross-site embedding with the Form Runner JavaScript embedding API #5974
-- `embedForm()` returns a JavaScript `Promise` object representing the form. The object supports functions documented in [The `FormRunnerForm` object](/form-runner/api/other/form-runner-javascript-api.md#the-formrunnerform-object).
-- Offline embedding API must offer Async API for services #5356
-    - [doc](/form-runner/api/other/offline-embedding-api.md) 
-- Offline: Dropdown with Search doesn't work #5637
+Form Runner now includes support for attachments in the offline mode.
+
+Note that this feature is currently only usable when embedding Orbeon Forms within a native application. It is not available when using the Form Runner standalone web application. However, you can attach files in the "Test Offline" mode of Form Builder.
+
+For more information, see the [API documentation](/form-runner/link-embed/offline-embedding-api.md), and the [Test offline](/form-builder/offline-test.md) feature.
+
+#### Offline support for asynchronous service calls
+
+The `SubmissionProvider` service call API now supports asynchronous responses, as well as streamed and chunked request and response bodies. 
+
+For more information, see the [API documentation](/form-runner/link-embed/offline-embedding-api.md), and the [Test offline](/form-builder/offline-test.md) feature.
+
+This in particular allows the [Dropdown with Search control](/form-runner/component/static-dynamic-dropdown.md) to work offline, as well as the ability to stream attachments content, for example between a native application and Form Runner.
+
+#### Cross-site JavaScript embedding
+
+You can now embed Form Runner forms in a different domain than the one where Form Runner is deployed. This is done through the Form [Runner JavaScript embedding API](/form-runner/link-embed/javascript-api.md#option-2-cross-origin).
+
+#### Promise returns an object
+
+`embedForm()` returns a JavaScript `Promise` object representing the form. The object supports functions documented in [The `FormRunnerForm` object](/form-runner/api/other/form-runner-javascript-api.md#the-formrunnerform-object).
 
 ### XForms features
 
@@ -359,7 +380,7 @@ When `PUT`ting data, Form Runner does a number of checks, including a check for 
 
 ### eXist DB removal
 
-This version of Orbeon Forms removes support for the eXist DB database. Use of this database has been deprecated for a long time, and we have not been able to maintain it for a while. If you are using eXist DB, please migrate to a [relational database](/form-runner/persistence/relational-db.md). (#5770)
+This version of Orbeon Forms removes support for the eXist DB database. Use of this database has been deprecated for a long time, and we have not been able to maintain it for a while. If you are using eXist DB, please migrate to a [relational database](/form-runner/persistence/relational-db.md). ([#5770](https://github.com/orbeon/orbeon-forms/issues/5770))
 
 ### Uploading empty files
 
