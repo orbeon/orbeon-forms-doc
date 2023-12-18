@@ -281,6 +281,8 @@ The following parameters are supported:
     - show hints in the generated PDF or TIFF 
 - `show-alerts`: `"true"` or `"false"` (default is `"false"`)
     - show alerts in the generated PDF or TIFF 
+- `show-required`: `"true"` or `"false"` (default is `"false"`)
+    - show the required styling (typically a star) next to required controls
 
 Example:
 
