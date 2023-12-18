@@ -120,7 +120,7 @@ The following is an example of custom configuration that updates the default con
 </property>
 ```
 
-![PDF output with header and footer](../images/pdf-header-footer-submitted.png)
+![PDF output with header and footer and submitted date](../images/pdf-header-footer-submitted.png)
 
 ## Header and footer configuration JSON format
 
