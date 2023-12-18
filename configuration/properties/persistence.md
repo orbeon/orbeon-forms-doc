@@ -14,7 +14,7 @@ Storage for the persistence hierarchy can be configured at multiple levels:
         * _form_: form definition as XHTML,  with optional associated resources (images, PDF template, and other attachments)
         * _data_: form data as XML, with optional associated attachments
 
-This allow you for example to store certain form definition on disk, while storing the associated data, as filled-out by users, in one or more databases.
+This allows you for example to store certain form definition on disk, while storing the associated data, as filled-out by users, in one or more databases.
 
 ## Persistence layer configuration
 
