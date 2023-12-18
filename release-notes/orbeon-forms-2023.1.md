@@ -201,8 +201,26 @@ TODO:
 
 - Add suggestion of variable names in all formulas #5798
 
+### New and improved APIs
+
+- Client-side APIs
+    - The Wizard supports navigating to a specific section via URL ([doc](/form-runner/feature/wizard-view.md#page-name-url-parameter))
+    - New JavaScript API to register a listener for process callbacks ([doc](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#registering-a-callback-function), [doc](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback))
+    - New JavaScript API to get a reference to an object representing a Form Runner form ([doc](/form-runner/api/other/form-runner-javascript-api.md#getting-a-reference-to-a-form))
+    - New JavaScript API to activate Process buttons ([doc](/form-runner/api/other/form-runner-javascript-api.md#activating-a-process-button))
+    - New JavaScript API to activate a form control ([doc](/form-runner/api/other/form-runner-javascript-api.md#activating-a-form-control))
+    - Improved JavaScript to set the value of a form control ([doc](/form-runner/api/other/form-runner-javascript-api.md#setting-a-controls-value))
+- Server-side APIs
+    - Pass page path and parameters information to FileScanProvider2 ([doc](/form-runner/api/other/file-scan-api.md#api))
+    - Export services to be exposed as pages #5382
+    - Service / API to produce PDF from data #3493
+    - Consider enabling PDF parameters for service calls #5958
+
 ### Other features
 
+TODO:
+
+- Improve handling of expired session on the client #5678
 - Ability to download the form definition #5608
   - [doc](https://doc.orbeon.com/form-builder/form-editor/buttons-bar)
 - Show dialog warning users their session is about to expire #5890 ([doc](https://doc.orbeon.com/contributors/state-handling#session-expiration-dialog))
@@ -232,6 +250,8 @@ TODO:
 
 ### Actions
 
+TODO:
+
 - Asynchronous actions ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#asynchronous-actions))
 - Add `fr:control-setfocus` action #5697 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#setting-the-focus-on-a-form-control))
     - also on 2022.1.2 
@@ -245,42 +265,24 @@ TODO:
 
 ### Embedding and offline
 
+TODO:
+
 - Support cross-site embedding with the Form Runner JavaScript embedding API #5974
-- API to register a listener for processes #5913 ([doc](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#registering-a-callback-function), [doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#callback))
 - `embedForm()` returns a JavaScript `Promise` object representing the form. The object supports functions documented in [The `FormRunnerForm` object](/form-runner/api/other/form-runner-javascript-api.md#the-formrunnerform-object).
 - Offline embedding API must offer Async API for services #5356
     - [doc](/form-runner/api/other/offline-embedding-api.md) 
 - Offline: Dropdown with Search doesn't work #5637
-- setControlValue
-- isFormDataSafe
-- activateProcessButton
-- get a reference to an object representing a Form Runner form with the `getForm()` function:
 
-```javascript
-ORBEON.fr.API.getForm(formIdOrElem: string | HTMLElement): FormRunnerForm
-```
+### XForms features
 
-### New and improved APIs
+- Support `event()` for `replace="all"` submissions ([doc](/xforms/submission-extensions.md#event-properties-with-replace-all))
+- You can tunnel context information to submission and error events ([doc](/xforms/events-extensions-other.md#tunnelling-of-events-properties))
+- Delayed events support passing atomic properties ([doc](/xforms/events-standard.md#delayed-events))
 
-- Can't set value of number field with documented public API #5383
-    - [doc](https://doc.orbeon.com/form-runner/api/other-apis/form-runner-javascript-api#setting-a-controls-value)
-    - also [activate controls](https://doc.orbeon.com/form-runner/api/other-apis/form-runner-javascript-api#activating-a-form-control)
-- Wizard: support navigating to a specific section via URL #2848 ([doc](/form-runner/feature/wizard-view.md#page-name-url-parameter))
-- Pass page path and parameters information to FileScanProvider2 #5930 ([doc](https://doc.orbeon.com/form-runner/api/other-apis/file-scan-api#api))
-- Form Runner JavaScript API to activate/set control values #5952
-- JavaScript API to activate Process buttons #5935 ([doc](https://doc.orbeon.com/form-runner/api/other-apis/form-runner-javascript-api#activating-a-process-button))
-- Export services to be exposed as pages #5382
-- Service / API to produce PDF from data #3493
-- Consider enabling PDF parameters for service calls #5958
-- Improve handling of expired session on the client #5678
+### Platform features
 
-### Low-level features
-
-- Support Tomcat 10+, WildFly 27+ #4885
-- Support for the JCache API (JSR-107) #5399 ([doc](https://doc.orbeon.com/installation/caches))
-- Submission with `replace="all"` using `event()` for method fails ([doc](https://doc.orbeon.com/xforms/submission/submission-extensions#event-properties-with-replace-all))
-- Ability to tunnel context information to submission events #4069 ([doc](https://doc.orbeon.com/xforms/events/events-extensions-other#tunnelling-of-events-properties))
-- Delayed events: support passing atomic properties #2579
+- Support Tomcat 10+, WildFly 27+ (TODO)
+- Support for the JCache API (JSR-107) ([doc](/installation/caches.md#enabling-jcache-providers))
 
 ## Compatibility notes
 
