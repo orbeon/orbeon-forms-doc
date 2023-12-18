@@ -333,13 +333,13 @@ Note that the epilogue applies the default theme under `/config/theme-plain.xsl`
 
 The Orbeon Forms filter implemented by `OrbeonXFormsFilter` sets the following request attributes:
 
-| Property name |  Value type |  Comments |
-|---|---|---|
-| `oxf.xforms.renderer.deployment` |  `separate` |
-| `oxf.xforms.renderer.base-uri` |  path | - contains request path, i.e. `/xforms-jsp/guess-the-number/test.jsp` <br>- used for `xml:base` resolution by XForms
-| `oxf.xforms.renderer.document` |  XHTML document as string | the string must contain well-formed XML
-| `oxf.xforms.renderer.content-type` |  content-type | content-type of the document passed
-| `oxf.xforms.renderer.has-session` |  `true` / `false` | whether the filter sees an existing session or not
+| Property name                      | Value type               | Comments                                                                                                             |
+|------------------------------------|--------------------------|----------------------------------------------------------------------------------------------------------------------|
+| `oxf.xforms.renderer.deployment`   | `separate`               |                                                                                                                      |
+| `oxf.xforms.renderer.base-uri`     | path                     | - contains request path, i.e. `/xforms-jsp/guess-the-number/test.jsp` <br>- used for `xml:base` resolution by XForms |
+| `oxf.xforms.renderer.document`     | XHTML document as string | the string must contain well-formed XML                                                                              |
+| `oxf.xforms.renderer.content-type` | content-type             | content-type of the document passed                                                                                  |
+| `oxf.xforms.renderer.has-session`  | `true` / `false`         | whether the filter sees an existing session or not                                                                   |
 
 _NOTE: In general, you do not need to know about these properties to use the Orbeon Forms filter._
 

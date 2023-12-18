@@ -28,9 +28,9 @@ When you do this:
 
 From the user's perspective, this works almost exactly like the "Test" button which has always been present in Form Builder.
 
-As of Orbeon Forms 2021.1, there are limitations, including the following:
+As of Orbeon Forms 2023.1, there are limitations, including the following:
  
-- The APIs to compile and embed forms are not yet documented.
+- The documentation is not yet complete.
 - Some controls are not fully supported, including the Formatted Text Area as well as attachment controls.
 - Some formulas might not work.
 - Performance needs some improvements.
@@ -40,7 +40,7 @@ As of Orbeon Forms 2021.1, there are limitations, including the following:
 
 As of Orbeon Forms 2023.1:
 
-- The offline embedding API is only relevant for users who want to embed Orbeon Forms in another application, typically a web view within a mobile app.
+- The offline embedding API is mainly relevant for users who want to embed Orbeon Forms in another application, typically a web view within a mobile app.
 - Orbeon Forms does not yet provide an offline mode for end users of the regular Form Runner web application. For more about this, see [this issue](https://github.com/orbeon/orbeon-forms/issues/5184).
 
 ## APIs
@@ -49,7 +49,7 @@ As of Orbeon Forms 2023.1:
 
 An Orbeon form first needs to be *compiled* into a serialized representation. This is done on the server-side, and the result is a zip file containing the compiled form definition, as well as any resources referenced by the form.
 
-In order to obtain a compiled form definition, you call the following service endpoint:
+In order to obtain a compiled form definition, you call the following service endpoint with an HTTP `GET` request:
 
 ```
 /fr/service/$app/$form/compile?format=zip
@@ -59,13 +59,80 @@ The resulting binary data can later be passed to the client-side `renderFormFrom
 
 ### Client-side embedding API
 
-TODO
+The API entry point is from the global JavaScript object:
 
-ORBEON.fr.FormRunnerOffline()
+```javascript
+ORBEON.fr.FormRunnerOffline
+```
 
-renderFormFromBase64()
+You must provide a specific configuration before running `renderForm()` and other methods:
 
-configure()
+```javascript
+ORBEON.fr.FormRunnerOffline.configure(
+    submissionProvider,
+    compiledFormCacheSize
+);
+```
+
+The first argument is a `SubmissionProvider` instance, which is described below. This tells Form Runner how to read and write form data, as well as how to call services.
+
+The second, optional parameter, is the size of the compiled form cache, in number of compiled forms. This is used to limit the number of compiled forms kept in memory.
+
+The effect of calling `configure()` is global. It applies to all subsequent calls to `renderForm()`.
+
+You can render the form in a given HTML element with id `orbeon-wrapper` as follows:
+
+```javascript
+window.ORBEON.fr.FormRunnerOffline.renderForm(
+    document.querySelector("#orbeon-wrapper"),
+    compiledFormDefinition,
+    {
+         "appName"    : "my-app",
+         "formName"   : "my-form",
+         "formVersion": 1,
+         "mode"       : "new"
+    }
+);
+```
+
+This returns a `Promise` which resolves when the configuration is complete.
+
+The `compiledFormDefinition` parameter is the binary data obtained from the server-side compilation API, as a `Uint8Array`.
+
+The third argument is a JavaScript object with the following properties:
+
+| Property      | Type       | Description              |
+|---------------|------------|--------------------------|
+| `appName`     | `string`   |                          |
+| `formName`    | `string`   |                          |
+| `formVersion` | `number`   | positive integer         |
+| `mode`        | `string`   | `new`\|`edit`\|`view`    |
+| `documentId`  | `string?`  | for `edit`\|`view` modes |
+| `queryString` | `string?`  | optional                 |
+| `headers`     | `Headers?` | optional                 |
+| `formData`    | `string?`  | for `POST`ed form data   |
+
+If `formData` is defined, it must be a string containing form data in XML format. This is the equivalent of performing an HTTP `POST` when online.
+
+Note that regular reading/writing data is done through the `SubmissionProvider` interface, which is described below. 
+
+If you are only loading one form in the page, you can chain the calls as follows:
+
+```javascript
+ORBEON.fr.FormRunnerOffline.configure(
+    submissionProvider,
+    compiledFormCacheSize
+).renderForm(
+    document.querySelector("#orbeon-wrapper"),
+    compiledFormDefinition,
+    {
+         "appName"    : "my-app",
+         "formName"   : "my-form",
+         "formVersion": 1,
+         "mode"       : "new"
+    }
+);
+```
 
 ### Client-side submission provider API
 
@@ -182,3 +249,4 @@ TODO
 
 ## See also
 
+- TODO
