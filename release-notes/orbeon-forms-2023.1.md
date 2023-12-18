@@ -4,9 +4,9 @@ __Sunday, December 31, 2023__
 
 [NOTE: THIS IS A PREVIEW, AND AS OF 2023-12-17, THIS VERSION OF ORBEON FORMS HASN'T BEEN RELEASED.]
 
-Today we released Orbeon Forms 2023.1! This release is packed with new features and bug-fixes!
+Today we released Orbeon Forms 2023.1! This release is absolutely packed with new features and bug-fixes!
 
-## New features
+## Major new features
 
 ### Token-based permissions
 
@@ -103,7 +103,7 @@ The Formulas console allows you to view formulas errors that occur when testing 
 
 For more information, see the [documentation](/form-builder/formulas-console.md).
 
-## Copying control content
+### Copying control content
 
 This new Form Builder action allows you to explicitly copy complex form content from some controls to other controls, including handling of repetitions.
 
@@ -111,35 +111,128 @@ This new Form Builder action allows you to explicitly copy complex form content 
 
 For more information, see the [documentation](/form-builder/actions-syntax.md#copying-control-content).
 
+### Option to store attachments in the filesystem
+
+If you handle large and/or a large number of attachments, you can now configure Form Runner to store attachments in the filesystem instead of the database. This can improve performance and reduce the size of the database.
+
+For more information, see the [documentation](/configuration/properties/persistence.md#attachments).
+
+### Summary page processes
+
+Form Runner supports processes associated with buttons, but so far this was only available on the Detail page. You can now configure processes associated with buttons on the Summary page.
+
+For more information, see the [documentation](/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md).
+
+### Offline support for attachments
+
+Form Runner now includes support for attachments in the offline mode.
+
+Note that this feature is currently only usable when embedding Orbeon Forms within a native application. It is not available when using the Form Runner standalone web application. However, you can attach files in the "Test Offline" mode of Form Builder.
+
+For more information, see the [API documentation](/form-runner/api/other/offline-embedding-api.md), and the [Test offline](/form-builder/offline-test.md) feature.
+
+## Other new features and enhancements
+
+### Security features
+
+#### SHA-256
+
+Orbeon Forms now standardizes on SHA-256.
+
+Note that this was also backported to Orbeon Forms 2022.1.3 and newer.
+
+See the [documentation](/configuration/properties/general.md#oxf.crypto.hash-algorithm).
+
+#### Improved encryption passwords
+
+We have now separated `oxf.fr.field-encryption.password` and `oxf.crypto.password`, in addition to `oxf.fr.access-token.password` which is used by the tokens feature described above.
+
+The `oxf.crypto.check-password-strength` property allows checking and reporting about password strength.
+
+See the [documentation](/configuration/properties/general.md#oxf.crypto.check-password-strength).
+
+### Performance improvements 
+
+The following performance enhancements should be noted:
+
+- Form Builder "Edit Source" performance with large form definitions
+- Landing page loading
+- Free text search performance with PostgreSQL
+
+TODO:
+
+- Persistence proxy/relational to cache form definition #5655
+
+### Usability and accessibility features
+
+#### Grid Tab Order 
+
+You can now set whether the tab navigation order within a grid is:
+
+- By row first, then by column
+- By column first, then by row
+
+See the [documentation](/form-builder/grid-settings.md#grid-tab-order).
+
+#### HTML autocomplete attribute
+
+The new "Autocomplete attribute" dropdown allows specifying an [HTML autocomplete value](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete).
+
+See the [documentation](/form-builder/control-settings.md#autocomplete-attribute).
+
+#### Other usability and accessibility features
+
+- Form Runner
+    - The Wizard supports separate short section labels ([doc](/form-builder/section-settings.md#label-help-message-and-short-labels))
+    - Empty file attachments are now rejected by default ([doc](/xforms/controls/upload.md#empty-files))
+    - Invalid attachment messages are improved
+    - Automatic hints are supported for the maximum file size and file types ([doc](/form-builder/control-settings.md#automatic-hints))
+    - Automatically focus on the first invalid field after closing Errors/Validation dialogs
+    - The Excel import now shows errors immediately when reviewing uploaded data
+    - The "Date" field supports the native date picker on the desktop ([doc](/form-runner/component/date.md#native-date-picker))
+    - New experimental properties allow configuring automatic PDF accessibility and PDF/A settings ([doc](/form-runner/feature/pdf-automatic.md#accessibility-and-pdf-a-support))
+- Form Builder usability
+    - "Test PDF" produces meaningful filenames
+    - Cmd/Ctrl-Enter commit the value in "Edit Source"
+    - You are warned when referring to a non-existent variable in a formula
+    - You can easily reset the value of a "Yes/No Answer"
+
+TODO:
+
+- Add suggestion of variable names in all formulas #5798
+
 ### Other features
 
-- Asynchronous actions ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#asynchronous-actions))
-- Short section labels for wizard #5795 ([doc](https://doc.orbeon.com/form-builder/form-editor/section-settings#label-help-message-and-short-labels))
 - Ability to download the form definition #5608
   - [doc](https://doc.orbeon.com/form-builder/form-editor/buttons-bar)
-- Option to store attachments in the filesystem #4146([doc](https://doc.orbeon.com/configuration/properties/form-runner/persistence#attachments))
-- Support for the JCache API (JSR-107) #5399 ([doc](https://doc.orbeon.com/installation/caches))
-- Ability to configure Summary page buttons that run processes #3347 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes#custom-process-configuration))
-- JavaScript API to activate Process buttons #5935 ([doc](https://doc.orbeon.com/form-runner/api/other-apis/form-runner-javascript-api#activating-a-process-button))
 - Show dialog warning users their session is about to expire #5890 ([doc](https://doc.orbeon.com/contributors/state-handling#session-expiration-dialog))
-- Support cross-site embedding with the Form Runner JavaScript embedding API #5974
 - Only send email from specific template when formula evaluates to true #6048 ([doc](https://doc.orbeon.com/form-builder/advanced/email-settings#usage)))
 - Email Settings support for custom email headers, value provided by a formula #6036 ([doc](https://doc.orbeon.com/form-builder/advanced/email-settings#custom-headers))
-- Support the HTML autocomplete attribute for accessibility #5083 ([doc](https://doc.orbeon.com/form-builder/form-editor/control-settings#autocomplete-attribute))
 - "Show on Summary page" / "Restrict to role" to support multiple roles with and/or logic #5994 ([doc](https://doc.orbeon.com/form-builder/form-editor/control-settings#basic-settings))
-- Automatic hint for max file size and supported file formats #6037 ([doc](https://doc.orbeon.com/form-builder/form-editor/control-settings#automatic-hints))
 - Summary page field search to show values in dropdown for controls without static items #6014 ([doc](/form-runner/feature/summary-page.md#dynamic-dropdowns))
 - Open selection in dynamic dropdown with search #5858
-- New action to copy complex content #5484 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#copying-control-content))
 - Add "copy to clipboard" button next to HTTP service response #3064
-- Add suggestion of variable names in all formulas #5798
 - Ability, in view mode, to show TOC on the left #5796 ([properties doc](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-detail-page#show-table-of-contents), [doc](TODO))
-- Form Runner JavaScript API to activate/set control values #5952
-- Validate lists of choices #6043
-- Improve handling of expired session on the client #5678
-- Support Tomcat 10+, WildFly 27+ #4885
-- Wizard: support navigating to a specific section via URL #2848 ([doc](/form-runner/feature/wizard-view.md#page-name-url-parameter))
+- Validate lists of choices #6043 (import)
 - Add Catalan language to form-runner #5659
+- Improved Norwegian resources
+- Rich text: ability to preserve colors in PDF #4158 ([doc](/form-runner/feature/pdf-automatic.md#pdf-color-mode))
+- `xxf:sort()` to support `lang`, `collation`, and `stable` parameters #5794
+- Form Builder: search by form name yields unexpected results #5928
+- Form Runner `success-message()` and `error-message()` to support HTML #4964 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#success-message-and-error-message))
+- Excel/XML export button on Summary page #5264 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes#configuring-summary-page-buttons))
+    - also on 2022.1.5 
+    - also `xml-export`
+- Upgrade to Font Awesome 6 #5702
+- Form Runner XPath functions for permissions #2834 ([doc](https://doc.orbeon.com/xforms/xpath/extension-functions/extension-form-runner#authentication-functions))
+- Configuration for image annotation start stroke color #6042 ([doc](https://doc.orbeon.com/form-runner/component/image-annotation))
+- Ability to configure the databound dropdown with search with a minimum input length #6051 ([doc](https://doc.orbeon.com/form-runner/component/static-dynamic-dropdown#minimum-input-length))
+- Optionally allow required stars to show in PDF #5959 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#open-rendered-format))
+- A "Clear value" button is available in Form Builder to clear the value of the control without editing the source of the form definition or recreating the control
+
+### Actions
+
+- Asynchronous actions ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#asynchronous-actions))
 - Add `fr:control-setfocus` action #5697 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#setting-the-focus-on-a-form-control))
     - also on 2022.1.2 
 - Add `fr:control-setvisited` action #5694 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#marking-a-form-control-visited-or-unvisited))
@@ -147,63 +240,16 @@ For more information, see the [documentation](/form-builder/actions-syntax.md#co
 - Add `fr:dataset-clear` action #5693 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#clearing-a-dataset))
     - also on 2022.1.2
 - Add `fr:control-setsize` to the Action Syntax #5817 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#setting-the-size-of-an-attachment-control))
-- Rich text: ability to preserve colors in PDF #4158 ([doc](/form-runner/feature/pdf-automatic.md#pdf-color-mode))
-- Standardize on SHA-256 #5759 ([doc](https://doc.orbeon.com/configuration/properties/general#oxf.crypto.hash-algorithm)) 
-    - also on 2022.1.3 
-- Form Builder usability
-    - Cmd/Ctrl-Enter to commit value in Edit Source dialog #5787
-    - Warn user when referring to a non-existent variable in a formula #4028
-- `xxf:sort()` to support `lang`, `collation`, and `stable` parameters #5794
-- Ability to reject or make empty (zero-size) files invalid #5405
-- Ability for form author to reset the value of a Yes/No Answer #5479
-- Message rejecting files because of their type to include file names #5815
-- PDF table of contents to include repeated sections titles #5855
-- File Attachment fields to have a Select File(s) link inside the drop area, instead of a separate button #5814
-- Properties to configure automatic PDF accessibility and PDF/A settings #5914 ([doc](/form-runner/feature/pdf-automatic.md#accessibility-and-pdf-a-support))
-- Focus on first invalid field after closing Errors/Validation dialog #5883
-- Pass page path and parameters information to FileScanProvider2 #5930 ([doc](https://doc.orbeon.com/form-runner/api/other-apis/file-scan-api#api))
-- "Test PDF" must produce meaningful filename #5105
-- Excel import: show errors immediately in review data page #5722
-- Form Builder: search by form name yields unexpected results #5928
-- Can't set value of number field with documented public API #5383
-    - [doc](https://doc.orbeon.com/form-runner/api/other-apis/form-runner-javascript-api#setting-a-controls-value)
-    - also [activate controls](https://doc.orbeon.com/form-runner/api/other-apis/form-runner-javascript-api#activating-a-form-control)
-- Form Runner `success-message()` and `error-message()` to support HTML #4964 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#success-message-and-error-message))
-- Excel/XML export button on Summary page #5264 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes#configuring-summary-page-buttons))
-    - also on 2022.1.5 
-    - also `xml-export`
-- Upgrade to Font Awesome 6 #5702
 - Action syntax: support concurrent actions #5725
-- Form Runner XPath functions for permissions #2834 ([doc](https://doc.orbeon.com/xforms/xpath/extension-functions/extension-form-runner#authentication-functions))
-- Date field to support native date picker on desktop #5956 ([doc](https://doc.orbeon.com/form-runner/component/date#native-date-picker), [doc](https://doc.orbeon.com/form-builder/form-editor/validation#dates-to-exclude-constraint))
-- Configuration for image annotation start stroke color #6042 ([doc](https://doc.orbeon.com/form-runner/component/image-annotation))
-- Improve free text search performance on PostgreSQL #6046
-- Ability to configure the databound dropdown with search with a minimum input length #6051 ([doc](https://doc.orbeon.com/form-runner/component/static-dynamic-dropdown#minimum-input-length))
-- Export services to be exposed as pages #5382
-- Service / API to produce PDF from data #3493
-- Consider enabling PDF parameters for service calls #5958
-- Optionally allow required stars to show in PDF #5959 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#open-rendered-format))
 - Support action syntax in library forms / section templates #4814
 
-- Grid Tab Order
-- A "Clear value" button is available in Form Builder to clear the value of the control without editing the source of the form definition or recreating the control
+### Embedding and offline
 
-### Security and performance
-
-- Improve Edit Source performance with large form definitions #5830
-- Ability to tunnel context information to submission events #4069 ([doc](https://doc.orbeon.com/xforms/events/events-extensions-other#tunnelling-of-events-properties))
-- Delayed events: support passing atomic properties #2579
-- Persistence proxy/relational to cache form definition #5655
-- Improved landing page loading performance
-- Improved encryption passwords
-    - separate `oxf.fr.field-encryption.password` vs. `oxf.crypto.password`, oxf.crypto.check-password-strength
-
-### Embdding and offline
-
-- API to register a listener for processes #5913 ([doc](https://doc.orbeon.com/form-runner/link-embed/javascript-api#embedform-api), [doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#callback))
+- Support cross-site embedding with the Form Runner JavaScript embedding API #5974
+- API to register a listener for processes #5913 ([doc](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#registering-a-callback-function), [doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#callback))
 - `embedForm()` returns a JavaScript `Promise` object representing the form. The object supports functions documented in [The `FormRunnerForm` object](/form-runner/api/other/form-runner-javascript-api.md#the-formrunnerform-object).
 - Offline embedding API must offer Async API for services #5356
-- Offline: support attachments #5207
+    - [doc](/form-runner/api/other/offline-embedding-api.md) 
 - Offline: Dropdown with Search doesn't work #5637
 - setControlValue
 - isFormDataSafe
@@ -214,9 +260,27 @@ For more information, see the [documentation](/form-builder/actions-syntax.md#co
 ORBEON.fr.API.getForm(formIdOrElem: string | HTMLElement): FormRunnerForm
 ```
 
+### New and improved APIs
+
+- Can't set value of number field with documented public API #5383
+    - [doc](https://doc.orbeon.com/form-runner/api/other-apis/form-runner-javascript-api#setting-a-controls-value)
+    - also [activate controls](https://doc.orbeon.com/form-runner/api/other-apis/form-runner-javascript-api#activating-a-form-control)
+- Wizard: support navigating to a specific section via URL #2848 ([doc](/form-runner/feature/wizard-view.md#page-name-url-parameter))
+- Pass page path and parameters information to FileScanProvider2 #5930 ([doc](https://doc.orbeon.com/form-runner/api/other-apis/file-scan-api#api))
+- Form Runner JavaScript API to activate/set control values #5952
+- JavaScript API to activate Process buttons #5935 ([doc](https://doc.orbeon.com/form-runner/api/other-apis/form-runner-javascript-api#activating-a-process-button))
+- Export services to be exposed as pages #5382
+- Service / API to produce PDF from data #3493
+- Consider enabling PDF parameters for service calls #5958
+- Improve handling of expired session on the client #5678
+
 ### Low-level features
 
+- Support Tomcat 10+, WildFly 27+ #4885
+- Support for the JCache API (JSR-107) #5399 ([doc](https://doc.orbeon.com/installation/caches))
 - Submission with `replace="all"` using `event()` for method fails ([doc](https://doc.orbeon.com/xforms/submission/submission-extensions#event-properties-with-replace-all))
+- Ability to tunnel context information to submission events #4069 ([doc](https://doc.orbeon.com/xforms/events/events-extensions-other#tunnelling-of-events-properties))
+- Delayed events: support passing atomic properties #2579
 
 ## Compatibility notes
 
