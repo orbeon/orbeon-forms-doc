@@ -197,6 +197,7 @@
             * [Generate XML Schema API](form-runner/api/other/xml-schema-generation.md)
             * [Publish form definition API](form-runner/api/other/publish.md)
             * [Run form in the background API](form-runner/api/other/run-form-background.md)
+            * [Offline embedding API](form-runner/api/other/offline-embedding-api.md)
         * Data formats
             * [Form data](form-runner/data-format/form-data.md)
             * [Date and time](form-runner/data-format/date-and-time.md)
