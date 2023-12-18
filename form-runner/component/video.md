@@ -1,16 +1,14 @@
 # Video component
 
-
-
 ## Availability
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ## What it does
 
 The `fr:video` component shows a video. Like [fr:image](image.md), `fr:video` doesn't have an associated upload control and cannot be changed by the end-user of a form.
 
-In addition, when in the Form Runner context, `fr:video` retrieves the resource while passing the `Orbeon-Form-Definition-Version` HTTP header when available.
+![Video component](images/xbl-video.png)
 
 ## Basic usage
 
@@ -21,6 +19,10 @@ In addition, when in the Form Runner context, `fr:video` retrieves the resource 
 ```
 
 The URL of the video is stored in instance data via a single-node binding, here using `bind`.
+
+## Advanced usage
+
+When in the Form Runner context, `fr:video` retrieves the resource while passing the `Orbeon-Form-Definition-Version` HTTP header when available.
 
 ## See also
 
