@@ -195,7 +195,7 @@ See the [documentation](/form-builder/control-settings.md#autocomplete-attribute
     - "Test PDF" produces meaningful filenames
     - Cmd/Ctrl-Enter commit the value in "Edit Source"
     - You are warned when referring to a non-existent variable in a formula
-    - You can easily reset the value of a "Yes/No Answer"
+    - You can easily reset the value of a "Yes/No Answer" ([doc](/form-runner/component/yesno-input.md))
 
 TODO:
 
@@ -224,8 +224,6 @@ TODO:
 - Ability to download the form definition #5608
   - [doc](https://doc.orbeon.com/form-builder/form-editor/buttons-bar)
 - Show dialog warning users their session is about to expire #5890 ([doc](https://doc.orbeon.com/contributors/state-handling#session-expiration-dialog))
-- Only send email from specific template when formula evaluates to true #6048 ([doc](https://doc.orbeon.com/form-builder/advanced/email-settings#usage)))
-- Email Settings support for custom email headers, value provided by a formula #6036 ([doc](https://doc.orbeon.com/form-builder/advanced/email-settings#custom-headers))
 - "Show on Summary page" / "Restrict to role" to support multiple roles with and/or logic #5994 ([doc](https://doc.orbeon.com/form-builder/form-editor/control-settings#basic-settings))
 - Summary page field search to show values in dropdown for controls without static items #6014 ([doc](/form-runner/feature/summary-page.md#dynamic-dropdowns))
 - Open selection in dynamic dropdown with search #5858
@@ -241,14 +239,17 @@ TODO:
 - Excel/XML export button on Summary page #5264 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes#configuring-summary-page-buttons))
     - also on 2022.1.5 
     - also `xml-export`
-- Upgrade to Font Awesome 6 #5702
 - Form Runner XPath functions for permissions #2834 ([doc](https://doc.orbeon.com/xforms/xpath/extension-functions/extension-form-runner#authentication-functions))
 - Configuration for image annotation start stroke color #6042 ([doc](https://doc.orbeon.com/form-runner/component/image-annotation))
 - Ability to configure the databound dropdown with search with a minimum input length #6051 ([doc](https://doc.orbeon.com/form-runner/component/static-dynamic-dropdown#minimum-input-length))
 - Optionally allow required stars to show in PDF #5959 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#open-rendered-format))
-- A "Clear value" button is available in Form Builder to clear the value of the control without editing the source of the form definition or recreating the control
 
-### Actions
+### Enhancements to email sending
+
+- You can now send an email conditionally for a specific template ([doc](/form-builder/email-settings.md#usage))
+- You can now specify custom email headers, even dynamically ([doc](/form-builder/email-settings.md#custom-headers))
+
+### Enhancements to actions
 
 TODO:
 
@@ -281,8 +282,9 @@ TODO:
 
 ### Platform features
 
-- Support Tomcat 10+, WildFly 27+ (TODO)
-- Support for the JCache API (JSR-107) ([doc](/installation/caches.md#enabling-jcache-providers))
+- We upgraded to Font Awesome 6
+- Orbeon Forms now supports Tomcat 10+, WildFly 27+ (TODO)
+- In addition to Ehcahe 2.x, we added support for the JCache API (JSR-107) ([doc](/installation/caches.md#enabling-jcache-providers))
 
 ## Compatibility notes
 
