@@ -164,6 +164,7 @@
         * [Liferay full portlet](form-runner/link-embed/liferay-full-portlet.md)
         * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
         * [Securing Form Runner access](form-runner/link-embed/securing.md)
+        * [Form Runner offline embedding API](form-runner/link-embed/offline-embedding-api.md)
     * [Access control and permissions](form-runner/access-control/README.md)
         * [Users](form-runner/access-control/users.md)
         * [Login & Logout](form-runner/access-control/login-logout.md)
@@ -191,13 +192,13 @@
             * [Caching](form-runner/api/persistence/caching.md)
             * [Versioning](form-runner/api/persistence/versioning.md)
         * Other APIs
-            * [Form Runner JavaScript API](form-runner/api/other/form-runner-javascript-api.md)
             * [Duplicate form data API](form-runner/api/other/duplicate-form-data.md)
             * [File scan API](form-runner/api/other/file-scan-api.md)
+            * [Form Runner JavaScript API](form-runner/api/other/form-runner-javascript-api.md)
             * [Generate XML Schema API](form-runner/api/other/xml-schema-generation.md)
+            * [PDF API](form-runner/api/other/pdf-api.md)
             * [Publish form definition API](form-runner/api/other/publish.md)
             * [Run form in the background API](form-runner/api/other/run-form-background.md)
-            * [Form Runner offline embedding API](form-runner/api/other/offline-embedding-api.md)
         * Data formats
             * [Form data](form-runner/data-format/form-data.md)
             * [Date and time](form-runner/data-format/date-and-time.md)

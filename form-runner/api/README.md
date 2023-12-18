@@ -15,16 +15,23 @@ Form Runner offers a number of integration APIs, including:
     - [Lease API](/form-runner/api/persistence/lease.md)
     - [Reindexing API](/form-runner/api/persistence/reindexing.md)
     - [Implementing a persistence service](/form-runner/api/persistence/implementing-a-persistence-service.md)
-- [Duplicate form data API](/form-runner/api/other/duplicate-form-data.md)
-- [File scan API](/form-runner/api/other/file-scan-api.md)
-- [Generate XML Schema API](/form-runner/api/other/xml-schema-generation.md)
-- [Publish form definition API](/form-runner/api/other/publish.md)
-- [Run form in the background API](/form-runner/api/other/run-form-background.md)
+- Other APIs
+    - [Duplicate form data API](/form-runner/api/other/duplicate-form-data.md)
+    - [File scan API](/form-runner/api/other/file-scan-api.md)
+    - [Form Runner JavaScript API](/form-runner/api/other/form-runner-javascript-api.md)
+    - [Generate XML Schema API](/form-runner/api/other/xml-schema-generation.md)
+    - [PDF API](/form-runner/api/other/pdf-api.md)
+    - [Publish form definition API](/form-runner/api/other/publish.md)
+    - [Run form in the background API](/form-runner/api/other/run-form-background.md)
 
 ## See also
 
-- [Integration](../overview/integration.md)
-- [Form Runner Java embedding API](../link-embed/java-api.md)
-- [Accessing data](../overview/accessing-data.md)
-- [Form Builder integration](../../form-builder/integration.md)
-- [Form Builder extension API](../../form-builder/extension-api.md)
+- [Integration](/form-runner/overview/integration.md)
+- Embedding APIs
+    - [Form Runner Java embedding API](/form-runner/link-embed/java-api.md)
+    - [Form Runner JavaScript embedding API](/form-runner/link-embed/javascript-api.md)
+    - [Form Runner offline embedding API](/form-runner/link-embed/offline-embedding-api.md)
+- Form Builder APIs
+    - [Form Builder integration](/form-builder/integration.md)
+    - [Form Builder extension API](/form-builder/extension-api.md)
+- [Accessing data](/form-runner/overview/accessing-data.md)

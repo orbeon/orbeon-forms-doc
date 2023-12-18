@@ -8,6 +8,8 @@
 - [Form metadata](forms-metadata.md)
 - [Caching](caching.md)
 - [Versioning](versioning.md)
+- [Lease API](lease.md)
+- [Reindexing API](reindexing.md)
 - [Implementing a persistence service](implementing-a-persistence-service.md)
 
 ## Introduction

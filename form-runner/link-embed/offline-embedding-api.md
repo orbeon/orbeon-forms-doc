@@ -224,3 +224,4 @@ TODO
 ## See also
 
 - [Offline test](/form-builder/offline-test.md)
+- [Form Runner JavaScript Embedding API](javascript-api.md)
