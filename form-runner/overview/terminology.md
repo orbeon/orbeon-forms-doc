@@ -4,6 +4,12 @@
 
 This page explains some terms which occur often in the Orbeon Forms documentation.
 
+## Form controls
+
+A form "control" is an interactive user interface element that allows the user to enter or view data. Examples include text fields, dropdown menus, radio buttons, and more.
+
+With Orbeon Forms, not all form controls are called "fields", and we reserve that latter word for form controls where the user enters text, usually on a single line.
+
 ## Form definitions and form data
 
 We make a distinction between:
