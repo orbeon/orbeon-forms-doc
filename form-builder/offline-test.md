@@ -6,7 +6,16 @@
 
 ## Rationale
 
-For a rationale, see [Offline embedding API](/form-runner/api/other/offline-embedding-api.md).
+Since its inception, Orbeon Forms has had a hybrid architecture for forms:
+
+- the user interface runs in the browser, implemented in JavaScript (and more recently Scala.js)
+- the form's logic and validations runs on the server
+
+This architecture has benefits, such as protecting the confidentiality of internal data that never leaves the server.
+
+This is still the case with the Orbeon Forms 2021.1, however we made lots of internal changes to support running Form Runner in a pure JavaScript environment, and we sometimes refer to this mode as the "Offline mode", even though it doesn't always imply being offline. This should, however, in the future, allow running forms entirely offline, as well as embedded within mobile apps.
+
+For API details, see [Offline embedding API](/form-runner/api/other/offline-embedding-api.md).
 
 ## Preview
 
