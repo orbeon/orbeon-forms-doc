@@ -234,7 +234,7 @@ TODO:
     - Page path and parameters information are passed to the file scanner ([doc](/form-runner/api/other/file-scan-api.md#api))
     - Export services are now also exposed as pages URLs ([doc](/form-runner/link-embed/linking.md))
     - A new API allows you to produce PDF and TIFF exports using service URLs ([doc](/form-runner/api/other/pdf-api.md))
-    - Consider enabling PDF parameters for service calls #5958
+    - New parameters allow controlling PDF production ([doc](/form-runner/api/other/pdf-api.md#other-parameters))
 
 ### Other features
 
