@@ -255,7 +255,21 @@ If a parameter name is already present on the URL, the parameter initially on th
 [SINCE Orbeon Forms 2018.1]
 
 When using PDF templates and `content = "pdf"` or `content = "tiff"`, you can control the PDF processing with the
-following:
+following.
+
+The following parameters allow controlling hints, alerts, and required controls in the PDF:
+
+- `show-hints`
+    - defaults to the `oxf.fr.detail.static-readonly-hint` property, which itself defaults to `false`
+    - when `true`, shows hints in the PDF
+- `show-alerts`
+    - defaults to the `oxf.fr.detail.static-readonly-alert` property, which itself defaults to `false`
+    - when `true`, shows alerts in the PDF
+- `show-required`
+    - defaults to the `oxf.fr.detail.static-readonly-required` property, which itself defaults to `false`
+    - when `true`, style required controls in the PDF
+
+The following parameters allow controlling the use of PDF templates:
 
 - `use-pdf-template`
     - This defaults to `true` if there is at least one PDF template attached to the form, `false` otherwise.
