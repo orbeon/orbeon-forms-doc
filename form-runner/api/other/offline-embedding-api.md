@@ -15,26 +15,9 @@ Since its inception, Orbeon Forms has had a hybrid architecture for forms:
 
 This architecture has benefits, such as protecting the confidentiality of internal data that never leaves the server.
 
-This is still the case with the Orbeon Forms 2021.1, however we made lots of internal changes to support running Form Runner in a pure JavaScript environment. This will, in the future, allow running forms entirely offline, as well as embedded within mobile apps.
+This is still the case with the Orbeon Forms 2021.1, however we made lots of internal changes to support running Form Runner in a pure JavaScript environment, and we sometimes refer to this mode as the "Offline mode", even though it doesn't always imply being offline. This should, however, in the future, allow running forms entirely offline, as well as embedded within mobile apps.
 
-With Orbeon Forms 2021.1, we are releasing a preview of this feature. From Form Builder, simply use the new "Test Offline" button to see whether your form operates and renders properly in this new mode.
-
-![The "Test Offline" button](/form-builder/images/test-offline-button.png)
-
-When you do this:
-
-- The form definition edited in Form Builder is compiled to a serialized representation.
-- The JavaScript-based form runtime is loaded in the Form Builder test window, loads the compiled form, and renders it. 
-
-From the user's perspective, this works almost exactly like the "Test" button which has always been present in Form Builder.
-
-As of Orbeon Forms 2023.1, there are limitations, including the following:
- 
-- The documentation is not yet complete.
-- Some controls are not fully supported, including the Formatted Text Area as well as attachment controls.
-- Some formulas might not work.
-- Performance needs some improvements.
-- There is no XML Schema support for datatype validation (although this is rarely used).
+See the [Offline test](/form-builder/offline-test.md) feature for the quickest way to preview this feature.
 
 ## Uses
 
@@ -176,8 +159,8 @@ This class has two methods:
     - only method supported until Orbeon Forms 2023.1
     - deprecated as of Orbeon Forms 2023.1
 - `submitAsync()`
-    - asynchronous call
     - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+    - asynchronous call
     - used for saving data
     - used for asynchronous service calls
 
@@ -249,4 +232,4 @@ TODO
 
 ## See also
 
-- TODO
+-[Offline test](/form-builder/offline-test.md)
