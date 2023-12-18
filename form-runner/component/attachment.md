@@ -108,5 +108,6 @@ This component dispatches the following events following the enclosed upload con
 - [Image component](image.md)
 - [Image attachment component](image-attachment.md)
 - [Video component](video.md)
+- [Video attachment component](video-attachment.md)
 - Blog post: [Orbeon Forms can now determine files' mediatype based on the extension](https://blog.orbeon.com/2021/02/orbeon-forms-can-now-determine-files.html)
 - Blog post: [The new Multiple File Attachments control](https://blog.orbeon.com/2020/05/the-new-multiple-file-attachments.html)

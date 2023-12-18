@@ -26,6 +26,7 @@ When in the Form Runner context, `fr:video` retrieves the resource while passing
 
 ## See also
 
+- [Video attachment component](video-attachment.md)
 - [Image component](image.md)
 - [Image attachment component](image-attachment.md)
 - [Attachment component](attachment.md)
