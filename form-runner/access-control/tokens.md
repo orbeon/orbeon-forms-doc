@@ -16,7 +16,12 @@ This feature allows you to specify that a user can access form data with readonl
 
 This feature is not enabled by default. To enable it for a given form, you must set form permissions that include at least one "Require token" permission ("Read" or "Update"), either from Form Builder or using global permission configuration properties.
 
-![Form Builder Permissions](../images/dialog-permissions-token.png)
+<figure>
+    <picture>
+        <img src="../images/dialog-permissions-token.png" width="60%">
+    </picture>
+    <figcaption>Form Builder Permissions</figcaption>
+</figure>
 
 Here is an example of configuration property:
 
@@ -90,7 +95,12 @@ When enabled with the `oxf.fr.navbar.share-button.enable` property, you can use 
     value="true"/>
 ```
 
-![Share icon and dialog](../images/dialog-share.png)
+<figure>
+    <picture>
+        <img src="../images/dialog-share.png" width="60%">
+    </picture>
+    <figcaption>Share icon and dialog</figcaption>
+</figure>
 
 The dialog allows the user to decide whether to share a readonly link or a read-write link (if the user itself has the "Update" permission). The link can simply be copied with the "Copy link" icon button.
 

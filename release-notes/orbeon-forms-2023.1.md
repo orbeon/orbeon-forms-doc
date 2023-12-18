@@ -70,8 +70,6 @@ In past versions, you could configure the PDF header and footer using CSS. Howev
 
 You can now configure the PDF header and footer using a declarative configuration. And if you need to add custom CSS, you can still do so, and it's easier than before.
 
-TODO: smaller
-
 <figure>
     <picture>
         <img src="../form-runner/images/pdf-header-footer-submitted.png" width="75%">

@@ -9,7 +9,12 @@ By default, Form Runner produces automatic PDF files with the following header a
 - Header: Form Runner logo, form title
 - Footer: Form title, page number
 
-![PDF output with header and footer](../images/pdf-header-footer.png)
+<figure>
+    <picture>
+        <img src="../images/pdf-header-footer.png" width="75%">
+    </picture>
+    <figcaption>PDF output with header and footer</figcaption>
+</figure>
 
 Starting Orbeon Forms 2023.1, header and footers are entirely configurable, and you can control exactly what is shown in all six header or footer positions:
 
@@ -120,7 +125,12 @@ The following is an example of custom configuration that updates the default con
 </property>
 ```
 
-![PDF output with header and footer and submitted date](../images/pdf-header-footer-submitted.png)
+<figure>
+    <picture>
+        <img src="../images/pdf-header-footer-submitted.png" width="75%">
+    </picture>
+    <figcaption>PDF output with header and footer and submitted date</figcaption>
+</figure>
 
 ## Header and footer configuration JSON format
 
