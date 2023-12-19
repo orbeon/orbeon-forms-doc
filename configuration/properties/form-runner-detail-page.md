@@ -105,7 +105,11 @@ The following property does the same as `oxf.fr.detail.toc.min-sections` but is 
 
 Where to place the table of contents: `top`, `left`, or `none`. The default is `top`. If neither `top` nor `left` is specified, the table of contents is not shown.
 
+![Table of contents on the left](../../form-runner/images/toc-left.png)
+
 In PDF mode, the `left` position is not supported and the table of contents is always shown at the top.
+
+![Table of contents on top in PDF files](../../form-runner/images/toc-top-pdf.png)
 
 ### Modes in which the table of contents is shown
 
