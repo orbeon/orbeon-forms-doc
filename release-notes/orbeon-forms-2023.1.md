@@ -236,9 +236,13 @@ See the [documentation](/configuration/properties/general.md#oxf.crypto.hash-alg
 
 #### Improved encryption passwords
 
-We have now separated `oxf.fr.field-encryption.password` and `oxf.crypto.password`, in addition to `oxf.fr.access-token.password` which is used by the tokens feature described above.
+We have now separated `oxf.fr.field-encryption.password` and `oxf.crypto.password`, in addition to the new `oxf.fr.access-token.password` which is used by the tokens feature described above.
 
-The `oxf.crypto.check-password-strength` property allows checking and reporting about password strength.
+__WARNING: Please be sure to read the compatibility notes about `oxf.fr.field-encryption.password` below, as well as the [field-level encryption documentation](/form-builder/field-level-encryption.md#configuration).__
+
+The [`oxf.crypto.check-password-strength`](/configuration/properties/general.md#oxf.crypto.check-password-strength) property allows checking and reporting about password strength. By default, this is enabled, and reports an error if the passwords are not set or too weak.
+
+If you start Orbeon Forms with a `oxf.crypto.password` that hasn't been set or that is set to a password that is too weak, by default Orbeon Forms will show a banner at the top of every Form Runner page informing the user that some changes to the configuration need to be made. Exactly what changes need to be made is shown in the log file.
 
 See the [documentation](/configuration/properties/general.md#oxf.crypto.check-password-strength).
 
@@ -391,6 +395,16 @@ You can now embed Form Runner forms in a different domain than the one where For
 - Expired sessions now send a status code 440 to the client
 
 ## Compatibility notes
+
+### Field encryption password
+
+The `oxf.fr.field-encryption.password` property now controls a separate encryption password for field-level encryption. In previous versions, the general `oxf.crypto.password` property was used instead.
+
+If you are upgrading from an earlier version of Orbeon Forms to version 2023.1, you need to set `oxf.fr.field-encryption.password` to the same value as `oxf.crypto.password` used previously. This step is required for Orbeon Forms to allow you to read existing encrypted data, as well as to write new encrypted data.
+
+If you fail to do this, Orbeon Forms will report an error when you try to read or write encrypted data.
+
+Please be sure to read the [field-level encryption documentation](/form-builder/field-level-encryption.md#configuration).
 
 ### Visiting of visible fields
 

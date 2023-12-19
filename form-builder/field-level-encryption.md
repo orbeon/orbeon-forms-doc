@@ -21,18 +21,26 @@ The key and algorithm to use is configured through the [encryption properties](/
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-If set, the `oxf.fr.field-encryption.password` property controls a separate encryption password for field-level encryption. If not set, the `oxf.crypto.password` property is used instead for backward compatibility.
+The `oxf.fr.field-encryption.password` property controls a separate encryption password for field-level encryption. In previous versions, the general `oxf.crypto.password` property is used instead.
+
+If you are upgrading from an earlier version of Orbeon Forms to version 2023.1, you need to set `oxf.fr.field-encryption.password` to the same value as `oxf.crypto.password` used previously. This step is required for Orbeon Forms to allow you to read existing encrypted data, as well as to write new encrypted data.
+
+If you fail to do this, Orbeon Forms will report an error when you try to read or write encrypted data.
+
+```
 
 ```xml
 <property
 	as="xs:string"
 	name="oxf.fr.field-encryption.password"
-	value="CHANGE THIS PASSWORD"/>
+	value="SET THIS PASSWORD"/>
 ```
 
-- If you are upgrading from an earlier version of Orbeon Forms, and you already have data in your database that contains encrypted fields:
-    - Set `oxf.fr.field-encryption.password` anyway, to the same value as `oxf.crypto.password`.
-- If you are not in the above case, set `oxf.fr.field-encryption.password` to a value different from `oxf.crypto.password`. 
+Once you have set `oxf.fr.field-encryption.password`, we recommend that you can change `oxf.crypto.password` to a different value.
+
+It is generally safe to change `oxf.crypto.password`, even regularly, as this is not used to encrypt data at rest.
+
+__WARNING: But keep in mind that `oxf.fr.field-encryption.password` needs to remain stable so that existing encrypted value can be read back. If that password is changed or lost, the existing data will not be readable anymore.__ 
 
 ## When encryption happens
 
