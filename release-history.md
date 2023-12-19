@@ -16,7 +16,8 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 
 | Year | Date   | Version    | PE support              | Release notes                                                                                                                        |
 |------|--------|------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| 2023 | Sep 28 | 2021.1.10  | 🟩 Until Dec 30, 2024   | [Release notes](/release-notes/orbeon-forms-2021.1.10.md)                                                                            | 
+| 2023 | Dec 31 | 2023.1     | 🟩 Until Dec 31, 2026   | [Release notes](/release-notes/orbeon-forms-2023.1.md)                                                                               | 
+|      | Sep 28 | 2021.1.10  | 🟩 Until Dec 31, 2024   | [Release notes](/release-notes/orbeon-forms-2021.1.10.md)                                                                            | 
 |      | Sep 20 | 2022.1.5   | 🟩 Until Dec 31, 2025   | [Release notes](/release-notes/orbeon-forms-2022.1.5.md)                                                                             | 
 |      | Jun 6  | 2021.1.9   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.9.md)                                                                             | 
 |      | May 30 | 2022.1.4   | 🟨 Upgrade to 2022.1.5  | [Release notes](/release-notes/orbeon-forms-2022.1.4.md)                                                                             | 
@@ -96,8 +97,8 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 
 ## Earlier Orbeon Forms releases
 
-| Year | Date   | Version                                                                        | PE support      | Release notes                                                                      |
-|------|--------|--------------------------------------------------------------------------------|-----------------|------------------------------------------------------------------------------------|
+| Year | Date   | Version  | PE support     | Release notes                                                                      |
+|------|--------|----------|----------------|------------------------------------------------------------------------------------|
 | 2012 | Feb 8  | 3.9.1 PE | 🟥 End of life | [release notes](https://blog.orbeon.com/2012/02/orbeon-forms-391-pe-released.html) |
 | 2011 | May 15 | 3.9      | 🟥 End of life | [release notes](https://blog.orbeon.com/2011/05/orbeon-forms-390-final.html)       |
 | 2010 | May 14 | 3.8      | 🟥 End of life |                                                                                    |
@@ -109,20 +110,20 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 
 Orbeon PresentationServer was an open source, general-purpose XML processing and presentation platform.
 
-| Year | Date   | Version                                                                        | PE support      |
-|------|--------|--------------------------------------------------------------------------------|-----------------|
-| 2006 | Jan 17 | 3.0 | 🟥 End of life |
-| 2005 | Mar 10 | 2.8 | 🟥 End of life |
-| 2005 | Jan 21 | 2.7 | 🟥 End of life |
-| 2004 | Nov 18 | 2.6 | 🟥 End of life |
-| 2004 | Jul 13 | 2.5 | 🟥 End of life |
+| Year | Date   | Version | PE support     |
+|------|--------|---------|----------------|
+| 2006 | Jan 17 | 3.0     | 🟥 End of life |
+| 2005 | Mar 10 | 2.8     | 🟥 End of life |
+| 2005 | Jan 21 | 2.7     | 🟥 End of life |
+| 2004 | Nov 18 | 2.6     | 🟥 End of life |
+| 2004 | Jul 13 | 2.5     | 🟥 End of life |
 
 ## Historical OXF releases
 
 For the curious, these are releases of the Orbeon XML platform before it was open sourced!
 
-| Year | Date   | Version | PE support |
-|------|--------|---------|------------|
+| Year | Date   | Version | PE support     |
+|------|--------|---------|----------------|
 | 2003 | Nov 17 | 2.2     | 🟥 End of life |
 | 2003 | Sep 16 | 2.1     | 🟥 End of life |
 | 2003 | Jul 10 | 2.0     | 🟥 End of life |
