@@ -1,7 +1,5 @@
 # Character Counter Component
 
-
-
 ## Availability
 
 [SINCE Orbeon Forms 4.10]
