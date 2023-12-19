@@ -2,7 +2,7 @@
 
 __Sunday, December 31, 2023__  
 
-[NOTE: THIS IS A PREVIEW, AND AS OF 2023-12-17, THIS VERSION OF ORBEON FORMS HASN'T BEEN RELEASED.]
+__THIS IS A PREVIEW, AND AS OF 2023-12-17, THIS VERSION OF ORBEON FORMS HASN'T BEEN RELEASED.__
 
 Today we released Orbeon Forms 2023.1! This release is absolutely packed with new features and bug-fixes!
 
@@ -250,9 +250,9 @@ See the [documentation](/configuration/properties/general.md#oxf.crypto.check-pa
 
 The following performance enhancements should be noted:
 
-- Form Builder "Edit Source" performance with large form definitions
-- Landing page loading
-- Free text search performance with PostgreSQL
+- The Form Builder "Edit Source" performance with large form definitions is greatly improved.
+- Landing page loading times are improved.
+- Free text search performance with PostgreSQL is improved.
 
 TODO:
 
@@ -334,12 +334,12 @@ You can now directly download a form definition XHTML from Form Builder ([doc](/
 - You can configure the Image Annotation start stroke color ([doc](/form-runner/component/image-annotation.md))
 - You can now optionally show required stars in produced PDF files ([doc](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format))
 
-    <figure>
-        <picture>
-            <img src="../form-builder/images/test-pdf-hints-alerts-required.png" width="60%">
-        </picture>
-        <figcaption>Options to show hints, alerts, and required</figcaption>
-    </figure>
+<figure>
+    <picture>
+        <img src="../form-builder/images/test-pdf-hints-alerts-required.png" width="60%">
+    </picture>
+    <figcaption>Options to show hints, alerts, and required</figcaption>
+</figure>
 
 ### Enhancements to actions
 
