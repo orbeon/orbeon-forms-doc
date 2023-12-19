@@ -93,13 +93,13 @@ The video player supports scrubbing thanks to changes to the Orbeon Forms persis
 
 You can see the Video component in action in the [Controls form](https://demo.orbeon.com/demo/fr/orbeon/controls/new?form-version=2&fr-wizard-page=attachment-controls).
 
-For more information, see the [documentation](/form-runner/component/video.md).
+For more information, see the [Video component](/form-runner/component/video.md) and [Video attachment](/form-runner/component/video-attachment.md) documentation.
 
 ### Bulk data updates
 
 This new feature allows you to update multiple form data at once directly from a form's Summary page. This is useful for example to update the status of multiple forms at once.
 
-For this to work, the form author must have enabled the "Allow bulk edit" option for at least one form control in the [Control Settings dialog](/form-builder/control-settings.md).
+For this to work, the form author must have enabled the "Allow bulk edit" option for at least one form control in the ["Control Settings" dialog](/form-builder/control-settings.md).
 
 ![Bulk Edit](../form-runner/images/summary-bookshelf-bulk-edit.png)
 
@@ -114,7 +114,7 @@ In addition, the following enhancements to the email configuration are introduce
 - You can now send an email conditionally for a specific template ([doc](/form-builder/email-settings.md#usage))
 - You can now specify custom email headers, even dynamically ([doc](/form-builder/email-settings.md#custom-headers))
 
-![Email Settings dialog](../form-builder/images/email-settings.png)
+!["Email Settings" dialog](../form-builder/images/email-settings.png)
 
 ### Configurable messages and resources in Form Builder
 
@@ -142,6 +142,73 @@ This new Form Builder action allows you to explicitly copy complex form content 
 ![Example form showing copied content](../form-builder/images/copy-content.png)
 
 For more information, see the [documentation](/form-builder/actions-syntax.md#copying-control-content).
+
+### Table of contents configuration
+
+When not using the Wizard view, as well as in readonly modes such as View and PDF modes, you can now show the table of contents either on the left, on the top, or not at all. The table of content scrolls the page as needed. This is useful for long forms with many sections. You can also control in which modes the table of contents is shown.
+
+![Table of contents on the left](../form-runner/images/toc-left.png)
+
+When enabled in PDF files, the table of contents is always shown on top:
+
+![Table of contents on top in PDF files](../form-runner/images/toc-top-pdf.png)
+
+For more information, see the [documentation](/configuration/properties/form-runner-detail-page.md#show-table-of-contents).
+
+### "Copy to clipboard" button
+
+The following form controls can now optionally show a "Copy to clipboard" button:
+
+- "Text Field"
+- "Text Area"
+- "Calculated Value"
+
+You control this in the "Control Settings" dialog, using the new "With Clipboard Copy" control appearance.
+
+<figure>
+    <picture>
+        <img src="../form-builder/images/copy-to-clipboard-appearance.png" width="200px">
+    </picture>
+    <figcaption>"With Clipboard Copy" control appearance</figcaption>
+</figure>
+
+This causes an icon to appear next to the form control. Activating the icon copies the value of the form control to the clipboard.
+
+<figure>
+    <picture>
+        <img src="../form-runner/images/copy-to-clipboard-text-area.png" width="400px">
+    </picture>
+    <figcaption>"With Clipboard Copy" control appearance</figcaption>
+</figure>
+
+### Open selection
+
+The "Dynamic Dropdown with Search" supports open selection.
+
+<figure>
+    <picture>
+        <img src="../form-runner/component/images/dynamic-data-dropdown-open.png" width="488">
+    </picture>
+    <figcaption>Open selection inside the "Control Settings" dialog</figcaption>
+</figure>
+
+For more information, see the [documentation](/form-runner/component/static-dynamic-dropdown.md#open-selection).
+
+### Summary page fields roles
+
+You can now restrict showing a field in the Summary page by one or more user roles.
+
+!["Basic Settings" tab](../form-builder/images/control-settings.png)
+
+For more information, see the [documentation](/form-builder/control-settings.md#basic-settings).
+
+### Session expiration warning
+
+When a user's session is about to expire, Form Runner can now show a dialog warning the user.
+
+![Session about to expire](../contributors/images/session-about-to-expire.png)
+
+For more information, see the [documentation](/contributors/state-handling.md#session-expiration-dialog).
 
 ## Other new features and enhancements
 
@@ -204,6 +271,13 @@ The new "Autocomplete attribute" dropdown allows specifying an [HTML autocomplet
 
 See the [documentation](/form-builder/control-settings.md#autocomplete-attribute).
 
+#### Localizations
+
+Thanks to external contributors:
+
+- There are now Catalan language resources for Form Runner.
+- The Norwegian Form Runner resources have also been updated.
+
 #### Other usability and accessibility features
 
 - Form Runner
@@ -240,56 +314,42 @@ TODO:
     - A new API allows you to produce PDF and TIFF exports using service URLs ([doc](/form-runner/api/other/pdf-api.md))
     - New parameters allow controlling PDF production ([doc](/form-runner/api/other/pdf-api.md#other-parameters))
 
-### Other features
+### Other Form Builder features
 
-TODO:
+You can now directly download a form definition XHTML from Form Builder ([doc](/form-builder/buttons-bar.md))
 
-- Improve handling of expired session on the client #5678
-- Show dialog warning users their session is about to expire #5890 ([doc](https://doc.orbeon.com/contributors/state-handling#session-expiration-dialog))
+### Other Form Runner features
 
-
-- Ability to download the form definition #5608
-  - [doc](https://doc.orbeon.com/form-builder/form-editor/buttons-bar)
-- "Show on Summary page" / "Restrict to role" to support multiple roles with and/or logic #5994 ([doc](https://doc.orbeon.com/form-builder/form-editor/control-settings#basic-settings))
-- Summary page field search to show values in dropdown for controls without static items #6014 ([doc](/form-runner/feature/summary-page.md#dynamic-dropdowns))
-- Open selection in dynamic dropdown with search #5858
-- Add "copy to clipboard" button next to HTTP service response #3064
-- Ability, in view mode, to show TOC on the left #5796 ([properties doc](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-detail-page#show-table-of-contents), [doc](TODO))
-- Validate lists of choices #6043 (import)
-- Add Catalan language to form-runner #5659
-- Improved Norwegian resources
-- Rich text: ability to preserve colors in PDF #4158 ([doc](/form-runner/feature/pdf-automatic.md#pdf-color-mode))
-- `xxf:sort()` to support `lang`, `collation`, and `stable` parameters #5794
-- Form Runner `success-message()` and `error-message()` to support HTML #4964 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#success-message-and-error-message))
-- Excel/XML export button on Summary page #5264 ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes#configuring-summary-page-buttons))
-    - also on 2022.1.5 
-    - also `xml-export`
-- Form Runner XPath functions for permissions #2834 ([doc](https://doc.orbeon.com/xforms/xpath/extension-functions/extension-form-runner#authentication-functions))
-- Configuration for image annotation start stroke color #6042 ([doc](https://doc.orbeon.com/form-runner/component/image-annotation))
-- Ability to configure the databound dropdown with search with a minimum input length #6051 ([doc](https://doc.orbeon.com/form-runner/component/static-dynamic-dropdown#minimum-input-length))
+- You can now opt to keep the "Formatted Text Area" colors in PDF output ([doc](/form-runner/feature/pdf-automatic.md#pdf-color-mode))
+- The Summary page field search can show dropdown values for controls without static items ([doc](/form-runner/feature/summary-page.md#dynamic-dropdowns))
+- The `success-message()` and `error-message()` now support HTML ([doc](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message))
+- The Import page validate static lists of choices when using named ranges Excel files
+- The Excel and XML export buttons can also be present on the Summary page ([doc](/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md#configuring-summary-page-buttons))
+- XPath functions for checking permissions now work ([doc](/xforms/xpath/extension-form-runner.md#authentication-functions))
+- You can now configure the "Dynamic Dropdown with Search" with a minimum input length ([doc](/form-runner/component/static-dynamic-dropdown.md#minimum-input-length))
+- You can configure the Image Annotation start stroke color ([doc](/form-runner/component/image-annotation.md))
 - You can now optionally show required stars in produced PDF files ([doc](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format))
 
-<figure>
-    <picture>
-        <img src="../form-builder/images/test-pdf-hints-alerts-required.png" width="60%">
-    </picture>
-    <figcaption>Options to show hints, alerts, and required</figcaption>
-</figure>
+    <figure>
+        <picture>
+            <img src="../form-builder/images/test-pdf-hints-alerts-required.png" width="60%">
+        </picture>
+        <figcaption>Options to show hints, alerts, and required</figcaption>
+    </figure>
 
 ### Enhancements to actions
 
-TODO:
+New actions are introduced:
 
-- Asynchronous actions ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#asynchronous-actions))
-- Add `fr:control-setfocus` action #5697 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#setting-the-focus-on-a-form-control))
-    - also on 2022.1.2 
-- Add `fr:control-setvisited` action #5694 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#marking-a-form-control-visited-or-unvisited))
-    - also on 2022.1.2
-- Add `fr:dataset-clear` action #5693 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#clearing-a-dataset))
-    - also on 2022.1.2
-- Add `fr:control-setsize` to the Action Syntax #5817 ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#setting-the-size-of-an-attachment-control))
-- Action syntax: support concurrent actions #5725
-- Support action syntax in library forms / section templates #4814
+- Add `fr:control-setfocus` action ([doc](/form-builder/actions-syntax.md#setting-the-focus-on-a-form-control))
+- Add `fr:control-setvisited` action ([doc](/form-builder/actions-syntax.md#marking-a-form-control-visited-or-unvisited))
+- Add `fr:dataset-clear` action ([doc](/form-builder/actions-syntax.md#clearing-a-dataset))
+- Add `fr:control-setsize` to the Action Syntax ([doc](/form-builder/actions-syntax.md#setting-the-size-of-an-attachment-control))
+
+In addition:
+
+- Actions can now optionally run their services asynchronously ([doc](/form-builder/actions-syntax.md#asynchronous-actions))
+- The action syntax is supported in Section Templates
 
 ### Embedding and offline support
 
@@ -319,7 +379,7 @@ You can now embed Form Runner forms in a different domain than the one where For
 
 ### XForms features
 
-- Support `event()` for `replace="all"` submissions ([doc](/xforms/submission-extensions.md#event-properties-with-replace-all))
+- `event()` is supported for `replace="all"` submissions ([doc](/xforms/submission-extensions.md#event-properties-with-replace-all))
 - You can tunnel context information to submission and error events ([doc](/xforms/events-extensions-other.md#tunnelling-of-events-properties))
 - Delayed events support passing atomic properties ([doc](/xforms/events-standard.md#delayed-events))
 
@@ -328,6 +388,7 @@ You can now embed Form Runner forms in a different domain than the one where For
 - We upgraded to Font Awesome 6
 - Orbeon Forms now supports Tomcat 10+, WildFly 27+ (TODO)
 - In addition to Ehcahe 2.x, we added support for the JCache API (JSR-107) ([doc](/installation/caches.md#enabling-jcache-providers))
+- Expired sessions now send a status code 440 to the client
 
 ## Compatibility notes
 
