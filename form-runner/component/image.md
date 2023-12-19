@@ -18,7 +18,7 @@ The `fr:image` component shows an image. Unlike [fr:image-attachment](image-atta
 
 The URL of the image is stored in instance data via a single-node binding, here using `bind`.
 
-## Advanced usage
+## Form Runner usage
 
 When in the Form Runner context, `fr:image` retrieves the resource while passing the `Orbeon-Form-Definition-Version` HTTP header when available.
 

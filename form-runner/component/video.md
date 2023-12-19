@@ -20,9 +20,13 @@ The `fr:video` component shows a video. Like [fr:image](image.md), `fr:video` do
 
 The URL of the video is stored in instance data via a single-node binding, here using `bind`.
 
-## Advanced usage
+## Form Runner usage
 
 When in the Form Runner context, `fr:video` retrieves the resource while passing the `Orbeon-Form-Definition-Version` HTTP header when available.
+
+## Limitations
+
+In PDF output, the Video component currently doesn't show any content. Ideally, it should show a still of the video.
 
 ## See also
 
