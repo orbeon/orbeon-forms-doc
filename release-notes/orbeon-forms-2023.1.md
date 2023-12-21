@@ -116,6 +116,17 @@ In addition, the following enhancements to the email configuration are introduce
 
 !["Email Settings" dialog](../form-builder/images/email-settings.png)
 
+### Time window
+
+This new feature enables you to prevent users from filling out new forms before a given start date or after a given end date. The screenshot below illustrates what you can expect to find in the corresponding tab of the Form Settings in Form Builder.
+
+<figure>
+    <img src="/form-builder/form-settings/time-window.png" width="1022">
+    <figcaption>Time Window tab of the Form Settings dialog</figcaption>
+</figure>
+
+For more information, see the [documentation](/form-builder/form-settings/time-window.md).
+
 ### Configurable messages and resources in Form Builder
 
 This new Form Builder dialog allows the form author to configure both:
