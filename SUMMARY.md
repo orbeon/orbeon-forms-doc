@@ -46,6 +46,7 @@
        * [Misc](configuration/troubleshooting/misc.md)
 * [Form Builder](form-builder/README.md)
     * [Form settings](form-builder/form-settings.md)
+        * [Time window](form-builder/form-settings/time-window.md)
     * [Form editor](form-builder/form-editor.md)
         * [Form area](form-builder/form-area.md)
         * [Toolbox](form-builder/toolbox.md)
