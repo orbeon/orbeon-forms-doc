@@ -52,6 +52,8 @@ Next WireShark will show you all the HTTP traffic that goes through the machine 
 </filter-mapping>
 ```
 
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If you are using Orbeon Forms 2023.1 or newer, and are running a servlet container that uses the Jakarta Servlet API (e.g. Tomcat 10+, WildFly 27+), you need to use the `org.orbeon.oxf.servlet.JakartaHttpLoggingFilter` servlet filter class instead of `org.orbeon.oxf.servlet.HttpLoggingFilter`.
+
 ## Request Dumper Filter
 
 Note that the Request Dumper Filter only shows information about the HTTP headers of the request. If you want more information to be logged, use the Apache TCPMon.

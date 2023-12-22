@@ -190,6 +190,8 @@ With this setup, a request for an Orbeon Forms page or service is forwarded to t
 
 Note that this example is just about the simplest way that you can implement the authorization service. But you most likely will want to do some more advanced configuration. Also, note that you are not limited to BASIC authentication. You could for example fully delegate authorization to your own servlet.
 
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If you are using Orbeon Forms 2023.1 or newer, and are running a servlet container that uses the Jakarta Servlet API (e.g. Tomcat 10+, WildFly 27+), you need to use the `org.orbeon.oxf.controller.JakartaAuthorizerServlet` servlet class instead of `org.orbeon.oxf.controller.AuthorizerServlet`.
+
 ## Implementing your own service
 
 You don't have to use the WAR provided to implement your service. You can implement your own servlet, or in fact implement your own service which can reside on any server and be written with any technology you like.

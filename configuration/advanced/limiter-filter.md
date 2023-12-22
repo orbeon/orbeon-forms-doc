@@ -89,6 +89,15 @@ The effective maximum number of concurrent threads allowed by the filter is:
 
 Remove or comment-out the relevant `<filter-mapping>` in `WEB-INF/web.xml`.
 
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If you are using Orbeon Forms 2023.1 or newer, the configuration above will look slightly different. Parameters are stored in `<context-param>` instead of `<init-param>`, and the parameter names are prefixed with `oxf.orbeon-limiter-filter`. To disable the filter, add the following parameter:
+
+```xml
+<context-param>
+    <param-name>oxf.orbeon-limiter-filter.enabled</param-name>
+    <param-value>false</param-value>
+</context-param>
+```
+
 ## See also
 
 - [Original issue](https://github.com/orbeon/orbeon-forms/issues/1971)

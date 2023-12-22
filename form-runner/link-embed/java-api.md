@@ -60,6 +60,8 @@ This is a typical filter configuration:
 </filter-mapping>
 ```
 
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If you are using Orbeon Forms 2023.1 or newer, and are running a servlet container that uses the Jakarta Servlet API (e.g. Tomcat 10+, WildFly 27+), you need to use the `org.orbeon.oxf.fr.embedding.servlet.JakartaServletFilter` servlet filter class instead of `org.orbeon.oxf.fr.embedding.servlet.ServletFilter`.
+
 And here is an example of embedding a form from a JSP page:
 
 ```jsp
@@ -87,6 +89,8 @@ And here is an example of embedding a form from a JSP page:
 ```
 
 The `Map<String, String>` allows passing a Java `Map` of HTTP header name/value pairs. These are passed to Form Runner when loading a form. Form Runner can access HTTP headers using the [`xxf:get-request-header()` XPath function](../../xforms/xpath/extension-http.md#xxfget-request-header).
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) The `request` parameter can be either of type `javax.servlet.http.HttpServletRequest` or of type `jakarta.servlet.http.HttpServletRequest`.
 
 #### Form Runner configuration
 

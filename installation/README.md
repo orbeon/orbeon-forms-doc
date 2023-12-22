@@ -27,6 +27,12 @@ Orbeon Forms runs on any platform that supports:
 
 See [Tomcat](tomcat.md).    
 
+### Java Servlet and Jakarta Servlet APIs
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+Orbeon Forms supports both the Java Servlet and Jakarta Servlet APIs, without any extra configuration, which means that the same `orbeon.war` file can be deployed in Tomcat 9, Tomcat 10, WildFly 26, or WildFly 27+, for example.
+
 ## Hardware requirements
 
 We recommend you run Orbeon Forms on a dedicated server or instance that satisfies the following requirements:
