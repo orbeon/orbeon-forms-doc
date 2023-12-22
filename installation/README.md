@@ -54,9 +54,9 @@ Also, make sure that you do *not* have tiered compilation when using Java 7. See
 
 ## Database setup
 
-Out-of-the-box, forms you create with Form Builder, as well as data captured with those forms, will be saved in an embedded database called eXist. You can setup Orbeon Forms so this data gets [stored in your relational database](../form-runner/persistence/relational-db.md), but if you're getting started with Orbeon Forms, you might to just use the embedded eXist, even if just temporarily.
+Out-of-the-box, Orbeon Forms uses an SQLite embedded database including multiple demo forms. This is meant to get you started quickly, but you will want to setup Orbeon Forms to use a proper relational database for development or production use. See [Relational Database](../form-runner/persistence/relational-db.md). A warning banner will be displayed to remind you to do so.
 
-Note that eXist will need to be able to write to the `WEB-INF/exist-data` directory, wherever Orbeon Forms `.war` file is uncompressed. So, especially if you're on UNIX, make sure that this directory is writable by the process running your app server.
+Note that the SQLite demo database is stored in `WEB-INF/orbeon-demo.sqlite`, wherever Orbeon Forms' `.war` file is uncompressed. Any time the WAR file is updated, the demo database will be overwritten and any data you have saved will be lost.
 
 ## License installation (Orbeon Forms PE only)
 
