@@ -173,7 +173,8 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
-| 2019.1 and newer        | [postgresql-2019_1.sql]    | [postgresql-2018_2-to-2019_1.sql]   |
+| 2023.1 and newer        | [postgresql-2023_1.sql]    | [postgresql-2019_2-to-2023_1.sql]   |
+| 2019.1 to 2022.1        | [postgresql-2019_1.sql]    | [postgresql-2018_2-to-2019_1.sql]   |
 | 2018.2                  | [postgresql-2018_2.sql]    | [postgresql-2017_2-to-2018_2.sql]   |
 | 2017.2, 2018.1          | [postgresql-2017_2.sql]    | [postgresql-2016_3-to-2017_2.sql]   |
 | 2016.3 to 2017.1        | [postgresql-2016_3.sql]    | [postgresql-2016_2-to-2016_3.sql]   |
