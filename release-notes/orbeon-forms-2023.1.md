@@ -263,7 +263,7 @@ The following performance enhancements should be noted:
 
 - The Form Builder "Edit Source" performance with large form definitions is greatly improved.
 - Landing page loading times are improved.
-- Free text search performance with PostgreSQL is improved.
+- Free text search performance in PostgreSQL has been enhanced. This improvement necessitates a new index, so if you are upgrading, ensure you run the [appropriate upgrade script](/form-runner/persistence/relational-db.md#postgresql-database-setup).
 
 TODO:
 
