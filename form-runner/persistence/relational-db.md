@@ -173,7 +173,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
-| 2023.1 and newer        | [postgresql-2023_1.sql]    | [postgresql-2019_2-to-2023_1.sql]   |
+| 2023.1 and newer        | [postgresql-2023_1.sql]    | [postgresql-2019_1-to-2023_1.sql]   |
 | 2019.1 to 2022.1        | [postgresql-2019_1.sql]    | [postgresql-2018_2-to-2019_1.sql]   |
 | 2018.2                  | [postgresql-2018_2.sql]    | [postgresql-2017_2-to-2018_2.sql]   |
 | 2017.2, 2018.1          | [postgresql-2017_2.sql]    | [postgresql-2016_3-to-2017_2.sql]   |
@@ -181,12 +181,14 @@ Run the following DDL to create or update your Orbeon database, and note that if
 | 2016.2                  | [postgresql-2016_2.sql]    | [postgresql-4_8-to-2016_2.sql]      |
 | 4.8 to 2016.1           | [postgresql-4_8.sql]       | -                                   |
 
+[postgresql-2023_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2023.1/postgresql-2023_1.sql
 [postgresql-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/postgresql-2019_1.sql
 [postgresql-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2018.2/postgresql-2018_2.sql
 [postgresql-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2017.2/postgresql-2017_2.sql
 [postgresql-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.3/postgresql-2016_3.sql
 [postgresql-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.2/postgresql-2016_2.sql
 [postgresql-4_8.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.8/postgresql-4_8.sql
+[postgresql-2019_1-to-2023_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2023.1/postgresql-2019_1-to-2023_1.sql
 [postgresql-2018_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/postgresql-2018_2-to-2019_1.sql
 [postgresql-2017_2-to-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2018.2/postgresql-2017_2-to-2018_2.sql
 [postgresql-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2017.2/postgresql-2016_3-to-2017_2.sql
