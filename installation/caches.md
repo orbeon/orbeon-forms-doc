@@ -89,9 +89,27 @@ For example, to point to the built-in Ehcache 3.x configuration, set:
 
 If you are using a different JCache-compatible implementation, different values for the `oxf.xforms.cache.resource` and/or `oxf.xforms.cache.uri` properties might be needed.
 
+## Persistence layer caching of form definition metadata
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+When you call the [Form Runner persistence API](/form-runner/api/persistence/README.md), Form Runner can cache accesses to form definition metadata. This is done to avoid having to load the form definition from the database on each persistence API call. This cache is not replicated, and is local to each Orbeon Forms instance.
+
+This cache is enabled by default. To disable it, set the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.persistence.form-definition-cache.enable"
+    value="false"/>
+```
+
+One reason to disable this cache might be if you perform accesses to the database from outside of Orbeon Forms, and you want to make sure that you always get the latest form definition. However, we recommend using the [Form Runner persistence API](/form-runner/api/persistence/README.md). instead.
+
 ## See also
 
 - [Installation](README.md)
 - [Replication](replication.md)
 - Blog post: [High-Availability Thanks to State Replication](https://blog.orbeon.com/2018/03/high-availability-thanks-to-state.html)
 - [Clustering and High Availability](/configuration/advanced/clustering.md)
+- [Form Runner persistence API](/form-runner/api/persistence/README.md)

@@ -264,10 +264,7 @@ The following performance enhancements should be noted:
 - The Form Builder "Edit Source" performance with large form definitions is greatly improved.
 - Landing page loading times are improved.
 - Free text search performance in PostgreSQL has been enhanced. This improvement necessitates a new index, so if you are upgrading, ensure you run the [appropriate upgrade script](/form-runner/persistence/relational-db.md#postgresql-database-setup).
-
-TODO:
-
-- Persistence proxy/relational to cache form definition #5655
+- Form Runner can cache accesses to form definition metadata in the persistence API ([doc](/installation/caches.md)).
 
 ### Usability and accessibility features
 
