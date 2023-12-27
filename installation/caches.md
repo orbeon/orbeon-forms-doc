@@ -38,7 +38,10 @@ By default, the following property is set and enables Ehcache 2.x:
     value="ehcache2"/>
 ```
 
-An internal `ehcache.xml` configuration file is used. Here is the [file as of Orbeon Forms 2022.1.4](https://github.com/orbeon/orbeon-forms/blob/0f5bcf02178009c8a33868227c9b1d03e019e80d/src/main/resources/config/ehcache.xml).
+An internal `ehcache.xml` configuration file is used. Here are the default configuration files:
+
+- [as of Orbeon Forms 2022.1.4](https://github.com/orbeon/orbeon-forms/blob/0f5bcf02178009c8a33868227c9b1d03e019e80d/src/main/resources/config/ehcache.xml)
+- [as of Orbeon Forms 2023.1](https://github.com/orbeon/orbeon-forms/blob/2023.1-ce/src/main/resources/config/ehcache.xml)
 
 You can update that configuration by placing your own `ehcache.xml` file in the `WEB-INF/resources/config` directory of your web app. This is rarely needed, except for enabling [replication](replication.md).
 
@@ -104,7 +107,12 @@ This cache is enabled by default. To disable it, set the following property:
     value="false"/>
 ```
 
-One reason to disable this cache might be if you perform accesses to the database from outside of Orbeon Forms, and you want to make sure that you always get the latest form definition. However, we recommend using the [Form Runner persistence API](/form-runner/api/persistence/README.md). instead.
+One reason to disable this cache might be if you perform accesses to the database from outside of Orbeon Forms, and you want to make sure that you always get the latest form definition. However, we recommend using the [Form Runner persistence API](/form-runner/api/persistence/README.md) instead.
+
+This property enables access to caches with the following names, configured either in `ehcache.xml` or in the JCache configuration:
+
+- `form-runner.persistence.form-definition`
+- `form-runner.persistence.form-metadata`
 
 ## See also
 
