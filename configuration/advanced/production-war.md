@@ -27,6 +27,20 @@ If you don't need Form Builder in an installation, you can simply remove that JA
 
 ## Removing the built-in eXist database
 
+### Deprecation
+
+[SINCE Orbeon Forms 2019.1]
+
+Using the eXist database with Orbeon Forms is deprecated. We recommend using one of the supported [relational databases](/form-runner/persistence/relational-db.md) for production.
+
+### Removal
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+The eXist database is no longer included in the standard Orbeon Forms WAR file. If you are using that version or newer, you don't need to explicitly remove eXist.
+
+### Steps
+
 The version of eXist which ships with Orbeon Forms is intended for demo purposes only. If you plan to use eXist, we recommend setting up an external eXist database.
 
 To remove the embedded eXist:
@@ -56,12 +70,6 @@ If you don't need an eXist database at all, in `properties-local.xml`, add the f
     name="oxf.fr.persistence.exist.active"
     value="false"/>
 ```
-
-xxx 2022-08-10: this is used for:
-
-- /fr/service/persistence/form
-- reindex
-- reencrypt
 
 Then set a property to select the persistence implementation you are using, for example, for SQL Server:
 

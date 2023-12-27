@@ -6,6 +6,12 @@
 
 Using the eXist database with Orbeon Forms is deprecated. We recommend using one of the supported [relational databases](/form-runner/persistence/relational-db.md) for production.
 
+## Removal
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+The eXist database is no longer included in the standard Orbeon Forms WAR file. If you are using that version or newer, you don't need to explicitly remove eXist.
+
 ## Rationale
 
 By default, Orbeon Forms ships with an embedded eXist-db database. For production, this is not an ideal setup and it is better to have a separate eXist-db database. After you download and install eXist-db, you should follow the instruction below to set it up, and let Orbeon Forms know how it should connect to eXist-db.
