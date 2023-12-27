@@ -470,7 +470,7 @@ When `PUT`ting data, Form Runner does a number of checks, including a check for 
 
 ### eXist DB removal
 
-This version of Orbeon Forms removes support for the eXist DB database. Use of this database has been deprecated for a long time, and we have not been able to maintain it for a while. If you are using eXist DB, please migrate to a [relational database](/form-runner/persistence/relational-db.md). ([#5770](https://github.com/orbeon/orbeon-forms/issues/5770))
+This version of Orbeon Forms removes support for the eXist DB database. Use of this database has been deprecated for a long time, and we have not been able to maintain it for a while. If you are using eXist DB, please migrate to a [relational database](/form-runner/persistence/relational-db.md).
 
 ### Uploading empty files
 
