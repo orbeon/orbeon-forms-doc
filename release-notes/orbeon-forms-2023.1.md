@@ -398,7 +398,7 @@ You can now embed Form Runner forms in a different domain than the one where For
 ### Platform features
 
 - We upgraded to Font Awesome 6
-- Orbeon Forms now supports Tomcat 10+, WildFly 27+ (TODO)
+- Orbeon Forms now supports Tomcat 10+, WildFly 27+ ([doc](/installation/README.md#java-servlet-and-jakarta-servlet-apis))
 - In addition to Ehcahe 2.x, we added support for the JCache API (JSR-107) ([doc](/installation/caches.md#enabling-jcache-providers))
 - Expired sessions now send a status code 440 to the client
 
