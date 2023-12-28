@@ -20,6 +20,7 @@
                 * [Attachments](configuration/properties/form-runner-attachments.md)
                 * [Email](configuration/properties/form-runner-email.md)
                 * [PDF](configuration/properties/form-runner-pdf.md)
+                * [Table of contents](configuration/properties/form-runner-toc.md)
             * [Persistence](configuration/properties/persistence.md)
             * [Summary page](configuration/properties/form-runner-summary-page.md)
         * [Form Builder](configuration/properties/form-builder.md)

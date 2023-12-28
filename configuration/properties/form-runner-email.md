@@ -263,3 +263,8 @@ This is known to work with Gmail at least.
 ## See also 
 
 - [Email settings](/form-builder/email-settings.md)
+- Configuration properties
+    - [Detail page](form-runner-detail-page.md)
+    - [Attachments](form-runner-attachments.md)
+    - [PDF](form-runner-pdf.md)
+    - [Table of contents](form-runner-toc.md)
