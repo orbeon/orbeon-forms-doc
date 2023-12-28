@@ -744,3 +744,25 @@ See also [Grid Tab Order](/form-builder/grid-settings.md#grid-tab-order) in the 
 ## PDF mode
 
 See [PDF configuration properties](form-runner-pdf.md).
+
+## Validation of static lists of choices
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+This property allows you to automatically add a validation error when a static list of choices contains invalid values. The default is `false`.
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.validate-selection-controls-choices.*.*"
+    value="true"/>
+```
+
+This can be useful in the following cases:
+
+- to catch errors where selection control values are set using calculations
+- to validate work in progress data added with the [Persistence API](/form-runner/api/persistence/crud.md)
+
+This property might be enabled by default in the future.
+
+This is also automatically enabled when importing form data through the Import page.
