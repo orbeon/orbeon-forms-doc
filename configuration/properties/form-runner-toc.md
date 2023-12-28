@@ -4,6 +4,8 @@
 
 The table of contents is a list of sections in the form. It is shown at the top or left of the form, and allows users to navigate to a particular section.
 
+![Table of contents on top](../../form-runner/images/toc-top.png)
+
 Note the following:
 
 - The following configuration properties only relate to the use of the table of contents when the Wizard view is not used.
