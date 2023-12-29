@@ -292,21 +292,46 @@ Example of configuration property:
 
 It is currently not possible to mix and match synchronous and asynchronous service calls within a given action.
 
-An asynchronous action, by default, causes a response to the client (web browser) to wait for its completion. This is done to enhance the backward-compatibility of asynchronous actions. This can be disabled:
+An asynchronous action, by default, causes a response to the client (web browser) to wait forever for its completion. This is done to enhance the backward-compatibility of asynchronous actions. This can be disabled:
 
-- at the action level, using the `response-must-await="false"` attribute
+- at the action level, using the `response-must-await="0ms"` attribute (or `0` followed by any other unit allowed as shown below)
 - at the form level, using the `oxf.fr.detail.actions.response-must-await.*.*` property
 
 Example of configuration property:
 
 ```xml
 <property 
-    as="xs:boolean" 
+    as="xs:string" 
     name="oxf.fr.detail.actions.response-must-await.*.*"              
-    value="false"/>
+    value="0ms"/>
 ```
 
-If `response-must-await` is set to `false`, a response to the client doesn't wait for the completion of asynchronous actions. Instead, the response is sent immediately, and the pending action's service calls continue to wait in the background. The client polls the server at regular intervals to check for the completion of such pending services, and then resumes the processing of the actions. This is useful when an action calls long-running services, and you don't want to keep the client waiting for its completion.
+If `response-must-await` is set to `0ms`, a response to the client doesn't wait for the completion of asynchronous actions. Instead, the response is sent immediately, and the pending action's service calls continue to wait in the background. The client polls the server at regular intervals to check for the completion of such pending services, and then resumes the processing of the actions. This is useful when an action calls long-running services, and you don't want to keep the client waiting for its completion.
+
+Possible values for this property and attribute are:
+
+- `forever`
+- `"$length$unit"` (whitespace allowed around and between tokens)
+    - `$length` is a positive long integer value
+    - `$unit` is as described below
+
+| Unit | Description   |
+|------|---------------|
+| `h`  | hours         |
+| `m`  | minutes       |
+| `s`  | seconds       |
+| `ms` | milliseconds  |
+
+Practically, units in the `ms` and `s` ranges are the most useful.
+
+Examples:
+
+- `response-must-await="0ms"`: don't wait
+- `response-must-await="200ms"`: wait up to 200 milliseconds
+- `response-must-await="5s"`: wait up to 5 seconds
+- `response-must-await="forever`"`: wait indefinitely
+
+For example, the Form Runner Landing page runs multiple background services to load lists of published forms. The page waits a few hundreds of milliseconds for the completion of those services, and if they take longer, for example due to a slow database, the page is shown to the user, and the services continue to run in the background.
 
 In the future, asynchronous actions will likely be enabled by default.
 
