@@ -58,6 +58,10 @@ Metadata include information such as:
 - the user who last modified the data
 - the workflow stage
 
+## Permissions
+
+The export feature exports forms and data regardless of the permissions of the user who performs the export, as long as that user has access to the Forms Admin page. Therefore, it is very important to control access to the Forms Admin page.
+
 ## Limitations
 
 At the moment, once the "Export" button has been clicked, the dialog will be closed and the export will be performed in the background. This means that you won't be able to see the progress of the export, and you won't be able to cancel it. This also means you shouldn't leave the current page until the zip file has been downloaded. This will be improved in a future version.
