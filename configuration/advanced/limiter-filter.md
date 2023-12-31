@@ -1,4 +1,4 @@
-# Limiter Filter
+# Limiter filter
 
 ## What this is about
 

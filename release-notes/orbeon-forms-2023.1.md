@@ -401,32 +401,23 @@ You can now embed Form Runner forms in a different domain than the one where For
 - In addition to Ehcahe 2.x, we added support for the JCache API (JSR-107) ([doc](/installation/caches.md#enabling-jcache-providers))
 - Expired sessions now send a status code 440 to the client
 
-## Compatibility notes
+## Compatibility and upgrade notes
 
-### Field encryption password
+### Field-level encryption password
 
-The `oxf.fr.field-encryption.password` property now controls a separate encryption password for field-level encryption. In previous versions, the general `oxf.crypto.password` property was used instead.
+The `oxf.fr.field-encryption.password` property controls a separate encryption password for field-level encryption. In previous versions, the general `oxf.crypto.password` property is used instead.
 
 If you are upgrading from an earlier version of Orbeon Forms to version 2023.1, you need to set `oxf.fr.field-encryption.password` to the same value as `oxf.crypto.password` used previously. This step is required for Orbeon Forms to allow you to read existing encrypted data, as well as to write new encrypted data.
 
 If you fail to do this, Orbeon Forms will report an error when you try to read or write encrypted data.
 
+Once you have set `oxf.fr.field-encryption.password`, we recommend that you can change `oxf.crypto.password` to a different value.
+
+It is generally safe to change `oxf.crypto.password`, even regularly, as this is not used to encrypt data at rest.
+
+__WARNING: But keep in mind that `oxf.fr.field-encryption.password` needs to remain stable so that existing encrypted value can be read back. If that password is changed or lost, the existing data will not be readable anymore.__ 
+
 Please be sure to read the [field-level encryption documentation](/form-builder/field-level-encryption.md#configuration).
-
-### Visiting of visible fields
-
-In Orbeon Forms, a form control can be *visited* or not. Visited controls have typically been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control.
-
-With Orbeon Forms 2023.1, form controls are also marked as visited when they are calculated, visible, and their value changes. This is useful to immediately show validation errors associated with such form controls, which are typically implemented with the Calculated Value form control.
-
-If you don't wish this behavior, you can turn it off globally with the following property:
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.xforms.xbl.fr.error-summary.visit-value-changed"
-    value="false"/>
-```
 
 ### Password strength checker
 
@@ -443,30 +434,62 @@ If you are using field-level encryption, and if you already have data in your da
 
 We do not recommend disabling this in general. Instead, always use strong randomly-generated passwords. 
 
-### Encryption passwords
+### Visiting of visible fields
 
-If set, the `oxf.fr.field-encryption.password` property controls a separate encryption password for field-level encryption. If not set, the `oxf.crypto.password` property is used instead for backward compatibility.
+In Orbeon Forms, a form control can be *visited* or not. Visited controls have typically been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control.
+
+With Orbeon Forms 2023.1, form controls are also marked as visited when they are calculated, visible, and their value changes. This is useful to immediately show validation errors associated with such form controls, which are typically implemented with the Calculated Value form control.
+
+If you don't wish this behavior, you can turn it off globally with the following property:
 
 ```xml
 <property
-	as="xs:string"
-	name="oxf.fr.field-encryption.password"
-	value="CHANGE THIS PASSWORD"/>
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.error-summary.visit-value-changed"
+    value="false"/>
 ```
-
-- If you are upgrading from an earlier version of Orbeon Forms, and you already have data in your database that contains encrypted fields:
-    - Set `oxf.fr.field-encryption.password` anyway, to the same value as `oxf.crypto.password`.
-- If you are not in the above case, set `oxf.fr.field-encryption.password` to a value different from `oxf.crypto.password`. 
 
 ### CRUD API
 
-When calling the [CRUD API](/form-runner/api/persistence/crud), you can `PUT` data as well as form definitions and their attachments.
+Using the [CRUD API](/form-runner/api/persistence/crud) to `PUT` data or data attachments now requires the presence in the database of the corresponding form definitions.
 
-When `PUT`ting data, Form Runner does a number of checks, including a check for permissions. In the past, in some cases, `PUT`ting data for a non-existent form definition could succeed. This is no longer the case, and you should make sure that the form definition exists before `PUT`ting data.
+In previous versions, in some cases, `PUT`ting data for a non-existent form definition could succeed. This is no longer the case, and you should make sure that a matching form definition exists before `PUT`ting data.
 
 ### eXist DB removal
 
 This version of Orbeon Forms removes support for the eXist DB database. Use of this database has been deprecated for a long time, and we have not been able to maintain it for a while. If you are using eXist DB, please migrate to a [relational database](/form-runner/persistence/relational-db.md).
+
+The demo/samples forms that ship with Orbeon Forms now use an embedded relational SQLite database.
+
+###  web.xml
+
+In order to support both Tomcat 10+ and WildFly 27+, which support the Servlet API version 5.0, 6.0 or newer, and older versions of the Servlet API, which are incompatible at the Java package level, the `web.xml` structure has been changed.
+
+Orbeon Forms now automatically detects the Servlet API version and registers its main components accordingly. To achieve this, the following elements are no longer present:
+
+- `<filter>`
+- `<filter-mapping>`
+- `<listener>`
+- `<servlet>`
+- `<servlet-mapping>`
+
+Instead, the configuration is done using top-level elements:
+
+- `<context-param>`
+
+For example, to disable the limiter filter:
+
+```xml
+<context-param>
+    <param-name>oxf.orbeon-limiter-filter.enabled</param-name>
+    <param-value>false</param-value>
+</context-param>
+```
+
+For more, see:
+
+- [Java Servlet and Jakarta Servlet APIs](/installation/README.md#java-servlet-and-jakarta-servlet-apis)
+- [Limiter filter](/configuration/advanced/limiter-filter.md)
 
 ### Uploading empty files
 
