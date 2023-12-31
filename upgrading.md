@@ -78,7 +78,7 @@ The way we handle fixes, generally, is as follows:
 
 When about to upgrade, we recommend you go through the release notes for all versions between the version you are using and the one you are upgrading to, paying particular attention to the compatibility notes sections. Here are the releases which contain backward compatibility notes:
 
-- [2023.1](/release-notes/orbeon-forms-2023.1.md#compatibility-notes)
+- [2023.1](/release-notes/orbeon-forms-2023.1.md#compatibility-and-upgrade-notes)
 - [2022.1.1](/release-notes/orbeon-forms-2022.1.1.md#compatibility-notes)
 - [2022.1](/release-notes/orbeon-forms-2022.1.md#compatibility-notes)
 - [2021.1](/release-notes/orbeon-forms-2021.1.md#compatibility-notes)
