@@ -2,8 +2,6 @@
 
 __Sunday, December 31, 2023__  
 
-__THIS IS A PREVIEW, AND AS OF 2023-12-17, THIS VERSION OF ORBEON FORMS HASN'T BEEN RELEASED.__
-
 Today we released Orbeon Forms 2023.1! This release is absolutely packed with new features and bug-fixes!
 
 ## Major new features
@@ -307,9 +305,10 @@ Thanks to external contributors:
     - You are warned when referring to a non-existent variable in a formula
     - You can easily reset the value of a "Yes/No Answer" ([doc](/form-runner/component/yesno-input.md))
 
-TODO:
+[//]: # (TODO:)
 
-- Add suggestion of variable names in all formulas #5798
+[//]: # ()
+[//]: # (- Add suggestion of variable names in all formulas #5798)
 
 ### New and improved APIs
 
