@@ -187,6 +187,8 @@ Using `ReadableStream` is the most difficult part of this API. This standard Jav
 
 [This is an example](https://gist.github.com/ebruchez/b57887e624234d228c426ba0d893c189) of a demo SubmissionProvider implementation which uses `ReadableStream`. The example is written in Scala, but the same exact logic applies to a JavaScript or TypeScript implementation.
 
+<script src="https://gist.github.com/ebruchez/b57887e624234d228c426ba0d893c189.js"></script>
+
 #### `SubmissionResponse`
 
 This is the response object returned by the `submit()` and `submitAsync()` methods.
