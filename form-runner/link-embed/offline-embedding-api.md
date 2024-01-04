@@ -108,7 +108,7 @@ ORBEON.fr.FormRunnerOffline.configure(
 );
 ```
 
-### Submission provider API
+### Client-side submission provider API
 
 When running in offline mode, Form Runner needs to be able to:
 
