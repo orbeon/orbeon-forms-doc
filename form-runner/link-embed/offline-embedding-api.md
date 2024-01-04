@@ -209,6 +209,73 @@ It has the following properties:
         - `ReadableStream<Uint8Array>` is used for asynchronous calls that return a body asynchronously
             - see the [ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) documentation
 
+## Form Runner calls
+
+### Introduction
+
+Form Runner calls are made through the `SubmissionProvider` interface.
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+Form Runner persistence calls (saving and reading form data and attachments) use `submitAsync()` instead of `submit()` in call cases.
+
+### Saving form data
+
+Form Runner starts by saving attachments, if needed (see below). Only if saving all attachments succeeds does Form Runner save the form data itself.
+
+Then Form Runner saves the form data itself.
+
+- `submitAsync()` is called
+- the `method` is `PUT`
+- the `url` is the URL of the form data resource
+    - for `save-final`: `/fr/service/persistence/crud/$app/$form/data/$document/data.xml`
+    - for `save-progress`: `/fr/service/persistence/crud/$app/$form/draft/$document/data.xml`
+        - this is only called if [autosave](/form-runner/persistence/autosave.md) is enabled
+- the `headers` include:
+    - `Content-Type`: `application/xml`
+    - `Orbeon-Workflow-Stage`: workflow stage information
+    - `Orbeon-Form-Definition-Version`: form definition version information
+
+The XML body is passed as a `ReadableStream<Uint8Array>`. You can convert that to a `Promise<Uint8Array>` if needed.
+
+### Reading form data
+
+When Form Runner needs to read form data, it calls:
+
+- `submitAsync()`
+- the `method` is `GET`
+- the `url` is the URL of the form data resource
+    - for reading final data: `/fr/service/persistence/crud/$app/$form/data/$document/data.xml`
+    - for reading autosaved data: `/fr/service/persistence/crud/$app/$form/draft/$document/data.xml`
+- the `headers` must include:
+    - `Content-Type`: `application/xml`
+    - `Orbeon-Workflow-Stage`: workflow stage information, if applicable (in particular if this was specified when the data was saved)
+    - `Orbeon-Form-Definition-Version`: form definition version
+
+The XML body must be returned as a `ReadableStream<Uint8Array>`. You can convert that from a `Promise<Uint8Array>` if needed (see [example](https://gist.github.com/ebruchez/b57887e624234d228c426ba0d893c189)).
+
+### Saving attachments
+
+This works like saving data, except that:
+
+- the `url` is the URL of the attachment resource
+    - for `save-final`: `/fr/service/persistence/crud/$app/$form/data/$document/$attachment.bin`
+    - for `save-progress`: `/fr/service/persistence/crud/$app/$form/draft/$document/$attachment.bin`
+        - this is only called if [autosave](/form-runner/persistence/autosave.md) is enabled
+- the `headers` include:
+    - `Content-Type`: `application/octet-stream`
+    - `Orbeon-Form-Definition-Version`: form definition version
+
+Currently, Form Runner always uses a `.bin` extension for attachments, even if the original file had a different extension. Similarly, Form Runner always uses `application/octet-stream` as the `Content-Type` for attachments, even if the original file had a different `Content-Type`.
+
+Form Runner will issue one call to `submitAsync()` per attachment.
+
+Again, an attachment body is passed as a `ReadableStream<Uint8Array>`. The main difference, compared with form data, is that attachments can be typically much larger: from a few megabytes to gigabytes, when images and videos are attached, for example. This makes it all the more important to leverage `ReadableStream` to avoid having to load the entire attachment in memory at once.
+
+### Reading attachments
+
+TODO
+
 ## See also
 
 - [Offline test](/form-builder/offline-test.md)
