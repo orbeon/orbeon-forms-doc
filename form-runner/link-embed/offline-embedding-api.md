@@ -29,7 +29,7 @@ In order to obtain a compiled form definition, you call the following service en
 /fr/service/$app/$form/compile?format=zip
 ```
 
-The resulting binary data can later be passed to the client-side `renderFormFromBase64()` API.
+The resulting binary data can later be passed to the client-side `renderForm()` API.
 
 ### Client-side embedding API
 
@@ -69,22 +69,22 @@ window.ORBEON.fr.FormRunnerOffline.renderForm(
 );
 ```
 
-This returns a `Promise` which resolves when the configuration is complete.
+This returns a `Promise` which resolves when the form initialization is complete.
 
 The `compiledFormDefinition` parameter is the binary data obtained from the server-side compilation API, as a `Uint8Array`.
 
 The third argument is a JavaScript object with the following properties:
 
-| Property      | Type       | Description              |
-|---------------|------------|--------------------------|
-| `appName`     | `string`   |                          |
-| `formName`    | `string`   |                          |
-| `formVersion` | `number`   | positive integer         |
-| `mode`        | `string`   | `new`\|`edit`\|`view`    |
-| `documentId`  | `string?`  | for `edit`\|`view` modes |
-| `queryString` | `string?`  | optional                 |
-| `headers`     | `Headers?` | optional                 |
-| `formData`    | `string?`  | for `POST`ed form data   |
+| Property      | Type       | Description                   |
+|---------------|------------|-------------------------------|
+| `appName`     | `string`   |                               |
+| `formName`    | `string`   |                               |
+| `formVersion` | `number`   | positive integer              |
+| `mode`        | `string`   | `new`\|`edit`\|`view`         |
+| `documentId`  | `string?`  | for `edit`\|`view` modes only |
+| `queryString` | `string?`  | optional                      |
+| `headers`     | `Headers?` | optional                      |
+| `formData`    | `string?`  | for `POST`ed form data        |
 
 If `formData` is defined, it must be a string containing form data in XML format. This is the equivalent of performing an HTTP `POST` when online.
 
@@ -108,7 +108,7 @@ ORBEON.fr.FormRunnerOffline.configure(
 );
 ```
 
-### Client-side submission provider API
+### Submission provider API
 
 When running in offline mode, Form Runner needs to be able to:
 
@@ -123,13 +123,13 @@ interface SubmissionRequest {
   method : string;
   url    : URL;
   headers: Headers;
-  body?  : Uint8Array | ReadableStream[Uint8Array] | null
+  body?  : Uint8Array | ReadableStream<Uint8Array> | null
 }
 
 interface SubmissionResponse {
   statusCode: number;
   headers   : Headers;
-  body?     : Uint8Array | Byte[] | ReadableStream[Uint8Array] | null;
+  body?     : Uint8Array | Byte[] | ReadableStream<Uint8Array> | null;
 }
 
 // Interface to be implemented by the embedder to support offline submissions
@@ -176,20 +176,16 @@ It has the following properties:
         - `Orbeon-Workflow-Stage`: workflow stage information
         - `Orbeon-Form-Definition-Version`: form definition version information
 - `body`
-    - optional for methods that don't have a body: `GET`, `HEAD`, `DELETE`
+    - optional for methods that don't have a body: `GET`, `HEAD`, `DELETE`, in which case it can be left `undefined`
     - required for methods that have a body: `POST`, `PUT`
-    - `Uint8Array` or `ReadableStream[Uint8Array]`
-    - `Uint8Array` is used for synchronous calls
-    - `ReadableStream[Uint8Array]` is used for asynchronous calls
-        - see the [ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) documentation
+    - `Uint8Array` or `ReadableStream<Uint8Array>`
+        - `Uint8Array` is used for synchronous calls
+        - `ReadableStream<Uint8Array>` is used for asynchronous calls
+            - see also the JavaScript [ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) documentation
 
 Using `ReadableStream` is the most difficult part of this API. This standard JavaScript API exposes a way to get data in a streamable way, in chunks, asynchronously. This means that you don't need to have all your data in memory at once, and you can start processing data as soon as it is available. You can also move data across network or application boundaries asynchronously, for example between a Web View and a native app. 
 
-Example:
-
-```javascript
-TODO
-```
+[This is an example](https://gist.github.com/ebruchez/b57887e624234d228c426ba0d893c189) of a demo SubmissionProvider implementation which uses `ReadableStream`. The example is written in Scala, but the same exact logic applies to a JavaScript or TypeScript implementation.
 
 #### `SubmissionResponse`
 
@@ -207,19 +203,11 @@ It has the following properties:
         - `Content-Type`: for methods that return a body: `POST`, `GET`
         - `Orbeon-Workflow-Stage`: workflow stage information when reading form data
 - `body`
-    - for methods that return a body: `POST`, `GET`
-    - `Uint8Array` or `ReadableStream[Uint8Array]`
-    - `Uint8Array` is used for synchronous calls or asynchronous calls that return a body synchronously
-    - `ReadableStream[Uint8Array]` is used for asynchronous calls that return a body asynchronously
-        - see the [ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) documentation
-
-Like for `SubmissionRequest`, using `ReadableStream` is the most difficult part of this API.
-
-Example:
-
-```javascript
-TODO
-```
+    - for methods that return a body: `POST`, `GET`, left `undefined` for methods that don't return a body
+    - `Uint8Array` or `ReadableStream<Uint8Array>`
+        - `Uint8Array` is used for synchronous calls or asynchronous calls that return a body synchronously
+        - `ReadableStream<Uint8Array>` is used for asynchronous calls that return a body asynchronously
+            - see the [ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) documentation
 
 ## See also
 
