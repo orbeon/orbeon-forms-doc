@@ -1,18 +1,49 @@
  # Orbeon Forms Caches
 
-## Caches used by Orbeon Forms
+## In-memory caches
 
-Orbeon Forms uses caches for the following purposes:
+Orbeon Forms uses in-memory caches for data structures associated with forms and form state:
+
+- Compiled forms
+    - This is the result of compiling the form definition. It is a data structure shared amongst all users of a form.
+    - The size of this cache is controlled by the `oxf.xforms.cache.static-state.size` property and defaults to 50.
+    - If a compiled form is evicted from the cache, it is serialized to the `xforms.state` store, from which it can be reloaded and reconstructed when needed.
+- Form sessions
+    - A form session represents one interactive session of a specific user with a specific form. This is *not* shared between users of a given form. 
+    - The size of this cache is controlled by the `oxf.xforms.cache.documents.size` property and defaults to 50.
+    - For testing purposes, this can be turned off with the `oxf.xforms.cache.document` property, but this is not recommended.
+    - If a form session is evicted from the cache, it is stored in the `xforms.state` store, from which it can be reloaded and reconstructed when needed.
+    - Whe a user session expires (that is, an application server session expires), the corresponding form sessions are evicted from the cache.
+
+The default size of `oxf.xforms.cache.static-state.size` or `oxf.xforms.cache.documents.size` is fairly small. You definitely will want to consider what size to use for your deployment. If possible, set:
+
+- `oxf.xforms.cache.static-state.size` to the number of distinct published form definitions you have in production (or slightly larger, for example 10-25% larger).
+- `oxf.xforms.cache.documents.size` to the number of concurrent users you expect to have (or slightly larger, for example 10-25% larger).
+
+__IMPORTANT: Performance will suffer if any of the data in the in-memory caches needs to be reconstructed from the `xforms.state` store.__
+
+However, there is a trade-off between performance and memory usage. The larger the cache, the more memory is used.
+
+For more information on these configuration properties, see [Configuring state handling](/contributors/state-handling.md#configuring-state-handling).
+
+## Other caches used by Orbeon Forms
+
+Orbeon Forms also uses the following caches that use an underlying cache implementation and configuration, such as Ehcache or through the JCache API (see [Supported cache implementations](#supported-cache-implementations) below):
 
 - Form state
     - This includes form data and other form state as the user interacts with a form.
-    - This cache acts as a store.
-    - This must be replicated when [replication](replication.md) is enabled. 
+    - This cache acts as a store: some information cannot be reconstructed from other sources.
+    - This is configured by the `xforms.state` cache.
+    - This must be replicated when [replication](replication.md) is enabled.
 - Mapping of some web resources
+    - This is configured by the `xforms.resources` cache.
+    - This cache acts as a store: some information cannot be reconstructed from other sources.
     - This must be replicated when [replication](replication.md) is enabled.
 - Caching of form definition metadata in the persistence layer
     - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+    - This is configured by the `form-runner.persistence.form-definition` and `form-runner.persistence.form-metadata` caches.
     - This is a true cache, which doesn't need to be replicated.
+    - See [Persistence layer caching of form definition metadata](#persistence-layer-caching-of-form-definition-metadata) below.
 
 ## Supported cache implementations
 
@@ -116,6 +147,7 @@ This property enables access to caches with the following names, configured eith
 
 ## See also
 
+- [State Handling](/contributors/state-handling.md)
 - [Installation](README.md)
 - [Replication](replication.md)
 - Blog post: [High-Availability Thanks to State Replication](https://blog.orbeon.com/2018/03/high-availability-thanks-to-state.html)

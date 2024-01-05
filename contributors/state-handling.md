@@ -159,3 +159,7 @@ In certain situations, it can be useful instead to ask the XForms page to reload
 ```
 
 *NOTE: It is recommended to use the `reload` value carefully, as reloading pages upon browser navigation often does not match the expectation of the user.*
+
+## See also
+
+- [Orbeon Forms Caches](/installation/caches.md)
