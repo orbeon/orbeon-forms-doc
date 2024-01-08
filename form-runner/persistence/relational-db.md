@@ -147,7 +147,6 @@ Run the following DDL to create or update your Orbeon database, and note that if
 |-------------------------|----------------------------|-------------------------------------|
 | 2023.1 and newer        | [sqlserver-2023_1.sql]     | [sqlserver-2019_1-to-2023_1.sql]    |
 | 2019.1                  | [sqlserver-2019_1.sql]     | [sqlserver-2017_2-to-2019_1.sql]    |
-| 2019.1                  | [sqlserver-2019_1.sql]     | [sqlserver-2017_2-to-2019_1.sql]    |
 | 2017.2                  | [sqlserver-2017_2.sql]     | [sqlserver-2016_3-to-2017_2.sql]    |
 | 2016.3 to 2017.1        | [sqlserver-2016_3.sql]     | [sqlserver-2016_2-to-2016_3.sql]    |
 | 2016.2                  | [sqlserver-2016_2.sql]     | [sqlserver-4_6-to-2016_2.sql]       |
