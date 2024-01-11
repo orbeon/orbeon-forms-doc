@@ -1,7 +1,5 @@
 # Core actions
 
-
-
 ## Introduction
 
 Core actions are actions directly supported by the process interpreter. They relate to how a process runs, completes or fails.
@@ -9,6 +7,10 @@ Core actions are actions directly supported by the process interpreter. They rel
 ## success
 
 Complete the top-level process right away and return a success value.
+
+## failure
+
+Complete the top-level process right away and return a failure value.
 
 ## process
 
