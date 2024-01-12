@@ -10,7 +10,7 @@ In a typical deployment, users will access this page from another part of your w
 
 <img alt="Page on your website/app linking to a form" src="../images/linking-page-with-link.png" width="484">
 
-## Technology agnostic
+## Technology agnosticity
 
 Linking doesn't make any assumption on the technology used by the website or application you're linking from. Your site could use Drupal, WordPress, be served by IIS, using .NET, or any other technology. For instance, the diagram below is for a situation where your website is served by Microsoft IIS, implemented in .NET, and links to forms served by Orbeon Forms.
 
@@ -18,7 +18,7 @@ Linking doesn't make any assumption on the technology used by the website or app
 
 ## Paths
 
-The `/fr/clerk/marriage-registration/new` in our example is what is referred to below as a *path*, and for a given form, multiple such paths exist. Knowing what those paths are is particulary important as this allows you to link from your web site or web application to forms your created with Form Builder. All the paths are relative to the *deployment context*, i.e. where you've deployed Orbeon Forms, which in our example was `https://www.city.gov/forms`.
+The `/fr/clerk/marriage-registration/new` in our example is what is referred to below as a *path*, and for a given form, multiple such paths exist. Knowing what those paths are is particularly important as this allows you to link from your website or web application to forms your created with Form Builder. All the paths are relative to the *deployment context*, i.e. where you've deployed Orbeon Forms, which in our example was `https://www.city.gov/forms`.
 
 | Description                              | Path                                                                        | Availability |
 |------------------------------------------|-----------------------------------------------------------------------------|--------------|
