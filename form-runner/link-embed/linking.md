@@ -141,18 +141,18 @@ Where do I see status codes?
 
 The following table lists the most common status codes you might encounter when linking to Orbeon Forms pages.
 
-| Status code | Description                                                                                                                                                                        |
-|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 200         | The request was successful.                                                                                                                                                        |
-| 302         | The requested page has moved to a different URL and the server is telling the browser where to navigate. This is rarely used by Orbeon Forms.                                      |
-| 304         | The requested resource has not changed since the last time it was requested. This can be returned for resources.                                                                   |
-| 400         | The request was invalid. This is rarely returned by Orbeon Forms for pages. Most likely, this is due to an internal error.                                                         |
-| 403         | The user is not authorized to access the requested page. Or, with Orbeon Forms version prior to 2022.1.5, this can also be returned if the application server session has expired. |
-| 413         | The request was too large. This can happen when the user uploads a file that is too large.                                                                                         |
-| 404         | The requested page was not found. This is typically the case when you request a page that doesn't exist, for example if you use an incorrect path or refer to a non-existing form. |
-| 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity from the user's part.                                |
-| 500         | An error occurred on the server. Check the Orbeon log files for details of the error.                                                                                              |
-| 503         | Service unavailable. This is only returned by Orbeon Forms for an XHR request that is a retry, if the original request is still running. The operation will likely be retried.     |
+| Status code | Description                                                                                                                                                                                   |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 200         | The request was successful.                                                                                                                                                                   |
+| 302         | The requested resource has moved to a different URL and the server is telling the browser where to navigate. This is rarely used for pages, but can be used for baseline embedding resources. |
+| 304         | The requested resource has not changed since the last time it was requested. This can be returned for resources.                                                                              |
+| 400         | The request was invalid. This is rarely returned by Orbeon Forms for pages. Most likely, this is due to an internal error.                                                                    |
+| 403         | The user is not authorized to access the requested page. Or, with Orbeon Forms version prior to 2022.1.5, this can also be returned if the application server session has expired.            |
+| 404         | The requested page was not found. This is typically the case when you request a page that doesn't exist, for example if you use an incorrect path or refer to a non-existing form.            |
+| 413         | The request was too large. This can happen when the user uploads a file that is too large.                                                                                                    |
+| 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity from the user's part.                                           |
+| 500         | An error occurred on the server. Check the Orbeon log files for details of the error.                                                                                                         |
+| 503         | Service unavailable. This is only returned by Orbeon Forms for an XHR request that is a retry, if the original request is still running. The operation will likely be retried.                |
 
 ### Service requests
 
