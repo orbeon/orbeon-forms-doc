@@ -6,13 +6,13 @@ When you create a form with Form Builder, you pick an *application name* and *fo
 
 When you publish the form, assuming you have Orbeon Forms deployed on a server on `http://www.city.gov/forms`, citizen will be able to fill out a new marriage registration by going to `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
 
-In a typical deployment, users will access this page from another part of your web site or web application that contains a link to form served by Orbeon Forms. For instance, a city government might have on its web site a page listing forms citizen can fill out, which links to the marriage registration form on `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
+In a typical deployment, users will access this page from another part of your website or web application that contains a link to form served by Orbeon Forms. For instance, a city government might have on its website a page listing forms citizen can fill out, which links to the marriage registration form on `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
 
-<img alt="Page on your web site/app linking to a form" src="../images/linking-page-with-link.png" width="484">
+<img alt="Page on your website/app linking to a form" src="../images/linking-page-with-link.png" width="484">
 
 ## Technology agnostic
 
-Linking doesn't make any assumption on the technology used by the web site or application you're linking from. Your site could use Drupal, WordPress, be served by IIS, using .NET, or any other technology. For instance, the diagram below is for a situation where your web site is served by Microsoft IIS, implemented in .NET, and links to forms served by Orbeon Forms.
+Linking doesn't make any assumption on the technology used by the website or application you're linking from. Your site could use Drupal, WordPress, be served by IIS, using .NET, or any other technology. For instance, the diagram below is for a situation where your website is served by Microsoft IIS, implemented in .NET, and links to forms served by Orbeon Forms.
 
 <img alt="IIS front-end" src="../images/linking-iis-net.png" width="441">
 
@@ -116,6 +116,75 @@ For exports that use the `/export/` path:
     - `false` (default): does not initialize and run the form before exporting
 - `language` 
     - language preference, for example `en` or `fr` 
+
+## HTTP status codes
+
+### Pages and other client requests
+
+Requesting an Orbeon Forms page is done through an HTTP or HTTPS request. This means that Orbeon Forms will respond with one of the [standard HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+
+The following types of HTTP requests can be made:
+
+- `GET` for an HTML page or page fragment
+- `GET` for a resource such as an image, CSS file, or JavaScript file
+- `POST` XHR (Ajax) to the server to update server state and obtain new client state
+- `POST` to upload attachments to the server
+- `POST` to navigate to another Orbeon Forms page
+- `OPTIONS` when the browser asks for some [CORS information](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) when using the JavaScript embedding API
+
+Where do I see status codes?
+
+- If you use Orbeon Forms in standalone mode, or using JavaScript embedding, Orbeon Forms status codes can be visible on the client (that is, the web browser) when loading pages and can be examined in your web browser's developer tools.
+- Resources, XHR (Ajax), uploads, navigation, and `OPTIONS` requests status codes can be seen in the developer tools as well.
+- Status codes are also often logged by web servers or application servers.
+- Finally, some error codes are explicitly logged by Orbeon Forms and you can find them in the Orbeon Forms logs.
+
+The following table lists the most common status codes you might encounter when linking to Orbeon Forms pages.
+
+| Status code | Description                                                                                                                                                                        |
+|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 200         | The request was successful.                                                                                                                                                        |
+| 302         | The requested page has moved to a different URL and the server is telling the browser where to navigate. This is rarely used by Orbeon Forms.                                      |
+| 304         | The requested resource has not changed since the last time it was requested. This can be returned for resources.                                                                   |
+| 400         | The request was invalid. This is rarely returned by Orbeon Forms for pages. Most likely, this is due to an internal error.                                                         |
+| 403         | The user is not authorized to access the requested page. Or, with Orbeon Forms version prior to 2022.1.5, this can also be returned if the application server session has expired. |
+| 413         | The request was too large. This can happen when the user uploads a file that is too large.                                                                                         |
+| 404         | The requested page was not found. This is typically the case when you request a page that doesn't exist, for example if you use an incorrect path or refer to a non-existing form. |
+| 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity from the user's part.                                |
+| 500         | An error occurred on the server. Check the Orbeon log files for details of the error.                                                                                              |
+| 503         | Service unavailable. This is only returned by Orbeon Forms for an XHR request that is a retry, if the original request is still running. The operation will likely be retried.     |
+
+### Service requests
+
+Service requests are requests for Orbeon Forms server-side [service APIs](/form-runner/api/README.md), typically:
+
+- called internally by Orbeon Forms
+- called by some external application
+
+When called internally, the status codes will not always be returned as is to the client. Instead, individual pages and services handle them as needed. They may opt the to return the same or another appropriate status code to the ultimate caller.
+
+You may or may not have external application service calls, depending on how you are integrating Orbeon Forms in your organization.
+
+Service requests also use HTTP or HTTPS, and Orbeon Forms responds with one of the [standard HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+
+However, more status codes can be returned for service requests than for pages. The following table lists the most common status codes you might encounter when calling Orbeon Forms services.
+
+| Status code | Description                                                                                                                                                                        |
+|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 200         | The request was successful.                                                                                                                                                        |
+| 201         | The request was successful and a new resource was created.                                                                                                                         |
+| 204         | The request was successful and no content is returned.                                                                                                                             |
+| 206         | The request was successful and partial content is returned. This is used for byte ranges when reading from video attachments.                                                      |
+| 400         | The request was invalid. This means the path, parameters, headers, and/or request body are invalid.                                                                                |
+| 401         | The user is not allowed to perform the specified operation.                                                                                                                        |
+| 403         | The user is not authorized to access the requested page. Or, with Orbeon Forms version prior to 2022.1.5, this can also be returned if the application server session has expired. |
+| 404         | The requested page was not found. This is typically the case when you request a page that doesn't exist, for example if you use an incorrect path or refer to a non-existing form. |
+| 405         | The HTTP method is not allowed.                                                                                                                                                    |
+| 409         | There is a conflict with the current state of the resource. This is only used when checking form definition versions.                                                              |
+| 410         | The resource is gone. This is only used when reading from the database and we know that the resource has been deleted.                                                             |
+| 423         | The resource is locked. This is only used by the lease feature.                                                                                                                    |
+| 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity from the user's part.                                |
+| 500         | An error occurred on the server. Check the Orbeon log files for details of the error.                                                                                              |
 
 ## See also
 
