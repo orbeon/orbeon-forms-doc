@@ -12,7 +12,7 @@ Form Runner can use information about the user to control whether that user can 
 Form Runner can obtain this information either by:
 
 - Calling a standard servlet API implemented by your application server, referred to as _container-driven method_.
-- Using HTTP headers set by a reverse proxy or a servlet filter, referred to as _header-driver method_.
+- Using HTTP headers set by a reverse proxy or a servlet filter, referred to as _header-driven method_.
 
 ### Container-driven or header-driven, which to choose?
 
