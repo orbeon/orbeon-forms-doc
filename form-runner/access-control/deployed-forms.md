@@ -170,11 +170,11 @@ However, for permissions defined in `properties-local.xml`, the permissions are 
 
 Which operations the current user can perform drives what page they can access, and on some pages which buttons are shown.
 
-### Forms page
+### Published Forms page
 
 This was formerly known as the _Home_ page.
 
-On the Form Runner Forms page, all the forms on which the current user can perform at least one operation are displayed. Then, for each one of those forms:
+On the Form Runner Published Forms page, all the forms on which the current user can perform at least one operation are displayed. Then, for each one of those forms:
 
 - If they can perform the _Create_ operation on the form, a link to the _New_ page is shown.
 - If they can perform any of the _Read_, _Update_, or _Delete_ operation on the form, a link to the _Summary_ page for that form is shown.
