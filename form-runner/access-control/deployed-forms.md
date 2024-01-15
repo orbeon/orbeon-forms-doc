@@ -32,13 +32,13 @@ In the example below:
 - Users with the role _clerk_ can read any form data. They can also list data on the Summary page.
 - Users with the role _admin_ can do any operation, including deleting form data and listing data on the Summary page.
 
-![Permissions dialog with explict permissions enabled](../../form-builder/images/permissions-dialog.png)
+![Permissions dialog with explicit permissions enabled](../../form-builder/images/permissions-dialog.png)
 
 ### Role types
 
 1. On the _Anyone_ line, set the operations allowed to all users.
-2. [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) On the _Require Token_ line, 
-3. [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) On the _Any Authenticated User_ line,
+2. [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) On the _Require Token_ line, specify that the _Read_ and _Update_ permissions above require a token to be satisfied.
+3. [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) On the _Any Authenticated User_ line, set the operation allowed to authenticated users only.
 2. On the _Owner_ line, set the operations allowed to the user who created the data. See also [Owner and Group Member Permissions](../../form-runner/access-control/owner-group.md). [SINCE Orbeon Forms 4.3]
 3. On the _Group members_ line, set the operations allowed to users in the same group as the owner. See also [Owner and Group Member Permissions](../../form-runner/access-control/owner-group.md). [SINCE Orbeon Forms 4.3]
 4. On the following lines, you can enter a role name, and define what operations users with that role can perform.
