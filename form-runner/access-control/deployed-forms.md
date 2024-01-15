@@ -53,7 +53,7 @@ _Update_ implies _Read_ – On any row, if you check _Update_, then _Read_ will 
 
 _Create_ can't be set for the _Owner_ and _Group members_ – The owner/group is a piece of information attached to existing form data, keeping track of the user who create the data, and the group in which this user is. This information is only known for existing data, so assigning the _Create_ permission to the _Owner_ or _Group members_ doesn't make sense, and the dialog doesn't show that checkbox.
 
-Permissions for the _Owner_ and _Group members_ can be set independently – If you want data to be accessible only by people who created it, check Read/Update/Delete/List for the owner but not for group members. If you want data to be accessible by all people in the same group,check Read/Update/Delete/List for the group members and don't check them for the owner if you want the owner to lose access to that data in case the owner changes group. (The latter highlights the need for permissions owner and group member to be set independently.)
+Permissions for the _Owner_ and _Group members_ can be set independently – If you want data to be accessible only by people who created it, check Read/Update/Delete/List for the owner but not for group members. If you want data to be accessible by all people in the same group, check Read/Update/Delete/List for the group members and don't check them for the owner if you want the owner to lose access to that data in case the owner changes group. (The latter highlights the need for permissions owner and group member to be set independently.)
 
 ### The _List_ permission
 
