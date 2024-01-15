@@ -1,5 +1,6 @@
 .DS_Store
 .idea
+.bsp/
 
 # Added by GitBook (maybe better not remove this?)
 .grunt

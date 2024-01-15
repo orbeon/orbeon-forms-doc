@@ -31,6 +31,16 @@ By default, the Summary page shows a single search box which does a full-text se
 
 You can open the search options using the "Show Search Options" button. The search options area contains individual search fields which allow performing a structured search, or search by field.
 
+### Search by created, last modified, created by, last modified by, and workflow stage
+
+[SINCE Orbeon Forms 2024.1]
+
+When the corresponding [`oxf.fr.summary.show-*` properties](/configuration/properties/form-runner-summary-page.md) are enabled, the search options area contains individual search fields which allow performing a search by created, last modified, created by, last modified by, and workflow stage.
+
+The created by, last modified by, and workflow stage search fields contain distinct values from accessible data.
+
+![Search by created, last modified, etc.](../images/summary-search-created-last-modified.png)
+
 ### Dynamic dropdowns
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
