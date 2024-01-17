@@ -66,6 +66,15 @@ Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple 
 
 Note that the SQLite demo database is stored in `WEB-INF/orbeon-demo.sqlite`, located where the Orbeon Forms' `.war` file is uncompressed. Be aware that updating the WAR file might overwrite the demo database, resulting in the loss of any saved data.
 
+To disable the `sqlite` embedded database and demo forms, add the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.persistence.sqlite.active"
+    value="false"/>
+```
+
 ## License installation (Orbeon Forms PE only)
 
 * If you are running Orbeon Forms CE, you don't need to install a license file.
