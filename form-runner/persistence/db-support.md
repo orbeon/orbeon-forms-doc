@@ -13,23 +13,23 @@ For setup instructions, see [Using Form Runner with a relational database](relat
 
 ## Feature matrix
 
-| Feature                                                                  | eXist         | Oracle        | MySQL         | SQL Server    | PostgreSQL    | DB2           |
-|--------------------------------------------------------------------------|---------------|---------------|---------------|---------------|---------------|---------------|
-| [Form controls and layouts including repeated grids and sections][blog1] | Y             | Y             | Y             | Y<sup>4</sup> | Y<sup>6</sup> | Y<sup>1</sup> |
-| [Versioning][blog2]                                                      | N             | Y<sup>3</sup> | Y<sup>3</sup> | Y<sup>4</sup> | Y<sup>6</sup> | Y<sup>3</sup> |
-| [Owner/group-based permissions](../access-control/owner-group.md)        | Y<sup>6</sup> | Y<sup>2</sup> | Y<sup>1</sup> | Y<sup>4</sup> | Y<sup>6</sup> | Y<sup>1</sup> |
-| [Autosave](autosave.md)                                                  | N             | Y<sup>2</sup> | Y<sup>1</sup> | Y<sup>4</sup> | Y<sup>6</sup> | Y<sup>1</sup> |
-| [Flat view](flat-view.md)                                                | N/A           | Y             | N             | Y<sup>7</sup> | Y<sup>6</sup> | Y<sup>5</sup> |
-| Orbeon Forms PE support                                                  | Y             | Y             | Y             | Y             | Y             | Y             |
-| Orbeon Forms CE support                                                  | Y             | N             | Y             | N             | Y             | N             |
+| Feature                                                                  | eXist | Oracle | MySQL | SQL Server | PostgreSQL | DB2 |
+|--------------------------------------------------------------------------|-------|--------|-------|------------|------------|-----|
+| [Form controls and layouts including repeated grids and sections][blog1] | Y     | Y      | Y     | Y⁴         | Y⁶         | Y¹  |
+| [Versioning][blog2]                                                      | N     | Y³     | Y³    | Y⁴         | Y⁶         | Y³  |
+| [Owner/group-based permissions](../access-control/owner-group.md)        | Y⁶    | Y²     | Y¹    | Y⁴         | Y⁶         | Y¹  |
+| [Autosave](autosave.md)                                                  | N     | Y²     | Y¹    | Y⁴         | Y⁶         | Y¹  |
+| [Flat view](flat-view.md)                                                | N/A   | Y      | N     | Y⁷         | Y⁶         | Y⁵  |
+| Orbeon Forms PE support                                                  | Y     | Y      | Y     | Y          | Y          | Y   |
+| Orbeon Forms CE support                                                  | Y     | N      | Y     | N          | Y          | N   |
 
 1. Since Orbeon Forms 4.3.
-1. Since Orbeon Forms 4.4.
-1. Since Orbeon Forms 4.5.
-1. Since Orbeon Forms 4.6.
-1. Since Orbeon Forms 4.7.
-1. Since Orbeon Forms 4.8.
-1. Since Orbeon Forms 2016.2.
+2. Since Orbeon Forms 4.4.
+3. Since Orbeon Forms 4.5.
+4. Since Orbeon Forms 4.6.
+5. Since Orbeon Forms 4.7.
+6. Since Orbeon Forms 4.8.
+7. Since Orbeon Forms 2016.2.
 
 ## Third-party implementations
 
