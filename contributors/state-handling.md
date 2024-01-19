@@ -55,6 +55,7 @@ If you have, say, in production, 100 separate form definition, the size should i
 
 It is tempting to make the cache very large, but because it is a strict cache, there is a risk of running out of memory. So you should make the cache just a little bit larger than the number of forms in production.
 
+
 ### XForms state store configuration
 
 When entries are evicted from the XForms document cache or the XForms static state cache, they are migrated to the XForms state store.
@@ -88,7 +89,7 @@ The session heartbeat should help prevent many occurrences of "session expired" 
 <property
     as="xs:boolean"
     name="oxf.xforms.session-heartbeat"
-    value="true">
+    value="true"/>
 ```
 
 ## Session expiration dialog
