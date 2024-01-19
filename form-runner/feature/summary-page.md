@@ -19,11 +19,24 @@ The Form Runner Summary page shows, for a given published form, the list of acce
 - __Created:__
     - This is the data's creation date.
     - You can optionally remove this column via [configuration](/configuration/properties/form-runner-summary-page.md).
-- __Last Modified:__
+- __Modified:__
     - This is the data's last modification date.
     - You can optionally remove this column via [configuration](/configuration/properties/form-runner-summary-page.md). 
 - __Custom columns:__
     - You specify those when editing the form definition, using the [Control Settings dialog](/form-builder/control-settings.md).
+
+### Sorting
+
+[SINCE Orbeon Forms 2024.1]
+
+It is possible to sort the data by clicking on the column headers. The sort order is indicated by an arrow next to the column name. Clicking multiple times on the same header will toggle between ascending and descending order.
+
+![Sorting](../images/summary-sorting.png)
+
+Limitations:
+
+- Currently, all values except the "Created" and "Modified" columns are sorted as strings. This can lead to unexpected results, in particular for numbers and HTML values. Numbers will be sorted alphabetically (e.g. "1", "10", "11", "2", "37", "4", etc.) and HTML values will be sorted by their HTML representation (i.e. including HTML markup).
+- Dropdown controls will be sorted by their value, not their label.
 
 ## Search 
 
@@ -31,15 +44,15 @@ By default, the Summary page shows a single search box which does a full-text se
 
 You can open the search options using the "Show Search Options" button. The search options area contains individual search fields which allow performing a structured search, or search by field.
 
-### Search by created, last modified, created by, last modified by, and workflow stage
+### Search by created, modified, created by, modified by, and workflow stage
 
 [SINCE Orbeon Forms 2024.1]
 
-When the corresponding [`oxf.fr.summary.show-*` properties](/configuration/properties/form-runner-summary-page.md) are enabled, the search options area contains individual search fields which allow performing a search by created, last modified, created by, last modified by, and workflow stage.
+When the corresponding [`oxf.fr.summary.show-*` properties](/configuration/properties/form-runner-summary-page.md) are enabled, the search options area contains individual search fields which allow performing a search by created, modified, created by, modified by, and workflow stage.
 
-The created by, last modified by, and workflow stage search fields contain distinct values from accessible data.
+The created by, modified by, and workflow stage search fields contain distinct values from accessible data.
 
-![Search by created, last modified, etc.](../images/summary-search-created-last-modified.png)
+![Search by created, modified, etc.](../images/summary-search-created-last-modified.png)
 
 ### Dynamic dropdowns
 
