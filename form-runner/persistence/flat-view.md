@@ -10,12 +10,12 @@ If you're using Oracle, SQL Server [SINCE Orbeon Forms 2016.2], or DB2 [SINCE Or
 
 You enable this feature by setting the relevant property listed below to `true`.
 
-Database   | Property
----------- | -----------------------------------------------
-Oracle     | `oxf.fr.persistence.oracle.create-flat-view`
-SQL Server | `oxf.fr.persistence.sqlserver.create-flat-view`
-DB2        | `oxf.fr.persistence.db2.create-flat-view`
-PostgreSQL | `oxf.fr.persistence.postgresql.create-flat-view`
+| Database   | Property                                         |
+|------------|--------------------------------------------------|
+| Oracle     | `oxf.fr.persistence.oracle.create-flat-view`     |
+| SQL Server | `oxf.fr.persistence.sqlserver.create-flat-view`  |
+| DB2        | `oxf.fr.persistence.db2.create-flat-view`        |
+| PostgreSQL | `oxf.fr.persistence.postgresql.create-flat-view` |
 
 For instance, if using  Oracle, you set:
 
@@ -84,13 +84,13 @@ The section name is truncated to 14 characters, the control name to 15 character
 
 Examples:
 
-Section name           | Control name | Column name
----------------------- | ------------ | ---------------------------
-`personal-information` | `first-name` | `PERSONAL_INFOR_FIRST_NAME`
-                       | `last-name`  | `PERSONAL_INFOR_LAST_NAME`
-                       | `address`    | `PERSONAL_INFOR_ADDRESS`
-`company`              | `name`       | `COMPANY_NAME`
-                       | `industry`   | `COMPANY_INDUSTRY`
+| Section name           | Control name               | Column name                 |
+|------------------------|----------------------------|-----------------------------|
+| `personal-information` | `first-name`               | `PERSONAL_INFOR_FIRST_NAME` |
+| `last-name`            | `PERSONAL_INFOR_LAST_NAME` |                             |
+| `address`              | `PERSONAL_INFOR_ADDRESS`   |                             |
+| `company`              | `name`                     | `COMPANY_NAME`              |
+| `industry`             | `COMPANY_INDUSTRY`         |                             |
 
 ## Limitations
 
