@@ -6,7 +6,7 @@ Forms often participate in *workflows*, allowing collaboration between different
 
 - You can require [authentication](/form-runner/access-control/users.md) for certain pages. This way, should users try to access those pages without being logged in, they will be redirected to a login page. You can also require users not only to be logged in but to have a specific role.
 - In Form Builder, using the [Permissions dialog](/form-runner/access-control/deployed-forms.md), you can define what actions (such as filling out a new form, reading or updating data), can perform be performed by which users.
-- You can [enable or disable some of the buttons shown at the bottom of the form](/configuration/properties/form-runner/form-runner-detail-page.md#hiding-and-disabling-buttons), say depending on the role of the user viewing the form.
+- You can [enable or disable some of the buttons shown at the bottom of the form](/configuration/properties/form-runner-detail-page.md#hiding-and-disabling-buttons), say depending on the role of the user viewing the form.
 - In Form Builder, with [formulas](/form-builder/formulas.md), you can decide whether certain fields should be hidden or made read-only, for instance based on who the user is. You can do the same for entire sections of the form.
 
 As an example, in the following section we’ll explore how to use some of those features to implement a specific simple workflow.
