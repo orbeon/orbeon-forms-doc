@@ -195,7 +195,7 @@ Replacing the entire content of the uploaded file is useful for example to:
 
 ### Registering a provider
 
-The file scanning API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
+The file scan API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
 API with a provider name of `org.orbeon.oxf.xforms.upload.api.java.FileScanProvider2`.
 
 The provider must:
@@ -312,7 +312,7 @@ The `abort()` method may be called after the `complete()` method.
 
 ### Registering a provider
 
-The file scanning API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
+The file scan API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
 API with a provider name of `org.orbeon.oxf.xforms.upload.api.FileScanProvider`.
 
 The provider must:
