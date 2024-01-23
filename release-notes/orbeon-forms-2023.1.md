@@ -136,7 +136,7 @@ This new Form Builder dialog allows the form author to configure both:
 
 For more information, see the [documentation](/form-builder/messages.md).
 
-### Formula console
+### Formulas console
 
 The Formulas console allows you to view formulas errors that occur when testing a form.
 
