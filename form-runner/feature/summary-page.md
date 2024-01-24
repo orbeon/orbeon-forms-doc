@@ -31,12 +31,23 @@ The Form Runner Summary page shows, for a given published form, the list of acce
 
 It is possible to sort the data by clicking on the column headers. The sort order is indicated by an arrow next to the column name. Clicking multiple times on the same header will toggle between ascending and descending order.
 
-![Sorting](../images/summary-sorting.png)
+<img src="../images/summary-sorting.png" alt="Sorting" style="width: 50%;"/>
 
 Limitations:
 
 - Currently, all values except the "Created" and "Modified" columns are sorted as strings. This can lead to unexpected results, in particular for numbers and HTML values. Numbers will be sorted alphabetically (e.g. "1", "10", "11", "2", "37", "4", etc.) and HTML values will be sorted by their HTML representation (i.e. including HTML markup).
 - Dropdown controls will be sorted by their value, not their label.
+
+#### Enabling support
+
+Implementations of the persistence API may support the sorting feature, but they are not required to. For this reason, if your implementation does support the sorting feature, you must set the following property to `true` for your provider:
+
+```xml
+<property 
+    as="xs:boolean" 
+    name="oxf.fr.persistence.[provider].sort"
+    value="true"/>
+```
 
 ## Search 
 
@@ -52,7 +63,7 @@ When the corresponding [`oxf.fr.summary.show-*` properties](/configuration/prope
 
 The created by, modified by, and workflow stage search fields contain distinct values from accessible data.
 
-![Search by created, modified, etc.](../images/summary-search-created-last-modified.png)
+<img src="../images/summary-search-created-last-modified.png" alt="Search by created, modified, etc." style="width: 75%;"/>
 
 ### Dynamic dropdowns
 

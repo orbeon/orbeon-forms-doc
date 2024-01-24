@@ -113,6 +113,7 @@ This requires setting more properties. Here is an example with MySQL, which allo
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_acme.lease"        value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_acme.reindex"      value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_acme.reencrypt"    value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_acme.sort"         value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_acme.active"       value="true"/>
 
 <property as="xs:anyURI"  name="oxf.fr.persistence.mysql_ajax.uri"          value="/fr/service/mysql"/>
@@ -123,6 +124,7 @@ This requires setting more properties. Here is an example with MySQL, which allo
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_ajax.lease"        value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_ajax.reindex"      value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_ajax.reencrypt"    value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_ajax.sort"         value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_ajax.active"       value="true"/>
 ```
 

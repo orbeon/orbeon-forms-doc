@@ -239,6 +239,10 @@ You associate each datasource with a Form Runner *persistence provider* with the
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.autosave"    value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.permissions" value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.versioning"  value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.lease"       value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.reindex"     value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.reencrypt"   value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.sort"        value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_foo.active"      value="true"/>
 
 <property as="xs:anyURI"  name="oxf.fr.persistence.mysql_bar.uri"         value="/fr/service/mysql"/>
@@ -246,6 +250,10 @@ You associate each datasource with a Form Runner *persistence provider* with the
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.autosave"    value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.permissions" value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.versioning"  value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.lease"       value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.reindex"     value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.reencrypt"   value="true"/>
+<property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.sort"        value="true"/>
 <property as="xs:boolean" name="oxf.fr.persistence.mysql_bar.active"      value="true"/>
 ```
 
