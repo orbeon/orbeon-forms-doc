@@ -247,7 +247,7 @@ Prefer using first the `getForm()` function, and then, on the object returned, t
 
 ## Setting a control's value
 
-You can set a control's value using the [XForms client-side JavaScript API](/xforms/client-side-javascript-api.md).
+You can set a control's value using the [XForms JavaScript API](/xforms/client-side-javascript-api.md).
 
 For example, here is how to set the value of a text field called `my-field` to the value "Hello!":
 
@@ -383,4 +383,4 @@ ORBEON.fr.API.errorSummary.removeNavigateToErrorListener(fn)
 ## See also
 
 - [Adding your own JavaScript](/configuration/properties/form-runner.md#adding-your-own-javascript)
-- [XForms client-side JavaScript API](/xforms/client-side-javascript-api.md)
+- [XForms JavaScript API](/xforms/client-side-javascript-api.md)

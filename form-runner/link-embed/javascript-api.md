@@ -181,7 +181,7 @@ The JavaScript embedding API has the same [limitations as the Java embedding API
 
 ## See also
 
-- [Client-side JavaScript API](/xforms/client-side-javascript-api.md)
+- [XForms JavaScript API](/xforms/client-side-javascript-api.md)
 - [Form Runner JavaScript API](/form-runner/api/other/form-runner-javascript-api.md)
 
 [h]: https://developer.mozilla.org/en-US/docs/Web/API/Headers

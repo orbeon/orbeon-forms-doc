@@ -233,7 +233,7 @@
         * [Validation](xforms/validation.md)
         * [Variables](xforms/variables.md)
         * [Keyboard focus](xforms/focus.md)
-        * [Client-side JavaScript API](xforms/client-side-javascript-api.md)
+        * [XForms JavaScript API](xforms/client-side-javascript-api.md)
         * [Error handling](xforms/error-handling.md)
             * [Detailed behavior](xforms/error-handling-detailed-behavior.md)
         * [Model-Bind variables](xforms/model-bind-variables.md)
