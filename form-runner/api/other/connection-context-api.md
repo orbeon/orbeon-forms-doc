@@ -87,7 +87,23 @@ public interface ConnectionContextProvider<Context extends Object> {
 
 ### Registering a provider
 
-You implement an instance of the interface above, and register it with Orbeon Forms by adding a file called:
+The connection context API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) API with a provider name of `org.orbeon.connection.ConnectionContextProvider`.
+
+The provider must:
+
+- be a public class
+- have a public no-arguments constructor
+- implement the `ConnectionContextProvider` Java interface
+
+To enable a provider with Orbeon Forms:
+
+- create your provider as per the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) 
+- create a JAR file containing the code or your provider
+- place your JAR file under the Orbeon Forms `WEB-INF/lib` directory
+
+The Orbeon Forms log files will log errors if any when starting if the provider was found but could not be instantiated.
+
+For example, implement an instance of the interface above, and register it with Orbeon Forms by adding a file called:
 
 ```
 META-INF/services/org.orbeon.connection.ConnectionContextProvider
@@ -99,10 +115,7 @@ The file contains a single line with the fully-qualified name of the implementat
 com.example.MyConnectionContextProvider
 ```
 
-This file and directory hierarchy can be placed within the web application:
-
-- in a JAR file under `WEB-INF/lib`
-- or directly under `WEB-INF/classes`
+This file and directory hierarchy are placed within the web application in a JAR file under `WEB-INF/lib`.
 
 ## See also
 
