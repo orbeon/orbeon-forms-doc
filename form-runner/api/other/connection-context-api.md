@@ -2,7 +2,7 @@
 
 ## Availability
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+[\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
 
 ## Rationale
 
