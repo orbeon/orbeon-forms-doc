@@ -342,3 +342,8 @@ is a Java example of a provider which does nothing but:
 The service provider is described with this [`META-INF/services/org.orbeon.oxf.xforms.upload.api.FileScanProvider`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-example/src/main/resources/META-INF/services/org.orbeon.oxf.xforms.upload.api.FileScanProvider) file. 
 
 The example project is provided [here](https://github.com/orbeon/orbeon-forms/tree/master/file-scan-example).
+
+## See also
+
+- [Connection context API](connection-context-api.md)
+- [Form Runner APIs](../README.md)
