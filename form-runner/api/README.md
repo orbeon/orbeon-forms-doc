@@ -16,6 +16,7 @@ Form Runner offers a number of integration APIs, including:
     - [Reindexing API](/form-runner/api/persistence/reindexing.md)
     - [Implementing a persistence service](/form-runner/api/persistence/implementing-a-persistence-service.md)
 - Other APIs
+    - [Connection context API](/form-runner/api/other/connection-context-api.md)
     - [Duplicate form data API](/form-runner/api/other/duplicate-form-data.md)
     - [File scan API](/form-runner/api/other/file-scan-api.md)
     - [Form Runner JavaScript API](/form-runner/api/other/form-runner-javascript-api.md)
