@@ -457,9 +457,11 @@ In previous versions, in some cases, `PUT`ting data for a non-existent form defi
 
 ### eXist DB removal
 
-This version of Orbeon Forms removes support for the eXist DB database. Use of this database has been deprecated for a long time, and we have not been able to maintain it for a while. If you are using eXist DB, please migrate to a [relational database](/form-runner/persistence/relational-db.md).
+This version of Orbeon Forms removes Form Runner support for the eXist DB database. Use of this database in this context has been deprecated for a long time, and we have not been able to maintain it for a while. If you are using eXist DB, please migrate to a [relational database](/form-runner/persistence/relational-db.md).
 
 The demo/samples forms that ship with Orbeon Forms now use an embedded relational SQLite database.
+
+Note that the above removal regards eXist support by Form Runner only. You can still use eXist with plain XForms applications, by using `<xf:submission>` and an external eXist database.
 
 ###  web.xml
 
