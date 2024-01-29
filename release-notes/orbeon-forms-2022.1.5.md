@@ -10,7 +10,7 @@ Today we released Orbeon Forms 2022.1.5 PE! This maintenance release contains bu
 - [Orbeon Forms 2022.1.1 PE](orbeon-forms-2022.1.1.md)
 - [Orbeon Forms 2022.1 PE](orbeon-forms-2022.1.md)
 
-This release also addresses the following issues since [Orbeon Forms 2022.1.4 PE](orbeon-forms-2022.1.3.md):
+This release also addresses the following issues since [Orbeon Forms 2022.1.4 PE](orbeon-forms-2022.1.4.md):
 
 - Security
     - Remove old XPath and Transformations Sandbox ([\#5943](https://github.com/orbeon/orbeon-forms/issues/5943))
