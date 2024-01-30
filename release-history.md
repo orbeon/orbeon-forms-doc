@@ -8,7 +8,7 @@ See the [Orbeon Forms roadmap](roadmap.md).
 
 Starting with Orbeon Forms 2016.1, Orbeon Forms uses a versioning scheme with the number of the year first followed by the number of the major release during that year.
 
-Since 2020 we have switched to one major release per year. Minor releases, when needed, have an extra digit like 2018.1.1, 2018.1.2, etc. This doesn't impact subscriptions or support.
+Since 2020 we have switched to one major release per year. Minor releases, when needed, have an extra digit like 2023.1.1, 2023.1.2, etc. This doesn't impact subscriptions or support.
 
 ## Orbeon Forms 4.0 and newer
 
