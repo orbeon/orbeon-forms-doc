@@ -4,7 +4,7 @@ __Tuesday, January 30, 2024__
 
 Today we released Orbeon Forms 2022.1.6 PE! This maintenance release contains bug-fixes and minor new features and is recommended for all users of:
 
-- [Orbeon Forms 2022.1.4 PE](orbeon-forms-2022.1.5.md)
+- [Orbeon Forms 2022.1.5 PE](orbeon-forms-2022.1.5.md)
 - [Orbeon Forms 2022.1.4 PE](orbeon-forms-2022.1.4.md)
 - [Orbeon Forms 2022.1.3 PE](orbeon-forms-2022.1.3.md)
 - [Orbeon Forms 2022.1.2 PE](orbeon-forms-2022.1.2.md)
