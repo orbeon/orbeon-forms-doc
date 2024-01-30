@@ -174,9 +174,9 @@ This is as opposed to validation that occurs only when you press a "submit" or "
 
 One benefit of as-you-type validation is that it allows the user to detect errors faster.
 
-### Can I use Form Builder to create a form, and put the form on my web site?
+### Can I use Form Builder to create a form, and put the form on my website?
 
-You can't just put the files produced by Form Builder or the HTML produced by the Form Runner runtime on a web site. The main reason is that forms produced by Form Builder need the server-side Form Runner runtime to function.
+You can't just put the files produced by Form Builder or the HTML produced by the Form Runner runtime on a website. The main reason is that forms produced by Form Builder need the server-side Form Runner runtime to function.
 
 If you have installed the Form Runner runtime on a server, then you can run Form Runner alongside your other web pages or applications. Please note that Form Runner requires a Java servlet container.
 

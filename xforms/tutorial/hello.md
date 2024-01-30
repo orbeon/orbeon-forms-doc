@@ -4,7 +4,7 @@
 
 ## Running the Hello application
 
-The Hello application is about the simplest Orbeon Forms application you can think of. It asks for your name and displays it back. Here is a direct link for running XForms Hello [online on the Orbeon web site](http://demo.orbeon.com/orbeon/xforms-hello/).
+The Hello application is about the simplest Orbeon Forms application you can think of. It asks for your name and displays it back. Here is a direct link for running XForms Hello [online on the Orbeon website](http://demo.orbeon.com/orbeon/xforms-hello/).
 
 Simply enter your first name in the input field, for example "Joe". You should promptly see a message underneath saying "Hello, Joe!".
 

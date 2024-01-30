@@ -50,7 +50,7 @@ If you don't have Java installed yet, download it from https://www.oracle.com/ja
 
 Tomcat is the container application into which Orbeon Forms deploys. Follow these steps to download and install Tomcat if you don't have it installed yet:
 
-1. Download Tomcat (see [supported versions](/installation/tomcat.md)) from the [Apache web site](http://tomcat.apache.org/).
+1. Download Tomcat (see [supported versions](/installation/tomcat.md)) from the [Apache website](http://tomcat.apache.org/).
 
 2. Install Tomcat as per the instructions. If you downloaded the installer version (Windows only), run the installer. If you downloaded a compressed archive, uncompress it to the location of your choice. We call the install location `TOMCAT_HOME` (on windows, this could be `c:/Program Files/Apache/Tomcat`, on a Unix system, `/home/jdoe/tomcat`, etc.).
 
@@ -93,7 +93,7 @@ You should see the Orbeon Forms welcome page:
 
 ### Running the Hello application
 
-The Hello application is about the simplest Orbeon Forms application you can think of. It asks for your name and displays it back. Here is a direct link for running XForms Hello [online on the Orbeon web site][6].
+The Hello application is about the simplest Orbeon Forms application you can think of. It asks for your name and displays it back. Here is a direct link for running XForms Hello [online on the Orbeon website][6].
 
 Simply enter your first name in the input field, for example "Joe". You should promptly see a message underneath saying "Hello, Joe!".
 
@@ -291,7 +291,7 @@ In this section, you will create a more complete XForms application: the Bookcas
 
 ![][11]
 
-You can run the final application [online on the Orbeon web site][12].
+You can run the final application [online on the Orbeon website][12].
 
 ### Getting started
 

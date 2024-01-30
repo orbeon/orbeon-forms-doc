@@ -6,7 +6,7 @@ The purpose of this page is to index features, their documentation and [blog pos
 
 ## See also
 
-- [Orbeon web site](https://www.orbeon.com/)
+- [Orbeon website](https://www.orbeon.com/)
 - [Orbeon blog](https://blog.orbeon.com/)
 
 ## Status

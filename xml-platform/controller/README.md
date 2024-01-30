@@ -17,7 +17,7 @@ The PFC encourages designing applications with a total separation between:
 * **Site Logic** or **Page Flow**: when, and how to navigate from one page to another.
 * **Page Logic** (the MVC page model): how data entered by the user is processed (for example validated, then fed to a backend), and how data is retrieved from a backend.
 * **Page Layout** (the MVC page view): how information is displayed and presented to the user.
-* **Site Presentation**: the layout and look and feel common to all pages in the web application or the web site, e.g.: site navigation menus, headers and footers, table backgrounds, or number formatting.
+* **Site Presentation**: the layout and look and feel common to all pages in the web application or the website, e.g.: site navigation menus, headers and footers, table backgrounds, or number formatting.
 
 _NOTE: By default, the PFC is configured in `web.xml` as the main processor for the Orbeon Forms servlet and portlet. However, you are not required to use the PFC with Orbeon Forms: you can define your own main processor for servlets and portlets, as documented in [Packaging and Deployment][2]. For most web applications, the PFC should be used._
 

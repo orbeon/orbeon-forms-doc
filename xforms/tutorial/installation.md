@@ -10,7 +10,7 @@ If you don't have Java installed yet, download it from https://www.oracle.com/ja
 
 Tomcat is the container application into which Orbeon Forms deploys. Follow these steps to download and install Tomcat if you don't have it installed yet:
 
-1. Download Tomcat (see [supported versions](/installation/tomcat.md)) from the [Apache web site](http://tomcat.apache.org/).
+1. Download Tomcat (see [supported versions](/installation/tomcat.md)) from the [Apache website](http://tomcat.apache.org/).
 
 2. Install Tomcat as per the instructions. If you downloaded the installer version (Windows only), run the installer. If you downloaded a compressed archive, uncompress it to the location of your choice. We call the install location `TOMCAT_HOME` (on windows, this could be `c:/Program Files/Apache/Tomcat`, on a Unix system, `/home/jdoe/tomcat`, etc.).
 
