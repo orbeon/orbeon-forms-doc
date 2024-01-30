@@ -461,7 +461,7 @@ This version of Orbeon Forms removes Form Runner support for the eXist DB databa
 
 The demo/samples forms that ship with Orbeon Forms now use an embedded relational SQLite database.
 
-Note that the above removal regards eXist support by Form Runner only. You can still use eXist with plain XForms applications, by using `<xf:submission>` and an external eXist database.
+__Note that the above removal regards eXist support by Form Runner only. You can still use eXist with plain XForms applications, by using `<xf:submission>` and an external eXist database.__
 
 ###  web.xml
 
