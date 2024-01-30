@@ -4,7 +4,7 @@ __Tuesday, January 30, 2024__
 
 Today we released Orbeon Forms 2022.1.6 PE! This maintenance release contains bug-fixes and minor new features and is recommended for all users of:
 
-- [Orbeon Forms 2022.1.4 PE](orbeon-forms-2022.1.5.md),
+- [Orbeon Forms 2022.1.4 PE](orbeon-forms-2022.1.5.md)
 - [Orbeon Forms 2022.1.4 PE](orbeon-forms-2022.1.4.md)
 - [Orbeon Forms 2022.1.3 PE](orbeon-forms-2022.1.3.md)
 - [Orbeon Forms 2022.1.2 PE](orbeon-forms-2022.1.2.md)
@@ -14,39 +14,39 @@ Today we released Orbeon Forms 2022.1.6 PE! This maintenance release contains bu
 This release also addresses the following issues since [Orbeon Forms 2022.1.5 PE](orbeon-forms-2022.1.5.md):
 
 - Security
-    - Use 16 byte (128 bits) instead of 8 byte (64 bits) salt for FIPS compliance #6146
+    - Use 16 byte (128 bits) instead of 8 byte (64 bits) salt for FIPS compliance ([\#6146](https://github.com/orbeon/orbeon-forms/issues/6146))
 - Form Builder
-    - Choices Editor: missing space around checkboxes #5985
-    - Drag-and-dropping and removing a row in a `fb:dnd-repeat` causes an exception #6000
+    - Choices Editor: missing space around checkboxes ([\#5985](https://github.com/orbeon/orbeon-forms/issues/5985))
+    - Drag-and-dropping and removing a row in a `fb:dnd-repeat` causes an exception ([\#6000](https://github.com/orbeon/orbeon-forms/issues/6000))
 - Form Runner
     - Email
-        - Migration code to fix forms incorrectly migrated `AllControlValuesParam(all)` #6127
-        - Email parameters lost in 2022 migration, not read from 2023 form definition #6149
+        - Migration code to fix forms incorrectly migrated `AllControlValuesParam(all)` ([\#6127](https://github.com/orbeon/orbeon-forms/issues/6127))
+        - Email parameters lost in 2022 migration, not read from 2023 form definition ([\#6149](https://github.com/orbeon/orbeon-forms/issues/6149))
     - PDF
-        - "Test PDF" fails for DMV-14 form #6035
-        - "Test PDF" fails with error #6034
+        - "Test PDF" fails for DMV-14 form ([\#6035](https://github.com/orbeon/orbeon-forms/issues/6035))
+        - "Test PDF" fails with error ([\#6034](https://github.com/orbeon/orbeon-forms/issues/6034))
     - Other
-        - Date picker causes `StringIndexOutOfBoundsException` #5936
-        - Option for landing, forms, and admin pages to link to summary page without form version #6017
-        - Image Attachment settings are no longer persisted in form definition #5811
-        - Import: way to validate item values #6008
-        - "_.isUndefined is not a function" when testing with Subject7 #6126
-        - NPE in `getLast()` #6016
-        - When the itemset changes, always send the current value, even if it is unchanged #5986
-        - JavaScript error "/ by zero" with attachment field #6029
-        - Localize error message on search for summary and landing pages #6030
-        - Setting `oxf.xforms.xbl.fr.number.grouping-separator` to a space has no effect #6027
-        - Support `xxf:itemset()` on `fr:open-select1` #6047
-        - Loading indicator may never hide when `delay-before-display-loading > 0` #6144
-        - XML Schema validation: extra space in filename attribute name #6134
-        - Assertion failed in `XFormsControlLifecycleHandler.scala` #6065
+        - Date picker causes `StringIndexOutOfBoundsException` ([\#5936](https://github.com/orbeon/orbeon-forms/issues/5936))
+        - Option for landing, forms, and admin pages to link to summary page without form version ([\#6017](https://github.com/orbeon/orbeon-forms/issues/6017))
+        - Image Attachment settings are no longer persisted in form definition ([\#5811](https://github.com/orbeon/orbeon-forms/issues/5811))
+        - Import: way to validate item values ([\#6008](https://github.com/orbeon/orbeon-forms/issues/6008))
+        - "_.isUndefined is not a function" when testing with Subject7 ([\#6126](https://github.com/orbeon/orbeon-forms/issues/6126))
+        - NPE in `getLast()` ([\#6016](https://github.com/orbeon/orbeon-forms/issues/6016))
+        - When the itemset changes, always send the current value, even if it is unchanged ([\#5986](https://github.com/orbeon/orbeon-forms/issues/5986))
+        - JavaScript error "/ by zero" with attachment field ([\#6029](https://github.com/orbeon/orbeon-forms/issues/6029))
+        - Localize error message on search for summary and landing pages ([\#6030](https://github.com/orbeon/orbeon-forms/issues/6030))
+        - Setting `oxf.xforms.xbl.fr.number.grouping-separator` to a space has no effect ([\#6027](https://github.com/orbeon/orbeon-forms/issues/6027))
+        - Support `xxf:itemset()` on `fr:open-select1` ([\#6047](https://github.com/orbeon/orbeon-forms/issues/6047))
+        - Loading indicator may never hide when `delay-before-display-loading > 0` ([\#6144](https://github.com/orbeon/orbeon-forms/issues/6144))
+        - XML Schema validation: extra space in filename attribute name ([\#6134](https://github.com/orbeon/orbeon-forms/issues/6134))
+        - Assertion failed in `XFormsControlLifecycleHandler.scala` ([\#6065](https://github.com/orbeon/orbeon-forms/issues/6065))
     - Embedding
-        - Extraneous `/` in requests to XForms Server with embedding #6066
-        - Second embedding not having any effect when using JavaScript embedding API #6079
-        - Portlet: error when attempting to read autosaved draft #6139
-        - Offline: `format-dateTime()` doesn't work #5976
-        - Offline: "Upload complete" message is not clear #6171
-        - Clarify Liferay handling of history API #4127
+        - Extraneous `/` in requests to XForms Server with embedding ([\#6066](https://github.com/orbeon/orbeon-forms/issues/6066))
+        - Second embedding not having any effect when using JavaScript embedding API ([\#6079](https://github.com/orbeon/orbeon-forms/issues/6079))
+        - Portlet: error when attempting to read autosaved draft ([\#6139](https://github.com/orbeon/orbeon-forms/issues/6139))
+        - Offline: `format-dateTime()` doesn't work ([\#5976](https://github.com/orbeon/orbeon-forms/issues/5976))
+        - Offline: "Upload complete" message is not clear ([\#6171](https://github.com/orbeon/orbeon-forms/issues/6171))
+        - Clarify Liferay handling of history API ([\#4127](https://github.com/orbeon/orbeon-forms/issues/4127))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
 
