@@ -161,7 +161,6 @@ See also:
 
 - [The `FormRunnerForm` object](/form-runner/api/other/form-runner-javascript-api.md#the-formrunnerform-object)
 - [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback)
-- [`embedForm()` API](/form-runner/link-embed/javascript-api.md#embedform-api)
 
 ### `destroyForm()`
 
