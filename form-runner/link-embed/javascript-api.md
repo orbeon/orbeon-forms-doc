@@ -127,7 +127,7 @@ ORBEON.fr.API.embedForm(
 | queryString | Yes               | String       | `"job=clerk"`                   | Additional query parameters                                   |
 | headers     | Yes               | [Headers][h] | `new Headers({ 'Foo': 'bar' })` | Additional HTTP headers; see point 2 below                    |
 
-1. The `documentId` parameter is mandatory for modes other than `new`, and must be `undefined` when the mode is `new`. For `new`, if you don't need to pass ny of parameters after `documentId`, you can just omit the `documentId` and all subsequent parameters in your call to `ORBEON.fr.API.embedForm()`; otherwise, you must explicitly pass `undefined` as the value of `documentId`.
+1. The `documentId` parameter is mandatory for modes other than `new`, and must be `undefined` when the mode is `new`. For `new`, if you don't need to pass any of the parameters after `documentId`, you can just omit the `documentId` and all subsequent parameters in your call to `ORBEON.fr.API.embedForm()`; otherwise, you must explicitly pass `undefined` as the value of `documentId`.
 2. The `headers` parameter is supported [SINCE Orbeon Forms 2021.1.1]. You can also access the value of such headers in the form you're embedding with the function [`xxf:get-request-header()`](/xforms/xpath/extension-http.md#xxfget-request-header).
 
 [SINCE Orbeon Forms 2022.1]
