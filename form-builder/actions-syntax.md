@@ -335,6 +335,30 @@ For example, the Form Runner Landing page runs multiple background services to l
 
 In the future, asynchronous actions will likely be enabled by default.
 
+## Resolution of form controls
+
+Many individual actions refer to form controls. When form controls are present in a repeated section or repeated grid, there can be ambiguity as to which control is being referred to.
+
+For this reason, an optional `at` attribute can be specified. That attribute is a space-separated list of tokens, one for each repetition level.
+
+A token can take the following values:
+
+- `start`: the first repetition
+- `end`: the last repetition
+- a strictly positive integer: the repetition at that specific position
+- `all`: all controls [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+When the `at` attribute is not present, it defaults to being relative to the action source. This usually means targeting the first repetition.
+
+Example:
+
+```xml
+<fr:control-setvalue 
+      value="'42'" 
+      control="my-repeated-value" 
+      at="all"/>
+```
+
 ## Individual actions
 
 ### Calling a service
@@ -534,7 +558,7 @@ With `my-repeated-grid` nested within `my-repeated-section`:
 | `control` | Yes       | control name                                                           |                                         |
 | `value`   | Yes       | value expression                                                       | value to set                            | |
 | `at`      | No        | space-delimited position tokens: `start`, `end`, or a positive integer | missing leading tokens default to `end` |
- 
+
 ```xml
 <fr:control-setvalue
     control="my-control"
