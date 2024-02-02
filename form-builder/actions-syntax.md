@@ -350,13 +350,22 @@ A token can take the following values:
 
 When the `at` attribute is not present, it defaults to being relative to the action source. This usually means targeting the first repetition.
 
-Example:
+The following example sets the value of the control `my-repeated-value` in all repetitions of the `my-repeated-value` repeated grid to `42`
 
 ```xml
 <fr:control-setvalue 
-      value="'42'" 
-      control="my-repeated-value" 
-      at="all"/>
+    value="'42'" 
+    control="my-repeated-value" 
+    at="all"/>
+```
+
+Assume now that the control `my-repeated-value` is within a repeated grid, itself nested within two levels of repeated sections. The following example sets the value of the control `my-repeated-value` in the third repetition of the last repetition of the first repetition to `42`:
+
+```xml
+<fr:control-setvalue 
+    value="'42'" 
+    control="my-repeated-value" 
+    at="start end 3"/>
 ```
 
 ## Individual actions
