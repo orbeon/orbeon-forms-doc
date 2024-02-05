@@ -267,6 +267,9 @@ When this is enabled, the following portal URL parameters are propagated to Orbe
 - `orbeon-form`: the Form Runner form name
 - `orbeon-document`: the Form Runner document (for `edit` and `view` pages)
 - `orbeon-page`: the Form Runner page (`new`, `edit`, or `view`)
+- `orbeon-draft`
+    - [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+    - when `orbeon-document` is set, whether the document is a draft or not (`true` or `false`)
 
 ### Disabling short namespaces
 
