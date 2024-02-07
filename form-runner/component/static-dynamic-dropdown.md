@@ -44,6 +44,13 @@ The dropdown "with search" doesn't use the native browser dropdown, but instead 
 
 ## Dynamic dropdowns
 
+<figure>
+    <img src="images/dynamic-data-dropdown-search-combinations.png" width="361">
+    <figcaption>Different combinations of features</figcaption>
+</figure>
+
+The Venn diagram above illustrates the various ways in which the features of dynamic dropdowns can be combined. Areas marked with an "x" indicate combinations that are not feasible. Specifically, enabling both the service to perform the search and auto-selection simultaneously is impossible. This is due to the requirement for auto-selection to know all possible choices beforehand, necessitating the service to return all possible options. However, when the service conducts a search, it only returns a subset of the possible choices based on the user's input. The remaining areas depict the six feasible combinations of features.
+
 ### Extracting choices from your service response
 
 Your service must either return XML or JSON. (If it returns JSON the result will first be [converted to XML](/xforms/submission-json.md), so Orbeon Forms can run XPath expressions on it.) Say your service returns a list of countries as follows, here including just the first 3 countries:
