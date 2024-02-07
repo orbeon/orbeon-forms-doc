@@ -48,6 +48,36 @@ In Form Builder, the inserted section templates show, at the top, the following 
 - section template section name
 - section template library version
 
+[\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+
+When inserting a section template, the following information is copied over to the current form:
+
+- section title
+- section help
+- custom CSS classes
+- Visibility and Readonly formulas for the section itself
+
+Visibility and Readonly formulas are special, as, when edited within the library:
+
+- it usually doesn't make sense for these formulas to refer to control values *within* the section itself
+- they can refer to data and form controls from other sections
+
+However, when inserted into a form, these formulas typically do not have access to other sections. As a workaround, they can depend on the enclosing form's data using formulas of the following shape:
+
+```
+xxf:instance('|fr-form-instance|')//my-control-name
+```
+
+In addition, they can depend on values from known sections using the `fr:control-string-value()` function, for example:
+
+```
+fr:control-string-value('my-control-name', false(), 'my-section-name')
+```
+
+If possible, the section name from the library is now preserved. If there is already a section with the same name in the enclosing form, a new name is generated.
+
+After insertion, you can modify those settings using the "Section/Grid Settings" dialog. 
+
 ## Services and actions
 
 ### Introduction

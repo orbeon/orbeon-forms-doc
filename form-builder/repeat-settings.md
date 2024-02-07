@@ -7,7 +7,7 @@ Form Builder supports grids and sections with repeated content.
 - With grids, you can repeat a single row (which is the most common case), or multiple heterogeneous rows (with different controls).
 - With sections, you can repeat the entire content of the section a number of times.
 
-Both repeated grids and repeated sections have *repeat settings* in the "Section/Grids Settings" dialog's "Repeated Content" tab.
+Both repeated grids and repeated sections have *repeat settings* in the "Section/Grid Settings" dialog's "Repeated Content" tab.
 
 ![Repeated Content](images/container-settings-repeated-content.png)
 
