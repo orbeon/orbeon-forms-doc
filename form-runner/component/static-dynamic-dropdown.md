@@ -44,12 +44,18 @@ The dropdown "with search" doesn't use the native browser dropdown, but instead 
 
 ## Dynamic dropdowns
 
+### Features combinations
+
+The Venn diagram below illustrates the various ways in which the features of dynamic dropdowns can be combined:
+
+- Areas marked with an "x" indicate combinations that are not feasible. Specifically, enabling both the service to perform the search and auto-selection simultaneously is impossible. This is because auto-selection requires knowing all possible choices beforehand, necessitating the service to return all possible options. However, when the service conducts a search, it only returns a subset of the possible choices based on the user's input.
+- The remaining areas depict the six feasible combinations of features.
+- Among those areas, caution is advised regarding #6, i.e., combining open selection with auto-selection. Consider a dropdown for a street number and a service that returns all known numbers on a given street. After the user selects a street, if the service only knows about one number on that street, that number will be auto-selected. If open selection is enabled, the user will be able to change the number, but the experience of having an unwanted number selected by default might be confusing. Therefore, it might be wise to be cautious about enabling both features simultaneously.
+
 <figure>
     <img src="images/dynamic-data-dropdown-search-combinations.png" width="361">
     <figcaption>Different combinations of features</figcaption>
 </figure>
-
-The Venn diagram above illustrates the various ways in which the features of dynamic dropdowns can be combined. Areas marked with an "x" indicate combinations that are not feasible. Specifically, enabling both the service to perform the search and auto-selection simultaneously is impossible. This is due to the requirement for auto-selection to know all possible choices beforehand, necessitating the service to return all possible options. However, when the service conducts a search, it only returns a subset of the possible choices based on the user's input. The remaining areas depict the six feasible combinations of features.
 
 ### Extracting choices from your service response
 
