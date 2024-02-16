@@ -49,7 +49,7 @@ It is possible to restrict the "Show on Summary page" and "Allow bulk edit" opti
 
 <figure>
     <picture>
-        <img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="75%">
+        <img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="50%">
     </picture>
     <figcaption>Role restriction</figcaption>
 </figure>
@@ -62,7 +62,7 @@ By default, bulk edition of form data on the Summary Page will simply save the u
 
 <figure>
     <picture>
-        <img alt="Bulk process" src="images/control-settings-bulk-process.png" width="75%">
+        <img alt="Bulk process" src="images/control-settings-bulk-process.png" width="50%">
     </picture>
     <figcaption>Bulk process</figcaption>
 </figure>
