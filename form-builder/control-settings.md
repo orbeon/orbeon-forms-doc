@@ -47,7 +47,28 @@ The following options are available:
 
 It is possible to restrict the "Show on Summary page" and "Allow bulk edit" options to one or more specific roles (i.e. group of users). When multiple roles are specified, the logic that applies can be chosen as well. If "All" is selected, then all specified roles must be present. If "Any" is selected, just one of the specified roles must be present.
 
-![Role restriction](images/control-settings-restrict-to-role.png)
+<img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="75%">
+
+##### Bulk action
+
+[SINCE Orbeon Forms 2024.1]
+
+By default, bulk edition of form data on the Summary Page will simply save the updated form data. You can also specify a custom process to run by selecting "Run process" instead of "Save data".
+
+<img alt="Bulk process" src="images/control-settings-bulk-process.png" width="75%">
+
+The selected process is responsible for saving the data.
+
+It's possible to specify a list of processes available for selection in the Control Settings dialog. This is done by specifying the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.summary.bulk-processes.*.*"
+    value="process1 process2"/>
+```
+
+The value is a space-separated list of process names. By default, this property is empty.
 
 ##### Email options
     
