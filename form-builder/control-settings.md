@@ -47,7 +47,7 @@ The following options are available:
 
 It is possible to restrict the "Show on Summary page" and "Allow bulk edit" options to one or more specific roles (i.e. group of users). When multiple roles are specified, the logic that applies can be chosen as well. If "All" is selected, then all specified roles must be present. If "Any" is selected, just one of the specified roles must be present.
 
-<img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="75%">
+<img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="300">
 
 ##### Bulk action
 
@@ -55,7 +55,7 @@ It is possible to restrict the "Show on Summary page" and "Allow bulk edit" opti
 
 By default, bulk edition of form data on the Summary Page will simply save the updated form data. You can also specify a custom process to run by selecting "Run process" instead of "Save data".
 
-<img alt="Bulk process" src="images/control-settings-bulk-process.png" width="75%">
+<img alt="Bulk process" src="images/control-settings-bulk-process.png" width="300">
 
 The selected process is responsible for saving the data.
 
