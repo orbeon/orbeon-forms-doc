@@ -33,6 +33,8 @@ See [Tomcat](tomcat.md).
 
 Orbeon Forms supports both the Java Servlet and Jakarta Servlet APIs, without any extra configuration, which means that the same `orbeon.war` file can be deployed in Tomcat 9, Tomcat 10, WildFly 26, or WildFly 27+, for example.
 
+To support both of those APIs, the various Orbeon servlet, filters, and listeners are now dynamically instantiated instead of being referenced in `web.xml`. If you need to disable that dynamic instantiation mechanism, you can remove the `servlet-container-initializer.jar` file from the `WEB-INF/lib` directory of the `orbeon.war` file.
+
 ## Hardware requirements
 
 We recommend you run Orbeon Forms on a dedicated server or instance that satisfies the following requirements:
