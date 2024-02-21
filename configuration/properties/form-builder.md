@@ -174,7 +174,7 @@ If you'd like to have multiple classes of Form Builder users where some can edit
 
 [SINCE Orbeon Forms 2018.1]
 
-To enable form authors to edit text with formatting shown by the Explanatory Text control, Form Builder uses the TinyMCE component. You can [configure the TinyMCE](https://www.tiny.cloud/docs/configure/) by providing your own config as JSON as the value of the `oxf.fb.tinymce.config` property, with a syntax along these lines:
+When form authors edit an Explanatory Text, Form Builder utilizes the TinyMCE component. You can [configure TinyMCE](https://www.tiny.cloud/docs/configure/) by supplying your own configuration in JSON as the value for the `oxf.fb.tinymce.config` property. If you do not set the `oxf.fb.tinymce.config` property, Form Builder defaults to a configuration, which can be found at the bottom of [`TinyMce.scala`](https://github.com/orbeon/orbeon-forms/blob/master/web-facades/src/main/scala/org/orbeon/facades/TinyMce.scala).   
 
 ```xml
 <property as="xs:string"  name="oxf.fb.tinymce.config">
