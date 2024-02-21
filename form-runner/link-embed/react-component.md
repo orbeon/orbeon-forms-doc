@@ -11,7 +11,7 @@ The Orbeon Forms React component can be used in any React application. To use it
 ```json
 {
   "dependencies": {
-    "@orbeon/react": "^1.0.5"
+    "@orbeon/react": "^1.0.6"
   }
 }
 ```
