@@ -2,7 +2,9 @@
 
 ## Availability
 
-The React component is available from [the npm package registry](https://www.npmjs.com/package/@orbeon/react).
+- [SINCE Orbeon Forms 2022.1.6, 2023.1.1]
+- This is an [Orbeon Forms PE](https://www.orbeon.com/download) feature.
+- The React component is available from [the npm package registry](https://www.npmjs.com/package/@orbeon/react).
 
 ## Usage
 
