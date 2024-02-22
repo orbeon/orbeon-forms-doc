@@ -11,7 +11,7 @@ The Orbeon Forms React component can be used in any React application. To use it
 ```json
 {
   "dependencies": {
-    "@orbeon/react": "^1.0.6"
+    "@orbeon/react": "^1.0.7"
   }
 }
 ```
@@ -32,13 +32,15 @@ The component is used as follows:
 
 The properties have the same meaning as in the [JavaScript embedding API](/form-runner/link-embed/javascript-api.md):
 
-| Parameter     | Optional                             | Example                          | Description                                             |
-|---------------|--------------------------------------|----------------------------------|---------------------------------------------------------|
-| orbeonContext | No                                   | `'http://localhost:8080/orbeon'` | Context where Orbeon Forms is deployed                  |
-| app           | No                                   | `'human-resources'`              | App name                                                |
-| form          | No                                   | `'job-application'`              | Form name                                               |
-| mode          | No                                   | `'new'`                          | Either `'new'`, `'edit'`, or `'view'`                   |
-| documentId    | Mandatory for modes other than `new` |                                  | For modes other than `'new'`, the document to be loaded |
+| Parameter     | Optional                             | Type         | Example                          | Description                                             |
+|---------------|--------------------------------------|--------------|----------------------------------|---------------------------------------------------------|
+| orbeonContext | No                                   | String       | `'http://localhost:8080/orbeon'` | Context where Orbeon Forms is deployed                  |
+| app           | No                                   | String       | `'human-resources'`              | App name                                                |
+| form          | No                                   | String       | `'job-application'`              | Form name                                               |
+| mode          | No                                   | String       | `'new'`                          | Either `'new'`, `'edit'`, or `'view'`                   |
+| documentId    | Mandatory for modes other than `new` | String       |                                  | For modes other than `'new'`, the document to be loaded |
+| queryString   | Yes                                  | String       | `"job=clerk"`                    | Additional query parameters                             |
+| headers       | Yes                                  | [Headers][h] | `new Headers({ 'Foo': 'bar' })`  | Additional HTTP headers; see point 2 below              |
 
 ## Example
 
@@ -47,7 +49,7 @@ Here's a simple example in TypeScript where a form is selected from a dropdown a
 ```tsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { FrForm } from "@orbeon/react";
+import FrForm from '@orbeon/react';
 
 interface MyComponentProps {
   selectedValue: string;
@@ -77,3 +79,5 @@ document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(<MyComponent selectedValue='form-1'/>, document.getElementById('root'));
 });
 ```
+
+[h]: https://developer.mozilla.org/en-US/docs/Web/API/Headers
