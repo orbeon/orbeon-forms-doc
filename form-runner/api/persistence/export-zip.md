@@ -20,13 +20,13 @@ The Zip export API is used to export a form definition and its data in a single 
 
 The following URL parameters are supported:
 
-| Parameter                     | Description                                            | Required | Multiple | Format                                            |
-|-------------------------------|--------------------------------------------------------|----------|----------|---------------------------------------------------|
-| `match`                       | specify a given app/form/version triplet to export     | Yes      | Yes      | see below                                         |
-| `content`                     | whether to export form definitions, form data, or both | Yes      | No       | `definition` and/or `form-data` tokens, see below |
-| `data-revision-history`       | whether to export data revision history                | No       | No       | `exclude`, `include`, `only` token, see below     |
-| `data-last-modified-time-gte` | minimum last modified date of the data, included       | No       | No       | ISO date                                          |
-| `data-last-modified-time-lt`  | maximum last modified date of the data, excluded       | No       | No       | ISO date                                          |
+| Parameter                     | Description                                            | Required | Multiple | Format                                                  |
+|-------------------------------|--------------------------------------------------------|----------|----------|---------------------------------------------------------|
+| `match`                       | specify a given app/form/version triplet to export     | Yes      | Yes      | see below                                               |
+| `content`                     | whether to export form definitions, form data, or both | Yes      | No       | `definition` and/or `form-data` tokens, see below       |
+| `data-revision-history`       | whether to export data revision history                | No       | No       | `exclude` (default), `include`, `only` token, see below |
+| `data-last-modified-time-gte` | minimum last modified date of the data, included       | No       | No       | ISO date                                                |
+| `data-last-modified-time-lt`  | maximum last modified date of the data, excluded       | No       | No       | ISO date                                                |
 
 #### Matching app names, form names, and form versions
 
@@ -55,7 +55,7 @@ The `content` parameter is a comma-separated list of tokens, which can include `
 
 The `data-revision-history` parameter is a token which can be one of:
 
-- `exclude`: don't include data revision history but only the data itself
+- `exclude`: don't include data revision history but only the data itself (default)
 - `include`: include both data revision history and the data itself
 - `only`: only include data revision history
 
