@@ -41,6 +41,16 @@ The following URL parameters are supported:
 
 A client can call the API using paging, to obtain smaller chunks of the revision history. A first request can, for example, use `page-number=1` and `page-size=10`. If the response indicates that there are more items, the client can then call the API again with `page-number=2` and `page-size=10`, and so on.
 
+#### Examples
+
+Retrieve the first page of revision history for the orbeon/bookshelf form data document with id `adcfea40124ef8e68fa81764df389d5a80b61762`:
+
+```
+/fr/service/persistence/history/orbeon/bookshelf/adcfea40124ef8e68fa81764df389d5a80b61762?
+    page-number=1&
+    page-size=10
+```
+
 ### Response
 
 The response is an XML document. Example:
