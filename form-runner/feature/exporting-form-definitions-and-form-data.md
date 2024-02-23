@@ -70,3 +70,4 @@ At the moment, once the "Export" button has been clicked, the dialog will be clo
 
 - [Purging historical data](purging-historical-data.md)
 - [Forms Admin page](forms-admin-page.md)
+- [Zip export API](/form-runner/api/persistence/export-zip.md)
