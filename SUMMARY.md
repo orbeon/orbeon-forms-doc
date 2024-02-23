@@ -195,6 +195,7 @@
             * [Implementing a persistence service](form-runner/api/persistence/implementing-a-persistence-service.md)
             * [Caching](form-runner/api/persistence/caching.md)
             * [Versioning](form-runner/api/persistence/versioning.md)
+            * [Zip export API](form-runner/api/persistence/export-zip.md)
         * Other APIs
             * [Connection context API](form-runner/api/other/connection-context-api.md) 
             * [Duplicate form data API](form-runner/api/other/duplicate-form-data.md)

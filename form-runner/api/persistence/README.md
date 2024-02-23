@@ -10,6 +10,7 @@
 - [Versioning](versioning.md)
 - [Lease API](lease.md)
 - [Reindexing API](reindexing.md)
+- [Zip export API](export-zip.md)
 - [Implementing a persistence service](implementing-a-persistence-service.md)
 
 ## Introduction
@@ -39,7 +40,7 @@ For example, to deal with form data:
 /fr/service/persistence
 
 | Operation | HTTP Method | URL                                                                                       |
-| --------- | ----------- |-------------------------------------------------------------------------------------------|
+|-----------|-------------|-------------------------------------------------------------------------------------------|
 | Create    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
 | Read      | `GET`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
 | Update    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
