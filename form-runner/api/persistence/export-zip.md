@@ -20,8 +20,6 @@ The Zip export API is used to export a form definition and its data in a single 
 
 The following URL parameters are supported:
 
-Q: Which parameters are required?
-
 | Parameter                     | Description                                            | Required | Multiple | Format                                            |
 |-------------------------------|--------------------------------------------------------|----------|----------|---------------------------------------------------|
 | `match`                       | specify a given app/form/version triplet to export     | Yes      | Yes      | see below                                         |
