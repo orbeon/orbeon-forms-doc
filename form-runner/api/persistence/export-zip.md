@@ -143,3 +143,4 @@ The response contains a ZIP file binary. The structure is documented [here](/for
 ## See also
 
 - [Exporting form definitions and form data](/form-runner/feature/exporting-form-definitions-and-form-data.md)
+- [Revision history API](/form-runner/api/persistence/revision-history.md)
