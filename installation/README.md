@@ -13,6 +13,7 @@ Orbeon Forms runs on any platform that supports:
 
 | Orbeon Forms Version | Java Versions | Comment         |
 |----------------------|---------------|-----------------|
+| 2023.1               | 11, 17, 21    |                 |
 | 2022.1               | 11, 17        |                 |
 | 2021.1               | 11            |                 |
 | 2020.1               | 8, 11         |                 |
