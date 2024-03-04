@@ -69,7 +69,7 @@ For the Orbeon Forms server to respond with the appropriate CORS headers, and to
     <!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN" "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
     <urlrewrite>
         <rule>
-            <set type="response-header" name="Access-Control-Allow-Origin">http://localhost:8080</set>
+            <set type="response-header" name="Access-Control-Allow-Origin">https://app.orbeon.com</set>
             <set type="response-header" name="Access-Control-Allow-Credentials">true</set>
             <set type="response-header" name="Access-Control-Allow-Methods">*</set>
             <set type="response-header" name="Access-Control-Allow-Headers">orbeon-client, content-type</set>
