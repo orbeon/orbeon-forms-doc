@@ -228,12 +228,12 @@ Access to environment variables with the [`environment-variable()` function](/xf
 
 ### oxf.cache.xpath.size
 
-| | |
-| --- | --- |
-| Name | `oxf.cache.xpath.size` |
-| Purpose | set the size of the Orbeon Forms XPath cache |
-| Type | `xs:integer` |
-| Default Value | 5000 |
+|               |                                              |
+|---------------|----------------------------------------------|
+| Name          | `oxf.cache.xpath.size`                       |
+| Purpose       | set the size of the Orbeon Forms XPath cache |
+| Type          | `xs:integer`                                 |
+| Default Value | 5000                                         |
 
 This property configures the maximum number of compiled XPath expressions to keep in the XPath cache. To tune the cache size, see the suggestions in the [Performance and Tuning][1] section.
 
@@ -314,79 +314,79 @@ See [HTTP client configuration properties](properties-general-http-client.md).
 
 ### oxf.epilogue.theme
 
-| | |
-| --- | --- |
-| Name | `oxf.epilogue.theme` |
-| Purpose | specifies the theme stylesheet |
-| Type | `xs:anyURI` |
+|               |                                  |
+|---------------|----------------------------------|
+| Name          | `oxf.epilogue.theme`             |
+| Purpose       | specifies the theme stylesheet   |
+| Type          | `xs:anyURI`                      |
 | Default Value | `oxf:/config/theme-examples.xsl` |
 
 This can be overwritten for a given app by placing a file `theme.xsl` inside the app directory.
 
 ###  oxf.epilogue.theme.embeddable
 
-| | |
-| --- | --- |
-| Name | `oxf.epilogue.theme.embeddable` |
-| Purpose | specifies the theme stylesheet to use when within a portlet or in embeddable mode |
-| Type | `xs:anyURI` |
-| Default Value | `oxf:/config/theme-portlet-examples.xsl` |
+|               |                                                                                   |
+|---------------|-----------------------------------------------------------------------------------|
+| Name          | `oxf.epilogue.theme.embeddable`                                                   |
+| Purpose       | specifies the theme stylesheet to use when within a portlet or in embeddable mode |
+| Type          | `xs:anyURI`                                                                       |
+| Default Value | `oxf:/config/theme-portlet-examples.xsl`                                          |
 
 This can be overwritten for a given app by placing a file `theme-embeddable.xsl `inside the app directory.
 
 ### oxf.epilogue.theme.renderer
 
-| | |
-| --- | --- |
-| Name | `oxf.epilogue.theme.renderer` |
-| Purpose | specifies the theme stylesheet to use when using the XForms filter, whether in integrated or separate deployment mode |
-| Type | `xs:anyURI` |
-| Default Value | `oxf:/config/theme-plain.xsl` |
+|               |                                                                                                                       |
+|---------------|-----------------------------------------------------------------------------------------------------------------------|
+| Name          | `oxf.epilogue.theme.renderer`                                                                                         |
+| Purpose       | specifies the theme stylesheet to use when using the XForms filter, whether in integrated or separate deployment mode |
+| Type          | `xs:anyURI`                                                                                                           |
+| Default Value | `oxf:/config/theme-plain.xsl`                                                                                         |
 
 ### oxf.epilogue.theme.error
 
-| | |
-| --- | --- |
-| Name | `oxf.epilogue.theme.error` |
-| Purpose | specifies the theme stylesheet to use on the error page |
-| Type | `xs:anyURI` |
-| Default Value | `oxf:/config/theme-error.xsl` |
+|               |                                                         |
+|---------------|---------------------------------------------------------|
+| Name          | `oxf.epilogue.theme.error`                              |
+| Purpose       | specifies the theme stylesheet to use on the error page |
+| Type          | `xs:anyURI`                                             |
+| Default Value | `oxf:/config/theme-error.xsl`                           |
 
 ### oxf.epilogue.use-theme
 
-| | |
-| --- | --- |
-| Name | `oxf.epilogue.use-theme` |
-| Purpose | whether a theme stylesheet must be applied |
-| Type | `xs:boolean` |
-| Default Value | `true` |
+|               |                                            |
+|---------------|--------------------------------------------|
+| Name          | `oxf.epilogue.use-theme`                   |
+| Purpose       | whether a theme stylesheet must be applied |
+| Type          | `xs:boolean`                               |
+| Default Value | `true`                                     |
 
 ### oxf.epilogue.output-xhtml
 
-| | |
-| --- | --- |
-| Name | `oxf.epilogue.output-xhtml` |
-| Purpose | whether to output XHTML to the browser or not |
-| Type | `xs:boolean` |
-| Default Value | `false` |
+|               |                                               |
+|---------------|-----------------------------------------------|
+| Name          | `oxf.epilogue.output-xhtml`                   |
+| Purpose       | whether to output XHTML to the browser or not |
+| Type          | `xs:boolean`                                  |
+| Default Value | `false`                                       |
 
 ### oxf.epilogue.renderer-rewrite
 
-| | |
-| --- | --- |
-| Name | `oxf.epilogue.renderer-rewrite` |
-| Purpose | whether the XForms renderer used in separate deployment must rewrite URLs |
-| Type | `xs:boolean` |
-| Default Value | `false` |
+|               |                                                                           |
+|---------------|---------------------------------------------------------------------------|
+| Name          | `oxf.epilogue.renderer-rewrite`                                           |
+| Purpose       | whether the XForms renderer used in separate deployment must rewrite URLs |
+| Type          | `xs:boolean`                                                              |
+| Default Value | `false`                                                                   |
 
 ### oxf.epilogue.process-svg
 
-| | |
-| --- | --- |
-| Name | `oxf.epilogue.process-svg` |
-| Purpose | whether SVG content must be converted server-side to images |
-| Type | `xs:boolean` |
-| Default Value | `true` |
+|               |                                                             |
+|---------------|-------------------------------------------------------------|
+| Name          | `oxf.epilogue.process-svg`                                  |
+| Purpose       | whether SVG content must be converted server-side to images |
+| Type          | `xs:boolean`                                                |
+| Default Value | `true`                                                      |
 
 
 ## Email processor properties
@@ -511,23 +511,23 @@ _NOTE: You don't usually need to modify this property and the default location f
 
 ### oxf.pipeline.processors
 
-| | |
-| --- | --- |
-| Name | `oxf.pipeline.processors` |
-| Purpose | specify the URL of the XML file with processor definitions for the XPL pipeline engine |
-| Type | `xs:anyURI` |
-| Default Value | `oxf:/processors.xml` |
+|               |                                                                                        |
+|---------------|----------------------------------------------------------------------------------------|
+| Name          | `oxf.pipeline.processors`                                                              |
+| Purpose       | specify the URL of the XML file with processor definitions for the XPL pipeline engine |
+| Type          | `xs:anyURI`                                                                            |
+| Default Value | `oxf:/processors.xml`                                                                  |
 
 _NOTE: You don't usually need to modify this property._
 
 ### oxf.validation.processor
 
-| | |
-| --- | --- |
-| Name | `oxf.validation.processor` |
-| Purpose | control the automatic processor validation |
-| Type | `xs:boolean` |
-| Default Value | Enabled |
+|               |                                            |
+|---------------|--------------------------------------------|
+| Name          | `oxf.validation.processor`                 |
+| Purpose       | control the automatic processor validation |
+| Type          | `xs:boolean`                               |
+| Default Value | Enabled                                    |
 
 Many processors validate their configuration input with a schema. This validation is automatic and allows meaningful error reporting. To potentially improve the performance of the application, validation can be disabled in production environments.
 
@@ -535,12 +535,12 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 
 ### oxf.validation.user
 
-| | |
-| --- | --- |
-| Name | `oxf.validation.user` |
-| Purpose | control user-defined validation |
-| Type | `boolean` |
-| Default Value | Enabled |
+|               |                                 |
+|---------------|---------------------------------|
+| Name          | `oxf.validation.user`           |
+| Purpose       | control user-defined validation |
+| Type          | `boolean`                       |
+| Default Value | Enabled                         |
 
 User-defined validation is activated in the [XML Pipeline Definition Language][9] with the attributes `schema-href` and `schema-uri`. To potentially improve the performance of the application, validation can be disabled in production environments.
 
@@ -548,12 +548,12 @@ _NOTE: It is  strongly discouraged to disable validation, as validation can high
 
 ### sax.inspection
 
-| | |
-| --- | --- |
-| Name | `sax.inspection` |
-| Purpose | enable inspection SAX events |
-| Type | `xs:boolean` |
-| Default Value | `false` |
+|               |                              |
+|---------------|------------------------------|
+| Name          | `sax.inspection`             |
+| Purpose       | enable inspection SAX events |
+| Type          | `xs:boolean`                 |
+| Default Value | `false`                      |
 
 SAX is the underlying mechanism in Orbeon Forms by which processors receive and generate XML data. Given only the constraints of the SAX API, it is possible for a processor to generate an invalid sequence of SAX events. Another processor that receives that invalid sequence of events may or may not be able to deal with it without throwing an exception. Some processors try to process invalid SAX events, while others throw exceptions. This means that when a processor generating an invalid sequence of SAX events is used in a pipeline, the problem might go unnoticed, or it might cause some other processor downstream to throw an exception.
 
