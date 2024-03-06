@@ -6,11 +6,11 @@ For the latest default values of general properties, see [`properties-base.xml`]
 
 ## XML entity expansion
 
-For security reasons, Orbeon Forms disables XML external entities.
+For security reasons, Orbeon Forms disables XML *external* entities. Other entities are enabled, but subject to a limit. This limit is set to 100,000 entity expansions.
 
 [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
 
-Orbeon Forms has a new global setting to control (internal) XML entity expansion. Previously, XML entity expansion, including character entities, was enabled but subject to a limit. That limit was set to 100,000 entity expansions, which is a fairly large limit. Since this version, you can configure XML entity expansion. By default, for security reasons, and since entities are rarely used, this is set to 0.
+Orbeon Forms has a new global setting to control (internal) XML entity expansion. Previously, XML entity expansion, including character entities, was enabled but subject to a limit. Since this version, you can configure XML entity expansion. By default, for security reasons, and since entities are rarely used, this is set to 0. To restore the previous behavior, set this to a positive number.
 
 ```xml
 <property
