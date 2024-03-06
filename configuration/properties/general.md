@@ -4,6 +4,21 @@
 
 For the latest default values of general properties, see [`properties-base.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-base.xml).
 
+## XML entity expansion
+
+For security reasons, Orbeon Forms disables XML external entities.
+
+[\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+
+Orbeon Forms has a new global setting to control (internal) XML entity expansion. Previously, XML entity expansion, including character entities, was enabled but subject to a limit. That limit was set to 100,000 entity expansions, which is a fairly large limit. Since this version, you can configure XML entity expansion. By default, for security reasons, and since entities are rarely used, this is set to 0.
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.xml-parsing.entity-expansion-limit"
+    value="0"/>
+```
+
 ## URL rewriting
 
 ### oxf.url-rewriting.service.base-uri
