@@ -22,7 +22,7 @@ When using the JavaScript embedding API, the browser must be able to communicate
 
 ### Option 1: Forwarding
 
-#### Deployment
+#### Forwarding deployment
 
 With this setup, all browser requests, whether for the page of your application using the embedding API or for Orbeon Forms, will be made to the same origin (scheme, server and port). It is your responsibility to configure this server so that requests to Orbeon Forms are forwarded to the Orbeon Forms server.
 
@@ -43,7 +43,7 @@ If your users are authenticated, you'll probably also want Orbeon Forms to know 
 
 [SINCE Orbeon Forms 2022.1.5]
 
-#### Deployment
+#### Corss-origin deployment
 
 When calling `embedForm()`, the value of the `context` parameter must be the full URL of the Orbeon Forms server (like `https://forms.example.org/orbeon`), not a relative URL (like `/orbeon`).
 
