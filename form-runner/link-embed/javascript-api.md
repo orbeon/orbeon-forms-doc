@@ -49,7 +49,14 @@ When calling `embedForm()`, the value of the `context` parameter must be the ful
 
 For the Orbeon Forms server to respond with the appropriate CORS headers, and to support preflight requests, install and configure the UrlRewriteFilter as follows. If you already have a piece of software active as a reverse proxy in front of Orbeon Forms, feel free to use it, to achieve the same result.  
 
-1. Place the [`urlrewritefilter-4.0.3.jar`](https://repo1.maven.org/maven2/org/tuckey/urlrewritefilter/4.0.3/urlrewritefilter-4.0.3.jar) file in the Orbeon Forms `WEB-INF/lib`.
+1. Place the UrlRewriteFilter jar in the Orbeon Forms `WEB-INF/lib`.
+    - If your container implements the Servlet 4.0 API (or earlier), like Tomcat 9 (and earlier):
+        - Use [`urlrewritefilter-4.0.3.jar`](https://repo1.maven.org/maven2/org/tuckey/urlrewritefilter/4.0.3/urlrewritefilter-4.0.3.jar).
+        - Using version 5.x of the UrlRewriteFilter will result in the error `java.lang.NoClassDefFoundError: jakarta/servlet/Filter` because it is designed for containers that implement the Servlet 5.0 API (or later).
+    - If your container implements the Servlet 5.0 API (or later), like Tomcat 10 (and later):
+        - Use [urlrewritefilter-5.1.3.jar](https://repo1.maven.org/maven2/org/tuckey/urlrewritefilter/5.1.3/urlrewritefilter-5.1.3.jar).
+        - Using version 4.x of the UrlRewriteFilter will result in the error `java.lang.NoClassDefFoundError: javax/servlet/Filter` because it is designed for containers that implement the Servlet 4.0 API (or earlier).
+        - Orbeon Forms has supported such containers since Orbeon Forms 2023.1.
 2. Edit the `WEB-INF/web.xml` to add the following `<filter>` and `<filter-mapping>`.
     ```xml
     <filter>
@@ -63,7 +70,7 @@ For the Orbeon Forms server to respond with the appropriate CORS headers, and to
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
     ```
-3. Create a `WEB-INF/urlrewrite.xml` file with the following content.
+3. Create a `WEB-INF/urlrewrite.xml` file with the following content.    
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN" "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
