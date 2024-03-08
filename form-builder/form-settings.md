@@ -34,19 +34,19 @@ Form options include options which apply to the entire form definition.
     - See [Singleton Form](/form-runner/advanced/singleton-form.md)
 - Maximum Attachment Size per File
     - [SINCE Orbeon Forms 2017.1]
-    - Use property: use the [`oxf.fr.detail.attachment.max-size` property](/configuration/properties/form-runner-attachments.md#maximum-attachment-size)
+    - Use property: use the [`oxf.fr.detail.attachment.max-size-per-file` property](/configuration/properties/form-runner-attachments.md#maximum-attachment-size)
+    - Other: the maximum size allowed in bytes
 - Maximum Aggregate Attachment Size
     - [SINCE Orbeon Forms 2017.1]
-    - Use property: use the [`oxf.fr.detail.attachment.max-size-aggregate` property](/configuration/properties/form-runner-attachments.md#maximum-aggregate-attachment-size)
+    - Use property: use the [`oxf.fr.detail.attachment.max-size-aggregate-per-form` property](/configuration/properties/form-runner-attachments.md#maximum-aggregate-attachment-size-forms)
     - Other: the maximum size allowed in bytes
 - Allowed File Types
     - [SINCE Orbeon Forms 2017.1]
     - Use property: use the [`oxf.fr.detail.attachment.mediatypes` property](/configuration/properties/form-runner-attachments.md#allowed-file-types)
-    - Other: the maximum size allowed in bytes
+    - Other: a space-separated list of mediatypes or wildcard mediatypes
 - Appearance of Control Labels
     - Use property: use the [`oxf.xforms.label.appearance` property](/xforms/controls/input.md#per-form-properties)
     - Inline: labels show inline above the control
-    - Other: a space-separated list of mediatypes or wildcard mediatypes
 - Use Placeholder for Text Fields and Text Areas
     - Labels show inline above the control for most fields.
     - For text, date, and time input fields, labels show as an HTML *placeholder* within the field when the field is empty.

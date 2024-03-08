@@ -194,13 +194,17 @@ for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
   - SINCE Orbeon Forms 2016.1
   - applies to "Decimal" type only
   - the constraint fails if the decimal number has more than the specified number of significant digits (trailing zeros are ignored)
-- "Maximum Attachment Size"
+- "Maximum Attachment Size" ("Maximum Attachment Size per File" in Multiple File Attachments controls)
   - SINCE Orbeon Forms 2017.1
-  - applies to attachment types only ("URI")
+  - applies to Single and Multiple File Attachments controls only
   - the constraint fails if the attachment size is larger than the specified size
+- "Maximum Aggregate Attachment Size"
+  - SINCE Orbeon Forms 2024.1
+  - applies to Multiple File Attachments controls only
+  - the constraint fails if the attachment size is larger than the remaining allowed size for the control
 - "Supported File Types"
   - SINCE Orbeon Forms 2017.1
-  - applies to attachment types only ("URI")
+  - applies to Single and Multiple File Attachments controls only
   - the constraint fails if the attachment mediatype doest not match one of the included mediatypes or mediatype wildcards
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).

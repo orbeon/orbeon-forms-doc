@@ -135,6 +135,20 @@ xxf:upload-max-size($bytes as xs:integer?) as xs:boolean
    - `-2` or lower: ignored for the purpose of checking the upload file size
 - always return `true()`, as the validation is only used at the time of upload
 
+## xxf:upload-max-size-aggregate-per-control()
+
+[SINCE Orbeon Forms 2024.1]
+
+```xpath
+xxf:upload-max-size-aggregate-per-control($bytes as xs:integer?) as xs:boolean
+```
+
+- `$bytes`
+    - non-negative value: limited upload file size aggregate for the control
+    - `-1`: unlimited upload file size aggregate for the control
+    - `-2` or lower: ignored for the purpose of checking the upload file size aggregate for the control
+- always return `true()`, as the validation is only used at the time of upload
+
 ## xxf:upload-mediatypes()
 
 [SINCE Orbeon Forms 2017.1]
