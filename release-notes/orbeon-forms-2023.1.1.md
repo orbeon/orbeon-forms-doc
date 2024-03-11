@@ -4,9 +4,9 @@ __xxx, March 1x, 2024__
 
 Today we released Orbeon Forms 2023.1.1 PE! This maintenance release contains bug-fixes and minor new features and is recommended for all users of:
 
-- [Orbeon Forms 2022.1 PE](orbeon-forms-2023.1.md)
+- [Orbeon Forms 2023.1 PE](orbeon-forms-2023.1.md)
 
-This release also addresses the following issues since [Orbeon Forms 2022.1 PE](orbeon-forms-2023.1.md):
+This release addresses the following issues since [Orbeon Forms 2023.1 PE](orbeon-forms-2023.1.md):
 
 - Security
     - Use 16 byte (128 bits) instead of 8 byte (64 bits) salt for FIPS compliance ([\#6146](https://github.com/orbeon/orbeon-forms/issues/6146))
