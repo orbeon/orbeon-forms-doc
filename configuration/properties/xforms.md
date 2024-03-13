@@ -389,15 +389,17 @@ If `oxf.xforms.upload.max-size-per-file` is blank or missing (the default), then
     value="100000000"/>
 ```
 
-The value of `oxf.xforms.upload.max-size-per-file` can be overridden for a specific control using the `xxf:upload-max-size()` validation function.
+The value of `oxf.xforms.upload.max-size-per-file` can be overridden for a specific control using the `xxf:upload-max-size-per-file()` validation function.
 
-See also [`oxf.fr.detail.attachment.max-size-per-file`](form-runner-attachments.md#maximum-attachment-size)
+This property was previously named `oxf.xforms.upload.max-size`. The old name is still supported for backward compatibility.
+
+Whenever possible, it is recommended to use the Form Runner property [`oxf.fr.detail.attachment.max-size-per-file`](form-runner-attachments.md#maximum-attachment-size) instead of this XForms property.
 
 #### Maximum aggregate upload size (forms)
 
 [SINCE Orbeon Forms 2017.1]
 
-The following property sets the maximum aggregate size in bytes of all uploaded files for a given instance of form data. For example, if you set it to `1000000` (1 MB), and the form has two upload controls, and you upload a 600 KB upload using the first control, then only 400 KB can be uploaded using the second control, even if a larger maximum size per control was set using the `oxf.xforms.upload.max-size-per-file` property or the `xxf:upload-max-size()` validation function. If you attempt to upload a larger file, an error is reported.
+The following property sets the maximum aggregate size in bytes of all uploaded files for a given instance of form data. For example, if you set it to `1000000` (1 MB), and the form has two upload controls, and you upload a 600 KB upload using the first control, then only 400 KB can be uploaded using the second control, even if a larger maximum size per control was set using the `oxf.xforms.upload.max-size-per-file` property or the `xxf:upload-max-size-per-file()` validation function. If you attempt to upload a larger file, an error is reported.
 
 ```xml
 <property 
@@ -406,7 +408,9 @@ The following property sets the maximum aggregate size in bytes of all uploaded 
     value="1000000"/>
 ```
 
-See also [`oxf.fr.detail.attachment.max-size-aggregate-per-form`](form-runner-attachments.md#maximum-aggregate-attachment-size-forms)
+This property was previously named `oxf.xforms.upload.max-size-aggregate`. The old name is still supported for backward compatibility.
+
+Whenever possible, it is recommended to use the Form Runner property [`oxf.fr.detail.attachment.max-size-aggregate-per-form`](form-runner-attachments.md#maximum-aggregate-attachment-size-forms) instead of this XForms property.
 
 #### Maximum aggregate upload size (controls)
 
@@ -421,7 +425,7 @@ The following property sets the maximum aggregate size in bytes of all uploaded 
     value="1000000"/>
 ```
 
-See also [`oxf.fr.detail.attachment.max-size-aggregate-per-control`](form-runner-attachments.md#maximum-aggregate-attachment-size-controls)
+Whenever possible, it is recommended to use the Form Runner property [`oxf.fr.detail.attachment.max-size-aggregate-per-control`](form-runner-attachments.md#maximum-aggregate-attachment-size-controls) instead of this XForms property.
 
 #### Allowed file types
 

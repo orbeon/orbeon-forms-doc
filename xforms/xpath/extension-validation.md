@@ -121,12 +121,12 @@ xxf:positive() as xs:boolean
 - return `true()` if the context item converted to a string via the `string()` function parses as an `xs:decimal` which is positive
 - return `false()` otherwise
 
-## xxf:upload-max-size()
+## xxf:upload-max-size-per-file()
 
 [SINCE Orbeon Forms 2017.1]
 
 ```xpath
-xxf:upload-max-size($bytes as xs:integer?) as xs:boolean
+xxf:upload-max-size-per-file($bytes as xs:integer?) as xs:boolean
 ```
 
 - `$bytes`
@@ -134,6 +134,8 @@ xxf:upload-max-size($bytes as xs:integer?) as xs:boolean
    - `-1`: unlimited upload file size
    - `-2` or lower: ignored for the purpose of checking the upload file size
 - always return `true()`, as the validation is only used at the time of upload
+
+This function was previously called `xxf:upload-max-size()`. Both names will work at runtime, but `xxf:upload-max-size()` will automatically be renamed to `xxf:upload-max-size-per-file()` when editing a form in Form Builder.
 
 ## xxf:upload-max-size-aggregate-per-control()
 

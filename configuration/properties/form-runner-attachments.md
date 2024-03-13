@@ -28,6 +28,8 @@ The value of `oxf.fr.detail.attachment.max-size-per-file` can be overridden:
 - for a specific form, from the Form Builder "Form Settings" dialog
 - for a specific control, using a common constraint in the Form Builder "Control Settings" dialog 
 
+This property was previously named `oxf.fr.detail.attachment.max-size`. The old name is still supported for backward compatibility.
+
 ## Maximum aggregate attachment size (forms)
 
 [SINCE Orbeon Forms 2017.1]
@@ -44,6 +46,8 @@ The following property sets the maximum aggregate size in bytes of all uploaded 
 The value of `oxf.fr.detail.attachment.max-size-aggregate-per-form` can be overridden:
 
 - for a specific form, from the Form Builder "Form Settings" dialog
+
+This property was previously named `oxf.fr.detail.attachment.max-size-aggregate`. The old name is still supported for backward compatibility.
 
 ## Maximum aggregate attachment size (controls)
 
