@@ -170,7 +170,56 @@ See also [Access control for deployed forms](/form-runner/access-control/deploye
 
 If you'd like to have multiple classes of Form Builder users where some can edit, say, forms in the `hr` app, while others can edit forms in the `sales` app, see [Access control for editing forms](../../form-runner/access-control/editing-forms.md#form-builder-permissions).
 
+## Formatted text configuration
+
+[\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+
+You can configure the TinyMCE editor used for formatted text (AKA the [Rich Text Editor](/form-runner/component/rich-text-editor.md)) for the following:
+
+- Explanatory Text
+- HTML control labels in Form Builder dialogs
+- HTML control hints in Form Builder dialogs
+- HTML control help texts in Form Builder dialogs
+
+Use the following property: 
+
+```xml
+<property as="xs:string"  name="oxf.xforms.xbl.fr.tinymce.config.orbeon.builder">
+    {{
+        "inline"             : false,
+        "hidden_input"       : false,
+        "language"           : "en",
+        "statusbar"          : false,
+        "menubar"            : false,
+        "plugins"            : "lists link fullscreen",
+        "toolbar"            : "bold italic | bullist numlist outdent indent | link fullscreen",
+        "browser_spellcheck" : true,
+        "doctype"            : "&lt;!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
+        "encoding"           : "xml",
+        "entity_encoding"    : "raw",
+        "forced_root_block"  : "div",
+        "verify_html"        : true,
+        "visual_table_class" : "fr-tinymce-table",
+        "skin"               : false,
+        "convert_urls"       : false,
+        "content_css"        : "default"
+    }}
+</property>
+```
+
+The example above switches to the `iframe` mode (instead of the `inline` mode) and adds the fullscreen plugin.
+
+For backward compatibility, if a non-blank `oxf.fb.tinymce.config` property is present, it will be used.
+
+Note that `oxf.xforms.xbl.fr.tinymce.config.orbeon.builder` is evaluated as an AVT, while `oxf.fb.tinymce.config` is not.
+
 ## Explanatory Text TinyMCE configuration
+
+[\[DEPRECATED SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+
+Prefer the `oxf.xforms.xbl.fr.tinymce.config.orbeon.builder` property above.
+
+Note that `oxf.xforms.xbl.fr.tinymce.config.orbeon.builder` controls the appearance of the Explanatory Text, as well as labels, hints, and help texts in Form Builder dialogs, while `oxf.fb.tinymce.config` only controls the appearance of the Explanatory Text.
 
 [SINCE Orbeon Forms 2018.1]
 
@@ -189,3 +238,4 @@ When form authors edit an Explanatory Text, Form Builder utilizes the TinyMCE co
 ## See also
 
 - [Form Builder toolbox properties](/configuration/properties/form-builder.md#toolbox)
+- [Rich Text Editor](/form-runner/component/rich-text-editor.md)

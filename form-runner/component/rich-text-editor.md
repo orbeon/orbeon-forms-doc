@@ -2,7 +2,7 @@
 
 ## Rationale
 
-This components wraps the [TinyMCE][1] rich text editor.
+This components wraps the [TinyMCE](https://www.tiny.cloud/) rich text editor.
 
 ![](images/xbl-tinymce.png)
 
@@ -24,7 +24,85 @@ Until Orbeon Forms 4.10 included, `<xf:textarea mediatype="text/html">` was usin
 
 ### Configuration
 
-You can also customize the TinyMCE editor by adding JavaScript code to your form that defines a [TinyMCE configuration][4] and assign it to the global `TINYMCE_CUSTOM_CONFIG` variable.
+#### Attribute, form, and property configuration
+
+[\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+
+The component can be configured with the `config` attribute. The attribute takes a JSON configuration string.
+
+If no `config` attribute is set, the following property is used:
+
+```xml
+<property as="xs:string"  name="oxf.xforms.xbl.fr.tinymce.config">
+    {{
+        "inline"             : false,
+        "hidden_input"       : false,
+        "language"           : "en",
+        "statusbar"          : false,
+        "menubar"            : false,
+        "plugins"            : "lists link fullscreen",
+        "toolbar"            : "bold italic | bullist numlist outdent indent | link fullscreen",
+        "browser_spellcheck" : true,
+        "doctype"            : "&lt;!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
+        "encoding"           : "xml",
+        "entity_encoding"    : "raw",
+        "forced_root_block"  : "div",
+        "verify_html"        : true,
+        "visual_table_class" : "fr-tinymce-table",
+        "skin"               : false,
+        "convert_urls"       : false,
+        "content_css"        : "default"
+    }}
+</property>
+```
+
+You can also set properties specific to an app and/or form:
+
+```xml
+<property as="xs:string"  name="oxf.xforms.xbl.fr.tinymce.config.acme.sales">
+    ...
+</property>
+```
+
+Attribute and properties are interpreted as AVTs (like all attributes and properties that configure components), which explains the double brackets `{{...}}`.
+
+For example, the following configuration restores the `iframe` mode (instead of the `inline` mode) for all rich text editors:
+
+```xml
+<property as="xs:string"  name="oxf.xforms.xbl.fr.tinymce.config">
+    {{
+        "inline"             : false,
+        "hidden_input"       : false,
+        "language"           : "en",
+        "statusbar"          : false,
+        "menubar"            : false,
+        "plugins"            : "lists link fullscreen",
+        "toolbar"            : "bold italic | bullist numlist outdent indent | link fullscreen",
+        "browser_spellcheck" : true,
+        "doctype"            : "&lt;!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
+        "encoding"           : "xml",
+        "entity_encoding"    : "raw",
+        "forced_root_block"  : "div",
+        "visual_table_class" : "fr-tinymce-table",
+        "skin"               : false,
+        "convert_urls"       : false,
+        "content_css"        : "default",
+        "content_style"      : "body.mce-content-body {{ margin: 0; color: #333 }} body.mce-content-body div {{font-family: 'Helvetica Neue'; font-size: 13px; padding: 4px 6px}} body.mce-content-body a {{ color: #0088cc }} body.mce-content-body p {{ margin: 0 0 10px }}"
+    }}
+</property>
+``` 
+
+In that example, the `content_style` property is used to set CSS to match the `inline` appearance of Form Runner.
+
+For backward compatibility, if an `TINYMCE_CUSTOM_CONFIG` JavaScript variable (see below) is found in the page, it is used as the configuration.
+
+#### Deprecated configuration
+
+[\[DEPRECATED SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+
+Prefer the `oxf.xforms.xbl.fr.tinymce.config` property above.
+
+You can also customize the TinyMCE editor by adding JavaScript code to your form that defines a [TinyMCE configuration](https://www.tiny.cloud/docs/configure/) and assign it to the global `TINYMCE_CUSTOM_CONFIG` variable.
 
 If you don't set this variable, the component uses a built-in default configuration. The default configuration limits the number of buttons shown to users.
 
@@ -40,6 +118,3 @@ The component supports being bound to a node which can be read-only or non-relev
 ## Limitations
 
 - Because of the update heuristic (see above), by design the TinyMCE won't update if the value of the bound node changes while the focus is on the TinyMCE.
-
-[1]: https://www.tiny.cloud/
-[4]: https://www.tiny.cloud/docs/configure/
