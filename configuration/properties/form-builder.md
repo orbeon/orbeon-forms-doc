@@ -174,12 +174,12 @@ If you'd like to have multiple classes of Form Builder users where some can edit
 
 [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
 
-You can configure the TinyMCE editor used for formatted text (AKA the [Rich Text Editor](/form-runner/component/rich-text-editor.md)) for the following:
+You can configure the TinyMCE editor used for Formatted Text (AKA [Rich Text Editor](/form-runner/component/rich-text-editor.md)) component for the following:
 
-- Explanatory Text
-- HTML control labels in Form Builder dialogs
-- HTML control hints in Form Builder dialogs
-- HTML control help texts in Form Builder dialogs
+- Explanatory Text content in the form area
+- control labels with "Use HTML"  in Form Builder dialogs
+- control hints with "Use HTML"  in Form Builder dialogs
+- control help with "Use HTML"  texts in Form Builder dialogs
 
 Use the following property: 
 
@@ -238,4 +238,4 @@ When form authors edit an Explanatory Text, Form Builder utilizes the TinyMCE co
 ## See also
 
 - [Form Builder toolbox properties](/configuration/properties/form-builder.md#toolbox)
-- [Rich Text Editor](/form-runner/component/rich-text-editor.md)
+- [Formatted Text / Rich Text Editor](/form-runner/component/rich-text-editor.md)

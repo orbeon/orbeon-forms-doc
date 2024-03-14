@@ -100,7 +100,7 @@ When the global property includes `minimal`, it is possible to override the appe
 
 If you add the attribute `mediatype="text/html"` on your `<xf:textarea>`, then the text area will be rendered as an HTML editor:
 
-![Rich text editor in Orbeon Forms](../images/xforms-textarea-formatted.png)
+![Formatted Text / Rich Text Editor in Orbeon Forms](../images/xforms-textarea-formatted.png)
 
 ### HTML cleanup
 

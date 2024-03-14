@@ -1,4 +1,4 @@
-# Rich Text Editor Component
+# Formatted Text / Rich Text Editor component
 
 ## Rationale
 
@@ -66,7 +66,7 @@ You can also set properties specific to an app and/or form:
 
 Attribute and properties are interpreted as AVTs (like all attributes and properties that configure components), which explains the double brackets `{{...}}`.
 
-For example, the following configuration restores the `iframe` mode (instead of the `inline` mode) for all rich text editors:
+For example, the following configuration restores the `iframe` mode (instead of the `inline` mode) for all Formatted Text / Rich Text Editor instances:
 
 ```xml
 <property as="xs:string"  name="oxf.xforms.xbl.fr.tinymce.config">
@@ -118,3 +118,7 @@ The component supports being bound to a node which can be read-only or non-relev
 ## Limitations
 
 - Because of the update heuristic (see above), by design the TinyMCE won't update if the value of the bound node changes while the focus is on the TinyMCE.
+
+## See also
+
+- [Form Builder formatted text configuration](/configuration/properties/form-builder.md#formatted-text-configuration)

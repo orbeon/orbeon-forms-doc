@@ -129,7 +129,7 @@ You can also drag a control directly from the toolbox to a grid cell in the form
 |-------------------------|------------------------------------------------|
 | **Input Field**         | single-line input field                        |
 | **Plain Text Area**     | multi-line plain text area                     |
-| **Formatted Text Area** | formatted text area (AKA rich text editor)     |
+| **Formatted Text Area** | formatted text area (AKA Rich Text Editor)     |
 | **Password Field**      | input field that hides the characters you type |
 
 The controls appear like this at design time:

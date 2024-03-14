@@ -49,7 +49,7 @@ Resources are split into 2 groups:
     * main built-in XForms engine resources
     * XBL resources for components specified with the `oxf.xforms.resources.baseline` property
 * other resources, which include
-    * other built-in XForms engine resources, such as for the rich text editor or tree selection
+    * other built-in XForms engine resources, such as for the Formatted Text / Rich Text Editor or tree selection
     * XBL resources not part of the baseline
     * user resources
 

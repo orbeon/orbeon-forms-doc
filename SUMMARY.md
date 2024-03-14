@@ -120,7 +120,7 @@
         * [Number](form-runner/component/number.md)
         * [Open selection](form-runner/component/open-select1.md)
         * [Repeater](form-runner/component/repeater.md)
-        * [Rich text editor](form-runner/component/rich-text-editor.md)
+        * [Formatted Text / Rich Text Editor](form-runner/component/rich-text-editor.md)
         * [Section](form-runner/component/section.md)
         * [Single-selection tree](form-runner/component/tree-select1.md)
         * [Source code editor](form-runner/component/source-code-editor.md)
