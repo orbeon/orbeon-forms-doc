@@ -165,6 +165,58 @@ You can return all the form's indexed controls, even if they don't have any matc
 
 For the search response in this case, see further below.
 
+## Metadata queries
+
+[SINCE Orbeon Forms 2024.1]
+
+`query` elements can also be used to add constraints on metadata fields, using the `metadata` attribute, which can take one of the following values:
+
+- `created`: creation date/time
+- `created-by`: username of the user who created the data
+- `last-modified`: last modification date/time
+- `last-modified-by`: username of the user who last modified the data
+- `workflow-stage`: name of the workflow stage associated with the data
+
+In that case, the `path` attribute must be absent and the `match` attribute must be present, with one of the following values:
+
+- `gte`: greater than or equal to
+- `lt`: less than
+- `exact`: exact match
+
+The `gte` and `lt` match values are used for date/time fields (creation or last modification date/time), and the `exact` match value is used for string fields (created by, last modified by, or workflow stage). Date/time values are expected to be in ISO format.
+
+Examples of metadata queries:
+
+```xml
+<query metadata="created" match="gte">2022-01-01T00:00:00Z</query>
+<query metadata="last-modified-by" match="exact">admin</query>
+```
+
+The absence or presence of a metadata query element doesn't affect the inclusion of the `created`, `created-by`, `last-modified`, `last-modified-by`, and `workflow-stage` attributes on the `<document>` elements in the search response.
+
+## Sorting
+
+[SINCE Orbeon Forms 2024.1]
+
+By default, search results are sorted by last modification date/time, from most recent to oldest. It is possible to specify another sort order by adding a `sort` attribute to the search query, on one of the `<query>` elements, with one of the following values:
+
+- `asc`: ascending order
+- `desc`: descending order
+
+Example (query element also used to match a substring):
+
+```xml
+<query path="details/title" match="substring" sort="asc">Peace</query>
+```
+
+Example (query element used only for sorting):
+
+```xml
+<query path="details/title" sort="asc"/>
+```
+
+At the moment, only a single `sort` attribute is supported, but the last modification date/time is always used as a secondary sort key.
+
 ## Paging
 
 The `page-size` and `page-number` elements control paging.
