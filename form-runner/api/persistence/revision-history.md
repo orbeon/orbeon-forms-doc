@@ -1,5 +1,9 @@
 # Revision history API
 
+## Availability
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
 ## Service endpoint
 
 HTTP `GET` to the following path:
@@ -61,6 +65,8 @@ The response is an XML document. Example:
     form-name="bookshelf"
     document-id="adcfea40124ef8e68fa81764df389d5a80b61762"
     total="3"
+    min-last-modified-time="2024-01-22T21:43:53.397Z"
+    max-last-modified-time="2024-02-22T22:36:34.018Z"
     page-size="10"
     page-number="1"
     form-version="1"
@@ -93,6 +99,12 @@ The following elements and attributes are returned:
 - `form-name`: the form name, as requested in the URL
 - `document-id`: the document id, as requested in the URL
 - `total`: the total number of entries (current and historical) found in the database
+- `min-last-modified-time`:
+    - [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+    - the earliest last modified time found in the database
+- `max-last-modified-time`:
+    - [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+    - the latest last modified time found in the database
 - `page-size`: the number of items per page, as requested in the URL
 - `page-number`: the page number, starting at 1, as requested in the URL
 - `form-version`: the form version associated with the form data
