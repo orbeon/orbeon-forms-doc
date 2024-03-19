@@ -33,6 +33,7 @@ This release addresses the following issues since [Orbeon Forms 2023.1 PE](orbeo
         - Excel export: mismatch of fields in repeated sections or grids ([\#6128](https://github.com/orbeon/orbeon-forms/issues/6128))
         - Purge: should only support `lt` but not `gte` date constraints ([\#6210](https://github.com/orbeon/orbeon-forms/issues/6210))
         - Purge: possible issue with attachments when using date ranges ([\#6207](https://github.com/orbeon/orbeon-forms/issues/6207))
+        - FormRunnerPersistence.getProviders returns "mysql" even when non-MySQL provider is configured ([\#6228](https://github.com/orbeon/orbeon-forms/issues/6228))
     - Offline
         - Offline: attaching file causes `GET` on `SubmissionProvider` ([\#6153](https://github.com/orbeon/orbeon-forms/issues/6153))
         - Offline: "Upload complete" message is not clear ([\#6171](https://github.com/orbeon/orbeon-forms/issues/6171))
@@ -71,11 +72,11 @@ This release addresses the following issues since [Orbeon Forms 2023.1 PE](orbeo
     - Sharing issue with global indented loggers ([\#179](https://github.com/orbeon/orbeon-forms/issues/179))
     - Data sources are available from `java:comp/env` in WildFly ([\#6094](https://github.com/orbeon/orbeon-forms/issues/6094))
     - PurgeTest fails ([\#6223](https://github.com/orbeon/orbeon-forms/issues/6223))
+    - Tomcat shows `cats.effect` errors upon shutdown ([\#6089](https://github.com/orbeon/orbeon-forms/issues/6089))
 - XForms
     - `<xf:action type="javascript">` must omit elements without DOM representation ([\#6216](https://github.com/orbeon/orbeon-forms/issues/6216))
     - `AjaxEventQueue` can get blocked when a response arrives for a form that has been removed ([\#6200](https://github.com/orbeon/orbeon-forms/issues/6200))
     - `Document.setValue()` must not return a Scala `Future` ([\#6129](https://github.com/orbeon/orbeon-forms/issues/6129))
-
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
 
