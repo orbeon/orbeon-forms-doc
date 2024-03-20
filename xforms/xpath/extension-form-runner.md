@@ -360,9 +360,7 @@ Return the form's current language.
 fr:mode() as xs:string
 ```
 
-Return the Form Runner mode.
-
-[//]: # (TODO link to new page explaining)
+Return the Form Runner [mode](/form-builder/formulas-examples.md#modes).
 
 ### fr:is-draft()
 
