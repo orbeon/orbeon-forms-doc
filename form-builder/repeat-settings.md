@@ -129,6 +129,19 @@ This option can be selected only when the "Allow the user to add, remove, or mov
 
 For details, see [Paging large repeated sections](/form-runner/feature/wizard-view.md#paging-large-repeated-sections).
 
+## Visibility and Read-Only formulas
+
+[SINCE Orbeon Forms 2024.1]
+
+- **Visibility:** Boolean expression specifying whether the repetition is visible.
+    - If this field is left blank, then the repetition is always visible, unless an enclosing grid or section is not visible.
+    - Otherwise, it is visible only if the result of the Boolean expression is `true()`.
+- **Read-Only:** Boolean expression specifying whether the repetition is read-only (not editable).
+    - If this field is left blank, then the repetition is editable unless an enclosing grid or section is read-only.
+    - Otherwise, it is editable only if the result of the Boolean expression is `false()`.
+
+XPath expressions are described in more details in [Formulas](formulas.md).
+
 ## See also
 
 - [Repeated grids](repeated-grids.md)
