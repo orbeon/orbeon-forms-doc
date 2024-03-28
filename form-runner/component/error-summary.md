@@ -121,6 +121,28 @@ You can dispatch the `fr-unvisit-all` event to the error summary. This:
 * makes the summary consider all controls under the configured observer(s) as not visited
 * marks all controls under the configured observer(s) as not visited by removing the `xforms-visited` and `xforms-alert-active-visited` classes
 
+### Visiting of fields
+
+In Orbeon Forms, a form control can be *visited* or not. Visited controls have typically been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control.
+
+[SINCE Orbeon Forms 2023.1] Form controls are also marked as visited when they are calculated, visible, and their value changes. This is useful to immediately show validation errors associated with such form controls, which are typically implemented with the Calculated Value form control. You can disable this behavior by setting the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.error-summary.visit-value-changed"
+    value="false"/>
+```
+
+[SINCE Orbeon Forms 2024.1] Form controls are also marked as visible as they become invalid. This is useful when you want to immediately show validation errors for field that become invalid not as the result of their value changing, but because their validity depend on something else in the form that has changed. You can disable this behavior by setting the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.error-summary.visit-invalid"
+    value="false"/>
+```
+
 ### Setting a page size
 
 [SINCE Orbeon Forms 2018.1]
