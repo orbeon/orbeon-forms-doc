@@ -18,9 +18,7 @@ Main features:
 * Handles repeats: if an iteration is moved, the error summary updates
 * More than one error summary can be placed in the page
 
-## Usage
-
-### Basic usage
+## Basic usage
 
 The minimal configuration looks like this:
 
@@ -61,7 +59,7 @@ The title can be dynamic, e.g. for localization purposes:
 </fr:error-summary>
 ```
 
-### Getting information from the error summary
+## Getting information from the error summary
 
 If specified, the following attributes point to nodes into which the error summary makes useful information available to you:
 
@@ -82,6 +80,8 @@ You can use this information for example to show a status icon:
     <xhtml:img src="/apps/my-app/images/warning.png" alt="Form is invalid"/>
 </xf:group>
 ```
+
+## Controls marking as visited
 
 ### Marking all controls as visited
 
@@ -121,7 +121,7 @@ You can dispatch the `fr-unvisit-all` event to the error summary. This:
 * makes the summary consider all controls under the configured observer(s) as not visited
 * marks all controls under the configured observer(s) as not visited by removing the `xforms-visited` and `xforms-alert-active-visited` classes
 
-### Visiting of fields
+### Automatically marking controls as visited
 
 In Orbeon Forms, a form control can be *visited* or not. Visited controls have typically been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control.
 
@@ -143,7 +143,7 @@ In Orbeon Forms, a form control can be *visited* or not. Visited controls have t
     value="false"/>
 ```
 
-### Setting a page size
+## Setting a page size
 
 [SINCE Orbeon Forms 2018.1]
 
@@ -161,7 +161,7 @@ To change the default, you can set the following property:
 
 The `page-size` attribute can also be used on the component when used outside of Form Runner.
 
-### Adding a header and a footer
+## Adding a header and a footer
 
 When there are no visible errors, the entire body of the error summary is hidden. You can had your own header and footer content within that body so it hides and shows depending on whether there are errors or not. Just add the `<fr:header>` and `<fr:footer>` elements:
 
@@ -172,7 +172,7 @@ When there are no visible errors, the entire body of the error summary is hidden
 </fr:error-summary>
 ```
 
-### Global errors
+## Global errors
 
 In addition to errors related to controls, the error summary can handle global errors:
 
@@ -192,7 +192,7 @@ The nested `fr:label` (optional) and `fr:alert` elements are evaluated relative 
 * A label text displayed to the left
 * An alert text displayed to the right
 
-### Non-incremental mode
+## Non-incremental mode
 
 By default the error summary updates the list of error as they occur on the form.
 
