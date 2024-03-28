@@ -183,14 +183,12 @@ In the Control Settings dialog, formulas are used to specify the following aspec
 
 ![Formulas](images/control-settings-formulas.png)
 
-- **Visibility:** 
-    - Boolean expression specifying whether the control is visible.
-    - If this field is left blank, then the control is always visible, unless the section is not visible.
-    - Otherwise, it is visible only if the result of the boolean expression is `true()`.
-- **Read-Only:** 
-    - Boolean expression specifying whether the control is read-only (not editable).
-    - If this field is left blank, then the control is editable unless the section is read-only.
-    - Otherwise, the field is editable only if the result of the Boolean expression is `false()`.
+- **Visibility:**
+    - Specifies whether the control is visible. This can be either "Yes" (default), "No", or an XPath formula.
+    - If a formula is specified, the control is visible only if the formula evaluates to `true()`.
+- **Read-Only:**
+    - Specifies whether the control is read-only (not editable). This can be either "Yes", "No" (default), or an XPath formula.
+    - If a formula is specified, the control is editable only if the formula evaluates to `false()`.
 - **Initial value:** 
     - String expression returning the initial value of the control when the form first shows. This is only applied in `new` mode.
     - Default: the value set into the field at design time (usually a blank value).
@@ -204,12 +202,8 @@ In the Control Settings dialog, formulas are used to specify the following aspec
 
 In the Section/Grid Settings dialog, formulas are used to specify the following aspects of a section or grid:
 
-- **Visibility:** Boolean expression specifying whether the section is visible or not.
-    - If this field is left blank, then the section is always visible.
-    - Otherwise, it is visible only if the result of the Boolean expression is true().
-- **Read-Only:** Boolean expression specifying whether the section is shown as read-only or not.
-    - If this field is left blank, then the section content is always editable.
-    - Otherwise, the section content is editable only if the result of the Boolean expression is false().
+- **Visibility:** Specifies whether the section or grid is visible. This can be either "Yes" (default), "No", or an XPath formula, in which case the section or grid is visible only if the formula evaluates to `true()`.
+- **Read-Only:** Specifies whether the section or grid is read-only (not editable). This can be either "Yes", "No" (default), or an XPath formula, in which case the section or grid is editable only if the formula evaluates to `false()`.
 
 [SINCE Orbeon Forms 2020.1]
 

@@ -133,12 +133,10 @@ For details, see [Paging large repeated sections](/form-runner/feature/wizard-vi
 
 [SINCE Orbeon Forms 2024.1]
 
-- **Visibility:** Boolean expression specifying whether the repetition is visible.
-    - If this field is left blank, then the repetition is always visible, unless an enclosing grid or section is not visible.
-    - Otherwise, it is visible only if the result of the Boolean expression is `true()`.
-- **Read-Only:** Boolean expression specifying whether the repetition is read-only (not editable).
-    - If this field is left blank, then the repetition is editable unless an enclosing grid or section is read-only.
-    - Otherwise, it is editable only if the result of the Boolean expression is `false()`.
+- **Visibility:** Specifies whether the repetition is visible. This can be either "Yes" (default), "No", or an XPath formula, in which case the repetition is visible only if the formula evaluates to `true()`.
+- **Read-Only:** Specifies whether the repetition is read-only (not editable). This can be either "Yes", "No" (default), or an XPath formula, in which case the repetition is editable only if the formula evaluates to `false()`.
+
+For a repetition to be visible or editable, all enclosing sections/grids must be visible or editable as well.
 
 XPath expressions are described in more details in [Formulas](formulas.md).
 

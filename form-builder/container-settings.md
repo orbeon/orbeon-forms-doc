@@ -33,12 +33,10 @@ See [Control Settings](control-settings.md#custom-css-classes) for more about cu
 
 ### Formulas
 
-- **Visibility:** Boolean expression specifying whether the section or grid is visible.
-    - If this field is left blank, then the section or grid is always visible, unless an enclosing section is not visible.
-    - Otherwise, it is visible only if the result of the Boolean expression is `true()`.
-- **Read-Only:** Boolean expression specifying whether the section or grid is read-only (not editable).
-    - If this field is left blank, then the section or grid is editable unless an enclosing section is read-only.
-    - Otherwise, it is editable only if the result of the Boolean expression is `false()`.
+- **Visibility:** Specifies whether the section or grid is visible. This can be either "Yes" (default), "No", or an XPath formula, in which case the section or grid is visible only if the formula evaluates to `true()`.
+- **Read-Only:** Specifies whether the section or grid is read-only (not editable). This can be either "Yes", "No" (default), or an XPath formula, in which case the section or grid is editable only if the formula evaluates to `false()`.
+
+For a section or grid to be visible or editable, all enclosing sections/grids must be visible or editable as well.
 
 XPath expressions are described in more details in [Formulas](formulas.md).
 
