@@ -132,13 +132,23 @@ In the Control Settings dialog box, open selection can be disabled (using the No
 
 ### Minimum input length
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-You can specify a minimum input length, in characters, before the dropdown starts displaying choices. This is useful if you have a large number of choices, and the subset of choices returned is unlikely to be useful if users don't type at least a few characters. This is configured by setting the following property.
+You can specify a minimum input length, in characters, before a dropdown with search starts displaying choices. This is useful if you have a large number of choices, and the subset of choices returned is unlikely to be useful if users don't type at least a few characters. This is configured by setting the following property.
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 ```xml
 <property 
     as="xs:integer"
     name="oxf.xforms.xbl.fr.databound-select1-search.min-input-length.*.*"
+    value="2"/>
+```
+
+[SINCE Orbeon Forms 2023.1.1]
+
+```xml
+<property 
+    as="xs:integer"
+    name="oxf.xforms.xbl.fr.dropdown-select1-search.min-input-length.*.*"
     value="2"/>
 ```
