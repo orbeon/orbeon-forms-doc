@@ -11,6 +11,7 @@ If you have your own application and would like to embed a form created with For
 
 - If you have a Java web app, we recommend you use the [Java Embedding API](java-api.md).
 - If you are using Liferay, we recommend you use the [Liferay proxy portlet](liferay-proxy-portlet.md).
+- If you are using Angular, we recommend you use the [Angular component](angular-component.md).
 - If you are using React, we recommend you use the [React component](react-component.md).
 - In all other cases, we recommend you use the JavaScript Embedding API described on this page. It offers the most flexibility, and will work irrelevant of the server-side technology you are using.
 

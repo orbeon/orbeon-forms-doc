@@ -168,6 +168,7 @@
         * [Liferay proxy portlet](form-runner/link-embed/liferay-proxy-portlet.md)
         * [Securing Form Runner access](form-runner/link-embed/securing.md)
         * [Form Runner offline embedding API](form-runner/link-embed/offline-embedding-api.md)
+        * [Angular component](form-runner/link-embed/angular-component.md)
         * [React component](form-runner/link-embed/react-component.md)
     * [Access control and permissions](form-runner/access-control/README.md)
         * [Users](form-runner/access-control/users.md)
