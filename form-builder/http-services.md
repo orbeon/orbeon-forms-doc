@@ -25,6 +25,7 @@ The "Definition" tab allows you to set the basic service parameters:
       ```xpath
       https://example.org/{fr:control-string-value('control-1')}
       ```
+  - [SINCE Orbeon Forms 2024.1] The resource URL can contain variable references to refer to the values of form controls (e.g. `$control-1`).
 - **Method**
     - The HTTP method to use: `GET`, `POST`, `PUT` or `DELETE`.
 - **Request Body**
