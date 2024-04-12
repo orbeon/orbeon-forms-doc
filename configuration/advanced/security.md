@@ -36,14 +36,14 @@ XForms state is kept on the server, so it is just not exposed to users. Only the
 
 _NOTE: There is a deprecated option to keep state on the client. In this case, it is encrypted with a password you set. The password doesn't leave the server, and even if the encrypted value is visible to the client, it cannot be decrypted by users and can only be decrypted on the server with a valid key._
 
-#### Indirect access to XForms instance data via Ajax
+#### Indirect access to XForms instance data via the Fetch API
 
-The Orbeon Forms XForms engine typically interacts with the client using Ajax requests sent from the client browser. These requests are protected as follows:
+The Orbeon Forms XForms engine typically interacts with the client using Fetch API requests (also known as XHR or Ajax requests) sent from the client browser. These requests are protected as follows:
 
-* Ajax requests are only allowed to modify controls, not XML data directly.
-* Ajax requests are only allowed to modify visible, read-write controls.
+* Fetch requests are only allowed to modify controls, not XML data directly.
+* Fetch requests are only allowed to modify visible, read-write controls.
 * Each page has a unique UUID generated each time the page is produced. The page has a finite lifetime, typically expiring with the user's session. Once the session has expired, any attempt to use that UUID fails.
-* Each Ajax request has a unique sequence number. The server rejects incorrect sequence numbers. This prevents simply replaying incoming requests.
+* Each Fetch request has a unique sequence number. The server rejects incorrect sequence numbers. This prevents simply replaying incoming requests.
 * Only requests via `POST` can have a side-effect on Orbeon Forms internal state. This excludes attacks via simply loading a URL via an image or a link.
 
 ### Cross site request forgery
@@ -56,7 +56,7 @@ The second way is the risk of using another site to trick Orbeon into doing some
 
 The key trick with CSRF is that the third-party site contains URLs, or is able to control a form submission, that can target Orbeon Forms into performing actions that otherwise would only be possible by the user of Orbeon Forms.
 
-Based on our understanding of CSRF, the measures above appear to make an XSRF attack difficult. The user would need to be able to `POST` Ajax or an HTML form, and to guess a valid UUID and sequence number. Even so, in this case only actions that the user of the form could perform would be possible. Note that such some actions could be dangerous: for example a "delete" button on the page could do harm. However again this would require the attacker to guess a lot about the possible requests first.
+Based on our understanding of CSRF, the measures above appear to make an XSRF attack difficult. The user would need to be able to `POST` via Fetch or an HTML form, and to guess a valid UUID and sequence number. Even so, in this case only actions that the user of the form could perform would be possible. Note that such some actions could be dangerous: for example a "delete" button on the page could do harm. However again this would require the attacker to guess a lot about the possible requests first.
 
 The [Wikipedia page about CSRF][4] confirms that some of the measures above are effective:
 
