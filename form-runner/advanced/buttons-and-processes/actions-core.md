@@ -10,7 +10,7 @@ Complete the top-level process right away and return a success value.
 
 ## failure
 
-[SINCE Orbeon Forms 2023.1]
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Complete the top-level process right away and return a failure value.
 
