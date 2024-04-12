@@ -20,13 +20,13 @@ This allows you for example to store certain form definition on disk, while stor
 
 Orbeon Forms 4.0 introduces a level of indirection in the persistence layer configuration: you map the parameters *app*, *form*, and *form definition or data* to a _provider_, and then map that provider to its REST persistence API. This is configured via properties starting with `oxf.fr.persistence.provider`.
 
-By default, eXist is configured for all apps and forms, including form definitions and form data. This is done by associating the `exist` provider:
+By default, SQLite (SINCE Orbeon Forms 2023.1, previously eXist) is configured for all apps and forms, including form definitions and form data. This is done by associating the `sqlite` provider:
 
 ```xml
 <property
     as="xs:string"
     name="oxf.fr.persistence.provider.*.*.*"
-    value="exist"/>
+    value="sqlite"/>
 ```
 
 In each such provider mapping, there are 3 configurable pieces of information. They represent, in this order:
