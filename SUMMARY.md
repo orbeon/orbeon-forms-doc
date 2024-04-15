@@ -3,6 +3,7 @@
 * [Getting started](README.md)
 * [Installation](installation/README.md)
     * [Logging](installation/logging.md)
+    * [Configuration banner](installation/configuration-banner.md)
     * [Tomcat](installation/tomcat.md)
     * [WildFly](installation/wildfly.md)
     * [WebSphere](installation/websphere.md)
