@@ -11,7 +11,7 @@ Orbeon Forms requires a number of configuration steps to be performed before it 
 - Setting a password for encryption
 - Setting a database provider
 
-If neither of these is set, Orbeon Forms now shows a banner at the top of most application pages. In order to know more about what needs to be configured, [configure logging](/installation/logging.md) and check the Orbeon Forms log file. The file will contain something like this at the `ERROR` level:
+If neither of these is configured, Orbeon Forms shows a banner at the top of most application pages. In order to know more about what needs to be configured, [configure logging](/installation/logging.md) and check the Orbeon Forms log file. The file will contain something like this at the `ERROR` level:
 
 ```
 The following Orbeon Forms configurations are incomplete:
@@ -21,6 +21,13 @@ The following Orbeon Forms configurations are incomplete:
 - The password for the `oxf.fr.field-encryption.password` property is missing or not strong enough.
 - The database configuration is missing or incomplete.
 ```
+
+In addition, feature-specific passwords must be set for two features which are not enabled by default:
+
+- [Token-based permissions](/form-runner/access-control/tokens.md)
+- [Field-level encryption](/form-builder/field-level-encryption.md)
+
+You do not have to configure these features if you do not use them. However, the fact that these features are not configured will be logged at the `INFO` level.
 
 ## Configurations
 
