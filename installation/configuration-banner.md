@@ -11,7 +11,7 @@ Orbeon Forms requires a number of configuration steps to be performed before it 
 - Setting a password for encryption
 - Setting a database provider
 
-If neither of these is set, Orbeon Forms now shows a banner at the top of most application pages. In order to know more about what needs to be configured, configure and view the Orbeon Forms log file. The file will contain something like this at the `ERROR` level:
+If neither of these is set, Orbeon Forms now shows a banner at the top of most application pages. In order to know more about what needs to be configured, [configure logging](/installation/logging.md) and check the Orbeon Forms log file. The file will contain something like this at the `ERROR` level:
 
 ```
 The following Orbeon Forms configurations are incomplete:
@@ -53,4 +53,5 @@ If you plan to use [Field-level encryption](/form-builder/field-level-encryption
 ## See also
 
 - [Installation](/installation/README.md)
+- [Logging](/installation/logging.md)
 - [Properties](/configuration/properties/README.md)
