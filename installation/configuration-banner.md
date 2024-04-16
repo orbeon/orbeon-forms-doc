@@ -33,9 +33,11 @@ You do not have to configure these features if you do not use them. However, the
 
 ### Database
 
-Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to utilize a proper relational database. For more information, see [Relational Database](/form-runner/persistence/relational-db.md).
+Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to use a proper [relational database](/form-runner/persistence/relational-db.md).
 
 The reason for considering this an incomplete configuration is that the SQLite database is not suitable for production use with Orbeon Forms at this point. This is not necessarily due to shortcomings of SQLite, but due to the fact that the SQLite database is embedded in the Orbeon Forms WAR file and more likely to be deleted by mistake. In addition, most users will want to use a more powerful database for production use.
+
+You are not required to configure a database if you are using Orbeon Forms for evaluation purposes only, but in this case you will see the banner.
 
 See also [Database setup](/installation/README.md#database-setup).
 
@@ -47,7 +49,7 @@ You must set the [`oxf.crypto.password`](/configuration/properties/general.md#ox
 - product version in the URL
 - `cid:` URLs and XML metadata format
 
-This password is typically used for transient data, but you should still change it.
+This password is typically used for transient data, but you must still change it.
 
 ### Access token password
 
@@ -62,3 +64,4 @@ If you plan to use [Field-level encryption](/form-builder/field-level-encryption
 - [Installation](/installation/README.md)
 - [Logging](/installation/logging.md)
 - [Properties](/configuration/properties/README.md)
+- [Removing the built-in SQLite database](/configuration/advanced/production-war.md#removing-the-built-in-sqlite-database)
