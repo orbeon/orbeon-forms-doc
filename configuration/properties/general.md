@@ -44,6 +44,7 @@ Such cases include:
 
 - accessing the server through different host names (like `https://foo/orbeon` and `https://bar/orbeon` reaching the same Orbeon Forms instance)
 - accessing the embedded eXist database (for demo purposes) when the request goes through a reverse proxy
+    - NOTE: The eXist database is removed [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md).
 
 When you are in such configurations, please make sure to set `oxf.url-rewriting.service.base-uri` to point to the local
 servlet container instance, for example:

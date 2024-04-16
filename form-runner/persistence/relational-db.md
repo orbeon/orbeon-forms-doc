@@ -2,6 +2,8 @@
 
 ## Overview
 
+Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to utilize a separate relational database. 
+
 The setup for the relational persistence layers is a 3-step process. The first two steps are database specific, so please refer to the relevant subsections below.
 
 1. __Database setup__: You set up the database and create a schema with a few tables. This is typically be done by a DBA.
@@ -9,6 +11,8 @@ The setup for the relational persistence layers is a 3-step process. The first t
 1. __Orbeon Forms setup__: You configure Orbeon Forms to use the relevant persistence layer.
 
 Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
+
+See also [Removing the built-in SQLite database](/configuration/advanced/production-war.md#removing-the-built-in-sqlite-database).
 
 ## Database setup
 
@@ -615,6 +619,7 @@ See [Auditing](form-runner/persistence/auditing.md).
 - [Purging historical data](/form-runner/feature/purging-historical-data.md)
 - [Purging old data using SQL](/form-runner/persistence/purging-old-data.md)
 - [Relational Database Logging](/configuration/troubleshooting/database-logging.md)
+- [Removing the built-in SQLite database](/configuration/advanced/production-war.md#removing-the-built-in-sqlite-database)
 
 [1]: https://www.orbeon.com/pricing
 [2]: http://docs.oracle.com/cd/B19306_01/appdev.102/b14259/xdb03usg.htm#sthref263

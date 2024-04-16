@@ -65,7 +65,7 @@ Also, make sure that you do *not* have tiered compilation when using Java 7. See
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to utilize a proper relational database. For more information, see [Relational Database](../form-runner/persistence/relational-db.md). A warning banner will display as a reminder to make this change.
+Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to utilize a separate relational database. For more information, see [Relational Database](/form-runner/persistence/relational-db.md). A warning banner will display as a reminder to make this change.
 
 Note that the SQLite demo database is stored in `WEB-INF/orbeon-demo.sqlite`, located where the Orbeon Forms' `.war` file is uncompressed. Be aware that updating the WAR file might overwrite the demo database, resulting in the loss of any saved data.
 
@@ -77,6 +77,8 @@ To disable the `sqlite` embedded database and demo forms, add the following prop
     name="oxf.fr.persistence.sqlite.active"
     value="false"/>
 ```
+
+See also [Removing the built-in SQLite database](/configuration/advanced/production-war.md#removing-the-built-in-sqlite-database).
 
 ## License installation (Orbeon Forms PE only)
 
