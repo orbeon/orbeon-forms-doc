@@ -2,7 +2,7 @@
 
 ## Overview
 
-Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to utilize a separate relational database. 
+Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to utilize a separate relational database.
 
 The setup for the relational persistence layers is a 3-step process. The first two steps are database specific, so please refer to the relevant subsections below.
 
