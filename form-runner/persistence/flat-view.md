@@ -4,7 +4,7 @@
 
 ### Rationale
 
-If you're using Oracle, SQL Server [SINCE Orbeon Forms 2016.2], or DB2 [SINCE Orbeon Forms 4.7], or PostgreSQL [SINCE Orbeon Forms 4.8], when you deploy a form created in Form Builder, Orbeon Forms can create a form-specific view of your data, with one column for each form field.
+If you're using Oracle, SQL Server [SINCE Orbeon Forms 2016.2], DB2 [SINCE Orbeon Forms 4.7], or PostgreSQL [SINCE Orbeon Forms 4.8], when you deploy a form created in Form Builder, Orbeon Forms can create a form-specific view of your data, with one column for each form field.
 
 ### Property to enable
 
