@@ -148,23 +148,22 @@ See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-
 
 ## Formulas
 
-[SINCE Orbeon Forms 2020.1]
+
 
 ![Readonly formula](images/form-settings-formulas.png)
 
 - **Read-Only:** Boolean expression specifying whether the entire form is read-only (not editable).
+    - [SINCE Orbeon Forms 2020.1]
     - If this field is left blank, then the form is editable.
     - Otherwise, it is editable only if the result of the Boolean expression is `false()`.
 
-[SINCE Orbeon Forms 2021.1]
-
 - **Calculations in readonly modes (Review, PDF)**:
-   - Use property: use the [`oxf.fr.detail.readonly.disable-calculate` property](/configuration/properties/form-runner-detail-page.md#calculations-in-readonly-modes)
-       - the property defaults to `false`, which means that Calculated Value formulas run in readonly modes
-   - Enable: Calculated Value formulas run in readonly modes.
-   - Disable: Calculated Value formulas do not run in readonly modes.
-
-Sometimes calculations should not run in readonly modes, such as the View page. This can now be configured at the form level.
+    - [SINCE Orbeon Forms 2021.1]
+    - Use property: use the [`oxf.fr.detail.readonly.disable-calculate` property](/configuration/properties/form-runner-detail-page.md#calculations-in-readonly-modes)
+        - the property defaults to `false`, which means that Calculated Value formulas run in readonly modes
+    - Enable: Calculated Value formulas run in readonly modes.
+    - Disable: Calculated Value formulas do not run in readonly modes.
+    - Sometimes calculations should not run in readonly modes, such as the View page. This can now be configured at the form level.
 
 ## About this Form
 
