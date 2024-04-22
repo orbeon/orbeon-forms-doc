@@ -130,7 +130,7 @@ In the Control Settings dialog box, open selection can be disabled (using the No
     <figcaption>Open selection inside the Control Settings</figcaption>
 </figure>
 
-## Auto-select unique choice
+### Auto-select unique choice
 
 [SINCE Orbeon Forms 2023.1.1, 2024.1]
 
