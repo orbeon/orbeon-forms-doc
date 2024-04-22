@@ -144,3 +144,4 @@ The response contains a ZIP file binary. The structure is documented [here](/for
 
 - [Exporting form definitions and form data](/form-runner/feature/exporting-form-definitions-and-form-data.md)
 - [Revision history API](/form-runner/api/persistence/revision-history.md)
+- [Blog post: Exporting form definitions and data](https://www.orbeon.com/2024/04/form-data-export)
