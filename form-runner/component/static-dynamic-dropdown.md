@@ -130,8 +130,18 @@ In the Control Settings dialog box, open selection can be disabled (using the No
     <figcaption>Open selection inside the Control Settings</figcaption>
 </figure>
 
-### Minimum input length
+## Auto-select unique choice
 
+[SINCE Orbeon Forms 2023.1.1, 2024.1]
+
+In certain scenarios, the list of choices offered by the dropdown may depend on values entered by users through other controls in the form. You might encounter situations where this list includes only one item. In such cases, it may seem redundant to require users to select that single item, as it is their only choice. Therefore, you might want to enable the 'Auto-select unique choice' option, as shown below.
+
+<figure>
+    <img src="images/dynamic-data-dropdown-auto-select.png" width="198">
+    <figcaption>Option in the Control Settings dialog</figcaption>
+</figure>
+
+### Minimum input length
 
 You can specify a minimum input length, in characters, before a dropdown with search starts displaying choices. This is useful if you have a large number of choices, and the subset of choices returned is unlikely to be useful if users don't type at least a few characters. This is configured by setting the following property.
 
