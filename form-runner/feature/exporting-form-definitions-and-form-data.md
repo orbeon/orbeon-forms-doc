@@ -72,3 +72,4 @@ At the moment, once the "Export" button has been clicked, the dialog will be clo
 - [Forms Admin page](forms-admin-page.md)
 - [Zip export API](/form-runner/api/persistence/export-zip.md)
 - [Revision history API](/form-runner/api/persistence/revision-history.md)
+- [Blog post: Exporting form definitions and data](https://www.orbeon.com/2024/04/form-data-export)
