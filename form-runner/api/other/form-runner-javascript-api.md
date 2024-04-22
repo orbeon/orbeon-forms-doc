@@ -337,6 +337,13 @@ repeat indexes.
 
 *NOTE: This only supports the wizard's `free` validation mode. `lax` and `strict` are not yet supported.*
 
+[\[SINCE Orbeon Forms 2023.1.2\]](/release-notes/orbeon-forms-2023.1.2.md)
+
+This now also works with the `strict` and `lax` validation modes. In these modes, the wizard will check whether the switch to the requested wizard page is allowed.
+
+- If so, it will switch and focus on the control.
+- If not, it will ignore the `focus()` request. 
+
 ## Listening for Error Summary navigation
 
 [SINCE Orbeon Forms 2022.1]
