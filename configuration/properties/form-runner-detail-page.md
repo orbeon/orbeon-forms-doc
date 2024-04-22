@@ -670,6 +670,8 @@ The following property allows you to show hints in the `view` and `pdf` modes. B
 
 ### Calculations in readonly modes
 
+[SINCE Orbeon Forms 2021.1]
+
 The following property allows disabling Calculated Value formulas in readonly modes (Review, PDF). By default, the value is `false` and the calculations take place.
 
 ```xml
