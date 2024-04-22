@@ -50,7 +50,7 @@ This feature is related to the Export feature above. It allows you to delete for
 
 ![Purge following forms](../form-runner/images/purge-following-forms.png)
 
-For more information, see the [documentation](/form-runner/feature/purging-historical-data.md)
+For more information, see the [documentation](/form-runner/feature/purging-historical-data.md) and this [blog post](https://www.orbeon.com/2024/04/form-data-export).
 
 ### Data revision history
 
