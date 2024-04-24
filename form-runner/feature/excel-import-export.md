@@ -30,7 +30,7 @@ The export feature produces Excel files that look like this:
 
 Orbeon Forms includes, in the generated Excel file, named ranges which match the control names assigned in Form Builder. This allows reimporting data in those cells during a subsequent import.
 
-Excel names do not support all the character supported in Form Runner names. In addition, Excel has some very specific and poorly documented rules for name ranges for names that look like cell references. Such names are modified by Orbeon Forms when needed with an `_` prefix. The following shows some modification that are performed by Orbeon Forms:
+Excel names do not support all the characters supported in Form Runner names. In addition, Excel has some very specific and poorly documented rules for name ranges for names that look like cell references. Such names are modified by Orbeon Forms when needed with an `_` prefix. The following shows some modification that are performed by Orbeon Forms:
 
 | Original Name | Modified Name |
 |---------------|---------------|
@@ -53,6 +53,8 @@ Excel allows you to see the name of a given cell or range:
 In the case of repeated grids, groups of cells share the same name.
 
 ![Repeated grid in Excel](/form-builder/images/excel-export-repeat-export.png)
+
+Repeated grids, or repeated sections containing only non-repeated grids, are "flattened". That is, all form controls are presented in a single Excel row, with one row for each repetition.
 
 ### Lists of choices
 
@@ -151,16 +153,16 @@ The import page wizard checks the validity of the format during import. When che
 
 As available in Orbeon Forms 2021.1, the new Excel import and export feature has the following limitations:
 
-- no 24-column mode
-- no dynamic list of choices (for example dynamic dropdowns)
-- no calculations or validations are exported
-- no nested repeats
-- repeated grids or sections are always flattened
-- no section templates support
-- some form controls are not supported, including
+- The 24-column mode is not supported.
+- Dynamic list of choices (for example dynamic dropdowns) are not supported.
+- Nested repeats are not supported.
+- Repeated grids or sections are always flattened.
+- Section templates are not supported.
+- Some form controls are not supported, including:
     - Formatted Text
     - Handwritten Signature
     - Attachments
+- No calculations or validations are exported.
 
 ## See also
 
