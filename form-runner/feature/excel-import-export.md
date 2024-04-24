@@ -139,21 +139,6 @@ The import page wizard checks the validity of the format during import. When che
 
 [//]: # (TODO: merging of data)
 
-[//]: # (### Validation of static lists of choices)
-
-[//]: # ()
-[//]: # ([\[SINCE Orbeon Forms 2023.1\]]&#40;/release-notes/orbeon-forms-2023.1.md&#41;)
-
-[//]: # ()
-[//]: # (You can enable the following property to enable validation of static lists of choices during import:)
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.detail.validate-selection-controls-choices.*.*"
-    value="true"/>
-```
-
 ## Limitations
 
 As available in Orbeon Forms 2021.1, the new Excel import and export feature has the following limitations:
