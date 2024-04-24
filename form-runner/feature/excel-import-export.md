@@ -54,6 +54,14 @@ In the case of repeated grids, groups of cells share the same name.
 
 ![Repeated grid in Excel](/form-builder/images/excel-export-repeat-export.png)
 
+### Lists of choices
+
+Lists of choices are exported as text, showing the value of the choice between parentheses, and the label next to it.
+
+When importing, the cell value must contain the value of the choice, not the label.
+
+Multiple-selection controls require entering the values as a space-separated list of tokens.
+
 ### Exporting from the Form Builder Detail page
 
 With Form Builder, the Excel Export button is available by default. You can control its availability with the following property, by adding the `excel-export` button token. We show here the default value of this property for Orbeon Forms 2023.1:
