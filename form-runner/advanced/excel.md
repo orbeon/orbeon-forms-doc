@@ -135,3 +135,8 @@ You can disable the ability for the user doing the import to select a version an
 ## Limitations
 
 The import functionality does not support importing data into repeated grids.
+
+## See also
+
+- [Excel named ranges import and export](excel-import-export.md)
+- [Service calls](/form-runner/link-embed/linking.md)
