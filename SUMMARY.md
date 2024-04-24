@@ -136,6 +136,7 @@
     * Features
         * [Automatic calculations dependencies](form-runner/feature/automatic-calculations-dependencies.md)
         * [Datasets](form-runner/feature/datasets.md)
+        * [Excel named ranges import and export](form-runner/advanced/excel-import-export.md)
         * [Export of form definitions and form data](form-runner/feature/exporting-form-definitions-and-form-data.md)
         * [Purging historical data](form-runner/feature/purging-historical-data.md)
         * [Lease Feature](form-runner/feature/lease.md)
@@ -228,7 +229,6 @@
             * [Predefined buttons, processes and dialogs](form-runner/advanced/buttons-and-processes/predefined.md)
             * [Summary page buttons and processes](/form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md)
         * [Custom dialogs/model logic](form-runner/advanced/custom.md)
-        * [Excel named ranges import and export](form-runner/advanced/excel-import-export.md)
         * [Excel import](form-runner/advanced/excel.md)
         * [Services](form-runner/advanced/services.md)
         * [Singleton form](form-runner/advanced/singleton-form.md)
