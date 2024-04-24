@@ -53,10 +53,11 @@ The new document-based import feature does not replace the previous one but comp
 
 The export feature produces Excel files that look like this:
 
-![Example of Excel export](/form-builder/images/excel-export-example.png)
+![Example of Excel export](/form-builder/images/excel-export-export.png)
 
 For more details:
 
+- [documentation](/form-runner/advanced/excel-import-export.md)
 - [blog post](https://blog.orbeon.com/2021/09/excel-export-and-import.html)
 
 ### XML format for export and import
