@@ -56,7 +56,7 @@ In the case of repeated grids, groups of cells share the same name.
 
 ### Exporting from the Form Builder Detail page
 
-With Form Builder, the Excel Export button is available by default. If it is not, you can control its availability with the following property, by adding the `excel-export` button token. We show here the default value of this property for Orbeon Forms 2023.1:
+With Form Builder, the Excel Export button is available by default. You can control its availability with the following property, by adding the `excel-export` button token. We show here the default value of this property for Orbeon Forms 2023.1:
 
 ```xml
 <property as="xs:string"  name="oxf.fr.detail.buttons.orbeon.builder">
@@ -70,9 +70,11 @@ With Form Builder, the Excel Export button is available by default. If it is not
 </property>
 ```
 
+Note the `|` which denote combined buttons.
+
 ### Exporting from the Form Runner Summary and Detail pages
 
-With Form Runner, you can enable the export button with the following properties, also by including the `excel-export` button token. Summary page:
+With Form Runner, you can enable the export button with the following properties, by including the same `excel-export` button token. Summary page:
 
 ```xml
 <property as="xs:string"  name="oxf.fr.summary.buttons.*.*">
@@ -101,7 +103,7 @@ The reason for this extra setting is that, even if the user has read access to t
 
 ### Exporting through a service call
 
-You can also export [through a service call](/form-runner/link-embed/linking.md).
+You can also export [through a service call](/form-runner/link-embed/linking.md#paths).
 
 ## Import
 
