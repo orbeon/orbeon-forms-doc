@@ -45,7 +45,7 @@ Cells inside a grid can be ordered in two ways:
 
 Ordering the cells by row is the default behaviour.
 
-Ordering the cells by column impacts the tab order (i.e. the order in which cells are navigated using the tab key) and the order in which the cells are placed on devices with a narrow display (e.g. phones) when all cells are stacked up (responsive relayout).
+Ordering the cells by column impacts the tab order (i.e. the order in which cells are navigated using the tab key) and the order in which the cells are placed on devices with a narrow display (e.g. phones) when all cells are stacked up (responsive layout).
 
 A default value can be set for all grids in the [Form Settings dialog](/form-builder/form-settings.md#form-options).
 
