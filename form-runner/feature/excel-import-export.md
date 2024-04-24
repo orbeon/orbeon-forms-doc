@@ -132,7 +132,7 @@ You don’t have to export a form to Excel to import data: as long as you have a
 
 ### Importing from the Import page
 
-The same [Import page](excel.md) that was used for the earlier Excel import feature is used for the new name ranges-based Excel import.
+The same [Import page](excel-import.md) that was used for the earlier Excel import feature is used for the new name ranges-based Excel import.
 
 However, you must configure the Import page to support the named ranges-based Excel import. You can do this by setting the following property, where the `excel-named-ranges` token indicates support for the format (the `xml-form-structure-and-data` allows support for the XML format):
 
@@ -165,7 +165,7 @@ As available in Orbeon Forms 2021.1, the new Excel import and export feature has
 ## See also
 
 - Blog post: [Excel export and import](https://blog.orbeon.com/2021/09/excel-export-and-import.html)
-- [Import page](/form-runner/advanced/excel.md)
+- [Import page](/form-runner/feature/excel-import.md)
 - [Service calls](/form-runner/link-embed/linking.md)
 
 [//]: # (https://3.basecamp.com/3600924/buckets/16915667/messages/4541166737)
