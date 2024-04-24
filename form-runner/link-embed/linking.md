@@ -115,7 +115,19 @@ For exports that use the `/export/` path:
     - `true`: initializes and runs the form before exporting
     - `false` (default): does not initialize and run the form before exporting
 - `language` 
-    - language preference, for example `en` or `fr` 
+    - language preference, for example `en` or `fr`
+
+### Excel export in `excel-with-named-ranges` format
+
+The following parameters control the number of repetitions created in the Excel file for repeated grids and repeated sections:
+
+- `repeats-at-least`
+    - if this is present, the number of repeats is at least the value of this parameter
+    - if the data (or form definition template) contains more repetitions, then all repetitions are included
+- `repeats-exactly`
+    - this is ignored if `repeats-at-least` is present 
+    - if this is present, the number of repeats is exactly the value of this parameter
+    - if the data (or form definition template) contains more repetitions, then only the repetitions up to the value specified are included
 
 ## HTTP status codes
 
