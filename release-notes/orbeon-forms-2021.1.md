@@ -57,7 +57,7 @@ The export feature produces Excel files that look like this:
 
 For more details:
 
-- [documentation](/form-runner/advanced/excel-import-export.md)
+- [documentation](/form-runner/feature/excel-import-export.md)
 - [blog post](https://blog.orbeon.com/2021/09/excel-export-and-import.html)
 
 ### XML format for export and import

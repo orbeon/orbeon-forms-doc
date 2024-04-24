@@ -138,5 +138,5 @@ The import functionality does not support importing data into repeated grids.
 
 ## See also
 
-- [Excel named ranges import and export](excel-import-export.md)
+- [Excel named ranges import and export](/form-runner/feature/excel-import-export.md)
 - [Service calls](/form-runner/link-embed/linking.md)
