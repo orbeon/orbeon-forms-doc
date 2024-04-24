@@ -27,11 +27,28 @@ A new XML format is supported.
 
 [//]: # (TODO)
 
-The import page wizard checks the validity of the format during import. When checked, you can open the data to review errors and decide to fix them or to perform a new import.
+## Allowed import formats
 
-## Choosing supported import formats
+[\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
 
-You configure the Import page import formats by setting the following property, where the `excel-named-ranges` token indicates support for the format (the `xml-form-structure-and-data` allows support for the XML format):
+You can configure the Import page to support various import formats. These include:
+
+- `excel-headings`: The default Excel import format, where the first row of the Excel file contains the names of the form fields.
+- `excel-named-ranges`: The Excel import format where the Excel file uses named ranges to map to form fields.
+- `xml-form-structure-and-data`: The XML format where the XML file contains both the form structure and data.
+
+The `excel-headings` format is enabled by default. It is exclusive with the `excel-named-ranges` format, which means that you can use none, or one of these tokens, but not both at the same time.
+
+The default configuration is:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.import.allowed-formats.*.*" 
+    value="excel-headings xml-form-structure-and-data"/>
+```
+
+Here is an example of configuration which switches to the `excel-named-ranges` format:
 
 ```xml
 <property
@@ -40,7 +57,7 @@ You configure the Import page import formats by setting the following property, 
     value="excel-named-ranges xml-form-structure-and-data"/>
 ```
 
-## How it works
+## Import wizard steps
 
 In order to import an Excel file, you follow a process in the Excel Import page as described below.
 
@@ -100,9 +117,19 @@ Import takes place and gives you an indication of the progress.
 
 _NOTE: Only the Excel 2007 `.xlsx` format (Office Open XML) is supported. The older, `.xls` format is not supported._
 
-## Mapping between form controls and spreadsheet
+### Review the data
+
+*NOTE: This step only applies to the `excel-named-ranges` and `xml-form-structure-and-data` formats.*
+
+The import page wizard checks the validity of the format during import. Before the data is saved to the database, you can review errors if any and decide to correct them or to perform a new import.
+
+[//]: # (![]&#40;../images/excel-import-review.png&#41;)
+
+## Form controls mapping
 
 ### Excel Headings format
+
+#### Excel file format
 
 A given Excel file contains data for a single Orbeon Forms form.
 
@@ -118,7 +145,13 @@ Here is an example spreadsheet for the sample Orbeon Contact form:
 
 ![](../images/excel-import-sheet.png)
 
+[//]: # (TODO: clarify)
+
 _NOTE: Only characters allowed in XML names are allowed as control names in Form Builder. In case your Excel header row requires names with non-XML characters (Form Builder will tell you the name is not allowed), simply replace them by "_" in Form Builder._
+
+#### Limitations
+
+The import functionality with the `excel-headings` format does not support importing data into repeated grids.
 
 ### Excel Named ranges format
 
@@ -140,7 +173,7 @@ Cells that contain values formatted as date/time, date, or time in the Excel spr
 
 *NOTE: This property only applies to the `excel-headings` format.*
 
-By default, invalid data is skipped during import.
+By default, invalid data rows are skipped during import.
 
 You can enable the optional import of invalid data with the following property:
 
@@ -161,9 +194,9 @@ When set to `true`, the user is provided with an option to skip invalid data at 
 
 [SINCE Orbeon Forms 2018.2]
 
-With Orbeon Forms 2018.2, you can select which form definition version to import to.
+The user can select which form definition version to import to.
 
-You can disable the ability for the user doing the import to select a version and always automatically select the latest form definition version with the following property:
+You can disable the ability for the user to do so, and always automatically select the latest form definition version, with the following property:
 
 ```xml
 <property
@@ -183,36 +216,6 @@ By default, the "Start Over" button is not shown on the Import page. You can ena
     as="xs:boolean"
     name="oxf.fr.import.show-start-over-button.*.*"
     value="true"/>
-```
-
-### Allowed import formats
-
-[\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
-
-You can configure the Import page to support various import formats. These include:
-
-- `excel-headings`: The default Excel import format, where the first row of the Excel file contains the names of the form fields.
-- `excel-named-ranges`: The Excel import format where the Excel file uses named ranges to map to form fields.
-- `xml-form-structure-and-data`: The XML format where the XML file contains both the form structure and data.
-
-The `excel-headings` format is enabled by default. It is exclusive with the `excel-named-ranges` format, which means that you can use none, or one of these tokens, but not both at the same time.
-
-The default configuration is:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.import.allowed-formats.*.*" 
-    value="excel-headings xml-form-structure-and-data"/>
-```
-
-Here is an example of configuration which switches to the `excel-named-ranges` format:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.import.allowed-formats.*.*" 
-    value="excel-named-ranges xml-form-structure-and-data"/>
 ```
 
 ### Showing the application and form names
@@ -255,7 +258,7 @@ You can pass a document id to the import page. This is useful if you want to pro
 /fr/import/orbeon/contact?document-id=123
 ```
 
-### Customizing the buttons on the Import page
+### Customizing the buttons in the buttons bar
 
 [\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
 
@@ -276,10 +279,6 @@ If, for example you don't want the `summary` button, then set the property to:
     name="oxf.fr.import.buttons.*.*"
     value="home close"/>
 ```
-
-## Limitations
-
-The import functionality wity the `excel-headings` format does not support importing data into repeated grids.
 
 ## See also
 
