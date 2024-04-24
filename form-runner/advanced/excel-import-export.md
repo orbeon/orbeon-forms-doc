@@ -172,7 +172,7 @@ As available in Orbeon Forms 2021.1, the new Excel import and export feature has
 ## See also
 
 - Blog post: [Excel export and import](https://blog.orbeon.com/2021/09/excel-export-and-import.html)
-- [Import page](excel.md)
+- [Import page](/form-runner/advanced/excel.md)
 - [Service calls](/form-runner/link-embed/linking.md)
 
 [//]: # (https://3.basecamp.com/3600924/buckets/16915667/messages/4541166737)
