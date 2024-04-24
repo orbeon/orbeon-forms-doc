@@ -1,4 +1,4 @@
-# Excel Import
+# Excel and XML Import
 
 ## Availability
 
@@ -6,19 +6,57 @@ This is an Orbeon Forms PE feature.
 
 ## What it is
 
-This feature allows you to import batches of data from a source Excel spreadsheet to a deployed Form Runner form.
+This feature allows you to import data from a source Excel spreadsheet or XML file.
+
+[\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
+
+A new Excel named ranges-based format is supported. Here are the main differences between the two types of Excel imports:
+
+| Headings format                           | Named ranges format         |
+|-------------------------------------------|-----------------------------|
+| multiple form documents at a time (batch) | one form document at a time |
+| row and column-based                      | named range based           |
+| no repeat support                         | repeat support              |
+| fixed layout                              | customizable layout         |
+
+The Named ranges-based import feature does not replace the Headings format but complements it.
+
+[\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
+
+A new XML format is supported.
+
+[//]: # (TODO)
+
+The import page wizard checks the validity of the format during import. When checked, you can open the data to review errors and decide to fix them or to perform a new import.
+
+## Choosing supported import formats
+
+You configure the Import page import formats by setting the following property, where the `excel-named-ranges` token indicates support for the format (the `xml-form-structure-and-data` allows support for the XML format):
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.import.allowed-formats.*.*" 
+    value="excel-named-ranges xml-form-structure-and-data"/>
+```
 
 ## How it works
 
 In order to import an Excel file, you follow a process in the Excel Import page as described below.
-
-_NOTE: Until Orbeon Forms 2018.1 the import wizard looked a little bit different from the screenshots below, but the steps are the same except for the selection of the form definition version._
 
 ### Access the Excel Import page 
 
 You start the import from the Form Runner Import page, accessible from the Summary page.
 
 ![](../images/excel-import-summary.png)
+
+You enable the "Import" button on the Summary page by adding the `import` token to the `oxf.fr.summary.buttons.*.*` property. Here for the Orbeon Contact form:
+
+```xml
+<property as="xs:string" name="oxf.fr.summary.buttons.orbeon.contact">
+    home review pdf delete duplicate import new
+</property>
+```
 
 ### Select the form version
 
@@ -50,7 +88,7 @@ Validation takes place and gives you an indication of the progress.
 
 ### Import the data
     
-Once validation is terminated, you navigate to the Import section. From there, you can start the data import. You ahve the option to add to existing data for the given form, or remove all existing data first.
+Once validation is terminated, you navigate to the Import section. From there, you can start the data import. When using the Headings format, you have the option to add to existing data for the given form, or remove all existing data first.
 
 ![](../images/excel-import-import.png)
     
@@ -62,19 +100,9 @@ Import takes place and gives you an indication of the progress.
 
 _NOTE: Only the Excel 2007 `.xlsx` format (Office Open XML) is supported. The older, `.xls` format is not supported._
 
-## Enabling the import button
-
-You enable the import button on the Summary page by adding the import token to the `oxf.fr.summary.buttons.*.*` property. Here for the Orbeon Contact form:
-
-```xml
-<property as="xs:string" name="oxf.fr.summary.buttons.orbeon.contact">
-    home review pdf delete duplicate import new
-</property>
-```
-
 ## Mapping between form controls and spreadsheet
 
-### Excel headings format
+### Excel Headings format
 
 A given Excel file contains data for a single Orbeon Forms form.
 
@@ -92,15 +120,25 @@ Here is an example spreadsheet for the sample Orbeon Contact form:
 
 _NOTE: Only characters allowed in XML names are allowed as control names in Form Builder. In case your Excel header row requires names with non-XML characters (Form Builder will tell you the name is not allowed), simply replace them by "_" in Form Builder._
 
-### Excel named ranges format
+### Excel Named ranges format
 
-[\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
+For more about the format, see [Excel and XML Export](/form-runner/feature/excel-xml-export.md).
 
-For details, see [Excel named ranges import and export](/form-runner/feature/excel-import-export.md).
+You don’t have to export a form to Excel to import data: as long as you have a spreadsheet that includes the appropriate named ranges (see above), you can use it for importing. This means that you can reuse existing spreadsheets with a few additions, and keep a spreadsheet layout that users are familiar with.
 
-## Allowing invalid data
+## Handling dates and times
+
+[SINCE Orbeon Forms 2019.2]
+
+Cells that contain values formatted as date/time, date, or time in the Excel spreadsheet are automatically converted to their respective ISO formats before being stored as form data.
+
+## Other configurations
+
+### Allowing invalid data
 
 [SINCE Orbeon Forms 2017.2]
+
+*NOTE: This property only applies to the `excel-headings` format.*
 
 By default, invalid data is skipped during import.
 
@@ -118,14 +156,6 @@ By default, it is set to `false` and the user is not provided with an option to 
 When set to `true`, the user is provided with an option to skip invalid data at the time of import:
 
 ![](../images/excel-import-validate-allow-invalid.png)
-
-## Handling dates and times
-
-[SINCE Orbeon Forms 2019.2]
-
-Cells that contain values formatted as date/time, date, or time in the Excel spreadsheet are automatically converted to their respective ISO formats before being stored as form data.
-
-## Other configurations
 
 ### Restricting to the latest version
 
@@ -249,9 +279,10 @@ If, for example you don't want the `summary` button, then set the property to:
 
 ## Limitations
 
-The import functionality does not support importing data into repeated grids.
+The import functionality wity the `excel-headings` format does not support importing data into repeated grids.
 
 ## See also
 
-- [Excel named ranges import and export](/form-runner/feature/excel-import-export.md)
+- [Excel and XML Export](/form-runner/feature/excel-xml-export.md)
+- [Exporting form definitions and form data](/form-runner/feature/exporting-form-definitions-and-form-data.md)
 - [Service calls](/form-runner/link-embed/linking.md)

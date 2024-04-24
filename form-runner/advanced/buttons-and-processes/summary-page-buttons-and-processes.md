@@ -36,7 +36,7 @@ The property configures which buttons are included on the Summary page, and in w
     * Action: Delete the selected form data.
 * `import`
     * Label: "Import"
-    * Action: Import data via the [Excel import page](/form-runner/feature/excel-import.md).
+    * Action: Import data via the [Import page](/form-runner/feature/excel-xml-import.md).
 * `duplicate` [SINCE Orbeon Forms 4.5]
     * Label: "Duplicate"
     * Action: Duplicate the selected form data (or form definition on the Form Builder Summary page), including attachments.

@@ -1,18 +1,33 @@
-# Excel named ranges import and export
+# Excel and XML Export
 
 ## Availability
 
 [\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
 
-## Introduction
+This is an Orbeon Forms PE feature.
+
+## Formats
+
+### Introduction
+
+Form Runner can export form data in two formats:
+
+- `excel-named-ranges` : Excel with named ranges
+- `xml-form-structure-and-data`: XML with form structure and data
+
+In each case, the export is done on the basis of a single document.
+
+For a comprehensive export of form definitions and form data, see [Exporting form definitions and form data](/form-runner/feature/exporting-form-definitions-and-form-data.md).
+
+### Excel with named ranges
+
+#### Introduction
 
 This feature is aimed at organizations whose users are familiar with Excel spreadsheets. Users can export a form to a spreadsheet and fill it out on their computers. They can pass the spreadsheet around for other users to complete it. When they are done, they can import the resulting spreadsheet back to Orbeon Forms, where the data is captured, validated, shown to the user for review, and then saved to the Orbeon Forms database.
 
-## Export
+For more about the import feature, see [Excel and XML Import](/form-runner/feature/excel-xml-import.md).
 
-### Basics 
-
-The Excel export feature allows you to export a form definition to an Excel file. The Excel document contains all the fields of the form, attempting to mirror the layout of the original form. This includes section titles and field labels.
+The Excel document contains all the fields of the form, attempting to mirror the layout of the original form. This includes section titles and field labels.
 
 You can export an Excel file from the following locations:
 
@@ -26,7 +41,7 @@ The export feature produces Excel files that look like this:
 
 ![Example of Excel export](/form-builder/images/excel-export-export.png)
 
-### Named ranges
+#### Named ranges
 
 Orbeon Forms includes, in the generated Excel file, named ranges which match the control names assigned in Form Builder. This allows reimporting data in those cells during a subsequent import.
 
@@ -48,7 +63,7 @@ Excel allows you to see the name of a given cell or range:
 
 ![Named ranges in Excel](/form-builder/images/excel-export-ranges.png)
 
-### Repeated content
+#### Repeated content
 
 In the case of repeated grids, groups of cells share the same name.
 
@@ -56,7 +71,7 @@ In the case of repeated grids, groups of cells share the same name.
 
 Repeated grids, or repeated sections containing only non-repeated grids, are "flattened". That is, all form controls are presented in a single Excel row, with one row for each repetition.
 
-### Lists of choices
+#### Lists of choices
 
 Lists of choices are exported as text, showing the value of the choice between parentheses, and the label next to it.
 
@@ -64,7 +79,7 @@ When importing, the cell value must contain the value of the choice, not the lab
 
 Multiple-selection controls require entering the values as a space-separated list of tokens.
 
-### Exporting from the Form Builder Detail page
+#### Exporting from the Form Builder Detail page
 
 With Form Builder, the Excel Export button is available by default. You can control its availability with the following property, by adding the `excel-export` button token. We show here the default value of this property for Orbeon Forms 2023.1:
 
@@ -80,9 +95,9 @@ With Form Builder, the Excel Export button is available by default. You can cont
 </property>
 ```
 
-Note the `|` which denote combined buttons.
+Note the `|` which denotes combined buttons.
 
-### Exporting from the Form Runner Summary and Detail pages
+#### Exporting from the Form Runner Summary and Detail pages
 
 With Form Runner, you can enable the export button with the following properties, by including the same `excel-export` button token. Summary page:
 
@@ -111,47 +126,9 @@ In addition, you must set the following property to enable export with data on t
 
 The reason for this extra setting is that, even if the user has read access to the form, exporting a form in Excel or XML format can reveal some hidden data.
 
-### Exporting through a service call
+#### Limitations
 
-You can also export [through a service call](/form-runner/link-embed/linking.md#paths).
-
-## Import
-
-### Basics
-
-Previous Orbeon Forms versions already supported an Excel import feature. Here are the main differences between the two types of Excel imports:
-
-| Existing import feature                   | New import feature          |
-|-------------------------------------------|-----------------------------|
-| multiple form documents at a time (batch) | one form document at a time |
-| row and column-based                      | named range based           |
-| no repeat support                         | repeat support              |
-| fixed layout                              | customizable layout         |
-
-The new document-based import feature does not replace the previous one but complements it.
-
-You don’t have to export a form to Excel to import data: as long as you have a spreadsheet that includes the appropriate named ranges (see above), you can use it for importing. This means that you can reuse existing spreadsheets with a few additions, and keep a spreadsheet layout that users are familiar with.
-
-### Importing from the Import page
-
-The same [Import page](excel-import.md) that was used for the earlier Excel import feature is used for the new name ranges-based Excel import.
-
-However, you must configure the Import page to support the named ranges-based Excel import. You can do this by setting the following property, where the `excel-named-ranges` token indicates support for the format (the `xml-form-structure-and-data` allows support for the XML format):
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.import.allowed-formats.*.*" 
-    value="excel-named-ranges xml-form-structure-and-data"/>
-```
-
-The import page wizard checks the validity of the format during import. When checked, you can open the data to review errors and decide to fix them or to perform a new import.
-
-[//]: # (TODO: merging of data)
-
-## Limitations
-
-As available in Orbeon Forms 2021.1, the new Excel import and export feature has the following limitations:
+As available in Orbeon Forms 2021.1, the new Excel export feature has the following limitations:
 
 - The 24-column mode is not supported.
 - Dynamic list of choices (for example dynamic dropdowns) are not supported.
@@ -164,10 +141,21 @@ As available in Orbeon Forms 2021.1, the new Excel import and export feature has
     - Attachments
 - No calculations or validations are exported.
 
+### XML with form structure and data
+
+TODO
+
+### Exporting through a service call
+
+You can also export to Excel and XML [through a service call](/form-runner/link-embed/linking.md#paths).
+
+[//]: # (TODO: merging of data)
+
 ## See also
 
 - Blog post: [Excel export and import](https://blog.orbeon.com/2021/09/excel-export-and-import.html)
-- [Import page](/form-runner/feature/excel-import.md)
+- [Excel and XML Import](/form-runner/feature/excel-xml-import.md)
+- [Exporting form definitions and form data](/form-runner/feature/exporting-form-definitions-and-form-data.md)
 - [Service calls](/form-runner/link-embed/linking.md)
 
 [//]: # (https://3.basecamp.com/3600924/buckets/16915667/messages/4541166737)

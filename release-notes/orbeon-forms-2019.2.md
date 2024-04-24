@@ -24,7 +24,7 @@ For details, see the [blog post](https://blog.orbeon.com/2019/11/new-layout-choi
 
 ### Date support for Excel import 
 
-The [Excel import](/form-runner/feature/excel-import.md) now supports importing date and time formats. Cells that contain values formatted as date/time, date, or time in the Excel spreadsheet are automatically converted to their respective ISO formats before being stored as form data.
+The [Excel import](/form-runner/feature/excel-xml-import.md) now supports importing date and time formats. Cells that contain values formatted as date/time, date, or time in the Excel spreadsheet are automatically converted to their respective ISO formats before being stored as form data.
 
 See also the [documentation](https://doc.orbeon.com/form-runner/advanced/excel#handling-dates-and-times). 
 
