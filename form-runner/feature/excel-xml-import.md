@@ -287,7 +287,7 @@ If, for example you don't want the `summary` button, then set the property to:
 ## See also
 
 - [Excel and XML Export](/form-runner/feature/excel-xml-export.md)
-- [Batch exporting form definitions and form data](/form-runner/feature/exporting-form-definitions-and-form-data.md)
+- [Form definitions and form data batch export](/form-runner/feature/exporting-form-definitions-and-form-data.md)
 - [Service calls](/form-runner/link-embed/linking.md)
 
 [//]: # (https://3.basecamp.com/3600924/buckets/16915667/messages/4541166737)

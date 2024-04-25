@@ -1,12 +1,23 @@
-# Exporting form definitions and form data
+# Form definitions and form data batch export
 
 ## Availability
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-Form definitions and form data can be exported as a zip file. This can be done in two ways.
+## Context
 
-You can either export the forms that were explicitly selected:
+Form definitions and form data can be exported in a batch, that is, multiple form definitions and their data can be exported at once. The result is a [zip file](https://en.wikipedia.org/wiki/ZIP_(file_format)).
+
+## How to access the feature
+
+The feature is available on the Form Runner [Forms Admin page](forms-admin-page.md). There, an "Export" button is available at the top of the page.
+
+[//]: # (TODO)
+[//]: # (![Export button]&#40;../images/export-button.png&#41;)
+
+## Export modes
+
+Exporting can be done in two different modes. You can either export the forms that were explicitly selected:
 
 ![Export selected forms](../images/export-selected-forms.png)
 
