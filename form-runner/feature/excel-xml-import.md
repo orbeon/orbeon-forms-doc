@@ -63,11 +63,15 @@ In order to import an Excel file, you follow a process in the Excel Import page 
 
 ### Access the Excel Import page 
 
-You start the import from the Form Runner Import page, accessible from the Summary page.
+You start the import from the Form Runner Import page, accessible from the [Summary page](/form-runner/feature/summary-page.md), or directly with the path:
+
+```
+/fr/import/$app/$form
+```
 
 ![](../images/excel-import-summary.png)
 
-You enable the "Import" button on the Summary page by adding the `import` token to the `oxf.fr.summary.buttons.*.*` property. Here for the Orbeon Contact form:
+You enable the "Import" button on the [Summary page](/form-runner/feature/summary-page.md) by adding the `import` token to the `oxf.fr.summary.buttons.*.*` property. Here for the Orbeon Contact form:
 
 ```xml
 <property as="xs:string" name="oxf.fr.summary.buttons.orbeon.contact">
@@ -79,7 +83,7 @@ You enable the "Import" button on the Summary page by adding the `import` token 
 
 [SINCE Orbeon Forms 2018.2]
 
-If form definition versioning is supported, you select the form definition version. The dropdown menu shows all published versions for the given form name and application name.
+If form definition versioning is supported, and if the given form definition has more than one version, you can select the form definition version. The dropdown menu shows all published versions for the given form name and application name.
 
 Selecting a version shows the versioning comment, if any, associated with the version, as well as the number of data records available in the database for that version.
     
@@ -262,7 +266,7 @@ You can pass a document id to the import page. This is useful if you want to pro
 
 [\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
 
-This property allows you to configure the buttons at the bottm of the Import page. They are, by default:
+This property allows you to configure the buttons at the bottom of the Import page. They are, by default:
 
 ```xml
 <property 
@@ -283,5 +287,19 @@ If, for example you don't want the `summary` button, then set the property to:
 ## See also
 
 - [Excel and XML Export](/form-runner/feature/excel-xml-export.md)
-- [Exporting form definitions and form data](/form-runner/feature/exporting-form-definitions-and-form-data.md)
+- [Batch exporting form definitions and form data](/form-runner/feature/exporting-form-definitions-and-form-data.md)
 - [Service calls](/form-runner/link-embed/linking.md)
+
+[//]: # (https://3.basecamp.com/3600924/buckets/16915667/messages/4541166737)
+[//]: # ()
+[//]: # (<!-- Mais ne le montrer qu'en mode `edit` -->)
+[//]: # (<property )
+[//]: # (    as="xs:string"  )
+[//]: # (    name="oxf.fr.detail.button.import.visible.acme.contact")
+[//]: # (    value="fr:mode&#40;&#41; = 'edit'"/>)
+[//]: # ()
+[//]: # (<!-- Le bouton `import` navigue à la page d'import en passant le `document-id` -->)
+[//]: # (<property as="xs:string" name="oxf.fr.detail.process.import.acme.contact">)
+[//]: # (    require-uploads)
+[//]: # (    then navigate&#40;'/fr/{fr:app-name&#40;&#41;}/{fr:form-name&#40;&#41;}/import?document-id={fr:document-id&#40;&#41;}'&#41;)
+[//]: # (</pro
