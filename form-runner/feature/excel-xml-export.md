@@ -12,6 +12,10 @@ Orbeon Forms includes a few ways to export form definitions and form data. This 
 
 For a different type of export, see also [Form definitions and form data batch export](/form-runner/feature/exporting-form-definitions-and-form-data.md).
 
+## How to access the feature
+
+### Locations
+
 You can export from the following locations:
 
 | Page                                                             | Data Included |
@@ -19,6 +23,53 @@ You can export from the following locations:
 | Form Builder                                                     | No            |
 | Form Runner [Summary page](/form-runner/feature/summary-page.md) | Yes           |
 | Form Runner Detail page                                          | Yes           |
+
+### Exporting from the Form Builder Detail page
+
+With Form Builder, the Excel Export button is available by default. You can control its availability with the following property, by adding the `excel-export` button token. We show here the default value of this property for Orbeon Forms 2023.1:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.buttons.orbeon.builder">
+    home
+    summary
+    new
+    form-definition-xhtml-export|excel-export|xml-export
+    test|test-pdf|test-offline|test-formulas
+    publish
+    save
+</property>
+```
+
+Note the `|` which denotes combined buttons.
+
+### Exporting from the Form Runner Summary and Detail pages
+
+With Form Runner, you can enable the export button with the following properties, by including the same `excel-export` button token. [Summary page](/form-runner/feature/summary-page.md):
+
+```xml
+<property as="xs:string"  name="oxf.fr.summary.buttons.*.*">
+    home review pdf delete duplicate excel-export new
+</property>
+```
+
+Detail page:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.buttons.*.*">
+    summary clear pdf excel-export wizard-toc wizard-prev wizard-next save-final review
+</property>
+```
+
+In addition, you must set the following property to enable export with data on the Summary and Detail pages:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.export.page.enable.*.*"
+    value="true"/>
+```
+
+The reason for this extra setting is that, even if the user has read access to the form, exporting a form in Excel or XML format can reveal some hidden data.
 
 ## Formats
 
@@ -80,53 +131,6 @@ Lists of choices are exported as text, showing the value of the choice between p
 When importing, the cell value must contain the value of the choice, not the label.
 
 Multiple-selection controls require entering the values as a space-separated list of tokens.
-
-### Exporting from the Form Builder Detail page
-
-With Form Builder, the Excel Export button is available by default. You can control its availability with the following property, by adding the `excel-export` button token. We show here the default value of this property for Orbeon Forms 2023.1:
-
-```xml
-<property as="xs:string"  name="oxf.fr.detail.buttons.orbeon.builder">
-    home
-    summary
-    new
-    form-definition-xhtml-export|excel-export|xml-export
-    test|test-pdf|test-offline|test-formulas
-    publish
-    save
-</property>
-```
-
-Note the `|` which denotes combined buttons.
-
-### Exporting from the Form Runner Summary and Detail pages
-
-With Form Runner, you can enable the export button with the following properties, by including the same `excel-export` button token. [Summary page](/form-runner/feature/summary-page.md):
-
-```xml
-<property as="xs:string"  name="oxf.fr.summary.buttons.*.*">
-    home review pdf delete duplicate excel-export new
-</property>
-```
-
-Detail page:
-
-```xml
-<property as="xs:string"  name="oxf.fr.detail.buttons.*.*">
-    summary clear pdf excel-export wizard-toc wizard-prev wizard-next save-final review
-</property>
-```
-
-In addition, you must set the following property to enable export with data on the Summary and Detail pages:
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.export.page.enable.*.*"
-    value="true"/>
-```
-
-The reason for this extra setting is that, even if the user has read access to the form, exporting a form in Excel or XML format can reveal some hidden data.
 
 ### Limitations
 
