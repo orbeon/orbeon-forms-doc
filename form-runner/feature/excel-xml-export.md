@@ -80,7 +80,7 @@ Form Runner can export in two formats:
 
 In each case, when form data is requested, the export is done on the basis of a *single document*.
 
-## Excel with named ranges
+## Excel with named ranges format
 
 ### Introduction
 
@@ -147,7 +147,7 @@ As available in Orbeon Forms 2021.1, the new Excel export feature has the follow
     - Attachments
 - No calculations or validations are exported.
 
-## XML with form structure and data
+## XML with form structure and data format
 
 TODO
 

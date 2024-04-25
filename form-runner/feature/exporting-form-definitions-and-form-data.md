@@ -6,7 +6,9 @@
 
 ## Context
 
-Form definitions and form data can be exported in a batch, that is, multiple form definitions and their data can be exported at once. The result is a [zip file](https://en.wikipedia.org/wiki/ZIP_(file_format)).
+Orbeon Forms includes a few ways to export form definitions and form data. This page documents a very specific capability: exporting form definitions and form data in a batch, that is, multiple form definitions and their data are exported at once. The result is stored in a [zip file](https://en.wikipedia.org/wiki/ZIP_(file_format)) which downloads to your computer.
+
+For a different type of export, see also [Excel and XML export](excel-xml-export.md).
 
 ## How to access the feature
 
@@ -80,6 +82,8 @@ At the moment, once the "Export" button has been clicked, the dialog will be clo
 ## See also
 
 - [Purging historical data](purging-historical-data.md)
+- [Excel and XML export](excel-xml-export.md)
+- [Excel and XML import](excel-xml-import.md)
 - [Forms Admin page](forms-admin-page.md)
 - [Zip export API](/form-runner/api/persistence/export-zip.md)
 - [Revision history API](/form-runner/api/persistence/revision-history.md)
