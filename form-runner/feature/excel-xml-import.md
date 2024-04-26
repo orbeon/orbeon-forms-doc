@@ -71,10 +71,10 @@ You start the import from the Form Runner Import page, accessible from the [Summ
 
 ![](../images/excel-import-summary.png)
 
-You enable the "Import" button on the [Summary page](/form-runner/feature/summary-page.md) by adding the `import` token to the `oxf.fr.summary.buttons.*.*` property. Here for the Orbeon Contact form:
+You enable the "Import" button on the [Summary page](/form-runner/feature/summary-page.md) by adding the `import` token to the `oxf.fr.summary.buttons.*.*` property. Here for the ACME Contact form:
 
 ```xml
-<property as="xs:string" name="oxf.fr.summary.buttons.orbeon.contact">
+<property as="xs:string" name="oxf.fr.summary.buttons.acme.contact">
     home review pdf delete duplicate import new
 </property>
 ```
