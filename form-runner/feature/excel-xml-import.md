@@ -97,11 +97,7 @@ You navigate to the Upload section and select the Excel 2007 file to upload and 
 
 ### Validate the data
     
-You navigate to the Validation section. From there, you can start data validation.
-
-![](../images/excel-import-validate.png)
-    
-Validation takes place and gives you an indication of the progress.
+You navigate to the Validation section. From there, data validation starts automatically, giving you an indication of the progress.
 
 ![](../images/excel-import-validating.png)
     
