@@ -18,6 +18,7 @@ This release addresses the following issues since [Orbeon Forms 2023.1.1 PE](orb
 - Form Builder
     - Type with custom error message must not store `xs:string` ([\#6252](https://github.com/orbeon/orbeon-forms/issues/6252))
     - "Test Offline" uses inline script ([\#6242](https://github.com/orbeon/orbeon-forms/issues/6242))
+    - "form not found" when closing Control Settings ([\#6277](https://github.com/orbeon/orbeon-forms/issues/6277))
 - Form Runner
     - `ORBEON.fr.API.wizard.focus()` to support the `lax` and `strict` modes ([\#6240](https://github.com/orbeon/orbeon-forms/issues/6240))
     - Excel export: Boolean `xf:input` doesn't export possible item values ([\#6244](https://github.com/orbeon/orbeon-forms/issues/6244))
@@ -32,6 +33,9 @@ This release addresses the following issues since [Orbeon Forms 2023.1.1 PE](orb
     - Radio button, checkboxes incorrectly checked ([\#6272](https://github.com/orbeon/orbeon-forms/issues/6272))
     - `StackOverflowError` with complex form ([\#6260](https://github.com/orbeon/orbeon-forms/issues/6260))
     - Wizard TOC subsection has gray on gray or white on gray text ([\#6246](https://github.com/orbeon/orbeon-forms/issues/6246))
+    - Schema to be aware of the dynamic dropdown itemset-empty attribute ([\#6022](https://github.com/orbeon/orbeon-forms/issues/6022))
+    - Excel import crashes during validation ([\#6278](https://github.com/orbeon/orbeon-forms/issues/6278))
+    - Import: grid layout is wrong ([\#6281](https://github.com/orbeon/orbeon-forms/issues/6281))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
 
