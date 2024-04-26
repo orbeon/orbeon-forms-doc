@@ -1,6 +1,6 @@
 # Orbeon Forms 2023.1.2
 
-__Tuesday, April xx, 2024__
+__Friday, April 26, 2024__
 
 Today we released Orbeon Forms 2023.1.2 PE! This maintenance release contains bug-fixes and minor new features and is recommended for all users of:
 
