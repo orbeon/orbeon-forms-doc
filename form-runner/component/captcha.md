@@ -99,7 +99,7 @@ You can configure:
 
 See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties.
 
-### SimpleCaptcha
+## SimpleCaptcha
 
 You can use this component to show users a captcha, like the one shown in the following screen shot:
 
