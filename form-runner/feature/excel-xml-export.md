@@ -16,7 +16,7 @@ For a different type of export, see also [Form definitions and form data batch e
 
 ### Locations
 
-You can export from the following locations:
+You can export using an "Excel Export" or "XML Export" button from the following locations:
 
 | Page                                                             | Data Included |
 |------------------------------------------------------------------|---------------|
@@ -41,6 +41,9 @@ With Form Builder, the Excel Export button is available by default. You can cont
 ```
 
 Note the `|` which denotes combined buttons.
+
+[//]: # (TODO: add image)
+[//]: # (![Excel Export button in Form Builder]&#40;/form-builder/images/excel-export-button.png&#41;)
 
 ### Exporting from the Form Runner Summary and Detail pages
 
@@ -70,6 +73,9 @@ In addition, you must set the following property to enable export with data on t
 ```
 
 The reason for this extra setting is that, even if the user has read access to the form, exporting a form in Excel or XML format can reveal some hidden data.
+
+[//]: # (TODO: add image)
+[//]: # (![Excel Export button in Form Runner]&#40;/form-builder/images/excel-export-button.png&#41;)
 
 ## Formats
 

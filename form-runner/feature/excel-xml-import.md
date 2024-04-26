@@ -6,20 +6,20 @@ This is an Orbeon Forms PE feature.
 
 ## What it is
 
-This feature allows you to import data from a source Excel spreadsheet or XML file.
+This feature allows you to import data from a source Excel document or XML document.
 
 [\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
 
 A new Excel named ranges-based format is supported. Here are the main differences between the two types of Excel imports:
 
-| Headings format                           | Named ranges format         |
-|-------------------------------------------|-----------------------------|
-| multiple form documents at a time (batch) | one form document at a time |
-| row and column-based                      | named range based           |
-| no repeat support                         | repeat support              |
-| fixed layout                              | customizable layout         |
+| "Headings" format                          | "Named ranges" format       |
+|--------------------------------------------|-----------------------------|
+| multiple form documents at a time (batch)  | one form document at a time |
+| row and column-based                       | named range based           |
+| no repeat support                          | repeat support              |
+| fixed layout                               | customizable layout         |
 
-The Named ranges-based import feature does not replace the Headings format but complements it.
+The Named ranges format does not replace the Headings format but complements it.
 
 [\[SINCE Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)
 
@@ -63,7 +63,7 @@ In order to import an Excel file, you follow a process in the Excel Import page 
 
 ### Access the Excel Import page 
 
-You start the import from the Form Runner Import page, accessible from the [Summary page](/form-runner/feature/summary-page.md), or directly with the path:
+You start the import from the Form Runner Import page, accessible from the [Summary page](/form-runner/feature/summary-page.md) when the "Import" button is configured, or directly with the path:
 
 ```
 /fr/import/$app/$form
