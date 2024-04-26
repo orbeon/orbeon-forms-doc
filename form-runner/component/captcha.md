@@ -90,6 +90,12 @@ You can configure:
 		    value="light"/>
 		```
 - The language with the `lang` attribute on the `<html>` element.
+- When a control is invalid, an alert message appears directly below it. This applies to the reCAPTCHA as well. However, the error summary typically appears just below the reCAPTCHA, causing the alert to be shown twice: once below the reCAPTCHA and again in the summary. To address this, the reCAPTCHA alert is hidden by default using CSS. If you want the alert to be visible below the reCAPTCHA, perhaps because you're not showing the error summary, you can use the following CSS:
+	```css
+	.orbeon .fr-captcha .xbl-fr-recaptcha.xforms-visited .xforms-alert.xforms-active {
+		display: block;
+	}
+	```
 
 See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties.
 
