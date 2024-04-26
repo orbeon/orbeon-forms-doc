@@ -153,6 +153,7 @@ During XForms development, you might want to enable a more aggressive debug conf
         process
         submission-details
         submission-body
+        state
     </property>
     ```
 
