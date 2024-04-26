@@ -103,7 +103,13 @@ You navigate to the Validation section. From there, data validation starts autom
     
 ![](../images/excel-import-validated.png)
 
+With the `excel-named-ranges` and `xml-form-structure-and-data` formats, information about valid and invalid fields shows.
+
+![](../images/excel-import-named-ranges-validation-errors.png)
+
 ### Import the data
+
+*NOTE: This step only applies to the `excel-headints` format.*
     
 Once validation is terminated, you navigate to the Import section. From there, you can start the data import. When using the Headings format, you have the option to add to existing data for the given form, or remove all existing data first.
 
@@ -121,7 +127,9 @@ _NOTE: Only the Excel 2007 `.xlsx` format (Office Open XML) is supported. The ol
 
 *NOTE: This step only applies to the `excel-named-ranges` and `xml-form-structure-and-data` formats.*
 
-The import page wizard checks the validity of the format during import. Before the data is saved to the database, you can review errors if any and decide to correct them or to perform a new import.
+Before the data is saved to the database, you can review errors if any and decide to correct them or to perform a new import.
+
+![](../images/excel-import-named-ranges-data-review.png)
 
 [//]: # (![]&#40;../images/excel-import-review.png&#41;)
 
