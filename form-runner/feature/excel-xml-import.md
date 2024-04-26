@@ -109,7 +109,7 @@ With the `excel-named-ranges` and `xml-form-structure-and-data` formats, informa
 
 ### Import the data
 
-*NOTE: This step only applies to the `excel-headints` format.*
+*NOTE: This step only applies to the `excel-headings` format.*
     
 Once validation is terminated, you navigate to the Import section. From there, you can start the data import. When using the Headings format, you have the option to add to existing data for the given form, or remove all existing data first.
 
