@@ -306,4 +306,3 @@ If, for example you don't want the `summary` button, then set the property to:
 [//]: # (<property as="xs:string" name="oxf.fr.detail.process.import.acme.contact">)
 [//]: # (    require-uploads)
 [//]: # (    then navigate&#40;'/fr/{fr:app-name&#40;&#41;}/{fr:form-name&#40;&#41;}/import?document-id={fr:document-id&#40;&#41;}'&#41;)
-[//]: # (</pro
