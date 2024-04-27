@@ -22,7 +22,7 @@ See [Editing the source code of the form definition](/form-builder/edit-source.m
 The standard body of the form looks like this:
 
 ```xml
-<xhtml:body>
+<xh:body>
     <fr:view width="..." appearance="...">
         <fr:body>
             <fr:section>
@@ -34,7 +34,7 @@ The standard body of the form looks like this:
         </fr:body>
         <fr:buttons>...</fr:buttons>
     </fr:view>
-</xhtml:body>
+</xh:body>
 ```
 
 The following attributes and elements are optional:

@@ -167,6 +167,12 @@ For more about the format, see [Excel and XML Export](/form-runner/feature/excel
 
 You don’t have to export a form to Excel to import data: as long as you have a spreadsheet that includes the appropriate named ranges (see above), you can use it for importing. This means that you can reuse existing spreadsheets with a few additions, and keep a spreadsheet layout that users are familiar with.
 
+### XML Form Structure and Data format
+
+For more about the format, see [Excel and XML Export](/form-runner/feature/excel-xml-export.md).
+
+When you import, the only part that matters is the `<form-data>` section of the XML document. The rest of the XML file is ignored.
+
 ## Handling dates and times
 
 [SINCE Orbeon Forms 2019.2]

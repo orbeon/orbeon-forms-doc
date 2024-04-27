@@ -155,7 +155,90 @@ As available in Orbeon Forms 2021.1, the new Excel export feature has the follow
 
 ## XML with form structure and data format
 
-TODO
+### Introduction
+
+This format exports an XML document with the form structure and the data.
+
+The purpose of this export is to allow you to save the form data in a format that can be reimported into Orbeon Forms at a later time. The form structure is included to provide context for the data. It doesn't replace the form definition as you can seen in Form Builder's Edit Source as well as [Form Definition Format](/form-runner/data-format/form-definition.md).
+
+### Format of the XML document
+
+The XML document is structured as follows (with `...` indicating omitted content).
+
+```xml
+<orbeon-export
+    export-date="2024-04-26T23:50:35.423Z"
+    export-lang="en"
+    export-format-version="2021.1">
+  <form-metadata>
+    <application-name>acme</application-name>
+    <form-name>contact</form-name>
+    <title>ACME Contact Form</title>
+    <description>The Contact form is a simple form which can be created in a few minutes with Form Builder.</description>
+  </form-metadata>
+  <form-structure>
+    <section name="contact">
+      <label>Contact Information</label>
+      <grid name="grid-1">
+        <control name="first-name" required="true" datatype="string" control-type="xf:input">
+          <label>First Name</label>
+          <hint>Your first or given name</hint>
+        </control>
+        <control name="last-name" required="true" datatype="string" control-type="xf:input">
+          <label>Last Name</label>
+          <hint>Your last name</hint>
+        </control>
+        ...
+      </grid>
+    </section>
+    ...
+  </form-structure>
+  <form-data>
+    <form xmlns:fr="http://orbeon.org/oxf/xml/form-runner"
+          fr:data-format-version="2019.1.0">
+      <contact>
+        <grid-1>
+          <first-name/>
+          <last-name/>
+          <email/>
+          <phone/>
+        </grid-1>
+      </contact>
+      <message>
+        <grid-2>
+          <order-number/>
+          <topic/>
+        </grid-2>
+        <grid-3>
+          <comments/>
+        </grid-3>
+      </message>
+    </form>
+  </form-data>
+</orbeon-export>
+```
+
+The XML document contains the following sections:
+
+- `orbeon-export`: root element
+    - `export-date` attribute: date and time of the export
+    - `export-lang` attribute: language of the form at the time of the export
+    - `export-format-version` attribute: version of the export format
+    - `form-metadata`: enclosing element for form metadata
+        - `application-name`: application name
+        - `form-name`: form name
+        - `title`: form title
+        - `description`: form description
+    - `form-structure`: enclosing element for the structure of the form
+        - `section`: form section
+            - `label`: section label
+            - `grid`: grid in the section
+                - `control`: control in the grid
+                    - `label`: control label
+                    - `hint`: control hint
+    - `form-data`: enclosing element for the form data
+
+The `form-data` section contains the form data in the version indicated by the `fr:data-format-version` attribute, see [Form data format](/form-runner/data-format/form-data.md).
 
 ## Exporting through a service call
 
