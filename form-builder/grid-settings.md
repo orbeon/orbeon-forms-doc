@@ -49,6 +49,8 @@ Ordering the cells by column impacts the tab order (i.e. the order in which cell
 
 A default value can be set for all grids in the [Form Settings dialog](/form-builder/form-settings.md#form-options).
 
+See also the [blog post](https://blog.orbeon.com/2024/05/grid-tab-order).
+
 ## See also
 
 - [Section and grid settings](container-settings.md)
@@ -60,3 +62,4 @@ A default value can be set for all grids in the [Form Settings dialog](/form-bui
 - [Template syntax](template-syntax.md)
 - [Wizard view](/form-runner/feature/wizard-view.md)
 - Blog post: [Enhancements to grids](https://blog.orbeon.com/2021/09/enhancements-to-repeated-grids.html)
+- Blog post: [Grid Tab Order](https://blog.orbeon.com/2024/05/grid-tab-order)

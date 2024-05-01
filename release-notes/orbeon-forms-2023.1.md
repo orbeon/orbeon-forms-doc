@@ -273,7 +273,7 @@ You can now set whether the tab navigation order within a grid is:
 - By row first, then by column
 - By column first, then by row
 
-See the [documentation](/form-builder/grid-settings.md#grid-tab-order).
+See the [documentation](/form-builder/grid-settings.md#grid-tab-order) and [blog post](https://blog.orbeon.com/2024/05/grid-tab-order).
 
 #### HTML autocomplete attribute
 
