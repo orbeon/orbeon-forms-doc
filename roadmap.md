@@ -2,26 +2,26 @@
 
 ## Upcoming releases
 
-### Orbeon Forms 2023.1
+### Orbeon Forms 2024.1
 
 Focus:
 
-- revision history of form data
-- sharing using token-based permissions
-- configurable PDF headers and footer
-- Excel and XML exports from the Summary page
-- purging of old data in the database
-- action for copying controls ([doc](/form-builder/actions-syntax.md#copying-control-content))
-- bulk export of form definitions and form data (possibly import back)
-- time-windowed forms
-- usability improvements
+- Progress on workflow-related features
+- Form Builder user-friendliness:
+    - more UI (properties, validations, formulas, etc.)
+    - see [#2282](https://github.com/orbeon/orbeon-forms/issues/2282), [#5798](https://github.com/orbeon/orbeon-forms/issues/5798), etc.
+- Forms look and feel
+- More demo forms
 
-See the tentative [2023.1 items](https://github.com/orbeon/orbeon-forms/projects/43) for details.
+[//]: # (- admin console!)
+[//]: # (Think about other general lines.)
+
+See the tentative [2024.1 items](https://github.com/orbeon/orbeon-forms/projects/57) for details.
 
 Consider:
 
 - [low-hanging fruits](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Low-Hanging+Fruit%22)
-- [dogfood items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3ADogfood)
+- [dogfood items](https://github.com/orbeon/orbeon-forms/labels/Area%3A%20Dogfood)
 - [maintenance items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Maintenance%22+)
 - [spare time items](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue++label%3A%22Priority%3A+Spare+Time%22+)
 - [top issues](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Top+issue%22)
@@ -29,7 +29,7 @@ Consider:
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2023-08: tentative release date
+- 2024-12: tentative release date
 
 ## Past releases
 
