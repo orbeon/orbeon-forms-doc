@@ -1,7 +1,5 @@
 # XForms actions
 
-
-
 ## Introduction
 
 The actions in this page are called "XForms actions" because they closely match actions found in the XForms specification.
