@@ -99,6 +99,19 @@ You can configure:
 
 See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties.
 
+### Resetting the captcha on navigation
+
+[SINCE Orbeon Forms 2022.1.8, 2023.1.3, 2024.1]
+
+When users submit a form with a captcha and subsequently navigate away from the page containing that form, they can use their browser's back functionality to return to the form. By default, the captcha will appear as already resolved. In some cases, you might prefer to require users to complete a new captcha for each submission they make. If so, you'll want to reset the captcha by adding the following to the process you are running, before the action that navigates away from the page.
+
+```xml
+then xf:dispatch(
+	name     = 'fr-reload',
+	targetid = 'fr-captcha'
+)
+```
+
 ## SimpleCaptcha
 
 You can use this component to show users a captcha, like the one shown in the following screenshot:
