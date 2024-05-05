@@ -99,7 +99,7 @@ You can configure:
 
 See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties.
 
-### Resetting the captcha on navigation
+### Resetting the captcha
 
 [SINCE Orbeon Forms 2022.1.8, 2023.1.3, 2024.1]
 
