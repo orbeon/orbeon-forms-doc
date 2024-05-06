@@ -152,6 +152,7 @@ Examples:
 
 - The Multiple File Attachments control is not supported, see [issue 6296](https://github.com/orbeon/orbeon-forms/issues/6296).
 - Only the default [form data format](https://doc.orbeon.com/form-runner/api/data-formats/form-data) is supported, see [issue 4440](https://github.com/orbeon/orbeon-forms/issues/4440).
-- With MySQL, fields inside repeated sections or grids are not supported.
+- Fields inside repeated sections or grids are not supported with MySQL.
+- Flat views are not supported at all with SQLite.
 - [SINCE Orbeon Forms 2016.1] Fields inside nested sections and nested section templates are supported.
 - [SINCE Orbeon Forms 2024.1] Fields inside repeated sections or grids are also supported.
