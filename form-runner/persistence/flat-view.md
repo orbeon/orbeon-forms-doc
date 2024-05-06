@@ -4,7 +4,7 @@
 
 ### Rationale
 
-If you're using Oracle, SQL Server [SINCE Orbeon Forms 2016.2], DB2 [SINCE Orbeon Forms 4.7], or PostgreSQL [SINCE Orbeon Forms 4.8], when you deploy a form created in Form Builder, Orbeon Forms can create a form-specific view of your data, with one column for each form field.
+If you're using Oracle, SQL Server [SINCE Orbeon Forms 2016.2], DB2 [SINCE Orbeon Forms 4.7], PostgreSQL [SINCE Orbeon Forms 4.8], or MySQL [SINCE Orbeon Forms 2024.1], when you deploy a form created in Form Builder, Orbeon Forms can create a form-specific view of your data, with one column for each form field.
 
 ### Property to enable
 
@@ -39,9 +39,15 @@ When you enable this property, upon publishing a form, the persistence layer cre
  
 For instance, on Orbeon Forms 2021.1 and newer, if your app is `hr`, your form is `expense`, and you are publishing version 2 of that form, then the view is named `orbeon_f_hr_expense_2`. If upon publishing, there is already a view with that name, the persistence layer deletes it before recreating a new view.
 
+[SINCE Orbeon Forms 2024.1] One extra view will be created for each repeated section and grid, if any. In that case, the view name will be suffixed with the name of the repeated section or grid.
+
+```
+orbeon_f_#{app}_#{form}_#{form_version}_#{repeated_section_or_grid}
+```
+
 ### Metadata column names
 
-The view always has the following metadata columns, with information copied from the equivalent columns in `orbeon_form_data`:
+Each view always has one or more metadata columns, with information copied from the equivalent columns in `orbeon_form_data`. For views related to repeated sections or grids, only the `metadata_document_id` column is included.
 
 - [UP TO Orbeon Forms 4.3]
     - `metadata_document_id`
@@ -56,27 +62,62 @@ The view always has the following metadata columns, with information copied from
 
 Note that there is no `metadata_draft` column, as drafts are not included the view. (Before 4.7 they were, incorrectly, see [issue 1870](https://github.com/orbeon/orbeon-forms/issues/1870).)
 
+### Repetition column names
+
+[SINCE Orbeon Forms 2024.1] For repeated sections and grids, the view includes the repetition number for the current repeated section or grid, as well as for any enclosing repeated section. The column names are generated as follows:
+
+```
+#{repeated_section_or_grid}_repetition
+```
+
 ### Data column names
 
-In addition to those columns, you have one column per form field, and each column is named by combining the section name with the control name. On some databases, like Oracle, columns names are limited to 30 characters, so the persistence layer truncates column names. It also converts dashes to underscores, removes any non alphanumeric character except inner underscores, and converts the name to uppercase (so it can be used in queries without quotes).
+In addition to the metadata and repetition columns, one column is created for each form field. Each column is named using the control name, optionally prefixed with enclosing section/grid names. See below for details on how column names are generated depending on the version of Orbeon Forms you are using.
+
+As databases limit the length of column names, the persistence layer truncates them if needed. It also converts dashes to underscores, and removes any non-alphanumeric character except inner underscores.
+
+#### With Orbeon Forms 2024.1 and newer
+
+By default, the column names are generated using the control names only, unless they are located in a section template, in which case they will be prefixed with the name of the template section.
+
+To change this behavior and always include the names of the enclosing sections/grids, the following property can be changed from `false` to `true`:
+
+```xml
+<property
+  as="xs:boolean"
+  name="oxf.fr.persistence.[provider].flat-view.fully-qualified-names"
+  value="false"/>
+```
+
+In previous versions, column names were always truncated to 30 characters. With Orbeon Forms 2024.1 and newer, they are now truncated to a number of characters which depends on the database used. Those limits are defined in properties, which can be overridden if needed:
+
+```xml
+<property as="xs:integer" name="oxf.fr.persistence.oracle.flat-view.max-identifier-length"     value="128"/>
+<property as="xs:integer" name="oxf.fr.persistence.mysql.flat-view.max-identifier-length"      value="64"/>
+<property as="xs:integer" name="oxf.fr.persistence.postgresql.flat-view.max-identifier-length" value="63"/>
+<property as="xs:integer" name="oxf.fr.persistence.db2.flat-view.max-identifier-length"        value="128"/>
+<property as="xs:integer" name="oxf.fr.persistence.sqlserver.flat-view.max-identifier-length"  value="128"/>
+```
 
 #### With Orbeon Forms 4.5 and newer
 
-Orbeon Forms 4.5 introduces a new truncation algorithm so names are not cut short unnecessarily, and A numerical *suffix* is used instead for those columns which would introduce duplicates.
+Orbeon Forms 4.5 introduces a new truncation algorithm so names are not cut short unnecessarily, and a numerical *suffix* is used instead for those columns which would introduce duplicates.
 
 Examples:
 
 - Section name: `personal-information`
-    - Control name: `first-name` ⇒ column name: `PERSONAL_INFORMATIO_FIRST_NAME`
-    - Control name: `last-name` ⇒ column name: `PERSONAL_INFORMATION_LAST_NAME`
-    - Control name: `address` ⇒ column name: `PERSONAL_INFORMATION_ADDRESS`
+    - Control name: `first-name` ⇒ column name: `personal_informatio_first_name`
+    - Control name: `last-name` ⇒ column name: `personal_information_last_name`
+    - Control name: `address` ⇒ column name: `personal_information_address`
 - Section name: `company`
-    - Control name: `name` ⇒ column name: `COMPANY_NAME`
-    - Control name: `industry` ⇒ column name: `COMPANY_INDUSTRY`
+    - Control name: `name` ⇒ column name: `company_name`
+    - Control name: `industry` ⇒ column name: `company_industry`
 - Section name: `section-with-long-name`
-    - Control name: `my-control-with-a-pretty-long-name` ⇒ column name: `SECTION_WITH_L_MY_CONTROL_WITH`
-    - Control name: `my-control-with-a-pretty-long-name-too` ⇒ column name: `SECTION_WITH_L_MY_CONTROL_WIT1`
-    - Control name: `my-control-with-a-pretty-long-name-really` ⇒ column name: `SECTION_WITH_L_MY_CONTROL_WIT2`
+    - Control name: `my-control-with-a-pretty-long-name` ⇒ column name: `section_with_l_my_control_with`
+    - Control name: `my-control-with-a-pretty-long-name-too` ⇒ column name: `section_with_l_my_control_wit1`
+    - Control name: `my-control-with-a-pretty-long-name-really` ⇒ column name: `section_with_l_my_control_wit2`
+
+Enclosing section and grid names are always included in the column names. A truncation limit of 30 characters is enforced.
 
 #### With Orbeon Forms 4.4 and earlier
 
@@ -94,7 +135,8 @@ Examples:
 
 ## Limitations
 
-- Repeated grids and repeated sections are not supported, see [issue 1069](https://github.com/orbeon/orbeon-forms/issues/1069).
 - The Multiple File Attachments control is not supported, see [issue 1069](https://github.com/orbeon/orbeon-forms/issues/1069).
-- Only the default [form data format](https://doc.orbeon.com/form-runner/api/data-formats/form-data) is supported, see [issue 4440](https://github.com/orbeon/orbeon-forms/issues/4440). 
-- [SINCE Orbeon Forms 2016.1] Orbeon Forms handles fields inside nested sections and nested section templates. Such fields used to be ignored with Orbeon Forms 4.10 and earlier.
+- Only the default [form data format](https://doc.orbeon.com/form-runner/api/data-formats/form-data) is supported, see [issue 4440](https://github.com/orbeon/orbeon-forms/issues/4440).
+- With MySQL, fields inside repeated sections or grids are not supported.
+- [SINCE Orbeon Forms 2016.1] Fields inside nested sections and nested section templates are supported.
+- [SINCE Orbeon Forms 2024.1] Fields inside repeated sections or grids are also supported.
