@@ -92,11 +92,26 @@ To change this behavior and always include the names of the enclosing sections/g
 In previous versions, column names were always truncated to 30 characters. With Orbeon Forms 2024.1 and newer, they are now truncated to a number of characters which depends on the database used. Those limits are defined in properties, which can be overridden if needed:
 
 ```xml
-<property as="xs:integer" name="oxf.fr.persistence.oracle.flat-view.max-identifier-length"     value="128"/>
-<property as="xs:integer" name="oxf.fr.persistence.mysql.flat-view.max-identifier-length"      value="64"/>
-<property as="xs:integer" name="oxf.fr.persistence.postgresql.flat-view.max-identifier-length" value="63"/>
-<property as="xs:integer" name="oxf.fr.persistence.db2.flat-view.max-identifier-length"        value="128"/>
-<property as="xs:integer" name="oxf.fr.persistence.sqlserver.flat-view.max-identifier-length"  value="128"/>
+<property
+  as="xs:integer"
+  name="oxf.fr.persistence.oracle.flat-view.max-identifier-length"
+  value="128"/>
+<property
+  as="xs:integer"
+  name="oxf.fr.persistence.mysql.flat-view.max-identifier-length"
+  value="64"/>
+<property
+  as="xs:integer"
+  name="oxf.fr.persistence.postgresql.flat-view.max-identifier-length"
+  value="63"/>
+<property
+  as="xs:integer"
+  name="oxf.fr.persistence.db2.flat-view.max-identifier-length"
+  value="128"/>
+<property
+  as="xs:integer"
+  name="oxf.fr.persistence.sqlserver.flat-view.max-identifier-length"
+  value="128"/>
 ```
 
 #### With Orbeon Forms 4.5 and newer
