@@ -19,6 +19,19 @@ If you prefer to define a time window for your forms using properties, you can d
 <property as="xs:string"  name="oxf.fr.detail.available-to.dateTime.*.*"   value=""/>
 ```
 
+You can change the default messages by overriding the built-in resources with the following properties. If you want to change the default message for languages other than English, replace `en` in the property names as appropriate.  
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.fr.resource.*.*.en.detail.available-from.message"            
+    value="Form not available yet. Patience is bitter, but its fruit is sweet."/>
+<property 
+    as="xs:string"
+    name="oxf.fr.resource.*.*.en.detail.available-to.message"            
+    value="Form not available anymore. On the bright side, punctuality is the virtue of the bored."/>
+```
+
 ## Applies to new forms
 
 The time window restriction you set applies only to new forms. For example, if a user has access to specific form data within the time window, they will retain access even after the time window has closed. To prevent users from modifying the data after the time window ends, use the read-only feature under the Formulas tab. Implement a formula similar to `current-date() >= xs:date('2024-01-01')`.
