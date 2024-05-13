@@ -55,9 +55,8 @@ When using the free mode, you can freely:
 - change page from the table of contents
 - leaving a page marks all fields on the given page as visited, ensuring that errors on that page, if any, show in the error summary
 
-### Validated mode
 
-#### Lax validated mode
+### Lax mode
 
 [SINCE Orbeon Forms 4.9]
 
@@ -103,7 +102,7 @@ You can see in the following picture that the sections in the table of contents 
 
 ![Wizard validated mode](../images/wizard-validated.png)
 
-#### Strict validated mode
+### Strict mode
 
 [SINCE Orbeon Forms 2016.3]
 
