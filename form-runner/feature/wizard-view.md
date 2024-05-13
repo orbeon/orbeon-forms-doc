@@ -73,7 +73,7 @@ When using the validated mode:
 - you should generally use the "Prev" or "Next" buttons for navigation
 - any attempt to navigate to the next page marks all the fields of the preceding pages as well as the current page as visited, ensuring that errors on those pages, if any, show in the error summary
 
-__NOTE: This only applies to navigation between top-level sections. When subsection navigation is enabled, the validated mode applies only to top-level sections, while navigation within a given top-level section is always free.__
+This only applies to navigation between top-level sections. When subsection navigation is enabled, the validated mode applies only to top-level sections, while navigation within a given top-level section is always free.
 
 [FROM Orbeon Forms Forms 4.9 to 2016.2]
 
@@ -118,7 +118,7 @@ The following property enables the strict validated mode:
 
 This mode behaves the same as the lax validated mode, except that it doesn't matter if a forward section has been visited or not: if there are errors in the current or preceding wizard pages, it is not possible to navigate with the "Next" button or via the table of contents.
 
-__NOTE: This only applies to navigation between top-level sections. When subsection navigation is enabled, the validated mode applies only to top-level sections, while navigation within a given top-level section is always free.__
+This only applies to navigation between top-level sections. When subsection navigation is enabled, the validated mode applies only to top-level sections, while navigation within a given top-level section is always free.
 
 ## Buttons
 
@@ -250,9 +250,9 @@ When `true`:
     - it is possible to freely navigate through subsections within a given top-level section
     - however when attempting to navigate to the next top-level section, validation constraints apply
 
-*NOTE: Grids directly nested within top-level sections which have any subsections are ignored in this mode. The recommendation is to avoid this situation when using subsections navigation and not place grids directly at the same level of first-level subsections. This restriction is lifted in Orbeon Forms 2016.3.*
+Grids directly nested within top-level sections which have any subsections are ignored in this mode. The recommendation is to avoid this situation when using subsections navigation and not place grids directly at the same level of first-level subsections. This restriction is lifted in Orbeon Forms 2016.3.
 
-*NOTE: Top-level repeated sections are not supported. The recommendation is to avoid this situation when using subsections navigation and not use top-level repeated sections. This is improved in Orbeon Forms 2016.3 where top-level repeated sections disable subsection navigation for themselves.*
+Top-level repeated sections are not supported. The recommendation is to avoid this situation when using subsections navigation and not use top-level repeated sections. This is improved in Orbeon Forms 2016.3 where top-level repeated sections disable subsection navigation for themselves.
 
 <!-- TODO: screenshot -->
 
