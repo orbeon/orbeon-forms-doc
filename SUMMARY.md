@@ -138,6 +138,7 @@
         * [Datasets](form-runner/feature/datasets.md)
         * [Excel and XML import](form-runner/feature/excel-xml-import.md)
         * [Excel and XML export](form-runner/feature/excel-xml-export.md)
+        * [Summary page Excel Export](form-runner/feature/summary-page-export.md)
         * [Form definitions and form data batch export](form-runner/feature/exporting-form-definitions-and-form-data.md)
         * [Purging historical data](form-runner/feature/purging-historical-data.md)
         * [Lease Feature](form-runner/feature/lease.md)

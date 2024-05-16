@@ -10,7 +10,7 @@ Orbeon Forms includes a few ways to export form definitions and form data. This 
 
 For a different type of export, see also [Excel and XML export](excel-xml-export.md).
 
-## How to access the feature
+## How to use the feature
 
 The feature is available on the Form Runner [Forms Admin page](forms-admin-page.md). There, an "Export" button is available at the top of the page.
 
@@ -83,6 +83,7 @@ At the moment, once the "Export" button has been clicked, the dialog will be clo
 
 - [Purging historical data](purging-historical-data.md)
 - [Excel and XML export](excel-xml-export.md)
+- [Summary page Excel Export](summary-page-export.md)
 - [Excel and XML import](excel-xml-import.md)
 - [Forms Admin page](forms-admin-page.md)
 - [Zip export API](/form-runner/api/persistence/export-zip.md)

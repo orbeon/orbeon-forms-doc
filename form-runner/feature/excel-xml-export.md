@@ -12,7 +12,7 @@ Orbeon Forms includes a few ways to export form definitions and form data. This 
 
 For a different type of export, see also [Form definitions and form data batch export](/form-runner/feature/exporting-form-definitions-and-form-data.md).
 
-## How to access the feature
+## How to use the feature
 
 ### Locations
 
@@ -249,6 +249,7 @@ You can also export to Excel and XML [through a service call](/form-runner/link-
 ## See also
 
 - Blog post: [Excel export and import](https://blog.orbeon.com/2021/09/excel-export-and-import.html)
-- [Excel and XML Import](/form-runner/feature/excel-xml-import.md)
-- [Form definitions and form data batch export](/form-runner/feature/exporting-form-definitions-and-form-data.md)
+- [Excel and XML Import](excel-xml-import.md)
+- [Summary page Excel Export](summary-page-export.md)
+- [Form definitions and form data batch export](exporting-form-definitions-and-form-data.md)
 - [Service calls](/form-runner/link-embed/linking.md)
