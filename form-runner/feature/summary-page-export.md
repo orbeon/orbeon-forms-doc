@@ -25,7 +25,7 @@ You can export form data from the Form Runner [Summary page](summary-page.md).
 
 ### Enabling the feature
 
-In order to enable the feature, you need to add the `excel-export-with-search` token:
+In order to enable the feature, you need to add the `excel-export-with-search` token to the `oxf.fr.summary.buttons` property:
 
 ```xml
 <property as="xs:string"  name="oxf.fr.summary.buttons.*.*">
@@ -33,7 +33,7 @@ In order to enable the feature, you need to add the `excel-export-with-search` t
 </property>
 ```
 
-![Excel export button in the Summary page](../images/summary-excel-export.png)
+![Form data and Excel export button on the Summary page](../images/summary-excel-export.png)
 
 ### Exported data
 
@@ -43,7 +43,7 @@ Activating the button exports the data currently displayed in the Summary Page, 
 - search results if a search is active
 - sorting order if specified
 
-The export only includes data that the user can already see in the Summary page.
+The export only includes data from form controls that the user can already see in the Summary page. These are the form controls marked as "Show on Summary page" in Form Builder's [Control Settings dialog](/form-builder/control-settings.md).
 
 The Excel document includes:
 
