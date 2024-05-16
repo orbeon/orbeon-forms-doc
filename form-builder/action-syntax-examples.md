@@ -5,7 +5,7 @@
 
 ]This document provides examples of the syntax used to define actions in the form builder.
 
-## Example 1: Xxx
+## Example 1: List of Nobel Prize winners
 
 The Nobel Prize organization exposes a [REST API](https://www.nobelprize.org/about/developer-zone-2/). We would like to create a form that queries that API to return the 2023 Nobel Prize winners, and show these details in a table.
 
@@ -31,11 +31,15 @@ https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear=2023
 Finally, we write, using the Form Builder's action syntax, an action that:
 
 - runs upon form load
-- calls the Nobel Prize service
+- calls the `get-nobel-prizes` service
 - clears the `prizes` repeat
-- iterates over the Nobel Prizes and laureates
-- adds iterations to the `prizes` and `laureates` repeats
-- sets values in the controls
+- iterates over the Nobel Prizes (`/*/nobelPrizes/_`), and for each entry
+    - adds iterations to the `prizes` repeat
+    - sets values in the controls `year` and `category` from the `awardYear` and `category/en` fields in the data
+    - clears the `laureates` repeat
+    - iterates over the laureates (`laureates/_`), and for each entry
+        - adds iterations to the `laureates` repeat
+        - sets values in the controls `known-name`, `surname`, and `motivation` from the `knownName`, `fullName`, and `motivation/en` fields in the data
 
 There is a nested iteration due to the nested repeats. here is what the complete listener and action look like:
 
