@@ -79,6 +79,7 @@
             * [Database services](form-builder/database-services.md)
             * [Actions](form-builder/actions.md)
             * [Action syntax](form-builder/actions-syntax.md)
+            * [Action syntax examples](form-builder/action-syntax-examples.md)
             * [Synchronizing repeated content](form-builder/synchronize-repeated-content.md)
         * [Testing PDF production](form-builder/pdf-test.md)
         * [Testing offline functionality](form-builder/offline-test.md)

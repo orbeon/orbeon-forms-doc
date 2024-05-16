@@ -40,7 +40,9 @@ You place listeners and actions within the source code, preferably before the en
 </xf:model>
 ```
 
-## Example
+## Examples
+
+See also [Action syntax examples](action-syntax-examples.md).
 
 The following example:
 
@@ -996,8 +998,9 @@ To be more explicit, the attribute can also be set on the first `<fr:value>`:
 
 ## See also
 
-- [Editing the source code of the form definition](/form-builder/edit-source.md)
-- [Synchronizing repeated content](/form-builder/synchronize-repeated-content.md)
+- [Action syntax examples](action-syntax-examples.md)
+- [Editing the source code of the form definition](edit-source.md)
+- [Synchronizing repeated content](synchronize-repeated-content.md)
 - [Actions](actions.md)
 - [HTTP services](http-services.md)
 - [Database services](database-services.md)
