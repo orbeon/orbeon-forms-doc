@@ -33,6 +33,8 @@ In order to enable the feature, you need to add the `excel-export-with-search` t
 </property>
 ```
 
+![Excel export button in the Summary page](../images/summary-excel-export.png)
+
 ### Exported data
 
 Activating the button exports the data currently displayed in the Summary Page, including:
