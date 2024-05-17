@@ -2,8 +2,7 @@
   
 ## Overview
 
-
-This document provides examples of the syntax used to define actions in the form builder.
+This document provides examples of the [Action syntax](actions-syntax.md) used to define actions in Form Builder.
 
 ## Example 1: List of Nobel Prize winners
 
