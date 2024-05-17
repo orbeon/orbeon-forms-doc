@@ -27,6 +27,79 @@ It points to the following API endpoint:
 https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear=2023
 ```
 
+This returns data in JSON format (with `...` to indicate omitted parts):
+
+```json
+{
+  "nobelPrizes": [
+    {
+      "awardYear": "2023",
+      "category": {
+        "en": "Chemistry",
+        ...
+      },
+      ...,
+      "laureates": [
+        {
+          "id": "1029",
+          "knownName": {
+            "en": "Moungi Bawendi"
+          },
+          ...,
+          "motivation": {
+            "en": "in recognition of the extraordinary services he has rendered by the discovery of the laws of chemical dynamics and osmotic pressure in solutions",
+            ...
+          }
+        },
+        ...
+      ],
+      ...
+    }
+  ],
+  "meta": ...,
+  "links": ...
+}
+```
+
+Form Runner operates on an XML view of JSON data so that you can use XPath formulas. You can see it directly in the "XML Response Body" of the HTTP Service Editor. Here is what that view looks like:
+
+```xml
+<json type="object">
+    <nobelPrizes type="array">
+        <_ type="object">
+            <awardYear>2023</awardYear>
+            <category type="object">
+                <en>Chemistry</en>
+                ...
+            </category>
+            ...
+            <laureates type="array">
+                <_ type="object">
+                    <id>1029</id>
+                    <knownName type="object">
+                        <en>Moungi Bawendi</en>
+                    </knownName>
+                    ...
+                    <motivation type="object">
+                        <en>for the discovery and synthesis of quantum dots</en>
+                       ...
+                    </motivation>
+                    ...
+                </_>
+                ...
+            </laureates>
+        </_>
+    </nobelPrizes>
+    ...
+    <meta type="object">
+        ...
+    </meta>
+    <links type="object">
+        ...
+    </links>
+</json>
+```
+
 Finally, we write, using the Form Builder's action syntax, an action that:
 
 - runs upon form load
@@ -38,7 +111,7 @@ Finally, we write, using the Form Builder's action syntax, an action that:
     - clears the `laureates` repeat
     - iterates over the laureates (`laureates/_`), and for each entry
         - adds iterations to the `laureates` repeat
-        - sets values in the controls `known-name`, `surname`, and `motivation` from the `knownName`, `fullName`, and `motivation/en` fields in the data
+        - sets values in the controls `known-name` and `motivation` from the `knownName` and `motivation/en` fields in the data
 
 There is a nested iteration due to the nested repeats. here is what the complete listener and action look like:
 
@@ -56,7 +129,6 @@ There is a nested iteration due to the nested repeats. here is what the complete
         <fr:data-iterate ref="laureates/_">
             <fr:repeat-add-iteration repeat="laureates"/>
             <fr:control-setvalue value="knownName" control="known-name" at="end"/>
-            <fr:control-setvalue value="fullName" control="surname" at="end"/>
             <fr:control-setvalue value="motivation/en" control="motivation" at="end"/>
         </fr:data-iterate>
     </fr:data-iterate>
