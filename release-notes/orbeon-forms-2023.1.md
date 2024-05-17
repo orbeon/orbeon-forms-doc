@@ -360,7 +360,7 @@ New actions are introduced:
 In addition:
 
 - Actions can now optionally run their services asynchronously ([doc](/form-builder/actions-syntax.md#asynchronous-actions))
-- The action syntax is supported in Section Templates
+- The Action Syntax is supported in Section Templates
 
 ### Embedding and offline support
 

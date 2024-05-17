@@ -86,9 +86,9 @@ When versioning is available, Form Builder allows you to publish multiple versio
 
 ![Choice of section template version in the Form Builder toolbox](images/section-templates-v2.png)
 
-### Improvements to the action syntax
+### Improvements to the Action Syntax
 
-The new [action syntax](/form-builder/actions-syntax.md) has a number of improvements:  
+The new [Action Syntax](/form-builder/actions-syntax.md) has a number of improvements:  
 
 - Iterating over data, including calling services multiple times ([doc](/form-builder/actions-syntax.md#iterating-over-data))
 - Conditions ([doc](/form-builder/actions-syntax.md#conditions))

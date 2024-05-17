@@ -24,7 +24,7 @@ This release addresses the following issues since [Orbeon Forms 2021.1.7 PE](orb
 - Error Summary doesn't update error with nested repeats ([\#5682](https://github.com/orbeon/orbeon-forms/issues/5682))
 - JavaScript error in `view` when the first control in the form is a dropdown ([\#5651](https://github.com/orbeon/orbeon-forms/issues/5651))
 - Dynamic dropdown with a service doing the search shows empty ([\#5705](https://github.com/orbeon/orbeon-forms/issues/5705))
-- Action syntax: `<fr:control-setitems at="end">` doesn't work ([\#5727](https://github.com/orbeon/orbeon-forms/issues/5727))
+- Action Syntax: `<fr:control-setitems at="end">` doesn't work ([\#5727](https://github.com/orbeon/orbeon-forms/issues/5727))
 - Offline: Formatted Text doesn't show toolbox icons ([\#5737](https://github.com/orbeon/orbeon-forms/issues/5737))
 - Instances of XBL components are not restored ([\#5750](https://github.com/orbeon/orbeon-forms/issues/5750))
 

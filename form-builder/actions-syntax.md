@@ -1,4 +1,4 @@
-# Action syntax
+# Action Syntax
 
 ## Availability
 
@@ -42,56 +42,7 @@ You place listeners and actions within the source code, preferably before the en
 
 ## Examples
 
-See also [Action syntax examples](action-syntax-examples.md).
-
-The following example:
-
-- listens to an activation event on the button `my-button`
-- in response, calls the `my-action` action, which
-    - sets values from controls into the `my-service` service request
-    - calls the `my-service` service
-- when the service call completes
-    - the `my-table` repeated grid is cleared
-    - iterating over the XML response, for each iteration
-        - adds a repetition at the end of the `my-table` repeated grid
-        - sets the value of controls on the new repetition
-    - finally, all the `result-dropdown` dropdown control items are updated
-
-```xml
-    <!-- other Form Builder code here -->
-    
-    <fr:listener
-        version="2018.2"
-        events="activated"
-        controls="my-button"
-        actions="my-action"/>
-    
-    <fr:action name="my-action" version="2018.2">
-    
-        <fr:service-call service="my-service">
-            <fr:value control="foo" ref="/*/foo"/>
-            <fr:value control="bar" ref="/*/bar"/>
-        </fr:service-call>
-    
-        <fr:repeat-clear repeat="my-table"/>
-    
-        <fr:data-iterate ref="/*/row">
-            <fr:repeat-add-iteration repeat="my-table" at="end"/>
-            <fr:control-setvalue value="@field" control="result-field" at="end"/>
-            <fr:control-setvalue value="@dropdown" control="result-dropdown" at="end"/>
-        </fr:data-iterate>
-    
-        <fr:control-setitems
-            items="/*/response/item"
-            label="@label"
-            value="@value"
-            control="result-dropdown"/>
-    
-    </fr:action>
-
-    <!-- Put `<fr:listener>` and `<fr:action>` just above this. -->
-</xf:model>
-```
+For concrete examples of Action Syntax use, see [Action Syntax examples](action-syntax-examples.md).
 
 ## Listeners
 
@@ -998,7 +949,7 @@ To be more explicit, the attribute can also be set on the first `<fr:value>`:
 
 ## See also
 
-- [Action syntax examples](action-syntax-examples.md)
+- [Action Syntax examples](action-syntax-examples.md)
 - [Editing the source code of the form definition](edit-source.md)
 - [Synchronizing repeated content](synchronize-repeated-content.md)
 - [Actions](actions.md)

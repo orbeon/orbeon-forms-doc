@@ -1,8 +1,8 @@
-# Action syntax examples
+# Action Syntax examples
   
 ## Overview
 
-This document provides examples of the [Action syntax](actions-syntax.md) used to define actions in Form Builder.
+This document provides examples of the [Action Syntax](actions-syntax.md) used to define actions in Form Builder.
 
 ## Example 1: List of Nobel Prize winners
 
@@ -100,7 +100,7 @@ Form Runner operates on an XML view of JSON data so that you can use XPath formu
 </json>
 ```
 
-Finally, we write, using the Form Builder's action syntax, an action that:
+Finally, we write, using the Form Builder's Action Syntax, an action that:
 
 - runs upon form load
 - calls the `get-nobel-prizes` service
@@ -141,7 +141,7 @@ When you test or run the deployed form, you see the Nobel Prize winners for 2023
 
 ## See also
 
-- [Action syntax](actions-syntax.md)
+- [Action Syntax](actions-syntax.md)
 - [Editing the source code of the form definition](edit-source.md)
 - [Synchronizing repeated content](synchronize-repeated-content.md)
 - [Actions](actions.md)

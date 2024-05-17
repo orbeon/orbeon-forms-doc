@@ -182,7 +182,7 @@ But you can also use them the following formulas:
     - Hint formula
 - Actions
     - [Legacy actions](/form-builder/actions.md)
-    - [Action syntax](/form-builder/actions-syntax.md)
+    - [Action Syntax](/form-builder/actions-syntax.md)
 - [Template parameters](/form-builder/template-syntax.md)
     - Control name
     - Formula

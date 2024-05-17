@@ -15,7 +15,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.2 PE
 - Tooltips for hint, help, and alert to work again ([\#5712](https://github.com/orbeon/orbeon-forms/issues/5712))
 - Landing: Demo Forms → Show More points to Form Builder ([\#5718](https://github.com/orbeon/orbeon-forms/issues/5718))
 - Incomplete check for `list` permission ([\#5717](https://github.com/orbeon/orbeon-forms/issues/5717))
-- Action syntax: `<fr:control-setitems at="end">` doesn't work ([\#5727](https://github.com/orbeon/orbeon-forms/issues/5727))
+- Action Syntax: `<fr:control-setitems at="end">` doesn't work ([\#5727](https://github.com/orbeon/orbeon-forms/issues/5727))
 - Clarify/improve presence of extra XML elements in data ([\#5710](https://github.com/orbeon/orbeon-forms/issues/5710))
 - FileScan API v2 error message display issue ([\#5715](https://github.com/orbeon/orbeon-forms/issues/5715))
 - Dropdown for action to perform, in "Service Response Actions" tab of Actions Editor tab to only show valid options ([\#5736](https://github.com/orbeon/orbeon-forms/issues/5736))

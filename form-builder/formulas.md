@@ -93,7 +93,7 @@ You can also use the variable notation in the following formulas:
     - Hint formula
 - Actions
     - [Legacy actions](actions.md)
-    - [Action syntax](actions-syntax.md)
+    - [Action Syntax](actions-syntax.md)
 - [Template parameters](template-syntax.md)
     - Control name
     - Formula
@@ -160,7 +160,7 @@ In addition, other references which use the variable notation `$foo` where `foo`
     - Hint formula
 - Actions
     - [Legacy actions](actions.md)
-    - [Action syntax](actions-syntax.md)
+    - [Action Syntax](actions-syntax.md)
 - [Template parameters](template-syntax.md)
     - Control name
     - Formula
