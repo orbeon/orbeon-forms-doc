@@ -3,7 +3,7 @@
 ## Overview
 
 
-]This document provides examples of the syntax used to define actions in the form builder.
+This document provides examples of the syntax used to define actions in the form builder.
 
 ## Example 1: List of Nobel Prize winners
 
