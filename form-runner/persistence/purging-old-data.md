@@ -75,6 +75,7 @@ If that is the case, the relevant rows must also be deleted.
 
 - [Revision history](/form-runner/feature/revision-history.md)
 - [Purging historical data](/form-runner/feature/purging-historical-data.md)
+- [Export of form definitions and form data](/form-runner/feature/exporting-form-definitions-and-form-data.md)
 - [Auditing](auditing.md)
 - [Forms Admin page](/form-runner/feature/forms-admin-page.md)
 - [Use Form Runner with a Relational Database](relational-db.md)

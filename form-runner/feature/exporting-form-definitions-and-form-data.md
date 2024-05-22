@@ -82,6 +82,8 @@ At the moment, once the "Export" button has been clicked, the dialog will be clo
 ## See also
 
 - [Purging historical data](purging-historical-data.md)
+- [Revision history](revision-history.md)
+- [Auditing](/form-runner/persistence/auditing.md)
 - [Excel and XML export](excel-xml-export.md)
 - [Summary page Excel Export](summary-page-export.md)
 - [Excel and XML import](excel-xml-import.md)

@@ -6,7 +6,7 @@
 
 ## Overview
 
-The "Purge" dialog is similar to the "Export" dialog, except that it allows you to delete form data instead of exporting it. A typical scenario will involve exporting the data first, e.g. for archival purpose, then deleting/purging it.
+The "Purge" dialog is similar to the ["Export" dialog](exporting-form-definitions-and-form-data.md), except that it allows you to delete form data instead of exporting it. A typical scenario will involve exporting the data first, e.g. for archival purpose, then deleting/purging it.
 
 Like in the "Export" dialog, you can either purge the forms that were explicitly selected:
 
@@ -24,7 +24,14 @@ At the moment, once the "Purge" button has been clicked, the dialog will be clos
 
 ## See also
 
-- [Revision history](revision-history.md)
-- [Purging historical data](purging-historical-data.md)
+- [Purging old data using SQL](/form-runner/persistence/purging-old-data.md)
 - [Export of form definitions and form data](exporting-form-definitions-and-form-data.md)
+- [Revision history](revision-history.md)
+- [Auditing](/form-runner/persistence/auditing.md)
+- [Excel and XML export](excel-xml-export.md)
+- [Summary page Excel Export](summary-page-export.md)
+- [Excel and XML import](excel-xml-import.md)
 - [Forms Admin page](forms-admin-page.md)
+- [Zip export API](/form-runner/api/persistence/export-zip.md)
+- [Revision history API](/form-runner/api/persistence/revision-history.md)
+- [Blog post: Exporting form definitions and data](https://www.orbeon.com/2024/04/form-data-export)
