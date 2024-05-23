@@ -65,6 +65,10 @@ The `<url-pattern>` defined under the second `<filter-mapping>` has the value `/
 
 The filter parameter `oxf.xforms.renderer.default-encoding` allows you to specify a default character encoding when the content provided by the servlet or JSP page doesn't specify one. Previously, the default character encoding was hardcoded to `ISO-8859-1`. Since 4.6.1 the hardcoded default remains this, but you can change it with `oxf.xforms.renderer.default-encoding`. The default Orbeon Forms web.xml overrides this default to `UTF-8`, which is what most modern HTML uses.
 
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+If you are using Orbeon Forms 2023.1 or newer, and are running a servlet container that uses the Jakarta Servlet API (e.g. Tomcat 10+, WildFly 27+), you need to use the `org.orbeon.oxf.servlet.JakartaOrbeonXFormsFilter` servlet filter class instead of `org.orbeon.oxf.servlet.OrbeonXFormsFilter`.
+
 _Limitation: Currently you cannot deploy your application in the default servlet context (i.e. the empty context)._
 
 ### Application server configuration
@@ -93,11 +97,11 @@ You deploy Orbeon Forms as a separate WAR with the following steps:
 
 1. Deploy Orbeon Forms as usual, typically in the `/orbeon` context. Follow the [installation instructions][5] and the [Orbeon Forms Tutorial][6] if needed.
 2. Deploy your own application as a separate WAR.
-3. Copy `WEB-INF/lib/orbeon-xforms-filter.jar` from the Orbeon Forms WAR into your application's `WEB-INF/lib/` directory.
+3. Copy `WEB-INF/lib/orbeon-xforms-filter.jar` from `orbeon-xforms-filter.war` into your application's `WEB-INF/lib/` directory.
 4. Configure your application's `web.xml` as described in the previous section to setup the Orbeon Forms XForms filter.
 5. Setup your application in cross-context mode, as described in the previous section.
-6. From the uncompressed `orbeon``.war`, you can remove:
-    * All the files under `WEB-INF/resources`, except the directory `WEB-INF/resources``/config` and its content. (This directory contains configuration files which you might want to change, in particular the [properties files][7].)
+6. From the uncompressed `orbeon.war`, you can remove:
+    * All the files under `WEB-INF/resources`, except the directory `WEB-INF/resources/config` and its content. (This directory contains configuration files which you might want to change, in particular the [properties files][7].)
     * All the application-server or portal configuration files under `WEB-INF`; namely: `jboss-web.xml`, `jonas-web.xml`, `liferay-display.xml`, `liferay-portlet.xml`, `portlet.xml`, `sun-web.xml`, `weblogic.xml`. (The application-server specific files contain an example of how to declare a data source, so you can safely remove those files even if they are for the application server you are using.)
     * The `WEB-INF/classes` directory.
     * The `WEB-INF/commons-cli-1_0.jar` file.
@@ -155,7 +159,7 @@ The name of the attribute must be `"oxf.xforms.renderer.document"`. It may conta
 
 ### File inclusions
 
-When you deploy your XForms in the Orbeon Forms resources directory, you can reference instances in separate files from your XForms with: `<xf:instance src="oxf:/path/file.xml">`. You can also use XInclude to include arbitrary parts of your form with:` <xi:include href="``oxf:/path/file.xml">`. The `oxf:` scheme tells Orbeon Forms that the file is loaded from the resource directory, typically from `WEB-INF/resources` inside the Orbeon Forms war file.
+When you deploy your XForms in the Orbeon Forms resources directory, you can reference instances in separate files from your XForms with: `<xf:instance src="oxf:/path/file.xml">`. You can also use XInclude to include arbitrary parts of your form with:` <xi:include href="oxf:/path/file.xml">`. The `oxf:` scheme tells Orbeon Forms that the file is loaded from the resource directory, typically from `WEB-INF/resources` inside the Orbeon Forms war file.
 
 You could do this in separate deployment as well, but you would need to put the files to include in the Orbeon Forms resource directory. Since that resource directory is typically inside the Orbeon Forms war file, doing so would defeat the purpose of using separate deployment.
 
