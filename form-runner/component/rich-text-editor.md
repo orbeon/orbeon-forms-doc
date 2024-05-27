@@ -50,8 +50,7 @@ If no `config` attribute is set, the following property is used:
         "verify_html"        : true,
         "visual_table_class" : "fr-tinymce-table",
         "skin"               : false,
-        "convert_urls"       : false,
-        "content_css"        : "default"
+        "convert_urls"       : false
     }}
 </property>
 ```
@@ -86,7 +85,6 @@ For example, the following configuration restores the `iframe` mode (instead of 
         "visual_table_class" : "fr-tinymce-table",
         "skin"               : false,
         "convert_urls"       : false,
-        "content_css"        : "default",
         "content_style"      : "body.mce-content-body {{ margin: 0; color: #333 }} body.mce-content-body div {{font-family: 'Helvetica Neue'; font-size: 13px; padding: 4px 6px}} body.mce-content-body a {{ color: #0088cc }} body.mce-content-body p {{ margin: 0 0 10px }}"
     }}
 </property>

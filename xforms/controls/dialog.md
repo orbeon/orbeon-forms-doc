@@ -1,7 +1,5 @@
 # Dialog control
 
-
-
 ## Declaring a dialog control
 
 You declare dialogs directly under the `<xh:body>` element (or under the `<fr:body>` element for Form Runner forms) with:

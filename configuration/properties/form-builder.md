@@ -201,8 +201,7 @@ Use the following property:
         "verify_html"        : true,
         "visual_table_class" : "fr-tinymce-table",
         "skin"               : false,
-        "convert_urls"       : false,
-        "content_css"        : "default"
+        "convert_urls"       : false
     }}
 </property>
 ```
