@@ -44,6 +44,12 @@ A short label can be configured in the "Short Label" tab. This short label is us
 
 ![](images/section-settings-short-label-3.png)
 
+[\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
+
+Section labels are now optional. If you don't provide a label in any language, by leaving it blank, the section title will not be displayed.
+
+For more, see [Optional Section Labels](https://www.orbeon.com/2024/05/optional-section-labels).
+
 ### Dynamic label and help message
 
 [SINCE Orbeon Forms 2018.1]
@@ -86,3 +92,4 @@ For sections with repeated content, the "Add Repetition Label" tab allows you to
 - [Section component](/form-runner/component/section.md)
 - [Template syntax](template-syntax.md)
 - [Wizard view](/form-runner/feature/wizard-view.md)
+- Blog post: [Optional Section Labels](https://www.orbeon.com/2024/05/optional-section-labels)
