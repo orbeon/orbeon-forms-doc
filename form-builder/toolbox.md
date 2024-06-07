@@ -287,6 +287,10 @@ The autocomplete control is a single item selection control that loads a list of
 /xforms-controls/services/countries?country-name={`encode-for-uri($fr-search-value)}
 ```
 
+## Keyboard shortcuts
+
+See [Keyboard shortcuts](keyboard-shortcuts.md).
+
 ## See also
 
 - [Form editor](form-editor.md)

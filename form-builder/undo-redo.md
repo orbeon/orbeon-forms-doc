@@ -20,17 +20,9 @@ You can undo most operations which change important aspects of the form:
 
 [SINCE Orbeon Forms 2020.1]
 
-You can use the following keyboard shortcuts:
+You can use keyboard shortcuts to undo and redo operations.
 
-macOS:
-
-- `⌘-Z`: undo the last operation
-- `⌘-⇧-Z`: redo the last operation
-
-All operating systems:
-
-- `⌃-Z`: undo the last operation
-- `⌃-Y`: redo the last operation
+See [Keyboard shortcuts](keyboard-shortcuts.md#undo-and-redo) for details.
 
 ## Supported undo/redo actions
 

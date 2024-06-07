@@ -49,17 +49,7 @@ See [Buttons bar](buttons-bar.md).
 
 ## Keyboard shortcuts
 
-[SINCE Orbeon Forms 2020.1]
-
-You can use the following keyboard shortcuts:
-
-macOS:
-
-- `⌘-S`: save the form definition (like the "Save" button)
-
-All operating systems:
-
-- `⌃-S`: save the form definition (like the "Save" button)
+See [Keyboard shortcuts](keyboard-shortcuts.md).
 
 ### Other functions
 

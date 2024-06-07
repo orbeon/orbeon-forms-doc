@@ -325,6 +325,10 @@ When multiple languages are available for the form, a language selector allows s
 
 ![Language selector](images/control-settings-language.selector.png)
 
+## Keyboard shortcuts
+
+See [Keyboard shortcuts](keyboard-shortcuts.md).
+
 ## See also
 
 - [Control metadata for the Control Settings dialog](metadata.md#control-metadata-for-the-control-settings-dialog)

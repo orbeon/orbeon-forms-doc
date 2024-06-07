@@ -14,8 +14,8 @@ The Quick control search provides a quick way to find a control.
 
 You use one of the following keyboard shortcuts:
 
-- ⌘J (macOS)
-- ⌃J (other operating systems)
+- `⌘J` (macOS)
+- `⌃J` (other operating systems)
 
 The shortcut opens a small dialog. Clicking or pressing the Enter key and then typing a search term allows you to search from the list of available form controls. Upon selection, Form Builder scrolls to the control selected and highlights it.
 
@@ -26,3 +26,4 @@ If the "Open Settings Dialog" option is selected, the "Control Settings" dialog 
 ## See also
 
 - Blog post: [Quickly navigate to fields in large forms](https://blog.orbeon.com/2022/06/navigate-to-fields-in-large-forms.html)
+- [Keyboard shortcuts](/form-builder/keyboard-shortcuts.md)

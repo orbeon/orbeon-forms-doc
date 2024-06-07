@@ -66,6 +66,7 @@
         * [Repeat settings](form-builder/repeat-settings.md)
         * [Repeated grids](form-builder/repeated-grids.md)
         * [Undo and redo](form-builder/undo-redo.md)
+        * [Keyboard shortcuts](form-builder/keyboard-shortcuts.md)
     * [Formulas](form-builder/formulas.md)
         * [Examples](form-builder/formulas-examples.md)
         * [Formulas inspector](form-builder/formulas-inspector.md)

@@ -41,19 +41,9 @@ When a control is pasted, if the control name of the clipboard control is curren
 
 [SINCE Orbeon Forms 2020.1]
 
-You can use the following keyboard shortcuts:
+You can use keyboard shortcuts to cut, copy and paste.
 
-macOS:
-
-- `⌘-X`: cut the current control
-- `⌘-C`: copy the current control
-- `⌘-V`: paste from the toolbox
-
-All operating systems:
-
-- `⌃-X`: cut the current control
-- `⌃-C`: copy the current control
-- `⌃-V`: paste from the toolbox
+See [Keyboard shortcuts](keyboard-shortcuts.md#cut-copy-and-paste) for details.
 
 ## Copying and pasting between forms
 
@@ -119,4 +109,5 @@ The "Cut" and "Paste" operations are undoable in the following way:
 
 - [Undo and redo](undo-redo.md)
 - [Section templates](section-templates.md)
+- [Keyboard shortcuts](keyboard-shortcuts.md)
 - Blog post: [Copying and pasting across forms](https://blog.orbeon.com/2020/06/copying-and-pasting-across-forms.html)
