@@ -100,4 +100,3 @@ You can use the left and right cursor keys to navigate between grid cells.
 ## See also
 
 - Blog post: [Adding keyboard shortcuts to Form Builder](https://www.orbeon.com/2021/01/adding-keyboard-shortcuts-to-form.html)
-- https://doc.orbeon.com/release-notes/orbeon-forms-2020.1#basic-form-builder-keyboard-shortcuts
