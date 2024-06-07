@@ -417,12 +417,12 @@ See also [PDF templates](/form-runner/feature/pdf-templates.md).
 fr:run-process-by-name(
     $scope   as xs:string,
     $process as xs:string
-) as item()?
+) as xs:boolean?
 ```
 
 Run the given process given a scope and process content.
 
-This function returns the empty sequence.
+This function returns `true()` if the process succeeded, and `false()` otherwise.
 
 Example:
 
@@ -432,18 +432,22 @@ Example:
 </xf:action>
 ```
 
+[\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
+
+The function returns an empty sequence if the process contains at least one asynchronous action, and therefore the process result is yet unknown.
+
 ### fr:run-process-by-name()
 
 ```xpath
 fr:run-process-by-name(
     $scope   as xs:string,
     $process as xs:string
-) as item()?
+) xs:boolean?
 ```
 
 Run the given process given a scope and process name.
 
-This function returns the empty sequence.
+This function returns `true()` if the process succeeded, and `false()` otherwise.
 
 Example:
 
@@ -452,6 +456,10 @@ Example:
     fr:run-process-by-name('oxf.fr.detail.process', 'save')
 </xf:action>
 ```
+
+[\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
+
+The function returns an empty sequence if the process contains at least one asynchronous action, and therefore the process result is yet unknown.
 
 ### fr:component-param-value()
 
