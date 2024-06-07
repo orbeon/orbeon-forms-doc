@@ -49,7 +49,7 @@ Other operating systems:
 
 - `⌃Z`: undo the last operation
 - `⌃Y`: redo the last operation
-- 
+
 See also [Undo and redo](/form-builder/undo-redo.md).
 
 ## Dialogs shortcuts
