@@ -4,6 +4,8 @@
 
 [SINCE Orbeon Forms 2020.1]
 
+The first keyboard shortcuts have been added with Orbeon Forms 2020.1. New shortcuts have been added since. See below for details.
+
 ##  Buttons shortcuts
 
 You can use the following keyboard shortcuts:
@@ -51,8 +53,6 @@ Other operating systems:
 See also [Undo and redo](/form-builder/undo-redo.md).
 
 ## Dialogs shortcuts
-
-[SINCE Orbeon Forms xxx]
 
 - `⇧↵` (Shift-Enter or Shift-Return): open the Control Settings dialog
 - `⌘J`
