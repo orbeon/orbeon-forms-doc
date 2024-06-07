@@ -22,15 +22,15 @@ You can use the following keyboard shortcuts:
 
 macOS:
 
-- `⌘-X`: cut the current control
-- `⌘-C`: copy the current control
-- `⌘-V`: paste from the toolbox
+- `⌘X`: cut the current control
+- `⌘C`: copy the current control
+- `⌘V`: paste from the toolbox
 
 Other operating systems:
 
-- `⌃-X`: cut the current control
-- `⌃-C`: copy the current control
-- `⌃-V`: paste from the toolbox
+- `⌃X`: cut the current control
+- `⌃C`: copy the current control
+- `⌃V`: paste from the toolbox
 
 See also [Cut, copy and paste](/form-builder/cut-copy-paste.md).
 
@@ -40,13 +40,13 @@ You can use the following keyboard shortcuts:
 
 macOS:
 
-- `⌘-Z`: undo the last operation
-- `⌘-⇧-Z`: redo the last operation
+- `⌘Z`: undo the last operation
+- `⌘⇧Z`: redo the last operation
 
 Other operating systems:
 
-- `⌃-Z`: undo the last operation
-- `⌃-Y`: redo the last operation
+- `⌃Z`: undo the last operation
+- `⌃Y`: redo the last operation
 - 
 See also [Undo and redo](/form-builder/undo-redo.md).
 
