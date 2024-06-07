@@ -6,6 +6,16 @@
 
 The first keyboard shortcuts have been added with Orbeon Forms 2020.1. New shortcuts have been added since. See below for details.
 
+## Rationale
+
+When you start being comfortable with the Form Builder user interface, you might want to use keyboard shortcuts to speed up your work. Orbeon Forms is progressively introducing keyboard shortcuts to help you with this.
+
+## Discoverability
+
+[\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
+
+Most keyboard shortcut hints now show when you hover over the Form Builder toolbox, the buttons bar, or icons.
+
 ##  Buttons shortcuts
 
 You can use the following keyboard shortcuts:
