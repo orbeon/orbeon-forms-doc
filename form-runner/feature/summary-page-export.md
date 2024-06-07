@@ -35,6 +35,25 @@ In order to enable the feature, you need to add the `excel-export-with-search` t
 
 ![Form data and Excel export button on the Summary page](../images/summary-excel-export.png)
 
+### Options
+
+Upon activating the button, a dialog opens which allows you to specify options for the export:
+
+- Use labels for headings:
+    - Default: selected
+    - If selected, the column headings in the Excel document use control labels of the form controls, as well as human-readable labels for metadata
+    - If deselected, the column headings in the Excel document use control names of the form controls, as well as metadata names 
+- Use labels for selection controls:
+   - Default: selected
+   - If selected, the values of selection controls are exported as human-readable choices labels
+   - If deselected, the values of selection controls are exported as choices values
+- Include document id column
+    - Default: deselected
+    - If selected, the document id is included in the Excel document as the first column
+    - If deselected, the document id is not included in the Excel document
+
+![Excel export options dialog](../images/fr-summary-excel-export-dialog.png)
+
 ### Exported data
 
 Activating the button exports the data currently displayed in the Summary Page, including:
