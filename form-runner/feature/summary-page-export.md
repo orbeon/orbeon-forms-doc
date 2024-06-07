@@ -39,15 +39,15 @@ In order to enable the feature, you need to add the `excel-export-with-search` t
 
 Upon activating the button, a dialog opens which allows you to specify options for the export:
 
-- Use labels for headings:
+- __Use labels for headings:__
     - Default: selected
     - If selected, the column headings in the Excel document use control labels of the form controls, as well as human-readable labels for metadata
     - If deselected, the column headings in the Excel document use control names of the form controls, as well as metadata names 
-- Use labels for selection controls:
+- __Use labels for selection controls:__
    - Default: selected
    - If selected, the values of selection controls are exported as human-readable choices labels
    - If deselected, the values of selection controls are exported as choices values
-- Include document id column
+- __Include document id column:__
     - Default: deselected
     - If selected, the document id is included in the Excel document as the first column
     - If deselected, the document id is not included in the Excel document
