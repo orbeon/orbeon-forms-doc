@@ -10,7 +10,7 @@ Today we released Orbeon Forms 2023.1.3 PE! This maintenance release contains bu
 
 ## New feature
 
-You can now export form data from the Summary page in Excel format, with a simple new butto
+You can now export form data from the Summary page in Excel format, with a simple new button:
 
 ![Form data and Excel export button on the Summary page](/form-runner/images/summary-excel-export.png)
 
