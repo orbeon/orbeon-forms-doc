@@ -2,11 +2,21 @@
 
 __xxx, June x, 2024__
 
-Today we released Orbeon Forms 2023.1.3 PE! This maintenance release contains bug-fixes and minor new features and is recommended for all users of:
+Today we released Orbeon Forms 2023.1.3 PE! This maintenance release contains bug-fixes and new features and is recommended for all users of:
 
 - [Orbeon Forms 2023.1.2 PE](orbeon-forms-2023.1.2.md)
 - [Orbeon Forms 2023.1.1 PE](orbeon-forms-2023.1.1.md)
 - [Orbeon Forms 2023.1 PE](orbeon-forms-2023.1.md)
+
+## New feature
+
+You can now export form data from the Summary page in Excel format, with a simple new butto
+
+![Form data and Excel export button on the Summary page](/form-runner/images/summary-excel-export.png)
+
+For more, see the [documentation](/form-runner/feature/summary-page-export.md).
+
+## Issues addressed
 
 This release addresses the following issues since [Orbeon Forms 2023.1.2 PE](orbeon-forms-2023.1.2.md):
 
@@ -30,6 +40,7 @@ This release addresses the following issues since [Orbeon Forms 2023.1.2 PE](orb
     - Horizontal scrollbar in toolbox when version dropdown displayed ([\#6358](https://github.com/orbeon/orbeon-forms/issues/6358))
     - Parameters editor should never allow entering two parameters with the same name ([\#6368](https://github.com/orbeon/orbeon-forms/issues/6368))
 - Form Runner
+    - Excel table export from Summary page ([\#6323](https://github.com/orbeon/orbeon-forms/issues/6323))
     - Summary page Excel export: optional document id export ([\#6329](https://github.com/orbeon/orbeon-forms/issues/6329))
     - Baseline updates do not include XBL components ([\#6352](https://github.com/orbeon/orbeon-forms/issues/6352))
     - `fr:run-process-by-name()` isn't sync anymore ([\#6342](https://github.com/orbeon/orbeon-forms/issues/6342))
@@ -39,7 +50,6 @@ This release addresses the following issues since [Orbeon Forms 2023.1.2 PE](orb
     - Enabling form level placeholders hides full labels for all XBL components ([\#6334](https://github.com/orbeon/orbeon-forms/issues/6334))
     - Email template expression doesn't resolve value correctly ([\#6335](https://github.com/orbeon/orbeon-forms/issues/6335))
     - Process action `send(content = "pdf")` failing ([\#6328](https://github.com/orbeon/orbeon-forms/issues/6328))
-    - Excel table export from Summary page ([\#6323](https://github.com/orbeon/orbeon-forms/issues/6323))
     - Improvements to Spanish resources for repeated grid, error dialog, attachment control ([\#6320](https://github.com/orbeon/orbeon-forms/issues/6320))
     - Inline spinner button loses spinner when label updates ([\#6069](https://github.com/orbeon/orbeon-forms/issues/6069))
     - Explanatory Text can overflow ([\#6316](https://github.com/orbeon/orbeon-forms/issues/6316))
