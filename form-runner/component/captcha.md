@@ -29,9 +29,9 @@ Both the `fr:recaptcha` and `fr:simple-captcha` components support the same even
 
 ## reCAPTCHA
 
-### Supported version
+### Supported versions
 
-Orbeon Forms supports the reCAPTCHA v2 since Orbeon Forms 2018.1 and 2017.2.2. Google [stopped supporting the reCAPTCHA v1](https://developers.google.com/recaptcha/docs/faq#what-happens-to-recaptcha-v1) used by earlier versions of Orbeon Forms after March 31, 2018. Hence, if you're using the reCAPTCHA, and are using an older version of Orbeon Forms, you'll want to upgrade to a newer version which supports reCAPTCHA v2.
+Orbeon Forms supports the reCAPTCHA v2 since Orbeon Forms 2018.1 and 2017.2.2, and reCAPTCHA v3 since Orbeon Forms 2024.1. Google [stopped supporting reCAPTCHA v1](https://developers.google.com/recaptcha/docs/faq#what-happens-to-recaptcha-v1) used by earlier versions of Orbeon Forms after March 31, 2018. Hence, if you're using the reCAPTCHA, and are using an older version of Orbeon Forms, you'll want to upgrade to a newer version which supports reCAPTCHA v2 or v3.
 
 ### Usage
 
@@ -40,18 +40,27 @@ You can use this component to show users a captcha, like the one shown in the fo
 <figure><img alt="" src="images/xbl-recaptcha.gif" width="308"></figure>
 
 1. First, you need to [sign up with reCAPTCHA][4] to get your own public/private key pair.
-2. Store your public key (now called "site key") and private key in your properties, as follows:
+2. Store your public keys (now called "site keys") and private keys in your properties, as follows:
 
     ```xml
     <property
         as="xs:string"
-        name="oxf.xforms.xbl.fr.recaptcha.public-key"
+        name="oxf.xforms.xbl.fr.recaptcha.v2.public-key"
         value="..."/>
     <property
         as="xs:string"
-        name="oxf.xforms.xbl.fr.recaptcha.private-key"
+        name="oxf.xforms.xbl.fr.recaptcha.v2.private-key"
+        value="..."/>
+   <property
+        as="xs:string"
+        name="oxf.xforms.xbl.fr.recaptcha.v3.public-key"
+        value="..."/>
+    <property
+        as="xs:string"
+        name="oxf.xforms.xbl.fr.recaptcha.v3.private-key"
         value="..."/>
     ```
+If your version of Orbeon Forms only supports reCAPTCHA v2 (before Orbeon Forms 2024.1), use the `oxf.xforms.xbl.fr.recaptcha.public-key` and `oxf.xforms.xbl.fr.recaptcha.private-key` properties.
 
 3. Add the reCAPTCHA component to your form:
 
@@ -95,6 +104,13 @@ You can configure:
 	.orbeon .fr-captcha .xbl-fr-recaptcha.xforms-visited .xforms-alert.xforms-active {
 		display: block;
 	}
+	```
+- The score threshold (for reCAPTCHA v3 only). When verifying the response, the reCAPTCHA API returns a score between 0 and 1. If the score is higher than the threshold, the verification is considered successful. If it is lower, the component will switch to reCAPTCHA v2 (visible reCAPTCHA) for further verification. The default score threshold is 0.5. You can customize this threshold with the following property:
+	```xml
+	<property
+	    as="xs:string"
+	    name="oxf.xforms.xbl.fr.recaptcha.v3.score-threshold"
+	    value="0.5"/>
 	```
 
 See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties.
