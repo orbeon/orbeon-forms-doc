@@ -5,7 +5,7 @@
 | Operation | HTTP Method | URL                                                                                       |
 |-----------|-------------|-------------------------------------------------------------------------------------------|
 | Create    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
-| Read      | `GET`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+| Read      | `GET`/`HEAD`| <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
 | Update    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
 | Delete    | `DELETE`    | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
 
