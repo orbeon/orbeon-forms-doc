@@ -108,7 +108,7 @@ You can configure:
 - The score threshold (for reCAPTCHA v3 only). When verifying the response, the reCAPTCHA API returns a score between 0 and 1. If the score is higher than the threshold, the verification is considered successful. If it is lower, the component will switch to reCAPTCHA v2 (visible reCAPTCHA) for further verification. The default score threshold is 0.5. You can customize this threshold with the following property:
 	```xml
 	<property
-	    as="xs:string"
+	    as="xs:decimal"
 	    name="oxf.xforms.xbl.fr.recaptcha.v3.score-threshold"
 	    value="0.5"/>
 	```
