@@ -24,7 +24,7 @@ Where:
 - [SINCE Orbeon Forms 4.5] The `Orbeon-Operations` response header lists the operations that the user can perform on the data (see [Supporting permissions in your persistence API implementation](https://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)).
 - If the implementation of the persistence API supports form versioning:
     - [SINCE Orbeon Forms 4.5] If the request is for a form definition, the `Orbeon-Form-Definition-Version` request header tells which version of the form definition is requested.
-    - [SINCE Orbeon Forms 2023.1] If the request is for a form definition, the `Orbeon-Form-Definition-Version` response header indicates which version of the form definition was used to create the relevant form data.
+    - [SINCE Orbeon Forms 2023.1] If the request is for a form data, the `Orbeon-Form-Definition-Version` response header indicates which version of the form definition was used to create the relevant form data.
 - [SINCE Orbeon Forms 2023.1] The built-in implementation of the persistence API supports the HEAD method, and Form Runner also makes calls to the CRUD API using the HEAD method. Implementations of the CRUD API must implement HEAD just like GET, but return an empty body.
     
 ### PUT
