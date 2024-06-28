@@ -627,6 +627,6 @@ See [Auditing](form-runner/persistence/auditing.md).
 [4]: http://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html
 [5]: http://docs.jboss.org/jbossas/docs/Installation_And_Getting_Started_Guide/5/html/Using_other_Databases.html#Configuring_a_datasource_for_Oracle_DB
 [6]: http://dev.mysql.com/downloads/connector/j/
-[8]: http://jdbc.postgresql.org/download.html
+[8]: https://jdbc.postgresql.org/download/
 [9]: http://www-01.ibm.com/support/docview.wss?uid=swg21363866
 [11]: http://demo.orbeon.com/orbeon/fr/orbeon/bookshelf/summary
