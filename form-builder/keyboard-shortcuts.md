@@ -23,12 +23,12 @@ You can use the following keyboard shortcuts:
 Apple operating systems:
 
 - `⌘S` (Command-S): save the form definition (like the "Save" button)
-- `⌘P`: open the Publish dialog
+- `⌘P`: open the [Publish dialog](/form-builder/publishing.md)
 
 Other operating systems:
 
 - `⌃S` (Ctrl-S): save the form definition (like the "Save" button)
-- `⌃P`: open the Publish dialog
+- `⌃P`: open the [Publish dialog](/form-builder/publishing.md)
 
 ## Cut, copy and paste
 
@@ -103,7 +103,7 @@ You can use the left and right cursor keys to navigate between grid cells.
 
 [\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
 
-- `⌘⇧R`/`⌃⇧R`: reload the toolbox
+- `⌘⇧R`/`⌃⇧R`: [reload the toolbox](/form-builder/toolbox.md#reloading-the-toolbox)
 
 ## See also
 
