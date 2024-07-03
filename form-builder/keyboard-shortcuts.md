@@ -66,7 +66,7 @@ See also [Undo and redo](/form-builder/undo-redo.md).
 
 ## Dialogs shortcuts
 
-- `⇧↵` (Shift-Enter or Shift-Return): open the Control Settings dialog
+- `⇧↵` (Shift-Enter or Shift-Return): open the [Control Settings dialog](/form-builder/control-settings.md)
 - `⌘J`/`⌃J`
     - [SINCE Orbeon Forms 2021.1]
     - Opens the [Quick control search](/form-builder/quick-control-search.md)
@@ -74,16 +74,16 @@ See also [Undo and redo](/form-builder/undo-redo.md).
 [\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
 
 - Opening settings dialogs:
-    - `O F`: open Form Settings
-    - `O P`: open Permissions
-    - `O E`: open Email Settings
-    - `O M`: open Messages
-    - `O S`: open Edit Source
+    - `O F`: open [Form Settings](/form-builder/form-settings.md)
+    - `O P`: open [Permissions](/form-runner/access-control/deployed-forms.md)
+    - `O E`: open [Email Settings](/form-builder/email-settings.md)
+    - `O M`: open [Messages](/form-builder/messages.md)
+    - `O S`: open [Edit Source](/form-builder/edit-source.md)
 - Opening test dialogs:
     - `T W`: test the web form
-    - `T P`: test the PDF
-    - `T O`: test the offline form
-    - `T F`: Inspect Formulas
+    - `T P`: [test the PDF](/form-builder/pdf-test.md)
+    - `T O`: [test the offline form](/form-builder/offline-test.md)
+    - `T F`: [inspect formulas](/form-builder/formulas-inspector.md)
 
 ## Grid navigation shortcuts
 
