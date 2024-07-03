@@ -99,7 +99,7 @@ You can use the left and right cursor keys to navigate between grid cells.
 - `I S G`: [insert a new grid](/form-builder/toolbox.md)
 - `I S R`: [insert a new repeated grid](/form-builder/toolbox.md)
 
-## Reloadinfg the toolbox
+## Reloading the toolbox
 
 [\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
 
