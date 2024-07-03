@@ -74,14 +74,14 @@ See also [Undo and redo](/form-builder/undo-redo.md).
 [\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
 
 - Opening settings dialogs:
-    - `O F`: open [Form Settings](/form-builder/form-settings.md)
-    - `O P`: open [Permissions](/form-runner/access-control/deployed-forms.md)
-    - `O E`: open [Email Settings](/form-builder/email-settings.md)
-    - `O M`: open [Messages](/form-builder/messages.md)
-    - `O S`: open [Edit Source](/form-builder/edit-source.md)
+    - `O F`: [open Form Settings](/form-builder/form-settings.md)
+    - `O P`: [open Permissions](/form-runner/access-control/deployed-forms.md)
+    - `O E`: [open Email Settings](/form-builder/email-settings.md)
+    - `O M`: [open Messages](/form-builder/messages.md)
+    - `O S`: [open Edit Source](/form-builder/edit-source.md)
 - Opening test dialogs:
     - `T W`: test the web form
-    - `T P`: [test the PDF](/form-builder/pdf-test.md)
+    - `T P`: [test PDF production](/form-builder/pdf-test.md)
     - `T O`: [test the offline form](/form-builder/offline-test.md)
     - `T F`: [inspect formulas](/form-builder/formulas-inspector.md)
 
