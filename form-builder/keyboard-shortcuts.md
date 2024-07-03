@@ -95,9 +95,9 @@ You can use the left and right cursor keys to navigate between grid cells.
 
 [\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
 
-- `I S S`: insert a new section
-- `I S G`: insert a new grid
-- `I S R`: insert a new repeated grid
+- `I S S`: [insert a new section](/form-builder/toolbox.md)
+- `I S G`: [insert a new grid](/form-builder/toolbox.md)
+- `I S R`: [insert a new repeated grid](/form-builder/toolbox.md)
 
 ## Reloadinfg the toolbox
 
