@@ -14,7 +14,10 @@ A PDF template must include Acrobat form fields. You can create these with Acrob
 
 You attach one or more PDF templates to a form definition in Form Builder using the "PDF Templates" button in the "Advanced" tab of the toolbox.
 
-![Attach PDF templates dialog](images/pdf-templates-dialog.png)
+<figure>
+    <img src="/form-builder/images/pdf-templates-dialog.png" width="702">
+    <figcaption>Attach PDF templates dialog</figcaption>
+</figure>
 
 [SINCE Orbeon Forms 2018.1]
 
