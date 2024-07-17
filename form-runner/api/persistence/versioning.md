@@ -41,4 +41,4 @@ In addition to explicit versioning of form definitions, the relational database 
 - [List form data attachments](list-form-data-attachments.md)
 - [Form metadata](forms-metadata.md)
 - [Caching](caching.md)
-- [Implementing a persistence service](implementing-a-persistence-service.md)
+- [Custom persistence providers](custom-persistence-providers.md)

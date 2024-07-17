@@ -15,7 +15,7 @@ Form Runner offers a number of integration APIs, including:
     - [Lease API](/form-runner/api/persistence/lease.md)
     - [Reindexing API](/form-runner/api/persistence/reindexing.md)
     - [Revision history API](/form-runner/api/persistence/revision-history.md)
-    - [Implementing a persistence service](/form-runner/api/persistence/implementing-a-persistence-service.md)
+    - [Custom persistence providers](/form-runner/api/persistence/custom-persistence-providers.md)
 - Other APIs
     - [Connection context API](/form-runner/api/other/connection-context-api.md)
     - [Duplicate form data API](/form-runner/api/other/duplicate-form-data.md)

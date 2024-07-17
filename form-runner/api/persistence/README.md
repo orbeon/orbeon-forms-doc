@@ -12,7 +12,7 @@
 - [Reindexing API](reindexing.md)
 - [Revision history API](revision-history.md)
 - [Zip export API](export-zip.md)
-- [Implementing a persistence service](implementing-a-persistence-service.md)
+- [Custom persistence providers](custom-persistence-providers.md)
 
 ## Introduction
 

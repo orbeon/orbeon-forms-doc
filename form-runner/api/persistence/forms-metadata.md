@@ -233,4 +233,4 @@ Here note that version 5 is marked as not available with:
 - [Form metadata](forms-metadata.md)
 - [Caching](caching.md)
 - [Versioning](versioning.md)
-- [Implementing a persistence service](implementing-a-persistence-service.md)
+- [Custom persistence providers](custom-persistence-providers.md)

@@ -369,4 +369,4 @@ To remove all instances of form data, issue a `DELETE` to:
 - [Form metadata](forms-metadata.md)
 - [Caching](caching.md)
 - [Versioning](versioning.md)
-- [Implementing a persistence service](implementing-a-persistence-service.md)
+- [Custom persistence providers](custom-persistence-providers.md)

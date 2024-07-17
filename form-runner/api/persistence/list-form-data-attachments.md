@@ -64,4 +64,4 @@ The caller must either call the service internally or have proper credentials to
 - [Form metadata](forms-metadata.md)
 - [Caching](caching.md)
 - [Versioning](versioning.md)
-- [Implementing a persistence service](implementing-a-persistence-service.md)
+- [Custom persistence providers](custom-persistence-providers.md)
