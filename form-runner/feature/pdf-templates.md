@@ -146,11 +146,28 @@ In template mode, fonts can be specified to provide glyphs which are not present
     value="/path/to/font1.ttf /path/to/font2.ttf"/>
 ```
 
+## PDF template selection
+
+[SINCE Orbeon Forms 2018.1]
+
+By default, the `pdf` button runs the following process:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.process.pdf.*.*">
+    open-rendered-format(format = "pdf")
+</property>
+```
+
+This will, by default, use a PDF template if there is one, otherwise use the automatic PDF. If there are multiple PDF templates, then matching by form language takes place.
+
+You can, in your `properties-local.xml`, specify your own process, and, using the `use-pdf-template`, `pdf-template-name`, and `pdf-template-lang` action parameters, be specific about which template you'd like to use, if any. For more about these parameters and the `open-rendered-format` action, see [the `open-rendered-format` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format).
+
 ## See also
 
 - [PDF Production](pdf-production.md)
 - [Automatic PDF](pdf-automatic.md)
 - [PDF configuration properties](/configuration/properties/form-runner-pdf.md)
+- [The `open-rendered-format` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format)
 - [Testing PDF production](/form-builder/pdf-test.md)
 - [TIFF Production](/form-runner/feature/tiff-production.md)
 - [Sending PDF and TIFF content: Controlling the format](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)

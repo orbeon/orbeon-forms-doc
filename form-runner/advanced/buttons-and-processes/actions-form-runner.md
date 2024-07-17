@@ -287,6 +287,8 @@ The following parameters allow controlling hints, alerts, and required controls 
     - defaults to the `oxf.fr.detail.static-readonly-required` property, which itself defaults to `false`
     - when `true`, style required controls in the PDF
 
+[SINCE Orbeon Forms 2018.1]
+
 The following parameters allow controlling the use of PDF templates:
 
 - `use-pdf-template`
