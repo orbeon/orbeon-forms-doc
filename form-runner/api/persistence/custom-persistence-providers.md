@@ -246,9 +246,15 @@ HTTP response headers for `GET` and `HEAD` requests:
 - `Orbeon-Created`
     - millisecond-resolution ISO format date/time with the data's created data
     - for example: `2024-07-17T21:52:11.611Z`
+    - this is used by
+        - the zip export API
+        - to pass `Orbeon-Created-Existing` in `PUT` and `DELETE` requests
 - `Orbeon-Last-Modified`
     - millisecond-resolution ISO format date/time with the data's last modification date
     - for example: `2024-07-17T21:52:11.611Z`
+    - this is used by
+        - the zip export API
+        - the purge API
 - `Content-Type`
     - `application/xml` for form data and form definitions, optional otherwise 
 - `Content-Range`
@@ -285,7 +291,7 @@ HTTP response headers for `PUT` and `DELETE` requests:
 
 TODO
 
-## Configuring a custom persistence provider
+## Custom persistence provider setup
 
 First, configure `properties-local.xml`, for example:
 
@@ -318,22 +324,22 @@ In addition, you must configure the following properties to describe what your p
 
 ```xml
 <!-- Whether provider support versioning -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.versioning"                               value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.acme.versioning" value="false"/>
 
 <!-- Whether provider support the lease feature -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.lease"                                    value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.acme.lease"      value="false"/>
 
 <!-- Whether provider support reindexing -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.reindex"                                  value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.acme.reindex"    value="false"/>
 
 <!-- Whether provider support re-encryption -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.reencrypt"                                value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.acme.reencrypt"  value="false"/>
 
 <!-- Whether provider support distinct values -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.distinct"                                 value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.acme.distinct"   value="false"/>
 
 <!-- Whether provider support sorting -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.sort"                                     value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.acme.sort"       value="false"/>
 ```
 
 [//]: # (### xxx)
