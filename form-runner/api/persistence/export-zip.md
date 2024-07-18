@@ -1,4 +1,4 @@
-# Zip export API
+# Zip Export API
 
 ## Service endpoint
 
@@ -10,7 +10,7 @@ HTTP `GET` to the following path:
 
 ## Purpose
 
-The Zip export API is used to export a form definition and its data in a single ZIP file. This is internally used by the [Forms Admin page](/form-runner/feature/forms-admin-page.md) to export a form definition and its data.
+The Zip Export API is used to export a form definition and its data in a single ZIP file. This is internally used by the [Forms Admin page](/form-runner/feature/forms-admin-page.md) to export a form definition and its data.
 
 ## API
 
@@ -143,5 +143,5 @@ The response contains a ZIP file binary. The structure is documented [here](/for
 ## See also
 
 - [Form definitions and form data batch export](/form-runner/feature/exporting-form-definitions-and-form-data.md)
-- [Revision history API](/form-runner/api/persistence/revision-history.md)
+- [Revision History API](/form-runner/api/persistence/revision-history.md)
 - [Blog post: Exporting form definitions and data](https://www.orbeon.com/2024/04/form-data-export)

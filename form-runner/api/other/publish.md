@@ -41,8 +41,8 @@ If the form definition is provided in the request:
 
 If the form definition is NOT provided in the request:
 
-- URL: `/fr/service/orbeon/builder/publish/$document-id`
-    - `$document-id`: Form Builder document id for retrieval of attachments
+- URL: `/fr/service/orbeon/builder/publish/$document`
+    - `$document`: Form Builder document id for retrieval of attachments
 - Method: `POST`
 - Request body: empty
 

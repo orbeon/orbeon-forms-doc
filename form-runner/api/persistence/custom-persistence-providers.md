@@ -7,9 +7,9 @@ This page describes how to implement a custom persistence implementation (also k
 A persistence provider is responsible for storing and retrieving form definitions and form data, typically in a database. It also implements APIs such as search or revision history. Here is the list of core APIs:
 
 - [CRUD API](crud.md)
-- [Form metadata API](forms-metadata.md)
+- [Form Metadata API](forms-metadata.md)
 - [Search API](search.md)
-- [Revision history API](revision-history.md)
+- [Revision History API](revision-history.md)
 
 [//]: # (- xxx [Lease API]&#40;lease.md&#41;)
 
@@ -69,9 +69,15 @@ A persistence provider implementation can be local to Form Runner, or it can be 
 
 ### CRUD
 
-"CRUD" stands for "Create, Read, Update, Delete". A persistence provider should implement the CRUD API. This API is used by Form Runner and Form Builder to store, retrieve, and optionally delete form definitions and form data.
+#### Overview
 
-The following HTTP methods must be supported:
+The [CRUD API](crud.md) is used to store, retrieve, and optionally delete form definitions and form data.
+
+"CRUD" stands for "Create, Read, Update, Delete". A persistence provider should implement the CRUD API. 
+
+#### HTTP methods
+
+The following HTTP methods are used and must be supported:
 
 - `GET`: retrieve a resource
 - `PUT`: create or update a resource
@@ -81,15 +87,15 @@ The following HTTP methods must be supported:
     - the implementation can be optimized to avoid reading the resource's content, but otherwise is identical to a `GET` request
     - the persistence proxy *will* issue `HEAD` requests, so the implementation must support it
 
-Endpoints:
+#### Endpoints
 
-- for a form definition: `/fr/service/persistence/crud/$app/$form/form/form.xhtml`
+- for a form definition: `/fr/service/$provider/crud/$app/$form/form/form.xhtml`
 - for form definition attachments: TODO
-- for form data: `/fr/service/persistence/crud/$app/$form/data/$document/data.xml`
+- for form data: `/fr/service/$provider/crud/$app/$form/data/$document/data.xml`
 - for form data attachments: TODO
 - TODO: drafts
 
-URL parameters:
+#### URL parameters
 
 - `force-delete`
     - for `DELETE` or `HEAD` only
@@ -101,7 +107,7 @@ URL parameters:
     - this is used by the Zip Export API, the Purge API, and the Revision History API 
     - TODO 
 
-HTTP request headers:
+#### HTTP request headers
 
 - `Orbeon-Username`
     - for example: `hsimpson`
@@ -186,7 +192,7 @@ HTTP request headers:
 - `Orbeon-Credentials`: `{"username":"hsimpson","groups":[],"roles":[],"organizations":[]}`
     - TODO
 
-HTTP request body:
+#### HTTP request body
 
 - for `GET`, `HEAD`, and `DELETE` requests, the body is empty
 - for `PUT`, the body contains the resource to store
@@ -195,7 +201,7 @@ HTTP request body:
     - for form data attachments, this is the binary attachment
     - for form definition attachments, this is the binary attachment
 
-HTTP response body:
+#### HTTP response body
 
 - for `HEAD`, `DELETE` and `PUT` requests, the body is empty
 - for `GET` requests, the body contains the resource to return
@@ -205,7 +211,7 @@ HTTP response body:
     - for form definition attachments, this is the binary attachment
 - TODO: ranges
 
-HTTP response codes:
+#### HTTP response codes
 
 - `200`: success
 - `500`: internal server error
@@ -215,6 +221,8 @@ HTTP response codes:
 - `410`: gone
     - for `GET` or `HEAD` requests, if we know that the resource used to exist but has been deleted
     - but for `HEAD` with `force-delete=true`, this is not returned, instead, the deleted resource metadata is returned
+
+#### HTTP response headers
 
 HTTP response headers for `GET` and `HEAD` requests:
 
@@ -287,7 +295,150 @@ HTTP response headers for `PUT` and `DELETE` requests:
         - the request is for deleting a draft
         - or if it is for force-deleting a resource
 
-### Form metadata API
+### Form Metadata API
+
+#### Overview
+
+The [Form Metadata API](forms-metadata.md) is used to retrieve the list of *published* forms as well as associated metadata, including published versions, form titles, and permissions. There are some internal uses of this API, therefore a persistence provider should implement it. 
+
+The persistence proxy calls this API to retrieve metadata about a specific form, including permissions, either for the latest version or for all versions. This matches the following endpoints with parameters:
+
+- `/fr/service/$provider/form/$app/$form?all-versions=true&all-forms=true`
+- `/fr/service/$provider/form/$app/$form?all-versions=false&all-forms=true`
+
+In addition to this internal persistence proxy use, as mentioned in [Form Metadata API](forms-metadata.md), other internal uses also call this API to list all published forms.
+
+#### HTTP methods
+
+- `GET` only
+- `HEAD` support is not required
+
+#### Endpoints
+
+The following endpoints are used:
+
+- `/fr/service/$provider/form`: list all published forms
+- `/fr/service/$provider/form/$app`: same, but restrict by the given app name
+- `/fr/service/$provider/form/$app/$form`: same, but restrict by the given app and form name
+
+#### URL parameters
+
+- `all-versions`:
+    - `true`
+        - the response must include all published form definition versions
+    - omitted or set to `false`
+        - the response must include only the published form definition with the highest version number 
+- `modified-since`
+    - ISO date/time
+    - this can be missing
+    - if present, only form definitions which have been modified since the given date/time must be returned
+
+_NOTE: The `all-forms` parameter is handled by the persistence proxy._
+
+#### HTTP request headers
+
+- `Orbeon-Datasource`
+    - JDBC datasource identifier
+    - this is used for the built-in relational providers
+    - default values: `mysql`, `postgresql`, `oracle`, `sqlserver`, `db2`, `sqlite`
+    - typically a custom value is set by the administrator in `properties-local.xml`
+    - a custom provider can use this to determine which datasource to use if needed, but it can also ignore it if datasources are not relevant to the particular implementation
+
+#### HTTP request body
+
+The body is empty.
+
+#### HTTP response body
+
+The response body is an XML document with the list of published forms and associated metadata.
+
+The document returned by this API looks like this:
+
+```xml
+<forms>
+    <form>
+        <application-name>orbeon</application-name>
+        <form-name>bookshelf</form-name>
+        <last-modified-time>2014-06-04T11:21:33.043-07:00</last-modified-time>
+        <form-version>1</form-version>
+        <title xml:lang="en">Orbeon Forms Bookshelf</title>
+        <title xml:lang="fr">Orbeon Forms Bookshelf</title>
+    </form>
+    <form>
+        <application-name>orbeon</application-name>
+        <form-name>w9</form-name>
+        <last-modified-time>2014-06-04T11:21:34.051-07:00</last-modified-time>
+        <form-version>3</form-version>
+        <title xml:lang="en">Request for Taxpayer Identification Number and Certification</title>
+    </form>
+    <form>
+        <application-name>acme</application-name>
+        <form-name>order</form-name>
+        <last-modified-time>2014-08-21T16:52:24.429-07:00</last-modified-time>
+        <form-version>2</form-version>
+        <title xml:lang="en">ACME Order Form</title>
+        <title xml:lang="fr">Formulaire de commande ACME</title>
+        <permissions>
+            <permission operations="delete">
+                <group-member/>
+            </permission>
+            <permission operations="delete">
+                <owner/>
+            </permission>
+            <permission operations="create read update"/>
+        </permissions>
+    </form>
+</forms>
+```
+
+_NOTE: The `operations` attribute on the `<form>` elements is *not* added by the persistence provider: the persistence proxy takes care of adding that attribute._
+
+#### HTTP response codes
+
+- `200`: success
+- `500`: internal server error
+- `400`: bad request
+
+#### HTTP response headers
+
+- `Content-Type`
+    - `application/xml` 
+
+### Search API
+
+#### HTTP methods
+
+TODO
+
+#### Endpoints
+
+TODO 
+
+#### URL parameters
+
+TODO
+
+#### HTTP request headers
+
+TODO
+
+#### HTTP request body
+
+TODO
+
+#### HTTP response body
+
+TODO
+
+#### HTTP response codes
+
+TODO
+
+#### HTTP response headers
+
+TODO
+
+## Scenarios
 
 TODO
 
@@ -398,9 +549,9 @@ In addition, you must configure the following properties to describe what your p
 ## See also
 
 - [CRUD API](crud.md)
-- [Form metadata API](forms-metadata.md)
+- [Form Metadata API](forms-metadata.md)
 - [Search API](search.md)
-- [Revision history API](revision-history.md)
+- [Revision History API](revision-history.md)
 - [Lease API](lease.md)
 - [Reindexing API](reindexing.md)
 - [Caching](caching.md)

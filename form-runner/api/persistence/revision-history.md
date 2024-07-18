@@ -1,4 +1,4 @@
-# Revision history API
+# Revision History API
 
 ## Availability
 
@@ -9,12 +9,12 @@
 HTTP `GET` to the following path:
 
 ```
-/fr/service/persistence/history/$app/$forms/$document-id
+/fr/service/persistence/history/$app/$forms/$document
 ```
 
 ## Purpose
 
-The revision history API is used to retrieve the revision history of a form data document.
+The Revision History API is used to retrieve the revision history of a form data document.
 
 ## API
 
@@ -120,4 +120,4 @@ The following elements and attributes are returned:
 ## See also
 
 - [Revision history](/form-runner/feature/revision-history.md)
-- [Zip export API](/form-runner/api/persistence/export-zip.md)
+- [Zip Export API](/form-runner/api/persistence/export-zip.md)

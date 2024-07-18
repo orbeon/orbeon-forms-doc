@@ -32,6 +32,6 @@ At the moment, once the "Purge" button has been clicked, the dialog will be clos
 - [Summary page Excel Export](summary-page-export.md)
 - [Excel and XML import](excel-xml-import.md)
 - [Forms Admin page](forms-admin-page.md)
-- [Zip export API](/form-runner/api/persistence/export-zip.md)
-- [Revision history API](/form-runner/api/persistence/revision-history.md)
+- [Zip Export API](/form-runner/api/persistence/export-zip.md)
+- [Revision History API](/form-runner/api/persistence/revision-history.md)
 - [Blog post: Exporting form definitions and data](https://www.orbeon.com/2024/04/form-data-export)

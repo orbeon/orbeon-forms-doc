@@ -10,7 +10,14 @@ HTTP `GET` to the following path:
 
 ## Purpose
 
-This is the API used, in particular, by the [Published Forms page](/form-runner/feature/published-forms-page.md), accessible to users on `/fr/forms`. The Published Forms page lists all the *published* forms the user has access to, and for each one it provides a link to create a new instance of that form, and to the summary page for that form. Either one of those links might be missing, depending on the [user's permissions](/form-runner/access-control/README.md).
+This API is used to obtain the list of published forms as well as associated metadata, including published versions, form titles, and permissions.
+
+In particular, this API is used internally by:
+
+- the [Published Forms page](/form-runner/feature/published-forms-page.md)
+- the [Forms Admin page](/form-runner/feature/forms-admin-page.md)
+- the [Zip Export API](/form-runner/api/persistence/export-zip.md)
+- the [persistence proxy](custom-persistence-providers.md), to obtain a given form's permissions and versions
 
 ## API
 
@@ -24,7 +31,7 @@ You get the list of all the published forms with a `GET` on:
 /fr/service/persistence/form
 ```
 
-This, in turn, calls the corresponding API for each persistence API implementation defined in the properties as [*active*](../../../configuration/properties/persistence.md#property_active), since different forms can be published on different persistence implementations. For example, this might call MySQL implementation doing a `GET` on:
+This, in turn, calls the corresponding API for each persistence API implementation defined in the properties as [*active*](/configuration/properties/persistence.md#property_active), since different forms can be published on different persistence implementations. For example, this might call MySQL implementation doing a `GET` on:
  
     /fr/service/mysql/form
     
@@ -32,7 +39,7 @@ Then it might call the eXist implementation with another `GET` on:
  
     /fr/service/exist/form
     
-Finally it aggregates the results returned by each implementation.
+Finally, it aggregates the results returned by each implementation.
 
 #### Restricting by app/form name
 
@@ -41,9 +48,9 @@ Finally it aggregates the results returned by each implementation.
 Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about published forms in that specific app, or that specific app and form is returned.
 
 * When an app specified, the URL looks like:  
-  `/fr/service/persistence/form/[APP_NAME]`
+  `/fr/service/persistence/form/$app`
 * When both an app and form name are specified, the URL looks like:  
-  `/fr/service/persistence/form/[APP_NAME]/[FORM_NAME]`
+  `/fr/service/persistence/form/$app/$form`
   
 #### Returning all form definition versions
   
@@ -80,7 +87,7 @@ Optionally, you can pass the URL parameter `all-forms`:
 Optionally, you can pass the URL parameter `modified-since`:
 
 - this must be an ISO date/time
-- when passed, only form definitions which have been modified since the given date are returned
+- when passed, only form definitions which have been modified since the given date/time are returned
 
 For example:
 

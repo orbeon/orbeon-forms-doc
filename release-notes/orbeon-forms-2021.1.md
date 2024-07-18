@@ -241,7 +241,7 @@ In addition, the [`fr:control-string-value()`](/xforms/xpath/extension-form-runn
 
 ### API improvements
 
-The [Form metadata API](form-runner/api/persistence/forms-metadata.md) now has the ability to filter by `modified-since` date.
+The [Form Metadata API](form-runner/api/persistence/forms-metadata.md) now has the ability to filter by `modified-since` date.
 
 The [Run form in the background API](/form-runner/api/other/run-form-background.md) supports the following new parameters:
 

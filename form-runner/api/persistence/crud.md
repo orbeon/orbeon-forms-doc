@@ -359,7 +359,7 @@ __WARNING: This feature is not supported when using relational databases.__
 To remove all instances of form data, issue a `DELETE` to:
 
 ```
-/crud/[APPLICATION_NAME]/[FORM_NAME]/data/
+/crud/$app/$form/data/
 ```
 
 ## See also

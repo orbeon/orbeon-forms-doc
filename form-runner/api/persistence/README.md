@@ -10,8 +10,8 @@
 - [Versioning](versioning.md)
 - [Lease API](lease.md)
 - [Reindexing API](reindexing.md)
-- [Revision history API](revision-history.md)
-- [Zip export API](export-zip.md)
+- [Revision History API](revision-history.md)
+- [Zip Export API](export-zip.md)
 - [Custom persistence providers](custom-persistence-providers.md)
 
 ## Introduction
