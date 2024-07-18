@@ -266,8 +266,8 @@ HTTP response headers for `GET` and `HEAD` requests:
     - millisecond-resolution ISO format date/time with the data's last modification date
     - for example: `2024-07-17T21:52:11.611Z`
     - this is used by
-        - the zip export API
-        - the purge API
+        - the Zip Export API
+        - the Purge API
 - `Content-Type`
     - `application/xml` for form data and form definitions, optional otherwise 
 - `Content-Range`
@@ -451,39 +451,54 @@ TODO
 
 #### Overview
 
-TODO
+The Revision History API is used to retrieve the revision history of a form data document. It is used internally by:
+
+- the [Revision history feature](/form-runner/feature/revision-history.md)
+- the [Zip Export API](export-zip.md)
+- the Purge API
 
 #### HTTP methods
 
-TODO
+- `GET` only
+- `HEAD` support is not required
 
 #### Endpoints
 
-TODO 
+The following endpoint is used:
+
+- `/fr/service/$provider/history/$app/$forms/$document`
 
 #### URL parameters
 
-TODO
+See [Revision History API](revision-history.md#parameters).
 
 #### HTTP request headers
 
-TODO
+- `Orbeon-Datasource`
+    - JDBC datasource identifier
+    - this is used for the built-in relational providers
+    - default values: `mysql`, `postgresql`, `oracle`, `sqlserver`, `db2`, `sqlite`
+    - typically a custom value is set by the administrator in `properties-local.xml`
+    - a custom provider can use this to determine which datasource to use if needed, but it can also ignore it if datasources are not relevant to the particular implementation
 
 #### HTTP request body
 
-TODO
+The body is empty.
 
 #### HTTP response body
 
-TODO
+See [Revision History API](revision-history.md#response).
 
 #### HTTP response codes
 
-TODO
+- `200`: success
+- `500`: internal server error
+- `400`: bad request
 
 #### HTTP response headers
 
-TODO
+- `Content-Type`
+    - `application/xml` 
 
 ## Scenarios
 

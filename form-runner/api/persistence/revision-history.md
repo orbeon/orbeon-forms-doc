@@ -24,11 +24,11 @@ The Revision History API is used to retrieve the revision history of a form data
 
 The endpoint path requires values for the following path elements:
 
-| Path element  | Description | Mandatory |
-|---------------|-------------|-----------|
-| `app`         | app name    | Yes       |
-| `form`        | form name   | Yes       |
-| `document-id` | document id | Yes       |
+| Path element | Description | Mandatory |
+|--------------|-------------|-----------|
+| `app`        | app name    | Yes       |
+| `form`       | form name   | Yes       |
+| `document`   | document id | Yes       |
 
 These specify the specific form data document for which to retrieve the revision history.
 
