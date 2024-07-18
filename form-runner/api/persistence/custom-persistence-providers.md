@@ -475,22 +475,22 @@ In addition, you must configure the following properties to describe what your p
 
 ```xml
 <!-- Whether provider support versioning -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.versioning" value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.versioning" value="false"/>
 
 <!-- Whether provider support the lease feature -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.lease"      value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.lease"      value="false"/>
 
 <!-- Whether provider support reindexing -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.reindex"    value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.reindex"    value="false"/>
 
 <!-- Whether provider support re-encryption -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.reencrypt"  value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.reencrypt"  value="false"/>
 
 <!-- Whether provider support distinct values -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.distinct"   value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.distinct"   value="false"/>
 
 <!-- Whether provider support sorting -->
-<property as="xs:boolean" name="oxf.fr.persistence.acme.sort"       value="false"/>
+<property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.sort"       value="false"/>
 ```
 
 [//]: # (### xxx)
