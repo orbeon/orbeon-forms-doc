@@ -160,15 +160,6 @@ The document returned by this API looks like this:
         <form-name>order</form-name>
         <title xml:lang="en">ACME Order Form</title>
         <title xml:lang="fr">Formulaire de commande ACME</title>
-        <permissions>
-            <permission operations="delete">
-                <group-member/>
-            </permission>
-            <permission operations="delete">
-                <owner/>
-            </permission>
-            <permission operations="create read update"/>
-        </permissions>
         <last-modified-time>2014-08-21T16:52:24.429-07:00</last-modified-time>
         <form-version>2</form-version>
     </form>

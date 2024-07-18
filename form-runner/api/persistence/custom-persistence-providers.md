@@ -397,8 +397,6 @@ The document returned by this API looks like this:
 </forms>
 ```
 
-_NOTE: The `operations` attribute on the `<form>` elements is *not* added by the persistence provider: the persistence proxy takes care of adding that attribute._
-
 The following elements and attributes are straightforward to include:
 
 - `<application-name>`
@@ -422,7 +420,9 @@ The built-in relational provider handles this as follows:
     - `<available>`
 - the result is stored in the database alongside the form definition's XHTML content, for faster later retrieval by Form Metadata API calls
 
-Custom persistence providers may choose a different approach, such as extracting the metadata from form definitions on demand, but the result must be the same.
+Custom persistence providers may choose a different approach, such as extracting the metadata from form definitions on demand, but the result must be the same. If you want to support permissions for deployed forms, it is particularly important to include the form definition's `<permissions>` element in the response.
+
+_NOTE: The `operations` attribute on the `<form>` elements is *not* added by the persistence provider: the persistence proxy takes care of adding that attribute._
 
 #### HTTP response codes
 
