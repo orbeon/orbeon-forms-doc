@@ -96,10 +96,10 @@ The following HTTP methods are used and must be supported:
 
 #### Endpoints
 
-- for a form definition: `/fr/service/$provider/crud/$app/$form/form/form.xhtml`
-- for form definition attachments: `/fr/service/$provider/crud/$app/$form/form/$filename`
-- for form data: `/fr/service/$provider/crud/$app/$form/data/$document/data.xml`
-- for form data attachments: `/fr/service/$provider/crud/$app/$form/data/$document/$filename`
+- for a form definition: `/crud/$app/$form/form/form.xhtml`
+- for form definition attachments: `/crud/$app/$form/form/$filename`
+- for form data: `/crud/$app/$form/data/$document/data.xml`
+- for form data attachments: `/crud/$app/$form/data/$document/$filename`
 - TODO: drafts
 
 #### URL parameters
@@ -311,8 +311,8 @@ The [Form Metadata API](forms-metadata.md) is used to retrieve the list of *publ
 
 The persistence proxy calls this API to retrieve metadata about a specific form, including permissions, either for the latest version or for all versions. This matches the following endpoints with parameters:
 
-- `/fr/service/$provider/form/$app/$form?all-versions=true&all-forms=true`
-- `/fr/service/$provider/form/$app/$form?all-versions=false&all-forms=true`
+- `/form/$app/$form?all-versions=true&all-forms=true`
+- `/form/$app/$form?all-versions=false&all-forms=true`
 
 In addition to this internal persistence proxy use, as mentioned in [Form Metadata API](forms-metadata.md), other internal uses also call this API to list all published forms.
 
@@ -325,9 +325,9 @@ In addition to this internal persistence proxy use, as mentioned in [Form Metada
 
 The following endpoints are used:
 
-- `/fr/service/$provider/form`: list all published forms
-- `/fr/service/$provider/form/$app`: same, but restrict by the given app name
-- `/fr/service/$provider/form/$app/$form`: same, but restrict by the given app and form name
+- `/form`: list all published forms
+- `/form/$app`: same, but restrict by the given app name
+- `/form/$app/$form`: same, but restrict by the given app and form name
 
 #### URL parameters
 
@@ -454,7 +454,7 @@ The Search API is used to search for form data documents. It is used internally 
 
 The following endpoint is used:
 
-- `/fr/service/$provider/search/$app/$form`
+- `/search/$app/$form`
 
 #### URL parameters
 
@@ -513,7 +513,7 @@ The Revision History API is used to retrieve the revision history of a form data
 
 The following endpoint is used:
 
-- `/fr/service/$provider/history/$app/$forms/$document`
+- `/history/$app/$forms/$document`
 
 #### URL parameters
 
