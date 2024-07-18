@@ -19,7 +19,7 @@ Where:
 - `$document` is the form data's document id
 - `$filename` is the data or attachment's filename
     - data: always `data.xml`
-    - attachment: a random id followed by the `.bin` extension, for example `26abcf492f64db9808f2b13847e0cf8b.bin`
+    - attachment: a random id followed by the `.bin` extension, for example `2a3bd8bb935c54280948a5874c47e2994359d01b.bin`
 
 ## Basics
 

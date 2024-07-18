@@ -38,13 +38,15 @@ SINCE Orbeon Forms 2023.1, the persistence proxy is also responsible for most of
 - versioning
 - permission checks
 
+This makes it easier to implement a persistence provider, as the more complex logic is handled by the persistence proxy.
+
 A persistence provider implementation can be local to Form Runner, or it can be remote and accessed via HTTP service call. The default relational provider is local to Form Runner and the persistence proxy calls it by using internal calls. A custom persistence provider will typically be remote and accessed via service calls.
 
 ### Built-in persistence providers
 
 Orbeon Forms ships (or shipped) with the following built-in persistence providers:
 
-- Relational
+- Relational databases
     - This is the default provider, or rather an implementation that supports a series of providers, one for each of the following databases:
         - `postgresql`: PostgreSQL
         - `mysql`: MySQL
@@ -53,7 +55,7 @@ Orbeon Forms ships (or shipped) with the following built-in persistence provider
         - `db2`: DB2
         - `sqlite`: SQLite
 - eXist XML database
-    - Support for eXist is deprecated since Orbeon Forms 2019.1 and removed with Orbeon Forms 2023.1. Therefore, this provider will not be discussed further in this document.
+    - Support for eXist is deprecated since Orbeon Forms 2019.1 and removed with Orbeon Forms 2023.1. Therefore, this provider is not discussed further in this document.
 
 ### Custom persistence providers
 
@@ -95,9 +97,9 @@ The following HTTP methods are used and must be supported:
 #### Endpoints
 
 - for a form definition: `/fr/service/$provider/crud/$app/$form/form/form.xhtml`
-- for form definition attachments: TODO
+- for form definition attachments: `/fr/service/$provider/crud/$app/$form/form/$filename`
 - for form data: `/fr/service/$provider/crud/$app/$form/data/$document/data.xml`
-- for form data attachments: TODO
+- for form data attachments: `/fr/service/$provider/crud/$app/$form/data/$document/$filename`
 - TODO: drafts
 
 #### URL parameters
@@ -439,15 +441,20 @@ _NOTE: The `operations` attribute on the `<form>` elements is *not* added by the
 
 #### Overview
 
-TODO
+The Search API is used to search for form data documents. It is used internally by:
+
+- the [Form Runner Summary page](/form-runner/feature/summary-page.md)
+- the [Form Builder Summary page](/form-builder/summary-page.md)
 
 #### HTTP methods
 
-TODO
+- `POST` only
 
 #### Endpoints
 
-TODO 
+The following endpoint is used:
+
+- `/fr/service/$provider/search/$app/$form`
 
 #### URL parameters
 
@@ -455,23 +462,37 @@ TODO
 
 #### HTTP request headers
 
-TODO
+- `Content-Type`
+    - `application/xml`
+- `Orbeon-Datasource`
+    - JDBC datasource identifier
+    - this is used for the built-in relational providers
+    - default values: `mysql`, `postgresql`, `oracle`, `sqlserver`, `db2`, `sqlite`
+    - typically a custom value is set by the administrator in `properties-local.xml`
+    - a custom provider can use this to determine which datasource to use if needed, but it can also ignore it if datasources are not relevant to the particular implementation
+- `Orbeon-Form-Definition-Version`
+    - `all`: 
+    - positive integer
+    - missing: TODO
 
 #### HTTP request body
 
-TODO
+See [Search API](search.md).
 
 #### HTTP response body
 
-TODO
+See [Search API](search.md).
 
 #### HTTP response codes
 
-TODO
+- `200`: success
+- `500`: internal server error
+- `400`: bad request
 
 #### HTTP response headers
 
-TODO
+- `Content-Type`
+    - `application/xml`
 
 ### Revision History API
 
@@ -580,8 +601,6 @@ In addition, you must configure the following properties to describe what your p
 <!-- Whether the provider supports sorting -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.sort"       value="false"/>
 ```
-
-TODO: drafts
 
 ## See also
 
