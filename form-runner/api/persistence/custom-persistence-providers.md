@@ -16,33 +16,9 @@ A persistence provider is responsible for storing and retrieving form definition
 
 [//]: # (- xxx [Caching]&#40;caching.md&#41;)
 
-## Built-in persistence providers
-
-Orbeon Forms ships (or shipped) with the following built-in persistence providers:
-
-- Relational
-    - This is the default provider, or rather an implementation that supports a series of providers, one for each of the following databases:
-        - `postgresql`: PostgreSQL
-        - `mysql`: MySQL
-        - `oracle`: Oracle
-        - `sqlserver`: SQL Server
-        - `db2`: DB2
-        - `sqlite`: SQLite
-- eXist XML database
-    - Support for eXist is deprecated since Orbeon Forms 2019.1 and removed with Orbeon Forms 2023.1. Therefore, this provider will not be discussed further in this document.
-
-## Custom persistence providers
-
-Before Orbeon Forms 2023.1, it was already possible to implement your own persistence implementation. However, it was difficult to implement some features, including:
-
-- versioning
-- permission checks
-
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
-
-Since this version, there is a documented API between Form Runner and the persistence provider that simplifies handling these features in a custom persistence provider. This API is documented below.
-
 ## Architecture
+
+### Overview
 
 Form Runner internally includes a *persistence proxy*, which exposes API endpoints for Form Runner, Form Builder, and external callers.
 
@@ -63,6 +39,32 @@ SINCE Orbeon Forms 2023.1, the persistence proxy is also responsible for most of
 - permission checks
 
 A persistence provider implementation can be local to Form Runner, or it can be remote and accessed via HTTP service call. The default relational provider is local to Form Runner and the persistence proxy calls it by using internal calls. A custom persistence provider will typically be remote and accessed via service calls.
+
+### Built-in persistence providers
+
+Orbeon Forms ships (or shipped) with the following built-in persistence providers:
+
+- Relational
+    - This is the default provider, or rather an implementation that supports a series of providers, one for each of the following databases:
+        - `postgresql`: PostgreSQL
+        - `mysql`: MySQL
+        - `oracle`: Oracle
+        - `sqlserver`: SQL Server
+        - `db2`: DB2
+        - `sqlite`: SQLite
+- eXist XML database
+    - Support for eXist is deprecated since Orbeon Forms 2019.1 and removed with Orbeon Forms 2023.1. Therefore, this provider will not be discussed further in this document.
+
+### Custom persistence providers
+
+Before Orbeon Forms 2023.1, it was already possible to implement your own persistence implementation. However, it was difficult to implement some features, including:
+
+- versioning
+- permission checks
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+Since this version, there is a documented API between Form Runner and the persistence provider that simplifies handling these features in a custom persistence provider. This API is documented below.
 
 ##  Persistence provider protocol
 
