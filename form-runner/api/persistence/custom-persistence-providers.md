@@ -399,6 +399,31 @@ The document returned by this API looks like this:
 
 _NOTE: The `operations` attribute on the `<form>` elements is *not* added by the persistence provider: the persistence proxy takes care of adding that attribute._
 
+The following elements and attributes are straightforward to include:
+
+- `<application-name>`
+- `<form-name>`
+- `<last-modified-time>`
+- `<form-version>`
+
+Other elements and their content come from the form definition's metadata:
+
+- `<title>`
+- `<permissions>`
+- `<available>`
+
+The built-in relational provider handles this as follows:
+
+- when a form definition is published (`PUT` of `form.xhtml`), the content of the XHTML document is parsed and the following element is identified
+    - `/xh:html/xh:head/xf:model[@id = 'fr-form-model']/xf:instance[@id = 'fr-form-metadata']/metadata`
+- the children elements with the following names are extracted from under that `<metadata>` element:
+    - `<title>`
+    - `<permissions>`
+    - `<available>`
+- the result is stored in the database alongside the form definition's XHTML content, for faster later retrieval by Form Metadata API calls
+
+Custom persistence providers may choose a different approach, such as extracting the metadata from form definitions on demand, but the result must be the same.
+
 #### HTTP response codes
 
 - `200`: success
@@ -555,6 +580,8 @@ In addition, you must configure the following properties to describe what your p
 <!-- Whether provider support sorting -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.sort"       value="false"/>
 ```
+
+TODO: drafts
 
 ## See also
 
