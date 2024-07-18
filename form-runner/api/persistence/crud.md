@@ -2,18 +2,24 @@
 
 ## Service endpoint
 
-| Operation | HTTP Method | URL                                                                                       |
-|-----------|-------------|-------------------------------------------------------------------------------------------|
-| Create    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
-| Read      | `GET`/`HEAD`| <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
-| Update    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
-| Delete    | `DELETE`    | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
+| Operation | HTTP Method  | URL                                                                          |
+|-----------|--------------|------------------------------------------------------------------------------|
+| Create    | `PUT`        | `/fr/service/persistence/crud/$app/$form/$data-or-draft/$document/$filename` |
+| Read      | `GET`/`HEAD` | `/fr/service/persistence/crud/$app/$form/$data-or-draft/$document/$filename` |
+| Update    | `PUT`        | `/fr/service/persistence/crud/$app/$form/$data-or-draft/$document/$filename` |
+| Delete    | `DELETE`     | `/fr/service/persistence/crud/$app/$form/$data-or-draft/$document/$filename` |
 
 Where:
 
 - `$app` is the form definition's application name
 - `$form` is the form definition's form name
+- `$data-or-draft`
+    - for data: `data`
+    - for draft: `draft`
 - `$document` is the form data's document id
+- `$filename` is the data or attachment's filename
+    - data: always `data.xml`
+    - attachment: a random id followed by the `.bin` extension, for example `26abcf492f64db9808f2b13847e0cf8b.bin`
 
 ## Basics
 
@@ -162,7 +168,7 @@ The following examples use the [curl](https://curl.haxx.se/) command-line utilit
 The service must be open for these examples to work.
 See [Authorization of pages and services](../../../xml-platform/controller/authorization-of-pages-and-services.md).
 
-The general format of the a path to access form data is:
+The general format of a path to access form data is:
 
 ```
 /fr/service/persistence/crud/$app/$form/(data|draft)/$doc/data.xml
