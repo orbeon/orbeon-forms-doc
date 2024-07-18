@@ -179,6 +179,7 @@ The following HTTP methods are used and must be supported:
     - `Orbeon-Lease`
         - `true` or `false`
         - whether the provider supports the lease feature
+        - see also the [Lease API](lease.md) 
     - `Orbeon-Reindex`
         - `true` or `false`
         - whether the provider supports reindexing

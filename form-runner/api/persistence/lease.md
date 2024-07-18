@@ -1,6 +1,10 @@
 # Lease API
 
+## Availability
+
 [SINCE Orbeon Forms 2017.2]
+
+## Overview
 
 This page describes what you'll want to do to support the lease feature in your own implementation of the persistence API. If instead you'd like to *use* that feature, see the documentation on the [lease feature](/form-runner/feature/lease.md).
 
@@ -18,6 +22,8 @@ This page describes what you'll want to do to support the lease feature in your 
 If your implementation advertises itself as supporting the lease feature, it must implement two additional methods, `LOCK` and `UNLOCK`, as described below. `LOCK` and `UNLOCK` are seen as an extension of the CRUD operations, so are issued to `/crud/$app/$form/data/$document/data.xml`.
 
 ## The LOCK method
+
+### Overview
 
 Before assigning a lease for a document to a user, Form Runner issues a `LOCK` for that document.
 
