@@ -562,22 +562,22 @@ _NOTE: You cannot name a provider `provider`._
 In addition, you must configure the following properties to describe what your provider supports:
 
 ```xml
-<!-- Whether provider support versioning -->
+<!-- Whether the provider supports versioning -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.versioning" value="false"/>
 
-<!-- Whether provider support the lease feature -->
+<!-- Whether the provider supports the lease feature -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.lease"      value="false"/>
 
-<!-- Whether provider support reindexing -->
+<!-- Whether the provider supports reindexing -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.reindex"    value="false"/>
 
-<!-- Whether provider support re-encryption -->
+<!-- Whether the provider supports re-encryption -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.reencrypt"  value="false"/>
 
-<!-- Whether provider support distinct values -->
+<!-- Whether the provider supports distinct values -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.distinct"   value="false"/>
 
-<!-- Whether provider support sorting -->
+<!-- Whether the provider supports sorting -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.sort"       value="false"/>
 ```
 
