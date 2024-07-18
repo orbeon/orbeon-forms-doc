@@ -86,6 +86,10 @@ The following HTTP methods are used and must be supported:
     - this returns the same HTTP headers and status code as a `GET` request, but no response body
     - the implementation can be optimized to avoid reading the resource's content, but otherwise is identical to a `GET` request
     - the persistence proxy *will* issue `HEAD` requests, so the implementation must support it
+- `LOCK`
+    - see the [Lease API](lease.md)
+- `UNLOCK`
+    - see the [Lease API](lease.md)
 
 #### Endpoints
 
