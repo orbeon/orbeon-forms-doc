@@ -10,8 +10,7 @@ A persistence provider is responsible for storing and retrieving form definition
 - [Form Metadata API](forms-metadata.md)
 - [Search API](search.md)
 - [Revision History API](revision-history.md)
-
-[//]: # (- xxx [Lease API]&#40;lease.md&#41;)
+- [Lease API](lease.md)
 
 [//]: # (- xxx [Reindexing API]&#40;reindexing.md&#41;)
 
@@ -45,9 +44,9 @@ Since this version, there is a documented API between Form Runner and the persis
 
 ## Architecture
 
-Form Runner internally includes a *persistence proxy*, which exposes API endpoints for Form Runner, Form Builder, and external callers, as documented in other pages.
+Form Runner internally includes a *persistence proxy*, which exposes API endpoints for Form Runner, Form Builder, and external callers.
 
-TODO
+![Persistence architecture](../../images/architecture-persistence.png)
 
 The proxy acts as an intermediary between public APIs and persistence providers. Persistence providers are never called directly by any software except the persistence proxy. 
 
