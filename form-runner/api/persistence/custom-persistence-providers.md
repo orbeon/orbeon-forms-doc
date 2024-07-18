@@ -406,6 +406,48 @@ _NOTE: The `operations` attribute on the `<form>` elements is *not* added by the
 
 ### Search API
 
+#### Overview
+
+TODO
+
+#### HTTP methods
+
+TODO
+
+#### Endpoints
+
+TODO 
+
+#### URL parameters
+
+TODO
+
+#### HTTP request headers
+
+TODO
+
+#### HTTP request body
+
+TODO
+
+#### HTTP response body
+
+TODO
+
+#### HTTP response codes
+
+TODO
+
+#### HTTP response headers
+
+TODO
+
+### Revision History API
+
+#### Overview
+
+TODO
+
 #### HTTP methods
 
 TODO
@@ -492,59 +534,6 @@ In addition, you must configure the following properties to describe what your p
 <!-- Whether provider support sorting -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.sort"       value="false"/>
 ```
-
-[//]: # (### xxx)
-
-[//]: # ()
-[//]: # (- persistence headers)
-
-[//]: # ()
-[//]: # (- `Orbeon-Form-Definition-Version`: xxx passed in AND out)
-
-[//]: # ()
-[//]: # (Request for a `GET` or `HEAD`:)
-
-[//]: # ()
-[//]: # (| Header                           | Description                                                               |)
-
-[//]: # (|----------------------------------|---------------------------------------------------------------------------|)
-
-[//]: # (| `Orbeon-Form-Definition-Version` |                                                                           |)
-
-[//]: # ()
-[//]: # (Response for a `GET` or `HEAD`:)
-
-[//]: # ()
-[//]: # (| Header                           | Description                                                               |)
-
-[//]: # (|----------------------------------|---------------------------------------------------------------------------|)
-
-[//]: # (| `Orbeon-Form-Definition-Version` |                                                                           |)
-
-[//]: # (| `Orbeon-Username`                |                                                                           |)
-
-[//]: # (| `Orbeon-Group`                   |                                                                           |)
-
-[//]: # (| `Orbeon-Workflow-Stage`          |                                                                           |)
-
-[//]: # (| `Created`                        |                                                                           |)
-
-[//]: # (| `Last-Modified`                  |                                                                           |)
-
-[//]: # (| `Content-Type`                   | `application/xml` for form data and form definitions, optional otherwise  |)
-
-[//]: # ()
-[//]: # ()
-[//]: # (Request for a `PUT` or `DELETE`:)
-
-[//]: # ()
-[//]: # (TODO)
-
-[//]: # ()
-[//]: # (Response for a `PUT` or `DELETE`:)
-
-[//]: # ()
-[//]: # (TODO)
 
 ## See also
 
