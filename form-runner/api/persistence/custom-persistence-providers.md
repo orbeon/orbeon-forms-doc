@@ -89,11 +89,11 @@ The following HTTP methods are used and must be supported:
     - this returns the same HTTP headers and status code as a `GET` request, but no response body
     - the implementation can be optimized to avoid reading the resource's content, but otherwise is identical to a `GET` request
     - the persistence proxy *will* issue `HEAD` requests, in the following cases, so the implementation must support it if the behavior is to be correct
-          - for `PUT` and `DELETE` of form definition and form data
-          - in order to obtain the following original information from an existing record, if present:
-              - creation date/time
-              - creation username (form data only)
-              - creation group (form data only)
+        - for `PUT` and `DELETE` of form definition and form data
+        - in order to obtain the following original information from an existing record, if present:
+            - creation date/time
+            - creation username (form data only)
+            - creation group (form data only)
 - `LOCK`
     - see the [Lease API](lease.md)
 - `UNLOCK`
