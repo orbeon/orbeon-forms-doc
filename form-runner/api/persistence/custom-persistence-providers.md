@@ -40,7 +40,7 @@ SINCE Orbeon Forms 2023.1, the persistence proxy is also responsible for most of
 
 This makes it easier to implement a persistence provider, as the more complex logic is handled by the persistence proxy.
 
-A persistence provider implementation can be local to Form Runner, or it can be remote and accessed via HTTP service call. The default relational provider is local to Form Runner and the persistence proxy calls it by using internal calls. A custom persistence provider will typically be remote and accessed via service calls.
+A persistence provider implementation can be local to Form Runner, or it can be remote and accessed via HTTP service call. The built-in relational provider is local to Form Runner and the persistence proxy calls it by using internal calls. A custom persistence provider will typically be remote and accessed via service calls.
 
 ### Built-in persistence providers
 
@@ -101,11 +101,58 @@ The following HTTP methods are used and must be supported:
 
 #### Endpoints
 
-- for a form definition: `/crud/$app/$form/form/form.xhtml`
-- for form definition attachments: `/crud/$app/$form/form/$filename`
-- for form data: `/crud/$app/$form/data/$document/data.xml`
-- for form data attachments: `/crud/$app/$form/data/$document/$filename`
-- TODO: drafts
+- published form definition
+  - form definition XHTML: `/crud/$app/$form/form/form.xhtml`
+  - form definition attachment: `/crud/$app/$form/form/$filename`
+- form data
+  - form data XML: `/crud/$app/$form/$data-or-draft/$document/data.xml`
+  - form data attachments: `/crud/$app/$form/$data-or-draft/$document/$filename`
+  - `$data-or-draft`
+      - for data (or "final" data): `data`
+      - for draft: `draft`
+          - see below for details 
+
+#### Drafts
+
+Orbeon Forms supports the concept of [autosave drafts](/form-runner/persistence/autosave.md). With the built-in relational provider, a draft is marked specially in database tables with a `draft` column. A custom persistence provider that supports drafts must make that distinction in its storage mechanism.
+
+_NOTE: This only applies to form data and form data attachments, not to published form definitions._
+
+For CRUD operations, whether a draft is being operated on is indicated by the `$data-or-draft` part of the URL (see above). Following REST principles, a resource stored (`PUT`) as `data` must be retrieved (`GET`/`HEAD`) or deleted (`DELETE`) as data and be separate from a resource stored as `draft`, and vice versa. 
+
+There is one case where handling of drafts is different. Consider the following assumptions:
+
+- For a given document id, only a single draft makes sense.
+- Historical data is not required for drafts.
+- Since there is only one "revision" of a draft, all associated attachments can also be removed when the XML data is removed.
+- Once final (non-draft) data is saved, the draft is no longer needed.
+
+For these reasons, a `PUT` or `DELETE` of `data` or `draft` XML (but not attachments) must start by force-deleting (that is deleting without leaving a trace of the data in the database) any draft data XML and attachments associated with the given document id, in the database or store handled by the provider. This logic is implemented by the built-in relational provider.
+
+_NOTE: As of Orbeon Forms 2023.1.4, the provider is expected to implement this logic. This may change in later versions of Orbeon Forms, where the persistence proxy may handle this logic and issue the force-delete with a separate call on the provider. This would be less efficient for the provider, but easier to implement._
+
+#### Revisions
+
+Orbeon Forms supports the concept of [revision history](/form-runner/feature/revision-history.md).
+
+This concept applies to:
+
+- form data XML
+- only non-draft form data
+
+This doesn't apply to:
+
+- form definitions
+- attachments
+- draft form data 
+
+_NOTE: Nothing prevents applying revision history to form data attachments. However, as of Orbeon Forms 2023.1.4, this is not a requirement of persistence providers, as attachments are `PUT` only once by Form Runner._
+
+This means that, when doing a `PUT` or `DELETE` of form data, the provider must keep older revisions of that data. The built-in relational provider uses a last modification date (`last_modified_time`) to identify revisions. It also uses a separate table (`orbeon_i_current`) which identifies the current data to improve performance.
+
+The [Revision History API](revision-history.md) is used to find out about revisions.
+
+In addition, a `GET`/`HEAD` request should support the `last-modified-time` URL parameter to identify a specific revision of the data (see below).
 
 #### URL parameters
 
@@ -116,8 +163,10 @@ The following HTTP methods are used and must be supported:
     - TODO: internal callers only???
 - `last-modified-time`
     - for form data only
-    - this is used by the Zip Export API, the Purge API, and the Revision History API 
-    - TODO 
+    - this is used by the Zip Export API, the Purge API, and the Revision History API
+    - this optional parameter is used with `GET`/`HEAD`/`DELETE` to retrieve or delete a specific revision of the data
+    - the value is a millisecond-resolution ISO format date/time
+        - for example: `last-modified-time=2024-07-17T21:52:11.611Z`
 
 #### HTTP request headers
 
