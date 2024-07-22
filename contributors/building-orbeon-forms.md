@@ -18,6 +18,7 @@ You need to have already installed:
 - [Tomcat 8](https://tomcat.apache.org/download-80.cgi) or [Tomcat 9](https://tomcat.apache.org/download-90.cgi)
     - ([Tomcat 7](http://tomcat.apache.org/download-70.cgi) still works as of 2018-10-01 but is deprecated)
 - [Node.js](https://nodejs.org/en/)
+- [jsdom](https://github.com/jsdom/jsdom)
 - Java 11 or newer
 
 On macOS, you can install the following easily if you have [Homebrew](http://brew.sh/):
@@ -28,7 +29,10 @@ brew install ant
 brew install sbt
 brew install nvm
 nvm install node
+npm install jsdom
 ```
+
+If you encounter any problem with Node.js and/or Uglify, try using an older version of Node.js, e.g. `nvm use 18` or `nvm use 20`. 
 
 ## Getting the source
 
@@ -127,7 +131,7 @@ Create a new context in Tomcat's `conf/server.xml`:
 ```xml
 <Context
     path="/orbeon"
-    docBase="/path/to/orbeon-forms/orbeon-war/target/webapp"
+    docBase="/path/to/orbeon-forms/orbeon-war/jvm/target/webapp"
     reloadable="false"
     override="true"
     crossContext="true"
@@ -172,7 +176,7 @@ Create a new context in Tomcat's `conf/server.xml`:
 </Context>
 ```
 
-Tomcat has a file called `bin/setenv.sh` where you can set environment variables. In it, set the `JAVA_OPTS` for Tomcat. For Java 11:
+Tomcat has a file called `bin/setenv.sh` where you can set environment variables. In it, set the `JAVA_OPTS` for Tomcat. Create the file if it doesn't exist yet. For Java 11:
 
 ```bash
 ORBEON_MEMORY_OPTS="-Xms300m -Xmx3g -verbosegc -XX:+PrintGCDetails"
