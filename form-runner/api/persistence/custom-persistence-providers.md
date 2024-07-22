@@ -163,7 +163,7 @@ In addition, a `GET`/`HEAD` request should support the `last-modified-time` URL 
     - TODO: internal callers only???
 - `last-modified-time`
     - for form data only
-    - this is used by the Zip Export API, the Purge API, and the Revision History API
+    - this is used by the [Zip Export API](export-zip.md), the Purge API, and the [Revision History API](revision-history.md)
     - this optional parameter is used with `GET`/`HEAD`/`DELETE` to retrieve or delete a specific revision of the data
     - the value is a millisecond-resolution ISO format date/time
         - for example: `last-modified-time=2024-07-17T21:52:11.611Z`
@@ -317,13 +317,13 @@ HTTP response headers for `GET` and `HEAD` requests:
     - millisecond-resolution ISO format date/time with the data's created data
     - for example: `2024-07-17T21:52:11.611Z`
     - this is used by
-        - the zip export API
+        - the [Zip Export API](export-zip.md)
         - to pass `Orbeon-Created-Existing` in `PUT` and `DELETE` requests
 - `Orbeon-Last-Modified`
     - millisecond-resolution ISO format date/time with the data's last modification date
     - for example: `2024-07-17T21:52:11.611Z`
     - this is used by
-        - the Zip Export API
+        - the [Zip Export API](export-zip.md)
         - the Purge API
 - `Content-Type`
     - `application/xml` for form data and form definitions, optional otherwise 
