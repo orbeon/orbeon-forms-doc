@@ -26,7 +26,7 @@ You can attach more than one PDF template. Templates are differentiated by name 
 - per language
 - and/or per a given name, selected when creating the PDF
 
-The rules that govern which of the available PDF templates is selected when sending a PDF document are documented [here](../form-runner/advanced/buttons-and-processes/actions-form-runner-send.md).
+The rules that govern which of the available PDF templates is selected when sending a PDF document are documented [here](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md).
 
 ## Creating a PDF template for use with Form Builder
 
