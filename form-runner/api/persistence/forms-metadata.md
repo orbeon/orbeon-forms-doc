@@ -133,6 +133,9 @@ Each `<form>` element contains:
     - *NOTE: This is only returned when using a relational database, as the implementation of the persistence API for eXist [doesn't support versioning yet](https://github.com/orbeon/orbeon-forms/issues/1524).*
 - `<available>`
     - set to `false` when the form definition is marked as not available
+- `<permissions>`
+    - contains the form definition permissions as contained in the form definition's metadata
+    - this is required for permissions checking to work 
 
 #### Latest published version
 
@@ -162,6 +165,15 @@ The document returned by this API looks like this:
         <title xml:lang="fr">Formulaire de commande ACME</title>
         <last-modified-time>2014-08-21T16:52:24.429-07:00</last-modified-time>
         <form-version>2</form-version>
+        <permissions>
+            <permission operations="delete">
+                <group-member/>
+            </permission>
+            <permission operations="delete">
+                <owner/>
+            </permission>
+            <permission operations="create read update"/>
+        </permissions>
     </form>
 </forms>
 ```
