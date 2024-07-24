@@ -6,7 +6,7 @@
 
 ## Overview
 
-This page describes what you'll want to do to support the lease feature in your own implementation of the persistence API. If instead you'd like to *use* that feature, see the documentation on the [lease feature](/form-runner/feature/lease.md).
+This page describes what you'll want to do to support the lease feature in your own implementation of the persistence API. If instead you'd like to *use* that feature, see the documentation on the [Lease feature](/form-runner/feature/lease.md).
 
 ## Enabling support
 
@@ -71,4 +71,5 @@ To release a lease on a document, Form Runner uses the `UNLOCK` method with a `<
 
 ## See also
 
+- [Lease feature](/form-runner/feature/lease.md)
 - [Custom persistence providers](custom-persistence-providers.md)
