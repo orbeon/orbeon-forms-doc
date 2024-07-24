@@ -632,7 +632,7 @@ The second `*` wildcard can restrict the configuration to a single form. The thi
     value="my-acme-provider"/>
 ```
 
-_NOTE: You cannot name a provider `provider`._
+_NOTE: You cannot name a provider `provider` or `persistence`._
 
 In addition, you must configure the following properties to describe what your provider supports:
 
