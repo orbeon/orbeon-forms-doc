@@ -1,4 +1,4 @@
-# Lease Feature
+# Lease feature
 
 ## Availability
 
@@ -8,7 +8,7 @@ This is an Orbeon Forms PE feature.
 
 ## Overview
 
-When the lease feature is enabled, Form Runner prevents multiple users from concurrently editing the same form instance. When a first user, let's call him Homer, opens a form instance for editing, Homer is assigned a *lease* on that form instance for a given duration, say 10 minutes. The lease gets automatically extended when Homer updates the form, say by changing the value of a field, or when Homer clicks on a button to request a lease extension (more on this below).
+When the Lease feature is enabled, Form Runner prevents multiple users from concurrently editing the same form instance. When a first user, let's call him Homer, opens a form instance for editing, Homer is assigned a *lease* on that form instance for a given duration, say 10 minutes. The lease gets automatically extended when Homer updates the form, say by changing the value of a field, or when Homer clicks on a button to request a lease extension (more on this below).
 
 ![Message showing the user owns the lease](../images/lease-own.png)
 
@@ -20,17 +20,17 @@ The lease given to Homer will end either because it expires without being renewe
 
 ![Message showing the user relinquished the lease](../images/lease-relinquished.png)
 
-[SINCE Orbeon Forms 2024.1] The lease feature is also available in Form Builder, where it prevents multiple users from concurrently editing the same form definition.
+[SINCE Orbeon Forms 2024.1] The Lease feature is also available in Form Builder, where it prevents multiple users from concurrently editing the same form definition.
 
-## Enabling the lease feature
+## Enabling the Lease feature
 
-By default, the lease feature is disabled. It is enabled when the following conditions are met:
+By default, the Lease feature is disabled. It is enabled when the following conditions are met:
 
 - You've set the property `oxf.fr.detail.lease.enabled.*.*` to `true`, as shown below (the default is `false`, so you do need to set this property).
 - The user is authenticated.
-- The implementation of the persistence API used by the current app/form supports the lease feature. As of Orbeon Forms 2018.2, this is the case of all the built-in implementations of the persistence API for relational databases, but not of the implementation of the persistence API for eXist.
+- The implementation of the persistence API used by the current app/form supports the Lease feature. As of Orbeon Forms 2018.2, this is the case of all the built-in implementations of the persistence API for relational databases, but not of the implementation of the persistence API for eXist.
 
-If the lease feature is enabled, when non-authenticated users try to edit the data, they receive receive a [403 Forbidden](https://en.wikipedia.org/wiki/HTTP_403).
+If the Lease feature is enabled, when non-authenticated users try to edit the data, they receive receive a [403 Forbidden](https://en.wikipedia.org/wiki/HTTP_403).
 
 ```xml
 <property 

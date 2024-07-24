@@ -31,7 +31,7 @@ This release addresses the following issues since [Orbeon Forms 2021.1.1 PE](orb
 - Support AVTs in existing `<fr:alert message=""/>` ([\#5222](https://github.com/orbeon/orbeon-forms/issues/5222))
 - Hidden Field taking space at runtime ([\#5223](https://github.com/orbeon/orbeon-forms/issues/5223))
 - Asset server must issue `Vary` header for CSS ([\#5236](https://github.com/orbeon/orbeon-forms/issues/5236))
-- Offline: disable the lease feature ([\#5242](https://github.com/orbeon/orbeon-forms/issues/5242))
+- Offline: disable the Lease feature ([\#5242](https://github.com/orbeon/orbeon-forms/issues/5242))
 - Should not autosave simply because `fr:section-status` is updated ([\#5233](https://github.com/orbeon/orbeon-forms/issues/5233))
 - Form Builder: trim title and description ([\#5243](https://github.com/orbeon/orbeon-forms/issues/5243))
 - Icons are truncated to the left on fluid mode in Form Builder ([\#5227](https://github.com/orbeon/orbeon-forms/issues/5227))

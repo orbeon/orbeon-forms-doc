@@ -67,7 +67,7 @@ WHERE  document_id NOT IN
 
 The `orbeon_i_current` and `orbeon_i_control_text` tables may contain references, via the `data_id` column, to entries in `orbeon_form_data`. The content of these tables is recreated when a [full database reindex](/form-runner/feature/forms-admin-page.md#reindexing) is performed.
 
-If the [lease feature](/form-runner/feature/lease.md) is enabled and in use, the `orbeon_form_data_lease` table may also contain references, via the `document_id` column, to entries in `orbeon_form_data`.
+If the [Lease feature](/form-runner/feature/lease.md) is enabled and in use, the `orbeon_form_data_lease` table may also contain references, via the `document_id` column, to entries in `orbeon_form_data`.
 
 If that is the case, the relevant rows must also be deleted.
 

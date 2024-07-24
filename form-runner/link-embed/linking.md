@@ -194,7 +194,7 @@ However, more status codes can be returned for service requests than for pages. 
 | 405         | The HTTP method is not allowed.                                                                                                                                                    |
 | 409         | There is a conflict with the current state of the resource. This is only used when checking form definition versions.                                                              |
 | 410         | The resource is gone. This is only used when reading from the database and we know that the resource has been deleted.                                                             |
-| 423         | The resource is locked. This is only used by the lease feature.                                                                                                                    |
+| 423         | The resource is locked. This is only used by the Lease feature.                                                                                                                    |
 | 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity from the user's part.                                |
 | 500         | An error occurred on the server. Check the Orbeon log files for details of the error.                                                                                              |
 

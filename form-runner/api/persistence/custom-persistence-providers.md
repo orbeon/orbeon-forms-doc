@@ -235,7 +235,7 @@ In addition, a `GET`/`HEAD` request should support the `last-modified-time` URL 
         - whether the provider supports versioning
     - `Orbeon-Lease`
         - `true` or `false`
-        - whether the provider supports the lease feature
+        - whether the provider supports the Lease feature
         - see also the [Lease API](lease.md) 
     - `Orbeon-Reindex`
         - `true` or `false`
@@ -640,7 +640,7 @@ In addition, you must configure the following properties to describe what your p
 <!-- Whether the provider supports versioning -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.versioning" value="false"/>
 
-<!-- Whether the provider supports the lease feature -->
+<!-- Whether the provider supports the Lease feature -->
 <property as="xs:boolean" name="oxf.fr.persistence.my-acme-provider.lease"      value="false"/>
 
 <!-- Whether the provider supports reindexing -->

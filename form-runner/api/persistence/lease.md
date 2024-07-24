@@ -6,11 +6,11 @@
 
 ## Overview
 
-This page describes what you'll want to do to support the lease feature in your own implementation of the persistence API. If instead you'd like to *use* that feature, see the documentation on the [Lease feature](/form-runner/feature/lease.md).
+This page describes what you'll want to do to support the Lease feature in your own implementation of the persistence API. If instead you'd like to *use* that feature, see the documentation on the [Lease feature](/form-runner/feature/lease.md).
 
 ## Enabling support
 
-[Custom persistence providers](custom-persistence-providers.md) may support the lease feature, but they are not required to. For this reason, if your implementation does support the lease feature, you must set the following property to `true` for your provider:
+[Custom persistence providers](custom-persistence-providers.md) may support the Lease feature, but they are not required to. For this reason, if your implementation does support the Lease feature, you must set the following property to `true` for your provider:
 
 ```xml
 <property 
@@ -19,7 +19,7 @@ This page describes what you'll want to do to support the lease feature in your 
     value="true"/>
 ```
 
-If your implementation advertises itself as supporting the lease feature, it must implement two additional methods, `LOCK` and `UNLOCK`, as described below. `LOCK` and `UNLOCK` are seen as an extension of the CRUD operations, so are issued to `/crud/$app/$form/data/$document/data.xml`.
+If your implementation advertises itself as supporting the Lease feature, it must implement two additional methods, `LOCK` and `UNLOCK`, as described below. `LOCK` and `UNLOCK` are seen as an extension of the CRUD operations, so are issued to `/crud/$app/$form/data/$document/data.xml`.
 
 ## The LOCK method
 

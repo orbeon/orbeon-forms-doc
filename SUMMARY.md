@@ -143,7 +143,7 @@
         * [Summary page Excel Export](form-runner/feature/summary-page-export.md)
         * [Form definitions and form data batch export](form-runner/feature/exporting-form-definitions-and-form-data.md)
         * [Purging historical data](form-runner/feature/purging-historical-data.md)
-        * [Lease Feature](form-runner/feature/lease.md)
+        * [Lease](form-runner/feature/lease.md)
         * [Localization](form-runner/feature/localization.md)
         * [Supported languages](form-runner/feature/supported-languages.md)
         * [Mobile support](form-runner/feature/mobile.md)
