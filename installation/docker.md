@@ -9,7 +9,7 @@ Multiple Docker images are available from the [Orbeon repository on Docker Hub](
 - [`orbeon/orbeon-forms`](https://hub.docker.com/r/orbeon/orbeon-forms): the Orbeon Forms application running on Tomcat
 - [`orbeon/postgres`](https://hub.docker.com/r/orbeon/postgres): a PostgreSQL database prepopulated with the Orbeon Forms database schema
 
-The `orbeon/orbeon-forms` image can be run as a standalone container, as it contains an SQLite database with demo forms. This is intended for evaluation purposes only, and you will probably want to use another database in production. For this, you can use the `orbeon/postgres` image, which contains a PostgreSQL database prepopulated with the Orbeon Forms database schema. See the Docker Compose configuration below for an example of how to run Orbeon Forms with PostgreSQL.
+The `orbeon/orbeon-forms` image can be run as a standalone container, as it contains an SQLite database with demo forms. This is intended for evaluation purposes only, and you will probably want to use another database in production. For this, you can use the `orbeon/postgres` image, which contains a PostgreSQL database prepopulated with the Orbeon Forms database schema. See the [Docker Compose configuration](#docker-compose-configuration) below for an example of how to run Orbeon Forms with PostgreSQL.
 
 ## Evaluation mode
 
@@ -45,7 +45,7 @@ To persist the data outside the container, you can copy the `orbeon-demo.sqlite`
 
 This is not recommended for production use.
 
-This involves creating a first container just to extract the `orbeon-demo.sqlite` file, then creating a second container with the mounted file. Alternatively, you can also extract the `orbeon-demo.sqlite` file from [the Orbeon Forms WAR file](https://www.orbeon.com/download).
+This involves creating a first container just to extract the `orbeon-demo.sqlite` file, then creating a second container with the mounted file. Alternatively, you can also extract the `orbeon-demo.sqlite` file from the [Orbeon Forms WAR file](https://www.orbeon.com/download).
 
 ## Docker Compose configuration
 
@@ -218,7 +218,7 @@ The customized image above can then be built using the following command:
 docker build -f Dockerfile.mysql -t "orbeon/orbeon-forms-mysql:2023.1.3-pe" .
 ```
 
-For further information about configuring Orbeon Forms to use a different database, see the [Using a relational database](/form-runner/persistence/relational-db.md) section of the documentation.
+For further information about configuring Orbeon Forms to use a different database, see [Using a relational database](/form-runner/persistence/relational-db.md).
 
 ## Logging
 
@@ -228,4 +228,4 @@ By default, Orbeon Forms outputs its logs to the console. To change the logging 
 -v /path/to/log4j2.xml:/usr/local/tomcat/webapps/orbeon/WEB-INF/resources/config/log4j2.xml
 ```
 
-For further information about logging, see the [Logging](/installation/logging.md) section of the documentation.
+See [Logging](/installation/logging.md) for more information.
