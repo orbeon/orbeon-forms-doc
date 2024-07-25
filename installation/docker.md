@@ -119,7 +119,7 @@ The `properties-local.xml` properties file needs to contain at least the followi
 </properties>
 ```
 
-Choose a strong password for the `oxf.crypto.password` property. More information about this property and other properties in general can be found in the [Properties section](https://doc.orbeon.com/configuration/properties) of the documentation.
+Choose a strong password for the `oxf.crypto.password` property. See [Properties](https://doc.orbeon.com/configuration/properties) for more information about this property and other properties in general.
 
 ### Tomcat context configuration
 
