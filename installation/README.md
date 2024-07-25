@@ -143,6 +143,7 @@ This step is optional. See [Logging](logging.md).
 ## Specific steps for your container / app server
 
 - [Logging](logging.md)
+- [Docker](docker.md)
 - [Tomcat](tomcat.md)
 - [WildFly](wildfly.md)
 - [WebLogic](weblogic.md)
