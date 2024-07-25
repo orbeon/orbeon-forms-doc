@@ -1,6 +1,9 @@
 # Docker
 
-[Orbeon Forms PE only]
+## Availability
+
+- [SINCE Orbeon Forms 2023.1.3, 2024.1]
+- This is an [Orbeon Forms PE](https://www.orbeon.com/download) feature.
 
 ## Docker images
 
