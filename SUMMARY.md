@@ -4,6 +4,7 @@
 * [Installation](installation/README.md)
     * [Logging](installation/logging.md)
     * [Configuration banner](installation/configuration-banner.md)
+    * [Docker](installation/docker.md)
     * [Tomcat](installation/tomcat.md)
     * [WildFly](installation/wildfly.md)
     * [WebSphere](installation/websphere.md)
