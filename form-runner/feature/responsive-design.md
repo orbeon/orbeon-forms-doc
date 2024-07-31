@@ -1,8 +1,12 @@
 # Responsive design
 
-## Fields in one column
+## Single column on narrow screens
 
-Starting with version 4.10, Orbeon Forms supports [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) for forms you create with Form Builder. One significant implication is that when your forms are shown on a narrow screen, for instance on a mobile phone, most fields are reflowed to be on the same "column".
+Orbeon Forms supports [responsive design](https://en.wikipedia.org/wiki/Responsive_web_design) for forms you create with Form Builder. The main aspect of this is that when your forms are shown on a narrow screen, for instance on a mobile phone, fields are shown in a single column.
+
+[SINCE Orbeon Forms 2022.1]
+
+The Form Runner [Landing page](landing-page.md) is also responsive.
 
 ## Example
 
@@ -16,7 +20,7 @@ When the same form is loaded from a mobile phone, fields will automatically be s
 
 ## Limitations
 
-Version 4.10 introduces responsive design to the "detail page", i.e. the page used to fill out a form, as it is the page accessed by most end users, who are also more likely to be using a mobile device. In future versions, responsive design will be brought also to the summary page and [Published Forms page](/form-runner/feature/published-forms-page.md).
+The [Summary page](summary-page.md) and [Published Forms page](published-forms-page.md) are not yet responsive.
 
 ## See also
 
