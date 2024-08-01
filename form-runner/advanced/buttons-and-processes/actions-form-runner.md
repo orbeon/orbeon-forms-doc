@@ -377,9 +377,9 @@ See also:
 - [`embedForm()` API](/form-runner/link-embed/javascript-api.md#embedform)
 - [Adding and removing process callback functions](/form-runner/api/other/form-runner-javascript-api.md#adding-and-removing-process-callback-functions)
 
-### Switching modes
+## Switching modes
 
-#### `new-to-edit`
+### `new-to-edit`
 
 [SINCE Orbeon Forms 2017.1]
 
@@ -389,7 +389,7 @@ See also:
 - If permissions do not allow editing the data, this action has no effect.
 - This preserves (and therefore does not reset) the current form data.
 
-#### `edit-to-new`
+### `edit-to-new`
  
 [SINCE Orbeon Forms 2023.1.4]
 
