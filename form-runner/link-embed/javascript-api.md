@@ -183,6 +183,26 @@ If you want to replace a form A shown in a given container by another form B, yo
 
 [SINCE Orbeon Forms 2022.1] Like `embedForm()`, `destroyForm()` returns a JavaScript `Promise` object. See the above section about `embedForm()` for more information about how to use the returned `Promise`. 
 
+## Caveats
+
+Make sure that you do *not* disable [combined resources](/configuration/advanced/javascript-css-assets.md#combined-asset-resources). Specifically, you *cannot* have the following in your `properties-local.xml`:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.combine-resources"
+    value="false"/>
+```
+
+If you do have this property, make sure you remove it, comment it out, or explicitly set:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.combine-resources"
+    value="true"/>
+```
+
 ## Limitations
 
 The JavaScript embedding API has the same [limitations as the Java embedding API](java-api.md#limitations).

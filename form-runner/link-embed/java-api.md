@@ -276,6 +276,26 @@ The embedding implementation:
 - keeps track of session and other cookies
 - proxies requests for resources, Ajax calls and file uploads to Form Runner
 
+## Caveats
+
+Make sure that you do *not* disable [combined resources](/configuration/advanced/javascript-css-assets.md#combined-asset-resources). Specifically, you *cannot* have the following in your `properties-local.xml`:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.combine-resources"
+    value="false"/>
+```
+
+If you do have this property, make sure you remove it, comment it out, or explicitly set:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.combine-resources"
+    value="true"/>
+```
+
 ## Limitations
 
 - Using non-combined resources is not supported (so `oxf.xforms.combine-resources` must be set to `true`, which is the default).
