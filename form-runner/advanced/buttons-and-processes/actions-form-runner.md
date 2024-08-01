@@ -377,26 +377,34 @@ See also:
 - [`embedForm()` API](/form-runner/link-embed/javascript-api.md#embedform)
 - [Adding and removing process callback functions](/form-runner/api/other/form-runner-javascript-api.md#adding-and-removing-process-callback-functions)
 
+### Switching modes
+
+#### `new-to-edit`
+
+[SINCE Orbeon Forms 2017.1]
+
+- If possible, switch the detail page's URL from `new` mode to `edit` mode.
+- Before this action, this was done automatically as part of the `save` action.
+- If the form is not in `new` mode, this action has no effect.
+- If permissions do not allow editing the data, this action has no effect.
+- This preserves (and therefore does not reset) the current form data.
+
+#### `edit-to-new`
+ 
+[SINCE Orbeon Forms 2023.1.4]
+
+- If possible, switch the detail page's URL from `edit` mode to `new` mode.
+- This also creates a fresh document id.
+- If the form is not in `edit` mode, this action has no effect.
+- If permissions do not allow creating new data, this action has no effect.
+- This preserves (and therefore does not reset) the current form data.
+
 ## Other actions
 
 - `captcha`: Trigger the captcha.
 - `collapse-all`: Collapse all sections (when not using the wizard view).
 - `expand-all`: Expand all sections (when not using the wizard view).
 - `expand-invalid`: [SINCE Orbeon Forms 2018.1] This action expands all the sections that contain an error. Out-of-the-box, this action is used by the `require-valid` process, in turn called when validating data, say before save, so users can see all the sections that contain an error.
-- `new-to-edit`:
-    - [SINCE Orbeon Forms 2017.1]
-    - If possible, switch the detail page's URL from `new` mode to `edit` mode.
-    - Before this action, this was done automatically as part of the `save` action.
-    - If the form is not in `new` mode, this action has no effect.
-    - If permissions do not allow editing the data, this action has no effect.
-    - This preserves (and therefore does not reset) the current form data.
-- `edit-to-new`:
-    - [SINCE Orbeon Forms 2023.1.4]
-    - If possible, switch the detail page's URL from `edit` mode to `new` mode.
-    - This also creates a fresh document id.
-    - If the form is not in `edit` mode, this action has no effect.
-    - If permissions do not allow creating new data, this action has no effect.
-    - This preserves (and therefore does not reset) the current form data.
 - `result-dialog`: Show the result dialog.
 - `review`, `edit`: Navigate to these Form Runner pages.
 - `show-relevant-errors`:
