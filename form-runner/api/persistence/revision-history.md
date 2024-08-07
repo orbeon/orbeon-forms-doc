@@ -119,5 +119,6 @@ The following elements and attributes are returned:
 
 ## See also
 
+- Blog post: [Data Revision History](https://www.orbeon.com/2024/08/revision-history)
 - [Revision history](/form-runner/feature/revision-history.md)
 - [Zip Export API](/form-runner/api/persistence/export-zip.md)

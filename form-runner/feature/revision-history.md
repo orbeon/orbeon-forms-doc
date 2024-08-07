@@ -52,6 +52,7 @@ For a given revision, you can click on the "View this revision" link to view the
 
 ## See also
 
+- Blog post: [Data Revision History](https://www.orbeon.com/2024/08/revision-history)
 - [Form Runner navigation bar](navbar.md)
 - [Auditing](/form-runner/persistence/auditing.md)
 - [Purging historical data](/form-runner/feature/purging-historical-data.md)
