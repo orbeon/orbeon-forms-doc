@@ -8,7 +8,7 @@
 
 Each time Form Runner saves data to the database, it saves a new *revision* of the data. Each revision of the data has an associated timestamp.
 
-Until Orbeon Forms 2023.1, this revision was only accessible through the database, for [auditing purposes](/form-runner/persistence/auditing.md). Starting with Orbeon Forms 2023.1, Form Runner provides a user interface to access the revision history of a given form data.
+Until Orbeon Forms 2023.1, the revision history was only accessible through the database, for [auditing purposes](/form-runner/persistence/auditing.md), or for restoring an older version manually. Starting with Orbeon Forms 2023.1, Form Runner provides a user interface to access the revision history of a given form data.
 
 Note that this feature is distinct from [form definition versioning](/form-runner/feature/versioning.md), which regards the versioning of published form definitions.
 
@@ -57,3 +57,4 @@ For a given revision, you can click on the "View this revision" link to view the
 - [Purging historical data](/form-runner/feature/purging-historical-data.md)
 - [Purging old data using SQL](/form-runner/persistence/purging-old-data.md)
 - [Form definition versioning](/form-runner/feature/versioning.md)
+- [Revision History API](/form-runner/api/persistence/revision-history.md)
