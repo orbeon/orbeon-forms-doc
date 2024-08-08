@@ -273,7 +273,7 @@ In addition, a `GET`/`HEAD` request should support the `last-modified-time` URL 
     - for form definition attachments, this is the binary attachment
 - TODO: ranges
 
-#### HTTP response codes
+#### HTTP response status codes
 
 - `200`: success
 - `500`: internal server error
@@ -480,7 +480,7 @@ Custom persistence providers may choose a different approach, such as extracting
 
 _NOTE: The `operations` attribute on the `<form>` elements is *not* added by the persistence provider: the persistence proxy takes care of adding that attribute._
 
-#### HTTP response codes
+#### HTTP response status codes
 
 - `200`: success
 - `500`: internal server error
@@ -537,7 +537,7 @@ See [Search API](search.md).
 
 See [Search API](search.md).
 
-#### HTTP response codes
+#### HTTP response status codes
 
 - `200`: success
 - `500`: internal server error
@@ -590,7 +590,7 @@ The body is empty.
 
 See [Revision History API](revision-history.md#response).
 
-#### HTTP response codes
+#### HTTP response status codes
 
 - `200`: success
 - `500`: internal server error
