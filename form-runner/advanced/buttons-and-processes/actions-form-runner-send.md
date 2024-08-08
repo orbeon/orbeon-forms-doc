@@ -83,7 +83,7 @@ The following parameters can be used:
     [SINCE Orbeon Forms 2016.1]
 
     - this is applied when `content` is set to `xml` only
-    - `true` to remove all occurrences of `fr:`-prefixed elements and attributes
+    - `true` to remove all occurrences of `fr:`-prefixed elements
     - `false` to leave such occurrences
     - default
         - `false` when `data-format-version` is set to `edge`
