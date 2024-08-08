@@ -77,7 +77,7 @@ A listener looks like this:
 - `view`
 - `pdf`
 
-xxx link to new modes page with explanations
+[//]: # (xxx link to new modes page with explanations)
 
 ### Events supported
 
