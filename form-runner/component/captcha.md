@@ -2,11 +2,11 @@
 
 ## Introduction
 
-If you are creating a public form, you might want to add a captcha to avoid spam. You can do so by enabling the *captcha* feature. Under this umbrella, Orbeon Forms supports several captcha implementations.
+If you are creating a public form, you might want to add a [captcha](https://en.wikipedia.org/wiki/CAPTCHA) to avoid spam. You can do so by enabling the Orbeon Forms *captcha* feature. Under this umbrella, Orbeon Forms supports several captcha implementations.
 
 ## Which captcha is right for you
 
-[reCAPTCHA][1] is almost a de facto standard on the web: more than a million reCAPTCHA are solved every day, it is used by a large number of mainstream sites and is constantly updated providing a high level of security. This service is owned by Google.
+[reCAPTCHA][1] is almost a de facto standard on the web: more than a hundred million reCAPTCHA are solved every day, it is used by a large number of mainstream sites and is constantly updated providing a high level of security. This service is owned by Google.
 
 Because of the high level of safety provided by reCAPTCHA, we recommend you use it, unless doing so isn't possible in your situation. Maybe, for instance, you don't want the server on which Orbeon Forms runs to connect to any external service, which the reCAPTCHA component does to verify the answer provided. If you can't use the reCAPTCHA, Orbeon Forms provides an alternate component which runs entirely within Orbeon Forms, without the need to connect to any external server.
 
@@ -155,36 +155,56 @@ then xf:dispatch(
 )
 ```
 
-### OnPremiseCaptcha
+### On-premise captcha
 
-You enable OnPremiseCaptcha by adding the following property to your `properties-local.xml`:
+#### Usage
 
-[SINCE Orbeon Forms 2020.1]
+You can use this component to show users a simple captcha like the one shown in the following screenshot:
+
+![](images/xbl-simple-captcha.png)
+
+Note that this doesn't offer as much security as reCAPTCHA, for example, but it is entirely handled by Orbeon Forms and does not call external services.
+
+#### Configuration
+
+You enable the simple on-premise captcha by adding the following property to your `properties-local.xml`:
+
+[\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
 
 ```xml
 <property
     as="xs:string"
     name="oxf.fr.detail.captcha.component.*.*"
-    value="reCAPTCHA"/>
+    value="OnPremiseCaptcha"/>
 ```
 
-[UNTIL Orbeon Forms 2019.2]
+__NOTE: The older `SimpleCaptcha` value is still accepted but deprecated.__
+
+[\[SINCE Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)
+[\[UNTIL Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.captcha.component.*.*"
+    value="SimpleCaptcha"/>
+```
+
+[\[UNTIL Orbeon Forms 2019.2\]](/release-notes/orbeon-forms-2019.2.md)
 
 ```xml
 <property
     as="xs:string"
     name="oxf.fr.detail.captcha.*.*"
-    value="reCAPTCHA"/>
+    value="SimpleCaptcha"/>
 ```
 
-You can use this component to show users a captcha, like the one shown in the following screenshot:
+#### XForms usage
 
-![](images/xbl-simple-captcha.png)
-
-To use this component, where you want the captcha to show in your form, add:
+To use this component with plain XForms, where you want the captcha to show in your form, add:
 
 ```xml
-<fr:simple-captcha id="my-simple-captcha">
+<fr:simple-captcha id="my-simple-captcha"/>
 ```
 
 Most likely, you'll want to add code dispatching an `fr-verify` event to your component to trigger a verification, and listeners on the `fr-verify-done` and `fr-verify-error` events. For more information on this, see the section _Events_ above.
@@ -237,7 +257,7 @@ As of Orbeon Forms 2023.1.4, Orbeon Forms uses version 0.9.16 of the Friendly Ca
 
 ### Events
 
-Both the `fr:recaptcha` and `fr:simple-captcha` components support the same events:
+The `fr:recaptcha`, `fr:on-premise-captcha` (formerly:`fr:simple-captcha`), and `fr:friendly-captcha` components support the same events:
 
 1. **Verifying the answer entered by users** — Both components don't include a _Verify_ button that triggers the value entered by users to be checked. This is to give more control to you, the form author, as to when the verification is done. For instance, you might want to verify the captcha when users click on a _Save_ button on your form. To trigger the value to be verified, dispatch a `fr-verify` event to the captcha.
 2. **Verification succeeded** — When the verification succeeds, the component dispatches a `fr-verify-done` event. The example below, using the reCAPTCHA, listens to that event to run a submission.
