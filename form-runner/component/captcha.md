@@ -2,11 +2,11 @@
 
 ## Introduction
 
-If you are creating a public form, you might want to add a captcha to avoid spam. You can do so by enabling the *captcha* feature.
+If you are creating a public form, you might want to add a captcha to avoid spam. You can do so by enabling the *captcha* feature. Under this umbrella, Orbeon Forms supports several captcha implementations.
 
 ## Which captcha is right for you
 
-[reCAPTCHA][1] is almost a de facto standard on the web: more than a million reCAPTCHA are solved every day, it is used by a large number of mainstream sites, like Facebook, and is constantly updated providing a high level of security. Since 2009, this service is owned by Google.
+[reCAPTCHA][1] is almost a de facto standard on the web: more than a million reCAPTCHA are solved every day, it is used by a large number of mainstream sites and is constantly updated providing a high level of security. This service is owned by Google.
 
 Because of the high level of safety provided by reCAPTCHA, we recommend you use it, unless doing so isn't possible in your situation. Maybe, for instance, you don't want the server on which Orbeon Forms runs to connect to any external service, which the reCAPTCHA component does to verify the answer provided. If you can't use the reCAPTCHA, Orbeon Forms provides an alternate component which runs entirely within Orbeon Forms, without the need to connect to any external server.
 
@@ -39,11 +39,11 @@ You enable a captcha by adding the following property to your `properties-local.
 The property name changed in Orbeon Forms 2020.1 with the introduction of new captcha-related properties (more on this below). The old property name, without the `component` part, is still supported, but deprecated. Allowed values are:
 
 - Blank or empty string: no captcha is added to your form (default)
-- `reCAPTCHA`: use reCAPTCHA
-- `OnPremiseCaptcha` (legacy: `SimpleCaptcha`): use SimpleCaptcha
+- `reCAPTCHA`: use [reCAPTCHA][1]
+- `OnPremiseCaptcha` (legacy: `SimpleCaptcha`)
     - [\[UNTIL Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md): use SimpleCaptcha
-    - [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md): use Katpcha
-- `fr:friendly-captcha`: use Friendly Captcha
+    - [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md): use [Katpcha](https://github.com/youkol/kaptcha)
+- `fr:friendly-captcha`: use [Friendly Captcha](https://friendlycaptcha.com/)
     - [\[SINCE Orbeon Forms 2023.1.4\]](/release-notes/orbeon-forms-2023.1.4.md) 
 - Qualified name of an XBL component that implements a captcha
     - [SINCE Orbeon Forms 2017.2]
@@ -52,34 +52,15 @@ The property name changed in Orbeon Forms 2020.1 with the introduction of new ca
 
 If using the reCAPTCHA, you'll also need to add properties to specify your reCAPTCHA public and private keys.
 
-## Events
+## Captcha implementations
 
-Both the `fr:recaptcha` and `fr:simple-captcha` components support the same events:
+### reCAPTCHA
 
-1. **Verifying the answer entered by users** — Both components don't include a _Verify_ button that triggers the value entered by users to be checked. This is to give more control to you, the form author, as to when the verification is done. For instance, you might want to verify the captcha when users click on a _Save_ button on your form. To trigger the value to be verified, dispatch a `fr-verify` event to the captcha.
-2. **Verification succeeded** — When the verification succeeds, the component dispatches a `fr-verify-done` event. The example below, using the reCAPTCHA, listens to that event to run a submission.
-3. **Verification failed** — When the verification fails, you get the `fr-verify-error` event. The example below, using the reCAPTCHA, listens to that event to show a case id `failure-case` (which might tell users the verification failed).
-4. **Loading another captcha** — Specifically for the reCAPTCHA, as part of the context information for the fr-verify-error event, you get an error code, which you can access with `event('fr-error-code')`. This is the error code returned by the reCAPTCHA API, which is a string. Its value can either be:
-    * `empty` — this tells you users didn't provide any answer. When that happens, you could notify users and keep the same challenge.
-    * One of the values listed in the [reCAPTCHA API documentation][2] (look for the table under _Error Code Reference_). When this happens, you could notify users, and _need_ to change the challenge by dispatching `fr-reload` to the reCAPTCHA. (For added safety, the reCAPTCHA won't let users try to solve the same captcha multiple times.)
-
-    ```xml
-    <fr:recaptcha id="my-captcha">
-        <xf:send ev:event="fr-verify-done" submission="save-submission"/>
-        <xf:action ev:event="fr-verify-error">
-            <xf:toggle case="failure-case"/>
-            <xf:dispatch target="my-captcha" name="fr-reload"/>
-        </xf:action>
-    </fr:recaptcha>
-    ```
-
-## reCAPTCHA
-
-### Supported versions
+#### Supported versions
 
 Orbeon Forms supports the reCAPTCHA v2 since Orbeon Forms 2018.1 and 2017.2.2, and reCAPTCHA v3 since Orbeon Forms 2024.1. Google [stopped supporting reCAPTCHA v1](https://developers.google.com/recaptcha/docs/faq#what-happens-to-recaptcha-v1) used by earlier versions of Orbeon Forms after March 31, 2018. Hence, if you're using the reCAPTCHA, and are using an older version of Orbeon Forms, you'll want to upgrade to a newer version which supports reCAPTCHA v2 or v3.
 
-### Usage
+#### Usage
 
 You can use this component to show users a captcha, like the one shown in the following screenshot:
 
@@ -125,7 +106,7 @@ If your version of Orbeon Forms only supports reCAPTCHA v2 (before Orbeon Forms 
     	<fr:recaptcha id="my-recaptcha"/>
     	```
 
-### Configuration
+#### Configuration
 
 You can configure:
 
@@ -161,7 +142,7 @@ You can configure:
 
 See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for more information on the possible values for the `theme` and `lang` properties.
 
-### Resetting the captcha
+#### Resetting the captcha
 
 [SINCE Orbeon Forms 2022.1.8, 2023.1.3, 2024.1]
 
@@ -174,7 +155,27 @@ then xf:dispatch(
 )
 ```
 
-## SimpleCaptcha
+### OnPremiseCaptcha
+
+You enable OnPremiseCaptcha by adding the following property to your `properties-local.xml`:
+
+[SINCE Orbeon Forms 2020.1]
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.captcha.component.*.*"
+    value="reCAPTCHA"/>
+```
+
+[UNTIL Orbeon Forms 2019.2]
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.captcha.*.*"
+    value="reCAPTCHA"/>
+```
 
 You can use this component to show users a captcha, like the one shown in the following screenshot:
 
@@ -188,7 +189,7 @@ To use this component, where you want the captcha to show in your form, add:
 
 Most likely, you'll want to add code dispatching an `fr-verify` event to your component to trigger a verification, and listeners on the `fr-verify-done` and `fr-verify-error` events. For more information on this, see the section _Events_ above.
 
-## Friendly Captcha
+### Friendly Captcha
 
 [\[SINCE Orbeon Forms 2023.1.4\]](/release-notes/orbeon-forms-2023.1.4.md)
 
@@ -232,9 +233,32 @@ As of Orbeon Forms 2023.1.4, Orbeon Forms uses version 0.9.16 of the Friendly Ca
     value="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.16/widget.min.js"/>
 ```
 
-## Captcha location
+## Advanced configuration
 
-### Configuration
+### Events
+
+Both the `fr:recaptcha` and `fr:simple-captcha` components support the same events:
+
+1. **Verifying the answer entered by users** — Both components don't include a _Verify_ button that triggers the value entered by users to be checked. This is to give more control to you, the form author, as to when the verification is done. For instance, you might want to verify the captcha when users click on a _Save_ button on your form. To trigger the value to be verified, dispatch a `fr-verify` event to the captcha.
+2. **Verification succeeded** — When the verification succeeds, the component dispatches a `fr-verify-done` event. The example below, using the reCAPTCHA, listens to that event to run a submission.
+3. **Verification failed** — When the verification fails, you get the `fr-verify-error` event. The example below, using the reCAPTCHA, listens to that event to show a case id `failure-case` (which might tell users the verification failed).
+4. **Loading another captcha** — Specifically for the reCAPTCHA, as part of the context information for the fr-verify-error event, you get an error code, which you can access with `event('fr-error-code')`. This is the error code returned by the reCAPTCHA API, which is a string. Its value can either be:
+    * `empty` — this tells you users didn't provide any answer. When that happens, you could notify users and keep the same challenge.
+    * One of the values listed in the [reCAPTCHA API documentation][2] (look for the table under _Error Code Reference_). When this happens, you could notify users, and _need_ to change the challenge by dispatching `fr-reload` to the reCAPTCHA. (For added safety, the reCAPTCHA won't let users try to solve the same captcha multiple times.)
+
+    ```xml
+    <fr:recaptcha id="my-captcha">
+        <xf:send ev:event="fr-verify-done" submission="save-submission"/>
+        <xf:action ev:event="fr-verify-error">
+            <xf:toggle case="failure-case"/>
+            <xf:dispatch target="my-captcha" name="fr-reload"/>
+        </xf:action>
+    </fr:recaptcha>
+    ```
+
+### Captcha location
+
+#### Configuration
 
 [SINCE Orbeon Forms 2020.1]
 
@@ -251,7 +275,7 @@ The following property allows you to configure where the captcha is shown (when 
     value="inside-wizard"/>
 ```
 
-### Limitations
+#### Limitations
 
 When all the following conditions are met:
  
@@ -265,7 +289,7 @@ Then:
 - While an error will show in the error summary to inform users that the captcha needs to be solved, when users click on the error message, Form Runner will not switch to the page where the captcha appears. (The situation here is somewhat different relative to what happens with normal fields, as depending on how you set the `oxf.fr.detail.captcha.visible.*.*` property, the captcha could appear on multiple pages.)
 - The page or pages in which the captcha appear won't be highlighted, as is the case for other invalid fields.
 
-## Captcha visibility
+### Captcha visibility
 
 [SINCE Orbeon Forms 2020.1]
 
