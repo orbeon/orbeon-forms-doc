@@ -144,9 +144,19 @@ See the [reCAPTCHA documentation][5], under _Look &amp; Feel Customizations_ for
 
 #### Resetting the captcha
 
+When users submit a form with a captcha and subsequently navigate away from the page containing that form, they can use their browser's back functionality to return to the form. By default, the captcha will appear as already resolved. In some cases, you might prefer to require users to complete a new captcha for each submission they make. If so, you'll want to *reset* the captcha.
+
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+
+Add the following to the process you are running, before the action that navigates away from the page.
+
+```xml
+then captcha-reset
+```
+
 [SINCE Orbeon Forms 2022.1.8, 2023.1.3, 2024.1]
 
-When users submit a form with a captcha and subsequently navigate away from the page containing that form, they can use their browser's back functionality to return to the form. By default, the captcha will appear as already resolved. In some cases, you might prefer to require users to complete a new captcha for each submission they make. If so, you'll want to reset the captcha by adding the following to the process you are running, before the action that navigates away from the page.
+Add the following to the process you are running, before the action that navigates away from the page.
 
 ```xml
 then xf:dispatch(
@@ -207,7 +217,7 @@ To use this component with plain XForms, where you want the captcha to show in y
 <fr:simple-captcha id="my-simple-captcha"/>
 ```
 
-Most likely, you'll want to add code dispatching an `fr-verify` event to your component to trigger a verification, and listeners on the `fr-verify-done` and `fr-verify-error` events. For more information on this, see the section _Events_ above.
+Most likely, you'll want to add code dispatching an `fr-verify` event to your component to trigger a verification, and listeners on the `fr-verify-done` and `fr-verify-error` events. For more information on this, see the section _Events_ below.
 
 ### Friendly Captcha
 
@@ -222,7 +232,7 @@ Similar to reCAPTCHA, you must configure properties in `properties-local.xml`. Y
     value="fr:friendly-captcha"/>
 ```
 
-You must the set keys, which you obtain by signing up with [Friendly Captcha](https://friendlycaptcha.com/) and following their [documentation](https://docs.friendlycaptcha.com/).
+You must configure keys, which you obtain by signing up with [Friendly Captcha](https://friendlycaptcha.com/) and following their [documentation](https://docs.friendlycaptcha.com/).
 
 The public key (or application, or "site key") is set with:
 
@@ -254,27 +264,6 @@ As of Orbeon Forms 2023.1.4, Orbeon Forms uses version 0.9.16 of the Friendly Ca
 ```
 
 ## Advanced configuration
-
-### Events
-
-The `fr:recaptcha`, `fr:on-premise-captcha` (formerly:`fr:simple-captcha`), and `fr:friendly-captcha` components support the same events:
-
-1. **Verifying the answer entered by users** — Both components don't include a _Verify_ button that triggers the value entered by users to be checked. This is to give more control to you, the form author, as to when the verification is done. For instance, you might want to verify the captcha when users click on a _Save_ button on your form. To trigger the value to be verified, dispatch a `fr-verify` event to the captcha.
-2. **Verification succeeded** — When the verification succeeds, the component dispatches a `fr-verify-done` event. The example below, using the reCAPTCHA, listens to that event to run a submission.
-3. **Verification failed** — When the verification fails, you get the `fr-verify-error` event. The example below, using the reCAPTCHA, listens to that event to show a case id `failure-case` (which might tell users the verification failed).
-4. **Loading another captcha** — Specifically for the reCAPTCHA, as part of the context information for the fr-verify-error event, you get an error code, which you can access with `event('fr-error-code')`. This is the error code returned by the reCAPTCHA API, which is a string. Its value can either be:
-    * `empty` — this tells you users didn't provide any answer. When that happens, you could notify users and keep the same challenge.
-    * One of the values listed in the [reCAPTCHA API documentation][2] (look for the table under _Error Code Reference_). When this happens, you could notify users, and _need_ to change the challenge by dispatching `fr-reload` to the reCAPTCHA. (For added safety, the reCAPTCHA won't let users try to solve the same captcha multiple times.)
-
-    ```xml
-    <fr:recaptcha id="my-captcha">
-        <xf:send ev:event="fr-verify-done" submission="save-submission"/>
-        <xf:action ev:event="fr-verify-error">
-            <xf:toggle case="failure-case"/>
-            <xf:dispatch target="my-captcha" name="fr-reload"/>
-        </xf:action>
-    </fr:recaptcha>
-    ```
 
 ### Captcha location
 
@@ -323,6 +312,27 @@ Even when not visible according this property (i.e. your value template returns 
     name="oxf.fr.detail.captcha.visible.*.*"                          
     value="true"/>
 ```
+
+### Events
+
+The `fr:recaptcha`, `fr:on-premise-captcha` (formerly:`fr:simple-captcha`), and `fr:friendly-captcha` components support the same events:
+
+1. **Verifying the answer entered by users** — Some implementations don't include a _Verify_ button that triggers the value entered by users to be checked. This is to give more control to you, the form author, as to when the verification is done. For instance, you might want to verify the captcha when users click on a _Save_ button on your form. To trigger the value to be verified, dispatch a `fr-verify` event to the captcha.
+2. **Verification succeeded** — When the verification succeeds, the component dispatches a `fr-verify-done` event. The example below, using the reCAPTCHA, listens to that event to run a submission.
+3. **Verification failed** — When the verification fails, you get the `fr-verify-error` event. The example below, using the reCAPTCHA, listens to that event to show a case id `failure-case` (which might tell users the verification failed).
+4. **Loading another captcha** — Specifically for the reCAPTCHA, as part of the context information for the fr-verify-error event, you get an error code, which you can access with `event('fr-error-code')`. This is the error code returned by the reCAPTCHA API, which is a string. Its value can either be:
+    * `empty` — this tells you users didn't provide any answer. When that happens, you could notify users and keep the same challenge.
+    * One of the values listed in the [reCAPTCHA API documentation][2] (look for the table under _Error Code Reference_). When this happens, you could notify users, and _need_ to change the challenge by dispatching `fr-reload` to the reCAPTCHA. (For added safety, the reCAPTCHA won't let users try to solve the same captcha multiple times.)
+
+    ```xml
+    <fr:recaptcha id="my-captcha">
+        <xf:send ev:event="fr-verify-done" submission="save-submission"/>
+        <xf:action ev:event="fr-verify-error">
+            <xf:toggle case="failure-case"/>
+            <xf:dispatch target="my-captcha" name="fr-reload"/>
+        </xf:action>
+    </fr:recaptcha>
+    ```
 
 ## See also
 
