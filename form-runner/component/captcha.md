@@ -8,7 +8,11 @@ If you are creating a public form, you might want to add a captcha to avoid spam
 
 [reCAPTCHA][1] is almost a de facto standard on the web: more than a million reCAPTCHA are solved every day, it is used by a large number of mainstream sites, like Facebook, and is constantly updated providing a high level of security. Since 2009, this service is owned by Google.
 
-Because of the high level of safety provided by reCAPTCHA, we recommend you use it, unless doing so isn't possible in your situation. Maybe, for instance, you don't want the server on which Orbeon Forms runs to connect to any external service, which the reCAPTCHA component does to verify the answer provided. If you can't use the reCAPTCHA, Orbeon Forms provides an alternate component, SimpleCaptcha, which runs entirely within Orbeon Forms, without the need to connect to any external server.
+Because of the high level of safety provided by reCAPTCHA, we recommend you use it, unless doing so isn't possible in your situation. Maybe, for instance, you don't want the server on which Orbeon Forms runs to connect to any external service, which the reCAPTCHA component does to verify the answer provided. If you can't use the reCAPTCHA, Orbeon Forms provides an alternate component which runs entirely within Orbeon Forms, without the need to connect to any external server.
+
+[\[SINCE Orbeon Forms 2023.1.4\]](/release-notes/orbeon-forms-2023.1.4.md)
+
+Using [Friendly Captcha](https://friendlycaptcha.com/) is another solid option. Friendly Captcha is an alternative to Google's reCAPTCHA and, in their own words, "GDPR-Compliant Bot Protection".
 
 ## Enabling and choosing a component
 
@@ -36,7 +40,11 @@ The property name changed in Orbeon Forms 2020.1 with the introduction of new ca
 
 - Blank or empty string: no captcha is added to your form (default)
 - `reCAPTCHA`: use reCAPTCHA
-- `SimpleCaptcha`: use SimpleCaptcha
+- `OnPremiseCaptcha` (legacy: `SimpleCaptcha`): use SimpleCaptcha
+    - [\[UNTIL Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md): use SimpleCaptcha
+    - [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md): use Katpcha
+- `fr:friendly-captcha`: use Friendly Captcha
+    - [\[SINCE Orbeon Forms 2023.1.4\]](/release-notes/orbeon-forms-2023.1.4.md) 
 - Qualified name of an XBL component that implements a captcha
     - [SINCE Orbeon Forms 2017.2]
     - Example: `acme:custom-captcha`
@@ -184,7 +192,45 @@ Most likely, you'll want to add code dispatching an `fr-verify` event to your co
 
 [\[SINCE Orbeon Forms 2023.1.4\]](/release-notes/orbeon-forms-2023.1.4.md)
 
-TODO
+Similar to reCAPTCHA, you must configure properties in `properties-local.xml`. You start by enabling Friendly Captcha by setting the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.captcha.component.*.*"
+    value="fr:friendly-captcha"/>
+```
+
+You must the set keys, which you obtain by signing up with [Friendly Captcha](https://friendlycaptcha.com/) and following their [documentation](https://docs.friendlycaptcha.com/).
+
+The public key (or application, or "site key") is set with:
+
+```xml
+<property
+	as="xs:string"
+	name="oxf.xforms.xbl.fr.friendly-captcha.public-key"
+	value="..."/>
+```
+
+The private key is set with:
+
+```xml
+<property
+	as="xs:string"
+	name="oxf.xforms.xbl.fr.friendly-captcha.private-key"
+	value="..."/>
+```
+
+The private key will remain on the Orbeon Forms server and be sent server-side to the Friendly Captcha API endpoint to verify the captcha. It will never be shown to the end-user.
+
+As of Orbeon Forms 2023.1.4, Orbeon Forms uses version 0.9.16 of the Friendly Captcha widget. You can change the URL to the widget script with the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.friendly-captcha.script-url"
+    value="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.16/widget.min.js"/>
+```
 
 ## Captcha location
 
