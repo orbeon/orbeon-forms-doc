@@ -1,10 +1,48 @@
 # Captcha components
 
+## Introduction
+
+If you are creating a public form, you might want to add a captcha to avoid spam. You can do so by enabling the *captcha* feature.
+
 ## Which captcha is right for you
 
 [reCAPTCHA][1] is almost a de facto standard on the web: more than a million reCAPTCHA are solved every day, it is used by a large number of mainstream sites, like Facebook, and is constantly updated providing a high level of security. Since 2009, this service is owned by Google.
 
 Because of the high level of safety provided by reCAPTCHA, we recommend you use it, unless doing so isn't possible in your situation. Maybe, for instance, you don't want the server on which Orbeon Forms runs to connect to any external service, which the reCAPTCHA component does to verify the answer provided. If you can't use the reCAPTCHA, Orbeon Forms provides an alternate component, SimpleCaptcha, which runs entirely within Orbeon Forms, without the need to connect to any external server.
+
+## Enabling and choosing a component
+
+You enable a captcha by adding the following property to your `properties-local.xml`:
+
+[SINCE Orbeon Forms 2020.1]
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.captcha.component.*.*"
+    value="reCAPTCHA"/>
+```
+
+[UNTIL Orbeon Forms 2019.2]
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.captcha.*.*"
+    value="reCAPTCHA"/>
+```
+
+The property name changed in Orbeon Forms 2020.1 with the introduction of new captcha-related properties (more on this below). The old property name, without the `component` part, is still supported, but deprecated. Allowed values are:
+
+- Blank or empty string: no captcha is added to your form (default)
+- `reCAPTCHA`: use reCAPTCHA
+- `SimpleCaptcha`: use SimpleCaptcha
+- Qualified name of an XBL component that implements a captcha
+    - [SINCE Orbeon Forms 2017.2]
+    - Example: `acme:custom-captcha`
+    - When doing so, you need to have a namespace defined in your property file for the component prefix you're using, say `xmlns:acme="http://acme.org/"`.
+
+If using the reCAPTCHA, you'll also need to add properties to specify your reCAPTCHA public and private keys.
 
 ## Events
 
@@ -142,11 +180,65 @@ To use this component, where you want the captcha to show in your form, add:
 
 Most likely, you'll want to add code dispatching an `fr-verify` event to your component to trigger a verification, and listeners on the `fr-verify-done` and `fr-verify-error` events. For more information on this, see the section _Events_ above.
 
+## Friendly Captcha
+
+[\[SINCE Orbeon Forms 2023.1.4\]](/release-notes/orbeon-forms-2023.1.4.md)
+
+TODO
+
+## Captcha location
+
+### Configuration
+
+[SINCE Orbeon Forms 2020.1]
+
+The following property allows you to configure where the captcha is shown (when enabled). The two possible values are:
+
+- `form-bottom`: show the captcha at the bottom of the form (default)
+- `inside-wizard`: show the captcha inside the wizard
+    - NOTE: Only use this if your form is using the [wizard view](/form-runner/feature/wizard-view.md), otherwise the captcha won't show.
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.fr.detail.captcha.location.*.*"                         
+    value="inside-wizard"/>
+```
+
+### Limitations
+
+When all the following conditions are met:
+ 
+- The captcha is shown inside the wizard.
+- You have set the `oxf.fr.detail.captcha.visible.*.*` property (see below) to have the captcha show only on certain pages.
+- Users attempt to save or submit the form, or otherwise perform an action that requires data to be valid.
+- The captcha hasn't been solved yet.
+
+Then:
+
+- While an error will show in the error summary to inform users that the captcha needs to be solved, when users click on the error message, Form Runner will not switch to the page where the captcha appears. (The situation here is somewhat different relative to what happens with normal fields, as depending on how you set the `oxf.fr.detail.captcha.visible.*.*` property, the captcha could appear on multiple pages.)
+- The page or pages in which the captcha appear won't be highlighted, as is the case for other invalid fields.
+
+## Captcha visibility
+
+[SINCE Orbeon Forms 2020.1]
+
+When the captcha is enabled, you can control its visibility with the following property. The default value is `true` (shown below), and you can use a [value template](/xforms/attribute-value-templates.md), to make it dynamic. For instance, you can have the captcha only show on the last page of the wizard by setting the above [location property](#captcha-location) to `inside-wizard`, and this `visible` property to `{fr:is-wizard-last-page()}`.
+
+Even when not visible according this property (i.e. your value template returns `false`), as long as the captcha is enabled, solving it is required; so this property isn't intended to be used to dynamically decide whether to have a captcha on a page or not, but it is to decide at what point during the form filling process you want the captcha to show.
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.fr.detail.captcha.visible.*.*"                          
+    value="true"/>
+```
+
 ## See also
 
 - [Stop spammers by adding a CAPTCHA to your forms](https://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 
-[1]: http://en.wikipedia.org/wiki/ReCAPTCHA
+[1]: https://en.wikipedia.org/wiki/ReCAPTCHA
 [2]: https://developers.google.com/recaptcha/docs/verify?csw=1
 [4]: https://www.google.com/recaptcha/admin#list
 [5]: https://developers.google.com/recaptcha/docs/display

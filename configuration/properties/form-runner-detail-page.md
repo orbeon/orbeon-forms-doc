@@ -353,75 +353,7 @@ By default, in `explicit` mode, validation occurs:
 
 ## Captcha
 
-### Enabling and choosing a component
-
-If you are creating a public form, you might want to add a captcha to avoid spam. You can do so by enabling the _captcha_ feature, which you do by adding the following property to your `properties-local.xml`:
-
-[SINCE Orbeon Forms 2020.1]
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.captcha.component.*.*"
-    value="reCAPTCHA"/>
-```
-
-[UNTIL Orbeon Forms 2019.2]
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.detail.captcha.*.*"
-    value="reCAPTCHA"/>
-```
-
-The property name changed in Orbeon Forms 2020.1 with the introduction of new captcha-related properties (more on this below). The old property name, without the `component` part, is still supported, but deprecated. You can set this property to either:
-
-- Blank (empty string), to not have captcha added to your form. This is the default.
-- `reCAPTCHA` or `SimpleCaptcha`, to use one the two captcha implementations built in Orbeon Forms. Also see [which captcha is right for you](../../form-runner/component/captcha.md#which-captcha-is-right-for-you).
-- [SINCE Orbeon Forms 2017.2] The qualified name of an XBL component you created and that implements a captcha, say `acme:custom-captcha`. When doing so, you need to have a namespace defined in your property file for the component prefix you're using, say `xmlns:acme="http://acme.org/"`.
-
-If using the reCAPTCHA, you'll also need to add properties to specify your reCAPTCHA public and private keys. For more on this, see how to set up the [reCAPTCHA component](../../form-runner/component/captcha.md#recaptcha).
-
-### Showing inside the wizard
-
-[SINCE Orbeon Forms 2020.1] The following property allows you to configure where the captcha is shown (when enabled). The two possible values are:
-- `form-bottom` (the default value), to show the captcha at the bottom of the form.
-- `inside-wizard` to show the captcha inside the wizard. Only use this if your form is using the [wizard view](/form-runner/feature/wizard-view.md), otherwise the captcha won't show.
-
-```xml
-<property 
-    as="xs:string"  
-    name="oxf.fr.detail.captcha.location.*.*"                         
-    value="inside-wizard"/>
-```
-
-#### Limitations
-
-When all the following conditions are met:
- 
-- The captcha is shown inside the wizard.
-- You have set the `oxf.fr.detail.captcha.visible.*.*` property (see below) to have the captcha show only on certain pages.
-- Users attempt to save or submit the form, or otherwise perform an action that requires data to be valid.
-- The captcha hasn't been solved yet.
-
-Then:
-
-- While an error will show in the error summary to inform users that the captcha needs to be solved, when users click on the error message, Form Runner will not switch to the page where the captcha appears. (The situation here is somewhat different relative to what happens with normal fields, as depending on how you set the `oxf.fr.detail.captcha.visible.*.*` property, the captcha could appear on multiple pages.)
-- The page or pages in which the captcha appear won't be highlighted, as is the case for other invalid fields. 
-
-### Captcha visibility
-
-[SINCE Orbeon Forms 2020.1] When the captcha is enabled, you can control its visibility with the following property. The default value is `true` (shown below), and you can use a [value template](/xforms/attribute-value-templates.md), to make it dynamic. For instance, you can have the captcha only show on the last page of the wizard by setting the above [location property](#showing-inside-the-wizard) to `inside-wizard`, and this `visible` property to `{fr:is-wizard-last-page()}`.
-
-Even when not visible according this property (i.e. your value template returns `false`), as long as the captcha is enabled, solving it is required; so this property isn't intended to be used to dynamically decide whether to have a captcha on a page or not, but it is to decide at what point during the form filling process you want the captcha to show.
-
-```xml
-<property 
-    as="xs:string"  
-    name="oxf.fr.detail.captcha.visible.*.*"                          
-    value="true"/>
-```
+See [Captcha components](/form-runner/component/captcha.md).
 
 ## Running processes upon page load
 
