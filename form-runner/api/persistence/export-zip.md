@@ -142,6 +142,6 @@ The response contains a ZIP file binary. The structure is documented [here](/for
 
 ## See also
 
-- [Form definitions and form data batch export](/form-runner/feature/exporting-form-definitions-and-form-data.md)
+- [Form definitions and form data Zip export](/form-runner/feature/exporting-form-definitions-and-form-data.md)
 - [Revision History API](/form-runner/api/persistence/revision-history.md)
 - [Blog post: Exporting form definitions and data](https://www.orbeon.com/2024/04/form-data-export)
