@@ -35,6 +35,30 @@ The "Current data / revision history" dropdown allows you to choose whether you 
 
 Finally, it's possible to specify a date range using the "From" and "Until" date pickers. This allows you to export only the data that was modified after and/or before the specified dates. Both the "From" and "Until" dates are inclusive.
 
+## Permissions
+
+### Introduction
+
+Orbeon Forms makes a distinction between:
+
+- __Admin permissions or Form Builder permissions:__ These are defined in `form-builder-permissions.xml` and control special access to form definitions in Form Builder and on the Admin page. For details, see [Access control for editing forms](/form-runner/access-control/editing-forms.md) and [Forms Admin page - Permissions](forms-admin-page.md#permissions).
+- __Deployed forms permissions:__ These permissions are associated with a form definition using the Form Builder UI or configuration properties. These permissions mainly regard accessing the *form data*, although they also impact whether the form definition can be presented to the user, and if so in which mode. For details, see [Access control and permissions - Deployed forms](/form-runner/access-control/deployed-forms.md).
+
+### Available forms
+
+The list of application names and form names made available to the Zip Export, either through the "Export selected forms" or "Export following forms" modes, is restricted to the list of application names and form names that the current user can see on the Admin page. If the user currently accessing the Admin page doesn't have access to certain application names and form names based on the `form-builder-permissions.xml` configuration, those will not be:
+
+- listed as available in the Export dialog
+- exported if "All applications" or "All forms" are selected
+ 
+For details on what application names and form names are accessible on the Admin page, see [Forms Admin page - Permissions](forms-admin-page.md#permissions).
+
+### Available form data
+
+When a particular application name/form name/form version is selected for export, whether explicitly or through the "All applications" or "All forms" options, and "Form data" is selected for export, deployed forms permissions are ignored for the purpose of the export of the form data, and all form data associated with the given form is exported, regardless of the permissions associated with the form definitions.
+
+__WARNING: From this perspective, the Zip Export works like a superuser feature, and you should know that users with access to the Admin page will by extension have access to additional form data in the exported zip file.__ 
+
 ## Zip file structure
 
 The exported zip file contains all selected form definitions and data, as well as associated attachments.
