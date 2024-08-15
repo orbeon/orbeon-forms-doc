@@ -4,7 +4,7 @@
 
 The Forms Admin page allows you to perform admin tasks on published forms. 
 
-You access the Forms Admin page by adding `fr/admin` to the path on which you deployed Orbeon Forms. If you deployed Orbeon Forms on `http://www.example.com/orbeon/`, then you can access the Forms Admin page at `http://www.example.com/orbeon/fr/admin`.
+You access the Forms Admin page by adding `fr/admin` to the path on which you deployed Orbeon Forms. If you deployed Orbeon Forms on `https://www.example.com/orbeon/`, then you can access the Forms Admin page at `https://www.example.com/orbeon/fr/admin`.
 
 The Forms Admin page is very similar to the [Published Forms](published-forms-page.md) page, but features additional administration functions and shows library forms.
 
