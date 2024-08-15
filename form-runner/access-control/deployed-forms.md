@@ -182,7 +182,7 @@ On the Form Runner Published Forms page, all the forms on which the current user
 ### Summary page
 
 - Access is completely denied if the current user can't perform any of the _Read_, _Update_, or _Delete_ operations.
-  -[SINCE Orbeon Forms 2022.1] Access is also completely denied if the user doesn't have the _List_ permission.
+  - [SINCE Orbeon Forms 2022.1] Access is also completely denied if the user doesn't have the _List_ permission.
 - The _Delete_ button is disabled if the current user can't perform the _Delete_ operation.
 - The _review_ and _pdf_ button are disabled if the current user can't perform the _Read_ operation.
 - Clicking in a row of the table will open the form in _Edit_ mode if the current user can perform the _Update_ operation, in _View_ mode if they can perform the _Read_ operation, and do nothing otherwise.
