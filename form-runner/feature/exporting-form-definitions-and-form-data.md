@@ -1,4 +1,4 @@
-# Form definitions and form data batch export
+# Form definitions and form data Zip export
 
 ## Availability
 
