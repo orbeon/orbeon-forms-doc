@@ -142,7 +142,7 @@
         * [Excel and XML import](form-runner/feature/excel-xml-import.md)
         * [Excel and XML export](form-runner/feature/excel-xml-export.md)
         * [Summary page Excel Export](form-runner/feature/summary-page-export.md)
-        * [Form definitions and form data Zip export](form-runner/feature/exporting-form-definitions-and-form-data.md)
+        * [Form definitions and form data Zip Export](form-runner/feature/exporting-form-definitions-and-form-data.md)
         * [Purging historical data](form-runner/feature/purging-historical-data.md)
         * [Lease](form-runner/feature/lease.md)
         * [Localization](form-runner/feature/localization.md)

@@ -312,9 +312,9 @@ If you'd like to enable logging at the `debug` level, add the following to your 
 </category>
 ```
 
-## Form definitions and form data Zip export
+## Form definitions and form data Zip Export
 
-See [Form definitions and form data Zip export](exporting-form-definitions-and-form-data.md).
+See [Form definitions and form data Zip Export](exporting-form-definitions-and-form-data.md).
 
 ## Purging historical data
 
