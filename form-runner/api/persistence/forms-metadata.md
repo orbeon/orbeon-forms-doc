@@ -102,7 +102,7 @@ For example:
 Optionally, you can pass the URL parameter `ignore-admin-permissions`:
 
 - when set to `true`
-    - Even if the user has access to the form as per `form-builder-permissions.xml`, the forms are filtered as [documented](#returning-all-form-definitions).
+    - Even if the user has access to the form as per `form-builder-permissions.xml`, the forms are filtered as [documented above](#returning-all-form-definitions).
 - when omitted or set to `false` (the default)
     - The behavior is the same as before this parameter was supported.
 
