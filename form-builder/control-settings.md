@@ -232,7 +232,7 @@ You can achieve this with the "Automatic PDF" options in the "Control Settings" 
 The supported properties are:
 
 - `oxf.xforms.xbl.fr.dropdown-select1.pdf-appearance.*.*`
-- `oxf.xforms.xbl.fr.'dropdown-select1-search'.pdf-appearance.*.*`
+- `oxf.xforms.xbl.fr.dropdown-select1-search.pdf-appearance.*.*`
 
 The possible values for each property are:
 
