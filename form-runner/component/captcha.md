@@ -16,7 +16,7 @@ Using [Friendly Captcha](https://friendlycaptcha.com/) is another solid option. 
 
 ## Enabling and choosing a component
 
-You enable a captcha by adding the following property to your `properties-local.xml`:
+You enable a captcha by adding the following property to your `properties-local.xml`. For example:
 
 [SINCE Orbeon Forms 2020.1]
 
@@ -24,7 +24,7 @@ You enable a captcha by adding the following property to your `properties-local.
 <property
     as="xs:string"
     name="oxf.fr.detail.captcha.component.*.*"
-    value="reCAPTCHA"/>
+    value="fr:recaptcha"/>
 ```
 
 [UNTIL Orbeon Forms 2019.2]
