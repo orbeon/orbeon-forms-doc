@@ -39,12 +39,26 @@ You enable a captcha by adding the following property to your `properties-local.
 The property name changed in Orbeon Forms 2020.1 with the introduction of new captcha-related properties (more on this below). The old property name, without the `component` part, is still supported, but deprecated. Allowed values are:
 
 - Blank or empty string: no captcha is added to your form (default)
-- `reCAPTCHA`: use [reCAPTCHA][1]
-- `OnPremiseCaptcha` (legacy: `SimpleCaptcha`)
-    - [\[UNTIL Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md): use SimpleCaptcha
-    - [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md): use [Katpcha](https://github.com/youkol/kaptcha)
-- `fr:friendly-captcha`: use [Friendly Captcha](https://friendlycaptcha.com/)
+- `fr:recaptcha`
+    - This enables [reCAPTCHA][1]. 
+    - You can also use the deprecated token `reCAPTCHA` for backward compatibility.
+    - Make sure that, at the top of your properties-local.xml file, you have `xmlns:fr="http://orbeon.org/oxf/xml/form-runner"` defined (this should be present by default).
+- `fr:friendly-captcha`
+    - This enables [Friendly Captcha](https://friendlycaptcha.com/).
     - [\[SINCE Orbeon Forms 2023.1.4\]](/release-notes/orbeon-forms-2023.1.4.md) 
+    - make sure that, at the top of your properties-local.xml file, you have `xmlns:fr="http://orbeon.org/oxf/xml/form-runner"` defined (this should be present by default)
+- `fr:on-premise-captcha`
+    - [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+    - This enables the [Katpcha](https://github.com/youkol/kaptcha) implementation.
+    - You can also use the deprecated tokens `OnPremiseCaptcha` or `SimpleCaptcha` for backward compatibility.
+    - Make sure that, at the top of your properties-local.xml file, you have `xmlns:fr="http://orbeon.org/oxf/xml/form-runner"` defined (this should be present by default).
+- `SimpleCaptcha`
+    - [\[DEPRECATED SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+    - [\[UNTIL Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+        - This uses the SimpleCaptcha implementation.
+    - [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+        - This uses to the [Katpcha](https://github.com/youkol/kaptcha) implementation.
+        - If you use Orbeon Forms 2023.1.1 or newer, use `fr:on-premise-captcha` instead.
 - Qualified name of an XBL component that implements a captcha
     - [SINCE Orbeon Forms 2017.2]
     - Example: `acme:custom-captcha`
