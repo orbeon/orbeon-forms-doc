@@ -14,9 +14,9 @@ You can now export form data from the Summary page in Excel format, with a simpl
 
 ![Form data and Excel export button on the Summary page](/form-runner/images/summary-excel-export.png)
 
-I addition, we have added new keyboard shortcuts to Form Builder. For more see, the [blog post](https://www.orbeon.com/2024/07/keyboard-shortcuts).
-
 For more, see the [documentation](/form-runner/feature/summary-page-export.md).
+
+In addition, we have added new keyboard shortcuts to Form Builder. For more see, the [blog post](https://www.orbeon.com/2024/07/keyboard-shortcuts).
 
 ## Issues addressed
 
