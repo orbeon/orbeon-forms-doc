@@ -277,6 +277,21 @@ As of Orbeon Forms 2023.1.4, Orbeon Forms uses version 0.9.16 of the Friendly Ca
     value="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.16/widget.min.js"/>
 ```
 
+You can configure the Friendly Captcha start mode with the following property:
+
+```xml
+<property 
+    as="xs:string" 
+    name="oxf.xforms.xbl.fr.friendly-captcha.start-mode"                
+    value="auto"/>
+```
+
+Allowed values:
+
+- `auto`: the solver starts as soon as possible after the page loads (the default)
+- `focus`: the solver starts when the user focuses in the form or presses the start button in the widget
+- `none`: the solver only starts when the user presses the start button
+
 ## Advanced configuration
 
 ### Captcha location
