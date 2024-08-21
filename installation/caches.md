@@ -78,6 +78,8 @@ You can update that configuration by placing your own `ehcache.xml` file in the 
 
 ## Enabling JCache providers
 
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
 With the Orbeon Forms versions that support it, you can enable JCache support with the following:
 
 ```xml
@@ -120,6 +122,8 @@ For example, to point to the built-in Ehcache 3.x configuration, set:
     name="oxf.xforms.cache.resource" 
     value="/ehcache3.xml"/>
 ```
+
+__NOTE: The Ehcache 3 JAR file is already included in Orbeon Forms. Java packages are different, and therefore the Ehcache 2.x and Ehcache 3.x JAR files do not conflict.__
 
 If you are using a different JCache-compatible implementation, different values for the `oxf.xforms.cache.resource` and/or `oxf.xforms.cache.uri` properties might be needed.
 
