@@ -16,7 +16,7 @@ This maintenance release introduces support for [Friendly Captcha](https://frien
 
 The following small features have also been added:
 
-- `edit-to-new'` process action ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#edit-to-new))
+- `edit-to-new` process action ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner#edit-to-new))
 - `captcha-reset` process action ([doc](https://doc.orbeon.com/form-runner/component/captcha#resetting-the-captcha))
 
 ## Issues addressed
