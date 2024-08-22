@@ -123,7 +123,7 @@ For example, to point to the built-in Ehcache 3.x configuration, set:
     value="/ehcache3.xml"/>
 ```
 
-__NOTE: The Ehcache 3 JAR file is already included in Orbeon Forms. Java packages are different, and therefore the Ehcache 2.x and Ehcache 3.x JAR files do not conflict.__
+_NOTE: The Ehcache 3 JAR file is already included in Orbeon Forms. Java packages are different, and therefore the Ehcache 2.x and Ehcache 3.x JAR files do not conflict._
 
 If you are using a different JCache-compatible implementation, different values for the `oxf.xforms.cache.resource` and/or `oxf.xforms.cache.uri` properties might be needed.
 
