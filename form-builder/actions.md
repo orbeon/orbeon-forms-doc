@@ -84,12 +84,12 @@ Each row instructs the action to take a value and pass it to the service, and yo
     - [SINCE Orbeon Forms 2022.1] The dropdown under "Destination" lists the URL parameter names you have defined in the HTTP Service Editor, allowing you to select the parameter you want to set.
     - [UNTIL Orbeon Forms 2021.1] The HTTP Service Editor implicitly creates an XML document representing these parameters, as in the example below. The Actions Editor doesn't yet support specifying URL parameters directly by name; instead, you need to enter a formula under "Set Service Request Values", like `//userId` or `//userName`.
 
-    ```xml
-    <params>
-        <userId>1</userId>
-        <userName>test</userName>
-    </params>
-    ```
+        ```xml
+        <params>
+            <userId>1</userId>
+            <userName>test</userName>
+        </params>
+        ```
 - With Database services:
     - To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
 
