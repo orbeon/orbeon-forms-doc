@@ -81,7 +81,8 @@ Each row instructs the action to take a value and pass it to the service, and yo
     - You provide a formula, which must point to an element or attribute node of the request body defined in the HTTP service under "XML Request Body".
 - With HTTP services doing a GET or DELETE:
     - The HTTP Service Editor [allows you to define URL parameters](http-services.md#url-parameters) when using the `GET` and `DELETE` HTTP methods.
-    - In this case, the HTTP Service Editor implicitly creates an XML document representing these parameters, as in the example below. The Actions Editor doesn't yet support specifying URL parameters directly by name; instead, you need to enter a formula under "Set Service Request Values", like `//userId` or `//userName`.
+    - [SINCE Orbeon Forms 2022.1] The dropdown under "Destination" lists the URL parameter names you have defined in the HTTP Service Editor, allowing you to select the parameter you want to set.
+    - [UNTIL Orbeon Forms 2021.1] The HTTP Service Editor implicitly creates an XML document representing these parameters, as in the example below. The Actions Editor doesn't yet support specifying URL parameters directly by name; instead, you need to enter a formula under "Set Service Request Values", like `//userId` or `//userName`.
 
     ```xml
     <params>
