@@ -578,14 +578,14 @@ The following masks are supported:
 
 For dates (property `oxf.xforms.format.input.date`):
 
-| Format            | Example    | Description                         |
-|-------------------|------------|-------------------------------------|
-| `[M]/[D]/[Y]`     | 11/5/2023  | also called "North American format" |
-| `[D]/[M]/[Y]`     | 5/11/2023  | also called "European format"       | 
-| `[D].[M].[Y]`     | 5.11.2023  | variation with dot separator        |
-| `[D]-[M]-[Y]`     | 5-11-2023  | variation with dash separator       |
-| `[M01]/[D01]/[Y]` | 11/05/2023 | force two digits for months an days | 
-| `[Y]-[M01]-[D01]` | 2023-11-05 | ISO format                          | 
+| Format            | Example    | Description                          |
+|-------------------|------------|--------------------------------------|
+| `[M]/[D]/[Y]`     | 11/5/2023  | also called "North American format"  |
+| `[D]/[M]/[Y]`     | 5/11/2023  | also called "European format"        | 
+| `[D].[M].[Y]`     | 5.11.2023  | variation with dot separator         |
+| `[D]-[M]-[Y]`     | 5-11-2023  | variation with dash separator        |
+| `[M01]/[D01]/[Y]` | 11/05/2023 | force two digits for months and days | 
+| `[Y]-[M01]-[D01]` | 2023-11-05 | ISO format                           | 
 
 For times, see [Time component](/form-runner/component/time.md). 
 
