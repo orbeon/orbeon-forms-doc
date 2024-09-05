@@ -12,6 +12,7 @@ xxf:json-to-xml($json as xs:string?) as document-node()?
 The `xxf:json-to-xml()` function takes a JSON string and returns an XML document using the [XForms 2.0 conversion scheme](../submission-json.md).
 
 If the parameter is the empty sequence, the result is the empty sequence.
+[SINCE Orbeon Forms 2024.1, 2023.1.5, 2022.1.8, 2021.1.11] If the parameter can't be parsed as JSON, the function returns an empty sequence instead of raising an error.
 
 If the parameter is omitted, the context item converted to a string via the `string()` function is used. 
 
