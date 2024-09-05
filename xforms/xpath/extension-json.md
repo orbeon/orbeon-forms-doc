@@ -4,16 +4,17 @@
 
 [SINCE Orbeon Forms 2016.3]
 
+The `xxf:json-to-xml()` function takes a JSON string and returns an XML document using the [XForms 2.0 conversion scheme](../submission-json.md).
+
 ```xpath
 xxf:json-to-xml() as document-node()?
 xxf:json-to-xml($json as xs:string?) as document-node()?
 ```
 
-- The `xxf:json-to-xml()` function takes a JSON string and returns an XML document using the [XForms 2.0 conversion scheme](../submission-json.md).
+- If the parameter is omitted, the context item is converted to a string using the `string()` function.
 - The function returns an empty sequence in the following cases:
-  - The parameter is the empty sequence.
-  - [SINCE Orbeon Forms 2024.1, 2023.1.5, 2022.1.8, 2021.1.11] The parameter can't be parsed as JSON (instead of raising an error, as done by earlier versions).
-- If the parameter is omitted, the context item converted to a string via the `string()` function is used. 
+    - The parameter is an empty sequence.
+    - [SINCE Orbeon Forms 2024.1, 2023.1.5, 2022.1.8, 2021.1.11] The parameter, or the context item if the parameter is omitted, cannot be parsed as JSON. In earlier versions, this case would raise an error instead of returning an empty sequence.
 
 ## xxf:xml-to-json()
 
