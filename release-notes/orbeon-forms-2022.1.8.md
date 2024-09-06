@@ -18,7 +18,7 @@ This release addresses the following issues since [Orbeon Forms 2022.1.7 PE](orb
 - Security
     - CVE-2018-18531 in Kaptcha ([\#6382](https://github.com/orbeon/orbeon-forms/issues/6382)) 
 - Form Builder
-    - Type with custom error message must not store xs:string ([\#6252](https://github.com/orbeon/orbeon-forms/issues/6252))
+    - Type with custom error message must not store `xs:string` ([\#6252](https://github.com/orbeon/orbeon-forms/issues/6252))
     - "Dropdown with Other" truncates entries in Number field settings ([\#6308](https://github.com/orbeon/orbeon-forms/issues/6308))
     - Parameters editor should never allow entering two parameters with the same name ([\#6368](https://github.com/orbeon/orbeon-forms/issues/6368))
     - Horizontal scrollbar in toolbox when version dropdown displayed ([\#6358](https://github.com/orbeon/orbeon-forms/issues/6358))
@@ -48,7 +48,7 @@ This release addresses the following issues since [Orbeon Forms 2022.1.7 PE](orb
     - Can't parse JSON from context with `xxf:json-to-xml()` ([\#6470](https://github.com/orbeon/orbeon-forms/issues/6470))
     - `xxf:json-to-xml()` fails instead of returning an empty sequence when the JSON is invalid ([\#6472](https://github.com/orbeon/orbeon-forms/issues/6472))
 
-- You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
+You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
 
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
