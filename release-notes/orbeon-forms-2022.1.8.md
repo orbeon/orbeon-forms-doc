@@ -2,7 +2,7 @@
 
 __Friday, September 6, 2024__
 
-Today we released Orbeon Forms 2022.1.8 PE! This maintenance release contains bug-fixes and minor new features and is recommended for all users of:
+Today we released Orbeon Forms 2022.1.8 PE! This maintenance release contains bug-fixes and is recommended for all users of:
 
 - [Orbeon Forms 2022.1.7 PE](orbeon-forms-2022.1.7.md)
 - [Orbeon Forms 2022.1.6 PE](orbeon-forms-2022.1.6.md)
@@ -13,7 +13,7 @@ Today we released Orbeon Forms 2022.1.8 PE! This maintenance release contains bu
 - [Orbeon Forms 2022.1.1 PE](orbeon-forms-2022.1.1.md)
 - [Orbeon Forms 2022.1 PE](orbeon-forms-2022.1.md)
 
-This release also addresses the following issues since [Orbeon Forms 2022.1.7 PE](orbeon-forms-2022.1.7.md):
+This release addresses the following issues since [Orbeon Forms 2022.1.7 PE](orbeon-forms-2022.1.7.md):
 
 - Security
     - CVE-2018-18531 in Kaptcha ([\#6382](https://github.com/orbeon/orbeon-forms/issues/6382)) 
