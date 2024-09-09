@@ -67,7 +67,7 @@ The `field-width` parameter can have two values:
 - `natural`: takes a width defined by the component
 - `full`: takes the entire width of the grid cell 
 
-This parameter can be specified at the control level, form level, or in properties-local.xml. The default is:
+This parameter can be specified at the control level, form level, or in `properties-local.xml`. The default is:
 
 ```xml
 <property

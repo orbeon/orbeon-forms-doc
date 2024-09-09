@@ -18,18 +18,20 @@ You use the date component like a regular input field, for example:
 
 `fr:date` must be bound to `xs:date`.
 
-## Parameters
+## Configuration
+
+`fr:date` supports parameters, which you can set via properties, Form Builder settings, or directly on `fr:date`.
+
+### Week start day
 
 [SINCE Orbeon Forms 2022.1]
 
-`fr:date` supports parameters, which you can set via properties, Form Builder settings, or directly on `fr:date`:
+The `week-start-day` parameter allows you to specify the first day of the week:
 
-- `week-start-day`
-    - first day of the week
-    - values: `sunday` or `monday`
-    - default: when not specified, the start day depends on the language (for example Sunday for English, Monday for French)
+- values: `sunday` or `monday`
+- default: when not specified, the start day depends on the language (for example Sunday for English, Monday for French)
 
-These are the default values of the properties:
+This is unspecified by default:
 
 ```xml
 <property 
@@ -38,7 +40,33 @@ These are the default values of the properties:
     value=""/>
 ```
 
-## Native date picker
+### Output format
+
+[SINCE Orbeon Forms 2023.1.4]
+
+The Date component adds an `output-format` parameter. This parameter can be used to override the global property at the control level, the form level, or via `properties-local.xml` with the following new property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.date.output-format"
+    value=""/>
+```
+
+As usual, the property can use an app name and form name (with possible wildcards) to specify a default value for all controls in a given app/form:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.date.output-format.acme.*"
+    value="[H01]:[m]"/>
+```
+
+The value is in the same format as the global `oxf.xforms.format.input.date` property.
+
+By default, the `output-format` parameter is not set, and the global `oxf.xforms.format.input.date` property is used for backward compatibility.
+
+### Native date picker
 
 On iOS, the native iOS date picker is used by default, unless users enabled Request Desktop Website in Safari, in which case they will see the same behavior as they would on the desktop. 
 
