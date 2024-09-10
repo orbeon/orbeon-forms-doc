@@ -29,7 +29,7 @@ Form Runner often performs *internal* service requests. For example:
 - The Form Runner Summary page calls the Search API.
 - The Form Runner Detail  page calls the CRUD API.
 
-In such cases, user is already authorized and authenticated (or may be anonymous) when accessing the page, and the user credentials are directly passed to the internal service call. In this case, the authorizer is not used at all.
+In such cases, the user is already authorized and authenticated (or may be anonymous) when accessing the page, and the user credentials are directly passed to the internal service call. In this case, the authorizer is not used at all.
 
 ## Providing user information
 
@@ -37,7 +37,7 @@ In such cases, user is already authorized and authenticated (or may be anonymous
 
 Until Orbeon Forms 2021.1.x included, it was not possible to easily pass user information when calling service APIs. It was only possible by using a workaround, such as deploying another instance of Orbeon Forms configured to use header-based authentication, separately from the rest of the application. In some cases, if you were using header-based authentication, this might work as well.
 
-With Orbeon Forms 2022.1, you can pass user information using Orbeon Forms HTTP headers:
+With Orbeon Forms 2022.1 and newer, you can pass user information using Orbeon Forms HTTP headers:
 
 - If using individual headers
     - `Orbeon-Username`
