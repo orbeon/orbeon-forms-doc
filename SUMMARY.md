@@ -69,7 +69,7 @@
         * [Undo and redo](form-builder/undo-redo.md)
         * [Keyboard shortcuts](form-builder/keyboard-shortcuts.md)
     * [Formulas](form-builder/formulas.md)
-        * [Examples](form-builder/formulas-examples.md)
+        * [Examples of formulas](form-builder/formulas-examples.md)
         * [Formulas inspector](form-builder/formulas-inspector.md)
         * [Formulas console](form-builder/formulas-console.md)
     * [Summary page](form-builder/summary-page.md)
