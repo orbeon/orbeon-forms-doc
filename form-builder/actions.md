@@ -1,4 +1,4 @@
-# Actions
+# Simple Actions
 
 ## Introduction
 

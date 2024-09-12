@@ -10,7 +10,7 @@ Orbeon Forms supports services and actions. With Orbeon Forms 2018.2, a first st
 
 ## Enhancements
 
-In addition to the features available through the ["Actions" dialog](actions.md), the following enhancements are available:
+In addition to the features available through the [Simple Actions dialog](actions.md), the following enhancements are available:
 
 - Call an action in response to *multiple events*.
 - Support *more event types*.
@@ -952,6 +952,6 @@ To be more explicit, the attribute can also be set on the first `<fr:value>`:
 - [Action Syntax examples](action-syntax-examples.md)
 - [Editing the source code of the form definition](edit-source.md)
 - [Synchronizing repeated content](synchronize-repeated-content.md)
-- [Actions](actions.md)
+- [Simple Actions](actions.md)
 - [HTTP services](http-services.md)
 - [Database services](database-services.md)

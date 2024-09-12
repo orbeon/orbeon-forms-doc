@@ -15,7 +15,7 @@ Instead, a dataset lives as long as the user stays on the given form page.
 
 ## Creating a dataset
 
-You create a dataset using the [Actions Editor](../../form-builder/actions.md). The data returned by the service is stored into the dataset in XML format.
+You create a dataset using the [Simple Actions Editor](../../form-builder/actions.md). The data returned by the service is stored into the dataset in XML format.
 
 A dataset is identified by a name. Multiple actions calling services can store data into the same dataset. The action which last updates the dataset overwrites the entire content of the dataset. 
 
@@ -36,7 +36,7 @@ Datasets do not work in section templates yet, see [issue #3132](https://github.
 ## See also
 
 - Blog post: [Datasets](https://blog.orbeon.com/2017/01/datasets.html)
-- [Actions Editor](/form-builder/actions.md)
+- [Simple Actions](/form-builder/actions.md)
 - [HTTP Services](/form-builder/http-services.md)
 - [Database Services](/form-builder/database-services.md)
 - [`fr:dataset()`](/xforms/xpath/extension-form-runner.md#frdataset) function

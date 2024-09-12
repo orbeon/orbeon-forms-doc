@@ -73,7 +73,7 @@ Including the features and enhancements above, we [closed over 180 issues](https
 
 ### Form Builder and Form Runner
 
-- The [Actions Editor](/form-builder/actions.md) supports setting a hint for control choices. ([\#4566](https://github.com/orbeon/orbeon-forms/issues/4566))
+- The [Simple Actions Editor](/form-builder/actions.md) supports setting a hint for control choices. ([\#4566](https://github.com/orbeon/orbeon-forms/issues/4566))
 - Emails can include a link back to the form. ([\#4461](https://github.com/orbeon/orbeon-forms/issues/4461)) ([doc](/form-builder/advanced/template-syntax.md#links))
 - Emails support `Reply-To`. ([\#4480](https://github.com/orbeon/orbeon-forms/issues/4480)) ([doc](/form-builder/control-settings.md#email-options))
 - Some math functions are now exposed in formulas. ([\#4508](https://github.com/orbeon/orbeon-forms/issues/4508)) ([doc](/xforms/xpath/standard-functions.md#xpath-3-0-functions))

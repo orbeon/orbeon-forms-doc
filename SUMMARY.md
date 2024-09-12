@@ -79,7 +79,7 @@
         * Services and actions
             * [HTTP services](form-builder/http-services.md)
             * [Database services](form-builder/database-services.md)
-            * [Actions](form-builder/actions.md)
+            * [Simple Actions](form-builder/actions.md)
             * [Action Syntax](form-builder/actions-syntax.md)
             * [Action Syntax examples](form-builder/action-syntax-examples.md)
             * [Synchronizing repeated content](form-builder/synchronize-repeated-content.md)

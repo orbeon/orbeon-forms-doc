@@ -106,7 +106,7 @@ As of 2016-04-19 this page is still being updated.
         - JSON support (for reading only): [doc](xforms/submission-standard.md#json-support)
         - setting URL parameters
     - Database Services: [doc](form-builder/database-services.md)
-    - Actions: [doc](form-builder/actions.md)
+    - Simple Actions: [doc](form-builder/actions.md)
 - XML Schema Support: [doc](form-builder/xml-schema-support.md)
 - Source code editor: [doc](form-runner/component/source-code-editor.md)whether section is collapsible
 - Extension API: [doc](form-builder/extension-api.md)

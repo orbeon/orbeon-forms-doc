@@ -181,7 +181,7 @@ But you can also use them the following formulas:
     - Value formula
     - Hint formula
 - Actions
-    - [Legacy actions](/form-builder/actions.md)
+    - [Simple Actions](/form-builder/actions.md)
     - [Action Syntax](/form-builder/actions-syntax.md)
 - [Template parameters](/form-builder/template-syntax.md)
     - Control name

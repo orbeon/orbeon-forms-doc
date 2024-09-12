@@ -125,5 +125,5 @@ You can get the [source of the form described above](https://gist.github.com/orb
 ## See also
 
 - [HTTP services](http-services.md)
-- [Actions](actions.md)
+- [Simple Actions](actions.md)
 - [Synchronizing repeated content](synchronize-repeated-content.md)

@@ -194,5 +194,5 @@ Services and actions in the section template are *not* merged into the enclosing
 - [Toolbox](toolbox.md)
 - [HTTP services](http-services.md)
 - [Database services](database-services.md)
-- [Actions](actions.md)
+- [Simple Actions](actions.md)
 

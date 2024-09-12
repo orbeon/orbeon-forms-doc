@@ -144,6 +144,6 @@ When you test or run the deployed form, you see the Nobel Prize winners for 2023
 - [Action Syntax](actions-syntax.md)
 - [Editing the source code of the form definition](edit-source.md)
 - [Synchronizing repeated content](synchronize-repeated-content.md)
-- [Actions](actions.md)
+- [Simple Actions](actions.md)
 - [HTTP services](http-services.md)
 - [Database services](database-services.md)

@@ -151,7 +151,7 @@ Orbeon Forms warns you if there are existing actions that refer to the service.
 
 ## See also
 
-- [Actions](actions.md)
+- [Simple Actions](actions.md)
 - [Database services](database-services.md)
 - [Synchronizing repeated content](synchronize-repeated-content.md)
 - [Datasets](/form-runner/feature/datasets.md)
