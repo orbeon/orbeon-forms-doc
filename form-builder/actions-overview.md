@@ -16,4 +16,7 @@ See also:
 - [Simple Actions](actions.md)
 - [Action Syntax](actions-syntax.md)
 - [Action Syntax Examples](action-syntax-examples.md)
+- [Database Services](database-services.md)
+- [HTTP Services](http-services.md)
+- [Synchronizing repeated content](synchronize-repeated-content.md)
 - [Simple processes](/form-runner/advanced/buttons-and-processes/README.md)
