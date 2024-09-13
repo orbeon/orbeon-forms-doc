@@ -949,6 +949,7 @@ To be more explicit, the attribute can also be set on the first `<fr:value>`:
 
 ## See also
 
+- Blog post: [Making sense of Form Runner Actions](https://www.orbeon.com/2024/09/making-sense-form-runner-actions)
 - [Action Syntax examples](action-syntax-examples.md)
 - [Editing the source code of the form definition](edit-source.md)
 - [Synchronizing repeated content](synchronize-repeated-content.md)
