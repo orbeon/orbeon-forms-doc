@@ -142,7 +142,7 @@ When you test or run the deployed form, you see the Nobel Prize winners for 2023
 ## See also
 
 - Blog post: [Making sense of Form Runner Actions](https://www.orbeon.com/2024/09/making-sense-form-runner-actions)
-- [Services and actions overview](actions-overview.md)
+- [Services and actions overview](services-and-actions.md)
 - [Action Syntax](actions-syntax.md)
 - [Editing the source code of the form definition](edit-source.md)
 - [Synchronizing repeated content](synchronize-repeated-content.md)
