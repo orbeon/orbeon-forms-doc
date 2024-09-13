@@ -76,7 +76,8 @@
     * [Form localization](form-builder/localization.md)
     * Advanced
         * [Edit source](form-builder/edit-source.md)
-        * [Services and actions](form-builder/actions-overview.md)
+        * Services and actions
+            * [Services and actions overview](form-builder/actions-overview.md)
             * [HTTP services](form-builder/http-services.md)
             * [Database services](form-builder/database-services.md)
             * [Simple Actions](form-builder/actions.md)
