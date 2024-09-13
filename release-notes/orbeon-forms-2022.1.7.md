@@ -34,6 +34,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.6 PE
     - "Malformed class name" error in the `orbeon.log` ([\#6186](https://github.com/orbeon/orbeon-forms/issues/6186))
     - "_.isUndefined is not a function" when testing with Subject7 ([\#6126](https://github.com/orbeon/orbeon-forms/issues/6126))
     - Multiple elements with `id="xforms-select-full-template"` and `id="xforms-select1-full-template"` ([\#6224](https://github.com/orbeon/orbeon-forms/issues/6224))
+    - Excel export: mismatch of fields in repeated sections or grids ([\#6128](https://github.com/orbeon/orbeon-forms/issues/6128))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
 

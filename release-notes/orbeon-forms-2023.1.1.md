@@ -65,6 +65,7 @@ This release addresses the following issues since [Orbeon Forms 2023.1 PE](orbeo
         - Portlet: error when attempting to read autosaved draft ([\#6139](https://github.com/orbeon/orbeon-forms/issues/6139))
         - Embedding JAR doesn't include `JavaxServletFilter`/`JakartaServletFilter` ([\#6192](https://github.com/orbeon/orbeon-forms/issues/6192))
         - Replace SimpleCaptcha by Kaptcha ([\#6215](https://github.com/orbeon/orbeon-forms/issues/6215))
+        - Portlet: error when attempting to read autosaved draft ([\#6139](https://github.com/orbeon/orbeon-forms/issues/6139))
 - Platform
     - Generate proper SQLite demo database during build step ([\#6104](https://github.com/orbeon/orbeon-forms/issues/6104))
     - NPE with `JavaxServletRegistration.addMapping()` ([\#6123](https://github.com/orbeon/orbeon-forms/issues/6123))

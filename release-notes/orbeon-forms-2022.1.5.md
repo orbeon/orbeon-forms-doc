@@ -43,6 +43,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.4 PE
         - Disable PDF parameters for page paths ([\#5918](https://github.com/orbeon/orbeon-forms/issues/5918))
         - Automatic PDF generation can be extremely slow on large forms ([\#5888](https://github.com/orbeon/orbeon-forms/issues/5888))
     - Other
+        - Session heartbeat request sent too frequently ([\#5889](https://github.com/orbeon/orbeon-forms/issues/5889))
         - Excel import: show errors immediately in review data page ([\#5722](https://github.com/orbeon/orbeon-forms/issues/5722))
         - Excel/XML export button on Summary page ([\#5264](https://github.com/orbeon/orbeon-forms/issues/5264))
         - Automatically visit changed visible fields ([\#5934](https://github.com/orbeon/orbeon-forms/issues/5934))
