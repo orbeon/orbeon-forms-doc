@@ -16,7 +16,8 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 
 | Year | Date   | Version    | PE support              | Release notes                                                                                                                        |
 |------|--------|------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| 2024 | Sep 6  | 2022.1.8   | 🟩 Until Dec 31, 2025   | [Release notes](/release-notes/orbeon-forms-2022.1.8.md)                                                                             | 
+| 2024 | Sep 13 | 2021.1.11  | 🟩 Until Dec 31, 2024   | [Release notes](/release-notes/orbeon-forms-2021.1.11.md)                                                                            | 
+|      | Sep 6  | 2022.1.8   | 🟩 Until Dec 31, 2025   | [Release notes](/release-notes/orbeon-forms-2022.1.8.md)                                                                             | 
 |      | Aug 22 | 2023.1.4   | 🟩 Until Dec 31, 2026   | [Release notes](/release-notes/orbeon-forms-2023.1.4.md)                                                                             | 
 |      | Jun 13 | 2023.1.3   | 🟨 Upgrade to 2023.1.4  | [Release notes](/release-notes/orbeon-forms-2023.1.3.md)                                                                             | 
 |      | Apr 26 | 2023.1.2   | 🟨 Upgrade to 2023.1.4  | [Release notes](/release-notes/orbeon-forms-2023.1.2.md)                                                                             | 
@@ -24,23 +25,23 @@ The following table lists all the release since Orbeon Forms 4.0 as well as the 
 |      | Mar 19 | 2023.1.1   | 🟨 Upgrade to 2023.1.4  | [Release notes](/release-notes/orbeon-forms-2023.1.1.md)                                                                             | 
 |      | Jan 30 | 2022.1.6   | 🟨 Upgrade to 2022.1.8  | [Release notes](/release-notes/orbeon-forms-2022.1.6.md)                                                                             | 
 | 2023 | Dec 31 | 2023.1     | 🟨 Upgrade to 2023.1.4  | [Release notes](/release-notes/orbeon-forms-2023.1.md)                                                                               | 
-|      | Sep 28 | 2021.1.10  | 🟩 Until Dec 31, 2024   | [Release notes](/release-notes/orbeon-forms-2021.1.10.md)                                                                            | 
+|      | Sep 28 | 2021.1.10  | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.10.md)                                                                            | 
 |      | Sep 20 | 2022.1.5   | 🟨 Upgrade to 2022.1.8  | [Release notes](/release-notes/orbeon-forms-2022.1.5.md)                                                                             | 
-|      | Jun 6  | 2021.1.9   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.9.md)                                                                             | 
+|      | Jun 6  | 2021.1.9   | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.9.md)                                                                             | 
 |      | May 30 | 2022.1.4   | 🟨 Upgrade to 2022.1.8  | [Release notes](/release-notes/orbeon-forms-2022.1.4.md)                                                                             | 
 |      | Apr 12 | 2022.1.3   | 🟨 Upgrade to 2022.1.8  | [Release notes](/release-notes/orbeon-forms-2022.1.3.md)                                                                             |
-|      | Apr 12 | 2021.1.8   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.8.md)                                                                             | 
+|      | Apr 12 | 2021.1.8   | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.8.md)                                                                             | 
 |      | Mar 8  | 2022.1.2   | 🟨 Upgrade to 2022.1.8  | [Release notes](/release-notes/orbeon-forms-2022.1.2.md)                                                                             | 
 |      | Feb 21 | 2022.1.1   | 🟨 Upgrade to 2022.1.8  | [Release notes](/release-notes/orbeon-forms-2022.1.1.md)                                                                             | 
-|      | Jan 23 | 2021.1.7   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.7.md)                                                                             | 
+|      | Jan 23 | 2021.1.7   | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.7.md)                                                                             | 
 | 2022 | Dec 31 | 2022.1     | 🟨 Upgrade to 2022.1.8  | [Release notes](/release-notes/orbeon-forms-2022.1.md)                                                                               | 
-|      | Nov 7  | 2021.1.6   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.6.md)                                                                             | 
-|      | Oct 4  | 2021.1.5   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.5.md)                                                                             | 
-|      | Aug 1  | 2021.1.4   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.4.md)                                                                             | 
-|      | Apr 27 | 2021.1.3   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.3.md)                                                                             | 
-|      | Mar 3  | 2021.1.2   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.2.md)                                                                             | 
-|      | Jan 14 | 2021.1.1   | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.1.md)                                                                             | 
-| 2021 | Dec 31 | 2021.1     | 🟨 Upgrade to 2021.1.10 | [Release notes](/release-notes/orbeon-forms-2021.1.md)                                                                               | 
+|      | Nov 7  | 2021.1.6   | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.6.md)                                                                             | 
+|      | Oct 4  | 2021.1.5   | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.5.md)                                                                             | 
+|      | Aug 1  | 2021.1.4   | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.4.md)                                                                             | 
+|      | Apr 27 | 2021.1.3   | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.3.md)                                                                             | 
+|      | Mar 3  | 2021.1.2   | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.2.md)                                                                             | 
+|      | Jan 14 | 2021.1.1   | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.1.md)                                                                             | 
+| 2021 | Dec 31 | 2021.1     | 🟨 Upgrade to 2021.1.11 | [Release notes](/release-notes/orbeon-forms-2021.1.md)                                                                               | 
 |      | Dec 29 | 2020.1.6.2 | 🟥 End of life          | [Release notes](/release-notes/orbeon-forms-2020.1.6.md)                                                                             | 
 |      | Dec 29 | 2019.2.4.1 | 🟥 End of life          | [Release notes](/release-notes/orbeon-forms-2019.2.4.md)                                                                             | 
 |      | Dec 29 | 2019.1.2.1 | 🟥 End of life          | [Release notes](/release-notes/orbeon-forms-2019.1.2.md)                                                                             | 
