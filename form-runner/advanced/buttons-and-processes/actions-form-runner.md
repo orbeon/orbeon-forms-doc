@@ -401,7 +401,9 @@ See also:
 
 ## Other actions
 
-- `captcha`: Trigger the captcha.
+- `captcha`:
+    - [SINCE Orbeon Forms 2024.1] This action is no longer needed, and running it has no effect.
+    - [UNTIL Orbeon Forms 2023.1] Trigger the captcha.
 - `collapse-all`: Collapse all sections (when not using the wizard view).
 - `expand-all`: Expand all sections (when not using the wizard view).
 - `expand-invalid`: [SINCE Orbeon Forms 2018.1] This action expands all the sections that contain an error. Out-of-the-box, this action is used by the `require-valid` process, in turn called when validating data, say before save, so users can see all the sections that contain an error.
