@@ -166,6 +166,7 @@ Add the following to the process you are running, before the action that navigat
 
 ```xml
 then captcha-reset
+then navigate(uri = "https://www.orbeon.com")
 ```
 
 [SINCE Orbeon Forms 2022.1.8, 2023.1.3, 2024.1]
