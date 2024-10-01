@@ -83,25 +83,39 @@ You can use this component to show users a captcha, like the one shown in the fo
 1. First, you need to [sign up with reCAPTCHA][4] to get your own public/private key pair.
 2. Store your public keys (now called "site keys") and private keys in your properties, as follows:
 
-    ```xml
-    <property
-        as="xs:string"
-        name="oxf.xforms.xbl.fr.recaptcha.v2.public-key"
-        value="..."/>
-    <property
-        as="xs:string"
-        name="oxf.xforms.xbl.fr.recaptcha.v2.private-key"
-        value="..."/>
-   <property
-        as="xs:string"
-        name="oxf.xforms.xbl.fr.recaptcha.v3.public-key"
-        value="..."/>
-    <property
-        as="xs:string"
-        name="oxf.xforms.xbl.fr.recaptcha.v3.private-key"
-        value="..."/>
-    ```
-If your version of Orbeon Forms only supports reCAPTCHA v2 (before Orbeon Forms 2024.1), use the `oxf.xforms.xbl.fr.recaptcha.public-key` and `oxf.xforms.xbl.fr.recaptcha.private-key` properties.
+   - [SINCE Orbeon Forms 2024.1] 
+
+       ```xml
+       <property
+           as="xs:string"
+           name="oxf.xforms.xbl.fr.recaptcha.v2.public-key"
+           value="..."/>
+       <property
+           as="xs:string"
+           name="oxf.xforms.xbl.fr.recaptcha.v2.private-key"
+           value="..."/>
+      <property
+           as="xs:string"
+           name="oxf.xforms.xbl.fr.recaptcha.v3.public-key"
+           value="..."/>
+       <property
+           as="xs:string"
+           name="oxf.xforms.xbl.fr.recaptcha.v3.private-key"
+           value="..."/>
+       ```
+     
+   - [UNTIL Orbeon Forms 2023.1]
+
+       ```xml
+       <property
+           as="xs:string"
+           name="oxf.xforms.xbl.fr.recaptcha.public-key"
+           value="..."/>
+       <property
+           as="xs:string"
+           name="oxf.xforms.xbl.fr.recaptcha.private-key"
+           value="..."/>
+       ```
 
 3. Add the reCAPTCHA component to your form:
 
