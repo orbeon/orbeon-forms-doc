@@ -23,8 +23,9 @@ You enable a captcha by adding the following property to your `properties-local.
 ```xml
 <property
     as="xs:string"
-    name="oxf.fr.detail.captcha.component.*.*"
-    value="fr:recaptcha"/>
+    name="oxf.fr.detail.captcha.component.*.*"  
+    value="fr:recaptcha"
+    xmlns:fr="http://orbeon.org/oxf/xml/form-runner"/>
 ```
 
 [UNTIL Orbeon Forms 2019.2]
