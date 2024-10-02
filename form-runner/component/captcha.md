@@ -316,11 +316,14 @@ Allowed values:
 
 [SINCE Orbeon Forms 2020.1]
 
-The following property allows you to configure where the captcha is shown (when enabled). The two possible values are:
+The following property allows you to configure where the captcha is shown, if enabled. The possible values are:
 
-- `form-bottom`: show the captcha at the bottom of the form (default)
-- `inside-wizard`: show the captcha inside the wizard
-    - NOTE: Only use this if your form is using the [wizard view](/form-runner/feature/wizard-view.md), otherwise the captcha won't show.
+- `form-bottom`: displays the captcha at the bottom of the form (default).
+- `inside-wizard`: displays the captcha on every page of the wizard.
+- `inside-wizard-first-page`: [SINCE Orbeon Forms 2024.1] displays the captcha on the first visible page of the wizard.
+- `inside-wizard-last-page`: [SINCE Orbeon Forms 2024.1] displays the captcha on the last visible page of the wizard.
+
+Only use `inside-wizard`, `inside-wizard-first-page`, or `inside-wizard-last-page` if your form is using the [wizard view](/form-runner/feature/wizard-view.md). If you use one of these tokens without the wizard view, the captcha will not be displayed.
 
 ```xml
 <property 
@@ -347,7 +350,7 @@ Then:
 
 [SINCE Orbeon Forms 2020.1]
 
-When the captcha is enabled, you can control its visibility with the following property. The default value is `true` (shown below), and you can use a [value template](/xforms/attribute-value-templates.md), to make it dynamic. For instance, you can have the captcha only show on the last page of the wizard by setting the above [location property](#captcha-location) to `inside-wizard`, and this `visible` property to `{fr:is-wizard-last-page()}`.
+When the captcha is enabled, you can control its visibility with the following property. The default value is `true` (shown below), and you can use a [value template](/xforms/attribute-value-templates.md), to make it dynamic.
 
 Even when not visible according this property (i.e. your value template returns `false`), as long as the captcha is enabled, solving it is required; so this property isn't intended to be used to dynamically decide whether to have a captcha on a page or not, but it is to decide at what point during the form filling process you want the captcha to show.
 
