@@ -414,7 +414,7 @@ See also [PDF templates](/form-runner/feature/pdf-templates.md).
 ### fr:run-process()
 
 ```xpath
-fr:run-process-by-name(
+fr:run-process(
     $scope   as xs:string,
     $process as xs:string
 ) as xs:boolean?
@@ -440,8 +440,8 @@ The function returns an empty sequence if the process contains at least one asyn
 
 ```xpath
 fr:run-process-by-name(
-    $scope   as xs:string,
-    $process as xs:string
+    $scope        as xs:string,
+    $process-name as xs:string
 ) xs:boolean?
 ```
 
