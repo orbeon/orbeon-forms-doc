@@ -117,11 +117,11 @@ The value of these properties is an XPath expression. For example the following 
   </property>
 ```
 
-You can access control values in the data in one of two ways, where `foo` is the name of the control:
+You can access control values in the data in the following ways, where `foo` is the name of the control:
 
 - Use an expression of the type `//foo`. Note that control elements might not be unique in case of repeats or section templates, and so this returns as many XML elements as there are values in the data, including within repeats and within section templates.
 - Use `fr:control-string-value('foo')`. This only works for controls that are not in a section template and returns zero or one value. If the control is repeated, only the first value is returned.
-- *NOTE: It's not yet possible to use the variable notation `$foo`.*
+- [SINCE Orbeon Forms 2023.1.6] You can use the variable notation `$foo` for controls that are not in a section template. If the control is repeated, only the first value is returned.
 
 Example searching data elements:
 
