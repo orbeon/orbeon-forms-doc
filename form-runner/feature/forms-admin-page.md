@@ -320,6 +320,16 @@ See [Form definitions and form data Zip Export](exporting-form-definitions-and-f
 
 See [Purging historical data](purging-historical-data.md).
 
+## Search and sorting
+
+[SINCE Orbeon Forms 2024.1]
+
+The Forms Admin page allows you to search and sort forms by status, last modification date/time, application name, form name, version, and title.
+
+To display search fields, click on the "Show Search Options" button.
+
+To sort the forms, click on the column headers.
+
 ## Configuration properties
 
 The same configuration properties as for the [Published Forms page](published-forms-page.md#configuration-properties) apply.

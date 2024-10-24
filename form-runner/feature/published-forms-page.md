@@ -33,6 +33,16 @@ The page shows a table with the following data:
 
 *NOTE: Only deployed forms are visible. Forms that have been created with Form Builder and which have been just saved but never deployed are not visible.*
 
+## Search and sorting
+
+[SINCE Orbeon Forms 2024.1]
+
+The Published Forms page allows you to search and sort forms by last modification date/time, application name, form name, version, and title.
+
+To display search fields, click on the "Show Search Options" button.
+
+To sort the forms, click on the column headers.
+
 ## Configuration properties
 
 ### Page size

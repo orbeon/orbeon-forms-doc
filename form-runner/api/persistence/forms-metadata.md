@@ -2,7 +2,7 @@
 
 ## Service endpoint
 
-HTTP `GET` to the following path:
+HTTP `GET` (v1) or `POST` (v2) to the following path:
 
 ```
 /fr/service/persistence/form
@@ -19,7 +19,263 @@ In particular, this API is used internally by:
 - the [Zip Export API](/form-runner/api/persistence/export-zip.md)
 - the [persistence proxy](custom-persistence-providers.md), to obtain a given form's permissions and versions
 
-## API
+## API (v2)
+
+[SINCE Orbeon Forms 2024.1]
+
+The Form Metadata API v2 tries to behave as much as possible like the first version of the API. The main difference is that it uses `POST` instead of `GET`. This allows for more complex requests to be passed to the API (filtering, sorting, paging).
+
+### Request
+
+#### Basics
+
+All requests to the API must include an XML content body, with a `Content-Type: application/xml` header.
+
+You get the list of all the published forms with a `POST` on:
+
+``` 
+/fr/service/persistence/form
+```
+
+with the following payload, which is the simplest request that can be sent:
+
+```xml
+<search/>
+```
+
+The following optional attributes can be added to the `search` element:
+
+| Attribute                  | Default value | Description                                                                                 |
+|----------------------------|---------------|---------------------------------------------------------------------------------------------|
+| `all-forms`                | `false`       | [Same semantics as in v1](#returning-all-form-definitions)                                  |
+| `ignore-admin-permissions` | `false`       | [Same semantics as in v1](#ignoring-admin-permissions)                                      |
+| `xml:lang`                 | None          | Default language for language-specific filtering/sorting directives (e.g. `en`, `fr`, etc.) |
+
+#### Filtering
+
+To filter the results, you can add a `filter` element to your request:
+
+```xml
+<element metadata="application-name" match="exact">acme</element>
+```
+
+| Attribute    | Mandatory | Description                                                                                                 |
+|--------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `metadata`   | Yes       | The metadata to filter by                                                                                   |
+| `match`      | Yes       | The match type                                                                                              |
+| `xml:lang`   | No        | Language for language-specific metadata, overrides any request-wide value specified on the `search` element |
+| `url`        | No        | URL of the remote server or local server if no URL specified                                                |
+| `combinator` | No        | Combinator to use in case of multiple local and/or remote values                                            |
+
+One or multiple filters can be specified. If no filter is present, all results are returned.
+
+The following metadata are supported:
+
+| Metadata           | Value type      | Language-specific | Description                                                                                                           |
+|--------------------|-----------------|-------------------|-----------------------------------------------------------------------------------------------------------------------|
+| `application-name` | String          | No                | Application name                                                                                                      |
+| `form-name`        | String          | No                | Form name                                                                                                             |
+| `form-version`     | Number          | No                | Form version                                                                                                          |
+| `created`          | Date/time       | No                | Creation date/time                                                                                                    |
+| `last-modified`    | Date/time       | No                | Last modification date/time                                                                                           |
+| `last-modified-by` | String          | No                | Username of the user who last modified the form definition                                                            |
+| `title`            | String          | Yes               | Form title                                                                                                            |
+| `available`        | Boolean         | No                | Whether the form definition is available                                                                              |
+| `operations`       | List of strings | No                | Space-separated list of operations allowed on the form (`admin`, `create`, `read`, `update`, `delete` and/or `list`)  |
+
+The following match types are supported and follow the same semantics as in the [Search API](search.md#match-types):
+
+| Match type  | Value type        | Description                                                    |
+|-------------|-------------------|----------------------------------------------------------------|
+| `exact`     | String, boolean   | Exact match                                                    |
+| `substring` | String            | Substring match                                                |
+| `gte`       | Date/time, number | Greater than or equal                                          |
+| `gt`        | Date/time, number | Greater than                                                   |
+| `lte`       | Date/time, number | Lower than or equal                                            |
+| `lt`        | Date/time, number | Lower than                                                     |
+| `token`     | List of strings   | All listed values must be found in the metadata (in any order) |
+
+For an `exact` match on `form-version`, the special value `latest` can be used to retrieve the latest version of each form.
+
+The following combinators are supported:
+
+| Combinator | Value type               | Description                                                           |
+|------------|--------------------------|-----------------------------------------------------------------------|
+| `min`      | Date/time                | Least recent date/time                                                |
+| `max`      | Date/time                | Most recent date/time                                                 |
+| `or`       | Boolean, list of strings | Booleans: `OR` operator<br/>Lists of strings: union of values         |
+| `and`      | Boolean, list of strings | Booleans: `AND` operator<br/>Lists of strings: intersection of values |
+
+Date/time values are expected to be given in ISO format.
+
+#### Sorting
+
+To sort the results, you can add a `sort` element to your request:
+
+```xml
+<sort metadata="form-name" direction="asc"/>
+```
+
+| Attribute    | Mandatory | Description                                                                                                 |
+|--------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `metadata`   | Yes       | The metadata to sort by (see above)                                                                         |
+| `direction`  | Yes       | The sort direction, either `asc` (ascending) or `desc` (descending)                                         |
+| `xml:lang`   | No        | Language for language-specific metadata, overrides any request-wide value specified on the `search` element |
+| `url`        | No        | Same semantics as on `filter` element (see above)                                                           |
+| `combinator` | No        | Same semantics as on `filter` element (see above)                                                           |
+
+If no `sort` element is specified, the results are sorted by last modification date/time, in descending order, using the most recent last modification date/time between the local server and any remote server (i.e. using the `max` combinator).
+
+Limitations:
+
+ - At the moment, only a single `sort` element is supported.
+
+#### Paging
+
+To page the results, you can use the following XML element:
+
+```xml
+<pagination page-number="1" page-size="10"/>
+```
+
+`page-number` is the 1-based page number and `page-size` is the maximum number of results to return per page.
+
+Paging the results is optional. By default, all results are returned.
+
+#### Remote servers
+
+The Form Metadata API v2 supports querying one or multiple remote servers. To do so, you can add `remote-server` elements to your request:
+
+```xml
+<remote-server url="http://staging.example.org:8080/orbeon" username="orbeon-admin" password="changeme"/>
+```
+
+When `remote-server` elements are present, the API queries the remote servers in addition to the local providers. The results are then aggregated.
+
+For more information about remote server configuration, see [Remote server operations](/form-runner/feature/forms-admin-page.md#remote-server-operations).
+
+#### Examples
+
+Retrieving the latest versions of any form with the application name `acme`, sorted by form name, and paginated:
+
+```xml
+<search>
+    <filter metadata="application-name" match="exact">acme</filter>
+    <filter metadata="form-version" match="exact">latest</filter>
+    <sort metadata="form-name" direction="asc"/>
+    <pagination page-number="1" page-size="10"/>
+</search>
+```
+
+Retrieving any form that is available, either locally or remotely, sorted by the French title of the form on the local server:
+
+```xml
+<search>
+    <remote-server url="http://staging.example.org:8080/orbeon" username="orbeon-admin" password="changeme"/>
+    <filter metadata="available" match="exact" combinator="or">true</filter>
+    <sort metadata="title" xml:lang="fr" direction="asc"/>
+</search>
+```
+
+Retrieving forms that have the `admin` operation on the remote server:
+
+```xml
+<search>
+    <remote-server url="http://staging.example.org:8080/orbeon" username="orbeon-admin" password="changeme"/>
+    <filter metadata="operations" match="token" url="http://staging.example.org:8080/orbeon">admin</filter>
+</search>
+```
+
+### Response
+
+#### Response format
+
+Response documents in v2 follow the same format as in v1:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<forms search-total="6">
+    <form operations="*">
+        <application-name>orbeon</application-name>
+        <form-name>dmv-14</form-name>
+        <form-version>1</form-version>
+        <last-modified-time>2023-12-18T15:11:35.131Z</last-modified-time>
+        <created>2023-12-18T15:11:35.131Z</created>
+        <title xml:lang="en">Notice of Change of Address</title>
+        <available>true</available>
+    </form>
+    <form operations="*">
+        <application-name>orbeon</application-name>
+        <form-name>controls</form-name>
+        <form-version>2</form-version>
+        <last-modified-time>2023-12-18T15:11:34.702Z</last-modified-time>
+        <created>2023-12-18T15:11:34.702Z</created>
+        <title xml:lang="en">All Form Controls</title>
+        <title xml:lang="fr">Tous les contrôles de formulaire</title>
+        <available>true</available>
+    </form>
+    <form operations="create list">
+        <application-name>acme</application-name>
+        <form-name>form-with-permissions</form-name>
+        <form-version>6</form-version>
+        <last-modified-time>2024-01-17T13:25:00.291Z</last-modified-time>
+        <last-modified-by>admin</last-modified-by>
+        <created>2024-01-17T13:25:00.291Z</created>
+        <title xml:lang="en">Form with permissions</title>
+        <available>true</available>
+        <permissions>
+            <permission operations="create"/>
+            <permission operations="read -list">
+                <owner/>
+            </permission>
+        </permissions>
+    </form>
+    <!-- ... more <form> elements ... -->
+</forms>
+```
+
+The main difference with v1 is that metadata for remote servers can be included in the response as well, if credentials for remote servers are included in the request. In that case, metadata specific to remote servers will be included in `remote-server` elements. Each remote server is identified by its URL.
+
+Example:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<forms search-total="113">
+    <form operations="*">
+        <application-name>orbeon</application-name>
+        <form-name>controls</form-name>
+        <form-version>2</form-version>
+        <last-modified-time>2023-12-18T15:11:34.702Z</last-modified-time>
+        <created>2023-12-18T15:11:34.702Z</created>
+        <title xml:lang="en">All Form Controls</title>
+        <title xml:lang="fr">Tous les contrôles de formulaire</title>
+        <available>true</available>
+        <remote-server operations="*" url="http://staging.example.org:8080/orbeon">
+            <last-modified-time>2024-09-05T09:41:10.663Z</last-modified-time>
+            <created>2024-09-05T09:41:10.663Z</created>
+            <title xml:lang="en">All Form Controls</title>
+            <title xml:lang="fr">Tous les contrôles de formulaire</title>
+            <available>true</available>
+        </remote-server>
+    </form>
+    <form>
+        <application-name>orbeon</application-name>
+        <form-name>placeholders</form-name>
+        <form-version>1</form-version>
+        <remote-server operations="*" url="http://staging.example.org:8080/orbeon">
+            <last-modified-time>2024-09-05T09:41:10.423Z</last-modified-time>
+            <created>2024-09-05T09:41:10.423Z</created>
+            <title xml:lang="en">Appearance of Labels Inline or as Placeholders</title>
+            <available>true</available>
+        </remote-server>
+    </form>
+    <!-- ... -->
+</forms>
+```
+
+The following elements are never included in the remote server metadata, as they are used to identify (and hence group) the form definitions: `application-name`, `form-name`, and `form-version`.
+
+## API (v1)
 
 ### Request
 
