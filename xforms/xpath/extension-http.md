@@ -33,11 +33,14 @@ xxf:get-request-attribute(
 ) as item()?
 ```
 
-The `xxf:get-request-attribute()` function returns the value of the given request attribute. The attribute may have been previously placed in the request through Java code, or using `xxf:set-request-attribute()`, for example.
+The `xxf:get-request-attribute()` function returns the value of the given request attribute. The attribute may have been previously placed in the request:
 
-The types of attribute objects supported are the same types supported by the Scope generator, plus types stored with `xxf:set-request-attribute()`.
+- through Java code
+- or using `xxf:set-request-attribute()`
 
-If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is returned as an `xs:string` instead of being parsed as XML.
+A value placed in the request will be available only for the duration of the request, which is the time for a form to load, or for an update to a form to be processed.
+
+If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is returned as an `xs:string` instead of being parsed as XML, which is the default for a String value.
 
 ```xml
 <!-- Get the "document" attribute and use it to replace instance "my-instance" -->
@@ -155,11 +158,12 @@ xxf:get-session-attribute(
 ) as item()?
 ```
 
-The `xxf:get-session-attribute()` function returns the value of the given session attribute.
+The `xxf:get-session-attribute()` function returns the value of the given session attribute. The attribute may have been previously placed in the request:
 
-The types of attribute objects supported are the same types supported by the Scope generator, plus types stored with `xxf:set-session-attribute()`.
+- through Java code
+- or using `xxf:set-session-attribute()`
 
-If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is returned as an `xs:string` instead of being parsed as XML.
+If present, the second parameter can specify the `text/plain` content type. In that case, if a String object is retrieved, it is returned as an `xs:string` instead of being parsed as XML, which is the default for a String value.
 
 ```xml
 <!-- Get the "document" attribute and use it to replace instance "my-instance" -->
@@ -210,6 +214,8 @@ The `xxf:set-request-attribute()` function stores the given value as a request a
   context="."
   origin="xxf:set-request-attribute('document', instance('my-instance'))"/>
 ```
+
+A value placed in the request will be available only for the duration of the request, which is the time for a form to load, or for an update to a form to be processed.
 
 ## xxf:set-session-attribute()
 
