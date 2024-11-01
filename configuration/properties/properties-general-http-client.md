@@ -133,7 +133,7 @@ Similar to general headers forwarding, cookies can be forwarded. By default, the
     value=""/>
 ```
 
-If you need to forward, say, `JSESSIONID` and `JSESSIONIDSSO` to services, set this in properties-local.xml:
+If you need to forward, say, `JSESSIONID` and `JSESSIONIDSSO` to services, set this in your `properties-local.xml`:
 
 ```xml
 <property
@@ -164,7 +164,7 @@ By default, the value of the prefix and suffix properties is empty, as shown bel
     value=""/>
 ```
 
-On the other hand, some application servers, add a prefix and suffix to the session id. For instance, WebSphere uses the *cache id* as prefix, and the colon character (`:`) followed by the *clone id* as suffix. So, on WebSphere, assuming that in your situation the *cache id* is always `0000`, and the *client id* (found in WebSphere's `plugin-cfg.xml`) is `123`, you will want to set those properties as shown below. Note how the value of the *client id* follows the colon character in the value of the suffix property.
+On the other hand, some application servers, add a prefix and suffix to the session id. For instance, WebSphere uses the *cache id* as prefix, and the colon character (`:`) followed by the *clone id* as suffix. So, on WebSphere, assuming that in your situation the *cache id* is always `0000`, and the *clone id* (found in WebSphere's `plugin-cfg.xml`) is `123`, you will want to set those properties as shown below. Note how the value of the *clone id* follows the colon character in the value of the suffix property.
 
 ```xml
 <property 
