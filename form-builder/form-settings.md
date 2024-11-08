@@ -60,7 +60,7 @@ Form options include options which apply to the entire form definition.
 
 Here is how hints appear depending on the type of control they are associated with:
 
-<img alt="" src="../form-runner/images/placeholder-and-inline-hints.png" width="932">
+![Hints](../form-runner/images/placeholder-and-inline-hints.png)
 
 ## Time Window
 
