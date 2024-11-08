@@ -21,7 +21,7 @@ In addition, for *new form definitions*, the "Automatic Calculations Dependencie
 
 _NOTE: Existing form definitions which do not have the `xxf:analysis.calculate="true"` attribute set in the form definition source are not automatically upgraded to enable automatic calculations dependencies. You must enable dependencies explicitly in the "Form Settings" dialog._
 
-![Form Options](../../form-builder/images/form-settings-formulas.png)
+![Form Options](../../form-builder/form-settings/formulas.png)
 
 _NOTE: Prior to Orbeon Forms 2022.1.1, this setting was under the "Form Settings" dialog's "Form Options" tab._
 

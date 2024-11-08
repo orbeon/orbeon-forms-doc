@@ -8,7 +8,7 @@ After pressing the "New" button on the [summary page](../form-builder/summary-pa
 _NOTE: Depending on your permissions, the application name might have been picked for you already, or you might have the choice of a restricted set of application names._
 * **Form Name.** Each form definition also has a _form name_, which identifies a unique form name within a particular application.
 
-![Form Settings for a New Form Definition](images/form-settings-new.png)
+![Form Settings for a New Form Definition](form-settings/new.png)
 
 Both application name and form name must respect a certain format:
 

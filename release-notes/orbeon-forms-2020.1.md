@@ -63,7 +63,7 @@ This is in addition to the [existing feature](/form-builder/formulas.md#renaming
 
 The form description now supports rich text.
 
-![Form description with rich text](/form-builder/images/form-settings-general-html.png)
+![Form description with rich text](/form-builder/form-settings/general-html.png)
 
 See the [documentation](/form-builder/form-settings.md) for details.
 

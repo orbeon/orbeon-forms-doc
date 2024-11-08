@@ -212,7 +212,7 @@ For more, see:
 - [Form Settings](/form-builder/form-settings.md#formulas)
 - the [`oxf.fr.detail.readonly.disable-calculate` property](/configuration/properties/form-runner-detail-page.md#calculations-in-readonly-modes)
 
-![Formula options](/form-builder/images/form-settings-formulas.png)
+![Formula options](/form-builder/form-settings/formulas.png)
 
 ### XForms 2.0 support
 

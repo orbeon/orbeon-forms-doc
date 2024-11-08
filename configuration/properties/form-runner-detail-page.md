@@ -27,6 +27,27 @@ This can also be configured for a particular form in Form Builder's Form Setting
     value="fixed"/>
 ```
 
+## Density
+
+[SINCE Orbeon Forms 2024.1]
+
+Available values:
+
+- `compact` (default)
+- `comfortable`
+- `roomy`
+
+This sets the spacing between elements in the interface.
+
+This can also be configured for a particular form in Form Builder's Form Settings dialog.
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.density.*.*"
+    value="compact"/>
+```
+
 ## Adding your own CSS files
 
 [SINCE Orbeon Forms 2017.1]

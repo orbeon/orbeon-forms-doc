@@ -42,7 +42,7 @@ The possible tokens are:
 - __Disabled:__ `disabled`
 - __Raise an error:__ `error`
 
-![Form Options](../../form-builder/images/form-settings-form-options.png)
+![Form Options](../../form-builder/form-settings/form-options.png)
 
 ## Moving controls
 
