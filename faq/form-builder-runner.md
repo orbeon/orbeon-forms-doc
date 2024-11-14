@@ -56,9 +56,7 @@ See the [Form Builder](/form-builder/README.md).
 
 ### Are forms created with Form Builder accessible?
 
-We are committed to accessibility: we make sustained effort to ensure that Orbeon Forms complies with Section 508, the W3C WCAG, and the Disability Discrimination Act (DDA). As part of this effort, we consider any instance of noncompliance with one of the aforementioned standards as a bug.
-
-Also, throughout the years, a number of customers have conducted accessibility audits for Orbeon Forms, and we work closely with those customers to solve possible compliance issues.
+In short, yes. For details, see [Accessible Forms](https://www.orbeon.com/accessible-forms).
 
 ### How can I pass a token a new page and have it saved with the data?
 
