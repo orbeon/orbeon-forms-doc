@@ -20,7 +20,7 @@ Most keyboard shortcut hints now show when you hover over the Form Builder toolb
 
 If you want to disable hover hints because you find them distracting or for any other reason, set the following property to `false`. Its default value is `true`, meaning hints are shown by default for all forms.
 
-```
+```xml
 <property
     as="xs:boolean"
     name="oxf.fr.keyboard-shortcuts.show-hints.*.*"
