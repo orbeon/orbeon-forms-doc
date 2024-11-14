@@ -18,7 +18,7 @@ Most keyboard shortcut hints now show when you hover over the Form Builder toolb
 
 [\[SINCE Orbeon Forms 2023.1.6\]](/release-notes/orbeon-forms-2023.1.6.md)
 
-If you find the hover hints distracting or want to disable them, you can set the following property, which is enabled by default.
+If you want to disable hover hints because you find them distracting or for any other reason, set the following property to `false`. Its default value is `true`, meaning hints are shown by default for all forms.
 
 ```
 <property
