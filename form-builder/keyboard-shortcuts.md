@@ -16,6 +16,17 @@ When you start being comfortable with the Form Builder user interface, you might
 
 Most keyboard shortcut hints now show when you hover over the Form Builder toolbox, the buttons bar, or icons.
 
+[\[SINCE Orbeon Forms 2023.1.6\]](/release-notes/orbeon-forms-2023.1.6.md)
+
+If you find the hover hints distracting or want to disable them, you can set the following property, which is enabled by default.
+
+```
+<property
+    as="xs:boolean"
+    name="oxf.fr.keyboard-shortcuts.show-hints.*.*"
+    value="false"/>
+```
+
 ##  Buttons shortcuts
 
 You can use the following keyboard shortcuts:
