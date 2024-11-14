@@ -83,7 +83,7 @@ So Orbeon Forms supports a "session heartbeat" feature. Here is how this works:
 
 Note that whenever an application keeps sessions alive for a long time, it is a good idea to keep as little data as possible in the session. The Orbeon Forms XForms engine itself uses a global state store and does not use session objects for storage, but do remember to keep your sessions small!
 
-The session heartbeat should help prevent many occurrences of "session expired" error messages. As an Orbeon Forms application developer you don't have to worry about anything: the session heartbeat is enabled by default. You can configure it globally in `properties-local.xml`:
+The session heartbeat should help prevent many occurrences of "session expired" error messages. As an Orbeon Forms application developer you don't have to worry about anything: the session heartbeat is enabled by default. You can however explicitly configure it globally in `properties-local.xml`:
 
 ```xml
 <property
@@ -96,7 +96,16 @@ The session heartbeat should help prevent many occurrences of "session expired" 
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-When the session heartbeat feature is disabled, Orbeon Forms can display a dialog to the user when the session is about to expire. This dialog can be enabled with the following property:
+When the session heartbeat feature is disabled with:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.session-heartbeat"
+    value="false"/>
+```
+
+In that case, Orbeon Forms can display a dialog to the user when the session is about to expire. This dialog can be enabled with the following property:
 
 ```xml
 <property
@@ -127,6 +136,8 @@ If the user doesn't renew the session, the session will expire and the user will
 This dialog is also shown if the user logs out from another page/tab from the same session.
 
 If the session heartbeat feature is enabled, the dialog won't be shown, independently of the value of `oxf.fr.detail.session-expiration-dialog.enabled.*.*`. In that case, the `oxf.xforms.session-expiration.trigger` property determines when the session heartbeat is sent to the server.
+
+Behind the scene, Orbeon Forms synchronizes multiple Orbeon Forms tabs or windows within a same browser session. This means that activity in one tab will keep the session alive for all tabs.
 
 ## Browser navigation (back and forward) handling
 
