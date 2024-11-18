@@ -126,12 +126,10 @@ To setup Form Runner authentication:
 
 ### BASIC or DIGEST authentication
 
-If you are using BASIC or DIGEST authentication on Tomcat 6.0.21 or newer you might have to add the following `<Valve>` element inside the `<Context>` corresponding to the Orbeon Forms web app in Tomcat's configuration:
+For BASIC or DIGEST authentication, add the following `<Valve>` element within the `<Context>` element corresponding to the Orbeon Forms web application in Tomcat's configuration. Remove this `<Valve>` element if switching to FORM authentication, as leaving it will enforce BASIC or DIGEST authentication regardless of the configuration in `web.xml`.
 
 ```xml
 <Valve
     className="org.apache.catalina.authenticator.BasicAuthenticator"
     changeSessionIdOnAuthentication="false"/>
 ```
-
-This is still necessary as of Tomcat 9 and Tomcat 10.
