@@ -33,9 +33,9 @@ This can also be configured for a particular form in Form Builder's Form Setting
 
 Available values:
 
-- `compact` (default)
-- `comfortable`
-- `roomy`
+- `compact`: This is the current default with Orbeon Forms until 2023.1.
+- `comfortable`: This is the default for forms created with Orbeon Forms 2024.1 and later.
+- `roomy`: Choose this for even more spacing between controls.
 
 This sets the spacing between elements in the interface.
 
@@ -47,6 +47,10 @@ This can also be configured for a particular form in Form Builder's Form Setting
     name="oxf.fr.detail.density.*.*"
     value="compact"/>
 ```
+
+See also:
+
+- Blog post: [Form Density Setting](https://www.orbeon.com/2024/11/form-density)
 
 ## Adding your own CSS files
 
