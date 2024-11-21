@@ -137,7 +137,7 @@ Finally, the "Roomy" setting:
 
 See also:
 
-- Blog post: [Form Density Setting](https://www.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
+- Blog post: [Form Density Setting](https://www.orbeon.com/2024/11/form-density)
 
 ## Wizard
 
