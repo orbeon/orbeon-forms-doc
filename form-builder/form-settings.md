@@ -113,7 +113,22 @@ See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-
   - For text, date, and time input fields, hints show as an HTML *placeholder* within the field when the field is empty.
   - For text areas, hints show as an HTML *placeholder* within the field when the field is empty. [SINCE Orbeon Forms 2017.1]
 
-See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html).
+See also:
+
+- Blog post: [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
+- Blog post: [Form Density Setting](https://www.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
+
+Here is how the same form layout looks with the three different form density settings. First, the default "Compact" setting:
+
+![Compact](form-settings/form-density-compact.png)
+
+Second, the "Comfortable" setting. Notice how the controls are spaced out more:
+
+![Comfortable](form-settings/form-density-comfortable.png)
+
+Finally, the "Roomy" setting:
+
+![Roomy](form-settings/form-density-roomy.png)
 
 ## Wizard
 
