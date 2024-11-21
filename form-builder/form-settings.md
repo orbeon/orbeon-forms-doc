@@ -84,6 +84,8 @@ See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-
 
 ## Appearance
 
+### Settings
+
 [SINCE Orbeon Forms 2018.1] These options are now in a separate tab.
 
 ![Appearance](form-settings/appearance.png)
@@ -116,7 +118,10 @@ See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-
 See also:
 
 - Blog post: [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
-- Blog post: [Form Density Setting](https://www.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
+
+### Form Density
+
+[SINCE Orbeon Forms 2024.1]
 
 Here is how the same form layout looks with the three different form density settings. First, the default "Compact" setting:
 
@@ -129,6 +134,10 @@ Second, the "Comfortable" setting. Notice how the controls are spaced out more:
 Finally, the "Roomy" setting:
 
 ![Roomy](form-settings/form-density-roomy.png)
+
+See also:
+
+- Blog post: [Form Density Setting](https://www.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
 
 ## Wizard
 
