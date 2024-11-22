@@ -157,25 +157,21 @@ See also [PDF templates](/form-runner/feature/pdf-templates.md).
 
 #### Custom CSS classes
 
-The "Custom CSS Classes" field allows adding CSS classes which will be placed on the control in the resulting HTML. This can be used for custom styling.
+The "Custom CSS Classes" field allows you to add CSS classes that will be applied to the control in the resulting HTML. This is useful for applying custom styling. Note that CSS classes themselves do not directly define styles; instead, they serve as space-separated tokens that you can reference in [your own CSS files](/form-runner/styling/css.md).  
 
-CSS classes don't directly control the style. Instead, they are space-separated tokens, which can then be referred to in [your own CSS files](/form-runner/styling/css.md).
-
-You could have for example:
+For example, you might specify:  
 
 ```
 my-name-field my-highlight
-```
+```  
 
-In your custom CSS file, you could refer to these classes with a selector, for example:
+In this example, the `my-` prefix is used as a best practice to prevent conflicts with other CSS classes on the page. In your custom CSS file, you can target these classes using a selector, such as:  
 
 ```css
 .orbeon .my-name-field.my-highlight input {
   border-color: blue;
 }
 ```
-
-*NOTE: The above uses example `my-` prefixes as it is a good idea to prefix CSS classes to avoid clashes with other CSS classes on the page.*
 
 #### Autocomplete attribute
 
