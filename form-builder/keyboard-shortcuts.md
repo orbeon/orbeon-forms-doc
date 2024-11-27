@@ -106,9 +106,49 @@ You can use the left and right cursor keys to navigate between grid cells.
 
 [\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
 
+The mnemonics for these shortcuts are:
+
+- `I`: insert
+- `S`: structure
+
+Available shortcuts
+
 - `I S S`: [insert a new section](/form-builder/toolbox.md)
 - `I S G`: [insert a new grid](/form-builder/toolbox.md)
 - `I S R`: [insert a new repeated grid](/form-builder/toolbox.md)
+
+## Inserting form controls
+
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+
+You can quickly insert form controls into a form at or after the current cell position. The mnemonics for these shortcuts are:
+
+- `I`: insert
+- category of control
+    - `C`: control
+    - `U`: utility controls
+    - `T`: typed controls
+    - `S`: selection controls
+    - `A`: attachment controls
+
+Available shortcuts:
+
+- `I C I`: Text Field
+- `I C T`: Text Area
+- `I C F`: Formatted Text Area
+- `I U E`: Explanatory Text
+- `I U C`: Calculated Value
+- `I U H`: Hidden Field
+- `I T N`: Number
+- `I T E`: Email Field
+- `I T D`: Date Field
+- `I T T`: Time Field
+- `I S D`: Dropdown
+- `I S R`: Radio Buttons
+- `I S C`: Checkboxes
+- `I A F`: Attachment
+- `I A I`: Image Attachment
+- `I A V`: Video Attachment
 
 ## Reloading the toolbox
 
