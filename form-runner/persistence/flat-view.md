@@ -80,14 +80,16 @@ As databases limit the length of column names, the persistence layer truncates t
 
 By default, the column names are generated using the control names only, unless they are located in a section template, in which case they will be prefixed with the name of the template section.
 
-To change this behavior and always include the names of the enclosing sections/grids, the following property can be changed from `false` to `true`:
+To get the previous behavior (Orbeon Forms 2023.1 and earlier), where the names of all enclosing sections/grids are included in the column names, the following property can be changed from `false` to `true`:
 
 ```xml
 <property
   as="xs:boolean"
-  name="oxf.fr.persistence.[provider].flat-view.fully-qualified-names"
+  name="oxf.fr.persistence.[provider].flat-view.prefixes-in-main-view-column-names"
   value="false"/>
 ```
+
+This property doesn't affect column names in views for repeated sections and grids. In those views, the names of enclosing sections/grids are never included in the column names.
 
 In previous versions, column names were always truncated to 30 characters. With Orbeon Forms 2024.1 and newer, they are now truncated to a number of characters which depends on the database used. Those limits are defined in properties, which can be overridden if needed:
 
