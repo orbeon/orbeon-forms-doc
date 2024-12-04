@@ -224,7 +224,7 @@
         * [Integration](form-runner/overview/integration.md)
     * Advanced
         * [Buttons and processes](form-runner/advanced/buttons-and-processes/README.md)
-            * [Process syntax](form-runner/advanced/buttons-and-processes/syntax.md)
+            * [Simple process syntax](form-runner/advanced/buttons-and-processes/syntax.md)
             * [Core actions](form-runner/advanced/buttons-and-processes/actions-core.md)
             * [Form Runner actions](form-runner/advanced/buttons-and-processes/actions-form-runner.md)
                 * [Save action](form-runner/advanced/buttons-and-processes/actions-form-runner-save.md)

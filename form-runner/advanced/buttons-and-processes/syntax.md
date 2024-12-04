@@ -1,4 +1,4 @@
-# Process syntax
+# Simple process syntax
 
 ## Defining a process
 
