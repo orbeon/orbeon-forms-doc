@@ -13,9 +13,10 @@ You enable this feature by setting the relevant property listed below to `true`.
 | Database   | Property                                         |
 |------------|--------------------------------------------------|
 | Oracle     | `oxf.fr.persistence.oracle.create-flat-view`     |
+| MySQL      | `oxf.fr.persistence.mysql.create-flat-view`      |
 | SQL Server | `oxf.fr.persistence.sqlserver.create-flat-view`  |
-| DB2        | `oxf.fr.persistence.db2.create-flat-view`        |
 | PostgreSQL | `oxf.fr.persistence.postgresql.create-flat-view` |
+| DB2        | `oxf.fr.persistence.db2.create-flat-view`        |
 
 For instance, if using  Oracle, you set:
 
@@ -154,7 +155,7 @@ Examples:
 
 - The Multiple File Attachments control is not supported, see [issue 6296](https://github.com/orbeon/orbeon-forms/issues/6296).
 - Only the default [form data format](https://doc.orbeon.com/form-runner/api/data-formats/form-data) is supported, see [issue 4440](https://github.com/orbeon/orbeon-forms/issues/4440).
-- Fields inside repeated sections or grids are not supported with MySQL.
+- With MySQL, fields within repeated sections or grids are not supported. This is because the MySQL built-in XML function `ExtractValue()` is quite limited and does not directly support returning multiple rows from a single XML document.
 - Flat views are not supported at all with SQLite.
 - [SINCE Orbeon Forms 2016.1] Fields inside nested sections and nested section templates are supported.
 - [SINCE Orbeon Forms 2024.1] Fields inside repeated sections or grids are also supported.
