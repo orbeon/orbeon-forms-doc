@@ -95,11 +95,12 @@ The following examples use the [curl](https://curl.haxx.se/) command-line utilit
 The following publishes the form definition saved with Form Builder under the `ef8b20715f447ef1ed6f2479161dc663b23f7cdc` document id:
 
 ```
-curl
-  -v
-  -k
-  -X POST
-  http://localhost:9090/orbeon/fr/service/orbeon/builder/publish/ef8b20715f447ef1ed6f2479161dc663b23f7cdc
+curl    \
+-v      \
+-k      \
+-X POST \
+"http://localhost:8080/orbeon/fr/service/orbeon/builder/publish\
+/ef8b20715f447ef1ed6f2479161dc663b23f7cdc"
 ``` 
 
 ### Publish a form definition provided via HTTP POST
@@ -107,12 +108,12 @@ curl
 The following publishes the form definition provided in the file `form.xhtml`:
 
 ```
-curl
-  -v
-  -k
-  -d @form.xhtml
-  -H "Content-Type: application/xml"
-  -X POST http://localhost:9090/orbeon/fr/service/publish
+curl                               \
+-v                                 \
+-k                                 \
+-d @form.xhtml                     \
+-H "Content-Type: application/xml" \
+-X POST http://localhost:8080/orbeon/fr/service/publish
 ```
 
 ## Permissions
