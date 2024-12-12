@@ -99,7 +99,8 @@ curl    \
 -v      \
 -k      \
 -X POST \
-"http://localhost:8080/orbeon/fr/service/orbeon/builder/publish\
+"http://localhost:8080/orbeon\
+/fr/service/orbeon/builder/publish\
 /ef8b20715f447ef1ed6f2479161dc663b23f7cdc"
 ``` 
 
@@ -113,7 +114,9 @@ curl                               \
 -k                                 \
 -d @form.xhtml                     \
 -H "Content-Type: application/xml" \
--X POST http://localhost:8080/orbeon/fr/service/publish
+-X POST                            \
+"http://localhost:8080/orbeon\
+/fr/service/publish"
 ```
 
 ## Permissions
