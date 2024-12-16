@@ -32,7 +32,7 @@ LIMITATION: Restrictions on the form name in `form-builder-permissions.xml` are 
 
 [SINCE Orbeon Forms 4.3]
 
-`form-builder-permissions.xml` also impacts the Form Runner Home page, which supports unpublishing and publishing forms.
+`form-builder-permissions.xml` also impacts the Forms Admin page, which supports making forms available and unavailable.
 
 If the configuration is unchanged, by default users cannot unpublish/publish from the Home page. In order to allow this feature, you must configure at least one `<role>`.
 
