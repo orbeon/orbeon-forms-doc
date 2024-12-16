@@ -125,7 +125,10 @@ For example, to point to the built-in Ehcache 3.x configuration, set:
 
 _NOTE: The Ehcache 3 JAR file is already included in Orbeon Forms. Java packages are different, and therefore the Ehcache 2.x and Ehcache 3.x JAR files do not conflict._
 
-If you are using a different JCache-compatible implementation, different values for the `oxf.xforms.cache.resource` and/or `oxf.xforms.cache.uri` properties might be needed.
+If you are using a different JCache-compatible implementation:
+
+- Different values for the `oxf.xforms.cache.resource` and/or `oxf.xforms.cache.uri` properties might be needed.
+- Add the property mentioned below to disable caching of form definitions, as we don't want cached form definitions to be replicated.
 
 ## Persistence layer caching of form definition metadata
 
