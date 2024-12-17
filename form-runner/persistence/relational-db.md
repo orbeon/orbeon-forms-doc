@@ -156,6 +156,35 @@ Run the following DDL to create or update your Orbeon database, and note that if
 | 2016.2                  | [sqlserver-2016_2.sql]     | [sqlserver-4_6-to-2016_2.sql]       |
 | 4.6 to 2016.1           | [sqlserver-4_6.sql]        | -                                   |
 
+You can create an `orbeon` database and run the DDL to create the tables and indices used by Orbeon Forms using the command-line tool `usql`. Follow these steps, making sure to replace `PASSWORD` with the password for the `sa` user and `VERSION` with your desired DDL version.
+
+- `usql mssql://sa:PASSWORD@localhost/`
+- `CREATE DATABASE orbeon;`
+- `\q`
+- `usql mssql://sa:PASSWORD@localhost/orbeon`
+- `\i sqlserver-VERSION.sql`
+
+Use the following SQL to get a list of indexes in your database to verify they match those defined in the latest version of the SQL Server DDL.
+
+```sql
+SELECT 
+    t.name AS TableName,
+    i.name AS IndexName,
+    i.type_desc AS IndexType,
+    STRING_AGG(c.name, ', ') WITHIN GROUP (ORDER BY ic.key_ordinal) AS IndexColumns
+FROM 
+    sys.tables t
+    INNER JOIN sys.indexes i ON t.object_id = i.object_id
+    INNER JOIN sys.index_columns ic ON i.object_id = ic.object_id AND i.index_id = ic.index_id
+    INNER JOIN sys.columns c ON ic.object_id = c.object_id AND ic.column_id = c.column_id
+WHERE 
+    i.type > 0 -- Exclude heap
+GROUP BY
+    t.name, i.name, i.type_desc
+ORDER BY 
+    t.name, i.name;
+```
+
 [sqlserver-2023_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2023.1/sqlserver-2023_1.sql
 [sqlserver-2019_1-to-2023_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2023.1/sqlserver-2019_1-to-2023_1.sql
 [sqlserver-2017_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/sqlserver-2017_2-to-2019_1.sql
