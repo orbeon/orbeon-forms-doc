@@ -84,6 +84,17 @@ On iOS, the native iOS date picker is used by default, unless users enabled Requ
     <figcaption>Native date picker on Chrome desktop</figcaption>
 </figure>
 
+### Today's highlight
+
+[UNTIL Orbeon Forms 2024.1], today's date was not highlighted in the datepicker. [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md), today's date is highlighted by default. You can disable this behavior by setting the following property.
+
+```xml
+<property 
+    as="xs:boolean"  
+    name="oxf.xforms.xbl.fr.date.today-highlight.*.*"             
+    value="false"/>
+```
+
 ## See also
 
 - [Dropdown Date](dropdown-date.md)
