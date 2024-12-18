@@ -69,6 +69,32 @@ This release addresses the following issues since [Orbeon Forms 2023.1.5 PE](orb
     - Controls form: repeated grid "+" doesn't work ([\#6677](https://github.com/orbeon/orbeon-forms/issues/6677))
     - Save operation completes before all files are uploaded in Multiple File Attachments control ([\#6548](https://github.com/orbeon/orbeon-forms/issues/6548))
 
+## Compatibility notes
+
+You need to make sure that your main Orbeon Forms configuration file, `properties-local.xml`, features `xmlns:fr` and `xmlns:xxf` attributes at the top. Your existing file might start with:
+
+```xml
+<properties
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:oxf="http://www.orbeon.com/oxf/processors"
+>
+    ... content of the configuration file here ...
+```
+
+Make sure to include the  `xmlns:fr` and `xmlns:xxf` attributes as well, for example:
+
+```xml
+<properties
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:oxf="http://www.orbeon.com/oxf/processors"
+    xmlns:fr="http://orbeon.org/oxf/xml/form-runner"
+    xmlns:xxf="http://orbeon.org/oxf/xml/xforms"
+>
+    ... content of the configuration file here ...
+```
+
+Failing to have these configuration attributes might prevent Orbeon Forms from starting. These attributes are present on the template file, `properties-local.xml.template`, provided with Orbeon Forms.
+
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
 
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
