@@ -475,8 +475,8 @@ Configure a test SMTP host for all email processors. This global property when s
 <property
     as="xs:string"
     processor-name="oxf:email"
-    name="test-to"
-    value="joe@example.org"/>
+    name="test-smtp-host"
+    value="smpt.acme.org"/>
 ```
 
 This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes](../../configuration/advanced/run-modes.md)).
