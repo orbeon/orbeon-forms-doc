@@ -156,6 +156,8 @@ Run the following DDL to create or update your Orbeon database, and note that if
 | 2016.2                  | [sqlserver-2016_2.sql]     | [sqlserver-4_6-to-2016_2.sql]       |
 | 4.6 to 2016.1           | [sqlserver-4_6.sql]        | -                                   |
 
+#### Using `usql` to create an `orbeon` database
+
 You can create an `orbeon` database and run the DDL to create the tables and indices used by Orbeon Forms using the command-line tool `usql`. Follow these steps, making sure to replace `PASSWORD` with the password for the `sa` user and `VERSION` with your desired DDL version.
 
 - `usql mssql://sa:PASSWORD@localhost/`
@@ -164,7 +166,9 @@ You can create an `orbeon` database and run the DDL to create the tables and ind
 - `usql mssql://sa:PASSWORD@localhost/orbeon`
 - `\i sqlserver-VERSION.sql`
 
-Use the following SQL to get a list of indexes in your database to verify they match those defined in the latest version of the SQL Server DDL.
+#### Verifying indexes
+
+After upgrading your database, we recommend verifying that you have all the latest indexes. Use the following SQL query to get a list of indexes in your database. You can then compare that list to the indexes defined in the latest DDL linked above.
 
 ```sql
 SELECT 
