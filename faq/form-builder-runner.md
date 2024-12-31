@@ -40,13 +40,13 @@ We don't recommend you deploy Orbeon Forms on a server less powerful than the af
 
 If you're looking to run Orbeon Forms in the cloud, make sure to pick a configuration that matches the above requirement. For instance, the table below provides a summary of Amazon's AWS offering, with [EC2 pricing](http://aws.amazon.com/ec2/pricing/). On EC2, we recommend you start with a c4.2xlarge.
 
-|            | vCPU |Single-core | Multi-core | Price /year  | <!---->
-| -----------| ----:|-----------:|-----------:|-------------:|----------------
-| 2013 i7    |      | 3,380      | 12,903     |              | <!---->
-| c4.xlarge  |    4 | 3,397      |  7,804     |  $1,276      | <!---->
-| c4.2xlarge |    8 | 3,381      | 14,185     |  $2,552      |  ←&nbsp;Recommended
-| c4.4xlarge |   16 | 3,381      | 26,238     |  $5,104      | <!---->
-| c4.8xlarge |   32 | 3,528      | 53,208     | $10,208      | <!---->
+|            | vCPU | Single-core | Multi-core | Price /year | <!---->            |
+|------------|-----:|------------:|-----------:|------------:|--------------------|
+| 2013 i7    |      |       3,380 |     12,903 |             | <!---->            |
+| c4.xlarge  |    4 |       3,397 |      7,804 |      $1,276 | <!---->            |
+| c4.2xlarge |    8 |       3,381 |     14,185 |      $2,552 | ←&nbsp;Recommended |
+| c4.4xlarge |   16 |       3,381 |     26,238 |      $5,104 | <!---->            |
+| c4.8xlarge |   32 |       3,528 |     53,208 |     $10,208 | <!---->            |
 
 ### Where is the Form Builder documentation?
 
