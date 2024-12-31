@@ -1,7 +1,5 @@
 # XBL FAQ
 
-
-
 ## What can component do?
 
 A lot! Among other things, they can:
