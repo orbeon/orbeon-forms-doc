@@ -387,6 +387,15 @@ The default is changed from `disabled` to `enabled` for new forms, with the foll
     value="{if (fr:created-with-or-newer('2024.1')) then 'enabled' else 'disabled'}"/>
 ```
 
+Although we do not recommend it, you can revert to the older behavior with:
+
+```xml
+<property
+    as="xs:string"  
+    name="oxf.fr.detail.data-migration.*.*"                              
+    value="disabled"/>
+```
+
 ### Index names
 
 We previously had a typo in the names of some indexes for SQL Server, PostgreSQL, Oracle, and MySQL: some indices began with `orbeon_from` instead of `orbeon_form`. Although this typo doesn't cause any issues, you may want to check for it during your upgrade and rename the affected indices for consistency. We corrected this typo in the DDL we provided in November 2024, so if you created your indices before that date, you likely have this typo.
