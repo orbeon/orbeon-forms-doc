@@ -1,4 +1,4 @@
-# Angular Component
+# Angular component
 
 ## Availability
 
