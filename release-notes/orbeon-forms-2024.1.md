@@ -239,6 +239,8 @@ Previously, a [Lease](/form-runner/feature/lease.md) was only supported for publ
 
 Orbeon Forms 2024.1 also includes many other new features and enhancements, including:
 
+- Support repeats in relational flat views ([\#1069](https://github.com/orbeon/orbeon-forms/issues/1069))
+- Add support for flat views in MySQL ([\#6284](https://github.com/orbeon/orbeon-forms/issues/6284))
 - Form author with access to two apps only sees forms in the first one, in the Form Builder summary page ([\#878](https://github.com/orbeon/orbeon-forms/issues/878))
 - Copy section settings when inserting section template ([\#3495](https://github.com/orbeon/orbeon-forms/issues/3495))
 - Reflow/responsive repeated grids on devices with narrow screens ([\#4491](https://github.com/orbeon/orbeon-forms/issues/4491)) (also on 2023.1.4)
