@@ -4,7 +4,7 @@ This is the landing page for the [Orbeon Forms](https://www.orbeon.com/) documen
 
 <figure>
     <picture>
-        <img src="/release-notes/images/landing.png" width="50%">
+        <img src="/form-runner/images/landing-form-data-card.png">
     </picture>
     <figcaption>Orbeon Forms</figcaption>
 </figure>
