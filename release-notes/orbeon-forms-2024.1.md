@@ -295,28 +295,32 @@ Platform updates:
 
 The following enhancements are part of 2024.1, but have also been backported to 2023.1.x maintenance releases:
 
-- Refactor persistence layer permissions ([\#5741](https://github.com/orbeon/orbeon-forms/issues/5741)) (also on 2023.1.4)
-- Persistence proxy to log reasons for 400 Bad Request ([\#6372](https://github.com/orbeon/orbeon-forms/issues/6372)) (also on 2023.1.3)
-- ProcessorService: log HTTP method and URL parameters ([\#6414](https://github.com/orbeon/orbeon-forms/issues/6414)) (also on 2023.1.4)
-- Add `getNativeSession` on `Session` instances ([\#6465](https://github.com/orbeon/orbeon-forms/issues/6465)) (also on 2023.1.5)
-- Reflow/responsive repeated grids on devices with narrow screens ([\#4491](https://github.com/orbeon/orbeon-forms/issues/4491)) (also on 2023.1.4)
-- Allow custom model variables references in formulas ([\#6145](https://github.com/orbeon/orbeon-forms/issues/6145)) (also on 2023.1.6)
-- Allow hiding the title of a section ([\#6288](https://github.com/orbeon/orbeon-forms/issues/6288)) (also on 2023.1.3)
-- Show label/name of current control in Control Settings dialog title ([\#6292](https://github.com/orbeon/orbeon-forms/issues/6292)) (also on 2023.1.3)
-- Don't show upload metadata if readonly and missing ([\#6298](https://github.com/orbeon/orbeon-forms/issues/6298)) (also on 2023.1.3)
-- Show hints for keyboard shortcuts ([\#6306](https://github.com/orbeon/orbeon-forms/issues/6306)) (also on 2023.1.3)
-- `fr:dropdown-select1` to support minimal label ([\#6333](https://github.com/orbeon/orbeon-forms/issues/6333)) (also on 2023.1.3)
-- Process action to create a new document id ([\#6435](https://github.com/orbeon/orbeon-forms/issues/6435)) (also on 2023.1.4)
-- Support Friendly Captcha ([\#6439](https://github.com/orbeon/orbeon-forms/issues/6439)) (also on 2023.1.4)
-- Add captcha-reset process action ([\#6441](https://github.com/orbeon/orbeon-forms/issues/6441)) (also on 2023.1.4)
-- Support `xxf:itemset()` with Dynamic dropdown with search (`databound-select1-search.xbl`) ([\#6444](https://github.com/orbeon/orbeon-forms/issues/6444)) (also on 2023.1.5)
-- Date control placeholder to be localized in Spanish, Czech, and Turkish ([\#6496](https://github.com/orbeon/orbeon-forms/issues/6496)) (also on 2023.1.5)
-- Option not to show the "Require token" row ([\#6500](https://github.com/orbeon/orbeon-forms/issues/6500)) (also on 2023.1.5)
-- Dropdowns "please select" to be localized in Czech and Turkish ([\#6502](https://github.com/orbeon/orbeon-forms/issues/6502)) (also on 2023.1.5)
-- Form Builder Export: consider not saving before ([\#6562](https://github.com/orbeon/orbeon-forms/issues/6562)) (also on 2023.1.6)
-- Property to disable the keyboard shortcuts hints ([\#6605](https://github.com/orbeon/orbeon-forms/issues/6605)) (also on 2023.1.6)
-- Revision History: button to add older revisions ([\#6623](https://github.com/orbeon/orbeon-forms/issues/6623)) (also on 2023.1.6)
-- Excel table export from Summary page ([\#6323](https://github.com/orbeon/orbeon-forms/issues/6323)) (also on 2023.1.3)
+- 2023.1.3
+    - Persistence proxy to log reasons for 400 Bad Request ([\#6372](https://github.com/orbeon/orbeon-forms/issues/6372))
+    - Allow hiding the title of a section ([\#6288](https://github.com/orbeon/orbeon-forms/issues/6288)) (also on 2023.1.3)
+    - Show label/name of current control in Control Settings dialog title ([\#6292](https://github.com/orbeon/orbeon-forms/issues/6292))
+    - Don't show upload metadata if readonly and missing ([\#6298](https://github.com/orbeon/orbeon-forms/issues/6298))
+    - Show hints for keyboard shortcuts ([\#6306](https://github.com/orbeon/orbeon-forms/issues/6306))
+    - Excel table export from Summary page ([\#6323](https://github.com/orbeon/orbeon-forms/issues/6323))
+    - `fr:dropdown-select1` to support minimal label ([\#6333](https://github.com/orbeon/orbeon-forms/issues/6333))
+- 2023.1.4
+    - Refactor persistence layer permissions ([\#5741](https://github.com/orbeon/orbeon-forms/issues/5741))
+    - ProcessorService: log HTTP method and URL parameters ([\#6414](https://github.com/orbeon/orbeon-forms/issues/6414))
+    - Reflow/responsive repeated grids on devices with narrow screens ([\#4491](https://github.com/orbeon/orbeon-forms/issues/4491))
+    - Process action to create a new document id ([\#6435](https://github.com/orbeon/orbeon-forms/issues/6435))
+    - Support Friendly Captcha ([\#6439](https://github.com/orbeon/orbeon-forms/issues/6439))
+    - Add captcha-reset process action ([\#6441](https://github.com/orbeon/orbeon-forms/issues/6441))
+- 2023.1.5
+    - Add `getNativeSession` on `Session` instances ([\#6465](https://github.com/orbeon/orbeon-forms/issues/6465))
+    - Support `xxf:itemset()` with Dynamic dropdown with search (`databound-select1-search.xbl`) ([\#6444](https://github.com/orbeon/orbeon-forms/issues/6444))
+    - Date control placeholder to be localized in Spanish, Czech, and Turkish ([\#6496](https://github.com/orbeon/orbeon-forms/issues/6496))
+    - Option not to show the "Require token" row ([\#6500](https://github.com/orbeon/orbeon-forms/issues/6500))
+    - Dropdowns "please select" to be localized in Czech and Turkish ([\#6502](https://github.com/orbeon/orbeon-forms/issues/6502))
+- 2023.1.6
+    - Allow custom model variables references in formulas ([\#6145](https://github.com/orbeon/orbeon-forms/issues/6145))
+    - Form Builder Export: consider not saving before ([\#6562](https://github.com/orbeon/orbeon-forms/issues/6562))
+    - Property to disable the keyboard shortcuts hints ([\#6605](https://github.com/orbeon/orbeon-forms/issues/6605))
+    - Revision History: button to add older revisions ([\#6623](https://github.com/orbeon/orbeon-forms/issues/6623))
 
 ## Compatibility and upgrade notes
 
