@@ -11,6 +11,9 @@ Orbeon Forms supports several embedding methods:
 - [Form Runner server-side Java embedding API](java-api.md)
 - [Form Runner proxy portlet](liferay-proxy-portlet.md)
 - [Form Runner JavaScript Embedding API](javascript-api.md)
+- [Angular component](angular-component.md)
+- [Angular component](angular-component.md)
+- [React component](react-component.md)
 - [Form Runner offline embedding API](offline-embedding-api.md)
 
 In all cases, also see [Securing Form Runner access when embedding](securing.md).
