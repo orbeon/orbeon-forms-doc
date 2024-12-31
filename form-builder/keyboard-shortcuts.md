@@ -113,9 +113,9 @@ The mnemonics for these shortcuts are:
 
 Available shortcuts
 
-- `I S S`: [insert a new section](/form-builder/toolbox.md)
-- `I S G`: [insert a new grid](/form-builder/toolbox.md)
-- `I S R`: [insert a new repeated grid](/form-builder/toolbox.md)
+- `I F S`: [insert a new section](/form-builder/toolbox.md)
+- `I F G`: [insert a new grid](/form-builder/toolbox.md)
+- `I F R`: [insert a new repeated grid](/form-builder/toolbox.md)
 
 ## Inserting form controls
 
