@@ -109,7 +109,7 @@ You can use the left and right cursor keys to navigate between grid cells.
 The mnemonics for these shortcuts are:
 
 - `I`: insert
-- `S`: structure
+- `F`: form structure (for a while, this was `S`)
 
 Available shortcuts
 

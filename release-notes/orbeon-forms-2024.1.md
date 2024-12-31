@@ -235,6 +235,14 @@ Previously, a [Lease](/form-runner/feature/lease.md) was only supported for publ
     <figcaption>Message showing the user owns the lease</figcaption>
 </figure>
 
+### Keyboard shortcuts
+
+With Orbeon Forms 2023.1.3, we had already added a number of keyboard shortcuts in Form Builder (see [the "Improved Keyboard Shortcuts" blog post](https://www.orbeon.com/2024/07/keyboard-shortcuts)).
+
+With this release, we have added more keyboard shortcuts, including shortcuts to enter specific form controls. This can greatly accelerate how power users create forms.
+
+For details, see [Keyboard Shortcuts](/form-builder/keyboard-shortcuts.md#inserting-form-controls).
+
 ## Other new features and enhancements
 
 Orbeon Forms 2024.1 also includes many other new features and enhancements, including:
@@ -288,7 +296,6 @@ Orbeon Forms 2024.1 also includes many other new features and enhancements, incl
 - Error Summary: support showing only messages down to a given level ([\#6649](https://github.com/orbeon/orbeon-forms/issues/6649))
 - Ability to set the relevant and readonly of iterations in repeated grids and repeated sections ([\#5724](https://github.com/orbeon/orbeon-forms/issues/5724))
 - Excel table export from Summary page ([\#6323](https://github.com/orbeon/orbeon-forms/issues/6323)) (also on 2023.1.3)
-- more keyboard shortcuts
 
 Platform updates:
 
