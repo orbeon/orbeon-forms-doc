@@ -23,7 +23,7 @@ docker create \
     --name orbeon-forms-with-sqlite \
     -p 8080:8080 \
     -v ~/.orbeon/license.xml:/usr/local/tomcat/webapps/orbeon/WEB-INF/resources/config/license.xml \
-    orbeon/orbeon-forms:2023.1.6-pe
+    orbeon/orbeon-forms:2024.1-pe
 ```
 
 Make sure to replace `~/.orbeon/license.xml` with the path to your license file and to use another port if `8080` is already in use on your machine.
@@ -58,7 +58,7 @@ The following `docker-compose.yml` file can be used to start Orbeon Forms with a
 version: '3.8'
 services:
   orbeon-forms:
-    image: orbeon/orbeon-forms:2023.1.6-pe
+    image: orbeon/orbeon-forms:2024.1-pe
     ports:
       - ${ORBEON_TOMCAT_PORT:-8080}:8080
     volumes:
@@ -73,7 +73,7 @@ services:
     networks:
       - orbeon-forms-and-postgres
   postgres:
-    image: orbeon/postgres:2023.1.3-pe
+    image: orbeon/postgres:2024.1-pe
     restart: always
     ports:
       - ${ORBEON_POSTGRES_PORT:-5432}:5432
@@ -194,7 +194,7 @@ The `orbeon/orbeon-forms` image contains the JDBC drivers for SQLite and Postgre
 This can be done by using the following Dockerfile, using MySQL as an example:
 
 ```dockerfile
-FROM orbeon/orbeon-forms:2023.1.6-pe
+FROM orbeon/orbeon-forms:2024.1-pe
 
 RUN mkdir -p /tmp/orbeon
 WORKDIR /tmp/orbeon
@@ -218,7 +218,7 @@ RUN rm -rf /tmp/orbeon
 The customized image above can then be built using the following command:
 
 ```bash
-docker build -f Dockerfile.mysql -t "orbeon/orbeon-forms-mysql:2023.1.3-pe" .
+docker build -f Dockerfile.mysql -t "orbeon/orbeon-forms-mysql:2024.1-pe" .
 ```
 
 For further information about configuring Orbeon Forms to use a different database, see [Using a relational database](/form-runner/persistence/relational-db.md).
