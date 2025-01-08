@@ -75,6 +75,22 @@ For dynamic dropdowns, the original service used to populate the dropdown is not
 
 You specify which fields appear in the search options area when editing the form definition, using the [Control Settings dialog](/form-builder/control-settings.md).
 
+### Search options opened on load
+
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
+
+This property controls whether the search options area is opened by default when the Summary page loads. It allows you to provide a better user experience for forms where users frequently need to perform structured searches by having the search options immediately available.
+
+- When set to `"true"`: The search options area is shown by default when the page loads
+- When set to `"false"` (default): The search options area is collapsed by default when the page loads
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.fr.summary.search-options-opened-on-load.*.*"              
+    value="true"/>
+```
+
 ## Versioning
 
 [SINCE Orbeon Forms 2018.2]
