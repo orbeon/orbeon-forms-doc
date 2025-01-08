@@ -43,7 +43,7 @@ You can mark any form you create as a template, and that form will then show in 
     <figcaption>Marking a form as available as a template</figcaption>
 </figure>
 
-You can associate a thumbnail with each form, which will be used in the Form Builder New page as well as on the landing page (see below). That thumbnail can be a screenshot of the form, or any other graphic you choose.
+You can associate a thumbnail with each form, which will be used in the Form Builder New page as well as on the Landing page (see below). That thumbnail can be a screenshot of the form, or any other graphic you choose.
 
 <figure>
     <picture>
