@@ -14,9 +14,7 @@ The notion of _publishing_ is central to Form Builder/Form Runner.
 
 When you start publishing a form with the Publish button at the bottom of Form Builder, a dialog opens to confirm the application name and form name:
 
-[//]: # (<img alt="Creating a new version" src="images/publish-initial-no-versioning.png" width="502">)
-
-![Creating a new version](images/publish-initial-no-versioning.png)
+![Creating a new version](images/publish-initial.png)
 
 If you decide to go ahead with publishing, simply use the Publish button.
 
@@ -59,19 +57,19 @@ When creating a new version, the field is initially empty:
 
 [//]: # (<img alt="Empty comment" src="images/publish-comment-1.png" width="502">)
 
-![Empty comment](images/publish-comment-1.png)
+![Empty comment](images/publish-initial.png)
 
 You can set an explanatory comment:
  
-[//]: # (<img alt="Empty comment" src="images/publish-comment-2.png" width="502">)
-
-![Empty comment](images/publish-comment-2.png)
+![Original comment](images/publish-comment-v1-original.png)
 
 When overwriting an existing form version, the existing comment, if any, is read back from the published form definition and you can update it before publishing:
 
-[//]: # (<img alt="Empty comment" src="images/publish-comment-5.png" width="502">)
+![Updated comment](images/publish-comment-v1-update.png)
 
-![Empty comment](images/publish-comment-5.png)
+When you publish a new version, a completely separate comment is created for that version:
+
+![Original comment for the new version](images/publish-comment-v2-original.png)
 
 ## See also
 
