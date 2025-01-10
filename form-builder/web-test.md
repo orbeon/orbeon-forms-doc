@@ -2,7 +2,7 @@
 
 ## How to test a form
 
-The Buttons bar includes a Test menu button. Clicking on it opens an overlay with a Preview of your form:
+The Buttons bar includes a "Test" menu button. Clicking on it opens an overlay with a preview of your form:
 
 ![Form Preview overlay](images/web-test.png)
 
@@ -21,6 +21,10 @@ The following is not available:
 - saving data
 - submitting data
 - switching to the View mode and other page navigation
+
+Using the "Close" button takes you back to Form Builder.
+
+At the bottom, you have the [Formulas console](formulas-console.md), which shows automatically in case of errors with formulas.
 
 ## See also 
 
