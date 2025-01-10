@@ -27,17 +27,17 @@ By default, the bar includes the following buttons:
         - Export the form definition in XHTML+XForms format (the Orbeon Forms form definition format).
         - This produces a file with the same content shown by the ["Edit Source" dialog](edit-source.md).
 - __Test functions"__: 
-    - Test: open the form in test mode
-    - Test PDF: open the "Test PDF" dialog for testing PDF output
+    - [Test](web-test.md): open the form in test mode
+    - [Test PDF](pdf-test.md): open the "Test PDF" dialog for testing PDF output
         - This is an Orbeon Forms PE feature. 
-    - Test Offline: open the form in test mode, but using the "offline" (JavaScript) runtime (experimental)
+    - [Test Offline](offline-test.md): open the form in test mode, but using the "offline" (JavaScript) runtime (experimental)
         - This is an Orbeon Forms PE feature. 
-    - Formula Inspector: observe formulas and their dependencies (experimental)
+    - [Formula Inspector](formulas-inspector.md): observe formulas and their dependencies (experimental)
 - __Publish"__: 
-    - Open the "Publish" dialog to publish the form definition
-    - This automatically saves the form definition as well.
+    - Open the ["Publish" dialog](publishing.md) to publish the form definition
+    - This will automatically save the form definition if you complete publishing in the dialog.
 - __Save"__:
-    - Save, but don't publish, the form definition 
+    - Save, but don't publish, the in-progress form definition 
 
 The buttons are configurable with the `oxf.fr.detail.buttons.orbeon.builder` property. The default value is, for Orbeon Forms 2023.1 PE:
 

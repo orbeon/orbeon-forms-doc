@@ -72,3 +72,5 @@ See also [The `open-rendered-format()` action](/form-runner/advanced/buttons-and
 - [Automatic PDF](pdf-automatic.md)
 - [PDF templates](pdf-templates.md)
 - [The `open-rendered-format()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format)
+- [Testing in web mode](web-test.md)
+- [Testing the offline mode](offline-test.md)

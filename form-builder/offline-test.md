@@ -41,3 +41,5 @@ As of Orbeon Forms 2023.1, there are limitations, including the following:
 ## See also
 
 - [Form Runner offline embedding API](/form-runner/link-embed/offline-embedding-api.md)
+- [Testing PDF production](pdf-test.md)
+- [Testing in web mode](web-test.md)

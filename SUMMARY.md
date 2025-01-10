@@ -83,6 +83,7 @@
             * [Action Syntax](form-builder/actions-syntax.md)
             * [Action Syntax examples](form-builder/action-syntax-examples.md)
             * [Synchronizing repeated content](form-builder/synchronize-repeated-content.md)
+        * [Testing a form in web mode](form-builder/web-test.md)
         * [Testing PDF production](form-builder/pdf-test.md)
         * [Testing offline functionality](form-builder/offline-test.md)
         * [Email settings](form-builder/email-settings.md)
