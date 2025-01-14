@@ -29,5 +29,5 @@ At the bottom, you have the [Formulas console](formulas-console.md), which shows
 ## See also 
 
 - [Testing PDF production](pdf-test.md)
-- [Testing the offline mode](offline-test.md)
+- [Testing in offline mode](offline-test.md)
 - [The `open-rendered-format()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format)

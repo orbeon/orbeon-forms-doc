@@ -27,3 +27,4 @@ The console automatically opens when the first error occurs. You can close and o
 - [Formulas inspector](formulas-inspector.md)
 - [Examples of formulas](formulas-examples.md)
 - [Formulas](formulas.md)
+- [Testing a form in web mode](web-test.md)
