@@ -64,6 +64,12 @@ Unless you have another front-end performing stream compression, it is important
 />
 ```
 
+You can check that compression is working in your browser's Dev Tools' Network tab, where the two sizes indicate the compressed size and the uncompressed size:
+
+![Gzip compression sizes](/installation/images/dev-tools-gzip-compression.png)
+
+Response headers will also include a `content-encoding: gzip` response header on pages and most text assets. 
+
 ## Datasource setup
 
 If you have a JDBC datasource, add it **inside** the `<Context>`, as in the following example:
