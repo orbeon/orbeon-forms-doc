@@ -70,7 +70,7 @@ By default, the `output-format` parameter is not set, and the global `oxf.xforms
 
 On iOS, the native iOS date picker is used by default, unless users enabled Request Desktop Website in Safari, in which case they will see the same behavior as they would on the desktop. 
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) As browser support for the native date picker on desktop has improved over the years, and since it is better supported by screen readers, you may want to use the native date picker not only on mobile but also on desktop. You can achieve this by setting the property mentioned below.
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) As browser support for the native date form control on desktop has improved over the years, and since it is better supported by screen readers, you may want to use the native date form control not only on mobile but also on desktop. You can achieve this by setting the property below.
 
 When doing so, the date format is determined by the browser based on the user's locale. Consequently, the properties `oxf.xforms.format.input.date` and `oxf.xforms.format.output.date` have no effect on the format of the native date picker.
 

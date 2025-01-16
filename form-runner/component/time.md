@@ -136,6 +136,36 @@ The value is in the same format as the global `oxf.xforms.format.input.time` pro
 
 By default, the `output-format` parameter is not set, and the global `oxf.xforms.format.input.time` property is used for backward compatibility.
 
+### Native time picker
+
+[SINCE Orbeon Forms 2024.1.1]
+
+On iOS, the native iOS time picker is used by default, unless users enabled Request Desktop Website in Safari, in which case they will see the same behavior as they would on the desktop. 
+
+As browser support for the native time form control on desktop has improved over the years, and since it is better supported by screen readers, you may want to use the native time form control not only on mobile but also on desktop. You can achieve this by setting the property below.
+
+When doing so, the time format is determined by the browser based on the user's locale. Consequently, the properties `oxf.xforms.format.input.date` and `oxf.xforms.format.output.date` have no effect on the format of the native date picker, with one exception: the presence or absence of seconds in the format is used to tell the browser to show or hide the seconds field. This, however, doesn't work on iOS as of January 2025, where the seconds field is never shown.
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.xforms.xbl.fr.time.native-picker.*.*"             
+    value="always"/>
+```
+
+<figure>
+    <img src="/form-runner/images/native-time-picker-chrome.png" width="270">
+    <figcaption>Native time picker on Chrome desktop</figcaption>
+</figure>
+
+As of January 2025, the native time form control is supported on all major desktop browsers. Note that the appearance can be different. In particular, only Chrome appears to offer an actual picker for the time:
+
+| **Browser** | **Time Field**  | **Picker Available** |
+|-------------|:---------------:|:--------------------:|
+| Chrome      |        ✅        |          ✅           |
+| Firefox     |        ✅        |          ❌           |
+| Safari      |        ✅        |          ❌           |
+
 ## Output format in readonly modes
 
 The Time control uses the `oxf.xforms.format.output.time` property to format the time value.
@@ -153,6 +183,7 @@ The default value is:
 The Time components uses the `output-format` parameter to format the time in readonly modes, including `view` and `pdf`.
 
 This means that the `oxf.xforms.format.output.time` property is no longer used in readonly modes.
+
 
 ## Example usage
 
