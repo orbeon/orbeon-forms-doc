@@ -102,7 +102,7 @@ Orbeon Forms first searches for the license file within the WAR, and if not foun
 
 The benefit of this approach is that you don't have to find where the WAR file is deployed in your container, or to uncompress and recompress the WAR file with the license.
 
-_NOTE:  Orbeon Forms uses Java's `System.getProperty("user.home")` to identify the user's home directory.__  This corresponds to the user running the servlet container and not necessarily to the user of the developer or system administrator._
+_NOTE: Orbeon Forms uses Java's `System.getProperty("user.home")` to identify the user's home directory. This corresponds to the user running the servlet container and not necessarily to the user of the developer or system administrator._
 
 ## Configuration properties
 
