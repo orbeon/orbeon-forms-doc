@@ -81,7 +81,7 @@ You can check that compression is working in your browser's Dev Tools' Network t
 
 ![Gzip compression sizes](/installation/images/dev-tools-gzip-compression.png)
 
-Response headers will also include a `content-encoding: gzip` response header on pages and most text assets. 
+Response headers will also include a `Content-Encoding: gzip` response header on pages and most text assets. 
 
 ## Datasource setup
 
