@@ -50,6 +50,20 @@ Edit `TOMCAT_HOME/conf/server.xml`, and inside the `<Host>` create a `<Context>`
     allowLinking="true"/>
 ```
 
+## Compression
+
+Unless you have another front-end performing stream compression, it is important to tell Tomcat to enable gzip compression on its connectors. This makes the amount of data transferred for JavaScript and CSS assets, in particular, significantly smaller. You can enable this on the Tomcat `<Connector>` elements in `server.xml` with the `compression="on"` attribute. For example: 
+
+```xml
+<Connector 
+    port="8080" 
+    protocol="HTTP/1.1"
+    connectionTimeout="20000"
+    URIEncoding="UTF-8"
+    compression="on"
+/>
+```
+
 ## Datasource setup
 
 If you have a JDBC datasource, add it **inside** the `<Context>`, as in the following example:
