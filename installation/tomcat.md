@@ -1,5 +1,18 @@
 # Tomcat
 
+## Introduction
+
+Installing Orbeon Forms on Tomcat is only one of the possibilities. You can also install Orbeon Forms on other Servlet container. You can also use Docker containers. See also:
+
+- Docker
+    - [Blog post](https://www.orbeon.com/2024/10/orbeon-forms-docker-images) 
+    - [Detailed documentation](docker.md)
+- Servlet containers
+    - [WildFly](wildfly.md)
+    - [WebLogic](weblogic.md)
+    - [WebSphere](websphere.md)
+    - [GlassFish](glassfish.md)
+
 ## Supported Tomcat versions
 
 The following versions of Tomcat are supported:

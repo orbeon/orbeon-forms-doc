@@ -1,5 +1,20 @@
 # IBM WebSphere 8.5
 
+## Introduction
+
+Installing Orbeon Forms on WebSphere is only one of the possibilities. You can also install Orbeon Forms on other Servlet container. You can also use Docker containers. See also:
+
+- Docker
+    - [Blog post](https://www.orbeon.com/2024/10/orbeon-forms-docker-images) 
+    - [Detailed documentation](docker.md)
+- Servlet containers
+    - [Tomcat](tomcat.md)
+    - [WildFly](wildfly.md)
+    - [WebLogic](weblogic.md)
+    - [GlassFish](glassfish.md)
+
+## Installation notes
+
 1. **Installing WebSphere** – Download [WebSphere 8.5 Liberty Profile](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-non-eclipse-environments/). Run the command line mentioned on that page, e.g. `java -jar wlp-developers-runtime-8.5.5.0.jar`. In what follows, we'll refer to the directory where you installed WebSphere Liberty Profile as `WLP`.
 2. **Running WebSphere** – Run the server: `cd WLP/bin ; ./server run`. This will create the directory structure under `WLP/usr/servers/defaultServer`.
 3. **Deploying Orbeon Forms** – In `WLP/usr/servers/defaultServer/apps` create a `war` directory, and inside it an `orbeon` directory. Uncompress the Orbeon Forms war into that `orbeon` directory. Open `WLP/usr/servers/defaultServer/server.xml` in an editor, inside the `<server>` root element, add the following two lines. The first lines declared the Orbeon Form app. The second disables automatic application redeployment when files in Orbeon Forms war file change. You need this as by default Form Runner uses the embedded eXist database, which writes to `WEB-INF/exist-data`, inside the Orbeon Forms `war`, which would trigger the app to restart as data is written to disk.

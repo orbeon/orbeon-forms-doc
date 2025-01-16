@@ -1,5 +1,20 @@
 # Oracle WebLogic 11g
 
+## Introduction
+
+Installing Orbeon Forms on WebLogic is only one of the possibilities. You can also install Orbeon Forms on other Servlet container. You can also use Docker containers. See also:
+
+- Docker
+    - [Blog post](https://www.orbeon.com/2024/10/orbeon-forms-docker-images) 
+    - [Detailed documentation](docker.md)
+- Servlet containers
+    - [Tomcat](tomcat.md)
+    - [WildFly](wildfly.md)
+    - [WebSphere](websphere.md)
+    - [GlassFish](glassfish.md)
+
+## Installation notes
+
 A version of the ANTLR library that ships with WebLogic 11g conflicts with the version required by Orbeon Forms. To run Orbeon Forms on WebLogic 10/11g, you need to instruct WebLogic to let Orbeon Forms use the version of ANTLR that ships with Orbeon Forms. You can do this in the WebLogic EAR descriptor, which means you need to encapsulate Orbeon Forms in an EAR before you deploy it:
 
 1. Create the following directory structure in a temporary directory:
