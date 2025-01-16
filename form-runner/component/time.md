@@ -166,6 +166,8 @@ As of January 2025, the native time form control is supported on all major deskt
 | Firefox     |        ✅        |          ❌           |
 | Safari      |        ✅        |          ❌           |
 
+See also the [native date picker](date.md#native-date-picker).
+
 ## Output format in readonly modes
 
 The Time control uses the `oxf.xforms.format.output.time` property to format the time value.
@@ -202,3 +204,4 @@ This means that the `oxf.xforms.format.output.time` property is no longer used i
 
 - [Date component](date.md)
 - Blog post: [Time form control improvements](https://blog.orbeon.com/2023/01/time-form-control-improvements.html)
+- [Native date picker](date.md#native-date-picker)

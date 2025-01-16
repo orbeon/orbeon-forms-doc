@@ -86,6 +86,8 @@ When doing so, the date format is determined by the browser based on the user's 
     <figcaption>Native date picker on Chrome desktop</figcaption>
 </figure>
 
+See also the [native time picker](time.md#native-time-picker).
+
 ### Today's highlight
 
 [UNTIL Orbeon Forms 2024.1], today's date was not highlighted in the datepicker. [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md), today's date is highlighted by default. You can disable this behavior by setting the following property.
@@ -101,3 +103,4 @@ When doing so, the date format is determined by the browser based on the user's 
 
 - [Dropdown Date](dropdown-date.md)
 - [Dates to Exclude constraint in Form Builder](/form-builder/validation.md#dates-to-exclude-constraint)
+- [Native time picker](time.md#native-time-picker)
