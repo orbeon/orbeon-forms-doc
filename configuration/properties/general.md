@@ -483,7 +483,7 @@ This property can easily be commented out for deployment, or placed in `properti
 
 ### Test recipient
 
-Configure a test recipient email address for all email processors. This global property when specified overrides all the other SMTP recipient configurations for all email processors.
+Configure a test recipient email address for all email processors. This global property when specified overrides all the other SMTP recipient configurations for all email processors. [SINCE Orbeon Forms 2024.1.1] If this property is specified, CC and BCC recipients are also ignored.
 
 ```xml
 <property
@@ -492,8 +492,6 @@ Configure a test recipient email address for all email processors. This global p
     name="test-to"
     value="joe@example.org"/>
 ```
-
-This property can easily be commented out for deployment, or placed in `properties-local-dev.xml` (see also [Run Modes](../../configuration/advanced/run-modes.md)).
 
 ## Rarely used properties
 
