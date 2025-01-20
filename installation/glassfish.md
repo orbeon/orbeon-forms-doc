@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Installing Orbeon Forms on GlassFish is only one of the possibilities. You can also install Orbeon Forms on other Servlet container. You can also use Docker containers. See also:
+Installing Orbeon Forms on GlassFish is only one of the possibilities. You can also install Orbeon Forms on other Servlet containers. You can also use Docker containers. See also:
 
 - Docker
     - [Blog post](https://www.orbeon.com/2024/10/orbeon-forms-docker-images) 
