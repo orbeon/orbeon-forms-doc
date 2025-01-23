@@ -121,11 +121,15 @@ During XForms development, you might want to enable a more aggressive debug conf
     - If you have a file named `log4j2.xml` (with `2` in the file name), inside the element `<Loggers>`, add:
     
         ```xml
-        <Logger name="org.orbeon.oxf.xforms.processor.XFormsServer" level="debug"/>
-        <Logger name="org.orbeon.oxf.processor.DebugProcessor"      level="debug"/>
-        <Logger name="org.orbeon.relational"                        level="debug"/>
-        <Logger name="org.orbeon.auth"                              level="debug"/>
-        <Logger name="org.orbeon.lifecycle"                         level="debug"/>
+        <Logger name="org.orbeon.oxf.xforms.processor.XFormsServer"          level="debug"/>
+        <Logger name="org.orbeon.oxf.fr.FormRunnerPersistence"               level="debug"/>
+        <Logger name="org.orbeon.oxf.processor.DebugProcessor"               level="debug"/>
+        <Logger name="org.orbeon.oxf.processor.pdf.XHTMLToPDFProcessor"      level="debug"/>
+        <Logger name="org.orbeon.relational"                                 level="debug"/>
+        <Logger name="org.orbeon.auth"                                       level="debug"/>
+        <Logger name="org.orbeon.lifecycle"                                  level="debug"/>
+        <Logger name="org.orbeon.xforms.submission.two-pass"                 level="debug"/>
+        <Logger name="org.orbeon.properties"                                 level="warn"/>
         ```
     
     - If you have a file named `log4j.xml` (without `2` in the file name), uncomment the following: 
