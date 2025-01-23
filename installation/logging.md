@@ -77,7 +77,7 @@ Log4j 2.x (`WEB-INF/resources/config/log4j2.xml`):
     name="SingleFileAppender"
     fileName="../logs/orbeon.log"
     append="false">
-    <PatternLayout pattern="%date{ISO8601} %-5level %logger{1} - %message%n"/>
+    <PatternLayout pattern="%date{ISO8601} - %tid - %-5level %logger{1} %X{orbeon-incoming-http-header-host} - %message%n"/>
 </File>
 ```
 
@@ -103,7 +103,7 @@ Log4j 2.x (`WEB-INF/resources/config/log4j2.xml`):
     name="SingleFileAppender"
     fileName="/path/to/logs/orbeon.log"
     append="false">
-    <PatternLayout pattern="%date{ISO8601} %-5level %logger{1} - %message%n"/>
+    <PatternLayout pattern="%date{ISO8601} - %tid - %-5level %logger{1} %X{orbeon-incoming-http-header-host} - %message%n"/>
 </File>
 ```
 
@@ -129,7 +129,7 @@ Log4j 2.x (`WEB-INF/resources/config/log4j2.xml`):
     name="SingleFileAppender"
     fileName="C:/My Path/To/Logs/orbeon.log"
     append="false">
-    <PatternLayout pattern="%date{ISO8601} %-5level %logger{1} - %message%n"/>
+    <PatternLayout pattern="%date{ISO8601} - %tid - %-5level %logger{1} %X{orbeon-incoming-http-header-host} - %message%n"/>
 </File>
 ```
 
@@ -159,7 +159,7 @@ Log4j 2.x (`WEB-INF/resources/config/log4j2.xml`):
     name="SingleFileAppender"
     fileName="/path/to/logs/orbeon.log"
     append="false">
-    <PatternLayout pattern="%date{ISO8601} %-5level %logger{1} - %message%n"/>
+    <PatternLayout pattern="%date{ISO8601} - %tid - %-5level %logger{1} %X{orbeon-incoming-http-header-host} - %message%n"/>
     <ThresholdFilter level="error"/>
 </File>
 ```
