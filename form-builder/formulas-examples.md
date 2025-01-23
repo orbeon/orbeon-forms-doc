@@ -75,7 +75,7 @@ Explanation:
 * the nested `/number` path points to the `number` field within each iteration
 * `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
 * `sum()` is a standard XPath function to compute the sum of a sequence of items
-*
+
 ## Constrain a number between two values
 
 Scenario: Make the current integer number field valid only if its value is between two values, say 12 and 17 included.
