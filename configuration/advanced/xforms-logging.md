@@ -140,7 +140,7 @@ During XForms development, you might want to enable a more aggressive debug conf
         </category>
         ```
 
-3. Configure the `oxf.xforms.logging.debug` property in your `config/properties-local.xml`. You can choose precisely what the XForms engine logs. The following is the most comprehensive configuration. It will log almost everything. In most cases, this is a good configuration during development, and while troubleshooting issues in staging:
+2. Configure the `oxf.xforms.logging.debug` property in your `config/properties-local.xml`. You can choose precisely what the XForms engine logs. The following is the most comprehensive configuration. It will log almost everything. In most cases, this is a good configuration during development, and while troubleshooting issues in staging:
 
     ```xml
     <property as="xs:NMTOKENS" name="oxf.xforms.logging.debug">
