@@ -18,9 +18,9 @@ Or you can purge forms by specifying a list of application, form, and version fi
 
 ## Limitations
 
-At the moment, it is only possible to purge form data, not form definitions.
-
-At the moment, once the "Purge" button has been clicked, the dialog will be closed and the purge will be performed in the background. This means that you won't be able to see the progress of the purge, and you won't be able to cancel it. This also means you shouldn't leave the current page until the zip file has been downloaded. This will be improved in a future version.
+- It is only possible to purge form data, not form definitions.
+- Once the "Purge" button has been clicked, the dialog will be closed and the purge will be performed in the background. This means that you won't be able to see the progress of the purge, and you won't be able to cancel it. This also means you shouldn't leave the current page until the zip file has been downloaded. This will be improved in a future version.
+- You can't use this interface to purge Form Builder forms, tracked as [#6428](https://github.com/orbeon/orbeon-forms/issues/6428).
 
 ## See also
 
