@@ -20,7 +20,22 @@ When you load existing data with the updated form definition, the following happ
 
 ## Configuration
 
-This option is disabled by default. You can enable it in the Form Settings's Form Options tab:
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+
+This option is enabled by default for new forms. Forms created with earlier versions are not affected. The default configuration property is set as follows:
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.fr.detail.data-migration.*.*"
+    value="{if (fr:created-with-or-newer('2024.1')) then 'enabled' else 'disabled'}"/>
+```
+
+[\[UNTIL Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+This option is disabled by default for forms created with Orbeon Forms 2023.1.x.
+
+You can enable it in the Form Settings's Form Options tab:
 
 - __Use property:__ Use the value set by the `oxf.fr.detail.data-migration` property.
 - __Enabled:__ Perform simple data migration when loading and receiving data.
@@ -59,7 +74,7 @@ Simply moving a form control this way allows you to reorganize your form while k
 
 When you load existing data with the updated form definition, the following happens:
 
-- If the data is both *missing* a placeholder and has an *extra* placeholder with the same name, and the placeholder doesn't cross repeated grids or section boundaries, then Form Runner considers that the form control moved and automatically moves the data that was read from the database. 
+- If the data is both *missing* a placeholder and has an *extra* placeholder with the same name, and the placeholder doesn't cross repeated grids or section boundaries, then Form Runner considers that the form control moved and automatically moves the data that was read from the database.
 
 ## Limitations
 
