@@ -2,21 +2,22 @@
 
 ## Upcoming releases
 
-### Orbeon Forms 2024.1
+### Orbeon Forms 2025.1
 
 Focus:
 
 - Progress on workflow-related features
 - Form Builder user-friendliness:
     - more UI (properties, validations, formulas, etc.)
-    - see [#2282](https://github.com/orbeon/orbeon-forms/issues/2282), [#5798](https://github.com/orbeon/orbeon-forms/issues/5798), etc.
-- Forms look and feel
+    - see [#2282](https://github.com/orbeon/orbeon-forms/issues/2282)
+- More standard form controls
 - More demo forms
+- More configurable look and feel
 
 [//]: # (- admin console!)
 [//]: # (Think about other general lines.)
 
-See the tentative [2024.1 items](https://github.com/orbeon/orbeon-forms/projects/57) for details.
+See the tentative [2025.1 items](https://github.com/users/orbeon/projects/18) for details.
 
 Consider:
 
@@ -29,7 +30,7 @@ Consider:
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2024-12: tentative release date
+- 2025-12: tentative release date
 
 ## Past releases
 
