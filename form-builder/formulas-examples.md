@@ -1,19 +1,12 @@
 # Examples of formulas
 
-## Testing on a Yes No Answer field
+## Live examples
 
-Say you have a *Yes/No Answer* field (before 2016.1 called *Boolean Input*), named `yes-no`, and if the answer is *Yes*, you would like to show another field. In the *Visibility* expression for this other field, you should write:
-
-```xpath
-$yes-no/string() = 'true'
-```
-
-- Why not just write `$yes-no`? If you do, the expression will always evaluate to true, because Orbeon Forms evaluates `boolean($yes-no)`: since `$yes-no` points to a node, the `boolean` function [always returns true](https://www.w3.org/TR/xpath-functions-3/#func-boolean).
-- Why not write `$yes-no = true()`? In this case, since `$yes-no` compared to boolean value, it is [atomized](https://www.w3.org/TR/xpath-30/#id-atomization). The node pointed to by `$yes-no` is of type boolean, so the atomization process takes the node typed value. When the node contains the string `true` or `false`, this expression works as expected. However, if it contains an empty string, which up to Orbeon Forms 2017.2 is the default value for that field, then the expression fails. For the purpose of determining whether a field is valid, read-only, or visible, when the expression fails the result will be considered to be `false`, so it will work if the expression is used on its own. However, if the expression is used in an `or` clause (`$yes-no = true() or something`), if the `$yes-no = true()` part is evaluated first, the expression as a whole will fail and return false, which is incorrect in case the other part of the `or` clause is true. Also, in the case of a calculated value, the result will be the empty string, instead of `false`.
+For live examples of [Formulas](formulas.md), see [Orbeon Demo: Examples of Formulas](https://demo.orbeon.com/demo/fr/orbeon-features/formulas/new?form-version=1).
 
 ## Sum of values in a repeat
 
-### With Orbeon Forms 4.5 and newer
+[SINCE Orbeon Forms 4.5]
 
 Scenario: compute the sum of values in multiple repeat repetitions.
 Say you have:
@@ -53,28 +46,6 @@ See also:
 - [Resolution of repeated controls](formulas.md#resolution-of-repeated-controls)
 - [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html).
 - [Unexpected result with variable inside an `<xf:bind>` iteration #152](https://github.com/orbeon/orbeon-forms/issues/152)
-
-### From Orbeon Forms 4.0 to 4.4.x
-
-Scenario: compute the sum of values in multiple repeat repetitions.
-
-Say you have:
-
-* a repeat called `my-repeat`
-* with a decimal field called `number` on each row
-
-Calculated value expression:
-
-```xpath
-sum($my-repeat/number[string() castable as xs:decimal])
-```
-
-Explanation:
-
-* `$my-repeat` points to the repeat data's enclosing XML elements
-* the nested `/number` path points to the `number` field within each iteration
-* `[string() castable as xs:decimal]` excludes values that are blank or not a decimal number
-* `sum()` is a standard XPath function to compute the sum of a sequence of items
 
 ## Constrain a number between two values
 
@@ -130,18 +101,6 @@ The same can be expressed, for the current control, as:
 ```xpath
 xxf:min-length(2) and xxf:max-length(140)
 ```
-
-## Validating with a regular expression
-
-Scenario: check that a given value matches a regular expression, for example "only ASCII letters and digits, the dash, and underscore character".
-
-```xpath
-matches(., '^[A-Za-z0-9\-_]+$')
-```
-
-Explanation:
-
-- the standard `matches()` function applies the regular expression passed as second argument to the first argument, and returns true if it does match
 
 ## Validating with a regular expression for an optional value
 
@@ -318,146 +277,6 @@ Explanation:
     - `xxf:get-request-parameter()` returns an empty XPath sequence
     - so you get a sequence containing only the current value of the field
     - we take the first value of that sequence, so we get the current value of the control
-
-## Testing the values of a checkbox 
-
-Say:
-
-- a Checkboxes control is needed named `my-checkboxes`
-- the Checkboxes control contains several choices, including two choices with values `foo` and `bar`
-- you'd like to show another control if `my-checkboxes` has either `foo` or `bar` selected
-
-```xpath
-xxf:split($my-checkboxes) = ('foo', 'bar')
-```
-
-Explanation:
-
-- `$my-checkboxes` refers to the XML element containing the checkbox values as a space-separated list of tokens, such as:
-    - ""
-    - "foo"
-    - "bar"
-    - "foo bar"
-    - "baz foo bar"
-    - etc. if you have more values
-- the `xxf:split()` function splits that value on spaces and returns an XPath sequence of string tokens
-- the `=` comparison will return `true()` if at least one value matches another value on the other side
-
-So in the end that formula returns `true()` if the field `my-checkboxes` has the `foo` or `bar` value selected.
-
-## Constraint the number of selected checkboxes
-
-Scenario: For a given set of checkboxes, make sure the number of selected checkboxes is at most 3.
-
-```xpath
-count(xxf:split(.)) le 3
-```
-
-Explanation:
-
-- `xxf:split(.)` tokenizes the space-separated values selected by the checkbox
-- the number of tokens obtained with `count()` corresponds to the number of selected checkboxes
-- then this makes sure the number of tokens is lower than or equal to 3
-
-## Validating a Legal Entity Identifier (LEI)
-
-You can use the following formula, in Control Settings, Validation and Alerts, Formula, to validate the relevant [LEI](https://en.wikipedia.org/wiki/Legal_Entity_Identifier) field. Should you need to assess the validity of a LEI field that is somewhere else in the form, just replace `.` on the first line with the appropriate expression. An examples of valid LEI are:
-
-- `F50EOCWSQFAUVO9Q8Z97` (examples in ISO/DIS 17442)
-- `549300Y7W34DK0WBPY51` (Google)
-- `98450054NFCE7A67C172` (ManagedLEI)
-
-```xpath
-let $lei := .
-return
-  string-length($lei) = 20 and
-  xs:decimal(
-    string-join(
-      for $code in string-to-codepoints($lei)
-      return
-        if ($code >= string-to-codepoints('A') and string-to-codepoints('Z') >= $code) then
-          (: Letters A-Z :)
-          xs:string($code - string-to-codepoints('A') + 10)
-        else if ($code >= string-to-codepoints('0') and string-to-codepoints('9') >= $code) then
-          (: Digits 0-9 :)
-          xs:string($code - string-to-codepoints('0'))
-          (: Unrecognized characters :)
-        else
-          '',
-      ''
-    )
-  ) mod 97 = 1
-```
-
-## Validating an International Securities Identification Number (ISIN)
-
-You can use the following formula, in Control Settings, Validation and Alerts, Formula, to validate the relevant [ISIN](https://en.wikipedia.org/wiki/International_Securities_Identification_Number) field. Should you need to assess the validity of a ISIN field that is somewhere else in the form, just replace `.` on the first line with the appropriate expression. Examples of valid ISIN are:
-
-- `US0378331005` (Apple, Inc.)
-- `AU0000XVGZA3` (Treasury Corporation of Victoria)
-- `GB0002634946` (BAE Systems)
-
-```xpath
-let $isin := .
-return
-  (
-    let
-      $without-checksum := substring($isin, 1, 11),
-      $letter-as-numbers-string :=
-        string-join(
-          for $code in string-to-codepoints($without-checksum)
-          return
-            if ($code >= string-to-codepoints('A') and string-to-codepoints('Z') >= $code) then
-              (: Letters A-Z :)
-              xs:string($code - string-to-codepoints('A') + 10)
-            else if ($code >= string-to-codepoints('0') and string-to-codepoints('9') >= $code) then
-              (: Digits 0-9 :)
-              xs:string($code - string-to-codepoints('0'))
-              (: Unrecognized characters :)
-            else
-              '',
-          ''
-        ),
-      $letter-as-numbers-digits :=
-        for $code in string-to-codepoints($letter-as-numbers-string)
-        return xs:decimal(codepoints-to-string($code)),
-      $reversed-digits     := reverse($letter-as-numbers-digits),
-      $group-1-digits      := $reversed-digits[position() mod 2 = 1],
-      $group-2-digits      := $reversed-digits[position() mod 2 = 0],
-      $group-1-x2-decimals := for $d in $group-1-digits return $d * 2,
-      $group-1-x2-string   := string-join(for $d in $group-1-x2-decimals return string($d), ''),
-      $group-1-x2-digits   := for $code in string-to-codepoints($group-1-x2-string)
-                              return xs:decimal(codepoints-to-string($code)),
-      $sum-digits          := sum(($group-1-x2-digits, $group-2-digits)),
-      $checksum-computed   := string((10 - ($sum-digits mod 10)) mod 10),
-      $checksum-provided   := substring($isin, 12, 1),
-      $proper-checksum     := $checksum-computed = $checksum-provided,
-      $proper-length       := string-length($isin) = 12
-    return
-      $proper-checksum and $proper-length
-  )
-```
-
-## Number of weekdays between 2 dates
-
-- *Input* – In the following XPath expression, the start and end dates are inline, so you'll most likely want to modify it to refer to, say, dates entered by users in a form fields.
-- *Weekends* – The expression takes Saturday and Sunday to be part of the weekend.
-- *First day of the week* – The expression assumes Monday is the first day of the week. For instance check that on your system `format-date(xs:date('2018-12-10'), '[F1]')` returns 1. If not, you'll need to change the expressions for `$startW` and `$endW`.
-- *Credits* – This is a translation to XPath of [Java code written by Roland](https://stackoverflow.com/a/44942039/5295).
-
-```xpath
-for
-    $start          in xs:date('2018-12-15'),
-    $end            in xs:date('2018-12-26'),
-    $startW         in xs:integer(format-date($start, '[F1]')),
-    $endW           in xs:integer(format-date($end, '[F1]')),
-    $days           in days-from-duration($end - $start),
-    $daysNoWeekends in $days - (floor($days div 7) * 2)
-return
-    if ($days mod 7 != 0 and ($startW = 7 or $endW = 7)) then $daysNoWeekends - 1
-    else if ($endW < $startW) then $daysNoWeekends - 2
-    else $daysNoWeekends
-```
 
 ## Converting a date/time to a named timezone
 
