@@ -44,7 +44,7 @@ If your users are authenticated, you'll probably also want Orbeon Forms to know 
 
 [SINCE Orbeon Forms 2022.1.5]
 
-#### Corss-origin deployment
+#### Cross-origin deployment
 
 When calling `embedForm()`, the value of the `context` parameter must be the full URL of the Orbeon Forms server (like `https://forms.example.org/orbeon`), not a relative URL (like `/orbeon`).
 
