@@ -183,6 +183,42 @@ If you want to replace a form A shown in a given container by another form B, yo
 
 [SINCE Orbeon Forms 2022.1] Like `embedForm()`, `destroyForm()` returns a JavaScript `Promise` object. See the above section about `embedForm()` for more information about how to use the returned `Promise`. 
 
+## HTML example
+
+Here is an example of how you might embed a form in an HTML page, assuming Orbeon Forms is deployed at the path `/orbeon-forms-pe`:
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Orbeon Embedding Demo</title>
+
+        <script type="text/javascript" src="/orbeon-forms-pe/xforms-server/baseline.js?updates=fr"></script>
+        <script type="text/javascript">
+
+          window.addEventListener('DOMContentLoaded', function() {
+            ORBEON.fr.API.embedForm(
+              document.getElementById("my-form"),
+              "/orbeon-forms-pe",
+              "orbeon",
+              "invoice",
+              "new"
+            )
+            .then(() => console.log("`embedForm()` successfully loaded the form"))
+            .catch((e) => {
+              console.log("`embedForm()` returned an error");
+              console.log(e);
+            });
+          });
+        </script>
+    </head>
+    <body>
+        <div id="my-form" class="container">
+        </div>
+    </body>
+</html>
+```
+
 ## Caveats
 
 Make sure that you do *not* disable [combined resources](/configuration/advanced/javascript-css-assets.md#combined-asset-resources). Specifically, you *cannot* have the following in your `properties-local.xml`:
