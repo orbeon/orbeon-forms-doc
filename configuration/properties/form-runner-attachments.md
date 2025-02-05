@@ -51,7 +51,7 @@ This property was previously named `oxf.fr.detail.attachment.max-size-aggregate`
 
 ## Maximum aggregate attachment size (controls)
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 The following property sets the maximum aggregate size in bytes of all uploaded attachments for each individual attachment control. This property will typically be used to limit the total size of attachments for multiple attachment controls, although it will also be checked for single attachment controls. If you attempt to upload a larger attachment, an error is reported.
 

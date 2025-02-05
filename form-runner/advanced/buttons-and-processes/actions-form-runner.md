@@ -402,7 +402,7 @@ See also:
 ## Other actions
 
 - `captcha`:
-    - [SINCE Orbeon Forms 2024.1] This action is no longer needed, and running it has no effect.
+    - [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) This action is no longer needed, and running it has no effect.
     - [UNTIL Orbeon Forms 2023.1] Trigger the captcha.
 - `collapse-all`: Collapse all sections (when not using the wizard view).
 - `expand-all`: Expand all sections (when not using the wizard view).

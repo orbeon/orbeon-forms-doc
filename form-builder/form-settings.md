@@ -33,6 +33,10 @@ Form options include options which apply to the entire form definition.
   - Enable or disable singleton form behavior. 
   - See [Singleton Form](/form-runner/advanced/singleton-form.md)
 - Allow use as form template
+    - [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+    - When this is checked, this form can be used as a template for new forms.
+    - The default is unchecked.
+    - For details, see [Form templates](form-templates.md).
 - Simple Data Migration
   - [SINCE Orbeon Forms 2018.2]
   - For details, see [Simple data migration](/form-runner/feature/simple-data-migration.md).
@@ -96,7 +100,7 @@ See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-
   - Fixed width: the form sections and grids take a fixed and predefined width of approximately 940px for large displays (the layout becomes responsive for smaller displays sizes).
   - Fluid width: the form sections and grids take the entire web browser's viewport size.
 - Density
-  - [SINCE Orbeon Forms 2024.1]
+  - [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
   - Use property: use the [`oxf.fr.detail.density` property](/configuration/properties/form-runner-detail-page.md#density)
   - Sets the spacing between elements in the interface, `Compact` being the most compact (default) and `Roomy` being the most spacious.
 - Appearance of Control Labels
@@ -121,7 +125,7 @@ See also:
 
 ### Form Density
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 Here is how the same form layout looks with the three different form density settings. First, the default "Compact" setting:
 

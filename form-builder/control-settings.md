@@ -56,7 +56,7 @@ It is possible to restrict the "Show on Summary page" and "Allow bulk edit" opti
 
 ##### Bulk action
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 By default, bulk edition of form data on the Summary Page will simply save the updated form data. You can also specify a custom process to run by selecting "Run process" instead of "Save data".
 

@@ -78,7 +78,7 @@ where `$app` and `$form` represent a Form Runner application name and/or form na
 For detail on the process names and more, see [Running processes upon page load
 ](../../../configuration/properties/form-runner-detail-page.md#running-processes-upon-page-load).
 
-[SINCE Orbeon Forms 2024.1] It is also possible to explicitly specify the process to run via the `fr-process-name` URL parameter. When specified, the `fr-process-name` parameter takes precedence over the `oxf.fr.detail.process.*` properties. Example:
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) It is also possible to explicitly specify the process to run via the `fr-process-name` URL parameter. When specified, the `fr-process-name` parameter takes precedence over the `oxf.fr.detail.process.*` properties. Example:
 
 - `/fr/service/acme/order/edit/fc4c32532e8d35a2d0b84e2cf076bb070e9c1e8e?fr-process-name=custom-process`
 

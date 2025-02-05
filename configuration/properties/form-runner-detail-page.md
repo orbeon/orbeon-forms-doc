@@ -29,7 +29,7 @@ This can also be configured for a particular form in Form Builder's Form Setting
 
 ## Density
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 Available values:
 

@@ -322,7 +322,7 @@ See [Purging historical data](purging-historical-data.md).
 
 ## Search and sorting
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 The Forms Admin page allows you to search and sort forms by status, last modification date/time, application name, form name, version, and title.
 

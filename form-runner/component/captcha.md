@@ -84,7 +84,7 @@ You can use this component to show users a captcha, like the one shown in the fo
 1. First, you need to [sign up with reCAPTCHA][4] to get your own public/private key pair.
 2. Store your public keys (now called "site keys") and private keys in your properties, as follows:
 
-   - [SINCE Orbeon Forms 2024.1] 
+   - [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) 
 
        ```xml
        <property
@@ -320,8 +320,8 @@ The following property allows you to configure where the captcha is shown, if en
 
 - `form-bottom`: displays the captcha at the bottom of the form (default).
 - `inside-wizard`: displays the captcha on every page of the wizard.
-- `inside-wizard-first-page`: [SINCE Orbeon Forms 2024.1] displays the captcha on the first visible page of the wizard.
-- `inside-wizard-last-page`: [SINCE Orbeon Forms 2024.1] displays the captcha on the last visible page of the wizard.
+- `inside-wizard-first-page`: [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) displays the captcha on the first visible page of the wizard.
+- `inside-wizard-last-page`: [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) displays the captcha on the last visible page of the wizard.
 
 Only use `inside-wizard`, `inside-wizard-first-page`, or `inside-wizard-last-page` if your form is using the [wizard view](/form-runner/feature/wizard-view.md). If you use one of these tokens without the wizard view, the captcha will not be displayed.
 

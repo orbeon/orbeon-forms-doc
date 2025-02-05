@@ -20,7 +20,7 @@ The lease given to Homer will end either because it expires without being renewe
 
 ![Message showing the user relinquished the lease](../images/lease-relinquished.png)
 
-[SINCE Orbeon Forms 2024.1] The Lease feature is also available in Form Builder, where it prevents multiple users from concurrently editing the same form definition.
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) The Lease feature is also available in Form Builder, where it prevents multiple users from concurrently editing the same form definition.
 
 ## Enabling the Lease feature
 
@@ -41,7 +41,7 @@ If the Lease feature is enabled, when non-authenticated users try to edit the da
 
 The above property will not enable the Lease feature for Form Builder.
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 To enable the Lease feature specifically for Form Builder, use the following property:
 

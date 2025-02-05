@@ -139,7 +139,7 @@ This function was previously called `xxf:upload-max-size()`. Both names will wor
 
 ## xxf:upload-max-size-aggregate-per-control()
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 ```xpath
 xxf:upload-max-size-aggregate-per-control($bytes as xs:integer?) as xs:boolean

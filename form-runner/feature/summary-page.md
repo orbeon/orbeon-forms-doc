@@ -27,7 +27,7 @@ The Form Runner Summary page shows, for a given published form, the list of acce
 
 ### Sorting
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 It is possible to sort the data by clicking on the column headers. The sort order is indicated by an arrow next to the column name. Clicking multiple times on the same header will toggle between ascending and descending order.
 
@@ -57,7 +57,7 @@ You can open the search options using the "Show Search Options" button. The sear
 
 ### Search by created, modified, created by, modified by, and workflow stage
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 When the corresponding [`oxf.fr.summary.show-*` properties](/configuration/properties/form-runner-summary-page.md) are enabled, the search options area contains individual search fields which allow performing a search by created, modified, created by, modified by, and workflow stage.
 

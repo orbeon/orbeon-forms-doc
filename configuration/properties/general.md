@@ -309,7 +309,7 @@ Default:
 
 ### Caching
 
-[SINCE Orbeon Forms 2024.1] The `oxf.http.service.cache-headers` property is new in Orbeon Forms 2024.1. The `oxf.http.page.cache-headers` property existed previously but was not publicly documented.
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) The `oxf.http.service.cache-headers` property is new in Orbeon Forms 2024.1. The `oxf.http.page.cache-headers` property existed previously but was not publicly documented.
 
 Orbeon Forms allows you to control the value of the `Cache-Control` HTTP caching header it sets in HTTP responses. For pages, i.e. the HTML sent to the browsers for your forms, the default value allows browsers to cache the page but requires the browser to revalidate the cached content with the server. For services, like APIs provided by Form Runner, caching is disabled. You can change these defaults with the following properties.
 

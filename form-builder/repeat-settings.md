@@ -131,7 +131,7 @@ For details, see [Paging large repeated sections](/form-runner/feature/wizard-vi
 
 ## Visibility and Read-Only formulas
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 - **Visibility:** Specifies whether the repetition is visible. This can be either "Yes" (default), "No", or an XPath formula, in which case the repetition is visible only if the formula evaluates to `true()`.
 - **Read-Only:** Specifies whether the repetition is read-only (not editable). This can be either "Yes", "No" (default), or an XPath formula, in which case the repetition is editable only if the formula evaluates to `false()`.

@@ -21,7 +21,7 @@ In particular, this API is used internally by:
 
 ## API (v2)
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 The Form Metadata API v2 tries to behave as much as possible like the first version of the API. The main difference is that it uses `POST` instead of `GET`. This allows for more complex requests to be passed to the API (filtering, sorting, paging).
 

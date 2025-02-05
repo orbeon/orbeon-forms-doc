@@ -167,7 +167,7 @@ For the search response in this case, see further below.
 
 ## Metadata queries
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 `query` elements can also be used to add constraints on metadata fields, using the `metadata` attribute, which can take one of the following values:
 
@@ -196,7 +196,7 @@ The absence or presence of a metadata query element doesn't affect the inclusion
 
 ## Sorting
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 By default, search results are sorted by last modification date/time, from most recent to oldest. It is possible to specify another sort order by adding a `sort` attribute to the search query, on one of the `<query>` elements, with one of the following values:
 

@@ -4,7 +4,7 @@
 
 ### Rationale
 
-If you're using Oracle, SQL Server [SINCE Orbeon Forms 2016.2], DB2 [SINCE Orbeon Forms 4.7], PostgreSQL [SINCE Orbeon Forms 4.8], or MySQL [SINCE Orbeon Forms 2024.1], when you deploy a form created in Form Builder, Orbeon Forms can create a form-specific view of your data, with one column for each form field.
+If you're using Oracle, SQL Server [SINCE Orbeon Forms 2016.2], DB2 [SINCE Orbeon Forms 4.7], PostgreSQL [SINCE Orbeon Forms 4.8], or MySQL [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md), when you deploy a form created in Form Builder, Orbeon Forms can create a form-specific view of your data, with one column for each form field.
 
 ### Property to enable
 
@@ -40,7 +40,7 @@ When you enable this property, upon publishing a form, the persistence layer cre
  
 For instance, on Orbeon Forms 2021.1 and newer, if your app is `hr`, your form is `expense`, and you are publishing version 2 of that form, then the view is named `orbeon_f_hr_expense_2`. If upon publishing, there is already a view with that name, the persistence layer deletes it before recreating a new view.
 
-[SINCE Orbeon Forms 2024.1] One extra view will be created for each repeated section and grid, if any. In that case, the view name will be suffixed with the name of the repeated section or grid.
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) One extra view will be created for each repeated section and grid, if any. In that case, the view name will be suffixed with the name of the repeated section or grid.
 
 ```
 orbeon_f_#{app}_#{form}_#{form_version}_#{repeated_section_or_grid}
@@ -65,7 +65,7 @@ Note that there is no `metadata_draft` column, as drafts are not included the vi
 
 ### Repetition column names
 
-[SINCE Orbeon Forms 2024.1] For repeated sections and grids, the view includes the repetition number for the current repeated section or grid, as well as for any enclosing repeated section. The column names are generated as follows:
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) For repeated sections and grids, the view includes the repetition number for the current repeated section or grid, as well as for any enclosing repeated section. The column names are generated as follows:
 
 ```
 #{repeated_section_or_grid}_repetition
@@ -158,4 +158,4 @@ Examples:
 - With MySQL, fields within repeated sections or grids are not supported. This is because the MySQL built-in XML function `ExtractValue()` is quite limited and does not directly support returning multiple rows from a single XML document.
 - Flat views are not supported at all with SQLite.
 - [SINCE Orbeon Forms 2016.1] Fields inside nested sections and nested section templates are supported.
-- [SINCE Orbeon Forms 2024.1] Fields inside repeated sections or grids are also supported.
+- [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) Fields inside repeated sections or grids are also supported.

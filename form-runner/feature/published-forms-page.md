@@ -35,7 +35,7 @@ The page shows a table with the following data:
 
 ## Search and sorting
 
-[SINCE Orbeon Forms 2024.1]
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 The Published Forms page allows you to search and sort forms by last modification date/time, application name, form name, version, and title.
 
