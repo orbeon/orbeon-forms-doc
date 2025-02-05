@@ -30,7 +30,7 @@ By default, the Lease feature is disabled. It is enabled when the following cond
 - The user is authenticated.
 - The implementation of the persistence API used by the current app/form supports the Lease feature. As of Orbeon Forms 2018.2, this is the case of all the built-in implementations of the persistence API for relational databases, but not of the implementation of the persistence API for eXist.
 
-If the Lease feature is enabled, when non-authenticated users try to edit the data, they receive receive a [403 Forbidden](https://en.wikipedia.org/wiki/HTTP_403).
+If the Lease feature is enabled, when non-authenticated users try to edit the data, they receive a [403 Forbidden](https://en.wikipedia.org/wiki/HTTP_403).
 
 ```xml
 <property 
@@ -38,6 +38,20 @@ If the Lease feature is enabled, when non-authenticated users try to edit the da
     name="oxf.fr.detail.lease.enabled.*.*"
     value="true"/>
 ```
+
+The above property will not enable the Lease feature for Form Builder.
+
+[SINCE Orbeon Forms 2024.1]
+
+To enable the Lease feature specifically for Form Builder, use the following property:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.lease.enabled.orbeon.builder"
+    value="true"/>
+```
+
 ## Configure lease duration and thresholds
 
 When users get a lease, by default its duration is of 10 minutes. You can change this default by setting the property below. The timeout can be set for all the form in a given app by replacing the second `*` by the name of that app, or even more specifically for a specific form of that app by also replacing the third `*` by the name of that form.
