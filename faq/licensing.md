@@ -62,8 +62,7 @@ Starting February 2018:
 - Production licenses expire after a grace period (except for grandfathered license renewals).
 - Non-production Basic licenses (as well as the older Dev licenses) expire after a grace period (except for grandfathered license renewals).
 
-For details, see the [New PE Gold Benefits and Perpetual Licenses Grandfathered
-](https://blog.orbeon.com/2018/02/pe-gold-benefits-perpetual-licenses-grandfathered.html).
+For details, see the [New PE Gold Benefits and Perpetual Licenses Grandfathered](https://blog.orbeon.com/2018/02/pe-gold-benefits-perpetual-licenses-grandfathered.html).
 
 Until February 2018:
 
@@ -91,5 +90,4 @@ The second and subsequent years:
 
 - [Pricing](https://www.orbeon.com/pricing)
 - [Services](https://www.orbeon.com/services)
-- [New PE Gold Benefits and Perpetual Licenses Grandfathered
-](https://blog.orbeon.com/2018/02/pe-gold-benefits-perpetual-licenses-grandfathered.html)
+- [New PE Gold Benefits and Perpetual Licenses Grandfathered](https://blog.orbeon.com/2018/02/pe-gold-benefits-perpetual-licenses-grandfathered.html)
