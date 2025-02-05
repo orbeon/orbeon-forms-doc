@@ -627,7 +627,7 @@ psql \
   --file ./postgresql-2024_1.sql;
 ```
 
-The SQL files needed to create the Orbeon Forms database schema can be downloaded from [this page](https://doc.orbeon.com/form-runner/persistence/relational-db#postgresql-database-setup).
+The SQL files needed to create the Orbeon Forms database schema can be downloaded from [PostgreSQL database setup](../form-runner/persistence/relational-db#postgresql-database-setup).
 
 You can then delete the `local-ip-allowed` firewall rule:
 
