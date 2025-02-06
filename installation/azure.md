@@ -12,7 +12,7 @@ This guide walks you through deploying Orbeon Forms on Microsoft Azure using:
 
 We will use a self-signed certificate and a single-node Kubernetes cluster for demonstration purposes. In production, you would likely use a certificate signed by a trusted certificate authority (CA) and a multi-node cluster.
 
-The user/groups will be accessed via the OpenID Connect (OIDC) protocol and WildFly's native OIDC support implementation. Entra ID groups will be mapped to WildFly roles, which will be used to control access to Orbeon Forms.
+The users/groups will be accessed via the OpenID Connect (OIDC) protocol and WildFly's native OIDC support implementation. Entra ID groups will be mapped to WildFly roles, which will be used to control access to Orbeon Forms.
 
 We will create two groups/roles:
 
