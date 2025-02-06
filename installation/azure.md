@@ -1,14 +1,19 @@
 # Microsoft Azure
 
+## Availability
+
+- [SINCE Orbeon Forms 2024.1]
+- This is an [Orbeon Forms PE](https://www.orbeon.com/download) feature.
+
 ## Overview
 
 This guide walks you through deploying Orbeon Forms on Microsoft Azure using:
 
-- Entra ID for user/group management
-- Azure Storage for configuration files
-- PostgreSQL for the database
-- Kubernetes for container orchestration
-- Azure Container Registry for custom Docker images (optional)
+- [Entra ID](https://learn.microsoft.com/en-us/entra/identity/) for user/group management
+- [Azure Storage](https://learn.microsoft.com/en-us/azure/storage/) for configuration files
+- [PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/) for the database
+- [Kubernetes](https://learn.microsoft.com/en-us/azure/aks/) for container orchestration
+- [Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-registry/) for custom Docker images (optional)
 
 We will use a self-signed certificate and a single-node Kubernetes cluster for demonstration purposes. In production, you would likely use a certificate signed by a trusted certificate authority (CA) and a multi-node cluster.
 
@@ -68,7 +73,7 @@ az provider register --namespace Microsoft.Storage
 Generate a self-signed certificate for the application:
 
 ```bash
-keytool
+keytool \
   -genkey \
   -alias server \
   -keyalg RSA \
@@ -270,7 +275,7 @@ az ad app show --id "$ENTRA_ID_APP_ID" | \
 
 Note that we have updated the application manifest multiple times, using the `az rest --method PATCH` command, but this was mainly done for demonstration purposes. In a real-world scenario, you would likely update the application manifest only once, with all the changes.
 
-Grant permissions:
+Grant Microsoft Graph permissions:
 
 ```bash
 # Azure API constants
@@ -278,7 +283,6 @@ API_MICROSOFT_GRAPH='00000003-0000-0000-c000-000000000000'
 API_PERMISSION_OPENID='37f7f235-527c-4136-accd-4a02d197296e'
 API_PERMISSION_EMAIL='64a6cdd6-aab1-4aaf-94b8-3cc8405e90d0'
 
-# Microsoft Graph permissions
 az ad app permission add \
   --id "$ENTRA_ID_APP_ID" \
   --api "$API_MICROSOFT_GRAPH" \
@@ -288,15 +292,9 @@ az ad app permission add \
   --id "$ENTRA_ID_APP_ID" \
   --api "$API_MICROSOFT_GRAPH" \
   --api-permissions "$API_PERMISSION_EMAIL=Scope"
-
-# App's own permissions
-az ad app permission add \
-  --id "$ENTRA_ID_APP_ID" \
-  --api "$api_id" \
-  --api-permissions "$ENTRA_ID_SCOPE_ID=Scope"
 ```
 
-Grant admin consent (for permissions above):
+Grant admin consent for permissions above:
 
 ```bash
 az ad app permission admin-consent --id "$ENTRA_ID_APP_ID"
@@ -400,7 +398,7 @@ Extract the `web.xml` file from the [Orbeon Forms WAR file](https://www.orbeon.c
             <role-name>ENTRA_ID_USER_GROUP_ID</role-name>
         </auth-constraint>
     </security-constraint>
-    <!-- Restrict Form Builder pages to the orbeon-admin group/role -->
+    <!-- Restrict Form Builder and Forms Admin pages to the orbeon-admin group/role -->
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>Form Builder</web-resource-name>
