@@ -694,7 +694,7 @@ Create an Azure Kubernetes Service (AKS) cluster:
 
 ```bash
 az aks create \
-  --name "$K8S_CLUSTER_NAME" \
+  --name 'orbeon-forms-cluster' \
   --resource-group 'orbeon-forms-resource-group' \
   --node-count 1 \
   --network-plugin azure \
@@ -707,7 +707,7 @@ Retrieve AKS credentials, save them locally to `~/.kube/config`, and set the AKS
 
 ```bash
 az aks get-credentials \
-  --name "$K8S_CLUSTER_NAME" \
+  --name 'orbeon-forms-cluster' \
   --resource-group 'orbeon-forms-resource-group' \
   --overwrite-existing
 ```
@@ -717,7 +717,7 @@ If you use a custom Docker image, you need to grant permission to the cluster to
 ```bash
 # Retrieve the cluster's client ID
 K8S_CLIENT_ID=$(az aks show \
-                --name "$K8S_CLUSTER_NAME" \
+                --name 'orbeon-forms-cluster' \
                 --resource-group 'orbeon-forms-resource-group' \
                 --query 'identityProfile.kubeletidentity.clientId' \
                 -o tsv)
@@ -912,7 +912,7 @@ Retrieve the cluster's external/public IP:
 K8S_EXTERNAL_IP=$(kubectl get service 'orbeon-forms-service' --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
 ```
 
-Orbeon Forms will now be available from the following URL:
+Orbeon Forms will be available from the following URL:
 
 ```bash
 K8S_APP_URL="https://$K8S_EXTERNAL_IP/orbeon"
@@ -924,19 +924,140 @@ Update the Entra ID redirect URIs with the actual Orbeon Forms URL:
 az ad app update --id "$ENTRA_ID_APP_ID" --web-redirect-uris "$K8S_APP_URL/*"
 ```
 
-Retrieve the Kubernetes pod name:
+Retrieve the Kubernetes pod name, which can be used to retrieve the logs (see below):
 
 ```bash
 K8S_POD=$(kubectl get pod -o name | head -1)
 ```
 
-Display and follow the Orbeon Forms logs:
+Alternatively, you can use Azure Container Instances (ACI) for a simpler deployment, but with limited support for file mounts, port mappings, etc.
+
+## Private network
+
+The last step is to configure a private network to allow the Kubernetes cluster to access the PostgreSQL database server.
+
+Create a private DNS zone:
+
+```bash
+az network private-dns zone create \
+  --resource-group 'orbeon-forms-resource-group' \
+  --name 'private.postgres.database.azure.com'
+```
+
+The network resource group we will use below is the Kubernetes node resource group. It follows the following format:
+
+```bash
+K8S_NODE_RESOURCE_GROUP="MC_${RESOURCE_GROUP}_${K8S_CLUSTER}_${AZURE_LOCATION}"
+```
+
+Retrieve the virtual network name:
+
+```bash
+NETWORK_VNET_NAME=$(az network vnet list \
+                    --resource-group 'MC_orbeon-forms-resource-group_orbeon-forms-cluster_westus' \
+                    --query '[0].name' \
+                    --output tsv)
+```
+
+Retrieve the virtual network ID:
+
+```bash
+NETWORK_VNET_ID=$(az network vnet show \
+                  --resource-group 'MC_orbeon-forms-resource-group_orbeon-forms-cluster_westus' \
+                  --name "$NETWORK_VNET_NAME" \
+                  --query 'id' \
+                  --output tsv)
+```
+
+Link the private DNS zone to the Kubernetes cluster virtual network:
+
+```bash
+az network private-dns link vnet create \
+  --resource-group 'orbeon-forms-resource-group' \
+  --zone-name 'private.postgres.database.azure.com' \
+  --name 'MyDNSLink' \
+  --virtual-network "$NETWORK_VNET_ID" \
+  --registration-enabled false
+```
+
+Retrieve the subnet name:
+
+```bash
+NETWORK_SUBNET_NAME=$(az network vnet subnet list \
+                      --resource-group 'MC_orbeon-forms-resource-group_orbeon-forms-cluster_westus' \
+                      --vnet-name "$NETWORK_VNET_NAME" \
+                      --query '[0].name' \
+                      --output tsv)
+```
+
+Retrieve the subnet ID:
+
+```bash
+NETWORK_SUBNET_ID=$(az network vnet subnet show \
+                    --resource-group 'MC_orbeon-forms-resource-group_orbeon-forms-cluster_westus' \
+                    --vnet-name "$NETWORK_VNET_NAME" \
+                    --name "$NETWORK_SUBNET_NAME" \
+                    --query 'id' \
+                    --output tsv)
+```
+
+Retrieve the database server ID:
+
+```bash
+DATABASE_SERVER_ID=$(az postgres flexible-server show \
+                     --resource-group 'orbeon-forms-resource-group' \
+                     --name "$DATABASE_SERVER" \
+                     --query 'id' \
+                     --output tsv)
+```
+
+Create a private endpoint:
+
+```bash
+az network private-endpoint create \
+  --resource-group 'orbeon-forms-resource-group' \
+  --name 'postgres-pe' \
+  --subnet "$NETWORK_SUBNET_ID" \
+  --private-connection-resource-id "$DATABASE_SERVER_ID" \
+  --connection-name 'postgres-connection' \
+  --group-id 'postgresqlServer'
+```
+
+Retrieve the private IP:
+
+```bash
+NETWORK_PRIVATE_IP=$(az network private-endpoint show \
+                     --resource-group 'orbeon-forms-resource-group' \
+                     --name 'postgres-pe' \
+                     --query 'customDnsConfigs[0].ipAddresses[0]' \
+                     --output tsv)
+```
+
+Create a private DNS record:
+
+```bash
+az network private-dns record-set a add-record \
+  --resource-group 'orbeon-forms-resource-group' \
+  --zone-name 'private.postgres.database.azure.com' \
+  --record-set-name "$DATABASE_SERVER" \
+  --ipv4-address "$NETWORK_PRIVATE_IP"
+```
+
+The database server will now be reachable from the Kubernetes cluster as `$DATABASE_SERVER.private.postgres.database.azure.com`.
+
+## Accessing the application and its logs
+
+Orbeon Forms is now available from the following URL:
+
+```bash
+K8S_APP_URL="https://$K8S_EXTERNAL_IP/orbeon"
+```
+
+You can display and follow the Orbeon Forms logs using the following command:
 
 ```bash
 kubectl logs $K8S_POD -f
 ```
-
-Alternatively, you can use Azure Container Instances (ACI) for a simpler deployment, but with limited support for file mounts, port mappings, etc.
 
 ## Limitations
 
