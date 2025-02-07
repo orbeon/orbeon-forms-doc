@@ -13,6 +13,7 @@ This guide walks you through deploying Orbeon Forms on Microsoft Azure using:
 - [Azure Storage](https://learn.microsoft.com/en-us/azure/storage/) for configuration files
 - [PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/) for the database
 - [Kubernetes](https://learn.microsoft.com/en-us/azure/aks/) for container orchestration
+- [Azure Virtual Network](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) for database-cluster communication
 - [Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-registry/) for custom Docker images (optional)
 
 We will use a self-signed certificate and a single-node Kubernetes cluster for demonstration purposes. In production, you would likely use a certificate signed by a trusted certificate authority (CA) and a multi-node cluster.
