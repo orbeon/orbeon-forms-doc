@@ -13,6 +13,24 @@ The component has two major features:
 
 The time is a local time, which does not contain a timezone, and stored in the data in ISO Format (`HH:mm:ss`).
 
+## Appearance
+
+![Regular appearance](images/xbl-time-controls.png)
+
+![Readonly modes appearance](images/xbl-time-controls-readonly.png)
+
+## Form Builder support
+
+The Time component is directly accessible from the Form Builder toolbox.
+
+The Control Settings dialog features a user interface for configuring the control width and output format.
+
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)  You can select in Form Builder whether the browser time form control should be used.
+
+![Configuring the time format](images/xbl-time-editor-custom-cropped.png)
+
+## Smart input
+
 With smart input, when the field loses the focus, the value you entered is parsed and, if recognized, replaced with a value in a canonical format.
 
 Here are examples of supported smart time formats:
@@ -21,6 +39,8 @@ Here are examples of supported smart time formats:
 |--------------|----------------------------|
 | now          | current local time         |
 | 21           | equivalent to 9:00:00 pm   |
+| 800          | equivalent to 8:00:00 am   |
+| 1732         | equivalent to 5:43:00 pm   |
 | 3:34:56 p.m. | full time with seconds     |
 | 3:34:56 pm   | same as above              |
 | 3:34 p.m.    | equivalent to 3:34:00 p.m. |
@@ -37,22 +57,6 @@ Here are examples of supported smart time formats:
 | 3a           | same as above              |
 | 12 a.m.      | midnight                   |
 | 12 p.m.      | noon                       |
-
-## Appearance
-
-![Regular appearance](images/xbl-time-controls.png)
-
-![Readonly modes appearance](images/xbl-time-controls-readonly.png)
-
-## Form Builder support
-
-The Time component is directly accessible from the Form Builder toolbox.
-
-The Control Settings dialog features a user interface for configuring the control width and output format.
-
-[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)  You can select in Form Builder whether the browser time form control should be used.
-
-![Configuring the time format](images/xbl-time-editor-custom-cropped.png)
 
 ## Configuration
 
