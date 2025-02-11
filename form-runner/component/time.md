@@ -226,6 +226,8 @@ There is no more support for `<xf:input>` bound to an `xs:time` type. Use this c
 </fr:time>
 ```
 
+`fr:time` must be bound to a node of type `xs:time`.
+
 ## See also
 
 - [Date component](date.md)

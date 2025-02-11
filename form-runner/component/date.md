@@ -1,4 +1,4 @@
-# Date Component
+# Date component
 
 ## What it does
 
@@ -98,6 +98,20 @@ See also the [native time picker](time.md#native-time-picker).
     name="oxf.xforms.xbl.fr.date.today-highlight.*.*"             
     value="false"/>
 ```
+
+## XForms
+
+### Example usage
+
+You use the date component like a regular input field, for example:
+
+```xml
+<fr:date ref="birth-date">
+  <xf:label>Birth Date</xf:label>
+</fr:date>
+```
+
+`fr:date` must be bound to a node of type `xs:date`.
 
 ## See also
 
