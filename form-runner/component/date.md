@@ -2,7 +2,7 @@
 
 ## What it does
 
-The date component is designed to enter a date, without time. On the desktop, the component shows as a field with a linked date picker.
+The date component is designed to enter a date, without time. On the desktop, the component shows by default as a field with a linked date picker, with an option to enable the browser's native date picker as well. On mobile, the native date picker is used.
 
 ## Basic usage
 
@@ -66,13 +66,13 @@ The value is in the same format as the global `oxf.xforms.format.input.date` pro
 
 By default, the `output-format` parameter is not set, and the global `oxf.xforms.format.input.date` property is used for backward compatibility.
 
-### Native date picker
+### Browser date form control
 
-On iOS, the native iOS date picker is used by default, unless users enabled Request Desktop Website in Safari, in which case they will see the same behavior as they would on the desktop. 
+On iOS, the native browser date form control is used by default, unless users enabled Request Desktop Website in Safari, in which case they will see the same behavior as they would on the desktop. 
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) As browser support for the native date form control on desktop has improved over the years, and since it is better supported by screen readers, you may want to use the native date form control not only on mobile but also on desktop. You can achieve this by setting the property below.
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) As browser support for the native browser date form control on desktop has improved over the years, and since it is better supported by screen readers, you may want to use the native browser date form control not only on mobile but also on desktop. You can achieve this by setting the property below.
 
-When doing so, the date format is determined by the browser based on the user's locale. Consequently, the properties `oxf.xforms.format.input.date` and `oxf.xforms.format.output.date` have no effect on the format of the native date picker.
+When doing so, the date format is determined by the browser based on the user's locale. Consequently, the properties `oxf.xforms.format.input.date` and `oxf.xforms.format.output.date` have no effect on the format of the native browser date form control.
 
 ```xml
 <property 

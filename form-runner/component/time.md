@@ -1,24 +1,12 @@
 # Time component
 
-## Availability
-
-[SINCE Orbeon Forms 2018.2]
-
-Prior to that, Form Builder was using `<xf:input>` bound to an `xs:time` type.
-
-[SINCE Orbeon Forms 2022.1]
-
-There is no more support for `<xf:input>` bound to an `xs:time` type. Use this component directly instead.
-
-## Appearance
-
-![Regular appearance](images/xbl-time-controls.png)
-
-![Readonly modes appearance](images/xbl-time-controls-readonly.png)
-
 ## What it does
 
-The Time component allows the user to enter a time of day. The component has two major features:
+The Time component allows the user to enter a time of day.
+
+On the desktop, the component shows by default as a field, with an option to enable the browser's native time form control as well. On mobile, the native time form control is used.
+
+The component has two major features:
 
 - __Smart input:__ lets the user enter a time in a variety of formats that are recognized, parsed, and then formatted
 - __Formatting:__ formats the time according to a specified format 
@@ -50,6 +38,12 @@ Here are examples of supported smart time formats:
 | 12 a.m.      | midnight                   |
 | 12 p.m.      | noon                       |
 
+## Appearance
+
+![Regular appearance](images/xbl-time-controls.png)
+
+![Readonly modes appearance](images/xbl-time-controls-readonly.png)
+
 ## Form Builder support
 
 The Time component is directly accessible from the Form Builder toolbox.
@@ -74,6 +68,21 @@ This parameter can be specified at the control level, form level, or in `propert
     as="xs:string"
     name="oxf.xforms.xbl.fr.time.field-width"
     value="{if (fr:created-with-or-newer('2018.2')) then 'full' else 'natural'}"/>
+```
+
+### Browser time form control
+
+On iOS, the native browser time form control is used by default, unless users enabled Request Desktop Website in Safari, in which case they will see the same behavior as they would on the desktop. 
+
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md) As browser support for the native browser time form control on desktop has improved over the years, and since it is better supported by screen readers, you may want to use the native browser time form control not only on mobile but also on desktop. You can achieve this by setting the property below.
+
+When doing so, the time format is determined by the browser based on the user's locale. Consequently, the properties `oxf.xforms.format.input.time` and `oxf.xforms.format.output.time` have no effect on the format of the native browser time form control.
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.xforms.xbl.fr.time.native-picker"                        
+    value="always"/>
 ```
 
 ### Output format
@@ -186,8 +195,19 @@ The Time components uses the `output-format` parameter to format the time in rea
 
 This means that the `oxf.xforms.format.output.time` property is no longer used in readonly modes.
 
+## XForms
 
-## Example usage
+### Availability
+
+[SINCE Orbeon Forms 2018.2]
+
+Prior to that, Form Builder was using `<xf:input>` bound to an `xs:time` type.
+
+[SINCE Orbeon Forms 2022.1]
+
+There is no more support for `<xf:input>` bound to an `xs:time` type. Use this component directly instead.
+
+### Example usage
 
 ```xml
 <fr:time 
