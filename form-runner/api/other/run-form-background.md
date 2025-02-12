@@ -187,7 +187,6 @@ The following examples use the [curl](https://curl.haxx.se/) command-line utilit
 
 - The `new` background service: `curl -X POST http://localhost:8080/orbeon/fr/service/a/a/new`
 - The `edit` background service: `curl -X POST http://localhost:8080/orbeon/fr/service/a/a/edit/123`
-- 
 
 ## Permissions
 
