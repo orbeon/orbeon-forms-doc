@@ -872,7 +872,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: $K8S_APP
+    app: orbeon-forms
   ports:
     - protocol: TCP
       port: 443
