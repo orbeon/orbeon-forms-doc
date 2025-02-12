@@ -6,8 +6,8 @@
 
 By default, Form Runner produces automatic PDF files with the following header and footer:
 
-- Header: Form Runner logo, form title
-- Footer: Form title, page number
+- In the header: Orbeon logo and form title.
+- In the footer: Form title, page number, and page count.
 
 <figure>
     <picture>
