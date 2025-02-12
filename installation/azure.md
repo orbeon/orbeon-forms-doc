@@ -578,7 +578,7 @@ Create the `orbeon` database:
 
 ```bash
 az postgres flexible-server db create \
-  --database-name `orbeon` \
+  --database-name 'orbeon' \
   --server-name "$DATABASE_SERVER" \
   --resource-group 'orbeon-forms-resource-group';
 ```
@@ -595,7 +595,7 @@ Create the `orbeon` database user:
 psql \
   --host "$DATABASE_SERVER.postgres.database.azure.com" \
   --username "$DATABASE_ADMIN_USERNAME" \
-  --dbname `orbeon` \
+  --dbname 'orbeon' \
   --command "CREATE USER \"orbeon@$DATABASE_SERVER\" WITH PASSWORD '$password';"
 ```
 
@@ -607,7 +607,7 @@ Grant privileges to the `orbeon` database user:
 psql \
   --host "$DATABASE_SERVER.postgres.database.azure.com" \
   --username "$DATABASE_ADMIN_USERNAME" \
-  --dbname `orbeon` \
+  --dbname 'orbeon' \
   --command "GRANT ALL PRIVILEGES ON DATABASE orbeon TO \"orbeon@$DATABASE_SERVER\";" \
   --command "GRANT ALL PRIVILEGES ON SCHEMA public TO \"orbeon@$DATABASE_SERVER\";" \
   --command "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO \"orbeon@$DATABASE_SERVER\";" \
