@@ -746,7 +746,7 @@ The Azure Storage account name and key need to be encoded in Base64.
 Import the storage account name/key secret
 
 ```bash
-kubectl apply -f storage-secret.yaml.yaml
+kubectl apply -f storage-secret.yaml
 ```
 
 Generate the persistence volume configuration file:
@@ -773,7 +773,7 @@ EOF
 Import the persistence volume configuration:
 
 ```bash
-kubectl apply -f orbeon-forms-pv.yaml.yaml
+kubectl apply -f orbeon-forms-pv.yaml
 ```
 
 Generate the persistence volume claim configuration file:
