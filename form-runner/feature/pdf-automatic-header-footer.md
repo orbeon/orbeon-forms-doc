@@ -215,3 +215,4 @@ The `"format"` property is a JSON string with the following format, as used in C
 - [Automatic PDF](pdf-automatic.md)
 - [PDF templates](pdf-templates.md)
 - [PDF production](pdf-production.md)
+- Blog post: [PDF Production](https://www.orbeon.com/2025/02/pdf-production)

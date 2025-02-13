@@ -174,3 +174,4 @@ You can, in your `properties-local.xml`, specify your own process, and, using th
 - [TIFF Production](/form-runner/feature/tiff-production.md)
 - [Sending PDF and TIFF content: Controlling the format](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md)
 - Blog post: [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
+- Blog post: [PDF Production](https://www.orbeon.com/2025/02/pdf-production)
