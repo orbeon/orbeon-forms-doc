@@ -31,20 +31,12 @@ If you don't need Form Builder in an installation, you can simply remove that JA
 
 Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to utilize a separate relational database. For more information, see [Relational Database](/form-runner/persistence/relational-db.md).
 
-To disable the `sqlite` embedded database and demo forms, add the following property:
-
-```xml
-<property
-    as="xs:boolean"
-    name="oxf.fr.persistence.sqlite.active"
-    value="false"/>
-```
+In particular, make sure you also [disable the embedded SQLite database](/form-runner/persistence/relational-db.md#disabling-the-embedded-sqlite-provider).
 
 You can leave the SQLite library and database in place if you are not using them, but you can also opt to remove them. If you do so, in addition to the above configuration property, you remove the following:
 
 - `WEB-INF/lib/sqlite-jdbc-*.jar`: the SQLite JDBC driver and implementation
 - `WEB-INF/orbeon-demo.sqlite`: the SQLite database with demo forms
-
 
 ## Removing the built-in eXist database
 

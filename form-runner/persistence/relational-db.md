@@ -553,15 +553,36 @@ Your `Resource` element pointing to the your Oracle instance (see also [Tomcat d
 
 What follows applies to Orbeon Forms 4.0 and newer. For Orbeon Forms 3.9, see this [legacy documentation](http://wiki.orbeon.com/forms/doc/developer-guide/form-runner/oracle-and-mysql-persistence-layers).
 
+### Disabling the embedded SQLite provider
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+Orbeon Forms comes with an embedded SQLite database in order to show demo forms, and also to allow to quickly get started with Orbeon Forms. When configuring your own provider or providers, you should disable the embedded SQLite database. To do so, add the following properties to your `properties-local.xml`, assuming here that your new persistence provider is called `postgresql`:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.persistence.sqlite.active"
+    value="false"/>
+<property 
+    as="xs:string"  
+    name="oxf.fr.persistence.provider.orbeon.*.form"                     
+    value="postgresql"/>
+<property 
+    as="xs:string"  
+    name="oxf.fr.persistence.provider.orbeon-features.*.form"                     
+    value="postgresql"/>
+```
+
 ### With a single schema
 
-In your `properties-local.xml`, you map an app / form / form type to the implementation of the persistence API you're using with the `oxf.fr.persistence.provider.*.*.*` [wildcard property](../../configuration/properties/README.md). For instance, if using Oracle, set the property to:
+In your `properties-local.xml`, you map an app / form / form type to the implementation of the persistence API you're using with the `oxf.fr.persistence.provider.*.*.*` [wildcard property](../../configuration/properties/README.md). For instance, if using PostgreSQL, set the property to:
 
 ```xml
 <property
     as="xs:string"
     name="oxf.fr.persistence.provider.*.*.*"
-    value="oracle"/>
+    value="postgresql"/>
 ```
 
 ### With multiple schemas

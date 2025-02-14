@@ -350,6 +350,10 @@ Make sure to include the  `xmlns:fr` and `xmlns:xxf` attributes as well, for exa
 
 Failing to have these configuration attributes might prevent Orbeon Forms from starting. These attributes are present on the template file, `properties-local.xml.template`, provided with Orbeon Forms.
 
+### Disabling the embedded SQLite database
+
+Orbeon Forms comes with an embedded SQLite database in order to show demo forms, and also to allow to quickly get started with Orbeon Forms. This maps to a provider called `sqlite`. To disable access to the embedded database after you have [set up your own relational database configuration](/form-runner/persistence/relational-db.md), make sure to also [disable the embedded SQLite database](/form-runner/persistence/relational-db.md#disabling-the-embedded-sqlite-provider).
+
 ### Excel export button on the Summary page
 
 The default `oxf.fr.summary.buttons` configuration property now includes `excel-export-with-search` by default. This means that, by default, a user can export the Summary page content in Excel format. If you do not wish this, you can set your own `oxf.fr.summary.buttons` configuration property.

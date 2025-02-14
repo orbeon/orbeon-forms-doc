@@ -41,7 +41,7 @@ The following subsections cover the individual configurations in more detail.
 
 ### Database
 
-Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to use a separate [relational database](/form-runner/persistence/relational-db.md).
+Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple demo forms. This setup is designed for a quick start, but for development or production use, you should configure Orbeon Forms to use a separate [relational database](/form-runner/persistence/relational-db.md). In addition, make sure you also [disable the embedded SQLite database](/form-runner/persistence/relational-db.md#disabling-the-embedded-sqlite-provider).
 
 The reason for considering this an incomplete configuration is that the SQLite database is not suitable for production use with Orbeon Forms at this point. This is not necessarily due to shortcomings of SQLite, but due to the fact that the SQLite database is embedded in the Orbeon Forms WAR file and more likely to be deleted by mistake. In addition, most users want to use a more powerful database for production use.
 
