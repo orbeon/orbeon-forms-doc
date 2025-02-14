@@ -162,3 +162,9 @@ You can specify a minimum input length, in characters, before a dropdown with se
     name="oxf.xforms.xbl.fr.dropdown-select1-search.min-input-length.*.*"
     value="2"/>
 ```
+
+## See also
+
+- Live example
+    - [Form Runner](https://demo.orbeon.com/demo/fr/orbeon-features/dependent-dropdowns/new?form-version=1)
+    - [Form Builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/df4e5accdd12b409495abaf541e61914c0b1d272)
