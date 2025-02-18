@@ -642,6 +642,16 @@ fr:can-update() as xs:boolean
 
 Whether the current user has the `update` permission for the current form data (detail page only).
 
+### fr:can-list()
+
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
+
+```xpath
+fr:can-list() as xs:boolean
+```
+
+Whether the current user has the `list` permission for the current app/form name (detail page only).
+
 ### fr:user-ancestor-organizations()
 
 [SINCE Orbeon Forms 2016.3]
