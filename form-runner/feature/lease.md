@@ -65,7 +65,7 @@ The first `*` can be replaced by a role name if you want the duration of the lea
     value="10"/>
 ```
 
-As mentioned earlier, when user change values in the form, the lease gets automatically renewed. However, minimize hits to the database this isn't done during the first minute after the lease was first obtained or renewed. If you wish to even even further minimize hits to the database, you can increase the value of the value of the following property.
+As mentioned earlier, when user change values in the form, the lease gets automatically renewed. However, minimize hits to the database this isn't done during the first minute after the lease was first obtained or renewed. If you wish to even further minimize hits to the database, you can increase the value of the value of the following property.
 
 ```xml
 <property
