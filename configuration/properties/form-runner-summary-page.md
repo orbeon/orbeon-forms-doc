@@ -65,14 +65,7 @@ You can remove either one of those columns by setting the appropriate property v
 
 [SINCE Orbeon Forms 2020.1]
 
-You can add this column by setting the following property value to `true`:
-
-```xml
-<property 
-    as="xs:boolean" 
-    name="oxf.fr.summary.show-workflow-stage.*.*"                           
-    value="true"/>
-```
+See [Workflow stage](/form-runner/feature/workflow-stage.md#showing-the-workflow-stage-in-the-summary-page).
 
 ## Show created by and last modified by users
 

@@ -162,6 +162,7 @@
         * [Versioning](form-runner/feature/versioning.md)
         * [Simple data migration](form-runner/feature/simple-data-migration.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
+        * [Workflow stage](form-runner/feature/workflow-stage.md)
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
         * [Purging old data using SQL](form-runner/persistence/purging-old-data.md)

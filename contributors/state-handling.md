@@ -158,7 +158,7 @@ Since Orbeon Forms 2020.1, we recommend instead using workflow features to help 
  
 This means that even if the user navigate to a confirmation page upon submission, and then navigates back to the form, the form will be shown (and if necessary restored) in a readonly mode. This achieves the intent without breaking the philosophy of navigation.
 
-See [workflow features](/release-notes/orbeon-forms-2020.1.md#workflow) from the Orbeon Forms 2020.1 release notes for more details.
+See [Workflow stage](/form-runner/feature/workflow-stage.md) for more details.
 
 ### How it works
 

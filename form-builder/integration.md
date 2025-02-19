@@ -1,7 +1,5 @@
 # Integration
 
-
-
 ## Form Builder URLs
 
 ### URL formats
