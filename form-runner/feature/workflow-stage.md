@@ -1,5 +1,9 @@
 # Workflow stage
 
+## Availability
+
+[SINCE Orbeon Forms 2020.1]
+
 ## Introduction
 
 Orbeon Forms has a number of features helping with workflows. One of them is the *workflow stage*.
@@ -18,8 +22,8 @@ This workflow has the following stages:
 
 A workflow stage is associated with form data:
 
-- in memory: when the form is being edited the workflow stage can also have a value and be changed 
-- at rest: when form data is saved in the database, the workflow stage is saved with it, and will be available alongside the form data when the form data is read
+- __In memory:__ When the form is being edited the workflow stage can also have a value and be changed. 
+- __At rest:__ When form data is saved in the database, the workflow stage is saved with it, and will be available alongside the form data when the form data is read.
 
 ## Setting or modifying the workflow stage
 
@@ -36,8 +40,6 @@ For more, see [Buttons and processes](/form-runner/advanced/buttons-and-processe
 The workflow stage can be read using the [`fr:workflow-stage-value()` function](/xforms/xpath/extension-form-runner.md#fr-workflow-stage-value). For example, you might use this function in formulas to conditionally show/hide, make readonly/readwrite fields, grids, sections, or buttons based on the workflow stage.
 
 ## Showing the workflow stage in the Summary page
-
-[SINCE Orbeon Forms 2020.1]
 
 You can optionally show the workflow page in a column in the form's Summary page by setting the following property value to `true`:
 
