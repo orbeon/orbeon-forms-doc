@@ -241,7 +241,8 @@ If you do have this property, make sure you remove it, comment it out, or explic
 
 ## Limitations
 
-The JavaScript embedding API has the same [limitations as the Java embedding API](java-api.md#limitations).
+- Embedding Form Builder with the JavaScript Embedding API is not supported ([#4483](https://github.com/orbeon/orbeon-forms/issues/4483)).
+- Additionally, the JavaScript embedding API has the same [limitations as the Java embedding API](java-api.md#limitations).
 
 ## See also
 
