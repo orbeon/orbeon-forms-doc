@@ -499,6 +499,11 @@ The Search API is used to search for form data documents. It is used internally 
 
 - the [Form Runner Summary page](/form-runner/feature/summary-page.md)
 - the [Form Builder Summary page](/form-builder/summary-page.md)
+- a form's Edit or New page, when looking for data associated with:
+    - [Singleton form](/form-runner/advanced/singleton-form.md)
+    - [Autosave drafts](/form-runner/persistence/autosave.md)
+- the [Zip Export API](export-zip.md)
+- the Purge API
 
 #### HTTP methods
 
