@@ -4,9 +4,16 @@
 
 See [Database Support](/form-runner/persistence/db-support.md) for the detail of which persistence layers and Orbeon Forms versions support the autosave feature.
 
-## See also
+## What it is
 
-- [Blog post](https://blog.orbeon.com/2013/10/autosave.html).
+Orbeon Forms has the ability to autosave data as the user fills in a form. This helps ensure that there is no data loss, even if the user hasn't saved or submitted the form.
+
+When form data is autosaved, it creates *autosave drafts*:
+
+- __Edit page:__ Only a single autosave draft can be associated with the data's document id.
+- __New page:__ Multiple autosave drafts can be created.
+
+Orbeon Forms gives the user the ability to see and recover data from autosave drafts. More details are provided below.
 
 ## Enabling autosave
 
@@ -105,3 +112,7 @@ With Orbeon Forms 4.3 specifically, you need to:
 <property as="xs:boolean" name="oxf.fr.support-owner-group" value="true"/>
 <property as="xs:boolean" name="oxf.fr.support-autosave"    value="true"/>
 ```
+
+## See also
+
+- [Blog post](https://blog.orbeon.com/2013/10/autosave.html).
