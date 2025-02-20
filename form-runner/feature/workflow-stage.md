@@ -14,8 +14,9 @@ A *workflow stage* is a string value used to track the progress of a form throug
 
 ![Example of workflow](../images/workflow-expense-report.png)
 
-This workflow has the following stages:
+This workflow is in the following stages over time:
 
+- blank or missing (initial stage)
 - `submitted`
 - `approved`
 - `rejected`
