@@ -44,5 +44,5 @@ Here is an example of a `submit` process for the `acme`/`order` form, which save
 ## See also
 
 - [Form Runner email properties](/configuration/properties/form-runner-email.md)
-- [;Form Builder email settings](/form-builder/email-settings.md)
+- [Form Builder email settings](/form-builder/email-settings.md)
 - [PDF templates](/form-runner/feature/pdf-templates.md)
