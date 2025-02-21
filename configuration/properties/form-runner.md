@@ -176,11 +176,11 @@ Whether to show the Orbeon Forms version at the bottom.
 
 With this property, you can set the default logo URI. This logo appears on the Summary, Detail and Home pages for a given form. You can omit (or comment out) this property or set its value to the empty string if you don't want a default logo at all.
 
-This is the default value of the property:
+[SINCE Orbeon Forms 2024.1.1] When the URI ends with `.svg`, Orbeon Forms generates markup that implements a fallback strategy - it first attempts to load the SVG version, then automatically falls back to a PNG version (using the same path but with `.png` extension) if SVG is not supported by the renderer. In practice, this means browsers will display the SVG version, while PDF generation will use the PNG version.
 
 ```xml
 <property as="xs:anyURI"  name="oxf.fr.default-logo.uri.*.*">
-    /apps/fr/style/orbeon-navbar-logo.png
+    /apps/fr/style/orbeon-logo.svg
 </property>
 ```
 
