@@ -19,7 +19,7 @@ The `email` action sends an email with optionally XML form data, attachments, an
     - `4.8.0`
     - `2019.1.0`
 - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) `match`: The behaviour to use when multiple templates are found. Can be `first` (default) or `all`. If `all`, then all matching templates are used (i.e. one email per template is sent). 
-- [Since Orbeon Forms 2025.1] `s3-store`: If `true`, email attachments are stored in an S3 bucket in addition to being sent via email. If `false` or absent, attachments are only sent via email. 
+- [SINCE Orbeon Forms 2025.1] `s3-store`: If `true`, email attachments are stored in an S3 bucket in addition to being sent via email. If `false` or absent, attachments are only sent via email. 
     - `s3-config`: Specifies the name of the S3 configuration to use. The S3 configuration properties are described below.
     - `s3-path`: Defines the XPath expression used to determine the storage path for attachments. The path is relative to the root of the S3 bucket. It is evaluated against the XML data of the form. If the XPath expression evaluates to an empty string, attachments are stored at the root of the S3 bucket. This expression has the same constraints as [the PDF, TIFF and XML attachments filenames](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-detail-page/form-runner-email#attachment-properties).
     - Fallback behavior:
