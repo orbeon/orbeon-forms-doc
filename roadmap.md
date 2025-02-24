@@ -6,14 +6,20 @@
 
 Focus:
 
-- Progress on workflow-related features
-- Replace Ehcache 2 with Infinispan [#6640](https://github.com/orbeon/orbeon-forms/issues/6640)
+- Workflow features
+    - Form Builder user interface
+- Infrastructure
+    - Replace Ehcache 2 with Infinispan [#6640](https://github.com/orbeon/orbeon-forms/issues/6640)
 - Form Builder user-friendliness:
     - more UI (properties, validations, formulas, etc.)
     - see [#2282](https://github.com/orbeon/orbeon-forms/issues/2282)
-- More standard form controls
-- More demo forms
-- More configurable look and feel
+- Additional form controls
+    - [#6734](https://github.com/orbeon/orbeon-forms/issues/6734) 
+- Additional demo forms
+- Steps toward a configurable look and feel
+    - [#4140](https://github.com/orbeon/orbeon-forms/issues/4140)
+- Additional integrations
+    - Google Sheets  
 
 [//]: # (- admin console!)
 [//]: # (Think about other general lines.)
