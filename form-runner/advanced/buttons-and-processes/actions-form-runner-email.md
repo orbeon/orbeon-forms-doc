@@ -58,11 +58,11 @@ No default S3 configuration is provided. You must define at least one S3 configu
 ### Example S3 configuration
 
 ```xml
-  <property as="xs:string"  name="oxf.fr.s3.default.endpoint"        value="s3.amazonaws.com"/>
-  <property as="xs:string"  name="oxf.fr.s3.default.region"          value="us-east-1"/>
-  <property as="xs:string"  name="oxf.fr.s3.default.bucket"          value="orbeon"/>
-  <property as="xs:string"  name="oxf.fr.s3.default.accesskey"       value="YYDLE3Z65JK7SZLB5RXB"/>
-  <property as="xs:string"  name="oxf.fr.s3.default.secretaccesskey" value="1csA5grUiF/TcAD7lOkWd0KBrYLDhQtK5sWl163U"/>
+<property as="xs:string"  name="oxf.fr.s3.default.endpoint"        value="s3.amazonaws.com"/>
+<property as="xs:string"  name="oxf.fr.s3.default.region"          value="us-east-1"/>
+<property as="xs:string"  name="oxf.fr.s3.default.bucket"          value="orbeon"/>
+<property as="xs:string"  name="oxf.fr.s3.default.accesskey"       value="YYDLE3Z65JK7SZLB5RXB"/>
+<property as="xs:string"  name="oxf.fr.s3.default.secretaccesskey" value="1csA5grUiF/TcAD7lOkWd0KBrYLDhQtK5sWl163U"/>
 ```
 
 ## Example
