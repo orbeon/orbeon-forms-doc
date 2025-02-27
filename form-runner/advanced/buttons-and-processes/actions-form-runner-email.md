@@ -28,7 +28,7 @@ When an email is sent, the following algorithm is used to determine what templat
 - If no email template is defined, then a default title and body defined in the Form Runner resources is used.
 - If at least one email template is defined:
   - All the templates that are for a specific language which doesn't correspond to the current language are filtered out.
-  - If the `template` template parameter is present, all the templates whose name doesn't match the value of the `template` parameter are filtered out.
+  - If the `template` parameter is present, all the templates whose name doesn't match the value of the `template` parameter are filtered out.
   - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If the "Enable this template only if the following formula evaluates to true" XPath expression is present and evaluates to `false`, the template is filtered out.
   - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If more than one template is left and the `match` parameter is set to `first` or absent, then the first template is used, following the order in which they are defined in the form. If the `match` parameter is set to `all`, then all remaining templates are used.
   - If no template is left, then no email is sent.
