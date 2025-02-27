@@ -35,9 +35,11 @@ When an email is sent, the following algorithm is used to determine what templat
 
 ## Configuration properties
 
+### Email properties
+
 See [Email configuration properties](/configuration/properties/form-runner-email.md).
 
-## S3 configuration
+### S3 properties
 
 An S3 configuration consists of a set of properties that follow the naming convention:
 
@@ -53,9 +55,7 @@ oxf.fr.s3.[configuration-name].[s3-property]
   - `accesskey`: The access key for authentication.
   - `secretaccesskey`: The secret access key for authentication.
 
-No default S3 configuration is provided. You must define at least one S3 configuration to use the `s3-store` parameter.
-
-### Example S3 configuration
+No default S3 configuration is provided. You must define at least one S3 configuration to use the `s3-store` parameter. For instance, your S3 configuration properties could look as follows.
 
 ```xml
 <property as="xs:string"  name="oxf.fr.s3.default.endpoint"        value="s3.amazonaws.com"/>
