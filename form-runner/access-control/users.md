@@ -78,7 +78,15 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
     </security-role>
     ```
 
-[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) When using Orbeon Forms with WildFly's native Open ID Connect (OIDC) support, i.e. with an `<auth-method>OIDC</auth-method>` authentication method, Orbeon Forms will automatically try and extract the `roles` claim from the OIDC tokens, and use it to determine the user's roles. WildFly's OIDC implementation currently doesn't perform this step. Please note that OIDC providers such as [Microsoft Entra ID](/installation/azure.md) can be configured to include the users' groups as roles in the OIDC tokens, which can be useful in this context.
+### OIDC with WildFly
+
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+
+WildFly provides native support for OpenID Connect (OIDC) using the `<auth-method>OIDC</auth-method>` authentication method. However, with this setup, WildFly does not automatically provide the current user's roles to Orbeon Forms through the standard `isUserInRole(String role)` method of `HttpServletRequest`.  
+
+Instead, WildFly exposes a proprietary `OidcSecurityContext` as a servlet request attribute. This object contains an OIDC token, which includes an OIDC roles claim. If Orbeon Forms detects the WildFly-provided `OidcSecurityContext`, it extracts the token and claim to determine the user's roles, which are then used for further processing.
+
+OIDC providers such as [Microsoft Entra ID](/installation/azure.md) can be configured to include the users' groups as roles in the OIDC tokens, which can be useful in this context.
 
 ## Header-driven method
 
