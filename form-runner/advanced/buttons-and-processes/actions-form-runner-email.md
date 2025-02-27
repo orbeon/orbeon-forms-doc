@@ -55,14 +55,31 @@ oxf.fr.s3.[configuration-name].[s3-property]
   - `accesskey`: The access key for authentication.
   - `secretaccesskey`: The secret access key for authentication.
 
-No default S3 configuration is provided. You must define at least one S3 configuration to use the `s3-store` parameter. For instance, your S3 configuration properties could look as follows.
+No default S3 configuration is provided. You must define at least one S3 configuration to use the `s3-store` parameter. For example, your S3 configuration properties could define an S3 configuration named `form-submissions-bucket` that looks as follows:
 
 ```xml
-<property as="xs:string"  name="oxf.fr.s3.default.endpoint"        value="s3.amazonaws.com"/>
-<property as="xs:string"  name="oxf.fr.s3.default.region"          value="us-east-1"/>
-<property as="xs:string"  name="oxf.fr.s3.default.bucket"          value="orbeon"/>
-<property as="xs:string"  name="oxf.fr.s3.default.accesskey"       value="YYDLE3Z65JK7SZLB5RXB"/>
-<property as="xs:string"  name="oxf.fr.s3.default.secretaccesskey" value="1csA5grUiF/TcAD7lOkWd0KBrYLDhQtK5sWl163U"/>
+<property as="xs:string"  name="oxf.fr.s3.form-submissions-bucket.endpoint"        value="s3.amazonaws.com"/>
+<property as="xs:string"  name="oxf.fr.s3.form-submissions-bucket.region"          value="us-east-1"/>
+<property as="xs:string"  name="oxf.fr.s3.form-submissions-bucket.bucket"          value="form-submissions"/>
+<property as="xs:string"  name="oxf.fr.s3.form-submissions-bucket.accesskey"       value="YYDLE3Z65JK7SZLB5RXB"/>
+<property as="xs:string"  name="oxf.fr.s3.form-submissions-bucket.secretaccesskey" value="1csA5grUiF/TcAD7lOkWd0KBrYLDhQtK5sWl163U"/>
+```
+
+You then reference the `form-submissions-bucket` configuration in an `email` action, which might look as follows. This example uses the default value for `s3-path`; if that default works for you, you can skip this parameter. This example includes only S3-specific parameters, but you may want to add other parameters documented on this page. 
+
+```
+email(
+    s3-store  = "true",
+    s3-config = "form-submissions-bucket",
+    s3-path   =
+      "concat(
+          fr:app-name(),      '/',
+          fr:form-name(),     '/',
+          fr:form-version(),  '/',
+          current-dateTime(), '-',
+          fr:document-id()
+      )"
+)
 ```
 
 ## Example
