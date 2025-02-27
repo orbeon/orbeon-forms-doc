@@ -222,7 +222,7 @@ For backward compatibility, the `orbeon/library` library is still available. A n
 
 ### Support for OpenID Connect (OIDC)
 
-We added support for [OpenID Connect (OIDC)](https://en.m.wikipedia.org/wiki/OpenID#OpenID_Connect_(OIDC)) as an authentication method when using the WildFly container. This is a step towards easily allowing deploying Orbeon Forms on cloud services such as Microsoft Azure, Google Cloud, and Amazon Web Services.
+When using WildFly's built-in support for OIDC, Orbeon Forms can now extract roles from the provided OIDC token. For details, see the section [OIDC with WildFly](/form-runner/access-control/users#oidc-with-wildfly).
 
 ### Support for leases in Form Builder
 
