@@ -43,11 +43,42 @@ When the form has more than one language, the choices editor opens in the langua
 
 ![](images/itemset-editor-language.png)
 
+Item values are not localizable: they remain the same for each language. On the other hand, item labels can be localized. For example:
+
+- English
+    - Name: "Apple"
+    - Value: "apple"
+- French
+    - Name: "Pomme"
+    - Value: apple
+
+This ensures that the data captured is machine-readable even if the user interface language changes.
+
 ## Removing all items
 
 [SINCE Orbeon Forms 2016.3]
 
 The "Remove All" button removes all the items in the itemset. This is particularly useful when opening the choices editor for the first time for a given control, since by default itemsets contain default values.
+
+## Filtering items
+
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
+
+The "Filter" field allows filtering items by label or value by entering a formula:
+
+- the formula's context is an individual `<item>` element, which contains
+    - a `<label>` child element
+    - a `<value>` child element
+    - a `<hint>` attribute
+- the formula must return a boolean value
+
+In the following example, the following formula will filter out the item with `strawberry` as a value if the form control named `allow-fruits` is set to `false`:
+
+```xpath
+$allow-fruits/string() = 'true' or value != 'strawberry'
+```
+
+![](images/itemset-editor-filter.png)
 
 ## Usability notes
 
@@ -69,19 +100,6 @@ If the value has a space in it, say `chocolate chip`, then the result would be:
     chocolate chip strawberry
 
 and it would be unclear which values are selected.
-
-## Localization
-
-Item values are not localizable: they remain the same for each language. On the other hand, item labels can be localized. For example:
-
-- English
-    - Name: "Apple"
-    - Value: "apple"
-- French
-    - Name: "Pomme"
-    - Value: apple
-
-This ensures that the data captured is machine-readable even if the user interface language changes.
 
 ## See also
 
