@@ -65,7 +65,7 @@ No default S3 configuration is provided. You must define at least one S3 configu
 <property as="xs:string"  name="oxf.fr.s3.form-submissions-bucket.secretaccesskey" value="1csA5grUiF/TcAD7lOkWd0KBrYLDhQtK5sWl163U"/>
 ```
 
-You then reference the `form-submissions-bucket` configuration in an `email` action, which might look as follows. This example uses the default value for `s3-path`; if that default works for you, you can skip this parameter. This example includes only S3-specific parameters, but you may want to add other parameters documented on this page. 
+You then reference the `form-submissions-bucket` configuration in an `email` action, which might look as the example below. This example uses the default value for `s3-path`; if that default works for you, you can skip this parameter. This example includes only S3-specific parameters, but you may want to add other parameters documented on this page. 
 
 ```
 email(
