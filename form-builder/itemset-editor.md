@@ -27,7 +27,7 @@ This results in the following hint:
 
 You add items using the "+" button.
 
-You move, insert and remove items using the menu to the left of each row. For example to remove an item entirely:
+You move, insert and remove items using the menu to the left of each row. For example to remove an item entirely, use the "Remove Line" menu item:
 
 ![](images/itemset-editor-remove.png)
 
@@ -46,13 +46,15 @@ When the form has more than one language, the choices editor opens in the langua
 Item values are not localizable: they remain the same for each language. On the other hand, item labels can be localized. For example:
 
 - English
-    - Name: "Apple"
-    - Value: "apple"
+    - Name: "Strawberry"
+    - Value: "strawberry"
 - French
-    - Name: "Pomme"
-    - Value: apple
+    - Name: "Fraise"
+    - Value: "strawberry"
 
 This ensures that the data captured is machine-readable even if the user interface language changes.
+
+![](images/itemset-editor-french.png)
 
 ## Removing all items
 
@@ -69,7 +71,7 @@ The "Filter" field allows filtering items by label or value by entering a formul
 - the formula's context is an individual `<item>` element, which contains
     - a `<label>` child element
     - a `<value>` child element
-    - a `<hint>` attribute
+    - a `<hint>` child element
 - the formula must return a boolean value
 
 In the following example, the following formula will filter out the item with `strawberry` as a value if the form control named `allow-fruits` is set to `false`:
