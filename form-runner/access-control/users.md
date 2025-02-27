@@ -78,6 +78,8 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
     </security-role>
     ```
 
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) When using Orbeon Forms with WildFly's native Open ID Connect (OIDC) support, i.e. with an `<auth-method>OIDC</auth-method>` authentication method, Orbeon Forms will automatically try and extract the `roles` claim from the OIDC tokens, and use them as the user's roles. OIDC providers such as [Microsoft Azure](/installation/azure.md) can be configured to include the users' groups as roles in the OIDC tokens.
+
 ## Header-driven method
 
 ### Overview
