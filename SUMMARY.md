@@ -31,6 +31,7 @@
    * Advanced
        * [Workflows](configuration/advanced/workflows.md)
        * [Session management](configuration/advanced/session.md)
+       * [State handling](configuration/advanced/state-handling.md)
        * [Client-side error handling](configuration/advanced/client-error-handling.md)
        * [Clustering and High Availability](configuration/advanced/clustering.md)
        * [Configuring a Form Runner eXist database](configuration/advanced/exist-db.md)
@@ -352,7 +353,6 @@
     * [Automated tests](contributors/automated-tests.md)
     * [Building Orbeon Forms](contributors/building-orbeon-forms.md)
     * [Localizing Orbeon Forms](contributors/localizing-orbeon-forms.md)
-    * [State handling](contributors/state-handling.md)
     * [Contributor License Agreement](contributors/cla.md)
 * Release notes
     * [Orbeon Forms 2023.1.7](/release-notes/orbeon-forms-2023.1.7.md)
