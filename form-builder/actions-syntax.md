@@ -629,10 +629,10 @@ This action clears the content of the dataset with the given name. Specifically,
     location="https://www.bbc.com/news"/>
 ```
 
-| Attribute  | Mandatory | Value                                               | Comment                       |
-|------------|-----------|-----------------------------------------------------|-------------------------------|
-| `location` | Yes       | path or URL                                         |                               |
-| `target`   | No        | `_self` or `_blank` or name of the browsing context | where to display the location |
+| Attribute  | Mandatory | Value                                               | AVT      | Comment                       |
+|------------|-----------|-----------------------------------------------------|----------|-------------------------------|
+| `location` | Yes       | path or URL                                         | 2024.1.1 |                               |
+| `target`   | No        | `_self` or `_blank` or name of the browsing context |          | where to display the location |
 
 ### Setting the value of an attachment control
 
@@ -804,11 +804,17 @@ When working with actions, some form controls can benefit from having their "vis
 
 ### Alert for debugging
 
-[SINCE Orbeon Forms 2022.1, 2021.1.2, 2020.1.7] The `<fr:alert>` action is intended to be used for debugging, allowing you to get some visibility on the value of intermediary results, or more generally the value of any expression is at a given point. The value of the `message` attribute uses the [AVT syntax](/xforms/attribute-value-templates.md), so the example below would show a dialog with the message "The answer is 42".
+[SINCE Orbeon Forms 2022.1, 2021.1.2, 2020.1.7] The `<fr:alert>` action is intended to be used for debugging, allowing you to get some visibility on the value of intermediary results, or more generally the value of any expression is at a given point.
+
+The value of the `message` attribute uses the [AVT syntax](/xforms/attribute-value-templates.md), so the example below would show a dialog with the message "The answer is 42".
 
 ```xml
-<fr:alert message="The answer is {40+2}"/>
+<fr:alert message="The answer is {40 + 2}"/>
 ```
+
+| Attribute | Mandatory | Value       | AVT | Comment |
+|-----------|-----------|-------------|-----|---------|
+| `message` | Yes       | path or URL | Yes |         |
 
 ### Copying control content
 
