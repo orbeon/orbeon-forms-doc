@@ -202,6 +202,10 @@ for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
   - SINCE Orbeon Forms 2024.1
   - applies to Multiple File Attachments controls only
   - the constraint fails if the attachment size is larger than the remaining allowed size for the control
+- "Maximum Number of Files per Control"
+  - SINCE Orbeon Forms 2024.1.1
+  - applies to Multiple File Attachments controls only
+  - the constraint fails if users attempt to attach more than number of specified files
 - "Supported File Types"
   - SINCE Orbeon Forms 2017.1
   - applies to Single and Multiple File Attachments controls only

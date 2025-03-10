@@ -66,6 +66,24 @@ The value of `oxf.fr.detail.attachment.max-size-aggregate-per-control` can be ov
 
 - for a specific control, from the Form Builder "Control Settings" dialog
 
+## Maximum number of files (controls)
+
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
+
+The following property sets the maximum number of files that can be uploaded for each individual multiple attachment control. If you attempt to upload more files than allowed, an error is reported.
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.fr.detail.attachment.max-files-per-control.*.*"                      
+    value="10"/>
+```
+
+The value of `oxf.fr.detail.attachment.max-files-per-control` can be overridden:
+
+- for a specific form, from the Form Builder "Form Settings" dialog
+- for a specific control, from the Form Builder "Control Settings" dialog
+
 ## Allowed file types
 
 [SINCE Orbeon Forms 2017.1]
