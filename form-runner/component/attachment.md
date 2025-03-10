@@ -8,7 +8,7 @@ This component represents an attachment to a form.
 
 ## Accepted mediatypes
 
-By default the component accepts any mediatype. 
+By default, the component accepts any mediatype. 
 
 [SINCE Orbeon Forms 2017.1]
 
