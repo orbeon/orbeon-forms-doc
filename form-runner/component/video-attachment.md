@@ -13,7 +13,7 @@ when attached.
 
 By default the component accepts `video/*` mediatypes. 
 
-If an [`upload-mediatypes` custom constraint](../../xforms/xpath/extension-validation.md#xxfupload-mediatypes) is
+If an [`upload-mediatypes` custom constraint](/contributors/extension-validation.md#xxfupload-mediatypes) is
 present and not blank, it is used applied to the enclosed upload control. If missing, the default is `video/*`.
 
 ## Events

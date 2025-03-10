@@ -289,7 +289,6 @@
             * [Core functions](xforms/xpath/extension-core.md)
             * [Utility functions](xforms/xpath/extension-util.md)
             * [Model functions](xforms/xpath/extension-model.md)
-            * [Validation functions](xforms/xpath/extension-validation.md)
             * [Controls functions](xforms/xpath/extension-controls.md)
             * [XML functions](xforms/xpath/extension-xml.md)
             * [JSON functions](xforms/xpath/extension-json.md)
@@ -353,6 +352,7 @@
     * [Automated tests](contributors/automated-tests.md)
     * [Building Orbeon Forms](contributors/building-orbeon-forms.md)
     * [Localizing Orbeon Forms](contributors/localizing-orbeon-forms.md)
+    * [Validation functions](contributors/extension-validation.md)
     * [Contributor License Agreement](contributors/cla.md)
 * Release notes
     * [Orbeon Forms 2023.1.7](/release-notes/orbeon-forms-2023.1.7.md)

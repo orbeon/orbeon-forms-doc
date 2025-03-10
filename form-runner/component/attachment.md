@@ -12,7 +12,7 @@ By default, the component accepts any mediatype.
 
 [SINCE Orbeon Forms 2017.1]
 
-If an [`upload-mediatypes` custom constraint](/xforms/xpath/extension-validation.md#xxfupload-mediatypes) is
+If an [`upload-mediatypes` custom constraint](/contributors/extension-validation.md#xxfupload-mediatypes) is
 present and not blank, it is applied to the enclosed upload control.
 
 Otherwise, if an `accept` attribute or associated `oxf.xforms.xbl.fr.attachment.accept` property is defined and not blank, it is used. Example of system-wide property:
