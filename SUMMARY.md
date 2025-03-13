@@ -160,9 +160,9 @@
         * [Responsive design](form-runner/feature/responsive-design.md)
         * [Revision history](form-runner/feature/revision-history.md)
         * [S3 storage](form-runner/feature/s3.md)
+        * [Simple data migration](form-runner/feature/simple-data-migration.md)
         * [TIFF production](form-runner/feature/tiff-production.md)
         * [Versioning](form-runner/feature/versioning.md)
-        * [Simple data migration](form-runner/feature/simple-data-migration.md)
         * [Wizard view](form-runner/feature/wizard-view.md)
         * [Workflow stage](form-runner/feature/workflow-stage.md)
     * Persistence

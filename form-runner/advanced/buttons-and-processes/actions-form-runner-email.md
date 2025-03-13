@@ -4,7 +4,7 @@
 
 ##  Introduction
 
-The `email` action sends an email with optionally XML form data, attachments, and PDF. It is automatically associated with the "Email" button, but can be called by an process.  
+The `email` action sends an email with optionally XML form data, attachments, and PDF. It is automatically associated with the "Email" button, but can be called by a process.  
 
 ## Parameters
 
