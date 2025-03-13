@@ -159,6 +159,7 @@
             * [PDF templates](form-runner/feature/pdf-templates.md)
         * [Responsive design](form-runner/feature/responsive-design.md)
         * [Revision history](form-runner/feature/revision-history.md)
+        * [S3 storage](form-runner/feature/s3.md)
         * [TIFF production](form-runner/feature/tiff-production.md)
         * [Versioning](form-runner/feature/versioning.md)
         * [Simple data migration](form-runner/feature/simple-data-migration.md)
