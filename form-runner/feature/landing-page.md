@@ -25,13 +25,24 @@ All Form Runner and Form Builder navigation bars now provide a direct link to th
 
 ## Configuration properties
 
-The following properties control which cards are shown on the Landing page:
+The following property control which cards are shown on the Landing page:
 
 ```xml
 <property
     as="xs:string"
     name="oxf.fr.landing.cards"
     value="quick-links published-forms form-builder-forms demo-forms"/>
+```
+
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
+
+The following property controls the number of rows available on cards shown on the Landing page:
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.fr.landing.page-size"
+    value="8"/>
 ```
 
 ## See also 
