@@ -13,7 +13,7 @@ The Landing page is organized in cards which provides quick access to:
 - Your in-progress Form Builder forms
 - Demo forms
 
-![The Landing page](/release-notes/images/landing.png)
+![The Landing page](/form-runner/images/landing-form-data-card.png)
 
 Some cards directly list content, including the list of published forms and the list of in-progress Form Builder forms.
 
