@@ -66,7 +66,7 @@ Note that the Request Dumper Filter only shows information about the HTTP header
         ```xml
         <filter>
             <filter-name>request-dumper-filter</filter-name>
-            <filter-class>filters.RequestDumperFilter</filter-class>
+            <filter-class>org.apache.catalina.filters.RequestDumperFilter</filter-class>
         </filter>
         ```
 
