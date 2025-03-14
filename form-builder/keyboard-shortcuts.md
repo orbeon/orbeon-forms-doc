@@ -98,11 +98,11 @@ See also [Undo and redo](/form-builder/undo-redo.md).
 
 ## Grid navigation shortcuts
 
-| Key       | Description                                                               | Since    |
-|-----------|---------------------------------------------------------------------------|----------|
-| `←`/`→`   | Move to the previous or next grid cell, including empty cells.            | 2020.1   |
-| `⇧←`/`⇧→` | Move to the previous or next grid cell, skipping empty cells.             | 2020.1   |
-| `↑`/`↓`   | Move to the previous or next grid cell vertically, including empty cells. | 2024.1.1 |
+| Key       | Description                                                               | Since                                                                |
+|-----------|---------------------------------------------------------------------------|----------------------------------------------------------------------|
+| `←`/`→`   | Move to the previous or next grid cell, including empty cells.            | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+| `⇧←`/`⇧→` | Move to the previous or next grid cell, skipping empty cells.             | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+| `↑`/`↓`   | Move to the previous or next grid cell vertically, including empty cells. | [\[Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md) |
 
 ## Inserting form structure
 
