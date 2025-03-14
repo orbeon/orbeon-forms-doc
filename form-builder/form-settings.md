@@ -53,7 +53,7 @@ Form options include options which apply to the entire form definition.
   - Use property: use the [`oxf.fr.detail.attachment.max-size-aggregate-per-form` property](/configuration/properties/form-runner-attachments.md#maximum-aggregate-attachment-size-forms)
   - Other: the maximum size allowed in bytes
 - Maximum Number of Files
-  - [\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
+  - [SINCE Orbeon Forms 2025.1]
   - Use property: use the [`oxf.fr.detail.attachment.max-files-per-control` property](/configuration/properties/form-runner-attachments.md#maximum-number-of-files)
   - Other: the maximum number of files allowed per multiple file attachment control
 - Allowed File Types
