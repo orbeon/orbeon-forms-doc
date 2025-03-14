@@ -1,4 +1,4 @@
-# Keyboard shortcuts
+# Form Builder keyboard shortcuts
 
 ## Availability
 
@@ -98,9 +98,11 @@ See also [Undo and redo](/form-builder/undo-redo.md).
 
 ## Grid navigation shortcuts
 
-[SINCE Orbeon Forms 2020.1]
-
-You can use the left and right cursor keys to navigate between grid cells.
+| Key       | Description                                                               | Since    |
+|-----------|---------------------------------------------------------------------------|----------|
+| `←`/`→`   | Move to the previous or next grid cell, including empty cells.            | 2020.1   |
+| `⇧←`/`⇧→` | Move to the previous or next grid cell, skipping empty cells.             | 2020.1   |
+| `↑`/`↓`   | Move to the previous or next grid cell vertically, including empty cells. | 2024.1.1 |
 
 ## Inserting form structure
 
