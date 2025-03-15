@@ -574,6 +574,15 @@ Orbeon Forms comes with an embedded SQLite database in order to show demo forms,
     value="postgresql"/>
 ```
 
+In addition, since by removing the SQLite demo database you don't have the Orbeon Forms demo forms anymore, you should remove the demo forms tiles from the [Landing page](/form-runner/feature/landing-page.md). You can do this by setting the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.landing.cards"
+    value="quick-links published-forms form-builder-forms"/>
+```
+
 ### With a single schema
 
 In your `properties-local.xml`, you map an app / form / form type to the implementation of the persistence API you're using with the `oxf.fr.persistence.provider.*.*.*` [wildcard property](../../configuration/properties/README.md). For instance, if using PostgreSQL, set the property to:
