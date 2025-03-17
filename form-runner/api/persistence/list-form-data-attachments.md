@@ -34,10 +34,12 @@ Request body:
 Response body:
 
 - `Content-Type: application/xml`
-- each child element contains
-    - as text data the path to the attachment
-    - `name` attribute: the associated control name
-    - `filename`, `mediatype`, `size`: attachment metadata
+- each child element
+    - has the following attributes
+        - `name` attribute: the associated control name
+        - `filename`, `mediatype`, `size`: attachment metadata
+        - `fr:relevant="false"`: if the corresponding control was non-relevant when data was saved, either directly because inside a non-relevant grid or section [SINCE Orbeon Forms 2024.1.1]
+    - contains, as text data, the path to the attachment
 
 Example response body:
 
