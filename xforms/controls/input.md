@@ -207,11 +207,11 @@ On iOS (iPhone, iPad, iPod touch), inputs bound to nodes of type `xs:date`, `xs:
     * The date will be shown as if the time zone indication was not there.
     * If users modify the time the time zone will be lost.
 
-## Text input sanitation
+## Text input sanitization
 
 [SINCE Orbeon Forms 4.0.1]
 
-Input sanitation allows you to apply a filter on the data entered by the user, before the data is stored into instance data. One use of sanitation is to replace undesired characters. For example, the following will replace sign and double rounded quotes with straight quotes, several long dashes with regular dashes and ellipsis character with three dots:
+Input sanitization allows you to apply a filter on the data entered by the user, before the data is stored into instance data. One use of sanitization is to replace undesired characters. For example, the following will replace sign and double rounded quotes with straight quotes, several long dashes with regular dashes and ellipsis character with three dots:
 
 ```xml
 <property as="xs:string" name="oxf.xforms.sanitize">
@@ -232,8 +232,8 @@ Input sanitation allows you to apply a filter on the data entered by the user, b
 
 The configuration is a JSON map of string to string. The algorithm is as follows:
 
-- If the configuration is blank string, sanitation is turned off.
-- If not blank, then the JSON configuration is parsed and sanitation is turned on.
+- If the configuration is blank string, sanitization is turned off.
+- If not blank, then the JSON configuration is parsed and sanitization is turned on.
 - Each mapping contains a search string on the left, and a replacement string on the right.
 - For each mapping, all instances of the search string in the input data are replaced with the replacement string.
 - Each replacement is applied in the order in which it appears in the JSON map.
@@ -248,7 +248,7 @@ Although this would be probably useless, and is definitely not recommended, the 
 </property>
 ```
 
-Sanitation applies only to:
+sanitization applies only to:
 
 - input fields bound to string data
 - text areas
