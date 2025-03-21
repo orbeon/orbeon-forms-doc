@@ -241,7 +241,7 @@ If you do have this property, make sure you remove it, comment it out, or explic
 
 ## Limitations
 
-- Embedding Form Builder with the JavaScript Embedding API has been supported [SINCE Orbeon Forms 2024.1.1]. As with embedding forms created with Form Builder, to allow form authors to edit an existing form in Form Builder, you need to know the document ID for that form, which is passed as the last parameter to `ORBEON.fr.API.embedForm()`. Most likely, you will want to have your own equivalent of a summary page where you list the forms a form author can edit and, upon clicking, call the embedding API.
+- Embedding Form Builder with the JavaScript Embedding API is supported [SINCE Orbeon Forms 2024.1.1]. As when embedding other forms, to allow form authors to edit an existing form in Form Builder, you need to know the document ID for that form, and to pass as the last parameter to `ORBEON.fr.API.embedForm()`. Most likely, you will want to have your own equivalent of a summary page where you list the forms form authors can edit, and, upon clicking, call the embedding API.
 - Additionally, the JavaScript embedding API has the same [limitations as the Java embedding API](java-api.md#limitations).
 
 ## See also
