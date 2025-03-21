@@ -232,9 +232,9 @@ This is the Handwritten Signature control (which of course you usually leave bla
 
 ![](images/button-controls.png)
 
-| Name | Description |
-| --- | --- |
-| **Button**      | standard button |
+| Name            | Description                |
+|-----------------|----------------------------|
+| **Button**      | standard button            |
 | **Link Button** | button appearing as a link |
 
 Buttons do not allow entering data, and by default do nothing significant, but they can be used to trigger actions with the Actions Editor.
@@ -257,7 +257,7 @@ From the perspective of people who will be filling out your form, the data dropd
 
 1. Insert a data dropdown field.
 2. Click on cogwheel to bring up a _Control Settings_ dialog, similar to the one shown to the right.
-3. In the _Resource URI_, enter the address of an HTTP service that returns the data you want to use to populate the dropdown. In most cases, the URL will look like `http://your-host/your-service`. If the address you specify start with a `/`, it is relative to the Orbeon Forms web app, which allows you to access a service you might have implemented in Orbeon Forms with XPL. For this example, let's assuming your service returns a list of states that looks like:
+3. In the _Resource URI_, enter the address of an HTTP service that returns the data you want to use to populate the dropdown. In most cases, the URL will look like `http://your-host/your-service`. If the address you specify start with a `/`, it is relative to the Orbeon Forms web app, which allows you to access a service you might have implemented in Orbeon Forms with XPL. For this example, let's assume your service returns a list of states that looks like:
 
 ```xml
 <states>

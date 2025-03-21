@@ -1,7 +1,5 @@
 # Memory and threads
 
-
-
 ## Memory
 
 If you suspect that Orbeon Forms is running out of memory, add the following to your JVM options:

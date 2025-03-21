@@ -1,7 +1,5 @@
 # Misc Troubleshooting
 
-
-
 ## Session not found when running both Tomcat and WebLogic
 
 This issue can also manifest itself with a dialog titled _Session has expired. Unable to process incoming request._ showing up as you try to interact with a form. This comes from the fact that Tomcat and WebLogic handle the `JSESSIONID` cookie used to track sessions differently:
