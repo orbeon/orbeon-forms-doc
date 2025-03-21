@@ -24,11 +24,9 @@ Cross-site scripting ([XSS][2]) attacks come from the application taking some us
 
 [\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
 
-Form Builder automatically sanitizes HTML content entered by form authors, including HTML labels, hints, and help messages.
+Form Builder automatically sanitizes HTML content entered by form authors, including HTML labels, hints, and help messages. This helps security by preventing a malicious or inattentive form author to inject script elements into a form, for example.  
 
-This helps security by preventing a malicious or inattentive form author to inject script elements into a form, for example.  
-
-In addition, all Orbeon Forms HTML output goes through HTML sanitization as well.
+In addition, all Orbeon Forms HTML output goes through HTML sanitization as well. This also covers cases where HTML might be produced dynamically, for example using formulas.
 
 ### Authentication and cookie security
 
