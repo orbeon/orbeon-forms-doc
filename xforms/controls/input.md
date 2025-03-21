@@ -248,7 +248,7 @@ Although this would be probably useless, and is definitely not recommended, the 
 </property>
 ```
 
-sanitization applies only to:
+Input sanitization applies only to:
 
 - input fields bound to string data
 - text areas

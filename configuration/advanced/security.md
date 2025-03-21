@@ -18,7 +18,17 @@ Cross-site scripting ([XSS][2]) attacks come from the application taking some us
 * the content is stored in a safe container: XML
 * uses standard XML parsers and serializers (which do proper escaping)  to read/write the data   
 * when users can enter rich content (HTML), Orbeon Forms automatically performs [HTML cleanup][3] on the data provided by users even before it reaches your application, so only HTML known to be safe is kept
-* control values sent to the server are never inserted literally into queries  
+* control values sent to the server are never inserted literally into queries
+
+### HTML sanitization
+
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
+
+Form Builder automatically sanitizes HTML content entered by form authors, including HTML labels, hints, and help messages.
+
+This helps security by preventing a malicious or inattentive form author to inject script elements into a form, for example.  
+
+In addition, all Orbeon Forms HTML output goes through HTML sanitization as well.
 
 ### Authentication and cookie security
 
