@@ -49,7 +49,12 @@ For more, see [S3 storage](/form-runner/feature/s3.md).
 
 The "Control Settings" dialog now includes a UI for the various appearances of buttons:
 
-![Button appearances](/form-builder/images/button-appearance-selector.png)
+<figure>
+    <picture>
+        <img src="../form-builder/images/button-appearance-selector.png" style="width: 75%">
+    </picture>
+    <figcaption>Button appearances</figcaption>
+</figure>
 
 At runtime, this translates into various button appearances:
 
@@ -89,6 +94,13 @@ For more, see [Keyboard shortcuts](/form-builder/keyboard-shortcuts.md#grid-navi
 You can select in Form Builder whether the browser time form control should always be used.
 
 ![Configuring the time format](/form-runner/component/images/xbl-time-editor-custom-cropped.png)
+
+<figure>
+    <picture>
+        <img src="../form-runner/component/images/xbl-time-editor-custom-cropped.png" style="width: 80%">
+    </picture>
+    <figcaption>Configuring the time format</figcaption>
+</figure>
 
 ### New configuration properties
 
