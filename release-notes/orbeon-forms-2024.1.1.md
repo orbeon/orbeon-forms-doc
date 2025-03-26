@@ -6,9 +6,7 @@ Today we released Orbeon Forms 2024.1.1! This maintenance release contains more 
 
 - [Orbeon Forms 2024.1 PE](orbeon-forms-2024.1.md)
 
-## New features`
-
-Orbeon Forms 2024.1.1 contains a few small but useful features.
+## New features
 
 ### Suggest control and section name from the control label
 
@@ -17,9 +15,11 @@ Form controls and sections typically have a label, but also an internal name whi
 - "Address" might be stored as `address`
 - "Contractor business name" might be stored as `contractor-business-name`
 
+If you haven't entered a name yet, the Form Builder will now suggest a name based on the label:
+
 ![Before the suggestion](/form-builder/images/control-settings-name-suggestion.png)
 
-Simply click on the suggestion to accept it.
+Simply click on the suggestion to accept it:
 
 ![After the suggestion](/form-builder/images/control-settings-name-suggestion-done.png)
 
@@ -27,7 +27,7 @@ This also works in the "Section Settings" dialog for section names.
 
 ### Ability to filter itemset with a formula
 
-The "Edit Choices" dialog allows you to filter choices based on a condition. This can for example remove choices based on a selection made somewhere else in the form.
+The "Edit Choices" dialog allows you to filter choices based on a condition. This can, for example, exclude choices based on a selection made somewhere else in the form.
 
 ![Filtering Choices](/form-builder/images/itemset-editor-filter.png)
 
