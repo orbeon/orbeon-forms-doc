@@ -98,6 +98,8 @@ See also [Undo and redo](/form-builder/undo-redo.md).
 
 ## Grid navigation shortcuts
 
+The grid navigation shortcuts use the keyboard cursor (arrow) keys.
+
 | Key       | Description                                                               | Since                                                                |
 |-----------|---------------------------------------------------------------------------|----------------------------------------------------------------------|
 | `←`/`→`   | Move to the previous or next grid cell, including empty cells.            | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |

@@ -2,23 +2,99 @@
 
 __Xxx, March , 2025__
 
-Today we released Orbeon Forms 2024.1.1! This maintenance release contains lots of bug-fixes and some new features, and is recommended for all users of:
+Today we released Orbeon Forms 2024.1.1! This maintenance release contains more than a hundred bug-fixes and some new features, and is recommended for all users of:
 
 - [Orbeon Forms 2024.1 PE](orbeon-forms-2024.1.md)
 
 ## New features`
 
-TODO: explanations and screenshots.
+Orbeon Forms 2024.1.1 contains a few small but useful features.
 
-- FB: Suggest control name from the control label ([\#1960](https://github.com/orbeon/orbeon-forms/issues/1960))
-- Ability to filter itemset with a formula ([\#4614](https://github.com/orbeon/orbeon-forms/issues/4614))
-- Store all attachments sent by email in AWS S3 ([\#6751](https://github.com/orbeon/orbeon-forms/issues/6751))
-- Show a form's workflow stage in the Detail page ([\#4948](https://github.com/orbeon/orbeon-forms/issues/4948))
-- Include UI for the various appearances of buttons ([\#6832](https://github.com/orbeon/orbeon-forms/issues/6832))
-- JavaScript embedding API to support Form Builder ([\#4483](https://github.com/orbeon/orbeon-forms/issues/4483))h
-- Configuration property for the Form Runner summary page to start with the Search Options open ([\#6311](https://github.com/orbeon/orbeon-forms/issues/6311))
-- Landing: property to configure tile page size ([\#6854](https://github.com/orbeon/orbeon-forms/issues/6854))
-- FB: Ability to navigate cells using cursor up/down ([\#6852](https://github.com/orbeon/orbeon-forms/issues/6852))
+### Suggest control and section name from the control label
+
+Form controls and sections typically have a label, but also an internal name which is used in the data. Often, these match, for example:
+
+- "Address" might be stored as `address`
+- "Contractor business name" might be stored as `contractor-business-name`
+
+![Before the suggestion](/form-builder/images/control-settings-name-suggestion.png)
+
+Simply click on the suggestion to accept it.
+
+![After the suggestion](/form-builder/images/control-settings-name-suggestion-done.png)
+
+This also works in the "Section Settings" dialog for section names.
+
+### Ability to filter itemset with a formula
+
+The "Edit Choices" dialog allows you to filter choices based on a condition. This can for example remove choices based on a selection made somewhere else in the form.
+
+![Filtering Choices](/form-builder/images/itemset-editor-filter.png)
+
+### Show a form's workflow stage in the Detail page
+
+You can now opt to show the workflow stage in the navigation bar of the form's Detail page.
+
+![Workflow stage in the navigation bar](/form-runner/images/workflow-stage-navbar.png)
+
+For more, see [Workflow stage](/form-runner/feature/workflow-stage.md#showing-the-workflow-stage-in-the-detail-page).
+
+### Store email attachments to AWS S3
+
+When sending an email using [the `email` action](/form-runner/advanced/buttons-and-processes/actions-form-runner-email.md), you can store attachments in an S3 bucket.
+
+For more, see [S3 storage](/form-runner/feature/s3.md).
+
+### Include UI for the various appearances of buttons
+
+The "Control Settings" dialog now includes a UI for the various appearances of buttons:
+
+![Button appearances](/form-builder/images/button-appearance-selector.png)
+
+At runtime, this translates into various button appearances:
+
+![Button appearances](/form-builder/images/button-appearance-runtime.png)
+
+This was already supported at runtime, but there was no selector in the "Control Settings" dialog to set it.
+
+### JavaScript embedding API to support Form Builder
+
+The [Form Runner JavaScript Embedding API](/form-runner/link-embed/javascript-api.md) now allows you to embed Form Builder.
+
+For more, see [JavaScript embedding API to support Form Builder](/form-runner/link-embed/javascript-api.md#form-builder-support).
+
+### Ability to navigate grid cells using cursor up/down
+
+We continue to add keyboard shortcuts to Form Builder. It has been possible to navigate between grid cells with the Left and Right cursor (arrow) keys.
+
+You can now also use the Up and Down cursor keys to move up and down in the form, including going across grid and section boundaries. Here are the shortcuts currently supported:
+
+| Key       | Description                                                               |
+|-----------|---------------------------------------------------------------------------|
+| `←`/`→`   | Move to the previous or next grid cell, including empty cells.            |
+| `⇧←`/`⇧→` | Move to the previous or next grid cell, skipping empty cells.             |
+| `↑`/`↓`   | Move to the previous or next grid cell vertically, including empty cells. |
+
+This is very useful when combined with other keyboard shortcuts, such as:
+
+- `⇧↵` (Shift-Enter or Shift-Return) to open the [Control Settings dialog](/form-builder/control-settings.md)
+- `⌘X` or `⌃X` to cut the current control
+- `⌘C` or `⌃C` to copy the current control
+- `⌘V` or `⌃V` to paste from the toolbox
+
+For more, see [Keyboard shortcuts](/form-builder/keyboard-shortcuts.md#grid-navigation-shortcuts).
+
+## Native timer picker
+
+You can select in Form Builder whether the browser time form control should always be used.
+
+![Configuring the time format](/form-runner/component/images/xbl-time-editor-custom-cropped.png)
+
+### New configuration properties
+
+You can now configure the Form Runner summary page to start with the Search Options open. For more, see [Search options opened on load](/form-runner/feature/summary-page.md#search-options-opened-on-load).
+
+You can also configure the Form Runner Landing page tile size. For more, see [Landing page tile size](/form-runner/feature/landing-page.md#configuration-properties).
 
 ## Issues addressed
 
@@ -134,6 +210,7 @@ Closed
     - PDF: Orbeon logo no longer shows in header ([\#6796](https://github.com/orbeon/orbeon-forms/issues/6796))
     - PDF: Empty signature can overflow ([\#6841](https://github.com/orbeon/orbeon-forms/issues/6841))
     - PDF header/footer lines cannot be removed with CSS ([\#6851](https://github.com/orbeon/orbeon-forms/issues/6851))
+    - PDF: Long explanatory text causes page break #6903
 - Performance
     - Reindexing: use batch updates for INSERT ([\#6731](https://github.com/orbeon/orbeon-forms/issues/6731))
     - Reindexing: avoid reading data when unnecessary ([\#6773](https://github.com/orbeon/orbeon-forms/issues/6773))

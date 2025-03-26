@@ -25,7 +25,7 @@ The Time component is directly accessible from the Form Builder toolbox.
 
 The Control Settings dialog features a user interface for configuring the control width and output format.
 
-[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)  You can select in Form Builder whether the browser time form control should be used.
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md) You can select in Form Builder whether the browser time form control should be used.
 
 ![Configuring the time format](images/xbl-time-editor-custom-cropped.png)
 

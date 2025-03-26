@@ -65,6 +65,7 @@ You can optionally show the workflow page in the navigation bar of the form's De
     name="oxf.fr.navbar.workflow-stage.enable.*.*"
     value="true"/>
 ```
+
 ![Workflow stage in the navigation bar](../images/workflow-stage-navbar.png)
 
 ## See also
