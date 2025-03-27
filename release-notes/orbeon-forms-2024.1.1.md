@@ -237,8 +237,10 @@ Closed
     - Mounting standalone.xml into WildFly image doesn't work ([\#6759](https://github.com/orbeon/orbeon-forms/issues/6759))
     - Remove last use of Parboiled 1 ([\#5000](https://github.com/orbeon/orbeon-forms/issues/5000))
     - Clean-up tests using `oxf.url-rewriting.service.base-uri` ([\#6835](https://github.com/orbeon/orbeon-forms/issues/6835))
-    - Third-party libraries updates
     - Fix ([\#6713](https://github.com/orbeon/orbeon-forms/issues/6713)): XForms Inspector with dialogs
+- Security
+    - Upgrade to TinyMCE 6.8.5 ([\#6906](https://github.com/orbeon/orbeon-forms/issues/6906)) 
+    - Third-party libraries updates
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page, or use our Docker images.
 
