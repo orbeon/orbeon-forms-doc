@@ -89,15 +89,13 @@ This is very useful when combined with other keyboard shortcuts, such as:
 
 For more, see [Keyboard shortcuts](/form-builder/keyboard-shortcuts.md#grid-navigation-shortcuts).
 
-## Native timer picker
+## Native time picker
 
 You can select in Form Builder whether the browser time form control should always be used.
 
-![Configuring the time format](/form-runner/component/images/xbl-time-editor-custom-cropped.png)
-
 <figure>
     <picture>
-        <img src="../form-runner/component/images/xbl-time-editor-custom-cropped.png" style="width: 80%">
+        <img src="../form-runner/component/images/xbl-time-editor-custom-cropped.png" width="481">
     </picture>
     <figcaption>Configuring the time format</figcaption>
 </figure>
