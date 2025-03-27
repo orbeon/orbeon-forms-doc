@@ -51,7 +51,7 @@ The "Control Settings" dialog now includes a UI for the various appearances of b
 
 <figure>
     <picture>
-        <img src="../form-builder/images/button-appearance-selector.png" style="width: 75%">
+        <img src="../form-builder/images/button-appearance-selector.png" width="140">
     </picture>
     <figcaption>Button appearances</figcaption>
 </figure>
