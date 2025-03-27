@@ -29,7 +29,12 @@ This also works in the "Section Settings" dialog for section names.
 
 The "Edit Choices" dialog allows you to filter choices based on a condition. This can, for example, exclude choices based on a selection made somewhere else in the form.
 
-![Filtering Choices](/form-builder/images/itemset-editor-filter.png)
+<figure>
+    <picture>
+        <img src="../form-builder/images/itemset-editor-filter.png" width="610">
+    </picture>
+    <figcaption>Filtering Choices</figcaption>
+</figure>
 
 ### Show a form's workflow stage in the Detail page
 
