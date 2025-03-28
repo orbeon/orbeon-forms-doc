@@ -306,4 +306,5 @@ If you do have this property, make sure you remove it, comment it out, or explic
 
 ## See also 
 
+- [JavaScript Embedding API](javascript-api.md)
 - Blog post: [Form Builder embedding](https://blog.orbeon.com/2017/02/form-builder-embedding.html)

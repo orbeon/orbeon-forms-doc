@@ -253,6 +253,7 @@ Additionally, the JavaScript embedding API has the same [limitations as the Java
 
 ## See also
 
+- [Java Embedding API](java-api.md)
 - [XForms JavaScript API](/xforms/client-side-javascript-api.md)
 - [Form Runner JavaScript API](/form-runner/api/other/form-runner-javascript-api.md)
 
