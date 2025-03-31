@@ -11,24 +11,22 @@ Once done:
 3. Install the new `orbeon.war`. With Tomcat, this is often done by uncompressing the `orbeon.war` into an `orbeon` directory (`unzip -d orbeon orbeon.war`), and moving the `orbeon` directory inside the Tomcat `webapps` directory.
 4. Restart your application server and test that your clean install works as expected "out of the box", that is without any of your custom configurations.
 5. Put back configurations you had with your previous installation. Often, the only file you need to modify is `WEB-INF/resources/config/properties-local.xml`, but you might have created or made changes to other files, such as `WEB-INF/resources/config/form-builder-permissions.xml`, `WEB-INF/resources/config/log4j.xml` or `WEB-INF/web.xml`.
-6. Migrate your database if needed.
-    - If you're using the internal eXist and want to keep the forms you created, and corresponding data captured with those forms, you'll want to move the `WEB-INF/exist-data` directory to the new web app.
-    - If using a relational database, open the page [Using Form Runner with a relational database](form-runner/persistence/relational-db.md), and:
-        - You might have to run some upgrade DDL at the database level. In the page linked above, find the section about the database you are using, and in the table with the DDL, given the version you are upgrading from and the version you are upgrading to, check if there is some DDL you need to run.
-        - Open the "DDL to create from scratch" for the version you are upgrading to, and check that your database has all the indexes mentioned in this file. Make sure to check this, even if you didn't have to run any upgrade DDL.
-7. Restart your application server and test that everything is working as expected with the new version of Orbeon 
-   Forms. While, or before doing so, you might also want to review the
-   [compatibility notes](#compatibility-notes-for-previous-versions) which might give you some indication of what 
-   you might to pay especially attention to when testing.
+6. Most installations of Orbeon Forms store data in a relational database using the built-in implementation of the persistence API. If this is your case, you might need to do some changes at the database level. Don't worry: those changes are typically very small.
+    - Open the page [Using Form Runner with a relational database](form-runner/persistence/relational-db.md), and:
+    - You might have to run some upgrade DDL at the database level. In the page you just opened, find the section about the database you are using, and in the table with the DDL, given the version you are upgrading from and the version you are upgrading to, check if there is some DDL you need to run.
+    - Open the "DDL to create from scratch" for the version you are upgrading to, and check that your database has all the indexes mentioned in this file. Make sure to check this, even if you didn't have to run any upgrade DDL.
+7. Restart your application server and test that everything is working as expected with the new version of Orbeon Forms. We also recommend you review the [compatibility notes](#compatibility-notes-for-previous-versions) which might give you some indication of what you might to pay especially attention to when testing.
 
-Finally, let us know if you encounter issues while upgrading, via the [community](https://www.orbeon.com/community), 
-by email, or via professional support.
+Finally, let us know if you have any question or encounter any issue while upgrading:
+
+- Via Basecamp if using Orbeon Forms PE
+- Via the Google Groups or Stack Overflow if using Orbeon Forms CE (see [community](https://www.orbeon.com/community))
 
 ## Why upgrade to newer versions of Orbeon Forms?
 
-### Minor releases
+### Maintenance updates
 
-Orbeon Forms minor releases (or "dot releases", or "point releases"), for example Orbeon Forms 2020.1.1, 2020.1.2, etc., contain important bug-fixes but no new features (in some rare cases, minor features can be introduced). We recommend upgrading to newer minor releases in all cases. 
+Orbeon Forms maintenance updates, for example Orbeon Forms 2024.1.1 or 2023.1.7, contain important bug-fixes but typically no new major features (in some rare cases, minor features can be introduced). We recommend you install the latest maintenance release for the version of Orbeon Forms you are using. 
 
 ### Major releases
 
