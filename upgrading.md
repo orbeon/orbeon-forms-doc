@@ -2,9 +2,7 @@
 
 ## Steps
 
-We recommend you test your upgrade in a non-production environment, and only upgrade your production environment 
-once you've validated the upgrade. Also, before upgrading, we recommend you have a current backup of your database. 
-Once done: 
+We recommend you test your upgrade in a non-production environment, and only upgrade your production environment once you've validated the upgrade. Also, before upgrading, we recommend you have a current backup of your database. Once done: 
 
 1. Stop your application server (e.g. Tomcat).
 2. Move your existing Orbeon Forms install to a temporary directory. For instance, with Tomcat, in Tomcat's `webapps` directory, move any existing `orbeon` folder, as well as the `orbeon.war` file, if present, out of the way before proceeding. 
@@ -12,7 +10,7 @@ Once done:
 4. Restart your application server and test that your clean install works as expected "out of the box", that is without any of your custom configurations.
 5. Put back configurations you had with your previous installation. Often, the only file you need to modify is `WEB-INF/resources/config/properties-local.xml`, but you might have created or made changes to other files, such as `WEB-INF/resources/config/form-builder-permissions.xml`, `WEB-INF/resources/config/log4j.xml` or `WEB-INF/web.xml`.
 6. Most installations of Orbeon Forms store data in a relational database using the built-in implementation of the persistence API. If this is your case, you might need to do some changes at the database level. Don't worry: those changes are typically very small.
-    - Open the page [Using Form Runner with a relational database](form-runner/persistence/relational-db.md), and:
+    - Open the page [Using Form Runner with a relational database](form-runner/persistence/relational-db.md).
     - You might have to run some upgrade DDL at the database level. In the page you just opened, find the section about the database you are using, and in the table with the DDL, given the version you are upgrading from and the version you are upgrading to, check if there is some DDL you need to run.
     - Open the "DDL to create from scratch" for the version you are upgrading to, and check that your database has all the indexes mentioned in this file. Make sure to check this, even if you didn't have to run any upgrade DDL.
 7. Restart your application server and test that everything is working as expected with the new version of Orbeon Forms. We also recommend you review the [compatibility notes](#compatibility-notes-for-previous-versions) which might give you some indication of what you might to pay especially attention to when testing.
