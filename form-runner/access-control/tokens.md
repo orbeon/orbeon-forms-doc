@@ -18,7 +18,7 @@ This feature is not enabled by default. To enable it for a given form, you must 
 
 <figure>
     <picture>
-        <img src="../images/dialog-permissions-token.png" width="60%">
+        <img src="../images/dialog-permissions-token.png" width="612">
     </picture>
     <figcaption>Form Builder Permissions</figcaption>
 </figure>
@@ -97,7 +97,7 @@ When enabled with the `oxf.fr.navbar.share-button.enable` property, you can use 
 
 <figure>
     <picture>
-        <img src="../images/dialog-share.png" width="60%">
+        <img src="../images/dialog-share.png" width="671">
     </picture>
     <figcaption>Share icon and dialog</figcaption>
 </figure>
