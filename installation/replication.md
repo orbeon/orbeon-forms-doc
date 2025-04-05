@@ -23,7 +23,8 @@ Sessions are still sticky for performance reasons. Because Orbeon Forms stores a
 A load balancer is required. It is in charge of proxying client requests to specific servers, detect which servers might have failed or are being brought back, and ensuring session affinity.
 
 <figure>
-    <img src="images/replication.png" alt="Replication architecture" width="800"/>
+    <img src="images/replication.png" alt="Replication architecture" width="500"/>
+    <figcaption>Replication architecture</figcaption>
 </figure>
 
 ## Configuration
