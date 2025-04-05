@@ -2,49 +2,27 @@
 
 ## Availability
 
-This is an [Orbeon Forms PE](https://www.orbeon.com/download) feature.
-
-This feature is available since Orbeon Forms 2017.2. It has been tested with the following software:
-
-- Apache Tomcat 8.0.45
-- HAProxy 1.7.4
+This is an [Orbeon Forms PE](https://www.orbeon.com/download) feature, and it is available since Orbeon Forms 2017.2.
 
 We also have reports of this feature working with OpenLiberty and Hazelcast session replication.
 
-## Introduction
+## Purpose
 
-The purpose of replication is to provide high-availability of Orbeon Forms with as little disruption as possible to
-users currently filling out forms. This is achieved by replicating state between servers.
+The purpose of replication is to provide high-availability of Orbeon Forms with as little disruption as possible to users currently filling out forms. This is achieved by replicating state between servers.
 
-Consider a simple scenario of load balancing with two servers, with sticky sessions (that is, a given user's requests always
-reach the same server). If one of the servers fails, new users will be assigned to the other server. So the system
-remains operational from that point of view. However, users with active sessions will have their current work lost, as
-the content will still in the failed server-memory.
+Consider a simple scenario of load balancing with two servers, with sticky sessions (that is, a given user's requests always reach the same server). If one of the servers fails, new users will be assigned to the other server. So the system remains operational from that point of view. However, users with active sessions will have their current work lost, as the content will still in the failed server-memory.
 
-Replication changes that by replicating state to one or more additional servers. So if a server goes down, the load
-balancer can redirect users with active sessions to other servers, and because state was replicated there, users can
-continue their work.
+Replication changes that by replicating state to one or more additional servers. So if a server goes down, the load balancer can redirect users with active sessions to other servers, and because state was replicated there, users can continue their work.
 
 ## Architecture
 
-Orbeon Forms achieves replication by enabling the replication of servlet sessions and of caches. All current state in
-memory, whether in the session or relevant caches, is replicated so that work can be resumed on replica servers when
-needed.
+Orbeon Forms achieves replication by enabling the replication of servlet sessions and of caches. All current state in memory, whether in the session or relevant caches, is replicated so that work can be resumed on replica servers when needed.
 
-Sessions are still sticky for performance reasons. Because Orbeon Forms stores a lot of information in memory, and there
-are data structures associated with that information, there is a cost to recreate all necessary data structures at each
-request. Therefore, requests for a given user must constantly reach the same server. However, if a server
-fails, then there is a one-time cost to recreating data structures on the new server for the given user (in fact, for
-a given form in use by that user).
+Sessions are still sticky for performance reasons. Because Orbeon Forms stores a lot of information in memory, and there are data structures associated with that information, there is a cost to recreate all necessary data structures at each request. Therefore, requests for a given user must constantly reach the same server. However, if a server fails, then there is a one-time cost to recreating data structures on the new server for the given user (in fact, for a given form in use by that user).
 
-Servers must be able to communicate via IP multicast. This means that they must typically be on the same network,
-physical or virtual.
+A load balancer is required. It is in charge of proxying client requests to specific servers, detect which servers might have failed or are being brought back, and ensuring session affinity.
 
-A load balancer is required. It is in charge of proxying client requests to specific servers, detect which servers
-might have failed or are being brought back, and ensuring session affinity.
-
-
-![Replication architecture](images/replication.png)
+<img src="images/replication.png" alt="Replication architecture" width="800"/>
 
 ## Configuration
 
@@ -52,7 +30,7 @@ might have failed or are being brought back, and ensuring session affinity.
 
 #### Properties
 
-Orbeon Forms has a single property enabling replication:
+Orbeon Forms has a single property enabling replication. By default, it is set to `false`, because there is a cost to serializing the state of forms after each update in memory. 
 
 ```xml
 <property
@@ -61,11 +39,7 @@ Orbeon Forms has a single property enabling replication:
     value="true"/>
 ```
 
-By default, this property is set to `false`, because there is a cost to serializing the state of forms after each update in
-memory.
-
-In addition you might need to set the following property to point to the local Orbeon Forms instance without going
-through the load balancer:
+In addition, you might need to set the following property to point to the local Orbeon Forms instance without going through the load balancer:
 
 ```xml
 <property
@@ -89,9 +63,7 @@ that ships with Orbeon Forms.
 
 The Orbeon Forms `ehcache.xml` must be modified to include replication settings, which are turned off by default. This is similar to Tomcat session replication. To modify this file, extract it from the `WEB-INF/lib/orbeon-core.jar`, and copy it in the `WEB-INF/resources/config` directory. You can then modify the `ehcache.xml` in that directory, and your updated version will take precedence over the built-in version of that file found inside `orbeon-core.jar`.
 
-*NOTE: There isn't as single set of settings to replicate the Tomcat servlet session and Ehcache, as the two products
-use different libraries for replication. But the idea is that both configuration should behave as closely as possible
-from each other.* 
+*NOTE: There isn't as single set of settings to replicate the Tomcat servlet session and Ehcache, as the two products use different libraries for replication. But the idea is that both configuration should behave as closely as possible from each other.* 
 
 The keys to this configuration are:
 
