@@ -22,7 +22,9 @@ Sessions are still sticky for performance reasons. Because Orbeon Forms stores a
 
 A load balancer is required. It is in charge of proxying client requests to specific servers, detect which servers might have failed or are being brought back, and ensuring session affinity.
 
-<img src="images/replication.png" alt="Replication architecture" width="800"/>
+<figure>
+    <img src="images/replication.png" alt="Replication architecture" width="800"/>
+</figure>
 
 ## Configuration
 
@@ -275,45 +277,30 @@ For details about the HAProxy configuration, see the [HAProxy Configuration Manu
 
 ### Individual server load
 
-Consider a scenario where you have two servers with replication enabled, and one of them fails. This means that users
-from the failed server are redirected by the load balancer to the server which is still working. If, at the time of
-failure, both servers were nearing their full capacity, then suddenly the only remaining server will have to handle
-all the load.
+Consider a scenario where you have two servers with replication enabled, and one of them fails. This means that users from the failed server are redirected by the load balancer to the server which is still working. If, at the time of failure, both servers were nearing their full capacity, then suddenly the only remaining server will have to handle all the load.
 
-This means that the load balanced servers should not be allowed to reach full capacity so that, in case of failure of
-a single server, the remaining server can handle all the load. Theoretically, this means that each server, in normal
-use, should be at under 50 % of total capacity.
+This means that the load balanced servers should not be allowed to reach full capacity so that, in case of failure of a single server, the remaining server can handle all the load. Theoretically, this means that each server, in normal use, should be at under 50 % of total capacity.
 
-Using more than 2 replicated servers allows using more of the available capacity of all servers in the case of a single
-server failure.     
+Using more than 2 replicated servers allows using more of the available capacity of all servers in the case of a single server failure.     
 
 ## Limitations
 
 ### Uploaded files
 
-Uploaded files which are not yet saved to a database are currently not replicated. If a use is switched from one server
-to another, Form Runner:
+Uploaded files which are not yet saved to a database are currently not replicated. If a user is switched from one server to another, Form Runner:
 
 - checks all unsaved attachments
 - if there are any
   - clears the associated temporary file path
   - shows an alert to the user
   
-This requires users with unsaved attachments to re-upload their attachments. This is not ideal but it is likely that
-the user still have the attachment or attachments available. 
+This requires users with unsaved attachments to re-upload their attachments. This is not ideal, but it is likely that  the user still have the attachment or attachments available. 
   
 ### Loss of state
 
-If a server fails instantly before it had the chance to replicate the latest modifications to a form, and after an
-Ajax response has been sent to the client, then state might be lost. The user is redirected by the load balancer
-to another server, but state will be missing from that server. In such cases, the user will see an error, and won't
-be able to continue working with the form. Unsaved data will be lost.
+If a server fails instantly before it had the chance to replicate the latest modifications to a form, and after an  Ajax response has been sent to the client, then state might be lost. The user is redirected by the load balancer to another server, but state will be missing from that server. In such cases, the user will see an error, and won't be able to continue working with the form. Unsaved data will be lost. In such cases, enabling the [autosave feature](/form-runner/persistence/autosave.md) can alleviate the issue.
 
-In such cases, enabling the [autosave feature](/form-runner/persistence/autosave.md) can alleviate the issue.
-
-The `ehcache.xml` configuration provided above attempts to minimize this kind of issues by adding `replicateAsynchronously=false`.
-
-_NOTE: We have feedback from customers that if manual peer discovery (RMI TCP unicast) is enabled, setting `replicateAsynchronously="true"` works and helps reduce latency._
+The `ehcache.xml` configuration provided above attempts to minimize this kind of issues by adding `replicateAsynchronously=false`. _NOTE: We have feedback from customers that if manual peer discovery (RMI TCP unicast) is enabled, setting `replicateAsynchronously="true"` works and helps reduce latency._
 
 ## See also
 
