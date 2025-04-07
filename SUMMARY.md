@@ -167,6 +167,7 @@
         * [Workflow stage](form-runner/feature/workflow-stage.md)
     * Persistence
         * [Using a relational database](form-runner/persistence/relational-db.md)
+        * [Relational database schema](form-runner/persistence/relational-db-schema.md)
         * [Purging old data using SQL](form-runner/persistence/purging-old-data.md)
         * [Auditing](form-runner/persistence/auditing.md)
         * [Autosave](form-runner/persistence/autosave.md)
