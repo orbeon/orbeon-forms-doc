@@ -1,15 +1,17 @@
 # Database support
 
-## Categories of databases
+## Builtin and custom providers
 
-We have two categories of databases:
+Orbeon Forms provides persistence of form definitions and form data through *persistence providers*. There are two types of providers:
 
-- __Built-in relational support__: Built-in support for Oracle, MySQL, SQL Server, PostgreSQL, and DB2.
-- __Through custom persistence providers__: See [Custom persistence providers](../api/persistence/custom-persistence-providers.md).
+- __Built-in relational provider__: This provides built-in support for Oracle, MySQL, SQL Server, PostgreSQL, and DB2.
+- __Custom persistence providers__: See [Custom persistence providers](../api/persistence/custom-persistence-providers.md) for details.
 
-For setup instructions, see [Using Form Runner with a relational database](relational-db.md).
+For relational database setup instructions, see [Using Form Runner with a relational database](relational-db.md).
 
 ## Feature matrix
+
+With the built-in relational provider, some features are not available for all databases. The following table summarizes the support for each database.
 
 | Feature                                                                  | Oracle | MySQL | SQL Server | PostgreSQL | DB2 |
 |--------------------------------------------------------------------------|--------|-------|------------|------------|-----|
