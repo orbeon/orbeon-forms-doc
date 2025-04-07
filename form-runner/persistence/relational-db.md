@@ -10,6 +10,8 @@ The setup for the relational persistence layers is a 3-step process. The first t
 1. __Application server setup__: You configure your application server to use the database.
 1. __Orbeon Forms setup__: You configure Orbeon Forms to use the relevant persistence layer.
 
+You can find more about the relational database schema in the [Relational database schema](relational-db-schema.md) page.
+
 Support for Oracle, SQL Server, and DB2 are [Orbeon Forms PE][1] features.
 
 See also [Removing the built-in SQLite database](/configuration/advanced/production-war.md#removing-the-built-in-sqlite-database).
@@ -39,7 +41,7 @@ See also [Removing the built-in SQLite database](/configuration/advanced/product
 [oracle-2019_1-to-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/oracle-2019_1-to-2024_1.sql 
 [oracle-2018_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/oracle-2018_2-to-2019_1.sql
 
-For older DDL see [Relational database schema](relational-db-schema.md).
+For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
 
 #### Oracle binary XML storage
 
@@ -95,7 +97,7 @@ By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5
 [mysql-2018_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/mysql-2018_2-to-2019_1.sql
 [mysql-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/mysql-2019_1.sql
 
-For older DDL see [Relational database schema](relational-db-schema.md).
+For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
 
 ### SQL Server database setup
 
@@ -119,7 +121,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 [sqlserver-2017_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/sqlserver-2017_2-to-2019_1.sql
 
 
-For older DDL see [Relational database schema](relational-db-schema.md).
+For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
 
 #### Using `usql` to create an `orbeon` database
 
@@ -171,7 +173,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 [postgresql-2019_1-to-2023_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2023.1/postgresql-2019_1-to-2023_1.sql
 [postgresql-2018_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/postgresql-2018_2-to-2019_1.sql
 
-For older DDL see [Relational database schema](relational-db-schema.md).
+For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
 
 ### DB2 database setup
 
@@ -186,7 +188,7 @@ Run the following DDL to create or update your Orbeon database, and note that if
 [db2-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/db2-2019_1.sql
 [db2-2017_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/db2-2017_2-to-2019_1.sql
 
-For older DDL see [Relational database schema](relational-db-schema.md).
+For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
 
 ## Application server setup
 
@@ -603,6 +605,7 @@ See [Auditing](form-runner/persistence/auditing.md).
 ## See also
 
 - [Database support](db-support.md)
+- [Relational database schema](relational-db-schema.md)
 - [Auditing](auditing.md)
 - [Revision history](/form-runner/feature/revision-history.md)
 - [Purging historical data](/form-runner/feature/purging-historical-data.md)

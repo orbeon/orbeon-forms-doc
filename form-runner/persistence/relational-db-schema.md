@@ -142,6 +142,7 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 
 ## See also
 
+- [Database support](db-support.md)
 - [Using Form Runner with a relational database](relational-db.md)
 - [Custom persistence providers](../api/persistence/custom-persistence-providers.md)
 - [Search API](../api/persistence/search.md)
