@@ -10,15 +10,19 @@ For more about the relational database setup, see [Using Form Runner with a rela
 
 | Table Name                      | Description                                                                     | See also                                                            |
 |---------------------------------|---------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| `orbeon_form_definition`        | Holds published form definitions.                                               |                                                                     |
-| `orbeon_form_definition_attach` | Holds attachments related to published form definitions.                        |                                                                     |
-| `orbeon_form_data`              | Holds saved and draft form data.                                                |                                                                     |
+| `orbeon_form_definition`        | Holds _published_ form definitions.                                             |                                                                     |
+| `orbeon_form_definition_attach` | Holds attachments related to _published_ form definitions.                      |                                                                     |
+| `orbeon_form_data`              | Holds saved and draft form data.<sup>1</sup>                                    |                                                                     |
 | `orbeon_form_data_attach`       | Holds attachments associated with submitted form data.                          |                                                                     |
 | `orbeon_form_data_lease`        | Holds information about active leases on form data.                             | [Lease feature](../feature/lease.md)                                |
 | `orbeon_organization`           | Holds information about organizations.                                          | [Organization-based permissions](../access-control/organization.md) |
 | `orbeon_i_current`              | Holds references to the current form data, as opposed to historical data.       |                                                                     |
 | `orbeon_i_control_text`         | Holds the values of indexed form controls for search and the Summary page.      | [Search API](../api/persistence/search.md)                          |
 | `orbeon_seq`                    | Used to generate organization IDs (except for Oracle where it is a `sequence`). | [Organization-based permissions](../access-control/organization.md) |
+
+1. The `orbeon_form_data` and `orbeon_form_data_attach` tables also hold _unpublished_ form definitions. These are form definitions which you see when you go to the Form Builder Summary page, and which you can edit with Form Builder. See also:
+    - [Terminology](/form-runner/overview/terminology.md)
+    - [Publishing](/form-builder/publishing.md)
 
 ## Sequences
 
