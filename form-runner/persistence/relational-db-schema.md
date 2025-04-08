@@ -8,22 +8,23 @@ For more about the relational database setup, see [Using Form Runner with a rela
 
 ## Tables
 
-| Table Name                      | Description                                                                | See also                                                            |
-|---------------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------|
-| `orbeon_form_definition`        | Holds published form definitions.                                          |                                                                     |
-| `orbeon_form_definition_attach` | Holds attachments related to published form definitions.                   |                                                                     |
-| `orbeon_form_data`              | Holds saved and draft form data.                                           |                                                                     |
-| `orbeon_form_data_attach`       | Holds attachments associated with submitted form data.                     |                                                                     |
-| `orbeon_form_data_lease`        | Holds information about active leases on form data.                        | [Lease feature](../feature/lease.md)                                |
-| `orbeon_organization`           | Holds information about organizations.                                     | [Organization-based permissions](../access-control/organization.md) |
-| `orbeon_i_current`              | Holds references to the current form data, as opposed to historical data.  |                                                                     |
-| `orbeon_i_control_text`         | Holds the values of indexed form controls for search and the Summary page. | [Search API](../api/persistence/search.md)                          |
+| Table Name                      | Description                                                                     | See also                                                            |
+|---------------------------------|---------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| `orbeon_form_definition`        | Holds published form definitions.                                               |                                                                     |
+| `orbeon_form_definition_attach` | Holds attachments related to published form definitions.                        |                                                                     |
+| `orbeon_form_data`              | Holds saved and draft form data.                                                |                                                                     |
+| `orbeon_form_data_attach`       | Holds attachments associated with submitted form data.                          |                                                                     |
+| `orbeon_form_data_lease`        | Holds information about active leases on form data.                             | [Lease feature](../feature/lease.md)                                |
+| `orbeon_organization`           | Holds information about organizations.                                          | [Organization-based permissions](../access-control/organization.md) |
+| `orbeon_i_current`              | Holds references to the current form data, as opposed to historical data.       |                                                                     |
+| `orbeon_i_control_text`         | Holds the values of indexed form controls for search and the Summary page.      | [Search API](../api/persistence/search.md)                          |
+| `orbeon_seq`                    | Used to generate organization IDs (except for Oracle where it is a `sequence`). | [Organization-based permissions](../access-control/organization.md) |
 
 ## Sequences
 
-| Sequence Name | Description                                                                                                  |
-|---------------|--------------------------------------------------------------------------------------------------------------|
-| `orbeon_seq`  | Used to generate organization IDs (all databases) and form data IDs (Oracle-only as of Orbeon Forms 2024.1). |
+| Sequence Name | Description                                                                |
+|---------------|----------------------------------------------------------------------------|
+| `orbeon_seq`  | Oracle database only: Used to generate organization IDs and form data IDs. |
  
 ## Current DDL
 
