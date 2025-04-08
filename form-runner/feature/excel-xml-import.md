@@ -266,7 +266,7 @@ This property allows you to forward specific URL parameters that were passed to 
 
 *NOTE: This property only applies to the `excel-named-ranges` and `xml-form-structure-and-data` formats.*
 
-You can pass a document id to the import page. This is useful if you want to propagate a document id to data review page to update or merge with an existing document in the database. This example shows how to pass the `document-id` parameter:
+You can pass a document id to the import page. This is useful if you want to propagate a document id to the data review page to update or merge with an existing document in the database. This example shows how to pass the `document-id` parameter:
 
 ```
 /fr/import/orbeon/contact?document-id=123
