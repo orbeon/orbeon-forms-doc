@@ -21,7 +21,7 @@ For more about the relational database setup, see [Using Form Runner with a rela
 | `orbeon_seq`                    | Used to generate organization IDs (except for Oracle where it is a `sequence`). | [Organization-based permissions](../access-control/organization.md) |
 
 1. The `orbeon_form_definition` and `orbeon_form_definition_attach` also hold _published_ section template libraries and their attachments if any.
-2. The `orbeon_form_data` and `orbeon_form_data_attach` tables also hold _unpublished_ form definitions, unpublished libraries, as well as form templates, and their attachments if any. These form definitions and libraries are visible when you go to the [Form Builder Summary page](/form-builder/summary-page.md), and which you can edit with Form Builder.
+2. The `orbeon_form_data` and `orbeon_form_data_attach` tables also hold _unpublished_ form definitions, unpublished libraries, as well as form templates, and their attachments if any. These form definitions, libraries, and form templates are visible when you go to the [Form Builder Summary page](/form-builder/summary-page.md). You can edit them with Form Builder.
 
 See also:
 
