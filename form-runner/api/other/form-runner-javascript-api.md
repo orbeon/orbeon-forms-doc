@@ -72,18 +72,19 @@ The `setControlValue()` function allows you to set the value of a Form Runner co
 
 ```typescript
 function setControlValue(
-    controlName: string,
-    controlValue: string,
-    
+    controlName : string,
+    controlValue: string | int,
+    index       : int[]
 ): Promise<void> | undefined
 ```
 
 [//]: # ( | number | string[] | number[])
 
-| Name             | Required | Type     | Description                         |
-|------------------|----------|----------|-------------------------------------|
-| **controlName**  | Yes      | `string` | The name of the Form Runner control |
-| **controlValue** | Yes      | `string` | The value of values to set          |
+| Name             | Required | Type                   | Description                                                                    | Since                      |
+|------------------|----------|------------------------|--------------------------------------------------------------------------------|----------------------------|
+| **controlName**  | Yes      | `string`               | The name of the Form Runner control                                            | 2023.1                     |
+| **controlValue** | Yes      | `string` \| `int`      | The value to set                                                               | 2023.1, 2023.1.1 for `int` |
+| **index**        | No       | `int[]` \| `undefined` | If specified, and the control is repeated, the 0-based position of the control | 2023.1.1                   |
 
 Here is how to set the value of a text field called `my-field` to the value "Hello!":
 
@@ -160,6 +161,18 @@ The `setControlValue()` function returns either:
 - or `undefined` if
     - the control is not found
     - the control is an XBL component which doesn't support the JavaScript lifecycle
+
+For single-selection controls, you can also pass an integer value rather than a string:
+
+```javascript
+ORBEON.fr.API.getForm().setControlValue('my-single-selection', 2)
+```
+
+If a control is repeated, use the optional `index` parameter to specify which repetition to set. The index is 0-based.
+
+```javascript
+ORBEON.fr.API.getForm().setControlValue('my-repeated-control', 'Anvil', 3)
+```
 
 ### Activating a form control
 
