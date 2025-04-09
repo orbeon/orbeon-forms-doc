@@ -70,17 +70,20 @@ ORBEON.fr.API.getFOrm().findControlsByName('street-address')
 
 The `setControlValue()` function allows you to set the value of a Form Runner control.
 
-```javascript
+```typescript
 function setControlValue(
     controlName: string,
-    controlValue: string | number | string[] | number[]
-): void
+    controlValue: string,
+    
+): Promise<void> | undefined
 ```
 
-| Name            | Required | Type                                             | Description                         |
-|-----------------|----------|--------------------------------------------------|-------------------------------------|
-| **controlName** | Yes      | `string`                                         | The name of the Form Runner control |
-| **controlValue**| Yes      | `string` or `number` or `string[]` or `number[]` | The value of values to set          |
+[//]: # ( | number | string[] | number[])
+
+| Name             | Required | Type     | Description                         |
+|------------------|----------|----------|-------------------------------------|
+| **controlName**  | Yes      | `string` | The name of the Form Runner control |
+| **controlValue** | Yes      | `string` | The value of values to set          |
 
 Here is how to set the value of a text field called `my-field` to the value "Hello!":
 
@@ -88,19 +91,25 @@ Here is how to set the value of a text field called `my-field` to the value "Hel
 ORBEON.fr.API.getForm().setControlValue('my-field', 'Hello!')
 ```
 
-For single selection controls, you pass the index of the value to select, either as a string or as a number:
+For single selection controls, you pass the index of the value to select:
 
-```javascript
-ORBEON.fr.API.getForm().setControlValue('my-single-selection', 2)
-```
+[//]: # (, either as a string or as a number:)
 
-or:
+[//]: # ()
+[//]: # (```javascript)
+
+[//]: # (ORBEON.fr.API.getForm&#40;&#41;.setControlValue&#40;'my-single-selection', 2&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (or:)
 
 ```javascript
 ORBEON.fr.API.getForm().setControlValue('my-single-selection', '2')
 ```
 
-For multiple selection controls, you pass a space-separated string of indexes:
+[//]: # (For multiple selection controls, you pass a space-separated string of indexes:)
 
 [//]: # (or an array of indexes of the values to select:)
 
@@ -143,14 +152,25 @@ The following controls are supported:
 - Date
 - Time
 
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+
+The `setControlValue()` function returns either:
+
+- a JavaScript `Promise` which resolves when the value is set on the server
+- or `undefined` if
+    - the control is not found
+    - the control is an XBL component which doesn't support the JavaScript lifecycle
+
 ### Activating a form control
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 The `activateControl()` function allows you to activate a Form Runner control. This is useful to activating buttons that are present within the form (as opposed to process buttons, which are typically placed at the bottom of the form). However, you can also activate other controls, in particular Text Fields.
 
-```javascript
-function activateControl(controlName: string): void
+```typescript
+function activateControl(
+    controlName: string
+): Promise<void>
 ```
 
 | Name            | Required | Type     | Description                         |
@@ -161,6 +181,15 @@ The following controls are supported:
 
 - Text field (as if the user presses the Return or Enter key)
 - Button
+
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+
+The `activateControl()` function returns either:
+
+- a JavaScript `Promise` which resolves when the activation has run on the server
+- or `undefined` if
+    - the control is not found
+    - the control is not a trigger or input control
 
 ### Telling whether the form data is safe
 

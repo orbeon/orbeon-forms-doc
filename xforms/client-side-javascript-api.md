@@ -104,6 +104,10 @@ As an example, consider you have the model below. It declares an instance with t
 </xh:p>
 ```
 
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+
+The `setValue()` function returns a JavaScript `Promise` which resolves when the value is set on the server.
+
 #### For forms created in Form Builder
 
 Keep in mind that, in Form Builder, if you have a field named `first-name`, the XForms id for that field will be `first-name-control`. Also, because your field is inside other containers, for instance a section, the id in the HTML for that field will have some prefix. Consequently, when using `getValue()` and `setValue()` described above, you'll want to write code along those lines:
