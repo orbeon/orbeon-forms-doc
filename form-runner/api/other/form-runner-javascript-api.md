@@ -152,7 +152,7 @@ The following controls are supported:
 - Date
 - Time
 
-[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+[\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
 
 The `setControlValue()` function returns either:
 
@@ -182,7 +182,7 @@ The following controls are supported:
 - Text field (as if the user presses the Return or Enter key)
 - Button
 
-[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+[\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
 
 The `activateControl()` function returns either:
 
