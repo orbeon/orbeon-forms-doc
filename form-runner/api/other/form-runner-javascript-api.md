@@ -92,36 +92,18 @@ Here is how to set the value of a text field called `my-field` to the value "Hel
 ORBEON.fr.API.getForm().setControlValue('my-field', 'Hello!')
 ```
 
-For single selection controls, you pass the index of the value to select:
-
-[//]: # (, either as a string or as a number:)
-
-[//]: # ()
-[//]: # (```javascript)
-
-[//]: # (ORBEON.fr.API.getForm&#40;&#41;.setControlValue&#40;'my-single-selection', 2&#41;)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (or:)
+For single selection controls, pass the index of the item to select:
 
 ```javascript
 ORBEON.fr.API.getForm().setControlValue('my-single-selection', '2')
 ```
 
-[//]: # (For multiple selection controls, you pass a space-separated string of indexes:)
+For multiple selection controls, pass a space-separated string of item indexes:
 
-[//]: # (or an array of indexes of the values to select:)
+```javascript
+ORBEON.fr.API.getForm().setControlValue('checkboxes', '0 1 3')
+```
 
-[//]: # ()
-[//]: # (```javascript)
-
-[//]: # (ORBEON.fr.API.getForm&#40;&#41;.setControlValue&#40;'my-multiple-selection', '2 7 8'&#41;)
-
-[//]: # (```)
-
-[//]: # ()
 [//]: # (or:)
 
 [//]: # ()
