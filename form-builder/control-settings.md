@@ -48,9 +48,7 @@ The following options are available:
 It is possible to restrict the "Show on Summary page" and "Allow bulk edit" options to one or more specific roles (i.e. group of users). When multiple roles are specified, the logic that applies can be chosen as well. If "All" is selected, then all specified roles must be present. If "Any" is selected, just one of the specified roles must be present.
 
 <figure>
-    <picture>
-        <img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="829">
-    </picture>
+    <img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="414">
     <figcaption>Role restriction</figcaption>
 </figure>
 
@@ -61,9 +59,7 @@ It is possible to restrict the "Show on Summary page" and "Allow bulk edit" opti
 By default, bulk edition of form data on the Summary Page will simply save the updated form data. You can also specify a custom process to run by selecting "Run process" instead of "Save data".
 
 <figure>
-    <picture>
-        <img alt="Bulk process" src="images/control-settings-bulk-process.png" width="50%">
-    </picture>
+    <img alt="Bulk process" src="images/control-settings-bulk-process.png" width="417">
     <figcaption>Bulk process</figcaption>
 </figure>
 
@@ -223,7 +219,10 @@ You can achieve this with the "Automatic PDF" options in the "Control Settings" 
 - __Show the selected value only__: the label for the selected value shows
 - __Show all values as radio buttons__: all possible values show as radio buttons and the selected value, if any, shows selected 
 
-![Automatic PDF options](/form-builder/images/control-settings-pdf-options.png)
+<figure>
+    <img alt="Automatic PDF options" src="images/control-settings-pdf-options.png" width="230">
+    <figcaption>Automatic PDF options</figcaption>
+</figure>
 
 The supported properties are:
 
