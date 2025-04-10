@@ -158,6 +158,39 @@ For single-selection controls, you can also pass an integer value rather than a 
 ORBEON.fr.API.getForm().setControlValue('my-single-selection', 2)
 ```
 
+### Getting a control's value
+
+[\[SINCE Orbeon Forms 2024.1.2\]](/release-notes/orbeon-forms-2024.1.2.md)
+
+The `getControlValue()` function allows you to get the value of a Form Runner control.
+
+```typescript
+function getControlValue(
+    controlName : string,
+    index       : int[]
+): string | undefined
+```
+
+[//]: # ( | number | string[] | number[])
+
+| Name             | Required | Type                   | Description                                                                    | Since    |
+|------------------|----------|------------------------|--------------------------------------------------------------------------------|----------|
+| **controlName**  | Yes      | `string`               | The name of the Form Runner control                                            | 2024.1.2 |
+| **index**        | No       | `int[]` \| `undefined` | If specified, and the control is repeated, the 0-based position of the control | 2024.1.2 |
+
+Here is how to get the value of a text field called `my-field`:
+
+```javascript
+ORBEON.fr.API.getForm().getControlValue('my-field')
+```
+
+The `getControlValue()` function returns either:
+
+- a `string` with the value of the control
+- or `undefined` if
+    - the control is not found
+    - the control is an XBL component which doesn't support the JavaScript lifecycle
+
 ### Activating a form control
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
