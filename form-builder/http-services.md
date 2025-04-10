@@ -8,7 +8,7 @@ To create a new HTTP service, click the Add icon under "HTTP Services". The HTTP
 
 The following screenshot shows an example of filled-out service:
 
-![Definition tab](images/service-definition.png)
+<img src="images/service-definition.png" alt="Definition tab" width="561">
 
 ## Service definition
 
@@ -105,7 +105,7 @@ The "Advanced" tab allows you to set advanced service parameters:
 - **SOAP Action**
     - If selected, the value of the `SOAPAction` header.
 
-![Advanced tab](images/service-definition-advanced.png)
+<img src="images/service-definition-advanced.png" alt="Advanced tab" width="562">
 
 ## Testing a service
 
@@ -121,9 +121,9 @@ The "Test" button allows you to test the service. Before doing this, you have to
 
 This helps you troubleshoot the service call.
 
-![Test Results tab with response headers](images/service-definition-test.png)
+<img src="images/service-definition-test.png" alt="Test Results tab with response headers" width="562">
 
-![Test Results tab with response body](images/service-definition-test-original-response-body.png)
+<img src="images/service-definition-test-original-response-body.png" alt="Test Results tab with response body" width="562">
 
 ### XML view of JSON responses
 
@@ -135,7 +135,7 @@ This is useful when you want to use XPath expressions to access a JSON response,
 
 See also [JSON support](/xforms/submission-json.md).
 
-![Test Results tab with XML response body](images/service-definition-test-xml-response-body.png) 
+<img src="images/service-definition-test-xml-response-body.png" alt="Test Results tab with XML response body" width="562">
 
 ## Saving the service
 
