@@ -8,7 +8,10 @@ To create a new HTTP service, click the Add icon under "HTTP Services". The HTTP
 
 The following screenshot shows an example of filled-out service:
 
-<img src="images/service-definition.png" alt="Definition tab" width="561">
+<figure>
+    <img src="images/service-definition.png" alt="Definition tab" width="561">
+    <figcaption>Definition tab</figcaption>
+</figure>
 
 ## Service definition
 
@@ -105,7 +108,10 @@ The "Advanced" tab allows you to set advanced service parameters:
 - **SOAP Action**
     - If selected, the value of the `SOAPAction` header.
 
-<img src="images/service-definition-advanced.png" alt="Advanced tab" width="562">
+<figure>
+    <img src="images/service-definition-advanced.png" alt="Advanced tab" width="562">
+    <figcaption>Advanced tab</figcaption>
+</figure>
 
 ## Testing a service
 
@@ -121,9 +127,15 @@ The "Test" button allows you to test the service. Before doing this, you have to
 
 This helps you troubleshoot the service call.
 
-<img src="images/service-definition-test.png" alt="Test Results tab with response headers" width="562">
+<figure>
+    <img src="images/service-definition-test.png" alt="Test Results tab with response headers" width="562">
+    <figcaption>Test Results tab with response headers</figcaption>
+</figure>
 
-<img src="images/service-definition-test-original-response-body.png" alt="Test Results tab with response body" width="562">
+<figure>
+    <img src="images/service-definition-test-original-response-body.png" alt="Test Results tab with response body" width="562">
+    <figcaption>Test Results tab with response body</figcaption>
+</figure>
 
 ### XML view of JSON responses
 
@@ -135,7 +147,10 @@ This is useful when you want to use XPath expressions to access a JSON response,
 
 See also [JSON support](/xforms/submission-json.md).
 
-<img src="images/service-definition-test-xml-response-body.png" alt="Test Results tab with XML response body" width="562">
+<figure>
+    <img src="images/service-definition-test-xml-response-body.png" alt="Test Results tab with XML response body" width="562">
+    <figcaption>Test Results tab with XML response body</figcaption>
+</figure>
 
 ## Saving the service
 
