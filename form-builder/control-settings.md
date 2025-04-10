@@ -49,7 +49,7 @@ It is possible to restrict the "Show on Summary page" and "Allow bulk edit" opti
 
 <figure>
     <picture>
-        <img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="50%">
+        <img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="829">
     </picture>
     <figcaption>Role restriction</figcaption>
 </figure>
