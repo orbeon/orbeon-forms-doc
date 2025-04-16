@@ -6,7 +6,7 @@ By default, with Form Runner all the form sections appear in the same page, on t
 
 With the wizard view, top-level sections instead appear in a table of contents area to the left, and only a single top-level section is shown at any given time in a separate wizard "page":
 
-![Form Runner Wizard](../images/wizard.png)
+![Form Runner Wizard](../images/wizard.webp)
 
 You can navigate between pages by clicking on a title in the table of contents, or you can use the navigation arrows. You can also use "Prev" and "Next" buttons when configured.
 
