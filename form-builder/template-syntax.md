@@ -31,7 +31,10 @@ You can add new parameters with the "+" icon and remove them with the "-" icon.
 
 The following options are available for each template parameter:
 
-<img alt="Template parameter options" src="images/template-parameter-options.png">
+<figure>
+    <img alt="Template parameter options" src="images/template-parameter-options.png" width="148">
+    <figcaption>Template parameter options</figcaption>
+</figure>
 
 - Parameter name: this must be unique among parameters.
 - Parameter value:
@@ -70,11 +73,17 @@ A template may omit references to any or all template parameters.
 
 Links are intended to point to some Orbeon Forms pages or resources (namely, the PDF file). The end user might see such links in explanatory text and email bodies, in particular.
 
-<img alt="Links in an email template" src="images/template-parameter-links-example.png">
+<figure>
+    <img alt="Links in an email template" src="images/template-parameter-links-example.png" width="802">
+    <figcaption>Links in an email template</figcaption>
+</figure>
 
 To insert the URL, you use the template syntax within the "URL" field of the link dialog:
 
-<img alt="Editing a link URL" src="images/template-parameter-link-editor.png">
+<figure>
+    <img alt="Editing a link URL" src="images/template-parameter-link-editor.png" width="482">
+    <figcaption>Editing a link URL</figcaption>
+</figure>
 
 Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty, and can set it to an absolute URL as follows:
 
@@ -98,15 +107,24 @@ When the form definition has more than one language:
 
 In the following example of a dynamic control label, the `$name` variable refers to the subsequent `name` parameter. The Template Parameters section declares that `name` parameter to refer to the `name` control.
 
-<img alt="Dynamic label configuration" src="images/control-settings-label-dynamic.png">
+<figure>
+    <img alt="Dynamic label configuration" src="images/control-settings-label-dynamic.png" width="942">
+    <figcaption>Dynamic label configuration</figcaption>
+</figure>
 
 This is how this would appear in the running form:
 
-<img alt="Dynamic label at runtime" src="images/control-settings-label-dynamic-runtime.png">
+<figure>
+    <img alt="Dynamic label at runtime" src="images/control-settings-label-dynamic-runtime.png" width="362">
+    <figcaption>Dynamic label at runtime</figcaption>
+</figure>
 
 In the following example of dynamic email subject, the `$title` and `$author` variables refer also to the subsequent parameters.
 
-<img alt="Email Subject" src="images/email-settings-subject.png">
+<figure>
+    <img alt="Email Subject" src="images/email-settings-subject.png" width="802">
+    <figcaption>Email Subject</figcaption>
+</figure>
 
 The text of the template is localized as usual when the form definition has more than one language.
 
