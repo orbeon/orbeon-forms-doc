@@ -29,9 +29,22 @@ A load balancer is required. It is in charge of proxying client requests to spec
 
 ## Configuration
 
-### Orbeon Forms configuration
+### Which configuration to use
 
-#### Properties
+When to use the Ehcache configuration:
+
+- Ehcache is better suited for traditional on-premises deployments where servers are on the same network and can use multicast for automatic peer discovery.
+- Your servers can communicate via multicast (IP multicast address and port).
+- You are using version of Orbeon Forms before 2024.1.2.
+
+When to use the Redis configuration:
+
+- You're deploying in cloud environments where multicast is typically not available.
+- You have Redis available as a managed service (common in cloud platforms).
+- You need a simpler configuration with fewer components to manage.
+- You're using Orbeon Forms 2024.1.2 or newer.
+
+### Ehcache configuration
 
 Orbeon Forms has a single property enabling replication. By default, it is set to `false`, because there is a cost to serializing the state of forms after each update in memory. 
 
@@ -41,28 +54,6 @@ Orbeon Forms has a single property enabling replication. By default, it is set t
     name="oxf.xforms.replication"
     value="true"/>
 ```
-
-In addition, you might need to set the following property to point to the local Orbeon Forms instance without going through the load balancer:
-
-```xml
-<property
-    as="xs:anyURI"
-    name="oxf.url-rewriting.service.base-uri"
-    value="http://localhost:8080/orbeon"/>
-```
-
-#### web.xml
-
-The application's `web.xml` must contain:
-
-```xml
-<distributable/> 
-```
-
-In addition, the `ReplicationServletContextListener` must be enabled. This is the case by default in the `web.xml`
-that ships with Orbeon Forms.
-
-#### Ehcache
 
 The Orbeon Forms `ehcache.xml` must be modified to include replication settings, which are turned off by default. This is similar to Tomcat session replication. To modify this file, extract it from the `WEB-INF/lib/orbeon-core.jar`, and copy it in the `WEB-INF/resources/config` directory. You can then modify the `ehcache.xml` in that directory, and your updated version will take precedence over the built-in version of that file found inside `orbeon-core.jar`.
 
@@ -179,8 +170,6 @@ When using a firewall:
     />
     ```
 
-### Servlet container configuration
-
 The servlet container must be configured to replicate the session information.
 
 With Tomcat, this is done in `server.xml` within the `<Engine>` element:
@@ -234,9 +223,59 @@ In that configuration, the following can be changed:
 
 For details about the Tomcat configuration, see [Clustering/Session Replication HOW-TO](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html).
 
-### Load balancer configuration
 
-With HAProxy, a simple configuration looks like this:
+### Redis configuration
+
+[SINCE Orbeon Forms 2024.1.2]
+
+This setup is best for cloud deployments where instances of Orbeon Forms typically can't use multicast for discovery, and Redis is provided as a service.
+
+1. Extract `orbeon-redis-jars.zip` which is part of the Orbeon Forms distribution.
+2. Copy the jar files it contains to Tomcat's `lib` directory.
+3. Create `redisson-jcache.yaml` in Tomcat's `conf` directory, changing `redis.example.com` to point to your Redis server:
+
+    ```yaml
+    codec: !<org.redisson.codec.FuryCodec> {}
+    singleServerConfig:
+        address: "redis://redis.example.com:6379"
+    ```
+
+4. In `properties-local.xml`, add the following (modifying the path to `redisson-jcache.yaml` as needed):
+
+    ```xml
+    <property as="xs:string"  name="oxf.xforms.store.provider"                          value="jcache"/>
+    <property as="xs:string"  name="oxf.xforms.store.jcache.classname"                  value="org.redisson.jcache.JCachingProvider"/>
+    <property as="xs:string"  name="oxf.xforms.store.jcache.uri"                        value="file:/usr/local/tomcat/conf/redisson-jcache.yaml"/>
+    ```
+
+5. Inside the `<Context>` for Orbeon Forms (typically found in the Tomcat `server.xml` or an `orbeon.xml`), add:
+
+    ```xml
+    <Manager
+        className="org.redisson.tomcat.RedissonSessionManager"
+        configPath="${catalina.base}/conf/redisson-jcache.yaml"
+        readMode="REDIS" updateMode="DEFAULT"
+        broadcastSessionUpdates="false"
+        broadcastSessionEvents="false"
+        keyPrefix=""/>
+    <Valve
+        className="org.apache.catalina.authenticator.BasicAuthenticator"
+        changeSessionIdOnAuthentication="false"/>
+    ```
+
+## Other considerations
+
+### Individual server load
+
+Consider a scenario where you have two servers with replication enabled, and one of them fails. This means that users from the failed server are redirected by the load balancer to the server which is still working. If, at the time of failure, both servers were nearing their full capacity, then suddenly the only remaining server will have to handle all the load.
+
+This means that the load balanced servers should not be allowed to reach full capacity so that, in case of failure of a single server, the remaining server can handle all the load. Theoretically, this means that each server, in normal use, should be at under 50 % of total capacity.
+
+Using more than 2 replicated servers allows using more of the available capacity of all servers in the case of a single server failure.     
+
+### HAProxy configuration
+
+If using HAProxy, a simple configuration looks like this:
 
 ```
 global
@@ -273,16 +312,6 @@ haproxy -db -f haproxy.conf
 ```
 
 For details about the HAProxy configuration, see the [HAProxy Configuration Manual](https://cbonte.github.io/haproxy-dconv/1.7/configuration.html).
-
-## Other considerations
-
-### Individual server load
-
-Consider a scenario where you have two servers with replication enabled, and one of them fails. This means that users from the failed server are redirected by the load balancer to the server which is still working. If, at the time of failure, both servers were nearing their full capacity, then suddenly the only remaining server will have to handle all the load.
-
-This means that the load balanced servers should not be allowed to reach full capacity so that, in case of failure of a single server, the remaining server can handle all the load. Theoretically, this means that each server, in normal use, should be at under 50 % of total capacity.
-
-Using more than 2 replicated servers allows using more of the available capacity of all servers in the case of a single server failure.     
 
 ## Limitations
 
