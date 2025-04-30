@@ -210,6 +210,7 @@ for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
   - SINCE Orbeon Forms 2017.1
   - applies to Single and Multiple File Attachments controls only
   - the constraint fails if the attachment mediatype doest not match one of the included mediatypes or mediatype wildcards
+  - when listing multiple media types, separate them by a space
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
 
