@@ -175,16 +175,21 @@ Run the following DDL to create or update your Orbeon database, and note that if
 
 For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
 
-### DB2 database setup
+### Db2 database setup
 
 [SINCE Orbeon Forms 4.3]
 
 Run the following DDL to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
 
+The DDL includes indices since Orbeon Forms 2024.1. Those indices typically cannot be added if the tables are created in the default tablespace, so the 2024.1 DDL includes the declaration for a new tablespace with 32K page size. No upgrade script is provided, as tables need to be moved or recreated in the new tablespace. You may use DB2's `SYSPROC.ADMIN_MOVE_TABLE` stored procedure to help with this migration.
+
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
-| 2022.1 and newer        | [db2-2019_1.sql]           | [db2-2017_2-to-2019_1.sql]          |
+| 2024.1 and newer        | [db2-2024_1.sql]           | See above                           |
+| 2022.1 to 2023.1        | [db2-2019_1.sql]           | [db2-2017_2-to-2019_1.sql]          |
 
+[db2-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/db2-2024_1.sql
+[db2-2019_1-to-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/db2-2019_1-to-2024_1.sql
 [db2-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/db2-2019_1.sql
 [db2-2017_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/db2-2017_2-to-2019_1.sql
 
@@ -194,7 +199,7 @@ For older DDL see [Relational database schema](relational-db-schema.md#historica
 
 ### Tomcat datasource configuration
 
-When using Tomcat, you setup a JDBC data source for your database instance either:
+When using Tomcat, you set up a JDBC data source for your database instance either:
 
 - in `server.xml` (not recommended by the Tomcat documentation because it is less flexible)
 - or in a separate context XML file (such as `orbeon.xml`) for the web app (recommended).
