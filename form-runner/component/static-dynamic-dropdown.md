@@ -149,7 +149,7 @@ When using the options "With Search" and "Service performs search", the label as
 
 However, when the "Service performs search" option is not selected, by default the label is not stored.
 
-The "Store label" option allows you to store the label also when the "Service performs search" option is not selected. This is useful if the service cannot run. For example, a user might be filling the form in a first environment and another user viewing it in another. In that case, it is useful to make the field readonly as well.
+The "Store label" option allows you to store the label also when the "Service performs search" option is not selected. This is useful if the service cannot run. For example, a user might be filling the form in a first environment and another user viewing it in another. If this option is not selected, the field will not be able to show a label associated with the selected value. Enabling this option allows the label to show even if the service is not running. In that case, it is useful to make the field readonly as well.
 
 The following table summarizes the behavior of the options:
 
@@ -159,6 +159,8 @@ The following table summarizes the behavior of the options:
 | Selected               | Selected                           | N/A                    | Yes              |
 | Selected               | Deselected                         | Deselected             | No               |
 | Selected               | Deselected                         | Selected               | Yes              |
+
+_NOTE: In a multilingual form, only the label in the current language, as returned by the service, will be stored._  
 
 ### Minimum input length
 
