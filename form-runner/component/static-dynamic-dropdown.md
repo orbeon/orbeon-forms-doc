@@ -151,6 +151,11 @@ However, when the "Service performs search" option is not selected, by default t
 
 The "Store label" option allows you to store the label also when the "Service performs search" option is not selected. This is useful if the service cannot run. For example, a user might be filling the form in a first environment and another user viewing it in another. If this option is not selected, the field will not be able to show a label associated with the selected value. Enabling this option allows the label to show even if the service is not running. In that case, it is useful to make the field readonly as well.
 
+<figure>
+    <img src="images/dynamic-data-dropdown-store-label.png" width="108">
+    <figcaption>Store label option in the Control Settings dialog</figcaption>
+</figure>
+
 The following table summarizes the behavior of the options:
 
 | **With Search option** | **Service performs search option** | **Store label option** | **Label stored** |
