@@ -153,7 +153,7 @@ By default, the `output-format` parameter is not set, and the global `oxf.xforms
 
 ### Native time picker
 
-[SINCE Orbeon Forms 2024.1.1]
+[\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
 
 On iOS, the native iOS time picker is used by default, unless users enabled Request Desktop Website in Safari, in which case they will see the same behavior as they would on the desktop. 
 
