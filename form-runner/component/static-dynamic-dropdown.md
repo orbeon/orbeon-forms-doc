@@ -141,6 +141,25 @@ In certain scenarios, the list of choices offered by the dropdown may depend on 
     <figcaption>Option in the Control Settings dialog</figcaption>
 </figure>
 
+### Store label
+
+[\[SINCE Orbeon Forms 2024.1.2\]](/release-notes/orbeon-forms-2024.1.2.md)
+
+When using the options "With Search" and "Service performs search", the label associated with the selected value is automatically stored in an attribute in the data.
+
+However, when the "Service performs search" option is not selected, by default the label is not stored.
+
+The "Store label" option allows you to store the label also when the "Service performs search" option is not selected. This is useful if the service cannot run. For example, a user might be filling the form in a first environment and another user viewing it in another. In that case, it is useful to make the field readonly as well.
+
+The following table summarizes the behavior of the options:
+
+| **With Search option** | **Service performs search option** | **Store label option** | **Label stored** |
+|------------------------|------------------------------------|------------------------|------------------|
+| Deselected             | N/A                                | N/A                    | No               |
+| Selected               | Selected                           | N/A                    | Yes              |
+| Selected               | Deselected                         | Deselected             | No               |
+| Selected               | Deselected                         | Selected               | Yes              |
+
 ### Minimum input length
 
 You can specify a minimum input length, in characters, before a dropdown with search starts displaying choices. This is useful if you have a large number of choices, and the subset of choices returned is unlikely to be useful if users don't type at least a few characters. This is configured by setting the following property.
