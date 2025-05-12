@@ -226,7 +226,7 @@ For details about the Tomcat configuration, see [Clustering/Session Replication 
 
 ### Redis configuration
 
-[SINCE Orbeon Forms 2024.1.2]
+[\[SINCE Orbeon Forms 2024.1.2\]](/release-notes/orbeon-forms-2024.1.2.md)
 
 This setup is best for cloud deployments where instances of Orbeon Forms typically can't use multicast for discovery, and Redis is provided as a service.
 
