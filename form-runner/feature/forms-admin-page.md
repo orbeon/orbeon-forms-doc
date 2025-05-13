@@ -244,13 +244,24 @@ To re-encrypt all the data for certain forms, from the Forms Admin page:
 	- "Re-encrypting 392/2401," while the re-encryption is in progress, here assuming it has already re-encrypted 391 documents out of 2401 it needs to re-encrypt.
 	- "Re-encryption finished," when the re-encryption is done for that form.
 
+### Configuration
+
+You can configure the batch size used during re-encryption by setting the `oxf.fr.persistence.*.max-batch-size` property. This property determines how many records are processed before committing changes to the database. The default value is 1000. Using an appropriate batch size helps balance memory usage and database performance during the re-encryption process. For example, to set a batch size of 500 for the MySQL provider:
+
+```xml
+<property 
+    as="xs:integer" 
+    name="oxf.fr.persistence.mysql.max-batch-size" 
+    value="500"/>
+```
+
 ## Reloading resources
 
 [SINCE Orbeon Forms 2019.2]
 
 Because Orbeon Forms caches form resources, if you override resources with the [`oxf.fr.resource` properties](/configuration/properties/form-runner.md#overriding-resources), those resources are not updated until the server restarts.    
 
-Using the "Reload resources" action will invalidate the cached resources of all the selected forms immediately. The next time the form is loaded, it will use up to date resources including those overridden in properties. 
+Using the "Reload resources" action will invalidate the cached resources of all the selected forms immediately. The next time the form is loaded, it will use up-to-date resources including those overridden in properties. 
 
 ## Reindexing
 
