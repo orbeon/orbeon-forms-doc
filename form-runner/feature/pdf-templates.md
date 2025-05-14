@@ -43,7 +43,7 @@ In order to create a template, you need Acrobat Professional or a similar tool t
 
 *NOTE: For languages like French, make sure that fields in the form have an Arial font, not Helvetica. Not using Arial can cause issue with accents.*
 
-![Example of form fields in Acrobat Professional](images/pdf-template.png)
+![Example of form fields in Acrobat Professional](/form-builder/images/pdf-template.png)
 
 ### Naming fields
 
@@ -73,7 +73,17 @@ or, for a control in a nested repeated section or grid:
 
 etc.
 
-![Name of the PDF field](images/control-settings.png)
+![Name of the PDF field](/form-builder/images/control-settings.png)
+
+[\[SINCE Orbeon Forms 2024.1.2\]](/release-notes/orbeon-forms-2024.1.2.md)
+
+Orbeon Forms allows you to set a custom PDF field name. If there is at least one PDF template attached to the form, you can pick a field name from the list.
+
+![Name of the PDF field](/form-builder/images/control-settings-pdf-field-name-from-list.png)
+
+ In any case, you can also enter you own custom field name.
+
+![Name of the PDF field](/form-builder/images/control-settings-pdf-field-name-from-field.png)
 
 ## Controls
 
