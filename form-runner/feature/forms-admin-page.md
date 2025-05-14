@@ -246,7 +246,7 @@ To re-encrypt all the data for certain forms, from the Forms Admin page:
 
 ### Configuration
 
-You can configure the batch size used during re-encryption by setting the `oxf.fr.persistence.*.max-batch-size` property. This property determines how many records are processed before committing changes to the database. The default value is 1000. Using an appropriate batch size helps balance memory usage and database performance during the re-encryption process. For example, to set a batch size of 500 for the MySQL provider:
+[SINCE Orbeon Forms 2025.1] You can configure the batch size used during re-encryption by setting the `oxf.fr.persistence.*.max-batch-size` property. This property determines how many records are processed before committing changes to the database. The default value is 1000. Using an appropriate batch size helps balance memory usage and database performance during the re-encryption process. For example, to set a batch size of 500 for the MySQL provider:
 
 ```xml
 <property 
