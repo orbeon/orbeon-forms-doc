@@ -73,17 +73,17 @@ or, for a control in a nested repeated section or grid:
 
 etc.
 
-![Name of the PDF field](/form-builder/images/control-settings.png)
+![Name of the PDF field in the Control Settings dialog](/form-builder/images/control-settings.png)
 
 [\[SINCE Orbeon Forms 2024.1.2\]](/release-notes/orbeon-forms-2024.1.2.md)
 
 Orbeon Forms allows you to set a custom PDF field name. If there is at least one PDF template attached to the form, you can pick a field name from the list.
 
-![Name of the PDF field](/form-builder/images/control-settings-pdf-field-name-from-list.png)
+![Custom PDF field name from the dropdown](/form-builder/images/control-settings-pdf-field-name-from-list.png)
 
- In any case, you can also enter you own custom field name.
+In any case, you can also enter you own custom field name.
 
-![Name of the PDF field](/form-builder/images/control-settings-pdf-field-name-from-field.png)
+![Custom PDF field name](/form-builder/images/control-settings-pdf-field-name-from-field.png)
 
 ## Controls
 
