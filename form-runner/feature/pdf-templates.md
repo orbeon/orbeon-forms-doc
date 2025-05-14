@@ -79,11 +79,21 @@ etc.
 
 Orbeon Forms allows you to set a custom PDF field name. If there is at least one PDF template attached to the form, you can pick a field name from the list.
 
-![Custom PDF field name from the dropdown](/form-builder/images/control-settings-pdf-field-name-from-list.png)
+<figure>
+    <picture>
+        <img src="/form-builder/images/control-settings-pdf-field-name-from-list.png" width="481">
+    </picture>
+    <figcaption>Custom PDF field name from the dropdown</figcaption>
+</figure>
 
 In any case, you can also enter you own custom field name.
 
-![Custom PDF field name](/form-builder/images/control-settings-pdf-field-name-from-field.png)
+<figure>
+    <picture>
+        <img src="/form-builder/images/control-settings-pdf-field-name-from-field.png" width="481">
+    </picture>
+    <figcaption>Custom PDF field name</figcaption>
+</figure>
 
 ## Controls
 
