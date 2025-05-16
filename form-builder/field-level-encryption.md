@@ -40,7 +40,7 @@ The field encryption password must remain stable to ensure that existing encrypt
 2. Set `oxf.fr.field-encryption.password.read-fallback` to the current value of `oxf.fr.field-encryption.password`.  
 3. Set `oxf.fr.field-encryption.password` to the new password.  
 4. Go to the Forms Admin page and click "Re-encrypt" for the forms containing encrypted fields.  
-5. After re-encryption is complete, the data will be encrypted with the new password, so you can remove the `oxf.fr.field-encryption.password.read-fallback` property.  
+5. Once re-encryption is complete, remove the `oxf.fr.field-encryption.password.read-fallback` property, as the data is now encrypted with the new password.  
 6. Open existing data that contains encrypted fields to verify that you can read the data with the new password.
 
 ```xml
