@@ -15,7 +15,10 @@ Combinations of static vs. dynamic, with vs. without search:
 
 ### Static vs. Dynamic
 
-In the Form Builder Toolbox you'll find 2 dropdown components, as shown in the screenshot below. The *Static Dropdown* is for cases when you, as a form author, want to provide, ahead of time, in Form Builder, the list of all the different choices users will be able to choose from. This is in contrast with the *Dynamic Dropdown* where the list of choices will be loaded at runtime from a service you provide.
+In the Form Builder Toolbox you'll find two dropdown components, as shown in the screenshot below.
+
+- The *Static Dropdown* (or simply *Dropdown*, depending on the Orbeon Forms version) is for cases when the form author wants to provide, ahead of time, the list of all the different choices users will be able to choose from. 
+- The *Dynamic Dropdown* where the list of choices will be loaded at runtime from a service you provide.
 
 Typically, you'll want to use the Static Dropdown for cases where the number of choices is limited, and doesn't change much over time, and the Dynamic Dropdown for cases where you have a long list of choices and/or those choices can change over time.
 
