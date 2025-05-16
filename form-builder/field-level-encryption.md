@@ -19,7 +19,7 @@ In Form Builder, to mark a field for encryption, open the "Control Settings" dia
 
 ### Setting the encryption password 
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) Set the `oxf.fr.field-encryption.password` property to the encryption password to be used for field-level encryption. In earlier versions, the general `oxf.crypto.password` property was used instead.
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) Set the `oxf.fr.field-encryption.password` property to the encryption password to be used for field-level encryption.
 
 ```xml
 <property
@@ -32,8 +32,6 @@ In Form Builder, to mark a field for encryption, open the "Control Settings" dia
 But keep in mind that `oxf.fr.field-encryption.password` needs to remain stable so that existing encrypted value can be read back. If that password is changed or lost, the existing data will not be readable anymore.
 {% endhint %}
 
-If you are upgrading from an earlier version of Orbeon Forms to version 2023.1 or newer, make sure to set `oxf.fr.field-encryption.password` to the same value as `oxf.crypto.password` used previously. If you fail to do this, Orbeon Forms will report an error when you try to read or write encrypted data. Once you have set `oxf.fr.field-encryption.password`, we recommend that you can change `oxf.crypto.password` to a different value. It is generally safe to change `oxf.crypto.password`, even regularly, as this is not used to encrypt data at rest.
-
 ### Changing the encryption password 
  
 [SINCE Orbeon Forms 2025.1] You can change the field encryption password using the following procedure:
@@ -42,6 +40,23 @@ If you are upgrading from an earlier version of Orbeon Forms to version 2023.1 o
 2. Set `oxf.fr.field-encryption.password` to the new password.
 3. Go to the Forms Admin page and click on "Re-encrypt" for the forms containing encrypted fields.
 4. After re-encryption completes, the data is encrypted with the new password, and you can remove the `oxf.fr.field-encryption.password.read-fallback` property.
+
+```xml
+<property
+	as="xs:string"
+	name="oxf.fr.field-encryption.password"
+	value="NEW PASSWORD"/>
+<property
+	as="xs:string"
+	name="oxf.fr.field-encryption.password.read-fallback"
+	value="OLD PASSWORD"/>
+```
+
+### Upgrading from Orbeon Forms 2022.1 or older
+
+Before Orbeon Forms 2023.1, the general `oxf.crypto.password` property was used instead of `oxf.fr.field-encryption.password`. If you are upgrading from an earlier version of Orbeon Forms to version 2023.1 or newer, make sure to set `oxf.fr.field-encryption.password` to the same value as `oxf.crypto.password` used previously. If you fail to do this, Orbeon Forms will report an error when you try to read or write encrypted data.
+
+Once you have set `oxf.fr.field-encryption.password`, we recommend that you can change `oxf.crypto.password` to a different value. It is generally safe to change `oxf.crypto.password`, even regularly, as this is not used to encrypt data at rest.
 
 ## When encryption happens
 
