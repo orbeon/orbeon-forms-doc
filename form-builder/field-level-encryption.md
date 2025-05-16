@@ -64,7 +64,10 @@ Once you have set `oxf.fr.field-encryption.password`, we recommend changing `oxf
 
 When storing form data, encryption is done before it is sent to the implementation of persistence API. When retrieving form data, decryption is done after it is received from the implementation of the persistence API. This means that implementations of the persistence API don't need to worry about encrypting or decrypting data when storing or reading form data. Also, it means that values of fields marked for encryption will be encrypted on the wire on the way to and from your database, further increasing the security of your solution.
 
-![Data encryption in Form Runner, before it reaches the implementation of the persistence API](images/field-level-encryption-when.png)
+<figure>
+    <img alt="Data encryption is done before it reaches the implementation of the persistence API" src="images/field-level-encryption-when.png" width="520">
+    <figcaption>Data encryption is done before it reaches the implementation of the persistence API</figcaption>
+</figure>
 
 ## Making changes to what needs to be encrypted
 
