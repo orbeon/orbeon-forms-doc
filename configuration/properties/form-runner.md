@@ -382,9 +382,20 @@ A value of `false` can be more efficient with slower browsers or large forms.
 
 ### Grid markup
 
-At runtime, grids in your forms are rendered using HTML tables, with elements such as `table`, `tr`, and `td`, this instead of using the more modern [CSS grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) (with `div` elements). This is because older browsers, in particular IE11, only provides limited support for CSS grids.
+#### Current behavior (Orbeon Forms 2022.1 and later)
 
-[SINCE Orbeon Forms 2020.1.7 and 2021.1.1] As support for IE11 will be dropped in future versions of Orbeon Forms, we anticipate that Orbeon Forms will by default use the CSS grids layout instead of HTML tables. You can already make this choice today by adding the following property:
+By default, grids in your forms are rendered using the modern [CSS grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) with `div` elements. This provides better compatibility with modern browsers and improved layout capabilities. If your custom CSS relies on the older HTML table-based structure (with `table`, `tr`, and `td` elements), you can revert to the previous behavior by setting the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.grid.markup.*.*"
+    value="html-table"/>
+```
+
+#### Older versions (before Orbeon Forms 2022.1)
+
+Before Orbeon Forms 2022.1, grids were rendered using HTML tables by default. This was because older browsers, in particular IE11, provided only limited support for CSS grids. Starting with Orbeon Forms 2020.1.7 and 2021.1.1, anticipating the drop of IE11 support, you could opt-in to use CSS grid layout by setting the following property. For more details on grid rendering in different versions, see the [Grids CSS documentation](/form-runner/styling/grids.md).
 
 ```xml
 <property
