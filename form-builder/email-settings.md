@@ -1,4 +1,4 @@
-# Email settings
+# Email Settings dialog
 
 ## Availability
 

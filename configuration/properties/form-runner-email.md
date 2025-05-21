@@ -1,4 +1,4 @@
-# Email configuration properties
+# Email properties
 
 ## Connection to the SMTP server
 
