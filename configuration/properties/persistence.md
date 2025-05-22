@@ -278,8 +278,6 @@ Each provider may have specific configuration properties. For the latest setting
 
 By default, attachments are stored in the database. Alternatively, you can configure Form Runner to store attachments in the filesystem ([\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)) or S3 ([SINCE Orbeon Forms 2025.1]). This is useful for larger attachments, for example.
 
-### Filesystem
-
 To store attachments in the filesystem, you can do so globally by setting the following property:
 
 ```xml
@@ -297,6 +295,8 @@ To store attachments in S3, use the `s3` value:
     name="oxf.fr.persistence.provider.*.*.*.attachments"
     value="s3"/>
 ```
+
+### Filesystem
 
 For filesystem storage, the base path where attachments are stored is configured with:
 
