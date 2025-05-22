@@ -345,7 +345,7 @@ For an empty base path, it would be stored at the following location:
 
 `s3-bucket/acme/sales/data/194714ff845faf31d08f745ca62cb0c622788aae/1/928cf991678ea0449bf0988dce956b4a88eb34c8.bin`
 
-#### Multiple attachment providers of the same type
+### Multiple attachment providers of the same type
 
 Multiple filesystem and S3 attachment providers can be configured, following the same principles as described [above](#multiple-databases-of-the-same-type)
 
@@ -370,7 +370,7 @@ For example, if you need to store attachments in two different filesystem paths 
 
 Similarly, you can configure multiple S3 attachment providers.
 
-#### Dynamic base path configuration
+### Dynamic base path configuration
 
 In addition to static paths, you can also use an [AVT](/xforms/attribute-value-templates.md) to dynamically configure the base path. For instance, the following would use a base path specified by an environment variable:
 
