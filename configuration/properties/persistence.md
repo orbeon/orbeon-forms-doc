@@ -274,11 +274,13 @@ Add:
 Each provider may have specific configuration properties. For the latest settings, see
 [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml#L17).
 
-## Attachments
+## Storing attachments in the filesystem or on S3
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+By default, attachments are stored in the database. Alternatively, you can configure Form Runner to store attachments in the filesystem ([\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)) or S3 ([SINCE Orbeon Forms 2025.1]). This is useful for larger attachments, for example.
 
-By default, attachments are stored in the database. You can configure Form Runner to store attachments in the file system instead. This is useful for larger attachments, for example. You can do so globally by setting the following property:
+### Filesystem
+
+To store attachments in the filesystem, you can do so globally by setting the following property:
 
 ```xml
 <property 
@@ -287,7 +289,16 @@ By default, attachments are stored in the database. You can configure Form Runne
     value="filesystem"/>
 ```
 
-The base directory where attachments are stored is configured with:
+To store attachments in S3, use the `s3` value:
+
+```xml
+<property 
+    as="xs:string"
+    name="oxf.fr.persistence.provider.*.*.*.attachments"
+    value="s3"/>
+```
+
+For filesystem storage, the base path where attachments are stored is configured with:
 
 ```xml
 <property
@@ -296,11 +307,49 @@ The base directory where attachments are stored is configured with:
     value="/path/to/attachments"/>
 ```
 
-### Multiple attachment directories
+This property doesn't have any default value and is mandatory.
 
-Multiple attachment directories can be configured, following the same principles as described [above](#multiple-databases-of-the-same-type)
+The full path where the attachment file is stored is determined using an internal scheme, which includes the application and form names, among other information. For example, with the above property value, an attachment would be stored at the following location:
 
-For example, if you need two different base directories for the Form Runner apps `foo` and `bar`, you can do so by using the following properties:
+`/path/to/attachments/acme/sales/data/194714ff845faf31d08f745ca62cb0c622788aae/1/928cf991678ea0449bf0988dce956b4a88eb34c8.bin`
+
+### S3
+
+To store attachments in S3, it is mandatory to specify an S3 configuration, using the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.s3.s3-config"
+    value="s3-config-name"/>
+```
+
+See [S3 storage](/form-runner/feature/s3.md) for more information about the properties needed to configure an S3 storage.
+
+For S3, the base path is configured using the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.s3.base-path"
+    value="path/to/attachments"/>
+```
+
+By default, this property is set to an empty string, which means that attachments are stored at the root of the configured S3 bucket. As with filesystem storage, the full path to the attachment objects includes the application and form names, as well as other information.
+
+For example, for an S3 bucket named `s3-bucket` and a base path set to `path/to/attachments`, an attachment would be stored at the following S3 location:
+
+`s3-bucket/path/to/attachments/acme/sales/data/194714ff845faf31d08f745ca62cb0c622788aae/1/928cf991678ea0449bf0988dce956b4a88eb34c8.bin`
+
+For an empty base path, it would be stored at the following location:
+
+`s3-bucket/acme/sales/data/194714ff845faf31d08f745ca62cb0c622788aae/1/928cf991678ea0449bf0988dce956b4a88eb34c8.bin`
+
+#### Multiple attachment providers of the same type
+
+Multiple filesystem and S3 attachment providers can be configured, following the same principles as described [above](#multiple-databases-of-the-same-type)
+
+For example, if you need to store attachments in two different filesystem paths for the Form Runner apps `foo` and `bar`, you can do so by using the following properties:
 
 ```xml
 <property 
@@ -319,9 +368,11 @@ For example, if you need two different base directories for the Form Runner apps
 <property as="xs:string" name="oxf.fr.persistence.filesystem_bar.directory" value="/path/to/bar_attachments"/>
 ```
 
-### Dynamic base directory configuration
+Similarly, you can configure multiple S3 attachment providers.
 
-In addition to static paths, you can also use an [AVT](/xforms/attribute-value-templates.md) to dynamically configure the base directory. For instance, the following would use a base directory specified by an environment variable:
+#### Dynamic base path configuration
+
+In addition to static paths, you can also use an [AVT](/xforms/attribute-value-templates.md) to dynamically configure the base path. For instance, the following would use a base path specified by an environment variable:
 
 ```xml
 <property
@@ -332,6 +383,9 @@ In addition to static paths, you can also use an [AVT](/xforms/attribute-value-t
 
 Note that, specifically in the context of the `oxf.fr.persistence.*.directory` property, it is not necessary to set `oxf.xpath.environment-variable.enabled` to true in order to use the `environment-variable()` function.
 
+For S3, the `oxf.fr.persistence.s3.base-path` property is also interpreted as an AVT.
+
 ## See also
 
 - [Form Runner persistence API](/form-runner/api/persistence/README.md)
+- [S3 storage](/form-runner/feature/s3.md)

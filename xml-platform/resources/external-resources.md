@@ -16,7 +16,7 @@ Orbeon Forms uses [resource managers](resource-managers.md) to load most of the 
 To be able to override resources that come with Orbeon Forms without changing any of the files inside the web archive:
 
 1. Create a directory on disk, in which you put the resources you want to override. Let's assume this directory is `/home/myapp/resources`. So if you want to override properties, you create your own `/home/myapp/resources/config/properties-local.xml`. To deploy your PE license, place it in `/home/myapp/resources/config/license.xml`.
-2. You will instruct Orbeon Forms to first try using a resource manager that is file system based, and that looks for resources in the base directory `/home/myapp/resources`. This is done by setting the following two context parameters:
+2. You will instruct Orbeon Forms to first try using a resource manager that is filesystem based, and that looks for resources in the base directory `/home/myapp/resources`. This is done by setting the following two context parameters:
     * First added context parameter:
         * Name: `oxf.resources.priority.0`
         * Value: `org.orbeon.oxf.resources.FilesystemResourceManagerFactory`
