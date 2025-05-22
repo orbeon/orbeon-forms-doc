@@ -28,69 +28,30 @@ Until Orbeon Forms 4.10 included, `<xf:textarea mediatype="text/html">` was usin
 
 [\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
 
-The component can be configured with the `config` attribute. The attribute takes a JSON configuration string.
-
-If no `config` attribute is set, the following property is used:
+The component can be configured using the `config` attribute, which accepts a JSON configuration string. If the `config` attribute is not set, the value of the `oxf.xforms.xbl.fr.tinymce.config` property is used instead. The default value for this property is defined in the `properties-xforms.xml` file, located inside `WEB-INF/lib/orbeon-core.jar`. Attributes and properties are interpreted as AVTs (as with all attributes and properties that configure components), which means you should use double brackets `{{...}}` in the JSON, since single brackets are interpreted as the start and end of an expression.
 
 ```xml
 <property as="xs:string"  name="oxf.xforms.xbl.fr.tinymce.config">
     {{
-        "inline"             : false,
-        "hidden_input"       : false,
-        "language"           : "en",
-        "statusbar"          : false,
-        "menubar"            : false,
-        "plugins"            : "lists link fullscreen",
-        "toolbar"            : "bold italic | bullist numlist outdent indent | link fullscreen",
-        "browser_spellcheck" : true,
-        "doctype"            : "&lt;!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
-        "encoding"           : "xml",
-        "entity_encoding"    : "raw",
-        "forced_root_block"  : "div",
-        "verify_html"        : true,
-        "visual_table_class" : "fr-tinymce-table",
-        "skin"               : false,
-        "convert_urls"       : false
+        "inline"               : true,
+        "hidden_input"         : false,
+        "language"             : "en",
+        "statusbar"            : false,
+        "menubar"              : false,
+        "plugins"              : "lists link",
+        "toolbar"              : "bold italic | bullist numlist outdent indent | link",
+        "browser_spellcheck"   : true,
+        "encoding"             : "xml",
+        "entity_encoding"      : "raw",
+        "forced_root_block"    : "div",
+        "visual_table_class"   : "fr-tinymce-table",
+        "skin"                 : false,
+        "convert_urls"         : false,
+        "sandbox_iframes"      : true,
+        "convert_unsafe_embeds": true
     }}
 </property>
 ```
-
-You can also set properties specific to an app and/or form:
-
-```xml
-<property as="xs:string"  name="oxf.xforms.xbl.fr.tinymce.config.acme.sales">
-    ...
-</property>
-```
-
-Attribute and properties are interpreted as AVTs (like all attributes and properties that configure components), which explains the double brackets `{{...}}`.
-
-For example, the following configuration restores the `iframe` mode (instead of the `inline` mode) for all Formatted Text / Rich Text Editor instances:
-
-```xml
-<property as="xs:string"  name="oxf.xforms.xbl.fr.tinymce.config">
-    {{
-        "inline"             : false,
-        "hidden_input"       : false,
-        "language"           : "en",
-        "statusbar"          : false,
-        "menubar"            : false,
-        "plugins"            : "lists link fullscreen",
-        "toolbar"            : "bold italic | bullist numlist outdent indent | link fullscreen",
-        "browser_spellcheck" : true,
-        "doctype"            : "&lt;!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
-        "encoding"           : "xml",
-        "entity_encoding"    : "raw",
-        "forced_root_block"  : "div",
-        "visual_table_class" : "fr-tinymce-table",
-        "skin"               : false,
-        "convert_urls"       : false,
-        "content_style"      : "body.mce-content-body {{ margin: 0; color: #333 }} body.mce-content-body div {{font-family: 'Helvetica Neue'; font-size: 13px; padding: 4px 6px}} body.mce-content-body a {{ color: #0088cc }} body.mce-content-body p {{ margin: 0 0 10px }}"
-    }}
-</property>
-``` 
-
-In that example, the `content_style` property is used to set CSS to match the `inline` appearance of Form Runner.
 
 For backward compatibility, if an `TINYMCE_CUSTOM_CONFIG` JavaScript variable (see below) is found in the page, it is used as the configuration.
 
