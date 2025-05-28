@@ -227,11 +227,15 @@ In the following example, with the repetition performed by `<fr:data-iterate>`, 
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-Previously, actions were run synchronously. That is, they were blocking any other form processing until completed. It is now possible to run actions asynchronously. This means that the form processing can continue while the actions are running in the background. This is particularly useful when the actions call services.
+Previously, actions were always run *synchronously*. That is, they were blocking any other form processing until completed, even when calling, for example, external services.
 
-You can enable asynchronous actions:
+It is now possible to run actions *asynchronously*. This means that, if the action contains services calls, form processing can continue while service calls are pending in the background. Once services terminate, the rest of the actions is processed.
 
-- at the action level, using the `async="true` attribute
+Changing this mode only matters for actions that include service calls.
+
+You can enable asynchronous actions either:
+
+- at the action level, using the `async="true"` attribute
 - at the form level, using the `oxf.fr.detail.actions.async.*.*` property
 
 Example of configuration property:
@@ -245,7 +249,7 @@ Example of configuration property:
 
 It is currently not possible to mix and match synchronous and asynchronous service calls within a given action.
 
-An asynchronous action, by default, causes a response to the client (web browser) to wait forever for its completion. This is done to enhance the backward-compatibility of asynchronous actions. This can be disabled:
+An asynchronous action, by default, causes a response to the client (web browser) to wait "forever" for its completion. This is done to enhance backward-compatibility. This can be disabled:
 
 - at the action level, using the `response-must-await="0ms"` attribute (or `0` followed by any other unit allowed as shown below)
 - at the form level, using the `oxf.fr.detail.actions.response-must-await.*.*` property
