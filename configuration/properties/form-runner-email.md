@@ -18,7 +18,7 @@ Supported values:
 - `smtp`: Use SMTP server (default, and the only transport available before Orbeon Forms 2025.1)
 - `sendgrid`: Use SendGrid API
 
-## Connection to the SMTP server
+### SMTP
 
 The following properties control the connection to the SMTP server when using the `smtp` transport:
 
@@ -61,7 +61,7 @@ The following properties control the connection to the SMTP server when using th
     value="secret"/>
 ```
 
-## SendGrid configuration
+### SendGrid
 
 [SINCE Orbeon Forms 2025.1]
 
