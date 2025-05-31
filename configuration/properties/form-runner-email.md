@@ -1,8 +1,26 @@
 # Email properties
 
+## Email transport configuration
+
+[SINCE Orbeon Forms 2025.1]
+
+You can choose between SMTP and SendGrid as the email transport mechanism:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.email.transport.*.*"
+    value="sendgrid"/>
+```
+
+Supported values:
+
+- `smtp`: Use SMTP server (default, and the only transport available before Orbeon Forms 2025.1)
+- `sendgrid`: Use SendGrid API
+
 ## Connection to the SMTP server
 
-The following properties control the connection to the SMTP server:
+The following properties control the connection to the SMTP server when using the `smtp` transport:
 
 - `host`: required SMTP host name
 - `port`: optional SMTP port override. If not specified, the defaults are:
@@ -42,6 +60,26 @@ The following properties control the connection to the SMTP server:
     name="oxf.fr.email.smtp.credentials.*.*"
     value="secret"/>
 ```
+
+## SendGrid configuration
+
+[SINCE Orbeon Forms 2025.1]
+
+When using SendGrid as the email transport, you need to configure your SendGrid API key:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.email.transport.*.*"
+    value="sendgrid"/>
+
+<property
+    as="xs:string"
+    name="oxf.fr.email.sendgrid.api-key.*.*"
+    value="YOUR_SENDGRID_API_KEY"/>
+```
+
+The `api-key` property is required when using the SendGrid transport. You can obtain your API key from the SendGrid dashboard. All other email configuration properties (addresses, attachments, etc.) work the same way regardless of which transport you choose.
 
 ## Email addresses properties
 
