@@ -24,4 +24,4 @@ Unlike the [US Social Security Number (SSN)](us-ssn.md), the EIN does not have a
 
 ## See also
 
-- [US Social Security Number (SSN)](us-ein.md)
+- [US Social Security Number (SSN)](us-ssn.md)
