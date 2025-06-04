@@ -33,9 +33,11 @@ Because a Social Security Number is a sensitive piece of information, by default
 
 For editable modes, you can configure the field to behave in the following ways:
 
-- Always visible, like `078-05-1120`.
-- Always obscured, like `•••••••••`.
-- Obscured by default, but visible when the user clicks on a "Reveal" checkbox next to the field. This allows the user to see the full SSN when needed, such as to verify that the number entered is correct, while still keeping it hidden by default, so that someone glancing at a screen will not see the full number.
+| Mode             | Description                                                                                                                                                                 | Example                      |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
+| Always visible   | Field is always shown in plain text                                                                                                                                         | `078-05-1120`                |
+| Always obscured  | Field is always hidden                                                                                                                                                      | `•••••••••`                  |
+| Reveal on demand | Field is hidden by default, but can be revealed when the user clicks a "Reveal" checkbox. Useful for verifying the value while keeping it hidden from onlookers by default. | `078-05-1120` or `•••••••••` |
 
 <figure>
     <img src="/form-runner/component/images/xbl-us-ssn-edit-revealed.webp" width="220">
@@ -44,9 +46,12 @@ For editable modes, you can configure the field to behave in the following ways:
 
 For readonly modes, such as the View and PDF modes, you can configure the field to behave in the following ways:
 
-- Visible, like `078-05-1120`.
-- Obscured, like `•••-••-••••`.
-- Only show the last four digits, like `•••-••-1120`.
+| Mode                  | Description                           | Example       |
+|-----------------------|---------------------------------------|---------------|
+| Visible               | Field is fully shown in plain text    | `078-05-1120` |
+| Obscured              | Field is fully hidden                 | `•••-••-••••` |
+| Show last four digits | Only the last four digits are visible | `•••-••-1120` |
+
 
 <figure>
     <img src="/form-runner/component/images/xbl-us-ssn-view-partial.webp" width="440">
