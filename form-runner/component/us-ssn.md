@@ -75,3 +75,5 @@ Because the SSN is a sensitive piece of information, we recommend that you handl
 - [Field-level encryption](/form-builder/field-level-encryption.md)
 - [Basic Settings](/form-builder/control-settings.md)
 - [US Employer Identification Number (EIN)](us-ein.md)
+- [US Phone Number](us-phone.md)
+- [US State](us-state.md)

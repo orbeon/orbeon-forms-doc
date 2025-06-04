@@ -1,6 +1,4 @@
-# US State Component
-
-
+# US State component
 
 ## Overview
 
@@ -17,3 +15,9 @@ You use `fr:us-state` like a regular XForms control:
     <xf:label>State of residence</xf:label>
 </fr:us-state>
 ```
+
+## See also
+
+- [US Employer Identification Number (EIN)](us-ein.md)
+- [US Phone Number](us-phone.md)
+- [US Social Security Number (SSN)](us-ssn.md)
