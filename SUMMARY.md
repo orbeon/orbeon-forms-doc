@@ -133,6 +133,7 @@
         * [Source code editor](form-runner/component/source-code-editor.md)
         * [Time](form-runner/component/time.md)
         * [US phone](form-runner/component/us-phone.md)
+        * [US Social Security Number (SSN)](form-runner/component/us-ssn.md)
         * [US state](form-runner/component/us-state.md)
         * [Video](form-runner/component/video.md)
         * [Video attachment](form-runner/component/video-attachment.md)
