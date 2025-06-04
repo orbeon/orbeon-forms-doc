@@ -220,9 +220,7 @@ The following properties control the name of the PDF, TIFF and XML attachments:
 - `oxf.fr.email.xml.filename`
     - filename of the XML attachment, when present
     
-The property contains an XPath expression which generates the filename. The expression runs in the context of the current
-form data but does *not* have a access to controls. Only a limited set of Form Runner XPath functions can be used, in
-particular:
+The property contains an XPath expression which generates the filename. The expression runs in the context of the current form data but does *not* have access to controls. Only a limited set of Form Runner XPath functions can be used, in particular:
 
 - `fr:form-title()`
 - `fr:app-name()`
@@ -233,8 +231,7 @@ particular:
 - `fr:is-readonly-mode()`
 - `fr:is-design-time()`
 
-*NOTE: Control values must be extracted by searching for element values within the XML document. In the future, we hope
-to provide a function for that purpose.* 
+*NOTE: Control values must be extracted by searching for element values within the XML document. In the future, we hope to provide a function for that purpose.* 
 
 ```xml
 <property as="xs:string" name="oxf.fr.email.pdf.filename.*.*">
@@ -266,11 +263,9 @@ to provide a function for that purpose.*
     
 ## Email subject and body
 
-NOTE: Since Orbeon Forms 2018.1, you can set a form's email subject and body in the Form Builder user interface. You can
-also use template placeholders. See [Email settings](/form-builder/email-settings.md).
+NOTE: Since Orbeon Forms 2018.1, you can set a form's email subject and body in the Form Builder user interface. You can also use template placeholders. See [Email settings](/form-builder/email-settings.md).
 
-With any Orbeon Forms version, the following properties can be used to set default and per app/form email subject and
-body templates. 
+With any Orbeon Forms version, the following properties can be used to set default and per app/form email subject and body templates. 
 
 ```xml
 <property 
