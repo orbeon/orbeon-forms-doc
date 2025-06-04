@@ -59,9 +59,9 @@ Here is an example of configuration which switches to the `excel-named-ranges` f
 
 ## Import wizard steps
 
-In order to import an Excel file, you follow a process in the Excel Import page as described below.
+In order to import an Excel file, you follow a process in the Import page as described below.
 
-### Access the Excel Import page 
+### Access the Import page 
 
 You start the import from the Form Runner Import page, accessible from the [Summary page](/form-runner/feature/summary-page.md) when the "Import" button is configured, or directly with the path:
 
