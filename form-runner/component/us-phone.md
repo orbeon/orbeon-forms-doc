@@ -1,10 +1,8 @@
 # US Phone Component
 
-
-
 ## What it does
 
-This component represents an US phone number. It:
+This component represents a US phone number. It:
 
 - *validates* the stored format to make sure it contains exactly 10 digits.
 - *removes* all `()*-[].#/'': ` characters from the input string before storing the value.
