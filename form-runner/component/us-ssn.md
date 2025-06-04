@@ -8,7 +8,10 @@
 
 This component represents a US Social Security Number (SSN).
 
-![US Social Security Number (SSN) field with obscured value](/form-runner/component/images/xbl-us-ssn-edit-obscured.webp)
+<figure>
+    <img src="/form-runner/component/images/xbl-us-ssn-edit-obscured.webp" width="220">
+    <figcaption>US Social Security Number (SSN) field with obscured value</figcaption>
+</figure>
 
 It allows the user to enter a Social Security Number in the format `078-05-1120`, with or without the dashes.
 
@@ -34,7 +37,10 @@ For editable modes, you can configure the field to behave in the following ways:
 - Always obscured, like `•••••••••`.
 - Obscured by default, but visible when the user clicks on a "Reveal" checkbox next to the field. This allows the user to see the full SSN when needed, such as to verify that the number entered is correct, while still keeping it hidden by default, so that someone glancing at a screen will not see the full number.
 
-![US Social Security Number (SSN) field with revealed value](/form-runner/component/images/xbl-us-ssn-edit-revealed.webp)
+<figure>
+    <img src="/form-runner/component/images/xbl-us-ssn-edit-revealed.webp" width="220">
+    <figcaption>US Social Security Number (SSN) field with revealed value</figcaption>
+</figure>
 
 For readonly modes, such as the View and PDF modes, you can configure the field to behave in the following ways:
 
@@ -42,7 +48,10 @@ For readonly modes, such as the View and PDF modes, you can configure the field 
 - Obscured, like `•••-••-••••`.
 - Only show the last four digits, like `•••-••-1120`.
 
-![US Social Security Number (SSN) field with partially-revealed value](/form-runner/component/images/xbl-us-ssn-view-partial.webp)
+<figure>
+    <img src="/form-runner/component/images/xbl-us-ssn-view-partial.webp" width="440">
+    <figcaption>US Social Security Number (SSN) field with partially-revealed value</figcaption>
+</figure>
 
 These options are controlled in Form Builder or using configuration properties:
 

@@ -8,7 +8,10 @@
 
 This component represents a US Employer Identification Number (EIN).
 
-![US Employer Identification Number (EIN)](/form-runner/component/images/xbl-us-ein-edit.webp)
+<figure>
+    <img src="/form-runner/component/images/xbl-us-ein-edit.webp" width="220">
+    <figcaption>US Employer Identification Number (EIN)</figcaption>
+</figure>
 
 It allows the user to enter an Employer Identification Number in the format `12-3456789`, with or without the dash.
 
