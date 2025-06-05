@@ -294,11 +294,13 @@ The following parameters allow controlling the use of PDF templates:
 - `use-pdf-template`
     - This defaults to `true` if there is at least one PDF template attached to the form, `false` otherwise.
     - If at least one PDF template is available, the default is to use one of the PDF templates. But if
-      `use-pdf-template = "false"`, then use of any PDF template is disabled and the automatic PDF is produced.  
+      `use-pdf-template = "false"`, then use of any PDF template is disabled and the automatic PDF is produced.
+    - Is an XPath value template.
 - `pdf-template-name`
     - This contributes to selecting a specific PDF template.
     - If `pdf-template-name` specifies a name, such as with `pdf-template-name = "archive"`, the list of available PDF
       templates is reduced to those having an exactly matching name. If no matching name is found, an error is raised. 
+    - Is an XPath value template.
 - `pdf-template-lang` 
     - This contributes to selecting a specific PDF template.
     - If `pdf-template-lang` specifies a language, such as with `pdf-template-lang = "fr"`, the list of available
@@ -307,6 +309,7 @@ The following parameters allow controlling the use of PDF templates:
     - If `pdf-template-lang` is empty or missing:
         - The PDF template with the current form language is used, if there is a match.
         - If there is no match, the first available PDF template is used.
+    - Is an XPath value template.
 
 Example:
 
