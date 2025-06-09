@@ -8,7 +8,7 @@ In case of issues when using Orbeon Forms with a relational database, you might 
 
 Below, you'll find a summary of the steps you can follow to install and configure P6Spy. For more options, or if you're using an application server  other than Tomcat, you'll most likely want to refer to the P6Spy documentation, and specifically their [installation](http://p6spy.readthedocs.io/en/latest/install.html) and [configuration](http://p6spy.readthedocs.io/en/latest/configandusage.html) instructions.
 
-1. [Download](https://search.maven.org/search?q=g:p6spy) the P6Spy jar file ([files](https://central.sonatype.com/artifact/p6spy/p6spy/versions).
+1. [Download](https://search.maven.org/search?q=g:p6spy) the P6Spy jar file ([files](https://central.sonatype.com/artifact/p6spy/p6spy/versions)).
 2. Move the P6Spy jar file to Tomcat's `lib` directory, or the equivalent directory on your application server. This should be the same directory where you installed your database driver jar file.
 3. In the same directory, create a `spy.properties` as follows. On the first line replace `/var/log/tomcat` by the directory where your log files are stored. If you're using a database other than MySQL, on the second line replace `com.mysql.cj.jdbc.Driver` by the corresponding JDBC driver class name for your database.
 
