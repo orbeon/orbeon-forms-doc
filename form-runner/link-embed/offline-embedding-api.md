@@ -80,18 +80,21 @@ This returns a `Promise` which resolves when the form initialization is complete
 The `compiledFormDefinition` parameter is the binary data obtained from the server-side compilation API, as
 a `Uint8Array`.
 
-The third argument is a JavaScript object with the following properties:
+The third argument is a JavaScript object with the following properties, many of which are optional.
 
-| Property      | Type       | Description                   |
-|---------------|------------|-------------------------------|
-| `appName`     | `string`   |                               |
-| `formName`    | `string`   |                               |
-| `formVersion` | `number`   | positive integer              |
-| `mode`        | `string`   | `new`\|`edit`\|`view`         |
-| `documentId`  | `string?`  | for `edit`\|`view` modes only |
-| `queryString` | `string?`  | optional                      |
-| `headers`     | `Headers?` | optional                      |
-| `formData`    | `string?`  | for `POST`ed form data        |
+| Property      | Type        | Description                          | Availability |
+|---------------|-------------|--------------------------------------|--------------|
+| `appName`     | `string`    |                                      |              |
+| `formName`    | `string`    |                                      |              |
+| `formVersion` | `number`    | positive integer                     |              |
+| `mode`        | `string`    | `new`\|`edit`\|`view`                |              |
+| `documentId`  | `string?`   | for `edit`\|`view` modes only        |              |
+| `queryString` | `string?`   | optional                             |              |
+| `headers`     | `Headers?`  | optional                             |              |
+| `formData`    | `string?`   | for `POST`ed form data               |              |
+| `username`    | `string?`   | username for credentials functions   | 2024.1.2     |
+| `groupname`   | `string?`   | group name for credentials functions | 2024.1.2     |
+| `roles`       | `string[]?` | roles for credentials functions      | 2024.1.2     |
 
 If `formData` is defined, it must be a string containing form data in XML format. This is the equivalent of performing
 an HTTP `POST` when online.
