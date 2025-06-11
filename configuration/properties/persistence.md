@@ -423,7 +423,13 @@ Example:
 <property
     as="xs:string"
     name="oxf.fr.persistence.attachments.filename.*.*"
-    value="concat(format-date(current-date(), '[Y]-[M01]-[D01]'), '-', fr:attachment-id(), '-', fr:attachment-filename())"/>
+    value="concat(
+        format-date(current-date(), '[Y]-[M01]-[D01]'),
+        '-',
+        fr:attachment-id(),
+        '-',
+        fr:attachment-filename()
+    )"/>
 ```
 
 This would lead to filenames that look like this:
