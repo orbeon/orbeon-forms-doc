@@ -385,17 +385,21 @@ Note that, specifically in the context of the `oxf.fr.persistence.*.directory` p
 
 For S3, the `oxf.fr.persistence.s3.base-path` property is also interpreted as an AVT.
 
-## Customizing the filename of stored attachments
+## Filename of stored attachments
 
-[SINCE Orbeon Forms 2025.1]
+### Default filename
 
-By default, attachments are stored with a filename of the form `$attachment.bin`, where `$attachment` is a unique hexadecimal identifier for the attachment. Example:
+
+By default, attachments are stored using a filename format of `[attachment-id].bin`, where `[attachment-id]` represents a unique hexadecimal identifier for each attachment. The original filename and file extension are not retained. Example:
 
 `883a36f20b8054187e0994022269a321ba3ec07e.bin`
 
-The original filename and extension are not preserved.
 
-This is usually fine, especially in the case where attachments are stored in the database, but when attachments are stored in the local filesystem or on S3, you might want to keep all or part of the original filename, such as the extension, for example. This is possible using the following property:
+### Custom filename
+
+[SINCE Orbeon Forms 2025.1]
+
+The default behavior typically works well, particularly when attachments are stored in the database. However, when attachments are stored on the local filesystem or S3, you may want to preserve all or part of the original filename, including the file extension. You can achieve this using the following property:
 
 ```xml
 <property
@@ -414,8 +418,8 @@ The following [XPath functions](/xforms/xpath/extension-form-runner.md#attachmen
 
 Note about the `fr:attachment-id()` function:
 
-- It must be called at least once in the XPath expression specified in the`oxf.fr.persistence.attachments.filename` property. If the full output of the function is not found in the evaluation of the expression, an error will be issued and the attachment will not be persisted.
-- At the moment, it can only be called in the context of the `oxf.fr.persistence.attachments.filename` property, whereas other attachment functions can be called in other XPath expressions as well.
+- This function must be called at least once in the XPath expression specified in the `oxf.fr.persistence.attachments.filename` property. If the function's complete output is not found during expression evaluation, an error will occur and the attachment will not be saved.
+- Currently, this function can only be invoked within the context of the `oxf.fr.persistence.attachments.filename` property, while other attachment functions can be called from additional locations.
 
 Example:
 
