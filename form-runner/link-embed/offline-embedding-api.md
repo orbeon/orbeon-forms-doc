@@ -92,12 +92,11 @@ The third argument is a JavaScript object with the following properties, many of
 | `queryString` | `string?`   | optional                             |              |
 | `headers`     | `Headers?`  | optional                             |              |
 | `formData`    | `string?`   | for `POST`ed form data               |              |
-| `username`    | `string?`   | username for credentials functions   | 2024.1.2     |
-| `groupname`   | `string?`   | group name for credentials functions | 2024.1.2     |
-| `roles`       | `string[]?` | roles for credentials functions      | 2024.1.2     |
+| `userName`    | `string?`   | username for credentials functions   | 2024.1.2     |
+| `groupName`   | `string?`   | group name for credentials functions | 2024.1.2     |
+| `userRoles`   | `string[]?` | roles for credentials functions      | 2024.1.2     |
 
-If `formData` is defined, it must be a string containing form data in XML format. This is the equivalent of performing
-an HTTP `POST` when online.
+If `formData` is defined, it must be a string containing form data in XML format. This is the equivalent of performing an HTTP `POST` when online.
 
 Note that regular reading/writing data is done through the `SubmissionProvider` interface, which is described below.
 
