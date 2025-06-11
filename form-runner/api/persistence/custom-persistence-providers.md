@@ -665,6 +665,7 @@ In addition, you must configure the following properties to describe what your p
 
 - [CRUD API](crud.md)
 - [Form Metadata API](forms-metadata.md)
+- [Reindexing](reindexing.md)
 - [Search API](search.md)
 - [Revision History API](revision-history.md)
 - [Lease API](lease.md)

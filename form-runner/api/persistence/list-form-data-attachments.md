@@ -62,6 +62,7 @@ The caller must either call the service internally or have proper credentials to
 ## See also
 
 - [CRUD](crud.md)
+- [Reindexing](reindexing.md)
 - [Search](search.md)
 - [Form metadata](forms-metadata.md)
 - [Caching](caching.md)

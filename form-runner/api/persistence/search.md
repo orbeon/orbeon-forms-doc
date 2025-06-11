@@ -446,6 +446,7 @@ Indexed controls are controls that are marked, in Form Builder, as:
 ## See also
 
 - [CRUD](crud.md)
+- [Reindexing](reindexing.md)
 - [List form data attachments](list-form-data-attachments.md)
 - [Form metadata](forms-metadata.md)
 - [Caching](caching.md)

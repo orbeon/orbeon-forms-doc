@@ -495,6 +495,7 @@ Here note that version 5 is marked as not available with:
 ## See also
 
 - [CRUD](crud.md)
+- [Reindexing](reindexing.md)
 - [Search](search.md)
 - [Form metadata](forms-metadata.md)
 - [Caching](caching.md)

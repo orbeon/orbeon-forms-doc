@@ -3,6 +3,7 @@
 ## Children pages
 
 - [CRUD](crud.md)
+- [Reindexing](reindexing.md)
 - [Search](search.md)
 - [List form data attachments](list-form-data-attachments.md)
 - [Form metadata](forms-metadata.md)

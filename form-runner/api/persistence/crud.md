@@ -370,6 +370,7 @@ To remove all instances of form data, issue a `DELETE` to:
 
 ## See also
 
+- [Reindexing](reindexing.md)
 - [Search](search.md)
 - [List form data attachments](list-form-data-attachments.md)
 - [Form metadata](forms-metadata.md)

@@ -37,6 +37,7 @@ In addition to explicit versioning of form definitions, the relational database 
 - [Auditing](/form-runner/persistence/auditing.md)
 - Blog post: [Form versioning](https://blog.orbeon.com/2014/02/form-versioning.html)
 - [CRUD](crud.md)
+- [Reindexing](reindexing.md)
 - [Search](search.md)
 - [List form data attachments](list-form-data-attachments.md)
 - [Form metadata](forms-metadata.md)
