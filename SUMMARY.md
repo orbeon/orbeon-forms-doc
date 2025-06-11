@@ -124,6 +124,8 @@
         * [Image](form-runner/component/image.md)
         * [Image annotation](form-runner/component/image-annotation.md)
         * [Image attachment](form-runner/component/image-attachment.md)
+        * [International Securities Identification Number (ISIN)](form-runner/component/isin.md)
+        * [Legal Entity Identifier (LEI)](form-runner/component/lei.md)
         * [Number](form-runner/component/number.md)
         * [Open selection](form-runner/component/open-select1.md)
         * [Repeater](form-runner/component/repeater.md)
