@@ -75,7 +75,7 @@ xxf:call-xpl(
 ## xxf:classes()
 
 ```xpath
-xxf:classes() as xs:boolean
+xxf:classes() as xs:string*
 xxf:classes($el as node()) as xs:string*
 ```
 

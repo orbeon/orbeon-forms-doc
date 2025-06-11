@@ -698,6 +698,57 @@ fr:username() as xs:string?
 
 See[`xxf:username()`](extension-http.md#xxfusername).
 
+## Attachment functions
+
+[SINCE Orbeon Forms 2025.1]
+
+For all the following functions, the attachment holder element can be passed as context or as argument.
+
+### fr:attachment-id()
+
+```xpath
+fr:attachment-id() as xs:string
+fr:attachment-id($el as node()) as xs:string
+```
+
+Attachment unique ID. This function can only be called in the context of [the `oxf.fr.persistence.attachments.filename.*.*` property](/configuration/properties/persistence.md#customizing-the-filename-of-stored-attachments).
+
+### fr:attachment-filename()
+
+```xpath
+fr:attachment-filename() as xs:string
+fr:attachment-filename($el as node()) as xs:string
+```
+
+Original attachment filename (e.g. `portrait.jpg`).
+
+### fr:attachment-mediatype()
+
+```xpath
+fr:attachment-mediatype() as xs:string
+fr:attachment-mediatype($el as node()) as xs:string
+```
+
+Attachment file type (e.g. `application/pdf`, `image/jpeg`, etc.).
+
+### fr:attachment-size()
+
+```xpath
+fr:attachment-size() as xs:integer
+fr:attachment-size($el as node()) as xs:integer
+```
+
+Attachment size in bytes.
+
+### fr:attachment-control-name()
+
+```xpath
+fr:attachment-control-name() as xs:string
+fr:attachment-control-name($el as node()) as xs:string
+```
+
+Name of the attachment control.
+
 ## See also
 
 - Blog post: [A stable function library for Form Runner](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)

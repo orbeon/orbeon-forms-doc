@@ -385,6 +385,51 @@ Note that, specifically in the context of the `oxf.fr.persistence.*.directory` p
 
 For S3, the `oxf.fr.persistence.s3.base-path` property is also interpreted as an AVT.
 
+## Customizing the filename of stored attachments
+
+[SINCE Orbeon Forms 2025.1]
+
+By default, attachments are stored with a filename of the form `$attachment.bin`, where `$attachment` is a unique hexadecimal identifier for the attachment. Example:
+
+`883a36f20b8054187e0994022269a321ba3ec07e.bin`
+
+The original filename and extension are not preserved.
+
+This is usually fine, especially in the case where attachments are stored in the database, but when attachments are stored in the local filesystem or on S3, you might want to keep all or part of the original filename, such as the extension, for example. This is possible using the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.attachments.filename.*.*"
+    value="concat(fr:attachment-id(), '.bin')"/>
+```
+
+The following [XPath functions](/xforms/xpath/extension-form-runner.md#attachment-functions) can be used to extract information from the attachment:
+
+- `fr:attachment-id()`: attachment unique ID (must be included)
+- `fr:attachment-filename()`: original attachment filename (e.g. `portrait.jpg`)
+- `fr:attachment-mediatype()`: attachment file type (e.g. `application/pdf`, `image/jpeg`, etc.)
+- `fr:attachment-size()`: attachment size in bytes
+- `fr:attachment-control-name()`: name of the attachment control
+
+Note about the `fr:attachment-id()` function:
+
+- It must be called at least once in the XPath expression specified in the`oxf.fr.persistence.attachments.filename` property. If the full output of the function is not found in the evaluation of the expression, an error will be issued and the attachment will not be persisted.
+- At the moment, it can only be called in the context of the `oxf.fr.persistence.attachments.filename` property, whereas other attachment functions can be called in other XPath expressions as well.
+
+Example:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.attachments.filename.*.*"
+    value="concat(format-date(current-date(), '[Y]-[M01]-[D01]'), '-', fr:attachment-id(), '-', fr:attachment-filename())"/>
+```
+
+This would lead to filenames that look like this:
+
+`2025-06-11-883a36f20b8054187e0994022269a321ba3ec07e-portrait.jpg`
+
 ## See also
 
 - [Form Runner persistence API](/form-runner/api/persistence/README.md)
