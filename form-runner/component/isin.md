@@ -9,7 +9,7 @@
 This component represents an [International Securities Identification Number (ISIN)](https://en.wikipedia.org/wiki/International_Securities_Identification_Number).
 
 <figure>
-    <img src="/form-runner/component/images/xbl-isin-edit.webp" width="220">
+    <img src="/form-runner/component/images/xbl-isin-edit.webp" width="338">
     <figcaption>International Securities Identification Number (ISIN)</figcaption>
 </figure>
 

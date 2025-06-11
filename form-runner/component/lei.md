@@ -9,7 +9,7 @@
 This component represents a [Legal Entity Identifier (LEI)](https://en.wikipedia.org/wiki/Legal_Entity_Identifier).
 
 <figure>
-    <img src="/form-runner/component/images/xbl-lei-edit.webp" width="220">
+    <img src="/form-runner/component/images/xbl-lei-edit.webp" width="338">
     <figcaption>Legal Entity Identifier (LEI)</figcaption>
 </figure>
 
