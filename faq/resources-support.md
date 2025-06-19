@@ -92,6 +92,6 @@ See also our [roadmap](../roadmap.md).
 [2]: https://www.orbeon.com/pricing
 [3]: https://www.orbeon.com/services
 [4]: mailto:info%40orbeon.com
-[5]: https://www.orbeon.com/community
+[5]: https://groups.google.com/g/orbeon
 [6]: ../contributors/building-orbeon-forms.md
 [7]: https://github.com/orbeon/orbeon-forms/issues

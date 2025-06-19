@@ -32,6 +32,6 @@ This release addresses the following issues since [Orbeon Forms 2021.1.10 PE](or
 - Excel export: mismatch of fields in repeated sections or grids ([\#6128](https://github.com/orbeon/orbeon-forms/issues/6472))
 - Incorrect wizard status classes ([\#5320](https://github.com/orbeon/orbeon-forms/issues/6472))
 
-Please send feedback via [Twitter](https://twitter.com/orbeon), [Mastodon](https://mastodon.social/@orbeon), or the [forum](https://www.orbeon.com/community).
+Please send feedback via [Twitter](https://twitter.com/orbeon), [Bluesky](https://bsky.app/profile/orbeon.bsky.social), or the [forum](https://groups.google.com/g/orbeon).
 
 We hope you enjoy this release!

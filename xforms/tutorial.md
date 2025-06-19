@@ -1469,7 +1469,7 @@ So far you have seen:
 You have now covered a good part of the basics of Orbeon Forms. You can now look at the [Orbeon Forms example applications][27] and the [rest of the Orbeon Forms documentation](https://doc.orbeon.com/)!
 
 [1]: https://www.orbeon.com/
-[2]: https://www.orbeon.com/community
+[2]: https://groups.google.com/g/orbeon
 [3]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/01.png
 [4]: https://www.orbeon.com/download
 [5]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/02.png

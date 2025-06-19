@@ -18,7 +18,7 @@ We recommend you test your upgrade in a non-production environment, and only upg
 Finally, let us know if you have any question or encounter any issue while upgrading:
 
 - Via Basecamp if using Orbeon Forms PE
-- Via the Google Groups or Stack Overflow if using Orbeon Forms CE (see [community](https://www.orbeon.com/community))
+- Via the Google Groups or Stack Overflow if using Orbeon Forms CE (see [community](https://groups.google.com/g/orbeon))
 
 ## Why upgrade to newer versions of Orbeon Forms?
 
