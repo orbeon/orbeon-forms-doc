@@ -7,10 +7,6 @@ Today we released Orbeon Forms 2024.1.2! This maintenance release contains more 
 - [Orbeon Forms 2024.1.1 PE](orbeon-forms-2024.1.1.md)
 - [Orbeon Forms 2024.1 PE](orbeon-forms-2024.1.md)
 
-TODO:
-
-- check issues numbers on branch vs. on GitHub issues
-
 ## New features
 
 ### Components with built-in validation
@@ -42,34 +38,65 @@ See also:
 - Blog post: [Custom PDF Field Names](https://www.orbeon.com/2025/05/custom-pdf-templates-field-names)
 - [PDF Templates](/form-runner/feature/pdf-templates.md)
 
-### New demo forms
+### Redis configuration
 
-We are continuing to add to our collection of demo forms, which you can use directly, as templates for your own forms, or to learn about Orbeon Forms features and capabilities. In this release, we are adding the following demo forms:
+We now provide a configuration for Redis. This setup is best for cloud deployments where instances of Orbeon Forms typically can't use multicast for discovery, and Redis is provided as a service.
+
+See [Redis configuration](/installation/replication.md#redis-configuration) for details.
+
+### OIDC with WildFly
+
+We now provide an integration with WildFly OIDC.
+
+See [OIDC with WildFly](/form-runner/access-control/users.md#oidc-with-wildfly) for details.
+
+### New localizations and translations
+
+Thanks to contributors, we have updated localizations and translations for Catalan, and added new translations for Spanish and Arabic. The latter remains a work in progress. 
+
+### Other features
+
+The following small features have been added in this release:
+
+- Form Builder to support properties to hide buttons based on formula #6805
+- Add `FormRunnerForm.getControlValue()` ([doc](/form-runner/api/other/form-runner-javascript-api.md#getting-a-controls-value))
+- Dynamic Dropdown With Search: option to store label in all cases ([doc](/form-runner/component/static-dynamic-dropdown.md#store-label))
+- Reindexing API: ability to reindex a specific form ([doc](/form-runner/api/persistence/reindexing.md#reindexing-a-specific-form))
+
+## New demo form
+
+We are continuing to add to our collection of demo forms, which you can use directly, as templates for your own forms, or to learn about Orbeon Forms features and capabilities. In this release, we are adding the following demo forms, which makes use of the new SSN and EIN components, as well as the custom PDF field names feature:
 
 - Vendor Application (builder, runner)
-- TODO: 1 more?
+- PTA Payment Authorization/Request for Reimbursement (builder, runner)
+- Public Records Act Request Form (builder, runner)
 
 In addition, we have updated the following demo forms which showcase features:
 
-- All Form Controls
-- Examples of Formulas
+- All Form Controls (builder, runner)
+- Examples of Formulas (builder, runner)
 
-### xxx
+## Performance improvements
 
-xxx
+We have made a number of performance improvements in this release, including:
 
-- Update Spanish translation resources-ca.xml #6997
-- Update Catalan translation resources-ca.xml #6996
-- Form Builder to support properties to hide buttons based on formula #6805
-- Arabic resources for Form Runner and Form Builder #7055
-- PDF templates: ability to specify field names #6932
-- Add `FormRunnerForm.getControlValue()` #6131
-- Form controls/components
-    - Dynamic Dropdown With Search: option to store label in all cases #7014
+- Add dependency support for `fr:app-name()`, etc. #7000
+- Add dependency support for pure functions #6999
+- Add dependency support for `xxf:property()` #6998
+- Add dependency support for `xxf:repeat-position()` #6981
+- `fr:grid`/`fr:section`: don't depend on `*` #6995
+- Add dependency support for `fr:component-param-value()` #6980
+- Cache `BindingIndex` #6972
+- Reindex: don't attempt to reindex data upon DELETE of form definition #6915
+- Reindex is triggered for attachments #6913
+
+See also:
+
+- Blog post: [2024.1 Performance improvements](https://www.orbeon.com/2025/05/performance-improvements)
 
 ## Issues addressed
 
-xxx
+In this release, we have addressed many issues, including:
 
 - Form Builder
     - In Control Settings, set focus on Control Name after clicking "Use suggestion" #7060
@@ -96,6 +123,7 @@ xxx
     - "Generate token URL parameter" option in email template parameters not persisted correctly #6919
     - Form Builder doesn't show repeated grid or section iterations with custom name #7067
     - After pasting form definition, Actions Editor dialog appears partially empty #7010
+    - Keyboard shortcuts to switch tabs to work also outside of dialogs #6964
 - Form Runner
     - Initial value not set when coming from service with a request parameter #7083
     - `/reindex` API should be a `POST`, not a `GET` #6174
@@ -145,16 +173,6 @@ xxx
         - Offline: edit mode fails to load data #7021
         - Offline: attachments don't work anymore #7006
         - Offline: exception when running on the default HTTP port #6987
-    - Performance
-        - Add dependency support for `fr:app-name()`, etc. #7000
-        - Add dependency support for pure functions #6999
-        - Add dependency support for `xxf:property()` #6998
-        - Add dependency support for `xxf:repeat-position()` #6981
-        - `fr:grid`/`fr:section`: don't depend on `*` #6995
-        - Add dependency support for `fr:component-param-value()` #6980
-        - Cache `BindingIndex` #6972
-        - Reindex: don't attempt to reindex data upon DELETE of form definition #6915
-        - Reindex is triggered for attachments #6913
 - WebSphere, WildFly, DB2
     - WebSphere: missing current servlet error #7052
     - Async I/O requests can fail in Jakarta EE environment #7030
@@ -179,12 +197,14 @@ xxx
 
 ### Support of `POST` for `/reindex` API
 
+The [Reindexing API](/form-runner/api/persistence/reindexing.md) responds to a `GET` request at `/fr/service/persistence/reindex`. This was in error and is now deprecated. The service now responds also to a `POST` request at the same endpoint, which is the correct HTTP method for a side-effecting operation. The `GET` method is still supported for backward compatibility, but it is recommended to use `POST` instead.
+
 xxxx also app/form/version
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page, or use our Docker images.
 
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
 
-Please send feedback via [Twitter](https://twitter.com/orbeon), [Mastodon](https://mastodon.social/@orbeon), or the [forum](https://www.orbeon.com/community).
+Please send feedback via [Twitter](https://twitter.com/orbeon), [Bluesky](https://bsky.app/profile/orbeon.bsky.social), or the [forum](https://groups.google.com/g/orbeon).
 
 We hope you enjoy this release!
