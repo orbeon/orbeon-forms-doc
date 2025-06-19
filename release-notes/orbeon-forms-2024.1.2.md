@@ -13,7 +13,12 @@ Today we released Orbeon Forms 2024.1.2! This maintenance release contains more 
 
 Orbeon Forms is built on top of a component system which allows adding new form controls with a little bit of programming. In fact, this is how most of the form controls which whip with Orbeon Forms are made. In this release, we are improving support for components which provide their own validation, and introducing new components.
 
-![New components with builtin validation](/form-runner/component/images/xbl-ssn-ein-isin-lei.webp)
+<figure>
+    <picture>
+        <img src="/form-runner/component/images/xbl-ssn-ein-isin-lei.webp" width="456">
+    </picture>
+    <figcaption>New components with builtin validation</figcaption>
+</figure>
 
 - [US Employer Identification Number (EIN)](/form-runner/component/us-ein.md)
 - [US Social Security Number (SSN)](/form-runner/component/us-ssn.md)
