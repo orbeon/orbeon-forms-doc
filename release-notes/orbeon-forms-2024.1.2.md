@@ -34,7 +34,12 @@ See also:
 
 Orbeon Forms supports PDF templates. This feature requires mapping form fields to PDF fields. To achieve this, until now, you had to name the fields in the PDF to match the Form Runner fields.
 
-![Custom PDF field name](/form-builder/images/control-settings-pdf-field-name-from-field.png)
+<figure>
+    <picture>
+        <img src="/form-builder/images/control-settings-pdf-field-name-from-field.png" width="481">
+    </picture>
+    <figcaption>Custom PDF field name</figcaption>
+</figure>
 
 The "Control Settings" dialog now lets you set a custom PDF field name for each form field. This makes it easier to manage the mapping between form fields and PDF fields.
 
