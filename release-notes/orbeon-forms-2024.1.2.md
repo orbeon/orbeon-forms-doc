@@ -209,8 +209,6 @@ In this release, we have addressed many issues, including:
 
 The [Reindexing API](/form-runner/api/persistence/reindexing.md) responds to a `GET` request at `/fr/service/persistence/reindex`. This was in error and is now deprecated. The service now responds also to a `POST` request at the same endpoint, which is the correct HTTP method for a side-effecting operation. The `GET` method is still supported for backward compatibility, but it is recommended to use `POST` instead.
 
-xxxx also app/form/version
-
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page, or use our Docker images.
 
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
