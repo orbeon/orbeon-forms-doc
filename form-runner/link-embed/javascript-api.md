@@ -52,7 +52,7 @@ For the Orbeon Forms server to respond with the appropriate CORS headers, and to
 
 1. Place the UrlRewriteFilter jar in the Orbeon Forms `WEB-INF/lib`.
     - If your container implements the Servlet 4.0 API (or earlier), like Tomcat 9 (and earlier):
-        - Use [`urlrewritefilter-4.0.3.jar`](https://repo1.maven.org/maven2/org/tuckey/urlrewritefilter/4.0.3/urlrewritefilter-4.0.3.jar).
+        - Use [`urlrewritefilter-4.0.4.jar`](https://repo1.maven.org/maven2/org/tuckey/urlrewritefilter/4.0.4/urlrewritefilter-4.0.4.jar).
         - Using version 5.x of the UrlRewriteFilter will result in the error `java.lang.NoClassDefFoundError: jakarta/servlet/Filter` because it is designed for containers that implement the Servlet 5.0 API (or later).
     - If your container implements the Servlet 5.0 API (or later), like Tomcat 10 (and later):
         - Use [`urlrewritefilter-5.1.3.jar`](https://repo1.maven.org/maven2/org/tuckey/urlrewritefilter/5.1.3/urlrewritefilter-5.1.3.jar).
