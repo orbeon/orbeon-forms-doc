@@ -1,7 +1,5 @@
 # Handwritten Signature Component
 
-
-
 ## Rationale
 
 [SINCE Orbeon Forms 2016.1 PE]
@@ -11,7 +9,12 @@ This component allows you to capture a signature from people filling out the for
 - The signature is stored digitally.
 - On a desktop, the signature is drawn with a mouse or other pointing device, while one a mobile it is drawn with the user's finger or, more rarely, a stylus.
 
-![An example signature](../images/handwritten-signature.png)
+<figure>
+    <picture>
+        <img src="/form-runner/images/handwritten-signature.png" width="346">
+    </picture>
+    <figcaption>An example signature</figcaption>
+</figure>
 
 ## Usage
 In Form Builder, to add a *signature control* to your form, click on *Handwritten signature* on the left sidebar. You can then add a label to the component (e.g. "Applicant signature") and a hint (e.g. "You are hereby accepting the Acme application terms and conditions"), as necessary.
