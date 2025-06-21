@@ -25,7 +25,7 @@ docker create \
     --name orbeon-forms-with-sqlite \
     -p 8080:8080 \
     -v ~/.orbeon/license.xml:/usr/local/tomcat/webapps/orbeon/WEB-INF/resources/config/license.xml \
-    orbeon/orbeon-forms:2024.1.1-pe
+    orbeon/orbeon-forms:2024.1.2-pe
 ```
 
 Make sure to replace `~/.orbeon/license.xml` with the path to your license file and to use another port if `8080` is already in use on your machine.
@@ -60,7 +60,7 @@ The following `docker-compose.yml` file can be used to start Orbeon Forms with a
 version: '3.8'
 services:
   orbeon-forms:
-    image: orbeon/orbeon-forms:2024.1.1-pe
+    image: orbeon/orbeon-forms:2024.1.2-pe
     ports:
       - ${ORBEON_TOMCAT_PORT:-8080}:8080
     volumes:
@@ -75,7 +75,7 @@ services:
     networks:
       - orbeon-forms-and-postgres
   postgres:
-    image: orbeon/postgres:2024.1.1-pe
+    image: orbeon/postgres:2024.1.2-pe
     restart: always
     ports:
       - ${ORBEON_POSTGRES_PORT:-5432}:5432
@@ -196,7 +196,7 @@ The `orbeon/orbeon-forms` image contains the JDBC drivers for SQLite and Postgre
 This can be done by using the following Dockerfile, using MySQL as an example:
 
 ```dockerfile
-FROM orbeon/orbeon-forms:2024.1.1-pe
+FROM orbeon/orbeon-forms:2024.1.2-pe
 
 RUN mkdir -p /tmp/orbeon
 WORKDIR /tmp/orbeon
@@ -220,7 +220,7 @@ RUN rm -rf /tmp/orbeon
 The customized image above can then be built using the following command:
 
 ```bash
-docker build -f Dockerfile.mysql -t "orbeon/orbeon-forms-mysql:2024.1.1-pe" .
+docker build -f Dockerfile.mysql -t "orbeon/orbeon-forms-mysql:2024.1.2-pe" .
 ```
 
 For further information about configuring Orbeon Forms to use a different database, see [Using a relational database](/form-runner/persistence/relational-db.md).
@@ -239,7 +239,7 @@ See [Logging](/installation/logging.md) for more information.
 
 To use WildFly instead of Tomcat:
 
-- use the tags suffixed with `-wildfly` (for example `2024.1.1-pe-wildfly`)
+- use the tags suffixed with `-wildfly` (for example `2024.1.2-pe-wildfly`)
 - mount the files in `/opt/jboss/wildfly/standalone/deployments/orbeon.war/WEB-INF` instead of `/usr/local/tomcat/webapps/orbeon/WEB-INF`
 - configure data sources in WildFly's `standalone.xml` configuration file, which should be copied or mounted into the `/docker-entrypoint-wildfly.d/` directory 
 
