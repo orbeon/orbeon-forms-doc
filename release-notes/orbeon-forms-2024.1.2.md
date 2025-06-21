@@ -83,8 +83,8 @@ We are continuing to add to our collection of demo forms, which you can use dire
 
 In addition, we have updated the following demo forms which showcase features:
 
-- All Form Controls (builder, runner)
-- Examples of Formulas (builder, runner)
+- All Form Controls ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/417b8b4473f6db9e0f94b05ccb9208be), [runner](https://demo.orbeon.com/demo/fr/orbeon-features/controls/new?form-version=1&fr-wizard-page=text-controls))
+- Examples of Formulas ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/22205ad1a78ce776bae20196ce277dc0e2ec05b4), [runner](https://demo.orbeon.com/demo/fr/orbeon-features/formulas/new?form-version=1))
 
 ## Performance improvements
 
