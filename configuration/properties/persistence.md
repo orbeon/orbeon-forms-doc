@@ -315,7 +315,7 @@ The full path where the attachment file is stored is determined using an interna
 
 ### S3
 
-To store attachments in S3, it is mandatory to specify an S3 configuration, using the following property:
+[SINCE Orbeon Forms 2025.1] To store attachments in S3, it is mandatory to specify an S3 configuration, using the following property:
 
 ```xml
 <property
