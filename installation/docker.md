@@ -243,4 +243,12 @@ To use WildFly instead of Tomcat:
 - mount the files in `/opt/jboss/wildfly/standalone/deployments/orbeon.war/WEB-INF` instead of `/usr/local/tomcat/webapps/orbeon/WEB-INF`
 - configure data sources in WildFly's `standalone.xml` configuration file, which should be copied or mounted into the `/docker-entrypoint-wildfly.d/` directory 
 
+```bash
+docker create \
+    --name orbeon-forms-with-sqlite \
+    -p 8080:8080 \
+    -v ~/.orbeon/license.xml:/opt/jboss/wildfly/standalone/deployments/orbeon.war/WEB-INF/resources/config/license.xml \
+    orbeon/orbeon-forms:2024.1.2-pe-wildfly
+```
+
 See also [WildFly](wildfly.md) for more information.
