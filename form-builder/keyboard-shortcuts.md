@@ -2,16 +2,49 @@
 
 ## Shortcuts
 
-| Area                      | Key       | Description                                                               | Since                                                                |
-|---------------------------|-----------|---------------------------------------------------------------------------|----------------------------------------------------------------------|
-| Button Shortcuts          | `⌘S`/`⌃S` | Save the form definition                                                  | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
-|                           | `⌘P`/`⌃P` | Open the [Publish dialog](/form-builder/publishing.md)                    | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
-| Cut, Copy and Paste       | `⌘X`/`⌃X` | Cut the current control                                                   | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
-|                           | `⌘C`/`⌃C` | Copy the current control                                                  | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
-|                           | `⌘V`/`⌃V` | Paste from the toolbox                                                    | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
-| Grid Navigation Shortcuts | `←`/`→`   | Move to the previous or next grid cell, including empty cells.            | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
-|                           | `⇧←`/`⇧→` | Move to the previous or next grid cell, skipping empty cells.             | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
-|                           | `↑`/`↓`   | Move to the previous or next grid cell vertically, including empty cells. | [\[Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md) |
+| Area                      | Key         | Description                                                               | Since                                                                |
+|---------------------------|-------------|---------------------------------------------------------------------------|----------------------------------------------------------------------|
+| Button Shortcuts          | `⌘S`/`⌃S`   | Save the form definition                                                  | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⌘P`/`⌃P`   | Open the [Publish dialog](/form-builder/publishing.md)                    | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+| Cut, Copy and Paste       | `⌘X`/`⌃X`   | Cut the current control                                                   | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⌘C`/`⌃C`   | Copy the current control                                                  | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⌘V`/`⌃V`   | Paste from the toolbox                                                    | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+| Grid Navigation Shortcuts | `←`/`→`     | Move to the previous or next grid cell, including empty cells.            | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⇧←`/`⇧→`   | Move to the previous or next grid cell, skipping empty cells.             | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `↑`/`↓`     | Move to the previous or next grid cell vertically, including empty cells. | [\[Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md) |
+| Undo and Redo             | `⌘Z`/`⌃Z`   | Undo the last operation                                                   | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⌘⇧Z`/`⌃Y`  | Redo the last operation                                                   | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+| Dialog Shortcuts          | `⇧↵`        | Open the [Control Settings dialog](/form-builder/control-settings.md)     | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⌘J`/`⌃J`   | Open the [Quick control search](/form-builder/quick-control-search.md)    | [\[Orbeon Forms 2021.1\]](/release-notes/orbeon-forms-2021.1.md)     |
+|                           | `O F`       | Open [Form Settings](/form-builder/form-settings.md)                      | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `O P`       | Open [Permissions](/form-runner/access-control/deployed-forms.md)         | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `O E`       | Open [Email Settings](/form-builder/email-settings.md)                    | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `O M`       | Open [Messages](/form-builder/messages.md)                                | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `O S`       | Open [Edit Source](/form-builder/edit-source.md)                          | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `T W`       | Test the web form                                                         | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `T P`       | [Test PDF production](/form-builder/pdf-test.md)                          | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `T O`       | [Test the offline form](/form-builder/offline-test.md)                    | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `T F`       | [Inspect formulas](/form-builder/formulas-inspector.md)                   | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+| Inserting Form Structure  | `I F S`     | [Insert a new section](/form-builder/toolbox.md)                          | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `I F G`     | [Insert a new grid](/form-builder/toolbox.md)                             | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+|                           | `I F R`     | [Insert a new repeated grid](/form-builder/toolbox.md)                    | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
+| Inserting Form Controls   | `I C I`     | Insert Text Field                                                         | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I C T`     | Insert Text Area                                                          | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I C F`     | Insert Formatted Text Area                                                | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I U E`     | Insert Explanatory Text                                                   | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I U C`     | Insert Calculated Value                                                   | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I U H`     | Insert Hidden Field                                                       | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I T N`     | Insert Number                                                             | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I T E`     | Insert Email Field                                                        | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I T D`     | Insert Date Field                                                         | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I T T`     | Insert Time Field                                                         | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I S D`     | Insert Dropdown                                                           | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I S R`     | Insert Radio Buttons                                                      | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I S C`     | Insert Checkboxes                                                         | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I A F`     | Insert Attachment                                                         | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I A I`     | Insert Image Attachment                                                   | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+|                           | `I A V`     | Insert Video Attachment                                                   | [\[Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)     |
+| Reloading the Toolbox     | `⌘⇧R`/`⌃⇧R` | [Reload the toolbox](/form-builder/toolbox.md#reloading-the-toolbox)      | [\[Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) |
 
 ## Discoverability
 
@@ -25,96 +58,6 @@
     value="false"/>
 ```
 
-## Undo and redo
-
-You can use the following keyboard shortcuts:
-
-Apple operating systems:
-
-- `⌘Z`: undo the last operation
-- `⌘⇧Z`: redo the last operation
-
-Other operating systems:
-
-- `⌃Z`: undo the last operation
-- `⌃Y`: redo the last operation
-
-See also [Undo and redo](/form-builder/undo-redo.md).
-
-## Dialogs shortcuts
-
-- `⇧↵` (Shift-Enter or Shift-Return): open the [Control Settings dialog](/form-builder/control-settings.md)
-- `⌘J`/`⌃J`
-    - [SINCE Orbeon Forms 2021.1]
-    - Opens the [Quick control search](/form-builder/quick-control-search.md)
-
-[\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
-
-- Opening settings dialogs:
-    - `O F`: [open Form Settings](/form-builder/form-settings.md)
-    - `O P`: [open Permissions](/form-runner/access-control/deployed-forms.md)
-    - `O E`: [open Email Settings](/form-builder/email-settings.md)
-    - `O M`: [open Messages](/form-builder/messages.md)
-    - `O S`: [open Edit Source](/form-builder/edit-source.md)
-- Opening test dialogs:
-    - `T W`: test the web form
-    - `T P`: [test PDF production](/form-builder/pdf-test.md)
-    - `T O`: [test the offline form](/form-builder/offline-test.md)
-    - `T F`: [inspect formulas](/form-builder/formulas-inspector.md)
-
-## Inserting form structure
-
-[\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
-
-The mnemonics for these shortcuts are:
-
-- `I`: insert
-- `F`: form structure (for a while, this was `S`)
-
-Available shortcuts
-
-- `I F S`: [insert a new section](/form-builder/toolbox.md)
-- `I F G`: [insert a new grid](/form-builder/toolbox.md)
-- `I F R`: [insert a new repeated grid](/form-builder/toolbox.md)
-
-## Inserting form controls
-
-[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
-
-You can quickly insert form controls into a form at or after the current cell position. The mnemonics for these shortcuts are:
-
-- `I`: insert
-- category of control
-    - `C`: control
-    - `U`: utility controls
-    - `T`: typed controls
-    - `S`: selection controls
-    - `A`: attachment controls
-
-Available shortcuts:
-
-- `I C I`: Text Field
-- `I C T`: Text Area
-- `I C F`: Formatted Text Area
-- `I U E`: Explanatory Text
-- `I U C`: Calculated Value
-- `I U H`: Hidden Field
-- `I T N`: Number
-- `I T E`: Email Field
-- `I T D`: Date Field
-- `I T T`: Time Field
-- `I S D`: Dropdown
-- `I S R`: Radio Buttons
-- `I S C`: Checkboxes
-- `I A F`: Attachment
-- `I A I`: Image Attachment
-- `I A V`: Video Attachment
-
-## Reloading the toolbox
-
-[\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
-
-- `⌘⇧R`/`⌃⇧R`: [reload the toolbox](/form-builder/toolbox.md#reloading-the-toolbox)
 
 ## See also
 
