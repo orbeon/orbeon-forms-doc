@@ -1,24 +1,22 @@
 # Form Builder keyboard shortcuts
 
-## Availability
+## Shortcuts
 
-[SINCE Orbeon Forms 2020.1]
-
-The first keyboard shortcuts have been added with Orbeon Forms 2020.1. New shortcuts have been added since. See below for details.
-
-## Rationale
-
-When you start being comfortable with the Form Builder user interface, you might want to use keyboard shortcuts to speed up your work. Orbeon Forms is progressively introducing keyboard shortcuts to help you with this.
+| Area                      | Key       | Description                                                               | Since                                                                |
+|---------------------------|-----------|---------------------------------------------------------------------------|----------------------------------------------------------------------|
+| Button Shortcuts          | `⌘S`/`⌃S` | Save the form definition                                                  | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⌘P`/`⌃P` | Open the [Publish dialog](/form-builder/publishing.md)                    | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+| Cut, Copy and Paste       | `⌘X`/`⌃X` | Cut the current control                                                   | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⌘C`/`⌃C` | Copy the current control                                                  | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⌘V`/`⌃V` | Paste from the toolbox                                                    | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+| Grid Navigation Shortcuts | `←`/`→`   | Move to the previous or next grid cell, including empty cells.            | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⇧←`/`⇧→` | Move to the previous or next grid cell, skipping empty cells.             | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `↑`/`↓`   | Move to the previous or next grid cell vertically, including empty cells. | [\[Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md) |
 
 ## Discoverability
 
-[\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
-
-Most keyboard shortcut hints now show when you hover over the Form Builder toolbox, the buttons bar, or icons.
-
-[\[SINCE Orbeon Forms 2023.1.6\]](/release-notes/orbeon-forms-2023.1.6.md)
-
-If you want to disable hover hints because you find them distracting or for any other reason, set the following property to `false`. Its default value is `true`, meaning hints are shown by default for all forms.
+[\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md) Most keyboard shortcut hints now show when you hover over the Form Builder toolbox, the buttons bar, or icons.
+[\[SINCE Orbeon Forms 2023.1.6\]](/release-notes/orbeon-forms-2023.1.6.md) If you want to disable hover hints because you find them distracting or for any other reason, set the following property to `false`. Its default value is `true`, meaning hints are shown by default for all forms.
 
 ```xml
 <property
@@ -26,38 +24,6 @@ If you want to disable hover hints because you find them distracting or for any 
     name="oxf.fr.keyboard-shortcuts.show-hints.*.*"
     value="false"/>
 ```
-
-##  Buttons shortcuts
-
-You can use the following keyboard shortcuts:
-
-Apple operating systems:
-
-- `⌘S` (Command-S): save the form definition (like the "Save" button)
-- `⌘P`: open the [Publish dialog](/form-builder/publishing.md)
-
-Other operating systems:
-
-- `⌃S` (Ctrl-S): save the form definition (like the "Save" button)
-- `⌃P`: open the [Publish dialog](/form-builder/publishing.md)
-
-## Cut, copy and paste
-
-You can use the following keyboard shortcuts:
-
-Apple operating systems:
-
-- `⌘X`: cut the current control
-- `⌘C`: copy the current control
-- `⌘V`: paste from the toolbox
-
-Other operating systems:
-
-- `⌃X`: cut the current control
-- `⌃C`: copy the current control
-- `⌃V`: paste from the toolbox
-
-See also [Cut, copy and paste](/form-builder/cut-copy-paste.md).
 
 ## Undo and redo
 
@@ -95,16 +61,6 @@ See also [Undo and redo](/form-builder/undo-redo.md).
     - `T P`: [test PDF production](/form-builder/pdf-test.md)
     - `T O`: [test the offline form](/form-builder/offline-test.md)
     - `T F`: [inspect formulas](/form-builder/formulas-inspector.md)
-
-## Grid navigation shortcuts
-
-The grid navigation shortcuts use the keyboard cursor (arrow) keys.
-
-| Key       | Description                                                               | Since                                                                |
-|-----------|---------------------------------------------------------------------------|----------------------------------------------------------------------|
-| `←`/`→`   | Move to the previous or next grid cell, including empty cells.            | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
-| `⇧←`/`⇧→` | Move to the previous or next grid cell, skipping empty cells.             | [\[Orbeon Forms 2020.1\]](/release-notes/orbeon-forms-2020.1.md)     |
-| `↑`/`↓`   | Move to the previous or next grid cell vertically, including empty cells. | [\[Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md) |
 
 ## Inserting form structure
 
