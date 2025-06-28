@@ -14,7 +14,7 @@
 |                           | `↑`/`↓`      | Move to the previous or next grid cell vertically, including empty cells. | [2024.1.1](/release-notes/orbeon-forms-2024.1.1.md) |
 | Undo and Redo             | `⌘Z`/`⌃Z`    | Undo the last operation                                                   | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
 |                           | `⌘⇧Z`/`⌃Y`   | Redo the last operation                                                   | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
-| Dialog Shortcuts          | `⇧↵`         | Open the [Control Settings dialog](/form-builder/control-settings.md)     | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
+| All dialogs               | `⇧↵`         | Open the [Control Settings dialog](/form-builder/control-settings.md)     | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
 |                           | `⌘↵`/`⌃↵`    | Apply/OK dialog (clicks primary button)                                   | [2024.1](/release-notes/orbeon-forms-2024.1.md)     |
 |                           | `⌘J`/`⌃J`    | Open the [Quick control search](/form-builder/quick-control-search.md)    | [2021.1](/release-notes/orbeon-forms-2021.1.md)     |
 |                           | `O F`        | Open [Form Settings](/form-builder/form-settings.md)                      | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
@@ -26,6 +26,8 @@
 |                           | `T P`        | [Test PDF production](/form-builder/pdf-test.md)                          | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
 |                           | `T O`        | [Test the offline form](/form-builder/offline-test.md)                    | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
 |                           | `T F`        | [Inspect formulas](/form-builder/formulas-inspector.md)                   | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
+| Control Settings dialog   | `⌃[`         | Navigate to previous control                                              | [2024.1.3](/release-notes/orbeon-forms-2024.1.3.md) |
+|                           | `⌃]`         | Navigate to next control                                                  | [2024.1.3](/release-notes/orbeon-forms-2024.1.3.md) |
 | Tab Navigation            | `⌃}`/`⌃Tab`  | Move to next tab                                                          | [2024.1.2](/release-notes/orbeon-forms-2024.1.2.md) |
 |                           | `⌃{`/`⌃⇧Tab` | Move to previous tab                                                      | [2024.1.2](/release-notes/orbeon-forms-2024.1.2.md) |
 | Inserting Form Structure  | `I F S`      | [Insert a new section](/form-builder/toolbox.md)                          | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
@@ -60,7 +62,6 @@
     name="oxf.fr.keyboard-shortcuts.show-hints.*.*"
     value="false"/>
 ```
-
 
 ## See also
 
