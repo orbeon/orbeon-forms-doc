@@ -15,6 +15,7 @@
 | Undo and Redo             | `⌘Z`/`⌃Z`    | Undo the last operation                                                   | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
 |                           | `⌘⇧Z`/`⌃Y`   | Redo the last operation                                                   | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
 | Dialog Shortcuts          | `⇧↵`         | Open the [Control Settings dialog](/form-builder/control-settings.md)     | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
+|                           | `⌘↵`/`⌃↵`    | Apply/OK dialog (clicks primary button)                                   | [2024.1](/release-notes/orbeon-forms-2024.1.md)     |
 |                           | `⌘J`/`⌃J`    | Open the [Quick control search](/form-builder/quick-control-search.md)    | [2021.1](/release-notes/orbeon-forms-2021.1.md)     |
 |                           | `O F`        | Open [Form Settings](/form-builder/form-settings.md)                      | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
 |                           | `O P`        | Open [Permissions](/form-runner/access-control/deployed-forms.md)         | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
