@@ -4,7 +4,7 @@
 
 You'll most likely be interested in the information on this page if:
 
-- You are able to load a form produced by Orbeon Forms, but then Ajax requests sent by the browser occasionally or systematically get an HTTP 403 response, causing the "An error has occurred" dialog to show up.
+- You are able to load a form produced by Orbeon Forms, but then Ajax requests sent by the browser occasionally or systematically get an HTTP 440 response, causing the "An error has occurred" dialog to show up.
 - In your environment, requests from the browser don't immediately reach the app server running Orbeon Forms, but instead go through some other software. For instance, this is the case if you're using a reverse proxy or have your own code embedding forms produced by Orbeon Forms in your web pages.
 - You want to learn more about session management in Orbeon Forms.
 
@@ -34,18 +34,20 @@ For Orbeon Forms to operate normally, for a given web page loaded by the browser
 
 ![Which HTTP requests/responses we are interested in](../images/session-where.png)
 
-Note that those requirements apply to the HTTP requests and responses sent to and coming from Orbeon Forms. As illustrated in the above diagrams, if you have reverse proxy or embedding code those will be different than the HTTP requests and responses made by and received by the browser, and the `JSESSIONID` (or equivalent) used between the browser and the proxy / embedding code is likely to be different than the `JSESSIONID` used between the proxy / embedding code and Orbeon Forms. Again, Orbeon Forms' requirement apply to the latter.
+Note that those requirements apply to the HTTP requests and responses sent to and coming from Orbeon Forms. As illustrated in the above diagrams, if you have reverse proxy or embedding code those will be different from the HTTP requests and responses made by and received by the browser, and the `JSESSIONID` (or equivalent) used between the browser and the proxy / embedding code is likely to be different from the `JSESSIONID` used between the proxy / embedding code and Orbeon Forms. Again, Orbeon Forms' requirement apply to the latter.
 
-## HTTP 403 / "An error has occurred" dialog
+## HTTP 440 / "An error has occurred" dialog
 
-When Orbeon Forms receives an Ajax request (see the third step in the previous section), if it can't find the state associated to the UUID in the session, it responds with an [HTTP 403 error](https://en.wikipedia.org/wiki/HTTP_403). When the Orbeon Forms client-side code receives the 403, it shows a dialog titled "An error has occurred".
+When Orbeon Forms receives an Ajax request (see the third step in the previous section), if it can't find the state associated to the UUID in the session, it responds with an [HTTP 440 error](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_client_errors) (Login Timeout). When the Orbeon Forms client-side code receives the 440, it shows a dialog titled "An error has occurred".
+
+[BEFORE Orbeon Forms 2022.1.5], Orbeon Forms returned HTTP 403 instead of 440 for this scenario.*
 
 ### Normal cases
 
-The following 2 cases can happen, and if they they do getting a 403 response and the corresponding "An error has occurred" dialog is expected, but those situations should happen very rarely:
+The following 2 cases can happen, and if they do getting a 440 response and the corresponding "An error has occurred" dialog is expected, but those situations should happen very rarely:
 
 1. The user's session has expired – As long as users keep a form open in their browser, by default the Orbeon Forms client-side code makes sure to send a "session heartbeat" Ajax request before the session expires to keep it alive. However:
-    - It's possible for you to disable the [session heartbeat](../../contributors/state-handling.md#session-heartbeat) feature. If you do, it is possible for the session to expire even if users keep a browser window with the form open.
+    - It's possible for you to disable the [session heartbeat](state-handling.md#session-heartbeat) feature. If you do, it is possible for the session to expire even if users keep a browser window with the form open.
     - In situations where the browser looses connectivity to the server for an extended period of time, the session heartbeat mechanism might not be able to contact the server before the session expires. For instance, this could happen if a user were to load a form on her laptop, close the lid, commute home, open the lid, and try to continue filling out the same form.
 2. A user loads the form, the server running Orbeon Forms is restarted, and then the user tries to interact with the form.
 
@@ -53,7 +55,7 @@ In both cases, if, after getting the error, users reload the form and get the er
 
 ### Problematic cases
 
-If you're getting 403 errors more regularly, and you have software sitting between the browser and Orbeon Forms, it is a sign that this software does not handle cookies properly. That software can be:
+If you're getting 440 errors more regularly, and you have software sitting between the browser and Orbeon Forms, it is a sign that this software does not handle cookies properly. That software can be:
 
 - A reverse proxy, for instance used to provide authentication, single sign-on, serve assets more efficiently, or provide security services.
 - Code running in a web app used to embed a form produced by Orbeon Forms into a page produced by the web app.
