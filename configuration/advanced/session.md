@@ -51,12 +51,12 @@ In both cases, if, after getting the error, users reload the form and get the er
 
 If you're getting 440 errors more regularly, and you have software sitting between the browser and Orbeon Forms, it is a sign that this software does not handle cookies properly. That software can be:
 
-- A reverse proxy, for instance used to provide authentication, single sign-on, serve assets more efficiently, or provide security services.
+- A reverse proxy, for load balancing, instance used to provide authentication, single sign-on, serve assets more efficiently, or provide security services.
 - Code running in a web app used to embed a form produced by Orbeon Forms into a page produced by the web app.
 
 In those cases, you can solve the issue by either:
 
+- When using a [load balancer](clustering.md) that dispatches requests across multiple servers, ensure session affinity (sticky sessions) is configured so that the initial page load and all subsequent Ajax requests from the same page load are routed to the same server instance. Some load balancers may, even with session affinity configured, decide to send a subsequent request to a different server if they determine that the original target server is too slow to respond and might not be operational. Unless you have set up session replication, you must ensure that your load balancer configuration prevents this failover behavior from occurring.
 - If you have own Java code to embed forms created with Form Builder, switch to using the built-in [Form Runner Java Embedding API](../../form-runner/link-embed/java-api.md), which will handle cookies properly.
 - Debug and fix the issue is the said software, armed with a better understanding of the Orbeon Forms' requirements when it comes to cookies, based on this information on this page.
 - If using Tomcat, in Tomcat's directory edit `conf/context.xml`, and add `sessionCookiePath="/"` on the root element, so it looks as follows: `<Context sessionCookiePath="/">`. This will make the job of any reverse proxy or embedding code you might have much simpler, and could help you get around bugs in that code.
-
