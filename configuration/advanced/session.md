@@ -8,7 +8,7 @@ You'll most likely be interested in the information on this page if:
 - In your environment, requests from the browser don't immediately reach the app server running Orbeon Forms, but instead go through some other software. For instance, this is the case if you're using a reverse proxy or have your own code embedding forms produced by Orbeon Forms in your web pages.
 - You want to learn more about session management in Orbeon Forms.
 
-[BEFORE Orbeon Forms 2022.1.5], Orbeon Forms returned an HTTP 403 error code instead of 440 for this scenario. The rest of this page refers to the 440 code; that same information is valid with the 403 code if you are using an earlier version.*
+[BEFORE Orbeon Forms 2022.1.5], Orbeon Forms returned an HTTP 403 error code instead of 440 for this scenario. The rest of this page refers to the 440 code; that same information is valid with the 403 code if you are using an earlier version.
 
 ## `JSESSIONID` and `UUID`
 
