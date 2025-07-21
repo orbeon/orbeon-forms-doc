@@ -29,13 +29,16 @@ See [Renaming of controls and formulas](/form-builder/formulas.md#renaming-of-co
 
 The following options are available:
 
+- __Index control:__
+  - SINCE Orbeon Forms 2021.1
+  - Index the value of this control even if it's not shown or searchable from the Summary page, or bulk editable. This makes the control accessible from the [search API](../form-runner/api/persistence/search.md).
 - __Show on Summary page:__
     - When selected, the control value is visible as a Summary page column and searchable.
 - __Allow bulk edit:__
     - When selected, the control value can be bulk edited from the Summary page.
-- __Index control:__
-    - SINCE Orbeon Forms 2021.1
-    - Index the value of this control even if it's not shown or searchable from the Summary page, or bulk editable. This makes the control accessible from the [search API](../form-runner/api/persistence/search.md).
+- __By default, sort this by column:__
+  - SINCE Orbeon Forms 2025.1
+  - Change the default sort column on the Summary page.
 - __Encrypt data at rest:__
     - SINCE Orbeon Forms 2018.1
     - This is an Orbeon Forms PE feature.
@@ -88,6 +91,8 @@ By default, data entries on the Summary page are sorted by last modification dat
     <img alt="Default sort column" src="images/control-settings-sort-by-this-column.png" width="264">
     <figcaption>Default sort column</figcaption>
 </figure>
+
+When enabled on a control, this setting will automatically be disabled on all other controls.
 
 ##### Email options
     
