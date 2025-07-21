@@ -48,7 +48,7 @@ The following options are available:
 It is possible to restrict the "Show on Summary page" and "Allow bulk edit" options to one or more specific roles (i.e. group of users). When multiple roles are specified, the logic that applies can be chosen as well. If "All" is selected, then all specified roles must be present. If "Any" is selected, just one of the specified roles must be present.
 
 <figure>
-    <img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="414">
+    <img alt="Role restriction" src="images/control-settings-restrict-to-role.png" width="492">
     <figcaption>Role restriction</figcaption>
 </figure>
 
@@ -59,7 +59,7 @@ It is possible to restrict the "Show on Summary page" and "Allow bulk edit" opti
 By default, bulk edition of form data on the Summary Page will simply save the updated form data. You can also specify a custom process to run by selecting "Run process" instead of "Save data".
 
 <figure>
-    <img alt="Bulk process" src="images/control-settings-bulk-process.png" width="417">
+    <img alt="Bulk process" src="images/control-settings-bulk-process.png" width="485">
     <figcaption>Bulk process</figcaption>
 </figure>
 
@@ -75,6 +75,19 @@ It's possible to specify a list of processes available for selection in the Cont
 ```
 
 The value is a space-separated list of process names. By default, this property is empty.
+
+The processes must not only be listed in the `oxf.fr.summary.bulk-processes` property, but also be defined as individual `oxf.fr.detail.process` properties. See [Simple process syntax](/form-runner/advanced/buttons-and-processes/syntax.md) for more information.
+
+#### Default sort column
+
+[SINCE Orbeon Forms 2025.1]
+
+By default, data entries on the Summary page are sorted by last modification date/time, from most recent to least recent. You can change that behavior by checking the "By default, sort by this column" checkbox. When this setting is enabled, the Summary page will sort the data entries by the selected control when first loaded. It will still be possible to change the sort column and direction by clicking on the column headers.
+
+<figure>
+    <img alt="Default sort column" src="images/control-settings-sort-by-this-column.png" width="264">
+    <figcaption>Default sort column</figcaption>
+</figure>
 
 ##### Email options
     
