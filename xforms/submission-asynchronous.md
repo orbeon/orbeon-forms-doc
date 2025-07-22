@@ -29,6 +29,22 @@ This is useful for example to speed up the initial load of data from slow servic
 
 _NOTE: While XForms 1.1 specifies that `mode="asynchronous"` should be the default, in Orbeon Forms `mode="synchronous"` is the default._
 
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+The `xxf:response-must-await` attribute allows specifying how long the server must wait for a submission to complete before returning a response to the client. For example:
+
+```xml
+xxf:response-must-await="200ms"
+```
+
+Also:
+
+- By default, the submission awaits indefinitely.
+- If multiple submissions are pending, the server waits up to the longest specified time.
+- To not wait at all, use `xxf:response-must-await="0ms"`.
+
+For the format of the duration value, see [Asynchronous actions](/form-builder/actions-syntax.md#asynchronous-actions).
+
 ## The xxf:join-submission action
 
 ### Availability
