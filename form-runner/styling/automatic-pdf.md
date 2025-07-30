@@ -38,7 +38,7 @@ You can do some prototype by instructing your browser emulate `@media print` aft
 
 In addition to the `@page` directive, the PDF layout supports positioning on items at the top and bottom of the page. 
 
-Here is the rough CSS as of Orbeon Forms 2018.1:
+Here is the rough CSS as of Orbeon Forms 2018.1 (but see below for the recommended way):
 
 ```css
 @page {
@@ -80,6 +80,14 @@ You can influence the content of the top and bottom parts of the PDF by overridi
     }
 }
 ```
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
+We recommend using the [automatic PDF header and footer configuration](../feature/pdf-automatic-header-footer.md) for any CSS modifying the header and footer of the PDF, using the `"css"` property.
+
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+
+The order of precedence of the custom CSS and the header and footer configuration has changed. For details, see the [release notes](/release-notes/orbeon-forms-2024.1.md#pdf-headerfooter-configuration).
 
 ## See also
 
