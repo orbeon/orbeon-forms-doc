@@ -324,6 +324,39 @@ The following enhancements are part of 2024.1, but have also been backported to 
 
 ## Compatibility and upgrade notes
 
+### Use of the `orbeon` global library
+
+If you are making use of the `orbeon` global section templates library, make sure that you add the following configuration property to your `properties-local.xml` file, if you don't already have it:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.orbeon.*.form"
+    value="MY_PROVIDER"/>
+```
+
+where `MY_PROVIDER` is the name of the persistence provider you are using. For example, if you are using the `postgresql` provider, you would set:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.orbeon.*.form"
+    value="postgresql"/>
+```
+
+It is important that the property be at least as specific as that. You could be even more specific, with:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.persistence.provider.orbeon.library.form"
+    value="MY_PROVIDER"/>
+```
+
+This will allow Orbeon Forms to load the `orbeon` global section templates library from your database, instead of from the embedded sample SQLite database.
+
+If you fail to do this, you might be prevented from publishing forms which use the `orbeon` global section templates library, as Orbeon Forms will not be able to find the library. For details, see [#7165](https://github.com/orbeon/orbeon-forms/issues/7165).
+
 ### Namespace attributes at the top of properties-local.xml
 
 You need to make sure that your main Orbeon Forms configuration file, `properties-local.xml`, features `xmlns:fr` and `xmlns:xxf` attributes at the top. Your existing file might start with:
