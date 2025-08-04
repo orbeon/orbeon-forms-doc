@@ -32,16 +32,16 @@ Major releases contain new features and bug-fixes. In some cases, bug-fixes cann
 
 The only sure way to keep up to date is to eventually update to a newer major version of Orbeon Forms. We acknowledge that upgrading, while it should always be smooth, comes with some risks, as with any software upgrade.
 
-You can reduce that risk by *not upgrading* to the first published major release, and wait until a subsequent dot release. For example, instead of immediately upgrading to Orbeon Forms 2021.1, wait until Orbeon Forms 2021.1.1 or 2020.1.2.  
+You can reduce that risk by *not upgrading* to the first published major release, and wait until a later dot release. For example, if you are using Orbeon Forms 2023.1.7, instead of immediately upgrading to Orbeon Forms 2024.1, wait until Orbeon Forms 2024.1.1 or 2024.1.2 is available.  
 
 ## Where do bug-fixes go?
 
 The way we handle fixes, generally, is as follows:
 
-- All new fixes go into the branch for the next major version of Orbeon Forms (for example the future Orbeon Forms 2019.1).
-- Most fixes (as opposed to new features) go into the previous major version of Orbeon Forms as well (for example Orbeon Forms 2020.1), and are released as a dot release at a later time (for example Orbeon Forms 2020.1.6).
-- Some important fixes are backported to earlier versions of Orbeon Forms (for example 2019.2.x) at Orbeon's discretion.
-- We backport certain features to customer branches on demand. But the more time passes between versions, the harder and riskier it becomes to backport fixes. This is because the codebase is more likely to change over time.
+- All new fixes go into the branch for the next major version of Orbeon Forms (for example, Orbeon Forms 2025.1).
+- Most fixes (as opposed to new features) go into the previous major version of Orbeon Forms as well (for example Orbeon Forms 2024.1), and are released as a dot release at a later time (for example Orbeon Forms 2024.1.3).
+- Some important fixes are backported to earlier versions of Orbeon Forms (for example 2022.1.x) at Orbeon's discretion.
+- For Gold support customers, we backport certain features to customer branches on demand. But the more time passes between versions, the harder and riskier it becomes to backport fixes. This is because the codebase is more likely to change over time.
 
 ## Compatibility policy
 
@@ -56,7 +56,7 @@ The way we handle fixes, generally, is as follows:
 *NOTE: As a reminder, starting with Orbeon Forms 2016.1, we are using a versioning scheme with the number of the year first followed by the number of the major release during that year. See [Release History](release-history.md) for details.*
 
 - Between any two subsequent 4.x releases, or 20xx.x releases, upgrades are expected to be fairly straightforward.
-- The longer the interval of time between two release, the harder the upgrade might be. For example, it will be easier to upgrade between 2022.1 and 2023.1 than between 2016.1 and 2023.1.
+- The longer the interval of time between two release, the harder the upgrade might be. For example, it will be easier to upgrade between 2023.1 and 2024.1 than between 2016.1 and 2024.1.
 - Orbeon Forms 4.0 was a large release with many changes. In general upgrading between pre-4.0 releases and 4.x releases is more difficult than upgrades between two 4.x or 20xx.x releases.
 - Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x or 20xx.x releases.
 
