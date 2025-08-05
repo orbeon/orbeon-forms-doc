@@ -584,6 +584,20 @@ These functions return a control's current label, help, hint, or alert, given a 
 
 If the control is not  relevant, or does not have an associated label, help, hint, or alert, the empty sequence is returned.
 
+## xxf:open dialogs()
+
+[\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
+
+```xpath
+xxf:open-dialogs() as xs:integer
+```
+
+The `xxf:open-dialogs()` function returns the number of open dialogs in the page.
+
+If there is no pending upload, the function returns 0.
+
+It is rare, but possibe, that there is more than 1 dialog open. Typically, the function returns 0 or 1.
+
 ## xxf:pending-uploads()
 
 ```xpath
