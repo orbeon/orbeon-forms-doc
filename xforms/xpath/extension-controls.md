@@ -584,7 +584,7 @@ These functions return a control's current label, help, hint, or alert, given a 
 
 If the control is not  relevant, or does not have an associated label, help, hint, or alert, the empty sequence is returned.
 
-## xxf:open dialogs()
+## xxf:open-dialogs()
 
 [\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
 
