@@ -191,13 +191,13 @@ Show a confirmation dialog. If the user selects "No", the current process is abo
     - `html`: [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) `"true"` if the message is HTML (default is `"false"`)
     - `resource`: resource key pointing to the message
 
-Example of use:
+In the following example, data is saved, then confirmation from the user is asked before sending data to a service:
 
 ```
 save
 then confirm
 then suspend
-then send("oxf.fr.detail.send.success")'/>
+then send("oxf.fr.detail.send.success")
 ```
 
 *NOTE: The `confirm` action is not synchronous, so the process *must* be suspended right after or the process will continue before the dialog is shown to the user.*
@@ -208,7 +208,7 @@ You can use a specific confirmation message with the `message` parameter:
 save
 then confirm(message = "Please confirm that you would like to submit your data.")
 then suspend
-then send("oxf.fr.detail.send.success")'/>
+then send("oxf.fr.detail.send.success")
 ```
 
 You can also override the default confirmation message:
@@ -226,7 +226,7 @@ You can also use a path to a resource, including a custom resource. For example"
 save
 then confirm(resource = "acme-resource-1")
 then suspend
-then send("oxf.fr.detail.send.success")'/>
+then send("oxf.fr.detail.send.success")
 ```
 
 If you have defined custom resources as follows:
