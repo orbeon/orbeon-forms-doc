@@ -459,8 +459,38 @@ In some cases, in particular when [embedding a form](/form-runner/link-embed/jav
     value="false"/>
 ```
 
-
 See also [the `set-data-status` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status).
+
+## Warning the user when data has changed since initially loaded
+
+[SINCE Orbeon Forms 2025.1]
+
+When multiple users edit the same form instance simultaneously, or when a single user edits the same form from different browser tabs or sessions, data conflicts can occur. By default, Orbeon Forms will overwrite previously saved data without warning, which can result in lost changes.
+
+It is possible to configure Form Runner to check whether the data has changed since initially loaded by setting the following property to `save-only`:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.conflict-detection.*.*"
+    value="save-only"/>
+```
+
+When the conflict detection feature is enabled, saving the data will trigger a check to determine whether the data has changed since the form was loaded.
+
+If no conflicts are detected, saving proceeds as usual. If a conflict is detected, users are presented with a dialog offering two options:
+
+- Save and overwrite: Proceeds with saving the current user's changes, overwriting any changes made by other sessions or tabs
+- Discard and reload: Discards the current user's unsaved changes and reloads the form with the latest data from the database
+
+<figure>
+    <img src="../images/conflict-detected.png" width="510">
+    <figcaption>Conflict detected</figcaption>
+</figure>
+
+### Limitations
+
+Currently, conflict detection only occurs when saving data (`save-only` mode). Future versions may include polling-based conflict detection to warn users of conflicts before they attempt to save.
 
 ## Initial data
 
