@@ -20,3 +20,5 @@ By default, the editor takes 100% of the available width, and has a fixed height
     width: 50em;
 }
 ```
+
+[1]: https://codemirror.net/
