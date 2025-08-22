@@ -316,6 +316,23 @@ Make sure you return a `Content-Type` header with a value of `application/xml` o
 
 The service can then retrieve the list of countries from a database, and return the list as XML or JSON in a response body. Here again, you can return either a `ReadableStream<Uint8Array>` or a `Uint8Array`.
 
+### Autosave
+
+[\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
+
+Until this version, Form Runner would autosave data under the [normal conditions](../persistence/autosave.md#enabling-autosave).
+
+However, the persistence provider considered to check the `oxf.fr.persistence.$name.autosave` property was the provider in use in the server-side JVM environment. This does not make sense in the JavaScript environment, where saving data goes through the [`SubmissionProvider` API](#submissionprovider).
+
+Instead, since this version, a special persistence provider name called `javascript` is exposed. By default, for this provider, autosave is disabled. You can enable autosave for this provider with:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.persistence.javascript.autosave"
+    value="true"/>
+```
+
 ## See also
 
 - [Offline test](/form-builder/offline-test.md)
