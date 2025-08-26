@@ -350,7 +350,9 @@ ORBEON.fr.API.isFormDataSafe(
 
 Prefer using first the `getForm()` function, and then, on the object returned, the `isFormDataSafe()` function.
 
-## Focusing on a control
+## Wizard API
+
+### Focusing on a control
 
 [SINCE Orbeon Forms 2017.2]
 
@@ -403,7 +405,9 @@ This now also works with the `strict` and `lax` validation modes. In these modes
 - If so, it will switch and focus on the control.
 - If not, it will ignore the `focus()` request. 
 
-## Listening for Error Summary navigation
+## Error Summary API
+
+### Listening for Error Summary navigation
 
 [SINCE Orbeon Forms 2022.1]
 
