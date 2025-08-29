@@ -61,7 +61,7 @@ On the other hand, if the control exists but is not shown at a given time, for e
 Example:
 
 ```javascript
-ORBEON.fr.API.getFOrm().findControlsByName('street-address')
+ORBEON.fr.API.getForm().findControlsByName('street-address')
 ```
 
 ### Setting a control's value
