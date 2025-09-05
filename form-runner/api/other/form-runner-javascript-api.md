@@ -450,6 +450,158 @@ The listener can be removed with `removeNavigateToErrorListener()` by passing th
 ORBEON.fr.API.errorSummary.removeNavigateToErrorListener(fn)
 ```
 
+## Pager API
+
+[SINCE Orbeon Forms 2025.1]
+
+The Pager API allows you to interact with pagination controls in repeated sections.
+
+### Getting a pager for a specific repeated section
+
+The `getPager()` function returns a pager object for a specific repeated section by name. This method is called on the `FormRunnerForm` object.
+
+```typescript
+function getPager(repeatedSectionName: string): Pager | undefined
+```
+
+| Name                     | Required | Type     | Description                          |
+|--------------------------|----------|----------|--------------------------------------|
+| **repeatedSectionName**  | Yes      | `string` | Name of the repeated section control |
+
+It returns a `Pager` object if found, or `undefined` if:
+- The repeated section is not found
+- The repeated section is disabled
+- The repeated section doesn't have pagination enabled
+
+Example:
+
+```javascript
+const pager = ORBEON.fr.API.getForm().getPager('my-repeated-section');
+if (pager != null) {
+    console.log('Current page:', pager.pageNumber);
+}
+```
+
+### Getting all pagers in the form
+
+The `getPagers()` function returns all pager objects in the current form. This method is called on the `FormRunnerForm` object.
+
+```typescript
+function getPagers(): Pager[]
+```
+
+It returns an array of `Pager` objects for all repeated sections that have pagination enabled and are not disabled.
+
+Example:
+
+```javascript
+const pagers = ORBEON.fr.API.getForm().getPagers();
+pagers.forEach(pager => {
+    console.log(`Section: ${pager.repeatedSectionName}, page: ${pager.pageNumber}`);
+});
+```
+
+### The `Pager` object
+
+The `Pager` object provides information about and control over pagination in a repeated section.
+
+#### Properties
+
+All properties except the section name return `number | undefined` (undefined if the value is not available):
+
+| Property                 | Type                  | Description                                           |
+|--------------------------|-----------------------|-------------------------------------------------------|
+| **repeatedSectionName**  | `string`              | Name of the repeated section                          |
+| **itemFrom**             | `number \| undefined` | Index of the first item on the current page (1-based) |
+| **itemTo**               | `number \| undefined` | Index of the last item on the current page (1-based)  |
+| **itemCount**            | `number \| undefined` | Total number of items across all pages                |
+| **pageSize**             | `number \| undefined` | Number of items displayed per page                    |
+| **pageNumber**           | `number \| undefined` | Current page number (1-based)                         |
+| **pageCount**            | `number \| undefined` | Total number of pages                                 |
+
+Example:
+
+```javascript
+const pager = ORBEON.fr.API.getForm().getPager('employees');
+if (pager != null) {
+    console.log(`Showing items ${pager.itemFrom}-${pager.itemTo} of ${pager.itemCount}`);
+    console.log(`Page ${pager.pageNumber} of ${pager.pageCount}`);
+}
+```
+
+#### Setting the current page
+
+The `setCurrentPage()` function navigates to a specific page.
+
+```typescript
+function setCurrentPage(page: number): void
+```
+
+| Name     | Required | Type     | Description                          |
+|----------|----------|----------|--------------------------------------|
+| **page** | Yes      | `number` | Page number to navigate to (1-based) |
+
+Example:
+
+```javascript
+ORBEON.fr.API.getForm().getPager('my-repeated-section').setCurrentPage(3);
+```
+
+#### Listening for page changes
+
+You can listen for page change events using the `addPageChangeListener()` function.
+
+```typescript
+function addPageChangeListener(
+    listener: (event: PageChangeEvent) => void
+): void
+```
+
+The `PageChangeEvent` object contains information about the page change:
+
+```typescript
+type PageChangeEvent = {
+    readonly repeatedSectionName: string; // Repeated section name
+    readonly previousPage       : number; // Previous page number (1-based)
+    readonly currentPage        : number; // Current page number (1-based)
+    readonly pageCount          : number; // Total number of pages
+    readonly itemCount          : number; // Total number of items across all pages
+}
+```
+
+Example:
+
+```javascript
+const pager = ORBEON.fr.API.getForm().getPager('my-repeated-section');
+
+function onPageChange(event) {
+    console.log(`Section ${event.repeatedSectionName} changed from page ${event.previousPage} to page ${event.currentPage}`);
+}
+
+pager.addPageChangeListener(onPageChange);
+```
+
+#### Removing page change listeners
+
+You can remove a previously added listener using the `removePageChangeListener()` function.
+
+```typescript
+function removePageChangeListener(
+    listener: (event: PageChangeEvent) => void
+): void
+```
+
+The `listener` parameter must be the same function object that was passed to `addPageChangeListener()`.
+
+Example:
+
+```javascript
+const pager = ORBEON.fr.API.getForm().getPager('my-repeated-section');
+
+// Remove the previously added listener
+pager.removePageChangeListener(onPageChange);
+```
+
 ## See also
 
 - [Adding your own JavaScript](/configuration/properties/form-runner.md#adding-your-own-javascript)
