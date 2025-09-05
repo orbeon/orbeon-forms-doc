@@ -507,17 +507,17 @@ The `Pager` object provides information about and control over pagination in a r
 
 #### Properties
 
-All properties except the section name return `number | undefined` (undefined if the value is not available):
+All properties except the section name return `number`:
 
-| Property                 | Type                  | Description                                           |
-|--------------------------|-----------------------|-------------------------------------------------------|
-| **repeatedSectionName**  | `string`              | Name of the repeated section                          |
-| **itemFrom**             | `number \| undefined` | Index of the first item on the current page (1-based) |
-| **itemTo**               | `number \| undefined` | Index of the last item on the current page (1-based)  |
-| **itemCount**            | `number \| undefined` | Total number of items across all pages                |
-| **pageSize**             | `number \| undefined` | Number of items displayed per page                    |
-| **pageNumber**           | `number \| undefined` | Current page number (1-based)                         |
-| **pageCount**            | `number \| undefined` | Total number of pages                                 |
+| Property                 | Type     | Description                                           |
+|--------------------------|----------|-------------------------------------------------------|
+| **repeatedSectionName**  | `string` | Name of the repeated section                          |
+| **itemFrom**             | `number` | Index of the first item on the current page (1-based) |
+| **itemTo**               | `number` | Index of the last item on the current page (1-based)  |
+| **itemCount**            | `number` | Total number of items across all pages                |
+| **pageSize**             | `number` | Number of items displayed per page                    |
+| **pageNumber**           | `number` | Current page number (1-based)                         |
+| **pageCount**            | `number` | Total number of pages                                 |
 
 Example:
 
