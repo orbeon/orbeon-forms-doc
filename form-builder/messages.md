@@ -42,7 +42,7 @@ success-message("save-success")
 
 ## Custom messages
 
-When overriding existing processes or introducing custom processes in the properties, you can also reference custom messages that are not used internally by Form Runner.
+When overriding existing processes or introducing custom processes in the properties, you can also reference custom messages that are not used internally by Form Runner. You can do so by selecting "Other" in the name dropdown and entering a custom name.
 
 For example, you might want to define a custom `email-and-save` process to email and save your form, and display a custom `sent-and-saved` message (defined via the Messages dialog) upon success. This allows you to use a more specific message than the pre-defined `save-success` message.
 
