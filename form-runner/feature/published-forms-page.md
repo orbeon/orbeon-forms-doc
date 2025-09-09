@@ -69,6 +69,22 @@ The table listing the forms links, for each form, either to the `summary` or the
 
 For instance, if you set it to `new summary`, the priority will be given to the `new` instead of the `summary` page. If you list only one page, say `new`, then entries in the table will only link to the `new` page, of course if the user has access to it. If you leave the value blank, the forms will only be listed, with no link.
 
+### Search options opened on load
+
+[\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
+
+This property controls whether the search options area is opened by default when the Published Forms page loads. It allows you to provide a better user experience for forms where users frequently need to perform structured searches by having the search options immediately available.
+
+- When set to `"true"`: The search options area is shown by default when the page loads
+- When set to `"false"` (default): The search options area is collapsed by default when the page loads
+
+```xml
+<property 
+    as="xs:boolean"  
+    name="oxf.fr.home.search-options-opened-on-load.*.*"              
+    value="true"/>
+```
+
 ## Orbeon Forms 4.0 to 4.2
 
 For each form definition the current user has access to, the following links are shown if allowed:
