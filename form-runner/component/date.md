@@ -44,7 +44,7 @@ This is unspecified by default:
 
 [SINCE Orbeon Forms 2023.1.4]
 
-The Date component adds an `output-format` parameter. This parameter can be used to override the global property at the control level, the form level, or via `properties-local.xml` with the following new property:
+The Date component adds an `output-format` parameter. This parameter can be used to override the global property at the control level, the form level, or via `properties-local.xml` with the following property:
 
 ```xml
 <property
@@ -53,16 +53,25 @@ The Date component adds an `output-format` parameter. This parameter can be used
     value=""/>
 ```
 
+The format is a "picture string". These are examples of values supported:
+
+| Format            | Example    | Description                          |
+|-------------------|------------|--------------------------------------|
+| `[M]/[D]/[Y]`     | 11/5/2023  | also called "North American format"  |
+| `[D]/[M]/[Y]`     | 5/11/2023  | also called "European format"        | 
+| `[D].[M].[Y]`     | 5.11.2023  | variation with dot separator         |
+| `[D]-[M]-[Y]`     | 5-11-2023  | variation with dash separator        |
+| `[M01]/[D01]/[Y]` | 11/05/2023 | force two digits for months and days | 
+| `[Y]-[M01]-[D01]` | 2023-11-05 | ISO format                           |
+
 As usual, the property can use an app name and form name (with possible wildcards) to specify a default value for all controls in a given app/form:
 
 ```xml
 <property
     as="xs:string"
     name="oxf.xforms.xbl.fr.date.output-format.acme.*"
-    value="[H01]:[m]"/>
+    value="[Y]-[M01]-[D01]"/> 
 ```
-
-The value is in the same format as the global `oxf.xforms.format.input.date` property.
 
 By default, the `output-format` parameter is not set, and the global `oxf.xforms.format.input.date` property is used for backward compatibility.
 
