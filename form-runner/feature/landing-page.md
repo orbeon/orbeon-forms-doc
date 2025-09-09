@@ -34,6 +34,23 @@ The following property control which cards are shown on the Landing page:
     value="quick-links published-forms form-builder-forms demo-forms"/>
 ```
 
+[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+
+You can add cards showing the latest data for specific forms. You do so by adding a token of the form `$app/$form/$version`, where:
+
+- `$app` is the application name
+- `$form` is the form name
+- `$version` is the form version
+
+For example, to show the latest data for the form `acme/sales/1`, you would use:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.landing.cards"
+    value="quick-links published-forms form-builder-forms acme/sales/1"/>
+```
+
 [\[SINCE Orbeon Forms 2024.1.1\]](/release-notes/orbeon-forms-2024.1.1.md)
 
 The following property controls the number of rows available on cards shown on the Landing page:
