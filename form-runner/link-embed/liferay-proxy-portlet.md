@@ -41,7 +41,7 @@ _WARNING: Even though you can configure the proxy portlet to show a give app and
 
 [\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
 
-The proxy portlet now performs filtering of incoming paths, and rejects access to disallowed pages as follows.
+The proxy portlet now performs filtering of incoming paths, and rejects access to disallowed pages as follows
 
 | Configuration  | Landing Page | Summary Page | New Page | Edit Page | View Page | Other Pages | Notes                |
 |----------------|--------------|--------------|----------|-----------|-----------|-------------|----------------------|
@@ -57,9 +57,9 @@ For example, if you configure the proxy portlet as follows:
 
 The user:
 
-- will be shown the form's New Page
+- will be shown the `acme`/`sales` form's New Page
 - will not have access, through links and navigation, to the Summary Page, Landing Page, or other Form Runner pages
-- will not have access to the New Page of other forms
+- will not have access to the New Page or other pages of other forms
 
 _NOTE: It is still possible for Form Runner to be configured to navigate to other pages through processes and actions. If you configure custom processes and actions that can take the user to such pages, enabling form access permissions should be strongly considered._
 
