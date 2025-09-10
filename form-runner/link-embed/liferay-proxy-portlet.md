@@ -37,7 +37,7 @@ This guide describes how to install, administer and use the Form Runner proxy po
 
 ## Security considerations
 
-_WARNING: Even though you can configure the proxy portlet to show a give app and form, the proxy portlet by default only delegates to Form Runner. It is important that you secure Form Runner with proper form permissions, in particular._
+__WARNING: Even though you can configure the proxy portlet to show a give app and form, the proxy portlet by default only delegates to Form Runner. It is important that you secure Form Runner with proper form permissions, in particular.__
 
 [\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
 
@@ -61,7 +61,7 @@ The user:
 - will not have access, through links and navigation, to the Summary Page, Landing Page, or other Form Runner pages
 - will not have access to the New Page or other pages of other forms
 
-_NOTE: It is still possible for Form Runner to be configured to navigate to other pages through processes and actions. If you configure custom processes and actions that can take the user to such pages, enabling form access permissions should be strongly considered._
+__WARNING: It is still possible for Form Runner to be configured to navigate to other pages through processes and actions. If you configure custom processes and actions that can take the user to such pages, enabling form access permissions should be strongly considered.__
 
 ## Architecture
 
