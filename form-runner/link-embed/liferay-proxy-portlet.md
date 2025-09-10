@@ -41,7 +41,7 @@ __WARNING: Even though you can configure the proxy portlet to show a give app an
 
 [\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
 
-The proxy portlet now performs filtering of incoming paths, and rejects access to disallowed pages as follows
+The proxy portlet now performs filtering of incoming paths, and rejects access to disallowed pages as follows:
 
 | Configuration  | Landing Page | Summary Page | New Page | Edit Page | View Page | Other Pages | Notes                |
 |----------------|--------------|--------------|----------|-----------|-----------|-------------|----------------------|
