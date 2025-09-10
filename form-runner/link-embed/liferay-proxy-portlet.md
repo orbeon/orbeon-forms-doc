@@ -31,11 +31,37 @@ Form Runner can be deployed [directly](../../form-runner/link-embed/liferay-full
 - Form Runner can be maintained and upgraded separately from the portal.
 - The Form Runner application itself does not have to be exposed to the outside world.
 
-If you only need Form Runner and are happy with deploying only one form per portlet, and if you want a simple configuration UI to set this up, then the proxy portlet is for you. Otherwise, you will have to look into the [full portlet](../../form-runner/link-embed/liferay-full-portlet.md).
-
 This guide describes how to install, administer and use the Form Runner proxy portlet.
 
 ![Controls form through the Liferay proxy portlet](images/liferay-proxy-controls-liferay7.png)
+
+## Security considerations
+
+_WARNING: Even though you can configure the proxy portlet to show a give app and form, the proxy portlet by default only delegates to Form Runner. It is important that you secure Form Runner with proper form permissions, in particular._
+
+[SINCE Orbeon Forms 2024.1.3]
+
+The proxy portlet now performs filtering of incoming paths, and rejects access to disallowed pages as follows.
+
+| Configuration  | Landing Page | Summary Page | New Page | Edit Page | View Page | Other Pages | Notes                |
+|----------------|--------------|--------------|----------|-----------|-----------|-------------|----------------------|
+| _Home Page_    | ✅            | ✅            | ✅        | ✅         | ✅         | ❌           | all forms            |
+| _Summary Page_ | ❌            | ✅            | ✅        | ✅         | ✅         | ❌           | configured form only |
+| _New Page_     | ❌            | ❌            | ✅        | ❌         | ❌         | ❌           | configured form only |
+
+For example, if you configure the proxy portlet as follows:
+
+- __Form Runner Page__: New Page
+- __Form Runner app name__: `acme`
+- __Form Runner form name__: `sales`
+
+The user:
+
+- will be shown the form's New Page
+- will not have access, through links and navigation, to the Summary Page, Landing Page, or other Form Runner pages
+- will not have access to the New Page of other forms
+
+_NOTE: It is still possible for Form Runner to be configured to navigate to other pages through processes and actions. If you configure custom processes and actions that can take the user to such pages, enabling form access permissions should be strongly considered._
 
 ## Architecture
 
@@ -313,10 +339,6 @@ This is the same as the [server-side embedding configuration](java-api.md).
 
 *NOTE: Be aware that `web.xml` uses `<param-name>` and `<param-value>`, but `portlet.xml` uses `<name>` and `<value>`.*
 
-## Performance tuning
-
-See the Performance Tuning section of the [Full Portlet Guide](../../form-runner/link-embed/liferay-full-portlet.md#performance-tuning).
-
 ## Securing Form Runner with an IP filter
 
 ### Rationale
@@ -471,6 +493,10 @@ Configuration properties in `properties-local.xml` (here for the orbeon/contact 
     name="oxf.fr.detail.buttons.view.orbeon.contact"
     value="close"/>
 ```
+
+## Performance tuning
+
+See the Performance Tuning section of the [Full Portlet Guide](../../form-runner/link-embed/liferay-full-portlet.md#performance-tuning).
 
 ## Limitations
 
