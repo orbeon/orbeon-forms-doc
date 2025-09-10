@@ -39,7 +39,7 @@ This guide describes how to install, administer and use the Form Runner proxy po
 
 _WARNING: Even though you can configure the proxy portlet to show a give app and form, the proxy portlet by default only delegates to Form Runner. It is important that you secure Form Runner with proper form permissions, in particular._
 
-[SINCE Orbeon Forms 2024.1.3]
+[\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
 
 The proxy portlet now performs filtering of incoming paths, and rejects access to disallowed pages as follows.
 
