@@ -8,7 +8,7 @@ When creating new form data (for instance going to the URL `/fr/orbeon/bookshelf
 2. Data `POST`ed to the "new form" page.
 3. Data retrieved by calling a service.
 
-## Initial data posted to the New Form page
+## Initial data posted to the page
 
 The data provided in the form definition is used by default, and the `POST`ed data is used if present.
 

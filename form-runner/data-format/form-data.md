@@ -50,7 +50,7 @@ However, some limited changes to a form definition allow for the data to remain 
 There is no option to change the version of the internal data format. This is a fixed format for a given version of Orbeon Forms.
 
 - When using the `send` action, the `data-format-version` parameter can be used to specify the format. See [Send action](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md).
-- When `POST`ing data to a form page, the `data-format-version` parameter can be used to specify the format. See [Initial data posted to the New Form page](/configuration/properties/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page).
+- When `POST`ing data to a form page, the `data-format-version` parameter can be used to specify the format. See [Initial data](/configuration/properties/form-runner-initial-data.md).
 - The `oxf.fr.persistence.[provider].data-format-version` property specifies the data format version used in the database. See [`data-format-version` property](/configuration/properties/persistence.md#data-format-version-property).
 
 ## 4.0.0 format
@@ -348,5 +348,5 @@ _NOTE: When the Wizard is not in use, these annotations are not added as of Orbe
 - [Form Definition Format](/form-runner/data-format/form-definition.md)
 - [Field-level encryption](/form-builder/field-level-encryption.md)
 - [Send action](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md) (`data-format-version` parameter)
-- [Initial data posted to the New Form page](/configuration/properties/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page) (`data-format-version` parameter)
+- [Initial data](/configuration/properties/form-runner-initial-data.md) (`data-format-version` parameter)
 - [The `data-format-version` property](/configuration/properties/persistence.md#data-format-version-property)

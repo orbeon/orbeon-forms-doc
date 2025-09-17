@@ -327,7 +327,7 @@ The `/fr/` path pointed to the combined Home page. It how points to the Landing 
 
 If the data posted contains extra elements, those were ignored prior to Orbeon Forms 2022.1. With Orbeon Forms 2022.1 and newer, they cause an error.
 
-See [Initial data posted to the New Form page](/configuration/properties/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page).
+See [Initial data](/configuration/properties/form-runner-initial-data.md).
 
 ### Use of CSS grids
 
