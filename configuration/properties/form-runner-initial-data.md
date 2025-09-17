@@ -1,6 +1,6 @@
 # Initial data properties
 
-When creating new form data (for instance going to the URL `http://localhost:8080/orbeon/fr/orbeon/bookshelf/new`), the initial data in the form can come from the following places:
+When creating new form data (for instance going to the URL `/fr/orbeon/bookshelf/new`), the initial data in the form can come from the following sources:
 
 1. Data specified in Form Builder when creating the form definition:
     - statically, by entering data in fields in Form Builder
