@@ -582,4 +582,4 @@ See [PDF configuration properties](form-runner-pdf.md).
 
 ## See also
 
-- [Detail Page configuration properties](form-runner-detail-page.md)
+- [Summary Page configuration properties](form-runner-summary-page.md)

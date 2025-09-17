@@ -108,4 +108,4 @@ Even when set to `false`, if the `form-version` request parameter is passed to t
 
 ## See also
 
-- [Summary Page configuration properties](form-runner-summary-page.md)
+- [Detail Page configuration properties](form-runner-detail-page.md)
