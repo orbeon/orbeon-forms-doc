@@ -22,7 +22,7 @@
             * [Detail page](configuration/properties/form-runner-detail-page.md)
                 * [Attachments](configuration/properties/form-runner-attachments.md)
                 * [Email properties](configuration/properties/form-runner-email.md)
-                *[Initial data](configuration/properties/form-runner-initial-data.md)
+                * [Initial data](configuration/properties/form-runner-initial-data.md)
                 * [PDF](configuration/properties/form-runner-pdf.md)
                 * [Table of contents](configuration/properties/form-runner-toc.md)
             * [Persistence](configuration/properties/persistence.md)
