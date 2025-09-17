@@ -118,6 +118,7 @@ The value of `oxf.fr.detail.attachment.mediatypes` can be overridden:
 - Configuration properties
     - [Detail page](form-runner-detail-page.md)
     - [Email](form-runner-email.md)
+    - [Initial data](form-runner-initial-data.md)
     - [PDF](form-runner-pdf.md)
     - [Table of contents](form-runner-toc.md)
 - Blog post: [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)

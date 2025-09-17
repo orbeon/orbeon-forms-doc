@@ -76,4 +76,5 @@ The table of contents is shown in the specified modes only. The default is `new 
     - [Detail page](form-runner-detail-page.md)
     - [Attachments](form-runner-attachments.md)
     - [Email](form-runner-email.md)
+    - [Initial data](form-runner-initial-data.md)
     - [PDF](form-runner-pdf.md)

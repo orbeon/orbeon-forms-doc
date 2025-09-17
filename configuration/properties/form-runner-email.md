@@ -299,5 +299,6 @@ This is known to work with Gmail at least.
 - Configuration properties
     - [Detail page](form-runner-detail-page.md)
     - [Attachments](form-runner-attachments.md)
+    - [Initial data](form-runner-initial-data.md)
     - [PDF](form-runner-pdf.md)
     - [Table of contents](form-runner-toc.md)
