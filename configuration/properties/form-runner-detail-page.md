@@ -495,7 +495,7 @@ Currently, conflict detection only occurs when saving data (`save-only` mode). F
 
 ## Initial data
 
-See [Initial data configuration properties](form-runner-initial-data.md).
+See [Initial data properties](form-runner-initial-data.md).
 
 ## View mode
 
