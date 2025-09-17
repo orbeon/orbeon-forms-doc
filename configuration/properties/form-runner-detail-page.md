@@ -494,22 +494,24 @@ Currently, conflict detection only occurs when saving data (`save-only` mode). F
 
 ## Initial data
 
-When creating a new form (for instance going to the URL `http://localhost:8080/orbeon/fr/orbeon/bookshelf/new`), the initial form data (also known as "form instance" or "form instance data") can come from 3 different places:
+When creating new form data (for instance going to the URL `http://localhost:8080/orbeon/fr/orbeon/bookshelf/new`), the initial data in the form can come from the following places:
 
-1. The initial instance provided in the form can be used.
-2. The Base64-encoded XML documented `POST`ed to the "new form" URI can be used.
-3. A service can be called to get the initial instance.
+1. Data specified in Form Builder when creating the form definition:
+    - statically, by entering data in fields in Form Builder
+    - dynamically, by using the "Initial Value" formula in "Control Settings"
+2. Data `POST`ed to the "new form" page.
+3. Data retrieved by calling a service.
 
 ### Initial data posted to the New Form page
 
-The instance provided in the form is used by default and the `POST`ed XML document is used if there actually is an XML document being `POST`ed.
+The data provided in the form definition is used by default, and the `POST`ed data is used if present.
 
-The document can be `POST`ed in two ways:
+Initial data can be `POST`ed in two ways:
 
 1. As a direct `POST` of the XML document
 2. As an HTML form `POST` parameter called `fr-form-data`
 
-For #2, this behaves as if a browser was submitting an HTML form that looks like the following, with the value of the `fr-form-data` request parameter being the Base64-encoded XML document.:
+For #2, this behaves as if a browser was submitting an HTML form that looks like the following, with the value of the `fr-form-data` request parameter being the Base64-encoded XML document:
 
 ```xml
 <form method="post" action="/path/to/new">
@@ -519,12 +521,12 @@ For #2, this behaves as if a browser was submitting an HTML form that looks like
 
 [SINCE Orbeon Forms 4.8]
 
-The format of the instance data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to `POST` data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a [`send()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#send) using `data-format-version = "edge"`.
+The format of the data follows the Orbeon Forms 4.0.0 format by default. You can change this behavior to `POST` data in the latest internal format by specifying the `data-format-version=edge` request parameter. This is useful if you obtained the data from, for example, a [`send()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#send) using `data-format-version = "edge"`.
 
 Use the authorization mechanism for services (see [Authorization of pages and services](/xml-platform/controller/authorization-of-pages-and-services.md)) to enable submitting initial instances to the new page:
 
-* Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when `POST`ing to Form Runner.
-* Your authorizer service must validate those credentials.
+- Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when `POST`ing to Form Runner.
+-Your authorizer service must validate those credentials.
 
 [SINCE Orbeon Forms 2017.1]
 
@@ -532,7 +534,7 @@ If `data-format-version=edge` is *not* specified, then the data `POST`ed is assu
 
 [SINCE Orbeon Forms 2022.1]
 
-Whe `POST`ing data as described above, the data can now be incomplete. Say the 4.0.0 format of your form data is:
+When `POST`ing data as described above, the data can now be incomplete. Say the 4.0.0 format of your form data is:
 
 ```xml
 <form>
