@@ -579,3 +579,7 @@ See also [Grid Tab Order](/form-builder/grid-settings.md#grid-tab-order) in the 
 ## PDF mode
 
 See [PDF configuration properties](form-runner-pdf.md).
+
+## See also
+
+- [Detail Page configuration properties](form-runner-detail-page.md)
