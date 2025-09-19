@@ -358,7 +358,7 @@ Prefer using first the `getForm()` function, and then, on the object returned, t
 
 The `wizard.focus()` function sets keyboard focus on a Form Runner control by name, including toggling wizard pages first if needed.
 
-```javascript
+```typescript
 ORBEON.fr.API.wizard.focus(
     controlName   : String,
     repeatIndexes : Int[]?
@@ -404,6 +404,34 @@ This now also works with the `strict` and `lax` validation modes. In these modes
 
 - If so, it will switch and focus on the control.
 - If not, it will ignore the `focus()` request. 
+
+### Listening for wizard page changes
+
+[SINCE Orbeon Forms 2025.1]
+
+You can remove and add listeners for wizard page changes using the following functions:
+
+```typescript
+ORBEON.fr.API.getForm().wizard.addPageChangeListener((event: PageChangeEvent) => void)
+ORBEON.fr.API.getForm().wizard.removePageChangeListener((event: PageChangeEvent) => void)
+```
+
+For example:
+
+```typescript
+ORBEON.fr.API.getForm().wizard.addPageChangeListener(e => {console.log(e);})
+```
+
+`PageChangeEvent` is defined as follows:
+
+The `PageChangeEvent` object contains information about the page change:
+
+```typescript
+type PageChangeEvent = {
+    readonly pageName : string; // page name
+    readonly pageIndex: number; // page index, for repeated top-level sections with paging
+}
+```
 
 ## Error Summary API
 
