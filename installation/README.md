@@ -6,7 +6,7 @@
 
 Orbeon Forms runs on any platform that supports:
 
-* A Java runtime
+* A Java runtime environment (JRE)
 * a Servlet 2.5 (or greater) container such as [Apache Tomcat](http://tomcat.apache.org/). For versions supported, see [Tomcat](tomcat.md).
 
 ### Java versions
