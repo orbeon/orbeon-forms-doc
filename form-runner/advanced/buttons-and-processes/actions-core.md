@@ -69,8 +69,6 @@ Complete the top-level process right away and return a failure value.
 
 ## Continuing a process
 
-### `nop`
-
 ### `continue-with-success`
 
 [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
@@ -84,6 +82,8 @@ Don't do anything and return a success value.
 [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
 
 Don't do anything and return a failure value.
+
+### `nop`
 
 [SINCE Orbeon Forms 4.3]
 
