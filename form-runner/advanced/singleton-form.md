@@ -20,6 +20,8 @@ When accessing the *new* page of a singleton form, the following will happen dep
 - 1: if she can access exactly one form data, she is redirected to the *edit* page for that form.
 - 2 or more: a message, as warns her she can't create any additional form data, and links to the *summary* page for that form, which she can use to pick the form data she wants to edit.
 
+[SINCE Orbeon Forms 2024.1.3] Database checks now prevent a user who already has access to form data from creating additional data, protecting singleton forms against adversarial attempts to create multiple entries. This improvement is available on all supported databases except Oracle.
+
 ![Message when multiple documents are found](../images/singleton-form-multiple.png)
 
 ### Summary page
