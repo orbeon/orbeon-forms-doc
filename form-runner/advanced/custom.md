@@ -37,9 +37,7 @@ Make sure that the dialog's root element has the proper XML namespaces, for exam
     xmlns:xxf="http://orbeon.org/oxf/xml/xforms"
     
     id="custom-dialog"
-    class="dialog"
-    close="true"
-    draggable="true">
+    close="true">
 
     <!-- Content of the dialog here -->
 </xxf:dialog>
