@@ -9,7 +9,7 @@
 HTTP `GET` to the following path:
 
 ```
-/fr/service/persistence/history/$app/$forms/$document
+/fr/service/persistence/history/$app/$form/$document
 ```
 
 ## Purpose
