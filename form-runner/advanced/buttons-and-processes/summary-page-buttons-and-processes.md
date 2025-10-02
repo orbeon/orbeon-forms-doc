@@ -28,6 +28,9 @@ The property configures which buttons are included on the Summary page, and in w
 * `excel-export` [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
     * Label: "Excel Export"
     * Action: Export the selected form data in Excel format.
+* `excel-export-with-search` [\[SINCE Orbeon Forms 2023.1.3\]](/release-notes/orbeon-forms-2023.1.3.md)
+    * Label: "Excel Export"
+    * Action: Export form data from the Form Runner Summary page, including with search filters, in Excel format. See [Summary page Excel Export](/form-runner/feature/summary-page-export.md) for details.
 * `xml-export` [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
     * Label: "XML Export"
     * Action: Export the selected form data in XML format.
