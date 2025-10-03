@@ -81,8 +81,10 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
 | 2025.1 and newer        | [db2-2025_1.sql]           | [db2-2024_1-to-2025_1.sql]          |
-| 2024.1                  | [db2-2024_1.sql]           | See above                           |
+| 2024.1                  | [db2-2024_1.sql]           | See below                           |
 | 2022.1 to 2023.1        | [db2-2019_1.sql]           | [db2-2017_2-to-2019_1.sql]          |
+
+The DDL includes indices since Orbeon Forms 2024.1. Those indices typically cannot be added if the tables are created in the default tablespace, so the 2024.1 DDL includes the declaration for a new tablespace with 32K page size. No upgrade script is provided for 2024.1, as tables need to be moved or recreated in the new tablespace. You may use DB2's `SYSPROC.ADMIN_MOVE_TABLE` stored procedure to help with this migration.
 
 ## Historical DDL
 

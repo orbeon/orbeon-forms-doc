@@ -31,8 +31,6 @@ See also [Removing the built-in SQLite database](/configuration/advanced/product
     ```
 3. Run the [following DDL](relational-db-schema.md#oracle) to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
 
-For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
-
 #### Oracle binary XML storage
 
 With Oracle 11.2, `XMLType` values are stored by default using the binary XML storage. The binary XML storage has numerous benefits over the basic file storage. In many respect, it is the "proper" way to store XML. However, we found that Oracle fails to properly save some documents when the binary XML storage is used. In particular, when documents have attributes with long values (several thousands of characters), when retrieving the document, the value of some attributes is missing. For this reason, until this issue is solved by Oracle, we recommend you store `XMLType` values as "basic file", per the above DDL.
@@ -77,8 +75,6 @@ By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5
    ```
 4. Run the [following DDL](relational-db-schema.md#mysql) to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
 
-For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
-
 ### SQL Server database setup
 
 [SINCE Orbeon Forms 4.6]
@@ -86,8 +82,6 @@ For older DDL see [Relational database schema](relational-db-schema.md#historica
 Orbeon Forms relies on SQL Server's full-text search, which is included out-of-the-box in all SQL Server editions, except the Express and Express with Tools. If you're using one of those two editions of SQL Server, you might want to look into getting Express with Advanced Services.
 
 Run the [following DDL](relational-db-schema.md#sql-server) to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
-
-For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
 
 #### Using `usql` to create an `orbeon` database
 
@@ -126,17 +120,11 @@ ORDER BY
 
 Run the [following DDL](relational-db-schema.md#postgresql) to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
 
-For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
-
 ### Db2 database setup
 
 [SINCE Orbeon Forms 4.3]
 
 Run the [following DDL](relational-db-schema.md#db2) to create or update your Orbeon database, and note that if upgrading to 2016.2, you need to [reindex your Orbeon database](/form-runner/feature/forms-admin-page.md#upgrading-to-20162).
-
-The DDL includes indices since Orbeon Forms 2024.1. Those indices typically cannot be added if the tables are created in the default tablespace, so the 2024.1 DDL includes the declaration for a new tablespace with 32K page size. No upgrade script is provided for 2024.1, as tables need to be moved or recreated in the new tablespace. You may use DB2's `SYSPROC.ADMIN_MOVE_TABLE` stored procedure to help with this migration.
-
-For older DDL see [Relational database schema](relational-db-schema.md#historical-ddl).
 
 ## Application server setup
 
