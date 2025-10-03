@@ -46,21 +46,24 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
-| 2024.1 and newer        | [oracle-2024_1.sql]        | [oracle-2019_1-to-2024_1.sql]       |
+| 2025.1 and newer        | [oracle-2025_1.sql]        | [oracle-2024_1-to-2025_1.sql]       |
+| 2024.1                  | [oracle-2024_1.sql]        | [oracle-2019_1-to-2024_1.sql]       |
 | 2022.1 to 2023.1        | [oracle-2019_1.sql]        | [oracle-2018_2-to-2019_1.sql]       |
 
 ### MySQL
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
-| 2024.1 and newer        | [mysql-2024_1.sql]         | [mysql-2019_1-to-2024_1.sql]        |
+| 2025.1 and newer        | [mysql-2025_1.sql]         | [mysql-2024_1-to-2025_1.sql]        |
+| 2024.1                  | [mysql-2024_1.sql]         | [mysql-2019_1-to-2024_1.sql]        |
 | 2022.1 to 2023.1        | [mysql-2019_1.sql]         | [mysql-2018_2-to-2019_1.sql]        |
 
 ### SQL Server
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
-| 2024.1 and newer        | [sqlserver-2024_1.sql]     | [sqlserver-2023_1-to-2024_1.sql]    |
+| 2025.1 and newer        | [sqlserver-2025_1.sql]     | [sqlserver-2024_1-to-2025_1.sql]    |
+| 2024.1                  | [sqlserver-2024_1.sql]     | [sqlserver-2023_1-to-2024_1.sql]    |
 | 2023.1                  | [sqlserver-2023_1.sql]     | [sqlserver-2019_1-to-2023_1.sql]    |
 | 2022.1                  | [sqlserver-2019_1.sql]     | [sqlserver-2017_2-to-2019_1.sql]    |
 
@@ -68,7 +71,8 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
-| 2024.1 and newer        | [postgresql-2024_1.sql]    | [postgresql-2023_1-to-2024_1.sql]   |
+| 2025.1 and newer        | [postgresql-2025_1.sql]    | [postgresql-2024_1-to-2025_1.sql]   |
+| 2024.1                  | [postgresql-2024_1.sql]    | [postgresql-2023_1-to-2024_1.sql]   |
 | 2023.1                  | [postgresql-2023_1.sql]    | [postgresql-2019_1-to-2023_1.sql]   |
 | 2022.1                  | [postgresql-2019_1.sql]    | [postgresql-2018_2-to-2019_1.sql]   |
 
@@ -76,7 +80,9 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 
 | Orbeon Forms version(s) | DDL to create from scratch | DDL to upgrade from previous format |
 |-------------------------|----------------------------|-------------------------------------|
-| 2022.1 and newer        | [db2-2019_1.sql]           | [db2-2017_2-to-2019_1.sql]          |
+| 2025.1 and newer        | [db2-2025_1.sql]           | [db2-2024_1-to-2025_1.sql]          |
+| 2024.1                  | [db2-2024_1.sql]           | See above                           |
+| 2022.1 to 2023.1        | [db2-2019_1.sql]           | [db2-2017_2-to-2019_1.sql]          |
 
 ## Historical DDL
 
@@ -159,6 +165,8 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 - [Organization-based permissions](../access-control/organization.md)
 - [Release History](/release-history.md)
 
+[mysql-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/mysql-2025_1.sql
+[mysql-2024_1-to-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/mysql-2024_1-to-2025_1.sql
 [mysql-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/mysql-2024_1.sql
 [mysql-2019_1-to-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/mysql-2019_1-to-2024_1.sql
 [mysql-2018_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/mysql-2018_2-to-2019_1.sql
@@ -180,6 +188,8 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 [mysql-4_3-to-4_4.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.4/mysql-4_3-to-4_4.sql
 [mysql-4_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.3/mysql-4_3.sql
 
+[oracle-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/oracle-2025_1.sql
+[oracle-2024_1-to-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/oracle-2024_1-to-2025_1.sql
 [oracle-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/oracle-2024_1.sql
 [oracle-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/oracle-2019_1.sql
 [oracle-2019_1-to-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/oracle-2019_1-to-2024_1.sql 
@@ -205,6 +215,8 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 [oracle-4_4-to-4_5.sql]:       https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.5/oracle-4_4-to-4_5.sql
 [oracle-4_3-to-4_4.sql]:       https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.4/oracle-4_3-to-4_4.sql
 
+[sqlserver-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/sqlserver-2025_1.sql
+[sqlserver-2024_1-to-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/sqlserver-2024_1-to-2025_1.sql
 [sqlserver-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/sqlserver-2024_1.sql
 [sqlserver-2023_1-to-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/sqlserver-2023_1-to-2024_1.sql
 [sqlserver-2023_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2023.1/sqlserver-2023_1.sql
@@ -220,6 +232,8 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 [sqlserver-4_6-to-2016_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.2/sqlserver-4_6-to-2016_2.sql
 [sqlserver-4_6.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.6/sqlserver-4_6.sql
 
+[postgresql-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/postgresql-2025_1.sql
+[postgresql-2024_1-to-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/postgresql-2024_1-to-2025_1.sql
 [postgresql-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/postgresql-2024_1.sql
 [postgresql-2023_1-to-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/postgresql-2023_1-to-2024_1.sql
 [postgresql-2023_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2023.1/postgresql-2023_1.sql
@@ -237,6 +251,9 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 [postgresql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.3postgresql-2016_2-to-2016_3.sql
 [postgresql-4_8-to-2016_2.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.2/postgresql-4_8-to-2016_2.sql
 
+[db2-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/db2-2025_1.sql
+[db2-2024_1-to-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/db2-2024_1-to-2025_1.sql
+[db2-2024_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2024.1/db2-2024_1.sql
 [db2-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/db2-2019_1.sql
 [db2-2017_2-to-2019_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2019.1/db2-2017_2-to-2019_1.sql
 
