@@ -54,18 +54,19 @@ In general, the behavior is as follows:
 
 This logic ensures:
 
-* that Form Builder is usable out of the box even without setting Form Builder permissions
+* that Form Builder is usable out-of-the-box even without setting Form Builder permissions
 * that the Form Runner Home page, which can by default be accessed by any user unless it is explicitly protected, does not inadvertently provide access to administrative functions
 
 ## Path-based permissions
 
 The paths used by Form Builder look as follows:
 
-| Path                                  | Description                   |
-|---------------------------------------|-------------------------------|
-| `/orbeon/fr/orbeon/builder/new`       | Create a new form             |
-| `/orbeon/fr/orbeon/builder/edit/{id}` | Edit a form with the given id |
-| `/orbeon/fr/orbeon/builder/summary`   | View all the editable forms   |
+| Path                                  | Description                      |
+|---------------------------------------|----------------------------------|
+| `/orbeon/fr/orbeon/builder/new`       | Create a new form                |
+| `/orbeon/fr/orbeon/builder/edit/{id}` | Edit a form with the given id    |
+| `/orbeon/fr/orbeon/builder/view/{id}` | Review a form without editing    |
+| `/orbeon/fr/orbeon/builder/summary`   | View all the editable forms      |
 
 Path-based access restrictions can also be implemented to fully or partially protect Form Builder access.
 

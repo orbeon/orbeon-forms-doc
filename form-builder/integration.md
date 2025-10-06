@@ -12,9 +12,9 @@ The following URL patterns are followed:
     `/fr/orbeon/builder/new`
 - Edit existing form definition:
     `/fr/orbeon/builder/edit/[FORM_ID]`
-
-_NOTE: All paths above are relative to the deployment context, e.g the actual URLs start with `http://localhost:8080/orbeon/fr/...`_
-
+- [SINCE Orbeon Forms 2025.1] Review existing form definition in read-only mode:
+    `/fr/orbeon/builder/view/[FORM_ID]` (see also [Reviewing a form definition](summary-page.md#reviewing-a-form-definition))
+  
 ### Specifying the initial language of the form
 
 [SINCE Orbeon Forms 4.10]

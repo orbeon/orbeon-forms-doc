@@ -7,6 +7,7 @@ The Form Builder summary page is your starting point when you work with Form Bui
 * Listing and searching form definitions
 * Creating new form definitions
 * Editing existing form definitions
+* Reviewing form definitions in read-only mode
 * Deleting form definitions
 
 _NOTE: Form definitions are usually stored in a database on the server. You do not usually keep them on your own computer._
@@ -58,6 +59,10 @@ Tip: to clear the search and list all the form definitions again, clear all sear
 ## Creating a new form definition
 
 To create a new form definition, press the "New" button at the bottom of the page. This opens the Form Builder editor in a separate browser window or tab.
+
+## Reviewing a form definition
+
+[SINCE Orbeon Forms 2025.1] Select the form definition you want to inspect, then press the "Review" button. Form Builder opens the form in *view mode*, which shows the complete designer interface while disabling actions that would modify the form, such as dragging controls, saving, or publishing. This is useful when you want to share the layout of a form for feedback without risking accidental edits.
 
 ## Deleting a form definition
 
