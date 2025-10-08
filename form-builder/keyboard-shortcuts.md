@@ -12,6 +12,8 @@
 | Grid Navigation Shortcuts | `←`/`→`      | Move to the previous or next grid cell, including empty cells.            | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
 |                           | `⇧←`/`⇧→`    | Move to the previous or next grid cell, skipping empty cells.             | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
 |                           | `↑`/`↓`      | Move to the previous or next grid cell vertically, including empty cells. | [2024.1.1](/release-notes/orbeon-forms-2024.1.1.md) |
+|                           | `⌃⇧↑`        | Move the current grid line up.                                            | [2024.1.3](/release-notes/orbeon-forms-2024.1.3.md) |
+|                           | `⌃⇧↓`        | Move the current grid line down.                                          | [2024.1.3](/release-notes/orbeon-forms-2024.1.3.md) |
 | Undo and Redo             | `⌘Z`/`⌃Z`    | Undo the last operation                                                   | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
 |                           | `⌘⇧Z`/`⌃Y`   | Redo the last operation                                                   | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
 | All dialogs               | `⇧↵`         | Open the [Control Settings dialog](/form-builder/control-settings.md)     | [2020.1](/release-notes/orbeon-forms-2020.1.md)     |
