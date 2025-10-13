@@ -65,7 +65,7 @@ The exported zip file contains all selected form definitions and data, as well a
 
 The form data are stored in `data.xml` files, located in paths following the structure below:
 
-`[app]/[form]/[version]/data/[document ID]/[last modified date/time]/data.xml`
+`[app]/[form]/[version]/data/[document id]/[last modified date/time]/data.xml`
 
 Example:
 
