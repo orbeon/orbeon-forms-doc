@@ -146,6 +146,7 @@
         * [Yes/No answer](form-runner/component/yesno-input.md)
     * Features
         * [Automatic calculations dependencies](form-runner/feature/automatic-calculations-dependencies.md)
+        * [Custom modes](form-runner/feature/custom-modes.md)
         * [Datasets](form-runner/feature/datasets.md)
         * [Excel and XML import](form-runner/feature/excel-xml-import.md)
         * [Excel and XML export](form-runner/feature/excel-xml-export.md)
@@ -362,6 +363,7 @@
     * [Validation functions](contributors/extension-validation.md)
     * [Contributor License Agreement](contributors/cla.md)
 * Release notes
+    * [Orbeon Forms 2024.1.3](/release-notes/orbeon-forms-2024.1.3.md)
     * [Orbeon Forms 2024.1.2](/release-notes/orbeon-forms-2024.1.2.md)
     * [Orbeon Forms 2022.1.9](/release-notes/orbeon-forms-2022.1.9.md)
     * [Orbeon Forms 2024.1.1](/release-notes/orbeon-forms-2024.1.1.md)
