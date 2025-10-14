@@ -120,9 +120,9 @@ You can change the token expiration time in minutes by setting the following pro
 
 ```xml
 <property 
-      as="xs:integer" 
-      name="oxf.fr.state-token.validity.*.*"                               
-      value="15"/>
+    as="xs:integer" 
+    name="oxf.fr.state-token.validity.*.*"                               
+    value="15"/>
 ```
 
 ## Restoring state
