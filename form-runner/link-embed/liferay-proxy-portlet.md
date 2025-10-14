@@ -21,7 +21,7 @@ These issues apply to Orbeon Forms 2017.1 to 2019.1.
         1. Don't use the Liferay navigation menu to reach the Form Runner proxy portlet.
         2. Or disable Liferay's SPA support portal-wide (see the [Disabling SPA](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-0/automatic-single-page-applications#disabling-spa)).
         
-*NOTE: We plan to lift these limitations in a future release of Orbeon Forms.*
+We plan to lift these limitations in a future release of Orbeon Forms.
 
 ## Introduction
 
@@ -37,7 +37,9 @@ This guide describes how to install, administer and use the Form Runner proxy po
 
 ## Security considerations
 
-__WARNING: Even though you can configure the proxy portlet to show a give app and form, the proxy portlet by default only delegates to Form Runner. It is important that you secure Form Runner with proper form permissions, in particular.__
+{% hint style="warning" %}
+Even though you can configure the proxy portlet to show a give app and form, the proxy portlet by default only delegates to Form Runner. It is important that you secure Form Runner with proper form permissions, in particular.
+{% endhint %}
 
 [\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
 
@@ -61,7 +63,9 @@ The user:
 - will not have access, through links and navigation, to the Summary Page, Landing Page, or other Form Runner pages
 - will not have access to the New Page or other pages of other forms
 
-__WARNING: It is still possible for Form Runner to be configured to navigate to other pages through processes and actions. If you configure custom processes and actions that can take the user to such pages, enabling form access permissions should be strongly considered.__
+{% hint style="warning" %}
+It is still possible for Form Runner to be configured to navigate to other pages through processes and actions. If you configure custom processes and actions that can take the user to such pages, enabling form access permissions should be strongly considered.
+{% endhint %}
 
 ## Architecture
 
@@ -130,7 +134,7 @@ For Orbeon Forms 4.0 and newer, no particular configuration is needed.
         - Example: `controls`
     - __Readonly access__
         - Whether the user is able to edit forms
-        - _NOTE: To ensure read-only access, it is also important to configure a `oxf.fr.detail.buttons.view.*.*` property without the `workflow-edit` button._
+        - To ensure read-only access, it is also important to configure a `oxf.fr.detail.buttons.view.*.*` property without the `workflow-edit` button.
     - __Send Liferay language__ [SINCE Orbeon Forms 4.4]
         - Whether Form Runner should use the Liferay user's language
         - This also hides the Form Runner language selector
@@ -337,7 +341,7 @@ However, in some cases of load balancing, this can be an issue. In such cases, y
 
 This is the same as the [server-side embedding configuration](java-api.md).
 
-*NOTE: Be aware that `web.xml` uses `<param-name>` and `<param-value>`, but `portlet.xml` uses `<name>` and `<value>`.*
+Be aware that `web.xml` uses `<param-name>` and `<param-value>`, but `portlet.xml` uses `<name>` and `<value>`.
 
 ## Securing Form Runner with an IP filter
 
@@ -414,7 +418,7 @@ Enabling UrlRewriteFilter's logging is helpful to see what's happening during de
 </filter>
 ```
 
-_NOTE: You could also setup filtering on the type "remote-host" and check on the value "localhost" instead of filtering on IP addresses, however often reverse DNS lookups are not enabled in servlet containers for performance reasons, which means you need to filter by IP address instead._
+You could also set up filtering on the type "remote-host" and check on the value "localhost" instead of filtering on IP addresses, however often reverse DNS lookups are not enabled in servlet containers for performance reasons, which means you need to filter by IP address instead.
 
 #### Test the setup
 
@@ -470,7 +474,7 @@ Configuration properties in `properties-local.xml` (here for the orbeon/contact 
     value="clear"/>
 ```
 
-_NOTE: Remove the `delete` token if the Delete button is not needed._
+Remove the `delete` token if the Delete button is not needed.
 
 ### Scenario: list and review form data
 
