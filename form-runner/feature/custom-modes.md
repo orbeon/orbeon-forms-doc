@@ -17,6 +17,8 @@ Custom modes are supported by functions to:
 - navigate *away* from Orbeon Forms to external pages, or pages embedded in iframes
 - navigate *back* to Orbeon Forms, while keeping the form data and other state information
 
+However, custom modes can be used separately from these functions, and conversely these functions can be used without custom modes.
+
 Here is an example of workflow involving standard modes, a custom mode, an external page or service, and navigation back to Orbeon Forms:
 
 ![Custom modes workflow](../images/custom-modes-workflow.webp)
@@ -113,6 +115,12 @@ A side effect of calling this function is that the form state, as described abov
 In addition, a token is created, which allows later restoration of the state (see below).
 
 The token includes an expiration time, which is 15 minutes by default. The idea is that the user will leave Orbeon Forms temporarily to perform a task, but will come back to Orbeon Forms relatively soon in most cases. This can be important as storing the state requires some resources on the server side.
+
+You can change the expiration time by setting the following property:
+
+```xml
+xxx
+```
 
 ## Restoring state
 
