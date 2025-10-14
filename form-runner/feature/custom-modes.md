@@ -116,10 +116,13 @@ In addition, a token is created, which allows later restoration of the state (se
 
 The token includes an expiration time, which is 15 minutes by default. The idea is that the user will leave Orbeon Forms temporarily to perform a task, but will come back to Orbeon Forms relatively soon in most cases. This can be important as storing the state requires some resources on the server side.
 
-You can change the expiration time by setting the following property:
+You can change the token expiration time in minutes by setting the following property:
 
 ```xml
-xxx
+<property 
+      as="xs:integer" 
+      name="oxf.fr.state-token.validity.*.*"                               
+      value="15"/>
 ```
 
 ## Restoring state
