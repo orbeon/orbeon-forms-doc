@@ -4,6 +4,8 @@
 
 [SINCE Orbeon Forms 2025.1]
 
+_NOTE: This is an advanced feature which may require programming skills._
+
 ## Introduction
 
 The Form Runner *Detail page* is the page where users create, edit, and view form data.
@@ -14,6 +16,10 @@ Custom modes are supported by functions to:
 
 - navigate *away* from Orbeon Forms to external pages, or pages embedded in iframes
 - navigate *back* to Orbeon Forms, while keeping the form data and other state information
+
+Here is an example of workflow involving standard modes, a custom mode, an external page or service, and navigation back to Orbeon Forms:
+
+![Custom modes workflow](../images/custom-modes-workflow.webp)
 
 An important use case for this is calling external services such as:
 
