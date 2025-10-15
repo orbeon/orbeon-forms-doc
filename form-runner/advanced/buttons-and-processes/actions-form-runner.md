@@ -382,6 +382,12 @@ See also:
 
 ## Switching modes
 
+### `change-mode`
+
+[SINCE Orbeon Forms 2025.1]
+
+This action changes the mode of the current page. For more information, see the [`change-mode()` action documentation](../../feature/custom-modes.md#the-change-mode-action).
+
 ### `new-to-edit`
 
 [SINCE Orbeon Forms 2017.1]

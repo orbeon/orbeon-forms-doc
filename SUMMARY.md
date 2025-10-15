@@ -148,6 +148,7 @@
         * [Automatic calculations dependencies](form-runner/feature/automatic-calculations-dependencies.md)
         * [Custom modes](form-runner/feature/custom-modes.md)
         * [Datasets](form-runner/feature/datasets.md)
+        * [Detail page modes](form-runner/feature/detail-page-modes.md)
         * [Excel and XML import](form-runner/feature/excel-xml-import.md)
         * [Excel and XML export](form-runner/feature/excel-xml-export.md)
         * [Summary page Excel Export](form-runner/feature/summary-page-export.md)

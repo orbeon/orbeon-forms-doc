@@ -8,7 +8,7 @@ _NOTE: This is an advanced feature which may require programming skills._
 
 ## Introduction
 
-The Form Runner *Detail page* is the page where users create, edit, and view form data.
+The Form Runner *Detail page* is the page where users create, edit, and view form data. Each such function is referred to as a *mode*. For more, see [Form Runner detail page modes](detail-page-modes.md).
 
 Orbeon Forms 2025.1 introduces the ability to define *custom modes* for the Form Runner Detail page. This allows you to create different views of the same form data. You do so by writing a custom component, while Orbeon Forms handles data management, state keeping, and permissions for you.
 
@@ -193,6 +193,17 @@ This component simply displays a message. In a real-world scenario, you would do
 - embed an `iframe` or other content with JavaScript
 - call external services
 - and more.
+
+## The `change-mode()` action
+
+The `change-mode()` action allows you to navigate to any mode, including custom modes. Examples:
+
+- `change-mode("edit")`: This action navigates to the `edit` mode from any mode, and is identical to the `edit` action.
+- `change-mode("view")`: This action navigates to the `view` mode from any mode, and is identical to the `review` action.
+- `change-mode("new")`: This action navigates to the `new` mode from any mode.
+- `change-mode("acme:demo-sign")`: This action navigates to the custom `acme:demo-sign` mode from any mode.
+
+_NOTE: It is not possible to use this action to produce a `pdf` or `tiff` view of the form data. Use the `open-rendered-format()` action instead._
 
 ## Configuring buttons
 
