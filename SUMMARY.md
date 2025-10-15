@@ -102,12 +102,11 @@
 * Form Runner
     * Overview
         * [Terminology](form-runner/overview/terminology.md)
-    * Pages
+    * [Pages](form-runner/feature/form-runner-pages.md)
         * [Landing page](form-runner/feature/landing-page.md) 
         * [Published Forms page](form-runner/feature/published-forms-page.md)
         * [Forms Admin page](form-runner/feature/forms-admin-page.md)
         * [Summary page](form-runner/feature/summary-page.md)
-        * [Form Runner pages](form-runner/feature/form-runner-pages.md)
     * [Components](form-runner/component/README.md)
         * [Alert dialog](form-runner/component/alert-dialog.md)
         * [Attachment](form-runner/component/attachment.md)
