@@ -48,7 +48,7 @@ The following URL parameters are supported:
 
 A client can call the API using paging, to obtain smaller chunks of the revision history. A first request can, for example, use `page-number=1` and `page-size=10`. If the response indicates that there are more items, the client can then call the API again with `page-number=2` and `page-size=10`, and so on.
 
-[SINCE Orbeon Forms 2025.1] When `include-diffs` is set to `true`, the response will include a `<diffs>` element within each `<document>` element (except for the original/oldest revision), showing the differences between that revision and the previous one. The `lang` parameter specifies which language to use for control labels in the diffs. If not specified, the API will use the language specified by the [`oxf.fr.default-language` property](/configuration/properties/form-runner.md#default-language) or the fist language available in the form definition. The `truncation-size` parameter limits the length of diff values to prevent overly large responses.
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md) When `include-diffs` is set to `true`, the response will include a `<diffs>` element within each `<document>` element (except for the original/oldest revision), showing the differences between that revision and the previous one. The `lang` parameter specifies which language to use for control labels in the diffs. If not specified, the API will use the language specified by the [`oxf.fr.default-language` property](/configuration/properties/form-runner.md#default-language) or the fist language available in the form definition. The `truncation-size` parameter limits the length of diff values to prevent overly large responses.
 
 #### Examples
 
@@ -189,7 +189,7 @@ The following elements and attributes are returned:
     - `owner-username`: the username of the user who owns the form data
     - `owner-group`: the group of the user who owns the form data; empty if there is no user group information
     - `deleted`: whether the form data was marked as deleted
-    - [SINCE Orbeon Forms 2025.1] `diffs`: (only present when `include-diffs=true`) element containing the differences between this revision and the previous one
+    - [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md) `diffs`: (only present when `include-diffs=true`) element containing the differences between this revision and the previous one
         - `older-modified-time`: the modification time of the older revision
         - `diff`: element describing a specific difference (may appear multiple times)
             - `type` (attribute): the type of difference, one of:

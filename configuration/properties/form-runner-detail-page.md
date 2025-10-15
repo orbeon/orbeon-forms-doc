@@ -464,7 +464,7 @@ See also [the `set-data-status` action](/form-runner/advanced/buttons-and-proces
 
 ## Warning the user when data has changed since initially loaded
 
-[SINCE Orbeon Forms 2025.1]
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
 When multiple users edit the same form instance simultaneously, or when a single user edits the same form from different browser tabs or sessions, data conflicts can occur. By default, Orbeon Forms will overwrite previously saved data without warning, which can result in lost changes.
 

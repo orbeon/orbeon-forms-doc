@@ -37,7 +37,7 @@ The following options are available:
 - __Allow bulk edit:__
     - When selected, the control value can be bulk edited from the Summary page.
 - __By default, sort this by column:__
-  - SINCE Orbeon Forms 2025.1
+  - [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
   - Change the default sort column on the Summary page.
 - __Encrypt data at rest:__
     - SINCE Orbeon Forms 2018.1
@@ -83,8 +83,7 @@ The processes must not only be listed in the `oxf.fr.summary.bulk-processes` pro
 
 #### Default sort column
 
-[SINCE Orbeon Forms 2025.1]
-
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 By default, data entries on the Summary page are sorted by last modification date/time, from most recent to least recent. You can change that behavior by checking the "By default, sort by this column" checkbox. When this setting is enabled, the Summary page will sort the data entries by the selected control when first loaded. It will still be possible to change the sort column and direction by clicking on the column headers.
 
 <figure>

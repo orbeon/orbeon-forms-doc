@@ -407,7 +407,7 @@ This now also works with the `strict` and `lax` validation modes. In these modes
 
 ### Listening for wizard page changes
 
-[SINCE Orbeon Forms 2025.1]
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
 You can remove and add listeners for wizard page changes using the following functions:
 
@@ -480,7 +480,7 @@ ORBEON.fr.API.errorSummary.removeNavigateToErrorListener(fn)
 
 ## Pager API
 
-[SINCE Orbeon Forms 2025.1]
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
 The Pager API allows you to interact with pagination controls in repeated sections.
 

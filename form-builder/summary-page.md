@@ -62,7 +62,7 @@ To create a new form definition, press the "New" button at the bottom of the pag
 
 ## Reviewing a form definition
 
-[SINCE Orbeon Forms 2025.1] Select the form definition you want to inspect, then press the "Review" button. Form Builder opens the form in *view mode*, which shows the complete designer interface while disabling actions that would modify the form, such as dragging controls, saving, or publishing. This is useful when you want to share the layout of a form for feedback without risking accidental edits.
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md) Select the form definition you want to inspect, then press the "Review" button. Form Builder opens the form in *view mode*, which shows the complete designer interface while disabling actions that would modify the form, such as dragging controls, saving, or publishing. This is useful when you want to share the layout of a form for feedback without risking accidental edits.
 
 ## Deleting a form definition
 

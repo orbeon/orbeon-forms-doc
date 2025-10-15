@@ -276,7 +276,7 @@ Each provider may have specific configuration properties. For the latest setting
 
 ## Storing attachments in the filesystem or on S3
 
-By default, attachments are stored in the database. Alternatively, you can configure Form Runner to store attachments in the filesystem ([\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)) or S3 ([SINCE Orbeon Forms 2025.1]). This is useful for larger attachments, for example.
+By default, attachments are stored in the database. Alternatively, you can configure Form Runner to store attachments in the filesystem ([\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)) or S3 ([\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)). This is useful for larger attachments, for example.
 
 To store attachments in the filesystem, you can do so globally by setting the following property:
 
@@ -315,7 +315,7 @@ The full path where the attachment file is stored is determined using an interna
 
 ### S3
 
-[SINCE Orbeon Forms 2025.1] To store attachments in S3, it is mandatory to specify an S3 configuration, using the following property:
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md) To store attachments in S3, it is mandatory to specify an S3 configuration, using the following property:
 
 ```xml
 <property
@@ -397,8 +397,7 @@ By default, attachments are stored using a filename format of `[attachment-id].b
 
 ### Custom filename
 
-[SINCE Orbeon Forms 2025.1]
-
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 The default behavior typically works well, particularly when attachments are stored in the database. However, when attachments are stored on the local filesystem or S3, you may want to preserve all or part of the original filename, including the file extension. You can achieve this using the following property:
 
 ```xml

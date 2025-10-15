@@ -384,7 +384,7 @@ See also:
 
 ### `change-mode`
 
-[SINCE Orbeon Forms 2025.1]
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
 This action changes the mode of the current page. For more information, see the [`change-mode()` action documentation](../../feature/custom-modes.md#the-change-mode-action).
 

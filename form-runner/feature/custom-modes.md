@@ -2,7 +2,7 @@
 
 ## Availability
 
-[SINCE Orbeon Forms 2025.1]
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
 _NOTE: This is an advanced feature which may require programming skills._
 

@@ -2,7 +2,7 @@
 
 ## Email transport configuration
 
-[SINCE Orbeon Forms 2025.1]
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
 You can choose between SMTP and SendGrid as the email transport mechanism:
 
@@ -63,7 +63,7 @@ The following properties control the connection to the SMTP server when using th
 
 ### SendGrid
 
-[SINCE Orbeon Forms 2025.1]
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
 When using SendGrid as the email transport, you need to configure your SendGrid API key:
 

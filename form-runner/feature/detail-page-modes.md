@@ -34,14 +34,13 @@ Some process actions are available to navigate between modes.
 - `edit`: This action navigates to the `edit` mode from the `new` or `view` mode, or from a custom mode. For more information, see the [`edit` action documentation](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#other-actions).
 - `review`: This action navigates to the `view` mode from the `new` or `edit` mode, or from a custom mode. For more information, see the [`review` action documentation](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#other-actions).
 
-[SINCE Orbeon Forms 2025.1]
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
 The `change-mode()` action allows you to navigate to any mode, including custom modes. For more information, see the [`change-mode()` action documentation](custom-modes.md#the-change-mode-action).
 
 ## Custom modes
 
-[SINCE Orbeon Forms 2025.1]
-
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 Orbeon Forms allows you to define *custom modes* for the Detail page. This advanced feature lets you create different views of the same form data by writing a custom XBL component. Custom modes are useful for implementing workflows that involve external services, such as payment or signature providers.
 
 For more details, see [Custom detail page modes](custom-modes.md).

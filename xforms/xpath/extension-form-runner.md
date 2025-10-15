@@ -700,7 +700,7 @@ See[`xxf:username()`](extension-http.md#xxfusername).
 
 ## Attachment functions
 
-[SINCE Orbeon Forms 2025.1]
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
 For all the following functions, the attachment holder element can be passed as context or as argument.
 

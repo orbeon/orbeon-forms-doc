@@ -12,7 +12,7 @@ The following URL patterns are followed:
     `/fr/orbeon/builder/new`
 - Edit existing form definition:
     `/fr/orbeon/builder/edit/$id`
-- [SINCE Orbeon Forms 2025.1] Review existing form definition in read-only mode:
+- [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md) Review existing form definition in read-only mode:
     `/fr/orbeon/builder/view/$id` (see also [Reviewing a form definition](summary-page.md#reviewing-a-form-definition))
 
 ### Specifying the initial language of the form
