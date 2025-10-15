@@ -1,10 +1,8 @@
 # Integration
 
-
-
 ## Introduction
 
-Form Builder and Form Runner integrate with other systems through the a number of means, summarized below.
+Form Builder and Form Runner integrate with other systems through several means, summarized below.
 
 ## Plain URLs
 
