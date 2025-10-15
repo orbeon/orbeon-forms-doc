@@ -1,7 +1,5 @@
 # Custom dialogs and model logic
 
- 
-
 ## Introduction
 
 *NOTE: This is an advanced feature which requires XForms knowledge.*

@@ -1,7 +1,5 @@
 # XBL Bindings
 
-
-
 ## Introduction
 
 An XBL file contains one or more *bindings*, expressed with the `xbl:binding` element:
