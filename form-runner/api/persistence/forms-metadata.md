@@ -51,6 +51,16 @@ The following optional attributes can be added to the `search` element:
 | `ignore-admin-permissions` | `false`       | [Same semantics as in v1](#ignoring-admin-permissions)                                      |
 | `xml:lang`                 | None          | Default language for language-specific filtering/sorting directives (e.g. `en`, `fr`, etc.) |
 
+```
+curl \
+    --silent \
+    --user api:password \
+    --header "Content-Type: application/xml" \
+    --data '<search/>' \
+    http://localhost:8080/orbeon/fr/service/persistence/form \
+    | xmllint --format -
+```
+
 #### Filtering
 
 To filter the results, you can add a `filter` element to your request:
