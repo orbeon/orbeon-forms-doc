@@ -130,70 +130,11 @@ This is an Orbeon Forms PE feature.
 
 This feature allows you to configure access to a remote server and to make available, make unavailable, and transfer (push/pull) forms between the local and remote server.
 
-### Configuration on the local server
+### Configuration
 
-In order to configure a remote server, you need to set up a property.
-
-With Orbeon Forms 4.7 and newer, use the `oxf.fr.home.remote-servers` property, which allows configuring multiple remote servers:
-
-```xml
-<property as="xs:string" name="oxf.fr.home.remote-servers">
-  [
-    {
-      "label": "Staging",
-      "url":   "http://staging.example.org:8080/orbeon"
-    },
-    {
-      "label": "Production",
-      "url":   "http://prod.example.org:9090/orbeon"
-    }
-  ]
-</property>
-```
+To configure remote server access, use the `oxf.fr.home.remote-servers` property; see the [Remote servers configuration](/configuration/properties/form-runner.md#remote-servers) documentation.
 
 ![Multiple Remote Servers](../images/remote-server-credentials.png)
-
-The format is a JSON array containing any number of JSON objects. Each object must have a non-empty `label` property indicating the label to display to the user when selecting a remote server, and a non-empty `url` property indicating the location of the remote server.
-
-With Orbeon Forms 4.4 to 4.6, use the `oxf.fr.production-server-uri` property:
-
-```xml
-<property
-  as="xs:anyURI"
-  name="oxf.fr.production-server-uri"
-  value="http://remote.server:8080/orbeon/"/>
-```
-
-*NOTE: Since Orbeon Forms 4.7, the `oxf.fr.production-server-uri` is deprecated. Since Orbeon Forms 4.7 and newer, if the `oxf.fr.production-server-uri` is set and not empty, it takes precedence over the new `oxf.fr.home.remote-servers` property, for backward compatibility.*
-
-### Configuration on the remote server
-
-You also need to authorize the remote server to accept incoming connections for services. One way of doing this is to use the Orbeon Forms delegating `orbeon-auth.war`, documented [here](../../xml-platform/controller/authorization-of-pages-and-services.md).
-
-You deploy this WAR file alongside `orbeon.war` on the remote server, and you add this property to the remote server's `properties-local.xml`:
-
-```xml
-<property
-  as="xs:anyURI"
-  processor-name="oxf:page-flow"
-  name="authorizer"
-  value="/orbeon-auth"/>
-```
-
-This tells the remote server to use the `orbeon-auth` webapp to authenticate requests for services or pages which are not public.
-
-By default, `orbeon-auth` requires that all external requests to Form Runner services are authenticated with `BASIC` authentication and have the `orbeon-service` role. It blocks any other request.
-
-If you are using Tomcat, you can then configure a user with role `orbeon-service`. For example, in `tomcat-users.xml`:
-
-```xml
-<role rolename="orbeon-service"/>
-<user username="orbeon-admin" password="changeme" roles="orbeon-service"/>
-```
-
-Then, on the local server, you would use username `orbeon-admin` and password `changeme` when prompted.
-
-With this configuration, the local Orbeon Forms connects to services on the remote Orbeon Forms, which calls up `orbeon-auth` to authenticate the connection. `orbeon-auth` requires that the username/password provided authenticate as a valid Tomcat user with the `orbeon-service` role. If that's successful, then the service proceeds, otherwise it fails.
 
 ### Remote operations
 

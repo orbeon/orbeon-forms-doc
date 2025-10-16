@@ -53,7 +53,6 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 * [Form Runner Published Forms Page](/form-runner/feature/published-forms-page.md)
     * `oxf.fr.home.page-size`
     * `oxf.fr.home.table.link-to`
-    * `oxf.fr.home.remote-servers`
 * [TIFF Production](/form-runner/feature/tiff-production.md)
     * `oxf.fr.detail.tiff.compression.type`
     * `oxf.fr.detail.tiff.compression.quality`
@@ -150,6 +149,75 @@ If the property is blank (the default), the Java environment's default timezone 
 [UNTIL Orbeon Forms 2020.1]
 
 The Java environment's default timezone is used.
+
+## Remote servers
+
+[SINCE Orbeon Forms 4.7]
+
+The `oxf.fr.home.remote-servers` property allows you to configure one or more remote Orbeon Forms servers for pushing and pulling form definitions.
+
+This property is used by:
+
+- The [Forms Admin page](/form-runner/feature/forms-admin-page.md) to display remote server options in the UI
+- The [Remote server APIs](/form-runner/api/other/remote.md) to programmatically push to or pull from remote servers
+
+### Configuration format
+
+The property value is a JSON array containing one or more server configuration objects:
+
+```xml
+<property as="xs:string" name="oxf.fr.home.remote-servers">
+  [
+    {
+      "name"      : "prod",
+      "label"     : "Production",
+      "url"       : "https://prod.example.com/orbeon",
+      "ui-access" : true,
+      "api-access": true
+    },
+    {
+      "name"      : "staging",
+      "label"     : "Staging",
+      "url"       : "https://staging.example.com/orbeon",
+      "ui-access" : true,
+      "api-access": false
+    }
+  ]
+</property>
+```
+
+### Configuration fields
+
+Each remote server object supports the following fields:
+
+- `name` (optional): [SINCE Orbeon Forms 2025.1] A unique identifier for the remote server, used by the API. If not specified, the server can only be accessed through the UI.
+- `label` (required): A human-readable label displayed in the Forms Admin page UI.
+- `url` (required): The base URL of the remote Orbeon Forms instance (without trailing slash)
+- `ui-access` (optional): [SINCE Orbeon Forms 2025.1] Whether the server is accessible from the Forms Admin page UI. Defaults to `true`.
+- `api-access` (optional): [SINCE Orbeon Forms 2025.1] Whether the server is accessible via the Remote server APIs. Defaults to `false`.
+
+### Authentication on the remote server
+
+Services on the remote server must be protected with Basic authentication. If the remote server needs to be accessible both by users through another form of authentication and services through Basic authentication, then this is typically configured using an [authorization service](/xml-platform/controller/authorization-of-pages-and-services.md#authorization-service).
+
+### Backward compatibility
+
+[SINCE Orbeon Forms 4.4]
+
+[UNTIL Orbeon Forms 4.6]
+
+Use the `oxf.fr.production-server-uri` property:
+
+```xml
+<property
+  as="xs:anyURI"
+  name="oxf.fr.production-server-uri"
+  value="http://remote.server:8080/orbeon/"/>
+```
+
+[SINCE Orbeon Forms 4.7]
+
+If the `oxf.fr.production-server-uri` property is set and not empty, it takes precedence over the `oxf.fr.home.remote-servers` property for backward compatibility.
 
 ## Summary Page
 

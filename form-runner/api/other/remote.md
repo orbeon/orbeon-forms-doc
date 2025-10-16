@@ -14,36 +14,7 @@ These APIs are used internally by the [Forms Admin page](/form-runner/feature/fo
 
 ## Configuration
 
-Before using these APIs, you must configure the remote servers in the `properties-local.xml` file:
-
-```xml
-<property as="xs:string" name="oxf.fr.home.remote-servers">
-  [
-    {
-      "name"      : "prod",
-      "label"     : "Production",
-      "url"       : "https://prod.example.com/orbeon",
-      "ui-access" : true,
-      "api-access": true
-    },
-    {
-      "name"      : "staging",
-      "label"     : "Staging",
-      "url"       : "https://staging.example.com/orbeon",
-      "ui-access" : true,
-      "api-access": true
-    }
-  ]
-</property>
-```
-
-The configuration fields are:
-
-- `name`: required, unique identifier for the remote server
-- `label`: optional, human-readable label for the UI
-- `url`: required, the base URL of the remote Orbeon Forms instance
-- `ui-access`: optional, defaults to `true`, whether the remote server is accessible from the Forms Admin page UI
-- `api-access`: optional, defaults to `false`, whether the remote server is accessible via the API
+Before using these APIs, you must configure the remote servers using the `oxf.fr.home.remote-servers` property; see the [Remote servers configuration](/configuration/properties/form-runner.md#remote-servers) documentation.
 
 ## Push to remote API
 
