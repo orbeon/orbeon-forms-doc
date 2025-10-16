@@ -132,7 +132,7 @@ This feature allows you to configure access to a remote server and to make avail
 
 ### Configuration on the local server
 
-In order to configure a remote server, you need to setup a property.
+In order to configure a remote server, you need to set up a property.
 
 With Orbeon Forms 4.7 and newer, use the `oxf.fr.home.remote-servers` property, which allows configuring multiple remote servers:
 
