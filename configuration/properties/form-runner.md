@@ -154,9 +154,7 @@ The Java environment's default timezone is used.
 
 [SINCE Orbeon Forms 4.7]
 
-The `oxf.fr.home.remote-servers` property allows you to configure one or more remote Orbeon Forms servers for pushing and pulling form definitions.
-
-This property is used by:
+The `oxf.fr.home.remote-servers` property allows you to configure one or more remote Orbeon Forms servers for pushing and pulling form definitions. This property is used by:
 
 - The [Forms Admin page](/form-runner/feature/forms-admin-page.md) to display remote server options in the UI
 - The [Remote server APIs](/form-runner/api/other/remote.md) to programmatically push to or pull from remote servers
