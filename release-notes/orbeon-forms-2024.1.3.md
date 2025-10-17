@@ -24,13 +24,13 @@ You access this mode using the "Review" button from the Form Builder Summary pag
 
 You can configure Form Runner to store attachments in S3 in addition to the database or the filesystem. This is useful for larger attachments.
 
-For more, see the [documentation](https://doc.orbeon.com/configuration/properties/form-runner/persistence#storing-attachments-in-the-filesystem-or-on-s3).
+For more, see the [documentation](/configuration/properties/persistence.md#storing-attachments-in-the-filesystem-or-on-s3).
 
 ### Ability to change the encryption key
 
 It is now possible to change the encryption key for encryption at rest. This will cause reencryption of all the data.
 
-For more, see the [documentation](https://doc.orbeon.com/form-builder/advanced/field-level-encryption#changing-the-encryption-password).
+For more, see the [documentation](/form-builder/field-level-encryption.md#changing-the-encryption-password).
 
 ### Tab duplication detection
 
@@ -51,7 +51,7 @@ For more, see the [blog post](https://www.orbeon.com/2025/09/tab-duplication-det
 [//]: # (- For [#7058]&#40;https://github.com/orbeon/orbeon-forms/issues/7058&#41;: Form Builder UI)
 
 - New keyboard shortcut allow you to move a grid line up or down in Form Builder: <kbd>⌃⇧↑</kbd> and <kbd>⌃⇧↓</kbd>.
-- You can now automatically open search options in the Forms/Admin pages ([doc](https://doc.orbeon.com/form-runner/form-runner-pages/published-forms-page#search-options-opened-on-load)).
+- You can now automatically open search options in the Forms/Admin pages ([doc](/form-runner/feature/published-forms-page.md#search-options-opened-on-load)).
 - The WebP image format is now supported in automatic PDF production.
 
 ## New demo form

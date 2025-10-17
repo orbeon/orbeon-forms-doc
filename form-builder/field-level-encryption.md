@@ -32,7 +32,7 @@ In Form Builder, to mark a field for encryption, open the "Control Settings" dia
 The field encryption password must remain stable to ensure that existing encrypted values can be read. If the password is changed or lost, the existing data will no longer be readable.
 {% endhint %}
 
-### Changing the encryption password 
+### Changing the encryption password
  
 [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md) You can change the field encryption password using the following procedure:
 
