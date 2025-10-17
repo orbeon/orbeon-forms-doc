@@ -2,7 +2,7 @@
 
 __TODO, October TODO, 2025__
 
-Today we released Orbeon Forms 2024.1.3! This maintenance release contains bug-fixes and is recommended for all users of:
+Today we released Orbeon Forms 2024.1.3! This maintenance release contains bug-fixes and a few new features and is recommended for all users of:
 
 - [Orbeon Forms 2024.1.2 PE](orbeon-forms-2024.1.2.md)
 - [Orbeon Forms 2024.1.1 PE](orbeon-forms-2024.1.1.md)
@@ -102,7 +102,6 @@ In this release, we have addressed many issues, including:
     - Undeclared variable in XPath expression: $autosave-now ([#7257](https://github.com/orbeon/orbeon-forms/issues/7257))
     - In the 4.0.0 format, annotate with `fr:relevant="false"` children of non-relevant grid elements ([#7223](https://github.com/orbeon/orbeon-forms/issues/7223))
     - Form Data Attachments API adds spurious section elements, nested `<attachment>` ([#7215](https://github.com/orbeon/orbeon-forms/issues/7215))
-    - Incorrect Unicode diacritics output in PDF file ([#7214](https://github.com/orbeon/orbeon-forms/issues/7214))
     - Background API incorrectly returning HTML ([#7158](https://github.com/orbeon/orbeon-forms/issues/7158))
     - First validation always picked if uses `fr:param` ([#7152](https://github.com/orbeon/orbeon-forms/issues/7152))
     - User without create but with update permission because owner can't attach new files to existing data ([#7145](https://github.com/orbeon/orbeon-forms/issues/7145))
@@ -125,20 +124,22 @@ In this release, we have addressed many issues, including:
     - Section Next/Prev buttons are always disabled ([#7169](https://github.com/orbeon/orbeon-forms/issues/7169))
     - Robust Singleton form constraint checking for databases other than Oracle ([#7164](https://github.com/orbeon/orbeon-forms/issues/7164))
     - Help propagate `fr:static-readonly`/`fr:pdf-template` inside section ([#7114](https://github.com/orbeon/orbeon-forms/issues/7114))
+    - `wizard.focus()` fails if passed repeat indexes ([#7216](https://github.com/orbeon/orbeon-forms/issues/7216))
 - XBL Components
     - Minor behavior improvements to `fr:friendly-captcha` ([#7286](https://github.com/orbeon/orbeon-forms/issues/7286))
-    - `wizard.focus()` fails if passed repeat indexes ([#7216](https://github.com/orbeon/orbeon-forms/issues/7216))
-    - Incorrect layout of grid with leading empty cells ([#7207](https://github.com/orbeon/orbeon-forms/issues/7207))
     - File attachment control no longer allows selection after language change ([#7203](https://github.com/orbeon/orbeon-forms/issues/7203))
     - Hint doesn't work in Dynamic Dropdown with Search ([#7133](https://github.com/orbeon/orbeon-forms/issues/7133))
-    - "Dropdown with other" doesn't look good in the PDF ([#6911](https://github.com/orbeon/orbeon-forms/issues/6911))
     - When the date format uses leading zeros, allow dates to be entered without separators ([#7122](https://github.com/orbeon/orbeon-forms/issues/7122))
 - PDF Support
+    - Incorrect layout of grid with leading empty cells ([#7207](https://github.com/orbeon/orbeon-forms/issues/7207)) 
+    - "Dropdown with other" doesn't look good in the PDF ([#6911](https://github.com/orbeon/orbeon-forms/issues/6911))
+    - Incorrect Unicode diacritics output in PDF file ([#7214](https://github.com/orbeon/orbeon-forms/issues/7214))
     - Don't set `max-height` on PDF logo ([#7255](https://github.com/orbeon/orbeon-forms/issues/7255))
-- Portlet support
+- Embedding and portlet support
     - Portlet preferences cause `java.lang.VerifyError` ([#7272](https://github.com/orbeon/orbeon-forms/issues/7272))
     - Proxy Portlet: update web.xml and remove log4j jars ([#7270](https://github.com/orbeon/orbeon-forms/issues/7270))
     - Proxy Portlet: filter out non-configured paths ([#7227](https://github.com/orbeon/orbeon-forms/issues/7227))
+    - Java embedding: output `Writer` must not be closed ([#7194](https://github.com/orbeon/orbeon-forms/issues/7194))
 - XForms
     - `iframe` in custom dialog initially loads non-existing URL ([#7267](https://github.com/orbeon/orbeon-forms/issues/7267))
     - `xxf:lang()` crashes ([#7209](https://github.com/orbeon/orbeon-forms/issues/7209))
@@ -149,12 +150,10 @@ In this release, we have addressed many issues, including:
     - Offline: separate property to configure autosave ([#7182](https://github.com/orbeon/orbeon-forms/issues/7182))
 - Distribution
     - Orbeon Forms application restarts regularly in WildFly Docker container ([#7217](https://github.com/orbeon/orbeon-forms/issues/7217))
-- Embedding
-    - Java embedding: output `Writer` must not be closed ([#7194](https://github.com/orbeon/orbeon-forms/issues/7194))
+    - Third-party library upgrades
 - Other
     - Running `FormRunnerApiClientTest`, getting "not a valid selector" SyntaxError ([#7250](https://github.com/orbeon/orbeon-forms/issues/7250))
     - Native function to determine if there are any open dialogs ([#7179](https://github.com/orbeon/orbeon-forms/issues/7179))
-- Third-party library upgrades
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page, or use our Docker images.
 
