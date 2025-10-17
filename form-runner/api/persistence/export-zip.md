@@ -1,5 +1,11 @@
 # Zip Export API
 
+## Availability
+
+This is an Orbeon Forms PE feature.
+
+[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+
 ## Service endpoint
 
 HTTP `GET` to the following path:
