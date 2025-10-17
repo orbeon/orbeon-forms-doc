@@ -18,7 +18,9 @@ Form Builder now supports a view mode, which allows users to view form definitio
 - dialogs can be open, but they are not editable
 - the user cannot save or publish the form 
 
-You access this mode using the "Review" button from the Form Builder Summary page. 
+You access this mode using the "Review" button from the Form Builder Summary page.
+
+![Form Builder view mode](/form-builder/images/form-builder-view-mode.webp)
 
 ### Option to store attachments in S3
 
