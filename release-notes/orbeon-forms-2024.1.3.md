@@ -40,6 +40,19 @@ When duplicating a browser tab, Orbeon Forms now warns the user to close that ta
 
 For more, see the [blog post](https://www.orbeon.com/2025/09/tab-duplication-detection).
 
+### Improved landing page configuration
+
+You can now specify custom cards on the landing page for:
+
+- published form definitions in a particular app
+- form data for a particular form
+
+This including specifying titles, descriptions, and icons for those cards.
+
+In addition, if the configuration is blank, the landing page is entirely disabled.
+
+For more, see the [documentation](/form-runner/feature/landing-page.md#configuration-properties).
+
 [//]: # (### Paging of large sections)
 
 [//]: # ()

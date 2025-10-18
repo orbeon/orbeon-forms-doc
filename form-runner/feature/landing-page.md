@@ -62,6 +62,93 @@ The following property controls the number of rows available on cards shown on t
     value="8"/>
 ```
 
+[\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
+
+The `oxf.fr.landing.cards` property can now be in JSON format and specify more options for cards. Here is an example:
+
+```json
+[
+  {
+    "card-type": "quick-links"
+  },
+  {
+    "card-type": "published-forms",
+    "title": "landing.titles.demo-forms",
+    "description": "landing.descriptions.demo-forms",
+    "thumbnail": "/apps/fr/style/images/orbeon/sports-car.svg",
+    "app": "orbeon"
+  },
+  {
+    "card-type": "published-forms",
+    "title": "landing.titles.demo-features",
+    "description": "landing.descriptions.demo-features",
+    "thumbnail": "/apps/fr/style/images/orbeon/checkboxes.svg",
+    "app": "orbeon-features"
+  },
+  {
+    "card-type": "published-forms",
+    "title": "landing.titles.published-forms",
+    "description": "landing.descriptions.published-forms",
+    "thumbnail": "/apps/fr/style/images/orbeon/book.svg"
+  },
+  {
+    "card-type": "form-data",
+    "app": "orbeon",
+    "form": "builder",
+    "version": 1
+  } ,
+  {
+    "card-type": "form-data",
+    "app": "orbeon",
+    "form": "bookshelf",
+    "version": 1
+  }
+]
+```
+
+The following card types are available:
+
+- `card-type` (string, required): type of card; possible values are:
+    - `quick-links`: quick links card
+    - `published-forms`: published forms card
+    - `form-data`: form data card
+
+For each card type, the following options are available:
+
+- `quick-links` card options: none
+- `published-forms` card options:
+    - `title` (required): title of the card
+    - `description` (required): description of the card
+    - `thumbnail` (required): URL of the thumbnail image for the card
+    - `app` (string, optional): application name to filter forms; if not specified, all applications are shown
+- `form-data` card options:
+    - `app` (string, required): application name
+    - `form` (string, required): form name
+    - `version` (integer, required): form version
+
+For the `form-data` cards, the title and description are taken from the form definition.
+
+Titles and descriptions shown above use Form Runner resources. You can also specify them directly as strings, by language code:
+
+```json
+{
+  "title": {
+    "en": "My Title",
+    "fr": "Mon Titre",
+    "_": "My Title [TODO: localize]"
+  },
+  "description": {
+    "en": "My Description",
+    "fr": "Ma Description",
+    "_": "My Description [TODO: localize]"
+  }
+}
+```
+
+The special `"_"` language code is used as a fallback when the user's language is not found.
+
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+
 ## See also 
 
 - [Published Forms page](published-forms-page.md)
