@@ -101,6 +101,7 @@ In this release, we have addressed many issues, including:
     - Form titles containing commas are truncated in Form Builder Forms landing page card ([#7117](https://github.com/orbeon/orbeon-forms/issues/7117))
     - Form Builder unresponsive after Esc in Open selection Formula ([#7116](https://github.com/orbeon/orbeon-forms/issues/7116))
     - Controls in repeated section disappear after section unmarked as repeated ([#7112](https://github.com/orbeon/orbeon-forms/issues/7112))
+    - After reordering controls in a repeated grid, the order of the binds and template elements remains unchanged ([#7312](https://github.com/orbeon/orbeon-forms/issues/7312))
 - Form Runner
     - Help popover for calculated value appears too far from text when border is disabled ([#7128](https://github.com/orbeon/orbeon-forms/issues/7128))
     - Help popover shows over calendar icon for natural width date ([#7127](https://github.com/orbeon/orbeon-forms/issues/7127))
