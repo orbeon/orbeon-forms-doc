@@ -36,6 +36,19 @@ The push to remote API reads a form definition from the local server and publish
     - `Authorization`: optional, credentials for the local server (standard HTTP Basic authentication)
     - `Orbeon-Remote-Authorization`: optional, credentials for the remote server (HTTP Basic authentication format)
 
+### Example with curl
+
+The following pushes version 1 of the `acme/order` form definition to the remote server named `prod`, using `remote:remote` as credentials on the remote:
+
+```
+curl -v \
+    --request POST \
+    --url "http://localhost:8080/orbeon/fr/service/push-to-remote/acme/order" \
+    --url-query "remote-server=prod" \
+    --header "Orbeon-Form-Definition-Version: 1" \
+    --header "Orbeon-Remote-Authorization: Basic cmVtb3RlOnJlbW90ZQ=="
+```
+
 ## Pull from remote API
 
 ### Purpose
@@ -56,33 +69,9 @@ The pull from remote API reads a form definition from a configured remote server
     - `Authorization`: optional, credentials for the local server (standard HTTP Basic authentication)
     - `Orbeon-Remote-Authorization`: optional, credentials for the remote server (HTTP Basic authentication format)
 
-## Response
+### Example with curl
 
-- Success: HTTP status code `200` (OK)
-- Errors:
-    - `400` (Bad Request): missing required parameters or invalid configuration
-    - `403` (Forbidden): the remote server does not allow API access
-    - `404` (Not Found): the form definition was not found on the remote server
-    - Other status codes may be returned based on the underlying operations
-
-## Examples
-
-### Push to remote with curl
-
-The following pushes version 1 of the `acme/order` form definition to the remote server named `prod`:
-
-```
-curl -v \
-    --request POST \
-    --url "http://localhost:8080/orbeon/fr/service/push-to-remote/acme/order" \
-    --url-query "remote-server=prod" \
-    --header "Orbeon-Form-Definition-Version: 1" \
-    --header "Orbeon-Remote-Authorization: Basic cmVtb3RlOnJlbW90ZQ=="
-```
-
-### Pull from remote with curl
-
-The following pulls version 2 of the `acme/order` form definition from the remote server named `prod`:
+The following pulls version 1 of the `acme/order` form definition from the remote server named `prod`, using `remote:remote` as credentials on the remote:
 
 ```
 curl -v \
@@ -93,6 +82,15 @@ curl -v \
     --header "Orbeon-Remote-Authorization: Basic cmVtb3RlOnJlbW90ZQ=="
     curl \
 ```
+
+## Response
+
+- Success: HTTP status code `200` (OK)
+- Errors:
+    - `400` (Bad Request): missing required parameters or invalid configuration
+    - `403` (Forbidden): the remote server does not allow API access
+    - `404` (Not Found): the form definition was not found on the remote server
+    - Other status codes may be returned based on the underlying operations
 
 ## See also
 
