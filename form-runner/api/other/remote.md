@@ -80,7 +80,6 @@ curl -v \
     --url-query "remote-server=prod" \
     --header "Orbeon-Form-Definition-Version: 1" \
     --header "Orbeon-Remote-Authorization: Basic cmVtb3RlOnJlbW90ZQ=="
-    curl \
 ```
 
 ## Response
