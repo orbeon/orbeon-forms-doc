@@ -140,6 +140,7 @@ In this release, we have addressed many issues, including:
     - Robust Singleton form constraint checking for databases other than Oracle ([#7164](https://github.com/orbeon/orbeon-forms/issues/7164))
     - Help propagate `fr:static-readonly`/`fr:pdf-template` inside section ([#7114](https://github.com/orbeon/orbeon-forms/issues/7114))
     - `wizard.focus()` fails if passed repeat indexes ([#7216](https://github.com/orbeon/orbeon-forms/issues/7216))
+    - JS API: setting readonly control value must report an error ([#7319](https://github.com/orbeon/orbeon-forms/issues/7319))
 - XBL Components
     - Minor behavior improvements to `fr:friendly-captcha` ([#7286](https://github.com/orbeon/orbeon-forms/issues/7286))
     - File attachment control no longer allows selection after language change ([#7203](https://github.com/orbeon/orbeon-forms/issues/7203))
