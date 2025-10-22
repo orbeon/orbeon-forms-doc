@@ -158,6 +158,17 @@ For single-selection controls, you can also pass an integer value rather than a 
 ORBEON.fr.API.getForm().setControlValue('my-single-selection', 2)
 ```
 
+[\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md)
+
+If the control to set the value on is one of the following:
+
+- upload control
+- output control
+- readonly control
+- disabled (non-relevant) control
+
+Then the function completes with a rejected `Promise`.
+
 ### Getting a control's value
 
 [\[SINCE Orbeon Forms 2024.1.2\]](/release-notes/orbeon-forms-2024.1.2.md)
