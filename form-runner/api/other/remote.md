@@ -8,13 +8,11 @@ This is an Orbeon Forms PE feature.
 
 ## Purpose
 
-The remote server APIs allow you to push form definitions to or pull form definitions from a remote server configured in the `oxf.fr.home.remote-servers` property. These APIs simplify the process of synchronizing form definitions between different Orbeon Forms instances.
-
-These APIs are used internally by the [Forms Admin page](/form-runner/feature/forms-admin-page.md) when pushing to or pulling from a remote server.
+The remote server APIs allow you to push form definitions to or pull form definitions from a remote server configured in the `oxf.fr.home.remote-servers` property. These APIs simplify the process of synchronizing form definitions between different Orbeon Forms instances. They are also used internally by the [Forms Admin page](/form-runner/feature/forms-admin-page.md) when pushing to or pulling from a remote server.
 
 ## Configuration
 
-Before using these APIs, you must configure the remote servers using the `oxf.fr.home.remote-servers` property; see the [Remote servers configuration](/configuration/properties/form-runner.md#remote-servers) documentation.
+Before using these APIs, configure the remote servers using the `oxf.fr.home.remote-servers` property. If you already have a configuration in place (for instance, for the Forms Admin page), add `"api-access": true` to any servers you wish to access through these APIs. For more details, see the [Remote servers configuration](/configuration/properties/form-runner.md#remote-servers) documentation.
 
 ## Push to remote API
 
