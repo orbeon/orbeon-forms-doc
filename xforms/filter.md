@@ -41,7 +41,7 @@ The `<url-pattern>` defined under the second `<filter-mapping>` has the value `/
     <init-param>
         <param-name>oxf.xforms.renderer.default-encoding</param-name>
         <param-value>UTF-8</param-value>
-    </init-param>-->
+    </init-param>
 </filter>
 
 <!-- Any web resource under /xforms-jsp is processed by the XForms engine -->
