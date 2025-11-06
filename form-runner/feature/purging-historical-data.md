@@ -16,6 +16,8 @@ Or you can purge forms by specifying a list of application, form, and version fi
 
 ![Purge following forms](../images/purge-following-forms.png)
 
+It's possible to specify a date range using the "From" and "Until" date pickers. This allows you to purge only the data that was last modified after and/or before the specified dates. Both the "From" and "Until" dates are inclusive.
+
 ## Limitations
 
 - It is only possible to purge form data, not form definitions.
