@@ -33,8 +33,8 @@ The field encryption password must remain stable to ensure that existing encrypt
 {% endhint %}
 
 ### Changing the encryption password
- 
-[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md) You can change the field encryption password using the following procedure:
+
+[\[SINCE Orbeon Forms 2024.1.3\]](/release-notes/orbeon-forms-2024.1.3.md) You can change the field encryption password using the following procedure:
 
 1. Make a database backup. This is essential, as the following steps will re-encrypt all your data in place, which can result in data loss if something goes wrong during re-encryption.  
 2. Set `oxf.fr.field-encryption.password.read-fallback` to the current value of `oxf.fr.field-encryption.password`.  
