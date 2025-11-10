@@ -61,7 +61,7 @@ Cross-site request forgery is often abbreviated CSRF or XSRF. We'll use CSRF her
 1. The first is the risk of using Orbeon to launch CSRF attacks on another site. This would require users to be able to inject content into an Orbeon Forms page. Orbeon takes steps to prevent this, as covered in the documentation above.
 2. The second is the risk of another site tricking Orbeon Forms into performing an action the user didn't want. In this scenario, the malicious site would make the browser do a form POST to the Orbeon Forms server. Two things prevent this:
     - When Orbeon Forms creates a page, it generates a random unique UUID for that page. Any request from that page needs this UUID. An attacker would need to know that UUID to pull off a CSRF attack.
-    - Unless your application server is set up to create a session cookie with `SameSite=None`, the session cookie Orbeon Forms uses won't be sent by browsers on cross-site requests. With Tomcat, the `SameSite` attribute isn't set by default, and modern browsers automatically apply `SameSite=Lax` to cookies without an explicit `SameSite` setting, which keeps things secure.
+    - For extra protection, you can configure your application server to create cookies with `SameSite=Strict` or `SameSite=Lax` ([MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)). With Tomcat, you can do this by adding `<CookieProcessor sameSiteCookies="strict"/>` inside the `<Context>` you use for Orbeon Forms.
 
 ### Communication with services
 
