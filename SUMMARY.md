@@ -225,6 +225,7 @@
             * [Form Runner JavaScript API](form-runner/api/other/form-runner-javascript-api.md)
             * [Generate XML Schema API](form-runner/api/other/xml-schema-generation.md)
             * [PDF API](form-runner/api/other/pdf-api.md)
+            * [Property provider API](form-runner/api/other/property-provider.md)
             * [Publish form definition API](form-runner/api/other/publish.md)
             * [Remote server APIs](form-runner/api/other/remote.md)
             * [Run form in the background API](form-runner/api/other/run-form-background.md)
