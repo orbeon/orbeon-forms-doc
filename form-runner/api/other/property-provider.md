@@ -123,7 +123,7 @@ public interface PropertyProvider {
 }
 ```
 
-Note that in many cases, only `getPropertiesIfNeeded()` needs to be implemented, as `getCacheKey()` has a default implementation which returns an empty `Optional`. Also, several of th parameters to `getPropertiesIfNeeded()` might not be needed. However, `eTag` is a major component of the caching mechanism, so it must be handled properly.
+Note that in many cases, only `getPropertiesIfNeeded()` needs to be implemented, as `getCacheKey()` has a default implementation which returns an empty `Optional`. Also, several of the parameters to `getPropertiesIfNeeded()` might not be needed. However, `eTag` is a major component of the caching mechanism, so it must be handled properly.
 
 In addition, the following context interfaces are provided to give access to information about the current request:
 
@@ -199,23 +199,26 @@ When multiple property providers are registered, they are called in order of pri
 ```xml
 <property
     as="xs:string"
-    name="oxf.properties.providers.order"
+    name="oxf.properties.providers.classnames"
     value=".*MyFirstProvider .*MySecondProvider"/>
 ```
 
 Each space-separated token is a regular expression matching the fully-qualified class name of a provider.
 
-- providers must be listed in order to be used; providers that are not matched are ignored
-- the leftmost providers have the lowest priority
-- the rightmost providers have the highest priority
-- a regular expression can match no provider, in which case it has no effect
-- Orbeon Forms includes a standard provider which has the lowest priority and is always included
+- matching
+    - providers must be listed in order to be used; providers that are not matched are ignored
+    - a regular expression may match no provider, in which case it has no effect
+- order
+    - the leftmost providers have the highest priority
+    - the rightmost providers have the lowest priority
+
+Orbeon Forms includes a standard provider which has the lowest priority and is always included. This provider reads your `properties-local.xml` file and other built-in Orbeon Forms property files (which you generally do not directly deal with).
 
 Some properties are always checked in the standard Orbeon Forms property provider, including:
 
 - `oxf.xforms.cache.provider`
 - `oxf.xforms.store.provider`
-- `oxf.properties.providers.order`
+- `oxf.properties.providers.classnames`
 
 ## See also
 
