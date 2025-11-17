@@ -158,7 +158,7 @@ public interface Request {
 }
 ```
 
-A provider implementation must not implement these interfaces: they are provided by Orbeon Forms at runtime. Orbeon Forms might extend these interfaces with further methods in the future.
+A provider implementation must not implement these interfaces: instead, they are meant for consumption by your property provider implementation. Orbeon Forms may extend these interfaces with additional methods in the future.
 
 ### Registering a provider
 
