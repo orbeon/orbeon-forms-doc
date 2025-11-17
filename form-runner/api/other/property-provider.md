@@ -214,9 +214,7 @@ _NOTE: If you use a fully-qualified class name, such as `org.acme.MyPropertyProv
     - the leftmost providers have the highest priority
     - the rightmost providers have the lowest priority
 
-Orbeon Forms includes a standard provider which has the lowest priority and is always included. This provider reads your `properties-local.xml` file and other built-in Orbeon Forms property files (which you generally do not directly deal with).
-
-Some properties are always checked in the standard Orbeon Forms property provider, including:
+Orbeon Forms includes a standard provider which has the lowest priority and is always included. This provider reads your `properties-local.xml` file and other built-in Orbeon Forms property files (which you generally do not directly deal with). Some properties are always checked in the standard Orbeon Forms property provider, including:
 
 - `oxf.properties.providers.classnames`
 - `oxf.xforms.cache.provider`
