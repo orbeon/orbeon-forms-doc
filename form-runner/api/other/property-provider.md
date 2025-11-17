@@ -192,9 +192,9 @@ com.example.MyPropertyProvider
 
 This file and directory hierarchy are placed within the web application in a JAR file under `WEB-INF/lib`. 
 
-### Priorities of providers
+### Enabling and priority of providers
 
-When multiple property providers are registered, they are called in order of priority. This is done using the following property:
+Providers must be explicitly enabled to be used by Orbeon Forms to be used. In addition, when multiple providers are registered, their priority must be specified. Both of these functions are achieved using the following property:
 
 ```xml
 <property
@@ -205,6 +205,8 @@ When multiple property providers are registered, they are called in order of pri
 
 Each space-separated token is a regular expression matching the fully-qualified class name of a provider.
 
+_NOTE: If you use a fully-qualified class name, such as `org.acme.MyPropertyProvider`, keep in mind that `.` in a regular expression matches any character. Use `\.` or `[.]` to explicitly match a period._
+
 - matching
     - providers must be listed in order to be used; providers that are not matched are ignored
     - a regular expression may match no provider, in which case it has no effect
@@ -212,13 +214,15 @@ Each space-separated token is a regular expression matching the fully-qualified 
     - the leftmost providers have the highest priority
     - the rightmost providers have the lowest priority
 
+If the 
+
 Orbeon Forms includes a standard provider which has the lowest priority and is always included. This provider reads your `properties-local.xml` file and other built-in Orbeon Forms property files (which you generally do not directly deal with).
 
 Some properties are always checked in the standard Orbeon Forms property provider, including:
 
+- `oxf.properties.providers.classnames`
 - `oxf.xforms.cache.provider`
 - `oxf.xforms.store.provider`
-- `oxf.properties.providers.classnames`
 
 ## See also
 
