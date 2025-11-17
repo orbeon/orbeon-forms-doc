@@ -205,7 +205,7 @@ Providers must be explicitly enabled to be used by Orbeon Forms to be used. In a
 
 Each space-separated token is a regular expression matching the fully-qualified class name of a provider.
 
-_NOTE: If you use a fully-qualified class name, such as `org.acme.MyPropertyProvider`, keep in mind that `.` in a regular expression matches any character. Use `\.` or `[.]` to explicitly match a period._
+_NOTE: If you use a fully-qualified class name, such as `org.acme.MyPropertyProvider`, keep in mind that `.` in a regular expression matches any character. Use `\.` or `[.]` to explicitly match a period. In general, this is not a problem, as it is unlikely that there are two providers in the classpath differing only by these characters._
 
 - matching
     - providers must be listed in order to be used; providers that are not matched are ignored
