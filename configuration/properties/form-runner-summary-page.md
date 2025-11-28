@@ -61,27 +61,6 @@ You can remove either one of those columns by setting the appropriate property v
     value="true"/>
 ```
 
-## Date and time formats
-
-There are 3 formats, depending on how far in the past the date is: `within-day`, `day-this-year`, and `short-date`. You can see below how to override all 3 formats to `[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]` for the English language (`en`).
-
-After setting those properties in your `properties-local.xml`, make sure to restart your server, as those are aggressively cached for performance reasons.
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.fr.resource.*.*.en.common.formats.within-day"
-    value="[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]"/>
-<property
-    as="xs:string"
-    name="oxf.fr.resource.*.*.en.common.formats.day-this-year"
-    value="[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]"/>
-<property
-    as="xs:string"
-    name="oxf.fr.resource.*.*.en.common.formats.short-date"
-    value="[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]"/>
-```
-
 ## Show the workflow stage
 
 [SINCE Orbeon Forms 2020.1]

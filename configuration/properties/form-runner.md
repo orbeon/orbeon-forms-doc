@@ -341,6 +341,33 @@ This also works for resources that don't exist yet. For your own resources, star
 
 *NOTE: You can add new resources as shown above, but you cannot create new languages.*
 
+### Date and time formats
+
+Form Runner uses 3 date/time format resources to display dates and times throughout its user interface, including the Summary page, Home page, and form/data cards. The format used depends on how far in the past the date is:
+
+- `within-day` - for dates within the last 24 hours
+- `day-this-year` - for dates earlier this year
+- `short-date` - for dates in previous years
+
+The example below shows how to override all 3 formats to use an ISO-8601 style format `[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]` for the English language (`en`). These formats are used for displaying Created and Last Modified timestamps in the Summary page, Last Modified timestamps in the Home page, and date information in the Published Forms and Form Data cards.
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.resource.*.*.en.common.formats.within-day"
+    value="[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]"/>
+<property
+    as="xs:string"
+    name="oxf.fr.resource.*.*.en.common.formats.day-this-year"
+    value="[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]"/>
+<property
+    as="xs:string"
+    name="oxf.fr.resource.*.*.en.common.formats.short-date"
+    value="[Y0001]-[M01]-[D01] [H01]:[m01]:[s01]"/>
+```
+
+After setting these properties, make sure to restart your application server, as resources are aggressively cached for performance reasons.
+
 ## Email settings
 
 See [Email](form-runner-email.md).
