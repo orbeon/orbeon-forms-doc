@@ -463,5 +463,5 @@ If you are testing the performance of an application that talks to a database or
 [11]: http://wiki.orbeon.com/forms/doc/developer-guide/admin-tuning#TOC-Customize-the-standard-epilogue
 [13]: https://blog.orbeon.com/2006/12/configuring-apache-front-end-for-orbeon_27.html
 [14]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-performance-settings
-[15]: contributors/state-handling.md
+[15]: configuration/advanced/state-handling.md
 [16]: http://wiki.orbeon.com/forms/doc/developer-guide/xforms-logging

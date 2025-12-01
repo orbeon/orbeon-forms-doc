@@ -217,7 +217,7 @@ When a user's session is about to expire, Form Runner can now show a dialog warn
 
 ![Session about to expire](../contributors/images/session-about-to-expire.png)
 
-For more information, see the [documentation](/contributors/state-handling.md#session-expiration-dialog).
+For more information, see the [documentation](/configuration/advanced/state-handling.md#session-expiration-dialog).
 
 ## Other new features and enhancements
 

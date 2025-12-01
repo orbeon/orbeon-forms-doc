@@ -24,7 +24,7 @@ __IMPORTANT: Performance will suffer if any of the data in the in-memory caches 
 
 However, there is a trade-off between performance and memory usage. The larger the cache, the more memory is used.
 
-For more information on these configuration properties, see [Configuring state handling](/contributors/state-handling.md#configuring-state-handling).
+For more information on these configuration properties, see [Configuring state handling](/configuration/advanced/state-handling.md#configuring-state-handling).
 
 ## Other caches used by Orbeon Forms
 
@@ -154,7 +154,7 @@ This property enables access to caches with the following names, configured eith
 
 ## See also
 
-- [State Handling](/contributors/state-handling.md)
+- [State Handling](/configuration/advanced/state-handling.md)
 - [Installation](README.md)
 - [Replication](replication.md)
 - Blog post: [High-Availability Thanks to State Replication](https://blog.orbeon.com/2018/03/high-availability-thanks-to-state.html)

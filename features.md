@@ -238,8 +238,8 @@ As of 2016-04-19 this page is still being updated.
 
 ### Form handling
 
-- Session heartbeat: [doc](contributors/state-handling.md)
-- Browser back/forward button support: [doc](contributors/state-handling.md)
+- Session heartbeat: [doc](configuration/advanced/state-handling.md)
+- Browser back/forward button support: [doc](configuration/advanced/state-handling.md)
 
 ### Embedding
 
