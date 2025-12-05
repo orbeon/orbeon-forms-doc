@@ -227,7 +227,7 @@ The baseline of resources is configured as follows:
 <property
   as="xs:string"
   name="oxf.xforms.resources.baseline"
-  value="fr:button fr:tabview fr:autocomplete"/>
+  value="fr:tabview fr:autocomplete"/>
 ```
 
 The value consists of a list of qualified names referring to XBL components. Resources for the components specified are always included in every page, whether the component is used by the page or not.
