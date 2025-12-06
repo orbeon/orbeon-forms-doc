@@ -296,6 +296,7 @@
         * [Compatibility](xforms/xpath/compatibility.md)
         * [Standard functions](xforms/xpath/standard-functions.md)
         * [Maps and arrays Functions](xforms/xpath/maps-arrays.md)
+        * [Calling Java code from XPath](xforms/xpath/java-functions.md)
         * Extension functions
             * [Core functions](xforms/xpath/extension-core.md)
             * [Utility functions](xforms/xpath/extension-util.md)
