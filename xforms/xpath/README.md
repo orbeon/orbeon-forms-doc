@@ -9,6 +9,7 @@ This page and sub-pages describe XPath usage and the Orbeon Forms XPath function
 - [Compatibility](compatibility.md)
 - [Standard Functions](standard-functions.md)
 - [Maps and arrays Functions](maps-arrays.md)
+- [Calling Java code from XPath](java-functions.md)
 - Extension Functions
     - [Core functions](extension-core.md)
     - [Utility functions](extension-util.md)
