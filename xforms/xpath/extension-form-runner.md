@@ -764,10 +764,10 @@ For example, here is how to download a rendered format:
 <!-- Action -->
 <xf:setvalue
     ref="my-attachment"
-    value="fr:get-or-create-rendered-format-url('pdf')"/>
+    value="fr:rendered-format-url('pdf')"/>
 <xf:setvalue
     ref="my-attachment/@filename"
-    value="fr:filename-for-rendered-format('pdf')"/>
+    value="fr:rendered-format-filename('pdf')"/>
 
 <!-- View -->
 <xf:output
@@ -780,15 +780,17 @@ For example, here is how to download a rendered format:
 </xf:output>
 ```
 
-### fr:get-or-create-rendered-format-url()
+### fr:rendered-format-url()
 
 ```xpath
-fr:get-or-create-rendered-format-url(
+fr:rendered-format-url(
     $rendered-format as xs:string
 ) as xs:string
 ```
 
 This function returns the URL to access the rendered format of the current form data, creating it if it doesn't already exist.
+
+__WARNING: This function can have a significant side-effect if the URL is not yet present, as the rendered format will be created at that time, which can be an expensive operation.__
 
 Parameters:
 
@@ -796,10 +798,10 @@ Parameters:
     - the rendered format to get or create the URL for
     - possible values: `pdf`, `tiff`, `excel-with-named-ranges`, `xml-form-structure-and-data`
 
-### fr:filename-for-rendered-format()
+### fr:rendered-format-filename()
 
 ```xpath
-fr:filename-for-rendered-format(
+fr:rendered-format-filename(
     $rendered-format as xs:string
 ) as xs:string
 ```
