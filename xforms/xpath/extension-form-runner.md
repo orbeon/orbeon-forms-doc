@@ -755,23 +755,7 @@ Name of the attachment control.
 
 These functions are useful with the [Confirmation page](/form-runner/feature/confirmation-page.md) feature.
 
-### fr:get-or-create-rendered-format-url()
-
-```xpath
-fr:get-or-create-rendered-format-url(
-    $rendered-format as xs:string
-) as xs:string
-```
-
-This function returns the URL to access the rendered format of the current form data, creating it if it doesn't already exist.
-
-Parameters:
-
-- `$rendered-format`
-    - the rendered format to get or create the URL for
-    - possible values: `pdf`, `tiff`, `excel-with-named-ranges`, `xml-form-structure-and-data`
-
-The URL can be used to download the rendered format, for example with:
+For example, here is how to download a rendered format:
 
 ```xml
 <!-- Data -->
@@ -788,13 +772,29 @@ The URL can be used to download the rendered format, for example with:
 <!-- View -->
 <xf:output
     appearance="xxf:download"
-    xxf:download="{@filename}"
-    ref="my-attachment">
+    ref="my-attachment"
+    xxf:download="{@filename}">
     <xf:label>Download PDF</xf:label>
     <xf:filename  ref="@filename"/>
     <xf:mediatype ref="@mediatype"/>
 </xf:output>
 ```
+
+### fr:get-or-create-rendered-format-url()
+
+```xpath
+fr:get-or-create-rendered-format-url(
+    $rendered-format as xs:string
+) as xs:string
+```
+
+This function returns the URL to access the rendered format of the current form data, creating it if it doesn't already exist.
+
+Parameters:
+
+- `$rendered-format`
+    - the rendered format to get or create the URL for
+    - possible values: `pdf`, `tiff`, `excel-with-named-ranges`, `xml-form-structure-and-data`
 
 ### fr:filename-for-rendered-format()
 
@@ -804,7 +804,12 @@ fr:filename-for-rendered-format(
 ) as xs:string
 ```
 
-This function returns the filename for the rendered format of the current form data, based on configuration properties.
+This function returns the filename for the rendered format of the current form data, based on configuration properties:
+
+- `oxf.fr.detail.pdf.filename.*.*`
+- `oxf.fr.detail.tiff.filename.*.*`
+- `oxf.fr.detail.excel-with-named-ranges.filename.*.*`
+- `oxf.fr.detail.xml-form-structure-and-data.filename.*.*`
 
 Parameters:
 
