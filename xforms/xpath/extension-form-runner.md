@@ -749,6 +749,69 @@ fr:attachment-control-name($el as node()) as xs:string
 
 Name of the attachment control.
 
+## Rendered format functions
+
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+
+These functions are useful with the [Confirmation page](/form-runner/feature/confirmation-page.md) feature.
+
+### fr:get-or-create-rendered-format-url()
+
+```xpath
+fr:get-or-create-rendered-format-url(
+    $rendered-format as xs:string
+) as xs:string
+```
+
+This function returns the URL to access the rendered format of the current form data, creating it if it doesn't already exist.
+
+Parameters:
+
+- `$rendered-format`
+    - the rendered format to get or create the URL for
+    - possible values: `pdf`, `tiff`, `excel-with-named-ranges`, `xml-form-structure-and-data`
+
+The URL can be used to download the rendered format, for example with:
+
+```xml
+<!-- Data -->
+<my-attachment filename="" mediatype="application/pdf"/>
+
+<!-- Action -->
+<xf:setvalue
+    ref="my-attachment"
+    value="fr:get-or-create-rendered-format-url('pdf')"/>
+<xf:setvalue
+    ref="my-attachment/@filename"
+    value="fr:filename-for-rendered-format('pdf')"/>
+
+<!-- View -->
+<xf:output
+    appearance="xxf:download"
+    xxf:download="{@filename}"
+    ref="my-attachment">
+    <xf:label>Download PDF</xf:label>
+    <xf:filename  ref="@filename"/>
+    <xf:mediatype ref="@mediatype"/>
+</xf:output>
+```
+
+### fr:filename-for-rendered-format()
+
+```xpath
+fr:filename-for-rendered-format(
+    $rendered-format as xs:string
+) as xs:string
+```
+
+This function returns the filename for the rendered format of the current form data, based on configuration properties.
+
+Parameters:
+
+- `$rendered-format`
+    - the rendered format to get the filename for
+    - possible values: `pdf`, `tiff`, `excel-with-named-ranges`, `xml-form-structure-and-data`
+
 ## See also
 
 - Blog post: [A stable function library for Form Runner](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
