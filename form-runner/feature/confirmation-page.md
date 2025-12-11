@@ -56,7 +56,7 @@ You can also choose whether a PDF download button is available. The PDF is produ
 By default, Form Runner does not show a confirmation page. You navigate to a confirmation page by using the `change-mode(mode = "confirmation")` action in a process, such as a `submit` process. For example:
 
 ```xml
-<property as="xs:string"  name="oxf.fr.detail.process.confirmation.issue.2985">
+<property as="xs:string"  name="oxf.fr.detail.process.confirmation.acme.order">
     send(
         uri     = "https://example.org/",
         method  = "POST",
