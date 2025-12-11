@@ -281,7 +281,12 @@ Form state is sensitive information, and Orbeon Forms makes sure to handle it se
 - the token can only be used once; a second use returns an error
 - form state is removed from the server store once it has been used
 
+## Example
+
+As an example of use of the custom mode logic, the built-in [Confirmation page](confirmation-page.md) feature uses a custom mode to display the confirmation message after form submission. You can look at the source code of that feature for inspiration, see [`confirmation.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/confirmation/confirmation.xbl).
+
 ## See also
 
+- [Confirmation page](confirmation-page.md)
 - [Detail page configuration properties](/configuration/properties/form-runner-detail-page.md)
 - [Simple processes](/form-runner/advanced/buttons-and-processes/README.md)
