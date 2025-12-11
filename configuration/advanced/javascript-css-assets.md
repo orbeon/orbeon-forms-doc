@@ -85,7 +85,7 @@ Some CSS and JavaScript files are never included into aggregated resources:
 * resources with `f:url-norewrite="true":  
 `<xh:link rel="stylesheet" href="/style.css" f:url-norewrite="true"/>`
 * resources with an absolute URL, such as:  
-`<xh:link rel="stylesheet" href="http://example.org/style.css"/>`
+`<xh:link rel="stylesheet" href="https://example.org/style.css"/>`
 * CSS resources with a `media` attribute that is present but different from "all":  
 `<xh:link rel="stylesheet" href="/style.css" media="print"/>`
 

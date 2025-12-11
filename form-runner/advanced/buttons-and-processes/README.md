@@ -69,7 +69,7 @@ This places a `save-progress` and `send` button on the page. (Prior to Orbeon Fo
 <property as="xs:string" name="oxf.fr.detail.process.send.acme.hr">
     require-valid
     then email
-    then send("http://example.org/")
+    then send("https://example.org/")
     then navigate("/success")
     recover navigate("/failure")
 </property>

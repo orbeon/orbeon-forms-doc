@@ -149,7 +149,7 @@ navigate(uri = "javascript:myFunction()")
 The URL value, whether directly or via a property, can be an XPath Value Template, which runs in the context of the root element of the main form instance:
 
 ```
-navigate(uri = "http://example.org/{xxf:get-request-parameter('bar')}/{.//code}")
+navigate(uri = "https://example.org/{xxf:get-request-parameter('bar')}/{.//code}")
 ```
 
 ## relinquish-lease

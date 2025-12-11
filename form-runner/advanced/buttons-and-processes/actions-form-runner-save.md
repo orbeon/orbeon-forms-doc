@@ -50,7 +50,7 @@ The full URL, for attachments as well as for the XML data, is composed of:
 
 Example:
 
-    http://example.org/orbeon/fr/service/persistence/crud/
+    https://example.org/orbeon/fr/service/persistence/crud/
         orbeon/
         bookshelf/
         data/891ce63e59c17348f6fda273afe28c2b/data.xml?

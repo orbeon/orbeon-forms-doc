@@ -23,6 +23,7 @@ See [Email configuration properties](/configuration/properties/form-runner-email
 ## Email template selection
 
 When an email is sent, the following algorithm is used to determine what template is used:
+
 - If no email template is defined, then a default title and body defined in the Form Runner resources is used.
 - If at least one email template is defined:
   - All the templates that are for a specific language which doesn't correspond to the current language are filtered out.

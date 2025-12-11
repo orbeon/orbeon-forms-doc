@@ -15,7 +15,7 @@ The following example uses three parameters in the `send` action for the form `m
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
     send(
-        uri        = "http://example.org/accept-form",
+        uri        = "https://example.org/accept-form",
         method     = "PUT",
         content    = "metadata"
     )
@@ -148,7 +148,7 @@ and the type of content using three additional sub-properties.
 <property
     as="xs:string"
     name="oxf.fr.detail.process.send.my-app.my-form.uri"
-    value="http://example.org/accept-form"
+    value="https://example.org/accept-form"
     />
 <property
     as="xs:string"
@@ -235,7 +235,7 @@ The full URL is composed of:
 
 Example:
 
-    http://example.org/service?
+    https://example.org/service?
         document=7520171020e65a1585e72574ae1fbe138c415bee&
         process=139ceb515f918d6d17030b81255d8a3dfa0501cc&
         valid=true&
@@ -367,7 +367,7 @@ For example, to send form data with its attachments:
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
     send(
-        uri     = "http://example.org/accept-form",
+        uri     = "https://example.org/accept-form",
         method  = "POST",
         content = "xml attachments"
     )
@@ -379,7 +379,7 @@ To send form data, attachments, and the PDF file:
 ```xml
 <property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
     send(
-        uri     = "http://example.org/accept-form",
+        uri     = "https://example.org/accept-form",
         method  = "POST",
         content = "xml attachments pdf"
     )

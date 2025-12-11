@@ -35,7 +35,7 @@ The default is `remove`.
 <xf:submission id="my-submission"
     method="post"
     nonrelevant="empty"
-    resource="http://example.org/rest/draft/"
+    resource="https://example.org/rest/draft/"
     replace="none"/>
 ```
 
@@ -52,7 +52,7 @@ These boolean attributes disable processing of validation and relevance pruning 
     method="post"
     validate="false"
     relevant="false"
-    resource="http://example.org/rest/draft/"
+    resource="https://example.org/rest/draft/"
     replace="none"/>
 ```
 
@@ -63,7 +63,7 @@ XForms 2.0 introduces `nonrelevant` (while keeping `relevant` for backward compa
     method="post"
     validate="false"
     nonrelevant="keep"
-    resource="http://example.org/rest/draft/"
+    resource="https://example.org/rest/draft/"
     replace="none"/>
 ```
 
@@ -75,7 +75,7 @@ Orbeon Forms supports the XForms 1.1 `serialization` on `<xf:submission>`. This 
 <xf:submission id="my-submission"
     method="get"
     serialization="none"
-    resource="http://example.org/document.xml"
+    resource="https://example.org/document.xml"
     replace="instance"
     instance="my-instance"/>
 ```
