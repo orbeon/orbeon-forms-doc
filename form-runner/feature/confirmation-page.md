@@ -19,12 +19,15 @@ Like email templates, the confirmation page can be customized using Form Builder
 
 You open the "Confirmation Page Settings" dialog from the Form Builder "Advanced" tab.
 
-![Advanced tab in Form Builder toolbox](../images/advanced-tab.webp)
+<figure>
+    <img alt="Advanced tab in Form Builder toolbox" src="../images/advanced-tab.webp" width="219">
+    <figcaption>Advanced tab in Form Builder toolbox</figcaption>
+</figure>
 
 The "Confirmation Page Settings" dialog allows you to create multiple templates, each with a name and optional language. The confirmation page selects a template as follows:
 
 - All the templates that are for a specific language which doesn't correspond to the current language are filtered out.
-- If at least one template which corresponds to the current language exists, the first such template is used, following the order in which they are defined in the form.
+- If at least one template which corresponds to the current language exists, the first such template is used, following the order in which they are defined in the form.z
 - The first remaining template is used, following the order in which they are defined in the form.
 
 __NOTE: As of Orbeon Forms 2025.1, unlike with email templates, it is not possible to choose a template by name.__
