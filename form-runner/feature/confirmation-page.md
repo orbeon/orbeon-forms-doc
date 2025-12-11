@@ -17,11 +17,11 @@ Like email templates, the confirmation page can be customized using Form Builder
 
 ## Form Builder user interface
 
-You open the "Confirmation Page Templates" dialog from the Form Builder "Advanced" tab.
+You open the "Confirmation Page Settings" dialog from the Form Builder "Advanced" tab.
 
 ![Advanced tab in Form Builder toolbox](../images/advanced-tab.webp)
 
-The "Confirmation Page Templates" dialog allows you to create multiple templates, with a name and optional language. The confirmation page selects a template as follows:
+The "Confirmation Page Settings" dialog allows you to create multiple templates, each with a name and optional language. The confirmation page selects a template as follows:
 
 - All the templates that are for a specific language which doesn't correspond to the current language are filtered out.
 - If at least one template which corresponds to the current language exists, the first such template is used, following the order in which they are defined in the form.
@@ -47,7 +47,20 @@ You can also choose whether a PDF download button is available. The PDF is produ
 
 ## Form Runner configuration
 
-By default, Form Runner does not enable a confirmation page. You navigate to the confirmation page by using the `change-mode(mode = "confirmation")` action in a process, such as a `submit` process.
+By default, Form Runner does not show a confirmation page. You navigate to a confirmation page by using the `change-mode(mode = "confirmation")` action in a process, such as a `submit` process. For example:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.process.confirmation.issue.2985">
+    send(
+        uri     = "https://example.org/",
+        method  = "POST",
+        content = "xml",
+        replace = "none"
+    )
+    then email(template = "my-template")
+    then change-mode(mode = "confirmation")
+</property>
+```
 
 ## See also
 
