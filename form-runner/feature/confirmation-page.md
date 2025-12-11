@@ -11,7 +11,10 @@ It is useful for a form to be able to show a confirmation page to the user once 
 - displaying a message to the user once the form is successfully submitted
 - allowing the user to download a PDF copy of the submitted data
 
-![Confirmation page example](../images/confirmation-page-example.webp)
+<figure>
+    <img alt="Confirmation page example" src="../images/confirmation-page-example.webp" width="590">
+    <figcaption>Confirmation page example</figcaption>
+</figure>
 
 Like email templates, the confirmation page can be customized using Form Builder, using *confirmation page templates*.
 
