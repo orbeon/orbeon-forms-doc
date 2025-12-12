@@ -30,7 +30,7 @@ You open the "Confirmation Page Settings" dialog from the Form Builder "Advanced
 The "Confirmation Page Settings" dialog allows you to create multiple templates, each with a name and optional language. The confirmation page selects a template as follows:
 
 - All the templates that are for a specific language which doesn't correspond to the current language are filtered out.
-- If at least one template which corresponds to the current language exists, the first such template is used, following the order in which they are defined in the form.z
+- If at least one template which corresponds to the current language exists, the first such template is used, following the order in which they are defined in the form.
 - The first remaining template is used, following the order in which they are defined in the form.
 
 __NOTE: As of Orbeon Forms 2025.1, unlike with email templates, it is not possible to choose a template by name.__
@@ -49,7 +49,7 @@ Both title and message body can be configured with templates parameters which ca
 You can also choose whether a PDF download button is available. The PDF is produced as follows:
 
 - If, in a previous page, a process used the `send()` or `email()` action and a PDF was produced at that time, then that PDF is used.
-- Else, the PDF is produced at the time the confirmation page is shown.
+- Otherwise, the PDF is produced at the time the confirmation page is shown.
 
 ## Form Runner configuration
 
