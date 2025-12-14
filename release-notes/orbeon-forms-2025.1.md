@@ -12,6 +12,14 @@ With Orbeon Forms 2025.1, we are introducing a number of major new features. Sev
 
 In addition, some features improve the deployment of Orbeon Forms, including cloud deployment, and deployment with JavaScript embedding. 
 
+### Language Support
+
+Orbeon Forms 2025.1 brings major improvements to language support: 
+
+- All languages that were only partially supported before are now fully supported.
+- We've added Polish, Arabic, and Japanese support for both Form Runner and Form Builder.
+- We've also added Catalan, Chinese (Simplified), Chinese (Traditional), Hungarian, and Turkish support for Form Runner.
+
 ### Pluggable detail page modes
 
 xxx
