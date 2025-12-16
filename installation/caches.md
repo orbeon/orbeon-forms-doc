@@ -26,6 +26,8 @@ However, there is a trade-off between performance and memory usage. The larger t
 
 For more information on these configuration properties, see [Configuring state handling](/configuration/advanced/state-handling.md#configuring-state-handling).
 
+xxx TODO: diagram
+
 ## Other caches used by Orbeon Forms
 
 Orbeon Forms also uses the following caches that use an underlying cache implementation and configuration, such as Ehcache or through the JCache API (see [Supported cache implementations](#supported-cache-implementations) below):
@@ -41,7 +43,7 @@ Orbeon Forms also uses the following caches that use an underlying cache impleme
     - This must be replicated when [replication](replication.md) is enabled.
 - Caching of form definition metadata in the persistence layer
     - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
-    - This is configured by the `form-runner.persistence.form-definition` and `form-runner.persistence.form-metadata` caches.
+    - This is configured by the `form-runner.persistence.form-definition` cache.
     - This is a true cache, which doesn't need to be replicated.
     - See [Persistence layer caching of form definition metadata](#persistence-layer-caching-of-form-definition-metadata) below.
 
@@ -147,10 +149,9 @@ This cache is enabled by default. To disable it, set the following property:
 
 One reason to disable this cache might be if you perform accesses to the database from outside of Orbeon Forms, and you want to make sure that you always get the latest form definition. However, we recommend using the [Form Runner persistence API](/form-runner/api/persistence/README.md) instead.
 
-This property enables access to caches with the following names, configured either in `ehcache.xml` or in the JCache configuration:
+This property enables access to cache with the following name, configured either in `ehcache.xml` or in the JCache configuration:
 
 - `form-runner.persistence.form-definition`
-- `form-runner.persistence.form-metadata`
 
 ## See also
 
