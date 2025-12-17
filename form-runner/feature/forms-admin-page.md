@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Forms Admin page allows you to perform admin tasks on published forms. 
+The Forms Admin page allows you to perform admin tasks on published forms.
 
 You access the Forms Admin page by adding `fr/admin` to the path on which you deployed Orbeon Forms. If you deployed Orbeon Forms on `https://www.example.com/orbeon/`, then you can access the Forms Admin page at `https://www.example.com/orbeon/fr/admin`.
 
@@ -10,11 +10,11 @@ The Forms Admin page is very similar to the [Published Forms](published-forms-pa
 
 This page is also accessible directly from the [Landing page](landing-page.md).
 
-![The Forms Admin page](/release-notes/images/form-runner-admin.png)
+![The Forms Admin page](../../.gitbook/assets/form-runner-admin.png)
 
 ## Availability and compatibility
 
-[SINCE Orbeon Forms 2022.1]
+\[SINCE Orbeon Forms 2022.1]
 
 Until Orbeon Forms 2021.1, this page was combined with the [Published Forms page](published-forms-page.md) under the name [Home page](home-page.md) and accessible at the path `/fr/`. Starting with Orbeon Forms 2022.1, the Home page is replaced with separate Published Forms and Forms Admin pages at paths `/fr/forms` and `/fr/admin`. The `/fr/` path now reaches the [Landing page](landing-page.md).
 
@@ -40,43 +40,43 @@ the user can perform admin operations on `acme` forms only.
 
 In addition to information shown in the [Published Forms page](published-forms-page.md), the Forms Admin page shows the following information:
 
-- whether the form is available or unavailable
-- whether the form is a library form
+* whether the form is available or unavailable
+* whether the form is a library form
 
 Unavailable forms remain on the server, but any user access to an unavailable form behaves as if the form definition had never been published. Data associated with the form definition is not touched, but cannot be read or updated via the form definition when it is unavailable.
 
 Administrators can select forms in two ways:
 
-- by using the checkboxes next to the form
-- by using the *Select* menu to automatically select all forms matching a certain condition
+* by using the checkboxes next to the form
+* by using the _Select_ menu to automatically select all forms matching a certain condition
 
-![Select Menu](../images/home-select-menu.png)
+![Select Menu](../../.gitbook/assets/home-select-menu.png)
 
 The operations listed in the Operation menu are then available depending on the current selection:
 
-![Operation Menu](../images/home-operation-menu.png)
+![Operation Menu](../../.gitbook/assets/home-operation-menu.png)
 
 ## Controlling form definitions availability
 
-- __Make available local forms:__ make an unavailable form definition available again.
-- __Make unavailable local forms:__ make a published form definition unavailable.
+* **Make available local forms:** make an unavailable form definition available again.
+* **Make unavailable local forms:** make a published form definition unavailable.
 
-![Unavailable](../images/home-unavailable.png)
+![Unavailable](../../.gitbook/assets/home-unavailable.png)
 
 Initially, when publishing a form definition with Form Builder, the form definition is made available, unless you choose the option "Make published form available" to "No".
 
-![](../../form-builder/images/publish-version-next.png)
+![](../../.gitbook/assets/publish-version-next.png)
 
-[SINCE Orbeon Forms 2020.1]
+\[SINCE Orbeon Forms 2020.1]
 
-Making a form definition available or unavailable also takes into account the *version* of the form definition(s) selected.  
+Making a form definition available or unavailable also takes into account the _version_ of the form definition(s) selected.
 
 ## Deleting published form definitions
 
-[SINCE Orbeon Forms 2021.1]
+\[SINCE Orbeon Forms 2021.1]
 
-- __Delete local forms:__ delete a locally-published form definition.
-- __Delete remote forms:__ delete a remotely-published form definition.
+* **Delete local forms:** delete a locally-published form definition.
+* **Delete remote forms:** delete a remotely-published form definition.
 
 Unlike the "Make unavailable" operations, this operation removes the selected published form definitions. Once this is done, the form definitions are no longer visible in the Admin page and they can no longer be accessed.
 
@@ -85,28 +85,28 @@ This feature is useful in cases a form definition was published by mistake, for 
 Important notes:
 
 1. This does not cause any data entered using this form definition to be removed. The data will remain in the database. However, that data is no longer accessible by a form definition. If a form definition with the same application name, form name, and form version is later published, then it will have access to that data again.
-2. This action cannot be undone. However, the [auditing trail](/form-runner/persistence/auditing.md) in the database might allow recovery of a deleted form definition at the database level.
+2. This action cannot be undone. However, the [auditing trail](../persistence/auditing.md) in the database might allow recovery of a deleted form definition at the database level.
 
 ## Upgrading form definitions
 
 ### Introduction
 
-[SINCE Orbeon Forms 4.6]
+\[SINCE Orbeon Forms 4.6]
 
-- __Upgrade local form definitions:__ upgrade the selected local published form definitions, including using published section templates.
-- __Upgrade remote form definitions:__ upgrade the selected remote published form definitions, including using published section templates.
- 
+* **Upgrade local form definitions:** upgrade the selected local published form definitions, including using published section templates.
+* **Upgrade remote form definitions:** upgrade the selected remote published form definitions, including using published section templates.
+
 This operation, for each selected form definition:
 
-1. Reads the latest version (or the selected version [SINCE Orbeon Forms 2020.1]) of the published form definition, whether it is marked available or unavailable.
+1. Reads the latest version (or the selected version \[SINCE Orbeon Forms 2020.1]) of the published form definition, whether it is marked available or unavailable.
 2. Loads published section templates used by the form definition if needed:
-    - With 2020.1 and earlier: loads the *latest* versions of the published section templates that are associated with that form definition.
-    - With 2021.1 and newer: loads the *specific versions* of the published section templates that are associated with that form definition.
+   * With 2020.1 and earlier: loads the _latest_ versions of the published section templates that are associated with that form definition.
+   * With 2021.1 and newer: loads the _specific versions_ of the published section templates that are associated with that form definition.
 3. Upgrades the form definition markup to the latest format, as if loading it in Form Builder and saving it again.
 4. Includes the latest section templates loaded above into the form definition.
 5. Publishes back the form definition, either as a new version or as the same version:
-    - From Orbeon Forms 4.6 (included) to 2016.1 (excluded): a *new* form definition version is created when the form definition is upgraded.
-    - From Orbeon Forms 2016.1 (included): the upgraded form definition *overrides* the previously-published form definition (which means that it has the same application name, form name, and form definition version). 
+   * From Orbeon Forms 4.6 (included) to 2016.1 (excluded): a _new_ form definition version is created when the form definition is upgraded.
+   * From Orbeon Forms 2016.1 (included): the upgraded form definition _overrides_ the previously-published form definition (which means that it has the same application name, form name, and form definition version).
 
 In general, it is not required to run this function even after upgrading to a new version of Orbeon Forms, since form definitions are backward compatible.
 
@@ -114,15 +114,15 @@ In general, it is not required to run this function even after upgrading to a ne
 
 Here is how you can use this operation to update your form definitions' section template to the latest published section templates:
 
-1. Publish your section templates from Form Builder (see [Section templates](/form-builder/section-templates.md)). 
+1. Publish your section templates from Form Builder (see [Section templates](../../form-builder/section-templates.md)).
 2. In the Forms Admin page, select which forms you want to update.
 3. Run the "Upgrade local form definitions" action.
 
-We advise that you only republish form definitions which use section templates if you know that the format of the data covered by the section templates remains compatible, or that [Simple Data Migration](/form-runner/feature/simple-data-migration.md) is enabled and expected to cover changes such as adding fields.
+We advise that you only republish form definitions which use section templates if you know that the format of the data covered by the section templates remains compatible, or that [Simple Data Migration](simple-data-migration.md) is enabled and expected to cover changes such as adding fields.
 
 ## Remote server operations
 
-[SINCE Orbeon Forms 4.4]
+\[SINCE Orbeon Forms 4.4]
 
 This is an Orbeon Forms PE feature.
 
@@ -132,39 +132,39 @@ This feature allows you to configure access to a remote server and to make avail
 
 ### Configuration
 
-To configure remote server access, use the `oxf.fr.home.remote-servers` property; see the [Remote servers configuration](/configuration/properties/form-runner.md#remote-servers) documentation.
+To configure remote server access, use the `oxf.fr.home.remote-servers` property; see the [Remote servers configuration](../../configuration/properties/form-runner.md#remote-servers) documentation.
 
-![Multiple Remote Servers](../images/remote-server-credentials.png)
+![Multiple Remote Servers](../../.gitbook/assets/remote-server-credentials.png)
 
 ### Remote operations
 
 When the remote server is configured as above, the first time you go to the Forms Admin page you are prompted for credentials:
 
-![Credentials](../images/home-credentials.png)
+![Credentials](../../.gitbook/assets/home-credentials.png)
 
-Once the credentials are correct, the Forms Admin page retrieves the remote server's list of deployed forms and metadata, which appears in a new *Remote* column group. You then have access to new operations:
+Once the credentials are correct, the Forms Admin page retrieves the remote server's list of deployed forms and metadata, which appears in a new _Remote_ column group. You then have access to new operations:
 
-- __Make available remote form:__ make an unavailable form available again on the remote server.
-- __Make unavailable remote form:__ make a previously published form unavailable on the remote server.
-- __Push to remote:__ copy a form definition and its attachments from the local to the remote server.
-- __Pull from remote:__ copy a form definition and its attachments from the remote to the local server.
-- __Upgrade remote form definitions:__ upgrade the remote form definition (see [Upgrading form definitions](#upgrading-form-definitions)).
+* **Make available remote form:** make an unavailable form available again on the remote server.
+* **Make unavailable remote form:** make a previously published form unavailable on the remote server.
+* **Push to remote:** copy a form definition and its attachments from the local to the remote server.
+* **Pull from remote:** copy a form definition and its attachments from the remote to the local server.
+* **Upgrade remote form definitions:** upgrade the remote form definition (see [Upgrading form definitions](forms-admin-page.md#upgrading-form-definitions)).
 
-![Push to Remote](../images/home-push.png)
+![Push to Remote](../../.gitbook/assets/home-push.png)
 
 You are always prompted to confirm the operation to perform:
 
-![Confirmation](../images/home-confirmation.png)
+![Confirmation](../../.gitbook/assets/home-confirmation.png)
 
-In addition, if the latest modification time of the form definitions differ, a *Newer* label appears:
+In addition, if the latest modification time of the form definitions differ, a _Newer_ label appears:
 
-![Newer](../images/home-newer.png)
+![Newer](../../.gitbook/assets/home-newer.png)
 
 ## Re-encryption
 
-[SINCE Orbeon Forms PE 2018.1]
+\[SINCE Orbeon Forms PE 2018.1]
 
-Also see [Field-level encryption](/form-builder/field-level-encryption.md).
+Also see [Field-level encryption](../../form-builder/field-level-encryption.md).
 
 ### Limitations to re-encryption
 
@@ -172,7 +172,7 @@ Currently, re-encryption is only supported in the built-in implementation of the
 
 ### Creating a database backup before re-encryption
 
-Unlike typical update and delete operations that are performed at the database level by adding a new row, thus keeping the old data, re-encryption is done *in-place*. All data is being re-encrypted, including historical data that is part of the "journal". This means that you could loose data if something were to go wrong during re-encryption. As such, we strongly recommend you create a backup of your data before re-encryption.
+Unlike typical update and delete operations that are performed at the database level by adding a new row, thus keeping the old data, re-encryption is done _in-place_. All data is being re-encrypted, including historical data that is part of the "journal". This means that you could loose data if something were to go wrong during re-encryption. As such, we strongly recommend you create a backup of your data before re-encryption.
 
 ### Starting re-encryption
 
@@ -181,13 +181,13 @@ To re-encrypt all the data for certain forms, from the Forms Admin page:
 1. Mark the checkboxes corresponding to the relevant forms.
 2. Click on the "Operations" button, and in the menu click on "Re-encrypt form definitions". If that entry is greyed out, make sure that you haven't selected a form for which data is stored with a persistence layer that doesn't support re-encryption.
 3. After you confirm you desire to go ahead with the re-encryption, you will see, in the "Status" column:
-	- "Re-encryption started," right after you triggered the re-encryption.
-	- "Re-encrypting 392/2401," while the re-encryption is in progress, here assuming it has already re-encrypted 391 documents out of 2401 it needs to re-encrypt.
-	- "Re-encryption finished," when the re-encryption is done for that form.
+   * "Re-encryption started," right after you triggered the re-encryption.
+   * "Re-encrypting 392/2401," while the re-encryption is in progress, here assuming it has already re-encrypted 391 documents out of 2401 it needs to re-encrypt.
+   * "Re-encryption finished," when the re-encryption is done for that form.
 
 ### Configuration
 
-[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md) You can configure the batch size used during re-encryption by setting the oxf.fr.persistence.*.max-batch-size property. This property determines how many records are processed before committing changes to the database. The default value is 1000. Using an appropriate batch size helps balance memory usage and database performance during the re-encryption process. For example, to set a batch size of 500 for the MySQL provider:
+[\[SINCE Orbeon Forms 2025.1\]](../../release-notes/orbeon-forms-2025.1.md) You can configure the batch size used during re-encryption by setting the oxf.fr.persistence.\*.max-batch-size property. This property determines how many records are processed before committing changes to the database. The default value is 1000. Using an appropriate batch size helps balance memory usage and database performance during the re-encryption process. For example, to set a batch size of 500 for the MySQL provider:
 
 ```xml
 <property 
@@ -198,19 +198,19 @@ To re-encrypt all the data for certain forms, from the Forms Admin page:
 
 ## Reloading resources
 
-[SINCE Orbeon Forms 2019.2]
+\[SINCE Orbeon Forms 2019.2]
 
-Because Orbeon Forms caches form resources, if you override resources with the [`oxf.fr.resource` properties](/configuration/properties/form-runner.md#overriding-resources), those resources are not updated until the server restarts.    
+Because Orbeon Forms caches form resources, if you override resources with the [`oxf.fr.resource` properties](../../configuration/properties/form-runner.md#overriding-resources), those resources are not updated until the server restarts.
 
-Using the "Reload resources" action will invalidate the cached resources of all the selected forms immediately. The next time the form is loaded, it will use up-to-date resources including those overridden in properties. 
+Using the "Reload resources" action will invalidate the cached resources of all the selected forms immediately. The next time the form is loaded, it will use up-to-date resources including those overridden in properties.
 
 ## Reindexing
 
-[SINCE Orbeon Forms 2016.2]
+\[SINCE Orbeon Forms 2016.2]
 
 ### Upgrading to 2016.2
 
-Orbeon Forms 2016.2 adds two index tables: `orbeon_i_current` and `orbeon_i_control_text`, so when upgrading to 2016.2, for Form Runner to work properly, you'll need to initially populate those tables in an operation referred to as *reindexing*. After you've upgraded and done the initial reindexing, you shouldn't need to reindex the database manually, as Form Runner will incrementally update the index when needed.
+Orbeon Forms 2016.2 adds two index tables: `orbeon_i_current` and `orbeon_i_control_text`, so when upgrading to 2016.2, for Form Runner to work properly, you'll need to initially populate those tables in an operation referred to as _reindexing_. After you've upgraded and done the initial reindexing, you shouldn't need to reindex the database manually, as Form Runner will incrementally update the index when needed.
 
 Depending on how much data you have, the reindexing operation can take a while, and during reindexing some features of Orbeon Forms 2016.2, like Form Runner summary pages and the [search API](../api/persistence/search.md), won't work as expected. Because of this, upgrading requires some additional steps if you're using those features. If end users don't access Form Runner summary pages on your production system, and you don't have custom code calling the search API (which is rare), then go to point 1 below; otherwise, go with point 2 below.
 
@@ -221,28 +221,28 @@ Depending on how much data you have, the reindexing operation can take a while, 
 
 In admin view, the Forms Admin page shows a reindex button:
 
-![Reindex button](../images/home-reindex-button.png)
+![Reindex button](../../.gitbook/assets/home-reindex-button.png)
 
 After you click it, and confirm you want to go ahead, if this is indeed what you want to do (see above paragraph for more information about what happens during reindexing), the Forms Admin page shows the reindexing status:
 
-![Reindex status](../images/home-reindex-status.png)
+![Reindex status](../../.gitbook/assets/home-reindex-status.png)
 
-If, for some reason, you want to stop reindexing, you can do so by clicking on the *Stop reindexing* button. When doing so, the index is left in an incoherent state, and you should restart indexing at a latter time. While reindexing stops, you'll see the following message:
+If, for some reason, you want to stop reindexing, you can do so by clicking on the _Stop reindexing_ button. When doing so, the index is left in an incoherent state, and you should restart indexing at a latter time. While reindexing stops, you'll see the following message:
 
-![Reindex stopping](../images/home-reindex-stopping.png)
+![Reindex stopping](../../.gitbook/assets/home-reindex-stopping.png)
 
 Finally, once reindexing is done, you'll see:
 
-![Reindex done](../images/home-reindex-done.png)
+![Reindex done](../../.gitbook/assets/home-reindex-done.png)
 
 ### Logging
 
 While reindexing happens, the indexer writes to the log:
 
-- When indexing starts and ends.
-- Which providers it will reindex.
-- For each provider how many document it will reindex.
-- A "progress message" for each document being reindexed.
+* When indexing starts and ends.
+* Which providers it will reindex.
+* For each provider how many document it will reindex.
+* A "progress message" for each document being reindexed.
 
 The last message is logged at the `debug` level, to avoid your log growing unnecessarily in case you have lots of documents, while all the other messages are logged at the `info` level. For instance, you'll see something along those lines in your `orbeon.log`:
 
@@ -274,7 +274,7 @@ See [Purging historical data](purging-historical-data.md).
 
 ## Search and sorting
 
-[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+[\[SINCE Orbeon Forms 2024.1\]](../../release-notes/orbeon-forms-2024.1.md)
 
 The Forms Admin page allows you to search and sort forms by status, last modification date/time, application name, form name, version, and title.
 
@@ -290,15 +290,15 @@ The same configuration properties as for the [Published Forms page](published-fo
 
 For each form definition the current user has access to, the following links are shown if allowed:
 
-- Link to the summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
-- Link to the new page: shown if the current user can perform the create operation on the form.
+* Link to the summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
+* Link to the new page: shown if the current user can perform the create operation on the form.
 
-![Home Page](../images/home.png)
+![Home Page](../../.gitbook/assets/home.png)
 
 ## See also
 
-- [Published Forms page](published-forms-page.md)
-- [Landing page](landing-page.md)
-- [Summary Page](summary-page.md)
-- [Access control for deployed forms](/form-runner/access-control/deployed-forms.md)
-- [Form Builder permissions](/form-runner/access-control/editing-forms.md#form-builder-permissions)
+* [Published Forms page](published-forms-page.md)
+* [Landing page](landing-page.md)
+* [Summary Page](summary-page.md)
+* [Access control for deployed forms](../access-control/deployed-forms.md)
+* [Form Builder permissions](../access-control/editing-forms.md#form-builder-permissions)

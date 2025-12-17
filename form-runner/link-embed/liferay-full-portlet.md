@@ -1,20 +1,16 @@
-# Form Runner Liferay Full Portlet
+# Liferay full portlet
 
-
-
-Please make sure to check the [Form Runner Liferay Proxy Portlet Guide](../../form-runner/link-embed/liferay-proxy-portlet.md)
-as well, as that is the recommended way to deploy Orbeon Forms into Liferay, and [Form Runner Embedding](../../form-runner/link-embed/images/embedding-bookshelf.png)
-for a comparison of portlet deployments.
+Please make sure to check the [Form Runner Liferay Proxy Portlet Guide](liferay-proxy-portlet.md) as well, as that is the recommended way to deploy Orbeon Forms into Liferay, and [Form Runner Embedding](https://github.com/orbeon/orbeon-forms-doc/tree/8be972a4d1f4edb7e7e86d1dacd6e0367b392bd1/form-runner/link-embed/images/embedding-bookshelf.png) for a comparison of portlet deployments.
 
 ## Availability
 
 This is an Orbeon Forms PE feature.
 
-__The full portlet is no longer supported as of Orbeon Forms 2017.2 and newer. Instead, please see the [Liferay proxy portlet](liferay-proxy-portlet.md).__
+**The full portlet is no longer supported as of Orbeon Forms 2017.2 and newer. Instead, please see the** [**Liferay proxy portlet**](liferay-proxy-portlet.md)**.**
 
 ## Supported Liferay versions
 
-See [Supported Liferay versions](README.md#supported-liferay-versions).
+See [Supported Liferay versions](./#supported-liferay-versions).
 
 ## Deploying into Liferay
 
@@ -22,7 +18,7 @@ See [Supported Liferay versions](README.md#supported-liferay-versions).
 
 The Orbeon Forms WAR can be directly deployed into the Liferay portal. By default, the Form Runner demo forms and XForms examples are immediately available within the portlet:
 
-![Orbeon Forms welcome page in Liferay](images/liferay-full-home.png)
+![Orbeon Forms welcome page in Liferay](../../.gitbook/assets/liferay-full-home.png)
 
 The following steps assume that:
 
@@ -31,59 +27,49 @@ The following steps assume that:
 
 Installation steps:
 
-1. __Deploy orbeon.war:__ Start Liferay. When it is fully started move the `orbeon.war` into the Liferay deploy directory (e.g. `~/liferay/deploy`). At this point, you should see message indicating that Orbeon is being deployed. Monitor the Liferay output as well as the `logs/orbeon.log` for possible errors.
+1. **Deploy orbeon.war:** Start Liferay. When it is fully started move the `orbeon.war` into the Liferay deploy directory (e.g. `~/liferay/deploy`). At this point, you should see message indicating that Orbeon is being deployed. Monitor the Liferay output as well as the `logs/orbeon.log` for possible errors.
+2. **Enable dynamic resource reloading (optional):** Remove the file `webapps/orbeon/META-INF/context.xml` and restart Liferay. For more information on what this does, see note 2 below.
+3.  **Configuration for Form Runner (optional):** You can skip this step if you do not intend to use Form Runner or Form Builder in a portlet. Otherwise, create a file `WEB-INF/resources/config/properties-local.xml` which declares the following properties (and other properties you might want to override):
 
-2. __Enable dynamic resource reloading (optional):__ Remove the file `webapps/orbeon/META-INF/context.xml` and restart Liferay. For more information on what this does, see note 2 below.
+    ```markup
+     <properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                 xmlns:oxf="http://www.orbeon.com/oxf/processors">
 
-3. __Configuration for Form Runner (optional):__ You can skip this step if you do not intend to use Form Runner or Form Builder in a portlet. Otherwise, create a file `WEB-INF/resources/config/properties-local.xml` which declares the following properties (and other properties you might want to override):
+         <!-- Configure authentication properties through headers -->
+         <property
+             as="xs:string"
+             name="oxf.fr.authentication.method"
+             value="header"/>
 
-    ```xml
-    <properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                xmlns:oxf="http://www.orbeon.com/oxf/processors">
+         <!-- If you want the Liferay user email used for Form Runner authentication -->
+         <property
+             as="xs:string"
+             name="oxf.fr.authentication.header.username"
+             value="Orbeon-Liferay-User-Email"/>
 
-        <!-- Configure authentication properties through headers -->
-        <property
-            as="xs:string"
-            name="oxf.fr.authentication.method"
-            value="header"/>
+         <!-- If you want Liferay roles used -->
+         <property
+             as="xs:string"
+             name="oxf.fr.authentication.header.roles"
+             value="Orbeon-Liferay-User-Roles"/>
 
-        <!-- If you want the Liferay user email used for Form Runner authentication -->
-        <property
-            as="xs:string"
-            name="oxf.fr.authentication.header.username"
-            value="Orbeon-Liferay-User-Email"/>
-
-        <!-- If you want Liferay roles used -->
-        <property
-            as="xs:string"
-            name="oxf.fr.authentication.header.roles"
-            value="Orbeon-Liferay-User-Roles"/>
-
-    </properties>
+     </properties>
     ```
 
     The host name (`localhost`), port (`8080`), and context path (`orbeon`) must be updated to match your local configuration.
+4. **Add the Orbeon Forms portlet:** Log into the portal, go to the Add menu and create a new page, for example _Orbeon Page_. Then go to the Applications tab and click or drag "Orbeon Forms Portlet" to the page. The Orbeon Forms home page will show.
 
-4. __Add the Orbeon Forms portlet:__ Log into the portal, go to the Add menu and create a new page, for example _Orbeon Page_. Then go to the Applications tab and click or drag "Orbeon Forms Portlet" to the page. The Orbeon Forms home page will show.
-
-<img alt="" src="images/liferay-applications.png" width="350">
+![](../../.gitbook/assets/liferay-applications.png)
 
 NOTE:
 
-When Liferay deploys Orbeon Forms, it changes some of the descriptors and adds a `META-INF/context.xml` which is not
-present in the distribution of Orbeon Forms. This file contains:
+When Liferay deploys Orbeon Forms, it changes some of the descriptors and adds a `META-INF/context.xml` which is not present in the distribution of Orbeon Forms. This file contains:
 
-```xml
+```markup
 <context antijarlocking="true" antiresourcelocking="true">
 ```
 
-which causes Tomcat to, on startup, make a copy of the Orbeon web application into its temp directory and use that
-copy instead of the files under `webapps/orbeon`. That copy is removed when the server shuts down, and will be
-done again the next time the server is started. This makes starting Liferay slower, but more importantly this means
-that changes you make to files under `webapps/orbeon` after the server started will never be picked up. So any
-modification to the resources (`WEB-INF/resources`) of your application will require a restart of Liferay.
-This  can be quite time consuming and annoying, hence our recommendation to remove the `META-INF/context.xml`
-generated by Liferay.
+which causes Tomcat to, on startup, make a copy of the Orbeon web application into its temp directory and use that copy instead of the files under `webapps/orbeon`. That copy is removed when the server shuts down, and will be done again the next time the server is started. This makes starting Liferay slower, but more importantly this means that changes you make to files under `webapps/orbeon` after the server started will never be picked up. So any modification to the resources (`WEB-INF/resources`) of your application will require a restart of Liferay. This can be quite time consuming and annoying, hence our recommendation to remove the `META-INF/context.xml` generated by Liferay.
 
 ### Accessing Liferay users and roles
 
@@ -93,7 +79,7 @@ When running in Liferay, you can access some specific user and roles information
 
 Getting the current user's email:
 
-```xpath
+```
 xxf:get-request-header('orbeon-liferay-user-email')
 ```
 
@@ -103,7 +89,7 @@ Example:
 
 Getting the current user's full name:
 
-```xpath
+```
 xxf:get-request-header('orbeon-liferay-user-full-name')
 ```
 
@@ -113,7 +99,7 @@ Example:
 
 Getting the current user's role names:
 
-```xpath
+```
 xxf:get-request-header('orbeon-liferay-user-roles')
 ```
 
@@ -123,45 +109,44 @@ Example:
 
 `('Administrator', 'Power user', 'User')`
 
-Alternatively, you can use the standard `Orbeon-Username` and `Orbeon-Roles` headers. See also [Access Control](../../form-runner/access-control/README.md).
+Alternatively, you can use the standard `Orbeon-Username` and `Orbeon-Roles` headers. See also [Access Control](../access-control/).
 
 #### Portlet filters
 
-[SINCE Orbeon Forms 4.10]
+\[SINCE Orbeon Forms 4.10]
 
 The portlet is configured to use two portlet filters in `portlet.xml`.
 
 The first filter, `AddLiferayUserHeadersFilter`, extracts Liferay user information and sets it as headers ("properties" in portlet API parlance). This sets the following properties/headers:
 
-- `Orbeon-Liferay-User-Id`
-- `Orbeon-Liferay-User-Screen-Name`
-- `Orbeon-Liferay-User-Full-Name`
-- `Orbeon-Liferay-User-First-Name` [SINCE Orbeon Forms 2018.1]
-- `Orbeon-Liferay-User-Middle-Name` [SINCE Orbeon Forms 2018.1]
-- `Orbeon-Liferay-User-Last-Name` [SINCE Orbeon Forms 2018.1]
-- `Orbeon-Liferay-User-Email`
-- `Orbeon-Liferay-User-Group-Id`
-- `Orbeon-Liferay-User-Group-Name`
-- `Orbeon-Liferay-User-Roles`
+* `Orbeon-Liferay-User-Id`
+* `Orbeon-Liferay-User-Screen-Name`
+* `Orbeon-Liferay-User-Full-Name`
+* `Orbeon-Liferay-User-First-Name` \[SINCE Orbeon Forms 2018.1]
+* `Orbeon-Liferay-User-Middle-Name` \[SINCE Orbeon Forms 2018.1]
+* `Orbeon-Liferay-User-Last-Name` \[SINCE Orbeon Forms 2018.1]
+* `Orbeon-Liferay-User-Email`
+* `Orbeon-Liferay-User-Group-Id`
+* `Orbeon-Liferay-User-Group-Name`
+* `Orbeon-Liferay-User-Roles`
 
 The second filter, `AddOrbeonAuthHeadersFilter`, handles either container or header-based auth, and then sets the following headers/properties:
 
-- `Orbeon-Username`
-- `Orbeon-Group`
-- `Orbeon-Roles`
+* `Orbeon-Username`
+* `Orbeon-Group`
+* `Orbeon-Roles`
 
 These in turn are used internally by Orbeon to handle other aspects of authentication/authorization.
 
 ### Performance tuning
 
-For large pages, we have found that the Liferay strip filter can take an extremely long time to process a response.
-You can disable that filter in your `portal-ext.properties` with:
+For large pages, we have found that the Liferay strip filter can take an extremely long time to process a response. You can disable that filter in your `portal-ext.properties` with:
 
 ```
 com.liferay.portal.servlet.filters.strip.StripFilter=false
 ```
-_NOTE: `portal-ext.properties` is a standard Liferay configuration file you place under the [Liferay Home directory](https://dev.liferay.com/discover/deployment/-/knowledge_base/6-2/liferay-home)._
 
+_NOTE: `portal-ext.properties` is a standard Liferay configuration file you place under the_ [_Liferay Home directory_](https://dev.liferay.com/discover/deployment/-/knowledge_base/6-2/liferay-home)_._
 
 ## Creating a new landing page for the portlet
 
@@ -177,19 +162,19 @@ A simple way do implement this is as follows:
 
 First, replace this line in `page-flow-portlet.xml`:
 
-```xml
+```markup
 <page path="/" model="apps/home/page-flow.xml"/>
 ```
 
 with:
 
-```xml
+```markup
 <page path="/" view="home.xhtml"/>
 ```
 
 Second, create a new file, `WEB-INF/resources/home.xhtml`, with content such as:
 
-```html
+```markup
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Form Runner Home</title>
@@ -206,13 +191,11 @@ This is the landing page itself, and it can contain any XHTML you like. Typicall
 
 Finally, to change the Orbeon portlet theme to the plain theme, set this property:
 
-```xml
+```markup
 <property
   as="xs:anyURI"
   name="oxf.epilogue.theme.embeddable"
   value="oxf:/config/theme-embeddable.xsl"/>
 ```
 
-
-https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml
-https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml
+[https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml) [https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml)

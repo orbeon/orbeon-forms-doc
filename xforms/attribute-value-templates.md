@@ -1,20 +1,18 @@
 # Attribute Value Templates (AVTs)
 
-
-
 ## Introduction
 
 Certain attributes in XForms are literal values defined by the form author at the time the form is written, as opposed to being evaluated at runtime. Examples include the `resource` attribute on `<xf:submission>` or `<xf:load>`.
 
 To improve this, Orbeon Forms supports a notation called _Attribute Value Templates_ (AVTs) which allows including XPath expressions within attributes. You include XPath expressions in attributes by enclosing them within curly brackets (`{` and `}`).
 
-_NOTE: AVTs were first introduced in [XSLT][1]._
+_NOTE: AVTs were first introduced in_ [_XSLT_](http://www.w3.org/TR/xslt20/)_._
 
 ## Example
 
 Consider this example:
 
-```xml
+```markup
 <xf:load
     resource="/forms/detail/{
         instance('documents-instance')/documents/document[index('documents-repeat')]/id
@@ -23,13 +21,13 @@ Consider this example:
 
 When `<xf:load>` is executed, the `resource` attribute is evaluated. The results is the concatenation of `/forms/detail/` and of the result of the expression within brackets:
 
-```xml
+```markup
 instance('documents-instance')/documents/document[index('documents-repeat')]/id
 ```
 
 If the `id` element pointed to contains the string `C728595E0E43A8BF50D8DED9F196A582`, the `resource` attribute takes the value:
 
-```xml
+```markup
 /forms/detail/C728595E0E43A8BF50D8DED9F196A582
 ```
 
@@ -41,8 +39,6 @@ Note the following:
 ## AVTs on XForms elements
 
 ### Model
-
-#### <xf:submission>
 
 * `method`
 * `action` and `resource`
@@ -67,8 +63,6 @@ Note the following:
 
 ### Actions
 
-#### <xf:dispatch>
-
 * `name`
 * `target`
 * `bubbles`
@@ -76,41 +70,20 @@ Note the following:
 * `delay`
 * `xxf:show-progress`
 * `xxf:progress-message`
-
-#### <xxf:hide>
-
 * `dialog`
-
-#### <xf:insert>
-
 * `position`
-
-#### <xf:load>
-
 * resource
 * replace
 * target
 * xxf:target
 * xxf:show-progress
 * f:url-type
-
-#### <xf:setfocus>
-
 * `control`
 * `xxf:deferred-updates`
-
-#### <xf:setindex>
-
 * `xxf:deferred-updates`
-
-#### <xxf:show>
-
 * `dialog`
 * `neighbor`
 * `constrain`
-
-#### <xf:toggle>
-
 * `case`
 * `xxf:deferred-updates`
 
@@ -121,7 +94,7 @@ Note the following:
 * `style`: equivalent to the HTML `style` attribute
 * `class`: equivalent to the HTML `class` attribute
 
-#### <xf:input> and <xf:secret>
+#### &#x20;and&#x20;
 
 * `xxf:size`: equivalent to the HTML `size` attribute
 * `xxf:maxlength`: equivalent to the HTML `maxlength` attribute
@@ -135,11 +108,11 @@ Note the following:
 
 ## AVTs on XHTML Elements
 
-AVTs are also supported on XHTML elements. 
+AVTs are also supported on XHTML elements.
 
 For example:
 
-```xml
+```markup
 <xh:table class="zebra-table">
     <xh:tbody>
         <xf:repeat ref="*">
@@ -160,13 +133,13 @@ The values of XHTML attributes built using AVTs update as you interact with the 
 
 It is also possible to use AVTs outside `<xh:body>`, for example:
 
-```xml
+```markup
 <xh:html lang="{instance('language-instance')}" xml:lang="{instance('language-instance')}">...</xh:html>
 ```
 
 AVTs are also usable on HTML elements within `<xf:label>`, `<xf:hint>`, `<xf:help>`, `<xf:alert>`:
 
-```xml
+```markup
 <xf:input ref="foobar">
     <xf:label>
         <xh:span 
@@ -175,8 +148,6 @@ AVTs are also usable on HTML elements within `<xf:label>`, `<xf:hint>`, `<xf:hel
             }-label">Inverted label</xh:span>
     </xf:label>
 </xf:input>
-``` 
+```
 
-_NOTE: It is not possible to use AVTs within the id attribute of XHTML elements._  
-
-[1]: http://www.w3.org/TR/xslt20/
+_NOTE: It is not possible to use AVTs within the id attribute of XHTML elements._

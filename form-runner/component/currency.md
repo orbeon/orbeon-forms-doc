@@ -1,11 +1,10 @@
-# Currency Component
-
+# Currency
 
 ## What it does
 
 The currency component is an input field specialized to capture amounts in a particular currency.
 
-![](images/xbl-currency6.png)
+![](../../.gitbook/assets/xbl-currency6.png)
 
 When the input field doesn't have the focus, it shows a formatted currency, such as `1,234.00`. When the control has the focus, it shows the plain number, such as `1234` to facilitate input.
 
@@ -31,13 +30,13 @@ You use the number component like a regular input field, for example:
 * `decimal-separator`: single character to use as decimal separator
 * `grouping-separator`: single character to use as thousands separator separator (can be blank)
 * `round-when-formatting`: when formatting the number for display, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
-    * SINCE Orbeon Forms 2016.1
-    * UNTIL Orbeon Forms 2017.2: Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
-    * SINCE Orbeon Forms 2018.1: Rounding uses the [half up](https://en.wikipedia.org/wiki/Rounding#Round_half_up) method.
+  * SINCE Orbeon Forms 2016.1
+  * UNTIL Orbeon Forms 2017.2: Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
+  * SINCE Orbeon Forms 2018.1: Rounding uses the [half up](https://en.wikipedia.org/wiki/Rounding#Round_half_up) method.
 * `round-when-storing`: when storing the number entered by the user, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
-    * SINCE Orbeon Forms 2016.1
-    * UNTIL Orbeon Forms 2017.2: Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
-    * SINCE Orbeon Forms 2018.1: Rounding uses the [half up](https://en.wikipedia.org/wiki/Rounding#Round_half_up) method.
+  * SINCE Orbeon Forms 2016.1
+  * UNTIL Orbeon Forms 2017.2: Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.
+  * SINCE Orbeon Forms 2018.1: Rounding uses the [half up](https://en.wikipedia.org/wiki/Rounding#Round_half_up) method.
 
 These are the default values of the properties:
 
@@ -77,30 +76,34 @@ These are the default values of the properties:
 By default the dollar sign ("$") is used as a currency prefix. You can override this either:
 
 * Globally for all your forms in your ‘properties-local.xml’ by setting the following property:
+
 ```xml
 <property
     as="xs:string"
     name="oxf.xforms.xbl.fr.currency.prefix"
     value="£"/>
 ```
+
 * For a particular instance of the component:
-    * With the `prefix` attribute, for static values.
-    * With the `<fr:prefix>` element, for dynamic values.
+  * With the `prefix` attribute, for static values.
+  * With the `<fr:prefix>` element, for dynamic values.
 
 ### Digits after the decimal sign
 
 By default, the component shows the value to 2 digits after the decimal sign. You can override this either:
 
 * Globally for all your forms in your `properties-local.xml` by setting the following property:
+
 ```xml
 <property
     as="xs:string"
     name="oxf.xforms.xbl.fr.currency.digits-after-decimal"
     value="3"/>
 ```
+
 * For a particular instance of the component:
-    * With the `digits-after-decimal` attribute, for static values.
-    * With the `<fr:digits-after-decimal>` element, for dynamic values.
+  * With the `digits-after-decimal` attribute, for static values.
+  * With the `<fr:digits-after-decimal>` element, for dynamic values.
 
 If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. The component truncates any additional digits beyond the specified number; it doesn't perform rounding.
 
@@ -112,7 +115,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 <fr:currency ref="value"/>
 ```
 
-![](images/xbl-currency1.png)
+![](../../.gitbook/assets/xbl-currency1.png)
 
 ### Setting a static prefix with the prefix attribute
 
@@ -120,7 +123,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 <fr:currency ref="value" prefix="£"/>
 ```
 
-![](images/xbl-currency2.png)
+![](../../.gitbook/assets/xbl-currency2.png)
 
 ### Setting a dynamic prefix with the fr:prefix element
 
@@ -138,7 +141,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
     digits-after-decimal="3/>
 ```
 
-![](images/xbl-currency2.png)
+![](../../.gitbook/assets/xbl-currency2.png)
 
 ### Showing 0 digits after the decimal sign
 
@@ -148,7 +151,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
     digits-after-decimal="0/>
 ```
 
-![](images/xbl-currency3.png)
+![](../../.gitbook/assets/xbl-currency3.png)
 
 ### Read-only input field, because bound to node set as read-only with a MIP
 
@@ -158,10 +161,10 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 <fr:currency ref="readonly-node"/>
 ```
 
-![](images/xbl-currency4.png)
+![](../../.gitbook/assets/xbl-currency4.png)
 
 ### Rounding
 
-[SINCE Orbeon Forms 2016.1]
+\[SINCE Orbeon Forms 2016.1]
 
 For examples of rounding, see the [`fr:number`](number.md) component.

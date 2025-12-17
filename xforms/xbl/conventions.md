@@ -1,7 +1,5 @@
 # Conventions
 
-
-
 ## Following XForms
 
 Whenever it is possible, XBL components should follow patterns found in XForms controls. For instance, if it makes sense to think that the component is bound to a node, then the component should support single node binding attributes on the component element, just like an XForms control would.
@@ -16,41 +14,37 @@ Some components take "parameters" that can be specified by users of the componen
 The convention dealing with parameters is as follows:
 
 * For **read-only** parameters, users can provide:
-    * A **static value** through an attribute:
-        * the attribute name is the parameter name;
-        * the attribute value is the parameter value.
+  * A **static value** through an attribute:
+    * the attribute name is the parameter name;
+    *   the attribute value is the parameter value.
 
-            ```xml
-            <fr:date ref="..." mindate="1970-01-01"/>
-            ```
+        ```markup
+          <fr:date ref="..." mindate="1970-01-01"/>
+        ```
+  * A **dynamic value** through a nested element:
+    * the element local name is the parameter name;
+    * the element namespace is the namespace of the component;
+    * the element supports single node binding attributes;
+    *   if the parameter is read-only, the element supports the `value` attribute like `<xf:output>` does.
 
-    * A **dynamic value** through a nested element:
-        * the element local name is the parameter name;
-        * the element namespace is the namespace of the component;
-        * the element supports single node binding attributes;
-        * if the parameter is read-only, the element supports the `value` attribute like `<xf:output>` does.
-
-            ```xml
-            <fr:date ref="...">
-                <fr:mindate ref="/parameters/mindate"/>
-            </fr:date>
-            ```
-
+        ```markup
+          <fr:date ref="...">
+              <fr:mindate ref="/parameters/mindate"/>
+          </fr:date>
+        ```
 * For **read/write** parameters, users bind the component to the node from which to read/write the value with:
+  * An **attribute**:
+    * the attribute name ends with `-ref` preceded by the parameter name;
+    *   the attribute value is a binding expression.
 
-    * An **attribute**:
-        * the attribute name ends with `-ref` preceded by the parameter name;
-        * the attribute value is a binding expression.
+        ```markup
+          <fr:map selected-longitude-ref="/coordinates/longitude"/>
+        ```
+  * An **element**:
+    *   which works like the element for dynamic values in the read-only case (see above).
 
-            ```xml
-            <fr:map selected-longitude-ref="/coordinates/longitude"/>
-            ```
-
-    * An **element**:
-        * which works like the element for dynamic values in the read-only case (see above).
-
-            ```xml
-            <fr:map>
-                <fr:selected-longitude ref="/coordinates/longitude"/>
-            </fr:map>
-            ```
+        ```markup
+          <fr:map>
+              <fr:selected-longitude ref="/coordinates/longitude"/>
+          </fr:map>
+        ```

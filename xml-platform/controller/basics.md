@@ -1,24 +1,22 @@
 # Basics
 
-
-
 ## Page flow configuration
 
 A page flow is usually defined in a file called `page-flow.xml` stored at the root of your Orbeon Forms resources. This XML file has a root element called `<controller>`, which has to be within the `http://www.orbeon.com/oxf/controller` namespace. All the XML elements in a page flow have to be in that namespace unless stated otherwise. You start a page flow document as follows:
 
-```xml
+```markup
 <controller xmlns="http://www.orbeon.com/oxf/controller">
     ...
 </controller>
 ```
 
-You can configure the location of the page flow configuration file in the web application's `web.xml` file. See [Packaging and Deployment][3] for more information. In most cases, it is not necessary to change the default name and location.
+You can configure the location of the page flow configuration file in the web application's `web.xml` file. See [Packaging and Deployment](http://wiki.orbeon.com/forms/doc/developer-guide/packaging-and-deployment) for more information. In most cases, it is not necessary to change the default name and location.
 
 ## Pages
 
 Most web applications consist of a set of _pages_, identified to clients (web browsers) by a certain URL, for example:
 
-```xml
+```markup
 http://www.orbeon.org/myapp/report/detail?first=12&amp;count=10#middle
 ```
 
@@ -32,23 +30,23 @@ In most cases the URL can be split as follows:
 
 For a particular web application, what usually matters in order to identify a particular page is the path within the URL under the context path, here `/report/detail`. Therefore, in an Orbeon Forms page flow, each page is identified with a unique path information. You declare a minimal page like this:
 
-```xml
-<page path="/report/detail">  
+```markup
+<page path="/report/detail">
 ```
 
 Other pages may be declared as follows:
 
-```xml
-<page path="/report/summary">  
+```markup
+<page path="/report/summary">
 ```
 
-```xml
-<page path="/home">  
+```markup
+<page path="/home">
 ```
 
-A `<page>` element can have an optional `id` attribute useful for [navigating between pages][4].
+A `<page>` element can have an optional `id` attribute useful for [navigating between pages](basics.md#page-navigation).
 
-See [Authorization of pages and services][5] for information about configuring page authorization.
+See [Authorization of pages and services](authorization-of-pages-and-services.md) for information about configuring page authorization.
 
 ## Services
 
@@ -63,23 +61,23 @@ By default, pages can be accessed by the outside world. Of course, it is possibl
 
 On the other hand, by default, a service can only be accessed by an Orbeon Forms application and not from the outside world. This means that services are more secure. This makes sense because in many cases services exposed by Orbeon Forms are intended for consumption by Orbeon Forms applications themselves.
 
-This behavior can be modified, see [Authorization of pages and services][5] for more information.
+This behavior can be modified, see [Authorization of pages and services](authorization-of-pages-and-services.md) for more information.
 
-_NOTE: In previous versions of Orbeon Forms, services were implemented using the `<page>` element._
+_NOTE: In previous versions of Orbeon Forms, services were implemented using the_ `<page>` _element._
 
 ## Static pages and simple pages with XSLT
 
 Creating a static page with Orbeon Forms is quite easy: just add a `view` attribute on a `<page>` element which points to an XHTML file:
 
-```xml
+```markup
 <page
   path="/report/detail"
   view="oxf:/report/detail/report-detail-view.xhtml"/>
 ```
 
-Here, using the `oxf:` protocol means that the file is searched through the Orbeon Forms [resource manager][6] sandbox. It is also possible to use relative paths, for example:
+Here, using the `oxf:` protocol means that the file is searched through the Orbeon Forms [resource manager](../resources/resource-managers.md) sandbox. It is also possible to use relative paths, for example:
 
-```xml
+```markup
 <page
   path="/report/detail"
   view="report/detail/report-detail-view.xhtml"/>
@@ -87,7 +85,7 @@ Here, using the `oxf:` protocol means that the file is searched through the Orbe
 
 The path is relative to the location of the page flow configuration file where the `<page>` element is contained. Here is an example of the content of `report-detail-view.xhtml`:
 
-```xml
+```markup
 <xh:html xmlns:xh="http://www.w3.org/1999/xhtml">
     <xh:head>
         <xh:title>Hello World Classic</xh:title>
@@ -102,7 +100,7 @@ It is recommended to to use XHTML and to put all the elements in the XHTML names
 
 Instead of using a static XHTML page, you can also use an XSLT template to generate a dynamic page. This allows using XSLT constructs mixed with XHTML constructs, for example:
 
-```xml
+```markup
 <html
   xmlns="http://www.w3.org/1999/xhtml" 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -118,7 +116,7 @@ Instead of using a static XHTML page, you can also use an XSLT template to gener
 
 When XSLT templates are used, it is recommended to use the `.xsl` extension:
 
-```xml
+```markup
 <page
   path="/report/detail"
   view="report/detail/report-detail-view.xsl"/>
@@ -126,33 +124,33 @@ When XSLT templates are used, it is recommended to use the `.xsl` extension:
 
 ## Page model and page view
 
-![][7]
+![](../../.gitbook/assets/reference-controller-mvc.png)
 
 In the MVC architecture, the page logic is implemented by a _page model_, and the page layout by a _page view_. The MVC architecture promotes the separation of model, view and controller:
 
 * **The page model** is responsible for calling or implementing the business logic. It is in charge of gathering the information to be displayed by the page view.
-* **The page view** is in charge of presenting to the user the information gathered by the page model. The page view usually produces XHTML and XForms, but it can also produce other results such as XSL-FO, RSS, etc. Handling of the output of the view is done in the [page flow epilogue][8], which by default knows how to handle XHTML, XForms, XSL-FO, and custom XML document.
+* **The page view** is in charge of presenting to the user the information gathered by the page model. The page view usually produces XHTML and XForms, but it can also produce other results such as XSL-FO, RSS, etc. Handling of the output of the view is done in the [page flow epilogue](http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue), which by default knows how to handle XHTML, XForms, XSL-FO, and custom XML document.
 * **The controller** is responsible for dispatching a request from a client such as a web browser to the appropriate page model and view and connecting the model with the view. In Orbeon Forms, the controller is the PFC itself, which is configured with a page flow.
 
 For instance, a news page can use a page model to retrieve the list of headlines and then pass this information as an XML document to a page view. The view produces an XHTML page by creating a table with the content of the headlines, adding a logo at the top of the page, a copyright notice at the bottom, etc.
 
 Each PFC `<page>` element therefore supports attributes defining what page model and page view must be used:
 
-* The `model` attribute is a URL refering to an [XPL pipeline][9] (optionally an XSLT stylesheet or a static XML file) implementing the model.
-* The `view` attribute is a URL refering to an XSLT stylesheet (optionally an [XPL pipeline][9] or a static XML file) implementing the view.
+* The `model` attribute is a URL refering to an [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) (optionally an XSLT stylesheet or a static XML file) implementing the model.
+* The `view` attribute is a URL refering to an XSLT stylesheet (optionally an [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) or a static XML file) implementing the view.
 
 The model passes data to the view as an XML document, as follows:
 
-* **XPL model.** The model document must be generated by the [XPL pipeline][9] on an output named `data`.
+* **XPL model.** The model document must be generated by the [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) on an output named `data`.
 * **XSLT model.** The model document is the default output of the XSLT transformation.
 * **Static XML model.** The model document is the static XML document specified.
 * **XPL view.** The model document is available on an input named `data`.
 * **XSLT view.** The model document is available as the default input of the XSLT transformation.
 * **Static XML view.** In this case, no model document is available to the view.
 
-A model [XPL pipeline][9] and an XSLT view can be declared as follows for the `/report/detail` page:
+A model [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) and an XSLT view can be declared as follows for the `/report/detail` page:
 
-```xml
+```markup
 <page
   path="/report/detail"
   model="report/detail/report-detail-model.xpl"
@@ -161,7 +159,7 @@ A model [XPL pipeline][9] and an XSLT view can be declared as follows for the `/
 
 Here, the location of the model and view definitions mirrors the path of the page, and file names repeat the directory path, so that files can be searched easier. It is up to the developer to choose a naming convention, but it is recommended to follow a consistent naming structure. Other possibilities include:
 
-```xml
+```markup
 <page
   path="/report/detail"
   model="report-detail-model.xpl"
@@ -170,7 +168,7 @@ Here, the location of the model and view definitions mirrors the path of the pag
 
 or:
 
-```xml
+```markup
 <page
   path="/report/detail"
   model="models/report-detail-model.xpl"
@@ -179,7 +177,7 @@ or:
 
 A typical XSLT view can extract model data passed to it automatically by the PFC on its default input, for example, if the model generates a document containing the following:
 
-```xml
+```markup
 <employee>
     <name>John Smith</name>
 </employee>
@@ -187,7 +185,7 @@ A typical XSLT view can extract model data passed to it automatically by the PFC
 
 Then an XSLT view can display the content of the `<name>` element as follows:
 
-```xml
+```markup
 <html
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -200,11 +198,3 @@ Then an XSLT view can display the content of the `<name>` element as follows:
     </body>
 </html>
 ```
-
-[3]: http://wiki.orbeon.com/forms/doc/developer-guide/packaging-and-deployment
-[4]: #page-navigation
-[5]: authorization-of-pages-and-services.md
-[6]: ../resources/resource-managers.md
-[7]: ../../images/legacy/reference-controller-mvc.png
-[8]: http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue
-[9]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl

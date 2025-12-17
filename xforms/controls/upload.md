@@ -1,14 +1,14 @@
-# Upload control
+# Upload
 
 ## Appearance
 
 Example of the upload control before selection:
 
-![](../images/xforms-upload-empty.png)
+![](../../.gitbook/assets/xforms-upload-empty.png)
 
 Example of the upload control sending a file in the background, with progress bar and "Cancel" button:
 
-![](../images/xforms-upload-progress.png)
+![](../../.gitbook/assets/xforms-upload-progress.png)
 
 ## Basic usage
 
@@ -35,8 +35,8 @@ The related section of the XForms model can look like this:
 
 The `file` element is the element storing the result of the file upload. The result can be stored in two ways:
 
-* __As a URL:__ By specifying the type `xs:anyURI`.
-* __As Base64-encoded text:__ By specifying the type `xs:base64Binary`. Base64 is a mechanism to encode any binary data using a 65-character subset of US-ASCII. Using this mechanism allows embedding binary data into XML documents, at the typical cost of taking 50% more space than the original binary data. For more information, please refer to the [RFC][3].
+* **As a URL:** By specifying the type `xs:anyURI`.
+* **As Base64-encoded text:** By specifying the type `xs:base64Binary`. Base64 is a mechanism to encode any binary data using a 65-character subset of US-ASCII. Using this mechanism allows embedding binary data into XML documents, at the typical cost of taking 50% more space than the original binary data. For more information, please refer to the [RFC](https://www.ietf.org/rfc/rfc2045.txt).
 
 The optional `xf:filename`, `xf:mediatype`, and `xxf:size` (the latter is an Orbeon Forms extension) allow storing metadata about an uploaded file:
 
@@ -66,9 +66,9 @@ The URL stored as the value of the upload is temporary and only valid until eith
 * the Java VM quits,
 * or a new file upload replaces the existing URI in the XForms instance.
 
-The URL is only accessible from the server side, and will not be accessible from a client such as a web browser. It is not guaranteed to be a `file:` URL, only that it can be read with Orbeon Forms's [URL generator][4] or `<xf:output>`.
+The URL is only accessible from the server side, and will not be accessible from a client such as a web browser. It is not guaranteed to be a `file:` URL, only that it can be read with Orbeon Forms's [URL generator](../../xml-platform/processors/url-generator.md) or `<xf:output>`.
 
-The contents of the file can be retrieved using the [URL Generator][4]. The result will be an XML document containing a single root element containing the uploaded file in Base64-encoded text.
+The contents of the file can be retrieved using the [URL Generator](../../xml-platform/processors/url-generator.md). The result will be an XML document containing a single root element containing the uploaded file in Base64-encoded text.
 
 _NOTE: Using the `xs:anyURI` type allows Orbeon Forms to make sure the uploaded file does not have to reside entirely in memory. This is the preferred method for uploading large files._
 
@@ -113,9 +113,9 @@ _SECURITY NOTE: The file name and the media type are provided by the user agent 
 
 ## The accept attributes
 
-[SINCE Orbeon Forms 4.3]
+\[SINCE Orbeon Forms 4.3]
 
-The `accept` attribute is simply passed to the web browser. As of 2013, most web browsers do support filtering files based on that attribute,  as per the [HTML specification][5]. For example:
+The `accept` attribute is simply passed to the web browser. As of 2013, most web browsers do support filtering files based on that attribute, as per the [HTML specification](https://html.spec.whatwg.org/multipage/forms.html#file-upload-state-\(type=file\)). For example:
 
 ```xml
 <xf:upload ref="file" accept="image/*">
@@ -148,8 +148,8 @@ In other cases, the process works as follows:
 
 * as soon as the user selects a file with an upload control, the file is automatically scheduled for synchronization with the server
 * background synchronization starts as soon as possible:
-    * immediately if no other upload is pending
-    * when other pending uploads have completed
+  * immediately if no other upload is pending
+  * when other pending uploads have completed
 * pending uploads can be canceled by the user with a Cancel button
 * while background synchronization is taking place, the user can keep interacting and updating the page
 * no boilerplate code or otherwise is needed to start synchronization!
@@ -158,9 +158,9 @@ By default, `<xf:submission>` checks for uploads and interrupts the submission i
 
 * the effective serialization is not `none`
 * there is a pending upload
-    * for an upload control
-        * which is relevant
-        * and bound to the instance being submitted
+  * for an upload control
+    * which is relevant
+    * and bound to the instance being submitted
 
 If a submission detects that there is a pending upload, the submission terminates with:
 
@@ -199,7 +199,7 @@ _NOTE: `xforms-select` is no longer dispatched when a file is selected._
 
 ## Empty files
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+[\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
 
 By default, empty uploaded files are rejected. This behavior can be changed using the following property:
 
@@ -209,7 +209,3 @@ By default, empty uploaded files are rejected. This behavior can be changed usin
     name="oxf.fr.upload.reject-empty-files"
     value="false"/>
 ```
-
-[3]: https://www.ietf.org/rfc/rfc2045.txt
-[4]: ../../xml-platform/processors/url-generator.md
-[5]: https://html.spec.whatwg.org/multipage/forms.html#file-upload-state-(type=file)

@@ -23,13 +23,13 @@ If you place models within `<xbl:implementation>` or `<xbl:template>`, the same 
 
 * The default XPath context starts with the root element of the first instance of the first model.
 * However, if your component doesn't have a model, then the XPath context is set to an empty document node.
-    * _NOTE: In the future, this might change to being an empty sequence. For implementation-dependent reasons, for now an empty document node had to be used._
+  * _NOTE: In the future, this might change to being an empty sequence. For implementation-dependent reasons, for now an empty document node had to be used._
 
 ## Creating a single-node binding
 
 Orbeon Forms provides direct support for bindings with the `binding` mode:
 
-```xml
+```markup
 <xbl:binding id="fr-foo" element="fr|foo" xxbl:mode="binding">
 ```
 
@@ -37,7 +37,7 @@ This automatically means that the component supports all the XForms binding attr
 
 You can access the actual bound node via the `xxf:binding()` function:
 
-```xml
+```markup
 xxf:binding('fr-foo')
 ```
 
@@ -51,7 +51,7 @@ Some native XForms controls, like `xf:input`, `xf:textarea`, etc. support holdin
 
 The default for XBL components is that they don't hold a value. Use the `value` mode to add value behavior:
 
-```xml
+```markup
 <xbl:binding
   id="fr-phone-binding"
   element="fr|us-phone"
@@ -60,7 +60,7 @@ The default for XBL components is that they don't hold a value. Use the `value` 
 
 The `xxf:value()` function allows access to the control's value from the inside, by using the binding id:
 
-```xml
+```markup
 <xbl:binding id="fr-gaga" element="fr|gaga" xxbl:mode="binding value">
     <xbl:template>
         <xf:output id="gaga-output" value="xxf:value('fr-gaga')"/>
@@ -72,13 +72,13 @@ The `xxf:value()` function allows access to the control's value from the inside,
 
 Orbeon Forms provides direct support for label, help, hint and alert (LHHA):
 
-```xml
+```markup
 <xbl:binding id="fr-foo" element="fr|foo" xxbl:mode="lhha">
 ```
 
 This automatically adds support for LHHA to the component:
 
-```xml
+```markup
 <fr:foo>
     <xf:label>My label</xf:label>
     ...
@@ -87,19 +87,19 @@ This automatically adds support for LHHA to the component:
 
 By default, markup is output for the LHHA elements. You can disable this with the `custom-lhha` mode:
 
-```xml
+```markup
 <xbl:binding id="fr-foo" element="fr|foo" xxbl:mode="lhha custom-lhha">
 ```
 
 With this mode, no markup is output, and the component author can access the LHHA values with XPath functions:
 
-```xml
+```markup
 <xf:output value="xxf:label('fr-foo')"/>
 ```
 
-[SINCE Orbeon Forms 4.5] When using the `lhha` mode, it is possible to link the label handled by the XBL engine to an internal control, so that that control and the label are linked. This is done with the `xxbl:label-for` attribute:
+\[SINCE Orbeon Forms 4.5] When using the `lhha` mode, it is possible to link the label handled by the XBL engine to an internal control, so that that control and the label are linked. This is done with the `xxbl:label-for` attribute:
 
-```xml
+```markup
 <xbl:binding
   id="fr-dropdown-select1"
   element="fr|dropdown-select1"
@@ -124,7 +124,7 @@ You can find the component discussed in this section in the Orbeon Forms distrib
 
 Orbeon Forms modes make this very simple:
 
-```xml
+```markup
 <xbl:xbl
     xmlns:xh="http://www.w3.org/1999/xhtml"
     xmlns:xf="http://www.w3.org/2002/xforms"
@@ -159,17 +159,17 @@ How would you go about this? The binding between an XForms control and instance 
 
 To do so, we create a local instance. You can put it under the `<xbl:implementation>` or `<xbl:template>` elements in your XBL file:
 
-```xml
+```markup
 <xf:model>
     <xf:instance><value/></xf:instance>
 </xf:model>
 ```
 
-Here we store a single value, so we just use a single root element in the instance:  `<value>`.
+Here we store a single value, so we just use a single root element in the instance: `<value>`.
 
 The local input field just points to the local instance instead of pointing to the external single-node binding:
 
-```xml
+```markup
 <xf:input ref="instance()">
 ```
 
@@ -179,7 +179,7 @@ _NOTE: You could also write `ref="."`, which would work because, like at the top
 
 What is needed now is, when the local value changes, to copy it to the external single-node binding. You do so with an event handler:
 
-```xml
+```markup
 <xf:input ref="instance()">
     <xf:setvalue
         event="xforms-value-changed"
@@ -190,7 +190,7 @@ What is needed now is, when the local value changes, to copy it to the external 
 
 What's missing now is to reverse the value:
 
-```xml
+```markup
 <xf:input ref="instance()">
     <xf:setvalue
         event="xforms-value-changed"
@@ -209,7 +209,7 @@ What's missing now is to reverse the value:
 
 Finally, the opposite operation is needed: when the component first comes to life, and when the external value changes, the internal value must update:
 
-```xml
+```markup
 <xbl:handler
     event="xforms-enabled xforms-value-changed"
     ref="instance()"
@@ -226,7 +226,7 @@ Finally, the opposite operation is needed: when the component first comes to lif
 
 So here you go: you have a fully working non-trivial component:
 
-```xml
+```markup
 <xbl:xbl
     xmlns:xh="http://www.w3.org/1999/xhtml"
     xmlns:xf="http://www.w3.org/2002/xforms"

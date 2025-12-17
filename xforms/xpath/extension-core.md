@@ -1,10 +1,8 @@
 # Core functions
 
-
-
 ## xxf:document-id()
 
-```xpath
+```
 xxf:document-id() as xs:string`
 ```
 
@@ -14,7 +12,7 @@ This function returns the current XForms document (or page)'s unique id.
 
 ## xxf:evaluate-avt()
 
-```xpath
+```
 xxf:evaluate-avt(
     $avt-expression as xs:string
 ) as item()*
@@ -22,7 +20,7 @@ xxf:evaluate-avt(
 
 This function is similar to `saxon:evaluate()` or `xxf:evaluate()`, but instead of evaluating an XPath expression, it evaluates a string representing an attribute value template.
 
-```xml
+```markup
 <xf:output
     value="
         xxf:evaluate-avt(
@@ -32,7 +30,7 @@ This function is similar to `saxon:evaluate()` or `xxf:evaluate()`, but instead 
 
 ## xxf:format-message()
 
-```xpath
+```
 xxf:format-message(
     $template as xs:string, 
     $params   as item()*
@@ -55,7 +53,7 @@ The function uses the current language as would be obtained by the `xxf:lang()` 
 
 Example with number, date, time, and string:
 
-```xml
+```markup
 <xf:output
     value="
         xxf:format-message(
@@ -76,7 +74,7 @@ At 7:25 PM on July 23, 2010, we detected 3 spaceships on the planet Mars.
 
 Example including a choice:
 
-```xml
+```markup
 <xf:output
     value="
         xxf:format-message(
@@ -93,11 +91,11 @@ There is one file.
 There are 1,273 files.
 ```
 
-_NOTE: It is important to pass dates and times as typed values. Use `xs:dateTime()`, `xs:date()`, or `xs:time()` if needed to convert from a string._
+_NOTE: It is important to pass dates and times as typed values. Use_ `xs:dateTime()`_,_ `xs:date()`_, or_ `xs:time()` _if needed to convert from a string._
 
 ## xxf:lang()
 
-```xpath
+```
 xxf:lang() as xs:string?
 ```
 
@@ -111,18 +109,18 @@ The `xml:lang` value to use is determined this way:
 `xml:lang` is supported in the following locations:
 
 * for a static `xml:lang` value
-    * on any XForms element
-    * on the top-level `<xh:html>` element
+  * on any XForms element
+  * on the top-level `<xh:html>` element
 * for a dynamic xml:lang value (using an AVT)
-    * only on the top-level `<xh:html>` element
+  * only on the top-level `<xh:html>` element
 
-_NOTE: `xml:lang` attributes on HTML elements other than the top-level `<xh:html>` are ignored for the purpose of the `xxf:lang()` function._
+_NOTE:_ `xml:lang` _attributes on HTML elements other than the top-level_ `<xh:html>` _are ignored for the purpose of the_ `xxf:lang()` _function._
 
-_NOTE: Format of the locale is currently restricted to the form "en" or "en-GB". Support for [BCP 47](http://www.rfc-editor.org/rfc/bcp/bcp47.txt) would be desirable._
+_NOTE: Format of the locale is currently restricted to the form "en" or "en-GB". Support for_ [_BCP 47_](http://www.rfc-editor.org/rfc/bcp/bcp47.txt) _would be desirable._
 
 Example of static values:
 
-```xml
+```markup
 <xf:group xml:lang="it">
     <!-- This output produces the value "it" -->
     <xf:output value="xxf:lang()"/>
@@ -133,7 +131,7 @@ Example of static values:
 
 Example with an AVT:
 
-```xml
+```markup
 <xh:html xml:lang="{instance()}">
     <xh:head>
         <xf:model id="model">
@@ -156,12 +154,12 @@ Example with an AVT:
 
 When calling the `xxf:lang()` function from an XBL component:
 
-- `xml:lang` is first searched as described above
-- if no `xml:lang` value is found in the XBL component, then the `xml:lang` value of the XBL bound element is searched
+* `xml:lang` is first searched as described above
+* if no `xml:lang` value is found in the XBL component, then the `xml:lang` value of the XBL bound element is searched
 
 Example:
 
-```xml
+```markup
 <xbl:xbl>
     <xbl:binding id="fr-foo" element="fr|foo">
         <xbl:template>
@@ -178,7 +176,7 @@ Example:
 
 ## xxf:process-template()
 
-[SINCE Orbeon Forms 2018.1]
+\[SINCE Orbeon Forms 2018.1]
 
 ```
 xxf:process-template(
@@ -188,18 +186,19 @@ xxf:process-template(
 ) as xs:string?
 ```
 
-This function fills a string template with values passed separately. 
+This function fills a string template with values passed separately.
 
-- `$template`: template of the form:
+*   `$template`: template of the form:
+
     ```
-    My name is {$name}. I am {$age} year-old. 
+      My name is {$name}. I am {$age} year-old.
     ```
-- `$lang`: language for formatting of parameters
-- `$params`: name → value XPath `map`
+* `$lang`: language for formatting of parameters
+* `$params`: name → value XPath `map`
 
 Example with `xmlns:map="http://www.w3.org/2005/xpath-functions/map"` in scope:
 
-```xpath
+```
 xxf:process-template(
     'My name is {$name}. I am {$age} year-old. I own $ {$amount}.',
     'en',
@@ -217,7 +216,7 @@ This evaluates to:
 
 > My name is Marco Polo. I am 42 year-old. I own $ 12.99.
 
-*NOTE: As Orbeon Forms 2018.1, parameters are formatted per Java's `MessageFormat`. It is expected that in the future, these values will be formatted as they are with `xf:output`, and possibly configurable. If the exact format is important, instead of passing `xs:integer`, `xs:date`, etc. types, format the value as an `xs:string` first before passing it as parameter.*
+_NOTE: As Orbeon Forms 2018.1, parameters are formatted per Java's_ `MessageFormat`_. It is expected that in the future, these values will be formatted as they are with_ `xf:output`_, and possibly configurable. If the exact format is important, instead of passing_ `xs:integer`_,_ `xs:date`_, etc. types, format the value as an_ `xs:string` _first before passing it as parameter._
 
 ## xxf:property()
 
@@ -229,10 +228,10 @@ The `xxf:property()` function retrieves the value of a property defined in `prop
 
 This function returns the following:
 
-- empty sequence if the property is not found
-- `xs:string`, `xs:integer`, `xs:boolean` or `xs:anyURI` depending on the actual type of the property
+* empty sequence if the property is not found
+* `xs:string`, `xs:integer`, `xs:boolean` or `xs:anyURI` depending on the actual type of the property
 
-```xml
+```markup
 <xf:setvalue ref="my-property" value="xxf:property('my.property.name')"/>
 ```
 
@@ -240,25 +239,25 @@ This function returns the following:
 
 The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources.
 
-```xpath
+```
 xxf:r($resource-name as xs:string) as xs:string?
 xxf:r($resource-name as xs:string, $instance-name as xs:string) as xs:string?
 ```
 
-- `$resource-name`: resource path of the form `foo.bar.baz`. The path is relative to the `resource` element corresponding to the current language in the resources instance.
-- `$instance-name`: name of the resources instance. If omitted, search `orbeon-resources` and then `fr-form-resources`.
+* `$resource-name`: resource path of the form `foo.bar.baz`. The path is relative to the `resource` element corresponding to the current language in the resources instance.
+* `$instance-name`: name of the resources instance. If omitted, search `orbeon-resources` and then `fr-form-resources`.
 
 The function:
 
-- determines the current language based on `xml:lang`attribute in scope where the function is in used
--  resolves the closest relevant resources instance
-  - specified instance name if present
-  - `orbeon-resources` or `fr-form-resources` (for Form Runner compatibility) if absent
-- uses the resource name specified to find a resource located in the resources instance, relative to the `resource` element with the matching language
+* determines the current language based on `xml:lang`attribute in scope where the function is in used
+* resolves the closest relevant resources instance
+  * specified instance name if present
+  * `orbeon-resources` or `fr-form-resources` (for Form Runner compatibility) if absent
+* uses the resource name specified to find a resource located in the resources instance, relative to the `resource` element with the matching language
 
 Example:
 
-```xml
+```markup
 <xf:instance id="orbeon-resources" xxf:readonly="true">
     <resources>
         <resource xml:lang="en"><buttons><download>Download</download></buttons></resource>
@@ -269,11 +268,11 @@ Example:
 <xf:label value="xxf:r('buttons.download')"/>
 ```
 
-[SINCE Orbeon Forms 2018.1]
+\[SINCE Orbeon Forms 2018.1]
 
 The function supports filling a template with parameters when the `$params` is supplied:
 
-```xpath
+```
 xxf:r(
     $resource-name as xs:string, 
     $instance-name as xs:string,
@@ -281,15 +280,15 @@ xxf:r(
 ) as xs:string
 ```
 
-In this case, the function fills the template as with the [`xxf:process-template()`](#xxf-process-template) function.
+In this case, the function fills the template as with the [`xxf:process-template()`](extension-core.md#xxf-process-template) function.
 
 ## xxf:resource-elements()
 
-[SINCE Orbeon Forms 2018.2]
+\[SINCE Orbeon Forms 2018.2]
 
 Like `xxf:r()`, The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources. The difference is that this function resolves to resource elements instead of resolving to a resource string.
 
-```xpath
+```
 xxf:resource-elements(
     $resource-name as xs:string
 ) as element()*
@@ -300,12 +299,12 @@ xxf:resource-elements(
 ) as element()*
 ```
 
-- `$resource-name`: resource path of the form `foo.bar.baz`. The path is relative to the `resource` element corresponding to the current language in the resources instance.
-- `$instance-name`: name of the resources instance. If omitted, search `fr-form-resources`.
+* `$resource-name`: resource path of the form `foo.bar.baz`. The path is relative to the `resource` element corresponding to the current language in the resources instance.
+* `$instance-name`: name of the resources instance. If omitted, search `fr-form-resources`.
 
 Example:
 
-```xml
+```markup
 <xf:itemset ref="xxf:resource-elements('default-always-never.item')">
     <xf:label ref="."/>
     <xf:value ref="if (@id = 0) then 'default' else if (@id = 1) then 'true' else 'false'"/>
@@ -314,7 +313,7 @@ Example:
 
 ## xxf:rewrite-resource-uri()
 
-```xpath
+```
 xxf:rewrite-resource-uri($uri as xs:string) as xs:string
 ```
 

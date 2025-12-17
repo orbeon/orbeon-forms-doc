@@ -1,6 +1,6 @@
 # JSON support
 
-[SINCE Orbeon Forms 2016.1]
+\[SINCE Orbeon Forms 2016.1]
 
 ## Receiving JSON
 
@@ -8,19 +8,19 @@
 
 When an `xf:submission` or by an `xf:instance` with a `src` or `resource` attribute receives content with the `application/json` mediatype, Orbeon Forms parses the received JSON and converts it to an XML representation friendly to XPath expressions.
 
-[SINCE Orbeon Forms 2017.1] In addition to the `application/json` mediatype, mediatypes of the form `a/b+json` are recognized.
+\[SINCE Orbeon Forms 2017.1] In addition to the `application/json` mediatype, mediatypes of the form `a/b+json` are recognized.
 
 ### Conversion examples
 
 The following JSON object:
 
-```json
+```javascript
 { "given": "Mark", "family": "Smith" }
 ```
 
 converts to:
 
-```xml
+```markup
 <json type="object">
     <given>Mark</given>
     <family>Smith</family>
@@ -31,13 +31,13 @@ and the values can be accessed in XPath with the paths `instance()/given` and `i
 
 Numbers have a `type="number"` attribute:
 
-```json
+```javascript
 { "name": "Mark", "age": 21 }
 ```
 
 converts to:
 
-```xml
+```markup
 <json type="object">
     <name>Mark</name>
     <age type="number">21</age>
@@ -46,13 +46,13 @@ converts to:
 
 Booleans similarly have a `type="boolean"` attribute:"
 
-```json
+```javascript
 { "selected": true }
 ```
 
 converts to:
 
-```xml
+```markup
 <json type="object">
     <selected type="boolean">true</selected>
 </json>
@@ -60,13 +60,13 @@ converts to:
 
 Arrays use the `_` element name and the `type="array"` attribute:
 
-```json
+```javascript
 { "cities": ["Amsterdam", "Paris", "London"] }
 ```
 
 converts to:
 
-```xml
+```markup
 <json type="object">
     <cities type="array">
         <_>Amsterdam</_>
@@ -78,16 +78,15 @@ converts to:
 
 and the string "Paris" can be accessed with `instance()/cities/_[2]`.
 
-
 JSON `null` adds a `type="null"` attribute:"
 
-```json
+```javascript
 { "p": null }
 ```
 
 converts to:
 
-```xml
+```markup
 <json type="object">
     <p type="null"/>
 </json>
@@ -105,13 +104,13 @@ You can visualize the XML converted from JSON with Form Builder as follows:
 4. Still while editing the new action, in the Service Response Actions tab set the value of "(control-1)" to `saxon:serialize(., 'xml')`.
 5. Hit the Text button, and you'll find the XML in the text field. To make it easier to read, copy the XML in the text field, and paste it in an [XML formatting tool](https://www.freeformatter.com/xml-formatter.html).
 
-![How to see the converted XML](images/submission-json-see-xml.png)
+![How to see the converted XML](../.gitbook/assets/submission-json-see-xml.png)
 
-[SINCE Orbeon Forms 2019.1]
+\[SINCE Orbeon Forms 2019.1]
 
 The Form Builder HTTP Service dialog supports viewing JSON response translated into XML.
 
-See [XML view of JSON responses](/form-builder/http-services.md#xml-view-of-json-responses).
+See [XML view of JSON responses](../form-builder/http-services.md#xml-view-of-json-responses).
 
 ## Sending JSON
 

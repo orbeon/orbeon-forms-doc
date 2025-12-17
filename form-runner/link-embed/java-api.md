@@ -1,15 +1,15 @@
-# Form Runner Java Embedding API
+# Java Embedding API
 
 ## Availability
 
-- [SINCE Orbeon Forms 4.7]
-- The Form Runner Java Embedding API is a PE feature.
+* \[SINCE Orbeon Forms 4.7]
+* The Form Runner Java Embedding API is a PE feature.
 
 ## Rationale
 
 The intent is to allow Java (and other Java Virtual Machine (JVM)-based languages) applications to easily embed forms produced with Form Builder within other pages.
 
-![A form embedded in a simple page with a top banner](images/embedding-bookshelf.png)
+![A form embedded in a simple page with a top banner](../../.gitbook/assets/embedding-bookshelf.png)
 
 ## Configuration
 
@@ -19,16 +19,16 @@ The intent is to allow Java (and other Java Virtual Machine (JVM)-based language
 
 Your own web app does the following:
 
-1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`. Both are included in `orbeon-embedding.war` which ships 
-   with Orbeon Professional Edition (PE) only.  
+1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`. Both are included in `orbeon-embedding.war` which ships   \
+   with Orbeon Professional Edition (PE) only.
 2. Setup the filter in your `web.xml` per the snippet below.
 3. Call the embedding API when producing a page, as done in the example below.
 
 The page you do the embedding from must:
 
 1. Start with `<!DOCTYPE html>`, so your page is in [full standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Without this, you will notice that some CSS fails to apply as it should.
-2. Use the UTF-8 character encoding for the HTML response.
-This is a typical filter configuration:
+2. Use the UTF-8 character encoding for the HTML response.   \
+   This is a typical filter configuration:
 
 ```xml
 <!-- Declare and configure the embedding filter -->
@@ -60,7 +60,7 @@ This is a typical filter configuration:
 </filter-mapping>
 ```
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If you are using Orbeon Forms 2023.1 or newer, and are running a servlet container that uses the Jakarta Servlet API (e.g. Tomcat 10+, WildFly 27+), you need to use the `org.orbeon.oxf.fr.embedding.servlet.JakartaServletFilter` servlet filter class instead of `org.orbeon.oxf.fr.embedding.servlet.ServletFilter`.
+[\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md) If you are using Orbeon Forms 2023.1 or newer, and are running a servlet container that uses the Jakarta Servlet API (e.g. Tomcat 10+, WildFly 27+), you need to use the `org.orbeon.oxf.fr.embedding.servlet.JakartaServletFilter` servlet filter class instead of `org.orbeon.oxf.fr.embedding.servlet.ServletFilter`.
 
 And here is an example of embedding a form from a JSP page:
 
@@ -90,7 +90,7 @@ And here is an example of embedding a form from a JSP page:
 
 The `Map<String, String>` allows passing a Java `Map` of HTTP header name/value pairs. These are passed to Form Runner when loading a form. Form Runner can access HTTP headers using the [`xxf:get-request-header()` XPath function](../../xforms/xpath/extension-http.md#xxfget-request-header).
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) The `request` parameter can be either of type `javax.servlet.http.HttpServletRequest` or of type `jakarta.servlet.http.HttpServletRequest`.
+[\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md) The `request` parameter can be either of type `javax.servlet.http.HttpServletRequest` or of type `jakarta.servlet.http.HttpServletRequest`.
 
 #### Form Runner configuration
 
@@ -109,7 +109,7 @@ Form runner must use "combined resources" to work. This is the case by default i
 
 You can pass information about the current user to Orbeon Forms through headers. For this:
 
-1. Enable header-based authentication by editing the `properties-local.xml` in your Orbeon Forms web app, adding:
+1.  Enable header-based authentication by editing the `properties-local.xml` in your Orbeon Forms web app, adding:
 
     ```xml
     <property 
@@ -117,8 +117,7 @@ You can pass information about the current user to Orbeon Forms through headers.
         name="oxf.fr.authentication.method"
         value="header"/>
     ```
-
-2. [SINCE Orbeon Forms 2020.1] You need to enable [sticky authentication headers](../access-control/users.md#when-to-set-the-headers), adding:
+2.  \[SINCE Orbeon Forms 2020.1] You need to enable [sticky authentication headers](../access-control/users.md#when-to-set-the-headers), adding:
 
     ```xml
     <property
@@ -126,8 +125,7 @@ You can pass information about the current user to Orbeon Forms through headers.
         name="oxf.fr.authentication.header.sticky"
         value="true"/>
     ```
-
-2. Back to your web app, pass the current user's username as the value of the `My-Username-Header` header, through a map you provide as the last argument to your call to `API.embedFormJava()`:
+3.  Back to your web app, pass the current user's username as the value of the `My-Username-Header` header, through a map you provide as the last argument to your call to `API.embedFormJava()`:
 
     ```java
     Map<String, String> headers = new HashMap<String, String>();
@@ -143,8 +141,8 @@ The embedding JAR uses SLF4J for logging. If your application already uses SLF4J
 
 Optionally, and in addition, if you want to actually configure logging for the embedding library, you must add a logging adapter for SLF4j and the appropriate configuration file, for example for log4j. See the sample configuration file under `WEB-INF/classes/log4j.properties.template`. Here are example JAR files which work with Orbeon Forms 2018.2:
 
-- `slf4j-log4j12-1.7.25.jar`
-- `log4j-1.2.17.jar`
+* `slf4j-log4j12-1.7.25.jar`
+* `log4j-1.2.17.jar`
 
 ### HTTP client configuration
 
@@ -219,7 +217,7 @@ The embedding implementation communicates with the rest of Orbeon Forms via HTTP
 </init-param>
 ```
 
-Details about the meaning of these parameters are [available here](/configuration/properties/general.md).
+Details about the meaning of these parameters are [available here](../../configuration/properties/general.md).
 
 ### HTTP server configuration
 
@@ -243,20 +241,21 @@ You can enable HTTP gzip compression between the embedding implementation and Fo
         application/json"
     redirectPort="8443"/>
 ```
+
 ## Usage scenarios
 
 In your Java web application, any page covered by the servlet filter can call the embedding API. You can have a single page calling a single form, or several pages each calling a different form. Or, pages can (based on URL parameters, internal application state, etc.), embed a form dynamically.
 
 The embedded form cannot navigate in place to another form or mode (such as Review).
 
-However, it can save form or send form data as it does in the standalone case. It can also run custom [processes](../../form-runner/advanced/buttons-and-processes/README.md) which can redirect the entire embedding page with `navigate`, or run JavaScript functions with `navigate(uri = "javascript:alert('Done!')")`. This allows communicating with the embedding application.
+However, it can save form or send form data as it does in the standalone case. It can also run custom [processes](../advanced/buttons-and-processes/) which can redirect the entire embedding page with `navigate`, or run JavaScript functions with `navigate(uri = "javascript:alert('Done!')")`. This allows communicating with the embedding application.
 
 ## Form Builder embedding
 
-[SINCE Orbeon Forms 2016.3]
+\[SINCE Orbeon Forms 2016.3]
 
 In addition to published forms, you can embed Form Builder: just use `orbeon` and `builder` as Form Runner app/form names.
- 
+
 The embedding application can set the size the embedded Form Builder `<div>` element via CSS or JavaScript, and Form Builder will adjust its size accordingly:
 
 ```html
@@ -265,20 +264,20 @@ The embedding application can set the size the embedded Form Builder `<div>` ele
 
 The Form Builder "New" and "Summary" buttons are hidden when Form Builder is embedded, as navigating between pages is not yet supported when embedding.
 
-![Embedding Form Builder](images/embedding-builder-dialog.png)
+![Embedding Form Builder](../../.gitbook/assets/embedding-builder-dialog.png)
 
 ## How it works
 
 The embedding implementation:
 
-- makes an HTTP or HTTPs request to Form Runner to retrieve the HTML to embed when you call the API
-- appropriately rewrites URLs in the HTML returned by Form Runner
-- keeps track of session and other cookies
-- proxies requests for resources, Ajax calls and file uploads to Form Runner
+* makes an HTTP or HTTPs request to Form Runner to retrieve the HTML to embed when you call the API
+* appropriately rewrites URLs in the HTML returned by Form Runner
+* keeps track of session and other cookies
+* proxies requests for resources, Ajax calls and file uploads to Form Runner
 
 ## Caveats
 
-Make sure that you do *not* disable [combined resources](/configuration/advanced/javascript-css-assets.md#combined-asset-resources). Specifically, you *cannot* have the following in your `properties-local.xml`:
+Make sure that you do _not_ disable [combined resources](../../configuration/advanced/javascript-css-assets.md#combined-asset-resources). Specifically, you _cannot_ have the following in your `properties-local.xml`:
 
 ```xml
 <property
@@ -298,13 +297,13 @@ If you do have this property, make sure you remove it, comment it out, or explic
 
 ## Limitations
 
-- Using non-combined resources is not supported (so `oxf.xforms.combine-resources` must be set to `true`, which is the default).
-- Embedding multiple forms is known to work in some cases, but has known issues so we don't recommend doing this (see [#1854](https://github.com/orbeon/orbeon-forms/issues/1854))
-- Navigation between pages, such as the Form Runner Edit and Review pages, is not supported. Because of this:
-    - The `send` action within a process does not support `replace="all"`.
-    - Autosave is not supported, as the prompts made to users, whether when [creating data](https://doc.orbeon.com/form-runner/persistence/autosave#new-page) or [editing existing data](https://doc.orbeon.com/form-runner/persistence/autosave#edit-page), make use of page navigation. If some of the users are logged in, you should probably [disable the autosave feature](https://doc.orbeon.com/form-runner/persistence/autosave#disabling-autosave).
+* Using non-combined resources is not supported (so `oxf.xforms.combine-resources` must be set to `true`, which is the default).
+* Embedding multiple forms is known to work in some cases, but has known issues so we don't recommend doing this (see [#1854](https://github.com/orbeon/orbeon-forms/issues/1854))
+* Navigation between pages, such as the Form Runner Edit and Review pages, is not supported. Because of this:
+  * The `send` action within a process does not support `replace="all"`.
+  * Autosave is not supported, as the prompts made to users, whether when [creating data](https://doc.orbeon.com/form-runner/persistence/autosave#new-page) or [editing existing data](https://doc.orbeon.com/form-runner/persistence/autosave#edit-page), make use of page navigation. If some of the users are logged in, you should probably [disable the autosave feature](https://doc.orbeon.com/form-runner/persistence/autosave#disabling-autosave).
 
-## See also 
+## See also
 
-- [JavaScript Embedding API](javascript-api.md)
-- Blog post: [Form Builder embedding](https://blog.orbeon.com/2017/02/form-builder-embedding.html)
+* [JavaScript Embedding API](javascript-api.md)
+* Blog post: [Form Builder embedding](https://blog.orbeon.com/2017/02/form-builder-embedding.html)

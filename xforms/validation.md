@@ -1,6 +1,4 @@
-# XForms Validation
-
-
+# Validation
 
 See also [Form Builder Validation](../form-builder/validation.md).
 
@@ -12,8 +10,8 @@ Orbeon Forms validates XForms instances following XForms 1.1 and adds some exten
 
 There are two main methods for validating data in XForms:
 
-- with an imported XML Schema
-- with `xf:bind`
+* with an imported XML Schema
+* with `xf:bind`
 
 Using a bind allows you to create precise error messages to the user based on the type of data entry error.
 
@@ -21,28 +19,28 @@ Using a bind allows you to create precise error messages to the user based on th
 
 Orbeon Forms performs validation of a node in the following order:
 
-- data type validation
-    - XML Schema validation (lax/strict/none on model instances)
-    - `xf:bind/@type`
-    - `xf:type`
-- required validation
-    - required-but-empty
-    - `xf:bind/@required`
-    - `xf:required/@value`
-- constraints
-    - `xf:bind/@constraint`
-    - `xf:constraint/@value`
-    - are checked *only* if the control's data type is valid
+* data type validation
+  * XML Schema validation (lax/strict/none on model instances)
+  * `xf:bind/@type`
+  * `xf:type`
+* required validation
+  * required-but-empty
+  * `xf:bind/@required`
+  * `xf:required/@value`
+* constraints
+  * `xf:bind/@constraint`
+  * `xf:constraint/@value`
+  * are checked _only_ if the control's data type is valid
 
 ## Extensions
 
 ### Multiple constraints and alerts
 
-[SINCE Orbeon Forms 4.3]
+\[SINCE Orbeon Forms 4.3]
 
 XForms allows a single `constraint` attribute on the `xf:bind` element. Orbeon Forms extends this to support any number of nested `xf:constraint` elements, each specifying a single validation:
 
-```xml
+```markup
 <xf:bind ref="." id="input-bind">
     <xf:constraint
         id="length-constraint"
@@ -59,8 +57,8 @@ Each constraint applies to the enclosing `xf:bind`.
 
 Attributes:
 
-- `level`: optional, specifies an alert level (defaults to `error`)
-- `constraint`: XPath expression specifying the constraint
+* `level`: optional, specifies an alert level (defaults to `error`)
+* `constraint`: XPath expression specifying the constraint
 
 The `id` attribute is optional and useful to attach alerts.
 
@@ -68,7 +66,7 @@ Constraints combine with a logical "and" for a given level. For example, if the 
 
 If there is a single error constraint, the following binds are equivalent:
 
-```xml
+```markup
 <xf:bind ref="." id="input-bind" constraint="string-length() gt 1"/>
 
 <xf:bind ref="." id="input-bind">
@@ -78,35 +76,35 @@ If there is a single error constraint, the following binds are equivalent:
 
 ### Validation levels
 
-[SINCE Orbeon Forms 4.3]
+\[SINCE Orbeon Forms 4.3]
 
 Orbeon Forms supports the following validation levels:
 
-- error (which corresponds to XForms's valid/invalid)
-- warning
-- info
+* error (which corresponds to XForms's valid/invalid)
+* warning
+* info
 
-The default validation level is *error*.
+The default validation level is _error_.
 
 The warning and info levels allow checking validation conditions that are weaker than errors.
 
-Levels are hierarchical. If a control is valid, it can have a *warning* level. This is the case if there is at least one failed warning constraint.
+Levels are hierarchical. If a control is valid, it can have a _warning_ level. This is the case if there is at least one failed warning constraint.
 
-If a control doesn't have a warning level, it can have an *info* level. This is the case if there is at least one failed info constraint.
+If a control doesn't have a warning level, it can have an _info_ level. This is the case if there is at least one failed info constraint.
 
 A warning or info level does not make the control value invalid and it is still possible to submit form data.
 
-*NOTE: As of Orbeon Forms 2018.2, it is only possible to associate a warning or info validation level to a constraint specified with `xf:constraint/@value`. It is not possible to associate these levels to the required or data type validations: they always use the error level. See also [issue #3571](https://github.com/orbeon/orbeon-forms/issues/3571)*
+_NOTE: As of Orbeon Forms 2018.2, it is only possible to associate a warning or info validation level to a constraint specified with `xf:constraint/@value`. It is not possible to associate these levels to the required or data type validations: they always use the error level. See also_ [_issue #3571_](https://github.com/orbeon/orbeon-forms/issues/3571)
 
 ### Nested validation elements
 
-[SINCE Orbeon Forms 4.9]
+\[SINCE Orbeon Forms 4.9]
 
 Instead of `type` and `required` attributes, you can use `xf:type` and `xf:required` elements nested within `xf:bind`.
 
 This allows assigning a specific identifier to a validation with the `id` attribute, so that `xf:alert` can refer to those with the `validation` attribute:
 
-```xml
+```markup
 <xf:bind id="control-1-bind" name="control-1" ref="control-1">
     <xf:required value="true()" id="validation-3-validation"/>
     <xf:type id="validation-4-validation">xs:decimal</xf:type>
@@ -124,31 +122,31 @@ This allows assigning a specific identifier to a validation with the `id` attrib
 
 This allows having distinct alerts for indicating:
 
-- that the value is required
-- that the value must be of the given datatype
-- that the value must satisfy constraints expressed in XPath
+* that the value is required
+* that the value must be of the given datatype
+* that the value must satisfy constraints expressed in XPath
 
-*LIMITATION: As of Orbeon Forms 2018.2, only the first `type` and the first `required` attribute or element associated with an `xf:bind` element are taken into account. On the other hand, all `constraint` elements are handled.*
+_LIMITATION: As of Orbeon Forms 2018.2, only the first `type` and the first `required` attribute or element associated with an `xf:bind` element are taken into account. On the other hand, all `constraint` elements are handled._
 
 ### Multiple alerts
 
-[SINCE Orbeon Forms 4.3]
+\[SINCE Orbeon Forms 4.3]
 
-A control can have more than one `xf:alert` element. By default, an `xf:alert` is considered the *default* alert for the control and is active for all validation levels and constraints:
+A control can have more than one `xf:alert` element. By default, an `xf:alert` is considered the _default_ alert for the control and is active for all validation levels and constraints:
 
-```xml
+```markup
 <xf:alert>
 ```
 
 If a `level` attribute is specified, the alert is active for the given levels:
 
-```xml
+```markup
 <xf:alert level="warning info">
 ```
 
 If a `validation` attribute is specified, the alert is active only for the given validations:
 
-```xml
+```markup
 <xf:alert validation="c1 c2">
 ```
 
@@ -158,25 +156,26 @@ Blank `level` and `validation` attributes are equivalent to no attributes.
 
 If both `level` and `validation` attributes are specified, `level` is ignored:
 
-```xml
+```markup
 <xf:alert level="error" validation="c1 c2">
 ```
+
 More than one alert can be active at the same time, following a hierarchy:
 
-- If the control doesn't have a validation level, no alert is active.
-- If there is a level:
-    - If there is a failed required validation, the default alert is active.
-    - Otherwise, if there is a failed data type validation, the default alert is active.
-    - Otherwise, if there are alerts that match specific failed constraints, those alerts and no others are active.
-    - Otherwise, if there are alerts that match the specific level, those alerts and no others are active.
-    - Otherwise, if present, the default alert is active.
-    - Otherwise, no alert is active.
+* If the control doesn't have a validation level, no alert is active.
+* If there is a level:
+  * If there is a failed required validation, the default alert is active.
+  * Otherwise, if there is a failed data type validation, the default alert is active.
+  * Otherwise, if there are alerts that match specific failed constraints, those alerts and no others are active.
+  * Otherwise, if there are alerts that match the specific level, those alerts and no others are active.
+  * Otherwise, if present, the default alert is active.
+  * Otherwise, no alert is active.
 
-*NOTE: This is the behavior as of Orbeon Forms 4.6.2 and newer, see [#1830](https://github.com/orbeon/orbeon-forms/issues/1830). Prior to that, a failed required validation was at the same level as other failed validations. The 4.6.2 behavior makes it so that the required validation has priority over other error validations.*
+_NOTE: This is the behavior as of Orbeon Forms 4.6.2 and newer, see_ [_#1830_](https://github.com/orbeon/orbeon-forms/issues/1830)_. Prior to that, a failed required validation was at the same level as other failed validations. The 4.6.2 behavior makes it so that the required validation has priority over other error validations._
 
 Example:
 
-```xml
+```markup
 <xf:bind ref="." id="input-bind">
     <xf:constraint
         id="length-constraint"
@@ -201,53 +200,53 @@ Example:
 
 ### Validation mode
 
-[SINCE Orbeon Forms 2016.3]
+\[SINCE Orbeon Forms 2016.3]
 
 Single-node controls support the `xxf:validation-mode` attribute, with the following values:
 
-- `incremental`: upon refresh, update the control's validity information (default)
-- `explicit`: upon refresh, don't update the control's validity information
+* `incremental`: upon refresh, update the control's validity information (default)
+* `explicit`: upon refresh, don't update the control's validity information
 
 When used on grouping controls, descendant controls inherit the value.
 
 With the `explicit` mode, the following action allows explicitly updating the validity information on a control or subtree of controls:
 
-```xml
+```markup
 <xxf:update-validity
     control="control1 control2"
     recurse="true"/>
 ```
 
 The action:
- 
-- makes sure the UI is up to date
-- updates the validity of the selected controls which have `xxf:validation-mode` set to `explicit`
-- marks the UI for a subsequent refresh
+
+* makes sure the UI is up to date
+* updates the validity of the selected controls which have `xxf:validation-mode` set to `explicit`
+* marks the UI for a subsequent refresh
 
 Attributes:
 
-- `control`: space-separated list of controls to update
-- `recurse`: when set to `true`, check all descendant controls of the specified controls as well
+* `control`: space-separated list of controls to update
+* `recurse`: when set to `true`, check all descendant controls of the specified controls as well
 
 ### xxforms-valid and xxforms-invalid events
 
 Orbeon Forms supports extensions events dispatched to an instance when it becomes valid or invalid:
 
-- `xxforms-valid`
-- `xxforms-invalid`
+* `xxforms-valid`
+* `xxforms-invalid`
 
 #### Orbeon Forms (4 and newer) behavior
 
 These events are dispatched just after `xforms-revalidate` completes on a given model to all instances that change their validation state (from valid to invalid or from invalid to valid):
 
-- If the instance is newly valid, `xxforms-valid` is dispatched
-- If the instance is newly invalid, `xxforms-invalid` is dispatched
+* If the instance is newly valid, `xxforms-valid` is dispatched
+* If the instance is newly invalid, `xxforms-invalid` is dispatched
 
 Before the initial validation of a model, instances are assumed to be in the valid state.
 
 These events can be used, for example, to toggle the appearance of icons indicating that a form is valid or invalid:
 
-```xml
+```markup
 <xf:instance id="my-instance">
     ...
 </xf:instance>
@@ -265,26 +264,25 @@ These events are dispatched just before `xforms-revalidate` completes, to all in
 
 ### xxforms-constraints-changed event
 
-[SINCE Orbeon Forms 4.3]
+\[SINCE Orbeon Forms 4.3]
 
 This event is dispatched to a control whenever the list of failed constraints associated with the control's bound node change.
 
 Context information:
 
-- `level`: the control's current validation level ("error", "warning", "info", or the empty sequence)
-- `constraints`: ids of all current failed constraints
-- `errors`: ids of current failed error constraints
-- `warnings`: ids of current failed warning constraints (empty if current level is "error")
-- `infos`: ids of current failed info constraints (empty if current level is "warning" or "error")
-- `added-errors`: ids of current errors added since the last refresh
-- `removed-errors`: ids of current errors removed since the last refresh
-- `added-warnings`: ids of current warnings added since the last refresh
-- `removed-warnings`: ids of current warnings removed since the last refresh
-- `added-infos`: ids of current infos added since the last refresh
-- `removed-infos`: ids of current infos removed since the last refresh
+* `level`: the control's current validation level ("error", "warning", "info", or the empty sequence)
+* `constraints`: ids of all current failed constraints
+* `errors`: ids of current failed error constraints
+* `warnings`: ids of current failed warning constraints (empty if current level is "error")
+* `infos`: ids of current failed info constraints (empty if current level is "warning" or "error")
+* `added-errors`: ids of current errors added since the last refresh
+* `removed-errors`: ids of current errors removed since the last refresh
+* `added-warnings`: ids of current warnings added since the last refresh
+* `removed-warnings`: ids of current warnings removed since the last refresh
+* `added-infos`: ids of current infos added since the last refresh
+* `removed-infos`: ids of current infos removed since the last refresh
 
-*NOTE: A [bug](https://github.com/orbeon/orbeon-forms/issues/3498) until Orbeon Forms 2017.2 caused the event to be 
-dispatched to all controls during the first refresh.*.
+_NOTE: A_ [_bug_](https://github.com/orbeon/orbeon-forms/issues/3498) _until Orbeon Forms 2017.2 caused the event to be dispatched to all controls during the first refresh._.
 
 ### xxf:valid() and xxf:invalid() XPath functions
 
@@ -296,17 +294,17 @@ dispatched to all controls during the first refresh.*.
 
 This types checks that the value is well-formed XML:
 
-```xml
+```markup
 <xf:bind ref="my-xml" type="xxf:xml"/>
 ```
 
-Note that this checks the string value of the node, which means that the node must contain *escaped* XML.
+Note that this checks the string value of the node, which means that the node must contain _escaped_ XML.
 
-[SINCE Orbeon Forms 2020.1]
+\[SINCE Orbeon Forms 2020.1]
 
 The `xxf:XML` capitalization is supported and preferred, for consistency with `xxf:XPath2ValueTemplate`.
 
-```xml
+```markup
 <xf:bind ref="my-xml" type="xxf:XML"/>
 ```
 
@@ -314,27 +312,27 @@ The `xxf:XML` capitalization is supported and preferred, for consistency with `x
 
 This types checks that the value is well-formed XPath 2.0. Any variable used by the expression is assumed to be in scope:
 
-```xml
+```markup
 <xf:bind ref="my-xpath" type="xxf:xpath2"/>
 ```
 
-*NOTE: In both these cases, Orbeon Forms checks for the required MIP: if it evaluates to `false()` and the value is the empty string, then the instance data node is considered valid. This is contrary to XForms 1.1 but follows XForms 2.0.*
+_NOTE: In both these cases, Orbeon Forms checks for the required MIP: if it evaluates to `false()` and the value is the empty string, then the instance data node is considered valid. This is contrary to XForms 1.1 but follows XForms 2.0._
 
-[SINCE Orbeon Forms 2020.1]
+\[SINCE Orbeon Forms 2020.1]
 
 The `xxf:XPath2` capitalization is supported and preferred, for consistency with `xxf:XPath2ValueTemplate`.
 
-```xml
+```markup
 <xf:bind ref="my-xpath" type="xxf:XPath2"/>
 ```
 
 ### xxf:XPath2ValueTemplate type
 
-[SINCE Orbeon Forms 2020.1]
+\[SINCE Orbeon Forms 2020.1]
 
 This types checks that the value is a well-formed XPath 2.0 value template. Any variable used by the expression is assumed to be in scope:
 
-```xml
+```markup
 <xf:bind ref="my-xpath" type="xxf:XPath2ValueTemplate"/>
 ```
 
@@ -342,19 +340,19 @@ This types checks that the value is a well-formed XPath 2.0 value template. Any 
 
 When an XML Schema is provided, Orbeon Forms supports controlling whether a particular instance is validated in the following modes:
 
-- "lax" mode
-- "strict" mode
-- not validated at all ("skip" mode)
+* "lax" mode
+* "strict" mode
+* not validated at all ("skip" mode)
 
 Orbeon Forms implements a "lax" validation mode by default, where only elements that have definitions in the imported schemas are validated. Other elements are not considered for validation. This is in line with XML Schema and XSLT 2.0 lax validation modes, and with the default validation mode as specified in XForms 1.1
 
 In addition, the author can specify the validation mode directly on each instance with the extension attribute `xxf:validation`, which takes values:
 
-- `lax` (the default)
-- `strict` (the root element has to have a definition in the schema and must be valid)
-- `skip` (no validation at all for that instance)
+* `lax` (the default)
+* `strict` (the root element has to have a definition in the schema and must be valid)
+* `skip` (no validation at all for that instance)
 
-```xml
+```markup
 <xf:model schema="my-schema.xsd">
     <xf:instance id="my-form" xxf:validation="strict">
         <my-form> ... </my-form>
@@ -369,12 +367,12 @@ Nodes validated through an XML Schema receive data type annotations, which means
 
 ## XML Schema validation
 
-[IN PROGRESS]
+\[IN PROGRESS]
 
 ## Validation and submission
 
-[IN PROGRESS]
+\[IN PROGRESS]
 
 ## Validation and controls
 
-[IN PROGRESS]
+\[IN PROGRESS]

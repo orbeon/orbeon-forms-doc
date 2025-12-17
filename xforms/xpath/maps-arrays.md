@@ -1,14 +1,12 @@
-# Maps and arrays functions
-
-
+# Maps and arrays Functions
 
 ## Introduction
 
-XPath 3.1 introduces [maps](https://www.w3.org/TR/xpath-31/#id-maps) and [arrays](https://www.w3.org/TR/xpath-31/#id-arrays). Orbeon Forms does not support XPath 3.1 yet, however it implements a subset of operations on maps and arrays. 
+XPath 3.1 introduces [maps](https://www.w3.org/TR/xpath-31/#id-maps) and [arrays](https://www.w3.org/TR/xpath-31/#id-arrays). Orbeon Forms does not support XPath 3.1 yet, however it implements a subset of operations on maps and arrays.
 
 ## Availability
 
-[SINCE Orbeon Forms 2017.2]
+\[SINCE Orbeon Forms 2017.2]
 
 ### Maps
 
@@ -16,7 +14,7 @@ XPath 3.1 introduces [maps](https://www.w3.org/TR/xpath-31/#id-maps) and [arrays
 
 Orbeon Forms does not support the native XPath 3.1 syntax to create maps. But you can create a new map as follows using the `map:merge()` and `map:entry()` functions:
 
-```xpath
+```
 map:merge(
     (
         map:entry('number',   42),
@@ -29,7 +27,7 @@ map:merge(
 
 #### map:entry()
 
-```xpath
+```
 map:entry(
     $key as xs:anyAtomicType,
     $value as item()*
@@ -40,7 +38,7 @@ map:entry(
 
 #### map:merge()
 
-```xpath
+```
 map:merge($maps as map(*)*) as map(*)
 ```
 
@@ -48,7 +46,7 @@ map:merge($maps as map(*)*) as map(*)
 
 #### map:get()
 
-```xpath
+```
 map:get(
     $map as map(*),
     $key as xs:anyAtomicType
@@ -63,7 +61,7 @@ map:get(
 
 Orbeon Forms does not support the native XPath 3.1 syntax to create arrays. But you can create a new array as follows using the `array:join()` and `array:append()` functions:
 
-```xpath
+```
 array:append(
     array:append(
         array:append(
@@ -81,7 +79,7 @@ array:append(
 
 #### array:size()
 
-```xpath
+```
 array:size($array as array(*)) as xs:integer
 ```
 
@@ -89,7 +87,7 @@ array:size($array as array(*)) as xs:integer
 
 #### array:get()
 
-```xpath
+```
 array:get($array as array(*), $position as xs:integer) as item()*
 ```
 
@@ -97,7 +95,7 @@ array:get($array as array(*), $position as xs:integer) as item()*
 
 #### array:put()
 
-```xpath
+```
 array:put(
     $array    as array(*),
     $position as xs:integer,
@@ -109,7 +107,7 @@ array:put(
 
 #### array:append()
 
-```xpath
+```
 array:append(
     $array     as array(*),
     $appendage as item()*
@@ -120,7 +118,7 @@ array:append(
 
 #### array:join()
 
-```xpath
+```
 array:join($arrays as array(*)*) as array(*)
 ```
 

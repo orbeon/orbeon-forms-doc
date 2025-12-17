@@ -1,4 +1,4 @@
-# Setup users for access control
+# Users
 
 ## Providing information about the user
 
@@ -6,20 +6,20 @@
 
 Form Runner can use information about the user to control whether that user can access:
 
-- Form Builder to edit forms – for more on this, see [access control for editing forms](editing-forms.md);
-- Deployed forms you created with Form Builder – for more on this, see [access control for deployed Forms](deployed-forms.md).
+* Form Builder to edit forms – for more on this, see [access control for editing forms](editing-forms.md);
+* Deployed forms you created with Form Builder – for more on this, see [access control for deployed Forms](deployed-forms.md).
 
 Form Runner can obtain this information either by:
 
-- Calling a standard servlet API implemented by your application server, referred to as _container-driven method_.
-- Using HTTP headers set by a reverse proxy or a servlet filter, referred to as _header-driven method_.
+* Calling a standard servlet API implemented by your application server, referred to as _container-driven method_.
+* Using HTTP headers set by a reverse proxy or a servlet filter, referred to as _header-driven method_.
 
 ### Container-driven or header-driven, which to choose?
 
 1. Are you using the Liferay proxy portlet? In this case, you'll be using the header-driven method, since the Orbeon Forms Liferay proxy portlet [uses headers to pass information about the user to Form Runner](../link-embed/liferay-proxy-portlet.md#configuring-form-runner-to-use-liferay-user-information).
 2. Otherwise, are your permissions dependent on more than users being authenticated and on their roles? In this case you need to use header-based permissions. This would for instance be the case if:
-    - You are using [group-based permissions](owner-group.md) and you need finer-grained control over what the user's group is. More specifically, with container-based permissions, users information is obtained through the servlet API, which doesn't have a notion of user's group. So in that case, Form Runner takes the first role to be the group, which is fine in certain use cases, but not in others that require more control over what the user's group is.
-    - You are using [organization-based permissions](organization.md), as the servlet API doesn't have any support for organizations.
+   * You are using [group-based permissions](owner-group.md) and you need finer-grained control over what the user's group is. More specifically, with container-based permissions, users information is obtained through the servlet API, which doesn't have a notion of user's group. So in that case, Form Runner takes the first role to be the group, which is fine in certain use cases, but not in others that require more control over what the user's group is.
+   * You are using [organization-based permissions](organization.md), as the servlet API doesn't have any support for organizations.
 3. Otherwise, do you want to use the [login and logout pages](login-logout.md) provided by Form Runner? If so, you'll want to go with container-based permissions, as those pages rely on facilities provided by the container to do the authentication.
 4. Otherwise, you can use either container-based or header-based permissions, going with the one that is the most convenient for you. If your information about users is stored in a system supported by your application server, e.g. you are using LDAP and Tomcat, then container-based is most likely the simplest option. If not, you could do such an integration, e.g. creating a custom security realm for Tomcat, and user container-based permissions, but it is in that case most likely simpler for you to go with header-based permissions and set headers in servlet filter or reverse proxy.
 
@@ -27,12 +27,12 @@ Form Runner can obtain this information either by:
 
 With the container-driven method, Orbeon Forms uses a standard API to ask the container, typically Tomcat, about the current user. Users are typically setup in a directory service, like Active Directory or LDAP, and you setup the container to interface with that directory service. With Tomcat:
 
-- See [Tomcat's Windows Authentication How-To](https://tomcat.apache.org/tomcat-8.0-doc/windows-auth-howto.html) for more on how to setup Tomcat with Active Directory.
-- See [Tomcat's JNDIRealm](https://tomcat.apache.org/tomcat-8.0-doc/realm-howto.html#JNDIRealm) for more on how to setup Tomcat with LDAP.
+* See [Tomcat's Windows Authentication How-To](https://tomcat.apache.org/tomcat-8.0-doc/windows-auth-howto.html) for more on how to setup Tomcat with Active Directory.
+* See [Tomcat's JNDIRealm](https://tomcat.apache.org/tomcat-8.0-doc/realm-howto.html#JNDIRealm) for more on how to setup Tomcat with LDAP.
 
 In addition to the configuration at the container level, at the Orbeon Forms level, you'll want to:
 
-1. __Enable container-driven method__ – To do so, set the following property in your `properties-local.xml`:
+1.  **Enable container-driven method** – To do so, set the following property in your `properties-local.xml`:
 
     ```xml
     <property
@@ -40,7 +40,7 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
         name="oxf.fr.authentication.method"
         value="container"/>
     ```
-2. __List possible roles__ – There is no container API for Orbeon Forms to ask for all the roles for the current user; instead Orbeon Forms can only ask if the current user has a specific role. Because of this, you need to list the possible roles in the following property. For instance, if you have two roles `form-builder-hr` and `form-builder-finance` define them as:
+2.  **List possible roles** – There is no container API for Orbeon Forms to ask for all the roles for the current user; instead Orbeon Forms can only ask if the current user has a specific role. Because of this, you need to list the possible roles in the following property. For instance, if you have two roles `form-builder-hr` and `form-builder-finance` define them as:
 
     ```xml
     <property
@@ -48,8 +48,9 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
         name="oxf.fr.authentication.container.roles"
         value="form-builder-hr form-builder-finance"/>
     ```
-    Header names are split on commas, pipes, and white space (using the regular expression `,|\s+`).
-    [SINCE Orbeon Forms 4.9] The splitting of header names can be overridden with the following property:
+
+    Header names are split on commas, pipes, and white space (using the regular expression `,|\s+`).\
+    \[SINCE Orbeon Forms 4.9] The splitting of header names can be overridden with the following property:
 
     ```xml
     <property
@@ -57,8 +58,8 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
         name="oxf.fr.authentication.container.roles.split"
         value=",|\s+"/>
     ```
-3. __Setup groups__ – There is no container API for Orbeon Forms to get the user's group; in fact the concept of _group_ is foreign the container API. So, when using container-driven method, Orbeon Forms takes the first role listed in `oxf.fr.authentication.container.roles` that the user has as the user's group. If you need more flexibility in determining what the user's group is, you might want to use the _header-driven method_ instead, which allows you to explicitly set through a header what the user's group is (more on this below).
-4. __Require authentication__ – You'll also want to have another role, say `form-builder`, that you grant to all the users who can access Form Builder. Hence, in our example, users will have either the two roles `form-builder` and `form-builder-hr`, or the two roles `form-builder` and `form-builder-finance`. In Orbeon Forms `WEB-INF/web.xml`, add the following to require users to login to access Form Builder. This assumes that you're using basic authentication:
+3. **Setup groups** – There is no container API for Orbeon Forms to get the user's group; in fact the concept of _group_ is foreign the container API. So, when using container-driven method, Orbeon Forms takes the first role listed in `oxf.fr.authentication.container.roles` that the user has as the user's group. If you need more flexibility in determining what the user's group is, you might want to use the _header-driven method_ instead, which allows you to explicitly set through a header what the user's group is (more on this below).
+4.  **Require authentication** – You'll also want to have another role, say `form-builder`, that you grant to all the users who can access Form Builder. Hence, in our example, users will have either the two roles `form-builder` and `form-builder-hr`, or the two roles `form-builder` and `form-builder-finance`. In Orbeon Forms `WEB-INF/web.xml`, add the following to require users to login to access Form Builder. This assumes that you're using basic authentication:
 
     ```xml
     <security-constraint>
@@ -80,11 +81,11 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
 
 ### OIDC with WildFly
 
-[SINCE Orbeon Forms 2024.1.2]
+\[SINCE Orbeon Forms 2024.1.2]
 
 WildFly provides native support for OpenID Connect (OIDC) using the `<auth-method>OIDC</auth-method>` authentication method. WildFly exposes a proprietary `OidcSecurityContext` as a servlet request attribute. This object contains the OIDC access token, which includes the roles as OIDC claims. If Orbeon Forms detects the WildFly-provided `OidcSecurityContext`, it extracts the access token to determine the user's roles, which are then used for further processing, without needing to list them in the `oxf.fr.authentication.container.roles` property.
 
-OIDC providers such as [Microsoft Entra ID](/installation/azure.md) can be configured to include the users' groups as roles in the OIDC tokens, which can be useful in this context.
+OIDC providers such as [Microsoft Entra ID](../../installation/azure.md) can be configured to include the users' groups as roles in the OIDC tokens, which can be useful in this context.
 
 Limitation: Entra ID roles are included in the OIDC tokens as IDs. Future versions of Orbeon Forms might be able to retrieve the actual names of the roles.
 
@@ -92,7 +93,7 @@ Limitation: Entra ID roles are included in the OIDC tokens as IDs. Future versio
 
 ### Overview
 
-<img alt="" src="/form-runner/images/users-headers.png" width="519">
+![](../../.gitbook/assets/users-headers.png)
 
 With the header-driven method, you are responsible for, in the block labeled as "reverse proxy" in the above diagram, to:
 
@@ -105,8 +106,8 @@ When using the header-driven method, as it is your reverse proxy performing that
 
 You can pass information about the user either using:
 
-- 3 headers, one for the username, one for the user's roles, and one for user's group.
-- 1 header, that contains the user's information in a JSON format specified below.
+* 3 headers, one for the username, one for the user's roles, and one for user's group.
+* 1 header, that contains the user's information in a JSON format specified below.
 
 The following should help you choose whether to use individual headers or a single header with JSON:
 
@@ -116,8 +117,8 @@ The following should help you choose whether to use individual headers or a sing
 
 ### When to set the headers
 
-- [SINCE Orbeon Forms 2020.1] You should provide the headers with every request made to Orbeon Forms for which you want the user to be authenticated, including Ajax requests. If you set the authentication headers for some requests, and then stop passing them, Orbeon Forms will assume the user has logged out, and clear the user's session. You can get the behavior implemented until Orbeon Forms 2019.2 (described below), by setting the `oxf.fr.authentication.header.sticky` property to `true`.
-- [UNTIL Orbeon Forms 2019.2] When you provide information about the user through headers, Orbeon Forms stores that information in the session. So for any subsequent request in the same session, you don't need to provide the headers anymore, and in fact even if you do they will be ignored.
+* \[SINCE Orbeon Forms 2020.1] You should provide the headers with every request made to Orbeon Forms for which you want the user to be authenticated, including Ajax requests. If you set the authentication headers for some requests, and then stop passing them, Orbeon Forms will assume the user has logged out, and clear the user's session. You can get the behavior implemented until Orbeon Forms 2019.2 (described below), by setting the `oxf.fr.authentication.header.sticky` property to `true`.
+* \[UNTIL Orbeon Forms 2019.2] When you provide information about the user through headers, Orbeon Forms stores that information in the session. So for any subsequent request in the same session, you don't need to provide the headers anymore, and in fact even if you do they will be ignored.
 
 ```xml
 <property
@@ -160,17 +161,21 @@ Tell Orbeon Forms the name of the HTTP headers that contain the username, group,
 
 The header `oxf.fr.authentication.header.roles` consists of a list of comma- or pipe-separated role names (using the regular expression `(\s*[,\|]\s*)+`), for example:
 
-    Administrator, Power User, User
+```
+Administrator, Power User, User
+```
 
 or:
 
-    Administrator | Power User | User
+```
+Administrator | Power User | User
+```
 
 White space around the commas or pipes is ignored.
 
 In addition or alternatively, multiple role headers can be provided, and each of them is split according to those roles. The resulting set of roles is the combination of all roles extracted from all role headers.
 
-[SINCE Orbeon Forms 4.9] The splitting of header names can be overridden with the following property:
+\[SINCE Orbeon Forms 4.9] The splitting of header names can be overridden with the following property:
 
 ```xml
 <property
@@ -181,7 +186,7 @@ In addition or alternatively, multiple role headers can be provided, and each of
 
 #### Forwarding headers with 4.6 and earlier
 
-*NOTE: This step is not necessary for Orbeon Forms 4.7 and newer.*
+_NOTE: This step is not necessary for Orbeon Forms 4.7 and newer._
 
 When using header-based authentication, in addition to defining the name of the headers Form Runner gets the username and role from `oxf.fr.authentication.header.username` and `oxf.fr.authentication.header.roles`, you need to add those header names to the `oxf.xforms.forward-submission-headers` property, so the headers are forwarded by the XForms engine to Form Runner. For instance:
 
@@ -220,7 +225,7 @@ Tell Orbeon Forms the name of the HTTP header that contain the user's informatio
     value="My-Credentials-Header"/>
 ```
 
-The value of the header must be valid JSON, and follow the format described below. An example 
+The value of the header must be valid JSON, and follow the format described below. An example
 
 ```json
 {
@@ -239,10 +244,10 @@ The value of the header must be valid JSON, and follow the format described belo
 }
 ```
 
-- `username` is mandatory.
-- `groups` is optional. If present, its value must be an array with one string, representing the user's group. (An array is used here as we can envision futures version of Orbeon Forms supporting users being part of more than one group.)
-- `roles` is optional. If present, its value must be an array of *roles*. Each *role* is an object with a mandatory `name` attribute, and an optional `organization` attribute. When the latter is present, it ties the role to the specified organization, for instance: "Linda is the manager of the iOS organization". For more on the latter, see [Organization-based permissions](organization.md).
-- `organizations` is optional. If present, its value must be an array. Each element of the array must in turn be an array, in which the last element is the organization the user is a member of, and preceding elements list where that organization is in the organization hierarchy. For instance, `["Acme", "Engineering", "iOS"]` signifies that the user is a member of the "iOS" organization, and that, in the organization hierarchy, "iOS" is a child organization of "Engineering", and "Engineering" is a child organization of "Acme".
+* `username` is mandatory.
+* `groups` is optional. If present, its value must be an array with one string, representing the user's group. (An array is used here as we can envision futures version of Orbeon Forms supporting users being part of more than one group.)
+* `roles` is optional. If present, its value must be an array of _roles_. Each _role_ is an object with a mandatory `name` attribute, and an optional `organization` attribute. When the latter is present, it ties the role to the specified organization, for instance: "Linda is the manager of the iOS organization". For more on the latter, see [Organization-based permissions](organization.md).
+* `organizations` is optional. If present, its value must be an array. Each element of the array must in turn be an array, in which the last element is the organization the user is a member of, and preceding elements list where that organization is in the organization hierarchy. For instance, `["Acme", "Engineering", "iOS"]` signifies that the user is a member of the "iOS" organization, and that, in the organization hierarchy, "iOS" is a child organization of "Engineering", and "Engineering" is a child organization of "Acme".
 
 ### Beware of ModHeader
 
@@ -254,29 +259,29 @@ This is because, out-of-the-box, that is unless you set `oxf.fr.authentication.h
 
 ## Accessing username, group and roles in Orbeon Forms
 
-* __Username/role from headers or container__ — Orbeon Forms automatically adds two headers, which are available within Form Runner:
+* **Username/role from headers or container** — Orbeon Forms automatically adds two headers, which are available within Form Runner:
   * `Orbeon-Username` — if present, the value contains the current username
     * if `oxf.fr.authentication.method == "container"`:
-        * obtained through the servlet/portlet container's `getRemoteUser()` function
+      * obtained through the servlet/portlet container's `getRemoteUser()` function
     * if `oxf.fr.authentication.method == "header"`
-        * obtained via the header specified by `oxf.fr.authentication.header.username`
+      * obtained via the header specified by `oxf.fr.authentication.header.username`
   * `Orbeon-Group` — if present, the value contains the current group
   * `Orbeon-Roles` — if present, is a list of values, each with one role
     * if `oxf.fr.authentication.method == "container"`:
-        * each role listed in `oxf.fr.authentication.container.roles` is checked against the container's `isUserInRole()` function
+      * each role listed in `oxf.fr.authentication.container.roles` is checked against the container's `isUserInRole()` function
     * if `oxf.fr.authentication.method == "header"`
-        * obtained via the header specified by `oxf.fr.authentication.header.roles`
-* __Persistence__ — These headers are forwarded to the persistence layer, which can make use of them. In particular, the [relational persistence layers](../../form-runner/persistence/relational-db.md) store the current username when doing any database update.
+      * obtained via the header specified by `oxf.fr.authentication.header.roles`
+* **Persistence** — These headers are forwarded to the persistence layer, which can make use of them. In particular, the [relational persistence layers](../persistence/relational-db.md) store the current username when doing any database update.
 
-See also [Accessing liferay users and roles](../../form-runner/link-embed/liferay-full-portlet.md#accessing-liferay-users-and-roles).
+See also [Accessing liferay users and roles](../link-embed/liferay-full-portlet.md#accessing-liferay-users-and-roles).
 
 ## See also
 
-- [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
-- [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
-- [Form fields](form-fields.md) - How to control access to specific form fields based on the user's roles.
-- [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
-    - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
-    - [Organization-based permissions](organization.md) – Access based on organizational structure.
-    - [Token-based permissions](tokens.md) - Token-based permissions
-- [Scenarios](scenarios.md)
+* [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
+* [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
+* [Form fields](form-fields.md) - How to control access to specific form fields based on the user's roles.
+* [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
+  * [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
+  * [Organization-based permissions](organization.md) – Access based on organizational structure.
+  * [Token-based permissions](tokens.md) - Token-based permissions
+* [Scenarios](scenarios.md)

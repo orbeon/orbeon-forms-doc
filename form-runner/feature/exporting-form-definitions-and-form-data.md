@@ -4,11 +4,11 @@
 
 This is an Orbeon Forms PE feature.
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+[\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
 
 ## Context
 
-Orbeon Forms includes a few ways to export form definitions and form data. This page documents a very specific capability: exporting form definitions and form data in a batch, that is, multiple form definitions and their data are exported at once. The result is stored in a [zip file](https://en.wikipedia.org/wiki/ZIP_(file_format)) which downloads to your computer.
+Orbeon Forms includes a few ways to export form definitions and form data. This page documents a very specific capability: exporting form definitions and form data in a batch, that is, multiple form definitions and their data are exported at once. The result is stored in a [zip file](https://en.wikipedia.org/wiki/ZIP_\(file_format\)) which downloads to your computer.
 
 For a different type of export, see also [Excel and XML export](excel-xml-export.md).
 
@@ -16,18 +16,15 @@ For a different type of export, see also [Excel and XML export](excel-xml-export
 
 The feature is available on the Form Runner [Forms Admin page](forms-admin-page.md). There, an "Export" button is available at the top of the page.
 
-[//]: # (TODO)
-[//]: # (![Export button]&#40;../images/export-button.png&#41;)
-
 ## Export modes
 
 Exporting can be done in two different modes. You can either export the forms that were explicitly selected:
 
-![Export selected forms](../images/export-selected-forms.png)
+![Export selected forms](../../.gitbook/assets/export-selected-forms.png)
 
 Or you can export forms by specifying a list of application, form, and version filters:
 
-![Export following forms](../images/export-following-forms.png)
+![Export following forms](../../.gitbook/assets/export-following-forms.png)
 
 The application filter can either be set to "All applications" or to a specific application. When a specific application is selected, the form filter can either be set to "All forms" or to a specific form. The version filter can always be set to "All versions" or "Latest version" and when a specific form is selected, it can also be set to a specific version.
 
@@ -43,23 +40,23 @@ Finally, it's possible to specify a date range using the "From" and "Until" date
 
 Orbeon Forms makes a distinction between:
 
-- __Admin permissions or Form Builder permissions:__ These are defined in `form-builder-permissions.xml` and control special access to form definitions in Form Builder and on the Admin page. For details, see [Access control for editing forms](/form-runner/access-control/editing-forms.md) and [Forms Admin page - Permissions](forms-admin-page.md#permissions).
-- __Deployed forms permissions:__ These permissions are associated with a form definition using the Form Builder UI or configuration properties. These permissions mainly regard accessing the *form data*, although they also impact whether the form definition can be presented to the user, and if so in which mode. For details, see [Access control and permissions - Deployed forms](/form-runner/access-control/deployed-forms.md).
+* **Admin permissions or Form Builder permissions:** These are defined in `form-builder-permissions.xml` and control special access to form definitions in Form Builder and on the Admin page. For details, see [Access control for editing forms](../access-control/editing-forms.md) and [Forms Admin page - Permissions](forms-admin-page.md#permissions).
+* **Deployed forms permissions:** These permissions are associated with a form definition using the Form Builder UI or configuration properties. These permissions mainly regard accessing the _form data_, although they also impact whether the form definition can be presented to the user, and if so in which mode. For details, see [Access control and permissions - Deployed forms](../access-control/deployed-forms.md).
 
 ### Available forms
 
 The list of application names and form names made available to the Zip Export, either through the "Export selected forms" or "Export following forms" modes, is restricted to the list of application names and form names that the current user can see on the Admin page. If the user currently accessing the Admin page doesn't have access to certain application names and form names based on the `form-builder-permissions.xml` configuration, those will not be:
 
-- listed as available in the Export dialog
-- exported if "All applications" or "All forms" are selected
- 
+* listed as available in the Export dialog
+* exported if "All applications" or "All forms" are selected
+
 For details on what application names and form names are accessible on the Admin page, see [Forms Admin page - Permissions](forms-admin-page.md#permissions).
 
 ### Available form data
 
 When a particular application name/form name/form version is selected for export, whether explicitly or through the "All applications" or "All forms" options, and "Form data" is selected for export, deployed forms permissions are ignored for the purpose of the export of the form data, and all form data associated with the given form is exported, regardless of the permissions associated with the form definitions.
 
-__WARNING: From this perspective, the Zip Export works like a superuser feature, and you should know that users with access to the Admin page will by extension have access to additional form data in the exported zip file.__ 
+**WARNING: From this perspective, the Zip Export works like a superuser feature, and you should know that users with access to the Admin page will by extension have access to additional form data in the exported zip file.**
 
 ## Zip file structure
 
@@ -93,9 +90,9 @@ Form data, form definitions, and attachments can have metadata, in which case `.
 
 Metadata include information such as:
 
-- the user/group who created the data
-- the user who last modified the data
-- the workflow stage
+* the user/group who created the data
+* the user who last modified the data
+* the workflow stage
 
 ## Permissions
 
@@ -107,13 +104,13 @@ At the moment, once the "Export" button has been clicked, the dialog will be clo
 
 ## See also
 
-- [Purging historical data](purging-historical-data.md)
-- [Revision history](revision-history.md)
-- [Auditing](/form-runner/persistence/auditing.md)
-- [Excel and XML export](excel-xml-export.md)
-- [Summary page Excel Export](summary-page-export.md)
-- [Excel and XML import](excel-xml-import.md)
-- [Forms Admin page](forms-admin-page.md)
-- [Zip Export API](/form-runner/api/persistence/export-zip.md)
-- [Revision History API](/form-runner/api/persistence/revision-history.md)
-- [Blog post: Exporting form definitions and data](https://www.orbeon.com/2024/04/form-data-export)
+* [Purging historical data](purging-historical-data.md)
+* [Revision history](revision-history.md)
+* [Auditing](../persistence/auditing.md)
+* [Excel and XML export](excel-xml-export.md)
+* [Summary page Excel Export](summary-page-export.md)
+* [Excel and XML import](excel-xml-import.md)
+* [Forms Admin page](forms-admin-page.md)
+* [Zip Export API](../api/persistence/export-zip.md)
+* [Revision History API](../api/persistence/revision-history.md)
+* [Blog post: Exporting form definitions and data](https://www.orbeon.com/2024/04/form-data-export)

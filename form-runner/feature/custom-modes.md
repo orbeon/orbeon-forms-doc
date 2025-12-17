@@ -1,33 +1,33 @@
-# Custom detail page modes
+# Custom modes
 
 ## Availability
 
-[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+[\[SINCE Orbeon Forms 2025.1\]](../../release-notes/orbeon-forms-2025.1.md)
 
 _NOTE: This is an advanced feature which may require programming skills._
 
 ## Introduction
 
-The Form Runner *Detail page* is the page where users create, edit, and view form data. Each such function is referred to as a *mode*. For more, see [Form Runner detail page modes](detail-page-modes.md).
+The Form Runner _Detail page_ is the page where users create, edit, and view form data. Each such function is referred to as a _mode_. For more, see [Form Runner detail page modes](detail-page-modes.md).
 
-Orbeon Forms 2025.1 introduces the ability to define *custom modes* for the Form Runner Detail page. This allows you to create different views of the same form data. You do so by writing a custom component, while Orbeon Forms handles data management, state keeping, and permissions for you.
+Orbeon Forms 2025.1 introduces the ability to define _custom modes_ for the Form Runner Detail page. This allows you to create different views of the same form data. You do so by writing a custom component, while Orbeon Forms handles data management, state keeping, and permissions for you.
 
 Custom modes are supported by functions to:
 
-- navigate *away* from Orbeon Forms to external pages, or pages embedded in iframes
-- navigate *back* to Orbeon Forms, while keeping the form data and other state information
+* navigate _away_ from Orbeon Forms to external pages, or pages embedded in iframes
+* navigate _back_ to Orbeon Forms, while keeping the form data and other state information
 
 However, custom modes can be used separately from these functions, and conversely these functions can be used without custom modes.
 
 Here is an example of workflow involving standard modes, a custom mode, an external page or service, and navigation back to Orbeon Forms:
 
-![Custom modes workflow](../images/custom-modes-workflow.webp)
+![Custom modes workflow](../../.gitbook/assets/custom-modes-workflow.webp)
 
 An important use case for this is calling external services such as:
 
-- payment providers
-- signature providers
-- and more.
+* payment providers
+* signature providers
+* and more.
 
 ## Defining custom modes
 
@@ -47,17 +47,17 @@ As usual, with wildcards representing the application name and form name, you ca
 </property>
 ```
 
-- The `name` attribute is the name of the custom mode.
-    - This must be an XML qualified name with a prefix and a colon `:`. Unqualified names are reserved for builtin modes.
-    - The prefix, here `acme`, must be defined in the `xmlns` attribute of the property or the properties file, here `xmlns:acme="http://www.acme.com/xbl"`.
-    - A matching XBL component of the same name will be used as view component, here `acme:demo-sign`. 
-- The `mode-type` attribute defines the type of the custom mode. It can be one of the following values:
-    - `readonly`: the form is displayed in read-only mode, and users cannot change or save any data.
-    - `edition`: the form is displayed in edit mode, and users can change data and save data, given appropriate permissions.
-- The `persistence` attribute defines whether the mode is allowed to read/write data from/to the persistence layer.
-    - If `true`, the mode is allowed to access the persistence layer, given appropriate permissions.
-    - If `false`, the mode is not allowed to access the persistence layer.
-        - In this case, form data typically comes from navigation from another mode, or from state restoration, and is passed to another mode or saved through `fr:save-state()`.
+* The `name` attribute is the name of the custom mode.
+  * This must be an XML qualified name with a prefix and a colon `:`. Unqualified names are reserved for builtin modes.
+  * The prefix, here `acme`, must be defined in the `xmlns` attribute of the property or the properties file, here `xmlns:acme="http://www.acme.com/xbl"`.
+  * A matching XBL component of the same name will be used as view component, here `acme:demo-sign`.
+* The `mode-type` attribute defines the type of the custom mode. It can be one of the following values:
+  * `readonly`: the form is displayed in read-only mode, and users cannot change or save any data.
+  * `edition`: the form is displayed in edit mode, and users can change data and save data, given appropriate permissions.
+* The `persistence` attribute defines whether the mode is allowed to read/write data from/to the persistence layer.
+  * If `true`, the mode is allowed to access the persistence layer, given appropriate permissions.
+  * If `false`, the mode is not allowed to access the persistence layer.
+    * In this case, form data typically comes from navigation from another mode, or from state restoration, and is passed to another mode or saved through `fr:save-state()`.
 
 Custom mode names appear in URLS, for example:
 
@@ -69,12 +69,12 @@ Custom mode names appear in URLS, for example:
 
 Form state includes:
 
-- the current form data
-- the current application name, form name, and form version
-- the current mode
-- the current workflow stage
-- current form permissions
-- and more
+* the current form data
+* the current application name, form name, and form version
+* the current mode
+* the current workflow stage
+* current form permissions
+* and more
 
 When navigating away from Orbeon Forms, you typically want to save that state, so that when the user comes back to Orbeon Forms, they can continue where they left off.
 
@@ -95,12 +95,12 @@ fr:save-state(
 
 The parameters are optional:
 
-- `$continuation-mode`: 
-    - If provided, when the user comes back to Orbeon Forms, they will be put in that mode. 
-    - If not provided, they will be put in the same mode as when `fr:save-state()` was called.
-- `$continuation-workflow-state`: 
-    - If provided, when the user comes back to Orbeon Forms, they will be put in that workflow state. 
-    - If not provided, they will be put in the same workflow state as when `fr:save-state()` was called.
+* `$continuation-mode`:
+  * If provided, when the user comes back to Orbeon Forms, they will be put in that mode.
+  * If not provided, they will be put in the same mode as when `fr:save-state()` was called.
+* `$continuation-workflow-state`:
+  * If provided, when the user comes back to Orbeon Forms, they will be put in that workflow state.
+  * If not provided, they will be put in the same workflow state as when `fr:save-state()` was called.
 
 This function can be called from a button process, for example:
 
@@ -135,11 +135,11 @@ Orbeon Forms provides a new callback endpoint:
 
 This must be reached with an HTTP `GET`. When called, the callback:
 
-- checks that a valid, non-expired token is provided
-- obtain the state from the store
-- navigates to the Detail page, restoring the state that was stored
-    - is a continuation mode was specified with `fr:save-state()`, Form Runner switches to that mode, otherwise uses the same mode as when `fr:save-state()` was called
-    - if a continuation workflow stage was specified with `fr:save-state()`, Form Runner switches to that workflow state, otherwise uses the same workflow stage as when `fr:save-state()` was called
+* checks that a valid, non-expired token is provided
+* obtain the state from the store
+* navigates to the Detail page, restoring the state that was stored
+  * is a continuation mode was specified with `fr:save-state()`, Form Runner switches to that mode, otherwise uses the same mode as when `fr:save-state()` was called
+  * if a continuation workflow stage was specified with `fr:save-state()`, Form Runner switches to that workflow state, otherwise uses the same workflow stage as when `fr:save-state()` was called
 
 ## Implementing a view component
 
@@ -152,7 +152,7 @@ The mode's qualified name determines the name of the XBL view component. Like fo
     value="http://www.acme.com/xbl" />
 ```
 
-See also [XBL Bindings](/xforms/xbl/bindings.md) for more about defining custom components.
+See also [XBL Bindings](../../xforms/xbl/bindings.md) for more about defining custom components.
 
 You place your component files in the `xbl` directory, for example:
 
@@ -189,19 +189,19 @@ Here is a simple example of a view component implemented by a `demo-sign.xbl`:
 
 This component simply displays a message. In a real-world scenario, you would do more, for example:
 
-- show the values of some form fields
-- embed an `iframe` or other content with JavaScript
-- call external services
-- and more.
+* show the values of some form fields
+* embed an `iframe` or other content with JavaScript
+* call external services
+* and more.
 
 ## The `change-mode()` action
 
 The `change-mode()` action allows you to navigate to any mode, including custom modes. Examples:
 
-- `change-mode("edit")`: This action navigates to the `edit` mode from any mode, and is identical to the `edit` action.
-- `change-mode("view")`: This action navigates to the `view` mode from any mode, and is identical to the `review` action.
-- `change-mode("new")`: This action navigates to the `new` mode from any mode.
-- `change-mode("acme:demo-sign")`: This action navigates to the custom `acme:demo-sign` mode from any mode.
+* `change-mode("edit")`: This action navigates to the `edit` mode from any mode, and is identical to the `edit` action.
+* `change-mode("view")`: This action navigates to the `view` mode from any mode, and is identical to the `review` action.
+* `change-mode("new")`: This action navigates to the `new` mode from any mode.
+* `change-mode("acme:demo-sign")`: This action navigates to the custom `acme:demo-sign` mode from any mode.
 
 _NOTE: It is not possible to use this action to produce a `pdf` or `tiff` view of the form data. Use the `open-rendered-format()` action instead._
 
@@ -237,7 +237,7 @@ As usual, the wildcards in the property names can be replaced by specific applic
 
 The result will be a button on the `new` or `edit` page which, when clicked, will switch to your custom signature page, while keeping data and state.
 
-![Button to navigate to a custom mode page](../images/custom-modes-demo-sign-button.webp)
+![Button to navigate to a custom mode page](../../.gitbook/assets/custom-modes-demo-sign-button.webp)
 
 ### Buttons on custom mode pages
 
@@ -275,11 +275,11 @@ The external service provider must be configured to call back to Orbeon Forms at
 
 Form state is sensitive information, and Orbeon Forms makes sure to handle it securely:
 
-- the form state is encrypted on the server using the encryption password
-- the server store is configured to expire items after a certain time
-- the token does not expose sensitive information
-- the token can only be used once; a second use returns an error
-- form state is removed from the server store once it has been used
+* the form state is encrypted on the server using the encryption password
+* the server store is configured to expire items after a certain time
+* the token does not expose sensitive information
+* the token can only be used once; a second use returns an error
+* form state is removed from the server store once it has been used
 
 ## Example
 
@@ -287,6 +287,6 @@ As an example of use of the custom mode logic, the built-in [Confirmation page](
 
 ## See also
 
-- [Confirmation page](confirmation-page.md)
-- [Detail page configuration properties](/configuration/properties/form-runner-detail-page.md)
-- [Simple processes](/form-runner/advanced/buttons-and-processes/README.md)
+* [Confirmation page](confirmation-page.md)
+* [Detail page configuration properties](../../configuration/properties/form-runner-detail-page.md)
+* [Simple processes](../advanced/buttons-and-processes/)

@@ -1,14 +1,12 @@
 # Polishing the app
 
-
-
 ## Making things look nicer
 
 You are probably not very happy with the look of your application. But let's see how you can improve this with CSS.
 
 First, start with a nicer "action bar" at the top of the page:
 
-```xml
+```markup
 <table class="books-action-table">
     <tr>
         <td>
@@ -32,7 +30,7 @@ You notice that:
 
 Then encapsulate the main XForms controls within a table:
 
-```xml
+```markup
 <table class="books-table">
     <tr>
         <td>
@@ -72,33 +70,33 @@ You notice a few more things:
 
 Finally, add a `books-label` class to the controls related to book data, for example:
 
-```xml
+```markup
 <xf:label class="books-label">Title</xf:label>
 ```
 
 Now remember that Orbeon Forms does not send the XForms code directly to the web browser, but instead it transforms it into HTML. You realize that this is done because Orbeon Forms cannot assume your web browser to support XForms at all. Consider the following examples:
 
-```xml
+```markup
 <xf:submit id="my-submit" submission="save-submission">
     <xf:label>Save</xf:label>
 </xf:submit>
 ```
 
-```xml
+```markup
 <button id="my-submit" class="xforms-control xforms-submit" type="button">Save</button>
 ```
 
-```xml
+```markup
 <xf:input id="my-input" ref="title">
     <xf:label>Title</xf:label>
 </xf:input>
 ```
 
-```xml
+```markup
 <label class="xforms-label" for="my-input">Title</label>
 ```
 
-```xml
+```markup
 <span id="my-input" class="xforms-control xforms-input">
     <span class="xforms-date-display"/>
     <input id="input-my-input" type="text" name="my-input" value="" class="xforms-input-input xforms-type-string"/>
@@ -106,25 +104,25 @@ Now remember that Orbeon Forms does not send the XForms code directly to the web
 </span>
 ```
 
-```xml
+```markup
 <label class="xforms-alert xforms-alert-inactive" for="my-input"/>
 ```
 
-```xml
+```markup
 <xf:textarea ref="notes">
     <xf:label class="books-label">Notes</xf:label>
 </xf:textarea>
 ```
 
-```xml
+```markup
 <label class="books-label xforms-label" for="my-textarea">Notes</label>
 ```
 
-```xml
+```markup
 <textarea id="my-textarea" class="xforms-control xforms-textarea" name="my-textarea"/>
 ```
 
-```xml
+```markup
 <label class="xforms-alert xforms-alert-inactive" for="my-textarea"/>
 ```
 
@@ -132,20 +130,20 @@ And so on for each XForms construct. You notice that Orbeon Forms produces HTML 
 
 So now look at the following CSS declaration for the Bookcast application:
 
-| CSS |  Description |
-| --- | --- |
-|  ` .xforms-label { font-weight: bold } `  |  Display all labels in bold.  |
-|  ` .books-label { display: -moz-inline-box; display: inline-block; width: expression('9em'); min-width: 9em; } `  |  Display all labels with the `books-label` class to have a minimum width. This allows aligning all the labels on the left. Note the mozilla- and IE-specific CSS.  |
-|  ` .xforms-textarea-appearance-xxforms-autosize { width: 20em; margin-bottom: 2px } `  |  Set width and margin to all text area controls with appearance `xxf:autosize`.  |
-|  ` .xforms-input input { width: 20em; margin-bottom: 2px }`  |  Set width and margin to all input controls.  |
-|  `.xforms-select1 { margin-bottom: 2px } .xforms-select1 input { margin-bottom: 2px } `  |  Set margin to all single selection controls.  |
-|  `.books-table { background-color: #fce5b6 }` <br> `.books-table .add-td { width: 33em }` <br> `.books-table .form-td { width: 33em; background: white; padding: .5em }`  |  Format the main table.  |
-|  ` .xforms-repeat-selected-item-1 .form-td { background: #ffc } `  |  Change the background color of the currently selected repeat index.  |
-|  ` .books-action-table { margin-bottom: 1em }` <br> `.books-action-table td { white-space: nowrap; vertical-align: middle; padding-right: 1em }` <br>  `.books-action-table .xforms-submit img { vertical-align: middle }` <br> `.books-action-table .xforms-trigger-appearance-minimal img { margin-right: 1em; vertical-align: middle }`  |  Set margins and alignment for the action table at the top of the page.  |
+| CSS                                                                                                                                                                                                                                                                                                                                                                                         | Description                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.xforms-label { font-weight: bold }`                                                                                                                                                                                                                                                                                                                                                       | Display all labels in bold.                                                                                                                                      |
+| `.books-label { display: -moz-inline-box; display: inline-block; width: expression('9em'); min-width: 9em; }`                                                                                                                                                                                                                                                                               | Display all labels with the `books-label` class to have a minimum width. This allows aligning all the labels on the left. Note the mozilla- and IE-specific CSS. |
+| `.xforms-textarea-appearance-xxforms-autosize { width: 20em; margin-bottom: 2px }`                                                                                                                                                                                                                                                                                                          | Set width and margin to all text area controls with appearance `xxf:autosize`.                                                                                   |
+| `.xforms-input input { width: 20em; margin-bottom: 2px }`                                                                                                                                                                                                                                                                                                                                   | Set width and margin to all input controls.                                                                                                                      |
+| `.xforms-select1 { margin-bottom: 2px } .xforms-select1 input { margin-bottom: 2px }`                                                                                                                                                                                                                                                                                                       | Set margin to all single selection controls.                                                                                                                     |
+| <p><code>.books-table { background-color: #fce5b6 }</code> <br> <code>.books-table .add-td { width: 33em }</code> <br> <code>.books-table .form-td { width: 33em; background: white; padding: .5em }</code></p>                                                                                                                                                                             | Format the main table.                                                                                                                                           |
+| `.xforms-repeat-selected-item-1 .form-td { background: #ffc }`                                                                                                                                                                                                                                                                                                                              | Change the background color of the currently selected repeat index.                                                                                              |
+| <p><code>.books-action-table { margin-bottom: 1em }</code> <br> <code>.books-action-table td { white-space: nowrap; vertical-align: middle; padding-right: 1em }</code> <br>  <code>.books-action-table .xforms-submit img { vertical-align: middle }</code> <br> <code>.books-action-table .xforms-trigger-appearance-minimal img { margin-right: 1em; vertical-align: middle }</code></p> | Set margins and alignment for the action table at the top of the page.                                                                                           |
 
 Now just add all the CSS declaration under the page's `<head>` element, encapsulated within an HTML `<style>` element:
 
-```xml
+```markup
 <style type="text/css">
     <!--Your CSS declaration here!-->
     ...
@@ -154,7 +152,7 @@ Now just add all the CSS declaration under the page's `<head>` element, encapsul
 
 Reload the page, and you should see something like this:
 
-![][21]
+![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/16.png)
 
 A little bit of CSS does make things look a little better, doesn't it?
 
@@ -168,11 +166,11 @@ You already made the title and author mandatory fields, but you may want to vali
 XForms supports two ways of performing validation:
 
 * With Model Item Properties (MIPs) in the model, called `constraint` and `type`.
-* With an _XML Schema_. [XML Schema][23] is a W3C standard to specify constraints on XML documents, including constraints on the structure of the document or on the data types contained.
+* With an _XML Schema_. [XML Schema](https://www.w3.org/XML/Schema) is a W3C standard to specify constraints on XML documents, including constraints on the structure of the document or on the data types contained.
 
 Look at the following XML Schema for the Bookcast application:
 
-```xml
+```markup
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
     <!-- Top-level element -->
@@ -238,7 +236,7 @@ XML Schema requires some learning, but for now just consider the following:
 
 Now create the schema as `schema.xsd` in the same directory as `view.xhtml` and `page-flow.xml`. Then link it to the XForms page as follows:
 
-```xml
+```markup
 <xf:model schema="/apps/my-bookcast/schema.xsd">
     <!-- Rest of the XForms model -->
     ...
@@ -247,7 +245,7 @@ Now create the schema as `schema.xsd` in the same directory as `view.xhtml` and 
 
 Alternatively, you can place the schema inline within the XForms model:
 
-```xml
+```markup
 <xf:model >
     <xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified">
         <!-- Rest of the schema -->
@@ -258,7 +256,7 @@ Alternatively, you can place the schema inline within the XForms model:
 
 Also add `<xf:alert>` elements to the controls which might be invalid. This allows you to specify a meaningful validation message:
 
-```xml
+```markup
 <xf:input ref="title">
     <xf:label class="books-label">Title</xf:label>
     <xf:alert>The title is required</xf:alert>
@@ -277,15 +275,15 @@ Also add `<xf:alert>` elements to the controls which might be invalid. This allo
 
 Reload the page, and try to enter an invalid link, for example "ftp://ftp.example.com/". An alert icon will show up as you leave the link field with your cursor.
 
-_NOTE: The URL of the schema, `/apps/my-bookcast/schema.xsd`, is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded through:_
+_NOTE: The URL of the schema,_ `/apps/my-bookcast/schema.xsd`_, is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded through:_
 
-```xml
+```markup
 http://localhost:8080/orbeon/apps/my-bookcast/schema.xsd
 ```
 
 Because retrieving documents through HTTP takes some time, you can also use the Orbeon Forms protocol, `oxf:`, to load the schema:
 
-```xml
+```markup
 <xf:model xschema="oxf:/apps/my-bookcast/schema.xsd">
     <!-- Rest of the XForms model -->
     ...
@@ -298,7 +296,7 @@ Still with an invalid link, press the "Save" link and check the data in the data
 
 It would be nice to tell the user that saving didn't work. You can do this very easily: if a submission error occurs, the `<xf:submission>` element dispaches the `xforms-submit-error` event. So let's see how you catch that event and display a message to the user:
 
-```xml
+```markup
 <xf:submission
     id="save-submission"
     ref="instance('books-instance')"
@@ -315,8 +313,4 @@ The `<xf:submission>` element hasn't changed, except we added a nested `<xf:mess
 
 Try now making this change, enter an invalid link, and press the "Save" link: an alert message should show up!
 
-![][22]
-
-[21]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/16.png
-[22]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/17.png
-[23]: https://www.w3.org/XML/Schema
+![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/17.png)

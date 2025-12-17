@@ -1,4 +1,4 @@
-# Orbeon Form Builder
+# Form Builder
 
 ## Introduction
 
@@ -25,17 +25,16 @@ Form Builder can be used without much technical knowledge to build a vast range 
 Deployment use cases for Form Builder and Form Runner can vary depending on configuration, but here is a typical life for a form:
 
 * **Design time** — The form author
-    * Initiates the creation of a new form definition from the Form Builder summary page
-    * Edits the form definition from the Form Builder editor
-    * Saves the form definition
-    * Tests the form definition
-    * Multiple edit/save/test cycles can take place
-    * Publishes the form definition
-
+  * Initiates the creation of a new form definition from the Form Builder summary page
+  * Edits the form definition from the Form Builder editor
+  * Saves the form definition
+  * Tests the form definition
+  * Multiple edit/save/test cycles can take place
+  * Publishes the form definition
 * **Runtime** — The form user
-    * Initiates the creation of new form data from the form's summary page
-    * Enters data into the form
-    * Reviews, saves, submits, or downloads form data
+  * Initiates the creation of new form data from the form's summary page
+  * Enters data into the form
+  * Reviews, saves, submits, or downloads form data
 
 Form definitions, as well as form data, can also be searched and deleted.
 
@@ -44,8 +43,8 @@ Form definitions, as well as form data, can also be searched and deleted.
 A few useful terms used in this document:
 
 * **Form control.** A form control is a form user interface element such as a text line, text field, group of radio buttons, email or currency field, etc.
-* **Form definition.** A form definition (often simply called a *form*) includes a set of form controls, a layout of these controls on the screen, a representation of the data to capture (e.g. an XML document format), and optionally events and actions defining behavior when the user interacts with the controls, as well as rules that can apply to the data.
-* **Form data.** Form data (often also called a *document*) is data that is captured or edited by a form definition.
+* **Form definition.** A form definition (often simply called a _form_) includes a set of form controls, a layout of these controls on the screen, a representation of the data to capture (e.g. an XML document format), and optionally events and actions defining behavior when the user interacts with the controls, as well as rules that can apply to the data.
+* **Form data.** Form data (often also called a _document_) is data that is captured or edited by a form definition.
 * **Form author.** The form author is the person creating a form definition (either using a visual tool, or by writing code).
 * **Data entry.** Act of entering data into a form.
 * **Form user.** As opposed to the form _author_, the form _user_ is the person entering data into a form.
@@ -62,4 +61,4 @@ The faster the browser and the computer, the better your authoring experience wi
 
 ## See also
 
-- [Form Runner](/form-runner/overview/README.md)
+* [Form Runner](https://github.com/orbeon/orbeon-forms-doc/tree/05dfe635d04d26fa28f0c788c3cc816a72c4c8ae/form-runner/overview/README.md)

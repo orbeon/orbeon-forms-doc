@@ -1,18 +1,18 @@
 # Messages
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+[\[SINCE Orbeon Forms 2023.1\]](../release-notes/orbeon-forms-2023.1.md)
 
-![Messages dialog](images/messages.png)
+![Messages dialog](../.gitbook/assets/messages.png)
 
 ## Purpose
 
-Some of the [Form Runner actions](/form-runner/advanced/buttons-and-processes/actions-form-runner.md) display messages to users. For instance, when a form is saved, a message is displayed to confirm that the form was saved successfully. The Messages dialog allows you to customize those messages directly in Form Builder, instead of using properties such as `oxf.fr.resource.*.*.en.detail.messages.save-success`.
+Some of the [Form Runner actions](../form-runner/advanced/buttons-and-processes/actions-form-runner.md) display messages to users. For instance, when a form is saved, a message is displayed to confirm that the form was saved successfully. The Messages dialog allows you to customize those messages directly in Form Builder, instead of using properties such as `oxf.fr.resource.*.*.en.detail.messages.save-success`.
 
 ## Usage
 
 You can open the Messages dialog by clicking on the "Messages" button, under the "Advanced" tab, in the toolbox.
 
-<img src="images/advanced-menu.png" width="245">
+![](../.gitbook/assets/advanced-menu.png)
 
 Each message must have a language, a name, and a value.
 
@@ -22,11 +22,11 @@ When a message is defined in the Messages dialog, it overrides any message defin
 
 ## Supported actions
 
-The following [Form Runner actions](/form-runner/advanced/buttons-and-processes/actions-form-runner.md) take a message as parameter:
+The following [Form Runner actions](../form-runner/advanced/buttons-and-processes/actions-form-runner.md) take a message as parameter:
 
-- [`confirm`](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#confirm)
-- [`success-message`](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message)
-- [`error-message`](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message)
+* [`confirm`](../form-runner/advanced/buttons-and-processes/actions-form-runner.md#confirm)
+* [`success-message`](../form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message)
+* [`error-message`](../form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message)
 
 For example, you can reference the pre-defined message `save-success` by calling the following action:
 
@@ -65,4 +65,4 @@ For example, you might want to define a custom `email-and-save` process to email
 
 ## See also
 
-- Blog post: [Customizing Form Runner messages directly from Form Builder](https://blog.orbeon.com/2023/10/customizing-form-runner-messages.html)
+* Blog post: [Customizing Form Runner messages directly from Form Builder](https://blog.orbeon.com/2023/10/customizing-form-runner-messages.html)

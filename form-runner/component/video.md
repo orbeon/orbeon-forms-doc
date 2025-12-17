@@ -1,14 +1,14 @@
-# Video component
+# Video
 
 ## Availability
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+[\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
 
 ## What it does
 
 The `fr:video` component shows a video. Like [fr:image](image.md), `fr:video` doesn't have an associated upload control and cannot be changed by the end-user of a form.
 
-![Video component](images/xbl-video.png)
+![Video component](../../.gitbook/assets/xbl-video.png)
 
 ## Basic usage
 
@@ -30,7 +30,7 @@ In PDF output, the Video component currently doesn't show any content. Ideally, 
 
 ## See also
 
-- [Video attachment component](video-attachment.md)
-- [Image component](image.md)
-- [Image attachment component](image-attachment.md)
-- [Attachment component](attachment.md)
+* [Video attachment component](video-attachment.md)
+* [Image component](image.md)
+* [Image attachment component](image-attachment.md)
+* [Attachment component](attachment.md)

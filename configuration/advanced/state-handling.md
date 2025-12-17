@@ -1,4 +1,4 @@
-# State Handling
+# State handling
 
 ## Audience
 
@@ -25,7 +25,7 @@ A property controls whether the XForms engine should try to optimize state recon
     value="true">
 ```
 
-*NOTE: We might get rid of this property in the future as there is no use case for setting it to false.*
+_NOTE: We might get rid of this property in the future as there is no use case for setting it to false._
 
 If `oxf.xforms.cache.document` is set to `true`, the number of XForms documents that can be held in that document cache at a given time is configured with the following property:
 
@@ -36,9 +36,9 @@ If `oxf.xforms.cache.document` is set to `true`, the number of XForms documents 
     value="50">
 ```
 
-*NOTE: This property is global and cannot be overridden on a page by page basis.*
+_NOTE: This property is global and cannot be overridden on a page by page basis._
 
-*NOTE: If a user loads the same XForms page twice, two entries are created in the document cache.*
+_NOTE: If a user loads the same XForms page twice, two entries are created in the document cache._
 
 The static state (or static analysis) of an XForms page is stored in a separate cache, controlled with this property:
 
@@ -54,7 +54,6 @@ This property should be set to a number equal to or greater than the number of d
 If you have, say, in production, 100 separate form definition, the size should ideally be 100.
 
 It is tempting to make the cache very large, but because it is a strict cache, there is a risk of running out of memory. So you should make the cache just a little bit larger than the number of forms in production.
-
 
 ### XForms state store configuration
 
@@ -74,12 +73,12 @@ To achieve this goal you could make all server sessions longer. However this is 
 
 So Orbeon Forms supports a "session heartbeat" feature. Here is how this works:
 
-- When this feature is enabled (the default), an open XForms page in a client browser regularly pings the server through Ajax to keep the current server session alive.
-- The ping delay is automatically computed based on the server's session timeout. The client pings the server at 80% of the session expiration time after the last interaction with the server.
-- We are careful not to hit the XForms engine too much, in fact we do a very limited amount of work on the server for each ping, so they should run fast.
-- XForms state information for pages hit with the heartbeat just migrates to the disk store over time if RAM is used by other pages, so keeping even large numbers of pages open should not have any negative impact on server RAM.
-- When a user gets back to using the page, state information migrates back from disk to RAM, and the page will be live again.
-- Sessions do eventually expire as nobody keeps a browser open forever.
+* When this feature is enabled (the default), an open XForms page in a client browser regularly pings the server through Ajax to keep the current server session alive.
+* The ping delay is automatically computed based on the server's session timeout. The client pings the server at 80% of the session expiration time after the last interaction with the server.
+* We are careful not to hit the XForms engine too much, in fact we do a very limited amount of work on the server for each ping, so they should run fast.
+* XForms state information for pages hit with the heartbeat just migrates to the disk store over time if RAM is used by other pages, so keeping even large numbers of pages open should not have any negative impact on server RAM.
+* When a user gets back to using the page, state information migrates back from disk to RAM, and the page will be live again.
+* Sessions do eventually expire as nobody keeps a browser open forever.
 
 Note that whenever an application keeps sessions alive for a long time, it is a good idea to keep as little data as possible in the session. The Orbeon Forms XForms engine itself uses a global state store and does not use session objects for storage, but do remember to keep your sessions small!
 
@@ -94,7 +93,7 @@ The session heartbeat should help prevent many occurrences of "session expired" 
 
 ## Session expiration dialog
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+[\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
 
 When the session heartbeat feature is disabled with:
 
@@ -116,7 +115,7 @@ In that case, Orbeon Forms can display a dialog to the user when the session is 
 
 The user can then manually renew the session if needed.
 
-![Session about to expire](images/session-about-to-expire.png)
+![Session about to expire](../../.gitbook/assets/session-about-to-expire.png)
 
 It is possible to configure when this dialog is shown using the following property, which is a percentage of the session expiration time, with a default value of 80%:
 
@@ -131,7 +130,7 @@ For example, if the session expiration time is one hour, the dialog will be show
 
 If the user doesn't renew the session, the session will expire and the user will see the following dialog:
 
-![Session expired](images/session-expired.png)
+![Session expired](../../.gitbook/assets/session-expired.png)
 
 This dialog is also shown if the user logs out from another page/tab from the same session.
 
@@ -141,13 +140,13 @@ Behind the scene, Orbeon Forms synchronizes multiple Orbeon Forms tabs or window
 
 ## Browser navigation (back and forward) handling
 
-[DEPRECATED SINCE Orbeon Forms 2021.1]
+\[DEPRECATED SINCE Orbeon Forms 2021.1]
 
 ### Deprecation
 
 The way web browsers should handle history, in particular "back" and "forward", is subject to interpretation. However, one consistent such interpretation is that going "back" or "forward" in the browser history should take the user to something as close as possible as what the user saw last, whether for web "pages" or web "apps".
 
-As of late 2021, the way web browsers handle history confirms this interpretation. In particular, the so-called ["bfcache"](https://web.dev/bfcache/) helps restore the state of pages and applications as they were last seen by the user.  
+As of late 2021, the way web browsers handle history confirms this interpretation. In particular, the so-called ["bfcache"](https://web.dev/bfcache/) helps restore the state of pages and applications as they were last seen by the user.
 
 One of the purpose of the `xxf:revisit-handling="reload"` setting described below was to prevent the possibility that a user could navigate back, see again data that was entered into a form, and resubmit it. Forcing a reload of the page upon browser back alleviated that issue, as the form would then be cleared. However, this also goes against the more accepted philosophy of navigation in history described above.
 
@@ -155,10 +154,10 @@ Since Orbeon Forms 2020.1, we recommend instead using workflow features to help 
 
 1. Set the workflow stage to a value such as `saved` or `submitted`.
 2. In the form definition, set the global "Read-only" formula to mark the form as read only when it is in `saved` or `submitted` stage.
- 
+
 This means that even if the user navigate to a confirmation page upon submission, and then navigates back to the form, the form will be shown (and if necessary restored) in a readonly mode. This achieves the intent without breaking the philosophy of navigation.
 
-See [Workflow stage](/form-runner/feature/workflow-stage.md) for more details.
+See [Workflow stage](../../form-runner/feature/workflow-stage.md) for more details.
 
 ### How it works
 
@@ -170,8 +169,8 @@ In certain situations, it can be useful instead to ask the XForms page to reload
 <xf:model xxf:revisit-handling="reload">
 ```
 
-*NOTE: It is recommended to use the `reload` value carefully, as reloading pages upon browser navigation often does not match the expectation of the user.*
+_NOTE: It is recommended to use the `reload` value carefully, as reloading pages upon browser navigation often does not match the expectation of the user._
 
 ## See also
 
-- [Orbeon Forms Caches](/installation/caches.md)
+* [Orbeon Forms Caches](../../installation/caches.md)

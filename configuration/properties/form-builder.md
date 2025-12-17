@@ -1,4 +1,4 @@
-# Form Builder configuration properties
+# Form Builder
 
 ## Default values
 
@@ -26,7 +26,7 @@ In that property, the value of `$GROUPNAME` determines a grouping of the control
 </property>
 ```
 
-*NOTE: With Orbeon Forms 4.5 and earlier, values must be placed in the `value` attribute.*
+_NOTE: With Orbeon Forms 4.5 and earlier, values must be placed in the `value` attribute._
 
 ```xml
 <property
@@ -55,17 +55,17 @@ In addition to controls, the toolbox has other features which you can enable or 
 <property as="xs:boolean" name="oxf.fb.menu.actions"                 value="true"/>
 ```
 
-- [SINCE Orbeon Forms 2022.1 and 2021.1.6] `oxf.fb.menu.permissions.owner-group` allows you, by setting the value of the property to `false`, to disable the two lines in the permissions dialog related to owner and group permissions. This is useful if you're always using a custom implementation of the persistence API that doesn't support owner and group permissions and you prefer to hide those options from form authors to avoid possible confusions.
+* \[SINCE Orbeon Forms 2022.1 and 2021.1.6] `oxf.fb.menu.permissions.owner-group` allows you, by setting the value of the property to `false`, to disable the two lines in the permissions dialog related to owner and group permissions. This is useful if you're always using a custom implementation of the persistence API that doesn't support owner and group permissions and you prefer to hide those options from form authors to avoid possible confusions.
 
 ## Publish dialog
 
 ### Links to new and summary pages
 
-[SINCE Orbeon Forms 4.6]
+\[SINCE Orbeon Forms 4.6]
 
 By default, the Publish dialog proposes, upon successful publication of a form definition, shortcuts to navigate to the published form's New or Summary pages.
 
-![Publish dialog](/form-builder/images/publish-confirmation.png)
+![Publish dialog](../../.gitbook/assets/publish-confirmation.png)
 
 This property allows specifying which of these actions are available:
 
@@ -78,15 +78,15 @@ This property allows specifying which of these actions are available:
 
 ### The Version dropdown
 
-[SINCE Orbeon Forms 2022.1, 2021.1.3]
+\[SINCE Orbeon Forms 2022.1, 2021.1.3]
 
 When versioning is supported, you can use the following property to control the behavior of the Version dropdown. If versioning isn't supported, this property has no effect. Also, the property has no effect if no version of this form has ever been published: in that case, version 1 will be published. The property can be set to:
 
-- `default-to-select` – The dropdown is enabled, and users need to select whether they want to create a new version or overwrite an existing version. This is the default.
-- `default-to-next` – The dropdown is enabled, and defaults to the choice to create a new version.
-- `default-to-latest` – The dropdown is enabled, and defaults to overwriting the latest version.
-- `force-next` – The dropdown is read-only, and a new version will be created on publish.
-- `force-latest` – The dropdown is read-only, and the latest published version will be overwritten on publish.
+* `default-to-select` – The dropdown is enabled, and users need to select whether they want to create a new version or overwrite an existing version. This is the default.
+* `default-to-next` – The dropdown is enabled, and defaults to the choice to create a new version.
+* `default-to-latest` – The dropdown is enabled, and defaults to overwriting the latest version.
+* `force-next` – The dropdown is read-only, and a new version will be created on publish.
+* `force-latest` – The dropdown is read-only, and the latest published version will be overwritten on publish.
 
 ```xml
 <property
@@ -95,7 +95,7 @@ When versioning is supported, you can use the following property to control the 
     value="default-to-select"/>
 ```
 
-## Maximum number of columns 
+## Maximum number of columns
 
 ```xml
 <property
@@ -162,26 +162,26 @@ The permissions dialog allows form authors, amongst other things, to assign perm
 
 The value of this property is an array of strings in the JSON format. For instance, the following screenshot shows the dialog with the above property set (see the line for "Organization owner"), and where the form author added a line for an "admin" role.
 
-![Permissions dialog with Organization Owner role](../images/fb-permissions-organization-owner.png)
+![Permissions dialog with Organization Owner role](../../.gitbook/assets/fb-permissions-organization-owner.png)
 
-See also [Access control for deployed forms](/form-runner/access-control/deployed-forms.md).
+See also [Access control for deployed forms](../../form-runner/access-control/deployed-forms.md).
 
-## Access control 
+## Access control
 
 If you'd like to have multiple classes of Form Builder users where some can edit, say, forms in the `hr` app, while others can edit forms in the `sales` app, see [Access control for editing forms](../../form-runner/access-control/editing-forms.md#form-builder-permissions).
 
 ## Formatted text configuration
 
-[\[SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+[\[SINCE Orbeon Forms 2023.1.1\]](../../release-notes/orbeon-forms-2023.1.1.md)
 
-You can configure the TinyMCE editor used for Formatted Text (AKA [Rich Text Editor](/form-runner/component/rich-text-editor.md)) component for the following:
+You can configure the TinyMCE editor used for Formatted Text (AKA [Rich Text Editor](../../form-runner/component/rich-text-editor.md)) component for the following:
 
-- Explanatory Text content in the form area
-- control labels with "Use HTML"  in Form Builder dialogs
-- control hints with "Use HTML"  in Form Builder dialogs
-- control help with "Use HTML"  texts in Form Builder dialogs
+* Explanatory Text content in the form area
+* control labels with "Use HTML" in Form Builder dialogs
+* control hints with "Use HTML" in Form Builder dialogs
+* control help with "Use HTML" texts in Form Builder dialogs
 
-Use the following property: 
+Use the following property:
 
 ```xml
 <property as="xs:string"  name="oxf.xforms.xbl.fr.tinymce.config.orbeon.builder">
@@ -214,15 +214,15 @@ Note that `oxf.xforms.xbl.fr.tinymce.config.orbeon.builder` is evaluated as an A
 
 ## Explanatory Text TinyMCE configuration
 
-[\[DEPRECATED SINCE Orbeon Forms 2023.1.1\]](/release-notes/orbeon-forms-2023.1.1.md)
+[\[DEPRECATED SINCE Orbeon Forms 2023.1.1\]](../../release-notes/orbeon-forms-2023.1.1.md)
 
 Prefer the `oxf.xforms.xbl.fr.tinymce.config.orbeon.builder` property above.
 
 Note that `oxf.xforms.xbl.fr.tinymce.config.orbeon.builder` controls the appearance of the Explanatory Text, as well as labels, hints, and help texts in Form Builder dialogs, while `oxf.fb.tinymce.config` only controls the appearance of the Explanatory Text.
 
-[SINCE Orbeon Forms 2018.1]
+\[SINCE Orbeon Forms 2018.1]
 
-When form authors edit an Explanatory Text, Form Builder utilizes the TinyMCE component. You can [configure TinyMCE](https://www.tiny.cloud/docs/configure/) by supplying your own configuration in JSON as the value for the `oxf.fb.tinymce.config` property. If you do not set the `oxf.fb.tinymce.config` property, Form Builder defaults to a configuration, which can be found at the bottom of [`TinyMce.scala`](https://github.com/orbeon/orbeon-forms/blob/master/web-facades/src/main/scala/org/orbeon/facades/TinyMce.scala).   
+When form authors edit an Explanatory Text, Form Builder utilizes the TinyMCE component. You can [configure TinyMCE](https://www.tiny.cloud/docs/configure/) by supplying your own configuration in JSON as the value for the `oxf.fb.tinymce.config` property. If you do not set the `oxf.fb.tinymce.config` property, Form Builder defaults to a configuration, which can be found at the bottom of [`TinyMce.scala`](https://github.com/orbeon/orbeon-forms/blob/master/web-facades/src/main/scala/org/orbeon/facades/TinyMce.scala).
 
 ```xml
 <property as="xs:string"  name="oxf.fb.tinymce.config">
@@ -236,5 +236,5 @@ When form authors edit an Explanatory Text, Form Builder utilizes the TinyMCE co
 
 ## See also
 
-- [Form Builder toolbox properties](/configuration/properties/form-builder.md#toolbox)
-- [Formatted Text / Rich Text Editor](/form-runner/component/rich-text-editor.md)
+* [Form Builder toolbox properties](form-builder.md#toolbox)
+* [Formatted Text / Rich Text Editor](../../form-runner/component/rich-text-editor.md)

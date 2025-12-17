@@ -1,4 +1,4 @@
-# Access control for deployed forms
+# Deployed forms
 
 ## Availability
 
@@ -12,11 +12,11 @@ You can restrict which users can access which forms, and what operations they ca
 
 By default, no restriction is imposed on _who_ can do _what_ with forms you create in Form Builder. You enable permissions by going to the Form Builder toolbox, and under _Advanced_, clicking on _Permissions_.
 
-![Opening the Permissions dialog](../../form-builder/images/advanced-menu.png)
+![Opening the Permissions dialog](../../.gitbook/assets/advanced-menu.png)
 
 This shows the following dialog:
 
-![Permissions dialog with no permissions enabled](../../form-builder/images/permissions-enable.png)
+![Permissions dialog with no permissions enabled](../../.gitbook/assets/permissions-enable.png)
 
 After you click on the checkbox, you'll be able to set access restrictions on the _Create_, _Read_, _Update_, and _Delete_ operations.
 
@@ -26,22 +26,22 @@ After you click on the checkbox, you'll be able to set access restrictions on th
 
 In the example below:
 
-- Any user (even anonymous) can fill out new form data.
-- A logged-in user who created form data can later read and update it.
-- A logged-in user member of the group of the user who created form data can read it but not update it.
-- Users with the role _clerk_ can read any form data. They can also list data on the Summary page.
-- Users with the role _admin_ can do any operation, including deleting form data and listing data on the Summary page.
+* Any user (even anonymous) can fill out new form data.
+* A logged-in user who created form data can later read and update it.
+* A logged-in user member of the group of the user who created form data can read it but not update it.
+* Users with the role _clerk_ can read any form data. They can also list data on the Summary page.
+* Users with the role _admin_ can do any operation, including deleting form data and listing data on the Summary page.
 
-![Permissions dialog with explicit permissions enabled](../../form-builder/images/permissions-dialog.png)
+![Permissions dialog with explicit permissions enabled](../../.gitbook/assets/permissions-dialog.png)
 
 ### Role types
 
 1. On the _Anyone_ line, set the operations allowed to all users.
-2. [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) On the _Require Token_ line, specify that the _Read_ and _Update_ permissions above require a token to be satisfied.
-3. [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) On the _Any Authenticated User_ line, set the operation allowed to authenticated users only.
-2. On the _Owner_ line, set the operations allowed to the user who created the data. See also [Owner and Group Member Permissions](../../form-runner/access-control/owner-group.md). [SINCE Orbeon Forms 4.3]
-3. On the _Group members_ line, set the operations allowed to users in the same group as the owner. See also [Owner and Group Member Permissions](../../form-runner/access-control/owner-group.md). [SINCE Orbeon Forms 4.3]
-4. On the following lines, you can enter a role name, and define what operations users with that role can perform.
+2. [\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md) On the _Require Token_ line, specify that the _Read_ and _Update_ permissions above require a token to be satisfied.
+3. [\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md) On the _Any Authenticated User_ line, set the operation allowed to authenticated users only.
+4. On the _Owner_ line, set the operations allowed to the user who created the data. See also [Owner and Group Member Permissions](owner-group.md). \[SINCE Orbeon Forms 4.3]
+5. On the _Group members_ line, set the operations allowed to users in the same group as the owner. See also [Owner and Group Member Permissions](owner-group.md). \[SINCE Orbeon Forms 4.3]
+6. On the following lines, you can enter a role name, and define what operations users with that role can perform.
 
 ### Permissions in detail
 
@@ -57,7 +57,7 @@ Permissions for the _Owner_ and _Group members_ can be set independently – If 
 
 ### The _List_ permission
 
-[SINCE Orbeon Forms 2022.1]
+\[SINCE Orbeon Forms 2022.1]
 
 The _List_ permission allows specifying that the user can list form data on the Form Runner Summary page. If a user navigates to the Summary page of a form and the _List_ permission is not granted to the user, the Summary page responds with an "Unauthorized" error.
 
@@ -69,14 +69,13 @@ Forms created and edited with earlier versions of Orbeon Forms that have the _Re
 
 ### Introduction
 
-[SINCE Orbeon Forms 2022.1]
+\[SINCE Orbeon Forms 2022.1]
 
-You can configure permissions per app, as well as globally. This is particularly useful when you have a large number of forms, and want to configure permissions for all of them at once.
-Per-app and global permissions are currently set using configuration properties in `properties-local.xml`.
+You can configure permissions per app, as well as globally. This is particularly useful when you have a large number of forms, and want to configure permissions for all of them at once. Per-app and global permissions are currently set using configuration properties in `properties-local.xml`.
 
 ### Properties
 
-You configure permissions with the `oxf.fr.permissions.$app.$form` properties. For example: 
+You configure permissions with the `oxf.fr.permissions.$app.$form` properties. For example:
 
 ```xml
 <property as="xs:string"  name="oxf.fr.permissions.acme.sales">
@@ -130,33 +129,33 @@ For each property, the configuration is a JSON format that follows the layout of
 
 The configuration is a JSON object with the following properties:
 
-- `anyone`: an array of operations that are allowed for all users
-- `anyone-with-token`:
-    - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
-    - an array of operations that are allowed for users with a link including a token
-    - see [Token-based permissions](/form-runner/access-control/tokens.md)
-- `any-authenticated-user`
-    - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
-    - an array of operations that are allowed for users who are authenticated
-    - this excludes, therefore, anonymous users
-- `owner`: an array of operations that are allowed for the user who created the data
-- `group-member`: an array of operations that are allowed for users in the same group as the owner of the data
-- `roles`: a JSON object with the following properties:
-    - each key is a role name
-    - each value is an array of operations that are allowed for users with the given role
+* `anyone`: an array of operations that are allowed for all users
+* `anyone-with-token`:
+  * [\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
+  * an array of operations that are allowed for users with a link including a token
+  * see [Token-based permissions](tokens.md)
+* `any-authenticated-user`
+  * [\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
+  * an array of operations that are allowed for users who are authenticated
+  * this excludes, therefore, anonymous users
+* `owner`: an array of operations that are allowed for the user who created the data
+* `group-member`: an array of operations that are allowed for users in the same group as the owner of the data
+* `roles`: a JSON object with the following properties:
+  * each key is a role name
+  * each value is an array of operations that are allowed for users with the given role
 
 The operations are the same as the ones in the Form Builder user interface:
 
-- `create`: create new data
-- `read`: read data
-- `update`: update data
-- `delete`: delete data
-- `list`: list data on the Summary page
+* `create`: create new data
+* `read`: read data
+* `update`: update data
+* `delete`: delete data
+* `list`: list data on the Summary page
 
 To indicate that no operation is allowed:
 
-- use an empty array
-- or omit the property
+* use an empty array
+* or omit the property
 
 ### Impact on versioning
 
@@ -176,16 +175,16 @@ This was formerly known as the _Home_ page.
 
 On the Form Runner Published Forms page, all the forms on which the current user can perform at least one operation are displayed. Then, for each one of those forms:
 
-- If they can perform the _Create_ operation on the form, a link to the _New_ page is shown.
-- If they can perform any of the _Read_, _Update_, or _Delete_ operation on the form, a link to the _Summary_ page for that form is shown.
+* If they can perform the _Create_ operation on the form, a link to the _New_ page is shown.
+* If they can perform any of the _Read_, _Update_, or _Delete_ operation on the form, a link to the _Summary_ page for that form is shown.
 
 ### Summary page
 
-- Access is completely denied if the current user can't perform any of the _Read_, _Update_, or _Delete_ operations.
-  - [SINCE Orbeon Forms 2022.1] Access is also completely denied if the user doesn't have the _List_ permission.
-- The _Delete_ button is disabled if the current user can't perform the _Delete_ operation.
-- The _review_ and _pdf_ button are disabled if the current user can't perform the _Read_ operation.
-- Clicking in a row of the table will open the form in _Edit_ mode if the current user can perform the _Update_ operation, in _View_ mode if they can perform the _Read_ operation, and do nothing otherwise.
+* Access is completely denied if the current user can't perform any of the _Read_, _Update_, or _Delete_ operations.
+  * \[SINCE Orbeon Forms 2022.1] Access is also completely denied if the user doesn't have the _List_ permission.
+* The _Delete_ button is disabled if the current user can't perform the _Delete_ operation.
+* The _review_ and _pdf_ button are disabled if the current user can't perform the _Read_ operation.
+* Clicking in a row of the table will open the form in _Edit_ mode if the current user can perform the _Update_ operation, in _View_ mode if they can perform the _Read_ operation, and do nothing otherwise.
 
 ### View, New, and Edit pages
 
@@ -195,15 +194,15 @@ On the Form Runner Published Forms page, all the forms on which the current user
 
 ## Compatibility note
 
-[SINCE 4.3] In Orbeon Forms 4.2 and earlier, role-based permissions set in Form Builder could only be driven by container-based roles and the value of the `oxf.fr.authentication.method` property was not taken into account. Since version 4.3, those permissions also apply if you are using header-driven roles.
+\[SINCE 4.3] In Orbeon Forms 4.2 and earlier, role-based permissions set in Form Builder could only be driven by container-based roles and the value of the `oxf.fr.authentication.method` property was not taken into account. Since version 4.3, those permissions also apply if you are using header-driven roles.
 
 ## See also
 
-- [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
-- [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
-- [Form fields](form-fields.md) - How to control access to specific form fields based on the user user's roles.
-- [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
-    - [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
-    - [Organization-based permissions](organization.md) – Access based on organizational structure.
-    - [Token-based permissions](tokens.md) - Token-based permissions
-- [Scenarios](scenarios.md)
+* [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
+* [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
+* [Form fields](form-fields.md) - How to control access to specific form fields based on the user user's roles.
+* [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
+  * [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
+  * [Organization-based permissions](organization.md) – Access based on organizational structure.
+  * [Token-based permissions](tokens.md) - Token-based permissions
+* [Scenarios](scenarios.md)

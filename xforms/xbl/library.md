@@ -1,6 +1,4 @@
-# XBL Library
-
-
+# XBL library
 
 ## Introduction
 
@@ -14,7 +12,7 @@ The XForms engine finds XBL bindings in the following ways:
 
 You can place inline `xbl:xbl` elements within the `xh:head` element, at the same level as `xf:model` elements. For example:
 
-```xml
+```markup
 <xh:html
     xmlns:xh="http://www.w3.org/1999/xhtml"
     xmlns:xf="http://www.w3.org/2002/xforms"
@@ -50,8 +48,8 @@ Orbeon Forms allows for automatic inclusion of XBL bindings when matching by nam
 
 Say element `<acme:button>` is found by the XForms engine, in your own `http://www.acme.com/xbl` namespace:
 
-- The corresponding XBL file is located following the standard [directory layout rules](bindings.md#directory-layout).
-- The resource, if found, is automatically included in the page for XBL processing.
+* The corresponding XBL file is located following the standard [directory layout rules](bindings.md#directory-layout).
+* The resource, if found, is automatically included in the page for XBL processing.
 
 Such bindings are checked for freshness every time a form is loaded. If a binding is out of date, it is reloaded and the form is recompiled.
 
@@ -61,14 +59,14 @@ Bindings which are not inline and which are not by name only need to be explicit
 
 With Orbeon Forms 4.9, this property is empty as no built-in XBL component binds by attribute in that version:
 
-```xml
+```markup
 <property as="xs:string" name="oxf.xforms.xbl.library">
 </property>
 ```
 
 XBL components with bindings by attribute can be added using the same format used by `oxf.xforms.resources.baseline`. Component references are separated by whitespace. With Orbeon Forms 4.10, the property is as follows:
 
-```xml
+```markup
 <property as="xs:string"  name="oxf.xforms.xbl.library">
     fr:dropdown-select1
     fr:dropdown-date
@@ -80,7 +78,7 @@ XBL components with bindings by attribute can be added using the same format use
 
 With Orbeon Forms 2016.1, the property is as follows:
 
-```xml
+```markup
 <property as="xs:string"  name="oxf.xforms.xbl.library">
     fr:tinymce
     fr:dropdown-select1

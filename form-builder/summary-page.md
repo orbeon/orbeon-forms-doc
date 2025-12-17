@@ -1,4 +1,4 @@
-# The Summary page
+# Summary page
 
 ## Purpose
 
@@ -24,7 +24,7 @@ _NOTE: The exact URL might be provided by your IT organization._
 
 Once you reach the summary page, you will either see an empty list, or a list containing existing form definitions, as shown in this screenshot.
 
-![The Summary page](images/summary.png)
+![The Summary page](../.gitbook/assets/summary.png)
 
 For each form definition, the list shows:
 
@@ -54,7 +54,7 @@ To search: enter a search term and press the "Search" button or the "enter" key.
 
 Tip: to clear the search and list all the form definitions again, clear all search fields and press the "Search" button or the "enter" key.
 
-![](images/summary-search.png)
+![](../.gitbook/assets/summary-search.png)
 
 ## Creating a new form definition
 
@@ -62,7 +62,7 @@ To create a new form definition, press the "New" button at the bottom of the pag
 
 ## Reviewing a form definition
 
-[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md) Select the form definition you want to inspect, then press the "Review" button. Form Builder opens the form in *view mode*, which shows the complete designer interface while disabling actions that would modify the form, such as dragging controls, saving, or publishing. This is useful when you want to share the layout of a form for feedback without risking accidental edits.
+[\[SINCE Orbeon Forms 2025.1\]](../release-notes/orbeon-forms-2025.1.md) Select the form definition you want to inspect, then press the "Review" button. Form Builder opens the form in _view mode_, which shows the complete designer interface while disabling actions that would modify the form, such as dragging controls, saving, or publishing. This is useful when you want to share the layout of a form for feedback without risking accidental edits.
 
 ## Deleting a form definition
 

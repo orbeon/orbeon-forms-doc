@@ -1,5 +1,5 @@
 # Action Syntax examples
-  
+
 ## Overview
 
 This document provides examples of the [Action Syntax](actions-syntax.md) used to define actions in Form Builder.
@@ -10,16 +10,16 @@ The Nobel Prize organization exposes a [REST API](https://www.nobelprize.org/abo
 
 To do this, we start by creating a simple form with a nested repetition:
 
-- a repeated section for the Nobel Prizes
-- a nested repeated grid for the laureates
+* a repeated section for the Nobel Prizes
+* a nested repeated grid for the laureates
 
 Here is how the form looks like in Form Builder:
 
-![Nobel Prize form](images/action-syntax-nobel-form.png)
+![Nobel Prize form](../.gitbook/assets/action-syntax-nobel-form.png)
 
 We then also create an HTTP Service endpoint:
 
-![Nobel Prize service](images/action-syntax-nobel-service.png)
+![Nobel Prize service](../.gitbook/assets/action-syntax-nobel-service.png)
 
 It points to the following API endpoint:
 
@@ -102,16 +102,16 @@ Form Runner operates on an XML view of JSON data so that you can use XPath formu
 
 Finally, we write, using the Form Builder's Action Syntax, an action that:
 
-- runs upon form load
-- calls the `get-nobel-prizes` service
-- clears the `prizes` repeat
-- iterates over the Nobel Prizes (`/*/nobelPrizes/_`), and for each entry
-    - adds iterations to the `prizes` repeat
-    - sets values in the controls `year` and `category` from the `awardYear` and `category/en` fields in the data
-    - clears the `laureates` repeat
-    - iterates over the laureates (`laureates/_`), and for each entry
-        - adds iterations to the `laureates` repeat
-        - sets values in the controls `known-name` and `motivation` from the `knownName` and `motivation/en` fields in the data
+* runs upon form load
+* calls the `get-nobel-prizes` service
+* clears the `prizes` repeat
+* iterates over the Nobel Prizes (`/*/nobelPrizes/_`), and for each entry
+  * adds iterations to the `prizes` repeat
+  * sets values in the controls `year` and `category` from the `awardYear` and `category/en` fields in the data
+  * clears the `laureates` repeat
+  * iterates over the laureates (`laureates/_`), and for each entry
+    * adds iterations to the `laureates` repeat
+    * sets values in the controls `known-name` and `motivation` from the `knownName` and `motivation/en` fields in the data
 
 There is a nested iteration due to the nested repeats. here is what the complete listener and action look like:
 
@@ -137,15 +137,15 @@ There is a nested iteration due to the nested repeats. here is what the complete
 
 When you test or run the deployed form, you see the Nobel Prize winners for 2023:
 
-![Nobel Prize winners](images/action-syntax-nobel-result.png)
+![Nobel Prize winners](../.gitbook/assets/action-syntax-nobel-result.png)
 
 ## See also
 
-- Blog post: [Making sense of Form Runner Actions](https://www.orbeon.com/2024/09/making-sense-form-runner-actions)
-- [Services and actions overview](services-and-actions.md)
-- [Action Syntax](actions-syntax.md)
-- [Editing the source code of the form definition](edit-source.md)
-- [Synchronizing repeated content](synchronize-repeated-content.md)
-- [Simple Actions](actions.md)
-- [HTTP services](http-services.md)
-- [Database services](database-services.md)
+* Blog post: [Making sense of Form Runner Actions](https://www.orbeon.com/2024/09/making-sense-form-runner-actions)
+* [Services and actions overview](services-and-actions.md)
+* [Action Syntax](actions-syntax.md)
+* [Editing the source code of the form definition](edit-source.md)
+* [Synchronizing repeated content](synchronize-repeated-content.md)
+* [Simple Actions](actions.md)
+* [HTTP services](http-services.md)
+* [Database services](database-services.md)

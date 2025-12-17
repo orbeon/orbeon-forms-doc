@@ -1,25 +1,25 @@
-# Detail page configuration properties
+# Detail page
 
 ## Children pages
 
-- [Attachments](form-runner-attachments.md)
-- [Email](form-runner-email.md)
-- [Initial data](form-runner-initial-data.md)
-- [PDF](form-runner-pdf.md)
-- [Table of contents](form-runner-toc.md)
+* [Attachments](form-runner-attachments.md)
+* [Email](form-runner-email.md)
+* [Initial data](form-runner-initial-data.md)
+* [PDF](form-runner-pdf.md)
+* [Table of contents](form-runner-toc.md)
 
 ## HTML page layout
 
-[SINCE Orbeon Forms 2019.2]
+\[SINCE Orbeon Forms 2019.2]
 
 Available modes:
 
-- `fixed` (default)
-- `fluid`
+* `fixed` (default)
+* `fluid`
 
-When in `fluid` mode, the form sections and grids take the entire web browser's viewport size. This also applies when using the [wizard view](/form-runner/feature/wizard-view.md).
+When in `fluid` mode, the form sections and grids take the entire web browser's viewport size. This also applies when using the [wizard view](../../form-runner/feature/wizard-view.md).
 
-This can also be configured for a particular form in Form Builder's Form Settings dialog. 
+This can also be configured for a particular form in Form Builder's Form Settings dialog.
 
 ```xml
 <property
@@ -30,13 +30,13 @@ This can also be configured for a particular form in Form Builder's Form Setting
 
 ## Density
 
-[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md)
+[\[SINCE Orbeon Forms 2024.1\]](../../release-notes/orbeon-forms-2024.1.md)
 
 Available values:
 
-- `compact`: This is the current default with Orbeon Forms until 2023.1.
-- `comfortable`: This is the default for forms created with Orbeon Forms 2024.1 and later.
-- `roomy`: Choose this for even more spacing between controls.
+* `compact`: This is the current default with Orbeon Forms until 2023.1.
+* `comfortable`: This is the default for forms created with Orbeon Forms 2024.1 and later.
+* `roomy`: Choose this for even more spacing between controls.
 
 This sets the spacing between elements in the interface.
 
@@ -51,11 +51,11 @@ This can also be configured for a particular form in Form Builder's Form Setting
 
 See also:
 
-- Blog post: [Form Density Setting](https://www.orbeon.com/2024/11/form-density)
+* Blog post: [Form Density Setting](https://www.orbeon.com/2024/11/form-density)
 
 ## Adding your own CSS files
 
-[SINCE Orbeon Forms 2017.1]
+\[SINCE Orbeon Forms 2017.1]
 
 In addition to `oxf.fr.css.custom.uri`, you can also use the following property, which apply only to the Detail page:
 
@@ -69,7 +69,7 @@ See also [Adding your own CSS](form-runner.md#adding-your-own-css).
 
 ## Adding your own JavaScript files
 
-[SINCE Orbeon Forms 2017.1]
+\[SINCE Orbeon Forms 2017.1]
 
 In addition to `oxf.fr.js.custom.uri`, you can also use the following property, which apply only to the Detail page:
 
@@ -107,11 +107,11 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
     value="close clear print pdf save submit"/>
 ```
 
-The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/README.md).
+The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/).
 
 ### Hiding and disabling buttons
 
-[SINCE Orbeon Forms 2016.2]
+\[SINCE Orbeon Forms 2016.2]
 
 The following properties, where you replace `BUTTON` by a specific button name, control whether a particular button is visible (button visibility) or disabled (or "readonly"):
 
@@ -145,9 +145,9 @@ The value of these properties is an XPath expression. For example the following 
 
 You can access control values in the data in the following ways, where `foo` is the name of the control:
 
-- Use an expression of the type `//foo`. Note that control elements might not be unique in case of repeats or section templates, and so this returns as many XML elements as there are values in the data, including within repeats and within section templates.
-- Use `fr:control-string-value('foo')`. This only works for controls that are not in a section template and returns zero or one value. If the control is repeated, only the first value is returned.
-- [SINCE Orbeon Forms 2023.1.6] You can use the variable notation `$foo` for controls that are not in a section template. If the control is repeated, only the first value is returned.
+* Use an expression of the type `//foo`. Note that control elements might not be unique in case of repeats or section templates, and so this returns as many XML elements as there are values in the data, including within repeats and within section templates.
+* Use `fr:control-string-value('foo')`. This only works for controls that are not in a section template and returns zero or one value. If the control is repeated, only the first value is returned.
+* \[SINCE Orbeon Forms 2023.1.6] You can use the variable notation `$foo` for controls that are not in a section template. If the control is repeated, only the first value is returned.
 
 Example searching data elements:
 
@@ -167,14 +167,13 @@ Example with `fr:control-string-value()`:
 
 ### Loading indicator for buttons
 
-[SINCE Orbeon Forms 2016.1]
+\[SINCE Orbeon Forms 2016.1]
 
 The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BUTTON` by a specific button name, allows you to configure which loading indicator, if any, is to be used for that button. The value of the property can be either:
 
-- Empty, which is the default, and means "no loading indicator".
-- `modal`, greys out the background, shows a spinner in the center of the screen, and prevents any user input as long as the action triggered by the button is being processed.
-- `inline`, shows a spinner inside the button itself.
-
+* Empty, which is the default, and means "no loading indicator".
+* `modal`, greys out the background, shows a spinner in the center of the screen, and prevents any user input as long as the action triggered by the button is being processed.
+* `inline`, shows a spinner inside the button itself.
 
 In the following example, the `send` button is made modal:
 
@@ -187,25 +186,25 @@ In the following example, the `send` button is made modal:
 
 In general, we would expect this property to be used as follows:
 
-- `modal` for buttons performing actions for which allowing users to change the value of fields after the button is pressed wouldn't make any sense, would be confusing, or outright dangerous. This would for instance be the case for *submit* or *publish* buttons.
-- `inline` for buttons performing actions that are expected to take a little bit of time, like a *save* operation.
-- Empty for any other button.
+* `modal` for buttons performing actions for which allowing users to change the value of fields after the button is pressed wouldn't make any sense, would be confusing, or outright dangerous. This would for instance be the case for _submit_ or _publish_ buttons.
+* `inline` for buttons performing actions that are expected to take a little bit of time, like a _save_ operation.
+* Empty for any other button.
 
 In all cases, should an action take any noticeable amount of time, Orbeon Forms will always show a loading bar at the top of the page, so users know one of their actions is being processed.
 
 By default, as shown in the below video:
 
-- The `modal` loading indicator used for the `submit` button.
-- The `inline` loading indicator for the *save* buttons (`save-draft` (up to 2020.1.x), `save-progress` (2021.1 and newer), and `save-final`).
+* The `modal` loading indicator used for the `submit` button.
+* The `inline` loading indicator for the _save_ buttons (`save-draft` (up to 2020.1.x), `save-progress` (2021.1 and newer), and `save-final`).
 
-![Loading indicators](../images/loading-indicators.gif)
+![Loading indicators](../../.gitbook/assets/loading-indicators.gif)
 
 ## Controlling the appearance of control labels
 
-[SINCE Orbeon Forms 2016.2]
- 
-By default, with Form Runner, control labels appear *inline* above the control. The following property allows overriding this behavior:
- 
+\[SINCE Orbeon Forms 2016.2]
+
+By default, with Form Runner, control labels appear _inline_ above the control. The following property allows overriding this behavior:
+
 ```xml
 <property
     as="xs:string"
@@ -215,21 +214,21 @@ By default, with Form Runner, control labels appear *inline* above the control. 
 
 Allowed values:
 
-- `full`: labels show inline above the control (the default)
-- `full minimal`: labels show inline above the control, but for text, date, and time input fields only, labels show as an HTML *placeholder* within the field when the field is empty
+* `full`: labels show inline above the control (the default)
+* `full minimal`: labels show inline above the control, but for text, date, and time input fields only, labels show as an HTML _placeholder_ within the field when the field is empty
 
-*LIMITATION: The `minimal` appearance is not supported on combined "Date and Time" fields and on text fields with "Character Counter" appearance.* 
+_LIMITATION: The `minimal` appearance is not supported on combined "Date and Time" fields and on text fields with "Character Counter" appearance._
 
-*NOTE: Only one `minimal` appearance can be used between `oxf.xforms.label.appearance` and `oxf.xforms.hint.appearance`. If both include `minimal`, the label wins.*
+_NOTE: Only one `minimal` appearance can be used between `oxf.xforms.label.appearance` and `oxf.xforms.hint.appearance`. If both include `minimal`, the label wins._
 
 For more about placeholders, see [Use HTML5 placeholders, in XForms](https://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html).
 
 ## Controlling the appearance of control hints
 
-[SINCE Orbeon Forms 2016.2]
- 
-By default, with Form Runner, control hints appear *inline* under the control. The following property allows overriding this behavior:
- 
+\[SINCE Orbeon Forms 2016.2]
+
+By default, with Form Runner, control hints appear _inline_ under the control. The following property allows overriding this behavior:
+
 ```xml
 <property
     as="xs:string"
@@ -239,24 +238,24 @@ By default, with Form Runner, control hints appear *inline* under the control. T
 
 Allowed values:
 
-- `full`: hints show inline below the control (the default)
-- `full minimal`: hints show inline below the control, but for text, date, and time input fields only, hints show as an HTML *placeholder* within the field when the field is empty
-- `tooltip`: hints show as tooltips upon mouseover
-- `tooltip minimal`: hints show as tooltips upon mouseover, but for input fields only, hints show as an HTML *placeholder* within the field when the field is empty
+* `full`: hints show inline below the control (the default)
+* `full minimal`: hints show inline below the control, but for text, date, and time input fields only, hints show as an HTML _placeholder_ within the field when the field is empty
+* `tooltip`: hints show as tooltips upon mouseover
+* `tooltip minimal`: hints show as tooltips upon mouseover, but for input fields only, hints show as an HTML _placeholder_ within the field when the field is empty
 
 Here is how hints appear depending on the type of control they are associated with:
 
-![](../../form-runner/images/placeholder-and-inline-hints.png)
+![](../../.gitbook/assets/placeholder-and-inline-hints.png)
 
-*LIMITATION: The `minimal` appearance is not supported on combined "Date and Time" fields and on text fields with "Character Counter" appearance.* 
+_LIMITATION: The `minimal` appearance is not supported on combined "Date and Time" fields and on text fields with "Character Counter" appearance._
 
-*NOTE: Only one `minimal` appearance can be used between `oxf.xforms.label.appearance` and `oxf.xforms.hint.appearance`. If both include `minimal`, the label wins.*
+_NOTE: Only one `minimal` appearance can be used between `oxf.xforms.label.appearance` and `oxf.xforms.hint.appearance`. If both include `minimal`, the label wins._
 
 For more about placeholders, see [Use HTML5 placeholders, in XForms](https://blog.orbeon.com/2012/01/use-html5-placeholders-in-xforms.html).
 
 ## Display hints inline
 
-[DEPRECATED SINCE Orbeon Forms 2016.2]
+\[DEPRECATED SINCE Orbeon Forms 2016.2]
 
 This property set whether the control hints are shown inline, rather than as tool-tips. The default is `true`.
 
@@ -269,16 +268,16 @@ This property set whether the control hints are shown inline, rather than as too
 
 Since Orbeon Forms 2016.2, this property is deprecated. Use `oxf.fr.detail.hint.appearance` instead. For backward compatibility, when this property is present, it overrides `oxf.xforms.hint.appearance` and sets it to:
 
-- `full` if set to `true`
-- `tooltip` if set to `false`
+* `full` if set to `true`
+* `tooltip` if set to `false`
 
 ## Order of LHHA elements
 
-[SINCE Orbeon Forms 2016.2]
+\[SINCE Orbeon Forms 2016.2]
 
 This property sets the respective order, in the generated HTML markup, of label/help/hint/alert and the control element.
 
-*NOTE: It is not recommended to change the default value of this property, which was introduced in the days where CSS couldn't do all it can do now. We recommend styling using CSS instead.*
+_NOTE: It is not recommended to change the default value of this property, which was introduced in the days where CSS couldn't do all it can do now. We recommend styling using CSS instead._
 
 ```xml
 <property 
@@ -289,7 +288,7 @@ This property sets the respective order, in the generated HTML markup, of label/
 
 ## Initial keyboard focus
 
-[SINCE Orbeon Forms 4.9]
+\[SINCE Orbeon Forms 4.9]
 
 This property controls whether Form Runner attempts to set focus on the first control upon form load. The default is `true`.
 
@@ -304,15 +303,15 @@ In some cases, such as [embedding](../../form-runner/link-embed/java-api.md), it
 
 ## Focusable controls
 
-[SINCE Orbeon Forms 2016.3]
+\[SINCE Orbeon Forms 2016.3]
 
 The following properties determine which control types are focusable in in the following scenarios:
 
-- initial focus (if enabled by  `oxf.fr.detail.initial-focus`)
-- switching sections in the table of contents
-- switching sections in the wizard table of contents or navigation
-- clearing the form data with the "Clear" button
-- moving, inserting, or deleting repetitions in repeated grids and sections
+* initial focus (if enabled by `oxf.fr.detail.initial-focus`)
+* switching sections in the table of contents
+* switching sections in the wizard table of contents or navigation
+* clearing the form data with the "Clear" button
+* moving, inserting, or deleting repetitions in repeated grids and sections
 
 ```xml
 <property
@@ -327,12 +326,12 @@ The following properties determine which control types are focusable in in the f
 ```
 
 Until Orbeon Forms 2016.2, only Text Fields (`<xf:input>`) were focusable in these cases. Since Orbeon Forms 2016.3, the default is to allow focus on any input control, including text fields, text areas, dropdown menus, and more. However, buttons are explicitly excluded.
-  
+
 The values of these properties follow the [`include` and `exclude` attributes](../../xforms/focus.md#includes-and-excludes) on the `<xf:setfocus>` action.
 
 ## Validation of static lists of choices
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+[\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
 
 This property allows you to automatically add a validation error when a static list of choices contains invalid values. The default is `false`.
 
@@ -345,8 +344,8 @@ This property allows you to automatically add a validation error when a static l
 
 This can be useful in the following cases:
 
-- to catch errors where selection control values are set using calculations
-- to validate work in progress data added with the [Persistence API](/form-runner/api/persistence/crud.md)
+* to catch errors where selection control values are set using calculations
+* to validate work in progress data added with the [Persistence API](../../form-runner/api/persistence/crud.md)
 
 This property might be enabled by default in the future.
 
@@ -354,7 +353,7 @@ This is also automatically enabled when importing form data through the Import p
 
 ## Validation mode
 
-[SINCE Orbeon Forms 2016.3]
+\[SINCE Orbeon Forms 2016.3]
 
 The following property controls whether validation happens as the user types or explicitly when activating a button:
 
@@ -367,23 +366,23 @@ The following property controls whether validation happens as the user types or 
 
 Values:
 
-- `incremental`: validate as the user types (default)
-- `explicit`: validate upon explicit activation of a button
+* `incremental`: validate as the user types (default)
+* `explicit`: validate upon explicit activation of a button
 
 The main purpose of the `explicit` mode is to mimic old-style forms, where validation traditionally happened upon pressing a "Submit" button.
 
 By default, in `explicit` mode, validation occurs:
 
-- when the `validate` Form Runner action runs
-- with the Wizard view, in validated mode, when the user attempts to navigate to the next page or select a page in the wizard's table of contents  
+* when the `validate` Form Runner action runs
+* with the Wizard view, in validated mode, when the user attempts to navigate to the next page or select a page in the wizard's table of contents
 
 ## Captcha
 
-See [Captcha components](/form-runner/component/captcha.md).
+See [Captcha components](../../form-runner/component/captcha.md).
 
 ## Running processes upon page load
 
-[SINCE Orbeon Forms 2017.2]
+\[SINCE Orbeon Forms 2017.2]
 
 Running processes in the background is an Orbeon Forms PE feature.
 
@@ -402,47 +401,45 @@ where `$app` and `$form` represent a Form Runner application name and/or form na
 
 The following process names apply:
 
-- `after-controls`: run after the controls are ready:
-    - The process runs when controls are "live", which means you can set their values and list of choices.
-- `after-data`: run when the data is ready:
-    - It has been loaded from the database if needed ("edit" mode).
-    - Its initial values and calculations are up to date.
-- `before-data`: run before the data's initial values are calculated:
-    - The process runs before the data is ready.
-    - You cannot set control values and list of choices as a result.
+* `after-controls`: run after the controls are ready:
+  * The process runs when controls are "live", which means you can set their values and list of choices.
+* `after-data`: run when the data is ready:
+  * It has been loaded from the database if needed ("edit" mode).
+  * Its initial values and calculations are up to date.
+* `before-data`: run before the data's initial values are calculated:
+  * The process runs before the data is ready.
+  * You cannot set control values and list of choices as a result.
 
-*WARNING: When running the process upon `after-data`, controls are not yet initialized. Because data validation depends
-on controls being present, data validation does not function in this case. If you need to validate data, for example
-before saving it or sending it, you must use the `after-controls` process name.*
+_WARNING: When running the process upon `after-data`, controls are not yet initialized. Because data validation depends on controls being present, data validation does not function in this case. If you need to validate data, for example before saving it or sending it, you must use the `after-controls` process name._
 
 Background options:
 
-- `background`: run only in the background, that is within a service such as the ["run form in the background"](../../form-runner/api/other/run-form-background.md) service
-- `foreground`: run only in the foreground, that is when the user is interacting with the page
-- `*`: run in both cases
+* `background`: run only in the background, that is within a service such as the ["run form in the background"](../../form-runner/api/other/run-form-background.md) service
+* `foreground`: run only in the foreground, that is when the user is interacting with the page
+* `*`: run in both cases
 
 Mode options:
 
-- `new`: run in "new" mode only
-- `edit`: run in "edit" mode only
-- etc.
-- `*`: run in all modes
+* `new`: run in "new" mode only
+* `edit`: run in "edit" mode only
+* etc.
+* `*`: run in all modes
 
-*NOTE: When running in the background, only the `new` and `edit` modes are supported.*
+_NOTE: When running in the background, only the `new` and `edit` modes are supported._
 
 See also [Run form in the background](../../form-runner/api/other/run-form-background.md).
 
 ## Warning the user when data is unsafe
 
-[SINCE Orbeon Forms 2018.2]
+\[SINCE Orbeon Forms 2018.2]
 
-When data is *unsafe*, meaning that is has been modified but not saved yet, Form Runner by default shows a warning when attempting to navigate away from the current page or to close the current browser tab or window.
+When data is _unsafe_, meaning that is has been modified but not saved yet, Form Runner by default shows a warning when attempting to navigate away from the current page or to close the current browser tab or window.
 
-<img alt="Chrome warning when leaving a page" src="../images/chrome-leave-site.png" width="490">
+![Chrome warning when leaving a page](../../.gitbook/assets/chrome-leave-site.png)
 
-In some cases, in particular when [embedding a form](/form-runner/link-embed/java-api.md), this can be an inconvenience. The following property allows disabling this behavior.
+In some cases, in particular when [embedding a form](../../form-runner/link-embed/java-api.md), this can be an inconvenience. The following property allows disabling this behavior.
 
-[SINCE Orbeon Forms 2021.1] In addition to `true` or `false`, since the value of the property is an [AVT](/xforms/core/attribute-value-templates.md), you can also, when needed, dynamically disable the warning by providing an expression between curly braces. For instance the following would only warn users if the content of the field named `description` has more than 50 characters and if users have made changes to the form since it was loaded:
+\[SINCE Orbeon Forms 2021.1] In addition to `true` or `false`, since the value of the property is an [AVT](../../xforms/core/attribute-value-templates.md), you can also, when needed, dynamically disable the warning by providing an expression between curly braces. For instance the following would only warn users if the content of the field named `description` has more than 50 characters and if users have made changes to the form since it was loaded:
 
 ```xml
 <property 
@@ -451,7 +448,7 @@ In some cases, in particular when [embedding a form](/form-runner/link-embed/jav
     value="{string-length(fr:control-string-value('description')) > 50}"/>
 ```
 
-[UNTIL Orbeon Forms 2020.1] The type of the property must be `xs:boolean`, and, consequently, the value must be either `true` or `false`.
+\[UNTIL Orbeon Forms 2020.1] The type of the property must be `xs:boolean`, and, consequently, the value must be either `true` or `false`.
 
 ```xml
 <property 
@@ -460,11 +457,11 @@ In some cases, in particular when [embedding a form](/form-runner/link-embed/jav
     value="false"/>
 ```
 
-See also [the `set-data-status` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status).
+See also [the `set-data-status` action](../../form-runner/advanced/buttons-and-processes/actions-form-runner.md#set-data-status).
 
 ## Warning the user when data has changed since initially loaded
 
-[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+[\[SINCE Orbeon Forms 2025.1\]](../../release-notes/orbeon-forms-2025.1.md)
 
 When multiple users edit the same form instance simultaneously, or when a single user edits the same form from different browser tabs or sessions, data conflicts can occur. By default, Orbeon Forms will overwrite previously saved data without warning, which can result in lost changes.
 
@@ -481,13 +478,10 @@ When the conflict detection feature is enabled, saving the data will trigger a c
 
 If no conflicts are detected, saving proceeds as usual. If a conflict is detected, users are presented with a dialog offering two options:
 
-- Save and overwrite: Proceeds with saving the current user's changes, overwriting any changes made by other sessions or tabs
-- Discard and reload: Discards the current user's unsaved changes and reloads the form with the latest data from the database
+* Save and overwrite: Proceeds with saving the current user's changes, overwriting any changes made by other sessions or tabs
+* Discard and reload: Discards the current user's unsaved changes and reloads the form with the latest data from the database
 
-<figure>
-    <img src="../images/conflict-detected.png" width="510">
-    <figcaption>Conflict detected</figcaption>
-</figure>
+<figure><img src="../../.gitbook/assets/conflict-detected.png" alt="" width="510"><figcaption><p>Conflict detected</p></figcaption></figure>
 
 ### Limitations
 
@@ -513,12 +507,12 @@ You configure which buttons are shown on the view page with the following proper
 You can use all the buttons available on the Detail Page. In addition, the following buttons apply:
 
 * `workflow-edit`
-    * Label: "Edit"
-    * Action: Navigate back to the Detail Page in "edit" mode.
+  * Label: "Edit"
+  * Action: Navigate back to the Detail Page in "edit" mode.
 
 ### Showing alerts in view and PDF modes
 
-[SINCE Orbeon Forms 2019.1]
+\[SINCE Orbeon Forms 2019.1]
 
 The following property allows you to show alerts in the `view` and `pdf` modes. By default, the value is `false` and the alerts do not show.
 
@@ -533,9 +527,9 @@ _NOTE: Alerts show under the fields as usual. Setting this property to `true` do
 
 ### Showing hints in view and PDF modes
 
-[SINCE Orbeon Forms 2017.1]
+\[SINCE Orbeon Forms 2017.1]
 
-The following property allows you to show hints in the `view` and `pdf` modes. By default, the value is `false` and the hints do not show. 
+The following property allows you to show hints in the `view` and `pdf` modes. By default, the value is `false` and the hints do not show.
 
 ```xml
 <property 
@@ -546,7 +540,7 @@ The following property allows you to show hints in the `view` and `pdf` modes. B
 
 ### Calculations in readonly modes
 
-[SINCE Orbeon Forms 2021.1]
+\[SINCE Orbeon Forms 2021.1]
 
 The following property allows disabling Calculated Value formulas in readonly modes (Review, PDF). By default, the value is `false` and the calculations take place.
 
@@ -557,11 +551,11 @@ The following property allows disabling Calculated Value formulas in readonly mo
     value="true"/>
 ```
 
-See also [Form Settings](/form-builder/form-settings.md#formulas).
+See also [Form Settings](../../form-builder/form-settings.md#formulas).
 
 ### Grid tab order
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
+[\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
 
 You can configure the tab order in grids with the following property:
 
@@ -574,7 +568,7 @@ You can configure the tab order in grids with the following property:
 
 Valid values are `rows` and `columns`.
 
-See also [Grid Tab Order](/form-builder/grid-settings.md#grid-tab-order) in the Grid Settings dialog.
+See also [Grid Tab Order](../../form-builder/grid-settings.md#grid-tab-order) in the Grid Settings dialog.
 
 ## PDF mode
 
@@ -582,4 +576,4 @@ See [PDF configuration properties](form-runner-pdf.md).
 
 ## See also
 
-- [Summary Page configuration properties](form-runner-summary-page.md)
+* [Summary Page configuration properties](form-runner-summary-page.md)

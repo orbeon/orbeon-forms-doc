@@ -1,14 +1,12 @@
-# Adding an Atom feed
-
-
+# Adding a feed
 
 ## What is it?
 
-Remember, the name of this application is Book_cast_, which lets suggest that we can expose the list of books as a feed of some sort. Here, you will use the [Atom Syndication Format][28] (or Atom in short). Atom is a format very much like RSS but it has been standardized by IETF and is much cleaner than RSS (note that there are at least 6 different versions of RSS). Atom is now supported by most feed readers.
+Remember, the name of this application is Boo&#x6B;_&#x63;ast_, which lets suggest that we can expose the list of books as a feed of some sort. Here, you will use the \[Atom Syndication Format]\[28] (or Atom in short). Atom is a format very much like RSS but it has been standardized by IETF and is much cleaner than RSS (note that there are at least 6 different versions of RSS). Atom is now supported by most feed readers.
 
 An atom feed looks like this (example from the Atom specification):
 
-```xml
+```markup
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title>Example Feed</title>
@@ -34,7 +32,7 @@ It would be nice if you could use XForms to produce such a format, and in fact i
 
 But first, it's time to introduce the Model-View-Controller (MVC) support in the page flow. Consider the following page flow declaration:
 
-```xml
+```markup
 <page path="/my-bookcast/atom" model="atom.xpl" view="atom.xsl">
 ```
 
@@ -52,7 +50,7 @@ This separation means that you can change how the data is retrieved without chan
 
 Consider the page model:
 
-```xml
+```markup
 <p:config
     xmlns:p="http://www.orbeon.com/oxf/pipeline"
     xmlns:oxf="http://www.orbeon.com/oxf/processors">
@@ -75,13 +73,13 @@ Consider the page model:
 </p:config>
 ```
 
-This document contains an XML pipeline described in a language called XPL (XML Pipeline Language). An XML pipeline language is simply a language for describing operations to be performed on XML documents. Orbeon Forms comes with an implementation of [XPL][23]. (Orbeon is currently working at W3C on the standardization of a pipeline language called [XProc][24].)
+This document contains an XML pipeline described in a language called XPL (XML Pipeline Language). An XML pipeline language is simply a language for describing operations to be performed on XML documents. Orbeon Forms comes with an implementation of [XPL](http://www.w3.org/Submission/xpl/). (Orbeon is currently working at W3C on the standardization of a pipeline language called [XProc](http://www.w3.org/TR/xproc/).)
 
 So what does this pipeline do? It runs a _processor_ called `oxf:xforms-submission`, which is a handy component that allows you to perform XForms submissions from XPL. That submission retrieves `books.xml` and returns it on the processor's `response` output. That output in turn is sent to the `data` output of the page model pipeline.
 
 Now look at the page view:
 
-```xml
+```markup
 <feed
     xmlns="http://www.w3.org/2005/Atom"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -148,7 +146,7 @@ Now look at the page view:
 
 This page view is an XSLT document (notice the `xsl:version="2.0"` attribute on the root element). It automatically receives on its main input the document produced by the page model. So if you were to write:
 
-```xml
+```markup
 <xsl:value-of select="/books/book[1]/title">
 ```
 
@@ -163,17 +161,17 @@ Now this XSLT document does not use many XSLT constructs:
 
 And that's it! You can now add the entry in `page-flow.xml`, add the two files `atom.xpl` and `atom.xsl`, and point your browser to:
 
-```xml
+```markup
 http://localhost:8080/orbeon/my-bookcast/atom
 ```
 
 You should see something similar to this, depending on your browser:
 
-![][25]
+![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/19.png)
 
 To make things even better, add the following to `view.xhtml` under the `<head>` element:
 
-```xml
+```markup
 <link
     rel="alternate"
     type="application/atom+xml"
@@ -185,7 +183,7 @@ With this addition, most modern browsers will display a feed icon or an RSS icon
 
 You can now try to load the feed into your favorite feed reader! Here is how the Bookcast feed looks in the Mozilla Thunderbird feed reader:
 
-![][26]
+![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/20.png)
 
 ## What's next
 
@@ -196,12 +194,6 @@ So far you have seen:
 * How to build your own application that allows editing and persisting a form.
 * How to create an Atom feed from form data.
 
-You have now covered a good part of the basics of Orbeon Forms. You can now look at the [Orbeon Forms example applications][27] and the [rest of the Orbeon Forms documentation](https://doc.orbeon.com/)!
+You have now covered a good part of the basics of Orbeon Forms. You can now look at the [Orbeon Forms example applications](http://demo.orbeon.com/orbeon/home/) and the [rest of the Orbeon Forms documentation](https://doc.orbeon.com/)!
 
-
-[23]: http://www.w3.org/Submission/xpl/
-[24]: http://www.w3.org/TR/xproc/
-[25]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/19.png
-[26]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/20.png
-[27]: http://demo.orbeon.com/orbeon/home/
-[28]: https://www.ietf.org/rfc/rfc4287.txt
+\[28]: [https://www.ietf.org/rfc/rfc4287.txt](https://www.ietf.org/rfc/rfc4287.txt)

@@ -1,6 +1,4 @@
-# PDF to Image Converter
-
-
+# PDF to image converter
 
 ## Availability
 
@@ -10,14 +8,13 @@ Orbeon Forms 2016.1 and newer.
 
 This processor converts a PDF document into a single image document.
 
-When the output format is TIFF, the processor creates a multi-page TIFF containing one page for each page in the PDF
-document. For other output formats, only the first page of the PDF document is used and a single image is created.
+When the output format is TIFF, the processor creates a multi-page TIFF containing one page for each page in the PDF document. For other output formats, only the first page of the PDF document is used and a single image is created.
 
 When using the TIFF format, if the destination format is bitonal (black and white), dithering is applied.
 
 ## Basic usage example
 
-```xml
+```markup
 <p:processor name="oxf:pdf-to-image">
     <p:input name="data" href="#pdf-data"/>
     <p:input name="config">
@@ -32,41 +29,39 @@ When using the TIFF format, if the destination format is bitonal (black and whit
     </p:input>
     <p:output name="data" id="image-data"/>
 </p:processor>
-
 ```
 
 ## Inputs and outputs
 
-- `data` input: receives the PDF document to convert as a binary document.
-- `config` input: receives the configuration of the transformation.
-- `data` output: produces the resulting image as a binary document.
+* `data` input: receives the PDF document to convert as a binary document.
+* `config` input: receives the configuration of the transformation.
+* `data` output: produces the resulting image as a binary document.
 
 The `config` input supports the following elements:
 
-- `format`:
-    - one of `gif`, `png`, `jpeg`, or `tiff`
-    - mandatory
-- `scale`:
-    - scaling factor
-    - optional
-    - defaults to `1.0`
-- `compression`
-    - compression settings
-    - optional
-    - `type` child element
-        - only meaningful for `tiff` format
-        - one of `CCITT RLE`, `CCITT T.4`, `CCITT T.6`, `LZW`, `JPEG`, `ZLib`, `PackBits`, `Deflate`, `EXIF JPEG` or `none`
-        - defaults to `none`
-    - `quality` child element
-        - only meaningful for `gif`, `jpeg` and `tiff` formats
-        - value is a double-precision number from `0.0` to `1.0`
+* `format`:
+  * one of `gif`, `png`, `jpeg`, or `tiff`
+  * mandatory
+* `scale`:
+  * scaling factor
+  * optional
+  * defaults to `1.0`
+* `compression`
+  * compression settings
+  * optional
+  * `type` child element
+    * only meaningful for `tiff` format
+    * one of `CCITT RLE`, `CCITT T.4`, `CCITT T.6`, `LZW`, `JPEG`, `ZLib`, `PackBits`, `Deflate`, `EXIF JPEG` or `none`
+    * defaults to `none`
+  * `quality` child element
+    * only meaningful for `gif`, `jpeg` and `tiff` formats
+    * value is a double-precision number from `0.0` to `1.0`
 
 ### Examples of configurations
 
-
 GIF output:
 
-```xml
+```markup
 <config>
     <format>gif</format>
     <scale>3.0</scale>
@@ -78,7 +73,7 @@ GIF output:
 
 JPEG output:
 
-```xml
+```markup
 <config>
     <format>jpeg</format>
     <scale>3.0</scale>
@@ -90,7 +85,7 @@ JPEG output:
 
 PNG output:
 
-```xml
+```markup
 <config>
     <format>png</format>
     <scale>3.0</scale>
@@ -99,7 +94,7 @@ PNG output:
 
 Black and white TIFF output with "CCITT T.6" compression:
 
-```xml
+```markup
 <config>
     <scale>3.0</scale>
     <format>tiff</format>
@@ -112,7 +107,7 @@ Black and white TIFF output with "CCITT T.6" compression:
 
 Uncompressed TIFF output:
 
-```xml
+```markup
 <config>
     <scale>3.0</scale>
     <format>tiff</format>
@@ -124,7 +119,7 @@ Uncompressed TIFF output:
 
 Compressed TIFF output with LZW compression:
 
-```xml
+```markup
 <config>
     <scale>3.0</scale>
     <format>tiff</format>

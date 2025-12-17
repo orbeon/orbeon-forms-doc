@@ -1,10 +1,8 @@
 # Model functions
 
-
-
 ## xxf:bind()
 
-```xpath
+```
 xxf:bind(
     $bind-id as xs:string
 ) as node()*
@@ -12,7 +10,7 @@ xxf:bind(
 
 Or, with its XForms 2.0 definition:
 
-```xpath
+```
 bind(
     $bind-id as xs:string
 ) as node()*
@@ -20,7 +18,7 @@ bind(
 
 The `bind()` function returns the node-set of a given bind:
 
-```xml
+```markup
 <!-- The following... -->
 <xf:input bind="my-bind">
 ...
@@ -33,7 +31,7 @@ The `bind()` function returns the node-set of a given bind:
 
 `xxf:bind()` is particularly useful when referring to a bind is subject to a condition:
 
-```xml
+```markup
 <xf:hint
     ref="
         for $bind in bind('my-hint') return
@@ -46,7 +44,7 @@ The `bind()` function returns the node-set of a given bind:
 
 ## xxf:custom-mip
 
-```xpath
+```
 xxf:custom-mip(
     $item as item()*,
     $mip-name as xs:string
@@ -59,7 +57,7 @@ The name of the property must match the qualified name used on the `xf:bind` tha
 
 ## xxf:evaluate-bind-property()
 
-```xpath
+```
 xxf:evaluate-bind-property(
     $bind-id        as xs:string,
     $property-qname as xs:string
@@ -69,19 +67,19 @@ xxf:evaluate-bind-property(
 The `xxf:evaluate-bind-property()` function evaluates a property of a given bind. Depending on the property, it returns:
 
 * `xs:string`
-    * `calculate`
-    * `xxf:default`
-    * custom MIPs
+  * `calculate`
+  * `xxf:default`
+  * custom MIPs
 * `xs:boolean`
-    * `relevant`
-    * `readonly`
-    * `required`
-    * `constraint`
+  * `relevant`
+  * `readonly`
+  * `required`
+  * `constraint`
 * `xs:QName`
 
 If the property is not present on the bind, an empty sequence is returned.
 
-```xml
+```markup
 <xf:bind
     id="my-bind"
     ref="foo"
@@ -98,7 +96,7 @@ _NOTE: The property is instantly evaluated, which means that it might be differe
 
 ## xxf:instance()
 
-```xpath
+```
 xxf:instance(
     $instance-id as xs:string
 ) as element()?
@@ -116,7 +114,7 @@ The search works as follows:
 
 For example, if there are no XBL components, and 2 top-level models:
 
-```xml
+```markup
 <xf:model id="main-model">
   <xf:instance id="main-instance">
     ...
@@ -133,11 +131,11 @@ For example, if there are no XBL components, and 2 top-level models:
 </xf:group>
 ```
 
-[SINCE Orbeon Forms 4.5] The `xxf:instance()` function can also take an absolute id as parameter.
+\[SINCE Orbeon Forms 4.5] The `xxf:instance()` function can also take an absolute id as parameter.
 
 ## xxf:invalid-binds()
 
-```xpath
+```
 xxf:invalid-binds(
     $node as node()?
 ) as xs:string*
@@ -147,7 +145,7 @@ The `xxf:invalid-binds()` function returns a sequence of strings. If the node wa
 
 This function is useful to help determine the reason why a node is invalid:
 
-```xml
+```markup
 <xf:bind ref="age" constraint=". ge 21" id="age-limit"/>
 ...
 <xf:action if="xxf:invalid-binds(event('xxf:binding')) = 'age-limit'">
@@ -157,7 +155,7 @@ This function is useful to help determine the reason why a node is invalid:
 
 You can also use this function to show bind-specific errors:
 
-```xml
+```markup
 <xf:alert value="if (xxf:invalid-binds(.)="age-limit" )="" then="" ...="" else="" ..."="">
 ```
 
@@ -165,7 +163,7 @@ Note however that the function actually only returns the first invalid bind at t
 
 ## xxf:type()
 
-```xpath
+```
 xxf:type(
     $node as node()?
 ) as xs:QName?
@@ -173,7 +171,7 @@ xxf:type(
 
 The `xxf:type()` function returns the type of the instance data node passed as parameter. If an empty sequence is passed, the function returns an empty sequence. Otherwise, the type of the instance data node is searched. If no type information is available, the function returns an empty sequence. Otherwise, a QName associated with the type is returned.
 
-```xml
+```markup
 <xf:output
     value="
         for $t in xxf:type(date) return
@@ -189,7 +187,7 @@ The `xxf:type()` function returns the type of the instance data node passed as p
 
 ## xxf:valid()
 
-```xpath
+```
 xxf:valid() as xs:boolean
 xxf:valid($item as xs:item*) as xs:boolean
 xxf:valid($item as xs:item*, $recurse as xs:boolean) as xs:boolean

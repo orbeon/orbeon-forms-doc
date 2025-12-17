@@ -8,29 +8,27 @@ Since Orbeon Forms 2016.1.
 
 Form Builder exposes the following developer extension API:
 
-- API to add a custom Form Settings tab
-- API to add a custom Control Settings tab
+* API to add a custom Form Settings tab
+* API to add a custom Control Settings tab
 
 Each extension is implemented with an XBL component. The component interacts with the enclosing dialog via events.
 
 ## Setting up an XBL component
 
-First, make sure you have chosen a prefix-to-namespace mapping for your components, as explained in
-[Automatic inclusion of XBL bindings](../xforms/xbl/bindings.md).
+First, make sure you have chosen a prefix-to-namespace mapping for your components, as explained in [Automatic inclusion of XBL bindings](../xforms/xbl/bindings.md).
 
 Below, we assume the following example mapping:
 
-```xml
+```markup
 <property
   as="xs:string"
   name="oxf.xforms.xbl.mapping.acme"
   value="http://www.acme.com/xbl"/>
 ```
 
-In practice, you would probably choose a prefix different from `acme`, and a namespace different from
-`http://www.acme.com/xbl`.
+In practice, you would probably choose a prefix different from `acme`, and a namespace different from `http://www.acme.com/xbl`.
 
-For more on XBL components, see [XBL documentation](../xforms/xbl/README.md).
+For more on XBL components, see [XBL documentation](../xforms/xbl/).
 
 ## Custom Form Settings tab
 
@@ -38,7 +36,7 @@ For more on XBL components, see [XBL documentation](../xforms/xbl/README.md).
 
 In order to add a custom Form Settings tab, the following property must be set to a non-blank value:
 
-```xml
+```markup
 <property
   as="xs:string"
   name="oxf.fb.extension.form-settings"
@@ -47,8 +45,8 @@ In order to add a custom Form Settings tab, the following property must be set t
 
 Here, the value `acme:form-settings` refers to the XBL component implementing the custom tab:
 
-- `acme` is the prefix you have mapped with the `oxf.xforms.xbl.mapping.acme` property above
-- `form-settings` is the name you give your XBL component (it doesn't have to be `form-settings`)
+* `acme` is the prefix you have mapped with the `oxf.xforms.xbl.mapping.acme` property above
+* `form-settings` is the name you give your XBL component (it doesn't have to be `form-settings`)
 
 ### The XBL component
 
@@ -60,7 +58,7 @@ WEB-INF/resources/xbl/acme/form-settings/form-settings.xbl
 
 Here is a template for the new XBL component:
 
-```xml
+```markup
 <xbl:xbl xmlns:xh="http://www.w3.org/1999/xhtml"
          xmlns:xf="http://www.w3.org/2002/xforms"
          xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -120,21 +118,20 @@ Here is a template for the new XBL component:
 
 Form Builder dispatches events to the component, following a predefined lifecycle:
 
-- `fb-initialize` is dispatched to initialize the tab when the dialog shows.
-- `fb-apply` is dispatched to save the settings, if any, to the form definition.
+* `fb-initialize` is dispatched to initialize the tab when the dialog shows.
+* `fb-apply` is dispatched to save the settings, if any, to the form definition.
 
-Handlers for these events can access the form definition and read from / write to it. Component authors have to be
-very careful not damaging the form definition in the process.
+Handlers for these events can access the form definition and read from / write to it. Component authors have to be very careful not damaging the form definition in the process.
 
 #### Event parameters
 
 `fb-initialize` and `fb-apply` both take the following parameters:
 
-Parameter Name|Type|Value
----|---|---
-`form` | `element(xh:html)` | root element of the form definition
-`form-instance` | `element(form)` | root element of the form definition's form instance
-`form-metadata` | `element(metadata)` | root element of the form definition's form metadata
+| Parameter Name  | Type                | Value                                               |
+| --------------- | ------------------- | --------------------------------------------------- |
+| `form`          | `element(xh:html)`  | root element of the form definition                 |
+| `form-instance` | `element(form)`     | root element of the form definition's form instance |
+| `form-metadata` | `element(metadata)` | root element of the form definition's form metadata |
 
 ## Custom Control Settings tab
 
@@ -142,8 +139,7 @@ Parameter Name|Type|Value
 
 In order to add a custom Control Settings tab, the following property must be set to a non-blank value:
 
-
-```xml
+```markup
 <property
   as="xs:string"
   name="oxf.fb.extension.control-settings"
@@ -152,8 +148,8 @@ In order to add a custom Control Settings tab, the following property must be se
 
 Here, the value `acme:control-settings` refers to the XBL component implementing the custom tab:
 
-- `acme` is the prefix you have mapped with the `oxf.xforms.xbl.mapping.acme` property above
-- `control-settings` is the name you give your XBL component (it doesn't have to be `control-settings`)
+* `acme` is the prefix you have mapped with the `oxf.xforms.xbl.mapping.acme` property above
+* `control-settings` is the name you give your XBL component (it doesn't have to be `control-settings`)
 
 ### The XBL component
 
@@ -163,7 +159,7 @@ You then create the file implementing the component under:
 WEB-INF/resources/xbl/acme/control-settings/control-settings.xbl
 ```
 
-For instance, see [`control-settings.xbl`](https://gist.github.com/orbeon/f327f6b1b336dc5f8be841c86fe08d81), an example of custom Control Settings that lets form authors enter, for each control, a "question identifier", which value is stored in an attribute of the form data, on the element corresponding that corresponds to the current control. 
+For instance, see [`control-settings.xbl`](https://gist.github.com/orbeon/f327f6b1b336dc5f8be841c86fe08d81), an example of custom Control Settings that lets form authors enter, for each control, a "question identifier", which value is stored in an attribute of the form data, on the element corresponding that corresponds to the current control.
 
 For an example template, see above for `acme:form-settings`.
 
@@ -173,35 +169,33 @@ For an example template, see above for `acme:form-settings`.
 
 Form Builder dispatches the following events to the component:
 
-- `fb-initialize` is dispatched to initialize the tab when the dialog shows.
-- `fb-apply` is dispatched to save the settings, if any, to the form definition.
+* `fb-initialize` is dispatched to initialize the tab when the dialog shows.
+* `fb-apply` is dispatched to save the settings, if any, to the form definition.
 
-Handlers for these events can access the form definition and read from / write to it. Component authors have to be
-very careful not damaging the form definition in the process.
+Handlers for these events can access the form definition and read from / write to it. Component authors have to be very careful not damaging the form definition in the process.
 
 #### Event parameters
 
 `fb-initialize` and `fb-apply` both take the following parameters:
 
-Parameter Name|Type|Value
----|---|---
-`form` | `element(xh:html)` | root element of the form definition
-`form-instance` | `element(form)` | root element of the form definition's form instance
-`form-metadata` | `element(metadata)` | root element of the form definition's form metadata
-`data-holders` | `element()*` | all data holders for the given control
+| Parameter Name  | Type                | Value                                               |
+| --------------- | ------------------- | --------------------------------------------------- |
+| `form`          | `element(xh:html)`  | root element of the form definition                 |
+| `form-instance` | `element(form)`     | root element of the form definition's form instance |
+| `form-metadata` | `element(metadata)` | root element of the form definition's form metadata |
+| `data-holders`  | `element()*`        | all data holders for the given control              |
 
 In addition, `fb-initialize` takes the following parameters:
 
-Parameter Name|Type|Value
----|---|---
-`original-control-id` | `xs:string` | original control id, such as `first-name-control`
-`original-control-name` | `xs:string` | original control name, such as `first-name`
+| Parameter Name          | Type        | Value                                             |
+| ----------------------- | ----------- | ------------------------------------------------- |
+| `original-control-id`   | `xs:string` | original control id, such as `first-name-control` |
+| `original-control-name` | `xs:string` | original control name, such as `first-name`       |
 
 In addition, `fb-apply` takes the following parameters:
 
-Parameter Name|Type|Value
----|---|---
-`control-name` | `xs:string` | new control name, such as `first-name`
+| Parameter Name | Type        | Value                                  |
+| -------------- | ----------- | -------------------------------------- |
+| `control-name` | `xs:string` | new control name, such as `first-name` |
 
-Between `fb-initialize` and `fb-apply`, the control name (and id) might have been changed in the dialog by the user.
-The `original-control-name` and `control-name` parameters reflect that change when needed.
+Between `fb-initialize` and `fb-apply`, the control name (and id) might have been changed in the dialog by the user. The `original-control-name` and `control-name` parameters reflect that change when needed.

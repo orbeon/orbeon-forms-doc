@@ -2,7 +2,7 @@
 
 ## Availability
 
-[SINCE Orbeon Forms 2017.1]
+\[SINCE Orbeon Forms 2017.1]
 
 _NOTE: As of Orbeon Forms 2018.2, this control is not present in the Form Builder toolbox because Form Builder lacks the ability to created hierarchical itemsets, making this control less useful in that context._
 
@@ -10,14 +10,14 @@ _NOTE: As of Orbeon Forms 2018.2, this control is not present in the Form Builde
 
 This control allows the user to select a single item from a hierarchical tree representation.
 
-<img alt="Appearance" src="images/xbl-tree-select1-collapsed-selected.png" width="212">
+![Appearance](../../.gitbook/assets/xbl-tree-select1-collapsed-selected.png)
 
 ## Basic usage
 
 You:
 
-- specify `appearance="tree"` on an `<xf:select1>` control
-- generally use an `<xf:itemset>` element to point to items which are organized in a hierarchy
+* specify `appearance="tree"` on an `<xf:select1>` control
+* generally use an `<xf:itemset>` element to point to items which are organized in a hierarchy
 
 ```xml
 <xf:select1 appearance="tree" ref="value">
@@ -72,13 +72,13 @@ The `tree-items` instance might look like:
 
 The user can expand or collapse tree nodes. This doesn't have an impact on the currently-selected value:
 
-<img alt="Expanded tree" src="images/xbl-tree-select1-expanded-selected.png" width="212">
+![Expanded tree](../../.gitbook/assets/xbl-tree-select1-expanded-selected.png)
 
 ## Readonly appearance
 
 If the control is readonly, it appears grayed out. It is not possible to select items in this case, but it is possible to open/close tree nodes:
 
-<img alt="Expanded tree in readonly mode" src="images/xbl-tree-select1-expanded-selected-readonly.png" width="201">
+![Expanded tree in readonly mode](../../.gitbook/assets/xbl-tree-select1-expanded-selected-readonly.png)
 
 ## Controlling which tree nodes are initially open
 
@@ -97,7 +97,7 @@ The `<xf:itemset>` element supports the `xxf:open` extension attribute, which de
 
 The result:
 
-<img alt="Tree with first level open only" src="images/xbl-tree-select1-initially-open.png" width="201">
+![Tree with first level open only](../../.gitbook/assets/xbl-tree-select1-initially-open.png)
 
 ## Adding class attributes
 
@@ -115,7 +115,6 @@ When used in Form Runner's readonly modes, the control doesn't show a tree but a
 
 You need the following configuration to use from a plain XForms (non-Form Runner) page, as the component's JavaScript is part of Form Runner:
 
-
 ```xml
 <xh:script type="text/javascript" src="/apps/fr/resources/scalajs/orbeon-form-runner.js"/>
 ```
@@ -124,7 +123,7 @@ And then, on your main XForms model, put the `xxf:assets.baseline.excludes` attr
 
 ```xml
 <xf:model xxf:assets.baseline.excludes="/ops/javascript/scalajs/orbeon-xforms.js">
-```  
+```
 
 ## Custom styling
 
@@ -133,7 +132,7 @@ Starting with Orbeon Forms 2017.1, the implementation of the `tree` appearance u
 _NOTE: This is subject to change in new versions of Orbeon Forms._
 
 However you can look at the markup produced by Fancytree with your browser's development tools and apply custom CSS to style the tree. All icons are set with CSS. Here is an example of the HTML layout:
- 
+
 ```html
  <ul class="ui-fancytree fancytree-container fancytree-plain" tabindex="0">
     <li class="">

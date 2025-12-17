@@ -1,16 +1,14 @@
 # Client-side error handling
 
-
-
 ## Disabling the standard error dialog
 
 By default, when an Ajax error happens, Orbeon Forms shows users an error dialog.
 
-![](error-dialog.png)
+![](../../.gitbook/assets/error-dialog.png)
 
 You can disable this behavior by adding this property to your `properties-local.xml`:
 
-```xml
+```markup
 <property
     as="xs:boolean"
     name="oxf.xforms.show-error-dialog"
@@ -21,11 +19,10 @@ You can disable this behavior by adding this property to your `properties-local.
 
 Orbeon Forms exposes a custom JavaScript event: `ORBEON.xforms.Events.errorEvent`.
 
-By default a dialog is shown to the user when an error is intercepted. If you prefer to show your own dialog or to
-implement some other behavior in case of error,  most likely you will want to:
+By default a dialog is shown to the user when an error is intercepted. If you prefer to show your own dialog or to implement some other behavior in case of error, most likely you will want to:
 
-- Disable the default error dialog by setting the [`oxf.xforms.show-error-dialog`](../../xforms/error-handling.md#error-dialog) property to `false`.
-- Register your own listener on `ORBEON.xforms.Events.errorEvent`.
+* Disable the default error dialog by setting the [`oxf.xforms.show-error-dialog`](../../xforms/error-handling.md#error-dialog) property to `false`.
+* Register your own listener on `ORBEON.xforms.Events.errorEvent`.
 
 You can register your own listener on that event, and when fired, send users to a page you choose, as done in the following snippet, which sends users to the Orbeon home page:
 
@@ -57,8 +54,8 @@ oxf:/config/error-dialog.xml
 
 This file is located inside the following jar file:
 
-- [SINCE Orbeon Forms 2016.3] `WEB-INF/lib/orbeon-core.jar`
-- [UP TO Orbeon Forms 2016.2] `WEB-INF/lib/orbeon-resources-private.jar`
+* \[SINCE Orbeon Forms 2016.3] `WEB-INF/lib/orbeon-core.jar`
+* \[UP TO Orbeon Forms 2016.2] `WEB-INF/lib/orbeon-resources-private.jar`
 
 You can override it in two ways:
 
@@ -67,13 +64,13 @@ You can override it in two ways:
 
 ### Localization
 
-[SINCE Orbeon Forms 2020.1] Should you need to provide multiple versions of the error dialog in different languages, you can do so by having multiple `<div class="xforms-error-panel">` each with its own `lang` attribute (see below for the full structure of the HTML you need to provide). Orbeon Forms will try to get the error panel with the `lang` attribute matching the current language, and if it can't find one it will pick the first error panel.
+\[SINCE Orbeon Forms 2020.1] Should you need to provide multiple versions of the error dialog in different languages, you can do so by having multiple `<div class="xforms-error-panel">` each with its own `lang` attribute (see below for the full structure of the HTML you need to provide). Orbeon Forms will try to get the error panel with the `lang` attribute matching the current language, and if it can't find one it will pick the first error panel.
 
 ### Example: default dialog
 
 The default dialog provides classes allowing for opening/closing a details section:
 
-```xml
+```markup
 <div xmlns="http://www.w3.org/1999/xhtml" class="xforms-error-dialogs">
     <div class="xforms-error-panel xforms-initially-hidden" role="dialog" aria-labelledby="error-dialog-title">
         <div class="hd" id="error-dialog-title">An error has occurred</div>
@@ -143,7 +140,7 @@ The default dialog provides classes allowing for opening/closing a details secti
 
 At a minimum, the file should contain the following structure:
 
-```xml
+```markup
 <div xmlns="http://www.w3.org/1999/xhtml"
      class="xforms-error-panel xforms-initially-hidden">
     <div class="hd">An error has occurred</div>
@@ -165,7 +162,6 @@ At a minimum, the file should contain the following structure:
     </div>
 </div>
 ```
-
 
 ### CSS configuration
 

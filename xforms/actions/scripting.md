@@ -1,6 +1,4 @@
-# Scripting Actions
-
-
+# Scripting actions
 
 ## Calling client-side JavaScript
 
@@ -10,7 +8,7 @@ Call client-side JavaScript as a result of XForms events:
 
 Starting Orbeon Forms 2016.1:
 
-```xml
+```markup
 <xf:action ev:event="xforms-value-changed" type="javascript">
     var v = 2;
     myValueChanged(v);
@@ -19,7 +17,7 @@ Starting Orbeon Forms 2016.1:
 
 Prior to Orbeon Forms 2016.1:
 
-```xml
+```markup
 <xxf:script ev:event="xforms-value-changed">
     var v = 2;
     myValueChanged(v);
@@ -28,7 +26,7 @@ Prior to Orbeon Forms 2016.1:
 
 or:
 
-```xml
+```markup
 <xxf:script ev:event="xforms-value-changed" type="javascript">
     var v = 2;
     myValueChanged(v);
@@ -39,17 +37,17 @@ The embedded JavaScript has access to the following JavaScript variables:
 
 * `this`: element observing the event causing `<xf:action>` to run
 * `event`:
-    * `event.target`: returns the element which is the target of the event causing `<xf:action>` to run
+  * `event.target`: returns the element which is the target of the event causing `<xf:action>` to run
 
 _NOTE: Because regular XForms actions run on the server and JavaScript actions run on the client, JavaScript actions are always executed last in a sequence of XForms actions, even if they appear before other XForms actions._
 
 ### Passing parameters
 
-[SINCE Orbeon Forms 2016.1]
+\[SINCE Orbeon Forms 2016.1]
 
 You can specify parameters to pass to the JavaScript, for example:
 
-```xml
+```markup
 <xf:action type="javascript">
     <xf:param
         name="newValue"
@@ -64,10 +62,10 @@ You can specify parameters to pass to the JavaScript, for example:
 
 Syntax:
 
-- nest as many `<xf:param>` elements as there are parameters to pass
-    - the `name` attribute specifies the name of the JavaScript parameter to pass
-    - the `value` attribute contains an XPath expression evaluating the value of the parameter
-- embed the JavaScript code within an `<xf:body>` element instead of directly under `<xf:action type="javascript">`
+* nest as many `<xf:param>` elements as there are parameters to pass
+  * the `name` attribute specifies the name of the JavaScript parameter to pass
+  * the `value` attribute contains an XPath expression evaluating the value of the parameter
+* embed the JavaScript code within an `<xf:body>` element instead of directly under `<xf:action type="javascript">`
 
 Parameters are scoped at the beginning of the embedded JavaScript and you just access them by name, like `newValue` in the above example.
 
@@ -75,11 +73,11 @@ For an example within Orbeon Forms, see [code-mirror.xbl](https://github.com/orb
 
 ### XBL handlers
 
-[SINCE Orbeon Forms 2016.1]
+\[SINCE Orbeon Forms 2016.1]
 
 The `<xbl:handler>` element works like an `<xf:action>` element and also supports the `type` attribute and nested `<xf:param>` and `<xf:body>` elements:
 
-```xml
+```markup
 <xbl:handler event="xforms-enabled xxforms-iteration-moved" type="javascript">
     <xf:param
         name="newValue"
@@ -98,7 +96,7 @@ Simple server-side scripts can be written in XPath. This is particularly useful 
 
 You specify an XPath script either with:
 
-```xml
+```markup
 <xf:action type="xpath">
    ...
 </xf:action>
@@ -106,7 +104,7 @@ You specify an XPath script either with:
 
 Or (deprecated since Orbeon Forms 2016.1):
 
-```xml
+```markup
 <xxf:script type="xpath">
    ...
 </xxf:script>
@@ -114,7 +112,7 @@ Or (deprecated since Orbeon Forms 2016.1):
 
 Example:
 
-```xml
+```markup
 <xf:action type="xpath">
     xxf:set-session-attribute('foo', $total),
     xxf:set-session-attribute('bar', instance()/bar)
@@ -132,17 +130,17 @@ Orbeon Forms first introduced JavaScript with the `<xxf:script>` action. This ac
 Here are the differences between the two:
 
 * `<xf:action type="...">`:
-    * this is a standard XForms action
-    * without a `type` attribute, the behavior is standard XForms and runs nested XForms actions
-    * with a `type` attribute, this is able to run nested client-side JavaScript or server-side XPath scripts
-    * Only available for JavaScript actions starting Orbeon Forms 2016.1.
+  * this is a standard XForms action
+  * without a `type` attribute, the behavior is standard XForms and runs nested XForms actions
+  * with a `type` attribute, this is able to run nested client-side JavaScript or server-side XPath scripts
+  * Only available for JavaScript actions starting Orbeon Forms 2016.1.
 * `<xxf:script>`:
-    * this is a custom Orbeon Forms action
-    * this never runs nested XForms actions
-    * without a `type` attribute, the default is to run client-side JavaScript
-    * with a `type` attribute, this can run nested client-side JavaScript or server-side XPath scripts
+  * this is a custom Orbeon Forms action
+  * this never runs nested XForms actions
+  * without a `type` attribute, the default is to run client-side JavaScript
+  * with a `type` attribute, this can run nested client-side JavaScript or server-side XPath scripts
 
 ## See also
 
-- [Adding your own JavaScript](../../configuration/properties/form-runner.md#adding-your-own-javascript)
-- [Form Runner JavaScript API](/form-runner/api/other/form-runner-javascript-api.md)
+* [Adding your own JavaScript](../../configuration/properties/form-runner.md#adding-your-own-javascript)
+* [Form Runner JavaScript API](../../form-runner/api/other/form-runner-javascript-api.md)

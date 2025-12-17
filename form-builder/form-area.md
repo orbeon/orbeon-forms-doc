@@ -2,53 +2,42 @@
 
 ## Introduction
 
-The Form Builder form area is meant to look as much as possible like the published form. 
+The Form Builder form area is meant to look as much as possible like the published form.
 
 Form Builder is built around as simple layout concept: _sections_ and _grids_. This is a good alternative to:
 
-- absolute positioning, which is rarely appropriate for web forms
-- complex dynamic layouts, which often confuse form authors
+* absolute positioning, which is rarely appropriate for web forms
+* complex dynamic layouts, which often confuse form authors
 
-Starting with Orbeon Forms 2017.2, Form Builder grids are more flexible then with earlier versions and follow a 12-column
-layout.
+Starting with Orbeon Forms 2017.2, Form Builder grids are more flexible then with earlier versions and follow a 12-column layout.
 
-![Form Builder and the main form area](images/form-area.png)
+![Form Builder and the main form area](../.gitbook/assets/form-area.png)
 
 ## Sections
 
 ### Introduction
 
-Form Builder represents every form as a series of _sections_. A section is a logical grouping of form controls which has a *title* and an optional *help*. For example, your form may have an "Address" section, and a "Personal Details" section.
+Form Builder represents every form as a series of _sections_. A section is a logical grouping of form controls which has a _title_ and an optional _help_. For example, your form may have an "Address" section, and a "Personal Details" section.
 
 Sections are by default presented in order, on top of each other in the page. But when using the [wizard view](../form-runner/feature/wizard-view.md), each top-level section, and optionally the next level of subsections, becomes a wizard page at runtime.
 
 In addition:
 
-- Every form has at least one section.
-- There is no maximum number of sections within a form.
-- Sections can have *subsections*, which are sections nested within other sections.
+* Every form has at least one section.
+* There is no maximum number of sections within a form.
+* Sections can have _subsections_, which are sections nested within other sections.
 
 ### Operations on sections
 
 You can perform the following operations on sections.
 
-- Set the section's localizable title by clicking on it. To select a different language, use the language
-  selector at the top right of the form area.
-- Delete the section by clicking on the trashcan icon. If the section contains controls, a confirmation dialog appears.
-- Set an optional help message for the section by clicking on the help icon. The help is localizable.
-- Set other [section settings](section-settings.md).
-- Open or collapse the section by clicking on the arrow to the left of the section title.
-- Move the section up or down by clicking on the up/down arrows. These appear as needed if there is more than one section.
-- Move the section left or right by clicking on the left/right arrows. These appear as needed if there is more than one section and if
-  it is possible to move a section *into* another section ("right"), or out of its container section ("left"). This allows making
-  sections *subsections* of other sections. 
-  
-<!--
-### Subsections
-
-TODO: screenshots, etc. (short screencast would be good!)
-
--->
+* Set the section's localizable title by clicking on it. To select a different language, use the language selector at the top right of the form area.
+* Delete the section by clicking on the trashcan icon. If the section contains controls, a confirmation dialog appears.
+* Set an optional help message for the section by clicking on the help icon. The help is localizable.
+* Set other [section settings](section-settings.md).
+* Open or collapse the section by clicking on the arrow to the left of the section title.
+* Move the section up or down by clicking on the up/down arrows. These appear as needed if there is more than one section.
+* Move the section left or right by clicking on the left/right arrows. These appear as needed if there is more than one section and if it is possible to move a section _into_ another section ("right"), or out of its container section ("left"). This allows making sections _subsections_ of other sections.
 
 ## Grids
 
@@ -58,10 +47,10 @@ A grid may be a regular grid or a [repeated grid](repeated-grids.md), which repe
 
 In addition:
 
-- A grid may have any number of rows (but at least one).
-- Each grid cell may contain a single form control, or remain empty.
-- A grid cell might span multiple rows.
-- Unlike a section, a grid does not have a title or properties, except for *repeated grids* which do have properties.
+* A grid may have any number of rows (but at least one).
+* Each grid cell may contain a single form control, or remain empty.
+* A grid cell might span multiple rows.
+* Unlike a section, a grid does not have a title or properties, except for _repeated grids_ which do have properties.
 
 When your mouse pointer hovers over a grid, the grid boundaries, cells and icons are highlighted.
 
@@ -69,135 +58,126 @@ When your mouse pointer hovers over a grid, the grid boundaries, cells and icons
 
 #### Introduction
 
-[SINCE Orbeon Forms 2017.2]
+\[SINCE Orbeon Forms 2017.2]
 
-A grid always has 12 columns when shown on a wide display. Note that on narrower displays, grids still collapse to a vertical
-layout (see [Responsive design](../form-runner/feature/responsive-design.md)).
+A grid always has 12 columns when shown on a wide display. Note that on narrower displays, grids still collapse to a vertical layout (see [Responsive design](../form-runner/feature/responsive-design.md)).
 
 See also [the blog post](https://blog.orbeon.com/2018/05/the-12-column-layout.html).
 
 #### Operations
- 
+
 You can perform the following operations on grids:
 
-- Add grid rows by clicking on the up and down arrows on the left of each row.
-- Delete a row by clicking on the "minus" icon on the left of a row.
-- Expand/shrink grid cells horizontally or vertically.
-- Using icons to the left of the grid
-    - Open the Grid Settings dialog (cogwheel icon)
-        - *NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids.*
-    - Delete the entire grid (minus icon)
-    - Moving a grid relative to its sibling grids (arrow icons)
-        - *NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids.* 
-    - Cut or copy the entire grid to the clipboard (scissors or copy icons)
-        - *NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids.*
-        
-![Grid icons](images/grid-icons.png)
+* Add grid rows by clicking on the up and down arrows on the left of each row.
+* Delete a row by clicking on the "minus" icon on the left of a row.
+* Expand/shrink grid cells horizontally or vertically.
+* Using icons to the left of the grid
+  * Open the Grid Settings dialog (cogwheel icon)
+    * _NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids._
+  * Delete the entire grid (minus icon)
+  * Moving a grid relative to its sibling grids (arrow icons)
+    * _NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids._
+  * Cut or copy the entire grid to the clipboard (scissors or copy icons)
+    * _NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids._
 
-Expanding/shrinking cells horizontally makes grid cells span *columns*. This allows grid cells to have a width of 1, 2,
-and up to 12 columns. 
+![Grid icons](../.gitbook/assets/grid-icons.png)
 
-![Grid cell widths at runtime](../form-runner/images/runtime-grid-cell-widths.png)
+Expanding/shrinking cells horizontally makes grid cells span _columns_. This allows grid cells to have a width of 1, 2, and up to 12 columns.
+
+![Grid cell widths at runtime](../.gitbook/assets/runtime-grid-cell-widths.png)
 
 With Orbeon Forms 2017.2, you use the arrow icons within the grid to expand into empty adjacent cells.
 
-![Expanding cell boundaries](images/grid-icons-cell-boundaries.png)
+![Expanding cell boundaries](../.gitbook/assets/grid-icons-cell-boundaries.png)
 
 With Orbeon Forms 2018.1 and newer, you drag the cell boundary to expand into empty adjacent cells. See also the [blog post](https://blog.orbeon.com/2018/10/resizing-cells-with-drag-drop-in-form.html).
 
-![Dragging cell boundaries horizontally](images/grid-dragging-cell-boundaries-horizontally.png)
+![Dragging cell boundaries horizontally](../.gitbook/assets/grid-dragging-cell-boundaries-horizontally.png)
 
-Expanding/shrinking cells vertically makes grid cells span *rows*. This allows making some cells taller when next to
-other cells, for example to allow for taller radio buttons lists.
+Expanding/shrinking cells vertically makes grid cells span _rows_. This allows making some cells taller when next to other cells, for example to allow for taller radio buttons lists.
 
-![Dragging cell boundaries vertically](images/grid-dragging-cell-boundaries-vertically.png)
+![Dragging cell boundaries vertically](../.gitbook/assets/grid-dragging-cell-boundaries-vertically.png)
 
 #### Undoing operations
 
-Destructive operations do not ask for confirmation but add the operation to the Undo stack, allowing you to
-undo the operation from the toolbox. See [Undo and redo](undo-redo.md).
+Destructive operations do not ask for confirmation but add the operation to the Undo stack, allowing you to undo the operation from the toolbox. See [Undo and redo](undo-redo.md).
 
 ### Until Orbeon Forms 2017.1
 
-A grid has between 1 and 4 columns, but it is possible to make Form Builder support more than 4 via a configuration
-property.
-  
+A grid has between 1 and 4 columns, but it is possible to make Form Builder support more than 4 via a configuration property.
+
 You can perform the following operations on grids:
 
-- Add grid columns by clicking on the left and right arrows at the top of each column.
-- Add grid rows by clicking on the up and down arrows on the left of each row.
-- Delete a column by clicking on the trashcan icon at the top of a column.
-- Delete a row by clicking on the trashcan icon on the left of a row.
-- Delete the entire grid by clicking on the trashcan icon on the top left corner of the grid.
-- Expand/shrink grid cells vertically only.  
+* Add grid columns by clicking on the left and right arrows at the top of each column.
+* Add grid rows by clicking on the up and down arrows on the left of each row.
+* Delete a column by clicking on the trashcan icon at the top of a column.
+* Delete a row by clicking on the trashcan icon on the left of a row.
+* Delete the entire grid by clicking on the trashcan icon on the top left corner of the grid.
+* Expand/shrink grid cells vertically only.
 
 For delete operations, a warning dialog shows if controls will be deleted as a result.
 
-<img alt="Column confirmation dialog" src="../form-runner/component/images/xbl-alert-dialog.png" width="504">
+![Column confirmation dialog](../.gitbook/assets/xbl-alert-dialog.png)
 
 ## Grid cells and controls
 
-Each grid cell can contain a single form control, or no control at all. Some controls, by default, take the entire width
-of the cell. This includes text fields and text areas. In such cases, to size the control, you can make the cell wider
-or narrower.
+Each grid cell can contain a single form control, or no control at all. Some controls, by default, take the entire width of the cell. This includes text fields and text areas. In such cases, to size the control, you can make the cell wider or narrower.
 
 If a control is present, the following actions related to the control are possible:
 
-- **Set control label:**
-    - Click on the label.
-    - A control's label appears on top of the control. It is intended to provide a descriptive label for  the form control.
-    - Examples: "First Name", "Street", "Phone Number".
-- **Set control hint:**
-    - Click on the hint.
-    - A control's hint usually appears under the control. It is intended to provide a short indication to the form user of how to fill-out the form control.
-    - Examples: "Your first name", "Date in mm/dd/yyyy format".
-- **Set control default value:**
-    - Simply enter text or select a value.
-    - You can also set a calculated initial value from the ["Control Settings" dialog](control-settings.md).
-- **Edit the control's items:**
-    - Click on the "Edit Items" icon or test to open the [Choices editor](itemset-editor.md) (for selection controls only).
+* **Set control label:**
+  * Click on the label.
+  * A control's label appears on top of the control. It is intended to provide a descriptive label for the form control.
+  * Examples: "First Name", "Street", "Phone Number".
+* **Set control hint:**
+  * Click on the hint.
+  * A control's hint usually appears under the control. It is intended to provide a short indication to the form user of how to fill-out the form control.
+  * Examples: "Your first name", "Date in mm/dd/yyyy format".
+* **Set control default value:**
+  * Simply enter text or select a value.
+  * You can also set a calculated initial value from the ["Control Settings" dialog](control-settings.md).
+* **Edit the control's items:**
+  * Click on the "Edit Items" icon or test to open the [Choices editor](itemset-editor.md) (for selection controls only).
 
 When your mouse pointer hovers over a grid cell containing a control, some icons allowing for further actions appear:
 
-- **Move or Copy Control icon:**
-    - [SINCE Orbeon Forms 2017.2]
-    - This handle lets you drag and drop the control to another grid cell. Press the *shift* key before you start the
-      drag & drop motion to create a copy of the current control in the target cell, instead of moving it there.
-- **Delete Control icon:**
-    - This deletes the control, removing all the information associated with the control including validation properties.
-- **Control Settings icon:**
-    - This opens the ["Control Settings" dialog](control-settings.md).
-- **Expand/shrink icons:**
-    - These expand and shrink the cell horizontally or vertically if possible.
+* **Move or Copy Control icon:**
+  * \[SINCE Orbeon Forms 2017.2]
+  * This handle lets you drag and drop the control to another grid cell. Press the _shift_ key before you start the drag & drop motion to create a copy of the current control in the target cell, instead of moving it there.
+* **Delete Control icon:**
+  * This deletes the control, removing all the information associated with the control including validation properties.
+* **Control Settings icon:**
+  * This opens the ["Control Settings" dialog](control-settings.md).
+* **Expand/shrink icons:**
+  * These expand and shrink the cell horizontally or vertically if possible.
 
 ## In-place editing
 
-Form Builder allows you to edit certain text information in-place. This just means that text appears as it would in the
-published form, and is editable when you click on it.
+Form Builder allows you to edit certain text information in-place. This just means that text appears as it would in the published form, and is editable when you click on it.
 
 To edit such text:
 
-- Click on the text (or placeholder text).
-- A text field appears.
-- Enter the text.
-- Use the "Enter" key or click outside the text field to commit the change.
+* Click on the text (or placeholder text).
+* A text field appears.
+* Enter the text.
+* Use the "Enter" key or click outside the text field to commit the change.
 
 To indicate that the text is editable, it highlights when the mouse hovers over it.
 
 This mechanism is how you edit:
 
-- section titles
-- control labels
-- control hints
-- explanation texts
+* section titles
+* control labels
+* control hints
+* explanation texts
 
-## See also 
+## See also
 
-- Blog post: [The 12-column layout](https://blog.orbeon.com/2018/05/the-12-column-layout.html)
-- Blog post: [Resizing cells with drag & drop in Form Builder](https://blog.orbeon.com/2018/10/resizing-cells-with-drag-drop-in-form.html)
-- [Form editor](form-editor.md)
-- [Toolbox](toolbox.md)
-- [Buttons bar](buttons-bar.md)
-- [Section settings](section-settings.md)
-- [Repeated grids](repeated-grids.md)
-- [Responsive design](../form-runner/feature/responsive-design.md)
+* Blog post: [The 12-column layout](https://blog.orbeon.com/2018/05/the-12-column-layout.html)
+* Blog post: [Resizing cells with drag & drop in Form Builder](https://blog.orbeon.com/2018/10/resizing-cells-with-drag-drop-in-form.html)
+* [Form editor](form-editor.md)
+* [Toolbox](toolbox.md)
+* [Buttons bar](buttons-bar.md)
+* [Section settings](section-settings.md)
+* [Repeated grids](repeated-grids.md)
+* [Responsive design](../form-runner/feature/responsive-design.md)

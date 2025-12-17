@@ -1,4 +1,4 @@
-# Date component
+# Date
 
 ## What it does
 
@@ -24,12 +24,12 @@ You use the date component like a regular input field, for example:
 
 ### Week start day
 
-[SINCE Orbeon Forms 2022.1]
+\[SINCE Orbeon Forms 2022.1]
 
 The `week-start-day` parameter allows you to specify the first day of the week:
 
-- values: `sunday` or `monday`
-- default: when not specified, the start day depends on the language (for example Sunday for English, Monday for French)
+* values: `sunday` or `monday`
+* default: when not specified, the start day depends on the language (for example Sunday for English, Monday for French)
 
 This is unspecified by default:
 
@@ -42,7 +42,7 @@ This is unspecified by default:
 
 ### Output format
 
-[SINCE Orbeon Forms 2023.1.4]
+\[SINCE Orbeon Forms 2023.1.4]
 
 The Date component adds an `output-format` parameter. This parameter can be used to override the global property at the control level, the form level, or via `properties-local.xml` with the following property:
 
@@ -56,12 +56,12 @@ The Date component adds an `output-format` parameter. This parameter can be used
 The format is a "picture string". These are examples of values supported:
 
 | Format            | Example    | Description                          |
-|-------------------|------------|--------------------------------------|
+| ----------------- | ---------- | ------------------------------------ |
 | `[M]/[D]/[Y]`     | 11/5/2023  | also called "North American format"  |
-| `[D]/[M]/[Y]`     | 5/11/2023  | also called "European format"        | 
+| `[D]/[M]/[Y]`     | 5/11/2023  | also called "European format"        |
 | `[D].[M].[Y]`     | 5.11.2023  | variation with dot separator         |
 | `[D]-[M]-[Y]`     | 5-11-2023  | variation with dash separator        |
-| `[M01]/[D01]/[Y]` | 11/05/2023 | force two digits for months and days | 
+| `[M01]/[D01]/[Y]` | 11/05/2023 | force two digits for months and days |
 | `[Y]-[M01]-[D01]` | 2023-11-05 | ISO format                           |
 
 As usual, the property can use an app name and form name (with possible wildcards) to specify a default value for all controls in a given app/form:
@@ -77,9 +77,9 @@ By default, the `output-format` parameter is not set, and the global `oxf.xforms
 
 ### Browser date form control
 
-On iOS, the native browser date form control is used by default, unless users enabled Request Desktop Website in Safari, in which case they will see the same behavior as they would on the desktop. 
+On iOS, the native browser date form control is used by default, unless users enabled Request Desktop Website in Safari, in which case they will see the same behavior as they would on the desktop.
 
-[\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) As browser support for the native browser date form control on desktop has improved over the years, and since it is better supported by screen readers, you may want to use the native browser date form control not only on mobile but also on desktop. You can achieve this by setting the property below.
+[\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md) As browser support for the native browser date form control on desktop has improved over the years, and since it is better supported by screen readers, you may want to use the native browser date form control not only on mobile but also on desktop. You can achieve this by setting the property below.
 
 When doing so, the date format is determined by the browser based on the user's locale. Consequently, the properties `oxf.xforms.format.input.date` and `oxf.xforms.format.output.date` have no effect on the format of the native browser date form control.
 
@@ -90,16 +90,13 @@ When doing so, the date format is determined by the browser based on the user's 
     value="always"/>
 ```
 
-<figure>
-    <img src="/form-runner/images/native-date-picker-chrome.png" width="270">
-    <figcaption>Native date picker on Chrome desktop</figcaption>
-</figure>
+<figure><img src="../../.gitbook/assets/native-date-picker-chrome.png" alt="" width="270"><figcaption><p>Native date picker on Chrome desktop</p></figcaption></figure>
 
 See also the [native time picker](time.md#native-time-picker).
 
 ### Today's highlight
 
-[UNTIL Orbeon Forms 2024.1], today's date was not highlighted in the datepicker. [\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md), today's date is highlighted by default. You can disable this behavior by setting the following property.
+\[UNTIL Orbeon Forms 2024.1], today's date was not highlighted in the datepicker. [\[SINCE Orbeon Forms 2024.1\]](../../release-notes/orbeon-forms-2024.1.md), today's date is highlighted by default. You can disable this behavior by setting the following property.
 
 ```xml
 <property 
@@ -124,6 +121,6 @@ You use the date component like a regular input field, for example:
 
 ## See also
 
-- [Dropdown Date](dropdown-date.md)
-- [Dates to Exclude constraint in Form Builder](/form-builder/validation.md#dates-to-exclude-constraint)
-- [Native time picker](time.md#native-time-picker)
+* [Dropdown Date](dropdown-date.md)
+* [Dates to Exclude constraint in Form Builder](../../form-builder/validation.md#dates-to-exclude-constraint)
+* [Native time picker](time.md#native-time-picker)

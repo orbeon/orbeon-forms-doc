@@ -1,4 +1,4 @@
-# XForms Inspector Component
+# XForms inspector
 
 ## Overview
 
@@ -10,18 +10,18 @@ The XForms Inspector allows you to:
 2. Type in XPath expression, and see what the result is when they are evaluated.
 3. See what is logged by your form to the XForms inspector console (_experimental_).
 
-![](images/xbl-xforms-inspector.png)
+![](../../.gitbook/assets/xbl-xforms-inspector.png)
 
 ## Configuration
 
 You can enable the XForms Inspector in one of two ways:
 
-- For all your pages, by setting the following property to `true`:
+*   For all your pages, by setting the following property to `true`:
 
     ```xml
     <property as="xs:boolean" name="oxf.epilogue.xforms.inspector" value="true"/>
     ```
-- For a specific page, by adding the following code in your XForms: `<fr:xforms-inspector/>`. If you don't have the "fr" prefix in scope, instead of declaring that prefix globally, you can declare it locally:
+*   For a specific page, by adding the following code in your XForms: `<fr:xforms-inspector/>`. If you don't have the "fr" prefix in scope, instead of declaring that prefix globally, you can declare it locally:
 
     ```xml
     <fr:xforms-inspector xmlns:fr="http://orbeon.org/oxf/xml/form-runner"/>
@@ -31,8 +31,7 @@ You can enable the XForms Inspector in one of two ways:
 
 ### The fr-log event
 
-The console is an experimental new feature, and is likely to be improved and changed in the future. When you select _View Console_ , the output area of the inspector shows what your XForms code logs to the console. You log something to the console by dispatching an event `fr-log` to the id of the XForms inspector. If you included the inspector by setting the `oxf.epilogue.xforms.inspector` property to `true`, that id is `orbeon-xforms-inspector`. Otherwise, it is the id you put on the `<fr:xforms-inspector>`. The event take one parameter:
-`fr-messages`. Its value is a sequence of values, either elements or atomic values (strings, numbers…).
+The console is an experimental new feature, and is likely to be improved and changed in the future. When you select _View Console_ , the output area of the inspector shows what your XForms code logs to the console. You log something to the console by dispatching an event `fr-log` to the id of the XForms inspector. If you included the inspector by setting the `oxf.epilogue.xforms.inspector` property to `true`, that id is `orbeon-xforms-inspector`. Otherwise, it is the id you put on the `<fr:xforms-inspector>`. The event take one parameter: `fr-messages`. Its value is a sequence of values, either elements or atomic values (strings, numbers…).
 
 ```xml
 <xf:dispatch name="fr-log" target="orbeon-xforms-inspector">

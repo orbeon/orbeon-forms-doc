@@ -1,16 +1,14 @@
-# XBL Event handling
-
-
+# Event handling
 
 ## Event propagation
 
 XBL promotes a strong encapsulation of data and behavior. In particular events which target elements within the component typically are invisible to the component user:
 
-- Events flow along XBL scopes:
-    - An event flowing *inside* the component is not visible from outside the component.
-    - An event flowing *outside* the component, including within content copied with `xbl:content` is not visible from inside the component.
-- For special use cases like `fr:error-summary`, _[phantom handlers][3]_ are introduced.
-- `DOMFocusIn` and `DOMFocusOut` follow the behavior outlined in [XForms - Focus][4].
+* Events flow along XBL scopes:
+  * An event flowing _inside_ the component is not visible from outside the component.
+  * An event flowing _outside_ the component, including within content copied with `xbl:content` is not visible from inside the component.
+* For special use cases like `fr:error-summary`, [_phantom handlers_](../events-extensions-other.md#phantom-handlers) are introduced.
+* `DOMFocusIn` and `DOMFocusOut` follow the behavior outlined in [XForms - Focus](../focus.md).
 
 ## Component user: attaching event handlers to the bound node
 
@@ -18,7 +16,7 @@ By default, you get the same behavior you have with built-in controls, like `xf:
 
 Event handlers can directly observe elements with XBL bindings:
 
-```xml
+```markup
 <foo:bar>
     <xf:action ev:event="xforms-value-changed">
         ...
@@ -30,7 +28,7 @@ The action handler above observes events going through element `<foo:bar>`, assu
 
 Similarly, the following observes events targeted directly to `<foo:bar>`:
 
-```xml
+```markup
 <foo:bar>
     <xf:action ev:event="xforms-enabled" ev:target="#observer">
         ...
@@ -40,21 +38,21 @@ Similarly, the following observes events targeted directly to `<foo:bar>`:
 
 Note that to achieve this the XBL engine does some special work here:
 
-- it recognizes those nested handlers
-- it attaches them to the bound node
-- it hides them from the component's `xbl:content` processing
+* it recognizes those nested handlers
+* it attaches them to the bound node
+* it hides them from the component's `xbl:content` processing
 
-_NOTE: However these handlers are still visible from XSLT processing when using `xxbl:transform`_
+_NOTE: However these handlers are still visible from XSLT processing when using_ `xxbl:transform`
 
 You can disable this automatic processing of nested event handlers, although you should only need this for very special components:
 
-```xml
+```markup
 <xbl:binding id="fr-foo" element="fr|foo" xxbl:mode="nohandlers">
 ```
 
 It is also possible to attach handlers by id, like with any XForms control:
 
-```xml
+```markup
 <foo:bar id="my-foobar">
     ...
 </foo:bar>
@@ -64,13 +62,13 @@ It is also possible to attach handlers by id, like with any XForms control:
 </xf:action>
 ```
 
-_NOTE: Only standard XForms controls and elements which have an XML binding can be used as event observers. Other elements, such as an HTML `<div>`, cannot be event observers._
+_NOTE: Only standard XForms controls and elements which have an XML binding can be used as event observers. Other elements, such as an HTML_ `<div>`_, cannot be event observers._
 
 ## Component user: nested content under the bound node
 
 Some components, such as a tabview, in effect behave like XForms grouping controls (like `xf:group`, `xf:switch/case`, `xf:repeat`). With such components, a lot of content is typically nested under the bound node:
 
-```xml
+```markup
 <fr:tab>
     <xh:div>
         <xf:group>
@@ -85,7 +83,7 @@ Some components, such as a tabview, in effect behave like XForms grouping contro
 It is up to the component author to handle nested content properly. When using `xbl:content`, the XBL engine does the work for you:
 
 * the nested content is automatically visible from the "outside"  of the component
-    * ids and variables are visible across the bound node (here `fr:tab`)
+  * ids and variables are visible across the bound node (here `fr:tab`)
 * events flow nicely as the form author would expect when using a regular XForms grouping control
 
 ## Component author: hooking-up creation and destruction event handlers
@@ -94,11 +92,11 @@ You can use the `xforms-model-construct-done` event on local models. This event 
 
 As is the case for top-level models, when `xforms-model-construct-done` is dispatched, UI controls are not present yet. So you cannot reach controls from action handlers responding to that event.
 
-[UNTIL Orbeon Forms 4.9 included]
+\[UNTIL Orbeon Forms 4.9 included]
 
 `xforms-ready` is not dispatched to local models. Here is how you can register handlers to perform initializations when the component is created and destroyed:
 
-```xml
+```markup
 <xbl:template>
     <xf:group id="component-group">
         <xf:action ev:event="xforms-enabled" ev:target="component-group">
@@ -116,7 +114,7 @@ As is the case for top-level models, when `xforms-model-construct-done` is dispa
 
 Note the `ev:target` attributes, which ensure that only events actually targeting this particular group are handled. If you omit that attribute, you might observe more than one event for creation or destruction, which is in general not desired.
 
-[SINCE Orbeon Forms 4.10]
+\[SINCE Orbeon Forms 4.10]
 
 `xforms-ready` is dispatched to XForms models nested within the component. Specifically, `xforms-ready` is dispatched when the component receives the `xforms-enabled` event during a refresh. This event can be dispatched multiple times to a given component during a form's lifecycle, as the component is initialized each time it becomes relevant.
 
@@ -130,7 +128,7 @@ A component can dispatch events to its bound element by using `xf:dispatch` and 
 
 Example:
 
-```xml
+```markup
 <xbl:binding id="foobar-component" element="fr|foobar">
     <xbl:template>
         <!-- Local controls -->
@@ -149,7 +147,7 @@ Example:
 
 The component user can listen to this event as expected, for example:
 
-```xml
+```markup
 <fr:foobar id="my-foobar">
     <xf:message ev:event="my-event">
         <xf:output value="concat('Got it: ', event('my:answer'))"/>
@@ -165,7 +163,7 @@ This allows a component to receive information from the outside world.
 
 You can register event handler attached to the bound node inside your component with the `xbl:handlers/xbl:handler` elements:
 
-```xml
+```markup
 <xbl:binding id="fr-bar" element="fr|bar">
     <xbl:handlers>
         <!-- Handlers are attached to the bound node -->
@@ -178,9 +176,10 @@ You can register event handler attached to the bound node inside your component 
 
 The `xbl:handler` element looks very much like an `xf:action` element. In particular, it supports the following attributes:
 
-* `event`: specifies which event(s) to listen to.
-    *NOTE: Like for `ev:event`, Orbeon Forms supports as an extension a list of space-separated event names.*
-* `phase`: whether to call the handler upon the `capture`, `target`, or `bubble `phase.
+*   `event`: specifies which event(s) to listen to.
+
+    &#x20; _NOTE: Like for_ `ev:event`_, Orbeon Forms supports as an extension a list of space-separated event names._
+* `phase`: whether to call the handler upon the `capture`, `target`, or `bubble`phase.
 
 The `xbl:handler` element can contain one or more XForms actions.
 
@@ -188,7 +187,7 @@ The `xbl:handler` element can contain one or more XForms actions.
 
 The following example responds to a button being activated and dispatches an event with custom context information to an `fr:bar` component:
 
-```xml
+```markup
 <fr:bar id="my-bar"/>
 
 <xf:trigger>
@@ -204,9 +203,6 @@ When the event `my-event` reaches the component, it activates the event handler 
 
 Event handlers are attached to the bound node but they execute within the context of the component, which means that they have access to XForms elements declared within the component. This includes:
 
-- `xf:model` elements declared within `xbl:implementation`
-- `xf:model` elements declared within `xbl:template`
-- controls declared within `xbl:template`
-
-[3]: ../events-extensions-other.md#phantom-handlers
-[4]: ../focus.md
+* `xf:model` elements declared within `xbl:implementation`
+* `xf:model` elements declared within `xbl:template`
+* controls declared within `xbl:template`

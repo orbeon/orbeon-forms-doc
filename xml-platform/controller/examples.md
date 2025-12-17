@@ -1,12 +1,10 @@
 # Examples
 
-
-
 ## Redirection with the PFC
 
 The following example illustrates how to perform a simple redirection with the PFC. Assume you want some path, `/a`, to be redirect to another path, `/b`. You can do this as follows:
 
-```xml
+```markup
 <page path="/a">
     <action>
         <result page="page-b" instance-passing="redirect"/>
@@ -14,7 +12,7 @@ The following example illustrates how to perform a simple redirection with the P
 </page
 ```
 
-```xml
+```markup
 <page id="page-b" path="/b">
     ...
 </page>
@@ -26,15 +24,15 @@ Note that you do not have to use `redirect`, but that doing so will cause the us
 
 The PFC allows you to very easily receive an XML document submitted, for example with an HTTP `POST`, and to generate an XML response. This can be useful to implement XML services such as XML-RPC, SOAP, or any XML-over-HTTP service. The following PFC configuration defines a simple XML service:
 
-```xml
-<page path="/xmlrpc" model="xml-rpc.xpl">  
+```markup
+<page path="/xmlrpc" model="xml-rpc.xpl">
 ```
 
 Notice that there is no `view` attribute: all the processing for this page is done in the page model.
 
 The following content for `xml-rpc.xpl` implements an XML service returning as a response the POST-ed XML document:
 
-```xml
+```markup
 <p:config 
   xmlns:p="http://www.orbeon.com/oxf/pipeline"
   xmlns:oxf="http://www.orbeon.com/oxf/processors">

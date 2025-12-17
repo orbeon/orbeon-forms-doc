@@ -1,7 +1,5 @@
 # Other configuration elements
 
-
-
 ## Overview
 
 A page flow file is comprised of three sections:
@@ -16,7 +14,7 @@ Some files are not dynamically generated and are served to the client as-is. Thi
 
 You tell the PFC what files to serve directly with one or more `<files>` elements in the page flow. The example below shows the configuration used by the Orbeon Forms examples:
 
-```xml
+```markup
 <controller>
     <files path="*.gif"/>
     <files path="*.css"/>
@@ -35,21 +33,21 @@ You tell the PFC what files to serve directly with one or more `<files>` element
 
 With `<files path="*.gif">`, if a request reaches the PFC with the path `images/logo.gif`, the file `oxf:/images/logo.gif` is sent in response to that request.
 
-The `<files>` element supports the [`path` and `matcher`][11] attributes like the `<page>` element. It also supports a `mediatype` attribute telling the PFC what media type must be sent to the client with the files. The PFC uses defaults for well-known extension, as defined by the [Resource Server processor][22]. In doubt, you can specify the mediatype attribute.
+The `<files>` element supports the [`path` and `matcher`](other.md#matchers) attributes like the `<page>` element. It also supports a `mediatype` attribute telling the PFC what media type must be sent to the client with the files. The PFC uses defaults for well-known extension, as defined by the [Resource Server processor](http://wiki.orbeon.com/forms/doc/developer-guide/processors-other#resource-server). In doubt, you can specify the mediatype attribute.
 
 ## The epilogue element
 
-![][23]
+![](../../.gitbook/assets/reference-controller-epilogue.png)
 
-You often want a common look and feel across pages. Instead of duplicating the code implementing this look and feel in every page view, you can define it in a central location called the _page flow epilogue_. The `<epilogue>` element specifies the [XPL pipeline][9] which implements the page flow epilogue.
+You often want a common look and feel across pages. Instead of duplicating the code implementing this look and feel in every page view, you can define it in a central location called the _page flow epilogue_. The `<epilogue>` element specifies the [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) which implements the page flow epilogue.
 
 This is an example of `<epilogue>` element, pointing to the default epilogue XPL pipeline:
 
-```xml
-<epilogue url="oxf:/config/epilogue.xpl">  
+```markup
+<epilogue url="oxf:/config/epilogue.xpl">
 ```
 
-The page flow epilogue is discussed in more details in the [Page Flow Epilogue][8] documentation.
+The page flow epilogue is discussed in more details in the [Page Flow Epilogue](http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue) documentation.
 
 ## The not-found-handler element
 
@@ -64,15 +62,15 @@ The "not found" page does _not_ run for resources served through the `<files>` e
 
 This is an example of `<not-found-handler>` element and the associated `<page>` element:
 
-```xml
+```markup
 <page id="my-not-found" path="/not-found" view="/config/not-found.xhtml">  
 ...
-<not-found-handler page="my-not-found">  
+<not-found-handler page="my-not-found">
 ```
 
 By default, `oxf:/config/not-found.xhtml` displays a simple XHTML page telling the user that the page requested cannot be found.
 
-_NOTE: The "not found" page does not run for resources served through the `<files>` element. In that case, the PFC returns instead a "not found" code to the user agent (code 404 in the case of HTTP)._
+_NOTE: The "not found" page does not run for resources served through the_ `<files>` _element. In that case, the PFC returns instead a "not found" code to the user agent (code 404 in the case of HTTP)._
 
 ## The unauthorized-handler element
 
@@ -84,7 +82,7 @@ Example:
 
 This is an example of `<unauthorized-handler>` element and the associated `<page>` element:
 
-```xml
+```markup
 <page id="my-unauthorized" path="/unauthorized" view="unauthorized.xhtml">  
 ...
 <unauthorized-handler page="my-unauthorized">
@@ -99,19 +97,12 @@ Several things can go wrong during the execution of a page flow by the PFC, in p
 
 Errors occurring while running a given page (#1 above) can be handled via the `<error-handler>` element. This works in a way very similar to the `<not-found-handler>` element:
 
-```xml
+```markup
 <page id="error" path="/error" model="/config/error.xpl"/>
 ...
 <error-handler page="error"/>
 ```
 
-Other errors (#2 above) are not directly handled by the PFC. Instead, they are handled with the error [XPL pipeline][9] specified in the web application's `web.xml` file. By default, the error processor is the Pipeline processor, which runs the `oxf:/config/error.xpl` XPL pipeline. You can configure `error.xpl` for your own needs. By default, it formats and displays the Java exception which caused ther error.
+Other errors (#2 above) are not directly handled by the PFC. Instead, they are handled with the error [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) specified in the web application's `web.xml` file. By default, the error processor is the Pipeline processor, which runs the `oxf:/config/error.xpl` XPL pipeline. You can configure `error.xpl` for your own needs. By default, it formats and displays the Java exception which caused ther error.
 
-See [Packaging and Deployment][3] for more information about configuring error processors.
-
-[3]: http://wiki.orbeon.com/forms/doc/developer-guide/packaging-and-deployment
-[8]: http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue
-[9]: http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl
-[11]: #matchers
-[22]: http://wiki.orbeon.com/forms/doc/developer-guide/processors-other#resource-server
-[23]: ../../images/legacy/reference-controller-epilogue.png
+See [Packaging and Deployment](http://wiki.orbeon.com/forms/doc/developer-guide/packaging-and-deployment) for more information about configuring error processors.

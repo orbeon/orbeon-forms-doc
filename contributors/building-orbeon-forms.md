@@ -6,20 +6,20 @@ This page explains how to build Orbeon Forms.
 
 Please note that the build system has changed over time. Building a full distribution with `ant orbeon-dist` has remained a constant though.
 
-If something is broken, please [let us know](https://twitter.com/intent/tweet?in_reply_to=orbeon&in_reply_to_status_id=261900968369729536&source=webclient&text=%40orbeon+)!
+If something is broken, please [let us know](https://twitter.com/intent/tweet?in_reply_to=orbeon\&in_reply_to_status_id=261900968369729536\&source=webclient\&text=%40orbeon+)!
 
 ## Prerequisites
 
 You need to have already installed:
 
-- [git](https://git-scm.com/)
-- [ant](https://ant.apache.org/)
-- [sbt](https://www.scala-sbt.org/)
-- [Tomcat 8](https://tomcat.apache.org/download-80.cgi) or [Tomcat 9](https://tomcat.apache.org/download-90.cgi)
-    - ([Tomcat 7](http://tomcat.apache.org/download-70.cgi) still works as of 2018-10-01 but is deprecated)
-- [Node.js](https://nodejs.org/en/)
-- [jsdom](https://github.com/jsdom/jsdom)
-- Java 11 or newer
+* [git](https://git-scm.com/)
+* [ant](https://ant.apache.org/)
+* [sbt](https://www.scala-sbt.org/)
+* [Tomcat 8](https://tomcat.apache.org/download-80.cgi) or [Tomcat 9](https://tomcat.apache.org/download-90.cgi)
+  * ([Tomcat 7](http://tomcat.apache.org/download-70.cgi) still works as of 2018-10-01 but is deprecated)
+* [Node.js](https://nodejs.org/en/)
+* [jsdom](https://github.com/jsdom/jsdom)
+* Java 11 or newer
 
 On macOS, you can install the following easily if you have [Homebrew](http://brew.sh/):
 
@@ -32,7 +32,7 @@ nvm install node
 npm install jsdom
 ```
 
-If you encounter any problem with Node.js and/or Uglify, try using an older version of Node.js, e.g. `nvm use 18` or `nvm use 20`. 
+If you encounter any problem with Node.js and/or Uglify, try using an older version of Node.js, e.g. `nvm use 18` or `nvm use 20`.
 
 ## Getting the source
 
@@ -46,7 +46,7 @@ where `~/my/projects` is an existing directory on your system where you want to 
 
 This clones the git repository into a child directory called `orbeon-forms`.
 
-*NOTE: There is no guarantee that the master branch is stable, as it contains some of the latest changes to Orbeon Forms!*
+_NOTE: There is no guarantee that the master branch is stable, as it contains some of the latest changes to Orbeon Forms!_
 
 ## Current instructions
 
@@ -54,8 +54,8 @@ This clones the git repository into a child directory called `orbeon-forms`.
 
 You don't have to use the following, but in case you care, the Orbeon Forms developers use:
 
-- the latest version of MacOS (Monterey as of 2022)  
-- the latest version of IntelliJ IDEA (2022.2 as of 2022-08) and the Scala plugin
+* the latest version of MacOS (Monterey as of 2022)
+* the latest version of IntelliJ IDEA (2022.2 as of 2022-08) and the Scala plugin
 
 ### GitHub token
 
@@ -65,8 +65,8 @@ This means that until that is addressed, or until we move to another host for pa
 
 If you have a GitHub account:
 
-- Create a [PAT (Personal Access Token)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the Read Packages ability
-- Export that token before launching sbt:
+* Create a [PAT (Personal Access Token)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the Read Packages ability
+* Export that token before launching sbt:
 
 ```bash
 export GITHUB_TOKEN=ghp_...
@@ -82,47 +82,49 @@ Most of the build is now done with [sbt](https://www.scala-sbt.org/).
 
 To build files for development:
 
-- `sbt`: launch sbt
-- `project /`: this is the default (with older versions of sbt: `project root`)
-- `package`: compile Scala, Java and assets, create JARs, and create the exploded WAR 
+* `sbt`: launch sbt
+* `project /`: this is the default (with older versions of sbt: `project root`)
+* `package`: compile Scala, Java and assets, create JARs, and create the exploded WAR
 
 The exploded WAR is available under:
 
-    orbeon-war/jvm/target/webapp
+```
+orbeon-war/jvm/target/webapp
+```
 
 To run all the tests:
 
-- `sbt`: launch sbt
-    - `project /`: this is the default (with older versions of sbt: `project root`)
-    - `Test/test`: run unit tests (with older versions of sbt: `test:test`)
-    - `Db/test`: run database tests (with older versions of sbt: `db:test`)
+* `sbt`: launch sbt
+  * `project /`: this is the default (with older versions of sbt: `project root`)
+  * `Test/test`: run unit tests (with older versions of sbt: `test:test`)
+  * `Db/test`: run database tests (with older versions of sbt: `db:test`)
 
 To create a distribution:
 
-- `ant orbeon-dist`
+* `ant orbeon-dist`
 
 ### Using IntelliJ
 
 You need:
 
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-- the Scala plugin for Scala source code support
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+* the Scala plugin for Scala source code support
 
-Currently, compiling and packaging is done via `sbt` and not from IntelliJ. You use IntelliJ for: 
+Currently, compiling and packaging is done via `sbt` and not from IntelliJ. You use IntelliJ for:
 
-- editing
-- debugging
+* editing
+* debugging
 
 To open the Orbeon Forms project:
 
-- Go to the "File" → "Open Project" menu and  select the `orbeon-forms` directory.
-- IntelliJ then indexes the project, which can take a minute the first time you do it.
-- Open the "sbt" tab which should appear on the right side of IntelliJ.
-    - If this doesn't show, search for "sbt" in the list of commands (Ctrl-Shift-A).
-- Do "Refresh all sbt projects".
-- ~~Open `build.sbt` and click "Refresh" to let IntelliJ create modules based on the sbt build.~~
+* Go to the "File" → "Open Project" menu and select the `orbeon-forms` directory.
+* IntelliJ then indexes the project, which can take a minute the first time you do it.
+* Open the "sbt" tab which should appear on the right side of IntelliJ.
+  * If this doesn't show, search for "sbt" in the list of commands (Ctrl-Shift-A).
+* Do "Refresh all sbt projects".
+* ~~Open `build.sbt` and click "Refresh" to let IntelliJ create modules based on the sbt build.~~
 
-![IntelliJ sbt module import](images/building-intellij-sbt.png)
+![IntelliJ sbt module import](../.gitbook/assets/building-intellij-sbt.png)
 
 ### Running
 
@@ -187,11 +189,11 @@ JAVA_OPTS="-ea $ORBEON_MEMORY_OPTS -Dapple.awt.UIElement=true $ORBEON_DEBUG_OPTS
 export JAVA_OPTS
 ```
 
-*NOTE: You don't have to set `-verbosegc -XX:+PrintGCDetails` if you are not interested in garbage collector output.*
+_NOTE: You don't have to set `-verbosegc -XX:+PrintGCDetails` if you are not interested in garbage collector output._
 
-*NOTE: The `-Djava.net.preferIPv4Stack=true` can help in some cases.*
+_NOTE: The `-Djava.net.preferIPv4Stack=true` can help in some cases._
 
-*NOTE: Older options for Java 8 included: `-XX:MaxPermSize=256m `, `-XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps`.*
+_NOTE: Older options for Java 8 included: `-XX:MaxPermSize=256m` , `-XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps`._
 
 Finally, you can start Tomcat with:
 
@@ -229,7 +231,7 @@ TODO: document making changes to resources or assets.
 
 ### Sbt tips
 
-The following runs only tests within `FormBuilderFunctionsTest` which contain the string `my test` and show full stack traces in case of exception: 
+The following runs only tests within `FormBuilderFunctionsTest` which contain the string `my test` and show full stack traces in case of exception:
 
 ```
 testOnly *FormBuilderFunctionsTest -- -z "my test" -oF
@@ -241,7 +243,7 @@ Orbeon does not provide public instructions or code to build Orbeon Forms PE, wh
 
 The idea is just that we want to ensure that something called "Orbeon Forms PE" in fact comes from Orbeon.
 
-----
+***
 
 ## Historical instructions
 
@@ -251,58 +253,57 @@ As of 2016-06-02:
 
 To compile the Scala and Java files from the command-line the first time, run:
 
-- `ant orbeon-war`
+* `ant orbeon-war`
 
 To incrementally compile Scala and Java files during further development, run:
 
-- `sbt`
-- `project root`
-- one of
-    - `~copyJarToExplodedWar`: to only update server-side classes
-    - `~fastOptJSToExplodedWar`: to only update the Form Builder Scala.js artifacts
-    - `~ ;copyJarToExplodedWar;fastOptJSToExplodedWar`: to update both
+* `sbt`
+* `project root`
+* one of
+  * `~copyJarToExplodedWar`: to only update server-side classes
+  * `~fastOptJSToExplodedWar`: to only update the Form Builder Scala.js artifacts
+  * `~ ;copyJarToExplodedWar;fastOptJSToExplodedWar`: to update both
 
 The `copyJarToExplodedWar` command in the `root` project incrementally:
- 
-- builds all the sub-projects depended by `root`
-    - `orbeon-common`
-    - `orbeon-dom`
-    - `orbeon-form-builder-shared` (empty currently on `master`)
-    - `orbeon-xupdate`
-    - `orbeon-core`
-    - `orbeon-form-runner`    
-    - `orbeon-form-builder`
-    - `orbeon-form-builder-client`
-- copies the following resulting JAR files to `build/orbeon-war/WEB-INF/lib`
-    - `orbeon-common.jar`
-    - `orbeon-dom.jar`
-    - `orbeon-form-builder-shared.jar`
-    - `orbeon-xupdate.jar`
-    - `orbeon-core.jar`    
-    - `orbeon-form-runner.jar`
-    - `orbeon-form-builder.jar`
-    
+
+* builds all the sub-projects depended by `root`
+  * `orbeon-common`
+  * `orbeon-dom`
+  * `orbeon-form-builder-shared` (empty currently on `master`)
+  * `orbeon-xupdate`
+  * `orbeon-core`
+  * `orbeon-form-runner`
+  * `orbeon-form-builder`
+  * `orbeon-form-builder-client`
+* copies the following resulting JAR files to `build/orbeon-war/WEB-INF/lib`
+  * `orbeon-common.jar`
+  * `orbeon-dom.jar`
+  * `orbeon-form-builder-shared.jar`
+  * `orbeon-xupdate.jar`
+  * `orbeon-core.jar`
+  * `orbeon-form-runner.jar`
+  * `orbeon-form-builder.jar`
+
 To run tests from IntelliJ:
 
-- from sbt, first run `test:compile`
-- run "Unit Tests" from IntelliJ
-    - there are issues, with the following tests failing:
-        - `formRunnerStaticCache`
-            - "Some(false) did not equal None"
-        - `formRunnerItemsetActions`
-            - "None.get"
-        - `ResourcesPatcherTest.testResourcesConsistency`
-            - "Cannot find resource: /apps/fr/i18n/resources.xml"
-        - `MemoryCacheTest`
-            - tries to connect to Selenium?
-        - "Form Runner and Form Builder - Oracle view column names"
-            - "Cannot find resource: /apps/fr/persistence/relational/sql-utils.xsl"
-        - `VersionTest`
-            because the version used is "2016.2-SNAPSHOT"
+* from sbt, first run `test:compile`
+* run "Unit Tests" from IntelliJ
+  * there are issues, with the following tests failing:
+    * `formRunnerStaticCache`
+      * "Some(false) did not equal None"
+    * `formRunnerItemsetActions`
+      * "None.get"
+    * `ResourcesPatcherTest.testResourcesConsistency`
+      * "Cannot find resource: /apps/fr/i18n/resources.xml"
+    * `MemoryCacheTest`
+      * tries to connect to Selenium?
+    * "Form Runner and Form Builder - Oracle view column names"
+      * "Cannot find resource: /apps/fr/persistence/relational/sql-utils.xsl"
+    * `VersionTest` because the version used is "2016.2-SNAPSHOT"
 
 NOTES:
 
-- compiling from IntelliJ doesn't work properly yet: files compile, but won't be copied to the exploded WAR
+* compiling from IntelliJ doesn't work properly yet: files compile, but won't be copied to the exploded WAR
 
 ### With IntelliJ
 
@@ -310,11 +311,11 @@ NOTES:
 
 You need to have already installed:
 
-- [git](http://git-scm.com/)
-- [sbt](http://www.scala-sbt.org/) [SINCE 2015-08]
-- [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html) 14 (previous versions may or may not work)
-- [Tomcat 7](http://tomcat.apache.org/download-70.cgi)
-- Java 1.7
+* [git](http://git-scm.com/)
+* [sbt](http://www.scala-sbt.org/) \[SINCE 2015-08]
+* [IntelliJ IDEA](http://www.jetbrains.com/idea/index.html) 14 (previous versions may or may not work)
+* [Tomcat 7](http://tomcat.apache.org/download-70.cgi)
+* Java 1.7
 
 On macOS, you can install git and sbt easily if you have [Homebrew](http://brew.sh/):
 
@@ -326,21 +327,21 @@ brew install sbt
 
 With IntelliJ, you need the following plugins, which you can download and enable from IntelliJ directly:
 
-- Scala: to compile Scala source code
-- File Watchers: to compile `.less` files to CSS (if you make changes to those)
+* Scala: to compile Scala source code
+* File Watchers: to compile `.less` files to CSS (if you make changes to those)
 
 #### Opening the project
 
 To open Orbeon Forms in IntelliJ:
 
-- Go to the "File" → "Open Project" menu and  select the `orbeon-forms` directory.
-- IntelliJ then indexes the project, which can take a minute the first time you do it.
+* Go to the "File" → "Open Project" menu and select the `orbeon-forms` directory.
+* IntelliJ then indexes the project, which can take a minute the first time you do it.
 
 #### Building the project
 
-- Go to the "Build" → "Make Project" (this takes about 1 mn 10 seconds on a recent laptop).
-- Go to the "Ant Build" pane and run the `orbeon-war` target.
-- Manually create the directory `orbeon-forms/src/resources-local` if it is missing.
+* Go to the "Build" → "Make Project" (this takes about 1 mn 10 seconds on a recent laptop).
+* Go to the "Ant Build" pane and run the `orbeon-war` target.
+* Manually create the directory `orbeon-forms/src/resources-local` if it is missing.
 
 This builds Orbeon Forms in development mode, where the Java/Scala class files are not placed into JARs. This way you can quickly recompile incrementally.
 
@@ -368,7 +369,7 @@ ORBEON_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt
 export JAVA_OPTS="-ea $ORBEON_MEMORY_OPTS $ORBEON_DEBUG_OPTS -Dapple.awt.UIElement=true"
 ```
 
-*NOTE: You don't have to set `-verbosegc -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCDetails` if you are not interested in garbage collector output.*
+_NOTE: You don't have to set `-verbosegc -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCDetails` if you are not interested in garbage collector output._
 
 Finally, you can start Tomcat with:
 
@@ -399,7 +400,7 @@ If you modify Java or Scala files, you need to recompile. Go to menu "Build" →
 
 If you are connected to Tomcat via the debugger AND you are lucky, changed classes will reload in the JVM via HotSwap. See also the IntelliJ doc on [Reloading Classes](https://www.jetbrains.com/help/idea/2017.3/reloading-classes.html). Otherwise, you need to restart Tomcat to see your changes.
 
-*NOTE: HotSwap has limitations, especially with Scala code which produces and modifies more class files. It is not a silver bullet and there will be cases where you will need to redeploy the web application or restart the application server. But you will spare yourself a redeployment or restart in the cases where your modification to the Java or Scala code does not significantly change the structure of classes.*
+_NOTE: HotSwap has limitations, especially with Scala code which produces and modifies more class files. It is not a silver bullet and there will be cases where you will need to redeploy the web application or restart the application server. But you will spare yourself a redeployment or restart in the cases where your modification to the Java or Scala code does not significantly change the structure of classes._
 
 If you modify resource files, re-run the ant `orbeon-war` target from IntelliJ.
 
@@ -415,12 +416,12 @@ This installs the less compiler to `/usr/local/bin/lessc`, which is where the in
 
 Select the "Unit Tests" configuration in IntelliJ, and run it. This should take about a minute.
 
-IntelliJ then shows : "Done: 723 of 731  Failed: 8"
+IntelliJ then shows : "Done: 723 of 731 Failed: 8"
 
 The tests that fail are the following:
 
-- `CombinedClientTest`: this requires Selenium to be setup.
-- `DDLTest` and `RestApiTest`: these require a database setup.
+* `CombinedClientTest`: this requires Selenium to be setup.
+* `DDLTest` and `RestApiTest`: these require a database setup.
 
 We hope to provide instructions to run these in the future.
 
@@ -440,23 +441,20 @@ Currently, there is no incremental compilation when running from the command lin
 
 A related known issue, from the command-line, is that running `ant classes` twice in a row fails with errors. You must remove classes under `build/classes` before running `ant classes` again.
 
-*NOTE: With ant, class files are produced under `build/classes`, but with IntelliJ they are produced under `build/orbeon-war/WEB-INF/classes`. You should be aware of this is you switch between building from IntelliJ and building with ant.*
+_NOTE: With ant, class files are produced under `build/classes`, but with IntelliJ they are produced under `build/orbeon-war/WEB-INF/classes`. You should be aware of this is you switch between building from IntelliJ and building with ant._
 
 #### Building a distribution
 
-*WARNING: `ant clean` deletes everything under the `build` directory. This includes the data for the embedded eXist database. If you have some test data, including form definitions and data in there, backup `build/orbeon-war/WEB-INF/exist-data` first!*
+_WARNING: `ant clean` deletes everything under the `build` directory. This includes the data for the embedded eXist database. If you have some test data, including form definitions and data in there, backup `build/orbeon-war/WEB-INF/exist-data` first!_
 
-- run `ant clean`
-- run `ant orbeon-dist-war` to build the WAR files
+* run `ant clean`
+* run `ant orbeon-dist-war` to build the WAR files
 
 Alternatively:
 
-- run `ant teamcity-release` to clean, test, and build the entire release
-
-[//]: # (xxx GITHUB_TOKEN)
-[//]: # (xxx IntelliJ and GITHUB_TOKEN)
+* run `ant teamcity-release` to clean, test, and build the entire release
 
 ## See also
 
-- [Contributor License Agreements (CLA)](cla.md) 
-- [Localizing Orbeon Forms](localizing-orbeon-forms.md)
+* [Contributor License Agreements (CLA)](cla.md)
+* [Localizing Orbeon Forms](localizing-orbeon-forms.md)

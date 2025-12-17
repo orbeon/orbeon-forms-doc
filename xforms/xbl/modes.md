@@ -6,7 +6,7 @@ The XBL component binding defined with `<xbl:binding>` supports the `xxbl:mode` 
 
 Example:
 
-```xml
+```markup
 <xbl:binding
     id="fr-code-mirror"
     element="fr|code-mirror"
@@ -31,7 +31,7 @@ When a component has a binding, UI events are dispatched depending on the bound 
 
 You can access the actual bound node via the `xxf:binding()` function:
 
-```xml
+```markup
 xxf:binding('fr-foo')
 ```
 
@@ -39,7 +39,7 @@ The id passed must be the id of the `xbl:binding` element.
 
 The `xxf:binding-context()` function returns the XPath evaluation context of the binding
 
-```xml
+```markup
 xxf:binding-context('fr-foo')
 ```
 
@@ -57,21 +57,21 @@ For an example, see [Adding support for a value](tutorial.md#adding-support-for-
 
 ### Formatted value
 
-[SINCE Orbeon Forms 2019.1]
+\[SINCE Orbeon Forms 2019.1]
 
-When the `value` mode is present, the components also has an associated *formatted value*. By default, this formatted value is based on the datatype of the bound item. Like `xf:output`, the following properties are used to format the value:
+When the `value` mode is present, the components also has an associated _formatted value_. By default, this formatted value is based on the datatype of the bound item. Like `xf:output`, the following properties are used to format the value:
 
-- `oxf.xforms.format.output.date`
-- `oxf.xforms.format.output.time`
-- `oxf.xforms.format.output.dateTime`
-- `oxf.xforms.format.output.decimal`
-- `oxf.xforms.format.output.integer`
-- `oxf.xforms.format.output.float`
-- `oxf.xforms.format.output.double`
+* `oxf.xforms.format.output.date`
+* `oxf.xforms.format.output.time`
+* `oxf.xforms.format.output.dateTime`
+* `oxf.xforms.format.output.decimal`
+* `oxf.xforms.format.output.integer`
+* `oxf.xforms.format.output.float`
+* `oxf.xforms.format.output.double`
 
 The component can override the formatted value with the `xxbl:format` attribute on `xbl:binding`, for example:
 
-```xml
+```markup
 <xbl:binding
     ...
     xxbl:mode="lhha binding value"
@@ -96,15 +96,15 @@ The component can override the formatted value with the `xxbl:format` attribute 
 
 The formatted value is used by:
 
-- the view mode
-- the PDF mode
-- the "All Control Values" option in email templates
+* the view mode
+* the PDF mode
+* the "All Control Values" option in email templates
 
-The formatted value can be accessed with the [`xxf:formatted-value()`](/xforms/xpath/extension-controls.md#xxf-formatted-value) function.  
+The formatted value can be accessed with the [`xxf:formatted-value()`](../xpath/extension-controls.md#xxf-formatted-value) function.
 
 ## The external-value mode
 
-[SINCE Orbeon Forms 2016.1]
+\[SINCE Orbeon Forms 2016.1]
 
 You use the `external-value` mode in addition to the `binding` and `value` modes.
 
@@ -116,7 +116,7 @@ See also [Support for the external-value mode](javascript.md#support-for-the-ext
 
 ## The javascript-lifecycle mode
 
-[SINCE Orbeon Forms 2016.1]
+\[SINCE Orbeon Forms 2016.1]
 
 You use this mode when the component implementation is mostly done in JavaScript and not with nested XForms controls.
 
@@ -130,14 +130,14 @@ For more details, see [Support for the javascript-lifecycle mode](javascript.md#
 
 The `lhha` mode allows the component to support the `<xh:label>`, `<xh:hint>`, `<xh:help>` and `<xh:alert>` element, whether:
 
-- directly nested under the component's bound element
-- or using the `for` attribute
+* directly nested under the component's bound element
+* or using the `for` attribute
 
 By default, markup is output for the LHHA elements. You can disable this with the additional `custom-lhha` mode.
 
 For an example, see [Adding LHHA elements](tutorial.md#adding-lhha-elements).
 
-[SINCE Orbeon Forms 4.5]
+\[SINCE Orbeon Forms 4.5]
 
 Sometimes, a component implementation uses HTML form controls, and you would like a `<label>` element pointing to it with a `for` attribute in the generated HTML markup.
 
@@ -147,7 +147,7 @@ The value of the attribute must be the id of a nested XForms control or a nested
 
 For examples, see [some of the Orbeon Forms XBL components](https://github.com/orbeon/orbeon-forms/tree/master/form-runner/jvm/src/main/resources/xbl/orbeon).
 
-[SINCE Orbeon Forms 2019.1]
+\[SINCE Orbeon Forms 2019.1]
 
 You can now specify custom label, hint, help and alerts individually using `-` and `+` prefixes and the LHHA name as suffix. For example to remove the custom alert and keep its standard handling:
 
@@ -167,11 +167,11 @@ You use this mode when the component implementation is mostly done in JavaScript
 
 The `focus` mode allows the component to handle keyboard focus natively, so that the XForms engine is aware of focus.
 
-[SINCE Orbeon Forms 2016.1]
+\[SINCE Orbeon Forms 2016.1]
 
 When the component receives focus, for example following an XForms `<xf:setfocus>` action, the JavaScript companion class's `xformsFocus()` method is called if present. If the method is missing, then the legacy `setFocus()` method is called.
 
-[UNTIL Orbeon Forms 4.10 included]
+\[UNTIL Orbeon Forms 4.10 included]
 
 The JavaScript companion class's `setFocus()` method is called if present.
 

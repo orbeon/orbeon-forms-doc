@@ -1,7 +1,5 @@
 # Setting up an external resources directory
 
-
-
 ## Rationale
 
 In some cases, you want to keep the files from Orbeon Forms completely separate from those of your application. You want to deploy the Orbeon Forms web archive (`war`) and use it without having to make any change to any of the file inside that archive. This approach has several benefits, including:
@@ -17,15 +15,14 @@ To be able to override resources that come with Orbeon Forms without changing an
 
 1. Create a directory on disk, in which you put the resources you want to override. Let's assume this directory is `/home/myapp/resources`. So if you want to override properties, you create your own `/home/myapp/resources/config/properties-local.xml`. To deploy your PE license, place it in `/home/myapp/resources/config/license.xml`.
 2. You will instruct Orbeon Forms to first try using a resource manager that is filesystem based, and that looks for resources in the base directory `/home/myapp/resources`. This is done by setting the following two context parameters:
-    * First added context parameter:
-        * Name: `oxf.resources.priority.0`
-        * Value: `org.orbeon.oxf.resources.FilesystemResourceManagerFactory`
-    * Second added context parameter:
-        * Name: `oxf.resources.priority.0.oxf.resources.filesystem.sandbox-directory`
-        * Value: `/home/myapp/resources`
+   * First added context parameter:
+     * Name: `oxf.resources.priority.0`
+     * Value: `org.orbeon.oxf.resources.FilesystemResourceManagerFactory`
+   * Second added context parameter:
+     * Name: `oxf.resources.priority.0.oxf.resources.filesystem.sandbox-directory`
+     * Value: `/home/myapp/resources`
 
 You typically set context parameters in the `web.xml`, but don't want to do so here, as you don't want to change _any_ of the files inside the web archive. So you will be setting those context parameters at the application server level, and the way you do this depends on what application server you use. See the section below that corresponds to your application server.
-
 
 ## With Tomcat
 
@@ -53,7 +50,7 @@ In Tomcat's `server.xml`, add the two `<parameter>` elements to the `<context>` 
 
 This assumes that you are deploying Orbeon Forms in WebLogic as an enterprise archive (`ear`), as described in [Installation with WebLogic](../../installation/weblogic.md).
 
-1. Save the XML file below in to an XML file (say `plan.xml`). This is going to be your WebLogic deployment plan. You keep it in a directory if your choice, separate from Orbeon Forms. (If you are already using a deployment for Orbeon Forms, then amend as appropriate.)
+1.  Save the XML file below in to an XML file (say `plan.xml`). This is going to be your WebLogic deployment plan. You keep it in a directory if your choice, separate from Orbeon Forms. (If you are already using a deployment for Orbeon Forms, then amend as appropriate.)
 
     ```xml
     <?xml version='1.0' encoding='UTF-8'?>
@@ -92,15 +89,12 @@ This assumes that you are deploying Orbeon Forms in WebLogic as an enterprise ar
         </module-override>
     </deployment-plan>
     ```
+2.  From the WebLogic Console, under _Deployments_, click the checkbox next to _orbeon-ear_, and click on the _Update_ button.
 
+    ![](../../.gitbook/assets/weblogic-deployments-summary.png)
+3.  On the next screen, choose _Redeploy the application using the following deployment files_. The _Source path_ will most likely be pre-populated with the path in which you have your Orbeon Forms enterprise archive (exploded or as an `ear` file). For the _Deployment plan path_, select the file you created in step 1. Click _Finish_ to redeploy Orbeon Forms taking into account the context parameters set in the deployment plan.
 
-2. From the WebLogic Console, under _Deployments_, click the checkbox next to _orbeon-ear_, and click on the _Update_ button.
-
-    ![](../../images/weblogic-deployments-summary.png)
-
-3. On the next screen, choose _Redeploy the application using the following deployment files_. The _Source path_ will most likely be pre-populated with the path in which you have your Orbeon Forms enterprise archive (exploded or as an `ear` file). For the _Deployment plan path_, select the file you created in step 1. Click _Finish_ to redeploy Orbeon Forms taking into account the context parameters set in the deployment plan.
-
-    ![](../../images/weblogic-update-application.png)
+    ![](../../.gitbook/assets/weblogic-update-application.png)
 
 Step 2 and 3 above assume you use the WebLogic Console to deploy Orbeon Forms. If instead you use `java weblogic.Deployer`, on the command line, just add the following parameter to the command you normally use to deploy Orbeon Forms: `-plan plan.xml`.
 

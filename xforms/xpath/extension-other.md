@@ -2,7 +2,7 @@
 
 ## xxf:decode-iso9075-14()
 
-```xpath
+```
 xxf:decode-iso9075-14($value as xs:string) as xs:string
 ```
 
@@ -10,7 +10,7 @@ The `xxf:decode-iso9075-14()` function decodes a string according to ISO 9075-14
 
 ## xxf:doc-base64()
 
-```xpath
+```
 xxf:doc-base64($href as xs:string) as xs:string
 ```
 
@@ -18,7 +18,7 @@ The `xxf:doc-base64()` function reads a resource identified by the given URL, an
 
 ## xxf:doc-base64-available()
 
-```xpath
+```
 xxf:doc-base64-available($href as xs:string) as xs:boolean
 ```
 
@@ -26,7 +26,7 @@ The `xxf:doc-base64-available()` function reads a resource identified by the giv
 
 ## xxf:encode-iso9075-14()
 
-```xpath
+```
 xxf:encode-iso9075-14($value as xs:string) as xs:string
 ```
 
@@ -34,9 +34,9 @@ The `xxf:encode-iso9075-14()` function encodes a string according to ISO 9075-14
 
 ## xxf:image-metadata()
 
-[SINCE Orbeon Forms 4.4]
+\[SINCE Orbeon Forms 4.4]
 
-```xpath
+```
 xxf:image-metadata($content as xs:anyURI, $name as xs:string) as xs:item?
 ```
 
@@ -44,13 +44,13 @@ Access basic image metadata.
 
 The function returns the empty sequence if the URL is empty or the metadata requested is not found.
 
-- `$content`: URL pointing to an image
-- `$name`: metadata property name
-    - `width`: image width in pixels, returns an `xs:integer` if found
-    - `height`: image height in pixels, returns an `xs:integer` if found
-    - `mediatype`: image mediatype based on the content, returns an `xs:string` of `image/jpeg`, `image/png`, `image/gif` or `image/bmp` (the formats universally supported by browsers) if found
+* `$content`: URL pointing to an image
+* `$name`: metadata property name
+  * `width`: image width in pixels, returns an `xs:integer` if found
+  * `height`: image height in pixels, returns an `xs:integer` if found
+  * `mediatype`: image mediatype based on the content, returns an `xs:string` of `image/jpeg`, `image/png`, `image/gif` or `image/bmp` (the formats universally supported by browsers) if found
 
-*NOTE: The function dereferences the content of the URL when called. Accesses to local files are likely to be faster than remote files.*
+_NOTE: The function dereferences the content of the URL when called. Accesses to local files are likely to be faster than remote files._
 
 The following example validates that the image is within 10% of a 1x1 aspect ratio:
 
@@ -63,4 +63,3 @@ The following example validates that the image is within 10% of a 1x1 aspect rat
         xs:decimal(xxf:image-metadata(., 'height')) - 1.0
     ) le 0.1"/>
 ```
-

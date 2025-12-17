@@ -1,14 +1,12 @@
 # Type annotations
 
-
-
 ## Basics
 
 Orbeon Forms supports exposing MIP type annotations to XPath 2.0.
 
 This means that if you have a type associated with a node, e.g.:
 
-```xml
+```markup
 <xf:bind ref="age" type="xs:integer">
 ```
 
@@ -16,7 +14,7 @@ then the type is not only used for validation, but also determines the typed val
 
 This means that earlier, you had to write the following:
 
-```xml
+```markup
 <xf:bind
   ref="age"
   type="xs:integer"
@@ -25,7 +23,7 @@ This means that earlier, you had to write the following:
 
 With exposing type annotations, you can simply write:
 
-```xml
+```markup
 <xf:bind
   ref="age"
   type="xs:integer"
@@ -34,7 +32,7 @@ With exposing type annotations, you can simply write:
 
 or:
 
-```xml
+```markup
 <xf:bind
   ref="date"
   type="xs:date"
@@ -47,7 +45,7 @@ _NOTE: Type annotations are not automatically enabled for backward compatibility
 
 The following property controls whether instance types annotations are exposed to XPath 2.0 expressions:
 
-```xml
+```markup
 <property
     as="xs:boolean"
     name="oxf.xforms.expose-xpath-types"
@@ -59,25 +57,25 @@ The following property controls whether instance types annotations are exposed t
 
 You can as usual enable this on a per-page basis:
 
-```xml
+```markup
 <xf:model xxf:expose-xpath-types="true">
 ```
 
-[SINCE Orbeon Forms 4.2]
+\[SINCE Orbeon Forms 4.2]
 
 You can also enable this on a per-instance basis:
 
-```xml
+```markup
 <xf:instance xxf:expose-xpath-types="true">
 ```
 
 ## Where does this work?
 
-Static type annotations (with `xf:bind/@type` and `xsi:type`) can be used by all XPath expressions, including  `xf:bind/@calculate`.
+Static type annotations (with `xf:bind/@type` and `xsi:type`) can be used by all XPath expressions, including `xf:bind/@calculate`.
 
-NOTE: Here is the order in which the XForms engine processes type annotations  in the model:
+NOTE: Here is the order in which the XForms engine processes type annotations in the model:
 
-- during a model _rebuild_, all `xf:bind` point to their associated instance nodes if any
-- static type annotations with `xf:bind/@type` and `xsi:type` are available just after a rebuild
-- this means that type annotations can be used during subsequent model _recalculate _and _revalidate_
-- however, annotations done via a schema are _not_ reliably available during _recalculate_
+* during a model _rebuild_, all `xf:bind` point to their associated instance nodes if any
+* static type annotations with `xf:bind/@type` and `xsi:type` are available just after a rebuild
+* this means that type annotations can be used during subsequent model _recalculate \_and \_revalidate_
+* however, annotations done via a schema are _not_ reliably available during _recalculate_

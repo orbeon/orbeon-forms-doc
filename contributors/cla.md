@@ -1,4 +1,4 @@
-# Contributor License Agreement (CLA)
+# Contributor License Agreement
 
 ## Rationale
 
@@ -6,7 +6,7 @@ In order to clarify the intellectual property license granted with Contributions
 
 ## What you should do
 
-If you plan to submit contributions to Orbeon, please download, review, sign and return a copy of the [Orbeon Contributor License Agreement](files/Orbeon Contributor License Agreement.pdf).
+If you plan to submit contributions to Orbeon, please download, review, sign and return a copy of the [Orbeon Contributor License Agreement](https://github.com/orbeon/orbeon-forms-doc/tree/40ee58bd0ad0adcb07dd7dff3a6eb81ba1e15ab0/contributors/files/Orbeon%20Contributor%20License%20Agreement.pdf).
 
 ## But isn't the open source license enough?
 
@@ -14,10 +14,10 @@ It's enough if you want to make changes and distribute them on your own, but it'
 
 ## More about CLAs
 
-- This [wikipedia page](https://en.wikipedia.org/wiki/Contributor_License_Agreement) provides some general information about CLAs and mentions some major projects which require CLAs.
-- The [Django project](https://www.djangoproject.com/foundation/cla/faq/) has a FAQ in which covers the reasons they have a CLA.
+* This [wikipedia page](https://en.wikipedia.org/wiki/Contributor_License_Agreement) provides some general information about CLAs and mentions some major projects which require CLAs.
+* The [Django project](https://www.djangoproject.com/foundation/cla/faq/) has a FAQ in which covers the reasons they have a CLA.
 
 ## See also
 
-- [Localizing Orbeon Forms](localizing-orbeon-forms.md)
-- [Building Orbeon Forms](building-orbeon-forms.md)
+* [Localizing Orbeon Forms](localizing-orbeon-forms.md)
+* [Building Orbeon Forms](building-orbeon-forms.md)

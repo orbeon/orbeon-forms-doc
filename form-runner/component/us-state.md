@@ -1,10 +1,10 @@
-# US State component
+# US state
 
 ## Overview
 
 The `fr:us-state` component allows you to select one of the 50 US states (plus Puerto Rico and the District of Columbia).
 
-![](images/xbl-us-state.png)
+![](../../.gitbook/assets/xbl-us-state.png)
 
 ## Usage
 
@@ -18,6 +18,6 @@ You use `fr:us-state` like a regular XForms control:
 
 ## See also
 
-- [US Employer Identification Number (EIN)](us-ein.md)
-- [US Phone Number](us-phone.md)
-- [US Social Security Number (SSN)](us-ssn.md)
+* [US Employer Identification Number (EIN)](us-ein.md)
+* [US Phone Number](us-phone.md)
+* [US Social Security Number (SSN)](us-ssn.md)

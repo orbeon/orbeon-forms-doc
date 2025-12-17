@@ -1,4 +1,4 @@
-# Text area control
+# Text area
 
 ## Basic usage
 
@@ -10,25 +10,25 @@
 
 By default, the text area control is rendered as a regular multi-line text area:
 
-![Multi-line text area in Orbeon Forms](../images/xforms-textarea-unformatted.png)
+![Multi-line text area in Orbeon Forms](../../.gitbook/assets/xforms-textarea-unformatted.png)
 
 ### Attributes
 
 With the standard appearance, the following attributes are available:
 
-- `xxf:cols`: same as HTML input `cols` attribute (prefer using CSS for this)
-- `xxf:rows`: same as HTML input `rows` attribute (prefer using CSS for this)
-- `xxf:maxlength`: same as HTML 5 input `maxlength` attribute (not all browsers support this attribute, and some have bugs)
+* `xxf:cols`: same as HTML input `cols` attribute (prefer using CSS for this)
+* `xxf:rows`: same as HTML input `rows` attribute (prefer using CSS for this)
+* `xxf:maxlength`: same as HTML 5 input `maxlength` attribute (not all browsers support this attribute, and some have bugs)
 
 You can add the `appearance="xxf:autosize"` attribute on the `<xf:textarea>` to get the textarea height to automatically adjust to its content.
 
 ### Placeholder for label and hint
 
-[SINCE Orbeon Forms 2017.1]
+\[SINCE Orbeon Forms 2017.1]
 
 #### Per-control properties
 
-The label or hint associated with `<xf:textarea>` may have the `minimal`  appearance:
+The label or hint associated with `<xf:textarea>` may have the `minimal` appearance:
 
 ```xml
 <xf:textarea ref=".">
@@ -44,7 +44,7 @@ The label or hint associated with `<xf:textarea>` may have the `minimal`  appear
 
 This causes either the label or the hint to appear on the background of the field when it is empty. If both the label and hint have a `minimal` appearance, the label wins.
 
-Orbeon Forms leverages the HTML 5 `placeholder` attribute for browsers that support it (Firefox 3.5+, Chrome, Safari, Opera), and simulates the HTML 5 `placeholder` functionality  in JavaScript for browsers that don't support it (IE8 and IE9). In that case, you can customize how the placeholder is displayed by overriding the CSS class `xforms-placeholder`.
+Orbeon Forms leverages the HTML 5 `placeholder` attribute for browsers that support it (Firefox 3.5+, Chrome, Safari, Opera), and simulates the HTML 5 `placeholder` functionality in JavaScript for browsers that don't support it (IE8 and IE9). In that case, you can customize how the placeholder is displayed by overriding the CSS class `xforms-placeholder`.
 
 #### Per-form properties
 
@@ -68,15 +68,15 @@ The default values is `full`:
 
 Supported values for `oxf.xforms.label.appearance`:
 
-- `full`: labels show inline above the control (the default)
-- `full minimal`: labels show as an HTML *placeholder* within the field when the field is empty
+* `full`: labels show inline above the control (the default)
+* `full minimal`: labels show as an HTML _placeholder_ within the field when the field is empty
 
 Supported values for `oxf.xforms.hint.appearance`:
 
-- `full`: hints show inline below the control (the default)
-- `full minimal`: hints show as an HTML *placeholder* within the field when the field is empty
-- `tooltip`: hints show as tooltips upon mouseover
-- `tooltip minimal`: hints show as an HTML *placeholder* within the field when the field is empty
+* `full`: hints show inline below the control (the default)
+* `full minimal`: hints show as an HTML _placeholder_ within the field when the field is empty
+* `tooltip`: hints show as tooltips upon mouseover
+* `tooltip minimal`: hints show as an HTML _placeholder_ within the field when the field is empty
 
 When the global property includes `minimal`, it is possible to override the appearance on the control with `appearance="full"`:
 
@@ -98,20 +98,20 @@ When the global property includes `minimal`, it is possible to override the appe
 
 If you add the attribute `mediatype="text/html"` on your `<xf:textarea>`, then the text area will be rendered as an HTML editor:
 
-![Formatted Text / Rich Text Editor in Orbeon Forms](../images/xforms-textarea-formatted.png)
+![Formatted Text / Rich Text Editor in Orbeon Forms](../../.gitbook/assets/xforms-textarea-formatted.png)
 
 ### HTML cleanup
 
 When using the attribute `mediatype="text/html"`, the HTML area will clean up the HTML typed or pasted in the editor. This is done for two reasons:
 
-- **Avoiding a "tag soup"** – The HTML received from the browser can be grossly invalid, and contain foreign elements, in particular when pasting text copied from another application (e.g. Microsoft Word) into the editor. If kept as-is, the "HTML" you capture this way is then harder to process.
-- **Security** – If you don't clean up the HTML, and if your application sometimes shows HTML entered by one user to another user, your application can pose a security threat. A malicious user "M" can insert in the HTML some JavaScript that exploits a security bug in a given browser. When a victim "V" loads a page that displays the HTML added by "M", that HTML (with the script it contains) runs and can potentially compromise "V"'s computer.
+* **Avoiding a "tag soup"** – The HTML received from the browser can be grossly invalid, and contain foreign elements, in particular when pasting text copied from another application (e.g. Microsoft Word) into the editor. If kept as-is, the "HTML" you capture this way is then harder to process.
+* **Security** – If you don't clean up the HTML, and if your application sometimes shows HTML entered by one user to another user, your application can pose a security threat. A malicious user "M" can insert in the HTML some JavaScript that exploits a security bug in a given browser. When a victim "V" loads a page that displays the HTML added by "M", that HTML (with the script it contains) runs and can potentially compromise "V"'s computer.
 
-[SINCE Orbeon Forms 2024.1]
+\[SINCE Orbeon Forms 2024.1]
 
-- the HTML is parsed
-- only whitelisted elements are preserved
-- all attributes starting with `on` or containing `javascript:` are removed
+* the HTML is parsed
+* only whitelisted elements are preserved
+* all attributes starting with `on` or containing `javascript:` are removed
 
 The currently supported whitelisted elements are:
 
@@ -123,7 +123,7 @@ th, tr, u, ul
 
 The list of whitelisted elements is currently not configurable.
 
-[UNTIL Orbeon Forms 2023.1]
+\[UNTIL Orbeon Forms 2023.1]
 
 The cleanup is performed in two stages:
 

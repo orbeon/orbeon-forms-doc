@@ -12,15 +12,15 @@ _NOTE: At this time Orbeon doesn't provide integrations with specific virus scan
 
 ### Availability
 
-[SINCE Orbeon Forms 2022.1]
+\[SINCE Orbeon Forms 2022.1]
 
 This is an Orbeon Forms PE feature.
 
 Version 2 of the API adds the following enhancements to the original version (called now Version 1):
 
-- The provider can return a modified file name, content type, or even replace the entire content.
-- The provider can return custom error messages in the current language of the form.
-- An extension mechanism via hash maps is provided.
+* The provider can return a modified file name, content type, or even replace the entire content.
+* The provider can return custom error messages in the current language of the form.
+* An extension mechanism via hash maps is provided.
 
 While we recommend using Version 2 of the API, Version 1 is still supported. If a Version 2 provider is present, it takes precedence over a Version 1 provider.
 
@@ -47,27 +47,27 @@ interface FileScanProvider2 {
 
 When Orbeon Forms initializes the provider, it:
 
-- creates an instance of the class
-- calls the `init()` method
+* creates an instance of the class
+* calls the `init()` method
 
 When Orbeon Forms is starting to receive an upload file, it calls the `startStream()` method. The method receives:
 
-- `filename`: a file name as provided by the web browser (which means that it must not be trusted)
-- `headers`: HTTP header name/values as they are received by Orbeon Forms
-- `language`: the current form language at the time the user started the upload
-- `extension`: an extension immutable hashmap
-    - *NOTE: This is an empty hashmap from Orbeon Forms 2022.1.0 until 2022.1.4 included.* 
+* `filename`: a file name as provided by the web browser (which means that it must not be trusted)
+* `headers`: HTTP header name/values as they are received by Orbeon Forms
+* `language`: the current form language at the time the user started the upload
+* `extension`: an extension immutable hashmap
+  * _NOTE: This is an empty hashmap from Orbeon Forms 2022.1.0 until 2022.1.4 included._
 
 The `extension` hashmap contains the following keys and values:
 
 | Key           | Value type     | Description                                          | Since Orbeon Forms Version |
-|---------------|----------------|------------------------------------------------------|----------------------------|
+| ------------- | -------------- | ---------------------------------------------------- | -------------------------- |
 | `request.uri` | `java.net.URI` | path and query of the form containing the attachment | 2022.1.5                   |
 
 The `java.net.URI` associated with `request.uri` contains the following parts:
 
 | Part         | Description                                                                                            |
-|--------------|--------------------------------------------------------------------------------------------------------|
+| ------------ | ------------------------------------------------------------------------------------------------------ |
 | `getPath()`  | Orbeon Forms path that loaded the form, for example `/fr/acme/order/new` or `/fr/acme/order/edit/1234` |
 | `getQuery()` | the query string, for example `form-version=2`                                                         |
 | other        | set to `null`                                                                                          |
@@ -146,9 +146,9 @@ public abstract class FileScanResult {
 
 This essentially defines three possible results, all implementing `FileScanResult`:
 
-- `FileScanAcceptResult`: accept the uploaded content, possibly with modifications
-- `FileScanRejectResult`: reject the uploaded content (for example because it is suspected to contain a virus), possibly with a message
-- `FileScanErrorResult`: any other error happened, possibly with a message and `Throwable`
+* `FileScanAcceptResult`: accept the uploaded content, possibly with modifications
+* `FileScanRejectResult`: reject the uploaded content (for example because it is suspected to contain a virus), possibly with a message
+* `FileScanErrorResult`: any other error happened, possibly with a message and `Throwable`
 
 As bytes are received, the `bytesReceived()` method is called. This method allows incremental scanning of a file. A provider may or may not make use of this method. If it is unused, the provider must return a `FileScanAcceptResult` with all `null` content, for example with:
 
@@ -158,22 +158,17 @@ public FileScanResult bytesReceived(byte[] bytes, int offset, int length) {
 }
 ```
 
-When the file is completely uploaded and stored into a temporary file, but not yet attached to the user's form, the
-`complete()` method is called with a pointer to the temporary file. The scanner can use this method to perform the
-entirety of the scan in case `bytesReceived()` is not used.
+When the file is completely uploaded and stored into a temporary file, but not yet attached to the user's form, the `complete()` method is called with a pointer to the temporary file. The scanner can use this method to perform the entirety of the scan in case `bytesReceived()` is not used.
 
-Upon processing the `complete()` method, resources associated with the file scan must be cleared by the provider, whether
-`FileScanRejectResult` or `FileScanErrorResult` is returned, or if any exception is thrown as part of the processing of `complete()`.
+Upon processing the `complete()` method, resources associated with the file scan must be cleared by the provider, whether `FileScanRejectResult` or `FileScanErrorResult` is returned, or if any exception is thrown as part of the processing of `complete()`.
 
 Both `bytesReceived()` and `complete()` must return a value from the `FileScanStatus` enumeration:
 
-If `FileScanRejectResult` or `FileScanErrorResult` is returned, or if any exception is thrown as part of `startStream()`, `bytesReceived()`, or
-`complete()`, the uploaded file is rejected and an error is shown to the user.
+If `FileScanRejectResult` or `FileScanErrorResult` is returned, or if any exception is thrown as part of `startStream()`, `bytesReceived()`, or `complete()`, the uploaded file is rejected and an error is shown to the user.
 
-![File scan error](../../images/file-scan.png)
+![File scan error](../../../.gitbook/assets/file-scan.png)
 
-If the user cancels the upload, or if any other error occurs on the Orbeon Forms side, the `abort()` method is called.
-In this case, the file scan for the given file must be stopped and associated resources must be cleared, if any.
+If the user cancels the upload, or if any other error occurs on the Orbeon Forms side, the `abort()` method is called. In this case, the file scan for the given file must be stopped and associated resources must be cleared, if any.
 
 The `abort()` method may be called after the `complete()` method.
 
@@ -181,51 +176,49 @@ The constructor parameters for `FileScanAcceptResult`, `FileScanRejectResult`, a
 
 If the provider wants to accept the file but replace any of the following:
 
-- filename
-- mediatype
-- actual content
+* filename
+* mediatype
+* actual content
 
 It can do so with a `FileScanAcceptResult` response, simply by passing non-`null` values to the respective fields in the constructor.
 
 Replacing the entire content of the uploaded file is useful for example to:
 
-- strip metadata in images
-- recompress images (although there is a built-in Orbeon Forms feature for that)
-- standardize file formats
+* strip metadata in images
+* recompress images (although there is a built-in Orbeon Forms feature for that)
+* standardize file formats
 
 ### Registering a provider
 
-The file scan API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
-API with a provider name of `org.orbeon.oxf.xforms.upload.api.java.FileScanProvider2`.
+The file scan API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) API with a provider name of `org.orbeon.oxf.xforms.upload.api.java.FileScanProvider2`.
 
 The provider must:
 
-- be a public class
-- have a public no-arguments constructor
-- implement the `FileScanProvider2` Java interface
+* be a public class
+* have a public no-arguments constructor
+* implement the `FileScanProvider2` Java interface
 
 To enable a provider with Orbeon Forms:
 
-- create your provider as per the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) 
-- create a JAR file containing the code or your provider
-- place your JAR file under the Orbeon Forms `WEB-INF/lib` directory
+* create your provider as per the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
+* create a JAR file containing the code or your provider
+* place your JAR file under the Orbeon Forms `WEB-INF/lib` directory
 
 The Orbeon Forms log files will log errors if any when starting if the provider was found but could not be instantiated.
 
 ### Example
 
-[`AcmeFileScanProvider2`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-v2-example/src/main/java/acme/filescan/AcmeFileScanProvider2.java)
-is a Java example of a provider which does nothing but:
+[`AcmeFileScanProvider2`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-v2-example/src/main/java/acme/filescan/AcmeFileScanProvider2.java) is a Java example of a provider which does nothing but:
 
-- log method calls
-- reject files which contain in their name the string "virus"
-- replace files which contain in their name the string "replace"
-- prefix the file name with "My "
-- return messages in English and French
+* log method calls
+* reject files which contain in their name the string "virus"
+* replace files which contain in their name the string "replace"
+* prefix the file name with "My "
+* return messages in English and French
 
-*NOTE: This obviously is not the right way to determine whether a file contains a virus or not!*
+_NOTE: This obviously is not the right way to determine whether a file contains a virus or not!_
 
-The service provider is described with this [`META-INF/services/org.orbeon.oxf.xforms.upload.api.java.FileScanProvider2`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-v2-example/src/main/resources/META-INF/services/org.orbeon.oxf.xforms.upload.api.java.FileScanProvider2) file. 
+The service provider is described with this [`META-INF/services/org.orbeon.oxf.xforms.upload.api.java.FileScanProvider2`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-v2-example/src/main/resources/META-INF/services/org.orbeon.oxf.xforms.upload.api.java.FileScanProvider2) file.
 
 The example project is provided [here](https://github.com/orbeon/orbeon-forms/tree/master/file-scan-v2-example).
 
@@ -233,7 +226,7 @@ The example project is provided [here](https://github.com/orbeon/orbeon-forms/tr
 
 ### Availability
 
-[SINCE Orbeon Forms 2017.2]
+\[SINCE Orbeon Forms 2017.2]
 
 This is an Orbeon Forms PE feature.
 
@@ -255,12 +248,10 @@ public abstract class FileScanProvider {
 
 When Orbeon Forms initializes the provider, it:
 
-- creates an instance of the class
-- calls the `init()` method
+* creates an instance of the class
+* calls the `init()` method
 
-When Orbeon Forms is starting to receive an upload file, it calls the `startStream()` method. The method receives a
-file name as provided by the web browser (which means that it must not be trusted), and HTTP header name/values as they
-are received by Orbeon Forms. 
+When Orbeon Forms is starting to receive an upload file, it calls the `startStream()` method. The method receives a file name as provided by the web browser (which means that it must not be trusted), and HTTP header name/values as they are received by Orbeon Forms.
 
 The provider implementation must return an implementation of a `FileScan`.
 
@@ -276,19 +267,13 @@ interface FileScan {
 }
 ```
 
-As bytes are received, the `bytesReceived()` method is called. A provider may or may not make use of this method. If it
-is unused, the provider must return an `ACCEPT` `FileScanStatus` (see below). This method allows incremental scanning
-of a file.
+As bytes are received, the `bytesReceived()` method is called. A provider may or may not make use of this method. If it is unused, the provider must return an `ACCEPT` `FileScanStatus` (see below). This method allows incremental scanning of a file.
 
-When the file is completely uploaded and stored into a temporary file, but not yet attached to the user's form, the
-`complete()` method is called with a pointer to the temporary file. The scanner can use this method to perform the
-entirety of the scan in case `bytesReceived()` is not used.
+When the file is completely uploaded and stored into a temporary file, but not yet attached to the user's form, the `complete()` method is called with a pointer to the temporary file. The scanner can use this method to perform the entirety of the scan in case `bytesReceived()` is not used.
 
-Upon processing the `complete()` method, resources associated with the file scan must be cleared by the provider, whether
-`REJECT` or `ERROR` is returned, or if any exception is thrown as part of the processing of `complete()`.
+Upon processing the `complete()` method, resources associated with the file scan must be cleared by the provider, whether `REJECT` or `ERROR` is returned, or if any exception is thrown as part of the processing of `complete()`.
 
-Both `bytesReceived()` and `complete()` must return a value from the `FileScanStatus` enumeration:  
-
+Both `bytesReceived()` and `complete()` must return a value from the `FileScanStatus` enumeration:
 
 ```java
 package org.orbeon.oxf.xforms.upload.api.java;
@@ -296,54 +281,50 @@ package org.orbeon.oxf.xforms.upload.api.java;
 public enum FileScanStatus { ACCEPT, REJECT, ERROR }
 ```
 
-- `ACCEPT`: accept the uploaded content
-- `REJECT`: reject the uploaded content (for example because it is suspected to contain a virus)
-- `ERROR`: any other error happened
+* `ACCEPT`: accept the uploaded content
+* `REJECT`: reject the uploaded content (for example because it is suspected to contain a virus)
+* `ERROR`: any other error happened
 
-If `REJECT` or `ERROR` is returned, or if any exception is thrown as part of `startStream()`, `bytesReceived()`, or
-`complete()`, the uploaded file is rejected and an error is shown to the user.
+If `REJECT` or `ERROR` is returned, or if any exception is thrown as part of `startStream()`, `bytesReceived()`, or `complete()`, the uploaded file is rejected and an error is shown to the user.
 
-![File scan error](../../images/file-scan.png)
+![File scan error](../../../.gitbook/assets/file-scan.png)
 
-If the user cancels the upload, or if any other error occurs on the Orbeon Forms side, the `abort()` method is called.
-In this case, the file scan for the given file must be stopped and associated resources must be cleared, if any.
+If the user cancels the upload, or if any other error occurs on the Orbeon Forms side, the `abort()` method is called. In this case, the file scan for the given file must be stopped and associated resources must be cleared, if any.
 
 The `abort()` method may be called after the `complete()` method.
 
 ### Registering a provider
 
-The file scan API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
-API with a provider name of `org.orbeon.oxf.xforms.upload.api.FileScanProvider`.
+The file scan API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) API with a provider name of `org.orbeon.oxf.xforms.upload.api.FileScanProvider`.
 
 The provider must:
 
-- be a public class
-- have a public no-arguments constructor
-- extend the `FileScanProvider` Java abstract class
+* be a public class
+* have a public no-arguments constructor
+* extend the `FileScanProvider` Java abstract class
 
 To enable a provider with Orbeon Forms:
 
-- create your provider as per the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) 
-- create a JAR file containing the code or your provider
-- place your JAR file under the Orbeon Forms `WEB-INF/lib` directory
+* create your provider as per the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
+* create a JAR file containing the code or your provider
+* place your JAR file under the Orbeon Forms `WEB-INF/lib` directory
 
 The Orbeon Forms log files will log errors if any when starting if the provider was found but could not be instantiated.
 
 ### Example
 
-[`AcmeFileScanProvider`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-example/src/main/java/acme/filescan/AcmeFileScanProvider.java)
-is a Java example of a provider which does nothing but:
+[`AcmeFileScanProvider`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-example/src/main/java/acme/filescan/AcmeFileScanProvider.java) is a Java example of a provider which does nothing but:
 
-- log method calls
-- reject files which contain in their name the string "virus"
+* log method calls
+* reject files which contain in their name the string "virus"
 
-*NOTE: This obviously is not the right way to determine whether a file contains a virus or not.*
+_NOTE: This obviously is not the right way to determine whether a file contains a virus or not._
 
-The service provider is described with this [`META-INF/services/org.orbeon.oxf.xforms.upload.api.FileScanProvider`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-example/src/main/resources/META-INF/services/org.orbeon.oxf.xforms.upload.api.FileScanProvider) file. 
+The service provider is described with this [`META-INF/services/org.orbeon.oxf.xforms.upload.api.FileScanProvider`](https://github.com/orbeon/orbeon-forms/blob/master/file-scan-example/src/main/resources/META-INF/services/org.orbeon.oxf.xforms.upload.api.FileScanProvider) file.
 
 The example project is provided [here](https://github.com/orbeon/orbeon-forms/tree/master/file-scan-example).
 
 ## See also
 
-- [Connection context API](connection-context-api.md)
-- [Form Runner APIs](../README.md)
+* [Connection context API](connection-context-api.md)
+* [Form Runner APIs](../)

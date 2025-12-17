@@ -1,60 +1,58 @@
 # The basic app
 
-
-
 ## Getting started
 
 But first things first. Start by making a first functional page:
 
 * The first thing to do is to create a new directory for your application. Orbeon Forms already come with the complete `xforms-bookcast` application, so instead let's decide on another name, for example `my-bookcast`. Create a directory with that name as `RESOURCES/apps/my-bookcast`. For convenience, we refer to that new directory as the `BOOKCAST` directory below.
-* Create a `page-flow.xml` file under `BOOKCAST`:
+*   Create a `page-flow.xml` file under `BOOKCAST`:
 
-    ```xml
-    <controller xmlns="http://www.orbeon.com/oxf/controller">
-        <page path="/my-bookcast/" view="view.xhtml"/>
-        <epilogue url="oxf:/config/epilogue.xpl"/>
-    </controller>
+    ```markup
+      <controller xmlns="http://www.orbeon.com/oxf/controller">
+          <page path="/my-bookcast/" view="view.xhtml"/>
+          <epilogue url="oxf:/config/epilogue.xpl"/>
+      </controller>
     ```
 
 This page flow is automatically called for any path that starts with `/orbeon/my-bookcast/`. Here, it matches on the exact path `/orbeon/my-bookcast/` and calls up the page view called `view.xhtml`.
 
-* Create a skeleton for your `view.xhtml` under `BOOKCAST`:
+*   Create a skeleton for your `view.xhtml` under `BOOKCAST`:
 
-    ```xml
-    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
-        <head>
-            <title>XForms Bookcast</title>
-        </head>
-        <body>
-            <p>Hello!</p>
-        </body>
-    </html>
+    ```markup
+      <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xxf="http://orbeon.org/oxf/xml/xforms">
+          <head>
+              <title>XForms Bookcast</title>
+          </head>
+          <body>
+              <p>Hello!</p>
+          </body>
+      </html>
     ```
 
     This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the `<body>`. It also declares a bunch of XML namespaces that you need later in the document.
 
 Now go to:
 
-```xml
+```markup
 http://localhost:8080/orbeon/my-bookcast/
 ```
 
 You should see something like this:
 
-![][13]
+![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/08.png)
 
 _NOTE:_
 
 _If you get lost at some point in this tutorial, feel free to look at the reference source files for the Bookcast application:_
 
-* [view.xhtml][17]
-* [page-flow.xml][18]
+* [view.xhtml](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/view.xhtml)
+* [page-flow.xml](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/page-flow.xml)
 
 ## XForms model and instance
 
 An XForms document that wants to do something really useful needs at least one model containing one instance. But first it is wise to decide how you would like to represent the information captured by your form. This is an example that shows a possible representation of the data of the Bookcast application (notes are borrowed from Wikipedia and are under the GNU Free Documentation License):
 
-```xml
+```markup
 <books>
     <book>
         <title>Don Quixote de la Mancha</title>
@@ -111,7 +109,7 @@ An XForms document that wants to do something really useful needs at least one m
 
 As you can see, the idea is to store the information about all the books in a single XML document. So under a top-level `<books>` element, we put as many `<book>` children elements as needed. You will see later how it is possible with XForms to add and remove children elements. For now, your initial instance declaration is empty and contains a single book, and you place it as usual within an `<xf:model>` element:
 
-```xml
+```markup
 <xf:model>
     <xf:instance id="books-instance">
         <books xmlns="">
@@ -141,7 +139,7 @@ You should still see a blank page, because so far you haven't added any visual e
 
 Now it's time to add some visual controls to your page. Start with the following under the `<body>` element:
 
-```xml
+```markup
 <xf:group ref="book">
     <xf:input ref="title">
         <xf:label>Title</xf:label>
@@ -155,7 +153,7 @@ Now it's time to add some visual controls to your page. Start with the following
 
 Reload the page. You should see something like this:
 
-![][14]
+![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/09.png)
 
 After having looked at the [Hello example](../hello.md), this should be clear, with a little novelty: `<xf:group>`. This element allows grouping XForms controls together. The `ref="book"` element changes the current _evaluation context_ for the nested controls, which means that they can use simpler XPath expressions: `ref="title"` instead of `ref="book/title"` and `ref="author"` instead of `ref="book/author"` (groups have other uses but you don't need to learn that now).
 
@@ -165,7 +163,7 @@ Another thing: all XForms controls require a nested `<xf:label>` element, as an 
 
 Now say you want to make the title and author required data. You control this with the `<xf:bind>` element in the XForms model. Add the following under `<xf:model>` after your instance:
 
-```xml
+```markup
 <xf:bind ref="book">
     <xf:bind ref="title" required="true()"/>
     <xf:bind ref="author" required="true()"/>
@@ -176,28 +174,27 @@ Notice how, as you enter text in the title or author field, the field's backgrou
 
 The above requires some explanations:
 
-* The `<xf:bind>` element is used to assign so-called [_Model Item Properties_][19] (or _MIPs_) to XForms instance nodes (typically XML elements or attributes). Such properties include whether a field is required, read-only, or visible; whether the field has to satisfy a certain constraint or be of a particular type; and whether the field is a calculated value.
+* The `<xf:bind>` element is used to assign so-called [_Model Item Properties_](https://www.w3.org/TR/2006/REC-xforms-20060314/slice6.html) (or _MIPs_) to XForms instance nodes (typically XML elements or attributes). Such properties include whether a field is required, read-only, or visible; whether the field has to satisfy a certain constraint or be of a particular type; and whether the field is a calculated value.
 * Here we use the `required` attribute, which determines whether a field is, well, required, that is, whether it has to be filled out by the user.
 * Much like `<xf:group>` in the controls, `<xf:bind>` elements can be nested.
 * `<xf:bind>` uses a `ref` attribute, which allows pointing at more than one node using a single XPath expression.
-* The outer `<xf:bind>` element points to the `<book>` element under the top-level `<books>` element of your instance. This happens because the evaluation context for a top-level XPath expression in an `<xf:bind>` element is the root element of the first XForms instance. You could be more explicit, for example with:
+*   The outer `<xf:bind>` element points to the `<book>` element under the top-level `<books>` element of your instance. This happens because the evaluation context for a top-level XPath expression in an `<xf:bind>` element is the root element of the first XForms instance. You could be more explicit, for example with:
 
-    ```xml
-    <xf:bind ref="/books/book">
-        ...
-    </xf:bind>
+    ```markup
+      <xf:bind ref="/books/book">
+          ...
+      </xf:bind>
     ```
 
     Or with:
 
-    ```xml
-    <xf:bind ref="instance('books-instance')/book">
-        ...
-    </xf:bind>
+    ```markup
+      <xf:bind ref="instance('books-instance')/book">
+          ...
+      </xf:bind>
     ```
 
     The latter makes it clear, with the XForms `instance()` function, that you are addressing the `books-instance` instance and not another instance, so you will probably tend to prefer that notation.
-
 * The inner `<xf:bind>` elements apply the _required_ MIP to the `<title>` and `<author>` elements. The `required` attribute must contain an XPath expression, which is why it contains `true()` (the way to express a Boolean "true" value in XPath) and not simply `true`. Using XPath expressions allows you to make MIPs dynamically change, so that, for example, a form field can be required or not depending on other form fields.
 * Note that MIPs are assigned to XML nodes, not directly to controls. But they affect the controls that are bound to those nodes. This is part of XForms's MVC philosophy.
 
@@ -205,7 +202,7 @@ The above requires some explanations:
 
 XForms is of course not limited to simple input controls. Add the following after the second `<xf:input>` control:
 
-```xml
+```markup
 <xf:select1 ref="language">
     <xf:label>Language</xf:label>
     <xf:item>
@@ -229,7 +226,7 @@ XForms is of course not limited to simple input controls. Add the following afte
 
 Reload the page. You should see the following:
 
-![][15]
+![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/11.png)
 
 You have just added a single selection control with `<xf:select1>`. The name means that the user can "select one" item among several items. (XForms tends to call controls using more abstract terms, rather than giving them names such as "combo box" or "menu".) The single selection control usually appears like a drop-down menu or combo box with most XForms implementations (but you can change it's appearance as shown later).
 
@@ -237,7 +234,7 @@ Nested within the control, you find several `<xf:item>` elements. Each one creat
 
 Now XForms encourages you to store data in the model. For a selection control, this means storing the list of labels and values in an XForms instance instead of statically listing the items under the `<xf:select1>` element. So let's do this! Create a new instance in the model:
 
-```xml
+```markup
 <xf:instance id="languages-instance">
     <languages xmlns="">
         <language>
@@ -258,7 +255,7 @@ Now XForms encourages you to store data in the model. For a selection control, t
 
 Then modify the `<xf:select1>` element as follows:
 
-```xml
+```markup
 <xf:select1 ref="language">
     <xf:label>Language</xf:label>
     <xf:item>
@@ -280,7 +277,7 @@ You often don't have to use an item set, but using them gives you the flexibilit
 
 Now add yet another control, a text area:
 
-```xml
+```markup
 <xf:textarea ref="notes" appearance="xxf:autosize">
     <xf:label>Notes</xf:label>
 </xf:textarea>
@@ -296,7 +293,7 @@ Note that the application captures the same data without the `appearance` attrib
 
 To create the ratings input, add this new instance:
 
-```xml
+```markup
 <xf:instance id="ratings-instance">
     <ratings xmlns="">
         <rating>
@@ -325,7 +322,7 @@ To create the ratings input, add this new instance:
 
 And then add another `<xf:select1>` control:
 
-```xml
+```markup
 <xf:select1 ref="rating" appearance="full">
     <xf:label>Rating</xf:label>
     <xf:item>
@@ -343,7 +340,7 @@ Here again, you store the list of items as a separate instance, but we keep the 
 
 The only missing control now is the input field bound to the `<link>` element. Add this, and you should have something like this in your controls:
 
-```xml
+```markup
 <xf:group ref="book">
     <xf:input ref="title">
         <xf:label>Title</xf:label>
@@ -389,14 +386,6 @@ The only missing control now is the input field bound to the `<link>` element. A
 
 And this is how the result should look like (you will see how to add the Save button you see on this screenshot in the next section):
 
-![][16]
+![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/12.png)
 
 By now you probably get the gist of it!
-
-[13]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/08.png
-[14]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/09.png
-[15]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/11.png
-[16]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/12.png
-[17]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/view.xhtml
-[18]: https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/page-flow.xml
-[19]: https://www.w3.org/TR/2006/REC-xforms-20060314/slice6.html

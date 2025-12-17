@@ -1,18 +1,16 @@
 # Database access
 
-
-
 ## Adding a "save" button
 
 The Bookcast application now allows you to capture some data. But it is not a very useful application yet, because it doesn't do anything with it! So let's see how you can add a "Save" button that, once pressed, well, saves the data in your form.
 
-Many applications use relational databases as a persistence layer. But because Orbeon Forms and XForms use XML as their native data format, it is very appropriate to use a database that understands XML instead. Orbeon Forms comes with the open source [eXist database][17] that does just that.
+Many applications use relational databases as a persistence layer. But because Orbeon Forms and XForms use XML as their native data format, it is very appropriate to use a database that understands XML instead. Orbeon Forms comes with the open source [eXist database](http://exist.sourceforge.net/) that does just that.
 
 So how do you save data from XForms to a database? An important feature of XForms is the XForms _submission_. A submission allows you to read and write XML documents using HTTP and other protocols. Because the eXist database has a REST API (in other words an HTTP-friendly interface), XForms can directly talk to eXist to read and write XML documents and perform all the common CRUD (Create, Retrieve, Update and Delete) operations.
 
 So look at how you create a submission that saves the `books-instance` instance into eXist:
 
-```xml
+```markup
 <xf:submission
     id="save-submission"
     ref="instance('books-instance')"
@@ -26,16 +24,16 @@ Let's look at the details:
 * The `<xf:submission>` element declares a submission.
 * As usual, the `id` attribute allows referring to the submission from other XForms constructs.
 * The `ref` attribute specifies what piece of XML must be handled by the submission. It points to an instance node with an XPath expression. Here, we point to the whole `books-instance` instance by using the `instance()` function.
-* The `resource` attribute specifies to what URL the submission takes place. Here, you use an absolute path:
+*   The `resource` attribute specifies to what URL the submission takes place. Here, you use an absolute path:
 
-    ```xml
-    /exist/rest/db/orbeon/my-bookcast/books.xml
+    ```markup
+      /exist/rest/db/orbeon/my-bookcast/books.xml
     ```
 
     This path is equivalent to using the absolute URL:
 
-    ```xml
-    http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
+    ```markup
+      http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
     ```
 
     (Because it is inconvenient for you to always write absolute URLs when you want to address an URL handle by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
@@ -46,7 +44,7 @@ Let's look at the details:
 
 This is great, but specifying a submission does not do anything until you _send_ (execute) that submission. A simple way to do this is to use the submit control:
 
-```xml
+```markup
 <xf:submit submission="save-submission">
     <xf:label>Save</xf:label>
 </xf:submit>
@@ -60,27 +58,27 @@ So go ahead and:
 * Add the submission to the model.
 * Reload the page.
 * Enter a book title and an author, then press the "Save" button. Your form data has been silently saved to the database. It was that easy!
-* Then, let's check that the data is actually in the database. By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/WEB-INF/web.xml`  noting that you will need to remove the  comment after `<url-pattern>` to make it well formed XML. (and don't forget to put them back before going to production if necessary):
+*   Then, let's check that the data is actually in the database. By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/WEB-INF/web.xml` noting that you will need to remove the comment after `<url-pattern>` to make it well formed XML. (and don't forget to put them back before going to production if necessary):
 
-    ```xml
-    <filter-mapping>
-        <filter-name>orbeon-exist-filter</filter-name>
-        <url-pattern>/exist/*</url-pattern>
-        <xsl:comment>Security filter for eXist</xsl:comment>
-        <dispatcher>REQUEST</dispatcher>
-        <dispatcher>FORWARD</dispatcher>
-    </filter-mapping>
+    ```markup
+      <filter-mapping>
+          <filter-name>orbeon-exist-filter</filter-name>
+          <url-pattern>/exist/*</url-pattern>
+          <xsl:comment>Security filter for eXist</xsl:comment>
+          <dispatcher>REQUEST</dispatcher>
+          <dispatcher>FORWARD</dispatcher>
+      </filter-mapping>
     ```
 
     Then, open up a new browser tab or window, and enter the following URL:
 
-    ```xml
-    http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
+    ```markup
+      http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
     ```
 
     This is the exact same URL to which your submission has done an HTTP `PUT`. By entering it in your browser, you tell it to do an HTTP `GET` instead, and the eXist database simply sends the XML document to your browser. You should see this:
 
-    ![][18]
+    ![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/13.png)
 
 Try changing the book author and pressing "Save" again. Then in your other browser tab or window, reload the eXist URL, and notice that the data has actually changed in the database.
 
@@ -96,7 +94,7 @@ You can now save your data to the database, and read it back using your web brow
 
 You guessed it, one way of doing this is to use a submission:
 
-```xml
+```markup
 <xf:submission
     id="list-submission"
     serialization="none"
@@ -113,17 +111,17 @@ There are a few differences with this `<xf:submission>`:
 * The `get` method specifies that you want to do an HTTP `GET`, like when you pointed your web browser at the URL to read the document from eXist.
 * The `replace="instance"` attribute specifies that the result of the submission has to be stored into an instance. The `instance="books-instance"` attribute specifies the identifier of the instance into which the result must be stored.
 
-Add this element after the previous `<xf:submission>` element which has an id value of `save-submission, `i.e. one submission follows the other.
+Add this element after the previous `<xf:submission>` element which has an id value of `save-submission,`i.e. one submission follows the other.
 
-Like with the `<xf:submission`> having  an id of  `save-submission`, the submission needs to be sent to achieve something. You do this by adding the following _event handler_ to the model, just before the end of the model:
+Like with the `<xf:submission`> having an id of `save-submission`, the submission needs to be sent to achieve something. You do this by adding the following _event handler_ to the model, just before the end of the model:
 
-```xml
+```markup
 <xf:send event="xforms-ready" submission="list-submission"/>
 ```
 
 Hence the code now has the appearance of
 
-```xml
+```markup
 <xf:submission id="save-submission" .../>
 
 <xf:submission id="list-submission" .../>
@@ -158,7 +156,7 @@ Now let's see how we can enter information about more than a single book!
 
 XForms comes with a really handy construct called `<xf:repeat>`. This allows you to _repeat_ sections of user interface controls, based on instance data. To see how this works, first replace the group you have defined:
 
-```xml
+```markup
 <xf:group ref="book">
     ...
 </xf:group>
@@ -166,7 +164,7 @@ XForms comes with a really handy construct called `<xf:repeat>`. This allows you
 
 with, instead, this:
 
-```xml
+```markup
 <xf:repeat ref="book" id="book-repeat">
     ...
 </xf:repeat>
@@ -178,7 +176,7 @@ This tells the XForms engine that the content of the `<xf:repeat>` element must 
 
 The trick now is to manage to _add_ a new `<book>` element to the `books-instance` instance. First, create a _template_ for the new `<book>` element to insert by declaring a new instance:
 
-```xml
+```markup
 <xf:instance id="book-template">
     <book xmlns="">
         <title/>
@@ -193,7 +191,7 @@ The trick now is to manage to _add_ a new `<book>` element to the `books-instanc
 
 Then you want to copy that template to the right place in `books-instance` when the user presses a button. You do this with a new control called `<xf:trigger>` and a new action called `<xf:insert>`. Add the following to your controls:
 
-```xml
+```markup
 <xf:trigger>
     <xf:label>Add One</xf:label>
     <xf:insert
@@ -213,7 +211,7 @@ Let's explain what the above does:
 * The `<xf:trigger>` element declares a button (remember, XForms likes more abstract names, but this control could have as well been called `<xf:button>`). Like all XForms controls, `<xf:trigger>` takes a label, which is here displayed within the button.
 * Once the user presses it, the button sends an event called `DOMActivate`. Don't be scared by this funny name, you will use it all the time. It just means that the user has _activated_ the button, which in most cases means that the user pressed (clicked) on it.
 * `<xf:insert>` is declared as an event handler with the `event="DOMActivate"` attribute, so this action runs when the user presses the button.
-* Here we have decided that we want to insert a new book always in first position in the page. The trick is to configure the insert action with the appropriate attributes.
+*   Here we have decided that we want to insert a new book always in first position in the page. The trick is to configure the insert action with the appropriate attributes.
 
     With the configuration provided, the action _inserts_ (`<xf:insert>`) the contents of the `book-template` instance (origin="instance('book-template')") _before_ (`position="before"`) the _first_ (`at="1"`) element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`).
 
@@ -221,7 +219,7 @@ Let's explain what the above does:
 
     Make the changes above, press on the "Add One" button, and you see a new row of controls created.
 
-    ![][19]
+    ![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/14.png)
 
 Again the XForms engine does its magic and takes care of updating the web page automatically. You also notice that the web page does not reload as it updates. This is because Orbeon Forms uses Ajax technology to perform updates to the page. With Ajax, client-side JavaScript code silently talks to the Orbeon Forms server, which then communicates to the client-side code the updates to perform to the page. These updates are directly done to the HTML Document Object Model (DOM) without reload.
 
@@ -229,7 +227,7 @@ Again the XForms engine does its magic and takes care of updating the web page a
 
 If you can add books, you probably also want to be able to remove them. This can be done with the `<xf:delete>` action. It doesn't seem to make much sense to always remove the first book, but rather, you probably want to delete a specific book. This can be done in several ways, but what about adding a delete button next to each series of repeated controls:
 
-```xml
+```markup
 <xf:trigger>
     <xf:label>Remove</xf:label>
     <xf:delete
@@ -244,7 +242,7 @@ This works in a way very similar to the "Add One" button:
 
 * The `<xf:trigger>` element declares a button, but here with a different label ("Remove"). Once the user presses it, the button sends a `DOMActivate`.
 * `<xf:delete>` is declared as an event handler with the `event="DOMActivate"` attribute.
-* The difference is in the configuration of `<xf:delete>`.
+*   The difference is in the configuration of `<xf:delete>`.
 
     Here you don't use the `position` and `origin` attributes. What you are telling the action here is to delete (`<xf:delete>`) the element called `<book>` (`ref="book"`) under the `books-instance` instance's root element (`context="instance('books-instance')"`) which is at the current index position of the `book-repeat` repetition (`at="index('book-repeat')"`).
 
@@ -254,21 +252,16 @@ This works in a way very similar to the "Add One" button:
 
 Now add the new trigger within `<xf:repeat>` and reload the page. Try adding books, then removing them by pressing the "Remove" button.
 
-![][20]
+![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/15.png)
 
 ## Adding a "revert" button
 
 For fun, let's also add a new button to cancel your unsaved edits and reload the original data from the database. It's as easy as this:
 
-```xml
+```markup
 <xf:submit submission="list-submission">
     <xf:label>Revert</xf:label>
 </xf:submit>
 ```
 
 When you press the "Revert" button, the `list-submission` submission is called, which causes the latest saved `books.xml` document to be reloaded. The XForms engine makes sure that all the controls on the page, including repeats, automatically update to reflect the changes to the `books-instance` instance.
-
-[17]: http://exist.sourceforge.net/
-[18]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/13.png
-[19]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/14.png
-[20]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/15.png

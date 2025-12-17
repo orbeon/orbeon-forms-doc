@@ -2,54 +2,48 @@
 
 ## Availability
 
-[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+[\[SINCE Orbeon Forms 2025.1\]](../../release-notes/orbeon-forms-2025.1.md)
 
 ## Introduction
 
 It is useful for a form to be able to show a confirmation page to the user once processing is complete. The confirmation page is a built-in feature which allows:
 
-- displaying a message to the user once the form is successfully submitted
-- allowing the user to download a PDF copy of the submitted data
+* displaying a message to the user once the form is successfully submitted
+* allowing the user to download a PDF copy of the submitted data
 
-<figure>
-    <img alt="Confirmation page example" src="../images/confirmation-page-example.webp" width="590">
-    <figcaption>Confirmation page example</figcaption>
-</figure>
+<figure><img src="../../.gitbook/assets/confirmation-page-example.webp" alt="Confirmation page example" width="590"><figcaption><p>Confirmation page example</p></figcaption></figure>
 
-Like email templates, the confirmation page can be customized using Form Builder, using *confirmation page templates*.
+Like email templates, the confirmation page can be customized using Form Builder, using _confirmation page templates_.
 
 ## Form Builder user interface
 
 You open the "Confirmation Page Settings" dialog from the Form Builder "Advanced" tab.
 
-<figure>
-    <img alt="Advanced tab in Form Builder toolbox" src="../images/advanced-tab.webp" width="219">
-    <figcaption>Advanced tab in Form Builder toolbox</figcaption>
-</figure>
+<figure><img src="../../.gitbook/assets/advanced-tab.webp" alt="Advanced tab in Form Builder toolbox" width="219"><figcaption><p>Advanced tab in Form Builder toolbox</p></figcaption></figure>
 
 The "Confirmation Page Settings" dialog allows you to create multiple templates, each with a name and optional language. The confirmation page selects a template as follows:
 
-- All the templates that are for a specific language which doesn't correspond to the current language are filtered out.
-- If at least one template which corresponds to the current language exists, the first such template is used, following the order in which they are defined in the form.
-- The first remaining template is used, following the order in which they are defined in the form.
+* All the templates that are for a specific language which doesn't correspond to the current language are filtered out.
+* If at least one template which corresponds to the current language exists, the first such template is used, following the order in which they are defined in the form.
+* The first remaining template is used, following the order in which they are defined in the form.
 
-__NOTE: As of Orbeon Forms 2025.1, unlike with email templates, it is not possible to choose a template by name.__
+**NOTE: As of Orbeon Forms 2025.1, unlike with email templates, it is not possible to choose a template by name.**
 
 Templates can specify a title and a message body.
 
-![Confirmation Page Templates dialog](../images/confirmation-page-settings-templates.webp)
+![Confirmation Page Templates dialog](../../.gitbook/assets/confirmation-page-settings-templates.webp)
 
 Both title and message body can be configured with templates parameters which can include:
 
-- control values
-- formulas
+* control values
+* formulas
 
-![Confirmation Page Templates dialog with parameters](../images/confirmation-page-settings-template-params.webp)
+![Confirmation Page Templates dialog with parameters](../../.gitbook/assets/confirmation-page-settings-template-params.webp)
 
 You can also choose whether a PDF download button is available. The PDF is produced as follows:
 
-- If, in a previous page, a process used the `send()` or `email()` action and a PDF was produced at that time, then that PDF is used.
-- Otherwise, the PDF is produced at the time the confirmation page is shown.
+* If, in a previous page, a process used the `send()` or `email()` action and a PDF was produced at that time, then that PDF is used.
+* Otherwise, the PDF is produced at the time the confirmation page is shown.
 
 ## Form Runner configuration
 
@@ -70,6 +64,6 @@ By default, Form Runner does not show a confirmation page. You navigate to a con
 
 ## See also
 
-- [Email settings dialog](/form-builder/email-settings.md)
-- [Form Runner email action](/form-runner/advanced/buttons-and-processes/actions-form-runner-email.md)
-- [Custom modes](custom-modes.md)
+* [Email settings dialog](../../form-builder/email-settings.md)
+* [Form Runner email action](../advanced/buttons-and-processes/actions-form-runner-email.md)
+* [Custom modes](custom-modes.md)

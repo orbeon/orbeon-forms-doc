@@ -1,12 +1,10 @@
-# Error Summary Component
-
-
+# Error summary
 
 ## What it does
 
 The Error Summary component is a reusable component listing the errors present on your form (or a sub-form):
 
-![](images/xbl-error-summary-errors.png)
+![](../../.gitbook/assets/xbl-error-summary-errors.png)
 
 Main features:
 
@@ -64,7 +62,7 @@ The title can be dynamic, e.g. for localization purposes:
 If specified, the following attributes point to nodes into which the error summary makes useful information available to you:
 
 * `error-count-ref:` current number of errors in the sub-form `(xs:integer)`.
-* `visible-errors-count-ref:` current number of visible errors in the sub-form.  An error for a control is visible if the control has been visited by the user `(xs:integer`).
+* `visible-errors-count-ref:` current number of visible errors in the sub-form. An error for a control is visible if the control has been visited by the user `(xs:integer`).
 * `valid-ref:` whether the sub-form is valid or not `(xs:boolean)`.
 
 ```xml
@@ -88,7 +86,7 @@ You can use this information for example to show a status icon:
 You can dispatch the `fr-visit-all` event to the error summary. This:
 
 * makes the summary consider all controls under the configured observer(s) as visited
-* marks all controls under the configured observer(s) as visited by adding the `xforms-visited and `xforms-alert-active-visited` classes`
+* marks all controls under the configured observer(s) as visited by adding the `xforms-visited and` xforms-alert-active-visited `classes`
 
 This is useful when the user, for example, presses a "Save" button: in that case, you might want to show all the errors on the form right away:
 
@@ -123,9 +121,9 @@ You can dispatch the `fr-unvisit-all` event to the error summary. This:
 
 ### Automatically marking controls as visited
 
-In Orbeon Forms, a form control can be *visited* or not. Visited controls have typically been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control.
+In Orbeon Forms, a form control can be _visited_ or not. Visited controls have typically been visited by the user, which means that the user navigated through the form control, possibly without changing its value. One way to visit form controls is to navigate using the "Tab" key, or to click on the form control and then click outside of it. Another way is to use the default "Save" or "Send" buttons, which by default visit all the form controls before proceeding. The notion is used to determine whether to show validation errors associated with that form control.
 
-[SINCE Orbeon Forms 2023.1] Form controls are also marked as visited when they are calculated, visible, and their value changes. This is useful to immediately show validation errors associated with such form controls, which are typically implemented with the Calculated Value form control. You can disable this behavior by setting the following property:
+\[SINCE Orbeon Forms 2023.1] Form controls are also marked as visited when they are calculated, visible, and their value changes. This is useful to immediately show validation errors associated with such form controls, which are typically implemented with the Calculated Value form control. You can disable this behavior by setting the following property:
 
 ```xml
 <property
@@ -134,7 +132,7 @@ In Orbeon Forms, a form control can be *visited* or not. Visited controls have t
     value="false"/>
 ```
 
-[\[SINCE Orbeon Forms 2024.1\]](/release-notes/orbeon-forms-2024.1.md) Form controls are also marked as visible as they become invalid. This is useful when you want to immediately show validation errors for field that become invalid not as the result of their value changing, but because their validity depend on something else in the form that has changed. You can disable this behavior by setting the following property:
+[\[SINCE Orbeon Forms 2024.1\]](../../release-notes/orbeon-forms-2024.1.md) Form controls are also marked as visible as they become invalid. This is useful when you want to immediately show validation errors for field that become invalid not as the result of their value changing, but because their validity depend on something else in the form that has changed. You can disable this behavior by setting the following property:
 
 ```xml
 <property
@@ -145,10 +143,9 @@ In Orbeon Forms, a form control can be *visited* or not. Visited controls have t
 
 ## Setting a page size
 
-[SINCE Orbeon Forms 2018.1]
+\[SINCE Orbeon Forms 2018.1]
 
-When forms have a large number of errors, the Error Summary can become too large to be very useful. By default, the
-Error Summary only shows 20 errors, and link buttons appear to show more or less errors if needed.
+When forms have a large number of errors, the Error Summary can become too large to be very useful. By default, the Error Summary only shows 20 errors, and link buttons appear to show more or less errors if needed.
 
 To change the default, you can set the following property:
 
@@ -228,4 +225,4 @@ To properly update the error summary within a submission response, you might nee
 
 ## See also
 
-- [Enhanced validation in Form Builder and Form Runner](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
+* [Enhanced validation in Form Builder and Form Runner](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)

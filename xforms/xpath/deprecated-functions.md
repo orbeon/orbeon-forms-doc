@@ -1,10 +1,8 @@
 # Deprecated functions
 
-
-
 ## xxf:event()
 
-```xpath
+```
 xxf:event(
     $attribute-name as xs:string
 ) as item()*
@@ -16,7 +14,7 @@ This function is deprecated since Orbeon Forms 4.0 and is just an alias for the 
 
 ## xf:if() / xxf:if()
 
-```xpath
+```
 xf:if()
 xxf:if()
 ```

@@ -1,43 +1,41 @@
-# XForms Binds
-
-
+# Binds
 
 ## Introduction
 
 The XForms `xf:bind` element is used to point to data in the data model. It allows to associate with data:
 
-- an `id`
-- a `name` (see [Model Bind Variables](model-bind-variables.md))
-- properties, called Model Item Properties (MIPs)
+* an `id`
+* a `name` (see [Model Bind Variables](model-bind-variables.md))
+* properties, called Model Item Properties (MIPs)
 
 This serves the following functions:
 
-- in the model
-  - determine which part of the data is valid, readonly, and relevant
-  - apply calculations to the data (formulas)
-  - export variables used in calculations (see [Model Bind Variables](model-bind-variables.md))
-- in the model and in the view
-  - as an indirection to the data model, with the `bind` attribute or the `bind()` function
+* in the model
+  * determine which part of the data is valid, readonly, and relevant
+  * apply calculations to the data (formulas)
+  * export variables used in calculations (see [Model Bind Variables](model-bind-variables.md))
+* in the model and in the view
+  * as an indirection to the data model, with the `bind` attribute or the `bind()` function
 
 ## Extensions
 
 ### Nested MIP elements
 
-[SINCE Orbeon Forms 4.3 for `xf:constraint`, and 4.9 for other elements]
+\[SINCE Orbeon Forms 4.3 for `xf:constraint`, and 4.9 for other elements]
 
 Instead of the `type`, `readonly`, `required`, `relevant`, `calculate`, `constraint`, and `xxf:default` attributes, you can use nested elements:
 
-- `xf:type`
-- `xf:readonly`
-- `xf:required`
-- `xf:relevant`
-- `xf:calculate`
-- `xf:constraint`
-- `xxf:default` (see below)
+* `xf:type`
+* `xf:readonly`
+* `xf:required`
+* `xf:relevant`
+* `xf:calculate`
+* `xf:constraint`
+* `xxf:default` (see below)
 
 All elements except `xf:type` (whose value is not an XPath expression but a type literal) have a `value` attribute. The following binds are equivalent:
 
-```xml
+```markup
 <xf:bind
     ref="control-1"
     type="xf:decimal"
@@ -48,7 +46,7 @@ All elements except `xf:type` (whose value is not an XPath expression but a type
 
 and:
 
-```xml
+```markup
 <xf:bind ref="control-1">
     <xf:type>xs:decimal</xf:type>
     <xxf:default value="42"/>
@@ -60,8 +58,8 @@ and:
 
 This enables two features:
 
-- the ability to assign a specific `id` attribute to a MIP and [refer to it from an `<xf:alert>](validation.md#Nested validation elements)
-- the ability to specify multiple `readonly`, `required`, `relevant`, and `constraint` rules (which are combined using either a boolean "or" or a boolean "and")
+* the ability to assign a specific `id` attribute to a MIP and [refer to it from an \`](validation.md#Nested%20validation%20elements)
+* the ability to specify multiple `readonly`, `required`, `relevant`, and `constraint` rules (which are combined using either a boolean "or" or a boolean "and")
 
 See [XForms Validation](validation.md) for details about the validation-related elements (`xf:type`, `xf:required`, and `xf:constraint`).
 
@@ -71,23 +69,23 @@ _NOTE: This is scheduled to be standardized in XForms 2._
 
 Model Item Properties (MIPs) have a default value:
 
-- required: `false`
-- valid: `true` (depends on a series of conditions, including `required`)
-- relevant: `true`
-- readonly: `false`
+* required: `false`
+* valid: `true` (depends on a series of conditions, including `required`)
+* relevant: `true`
+* readonly: `false`
 
 The resulting value of a MIP on a given node when multiple binds touch that node is the result of a boolean combination:
 
-- required: boolean "or"
-- valid: boolean "and"
-- relevant: boolean "and"
-- readonly: boolean "or"
+* required: boolean "or"
+* valid: boolean "and"
+* relevant: boolean "and"
+* readonly: boolean "or"
 
 The values are also combined this way when multiple nested elements are specified on a same bind.
 
 Consider the following example:
 
-```xml
+```markup
 <xf:model>
     <xf:instance>
         <instance>
@@ -105,10 +103,10 @@ _NOTE: This is the behavior with Orbeon Forms 3.9 onwards. With Orbeon Forms 3.8
 
 ### Extension XPath functions
 
-- The `xxf:bind()` function returns the node-set of a given bind.
-    - *NOTE: This is also available as a plain `bind()` function since it is proposed for XForms 2.0.*
-- The `xxf:evaluate-bind-property()` function evaluates a property of a given bind.
-- The `xxf:type()` function returns the type of the instance data node passed as parameter.
+* The `xxf:bind()` function returns the node-set of a given bind.
+  * _NOTE: This is also available as a plain_ `bind()` _function since it is proposed for XForms 2.0._
+* The `xxf:evaluate-bind-property()` function evaluates a property of a given bind.
+* The `xxf:type()` function returns the type of the instance data node passed as parameter.
 
 For details, see [XPath Function Library](xpath/standard-functions.md).
 
@@ -118,7 +116,7 @@ You can place user-defined Model Item Properties (MIPs) on the `<xf:bind>` eleme
 
 When `xxf:custom-mips` is missing (see below), any attribute not in a standard Orbeon namespace is interpreted as a custom MIP:
 
-```xml
+```markup
 <xf:bind ref="*" foo:bar="if (starts-with(., 'g')) then 'is-g' else 'is-not-g'"/>
 ```
 
@@ -134,7 +132,7 @@ Custom MIPs have the side effect of placing CSS classes on controls bound to aff
 
 With the example above, the following class names can be set: `foo-bar-is-g` or `foo-bar-is-not-g`.
 
-[SINCE Orbeon Forms 4.0.1]
+\[SINCE Orbeon Forms 4.0.1]
 
 The model supports the `xxf:custom-mips` attribute, which lists the names of the custom MIPs in use. When this attribute is present, only the attributes with names listed are interpreted as MIPs. Other non-built-in attributes are ignored.
 
@@ -142,7 +140,7 @@ When this attribute is missing, the backward-compatible behavior is enabled and 
 
 It is recommended to use the `xxf:custom-mips` attribute to specify which attributes are custom MIPs.
 
-```xml
+```markup
 <xf:model xxf:custom-mips="foo:bar foo:baz">
     <xf:bind ref="name" foo:bar="normalize-space(.) = ''" foo:baz="42"/>
 </xf:model>
@@ -154,7 +152,7 @@ It is recommended to use the `xxf:custom-mips` attribute to specify which attrib
 
 In XForms, default or initial values can be set by pre-populating an instance document's elements and attributes with initial data, for example:
 
-```xml
+```markup
 <xf:instance>
     <form>
         <username>jdoe</username>
@@ -165,7 +163,7 @@ In XForms, default or initial values can be set by pre-populating an instance do
 
 For dynamic values, for example coming from request parameters or session values, there is no declarative notation and you must use `xforms-submit-done`, `xforms-model-construct-done`, or `xforms-submit-ready`, which is sometimes cumbersome:
 
-```xml
+```markup
 <xf:setvalue
     event="xforms-model-construct-done"
     ref="username"
@@ -174,7 +172,7 @@ For dynamic values, for example coming from request parameters or session values
 
 For convenience, Orbeon Forms support an extension MIP: `xxf:default`. It works like the standard `calculate`, except that it is evaluated only once, just before the first evaluation of the `calculate` expressions if any.
 
-```xml
+```markup
 <xf:bind ref="username" xxf:default="xxf:get-request-header('MY_USER')"/>
 ```
 
@@ -182,13 +180,13 @@ For convenience, Orbeon Forms support an extension MIP: `xxf:default`. It works 
 
 `<xf:recalculate>` supports an extension attribute, `xxf:defaults`, which, when set to `true`, forces the re-evaluation of initial values before performing the recalculation.
 
-```xml
+```markup
 <xf:recalculate xxf:defaults="true"/>
 ```
 
 The `xxf:defaults` attribute is an AVT and can include XPath expressions between curly brackets:
 
-```xml
+```markup
 <xf:recalculate xxf:defaults="{instance()/status = 'dirty'}"/>
 ```
 
@@ -200,22 +198,22 @@ See [Evaluation of initial values upon insert](actions/repeat-insert-delete.md).
 
 #### The xxf:whitespace MIP
 
-[SINCE Orbeon Forms 2016.1]
+\[SINCE Orbeon Forms 2016.1]
 
 The `xxf:whitespace` MIP controls whitespace trimming. When the MIP is absent, there is no whitespace trimming.
 
 `xxf:whitespace` can take one of two values:
 
-- `preserve`: there is no change to the value's whitespace (the default).
-- `trim`: leading and trailing whitespace is removed.
+* `preserve`: there is no change to the value's whitespace (the default).
+* `trim`: leading and trailing whitespace is removed.
 
-*NOTE: The value is static and cannot be the result of an XPath expression.*
+_NOTE: The value is static and cannot be the result of an XPath expression._
 
 When using `trim`, all leading and trailing characters which are spaces, including non-breakable spaces, or ISO control characters, are removed.
 
 Example:
 
-```xml
+```markup
 <xf:bind
     id="first-name-bind"
     ref="first-name"
@@ -234,7 +232,7 @@ XForms provides actions to force a given model's rebuild, recalculate, revalidat
 
 Orbeon Forms provides an extension on those actions to defer the behavior of those actions by just setting the appropriate flags defined in the XForms specification, but not actually running the actions immediately. The actions will run as needed the next time the flags are checked.
 
-```xml
+```markup
 <xf:rebuild     xxf:deferred="true"/>
 <xf:recalculate xxf:deferred="true"/>
 <xf:revalidate  xxf:deferred="true"/>
@@ -244,7 +242,7 @@ Orbeon Forms provides an extension on those actions to defer the behavior of tho
 
 Sometimes, read-only controls don't appear very nicely in web browsers. For example, a combo box will appear grayed out. It may be be hard to read, and there is not much point showing a combo box since the user can't interact with it. Furthermore, with some browsers, like IE 6 and earlier, it is not even possible to make disabled controls appear nicer with CSS. In order to make read-only versions of forms look nicer, Orbeon Forms supports a special extension attribute that allows you to produce a "static" appearance for read-only controls. You enable this on your first XForms model:
 
-```xml
+```markup
 <xf:model xxf:readonly-appearance="static">
     ...
 </xf:model>
@@ -262,7 +260,7 @@ See Form Runner's _Preview_ mode for an example of this feature in action.
 
 You often want to present a form without allowing the user to enter data. An easy solution is to use the `readonly` MIP in the model. By making for example the root element of an instance read-only, all the controls bound to any node of that instance will appear read-only (because the read-only property is inherited in an instance):
 
-```xml
+```markup
 <xf:instance>
     <form>
         ...
@@ -273,11 +271,11 @@ You often want to present a form without allowing the user to enter data. An eas
 
 ## See also
 
-- [XForms Validation](validation.md)
-- [XForms Model bind variables](model-bind-variables.md)
-- [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
-- [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
-- [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
-- [Evaluation of initial values upon insert](actions/repeat-insert-delete.md)
-- [Grid component](../form-runner/component/grid.md)
-- Blog post: [Required fields: more subtle than you might think](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
+* [XForms Validation](validation.md)
+* [XForms Model bind variables](model-bind-variables.md)
+* [Better formulas with XPath type annotations](https://blog.orbeon.com/2013/01/better-formulas-with-xpath-type.html)
+* [Formulas for summing values, done right](https://blog.orbeon.com/2013/08/formulas-for-summing-values-done-right.html)
+* [Control required values with formulas in Orbeon Forms 4.7](https://blog.orbeon.com/2014/09/control-required-values-with-formulas.html)
+* [Evaluation of initial values upon insert](actions/repeat-insert-delete.md)
+* [Grid component](../form-runner/component/grid.md)
+* Blog post: [Required fields: more subtle than you might think](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)

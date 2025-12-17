@@ -4,32 +4,32 @@
 
 The Form Builder toolbox provides the following:
 
-- **Global icons:**
-    - Form Settings [SINCE Orbeon Forms 2017.2]
-    - Cut/copy/paste
-    - Undo/redo [SINCE Orbeon Forms 2017.2]
-    - "Reload toolbox" [UNTIL Orbeon Forms 2017.1]
-- **Form structure:**
-    - New Section
-    - New Grid
-    - New Repeated Grid
-- **Form controls:**
-    - Form control (also known as form fields) you can add to your form.
-- **Metadata:**
-    - Allows you to modify the application name and form name.
-- **Advanced:**
-    - Includes advanced features like XML Schema, PDF and source code view.
-- **Services and Actions:**
-    - Editors for simple services and actions.
+* **Global icons:**
+  * Form Settings \[SINCE Orbeon Forms 2017.2]
+  * Cut/copy/paste
+  * Undo/redo \[SINCE Orbeon Forms 2017.2]
+  * "Reload toolbox" \[UNTIL Orbeon Forms 2017.1]
+* **Form structure:**
+  * New Section
+  * New Grid
+  * New Repeated Grid
+* **Form controls:**
+  * Form control (also known as form fields) you can add to your form.
+* **Metadata:**
+  * Allows you to modify the application name and form name.
+* **Advanced:**
+  * Includes advanced features like XML Schema, PDF and source code view.
+* **Services and Actions:**
+  * Editors for simple services and actions.
 
 Depending on your monitor or browser size, you can use the scrollbar to the right of the toolbox to see more toolbox content.
 
 ## Configuration of the toolbox
 
 The toolbox can be configured via:
- 
-- [Properties](/configuration/properties/form-builder.md#toolbox): for selecting and ordering the components that show in the toolbox. 
-- [Component metadata](form-builder/metadata.md): for the component names.
+
+* [Properties](../configuration/properties/form-builder.md#toolbox): for selecting and ordering the components that show in the toolbox.
+* [Component metadata](form-builder/metadata.md): for the component names.
 
 ## Cut, copy and paste
 
@@ -45,32 +45,32 @@ See [Undo and redo](form-builder/undo-redo.md).
 
 The "Reload Toolbox" icon or button reloads all the components in the toolbox. After reloading:
 
-- The list of controls in the toolbox updates to reflect changes to the [`oxf.fb.toolbox.group` properties](/configuration/properties/form-builder.md#groups-of-controls).
-- The [section templates](section-templates.md) libraries update.
-- [Section templates](section-templates.md) used in your form also update to their latest published version.
+* The list of controls in the toolbox updates to reflect changes to the [`oxf.fb.toolbox.group` properties](../configuration/properties/form-builder.md#groups-of-controls).
+* The [section templates](section-templates.md) libraries update.
+* [Section templates](section-templates.md) used in your form also update to their latest published version.
 
-[SINCE Orbeon Forms 2019.1]
+\[SINCE Orbeon Forms 2019.1]
 
-- The list of all available (published) *versions* of section templates is updated.
-- The currently-selected versions of section templates, if still available, are updated to reflect their latest published.
+* The list of all available (published) _versions_ of section templates is updated.
+* The currently-selected versions of section templates, if still available, are updated to reflect their latest published.
 
-For more, see [Versioning of section templates](/form-builder/section-templates.md#versioning-of-section-templates).
+For more, see [Versioning of section templates](section-templates.md#versioning-of-section-templates).
 
 ### Orbeon Forms 2017.2 and newer
 
 The "Reload Toolbox" button is located at the top of the "Advanced" tab.
 
-<img src="images/advanced-menu.png" width="245">
+![](../.gitbook/assets/advanced-menu.png)
 
-### Orbeon Forms 2017.1 and earlier 
+### Orbeon Forms 2017.1 and earlier
 
-The "Reload Toolbox" icon is located at the top of the toolbox: 
+The "Reload Toolbox" icon is located at the top of the toolbox:
 
-<img src="images/toolbox-reload.png" width="275">
+![](../.gitbook/assets/toolbox-reload.png)
 
 ## Form structure
 
-![](images/form-structure.png)
+![](../.gitbook/assets/form-structure.png)
 
 ### New Section button
 
@@ -88,7 +88,7 @@ Pressing this button inserts a new repeated grid into the form. The grid is inse
 
 See also [Repeated grids](repeated-grids.md).
 
-[SINCE Orbeon Forms 2019.1]
+\[SINCE Orbeon Forms 2019.1]
 
 You can also switch a regular grid to be repeated. See [Repeat settings](repeat-settings.md).
 
@@ -97,7 +97,7 @@ You can also switch a regular grid to be repeated. See [Repeat settings](repeat-
 The toolbox contains the user interface controls you can insert into your form, grouped by category:
 
 | Category               | Description                                                                |
-|------------------------|----------------------------------------------------------------------------|
+| ---------------------- | -------------------------------------------------------------------------- |
 | **Text Controls**      | for capturing text                                                         |
 | **Utility Controls**   | for descriptions and calculations                                          |
 | **Typed Controls**     | for capturing other data like numbers, emails, phone numbers, etc.         |
@@ -108,25 +108,25 @@ The toolbox contains the user interface controls you can insert into your form, 
 
 To add a control to your form, simply click on the control. The following insertion logic is implemented:
 
-- If the currently selected grid cell is empty, the control is inserted there.
-- Otherwise, if the cell to the right of the currently selected grid cell is empty, the control is inserted there.
-- Otherwise, if the control is the last control of the grid, a new grid row is inserted and the control is inserted in the first cell of the new row.
-- Otherwise, the controls in the toolbox are disabled and you cannot insert a new control.
+* If the currently selected grid cell is empty, the control is inserted there.
+* Otherwise, if the cell to the right of the currently selected grid cell is empty, the control is inserted there.
+* Otherwise, if the control is the last control of the grid, a new grid row is inserted and the control is inserted in the first cell of the new row.
+* Otherwise, the controls in the toolbox are disabled and you cannot insert a new control.
 
 ## Drag and drop of controls
 
 Once a form control is inserted into the form, you can drag it to a different grid cell in the form: simply click on the arrow icon that shows when you hover over the grid cell, and drag it to the new location.
 
-[SINCE Orbeon Forms 2022.1]
+\[SINCE Orbeon Forms 2022.1]
 
 You can also drag a control directly from the toolbox to a grid cell in the form.
 
 ### Text Controls
 
-![](images/text-controls.png)
+![](../.gitbook/assets/text-controls.png)
 
 | Name                    | Description                                    |
-|-------------------------|------------------------------------------------|
+| ----------------------- | ---------------------------------------------- |
 | **Input Field**         | single-line input field                        |
 | **Plain Text Area**     | multi-line plain text area                     |
 | **Formatted Text Area** | formatted text area (AKA Rich Text Editor)     |
@@ -134,24 +134,24 @@ You can also drag a control directly from the toolbox to a grid cell in the form
 
 The controls appear like this at design time:
 
-![](images/text-controls-design-time.png)
+![](../.gitbook/assets/text-controls-design-time.png)
 
 ### Utility Controls
 
-![](images/utility-controls.png)
+![](../.gitbook/assets/utility-controls.png)
 
 | Name                 | Description                                                                                                                                                                                         |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Explanatory Text** | Explanatory text which does not capture a value ([blog post](https://blog.orbeon.com/2015/04/adding-explanatory-text-to-your-forms.html))                                                           |
-| **Calculated Value** | Like most other controls, this control has a label and hint, but unlike most controls it is not used to enter a value. Instead, it just *shows* a value, either fixed or calculated with a formula. |
-| **Hidden Field**     | This control supports most features of regular controls, but doesn't show in the form at runtime. See [Hidden field component](/form-runner/component/hidden.md).                                   |
+| **Calculated Value** | Like most other controls, this control has a label and hint, but unlike most controls it is not used to enter a value. Instead, it just _shows_ a value, either fixed or calculated with a formula. |
+| **Hidden Field**     | This control supports most features of regular controls, but doesn't show in the form at runtime. See [Hidden field component](../form-runner/component/hidden.md).                                 |
 
 ### Typed Controls
 
-![](images/typed-controls.png)
+![](../.gitbook/assets/typed-controls.png)
 
 | Name                | Description                                                     |
-|---------------------|-----------------------------------------------------------------|
+| ------------------- | --------------------------------------------------------------- |
 | **Number**          | number field with formatting, validation and rounding           |
 | **Email Address**   | text field which validates that the content is an email address |
 | **Currency**        | US dollar currency                                              |
@@ -160,14 +160,14 @@ The controls appear like this at design time:
 
 The controls appear like this at design time:
 
-![](images/typed-controls-design-time.png)
+![](../.gitbook/assets/typed-controls-design-time.png)
 
 ### Date and time Controls
 
-![](images/date-time-controls.png)
+![](../.gitbook/assets/date-time-controls.png)
 
 | Name              | Description                                  |
-|-------------------|----------------------------------------------|
+| ----------------- | -------------------------------------------- |
 | **Date**          | date field with date picker                  |
 | **Time**          | time field                                   |
 | **Date and Time** | combined date and time field                 |
@@ -176,14 +176,14 @@ The controls appear like this at design time:
 
 The controls appear like this at design time:
 
-![](images/date-time-controls-design-time.png)
+![](../.gitbook/assets/date-time-controls-design-time.png)
 
 ### Selection Controls
 
-![](images/selection-controls.png)
+![](../.gitbook/assets/selection-controls.png)
 
 | Name                           | Selection | Description                                                  |
-|--------------------------------|-----------|--------------------------------------------------------------|
+| ------------------------------ | --------- | ------------------------------------------------------------ |
 | **Dropdown Menu**              | single    | dropdown menu                                                |
 | **Radio Buttons**              | single    | radio buttons                                                |
 | **Radio Buttons with "Other"** | single    | radio buttons with "Other" option to a enter a custom option |
@@ -197,43 +197,43 @@ You edit the choices of most selection controls with the [Choices editor](itemse
 
 The controls appear like this at design time:
 
-![](images/selection-controls-design-time.png)
+![](../.gitbook/assets/selection-controls-design-time.png)
 
 _NOTE: The "Scrollable List" control is deprecated since Orbeon Forms 2016.1 and removed from the toolbox._
 
 ### Attachment Controls
 
-![](images/attachment-controls.png)
+![](../.gitbook/assets/attachment-controls.png)
 
-| Name                          | Description                                                                                                                                                                                                                                                      |
-|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Single File Attachment**    | - file which can be attached to the form at design time or at runtime<br>- the file can also be replaced or downloaded once attached                                                                                                                             |
-| **Multiple File Attachments** | - [SINCE Orbeon Forms 2020.1]<br>- files which can be attached to the form at design time or at runtime<br>- the files can also be replaced or downloaded once attached                                                                                          |
-| **Image Attachment**          | - image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached                                                                                                                               |
-| **Image**                     | - image attached to the form at design time<br>- it is not possible to change the image at runtime                                                                                                                                                               |
-| **Image Annotation**          | - image which can be attached to the form at design time or at runtime<br>- the image can then be annotated with graphic objects<br>- see also the [blog post](https://blog.orbeon.com/2013/08/new-image-annotation-control.html)<br>- SINCE Orbeon Forms 2016.3 |
-| **Handwritten Signature**     | signature drawn with a mouse or touch screen                                                                                                                                                                                                                     |
+| Name                          | Description                                                                                                                                                                                                                                                                        |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Single File Attachment**    | <p>- file which can be attached to the form at design time or at runtime<br>- the file can also be replaced or downloaded once attached</p>                                                                                                                                        |
+| **Multiple File Attachments** | <p>- [SINCE Orbeon Forms 2020.1]<br>- files which can be attached to the form at design time or at runtime<br>- the files can also be replaced or downloaded once attached</p>                                                                                                     |
+| **Image Attachment**          | <p>- image which can be attached to the form at design time or at runtime<br>- the image can also be changed at runtime once attached</p>                                                                                                                                          |
+| **Image**                     | <p>- image attached to the form at design time<br>- it is not possible to change the image at runtime</p>                                                                                                                                                                          |
+| **Image Annotation**          | <p>- image which can be attached to the form at design time or at runtime<br>- the image can then be annotated with graphic objects<br>- see also the <a href="https://blog.orbeon.com/2013/08/new-image-annotation-control.html">blog post</a><br>- SINCE Orbeon Forms 2016.3</p> |
+| **Handwritten Signature**     | signature drawn with a mouse or touch screen                                                                                                                                                                                                                                       |
 
 The controls appear like this at design time:
 
-![](images/attachment-controls-design-time.png)
+![](../.gitbook/assets/attachment-controls-design-time.png)
 
 Here is an example of attachment control with multiple selection enabled:
 
-![The attachment control with mulltiple selection enabled](/form-runner/component/images/attachment-controls-design-time.png)
+![The attachment control with mulltiple selection enabled](../form-runner/component/images/attachment-controls-design-time.png)
 
 /form-runner/component/images/xbl-attachment-multiple.png
 
 This is the Handwritten Signature control (which of course you usually leave blank at design time):
 
-![](images/signature-design-time.png)
+![](../.gitbook/assets/signature-design-time.png)
 
 ### Button Controls
 
-![](images/button-controls.png)
+![](../.gitbook/assets/button-controls.png)
 
 | Name            | Description                |
-|-----------------|----------------------------|
+| --------------- | -------------------------- |
 | **Button**      | standard button            |
 | **Link Button** | button appearing as a link |
 
@@ -243,7 +243,7 @@ _NOTE: Buttons do not appear at all in preview mode._
 
 The controls appear like this at design time:
 
-![](images/button-controls-design-time.png)
+![](../.gitbook/assets/button-controls-design-time.png)
 
 ### Choices
 
@@ -267,6 +267,7 @@ From the perspective of people who will be filling out your form, the data dropd
     ...
 </states>
 ```
+
 4. In the _Items_ field, enter an XPath expression that returns one node per state. In this case, it will be: `/states/state`.
 5. For each state (_item_), specify an expression relative to the node returning the label (shown to users in the dropdown) and the value (stored in the data). In this case, those expressions will be, respectively: `@name` and `@abbreviation`.
 
@@ -276,12 +277,11 @@ If the data in the dropdown depends on a value entered by users in another form 
 /xforms-sandbox/service/zip-cities?state-abbreviation={$state}
 ```
 
-*Limitation: you can't yet use a variable as shown in the above example, to refer to another fields value. Instead, if the control is in the same section use `{../state}`. If in a different section with name other-section, use `{../../other-section/state}`. See [#431](https://github.com/orbeon/orbeon-forms/issues/431).*
-
+_Limitation: you can't yet use a variable as shown in the above example, to refer to another fields value. Instead, if the control is in the same section use `{../state}`. If in a different section with name other-section, use `{../../other-section/state}`. See_ [_#431_](https://github.com/orbeon/orbeon-forms/issues/431)_._
 
 ### Autocomplete
 
-The autocomplete control is a single item selection control that loads a list of suggestions from a service. It takes the same _Resource URI_, _Items_, _Label_, and _Value_ configuration parameters as the [Data dropdown control][46]. You may want to pass the value of other controls to the service, but you'll always want to pass the currently typed value, as the suggestions should depend on what users typed so far. You access to the currently typed by value with `$fr-search-value`, as in the following example:
+The autocomplete control is a single item selection control that loads a list of suggestions from a service. It takes the same _Resource URI_, _Items_, _Label_, and _Value_ configuration parameters as the \[Data dropdown control]\[46]. You may want to pass the value of other controls to the service, but you'll always want to pass the currently typed value, as the suggestions should depend on what users typed so far. You access to the currently typed by value with `$fr-search-value`, as in the following example:
 
 ```
 /xforms-controls/services/countries?country-name={`encode-for-uri($fr-search-value)}
@@ -293,13 +293,13 @@ See [Keyboard shortcuts](keyboard-shortcuts.md).
 
 ## See also
 
-- [Form editor](form-editor.md)
-- [Form area](form-area.md)
-- [Buttons bar](buttons-bar.md)
-- [Section templates](section-templates.md)
-- [Documented XBL components](../form-runner/component/README.md)
-- [XBL components](../xforms/xbl/README.md)
-- [Form Builder toolbox properties](/configuration/properties/form-builder.md#toolbox)
-- [Component metadata](form-builder/metadata.md): for the component names.
-- Blog post: [The new Multiple File Attachments control](https://blog.orbeon.com/2020/05/the-new-multiple-file-attachments.html)
-- Blog post: [Copying and pasting across forms](https://blog.orbeon.com/2020/06/copying-and-pasting-across-forms.html)
+* [Form editor](form-editor.md)
+* [Form area](form-area.md)
+* [Buttons bar](buttons-bar.md)
+* [Section templates](section-templates.md)
+* [Documented XBL components](../form-runner/component/)
+* [XBL components](../xforms/xbl/)
+* [Form Builder toolbox properties](../configuration/properties/form-builder.md#toolbox)
+* [Component metadata](form-builder/metadata.md): for the component names.
+* Blog post: [The new Multiple File Attachments control](https://blog.orbeon.com/2020/05/the-new-multiple-file-attachments.html)
+* Blog post: [Copying and pasting across forms](https://blog.orbeon.com/2020/06/copying-and-pasting-across-forms.html)
