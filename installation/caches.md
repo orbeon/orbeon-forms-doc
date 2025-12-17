@@ -51,16 +51,41 @@ Orbeon Forms also uses the following caches that use an underlying cache impleme
 
 Orbeon Forms has traditionally used Ehcache 2.x. In recent versions, JCache API (JSR-107) support has been added.
 
-| Orbeon Forms Version | Ehcache 2.x Support | JCache Support | Default     |
-|----------------------|---------------------|----------------|-------------|
-| 2023.1 and newer     | Yes                 | Yes            | Ehcache 2.x |
-| 2022.1.5 and newer   | Yes                 | Yes            | Ehcache 2.x |
-| 2021.1.9 and newer   | Yes                 | Yes            | Ehcache 2.x |
-| 2022.1.4 and earlier | Yes                 | No             | Ehcache 2.x |
-| 2021.1.8 and earlier | Yes                 | No             | Ehcache 2.x |
-| 2020.1.x and earlier | Yes                 | No             | Ehcache 2.x |
+| Orbeon Forms Version | Ehcache 2.x Support | JCache Support | Default                  |
+|----------------------|---------------------|----------------|--------------------------|
+| 2025.1               | Yes (deprecated)    | Yes            | Infinispan trough JCache |
+| 2023.1 and newer     | Yes                 | Yes            | Ehcache 2.x              |
+| 2022.1.5 and newer   | Yes                 | Yes            | Ehcache 2.x              |
+| 2021.1.9 and newer   | Yes                 | Yes            | Ehcache 2.x              |
+| 2022.1.4 and earlier | Yes                 | No             | Ehcache 2.x              |
+| 2021.1.8 and earlier | Yes                 | No             | Ehcache 2.x              |
+| 2020.1.x and earlier | Yes                 | No             | Ehcache 2.x              |
 
-## Using the default Ehcache 2.x configuration
+## Using the default configuration
+
+### Orbeon Forms 2025.1 and newer: JCache configuration with Infinispan
+
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+
+By default, the following properties are set and enable Infinispan through JCache:
+
+```xml
+<property as="xs:string"  name="oxf.xforms.cache.provider"                          value="jcache"/>
+<property as="xs:string"  name="oxf.xforms.cache.jcache.classname"                  value=".*infinispan.*"/>
+<property as="xs:string"  name="oxf.xforms.cache.jcache.resource"                   value="/config/infinispan.xml"/>
+```
+
+An internal `infinispan.xml` configuration file is used. Here are the default configuration files:
+
+- [as of Orbeon Forms 2025.1](xxx)
+
+You can update that configuration by placing your own `infinispan.xml` file in the `WEB-INF/resources/config` directory of your web app. This is rarely needed, except for enabling [replication](replication.md).
+
+As of Orbeon Forms 2025.1, Ehcache 2.x support is still included in the Orbeon Forms web app for backward compatibility, but it is deprecated and support for it will be removed in a future release. We recommend migrating to a JCache provider such as Infinispan.
+
+### Orbeon Forms 2024.1 and earlier: Ehcache 2.x configuration
+
+[UNTIL Orbeon Forms 2024.1.x]
 
 By default, the following property is set and enables Ehcache 2.x:
 

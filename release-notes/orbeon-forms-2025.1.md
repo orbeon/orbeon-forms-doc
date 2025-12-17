@@ -52,7 +52,18 @@ xxx was planned for removal in 2017!
 fr:created-date(), use fr:created-dateTime()
 fr:modified-date(), use fr:modified-dateTime()
 
-### xxx
+### Ehcache 2.x changes and deprecation
 
-Ehcache2 provider: don't use `oxf:/`, but resource path `/config/ehcache.xml`
-xxx also: deprecated
+Support for Ehcache 2.x as a caching provider is deprecated and will be removed in a subsequent release. The Ehcache 2.x JAR file is no longer provided. If you are using Ehcache 2.x, please migrate to using a JCache provider, such as Infinispan, which is now the default.
+
+If this is not convenient or possible in the short term, you can still, at of Orbeon Forms 2025.1, configure Ehcache 2.x as the caching provider by adding the Ehcache 2.x JAR file to Orbeon Forms' classpath and setting the following property in `properties-local.xml`:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.cache.provider"
+    value="ehcache2"/>
+```
+See also:
+
+- Documentation: [JCache configuration with Infinispan](/installation/caches.md#orbeon-forms-20251-and-newer-jcache-configuration-with-infinispan)
