@@ -30,7 +30,7 @@ xxx TODO: diagram
 
 ## Other caches used by Orbeon Forms
 
-Orbeon Forms also uses the following caches that use an underlying cache implementation and configuration, such as Ehcache or through the JCache API (see [Supported cache implementations](#supported-cache-implementations) below):
+Orbeon Forms also uses the following caches that use an underlying cache implementation and configuration, such as Infinispan or through the JCache API (see [Supported cache implementations](#supported-cache-implementations) below):
 
 - Form state
     - This includes form data and other form state as the user interacts with a form.
@@ -51,19 +51,19 @@ Orbeon Forms also uses the following caches that use an underlying cache impleme
 
 Orbeon Forms has traditionally used Ehcache 2.x. In recent versions, JCache API (JSR-107) support has been added.
 
-| Orbeon Forms Version | Ehcache 2.x Support | JCache Support | Default     |
-|----------------------|---------------------|----------------|-------------|
-| 2025.1               | Yes (deprecated)    | Yes            | Infinispan  |
-| 2023.1 and newer     | Yes                 | Yes            | Ehcache 2.x |
-| 2022.1.5 and newer   | Yes                 | Yes            | Ehcache 2.x |
-| 2021.1.9 and newer   | Yes                 | Yes            | Ehcache 2.x |
-| 2022.1.4 and earlier | Yes                 | No             | Ehcache 2.x |
-| 2021.1.8 and earlier | Yes                 | No             | Ehcache 2.x |
-| 2020.1.x and earlier | Yes                 | No             | Ehcache 2.x |
+| Orbeon Forms Version | Infinispan support | Ehcache 2.x Support | JCache Support | Default     |
+|----------------------|--------------------|---------------------|----------------|-------------|
+| 2025.1               | Yes                | Yes (deprecated)    | Yes            | Infinispan  |
+| 2023.1 and newer     | No                 | Yes                 | Yes            | Ehcache 2.x |
+| 2022.1.5 and newer   | No                 | Yes                 | Yes            | Ehcache 2.x |
+| 2021.1.9 and newer   | No                 | Yes                 | Yes            | Ehcache 2.x |
+| 2022.1.4 and earlier | No                 | Yes                 | No             | Ehcache 2.x |
+| 2021.1.8 and earlier | No                 | Yes                 | No             | Ehcache 2.x |
+| 2020.1.x and earlier | No                 | Yes                 | No             | Ehcache 2.x |
 
 ## Using the default configuration
 
-### Orbeon Forms 2025.1 and newer: JCache configuration with Infinispan
+### Orbeon Forms 2025.1 and newer: Infinispan configuration
 
 [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
