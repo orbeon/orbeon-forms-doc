@@ -50,6 +50,59 @@ When to use the Ehcache configuration (deprecated as of Orbeon Forms 2025.1):
 - Your servers can communicate via multicast (IP multicast address and port).
 - You are using version of Orbeon Forms before 2024.1.2.
 
+### Infinispan configuration
+
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+
+See [Infinispan configuration file for replication](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/js/src/test/resources/resources/config-replication/infinispan.xml).
+
+Unlike with Ehcache 2.x, which synchronizes disk stores as well as in-memory caches, with Infinispan only in-memory caches are synchronized. There are a few ways to deal with this with Infinispan:
+
+1. Use only in-memory caches, and make them larger. This can work if you have enough RAM.
+2. Use disk stores, but accept that in case of failure of a server, some state might be lost.
+3. Use shared disk stores, which require a shared filesystem between servers.
+
+The default Orbeon Forms `infinispan.xml` configuration uses in-memory caches only.
+
+### Redis configuration
+
+[\[SINCE Orbeon Forms 2024.1.2\]](/release-notes/orbeon-forms-2024.1.2.md)
+
+This setup is best for cloud deployments where instances of Orbeon Forms typically can't use multicast for discovery, and Redis is provided as a service.
+
+1. Extract `orbeon-redis-jars.zip` which is part of the Orbeon Forms distribution.
+2. Copy the jar files it contains to Tomcat's `lib` directory.
+3. Create `redisson-jcache.yaml` in Tomcat's `conf` directory, changing `redis.example.com` to point to your Redis server:
+
+    ```yaml
+    codec: !<org.redisson.codec.FuryCodec> {}
+    singleServerConfig:
+        address: "redis://redis.example.com:6379"
+    ```
+
+4. In `properties-local.xml`, add the following (modifying the path to `redisson-jcache.yaml` as needed):
+
+    ```xml
+    <property as="xs:string"  name="oxf.xforms.store.provider"                          value="jcache"/>
+    <property as="xs:string"  name="oxf.xforms.store.jcache.classname"                  value="org.redisson.jcache.JCachingProvider"/>
+    <property as="xs:string"  name="oxf.xforms.store.jcache.uri"                        value="file:/usr/local/tomcat/conf/redisson-jcache.yaml"/>
+    ```
+
+5. Inside the `<Context>` for Orbeon Forms (typically found in the Tomcat `server.xml` or an `orbeon.xml`), add:
+
+    ```xml
+    <Manager
+        className="org.redisson.tomcat.RedissonSessionManager"
+        configPath="${catalina.base}/conf/redisson-jcache.yaml"
+        readMode="REDIS" updateMode="DEFAULT"
+        broadcastSessionUpdates="false"
+        broadcastSessionEvents="false"
+        keyPrefix=""/>
+    <Valve
+        className="org.apache.catalina.authenticator.BasicAuthenticator"
+        changeSessionIdOnAuthentication="false"/>
+    ```
+
 ### Ehcache configuration
 
 [DEPRECATED AS OF Orbeon Forms 2025.1]
@@ -230,60 +283,6 @@ In that configuration, the following can be changed:
 - the IP multicast port, here `port="45564"`
 
 For details about the Tomcat configuration, see [Clustering/Session Replication HOW-TO](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html).
-
-
-### Redis configuration
-
-[\[SINCE Orbeon Forms 2024.1.2\]](/release-notes/orbeon-forms-2024.1.2.md)
-
-This setup is best for cloud deployments where instances of Orbeon Forms typically can't use multicast for discovery, and Redis is provided as a service.
-
-1. Extract `orbeon-redis-jars.zip` which is part of the Orbeon Forms distribution.
-2. Copy the jar files it contains to Tomcat's `lib` directory.
-3. Create `redisson-jcache.yaml` in Tomcat's `conf` directory, changing `redis.example.com` to point to your Redis server:
-
-    ```yaml
-    codec: !<org.redisson.codec.FuryCodec> {}
-    singleServerConfig:
-        address: "redis://redis.example.com:6379"
-    ```
-
-4. In `properties-local.xml`, add the following (modifying the path to `redisson-jcache.yaml` as needed):
-
-    ```xml
-    <property as="xs:string"  name="oxf.xforms.store.provider"                          value="jcache"/>
-    <property as="xs:string"  name="oxf.xforms.store.jcache.classname"                  value="org.redisson.jcache.JCachingProvider"/>
-    <property as="xs:string"  name="oxf.xforms.store.jcache.uri"                        value="file:/usr/local/tomcat/conf/redisson-jcache.yaml"/>
-    ```
-
-5. Inside the `<Context>` for Orbeon Forms (typically found in the Tomcat `server.xml` or an `orbeon.xml`), add:
-
-    ```xml
-    <Manager
-        className="org.redisson.tomcat.RedissonSessionManager"
-        configPath="${catalina.base}/conf/redisson-jcache.yaml"
-        readMode="REDIS" updateMode="DEFAULT"
-        broadcastSessionUpdates="false"
-        broadcastSessionEvents="false"
-        keyPrefix=""/>
-    <Valve
-        className="org.apache.catalina.authenticator.BasicAuthenticator"
-        changeSessionIdOnAuthentication="false"/>
-    ```
-
-### Infinispan configuration
-
-[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
-
-See [Infinispan configuration file for replication](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/js/src/test/resources/resources/config-replication/infinispan.xml).
-
-Unlike with Ehcache 2.x, which synchronizes disk stores as well as in-memory caches, with Infinispan only in-memory caches are synchronized. There are a few ways to deal with this with Infinispan:
-
-1. Use only in-memory caches, and make them larger. This can work if you have enough RAM.
-2. Use disk stores, but accept that in case of failure of a server, some state might be lost.
-3. Use shared disk stores, which require a shared filesystem between servers.
-
-The default Orbeon Forms `infinispan.xml` configuration uses in-memory caches only.
 
 ## Other considerations
 
