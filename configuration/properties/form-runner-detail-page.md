@@ -53,6 +53,38 @@ See also:
 
 * Blog post: [Form Density Setting](https://www.orbeon.com/2024/11/form-density)
 
+## Color scheme
+
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+
+Available values:
+
+* `light` (default): Light color scheme.
+* `dark`: Dark color scheme.
+* `system`: Automatically selects between light and dark schemes based on browser/system settings.
+
+This property allows you to switch between the light and dark color schemes.
+
+_NOTE: This is work in progress. Modifications will be included in future releases. At the moment, Form Builder only supports the light mode._
+
+For Form Runner Detail pages, use:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.color-scheme.*.*"
+    value="dark"/>
+```
+
+For other pages such as the Summary, Form Builder Forms, Published Forms, Forms Admin, and Landing pages, use the property without wildcards:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.color-scheme"
+    value="dark"/>
+```
+
 ## Adding your own CSS files
 
 \[SINCE Orbeon Forms 2017.1]

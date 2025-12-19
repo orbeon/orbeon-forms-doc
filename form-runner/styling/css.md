@@ -40,6 +40,34 @@ The names `APP`, `FORM`, `my-app.css` and `my-app-and-form.css` are just placeho
 
 If a specific property is defined for an app/form, such as `oxf.fr.css.custom.uri.APP.FORM`, only that property is considered and other properties defined only for a given app but without a specific form, such as `oxf.fr.css.custom.uri.APP.*`, will be ignored. This means that you must repeat references to CSS resources in the more specific property if desired. For example above `/forms/APP/assets/my-app.css` is repeated.
 
+### Overriding CSS variables
+
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+
+Orbeon Forms provides CSS variables that allow you to customize various styling aspects such as font sizes, font families, font weights, colors, background colors, and border colors. You can override these variables in a custom CSS file referenced using the `oxf.fr.css.custom.uri.*.*` property.
+
+_NOTE: This is work in progress. More variables will be introduced in future releases. Variable names are subject to change._
+
+You can view the available CSS variables in the [LESS file on GitHub](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/apps/fr/style/form-runner-css-variables.less).
+
+Example of overriding variables in Form Runner only (not in Form Builder):
+
+```css
+.orbeon:not(:has(.fb-main)) {
+    --orbeon-base-font-size: 14px;
+}
+```
+
+To override variables in the generated PDF, use the `@media print` rule:
+
+```css
+@media print {
+    .orbeon {
+        --orbeon-base-font-size: 14px;
+    }
+}
+```
+
 [SINCE Orbeon Forms 2017.1]
 
 In addition to [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css), you can also use the following properties, which apply only to the Summary and Detail pages respectively:
