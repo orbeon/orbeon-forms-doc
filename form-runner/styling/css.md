@@ -55,7 +55,7 @@ Orbeon Forms provides CSS variables that allow you to customize various styling 
 
 _NOTE: This is work in progress. More variables will be introduced in future releases. Variable names are subject to change._
 
-You can view the available CSS variables in the [LESS file on GitHub](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/apps/fr/style/form-runner-css-variables.less).
+You can view the available CSS variables in the [`form-runner-css-variables.less` LESS file on GitHub](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/apps/fr/style/form-runner-css-variables.less).
 
 Example of overriding variables in Form Runner only (not in Form Builder):
 
@@ -65,7 +65,7 @@ Example of overriding variables in Form Runner only (not in Form Builder):
 }
 ```
 
-To override variables in the generated PDF, use the `@media print` rule:
+To override variables in generated PDF files, use the `@media print` rule:
 
 ```css
 @media print {

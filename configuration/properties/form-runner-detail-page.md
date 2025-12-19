@@ -85,6 +85,8 @@ For other pages such as the Summary, Form Builder Forms, Published Forms, Forms 
     value="dark"/>
 ```
 
+![Dark color scheme](../../.gitbook/assets/dark-color-scheme.png)
+
 ## Adding your own CSS files
 
 \[SINCE Orbeon Forms 2017.1]
