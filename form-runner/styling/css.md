@@ -40,6 +40,13 @@ The names `APP`, `FORM`, `my-app.css` and `my-app-and-form.css` are just placeho
 
 If a specific property is defined for an app/form, such as `oxf.fr.css.custom.uri.APP.FORM`, only that property is considered and other properties defined only for a given app but without a specific form, such as `oxf.fr.css.custom.uri.APP.*`, will be ignored. This means that you must repeat references to CSS resources in the more specific property if desired. For example above `/forms/APP/assets/my-app.css` is repeated.
 
+[SINCE Orbeon Forms 2017.1]
+
+In addition to [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css), you can also use the following properties, which apply only to the Summary and Detail pages respectively:
+
+- [`oxf.fr.summary.css.custom.uri`](form-runner-summary-page.md#adding-your-own-css-files)
+- [`oxf.fr.detail.css.custom.uri`](form-runner-detail-page.md#adding-your-own-css-files)
+
 ### Overriding CSS variables
 
 [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
@@ -67,13 +74,6 @@ To override variables in the generated PDF, use the `@media print` rule:
     }
 }
 ```
-
-[SINCE Orbeon Forms 2017.1]
-
-In addition to [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css), you can also use the following properties, which apply only to the Summary and Detail pages respectively:
-
-- [`oxf.fr.summary.css.custom.uri`](form-runner-summary-page.md#adding-your-own-css-files)
-- [`oxf.fr.detail.css.custom.uri`](form-runner-detail-page.md#adding-your-own-css-files)
 
 ## Authoring CSS
 
