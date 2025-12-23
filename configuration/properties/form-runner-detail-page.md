@@ -65,7 +65,7 @@ Available values:
 
 This property allows you to switch between the light and dark color schemes.
 
-_NOTE: This is work in progress. Modifications will be included in future releases. At the moment, Form Builder only supports the light mode._
+_NOTE: This is a work in progress, and enhancements will be included in future releases. At the moment, both Form Builder and the Landing page only support the light color scheme._
 
 For Form Runner Detail pages, use:
 
@@ -76,7 +76,7 @@ For Form Runner Detail pages, use:
     value="dark"/>
 ```
 
-For other pages such as the Summary, Form Builder Forms, Published Forms, Forms Admin, and Landing pages, use the property without wildcards:
+For other pages such as the Summary, Form Builder Forms, Published Forms, and Forms Admin pages, use the property without wildcards:
 
 ```xml
 <property

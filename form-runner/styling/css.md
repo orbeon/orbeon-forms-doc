@@ -53,7 +53,7 @@ In addition to [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.m
 
 Orbeon Forms provides CSS variables that allow you to customize various styling aspects such as font sizes, font families, font weights, colors, background colors, and border colors. You can override these variables in a custom CSS file referenced using the `oxf.fr.css.custom.uri.*.*` property.
 
-_NOTE: This is work in progress. More variables will be introduced in future releases. Variable names are subject to change._
+_NOTE: This is a work in progress. More variables will be introduced in future releases. Variable names are subject to change._
 
 You can view the available CSS variables in the [`form-runner-css-variables.less` LESS file on GitHub](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/apps/fr/style/form-runner-css-variables.less).
 
