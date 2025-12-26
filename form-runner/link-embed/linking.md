@@ -198,6 +198,12 @@ However, more status codes can be returned for service requests than for pages. 
 | 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity from the user's part.                                |
 | 500         | An error occurred on the server. Check the Orbeon log files for details of the error.                                                                                              |
 
+## Generating links automatically
+
+Some links can be produced automatically by Orbeon Forms.
+
+xxx templates
+
 ## See also
 
 * [Multitenancy](../feature/multitenancy.md)
