@@ -59,7 +59,7 @@ For more, see the [documentation](../form-runner/feature/landing-page.md#configu
 * You can now automatically open search options in the Forms/Admin pages ([doc](../form-runner/feature/published-forms-page.md#search-options-opened-on-load)).
 * The WebP image format is now supported in automatic PDF production.
 
-## New demo form
+## New demo forms
 
 We have added new demo forms:
 

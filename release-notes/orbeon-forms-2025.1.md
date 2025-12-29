@@ -16,6 +16,31 @@ In this version, we have greatly increased the number of supported languages in 
 - We've added Polish, Arabic, and Japanese support for both Form Runner and Form Builder.
 - We've also added Catalan, Chinese (Simplified), Chinese (Traditional), Hungarian, and Turkish support for Form Runner.
 
+Here is the full list:
+
+| Language              | Form Runner | Form Builder |
+|-----------------------|:-----------:|:------------:|
+| Arabic                |      F      |      F       |
+| Catalan               |      F      |      N       |
+| Chinese (Simplified)  |      F      |      N       |
+| Chinese (Traditional) |      F      |      N       |
+| Danish                |      F      |      N       |
+| Dutch                 |      F      |      F       |
+| English               |      F      |      F       |
+| Finnish               |      F      |      F       |
+| French                |      F      |      F       |
+| German                |      F      |      F       |
+| Hungarian             |      F      |      N       |
+| Italian               |      F      |      F       |
+| Japanese              |      F      |      F       |
+| Norwegian             |      F      |      F       |
+| Polish                |      F      |      F       |
+| Portuguese            |      F      |      F       |
+| Russian               |      F      |      F       |
+| Spanish               |      F      |      F       |
+| Swedish               |      F      |      F       |
+| Turkish               |      F      |      N       |
+
 See also:
 
 - Documentation: [Supported languages](/form-runner/feature/supported-languages.md#as-of-orbeon-forms-20251)
@@ -89,7 +114,12 @@ See also:
 
 In 2025, we have added a number of new demo forms to showcase various features of Orbeon Forms. These forms are available online as well as in the Orbeon Forms distribution:
 
-- xxx
+- Building Permit Application ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/73dfe9ffc8fe0356846ab6a7d1a400b99812fd72), [runner](https://demo.orbeon.com/demo/fr/orbeon/building-permit/edit/8ee48fe19bf77b0b1ac248fcdb038829129243e1))
+- Vendor Application ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/a9ccae9cb991ebabc507a0da9850bf1c33c1d910), [runner](https://demo.orbeon.com/demo/fr/orbeon/vendor-application/edit/18dc67f6ac5f239dec92a876fb4cc3c039388a7d))
+- PTA Payment Authorization/Request for Reimbursement ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/8fcdfe4ff49218923b6599ec9c7bb91488fcdf1a), [runner](https://demo.orbeon.com/demo/fr/orbeon/pta-payment-authorization/edit/dc858de075f523e64b7020a6bcd10353a0d1c8ce))
+- Public Records Act Request Form ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/f2d5187098bfd0e60de353ed7bb9a2f5021b3ee8), [runner](https://demo.orbeon.com/demo/fr/orbeon/public-records/edit/e7fb0c80221b191bf18e95e08d55ef9242ddcf73))
+- Health History ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/12553579e52f1008617b8d7a000e659db2b15133), [runner](https://demo.orbeon.com/demo/fr/orbeon/health-history/edit/13e1a4f2a555d31326d2b3bb041b11f4d8f95539))
+- Medical Record Amendment ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/7f9b4de690effbf69a5d3c5207b9c880eaa23524), [runner](https://demo.orbeon.com/demo/fr/orbeon/medical-record-amendment/edit/8c7a175dd8ada3e5292b4e993b230fcca1eee12b))
 
 ### Sending emails with the SendGrid Email API
 

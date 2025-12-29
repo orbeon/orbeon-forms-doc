@@ -63,7 +63,7 @@ The following small features have been added in this release:
 * Dynamic Dropdown With Search: option to store label in all cases ([doc](../form-runner/component/static-dynamic-dropdown.md#store-label))
 * Reindexing API: ability to reindex a specific form ([doc](../form-runner/api/persistence/reindexing.md#reindexing-a-specific-form))
 
-## New demo form
+## New demo forms
 
 We are continuing to add to our collection of demo forms, which you can use directly, as templates for your own forms, or to learn about Orbeon Forms features and capabilities. In this release, we are adding the following demo forms, which makes use of the new SSN and EIN components, as well as the custom PDF field names feature:
 
