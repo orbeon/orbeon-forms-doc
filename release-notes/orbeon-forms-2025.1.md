@@ -6,11 +6,9 @@ Today we released Orbeon Forms 2025.1! This release introduces new features, man
 
 ## Major new features
 
-### Introduction
-
 ### Built-in confirmation page
 
-The Confirmation page is simply a page which is intended to show after form processing has completed. For example, a user might have submitted their data, and you want to show a confirmation message, along with next steps.
+The Confirmation page is a page which is intended to show after form processing has completed. For example, a user might have submitted their data, and you want to show a confirmation message, along with next steps.
 
 ![Confirmation page example](/form-runner/images/confirmation-page-example.webp)
 
@@ -29,7 +27,7 @@ See also:
 
 ### Dark mode
 
-An experimental dark mode is now available in Orbeon Forms. This mode can be enabled using configuration properties.
+A new dark mode is now available in Orbeon Forms. This mode can be enabled using configuration properties.
 
 ![Orbeon Forms in dark mode](/configuration/images/dark-color-scheme.png)
 
@@ -223,21 +221,21 @@ See also:
 
 Orbeon Forms 2025.1 also includes many other new features and enhancements, including all enhancements present in Orbeon Forms 2024.1.x releases. Some of the highlights are:
 
-- Support for new custom validation "Maximum number of files", on multiple attachment controls #6737
-- Minimum Number of Files per Control validation for Multiple File Attachments #7333
-- Store attachment hash in form data, pass hash to persistence, store hash in relational database #6982
-- WebP support in PDF #7109
-- When the date format uses leading zeros, allow dates to be entered without separators #7122
-- Option to fully disable the landing page #7201 (2024.1.3)
-- Pager: add page selection dropdown/field #7200 (2024.1.3)
-- Improve wizard.focus() to handle pager #7202 (2024.1.3)
-- Use dropdown with search for language selector in Add Language dialog #7233
-- Include the form's schema (XSD) along form definition in the zip export #7303
-- Provide analyze-string() in JVM environment #7354 (2024.1.4)
-- xf:instance to support xxf:xinclude="true" #7367
-- Repeated grids/sections: support paging #4137 (2024.1.3)
-- JavaScript API for repeated section paging #7183 (2024.1.3)
-- Ability for form authors to select the default sort column #7144
+- Support for new custom validation "Maximum number of files", on multiple attachment controls ([\#6737](https://github.com/orbeon/orbeon-forms/issues/6737))
+- Minimum Number of Files per Control validation for Multiple File Attachments ([\#7333](https://github.com/orbeon/orbeon-forms/issues/7333))
+- Store attachment hash in form data, pass hash to persistence, store hash in relational database ([\#6982](https://github.com/orbeon/orbeon-forms/issues/6982))
+- WebP support in PDF ([\#7109](https://github.com/orbeon/orbeon-forms/issues/7109))
+- When the date format uses leading zeros, allow dates to be entered without separators ([\#7122](https://github.com/orbeon/orbeon-forms/issues/7122))
+- Option to fully disable the landing page ([\#7201](https://github.com/orbeon/orbeon-forms/issues/7201)) (2024.1.3)
+- Pager: add page selection dropdown/field ([\#7200](https://github.com/orbeon/orbeon-forms/issues/7200)) (2024.1.3)
+- Improve wizard.focus() to handle pager ([\#7202](https://github.com/orbeon/orbeon-forms/issues/7202)) (2024.1.3)
+- Use dropdown with search for language selector in Add Language dialog ([\#7233](https://github.com/orbeon/orbeon-forms/issues/7233))
+- Include the form's schema (XSD) along form definition in the zip export ([\#7303](https://github.com/orbeon/orbeon-forms/issues/7303))
+- Provide analyze-string() in JVM environment ([\#7354](https://github.com/orbeon/orbeon-forms/issues/7354)) (2024.1.4)
+- xf:instance to support xxf:xinclude="true" ([\#7367](https://github.com/orbeon/orbeon-forms/issues/7367))
+- Repeated grids/sections: support paging ([\#4137](https://github.com/orbeon/orbeon-forms/issues/4137)) (2024.1.3)
+- JavaScript API for repeated section paging ([\#7183](https://github.com/orbeon/orbeon-forms/issues/7183)) (2024.1.3)
+- Ability for form authors to select the default sort column ([\#7144](https://github.com/orbeon/orbeon-forms/issues/7144))
 
 ## Compatibility and upgrade notes
 
