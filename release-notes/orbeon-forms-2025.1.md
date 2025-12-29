@@ -8,7 +8,63 @@ Today we released Orbeon Forms 2025.1! This release introduces new features, man
 
 ### Introduction
 
-### Language Support
+### Built-in confirmation page
+
+The Confirmation page is simply a page which is intended to show after form processing has completed. For example, a user might have submitted their data, and you want to show a confirmation message, along with next steps.
+
+![Confirmation page example](/form-runner/images/confirmation-page-example.webp)
+
+The Confirmation page is made of two parts:
+
+- A user interface in Form Builder, where you can specify what message to show and some options.
+- Configuration properties to enable and customize the confirmation page behavior.
+
+Messages, like other information in your form, can be fully localized by language.
+
+![Form Runner confirmation page configuration](/form-runner/images/confirmation-page-settings-templates.webp)
+
+See also:
+
+- Documentation: [Confirmation page](/form-runner/feature/confirmation-page.md)
+
+### Dark mode
+
+An experimental dark mode is now available in Orbeon Forms. This mode can be enabled using configuration properties.
+
+![Orbeon Forms in dark mode](/configuration/images/dark-color-scheme.png)
+
+See also:
+
+- Documentation: [Color scheme](/configuration/properties/form-runner-detail-page.md#color-scheme)
+
+### Keyboard Shortcuts dialog
+
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+
+Form Builder now includes a dedicated Keyboard Shortcuts dialog that lists all available shortcuts, allowing you to discover them without leaving the app.
+
+![Form Builder Keyboard Shortcuts](/form-builder/images/form-builder-keyboard-shortcuts-dialog.webp)
+
+See also:
+
+- Blog post: [Keyboard Shortcut Improvements in Form Builder](https://www.orbeon.com/2025/10/keyboard-shortcut-improvements)
+
+### Pluggable detail page modes
+
+With Orbeon Forms 2025.1, we are introducing custom modes. This enables two new different features for integrators:
+
+- __Custom Views:__ Showing existing form data in custom ways, for example showing a subset of the form data for confirmation.
+- __External Navigation:__ Navigating away from and back to Orbeon Forms, for example for calling external services such as payment and signature providers.
+The good news is that Orbeon Forms handles for you the difficult parts: data management, state keeping, and permissions, in particular, while you can concentrate on your custom mode logic. The following diagram summarizes the overall flow:
+
+![Custom Form Runner modes overview](/form-runner/images/custom-modes-workflow.webp)
+
+See also:
+
+- Blog post: [Custom Form Runner modes](https://www.orbeon.com/2025/12/custom-modes)
+- Documentation: [Form Runner custom modes](/form-runner/feature/custom-modes.md)
+
+### Improved languages support
 
 In this version, we have greatly increased the number of supported languages in Orbeon Forms: 
 
@@ -45,38 +101,6 @@ See also:
 
 - Documentation: [Supported languages](/form-runner/feature/supported-languages.md#as-of-orbeon-forms-20251)
 
-### Pluggable detail page modes
-
-With Orbeon Forms 2025.1, we are introducing custom modes. This enables two new different features for integrators:
-
-- __Custom Views:__ Showing existing form data in custom ways, for example showing a subset of the form data for confirmation.
-- __External Navigation:__ Navigating away from and back to Orbeon Forms, for example for calling external services such as payment and signature providers.
-The good news is that Orbeon Forms handles for you the difficult parts: data management, state keeping, and permissions, in particular, while you can concentrate on your custom mode logic. The following diagram summarizes the overall flow:
-
-![Custom Form Runner modes overview](/form-runner/images/custom-modes-workflow.webp)
-
-See also:
-
-- Blog post: [Custom Form Runner modes](https://www.orbeon.com/2025/12/custom-modes)
-- Documentation: [Form Runner custom modes](/form-runner/feature/custom-modes.md)
-
-### Built-in confirmation page
-
-The Confirmation page is simply a page which is intended to show after form processing has completed. For example, a user might have submitted their data, and you want to show a confirmation message, along with next steps.
-
-The Confirmation page is made of two parts:
-
-- A user interface in Form Builder, where you can specify what message to show and some options.
-- Configuration properties to enable and customize the confirmation page behavior.
-
-Messages, like other information in your form, can be fully localized by language.
-
-![Form Runner confirmation page configuration](/form-runner/images/confirmation-page-settings-templates.webp)
-
-See also:
-
-- Documentation: [Confirmation page](/form-runner/feature/confirmation-page.md)
-
 ### CSS variables
 
 In this version, we have refactored our CSS files to use CSS variables. This makes it easier to customize the look-and-feel of Orbeon Forms to your own needs. Variables control various aspects of the appearance of forms, including:
@@ -100,16 +124,6 @@ See also:
 
 - Documentation: [PDF color mode](/form-runner/feature/pdf-automatic.md#pdf-color-mode)
 
-### Dark mode
-
-An experimental dark mode is now available in Orbeon Forms. This mode can be enabled using configuration properties.
-
-![Orbeon Forms in dark mode](/configuration/images/dark-color-scheme.png)
-
-See also:
-
-- Documentation: [Color scheme](/configuration/properties/form-runner-detail-page.md#color-scheme)
-
 ### New demo forms
 
 In 2025, we have added a number of new demo forms to showcase various features of Orbeon Forms. These forms are available online as well as in the Orbeon Forms distribution:
@@ -120,14 +134,6 @@ In 2025, we have added a number of new demo forms to showcase various features o
 - Public Records Act Request Form ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/f2d5187098bfd0e60de353ed7bb9a2f5021b3ee8), [runner](https://demo.orbeon.com/demo/fr/orbeon/public-records/edit/e7fb0c80221b191bf18e95e08d55ef9242ddcf73))
 - Health History ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/12553579e52f1008617b8d7a000e659db2b15133), [runner](https://demo.orbeon.com/demo/fr/orbeon/health-history/edit/13e1a4f2a555d31326d2b3bb041b11f4d8f95539))
 - Medical Record Amendment ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/7f9b4de690effbf69a5d3c5207b9c880eaa23524), [runner](https://demo.orbeon.com/demo/fr/orbeon/medical-record-amendment/edit/8c7a175dd8ada3e5292b4e993b230fcca1eee12b))
-
-### Sending emails with the SendGrid Email API
-
-In addition to sending emails with SMTP servers, we are introducing support for sending emails through the SendGrid Email API.
-
-See also:
-
-- Documentation: [Form Runner email configuration properties](/configuration/properties/form-runner-email.md#email-transport-configuration)
 
 ### Removal of Ehcache 2 and use of Infinispan
 
@@ -147,15 +153,26 @@ See also:
 
 - Documentation: [Revision History API: Parameters](/form-runner/api/persistence/revision-history.md#parameters)
 
-### New APIs
+### New and improved APIs
 
-#### Push and pull form definition API
+#### Sending emails with the SendGrid Email API
 
-xxx
+In addition to sending emails with SMTP servers, we are introducing support for sending emails through the SendGrid Email API.
+
+See also:
+
+- Documentation: [Form Runner email configuration properties](/configuration/properties/form-runner-email.md#email-transport-configuration)
+
+#### Remote server APIs
+
+This new API allows you to perform remote operations:
+
+- Push to remote
+- Pull from remote
 
 See also:
  
-- Documentation: [](xxx)
+- Documentation: [Remote server APIs](/form-runner/api/other/remote.md)
 
 #### Property provider API
 
@@ -169,18 +186,6 @@ This new server-side Java API allows adding custom property providers to supply 
 See also:
 
 - Documentation: [Property provider API](/form-runner/api/other/property-provider.md)
-
-### Keyboard Shortcuts dialog
-
-[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
-
-Form Builder now includes a dedicated Keyboard Shortcuts dialog that lists all available shortcuts, allowing you to discover them without leaving the app.
-
-![Form Builder Keyboard Shortcuts](/form-builder/images/form-builder-keyboard-shortcuts-dialog.webp)
-
-See also:
-
-- Blog post: [Keyboard Shortcut Improvements in Form Builder](https://www.orbeon.com/2025/10/keyboard-shortcut-improvements)
 
 ## Features also included with Orbeon Forms 2024.1.x
 
