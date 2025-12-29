@@ -1,6 +1,14 @@
 # Form Builder keyboard shortcuts
 
-## Shortcuts
+## Keyboard Shortcuts dialog
+
+[\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
+
+Form Builder includes a dedicated Keyboard Shortcuts dialog that lists all available shortcuts, allowing you to discover them without leaving the app.
+
+![Form Builder Keyboard Shortcuts](images/form-builder-keyboard-shortcuts-dialog.webp)
+
+## List of shortcuts
 
 | Area                      | Key          | Description                                                               | Since                                               |
 |---------------------------|--------------|---------------------------------------------------------------------------|-----------------------------------------------------|
@@ -67,5 +75,6 @@
 
 ## See also
 
-- Blog post: [Adding keyboard shortcuts to Form Builder](https://www.orbeon.com/2021/01/adding-keyboard-shortcuts-to-form.html)
+- Blog post: [Keyboard Shortcut Improvements in Form Builder](https://www.orbeon.com/2025/10/keyboard-shortcut-improvements)
 - Blog post: [Improved Keyboard Shortcuts](https://www.orbeon.com/2024/07/keyboard-shortcuts)
+- Blog post: [Adding keyboard shortcuts to Form Builder](https://www.orbeon.com/2021/01/adding-keyboard-shortcuts-to-form.html)

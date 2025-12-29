@@ -14,28 +14,28 @@ See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for
 
 ## As of Orbeon Forms 2025.1
 
-| Language             | Form Runner | Form Builder |
-|----------------------|:-----------:|:------------:|
-| Arabic               |      F      |      F       |
-| Catalan              |      F      |      N       |
-| Chinese (Simplified) |      F      |      N       |
-| Chinese (Traditional)|      F      |      N       |
-| Danish               |      F      |      N       |
-| Dutch                |      F      |      F       |
-| English              |      F      |      F       |
-| Finnish              |      F      |      F       |
-| French               |      F      |      F       |
-| German               |      F      |      F       |
-| Hungarian            |      F      |      N       |
-| Italian              |      F      |      F       |
-| Japanese             |      F      |      F       |
-| Norwegian            |      F      |      F       |
-| Polish               |      F      |      F       |
-| Portuguese           |      F      |      F       |
-| Russian              |      F      |      F       |
-| Spanish              |      F      |      F       |
-| Swedish              |      F      |      F       |
-| Turkish              |      F      |      N       |
+| Language              | Form Runner | Form Builder |
+|-----------------------|:-----------:|:------------:|
+| Arabic                |      F      |      F       |
+| Catalan               |      F      |      N       |
+| Chinese (Simplified)  |      F      |      N       |
+| Chinese (Traditional) |      F      |      N       |
+| Danish                |      F      |      N       |
+| Dutch                 |      F      |      F       |
+| English               |      F      |      F       |
+| Finnish               |      F      |      F       |
+| French                |      F      |      F       |
+| German                |      F      |      F       |
+| Hungarian             |      F      |      N       |
+| Italian               |      F      |      F       |
+| Japanese              |      F      |      F       |
+| Norwegian             |      F      |      F       |
+| Polish                |      F      |      F       |
+| Portuguese            |      F      |      F       |
+| Russian               |      F      |      F       |
+| Spanish               |      F      |      F       |
+| Swedish               |      F      |      F       |
+| Turkish               |      F      |      N       |
 
 ## As of Orbeon Forms 2024.1
 
