@@ -6,10 +6,6 @@ The image annotation component allows users to select an image and annotate it. 
 
 ![](../../.gitbook/assets/xbl-image-annotation.png)
 
-## Browser support
-
-This component uses [wPaint](https://github.com/websanova/wPaint), which requires support for the [HTML5 canvas](http://en.wikipedia.org/wiki/Canvas_element) in the web browser. Most browsers have support for the canvas, but note that Internet Explorer [IE9 or later is required](http://en.wikipedia.org/wiki/Canvas_element#Support) (this feature will not work with IE7 and IE8).
-
 ## Configuration
 
 [\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md) You can change the start stroke color with the following property:

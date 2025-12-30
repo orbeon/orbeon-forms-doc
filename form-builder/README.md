@@ -6,8 +6,8 @@ Orbeon Form Builder is a visual form designer which allows you to build and depl
 
 A few key Form Builder features:
 
-* **100% web-based.** Form Builder does not require installing any software on the user's computer: all that is needed is a recent web browser such as Firefox, Safari, Google Chrome or Internet Explorer, without installing browser plugins or extensions.
-* **Easy grid-based layout.** Form Builder uses an easy to understand layout based on sections and grids, onto which you place your form elements. You concentrate on the data you want to capture, not the pesky details.
+* **100% web-based.** Form Builder does not require installing any software on the user's computer: all that is needed is a recent web browser such as Firefox, Safari, Google Chrome or Microsoft Edge.
+* **Easy grid-based layout.** Form Builder uses an easy-to-understand layout based on sections and grids, onto which you place your form elements. You concentrate on the data you want to capture, not the pesky details.
 * **Rich data validation and controls.** Form Builder supports common datatypes for validation and user interface controls, as well as attachments and pictures. It also lets you import your own XML Schema and use the imported types.
 * **Easy HTML and PDF output.** The forms you build with Form Builder automatically produce nice-looking HTML and PDF output.
 * **Full internationalization.** With Form Builder, any form is easily designed in multiple languages, including labels, help, and error messages.

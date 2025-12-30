@@ -107,8 +107,6 @@ The following bind checks that if an uploaded file is present, the file size is 
 />
 ```
 
-Note that Internet Explorer can send the `image/pjpeg` mediatype.
-
 _SECURITY NOTE: The file name and the media type are provided by the user agent (typically a web browser). Not only are they not guaranteed to be correct, but they must not be trusted._
 
 ## The accept attributes
