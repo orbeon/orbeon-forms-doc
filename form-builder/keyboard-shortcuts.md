@@ -4,7 +4,10 @@
 
 [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
-Form Builder includes a dedicated Keyboard Shortcuts dialog that lists all available shortcuts, allowing you to discover them without leaving the app.
+Form Builder includes a dedicated Keyboard Shortcuts dialog that lists all available shortcuts, allowing you to discover them without leaving the app. You can display this dialog in two ways:
+
+- By pressing <kbd>⇧?</kbd> (`shift` + `?`).
+- In the Form Builder toolbox's Advanced tab, click the "Keyboard Shortcuts" button.
 
 ![Form Builder Keyboard Shortcuts](images/form-builder-keyboard-shortcuts-dialog.webp)
 

@@ -46,6 +46,7 @@ Form Builder now includes a dedicated Keyboard Shortcuts dialog that lists all a
 See also:
 
 - Blog post: [Keyboard Shortcut Improvements in Form Builder](https://www.orbeon.com/2025/10/keyboard-shortcut-improvements)
+- Documentation: [Form Builder Keyboard Shortcuts](/form-builder/keyboard-shortcuts.md)
 
 ### Pluggable detail page modes
 
