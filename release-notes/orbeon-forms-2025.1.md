@@ -272,4 +272,4 @@ If this is not convenient or possible in the short term, you can still, at of Or
 ```
 See also:
 
-- Documentation: [JCache configuration with Infinispan](/installation/caches.md#orbeon-forms-20251-and-newer-jcache-configuration-with-infinispan)
+- Documentation: [Infinispan configuration](/installation/caches.md#orbeon-forms-20251-and-newer-infinispan-configuration)
