@@ -89,7 +89,7 @@ This property controls whether the search options area is opened by default when
 
 For each form definition the current user has access to, the following links are shown if allowed:
 
-* Link to the summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
+* Link to the Summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
 * Link to the new page: shown if the current user can perform the create operation on the form.
 
 ![Published Forms page](../../.gitbook/assets/home.png)
@@ -98,6 +98,6 @@ For each form definition the current user has access to, the following links are
 
 * [Forms Admin page](forms-admin-page.md)
 * [Landing page](landing-page.md)
-* [Summary Page](summary-page.md)
+* [Summary page](summary-page.md)
 * [Access control for deployed forms](../access-control/deployed-forms.md)
 * [Form Builder permissions](../access-control/editing-forms.md#form-builder-permissions)

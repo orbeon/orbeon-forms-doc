@@ -8,7 +8,7 @@ This is an Orbeon Forms PE feature.
 
 ## Context
 
-Orbeon Forms includes a few ways to export form definitions and form data. This page documents a very specific capability: exporting a subset of _form data_ as seen in the Summary Page in Excel format.
+Orbeon Forms includes a few ways to export form definitions and form data. This page documents a very specific capability: exporting a subset of _form data_ as seen in the Summary page in Excel format.
 
 For different types of export, see also:
 
@@ -54,7 +54,7 @@ Upon activating the button, a dialog opens which allows you to specify options f
 
 ### Exported data
 
-Activating the button exports the data currently displayed in the Summary Page, including:
+Activating the button exports the data currently displayed in the Summary page, including:
 
 * all the pages accessible using paging
 * search results if a search is active

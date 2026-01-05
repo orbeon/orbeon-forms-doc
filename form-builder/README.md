@@ -25,14 +25,14 @@ Form Builder can be used without much technical knowledge to build a vast range 
 Deployment use cases for Form Builder and Form Runner can vary depending on configuration, but here is a typical life for a form:
 
 * **Design time** — The form author
-  * Initiates the creation of a new form definition from the Form Builder summary page
+  * Initiates the creation of a new form definition from the Form Builder Summary page
   * Edits the form definition from the Form Builder editor
   * Saves the form definition
   * Tests the form definition
   * Multiple edit/save/test cycles can take place
   * Publishes the form definition
 * **Runtime** — The form user
-  * Initiates the creation of new form data from the form's summary page
+  * Initiates the creation of new form data from the form's Summary page
   * Enters data into the form
   * Reviews, saves, submits, or downloads form data
 

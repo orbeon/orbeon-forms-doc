@@ -175,7 +175,7 @@ Orbeon Forms 2024.1 also includes many other new features and enhancements, incl
 
 * Support repeats in relational flat views ([#1069](https://github.com/orbeon/orbeon-forms/issues/1069))
 * Add support for flat views in MySQL ([#6284](https://github.com/orbeon/orbeon-forms/issues/6284))
-* Form author with access to two apps only sees forms in the first one, in the Form Builder summary page ([#878](https://github.com/orbeon/orbeon-forms/issues/878))
+* Form author with access to two apps only sees forms in the first one, in the Form Builder Summary page ([#878](https://github.com/orbeon/orbeon-forms/issues/878))
 * Copy section settings when inserting section template ([#3495](https://github.com/orbeon/orbeon-forms/issues/3495))
 * Form metadata API: support paging ([#5493](https://github.com/orbeon/orbeon-forms/issues/5493))
 * Ability to customize, in Form Builder, the "add another line" link, for minimal repeated grids ([#5742](https://github.com/orbeon/orbeon-forms/issues/5742))

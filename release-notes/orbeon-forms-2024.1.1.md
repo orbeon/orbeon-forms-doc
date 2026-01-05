@@ -92,7 +92,7 @@ You can select in Form Builder whether the browser time form control should alwa
 
 ### New configuration properties
 
-You can now configure the Form Runner summary page to start with the Search Options open. For more, see [Search options opened on load](../form-runner/feature/summary-page.md#search-options-opened-on-load).
+You can now configure the Form Runner Summary page to start with the Search Options open. For more, see [Search options opened on load](../form-runner/feature/summary-page.md#search-options-opened-on-load).
 
 You can also configure the Form Runner Landing page tile size. For more, see [Landing page tile size](../form-runner/feature/landing-page.md#configuration-properties).
 
@@ -151,7 +151,7 @@ You can also configure the Form Runner Landing page tile size. For more, see [La
   * Top alert buttons (lease, documents, time window) too high with long text ([#6727](https://github.com/orbeon/orbeon-forms/issues/6727))
   * Email process to ignore CC and BCC recipients when test-to is specified ([#6732](https://github.com/orbeon/orbeon-forms/issues/6732))
   * File Scan: mediatype update is not checked against constraints ([#6738](https://github.com/orbeon/orbeon-forms/issues/6738))
-  * If user can't acquire lease, provide option to go to the summary page ([#6793](https://github.com/orbeon/orbeon-forms/issues/6793))
+  * If user can't acquire lease, provide option to go to the Summary page ([#6793](https://github.com/orbeon/orbeon-forms/issues/6793))
   * Avoid Ehcache warning "Statistics can no longer be enabled via configuration" ([#6754](https://github.com/orbeon/orbeon-forms/issues/6754))
   * Markup produced for `<xf:group xxf:appearance="internal">` ([#6758](https://github.com/orbeon/orbeon-forms/issues/6758))
   * Error uploading file with Maximum Aggregate Attachment Size ([#6762](https://github.com/orbeon/orbeon-forms/issues/6762))

@@ -32,7 +32,7 @@ The Home page was the main entry point to Form Runner until Orbeon Forms 2021.1.
 - **Documentation**: [Home page](home-page.md)
 - **Availability**: Until Orbeon Forms 2021.1.
 
-## Summary Page
+## Summary page
 
 The Summary page lists the data collected for a specific form. It allows users to view, edit, and create new data entries.
 

@@ -212,7 +212,7 @@ Using the "Reload resources" action will invalidate the cached resources of all 
 
 Orbeon Forms 2016.2 adds two index tables: `orbeon_i_current` and `orbeon_i_control_text`, so when upgrading to 2016.2, for Form Runner to work properly, you'll need to initially populate those tables in an operation referred to as _reindexing_. After you've upgraded and done the initial reindexing, you shouldn't need to reindex the database manually, as Form Runner will incrementally update the index when needed.
 
-Depending on how much data you have, the reindexing operation can take a while, and during reindexing some features of Orbeon Forms 2016.2, like Form Runner summary pages and the [search API](../api/persistence/search.md), won't work as expected. Because of this, upgrading requires some additional steps if you're using those features. If end users don't access Form Runner summary pages on your production system, and you don't have custom code calling the search API (which is rare), then go to point 1 below; otherwise, go with point 2 below.
+Depending on how much data you have, the reindexing operation can take a while, and during reindexing some features of Orbeon Forms 2016.2, like Form Runner Summary pages and the [search API](../api/persistence/search.md), won't work as expected. Because of this, upgrading requires some additional steps if you're using those features. If end users don't access Form Runner Summary pages on your production system, and you don't have custom code calling the search API (which is rare), then go to point 1 below; otherwise, go with point 2 below.
 
 1. If you're not relying on those features in production, you can upgrade Orbeon Forms as you normally would when you need to make changes to the database: take the previous version of Orbeon Forms offline, run the [relevant DDL to upgrade your database schema](../persistence/relational-db.md), and take the new version of Orbeon Forms online. This requires Orbeon Forms to be offline, but this, typically, only for a matter of a few minutes.
 2. If you're relying on those features in production, since reindexing can take a while and you can't run Orbeon Forms 2016.2 while reindexing, we suggest you start by cloning your database, run the [relevant DDL to upgrade your database schema](../persistence/relational-db.md) on that cloned database, run 2016.2 on another server, and have it reindex the cloned database. This will give you an idea of how long reindexing takes, and how long of an offline window you need. With this information in mind, schedule an offline window of the appropriate length, and at that time, do the upgrade procedure again, but this time on the production database.
@@ -290,7 +290,7 @@ The same configuration properties as for the [Published Forms page](published-fo
 
 For each form definition the current user has access to, the following links are shown if allowed:
 
-* Link to the summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
+* Link to the Summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
 * Link to the new page: shown if the current user can perform the create operation on the form.
 
 ![Home Page](../../.gitbook/assets/home.png)
@@ -299,6 +299,6 @@ For each form definition the current user has access to, the following links are
 
 * [Published Forms page](published-forms-page.md)
 * [Landing page](landing-page.md)
-* [Summary Page](summary-page.md)
+* [Summary page](summary-page.md)
 * [Access control for deployed forms](../access-control/deployed-forms.md)
 * [Form Builder permissions](../access-control/editing-forms.md#form-builder-permissions)

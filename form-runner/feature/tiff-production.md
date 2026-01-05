@@ -14,7 +14,7 @@ This is an Orbeon Forms PE feature.
 
 ### Using buttons
 
-TIFF files can be accessed directly from the Form Runner Summary Page and Detail Page using the `tiff` button.
+TIFF files can be accessed directly from the Form Runner Summary page and Detail Page using the `tiff` button.
 
 Example for the Detail Page:
 
@@ -24,7 +24,7 @@ Example for the Detail Page:
 </property>
 ```
 
-Example for the Summary Page:
+Example for the Summary page:
 
 ```xml
 <property as="xs:string"  name="oxf.fr.summary.buttons.acme.order">

@@ -17,7 +17,7 @@ This release addresses the following issues since [Orbeon Forms 2021.1 PE](orbeo
 - Minimal trigger not disabled when readonly ([\#5167](https://github.com/orbeon/orbeon-forms/issues/5167))
 - Section help using HTML incorrectly shows markup ([\#5168](https://github.com/orbeon/orbeon-forms/issues/5168))
 - Label and help for Single checkbox always rendered as HTML, even if plain text ([\#5169](https://github.com/orbeon/orbeon-forms/issues/5169))
-- "An error has occurred" dialog shows when going back to the summary page on Safari ([\#5133](https://github.com/orbeon/orbeon-forms/issues/5133))
+- "An error has occurred" dialog shows when going back to the Summary page on Safari ([\#5133](https://github.com/orbeon/orbeon-forms/issues/5133))
 - Signature becomes smaller the second time the section is open ([\#5149](https://github.com/orbeon/orbeon-forms/issues/5149))
 - Saving with an attachment fails with 403 ([\#5171](https://github.com/orbeon/orbeon-forms/issues/5171))
 - Admin page: "Select All" doesn't select forms on eXist ([\#5165](https://github.com/orbeon/orbeon-forms/issues/5165))

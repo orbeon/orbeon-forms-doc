@@ -39,6 +39,6 @@ the user can perform admin operations on `acme` forms only.
 - [Published Forms page](published-forms-page.md)
 - [Forms Admin page](forms-admin-page.md)
 - [Landing page](landing-page.md)
-- [Summary Page](summary-page.md)
+- [Summary page](summary-page.md)
 - [Access control for deployed forms](/form-runner/access-control/deployed-forms.md)
 - [Form Builder permissions](/form-runner/access-control/editing-forms.md#form-builder-permissions)

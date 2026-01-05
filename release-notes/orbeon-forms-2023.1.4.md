@@ -40,7 +40,7 @@ This release addresses the following issues since [Orbeon Forms 2023.1.3 PE](orb
   * Narrow layout: bottom buttons hide content ([#6417](https://github.com/orbeon/orbeon-forms/issues/6417))
   * Reflow/responsive repeated grids on devices with narrow screens ([#4491](https://github.com/orbeon/orbeon-forms/issues/4491))
   * Failed to execute 'add' on 'DOMTokenList': The token provided must not be empty ([#6383](https://github.com/orbeon/orbeon-forms/issues/6383))
-  * PDF button on summary page doesn't do anything ([#6386](https://github.com/orbeon/orbeon-forms/issues/6386))
+  * PDF button on Summary page doesn't do anything ([#6386](https://github.com/orbeon/orbeon-forms/issues/6386))
   * Excel file can't be opened in Excel when the language is set to German ([#6391](https://github.com/orbeon/orbeon-forms/issues/6391))
   * `ORBEON.fr.API.destroyForm()` throwing `java.lang.IllegalArgumentException` ([#6397](https://github.com/orbeon/orbeon-forms/issues/6397))
   * Mask for Error Panel and other dialogs stays after `destroyForm()` ([#6396](https://github.com/orbeon/orbeon-forms/issues/6396))

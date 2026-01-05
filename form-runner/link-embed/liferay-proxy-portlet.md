@@ -60,7 +60,7 @@ For example, if you configure the proxy portlet as follows:
 The user:
 
 * will be shown the `acme`/`sales` form's New Page
-* will not have access, through links and navigation, to the Summary Page, Landing Page, or other Form Runner pages
+* will not have access, through links and navigation, to the Summary page, Landing page, or other Form Runner pages
 * will not have access to the New Page or other pages of other forms
 
 {% hint style="warning" %}
@@ -151,7 +151,7 @@ For Orbeon Forms 4.0 and newer, no particular configuration is needed.
         * `Orbeon-Liferay-User-Group-Name`
         * `Orbeon-Liferay-User-Roles`
 
-    When read-only access is enabled, if the Form Runner summary page is enabled and accessed, selecting a form takes the user to the Review page instead of the Edit page for a given form.
+    When read-only access is enabled, if the Form Runner Summary page is enabled and accessed, selecting a form takes the user to the Review page instead of the Edit page for a given form.
 
     Press the "Save" or "Cancel" button to save/cancel and return to the portlet.
 
@@ -511,7 +511,7 @@ Concretely, this means that you cannot have the following portlet instances at t
 * `orbeon/contact` form in "list, edit, create and save form data" scenario
 * `orbeon/contact` form in "list and review form data" scenario
 
-This is because both scenarios need a different configuration for the summary page buttons.
+This is because both scenarios need a different configuration for the Summary page buttons.
 
 ## See also
 

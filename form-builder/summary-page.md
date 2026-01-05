@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The Form Builder summary page is your starting point when you work with Form Builder. It allows:
+The Form Builder Summary page is your starting point when you work with Form Builder. It allows:
 
 * Listing and searching form definitions
 * Creating new form definitions
@@ -12,9 +12,9 @@ The Form Builder summary page is your starting point when you work with Form Bui
 
 _NOTE: Form definitions are usually stored in a database on the server. You do not usually keep them on your own computer._
 
-## Accessing the summary page
+## Accessing the Summary page
 
-You access the summary page from your web browser through a URL (or web address) of the form:
+You access the Summary page from your web browser through a URL (or web address) of the form:
 
 ```
 http://[SERVER NAME]/orbeon/fr/orbeon/builder/summary
@@ -22,7 +22,7 @@ http://[SERVER NAME]/orbeon/fr/orbeon/builder/summary
 
 _NOTE: The exact URL might be provided by your IT organization._
 
-Once you reach the summary page, you will either see an empty list, or a list containing existing form definitions, as shown in this screenshot.
+Once you reach the Summary page, you will either see an empty list, or a list containing existing form definitions, as shown in this screenshot.
 
 ![The Summary page](../.gitbook/assets/summary.png)
 
@@ -39,13 +39,13 @@ If the list doesn't fit entirely on one page, you can navigate to further pages 
 
 If the list is too wide, a horizontal scrollbar appears at the bottom of the list and allows you to navigate horizontally.
 
-By default, the summary page lists all the form definitions which you have access to.
+By default, the Summary page lists all the form definitions which you have access to.
 
 _NOTE: Depending on your permissions, the Application Name field and/or Form Name field might be input fields or dropdown menus that restrict your choices._
 
 ### Searching and navigating form definitions
 
-The top of the summary page features search fields. There are two types of searches:
+The top of the Summary page features search fields. There are two types of searches:
 
 * **Free text search.** This searches any text within the form definition.
 * **Structured search.** This searches on Application Name, Form Name, Form Title, or Form Description.

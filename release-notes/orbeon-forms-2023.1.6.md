@@ -72,7 +72,7 @@ This release addresses the following issues since [Orbeon Forms 2023.1.5 PE](orb
     - `xxf:get-session-attribute()` to support returning a Java object ([\#6564](https://github.com/orbeon/orbeon-forms/issues/6564))
     - Modal loading indicator not showing anymore for process buttons ([\#6578](https://github.com/orbeon/orbeon-forms/issues/6578))
     - `newToEdit()` can fail in the JavaScript environment ([\#6593](https://github.com/orbeon/orbeon-forms/issues/6593))
-    - Form Runner summary page reset the language to English ([\#6582](https://github.com/orbeon/orbeon-forms/issues/6582))
+    - Form Runner Summary page reset the language to English ([\#6582](https://github.com/orbeon/orbeon-forms/issues/6582))
     - Exception "form not found for target id" with `dispatchEvent` and no form provided ([\#6595](https://github.com/orbeon/orbeon-forms/issues/6595))
     - "Required item type of first operand of '/' is node(); supplied value has item type xs:string" when dynamic dropdown in section template, used in form, loading the view page ([\#6596](https://github.com/orbeon/orbeon-forms/issues/6596))
     - Dynamic Dropdown with Search: usability issues ([\#6597](https://github.com/orbeon/orbeon-forms/issues/6597))

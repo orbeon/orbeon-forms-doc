@@ -24,7 +24,7 @@ This release addresses the following issues since [Orbeon Forms 2022.1.8 PE](orb
 - PDF file from Summary page produces error #6515
 - Escape value of parameter used in HTML label, hint, or help message #6501
 - Hint as tooltip not showing for datetime control #6563
-- Form Runner summary page reset the language to English #6582
+- Form Runner Summary page reset the language to English #6582
 - Plain textarea can be resized to overlap other controls #6612
 - Second phase of `xf:submission replace="all"` unnecessarily send all the field values to the server #6682
 - Submission, `send()` causing a new tab being opened #6792

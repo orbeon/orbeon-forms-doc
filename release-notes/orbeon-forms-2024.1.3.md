@@ -111,7 +111,7 @@ In this release, we have addressed many issues, including:
   * First validation always picked if uses `fr:param` ([#7152](https://github.com/orbeon/orbeon-forms/issues/7152))
   * User without create but with update permission because owner can't attach new files to existing data ([#7145](https://github.com/orbeon/orbeon-forms/issues/7145))
   * "Can't set request entity" exception when using attachments provider with custom implementation of the persistence API ([#7141](https://github.com/orbeon/orbeon-forms/issues/7141))
-  * Empty cells in summary page are only partially clickable ([#7097](https://github.com/orbeon/orbeon-forms/issues/7097))
+  * Empty cells in Summary page are only partially clickable ([#7097](https://github.com/orbeon/orbeon-forms/issues/7097))
   * Exporting or purging a form with thousands of form data entries from the UI doesn't work ([#7088](https://github.com/orbeon/orbeon-forms/issues/7088))
   * Draft attachments are not deleted when draft is saved ([#7049](https://github.com/orbeon/orbeon-forms/issues/7049))
   * Loading indicator not showing anymore after file upload ([#7244](https://github.com/orbeon/orbeon-forms/issues/7244))

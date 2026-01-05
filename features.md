@@ -120,7 +120,7 @@ As of 2016-04-19 this page is still being updated.
 - Standard look & feel
 - Automatic calculations dependencies: [doc](form-runner/feature/automatic-calculations-dependencies.md), [blog post](https://blog.orbeon.com/2018/10/automatic-calculation-dependencies.html)
 - Custom XBL components: [doc](xforms/xbl/README.md)
-- Summary Page: [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
+- Summary page: [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
     - search
 - Detail Page
     - Responsive design for mobile devices such as smartphones: [doc](form-runner/feature/responsive-design.md), [blog](https://blog.orbeon.com/2015/08/responsive-design.html)

@@ -12,7 +12,7 @@ The Form Runner Summary page shows, for a given published form, the list of acce
 * Navigating to the Home page and Import page
 * Opening a PDF or TIFF version of the form
 
-![Summary Page for the Bookshelf form](../../.gitbook/assets/summary-bookshelf.png)
+![Summary page for the Bookshelf form](../../.gitbook/assets/summary-bookshelf.png)
 
 ## Columns
 
@@ -95,11 +95,11 @@ This property controls whether the search options area is opened by default when
 
 \[SINCE Orbeon Forms 2018.2]
 
-When more than one [form version](versioning.md) is available, the user has the choice of the version to access. Different versions can behave like very different forms. Also see the [properties to configuring the behavior of the summary page with regards to versioning](../../configuration/properties/form-runner-summary-page.md#versioning).
+When more than one [form version](versioning.md) is available, the user has the choice of the version to access. Different versions can behave like very different forms. Also see the [properties to configuring the behavior of the Summary page with regards to versioning](../../configuration/properties/form-runner-summary-page.md#versioning).
 
-![Summary Page for version 1 of the form](../../.gitbook/assets/summary-version-1.png)
+![Summary page for version 1 of the form](../../.gitbook/assets/summary-version-1.png)
 
-![Summary Page for version 2 of the form](../../.gitbook/assets/summary-version-2.png)
+![Summary page for version 2 of the form](../../.gitbook/assets/summary-version-2.png)
 
 ## Bulk edit
 
@@ -122,6 +122,6 @@ See [Summary page buttons and processes](../advanced/buttons-and-processes/summa
 * [Summary page configuration properties](../../configuration/properties/form-runner-summary-page.md)
 * [Summary page buttons and processes](../advanced/buttons-and-processes/summary-page-buttons-and-processes.md)
 * [Versioning](versioning.md)
-* [Form Builder Summary Page](../../form-builder/summary-page.md)
+* [Form Builder Summary page](../../form-builder/summary-page.md)
 * [Control Settings dialog](../../form-builder/control-settings.md)
 * Blog post: [Summary page versioning support](https://blog.orbeon.com/2019/05/summary-page-versioning-support.html)

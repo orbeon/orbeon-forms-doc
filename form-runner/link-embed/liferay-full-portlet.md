@@ -181,7 +181,7 @@ Second, create a new file, `WEB-INF/resources/home.xhtml`, with content such as:
     </head>
     <body>
         <a href="/fr/">Link to the Form Runner home page</a>
-        <a href="/fr/acme/form1/summary">Link to summary page of form acme/form1</a>
+        <a href="/fr/acme/form1/summary">Link to Summary page of form acme/form1</a>
         <a href="/fr/acme/form2/new">Link to new page of form acme/form2</a>
     </body>
 </html>

@@ -25,7 +25,7 @@ This release addresses the following issues since [Orbeon Forms 2021.1.2 PE](orb
 - "Can't find variable: google" when a form using `fr:map` loaded is through the Form Runner embedding API ([\#5269](https://github.com/orbeon/orbeon-forms/issues/5269))
 - Offline: Formatted Text Area doesn't work ([\#5262](https://github.com/orbeon/orbeon-forms/issues/5262))
 - Error at runtime with cell expanded both horizontally and vertically ([\#5260](https://github.com/orbeon/orbeon-forms/issues/5260))
-- Months in German on the summary page to be in uppercase ([\#5261](https://github.com/orbeon/orbeon-forms/issues/5261))
+- Months in German on the Summary page to be in uppercase ([\#5261](https://github.com/orbeon/orbeon-forms/issues/5261))
 - Remove Link Button from the toolbox ([\#5265](https://github.com/orbeon/orbeon-forms/issues/5265))
 - "Prefix xxf has not been declared" ([\#5279](https://github.com/orbeon/orbeon-forms/issues/5279))
 - `oxf.fr.default-timezone`: `MatchError` with "Z" timezone ([\#5287](https://github.com/orbeon/orbeon-forms/issues/5287))

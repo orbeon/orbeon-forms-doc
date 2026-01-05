@@ -217,7 +217,7 @@ Use the `oxf.fr.production-server-uri` property:
 
 If the `oxf.fr.production-server-uri` property is set and not empty, it takes precedence over the `oxf.fr.home.remote-servers` property for backward compatibility.
 
-## Summary Page
+## Summary page
 
 See [Summary page configuration properties](form-runner-summary-page.md).
 

@@ -610,4 +610,4 @@ See [PDF configuration properties](form-runner-pdf.md).
 
 ## See also
 
-* [Summary Page configuration properties](form-runner-summary-page.md)
+* [Summary page configuration properties](form-runner-summary-page.md)

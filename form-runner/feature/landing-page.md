@@ -153,10 +153,10 @@ The special `"_"` language code is used as a fallback when the user's language i
 
 * [Published Forms page](published-forms-page.md)
 * [Forms Admin page](forms-admin-page.md)
-* [Summary Page](summary-page.md)
+* [Summary page](summary-page.md)
   * [Summary page configuration properties](../../configuration/properties/form-runner-summary-page.md)
   * [Summary page buttons and processes](../advanced/buttons-and-processes/summary-page-buttons-and-processes.md)
-  * [Form Builder Summary Page](../../form-builder/summary-page.md)
+  * [Form Builder Summary page](../../form-builder/summary-page.md)
 * [Access control for deployed forms](../access-control/deployed-forms.md)
 * [Form Builder permissions](../access-control/editing-forms.md#form-builder-permissions)
 * [Versioning](versioning.md)

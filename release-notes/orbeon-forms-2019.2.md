@@ -41,7 +41,7 @@ This release adds the new option of _clearing_ (or _resetting_) a repetition. Wh
 Including the features and enhancements above, we [closed over 180 issues](https://github.com/orbeon/orbeon-forms/issues?page=7\&q=is%3Aissue+is%3Aclosed+project%3Aorbeon%2Forbeon-forms%2F11) since [Orbeon Forms 2019.1](orbeon-forms-2019.1.md).
 
 * New features
-  * Ability for "new" button on summary page to always use the latest version of the form ([doc](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-summary-page#new-button-version-of-the-form))
+  * Ability for "new" button on Summary page to always use the latest version of the form ([doc](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-summary-page#new-button-version-of-the-form))
   * Ability for form authors and admins to reload resources for a form, instead of restarting the server ([doc](../form-runner/feature/forms-admin-page.md#reloading-resources))
   * Issues with nested `<fr:data-iterate>` ([doc](https://doc.orbeon.com/form-builder/advanced/services-and-actions/actions-syntax#nesting-of-iterations))
   * JavaScript API to obtain the data status ([doc](https://doc.orbeon.com/form-runner/advanced/client-side-javascript-api#telling-whether-the-form-data-is-safe))

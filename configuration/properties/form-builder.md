@@ -59,7 +59,7 @@ In addition to controls, the toolbox has other features which you can enable or 
 
 ## Publish dialog
 
-### Links to new and summary pages
+### Links to new and Summary pages
 
 \[SINCE Orbeon Forms 4.6]
 
@@ -119,9 +119,9 @@ Closing sections in Form Builder can improve responsiveness. This property sets 
 
 ## Action buttons in Form Builder
 
-### Action buttons on the Form Builder summary page
+### Action buttons on the Form Builder Summary page
 
-This controls which buttons appear on the Form Builder summary page.
+This controls which buttons appear on the Form Builder Summary page.
 
 ```xml
 <property as="xs:string"  name="oxf.fr.summary.buttons.orbeon.builder">

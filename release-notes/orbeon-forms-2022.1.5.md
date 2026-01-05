@@ -19,7 +19,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.4 PE
 - Form Builder
     - "Test PDF" must produce meaningful filename ([\#5105](https://github.com/orbeon/orbeon-forms/issues/5105))
     - Form Builder: search by form name yields unexpected results ([\#5928](https://github.com/orbeon/orbeon-forms/issues/5928))
-    - Occasional error when loading Form Builder summary page ([\#5872](https://github.com/orbeon/orbeon-forms/issues/5872))
+    - Occasional error when loading Form Builder Summary page ([\#5872](https://github.com/orbeon/orbeon-forms/issues/5872))
     - Limit app/form name to 255 characters ([\#5848](https://github.com/orbeon/orbeon-forms/issues/5848))
     - Form Builder should not add `bind` to custom dialog in form definition ([\#5733](https://github.com/orbeon/orbeon-forms/issues/5733))
     - Section label editor closes on heartbeat ([\#5841](https://github.com/orbeon/orbeon-forms/issues/5841))

@@ -38,7 +38,7 @@ This release addresses the following issues since [Orbeon Forms 2020.1.3 PE](orb
 - Incorrect section template bind during reindex crash interrupts the process ([\#4972](https://github.com/orbeon/orbeon-forms/issues/4972))
 - Section to pass `index` to `fr-iteration-removed` ([\#4973](https://github.com/orbeon/orbeon-forms/issues/4973))
 - First field not to show as invalid with separate TOC ([\#4975](https://github.com/orbeon/orbeon-forms/issues/4975))
-- User with organization-based permission to be able to access the summary page ([\#4979](https://github.com/orbeon/orbeon-forms/issues/4979))
+- User with organization-based permission to be able to access the Summary page ([\#4979](https://github.com/orbeon/orbeon-forms/issues/4979))
 - Always return 404 when data doesn't exist ([\#4979](https://github.com/orbeon/orbeon-forms/issues/4979))
 - Allow user to org-based perms to create data ([\#4978](https://github.com/orbeon/orbeon-forms/issues/4978))
 

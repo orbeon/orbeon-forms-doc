@@ -23,7 +23,7 @@ This parameter is passed when:
 This parameter is NOT passed when no document information is available, e.g. when:
 
 - creating new form data
-- listing form data on the summary page
+- listing form data on the Summary page
 
 The value of the parameter is the id of the form data (document) being edited. This allows the persistence layer to retrieve the form definition associated with that document, in case the persistence layer handles versioning itself.
 

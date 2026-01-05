@@ -20,7 +20,7 @@ By default, Orbeon Forms ships with an embedded eXist-db database. For productio
 
 ### Configuring full-text indexing in eXist-db
 
-Orbeon Forms uses the [Lucene-based full-text index](http://exist-db.org/exist/apps/doc/lucene.xml). Without this configuration, free-text search in the Form Runner summary page won't work. After you install eXist-db, store a `collection.xconf` file as follows in the eXist-db, under `system/config/db/orbeon/fr/`. You can also find the [latest version of this file on GitHub](https://github.com/orbeon/orbeon-forms/blob/master/data/system/config/db/orbeon/fr/collection.xconf).
+Orbeon Forms uses the [Lucene-based full-text index](http://exist-db.org/exist/apps/doc/lucene.xml). Without this configuration, free-text search in the Form Runner Summary page won't work. After you install eXist-db, store a `collection.xconf` file as follows in the eXist-db, under `system/config/db/orbeon/fr/`. You can also find the [latest version of this file on GitHub](https://github.com/orbeon/orbeon-forms/blob/master/data/system/config/db/orbeon/fr/collection.xconf).
 
 ```xml
 <collection xmlns="http://exist-db.org/collection-config/1.0">

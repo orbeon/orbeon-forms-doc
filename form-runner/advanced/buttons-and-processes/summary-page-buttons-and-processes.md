@@ -97,4 +97,4 @@ As with the Detail page processes, you can control button visibility and whether
 - [Forms Admin page](/form-runner/feature/forms-admin-page.md)
 - [Summary page configuration properties](/configuration/properties/form-runner-summary-page.md)
 - [Summary page](/form-runner/feature/summary-page.md)
-- [Form Builder Summary Page](/form-builder/summary-page.md)
+- [Form Builder Summary page](/form-builder/summary-page.md)

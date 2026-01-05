@@ -45,7 +45,7 @@ Below, you'll find a summary of the steps you can follow to install and configur
        url="jdbc:p6spy:mysql://localhost:3306/orbeon?useUnicode=true&amp;characterEncoding=UTF8"/>
    ```
 
-5. Restart Tomcat or the application server you're using. Check that no error messages show on the console, `catalina.out`, or equivalent with your setup. If none show and Orbeon Forms starts properly, run `tail -f spy.log` in a terminal window, or equivalent on your operating system, and check that as you access, say, the Form Builder summary page, SQL statement are properly being logged.
+5. Restart Tomcat or the application server you're using. Check that no error messages show on the console, `catalina.out`, or equivalent with your setup. If none show and Orbeon Forms starts properly, run `tail -f spy.log` in a terminal window, or equivalent on your operating system, and check that as you access, say, the Form Builder Summary page, SQL statement are properly being logged.
 
 ## See also
 

@@ -19,7 +19,7 @@ This release addresses the following issues since [Orbeon Forms 2020.1.4 PE](orb
 - Radios not marked as visited when a value is selected ([\#5040](https://github.com/orbeon/orbeon-forms/issues/5040))
 - On Firefox, second click on link to `#` clears the `window.history.state` ([\#5039](https://github.com/orbeon/orbeon-forms/issues/5039))
 - When an anchor in an `<xf:output mediatype="text/html">` has the focus, on blur, the focus is set back ([\#5038](https://github.com/orbeon/orbeon-forms/issues/5038))
-- Autosave prompt showing when going from view to edit if arrived to the view page directly from the summary page ([\#5033](https://github.com/orbeon/orbeon-forms/issues/5033))
+- Autosave prompt showing when going from view to edit if arrived to the view page directly from the Summary page ([\#5033](https://github.com/orbeon/orbeon-forms/issues/5033))
 - Can't move cell boundaries with a 24 column grid ([\#5031](https://github.com/orbeon/orbeon-forms/issues/5031))
 - Avoid cutting text areas using little vertical space across PDF pages ([\#5027](https://github.com/orbeon/orbeon-forms/issues/5027))
 - Attachment metadata doesn't show in PDF template ([\#5023](https://github.com/orbeon/orbeon-forms/issues/5023))

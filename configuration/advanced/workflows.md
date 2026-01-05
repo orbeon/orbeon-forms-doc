@@ -25,9 +25,9 @@ In Form Builder, in the left sidebar, switch to the Advanced tab, click on Permi
 This will ensure that only users with the role `public-works-staff` can see any of the submitted data. Next, you’ll want to require users accessing submissions to be authenticated. Say the form app name is `public-works` and form name `report-pothole`. Then:
 
 * The page to fill out a new instance of the form, often called the _new page_, is at `/fr/public-works/report-pothole/new`.
-* The page to access all the submissions, often call the _summary page_, is at `/fr/public-works/report-pothole/summary`.
+* The page to access all the submissions, often call the _Summary page_, is at `/fr/public-works/report-pothole/summary`.
 
-So you’ll want to require any user accessing the summary page to have the `public-works-staff` role. This can be done by editing the Orbeon Forms `web.xml`, adding the following, inside the root element `<web-app>`:
+So you’ll want to require any user accessing the Summary page to have the `public-works-staff` role. This can be done by editing the Orbeon Forms `web.xml`, adding the following, inside the root element `<web-app>`:
 
 ```xml
 <security-constraint>

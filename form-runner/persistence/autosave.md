@@ -53,7 +53,7 @@ When autosave is enabled and you are an authenticated user, form data is automat
 
 ### Summary page
 
-The summary page shows the drafts, on separate lines and clearly marked as such. From the summary page, users can click on a draft to open it, or select it to then delete it, assuming they have the permission to do so.
+The Summary page shows the drafts, on separate lines and clearly marked as such. From the Summary page, users can click on a draft to open it, or select it to then delete it, assuming they have the permission to do so.
 
 ![Summary page](../../.gitbook/assets/autosave-summary.png)
 

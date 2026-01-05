@@ -27,7 +27,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.5 PE
         - "Test PDF" fails with error ([\#6034](https://github.com/orbeon/orbeon-forms/issues/6034))
     - Other
         - Date picker causes `StringIndexOutOfBoundsException` ([\#5936](https://github.com/orbeon/orbeon-forms/issues/5936))
-        - Option for landing, forms, and admin pages to link to summary page without form version ([\#6017](https://github.com/orbeon/orbeon-forms/issues/6017))
+        - Option for landing, forms, and admin pages to link to Summary page without form version ([\#6017](https://github.com/orbeon/orbeon-forms/issues/6017))
         - Image Attachment settings are no longer persisted in form definition ([\#5811](https://github.com/orbeon/orbeon-forms/issues/5811))
         - Import: way to validate item values ([\#6008](https://github.com/orbeon/orbeon-forms/issues/6008))
         - "_.isUndefined is not a function" when testing with Subject7 ([\#6126](https://github.com/orbeon/orbeon-forms/issues/6126))

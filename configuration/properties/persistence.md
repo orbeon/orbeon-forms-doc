@@ -147,7 +147,7 @@ If `true`, Form Runner assumes that permissions are supported by the provider im
 
 This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
 
-- The Summary Page sends a 403 if the user doesn't have access based on role, and the persistence provider is known
+- The Summary page sends a 403 if the user doesn't have access based on role, and the persistence provider is known
   not to support permissions.
 
 ```xml
@@ -211,7 +211,7 @@ _NOTE: Since Orbeon Forms 2017.1, the `oxf.fr.detail.new.service.enable` propert
 
 We recommend you set up your database to store text as Unicode, to avoid potential problems when users enter non-ASCII characters, like accents, characters from non-latin languages, or even emojis. In cases when this isn't possible, you can set the following property to `true`, to instruct Orbeon Forms to escape all non-ASCII characters in form data before they are sent to the database.
 
-This escaping only applies to form data, and not to indices created based on this data, which means that if you are using the Form Runner summary page, or the search API, and that a field value shown in the summary page or returned by the search API contains a character that your database is unable to store, while your data is still safe, the summary page or the result of the search API might contain an incorrect value.
+This escaping only applies to form data, and not to indices created based on this data, which means that if you are using the Form Runner Summary page, or the search API, and that a field value shown in the Summary page or returned by the search API contains a character that your database is unable to store, while your data is still safe, the Summary page or the result of the search API might contain an incorrect value.
 
 For instance, say a user enters the character `é` in a field, and that you have this property enabled, then the form data will contain `&#233;`, which is the escaped version of `é`, however, if that field is indexed (because you've enabled *Show on Summary page* or *Allow bulk edit* in the *Control Settings* for that field), then the character `é` will be stored in the index table, which might be a problem if your database encoding cannot accommodate the storage of this character.
 
