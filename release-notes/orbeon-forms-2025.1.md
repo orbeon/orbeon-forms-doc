@@ -146,15 +146,15 @@ See also:
 
 - Documentation: [JCache configuration with Infinispan](/installation/caches.md#orbeon-forms-20251-and-newer-jcache-configuration-with-infinispan)
 
-### Revision History API improvements
+### New and improved APIs
+
+#### Revision History API improvements
 
 The Revision History API can now directly return differences.
 
 See also:
 
 - Documentation: [Revision History API: Parameters](/form-runner/api/persistence/revision-history.md#parameters)
-
-### New and improved APIs
 
 #### Sending emails with the SendGrid Email API
 
