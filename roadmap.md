@@ -2,29 +2,27 @@
 
 ## Upcoming releases
 
-### Orbeon Forms 2025.1
+### Orbeon Forms 2026.1
 
 Focus:
 
-- Workflow features
-    - Form Builder user interface
-- Infrastructure
-    - Replace Ehcache 2 with Infinispan [#6640](https://github.com/orbeon/orbeon-forms/issues/6640)
-- Form Builder user-friendliness:
-    - more UI (properties, validations, formulas, etc.)
-    - see [#2282](https://github.com/orbeon/orbeon-forms/issues/2282)
+- Form Builder user interface
+    - improved actions editor
+    - workflow editor
+    - see also: [#2282](https://github.com/orbeon/orbeon-forms/issues/2282)
+- Form Runner user interface
+    - styles/theme editor
+    - properties editor
 - Additional form controls
     - [#6734](https://github.com/orbeon/orbeon-forms/issues/6734) 
 - Additional demo forms
-- Steps toward a configurable look and feel
-    - [#4140](https://github.com/orbeon/orbeon-forms/issues/4140)
 - Additional integrations
-    - Google Sheets  
+    - Google Sheets
 
 [//]: # (- admin console!)
 [//]: # (Think about other general lines.)
 
-See the tentative [2025.1 items](https://github.com/users/orbeon/projects/18) for details.
+See the tentative [2026.1 items](https://github.com/users/orbeon/projects/29/views/1) for details.
 
 Consider:
 
@@ -37,7 +35,7 @@ Consider:
 
 __Please remember that the following schedule is a plan, not a promise:__
 
-- 2025-12: tentative release date
+- 2026-12: tentative release date
 
 ## Past releases
 
