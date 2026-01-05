@@ -102,7 +102,7 @@ See also:
 
 ### CSS variables
 
-In this version, we have refactored our CSS files to use CSS variables. This makes it easier to customize the look-and-feel of Orbeon Forms to your own needs. Variables control various aspects of the appearance of forms, including:
+In this version, we have refactored our CSS files to use CSS variables. This makes it easier to customize the look and feel of Orbeon Forms to your own needs. Variables control various aspects of the appearance of forms, including:
 
 - font sizes
 - colors
