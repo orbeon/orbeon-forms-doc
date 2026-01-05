@@ -293,7 +293,7 @@ For each form definition the current user has access to, the following links are
 * Link to the Summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
 * Link to the new page: shown if the current user can perform the create operation on the form.
 
-![Home Page](../../.gitbook/assets/home.png)
+![Home page](../../.gitbook/assets/home.png)
 
 ## See also
 

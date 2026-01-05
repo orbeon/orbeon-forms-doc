@@ -34,7 +34,7 @@
 
     ```xml
     <url-pattern>/fr/orbeon/builder/*</url-pattern>
-    <!-- Optional, to prevent anonymous users from accessing the Form Runner Home Page -->
+    <!-- Optional, to prevent anonymous users from accessing the Form Runner Home page -->
     <url-pattern>/fr/</url-pattern>
     ```
     and replace the role name:

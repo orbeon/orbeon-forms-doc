@@ -18,7 +18,7 @@ The following property controls the header and footer configuration for automati
 
 [SINCE Orbeon Forms 4.9]
 
-The following property dynamically controls the name of the PDF file produced on the Detail Page. By default, if the property value is blank, the PDF filename is a random id assigned to the current form session.
+The following property dynamically controls the name of the PDF file produced on the Detail page. By default, if the property value is blank, the PDF filename is a random id assigned to the current form session.
 
 ```xml
 <property

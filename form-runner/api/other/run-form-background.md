@@ -34,7 +34,7 @@ Where:
 Optional request body when using `/new`:
 
 - `Content-Type: application/xml`
-- XML data to `POST` to the form, like when [`POST`ing to the detail page](/configuration/properties/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page)
+- XML data to `POST` to the form, like when [`POST`ing to the Detail page](/configuration/properties/form-runner-detail-page.md#initial-data-posted-to-the-new-form-page)
 
 When not `POST`ing any XML data, just `POST` an empty request body to the service.
 

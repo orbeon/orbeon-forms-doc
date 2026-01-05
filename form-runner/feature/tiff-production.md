@@ -14,9 +14,9 @@ This is an Orbeon Forms PE feature.
 
 ### Using buttons
 
-TIFF files can be accessed directly from the Form Runner Summary page and Detail Page using the `tiff` button.
+TIFF files can be accessed directly from the Form Runner Summary page and Detail page using the `tiff` button.
 
-Example for the Detail Page:
+Example for the Detail page:
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.buttons.acme.order">
@@ -80,7 +80,7 @@ The scale factor can be selected with the `oxf.fr.detail.tiff.scale` property:
 
 #### Custom TIFF filename
 
-The following property dynamically controls the name of the TIFF file produced on the Detail Page. By default, if the property value is blank, the TIFF filename is a random id assigned to the current form session.
+The following property dynamically controls the name of the TIFF file produced on the Detail page. By default, if the property value is blank, the TIFF filename is a random id assigned to the current form session.
 
 ```xml
 <property

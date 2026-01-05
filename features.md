@@ -122,7 +122,7 @@ As of 2016-04-19 this page is still being updated.
 - Custom XBL components: [doc](xforms/xbl/README.md)
 - Summary page: [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
     - search
-- Detail Page
+- Detail page
     - Responsive design for mobile devices such as smartphones: [doc](form-runner/feature/responsive-design.md), [blog](https://blog.orbeon.com/2015/08/responsive-design.html)
         - show numeric keypad/numbers and punctuation" keyboard pane when possible: [doc](form-runner/component/number.md#mobile-support), [blog post](https://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
     - Review mode (printable)
@@ -134,8 +134,8 @@ As of 2016-04-19 this page is still being updated.
         - subsection navigation
         - optional separate table of contents
 - File scan API: [doc](form-runner/api/other/file-scan-api.md) 
-- Forms Admin Page: [doc](form-runner/feature/forms-admin-page.md), [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
-- Published Forms Page: [doc](form-runner/feature/published-forms-page.md), [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
+- Forms Admin page: [doc](form-runner/feature/forms-admin-page.md), [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
+- Published Forms page: [doc](form-runner/feature/published-forms-page.md), [blog post](https://blog.orbeon.com/2014/06/the-form-builder-summary-page-and-form.html)
 - Landing page: [doc](form-runner/feature/landing-page.md)
 - Excel and XML Import: [doc](/form-runner/feature/excel-xml-import.md)
 - Excel and XML Export: [doc](/form-runner/feature/excel-xml-export.md)

@@ -205,7 +205,7 @@ And test by going to:
 
 `http://localhost:8080/orbeon/`
 
-This will show the Orbeon Forms landing page.
+This will show the Orbeon Forms Landing page.
 
 ### Debugging
 
@@ -381,7 +381,7 @@ And test by going to:
 
 `http://localhost:8080/orbeon/`
 
-This will show the Orbeon Forms landing page.
+This will show the Orbeon Forms Landing page.
 
 #### Profiling
 

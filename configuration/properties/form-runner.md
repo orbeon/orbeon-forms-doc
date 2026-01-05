@@ -50,7 +50,7 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.authentication.header.roles.split`
     * `oxf.fr.authentication.header.roles.property-name`
     * `oxf.fr.authentication.header.sticky`
-* [Form Runner Published Forms Page](/form-runner/feature/published-forms-page.md)
+* [Form Runner Published Forms page](/form-runner/feature/published-forms-page.md)
     * `oxf.fr.home.page-size`
     * `oxf.fr.home.table.link-to`
 * [TIFF Production](/form-runner/feature/tiff-production.md)
@@ -74,7 +74,7 @@ The following property determines Form Runner's default language:
 
 When wildcards are specified, this property can control the default language for a given app or form.
 
-The property without wildcards can also be used to control the default language of pages which don't involve a specific form, such as the Form Runner Home Page
+The property without wildcards can also be used to control the default language of pages which don't involve a specific form, such as the Form Runner Home page
 
 ```xml
 <property
@@ -111,7 +111,7 @@ If the property is blank or contains the wildcard `*`, all the form languages ar
 
 [SINCE Orbeon Forms 4.3]
 
-For pages which don't involve a specific form, such as the Form Runner Home Page, the following property controls the available languages:
+For pages which don't involve a specific form, such as the Form Runner Home page, the following property controls the available languages:
 
 ```xml
 <property
@@ -308,7 +308,7 @@ In addition to [`oxf.fr.js.custom.uri`](/configuration/properties/form-runner.md
 
 ## Overriding resources
 
-In some cases, it might make sense to change some of the resources provided out of the box by Form Runner. For instance, the Detail Page can have a submit button, which in English has a label "Submit". For your application, another label might make more sense, for instance "Send". To override Form Runner resources, you define properties with a name that has the following structure:
+In some cases, it might make sense to change some of the resources provided out of the box by Form Runner. For instance, the Detail page can have a submit button, which in English has a label "Submit". For your application, another label might make more sense, for instance "Send". To override Form Runner resources, you define properties with a name that has the following structure:
 
 1. The name start with `oxf.fr.resource`.
 2. Followed by the name of the application and form name for which you want to redefine the resource. You can use `*` for either if you want the redefinition to apply to all the applications or all the forms. For instance: `*.*`, or `my-app.my-form`.

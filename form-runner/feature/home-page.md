@@ -1,4 +1,4 @@
-# Home Page
+# Home page
 
 ## Compatibility
 
@@ -14,11 +14,11 @@ If you are using a version of Orbeon Forms prior to 2022.1, you access the combi
 
 If the user doesn't have any permissions set via `form-builder-permissions.xml`, as [documented here](/form-runner/access-control/editing-forms.md#form-builder-permissions), a simple user view is presented:
 
-![Home Page](../images/home-simple-view.png)
+![Home page](../images/home-simple-view.png)
 
 If the user has permissions set in `form-builder-permissions.xml`, a view with admin privileges is presented:
 
-![Home Page](../images/home-admin-view.png)
+![Home page](../images/home-admin-view.png)
 
 The list of forms listed depends on the roles set in `form-builder-permissions.xml`. For example, with:
 

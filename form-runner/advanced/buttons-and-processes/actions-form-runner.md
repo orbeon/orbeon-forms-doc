@@ -388,7 +388,7 @@ This action changes the mode of the current page. For more information, see the 
 
 \[SINCE Orbeon Forms 2017.1]
 
-* If possible, switch the detail page's URL from `new` mode to `edit` mode.
+* If possible, switch the Detail page's URL from `new` mode to `edit` mode.
 * Before this action, this was done automatically as part of the `save` action.
 * If the form is not in `new` mode, this action has no effect.
 * If permissions do not allow editing the data, this action has no effect.
@@ -398,7 +398,7 @@ This action changes the mode of the current page. For more information, see the 
 
 \[SINCE Orbeon Forms 2023.1.4]
 
-* If possible, switch the detail page's URL from `edit` mode to `new` mode.
+* If possible, switch the Detail page's URL from `edit` mode to `new` mode.
 * This also creates a fresh document id.
 * If the form is not in `edit` mode, this action has no effect.
 * If permissions do not allow creating new data, this action has no effect.

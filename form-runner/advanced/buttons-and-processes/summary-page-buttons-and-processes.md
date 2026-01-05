@@ -65,7 +65,7 @@ By default, the "New" button takes users to the current version of the form, tha
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-Originally, Form Runner processes associated with buttons were only [available for the Detail Page](/form-runner/advanced/buttons-and-processes/README.md). Since Orbeon Forms 2023.1, they are also available on the Form Runner [Summary page](/configuration/properties/form-runner-summary-page.md). This allows you to add custom buttons to the Summary page, and to configure what happens when users press those buttons.
+Originally, Form Runner processes associated with buttons were only [available for the Detail page](/form-runner/advanced/buttons-and-processes/README.md). Since Orbeon Forms 2023.1, they are also available on the Form Runner [Summary page](/configuration/properties/form-runner-summary-page.md). This allows you to add custom buttons to the Summary page, and to configure what happens when users press those buttons.
 
 You configure a Summary page process with properties starting with the `oxf.fr.summary.process` prefix. For example, to create a process for the `new` button:
 

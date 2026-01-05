@@ -1,10 +1,10 @@
-# Form Runner detail page modes
+# Form Runner Detail page modes
 
 ## Introduction
 
 The Form Runner Detail page is the page where users create, edit, and view form data. This page can operate in several distinct *modes*. Each mode is designed for a specific task, such as creating new data, editing existing data, or simply viewing data in a read-only format.
 
-[//]: # (TODO: image of a detail page)
+[//]: # (TODO: image of a Detail page)
 
 The primary modes are:
 
@@ -43,7 +43,7 @@ The `change-mode()` action allows you to navigate to any mode, including custom 
 [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 Orbeon Forms allows you to define *custom modes* for the Detail page. This advanced feature lets you create different views of the same form data by writing a custom XBL component. Custom modes are useful for implementing workflows that involve external services, such as payment or signature providers.
 
-For more details, see [Custom detail page modes](custom-modes.md).
+For more details, see [Custom Detail page modes](custom-modes.md).
 
 ## Styling based on mode
 
@@ -63,4 +63,4 @@ For more on styling, see the [CSS documentation](/form-runner/styling/css.md).
 
 - [Linking to your forms](/form-runner/link-embed/linking.md)
 - [Buttons and processes](/form-runner/advanced/buttons-and-processes/README.md)
-- [Custom detail page modes](custom-modes.md)
+- [Custom Detail page modes](custom-modes.md)

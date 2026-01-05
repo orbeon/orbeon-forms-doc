@@ -111,7 +111,7 @@ The `active` property specifies whether the provider is active.
 
 This is used as follows (confirmed for Orbeon Forms 4.4 to 4.10):
 
-- If active, the Form Runner Home Page queries the persistence implementation to obtain the list of published forms and enable administrative operations.
+- If active, the Form Runner Home page queries the persistence implementation to obtain the list of published forms and enable administrative operations.
 - See issue [#2327](https://github.com/orbeon/orbeon-forms/issues/2327).
 
 ```xml

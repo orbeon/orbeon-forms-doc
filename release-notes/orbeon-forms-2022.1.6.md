@@ -34,7 +34,7 @@ This release also addresses the following issues since [Orbeon Forms 2022.1.5 PE
         - NPE in `getLast()` ([\#6016](https://github.com/orbeon/orbeon-forms/issues/6016))
         - When the itemset changes, always send the current value, even if it is unchanged ([\#5986](https://github.com/orbeon/orbeon-forms/issues/5986))
         - JavaScript error "/ by zero" with attachment field ([\#6029](https://github.com/orbeon/orbeon-forms/issues/6029))
-        - Localize error message on search for summary and landing pages ([\#6030](https://github.com/orbeon/orbeon-forms/issues/6030))
+        - Localize error message on search for summary and Landing pages ([\#6030](https://github.com/orbeon/orbeon-forms/issues/6030))
         - Setting `oxf.xforms.xbl.fr.number.grouping-separator` to a space has no effect ([\#6027](https://github.com/orbeon/orbeon-forms/issues/6027))
         - Support `xxf:itemset()` on `fr:open-select1` ([\#6047](https://github.com/orbeon/orbeon-forms/issues/6047))
         - Loading indicator may never hide when `delay-before-display-loading > 0` ([\#6144](https://github.com/orbeon/orbeon-forms/issues/6144))

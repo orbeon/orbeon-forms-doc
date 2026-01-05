@@ -43,7 +43,7 @@ The following attributes and elements are optional:
 - the `appearance` attribute on `<fr:view>` (reserved for future use)
 - the `<fr:buttons>` element
 
-When the `<fr:buttons>` element is present, Form Runner ignores the buttons configured by default for the detail page, and instead uses the content of the `<fr:buttons>` element.
+When the `<fr:buttons>` element is present, Form Runner ignores the buttons configured by default for the Detail page, and instead uses the content of the `<fr:buttons>` element.
 
 ## Form data
 

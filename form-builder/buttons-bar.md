@@ -9,7 +9,7 @@ The buttons bar sits at the bottom of the Form Builder screen.
 By default, the bar includes the following buttons:
 
 * **"Home"**:
-  * Go back to the Form Runner landing page.
+  * Go back to the Form Runner Landing page.
   * If the current form is not saved, you will be prompted to save it.
 * **Summary"**:
   * Go back to the [Form Builder Summary page](summary-page.md).

@@ -192,7 +192,7 @@ See [Form Fields](../form-runner/access-control/form-fields.md).
 
 ### Modes
 
-The Form Runner detail page can have the following modes:
+The Form Runner Detail page can have the following modes:
 
 * `new`
 * `edit`

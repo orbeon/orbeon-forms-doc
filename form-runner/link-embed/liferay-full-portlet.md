@@ -148,14 +148,14 @@ com.liferay.portal.servlet.filters.strip.StripFilter=false
 
 _NOTE: `portal-ext.properties` is a standard Liferay configuration file you place under the_ [_Liferay Home directory_](https://dev.liferay.com/discover/deployment/-/knowledge_base/6-2/liferay-home)_._
 
-## Creating a new landing page for the portlet
+## Creating a new Landing page for the portlet
 
 By default, the portlet shows a list of Orbeon Forms sample forms and apps.
 
 To change this, you need to:
 
 1. Modify `WEB-INF/resources/page-flow-portlet.xml.`
-2. Create a new landing page in XHTML format.
+2. Create a new Landing page in XHTML format.
 3. Change the default Orbeon theme so that no custom Orbeon CSS is added.
 
 A simple way do implement this is as follows:
@@ -187,7 +187,7 @@ Second, create a new file, `WEB-INF/resources/home.xhtml`, with content such as:
 </html>
 ```
 
-This is the landing page itself, and it can contain any XHTML you like. Typically would include links to specific Form Runner paths as shown in the example above.
+This is the Landing page itself, and it can contain any XHTML you like. Typically would include links to specific Form Runner paths as shown in the example above.
 
 Finally, to change the Orbeon portlet theme to the plain theme, set this property:
 

@@ -30,7 +30,7 @@ This release addresses the following issues since [Orbeon Forms 2021.1.2 PE](orb
 - "Prefix xxf has not been declared" ([\#5279](https://github.com/orbeon/orbeon-forms/issues/5279))
 - `oxf.fr.default-timezone`: `MatchError` with "Z" timezone ([\#5287](https://github.com/orbeon/orbeon-forms/issues/5287))
 - Update function to access the value of a control within a section template ([\#5246](https://github.com/orbeon/orbeon-forms/issues/5246))
-- Excel/XML export button on detail page ([\#5263](https://github.com/orbeon/orbeon-forms/issues/5263))
+- Excel/XML export button on Detail page ([\#5263](https://github.com/orbeon/orbeon-forms/issues/5263))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page.
 

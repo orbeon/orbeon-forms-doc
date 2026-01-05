@@ -8,7 +8,7 @@ _NOTE: This is an advanced feature which may require programming skills._
 
 ## Introduction
 
-The Form Runner _Detail page_ is the page where users create, edit, and view form data. Each such function is referred to as a _mode_. For more, see [Form Runner detail page modes](detail-page-modes.md).
+The Form Runner _Detail page_ is the page where users create, edit, and view form data. Each such function is referred to as a _mode_. For more, see [Form Runner Detail page modes](detail-page-modes.md).
 
 Orbeon Forms 2025.1 introduces the ability to define _custom modes_ for the Form Runner Detail page. This allows you to create different views of the same form data. You do so by writing a custom component, while Orbeon Forms handles data management, state keeping, and permissions for you.
 

@@ -23,7 +23,7 @@ Installing Orbeon Forms on WebSphere is only one of the possibilities. You can a
     <application id="orbeon" name="orbeon" location="war/orbeon" type="war"/>
     <applicationMonitor updateTrigger="disabled"/>
     ```
-4. **Testing your installation** – Check the console: you should see the that Orbeon Forms was deployed successfully. Then access `http://localhost:9080/orbeon/home/`, and you should see the Orbeon Forms home page. If you start WebSphere from the WLP/bin directory, as mentioned on step 2, you will find the Orbeon Forms log file in `WLP/usr/servers/logs/orbeon.log`.
+4. **Testing your installation** – Check the console: you should see the that Orbeon Forms was deployed successfully. Then access `http://localhost:9080/orbeon/home/`, and you should see the Orbeon Forms Home page. If you start WebSphere from the WLP/bin directory, as mentioned on step 2, you will find the Orbeon Forms log file in `WLP/usr/servers/logs/orbeon.log`.
 
 [SINCE Orbeon Forms 4.3]
 

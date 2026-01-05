@@ -48,7 +48,7 @@ See also:
 - Blog post: [Keyboard Shortcut Improvements in Form Builder](https://www.orbeon.com/2025/10/keyboard-shortcut-improvements)
 - Documentation: [Form Builder Keyboard Shortcuts](/form-builder/keyboard-shortcuts.md)
 
-### Pluggable detail page modes
+### Pluggable Detail page modes
 
 With Orbeon Forms 2025.1, we are introducing custom modes. This enables two new different features for integrators:
 
@@ -215,7 +215,7 @@ See also:
 - [Option to store attachments in S3](https://doc.orbeon.com/release-notes/orbeon-forms-2024.1.3#option-to-store-attachments-in-s3)
 - [Ability to change the encryption key](https://doc.orbeon.com/release-notes/orbeon-forms-2024.1.3#ability-to-change-the-encryption-key)
 - [Tab duplication detection](https://doc.orbeon.com/release-notes/orbeon-forms-2024.1.3#tab-duplication-detection)
-- [Improved landing page configuration](https://doc.orbeon.com/release-notes/orbeon-forms-2024.1.3#improved-landing-page-configuration)
+- [Improved Landing page configuration](https://doc.orbeon.com/release-notes/orbeon-forms-2024.1.3#improved-landing-page-configuration)
 - [Other new features](https://doc.orbeon.com/release-notes/orbeon-forms-2024.1.3#improved-landing-page-configuration)
 
 ## Other new features and enhancements
@@ -227,7 +227,7 @@ Orbeon Forms 2025.1 also includes many other new features and enhancements, incl
 - Store attachment hash in form data, pass hash to persistence, store hash in relational database ([\#6982](https://github.com/orbeon/orbeon-forms/issues/6982))
 - WebP support in PDF ([\#7109](https://github.com/orbeon/orbeon-forms/issues/7109))
 - When the date format uses leading zeros, allow dates to be entered without separators ([\#7122](https://github.com/orbeon/orbeon-forms/issues/7122))
-- Option to fully disable the landing page ([\#7201](https://github.com/orbeon/orbeon-forms/issues/7201)) (2024.1.3)
+- Option to fully disable the Landing page ([\#7201](https://github.com/orbeon/orbeon-forms/issues/7201)) (2024.1.3)
 - Pager: add page selection dropdown/field ([\#7200](https://github.com/orbeon/orbeon-forms/issues/7200)) (2024.1.3)
 - Improve wizard.focus() to handle pager ([\#7202](https://github.com/orbeon/orbeon-forms/issues/7202)) (2024.1.3)
 - Use dropdown with search for language selector in Add Language dialog ([\#7233](https://github.com/orbeon/orbeon-forms/issues/7233))

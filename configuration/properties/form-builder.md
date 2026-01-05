@@ -129,9 +129,9 @@ This controls which buttons appear on the Form Builder Summary page.
 </property>
 ```
 
-### Action buttons on the Form Builder detail page
+### Action buttons on the Form Builder Detail page
 
-This controls which buttons appear on the Form Builder detail page.
+This controls which buttons appear on the Form Builder Detail page.
 
 ```xml
 <property as="xs:string"  name="oxf.fr.detail.buttons.orbeon.builder">

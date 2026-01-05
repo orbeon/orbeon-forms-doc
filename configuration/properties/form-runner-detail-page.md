@@ -130,7 +130,7 @@ See [Table of contents configuration properties](form-runner-toc.md).
 
 Where to place the error summary: `top`, `bottom`, `both`, or `none`.
 
-## Buttons on the Detail Page
+## Buttons on the Detail page
 
 ### Choosing which buttons are shown
 
@@ -141,7 +141,7 @@ Where to place the error summary: `top`, `bottom`, `both`, or `none`.
     value="close clear print pdf save submit"/>
 ```
 
-The property configures which buttons are included on the Detail Page, and in what order they are shown. For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/).
+The property configures which buttons are included on the Detail page, and in what order they are shown. For more information, see [Buttons and Processes](../../form-runner/advanced/buttons-and-processes/).
 
 ### Hiding and disabling buttons
 
@@ -538,11 +538,11 @@ You configure which buttons are shown on the view page with the following proper
     value="back workflow-edit pdf"/>
 ```
 
-You can use all the buttons available on the Detail Page. In addition, the following buttons apply:
+You can use all the buttons available on the Detail page. In addition, the following buttons apply:
 
 * `workflow-edit`
   * Label: "Edit"
-  * Action: Navigate back to the Detail Page in "edit" mode.
+  * Action: Navigate back to the Detail page in "edit" mode.
 
 ### Showing alerts in view and PDF modes
 

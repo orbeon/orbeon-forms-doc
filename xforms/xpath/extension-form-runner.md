@@ -610,7 +610,7 @@ fr:wizard-current-page-name() as xs:string?
 fr:can-create() as xs:boolean
 ```
 
-Whether the current user has the `create` permission for the current app/form name (detail page only).
+Whether the current user has the `create` permission for the current app/form name (Detail page only).
 
 ### fr:can-delete()
 
@@ -620,7 +620,7 @@ Whether the current user has the `create` permission for the current app/form na
 fr:can-delete() as xs:boolean
 ```
 
-Whether the current user has the `delete` permission for the current form data (detail page only).
+Whether the current user has the `delete` permission for the current form data (Detail page only).
 
 ### fr:can-read()
 
@@ -630,7 +630,7 @@ Whether the current user has the `delete` permission for the current form data (
 fr:can-read() as xs:boolean
 ```
 
-Whether the current user has the `read` permission for the current app/form name (detail page only).
+Whether the current user has the `read` permission for the current app/form name (Detail page only).
 
 ### fr:can-update()
 
@@ -640,7 +640,7 @@ Whether the current user has the `read` permission for the current app/form name
 fr:can-update() as xs:boolean
 ```
 
-Whether the current user has the `update` permission for the current form data (detail page only).
+Whether the current user has the `update` permission for the current form data (Detail page only).
 
 ### fr:can-list()
 
@@ -650,7 +650,7 @@ Whether the current user has the `update` permission for the current form data (
 fr:can-list() as xs:boolean
 ```
 
-Whether the current user has the `list` permission for the current app/form name (detail page only).
+Whether the current user has the `list` permission for the current app/form name (Detail page only).
 
 ### fr:user-ancestor-organizations()
 

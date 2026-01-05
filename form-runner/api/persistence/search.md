@@ -228,7 +228,7 @@ The `page-size` and `page-number` elements control paging.
 
 ### Since 2016.2
 
-The Form Runner home page doesn't send the `<lang>` element, and the implementations of the API that ship with Orbeon Forms don't use it even if provided. Instead, when the persistence knows about multiple values corresponding to different languages for a "control", it returns all the values. In turn, the Summary page displays all the values. This is inline with what is done for controls inside repeated grids or repeated sections, which can have multiple values.
+The Form Runner Home page doesn't send the `<lang>` element, and the implementations of the API that ship with Orbeon Forms don't use it even if provided. Instead, when the persistence knows about multiple values corresponding to different languages for a "control", it returns all the values. In turn, the Summary page displays all the values. This is inline with what is done for controls inside repeated grids or repeated sections, which can have multiple values.
 
 ### Up to 2016.1
 

@@ -63,7 +63,7 @@ The following Form Runner limitations are known within Liferay:
 
 ### Form Runner proxy portlet or full portlet?
 
-The full portlet is not specifically tied to Form Runner and does not provide Form-Runner-specific features. Using the full portlet usually requires setting a custom landing page and possibly other custom configurations.
+The full portlet is not specifically tied to Form Runner and does not provide Form-Runner-specific features. Using the full portlet usually requires setting a custom Landing page and possibly other custom configurations.
  
 The Form Runner proxy portlet is designed to work with Form Runner only and to support a deployment mode where Form Runner can be installed within a separate application container, possibly on a separate server.
 
@@ -83,4 +83,4 @@ Here is a comparison of the two options:
 |Can use portal language preference    |yes          |no          |4.4          |
 |Supports Liferay organizations        |yes          |no          |2016.3       |
 |Runs custom XForms applications       |no           |yes         |             |
-|Requires custom landing page          |no           |yes         |             |
+|Requires custom Landing page          |no           |yes         |             |

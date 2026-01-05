@@ -31,7 +31,7 @@ Finally, Form Runner buttons now are sticky, so that they are always visible whe
 
 ### Separation of the Forms Admin page and Published Forms page
 
-Previously, Form Runner featured a static landing page, as well as a Home page, which doubled as an Admin page when the user was an administrator. The Home page is now replaced by a Published Forms page, which shows published forms accessible to the user, but no administration functions, and a separate Forms Admin page, which is only accessible to administrators.
+Previously, Form Runner featured a static Landing page, as well as a Home page, which doubled as an Admin page when the user was an administrator. The Home page is now replaced by a Published Forms page, which shows published forms accessible to the user, but no administration functions, and a separate Forms Admin page, which is only accessible to administrators.
 
 ![The Published Forms page](../.gitbook/assets/form-runner-forms.png)
 
@@ -73,7 +73,7 @@ This version includes lots of improvements to the look and feel of Form Runner a
 * lighter background and rounded corners
 * more modern dialogs
 
-![View of the detail page with Wizard](../.gitbook/assets/detail-look-and-feel.png)
+![View of the Detail page with Wizard](../.gitbook/assets/detail-look-and-feel.png)
 
 ### Resizing of image attachments
 
@@ -310,7 +310,7 @@ We plan to add support for the new date picker in plain XForms in a future point
 
 ### Form Runner Landing page
 
-With earlier Orbeon Forms versions, the landing page was at `/home/`. This was a static landing page, which mixed links to the Form Runner Home page, Form Builder, and demo forms. The new Landing page replaces this page and automatically redirects to the `/fr/` path. The `/home/` path now redirects to `/fr/`.
+With earlier Orbeon Forms versions, the Landing page was at `/home/`. This was a static Landing page, which mixed links to the Form Runner Home page, Form Builder, and demo forms. The new Landing page replaces this page and automatically redirects to the `/fr/` path. The `/home/` path now redirects to `/fr/`.
 
 The `/fr/` path pointed to the combined Home page. It how points to the Landing page. Instead, the Home page is now split into the Forms and Admin pages:
 

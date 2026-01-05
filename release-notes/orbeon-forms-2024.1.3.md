@@ -40,16 +40,16 @@ When duplicating a browser tab, Orbeon Forms now warns the user to close that ta
 
 For more, see the [blog post](https://www.orbeon.com/2025/09/tab-duplication-detection).
 
-### Improved landing page configuration
+### Improved Landing page configuration
 
-You can now specify custom cards on the landing page for:
+You can now specify custom cards on the Landing page for:
 
 * published form definitions in a particular app
 * form data for a particular form
 
 This including specifying titles, descriptions, and icons for those cards.
 
-In addition, if the configuration is blank, the landing page is entirely disabled.
+In addition, if the configuration is blank, the Landing page is entirely disabled.
 
 For more, see the [documentation](../form-runner/feature/landing-page.md#configuration-properties).
 
@@ -88,7 +88,7 @@ In this release, we have addressed many issues, including:
   * Keyboard shortcuts to move to the previous/next control in the control settings dialog ([#7129](https://github.com/orbeon/orbeon-forms/issues/7129))
   * Form Builder label editor should have a name or id ([#7121](https://github.com/orbeon/orbeon-forms/issues/7121))
   * Drag and drop doesn't work in Form Builder when embedded via JavaScript Embedding API ([#7118](https://github.com/orbeon/orbeon-forms/issues/7118))
-  * Form titles containing commas are truncated in Form Builder Forms landing page card ([#7117](https://github.com/orbeon/orbeon-forms/issues/7117))
+  * Form titles containing commas are truncated in Form Builder Forms Landing page card ([#7117](https://github.com/orbeon/orbeon-forms/issues/7117))
   * Form Builder unresponsive after Esc in Open selection Formula ([#7116](https://github.com/orbeon/orbeon-forms/issues/7116))
   * Controls in repeated section disappear after section unmarked as repeated ([#7112](https://github.com/orbeon/orbeon-forms/issues/7112))
   * After reordering controls in a repeated grid, the order of the binds and template elements remains unchanged ([#7312](https://github.com/orbeon/orbeon-forms/issues/7312))

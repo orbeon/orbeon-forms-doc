@@ -37,7 +37,7 @@ _NOTE: `GET` is not supported for reindexing a specific form._
 
 ### Declaring reindexing support
 
-The Form Runner Admin page allows admins to reindex the database, however this feature isn't implemented by the Form Runner home page itself, but by the respective implementations of the persistence API. Of course, reindexing only makes sense for implementations of the persistence API that maintain their own index. Since this is an optional feature, the Form Runner home page needs to know which implementations supports reindexing, so it can call them if they do when admins ask for the data to be reindexed. You declare that your implementation supports reindexing by adding the following property:
+The Form Runner Admin page allows admins to reindex the database, however this feature isn't implemented by the Form Runner Home page itself, but by the respective implementations of the persistence API. Of course, reindexing only makes sense for implementations of the persistence API that maintain their own index. Since this is an optional feature, the Form Runner Home page needs to know which implementations supports reindexing, so it can call them if they do when admins ask for the data to be reindexed. You declare that your implementation supports reindexing by adding the following property:
 
 ```xml
 <property 
@@ -60,7 +60,7 @@ An implementation supporting reindexing a specific form must also support a `POS
 
 ## Limitations
 
-The Form Runner home page supports stopping the reindexing, and showing a progress while the reindexing happens. For now, while those features are implemented by the built-in implementation of the persistence API for relational databases, they are not exposed through the API, and can't yet be implemented by third-parties.
+The Form Runner Home page supports stopping the reindexing, and showing a progress while the reindexing happens. For now, while those features are implemented by the built-in implementation of the persistence API for relational databases, they are not exposed through the API, and can't yet be implemented by third-parties.
 
 ## See also
 
