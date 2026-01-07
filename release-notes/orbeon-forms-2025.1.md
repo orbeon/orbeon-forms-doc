@@ -242,6 +242,10 @@ Orbeon Forms 2025.1 also includes many other new features and enhancements, incl
 
 ## Compatibility and upgrade notes
 
+### Relational database upgrade
+
+Between Orbeon Forms 2024.1 and 2025.1, you need to upgrade the database schema. For details, see [Relational database schema](https://doc.orbeon.com/form-runner/persistence/relational-db-schema).
+
 ### Legacy custom XForms JavaScript events
 
 These long undocumented events are no longer dispatched on the client side:
