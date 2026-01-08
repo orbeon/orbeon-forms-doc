@@ -26,8 +26,6 @@ However, there is a trade-off between performance and memory usage. The larger t
 
 For more information on these configuration properties, see [Configuring state handling](/configuration/advanced/state-handling.md#configuring-state-handling).
 
-xxx TODO: diagram
-
 ## Other caches used by Orbeon Forms
 
 Orbeon Forms also uses the following caches that use an underlying cache implementation and configuration, such as Infinispan or through the JCache API (see [Supported cache implementations](#supported-cache-implementations) below):
