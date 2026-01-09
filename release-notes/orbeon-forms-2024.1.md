@@ -149,7 +149,7 @@ For backward compatibility, the `orbeon/library` library is still available. A n
 
 ### Support for OpenID Connect (OIDC)
 
-When using WildFly's built-in support for OIDC, Orbeon Forms can now extract roles from the provided OIDC token. For details, see the section [OIDC with WildFly](../form-runner/access-control/users/#oidc-with-wildfly).
+When using WildFly's built-in support for OIDC, Orbeon Forms can now extract roles from the provided OIDC token. For details, see the section [OIDC with WildFly](/form-runner/access-control/users.md/#oidc-with-wildfly).
 
 ### Support for leases in Form Builder
 
