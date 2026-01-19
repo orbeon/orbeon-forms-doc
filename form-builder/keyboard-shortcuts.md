@@ -41,8 +41,8 @@ Form Builder includes a dedicated Keyboard Shortcuts dialog that lists all avail
 |                           | `T F`        | [Inspect formulas](/form-builder/formulas-inspector.md)                   | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
 | Control Settings dialog   | `⌃[`         | Go to previous control                                                    | [2024.1.3](/release-notes/orbeon-forms-2024.1.3.md) |
 |                           | `⌃]`         | Go to next control                                                        | [2024.1.3](/release-notes/orbeon-forms-2024.1.3.md) |
-| Tab Navigation            | `⌃}`/`⌃Tab`  | Move to next tab                                                          | [2024.1.2](/release-notes/orbeon-forms-2024.1.2.md) |
-|                           | `⌃{`/`⌃⇧Tab` | Move to previous tab                                                      | [2024.1.2](/release-notes/orbeon-forms-2024.1.2.md) |
+| Tab Navigation            | `⌃}`         | Move to next tab                                                          | [2024.1.2](/release-notes/orbeon-forms-2024.1.2.md) |
+|                           | `⌃{`         | Move to previous tab                                                      | [2024.1.2](/release-notes/orbeon-forms-2024.1.2.md) |
 | Inserting Form Structure  | `I F S`      | [Insert a new section](/form-builder/toolbox.md)                          | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
 |                           | `I F G`      | [Insert a new grid](/form-builder/toolbox.md)                             | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
 |                           | `I F R`      | [Insert a new repeated grid](/form-builder/toolbox.md)                    | [2023.1.3](/release-notes/orbeon-forms-2023.1.3.md) |
