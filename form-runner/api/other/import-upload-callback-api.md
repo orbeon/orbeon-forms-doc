@@ -14,8 +14,7 @@ You enable the callback API by setting the following property in your `propertie
 <property
     as="xs:string"
     name="oxf.fr.import.attachment-callback.uri.*.*"
-    value="http://localhost:8084/post"
-/>
+    value="http://localhost:8084/post"/>
 ```
 
 Replace `http://localhost:8084/post` with the endpoint where the callback should be sent.
@@ -35,6 +34,17 @@ When a file is uploaded in the Import page, a `POST` request is sent to the conf
 Headers:
 
 - `Content-Type`: the media type of the uploaded file
+
+Example URL generated:
+
+```
+http://localhost:8084/post
+    ?filename=Orbeon Demo_ Feedback Form (en).xlsx
+    &app=orbeon
+    &form=feedback
+    &form-version=1
+    &document=9eff349bfd95aab8d4d5e048bd25a815
+```
 
 ## Expected response
 

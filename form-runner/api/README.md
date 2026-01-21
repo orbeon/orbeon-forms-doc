@@ -22,6 +22,7 @@ Form Runner offers a number of integration APIs, including:
     - [File scan API](/form-runner/api/other/file-scan-api.md)
     - [Form Runner JavaScript API](/form-runner/api/other/form-runner-javascript-api.md)
     - [Generate XML Schema API](/form-runner/api/other/xml-schema-generation.md)
+    - [Import upload callback API](/form-runner/api/other/import-upload-callback-api.md)
     - [PDF API](/form-runner/api/other/pdf-api.md)
     - [Publish form definition API](/form-runner/api/other/publish.md)
     - [Remote server APIs](/form-runner/api/other/remote.md)
