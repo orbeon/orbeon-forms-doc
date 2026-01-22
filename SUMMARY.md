@@ -368,6 +368,7 @@
   * [Validation functions](contributors/extension-validation.md)
   * [Contributor License Agreement](contributors/cla.md)
 * [Release notes](release-notes/README.md)
+  * [Orbeon Forms 2024.1.4](release-notes/orbeon-forms-2024.1.4.md)
   * [Orbeon Forms 2025.1](release-notes/orbeon-forms-2025.1.md)
   * [Orbeon Forms 2024.1.3](release-notes/orbeon-forms-2024.1.3.md)
   * [Orbeon Forms 2024.1.2](release-notes/orbeon-forms-2024.1.2.md)
