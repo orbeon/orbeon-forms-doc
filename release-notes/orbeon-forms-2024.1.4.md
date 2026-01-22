@@ -15,9 +15,10 @@ In this release, we have addressed many issues, including:
 
 * Security
     * Don't point to the landing page in the DOM when the home link is disabled ([\#7315](https://github.com/orbeon/orbeon-forms/issues/7315))
-    * FB: undo doesn't work in text field/area in dialog ([\#7341](https://github.com/orbeon/orbeon-forms/issues/7341))
     * New page still shows for form with no `create` permission ([\#7373](https://github.com/orbeon/orbeon-forms/issues/7373))
+    * Library upgrades
 * Form Builder
+    * FB: undo doesn't work in text field/area in dialog ([\#7341](https://github.com/orbeon/orbeon-forms/issues/7341))
     * Pasting section with formula and `fr:*` function fails ([\#7330](https://github.com/orbeon/orbeon-forms/issues/7330))
     * FB Summary: applications include the label "Application Name" ([\#7344](https://github.com/orbeon/orbeon-forms/issues/7344))
     * Don't disable custom classes that don't use AVTs in Form Builder at design time ([\#7347](https://github.com/orbeon/orbeon-forms/issues/7347))
@@ -45,8 +46,6 @@ In this release, we have addressed many issues, including:
     * On mobile, the number field is cleared on tap ([\#7376](https://github.com/orbeon/orbeon-forms/issues/7376))
     * fr:number – Incorrect behavior of round-when-formatting when editing an existing value ([\#7386](https://github.com/orbeon/orbeon-forms/issues/7386))
     * Solution to dynamic dropdown with search in section template in view mode that does not require republishing ([\#7397](https://github.com/orbeon/orbeon-forms/issues/7397))
-* PDF Support
-* Embedding and portlet support
 * Accessibility
     * Invalid `aria-readonly="true"` on calculated value without border ([\#7448](https://github.com/orbeon/orbeon-forms/issues/7448))
     * Document does not have a main landmark ([\#7449](https://github.com/orbeon/orbeon-forms/issues/7449))
