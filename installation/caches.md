@@ -168,6 +168,8 @@ This cache is enabled by default. To disable it, set the following property:
     value="false"/>
 ```
 
+[SINCE Orbeon Forms 2026.1] The property is now named `oxf.fr.persistence.proxy.form-definition-cache.enable`.
+
 One reason to disable this cache might be if you perform accesses to the database from outside of Orbeon Forms, and you want to make sure that you always get the latest form definition. However, we recommend using the [Form Runner persistence API](/form-runner/api/persistence/README.md) instead.
 
 This property enables access to cache with the following name, configured either in `ehcache.xml` or in the JCache configuration:
