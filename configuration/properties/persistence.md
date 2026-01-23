@@ -274,6 +274,32 @@ Add:
 Each provider may have specific configuration properties. For the latest settings, see
 [`properties-form-runner.xml`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/properties-form-runner.xml#L17).
 
+## Persistence proxy properties
+
+[SINCE Orbeon Forms 2026.1]
+
+Some properties apply to the persistence proxy itself, rather than to a specific persistence provider.
+
+### Disabling version history
+
+The following property allows you to disable [revision history](/form-runner/feature/revision-history.md) for a specific application and form:
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.persistence.proxy.disable-version-history.*.*"
+    value="true"/>
+```
+
+When set to `true`, each time form data is saved, the persistence proxy disables all revision history for that document.
+
+Use cases include:
+
+- When users don't want a history of their edits to be kept.
+- When regulations don't allow keeping edit history.
+
+Note that if this property is enabled on a form that already has existing data, the revision history for that existing data won't be purged. Revision history will only be disabled for data saved after the property is enabled.
+
 ## Storing attachments in the filesystem or on S3
 
 By default, attachments are stored in the database. Alternatively, you can configure Form Runner to store attachments in the filesystem ([\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)) or S3 ([\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)). This is useful for larger attachments, for example.

@@ -31,6 +31,8 @@ Activating the icon opens the Revision History pane:
 
 ![Revision History pane](../../.gitbook/assets/fr-revision-history-pane.png)
 
+[SINCE Orbeon Forms 2026.1] You can disable revision history on an app and form basis using the [`oxf.fr.persistence.proxy.disable-version-history.*.*` property](../../configuration/properties/persistence.md#disabling-version-history).
+
 ## The Revision History pane
 
 The Revision History pane shows the list of revisions for the current form data, with the following information:
@@ -59,3 +61,4 @@ For a given revision, you can click on the "View this revision" link to view the
 * [Purging old data using SQL](../persistence/purging-old-data.md)
 * [Form definition versioning](versioning.md)
 * [Revision History API](../api/persistence/revision-history.md)
+* [Persistence proxy properties](../../configuration/properties/persistence.md#persistence-proxy-properties)
