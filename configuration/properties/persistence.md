@@ -276,11 +276,11 @@ Each provider may have specific configuration properties. For the latest setting
 
 ## Persistence proxy properties
 
-[SINCE Orbeon Forms 2026.1]
-
 Some properties apply to the persistence proxy itself, rather than to a specific persistence provider.
 
 ### Disabling version history
+
+[SINCE Orbeon Forms 2026.1]
 
 The following property allows you to disable [revision history](/form-runner/feature/revision-history.md) for a specific application and form:
 
