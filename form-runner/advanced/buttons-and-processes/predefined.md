@@ -117,7 +117,7 @@ The `result-dialog` action shows a configurable dialog. You can customize:
     * `clear`: Sets all the fields to their default value and closes the dialog.
     * `keep`: Keeps the field values as they are and closes the dialog.
     * `go`: Go to a URL (see below for how the URL can be configured)
-    * `close-window`: Closes the window. For this to work, JavaScript must be enabled, and the window in which the form is shown must have been opened by another page you created.
+    * `close-window`: Closes the window. For this to work, the window in which the form is shown must have been opened by another page you created.
 
     ```xml
     <property
