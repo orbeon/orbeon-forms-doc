@@ -21,7 +21,7 @@ Linking doesn't make any assumption on the technology used by the website or app
 The `/fr/clerk/marriage-registration/new` in our example is what is referred to below as a _path_, and for a given form, multiple such paths exist. Knowing what those paths are is particularly important as this allows you to link from your website or web application to forms your created with Form Builder. All the paths are relative to the _deployment context_, i.e. where you've deployed Orbeon Forms, which in our example was `https://www.city.gov/forms`.
 
 | Description                              | Path                                                                        | Availability |
-| ---------------------------------------- | --------------------------------------------------------------------------- | ------------ |
+|------------------------------------------|-----------------------------------------------------------------------------|--------------|
 | Summary page for a given form definition | `/fr/$app/$form/summary`                                                    |              |
 | New empty form data                      | `/fr/$app/$form/new`                                                        |              |
 | Edit existing form data                  | `/fr/$app/$form/edit/$document`                                             |              |
