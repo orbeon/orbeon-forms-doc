@@ -50,6 +50,7 @@ The following parameters can be used:
 - <a name="send_parameter_content"></a>`content`:
     - `xml` to send the XML data (default)
     - `metadata` to send form metadata, see [details](#sending-form-metadata) [SINCE Orbeon Forms 4.7]
+    - `attachments` to send form data attachments [SINCE Orbeon Forms 2022.1]
     - `pdf` to send the PDF binary, see [details](#sending-a-pdf-binary) [SINCE Orbeon Forms 2016.2]
     - `tiff` to send the TIFF binary, see [details](#sending-a-tiff-binary) [SINCE Orbeon Forms 2016.2]
     - `pdf-url` to send the PDF URL, see [details](#sending-a-pdf-url)
