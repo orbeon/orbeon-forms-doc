@@ -1,6 +1,6 @@
 # Orbeon Forms 2024.1.4
 
-**Friday, January 23, 2026**
+**Thursday, January 29, 2026**
 
 Today we released Orbeon Forms 2024.1.4! This maintenance release mainly contains bug-fixes and is recommended for all users of:
 
@@ -41,6 +41,7 @@ In this release, we have addressed many issues, including:
     * Make error messages easier to read by removing the full file size and adding a significant digit to the compact version ([\#7437](https://github.com/orbeon/orbeon-forms/issues/7437))
     * Help for output without border and an empty value doesn't point to anything ([\#7440](https://github.com/orbeon/orbeon-forms/issues/7440))
     * Remove ⌃Tab / ⌃⇧Tab as keyboard shortcuts to switch tabs ([\#7446](https://github.com/orbeon/orbeon-forms/issues/7446))
+    * Action targeting repeated iteration on same line doesn't work ([\#7464](https://github.com/orbeon/orbeon-forms/issues/7464))
 * XBL Components
     * Dynamic dropdown with search stuck on showing "Searching…" ([\#7368](https://github.com/orbeon/orbeon-forms/issues/7368))
     * On mobile, the number field is cleared on tap ([\#7376](https://github.com/orbeon/orbeon-forms/issues/7376))
