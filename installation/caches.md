@@ -73,7 +73,7 @@ By default, the following properties are set and enable Infinispan through JCach
 
 An internal `infinispan.xml` configuration file is used. Here are the default configuration files:
 
-- [Infinispan configuration file](https://github.com/orbeon/orbeon-forms/blob/master/src/main/resources/config/infinispan.xml)
+- [Orbeon Forms 2025.1 Infinispan configuration file](https://github.com/orbeon/orbeon-forms/blob/tag-release-2025.1-ce/orbeon-war/js/src/test/resources/resources/config-replication/infinispan.xml)
 
 You can update that configuration by placing your own `infinispan.xml` file in the `WEB-INF/resources/config` directory of your web app. This is rarely needed, except for enabling [replication](replication.md).
 
