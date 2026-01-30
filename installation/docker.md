@@ -80,7 +80,7 @@ services:
     ports:
       - ${ORBEON_POSTGRES_PORT:-5432}:5432
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql
     environment:
       POSTGRES_DB: ${ORBEON_POSTGRES_DB:-orbeon}
       POSTGRES_USER: ${ORBEON_POSTGRES_USER:-orbeon}
