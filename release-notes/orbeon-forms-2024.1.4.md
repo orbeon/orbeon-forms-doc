@@ -42,6 +42,7 @@ In this release, we have addressed many issues, including:
     * Help for output without border and an empty value doesn't point to anything ([\#7440](https://github.com/orbeon/orbeon-forms/issues/7440))
     * Remove ⌃Tab / ⌃⇧Tab as keyboard shortcuts to switch tabs ([\#7446](https://github.com/orbeon/orbeon-forms/issues/7446))
     * Action targeting repeated iteration on same line doesn't work ([\#7464](https://github.com/orbeon/orbeon-forms/issues/7464))
+    * Improve logging for invalid property value ([\#7456](https://github.com/orbeon/orbeon-forms/issues/7456))
 * XBL Components
     * Dynamic dropdown with search stuck on showing "Searching…" ([\#7368](https://github.com/orbeon/orbeon-forms/issues/7368))
     * On mobile, the number field is cleared on tap ([\#7376](https://github.com/orbeon/orbeon-forms/issues/7376))
