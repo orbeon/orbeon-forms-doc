@@ -17,4 +17,4 @@ This is the landing page for the [Orbeon Forms](https://www.orbeon.com/) documen
   * [Form Runner Landing page](form-runner/feature/landing-page.md)
   * And more!
 * [Download](https://www.orbeon.com/download) Orbeon Forms.
-* Review the [latest release notes for Orbeon Forms 2024.1](release-notes/orbeon-forms-2024.1.md)!
+* Review the [latest release notes for Orbeon Forms 2025.1](release-notes/orbeon-forms-2025.1.md)!
