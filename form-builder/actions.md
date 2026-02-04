@@ -90,6 +90,7 @@ Each row instructs the action to take a value and pass it to the service, and yo
           <userName>test</userName>
       </params>
       ```
+* With HTTP headers (see [Setting HTTP headers](#setting-http-headers) below).
 * With Database services:
   * To set the first query parameter, use the value "1" (without the quotes), the second, "2", etc.
 
@@ -123,6 +124,27 @@ Parameters:
   * The expression must point to an element or attribute node of the request body. If multiple nodes are returned, only the first one is considered.
 
 ![Action request formula](../.gitbook/assets/actions-request-formula.png)
+
+### Setting HTTP headers
+
+\[SINCE Orbeon Forms 2026.1]
+
+You can set HTTP headers dynamically when calling an HTTP service, in the same way you can set URL parameters.
+
+To set an HTTP header:
+
+1. First, define the header in the HTTP Service Editor under the "HTTP Headers" section (see [HTTP headers](http-services.md#http-headers)).
+2. In the Actions Editor, under "Service Request Actions", select "Control Value" or "Formula" in the first dropdown.
+3. In the destination dropdown, select the header you want to set. Headers are grouped separately from URL parameters in the dropdown list.
+
+Parameters:
+
+* **Control** (when using "Control Value"):
+  * Specifies the control whose value must be used as the header value.
+* **Formula** (when using "Formula"):
+  * An XPath expression that evaluates to the header value.
+* **Destination**:
+  * The dropdown lists both URL parameters and HTTP headers defined in the HTTP Service Editor, organized into separate groups for easy identification.
 
 ## Handling the service response
 

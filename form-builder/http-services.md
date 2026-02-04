@@ -62,6 +62,18 @@ On the wire, this serialization uses the `application/x-www-form-urlencoded` enc
 
 Here is [how to set URL parameters from an action](actions.md#passing-url-parameters-to-get-and-delete-methods).
 
+### HTTP headers
+
+\[SINCE Orbeon Forms 2026.1]
+
+The HTTP headers section allows you to specify custom HTTP headers to send with the service request, similar to how URL parameters work.
+
+* You can add as many HTTP headers as needed using the "+" button.
+* A non-blank header value specifies a default value for the header.
+* An action can set the value of a header.
+
+Here is [how to set HTTP headers from an action](actions.md#setting-http-headers).
+
 ### JSON support
 
 \[SINCE Orbeon Forms 2016.1]
