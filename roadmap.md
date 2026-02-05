@@ -4,27 +4,26 @@
 
 ### Orbeon Forms 2026.1
 
-Focus:
+For Orbeon Forms 2026.1, we are planning to work on the following items:
 
-- Form Builder user interface
-    - improved actions editor
-    - workflow editor
-    - see also: [#2282](https://github.com/orbeon/orbeon-forms/issues/2282)
-- Form Runner user interface
-    - styles/theme editor
-    - properties editor
-- Additional form controls
-    - [#6734](https://github.com/orbeon/orbeon-forms/issues/6734) 
-- Additional demo forms
-- Additional integrations
-    - Google Sheets
+- Form Builder user interface:
+    - __Improved actions editor:__ We would like to improve the current editor to progressively support more of the action syntax. Actions are powerful, but not always easy to use, and we want to make them more accessible to users of all levels.
+    - __Workflow editor:__ This has been a long-standing item, and we would like to make it possible to edit simple workflows in the Form Builder UI.
+    - __More user-friendly formulas:__ See [#2282](https://github.com/orbeon/orbeon-forms/issues/2282).
+- Form Runner user interface:
+    - __Styles/theme editor:__ With 2025.1, we have refactored the CSS to use variables. The next step will be to expose the UI configuration at a higher level in the Form Runner UI. 
+    - __Properties editor:__ Similarly, we now have a powerful API to define configuration properties. We'd like to add a UI to edit those properties so that administrators, form authors, and end users alike can change settings without having to edit server-side configuration files.
+- Additional form controls:
+    - __Improved phone number control:__ See also [#6734](https://github.com/orbeon/orbeon-forms/issues/6734).
+- Additional demo forms: we plan to continue creating more demo forms to show the capabilities of Orbeon Forms.
+- Additional integrations: one candidate is to add support for Google Sheets as a data destination, which would be a great addition to the existing support for databases and HTTP services.
 
 [//]: # (- admin console!)
 [//]: # (Think about other general lines.)
 
-See the tentative [2026.1 items](https://github.com/users/orbeon/projects/29/views/1) for details.
+See also the tentative [2026.1 items](https://github.com/users/orbeon/projects/29/views/1) for details.
 
-Consider:
+As usual, we also are considering:
 
 - [low-hanging fruits](https://github.com/orbeon/orbeon-forms/issues?q=is%3Aopen+is%3Aissue+label%3A%22Low-Hanging+Fruit%22)
 - [dogfood items](https://github.com/orbeon/orbeon-forms/labels/Area%3A%20Dogfood)
