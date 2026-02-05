@@ -15,8 +15,9 @@ For Orbeon Forms 2026.1, we are planning to work on the following items:
     - __Properties editor:__ Similarly, we now have a powerful API to define configuration properties. We'd like to add a UI to edit those properties so that administrators, form authors, and end users alike can change settings without having to edit server-side configuration files.
 - Additional form controls:
     - __Improved phone number control:__ See also [#6734](https://github.com/orbeon/orbeon-forms/issues/6734).
-- Additional demo forms: we plan to continue creating more demo forms to show the capabilities of Orbeon Forms.
-- Additional integrations: one candidate is to add support for Google Sheets as a data destination, which would be a great addition to the existing support for databases and HTTP services.
+- Other
+    - __Additional demo forms:__ we plan to continue creating more demo forms to show the capabilities of Orbeon Forms.
+    - __Additional integrations:__ A candidate is to add support for Google Sheets as a data destination, which would be a great addition to the existing support for databases and HTTP services.
 
 [//]: # (- admin console!)
 [//]: # (Think about other general lines.)
