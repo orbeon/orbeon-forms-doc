@@ -461,6 +461,18 @@ Example:
 
 The function returns an empty sequence if the process contains at least one asynchronous action, and therefore the process result is yet unknown.
 
+### fr:process-dateTime()
+
+[SINCE Orbeon Forms 2026.1]
+
+```xpath
+fr:process-dateTime() as xs:dateTime
+```
+
+When called within a [process](/form-runner/advanced/buttons-and-processes/README.md) context, this function returns the same `xs:dateTime` value for every call during that process. The value corresponds to the time when the process started.
+
+When called outside a process context, the function fails.
+
 ### fr:component-param-value()
 
 [SINCE Orbeon Forms 2018.1]
