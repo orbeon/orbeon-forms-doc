@@ -4,6 +4,7 @@
 
 * [`save` action](actions-form-runner-save.md)
 * [`send` action](actions-form-runner-send.md)
+* [`send-s3` action](actions-form-runner-send-s3.md)
 * [`email` action](actions-form-runner-email.md)
 
 ## Introduction
@@ -89,6 +90,10 @@ The documentation for the `email` action is on a [separate page](actions-form-ru
 ## send
 
 The documentation for the `send` action is on a [separate page](actions-form-runner-send.md).
+
+## send-s3
+
+The documentation for the `send-s3` action is on a [separate page](actions-form-runner-send-s3.md).
 
 ## set-data-status
 
