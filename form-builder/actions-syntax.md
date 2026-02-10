@@ -439,7 +439,7 @@ With `my-repeated-grid` nested within `my-repeated-section`:
 | `at`              | No        | space-delimited position tokens: `start`, `end`, or a positive integer           | missing leading tokens default to `end`                                                              |
 | `apply-defaults ` | No        | whether to apply initial value formulas when adding iterations:`true` or `false` | if missing, use the repeated section or grid's "Apply initial value formulas when adding iterations" |
 
-`apply-defaults` is \[SINCE Orbeon Forms 2026.1\]/\[SINCE Orbeon Forms 2025.1.1\]/\[SINCE Orbeon Forms 2024.1.5\]/\[SINCE Orbeon Forms 2023.1.10\].
+`apply-defaults` is \[SINCE Orbeon Forms 2026.1\]/\[SINCE Orbeon Forms 2025.1.1\]/\[SINCE Orbeon Forms 2024.1.5\]/\[SINCE Orbeon Forms 2023.1.9\].
 
 This action starts by identifying a single repeated grid or section with the `repeat` attribute. If the repeated grid or section is at the top-level, there is only one possible match. If the repeated grid or section is _nested_ within one or more repeated sections, then a single repetition of the ancestor repeated sections is determined using the optional `at` attribute.
 
