@@ -61,7 +61,7 @@ A listener looks like this:
 ```
 
 | Attribute  | Mandatory                                                                              | Value                                 | Comment                                                                                                                    |
-| ---------- | -------------------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+|------------|----------------------------------------------------------------------------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | `version`  | Yes                                                                                    | format version                        | always `2018.2`                                                                                                            |
 | `modes`    | No                                                                                     | space-separated list of modes         | The listener is enabled for each mode listed only. If absent, the listener is enabled for all modes.                       |
 | `events`   | Yes                                                                                    | space-separated list of event names   | When more than one event name is present, the listener reacts if _any_ of the listed events is present.                    |
@@ -112,7 +112,7 @@ An action looks like this:
 ```
 
 | Attribute | Mandatory | Value          | Comment                               |
-| --------- | --------- | -------------- | ------------------------------------- |
+|-----------|-----------|----------------|---------------------------------------|
 | `version` | Yes       | format version | always `2018.2`                       |
 | `name`    | Yes       | action name    | must be unique in the form definition |
 
@@ -135,7 +135,7 @@ An action looks like this:
 Containing actions can include one or more calls to services.
 
 | Attribute | Mandatory | Value                     | Comment                                      |
-| --------- | --------- | ------------------------- | -------------------------------------------- |
+|-----------|-----------|---------------------------|----------------------------------------------|
 | `ref`     | Yes       | sequence XPath expression | runs in the current XPath evaluation context |
 
 In the following example, each repetition adds a row to the grid, calls a service, passing the attachment id, and sets the attachment value on the last row.
@@ -197,7 +197,7 @@ Example:
 `<fr:if>` allows you to conditionally run a block of actions.
 
 | Attribute   | Mandatory | Value                    | Comment                                      |
-| ----------- | --------- | ------------------------ | -------------------------------------------- |
+|-------------|-----------|--------------------------|----------------------------------------------|
 | `condition` | Yes       | boolean XPath expression | runs in the current XPath evaluation context |
 
 In the following example, with the repetition performed by `<fr:data-iterate>`, the call to the service that retrieves an attachment depends on whether there is a non-blank attachment id provided.
@@ -271,7 +271,7 @@ Possible values for this property and attribute are:
   * `$unit` is as described below
 
 | Unit | Description  |
-| ---- | ------------ |
+|------|--------------|
 | `h`  | hours        |
 | `m`  | minutes      |
 | `s`  | seconds      |
@@ -336,7 +336,7 @@ Assume now that the control `my-repeated-value` is within a repeated grid, itsel
 `<fr:service-call>` calls a service by name.
 
 | Attribute | Mandatory | Value                       | Comment                     |
-| --------- | --------- | --------------------------- | --------------------------- |
+|-----------|-----------|-----------------------------|-----------------------------|
 | `service` | Yes       | name of the service to call | must be an existing service |
 
 #### Passing a value
@@ -354,7 +354,7 @@ or:
 When calling an [HTTP service](http-services.md), you can set XML request body values using nested `<fr:value>` elements.
 
 | Attribute | Mandatory | Value                  | Comment                                              |
-| --------- | --------- | ---------------------- | ---------------------------------------------------- |
+|-----------|-----------|------------------------|------------------------------------------------------|
 | `control` | No        | control name           | either this or `value` must be specified             |
 | `value`   | No        | value expression       | either this or `control` must be specified           |
 | `ref`     | Yes       | destination expression | points to an element or attribute in the request XML |
@@ -368,7 +368,7 @@ When calling an [HTTP service](http-services.md), you can set XML request body v
 When calling an [HTTP service](http-services.md), you can pass URL parameters using nested `<fr:url-param>` elements.
 
 | Attribute | Mandatory | Value            | Comment                                    |
-| --------- | --------- | ---------------- | ------------------------------------------ |
+|-----------|-----------|------------------|--------------------------------------------|
 | `control` | No        | control name     | either this or `value` must be specified   |
 | `value`   | No        | value expression | either this or `control` must be specified |
 | `name`    | Yes       | parameter name   | URL parameter name                         |
@@ -382,7 +382,7 @@ When calling an [HTTP service](http-services.md), you can pass URL parameters us
 When calling a [database service](database-services.md), you can pass parameters using nested `<fr:sql-param>` elements.
 
 | Attribute | Mandatory | Value            | Comment                                    |
-| --------- | --------- | ---------------- | ------------------------------------------ |
+|-----------|-----------|------------------|--------------------------------------------|
 | `control` | No        | control name     | either this or `value` must be specified   |
 | `value`   | No        | value expression | either this or `control` must be specified |
 | `index`   | Yes       | positive integer | SQL query parameter index                  |
@@ -396,7 +396,7 @@ When calling a [database service](database-services.md), you can pass parameters
 ```
 
 | Attribute | Mandatory | Value                                                                  | Comment                                 |
-| --------- | --------- | ---------------------------------------------------------------------- | --------------------------------------- |
+|-----------|-----------|------------------------------------------------------------------------|-----------------------------------------|
 | `repeat`  | Yes       | repeated grid or repeated section name                                 |                                         |
 | `at`      | No        | space-delimited position tokens: `start`, `end`, or a positive integer | missing leading tokens default to `end` |
 
@@ -433,10 +433,13 @@ With `my-repeated-grid` nested within `my-repeated-section`:
     at="..."/>
 ```
 
-| Attribute | Mandatory | Value                                                                  | Comment                                 |
-| --------- | --------- | ---------------------------------------------------------------------- | --------------------------------------- |
-| `repeat`  | Yes       | repeated grid or repeated section name                                 |                                         |
-| `at`      | No        | space-delimited position tokens: `start`, `end`, or a positive integer | missing leading tokens default to `end` |
+| Attribute         | Mandatory | Value                                                                            | Comment                                                                                              |
+|-------------------|-----------|----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| `repeat`          | Yes       | repeated grid or repeated section name                                           |                                                                                                      |
+| `at`              | No        | space-delimited position tokens: `start`, `end`, or a positive integer           | missing leading tokens default to `end`                                                              |
+| `apply-defaults ` | No        | whether to apply initial value formulas when adding iterations:`true` or `false` | if missing, use the repeated section or grid's "Apply initial value formulas when adding iterations" |
+
+`apply-defaults` is \[SINCE Orbeon Forms 2026.1\]/\[SINCE Orbeon Forms 2025.1.1\]/\[SINCE Orbeon Forms 2024.1.5\]/\[SINCE Orbeon Forms 2023.1.10\].
 
 This action starts by identifying a single repeated grid or section with the `repeat` attribute. If the repeated grid or section is at the top-level, there is only one possible match. If the repeated grid or section is _nested_ within one or more repeated sections, then a single repetition of the ancestor repeated sections is determined using the optional `at` attribute.
 
@@ -495,7 +498,7 @@ With `my-repeated-grid` nested within `my-repeated-section`:
 ```
 
 | Attribute | Mandatory | Value                                                                  | Comment                                 |
-| --------- | --------- | ---------------------------------------------------------------------- | --------------------------------------- |
+|-----------|-----------|------------------------------------------------------------------------|-----------------------------------------|
 | `repeat`  | Yes       | repeated grid or repeated section name                                 |                                         |
 | `at`      | No        | space-delimited position tokens: `start`, `end`, or a positive integer | missing leading tokens default to `end` |
 
@@ -540,7 +543,7 @@ With `my-repeated-grid` nested within `my-repeated-section`:
 `<fr:control-setvalue/>` sets the value of a form control.
 
 | Attribute | Mandatory | Value                                                                  | Comment                                 |
-| --------- | --------- | ---------------------------------------------------------------------- | --------------------------------------- |
+|-----------|-----------|------------------------------------------------------------------------|-----------------------------------------|
 | `control` | Yes       | control name                                                           |                                         |
 | `value`   | Yes       | value expression                                                       | value to set                            |
 | `at`      | No        | space-delimited position tokens: `start`, `end`, or a positive integer | missing leading tokens default to `end` |
@@ -562,7 +565,7 @@ With `my-repeated-grid` nested within `my-repeated-section`:
 `<fr:control-clear/>` clears the value of a control. For attachment controls, this clears the file but also the file metadata (filename, mediatype, and size).
 
 | Attribute | Mandatory | Value                                                                  | Comment                                 |
-| --------- | --------- | ---------------------------------------------------------------------- | --------------------------------------- |
+|-----------|-----------|------------------------------------------------------------------------|-----------------------------------------|
 | `control` | Yes       | control name                                                           |                                         |
 | `at`      | No        | space-delimited position tokens: `start`, `end`, or a positive integer | missing leading tokens default to `end` |
 
@@ -581,7 +584,7 @@ Example:
 `<fr:control-setitems/>` sets the choices (or "itemset") of a selection control such as a dropdown or radio buttons.
 
 | Attribute | Mandatory | Value                                                                  | Comment                                 |
-| --------- | --------- | ---------------------------------------------------------------------- | --------------------------------------- |
+|-----------|-----------|------------------------------------------------------------------------|-----------------------------------------|
 | `control` | Yes       | control name                                                           |                                         |
 | `items`   | Yes       | XPath expression returning one XPath item for each choice              |                                         |
 | `label`   | Yes       | relative XPath expression returning the label for the current choice   |                                         |
@@ -599,7 +602,7 @@ _NOTE: Hints are only supported for checkboxes and radio buttons as of Orbeon Fo
 ```
 
 | Attribute | Mandatory | Value        | Comment |
-| --------- | --------- | ------------ | ------- |
+|-----------|-----------|--------------|---------|
 | `name`    | Yes       | dataset name |         |
 
 This action takes the latest service result and saves it to the dataset specified by name. Example:
@@ -619,7 +622,7 @@ This action takes the latest service result and saves it to the dataset specifie
 ```
 
 | Attribute | Mandatory | Value        | Comment |
-| --------- | --------- | ------------ | ------- |
+|-----------|-----------|--------------|---------|
 | `name`    | Yes       | dataset name |         |
 
 This action clears the content of the dataset with the given name. Specifically, it replaces it with a single anonymous root element (`<_/>`). Example:
@@ -640,7 +643,7 @@ This action clears the content of the dataset with the given name. Specifically,
 ```
 
 | Attribute | Mandatory | Value          | Comment |
-| --------- | --------- | -------------- | ------- |
+|-----------|-----------|----------------|---------|
 | `scope`   | Yes       | property scope |         |
 | `name`    | Yes       | process name   |         |
 
@@ -654,7 +657,7 @@ This action clears the content of the dataset with the given name. Specifically,
 ```
 
 | Attribute  | Mandatory | Value                                               | AVT      | Comment                       |
-| ---------- | --------- | --------------------------------------------------- | -------- | ----------------------------- |
+|------------|-----------|-----------------------------------------------------|----------|-------------------------------|
 | `location` | Yes       | path or URL                                         | 2024.1.1 |                               |
 | `target`   | No        | `_self` or `_blank` or name of the browsing context |          | where to display the location |
 
@@ -668,7 +671,7 @@ This action clears the content of the dataset with the given name. Specifically,
 ```
 
 | Attribute | Mandatory | Value        | Comment |
-| --------- | --------- | ------------ | ------- |
+|-----------|-----------|--------------|---------|
 | `control` | Yes       | control name |         |
 
 When the response of a service is binary, this action allows setting the value of an attachment control to the content of the service response:
@@ -702,7 +705,7 @@ See also the following actions:
 ```
 
 | Attribute | Mandatory | Value            | Comment                      |
-| --------- | --------- | ---------------- | ---------------------------- |
+|-----------|-----------|------------------|------------------------------|
 | `control` | Yes       | control name     |                              |
 | `value`   | Yes       | value expression | value of the filename to set |
 
@@ -730,7 +733,7 @@ This supports the following controls:
 ```
 
 | Attribute | Mandatory | Value            | Comment                       |
-| --------- | --------- | ---------------- | ----------------------------- |
+|-----------|-----------|------------------|-------------------------------|
 | `control` | Yes       | control name     |                               |
 | `value`   | Yes       | value expression | value of the mediatype to set |
 
@@ -760,7 +763,7 @@ Note that the `<fr:control-setattachment>` action automatically sets a mediatype
 ```
 
 | Attribute | Mandatory | Value            | Comment                  |
-| --------- | --------- | ---------------- | ------------------------ |
+|-----------|-----------|------------------|--------------------------|
 | `control` | Yes       | control name     |                          |
 | `value`   | Yes       | value expression | value of the size to set |
 
@@ -789,7 +792,7 @@ Note that the `<fr:control-setattachment>` action automatically sets a size.
 ```
 
 | Attribute | Mandatory | Value        | Comment |
-| --------- | --------- | ------------ | ------- |
+|-----------|-----------|--------------|---------|
 | `control` | Yes       | control name |         |
 
 This action allows setting the focus on a form control. Example:
@@ -810,7 +813,7 @@ This action allows setting the focus on a form control. Example:
 ```
 
 | Attribute | Mandatory | Value             | Comment            |
-| --------- | --------- | ----------------- | ------------------ |
+|-----------|-----------|-------------------|--------------------|
 | `control` | Yes       | control name      |                    |
 | `visited` | No        | `true` or `false` | defaults to `true` |
 
@@ -837,7 +840,7 @@ The value of the `message` attribute uses the [AVT syntax](../xforms/attribute-v
 ```
 
 | Attribute | Mandatory | Value       | AVT | Comment |
-| --------- | --------- | ----------- | --- | ------- |
+|-----------|-----------|-------------|-----|---------|
 | `message` | Yes       | path or URL | Yes |         |
 
 ### Copying control content
