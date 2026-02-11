@@ -15,6 +15,7 @@ The `email` action sends an email with optionally XML form data, attachments, an
   - `2019.1.0`
 - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) `match`: The behaviour to use when multiple templates are found. Can be `first` (default) or `all`. If `all`, then all matching templates are used (i.e. one email per template is sent). If `first`, then only the first matching template is used.
 - [SINCE Orbeon Forms 2024.1.1] `s3-store`: If `true`, email attachments are stored in an S3 bucket in addition to being sent via email. If `false` or absent, attachments are only sent via email. See [S3 storage](/form-runner/feature/s3.md) for more information about how to use this feature.
+- `lang`: Optional language override for email template selection. If not provided, the current form language is used.
 
 ## Configuration properties
 
