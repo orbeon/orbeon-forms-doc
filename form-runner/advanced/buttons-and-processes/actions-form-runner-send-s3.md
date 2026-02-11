@@ -14,15 +14,23 @@ This action uses the same S3 configuration as the [`email` action's S3 storage f
 
 - `content`: The type of content to send. Currently, only `xml` is supported (and is the default).
 - `s3-config`: The name of the S3 configuration to use. Defaults to `default`. See [S3 bucket configuration](/form-runner/feature/s3.md#bucket-configuration).
-- `s3-path`: An XPath expression that determines the S3 key (path) under which the data is stored. The expression is evaluated against the XML data of the form.
+- `s3-path`: An optional XPath expression that determines the S3 key (path) under which the data is stored. The expression is evaluated against the XML data of the form.
 - `data-format-version`: The data format version. Defaults to `4.0.0`. Possible values include `edge`, `2019.1.0`, `4.8.0`, and `4.0.0`.
+- `prune-metadata`: Whether to prune metadata from the XML data. Defaults to `true` unless `data-format-version` is set to `edge`.
 
 ### Using properties
 
-If `s3-config` or `s3-path` are not provided as parameters, the following properties are used instead:
+The `s3-config`, `s3-path`, and `prune-metadata` parameters are resolved in order as follows:
+
+1. The action parameter, if provided (e.g. `send-s3(s3-path = "...")`).
+2. The corresponding property, if the action parameter is not provided.
+3. A default value, if neither the action parameter nor the property is found.
+
+The corresponding properties are:
 
 - `oxf.fr.send-s3.s3-config`
 - `oxf.fr.send-s3.xml.s3-path`
+- `oxf.fr.send-s3.prune-metadata`
 
 A default value for `oxf.fr.send-s3.xml.s3-path` is provided:
 
