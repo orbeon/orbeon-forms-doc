@@ -190,7 +190,7 @@ fr:form-title() as xs:string?
 
 Return the form's title for the current form language.
 
-### fr:form-runner-link
+### fr:form-runner-link()
 
 [SINCE Orbeon Forms 2022.1]
 
