@@ -4,6 +4,8 @@ __Wednesday, December 31, 2025__
 
 Today we released Orbeon Forms 2025.1! This release introduces new features, many improvements, and bug-fixes!
 
+![Orbeon Forms 2025.1](/images/orbeon-forms-2025.1.webp)
+
 ## Major new features
 
 ### Built-in confirmation page
