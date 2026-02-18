@@ -146,6 +146,8 @@ Parameters:
 * **Destination**:
   * The dropdown lists both URL parameters and HTTP headers defined in the HTTP Service Editor, organized into separate groups for easy identification.
 
+![Action request HTTP headers](../.gitbook/assets/actions-request-http-headers.png)
+
 ## Handling the service response
 
 ### User interface
