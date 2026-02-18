@@ -137,7 +137,7 @@ The Actions Editor features two new enhancements:
 * You can now set service values from a formula in addition to a control value.
 * You can control whether an action runs based on formula.
 
-![Action request formula](../.gitbook/assets/actions-request-formula.png)
+![Action request formula](../form-builder/images/actions-request-formula.png)
 
 ![Action condition formula](../.gitbook/assets/actions-condition-formula.png)
 

@@ -73,7 +73,7 @@ Like for services, once your action is defined, the Save buttons saves it to the
 
 Each row instructs the action to take a value and pass it to the service, and you can add as many such rows as needed using the "+" button, and remove existing entries with the dropdown menu.
 
-![Actions Editor Service Request Actions](../.gitbook/assets/actions-request.png)
+![Actions Editor Service Request Actions](images/actions-request.png)
 
 ### How a value is provided to the service
 
@@ -123,7 +123,7 @@ Parameters:
   * The expression is evaluated in the context of root element of the XML request data to send to the service.
   * The expression must point to an element or attribute node of the request body. If multiple nodes are returned, only the first one is considered.
 
-![Action request formula](../.gitbook/assets/actions-request-formula.png)
+![Action request formula](images/actions-request-formula.png)
 
 ### Setting HTTP headers
 
@@ -146,7 +146,7 @@ Parameters:
 * **Destination**:
   * The dropdown lists both URL parameters and HTTP headers defined in the HTTP Service Editor, organized into separate groups for easy identification.
 
-![Action request HTTP headers](../.gitbook/assets/actions-request-http-headers.png)
+![Action request HTTP headers](images/actions-request-http-headers.png)
 
 ## Handling the service response
 

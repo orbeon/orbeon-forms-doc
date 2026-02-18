@@ -8,7 +8,7 @@ To create a new HTTP service, click the Add icon under "HTTP Services". The HTTP
 
 The following screenshot shows an example of filled-out service:
 
-<figure><img src="../.gitbook/assets/service-definition.png" alt="Definition tab" width="561"><figcaption><p>Definition tab</p></figcaption></figure>
+<figure><img src="images/service-definition.png" alt="Definition tab" width="561"><figcaption><p>Definition tab</p></figcaption></figure>
 
 ## Service definition
 
