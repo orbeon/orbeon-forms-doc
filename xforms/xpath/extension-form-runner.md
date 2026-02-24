@@ -63,6 +63,13 @@ fr:control-string-value(
 This function returns the value or values of a Form Runner control by name as a sequence of strings, or an empty sequence if the control or
 value is not found.
 
+Unless `$section-name` is used (see below), the search takes place only in the context of the current expression. This
+means that this function will not find form control values that are:
+
+- in a section template, if called from the top-level form
+- in a different section template, if called from a section template
+- at the top level, if called from a section template
+
 [SINCE Orbeon Forms 2021.1.3]
 
 ```xpath
