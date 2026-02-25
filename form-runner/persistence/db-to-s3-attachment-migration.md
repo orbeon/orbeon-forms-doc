@@ -29,7 +29,7 @@ The tool is available as a Docker image: `orbeon/db-to-s3-attachment-migration`.
 
 ```bash
 docker run --rm \
-  orbeon/db-to-s3-attachment-migration:2025.1.1 \
+  orbeon/db-to-s3-attachment-migration:2025.1.1-pe \
   --db-url "jdbc:postgresql://host:5432/orbeon" \
   --db-user "orbeon" \
   --db-password "secret" \
@@ -56,7 +56,7 @@ ORBEON_S3_REGION=us-east-1
 ```bash
 docker run --rm \
   --env-file migration.env \
-  orbeon/db-to-s3-attachment-migration:2025.1.1
+  orbeon/db-to-s3-attachment-migration:2025.1.1-pe
 ```
 
 ### Network access
@@ -96,7 +96,7 @@ It is recommended to start with a dry run to preview what the tool would do:
 
 ```bash
 docker run --rm \
-  orbeon/db-to-s3-attachment-migration:2025.1.1 \
+  orbeon/db-to-s3-attachment-migration:2025.1.1-pe \
   --db-url "jdbc:postgresql://host:5432/orbeon" \
   --db-user "orbeon" \
   --db-password "secret" \
