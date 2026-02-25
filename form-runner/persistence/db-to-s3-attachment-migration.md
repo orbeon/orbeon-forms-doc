@@ -30,13 +30,13 @@ The tool is available as a Docker image: `orbeon/db-to-s3-attachment-migration`.
 ```bash
 docker run --rm \
   orbeon/db-to-s3-attachment-migration:2025.1.1 \
-  --db-url               "jdbc:postgresql://host:5432/orbeon" \
-  --db-user              "orbeon" \
-  --db-password          "secret" \
-  --s3-bucket            "my-bucket" \
-  --s3-access-key        "AKIAIOSFODNN7EXAMPLE" \
+  --db-url "jdbc:postgresql://host:5432/orbeon" \
+  --db-user "orbeon" \
+  --db-password "secret" \
+  --s3-bucket "my-bucket" \
+  --s3-access-key "AKIAIOSFODNN7EXAMPLE" \
   --s3-secret-access-key "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY" \
-  --s3-region            "us-east-1"
+  --s3-region "us-east-1"
 ```
 
 ### Using environment variables
