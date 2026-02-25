@@ -59,6 +59,22 @@ docker run --rm \
   orbeon/db-to-s3-attachment-migration:2025.1.1-pe
 ```
 
+### JDBC drivers
+
+The Docker image includes the PostgreSQL JDBC driver. For licensing reasons, other database drivers (MySQL, Oracle, SQL Server, DB2) are not included. You must provide the appropriate JDBC driver JAR by mounting it into the `/opt/drivers/` directory:
+
+```bash
+docker run --rm \
+  -v /path/to/mysql-connector-j-9.2.0.jar:/opt/drivers/mysql-connector-j-9.2.0.jar \
+  orbeon/db-to-s3-attachment-migration:2025.1.1-pe \
+  --db-url "jdbc:mysql://host:3306/orbeon" \
+  --db-user "orbeon" \
+  --db-password "secret" \
+  --s3-bucket "my-bucket" \
+  --s3-access-key "..." \
+  --s3-secret-access-key "..."
+```
+
 ### Network access
 
 The Docker container must be able to reach both the database and the S3 endpoint. If the database runs on the host machine, you may need to use `--network host` or the appropriate Docker networking option for your setup.
