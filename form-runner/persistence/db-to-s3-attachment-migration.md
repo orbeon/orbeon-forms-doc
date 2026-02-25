@@ -1,4 +1,4 @@
-# DB to S3 attachment migration
+# DB-to-S3 attachment migration
 
 ## Availability
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-When switching your attachment storage from a relational database to S3 (see [Storing attachments in the filesystem or on S3](/configuration/properties/persistence.md#storing-attachments-in-the-filesystem-or-on-s3)), existing attachments remain in the database. The DB to S3 attachment migration tool moves those existing attachments from the database to S3, so that all attachments are stored in a single location.
+When switching your attachment storage from a relational database to S3 (see [Storing attachments in the filesystem or on S3](/configuration/properties/persistence.md#storing-attachments-in-the-filesystem-or-on-s3)), existing attachments remain in the database. The DB-to-S3 attachment migration tool moves those existing attachments from the database to S3, so that all attachments are stored in a single location.
 
 The tool:
 

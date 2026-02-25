@@ -181,7 +181,7 @@
     * [Autosave](form-runner/persistence/autosave.md)
     * [Database support](form-runner/persistence/db-support.md)
     * [Flat view](form-runner/persistence/flat-view.md)
-    * [DB to S3 attachment migration](form-runner/persistence/db-to-s3-attachment-migration.md)
+    * [DB-to-S3 attachment migration](form-runner/persistence/db-to-s3-attachment-migration.md)
   * [Linking and embedding](form-runner/link-embed/README.md)
     * [Linking](form-runner/link-embed/linking.md)
     * [Java Embedding API](form-runner/link-embed/java-api.md)
