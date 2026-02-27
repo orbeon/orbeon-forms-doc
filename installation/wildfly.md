@@ -119,4 +119,4 @@ To setup a datasource, if you'd like Orbeon Forms to connect to your relational 
 
 Finally, you might want to double check the configuration you just did, ensuring names match across files, per the following diagram.
 
-![Configuration files that need to be in sync](../.gitbook/assets/jboss.png)
+![Configuration files that need to be in sync](images/jboss.png)

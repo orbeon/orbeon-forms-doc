@@ -9,7 +9,7 @@
 
 The intent is to allow Java (and other Java Virtual Machine (JVM)-based languages) applications to easily embed forms produced with Form Builder within other pages.
 
-![A form embedded in a simple page with a top banner](../../.gitbook/assets/embedding-bookshelf.png)
+![A form embedded in a simple page with a top banner](images/embedding-bookshelf.png)
 
 ## Configuration
 
@@ -19,7 +19,8 @@ The intent is to allow Java (and other Java Virtual Machine (JVM)-based language
 
 Your own web app does the following:
 
-1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`. Both are included in `orbeon-embedding.war` which ships   \
+1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`. Both are included in `orbeon-embedding.war` which ships
+   \
    with Orbeon Professional Edition (PE) only.
 2. Setup the filter in your `web.xml` per the snippet below.
 3. Call the embedding API when producing a page, as done in the example below.
@@ -27,7 +28,8 @@ Your own web app does the following:
 The page you do the embedding from must:
 
 1. Start with `<!DOCTYPE html>`, so your page is in [full standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode). Without this, you will notice that some CSS fails to apply as it should.
-2. Use the UTF-8 character encoding for the HTML response.   \
+2. Use the UTF-8 character encoding for the HTML response.
+   \
    This is a typical filter configuration:
 
 ```xml
@@ -264,7 +266,7 @@ The embedding application can set the size the embedded Form Builder `<div>` ele
 
 The Form Builder "New" and "Summary" buttons are hidden when Form Builder is embedded, as navigating between pages is not yet supported when embedding.
 
-![Embedding Form Builder](../../.gitbook/assets/embedding-builder-dialog.png)
+![Embedding Form Builder](images/embedding-builder-dialog.png)
 
 ## How it works
 

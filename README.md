@@ -4,7 +4,7 @@
 
 This is the landing page for the [Orbeon Forms](https://www.orbeon.com/) documentation.
 
-<figure><img src=".gitbook/assets/landing-form-data-card.png" alt=""><figcaption><p>Orbeon Forms</p></figcaption></figure>
+<figure><img src="form-runner/images/landing-form-data-card.png" alt=""><figcaption><p>Orbeon Forms</p></figcaption></figure>
 
 ### Things you can do next
 

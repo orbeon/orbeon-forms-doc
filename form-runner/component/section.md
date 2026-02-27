@@ -16,11 +16,11 @@ The `fr:section` component organizes [grids](grid.md) under a header or title. F
 
 An open, collapsible section shows a "collapse" icon at the left of the heading.
 
-![Open section](../../.gitbook/assets/xbl-section-open.png)
+![Open section](images/xbl-section-open.png)
 
 The same section when closed just shows the heading.
 
-![Closed or collapsed section](../../.gitbook/assets/xbl-section-closed.png)
+![Closed or collapsed section](images/xbl-section-closed.png)
 
 ### Full repeat appearance
 
@@ -42,17 +42,17 @@ A menu is available to perform operations on or around a line. Not all operation
 * Remove Line
   * When allowed, remove the current repetition.
 
-![Repeated section menu](../../.gitbook/assets/xbl-grid-menu.png)
+![Repeated section menu](images/xbl-grid-menu.png)
 
 #### Appearance
 
-![Full appearance](../../.gitbook/assets/xbl-section-repeat-full.png)
+![Full appearance](images/xbl-section-repeat-full.png)
 
 ### Minimal repeat appearance
 
 \[SINCE Orbeon Forms 2016.1]
 
-![Minimal appearance](../../.gitbook/assets/xbl-section-repeat-minimal.png)
+![Minimal appearance](images/xbl-section-repeat-minimal.png)
 
 ## Basic usage
 
@@ -125,7 +125,7 @@ These attributes are supported in addition to the non-repeated mode attributes w
 
 You move, insert, and remove iterations using the left menu:
 
-![Menu](../../.gitbook/assets/xbl-section-repeat-menu.png)
+![Menu](images/xbl-section-repeat-menu.png)
 
 ## Data format
 

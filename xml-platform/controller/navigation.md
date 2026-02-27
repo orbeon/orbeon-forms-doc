@@ -2,7 +2,7 @@
 
 ## Page flow
 
-![](../../.gitbook/assets/reference-controller-navigation.png)
+![](../../images/legacy/reference-controller-navigation.png)
 
 The site logic or page flow describes the conditions that trigger the navigation from one page to the other. It also describes how arguments are passed from one page to the other. In a simple web application simulating an ATM, the navigation logic could look like the one described in the diagram on the right. In this diagram, the square boxes represent pages and diamond-shaped boxes represent actions performed by the end-user.
 
@@ -17,7 +17,7 @@ With the PFC, page flow is expressed declaratively and externally to the pages. 
 
 Consider a `view-account` page in the ATM web application. The page displays the current balance and lets the user enter an amount of money to withdraw from the account. The page looks like this:
 
-![](../../.gitbook/assets/reference-controller-atm-screen.png)
+![](../../images/legacy/reference-controller-atm-screen.png)
 
 This page is composed of different parts illustrated in the figure below:
 
@@ -25,7 +25,7 @@ This page is composed of different parts illustrated in the figure below:
 * **The page view** displays the balance, and presents a form for the user to enter the amount to withdraw.
 *   **An action** executed when the user enters an amount in the text field. This action checks if the amount entered is inferior or equal to the account balance. If it is, the balance is decreased by the amount entered and the transaction is considered valid. Otherwise, the transaction is considered illegal. Depending on the validity of the transaction, a different page is displayed. If the transaction is valid, the `anything-else` page is displayed; otherwise the `low-balance` page is displayed.
 
-    ![](../../.gitbook/assets/reference-controller-atm-logic.png)
+    ![](../../images/legacy/reference-controller-atm-logic.png)
 
 This behavior is described in the Page Flow with:
 
@@ -136,8 +136,8 @@ Going from page "a" to page "b" can be done with either a "forward" or a "redire
 
 |          |                                                      |
 | -------- | ---------------------------------------------------- |
-| Redirect | ![](../../.gitbook/assets/home-changes-forward.png)  |
-| Forward  | ![](../../.gitbook/assets/home-changes-redirect.png) |
+| Redirect | ![](../../images/legacy/home-changes-forward.png)  |
+| Forward  | ![](../../images/legacy/home-changes-redirect.png) |
 
 The benefit of the "redirect" method is that after being redirected to page _b_, the end-user will see a URL starting with `/b` in the browser's address bar. He will also be able to bookmark that page and to come back to it later. However, a drawback is that the request for page _b_ is sent by the browser with a `GET` method. Since browsers impose limits on the maximum amount of information that can be sent in a `GET` (URL length), this method might not work if the amount of information that needs to be passed to page _b_ from page _a_ is too large. This typically happens when working with fairly large XML submissions. In those cases, you must use the "forward" method, which does not limit the amount of information passed from page to page. The "forward" method also reduces the number of roundtrips with the server.
 

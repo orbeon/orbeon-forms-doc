@@ -4,7 +4,7 @@
 
 The Buttons bar includes a "Test" menu button. Clicking on it opens an overlay with a preview of your form:
 
-![Form Preview overlay](../.gitbook/assets/web-test.png)
+![Form Preview overlay](images/web-test.png)
 
 Here, many of your form's functions are available, including:
 

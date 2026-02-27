@@ -24,7 +24,7 @@ _NOTE: The exact URL might be provided by your IT organization._
 
 Once you reach the Summary page, you will either see an empty list, or a list containing existing form definitions, as shown in this screenshot.
 
-![The Summary page](../.gitbook/assets/summary.png)
+![The Summary page](images/summary.png)
 
 For each form definition, the list shows:
 
@@ -54,7 +54,7 @@ To search: enter a search term and press the "Search" button or the "enter" key.
 
 Tip: to clear the search and list all the form definitions again, clear all search fields and press the "Search" button or the "enter" key.
 
-![](../.gitbook/assets/summary-search.png)
+![](images/summary-search.png)
 
 ## Creating a new form definition
 

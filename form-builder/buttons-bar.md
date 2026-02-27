@@ -4,7 +4,7 @@
 
 The buttons bar sits at the bottom of the Form Builder screen.
 
-![The buttons bar](../.gitbook/assets/buttons-bar.png)
+![The buttons bar](images/buttons-bar.png)
 
 By default, the bar includes the following buttons:
 
@@ -59,7 +59,7 @@ Buttons combined with the `|` character show as a combined "drop-up" button.
 
 The buttons bar also includes transient messages, which appear in the messages area. Here is an example:
 
-![The buttons bar with a status message](../.gitbook/assets/buttons-bar-message.png)
+![The buttons bar with a status message](images/buttons-bar-message.png)
 
 ## See also
 

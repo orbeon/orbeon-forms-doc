@@ -21,7 +21,7 @@ For API details, see [Form Runner offline embedding API](../form-runner/link-emb
 
 Orbeon Forms allows testing that most aspects of a form work in . From Form Builder, simply use the new "Test Offline" button to see whether your form operates and renders properly in this new mode.
 
-![The "Test Offline" button](../.gitbook/assets/test-offline-button.png)
+![The "Test Offline" button](images/test-offline-button.png)
 
 When you do this:
 

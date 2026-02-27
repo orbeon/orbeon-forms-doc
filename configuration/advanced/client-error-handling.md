@@ -4,7 +4,7 @@
 
 By default, when an Ajax error happens, Orbeon Forms shows users an error dialog.
 
-![](../../.gitbook/assets/error-dialog.png)
+![](error-dialog.png)
 
 You can disable this behavior by adding this property to your `properties-local.xml`:
 

@@ -8,7 +8,7 @@
 
 The toolbox shows familiar undo and redo icons.
 
-![Undo and redo icons](../.gitbook/assets/xcv.png)
+![Undo and redo icons](images/xcv.png)
 
 ## Using undo and redo
 

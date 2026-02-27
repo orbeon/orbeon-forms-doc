@@ -77,7 +77,7 @@ By default, the error dialog is enabled. You can disable it entirely by setting 
 
 If you disable the default error dialog, you might want to provide an alternative way of reporting the issue to the user. You can do this in JavaScript by registering an event listener on [`ORBEON.xforms.Events.errorEvent`](../configuration/advanced/client-error-handling.md#javascript-event-handler).
 
-![Error dialog](../.gitbook/assets/xforms-error-dialog.png)
+![Error dialog](images/xforms-error-dialog.png)
 
 ### Recoverable errors
 
@@ -120,7 +120,7 @@ Default: `true`.
 
 In noscript mode, an error panel is also shown for recoverable errors:
 
-![Noscript error panel](../.gitbook/assets/xforms-noscript-error.png)
+![Noscript error panel](images/xforms-noscript-error.png)
 
 The differences with the Ajax mode are:
 

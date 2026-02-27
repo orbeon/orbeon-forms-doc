@@ -31,7 +31,7 @@ In order to enable the feature, you need to add the `excel-export-with-search` t
 </property>
 ```
 
-![Form data and Excel export button on the Summary page](../../.gitbook/assets/summary-excel-export.png)
+![Form data and Excel export button on the Summary page](../images/summary-excel-export.png)
 
 ### Options
 
@@ -50,7 +50,7 @@ Upon activating the button, a dialog opens which allows you to specify options f
   * If selected, the document id is included in the Excel document as the first column
   * If deselected, the document id is not included in the Excel document
 
-![Excel export options dialog](../../.gitbook/assets/fr-summary-excel-export-dialog.png)
+![Excel export options dialog](../images/fr-summary-excel-export-dialog.png)
 
 ### Exported data
 
@@ -73,7 +73,7 @@ The Excel document includes:
   * Modified By: username of the user who last modified the data
   * Workflow stage: name of the workflow stage associated with the data
 
-![Example of Excel export from the Summary page](../../.gitbook/assets/summary-excel-export-sheet.png)
+![Example of Excel export from the Summary page](../images/summary-excel-export-sheet.png)
 
 ## See also
 

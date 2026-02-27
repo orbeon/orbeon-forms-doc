@@ -16,7 +16,7 @@ This also means that when opening existing data for editing or viewing, Orbeon F
 
 Form definition versioning introduces the idea that published form definitions for a given application name/form name also have a version number. When creating a _new_ version upon publishing, the version number is "1", and when publishing again with a new version the number increases: "2", "3", etc. So you can talk about "version 2 of the Acme Order form".
 
-![Creating a new version](../../.gitbook/assets/publish-version-next.png)
+![Creating a new version](../../form-builder/images/publish-version-next.png)
 
 When saving form data, the data in the database is associated not only with the application name and form name, but also with the _version_ of the form definition that was used to create or edit that data. So when you open that data for editing or viewing at a later time, Form Runner can use the matching version of the form definition.
 

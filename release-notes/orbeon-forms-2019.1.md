@@ -14,7 +14,7 @@ You can now control whether a non-repeated grid is _readonly_ or _visible_, as w
 * Custom CSS classes
 * Visibility and Read-Only formulas
 
-![Grid Settings for repeated and non-repeated grids](../.gitbook/assets/grid-options.png)
+![Grid Settings for repeated and non-repeated grids](images/grid-options.png)
 
 As was already the case for sections, you can make a non-repeated grid repeated by enabling the "Repeat Content" checkbox, and vice versa.
 
@@ -30,15 +30,15 @@ Several constructs in a form can depend on one or more form controls. This inclu
 
 In this version, when a form control, section, or grid is renamed, formulas, templates, and actions are all automatically adjusted.
 
-![Example of formula affected by automatic renaming](<../.gitbook/assets/calculations-dependencies-row-total (1).png>)
+![Example of formula affected by automatic renaming](<images/calculations-dependencies-row-total.png>)
 
 ### Improved selection dropdowns
 
 The "Autocomplete" control is deprecated and replaced with new options for the "Static Dropdown" and "Dynamic Dropdown" controls. You can now, for each of these controls, select a "With Search" option, which allows the user to type in a search box to restrict the number of entries in the dropdown before selecting one.
 
-![Example of search within a dropdown](<../.gitbook/assets/dropdown-with-search (1).png>)
+![Example of search within a dropdown](<images/dropdown-with-search.png>)
 
-![Form Builder options to enable dropdown search](<../.gitbook/assets/dynamic-data-dropdown-with-without-search (1).png>)
+![Form Builder options to enable dropdown search](<images/dynamic-data-dropdown-with-without-search.png>)
 
 For more details, see the [documentation](../form-runner/component/static-dynamic-dropdown.md).
 
@@ -46,7 +46,7 @@ For more details, see the [documentation](../form-runner/component/static-dynami
 
 Until now you could move sections up and down, as well as inside and outside of other sections, but you couldn't do the same with grids. Now you can and arrows show next to grids as well.
 
-![Moving a grid relatively to another grid](../.gitbook/assets/move-grids.png)
+![Moving a grid relatively to another grid](images/move-grids.png)
 
 ### Appearance of calculated values
 
@@ -60,13 +60,13 @@ This version makes further improvements to this change of appearance, as many us
 
 In general, we recommend using the "Explanatory Text" control to present some text to the user. Since this version, note that the "Explanatory Text" can also be dynamic with the support for templates (further on this below).
 
-![Choice of Calculated Value appearance](../.gitbook/assets/calculated-value.png)
+![Choice of Calculated Value appearance](images/calculated-value.png)
 
 ### Paging large repeated sections
 
 This version introduces an improvement to [synchronized master-detail views](https://blog.orbeon.com/2019/01/synchronized-master-detail-views.html): it allows each individual detail to show on a separate wizard page. This makes it easier for the user as there is less information presented on each wizard page. In addition, you can configure a custom repetition label for use by the wizard's table of contents.
 
-![Detail view appearing in the wizard table of contents](<../.gitbook/assets/sync-detail-paging-alice (1).png>)
+![Detail view appearing in the wizard table of contents](<images/sync-detail-paging-alice.png>)
 
 For more, see the [blog post](https://blog.orbeon.com/2019/09/paging-large-repeated-sections.html) and the documentation:
 
@@ -78,13 +78,13 @@ For more, see the [blog post](https://blog.orbeon.com/2019/09/paging-large-repea
 
 When the service response is in JSON format, you can view the JSON response translated into XML. This is useful when you want to use XPath expressions to access a JSON response, for example with datasets or item choices. ([doc](../form-builder/http-services.md#xml-view-of-json-responses))
 
-![XML view of a JSON response in Form Builder](<../.gitbook/assets/service-definition-test-xml-response-body (1).png>)
+![XML view of a JSON response in Form Builder](<images/service-definition-test-xml-response-body.png>)
 
 ### Ability to pick a specific section templates library version
 
 When versioning is available, Form Builder allows you to publish multiple versions of a section templates library. Now, Form Builder allows you to select which version of a section templates library you want to use in a particular form definition. ([doc](../form-builder/section-templates.md#versioning-of-section-templates))
 
-![Choice of section template version in the Form Builder toolbox](../.gitbook/assets/section-templates-v2.png)
+![Choice of section template version in the Form Builder toolbox](images/section-templates-v2.png)
 
 ### Improvements to the Action Syntax
 

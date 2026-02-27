@@ -75,7 +75,7 @@ The following matching properties allow setting global defaults. For example:
 
 When used in Form Builder, the following custom settings for image transformation are available:
 
-![Custom settings](../../.gitbook/assets/custom-settings-image-attachment.png)
+![Custom settings](images/custom-settings-image-attachment.png)
 
 ## See also
 

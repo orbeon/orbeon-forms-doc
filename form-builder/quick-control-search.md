@@ -21,7 +21,7 @@ The shortcut opens a small dialog. Clicking or pressing the Enter key and then t
 
 If the "Open Settings Dialog" option is selected, the "Control Settings" dialog for the control also opens right away.
 
-![The quick search dialog](../.gitbook/assets/quick-search.png)
+![The quick search dialog](images/quick-search.png)
 
 ## See also
 

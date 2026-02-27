@@ -86,7 +86,7 @@ Examples:
 
 ### Validation dialog
 
-![The validation dialog](../../../.gitbook/assets/review-messages.png)
+![The validation dialog](../../images/review-messages.png)
 
 The following dialog can be opened with the `xf:show` action:
 
@@ -100,7 +100,7 @@ xf:show(dialog = "fr-validation-dialog") then suspend
 
 ### The result dialog
 
-![The result dialog](../../../.gitbook/assets/result-dialog.png)
+![The result dialog](../../images/result-dialog.png)
 
 The `result-dialog` action shows a configurable dialog. You can customize:
 

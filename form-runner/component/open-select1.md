@@ -11,7 +11,7 @@ The `fr:open-select1` component presents:
 * a list of radio buttons predefined by the form author
 * and a custom choice ("Other") which the user has the option to specify instead
 
-![Open selection component](../../.gitbook/assets/xbl-open-select1.png)
+![Open selection component](images/xbl-open-select1.png)
 
 ## Usage
 
@@ -45,7 +45,7 @@ You use `fr:open-select1` like a regular `xf:select1` control:
 
 This is the control with the `minimal` appearance:
 
-![Open selection component with \`minimal\` appearance](../../.gitbook/assets/xbl-open-select1-minimal.png)
+![Open selection component with \`minimal\` appearance](images/xbl-open-select1-minimal.png)
 
 ## Data format
 

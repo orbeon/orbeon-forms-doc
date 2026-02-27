@@ -12,7 +12,7 @@ Orbeon Forms has a number of features helping with workflows. One of them is the
 
 A _workflow stage_ is a string value used to track the progress of a form through a workflow. For instance, you might have a form which goes through the following workflow:
 
-![Example of workflow](../../.gitbook/assets/workflow-expense-report.png)
+![Example of workflow](../images/workflow-expense-report.png)
 
 This workflow is in the following stages over time:
 
@@ -66,7 +66,7 @@ You can optionally show the workflow page in the navigation bar of the form's De
     value="true"/>
 ```
 
-![Workflow stage in the navigation bar](../../.gitbook/assets/workflow-stage-navbar.png)
+![Workflow stage in the navigation bar](../images/workflow-stage-navbar.png)
 
 ## See also
 

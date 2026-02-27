@@ -16,7 +16,7 @@ Form Builder supports this kind of validations via the "Validations and Alerts" 
 
 _NOTE: Prior to Orbeon Forms 4.3, the dialog was called "Validation Properties". Orbeon Forms 4.3 combines dialogs and adds functionality._
 
-![Control validation settings](../.gitbook/assets/validation.png)
+![Control validation settings](images/validation.png)
 
 ## Validation types
 
@@ -37,7 +37,7 @@ This simple validation has 3 possibilities:
 * _No_: a value is not required and can be empty.
 * _Formula_: an XPath expression to dynamically control whether the control is valid or not. \[SINCE Orbeon Forms 4.7]
 
-![Options for required validation](../.gitbook/assets/required-formula.png)
+![Options for required validation](images/required-formula.png)
 
 When the value is required, an asterisk appears next to the control to signify to the user that the value is required.
 
@@ -59,7 +59,7 @@ This option is also useful for non-required fields which must not contain leadin
 
 See also [Required fields: more subtle than you might think](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html).
 
-![Whitespace trimming](../.gitbook/assets/whitespace-trimming.png)
+![Whitespace trimming](images/whitespace-trimming.png)
 
 ### Data type validation
 
@@ -85,7 +85,7 @@ Built-in types include:
   * Time: time stored in ISO format
   * Date and Time: date and time stored in ISO format
 
-![Built-in Types](../.gitbook/assets/built-in-types.png)
+![Built-in Types](images/built-in-types.png)
 
 _NOTE: Prior to Orbeon Forms 4.3, the list of available types was longer, as explained in_ [_this blog post_](https://blog.orbeon.com/2013/07/simplifying-list-of-data-types-in-form.html)_._
 
@@ -101,7 +101,7 @@ _NOTE: When selecting certain controls from the toolbox, such as "Email", "Date"
 
 If an XML Schema containing simple types has been attached to the form \[Orbeon Forms PE only], the simples types are listed in the Schema Type menu.
 
-![Built-in Types](../.gitbook/assets/schema-types.png)
+![Built-in Types](images/schema-types.png)
 
 Either a built-in data type or an XML Schema data type can be selected. If you select an XML Schema data type, the built-in data type is automatically reset. Similarly, if you select a built-in data type, the XML Schema data type is reset.
 
@@ -144,7 +144,7 @@ Each formula can have a _level_ associated with it and a custom alert message.
 
 The Dates to Exclude constraint takes a list (sequence) of dates to exclude, provided by a formula. The constraint fails if users type a date that is in the supplied list of dates to exclude. Also, dates in this list are disabled in the non-native date picker, so users cannot select them, as in the case of the 18th and 20th in the screenshot below. When the date picker is native, the dates are not disabled because the native date picker doesn't support disabling specific dates, but the validation still applies.
 
-<figure><img src="../.gitbook/assets/validation-excluded-dates.png" alt="Dates disabled in date picker" width="239"><figcaption></figcaption></figure>
+<figure><img src="images/validation-excluded-dates.png" alt="Dates disabled in date picker" width="239"><figcaption></figcaption></figure>
 
 You might have a service storing a the list of dates to exclude in a [dataset](../form-runner/feature/datasets.md), for example. From that dataset, you can extract and convert the dates to XPath dates.
 
@@ -214,7 +214,7 @@ for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
 
-![Min and max length constraints](../.gitbook/assets/min-max-constraints.png)
+![Min and max length constraints](images/min-max-constraints.png)
 
 ## Control validity
 
@@ -280,7 +280,7 @@ Alert messages appear:
 * as badge counts in the navigation bar
 * as general count in the browser's title bar
 
-![Alert Messages](<../.gitbook/assets/validation (1).png>)
+![Alert Messages](<../form-runner/images/validation.png>)
 
 ## Validation errors and review messages dialog
 
@@ -290,7 +290,7 @@ By default, when saving or sending form data, the following happens:
 * If all controls are valid and there are no warning or info messages, the operation continues.
 * If all controls are valid and there is at least one warning or info message, the "Review Messages" dialog shows. \[SINCE Orbeon Forms 4.3]
 
-![Review Messages](<../.gitbook/assets/review-messages (1).png>)
+![Review Messages](<../form-runner/images/review-messages.png>)
 
 The user has the following choices:
 

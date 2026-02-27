@@ -20,7 +20,7 @@ Form Builder now supports a view mode, which allows users to view form definitio
 
 You access this mode using the "Review" button from the Form Builder Summary page.
 
-![Form Builder view mode](../.gitbook/assets/form-builder-view-mode.webp)
+![Form Builder view mode](../form-builder/images/form-builder-view-mode.webp)
 
 ### Option to store attachments in S3
 

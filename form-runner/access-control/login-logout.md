@@ -15,11 +15,11 @@ Form Runner can show a _user menu_ in the navigation bar, allowing users to logi
 
 When enabled, before users login, the menu contain 2 entries: "Login" and "Register", as shown in the screenshot below.
 
-![User menu when logged out](../../.gitbook/assets/logout-logout-menu-logged-out.png)
+![User menu when logged out](../images/logout-logout-menu-logged-out.png)
 
 Conversely, when users are logged in, the menu will show who the user is, as well as provide a way for users to logout.
 
-![User menu when logged in](../../.gitbook/assets/logout-logout-menu-logged-in.png)
+![User menu when logged in](../images/logout-logout-menu-logged-in.png)
 
 You can configure what page users will be taken to when they select "Login", "Logout", or "Register" by setting the properties below, shown here with their default value. Setting a property to the empty string disables hides the corresponding entry in the menu.
 
@@ -44,7 +44,7 @@ _NOTE: Orbeon Forms does not provide an out of the box system to create and mana
 
 Form Runner comes with a simple default login page which can be used with container-based authentication.
 
-![Default login page](../../.gitbook/assets/login-page.png)
+![Default login page](../images/login-page.png)
 
 ## See also
 

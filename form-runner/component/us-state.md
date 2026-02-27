@@ -4,7 +4,7 @@
 
 The `fr:us-state` component allows you to select one of the 50 US states (plus Puerto Rico and the District of Columbia).
 
-![](../../.gitbook/assets/xbl-us-state.png)
+![](images/xbl-us-state.png)
 
 ## Usage
 

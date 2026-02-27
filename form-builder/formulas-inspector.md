@@ -6,7 +6,7 @@ With Orbeon Forms, [formulas](formulas.md) are very important: they are used for
 
 This new, still experimental feature allows you to inspect formulas. You access it under the "Test" menu.
 
-![The "Inspect Formulas" button](../.gitbook/assets/inspect-formulas-button.png)
+![The "Inspect Formulas" button](images/inspect-formulas-button.png)
 
 ## Availability
 
@@ -28,7 +28,7 @@ You select the category of formulas from the list. Then the results table shows,
 
 The following example show dependencies between "Calculated Value" formulas and controls. A color scheme indicates the dependency relationships between controls via formulas.
 
-![Example showing "Calculated Value" dependencies](../.gitbook/assets/inspect-formulas-example.png)
+![Example showing "Calculated Value" dependencies](images/inspect-formulas-example.png)
 
 ## Results table
 

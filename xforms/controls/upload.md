@@ -4,11 +4,11 @@
 
 Example of the upload control before selection:
 
-![](../../.gitbook/assets/xforms-upload-empty.png)
+![](../images/xforms-upload-empty.png)
 
 Example of the upload control sending a file in the background, with progress bar and "Cancel" button:
 
-![](../../.gitbook/assets/xforms-upload-progress.png)
+![](../images/xforms-upload-progress.png)
 
 ## Basic usage
 

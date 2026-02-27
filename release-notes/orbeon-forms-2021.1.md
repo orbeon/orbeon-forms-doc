@@ -10,11 +10,11 @@ Today we released Orbeon Forms 2021.1! This release introduces new features and 
 
 Orbeon Forms 2021.1 allows you to test PDF production without publishing your form.
 
-![The "Test PDF" button](../.gitbook/assets/test-pdf-button.png)
+![The "Test PDF" button](../form-builder/images/test-pdf-button.png)
 
 This feature provides a number of options that help test some of the form's logic as well:
 
-![The “Test PDF Production” dialog](../.gitbook/assets/test-pdf-use-data.png)
+![The “Test PDF Production” dialog](../form-builder/images/test-pdf-use-data.png)
 
 For more details:
 
@@ -32,7 +32,7 @@ The shortcuts open a small dialog. Clicking or pressing the Enter key and then t
 
 If the "Open Settings Dialog" option is selected, the "Control Settings" dialog for the control also opens right away.
 
-![The quick search dialog](../.gitbook/assets/quick-search.png)
+![The quick search dialog](../form-builder/images/quick-search.png)
 
 For details, see [Quick control search](../form-builder/quick-control-search.md).
 
@@ -53,7 +53,7 @@ The new document-based import feature does not replace the previous one but comp
 
 The export feature produces Excel files that look like this:
 
-![Example of Excel export](../.gitbook/assets/excel-export-export.png)
+![Example of Excel export](../form-builder/images/excel-export-export.png)
 
 For more details:
 
@@ -87,7 +87,7 @@ This is still the case with the Orbeon Forms 2021.1, however we made lots of int
 
 With Orbeon Forms 2021.1, we are releasing a preview of this feature. From Form Builder, simply use the new "Test Offline" button to see whether your form operates and renders properly in this new mode.
 
-![The "Test Offline" button](../.gitbook/assets/test-offline-button.png)
+![The "Test Offline" button](../form-builder/images/test-offline-button.png)
 
 When you do this:
 
@@ -112,7 +112,7 @@ With Orbeon Forms, formulas are very important: they are used for calculating va
 
 A new, still experimental feature allows you to inspect formulas. You access it under the "Test" menu.
 
-![The "Inspect Formulas" button](../.gitbook/assets/inspect-formulas-button.png)
+![The "Inspect Formulas" button](../form-builder/images/inspect-formulas-button.png)
 
 This allows you to see, in a table, the following formulas used in the form for:
 
@@ -124,7 +124,7 @@ This allows you to see, in a table, the following formulas used in the form for:
 
 The following example show dependencies between "Calculated Value" formulas and controls. A color scheme indicates the dependency relationships between controls via formulas.
 
-![Example showing "Calculated Value" dependencies](../.gitbook/assets/inspect-formulas-example.png)
+![Example showing "Calculated Value" dependencies](../form-builder/images/inspect-formulas-example.png)
 
 We consider this features still experimental, but only because it is still fairly basic! However, it is still useful and we hope to improve it in newer versions of Orbeon Forms.
 
@@ -139,7 +139,7 @@ The Actions Editor features two new enhancements:
 
 ![Action request formula](../form-builder/images/actions-request-formula.png)
 
-![Action condition formula](../.gitbook/assets/actions-condition-formula.png)
+![Action condition formula](../form-builder/images/actions-condition-formula.png)
 
 These two features were already supported by the [Action Syntax](../form-builder/actions-syntax.md) but were not available in the Form Builder UI.
 
@@ -155,11 +155,11 @@ Orbeon Forms 2021.1 improves grids in two ways.
 
 First, the Grid Settings dialog now shows the number of grid rows in the grid.
 
-![Number of grid rows](../.gitbook/assets/grid-settings-number-of-grid-rows.png)
+![Number of grid rows](../form-builder/images/grid-settings-number-of-grid-rows.png)
 
 Second, for repeated grids only, an option allows you to automatically show a row number at the beginning of each grid repetition.
 
-![Show repetition number](../.gitbook/assets/grid-settings-show-repetition-number.png)
+![Show repetition number](../form-builder/images/grid-settings-show-repetition-number.png)
 
 For more details:
 
@@ -175,7 +175,7 @@ It is now possible to tell Form Runner to index fields independently of whether 
 
 For details, see [Control Settings](../form-builder/control-settings.md#main-options).
 
-![Index control](../.gitbook/assets/control-settings.png)
+![Index control](../form-builder/images/control-settings.png)
 
 ### Double-precision floating-point type
 
@@ -185,17 +185,17 @@ However, for scientific calculations, a floating-point type is appropriate. For 
 
 For details, see [Control Settings](../form-builder/validation.md#data-type-validation).
 
-![Built-in Types](../.gitbook/assets/built-in-types-double.png)
+![Built-in Types](../form-builder/images/built-in-types-double.png)
 
 ### Hints for dropdown control choices
 
 Hints were already supported, among selection controls, on "Radio Buttons" and "Checkboxes" controls. They are now used on the "Static Dropdown" as well. This allows browsers to show hints when the user hovers over an entry. Screen readers also read the hint, represented as a `title` attribute in HTML.
 
-!["Static Dropdown" hint](../.gitbook/assets/dropdown-hint.png)
+!["Static Dropdown" hint](../form-runner/images/dropdown-hint.png)
 
 This also works with the "Dropdown with Search" control.
 
-!["Dropdown with Search" hint](../.gitbook/assets/dropdown-search-hint.png)
+!["Dropdown with Search" hint](../form-runner/images/dropdown-search-hint.png)
 
 ### Option to show all dropdown control values in automatic PDF
 
@@ -203,7 +203,7 @@ When producing a PDF file, single-selection controls like the "Static Dropdown" 
 
 For more, see [Automatic PDF options](../form-builder/control-settings.md#automatic-pdf-options).
 
-![PDF options](../.gitbook/assets/control-settings-pdf-options.png)
+![PDF options](../form-builder/images/control-settings-pdf-options.png)
 
 ### More fine-grained control over calculations
 
@@ -214,7 +214,7 @@ For more, see:
 * [Form Settings](../form-builder/form-settings.md#formulas)
 * the [`oxf.fr.detail.readonly.disable-calculate` property](../configuration/properties/form-runner-detail-page.md#calculations-in-readonly-modes)
 
-![Formula options](../.gitbook/assets/formulas.png)
+![Formula options](../form-builder/form-settings/formulas.png)
 
 ### XForms 2.0 support
 
@@ -306,7 +306,7 @@ Form Builder now shows the library/section names and version at the top of the s
 
 See also [Section template](../form-builder/section-templates.md).
 
-![Section template information](../.gitbook/assets/section-template-info.png)
+![Section template information](../form-builder/images/section-template-info.png)
 
 We added initial support for allowing section templates from the same library to communicate via actions. This in particular allows an action triggered by an event in a given section to update form controls in another section, if these two sections are included in the same destination form.
 

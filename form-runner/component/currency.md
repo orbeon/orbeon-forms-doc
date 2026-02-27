@@ -4,7 +4,7 @@
 
 The currency component is an input field specialized to capture amounts in a particular currency.
 
-![](../../.gitbook/assets/xbl-currency6.png)
+![](images/xbl-currency6.png)
 
 When the input field doesn't have the focus, it shows a formatted currency, such as `1,234.00`. When the control has the focus, it shows the plain number, such as `1234` to facilitate input.
 
@@ -115,7 +115,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 <fr:currency ref="value"/>
 ```
 
-![](../../.gitbook/assets/xbl-currency1.png)
+![](images/xbl-currency1.png)
 
 ### Setting a static prefix with the prefix attribute
 
@@ -123,7 +123,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 <fr:currency ref="value" prefix="£"/>
 ```
 
-![](../../.gitbook/assets/xbl-currency2.png)
+![](images/xbl-currency2.png)
 
 ### Setting a dynamic prefix with the fr:prefix element
 
@@ -141,7 +141,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
     digits-after-decimal="3/>
 ```
 
-![](../../.gitbook/assets/xbl-currency2.png)
+![](images/xbl-currency2.png)
 
 ### Showing 0 digits after the decimal sign
 
@@ -151,7 +151,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
     digits-after-decimal="0/>
 ```
 
-![](../../.gitbook/assets/xbl-currency3.png)
+![](images/xbl-currency3.png)
 
 ### Read-only input field, because bound to node set as read-only with a MIP
 
@@ -161,7 +161,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 <fr:currency ref="readonly-node"/>
 ```
 
-![](../../.gitbook/assets/xbl-currency4.png)
+![](images/xbl-currency4.png)
 
 ### Rounding
 

@@ -6,7 +6,7 @@
 
 Let's consider that your company has the following hierarchical organizational structure. We refer to each box in this diagram as an _organization_, e.g the _Engineering organization_.
 
-![Organization hierarchy](../../.gitbook/assets/organization-hierarchy.png)
+![Organization hierarchy](../images/organization-hierarchy.png)
 
 With organization-based permissions. Users can have roles that are not just _global_, but _tied to an organization_. For instance, consider that a form author defines that for a given form, users with the role `admin` can read, update, and delete any form data. You might have admins who should get this permission company-wide. But you might also want to restict that permissions to form data created by users in certain parts of the company; for instance, a given user might be "admin for the Engineering organization", and she should only have the aformentioned permissions on form data created by users who are either directly in the Engineering organization, or any of its children organizations. This is particularly relevant for roles that are inherently tied to an organization, like "manager", where you're likely to want to say that the permissions you grant to a manager are limited to the data created by the people they manage.
 
@@ -16,7 +16,7 @@ As alluded to in the previous section, if the form author grants permissions for
 
 Say you have an "expense report" form, and that the form author granted the right to managers to access data created with that form. Say, Tom, in the iOS organization creates an expense report. Then, his manager, Mary will be able to access it, and so will John, the VP of engineering, defined in the system as manager of the "Engineering" organization, and so will Carla, the CEO, defined in the system as manager of Acme, which sits at the root of the organizational structure.
 
-![Transitive permissions](../../.gitbook/assets/organization-transitive.png)
+![Transitive permissions](../images/organization-transitive.png)
 
 ## Information about users
 
@@ -54,7 +54,7 @@ If your information about users and organizations is stored in a system other th
 
 When a user fills out a form, when data for that form is saved, Form Runner also stores, along with the data, information about the user. This includes the username, but also the organizations the user is a member of, and the ancestors of those organizations. For instance, say Linda saves data, and the name of the organizations she is a member of, the `Support` and `iOS` organizations, along with their ancestors in the organizational structure, are stored in the database:
 
-![Owner information stored with the form data](../../.gitbook/assets/organization-constraints.png)
+![Owner information stored with the form data](../images/organization-constraints.png)
 
 If the form definition grants access to managers, and John is a "manager of Engineering", because of the information available and the way it is stored, Form Runner can efficiently determine what data John has access to. In this example, John can be granted access to Linda's data as Linda is a member of the `iOS` organization, which is under the `Engineering` organization, of which John is a manager.
 

@@ -24,13 +24,13 @@ You create a new action or update an existing action in the "Advanced" tab of th
 
 You can reorder actions by drag and drop in the toolbox. Sometimes, the specific order of actions is important, or you might just want to organize them in a way that makes sense for your form.
 
-![List of actions in the toolbox](../.gitbook/assets/toolbox-actions.png)
+![List of actions in the toolbox](images/toolbox-actions.png)
 
 ### With Orbeon Forms 2017.1 or newer
 
 \[SINCE Orbeon Forms 2017.1]
 
-![Actions Editor General Settings](../.gitbook/assets/actions-general-settings.png)
+![Actions Editor General Settings](images/actions-general-settings.png)
 
 This is the meaning of the fields of the dialog:
 
@@ -156,7 +156,7 @@ Parameters:
 
 You access the response in the Service Response Actions tab. This allows adding, removing, and moving response actions:
 
-![Actions Editor Service Response Actions](../.gitbook/assets/actions-response.png)
+![Actions Editor Service Response Actions](images/actions-response.png)
 
 ### Setting the value of a control
 

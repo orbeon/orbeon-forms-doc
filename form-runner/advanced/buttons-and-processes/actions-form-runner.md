@@ -189,7 +189,7 @@ In most cases you'll want to use this action in conjunction with [`navigate`](ac
 
 Show a confirmation dialog. If the user selects "No", the current process is aborted. If the user selects "Yes", the current process is resumed.
 
-![Confirmation dialog](../../../.gitbook/assets/confirm.png)
+![Confirmation dialog](../../images/confirm.png)
 
 * parameters
   * `message`: message to show (is an XPath value template)
@@ -322,7 +322,7 @@ Example:
 
 The output contains alerts and/or hints if one of the values is set to `"true"`. For example:
 
-![PDF output with alerts and hints](../../../.gitbook/assets/test-pdf-hints-alerts-result.png)
+![PDF output with alerts and hints](../../../form-builder/images/test-pdf-hints-alerts-result.png)
 
 See also [Testing PDF production](../../../form-builder/pdf-test.md).
 

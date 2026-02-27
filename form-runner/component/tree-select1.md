@@ -10,7 +10,7 @@ _NOTE: As of Orbeon Forms 2018.2, this control is not present in the Form Builde
 
 This control allows the user to select a single item from a hierarchical tree representation.
 
-![Appearance](../../.gitbook/assets/xbl-tree-select1-collapsed-selected.png)
+![Appearance](images/xbl-tree-select1-collapsed-selected.png)
 
 ## Basic usage
 
@@ -72,13 +72,13 @@ The `tree-items` instance might look like:
 
 The user can expand or collapse tree nodes. This doesn't have an impact on the currently-selected value:
 
-![Expanded tree](../../.gitbook/assets/xbl-tree-select1-expanded-selected.png)
+![Expanded tree](images/xbl-tree-select1-expanded-selected.png)
 
 ## Readonly appearance
 
 If the control is readonly, it appears grayed out. It is not possible to select items in this case, but it is possible to open/close tree nodes:
 
-![Expanded tree in readonly mode](../../.gitbook/assets/xbl-tree-select1-expanded-selected-readonly.png)
+![Expanded tree in readonly mode](images/xbl-tree-select1-expanded-selected-readonly.png)
 
 ## Controlling which tree nodes are initially open
 
@@ -97,7 +97,7 @@ The `<xf:itemset>` element supports the `xxf:open` extension attribute, which de
 
 The result:
 
-![Tree with first level open only](../../.gitbook/assets/xbl-tree-select1-initially-open.png)
+![Tree with first level open only](images/xbl-tree-select1-initially-open.png)
 
 ## Adding class attributes
 

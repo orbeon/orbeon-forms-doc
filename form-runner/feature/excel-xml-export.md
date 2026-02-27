@@ -92,7 +92,7 @@ The Excel document contains all the fields of the form, attempting to mirror the
 
 The export feature produces an Excel document that look like this:
 
-![Example of Excel export](../../.gitbook/assets/excel-export-export.png)
+![Example of Excel export](../../form-builder/images/excel-export-export.png)
 
 ### Named ranges
 
@@ -114,13 +114,13 @@ Excel names do not support all the characters supported in Form Runner names. In
 
 Excel allows you to see the name of a given cell or range:
 
-![Named ranges in Excel](../../.gitbook/assets/excel-export-ranges.png)
+![Named ranges in Excel](../../form-builder/images/excel-export-ranges.png)
 
 ### Repeated content
 
 In the case of repeated grids, groups of cells share the same name.
 
-![Repeated grid in Excel](../../.gitbook/assets/excel-export-repeat-export.png)
+![Repeated grid in Excel](../../form-builder/images/excel-export-repeat-export.png)
 
 Repeated grids, or repeated sections containing only non-repeated grids, are "flattened". That is, all form controls are presented in a single Excel row, with one row for each repetition.
 

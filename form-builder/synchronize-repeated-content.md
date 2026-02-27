@@ -81,9 +81,9 @@ The following example does the following:
 
 The following screenshots show how the form looks like when using the wizard view:
 
-![Master view](../.gitbook/assets/sync-master.png)
+![Master view](images/sync-master.png)
 
-![Detail view](../.gitbook/assets/sync-detail.png)
+![Detail view](images/sync-detail.png)
 
 ## Paging large repeated sections
 
@@ -91,9 +91,9 @@ The following screenshots show how the form looks like when using the wizard vie
 
 When paging of large repeated sections is enabled, optionally with a repetition label, each master repetition appears as its own wizard page. This reduces the size of wizard pages and makes it easier to fill out a form.
 
-![Detail view](../.gitbook/assets/sync-detail-paging-alice.png)
+![Detail view](images/sync-detail-paging-alice.png)
 
-![Detail view](../.gitbook/assets/sync-detail-paging-bob.png)
+![Detail view](images/sync-detail-paging-bob.png)
 
 See [Paging large repeated sections](../form-runner/feature/wizard-view.md#paging-large-repeated-sections) for detail of the configuration.
 

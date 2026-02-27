@@ -25,11 +25,11 @@ The feature is disabled by default. You can enable it globally by setting the fo
 
 This adds a "Revision History" icon in the [navigation bar](navbar.md).
 
-![Revision History icon](../../.gitbook/assets/fr-revision-history-icon.png)
+![Revision History icon](../images/fr-revision-history-icon.png)
 
 Activating the icon opens the Revision History pane:
 
-![Revision History pane](../../.gitbook/assets/fr-revision-history-pane.png)
+![Revision History pane](../images/fr-revision-history-pane.png)
 
 [SINCE Orbeon Forms 2026.1] You can disable revision history on an app and form basis using the [`oxf.fr.persistence.proxy.disable-version-history.*.*` property](../../configuration/properties/persistence.md#disabling-version-history).
 
@@ -50,7 +50,7 @@ The Revision History pane shows the list of revisions for the current form data,
 
 For a given revision, you can click on the "View this revision" link to view the form data as it was at the time of that revision.
 
-![Viewing a specific revision](../../.gitbook/assets/fr-revision-history-view-revision.png)
+![Viewing a specific revision](../images/fr-revision-history-view-revision.png)
 
 ## See also
 

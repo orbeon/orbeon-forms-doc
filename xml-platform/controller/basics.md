@@ -124,7 +124,7 @@ When XSLT templates are used, it is recommended to use the `.xsl` extension:
 
 ## Page model and page view
 
-![](../../.gitbook/assets/reference-controller-mvc.png)
+![](../../images/legacy/reference-controller-mvc.png)
 
 In the MVC architecture, the page logic is implemented by a _page model_, and the page layout by a _page view_. The MVC architecture promotes the separation of model, view and controller:
 

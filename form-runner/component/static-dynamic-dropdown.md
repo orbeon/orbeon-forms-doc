@@ -20,19 +20,19 @@ In the Form Builder Toolbox you'll find two dropdown components, as shown in the
 
 Typically, you'll want to use the Static Dropdown for cases where the number of choices is limited, and doesn't change much over time, and the Dynamic Dropdown for cases where you have a long list of choices and/or those choices can change over time.
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-components.png" alt="" width="193"><figcaption><p>Static Dropdown and Dynamic Dropdown in the Toolbox</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-components.png" alt="" width="193"><figcaption><p>Static Dropdown and Dynamic Dropdown in the Toolbox</p></figcaption></figure>
 
 ### With vs. without search
 
 You can choose to have each one of your Static or Dynamic Dropdown show as a regular dropdown native to the browser, or as a dropdown with search. You make that choice in the Control Settings dialog, as highlighted in the screenshot below.
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-with-without-search.png" alt="" width="987"><figcaption><p>Choosing between a regular dropdown and a dropdown with search</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-with-without-search.png" alt="" width="987"><figcaption><p>Choosing between a regular dropdown and a dropdown with search</p></figcaption></figure>
 
 The dropdown "with search" doesn't use the native browser dropdown, but instead uses a dropdown implemented in JavaScript that allows users to search for the choice they want to select by typing part of the label, which is typically useful when the list of choices can be pretty long, and it is thus hard for users to visually just pick one of the choices offered when the dropdown opens.
 
 ### Example with search
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-search-country.gif" alt="" width="478"><figcaption><p>Doing a search to select a country</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-search-country.gif" alt="" width="478"><figcaption><p>Doing a search to select a country</p></figcaption></figure>
 
 ## Dynamic dropdowns
 
@@ -44,7 +44,7 @@ The Venn diagram below illustrates the various ways in which the features of dyn
 * The remaining areas depict the six feasible combinations of features.
 * Among those areas, caution is advised regarding #6, i.e., combining open selection with auto-selection. Consider a dropdown for a street number and a service that returns all known numbers on a given street. After the user selects a street, if the service only knows about one number on that street, that number will be auto-selected. If open selection is enabled, the user will be able to change the number, but the experience of having an unwanted number selected by default might be confusing. Therefore, it might be wise to be cautious about enabling both features simultaneously.
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-search-combinations.png" alt="" width="361"><figcaption><p>Different combinations of features</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-search-combinations.png" alt="" width="361"><figcaption><p>Different combinations of features</p></figcaption></figure>
 
 ### Extracting choices from your service response
 
@@ -73,7 +73,7 @@ You specify how to extract the necessary information to populate the dropdown th
 * The "Label XPath expression" is relative to a given choice as returned by the first expression, and must return the label shown to users in the dropdown. In our example, this will point to the `name` element.
 * The "Value XPath expression" is similar to the "Label XPath expression" but points to the value stored in the data when users make a selection.
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-exact.png" alt="" width="492"><figcaption><p>Extracting choices with XPath in Control Settings</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-exact.png" alt="" width="492"><figcaption><p>Extracting choices with XPath in Control Settings</p></figcaption></figure>
 
 ### Services performing the search
 
@@ -85,7 +85,7 @@ In most cases, it will be simpler to have your service return all the possible v
 
 With this, Orbeon Forms will automatically call your service repeatedly as users type in the field, this to retrieve a new list of possible choices, and update the dropdown.
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-service-search.png" alt="" width="487"><figcaption><p>Service performing search</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-service-search.png" alt="" width="487"><figcaption><p>Service performing search</p></figcaption></figure>
 
 ### Paging
 
@@ -95,7 +95,7 @@ Services that implement their own search can also implement paging. This is usef
 * Add a request parameter `{$fr-search-page}` to the URL. The first time the service is called, the value will be `1`. If users scroll down in the dropdown, and reach the bottom, they will see a message informing them that more results will be loaded, and your service will be called with the parameter set to 2, and so on.
 * At some point, users might reach the last page, as your service doesn't have more choices to list for the given search string. You'll want to include some information in your response as to whether the last page has been reached, and provide an XPath expression under "Is last page XPath expression" returning `true` when on the last page.
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-service-paging.png" alt="" width="488"><figcaption><p>Service performing search</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-service-paging.png" alt="" width="488"><figcaption><p>Service performing search</p></figcaption></figure>
 
 ### Open selection
 
@@ -105,7 +105,7 @@ You can mark a dynamic search dropdown as _open_ in cases where you want users t
 
 In the Control Settings dialog box, open selection can be disabled (using the No radio button, which is the default), enabled (using the Yes radio button), or conditionally enabled (using the Formula radio button). When set to Yes or Formula, the Label and Value formulas must be the same; therefore, the Label formula input field is disabled and its value is automatically set to the Value formula.
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-open.png" alt="" width="488"><figcaption><p>Open selection inside the Control Settings</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-open.png" alt="" width="488"><figcaption><p>Open selection inside the Control Settings</p></figcaption></figure>
 
 ### Auto-select unique choice
 
@@ -113,7 +113,7 @@ In the Control Settings dialog box, open selection can be disabled (using the No
 
 In certain scenarios, the list of choices offered by the dropdown may depend on values entered by users through other controls in the form. You might encounter situations where this list includes only one item. In such cases, it may seem redundant to require users to select that single item, as it is their only choice. Therefore, you might want to enable the 'Auto-select unique choice' option, as shown below.
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-auto-select.png" alt="" width="198"><figcaption><p>Option in the Control Settings dialog</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-auto-select.png" alt="" width="198"><figcaption><p>Option in the Control Settings dialog</p></figcaption></figure>
 
 ### Store label
 
@@ -125,7 +125,7 @@ However, when the "Service performs search" option is not selected, by default t
 
 The "Store label" option allows you to store the label also when the "Service performs search" option is not selected. This is useful if the service cannot run. For example, a user might be filling the form in a first environment and another user viewing it in another. If this option is not selected, the field will not be able to show a label associated with the selected value. Enabling this option allows the label to show even if the service is not running. In that case, it is useful to make the field readonly as well.
 
-<figure><img src="../../.gitbook/assets/dynamic-data-dropdown-store-label.png" alt="" width="108"><figcaption><p>Store label option in the Control Settings dialog</p></figcaption></figure>
+<figure><img src="images/dynamic-data-dropdown-store-label.png" alt="" width="108"><figcaption><p>Store label option in the Control Settings dialog</p></figcaption></figure>
 
 The following table summarizes the behavior of the options:
 

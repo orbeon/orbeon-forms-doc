@@ -13,13 +13,13 @@ General settings allow you to set the following form definition metadata:
 * Form title in the current language
 * Form description in the current language
 
-![General Settings](../.gitbook/assets/general.png)
+![General Settings](form-settings/general.png)
 
 \[SINCE Orbeon Forms 2020.1]
 
 The description can optionally use rich text.
 
-![Form description with rich text](../.gitbook/assets/general-html.png)
+![Form description with rich text](form-settings/general-html.png)
 
 ## Form Options
 
@@ -27,7 +27,7 @@ The description can optionally use rich text.
 
 Form options include options which apply to the entire form definition.
 
-![Form Options](../.gitbook/assets/form-options.png)
+![Form Options](form-settings/form-options.png)
 
 * Singleton Form
   * Enable or disable singleton form behavior.
@@ -68,11 +68,11 @@ Form options include options which apply to the entire form definition.
 
 Here is how hints appear depending on the type of control they are associated with:
 
-![Hints](../.gitbook/assets/placeholder-and-inline-hints.png)
+![Hints](../form-runner/images/placeholder-and-inline-hints.png)
 
 ## Time Window
 
-![Time Window](../.gitbook/assets/time-window.png)
+![Time Window](form-settings/time-window.png)
 
 See [Time Window](form-settings/time-window.md).
 
@@ -84,9 +84,9 @@ This tab shows settings for specific controls. Those settings apply to all contr
 
 For example, you can set a "Digits After Decimal" setting global to the form, and then override it on specific number controls as needed.
 
-![Number Control Settings](../.gitbook/assets/controls-number.png)
+![Number Control Settings](form-settings/controls-number.png)
 
-![Date Control Settings](../.gitbook/assets/controls-date.png)
+![Date Control Settings](form-settings/controls-date.png)
 
 See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-level-settings.html).
 
@@ -96,7 +96,7 @@ See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-
 
 \[SINCE Orbeon Forms 2018.1] These options are now in a separate tab.
 
-![Appearance](../.gitbook/assets/appearance.png)
+![Appearance](form-settings/appearance.png)
 
 * Browser page layout
   * \[SINCE Orbeon Forms 2019.2]
@@ -133,15 +133,15 @@ See also:
 
 Here is how the same form layout looks with the three different form density settings. First, the default "Compact" setting:
 
-![Compact](../.gitbook/assets/form-density-compact.png)
+![Compact](form-settings/form-density-compact.png)
 
 Second, the "Comfortable" setting. Notice how the controls are spaced out more:
 
-![Comfortable](../.gitbook/assets/form-density-comfortable.png)
+![Comfortable](form-settings/form-density-comfortable.png)
 
 Finally, the "Roomy" setting:
 
-![Roomy](../.gitbook/assets/form-density-roomy.png)
+![Roomy](form-settings/form-density-roomy.png)
 
 See also:
 
@@ -177,7 +177,7 @@ See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-
 
 \[SINCE Orbeon Forms 2019.2]
 
-![PDF](../.gitbook/assets/pdf.png)
+![PDF](form-settings/pdf.png)
 
 * PDF page orientation
   * Use property: use the [`oxf.fr.detail.rendered-page-orientation` property](../configuration/properties/form-runner-pdf.md#automatic-pdf-page-size-and-orientation)
@@ -193,7 +193,7 @@ See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-
 
 ## Formulas
 
-![Formulas](../.gitbook/assets/formulas.png)
+![Formulas](form-settings/formulas.png)
 
 * Calculations in Read-Only Modes (Review, PDF)
   * \[SINCE Orbeon Forms 2021.1]
@@ -213,7 +213,7 @@ See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-
 
 ## About this Form
 
-![About this Form](../.gitbook/assets/about.png)
+![About this Form](form-settings/about.png)
 
 ### Versions
 

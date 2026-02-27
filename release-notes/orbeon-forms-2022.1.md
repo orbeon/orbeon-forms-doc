@@ -15,7 +15,7 @@ Form Runner now features a new Landing page, organized in cards which provides q
 * Your in-progress Form Builder forms
 * Demo forms
 
-![The new Landing page](../.gitbook/assets/landing.png)
+![The new Landing page](images/landing.png)
 
 Some cards directly list content, including the list of published forms and the list of in-progress Form Builder forms.
 
@@ -23,7 +23,7 @@ You can configure whether you want to have a particular card on the Landing page
 
 All Form Runner and Form Builder navigation bars now provide a direct link to the Landing page. This can be disabled if not desired.
 
-![Landing page navigation](../.gitbook/assets/summary-navigation.png)
+![Landing page navigation](images/summary-navigation.png)
 
 We have made the Summary page layout fluid, similar to the Forms/Admin page (previously known as the Home page).
 
@@ -33,17 +33,17 @@ Finally, Form Runner buttons now are sticky, so that they are always visible whe
 
 Previously, Form Runner featured a static Landing page, as well as a Home page, which doubled as an Admin page when the user was an administrator. The Home page is now replaced by a Published Forms page, which shows published forms accessible to the user, but no administration functions, and a separate Forms Admin page, which is only accessible to administrators.
 
-![The Published Forms page](../.gitbook/assets/form-runner-forms.png)
+![The Published Forms page](images/form-runner-forms.png)
 
 The Forms Admin page is very similar to the Published Forms page, but features additional administration functions and shows library forms.
 
-![The Forms Admin page](../.gitbook/assets/form-runner-admin.png)
+![The Forms Admin page](images/form-runner-admin.png)
 
 ### Drag and drop of form controls to grid cells
 
 Form Builder has long supported drag and drop of form controls _between_ grid cells. This release introduces drag and drop of form controls from the toolbox to grid cells, which is more intuitive to newcomers and also convenient for experienced users. You can still click on toolbox controls to add them to a grid cell as before, but you can now also drag and drop them.
 
-![Form Builder drag and drop](../.gitbook/assets/form-builder-dnd.png)
+![Form Builder drag and drop](images/form-builder-dnd.png)
 
 ### Per-app and global permissions configuration
 
@@ -59,7 +59,7 @@ The new _List_ permission allows specifying that the user can list form data on 
 
 With earlier versions of Orbeon Forms, the ability to "Read" implied the ability to _List_ on the Summary page.
 
-![Permissions dialog with list permission](../.gitbook/assets/permissions-dialog.png)
+![Permissions dialog with list permission](../form-builder/images/permissions-dialog.png)
 
 For more details, see the [documentation](../form-runner/access-control/deployed-forms.md#the-_list_-permission).
 
@@ -73,7 +73,7 @@ This version includes lots of improvements to the look and feel of Form Runner a
 * lighter background and rounded corners
 * more modern dialogs
 
-![View of the Detail page with Wizard](../.gitbook/assets/detail-look-and-feel.png)
+![View of the Detail page with Wizard](images/detail-look-and-feel.png)
 
 ### Resizing of image attachments
 
@@ -81,7 +81,7 @@ The Image Attachment form control now supports resizing images upon upload. You 
 
 You can also choose the resulting image format, which can be PNG or JPEG, and the quality of the JPEG image.
 
-![Image resizing options](../.gitbook/assets/dialog-image-resize.png)
+![Image resizing options](images/dialog-image-resize.png)
 
 ### Improved selection on the Summary, Forms, and Admin pages
 
@@ -92,11 +92,11 @@ The Summary, Forms, and Admin pages now support quick selection of multiple form
 
 The menu allows you to select all items, or to select only items that match a particular status. For example, you can select only published forms on the Admin page, or only form data that is not an in-progress draft in a form's Summary page. The number of selected items is conveniently displayed in the menu.
 
-![Selection menu](../.gitbook/assets/summary-selection-menu.png)
+![Selection menu](images/summary-selection-menu.png)
 
 If you are familiar with for example Gmail, you might know that you can select a checkbox, and then shift-click another one, and all the checkboxes in the interval will be selected. Similarly, you can deselect a series of checkboxes. The exact logic is a little subtle, but we implemented something very similar in Form Runner.
 
-![Shift-click](../.gitbook/assets/admin-shift-click.png)
+![Shift-click](images/admin-shift-click.png)
 
 This doesn’t only apply to the Form Runner Summary, Forms, and Admin pages: it applies to any checkboxes in a repeated grid. And it also applies to the Checkboxes form control, so you can quickly select and deselect a range of checkboxes.
 
@@ -114,7 +114,7 @@ This release introduces a number of improvements to Simple Data Migration. With 
 * Move controls within a given level of repeated grids or repeated sections, even across nested grids.
 * Simply moving a form control this way allows you to reorganize your form while keeping access to existing data.
 
-![Moving a control across section boundaries](../.gitbook/assets/form-builder-simple-data-migration.png)
+![Moving a control across section boundaries](images/form-builder-simple-data-migration.png)
 
 See also:
 
@@ -148,7 +148,7 @@ In this release, we have introduced many accessibility improvements. In particul
 
 Focus highlights on groups can be disabled via configuration property and are enabled by default. The following illustrates highlights on selection controls and groups (in practice focus highlights are only shown on keyboard focus):
 
-![Selection controls focus highlights](../.gitbook/assets/selection-focus-highlights.png)
+![Selection controls focus highlights](images/selection-focus-highlights.png)
 
 ### Support for variables in more places
 
@@ -183,7 +183,7 @@ But you can also use them the following formulas:
   * Control name
   * Formula
 
-![Example of new use of variable reference](../.gitbook/assets/container-max-items.png)
+![Example of new use of variable reference](images/container-max-items.png)
 
 Using variables also has the benefit that when renaming controls, the variable references are [automatically updated](../form-builder/formulas.md#renaming-of-controls-and-formulas).
 
@@ -210,19 +210,19 @@ It was already possible to attach multiple PDF templates to a form. It is now po
 
 When running the `email` action, you can now specify a new `template` parameter to select the email template to use. If you don’t specify a template, the default template is used.
 
-![Email templates](../.gitbook/assets/email-templates-custom.png)
+![Email templates](images/email-templates-custom.png)
 
 ### Form Builder shows control names in overlay
 
 Form Builder now shows the control names in overlay, which makes it easier to find the control you want to edit. The following screenshot shows the `submitter-pta-position` control names in the overlay:
 
-![Control names in overlay](../.gitbook/assets/builder-control-name-overlay.png)
+![Control names in overlay](images/builder-control-name-overlay.png)
 
 ### Ability to change the "Add Another Repetition" label
 
 For sections with repeated content, like for the "Repetition Label", the "Add Repetition Label" tab allows you to set a label that applies to the button used to add repetitions.
 
-![](../.gitbook/assets/section-settings-add-repetition-label.png)
+![](../form-builder/images/section-settings-add-repetition-label.png)
 
 ### PDF production enhancements
 
@@ -234,7 +234,7 @@ Orbeon Forms now embeds the richer [Inter font](https://rsms.me/inter/) into PDF
 
 PDF bookmarks are now generated correctly for sections and allow quick navigation in the resulting PDF.
 
-![PDF bookmarks](../.gitbook/assets/pdf-bookmarks.png)
+![PDF bookmarks](images/pdf-bookmarks.png)
 
 In addition:
 
@@ -261,11 +261,11 @@ In addition, showing the section status is supported even when the TOC is not se
 
 The Actions editor now supports running an action when a control disappears.
 
-![Action running upon disappearing form control](../.gitbook/assets/actions-general-settings-disappears.png)
+![Action running upon disappearing form control](../form-builder/images/actions-general-settings-disappears.png)
 
 In addition, when a service exposes URL parameters, an action can explicitly specify the value of the parameter.
 
-![Action setting a configured URL parameter](../.gitbook/assets/actions-request-param.png)
+![Action setting a configured URL parameter](../form-builder/images/actions-request-param.png)
 
 ### Other new features
 
@@ -342,7 +342,7 @@ Although we do not recommend it, it is possible to change the default back to HT
 
 The ability to mark a field as "Show in email subject", as highlighted in the screenshot below, taken from Orbeon Forms 2021.1, is no longer supported. Instead, you can specify what the subject of the email should be in the Email Settings dialog, and use template parameters to add the value of fields to the subject of the email.
 
-![Show in email subject from Orbeon Forms 2021.1](../.gitbook/assets/email-show-in-email-subject.png)
+![Show in email subject from Orbeon Forms 2021.1](images/email-show-in-email-subject.png)
 
 ### User information when calling Orbeon Forms service APIs
 

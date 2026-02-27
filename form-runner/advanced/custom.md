@@ -97,4 +97,4 @@ We can create a [custom button](buttons-and-processes/) that dispatches that eve
 
 The result:
 
-![Form Runner message](../../.gitbook/assets/your-email-is.png)
+![Form Runner message](../images/your-email-is.png)

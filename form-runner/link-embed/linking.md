@@ -8,13 +8,13 @@ When you publish the form, assuming you have Orbeon Forms deployed on a server o
 
 In a typical deployment, users will access this page from another part of your website or web application that contains a link to form served by Orbeon Forms. For instance, a city government might have on its website a page listing forms citizen can fill out, which links to the marriage registration form on `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
 
-![Page on your website/app linking to a form](../../.gitbook/assets/linking-page-with-link.png)
+![Page on your website/app linking to a form](../images/linking-page-with-link.png)
 
 ## Technology agnosticity
 
 Linking doesn't make any assumption on the technology used by the website or application you're linking from. Your site could use Drupal, WordPress, be served by IIS, using .NET, or any other technology. For instance, the diagram below is for a situation where your website is served by Microsoft IIS, implemented in .NET, and links to forms served by Orbeon Forms.
 
-![IIS front-end](../../.gitbook/assets/linking-iis-net.png)
+![IIS front-end](../images/linking-iis-net.png)
 
 ## Paths
 

@@ -231,7 +231,7 @@ By default, as shown in the below video:
 * The `modal` loading indicator used for the `submit` button.
 * The `inline` loading indicator for the _save_ buttons (`save-draft` (up to 2020.1.x), `save-progress` (2021.1 and newer), and `save-final`).
 
-![Loading indicators](../../.gitbook/assets/loading-indicators.gif)
+![Loading indicators](../images/loading-indicators.gif)
 
 ## Controlling the appearance of control labels
 
@@ -279,7 +279,7 @@ Allowed values:
 
 Here is how hints appear depending on the type of control they are associated with:
 
-![](../../.gitbook/assets/placeholder-and-inline-hints.png)
+![](../../form-runner/images/placeholder-and-inline-hints.png)
 
 _LIMITATION: The `minimal` appearance is not supported on combined "Date and Time" fields and on text fields with "Character Counter" appearance._
 
@@ -469,7 +469,7 @@ See also [Run form in the background](../../form-runner/api/other/run-form-backg
 
 When data is _unsafe_, meaning that is has been modified but not saved yet, Form Runner by default shows a warning when attempting to navigate away from the current page or to close the current browser tab or window.
 
-![Chrome warning when leaving a page](../../.gitbook/assets/chrome-leave-site.png)
+![Chrome warning when leaving a page](../images/chrome-leave-site.png)
 
 In some cases, in particular when [embedding a form](../../form-runner/link-embed/java-api.md), this can be an inconvenience. The following property allows disabling this behavior.
 
@@ -515,7 +515,7 @@ If no conflicts are detected, saving proceeds as usual. If a conflict is detecte
 * Save and overwrite: Proceeds with saving the current user's changes, overwriting any changes made by other sessions or tabs
 * Discard and reload: Discards the current user's unsaved changes and reloads the form with the latest data from the database
 
-<figure><img src="../../.gitbook/assets/conflict-detected.png" alt="" width="510"><figcaption><p>Conflict detected</p></figcaption></figure>
+<figure><img src="../images/conflict-detected.png" alt="" width="510"><figcaption><p>Conflict detected</p></figcaption></figure>
 
 ### Limitations
 

@@ -22,7 +22,7 @@ The title of the section in the section template library form definition is used
 
 For example, you can create a generic "US Address" section and reuse it in multiple forms:
 
-![Defining a section template in Form Builder](<../.gitbook/assets/section-template (1).png>)
+![Defining a section template in Form Builder](<images/section-template.png>)
 
 Section templates can contain:
 
@@ -34,11 +34,11 @@ When you click on a given section template, the section is inserted into the for
 
 The section appears with read-only fields (which means that you cannot change properties of the controls once inserted):
 
-![Using section templates in Form Builder](../.gitbook/assets/section-template-use.png)
+![Using section templates in Form Builder](images/section-template-use.png)
 
 When deploying the form, section templates appear like regular editable sections:
 
-![Section templates in Form Runner](../.gitbook/assets/section-template.png)
+![Section templates in Form Runner](../form-runner/images/section-template.png)
 
 \[SINCE Orbeon Forms 2021.1]
 
@@ -118,7 +118,7 @@ When you open Form Builder, the latest version of the controls and section templ
 
 If you make changes to section templates by modifying and publishing a library form, you must reload the toolbox in your form to reflect the latest changes using the "Reload Toolbox" icon at the top of the toolbox (Orbeon Forms 2017.1 and earlier) or the "Reload Toolbox" button in the "Advanced" tab (Orbeon Forms 2017.2).
 
-![](../.gitbook/assets/advanced-menu.png)
+![](images/advanced-menu.png)
 
 For more about reloading, see [Reloading the toolbox](toolbox.md#reloading-the-toolbox)
 
@@ -135,7 +135,7 @@ When [versioning](../form-runner/feature/versioning.md) is available:
 
 For example, if you have published versions 1, 2 and 3 of the `acme` library form, the toolbox shows a dropdown with those versions.
 
-![Version 2 of the section templates library](<../.gitbook/assets/section-templates-v2 (1).png>)
+![Version 2 of the section templates library](<images/section-templates-v2.png>)
 
 When you select a particular version, the toolbox reloads with the latest published form definition with that version.
 
@@ -155,11 +155,11 @@ For more about reloading, see [Reloading the toolbox](toolbox.md#reloading-the-t
 
 You can merge section templates into your current form definition with the "Merge Section Template" icon associated with the section:
 
-![Unmerged section template](../.gitbook/assets/section-template-unmerged.png)
+![Unmerged section template](images/section-template-unmerged.png)
 
 After activating the icon, a dialog shows:
 
-![Control Names dialog](<../.gitbook/assets/section-template-merge-dialog (1).png>)
+![Control Names dialog](<images/section-template-merge-dialog.png>)
 
 The dialog shows a list of all control names within the section template and how they will be changed after the merge. Since control names are unique within a form definition, two controls cannot have the same name. Names that are available show in green. Names that conflict show in yellow and an automatic name is generated.
 
@@ -168,13 +168,13 @@ You can optionally set a prefix and/or a suffix for all names. This can help pre
 * first, with all control names prefixed by `shipping-`
 * second, with all control names prefixed by `billing-`
 
-![Control Names dialog with prefix](<../.gitbook/assets/section-template-merge-dialog-prefix (1).png>)
+![Control Names dialog with prefix](<images/section-template-merge-dialog-prefix.png>)
 
 _NOTE: The enclosing section name itself is not part of this renaming process, as the section was already part of the containing form definition and therefore its name was already unique._
 
 After merging the section template, it becomes part of the current form definition and is completely unlinked from the original section template. You can modify the section and its content as if it had been directly created by hand within the form definition:
 
-![Merged section template](../.gitbook/assets/section-template-merged.png)
+![Merged section template](images/section-template-merged.png)
 
 This also means that if you make changes to the section templates library and reload the toolbox, the merged section template does not update.
 

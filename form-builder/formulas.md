@@ -173,7 +173,7 @@ In the Control Settings dialog, formulas are used to specify the following aspec
 
 #### Validations and alerts
 
-![Validations](../.gitbook/assets/control-settings-validations.png)
+![Validations](images/control-settings-validations.png)
 
 * **Constraint:** Boolean expression specifying whether the control is valid.
   * If this field is left blank, then the validity of the control depends on the data type and the "Required" option.
@@ -181,7 +181,7 @@ In the Control Settings dialog, formulas are used to specify the following aspec
 
 #### Formulas
 
-![Formulas](../.gitbook/assets/control-settings-formulas.png)
+![Formulas](images/control-settings-formulas.png)
 
 * **Visibility:**
   * Specifies whether the control is visible. This can be either "Yes" (default), "No", or an XPath formula.
@@ -198,7 +198,7 @@ In the Control Settings dialog, formulas are used to specify the following aspec
 
 ### Section/Grid Settings dialog
 
-![Basic Settings and Formulas](../.gitbook/assets/section-settings.png)
+![Basic Settings and Formulas](images/section-settings.png)
 
 In the Section/Grid Settings dialog, formulas are used to specify the following aspects of a section or grid:
 

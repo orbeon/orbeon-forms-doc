@@ -34,7 +34,7 @@ Repeated grids and sections support a [menu](https://doc.orbeon.com/form-runner/
 
 This release adds the new option of _clearing_ (or _resetting_) a repetition. When this option is activated, all data entered by the user in the repetition is cleared and all default values for the repetition are set.
 
-![Grid menu with the new "Clear Line" option](../.gitbook/assets/xbl-grid-menu.png)
+![Grid menu with the new "Clear Line" option](../form-runner/component/images/xbl-grid-menu.png)
 
 ## Other features and enhancements
 

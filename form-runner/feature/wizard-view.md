@@ -6,7 +6,7 @@ By default, with Form Runner all the form sections appear in the same page, on t
 
 With the wizard view, top-level sections instead appear in a table of contents area to the left, and only a single top-level section is shown at any given time in a separate wizard "page":
 
-![Form Runner Wizard](../../.gitbook/assets/wizard.webp)
+![Form Runner Wizard](../images/wizard.webp)
 
 You can navigate between pages by clicking on a title in the table of contents, or you can use the navigation arrows. You can also use "Prev" and "Next" buttons when configured.
 
@@ -99,7 +99,7 @@ Setting the value to `true` is still supported for backward compatibility.
 
 You can see in the following picture that the sections in the table of contents which have not yet been visited are grayed out:
 
-![Wizard validated mode](../../.gitbook/assets/wizard-validated.png)
+![Wizard validated mode](../images/wizard-validated.png)
 
 ### Strict mode
 
@@ -131,7 +131,7 @@ The following property allows specifying which buttons are presented _inside_ th
     value="wizard-prev wizard-next"/>
 ```
 
-![](../../.gitbook/assets/wizard-buttons.png)
+![](../images/wizard-buttons.png)
 
 ## Separate table of contents
 
@@ -173,7 +173,7 @@ When enabling the separate table of contents of the wizard (see above), the wiza
 * **Errors:** the user has visited the section and some fields have been filled but contain errors.
 * **Complete:** the user has visited the section and all the required fields for the section have been filled.
 
-![Wizard validated mode](../../.gitbook/assets/wizard-status.png)
+![Wizard validated mode](../images/wizard-status.png)
 
 \[SINCE Orbeon Forms 2022.1]
 
@@ -292,11 +292,11 @@ To enable this, go to the relevant [section repeat settings](../../form-builder/
 * Uncheck "Allow the user to add, remove, or move repetitions"
 * Check "Show one repetition at a time in the wizard"
 
-![Repeated Content Configuration](../../.gitbook/assets/container-settings-repeated-content-one-repetition.png)
+![Repeated Content Configuration](../../form-builder/images/container-settings-repeated-content-one-repetition.png)
 
 In addition, each repetition can have an individual [repetition label](../../form-builder/section-settings.md#dynamic-iteration-label).
 
-![](../../.gitbook/assets/section-settings-repetition-label.png)
+![](../../form-builder/images/section-settings-repetition-label.png)
 
 ## Disabling full update
 

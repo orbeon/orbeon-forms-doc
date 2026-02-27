@@ -4,7 +4,7 @@
 
 XBL components can be loaded by the Form Builder toolbox. In order for Form Builder to have information about those components, metadata can be added to each XBL binding.
 
-![](../.gitbook/assets/text-controls.png)
+![](images/text-controls.png)
 
 ## Namespace
 
@@ -134,7 +134,7 @@ All the controls share certain properties, like the control name. However, some 
 * an XPath expression extracting the items from the XML document,
 * and two XPath expressions returning the label and value for each item.
 
-![](../.gitbook/assets/toolbox-fields.png)
+![](images/toolbox-fields.png)
 
 You can create a custom user interface within Form Builder for XBL component that require such additional properties by adding XForms controls under the the `<fb:control-details>` element, which you add under `<fb:metadata>`.
 
@@ -144,7 +144,7 @@ See also [Custom control settings](control-settings.md#custom-control-settings).
 
 `<fb:control-details>` can contain any XForms control. This allows for more flexible layouts:
 
-![Custom Control Settings](<../.gitbook/assets/control-settings-custom-properties (1).png>)
+![Custom Control Settings](<images/control-settings-custom-properties.png>)
 
 In addition, you can place an `<xf:model>`, which can be used for:
 

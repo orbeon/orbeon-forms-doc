@@ -21,7 +21,7 @@ However, custom modes can be used separately from these functions, and conversel
 
 Here is an example of workflow involving standard modes, a custom mode, an external page or service, and navigation back to Orbeon Forms:
 
-![Custom modes workflow](../../.gitbook/assets/custom-modes-workflow.webp)
+![Custom modes workflow](../images/custom-modes-workflow.webp)
 
 An important use case for this is calling external services such as:
 
@@ -237,7 +237,7 @@ As usual, the wildcards in the property names can be replaced by specific applic
 
 The result will be a button on the `new` or `edit` page which, when clicked, will switch to your custom signature page, while keeping data and state.
 
-![Button to navigate to a custom mode page](../../.gitbook/assets/custom-modes-demo-sign-button.webp)
+![Button to navigate to a custom mode page](../images/custom-modes-demo-sign-button.webp)
 
 ### Buttons on custom mode pages
 

@@ -13,7 +13,7 @@ Orbeon Forms requires a few important configuration steps to be performed before
 
 If either of these is not properly configured, Orbeon Forms show a banner at the top of application pages.
 
-![Configuration banner](../.gitbook/assets/configuration-banner.png)
+![Configuration banner](images/configuration-banner.png)
 
 You can learn more about the specific configurations that are missing by [configuring logging](logging.md) and checking the Orbeon Forms log file. The file will contain something like the following at the `ERROR` level:
 

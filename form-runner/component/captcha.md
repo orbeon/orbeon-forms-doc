@@ -79,7 +79,7 @@ Orbeon Forms supports the reCAPTCHA v2 since Orbeon Forms 2018.1 and 2017.2.2, a
 
 You can use this component to show users a captcha, like the one shown in the following screenshot:
 
-<figure><img src="../../.gitbook/assets/xbl-recaptcha.gif" alt="" width="308"><figcaption></figcaption></figure>
+<figure><img src="images/xbl-recaptcha.gif" alt="" width="308"><figcaption></figcaption></figure>
 
 1. First, you need to [sign up with reCAPTCHA](https://www.google.com/recaptcha/admin#list) to get your own public/private key pair.
 2. Store your public keys (now called "site keys") and private keys in your properties, as follows:
@@ -200,7 +200,7 @@ then xf:dispatch(
 
 You can use this component to show users a simple captcha like the one shown in the following screenshot:
 
-![](../../.gitbook/assets/xbl-simple-captcha.png)
+![](images/xbl-simple-captcha.png)
 
 Note that this doesn't offer as much security as reCAPTCHA, for example, but it is entirely handled by Orbeon Forms and does not call external services.
 

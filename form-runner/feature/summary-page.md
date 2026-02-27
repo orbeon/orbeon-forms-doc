@@ -12,7 +12,7 @@ The Form Runner Summary page shows, for a given published form, the list of acce
 * Navigating to the Home page and Import page
 * Opening a PDF or TIFF version of the form
 
-![Summary page for the Bookshelf form](../../.gitbook/assets/summary-bookshelf.png)
+![Summary page for the Bookshelf form](../images/summary-bookshelf.png)
 
 ## Columns
 
@@ -31,7 +31,7 @@ The Form Runner Summary page shows, for a given published form, the list of acce
 
 It is possible to sort the data by clicking on the column headers. The sort order is indicated by an arrow next to the column name. Clicking multiple times on the same header will toggle between ascending and descending order.
 
-![Sorting](../../.gitbook/assets/summary-sorting.png)
+![Sorting](../images/summary-sorting.png)
 
 Limitations:
 
@@ -63,7 +63,7 @@ When the corresponding [`oxf.fr.summary.show-*` properties](../../configuration/
 
 The created by, modified by, and workflow stage search fields contain distinct values from accessible data.
 
-![Search by created, modified, etc.](../../.gitbook/assets/summary-search-created-last-modified.png)
+![Search by created, modified, etc.](../images/summary-search-created-last-modified.png)
 
 ### Dynamic dropdowns
 
@@ -71,7 +71,7 @@ The created by, modified by, and workflow stage search fields contain distinct v
 
 For dynamic dropdowns, the original service used to populate the dropdown is not called again, but distinct values from accessible data are listed. This is also done in the bulk edit area if dynamic dropdowns are present.
 
-![Search Options](../../.gitbook/assets/summary-bookshelf-search.png)
+![Search Options](../images/summary-bookshelf-search.png)
 
 You specify which fields appear in the search options area when editing the form definition, using the [Control Settings dialog](../../form-builder/control-settings.md).
 
@@ -97,9 +97,9 @@ This property controls whether the search options area is opened by default when
 
 When more than one [form version](versioning.md) is available, the user has the choice of the version to access. Different versions can behave like very different forms. Also see the [properties to configuring the behavior of the Summary page with regards to versioning](../../configuration/properties/form-runner-summary-page.md#versioning).
 
-![Summary page for version 1 of the form](../../.gitbook/assets/summary-version-1.png)
+![Summary page for version 1 of the form](../images/summary-version-1.png)
 
-![Summary page for version 2 of the form](../../.gitbook/assets/summary-version-2.png)
+![Summary page for version 2 of the form](../images/summary-version-2.png)
 
 ## Bulk edit
 
@@ -107,7 +107,7 @@ When more than one [form version](versioning.md) is available, the user has the 
 
 Just like for search options, you can open the bulk edit area using the "Show Bulk Edit" button. The bulk edit area contains individual fields which allow performing a bulk edit of multiple forms at once.
 
-![Bulk Edit](../../.gitbook/assets/summary-bookshelf-bulk-edit.png)
+![Bulk Edit](../images/summary-bookshelf-bulk-edit.png)
 
 You specify which fields appear in the bulk edit area when editing the form definition, using the [Control Settings dialog](../../form-builder/control-settings.md).
 

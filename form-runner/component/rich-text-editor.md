@@ -4,7 +4,7 @@
 
 This components wraps the [TinyMCE](https://www.tiny.cloud/) rich text editor.
 
-![](../../.gitbook/assets/xbl-tinymce.png)
+![](images/xbl-tinymce.png)
 
 ## Usage
 

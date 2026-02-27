@@ -9,7 +9,7 @@
 
 ### Overview
 
-![](../.gitbook/assets/section-settings.png)
+![](images/section-settings.png)
 
 ### Section or grid name
 

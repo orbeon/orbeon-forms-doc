@@ -12,11 +12,11 @@ The "Purge" dialog is similar to the ["Export" dialog](exporting-form-definition
 
 Like in the "Export" dialog, you can either purge the forms that were explicitly selected:
 
-![Purge selected forms](../../.gitbook/assets/purge-selected-forms.png)
+![Purge selected forms](../images/purge-selected-forms.png)
 
 Or you can purge forms by specifying a list of application, form, and version filters:
 
-![Purge following forms](../../.gitbook/assets/purge-following-forms.png)
+![Purge following forms](../images/purge-following-forms.png)
 
 It's possible to specify a date range using the "From" and "Until" date pickers. This allows you to purge only the data that was last modified after and/or before the specified dates. Both the "From" and "Until" dates are inclusive.
 

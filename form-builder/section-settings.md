@@ -8,7 +8,7 @@ See [Section and grid settings](container-settings.md).
 
 ### Overview
 
-![](../.gitbook/assets/section-settings.png)
+![](images/section-settings.png)
 
 ### Section collapsing
 
@@ -38,11 +38,11 @@ The help message is configured in the "Help Message" tab. Similarly, the help me
 
 A short label can be configured in the "Short Label" tab. This short label is used instead of the regular label in the table of contents when using the [wizard view](../form-runner/feature/wizard-view.md).
 
-![](../.gitbook/assets/section-settings-short-label-1.png)
+![](images/section-settings-short-label-1.png)
 
-![](../.gitbook/assets/section-settings-short-label-2.png)
+![](images/section-settings-short-label-2.png)
 
-![](../.gitbook/assets/section-settings-short-label-3.png)
+![](images/section-settings-short-label-3.png)
 
 [\[SINCE Orbeon Forms 2023.1.3\]](../release-notes/orbeon-forms-2023.1.3.md)
 
@@ -60,9 +60,9 @@ However, sections also support _dynamic_ labels and help messages. This means th
 
 For more, see [Template syntax](template-syntax.md).
 
-![](../.gitbook/assets/section-settings-label.png)
+![](images/section-settings-label.png)
 
-![](../.gitbook/assets/section-settings-help.png)
+![](images/section-settings-help.png)
 
 ### Dynamic iteration label
 
@@ -72,7 +72,7 @@ For sections with repeated content, the "Repetition Label" tab allows you to set
 
 When using the [Wizard view](../form-runner/feature/wizard-view.md), repetition labels will show in the Wizard's table of contents.
 
-![](../.gitbook/assets/section-settings-repetition-label.png)
+![](images/section-settings-repetition-label.png)
 
 ### Custom "Add Repetition" label
 
@@ -80,7 +80,7 @@ When using the [Wizard view](../form-runner/feature/wizard-view.md), repetition 
 
 For sections with repeated content, the "Add Repetition Label" tab allows you to set a label that applies to the button used to add repetitions.
 
-![](../.gitbook/assets/section-settings-add-repetition-label.png)
+![](images/section-settings-add-repetition-label.png)
 
 ## See also
 

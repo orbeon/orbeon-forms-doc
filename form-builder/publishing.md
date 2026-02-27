@@ -14,7 +14,7 @@ The notion of _publishing_ is central to Form Builder/Form Runner.
 
 When you start publishing a form with the Publish button at the bottom of Form Builder, a dialog opens to confirm the application name and form name:
 
-![Creating a new version](../.gitbook/assets/publish-initial.png)
+![Creating a new version](images/publish-initial.png)
 
 If you decide to go ahead with publishing, simply use the Publish button.
 
@@ -28,11 +28,11 @@ You can decide whether the published form is _available_ to end users with the "
 
 When versioning is enabled, you have a choice, when publishing, of whether to _create a new form version_ or to _overwrite an existing one_.
 
-![Creating a new version](../.gitbook/assets/publish-version-next.png)
+![Creating a new version](images/publish-version-next.png)
 
 When creating a new form version, publishing the form definition creates a new version of the form definition in the database. Data which already exists in the database will still be viewed and edited with the previous versions of this form definition which are associated with that data. The new form definition version will be used to create, edit and view new data.
 
-![Overwriting an existing version](../.gitbook/assets/publish-version-overwrite.png)
+![Overwriting an existing version](images/publish-version-overwrite.png)
 
 When overwriting an existing form definition, if the changes you have made to the form definition are small and non-structural, such as changing control labels only, the form definition will be compatible with existing form data. But if you have made structural changes, such as adding, removing, renaming, or moving controls, the form definition might be incompatible with existing data. We recommend being careful when overwriting an existing form definition version.
 
@@ -50,19 +50,19 @@ You can add or update a textual comment associated with the given published vers
 
 When creating a new version, the field is initially empty:
 
-![Empty comment](../.gitbook/assets/publish-initial.png)
+![Empty comment](images/publish-initial.png)
 
 You can set an explanatory comment:
 
-![Original comment](../.gitbook/assets/publish-comment-v1-original.png)
+![Original comment](images/publish-comment-v1-original.png)
 
 When overwriting an existing form version, the existing comment, if any, is read back from the published form definition and you can update it before publishing:
 
-![Updated comment](../.gitbook/assets/publish-comment-v1-update.png)
+![Updated comment](images/publish-comment-v1-update.png)
 
 When you publish a new version, a completely separate comment is created for that version:
 
-![Original comment for the new version](../.gitbook/assets/publish-comment-v2-original.png)
+![Original comment for the new version](images/publish-comment-v2-original.png)
 
 ## See also
 

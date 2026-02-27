@@ -8,7 +8,7 @@ Most forms are filled out for a given purpose, and then submitted. When the init
 
 As a form author, you can mark a form as _singleton_ in Form Builder by opening the _Form Settings_ dialog, and clicking on the _Singleton form_ checkbox.
 
-![Form Options](../../.gitbook/assets/form-options.png)
+![Form Options](../../form-builder/form-settings/form-options.png)
 
 ## In Form Runner
 
@@ -22,7 +22,7 @@ When accessing the _new_ page of a singleton form, the following will happen dep
 
 \[SINCE Orbeon Forms 2024.1.3] Database checks now prevent a user who already has access to form data from creating additional data, protecting singleton forms against adversarial attempts to create multiple entries. This improvement is available on all supported databases except Oracle.
 
-![Message when multiple documents are found](../../.gitbook/assets/singleton-form-multiple.png)
+![Message when multiple documents are found](../images/singleton-form-multiple.png)
 
 ### Summary page
 

@@ -13,7 +13,7 @@ The Landing page is organized in cards which provides quick access to:
 * Your in-progress Form Builder forms
 * Demo forms
 
-![The Landing page](../../.gitbook/assets/landing-form-data-card.png)
+![The Landing page](../images/landing-form-data-card.png)
 
 Some cards directly list content, including the list of published forms and the list of in-progress Form Builder forms.
 
@@ -21,7 +21,7 @@ You can configure whether you want to have a particular card on the Landing page
 
 All Form Runner and Form Builder navigation bars now provide a direct link to the Landing page. This can be disabled if not desired.
 
-![Landing page navigation](../../.gitbook/assets/summary-navigation.png)
+![Landing page navigation](../../release-notes/images/summary-navigation.png)
 
 ## Configuration properties
 

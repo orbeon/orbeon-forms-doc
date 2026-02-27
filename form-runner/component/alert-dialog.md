@@ -8,7 +8,7 @@ The alert dialog allows you to build simple dialogs for those cases where you ne
 
 Let's assume that you want to ask a yes/no question which produces a dialog as shown below, and that you want to react to users choosing _Yes_ .
 
-![](<../../.gitbook/assets/xbl-alert-dialog (1).png>)
+![](<images/xbl-alert-dialog.png>)
 
 First declare the dialog, with:
 
@@ -56,9 +56,9 @@ The alert dialog supports 3 buttons, that correspond to a _positive choice_ , a 
 
 | Element                | Default representation                              | CSS class                      |
 | ---------------------- | --------------------------------------------------- | ------------------------------ |
-| `<fr:positive-choice>` | ![](../../.gitbook/assets/xbl-alert-dialog-yes.png) | `xbl-fr-alert-dialog-positive` |
-| `<fr:negative-choice>` | ![](../../.gitbook/assets/xbl-alert-dialog-no.png)  | `xbl-fr-alert-dialog-negative` |
-| `<fr:neutral-choice>`  | ![](../../.gitbook/assets/xbl-alert-dialog-ok.png)  | `xbl-fr-alert-dialog-neutral`  |
+| `<fr:positive-choice>` | ![](images/xbl-alert-dialog-yes.png) | `xbl-fr-alert-dialog-positive` |
+| `<fr:negative-choice>` | ![](images/xbl-alert-dialog-no.png)  | `xbl-fr-alert-dialog-negative` |
+| `<fr:neutral-choice>`  | ![](images/xbl-alert-dialog-ok.png)  | `xbl-fr-alert-dialog-neutral`  |
 
 In most cases, you will be using either the positive and negative choice together, or the neutral choice alone. You can use the 3 buttons at the same time, to create a _Yes-No-Cancel_ type of dialog. In this case however, you should consider giving labels to buttons that more description than _Yes-No-Cancel_ . For instance, if you want to ask users whether they want to leave this form without saving, you could label the buttons _Save data_ , _Discard data_ , _Continue editing_ .
 
@@ -120,7 +120,7 @@ Depending on the number of buttons you place in your dialog, a different icon is
 
 *   When you have 2 or 3 buttons, the dialog is considered to be a **question**. The CSS class is `xbl-fr-alert-dialog-question` and the dialog looks like:
 
-    ![](<../../.gitbook/assets/xbl-alert-dialog (1).png>)
+    ![](<images/xbl-alert-dialog.png>)
 *   When you have 1 button, the dialog is considered to be **informational**. The CSS class is `xbl-fr-alert-dialog-info` and the dialog looks like:
 
-    ![](../../.gitbook/assets/xbl-alert-dialog-info.png)
+    ![](images/xbl-alert-dialog-info.png)

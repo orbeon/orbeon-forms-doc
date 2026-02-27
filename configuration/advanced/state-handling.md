@@ -115,7 +115,7 @@ In that case, Orbeon Forms can display a dialog to the user when the session is 
 
 The user can then manually renew the session if needed.
 
-![Session about to expire](../../.gitbook/assets/session-about-to-expire.png)
+![Session about to expire](../../contributors/images/session-about-to-expire.png)
 
 It is possible to configure when this dialog is shown using the following property, which is a percentage of the session expiration time, with a default value of 80%:
 
@@ -130,7 +130,7 @@ For example, if the session expiration time is one hour, the dialog will be show
 
 If the user doesn't renew the session, the session will expire and the user will see the following dialog:
 
-![Session expired](../../.gitbook/assets/session-expired.png)
+![Session expired](../../contributors/images/session-expired.png)
 
 This dialog is also shown if the user logs out from another page/tab from the same session.
 

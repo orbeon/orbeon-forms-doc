@@ -104,7 +104,7 @@ You can visualize the XML converted from JSON with Form Builder as follows:
 4. Still while editing the new action, in the Service Response Actions tab set the value of "(control-1)" to `saxon:serialize(., 'xml')`.
 5. Hit the Text button, and you'll find the XML in the text field. To make it easier to read, copy the XML in the text field, and paste it in an [XML formatting tool](https://www.freeformatter.com/xml-formatter.html).
 
-![How to see the converted XML](../.gitbook/assets/submission-json-see-xml.png)
+![How to see the converted XML](images/submission-json-see-xml.png)
 
 \[SINCE Orbeon Forms 2019.1]
 

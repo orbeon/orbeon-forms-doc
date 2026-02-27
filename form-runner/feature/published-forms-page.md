@@ -8,7 +8,7 @@ You access the Form Runner Published Forms page by adding `fr/forms` to the path
 
 This page is also accessible directly from the [Landing page](landing-page.md).
 
-![The Published Forms page](../../.gitbook/assets/form-runner-forms.png)
+![The Published Forms page](../../release-notes/images/form-runner-forms.png)
 
 ## Availability and compatibility
 
@@ -92,7 +92,7 @@ For each form definition the current user has access to, the following links are
 * Link to the Summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
 * Link to the new page: shown if the current user can perform the create operation on the form.
 
-![Published Forms page](../../.gitbook/assets/home.png)
+![Published Forms page](../images/home.png)
 
 ## See also
 

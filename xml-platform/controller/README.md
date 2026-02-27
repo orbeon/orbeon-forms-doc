@@ -6,7 +6,7 @@ This technology is _deprecated_. While it is still use internally by Orbeon Form
 
 ## Introduction to the Page Flow Controller
 
-![](../../.gitbook/assets/reference-controller-oxf-app.png)
+![](../../images/legacy/reference-controller-oxf-app.png)
 
 The Orbeon Forms Page Flow Controller (PFC) is the heart of your Orbeon Forms web application. It dispatches incoming user requests to individual pages built out of models and views, following the model / view / controller (MVC) architecture.
 

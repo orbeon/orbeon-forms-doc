@@ -4,7 +4,7 @@
 
 The number component is designed to enter integer or decimal numbers. See [Currency](currency.md) for a similar component designed to enter currency amounts.
 
-![Number field with unit](<../../.gitbook/assets/xbl-number (1).png>)
+![Number field with unit](<images/xbl-number.png>)
 
 ## Basic usage
 
@@ -20,11 +20,11 @@ You use the number component like a regular input field, for example:
 
 Form builder shows extended control settings for Number and Currency fields:
 
-![Number and Currency field control settings](../../.gitbook/assets/xbl-number-control-settings.png)
+![Number and Currency field control settings](images/xbl-number-control-settings.png)
 
 These are also available at the form level:
 
-![Number and Currency field form settings](../../.gitbook/assets/xbl-number-form-settings.png)
+![Number and Currency field form settings](images/xbl-number-form-settings.png)
 
 ## Datatype
 
@@ -106,7 +106,7 @@ In order to validate the number to have a specific number of decimal digits, the
 
 On iOS, when the control identifies that the value is a non-negative integer, it shows a numeric keypad:
 
-![iOS numeric keypad](../../.gitbook/assets/xbl-number-numeric-keypad.png)
+![iOS numeric keypad](images/xbl-number-numeric-keypad.png)
 
 This is the case if:
 
@@ -115,7 +115,7 @@ This is the case if:
 
 Otherwise, the control shows the numeric pane of the regular keyboard:
 
-![iOS numeric keypad](../../.gitbook/assets/xbl-number-numeric-pane.png)
+![iOS numeric keypad](images/xbl-number-numeric-pane.png)
 
 ## Examples
 
@@ -123,7 +123,7 @@ Otherwise, the control shows the numeric pane of the regular keyboard:
 
 Here is an example with a suffix:
 
-![Number field with suffix](<../../.gitbook/assets/xbl-number (1).png>)
+![Number field with suffix](<images/xbl-number.png>)
 
 ```xml
 <fr:number ref="my-number" suffix="m/s">
@@ -200,11 +200,11 @@ This is useful if you don't want to keep the full precision of decimal values in
 
 Regular controls:
 
-![Right-aligned content](../../.gitbook/assets/xbl-number-right-aligned.png)
+![Right-aligned content](images/xbl-number-right-aligned.png)
 
 Within a repeated grid:
 
-![Right-aligned content in a repeated grid](../../.gitbook/assets/xbl-number-right-aligned-repeated-grid.png)
+![Right-aligned content in a repeated grid](images/xbl-number-right-aligned-repeated-grid.png)
 
 ## See also
 

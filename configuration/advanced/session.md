@@ -26,7 +26,7 @@ You'll most likely be interested in the information on this page if:
 
 For Orbeon Forms to operate normally, for a given web page loaded by the browser from Orbeon Forms, the `JSESSIONID` set in the HTTP response produced by Orbeon Forms (with `Set-Cookie: …`), or if none is set the `JSESSIONID` on in the HTTP request received by Orbeon Forms must also be the one Orbeon Forms receives in all subsequent Ajax requests issued by that page.
 
-![Which HTTP requests/responses we are interested in](../../.gitbook/assets/session-where.png)
+![Which HTTP requests/responses we are interested in](../images/session-where.png)
 
 Note that those requirements apply to the HTTP requests and responses sent to and coming from Orbeon Forms. As illustrated in the above diagrams, if you have reverse proxy or embedding code those will be different from the HTTP requests and responses made by and received by the browser, and the `JSESSIONID` (or equivalent) used between the browser and the proxy / embedding code is likely to be different from the `JSESSIONID` used between the proxy / embedding code and Orbeon Forms. Again, Orbeon Forms' requirement apply to the latter.
 

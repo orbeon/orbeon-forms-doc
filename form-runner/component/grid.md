@@ -33,23 +33,23 @@ A menu is available to perform operations on or around a line. Not all operation
 * Remove Line
   * When allowed, remove the current repetition.
 
-![Repeated grid menu](../../.gitbook/assets/xbl-grid-menu.png)
+![Repeated grid menu](images/xbl-grid-menu.png)
 
 #### Single-line
 
-![Full appearance / single-line](../../.gitbook/assets/xbl-grid-full-single-line.png)
+![Full appearance / single-line](images/xbl-grid-full-single-line.png)
 
 #### Multi-line
 
-![Full appearance / multi-line](../../.gitbook/assets/xbl-grid-full-multi-line.png)
+![Full appearance / multi-line](images/xbl-grid-full-multi-line.png)
 
 ### Minimal repeat appearance
 
 \[SINCE Orbeon Forms 2016.1]
 
-![Minimal appearance / single-line](../../.gitbook/assets/xbl-grid-minimal-single-line.png)
+![Minimal appearance / single-line](images/xbl-grid-minimal-single-line.png)
 
-![Minimal appearance / multi-line](../../.gitbook/assets/xbl-grid-minimal-multi-line.png)
+![Minimal appearance / multi-line](images/xbl-grid-minimal-multi-line.png)
 
 ## Basic usage
 

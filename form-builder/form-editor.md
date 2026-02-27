@@ -7,7 +7,7 @@ After pressing the "New" button on the [Summary page](summary-page.md), you reac
 * **Application Name.** Each form definition has an _application name_ which identifies a group of forms that belong together. In practice, an application name might correspond to a project, or a department, or a company. For example, all forms built by Orbeon have the "orbeon" application name. _NOTE: Depending on your permissions, the application name might have been picked for you already, or you might have the choice of a restricted set of application names._
 * **Form Name.** Each form definition also has a _form name_, which identifies a unique form name within a particular application.
 
-![Form Settings for a New Form Definition](../.gitbook/assets/new.png)
+![Form Settings for a New Form Definition](form-settings/new.png)
 
 Both application name and form name must respect a certain format:
 
@@ -30,7 +30,7 @@ Form Builder's form editor is organized in 4 areas:
 * **Bottom:** status icons and buttons.
 * **Center:** WYSIWYG [form area](form-area.md) where you actually edit your form definition. This area might scroll vertically depending on your browser or monitor size or the size of the form you are editing.
 
-![General Layout of Form Builder](../.gitbook/assets/general-layout.png)
+![General Layout of Form Builder](images/general-layout.png)
 
 ## The top bar
 
@@ -40,7 +40,7 @@ Changing the language immediately updates the Form Builder user interface: you d
 
 _NOTE: This feature controls the language of the Form Builder user interface only. For localization of the form definition you are currently editing, see documentation below._
 
-![Form Builder's Top Bar](../.gitbook/assets/top.png)
+![Form Builder's Top Bar](images/top.png)
 
 ## The buttons bar
 

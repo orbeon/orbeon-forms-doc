@@ -6,7 +6,7 @@
 
 This component represents an attachment to a form which has to contain a video. The video is displayed by the component when attached.
 
-![Video attachment component](../../.gitbook/assets/xbl-video-attachment.png)
+![Video attachment component](images/xbl-video-attachment.png)
 
 ## Accepted mediatypes
 

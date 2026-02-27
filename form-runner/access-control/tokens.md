@@ -16,7 +16,7 @@ This feature allows you to specify that a user can access form data with readonl
 
 This feature is not enabled by default. To enable it for a given form, you must set form permissions that include at least one "Require token" permission ("Read" or "Update"), either from Form Builder or using global permission configuration properties.
 
-<figure><img src="../../.gitbook/assets/dialog-permissions-token.png" alt="" width="612"><figcaption><p>Form Builder Permissions</p></figcaption></figure>
+<figure><img src="../images/dialog-permissions-token.png" alt="" width="612"><figcaption><p>Form Builder Permissions</p></figcaption></figure>
 
 Here is an example of configuration property:
 
@@ -77,7 +77,7 @@ You generate a link containing a token in one of two ways, described below.
 
 When using a [template](../../form-builder/template-syntax.md#links) (for an Explanation control, label, email, or other), you can choose the "Generate token URL parameter" for "View page" or "Edit page" links.
 
-![Linking to a page with a token](../../.gitbook/assets/control-settings-edit-link-token.png)
+![Linking to a page with a token](../images/control-settings-edit-link-token.png)
 
 #### Using the Share dialog
 
@@ -90,7 +90,7 @@ When enabled with the `oxf.fr.navbar.share-button.enable` property, you can use 
     value="true"/>
 ```
 
-<figure><img src="../../.gitbook/assets/dialog-share.png" alt="" width="671"><figcaption><p>Share icon and dialog</p></figcaption></figure>
+<figure><img src="../images/dialog-share.png" alt="" width="671"><figcaption><p>Share icon and dialog</p></figcaption></figure>
 
 The dialog allows the user to decide whether to share a readonly link or a read-write link (if the user itself has the "Update" permission). The link can simply be copied with the "Copy link" icon button.
 

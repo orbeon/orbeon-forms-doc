@@ -10,13 +10,13 @@ A PDF template must include Acrobat form fields. You can create these with Acrob
 * read the filled-out form data
 * fill out the fields in the PDF template based on the data
 
-![Example of filled PDF template](../../.gitbook/assets/pdf-dmv14-shadow.png)
+![Example of filled PDF template](../images/pdf-dmv14-shadow.png)
 
 ## Attaching a PDF template
 
 You attach one or more PDF templates to a form definition in Form Builder using the "PDF Templates" button in the "Advanced" tab of the toolbox.
 
-<figure><img src="../../.gitbook/assets/pdf-templates-dialog.png" alt="" width="702"><figcaption><p>PDF Templates Dialog</p></figcaption></figure>
+<figure><img src="../../form-builder/images/pdf-templates-dialog.png" alt="" width="702"><figcaption><p>PDF Templates Dialog</p></figcaption></figure>
 
 \[SINCE Orbeon Forms 2018.1]
 
@@ -40,7 +40,7 @@ In order to create a template, you need Acrobat Professional or a similar tool t
 
 _NOTE: For languages like French, make sure that fields in the form have an Arial font, not Helvetica. Not using Arial can cause issue with accents._
 
-![Example of form fields in Acrobat Professional](../../.gitbook/assets/pdf-template.png)
+![Example of form fields in Acrobat Professional](../../form-builder/images/pdf-template.png)
 
 ### Naming fields
 
@@ -70,17 +70,17 @@ or, for a control in a nested repeated section or grid:
 
 etc.
 
-![Name of the PDF field in the Control Settings dialog](../../.gitbook/assets/control-settings.png)
+![Name of the PDF field in the Control Settings dialog](../../form-builder/images/control-settings.png)
 
 [\[SINCE Orbeon Forms 2024.1.2\]](../../release-notes/orbeon-forms-2024.1.2.md)
 
 Orbeon Forms allows you to set a custom PDF field name. If there is at least one PDF template attached to the form, you can pick a field name from the list.
 
-<figure><img src="../../.gitbook/assets/control-settings-pdf-field-name-from-list.png" alt="" width="481"><figcaption><p>Custom PDF field name from the dropdown</p></figcaption></figure>
+<figure><img src="../../form-builder/images/control-settings-pdf-field-name-from-list.png" alt="" width="481"><figcaption><p>Custom PDF field name from the dropdown</p></figcaption></figure>
 
 In any case, you can also enter you own custom field name.
 
-<figure><img src="../../.gitbook/assets/control-settings-pdf-field-name-from-field.png" alt="" width="481"><figcaption><p>Custom PDF field name</p></figcaption></figure>
+<figure><img src="../../form-builder/images/control-settings-pdf-field-name-from-field.png" alt="" width="481"><figcaption><p>Custom PDF field name</p></figcaption></figure>
 
 ## Controls
 

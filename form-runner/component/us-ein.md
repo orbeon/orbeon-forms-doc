@@ -8,7 +8,7 @@
 
 This component represents a US Employer Identification Number (EIN).
 
-<figure><img src="../../.gitbook/assets/xbl-us-ein-edit.webp" alt="" width="220"><figcaption><p>US Employer Identification Number (EIN)</p></figcaption></figure>
+<figure><img src="images/xbl-us-ein-edit.webp" alt="" width="220"><figcaption><p>US Employer Identification Number (EIN)</p></figcaption></figure>
 
 It allows the user to enter an Employer Identification Number in the format `12-3456789`, with or without the dash.
 

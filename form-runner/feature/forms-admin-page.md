@@ -10,7 +10,7 @@ The Forms Admin page is very similar to the [Published Forms](published-forms-pa
 
 This page is also accessible directly from the [Landing page](landing-page.md).
 
-![The Forms Admin page](../../.gitbook/assets/form-runner-admin.png)
+![The Forms Admin page](../../release-notes/images/form-runner-admin.png)
 
 ## Availability and compatibility
 
@@ -50,22 +50,22 @@ Administrators can select forms in two ways:
 * by using the checkboxes next to the form
 * by using the _Select_ menu to automatically select all forms matching a certain condition
 
-![Select Menu](../../.gitbook/assets/home-select-menu.png)
+![Select Menu](../images/home-select-menu.png)
 
 The operations listed in the Operation menu are then available depending on the current selection:
 
-![Operation Menu](../../.gitbook/assets/home-operation-menu.png)
+![Operation Menu](../images/home-operation-menu.png)
 
 ## Controlling form definitions availability
 
 * **Make available local forms:** make an unavailable form definition available again.
 * **Make unavailable local forms:** make a published form definition unavailable.
 
-![Unavailable](../../.gitbook/assets/home-unavailable.png)
+![Unavailable](../images/home-unavailable.png)
 
 Initially, when publishing a form definition with Form Builder, the form definition is made available, unless you choose the option "Make published form available" to "No".
 
-![](../../.gitbook/assets/publish-version-next.png)
+![](../../form-builder/images/publish-version-next.png)
 
 \[SINCE Orbeon Forms 2020.1]
 
@@ -134,13 +134,13 @@ This feature allows you to configure access to a remote server and to make avail
 
 To configure remote server access, use the `oxf.fr.home.remote-servers` property; see the [Remote servers configuration](../../configuration/properties/form-runner.md#remote-servers) documentation.
 
-![Multiple Remote Servers](../../.gitbook/assets/remote-server-credentials.png)
+![Multiple Remote Servers](../images/remote-server-credentials.png)
 
 ### Remote operations
 
 When the remote server is configured as above, the first time you go to the Forms Admin page you are prompted for credentials:
 
-![Credentials](../../.gitbook/assets/home-credentials.png)
+![Credentials](../images/home-credentials.png)
 
 Once the credentials are correct, the Forms Admin page retrieves the remote server's list of deployed forms and metadata, which appears in a new _Remote_ column group. You then have access to new operations:
 
@@ -150,15 +150,15 @@ Once the credentials are correct, the Forms Admin page retrieves the remote serv
 * **Pull from remote:** copy a form definition and its attachments from the remote to the local server.
 * **Upgrade remote form definitions:** upgrade the remote form definition (see [Upgrading form definitions](forms-admin-page.md#upgrading-form-definitions)).
 
-![Push to Remote](../../.gitbook/assets/home-push.png)
+![Push to Remote](../images/home-push.png)
 
 You are always prompted to confirm the operation to perform:
 
-![Confirmation](../../.gitbook/assets/home-confirmation.png)
+![Confirmation](../images/home-confirmation.png)
 
 In addition, if the latest modification time of the form definitions differ, a _Newer_ label appears:
 
-![Newer](../../.gitbook/assets/home-newer.png)
+![Newer](../images/home-newer.png)
 
 ## Re-encryption
 
@@ -221,19 +221,19 @@ Depending on how much data you have, the reindexing operation can take a while, 
 
 In admin view, the Forms Admin page shows a reindex button:
 
-![Reindex button](../../.gitbook/assets/home-reindex-button.png)
+![Reindex button](../images/home-reindex-button.png)
 
 After you click it, and confirm you want to go ahead, if this is indeed what you want to do (see above paragraph for more information about what happens during reindexing), the Forms Admin page shows the reindexing status:
 
-![Reindex status](../../.gitbook/assets/home-reindex-status.png)
+![Reindex status](../images/home-reindex-status.png)
 
 If, for some reason, you want to stop reindexing, you can do so by clicking on the _Stop reindexing_ button. When doing so, the index is left in an incoherent state, and you should restart indexing at a latter time. While reindexing stops, you'll see the following message:
 
-![Reindex stopping](../../.gitbook/assets/home-reindex-stopping.png)
+![Reindex stopping](../images/home-reindex-stopping.png)
 
 Finally, once reindexing is done, you'll see:
 
-![Reindex done](../../.gitbook/assets/home-reindex-done.png)
+![Reindex done](../images/home-reindex-done.png)
 
 ### Logging
 
@@ -293,7 +293,7 @@ For each form definition the current user has access to, the following links are
 * Link to the Summary page: shown if the current user can perform either one of the read, update, or delete operations on the form.
 * Link to the new page: shown if the current user can perform the create operation on the form.
 
-![Home page](../../.gitbook/assets/home.png)
+![Home page](../images/home.png)
 
 ## See also
 

@@ -60,17 +60,17 @@ For more, see [Versioning of section templates](section-templates.md#versioning-
 
 The "Reload Toolbox" button is located at the top of the "Advanced" tab.
 
-![](../.gitbook/assets/advanced-menu.png)
+![](images/advanced-menu.png)
 
 ### Orbeon Forms 2017.1 and earlier
 
 The "Reload Toolbox" icon is located at the top of the toolbox:
 
-![](../.gitbook/assets/toolbox-reload.png)
+![](images/toolbox-reload.png)
 
 ## Form structure
 
-![](../.gitbook/assets/form-structure.png)
+![](images/form-structure.png)
 
 ### New Section button
 
@@ -123,7 +123,7 @@ You can also drag a control directly from the toolbox to a grid cell in the form
 
 ### Text Controls
 
-![](../.gitbook/assets/text-controls.png)
+![](images/text-controls.png)
 
 | Name                    | Description                                    |
 | ----------------------- | ---------------------------------------------- |
@@ -134,11 +134,11 @@ You can also drag a control directly from the toolbox to a grid cell in the form
 
 The controls appear like this at design time:
 
-![](../.gitbook/assets/text-controls-design-time.png)
+![](images/text-controls-design-time.png)
 
 ### Utility Controls
 
-![](../.gitbook/assets/utility-controls.png)
+![](images/utility-controls.png)
 
 | Name                 | Description                                                                                                                                                                                         |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -148,7 +148,7 @@ The controls appear like this at design time:
 
 ### Typed Controls
 
-![](../.gitbook/assets/typed-controls.png)
+![](images/typed-controls.png)
 
 | Name                | Description                                                     |
 | ------------------- | --------------------------------------------------------------- |
@@ -160,11 +160,11 @@ The controls appear like this at design time:
 
 The controls appear like this at design time:
 
-![](../.gitbook/assets/typed-controls-design-time.png)
+![](images/typed-controls-design-time.png)
 
 ### Date and time Controls
 
-![](../.gitbook/assets/date-time-controls.png)
+![](images/date-time-controls.png)
 
 | Name              | Description                                  |
 | ----------------- | -------------------------------------------- |
@@ -176,11 +176,11 @@ The controls appear like this at design time:
 
 The controls appear like this at design time:
 
-![](../.gitbook/assets/date-time-controls-design-time.png)
+![](images/date-time-controls-design-time.png)
 
 ### Selection Controls
 
-![](../.gitbook/assets/selection-controls.png)
+![](images/selection-controls.png)
 
 | Name                           | Selection | Description                                                  |
 | ------------------------------ | --------- | ------------------------------------------------------------ |
@@ -197,13 +197,13 @@ You edit the choices of most selection controls with the [Choices editor](itemse
 
 The controls appear like this at design time:
 
-![](../.gitbook/assets/selection-controls-design-time.png)
+![](images/selection-controls-design-time.png)
 
 _NOTE: The "Scrollable List" control is deprecated since Orbeon Forms 2016.1 and removed from the toolbox._
 
 ### Attachment Controls
 
-![](../.gitbook/assets/attachment-controls.png)
+![](images/attachment-controls.png)
 
 | Name                          | Description                                                                                                                                                                                                                                                                        |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,7 +216,7 @@ _NOTE: The "Scrollable List" control is deprecated since Orbeon Forms 2016.1 and
 
 The controls appear like this at design time:
 
-![](../.gitbook/assets/attachment-controls-design-time.png)
+![](images/attachment-controls-design-time.png)
 
 Here is an example of attachment control with multiple selection enabled:
 
@@ -226,11 +226,11 @@ Here is an example of attachment control with multiple selection enabled:
 
 This is the Handwritten Signature control (which of course you usually leave blank at design time):
 
-![](../.gitbook/assets/signature-design-time.png)
+![](images/signature-design-time.png)
 
 ### Button Controls
 
-![](../.gitbook/assets/button-controls.png)
+![](images/button-controls.png)
 
 | Name            | Description                |
 | --------------- | -------------------------- |
@@ -243,7 +243,7 @@ _NOTE: Buttons do not appear at all in preview mode._
 
 The controls appear like this at design time:
 
-![](../.gitbook/assets/button-controls-design-time.png)
+![](images/button-controls-design-time.png)
 
 ### Choices
 

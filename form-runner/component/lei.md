@@ -8,7 +8,7 @@
 
 This component represents a [Legal Entity Identifier (LEI)](https://en.wikipedia.org/wiki/Legal_Entity_Identifier).
 
-<figure><img src="../../.gitbook/assets/xbl-lei-edit.webp" alt="" width="338"><figcaption><p>Legal Entity Identifier (LEI)</p></figcaption></figure>
+<figure><img src="images/xbl-lei-edit.webp" alt="" width="338"><figcaption><p>Legal Entity Identifier (LEI)</p></figcaption></figure>
 
 It allows the user to enter a Legal Entity Identifier (LEI) such as `F50EOCWSQFAUVO9Q8Z97`.
 

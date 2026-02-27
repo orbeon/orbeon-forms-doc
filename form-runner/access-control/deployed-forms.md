@@ -12,11 +12,11 @@ You can restrict which users can access which forms, and what operations they ca
 
 By default, no restriction is imposed on _who_ can do _what_ with forms you create in Form Builder. You enable permissions by going to the Form Builder toolbox, and under _Advanced_, clicking on _Permissions_.
 
-![Opening the Permissions dialog](../../.gitbook/assets/advanced-menu.png)
+![Opening the Permissions dialog](../../form-builder/images/advanced-menu.png)
 
 This shows the following dialog:
 
-![Permissions dialog with no permissions enabled](../../.gitbook/assets/permissions-enable.png)
+![Permissions dialog with no permissions enabled](../../form-builder/images/permissions-enable.png)
 
 After you click on the checkbox, you'll be able to set access restrictions on the _Create_, _Read_, _Update_, and _Delete_ operations.
 
@@ -32,7 +32,7 @@ In the example below:
 * Users with the role _clerk_ can read any form data. They can also list data on the Summary page.
 * Users with the role _admin_ can do any operation, including deleting form data and listing data on the Summary page.
 
-![Permissions dialog with explicit permissions enabled](../../.gitbook/assets/permissions-dialog.png)
+![Permissions dialog with explicit permissions enabled](../../form-builder/images/permissions-dialog.png)
 
 ### Role types
 

@@ -45,7 +45,7 @@ Number of rows shown in the Summary page.
 
 By default, the Summary page shows a Created and Modified columns:
 
-![Created and Last Modified](../../.gitbook/assets/summary-created-last-modified.png)
+![Created and Last Modified](../../form-runner/images/summary-created-last-modified.png)
 
 You can remove either one of those columns by setting the appropriate property value to `false`:
 

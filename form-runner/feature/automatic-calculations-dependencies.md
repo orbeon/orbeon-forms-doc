@@ -21,7 +21,7 @@ In addition, for _new form definitions_, the "Automatic Calculations Dependencie
 
 _NOTE: Existing form definitions which do not have the `xxf:analysis.calculate="true"` attribute set in the form definition source are not automatically upgraded to enable automatic calculations dependencies. You must enable dependencies explicitly in the "Form Settings" dialog._
 
-![Form Options](../../.gitbook/assets/formulas.png)
+![Form Options](../../form-builder/form-settings/formulas.png)
 
 _NOTE: Prior to Orbeon Forms 2022.1.1, this setting was under the "Form Settings" dialog's "Form Options" tab._
 
@@ -39,7 +39,7 @@ See [Renaming of controls and formulas](../../form-builder/formulas.md#renaming-
 
 Consider the following grid, where the Total Total appear on each line item row:
 
-![Grid with calculations](../../.gitbook/assets/calculations-dependencies-grid.png)
+![Grid with calculations](../images/calculations-dependencies-grid.png)
 
 Each Row Total is expressed with the following calculated value formula:
 
@@ -47,7 +47,7 @@ Each Row Total is expressed with the following calculated value formula:
 $units * $unit-price
 ```
 
-![Row totals](../../.gitbook/assets/calculations-dependencies-row-total.png)
+![Row totals](../images/calculations-dependencies-row-total.png)
 
 And the Total Units and Total Price are expressed with the following calculated value formula:
 
@@ -61,7 +61,7 @@ and:
 sum($row-total)
 ```
 
-![Total price](../../.gitbook/assets/calculations-dependencies-global-total.png)
+![Total price](../images/calculations-dependencies-global-total.png)
 
 Automatic calculations dependencies ensure that the totals update correctly as the user modifies the "Units" and "Unit Price" fields. This is the case whether the totals are positioned after or before the fields they depend on in the form.
 

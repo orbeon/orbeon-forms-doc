@@ -10,13 +10,13 @@ Today we released Orbeon Forms 2020.1! This release introduces new features and 
 
 This version of Orbeon Forms introduces a new _Multiple File Attachments_ control, which includes reordering attached files, a localized "Attached Files" buttons, and more. The existing _File Attachment_ control also got updated and is now called _Single File Attachment_.
 
-![The new Multiple File Attachments control](../.gitbook/assets/xbl-attachment-multiple.png)
+![The new Multiple File Attachments control](../form-runner/component/images/xbl-attachment-multiple.png)
 
 See the [blog post](https://blog.orbeon.com/2020/05/the-new-multiple-file-attachments.html) for details.
 
 In addition, you can now control whether downloading an attached file is allowed or not.
 
-![Allow download option](../.gitbook/assets/xbl-attachment-control-settings.png)
+![Allow download option](../form-runner/component/images/xbl-attachment-control-settings.png)
 
 See [the documentation](../form-runner/component/attachment.md) for details.
 
@@ -63,7 +63,7 @@ This is in addition to the [existing feature](../form-builder/formulas.md#renami
 
 The form description now supports rich text.
 
-![Form description with rich text](../.gitbook/assets/general-html.png)
+![Form description with rich text](../form-builder/form-settings/general-html.png)
 
 See the [documentation](../form-builder/form-settings.md) for details.
 

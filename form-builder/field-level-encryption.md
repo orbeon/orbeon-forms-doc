@@ -13,7 +13,7 @@ This feature allows form authors to mark certain fields so any data entered by u
 
 In Form Builder, to mark a field for encryption, open the "Control Settings" dialog for that field, and click on the "Encrypt data at rest" checkbox, as done in the screenshot below.
 
-![Checkbox to mark field for encryption](../.gitbook/assets/field-level-encryption-ssn.png)
+![Checkbox to mark field for encryption](images/field-level-encryption-ssn.png)
 
 ## Configuration
 
@@ -64,7 +64,7 @@ Once you have set `oxf.fr.field-encryption.password`, we recommend changing `oxf
 
 When storing form data, encryption is done before it is sent to the implementation of persistence API. When retrieving form data, decryption is done after it is received from the implementation of the persistence API. This means that implementations of the persistence API don't need to worry about encrypting or decrypting data when storing or reading form data. Also, it means that values of fields marked for encryption will be encrypted on the wire on the way to and from your database, further increasing the security of your solution.
 
-<figure><img src="../.gitbook/assets/field-level-encryption-when.png" alt="" width="520"><figcaption><p>Data encryption is done before it reaches the implementation of the persistence API</p></figcaption></figure>
+<figure><img src="images/field-level-encryption-when.png" alt="" width="520"><figcaption><p>Data encryption is done before it reaches the implementation of the persistence API</p></figcaption></figure>
 
 ## Making changes to what needs to be encrypted
 

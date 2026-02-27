@@ -15,11 +15,11 @@ To do this, we start by creating a simple form with a nested repetition:
 
 Here is how the form looks like in Form Builder:
 
-![Nobel Prize form](../.gitbook/assets/action-syntax-nobel-form.png)
+![Nobel Prize form](images/action-syntax-nobel-form.png)
 
 We then also create an HTTP Service endpoint:
 
-![Nobel Prize service](../.gitbook/assets/action-syntax-nobel-service.png)
+![Nobel Prize service](images/action-syntax-nobel-service.png)
 
 It points to the following API endpoint:
 
@@ -137,7 +137,7 @@ There is a nested iteration due to the nested repeats. here is what the complete
 
 When you test or run the deployed form, you see the Nobel Prize winners for 2023:
 
-![Nobel Prize winners](../.gitbook/assets/action-syntax-nobel-result.png)
+![Nobel Prize winners](images/action-syntax-nobel-result.png)
 
 ## See also
 

@@ -20,11 +20,11 @@ The feature is available on the Form Runner [Forms Admin page](forms-admin-page.
 
 Exporting can be done in two different modes. You can either export the forms that were explicitly selected:
 
-![Export selected forms](../../.gitbook/assets/export-selected-forms.png)
+![Export selected forms](../images/export-selected-forms.png)
 
 Or you can export forms by specifying a list of application, form, and version filters:
 
-![Export following forms](../../.gitbook/assets/export-following-forms.png)
+![Export following forms](../images/export-following-forms.png)
 
 The application filter can either be set to "All applications" or to a specific application. When a specific application is selected, the form filter can either be set to "All forms" or to a specific form. The version filter can always be set to "All versions" or "Latest version" and when a specific form is selected, it can also be set to a specific version.
 

@@ -11,15 +11,15 @@ There are two ways to access the "Test PDF" function:
 1. directly from the Form Builder's main window's "Test" menu
 2. from the "Test Form" window
 
-![The "Test" menu](../.gitbook/assets/test-pdf-button.png)
+![The "Test" menu](images/test-pdf-button.png)
 
 When accessed directly, "Test PDF" shows the following dialog:
 
-![The "Test PDF Production" dialog](../.gitbook/assets/test-pdf-no-data.png)
+![The "Test PDF Production" dialog](images/test-pdf-no-data.png)
 
 When accessed from the "Test Form" window, "Test PDF" shows the following dialog:
 
-![The "Test PDF Production" dialog](../.gitbook/assets/test-pdf-use-data.png)
+![The "Test PDF Production" dialog](images/test-pdf-use-data.png)
 
 You have access to the following options:
 
@@ -49,7 +49,7 @@ Selecting "Continue" opens the resulting PDF, which will show in your browser wi
 
 The "Test PDF" dialog lets you choose between the [automatic PDF](pdf-automatic.md) or one of the available [PDF templates](pdf-templates.md) when testing.
 
-![Selecting a PDF template for PDF testing](../.gitbook/assets/test-pdf-use-pdf-template.png)
+![Selecting a PDF template for PDF testing](images/test-pdf-use-pdf-template.png)
 
 ## Showing hints and alerts
 
@@ -57,11 +57,11 @@ The "Test PDF" dialog lets you choose between the [automatic PDF](pdf-automatic.
 
 Two options allow you to show controls hints and alerts in the resulting PDF:
 
-![Options to show hints, alerts, and required](../.gitbook/assets/test-pdf-hints-alerts-required.png)
+![Options to show hints, alerts, and required](images/test-pdf-hints-alerts-required.png)
 
 This is an example of the resulting PDF with hints and alerts:
 
-![PDF output with alerts and hints](../.gitbook/assets/test-pdf-hints-alerts-result.png)
+![PDF output with alerts and hints](images/test-pdf-hints-alerts-result.png)
 
 See also [The `open-rendered-format()` action](../form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format).
 

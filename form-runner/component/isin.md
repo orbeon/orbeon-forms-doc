@@ -8,7 +8,7 @@
 
 This component represents an [International Securities Identification Number (ISIN)](https://en.wikipedia.org/wiki/International_Securities_Identification_Number).
 
-<figure><img src="../../.gitbook/assets/xbl-isin-edit.webp" alt="" width="338"><figcaption><p>International Securities Identification Number (ISIN)</p></figcaption></figure>
+<figure><img src="images/xbl-isin-edit.webp" alt="" width="338"><figcaption><p>International Securities Identification Number (ISIN)</p></figcaption></figure>
 
 It allows the user to enter an International Securities Identification Number (ISIN) such as `US0378331005`.
 

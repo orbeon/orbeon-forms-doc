@@ -10,7 +10,7 @@
 
 By default, the text area control is rendered as a regular single-line input field:
 
-![](../../.gitbook/assets/xforms-input-simple.png)
+![](../images/xforms-input-simple.png)
 
 _Examples of input fields_
 
@@ -122,13 +122,13 @@ The way the XForms input control is rendered on the page depends on the type of 
 | `xs:time`     |                     | input field with time parsing and formatting                                           |
 | `xs:dateTime` |                     | combined date and time fields                                                          |
 
-![Boolean input](../../.gitbook/assets/xforms-input-boolean.png)
+![Boolean input](../images/xforms-input-boolean.png)
 
 _NOTE: The Boolean input is deprecated. Use the `fr:checkbox-input` component instead._
 
-![Date picker](../../.gitbook/assets/xforms-datepicker-simple.png)
+![Date picker](../images/xforms-datepicker-simple.png)
 
-![Date and time input variations](../../.gitbook/assets/xforms-input-dates-times.png)
+![Date and time input variations](../images/xforms-input-dates-times.png)
 
 ## date, time, and dateTime types
 
@@ -175,7 +175,7 @@ If you type in a date field a year with only two digits (say 5/20/10), the contr
 
 By default, the months and days of the week are in English in the date picker (as shown in the screenshot above). You can change this by setting the value of the lang attribute on the element of the page. The value of the attribute two-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For instance with months and weekdays will be shown in French, for instance:
 
-![Localized date picker](../../.gitbook/assets/xforms-datepicker-french.png)
+![Localized date picker](../images/xforms-datepicker-french.png)
 
 For more on which languages are supported localized out-of-the-box, see [supported languages](../../form-runner/feature/localization.md). Note that the changing the language also changes which day of the week is shown first in the calendar: in English, Sunday is shown first; with French and Spanish, Monday is shown first.
 
@@ -191,9 +191,9 @@ If you are using the date picker in an area of your page which is scrollable (e.
 
 On iOS (iPhone, iPad, iPod touch), inputs bound to nodes of type `xs:date`, `xs:time`, or `xs:dateTime` are rendered using the iOS 5 browser native date or time widgets, which iOS users are accustomed to, and which provides a better usability, especially on the smaller screen iPhone and iPod touch.
 
-![iOS date picker](../../.gitbook/assets/xforms-ios-date.png)
+![iOS date picker](../images/xforms-ios-date.png)
 
-![iOS time picker](../../.gitbook/assets/xforms-ios-time.png)
+![iOS time picker](../images/xforms-ios-time.png)
 
 ### Limitations
 

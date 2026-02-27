@@ -10,7 +10,7 @@ The XForms Inspector allows you to:
 2. Type in XPath expression, and see what the result is when they are evaluated.
 3. See what is logged by your form to the XForms inspector console (_experimental_).
 
-![](../../.gitbook/assets/xbl-xforms-inspector.png)
+![](images/xbl-xforms-inspector.png)
 
 ## Configuration
 

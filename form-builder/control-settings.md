@@ -6,7 +6,7 @@ The Control Settings dialog allows controlling all the aspects the a control bes
 
 ### Basic Settings
 
-![Basic Settings tab](../.gitbook/assets/control-settings.png)
+![Basic Settings tab](images/control-settings.png)
 
 #### Basic options
 
@@ -48,7 +48,7 @@ The following options are available:
 
 It is possible to restrict the "Show on Summary page" and "Allow bulk edit" options to one or more specific roles (i.e. group of users). When multiple roles are specified, the logic that applies can be chosen as well. If "All" is selected, then all specified roles must be present. If "Any" is selected, just one of the specified roles must be present.
 
-<figure><img src="../.gitbook/assets/control-settings-restrict-to-role.png" alt="Role restriction" width="492"><figcaption><p>Role restriction</p></figcaption></figure>
+<figure><img src="images/control-settings-restrict-to-role.png" alt="Role restriction" width="492"><figcaption><p>Role restriction</p></figcaption></figure>
 
 **Bulk action**
 
@@ -56,7 +56,7 @@ It is possible to restrict the "Show on Summary page" and "Allow bulk edit" opti
 
 By default, bulk edition of form data on the Summary page will simply save the updated form data. You can also specify a custom process to run by selecting "Run process" instead of "Save data".
 
-<figure><img src="../.gitbook/assets/control-settings-bulk-process.png" alt="Bulk process" width="485"><figcaption><p>Bulk process</p></figcaption></figure>
+<figure><img src="images/control-settings-bulk-process.png" alt="Bulk process" width="485"><figcaption><p>Bulk process</p></figcaption></figure>
 
 The selected process is responsible for saving the data.
 
@@ -77,7 +77,7 @@ The processes must not only be listed in the `oxf.fr.summary.bulk-processes` pro
 
 [\[SINCE Orbeon Forms 2025.1\]](../release-notes/orbeon-forms-2025.1.md) By default, data entries on the Summary page are sorted by last modification date/time, from most recent to least recent. You can change that behavior by checking the "By default, sort by this column" checkbox. When this setting is enabled, the Summary page will sort the data entries by the selected control when first loaded. It will still be possible to change the sort column and direction by clicking on the column headers.
 
-<figure><img src="../.gitbook/assets/control-settings-sort-by-this-column.png" alt="Default sort column" width="264"><figcaption><p>Default sort column</p></figcaption></figure>
+<figure><img src="images/control-settings-sort-by-this-column.png" alt="Default sort column" width="264"><figcaption><p>Default sort column</p></figcaption></figure>
 
 When enabled on a control, this setting will automatically be disabled on all other controls.
 
@@ -191,7 +191,7 @@ See also [How the new Form Builder Appearance Selector Works](https://blog.orbeo
 
 Some controls have custom settings. For example:
 
-![Custom Control Settings](../.gitbook/assets/control-settings-custom-properties.png)
+![Custom Control Settings](images/control-settings-custom-properties.png)
 
 The following controls have custom settings:
 
@@ -221,7 +221,7 @@ You can achieve this with the "Automatic PDF" options in the "Control Settings" 
 * **Show the selected value only**: the label for the selected value shows
 * **Show all values as radio buttons**: all possible values show as radio buttons and the selected value, if any, shows selected
 
-<figure><img src="../.gitbook/assets/control-settings-pdf-options.png" alt="Automatic PDF options" width="230"><figcaption><p>Automatic PDF options</p></figcaption></figure>
+<figure><img src="images/control-settings-pdf-options.png" alt="Automatic PDF options" width="230"><figcaption><p>Automatic PDF options</p></figcaption></figure>
 
 The supported properties are:
 
@@ -246,13 +246,13 @@ The global default is "Show the selected value only".
 
 ### Validations and alerts
 
-![Validations and alerts tab](../.gitbook/assets/control-settings-validations.png)
+![Validations and alerts tab](images/control-settings-validations.png)
 
 See [Form Builder Validation](validation.md) for details.
 
 ### Formulas
 
-![Formulas tab](../.gitbook/assets/control-settings-formulas.png)
+![Formulas tab](images/control-settings-formulas.png)
 
 See [Formulas](formulas.md) for details.
 
@@ -266,7 +266,7 @@ The "Yes" and "No" options have their own radio button. Select "Formula" to ente
 
 For the Explanatory Text control only, you can modify the text in this location, including making the text dynamic using templates as is the case for the Label, Hint and Help Message.
 
-![Explanatory Text tab](../.gitbook/assets/control-settings-explanatory-text.png)
+![Explanatory Text tab](images/control-settings-explanatory-text.png)
 
 ### Label and Hint
 
@@ -274,7 +274,7 @@ For the Explanatory Text control only, you can modify the text in this location,
 
 In addition to setting a control's label and hint in place in the form area, you can also set and update them in this tab. You can switch between plain text and HTML text as well. The "Previous" and "Next" buttons allow quick navigation between controls.
 
-![Label tab](../.gitbook/assets/control-settings-label-hint.png)
+![Label tab](images/control-settings-label-hint.png)
 
 #### Automatic hints
 
@@ -293,7 +293,7 @@ Automatic hints are disabled by default, and you can enable them for a specific 
 
 ### Help Message
 
-![Help tab](../.gitbook/assets/control-settings-help.png)
+![Help tab](images/control-settings-help.png)
 
 This allows specifying some help text, which can be plain text or rich text when the "Use HTML" checkbox is selected.
 
@@ -317,7 +317,7 @@ For more, see [Template syntax](template-syntax.md).
 
 When multiple languages are available for the form, a language selector allows selecting the language for which localizable texts are being edited (e.g. Validations and Alerts, Label, Hint, and Help Message) directly from the Control Settings dialog.
 
-![Language selector](../.gitbook/assets/control-settings-language.selector.png)
+![Language selector](images/control-settings-language.selector.png)
 
 ## Keyboard shortcuts
 

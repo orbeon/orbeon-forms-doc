@@ -67,7 +67,7 @@ You start the import from the Form Runner Import page, accessible from the [Summ
 /fr/import/$app/$form
 ```
 
-![](../../.gitbook/assets/excel-import-summary.png)
+![](../images/excel-import-summary.png)
 
 You enable the "Import" button on the [Summary page](summary-page.md) by adding the `import` token to the `oxf.fr.summary.buttons.*.*` property. Here for the ACME Contact form:
 
@@ -85,25 +85,25 @@ If form definition versioning is supported, and if the given form definition has
 
 Selecting a version shows the versioning comment, if any, associated with the version, as well as the number of data records available in the database for that version.
 
-![](../../.gitbook/assets/excel-import-version.png)
+![](../images/excel-import-version.png)
 
 ### Upload the file
 
 You navigate to the Upload section and select the Excel 2007 file to upload and import.
 
-![](../../.gitbook/assets/excel-import-select.png)
+![](../images/excel-import-select.png)
 
 ### Validate the data
 
 You navigate to the Validation section. From there, data validation starts automatically, giving you an indication of the progress.
 
-![](../../.gitbook/assets/excel-import-validating.png)
+![](../images/excel-import-validating.png)
 
-![](../../.gitbook/assets/excel-import-validated.png)
+![](../images/excel-import-validated.png)
 
 With the `excel-named-ranges` and `xml-form-structure-and-data` formats, information about valid and invalid fields shows.
 
-![](../../.gitbook/assets/excel-import-named-ranges-validation-errors.png)
+![](../images/excel-import-named-ranges-validation-errors.png)
 
 ### Import the data
 
@@ -111,13 +111,13 @@ _NOTE: This step only applies to the `excel-headings` format._
 
 Once validation is terminated, you navigate to the Import section. From there, you can start the data import. When using the Headings format, you have the option to add to existing data for the given form, or remove all existing data first.
 
-![](../../.gitbook/assets/excel-import-import.png)
+![](../images/excel-import-import.png)
 
 Import takes place and gives you an indication of the progress.
 
-![](../../.gitbook/assets/excel-import-importing.png)
+![](../images/excel-import-importing.png)
 
-![](../../.gitbook/assets/excel-import-imported.png)
+![](../images/excel-import-imported.png)
 
 _NOTE: Only the Excel 2007 `.xlsx` format (Office Open XML) is supported. The older, `.xls` format is not supported._
 
@@ -127,7 +127,7 @@ _NOTE: This step only applies to the `excel-named-ranges` and `xml-form-structur
 
 Before the data is saved to the database, you can review errors if any and decide to correct them or to perform a new import.
 
-![](../../.gitbook/assets/excel-import-named-ranges-data-review.png)
+![](../images/excel-import-named-ranges-data-review.png)
 
 ## Form controls mapping
 
@@ -147,7 +147,7 @@ In your form, you create controls with names that match the names in the first r
 
 Here is an example spreadsheet for the sample Orbeon Contact form:
 
-![](../../.gitbook/assets/excel-import-sheet.png)
+![](../images/excel-import-sheet.png)
 
 _NOTE: Only characters allowed in XML names are allowed as control names in Form Builder. In case your Excel header row requires names with non-XML characters (Form Builder will tell you the name is not allowed), simply replace them by "_" in Form Builder.\_
 
@@ -196,7 +196,7 @@ By default, it is set to `false` and the user is not provided with an option to 
 
 When set to `true`, the user is provided with an option to skip invalid data at the time of import:
 
-![](../../.gitbook/assets/excel-import-validate-allow-invalid.png)
+![](../images/excel-import-validate-allow-invalid.png)
 
 ### Restricting to the latest version
 

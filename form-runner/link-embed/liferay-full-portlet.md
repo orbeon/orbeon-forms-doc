@@ -18,7 +18,7 @@ See [Supported Liferay versions](./#supported-liferay-versions).
 
 The Orbeon Forms WAR can be directly deployed into the Liferay portal. By default, the Form Runner demo forms and XForms examples are immediately available within the portlet:
 
-![Orbeon Forms welcome page in Liferay](../../.gitbook/assets/liferay-full-home.png)
+![Orbeon Forms welcome page in Liferay](images/liferay-full-home.png)
 
 The following steps assume that:
 
@@ -59,7 +59,7 @@ Installation steps:
     The host name (`localhost`), port (`8080`), and context path (`orbeon`) must be updated to match your local configuration.
 4. **Add the Orbeon Forms portlet:** Log into the portal, go to the Add menu and create a new page, for example _Orbeon Page_. Then go to the Applications tab and click or drag "Orbeon Forms Portlet" to the page. The Orbeon Forms home page will show.
 
-![](../../.gitbook/assets/liferay-applications.png)
+![](images/liferay-applications.png)
 
 NOTE:
 

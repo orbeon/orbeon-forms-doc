@@ -10,7 +10,7 @@ Owner-based and group-based permissions are useful when you want users to only s
 
 To use this feature for a form, in Form Builder, when editing a form, open the _Permissions_ dialog, and check boxes on the _Owner_ and _Group member_ lines as appropriate for your situation.
 
-![The Permissions dialog](../../.gitbook/assets/permissions-dialog.png)
+![The Permissions dialog](../../form-builder/images/permissions-dialog.png)
 
 ## Configuration
 

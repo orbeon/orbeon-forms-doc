@@ -57,7 +57,7 @@ The possible tokens are:
 * **Disabled:** `disabled`
 * **Raise an error:** `error`
 
-![Form Options](../../.gitbook/assets/form-options.png)
+![Form Options](../../form-builder/form-settings/form-options.png)
 
 ## Moving controls
 
@@ -70,7 +70,7 @@ With this enhancement, the updated form definition can now move (without renamin
 
 Simply moving a form control this way allows you to reorganize your form while keeping access to existing data.
 
-![Moving a control across section boundaries](../../.gitbook/assets/simple-data-migration-move.png)
+![Moving a control across section boundaries](../images/simple-data-migration-move.png)
 
 When you load existing data with the updated form definition, the following happens:
 

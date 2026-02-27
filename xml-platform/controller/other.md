@@ -37,7 +37,7 @@ The `<files>` element supports the [`path` and `matcher`](other.md#matchers) att
 
 ## The epilogue element
 
-![](../../.gitbook/assets/reference-controller-epilogue.png)
+![](../../images/legacy/reference-controller-epilogue.png)
 
 You often want a common look and feel across pages. Instead of duplicating the code implementing this look and feel in every page view, you can define it in a central location called the _page flow epilogue_. The `<epilogue>` element specifies the [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) which implements the page flow epilogue.
 

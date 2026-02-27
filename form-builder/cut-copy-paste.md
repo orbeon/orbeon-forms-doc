@@ -6,7 +6,7 @@
 
 The top of the toolbox has the usual cut, copy, and paste icons:
 
-![Cut, copy and paste icons](../.gitbook/assets/xcv.png)
+![Cut, copy and paste icons](images/xcv.png)
 
 They allow performing the usual cut/copy/paste operations on form controls.
 
@@ -64,7 +64,7 @@ _NOTE: It is for now not possible to copy and paste items between different brow
 
 When hovering over a grid or section, "Cut" and "Copy" icons are available:
 
-!["Cut" and "Copy" icons for grids and sections](../.gitbook/assets/cut-copy-grids-sections.png)
+!["Cut" and "Copy" icons for grids and sections](images/cut-copy-grids-sections.png)
 
 _NOTE: The "Cut" icon is not available if the section or grid is the last one in its container._
 
@@ -80,7 +80,7 @@ You paste a cut or copied grid or section using the toolbox's "Paste" icon (see 
 
 If pasting the grid or section can cause name conflicts, a dialog shows:
 
-![Control Names dialog](<../.gitbook/assets/section-template-merge-dialog (1).png>)
+![Control Names dialog](<images/section-template-merge-dialog.png>)
 
 The dialog shows a list of all control names within the grid or section and how they will be changed after pasting. Since control names are unique within a form definition, two controls cannot have the same name. Names that are available show in green. Names that conflict show in yellow and an automatic name is generated.
 
@@ -89,7 +89,7 @@ You can optionally set a prefix and/or a suffix for all names. This can help pre
 * first, with all control names prefixed by `shipping-`
 * second, with all control names prefixed by `billing-`
 
-![Control Names dialog with prefix](<../.gitbook/assets/section-template-merge-dialog-prefix (1).png>)
+![Control Names dialog with prefix](<images/section-template-merge-dialog-prefix.png>)
 
 ## Undoing and redoing cut and paste operations
 

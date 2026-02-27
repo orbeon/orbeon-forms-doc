@@ -12,11 +12,11 @@ The Form Runner [Landing page](landing-page.md) is also responsive.
 
 If you have a form with a section containing a grid with two columns, on a desktop or tablet your form might show as:
 
-![Fields as shown on a desktop](../../.gitbook/assets/responsive-desktop.png)
+![Fields as shown on a desktop](../images/responsive-desktop.png)
 
 When the same form is loaded from a mobile phone, fields will automatically be shown in one column to better fit that screen:
 
-<div align="center"><img src="../../.gitbook/assets/responsive-mobile.png" alt="Fields as shown on a mobile phone" width="40%"></div>
+<div align="center"><img src="../images/responsive-mobile.png" alt="Fields as shown on a mobile phone" width="40%"></div>
 
 ## Limitations
 

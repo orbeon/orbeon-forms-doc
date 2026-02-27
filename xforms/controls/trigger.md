@@ -10,7 +10,7 @@ In XForms, buttons are called "triggers" and use the `<xf:trigger>` element. A s
 
 This is the default appearance of a button.
 
-![](../../.gitbook/assets/xforms-button-full.png)
+![](../images/xforms-button-full.png)
 
 ### Usage
 
@@ -46,7 +46,7 @@ or:
 
 The `minimal` appearance creates a button which appears like a link.
 
-![](../../.gitbook/assets/xforms-button-link.png)
+![](../images/xforms-button-link.png)
 
 ### Usage
 
@@ -70,7 +70,7 @@ When the trigger has the `full` appearance, the following additional appearances
 * `xxf:small` (SINCE Orbeon Forms 2016.3)
 * `xxf:large` (SINCE Orbeon Forms 2016.3)
 
-![](../../.gitbook/assets/xforms-buttons-appearances.png)
+![](../images/xforms-buttons-appearances.png)
 
 These appearances are mutually exclusive. They match corresponding [Twitter Bootstrap button classes](http://getbootstrap.com/2.3.2/base-css.html#buttons).
 
@@ -90,7 +90,7 @@ Example:
 
 Usually, activating a trigger or submit button on the client doesn't prevent further actions in the user interface. Sometimes however it is useful to block such actions until further processing is complete, for example calling a submission that saves a document.
 
-![](../../.gitbook/assets/xforms-spinner.png)
+![](../images/xforms-spinner.png)
 
 You can obtain this behavior by using the `xxf:modal="true"` attribute on `<xf:trigger>` and `<xf:submit>`:
 

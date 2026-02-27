@@ -38,7 +38,7 @@ This allows `calculate` expressions to refer to these variables:
 
 The result shows the expected sums:
 
-![XForms Sums](../.gitbook/assets/xforms-sums.png)
+![XForms Sums](images/xforms-sums.png)
 
 More specifically, given the following:
 

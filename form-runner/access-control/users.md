@@ -93,7 +93,7 @@ Limitation: Entra ID roles are included in the OIDC tokens as IDs. Future versio
 
 ### Overview
 
-![](../../.gitbook/assets/users-headers.png)
+![](../images/users-headers.png)
 
 With the header-driven method, you are responsible for, in the block labeled as "reverse proxy" in the above diagram, to:
 

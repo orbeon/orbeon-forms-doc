@@ -8,7 +8,7 @@
 
 The `fr:video` component shows a video. Like [fr:image](image.md), `fr:video` doesn't have an associated upload control and cannot be changed by the end-user of a form.
 
-![Video component](../../.gitbook/assets/xbl-video.png)
+![Video component](images/xbl-video.png)
 
 ## Basic usage
 

@@ -33,7 +33,7 @@ Form Runner can be deployed [directly](liferay-full-portlet.md) into Liferay. Ho
 
 This guide describes how to install, administer and use the Form Runner proxy portlet.
 
-![Controls form through the Liferay proxy portlet](../../.gitbook/assets/liferay-proxy-controls-liferay7.png)
+![Controls form through the Liferay proxy portlet](images/liferay-proxy-controls-liferay7.png)
 
 ## Security considerations
 
@@ -100,7 +100,7 @@ For Orbeon Forms 4.0 and newer, no particular configuration is needed.
 1. Deploy `orbeon-proxy-portlet.war` or `proxy-portlet.war` (formerly `orbeon-PE-proxy-portlet.war`) into Liferay
 2.  Add an instance of Orbeon Forms → Form Runner to a page:
 
-    ![](../../.gitbook/assets/liferay-applications.png)
+    ![](images/liferay-applications.png)
 3.  The portlet will load with its default configuration. If Orbeon Forms is deployed at the default address, a form shows.
 
     If Orbeon Forms is _not_ deployed at the default address, the proxy portlet will initially show an error. You can ignore this error and proceed to the proxy portlet configuration below.
@@ -109,10 +109,10 @@ For Orbeon Forms 4.0 and newer, no particular configuration is needed.
 
 1.  Open the portlet preferences page
 
-    ![](../../.gitbook/assets/liferay-proxy-open-preferences.png)
+    ![](images/liferay-proxy-open-preferences.png)
 2.  Configure the preferences
 
-    ![](../../.gitbook/assets/liferay-proxy-preferences.png)
+    ![](images/liferay-proxy-preferences.png)
 
     The preferences are as follows:
 

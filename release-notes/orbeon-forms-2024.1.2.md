@@ -13,7 +13,7 @@ Today we released Orbeon Forms 2024.1.2! This maintenance release contains more 
 
 Orbeon Forms is built on top of a component system which allows adding new form controls with a little bit of programming. In fact, this is how most of the form controls which whip with Orbeon Forms are made. In this release, we are improving support for components which provide their own validation, and introducing new components.
 
-<figure><img src="../.gitbook/assets/xbl-ssn-ein-isin-lei.webp" alt="" width="456"><figcaption><p>New components with builtin validation</p></figcaption></figure>
+<figure><img src="../form-runner/component/images/xbl-ssn-ein-isin-lei.webp" alt="" width="456"><figcaption><p>New components with builtin validation</p></figcaption></figure>
 
 * [US Employer Identification Number (EIN)](../form-runner/component/us-ein.md)
 * [US Social Security Number (SSN)](../form-runner/component/us-ssn.md)
@@ -29,7 +29,7 @@ See also:
 
 Orbeon Forms supports PDF templates. This feature requires mapping form fields to PDF fields. To achieve this, until now, you had to name the fields in the PDF to match the Form Runner fields.
 
-<figure><img src="../.gitbook/assets/control-settings-pdf-field-name-from-field.png" alt="" width="481"><figcaption><p>Custom PDF field name</p></figcaption></figure>
+<figure><img src="../form-builder/images/control-settings-pdf-field-name-from-field.png" alt="" width="481"><figcaption><p>Custom PDF field name</p></figcaption></figure>
 
 The "Control Settings" dialog now lets you set a custom PDF field name for each form field. This makes it easier to manage the mapping between form fields and PDF fields.
 

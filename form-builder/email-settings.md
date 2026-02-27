@@ -14,13 +14,13 @@ The dialog allows you to configure the content of emails sent by Orbeon Forms. Y
 
 \[SINCE Orbeon Forms 2022.1] You can have as many email templates per form as you'd like. This enables you to create different templates, for various languages, or have a template to inform users their data has been received and another template to email the person who needs to process the data. Additionally, if your form is used to implement a workflow, you can have different templates: for example, to notify a user that their request has been accepted or rejected. This opens up numerous possibilities for implementing workflows with Orbeon Forms.
 
-![Email Settings dialog](../.gitbook/assets/email-settings.png)
+![Email Settings dialog](images/email-settings.png)
 
 ## Usage
 
 You can open the "Email Settings" by clicking on the "Email Settings" button, under the "Advanced" tab, in the toolbox.
 
-![](../.gitbook/assets/advanced-menu.png)
+![](images/advanced-menu.png)
 
 * Template name – Each email template must have a _name_. This name is not exposed to end users; it is only for your own use, to understand what each template is for, and to be able to refer to a specific template in the [`email(template = "my-template")` action](../form-runner/advanced/buttons-and-processes/actions-form-runner-email.md).\
   Localization – If your form is available in multiple languages, a "Language" dropdown shows next to the template name, allowing you to select which language this template is for. When an email is sent, the template that corresponds to the user's language is automatically used.

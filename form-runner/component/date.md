@@ -90,7 +90,7 @@ When doing so, the date format is determined by the browser based on the user's 
     value="always"/>
 ```
 
-<figure><img src="../../.gitbook/assets/native-date-picker-chrome.png" alt="" width="270"><figcaption><p>Native date picker on Chrome desktop</p></figcaption></figure>
+<figure><img src="../images/native-date-picker-chrome.png" alt="" width="270"><figcaption><p>Native date picker on Chrome desktop</p></figcaption></figure>
 
 See also the [native time picker](time.md#native-time-picker).
 

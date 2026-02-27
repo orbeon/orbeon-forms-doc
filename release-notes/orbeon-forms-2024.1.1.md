@@ -17,11 +17,11 @@ Form controls and sections typically have a label, but also an internal name whi
 
 If you haven't entered a name yet, the Form Builder will now suggest a name based on the label:
 
-![Before the suggestion](../.gitbook/assets/control-settings-name-suggestion.png)
+![Before the suggestion](../form-builder/images/control-settings-name-suggestion.png)
 
 Simply click on the suggestion to accept it:
 
-![After the suggestion](../.gitbook/assets/control-settings-name-suggestion-done.png)
+![After the suggestion](../form-builder/images/control-settings-name-suggestion-done.png)
 
 This also works in the "Section Settings" dialog for section names.
 
@@ -29,13 +29,13 @@ This also works in the "Section Settings" dialog for section names.
 
 The "Edit Choices" dialog allows you to filter choices based on a condition. This can, for example, exclude choices based on a selection made somewhere else in the form.
 
-<figure><img src="../.gitbook/assets/itemset-editor-filter.png" alt="" width="610"><figcaption><p>Filtering Choices</p></figcaption></figure>
+<figure><img src="../form-builder/images/itemset-editor-filter.png" alt="" width="610"><figcaption><p>Filtering Choices</p></figcaption></figure>
 
 ### Show a form's workflow stage in the Detail page
 
 You can now opt to show the workflow stage in the navigation bar of the form's Detail page.
 
-![Workflow stage in the navigation bar](../.gitbook/assets/workflow-stage-navbar.png)
+![Workflow stage in the navigation bar](../form-runner/images/workflow-stage-navbar.png)
 
 For more, see [Workflow stage](../form-runner/feature/workflow-stage.md#showing-the-workflow-stage-in-the-detail-page).
 
@@ -49,11 +49,11 @@ For more, see [S3 storage](../form-runner/feature/s3.md).
 
 The "Control Settings" dialog now includes a UI for the various appearances of buttons:
 
-<figure><img src="../.gitbook/assets/button-appearance-selector.png" alt="" width="140"><figcaption><p>Button appearances</p></figcaption></figure>
+<figure><img src="../form-builder/images/button-appearance-selector.png" alt="" width="140"><figcaption><p>Button appearances</p></figcaption></figure>
 
 At runtime, this translates into various button appearances:
 
-![Button appearances](../.gitbook/assets/button-appearance-runtime.png)
+![Button appearances](../form-builder/images/button-appearance-runtime.png)
 
 This was already supported at runtime, but there was no selector in the "Control Settings" dialog to set it.
 
@@ -88,7 +88,7 @@ For more, see [Keyboard shortcuts](../form-builder/keyboard-shortcuts.md#grid-na
 
 You can select in Form Builder whether the browser time form control should always be used.
 
-<figure><img src="../.gitbook/assets/xbl-time-editor-custom-cropped.png" alt="" width="481"><figcaption><p>Configuring the time format</p></figcaption></figure>
+<figure><img src="../form-runner/component/images/xbl-time-editor-custom-cropped.png" alt="" width="481"><figcaption><p>Configuring the time format</p></figcaption></figure>
 
 ### New configuration properties
 

@@ -10,7 +10,7 @@
 
 By default, the text area control is rendered as a regular multi-line text area:
 
-![Multi-line text area in Orbeon Forms](../../.gitbook/assets/xforms-textarea-unformatted.png)
+![Multi-line text area in Orbeon Forms](../images/xforms-textarea-unformatted.png)
 
 ### Attributes
 
@@ -98,7 +98,7 @@ When the global property includes `minimal`, it is possible to override the appe
 
 If you add the attribute `mediatype="text/html"` on your `<xf:textarea>`, then the text area will be rendered as an HTML editor:
 
-![Formatted Text / Rich Text Editor in Orbeon Forms](../../.gitbook/assets/xforms-textarea-formatted.png)
+![Formatted Text / Rich Text Editor in Orbeon Forms](../images/xforms-textarea-formatted.png)
 
 ### HTML cleanup
 

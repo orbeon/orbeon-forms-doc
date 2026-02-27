@@ -15,9 +15,9 @@ The time is a local time, which does not contain a timezone, and stored in the d
 
 ## Appearance
 
-![Regular appearance](../../.gitbook/assets/xbl-time-controls.png)
+![Regular appearance](images/xbl-time-controls.png)
 
-![Readonly modes appearance](../../.gitbook/assets/xbl-time-controls-readonly.png)
+![Readonly modes appearance](images/xbl-time-controls-readonly.png)
 
 ## Form Builder support
 
@@ -27,7 +27,7 @@ The Control Settings dialog features a user interface for configuring the contro
 
 [\[SINCE Orbeon Forms 2024.1.1\]](../../release-notes/orbeon-forms-2024.1.1.md) You can select in Form Builder whether the browser time form control should be used.
 
-![Configuring the time format](../../.gitbook/assets/xbl-time-editor-custom-cropped.png)
+![Configuring the time format](images/xbl-time-editor-custom-cropped.png)
 
 ## Smart input
 
@@ -168,7 +168,7 @@ When doing so, the time format is determined by the browser based on the user's 
     value="always"/>
 ```
 
-<figure><img src="../../.gitbook/assets/native-time-picker-chrome.png" alt="" width="270"><figcaption><p>Native time picker on Chrome desktop</p></figcaption></figure>
+<figure><img src="../images/native-time-picker-chrome.png" alt="" width="270"><figcaption><p>Native time picker on Chrome desktop</p></figcaption></figure>
 
 As of January 2025, the native time form control is supported on all major desktop browsers. Note that the appearance can be different. In particular, only Chrome appears to offer an actual picker for the time:
 

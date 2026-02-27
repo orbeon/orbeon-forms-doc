@@ -4,7 +4,7 @@
 
 For live examples of [Formulas](formulas.md), see [Orbeon Demo: Examples of Formulas](https://demo.orbeon.com/demo/fr/orbeon-features/formulas/new?form-version=1).
 
-![Orbeon Demo: Examples of Formulas](../.gitbook/assets/examples-of-formulas.png)
+![Orbeon Demo: Examples of Formulas](images/examples-of-formulas.png)
 
 ## Sum of values in a repeat
 

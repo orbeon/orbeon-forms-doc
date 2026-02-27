@@ -79,7 +79,7 @@ Unless you have another front-end performing stream compression, it is important
 
 You can check that compression is working in your browser's Dev Tools' Network tab, where the two sizes indicate the compressed size and the uncompressed size:
 
-![Gzip compression sizes](../.gitbook/assets/dev-tools-gzip-compression.png)
+![Gzip compression sizes](images/dev-tools-gzip-compression.png)
 
 Response headers will also include a `Content-Encoding: gzip` response header on pages and most text assets.
 

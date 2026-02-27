@@ -8,7 +8,7 @@
 
 The Formulas console allows you to view formulas errors that occur when testing a form.
 
-![Formulas console](../.gitbook/assets/formulas-console.png)
+![Formulas console](images/formulas-console.png)
 
 Some errors are detected by Orbeon Forms statically, when compiling the form; other errors are detected dynamically, when the form runs and there is user interaction. Both types of errors are shown in the Formulas console.
 

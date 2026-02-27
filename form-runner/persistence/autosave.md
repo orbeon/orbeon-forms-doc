@@ -55,25 +55,25 @@ When autosave is enabled and you are an authenticated user, form data is automat
 
 The Summary page shows the drafts, on separate lines and clearly marked as such. From the Summary page, users can click on a draft to open it, or select it to then delete it, assuming they have the permission to do so.
 
-![Summary page](../../.gitbook/assets/autosave-summary.png)
+![Summary page](../images/autosave-summary.png)
 
 ### Edit page
 
 If users edit a form for which there is a draft, they will be asked whether they want to open the saved data, or start from the autosaved draft.
 
-![Edit page](../../.gitbook/assets/autosave-open.png)
+![Edit page](../images/autosave-open.png)
 
 ### New page
 
 If users started filling out a new form, but didn't save the data, if starting to fill out a new form later, they will be asked whether they wish to start from scratch, or from one of the drafts saved earlier. In this case, the prompt will be different whether there is just one draft for new data, or multiple drafts available, as in the latter case, users will need to select which draft they want to use.
 
-![New page, single draft](../../.gitbook/assets/autosave-new-single.png)
+![New page, single draft](../images/autosave-new-single.png)
 
-![New page, single draft](../../.gitbook/assets/autosave-new-multiple.png)
+![New page, single draft](../images/autosave-new-multiple.png)
 
 When multiple drafts are available, choosing the "View autosaved drafts" button takes you to the form's Summary page in a special mode where only the relevant drafts are visible:
 
-![Summary page with drafts only](../../.gitbook/assets/autosave-summary-drafts-only.png)
+![Summary page with drafts only](../images/autosave-summary-drafts-only.png)
 
 ## Configuration
 

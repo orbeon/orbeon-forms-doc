@@ -4,7 +4,7 @@
 
 The Error Summary component is a reusable component listing the errors present on your form (or a sub-form):
 
-![](../../.gitbook/assets/xbl-error-summary-errors.png)
+![](images/xbl-error-summary-errors.png)
 
 Main features:
 

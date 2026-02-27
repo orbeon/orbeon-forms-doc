@@ -18,7 +18,7 @@ A persistence provider is responsible for storing and retrieving form definition
 
 Form Runner internally includes a _persistence proxy_, which exposes API endpoints for Form Runner, Form Builder, and external callers.
 
-![Persistence architecture](../../../.gitbook/assets/architecture-persistence.png)
+![Persistence architecture](../../images/architecture-persistence.png)
 
 The proxy acts as an intermediary between public APIs and persistence providers. Persistence providers are never called directly by any software except the persistence proxy.
 

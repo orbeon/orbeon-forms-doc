@@ -874,7 +874,7 @@ Then, in the following example, each `<fr:map>` expresses that all repeated cont
 </fr:copy-content>
 ```
 
-![Example form showing copied content](../.gitbook/assets/copy-content.png)
+![Example form showing copied content](images/copy-content.png)
 
 #### Repeated source and destination
 

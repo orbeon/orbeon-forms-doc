@@ -2,7 +2,7 @@
 
 [\[SINCE Orbeon Forms 2023.1\]](../release-notes/orbeon-forms-2023.1.md)
 
-![Messages dialog](../.gitbook/assets/messages.png)
+![Messages dialog](images/messages.png)
 
 ## Purpose
 
@@ -12,7 +12,7 @@ Some of the [Form Runner actions](../form-runner/advanced/buttons-and-processes/
 
 You can open the Messages dialog by clicking on the "Messages" button, under the "Advanced" tab, in the toolbox.
 
-![](../.gitbook/assets/advanced-menu.png)
+![](images/advanced-menu.png)
 
 Each message must have a language, a name, and a value.
 

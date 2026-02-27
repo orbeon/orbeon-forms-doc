@@ -8,7 +8,7 @@
 
 This component represents a US Social Security Number (SSN).
 
-<figure><img src="../../.gitbook/assets/xbl-us-ssn-edit-obscured.webp" alt="" width="220"><figcaption><p>US Social Security Number (SSN) field with obscured value</p></figcaption></figure>
+<figure><img src="images/xbl-us-ssn-edit-obscured.webp" alt="" width="220"><figcaption><p>US Social Security Number (SSN) field with obscured value</p></figcaption></figure>
 
 It allows the user to enter a Social Security Number in the format `078-05-1120`, with or without the dashes.
 
@@ -36,7 +36,7 @@ For editable modes, you can configure the field to behave in the following ways:
 | Always obscured  | Field is always hidden                                                                                                                                                      | `•••••••••`                  |
 | Reveal on demand | Field is hidden by default, but can be revealed when the user clicks a "Reveal" checkbox. Useful for verifying the value while keeping it hidden from onlookers by default. | `078-05-1120` or `•••••••••` |
 
-<figure><img src="../../.gitbook/assets/xbl-us-ssn-edit-revealed.webp" alt="" width="220"><figcaption><p>US Social Security Number (SSN) field with revealed value</p></figcaption></figure>
+<figure><img src="images/xbl-us-ssn-edit-revealed.webp" alt="" width="220"><figcaption><p>US Social Security Number (SSN) field with revealed value</p></figcaption></figure>
 
 For readonly modes, such as the View and PDF modes, you can configure the field to behave in the following ways:
 
@@ -46,7 +46,7 @@ For readonly modes, such as the View and PDF modes, you can configure the field 
 | Obscured              | Field is fully hidden                 | `•••-••-••••` |
 | Show last four digits | Only the last four digits are visible | `•••-••-1120` |
 
-<figure><img src="../../.gitbook/assets/xbl-us-ssn-view-partial.webp" alt="" width="440"><figcaption><p>US Social Security Number (SSN) field with partially-revealed value</p></figcaption></figure>
+<figure><img src="images/xbl-us-ssn-view-partial.webp" alt="" width="440"><figcaption><p>US Social Security Number (SSN) field with partially-revealed value</p></figcaption></figure>
 
 These options are controlled in Form Builder or using configuration properties:
 
@@ -54,7 +54,7 @@ These options are controlled in Form Builder or using configuration properties:
 * at the form level, using the "Form Settings" dialog
 * in configuration properties
 
-![US Social Security Number (SSN) field settings](../../.gitbook/assets/xbl-us-ssn-settings.webp)
+![US Social Security Number (SSN) field settings](images/xbl-us-ssn-settings.webp)
 
 The default properties are as follows:
 

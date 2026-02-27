@@ -166,7 +166,7 @@ Both `bytesReceived()` and `complete()` must return a value from the `FileScanSt
 
 If `FileScanRejectResult` or `FileScanErrorResult` is returned, or if any exception is thrown as part of `startStream()`, `bytesReceived()`, or `complete()`, the uploaded file is rejected and an error is shown to the user.
 
-![File scan error](../../../.gitbook/assets/file-scan.png)
+![File scan error](../../images/file-scan.png)
 
 If the user cancels the upload, or if any other error occurs on the Orbeon Forms side, the `abort()` method is called. In this case, the file scan for the given file must be stopped and associated resources must be cleared, if any.
 
@@ -287,7 +287,7 @@ public enum FileScanStatus { ACCEPT, REJECT, ERROR }
 
 If `REJECT` or `ERROR` is returned, or if any exception is thrown as part of `startStream()`, `bytesReceived()`, or `complete()`, the uploaded file is rejected and an error is shown to the user.
 
-![File scan error](../../../.gitbook/assets/file-scan.png)
+![File scan error](../../images/file-scan.png)
 
 If the user cancels the upload, or if any other error occurs on the Orbeon Forms side, the `abort()` method is called. In this case, the file scan for the given file must be stopped and associated resources must be cleared, if any.
 

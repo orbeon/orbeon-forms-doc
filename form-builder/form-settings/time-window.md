@@ -2,7 +2,7 @@
 
 \[SINCE Orbeon Forms 2023.1] \[Orbeon Forms PE only]
 
-<figure><img src="../../.gitbook/assets/time-window.png" alt="" width="1022"><figcaption><p>Time Window tab of the Form Settings dialog</p></figcaption></figure>
+<figure><img src="time-window.png" alt="" width="1022"><figcaption><p>Time Window tab of the Form Settings dialog</p></figcaption></figure>
 
 For some forms, you might only want to accept new entries after a given start date or before a given end date. You can define such constraints by opening your form in Form Builder, opening the Form Settings dialog, and switching to the Time Window tab, which is also shown in the above screenshot. This allows you to define an optional start date and end date. If users try to fill out a new form before or after the specified dates, they will be shown a default message, which you can also override in the same tab.
 

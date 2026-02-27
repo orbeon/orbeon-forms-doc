@@ -121,7 +121,7 @@ The "Advanced" tab allows you to set advanced service parameters:
 * **SOAP Action**
   * If selected, the value of the `SOAPAction` header.
 
-<figure><img src="../.gitbook/assets/service-definition-advanced.png" alt="Advanced tab" width="562"><figcaption><p>Advanced tab</p></figcaption></figure>
+<figure><img src="images/service-definition-advanced.png" alt="Advanced tab" width="562"><figcaption><p>Advanced tab</p></figcaption></figure>
 
 ## Testing a service
 
@@ -137,9 +137,9 @@ The "Test" button allows you to test the service. Before doing this, you have to
 
 This helps you troubleshoot the service call.
 
-<figure><img src="../.gitbook/assets/service-definition-test.png" alt="Test Results tab with response headers" width="562"><figcaption><p>Test Results tab with response headers</p></figcaption></figure>
+<figure><img src="images/service-definition-test.png" alt="Test Results tab with response headers" width="562"><figcaption><p>Test Results tab with response headers</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/service-definition-test-original-response-body.png" alt="Test Results tab with response body" width="562"><figcaption><p>Test Results tab with response body</p></figcaption></figure>
+<figure><img src="images/service-definition-test-original-response-body.png" alt="Test Results tab with response body" width="562"><figcaption><p>Test Results tab with response body</p></figcaption></figure>
 
 ### XML view of JSON responses
 
@@ -151,7 +151,7 @@ This is useful when you want to use XPath expressions to access a JSON response,
 
 See also [JSON support](../xforms/submission-json.md).
 
-<figure><img src="../.gitbook/assets/service-definition-test-xml-response-body.png" alt="Test Results tab with XML response body" width="562"><figcaption><p>Test Results tab with XML response body</p></figcaption></figure>
+<figure><img src="images/service-definition-test-xml-response-body.png" alt="Test Results tab with XML response body" width="562"><figcaption><p>Test Results tab with XML response body</p></figcaption></figure>
 
 ## Saving the service
 

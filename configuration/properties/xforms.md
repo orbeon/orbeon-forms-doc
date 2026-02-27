@@ -334,11 +334,11 @@ Individual controls also support this property locally:
 
 By default, YUI date picker shows as follows:
 
-![Default date picker](../../.gitbook/assets/xforms-datepicker-simple.png)
+![Default date picker](../../xforms/images/xforms-datepicker-simple.png)
 
 You can set the `oxf.xforms.datepicker.two-months` property to `true`, and the date picker will show two months at a time:
 
-![Date picker with two months displayed at a time](../../.gitbook/assets/xforms-datepicker-navigator.png)
+![Date picker with two months displayed at a time](../../xforms/images/xforms-datepicker-navigator.png)
 
 By default, the property is set to `false`, (only one month is shown). You can override by adding the following to your `properties-local.xml`:
 
@@ -353,7 +353,7 @@ By default, the property is set to `false`, (only one month is shown). You can o
 
 With the `oxf.xforms.datepicker.navigator` property set to `true` (the default), when you click on the month headers, a small dialog allows you to type a year and select a month from a drop-down. This is particularly convenient if the date you want to capture has a chance to be further in the future or in the past (such as a birth date).
 
-![Month and year selection in YUI date picker with navigator and two months properties enabled](../../.gitbook/assets/xforms-datepicker-month-year.png)
+![Month and year selection in YUI date picker with navigator and two months properties enabled](../../xforms/images/xforms-datepicker-month-year.png)
 
 You disable the navigator by setting the following property to `false` (it is `true` by default):
 
@@ -458,7 +458,7 @@ See also [`oxf.fr.detail.attachment.mediatypes`](form-runner-attachments.md#allo
 
 When you use an `<xf:upload>` control, as soon users select a file, the file is uploaded in the background from the browser to Orbeon Forms. While the file is uploaded, a progress bar is show in the browser, in place of the file selection control, as in this screenshot:
 
-![Upload Progress](../../.gitbook/assets/xforms-upload-progress-bar.png)
+![Upload Progress](../../xforms/images/xforms-upload-progress-bar.png)
 
 To know how much of the file has been uploaded so far, the browser sends an Ajax request to the server, at a regular interval, asking the server what percentage of the file it has received. By default, the browser sends a request every 2 seconds. You can change this by overriding the following property. You set the value of this property as a compromise: low enough so the progress bar updates at a regular interval giving users a more accurate indication of how far along they are in the upload, and high enough to limit the number a queries made to Orbeon Forms, and thus limit the load on the server.
 

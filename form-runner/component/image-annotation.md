@@ -4,7 +4,7 @@
 
 The image annotation component allows users to select an image and annotate it. Both the original image users select and the image with the annotation are saved as part of the data.
 
-![](../../.gitbook/assets/xbl-image-annotation.png)
+![](images/xbl-image-annotation.png)
 
 ## Configuration
 

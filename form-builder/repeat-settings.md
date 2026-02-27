@@ -9,7 +9,7 @@ Form Builder supports grids and sections with repeated content.
 
 Both repeated grids and repeated sections have _repeat settings_ in the "Section/Grid Settings" dialog's "Repeated Content" tab.
 
-![Repeated Content](../.gitbook/assets/container-settings-repeated-content.png)
+![Repeated Content](images/container-settings-repeated-content.png)
 
 ## Repeat Content
 
@@ -21,7 +21,7 @@ Select this checkbox to enable repeated content. This enables a series of detail
 
 By default, the form user is allowed to add, remove, or move repetitions. To disable this behavior, deselect the "Allow the user to add, remove, or move repetitions" option. When the checkbox is deselected, the user does not have direct access to buttons, icons or menus to change repetitions.
 
-![Allow the user to add, remove, or move repetitions](../.gitbook/assets/container-settings-repeated-content-one-repetition-highlighted.png)
+![Allow the user to add, remove, or move repetitions](images/container-settings-repeated-content-one-repetition-highlighted.png)
 
 When this option is deselected, the minimum, maximum and frozen repetitions settings do not apply.
 
@@ -37,17 +37,17 @@ Deselecting this option makes sense in particular when the number of repetitions
 
 For grids only, selecting this option automatically shows a row number at the beginning of each grid repetition.
 
-![Show repetition number](../.gitbook/assets/container-settings-repeated-content-show-repetition-number-highlighted.png)
+![Show repetition number](images/container-settings-repeated-content-show-repetition-number-highlighted.png)
 
 This is how the repetition number appears at runtime.
 
-![Repetition number at runtime](../.gitbook/assets/container-settings-repeated-content-repetition-number-runtimep-highlighted.png)
+![Repetition number at runtime](images/container-settings-repeated-content-repetition-number-runtimep-highlighted.png)
 
 ## Minimum and maximum number of repetitions
 
 These settings can be predefined numbers or formulas when selecting "Other". Here is an example of using a firmula for the maximum number of repetitions.
 
-![Formula for the maximum number of repetitions](../.gitbook/assets/container-settings-repeated-content-maximum-other-highlighted.png)
+![Formula for the maximum number of repetitions](images/container-settings-repeated-content-maximum-other-highlighted.png)
 
 ## Freeze repetitions
 
@@ -89,7 +89,7 @@ The "Apply initial value formulas when adding iterations" option specifies wheth
 
 With the option enabled, new iterations can have dynamic initial values:
 
-![Initial Values](../.gitbook/assets/iterations-initial-values.png)
+![Initial Values](images/iterations-initial-values.png)
 
 With Orbeon Forms 2016.1, the option is enabled by default for new forms and new repeated grids. The option is disabled by default for grids created with previous versions of Orbeon Forms.
 
@@ -104,15 +104,15 @@ The "Initial Number of Iterations Uses Template" option specifies, when an _encl
 
 The following screenshot shows a case with a repeated grid within nested repeated sections. At first, when the form shows, there are two iterations of the repeated grid.
 
-![](../.gitbook/assets/iterations-initial.png)
+![](images/iterations-initial.png)
 
 With the option enabled on the grid, adding a new iteration of _Repeated section 2_ causes the new iteration to contain a new repeated grid with two iterations:
 
-![](../.gitbook/assets/iterations-template.png)
+![](images/iterations-template.png)
 
 While, with the option disabled on the grid, adding a new iteration of _Repeated section 2_ causes the new iteration to contain a new repeated grid a single iterations:
 
-![](../.gitbook/assets/iterations-single.png)
+![](images/iterations-single.png)
 
 ## Show one repetition at a time in the wizard
 

@@ -65,7 +65,7 @@ In addition to controls, the toolbox has other features which you can enable or 
 
 By default, the Publish dialog proposes, upon successful publication of a form definition, shortcuts to navigate to the published form's New or Summary pages.
 
-![Publish dialog](../../.gitbook/assets/publish-confirmation.png)
+![Publish dialog](../../form-builder/images/publish-confirmation.png)
 
 This property allows specifying which of these actions are available:
 
@@ -162,7 +162,7 @@ The permissions dialog allows form authors, amongst other things, to assign perm
 
 The value of this property is an array of strings in the JSON format. For instance, the following screenshot shows the dialog with the above property set (see the line for "Organization owner"), and where the form author added a line for an "admin" role.
 
-![Permissions dialog with Organization Owner role](../../.gitbook/assets/fb-permissions-organization-owner.png)
+![Permissions dialog with Organization Owner role](../images/fb-permissions-organization-owner.png)
 
 See also [Access control for deployed forms](../../form-runner/access-control/deployed-forms.md).
 

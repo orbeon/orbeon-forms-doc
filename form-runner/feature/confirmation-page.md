@@ -11,7 +11,7 @@ It is useful for a form to be able to show a confirmation page to the user once 
 * displaying a message to the user once the form is successfully submitted
 * allowing the user to download a PDF copy of the submitted data
 
-<figure><img src="../../.gitbook/assets/confirmation-page-example.webp" alt="Confirmation page example" width="590"><figcaption><p>Confirmation page example</p></figcaption></figure>
+<figure><img src="../images/confirmation-page-example.webp" alt="Confirmation page example" width="590"><figcaption><p>Confirmation page example</p></figcaption></figure>
 
 Like email templates, the confirmation page can be customized using Form Builder, using _confirmation page templates_.
 
@@ -19,7 +19,7 @@ Like email templates, the confirmation page can be customized using Form Builder
 
 You open the "Confirmation Page Settings" dialog from the Form Builder "Advanced" tab.
 
-<figure><img src="../../.gitbook/assets/advanced-tab.webp" alt="Advanced tab in Form Builder toolbox" width="219"><figcaption><p>Advanced tab in Form Builder toolbox</p></figcaption></figure>
+<figure><img src="../images/advanced-tab.webp" alt="Advanced tab in Form Builder toolbox" width="219"><figcaption><p>Advanced tab in Form Builder toolbox</p></figcaption></figure>
 
 The "Confirmation Page Settings" dialog allows you to create multiple templates, each with a name and optional language. The confirmation page selects a template as follows:
 
@@ -31,14 +31,14 @@ The "Confirmation Page Settings" dialog allows you to create multiple templates,
 
 Templates can specify a title and a message body.
 
-![Confirmation Page Templates dialog](../../.gitbook/assets/confirmation-page-settings-templates.webp)
+![Confirmation Page Templates dialog](../images/confirmation-page-settings-templates.webp)
 
 Both title and message body can be configured with templates parameters which can include:
 
 * control values
 * formulas
 
-![Confirmation Page Templates dialog with parameters](../../.gitbook/assets/confirmation-page-settings-template-params.webp)
+![Confirmation Page Templates dialog with parameters](../images/confirmation-page-settings-template-params.webp)
 
 You can also choose whether a PDF download button is available. The PDF is produced as follows:
 

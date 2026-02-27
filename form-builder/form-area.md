@@ -11,7 +11,7 @@ Form Builder is built around as simple layout concept: _sections_ and _grids_. T
 
 Starting with Orbeon Forms 2017.2, Form Builder grids are more flexible then with earlier versions and follow a 12-column layout.
 
-![Form Builder and the main form area](../.gitbook/assets/form-area.png)
+![Form Builder and the main form area](images/form-area.png)
 
 ## Sections
 
@@ -80,23 +80,23 @@ You can perform the following operations on grids:
   * Cut or copy the entire grid to the clipboard (scissors or copy icons)
     * _NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids._
 
-![Grid icons](../.gitbook/assets/grid-icons.png)
+![Grid icons](images/grid-icons.png)
 
 Expanding/shrinking cells horizontally makes grid cells span _columns_. This allows grid cells to have a width of 1, 2, and up to 12 columns.
 
-![Grid cell widths at runtime](../.gitbook/assets/runtime-grid-cell-widths.png)
+![Grid cell widths at runtime](../form-runner/images/runtime-grid-cell-widths.png)
 
 With Orbeon Forms 2017.2, you use the arrow icons within the grid to expand into empty adjacent cells.
 
-![Expanding cell boundaries](../.gitbook/assets/grid-icons-cell-boundaries.png)
+![Expanding cell boundaries](images/grid-icons-cell-boundaries.png)
 
 With Orbeon Forms 2018.1 and newer, you drag the cell boundary to expand into empty adjacent cells. See also the [blog post](https://blog.orbeon.com/2018/10/resizing-cells-with-drag-drop-in-form.html).
 
-![Dragging cell boundaries horizontally](../.gitbook/assets/grid-dragging-cell-boundaries-horizontally.png)
+![Dragging cell boundaries horizontally](images/grid-dragging-cell-boundaries-horizontally.png)
 
 Expanding/shrinking cells vertically makes grid cells span _rows_. This allows making some cells taller when next to other cells, for example to allow for taller radio buttons lists.
 
-![Dragging cell boundaries vertically](../.gitbook/assets/grid-dragging-cell-boundaries-vertically.png)
+![Dragging cell boundaries vertically](images/grid-dragging-cell-boundaries-vertically.png)
 
 #### Undoing operations
 
@@ -117,7 +117,7 @@ You can perform the following operations on grids:
 
 For delete operations, a warning dialog shows if controls will be deleted as a result.
 
-![Column confirmation dialog](../.gitbook/assets/xbl-alert-dialog.png)
+![Column confirmation dialog](../form-runner/component/images/xbl-alert-dialog.png)
 
 ## Grid cells and controls
 

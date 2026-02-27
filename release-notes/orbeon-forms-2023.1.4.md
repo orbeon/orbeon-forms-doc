@@ -14,7 +14,7 @@ Today we released Orbeon Forms 2023.1.4 PE! This maintenance release contains bu
 
 This maintenance release introduces support for [Friendly Captcha](https://friendlycaptcha.com/), an alternative to Google's reCAPTCHA and, in their own words, "GDPR-Compliant Bot Protection". For more information, see the [documentation](../form-runner/component/captcha.md#friendly-captcha). Thanks to the kind users who have sponsored this enhancement!
 
-![Friendly Captcha](../.gitbook/assets/friendly-captcha.png)
+![Friendly Captcha](../form-runner/images/friendly-captcha.png)
 
 The following small features have also been added:
 

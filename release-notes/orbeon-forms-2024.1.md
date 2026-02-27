@@ -18,25 +18,25 @@ In previous versions, creating an entirely new form with Form Builder always sta
 
 The "New Form" dialog now starts with a series of form templates that you can choose from. There are built-in form templates, but you can make your own form templates.
 
-<figure><img src="../.gitbook/assets/new-form-dialog-templates.png" alt=""><figcaption><p>New Form dialog with templates</p></figcaption></figure>
+<figure><img src="../form-builder/images/new-form-dialog-templates.png" alt=""><figcaption><p>New Form dialog with templates</p></figcaption></figure>
 
 In addition, providing a form application name and form name is now optional when you start. You can provide them later, after you've started working on the form. This makes getting started on a new form more straightforward. Finally, when you pick an application name and form name, Form Builder checks the in-progress and published forms for a match to tell you whether that combination is already in use.
 
-<figure><img src="../.gitbook/assets/new-form-dialog-app-form-search.png" alt=""><figcaption><p>Choosing an application and form name</p></figcaption></figure>
+<figure><img src="../form-builder/images/new-form-dialog-app-form-search.png" alt=""><figcaption><p>Choosing an application and form name</p></figcaption></figure>
 
 You can mark any form you create as a template, and that form will then show in the list of available templates.
 
-<figure><img src="../.gitbook/assets/form-settings-allow-use-as-form-template.png" alt=""><figcaption><p>Marking a form as available as a template</p></figcaption></figure>
+<figure><img src="../form-builder/images/form-settings-allow-use-as-form-template.png" alt=""><figcaption><p>Marking a form as available as a template</p></figcaption></figure>
 
 You can associate a thumbnail with each form, which will be used in the Form Builder New page as well as on the Landing page (see below). That thumbnail can be a screenshot of the form, or any other graphic you choose.
 
-<figure><img src="../.gitbook/assets/form-settings-thumbnail.png" alt=""><figcaption><p>Setting a thumbnail for a form</p></figcaption></figure>
+<figure><img src="../form-builder/images/form-settings-thumbnail.png" alt=""><figcaption><p>Setting a thumbnail for a form</p></figcaption></figure>
 
 ### Sorting and improved searching on the Summary page
 
 The Form Runner Summary page already allowed you to _search_, but it now allows you to _sort by metadata or field_ as well.
 
-<figure><img src="../.gitbook/assets/summary-sort.png" alt=""><figcaption><p>Sorting by "Title" field on the Summary page</p></figcaption></figure>
+<figure><img src="../form-runner/images/summary-sort.png" alt=""><figcaption><p>Sorting by "Title" field on the Summary page</p></figcaption></figure>
 
 In addition, search has been improved to search and sort by the following metadata information (when present):
 
@@ -46,7 +46,7 @@ In addition, search has been improved to search and sort by the following metada
 * Last Modified by Username
 * Workflow Stage
 
-<figure><img src="../.gitbook/assets/summary-search-modified.png" alt=""><figcaption><p>Search by Last Modified Date on the Summary page</p></figcaption></figure>
+<figure><img src="../form-runner/images/summary-search-modified.png" alt=""><figcaption><p>Search by Last Modified Date on the Summary page</p></figcaption></figure>
 
 See also [this video](https://www.youtube.com/watch?v=udsIa9raVfg) which covers the topic.
 
@@ -60,7 +60,7 @@ The format allows you to control the following:
 * the separator to use
 * pad the months and days with zeros or not
 
-<figure><img src="../.gitbook/assets/xbl-date-editor-custom-cropped-small.png" alt=""><figcaption><p>Custom date format configuration</p></figcaption></figure>
+<figure><img src="../form-runner/component/images/xbl-date-editor-custom-cropped-small.png" alt=""><figcaption><p>Custom date format configuration</p></figcaption></figure>
 
 If you are configuring this at the form control or form level, you can do this in the Form Builder UI, so you don’t have to figure out a textual syntax (but you still use such a syntax in Orbeon Forms configuration properties).
 
@@ -69,21 +69,21 @@ In addition, we have fixed other issues with the Date control, and we have broug
 * Use browser date picker
 * First day of the week
 
-<figure><img src="../.gitbook/assets/xbl-date-editor.png" alt=""><figcaption><p>Browser date picker and first day of the week</p></figcaption></figure>
+<figure><img src="../form-runner/component/images/xbl-date-editor.png" alt=""><figcaption><p>Browser date picker and first day of the week</p></figcaption></figure>
 
 The following shows examples of Date and Time controls at runtime:
 
-<figure><img src="../.gitbook/assets/xbl-date-time-controls.png" alt=""><figcaption><p>Date and time controls</p></figcaption></figure>
+<figure><img src="../form-runner/component/images/xbl-date-time-controls.png" alt=""><figcaption><p>Date and time controls</p></figcaption></figure>
 
 ### Sorting and searching on the Admin and Published Forms pages
 
 The Forms/Admin and Forms/Published pages now allow you to sort as well.
 
-<figure><img src="../.gitbook/assets/published-forms-sort.png" alt=""><figcaption><p>Sorting by "Form Title" on the Admin and Published Forms pages</p></figcaption></figure>
+<figure><img src="../form-runner/images/published-forms-sort.png" alt=""><figcaption><p>Sorting by "Form Title" on the Admin and Published Forms pages</p></figcaption></figure>
 
 You can also search by metadata or field.
 
-<figure><img src="../.gitbook/assets/published-forms-search.png" alt=""><figcaption><p>Sorting and searching by "Form Title" on the Admin and Published Forms pages</p></figcaption></figure>
+<figure><img src="../form-runner/images/published-forms-search.png" alt=""><figcaption><p>Sorting and searching by "Form Title" on the Admin and Published Forms pages</p></figcaption></figure>
 
 See also [this video](https://www.youtube.com/watch?v=udsIa9raVfg) which covers the topic.
 
@@ -97,7 +97,7 @@ You now have a choice of several form density settings:
 
 This setting can be set globally, per app, or per form, with a setting in Form Builder as well.
 
-<figure><img src="../.gitbook/assets/form-settings-density.png" alt=""><figcaption><p>Form Density Setting</p></figcaption></figure>
+<figure><img src="../form-builder/images/form-settings-density.png" alt=""><figcaption><p>Form Density Setting</p></figcaption></figure>
 
 For more, see also the [Form Density Setting](https://www.orbeon.com/2024/11/form-density) blog post.
 
@@ -105,7 +105,7 @@ For more, see also the [Form Density Setting](https://www.orbeon.com/2024/11/for
 
 Like in a spreadsheet, a formula can reference other form control values. Formulas now provide completion of control names: simply type the `$` character, and a completion menu appears. It shows not only the name of the field, but also its label.
 
-<figure><img src="../.gitbook/assets/variable-completion-menu-open.png" alt=""><figcaption><p>Variable completion in formulas</p></figcaption></figure>
+<figure><img src="../form-builder/images/variable-completion-menu-open.png" alt=""><figcaption><p>Variable completion in formulas</p></figcaption></figure>
 
 For more, see also the [Variable completion in formulas](https://www.orbeon.com/2024/12/variable-completion-formulas) blog post.
 
@@ -113,7 +113,7 @@ For more, see also the [Variable completion in formulas](https://www.orbeon.com/
 
 The Orbeon Forms Landing page, introduced with Orbeon Forms 2022.1, now allows you to show cards showing the latest data for specific forms that you configure. This gives you quick access to your important data.
 
-<figure><img src="../.gitbook/assets/landing-form-data-card.png" alt=""><figcaption><p>Landing page with cards</p></figcaption></figure>
+<figure><img src="../form-runner/images/landing-form-data-card.png" alt=""><figcaption><p>Landing page with cards</p></figcaption></figure>
 
 In addition, we have split the Orbeon Demo Forms and Demo Features. These, of course, are just examples, and can easily be removed with a simple configuration for your dev, test, or production environments.
 
@@ -155,7 +155,7 @@ When using WildFly's built-in support for OIDC, Orbeon Forms can now extract rol
 
 Previously, a [Lease](../form-runner/feature/lease.md) was only supported for published forms. With this version, leases are supported for Form Builder itself. This allows to better control how multiple form authors can edit a form in Form Builder without conflicts.
 
-<figure><img src="../.gitbook/assets/form-builder-lease.png" alt=""><figcaption><p>Message showing the user owns the lease</p></figcaption></figure>
+<figure><img src="../form-builder/images/form-builder-lease.png" alt=""><figcaption><p>Message showing the user owns the lease</p></figcaption></figure>
 
 ### Keyboard shortcuts
 
