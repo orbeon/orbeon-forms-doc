@@ -1,4 +1,4 @@
-v# Form Runner control-setvalue action
+# Form Runner control-setvalue action
 
 
 ## Availability
@@ -31,7 +31,7 @@ control-setvalue(
 | `at`           | No        | space-delimited position tokens: `start`, `end`, `all`, positive integer | missing leading tokens default to `end`                   |
 | `section-name` | No        | section name                                                             | section name to search, if it contains a section template |
 
-- `value
+- `value`
     - the value expression is evaluated in the context of the root element of the form data and the resulting value is set on the control
     - you can use the `$foo` syntax to refer to the value of another control, where `foo` is the name of that control in the same scope (i.e. in the same section template instance, or at the top level if not in a section template)
 - `section-name`
@@ -47,15 +47,6 @@ Set the value of a top-level form control called `contact-information-first-name
 control-setvalue(
     control-name = "contact-information-first-name",
     value        = "'Homer'
-)
-```
-
-Set the value of a top-level form control called `second-control` with the value from a first control called `first-control`:
-
-```
-control-setvalue(
-    control-name = "second-control",
-    value        = "$first-control"
 )
 ```
 
@@ -121,6 +112,19 @@ then control-setvalue(
     control-name = "us-address-zip",
     value        = "'99999'",
     section-name = "address-us"
+)
+```
+
+The above actions can result in the following values in a test form:
+
+![Result of setting the value of controls](../../images/process-action-control-setvalue.webp)
+
+Set the value of a top-level form control called `second-control` with the value from a first control called `first-control`:
+
+```
+control-setvalue(
+    control-name = "second-control",
+    value        = "$first-control"
 )
 ```
 
