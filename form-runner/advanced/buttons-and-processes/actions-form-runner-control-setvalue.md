@@ -115,7 +115,21 @@ then control-setvalue(
 )
 ```
 
-The above actions can result in the following values in a test form:
+The above actions can result in the following values in a test form, if combined the following process:
+
+```
+<property as="xs:string" name="oxf.fr.detail.process.after-controls.foreground.new.my-app.my-form">
+         control-setvalue(control-name = "contact-information-first-name", value = "'Homer'")
+    then control-setvalue(control-name = "top-level-repeated-control-1",   value = "'A'",                     at = "start")
+    then control-setvalue(control-name = "top-level-repeated-control-1",   value = "'B'",                     at = "2")
+    then control-setvalue(control-name = "top-level-repeated-control-1",   value = "'Z'",                     at = "end")
+    then control-setvalue(control-name = "top-level-repeated-control-2",   value = "'X'",                     at = "all")
+    then control-setvalue(control-name = "us-address-street-1",            value = "'742 Evergreen Terrace'", section-name = "address-us")
+    then control-setvalue(control-name = "us-address-city",                value = "'Springfield'",           section-name = "address-us")
+    then control-setvalue(control-name = "us-address-state",               value = "'OR'",                    section-name = "address-us")
+    then control-setvalue(control-name = "us-address-zip",                 value = "'99999'",                 section-name = "address-us")
+</property>
+```
 
 ![Result of setting the value of controls](../../images/process-action-control-setvalue.webp)
 
