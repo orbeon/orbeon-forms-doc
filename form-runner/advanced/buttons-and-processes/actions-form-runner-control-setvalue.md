@@ -115,7 +115,7 @@ then control-setvalue(
 )
 ```
 
-The above actions can result in the following values in a test form, if combined the following process:
+The above actions can result in the following values in a test form, if combined in the following process for application `my-app` and form `my-form`, in `new` mode, and executed after controls are processed:
 
 ```
 <property as="xs:string" name="oxf.fr.detail.process.after-controls.foreground.new.my-app.my-form">
