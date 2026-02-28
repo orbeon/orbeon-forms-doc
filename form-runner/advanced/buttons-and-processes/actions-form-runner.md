@@ -6,6 +6,7 @@
 * [`send` action](actions-form-runner-send.md)
 * [`send-s3` action](actions-form-runner-send-s3.md)
 * [`email` action](actions-form-runner-email.md)
+* [`control-setvalue` action](actions-form-runner-control-setvalue.md)
 
 ## Introduction
 
