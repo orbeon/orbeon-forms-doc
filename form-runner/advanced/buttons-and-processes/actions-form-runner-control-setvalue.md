@@ -7,7 +7,9 @@
 
 ##  Introduction
 
-The `control-setvalue` action sets the value of a form control. It matches the semantic of the `<fr:control-setvalue>` action in the [action syntax](/form-builder/actions-syntax.md#setting-the-value-of-a-control), but is called from [processes](README.md).
+The `control-setvalue` process action sets the value of a form control.
+
+This process action matches the semantic of the `<fr:control-setvalue>` action in the [action syntax](/form-builder/actions-syntax.md#setting-the-value-of-a-control).
 
 ## Syntax and parameters
 
