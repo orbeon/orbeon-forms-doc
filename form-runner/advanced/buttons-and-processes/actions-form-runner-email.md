@@ -9,6 +9,10 @@ The `email` action sends an email with optionally XML form data, attachments, an
 ## Parameters
 
 - [SINCE Orbeon Forms 2022.1] `template`: Optional name of the email template to use.
+- PDF parameters (when a rendered PDF version of the form is attached to the email):
+    - `use-pdf-template`
+    - `pdf-template-name`
+    - `pdf-template-lang` 
 - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) `data-format-version`: The data format version for the XML data, if included as email attachment.
   - `4.0.0`: the default (which matches the backward compatibility format of the data, as stored in the database)
   - `4.8.0`
