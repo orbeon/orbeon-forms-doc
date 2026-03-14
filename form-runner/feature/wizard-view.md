@@ -317,31 +317,44 @@ However, should you want to disable this behavior, and have the HTML for all the
 
 [\[SINCE Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
 
-The URL of the form now contains a `fr-wizard-page` parameter, which indicates the page currently being displayed. For example:
+Two properties control how the wizard interacts with the `fr-wizard-page` URL parameter.
+
+The `allow-url-param` property controls whether the wizard reads the `fr-wizard-page` parameter from the URL on page load to navigate to the requested page. It defaults to `true`.
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.xforms.xbl.fr.wizard.allow-url-param.*.*"
+    value="true"/>
+```
+
+For example, the following URL opens the wizard on the "selection-controls" page:
 
 ```
 /fr/orbeon/controls/new?fr-wizard-page=selection-controls
 ```
 
-Form Runner also reads this URL parameter to attempt initializing the wizard to the requested page. This is useful when you want to bookmark a specific page of the wizard, or when you want to send a link to a specific page of the wizard to someone else.
-
-Requesting a specific wizard page may fail in case the page is non-existent or not accessible to the current user. In particular, this is the case for non-available pages in validated modes. In that case, the wizard displays the first available page of the wizard as if the parameter had not been provided.
-
-When using paged repeated sections, the URL parameter indicates the repetition number, and requesting that URL parameter value shows the given repetition if it exists and is available. If the page name doesn't correspond to a repeated section, or if the index requested is out of bounds, the wizard displays the first available page of the wizard as if the parameter had not been provided. The index is 1-based and encoded after an encoded `/` character (`%2F`), for example:
+When using paged repeated sections, the repetition index (1-based) is appended after an encoded `/` character (`%2F`):
 
 ```
 /fr/orbeon/travel/edit/28431b9fac9ba642a6bf8408a513538a97273483
     ?fr-wizard-page=detail-section%2F2
 ```
 
-It is possible to disable this behavior by setting the following property to `false`:
+If the requested page is non-existent or not accessible (for example, a non-available page in validated modes, or an out-of-bounds repetition index), the wizard displays the first available page as if the parameter had not been provided.
+
+\[SINCE Orbeon Forms 2025.1.1\]
+
+The `update-url-param` property controls whether the wizard updates the `fr-wizard-page` URL parameter as users navigate between pages. It defaults to `true`.
 
 ```xml
-<property 
+<property
     as="xs:boolean"
-    name="oxf.xforms.xbl.fr.wizard.allow-url-param.*.*"                   
-    value="false"/>
+    name="oxf.xforms.xbl.fr.wizard.update-url-param.*.*"
+    value="true"/>
 ```
+
+Setting `allow-url-param` to `true` and `update-url-param` to `false` is useful when you want to provide links to a specific page (for example, a link to return to a draft on a given page), but don't want users to inadvertently copy a page-specific URL from the browser's address bar.
 
 It is possible to read the current wizard page name using the [`fr:wizard-current-page-name()`](../../xforms/xpath/extension-form-runner.md#fr-wizard-current-page-name) function. This can be used for example whe calling a process from a button to pass the current wizard page name as a parameter to the service URL.
 
