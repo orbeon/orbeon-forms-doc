@@ -455,6 +455,25 @@ If the property is missing or empty, no annotation takes place. For example:
 </form>
 ```
 
+## Including non-persisted control values
+
+By default, the `send()` action does not include non-persisted control values in the XML data sent to the service. This is because such values are not stored in the database. However, if you want to include non-persisted control values in the XML data sent to the service, you can set the `keep-non-persisted-values` parameter to `true`:
+
+```xml
+<property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form" >
+    send(
+        uri                       = "https://example.org/accept-form",
+        method                    = "POST",
+        content                   = "xml",
+        keep-non-persisted-values = "true"
+    )
+</property>
+```
+
+See also:
+ 
+- Blog post: [Non-persisted control values](https://www.orbeon.com/2026/03/non-persisted-control-values)
+
 ## Debugging the `send` action
 
 The `send` action operates on the server, so you won't see the data submitted in your browser's dev tools, in particular.
