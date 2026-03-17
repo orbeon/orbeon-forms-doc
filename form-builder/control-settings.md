@@ -27,6 +27,11 @@ See [Renaming of controls and formulas](formulas.md#renaming-of-controls-and-for
 
 The following options are available:
 
+* **Persist control value:**
+  * [\[SINCE Orbeon Forms 2025.1.1\]](/release-notes/orbeon-forms-2025.1.1.md)
+  * Persist the value of this control. This is selected by default for most form controls, except for the Explanatory Text and Button controls. When not selected, the control value is not persisted in the database.
+  * When this option is not selected, it is not possible to index or encrypt control data (see below).
+  * See also: [Non-persisted control values](https://www.orbeon.com/2026/03/non-persisted-control-values)
 * **Index control:**
   * SINCE Orbeon Forms 2021.1
   * Index the value of this control even if it's not shown or searchable from the Summary page, or bulk editable. This makes the control accessible from the [search API](../form-runner/api/persistence/search.md).
