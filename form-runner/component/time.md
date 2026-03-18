@@ -93,7 +93,7 @@ When doing so, the time format is determined by the browser based on the user's 
 
 ### Output format
 
-\[SINCE Orbeon Forms 2022.1.1\
+\[SINCE Orbeon Forms 2022.1.1\]
 
 The Time component adds an `output-format` parameter. This parameter can be used to override the global property at the control level, the form level, or via properties-local.xml with the following new property:
 
