@@ -36,7 +36,7 @@ With smart input, when the field loses the focus, the value you entered is parse
 Here are examples of supported smart time formats:
 
 | Example      | Note                       |
-| ------------ | -------------------------- |
+|--------------|----------------------------|
 | now          | current local time         |
 | 21           | equivalent to 9:00:00 pm   |
 | 800          | equivalent to 8:00:00 am   |
@@ -93,41 +93,7 @@ When doing so, the time format is determined by the browser based on the user's 
 
 ### Output format
 
-The `oxf.xforms.format.input.time` global property configures the default output format for all instances of the Time component. The default value is:
-
-```xml
-<property
-    as="xs:string"
-    name="oxf.xforms.format.input.time" 
-    value="[h]:[m]:[s] [P,*-2]"/>
-```
-
-The format is a "picture string". These are examples of values supported:
-
-| Format                 | Example      | Description                                  | Since    |
-| ---------------------- | ------------ | -------------------------------------------- | -------- |
-| `[h]:[m]:[s] [P]`      | 2:05:12 p.m. | with dots in a.m. and p.m.                   |          |
-| `[h]:[m] [P]`          | 2:05 p.m.    | with dots in a.m. and p.m., no seconds       | 2020.1   |
-| `[h]:[m]:[s] [P,*-2]`  | 2:05:12 pm   | without dots in am and pm                    |          |
-| `[h]:[m] [P,*-2]`      | 2:05 pm      | without dots in am and pm, no seconds        | 2020.1   |
-| `[h]:[m]:[s] [PN]`     | 2:05:12 P.M  | uppercase A.M. and P.M.                      | 2022.1.1 |
-| `[h]:[m] [PN]`         | 2:05 P.M.    | uppercase A.M. and P.M.                      | 2022.1.1 |
-| `[h]:[m]:[s] [PN,*-2]` | 2:05:12 PM   | uppercase AM and PM                          | 2022.1.1 |
-| `[h]:[m] [PN,*-2]`     | 2:05 PM      | uppercase AM and PM                          | 2022.1.1 |
-| `[H]:[m]:[s]`          | 14:05:12     | 24-hour time                                 |          |
-| `[H]:[m]`              | 14:05        | 24-hour time                                 |          |
-| `[H01]:[m]:[s]`        | 03:05:12     | 24-hour time, 2-digit hour                   | 2022.1.1 |
-| `[H01]:[m]`            | 03:05        | 24-hour time, 2-digit hour (without seconds) | 2022.1.1 |
-
-Important:
-
-* The order of components (hours, minutes, etc.) cannot be changed.
-* The separator is always `:`.
-* Milliseconds are not supported.
-
-When seconds are omitted, the user is still allowed to enter non-zero seconds. However, they will not be shown by the control when the user leaves the control.
-
-\[SINCE Orbeon Forms 2022.1.1]
+\[SINCE Orbeon Forms 2022.1.1\
 
 The Time component adds an `output-format` parameter. This parameter can be used to override the global property at the control level, the form level, or via properties-local.xml with the following new property:
 
@@ -147,9 +113,45 @@ As usual, the property can use an app name and form name (with possible wildcard
     value="[H01]:[m]"/>
 ```
 
-The value is in the same format as the global `oxf.xforms.format.input.time` property.
+The format is a "picture string". These are examples of values supported:
+
+| Format                 | Example      | Description                                  | Since    |
+|------------------------|--------------|----------------------------------------------|----------|
+| `[h]:[m]:[s] [P]`      | 2:05:12 p.m. | with dots in a.m. and p.m.                   |          |
+| `[h]:[m] [P]`          | 2:05 p.m.    | with dots in a.m. and p.m., no seconds       | 2020.1   |
+| `[h]:[m]:[s] [P,*-2]`  | 2:05:12 pm   | without dots in am and pm                    |          |
+| `[h]:[m] [P,*-2]`      | 2:05 pm      | without dots in am and pm, no seconds        | 2020.1   |
+| `[h]:[m]:[s] [PN]`     | 2:05:12 P.M  | uppercase A.M. and P.M.                      | 2022.1.1 |
+| `[h]:[m] [PN]`         | 2:05 P.M.    | uppercase A.M. and P.M.                      | 2022.1.1 |
+| `[h]:[m]:[s] [PN,*-2]` | 2:05:12 PM   | uppercase AM and PM                          | 2022.1.1 |
+| `[h]:[m] [PN,*-2]`     | 2:05 PM      | uppercase AM and PM                          | 2022.1.1 |
+| `[H]:[m]:[s]`          | 14:05:12     | 24-hour time                                 |          |
+| `[H]:[m]`              | 14:05        | 24-hour time                                 |          |
+| `[H01]:[m]:[s]`        | 03:05:12     | 24-hour time, 2-digit hour                   | 2022.1.1 |
+| `[H01]:[m]`            | 03:05        | 24-hour time, 2-digit hour (without seconds) | 2022.1.1 |
 
 By default, the `output-format` parameter is not set, and the global `oxf.xforms.format.input.time` property is used for backward compatibility.
+
+\[BEFORE Orbeon Forms 2022.1.1\]
+
+The `oxf.xforms.format.input.time` global property configures the default output format for all instances of the Time component. The default value is:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.format.input.time" 
+    value="[h]:[m]:[s] [P,*-2]"/>
+```
+
+The value is in the same format as the `output-format` above.
+
+Important:
+
+* The order of components (hours, minutes, etc.) cannot be changed.
+* The separator is always `:`.
+* Milliseconds are not supported.
+
+When seconds are omitted, the user is still allowed to enter non-zero seconds. However, they will not be shown by the control when the user leaves the control.
 
 ### Native time picker
 
