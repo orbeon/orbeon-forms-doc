@@ -22,6 +22,8 @@ When accessing the _new_ page of a singleton form, the following will happen dep
 
 \[SINCE Orbeon Forms 2024.1.3] Database checks now prevent a user who already has access to form data from creating additional data, protecting singleton forms against adversarial attempts to create multiple entries. This improvement is available on all supported databases except Oracle.
 
+\[SINCE Orbeon Forms 2026.1, 2025.1.1, 2024.1.5] The above count doesn't take into account any autosaved documents that might exist for the current form. Moreover, if user stays on the _new_ page (case 0 above), then [autosave](../../form-runner/persistence/autosave.md) is disabled.
+
 ![Message when multiple documents are found](../images/singleton-form-multiple.png)
 
 ### Summary page
