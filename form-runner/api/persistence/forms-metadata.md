@@ -81,17 +81,17 @@ One or multiple filters can be specified. If no filter is present, all results a
 
 The following metadata are supported:
 
-| Metadata           | Value type      | Language-specific | Description                                                                                                           |
-|--------------------|-----------------|-------------------|-----------------------------------------------------------------------------------------------------------------------|
-| `application-name` | String          | No                | Application name                                                                                                      |
-| `form-name`        | String          | No                | Form name                                                                                                             |
-| `form-version`     | Number          | No                | Form version                                                                                                          |
-| `created`          | Date/time       | No                | Creation date/time                                                                                                    |
-| `last-modified`    | Date/time       | No                | Last modification date/time                                                                                           |
-| `last-modified-by` | String          | No                | Username of the user who last modified the form definition                                                            |
-| `title`            | String          | Yes               | Form title                                                                                                            |
-| `available`        | Boolean         | No                | Whether the form definition is available                                                                              |
-| `operations`       | List of strings | No                | Space-separated list of operations allowed on the form (`admin`, `create`, `read`, `update`, `delete` and/or `list`)  |
+| Metadata           | Value type         | Language-specific | Description                                                                                                          |
+|--------------------|--------------------|-------------------|----------------------------------------------------------------------------------------------------------------------|
+| `application-name` | String             | No                | Application name                                                                                                     |
+| `form-name`        | String             | No                | Form name                                                                                                            |
+| `form-version`     | Number or `latest` | No                | Form version (the special value `latest` is only supported with `match="exact"`)                                     |
+| `created`          | Date/time          | No                | Creation date/time                                                                                                   |
+| `last-modified`    | Date/time          | No                | Last modification date/time                                                                                          |
+| `last-modified-by` | String             | No                | Username of the user who last modified the form definition                                                           |
+| `title`            | String             | Yes               | Form title                                                                                                           |
+| `available`        | Boolean            | No                | Whether the form definition is available                                                                             |
+| `operations`       | List of strings    | No                | Space-separated list of operations allowed on the form (`admin`, `create`, `read`, `update`, `delete` and/or `list`) |
 
 The following match types are supported and follow the same semantics as in the [Search API](search.md#match-types):
 
@@ -104,8 +104,6 @@ The following match types are supported and follow the same semantics as in the 
 | `lte`       | Date/time, number | Lower than or equal                                            |
 | `lt`        | Date/time, number | Lower than                                                     |
 | `token`     | List of strings   | All listed values must be found in the metadata (in any order) |
-
-For an `exact` match on `form-version`, the special value `latest` can be used to retrieve the latest version of each form.
 
 The following combinators are supported:
 
