@@ -1,0 +1,34 @@
+<properties
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:oxf="http://www.orbeon.com/oxf/processors"
+    xmlns:fr="http://orbeon.org/oxf/xml/form-runner"
+    xmlns:xxf="http://orbeon.org/oxf/xml/xforms"
+>
+
+	<property
+		as="xs:string"
+		name="oxf.fr.authentication.method"
+		value="header"/>
+	<property
+		as="xs:string"
+		name="oxf.fr.authentication.header.username"
+		value="Orbeon-Username"/>		
+    <property 
+		as="xs:boolean"
+		name="oxf.fr.authentication.user-menu.enable"                          
+		value="true"/>
+
+    <property
+        as="xs:string"
+        name="oxf.crypto.password"
+        value=""/>
+    <property
+        as="xs:string"
+        name="oxf.fr.field-encryption.password"
+        value=""/>
+    <property
+        as="xs:string"
+        name="oxf.fr.access-token.password"
+        value=""/>
+
+</properties>
