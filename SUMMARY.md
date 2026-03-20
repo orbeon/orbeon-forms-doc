@@ -6,6 +6,7 @@
   * [Configuration banner](installation/configuration-banner.md)
   * [Docker](installation/docker.md)
   * [Azure](installation/azure.md)
+  * [IIS](installation/iis.md)
   * [Tomcat](installation/tomcat.md)
   * [WildFly](installation/wildfly.md)
   * [WebSphere](installation/websphere.md)
