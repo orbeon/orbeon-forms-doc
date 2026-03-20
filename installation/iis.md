@@ -4,7 +4,7 @@
 
 Orbeon Forms runs on a Java servlet container such as Tomcat. In some environments, particularly in organizations using Windows-based infrastructure, IIS (Internet Information Services) is the standard web server, and Windows Authentication (often backed by Active Directory) is the required authentication mechanism. In such cases, IIS can act as a reverse proxy in front of Tomcat, and forward the authenticated user's identity to Orbeon Forms. This page will walk you though the steps to set up IIS as a reverse proxy for Orbeon Forms running on Tomcat.
 
-<figure><img src="images/iis-reverse-proxy.png" alt="IIS as a reverse proxy for Tomcat" width="210"></figure>
+<figure><img src="images/iis-reverse-proxy.png" alt="IIS as a reverse proxy for Tomcat" width="420"></figure>
 
 ## Steps
 
