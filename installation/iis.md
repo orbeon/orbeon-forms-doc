@@ -22,14 +22,14 @@ Download the following files by clicking on each link, then clicking on the "Dow
 
 - If you've already set up a rewrite rule to forward requests to Tomcat, for now, disable that rule.
 - Move the `user.aspx` in your site directory (the default is `C:\inetpub\wwwroot`).
-- Load http://localhost/user.aspx. It should show something like *Page.User.Identity.Name: DOMAIN\Homer Simpson*.
+- Access [http://localhost/user.aspx](http://localhost/user.aspx). It should show something like *Page.User.Identity.Name: DOMAIN\Homer Simpson*.
 
 ### Pass the user information to Tomcat through a header
 
 - In the directory where you put `user.aspx`, create a directory named `App_Code`. Move the `WindowsAuthHeaderModule.cs` inside that `App_Code` directory. This module sets the `HTTP_ORBEON_USERNAME` variable to the part of Windows username that follows the `\` character.
 - Move the `web.config` in the same directory where you have `App_Code` and `user.aspx`.
 - Move `user.jsp` in the directory `webapps\ROOT`, inside the Tomcat directory (for instance `C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\ROOT`). This page will show the value of the `Orbeon-Username` header.
-- Access [http://localhost/user.jsp](http://localhost/user.jsp). You should see something like: *Forwarded User: Homer Simpson*.
+- Access [http://localhost/user.jsp](http://localhost/user.jsp). It should show something like: *Forwarded User: Homer Simpson*.
 
 ### Configure Orbeon Forms to use the value of that header
 
