@@ -4,7 +4,7 @@
 
 This component represents an attachment to a form.
 
-![The attachment control with multiple selection enabled](images/xbl-attachment-multiple.png)
+<figure><img src="images/xbl-attachment-multiple.png" alt="" width="779"><figcaption><p>The attachment control with multiple selection enabled</p></figcaption></figure>
 
 ## Accepted mediatypes
 
@@ -73,11 +73,11 @@ By default, the user can download back the attached files. In some cases, this i
 
 Form Builder offers an option in the "Control Settings" dialog.
 
-![Allow download option](images/xbl-attachment-control-settings.png)
+<figure><img src="images/xbl-attachment-control-settings.png" alt="" width="1002"><figcaption><p>Allow download option</p></figcaption></figure>
 
-![With download allowed](images/xbl-attachment-multiple.png)
+<figure><img src="images/xbl-attachment-multiple.png" alt="" width="779"><figcaption><p>With download allowed</p></figcaption></figure>
 
-![With download disallowed](images/xbl-attachment-multiple-nodownload.png)
+<figure><img src="images/xbl-attachment-multiple-nodownload.png" alt="" width="777"><figcaption><p>With download disallowed</p></figcaption></figure>
 
 ## Mediatype determination
 
