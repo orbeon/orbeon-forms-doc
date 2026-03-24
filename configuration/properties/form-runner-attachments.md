@@ -113,6 +113,29 @@ The value of `oxf.fr.detail.attachment.mediatypes` can be overridden:
 - for a specific form, from the Form Builder "Form Settings} dialog
 - for a specific control, using a common constraint the Form Builder "Control Settings" dialog
 
+## Upload error appearance
+
+[\[SINCE Orbeon Forms 2025.1.1\]](/release-notes/orbeon-forms-2025.1.1.md)
+
+When a file upload is rejected (for example, because the file is too large or has a disallowed mediatype), by default Orbeon Forms shows the error in a dialog. With this property, you can choose to show the error message inline, directly inside the attachment control.
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.attachment.upload-error-appearance.*.*"
+    value="dialog"/>
+```
+
+| Value    | Description                                               |
+|----------|-----------------------------------------------------------|
+| `dialog` | Show upload errors in a dialog (default).                 |
+| `inline` | Show upload errors inline, inside the attachment control. |
+
+The value of `oxf.xforms.xbl.fr.attachment.upload-error-appearance` can be overridden:
+
+- for a specific form, from the Form Builder "Form Settings" dialog
+- for a specific control, from the Form Builder "Control Settings" dialog
+
 ## See also
 
 - Configuration properties
