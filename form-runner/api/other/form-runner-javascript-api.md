@@ -272,9 +272,7 @@ ORBEON.fr.API.getForm().activateProcessButton("wizard-next")
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-Form Runner simple processes now support a [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback) server action that allows client-side callback functions to be called.
-
-You add a callback function on the client using:
+Form Runner simple processes now support a [`callback()` action](/form-runner/advanced/buttons-and-processes/actions-form-runner.md#callback) server action that allows client-side callback functions to be called. You add a callback function on the client using:
 
 ```javascript
 function addCallback(name: string, fn: () => void): void
@@ -284,6 +282,18 @@ function addCallback(name: string, fn: () => void): void
 |----------|----------|--------------|----------------------------------------------------|
 | **name** | Yes      | `string`     | Name passed to the server-side `callback()` action |
 | **fn**   | Yes      | `() => void` | Callback function to be called on the client       |
+
+
+For instance, the following registers a callback named `your-callback`:
+
+```javascript
+ORBEON.xforms.Events.orbeonLoadedEvent.subscribe(function () {
+    const form = ORBEON.fr.API.getForm();
+    form.addCallback("your-callback", function () {
+        // Do something
+    });
+});
+```
 
 You remove a callback function on the client using:
 
