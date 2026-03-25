@@ -131,6 +131,8 @@ When a file upload is rejected (for example, because the file is too large or ha
 | `dialog` | Show upload errors in a dialog (default).                 |
 | `inline` | Show upload errors inline, inside the attachment control. |
 
+<figure><img src="/configuration/images/upload-error-inline.png" width="449" alt=""><figcaption>Inline upload error</figcaption></figure>
+
 The value of `oxf.xforms.xbl.fr.attachment.upload-error-appearance` can be overridden:
 
 - for a specific form, from the Form Builder "Form Settings" dialog
