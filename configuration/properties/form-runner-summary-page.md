@@ -47,7 +47,9 @@ By default, the Summary page shows a Created and Modified columns:
 
 ![Created and Last Modified](../../form-runner/images/summary-created-last-modified.png)
 
-You can remove either one of those columns by setting the appropriate property value to `false`:
+You can remove either one of those columns by setting the appropriate property value to `false`.
+
+\[SINCE Orbeon Forms 2026.1] These properties can also be overridden per form using the [Summary Page tab](../../form-builder/form-settings/summary-page.md) of the Form Settings dialog.
 
 ```xml
 <property
@@ -67,11 +69,15 @@ You can remove either one of those columns by setting the appropriate property v
 
 See [Workflow stage](../../form-runner/feature/workflow-stage.md#showing-the-workflow-stage-in-the-summary-page).
 
+\[SINCE Orbeon Forms 2026.1] This property can also be overridden per form using the [Summary Page tab](../../form-builder/form-settings/summary-page.md) of the Form Settings dialog.
+
 ## Show created by and last modified by users
 
 \[SINCE Orbeon Forms 2021.1]
 
-You can add either one of those columns by setting the appropriate property value to `true`:
+You can add either one of those columns by setting the appropriate property value to `true`.
+
+\[SINCE Orbeon Forms 2026.1] These properties can also be overridden per form using the [Summary Page tab](../../form-builder/form-settings/summary-page.md) of the Form Settings dialog.
 
 ```xml
 <property 
@@ -109,3 +115,4 @@ Even when set to `false`, if the `form-version` request parameter is passed to t
 ## See also
 
 * [Detail page configuration properties](form-runner-detail-page.md)
+* [Summary Page tab of the Form Settings dialog](../../form-builder/form-settings/summary-page.md)

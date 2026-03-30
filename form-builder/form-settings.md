@@ -211,6 +211,14 @@ See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-
   * \[SINCE Orbeon Forms 2018.1]
   * For details, see [Automatic calculations dependencies](../form-runner/feature/automatic-calculations-dependencies.md).
 
+## Summary Page
+
+\[SINCE Orbeon Forms 2026.1]
+
+This tab allows you to configure the visibility of form metadata columns (Created, Last Modified, Workflow Stage, Created By, Last Modified By) on the [Summary page](../form-runner/feature/summary-page.md). For each column, you can choose to use the global property, show, or hide the column, and optionally restrict visibility by role.
+
+See [Summary Page](form-settings/summary-page.md).
+
 ## About this Form
 
 ![About this Form](form-settings/about.png)
@@ -237,6 +245,7 @@ Form statistics show counts of various form elements.
 * [Wizard View](../form-runner/feature/wizard-view.md)
 * [Simple data migration](../form-runner/feature/simple-data-migration.md)
 * [Automatic calculations dependencies](../form-runner/feature/automatic-calculations-dependencies.md)
+* [Summary page configuration](form-settings/summary-page.md)
 * Blog posts
   * [New layout choices for PDF and browser views](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html)
   * [Improved constraints on attachments uploads](https://blog.orbeon.com/2017/04/improved-constraints-on-attachments.html)

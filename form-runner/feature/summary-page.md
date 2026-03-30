@@ -18,10 +18,10 @@ The Form Runner Summary page shows, for a given published form, the list of acce
 
 * **Created:**
   * This is the data's creation date.
-  * You can optionally remove this column via [configuration](../../configuration/properties/form-runner-summary-page.md).
+  * You can optionally remove this column via [configuration](../../configuration/properties/form-runner-summary-page.md) or the [Summary Page tab](../../form-builder/form-settings/summary-page.md) of the Form Settings dialog.
 * **Modified:**
   * This is the data's last modification date.
-  * You can optionally remove this column via [configuration](../../configuration/properties/form-runner-summary-page.md).
+  * You can optionally remove this column via [configuration](../../configuration/properties/form-runner-summary-page.md) or the [Summary Page tab](../../form-builder/form-settings/summary-page.md) of the Form Settings dialog.
 * **Custom columns:**
   * You specify those when editing the form definition, using the [Control Settings dialog](../../form-builder/control-settings.md).
 
@@ -120,6 +120,7 @@ See [Summary page buttons and processes](../advanced/buttons-and-processes/summa
 * [Published Forms page](published-forms-page.md)
 * [Forms Admin page](forms-admin-page.md)
 * [Summary page configuration properties](../../configuration/properties/form-runner-summary-page.md)
+* [Summary Page tab of the Form Settings dialog](../../form-builder/form-settings/summary-page.md)
 * [Summary page buttons and processes](../advanced/buttons-and-processes/summary-page-buttons-and-processes.md)
 * [Versioning](versioning.md)
 * [Form Builder Summary page](../../form-builder/summary-page.md)
