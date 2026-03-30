@@ -14,9 +14,9 @@ The following form metadata columns can be configured:
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | Created          | [`oxf.fr.summary.show-created`](../../configuration/properties/form-runner-summary-page.md#created-and-last-modified-columns)                   |
 | Last Modified    | [`oxf.fr.summary.show-last-modified`](../../configuration/properties/form-runner-summary-page.md#created-and-last-modified-columns)             |
-| Workflow Stage   | [`oxf.fr.summary.show-workflow-stage`](../../configuration/properties/form-runner-summary-page.md#show-the-workflow-stage)                      |
 | Created By       | [`oxf.fr.summary.show-created-by`](../../configuration/properties/form-runner-summary-page.md#show-created-by-and-last-modified-by-users)       |
 | Last Modified By | [`oxf.fr.summary.show-last-modified-by`](../../configuration/properties/form-runner-summary-page.md#show-created-by-and-last-modified-by-users) |
+| Workflow Stage   | [`oxf.fr.summary.show-workflow-stage`](../../configuration/properties/form-runner-summary-page.md#show-the-workflow-stage)                      |
 
 ## Display options
 
