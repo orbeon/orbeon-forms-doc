@@ -14,11 +14,11 @@ As a form author, you can mark a form as _singleton_ in Form Builder by opening 
 
 ### New page
 
-When accessing the _new_ page of a singleton form, the following will happen depending on how many form data the current user can access for that form:
+When accessing the *new* page of a singleton form, the behavior depends on how many form records the current user can access for that form:
 
-* 0: if she can't access any existing data for the current form, then she stays on the _new_ page for the form.
-* 1: if she can access exactly one form data, she is redirected to the _edit_ page for that form.
-* 2 or more: a message, as warns her she can't create any additional form data, and links to the _summary_ page for that form, which she can use to pick the form data she wants to edit.
+- 0: if the user has no access to any existing records for the form, they remain on the *new* page.
+- 1: if the user can access exactly one record, they are redirected to the *edit* page for that form.
+- 2 or more: a warning message (shown below) informs the user that no additional records can be created. A button allows them to navigate to the *summary* page, where they can select a record to edit.
 
 \[SINCE Orbeon Forms 2024.1.3] Database checks now prevent a user who already has access to form data from creating additional data, protecting singleton forms against adversarial attempts to create multiple entries. This improvement is available on all supported databases except Oracle.
 
