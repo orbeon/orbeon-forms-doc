@@ -3,7 +3,7 @@
 ## Service endpoint
 
 | Operation | HTTP Method  | URL                                                                          |
-| --------- | ------------ | ---------------------------------------------------------------------------- |
+|-----------|--------------|------------------------------------------------------------------------------|
 | Create    | `PUT`        | `/fr/service/persistence/crud/$app/$form/$data-or-draft/$document/$filename` |
 | Read      | `GET`/`HEAD` | `/fr/service/persistence/crud/$app/$form/$data-or-draft/$document/$filename` |
 | Update    | `PUT`        | `/fr/service/persistence/crud/$app/$form/$data-or-draft/$document/$filename` |
