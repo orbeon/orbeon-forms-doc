@@ -7,11 +7,17 @@
 For Orbeon Forms 2026.1, we are planning to work on the following items:
 
 - Form Builder user interface:
-    - __Improved actions editor:__ We would like to improve the current editor to progressively support more of the action syntax. Actions are powerful but not always easy to use, and we want to make them more accessible to users of all levels. The plan is to start by migrating the older action format to 2018.2 action syntax at runtime ([#3855](https://github.com/orbeon/orbeon-forms/issues/3855)), then perform this migration at design time and update the existing Actions Editor to support the new syntax, and finally create a new editor supporting more of the Action Syntax ([#1298](https://github.com/orbeon/orbeon-forms/issues/1298)).
+    - __Improved actions editor:__ We would like to improve the current editor to progressively support more of the action syntax. Actions are powerful but not always easy to use, and we want to make them more accessible to users of all levels. Our plan is to do this in three steps:
+        1. Start by migrating the older action format to 2018.2 action syntax at runtime, see [#3855](https://github.com/orbeon/orbeon-forms/issues/3855).
+        2. Then perform this migration at design time and update the existing Actions Editor to support the new syntax.
+        3. Finally create a new editor supporting more of the Action Syntax, see [#1298](https://github.com/orbeon/orbeon-forms/issues/1298).
     - __Workflow editor:__ This has been a long-standing item, and we would like to make it possible to edit simple workflows in the Form Builder UI. See [#2256](https://github.com/orbeon/orbeon-forms/issues/2256).
     - __More user-friendly formulas:__ See [#2282](https://github.com/orbeon/orbeon-forms/issues/2282).
 - Form Runner user interface:
-    - __Styles/theme editor:__ With 2025.1, we have refactored the CSS to use variables. The next step will be to expose the UI configuration at a higher level in the Form Runner UI. See [#4140](https://github.com/orbeon/orbeon-forms/issues/4140). 
+    - __Styles/theme editor:__ With 2025.1, we have refactored the CSS to use variables. This was a major step, and we now want to provide a more modern theme, and enable users to create their own themes. Our plan is to do this in three steps:
+        1. Put in place a system that allows properties to define themes and to select a theme, with each theme being a set of (CSS variable → value). Use this system to create a default theme with the existing CSS variables values, which we could call "2025.1".
+        2. Create a new, more modern theme, which we could call "2026.1", and make it the default. While doing so, we might find that we need new CSS variables, or existing variables to be changed.
+        3. Create a high level UI allowing users to configure to customize the main aspects of a theme, see [#4140](https://github.com/orbeon/orbeon-forms/issues/4140).
     - __Properties editor:__ Similarly, we now have a powerful API to define configuration properties. We'd like to add a UI to edit those properties so that administrators, form authors, and end users alike can change settings without having to edit server-side configuration files. See [#2238](https://github.com/orbeon/orbeon-forms/issues/2238).
 - Additional form controls:
     - __Improved phone number control:__ See [#6734](https://github.com/orbeon/orbeon-forms/issues/6734).
