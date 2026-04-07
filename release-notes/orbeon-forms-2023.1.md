@@ -408,7 +408,7 @@ If you don't wish this behavior, you can turn it off globally with the following
 
 ### CRUD API
 
-Using the [CRUD API](../form-runner/api/persistence/crud/) to `PUT` data or data attachments now requires the presence in the database of the corresponding form definitions.
+Using the [CRUD API](/form-runner/api/persistence/crud.md) to `PUT` data or data attachments now requires the presence in the database of the corresponding form definitions.
 
 In previous versions, in some cases, `PUT`ting data for a non-existent form definition could succeed. This is no longer the case, and you should make sure that a matching form definition exists before `PUT`ting data.
 
