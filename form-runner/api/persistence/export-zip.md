@@ -14,6 +14,10 @@ HTTP `GET` to the following path:
 /fr/service/persistence/export
 ```
 
+[\[SINCE Orbeon Forms 2025.1.1\]](/release-notes/orbeon-forms-2025.1.1.md)
+
+You can also use the `POST` method to avoid URL length limits, with the same path and the same parameters in the request body as form parameters. Simply encode parameters in the body of the request as `application/x-www-form-urlencoded`.
+
 ## Purpose
 
 The Zip Export API is used to export a form definition and its data in a single ZIP file. This is internally used by the [Forms Admin page](/form-runner/feature/forms-admin-page.md) to export a form definition and its data.
