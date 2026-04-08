@@ -24,6 +24,8 @@ In this release, we have addressed many issues, including:
     * `fr|databound-select1-search`: don't evaluate resource at design-time ([\#7555](https://github.com/orbeon/orbeon-forms/issues/7555))
     * HTTP Service Editor grid menu is cropped ([\#7463](https://github.com/orbeon/orbeon-forms/issues/7463))
     * Container Settings: completion menu truncated by dialog ([\#7317](https://github.com/orbeon/orbeon-forms/issues/7317))
+    * "Cannot read properties of null" in Form Builder's Form Settings ([\#7587](https://github.com/orbeon/orbeon-forms/issues/7587))
+    * When in-place editing a control label drag-and-dropping another control cancels the label edition ([\#6867](https://github.com/orbeon/orbeon-forms/issues/6867))
 * Form Runner
     * Help popover too wide when shown over the control ([\#7462](https://github.com/orbeon/orbeon-forms/issues/7462))
     * Support forcing path style in the S3 bucket config ([\#7466](https://github.com/orbeon/orbeon-forms/issues/7466))
@@ -56,6 +58,10 @@ In this release, we have addressed many issues, including:
     * When a control's value changes, do not mark it as visited if the control is focused ([\#7574](https://github.com/orbeon/orbeon-forms/issues/7574))
     * Possible deadlock with concurrent search and deletes ([\#7503](https://github.com/orbeon/orbeon-forms/issues/7503))
     * Normalize app/form name case from form definition ([\#7172](https://github.com/orbeon/orbeon-forms/issues/7172))
+    * Export: support POST so that URL limit is not exceeded ([\#7459](https://github.com/orbeon/orbeon-forms/issues/7459))
+    * More user-friendly file names in persistence ([\#6565](https://github.com/orbeon/orbeon-forms/issues/6565))
+    * In wizard TOC, hints for section labels, shown on hover, incorrectly contain HTML tags ([\#7595](https://github.com/orbeon/orbeon-forms/issues/7595))
+    * Wizard pager for top-level repeated section incorrectly disables "Next" icon ([\#7229](https://github.com/orbeon/orbeon-forms/issues/7229))
 * XBL Components
     * Date and Time field not to show error after date is selected ([\#7461](https://github.com/orbeon/orbeon-forms/issues/7461))
     * Clearer distinction in the date control between interacting with the datepicker and the field ([\#7518](https://github.com/orbeon/orbeon-forms/issues/7518))
@@ -63,9 +69,11 @@ In this release, we have addressed many issues, including:
 * Accessibility
     * Dropdown with search creates two elements with `role="combobox"`, one is missing `aria-controls` ([\#7442](https://github.com/orbeon/orbeon-forms/issues/7442))
     * Screen reader to announce section name in addition to field label ([\#7451](https://github.com/orbeon/orbeon-forms/issues/7451))
+    * Attachment control "Cancel" link should be localized in Form Runner ([\#7562](https://github.com/orbeon/orbeon-forms/issues/7562))
 * Offline
     * JS env: zero length file size constraint not checked ([\#7522](https://github.com/orbeon/orbeon-forms/issues/7522))
     * JS env: default attachment error action runs ([\#7563](https://github.com/orbeon/orbeon-forms/issues/7563))
+    * Support customized attachment filenames in offline mode ([\#7082](https://github.com/orbeon/orbeon-forms/issues/7082))
 * Embedding
     * JavaScript error when destroying a form using a lease and embedded with the JavaScript API ([\#7535](https://github.com/orbeon/orbeon-forms/issues/7535))
 * Distribution
