@@ -23,7 +23,13 @@ The following is not a valid value, because it doesn't have a timezone offset an
 
 - `2024-06-30T12:34:56` 
 
-In particular, the standard `current-dateTime()` function returns a value with the timezone offset, and it can be used to set the value of a timestamp component to the current time:
+In particular the following functions return a value with a timezone offset:
+
+- `current-dateTime()`
+- [fr:modified-dateTime()](/xforms/xpath/extension-form-runner.md#frmodified-datetime)
+- [fr:created-dateTime()](/xforms/xpath/extension-form-runner.md#frcreated-datetime)
+ 
+In particular, these can be used with:
 
 - [Formulas](/form-builder/formulas.md): see the "Initial" or "Calculated Value" formulas 
 - [Action syntax](/form-builder/actions-syntax.md): see the `<fr:control-setvalue>` action
