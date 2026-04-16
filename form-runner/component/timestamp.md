@@ -14,9 +14,22 @@ The timestamp component is a readonly form control able to show an instant in ti
 
 `fr:timestamp` must be bound to the `xs:dateTime` type.
 
-In addition, it expects a value with a timezone offset or the suffix `Z` for UTC. For example, `2024-06-30T12:34:56Z` or `2024-06-30T12:34:56+02:00` are valid values, while `2024-06-30T12:34:56` is not. The standard `current-dateTime()` function returns a value with the timezone offset, so it can be used to set the value of a timestamp component to the current time.
+In addition, it expects a value with a timezone offset or the suffix `Z` for UTC. For example these are valid values:
 
-While the timezone offset in the value can have meaning, the main function it serves is to refer to an absolute point in time (or *instant*). That timezone offset is not used for formatting the value to the user, see below.
+- `2024-06-30T12:34:56Z`
+- `2024-06-30T12:34:56+02:00`
+
+The following is not a valid value, because it doesn't have a timezone offset and represents a *local time*:
+
+- `2024-06-30T12:34:56` 
+
+In particular, the standard `current-dateTime()` function returns a value with the timezone offset, and it can be used to set the value of a timestamp component to the current time:
+
+- [Formulas](/form-builder/formulas.md): see the "Initial" or "Calculated Value" formulas 
+- [Action syntax](/form-builder/actions-syntax.md): see the `<fr:control-setvalue>` action
+- [simple process](/form-runner/advanced/buttons-and-processes/actions-form-runner-control-setvalue.md): see the `control-setvalue()` action 
+
+_NOTE: While the timezone offset in the value can have meaning, its main function is to refer to an absolute point in time (or *instant*). That timezone offset is not used for formatting the value to the user, see below._
 
 ## Timezone
 
