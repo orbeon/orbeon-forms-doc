@@ -8,7 +8,7 @@
 
 The timestamp component is a readonly form control able to show an instant in time, with date, time, and timezone. It does not support user input: instead, it is meant to show a value, for example the last modified date of a form.
 
-![Timestamp component](../images/xbl-timestamp.webp)
+![Timestamp component](images/xbl-timestamp.webp)
 
 ## Datatype
 
