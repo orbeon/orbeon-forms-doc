@@ -8,7 +8,11 @@
 
 The timestamp component is a readonly form control able to show an instant in time, with date, time, and timezone. It does not support user input: instead, it is meant to show a value, for example the last modified date of a form.
 
-<figure><img src="images/xbl-timestamp.webp" alt="" width="242"><figcaption>Timestamp component]</figcaption></figure>
+<figure><img src="images/xbl-timestamp.webp" alt="" width="242"><figcaption>Timestamp component</figcaption></figure>
+
+## Usage
+
+From Form Builder, insert the Timezone control from the toolbox.
 
 ## Datatype
 
@@ -45,7 +49,7 @@ When displaying a timestamp, the value is converted to the current user's local 
 
 ### Server-side
 
-When providing a value on the server, for example when producing a PDF file, the value is converted to a timezone provided on the server, as follows:
+When rendering on the server, for example when producing a PDF file, the value is converted to a timezone provided on the server, as follows:
 
 - `user.timezone` property, if set, for example to `Europe/Paris`
 - `oxf.fr.default-timezone` property, if set
