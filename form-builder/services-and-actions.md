@@ -7,7 +7,10 @@ Orbeon Forms comes with a few powerful options to perform complex operations on 
 
 The following diagram illustrates how Actions and Simple Processes relate to a form:
 
-![Actions and processes](images/actions-processes-form.png)
+<figure>
+    <img src="images/actions-processes-form.png" alt="Actions and processes" width="500">
+    <figcaption>Actions and processes</figcaption>
+</figure>
 
 For more details, see the following blog post: [Making sense of Form Runner Actions](https://www.orbeon.com/2024/09/making-sense-form-runner-actions).
 
