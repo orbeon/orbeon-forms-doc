@@ -14,7 +14,7 @@ As a form author, you can mark a form as _singleton_ in Form Builder by opening 
 
 ### Properties
 
-[\[SINCE Orbeon Forms 2025.1.1\]](/release-notes/orbeon-forms-2025.1.1.md)
+\[SINCE Orbeon Forms 2025.1.1\]
 
 You can use the following property to enable the singleton behavior for forms that have the *Singleton Form* setting set to *Use property* in the *Form Settings* dialog.
 
