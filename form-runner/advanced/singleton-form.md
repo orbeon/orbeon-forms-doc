@@ -4,11 +4,35 @@
 
 Most forms are filled out for a given purpose, and then submitted. When the initial purpose comes up again, the form is filled and submitted one more time. For instance, a _car registration_ form would be such an example. However, certain forms are often used more like "documents", that users create, and then come back to update, without creating another instance of that form/document. Those forms are here referred to as _singleton forms_.
 
-## In Form Builder
+## Configuration
+
+### In Form Builder
 
 As a form author, you can mark a form as _singleton_ in Form Builder by opening the _Form Settings_ dialog, and clicking on the _Singleton form_ checkbox.
 
 ![Form Options](../../form-builder/form-settings/form-options.png)
+
+### Properties
+
+[\[SINCE Orbeon Forms 2025.1.1\]](/release-notes/orbeon-forms-2025.1.1.md)
+
+You can use the following property to enable the singleton behavior for forms that have the *Singleton Form* setting set to *Use property* in the *Form Settings* dialog.
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fr.detail.singleton.enabled.*.*"
+    value="false"/>
+```
+
+You can set the following property to define what happens when users access the `/new` page of a singleton form and exactly one existing document is found. If set to `open` (the default), users are automatically redirected to the `/edit` page for the existing document. If set to `prompt`, users see a message informing them that existing form data was found, with a button to navigate to it. When two or more existing documents are found, a message is always shown regardless of this property, since automatic redirection is not possible in that case.
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.singleton.if-one-exists.*.*"
+    value="open"/>
+```
 
 ## In Form Runner
 
