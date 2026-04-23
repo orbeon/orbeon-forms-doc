@@ -6,7 +6,7 @@ Today we released Orbeon Forms 2025.1.1! This maintenance release mainly contain
 
 * [Orbeon Forms 2025.1 PE](orbeon-forms-2025.1.md)
 
-## New minor features
+## New features
 
 This release includes the following new features:
 
