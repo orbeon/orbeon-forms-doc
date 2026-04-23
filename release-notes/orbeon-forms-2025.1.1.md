@@ -6,6 +6,18 @@ Today we released Orbeon Forms 2025.1.1! This maintenance release mainly contain
 
 * [Orbeon Forms 2025.1 PE](orbeon-forms-2025.1.md)
 
+## New minor features
+
+This release includes the following new features:
+
+- Option to not persist the value of a form control ([blog](https://www.orbeon.com/2026/03/non-persisted-control-values))
+- New Timestamp form control ([doc](https://doc.orbeon.com/form-runner/component/timestamp))
+- New International Bank Account Number (IBAN) form control ([doc](https://doc.orbeon.com/form-runner/component/iban))
+- New `control-setvalue()` action for simple processes ([doc](https://doc.orbeon.com/form-runner/advanced/buttons-and-processes/actions-form-runner/actions-form-runner-control-setvalue))
+- New `process-dateTime()` XPath function ([doc](https://doc.orbeon.com/xforms/xpath/extension-functions/extension-form-runner#fr-process-datetime))
+- Summary page: new option to show/hide metadata columns based on role ([doc](https://doc.orbeon.com/form-builder/form-settings/summary-page#role-restriction))
+- Better feedback for rejected files with a new option to show the message inline ([doc](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-detail-page/form-runner-attachments#upload-error-appearance))
+
 ## Issues addressed
 
 In this release, we have addressed over 100 issues, including:
@@ -27,7 +39,6 @@ In this release, we have addressed over 100 issues, including:
     - Menu for repeated grid positioned incorrectly in Form Builder when `.fb-main` is scrolled down ([#7502](https://github.com/orbeon/orbeon-forms/issues/7502))
     - Repeated section template sometimes crashes when removing a repetition ([#7506](https://github.com/orbeon/orbeon-forms/issues/7506))
     - Clicking on the right of "Delete template" in Email Settings deletes the template ([#6058](https://github.com/orbeon/orbeon-forms/issues/6058))
-    - Option to not persist the value of a form control ([#1671](https://github.com/orbeon/orbeon-forms/issues/1671))
     - `fr|databound-select1-search`: don't evaluate resource at design-time ([#7555](https://github.com/orbeon/orbeon-forms/issues/7555))
     - Some walls are not positioned correctly when loading the All Form Controls form in Form Builder ([#7597](https://github.com/orbeon/orbeon-forms/issues/7597))
     - Form Builder scrolls to wrong position when clicking on an Explanatory Text ([#7599](https://github.com/orbeon/orbeon-forms/issues/7599))
@@ -41,7 +52,7 @@ In this release, we have addressed over 100 issues, including:
     - Wizard pager for top-level repeated section incorrectly disables "Next" icon ([#7229](https://github.com/orbeon/orbeon-forms/issues/7229))
     - Dark color scheme (dark mode) enhancements ([#7407](https://github.com/orbeon/orbeon-forms/issues/7407))
     - HTML label with `<div>` shows in blue on new line in the error summary ([#7410](https://github.com/orbeon/orbeon-forms/issues/7410))
-    - Setting o`xf.fr.detail.button.lease.show-in-view-mode.visible.*.*` to false makes the button readonly instead of hiding it ([#7411](https://github.com/orbeon/orbeon-forms/issues/7411))
+    - Setting `oxf.fr.detail.button.lease.show-in-view-mode.visible.*.*` to false makes the button readonly instead of hiding it ([#7411](https://github.com/orbeon/orbeon-forms/issues/7411))
     - User can submit form after losing the lease if the Review Form Validation Messages dialog is shown ([#7421](https://github.com/orbeon/orbeon-forms/issues/7421))
     - With flat view enabled, can't publish form with control named `_` ([#7433](https://github.com/orbeon/orbeon-forms/issues/7433))
     - Make error messages easier to read by removing the full file size and adding a significant digit to the compact version ([#7437](https://github.com/orbeon/orbeon-forms/issues/7437))
@@ -62,8 +73,6 @@ In this release, we have addressed over 100 issues, including:
     - Navbar workflow stage margins are incorrect ([#7505](https://github.com/orbeon/orbeon-forms/issues/7505))
     - Workflow stage not correctly restored upon mode change ([#7513](https://github.com/orbeon/orbeon-forms/issues/7513))
     - Purge API not deleting files ([#7517](https://github.com/orbeon/orbeon-forms/issues/7517))
-    - Simple processes: add `control-setvalue()` action ([#7509](https://github.com/orbeon/orbeon-forms/issues/7509))
-    - `process-dateTime()` XPath function ([#7480](https://github.com/orbeon/orbeon-forms/issues/7480))
     - Section templates: value dependencies ([#7427](https://github.com/orbeon/orbeon-forms/issues/7427))
     - Process save action to ensure document is synchronized ([#7533](https://github.com/orbeon/orbeon-forms/issues/7533))
     - Continue button missing in Review Form Validation Messages dialog if shown from the view page ([#7534](https://github.com/orbeon/orbeon-forms/issues/7534))
@@ -84,7 +93,6 @@ In this release, we have addressed over 100 issues, including:
     - Clarify message shown for singleton forms when multiple documents are found ([#7589](https://github.com/orbeon/orbeon-forms/issues/7589))
     - --orbeon-label-color doesn't change label color in PDF in 'color' PDF color mode ([#7590](https://github.com/orbeon/orbeon-forms/issues/7590))
     - Export: support POST so that URL limit is not exceeded ([#7459](https://github.com/orbeon/orbeon-forms/issues/7459))
-    - Summary: show/hide metadata columns based on role ([#7553](https://github.com/orbeon/orbeon-forms/issues/7553))
     - In wizard TOC, hints for section labels, shown on hover, incorrectly contain HTML tags ([#7595](https://github.com/orbeon/orbeon-forms/issues/7595))
     - Value of hidden field doesn't show in template PDF ([#3894](https://github.com/orbeon/orbeon-forms/issues/3894))
     - If a draft exists, after selecting to either use it or start from scratch, the "Leave Site?" alert shows even no changes to the were made ([#7606](https://github.com/orbeon/orbeon-forms/issues/7606))
@@ -102,14 +110,11 @@ In this release, we have addressed over 100 issues, including:
     - JS env: zero length file size constraint not checked ([#7522](https://github.com/orbeon/orbeon-forms/issues/7522))
     - Offline: `controlVariableValueForAction()` not found ([#7470](https://github.com/orbeon/orbeon-forms/issues/7470))
 - Form controls
-    - Better feedback for rejected files: option show message inline ([#4294](https://github.com/orbeon/orbeon-forms/issues/4294))
-    - Option to adjust date/time to JavaScript timezone ([#7519](https://github.com/orbeon/orbeon-forms/issues/7519))
     - Label of the dynamic dropdown doesn't update on language change ([#7401](https://github.com/orbeon/orbeon-forms/issues/7401))
     - Formatted Text Area on ulterior page of wizard in cross-origin embedded form fails to loads model.min.js from incorrect host ([#7400](https://github.com/orbeon/orbeon-forms/issues/7400))
     - Dropdown with search creates two elements with role="combobox", one is missing aria-controls ([#7442](https://github.com/orbeon/orbeon-forms/issues/7442))
     - Invalid `aria-readonly="true"` on calculated value without border ([#7448](https://github.com/orbeon/orbeon-forms/issues/7448))
     - Date and Time field not to show error after date is selected ([#7461](https://github.com/orbeon/orbeon-forms/issues/7461))
-    - New component for IBAN ([#7455](https://github.com/orbeon/orbeon-forms/issues/7455))
     - Datepicker does not change to the selected language ([#7520](https://github.com/orbeon/orbeon-forms/issues/7520))
     - `fr:tinymce`: content not available in PDF template ([#7537](https://github.com/orbeon/orbeon-forms/issues/7537))
     - Dropdown to always show empty as the first value, instead of "Please select:" ([#6389](https://github.com/orbeon/orbeon-forms/issues/6389))
