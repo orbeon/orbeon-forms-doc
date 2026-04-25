@@ -1,6 +1,6 @@
 # Orbeon Forms 2025.1.1
 
-**xxx, April xxx, 2026**
+**Friday, April 24, 2026**
 
 Today we released Orbeon Forms 2025.1.1! This maintenance release mainly contains bug-fixes and is recommended for all users of:
 
@@ -46,6 +46,7 @@ In this release, we have addressed over 100 issues, including:
     - Configuration to show message if one form data is found for singleton forms ([#7591](https://github.com/orbeon/orbeon-forms/issues/7591))
     - "Cannot read properties of null" in Form Builder's Form Settings ([#7587](https://github.com/orbeon/orbeon-forms/issues/7587))
     - "Undeclared variable" error with itemset filter ([#7504](https://github.com/orbeon/orbeon-forms/issues/7504))
+    - CSS class with AVT and if/then/else fails ([#7625](https://github.com/orbeon/orbeon-forms/issues/7625))
 - Form Runner
     - Wizard status: mark section as completed when visited if no required fields ([#7494](https://github.com/orbeon/orbeon-forms/issues/7494))
     - For the form metadata API, the persistence proxy incorrectly expects implementation of the persistence of API to always return all versions ([#7565](https://github.com/orbeon/orbeon-forms/issues/7565))
@@ -130,6 +131,7 @@ In this release, we have addressed over 100 issues, including:
     - Improve `<p:choose>` caching ([#7471](https://github.com/orbeon/orbeon-forms/issues/7471))
     - Connection interruption errors not caught for static files ([#7532](https://github.com/orbeon/orbeon-forms/issues/7532))
     - Connection not closed after `xforms-submit-error` ([#7571](https://github.com/orbeon/orbeon-forms/issues/7571))
+    - Persistent cache entries not cleared when the session expires ([#7572](https://github.com/orbeon/orbeon-forms/issues/7572))
 - Embedding
     - Embedding: top menu hidden by content ([#7418](https://github.com/orbeon/orbeon-forms/issues/7418))
     - `replaceState()` can fail in some mobile embedded environments ([#7428](https://github.com/orbeon/orbeon-forms/issues/7428))
@@ -153,7 +155,6 @@ In this release, we have addressed over 100 issues, including:
     - FormMetadataApiTest intermittently failing on Travis ([#7547](https://github.com/orbeon/orbeon-forms/issues/7547))
     - Infinispan cache lock conflict with multiple Orbeon instances ([#7415](https://github.com/orbeon/orbeon-forms/issues/7415))
     - Part of RestApiTest using S3 occasionally fails on CI ([#7585](https://github.com/orbeon/orbeon-forms/issues/7585))
-    - Persistent cache entries not cleared when the session expires ([#7572](https://github.com/orbeon/orbeon-forms/issues/7572))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page, or use our Docker images.
 
