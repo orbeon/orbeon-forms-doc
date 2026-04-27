@@ -47,6 +47,7 @@ In this release, we have addressed over 100 issues, including:
     - "Cannot read properties of null" in Form Builder's Form Settings ([#7587](https://github.com/orbeon/orbeon-forms/issues/7587))
     - "Undeclared variable" error with itemset filter ([#7504](https://github.com/orbeon/orbeon-forms/issues/7504))
     - CSS class with AVT and if/then/else fails ([#7625](https://github.com/orbeon/orbeon-forms/issues/7625))
+    - Action Editor to upgrade syntax for setting parameter names using /*/my-param syntax ([#7631](https://github.com/orbeon/orbeon-forms/issues/7631))
 - Form Runner
     - Wizard status: mark section as completed when visited if no required fields ([#7494](https://github.com/orbeon/orbeon-forms/issues/7494))
     - For the form metadata API, the persistence proxy incorrectly expects implementation of the persistence of API to always return all versions ([#7565](https://github.com/orbeon/orbeon-forms/issues/7565))
@@ -136,6 +137,7 @@ In this release, we have addressed over 100 issues, including:
     - Embedding: top menu hidden by content ([#7418](https://github.com/orbeon/orbeon-forms/issues/7418))
     - `replaceState()` can fail in some mobile embedded environments ([#7428](https://github.com/orbeon/orbeon-forms/issues/7428))
     - JavaScript error when destroying a form using a lease and embedded with the JavaScript API ([#7535](https://github.com/orbeon/orbeon-forms/issues/7535))
+    - `orbeon-embedding.jar` not to contain SLF4J classes ([#7337](https://github.com/orbeon/orbeon-forms/issues/7337))
 - Accessibility
     - Arrow for help has unintended black background ([#7439](https://github.com/orbeon/orbeon-forms/issues/7439))
     - Help popover too wide when shown over the control ([#7462](https://github.com/orbeon/orbeon-forms/issues/7462))
