@@ -18,6 +18,12 @@ This release includes the following new features:
 - Summary page: new option to show/hide metadata columns based on role ([doc](https://doc.orbeon.com/form-builder/form-settings/summary-page#role-restriction))
 - Better feedback for rejected files with a new option to show the message inline ([doc](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-detail-page/form-runner-attachments#upload-error-appearance))
 
+## Performance enhancmenets
+
+This release also includes an important performance enhancement related to page load time. See the blog post [Page load performance](https://www.orbeon.com/2026/04/page-load-performance) for details.
+
+![](https://www.orbeon.com/assets/posts/performance-graph.webp)
+
 ## Issues addressed
 
 In this release, we have addressed over 100 issues, including:
@@ -127,7 +133,7 @@ In this release, we have addressed over 100 issues, including:
     - Clearer distinction in the date control between interacting with the datepicker and the field ([#7518](https://github.com/orbeon/orbeon-forms/issues/7518))
     - Attachment control "Cancel" link should be localized in Form Runner ([#7562](https://github.com/orbeon/orbeon-forms/issues/7562))
 - Performance
-    - Improve caching to reduce delay between request and XForms processing ([#1239](https://github.com/orbeon/orbeon-forms/issues/1239))
+    - Improve caching to reduce delay between request and XForms processing ([#1239](https://github.com/orbeon/orbeon-forms/issues/1239)) ([blog](https://www.orbeon.com/2026/04/page-load-performance))
     - `controlNameFromIdOpt()` is a hotspot ([#7432](https://github.com/orbeon/orbeon-forms/issues/7432))
     - Improve `<p:choose>` caching ([#7471](https://github.com/orbeon/orbeon-forms/issues/7471))
     - Connection interruption errors not caught for static files ([#7532](https://github.com/orbeon/orbeon-forms/issues/7532))
