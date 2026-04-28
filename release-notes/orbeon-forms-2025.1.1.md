@@ -18,7 +18,7 @@ This release includes the following new features:
 - Summary page: new option to show/hide metadata columns based on role ([doc](https://doc.orbeon.com/form-builder/form-settings/summary-page#role-restriction))
 - Better feedback for rejected files with a new option to show the message inline ([doc](https://doc.orbeon.com/configuration/properties/form-runner/form-runner-detail-page/form-runner-attachments#upload-error-appearance))
 
-## Performance enhancmenets
+## Performance enhancements
 
 This release also includes an important performance enhancement related to page load time. See the blog post [Page load performance](https://www.orbeon.com/2026/04/page-load-performance) for details.
 
