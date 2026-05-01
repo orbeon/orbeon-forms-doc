@@ -2,11 +2,31 @@
 
 ## Overview
 
-The source code editor component uses the excellent [CodeMirror](https://codemirror.net/) library, hence the name of the XBL element name: `<fr:code-mirror>`. You can use it in situations where you want to users to be able to view or edit source code. You bind it to the node that contains the text to view or edit, just like you would with an `<xforms:textarea>`. If the node you bind it to is readonly, then users will be able to view the source but not edit it.
+The source code editor component uses the excellent [CodeMirror](https://codemirror.net/) library, hence the name of the XBL element name: `<fr:code-mirror>`. You can use it in situations where you want to users to be able to view or edit source code. You bind it to the node that contains the text to view or edit, just like you would with an `<xf:textarea>`. If the node you bind it to is readonly, then users will be able to view the source but not edit it.
 
-![](images/xbl-code-mirror.png)
+## Form Builder usage
 
-\[LIMITATION] At this point, the source editor can't be configured, and it always does syntax coloring interpreting the source as XML.
+Form Builder uses this component to edit the source of a form.
+
+![Editing the form source in Form Builder](images/xbl-code-mirror.webp)
+
+## Configuration
+
+[\[SINCE Orbeon Forms 2025.1.1\]](/release-notes/orbeon-forms-2025.1.1.md)
+
+You can change the default theme used by the editor by setting the following property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.code-mirror.theme"
+    value="default"/>
+```
+
+For Form Builder, the following values are supported:
+
+- `solarized dark` (used by default by Form Builder with 2025.1, 2024.1)
+- `solarized light`
 
 ## Styling
 
