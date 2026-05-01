@@ -65,23 +65,23 @@ Available values:
 
 This property allows you to switch between the light and dark color schemes.
 
-_NOTE: This is a work in progress, and enhancements will be included in future releases. At the moment, both Form Builder and the Landing page only support the light color scheme._
+_NOTE: This is a work in progress, and enhancements will be included in future releases. At the moment, Form Builder only supports the light color scheme._
 
 For Form Runner Detail pages, use:
 
 ```xml
 <property
     as="xs:string"
-    name="oxf.fr.detail.color-scheme.*.*"
+    name="oxf.fr.style.color-scheme.*.*"
     value="dark"/>
 ```
 
-For other pages such as the Summary, Form Builder Forms, Published Forms, and Forms Admin pages, use the property without wildcards:
+For other pages (Summary, Form Builder Forms, Published Forms, Forms Admin, and Landing pages), use the property without wildcards:
 
 ```xml
 <property
     as="xs:string"
-    name="oxf.fr.detail.color-scheme"
+    name="oxf.fr.style.color-scheme"
     value="dark"/>
 ```
 
