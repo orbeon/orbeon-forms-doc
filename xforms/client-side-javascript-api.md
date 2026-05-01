@@ -301,6 +301,33 @@ The arguments of the listener for `errorEvent` are as follows:
         - If it happened in JavaScript: information of where the error happened (such as the file name and the line number).
         - If if happened on the server: detailed information about where the error happened (such as the invalid XPath expression and the file where that expression is found).
 
+### Ajax lifecycle DOM events
+
+[SINCE Orbeon Forms 2026.1]
+
+Two custom DOM events are fired during the XForms Ajax lifecycle:
+
+- `orbeon:event-queued` — fired on a control's element after an XForms event targeting that control has been queued for the next Ajax request.
+- `orbeon:updates-applied` — fired on the form element after an Ajax response has been processed and the DOM updated.
+
+Both events bubble, so a single listener on the form (or any ancestor) can observe events from all controls.
+
+Example:
+
+```javascript
+const form = document.querySelector("form.xforms-form");
+
+form.addEventListener("orbeon:event-queued", function (event) {
+    console.log("event queued for control", event.detail.control.id);
+});
+
+form.addEventListener("orbeon:updates-applied", function (event) {
+    console.log("updates applied to form", event.detail.form.id);
+});
+```
+
+`orbeon:event-queued` is not fired for events that don't target a control (such as the session heartbeat and polling events).
+
 ### Removing event listeners
 
 To remove your event listener on, say `orbeonLoadedEvent`, you'll need to implement your listener in a named function, say `myListener`:
