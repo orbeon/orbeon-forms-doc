@@ -20,13 +20,13 @@ You can change the default theme used by the editor by setting the following pro
 <property
     as="xs:string"
     name="oxf.xforms.xbl.fr.code-mirror.theme"
-    value="default"/>
+    value="solarized dark"/>
 ```
 
 For Form Builder, the following values are supported:
 
-- `solarized dark` (used by default by Form Builder with 2025.1, 2024.1)
-- `solarized light`
+- `solarized dark`: dark theme, used by default by Form Builder with 2025.1, 2024.1
+- `default`: a light theme
 
 ## XForms usage
 
