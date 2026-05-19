@@ -130,6 +130,8 @@ Run the [following DDL](relational-db-schema.md#db2) to create or update your Or
 
 ### Tomcat datasource configuration
 
+### Configuration of the database connection pool 
+
 When using Tomcat, you set up a JDBC data source for your database instance either:
 
 - in `server.xml` (not recommended by the Tomcat documentation because it is less flexible)
@@ -193,7 +195,26 @@ Here is an example of a context file. Note the enclosing `<Context>` element:
         url="jdbc:mysql://localhost:3306/orbeon"/>
 
 </Context>
-```  
+```
+
+#### Sizing of the database connection pool
+
+The examples above use `10` for the pool's `maxActive`. But you can configure these sizes depending on the configuration of your server.
+
+- By default, Orbeon Forms lets one thread enter for each available CPU core. See the [Limiter Filter](/configuration/advanced/limiter-filter.md).
+- Each thread that enters Orbeon Forms is meant to use at most one database connection.
+- There are some exceptions, however, and some asynchronous processing can run on a separate thread and may use a connection.
+
+Given this, a connection pool sized to have about twice the maximum number of connections allowed (`maxActive`) as the number of CPU cores is fine. For example: 
+
+- 4 cores → `maxActive="8"`
+- 10 cores → `maxActive="20"`
+
+It is acceptable to increase these values a little.
+
+If you disable the Limiter Filter and have more incoming connections than CPU cores, you might want to increase the pool size accordingly.
+
+#### See also
 
 See also the following external links:
 
