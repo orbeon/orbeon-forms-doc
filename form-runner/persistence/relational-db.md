@@ -130,7 +130,7 @@ Run the [following DDL](relational-db-schema.md#db2) to create or update your Or
 
 ### Tomcat datasource configuration
 
-### Configuration of the database connection pool 
+#### Configuration of the database connection pool 
 
 When using Tomcat, you set up a JDBC data source for your database instance either:
 
