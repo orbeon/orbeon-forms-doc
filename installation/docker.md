@@ -75,7 +75,7 @@ services:
     networks:
       - orbeon-forms-and-postgres
   postgres:
-    image: orbeon/postgres:2025.1-pe
+    image: orbeon/postgres:2025.1.1-pe
     restart: always
     ports:
       - ${ORBEON_POSTGRES_PORT:-5432}:5432
@@ -220,7 +220,7 @@ RUN rm -rf /tmp/orbeon
 The customized image above can then be built using the following command:
 
 ```bash
-docker build -f Dockerfile.mysql -t "orbeon/orbeon-forms-mysql:2025.1-pe" .
+docker build -f Dockerfile.mysql -t "orbeon/orbeon-forms-mysql:2025.1.1-pe" .
 ```
 
 For further information about configuring Orbeon Forms to use a different database, see [Using a relational database](/form-runner/persistence/relational-db.md).
