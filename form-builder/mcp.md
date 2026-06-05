@@ -109,6 +109,7 @@ copilot mcp add orbeon \
 
 Edit your `~/.gemini/antigravity-cli/mcp_config.json` to add the `orbeon` MCP server, for example:
 
+```
 {
   "mcpServers": {
     "orbeon": {
@@ -119,6 +120,7 @@ Edit your `~/.gemini/antigravity-cli/mcp_config.json` to add the `orbeon` MCP se
     }
   }
 }
+```
 
 #### Skill (optional)
 
