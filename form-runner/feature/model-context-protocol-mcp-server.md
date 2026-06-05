@@ -8,7 +8,7 @@ This is an experimental feature, which means that it is not yet fully documented
 
 ## What it does
 
-The Orbeon Form Builder MCP server exposes Form Builder functionality to AI assistants, such as ChatGPT, via the Model Context Protocol (MCP). This allows AI assistants to interact with Form Builder, for example to create forms based on user instructions.
+The Orbeon Form Builder MCP server exposes Form Builder functionality to AI assistants, such as ChatGPT, via the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), a standard protocol supported by most AI assistants. This allows AI assistants to interact with Form Builder, for example to create forms based on user instructions.
 
 ## Configuration
 
@@ -37,6 +37,8 @@ __WARNING: This will allow anyone to access the MCP server, which may have secur
 You can generate a token from Form Builder, using the "Create Model Context Protocol (MCP) token" dialog.
 
 ![Creating an MCP token in Form Builder](../images/mcp-token-dialog.webp)
+
+If choosing "Readonly" access, only read-only operations will be allowed, such as listing forms and retrieving form metadata. If choosing "Read/Write" access, all operations will be allowed, including creating and modifying forms.
 
 By default, the token validity is one day. You can change this by setting the following property:
 
@@ -119,6 +121,52 @@ You can also add to your AI assistant a skill file. The latest version of the sk
 ```
 
 Once the MCP server and skill configuration is done, you can start using the AI assistant to interact with Form Builder.
+
+## List of tools available
+
+### Form Lifecycle
+
+| Tool                   | Description                                                |
+|------------------------|------------------------------------------------------------|
+| `form_new`             | Create a new form and return a session ID                  |
+| `form_edit`            | Open an existing form for editing and return a session ID  |
+| `form_view`            | Open an existing form in view mode and return a session ID |
+| `form_save`            | Save the current form                                      |
+| `form_close`           | Close the current form                                     |
+| `form_set_title`       | Set the title of the current form                          |
+| `form_set_description` | Set the description of the current form                    |
+
+### Structure
+
+| Tool                          | Description                                                           |
+|-------------------------------|-----------------------------------------------------------------------|
+| `form_get_structure`          | Get the structure of the current form (sections, grids, and controls) |
+| `section_insert`              | Insert a new section into the form                                    |
+| `grid_insert`                 | Insert a new grid into a section                                      |
+| `container_move`              | Move a section or grid to a different location in the form            |
+| `section_grid_control_rename` | Rename a section, grid, or control by its current name                |
+| `section_grid_control_delete` | Delete a section, grid, or control by its name                        |
+| `section_control_set_label`   | Set the visible label of a section or control by its name             |
+
+### Controls
+
+| Tool                                   | Description                                                                                |
+|----------------------------------------|--------------------------------------------------------------------------------------------|
+| `control_insert`                       | Insert a new control into a grid                                                           |
+| `control_move`                         | Move a control into a different grid                                                       |
+| `control_set_items`                    | Set the static items (choices) for a selection control (dropdown, radio, checkboxes, etc.) |
+| `control_get_validation`               | Get validation settings (required, datatype, constraints) for a control                    |
+| `control_set_validation`               | Set validation settings (required, datatype, constraints) for a control                    |
+| `list_available_toolbox_form_controls` | List all available toolbox form controls with their types and details                      |
+
+### Languages
+
+| Tool                               | Description                                                                              |
+|------------------------------------|------------------------------------------------------------------------------------------|
+| `form_list_languages`              | List the languages currently configured in the form                                      |
+| `form_add_language`                | Add a new language to the form (copies existing resource structure for the new language) |
+| `form_remove_language`             | Remove a language and all its resource entries from the form                             |
+| `list_available_toolbox_languages` | List all languages available in Orbeon that can be added to the form                     |
 
 ## Usage patterns
 
