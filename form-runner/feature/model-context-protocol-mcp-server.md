@@ -8,7 +8,11 @@ This is an experimental feature, which means that it is not yet fully documented
 
 ## What it does
 
-The Orbeon Form Builder MCP server exposes Form Builder functionality to AI assistants, such as ChatGPT, via the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), a standard protocol supported by most AI assistants. This allows AI assistants to interact with Form Builder, for example to create forms based on user instructions.
+The Orbeon Form Builder MCP server exposes Form Builder functionality to AI assistants, such as ChatGPT, via the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), a standard protocol supported by most AI assistants. This allows AI assistants to interact with Form Builder, for example to:
+
+- create forms based on user instructions
+- modify existing forms based on user instructions
+- retrieve information about forms, such as their structure and metadata
 
 ## Configuration
 
