@@ -8,7 +8,7 @@ This is an early access feature, which means that it is not yet fully documented
 
 ## What it does
 
-The Form Builder MCP server exposes Form Builder functionality to AI agents via the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), a standard protocol supported by most AI agents. This allows AI agents to interact with Form Builder, for example to:
+The Form Builder MCP server exposes Form Builder functionality to AI agents via the MCP (Model Context Protocol), a standard protocol supported by most AI agents. This allows AI agents to interact with Form Builder, for example to:
 
 - create forms based on user instructions
 - modify existing forms based on user instructions
@@ -60,7 +60,7 @@ The duration is in minutes, so:
 - `44640` means 31 days (1 month)
 
 
-### AI agent configuration
+### Agent configuration
 
 In what follows:
 
@@ -137,13 +137,14 @@ As of Summer 2026, WebMCP is a nascent, but very primising standard. The idea is
 Today, we get a taste for what using WebMCP will feel like by using a regular exteral agent, such as Claude or Codex. To set this up:   
 
 1. In Chrome, open `chrome://flags/`, search for "MCP", enable both "WebMCP support in DevTools" and "WebMCP for testing", then restart the browser.
-2. Set up your agent to add [Chrome DevTools for agents](https://github.com/ChromeDevTools/chrome-devtools-mcp). Make sure to use the `--autoConnect` parameter so your agent can connect to a live browser. Keep in mind that with that option your agent will be able to do anything you can do in the browser.
+2. Set up your agent to add [Chrome DevTools for agents](https://github.com/ChromeDevTools/chrome-devtools-mcp). Make sure to use the `--autoConnect` parameter so your agent can connect to a live browser (for instance, with Claude Code, use `claude mcp add chrome-devtools -s user -- npx chrome-devtools-mcp@latest --autoConnect`).
 3. In Chrome, open a form in Form Builder, and ask your agent "with Chrome DevTools, through WebMCP, give me a list of the control in the form I have open in Form Builder".
 
 This set up quite convenient:
 
 - It doesn't require users to generate a token in Form Builder and set up their agent with that token.
-- Users can see changed made to the form as they are made in the browser. They can also make their own changes, and use both the agent or the Form Builder UI in the same session to update a form. 
+- Users can see changes made to the form in real time in the browser. They can also make their own changes, and use both the agent and the Form Builder UI in the same session to update a form.
+- In the future, when agents built in the browser, such as Gemini in Chrome, support WebMCP, users will be able to do all of the above directly from their browser, without even having to install an external agent.
 
 ## Usage patterns
 
