@@ -170,13 +170,21 @@ Once the MCP server and skill configuration is done, you can start using the AI 
 
 ## Usage patterns
 
-With MCP support, you can use your AI assistant to interact with Form Builder in various ways, for example:
+With MCP support, you can use your AI assistant to interact with Form Builder in various ways using prompts such as:
 
 > Using Orbeon, create a new demo form for a personal collection of widgets. Split the form into sections, and use appropriate form controls. Then save and close the form.
 
+The result might look like this:
+
+![Example of a form created by an AI assistant](../images/mcp-widgets-form.webp)
+
+Further prompts can be used to update the form layout, for example:
+
 > Using Orbeon, edit form 33e71949140e1282b9428770176994bdb24c702a and modify the size of control widget-quantity to half its current width. 
 
-> Using Orbeon, update form 33e71949140e1282b9428770176994bdb24c702a to make the type of the widget-quantity field an non-negative integer.
+Or add validation rules:
+
+> Using Orbeon, update form 33e71949140e1282b9428770176994bdb24c702a to make the type of the widget-quantity field a non-negative integer.
 
 ## Using WebMCP
 
