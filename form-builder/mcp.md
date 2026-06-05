@@ -1,4 +1,4 @@
-# Model Context Protocol (MCP) Server
+# Form Builder MCP
 
 ## Availability
 
@@ -40,7 +40,7 @@ __WARNING: This will allow anyone to access the MCP server, which may have secur
 
 You can generate a token from Form Builder, using the "Create Model Context Protocol (MCP) token" dialog.
 
-![Creating an MCP token in Form Builder](../images/mcp-token-dialog.webp)
+![Creating an MCP token in Form Builder](images/mcp-token-dialog.webp)
 
 If choosing "Readonly" access, only read-only operations will be allowed, such as listing forms and retrieving form metadata. If choosing "Read/Write" access, all operations will be allowed, including creating and modifying forms.
 
@@ -180,7 +180,7 @@ With MCP support, you can use your AI assistant to interact with Form Builder in
 
 The result might look like this:
 
-![Example of a form created by an AI assistant](../images/mcp-widgets-form.webp)
+![Example of a form created by an AI assistant](images/mcp-widgets-form.webp)
 
 Further prompts can be used to update the form layout, for example:
 
