@@ -109,7 +109,7 @@ copilot mcp add orbeon \
 
 Edit your `~/.gemini/antigravity-cli/mcp_config.json` to add the `orbeon` MCP server, for example:
 
-```
+```json
 {
   "mcpServers": {
     "orbeon": {
@@ -130,22 +130,20 @@ You can also add to your AI agent a skill file. The latest version of the skill 
 .agents/skills/orbeon/SKILL.md
 ```
 
-## WebMCP (experimental)
+## WebMCP
 
-You can also use Orbeon Forms's AI agent support using WebMCP, an interface directly available in Form Builder.
+As of Summer 2026, WebMCP is a nascent, but very primising standard. The idea is that users will load a WebMCP page in their browser, open an agent in a sidebar, either built in the browser or provided by a browser extension, and the agent in the sidebar will be able to use tools provided by that page. Gemini in Chrome would be a prime candidate to support this, and other vendors like Anthropic or OpenAI could provide similar support through a browser extensions. This could provide a very seemless experience for users.
 
-As of Summer 2026, you can use it with:
+Today, we get a taste for what using WebMCP will feel like by using a regular exteral agent, such as Claude or Codex. To set this up:   
 
-- [WebMCP - Model Context Tool Inspector](https://chromewebstore.google.com/detail/webmcp-model-context-tool/gbpdfapgefenggkahomfgkhfehlcenpd)
-    - This is a Chrome extension which allows you to interact with the MCP server directly from the browser.
-    - In order to run prompts, you need a Google Gemini API key.
-    - You need to enable this with a flag in Chrome. 
-- [Chrome DevTools for agents](https://github.com/ChromeDevTools/chrome-devtools-mcp)
-    - This is a tool which allows you to use MCP to interact with Chrome DevTools.
-    - This includes WebMCP support, which allows AI agents to use this extension to access WebMCP.
-    - You need to enable this with a flag in Chrome.
+1. In Chrome, open `chrome://flags/`, search for "MCP", enable both "WebMCP support in DevTools" and "WebMCP for testing", then restart the browser.
+2. Set up your agent to add [Chrome DevTools for agents](https://github.com/ChromeDevTools/chrome-devtools-mcp). Make sure to use the `--autoConnect` parameter so your agent can connect to a live browser. Keep in mind that with that option your agent will be able to do anything you can do in the browser.
+3. In Chrome, open a form in Form Builder, and ask your agent "with Chrome DevTools, through WebMCP, give me a list of the control in the form I have open in Form Builder".
 
-It is expected that support for WebMCP will grow quickly, and that more tools will become available directly in the browser in the future.
+This set up quite convenient:
+
+- It doesn't require users to generate a token in Form Builder and set up their agent with that token.
+- Users can see changed made to the form as they are made in the browser. They can also make their own changes, and use both the agent or the Form Builder UI in the same session to update a form. 
 
 ## Usage patterns
 
