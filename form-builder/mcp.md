@@ -8,7 +8,7 @@ This is an experimental feature, which means that it is not yet fully documented
 
 ## What it does
 
-The Orbeon Form Builder MCP server exposes Form Builder functionality to AI assistants, such as ChatGPT, via the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), a standard protocol supported by most AI assistants. This allows AI assistants to interact with Form Builder, for example to:
+The Form Builder MCP server exposes Form Builder functionality to AI agents, such as Claude Code, Claude Cowork, OpenAI Codex, and Google Antigravity via the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro), a standard protocol supported by most AI agents. This allows AI agents to interact with Form Builder, for example to:
 
 - create forms based on user instructions
 - modify existing forms based on user instructions
@@ -27,20 +27,20 @@ By default, the MCP server is disabled. To enable it, set the following property
     value="true"/>
 ```
 
-The MCP server can support an authorization token. By default, a token is required. To disable token support, set the following property:
+By default, the MCP server requires a token, which is signed with a password. Set the token password with the following property:
 
 ```xml
 <property 
-    as="xs:boolean" 
-    name="oxf.fb.mcp.token.enable" 
-    value="false"/>
+    as="xs:string"  
+    name="oxf.fb.mcp.token.password" 
+    value="This is not a very safe password!"/>
 ```
 
-__WARNING: This will allow anyone to access the MCP server, which may have security implications. Use with caution, for testing, ideally only in restricted local environments.__
+In order to revoke all tokens issued, simply change the token password.
 
-You can generate a token from Form Builder, using the "Create Model Context Protocol (MCP) token" dialog.
+Once you have those two properties in place, you can generate a token from Form Builder, using the "Create Model Context Protocol (MCP) token" dialog.
 
-![Creating an MCP token in Form Builder](images/mcp-token-dialog.webp)
+<figure><img src="images/mcp-token-dialog.webp" alt="" width="510"><figcaption>Creating an MCP token in Form Builder</figcaption></figure>
 
 If choosing "Readonly" access, only read-only operations will be allowed, such as listing forms and retrieving form metadata. If choosing "Read/Write" access, all operations will be allowed, including creating and modifying forms.
 
@@ -59,20 +59,10 @@ The duration is in minutes, so:
 - `10080` means 7 days (1 week)
 - `44640` means 31 days (1 month)
 
-In order to use the token, you must also set a token password, which is used to sign the token. You can set the token password with the following property:
 
-```xml
-<property 
-    as="xs:string"  
-    name="oxf.fb.mcp.token.password" 
-    value="This is not a very safe password!"/>
-```
+### AI agent configuration
 
-In order to revoke all tokens issued, simply change the token password.
-
-### AI assistant configuration
-
-Command-line AI assistants usually have a configuration file:
+Command-line AI agents usually have a configuration file:
 
 - Copilot CLI: `~/.copilot/mcp-config.json`
 - Antigravity CLI: `~/.gemini/antigravity-cli/mcp_config.json`
@@ -118,13 +108,13 @@ Where:
 - `AUTHORIZATION` is the value of the `Authorization` header to use when making requests to the MCP server.
     - If token support is enabled, this should be in the format `Bearer 12345678`, where `12345678` is the token generated from Form Builder.
 
-You can also add to your AI assistant a skill file. The latest version of the skill file can be found [in the Orbeon Forms GitHub repository here](https://github.com/orbeon/orbeon-forms/blob/master/.agents/skills/orbeon/SKILL.md). You place such as file in the appropriate location for your AI assistant, for example:
+You can also add to your AI agent a skill file. The latest version of the skill file can be found [in the Orbeon Forms GitHub repository here](https://github.com/orbeon/orbeon-forms/blob/master/.agents/skills/orbeon/SKILL.md). You place such as file in the appropriate location for your AI agent, for example:
 
 ```
 .agents/skills/orbeon/SKILL.md
 ```
 
-Once the MCP server and skill configuration is done, you can start using the AI assistant to interact with Form Builder.
+Once the MCP server and skill configuration is done, you can start using the AI agent to interact with Form Builder.
 
 ## List of tools available
 
@@ -174,13 +164,13 @@ Once the MCP server and skill configuration is done, you can start using the AI 
 
 ## Usage patterns
 
-With MCP support, you can use your AI assistant to interact with Form Builder in various ways using prompts such as:
+With MCP support, you can use your AI agent to interact with Form Builder in various ways using prompts such as:
 
 > Using Orbeon, create a new demo form for a personal collection of widgets. Split the form into sections, and use appropriate form controls. Then save and close the form.
 
 The result might look like this:
 
-![Example of a form created by an AI assistant](images/mcp-widgets-form.webp)
+![Example of a form created by an AI agent](images/mcp-widgets-form.webp)
 
 Further prompts can be used to update the form layout, for example:
 
@@ -192,7 +182,7 @@ Or add validation rules:
 
 ## Using WebMCP
 
-You can also use Orbeon Forms's AI assistant support using WebMCP, an interface directly available in Form Builder.
+You can also use Orbeon Forms's AI agent support using WebMCP, an interface directly available in Form Builder.
 
 As of Summer 2026, you can use it with:
 
@@ -202,7 +192,7 @@ As of Summer 2026, you can use it with:
     - You need to enable this with a flag in Chrome. 
 - [Chrome DevTools for agents](https://github.com/ChromeDevTools/chrome-devtools-mcp)
     - This is a tool which allows you to use MCP to interact with Chrome DevTools.
-    - This includes WebMCP support, which allows AI assistants to use this extension to access WebMCP.
+    - This includes WebMCP support, which allows AI agents to use this extension to access WebMCP.
     - You need to enable this with a flag in Chrome.
 
 It is expected that support for WebMCP will grow quickly, and that more tools will become available directly in the browser in the future.
