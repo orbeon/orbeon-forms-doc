@@ -21,6 +21,8 @@ Orbeon Forms provides both:
 
 ## MCP Server
 
+<figure><img src="images/mcp-diagram.png" alt="" width="760"><figcaption>AI Agent connected to Form Builder MCP</figcaption></figure>
+
 ### Orbeon Forms configuration
 
 To use the MCE server, set the following property two properties. The first enables the MCP server (it is disabled by default). The second sets the password used to sign the token, which you need to set the value of this property to a secure password. 
