@@ -21,7 +21,7 @@ Orbeon Forms provides both:
 
 ## MCP Server
 
-<figure><img src="images/mcp-diagram.png" alt="" width="760"><figcaption>AI Agent connected to Form Builder MCP</figcaption></figure>
+<figure><img src="images/mcp-diagram.svg" alt="" width="760"><figcaption>AI Agent connected to Form Builder MCP</figcaption></figure>
 
 ### Orbeon Forms configuration
 
