@@ -89,7 +89,7 @@ fr:save-state(
 
 fr:save-state(
     $continuation-mode as xs:string?,
-    $continuation-workflow-state as xs:string?
+    $continuation-workflow-stage as xs:string?
 ) as xs:string
 ```
 
@@ -98,9 +98,9 @@ The parameters are optional:
 * `$continuation-mode`:
   * If provided, when the user comes back to Orbeon Forms, they will be put in that mode.
   * If not provided, they will be put in the same mode as when `fr:save-state()` was called.
-* `$continuation-workflow-state`:
-  * If provided, when the user comes back to Orbeon Forms, they will be put in that workflow state.
-  * If not provided, they will be put in the same workflow state as when `fr:save-state()` was called.
+* `$continuation-workflow-stage`:
+  * If provided, when the user comes back to Orbeon Forms, they will be put in that workflow stage.
+  * If not provided, they will be put in the same workflow stage as when `fr:save-state()` was called.
 
 This function can be called from a button process, for example:
 
