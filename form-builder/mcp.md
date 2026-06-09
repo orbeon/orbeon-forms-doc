@@ -21,7 +21,7 @@ Orbeon Forms provides both:
 
 ## MCP Server
 
-<figure><img src="images/mcp-diagram.svg" alt="" width="760"><figcaption>AI Agent connected to Form Builder MCP</figcaption></figure>
+<figure><img src="images/mcp-diagram.svg" alt="" width="690"><figcaption>AI agent connected to Form Builder MCP</figcaption></figure>
 
 ### Orbeon Forms configuration
 
@@ -133,6 +133,8 @@ You can also add to your AI agent a skill file. The latest version of the skill 
 ```
 
 ## WebMCP
+
+<figure><img src="images/webmcp-diagram.svg" alt="" width="690"><figcaption>AI agent connected to Form Builder through WebMCP</figcaption></figure>
 
 As of Summer 2026, WebMCP is a nascent, but very primising standard. The idea is that users will load a WebMCP page in their browser, open an agent in a sidebar, either built in the browser or provided by a browser extension, and the agent in the sidebar will be able to use tools provided by that page. Gemini in Chrome would be a prime candidate to support this, and other vendors like Anthropic or OpenAI could provide similar support through a browser extensions. This could provide a very seemless experience for users.
 
