@@ -4,15 +4,15 @@
 
 [\[SINCE Orbeon Forms 2025.1.2\]](/release-notes/orbeon-forms-2025.1.2.md)
 
-This is an early access feature, which means that it is not yet fully documented and may change in the future. If you are interested in using or contributing to this feature, please contact us.
+This is an early access feature. We're actively working to improve it by creating more tools that expose additional Form Builder functionality to AI agents and by improving the documentation and ergonomics. We believe it is already very useful, which is why we want to make it available to you early. Please let us know if you have any feedback.
 
 ## What it does
 
-The Form Builder MCP server exposes Form Builder functionality to AI agents via the MCP (Model Context Protocol), a standard protocol supported by most AI agents. This allows AI agents to interact with Form Builder, for example to:
+The Form Builder MCP server makes Form Builder's features available to AI agents through the MCP (Model Context Protocol), which is a standard protocol supported by most AI agents. This allows AI agents to interact with Form Builder to:
 
 - create forms based on user instructions
 - modify existing forms based on user instructions
-- retrieve information about forms, such as their structure and metadata
+- retrieve information about forms, such as their structure and metadata.
 
 Orbeon Forms provides both:
 
