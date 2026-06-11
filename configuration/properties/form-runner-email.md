@@ -61,6 +61,15 @@ The following properties control the connection to the SMTP server when using th
     value="secret"/>
 ```
 
+[SINCE Orbeon Forms 2026.1]
+
+The following optional properties control SMTP timeouts:
+
+- `connection-timeout`: socket connection timeout in milliseconds (by default, no timeout)
+- `timeout`: socket read timeout in milliseconds (by default, no timeout)
+- `write-timeout`: socket write timeout in milliseconds (by default, no timeout)
+- `quit-wait`: whether to wait for the server's response to the `QUIT` command (`xs:boolean`, default: `true`)
+
 ### SendGrid
 
 [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
