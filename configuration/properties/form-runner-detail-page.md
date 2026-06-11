@@ -469,7 +469,7 @@ See also [Run form in the background](../../form-runner/api/other/run-form-backg
 
 When data is _unsafe_, meaning that is has been modified but not saved yet, Form Runner by default shows a warning when attempting to navigate away from the current page or to close the current browser tab or window.
 
-![Chrome warning when leaving a page](../images/chrome-leave-site.png)
+<figure><img src="../images/chrome-leave-site.png" alt="" width="490"><figcaption>Chrome warning when leaving a page</figcaption></figure>
 
 In some cases, in particular when [embedding a form](../../form-runner/link-embed/java-api.md), this can be an inconvenience. The following property allows disabling this behavior.
 
