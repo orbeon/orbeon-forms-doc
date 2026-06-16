@@ -106,6 +106,29 @@ When versioning is supported, you can use the following property to control the 
 
 Use this property to change the default maximum number of grid columns form authors can create. The more columns there are, the more narrow each column is, and when columns become too narrow, some less "elastic" controls might not have enough space to render properly. You want to set this property to a "reasonable" value to reduce the chance of form authors ending up with columns that are too narrow to accommodate certain controls.
 
+## Pages in the new form wizard
+
+[SINCE Orbeon Forms 2025.1.2]
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fb.new-form.wizard-steps"
+    value="templates general-settings"/>
+```
+
+When you create a new form, the new form wizard shows up to two pages:
+
+- `templates`: a page where you can pick a template to start from
+- `general-settings`: a page where you enter the application name, form name, title, and description
+
+This property lists, as a space-separated list of tokens, which of these pages to show:
+
+- With both tokens (the default), the wizard shows the templates page followed by the general settings page.
+- With only `templates`, the wizard shows just the templates page.
+- With only `general-settings`, the wizard shows just the general settings page, and new forms are created as blank forms.
+- With neither token, the wizard doesn't show at all, and new forms are created directly as blank forms.
+
 ## Closing sections
 
 ```xml
