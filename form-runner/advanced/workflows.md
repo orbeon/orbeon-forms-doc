@@ -7,7 +7,7 @@ Many applications of forms require some kind of workflow. The typical example is
 
 In this kind of scenarios, there are several users involved, with different access rights to different parts of the form.
 
-Orbeon Forms has several workflow-related features, which we will cover in this post. We will examine the example of a construction permit application.
+Orbeon Forms has several workflow-related features, which we cover in this page. We will examine the example of a construction permit application.
 
 ## General workflow
 
