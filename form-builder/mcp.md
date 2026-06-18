@@ -136,9 +136,9 @@ You can also add to your AI agent a skill file. The latest version of the skill 
 
 <figure><img src="images/webmcp-diagram.svg" alt="" width="600"><figcaption>AI agent connected to Form Builder through WebMCP</figcaption></figure>
 
-As of Summer 2026, WebMCP is a nascent, but very primising standard. The idea is that users will load a WebMCP page in their browser, open an agent in a sidebar, either built in the browser or provided by a browser extension, and the agent in the sidebar will be able to use tools provided by that page. Gemini in Chrome would be a prime candidate to support this, and other vendors like Anthropic or OpenAI could provide similar support through a browser extensions. This could provide a very seemless experience for users.
+As of Summer 2026, WebMCP is a nascent, but very promising standard. The idea is that users will load a WebMCP page in their browser, open an agent in a sidebar, either built in the browser or provided by a browser extension, and the agent in the sidebar will be able to use tools provided by that page. Gemini in Chrome would be a prime candidate to support this, and other vendors like Anthropic or OpenAI could provide similar support through a browser extensions. This could provide a very seamless experience for users.
 
-Today, we get a taste for what using WebMCP will feel like by using a regular exteral agent, such as Claude or Codex. To set this up:   
+Today, we get a taste for what using WebMCP will feel like by using a regular external agent, such as Claude or Codex. To set this up:   
 
 1. In Chrome, open `chrome://flags/`, search for "MCP", enable both "WebMCP support in DevTools" and "WebMCP for testing", then restart the browser.
 2. Set up your agent to add [Chrome DevTools for agents](https://github.com/ChromeDevTools/chrome-devtools-mcp). Make sure to use the `--autoConnect` parameter so your agent can connect to a live browser (for instance, with Claude Code, use `claude mcp add chrome-devtools -s user -- npx chrome-devtools-mcp@latest --autoConnect`).
