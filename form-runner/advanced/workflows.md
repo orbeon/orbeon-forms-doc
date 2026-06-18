@@ -13,12 +13,7 @@ Orbeon Forms has several workflow-related features, which we will cover in this 
 
 Here is a diagram that shows a concrete workflow, similar to the expense report example, but for a construction permit application:
 
-<figure>
-    <a href="/form-runner/images/permit-workflow-diagram.webp" data-lightbox>
-        <img src="/form-runner/images/permit-workflow-diagram.webp" alt="Submission process">
-    </a>
-    <figcaption>Workflow diagram (click to enlarge)</figcaption>
-</figure>
+!Workflow diagram[](/form-runner/images/permit-workflow-diagram.webp)
 
 In this workflow, there are two types of users:
 
@@ -76,7 +71,7 @@ You create a form as usual with Form Builder. In this example, we used top-level
 
 This allows us to easily show/hide/make readonly different sections of the form based on the user role and workflow stage.
 
-![Step 1](/form-runner/images/permit-workflow-step1.webp){:standalone class=""}
+![Step 1](/form-runner/images/permit-workflow-step1.webp)
 
 ### 2. Workflow stages
 
@@ -103,7 +98,7 @@ In this example, we define the following user roles:
 
 In Form Builder, you can control the visibility and access to different parts of the form based on the user role and workflow stage. For example, the "Step 1: Submitter and permit information" section can be made readonly as follows:
 
-![Conditional readonly access to a form section](/form-runner/images/permit-workflow-section-readonly.webp){:standalone class=""}
+![Conditional readonly access to a form section](/form-runner/images/permit-workflow-section-readonly.webp)
 
 ### 4. Processes
 
@@ -122,12 +117,7 @@ Here are realistic examples of processes for the `submit`, `approve`, and `rejec
 
 These processes run entirely on the server.
 
-<figure>
-    <a href="/form-runner/images/permit-workflow-submit.webp" data-lightbox>
-        <img src="/form-runner/images/permit-workflow-submit.webp" alt="Submission process">
-    </a>
-    <figcaption>Submission process (click to enlarge)</figcaption>
-</figure>
+![Submission process](/form-runner/images/permit-workflow-submit.webp)
 
 ```xml
 <!-- `submit` process -->
@@ -150,12 +140,7 @@ These processes run entirely on the server.
 </property>
 ```
 
-<figure>
-    <a href="/form-runner/images/permit-workflow-approved.webp" data-lightbox>
-        <img src="/form-runner/images/permit-workflow-approved.webp" alt="Submission process">
-    </a>
-    <figcaption>Approval process (click to enlarge)</figcaption>
-</figure>
+![Approval process](/form-runner/images/permit-workflow-approved.webp)
 
 ```xml
 <!-- `approve` process -->
@@ -179,12 +164,7 @@ These processes run entirely on the server.
 </property>
 ```
 
-<figure>
-    <a href="/form-runner/images/permit-workflow-approved.webp" data-lightbox>
-        <img src="/form-runner/images/permit-workflow-approved.webp" alt="Submission process">
-    </a>
-    <figcaption>Submission process (click to enlarge)</figcaption>
-</figure>
+![Submission process](/form-runner/images/permit-workflow-approved.webp)
 
 ```xml
 <!-- `reject` process -->
@@ -236,7 +216,7 @@ Orbeon Forms can generate PDF documents automatically based on the form data. He
 
 For the final permit, a PDF template can be attached to the form, and filled by Orbeon Forms.
 
-![Form Builder PDF template UI](/form-runner/images/permit-workflow-pdf-template-ui.webp){:standalone class=""}
+![Form Builder PDF template UI](/form-runner/images/permit-workflow-pdf-template-ui.webp)
 
 This allows creating official-looking documents based on the form data.
 
@@ -264,13 +244,13 @@ email(
 
 Emails and the Confirmation Page share a very similar configuration, as they both contain similar content. With Form Builder, you can configure both types of templates. Here is the rejection email template:
 
-![Rejection email template](/form-runner/images/permit-workflow-email-settings-rejected.webp){:standalone class=""}
+![Rejection email template](/form-runner/images/permit-workflow-email-settings-rejected.webp)
 
 An email can include control values, as well as links pointing back to the form for later editing. Here, we use this feature to allow amending the permit request.
 
 Here is the confirmation page template:
 
-![Conformation page template](/form-runner/images/permit-workflow-confirmation-template.webp){:standalone class=""}
+![Conformation page template](/form-runner/images/permit-workflow-confirmation-template.webp)
 
 The Confirmation page can also let the user download a PDF document.
 
