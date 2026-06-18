@@ -220,7 +220,7 @@ For the final permit, a PDF template can be attached to the form, and filled by 
 
 This allows creating official-looking documents based on the form data.
 
-![Empty PDF template](/form-runner/images/permit-workflow-pdf-template.webp){:standalone class="" style="max-width: 512px; width: 100%"}
+![Empty PDF template](/form-runner/images/permit-workflow-pdf-template.webp)
 
 In processes, the `email` action can be configured to use a PDF template or an automatic PDF. For example, the following uses the `permit-rejected` email template, but no PDF template:
 
