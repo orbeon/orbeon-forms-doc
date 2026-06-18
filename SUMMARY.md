@@ -45,7 +45,7 @@
       * [Content-Security-Policy header](configuration/advanced/content-security-policy.md)
     * [SAP Hybris Module](configuration/advanced/sap-hybris.md)
     * [XForms logging](configuration/advanced/xforms-logging.md)
-    * [Worfklows](form-runner/advanced/workflows.md)
+    * [Workflows](form-runner/advanced/workflows.md)
   * [Troubleshooting](configuration/troubleshooting/README.md)
     * [Troubleshooting with the orbeon.log](configuration/troubleshooting/orbeon-log.md)
     * [Memory and threads](configuration/troubleshooting/memory-and-threads.md)
