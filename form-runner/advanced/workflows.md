@@ -13,7 +13,7 @@ Orbeon Forms has several workflow-related features, which we will cover in this 
 
 Here is a diagram that shows a concrete workflow, similar to the expense report example, but for a construction permit application:
 
-!Workflow diagram[](/form-runner/images/permit-workflow-diagram.webp)
+![Workflow diagram](/form-runner/images/permit-workflow-diagram.webp)
 
 In this workflow, there are two types of users:
 
