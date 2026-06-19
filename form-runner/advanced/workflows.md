@@ -3,7 +3,7 @@
 Many applications of forms require some kind of workflow. The typical example is that of an expense report:
 
 - the employee submits the expense report
-- a manager reviews the expense report and approves or reje ct it
+- a manager reviews the expense report and approves or reject it
 
 In this kind of scenarios, there are several users involved, with different access rights to different parts of the form.
 
@@ -54,7 +54,7 @@ Orbeon Forms solves these challenges with the following features:
 3. __Roles and conditions__ Depending on the user role (citizen or city employee) and the state of the workflow, different parts of the form can be shown or hidden.
 4. __Processes:__ Orbeon Forms supports *processes*, which can be used to automate actions such as sending emails or generating PDFs at different steps of the workflow.
 5. __Configurable buttons:__ Action buttons at the bottom of the form can be configured to trigger different processes, and to be shown or hidden based on the user role and workflow stage.
-6. __PDF generation:__ Orbeon Forms can generate PDF documents based on the form data, which can be used to create the official city permit, as well as intermediate documents attache to emails.
+6. __PDF generation:__ Orbeon Forms can generate PDF documents based on the form data, which can be used to create the official city permit, as well as intermediate documents attached to emails.
 7. __PDF templates:__ Orbeon Forms supports PDF templates, which can be used to create official-looking documents based on the form data.
 8. __Email templates:__ Orbeon Forms supports email templates, which can be used to create different email content based on the workflow stage and user role.
 9. __Confirmation page templates:__ Orbeon Forms supports confirmation page templates, which can be used to create different confirmation pages based on the workflow stage and user role.
