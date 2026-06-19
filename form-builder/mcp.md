@@ -19,6 +19,10 @@ Orbeon Forms provides both:
 - A Form Builder MCP Server; this is covered in the first section below.  
 - Support for WebMCP in Form Builder loaded in your browser; this is covered in the second section below.
 
+The following video shows you you can use the Form Builder MCP support in the browser:
+
+{% embed url="https://www.youtube.com/watch?v=-nQ0ed_BfOg" %}
+
 ## MCP Server
 
 <figure><img src="images/mcp-diagram.svg" alt="" width="690"><figcaption>AI agent connected to Form Builder MCP</figcaption></figure>
