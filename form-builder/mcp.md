@@ -6,6 +6,10 @@
 
 This is an early access feature. We're actively working to improve it by creating more tools that expose additional Form Builder functionality to AI agents and by improving the documentation and ergonomics. We believe it is already very useful, which is why we want to make it available to you early. Please let us know if you have any feedback.
 
+Watch the video which shows Form Builder MCP support in the browser:
+
+{% embed url="https://www.youtube.com/watch?v=-nQ0ed_BfOg" %}
+
 ## What it does
 
 The Form Builder MCP server makes Form Builder's features available to AI agents through the MCP (Model Context Protocol), which is a standard protocol supported by most AI agents. This allows AI agents to interact with Form Builder to:
@@ -18,10 +22,6 @@ Orbeon Forms provides both:
 
 - A Form Builder MCP Server; this is covered in the first section below.  
 - Support for WebMCP in Form Builder loaded in your browser; this is covered in the second section below.
-
-The following video shows you you can use the Form Builder MCP support in the browser:
-
-{% embed url="https://www.youtube.com/watch?v=-nQ0ed_BfOg" %}
 
 ## MCP Server
 

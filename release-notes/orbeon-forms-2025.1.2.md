@@ -21,7 +21,9 @@ You can connect to the MCP server using any AI agent that supports the MCP proto
 
 You can also use MCP directly from your web browser using WebMCP, which allows you to interact with the MCP server without needing to set up a separate AI agent. For this, you currently need a Gemini API key.
 
-![WebMCP session](/form-builder/images/webmcp-example.webp)
+Watch the video which shows Form Builder MCP support in the browser:
+
+{% embed url="https://www.youtube.com/watch?v=-nQ0ed_BfOg" %}
 
 See the [documentation](/form-builder/mcp.md) for more details.
 
