@@ -74,6 +74,7 @@ In this release, we have addressed over 50 issues, including:
     - Top left/right corners of signature field cropped in PDF ([\#7721](https://github.com/orbeon/orbeon-forms/issues/7721))
     - Property to disable warning the user when data is unsafe is not honored anymore ([\#7736](https://github.com/orbeon/orbeon-forms/issues/7736))
     - `send()` with Excel file doesn't work ([\#7747](https://github.com/orbeon/orbeon-forms/issues/7747))
+    - PDF download doesn't use filename ([\#7732](https://github.com/orbeon/orbeon-forms/issues/7732))
 - Offline
     - Offline: Allow attachment download in new form session ([\#7154](https://github.com/orbeon/orbeon-forms/issues/7154))
 - Form controls
