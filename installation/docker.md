@@ -25,7 +25,7 @@ docker create \
     --name orbeon-forms-with-sqlite \
     -p 8080:8080 \
     -v ~/.orbeon/license.xml:/usr/local/tomcat/webapps/orbeon/WEB-INF/resources/config/license.xml \
-    orbeon/orbeon-forms:2025.1.1-pe
+    orbeon/orbeon-forms:2025.1.2-pe
 ```
 
 Make sure to replace `~/.orbeon/license.xml` with the path to your license file and to use another port if `8080` is already in use on your machine.
