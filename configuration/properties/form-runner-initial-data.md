@@ -103,6 +103,12 @@ The service must either:
 - return an empty body, in which case no error is produced (see also issue [\#3935](https://github.com/orbeon/orbeon-forms/issues/3935))
 - return an error HTTP response or malformed XML response, in which case an error is produced and the form doesn't initialize
 
+[SINCE Orbeon Forms 2025.1.3]
+
+As with [data `POST`ed to the page](#initial-data-posted-to-the-page), the XML data returned by the service can be incomplete. Missing elements are automatically added based on the form definition, so the service only needs to return the elements and values it wants to provide.
+
+As with `POST`ed data, if the data returned by the service contains extra XML elements in no namespace that are not supported by the form, an error is returned. However, extra XML elements in a custom namespace are allowed.
+
 The following property defines a space-separated list of request parameters to be passed to the service. Say the new page was invoke with request parameters `foo=42` and `bar=84`, if you set the value of this property to `foo bar`, these two request parameters will be passed along as request parameters to the service. The request parameters can either get to the new page in a `POST` or `GET` request. The service is always called with a `GET`, consequently request parameters will be passed on the URI.
 
 ```xml
