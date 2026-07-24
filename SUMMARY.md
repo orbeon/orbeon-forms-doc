@@ -256,6 +256,7 @@
         * [`send-s3` action](form-runner/advanced/buttons-and-processes/actions-form-runner-send-s3.md)
         * [`email` action](form-runner/advanced/buttons-and-processes/actions-form-runner-email.md)
         * [`control-setvalue` action](form-runner/advanced/buttons-and-processes/actions-form-runner-control-setvalue.md)
+        * [`log` action](form-runner/advanced/buttons-and-processes/actions-form-runner-log.md)
       * [XForms actions](form-runner/advanced/buttons-and-processes/actions-xforms.md)
       * [Predefined buttons, processes and dialogs](form-runner/advanced/buttons-and-processes/predefined.md)
       * [Summary page buttons and processes](form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md)
