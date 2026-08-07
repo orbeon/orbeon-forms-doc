@@ -65,6 +65,29 @@ Custom mode names appear in URLS, for example:
 /fr/orbeon/feedback/fr:demo-sign/9eff349bfd95aab8d4d5e048bd25a815
 ```
 
+Optionally, you can specify a *public name* for the mode. This should be a name without a colon. For example, you could define a public name for the `acme:demo-sign` mode as follows:
+
+```xml
+<property as="xs:string" name="oxf.fr.detail.custom-modes.*.*" xmlns:acme="http://www.acme.com/xbl">
+    [
+      {
+        "name": "acme:demo-sign",
+        "public-name": "demo-sign",
+        "mode-type": "readonly",
+        "persistence": false
+      }
+    ]
+</property>
+```
+
+The public name is the name to use in URLs, and visible to end users.
+
+```
+/fr/orbeon/feedback/demo-sign/9eff349bfd95aab8d4d5e048bd25a815
+```
+
+The public name _cannot_ be one of the standard Orbeon Forms names, such as `new`, `edit`, `view`, `pdf`, or `tiff`. If you try to use one of those names, Orbeon Forms will throw an error.
+
 ## Saving state
 
 Form state includes:
@@ -202,6 +225,11 @@ The `change-mode()` action allows you to navigate to any mode, including custom 
 * `change-mode("view")`: This action navigates to the `view` mode from any mode, and is identical to the `review` action.
 * `change-mode("new")`: This action navigates to the `new` mode from any mode.
 * `change-mode("acme:demo-sign")`: This action navigates to the custom `acme:demo-sign` mode from any mode.
+
+The parameter to the `change-mode()` action is the public name of the mode to navigate to. This means that:
+
+- if you defined a custom public name, l.ike `demo-sign` in the example above, you would use `change-mode("demo-sign")`
+- if you did not define a custom public name, you would use the qualified name of the mode, like `change-mode("acme:demo-sign")`.
 
 _NOTE: It is not possible to use this action to produce a `pdf` or `tiff` view of the form data. Use the `open-rendered-format()` action instead._
 
