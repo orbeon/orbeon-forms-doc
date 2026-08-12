@@ -82,6 +82,19 @@ $allow-fruits/string() = 'true' or value != 'strawberry'
 
 ![](images/itemset-editor-filter.png)
 
+## Copying and Pasting Items
+
+[SINCE Orbeon Forms 2026.1.1]
+
+The "Copy to Clipboard" and "Paste from Clipboard" buttons allow you to easily copy/paste items from/to the itemset editor. The former takes all items (label/value/hint) and stores them into the clipboard, and the latter does the opposite (Hint being optional). You can, for example, paste/copy to/from Google Sheets and Excel, in order to manage or track items in a spreadsheet.
+
+When pasting items, they are matched by value, for the current language:
+
+- existing values are updated
+- missing values are added
+
+If you want to replace all items, use "Remove All" first.
+
 ## Usability notes
 
 * When in a label field, pressing the "tab" key into an empty value field automatically creates a default value. For example:
