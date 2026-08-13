@@ -55,7 +55,7 @@ Orbeon Forms provides CSS variables that allow you to customize various styling 
 
 _NOTE: This is a work in progress. More variables will be introduced in future releases. Variable names are subject to change._
 
-You can view the available CSS variables in the [`form-runner-css-variables.less` LESS file on GitHub](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/apps/fr/style/form-runner-css-variables.less).
+You can view the available CSS variables in the [`theme.less` LESS file on GitHub](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/apps/fr/themes/2025/theme.less).
 
 Example of overriding variables in Form Runner only (not in Form Builder):
 
@@ -258,9 +258,11 @@ When defining your own CSS, make sure to use a strong selector, so its precedenc
 }
 ```
 
-### Twitter Bootstrap
+### Bootstrap
 
-Since Orbeon Forms 4.0, Form Runner uses [Twitter Bootstrap](https://getbootstrap.com/2.3.2/) for some aspects of its layout and styling.
+Since Orbeon Forms 4.0, Form Runner uses [Bootstrap](https://getbootstrap.com/docs/5.1/) for some aspects of its layout and styling.
+
+\[SINCE Orbeon Forms 2026.1] Form Runner uses Bootstrap 5. Earlier versions used Bootstrap 2. If your custom CSS uses Bootstrap 2 class names which Bootstrap 5 renamed or removed, such as `span12`, `row-fluid`, `navbar-inner`, `btn-small`, or `pull-left`, you have to update it.
 
 *NOTE: If you have custom CSS which works with Orbeon Forms 3.9, it is likely that you will have to update it to work with Orbeon Forms 4.0.*
 
@@ -270,7 +272,15 @@ See [Automatic PDF](automatic-pdf.md).
 
 ## Changing the page width
 
-The [default width with Bootstrap](http://getbootstrap.com/2.3.2/scaffolding.html) is 940px, but you can change this by overriding the Bootstrap/Orbeon CSS. As usual, to do so, we recommend you use a tool like the [Chrome DevTools](https://developer.chrome.com/devtools) to find the exact rules you need to override in your environment. For instance, with an out-of-the-box Orbeon Forms deployed as a servlet, you can set the width to 720px with:
+The default width is 940px.
+
+\[SINCE Orbeon Forms 2026.1] Change it with the `--orbeon-view-max-width` CSS variable, for instance to 720px:
+
+```css
+.orbeon { --orbeon-view-max-width: 720px }
+```
+
+With earlier versions, override the Bootstrap 2 CSS instead:
 
 ```css
 .orbeon .container, .orbeon .span12 { width: 720px }

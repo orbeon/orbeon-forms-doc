@@ -67,7 +67,7 @@ The way we handle fixes, generally, is as follows:
   - Form Builder, upon loading and republishing forms, can upgrade the format of form definitions when needed.
   - Similarly, and since Orbeon Forms 4.6, the Form Runner Home page has an "Upgrade" feature to upgrade published form definitions.
 - __XForms support:__ We strive for maximum backward compatibility at the XForms source level. But because the XForms processing model is quite advanced, some subtle details are subject to change, such as the order in which some events are dispatched.
-- __Look and feel and CSS:__ Often users adapt the Orbeon Forms look and feel using custom CSS. It is hard to guarantee full backward compatibility here due to the lack of encapsulation provided by CSS. Upgrades can require custom CSS to be adapted. 4.0 in particular introduced the Twitter Bootstrap library for the user interface, and that was a major change from previous versions.
+- __Look and feel and CSS:__ Often users adapt the Orbeon Forms look and feel using custom CSS. It is hard to guarantee full backward compatibility here due to the lack of encapsulation provided by CSS. Upgrades can require custom CSS to be adapted. 4.0 in particular introduced the Bootstrap library for the user interface, and that was a major change from previous versions. 2026.1 upgraded that library from Bootstrap 2 to Bootstrap 5.
 - __Configuration properties:__ We strive to keep properties backward compatible. On rare occasions, configuration properties have changed in incompatible ways, in particular in 4.0 the Form Runner persistence providers configuration have changed.
 
 ## Compatibility notes for previous versions

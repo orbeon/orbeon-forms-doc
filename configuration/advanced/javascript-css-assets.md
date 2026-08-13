@@ -117,6 +117,8 @@ Mappings between resources URLs and the resources are stored in the `xforms.reso
 
 _NOTE: These properties are mainly intended for internal use. Proceed with caution._
 
+\[SINCE Orbeon Forms 2026.1] The Bootstrap 2 assets were replaced with Bootstrap 5 and removed. If you override this property, update the Bootstrap paths.
+
 The default baseline of XForms assets is configured with the `oxf.xforms.assets.baseline` property. Here is an example:
 
 ```xml
@@ -125,8 +127,8 @@ The default baseline of XForms assets is configured with the `oxf.xforms.assets.
       "css": [
         { "full": "/ops/yui/container/assets/skins/sam/container.css",                   "min": false },
         { "full": "/ops/yui/calendar/assets/skins/sam/calendar.css",                     "min": false },
-        { "full": "/apps/fr/style/bootstrap/css/bootstrap.css",                          "min": true  },
-        { "full": "/apps/fr/style/form-runner-bootstrap-override.css",                   "min": false },
+        { "full": "/apps/fr/style/bootstrap-5.1.3-orbeon/css/bootstrap.css",             "min": true  },
+        { "full": "/apps/fr/style/form-runner-bootstrap5-override.css",                  "min": false },
         { "full": "/apps/fr/style/font-awesome/css/font-awesome.css",                    "min": true  },
         { "full": "/config/theme/xforms.css",                                            "min": false },
         { "full": "/config/theme/error.css",                                             "min": false },
@@ -136,7 +138,7 @@ The default baseline of XForms assets is configured with the `oxf.xforms.assets.
 
       "js": [
         { "full": "/ops/jquery/jquery-3.6.0.js",                                         "min": true  },
-        { "full": "/apps/fr/style/bootstrap/js/bootstrap.js",                            "min": true  },
+        { "full": "/apps/fr/style/bootstrap-5.1.3-dist/js/bootstrap.bundle.js",          "min": true  },
         { "full": "/ops/javascript/orbeon/util/jquery-orbeon.js",                        "min": true  },
         { "full": "/ops/nprogress-0.2.0/nprogress.js",                                   "min": true  },
         { "full": "/ops/bowser/bowser.js",                                               "min": true  },

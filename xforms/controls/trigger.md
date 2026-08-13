@@ -72,7 +72,7 @@ When the trigger has the `full` appearance, the following additional appearances
 
 ![](../images/xforms-buttons-appearances.png)
 
-These appearances are mutually exclusive. They match corresponding [Twitter Bootstrap button classes](http://getbootstrap.com/2.3.2/base-css.html#buttons).
+These appearances are mutually exclusive. They match corresponding [Bootstrap button classes](https://getbootstrap.com/docs/5.1/components/buttons/).
 
 Example:
 
