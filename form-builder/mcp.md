@@ -50,13 +50,13 @@ Once you have those two properties in place, you can generate a token. Open any 
 
 If choosing "Readonly" access, only read-only operations will be allowed, such as listing forms and retrieving form metadata. If choosing "Read/Write" access, all operations will be allowed, including creating and modifying forms.
 
-By default, the token validity is one day. You can change this by setting the following property:
+By default, the token validity is one year. You can change this by setting the following property:
 
 ```xml
 <property 
     as="xs:integer" 
     name="oxf.fb.mcp.token.validity" 
-    value="1440"/>
+    value="525600"/>
 ```
 
 The duration is in minutes, so:
@@ -64,6 +64,7 @@ The duration is in minutes, so:
 - `1440` means 24 hours (1 day)
 - `10080` means 7 days (1 week)
 - `44640` means 31 days (1 month)
+- `525600` means 365 days (1 year)
 
 
 ### Agent configuration
