@@ -15,7 +15,7 @@ Orbeon Forms supports several embedding methods:
 - [Angular component](angular-component.md)
 - [React component](react-component.md)
 - [Form Runner offline embedding API](offline-embedding-api.md)
-
+ 
 In all cases, also see [Securing Form Runner access when embedding](securing.md).
 
 ## Liferay
@@ -26,6 +26,8 @@ The following versions of Liferay have been tested:
 
 | Orbeon Forms Version | Tested Liferay Version     | Proxy Portlet | Full Portlet |
 |----------------------|----------------------------|---------------|--------------|
+| 2025.1               | Liferay 7.4.3 CE GA106     | yes           | no           |
+| 2024.1               | Liferay 7.4.3 CE GA106     | yes           | no           |
 | 2023.1               | Liferay 7.4.3 CE GA106     | yes           | no           |
 | 2021.1               | Liferay 7.2.1 CE GA2       | yes           | no           |
 | 2020.1               | Liferay 7.2.1 CE GA2       | yes           | no           |
