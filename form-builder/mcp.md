@@ -111,7 +111,7 @@ copilot mcp add orbeon \
     --header "Authorization=Bearer your-token"
 ```
 
-#### Antigravity CLI
+#### Antigravity and Antigravity CLI
 
 Edit your `~/.gemini/config/mcp_config.json` to add the `orbeon` MCP server, for example:
 
