@@ -26,6 +26,7 @@ The following versions of Liferay have been tested:
 
 | Orbeon Forms Version | Tested Liferay Version     | Proxy Portlet | Full Portlet |
 |----------------------|----------------------------|---------------|--------------|
+| 2026.1               | Liferay 7.4.3 CE GA132     | yes           | no           |
 | 2025.1               | Liferay 7.4.3 CE GA106     | yes           | no           |
 | 2024.1               | Liferay 7.4.3 CE GA106     | yes           | no           |
 | 2023.1               | Liferay 7.4.3 CE GA106     | yes           | no           |
