@@ -138,7 +138,7 @@ The default baseline of XForms assets is configured with the `oxf.xforms.assets.
 
       "js": [
         { "full": "/ops/jquery/jquery-3.6.0.js",                                         "min": true  },
-        { "full": "/apps/fr/style/bootstrap-5.1.3-dist/js/bootstrap.bundle.js",          "min": true  },
+        { "full": "/apps/fr/style/bootstrap-5.1.3-orbeon/js/bootstrap.bundle.js",        "min": true  },
         { "full": "/ops/javascript/orbeon/util/jquery-orbeon.js",                        "min": true  },
         { "full": "/ops/nprogress-0.2.0/nprogress.js",                                   "min": true  },
         { "full": "/ops/bowser/bowser.js",                                               "min": true  },
