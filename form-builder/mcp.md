@@ -28,8 +28,8 @@ Orbeon Forms provides both:
 Using any MCP server (not just Orbeon Forms'), involves 3 parts, illustrated in the diagram below:
 
 - On the right, the MCP server itself. In our case, the MCP server is part of Orbeon Forms, which you already have.
-- On the left, an AI agent. This is a software that you install on your own laptop or workstation. It provides the chat interface.
-- At the bottom, an AI model. Typically, the AI model runs in the cloud. Local model can also be used, but this isn't something we cover on this page. 
+- On the left, an AI agent. This is software that you install on your own laptop or workstation. It provides the chat interface.
+- At the bottom, an AI model. Typically, the AI model runs in the cloud. Local models can also be used, but this isn't something we cover on this page. 
 
 <figure><img src="images/mcp-diagram.svg" alt="" width="690"><figcaption>AI agent connected to Form Builder MCP</figcaption></figure>
 
@@ -41,7 +41,7 @@ To use the MCP server:
 
 ### Orbeon Forms
 
-Set the following property 3 properties in your `properties-local.xml`:
+Set the following three properties in your `properties-local.xml`:
 
 1. The first enables the MCP server (it is disabled by default).
 2. The second sets the password used to sign the token. You need to set the value of this property to a secure password. Should you, in the future, want to revoke all tokens issued, simply change this password.
@@ -68,7 +68,7 @@ Once you have those properties in place, you can generate a token. Open any form
 
 Then continue in the below section that corresponds to your configuration. In what follows:
 
-- Change `YOUR_TOKEN` with the value of the token you just copied in Form Builder.
+- Replace `YOUR_TOKEN` with the value of the token you just copied in Form Builder.
 - If needed, change the `http://localhost:8080/orbeon/fr/mcp/builder` URL:
     - Keep the `/fr/mcp/builder` part, which is the path to the MCP server in Form Builder.
     - The domain, port, and prefix (here `/orbeon`) should be those of your Orbeon Forms instance.
@@ -92,11 +92,11 @@ Declare an `ORBEON_MCP_TOKEN` environment variable with the value of your token 
 
 ```
 codex mcp add orbeon \
-    --url http://localhost:8080/orbeon/fr/mcp/builder \ 
+    --url http://localhost:8080/orbeon/fr/mcp/builder \
     --bearer-token-env-var ORBEON_MCP_TOKEN
 ```
 
-You can then run `codex mcp list` to check it was correctly properly added.
+You can then run `codex mcp list` to check it was correctly added.
 
 ### GitHub Copilot CLI
 
@@ -129,7 +129,7 @@ Whether you're using Antigravity 2.0 or Antigravity CLI, edit your `~/.gemini/co
 ### OpenRouter
 
 1. Follow the steps in [Use Claude Code with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration).
-2. Set up the MCP server as described in above section for *Claude Code*.
+2. Set up the MCP server as described in the *Claude Code* section above.
 3. Run `claude`.
 4. Pick a [model](https://openrouter.ai/models), say with `/model z-ai/glm-5.3`.
 5. Tell the agent what you'd like it to do, say `Using Orbeon, create a new demo form with just a First name field`.
@@ -137,7 +137,7 @@ Whether you're using Antigravity 2.0 or Antigravity CLI, edit your `~/.gemini/co
 
 ### Skill
 
-Optionally, you can provide your AI agent with a skill file. The latest version of the skill file can be found [in the Orbeon Forms GitHub repository here](https://github.com/orbeon/orbeon-forms/blob/master/.agents/skills/orbeon/SKILL.md). You place such as file in the appropriate location for your AI agent, for example:
+Optionally, you can provide your AI agent with a skill file. The latest version of the skill file can be found [in the Orbeon Forms GitHub repository here](https://github.com/orbeon/orbeon-forms/blob/master/.agents/skills/orbeon/SKILL.md). You place such a file in the appropriate location for your AI agent, for example:
 
 ```
 .agents/skills/orbeon/SKILL.md
@@ -147,15 +147,15 @@ Optionally, you can provide your AI agent with a skill file. The latest version 
 
 <figure><img src="images/webmcp-diagram.svg" alt="" width="600"><figcaption>AI agent connected to Form Builder through WebMCP</figcaption></figure>
 
-As of Summer 2026, WebMCP is a nascent, but very promising standard. The idea is that users will load a WebMCP page in their browser, open an agent in a sidebar, either built in the browser or provided by a browser extension, and the agent in the sidebar will be able to use tools provided by that page. Gemini in Chrome would be a prime candidate to support this, and other vendors like Anthropic or OpenAI could provide similar support through a browser extensions. This could provide a very seamless experience for users.
+As of Summer 2026, WebMCP is a nascent, but very promising standard. The idea is that users will load a WebMCP page in their browser, open an agent in a sidebar, either built in the browser or provided by a browser extension, and the agent in the sidebar will be able to use tools provided by that page. Gemini in Chrome would be a prime candidate to support this, and other vendors like Anthropic or OpenAI could provide similar support through a browser extension. This could provide a very seamless experience for users.
 
-Today, we get a taste for what using WebMCP will feel like by using a regular external agent, such as Claude or Codex. To set this up:   
+Today, we get a taste of what using WebMCP will feel like by using a regular external agent, such as Claude or Codex. To set this up:   
 
 1. In Chrome, open `chrome://flags/`, search for "MCP", enable both "WebMCP support in DevTools" and "WebMCP for testing", then restart the browser.
 2. Set up your agent to add [Chrome DevTools for agents](https://github.com/ChromeDevTools/chrome-devtools-mcp). Make sure to use the `--autoConnect` parameter so your agent can connect to a live browser (for instance, with Claude Code, use `claude mcp add chrome-devtools -s user -- npx chrome-devtools-mcp@latest --autoConnect`).
 3. In Chrome, open a form in Form Builder, and ask your agent "with Chrome DevTools, through WebMCP, give me a list of the control in the form I have open in Form Builder".
 
-This set up quite convenient:
+This setup is quite convenient:
 
 - It doesn't require users to generate a token in Form Builder and set up their agent with that token.
 - Users can see changes made to the form in real time in the browser. They can also make their own changes, and use both the agent and the Form Builder UI in the same session to update a form.
