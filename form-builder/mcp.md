@@ -128,13 +128,12 @@ Whether you're using Antigravity 2.0 or Antigravity CLI, edit your `~/.gemini/co
 
 ### OpenRouter
 
-1. Install Claude Code, following step 1 of the [Claude Code Quickstart](https://code.claude.com/docs/en/quickstart). Since you're using OpenRouter, you don't need a Claude account, and don't need to follow steps other than step 1.
-2. Follow the steps in [Use Claude Code with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration).
-3. Add the MCP as described in above section for Claude Code.
-4. Run `claude`.
-5. Pick a [model](https://openrouter.ai/models), say with `/model z-ai/glm-5.3`.
-6. Tell the agent what you'd like it do, say `Using Orbeon, create a new demo form with just a First name field`.
-7. In your browser, load the Form Builder summary page, and check the form got created.
+1. Follow the steps in [Use Claude Code with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration).
+2. Set up the MCP server as described in above section for *Claude Code*.
+3. Run `claude`.
+4. Pick a [model](https://openrouter.ai/models), say with `/model z-ai/glm-5.3`.
+5. Tell the agent what you'd like it to do, say `Using Orbeon, create a new demo form with just a First name field`.
+6. In your browser, load the Form Builder summary page, and check the form got created.
 
 ### Skill
 
