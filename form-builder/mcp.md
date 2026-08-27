@@ -27,24 +27,24 @@ Orbeon Forms provides both:
 
 Using any MCP server (not just Orbeon Forms'), involves 3 parts, illustrated in the diagram below:
 
-- On the right in the diagram, the MCP server itself: in our case, the MCP server is part of Orbeon Forms, which you already have.
-- On the left in the diagram, an AI agent: this is a software that you install on your own laptop or workstation. It provides the chat interface.
-- At the bottom in the dialog, an AI model: typically, the AI model runs in the cloud (even if local model can also be used, which we won't cover on this page). 
+- On the right, the MCP server itself. In our case, the MCP server is part of Orbeon Forms, which you already have.
+- On the left, an AI agent. This is a software that you install on your own laptop or workstation. It provides the chat interface.
+- At the bottom, an AI model. Typically, the AI model runs in the cloud. Local model can also be used, but this isn't something we cover on this page. 
 
 <figure><img src="images/mcp-diagram.svg" alt="" width="690"><figcaption>AI agent connected to Form Builder MCP</figcaption></figure>
 
 To use the MCP server:
 
 1. Follow the first section below, *Orbeon Forms*.
-2. Then jump to the section that corresponds to your agent of choice (Claude Code, Codex CLI, GitHub Copilot CLI, or Antigravity). If you have an OpenRouter account or key, instead jump to the *OpenRouter* section.
-3. Finally, optionally, set up a skill as mentioned in the last *Skill* section.
+2. Then jump to the section that corresponds to your agent of choice (*Claude Code*, *Codex CLI*, *GitHub Copilot CLI*, or *Antigravity*). If you have an OpenRouter key or account, instead jump to the *OpenRouter* section.
+3. Finally, optionally set up a skill as mentioned in the *Skill* section.
 
 ### Orbeon Forms
 
-Set the following property 3 properties:
+Set the following property 3 properties in your `properties-local.xml`:
 
 1. The first enables the MCP server (it is disabled by default).
-2. The second sets the password used to sign the token, which you need to set the value of this property to a secure password. If in the future you want to revoke all tokens issued, simply change this password.
+2. The second sets the password used to sign the token. You need to set the value of this property to a secure password. Should you, in the future, want to revoke all tokens issued, simply change this password.
 3. The third sets the token validity to one year (the duration is in minutes).
 
 ```xml
@@ -62,14 +62,14 @@ Set the following property 3 properties:
     value="525600"/>
 ```
 
-Once you have those properties in place, you can generate a token. Open any form in Form Builder and click on the key icon that shows at the top right of the page to reveal the token dialog. If you'd like your agent to be able to create and edit forms, choose "Read/Write" and copy the token. 
+Once you have those properties in place, you can generate a token. Open any form in Form Builder and click on the key icon that shows at the top right of the page to reveal the token dialog. If you'd like your agent to be able to create and edit forms, in the dropdown choose "Read/Write", then click on the button to the right of the token to copy its value. 
 
 <figure><img src="images/mcp-token-dialog.webp" alt="" width="510"><figcaption>Creating an MCP token in Form Builder</figcaption></figure>
 
-Then continue in the section below for your configuration. In what follows:
+Then continue in the below section that corresponds to your configuration. In what follows:
 
 - Change `YOUR_TOKEN` with the value of the token you just copied in Form Builder.
-- If needed, change `http://localhost:8080/orbeon/fr/mcp/builder`:
+- If needed, change the `http://localhost:8080/orbeon/fr/mcp/builder` URL:
     - Keep the `/fr/mcp/builder` part, which is the path to the MCP server in Form Builder.
     - The domain, port, and prefix (here `/orbeon`) should be those of your Orbeon Forms instance.
 
@@ -136,9 +136,9 @@ Whether you're using Antigravity 2.0 or Antigravity CLI, edit your `~/.gemini/co
 6. Tell the agent what you'd like it do, say `Using Orbeon, create a new demo form with just a First name field`.
 7. In your browser, load the Form Builder summary page, and check the form got created.
 
-### Skill (optional)
+### Skill
 
-You can also add to your AI agent a skill file. The latest version of the skill file can be found [in the Orbeon Forms GitHub repository here](https://github.com/orbeon/orbeon-forms/blob/master/.agents/skills/orbeon/SKILL.md). You place such as file in the appropriate location for your AI agent, for example:
+Optionally, you can provide your AI agent with a skill file. The latest version of the skill file can be found [in the Orbeon Forms GitHub repository here](https://github.com/orbeon/orbeon-forms/blob/master/.agents/skills/orbeon/SKILL.md). You place such as file in the appropriate location for your AI agent, for example:
 
 ```
 .agents/skills/orbeon/SKILL.md
