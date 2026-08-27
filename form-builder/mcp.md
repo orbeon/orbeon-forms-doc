@@ -25,11 +25,23 @@ Orbeon Forms provides both:
 
 ## MCP Server
 
+Using any MCP server (not just Orbeon Forms'), involves 3 parts, illustrated in the diagram below:
+
+- On the right in the diagram, the MCP server itself: in our case, the MCP server is part of Orbeon Forms, which you already have.
+- On the left in the diagram, an AI agent: this is a software that you install on your own laptop or workstation. It provides the chat interface.
+- At the bottom in the dialog, an AI model: typically, the AI model runs in the cloud (even if local model can also be used, which we won't cover on this page). 
+
 <figure><img src="images/mcp-diagram.svg" alt="" width="690"><figcaption>AI agent connected to Form Builder MCP</figcaption></figure>
+
+To use the MCP server:
+
+1. Follow the first section below, *Orbeon Forms configuration*.
+2. Then jump to the section that corresponds to your agent of choice (Claude Code, Codex CLI, GitHub Copilot CLI, or Antigravity). If you have an OpenRouter account or key, instead jump to the *OpenRouter* section.
+3. Finally, optionally, set up a skill as mentioned in the last *Skill* section.
 
 ### Orbeon Forms configuration
 
-To use the MCE server, set the following property 3 properties:
+Set the following property 3 properties:
 
 1. The first enables the MCP server (it is disabled by default).
 2. The second sets the password used to sign the token, which you need to set the value of this property to a secure password. If in the future you want to revoke all tokens issued, simply change this password.
@@ -97,9 +109,9 @@ copilot mcp add orbeon \
     --header "Authorization=Bearer YOUR_TOKEN"
 ```
 
-### Antigravity and Antigravity CLI
+### Antigravity
 
-Edit your `~/.gemini/config/mcp_config.json` to add the `orbeon` MCP server, for example:
+Whether you're using Antigravity 2.0 or Antigravity CLI, edit your `~/.gemini/config/mcp_config.json` to add the `orbeon` MCP server, for example:
 
 ```json
 {
@@ -120,7 +132,7 @@ Edit your `~/.gemini/config/mcp_config.json` to add the `orbeon` MCP server, for
 2. Follow the steps in [Use Claude Code with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration).
 3. Add the MCP as described in above section for Claude Code.
 4. Run `claude`.
-5. Pick a model, say with `/model z-ai/glm-5.3`.
+5. Pick a [model](https://openrouter.ai/models), say with `/model z-ai/glm-5.3`.
 6. Tell the agent what you'd like it do, say `Using Orbeon, create a new demo form with just a First name field`.
 7. In your browser, load the Form Builder summary page, and check the form got created.
 
