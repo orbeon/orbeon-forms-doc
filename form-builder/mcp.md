@@ -35,11 +35,11 @@ Using any MCP server (not just Orbeon Forms'), involves 3 parts, illustrated in 
 
 To use the MCP server:
 
-1. Follow the first section below, *Orbeon Forms configuration*.
+1. Follow the first section below, *Orbeon Forms*.
 2. Then jump to the section that corresponds to your agent of choice (Claude Code, Codex CLI, GitHub Copilot CLI, or Antigravity). If you have an OpenRouter account or key, instead jump to the *OpenRouter* section.
 3. Finally, optionally, set up a skill as mentioned in the last *Skill* section.
 
-### Orbeon Forms configuration
+### Orbeon Forms
 
 Set the following property 3 properties:
 
