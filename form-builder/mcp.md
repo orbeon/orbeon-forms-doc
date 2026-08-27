@@ -29,7 +29,11 @@ Orbeon Forms provides both:
 
 ### Orbeon Forms configuration
 
-To use the MCE server, set the following property two properties. The first enables the MCP server (it is disabled by default). The second sets the password used to sign the token, which you need to set the value of this property to a secure password. 
+To use the MCE server, set the following property 3 properties:
+
+1. The first enables the MCP server (it is disabled by default).
+2. The second sets the password used to sign the token, which you need to set the value of this property to a secure password. If in the future you want to revoke all tokens issued, simply change this password.
+3. The third sets the token validity to one year (the duration is in minutes).
 
 ```xml
 <property 
@@ -40,79 +44,60 @@ To use the MCE server, set the following property two properties. The first enab
     as="xs:string"  
     name="oxf.fb.mcp.token.password" 
     value=""/>
-```
-
-In order to revoke all tokens issued, simply change the token password.
-
-Once you have those two properties in place, you can generate a token. Open any form in Form Builder and click on the key icon that shows at the top right of the page to reveal the token dialog.
-
-<figure><img src="images/mcp-token-dialog.webp" alt="" width="510"><figcaption>Creating an MCP token in Form Builder</figcaption></figure>
-
-If choosing "Readonly" access, only read-only operations will be allowed, such as listing forms and retrieving form metadata. If choosing "Read/Write" access, all operations will be allowed, including creating and modifying forms.
-
-By default, the token validity is one year. You can change this by setting the following property:
-
-```xml
 <property 
     as="xs:integer" 
     name="oxf.fb.mcp.token.validity" 
     value="525600"/>
 ```
 
-The duration is in minutes, so:
+Once you have those properties in place, you can generate a token. Open any form in Form Builder and click on the key icon that shows at the top right of the page to reveal the token dialog. If you'd like your agent to be able to create and edit forms, choose "Read/Write" and copy the token. 
 
-- `1440` means 24 hours (1 day)
-- `10080` means 7 days (1 week)
-- `44640` means 31 days (1 month)
-- `525600` means 365 days (1 year)
+<figure><img src="images/mcp-token-dialog.webp" alt="" width="510"><figcaption>Creating an MCP token in Form Builder</figcaption></figure>
 
+Then continue in the section below for your configuration. In what follows:
 
-### Agent configuration
-
-In what follows:
-
-- `your-form-builder-url` is the URL to your Orbeon Forms, for example `https://example.org/orbeon/fr/mcp/builder`
-    - An important part is `/fr/mcp/builder`, which is the path to the MCP server in Form Builder.
+- Change `YOUR_TOKEN` with the value of the token you just copied in Form Builder.
+- If needed, change `http://localhost:8080/orbeon/fr/mcp/builder`:
+    - Keep the `/fr/mcp/builder` part, which is the path to the MCP server in Form Builder.
     - The domain, port, and prefix (here `/orbeon`) should be those of your Orbeon Forms instance.
-- `your-token` is the value of the token you generated in Form Builder.
 
-#### Claude Code
+### Claude Code
 
 Add the MCP server with:
 
 ```
-claude mcp add orbeon your-form-builder-url \
+claude mcp add orbeon http://localhost:8080/orbeon/fr/mcp/builder \
     --scope user \
     --transport http \
-    --header "Authorization: Bearer your-token"
+    --header "Authorization: Bearer YOUR_TOKEN"
 ```
 
 You can then run `claude mcp list` to check it was correctly added and that Claude is able to connect. 
 
-#### Codex CLI
+### Codex CLI
 
-Declare an `ORBEON_MCP_TOKEN` environment variable with the value of your token value, then run:
+Declare an `ORBEON_MCP_TOKEN` environment variable with the value of your token value (`YOUR_TOKEN`), then run:
 
 ```
 codex mcp add orbeon \
-    --url your-form-builder-url \ 
+    --url http://localhost:8080/orbeon/fr/mcp/builder \ 
     --bearer-token-env-var ORBEON_MCP_TOKEN
 ```
 
 You can then run `codex mcp list` to check it was correctly properly added.
 
-#### GitHub Copilot CLI
+### GitHub Copilot CLI
 
 Add the MCP server with:
 
 ```
 copilot mcp add orbeon \
-    --url your-form-builder-url \
+    --url http://localhost:8080/orbeon/fr/mcp/builder \
     --type http \
-    --header "Authorization=Bearer your-token"
+    --header "Authorization=Bearer YOUR_TOKEN"
 ```
 
-#### Antigravity and Antigravity CLI
+### Antigravity and Antigravity CLI
 
 Edit your `~/.gemini/config/mcp_config.json` to add the `orbeon` MCP server, for example:
 
@@ -120,18 +105,26 @@ Edit your `~/.gemini/config/mcp_config.json` to add the `orbeon` MCP server, for
 {
   "mcpServers": {
     "orbeon": {
-      "serverUrl": "your-form-builder-url",
+      "serverUrl": "http://localhost:8080/orbeon/fr/mcp/builder",
       "headers": {
-        "Authorization": "Bearer your-token"
+        "Authorization": "Bearer YOUR_TOKEN"
       }
     }
   }
 }
 ```
 
-_NOTE: As of August 2026, using `~/.gemini/antigravity-cli/mcp_config.json` doesn't appear to work. Use `~/.gemini/config/mcp_config.json` instead._
+### OpenRouter
 
-#### Skill (optional)
+1. Install Claude Code, following step 1 of the [Claude Code Quickstart](https://code.claude.com/docs/en/quickstart). Since you're using OpenRouter, you don't need a Claude account, and don't need to follow steps other than step 1.
+2. Follow the steps in [Use Claude Code with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration).
+3. Add the MCP as described in above section for Claude Code.
+4. Run `claude`.
+5. Pick a model, say with `/model z-ai/glm-5.3`.
+6. Tell the agent what you'd like it do, say `Using Orbeon, create a new demo form with just a First name field`.
+7. In your browser, load the Form Builder summary page, and check the form got created.
+
+### Skill (optional)
 
 You can also add to your AI agent a skill file. The latest version of the skill file can be found [in the Orbeon Forms GitHub repository here](https://github.com/orbeon/orbeon-forms/blob/master/.agents/skills/orbeon/SKILL.md). You place such as file in the appropriate location for your AI agent, for example:
 
