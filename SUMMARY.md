@@ -117,6 +117,7 @@
     * [Captcha](form-runner/component/captcha.md)
     * [Character counter](form-runner/component/character-counter.md)
     * [Checkbox input](form-runner/component/checkbox-input.md)
+    * [Content filter](form-runner/component/content-filter.md)
     * [Currency](form-runner/component/currency.md)
     * [Date](form-runner/component/date.md)
     * [Dropdown date](form-runner/component/dropdown-date.md)
