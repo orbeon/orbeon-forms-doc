@@ -8,6 +8,8 @@
 
 The `fr:content-filter` component (available as the "With Content Filter" appearance in Form Builder) checks text entered into fields or text areas against dictionaries of inappropriate words and profanity, providing real-time visual feedback and form validation.
 
+![Content filter appearance](images/content-filter-form-runner.webp)
+
 Key capabilities:
 
 * **Real-time visual feedback**: As the user types in the browser, any detected inappropriate words are immediately highlighted with a wavy red underline directly beneath the text.
