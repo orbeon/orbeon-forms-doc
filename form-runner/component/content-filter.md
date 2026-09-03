@@ -18,7 +18,7 @@ Key capabilities:
     * Character substitutions / leet-speak (e.g. `@` &rarr; `a`, `0` &rarr; `o`, `1`/`!` &rarr; `i`, `$` &rarr; `s`, `3` &rarr; `e`, `5` &rarr; `s`, `7`/`+` &rarr; `t`, `8` &rarr; `b`, `9`/`6` &rarr; `g`, `#` &rarr; `h`)
     * Diacritics and accents (normalized via Unicode NFKD normalization)
     * Zero-width characters and combining marks
-    * Separators, spaces, and punctuation inserted between letters (e.g. `f-u-c-k` or `f u c k`)
+    * Separators, spaces, and punctuation inserted between letters
     * Boundary protection: Short words (3 characters or fewer) are only matched on word/token boundaries to prevent false positives within innocent words.
 * **Multilingual dictionary support**: The built-in filter checks against word lists across multiple languages, including English, Spanish, French, Japanese, and Polish.
 * **Server-side validation**: Content validation is always enforced on the server during form processing, ensuring security even if client-side validation is bypassed.
