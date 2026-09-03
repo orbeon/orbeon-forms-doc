@@ -31,6 +31,8 @@ It supports the following controls:
 
 In Form Builder, the content filter is available as an appearance option on **Text Field** and **Plain Text Area** controls.
 
+![With Content Filter appearance](images/content-filter-form-builder.webp)
+
 To enable it:
 
 1. Select the Text Field or Plain Text Area in the form canvas.
