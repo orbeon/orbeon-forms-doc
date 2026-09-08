@@ -57,7 +57,9 @@ Orbeon Forms solves these challenges with the following features:
 6. __PDF generation:__ Orbeon Forms can generate PDF documents based on the form data, which can be used to create the official city permit, as well as intermediate documents attached to emails.
 7. __PDF templates:__ Orbeon Forms supports PDF templates, which can be used to create official-looking documents based on the form data.
 8. __Email templates:__ Orbeon Forms supports email templates, which can be used to create different email content based on the workflow stage and user role.
-9. __Confirmation page templates:__ Orbeon Forms supports confirmation page templates, which can be used to create different confirmation pages based on the workflow stage and user role.
+9. __Email sending:__ Orbeon Forms can send emails with different content and attachments at different steps of the workflow, based on the user role and workflow stage.
+10. __Access tokens:__ Orbeon Forms supports access tokens, which can be used to grant access to a specific form page from a link in an email, without requiring the user to log in.
+11. __Confirmation page templates:__ Orbeon Forms supports confirmation page templates, which can be used to create different confirmation pages based on the workflow stage and user role.
 
 ## Concrete use of Orbeon Forms features
 
