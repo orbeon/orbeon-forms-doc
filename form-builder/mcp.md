@@ -135,20 +135,20 @@ Whether you're using Antigravity 2.0 or Antigravity CLI, edit your `~/.gemini/co
 }
 ```
 
-### OpenRouter with ChatGPT for desktop
+### OpenRouter
 
-On July 9, 2026, OpenAI essentially renamed the desktop app that used to be called *Codex* into *ChatGPT for desktop*, so, occasionally, you'll still see this app called *Codex*. 
+You can use your OpenRouter API key with numerous agents:
 
-1. Follow the steps in [Use Codex Desktop App with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/codex-desktop).
-2. Set up the MCP server as described in the *ChatGPT for desktop* section above.
-3. Tell the agent what you'd like it to do, say `Using Orbeon, create a new demo form with just a First name field`.
+- OpenRouter provides good documentation on how to set up your OpenRouter API key with a number of different agents. For a full list, open their [Cookbook](https://openrouter.ai/docs/cookbook), and check the links in the left navigation under the heading *Working with Coding Agents*.
+- We have tested OpenRouter with ChatGPT for desktop and Claude Code, but other agents should work as well.
+- Regarding the *ChatGPT* vs. *Codex* naming, note that on July 9, 2026, OpenAI renamed the desktop app that used to be called *Codex* into *ChatGPT for desktop*, so, occasionally, you'll still see this app called *Codex*.
 
-### OpenRouter with Claude Code
+In general the procedure is as follows:   
 
-1. Follow the steps in [Use Claude Code with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration).
-2. Set up the MCP server as described in the *Claude Code* section above.
-3. Run `claude`.
-4. Pick a [model](https://openrouter.ai/models), say with `/model z-ai/glm-5.3`.
+1. Follow the steps in the OpenRouter documentation, for instance in [Use Codex Desktop App with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/codex-desktop) or [Use Claude Code with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration).
+2. Set up the MCP server for your agent as described in the corresponding section above.
+3. Run your agent.
+4. Pick a [model](https://openrouter.ai/models). This is often done in a selector or a slash command like `/model z-ai/glm-5.3`.
 5. Tell the agent what you'd like it to do, say `Using Orbeon, create a new demo form with just a First name field`.
 6. In your browser, load the Form Builder summary page, and check the form got created.
 
