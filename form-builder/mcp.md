@@ -36,7 +36,7 @@ Using any MCP server (not just Orbeon Forms'), involves 3 parts, illustrated in 
 To use the MCP server:
 
 1. Follow the first section below, *Orbeon Forms*.
-2. Then jump to the section that corresponds to your agent of choice (*Claude Code*, *Codex CLI*, *GitHub Copilot CLI*, or *Antigravity*). If you have an OpenRouter key or account, instead jump to the *OpenRouter* section.
+2. Then jump to the section that corresponds to your agent of choice (*Claude Code*, *Codex CLI*, *GitHub Copilot CLI*, or *Antigravity*). If you have an OpenRouter key or account, instead jump to the relevant *OpenRouter* section.
 3. Finally, optionally set up a skill as mentioned in the *Skill* section.
 
 ### Orbeon Forms
@@ -98,6 +98,15 @@ codex mcp add orbeon \
 
 You can then run `codex mcp list` to check it was correctly added.
 
+### ChatGPT for desktop
+
+1. Declare an `ORBEON_MCP_TOKEN` environment variable with the value of your token value (`YOUR_TOKEN`).
+2. In ChatGPT, under Settings → Plugins → Add → Add MCP server:
+    - In *Name*, enter `orbeon-form-builder`
+    - In *URL*, enter `http://localhost:8080/orbeon/fr/mcp/builder`
+    - In *Bearer token env var*, enter `ORBEON_MCP_TOKEN`
+    - Save
+
 ### GitHub Copilot CLI
 
 Add the MCP server with:
@@ -126,7 +135,15 @@ Whether you're using Antigravity 2.0 or Antigravity CLI, edit your `~/.gemini/co
 }
 ```
 
-### OpenRouter
+### OpenRouter with ChatGPT for desktop
+
+On July 9, 2026, OpenAI essentially renamed the desktop app that used to be called *Codex* into *ChatGPT for desktop*, so, occasionally, you'll still see this app called *Codex*. 
+
+1. Follow the steps in [Use Codex Desktop App with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/codex-desktop).
+2. Set up the MCP server as described in the *ChatGPT for desktop* section above.
+3. Tell the agent what you'd like it to do, say `Using Orbeon, create a new demo form with just a First name field`.
+
+### OpenRouter with Claude Code
 
 1. Follow the steps in [Use Claude Code with OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration).
 2. Set up the MCP server as described in the *Claude Code* section above.
