@@ -76,20 +76,25 @@ The `oxf.fr.landing.cards` property can now be in JSON format and specify more o
     "title": "landing.titles.demo-forms",
     "description": "landing.descriptions.demo-forms",
     "thumbnail": "/apps/fr/style/images/orbeon/sports-car.svg",
-    "app": "orbeon"
+    "app": "orbeon",
+    "sort-by": "title"
   },
   {
     "card-type": "published-forms",
     "title": "landing.titles.demo-features",
     "description": "landing.descriptions.demo-features",
     "thumbnail": "/apps/fr/style/images/orbeon/checkboxes.svg",
-    "app": "orbeon-features"
+    "app": "orbeon-features",
+    "sort-by": "title",
+    "link-to": "new"
   },
   {
     "card-type": "published-forms",
     "title": "landing.titles.published-forms",
     "description": "landing.descriptions.published-forms",
-    "thumbnail": "/apps/fr/style/images/orbeon/book.svg"
+    "thumbnail": "/apps/fr/style/images/orbeon/book.svg",
+    "sort-by": "last-modified",
+    "link-to": "summary new"
   },
   {
     "card-type": "form-data",
@@ -121,6 +126,29 @@ For each card type, the following options are available:
   * `description` (required): description of the card
   * `thumbnail` (required): URL of the thumbnail image for the card
   * `app` (string, optional): application name to filter forms; if not specified, all applications are shown
+  * `link-to` (string, optional): whether entries link to the `new` and/or `summary` page
+      * [\[SINCE Orbeon Forms 2025.1.3\]](/release-notes/orbeon-forms-2025.1.3.md)
+      * either `new` or `summary` or both
+      * if not specified, defaults to `summary` only
+      * form permissions are checked
+          * linking only occurs if the user has permission to access the link with current permissions
+          * specifying two tokens allow defaulting to the second token if the first one is not allowed, for example:
+              * `new summary`
+              * user has `list` permission but not `create` permission for a given form
+              * so the link will point to the `summary` page instead of the `new` page
+  * `sort-by` (string, optional): how to sort the forms; possible values
+    * [\[SINCE Orbeon Forms 2025.1.3\]](/release-notes/orbeon-forms-2025.1.3.md) 
+    * `title`: sort by form title
+    * `last-modified`: sort by last modified date/time
+    * `created`: sort by created date/time
+    * `app-name`: sort by application name
+    * `form-name`: sort by form name
+  * `sort-direction` (string, optional): sort direction if `sort-by` is specified
+    * [\[SINCE Orbeon Forms 2025.1.3\]](/release-notes/orbeon-forms-2025.1.3.md)
+    * possible values
+      * `ascending`: ascending order
+      * `descending`: descending order
+    * default: `descending` for date/times, `ascending` for title
 * `form-data` card options:
   * `app` (string, required): application name
   * `form` (string, required): form name
