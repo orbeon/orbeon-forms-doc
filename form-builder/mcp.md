@@ -164,34 +164,34 @@ Optionally, you can provide your AI agent with a skill file. The latest version 
 
 <figure><img src="images/webmcp-diagram.svg" alt="" width="600"><figcaption>AI agent connected to Form Builder through WebMCP</figcaption></figure>
 
-As of Summer 2026, WebMCP is a nascent, but very promising standard. The idea is that users will load a WebMCP page in their browser, open an agent in a sidebar, either built in the browser or provided by a browser extension, and the agent in the sidebar will be able to use tools provided by that page. Gemini in Chrome would be a prime candidate to support this, and other vendors like Anthropic or OpenAI could provide similar support through a browser extension. This could provide a very seamless experience for users.
-
-Today, we get a taste of what using WebMCP will feel like by using a regular external agent, such as Claude or Codex. To set this up:   
-
-1. In Chrome, open `chrome://flags/`, search for "MCP", enable both "WebMCP support in DevTools" and "WebMCP for testing", then restart the browser.
-2. Set up your agent to add [Chrome DevTools for agents](https://github.com/ChromeDevTools/chrome-devtools-mcp). Make sure to use the `--autoConnect` parameter so your agent can connect to a live browser (for instance, with Claude Code, use `claude mcp add chrome-devtools -s user -- npx chrome-devtools-mcp@latest --autoConnect`).
-3. In Chrome, open a form in Form Builder, and ask your agent "with Chrome DevTools, through WebMCP, give me a list of the control in the form I have open in Form Builder".
-
-This setup is quite convenient:
+As of Summer 2026, WebMCP is a nascent, but very promising standard. The idea is that users will load a web page that supports WebMCP in their browser, open their agent, and the agent will be able to use tools provided by that page. Gemini in Chrome would be a prime candidate to support this, and other vendors like Anthropic or OpenAI could provide similar support through a browser extension. We expect that this will provide a very seamless experience for users:
 
 - It doesn't require users to generate a token in Form Builder and set up their agent with that token.
 - Users can see changes made to the form in real time in the browser. They can also make their own changes, and use both the agent and the Form Builder UI in the same session to update a form.
 - In the future, when agents built in the browser, such as Gemini in Chrome, support WebMCP, users will be able to do all of the above directly from their browser, without even having to install an external agent.
 
+As of September 2026, the only agent to natively support WebMCP is ChatGPT for desktop, which we cover in the first section below. If you're using another agent and prefer not to switch, you can get it to use WebMCP through Chrome DevTools for agents, which we cover in the second section below.
+
+### ChatGPT for desktop
+
+1. In the ChatGPT desktop app, open a browser tab with ⌘+T on macOS or Ctrl+T on other operating systems.
+2. Use the URL bar to navigate to your instance of Orbeon Forms. Create a new form or open an existing form in Form Builder.
+3. Use the chat to have your agent perform operations on the form.
+
+### Any agent, through Chrome DevTools for agents
+
+1. In Chrome, open `chrome://flags/`, search for "MCP", enable both "WebMCP support in DevTools" and "WebMCP for testing", then restart the browser.
+2. Set up your agent to add [Chrome DevTools for agents](https://github.com/ChromeDevTools/chrome-devtools-mcp). Make sure to include `--autoConnect` to connect to your running browser (for instance, with Claude Code, use `claude mcp add chrome-devtools -s user -- npx chrome-devtools-mcp@latest --autoConnect`).
+3. In Chrome, open a form in Form Builder, and ask your agent "with Chrome DevTools, through WebMCP, give me a list of the controls in the form I have open in Form Builder".
+
 ## Usage patterns
 
 With MCP support, you can use your AI agent to interact with Form Builder in various ways using prompts such as:
 
-> Using Orbeon, create a new demo form for a personal collection of widgets. Split the form into sections, and use appropriate form controls. Then save and close the form.
+- Using Orbeon, create a new demo form for a personal collection of widgets. Split the form into sections, and use appropriate form controls. Then save and close the form.
+- Using Orbeon, edit form 33e71949140e1282b9428770176994bdb24c702a and modify the size of control widget-quantity to half its current width. 
+- Using Orbeon, update form 33e71949140e1282b9428770176994bdb24c702a to make the type of the widget-quantity field a non-negative integer.
 
-The result might look like this:
+The result of the first prompt might look like this:
 
 ![Example of a form created by an AI agent](images/mcp-widgets-form.webp)
-
-Further prompts can be used to update the form layout, for example:
-
-> Using Orbeon, edit form 33e71949140e1282b9428770176994bdb24c702a and modify the size of control widget-quantity to half its current width. 
-
-Or add validation rules:
-
-> Using Orbeon, update form 33e71949140e1282b9428770176994bdb24c702a to make the type of the widget-quantity field a non-negative integer.
