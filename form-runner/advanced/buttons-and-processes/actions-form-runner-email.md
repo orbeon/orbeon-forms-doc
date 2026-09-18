@@ -10,9 +10,10 @@ The `email` action sends an email with optionally XML form data, attachments, an
 
 - [SINCE Orbeon Forms 2022.1] `template`: Optional name of the email template to use.
 - PDF parameters (when a rendered PDF version of the form is attached to the email):
-    - `use-pdf-template`
-    - `pdf-template-name`
-    - `pdf-template-lang` 
+    - `use-pdf-template`: whether to use a PDF template, if the form has any. Defaults to `true`.
+    - [DEPRECATED SINCE Orbeon Forms 2026.1] `pdf-template-name`: name of the PDF template to use. Use `pdf-template-names` instead.
+    - [SINCE Orbeon Forms 2026.1] `pdf-template-names`: space-separated list of PDF template names. One PDF is attached for each name, in the order given. See [Multiple PDF attachments](#multiple-pdf-attachments) below.
+    - `pdf-template-lang`: language of the PDF template to use.
 - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) `data-format-version`: The data format version for the XML data, if included as email attachment.
   - `4.0.0`: the default (which matches the backward compatibility format of the data, as stored in the database)
   - `4.8.0`
@@ -36,6 +37,27 @@ When an email is sent, the following algorithm is used to determine what templat
   - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If the "Enable this template only if the following formula evaluates to true" XPath expression is present and evaluates to `false`, the template is filtered out.
   - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) If more than one template is left and the `match` parameter is set to `first` or absent (the default), then the first template is used, following the order in which they are defined in the form. If the `match` parameter is set to `all`, then all remaining templates are used.
   - If no template is left, then no email is sent.
+
+## Multiple PDF attachments
+
+[SINCE Orbeon Forms 2026.1]
+
+When a form has several PDF templates, the `pdf-template-names` parameter attaches several PDFs to the same email, one per template name. Names are separated by spaces, and the PDFs are attached in the order given:
+
+```xml
+<property as="xs:string"  name="oxf.fr.detail.process.send.acme.order">
+    email(
+        template           = "acme-order",
+        pdf-template-names = "agreement confirmation"
+    )
+</property>
+```
+
+Notes:
+
+- If both `pdf-template-name` and `pdf-template-names` are specified, the template from `pdf-template-name` comes first, followed by the templates from `pdf-template-names`. Duplicate names are ignored.
+- The `use-pdf-template` and `pdf-template-lang` parameters apply to all the templates.
+- The name of each PDF attachment is determined by the `oxf.fr.email.pdf.filename` property. With the default value of this property, all the PDFs attached to the same email have the same name. To give each PDF a distinct name, use the `fr:pdf-template-name()` function in this property, as described in [Attachment properties](/configuration/properties/form-runner-email.md#attachment-properties). When `s3-store` is enabled, attachments with the same name are stored under distinct keys: a number is added before the extension of each of them, for example `form-1.pdf`, `form-2.pdf`, `form-3.pdf`.
 
 ## Example
 

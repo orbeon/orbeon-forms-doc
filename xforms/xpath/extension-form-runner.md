@@ -480,6 +480,18 @@ When called within a [process](/form-runner/advanced/buttons-and-processes/READM
 
 When called outside a process context, the function fails.
 
+### fr:pdf-template-name()
+
+[SINCE Orbeon Forms 2026.1]
+
+```xpath
+fr:pdf-template-name() as xs:string?
+```
+
+This function returns the name of the PDF template used to produce the PDF attachment of an email. It is meant to be used in the `oxf.fr.email.pdf.filename` property, so that each PDF can be named after its template when [the `email` action attaches several PDFs](/form-runner/advanced/buttons-and-processes/actions-form-runner-email.md#multiple-pdf-attachments).
+
+The function returns the empty sequence when the PDF is not produced from a PDF template, or when called outside the evaluation of that property.
+
 ### fr:component-param-value()
 
 [SINCE Orbeon Forms 2018.1]
