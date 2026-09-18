@@ -482,7 +482,7 @@ When called outside a process context, the function fails.
 
 ### fr:pdf-template-name()
 
-[SINCE Orbeon Forms 2026.1]
+[SINCE Orbeon Forms 2025.1.3]
 
 ```xpath
 fr:pdf-template-name() as xs:string?

@@ -11,8 +11,8 @@ The `email` action sends an email with optionally XML form data, attachments, an
 - [SINCE Orbeon Forms 2022.1] `template`: Optional name of the email template to use.
 - PDF parameters (when a rendered PDF version of the form is attached to the email):
     - `use-pdf-template`: whether to use a PDF template, if the form has any. Defaults to `true`.
-    - [DEPRECATED SINCE Orbeon Forms 2026.1] `pdf-template-name`: name of the PDF template to use. Use `pdf-template-names` instead.
-    - [SINCE Orbeon Forms 2026.1] `pdf-template-names`: space-separated list of PDF template names. One PDF is attached for each name, in the order given. See [Multiple PDF attachments](#multiple-pdf-attachments) below.
+    - [DEPRECATED SINCE Orbeon Forms 2025.1.3] `pdf-template-name`: name of the PDF template to use. Use `pdf-template-names` instead.
+    - [SINCE Orbeon Forms 2025.1.3] `pdf-template-names`: space-separated list of PDF template names. One PDF is attached for each name, in the order given. See [Multiple PDF attachments](#multiple-pdf-attachments) below.
     - `pdf-template-lang`: language of the PDF template to use.
 - [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md) `data-format-version`: The data format version for the XML data, if included as email attachment.
   - `4.0.0`: the default (which matches the backward compatibility format of the data, as stored in the database)
@@ -40,7 +40,7 @@ When an email is sent, the following algorithm is used to determine what templat
 
 ## Multiple PDF attachments
 
-[SINCE Orbeon Forms 2026.1]
+[SINCE Orbeon Forms 2025.1.3]
 
 When a form has several PDF templates, the `pdf-template-names` parameter attaches several PDFs to the same email, one per template name. Names are separated by spaces, and the PDFs are attached in the order given:
 
