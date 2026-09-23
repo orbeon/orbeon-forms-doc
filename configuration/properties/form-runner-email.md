@@ -33,6 +33,9 @@ The following properties control the connection to the SMTP server when using th
     * `ssl`: use SSL
 - `username`: SMTP username (required if TLS or SSL is used, optional otherwise)
 - `credentials`: SMTP password
+- `helo-name`: local host name sent in the SMTP `EHLO`/`HELO` command
+    - [SINCE Orbeon Forms 2026.1, 2025.1.3]
+    - By default, when this property is blank or unset, Form Runner auto-detects the local hostname. In some environments, auto-detection can resolve to `localhost`, and certain mail servers and relays—such as the Google Workspace SMTP Relay (`smtp-relay.gmail.com`)—strictly reject `EHLO localhost` with a `421-4.7.0` error and immediately close the connection (causing a `MessagingException: [EOF]`). In such cases you'll want to set the `helo-name` using this property.
 
 ```xml
 <property
@@ -59,6 +62,10 @@ The following properties control the connection to the SMTP server when using th
     as="xs:string"
     name="oxf.fr.email.smtp.credentials.*.*"
     value="secret"/>
+<property
+    as="xs:string"
+    name="oxf.fr.email.smtp.helo-name.*.*"
+    value="forms.example.com"/>
 ```
 
 [SINCE Orbeon Forms 2026.1]
