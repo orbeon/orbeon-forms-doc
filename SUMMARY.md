@@ -19,6 +19,7 @@
   * [Properties](configuration/properties/README.md)
     * [General](configuration/properties/general.md)
       * [HTTP client](configuration/properties/properties-general-http-client.md)
+    * [Property profiles](configuration/properties/property-profiles.md)
     * [Form Runner](configuration/properties/form-runner.md)
       * [Detail page](configuration/properties/form-runner-detail-page.md)
         * [Attachments](configuration/properties/form-runner-attachments.md)

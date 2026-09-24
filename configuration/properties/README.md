@@ -40,6 +40,7 @@ In addition, a password strength checker will also cause an error if the passwor
 Each Orbeon Forms subsystem defines its own properties. They are documented in the following pages:
 
 - [General properties](general.md)
+- [Property profiles](property-profiles.md)
 - [Form Runner properties](form-runner.md)
     - [Detail page](form-runner-detail-page.md)
         - [Attachments](form-runner-attachments.md)

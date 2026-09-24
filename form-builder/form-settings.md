@@ -12,6 +12,7 @@ General settings allow you to set the following form definition metadata:
 * Form name
 * Form title in the current language
 * Form description in the current language
+* Profile [SINCE Orbeon Forms 2026.1]: assign a [property profile](../configuration/properties/property-profiles.md) to this form definition to share and reuse configuration properties
 
 ![General Settings](form-settings/general.png)
 
