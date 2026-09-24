@@ -276,6 +276,36 @@ NOTE: Since Orbeon Forms 4.0, this property doesn't have an impact on the Form B
 ```
 -->
 
+## Favicon
+
+[SINCE Orbeon Forms 2026.1, 2025.1.3]
+
+With this property, you can set the favicon URI. This favicon appears in the browser tab on Form Runner pages (Detail, Summary, Landing, Forms Admin, Form Builder, etc.).
+
+```xml
+<property as="xs:anyURI"  name="oxf.fr.favicon.uri.*.*">
+    /ops/images/orbeon-icon-64.png
+</property>
+```
+
+You can omit this property or set its value to the empty string if you don't want a favicon at all.
+
+1. Place your favicon file(s) under one of the recommended locations:
+    - `WEB-INF/resources/forms/assets`: favicon for all forms
+    - `WEB-INF/resources/forms/APP/assets`: favicon for app name APP
+    - `WEB-INF/resources/forms/APP/FORM/assets`: favicon for app name APP and form name FORM
+2. Define the `oxf.fr.favicon.uri.*.*` property to point to the file you added. The path points to a location under the `WEB-INF/resources` directory.
+
+For example, to set a custom favicon called `favicon.ico` for all forms and pages:
+
+```xml
+<property as="xs:anyURI"  name="oxf.fr.favicon.uri.*.*">
+    /forms/assets/favicon.ico
+</property>
+```
+
+Common image extensions (`.ico`, `.png`, `.svg`, `.gif`, `.jpg`, `.jpeg`, `.webp`) automatically set the corresponding `type` attribute on the generated `<link rel="icon">` element (`image/x-icon`, `image/png`, `image/svg+xml`, etc.).
+
 ## Adding your own CSS
 
 See the [CSS page](/form-runner/styling/css.md).
