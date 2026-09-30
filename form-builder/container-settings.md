@@ -38,7 +38,7 @@ See [Control Settings](control-settings.md#custom-css-classes) for more about cu
 
 For a section or grid to be visible or editable, all enclosing sections/grids must be visible or editable as well.
 
-XPath expressions are described in more details in [Formulas](formulas.md).
+XPath expressions are described in more detail in [Formulas](formulas.md).
 
 ## Repeat settings
 

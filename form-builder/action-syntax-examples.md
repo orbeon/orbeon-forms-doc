@@ -13,7 +13,7 @@ To do this, we start by creating a simple form with a nested repetition:
 * a repeated section for the Nobel Prizes
 * a nested repeated grid for the laureates
 
-Here is how the form looks like in Form Builder:
+Here is what the form looks like in Form Builder:
 
 ![Nobel Prize form](images/action-syntax-nobel-form.png)
 

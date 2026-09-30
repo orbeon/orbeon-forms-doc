@@ -7,7 +7,7 @@ The notion of _publishing_ is central to Form Builder/Form Runner.
 * As a form author, you first work on a form definition in a special space where the form can be modified, saved, and tested.
 * Once the form definition is ready, you _publish it_ to Form Runner.
 * After that moment:
-  * the form becomes available by form users for data entry
+  * the form becomes available to form users for data entry
   * Form Builder is no longer part of the equation
 
 ## First publish

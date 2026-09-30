@@ -4,7 +4,7 @@
 
 An important part of designing a form is to prevent incorrect data from being captured. For example:
 
-* an applicant's first and last names is required
+* an applicant's first and last names are required
 * an applicant's age must be a positive number and has to be greater than a minimum
 * an id number has to follow a specific syntax
 
@@ -124,7 +124,7 @@ A formula validation is a boolean XPath expression running with the XML element 
 
 See also [Form Builder Formulas](formulas.md).
 
-For example the following expression, which would make sense for a birthday date field, checks that the user is 18 year old or older:
+For example the following expression, which would make sense for a birthday date field, checks that the user is 18 years old or older:
 
 ```xpath
 . <= (current-date() - xs:yearMonthDuration("P18Y"))
@@ -132,7 +132,7 @@ For example the following expression, which would make sense for a birthday date
 
 \[SINCE Orbeon Forms 4.3]
 
-There can be more than one formulas applied to a given control. You add formulas with the `+` icon and remove them with the `-` icon.
+There can be more than one formula applied to a given control. You add formulas with the `+` icon and remove them with the `-` icon.
 
 \[SINCE Orbeon Forms 4.3]
 
@@ -205,7 +205,7 @@ for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
 * "Maximum Number of Files per Control"
   * [\[SINCE Orbeon Forms 2025.1\]](../release-notes/orbeon-forms-2025.1.md)
   * applies to Multiple File Attachments controls only
-  * the constraint fails if users attempt to attach more than number of specified files
+  * the constraint fails if users attempt to attach more than the specified number of files
 * "Supported File Types"
   * SINCE Orbeon Forms 2017.1
   * applies to Single and Multiple File Attachments controls only
@@ -271,14 +271,14 @@ _NOTE: Since 4.6.2, required validations take precedence over other validations,
   * The specific alert message is used.
   * More than one message can show if several info validations have failed.
 
-_NOTE: It is not possible to associate specific alert message to the required or data type validations: they always use the default or global alert message._
+_NOTE: It is not possible to associate a specific alert message to the required or data type validations: they always use the default or global alert message._
 
 Alert messages appear:
 
 * under the control value
 * in the Error Summary section of the form
 * as badge counts in the navigation bar
-* as general count in the browser's title bar
+* as a general count in the browser's title bar
 
 ![Alert Messages](<../form-runner/images/validation.png>)
 
@@ -309,7 +309,7 @@ You can validate a field using an external validation service as follows:
    * (a) the field you want to validate,
    * (b) a [hidden field](../form-runner/component/hidden.md) used to store the result from the validation.
 2. You create (c) an HTTP Service for your validation service
-3. You create an action, which, when the value of the field you want to validate (a) changes, calls the service (c), passing the value of the field (a), and stores the result from the validation in the hidden field (b). That result is typically be a boolean, `true` if valid, and `false` if invalid.
+3. You create an action, which, when the value of the field you want to validate (a) changes, calls the service (c), passing the value of the field (a), and stores the result from the validation in the hidden field (b). That result is typically a boolean, `true` if valid, and `false` if invalid.
 4. In the Control Settings for the field you want to validate (a), in the Validations and Alerts tab, you use a formula to declare that the field is valid only if the value of the hidden field (b) is `true`.
 
 ## See also

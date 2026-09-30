@@ -227,7 +227,7 @@ In the following example, with the repetition performed by `<fr:data-iterate>`, 
 
 Previously, actions were always run _synchronously_. That is, they were blocking any other form processing until completed, even when calling, for example, external services.
 
-It is now possible to run actions _asynchronously_. This means that, if the action contains services calls, form processing can continue while service calls are pending in the background. Once services terminate, the rest of the actions is processed.
+It is now possible to run actions _asynchronously_. This means that, if the action contains service calls, form processing can continue while service calls are pending in the background. Once services terminate, the rest of the actions is processed.
 
 Changing this mode only matters for actions that include service calls.
 
@@ -286,7 +286,7 @@ Examples:
 * `response-must-await="5s"`: wait up to 5 seconds
 * `response-must-await="forever`"\`: wait indefinitely
 
-For example, the Form Runner Landing page runs multiple background services to load lists of published forms. The page waits a few hundreds of milliseconds for the completion of those services, and if they take longer, for example due to a slow database, the page is shown to the user, and the services continue to run in the background.
+For example, the Form Runner Landing page runs multiple background services to load lists of published forms. The page waits a few hundred milliseconds for the completion of those services, and if they take longer, for example due to a slow database, the page is shown to the user, and the services continue to run in the background.
 
 In the future, asynchronous actions will likely be enabled by default.
 
@@ -686,7 +686,7 @@ This supports the following controls:
 * `<fr:attachment>`
 * `<fr:image-attachment>`
 
-The mediatype and received by the service and the actual size of the attachment are automatically set. However, the filename is not set automatically.
+The mediatype received by the service and the actual size of the attachment are automatically set. However, the filename is not set automatically.
 
 See also the following actions:
 
@@ -831,7 +831,7 @@ When working with actions, some form controls can benefit from having their "vis
 
 ### Alert for debugging
 
-\[SINCE Orbeon Forms 2022.1, 2021.1.2, 2020.1.7] The `<fr:alert>` action is intended to be used for debugging, allowing you to get some visibility on the value of intermediary results, or more generally the value of any expression is at a given point.
+\[SINCE Orbeon Forms 2022.1, 2021.1.2, 2020.1.7] The `<fr:alert>` action is intended to be used for debugging, allowing you to get some visibility on the value of intermediary results, or more generally the value of any expression at a given point.
 
 The value of the `message` attribute uses the [AVT syntax](../xforms/attribute-value-templates.md), so the example below would show a dialog with the message "The answer is 42".
 
@@ -941,7 +941,7 @@ The context item used for XPath evaluations is set as follows:
 
 \[SINCE Orbeon Forms 2019.1]
 
-You can explicitly set the XPath evaluation context to the current iteration item within a `<fr:data-iterate>` with the `expression-context` attribute set to `current-iteration`.
+You can explicitly set the XPath evaluation context to the current iteration item within an `<fr:data-iterate>` with the `expression-context` attribute set to `current-iteration`.
 
 In the following example, without the `expression-context="current-iteration"` attribute, the second `<fr:value>` would evaluate within the context of the first service call's response.
 

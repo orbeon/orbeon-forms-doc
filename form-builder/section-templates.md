@@ -92,7 +92,7 @@ When editing a library form, you can define actions involving controls present i
 
 However, when using sections from the library in a form, nothing prevents you from only including one of the sections. What should then happen with cross-section actions?
 
-With Orbeon Forms 2021.1, there is limited support for this kind of scenarios. For each section template:
+With Orbeon Forms 2021.1, there is limited support for this kind of scenario. For each section template:
 
 1. Orbeon Forms gathers actions that:
    * can update at least one control of the current section (for example with "Set control value" result)

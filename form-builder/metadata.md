@@ -8,7 +8,7 @@ XBL components can be loaded by the Form Builder toolbox. In order for Form Buil
 
 ## Namespace
 
-The Form Builder specific extensions are in an namespace:
+The Form Builder specific extensions are in a namespace:
 
 * URI: `http://orbeon.org/oxf/xml/form-builder`
 * Usual prefix: `fb`
@@ -16,7 +16,7 @@ The Form Builder specific extensions are in an namespace:
 
 ## Group metadata for the toolbox
 
-In XBL, each component is defined in an `<xbl:binding>` element and multiple `<xbl:binding>` can be grouped under an `<xbl:xbl>` element. The Form Builder toolbox shows components, grouped by "types of components", e.g. "Text Controls", as shown at the right of this text. To instruct Form Builder that multiple component should be grouped together in the toolbar, place them inside the same `<xbl:xbl>`. Then, as a child element of `<xbl:xbl>`, you provide the title for the group inside an `<fb:metadata>`, as in (see the [full source](https://github.com/orbeon/orbeon-forms/blob/1f92ad665d15de2eda212a0d6a59694529970cb9/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-controls.xbl) as of Orbeon Forms 2018.1):
+In XBL, each component is defined in an `<xbl:binding>` element and multiple `<xbl:binding>` can be grouped under an `<xbl:xbl>` element. The Form Builder toolbox shows components, grouped by "types of components", e.g. "Text Controls", as shown at the right of this text. To instruct Form Builder that multiple components should be grouped together in the toolbar, place them inside the same `<xbl:xbl>`. Then, as a child element of `<xbl:xbl>`, you provide the title for the group inside an `<fb:metadata>`, as in (see the [full source](https://github.com/orbeon/orbeon-forms/blob/1f92ad665d15de2eda212a0d6a59694529970cb9/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-controls.xbl) as of Orbeon Forms 2018.1):
 
 ```markup
 <fb:metadata>
@@ -29,7 +29,7 @@ In XBL, each component is defined in an `<xbl:binding>` element and multiple `<x
 
 ### Introduction
 
-To be used in Form Builder, your XBL component must have an additional `<fb:metadata>` section inside the `<xbl:binding>` of your component. That `<fb:metadata>` provides to Form Builder the localized display name for the component, an icon, and the markup to be inserted by Form Builder into the form when the component is used. For instance, the `<metadata>` section for the Explanatory Text component look like (see the [full source](https://github.com/orbeon/orbeon-forms/blob/1f92ad665d15de2eda212a0d6a59694529970cb9/form-runner/jvm/src/main/resources/xbl/orbeon/explanation/explanation.xbl) as of Orbeon Forms 2018.1):
+To be used in Form Builder, your XBL component must have an additional `<fb:metadata>` section inside the `<xbl:binding>` of your component. That `<fb:metadata>` provides to Form Builder the localized display name for the component, an icon, and the markup to be inserted by Form Builder into the form when the component is used. For instance, the `<metadata>` section for the Explanatory Text component looks like (see the [full source](https://github.com/orbeon/orbeon-forms/blob/1f92ad665d15de2eda212a0d6a59694529970cb9/form-runner/jvm/src/main/resources/xbl/orbeon/explanation/explanation.xbl) as of Orbeon Forms 2018.1):
 
 ```markup
 <fb:metadata>
@@ -136,7 +136,7 @@ All the controls share certain properties, like the control name. However, some 
 
 ![](images/toolbox-fields.png)
 
-You can create a custom user interface within Form Builder for XBL component that require such additional properties by adding XForms controls under the `<fb:control-details>` element, which you add under `<fb:metadata>`.
+You can create a custom user interface within Form Builder for XBL components that require such additional properties by adding XForms controls under the `<fb:control-details>` element, which you add under `<fb:metadata>`.
 
 See also [Custom control settings](control-settings.md#custom-control-settings).
 
@@ -240,7 +240,7 @@ Example:
 The text for control `<xf:label>`, `<xf:hint>`, `<xf:help>`, and `<xf:alert>`, can either be:
 
 * Inline, with a `lang` attribute indicating the language. This is what the author of the  Dynamic Data Dropdown control did for the first `<xf:input>` above.
-* Taken from the [Form Builder resource file](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/form/resources.xml), which is typically useful when your control uses resources that already exists elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the Dynamic Data Dropdown control did for the second `<xf:input>` above.
+* Taken from the [Form Builder resource file](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/form/resources.xml), which is typically useful when your control uses resources that already exist elsewhere in Form Builder. In this case, you don't need to worry about what the current language is: Form Builder will automatically select the subset of the resource file that applies for the current language. This is what the author of the Dynamic Data Dropdown control did for the second `<xf:input>` above.
 
 ## See also
 

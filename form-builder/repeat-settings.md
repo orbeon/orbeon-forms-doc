@@ -110,7 +110,7 @@ With the option enabled on the grid, adding a new iteration of _Repeated section
 
 ![](images/iterations-template.png)
 
-While, with the option disabled on the grid, adding a new iteration of _Repeated section 2_ causes the new iteration to contain a new repeated grid a single iterations:
+While, with the option disabled on the grid, adding a new iteration of _Repeated section 2_ causes the new iteration to contain a new repeated grid with a single iteration:
 
 ![](images/iterations-single.png)
 
@@ -131,7 +131,7 @@ For details, see [Paging large repeated sections](../form-runner/feature/wizard-
 
 For a repetition to be visible or editable, all enclosing sections/grids must be visible or editable as well.
 
-XPath expressions are described in more details in [Formulas](formulas.md).
+XPath expressions are described in more detail in [Formulas](formulas.md).
 
 ## See also
 

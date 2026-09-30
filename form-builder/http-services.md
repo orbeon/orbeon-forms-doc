@@ -6,7 +6,7 @@ The HTTP Service Editor allows you to create simple REST services. The idea is t
 
 To create a new HTTP service, click the Add icon under "HTTP Services". The HTTP Service Editor opens.
 
-The following screenshot shows an example of filled-out service:
+The following screenshot shows an example of a filled-out service:
 
 <figure><img src="images/service-definition.png" alt="Definition tab" width="561"><figcaption><p>Definition tab</p></figcaption></figure>
 
@@ -155,7 +155,7 @@ See also [JSON support](../xforms/submission-json.md).
 
 ## Saving the service
 
-Once your service is defined, the "Save" buttons saves it to the form. You can come back to it and modify it later by clicking on the "Edit" icon next to the service name. You can also delete the service using the trashcan icon.
+Once your service is defined, the "Save" button saves it to the form. You can come back to it and modify it later by clicking on the "Edit" icon next to the service name. You can also delete the service using the trashcan icon.
 
 ## Deleting a service
 

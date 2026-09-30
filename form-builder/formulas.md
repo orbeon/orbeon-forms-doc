@@ -177,7 +177,7 @@ In the Control Settings dialog, formulas are used to specify the following aspec
 
 * **Constraint:** Boolean expression specifying whether the control is valid.
   * If this field is left blank, then the validity of the control depends on the data type and the "Required" option.
-  * Otherwise, the control is valid if in addition to all the other constraint being met, the result of the Boolean expression is `true()`.
+  * Otherwise, the control is valid if in addition to all the other constraints being met, the result of the Boolean expression is `true()`.
 
 #### Formulas
 

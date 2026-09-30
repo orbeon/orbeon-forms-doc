@@ -42,7 +42,7 @@ The dialog is actually bypassed only if the values passed are valid, specificall
 
 * `fr-app`
   * must be non-blank and only contain ASCII letters, digits, "-" or "\_"
-  * if Form Builder permission are enabled, the app name must be allowed by those permissions (see [Form Builder Permissions](../form-runner/access-control/editing-forms.md#form-builder-permissions))
+  * if Form Builder permissions are enabled, the app name must be allowed by those permissions (see [Form Builder Permissions](../form-runner/access-control/editing-forms.md#form-builder-permissions))
 * `fr-form`
   * must be non-blank and only contain ASCII letters, digits, "-" or "\_"
 

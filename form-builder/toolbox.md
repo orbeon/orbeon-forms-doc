@@ -14,7 +14,7 @@ The Form Builder toolbox provides the following:
   * New Grid
   * New Repeated Grid
 * **Form controls:**
-  * Form control (also known as form fields) you can add to your form.
+  * Form controls (also known as form fields) you can add to your form.
 * **Metadata:**
   * Allows you to modify the application name and form name.
 * **Advanced:**
@@ -186,7 +186,7 @@ The controls appear like this at design time:
 | ------------------------------ | --------- | ------------------------------------------------------------ |
 | **Dropdown Menu**              | single    | dropdown menu                                                |
 | **Radio Buttons**              | single    | radio buttons                                                |
-| **Radio Buttons with "Other"** | single    | radio buttons with "Other" option to a enter a custom option |
+| **Radio Buttons with "Other"** | single    | radio buttons with "Other" option to enter a custom option |
 | **Checkboxes**                 | multiple  | checkboxes                                                   |
 | **Scrollable Checkboxes**      | multiple  | scrollable checkboxes                                        |
 | **Yes/No Answer**              | single    | a simple "Yes" or "No" choice                                |
@@ -256,8 +256,8 @@ For more, see the [Itemset Editor](itemset-editor.md).
 From the perspective of people who will be filling out your form, the data dropdown works just like a regular dropdown. However, the data in the dropdown comes from a service. For instance, imagine you have a list to select a state and that you don't want to hard code the list of states in the form, either for convenience, or because the subset of selectable states is dynamic:
 
 1. Insert a data dropdown field.
-2. Click on cogwheel to bring up a _Control Settings_ dialog, similar to the one shown to the right.
-3. In the _Resource URI_, enter the address of an HTTP service that returns the data you want to use to populate the dropdown. In most cases, the URL will look like `http://your-host/your-service`. If the address you specify start with a `/`, it is relative to the Orbeon Forms web app, which allows you to access a service you might have implemented in Orbeon Forms with XPL. For this example, let's assume your service returns a list of states that looks like:
+2. Click on the cogwheel to bring up a _Control Settings_ dialog, similar to the one shown to the right.
+3. In the _Resource URI_, enter the address of an HTTP service that returns the data you want to use to populate the dropdown. In most cases, the URL will look like `http://your-host/your-service`. If the address you specify starts with a `/`, it is relative to the Orbeon Forms web app, which allows you to access a service you might have implemented in Orbeon Forms with XPL. For this example, let's assume your service returns a list of states that looks like:
 
 ```xml
 <states>
@@ -277,11 +277,11 @@ If the data in the dropdown depends on a value entered by users in another form 
 /xforms-sandbox/service/zip-cities?state-abbreviation={$state}
 ```
 
-_Limitation: you can't yet use a variable as shown in the above example, to refer to another fields value. Instead, if the control is in the same section use `{../state}`. If in a different section with name other-section, use `{../../other-section/state}`. See_ [_#431_](https://github.com/orbeon/orbeon-forms/issues/431)_._
+_Limitation: you can't yet use a variable as shown in the above example, to refer to another field's value. Instead, if the control is in the same section use `{../state}`. If in a different section with name other-section, use `{../../other-section/state}`. See_ [_#431_](https://github.com/orbeon/orbeon-forms/issues/431)_._
 
 ### Autocomplete
 
-The autocomplete control is a single item selection control that loads a list of suggestions from a service. It takes the same _Resource URI_, _Items_, _Label_, and _Value_ configuration parameters as the \[Data dropdown control]\[46]. You may want to pass the value of other controls to the service, but you'll always want to pass the currently typed value, as the suggestions should depend on what users typed so far. You access to the currently typed by value with `$fr-search-value`, as in the following example:
+The autocomplete control is a single item selection control that loads a list of suggestions from a service. It takes the same _Resource URI_, _Items_, _Label_, and _Value_ configuration parameters as the \[Data dropdown control]\[46]. You may want to pass the value of other controls to the service, but you'll always want to pass the currently typed value, as the suggestions should depend on what users typed so far. You access the currently typed value with `$fr-search-value`, as in the following example:
 
 ```
 /xforms-controls/services/countries?country-name={`encode-for-uri($fr-search-value)}

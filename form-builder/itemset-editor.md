@@ -17,7 +17,7 @@ If you provide a hint for a choice, that choice will be highlighted and the hint
 
 ![](../form-runner/images/itemset-hint.png)
 
-For radio buttons and checkboxes, the "Mark this checkbox if you'd like to type HTML tags" option shows. If you check the HTML checkbox, all the hints and labels you type in dialog are interpreted as HTML, allowing you to use HTML tags in label and hints, say to make text bold or italic:
+For radio buttons and checkboxes, the "Mark this checkbox if you'd like to type HTML tags" option shows. If you check the HTML checkbox, all the hints and labels you type in the dialog are interpreted as HTML, allowing you to use HTML tags in labels and hints, say to make text bold or italic:
 
 ![](images/itemset-editor-html.png)
 
@@ -39,7 +39,7 @@ For radio buttons, the choices editor allows you to clear the selected value wit
 
 ## Internationalization
 
-When the form has more than one language, the choices editor opens in the language selected in Form Builder. You can switch between languages directly in the choices editor. Switching the language allow you to localize labels and hints. However, values are shared between all languages.
+When the form has more than one language, the choices editor opens in the language selected in Form Builder. You can switch between languages directly in the choices editor. Switching the language allows you to localize labels and hints. However, values are shared between all languages.
 
 ![](images/itemset-editor-language.png)
 

@@ -12,7 +12,7 @@ This new, still experimental feature allows you to inspect formulas. You access 
 
 \[SINCE Orbeon Forms 2021.1]
 
-This feature considered experimental with Orbeon Forms 2021.1, but only because it is still fairly basic! However, it is still useful, and we hope to improve it in newer versions of Orbeon Forms.
+This feature is considered experimental with Orbeon Forms 2021.1, but only because it is still fairly basic! However, it is still useful, and we hope to improve it in newer versions of Orbeon Forms.
 
 ## Usage
 
@@ -26,7 +26,7 @@ The formulas inspector allows you to see, in a table, the following formulas use
 
 You select the category of formulas from the list. Then the results table shows, in order, all the formulas of that category associated with form controls, as well as the controls they depend on or influence (see below).
 
-The following example show dependencies between "Calculated Value" formulas and controls. A color scheme indicates the dependency relationships between controls via formulas.
+The following example shows dependencies between "Calculated Value" formulas and controls. A color scheme indicates the dependency relationships between controls via formulas.
 
 ![Example showing "Calculated Value" dependencies](images/inspect-formulas-example.png)
 

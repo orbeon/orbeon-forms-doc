@@ -6,7 +6,7 @@ This is an [Orbeon Forms PE](https://www.orbeon.com/download) feature.
 
 ## Localizing your forms
 
-Form Builder has localization support. This means that your form's titles, labels, help messages, etc. can be specified in multiple languages. At runtime, the form user is presented with a default language and can switch the most appropriate language.
+Form Builder has localization support. This means that your form's titles, labels, help messages, etc. can be specified in multiple languages. At runtime, the form user is presented with a default language and can switch to the most appropriate language.
 
 By default, only one language is present, typically English. The default language is configurable by the Form Builder system administrator. By pressing the "⊕" icon, a dropdown dialog shows. The dropdown list allows you to pick a new language to add to the list of languages of the form.
 

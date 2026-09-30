@@ -63,9 +63,9 @@ This is the meaning of the fields of the dialog:
         * You cannot set control values and list of choices as a result.
         * You can store datasets as a result.
 * **Service to Call.**
-  * The service to call as once the action is triggered.
+  * The service to call once the action is triggered.
 
-Like for services, once your action is defined, the Save buttons saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the action name. You can also delete the action using the Remove button.
+Like for services, once your action is defined, the Save button saves it to the form. You can come back to it and modify it later by clicking on the Edit icon next to the action name. You can also delete the action using the Remove button.
 
 ## Handling the service request
 
@@ -106,7 +106,7 @@ Parameters:
     * If the control is not within a repeated grid or section, then that unique control is updated.
     * Otherwise, the control which is the closest by following repetitions and repeat indexes is chosen.
 * **Destination XPath Expression**:
-  * The expression is evaluated in the context of root element of the XML request data to send to the service.
+  * The expression is evaluated in the context of the root element of the XML request data to send to the service.
   * The expression must point to an element or attribute node of the request body. If multiple nodes are returned, only the first one is considered.
 
 ### Passing a value from a formula
@@ -120,7 +120,7 @@ Parameters:
 * **Formula**:
   * The given formula is evaluated and converted to a string.
 * **Destination XPath Expression**:
-  * The expression is evaluated in the context of root element of the XML request data to send to the service.
+  * The expression is evaluated in the context of the root element of the XML request data to send to the service.
   * The expression must point to an element or attribute node of the request body. If multiple nodes are returned, only the first one is considered.
 
 ![Action request formula](images/actions-request-formula.png)
@@ -173,7 +173,7 @@ Parameters:
     * If the destination control is not within a repeated grid or section, then that unique control is updated.
     * Otherwise, the control which is the closest by following repetitions and repeat indexes is chosen.
 * **Source XPath Expression:**
-  * The expression is evaluated in the context of root element of the XML data returned by the service.
+  * The expression is evaluated in the context of the root element of the XML data returned by the service.
   * The expression can point to an element or attribute node of the response body, but can also be a more complex expression. Its result is converted to a string.
 
 ### Setting the choices of a selection control
@@ -250,7 +250,7 @@ Your service should return localized labels for all the languages supported by y
 </response>
 ```
 
-After the service is called, the _items_, _label_, and _value_ XPath expressions you wrote when defining the action are executed once per language supported by the form, and for each execution the `$fr-lang` variable is set to current language. So in the case of our hypothetical service returning a list of countries, you will define the _items_ as `/response/row[lang = $fr-lang]`, the _value_ simply as `value`, and _label_ as `label`.
+After the service is called, the _items_, _label_, and _value_ XPath expressions you wrote when defining the action are executed once per language supported by the form, and for each execution the `$fr-lang` variable is set to the current language. So in the case of our hypothetical service returning a list of countries, you will define the _items_ as `/response/row[lang = $fr-lang]`, the _value_ simply as `value`, and _label_ as `label`.
 
 While in theory this allows you to have the _values_ depend on the language, to avoid unexpected behavior when users switch languages or different users look at the same data using a different language, you should make sure that values are the same for all languages, and only the _labels_ differ between languages.
 

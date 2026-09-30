@@ -9,7 +9,7 @@ Form Builder is built around a simple layout concept: _sections_ and _grids_. Th
 * absolute positioning, which is rarely appropriate for web forms
 * complex dynamic layouts, which often confuse form authors
 
-Starting with Orbeon Forms 2017.2, Form Builder grids are more flexible then with earlier versions and follow a 12-column layout.
+Starting with Orbeon Forms 2017.2, Form Builder grids are more flexible than with earlier versions and follow a 12-column layout.
 
 ![Form Builder and the main form area](images/form-area.png)
 

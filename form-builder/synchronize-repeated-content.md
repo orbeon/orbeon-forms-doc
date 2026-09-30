@@ -8,7 +8,7 @@ This is an Orbeon Forms PE feature.
 
 ## Rationale
 
-Often, forms require some kind of [master-detail interface](https://en.wikipedia.org/wiki/Master%E2%80%93detail_interface), where you first enter a list of initial information, and then complete the information for each item of the list in more details on a separate screen.
+Often, forms require some kind of [master-detail interface](https://en.wikipedia.org/wiki/Master%E2%80%93detail_interface), where you first enter a list of initial information, and then complete the information for each item of the list in more detail on a separate screen.
 
 A way of doing this with Orbeon Forms consists in:
 
@@ -79,7 +79,7 @@ The following example does the following:
 </xf:model>
 ```
 
-The following screenshots show how the form looks like when using the wizard view:
+The following screenshots show what the form looks like when using the wizard view:
 
 ![Master view](images/sync-master.png)
 

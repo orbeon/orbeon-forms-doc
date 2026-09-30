@@ -61,8 +61,8 @@ Expression:
 Explanation:
 
 * `.` refers to the current value of the control
-* `>=` or `ge` means "greater than or equals to"
-* `<=` or `le` means "less than or equals to"
+* `>=` or `ge` means "greater than or equal to"
+* `<=` or `le` means "less than or equal to"
 * `and` is the logical "and" operator
 
 If you want to refer to a specific control by name, you can use:
@@ -85,8 +85,8 @@ Explanation:
 
 * `.` refers to the current value of the control
 * The standard `string-length()` function returns the length of its argument
-* `>=` or `ge` means "greater than or equals to"
-* `<=` or `le` means "less than or equals to"
+* `>=` or `ge` means "greater than or equal to"
+* `<=` or `le` means "less than or equal to"
 * `and` is the logical "and" operator
 
 If you want to refer to a specific control by name, you can use:
@@ -271,7 +271,7 @@ Explanation:
 
 * If the parameter exists
   * `xxf:get-request-parameter()` returns a single string
-  * so you get a sequence containing that string following by the current value of the field
+  * so you get a sequence containing that string followed by the current value of the field
   * we take the first value of the sequence, so the value of the parameter is used
 * if the parameter doesn't exist
   * `xxf:get-request-parameter()` returns an empty XPath sequence

@@ -12,7 +12,7 @@ A SQL query, when successful, returns an XML document with the following format:
 * It contains one nested `<row>` element per row.
 * Each such element in turn contains one element per selected column, derived from the column name:
   * The name is converted to lowercase.
-  * Underscores (`_`) replaced by dashes (`-`).
+  * Underscores (`_`) are replaced by dashes (`-`).
 
 For example, values for the `dept_no` column end up in `<dept-no>`.
 
@@ -20,7 +20,7 @@ See below for concrete examples.
 
 ## Populating a dropdown
 
-In what follows, we'll see how you can populate a _Department_ dropdown in your form using values stored in an `departments` table of your relational database.
+In what follows, we'll see how you can populate a _Department_ dropdown in your form using values stored in a `departments` table of your relational database.
 
 ![Dropdown](images/database-services-dropdown.png)
 
@@ -83,7 +83,7 @@ Finally, when your form runs and users make a selection in the dropdown, the _va
 
 ## Populating fields using another field value
 
-Say that when users enter a value in _employee number_, you want to look up the corresponding employee in your database and populate other fields, _First name_ and _Last name_, based on the information you find about that employee. We've already know how to establish a [connection with the database](database-services.md#1-connect-with-the-database), so let's start by seeing how we can use the value of a field in a SQL query.
+Say that when users enter a value in _employee number_, you want to look up the corresponding employee in your database and populate other fields, _First name_ and _Last name_, based on the information you find about that employee. We already know how to establish a [connection with the database](database-services.md#1-connect-with-the-database), so let's start by seeing how we can use the value of a field in a SQL query.
 
 ![Populate fields](images/database-services-poulate-fields.png)
 
@@ -103,7 +103,7 @@ Finally, you use the _Set Response Control Values_ section of the _Actions Edito
 
 ## Example: fields pre-population
 
-Say you will be passing a request parameter `employee-id=100` to your form, and want to load data from a relational database about the employee with specified id, this to pre-populate some fields, such their first name, last name, hire data, and department, as shown in the screenshot below.
+Say you will be passing a request parameter `employee-id=100` to your form, and want to load data from a relational database about the employee with specified id, this to pre-populate some fields, such as their first name, last name, hire date, and department, as shown in the screenshot below.
 
 ![Pre-populated fields](images/database-services-pre-population.png)
 

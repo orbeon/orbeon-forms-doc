@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Control Settings dialog allows controlling all the aspects the a control besides its label and hint. The dialog has several tabs, detailed below.
+The Control Settings dialog allows controlling all the aspects of a control besides its label and hint. The dialog has several tabs, detailed below.
 
 ### Basic Settings
 
@@ -10,7 +10,7 @@ The Control Settings dialog allows controlling all the aspects the a control bes
 
 #### Basic options
 
-The control _name_ specifies a identifier for the control, unique in the entire form (except [Section Templates](section-templates.md)). The identifier is used for the following:
+The control _name_ specifies an identifier for the control, unique in the entire form (except [Section Templates](section-templates.md)). The identifier is used for the following:
 
 * to refer to the control value from formulas, using the variable notation `$foo` where `foo` is the control name
 * to determine an XML element name when the form data is represented as XML
@@ -39,7 +39,7 @@ The following options are available:
   * When selected, the control value is visible as a Summary page column and searchable.
 * **Allow bulk edit:**
   * When selected, the control value can be bulk edited from the Summary page.
-* **By default, sort this by column:**
+* **By default, sort by this column:**
   * [\[SINCE Orbeon Forms 2025.1\]](../release-notes/orbeon-forms-2025.1.md)
   * Change the default sort column on the Summary page.
 * **Encrypt data at rest:**
@@ -94,17 +94,17 @@ _NOTE: SINCE Orbeon Forms 2018.2, these options are in a separate list._
 
 * **Email recipient:**
   * When selected, the control is used to determine an email recipient ("To:") when the form data is sent by email.
-  * If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.to` property is used.
+  * If more than one non-blank email address is found, they are all included as email recipients. In addition, the `oxf.fr.email.to` property is used.
   * A single control value can contain more than one email address, separated by commas (`,`) or spaces.
 * **Email carbon copy recipient:**
   * SINCE Orbeon Forms 2017.1
   * When selected, the control is used to determine a carbon copy email recipient ("Cc:") when the form data is sent by email.
-  * If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.cc` property is used.
+  * If more than one non-blank email address is found, they are all included as email recipients. In addition, the `oxf.fr.email.cc` property is used.
   * A single control value can contain more than one email address, separated by commas (`,`) or spaces.
 * **Email blind carbon copy recipient:**
   * SINCE Orbeon Forms 2017.1
   * When selected, the control is used to determine a blind carbon copy email recipient ("Bcc:") when the form data is sent by email.
-  * If more than one non-blank email addresses is found, they are all included as email recipients. In addition, the `oxf.fr.email.bcc` property is used.
+  * If more than one non-blank email address is found, they are all included as email recipients. In addition, the `oxf.fr.email.bcc` property is used.
   * A single control value can contain more than one email address, separated by commas (`,`) or spaces.
 * **Email sender:**
   * SINCE Orbeon Forms 2017.1
@@ -124,7 +124,7 @@ _NOTE: SINCE Orbeon Forms 2018.2, these options are in a separate list._
 * **Show in email subject:**
   * DEPRECATED SINCE Orbeon Forms 2018.1: Use a [template for the subject](email-settings.md) instead.
   * When selected, the control value is used as part of the subject of the email when the form data is sent by email.
-  * If more than one non-blank values are found, they are all included in the email subject, comma-separated.
+  * If more than one non-blank value is found, they are all included in the email subject, comma-separated.
 
 \[SINCE Orbeon Forms 2021.1.4]
 

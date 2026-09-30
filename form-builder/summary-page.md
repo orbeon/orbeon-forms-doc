@@ -70,4 +70,4 @@ Using the checkboxes that appear on each row, select the form definitions you wi
 
 ## Permissions
 
-The Summary page follows the [access control rules for deployed forms](form-runner/access-control/deployed-forms.md). This means that a user accessing the Summary page will only see the data to which she has access to.
+The Summary page follows the [access control rules for deployed forms](form-runner/access-control/deployed-forms.md). This means that a user accessing the Summary page will only see the data to which she has access.

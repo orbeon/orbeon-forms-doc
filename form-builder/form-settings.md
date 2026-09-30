@@ -81,7 +81,7 @@ See [Time Window](form-settings/time-window.md).
 
 \[SINCE Orbeon Forms 2018.2]
 
-This tab shows settings for specific controls. Those settings apply to all control on the form except when they are overridden by individual settings in the "Control Settings" dialog.
+This tab shows settings for specific controls. Those settings apply to all controls on the form except when they are overridden by individual settings in the "Control Settings" dialog.
 
 For example, you can set a "Digits After Decimal" setting global to the form, and then override it on specific number controls as needed.
 
@@ -102,7 +102,7 @@ See also the [blog post](https://blog.orbeon.com/2019/03/form-level-and-control-
 * Browser page layout
   * \[SINCE Orbeon Forms 2019.2]
   * Use property: use the [`oxf.fr.detail.html-page-layout` property](../configuration/properties/form-runner-detail-page.md#html-page-layout)
-  * Fixed width: the form sections and grids take a fixed and predefined width of approximately 940px for large displays (the layout becomes responsive for smaller displays sizes).
+  * Fixed width: the form sections and grids take a fixed and predefined width of approximately 940px for large displays (the layout becomes responsive for smaller display sizes).
   * Fluid width: the form sections and grids take the entire web browser's viewport size.
 * Density
   * [\[SINCE Orbeon Forms 2024.1\]](../release-notes/orbeon-forms-2024.1.md)

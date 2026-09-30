@@ -76,7 +76,7 @@ To insert the URL, you use the template syntax within the "URL" field of the lin
 
 <figure><img src="images/template-parameter-link-editor.png" alt="Editing a link URL" width="482"><figcaption><p>Editing a link URL</p></figcaption></figure>
 
-Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty, and can set it to an absolute URL as follows:
+Form Runner requires the ability to know how to reach Form Runner. In some cases (use of a reverse proxy), Orbeon Forms cannot determine this automatically. For this purpose, the following property allows setting the external Form Runner URL. By default, it is empty, and you can set it to an absolute URL as follows:
 
 ```xml
 <property 
