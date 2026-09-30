@@ -30,7 +30,7 @@ To install Orbeon Forms:
 3. Move the `orbeon.war` file into the WildFly `standalone/deployments` folder
 4. Check whether the deployment was successful by watching `standalone/log/server.log`
 
-## Creating an jboss-deployment-structure.xml
+## Creating a jboss-deployment-structure.xml
 
 With Orbeon Forms 2018.2.2 and earlier, with some versions of WildFly, a `jboss-deployment-structure.xml` under the Orbeon Forms WAR's `WEB-INF` directory is needed:
 
@@ -51,7 +51,7 @@ With Orbeon Forms 2018.2.2 and earlier, with some versions of WildFly, a `jboss-
 
 Orbeon Forms 2018.2.3 and later, as well as Orbeon Forms 2019.1, already include this descriptor.
 
-## Setup a JDBC datasource
+## Set up a JDBC datasource
 
 To setup a datasource, if you'd like Orbeon Forms to connect to your relational database, do the following:
 

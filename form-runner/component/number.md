@@ -136,7 +136,7 @@ Here is an example with a suffix:
 
 \[SINCE Orbeon Forms 2016.1]
 
-#### Rouding when formatting only
+#### Rounding when formatting only
 
 Assume the following properties or corresponding attributes:
 

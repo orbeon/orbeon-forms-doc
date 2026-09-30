@@ -68,14 +68,14 @@ In this use case:
 
 There are many ways to do that. One of the easiest ways, if you don't already have infrastructure for that, is to use Tomcat and its `tomcat-users.xml` file. See also [Access Control](form-runner/access-control/users.md).
 
-#### 2. Setup Owner/Group permissions for your forms.
+#### 2. Set up Owner/Group permissions for your forms.
 
 See [Owner Group](form-runner/access-control/owner-group.md). Setup permissions this way:
 
 - `Anyone` has `Create` permissions
 - `Owner` can `Read`, `Update`, and possibly `Delete` data
 
-#### 3. Setup which buttons are visible on the form
+#### 3. Set up which buttons are visible on the form
 
 See [Buttons on the Detail page](configuration/properties/form-runner.md#buttons-on-the-detail-page) to control which buttons appear on the page. You might want to add the `send` or `submit` button, in particular.
 

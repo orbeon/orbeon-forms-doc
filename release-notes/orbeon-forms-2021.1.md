@@ -4,7 +4,7 @@
 
 Today we released Orbeon Forms 2021.1! This release introduces new features and bug-fixes.
 
-## Notable features and enhancement
+## Notable features and enhancements
 
 ### Ability to test PDF production
 

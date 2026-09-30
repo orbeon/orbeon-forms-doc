@@ -4,7 +4,7 @@
 
 Today we released Orbeon Forms 2019.2! This release introduces some new features and bug-fixes.
 
-## Notable features and enhancement
+## Notable features and enhancements
 
 ### Landscape mode support
 

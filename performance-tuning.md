@@ -407,7 +407,7 @@ _NOTE: If your XForms page is generated from XSLT or JSP, and you insert changin
 
 It is a good idea to test the scenarios above also from multiple users (if your application handles multiple users), in order to make sure that a change in user keeps caching active.
 
-### Making your XForms document is cacheable
+### Making your XForms document cacheable
 
 The key to make the XForms document cacheable is to make sure the document that is fed to the XForms processor "doesn't change" between requests.
 

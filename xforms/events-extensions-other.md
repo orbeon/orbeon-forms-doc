@@ -99,7 +99,7 @@ Example with `xxforms-action-error`:
 </xf:group>
 ```
 
-## Allowing duplicate event in the event queue
+## Allowing duplicate events in the event queue
  
 [SINCE Orbeon Forms 2017.1]
 

@@ -327,7 +327,7 @@ We recommend that you always use the [header and footer configuration](../form-r
 
 The default `oxf.fr.summary.buttons` configuration property now includes `excel-export-with-search` by default. This means that, by default, a user can export the Summary page content in Excel format. If you do not wish this, you can set your own `oxf.fr.summary.buttons` configuration property.
 
-### Deprecation of catpcha tokens in configuration
+### Deprecation of captcha tokens in configuration
 
 Previously, the `oxf.fr.detail.captcha` or `oxf.fr.detail.captcha.component` supported tokens, including:
 

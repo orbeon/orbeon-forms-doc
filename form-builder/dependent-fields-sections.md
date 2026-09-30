@@ -15,7 +15,7 @@ The visibility, read-only, initial value, and calculated value are set using [fo
 
 ## Examples
 
-### Hide a field based on the user's answer to an earlier questions
+### Hide a field based on the user's answer to an earlier question
 
 Say you want to show a textarea when users check a checkbox to indicate they want to provide more details:
 

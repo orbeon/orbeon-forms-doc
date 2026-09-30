@@ -4,7 +4,7 @@
 
 Today we released Orbeon Forms 2019.1! This release is packed with new features and enhancements which should help form authors and form users be more productive.
 
-## Major features and enhancement
+## Major features and enhancements
 
 ### Controlling non-repeated grid settings
 

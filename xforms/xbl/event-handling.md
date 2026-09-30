@@ -86,7 +86,7 @@ It is up to the component author to handle nested content properly. When using `
   * ids and variables are visible across the bound node (here `fr:tab`)
 * events flow nicely as the form author would expect when using a regular XForms grouping control
 
-## Component author: hooking-up creation and destruction event handlers
+## Component author: hooking up creation and destruction event handlers
 
 You can use the `xforms-model-construct-done` event on local models. This event is dispatched when the component is being initialized. This event can be dispatched multiple times to a given component during a form's lifecycle, as the component is initialized each time it becomes relevant.
 

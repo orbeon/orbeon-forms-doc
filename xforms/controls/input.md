@@ -163,7 +163,7 @@ Date formats:
 
 In the table above, the "US format" applies the `oxf.xforms.format.input.date` property starts with `[M`, and the "European format" when that property starts with `[D`.
 
-### Two digits years
+### Two-digit years
 
 If you type in a date field a year with only two digits (say 5/20/10), the control will assume that you intended to type a year in the twentieth or twenty-first century, rather than a year in the first century. It will convert the two-digit year you typed into a four digits year by taking the corresponding year in either the twentieth or twenty first century based on which one is closest to the current year. So for instance, if the current year is 2020:
 

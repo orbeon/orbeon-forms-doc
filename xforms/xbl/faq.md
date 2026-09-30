@@ -1,6 +1,6 @@
 # XBL FAQ
 
-## What can component do?
+## What can components do?
 
 A lot! Among other things, they can:
 

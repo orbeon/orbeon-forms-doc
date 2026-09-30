@@ -58,7 +58,7 @@ See the [Form Builder](/form-builder/README.md).
 
 In short, yes. For details, see [Accessible Forms](https://www.orbeon.com/accessible-forms).
 
-### How can I pass a token a new page and have it saved with the data?
+### How can I pass a token to a new page and have it saved with the data?
 
 Say you've created a form, deployed it, and would like to take users to the `/new` page for that form, but would like to pass along some information to the form (let's call that piece of information "token"), and have that token saved with the data, so you can then find back the data based on the token.
 
@@ -160,7 +160,7 @@ You can implement them within Orbeon (for example using XML pipelines (XPL), or 
 
 Yes, you can save a form definition and get back to it later.
 
-### Does Form Runner has reporting (graphs and charts) capabilities?
+### Does Form Runner have reporting (graphs and charts) capabilities?
 
 No. But you can use third-party tools to analyze the data.
 
