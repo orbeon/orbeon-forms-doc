@@ -17,7 +17,7 @@ Note that Orbeon Forms as of Orbeon Forms 2018.2 doesn't provide a user interfac
 
 For auditing to work meaningfully, Form Runner needs to know who is presently using the application.
 
-For details, see [Setup users for access control](/form-runner/access-control/users.md).
+For details, see [Set up users for access control](/form-runner/access-control/users.md).
 
 ## Implementation for relational databases
 
@@ -46,7 +46,7 @@ You can also use the [Purge function](/form-runner/feature/purging-historical-da
 - [Purging historical data](/form-runner/feature/purging-historical-data.md)
 - [Purging old data using SQL](/form-runner/persistence/purging-old-data.md)
 - [Access Control](/form-runner/access-control/README.md)
-- [Setup users for access control](/form-runner/access-control/users.md)
+- [Set up users for access control](/form-runner/access-control/users.md)
 - [Using Form Runner with a relational database](relational-db.md)
 - [Database Support](db-support.md)
 - [Versioning](/form-runner/feature/versioning.md)

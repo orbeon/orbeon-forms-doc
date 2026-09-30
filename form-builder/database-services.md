@@ -28,7 +28,7 @@ In what follows, we'll see how you can populate a _Department_ dropdown in your 
 
 You start, in Form Builder, by creating a new database service, clicking _Add_ in the left sidebar under _Database Services_. This opens the _Database Service Editor_.
 
-Under _Datasource_ you type the name of a datasource you setup in your application server. This is the JNDI name of the datasource, without the `jdbc/` part. If you type `employees`, Orbeon Forms will look for `java:comp/env/jdbc/employees`.
+Under _Datasource_ you type the name of a datasource you set up in your application server. This is the JNDI name of the datasource, without the `jdbc/` part. If you type `employees`, Orbeon Forms will look for `java:comp/env/jdbc/employees`.
 
 If you're using Tomcat, the simplest way of setting up a datasource is to edit Tomcat's `server.xml`, there add a `<Context>` for Orbeon Forms if you don't have one already, and inside it add a `<Resource>` pointing to your database. On Tomcat, you also need to put the database JDBC driver in Tomcat's `lib` directory.
 

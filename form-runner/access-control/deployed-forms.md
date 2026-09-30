@@ -198,7 +198,7 @@ On the Form Runner Published Forms page, all the forms on which the current user
 
 ## See also
 
-* [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
+* [Set up users for access control](users.md) - How to set up Orbeon Forms so that users and roles are provided.
 * [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
 * [Form fields](form-fields.md) - How to control access to specific form fields based on the user's roles.
 * [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.

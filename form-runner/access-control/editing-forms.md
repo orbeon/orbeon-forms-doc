@@ -4,7 +4,7 @@
 
 Specific Form Builder permissions are configured with `WEB-INF/resources/config/form-builder-permissions.xml`.
 
-If you'd like to have multiple classes of Form Builder users where some can edit, say, form in the `hr` app, while other can edit forms in the `sales` app, then you'll want to setup the `form-builder-permissions.xml`.
+If you'd like to have multiple classes of Form Builder users where some can edit, say, form in the `hr` app, while other can edit forms in the `sales` app, then you'll want to set up the `form-builder-permissions.xml`.
 
 _NOTE: The file used to be called `form-runner-roles.xml`._
 
@@ -75,7 +75,7 @@ Orbeon Forms does not specifically provide a mechanism to protect access based o
 
 ## See also
 
-* [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
+* [Set up users for access control](users.md) - How to set up Orbeon Forms so that users and roles are provided.
 * [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
 * [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
 * [Form fields](form-fields.md) - How to control access to specific form fields based on the user's roles.

@@ -22,7 +22,7 @@ Your own web app does the following:
 1. Include `orbeon-embedding.jar` and `slf4j-api-1.7.7.jar` under `WEB-INF/lib`. Both are included in `orbeon-embedding.war` which ships
    \
    with Orbeon Professional Edition (PE) only.
-2. Setup the filter in your `web.xml` per the snippet below.
+2. Set up the filter in your `web.xml` per the snippet below.
 3. Call the embedding API when producing a page, as done in the example below.
 
 The page you do the embedding from must:
@@ -98,7 +98,7 @@ The `Map<String, String>` allows passing a Java `Map` of HTTP header name/value 
 
 You deploy Form Runner in a separate web app, which can be located in the same servlet container as your web app or in a separate or even remote servlet container.
 
-Form Runner must use "combined resources" to work. This is the case by default in `prod` mode (see [Run Modes](../../configuration/advanced/run-modes.md)), but if you happen to have setup Orbeon Forms in `dev` mode, make sure to add this property in your `properties-local.xml`:
+Form Runner must use "combined resources" to work. This is the case by default in `prod` mode (see [Run Modes](../../configuration/advanced/run-modes.md)), but if you happen to have set up Orbeon Forms in `dev` mode, make sure to add this property in your `properties-local.xml`:
 
 ```xml
 <property

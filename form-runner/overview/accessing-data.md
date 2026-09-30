@@ -2,7 +2,7 @@
 
 ## Scenario
 
-You've created forms with Form Builder, published those forms, and setup Orbeon Forms so it [stores data captured by the forms in your relational database](../persistence/relational-db.md). Now, how can another app of yours access this data?
+You've created forms with Form Builder, published those forms, and set up Orbeon Forms so it [stores data captured by the forms in your relational database](../persistence/relational-db.md). Now, how can another app of yours access this data?
 
 ![Accessing data - How](../images/overview-accessing-data-how.png)
 
@@ -16,7 +16,7 @@ In what follows, you'll see 3 techniques for doing so:
 
 ### 1. Send data on submit
 
-In most cases, this is the best option, and the one we recommend. In essence, you setup Orbeon Forms so when users fill out a form and submit it, Orbeon Forms sends the data users entered to your app. Your app can do whatever it wants with this data, and if needed, in the response to Orbeon Forms, your app can tell Orbeon Forms which page the user should go to next.
+In most cases, this is the best option, and the one we recommend. In essence, you set up Orbeon Forms so when users fill out a form and submit it, Orbeon Forms sends the data users entered to your app. Your app can do whatever it wants with this data, and if needed, in the response to Orbeon Forms, your app can tell Orbeon Forms which page the user should go to next.
 
 ![Doc - Accessing data - Process - Overview](../images/overview-accessing-data-process-overview.png)
 
@@ -39,7 +39,7 @@ As mentioned, the API provided by Orbeon Forms is quite simple, but there are a 
 
 1. You're deciding when to call the API. Most likely you'll want to do this at a regular interval, like every hour or every day, to process any new data submitted to the system. This means that you need to have a cron-like infrastructure to perform that task on a regular basis, and that your app won't know about new data in real-time.
 2. Assuming your app is just interested in processing new data, it will need to somehow keep track of what data it has already processed.
-3. Out-of-the-box, for security reasons, access to the REST API is blocked. You can either completely open up access to the API at the Orbeon Forms level, and protect it through some other mean (e.g. filter), or setup some authentication between the caller of the API and Orbeon Forms, through an authorization service. You can find more about this in [Authorization of Pages and Services](../../xml-platform/controller/authorization-of-pages-and-services.md).
+3. Out-of-the-box, for security reasons, access to the REST API is blocked. You can either completely open up access to the API at the Orbeon Forms level, and protect it through some other mean (e.g. filter), or set up some authentication between the caller of the API and Orbeon Forms, through an authorization service. You can find more about this in [Authorization of Pages and Services](../../xml-platform/controller/authorization-of-pages-and-services.md).
 
 ### 3. Accessing the database
 

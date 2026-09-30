@@ -70,7 +70,7 @@ There are many ways to do that. One of the easiest ways, if you don't already ha
 
 #### 2. Set up Owner/Group permissions for your forms.
 
-See [Owner Group](form-runner/access-control/owner-group.md). Setup permissions this way:
+See [Owner Group](form-runner/access-control/owner-group.md). Set up permissions this way:
 
 - `Anyone` has `Create` permissions
 - `Owner` can `Read`, `Update`, and possibly `Delete` data

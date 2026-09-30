@@ -100,7 +100,7 @@ If you believe that tokens have been compromised, or if you simply want to make 
 
 ## See also
 
-* [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
+* [Set up users for access control](users.md) - How to set up Orbeon Forms so that users and roles are provided.
 * [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
 * [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
 * [Form fields](form-fields.md) - How to control access to specific form fields based on the user's roles.

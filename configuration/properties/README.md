@@ -2,13 +2,13 @@
 
 ## Overview
 
-Orbeon Forms is configured via _configuration properties_. They are setup in a file called `properties-local.xml` and stored in the Orbeon Forms WAR file as:
+Orbeon Forms is configured via _configuration properties_. They are set up in a file called `properties-local.xml` and stored in the Orbeon Forms WAR file as:
 
 ```
 WEB-INF/resources/config/properties-local.xml
 ```
 
-Orbeon Forms will do a certain number of things out of the box without you having to setup anything in your `properties-local.xml`. But if you want to change the default behavior (and it is likely you will want to in order to setup access control, database access, configure buttons, etc.), you will need to make changes to that file. This page describes the basics of that process.
+Orbeon Forms will do a certain number of things out of the box without you having to set up anything in your `properties-local.xml`. But if you want to change the default behavior (and it is likely you will want to in order to set up access control, database access, configure buttons, etc.), you will need to make changes to that file. This page describes the basics of that process.
 
 ## Setting and overriding properties
 

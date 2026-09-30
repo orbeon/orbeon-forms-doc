@@ -189,7 +189,7 @@ You can now try to load the feed into your favorite feed reader! Here is how the
 
 So far you have seen:
 
-* How to setup Orbeon Forms.
+* How to set up Orbeon Forms.
 * How the basic Hello application is organized.
 * How to build your own application that allows editing and persisting a form.
 * How to create an Atom feed from form data.

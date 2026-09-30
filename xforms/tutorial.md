@@ -744,7 +744,7 @@ So go ahead and:
 * Add the submission to the model.
 * Reload the page.
 * Enter a book title and an author, then press the "Save" button. Your form data has been silently saved to the database. It was that easy!
-* Then, let's check that the data is actually in the database. By default, for security reasons, eXist is setup so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/WEB-INF/web.xml`  noting that you will need to remove the  comment after <url-pattern> to make it well formed XML. (and don't forget to put them back before going to production if necessary):
+* Then, let's check that the data is actually in the database. By default, for security reasons, eXist is set up so you can't directly access it from your browser. However, it is often convenient to do so while in development. For this, comment out the following lines in your `orbeon/WEB-INF/web.xml`  noting that you will need to remove the  comment after <url-pattern> to make it well formed XML. (and don't forget to put them back before going to production if necessary):
 
     ```xml
     <filter-mapping>
@@ -1461,7 +1461,7 @@ You can now try to load the feed into your favorite feed reader! Here is how the
 
 So far you have seen:
 
-* How to setup Orbeon Forms.
+* How to set up Orbeon Forms.
 * How the basic Hello application is organized.
 * How to build your own application that allows editing and persisting a form.
 * How to create an Atom feed from form data.

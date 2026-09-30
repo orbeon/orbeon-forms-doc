@@ -35,7 +35,7 @@ In each such provider mapping, there are 3 configurable pieces of information. T
 2. A Form Runner form name, like `registration` or `address`.
 3. Whether the configuration regards form data (`data`), or the form configuration files (`form`).
 
-Each of those can be a wildcard (`*`). Wildcards allow you to setup Orbeon Forms to use different persistence providers for different app, form, and resource  type combinations.
+Each of those can be a wildcard (`*`). Wildcards allow you to set up Orbeon Forms to use different persistence providers for different app, form, and resource  type combinations.
 
 The properties are interpreted hierarchically and you may specify the configuration more or less specifically:
 
@@ -78,7 +78,7 @@ If you want to change the default provider to Oracle, and since a provider named
 
 Because wildcards are used, this property does not override the configuration for the built-in demo forms as well as Form Builder! This is desirable, because the Form Builder implementation itself is not usually something you want to store somewhere else.
 
-In the case of Oracle, the wildcards also allow you to setup Orbeon Forms to use different schemas for different app, form, and resource type combinations. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to setup the persistence layer for [multiple schemas](../../form-runner/persistence/relational-db.md).
+In the case of Oracle, the wildcards also allow you to set up Orbeon Forms to use different schemas for different app, form, and resource type combinations. For instance you could store everything related to an `hr` app in one Oracle database schema and everything related to another `finance` app in another Oracle database schema. For more on this, see how to set up the persistence layer for [multiple schemas](../../form-runner/persistence/relational-db.md).
 
 Each provider supports standard properties, as follows:
 

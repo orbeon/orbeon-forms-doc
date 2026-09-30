@@ -480,7 +480,7 @@ The `send` action operates on the server, so you won't see the data submitted in
 
 There are a few ways to debug those requests:
 
-1. Setup the service you are calling to log requests, if it can do that.
+1. Set up the service you are calling to log requests, if it can do that.
 1. Use the built-in `echo` service, and modify your `send` process to look like this:
     ```xml
     <property as="xs:string" name="oxf.fr.detail.process.send.my-app.my-form">

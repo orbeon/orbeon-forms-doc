@@ -53,7 +53,7 @@ All steps described below can also be done manually via the Azure UI.
 
 ## Login and general configuration
 
-The very first step is to login to Azure and set the Microsoft Graph API scope:
+The very first step is to log in to Azure and set the Microsoft Graph API scope:
 
 ```bash
 az login --scope https://graph.microsoft.com/.default
@@ -650,7 +650,7 @@ az acr create --name "$CONTAINER_REGISTRY" --resource-group 'orbeon-forms-resour
 
 The container registry name must be unique across Azure.
 
-Then login to the Azure Container Registry:
+Then log in to the Azure Container Registry:
 
 ```bash
 az acr login --name "$CONTAINER_REGISTRY"

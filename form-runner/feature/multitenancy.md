@@ -74,7 +74,7 @@ See also [Form Builder permissions](/form-runner/access-control/editing-forms.md
 
 ### Database configuration
 
-Optionally, you can setup different database providers for each application name. For example:
+Optionally, you can set up different database providers for each application name. For example:
 
 ```xml
 <property 

@@ -4,7 +4,7 @@
 
 ## Menu
 
-Form Runner can show a _user menu_ in the navigation bar, allowing users to login, logout, and, if necessary, register. You can enable the user menu by setting the following property to `true` (its default value is `false`):
+Form Runner can show a _user menu_ in the navigation bar, allowing users to log in, log out, and, if necessary, register. You can enable the user menu by setting the following property to `true` (its default value is `false`):
 
 ```xml
 <property
@@ -13,11 +13,11 @@ Form Runner can show a _user menu_ in the navigation bar, allowing users to logi
     value="true"/>
 ```
 
-When enabled, before users login, the menu contain 2 entries: "Login" and "Register", as shown in the screenshot below.
+When enabled, before users log in, the menu contain 2 entries: "Login" and "Register", as shown in the screenshot below.
 
 ![User menu when logged out](../images/logout-logout-menu-logged-out.png)
 
-Conversely, when users are logged in, the menu will show who the user is, as well as provide a way for users to logout.
+Conversely, when users are logged in, the menu will show who the user is, as well as provide a way for users to log out.
 
 ![User menu when logged in](../images/logout-logout-menu-logged-in.png)
 
@@ -48,7 +48,7 @@ Form Runner comes with a simple default login page which can be used with contai
 
 ## See also
 
-* [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
+* [Set up users for access control](users.md) - How to set up Orbeon Forms so that users and roles are provided.
 * [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
 * [Form fields](form-fields.md) - How to control access to specific form fields based on the user's roles.
 * [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.

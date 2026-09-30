@@ -53,9 +53,9 @@ Orbeon Forms 2018.2.3 and later, as well as Orbeon Forms 2019.1, already include
 
 ## Set up a JDBC datasource
 
-To setup a datasource, if you'd like Orbeon Forms to connect to your relational database, do the following:
+To set up a datasource, if you'd like Orbeon Forms to connect to your relational database, do the following:
 
-1. Setup Orbeon Forms to use a WildFly datasource (configured in the following steps):
+1. Set up Orbeon Forms to use a WildFly datasource (configured in the following steps):
    1. Set the `oxf.fr.persistence.provider.*.*.*` property in your `properties-local.xml`
       1.  If you already created a `WEB-INF/resources/config/properties-local.xml` unzip it and add the property per the example below. Otherwise create that file with the following content:
 

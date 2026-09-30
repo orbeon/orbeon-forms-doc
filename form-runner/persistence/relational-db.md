@@ -299,7 +299,7 @@ Your `Resource` element pointing to your Oracle instance (see also [Tomcat datas
 
 1. [Download the MySQL JDBC driver][6], called Connector/J, e.g. `mysql-connector-java-5.1.39-bin.jar` (latest version as of 2016-06-20)
 2. Copy it in the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
-3. Setup a JDBC data source for your MySQL schema (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). In the example below, the MySQL server is running on `localhost` port 3306, the schema is `orbeon`, the username/password is `orbeon`/`orbeon`. Those values are highlighted in the configuration below, and you'll most likely want to change them to fit your setup. Also, on the JDBC URL you're telling the MySQL driver to use Unicode and the UTF-8 encoding when talking to the database, which we highly recommend you to do in order to avoid encoding issues with non-ASCII characters.
+3. Set up a JDBC data source for your MySQL schema (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). In the example below, the MySQL server is running on `localhost` port 3306, the schema is `orbeon`, the username/password is `orbeon`/`orbeon`. Those values are highlighted in the configuration below, and you'll most likely want to change them to fit your setup. Also, on the JDBC URL you're telling the MySQL driver to use Unicode and the UTF-8 encoding when talking to the database, which we highly recommend you to do in order to avoid encoding issues with non-ASCII characters.
 
     ```xml
     <Resource
@@ -362,7 +362,7 @@ Your `Resource` element pointing to your Oracle instance (see also [Tomcat datas
 
 1. [Download the PostgreSQL JDBC driver][8].
 2. Copy the driver jar to the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
-3. Setup the JDBC data source for your PostgreSQL instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). Example:
+3. Set up the JDBC data source for your PostgreSQL instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). Example:
 
     ```xml
     <Resource
@@ -399,7 +399,7 @@ Your `Resource` element pointing to your Oracle instance (see also [Tomcat datas
 
 1. [Download the DB2 JDBC driver][9] for the version of DB2 you're using.
 2. Uncompress the zip file, and copy the `db2jcc4.jar` it contains to the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version).
-3. Setup the JDBC data source for your DB2 instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). Example:
+3. Set up the JDBC data source for your DB2 instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). Example:
 
     ```xml
     <Resource
@@ -473,7 +473,7 @@ In your `properties-local.xml`, you map an app / form / form type to the impleme
 
 The single schema configuration described in the previous section uses the predefined `oracle` and `mysql` providers. To use multiple schemas you need to define your own provider names. For instance, assume that you have two apps, `hr` and `finance`, and would like both the form definition and data for those apps to be stored in two separate schemas:
 
-1. In your application server configuration, you setup two data sources; let's call them `hr-datasource` and `finance-datasource`.
+1. In your application server configuration, you set up two data sources; let's call them `hr-datasource` and `finance-datasource`.
 2. In `properties-local.xml`, you use the following properties to define two providers `hr` and `finance` that you configure to use the desired persistence layer implementation (Oracle in this example) and data source:
 
     ```xml

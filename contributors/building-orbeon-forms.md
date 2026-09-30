@@ -420,7 +420,7 @@ IntelliJ then shows: "Done: 723 of 731 Failed: 8"
 
 The tests that fail are the following:
 
-* `CombinedClientTest`: this requires Selenium to be setup.
+* `CombinedClientTest`: this requires Selenium to be set up.
 * `DDLTest` and `RestApiTest`: these require a database setup.
 
 We hope to provide instructions to run these in the future.

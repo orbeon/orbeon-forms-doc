@@ -98,8 +98,8 @@ You deploy Orbeon Forms as a separate WAR with the following steps:
 1. Deploy Orbeon Forms as usual, typically in the `/orbeon` context. Follow the [installation instructions][5] and the [Orbeon Forms Tutorial][6] if needed.
 2. Deploy your own application as a separate WAR.
 3. Copy `WEB-INF/lib/orbeon-xforms-filter.jar` from `orbeon-xforms-filter.war` into your application's `WEB-INF/lib/` directory.
-4. Configure your application's `web.xml` as described in the previous section to setup the Orbeon Forms XForms filter.
-5. Setup your application in cross-context mode, as described in the previous section.
+4. Configure your application's `web.xml` as described in the previous section to set up the Orbeon Forms XForms filter.
+5. Set up your application in cross-context mode, as described in the previous section.
 6. From the uncompressed `orbeon.war`, you can remove:
     * All the files under `WEB-INF/resources`, except the directory `WEB-INF/resources/config` and its content. (This directory contains configuration files which you might want to change, in particular the [properties files][7].)
     * All the application-server or portal configuration files under `WEB-INF`; namely: `jboss-web.xml`, `jonas-web.xml`, `liferay-display.xml`, `liferay-portlet.xml`, `portlet.xml`, `sun-web.xml`, `weblogic.xml`. (The application-server specific files contain an example of how to declare a data source, so you can safely remove those files even if they are for the application server you are using.)
@@ -112,7 +112,7 @@ Before forwarding Ajax requests to Orbeon Forms, the XForms filter [checks][8] t
 
 If your application never creates a session, this check will always fail, and Ajax request will never go through. To get around this, you can either:
 
-* Setup your application server so your application session is shared with the Orbeon Forms session.
+* Set up your application server so your application session is shared with the Orbeon Forms session.
     * For instance, if using WebLogic, you can do so by deploying your app and Orbeon Forms in the same EAR, and [setting][9] `<sharing-enabled>` to `true` in `weblogic-application.xml`.
     * With Tomcat, enable [Single Sign On][10].
 * Always create a session in your code, e.g. with `request.getSession()`, even if you're not going to store anything in that session.

@@ -2,8 +2,8 @@
 
 ## 1. Anonymous data capture with administrator
 
-1. Setup at least one user and role for your container.
-    - The easiest way to do this with Tomcat, if you don't have already users setup within your system (via a Tomcat realm for example), is to modify Tomcat's `tomcat-users.xml` file, for example as follows:
+1. Set up at least one user and role for your container.
+    - The easiest way to do this with Tomcat, if you don't have already users set up within your system (via a Tomcat realm for example), is to modify Tomcat's `tomcat-users.xml` file, for example as follows:
 
     ```xml
     <tomcat-users>
@@ -71,11 +71,11 @@ Users with the `orbeon-admin` role have
 Limitations:
 
 - Anonymous data entry does not support autosave.
-- As an administrator, you first have to login, for example by accessing Form Builder, before accessing published forms' Summary page (issue [#1292](https://github.com/orbeon/orbeon-forms/issues/1292)).
+- As an administrator, you first have to log in, for example by accessing Form Builder, before accessing published forms' Summary page (issue [#1292](https://github.com/orbeon/orbeon-forms/issues/1292)).
 
 ## See also
 
-- [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
+- [Set up users for access control](users.md) - How to set up Orbeon Forms so that users and roles are provided.
 - [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
 - [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
 - [Form fields](form-fields.md) - How to control access to specific form fields based on the user's roles.

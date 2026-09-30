@@ -32,7 +32,7 @@ TODO: more examples (in particular using `xxf:get-header('Orbeon-Username')`, et
 
 ## See also
 
-- [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
+- [Set up users for access control](users.md) - How to set up Orbeon Forms so that users and roles are provided.
 - [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
 - [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
 - [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.

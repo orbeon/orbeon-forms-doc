@@ -124,7 +124,7 @@ We recommend you add the `URIEncoding="UTF-8"` attribute on the [`<Connector>`](
 
 ### Form Runner authentication
 
-To setup Form Runner authentication:
+To set up Form Runner authentication:
 
 1. Open `TOMCAT_HOME/webapps/orbeon/WEB-INF/web.xml` and uncomment the `security-constraint`, `login-config` and `security-role` declarations at the end of the file.
 2.  Open `TOMCAT_HOME/conf/server.xml` and make sure there is a `<Realm>` enabled. For example, by default with Tomcat 7:
