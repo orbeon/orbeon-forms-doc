@@ -169,7 +169,7 @@ As of 2016-04-19 this page is still being updated.
 - Function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
 - Repeated content synchronization: [doc](/form-builder/synchronize-repeated-content.md)
 - Grids
-    - HTML tables-free layout: [blog post](https://blog.orbeon.com/2016/06/saying-farewell-to-html-tables.html))
+    - HTML tables-free layout: [blog post](https://blog.orbeon.com/2016/06/saying-farewell-to-html-tables.html)
 - Services and APIs
     - [Duplicate form data API](form-runner/api/other/duplicate-form-data.md)
     - [Generate XML Schema API](form-runner/api/other/duplicate-form-data.md)

@@ -204,7 +204,7 @@ Attributes:
   * this cannot be an AVT
 * `apply-defaults` \[SINCE Orbeon Forms 2016.1]
   * `true`: dynamic initial values (via the `xxf:default` MIP) apply to new iterations
-  * missing or \`false: dynamic initial values do not apply to new iterations
+  * missing or `false`: dynamic initial values do not apply to new iterations
   * can be an AVT
   * see also: [Evaluation of initial values upon insert](../../xforms/actions/repeat-insert-delete.md#evaluation-of-initial-values-upon-insert)
 * `appearance` \[SINCE Orbeon Forms 2016.1]

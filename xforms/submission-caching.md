@@ -40,7 +40,7 @@ When used on `<xf:submission>`, the submission has to use `method="get"`, `metho
 
 _NOTE: Since_ `POST` _and_ `PUT` _are not meant to be idempotent methods, you should use_ `xxf:cache="true"` _with these methods carefully, typically for calls to services you know are idempotent. Otherwise, incorrect or stale data might be returned by the submission._
 
-You set the size of the shared instances cache using a property in `properties.xm`l:
+You set the size of the shared instances cache using a property in `properties.xml`:
 
 ```markup
 <property 
@@ -103,7 +103,7 @@ It is also possible to remove all shared instances from the cache by using the `
 <xxf:invalidate-instances ev:event="DOMActivate"/>
 ```
 
-The `xxf:ttl attribute` can be used to set a time to live for the instance in cache. This duration is expressed in milliseconds and has to be greater than zero. When a shared instance if found in cache but has an associated time to live, if it was put in the cache more than time to live milliseconds in the past, then the instance is discarded from the cache and retrieved again by URI as if it had not been found in cache at all. The following example expires the shared instance after one hour:
+The `xxf:ttl` attribute can be used to set a time to live for the instance in cache. This duration is expressed in milliseconds and has to be greater than zero. When a shared instance if found in cache but has an associated time to live, if it was put in the cache more than time to live milliseconds in the past, then the instance is discarded from the cache and retrieved again by URI as if it had not been found in cache at all. The following example expires the shared instance after one hour:
 
 ```markup
 <xf:instance

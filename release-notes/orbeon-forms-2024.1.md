@@ -375,6 +375,6 @@ We previously had a typo in the names of some indexes for SQL Server, PostgreSQL
 
 ### Date formats
 
-With this release, for Date controls, `the oxf.xforms.format.output.date` property is no longer used in readonly modes. Instead, the `output-format` parameter of the time field is used, which defaults to the value of the global `oxf.xforms.format.input.time` property.
+With this release, for Date controls, the `oxf.xforms.format.output.date` property is no longer used in readonly modes. Instead, the `output-format` parameter of the time field is used, which defaults to the value of the global `oxf.xforms.format.input.time` property.
 
 See [Date](../form-runner/component/date.md) component for more information.

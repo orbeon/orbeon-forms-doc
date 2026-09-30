@@ -82,7 +82,7 @@ When the Orbeon Forms XForms server receives a request for a combined resource, 
 
 Some CSS and JavaScript files are never included into aggregated resources:
 
-* resources with `f:url-norewrite="true":  
+* resources with `f:url-norewrite="true"`:  
 `<xh:link rel="stylesheet" href="/style.css" f:url-norewrite="true"/>`
 * resources with an absolute URL, such as:  
 `<xh:link rel="stylesheet" href="https://example.org/style.css"/>`

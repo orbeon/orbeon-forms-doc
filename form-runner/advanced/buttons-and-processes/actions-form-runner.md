@@ -423,7 +423,7 @@ This action changes the mode of the current page. For more information, see the 
 * `show-relevant-errors`:
   * \[SINCE Orbeon Forms 2018.1]
   * This is the new name for the `visit-all` action.
-  * This shows all "relevant errors". When using the [wizard view](../../feature/wizard-view.md) in `lax` and strict\` mode, this shows errors to show for all available wizard pages. Errors for controls on non-available pages are not shown.
+  * This shows all "relevant errors". When using the [wizard view](../../feature/wizard-view.md) in `lax` and `strict` mode, this shows errors to show for all available wizard pages. Errors for controls on non-available pages are not shown.
 * `summary`: Navigate to this Form Runner page (a predefined process since 4.7).
 * `unvisit-all`:
   * Mark all controls as not visited.

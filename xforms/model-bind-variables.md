@@ -34,7 +34,7 @@ Variable resolution attempts to find the "closest" associated target bind object
 This allows `calculate` expressions to refer to these variables:
 
 * `rowsum-bind` refers, for each iteration of `my-repeat-bind`, to the `$col1` and `$col2` belonging to that _same_ iteration.
-* `totalsum-bind`, on the other hand, refers to the $rowsum\` in _all_ iterations.
+* `totalsum-bind`, on the other hand, refers to the `$rowsum` in _all_ iterations.
 
 The result shows the expected sums:
 

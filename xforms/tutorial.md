@@ -797,9 +797,9 @@ There are a few differences with this `<xf:submission>`:
 * The `get` method specifies that you want to do an HTTP `GET`, like when you pointed your web browser at the URL to read the document from eXist.
 * The `replace="instance"` attribute specifies that the result of the submission has to be stored into an instance. The `instance="books-instance"` attribute specifies the identifier of the instance into which the result must be stored.
 
-Add this element after the previous `<xf:submission>` element which has an id value of `save-submission, `i.e. one submission follows the other.
+Add this element after the previous `<xf:submission>` element which has an id value of `save-submission`, i.e. one submission follows the other.
 
-Like with the `<xf:submission`> having  an id of  `save-submission`, the submission needs to be sent to achieve something. You do this by adding the following _event handler_ to the model, just before the end of the model:
+Like with the `<xf:submission>` having an id of `save-submission`, the submission needs to be sent to achieve something. You do this by adding the following _event handler_ to the model, just before the end of the model:
 
 ```xml
 <xf:send event="xforms-ready" submission="list-submission"/>

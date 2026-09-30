@@ -209,7 +209,7 @@ The special `#observer` target name on `target` can be used to specify that the 
 </xf:group>
 ```
 
-In this example, this is identical to:`  
+In this example, this is identical to:  
 
 ```xml
 <xf:group>

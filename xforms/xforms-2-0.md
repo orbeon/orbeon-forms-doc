@@ -37,7 +37,7 @@ XForms 2.0 features added with Orbeon Forms 2016.1:
     - This allows receiving `application/json` content. The JSON received is converted to an XML representation friendly to XPath expressions. This allows receiving data from JSON services and using it in your forms, including via Form Builder services.
     - This also allows sending `application/json` content, based on an XML representation.
 - `xf:param` and `xf:body` on `xf:action`
-- `type attribute on `xf:action` for types:
+- `type` attribute on `xf:action` for types:
     - `text/javascript` / `application/javascript` / `javascript`
     - `text/xpath` / `application/xpath` / `xpath`
 

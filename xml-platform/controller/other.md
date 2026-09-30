@@ -6,7 +6,7 @@ A page flow file is comprised of three sections:
 
 * The `<files>` elements list files that must be served directly to the client, such as images or CSS files.
 * The `<page>` elements declare pages and for each one specify identifier, path, model, view, and XML submission.
-* The `<epilogue>``, <not-found-handler>`, `<unauthorized-handler>` and `<error-handler>` elements define additional behavior that apply to all the pages.
+* The `<epilogue>`, `<not-found-handler>`, `<unauthorized-handler>` and `<error-handler>` elements define additional behavior that apply to all the pages.
 
 ## The files element
 

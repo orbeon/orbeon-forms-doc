@@ -86,7 +86,7 @@ You can use this information for example to show a status icon:
 You can dispatch the `fr-visit-all` event to the error summary. This:
 
 * makes the summary consider all controls under the configured observer(s) as visited
-* marks all controls under the configured observer(s) as visited by adding the `xforms-visited and` xforms-alert-active-visited `classes`
+* marks all controls under the configured observer(s) as visited by adding the `xforms-visited` and `xforms-alert-active-visited` classes
 
 This is useful when the user, for example, presses a "Save" button: in that case, you might want to show all the errors on the form right away:
 

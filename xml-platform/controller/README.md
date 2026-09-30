@@ -25,7 +25,7 @@ _NOTE: By default, the PFC is configured in `web.xml` as the main processor for 
 
 Starting Orbeon Forms 4.0, the following elements and attributes are introduced:
 
-* `controller` element: replaces the `config` element\`
+* `controller` element: replaces the `config` element
 * `path` attribute: replaces the `path-info` attribute
 * `mediatype` attribute: replaces the `mime-type` attribute
 
