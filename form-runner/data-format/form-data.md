@@ -295,7 +295,7 @@ If in your form you have fields marked to be encrypted at rest, an attribute is 
 - Since Orbeon Forms 2019.1
     - `fr:attachment-encrypted="true"` for attachment fields
     - `fr:value-encrypted="true"` for other fields
-- Update to Orbeon Forms 2018.2
+- Up to Orbeon Forms 2018.2
     - `encrypted="true"`
     
 Explicitly marking fields that have been encrypted in the data allows form authors to change a form definition adding or removing fields to be encrypted without having to create a new version of that form definition, should form authors want to do so.

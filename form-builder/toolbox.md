@@ -52,7 +52,7 @@ The "Reload Toolbox" icon or button reloads all the components in the toolbox. A
 \[SINCE Orbeon Forms 2019.1]
 
 * The list of all available (published) _versions_ of section templates is updated.
-* The currently-selected versions of section templates, if still available, are updated to reflect their latest published.
+* The currently-selected versions of section templates, if still available, are updated to reflect their latest published version.
 
 For more, see [Versioning of section templates](section-templates.md#versioning-of-section-templates).
 

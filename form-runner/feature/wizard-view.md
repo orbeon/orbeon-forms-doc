@@ -204,7 +204,7 @@ CSS classes are available on table of content entries to reflect the status of e
 The following classes indicate the first and last sections:
 
 * `first-page`: the first visible page
-* `last-top-level-page`: the first visible top-level page
+* `last-top-level-page`: the last visible top-level page
 * `last-page`: the last visible page
   * this can be different from `last-top-level-page` when using subsection navigation
 

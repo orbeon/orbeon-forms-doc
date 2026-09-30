@@ -24,6 +24,6 @@ xxf:json-to-xml($json as xs:string?) as document-node()?
 xxf:xml-to-json($xml as document-node()?) as xs:string?
 ```
 
-The `xxf:json-to-xml()` function takes an XML document following the [XForms 2.0 conversion scheme](../submission-json.md) and converts it to a JSON string.
+The `xxf:xml-to-json()` function takes an XML document following the [XForms 2.0 conversion scheme](../submission-json.md) and converts it to a JSON string.
 
 If the parameter is the empty sequence, the result is the empty sequence.

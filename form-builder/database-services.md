@@ -120,7 +120,7 @@ SELECT *
  WHERE employee_id = <sql:param type="xs:string" select=""/>
 ```
 
-You can get the [source of the form described above](https://gist.github.com/orbeon/1e25851b7219f765a2cde373a72e9dea), and run it for yourself on the instance of Orbeon Forms deployed on demo.orbeon.orbeon, which has the `employees` table used by the above query. After you publish the form, try opening its `/new` page, passing the request parameter `?employee-id=100`.
+You can get the [source of the form described above](https://gist.github.com/orbeon/1e25851b7219f765a2cde373a72e9dea), and run it for yourself on the instance of Orbeon Forms deployed on demo.orbeon.com, which has the `employees` table used by the above query. After you publish the form, try opening its `/new` page, passing the request parameter `?employee-id=100`.
 
 ## See also
 

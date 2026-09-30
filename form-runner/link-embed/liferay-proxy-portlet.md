@@ -14,7 +14,7 @@ These issues apply to Orbeon Forms 2017.1 to 2019.1.
 
 * **The Form Runner language selector doesn't work**
   * See [issue #3257](https://github.com/orbeon/orbeon-forms/issues/3257)
-  * Workaround: Select the "Send Liferay language" option. When this option is sent, the Form Runner language selector doesn't show. Orbeon Forms uses instead the current Liferay user's language preference.
+  * Workaround: Select the "Send Liferay language" option. When this option is set, the Form Runner language selector doesn't show. Orbeon Forms uses instead the current Liferay user's language preference.
 * **The Liferay navigation menu doesn't navigate to Form Runner**
   * See [issue #3256](https://github.com/orbeon/orbeon-forms/issues/3256)
   * Workarounds:

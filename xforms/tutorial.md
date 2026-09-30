@@ -168,7 +168,7 @@ Also notice the special `xmlns=""` namespace attribute on `<first-name>`: this i
 
 This element defines an XForms _instance_, which is just XForms' way of calling an XML document used to store data.
 
-Now consider the remaining XForms elements in the source file: `<xf:input>` and `<xf:output>`. These two elements are not located under the XHTML ``, but under ``. They are part of the _view_ of your page, in other words these elements directly help define visible controls on the page. Consider `<xf:input>`:
+Now consider the remaining XForms elements in the source file: `<xf:input>` and `<xf:output>`. These two elements are not located under the XHTML `<head>`, but under `<body>`. They are part of the _view_ of your page, in other words these elements directly help define visible controls on the page. Consider `<xf:input>`:
 
 ```xml
 <xf:input ref="/first-name" incremental="true">
@@ -322,7 +322,7 @@ This page flow is automatically called for any path that starts with `/orbeon/my
     </html>
     ```
 
-    This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the ``/. It also declares a bunch of XML namespaces that you need later in the document.
+    This is a very basic XHTML document. It features a title in the `<head>` and a "Hello!" message in the `<body>`. It also declares a bunch of XML namespaces that you need later in the document.
 
 Now go to:
 

@@ -6,7 +6,7 @@ This feature is available since Orbeon Forms 4.0. Orbeon Forms 3.9 and earlier d
 
 ## Rationale
 
-Orbeon Forms runs within a the servlet container. This has huge benefits, including portability. But in general, such a container is fairly inflexible. For example, you cannot match pages based on regular expressions, and you cannot specify two different forms of authentication in the same web application based on whether you're targeting a page or service (such as form-based authentication, versus basic authentication). In addition, it is not easily possible for a web application to have full access to the container's authentication and authorization mechanisms, certainly not in a pain-free and portable way.
+Orbeon Forms runs within a servlet container. This has huge benefits, including portability. But in general, such a container is fairly inflexible. For example, you cannot match pages based on regular expressions, and you cannot specify two different forms of authentication in the same web application based on whether you're targeting a page or service (such as form-based authentication, versus basic authentication). In addition, it is not easily possible for a web application to have full access to the container's authentication and authorization mechanisms, certainly not in a pain-free and portable way.
 
 On the other hand, Orbeon Forms would like to allow some level of configuration of this directly in a page flow. The solution chosen is a solution of _delegation_.
 

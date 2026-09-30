@@ -502,7 +502,7 @@ If you don't like this behavior, you can set the following two properties:
     value="minimal"/>
 ```
 
-These cause the radio buttons and checkboxes to display only the values selected, as text, like for dropdown menus and other section controls.
+These cause the radio buttons and checkboxes to display only the values selected, as text, like for dropdown menus and other selection controls.
 
 ## Formatting
 

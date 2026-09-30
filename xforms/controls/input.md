@@ -208,7 +208,7 @@ On iOS (iPhone, iPad, iPod touch), inputs bound to nodes of type `xs:date`, `xs:
 
 \[SINCE Orbeon Forms 4.0.1]
 
-Input sanitization allows you to apply a filter on the data entered by the user, before the data is stored into instance data. One use of sanitization is to replace undesired characters. For example, the following will replace sign and double rounded quotes with straight quotes, several long dashes with regular dashes and ellipsis character with three dots:
+Input sanitization allows you to apply a filter on the data entered by the user, before the data is stored into instance data. One use of sanitization is to replace undesired characters. For example, the following will replace single and double rounded quotes with straight quotes, several long dashes with regular dashes and ellipsis character with three dots:
 
 ```xml
 <property as="xs:string" name="oxf.xforms.sanitize">

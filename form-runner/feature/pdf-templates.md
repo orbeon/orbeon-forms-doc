@@ -46,7 +46,7 @@ _NOTE: For languages like French, make sure that fields in the form have an Aria
 
 Form Runner identifies the PDF fields to fill-out based on their name. Those names must follow the following convention:
 
-* Let's assume you the name of a field to `my-field` and the name of the section in which that field is to `my-section`.
+* Let's assume you set the name of a field to `my-field` and the name of the section in which that field is to `my-section`.
 * The name of the PDF field must be: `my-section$my-field`.
 
 \[LIMITATION] It has been [reported](http://discuss.orbeon.com/Creating-a-PDF-template-for-use-with-Form-Builder-td931856.html) that Adobe LiveCycle Designer does not support the `$` character in field names.

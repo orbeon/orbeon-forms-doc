@@ -108,7 +108,7 @@ As of 2016-04-19 this page is still being updated.
     - Database Services: [doc](form-builder/database-services.md)
     - Simple Actions: [doc](form-builder/actions.md)
 - XML Schema Support: [doc](form-builder/xml-schema-support.md)
-- Source code editor: [doc](form-runner/component/source-code-editor.md)whether section is collapsible
+- Source code editor: [doc](form-runner/component/source-code-editor.md)
 - Extension API: [doc](form-builder/extension-api.md)
 - Basic keyboard shortcuts
     - Cut/Copy/Paste: [doc](form-builder/cut-copy-paste.md#keyboard-shortcuts)

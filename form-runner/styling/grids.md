@@ -176,7 +176,7 @@ It is possible to change the default back to using HTML tables at runtime with t
 
 [SINCE Orbeon Forms 2016.2]
 
-Grids which are not repeated and do not include `rowpan`s do not use a `<table>` element but use instead `<div>`s:
+Grids which are not repeated and do not include `rowspan`s do not use a `<table>` element but use instead `<div>`s:
 
 ```html
 <div class="fr-grid fr-grid-2 fr-norepeat">
@@ -211,7 +211,7 @@ Grids which are not repeated and do not include `rowpan`s do not use a `<table>`
 
 ### Non-repeated grids with rowspans
 
-Grids which are not repeated and do include `rowpan`s use a `<table>` element with `role="presentation"`:
+Grids which are not repeated and do include `rowspan`s use a `<table>` element with `role="presentation"`:
 
 ```html
 <table class="fr-grid fr-grid-2 fr-norepeat" role="presentation">

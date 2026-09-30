@@ -41,7 +41,7 @@ This simple validation has 3 possibilities:
 
 When the value is required, an asterisk appears next to the control to signify to the user that the value is required.
 
-At runtime, if the value is required but not empty, the value is marked as invalid.
+At runtime, if the value is required but empty, the value is marked as invalid.
 
 \[SINCE Orbeon Forms 4.9]
 

@@ -222,7 +222,7 @@ At the moment, only a single `sort` attribute is supported, but the last modific
 The `page-size` and `page-number` elements control paging.
 
 - `page-size` attribute: how many results to return at the most
-- `page-number` attribute: page number to result, starting with 1
+- `page-number` attribute: page number to return, starting with 1
 
 ## Language
 

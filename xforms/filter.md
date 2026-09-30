@@ -108,7 +108,7 @@ You deploy Orbeon Forms as a separate WAR with the following steps:
 
 ### Session handling
 
-Before forwarding Ajax requests to Orbeon Forms, the XForms filter [checks][8] that a session exists for the current user. This is done to deal with the scenario where users log out from your application but still have, say in another tab, a form created with Orbeon Forms open. When they logout, you invalidate the session in your app, but the Orbeon session is still there. Without this check, after logging, users could switch to the other tab, and continue to interact with the form, and it would work as the Ajax requests would be routed to Orbeon Forms, whose session is still alive, which, obviously, you wouldn't want that happen.
+Before forwarding Ajax requests to Orbeon Forms, the XForms filter [checks][8] that a session exists for the current user. This is done to deal with the scenario where users log out from your application but still have, say in another tab, a form created with Orbeon Forms open. When they log out, you invalidate the session in your app, but the Orbeon session is still there. Without this check, after logging out, users could switch to the other tab, and continue to interact with the form, and it would work as the Ajax requests would be routed to Orbeon Forms, whose session is still alive, which, obviously, you wouldn't want that to happen.
 
 If your application never creates a session, this check will always fail, and Ajax request will never go through. To get around this, you can either:
 

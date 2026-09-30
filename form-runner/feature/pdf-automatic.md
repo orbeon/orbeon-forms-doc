@@ -23,7 +23,7 @@ These properties allow specifying fonts to embed in PDF files. You do this with 
     value="Roboto"/>
 ```
 
-Then you indicate where the TTF file for the name you chose is located on disk, using either one of the following two properties. Use the first [SINCE Orbeon Forms 2019.2] if you want to place your font inside the Orbeon Forms `WIB-INF/resources` directory, or use the second if you want to place it somewhere else, referring to the file using an absolute path.
+Then you indicate where the TTF file for the name you chose is located on disk, using either one of the following two properties. Use the first [SINCE Orbeon Forms 2019.2] if you want to place your font inside the Orbeon Forms `WEB-INF/resources` directory, or use the second if you want to place it somewhere else, referring to the file using an absolute path.
 
 ```xml
 <property
