@@ -19,7 +19,7 @@ If you place a file called `foo.xpl` under
 WEB-INF/resources/form/acme/service/
 ```
 
-A service called `foo` is made available the following URL:
+A service called `foo` is made available at the following URL:
 
 ```
 /fr/service/custom/acme/foo
@@ -31,7 +31,7 @@ Similarly, if you place a file called `bar.xpl` under
 WEB-INF/resources/form/acme/order/service/
 ```
 
-A service called `bar` is made available the following URL:
+A service called `bar` is made available at the following URL:
 
 ```
 /fr/service/custom/acme/order/bar

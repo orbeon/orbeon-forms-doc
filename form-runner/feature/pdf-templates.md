@@ -38,13 +38,13 @@ In order to create a template, you need Acrobat Professional or a similar tool t
 3. Remove incorrectly detected areas
 4. Set all field names, as per the `my-section$my-field` explained below
 
-_NOTE: For languages like French, make sure that fields in the form have an Arial font, not Helvetica. Not using Arial can cause issue with accents._
+_NOTE: For languages like French, make sure that fields in the form have an Arial font, not Helvetica. Not using Arial can cause issues with accents._
 
 ![Example of form fields in Acrobat Professional](../../form-builder/images/pdf-template.png)
 
 ### Naming fields
 
-Form Runner identifies the PDF fields to fill-out based on their name. Those names must follow the following convention:
+Form Runner identifies the PDF fields to fill out based on their name. Those names must follow the following convention:
 
 * Let's assume you set the name of a field to `my-field` and the name of the section in which that field is to `my-section`.
 * The name of the PDF field must be: `my-section$my-field`.

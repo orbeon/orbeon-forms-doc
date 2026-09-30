@@ -47,7 +47,7 @@ Check whether there are pending uploads.
 
 \[SINCE Orbeon Forms 2017.2]
 
-Rollback some of the changes that have taken place during the current process.
+Roll back some of the changes that have taken place during the current process.
 
 * parameters
   * `changes`: must be "in-memory-form-data"

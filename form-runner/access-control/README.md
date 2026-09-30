@@ -6,7 +6,7 @@ Access control touches on the following:
 
 - __Form definitions__ – Which users (in this case also known as *form authors*), can create, edit, or view form definitions.
 - __Published forms__ – Which users can access a deployed form? If they can access the form, what operations (such as creating, viewing, editing, deleting) are allowed?
-- __Form fields__ – If users can access the form, can she access a particular field or group of fields? If so, can the field be changed or just viewed?
+- __Form fields__ – If users can access the form, can they access a particular field or group of fields? If so, can the field be changed or just viewed?
 
 The following pages address specific topics:
 

@@ -10,7 +10,7 @@ With the wizard view, top-level sections instead appear in a table of contents a
 
 You can navigate between pages by clicking on a title in the table of contents, or you can use the navigation arrows. You can also use "Prev" and "Next" buttons when configured.
 
-Errors on your form appear at the bottom as usual, and the title of pages that contain errors are highlighted in red. If you click on an error you are taken directly to the page and control containing the error.
+Errors on your form appear at the bottom as usual, and the titles of pages that contain errors are highlighted in red. If you click on an error you are taken directly to the page and control containing the error.
 
 ## Enabling the wizard view
 
@@ -41,7 +41,7 @@ You can enable or disable the wizard view for a specific form definition directl
 
 ### Introduction
 
-The wizard supports two mode:
+The wizard supports two modes:
 
 * the _free_ mode (which is the default mode)
 * the _validated_ mode \[SINCE Orbeon Forms 4.9]
@@ -190,7 +190,7 @@ The Form Settings in Form Builder allow overriding the default set by configurat
 
 ### CSS classes
 
-CSS classes are available on table of content entries to reflect the status of each section:
+CSS classes are available on table of contents entries to reflect the status of each section:
 
 * `disabled`
 * `active`

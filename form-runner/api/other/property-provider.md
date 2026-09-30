@@ -24,7 +24,7 @@ You can provide one or more custom property providers by implementing the `org.o
 - checking the passed parameters to handle caching
 - returning a list of properties when needed
 
-At runtime, during a given request, Orbeon Forms queries each registered property providers in order of priority to obtain current properties, and merges the results. In order to make the process efficient, caching is supported.
+At runtime, during a given request, Orbeon Forms queries each registered property provider in order of priority to obtain current properties, and merges the results. In order to make the process efficient, caching is supported.
 
 ### Caching
 

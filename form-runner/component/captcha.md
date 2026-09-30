@@ -58,7 +58,7 @@ The property name changed in Orbeon Forms 2020.1 with the introduction of new ca
   * [\[UNTIL Orbeon Forms 2023.1\]](../../release-notes/orbeon-forms-2023.1.md)
     * This uses the SimpleCaptcha implementation.
   * [\[SINCE Orbeon Forms 2023.1.1\]](../../release-notes/orbeon-forms-2023.1.1.md)
-    * This uses to the [Katpcha](https://github.com/youkol/kaptcha) implementation.
+    * This uses the [Kaptcha](https://github.com/youkol/kaptcha) implementation.
     * If you use Orbeon Forms 2023.1.1 or newer, use `fr:on-premise-captcha` instead.
 * Qualified name of an XBL component that implements a captcha
   * \[SINCE Orbeon Forms 2017.2]
@@ -342,7 +342,7 @@ When all the following conditions are met:
 Then:
 
 * While an error will show in the error summary to inform users that the captcha needs to be solved, when users click on the error message, Form Runner will not switch to the page where the captcha appears. (The situation here is somewhat different relative to what happens with normal fields, as depending on how you set the `oxf.fr.detail.captcha.visible.*.*` property, the captcha could appear on multiple pages.)
-* The page or pages in which the captcha appear won't be highlighted, as is the case for other invalid fields.
+* The page or pages in which the captcha appears won't be highlighted, as is the case for other invalid fields.
 
 ### Captcha visibility
 
@@ -350,7 +350,7 @@ Then:
 
 When the captcha is enabled, you can control its visibility with the following property. The default value is `true` (shown below), and you can use a [value template](../../xforms/attribute-value-templates.md), to make it dynamic.
 
-Even when not visible according this property (i.e. your value template returns `false`), as long as the captcha is enabled, solving it is required; so this property isn't intended to be used to dynamically decide whether to have a captcha on a page or not, but it is to decide at what point during the form filling process you want the captcha to show.
+Even when not visible according to this property (i.e. your value template returns `false`), as long as the captcha is enabled, solving it is required; so this property isn't intended to be used to dynamically decide whether to have a captcha on a page or not, but it is to decide at what point during the form filling process you want the captcha to show.
 
 ```xml
 <property 

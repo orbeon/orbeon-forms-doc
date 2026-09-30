@@ -4,7 +4,7 @@
 
 Form Runner has a built-in theme for forms. This page documents how you can make changes to that default style.
 
-CSS stands for [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS), and is the standard technology to add style to web pages and web applications. Orbeon Forms supports custom CSS files which allows you to change your forms' appearance. This assumes that you have some CSS knowledge.
+CSS stands for [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS), and is the standard technology to add style to web pages and web applications. Orbeon Forms supports custom CSS files which allow you to change your forms' appearance. This assumes that you have some CSS knowledge.
 
 ## Adding your own CSS files
 
@@ -12,7 +12,7 @@ CSS stands for [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs
     - `WEB-INF/resources/forms/assets`: CSS for all forms
     - `WEB-INF/resources/forms/APP/assets`: CSS for app name APP
     - `WEB-INF/resources/forms/APP/FORM/assets`: CSS for app name APP and form name FORM
-2. Define the `oxf.fr.css.custom.uri` property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
+2. Define the `oxf.fr.css.custom.uri` property to point to the file(s) you added. The path points to a location under the `WEB-INF/resources` directory.
 
 ```xml
 <property as="xs:string" name="oxf.fr.css.custom.uri.*.*">
@@ -36,7 +36,7 @@ Note that the locations suggested are just about how to organize the files for c
 </property>
 ```
 
-The names `APP`, `FORM`, `my-app.css` and `my-app-and-form.css` are just placeholders for your own app name, form name, and CSS files names.
+The names `APP`, `FORM`, `my-app.css` and `my-app-and-form.css` are just placeholders for your own app name, form name, and CSS file names.
 
 If a specific property is defined for an app/form, such as `oxf.fr.css.custom.uri.APP.FORM`, only that property is considered and other properties defined only for a given app but without a specific form, such as `oxf.fr.css.custom.uri.APP.*`, will be ignored. This means that you must repeat references to CSS resources in the more specific property if desired. For example above `/forms/APP/assets/my-app.css` is repeated.
 
@@ -250,7 +250,7 @@ Bootstrap, XForms engine, Form Runner and Form Builder CSS rules are contained w
 
 See [here for more on CSS specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity).
 
-When defining your own CSS, make sure to use a strong selector, so its precedence is higher than CSS provide by Orbeon Forms, e.g. something like:
+When defining your own CSS, make sure to use a strong selector, so its precedence is higher than CSS provided by Orbeon Forms, e.g. something like:
 
 ```css
 .orbeon .fr-grid .my-class .xforms-input-input {

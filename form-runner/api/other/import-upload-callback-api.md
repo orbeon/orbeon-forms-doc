@@ -4,7 +4,7 @@
 
 [\[SINCE Orbeon Forms 2025.1.1\]](/release-notes/orbeon-forms-2025.1.1.md)
 
-This API is a simple callback API to let a third-party service when a file has been uploaded in the [Import](/form-runner/feature/excel-xml-import.md) page.
+This API is a simple callback API to let a third-party service know when a file has been uploaded in the [Import](/form-runner/feature/excel-xml-import.md) page.
 
 ## Enabling the callback API
 

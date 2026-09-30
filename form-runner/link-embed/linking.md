@@ -4,9 +4,9 @@
 
 When you create a form with Form Builder, you pick an _application name_ and _form name_ for that form. For instance, for a marriage registration, you might choose `clerk` as the application name, and `marriage-registration` as the form name.
 
-When you publish the form, assuming you have Orbeon Forms deployed on a server on `http://www.city.gov/forms`, citizen will be able to fill out a new marriage registration by going to `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
+When you publish the form, assuming you have Orbeon Forms deployed on a server on `http://www.city.gov/forms`, citizens will be able to fill out a new marriage registration by going to `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
 
-In a typical deployment, users will access this page from another part of your website or web application that contains a link to form served by Orbeon Forms. For instance, a city government might have on its website a page listing forms citizen can fill out, which links to the marriage registration form on `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
+In a typical deployment, users will access this page from another part of your website or web application that contains a link to a form served by Orbeon Forms. For instance, a city government might have on its website a page listing forms citizens can fill out, which links to the marriage registration form on `http://www.city.gov/forms/fr/clerk/marriage-registration/new`.
 
 ![Page on your website/app linking to a form](../images/linking-page-with-link.png)
 
@@ -159,10 +159,10 @@ The following table lists the most common status codes you might encounter when 
 | 302         | The requested resource has moved to a different URL and the server is telling the browser where to navigate. This is rarely used for pages, but can be used for baseline embedding resources. |
 | 304         | The requested resource has not changed since the last time it was requested. This can be returned for resources.                                                                              |
 | 400         | The request was invalid. This is rarely returned by Orbeon Forms for pages. Most likely, this is due to an internal error.                                                                    |
-| 403         | The user is not authorized to access the requested page. Or, with Orbeon Forms version prior to 2022.1.5, this can also be returned if the application server session has expired.            |
+| 403         | The user is not authorized to access the requested page. Or, with Orbeon Forms versions prior to 2022.1.5, this can also be returned if the application server session has expired.            |
 | 404         | The requested page was not found. This is typically the case when you request a page that doesn't exist, for example if you use an incorrect path or refer to a non-existing form.            |
 | 413         | The request was too large. This can happen when the user uploads a file that is too large.                                                                                                    |
-| 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity from the user's part.                                           |
+| 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity on the user's part.                                           |
 | 500         | An error occurred on the server. Check the Orbeon log files for details of the error.                                                                                                         |
 | 503         | Service unavailable. This is only returned by Orbeon Forms for an XHR request that is a retry, if the original request is still running. The operation will likely be retried.                |
 
@@ -189,13 +189,13 @@ However, more status codes can be returned for service requests than for pages. 
 | 206         | The request was successful and partial content is returned. This is used for byte ranges when reading from video attachments.                                                      |
 | 400         | The request was invalid. This means the path, parameters, headers, and/or request body are invalid.                                                                                |
 | 401         | The user is not allowed to perform the specified operation.                                                                                                                        |
-| 403         | The user is not authorized to access the requested page. Or, with Orbeon Forms version prior to 2022.1.5, this can also be returned if the application server session has expired. |
+| 403         | The user is not authorized to access the requested page. Or, with Orbeon Forms versions prior to 2022.1.5, this can also be returned if the application server session has expired. |
 | 404         | The requested page was not found. This is typically the case when you request a page that doesn't exist, for example if you use an incorrect path or refer to a non-existing form. |
 | 405         | The HTTP method is not allowed.                                                                                                                                                    |
 | 409         | There is a conflict with the current state of the resource. This is only used when checking form definition versions.                                                              |
 | 410         | The resource is gone. This is only used when reading from the database and we know that the resource has been deleted.                                                             |
 | 423         | The resource is locked. This is only used by the Lease feature.                                                                                                                    |
-| 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity from the user's part.                                |
+| 440         | From Orbeon Forms 2022.1.5 and newer. The application server session has expired. This can happen after periods of inactivity on the user's part.                                |
 | 500         | An error occurred on the server. Check the Orbeon log files for details of the error.                                                                                              |
 
 ## Generating links automatically

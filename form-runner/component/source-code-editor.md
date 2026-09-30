@@ -40,7 +40,7 @@ The `theme` attribute allows you to specify the theme to use for the editor. The
 
 ### Styling
 
-By default, the editor takes 100% of the available width, and has a fixed height of 300 pixels. You can set to use a width and height of your choosing with CSS, as follows:
+By default, the editor takes 100% of the available width, and has a fixed height of 300 pixels. You can set it to use a width and height of your choosing with CSS, as follows:
 
 ```css
 .xbl-fr-code-mirror .CodeMirror {

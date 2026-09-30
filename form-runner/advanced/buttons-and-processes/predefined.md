@@ -23,9 +23,9 @@ The following buttons are predefined and associated with the processes of the sa
 | `summary`       | navigate to the Summary page                                                                                                                                                                                                                                                 | 4.2              |
 | `tiff`          | generate a TIFF version of the current form (see [TIFF Production](../../feature/tiff-production.md))                                                                                                                                                                        | 4.2              |
 | `validate`      | run `validate-all`                                                                                                                                                                                                                                                           | 4.2              |
-| `wizard-next`   | runs the action of the same name and show an error when needed                                                                                                                                                                                                               | 4.2              |
-| `wizard-prev`   | runs the action of the same name and show an error when needed                                                                                                                                                                                                               | 4.2              |
-| `wizard-toc`    | show the separate table of content when the wizard is configured with a separate table of contents                                                                                                                                                                           | 2016.2           |
+| `wizard-next`   | run the action of the same name and show an error when needed                                                                                                                                                                                                               | 4.2              |
+| `wizard-prev`   | run the action of the same name and show an error when needed                                                                                                                                                                                                               | 4.2              |
+| `wizard-toc`    | show the separate table of contents when the wizard is configured with a separate table of contents                                                                                                                                                                           | 2016.2           |
 | `xml-export`    | generate an XML file containing information about the structure of the form as well as the current data                                                                                                                                                                      | 2021.1.3         |
 | ~~`refresh`~~   | visit all controls and update the page (noscript mode only)                                                                                                                                                                                                                  | 4.2 to 2016.3    |
 
@@ -112,7 +112,7 @@ The `result-dialog` action shows a configurable dialog. You can customize:
       name="oxf.fr.detail.submit.content-from-persistence.*.*"
       value="false"/>
     ```
-*   The **buttons** shows in the submit dialog, which can be:
+*   The **buttons** shown in the submit dialog, which can be:
 
     * `clear`: Sets all the fields to their default value and closes the dialog.
     * `keep`: Keeps the field values as they are and closes the dialog.
@@ -125,7 +125,7 @@ The `result-dialog` action shows a configurable dialog. You can customize:
       name="oxf.fr.detail.submit.buttons.*.*"
       value="go"/>
     ```
-*   The **go URI**, if you have enabled the go button. When the "go" button is pressed, users will be taken to the URI specified by the following property. The value of the property is an XPath expression evaluated in the context of the form instance. This allows you both to have a "dynamic" URI (which depends on the initial data or data entered by users) or a "static" URI in the form of a URI between single quote in the XPath expression.
+*   The **go URI**, if you have enabled the go button. When the "go" button is pressed, users will be taken to the URI specified by the following property. The value of the property is an XPath expression evaluated in the context of the form instance. This allows you both to have a "dynamic" URI (which depends on the initial data or data entered by users) or a "static" URI in the form of a URI between single quotes in the XPath expression.
 
     ```xml
     <property

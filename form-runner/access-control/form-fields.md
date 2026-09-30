@@ -8,7 +8,7 @@ You can control access to specific form fields based on the user's roles.
 
 The `$fr-roles` XPath variable can be used in formulas controlling whether a field or section is visible or readonly. `$fr-roles` contains the list (as an XPath sequence) of roles of the current user, if any. Each role is represented as a string.
 
-You can make a control non-visible to the current user by defining a _visibility_ expression that returns `false()`. If the control is visible, you can make it readonly to current user by defining a _readonly_ expression that returns `true()`.
+You can make a control non-visible to the current user by defining a _visibility_ expression that returns `false()`. If the control is visible, you can make it readonly to the current user by defining a _readonly_ expression that returns `true()`.
 
 ## Examples
 

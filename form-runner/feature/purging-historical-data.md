@@ -8,7 +8,7 @@ This is an Orbeon Forms PE feature.
 
 ## Overview
 
-The "Purge" dialog is similar to the ["Export" dialog](exporting-form-definitions-and-form-data.md), except that it allows you to delete form data instead of exporting it. A typical scenario will involve exporting the data first, e.g. for archival purpose, then deleting/purging it.
+The "Purge" dialog is similar to the ["Export" dialog](exporting-form-definitions-and-form-data.md), except that it allows you to delete form data instead of exporting it. A typical scenario will involve exporting the data first, e.g. for archival purposes, then deleting/purging it.
 
 Like in the "Export" dialog, you can either purge the forms that were explicitly selected:
 

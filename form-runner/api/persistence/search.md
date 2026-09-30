@@ -48,7 +48,7 @@ The `query` element is the most complex element. It is used for full-text and st
 
 ### Full-text search
 
-The first `<query>` element is used for free text search: its attributes, if any, are ignored, and its text content, if present, is taken to be the text of the search. The result details to return is still determined by the subsequent `<query>` elements with summary-field set to `true`. See below for more information about the response format. The exact semantic of the full-text search is implementation-dependent.
+The first `<query>` element is used for free text search: its attributes, if any, are ignored, and its text content, if present, is taken to be the text of the search. The result details to return are still determined by the subsequent `<query>` elements with summary-field set to `true`. See below for more information about the response format. The exact semantic of the full-text search is implementation-dependent.
 
 [SINCE Orbeon Forms 2022.1]
 
@@ -99,7 +99,7 @@ _NOTE: The exact semantics for `substring` is not specified at the moment (the s
 
 ### Search paths
 
-The `path` attribute can be looked at as a search key. Say your documents looks like this:
+The `path` attribute can be looked at as a search key. Say your documents look like this:
 
 ```xml
 <form>
@@ -383,7 +383,7 @@ For each of the documents found, a `<document>` element is returned with the fol
 - `draft`
     - `true` or `false`, depending on whether the form data is a draft (autosaved) or not
 - `operations`
-    - a space separated subset of the following token: `read`, `write`, `update`, and `delete`, whichever operations the user is allowed to perform; also see [Supporting permissions in your persistence API implementation](https://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)
+    - a space separated subset of the following tokens: `read`, `write`, `update`, and `delete`, whichever operations the user is allowed to perform; also see [Supporting permissions in your persistence API implementation](https://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)
 - `created-by`
     - [SINCE Orbeon Forms 2021.1] 
     - username of the user who created the data, or missing if there is no user information

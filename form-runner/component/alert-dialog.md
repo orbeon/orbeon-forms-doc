@@ -47,7 +47,7 @@ The alert dialog supports 3 buttons, that correspond to a _positive choice_, a _
       <fr:positive-choice><fr:label>OK</fr:label></fr:positive-choice>
       <fr:negative-choice><fr:label>Cancel</fr:label></fr:negative-choice>
     ```
-*   Override the icon shown inside the button with CSS. You will find an `<xhtml:span>` with the class indicated in the table below around each button, which allows you to have a different style depending on the button type. For instance, if you can use the following CSS rule to remove the icon for the positive choice button:
+*   Override the icon shown inside the button with CSS. You will find an `<xhtml:span>` with the class indicated in the table below around each button, which allows you to have a different style depending on the button type. For instance, you can use the following CSS rule to remove the icon for the positive choice button:
 
     ```markup
       .yui-skin-sam .xbl-fr-alert-dialog-positive .xbl-fr-button .yui-button button

@@ -34,7 +34,7 @@ The following parameters allow controlling hints, alerts, and required controls 
     - when `true`, shows alerts in the PDF
 - `fr-pdf-show-required`
     - defaults to the `oxf.fr.detail.static-readonly-required` property, which itself defaults to `false`
-    - when `true`, style required controls in the PDF
+    - when `true`, styles required controls in the PDF
 
 The following parameters allow controlling the use of PDF templates:
 

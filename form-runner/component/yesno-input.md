@@ -21,7 +21,7 @@ A "Clear value" button is available in Form Builder to clear the value of the co
 
 ## Basic usage
 
-You use `fr:yesno-input` like a regular XForms controls. Example:
+You use `fr:yesno-input` like a regular XForms control. Example:
 
 ```xml
 <fr:yesno-input ref="happy-camper">

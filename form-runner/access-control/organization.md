@@ -8,7 +8,7 @@ Let's consider that your company has the following hierarchical organizational s
 
 ![Organization hierarchy](../images/organization-hierarchy.png)
 
-With organization-based permissions, users can have roles that are not just _global_, but _tied to an organization_. For instance, consider that a form author defines that for a given form, users with the role `admin` can read, update, and delete any form data. You might have admins who should get this permission company-wide. But you might also want to restrict that permissions to form data created by users in certain parts of the company; for instance, a given user might be "admin for the Engineering organization", and she should only have the aforementioned permissions on form data created by users who are either directly in the Engineering organization, or any of its children organizations. This is particularly relevant for roles that are inherently tied to an organization, like "manager", where you're likely to want to say that the permissions you grant to a manager are limited to the data created by the people they manage.
+With organization-based permissions, users can have roles that are not just _global_, but _tied to an organization_. For instance, consider that a form author defines that for a given form, users with the role `admin` can read, update, and delete any form data. You might have admins who should get this permission company-wide. But you might also want to restrict that permission to form data created by users in certain parts of the company; for instance, a given user might be "admin for the Engineering organization", and she should only have the aforementioned permissions on form data created by users who are either directly in the Engineering organization, or any of its children organizations. This is particularly relevant for roles that are inherently tied to an organization, like "manager", where you're likely to want to say that the permissions you grant to a manager are limited to the data created by the people they manage.
 
 ## Permissions apply to sub-organizations
 
@@ -38,7 +38,7 @@ For Liferay's user information to be passed to Orbeon Forms, you need to:
 1. Use the Liferay proxy portlet. (The Liferay full portlet doesn't support passing Liferay's user information to Orbeon Forms.)
 2. In the [proxy portlet preferences](../link-embed/liferay-proxy-portlet.md#configure-the-proxy-portlet), check the box _Send Liferay user_.
 3. Add to your `properties-local.xml` the [necessary properties](../link-embed/liferay-proxy-portlet.md#configuring-form-runner-to-use-liferay-user-information) so Orbeon Forms knows how to extract the user's information from the headers set by the Liferay proxy portlet.
-4. Add to your `properties-local.xml` the following property, so form authors can assign rights to user designated as Organization Owner in Liferay:
+4. Add to your `properties-local.xml` the following property, so form authors can assign rights to users designated as Organization Owner in Liferay:
 
 ```xml
 <property as="xs:string" name="oxf.fb.permissions.role.always-show">
@@ -77,7 +77,7 @@ The way organizations are used and stored has the following consequences:
 
 * If an organization name changes, for instance `Support` is renamed `Customer satisfaction`, then data in the database needs to be changed.
 * If the organization structure changes, say `Support` isn't under `Engineering` but under `Operations`, then information in the database needs to be changed.
-* If a user switches to another organization, existing data will still be tied to her previous organizations. Another way to look at it is that, by default, data stays with the organizations where it was created, irrelevant of where the user who created that data moves. This may or may not be what you want, depending on the scenario. For instance, say a user in organization A submits an expense report, and shortly after that moves to organization B. By default, it will still be the manager in organization A who will be in charge of approving that expense report. If instead you want data to move along with the user, it is up to you to change the organization associated with the data for that user in the database.
+* If a user switches to another organization, existing data will still be tied to her previous organizations. Another way to look at it is that, by default, data stays with the organizations where it was created, irrespective of where the user who created that data moves. This may or may not be what you want, depending on the scenario. For instance, say a user in organization A submits an expense report, and shortly after that moves to organization B. By default, it will still be the manager in organization A who will be in charge of approving that expense report. If instead you want data to move along with the user, it is up to you to change the organization associated with the data for that user in the database.
 
 ## See also
 

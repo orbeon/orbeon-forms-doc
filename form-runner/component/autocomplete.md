@@ -6,11 +6,11 @@
 
 ## Overview
 
-[Autocomplete](http://en.wikipedia.org/wiki/Autocomplete) is a feature provided by many applications, and this component makes it easy to add an autocomplete field to your form. The autocomplete controls is not unlike an `<xf:select1>` selection controls:
+[Autocomplete](http://en.wikipedia.org/wiki/Autocomplete) is a feature provided by many applications, and this component makes it easy to add an autocomplete field to your form. The autocomplete control is not unlike an `<xf:select1>` selection control:
 
 * You use a [single-node binding attribute](http://www.w3.org/TR/xforms11/#structure-attrs-single-node) to bind the control to the node holding the current value for the control.
 * You use a combination of `<xf:itemset>` and `<xf:item>` to define the values suggested to the user. Just as with `<xf:select1>`, what is visible to users are item's labels and what is stored in the node to which your autocomplete is bound is the selected item's value.
-* Just like the `<xf:select1>`, the autocomplete only implements a closed selection: users will only be able to select a value which exists in the itemset. The value of the node bound to the autocomplete won't be set to the value typed by users in the field, unless they select an item from the suggestion list or type text which is identical to one of the item's label.
+* Just like the `<xf:select1>`, the autocomplete only implements a closed selection: users will only be able to select a value which exists in the itemset. The value of the node bound to the autocomplete won't be set to the value typed by users in the field, unless they select an item from the suggestion list or type text which is identical to one of the items' labels.
 
 ![Auto Complete field used for a list of countries](../images/autocomplete-simple.png)
 
@@ -25,10 +25,10 @@ The autocomplete can work in one of three modes, which in order of increasing co
   * When the default filtering mechanism works for you (more on this below).
 *   Does the itemset really need to be static?
 
-    No, you don't need hard code the list of values in your form, or even to know it when you generate the page. You can fetch the list from a service using an `<xf:submission>`, and this list can change depending on other values entered by users in other fields of the page. But at a given point in time, that list must be complete; you can't change it depending what users are currently typing in the field as they type.
+    No, you don't need to hard code the list of values in your form, or even to know it when you generate the page. You can fetch the list from a service using an `<xf:submission>`, and this list can change depending on other values entered by users in other fields of the page. But at a given point in time, that list must be complete; you can't change it depending on what users are currently typing in the field as they type.
 *   How does the filtering work?
 
-    In this mode, the autocomplete field determines which values are shown in the suggestion based on what users typed in the field. It will only show items which label starts with the text entered by users. The comparison is not case sensitive. For instance, typing "ar" in a field that expects a list of countries will show "Argentina", amongst other countries, but not "Saudi Arabia".
+    In this mode, the autocomplete field determines which values are shown in the suggestion based on what users typed in the field. It will only show items whose label starts with the text entered by users. The comparison is not case sensitive. For instance, typing "ar" in a field that expects a list of countries will show "Argentina", amongst other countries, but not "Saudi Arabia".
 *   What does the syntax look like?
 
     ```markup
@@ -63,7 +63,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
       </fr:autocomplete>
     ```
 
-    * `ref`: binds the autocomplete to a node that will that the autocomplete will populate with the selected item's value.
+    * `ref`: binds the autocomplete to a node that the autocomplete will populate with the selected item's value.
     * `labelref`: binds the autocomplete to a node that the autocomplete will populate with the selected item's label. The XPath expression in `labelref` is evaluated in the context of the node to which the control is bound. This attribute is optional, but if you don't specify it, when loading a form where an autocomplete already has a value, then autocomplete will show empty, which most likely will be seen as incorrect behavior by users. This is because in _resource_ mode, as well as in _dynamic_ mode (see below), the autocomplete doesn't know about all the items, and thus can't automatically infer the label it needs to show users based on a value stored in the instance. `labelref` solves this problem by also storing the label in the instance.
     * `resource`: points to an HTTP service responding with an XML document. It is interpreted as an AVT, and you can use the `$fr-search-value` to refer to the value users typed so far in the search field, as done in the above example.
     * `<xf:itemset>`: points to the items in the XML returned by the service, and for each item to its label and value.
@@ -78,10 +78,10 @@ The autocomplete can work in one of three modes, which in order of increasing co
 
     In most cases, you will want to update the itemset as users type, based on the value they entered. For this, listen to the event `fr-search-changed` on the `<fr:autocomplete>`, and run an action that updates the itemset. You are in control of where the data comes from, what subset of the data is to be displayed in the suggestion list based on what the user types, and when the suggestion is to be made.
 
-    For instance, the following code reacting to the `fr-search-changed` event is written is a such a way that:
+    For instance, the following code reacting to the `fr-search-changed` event is written in such a way that:
 
     * The suggestion list shows up only after users enter at least 2 characters.
-    *   The suggestion list is updating by running a submission which calls a service, providing the text typed by users so far.
+    *   The suggestion list is updated by running a submission which calls a service, providing the text typed by users so far.
 
         ```markup
         <fr:autocomplete
@@ -120,7 +120,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
         </fr:autocomplete>
         ```
 
-_For more on the `labelref` attribute, see the above section the resource mode._
+_For more on the `labelref` attribute, see the above section on the resource mode._
 
 ## Events
 
@@ -129,7 +129,7 @@ _For more on the `labelref` attribute, see the above section the resource mode._
     When using the autocomplete in dynamic itemset mode, you can listen on the `fr-search-changed` event to be notified when the value typed in the field changes. This event is dispatched as users type in the field, just like the `xforms-value-changed` event would for an incremental `<xf:input>`. The preceding example uses this event to update the itemset as users type in the field.
 *   `xforms-value-changed` – When did the user make a selection?
 
-    Just as with other XForms controls, you can listen on `xforms-value-changed` to be notified when the value of the node bound to the autocomplete changes. That event is also dispatched when users make a selection from the suggestion list, or when they happen to have typed a value that exactly matches one of the items in the itemset. This event is dispatched when the autocomplete loses the focus. At that time, the node bound to the autocomplete is also updated with the value corresponding to the label typed or selected by users. If the label in the field doesn't correspond to label of any item in the itemset, both the value of the node bound to the autocomplete as well as the content of the search field are set to empty string.
+    Just as with other XForms controls, you can listen on `xforms-value-changed` to be notified when the value of the node bound to the autocomplete changes. That event is also dispatched when users make a selection from the suggestion list, or when they happen to have typed a value that exactly matches one of the items in the itemset. This event is dispatched when the autocomplete loses the focus. At that time, the node bound to the autocomplete is also updated with the value corresponding to the label typed or selected by users. If the label in the field doesn't correspond to the label of any item in the itemset, both the value of the node bound to the autocomplete as well as the content of the search field are set to empty string.
 
 ## Setting the content of the text field
 
@@ -152,7 +152,7 @@ Just as if users had typed that label, if you are in dynamic itemset mode, this 
 
 When using a static itemset, you can set the value of the node you bind to the autocomplete control. This value can either be set initially (i.e. be present in the instance when the page is loaded), or can be set dynamically. When this happens, the autocomplete control will populate the search field with the label corresponding to that value, if there is one.
 
-Don't set the value of the node bound to an autocomplete control if you are using the dynamic or resource mode. This is because when the itemset is dynamic, you load the itemset based on the search term entered by users, responding to the `fr-search-changed` event. If the value is set, the autocomplete can't dispatch a `fr-search-changed` event, since it doesn't know the label yet, and your code won't load the appropriate itemset that contains the label for the new value. In dynamic itemset mode, always use the `fr-set-label` event to indirectly set the value of the control. If you want the autocomplete to be populated based on a value in the instance when the form loads, on `xforms-model-construct-done` you need to find what the label corresponding to this value is, and dispatch an `fr-set-label` event with that label. As an exception to this rule, setting the value of bound node to empty string is supported in all cases: it is understood as a "reset" and will also set the search field to empty string.
+Don't set the value of the node bound to an autocomplete control if you are using the dynamic or resource mode. This is because when the itemset is dynamic, you load the itemset based on the search term entered by users, responding to the `fr-search-changed` event. If the value is set, the autocomplete can't dispatch a `fr-search-changed` event, since it doesn't know the label yet, and your code won't load the appropriate itemset that contains the label for the new value. In dynamic itemset mode, always use the `fr-set-label` event to indirectly set the value of the control. If you want the autocomplete to be populated based on a value in the instance when the form loads, on `xforms-model-construct-done` you need to find what the label corresponding to this value is, and dispatch an `fr-set-label` event with that label. As an exception to this rule, setting the value of the bound node to empty string is supported in all cases: it is understood as a "reset" and will also set the search field to empty string.
 
 ## Maximum number of displayed results
 

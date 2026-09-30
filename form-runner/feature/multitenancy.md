@@ -18,7 +18,7 @@ See also [Providing information about the user](/form-runner/access-control/user
 
 ### Isolating forms with Form Runner
 
-Now that users have a role identifying them, it is possible to isolate users at the Form Runner level. There are two separate configuration you can do to enforce that.
+Now that users have a role identifying them, it is possible to isolate users at the Form Runner level. There are two separate configurations you can do to enforce that.
 
 First, you can set individual form permissions (see also [Setting permissions](/form-runner/access-control/deployed-forms#setting-permissions.md)). For a given form:
 
@@ -100,7 +100,7 @@ Unpublished Form Builder form definitions must be stored in the same database pr
     value="oracle"/>
 ```
 
-In general, however, you don't want to have entirely different database providers, but you would like two different database schema in the same database or two databases of the same type.
+In general, however, you don't want to have entirely different database providers, but you would like two different database schemas in the same database or two databases of the same type.
 
 This requires setting more properties. Here is an example with MySQL, which allows you to use two separate MySQL datasources:
 

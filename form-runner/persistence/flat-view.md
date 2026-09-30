@@ -61,7 +61,7 @@ Each view always has one or more metadata columns, with information copied from 
     - `metadata_last_modified_time`
     - `metadata_last_modified_by`
 
-Note that there is no `metadata_draft` column, as drafts are not included the view. (Before 4.7 they were, incorrectly, see [issue 1870](https://github.com/orbeon/orbeon-forms/issues/1870).)
+Note that there is no `metadata_draft` column, as drafts are not included in the view. (Before 4.7 they were, incorrectly, see [issue 1870](https://github.com/orbeon/orbeon-forms/issues/1870).)
 
 ### Repetition column names
 
@@ -139,7 +139,7 @@ Enclosing section and grid names are always included in the column names. A trun
 
 #### With Orbeon Forms 4.4 and earlier
 
-The section name is truncated to 14 characters, the control name to 15 characters, and both are combined with an underscore in between. In the vast majority of the cases, this will result in distinct and recognizable column names. In cases where two or more columns would end up having the same name or conflict with one of the metadata column, the persistence layer adds a number prefix of the form `001_`, `002_`, `003_`… to each column to make it unique. If this happens, you might want to change your section and/or control names to have more recognizable column names.
+The section name is truncated to 14 characters, the control name to 15 characters, and both are combined with an underscore in between. In the vast majority of the cases, this will result in distinct and recognizable column names. In cases where two or more columns would end up having the same name or conflict with one of the metadata columns, the persistence layer adds a number prefix of the form `001_`, `002_`, `003_`… to each column to make it unique. If this happens, you might want to change your section and/or control names to have more recognizable column names.
 
 Examples:
 

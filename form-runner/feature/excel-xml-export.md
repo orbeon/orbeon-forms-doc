@@ -90,7 +90,7 @@ For more about the import feature, see [Excel and XML Import](excel-xml-import.m
 
 The Excel document contains all the fields of the form, attempting to mirror the layout of the original form. This includes section titles and field labels.
 
-The export feature produces an Excel document that look like this:
+The export feature produces an Excel document that looks like this:
 
 ![Example of Excel export](../../form-builder/images/excel-export-export.png)
 
@@ -98,7 +98,7 @@ The export feature produces an Excel document that look like this:
 
 Orbeon Forms includes, in the generated Excel document, so-called _named ranges_ which match the control names assigned in Form Builder. This allows reimporting data in those cells during a subsequent import.
 
-Excel names do not support all the characters supported in Form Runner names. In addition, Excel has some very specific and poorly documented rules for name ranges for names that look like cell references. Such names are modified by Orbeon Forms when needed with an `_` prefix. The following shows some modification that are performed by Orbeon Forms:
+Excel names do not support all the characters supported in Form Runner names. In addition, Excel has some very specific and poorly documented rules for name ranges for names that look like cell references. Such names are modified by Orbeon Forms when needed with an `_` prefix. The following shows some modifications that are performed by Orbeon Forms:
 
 | Original Name | Modified Name |
 | ------------- | ------------- |
@@ -137,7 +137,7 @@ Multiple-selection controls require entering the values as a space-separated lis
 As available in Orbeon Forms 2021.1, the new Excel export feature has the following limitations:
 
 * The 24-column mode is not supported.
-* Dynamic list of choices (for example dynamic dropdowns) are not supported.
+* Dynamic lists of choices (for example dynamic dropdowns) are not supported.
 * Nested repeats are not supported.
 * Repeated grids or sections are always flattened.
 * Section templates are not supported.
@@ -153,7 +153,7 @@ As available in Orbeon Forms 2021.1, the new Excel export feature has the follow
 
 This format exports an XML document with the form structure and the data.
 
-The purpose of this export is to allow you to save the form data in a format that can be reimported into Orbeon Forms at a later time. The form structure is included to provide context for the data. It doesn't replace the form definition as you can seen in Form Builder's Edit Source as well as [Form Definition Format](../data-format/form-definition.md).
+The purpose of this export is to allow you to save the form data in a format that can be reimported into Orbeon Forms at a later time. The form structure is included to provide context for the data. It doesn't replace the form definition as you can see in Form Builder's Edit Source as well as [Form Definition Format](../data-format/form-definition.md).
 
 ### Format of the XML document
 

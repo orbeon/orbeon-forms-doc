@@ -20,7 +20,7 @@ There is no particular configuration.
 
 ### With Orbeon Forms 4.8.x (eXist database only)
 
-When using this features with eXist, you need to set the following property:
+When using this feature with eXist, you need to set the following property:
 
 ```xml
 <property 

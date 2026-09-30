@@ -31,7 +31,7 @@ A workflow stage is associated with form data:
 You can set or modify the workflow stage using the [`set-workflow-stage()` action](../advanced/buttons-and-processes/actions-form-runner.md#set-workflow-stage). This action is part of a process, which is usually associated with a button. For example, in the workflow above, you might have:
 
 * a "Submit" button to submit the form, which sets the workflow stage to `submitted`;
-* a "Approve" button to approve the form, which sets the workflow stage to `approved`;
+* an "Approve" button to approve the form, which sets the workflow stage to `approved`;
 * a "Reject" button to reject the form, which sets the workflow stage to `rejected`.
 
 For more, see [Buttons and processes](../advanced/buttons-and-processes/).

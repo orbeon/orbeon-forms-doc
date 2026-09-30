@@ -12,7 +12,7 @@ then success-message("save-success")
 recover error-message("database-error")
 ```
 
-This follows a DSL (domain-specific language) described in more details below. The process DSL supports:
+This follows a DSL (domain-specific language) described in more detail below. The process DSL supports:
 
 - actions with or without parameters
 - combinators to handle success and failure

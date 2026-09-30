@@ -304,7 +304,7 @@ TODO
 
 ### Service calls
 
-Form Runner will issue service calls through the `SubmissionProvider` API as well. This includes form author-defined service calls in Form Builder, as well as services calls specified in the Dynamic Dropdown, in particular.
+Form Runner will issue service calls through the `SubmissionProvider` API as well. This includes form author-defined service calls in Form Builder, as well as service calls specified in the Dynamic Dropdown, in particular.
 
 For example a Dynamic Dropdown might call a service at the following URL with the `GET` method
 

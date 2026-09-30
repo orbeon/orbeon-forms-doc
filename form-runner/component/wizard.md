@@ -4,7 +4,7 @@
 
 ## What it does
 
-The `fr:wizard` component presents the nested list of `fr:section` elements as a series of navigable steps, with only one section is visible at a time. The component also shows a table of contents and buttons allowing users to navigate between sections.
+The `fr:wizard` component presents the nested list of `fr:section` elements as a series of navigable steps, with only one section visible at a time. The component also shows a table of contents and buttons allowing users to navigate between sections.
 
 [SINCE Orbeon Forms 2016.2]
 
@@ -95,4 +95,4 @@ In separate table of contents mode, this event can be dispatched multiple times 
 ## See also
 
 - [Form Runner Wizard View](../feature/wizard-view.md): the relevant Form Runner documentation
-- [Form Runner Wizard View](https://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces to the feature, with a video
+- [Form Runner Wizard View](https://blog.orbeon.com/2012/12/form-runner-wizard-view.html): a blog post which introduces the feature, with a video

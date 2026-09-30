@@ -6,7 +6,7 @@ Out-of-the-box, Orbeon Forms includes an SQLite embedded database with multiple 
 
 The setup for the relational persistence layers is a 3-step process. The first two steps are database specific, so please refer to the relevant subsections below.
 
-1. __Database setup__: You set up the database and create a schema with a few tables. This is typically be done by a DBA.
+1. __Database setup__: You set up the database and create a schema with a few tables. This is typically done by a DBA.
 1. __Application server setup__: You configure your application server to use the database.
 1. __Orbeon Forms setup__: You configure Orbeon Forms to use the relevant persistence layer.
 
@@ -33,14 +33,14 @@ See also [Removing the built-in SQLite database](/configuration/advanced/product
 
 #### Oracle binary XML storage
 
-With Oracle 11.2, `XMLType` values are stored by default using the binary XML storage. The binary XML storage has numerous benefits over the basic file storage. In many respect, it is the "proper" way to store XML. However, we found that Oracle fails to properly save some documents when the binary XML storage is used. In particular, when documents have attributes with long values (several thousands of characters), when retrieving the document, the value of some attributes is missing. For this reason, until this issue is solved by Oracle, we recommend you store `XMLType` values as "basic file", per the above DDL.
+With Oracle 11.2, `XMLType` values are stored by default using the binary XML storage. The binary XML storage has numerous benefits over the basic file storage. In many respects, it is the "proper" way to store XML. However, we found that Oracle fails to properly save some documents when the binary XML storage is used. In particular, when documents have attributes with long values (several thousands of characters), when retrieving the document, the value of some attributes is missing. For this reason, until this issue is solved by Oracle, we recommend you store `XMLType` values as "basic file", per the above DDL.
 
 ### MySQL database setup
 
 #### Supported MySQL versions
 
 - [SINCE Orbeon Forms 2018.2]
-	- __MySQL 5.7 and MySQL 8__: Since version 2018.2, Orbeon Forms uses the `utf8mb4` character set instead of the `utf8` character set. The reason being that MySQL's `utf8` character set can only store UTF-8-encoded symbols that consist of 1 to 3 bytes, that is characters in the Unicode [Basic Multilingual Plane](https://tinyurl.com/85a8weh), which means that none of the characters in the [Supplementary Multilingual Plane](https://tinyurl.com/yatmk5et), which include Emojis, could stored. However, the switch to the `utf8mb4` character set will prevent you from creating some indexes on MySQL 5.6 where default key prefix limit is 767 bytes. Hence we recommend you use MySQL 5.7, which raised the index key prefix length limit to 3072 bytes for InnoDB tables. If in your situation upgrading to MySQL 5.7 isn't an option, you can explore [enabling the `innodb_large_prefix` configuration option on your MySQL 5.6](https://dev.mysql.com/doc/refman/5.6/en/innodb-restrictions.html), or changing the DDL that ships with Orbeon Forms to use `utf8` instead of `utf8mb4`.
+	- __MySQL 5.7 and MySQL 8__: Since version 2018.2, Orbeon Forms uses the `utf8mb4` character set instead of the `utf8` character set. The reason being that MySQL's `utf8` character set can only store UTF-8-encoded symbols that consist of 1 to 3 bytes, that is characters in the Unicode [Basic Multilingual Plane](https://tinyurl.com/85a8weh), which means that none of the characters in the [Supplementary Multilingual Plane](https://tinyurl.com/yatmk5et), which include Emojis, could be stored. However, the switch to the `utf8mb4` character set will prevent you from creating some indexes on MySQL 5.6 where default key prefix limit is 767 bytes. Hence we recommend you use MySQL 5.7, which raised the index key prefix length limit to 3072 bytes for InnoDB tables. If in your situation upgrading to MySQL 5.7 isn't an option, you can explore [enabling the `innodb_large_prefix` configuration option on your MySQL 5.6](https://dev.mysql.com/doc/refman/5.6/en/innodb-restrictions.html), or changing the DDL that ships with Orbeon Forms to use `utf8` instead of `utf8mb4`.
 - [UP TO Orbeon Forms 2018.1]
 	- __Minimum version__: The MySQL persistence layer relies on [XML functions][3] that have been introduced in MySQL 5.1, so you need to be using the MySQL 5.1 (which was released in November 2008) or newer.
 	- __Recommended versions__: However, we recommend you use MySQL 5.6.4 or newer, as it supports [storing fractional seconds][4].
@@ -63,7 +63,7 @@ By default, the MySQL JDBC driver [uses](https://dev.mysql.com/doc/connector-j/5
     mysql -u root
     mysql> CREATE USER 'orbeon'@'%' IDENTIFIED BY 'orbeon';
     ```
-2. Create a new schema `orbeon`. This schema will contains the tables used to store your forms definitions and form data.
+2. Create a new schema `orbeon`. This schema will contain the tables used to store your forms definitions and form data.
 
     ```sql
     mysql> CREATE schema orbeon;
@@ -329,7 +329,7 @@ Your `Resource` element pointing to your Oracle instance (see also [Tomcat datas
 [SINCE Orbeon Forms 4.6]
 
 1. [Download the Microsoft JDBC driver for SQL Server](https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15) (as of 2020-05-04, this is version 8.2 of the driver)
-2. Uncompress the zip file, and copy the `sqljdbc4.jar` it contains to the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib` with newer Tomcat version).
+2. Uncompress the zip file, and copy the `sqljdbc4.jar` it contains to the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib` with newer Tomcat versions).
 3. When using Java 11 or newer, you might need to add the JAXB API, which was present in earlier versions of Java. Download the JAR file from [Maven](https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar) and place it in the same directory you placed the JDBC driver.
 4. Set up the JDBC data source for your SQL Server instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). Example:
 
@@ -553,7 +553,7 @@ end;
 |
 ```
 
-Since you are interested in data for Bookshelf form, which is in the app `orbeon` form `bookshelf`, the trigger only does something if `new.app = 'orbeon' and new.form = 'bookshelf'`. To enable auditing, the MySQL persistence layer never deletes or updates data; it only inserts new row. So your trigger only needs to be concerned about updates. On insert, you want to make sure you are not creating duplicates in your `bookshelf` table, hence the `delete` statement. When a newly inserted row has `delete = 'N'`, this indicates that a user deleted that document, in which case you don't want to insert a row in your `bookshelf` table, hence the `if` test.
+Since you are interested in data for Bookshelf form, which is in the app `orbeon` form `bookshelf`, the trigger only does something if `new.app = 'orbeon' and new.form = 'bookshelf'`. To enable auditing, the MySQL persistence layer never deletes or updates data; it only inserts new rows. So your trigger only needs to be concerned about updates. On insert, you want to make sure you are not creating duplicates in your `bookshelf` table, hence the `delete` statement. When a newly inserted row has `delete = 'N'`, this indicates that a user deleted that document, in which case you don't want to insert a row in your `bookshelf` table, hence the `if` test.
 
 ## Auditing
 

@@ -27,7 +27,7 @@ The following steps assume that:
 
 Installation steps:
 
-1. **Deploy orbeon.war:** Start Liferay. When it is fully started move the `orbeon.war` into the Liferay deploy directory (e.g. `~/liferay/deploy`). At this point, you should see message indicating that Orbeon is being deployed. Monitor the Liferay output as well as the `logs/orbeon.log` for possible errors.
+1. **Deploy orbeon.war:** Start Liferay. When it is fully started move the `orbeon.war` into the Liferay deploy directory (e.g. `~/liferay/deploy`). At this point, you should see a message indicating that Orbeon is being deployed. Monitor the Liferay output as well as the `logs/orbeon.log` for possible errors.
 2. **Enable dynamic resource reloading (optional):** Remove the file `webapps/orbeon/META-INF/context.xml` and restart Liferay. For more information on what this does, see note 2 below.
 3.  **Configuration for Form Runner (optional):** You can skip this step if you do not intend to use Form Runner or Form Builder in a portlet. Otherwise, create a file `WEB-INF/resources/config/properties-local.xml` which declares the following properties (and other properties you might want to override):
 
@@ -158,7 +158,7 @@ To change this, you need to:
 2. Create a new Landing page in XHTML format.
 3. Change the default Orbeon theme so that no custom Orbeon CSS is added.
 
-A simple way do implement this is as follows:
+A simple way to implement this is as follows:
 
 First, replace this line in `page-flow-portlet.xml`:
 
@@ -187,7 +187,7 @@ Second, create a new file, `WEB-INF/resources/home.xhtml`, with content such as:
 </html>
 ```
 
-This is the Landing page itself, and it can contain any XHTML you like. Typically would include links to specific Form Runner paths as shown in the example above.
+This is the Landing page itself, and it can contain any XHTML you like. Typically it would include links to specific Form Runner paths as shown in the example above.
 
 Finally, to change the Orbeon portlet theme to the plain theme, set this property:
 

@@ -47,7 +47,7 @@ The TIFF compression type can be selected with the `oxf.fr.detail.tiff.compressi
     value="LZW"/>
 ```
 
-- possible value: `CCITT RLE`, `CCITT T.4`, `CCITT T.6`, `LZW`, `JPEG`, `ZLib`, `PackBits`, `Deflate`, `EXIF JPEG` or `none`
+- possible values: `CCITT RLE`, `CCITT T.4`, `CCITT T.6`, `LZW`, `JPEG`, `ZLib`, `PackBits`, `Deflate`, `EXIF JPEG` or `none`
 - default: `LZW`
 
 #### Compression quality

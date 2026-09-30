@@ -6,7 +6,7 @@ This action saves data and attachments via the persistence layer.
 
 ## Behavior
 
-The `save` actions performs the following, in order:
+The `save` action performs the following, in order:
 
 - dispatch `fr-data-save-prepare` to `fr-form-model`
 - save attachments
@@ -19,7 +19,7 @@ The `save` actions performs the following, in order:
 ## Parameters
 
 - `draft`: "true" if must be saved as a draft [SINCE Orbeon Forms 4.4]
-- `query`: additional query parameters to pass the persistence layer (is an XPath value template) [SINCE Orbeon Forms 4.6.1]
+- `query`: additional query parameters to pass to the persistence layer (is an XPath value template) [SINCE Orbeon Forms 4.6.1]
 - `prune-metadata`:
     - [SINCE Orbeon Forms 2017.2]
     - "true" if any `fr:*` metadata must be pruned before saving

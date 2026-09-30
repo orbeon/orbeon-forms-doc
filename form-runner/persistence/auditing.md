@@ -6,7 +6,7 @@ Auditing (also known as the *auditing trail*) guarantees that all the operations
 
 - Are performed in a non-destructive manner.
     - This means that it is possible for a DBA to revert changes that have been made.
-- Every change has indication of when that change was made and who did that change (if the user is known by the system).
+- Every change has an indication of when that change was made and who did that change (if the user is known by the system).
     - This means that you can see who did what and when.
 
 This feature is only available when using a [relational persistence layer](relational-db.md).

@@ -156,7 +156,7 @@ You are always prompted to confirm the operation to perform:
 
 ![Confirmation](../images/home-confirmation.png)
 
-In addition, if the latest modification time of the form definitions differ, a _Newer_ label appears:
+In addition, if the latest modification time of the form definitions differs, a _Newer_ label appears:
 
 ![Newer](../images/home-newer.png)
 
@@ -241,7 +241,7 @@ While reindexing happens, the indexer writes to the log:
 
 * When indexing starts and ends.
 * Which providers it will reindex.
-* For each provider how many document it will reindex.
+* For each provider how many documents it will reindex.
 * A "progress message" for each document being reindexed.
 
 The last message is logged at the `debug` level, to avoid your log growing unnecessarily in case you have lots of documents, while all the other messages are logged at the `info` level. For instance, you'll see something along those lines in your `orbeon.log`:

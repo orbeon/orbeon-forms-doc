@@ -7,8 +7,8 @@ _NOTE: This is an advanced feature which requires XForms knowledge._
 It can be useful to be able to define custom dialogs and/or custom model logic, either for a particular form or shared among a number of forms. For this, place your XML files with your custom dialogs and/or model logic under one of the following recommended locations:
 
 * `WEB-INF/resources/forms/resources`: if applies to all forms
-* `WEB-INF/resources/forms/APP/resources`: if applies to all form in a specific app
-* `WEB-INF/resources/forms/APP/FORM/resources`: if applies to a specific with a given app and form name
+* `WEB-INF/resources/forms/APP/resources`: if applies to all forms in a specific app
+* `WEB-INF/resources/forms/APP/FORM/resources`: if applies to a specific form with a given app and form name
 
 Then:
 

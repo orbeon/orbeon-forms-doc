@@ -16,7 +16,7 @@ _NOTE: It differs from the (deprecated in Orbeon Forms 2016.1) Boolean Input fie
 
 ## Basic usage
 
-You use `fr:checkbox-input` like a regular XForms controls. Example:
+You use `fr:checkbox-input` like a regular XForms control. Example:
 
 ```xml
 <fr:checkbox-input ref="initially-open">
@@ -62,7 +62,7 @@ And when the user deselects the checkbox, the node contains again:
 <whitespace>foo bar</whitespace>
 ```
 
-_NOTE: The control only store a value into the bound node when the user changes the checkbox selection. Say the data by default is blank: the control will not automatically change it to `false` (or to the value set by `deselected-value`) until the user selects then deselects the value again._
+_NOTE: The control only stores a value into the bound node when the user changes the checkbox selection. Say the data by default is blank: the control will not automatically change it to `false` (or to the value set by `deselected-value`) until the user selects then deselects the value again._
 
 ## See also
 

@@ -9,7 +9,7 @@ Orbeon Forms can produce PDF output in two ways:
   * As a form author, you do not need to take any action to enable this mode.
   * For more, see [Automatic PDF](pdf-automatic.md).
 * **From one or more PDF templates**
-  * You upload one or more PDF files using the "Attach PDF Templates" dialog. At runtime, Form Runner fills-out Acrobat fields in the template.
+  * You upload one or more PDF files using the "Attach PDF Templates" dialog. At runtime, Form Runner fills out Acrobat fields in the template.
   * This mode is automatically enabled for a form if a PDF template is attached.
   * For more, see [PDF Templates](pdf-templates.md).
 

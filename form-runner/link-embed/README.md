@@ -4,7 +4,7 @@
 
 "Linking" refers to using URLs or paths to point to Orbeon Forms pages. For more on linking, see [Linking to your forms](linking.md).
 
-"Embedding" refers to a deployment option where Orbeon Forms pages or forms appear *embedded* or *nested* within another application's page. This is in contrast to the default standalone deployment setup where Orbeon Forms produces entire web pages, and you link to those page from your application.
+"Embedding" refers to a deployment option where Orbeon Forms pages or forms appear *embedded* or *nested* within another application's page. This is in contrast to the default standalone deployment setup where Orbeon Forms produces entire web pages, and you link to those pages from your application.
 
 Orbeon Forms supports several embedding methods:
 
@@ -70,7 +70,7 @@ The full portlet is not specifically tied to Form Runner and does not provide Fo
  
 The Form Runner proxy portlet is designed to work with Form Runner only and to support a deployment mode where Form Runner can be installed within a separate application container, possibly on a separate server.
 
-You can configure the proxy portlet via UI, making it is easier to create a setup with multiple forms on different portal pages.
+You can configure the proxy portlet via UI, making it easier to create a setup with multiple forms on different portal pages.
 
 Here is a comparison of the two options:
 

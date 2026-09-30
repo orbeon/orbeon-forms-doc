@@ -13,7 +13,7 @@ If you have your own application and would like to embed a form created with For
 * If you are using Liferay, we recommend you use the [Liferay proxy portlet](liferay-proxy-portlet.md).
 * If you are using Angular, we recommend you use the [Angular component](angular-component.md).
 * If you are using React, we recommend you use the [React component](react-component.md).
-* In all other cases, we recommend you use the JavaScript Embedding API described on this page. It offers the most flexibility, and will work irrelevant of the server-side technology you are using.
+* In all other cases, we recommend you use the JavaScript Embedding API described on this page. It offers the most flexibility, and will work irrespective of the server-side technology you are using.
 
 ## Options
 
@@ -31,7 +31,7 @@ Exactly how to do this depends on the server-side technology you are using. For 
 
 You can identify the requests you need to forward by their path, which is typically `/orbeon`. In Java web applications, this first part of the path is called the "context", and you can deploy Orbeon Forms in a context other than `/orbeon`, such as `/forms`, but in the following we'll just assume that you've kept `/orbeon`. When forwarding HTTP requests, you need to make sure that the `JSESSIONID` cookie is forwarded correctly. You can check this using the Network tab in the Chrome Dev Tools. Make sure this is the case:
 
-1. The first time the browser makes a request to Orbeon Forms, that is with a path starting with `/orbeon`, the response sets `JSESSIONID` cookie.
+1. The first time the browser makes a request to Orbeon Forms, that is with a path starting with `/orbeon`, the response sets a `JSESSIONID` cookie.
 2. In every subsequent request made to Orbeon Forms, that `JSESSIONID` cookie set earlier is sent by the browser, and the server doesn't in turn set another `JSESSIONID` in the response. (I.e. the value of the `JSESSIONID` cookie sent by the browser to the server shouldn't change for the duration of the session.)
 
 #### Users and authentication
@@ -247,7 +247,7 @@ If you do have this property, make sure you remove it, comment it out, or explic
 
 [\[SINCE Orbeon Forms 2024.1.1\]](../../release-notes/orbeon-forms-2024.1.1.md)
 
-Embedding Form Builder with the JavaScript Embedding API is supported. As when embedding other forms, to allow form authors to edit an existing form in Form Builder, you need to know the document id for that form, and to pass as the last parameter to `ORBEON.fr.API.embedForm()`. Most likely, you will want to have your own equivalent of a Summary page where you list the forms form authors can edit, and, upon clicking, call the embedding API.
+Embedding Form Builder with the JavaScript Embedding API is supported. As when embedding other forms, to allow form authors to edit an existing form in Form Builder, you need to know the document id for that form, and to pass it as the last parameter to `ORBEON.fr.API.embedForm()`. Most likely, you will want to have your own equivalent of a Summary page where you list the forms form authors can edit, and, upon clicking, call the embedding API.
 
 ### Other limitations
 

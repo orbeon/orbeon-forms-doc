@@ -206,7 +206,7 @@ The `getControlValue()` function returns either:
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-The `activateControl()` function allows you to activate a Form Runner control. This is useful to activating buttons that are present within the form (as opposed to process buttons, which are typically placed at the bottom of the form). However, you can also activate other controls, in particular Text Fields.
+The `activateControl()` function allows you to activate a Form Runner control. This is useful for activating buttons that are present within the form (as opposed to process buttons, which are typically placed at the bottom of the form). However, you can also activate other controls, in particular Text Fields.
 
 ```typescript
 function activateControl(

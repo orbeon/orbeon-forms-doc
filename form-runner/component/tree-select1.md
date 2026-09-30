@@ -4,7 +4,7 @@
 
 \[SINCE Orbeon Forms 2017.1]
 
-_NOTE: As of Orbeon Forms 2018.2, this control is not present in the Form Builder toolbox because Form Builder lacks the ability to created hierarchical itemsets, making this control less useful in that context._
+_NOTE: As of Orbeon Forms 2018.2, this control is not present in the Form Builder toolbox because Form Builder lacks the ability to create hierarchical itemsets, making this control less useful in that context._
 
 ## What it does
 

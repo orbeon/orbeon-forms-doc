@@ -295,7 +295,7 @@ You get the list of all the published forms with a `GET` on:
 /fr/service/persistence/form
 ```
 
-This, in turn, calls the corresponding API for each persistence API implementation defined in the properties as [*active*](/configuration/properties/persistence.md#property_active), since different forms can be published on different persistence implementations. For example, this might call MySQL implementation doing a `GET` on:
+This, in turn, calls the corresponding API for each persistence API implementation defined in the properties as [*active*](/configuration/properties/persistence.md#property_active), since different forms can be published on different persistence implementations. For example, this might call the MySQL implementation doing a `GET` on:
  
     /fr/service/mysql/form
     
@@ -311,7 +311,7 @@ Finally, it aggregates the results returned by each implementation.
 
 Optionally, an app name or both an app name and form name can be specified on the URL. In that case, the API only returns information about published forms in that specific app, or that specific app and form is returned.
 
-* When an app specified, the URL looks like:  
+* When an app is specified, the URL looks like:  
   `/fr/service/persistence/form/$app`
 * When both an app and form name are specified, the URL looks like:  
   `/fr/service/persistence/form/$app/$form`

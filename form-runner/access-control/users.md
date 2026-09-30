@@ -58,7 +58,7 @@ In addition to the configuration at the container level, at the Orbeon Forms lev
         name="oxf.fr.authentication.container.roles.split"
         value=",|\s+"/>
     ```
-3. **Set up groups** – There is no container API for Orbeon Forms to get the user's group; in fact the concept of _group_ is foreign the container API. So, when using container-driven method, Orbeon Forms takes the first role listed in `oxf.fr.authentication.container.roles` that the user has as the user's group. If you need more flexibility in determining what the user's group is, you might want to use the _header-driven method_ instead, which allows you to explicitly set through a header what the user's group is (more on this below).
+3. **Set up groups** – There is no container API for Orbeon Forms to get the user's group; in fact the concept of _group_ is foreign to the container API. So, when using container-driven method, Orbeon Forms takes the first role listed in `oxf.fr.authentication.container.roles` that the user has as the user's group. If you need more flexibility in determining what the user's group is, you might want to use the _header-driven method_ instead, which allows you to explicitly set through a header what the user's group is (more on this below).
 4.  **Require authentication** – You'll also want to have another role, say `form-builder`, that you grant to all the users who can access Form Builder. Hence, in our example, users will have either the two roles `form-builder` and `form-builder-hr`, or the two roles `form-builder` and `form-builder-finance`. In Orbeon Forms `WEB-INF/web.xml`, add the following to require users to log in to access Form Builder. This assumes that you're using basic authentication:
 
     ```xml
@@ -106,14 +106,14 @@ When using the header-driven method, as it is your reverse proxy that performs u
 
 You can pass information about the user either using:
 
-* 3 headers, one for the username, one for the user's roles, and one for user's group.
+* 3 headers, one for the username, one for the user's roles, and one for the user's group.
 * 1 header, that contains the user's information in a JSON format specified below.
 
 The following should help you choose whether to use individual headers or a single header with JSON:
 
 1. If using Orbeon Forms 2016.2 or earlier, go for individual headers. (The single header with JSON was introduced in Orbeon Forms 2016.3.)
 2. If using [organization-based permissions](organization.md) you'll need to use the single header with JSON, as this is the only way to pass organization-related information to Orbeon Forms.
-3. Otherwise, you can whichever technique is more convenient for you, and in most cases using individual headers might be simpler.
+3. Otherwise, you can use whichever technique is more convenient for you, and in most cases using individual headers might be simpler.
 
 ### When to set the headers
 
@@ -205,7 +205,7 @@ The value of the header is a list of roles separated by spaces, commas, or pipes
 cn=role1,dc=acme,dc=ch|cn=role2,dc=acme,dc=ch
 ```
 
-If your header follows a LDAP-style syntax, set the following property to configure what "name" contains the header, which in this example is `cn`:
+If your header follows an LDAP-style syntax, set the following property to configure what "name" contains the header, which in this example is `cn`:
 
 ```xml
 <property
@@ -216,7 +216,7 @@ If your header follows a LDAP-style syntax, set the following property to config
 
 ### If using a single header with JSON
 
-Tell Orbeon Forms the name of the HTTP header that contain the user's information in JSON format:
+Tell Orbeon Forms the name of the HTTP header that contains the user's information in JSON format:
 
 ```xml
 <property
@@ -245,7 +245,7 @@ The value of the header must be valid JSON, and follow the format described belo
 ```
 
 * `username` is mandatory.
-* `groups` is optional. If present, its value must be an array with one string, representing the user's group. (An array is used here as we can envision futures version of Orbeon Forms supporting users being part of more than one group.)
+* `groups` is optional. If present, its value must be an array with one string, representing the user's group. (An array is used here as we can envision future versions of Orbeon Forms supporting users being part of more than one group.)
 * `roles` is optional. If present, its value must be an array of _roles_. Each _role_ is an object with a mandatory `name` attribute, and an optional `organization` attribute. When the latter is present, it ties the role to the specified organization, for instance: "Linda is the manager of the iOS organization". For more on the latter, see [Organization-based permissions](organization.md).
 * `organizations` is optional. If present, its value must be an array. Each element of the array must in turn be an array, in which the last element is the organization the user is a member of, and preceding elements list where that organization is in the organization hierarchy. For instance, `["Acme", "Engineering", "iOS"]` signifies that the user is a member of the "iOS" organization, and that, in the organization hierarchy, "iOS" is a child organization of "Engineering", and "Engineering" is a child organization of "Acme".
 
@@ -255,7 +255,7 @@ If using the ModHeader extension to test sending custom headers to Orbeon Forms,
 
 > `SessionListeners` object not found in session. `OrbeonSessionListener` might be missing from web.xml.
 
-This is because, out-of-the-box, that is unless you set `oxf.fr.authentication.header.sticky` to `true`, you are expected to send the authentication headers with every request. Orbeon Forms takes missing authentication headers as a sign that you want to tell Orbeon Forms that the user logged out, and consequently Orbeon Forms kills the "previous" user's session. ModHeader sends the headers you specified with every request, except for source maps. So after Chrome makes a request for a source maps, the session is cleared, and you'll have a problem on the next request that relies on a session, like an Ajax request.
+This is because, out-of-the-box, that is unless you set `oxf.fr.authentication.header.sticky` to `true`, you are expected to send the authentication headers with every request. Orbeon Forms takes missing authentication headers as a sign that you want to tell Orbeon Forms that the user logged out, and consequently Orbeon Forms kills the "previous" user's session. ModHeader sends the headers you specified with every request, except for source maps. So after Chrome makes a request for a source map, the session is cleared, and you'll have a problem on the next request that relies on a session, like an Ajax request.
 
 ## Accessing username, group and roles in Orbeon Forms
 

@@ -95,7 +95,7 @@ This property controls whether the search options area is opened by default when
 
 \[SINCE Orbeon Forms 2018.2]
 
-When more than one [form version](versioning.md) is available, the user has the choice of the version to access. Different versions can behave like very different forms. Also see the [properties to configuring the behavior of the Summary page with regards to versioning](../../configuration/properties/form-runner-summary-page.md#versioning).
+When more than one [form version](versioning.md) is available, the user has the choice of the version to access. Different versions can behave like very different forms. Also see the [properties to configure the behavior of the Summary page with regards to versioning](../../configuration/properties/form-runner-summary-page.md#versioning).
 
 ![Summary page for version 1 of the form](../images/summary-version-1.png)
 

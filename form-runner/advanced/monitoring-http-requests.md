@@ -2,13 +2,13 @@
 
 ## Introduction
 
-When investigating issues, you often need to look at what goes "over the wire", in the HTTP requests between the client and the server. You may want to look at the HTTP requests as sent/received on the browser, on the application server, or somewhere in between. This page lists a few tool which might be of use in these cases.
+When investigating issues, you often need to look at what goes "over the wire", in the HTTP requests between the client and the server. You may want to look at the HTTP requests as sent/received on the browser, on the application server, or somewhere in between. This page lists a few tools which might be of use in these cases.
 
 ### On the browser, the server, or in between
 
 * [Charles](http://www.charlesproxy.com/) (see also this [blog post](https://blog.orbeon.com/2013/04/let-charles-help-you-monitor-http.html))
 * [WireShark](http://www.wireshark.org/) is a workhorse. It can do a lot more than monitoring HTTP requests, but can also be intimidating. Lately, usability, including the installing process, has improved significantly. (See below for more details on WireShark.)
-* [Apache TCPMon](http://ws.apache.org/commons/tcpmon/) is very versatile tool; highly recommended; see the [TCPMon tutorial](http://ws.apache.org/commons/tcpmon/tcpmontutorial.html)
+* [Apache TCPMon](http://ws.apache.org/commons/tcpmon/) is a very versatile tool; highly recommended; see the [TCPMon tutorial](http://ws.apache.org/commons/tcpmon/tcpmontutorial.html)
 
 ### On the server
 
@@ -30,7 +30,7 @@ After you install WireShark, click on _Capture Options_, and set up the _Capture
 
 ![](../images/wireshark-capture-filter.png)
 
-Click Start, and since you only interested about HTTP (versus TCP) traffic, in _Filter_ type `http` and press enter to apply.
+Click Start, and since you are only interested in HTTP (versus TCP) traffic, in _Filter_ type `http` and press enter to apply.
 
 ![](../images/wireshark-filter.png)
 

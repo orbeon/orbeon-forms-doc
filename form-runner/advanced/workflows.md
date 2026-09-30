@@ -3,9 +3,9 @@
 Many applications of forms require some kind of workflow. The typical example is that of an expense report:
 
 - the employee submits the expense report
-- a manager reviews the expense report and approves or reject it
+- a manager reviews the expense report and approves or rejects it
 
-In this kind of scenarios, there are several users involved, with different access rights to different parts of the form.
+In this kind of scenario, there are several users involved, with different access rights to different parts of the form.
 
 Orbeon Forms has several workflow-related features, which we cover in this page. We will examine the example of a construction permit application.
 
@@ -28,7 +28,7 @@ The steps, or stages, are as follows:
     - receives a confirmation email
 - The city employee:
     - reviews the application
-    - either approve or reject it, possibly with comments
+    - either approves or rejects it, possibly with comments
 - If the permit is approved:
     - A permit number is generated.
     - The citizen receives a confirmation email

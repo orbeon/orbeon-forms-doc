@@ -30,7 +30,7 @@ Where:
 * \[SINCE Orbeon Forms 4.5] The `Orbeon-Operations` response header lists the operations that the user can perform on the data (see [Supporting permissions in your persistence API implementation](https://blog.orbeon.com/2013/10/supporting-permissions-in-your.html)).
 * If the implementation of the persistence API supports form versioning:
   * \[SINCE Orbeon Forms 4.5] If the request is for a form definition, the `Orbeon-Form-Definition-Version` request header tells which version of the form definition is requested.
-  * \[SINCE Orbeon Forms 2023.1] If the request is for a form data, the `Orbeon-Form-Definition-Version` response header indicates which version of the form definition was used to create the relevant form data.
+  * \[SINCE Orbeon Forms 2023.1] If the request is for form data, the `Orbeon-Form-Definition-Version` response header indicates which version of the form definition was used to create the relevant form data.
 * \[SINCE Orbeon Forms 2023.1] The built-in implementation of the persistence API supports the HEAD method. Form Runner uses HEAD instead of GET as an optimization when it doesn't need the response body. Implementations of the CRUD API must handle HEAD requests similarly to GET requests, but return an empty body.
 
 ### PUT
@@ -114,7 +114,7 @@ By default, without this parameter, a form definition is returned unchanged from
 * `form-definition-format-version=4.8.0`: target the 4.8.0 data format
 * `form-definition-format-version=2019.1.0`: target the 2019.1.0 data format
 
-The internal data format version associated with form definition retrieved is determined as follows:
+The internal data format version associated with the form definition retrieved is determined as follows:
 
 * If the form definition includes `updated-with-version` or `created-with-version` metadata, that information is used to infer the data format associated with the given Orbeon Forms version.
 * Else the form definition was last updated with a version older than Orbeon Forms 2018.2, and the data format version associated with the form definition is assumed to be 4.8.0.

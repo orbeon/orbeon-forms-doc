@@ -24,7 +24,7 @@ Typically, you'll want to use the Static Dropdown for cases where the number of 
 
 ### With vs. without search
 
-You can choose to have each one of your Static or Dynamic Dropdown show as a regular dropdown native to the browser, or as a dropdown with search. You make that choice in the Control Settings dialog, as highlighted in the screenshot below.
+You can choose to have each one of your Static or Dynamic Dropdowns show as a regular dropdown native to the browser, or as a dropdown with search. You make that choice in the Control Settings dialog, as highlighted in the screenshot below.
 
 <figure><img src="images/dynamic-data-dropdown-with-without-search.png" alt="" width="987"><figcaption><p>Choosing between a regular dropdown and a dropdown with search</p></figcaption></figure>
 
@@ -77,7 +77,7 @@ You specify how to extract the necessary information to populate the dropdown th
 
 ### Services performing the search
 
-In most cases, it will be simpler to have your service return all the possible values. But in some cases, the list of all possible values could be extremely large, and returning all them to Orbeon Forms would be prohibitively expensive, or outright impossible. In those cases you'll want the service to only return a subset of all possible choices, based on what users have typed so far. To do so:
+In most cases, it will be simpler to have your service return all the possible values. But in some cases, the list of all possible values could be extremely large, and returning all of them to Orbeon Forms would be prohibitively expensive, or outright impossible. In those cases you'll want the service to only return a subset of all possible choices, based on what users have typed so far. To do so:
 
 * Make sure you've checked the "With Search" appearance.
 * Select the "Yes" radio button under "Service performs search".

@@ -196,7 +196,7 @@ The default value is:
 
 \[SINCE Orbeon Forms 2022.1.1]
 
-The Time components uses the `output-format` parameter to format the time in readonly modes, including `view` and `pdf`.
+The Time component uses the `output-format` parameter to format the time in readonly modes, including `view` and `pdf`.
 
 This means that the `oxf.xforms.format.output.time` property is no longer used in readonly modes.
 

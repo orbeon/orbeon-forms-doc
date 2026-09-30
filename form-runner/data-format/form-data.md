@@ -258,7 +258,7 @@ With Orbeon Forms 2019.1, the 2019.1 data format is introduced. It changes the w
 
 ### Non-repeated grids
 
-An enclosing element with the name of the non-repeated grid is added, exactly like for sections. Elements for nested controls directly under that enclosing element.
+An enclosing element with the name of the non-repeated grid is added, exactly like for sections. Elements for nested controls are directly under that enclosing element.
 
 In the following example, the `<details-grid>` and `<review-grid>` elements are added, compared to the 4.8.0 and 4.0.0 data formats:
 

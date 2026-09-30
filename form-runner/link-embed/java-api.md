@@ -258,7 +258,7 @@ However, it can save form or send form data as it does in the standalone case. I
 
 In addition to published forms, you can embed Form Builder: just use `orbeon` and `builder` as Form Runner app/form names.
 
-The embedding application can set the size the embedded Form Builder `<div>` element via CSS or JavaScript, and Form Builder will adjust its size accordingly:
+The embedding application can set the size of the embedded Form Builder `<div>` element via CSS or JavaScript, and Form Builder will adjust its size accordingly:
 
 ```html
 <div class="orbeon orbeon-portlet-div ...>

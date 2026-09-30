@@ -92,7 +92,7 @@ You don't need to do anything special to use this feature.
 
 The value of `oxf.fr.detail.autosave-delay` sets the maximum time, in milliseconds, after which a change done by the user will be autosaved. If 0 or negative, autosaving is disabled. Out of the box, this property is set to `5000`, that is 5 seconds. If your server experiences a lot of load, you might want to make that value higher to reduce the number of requests made by Orbeon Forms to your database.
 
-The following property enables or disable autosave for a given persistence provider, as autosave requires support from the persistence provider. For database support, see [Database Support](db-support.md).
+The following property enables or disables autosave for a given persistence provider, as autosave requires support from the persistence provider. For database support, see [Database Support](db-support.md).
 
 ```xml
 <property

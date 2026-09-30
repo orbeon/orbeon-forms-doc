@@ -10,7 +10,7 @@ By default the component accepts `image/*` mediatypes.
 
 \[SINCE Orbeon Forms 2017.1]
 
-If an [`upload-mediatypes` custom constraint](../../contributors/extension-validation.md#xxfupload-mediatypes) is present and not blank, it is used applied to the enclosed upload control. If missing, the default is `image/*`.
+If an [`upload-mediatypes` custom constraint](../../contributors/extension-validation.md#xxfupload-mediatypes) is present and not blank, it is applied to the enclosed upload control. If missing, the default is `image/*`.
 
 ## Events
 

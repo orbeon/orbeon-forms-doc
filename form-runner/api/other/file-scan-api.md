@@ -26,7 +26,7 @@ While we recommend using Version 2 of the API, Version 1 is still supported. If 
 
 ### API
 
-Orbeon Forms provide the following `FileScanProvider2` interface as a base for concrete providers:
+Orbeon Forms provides the following `FileScanProvider2` interface as a base for concrete providers:
 
 ```java
 package org.orbeon.oxf.xforms.upload.api.java;
@@ -232,7 +232,7 @@ This is an Orbeon Forms PE feature.
 
 ### API
 
-Orbeon Forms provide the following `FileScanProvider` abstract class as a base for concrete providers:
+Orbeon Forms provides the following `FileScanProvider` abstract class as a base for concrete providers:
 
 ```java
 package org.orbeon.oxf.xforms.upload.api.java;

@@ -33,7 +33,7 @@ Templates can specify a title and a message body.
 
 ![Confirmation Page Templates dialog](../images/confirmation-page-settings-templates.webp)
 
-Both title and message body can be configured with templates parameters which can include:
+Both title and message body can be configured with template parameters which can include:
 
 * control values
 * formulas

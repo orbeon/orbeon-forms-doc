@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The Landing page is organized in cards which provides quick access to:
+The Landing page is organized in cards which provide quick access to:
 
 * Quick links, including Form Builder and the Administration page
 * Your published forms
@@ -25,7 +25,7 @@ All Form Runner and Form Builder navigation bars now provide a direct link to th
 
 ## Configuration properties
 
-The following property control which cards are shown on the Landing page:
+The following property controls which cards are shown on the Landing page:
 
 ```xml
 <property
@@ -132,7 +132,7 @@ For each card type, the following options are available:
       * if not specified, defaults to `summary` only
       * form permissions are checked
           * linking only occurs if the user has permission to access the link with current permissions
-          * specifying two tokens allow defaulting to the second token if the first one is not allowed, for example:
+          * specifying two tokens allows defaulting to the second token if the first one is not allowed, for example:
               * `new summary`
               * user has `list` permission but not `create` permission for a given form
               * so the link will point to the `summary` page instead of the `new` page

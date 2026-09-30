@@ -21,7 +21,7 @@ We make a distinction between:
 
 In Form Builder, a form definition is identified by a two-level hierarchy of names:
 
-- __Application name__: a name which allows grouping form together. The application name (or app name) can be, for example:
+- __Application name__: a name which allows grouping forms together. The application name (or app name) can be, for example:
   - a company name such as "orbeon" or "acme"
   - a company entity such as "hr" or "sales" or "engineering"
   - a project name such as "mercury" or "phoenix"

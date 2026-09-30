@@ -21,7 +21,7 @@ You call the reindexing API by sending a `GET` request to the `/fr/service/persi
 
 [\[SINCE Orbeon Forms 2024.1.2\]](/release-notes/orbeon-forms-2024.1.2.md)
 
-Orbeon Forms also support a `POST` request with an empty body. `POST` makes more sense than `GET` as it is a side-effecting operation, and in fact only supporting `GET` was a bug. `GET` is still supported for backward compatibility by the Orbeon Forms builtin relational provider, but it is recommended to use `POST` instead.
+Orbeon Forms also supports a `POST` request with an empty body. `POST` makes more sense than `GET` as it is a side-effecting operation, and in fact only supporting `GET` was a bug. `GET` is still supported for backward compatibility by the Orbeon Forms builtin relational provider, but it is recommended to use `POST` instead.
 
 The API responds with a 200 OK when the reindexing is done. Note that the reindexing can be a long operation.
 
@@ -37,7 +37,7 @@ _NOTE: `GET` is not supported for reindexing a specific form._
 
 ### Declaring reindexing support
 
-The Form Runner Admin page allows admins to reindex the database, however this feature isn't implemented by the Form Runner Home page itself, but by the respective implementations of the persistence API. Of course, reindexing only makes sense for implementations of the persistence API that maintain their own index. Since this is an optional feature, the Form Runner Home page needs to know which implementations supports reindexing, so it can call them if they do when admins ask for the data to be reindexed. You declare that your implementation supports reindexing by adding the following property:
+The Form Runner Admin page allows admins to reindex the database, however this feature isn't implemented by the Form Runner Home page itself, but by the respective implementations of the persistence API. Of course, reindexing only makes sense for implementations of the persistence API that maintain their own index. Since this is an optional feature, the Form Runner Home page needs to know which implementations support reindexing, so it can call them if they do when admins ask for the data to be reindexed. You declare that your implementation supports reindexing by adding the following property:
 
 ```xml
 <property 

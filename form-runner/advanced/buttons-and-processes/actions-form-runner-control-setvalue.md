@@ -146,7 +146,7 @@ control-setvalue(
 
 ## Earlier Orbeon Forms versions
 
-With Orbeon Forms 2025.0 and earlier, you have to use the lower-level [`xf:setvalue` action](actions-xforms.md#xfsetvalue) to set the value of a control. The drawback is this is that you have to directly reach data in the XML document containing all of the form data. The new `control-setvalue` action allows you to set the value of a control without having to know where in the XML document the data for that control is stored.
+With Orbeon Forms 2025.0 and earlier, you have to use the lower-level [`xf:setvalue` action](actions-xforms.md#xfsetvalue) to set the value of a control. The drawback of this is that you have to directly reach data in the XML document containing all of the form data. The new `control-setvalue` action allows you to set the value of a control without having to know where in the XML document the data for that control is stored.
 
 ## See also
 

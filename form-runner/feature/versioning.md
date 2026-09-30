@@ -2,7 +2,7 @@
 
 ## Availability
 
-This an Orbeon Forms PE feature available since Orbeon Forms 4.5. It is available with all supported relational databases but not the eXist database.
+This is an Orbeon Forms PE feature available since Orbeon Forms 4.5. It is available with all supported relational databases but not the eXist database.
 
 ## What is form definition versioning?
 
@@ -46,14 +46,14 @@ Examples of incompatible changes:
 * removing a control, grid, or section
 * renaming a control, grid, or section
 * moving a control between grids or sections
-* changing the nesting of grids or section within subsections
+* changing the nesting of grids or sections within subsections
 
 See also [Simple data migration](simple-data-migration.md), which enables some of the incompatible changes listed above.
 
 ## Limitations
 
 * \[SINCE Orbeon Forms 2021.1] If you are using the built-in implementation of the persistence API for relational databases to store data, if you want to use another implementation to store your forms, then that implementation needs to support versioning.
-* \[UP TO Orbeon Forms 2020.1] You are using a provider that uses the built-in implementation of the persistence API for relational databases to store data, then you also need to use the same provider to store forms (see [#3926](https://github.com/orbeon/orbeon-forms/issues/3926)). This limitation is lifted starting in Orbeon Forms 2021.1.
+* \[UP TO Orbeon Forms 2020.1] If you are using a provider that uses the built-in implementation of the persistence API for relational databases to store data, then you also need to use the same provider to store forms (see [#3926](https://github.com/orbeon/orbeon-forms/issues/3926)). This limitation is lifted starting in Orbeon Forms 2021.1.
 
 ## See also
 

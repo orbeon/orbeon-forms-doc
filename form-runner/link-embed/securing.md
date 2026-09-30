@@ -4,14 +4,14 @@
 
 When the [Form Runner Java Embedding API](java-api.md) or the [Form Runner Liferay Proxy Portlet](liferay-proxy-portlet.md) is used, the system has two parts:
 
-* the _embedding client_, which runs within your application (using embedding API) or within a portal
+* the _embedding client_, which runs within your application (using the embedding API) or within a portal
 * the Form Runner server, which runs Form Runner and/or Form Builder
 
 In this case not only does your application or the portal need to be secured, but the separate Form Runner server also needs to be properly secured. If that is not the case, then a user or attacker might, inadvertently or intentionally, manage to access the Form Runner server directly without going through your application or portal, possibly gaining access to forms or operations that must be disallowed.
 
 The main idea is that the Form Runner server must only respond to requests coming from your application or the proxy portlet, but not from direct HTTP requests.
 
-This page describes a few solution which are not mutually exclusive:
+This page describes a few solutions which are not mutually exclusive:
 
 * IP filter
 * HTTPS and BASIC authentication

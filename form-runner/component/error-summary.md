@@ -132,7 +132,7 @@ In Orbeon Forms, a form control can be _visited_ or not. Visited controls have t
     value="false"/>
 ```
 
-[\[SINCE Orbeon Forms 2024.1\]](../../release-notes/orbeon-forms-2024.1.md) Form controls are also marked as visible as they become invalid. This is useful when you want to immediately show validation errors for field that become invalid not as the result of their value changing, but because their validity depend on something else in the form that has changed. You can disable this behavior by setting the following property:
+[\[SINCE Orbeon Forms 2024.1\]](../../release-notes/orbeon-forms-2024.1.md) Form controls are also marked as visible as they become invalid. This is useful when you want to immediately show validation errors for fields that become invalid not as the result of their value changing, but because their validity depends on something else in the form that has changed. You can disable this behavior by setting the following property:
 
 ```xml
 <property
@@ -191,7 +191,7 @@ The nested `fr:label` (optional) and `fr:alert` elements are evaluated relative 
 
 ## Non-incremental mode
 
-By default the error summary updates the list of error as they occur on the form.
+By default the error summary updates the list of errors as they occur on the form.
 
 By specifying the `incremental="false"` attribute, errors only show on demand with the `fr-update` and `fr-clear` events.
 

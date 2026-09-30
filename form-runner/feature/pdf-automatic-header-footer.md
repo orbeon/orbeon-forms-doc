@@ -11,7 +11,7 @@ By default, Form Runner produces automatic PDF files with the following header a
 
 <figure><img src="../images/pdf-header-footer.png" alt="" width="75%"><figcaption><p>PDF output with header and footer</p></figcaption></figure>
 
-Starting Orbeon Forms 2023.1, header and footers are entirely configurable, and you can control exactly what is shown in all six header or footer positions:
+Starting Orbeon Forms 2023.1, headers and footers are entirely configurable, and you can control exactly what is shown in all six header or footer positions:
 
 * Header left
 * Header center
@@ -185,7 +185,7 @@ The `"parameters"` property is a JSON object with the following properties:
   * `"control-name"`: the name of the control to use, if the type is `"control-value"`
     * either one of `"control-name"` or `"control-css-class"` is required for the type `"control-value"`
   * `"control-css-class"`: or the name of a custom CSS class for the control to use, if the type is `"control-value"`
-    * if multiple controls has this CSS class, the first one is used
+    * if multiple controls have this CSS class, the first one is used
     * either one of `"control-name"` or `"control-css-class"` is required for the type `"control-value"`
   * `"format"`: the optional format to use, if the type is `"page-count"` or `"page-number"`
     * defaults to `"decimal"`

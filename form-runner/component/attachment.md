@@ -40,7 +40,7 @@ Otherwise, any mediatype is allowed.
 The `multiple="true"` attribute enables support for multiple files:
 
 * The file selector allows multiple selection.
-* The drop area (see below) allows multiple file being dropped at the same time or serially.
+* The drop area (see below) allows multiple files being dropped at the same time or serially.
 * A reorderable list of multiple files shows.
 
 ## Drag and drop of files

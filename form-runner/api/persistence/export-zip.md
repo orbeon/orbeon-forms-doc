@@ -75,7 +75,7 @@ The `data-revision-history` parameter is a token which can be one of:
 
 The `data-last-modified-time-gte` and `data-last-modified-time-lt` parameters are used to filter the data to export based on the last modified time of the data. Both parameters are optional, and if both are omitted, all data is exported. They only apply when exporting form data.
 
-The dates represent instants in time, are used for comparison with last modified dates in the database.
+The dates represent instants in time, and are used for comparison with last modified dates in the database.
 
 The dates in ISO format can specify a time zone offset, for example `+01:00` for Central European Time. Otherwise, make sure the dates are in UTC, with a `Z` suffix:
 

@@ -97,7 +97,7 @@ These attributes are supported in addition to the non-repeated mode attributes w
   * optional number of rows at the top which cannot be removed or moved
   * can be an AVT \[SINCE Orbeon Forms 2016.3]
 * `readonly`
-  * whether to disallow the user to add/remove iteration with the menu or the "-" button (depending on appearance)
+  * whether to disallow the user to add/remove iterations with the menu or the "-" button (depending on appearance)
   * `false` (default)
     *   show the iteration menu and buttons, unless the section binds to a readonly node or unless the Form Runner
 
