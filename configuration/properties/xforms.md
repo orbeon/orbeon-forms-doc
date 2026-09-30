@@ -79,7 +79,7 @@ class FormRunnerFunctionLibrary {
 }
 ```
 
-You can also turn specify this property specifically for a given form by adding an `xxf:function-library` attribute on the first model:
+You can also specify this property specifically for a given form by adding an `xxf:function-library` attribute on the first model:
 
 ```xml
 <xf:model xxf:function-library="org.orbeon.oxf.fr.library.FormRunnerFunctionLibrary">
@@ -140,7 +140,7 @@ The following property controls some aspects of XForms submission in Orbeon Form
     value="true"/>
 ```
 
-* If set to `true` (the default), Orbeon Forms optimizes submissions with replace="all" and the get method by sending URL of the submission action directly to the web browser. This however means that submission errors cannot be caught by XForms event handlers after Orbeon Forms has started connecting to the submission URL, as should be the case following the XForms specification.
+* If set to `true` (the default), Orbeon Forms optimizes submissions with replace="all" and the get method by sending the URL of the submission action directly to the web browser. This however means that submission errors cannot be caught by XForms event handlers after Orbeon Forms has started connecting to the submission URL, as should be the case following the XForms specification.
 * If set to `false`, Orbeon Forms buffers the reply so that errors can be handled as per XForms. However, this solution is less efficient.
 
 The following two properties control optimized XForms submissions:
@@ -286,9 +286,9 @@ See also [#3503](https://github.com/orbeon/orbeon-forms/issues/3503).
 
 By default, LHHA elements are represented as follows:
 
-* `<xf:label>` use the HTML `<label>` element
-* `<xf:hint>` use the HTML `<span>` element
-* `<xf:help>` use the HTML `<span>` element
+* `<xf:label>` uses the HTML `<label>` element
+* `<xf:hint>` uses the HTML `<span>` element
+* `<xf:help>` uses the HTML `<span>` element
 * `<xf:alert>`
   * \[SINCE Orbeon Forms 2022.1] Use the HTML `<button>` element; this is done so users can tab to the help icon, making it accessible to the keyboard to users who predominantly use a keyboard, either by choice or because they have difficulties using a pointing device.
   * \[UP TO Orbeon Forms 2021.1] Use the HTML `<span>` element, and in Orbeon Forms 2021.1.2 and subsequent point releases, you can manually change the value of this property to `button` to make the help icon accessible with the keyboard.
@@ -319,7 +319,7 @@ The following property controls the order of label, help, hint, alert, and contr
 
 The property uses the order of the predefined tokens `label`, `control`, `help`, `alert`, and `hint` to set the order.
 
-The order applies to most controls, such as `<xf:input>`, etc. Some specific control or appearances do not use this property:
+The order applies to most controls, such as `<xf:input>`, etc. Some specific controls or appearances do not use this property:
 
 * `<xxf:dialog>`
 * `<xf:group appearance="xxf:fieldset">`
@@ -456,11 +456,11 @@ See also [`oxf.fr.detail.attachment.mediatypes`](form-runner-attachments.md#allo
 
 #### Upload progress
 
-When you use an `<xf:upload>` control, as soon users select a file, the file is uploaded in the background from the browser to Orbeon Forms. While the file is uploaded, a progress bar is shown in the browser, in place of the file selection control, as in this screenshot:
+When you use an `<xf:upload>` control, as soon as users select a file, the file is uploaded in the background from the browser to Orbeon Forms. While the file is uploaded, a progress bar is shown in the browser, in place of the file selection control, as in this screenshot:
 
 ![Upload Progress](../../xforms/images/xforms-upload-progress-bar.png)
 
-To know how much of the file has been uploaded so far, the browser sends an Ajax request to the server, at a regular interval, asking the server what percentage of the file it has received. By default, the browser sends a request every 2 seconds. You can change this by overriding the following property. You set the value of this property as a compromise: low enough so the progress bar updates at a regular interval giving users a more accurate indication of how far along they are in the upload, and high enough to limit the number a queries made to Orbeon Forms, and thus limit the load on the server.
+To know how much of the file has been uploaded so far, the browser sends an Ajax request to the server, at a regular interval, asking the server what percentage of the file it has received. By default, the browser sends a request every 2 seconds. You can change this by overriding the following property. You set the value of this property as a compromise: low enough so the progress bar updates at a regular interval giving users a more accurate indication of how far along they are in the upload, and high enough to limit the number of queries made to Orbeon Forms, and thus limit the load on the server.
 
 ```xml
 <property
@@ -471,7 +471,7 @@ To know how much of the file has been uploaded so far, the browser sends an Ajax
 
 ## XForms inspector
 
-You can enable the [XForms Inspector](../../form-runner/component/xforms-inspector.md) for all the page in your site by setting the following property to `true` (the default is `false`):
+You can enable the [XForms Inspector](../../form-runner/component/xforms-inspector.md) for all the pages in your site by setting the following property to `true` (the default is `false`):
 
 ```xml
 <property 
@@ -484,7 +484,7 @@ You can enable the [XForms Inspector](../../form-runner/component/xforms-inspect
 
 \[SINCE Orbeon Forms 4.6]
 
-Since Orbeon Forms 4.5, radio buttons and checkboxes in review and PDF modes (or for any static-readonly control appearance) shows all items as checkboxes (see the [blog post](https://blog.orbeon.com/2014/03/review-and-pdf-improvements.html)).
+Since Orbeon Forms 4.5, radio buttons and checkboxes in review and PDF modes (or for any static-readonly control appearance) show all items as checkboxes (see the [blog post](https://blog.orbeon.com/2014/03/review-and-pdf-improvements.html)).
 
 If you don't like this behavior, you can set the following two properties:
 
@@ -556,7 +556,7 @@ The default formatting properties for `date`, `time`, and `dateTime` now use the
 </property>
 ```
 
-This means that the language that is used for the formatting is the language in effect where the control is in used, via the `xml:lang` attribute.
+This means that the language that is used for the formatting is the language in effect where the control is in use, via the `xml:lang` attribute.
 
 ### For xf:input
 
@@ -611,7 +611,7 @@ See [XForms Error Handling](../../xforms/error-handling.md).
 
 If you write your own XBL components, you need to include the XBL in every page that uses them. To avoid this, you can define a mapping between the namespace in which your XBL components are, and a directory containing the XBL file. Then, following some naming conventions (more on this below), your XBL will be automatically found by Orbeon Forms, without you having to explicitly include it in every page that uses it.
 
-Properties starting with `oxf.xforms.xbl.mapping` specify a mapping between directory name and a URI:
+Properties starting with `oxf.xforms.xbl.mapping` specify a mapping between a directory name and a URI:
 
 ```xml
 <property
@@ -623,7 +623,7 @@ Properties starting with `oxf.xforms.xbl.mapping` specify a mapping between dire
 Consider an example, with the property above set:
 
 1. Say element `<acme:button>` is found by the XForms engine, in your own `http://www.acme.com/xbl` namespace
-2. Orbeon Forms looks for a property with a name that starts with `oxf.xforms.xbl.mapping` and with a value is equal to the namespace in question (here `http://www.acme.com/xbl`). In this case it finds the property `oxf.xforms.xbl.mapping.acme`.
+2. Orbeon Forms looks for a property with a name that starts with `oxf.xforms.xbl.mapping` and with a value equal to the namespace in question (here `http://www.acme.com/xbl`). In this case it finds the property `oxf.xforms.xbl.mapping.acme`.
 3. Orbeon Forms extracts the part of the property name after `oxf.xforms.xbl.mapping`. In this case it is: `acme`.
 4. This is used to resolve a resource called `oxf:/xbl/acme/button/button.xbl`.
    * The first part of the path is always `xbl`.
@@ -665,7 +665,7 @@ Orbeon Forms handles the case where a request was successfully received and exec
 
 \[SINCE Orbeon Forms 4.5]
 
-You can set the following property to a regexp. When set to a non-empty value, if an Ajax request get an unexpected page which isn't an Orbeon Forms error and matches the regexp, users will be notified, and Orbeon Forms will reload the form, which in turn is likely to take them to the login page. By default, this property is set to the empty string, meaning that Orbeon Forms doesn't try to detect login pages, and always retries Ajax requests met with an unexpected response that aren't Orbeon Forms error pages. For some background on this, see our blog post [Detecting login pages in Ajax requests](https://blog.orbeon.com/2013/12/detecting-login-pages-in-ajax-requests.html).
+You can set the following property to a regexp. When set to a non-empty value, if an Ajax request gets an unexpected page which isn't an Orbeon Forms error and matches the regexp, users will be notified, and Orbeon Forms will reload the form, which in turn is likely to take them to the login page. By default, this property is set to the empty string, meaning that Orbeon Forms doesn't try to detect login pages, and always retries Ajax requests met with an unexpected response that aren't Orbeon Forms error pages. For some background on this, see our blog post [Detecting login pages in Ajax requests](https://blog.orbeon.com/2013/12/detecting-login-pages-in-ajax-requests.html).
 
 ```xml
 <property 

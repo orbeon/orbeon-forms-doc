@@ -37,7 +37,7 @@ http://www.mycompany.com/orbeon
 ```
 
 to infer how to reach itself when calling some service URLs (see below for which URLs apply depending on the Orbeon\
-Forms version). But in some cases, Orbeon Forms cannot reach to itself this way and an explicit base URL must be\
+Forms version). But in some cases, Orbeon Forms cannot reach itself this way and an explicit base URL must be\
 specified with this property.
 
 Such cases include:
@@ -238,7 +238,7 @@ Access to environment variables with the [`environment-variable()` function](../
 
 This property configures the maximum number of compiled XPath expressions to keep in the XPath cache. To tune the cache size, see the suggestions in the [Performance and Tuning](http://wiki.orbeon.com/forms/doc/developer-guide/admin/performance-tuning) section.
 
-_NOTE: A profiler run shows that 2000 cache entries takes, for fairly typical XPath expressions, about 5 MB of memory._
+_NOTE: A profiler run shows that 2000 cache entries take, for fairly typical XPath expressions, about 5 MB of memory._
 
 ### Showing the Orbeon Forms version number
 
@@ -293,7 +293,7 @@ Default:
 
 ### Errors and exceptions
 
-The following property specifies whether the server is allowed to send detailed error and exceptions messages to the browser:
+The following property specifies whether the server is allowed to send detailed error and exception messages to the browser:
 
 ```xml
 <property
@@ -564,7 +564,7 @@ _NOTE: It is strongly discouraged to disable validation, as validation can highl
 |               |                              |
 | ------------- | ---------------------------- |
 | Name          | `sax.inspection`             |
-| Purpose       | enable inspection SAX events |
+| Purpose       | enable inspection of SAX events |
 | Type          | `xs:boolean`                 |
 | Default Value | `false`                      |
 

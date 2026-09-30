@@ -49,7 +49,7 @@ To configure an HTTP proxy to be used for all the HTTP connections established b
 By default, the host and port properties are commented and Orbeon Forms doesn't use a proxy. Some of the use cases where you will want to define a proxy include:
 
 - Your network setup requires you to go through a proxy.
-- You would like see what goes through HTTP by using a tool that acts as an HTTP proxy, such as [Charles](https://www.charlesproxy.com/).
+- You would like to see what goes through HTTP by using a tool that acts as an HTTP proxy, such as [Charles](https://www.charlesproxy.com/).
 
 To connect to the proxy over HTTPS, instead of HTTP which is the default, set the `oxf.http.proxy.use-ssl` property to `true`.
 
@@ -97,14 +97,14 @@ When using HTTPS, you might want Orbeon Forms to authenticate itself by presenti
     - The URI can use the `file:` or [SINCE Orbeon Forms 2021.1] `oxf:` protocol.
     - Relationship to the truststore:
         - [SINCE Orbeon Forms 2021.1] Whether this property is specified or not, the server certificate is verified using the default truststore, which you override by setting the `javax.net.ssl.trustStore` property (more on this in the [JSSE Reference Guide](https://docs.oracle.com/en/java/javase/11/security/java-secure-socket-extension-jsse-reference-guide.html)).
-        - [UNTIL Orbeon Forms 2020.1] If you specify a keystore, it is also used as a truststore. This is the case even if connecting to server whose key is signed by a recognized certificate authority (CA), which means that you need to add the certificate of the CA who signed the key of the server you want to connect to the keystore.  
+        - [UNTIL Orbeon Forms 2020.1] If you specify a keystore, it is also used as a truststore. This is the case even if connecting to a server whose key is signed by a recognized certificate authority (CA), which means that you need to add the certificate of the CA who signed the key of the server you want to connect to the keystore.  
         - If this property is blank, the default JSSE algorithm to find a truststore applies.
 - `oxf.http.ssl.keystore.password`
     - Specifies the password needed to access the keystore file.
 
 You might also want to:
 
-- For Orbeon Forms to accept incoming connections using the same certificate, set up your servlet container, on Tomcat in the `server.xml` on the `<Connector>` used for HTTPS, to point to same keystore.
+- For Orbeon Forms to accept incoming connections using the same certificate, set up your servlet container, on Tomcat in the `server.xml` on the `<Connector>` used for HTTPS, to point to the same keystore.
 - [SINCE Orbeon Forms 2021.1] Set the `oxf.http.ssl.keystore.*` system property to point to a truststore that contains the certificate of the certificate authority who signed the certificate of the server you want to connect to. 
 
 ## Headers forwarding
@@ -185,7 +185,7 @@ This property is tied to the [HttpClient stale checking](http://hc.apache.org/ht
 
 > Defines whether stale connection check is to be used. Disabling stale connection check may result in slight performance improvement at the risk of getting an I/O error when executing a request over a connection that has been closed at the server side.
 
-By default, Orbeon checks for stale HTTP connections. You can disabling stale connection checking by setting the following property to `false` (it is `true` by default):
+By default, Orbeon checks for stale HTTP connections. You can disable stale connection checking by setting the following property to `false` (it is `true` by default):
 
 ```xml
 <property
@@ -244,7 +244,7 @@ The `oxf.http.idle-connections-delay` property sets the idle connection time to 
     value="30000"/> 
 ```
 
-If `oxf.http.expired-connections-polling-delay` is commented out or not present, neither checks are performed.
+If `oxf.http.expired-connections-polling-delay` is commented out or not present, neither check is performed.
 
 If `oxf.http.idle-connections-delay` is commented out or not present, but `oxf.http.expired-connections-polling-delay` is present, then only the check for expired connections takes place.
 

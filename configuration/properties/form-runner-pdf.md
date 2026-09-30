@@ -72,13 +72,13 @@ The following property controls whether hyperlinks are enabled in the generated 
 
 When set to `true`:
 
-* HTTP and HTTPS URLs in input field and text areas are automatically hyperlinked.
+* HTTP and HTTPS URLs in input fields and text areas are automatically hyperlinked.
 * Hyperlinks in rich text controls are preserved.
 * Hyperlinks in the rest of the form, if any, are preserved.
 
 When set to `false`:
 
-* HTTP and HTTPS URLs in input field and text areas are not hyperlinked, but placeholders are added.
+* HTTP and HTTPS URLs in input fields and text areas are not hyperlinked, but placeholders are added.
 * Hyperlinks in rich text controls are removed and placeholders are left.
 * Hyperlinks in the rest of the form, if any, are removed and placeholders are left.
 * Placeholders consist of an HTML `<a>` without an `href` attribute. This helps with CSS styling.

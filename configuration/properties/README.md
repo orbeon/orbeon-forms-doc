@@ -134,8 +134,8 @@ This allows creating hierarchical properties with generic defaults and more spec
 
 In general these are used with Form Runner or Form Builder and in these cases:
 
-* The first wildcard matches a forms "application name"
-* The second wildcard matches a forms "form name"
+* The first wildcard matches a form's "application name"
+* The second wildcard matches a form's "form name"
 
 There is a precedence order with wildcards:
 

@@ -4,7 +4,7 @@
 
 \[SINCE Orbeon Forms 2017.1]
 
-In addition to `oxf.fr.css.custom.uri`, you can also use the following property, which apply only to the Summary page:
+In addition to `oxf.fr.css.custom.uri`, you can also use the following property, which applies only to the Summary page:
 
 ```xml
 <property
@@ -19,7 +19,7 @@ See also [Adding your own CSS](form-runner.md#adding-your-own-css).
 
 \[SINCE Orbeon Forms 2017.1]
 
-In addition to `oxf.fr.js.custom.uri`, you can also use the following property, which apply only to the Summary page:
+In addition to `oxf.fr.js.custom.uri`, you can also use the following property, which applies only to the Summary page:
 
 ```xml
 <property
@@ -43,7 +43,7 @@ Number of rows shown in the Summary page.
 
 ## Created and Last Modified columns
 
-By default, the Summary page shows a Created and Modified columns:
+By default, the Summary page shows Created and Modified columns:
 
 ![Created and Last Modified](../../form-runner/images/summary-created-last-modified.png)
 

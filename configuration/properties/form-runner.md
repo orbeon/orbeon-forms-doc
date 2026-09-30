@@ -256,7 +256,7 @@ If you use two `*` wildcards, as in the example above, the property also sets th
     - `WEB-INF/resources/forms/assets`: logo for all forms
     - `WEB-INF/resources/forms/APP/assets`: logo for app name APP
     - `WEB-INF/resources/forms/APP/FORM/assets`: logo for app name APP and form name FORM
-2. Define the `oxf.fr.default-logo.uri.*.*` property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
+2. Define the `oxf.fr.default-logo.uri.*.*` property to point to the file(s) you added. The path points to a location under the `WEB-INF/resources` directory.
 
 For example, to change the default logo for all forms and pages to an image called `my-logo.png`, place the image at the proper location and use the following property:
 
@@ -318,7 +318,7 @@ See the [CSS page](/form-runner/styling/css.md).
     * `WEB-INF/resources/forms/assets`: scripts for all forms
     * `WEB-INF/resources/forms/APP/assets`: scripts for app name APP
     * `WEB-INF/resources/forms/APP/FORM/assets`: scripts for app name APP and form name FORM
-2. Define the [`oxf.fr.js.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-adding-your-own-javascript-files) property to point to the file(s) you added. The path points to location under the `WEB-INF/resources` directory.
+2. Define the [`oxf.fr.js.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-adding-your-own-javascript-files) property to point to the file(s) you added. The path points to a location under the `WEB-INF/resources` directory.
 
 ```xml
 <property as="xs:string" name="oxf.fr.js.custom.uri.*.*">
@@ -340,11 +340,11 @@ In addition to [`oxf.fr.js.custom.uri`](/configuration/properties/form-runner.md
 
 In some cases, it might make sense to change some of the resources provided out of the box by Form Runner. For instance, the Detail page can have a submit button, which in English has a label "Submit". For your application, another label might make more sense, for instance "Send". To override Form Runner resources, you define properties with a name that has the following structure:
 
-1. The name start with `oxf.fr.resource`.
+1. The name starts with `oxf.fr.resource`.
 2. Followed by the name of the application and form name for which you want to redefine the resource. You can use `*` for either if you want the redefinition to apply to all the applications or all the forms. For instance: `*.*`, or `my-app.my-form`.
 3. The 2-letter code for the language for which you want to override the resource. For instance: `en`.
 4. A dot-separated path corresponding to the path of the resource you want to override as defined by Form Runner [`resources.xml`][19].
-5. Resources are aggressively caches, so you need to restart your application server (or redeploy the web app) after changing a property that overrides resources.
+5. Resources are aggressively cached, so you need to restart your application server (or redeploy the web app) after changing a property that overrides resources.
 
 For instance, to change the label of the submit button to be "Send" in English for all applications and forms, write:
 
@@ -492,7 +492,7 @@ The following property controls the same behavior in noscript mode:
 
 A value of `false` may make sections more accessible and less confusing to screen reader users.
 
-The following property controls the whether collapsing/opening of sections uses an animation. The default is `true`:
+The following property controls whether collapsing/opening of sections uses an animation. The default is `true`:
 
 ```xml
 <property
@@ -518,7 +518,7 @@ By default, grids in your forms are rendered using the modern [CSS grid layout](
 
 #### Older versions (before Orbeon Forms 2022.1)
 
-Before Orbeon Forms 2022.1, grids were rendered using HTML tables by default. This was because older browsers, in particular IE11, provided only limited support for CSS grids. Starting with Orbeon Forms 2020.1.7 and 2021.1.1, anticipating the drop of IE11 support, you could opt-in to use CSS grid layout by setting the following property. For more details on grid rendering in different versions, see the [Grids CSS documentation](/form-runner/styling/grids.md).
+Before Orbeon Forms 2022.1, grids were rendered using HTML tables by default. This was because older browsers, in particular IE11, provided only limited support for CSS grids. Starting with Orbeon Forms 2020.1.7 and 2021.1.1, anticipating the drop of IE11 support, you could opt in to use CSS grid layout by setting the following property. For more details on grid rendering in different versions, see the [Grids CSS documentation](/form-runner/styling/grids.md).
 
 ```xml
 <property

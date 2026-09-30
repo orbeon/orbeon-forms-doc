@@ -173,7 +173,7 @@ In production, you probably don't want any debug information coming out to your 
 </category>
 ```
 
-Alternatively, remove or comment-out the lines above. When this is done, the `oxf.xforms.logging.debug` property is no longer used, so it does not matter what it contains. However, the `oxf.xforms.logging.error` is still relevant. Configure it appropriately, depending on whether you want to see submission responses bodies logged or not.
+Alternatively, remove or comment-out the lines above. When this is done, the `oxf.xforms.logging.debug` property is no longer used, so it does not matter what it contains. However, the `oxf.xforms.logging.error` is still relevant. Configure it appropriately, depending on whether you want to see submission response bodies logged or not.
 
 ### Just submission timings
 

@@ -215,7 +215,7 @@ When more than one email is present, if you specify names, you must use commas e
 The following property controls whether file and image form attachments are attached to the email.
 
 - `all`: all form attachments are included (this is the default)
-- `none`: no form attachments is included
+- `none`: no form attachments are included
 - `selected`: only form attachments selected in the Form Builder with "Include as Email Attachment" are included
     
 ```xml

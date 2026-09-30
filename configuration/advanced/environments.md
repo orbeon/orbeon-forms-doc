@@ -12,7 +12,7 @@ The above scenario is typical, but there is nothing in Orbeon Forms that dictate
 
 ## Database setup
 
-So you get the full benefit of having different environment, you should set up the instances of Orbeon Forms in different environments to use different databases, or at least different database schemas, so you can see each environment as a silo, and never have, say, form authors accessing the development environment change any data related to the staging or production environment.
+So you get the full benefit of having different environments, you should set up the instances of Orbeon Forms in different environments to use different databases, or at least different database schemas, so you can see each environment as a silo, and never have, say, form authors accessing the development environment change any data related to the staging or production environment.
 
 ## Migration of form definitions
 

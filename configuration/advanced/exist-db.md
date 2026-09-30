@@ -14,7 +14,7 @@ The eXist database is no longer included in the standard Orbeon Forms WAR file. 
 
 ## Rationale
 
-By default, Orbeon Forms ships with an embedded eXist-db database. For production, this is not an ideal setup and it is better to have a separate eXist-db database. After you download and install eXist-db, you should follow the instruction below to set it up, and let Orbeon Forms know how it should connect to eXist-db.
+By default, Orbeon Forms ships with an embedded eXist-db database. For production, this is not an ideal setup and it is better to have a separate eXist-db database. After you download and install eXist-db, you should follow the instructions below to set it up, and let Orbeon Forms know how it should connect to eXist-db.
 
 ## Setup
 

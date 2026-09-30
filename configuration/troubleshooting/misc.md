@@ -15,7 +15,7 @@ The solution is simply to clear in your browser all the `JSESSIONID` cookies for
 
 ## Data looks garbled on the Summary page with MySQL
 
-If when accessing the Form Runner Summary page, the data you're seeing looks garbled, then run the following in on your MySQL database:
+If when accessing the Form Runner Summary page, the data you're seeing looks garbled, then run the following on your MySQL database:
 
 ```sql
 alter table orbeon_form_definition change xml xml mediumtext collate utf8_unicode_ci;

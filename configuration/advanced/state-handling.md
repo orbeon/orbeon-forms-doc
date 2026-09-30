@@ -51,7 +51,7 @@ The static state (or static analysis) of an XForms page is stored in a separate 
 
 This property should be set to a number equal to or greater than the number of distinct XForms pages you have.
 
-If you have, say, in production, 100 separate form definition, the size should ideally be 100.
+If you have, say, in production, 100 separate form definitions, the size should ideally be 100.
 
 It is tempting to make the cache very large, but because it is a strict cache, there is a risk of running out of memory. So you should make the cache just a little bit larger than the number of forms in production.
 
@@ -136,7 +136,7 @@ This dialog is also shown if the user logs out from another page/tab from the sa
 
 If the session heartbeat feature is enabled, the dialog won't be shown, independently of the value of `oxf.fr.detail.session-expiration-dialog.enabled.*.*`. In that case, the `oxf.xforms.session-expiration.trigger` property determines when the session heartbeat is sent to the server.
 
-Behind the scene, Orbeon Forms synchronizes multiple Orbeon Forms tabs or windows within a same browser session. This means that activity in one tab will keep the session alive for all tabs.
+Behind the scenes, Orbeon Forms synchronizes multiple Orbeon Forms tabs or windows within a same browser session. This means that activity in one tab will keep the session alive for all tabs.
 
 ## Browser navigation (back and forward) handling
 
@@ -144,18 +144,18 @@ Behind the scene, Orbeon Forms synchronizes multiple Orbeon Forms tabs or window
 
 ### Deprecation
 
-The way web browsers should handle history, in particular "back" and "forward", is subject to interpretation. However, one consistent such interpretation is that going "back" or "forward" in the browser history should take the user to something as close as possible as what the user saw last, whether for web "pages" or web "apps".
+The way web browsers should handle history, in particular "back" and "forward", is subject to interpretation. However, one consistent such interpretation is that going "back" or "forward" in the browser history should take the user to something as close as possible to what the user saw last, whether for web "pages" or web "apps".
 
 As of late 2021, the way web browsers handle history confirms this interpretation. In particular, the so-called ["bfcache"](https://web.dev/bfcache/) helps restore the state of pages and applications as they were last seen by the user.
 
-One of the purpose of the `xxf:revisit-handling="reload"` setting described below was to prevent the possibility that a user could navigate back, see again data that was entered into a form, and resubmit it. Forcing a reload of the page upon browser back alleviated that issue, as the form would then be cleared. However, this also goes against the more accepted philosophy of navigation in history described above.
+One of the purposes of the `xxf:revisit-handling="reload"` setting described below was to prevent the possibility that a user could navigate back, see again data that was entered into a form, and resubmit it. Forcing a reload of the page upon browser back alleviated that issue, as the form would then be cleared. However, this also goes against the more accepted philosophy of navigation in history described above.
 
 Since Orbeon Forms 2020.1, we recommend instead using workflow features to help with this. When saving or submitting form data:
 
 1. Set the workflow stage to a value such as `saved` or `submitted`.
 2. In the form definition, set the global "Read-only" formula to mark the form as read only when it is in `saved` or `submitted` stage.
 
-This means that even if the user navigate to a confirmation page upon submission, and then navigates back to the form, the form will be shown (and if necessary restored) in a readonly mode. This achieves the intent without breaking the philosophy of navigation.
+This means that even if the user navigates to a confirmation page upon submission, and then navigates back to the form, the form will be shown (and if necessary restored) in a readonly mode. This achieves the intent without breaking the philosophy of navigation.
 
 See [Workflow stage](../../form-runner/feature/workflow-stage.md) for more details.
 

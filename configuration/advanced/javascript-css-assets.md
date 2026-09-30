@@ -31,7 +31,7 @@ Starting with Orbeon Forms 2020.1, disabling combined resources is deprecated. D
 
 Serving external CSS and JavaScript assets can have a high performance cost on page loads. This is particularly important with the intensive use of JavaScript in Orbeon Forms. In particular, it can be shown that serving many small files is slower than serving a single large file.
 
-This is why Orbeon Forms supports the option of combining the multiple JavaScript and CSS files required for a given XForms page into one or two JavaScript files and one or two CSS file.
+This is why Orbeon Forms supports the option of combining the multiple JavaScript and CSS files required for a given XForms page into one or two JavaScript files and one or two CSS files.
 
 _NOTE: In theory, HTTP pipelining can improve very much on this, but this is (very unfortunately) useless in practice at the time of writing because browsers do not implement it or do not enable it by default. HTTP/2 might help solve this._
 
@@ -78,7 +78,7 @@ The URLs produced identify the resources needed by the page, for example:
   src="/orbeon/xforms-server/orbeon-3a3469eca94e6df9783e742067f464b57de4e2f3.js"/>
 ```
 
-When the Orbeon Forms XForms server receives a request for a combined resource, it determine what files need to be combined and outputs them all together. Furthermore, for CSS files, all URLs referred to with `url()` are rewritten, so that links to images, in particular, remain correct.
+When the Orbeon Forms XForms server receives a request for a combined resource, it determines what files need to be combined and outputs them all together. Furthermore, for CSS files, all URLs referred to with `url()` are rewritten, so that links to images, in particular, remain correct.
 
 Some CSS and JavaScript files are never included into aggregated resources:
 
@@ -234,7 +234,7 @@ The baseline of resources is configured as follows:
 
 The value consists of a list of qualified names referring to XBL components. Resources for the components specified are always included in every page, whether the component is used by the page or not.
 
-Starting Orbeon Forms 2021.1, use `oxf.xforms.assets.baseline` instead.
+Starting with Orbeon Forms 2021.1, use `oxf.xforms.assets.baseline` instead.
 
 #### Disk caching of combined resources
 
@@ -338,7 +338,7 @@ This means that the resource can effectively be cached "for ever" by a client. I
 
 When Orbeon Forms is upgraded on the server, the version number changes as well. An XForms page will refer to resources with the new version number, so the cached resource is not used by the browser and a new resource is loaded from the server, before being cached. This "magic" is enabled simply with the inclusion of the Orbeon Forms version number in the URL.
 
-Only CSS and JavaScript resources used by the XForms engine are loaded through the XForms Server component. Other resources like images referred by XForms stylesheets are served by the Page Flow Controller, through URLs like this one:
+Only CSS and JavaScript resources used by the XForms engine are loaded through the XForms Server component. Other resources like images referred to by XForms stylesheets are served by the Page Flow Controller, through URLs like this one:
 
 ```xml
 http://localhost:8080/orbeon/ops/images/xforms/error.png
@@ -375,7 +375,7 @@ The versioning mechanism is made available to your own application resources as 
 <property as="xs:string" name="oxf.resources.version-number" value="1.6.3"/>
 ```
 
-For deployed application, you should upgrade the application version number whenever you modify application resources so that clients retrieve the proper resources.
+For deployed applications, you should upgrade the application version number whenever you modify application resources so that clients retrieve the proper resources.
 
 The following scenario shows the entire lifecycle for application resources:
 
@@ -414,7 +414,7 @@ The following scenario shows the entire lifecycle for application resources:
     RESOURCES/apps/foo/bar.png
     ```
 
-From client-side JavaScript, you can access the application version number as follow:
+From client-side JavaScript, you can access the application version number as follows:
 
 ```xml
 var version = ORBEON.util.Utils.getProperty(APPLICATION_RESOURCES_VERSION_PROPERTY);

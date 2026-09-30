@@ -175,7 +175,7 @@ This controls which Form Builder user interface languages appear in the language
 
 ## Permissions dialog
 
-The permissions dialog allows form authors, amongst other things, to assign permissions to users having a specific roles. In that dialog, form authors can type in a text field the name of the role(s) they want to assign those permissions to. If you're systematically using certain roles, want to save form authors from having to type them, and prevent possible mistakes in the process, you can use the following property to list the role names you want the Form Builder permissions dialog to always show in that dialog:
+The permissions dialog allows form authors, amongst other things, to assign permissions to users having a specific role. In that dialog, form authors can type in a text field the name of the role(s) they want to assign those permissions to. If you're systematically using certain roles, want to save form authors from having to type them, and prevent possible mistakes in the process, you can use the following property to list the role names you want the Form Builder permissions dialog to always show in that dialog:
 
 ```xml
 <property as="xs:string" name="oxf.fb.permissions.role.always-show">

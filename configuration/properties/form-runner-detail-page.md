@@ -91,7 +91,7 @@ For other pages (Summary, Form Builder Forms, Published Forms, Forms Admin, and 
 
 \[SINCE Orbeon Forms 2017.1]
 
-In addition to `oxf.fr.css.custom.uri`, you can also use the following property, which apply only to the Detail page:
+In addition to `oxf.fr.css.custom.uri`, you can also use the following property, which applies only to the Detail page:
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.css.custom.uri.*.*">
@@ -105,7 +105,7 @@ See also [Adding your own CSS](form-runner.md#adding-your-own-css).
 
 \[SINCE Orbeon Forms 2017.1]
 
-In addition to `oxf.fr.js.custom.uri`, you can also use the following property, which apply only to the Detail page:
+In addition to `oxf.fr.js.custom.uri`, you can also use the following property, which applies only to the Detail page:
 
 ```xml
 <property as="xs:string" name="oxf.fr.detail.js.custom.uri.*.*">
@@ -291,7 +291,7 @@ For more about placeholders, see [Use HTML5 placeholders, in XForms](https://blo
 
 \[DEPRECATED SINCE Orbeon Forms 2016.2]
 
-This property set whether the control hints are shown inline, rather than as tool-tips. The default is `true`.
+This property sets whether the control hints are shown inline, rather than as tool-tips. The default is `true`.
 
 ```xml
 <property

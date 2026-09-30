@@ -34,7 +34,7 @@ ORBEON.xforms.Events.errorEvent.subscribe(function(eventName, eventData) {
 
 ### Example
 
-In case the user session expires, or some other error happens, you would like to redirect them a page you created that will, for instance, tell users to log in and try again, and if the problem persists to contact customer support.
+In case the user session expires, or some other error happens, you would like to redirect them to a page you created that will, for instance, tell users to log in and try again, and if the problem persists to contact customer support.
 
 ```javascript
 ORBEON.xforms.Events.errorEvent.subscribe(function(eventName, eventData) {

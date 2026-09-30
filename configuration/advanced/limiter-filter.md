@@ -72,7 +72,7 @@ The default settings are meant to apply to:
 
 but *not* to:
 
-- assets such as JavaScript, CSS and images files
+- assets such as JavaScript, CSS and image files
 - file uploads
 
 The number of threads which can run concurrently is based on the number of CPUs advertised by the JVM. This typically includes hyperthreading: for example, a laptop with 4 cores advertises 8 "CPUs".

@@ -15,7 +15,7 @@ You'll most likely be interested in the information on this page if:
 ### Normal operation
 
 1. The first time a browser requests a web page from Orbeon Forms, Orbeon Forms creates a session, and the HTTP response has a header with `Set-Cookie: JSESSIONID=123`, where `123` is a unique identifier. (The specific cookie name may differ depending on how you configured your app server, but typically `JSESSIONID` is the default and for simplicity we'll use that name in the rest of this document.) From that point, any subsequent requests issued by the browser will have a header that looks like `Cookie: JSESSIONID=123`.
-2. When Orbeon Forms generates a web page for a form, it produces a unique UUID, and stores _state_ in the session related to this UUID. If the user reloads the form, Orbeon Forms generated a different UUID.
+2. When Orbeon Forms generates a web page for a form, it produces a unique UUID, and stores _state_ in the session related to this UUID. If the user reloads the form, Orbeon Forms generates a different UUID.
 3.  When the Orbeon Forms client-side code sends an Ajax request, it includes that UUID in the body of the request, and the browser passes the `JSESSIONID`. On the server, Orbeon Forms uses that information to find the _state_ it stored in step 1. The UUID sent by Orbeon Forms in the Ajax request looks like:
 
     ```xml
@@ -28,7 +28,7 @@ For Orbeon Forms to operate normally, for a given web page loaded by the browser
 
 ![Which HTTP requests/responses we are interested in](../images/session-where.png)
 
-Note that those requirements apply to the HTTP requests and responses sent to and coming from Orbeon Forms. As illustrated in the above diagrams, if you have reverse proxy or embedding code those will be different from the HTTP requests and responses made by and received by the browser, and the `JSESSIONID` (or equivalent) used between the browser and the proxy / embedding code is likely to be different from the `JSESSIONID` used between the proxy / embedding code and Orbeon Forms. Again, Orbeon Forms' requirement apply to the latter.
+Note that those requirements apply to the HTTP requests and responses sent to and coming from Orbeon Forms. As illustrated in the above diagrams, if you have reverse proxy or embedding code those will be different from the HTTP requests and responses made by and received by the browser, and the `JSESSIONID` (or equivalent) used between the browser and the proxy / embedding code is likely to be different from the `JSESSIONID` used between the proxy / embedding code and Orbeon Forms. Again, Orbeon Forms' requirements apply to the latter.
 
 ## HTTP 440
 
@@ -55,6 +55,6 @@ If you're getting 440 errors more regularly, and you have software sitting betwe
 In those cases, you can solve the issue by either:
 
 * When using a [load balancer](clustering.md) that dispatches requests across multiple servers, ensure session affinity (sticky sessions) is configured so that the initial page load and all subsequent Ajax requests from the same page load are routed to the same server instance. Some load balancers may, even with session affinity configured, decide to send a subsequent request to a different server if they determine that the original target server is too slow to respond and might not be operational. Unless you have set up session replication, you must ensure that your load balancer configuration prevents this failover behavior from occurring.
-* If you have own Java code to embed forms created with Form Builder, switch to using the built-in [Form Runner Java Embedding API](../../form-runner/link-embed/java-api.md), which will handle cookies properly.
+* If you have your own Java code to embed forms created with Form Builder, switch to using the built-in [Form Runner Java Embedding API](../../form-runner/link-embed/java-api.md), which will handle cookies properly.
 * Debug and fix the issue in the said software, armed with a better understanding of the Orbeon Forms' requirements when it comes to cookies, based on this information on this page.
 * If using Tomcat, in Tomcat's directory edit `conf/context.xml`, and add `sessionCookiePath="/"` on the root element, so it looks as follows: `<Context sessionCookiePath="/">`. This will make the job of any reverse proxy or embedding code you might have much simpler, and could help you get around bugs in that code.
