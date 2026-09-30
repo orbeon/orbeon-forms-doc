@@ -113,7 +113,7 @@ Finally, we write, using the Form Builder's Action Syntax, an action that:
     * adds iterations to the `laureates` repeat
     * sets values in the controls `known-name` and `motivation` from the `knownName` and `motivation/en` fields in the data
 
-There is a nested iteration due to the nested repeats. here is what the complete listener and action look like:
+There is a nested iteration due to the nested repeats. Here is what the complete listener and action look like:
 
 ```xml
 <fr:listener version="2018.2" events="form-load-after-controls" actions="my-action"/>

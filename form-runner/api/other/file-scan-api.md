@@ -74,7 +74,7 @@ The `java.net.URI` associated with `request.uri` contains the following parts:
 
 The provider implementation must return an implementation of a `FileScan2`.
 
-The `FileScan2` interface is as follows :
+The `FileScan2` interface is as follows:
 
 ```java
 package org.orbeon.oxf.xforms.upload.api.java;
@@ -255,7 +255,7 @@ When Orbeon Forms is starting to receive an upload file, it calls the `startStre
 
 The provider implementation must return an implementation of a `FileScan`.
 
-The `FileScan` interface is as follows :
+The `FileScan` interface is as follows:
 
 ```java
 package org.orbeon.oxf.xforms.upload.api.java;

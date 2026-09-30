@@ -25,7 +25,7 @@ Orbeon Forms provides both:
 
 ## MCP Server
 
-Using any MCP server (not just Orbeon Forms'), involves 3 parts, illustrated in the diagram below:
+Using any MCP server (not just Orbeon Forms') involves 3 parts, illustrated in the diagram below:
 
 - On the right, the MCP server itself. In our case, the MCP server is part of Orbeon Forms, which you already have.
 - On the left, an AI agent. This is software that you install on your own laptop or workstation. It provides the chat interface.

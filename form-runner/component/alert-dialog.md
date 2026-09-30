@@ -2,11 +2,11 @@
 
 ## Rationale
 
-The alert dialog allows you to build simple dialogs for those cases where you need to inform users of something that happened, or ask a question which can be answered by a _yes_ or a _no_ .
+The alert dialog allows you to build simple dialogs for those cases where you need to inform users of something that happened, or ask a question which can be answered by a _yes_ or a _no_.
 
 ## Example
 
-Let's assume that you want to ask a yes/no question which produces a dialog as shown below, and that you want to react to users choosing _Yes_ .
+Let's assume that you want to ask a yes/no question which produces a dialog as shown below, and that you want to react to users choosing _Yes_.
 
 ![](<images/xbl-alert-dialog.png>)
 
@@ -39,7 +39,7 @@ You open this dialog by dispatching the event `fr-show` to the dialog:
 
 ## Buttons
 
-The alert dialog supports 3 buttons, that correspond to a _positive choice_ , a _negative choice_ , and a _neutral choice_ . Each one has a default label and a default icon, as shown in the table below. For each button, you can:
+The alert dialog supports 3 buttons, that correspond to a _positive choice_, a _negative choice_, and a _neutral choice_. Each one has a default label and a default icon, as shown in the table below. For each button, you can:
 
 *   Override the label by placing your own `<fr:label>` inside the button element. For instance, you would change the label for positive choice from _Yes_ to _OK_ and for the negative choice from _No_ to _Cancel_ with:
 
@@ -60,7 +60,7 @@ The alert dialog supports 3 buttons, that correspond to a _positive choice_ , a 
 | `<fr:negative-choice>` | ![](images/xbl-alert-dialog-no.png)  | `xbl-fr-alert-dialog-negative` |
 | `<fr:neutral-choice>`  | ![](images/xbl-alert-dialog-ok.png)  | `xbl-fr-alert-dialog-neutral`  |
 
-In most cases, you will be using either the positive and negative choice together, or the neutral choice alone. You can use the 3 buttons at the same time, to create a _Yes-No-Cancel_ type of dialog. In this case however, you should consider giving labels to buttons that more description than _Yes-No-Cancel_ . For instance, if you want to ask users whether they want to leave this form without saving, you could label the buttons _Save data_ , _Discard data_ , _Continue editing_ .
+In most cases, you will be using either the positive and negative choice together, or the neutral choice alone. You can use the 3 buttons at the same time, to create a _Yes-No-Cancel_ type of dialog. In this case however, you should consider giving labels to buttons that more description than _Yes-No-Cancel_. For instance, if you want to ask users whether they want to leave this form without saving, you could label the buttons _Save data_, _Discard data_, _Continue editing_.
 
 ## Actions
 

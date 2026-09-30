@@ -373,7 +373,7 @@ For an empty base path, it would be stored at the following location:
 
 ### Multiple attachment providers of the same type
 
-Multiple filesystem and S3 attachment providers can be configured, following the same principles as described [above](#multiple-databases-of-the-same-type)
+Multiple filesystem and S3 attachment providers can be configured, following the same principles as described [above](#multiple-databases-of-the-same-type).
 
 For example, if you need to store attachments in two different filesystem paths for the Form Runner apps `foo` and `bar`, you can do so by using the following properties:
 

@@ -168,7 +168,7 @@ Explanation:
 * `if (...) then ... else ...` evaluates a condition and then returns one of two alternatives
 * the condition `quantity1 castable as xs:integer` checks that the value from the field "quantity1" is an integer
 * `quantity1 + $quantity2` simply adds the two values
-* the value `''` represents an empty string This can be specified for example on a Text Output control.
+* the value `''` represents an empty string. This can be specified for example on a Text Output control.
 
 _NOTE: If the value of a control is calculated, by default it is also marked as read-only. If you want a calculated control to be still editable by the user, set its Read-Only property explicitly to `false()`._
 

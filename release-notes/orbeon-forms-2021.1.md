@@ -341,7 +341,7 @@ See also:
 
 Due to December 2021 Log4j vulnerabilities, Orbeon Forms now uses the latest Log4j 2.x libraries. Until Orbeon Forms 2020.1.5, Orbeon Forms used older Log4j 1.x libraries. While Orbeon Forms was not vulnerable to these specific attacks, we decided to migrate Orbeon Forms to Log4j 2.x in order to respond faster to future vulnerabilities should they arise.
 
-For details, see the following blog posts;
+For details, see the following blog posts:
 
 * [Vulnerability in the log4j library](https://blog.orbeon.com/2021/12/vulnerability-in-log4j-library.html)
 * [Orbeon Forms PE Log4j maintenance releases](https://blog.orbeon.com/2021/12/orbeon-forms-pe-log4j-maintenance.html)
@@ -378,7 +378,7 @@ The `save-draft` button is now called `save-progress`. The button label is also 
 
 The `save-draft` button remains for backward compatibility. By default, it calls the `process("save-progress")` process.
 
-We recommend that you review whether you have customized the `save-draft` process and/or button resources in your `properties-local.xml` and update them to the new name as needed,
+We recommend that you review whether you have customized the `save-draft` process and/or button resources in your `properties-local.xml` and update them to the new name as needed.
 
 ### Use of `model` and `xxbl:scope` on `<xf:output>`
 

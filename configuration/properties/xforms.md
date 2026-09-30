@@ -340,7 +340,7 @@ You can set the `oxf.xforms.datepicker.two-months` property to `true`, and the d
 
 ![Date picker with two months displayed at a time](../../xforms/images/xforms-datepicker-navigator.png)
 
-By default, the property is set to `false`, (only one month is shown). You can override by adding the following to your `properties-local.xml`:
+By default, the property is set to `false` (only one month is shown). You can override by adding the following to your `properties-local.xml`:
 
 ```xml
 <property 

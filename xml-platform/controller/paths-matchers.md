@@ -6,12 +6,12 @@ The value of the `path` attribute can be either a glob pattern or a full regular
 
 | Value              | Description                                                                                                                                                                                                                                                                                                                                                                               |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Glob               | This is the default but can also be set explicitly with the  `matcher` attribute set to glob (or `oxf:glob-matcher` for backward compatibility) on the `<page>` element. This supports the wildcards "`*`" and "?". as well as character classes, as [documented here](https://svn.apache.org/repos/asf/jakarta/oro/tags/oro-2.0.9-dev-1/docs/api/org/apache/oro/text/GlobCompiler.html). |
+| Glob               | This is the default but can also be set explicitly with the  `matcher` attribute set to glob (or `oxf:glob-matcher` for backward compatibility) on the `<page>` element. This supports the wildcards "`*`" and "?", as well as character classes, as [documented here](https://svn.apache.org/repos/asf/jakarta/oro/tags/oro-2.0.9-dev-1/docs/api/org/apache/oro/text/GlobCompiler.html). |
 | Regular expression | This is enabled with the  `matcher` attribute set to regexp (or oxf:perl5-matcher for backward compatibility) on the `<page>` element. This enables full Java/Perl 5 regular expressions.                                                                                                                                                                                                 |
 
 Simple examples of glob:
 
-* `/about/company.html`matches exactly this URL
+* `/about/company.html` matches exactly this URL
 * `about/*` matches any URL that starts with `about/`
 * `*.gif` matches any URL that ends with `.gif`
 * `a?c` matches `aac`, `abc`, `etc`.

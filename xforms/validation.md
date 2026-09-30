@@ -282,7 +282,7 @@ Context information:
 * `added-infos`: ids of current infos added since the last refresh
 * `removed-infos`: ids of current infos removed since the last refresh
 
-_NOTE: A_ [_bug_](https://github.com/orbeon/orbeon-forms/issues/3498) _until Orbeon Forms 2017.2 caused the event to be dispatched to all controls during the first refresh._.
+_NOTE: A_ [_bug_](https://github.com/orbeon/orbeon-forms/issues/3498) _until Orbeon Forms 2017.2 caused the event to be dispatched to all controls during the first refresh._
 
 ### xxf:valid() and xxf:invalid() XPath functions
 
@@ -344,7 +344,7 @@ When an XML Schema is provided, Orbeon Forms supports controlling whether a part
 * "strict" mode
 * not validated at all ("skip" mode)
 
-Orbeon Forms implements a "lax" validation mode by default, where only elements that have definitions in the imported schemas are validated. Other elements are not considered for validation. This is in line with XML Schema and XSLT 2.0 lax validation modes, and with the default validation mode as specified in XForms 1.1
+Orbeon Forms implements a "lax" validation mode by default, where only elements that have definitions in the imported schemas are validated. Other elements are not considered for validation. This is in line with XML Schema and XSLT 2.0 lax validation modes, and with the default validation mode as specified in XForms 1.1.
 
 In addition, the author can specify the validation mode directly on each instance with the extension attribute `xxf:validation`, which takes values:
 

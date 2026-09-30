@@ -85,7 +85,7 @@ Form Runner requires the ability to know how to reach Form Runner. In some cases
     value="https://orbeon.acme.org/forms"/>
 ```
 
-You can't use links to point back to Form Runner when using [embedding](../form-runner/link-embed/java-api.md) or the \[ [Form Runner proxy portlet](../form-runner/link-embed/liferay-proxy-portlet.md).
+You can't use links to point back to Form Runner when using [embedding](../form-runner/link-embed/java-api.md) or the [Form Runner proxy portlet](../form-runner/link-embed/liferay-proxy-portlet.md).
 
 ## Localization
 

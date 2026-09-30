@@ -50,13 +50,13 @@ The control works like `xf:select` in that it adds and removes the selected valu
 <whitespace>foo bar</whitespace>
 ```
 
-When the user selects the checkbox. The node now contains:
+When the user selects the checkbox, the node now contains:
 
 ```xml
 <whitespace>foo bar trim</whitespace>
 ```
 
-And when the user deselects the checkbox. The node contains again:
+And when the user deselects the checkbox, the node contains again:
 
 ```xml
 <whitespace>foo bar</whitespace>

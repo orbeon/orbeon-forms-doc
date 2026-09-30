@@ -77,5 +77,5 @@ NOTE: Here is the order in which the XForms engine processes type annotations in
 
 * during a model _rebuild_, all `xf:bind` point to their associated instance nodes if any
 * static type annotations with `xf:bind/@type` and `xsi:type` are available just after a rebuild
-* this means that type annotations can be used during subsequent model _recalculate \_and \_revalidate_
+* this means that type annotations can be used during subsequent model _recalculate_ and _revalidate_
 * however, annotations done via a schema are _not_ reliably available during _recalculate_

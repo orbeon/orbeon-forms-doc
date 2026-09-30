@@ -232,7 +232,7 @@ This area shows relevant Orbeon Forms versions:
 
 * "Created with Version": version with which this form definition was created.
   * _NOTE: This is blank for forms created prior to Orbeon Forms 2018.1._
-* "Updated with Versions": versions with which this form definition was updated This is updated:
+* "Updated with Versions": versions with which this form definition was updated. This is updated:
   * when saving the form definition
   * when upgrading the form definition from the Form Runner Home page.
 * "Current Version": the current Orbeon Forms version.

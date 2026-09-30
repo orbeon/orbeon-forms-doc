@@ -8,7 +8,7 @@ XBL components can be loaded by the Form Builder toolbox. In order for Form Buil
 
 ## Namespace
 
-The Form Builder specific extensions are in an namespace::
+The Form Builder specific extensions are in an namespace:
 
 * URI: `http://orbeon.org/oxf/xml/form-builder`
 * Usual prefix: `fb`

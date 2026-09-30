@@ -72,7 +72,7 @@ This has two benefits:
 
 _NOTE: If processing background submissions causes new background submissions to run, their results are processed as well._
 
-_NOTE: If the resulting instance is cacheable with `xxf:cache="true"` and already in cache, it is immediately retrieved and no background submission takes place.__
+_NOTE: If the resulting instance is cacheable with `xxf:cache="true"` and already in cache, it is immediately retrieved and no background submission takes place._
 
 _NOTE: Optimized submissions and submissions with `replace="all"` are not supported in asynchronous mode._
 

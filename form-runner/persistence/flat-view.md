@@ -18,7 +18,7 @@ You enable this feature by setting the relevant property listed below to `true`.
 | PostgreSQL | `oxf.fr.persistence.postgresql.create-flat-view` |
 | DB2        | `oxf.fr.persistence.db2.create-flat-view`        |
 
-For instance, if using  Oracle, you set:
+For instance, if using Oracle, you set:
 
 ```xml
 <property

@@ -110,7 +110,7 @@ The format is as follows:
   
 The value of `oxf.fr.detail.attachment.mediatypes` can be overridden:
 
-- for a specific form, from the Form Builder "Form Settings} dialog
+- for a specific form, from the Form Builder "Form Settings" dialog
 - for a specific control, using a common constraint the Form Builder "Control Settings" dialog
 
 ## Upload error appearance

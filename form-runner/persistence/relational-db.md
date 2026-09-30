@@ -473,7 +473,7 @@ In your `properties-local.xml`, you map an app / form / form type to the impleme
 
 The single schema configuration described in the previous section uses the predefined `oracle` and `mysql` providers. To use multiple schemas you need to define your own provider names. For instance, assume that you have two apps, `hr` and `finance`, and would like both the form definition and data for those apps to be stored in two separate schemas:
 
-1. In your application server configuration, you setup two data sources ; let's call them `hr-datasource` and `finance-datasource`.
+1. In your application server configuration, you setup two data sources; let's call them `hr-datasource` and `finance-datasource`.
 2. In `properties-local.xml`, you use the following properties to define two providers `hr` and `finance` that you configure to use the desired persistence layer implementation (Oracle in this example) and data source:
 
     ```xml

@@ -361,7 +361,7 @@ Even when not visible according this property (i.e. your value template returns 
 
 ### Events
 
-The `fr:recaptcha`, `fr:on-premise-captcha` (formerly:`fr:simple-captcha`), and `fr:friendly-captcha` components support the same events:
+The `fr:recaptcha`, `fr:on-premise-captcha` (formerly: `fr:simple-captcha`), and `fr:friendly-captcha` components support the same events:
 
 1. **Verifying the answer entered by users** — Some implementations don't include a _Verify_ button that triggers the value entered by users to be checked. This is to give more control to you, the form author, as to when the verification is done. For instance, you might want to verify the captcha when users click on a _Save_ button on your form. To trigger the value to be verified, dispatch a `fr-verify` event to the captcha.
 2. **Verification succeeded** — When the verification succeeds, the component dispatches a `fr-verify-done` event. The example below, using the reCAPTCHA, listens to that event to run a submission.

@@ -166,7 +166,7 @@ The Form Settings in Form Builder allow overriding the default set by configurat
 
 \[SINCE Orbeon Forms 2016.2]
 
-When enabling the separate table of contents of the wizard (see above), the wizard automatically indicates, the status of each section:
+When enabling the separate table of contents of the wizard (see above), the wizard automatically indicates the status of each section:
 
 * **Not Started:** the user hasn't visited the section yet.
 * **Incomplete:** the user has visited the section but some required fields are not filled.

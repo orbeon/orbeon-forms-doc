@@ -86,7 +86,7 @@ See [#2480](https://github.com/orbeon/orbeon-forms/issues/2480) for details abou
 
 Prior to Orbeon Forms 2016.1, a "request body" is mandatory for the `GET` and `DELETE` methods. The body is not sent to the service, but instead is used to configure request parameters.
 
-The content of the "Request Body" form has to be a well-formed XML document. The name of the root element doesn't matter, but usually `params`or `request` is used. Each child element defines a parameter as shown in the following example:
+The content of the "Request Body" form has to be a well-formed XML document. The name of the root element doesn't matter, but usually `params` or `request` is used. Each child element defines a parameter as shown in the following example:
 
 ```xml
 <params>

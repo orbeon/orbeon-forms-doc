@@ -249,7 +249,7 @@ xxf:r($resource-name as xs:string, $instance-name as xs:string) as xs:string?
 
 The function:
 
-* determines the current language based on `xml:lang`attribute in scope where the function is in used
+* determines the current language based on `xml:lang` attribute in scope where the function is in used
 * resolves the closest relevant resources instance
   * specified instance name if present
   * `orbeon-resources` or `fr-form-resources` (for Form Runner compatibility) if absent

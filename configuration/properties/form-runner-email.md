@@ -113,7 +113,7 @@ The `api-key` property is required when using the SendGrid transport. You can ob
     - SINCE Orbeon Forms 2017.1
     - blind carbon copy email address(es) of the email sent
 
-List of emails are space- or comma- separated.
+List of emails are space- or comma-separated.
 
 ```xml
 <property
@@ -314,7 +314,7 @@ With any Orbeon Forms version, the following properties can be used to set defau
 
 [SINCE Orbeon Forms 2019.1]
 
-When using HTML for an email body template in [Email settings](/form-builder/email-settings.md), you can provide inline CSS that will be included in the email messages. For example"
+When using HTML for an email body template in [Email settings](/form-builder/email-settings.md), you can provide inline CSS that will be included in the email messages. For example:
 
 ```xml
 <property as="xs:string" name="oxf.fr.email.css.custom.inline.*.*">

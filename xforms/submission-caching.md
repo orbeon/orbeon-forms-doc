@@ -13,7 +13,7 @@ Orbeon Forms supports a boolean extension attribute, `xxf:cache`, on the `<xf:in
 * The instance stored in cache is read-only. If the `xxf:readonly` attribute is set to true (on `<xf:instance>` or `<xf:submission>`), a single copy of the instance is used in memory. Otherwise, a read-write copy is made.
 * In general, the URL should refer to a constant or rarely-changing XML document, and authorization credentials such as username and password should not cause different data to be loaded.
 
-_NOTE: This attribute deprecates the_ `xxf:shared` _attribute. Using_ `xxf:cache="true"` _is equivalent to using_ `xxf:shared="application"`_. Using_ `xxf:cache="false"` _is equivalent to using_`xxf:shared="document"`_._
+_NOTE: This attribute deprecates the_ `xxf:shared` _attribute. Using_ `xxf:cache="true"` _is equivalent to using_ `xxf:shared="application"`_. Using_ `xxf:cache="false"` _is equivalent to using_ `xxf:shared="document"`_._
 
 Here is how you use the attribute on `<xf:instance>`:
 

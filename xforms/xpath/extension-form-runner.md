@@ -693,7 +693,7 @@ fr:user-ancestor-organizations(
 ) as xs:string*
 ```
 
-See[`xxf:user-ancestor-organizations()`](extension-http.md#xxfuser-ancestor-organizations).
+See [`xxf:user-ancestor-organizations()`](extension-http.md#xxfuser-ancestor-organizations).
 
 ### fr:user-group()
 
@@ -701,7 +701,7 @@ See[`xxf:user-ancestor-organizations()`](extension-http.md#xxfuser-ancestor-orga
 fr:user-group() as xs:string?
 ```
 
-See[`xxf:user-group()`](extension-http.md#xxfuser-group).
+See [`xxf:user-group()`](extension-http.md#xxfuser-group).
 
 ### fr:user-organizations()
 
@@ -711,7 +711,7 @@ See[`xxf:user-group()`](extension-http.md#xxfuser-group).
 fr:user-organizations() as xs:string*
 ```
 
-See[`xxf:user-organizations()`](extension-http.md#xxfuser-organizations).
+See [`xxf:user-organizations()`](extension-http.md#xxfuser-organizations).
 
 ### fr:user-roles()
 
@@ -719,7 +719,7 @@ See[`xxf:user-organizations()`](extension-http.md#xxfuser-organizations).
 fr:user-roles() as xs:string*
 ```
 
-See[`xxf:user-roles()`](extension-http.md#xxfuser-roles).
+See [`xxf:user-roles()`](extension-http.md#xxfuser-roles).
 
 ### fr:username()
 
@@ -727,7 +727,7 @@ See[`xxf:user-roles()`](extension-http.md#xxfuser-roles).
 fr:username() as xs:string?
 ```
 
-See[`xxf:username()`](extension-http.md#xxfusername).
+See [`xxf:username()`](extension-http.md#xxfusername).
 
 ## Attachment functions
 

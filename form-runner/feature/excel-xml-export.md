@@ -75,7 +75,7 @@ The reason for this extra setting is that, even if the user has read access to t
 
 Form Runner can export in two formats:
 
-* `excel-named-ranges` : Excel document containing the structure of the form, using named ranges (see below) to map form controls to cells
+* `excel-named-ranges`: Excel document containing the structure of the form, using named ranges (see below) to map form controls to cells
 * `xml-form-structure-and-data`: XML document with indications about the form structure, alongside XML data
 
 In each case, when form data is requested, the export is done on the basis of a _single document_.

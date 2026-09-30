@@ -75,7 +75,7 @@ If you want to point to an external eXist database, set the following property:
 
 And replace `$urlToExistRestService` with the actual URL of the eXist REST service.
 
-If you don't need an eXist database at all, in `properties-local.xml`, add the following to fully disable the eXist persistence implementation.:
+If you don't need an eXist database at all, in `properties-local.xml`, add the following to fully disable the eXist persistence implementation:
 
 ```xml
 <property

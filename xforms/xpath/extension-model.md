@@ -198,7 +198,7 @@ The `xxf:valid()` function returns the validity of an instance data node or of a
 
 If the first argument is specified, its first item is obtained, if any.
 
-If the first argument is not specified, the context item is used, if any
+If the first argument is not specified, the context item is used, if any.
 
 If the second argument is specified and `true()`, the function recurses into attributes and descendant nodes.
 

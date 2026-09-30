@@ -179,7 +179,7 @@ The `xbl:handler` element looks very much like an `xf:action` element. In partic
 *   `event`: specifies which event(s) to listen to.
 
     &#x20; _NOTE: Like for_ `ev:event`_, Orbeon Forms supports as an extension a list of space-separated event names._
-* `phase`: whether to call the handler upon the `capture`, `target`, or `bubble`phase.
+* `phase`: whether to call the handler upon the `capture`, `target`, or `bubble` phase.
 
 The `xbl:handler` element can contain one or more XForms actions.
 

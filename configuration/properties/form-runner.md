@@ -74,7 +74,7 @@ The following property determines Form Runner's default language:
 
 When wildcards are specified, this property can control the default language for a given app or form.
 
-The property without wildcards can also be used to control the default language of pages which don't involve a specific form, such as the Form Runner Home page
+The property without wildcards can also be used to control the default language of pages which don't involve a specific form, such as the Form Runner Home page.
 
 ```xml
 <property

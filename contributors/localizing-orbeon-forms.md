@@ -72,7 +72,7 @@ support.
 
 ### XBL components
 
-Orbeon Forms XBL components are located as subdirectories here:;
+Orbeon Forms XBL components are located as subdirectories here:
 
 - https://github.com/orbeon/orbeon-forms/tree/master/form-runner/jvm/src/main/resources/xbl/orbeon
 

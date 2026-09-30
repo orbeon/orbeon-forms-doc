@@ -11,13 +11,13 @@ By default, the bar includes the following buttons:
 * **"Home"**:
   * Go back to the Form Runner Landing page.
   * If the current form is not saved, you will be prompted to save it.
-* **Summary"**:
+* **"Summary"**:
   * Go back to the [Form Builder Summary page](summary-page.md).
   * If the current form is not saved, you will be prompted to save it.
-* **New"**:
+* **"New"**:
   * Close the current form and create a new one.
   * If the current form is not saved, you will be prompted to save it.
-* **Export buttons"**:
+* **"Export buttons"**:
   * Excel Export: export the form in Excel format
     * This is an Orbeon Forms PE feature.
   * XML Export: export the form in "XML with metadata" format
@@ -26,17 +26,17 @@ By default, the bar includes the following buttons:
     * [\[SINCE Orbeon Forms 2023.1\]](../release-notes/orbeon-forms-2023.1.md)
     * Export the form definition in XHTML+XForms format (the Orbeon Forms form definition format).
     * This produces a file with the same content shown by the ["Edit Source" dialog](edit-source.md).
-* **Test functions"**:
+* **"Test functions"**:
   * [Test](web-test.md): open the form in test mode
   * [Test PDF](pdf-test.md): open the "Test PDF" dialog for testing PDF output
     * This is an Orbeon Forms PE feature.
   * [Test Offline](offline-test.md): open the form in test mode, but using the "offline" (JavaScript) runtime (experimental)
     * This is an Orbeon Forms PE feature.
   * [Formula Inspector](formulas-inspector.md): observe formulas and their dependencies (experimental)
-* **Publish"**:
+* **"Publish"**:
   * Open the ["Publish" dialog](publishing.md) to publish the form definition
   * This will automatically save the form definition if you complete publishing in the dialog.
-* **Save"**:
+* **"Save"**:
   * Save, but don't publish, the in-progress form definition
 
 The buttons are configurable with the `oxf.fr.detail.buttons.orbeon.builder` property. The default value is, for Orbeon Forms 2023.1 PE:

@@ -106,7 +106,7 @@ The API has a number of implementations. The default implementation is the embed
 
 ### Do you integrate with my favorite workflow engine / CMS?
 
-There is no built-in integration with  CMS or workflow engines. However you can integrate with systems in a few ways:
+There is no built-in integration with CMS or workflow engines. However you can integrate with systems in a few ways:
 
 - Form Runner is built around a [REST API for persistence](/form-runner/api/persistence/README.md), which allows you to integrate yourself with any system by providing an implementation of that API.
 - [Simple processes](/form-runner/advanced/buttons-and-processes.md) allow you to send data to external systems.
@@ -154,7 +154,7 @@ Some relational persistence layers support a "flat view", which is created at fo
 
 No. A persistence layer implementation consists a few REST services that you implement. You simply tell Orbeon Forms, in a configuration file (`properties-local.xml`), what the URL of the service is.
 
-You can implement them within Orbeon (for example using XML pipelines (XPL), or with any technology you like (Java, Ruby, PHP, you name it). In all cases, you won't need to modify Orbeon Forms beyond configuration properties.
+You can implement them within Orbeon (for example using XML pipelines (XPL)), or with any technology you like (Java, Ruby, PHP, you name it). In all cases, you won't need to modify Orbeon Forms beyond configuration properties.
 
 ### Can you start creating a form, save it, and get back to it later?
 

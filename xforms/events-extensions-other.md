@@ -58,7 +58,7 @@ Context attributes passed this way can be retrieved using the `event()` function
 </xf:action>
 ```
  
-_NOTE: At the moment, with, `<xf:dispatch>`, only custom events support passing context attributes this way. Built-in events, such as `xforms-value-changed`, or `DOMActivate`, ignore nested `<xf:property>` elements._
+_NOTE: At the moment, with `<xf:dispatch>`, only custom events support passing context attributes this way. Built-in events, such as `xforms-value-changed`, or `DOMActivate`, ignore nested `<xf:property>` elements._
 
 ## Tunnelling of events properties
 

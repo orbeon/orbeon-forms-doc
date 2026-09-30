@@ -10,7 +10,7 @@ A page flow file is comprised of three sections:
 
 ## The files element
 
-Some files are not dynamically generated and are served to the client as-is. This is typically the case for images such as GIF, JPEG, CSS files, etc..
+Some files are not dynamically generated and are served to the client as-is. This is typically the case for images such as GIF, JPEG, CSS files, etc.
 
 You tell the PFC what files to serve directly with one or more `<files>` elements in the page flow. The example below shows the configuration used by the Orbeon Forms examples:
 

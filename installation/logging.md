@@ -29,7 +29,7 @@ The following versions of Orbeon Forms use Log4j 2.x:
 
 Log4j 2.x uses different configuration files than Log4j 1.x.
 
-However, until Orbeon Forms 2024.1.x., Orbeon Forms provides backward compatibility support for the older Log4j 1.x configuration file. This means that in most cases, you do not have to update your configuration file immediately if you are upgrading from an older version of Orbeon Forms.
+However, until Orbeon Forms 2024.1.x, Orbeon Forms provides backward compatibility support for the older Log4j 1.x configuration file. This means that in most cases, you do not have to update your configuration file immediately if you are upgrading from an older version of Orbeon Forms.
 
 __WARNING: With 2025.1 onward, there is no longer Log4j 1.x configuration file compatibility. Use a `log4j2.xml` configuration file.__ 
 

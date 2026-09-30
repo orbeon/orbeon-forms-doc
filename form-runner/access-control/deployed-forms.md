@@ -45,7 +45,7 @@ In the example below:
 
 ### Permissions in detail
 
-Permissions you set in the dialog are _additive_ – Say you defined permissions for two roles, where users with the _reader_ role can read and users in the _clerk_ role can delete, users with both roles ( _reader_ and _clerk_) are allowed to perform both operations (reading and deleting).
+Permissions you set in the dialog are _additive_ – Say you defined permissions for two roles, where users with the _reader_ role can read and users in the _clerk_ role can delete, users with both roles (_reader_ and _clerk_) are allowed to perform both operations (reading and deleting).
 
 Operation on _Anyone_ apply to all other rows – When you select a checkbox for a given operation on the first _Anyone_ row, that checkbox will be automatically checked and disabled so you can't change it, for any additional row, since you wouldn't want to authorize users with additional roles to perform less operations.
 

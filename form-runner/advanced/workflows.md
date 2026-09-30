@@ -50,8 +50,8 @@ In such a workflow, there are several challenges:
 Orbeon Forms solves these challenges with the following features:
 
 1. __Form creation__: Orbeon Forms, with Form Builder, allows you to create complex forms with different sections.
-2. __Workflow stages__ Orbeon Forms supports a native notion of *workflow stages*, which can be used to track the state of the workflow.
-3. __Roles and conditions__ Depending on the user role (citizen or city employee) and the state of the workflow, different parts of the form can be shown or hidden.
+2. __Workflow stages:__ Orbeon Forms supports a native notion of *workflow stages*, which can be used to track the state of the workflow.
+3. __Roles and conditions:__ Depending on the user role (citizen or city employee) and the state of the workflow, different parts of the form can be shown or hidden.
 4. __Processes:__ Orbeon Forms supports *processes*, which can be used to automate actions such as sending emails or generating PDFs at different steps of the workflow.
 5. __Configurable buttons:__ Action buttons at the bottom of the form can be configured to trigger different processes, and to be shown or hidden based on the user role and workflow stage.
 6. __PDF generation:__ Orbeon Forms can generate PDF documents based on the form data, which can be used to create the official city permit, as well as intermediate documents attached to emails.

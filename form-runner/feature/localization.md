@@ -96,7 +96,7 @@ See [Supported languages](supported-languages.md).
 
 Form Builder (Orbeon Forms PE only) lets you create forms in multiple languages. Most world languages are available, with some limitations described below.
 
-1. PDF output: There are some  known issues with ligatures in some Indian languages such as Hindi or Tamil.
+1. PDF output: There are some known issues with ligatures in some Indian languages such as Hindi or Tamil.
 2. See the previous section for limitations specific to right-to-left languages.
 
 We are glad to get help to address these two limitations.

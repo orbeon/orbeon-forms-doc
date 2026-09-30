@@ -193,7 +193,7 @@ _NOTE: You don't have to set `-verbosegc -XX:+PrintGCDetails` if you are not int
 
 _NOTE: The `-Djava.net.preferIPv4Stack=true` can help in some cases._
 
-_NOTE: Older options for Java 8 included: `-XX:MaxPermSize=256m` , `-XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps`._
+_NOTE: Older options for Java 8 included: `-XX:MaxPermSize=256m`, `-XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps`._
 
 Finally, you can start Tomcat with:
 
@@ -416,7 +416,7 @@ This installs the less compiler to `/usr/local/bin/lessc`, which is where the in
 
 Select the "Unit Tests" configuration in IntelliJ, and run it. This should take about a minute.
 
-IntelliJ then shows : "Done: 723 of 731 Failed: 8"
+IntelliJ then shows: "Done: 723 of 731 Failed: 8"
 
 The tests that fail are the following:
 

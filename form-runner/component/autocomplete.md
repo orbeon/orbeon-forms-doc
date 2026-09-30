@@ -209,7 +209,7 @@ The defaults of the autocomplete are improved compared to previous versions:
       .orbeon .xbl-fr-autocomplete .xforms-input input { width: 200px }
     ```
 
-    To change a specific autocomplete, add your own class on the autocomplete, say `<fr:autocomplete class="my-autocomplete">`and the following CSS:
+    To change a specific autocomplete, add your own class on the autocomplete, say `<fr:autocomplete class="my-autocomplete">` and the following CSS:
 
     ```css
       .orbeon .my-autocomplete .xforms-input input { width: 200px }

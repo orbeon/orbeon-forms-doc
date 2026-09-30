@@ -226,7 +226,7 @@ You can also override the default confirmation message:
   value="Are you sure you want to proceed?"/>
 ```
 
-You can also use a path to a resource, including a custom resource. For example"
+You can also use a path to a resource, including a custom resource. For example:
 
 ```xml
 save

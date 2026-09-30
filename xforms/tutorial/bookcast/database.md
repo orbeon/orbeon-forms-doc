@@ -204,7 +204,7 @@ Then you want to copy that template to the right place in `books-instance` when 
 </xf:trigger>
 ```
 
-Insert this immediately before the `</xf:repeat>` .
+Insert this immediately before the `</xf:repeat>`.
 
 Let's explain what the above does:
 

@@ -32,7 +32,7 @@ The format of the data follows the Orbeon Forms 4.0.0 format by default. You can
 Use the authorization mechanism for services (see [Authorization of pages and services](/xml-platform/controller/authorization-of-pages-and-services.md)) to enable submitting initial instances to the new page:
 
 - Your external application must provide credentials (e.g. BASIC authorization, a secret token, etc.) when `POST`ing to Form Runner.
--Your authorizer service must validate those credentials.
+- Your authorizer service must validate those credentials.
 
 [SINCE Orbeon Forms 2017.1]
 

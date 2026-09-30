@@ -24,7 +24,7 @@ You need to make sure that your main Orbeon Forms configuration file, `propertie
     ... content of the configuration file here ...
 ```
 
-Make sure to include the  `xmlns:fr` and `xmlns:xxf` attributes as well, for example:
+Make sure to include the `xmlns:fr` and `xmlns:xxf` attributes as well, for example:
 
 ```xml
 <properties

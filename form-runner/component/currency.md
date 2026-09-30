@@ -24,7 +24,7 @@ You use the number component like a regular input field, for example:
 
 `fr:currency` supports parameters, which you can set via properties or directly on `fr:currency`:
 
-* `prefix`: optional prefix shown before the number ( by default the dollar sign)
+* `prefix`: optional prefix shown before the number (by default the dollar sign)
 * `suffix`: optional suffix shown after the number
 * `digits-after-decimal`: digits to show after the decimal point (by default 2)
 * `decimal-separator`: single character to use as decimal separator

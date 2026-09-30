@@ -26,11 +26,11 @@ The following parameters can be used:
 
 - <a name="send_parameter_property"></a>`property`: specifies an optional property prefix
 - <a name="send_parameter_uri"></a>`uri`: URL to which to send the data
-- <a name="send_parameter_method"></a>`method`: `GET`, `POST`(default), or `PUT`
+- <a name="send_parameter_method"></a>`method`: `GET`, `POST` (default), or `PUT`
 - <a name="send_parameter_nonrelevant"></a>`nonrelevant`
     - [SINCE Orbeon Forms 2017.1]
     - values
-        - `keep`: all values are serialized, 
+        - `keep`: all values are serialized 
         - `remove`: non-relevant values are not serialized 
         - `empty`: non-relevant nodes are serialized as empty values
     - default: `remove`
@@ -293,7 +293,7 @@ The PDF can be retrieved by accessing that path with the proper session cookie.
 
 A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the PDF.
 
-*NOTE: When the PDF must be sent to a remote service, send the PDF binary directly with `content = "pdf"` .*
+*NOTE: When the PDF must be sent to a remote service, send the PDF binary directly with `content = "pdf"`.*
 
 ### Sending a TIFF URL
 
@@ -310,7 +310,7 @@ The TIFF can be retrieved by accessing that path with the proper session cookie.
 
 A use case for this is to submit the URL to a local confirmation page. The page can then link to the URL provided, and the user can download the TIFF file.
 
-*NOTE: When the TIFF must be sent to a remote service, send the TIFF binary directly with `content = "tiff"` .*
+*NOTE: When the TIFF must be sent to a remote service, send the TIFF binary directly with `content = "tiff"`.*
 
 ## Sending form metadata
 

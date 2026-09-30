@@ -437,7 +437,7 @@ With `my-repeated-grid` nested within `my-repeated-section`:
 |-------------------|-----------|----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | `repeat`          | Yes       | repeated grid or repeated section name                                           |                                                                                                      |
 | `at`              | No        | space-delimited position tokens: `start`, `end`, or a positive integer           | missing leading tokens default to `end`                                                              |
-| `apply-defaults ` | No        | whether to apply initial value formulas when adding iterations:`true` or `false` | if missing, use the repeated section or grid's "Apply initial value formulas when adding iterations" |
+| `apply-defaults ` | No        | whether to apply initial value formulas when adding iterations: `true` or `false` | if missing, use the repeated section or grid's "Apply initial value formulas when adding iterations" |
 
 `apply-defaults` is \[SINCE Orbeon Forms 2026.1\]/\[SINCE Orbeon Forms 2025.1.1\]/\[SINCE Orbeon Forms 2024.1.5\]/\[SINCE Orbeon Forms 2023.1.9\].
 

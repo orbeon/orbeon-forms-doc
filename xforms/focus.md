@@ -29,7 +29,7 @@ Focus can only happen on those controls under the following conditions:
 
 * The control is relevant.
 * The control is not read-only.
-* The control is not hidden, namely.
+* The control is not hidden, namely:
   * It is not in a hidden case.
   * It is not in a closed dialog.
 

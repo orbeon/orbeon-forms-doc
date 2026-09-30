@@ -41,7 +41,7 @@ There are 3 categories of asset resources:
 
 * built-in XForms engine resources, like `xforms.js`
 * XBL components resources, like `grid.js`
-* user resources (placed in the `<head>` element
+* user resources (placed in the `<head>` element)
 
 Resources are split into 2 groups:
 

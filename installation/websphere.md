@@ -29,7 +29,7 @@ Installing Orbeon Forms on WebSphere is only one of the possibilities. You can a
 
 To setup a JDBC, for instance here for Oracle:
 
-1. **Install the database driver** – Create a directory `WLS/usr/servers/defaultServer/lib`, and inside it place the database driver jar file, for instance `ojdbc6_g.jar`. On WebSphere, Orbeon Forms requires a JDBC 4 driver (e.g. for Oracle , use `ojdbc6_g.jar` or `ojdbc6.jar` but not `ojdbc5_g.jar` or `ojdbc5.jar`).
+1. **Install the database driver** – Create a directory `WLS/usr/servers/defaultServer/lib`, and inside it place the database driver jar file, for instance `ojdbc6_g.jar`. On WebSphere, Orbeon Forms requires a JDBC 4 driver (e.g. for Oracle, use `ojdbc6_g.jar` or `ojdbc6.jar` but not `ojdbc5_g.jar` or `ojdbc5.jar`).
 2. **Setup a datasource in WebSphere** – Open your `WLP/usr/servers/defaultServer/server.xml` in an editor. Your server.xml should look like the one below.  The `jdbc-4.0` feature is included, a top level library is declared pointing to the driver jar (in this case `ojdbc6_g.jar`), a datasource is defined, and the JNDI name set to `jdbc/oracle`, and both the data source and the application point to the same top level library, which is particularly important so WebSphere loads the driver classes with a single shared class loader.
 
     ```xml

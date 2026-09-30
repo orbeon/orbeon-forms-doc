@@ -44,7 +44,7 @@ converts to:
 </json>
 ```
 
-Booleans similarly have a `type="boolean"` attribute:"
+Booleans similarly have a `type="boolean"` attribute:
 
 ```javascript
 { "selected": true }
@@ -78,7 +78,7 @@ converts to:
 
 and the string "Paris" can be accessed with `instance()/cities/_[2]`.
 
-JSON `null` adds a `type="null"` attribute:"
+JSON `null` adds a `type="null"` attribute:
 
 ```javascript
 { "p": null }

@@ -265,7 +265,7 @@ We recommend that you put the handler for `xxforms-nodeset-changed` outside the 
 
 If nodes related to a repeat are inserted with `xf:insert` or `xf:delete` (including instance replacement upon submission), you could detect changes to the repeat node-set with XForms 1.1 using `xforms-insert` and `xforms-delete` events on instances. However these events are harder to use in this scenario, and will not catch situations where the repeat nodeset changes without insertions / deletions.  
 
-Currently, we interpret handlers placed directly within `<xf:repeat>` as being attached to a particular repeat -*iteration**, not to the repeat element itself. This means you can write things like:
+Currently, we interpret handlers placed directly within `<xf:repeat>` as being attached to a particular repeat **iteration**, not to the repeat element itself. This means you can write things like:
 
 ```xml
 <xf:repeat ref="value" id="my-repeat">

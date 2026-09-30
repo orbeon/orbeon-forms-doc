@@ -202,7 +202,7 @@ It may be tempting to directly inline data into instances, like this:
 </xf:instance>
 ```
 
-This, is not a good way, for the following reason. The XForms engine will receive for a first request e.g.:
+This is not a good way, for the following reason. The XForms engine will receive for a first request e.g.:
 
 ```xml
 <xf:instance id="profile-instance">
@@ -236,7 +236,7 @@ The good news is that you can initialize instance data in a way that will achiev
 
 With this XForms, the request attribute is queried directly from XForms and stored into the instance. Note the text/plain second parameter, which makes sure that the user-id attribute is not parsed as XML.
 
-The difference with the first example is that the _XForms code is the same for all requests_, so caching can work.If the request attribute is an entire instance in XML format, you could also write:
+The difference with the first example is that the _XForms code is the same for all requests_, so caching can work. If the request attribute is an entire instance in XML format, you could also write:
 
 ```xml
 <xf:instance id="profile-instance">

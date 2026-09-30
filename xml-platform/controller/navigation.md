@@ -112,7 +112,7 @@ The following is an example of using XSLT within `<result>` element in order to 
 </action>
 ```
 
-Notice the `transform` attribute set to `oxf:xslt`, and the use of the `doc('input:action')` to refer to the output of the action XPL pipeline specified by the `action` attribute on the `<action>` element. The current XML submission can also be accessed with`doc('input:instance')`.
+Notice the `transform` attribute set to `oxf:xslt`, and the use of the `doc('input:action')` to refer to the output of the action XPL pipeline specified by the `action` attribute on the `<action>` element. The current XML submission can also be accessed with `doc('input:instance')`.
 
 Also see the [Orbeon Forms Tutorial](https://github.com/orbeon/orbeon-forms-doc/tree/c432b92f4f85b0983a3ce0b85bb2bdd4e53d043e/xforms/tutorial/README.md).
 
