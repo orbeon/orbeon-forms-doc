@@ -13,7 +13,7 @@
 
 ### Section or grid name
 
-Each section or grid has a _name_ or identifier, which determines how data is represented in XML. The name name specifies an identifier for the section or grid which is unique in the entire form. If no name is explicitly specified, Form Builder assigns a default name, such as "section-1" or "grid-1".
+Each section or grid has a _name_ or identifier, which determines how data is represented in XML. The name specifies an identifier for the section or grid which is unique in the entire form. If no name is explicitly specified, Form Builder assigns a default name, such as "section-1" or "grid-1".
 
 A section or grid name can be changed, provided it doesn't collide with another control name (an error will show otherwise).
 

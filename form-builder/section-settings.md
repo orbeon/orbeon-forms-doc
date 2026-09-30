@@ -22,7 +22,7 @@ The "Collapsible" radio buttons control whether the user can collapse and expand
 
 * **Use property:** use the configuration specified with the `oxf.xforms.xbl.fr.section.collapsible` property
 * **Always:** the section is collapsible no matter what the `oxf.xforms.xbl.fr.section.collapsible` property specifies
-* **Never:** the section is not collapsible no matter no matter what the `oxf.xforms.xbl.fr.section.collapsible` property specifies
+* **Never:** the section is not collapsible no matter what the `oxf.xforms.xbl.fr.section.collapsible` property specifies
 
 ## Repeat settings
 

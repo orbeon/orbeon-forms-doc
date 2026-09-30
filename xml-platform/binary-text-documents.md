@@ -76,7 +76,7 @@ The `content-type` attribute may have a `charset` parameter providing a hint for
 </document>
 ```
 
-Because XML character data itself is represented in Unicode (in other words it is designed to allow representing in a same document all the characters specified by the Unicode specification), there is no requirement for specifying character encoding in XML pipelines. However, when an XML infoset is read or written as a textual XML document, specifying a character encoding may may be a useful hint. For example a URL generator can, with this mechanism, communicate to an HTTP serializer the preferred character encoding obtained when the document was read. The serializer may then use that hint, but it is by no means authoritative.
+Because XML character data itself is represented in Unicode (in other words it is designed to allow representing in a same document all the characters specified by the Unicode specification), there is no requirement for specifying character encoding in XML pipelines. However, when an XML infoset is read or written as a textual XML document, specifying a character encoding may be a useful hint. For example a URL generator can, with this mechanism, communicate to an HTTP serializer the preferred character encoding obtained when the document was read. The serializer may then use that hint, but it is by no means authoritative.
 
 In general, XML documents can be read and written using the `utf-8` character encoding, which allows representing all the Unicode characters.
 

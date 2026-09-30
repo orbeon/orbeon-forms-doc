@@ -136,7 +136,7 @@ All the controls share certain properties, like the control name. However, some 
 
 ![](images/toolbox-fields.png)
 
-You can create a custom user interface within Form Builder for XBL component that require such additional properties by adding XForms controls under the the `<fb:control-details>` element, which you add under `<fb:metadata>`.
+You can create a custom user interface within Form Builder for XBL component that require such additional properties by adding XForms controls under the `<fb:control-details>` element, which you add under `<fb:metadata>`.
 
 See also [Custom control settings](control-settings.md#custom-control-settings).
 

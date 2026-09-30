@@ -30,7 +30,7 @@ The binding:
 
 ### Your own components
 
-Each binding must have has a *direct* binding by element name (see [below](#binding-by-element-name)). In the example above, it is `acme|multi-tool`.
+Each binding must have a *direct* binding by element name (see [below](#binding-by-element-name)). In the example above, it is `acme|multi-tool`.
 
 *NOTE: This is CSS syntax to express what in XML you would usually refer to as `acme:multi-tool`. It's just that CSS chose as namespace separator `|` instead of XML's standard `:`.*
 

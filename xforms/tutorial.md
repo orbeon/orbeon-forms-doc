@@ -825,7 +825,7 @@ The following is an overview of what has just happened:
 
 * You request the page of the Bookcast application with your browser.
 * Orbeon Forms receives the request, looks up the page flow file, and finds out that `view.xhtml` must be served.
-* `view.xhtml` goes through the XForms engine, which does a few bits of magic: it goes through an initialization phase, where it creates the objects you have defined such as as model, instance, and controls.
+* `view.xhtml` goes through the XForms engine, which does a few bits of magic: it goes through an initialization phase, where it creates the objects you have defined such as model, instance, and controls.
 * Once this is done, the XForms engine sends the `xforms-ready` event to the model.
 * Because you have defined an event handler for `xforms-ready`, that handler is called. This caused the `<xf:send>` action to be run and, therefore, the `list-submission` submission to be sent.
 * The submission performs an HTTP `GET` to the URL you have specified. The connection reaches the built-in eXist database, which returns the document called `books.xml`. The content of that document reaches back the XForms engine, which stores it into the `books-instance` instance.

@@ -32,7 +32,7 @@ For Form Builder, the following values are supported:
 
 ### Element name and binding 
 
-The name of the XBL element name is `<fr:code-mirror>`. You bind it to the node that contains the text to view or edit, just like you would with an `<xf:textarea>`. If the node you bind it to is readonly, then users will be able to view the source but not edit it.
+The name of the XBL element is `<fr:code-mirror>`. You bind it to the node that contains the text to view or edit, just like you would with an `<xf:textarea>`. If the node you bind it to is readonly, then users will be able to view the source but not edit it.
 
 [\[SINCE Orbeon Forms 2025.1.1\]](/release-notes/orbeon-forms-2025.1.1.md)
 

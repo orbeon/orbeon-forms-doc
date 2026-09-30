@@ -14,7 +14,7 @@ XForms provides a very powerful mechanism to implement such repeated structures:
 </xf:repeat>
 ```
 
-This is not enough to be functional code: you need to indicate to the `<xf:repeat>` element how many repetitions must be performed. This is done not by supplying a simple count value, but by binding the the element to a node-set with the `ref` attribute. Consider the following XForms instance:
+This is not enough to be functional code: you need to indicate to the `<xf:repeat>` element how many repetitions must be performed. This is done not by supplying a simple count value, but by binding the element to a node-set with the `ref` attribute. Consider the following XForms instance:
 
 ```markup
 <xf:instance id="employees-instance">

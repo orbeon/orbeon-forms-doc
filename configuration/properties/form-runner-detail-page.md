@@ -339,7 +339,7 @@ In some cases, such as [embedding](../../form-runner/link-embed/java-api.md), it
 
 \[SINCE Orbeon Forms 2016.3]
 
-The following properties determine which control types are focusable in in the following scenarios:
+The following properties determine which control types are focusable in the following scenarios:
 
 * initial focus (if enabled by `oxf.fr.detail.initial-focus`)
 * switching sections in the table of contents

@@ -112,7 +112,7 @@ To do this, after you have installed your Orbeon Forms application, stop WebLogi
 
 ### Disable DNS lookup
 
-You can configure your application server to perform a DNS lookup for every HTTP request. The server always know the IP address of the machine where the HTTP request originated. However, to get the name, the application server needs to send a DNS lookup query to the DNS server. In most cases, performing this query only has a negligible impact on performance. However, the request can take a significant amount of time in certain cases where the network from which the request originated is badly configured. In most case, the application server is doing DNS lookups for "aesthetic reasons": that is to able to in include in the logs the name of the client's machines, instead of their IP address (note that web analysis tools can usually do this reverse DNS lookup much more efficiently when analyzing log files subsequently, typically on a daily basis). So we recommend you change the configuration of your application server to disable DNS lookup, which is in general enabled by default.
+You can configure your application server to perform a DNS lookup for every HTTP request. The server always know the IP address of the machine where the HTTP request originated. However, to get the name, the application server needs to send a DNS lookup query to the DNS server. In most cases, performing this query only has a negligible impact on performance. However, the request can take a significant amount of time in certain cases where the network from which the request originated is badly configured. In most case, the application server is doing DNS lookups for "aesthetic reasons": that is to able to include in the logs the name of the client's machines, instead of their IP address (note that web analysis tools can usually do this reverse DNS lookup much more efficiently when analyzing log files subsequently, typically on a daily basis). So we recommend you change the configuration of your application server to disable DNS lookup, which is in general enabled by default.
 
 On Tomcat 5.5 ([external documentation][3]), look for the `enableLookups` attribute on the `<connector>` element and set it to false. If the attribute is not present, add it and set it to `false` (the default value is true).
 
@@ -417,7 +417,7 @@ The absolute safest way to make the document cacheable is to keep it as a single
 
 But this is not the only way. The document will also be cacheable if it depends on other documents which themselves are cacheable. For example, XSLT and XInclude transformations support this and in general allow caching of their resulting document, if the XSLT or XInclude document doesn't change and if all their dependencies don't change either.
 
-_NOTE: There are exceptions, like using the `doc()` or `document()` functions in XSLT with with a dynamic parameter. In this case, caching is not possible._
+_NOTE: There are exceptions, like using the `doc()` or `document()` functions in XSLT with a dynamic parameter. In this case, caching is not possible._
 
 More generally content that is provided with key/validity information that doesn't change (for example, the `oxf:scope-generator` processor) is also cacheable.
 

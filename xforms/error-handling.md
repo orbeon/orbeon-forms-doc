@@ -32,7 +32,7 @@ The following errors are fatal during page load and cause the page to display a 
 On the other hand, the following errors do not cause the page to fail loading:
 
 * **Dynamic XPath errors:** This includes divisions by zero and other errors which can happen while an XPath expression executes.
-* **Errors writing values into the data model**: For example, a `calculate` expression attempting to write to a non-leaf XML element or a an XML document element.
+* **Errors writing values into the data model**: For example, a `calculate` expression attempting to write to a non-leaf XML element or an XML document element.
 * **XForms actions errors**: In addition to failed `xf:setvalue` actions, unexpected errors when running an XForms action.
 
 _NOTE: Like before, non-XForms errors typically are fatal during page load. These include errors in XML pipelines, XSLT transformations outside of XForms, and other unexpected Java exceptions in Orbeon Forms._

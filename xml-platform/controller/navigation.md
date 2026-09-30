@@ -52,7 +52,7 @@ On the `<page>` element, as documented above:
 
 ### The `<action>` element
 
-The `<page>` element contains an `<action>` element. It is named _action_ because it is typically executed as a consequence of an action performed by the end-user, for example by clicking on a button or a link which causes a form to be submitted. There may be more than one `<action>` element within a `<page>` element element. On an `<action>` element:
+The `<page>` element contains an `<action>` element. It is named _action_ because it is typically executed as a consequence of an action performed by the end-user, for example by clicking on a button or a link which causes a form to be submitted. There may be more than one `<action>` element within a `<page>` element. On an `<action>` element:
 
 * The `when` attribute contains an XPath 2.0 expression executed against the XML submission. The first `<action>` element with a `when` attribute evaluating to `true()` is executed. The `when` attribute is optional: a missing `when` attribute is equivalent to `when="true()"`. Only the last `<action>` element is allowed to have a missing `when` attribute. This allows for defining a default action which executes if no other action can execute.
 * When the action is executed, if the optional `action` attribute is present, the [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) it points to is executed.
@@ -71,7 +71,7 @@ The `<action>` element can contain zero or more `<result>` elements.
 
     * An `instance` input, containing the current XML submission. From XSLT, XQuery and XUpdate, this input is available with the `doc('input:instance')` function. If there is no current XML submission, a "null" document is available instead:
     * An `action` input, containing the result of the action [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) if present. From XSLT, XQuery and XUpdate, this input is available with the `doc('input:action')` function. If there is no action result, a "null" document is available instead:
-    *   The default input contains the current current XML submission as available from the `instance` input.
+    *   The default input contains the current XML submission as available from the `instance` input.
 
         The result of the transformation is automatically submitted to the destination page. If there is no destination page, it replaces the current XML submission document made availabe to the page model and page view.
 

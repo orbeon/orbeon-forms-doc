@@ -26,7 +26,7 @@ When investigating issues, you often need to look at what goes "over the wire", 
 
 ## WireShark
 
-After you install WireShark, click on _Capture Options_, and setup a setup the _Capture Filter_ to be `tcp port 8080`. (Replace `8080` with the port on which your application server or services are listening, as appropriate.)
+After you install WireShark, click on _Capture Options_, and set up the _Capture Filter_ to be `tcp port 8080`. (Replace `8080` with the port on which your application server or services are listening, as appropriate.)
 
 ![](../images/wireshark-capture-filter.png)
 

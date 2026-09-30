@@ -4,7 +4,7 @@
 
 Orbeon Forms supports most standard XForms features, including:
 
-- the specified processing processing model
+- the specified processing model
 - events: `xforms-submit`, `xforms-submit-serialize`, `xforms-submit-done`, and `xforms-submit-error`
 - all HTTP and HTTPS methods
 - serializations: `application/x-www-form-urlencoded`, `application/xml`, `application/json` (SINCE Orbeon Forms 2016.1), `multipart/form-data`, as well as [extensions](submission-extensions.md).

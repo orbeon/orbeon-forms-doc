@@ -194,7 +194,7 @@ This file and directory hierarchy are placed within the web application in a JAR
 
 ### Enabling and priority of providers
 
-Providers must be explicitly enabled to be used by Orbeon Forms to be used. In addition, when multiple providers are registered, their priority must be specified. Both of these functions are achieved using the following property:
+Providers must be explicitly enabled to be used by Orbeon Forms. In addition, when multiple providers are registered, their priority must be specified. Both of these functions are achieved using the following property:
 
 ```xml
 <property

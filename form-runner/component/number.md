@@ -42,7 +42,7 @@ These are also available at the form level:
 * `digits-after-decimal`: digits to show after the decimal point (by default 0, which means the number is an integer)
 * `decimal-separator`: single character to use as decimal separator
   * use `.` or `,` only
-* `grouping-separator`: single character to use as thousands separator separator (can be blank)
+* `grouping-separator`: single character to use as thousands separator (can be blank)
 * `round-when-formatting`: when formatting the number for display, whether to round the value to `digits-after-decimal` if there are more digits after the decimal point or not. The default is `false`.
   * SINCE Orbeon Forms 2016.1
   * UNTIL Orbeon Forms 2017.2: Rounding uses the [half to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) method.

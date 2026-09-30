@@ -101,7 +101,7 @@ The result:
 
 ## Adding class attributes
 
-You can use an AVT in the the `class` attribute on the `<xf:itemset>` element to produce different CSS classes for different nodes.
+You can use an AVT in the `class` attribute on the `<xf:itemset>` element to produce different CSS classes for different nodes.
 
 ```
 class="my-class-{position()}" 

@@ -97,7 +97,7 @@ _NOTE: When using a_ `mediatype="text/html"`_, an HTML_ `<div>` _element will be
 
 ## xxf:download appearance
 
-`<xf:output>` supports the `xxf:download` appearance, which causes the the resource identified by the single-node binding to be downloadable through a link.
+`<xf:output>` supports the `xxf:download` appearance, which causes the resource identified by the single-node binding to be downloadable through a link.
 
 Like `<xf:upload>`, when using this appearance, `<xf:mediatype>` and `<xf:filename>` children elements are allowed (but not the `<xxf:size>` element). When serving the file, if these elements are present, they are passed to the resulting HTTP response to provide mediatype and file name hints to the browser. Example:
 

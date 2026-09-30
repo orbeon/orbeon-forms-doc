@@ -24,7 +24,7 @@ You'll most likely be interested in the information on this page if:
 
 ### Orbeon Forms requirement
 
-For Orbeon Forms to operate normally, for a given web page loaded by the browser from Orbeon Forms, the `JSESSIONID` set in the HTTP response produced by Orbeon Forms (with `Set-Cookie: …`), or if none is set the `JSESSIONID` on in the HTTP request received by Orbeon Forms must also be the one Orbeon Forms receives in all subsequent Ajax requests issued by that page.
+For Orbeon Forms to operate normally, for a given web page loaded by the browser from Orbeon Forms, the `JSESSIONID` set in the HTTP response produced by Orbeon Forms (with `Set-Cookie: …`), or if none is set the `JSESSIONID` in the HTTP request received by Orbeon Forms must also be the one Orbeon Forms receives in all subsequent Ajax requests issued by that page.
 
 ![Which HTTP requests/responses we are interested in](../images/session-where.png)
 

@@ -146,7 +146,7 @@ The Dates to Exclude constraint takes a list (sequence) of dates to exclude, pro
 
 <figure><img src="images/validation-excluded-dates.png" alt="Dates disabled in date picker" width="239"><figcaption></figcaption></figure>
 
-You might have a service storing a the list of dates to exclude in a [dataset](../form-runner/feature/datasets.md), for example. From that dataset, you can extract and convert the dates to XPath dates.
+You might have a service storing the list of dates to exclude in a [dataset](../form-runner/feature/datasets.md), for example. From that dataset, you can extract and convert the dates to XPath dates.
 
 For example, assuming the following `my-excluded-dates` dataset, with dates in the ISO format:
 

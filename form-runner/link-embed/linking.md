@@ -173,7 +173,7 @@ Service requests are requests for Orbeon Forms server-side [service APIs](../api
 * called internally by Orbeon Forms
 * called by some external application
 
-When called internally, the status codes will not always be returned as is to the client. Instead, individual pages and services handle them as needed. They may opt the to return the same or another appropriate status code to the ultimate caller.
+When called internally, the status codes will not always be returned as is to the client. Instead, individual pages and services handle them as needed. They may opt to return the same or another appropriate status code to the ultimate caller.
 
 You may or may not have external application service calls, depending on how you are integrating Orbeon Forms in your organization.
 

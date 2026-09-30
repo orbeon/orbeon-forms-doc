@@ -238,7 +238,7 @@ Assuming:
 
 Put the Oracle jar file that contains the JDBC driver (e.g. `ojdbc6_g.jar`, `xdb.jar`, and `xmlparserv2.jar`) in the appropriate directory for your application server (on Tomcat: `common/lib` or simply `lib`, depending on the version). If you don't already have it, you can download the Oracle JDBC driver from the Oracle site.
 
-Your `Resource` element pointing to the your Oracle instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). In the example below, the Oracle server is running on `localhost`, the instance name is `globaldb`, and the user/schema is `orbeon` with password `orbeon`. Those values are highlighted in the configuration below, and you'll most likely want to change them to fit your setup.
+Your `Resource` element pointing to your Oracle instance (see also [Tomcat datasource configuration](#tomcat-datasource-configuration) above). In the example below, the Oracle server is running on `localhost`, the instance name is `globaldb`, and the user/schema is `orbeon` with password `orbeon`. Those values are highlighted in the configuration below, and you'll most likely want to change them to fit your setup.
 
 ```xml
 <Resource

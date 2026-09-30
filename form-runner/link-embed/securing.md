@@ -21,7 +21,7 @@ This page describes a few solution which are not mutually exclusive:
 
 A simple security step consists in setting up an IP filter on the Form Runner side. You can do this for example with the third-party [UrlRewriteFilter](http://tuckey.org/urlrewrite/) servlet filter.
 
-This is the Swiss Army knife of servlet filters. In particular, it allows you to filter requests based on on a number of factors, including the IP address of the originating host. In this case, that IP address would be that of the server on which your application or portal runs. That IP address would typically be local to your network.
+This is the Swiss Army knife of servlet filters. In particular, it allows you to filter requests based on a number of factors, including the IP address of the originating host. In this case, that IP address would be that of the server on which your application or portal runs. That IP address would typically be local to your network.
 
 If both your application or portal and Form Runner run on the same server, you can even restrict access to requests coming from `localhost`.
 

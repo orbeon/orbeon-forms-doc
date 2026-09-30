@@ -105,7 +105,7 @@ The following parameters can be used:
 
     [SINCE Orbeon Forms 2017.1]
 
-    - if `replace` is set to `all`, whether to continue showing the loading the indicator while the browser navigates away from the current page
+    - if `replace` is set to `all`, whether to continue showing the loading indicator while the browser navigates away from the current page
     - typically, you'll only want to set this parameter to `false` if you know that URL the browser navigates to won't replace the current page, say because the page will be opened in another window, or be downloaded by the browser
     - default: `true`
     

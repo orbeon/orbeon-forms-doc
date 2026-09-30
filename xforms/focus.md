@@ -8,7 +8,7 @@ In user interfaces, the _focus_ usually refers to _keyboard focus._ A control is
 
 XForms supports focus with a few constructs:
 
-* the `<xf:setfocus>` action and the the `xforms-focus` event
+* the `<xf:setfocus>` action and the `xforms-focus` event
 * the `DOMFocusIn` and `DOMFocusOut` events
 
 This page describes the behaviors associated with focus in the Orbeon Forms XForms engine.

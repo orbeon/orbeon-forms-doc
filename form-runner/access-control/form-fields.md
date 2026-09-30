@@ -2,7 +2,7 @@
 
 ## Overview
 
-You can control access to specific form fields based on the user user's roles.
+You can control access to specific form fields based on the user's roles.
 
 ## Using and accessing roles
 

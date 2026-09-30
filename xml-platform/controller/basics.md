@@ -96,7 +96,7 @@ The path is relative to the location of the page flow configuration file where t
 </xh:html>
 ```
 
-It is recommended to to use XHTML and to put all the elements in the XHTML namespace, `http://www.w3.org/1999/xhtml`. This can be done by using default namespace declaration on the root element (`xmlns="http://www.w3.org/1999/xhtml`) or by mapping the namespace to a prefix such as `xhtml` and to use that prefix throughout the document, as shown above. The file must contain well-formed XML: just using a legacy HTML file won't work without some adjustments, usually minor.
+It is recommended to use XHTML and to put all the elements in the XHTML namespace, `http://www.w3.org/1999/xhtml`. This can be done by using default namespace declaration on the root element (`xmlns="http://www.w3.org/1999/xhtml`) or by mapping the namespace to a prefix such as `xhtml` and to use that prefix throughout the document, as shown above. The file must contain well-formed XML: just using a legacy HTML file won't work without some adjustments, usually minor.
 
 Instead of using a static XHTML page, you can also use an XSLT template to generate a dynamic page. This allows using XSLT constructs mixed with XHTML constructs, for example:
 

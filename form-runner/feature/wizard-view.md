@@ -73,7 +73,7 @@ When using the validated mode:
 
 This only applies to navigation between top-level sections. When subsection navigation is enabled, the validated mode applies only to top-level sections, while navigation within a given top-level section is always free.
 
-\[FROM Orbeon Forms Forms 4.9 to 2016.2]
+\[FROM Orbeon Forms 4.9 to 2016.2]
 
 The following property enables the lax validated mode:
 

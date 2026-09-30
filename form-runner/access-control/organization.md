@@ -77,7 +77,7 @@ The way organizations are used and stored has the following consequences:
 
 * If an organization name changes, for instance `Support` is renamed `Customer satisfaction`, then data in the database needs to be changed.
 * If the organization structure changes, say `Support` isn't under `Engineering` but under `Operations`, then information in the database needs to be changed.
-* If a user switches to another organization, existing data will still be tied to her previous organizations. Another way to look at it is that, by default, data stays with the organizations where it was created, irrelevant of where the user who created that data moves. This may or may not be what you want, depending on the scenario. For instance, say a user in organization A submits an expense report, and shortly after that moves to organization B. By default, it will still be the manager in organization A who will be in charge of approving that expense report. If instead you want to data to move along with the user, it is up to you to change the organization associated with the data for that user in the database.
+* If a user switches to another organization, existing data will still be tied to her previous organizations. Another way to look at it is that, by default, data stays with the organizations where it was created, irrelevant of where the user who created that data moves. This may or may not be what you want, depending on the scenario. For instance, say a user in organization A submits an expense report, and shortly after that moves to organization B. By default, it will still be the manager in organization A who will be in charge of approving that expense report. If instead you want data to move along with the user, it is up to you to change the organization associated with the data for that user in the database.
 
 ## See also
 
@@ -85,7 +85,7 @@ The way organizations are used and stored has the following consequences:
 * [Setup users for access control](users.md) - How to setup Orbeon Forms so that users and roles are provided.
 * [Login & Logout](login-logout.md) - Optional user menu for providing links to login and logout functions.
 * [Access control for deployed forms](deployed-forms.md) - How to control access to deployed forms.
-* [Form fields](form-fields.md) - How to control access to specific form fields based on the user user's roles.
+* [Form fields](form-fields.md) - How to control access to specific form fields based on the user's roles.
 * [Access control for editing forms](editing-forms.md) - How to control access to Form Builder.
   * [Owner and group member permissions](owner-group.md) - Access based on ownership and groups.
   * [Token-based permissions](tokens.md) - Token-based permissions
