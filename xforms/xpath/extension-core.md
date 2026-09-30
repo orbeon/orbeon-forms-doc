@@ -216,7 +216,7 @@ This evaluates to:
 
 > My name is Marco Polo. I am 42 year-old. I own $ 12.99.
 
-_NOTE: As Orbeon Forms 2018.1, parameters are formatted per Java's_ `MessageFormat`_. It is expected that in the future, these values will be formatted as they are with_ `xf:output`_, and possibly configurable. If the exact format is important, instead of passing_ `xs:integer`_,_ `xs:date`_, etc. types, format the value as an_ `xs:string` _first before passing it as parameter._
+_NOTE: As of Orbeon Forms 2018.1, parameters are formatted per Java's_ `MessageFormat`_. It is expected that in the future, these values will be formatted as they are with_ `xf:output`_, and possibly configurable. If the exact format is important, instead of passing_ `xs:integer`_,_ `xs:date`_, etc. types, format the value as an_ `xs:string` _first before passing it as parameter._
 
 ## xxf:property()
 
@@ -249,7 +249,7 @@ xxf:r($resource-name as xs:string, $instance-name as xs:string) as xs:string?
 
 The function:
 
-* determines the current language based on `xml:lang` attribute in scope where the function is in used
+* determines the current language based on `xml:lang` attribute in scope where the function is used
 * resolves the closest relevant resources instance
   * specified instance name if present
   * `orbeon-resources` or `fr-form-resources` (for Form Runner compatibility) if absent
@@ -286,7 +286,7 @@ In this case, the function fills the template as with the [`xxf:process-template
 
 \[SINCE Orbeon Forms 2018.2]
 
-Like `xxf:r()`, The purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources. The difference is that this function resolves to resource elements instead of resolving to a resource string.
+Like `xxf:r()`, the purpose of this function is to automatically resolve resources by name given the current language and an XForms instance containing localized resources. The difference is that this function resolves to resource elements instead of resolving to a resource string.
 
 ```
 xxf:resource-elements(

@@ -141,7 +141,7 @@ So now look at the following CSS declaration for the Bookcast application:
 | `.xforms-repeat-selected-item-1 .form-td { background: #ffc }`                                                                                                                                                                                                                                                                                                                              | Change the background color of the currently selected repeat index.                                                                                              |
 | <p><code>.books-action-table { margin-bottom: 1em }</code> <br> <code>.books-action-table td { white-space: nowrap; vertical-align: middle; padding-right: 1em }</code> <br>  <code>.books-action-table .xforms-submit img { vertical-align: middle }</code> <br> <code>.books-action-table .xforms-trigger-appearance-minimal img { margin-right: 1em; vertical-align: middle }</code></p> | Set margins and alignment for the action table at the top of the page.                                                                                           |
 
-Now just add all the CSS declaration under the page's `<head>` element, encapsulated within an HTML `<style>` element:
+Now just add all the CSS declarations under the page's `<head>` element, encapsulated within an HTML `<style>` element:
 
 ```markup
 <style type="text/css">

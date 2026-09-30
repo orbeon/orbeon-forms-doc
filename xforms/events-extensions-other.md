@@ -46,7 +46,7 @@ Here is how you pass context attributes when executing an action:
 | `name`  | Mandatory | Name of the context attribute.                                       |
 | `value` | Mandatory | XPath 2.0 expression determining the value of the context attribute. |
 
-Note that the context attribute name cannot be a qualified name (QName), because this would not be compatible with [DOM 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/events.html). However, a QName can be used as custom event name.
+Note that the context attribute name cannot be a qualified name (QName), because this would not be compatible with [DOM 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/events.html). However, a QName can be used as a custom event name.
 
 In order to avoid confusion with standard XForms names, we recommend you use prefixed names if you use custom context information with standard event names (when supported). However, with custom event names, prefixing is not necessary.
 
@@ -66,7 +66,7 @@ _NOTE: At the moment, with `<xf:dispatch>`, only custom events support passing c
 
 The `xxf:tunnel="true` attribute on `<xf:property>` allows the propagation, or tunneling, of event properties in the following cases:
 
-- `<xf:send>`: the properties are tunneled to event handlers for the `xforms-submit-error` and `xforms-submit-done` events as well as event handlers for `xxforms-action-error` event dispatched while processing event handlers for those events
+- `<xf:send>`: the properties are tunneled to event handlers for the `xforms-submit-error` and `xforms-submit-done` events as well as event handlers for the `xxforms-action-error` event dispatched while processing event handlers for those events
 - `<xf:dispatch>`: the properties are tunneled to event handlers for the `xxforms-action-error` event dispatched while processing event handlers for the event dispatched
 
 Example with `xforms-submit-done`:
@@ -242,7 +242,7 @@ This is useful in situations where it is not possible to explicitly set an id on
 
 ## Phantom handlers
 
-Event handler support the `xxf:phantom="true"` attribute to specify that the event handler is listening to events flowing across XBL scopes.
+Event handlers support the `xxf:phantom="true"` attribute to specify that the event handler is listening to events flowing across XBL scopes.
 
 XForms events flow along XBL boundaries and are fully encapsulated. This attribute allows special consumers of events to have a global view of events flowing in the XForms page. Example:
 

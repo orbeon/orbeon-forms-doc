@@ -46,7 +46,7 @@ See also:
      * binding errors with the `bind` or `model` attribute
      * binding errors with complex or readonly content
      * missing attributes or unsupported attribute values on action elements
-   * `xxforms-action-error` event is dispatched to observer of the action
+   * `xxforms-action-error` event is dispatched to the observer of the action
    * _NOTE: Some actions silently ignore some error conditions, including:_
      * `<setvalue>` pointing to an empty sequence or to an atomic item (such as a string) instead of a node
      * `<delete>` with an empty sequence or an empty overridden context

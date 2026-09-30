@@ -36,7 +36,7 @@ Let's look at the details:
       http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
     ```
 
-    (Because it is inconvenient for you to always write absolute URLs when you want to address an URL handle by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
+    (Because it is inconvenient for you to always write absolute URLs when you want to address a URL handled by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
 
     The path starts with `/exist/rest/`, which maps to the built-in eXist database. The rest of the path (`/db/orbeon/my-bookcast/books.xml`) specifies the _collection_ and _document_ to access. Here, we decide to save the data to a document called `books` within a collection called `/db/orbeon/my-bookcast/`.
 * The `method` attribute specifies what HTTP method to use. Here, you use the value `put`, which translates into using the HTTP `PUT` method. (You may not be very familiar with the `PUT` method (HTML forms, for example, always use `GET` and `POST`), but `PUT` is getting used more and more with REST interfaces. In just a few words, `PUT` allows you to store a resource to a particular location on an HTTP server.)
@@ -86,7 +86,7 @@ Do you see how persistence is easily implemented with Orbeon Forms? No need for 
 
 _NOTE:_
 
-_Of course, you don't have to use eXist or even an XML database with Orbeon Forms: you can in fact interface with any system you can think of with submissions. For systems that don't already have a REST API, you will need to write REST interfaces - and you can do this with your favorite language and platform, including Java, PHP, Ruby, or .NET. You can even write such services with Orbeon Forms XPL (the Orbeon Forms XML pipelines language), which feature built-in components for access to relational databases, web services, and more._
+_Of course, you don't have to use eXist or even an XML database with Orbeon Forms: you can in fact interface with any system you can think of with submissions. For systems that don't already have a REST API, you will need to write REST interfaces - and you can do this with your favorite language and platform, including Java, PHP, Ruby, or .NET. You can even write such services with Orbeon Forms XPL (the Orbeon Forms XML pipelines language), which features built-in components for access to relational databases, web services, and more._
 
 ## Loading the initial data
 
@@ -131,7 +131,7 @@ Hence the code now has the appearance of
 
 This tells the XForms engine to execute an _action_ called `<xf:send>` when the XForms engine is ready. This action takes an attribute called `submission`, which specifies which submission to send, here `list-submission`.
 
-Note the special attribute called `event`: this attributes marks the `<xf:send>` element as an _event handler_, that is an action that must respond to an event dispatched by the XForms engine. In this case, the name of the event is `xforms-ready`, which is a standard XForms event with the meaning that well, the XForms engine is ready.
+Note the special attribute called `event`: this attribute marks the `<xf:send>` element as an _event handler_, that is an action that must respond to an event dispatched by the XForms engine. In this case, the name of the event is `xforms-ready`, which is a standard XForms event with the meaning that well, the XForms engine is ready.
 
 After adding the event handler, reload the page, and notice how the page now loads and immediately shows the data that you saved into the database.
 
@@ -146,7 +146,7 @@ The following is an overview of what has just happened:
 * The XForms engine updates the XForms controls bound to the instance with the values now contained in the instance. For example, the "title" and "author" input fields are now updated with the values that came from the database.
 * The XForms engine sends an HTML page to your web browser. You see the page with all the correct data as saved earlier into the database.
 
-_Actions_ and _events_ are very important in XForms: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable action that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
+_Actions_ and _events_ are very important in XForms: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable actions that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
 
 (You may wonder what would happen the first time the `list-submission` is called if no `books.xml` document is available in the database. The answer is that the database would return an error, and the submission would throw an event called `xforms-submit-error`. But because you don't have an event handler for this event, nothing happens: the initial content of the `books-submission` instance is not changed and so you see an empty form.)
 

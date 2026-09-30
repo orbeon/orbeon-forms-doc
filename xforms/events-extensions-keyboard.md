@@ -40,7 +40,7 @@ You can, by listening to the `keypress`, `keydown` and `keyup` events, run actio
         ...
     </xf:action>
     ```
-- __Part of the document__, in which case you set your actions to listen on a XForms control such as a `xf:group` or an `xf:input`. Note that in this case, your listener will be called only if a form control (either the one you have specified, or form control inside the one you have specified for container form controls) has the focus when users press the key combination.
+- __Part of the document__, in which case you set your actions to listen on an XForms control such as an `xf:group` or an `xf:input`. Note that in this case, your listener will be called only if a form control (either the one you have specified, or form control inside the one you have specified for container form controls) has the focus when users press the key combination.
 - __A dialog__, in which case your listener will be called only when users press the key combination while the dialog is open. In this case, the only requirement for the listener to be called is for the dialog to be open; the focus does not necessarily need to be on a form control inside the dialog.
 
 You specify what key stroke(s) you want to listen to with the following two attributes:

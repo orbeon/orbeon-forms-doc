@@ -287,7 +287,7 @@ You notice that you get instant gratification with Orbeon Forms: just change fil
 
 ### What is it?
 
-In this section, you will create a more complete XForms application: the Bookcast application. The Bookcast application allows you to keep track of information about books you have read. For each book, you enter information such as title, author, language, and your own comments. The information is persisted so you can access it again. Then you can do cool things with the available data such create an Atom feed of your entries.
+In this section, you will create a more complete XForms application: the Bookcast application. The Bookcast application allows you to keep track of information about books you have read. For each book, you enter information such as title, author, language, and your own comments. The information is persisted so you can access it again. Then you can do cool things with the available data such as create an Atom feed of your entries.
 
 ![][11]
 
@@ -297,7 +297,7 @@ You can run the final application [online on the Orbeon website][12].
 
 But first things first. Start by making a first functional page:
 
-* The first thing to do is to create a new directory for your application. Orbeon Forms already come with the complete `xforms-bookcast` application, so instead let's decide on another name, for example `my-bookcast`. Create a directory with that name as `RESOURCES/apps/my-bookcast`. For convenience, we refer to that new directory as the `BOOKCAST` directory below.
+* The first thing to do is to create a new directory for your application. Orbeon Forms already comes with the complete `xforms-bookcast` application, so instead let's decide on another name, for example `my-bookcast`. Create a directory with that name as `RESOURCES/apps/my-bookcast`. For convenience, we refer to that new directory as the `BOOKCAST` directory below.
 * Create a `page-flow.xml` file under `BOOKCAST`:
 
     ```xml
@@ -330,7 +330,7 @@ Now go to:
 http://localhost:8080/orbeon/my-bookcast/
 ```
 
-You should something like this:
+You should see something like this:
 
 ![][13]
 
@@ -524,7 +524,7 @@ Reload the page. You should see the following:
 
 ![][15]
 
-You have just added a single selection control with `<xf:select1>`. The name means that the user can "select one" item among several items. (XForms tends to call controls using more abstract terms, rather than giving them names such as "combo box" or "menu".) The single selection control usually appears like a drop-down menu or combo box with most XForms implementations (but you can change it's appearance as shown later).
+You have just added a single selection control with `<xf:select1>`. The name means that the user can "select one" item among several items. (XForms tends to call controls using more abstract terms, rather than giving them names such as "combo box" or "menu".) The single selection control usually appears like a drop-down menu or combo box with most XForms implementations (but you can change its appearance as shown later).
 
 Nested within the control, you find several `<xf:item>` elements. Each one creates an item in the drop-down menu. An item has two sides: the `<xf:label>` element specifies the _label_ that is presented to the user, and the `<xf:value>` element specifies the _value_ that is stored into the XForms instance when the user selects that particular item.
 
@@ -722,9 +722,9 @@ Let's look at the details:
     http://localhost:8080/orbeon/exist/rest/db/orbeon/my-bookcast/books.xml
     ```
 
-    (Because it is inconvenient for you to always write absolute URLs when you want to address an URL handle by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
+    (Because it is inconvenient for you to always write absolute URLs when you want to address a URL handled by Orbeon Forms, Orbeon Forms automatically resolves absolute paths against the base `http://localhost:8080/orbeon/`.)
 
-    The paths starts with `/exist/rest/`, which maps to the built-in eXist database. The rest of the path (`/db/orbeon/my-bookcast/books.xml`) specifies the _collection_ and `document` to access. Here, we decide to save the data to a document called `books` within a collection called `/db/orbeon/my-bookcast/`.
+    The path starts with `/exist/rest/`, which maps to the built-in eXist database. The rest of the path (`/db/orbeon/my-bookcast/books.xml`) specifies the _collection_ and `document` to access. Here, we decide to save the data to a document called `books` within a collection called `/db/orbeon/my-bookcast/`.
 * The `method` attribute specifies what HTTP method to use. Here, you use the value `put`, which translates into using the HTTP `PUT` method. (You may not be very familiar with the `PUT` method (HTML forms, for example, always use `GET` and `POST`), but `PUT` is getting used more and more with REST interfaces. In just a few words, `PUT` allows you to store a resource to a particular location on an HTTP server.)
 * Finally, the `replace` attribute specifies what to do with the response sent by the server (here the server is the eXist database). Specifying a value of `none` tells the XForms engine to discard the content of the response from the database.
 
@@ -772,7 +772,7 @@ Do you see how persistence is easily implemented with Orbeon Forms? No need for 
 
 _NOTE:_
 
-_Of course, you don't have to use eXist or even an XML database with Orbeon Forms: you can in fact interface with any system you can think of with submissions. For systems that don't already have a REST API, you will need to write REST interfaces - and you can do this with your favorite language and platform, including Java, PHP, Ruby, or .NET. You can even write such services with Orbeon Forms XPL (the Orbeon Forms XML pipelines language), which feature built-in components for access to relational databases, web services, and more._
+_Of course, you don't have to use eXist or even an XML database with Orbeon Forms: you can in fact interface with any system you can think of with submissions. For systems that don't already have a REST API, you will need to write REST interfaces - and you can do this with your favorite language and platform, including Java, PHP, Ruby, or .NET. You can even write such services with Orbeon Forms XPL (the Orbeon Forms XML pipelines language), which features built-in components for access to relational databases, web services, and more._
 
 ### Loading the initial data
 
@@ -817,7 +817,7 @@ Hence the code now has the appearance of
 
 This tells the XForms engine to execute an _action_ called `<xf:send>` when the XForms engine is ready. This action takes an attribute called `submission`, which specifies which submission to send, here `list-submission`.
 
-Note the special attribute called `event`: this attributes marks the `<xf:send>` element as an _event handler_, that is an action that must respond to an event dispatched by the XForms engine. In this case, the name of the event is `xforms-ready`, which is a standard XForms event with the meaning that well, the XForms engine is ready.
+Note the special attribute called `event`: this attribute marks the `<xf:send>` element as an _event handler_, that is an action that must respond to an event dispatched by the XForms engine. In this case, the name of the event is `xforms-ready`, which is a standard XForms event with the meaning that well, the XForms engine is ready.
 
 After adding the event handler, reload the page, and notice how the page now loads and immediately shows the data that you saved into the database.
 
@@ -832,7 +832,7 @@ The following is an overview of what has just happened:
 * The XForms engine updates the XForms controls bound to the instance with the values now contained in the instance. For example, the "title" and "author" input fields are now updated with the values that came from the database.
 * The XForms engine sends an HTML page to your web browser. You see the page with all the correct data as saved earlier into the database.
 
-_Actions_ and _events_ are very important in XForms: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable action that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
+_Actions_ and _events_ are very important in XForms: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable actions that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
 
 (You may wonder what would happen the first time the `list-submission` is called if no `books.xml` document is available in the database. The answer is that the database would return an error, and the submission would throw an event called `xforms-submit-error`. But because you don't have an event handler for this event, nothing happens: the initial content of the `books-submission` instance is not changed and so you see an empty form.)
 
@@ -907,7 +907,7 @@ Let's explain what the above does:
 
     ![][19]
 
-Again the XForms engine does its magic and takes care of updating the web page automatically. You also notice that the web page does not reload as it updates. This is because Orbeon Forms uses Ajax technology to perform updates to the page. With Ajax, client-side JavaScript code silently talks to the Orbeon Forms server, which then communicates to the client-side code the updates to perform to the page. These update are directly done to the HTML Document Object Model (DOM) without reload.
+Again the XForms engine does its magic and takes care of updating the web page automatically. You also notice that the web page does not reload as it updates. This is because Orbeon Forms uses Ajax technology to perform updates to the page. With Ajax, client-side JavaScript code silently talks to the Orbeon Forms server, which then communicates to the client-side code the updates to perform to the page. These updates are directly done to the HTML Document Object Model (DOM) without reload.
 
 ### Deleting a book
 
@@ -1026,7 +1026,7 @@ Finally, add a `books-label` class to the controls related to book data, for exa
 <xf:label class="books-label">Title</xf:label>
 ```
 
-Now remember that Orbeon Forms does not send the XForms code directly to the web browser, but instead it transforms it into HTML. You realize that this is done because Orbeon Forms cannot assume that your web browser to support XForms at all. Consider the following examples:
+Now remember that Orbeon Forms does not send the XForms code directly to the web browser, but instead it transforms it into HTML. You realize that this is done because Orbeon Forms cannot assume that your web browser supports XForms at all. Consider the following examples:
 
 ```xml
 <xf:submit id="my-submit" submission="save-submission">
@@ -1098,7 +1098,7 @@ So now look at the following CSS declaration for the Bookcast application:
 .books-action-table .xforms-submit img { vertical-align: middle }
 .books-action-table .xforms-trigger-appearance-minimal img { margin-right: 1em; vertical-align: middle } `  |  Set margins and alignment for the action table at the top of the page.  |
 
-Now just add all the CSS declaration under the page's `<head>` element, encapsulated within an HTML `<style>` element:
+Now just add all the CSS declarations under the page's `<head>` element, encapsulated within an HTML `<style>` element:
 
 ```xml
 <style type="text/css">
@@ -1266,7 +1266,7 @@ It would be nice to tell the user that saving didn't work. You can do this very 
 </xf:submission>
 ```
 
-The `<xf:submission>` element hasn't changed, except we added a nested `<xf:message>` element. Besides the `event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and message for the user.
+The `<xf:submission>` element hasn't changed, except we added a nested `<xf:message>` element. Besides the `event` attribute, which you start to be familiar with, this element takes a `level` attribute (use "modal" in general for alerts) and a message for the user.
 
 Try now making this change, enter an invalid link, and press the "Save" link: an alert message should show up!
 
@@ -1347,7 +1347,7 @@ Consider the page model:
 
 This document contains an XML pipeline described in a language called XPL (XML Pipeline Language). An XML pipeline language is simply a language for describing operations to be performed on XML documents. Orbeon Forms comes with an implementation of [XPL][23]. (Orbeon is currently working at W3C on the standardization of a pipeline language called [XProc][24].)
 
-So what does this pipeline do? It runs a _processor_ called `oxf:xforms-submission`, which is handy component that allows you to perform XForms submissions from XPL. That submission retrieves `books.xml` and returns it on the processor's `response` output. That output in turn is sent to the `data` output of the page model pipeline.
+So what does this pipeline do? It runs a _processor_ called `oxf:xforms-submission`, which is a handy component that allows you to perform XForms submissions from XPL. That submission retrieves `books.xml` and returns it on the processor's `response` output. That output in turn is sent to the `data` output of the page model pipeline.
 
 Now look at the page view:
 

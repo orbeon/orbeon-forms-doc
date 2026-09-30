@@ -70,7 +70,7 @@ You can listen to it with:
 - __Context Info:__ None
 
 The `xxforms-state-restored` event is dispatched to the `#document` element when the form state is restored from the 
-XForms state store. This can happen in the following case:
+XForms state store. This can happen in the following cases:
 
 1. The form hasn't received updates from the client for a long time, has been evicted from the memory cache and stored
    into the state store, and is finally restored from the state store when the client issues a new update.
@@ -259,7 +259,7 @@ Example:
 In this example:
 
 - The `ev:target` attribute ensures that this particular handler only catches events for `my-repeat`, in case there are some nested repeats or some other repeats within the group.
-- The `ev:event` attribute lists not only `xxforms-nodeset-changed` event, but also the `xforms-enabled` and `xforms-disabled` event so the event runs when the nodeset goes from empty to non-empty or from non-empty to empty.
+- The `ev:event` attribute lists not only `xxforms-nodeset-changed` event, but also the `xforms-enabled` and `xforms-disabled` events so the event runs when the nodeset goes from empty to non-empty or from non-empty to empty.
 
 We recommend that you put the handler for `xxforms-nodeset-changed` outside the `` element, as shown in the example above. This ensures that, in case the repeat node-set becomes empty, actions associated with your event handler will still execute within a non-empty XPath context.
 

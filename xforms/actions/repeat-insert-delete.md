@@ -2,7 +2,7 @@
 
 ## Basics
 
-A very common requirement of user interfaces consists in repeating visual elements, such as rows in a table or entries in a list. Those repeated sections usually (but not always) have an homogeneous aspect: they all have the same or a very similar structure. For example, multiple table rows will differ only in the particular content they display in their cells. An example of this is an invoice made of lines with each a description, unit price, and quantity.
+A very common requirement of user interfaces consists in repeating visual elements, such as rows in a table or entries in a list. Those repeated sections usually (but not always) have a homogeneous aspect: they all have the same or a very similar structure. For example, multiple table rows will differ only in the particular content they display in their cells. An example of this is an invoice made of lines with each a description, unit price, and quantity.
 
 XForms provides a very powerful mechanism to implement such repeated structures: the `<xf:repeat>` action. You use `<xf:repeat>` around XHTML elements or XForms controls. For example, to repeat a table row, you write:
 

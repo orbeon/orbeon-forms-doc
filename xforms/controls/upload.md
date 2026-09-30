@@ -41,7 +41,7 @@ The `file` element is the element storing the result of the file upload. The res
 The optional `xf:filename`, `xf:mediatype`, and `xxf:size` (the latter is an Orbeon Forms extension) allow storing metadata about an uploaded file:
 
 * `xf:filename`: stores the file name sent by the user agent
-* `xf:mediatype`: store the media type sent by the user agent
+* `xf:mediatype`: stores the media type sent by the user agent
 * `xxf:size`: stores the actual size in bytes of the uploaded data
 
 _SECURITY NOTE: The file name and the media type are provided by the user agent (typically a web browser). Not only are they not guaranteed to be correct, but they must not be trusted._
@@ -121,7 +121,7 @@ The `accept` attribute is simply passed to the web browser. As of 2013, most web
 
 The `accept` attribute is an XForms 2.0 feature. For backward compatibility, the `mediatype` attribute is also supported.
 
-_SECURITY NOTE: This is not a guarantee that the file sent will have that mediatype, because some browsers do not support that feature, and even when it does, the browser must not be trusted._
+_SECURITY NOTE: This is not a guarantee that the file sent will have that mediatype, because some browsers do not support that feature, and even when they do, the browser must not be trusted._
 
 ## Controlling upload between the client and the server
 
@@ -140,7 +140,7 @@ Orbeon Forms is able in most cases to synchronize files in the background: the u
 
 ### When synchronization takes place
 
-Any files are selected but not synchronized upon a submission with `replace="all"`, those files are synchronized then.
+If any files are selected but not synchronized upon a submission with `replace="all"`, those files are synchronized then.
 
 In other cases, the process works as follows:
 

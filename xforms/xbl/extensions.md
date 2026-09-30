@@ -66,7 +66,7 @@ class FormRunnerXblSupport {
 }
 ```
 
-You can also turn specify this property specifically for a given form by adding an `xxf:xbl-support` attribute on the first model:
+You can also specify this property specifically for a given form by adding an `xxf:xbl-support` attribute on the first model:
 
 ```xml
 xxf:xbl-support="org.orbeon.oxf.fr.xbl.FormRunnerXblSupport"

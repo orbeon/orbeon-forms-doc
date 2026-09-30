@@ -161,11 +161,11 @@ Date formats:
 | 10202000 ("US format") or 20102000 ("European format")     | \[SINCE Orbeon Forms 2017.2]          |
 | 2000-10-20                                                 | ISO or "Asian" format                 |
 
-In the table above, the "US format" applies the `oxf.xforms.format.input.date` property starts with `[M`, and the "European format" when that property starts with `[D`.
+In the table above, the "US format" applies when the `oxf.xforms.format.input.date` property starts with `[M`, and the "European format" when that property starts with `[D`.
 
 ### Two-digit years
 
-If you type in a date field a year with only two digits (say 5/20/10), the control will assume that you intended to type a year in the twentieth or twenty-first century, rather than a year in the first century. It will convert the two-digit year you typed into a four digits year by taking the corresponding year in either the twentieth or twenty first century based on which one is closest to the current year. So for instance, if the current year is 2020:
+If you type in a date field a year with only two digits (say 5/20/10), the control will assume that you intended to type a year in the twentieth or twenty-first century, rather than a year in the first century. It will convert the two-digit year you typed into a four-digit year by taking the corresponding year in either the twentieth or twenty first century based on which one is closest to the current year. So for instance, if the current year is 2020:
 
 * 10 is changed to 2010
 * 80 is changed to 1980
@@ -173,11 +173,11 @@ If you type in a date field a year with only two digits (say 5/20/10), the contr
 
 ### Date picker internationalization
 
-By default, the months and days of the week are in English in the date picker (as shown in the screenshot above). You can change this by setting the value of the lang attribute on the element of the page. The value of the attribute two-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For instance with months and weekdays will be shown in French, for instance:
+By default, the months and days of the week are in English in the date picker (as shown in the screenshot above). You can change this by setting the value of the lang attribute on the element of the page. The value of the attribute is a two-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For instance with months and weekdays will be shown in French, for instance:
 
 ![Localized date picker](../images/xforms-datepicker-french.png)
 
-For more on which languages are supported localized out-of-the-box, see [supported languages](../../form-runner/feature/localization.md). Note that the changing the language also changes which day of the week is shown first in the calendar: in English, Sunday is shown first; with French and Spanish, Monday is shown first.
+For more on which languages are supported localized out-of-the-box, see [supported languages](../../form-runner/feature/localization.md). Note that changing the language also changes which day of the week is shown first in the calendar: in English, Sunday is shown first; with French and Spanish, Monday is shown first.
 
 ### Date picker in scrollable area
 
@@ -189,7 +189,7 @@ If you are using the date picker in an area of your page which is scrollable (e.
 
 ### On iOS
 
-On iOS (iPhone, iPad, iPod touch), inputs bound to nodes of type `xs:date`, `xs:time`, or `xs:dateTime` are rendered using the iOS 5 browser native date or time widgets, which iOS users are accustomed to, and which provides a better usability, especially on the smaller screen iPhone and iPod touch.
+On iOS (iPhone, iPad, iPod touch), inputs bound to nodes of type `xs:date`, `xs:time`, or `xs:dateTime` are rendered using the iOS 5 browser native date or time widgets, which iOS users are accustomed to, and which provide a better usability, especially on the smaller screen iPhone and iPod touch.
 
 ![iOS date picker](../images/xforms-ios-date.png)
 
@@ -229,7 +229,7 @@ Input sanitization allows you to apply a filter on the data entered by the user,
 
 The configuration is a JSON map of string to string. The algorithm is as follows:
 
-* If the configuration is blank string, sanitization is turned off.
+* If the configuration is a blank string, sanitization is turned off.
 * If not blank, then the JSON configuration is parsed and sanitization is turned on.
 * Each mapping contains a search string on the left, and a replacement string on the right.
 * For each mapping, all instances of the search string in the input data are replaced with the replacement string.

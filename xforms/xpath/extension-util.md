@@ -76,4 +76,4 @@ If no argument is passed, use the context item converted to a string.
 
 If an empty sequence is passed, return the empty sequence.
 
-The result is a string with all leading and trailing Unicode whitespace, non-breakable space, zero-width space, and ISO control characters are removed.
+The result is a string with all leading and trailing Unicode whitespace, non-breakable space, zero-width space, and ISO control characters removed.

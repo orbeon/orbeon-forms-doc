@@ -59,7 +59,7 @@ For an example, see [Adding support for a value](tutorial.md#adding-support-for-
 
 \[SINCE Orbeon Forms 2019.1]
 
-When the `value` mode is present, the components also has an associated _formatted value_. By default, this formatted value is based on the datatype of the bound item. Like `xf:output`, the following properties are used to format the value:
+When the `value` mode is present, the component also has an associated _formatted value_. By default, this formatted value is based on the datatype of the bound item. Like `xf:output`, the following properties are used to format the value:
 
 * `oxf.xforms.format.output.date`
 * `oxf.xforms.format.output.time`
@@ -128,7 +128,7 @@ For more details, see [Support for the javascript-lifecycle mode](javascript.md#
 
 ## The lhha and custom-lhha modes
 
-The `lhha` mode allows the component to support the `<xh:label>`, `<xh:hint>`, `<xh:help>` and `<xh:alert>` element, whether:
+The `lhha` mode allows the component to support the `<xh:label>`, `<xh:hint>`, `<xh:help>` and `<xh:alert>` elements, whether:
 
 * directly nested under the component's bound element
 * or using the `for` attribute

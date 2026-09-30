@@ -125,7 +125,7 @@ Example:
 
 The `xxf:readonly` attribute on `<xf:instance>` determines if the instance is read-only until that instance is being replaced.
 
-After an instance is replaced, it can be read-only or not irrelevant of the of `xxf:readonly` on `<xf:instance>`. When the instance is replaced, the replaced instance is read-only if and only if the `<xf:submission>` that does the replacement has a attribute `xxf:readonly="true"`.
+After an instance is replaced, it can be read-only or not irrelevant of the of `xxf:readonly` on `<xf:instance>`. When the instance is replaced, the replaced instance is read-only if and only if the `<xf:submission>` that does the replacement has an attribute `xxf:readonly="true"`.
 
 When this attribute is set to true on `<xf:submission>` and if the `targetref` attribute is specified, the replacement target must be an instance's root element.
 
@@ -175,7 +175,7 @@ produces the following XML:
 </form>
 ```
 
-All existing instances of the attribute, irrelevant from its value, are removed from the resulting XML document.
+All existing instances of the attribute, irrespective of its value, are removed from the resulting XML document.
 
 ## HTTP authentication
 
@@ -221,7 +221,7 @@ _NOTE: On  `<xf:instance>`, the attribute is statically-defined. On `<xf:submiss
 
 HTTP requests initiated by `<xf:submission>` and `<xf:instance>` can automatically forward incoming HTTP headers.
 
-_SECURITY NOTE: Forwarding authentication-related headers may cause a security risks when communicated with non-trusted servers. Use carefully!_
+_SECURITY NOTE: Forwarding authentication-related headers may cause a security risk when communicating with non-trusted servers. Use carefully!_
 
 ### Configuration
 
@@ -285,7 +285,7 @@ Prior to Orbeon Forms 4.9, the two properties were looked at in order:
 
 ## Loading indicator
 
-When an `<xf:submission>` with `replace="all"` is executed, in general, the browser will load another page. While this happens, the loading indicator, by default shown in red at the top right of the window, is displayed. However, when the browser is served not a web page but say a ZIP file, the browser might ask you in you want to download it, and then stay in the current page. When this happens, the loading indicator does not go away.
+When an `<xf:submission>` with `replace="all"` is executed, in general, the browser will load another page. While this happens, the loading indicator, by default shown in red at the top right of the window, is displayed. However, when the browser is served not a web page but say a ZIP file, the browser might ask you if you want to download it, and then stay in the current page. When this happens, the loading indicator does not go away.
 
 In those cases where you know that the target page does not replace the current page, you can prevent the loading indicator from being displayed by adding the `xxf:show-progress="false"` attribute. [Since Orbeon Forms 2017.1] The value of the `xxf:target` attribute is interpreted as an AVT.
 
@@ -295,7 +295,7 @@ Similarly the `xxf:show-progress="false"` attribute can be used with the `xf:loa
 
 You can use the `xxf:target` attribute on both `<xf:submission>` and `xf:load`. It behaves just like the [HTML target attribute](https://www.w3.org/TR/html401/present/frames.html#adef-target). When used on `<xf:submission>`, it only makes sense to use this attribute when you have `replace="all"`. Using this attribute to load a page in a new page is a case where you should add the `xxf:show-progress="false"` attribute. The value of the `xxf:target` attribute is interpreted as an AVT.
 
-When a submission runs in response to a user action, say a click on a button, an Ajax request is sent by the browser to the server. Then, based on the Ajax response, JavaScript runs submitting a `<form>` with a `target` attribute. Browsers implement popup blockers that prevent attempt made by JavaScript to open new windows, and this unless the [JavaScript code run in response to a trusted event](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted). A trusted event is one that happened in response to a user action, such as clicking on a button. However, even if your submission runs in response a user action, as it happens in response to an Ajax request, some browsers lose track that it was started by a trusted event, and those browsers might prevent the form submission. This is the case with Safari and Firefox (but not with Chrome, IE, and Edge).
+When a submission runs in response to a user action, say a click on a button, an Ajax request is sent by the browser to the server. Then, based on the Ajax response, JavaScript runs submitting a `<form>` with a `target` attribute. Browsers implement popup blockers that prevent attempts made by JavaScript to open new windows, and this unless the [JavaScript code runs in response to a trusted event](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted). A trusted event is one that happened in response to a user action, such as clicking on a button. However, even if your submission runs in response to a user action, as it happens in response to an Ajax request, some browsers lose track that it was started by a trusted event, and those browsers might prevent the form submission. This is the case with Safari and Firefox (but not with Chrome, IE, and Edge).
 
 - [UP TO Orbeon Forms 2016.3] On those browsers, the new tab or window will fail to open.
 - [SINCE Orbeon Forms 2017.1] Orbeon Forms detects that the browser prevents it from opening a new tab or window, and instead loads the resource in the current tab or window.   
@@ -304,7 +304,7 @@ When a submission runs in response to a user action, say a click on a button, an
 
 On an `<xf:submission>` element with `replace="instance"`, the optional `instance` attribute specifies a destination instance for the result. That attribute is processed like the `instance()` function, which means that the instance specified must be in the current model.
 
-The `xxf:instance` extension attribute can be use instead of the standard `instance` attribute. It works like `instance`, except that the instance is searched globally among all models. `xxf:instance` is to the `instance` attribute what the [`xxf:instance()`][3] function is to the standard `instance()` function.
+The `xxf:instance` extension attribute can be used instead of the standard `instance` attribute. It works like `instance`, except that the instance is searched globally among all models. `xxf:instance` is to the `instance` attribute what the [`xxf:instance()`][3] function is to the standard `instance()` function.
 
 ```xml
 <xf:submission 
@@ -344,7 +344,7 @@ Orbeon Forms adds the following attribute:
 
 The default value is `false` if the value of serialization is `none` and `true` otherwise.
 
-The purpose of the attribute is to improve performance when multiple submission are called serially. The form author can this way completely prevent the `rebuild`, `recalculate` and `revalidate` flags from being checked before submitting data:
+The purpose of the attribute is to improve performance when multiple submissions are called serially. The form author can this way completely prevent the `rebuild`, `recalculate` and `revalidate` flags from being checked before submitting data:
 
 ```xml
 <xf:submission 
@@ -371,7 +371,7 @@ Here is how Orbeon Forms performs the `rebuild`, `recalculate` and `revalidate` 
 * Perform revalidate if:
     * the deferred flag for `revalidate` is set
     * and the data to submit belongs to an instance (as opposed to a non-instance XML node)
-    * and the final effective of the validate attribute is true
+    * and the final effective value of the validate attribute is true
 
 The "effective value" for the `validate`, `relevant` and `xxf:calculate` attributes is the value after considering:
 
@@ -385,7 +385,7 @@ The "effective value" for the `validate`, `relevant` and `xxf:calculate` attribu
 Orbeon Forms supports sending the text content of an XML document as per [XSLT 2.0 and XQuery 1.0 Serialization](https://www.w3.org/TR/xslt-xquery-serialization/). To perform a text submission:
 
 - The `post` or `put` method is required.
-- You must use a the `text/plain` value for the `serialization` attribute.
+- You must use the `text/plain` value for the `serialization` attribute.
 
 
 ```xml
@@ -407,10 +407,10 @@ Orbeon Forms supports sending the text content of an XML document as per [XSLT 2
 
 ### Submitting HTML or XHTML content
 
-Orbeon Forms supports sending an XML document as HTML or XHTML as per [XSLT 2.0 and XQuery 1.0 Serialization](https://www.w3.org/TR/xslt-xquery-serialization/). To perform a HTML or XHTML submission:
+Orbeon Forms supports sending an XML document as HTML or XHTML as per [XSLT 2.0 and XQuery 1.0 Serialization](https://www.w3.org/TR/xslt-xquery-serialization/). To perform an HTML or XHTML submission:
 
 * The `post` or `put` method is required.
-* You must use a the `text/html` or the `application/xhtml+xml` value for the `serialization` attribute.
+* You must use the `text/html` or the `application/xhtml+xml` value for the `serialization` attribute.
 
 ```xml
 <xf:instance id="instance">
@@ -567,7 +567,7 @@ For more information, see also the [configuration properties](../configuration/p
 
 Orbeon Forms performs a local submission if:
 
-* The URL specified is not a absolute, i.e. does not start with `http://` or `https://`.
+* The URL specified is not absolute, i.e. does not start with `http://` or `https://`.
 * The submission is not asynchronous. (This restriction may be lifted in the future.)
 * In a servlet environment:
     * The submission has `replace="all"` (which is the default if no `replace` attribute is specified) and the `oxf.xforms.local-submission-forward` property is set to `true` (which is the default).
@@ -614,14 +614,14 @@ With:
 * `replace="text"`
 * `replace="none"`
 
-optimized submission are implemented using the servlet container's include mechanism, which does not automatically build path information for the included resource.
+optimized submissions are implemented using the servlet container's include mechanism, which does not automatically build path information for the included resource.
 
 In this case, Orbeon Forms is therefore unable to provide proper "servlet path" and "path info" information. Orbeon Forms handles this situation in the following way:
 
 * A blank (`""`) "servlet path" is provided.
 * The "path info" contains the entire path provided, instead of the path following the servlet path.
 
-This may cause some application which rely on the "servlet path" information to behave incorrectly. For example, consider the eXist REST servlet:
+This may cause some applications which rely on the "servlet path" information to behave incorrectly. For example, consider the eXist REST servlet:
 
 * It is mounted as `/exist/rest` within Orbeon Forms.
 * eXist (quite properly) expects any path following `/exist/rest` to be a path into the database, e.g. `/exist/rest/db/orbeon` produces a path called `/db/orbeon`.

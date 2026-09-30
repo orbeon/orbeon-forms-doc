@@ -72,7 +72,7 @@ On `xforms-value-changed`, the following extension attributes are supported:
 On `xforms-select`, the following extension attributes are supported:
 
 - `event('xxf:item-value')`
-  When this event is dispatched to in response to a selection control item being selected, returns the value of the selected item.
+  When this event is dispatched in response to a selection control item being selected, returns the value of the selected item.
 
 [SINCE Orbeon Forms 2018.2]
 

@@ -123,7 +123,7 @@ Form Builder, at design time only (since Orbeon Forms 4.9), also supports bindin
 xf|input:xxf-type('xs:decimal')
 ```
 
-This must be used on conjunction with a "direct" binding like `fr|number`:
+This must be used in conjunction with a "direct" binding like `fr|number`:
 
 ```css
 fr|number, xf|input:xxf-type('xs:decimal')

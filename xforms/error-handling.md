@@ -90,7 +90,7 @@ The following property allows you to enable or disable showing recoverable serve
   value="10"/>
 ```
 
-If the value is `0`, no errors are shown the user. If the value is `1` or greater, the value is the maximum number of errors to show the user.
+If the value is `0`, no errors are shown to the user. If the value is `1` or greater, the value is the maximum number of errors to show the user.
 
 Default:
 

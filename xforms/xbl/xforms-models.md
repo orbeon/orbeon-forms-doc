@@ -18,7 +18,7 @@ XForms 1.1 specifies the following event sequence upon value changes, insertions
 * `rebuild` (if document structure changed): update binds structure/dependencies
 * `recalculate` (if value changed): perform MIPs and calculated values updates
 * `revalidate` (if value changed): perform instance revalidation
-* `refresh`: updates the UI and dispatch UI events
+* `refresh`: update the UI and dispatch UI events
 
 XBL components with local models are no different and they receive these events when needed.
 

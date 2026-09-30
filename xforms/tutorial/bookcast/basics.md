@@ -4,7 +4,7 @@
 
 But first things first. Start by making a first functional page:
 
-* The first thing to do is to create a new directory for your application. Orbeon Forms already come with the complete `xforms-bookcast` application, so instead let's decide on another name, for example `my-bookcast`. Create a directory with that name as `RESOURCES/apps/my-bookcast`. For convenience, we refer to that new directory as the `BOOKCAST` directory below.
+* The first thing to do is to create a new directory for your application. Orbeon Forms already comes with the complete `xforms-bookcast` application, so instead let's decide on another name, for example `my-bookcast`. Create a directory with that name as `RESOURCES/apps/my-bookcast`. For convenience, we refer to that new directory as the `BOOKCAST` directory below.
 *   Create a `page-flow.xml` file under `BOOKCAST`:
 
     ```markup
@@ -228,7 +228,7 @@ Reload the page. You should see the following:
 
 ![](https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/11.png)
 
-You have just added a single selection control with `<xf:select1>`. The name means that the user can "select one" item among several items. (XForms tends to call controls using more abstract terms, rather than giving them names such as "combo box" or "menu".) The single selection control usually appears like a drop-down menu or combo box with most XForms implementations (but you can change it's appearance as shown later).
+You have just added a single selection control with `<xf:select1>`. The name means that the user can "select one" item among several items. (XForms tends to call controls using more abstract terms, rather than giving them names such as "combo box" or "menu".) The single selection control usually appears like a drop-down menu or combo box with most XForms implementations (but you can change its appearance as shown later).
 
 Nested within the control, you find several `<xf:item>` elements. Each one creates an item in the drop-down menu. An item has two sides: the `<xf:label>` element specifies the _label_ that is presented to the user, and the `<xf:value>` element specifies the _value_ that is stored into the XForms instance when the user selects that particular item.
 

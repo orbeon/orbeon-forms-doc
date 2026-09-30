@@ -16,7 +16,7 @@ Consider:
 <xf:action if="is-soap = 'true'">
 ```
 
-This will cause an XPath dynamic error, because 'true' is a string and XPath will _atomize_ (get an atomic value) the content of the `is-soap` node, which results in a boolean. Because there is no automatic conversion between the two, and error is raised and the action won't run. Instead, write:
+This will cause an XPath dynamic error, because 'true' is a string and XPath will _atomize_ (get an atomic value) the content of the `is-soap` node, which results in a boolean. Because there is no automatic conversion between the two, an error is raised and the action won't run. Instead, write:
 
 ```markup
 <xf:action if="is-soap = true()">

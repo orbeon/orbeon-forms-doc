@@ -21,7 +21,7 @@ or:
 For the `<xf:output>` control to display an image, you need to:
 
 * Have a `mediatype` attribute on the `<xf:output>`. That attribute must refer to an image mediatype, such as `image/*` or `image/jpeg`.
-* Use the `value` attribute on `<xf:output>` or bind to the control to a node without type, with an `xs:anyURI` type or with an `xs:base64Binary` type.
+* Use the `value` attribute on `<xf:output>` or bind the control to a node without type, with an `xs:anyURI` type or with an `xs:base64Binary` type.
 
 The resulting value from the instance is interpreted either as a URI pointing to an image, or as a base64-encoded binary representation of the image. The image will display in place of the `<xf:output>`. It is possible to dynamically change the image pointed to. For example:
 

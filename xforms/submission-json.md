@@ -6,7 +6,7 @@
 
 ### Introduction
 
-When an `xf:submission` or by an `xf:instance` with a `src` or `resource` attribute receives content with the `application/json` mediatype, Orbeon Forms parses the received JSON and converts it to an XML representation friendly to XPath expressions.
+When an `xf:submission` or an `xf:instance` with a `src` or `resource` attribute receives content with the `application/json` mediatype, Orbeon Forms parses the received JSON and converts it to an XML representation friendly to XPath expressions.
 
 \[SINCE Orbeon Forms 2017.1] In addition to the `application/json` mediatype, mediatypes of the form `a/b+json` are recognized.
 

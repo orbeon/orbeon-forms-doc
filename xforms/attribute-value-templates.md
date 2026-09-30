@@ -19,7 +19,7 @@ Consider this example:
     }"/>
 ```
 
-When `<xf:load>` is executed, the `resource` attribute is evaluated. The results is the concatenation of `/forms/detail/` and of the result of the expression within brackets:
+When `<xf:load>` is executed, the `resource` attribute is evaluated. The result is the concatenation of `/forms/detail/` and of the result of the expression within brackets:
 
 ```markup
 instance('documents-instance')/documents/document[index('documents-repeat')]/id
@@ -34,7 +34,7 @@ If the `id` element pointed to contains the string `C728595E0E43A8BF50D8DED9F196
 Note the following:
 
 * If you need curly brackets as literal values instead of enclosing an XPath expression, escape them using double brackets (`{{` and `}}`).
-* You can use as many XPath expressions as you want within a single attributes, each of them enclosed by curly brackets.
+* You can use as many XPath expressions as you want within a single attribute, each of them enclosed by curly brackets.
 
 ## AVTs on XForms elements
 

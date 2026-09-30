@@ -19,7 +19,7 @@ string-join(('cat', 'dog', 'alligator'), ', ')
 Namespaces:
 
 - These functions are available in the default function namespace.
-- These function are also available in the XPath functions namespace (`http://www.w3.org/2005/xpath-functions`), usually associated with the `fn` prefix.
+- These functions are also available in the XPath functions namespace (`http://www.w3.org/2005/xpath-functions`), usually associated with the `fn` prefix.
 
 This means that it is usually not necessary to declare a namespace for these functions, nor is it necessary to use a prefix in calls to these functions.
 
@@ -76,10 +76,10 @@ These functions are documented in XForms 2.0's [XPath Expressions Module](https:
 ### Namespaces
 
 - These functions are available in the default function namespace. 
-- These function are also available in the XForms namespace (`http://www.w3.org/2002/xforms`), usually associated with the `xf` prefix.
+- These functions are also available in the XForms namespace (`http://www.w3.org/2002/xforms`), usually associated with the `xf` prefix.
 
 <!--
-- These function are also available in the XForms functions namespace (`http://www.w3.org/2002/xforms-functions`), which doesn't have a standard prefix. [SINCE Orbeon Forms 2017.1]
+- These functions are also available in the XForms functions namespace (`http://www.w3.org/2002/xforms-functions`), which doesn't have a standard prefix. [SINCE Orbeon Forms 2017.1]
 -->
  
 This means that it is usually not necessary to declare a namespace for these functions in the form, nor is it necessary to use a prefix in calls to the core XPath functions:

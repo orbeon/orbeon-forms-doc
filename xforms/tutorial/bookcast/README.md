@@ -1,6 +1,6 @@
 # The Bookcast application
 
-In this section, you will create a more complete XForms application: the Bookcast application. The Bookcast application allows you to keep track of information about books you have read. For each book, you enter information such as title, author, language, and your own comments. The information is persisted so you can access it again. Then you can do cool things with the available data such create an Atom feed of your entries.
+In this section, you will create a more complete XForms application: the Bookcast application. The Bookcast application allows you to keep track of information about books you have read. For each book, you enter information such as title, author, language, and your own comments. The information is persisted so you can access it again. Then you can do cool things with the available data such as create an Atom feed of your entries.
 
 ![][11]
 

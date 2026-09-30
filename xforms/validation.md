@@ -230,7 +230,7 @@ Attributes:
 
 ### xxforms-valid and xxforms-invalid events
 
-Orbeon Forms supports extensions events dispatched to an instance when it becomes valid or invalid:
+Orbeon Forms supports extension events dispatched to an instance when it becomes valid or invalid:
 
 * `xxforms-valid`
 * `xxforms-invalid`
@@ -266,7 +266,7 @@ These events are dispatched just before `xforms-revalidate` completes, to all in
 
 \[SINCE Orbeon Forms 4.3]
 
-This event is dispatched to a control whenever the list of failed constraints associated with the control's bound node change.
+This event is dispatched to a control whenever the list of failed constraints associated with the control's bound node changes.
 
 Context information:
 
@@ -286,13 +286,13 @@ _NOTE: A_ [_bug_](https://github.com/orbeon/orbeon-forms/issues/3498) _until Orb
 
 ### xxf:valid() and xxf:invalid() XPath functions
 
-`xxf:valid()` returns the validity of a instance data node or of a subtree of instance data.
+`xxf:valid()` returns the validity of an instance data node or of a subtree of instance data.
 
 `xxf:invalid-binds()` allows you to determine which bind caused node invalidity.
 
 ### xxf:xml type
 
-This types checks that the value is well-formed XML:
+This type checks that the value is well-formed XML:
 
 ```markup
 <xf:bind ref="my-xml" type="xxf:xml"/>
@@ -310,7 +310,7 @@ The `xxf:XML` capitalization is supported and preferred, for consistency with `x
 
 ### xxf:xpath2 type
 
-This types checks that the value is well-formed XPath 2.0. Any variable used by the expression is assumed to be in scope:
+This type checks that the value is well-formed XPath 2.0. Any variable used by the expression is assumed to be in scope:
 
 ```markup
 <xf:bind ref="my-xpath" type="xxf:xpath2"/>
@@ -330,7 +330,7 @@ The `xxf:XPath2` capitalization is supported and preferred, for consistency with
 
 \[SINCE Orbeon Forms 2020.1]
 
-This types checks that the value is a well-formed XPath 2.0 value template. Any variable used by the expression is assumed to be in scope:
+This type checks that the value is a well-formed XPath 2.0 value template. Any variable used by the expression is assumed to be in scope:
 
 ```markup
 <xf:bind ref="my-xpath" type="xxf:XPath2ValueTemplate"/>

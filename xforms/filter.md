@@ -110,14 +110,14 @@ You deploy Orbeon Forms as a separate WAR with the following steps:
 
 Before forwarding Ajax requests to Orbeon Forms, the XForms filter [checks][8] that a session exists for the current user. This is done to deal with the scenario where users log out from your application but still have, say in another tab, a form created with Orbeon Forms open. When they log out, you invalidate the session in your app, but the Orbeon session is still there. Without this check, after logging out, users could switch to the other tab, and continue to interact with the form, and it would work as the Ajax requests would be routed to Orbeon Forms, whose session is still alive, which, obviously, you wouldn't want that to happen.
 
-If your application never creates a session, this check will always fail, and Ajax request will never go through. To get around this, you can either:
+If your application never creates a session, this check will always fail, and Ajax requests will never go through. To get around this, you can either:
 
 * Set up your application server so your application session is shared with the Orbeon Forms session.
     * For instance, if using WebLogic, you can do so by deploying your app and Orbeon Forms in the same EAR, and [setting][9] `<sharing-enabled>` to `true` in `weblogic-application.xml`.
     * With Tomcat, enable [Single Sign On][10].
 * Always create a session in your code, e.g. with `request.getSession()`, even if you're not going to store anything in that session.
 
-All URLs are designed go through your web application's context, so your application and the Orbeon Forms XForms engine automatically share the same session.
+All URLs are designed to go through your web application's context, so your application and the Orbeon Forms XForms engine automatically share the same session.
 
 ## Generating XHTML and XForms
 
@@ -327,7 +327,7 @@ In XForms you reference the service with the action attribute of `<xf:submission
 What happens when your JSP or servlet produces an XHTML and XForms document?
 
 * If configured appropriately in `web.xml`, the Orbeon Forms XForms filter kicks in and intercepts the output of your JSP or servlet (whether produced the regular way or passed as a request attribute).
-* The Orbeon Forms XForms filter then forward the request to Orbeon Forms, at the location `/xforms-renderer`.
+* The Orbeon Forms XForms filter then forwards the request to Orbeon Forms, at the location `/xforms-renderer`.
 * Orbeon Forms reacts to `/xforms-renderer` by extracting the XHTML and XForms document from the forwarded request.
 * Orbeon Forms sends the XHTML and XForms document to the standard Orbeon Forms [epilogue][12] called `/config/epilogue-servlet.xpl`. The epilogue performs several tasks, including transforming XHTML and XForms into HTML that the browser can understand. The default configuration of this pipeline should be fine for most use cases, which means you usually don't need to worry about it.
 

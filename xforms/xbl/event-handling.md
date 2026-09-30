@@ -155,13 +155,13 @@ The component user can listen to this event as expected, for example:
 </fr:foobar>
 ```
 
-The use of the `my:` prefix in the event context information is not mandatory, but if a prefixed is used a namespace mapping must be in scope. It is good practice to use a prefix so as to prevent name conflicts with standard XForms event context information.
+The use of the `my:` prefix in the event context information is not mandatory, but if a prefix is used a namespace mapping must be in scope. It is good practice to use a prefix so as to prevent name conflicts with standard XForms event context information.
 
 ## Component author: listening for events dispatched to the component
 
 This allows a component to receive information from the outside world.
 
-You can register event handler attached to the bound node inside your component with the `xbl:handlers/xbl:handler` elements:
+You can register event handlers attached to the bound node inside your component with the `xbl:handlers/xbl:handler` elements:
 
 ```markup
 <xbl:binding id="fr-bar" element="fr|bar">

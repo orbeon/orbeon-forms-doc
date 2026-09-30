@@ -13,7 +13,7 @@
 
 ## Usage
 
-The map component shows the location of an address on the map, but doesn't by itself allow users to enter an address. So, in Form Builder, you'll want to first create a text field for users to enter an address. Say you name this field `address`. Then add a map control, which you'll find after scrolling to the very bottom of the left sidebar, open the Control Settings for the new, and under Formulas set its Calculated Value as `$address`. If you test the form, the map will show the map of the world.
+The map component shows the location of an address on the map, but doesn't by itself allow users to enter an address. So, in Form Builder, you'll want to first create a text field for users to enter an address. Say you name this field `address`. Then add a map control, which you'll find after scrolling to the very bottom of the left sidebar, open the Control Settings for the new control, and under Formulas set its Calculated Value as `$address`. If you test the form, the map will show the map of the world.
 
 ![](example-map-world.png)
 

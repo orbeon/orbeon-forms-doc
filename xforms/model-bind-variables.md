@@ -53,7 +53,7 @@ The following algorithm is followed:
 
 ### With Orbeon Forms 4.4 and earlier
 
-If a bind referenced by a variable is within an unambiguous context, that is the context in which that bind evaluates is a single node, then the values of the bind's node-set is returned by the variable, otherwise the empty sequence is returned.
+If a bind referenced by a variable is within an unambiguous context, that is the context in which that bind evaluates is a single node, then the values of the bind's node-set are returned by the variable, otherwise the empty sequence is returned.
 
 This means that target bind objects within more than one bind iteration cannot be accessed.
 

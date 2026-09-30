@@ -343,7 +343,7 @@ fr:is-noscript() as xs:boolean
 fr:is-pe() as xs:boolean
 ```
 
-Return whether the current version Orbeon Forms is the Professional Edition (PE).
+Return whether the current version of Orbeon Forms is the Professional Edition (PE).
 
 ### fr:is-readonly-mode()
 
@@ -397,7 +397,7 @@ Return the modification date of the current form data *as of the last read from 
 fr:pdf-templates() as map(xs:string, xs:string?)*
 ```
 
-Return the list of section templates associate with the current form definition. The return value is a sequence of
+Return the list of section templates associated with the current form definition. The return value is a sequence of
 `map(xs:string, xs:string?)`, where keys map to values as follows:
 
 - `path`: the path to the PDF template in the persistence layer
@@ -620,7 +620,7 @@ fr:wizard-current-page-name() as xs:string?
 ```
 
 - If a wizard page is being shown, the function returns the name of the current wizard page name, which is the section name used in Form Builder.
-- Otherwise, it returns the empty sequence. So an empty sequence is returned if the form is not using the wizard view. This can be used as follows to show a button, say the Submit button, only the last page of the wizard if the form is using the wizard view, but to always show that Submit button if the form isn't using the wizard view.
+- Otherwise, it returns the empty sequence. So an empty sequence is returned if the form is not using the wizard view. This can be used as follows to show a button, say the Submit button, only on the last page of the wizard if the form is using the wizard view, but to always show that Submit button if the form isn't using the wizard view.
 
 ```xml
 <property

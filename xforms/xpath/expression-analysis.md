@@ -108,9 +108,9 @@ The same idea applies to:
 
 Not all XPath expressions are currently analyzed fully. If an XPath expression is not analyzable, it will simply be re-evaluated whenever needed.
 
-These expression are not analyzed:
+These expressions are not analyzed:
 
-Expression containing the following functions:
+Expressions containing the following functions:
 
 * `index()` / `xxf:index()`&#x20;
 * `xxf:case()`
@@ -126,4 +126,4 @@ For debugging purposes, you can log the result of the XPath analysis to the serv
     value="true">
 ```
 
-This lists all the expressions considered, mark whether they were analyzed or not, and list all aspects of the analysis.
+This lists all the expressions considered, marks whether they were analyzed or not, and lists all aspects of the analysis.

@@ -221,7 +221,7 @@ While the control is relevant, upon refresh:
 NOTES:
 
 - `xf:output/@value` also dispatches `xforms-value-changed`.
-- `xf:var` also dispatch `xforms-value-changed`.
+- `xf:var` also dispatches `xforms-value-changed`.
 
 _NOTE: XForms 1.1 says that all MIP events must be dispatched upon value change. This is not necessary because those events are properly tracked independently._
 

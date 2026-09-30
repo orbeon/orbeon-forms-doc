@@ -43,7 +43,7 @@ or:
 
 _NOTE: Type annotations are not automatically enabled for backward compatibility reasons. However, they are enabled by default for new forms created with Form Builder._
 
-The following property controls whether instance types annotations are exposed to XPath 2.0 expressions:
+The following property controls whether instance type annotations are exposed to XPath 2.0 expressions:
 
 ```markup
 <property

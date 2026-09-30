@@ -19,6 +19,6 @@ xf:if()
 xxf:if()
 ```
 
-This function implements the semantic of the XForms 1.0 `if()` function.
+This function implements the semantics of the XForms 1.0 `if()` function.
 
 Prefer the XPath 2 `if(...) then ... else ...` construct.

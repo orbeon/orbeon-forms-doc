@@ -46,7 +46,7 @@ Using XSLT to implement components is not always a good alternative:
     * Each component instantiation must produce unique ids in the browser
     * Id resolution must depend on where ids are used
     * Ids in different repeat iterations must be unique as well
-* XSLT does not enforce any encapsulations rules, including:
+* XSLT does not enforce any encapsulation rules, including:
     * Visibility of objects from inside or outside a component
     * Containment of event flows within the component
 * Local models and instances are better handled natively
@@ -61,6 +61,6 @@ Convinced? If not, read on! In the section about extensions, you'll find out tha
 
 * Orbeon Forms components are inspired by [XBL 2](http://www.w3.org/TR/xbl/). XBL in this case is implemented server-side, not on the client!
 * Support for components is implemented at the XForms engine level.
-* Components can therefore be used within XForms pages, but not within non-XForms page (such as plain XHTML pages).
+* Components can therefore be used within XForms pages, but not within non-XForms pages (such as plain XHTML pages).
 * Because the XBL specification does not detail how it can be used in conjunction with XForms, Orbeon Forms uses XBL in a particular way, but it is not necessarily the only possible way.
 * Orbeon Forms implements a superset of a subset of XBL!

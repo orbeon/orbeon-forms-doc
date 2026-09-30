@@ -132,7 +132,7 @@ The attribute is an AVT.
 
 \[SINCE Orbeon Forms 2016.3]
 
-The `includes` and `excludes` attribute allow filtering which controls are allowed to receive focus when using `<xf:setfocus>`.
+The `includes` and `excludes` attributes allow filtering which controls are allowed to receive focus when using `<xf:setfocus>`.
 
 * `includes`
   * list of control QNames to include
@@ -204,7 +204,7 @@ The following logic takes place:
 Lots of things can change during refresh:
 
 * controls might become non-relevant
-* repeat iterations might be added, removed, or move
+* repeat iterations might be added, removed, or moved
 * with the XForms 2 `@caseref` attribute, cases can become hidden
 
 Just after refresh, the focus is adjusted accordingly:
@@ -305,7 +305,7 @@ Orbeon Forms implements the following XForms 1.1-compatible behavior when receiv
   * if the control is non-relevant, read-only, or not visible, processing of the event terminates and the focus is not changed
 * If the target control is a core form control (such as `<xf:input>`):
   * focus is set to that control
-* If the target control is one of the following container form control: `<xf:group>`, `<xf:case>`, `<xxf:dialog>`, or an XBL control:
+* If the target control is one of the following container form controls: `<xf:group>`, `<xf:case>`, `<xxf:dialog>`, or an XBL control:
   * children controls are recursively searched and the first descendant control able to receive focus receives focus &#x20;
   * if there is no such control, processing of the event terminates
 * If the target control is the `<xf:switch>` control: &#x20;

@@ -40,7 +40,7 @@ Directly under the `<xf:model>` element, the following rules apply:
 - Variables are supported directly under the `<xf:model>` element.
 - Model variables are evaluated in the order in which they appear in the model.
 - All model variables are visible to other model elements such as `<xf:bind>` or `<xf:submission>`.
-- Model variables are also visible from XPath expression outside of models whenever that model is in scope.
+- Model variables are also visible from XPath expressions outside of models whenever that model is in scope.
 
 ```xml
 <xh:head>

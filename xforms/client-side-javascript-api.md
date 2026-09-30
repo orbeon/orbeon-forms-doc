@@ -65,7 +65,7 @@ The following objects are publicly exposed:
 - `ORBEON.xforms.Events.errorEvent`
     - See [JavaScript Event Handler](/configuration/advanced/client-error-handling.md#javascript-event-handler).
 
-Associated functions are described in more details below.
+Associated functions are described in more detail below.
 
 In addition, `ORBEON.jQuery` exposes the version of jQuery used by Orbeon Forms.
 
@@ -194,7 +194,7 @@ ORBEON.xforms.Document.dispatchEvent(
 );
 ```
 
-You can dispatch your own events from JavaScript by calling the function `ORBEON.xforms.Document.dispatchEvent()`. The function takes a single parameter which is an object with properties as defined in the table below. Calling the function with several parameters in order listed in the table below is supported as a deprecated alternative for backward compatibility.
+You can dispatch your own events from JavaScript by calling the function `ORBEON.xforms.Document.dispatchEvent()`. The function takes a single parameter which is an object with properties as defined in the table below. Calling the function with several parameters in the order listed in the table below is supported as a deprecated alternative for backward compatibility.
 
 In most cases, you only need to call `dispatchEvent()` with a target id and event name, as in:
 
@@ -227,7 +227,7 @@ An event handler for the custom event can be in an XForms model or control, and 
 | **properties** |  No |  Allows you to attach custom properties to the event.
 | **form** |  No |  The form object that corresponds to the XForms form you want to dispatch the event to. This argument is only needed when you have multiple "XForms forms" on the same HTML page, which only happens if you are running your form in embedded mode and you have multiple forms on the same page.<br><br>When the parameter is not present or null, the first form on the HTML page with the class `xforms-form` is used. |
 | **incremental** |  No |  When `false` the event is sent to the XForms server right away. When `true` the event is sent after a small delay, giving the opportunity for other events that would occur during that time span to be aggregated with the current event.
-| **ignoreErrors** |  No |  When set to `true`, errors happening while the event is dispatched to the server are ignored. This is in particular useful when you are using a JavaScript timer (e.g. `window.setInterval()`) that runs a JavaScript function on a regular interval to dispatch an event to the server, maybe to have part of the UI updated. In some cases, you might not want to alert the user when a there is a maybe temporary communication error while the event is being dispatched to the server. In those cases, you call `dispatchEvent()` with `ignoreErrors` set to `true`. |
+| **ignoreErrors** |  No |  When set to `true`, errors happening while the event is dispatched to the server are ignored. This is in particular useful when you are using a JavaScript timer (e.g. `window.setInterval()`) that runs a JavaScript function on a regular interval to dispatch an event to the server, maybe to have part of the UI updated. In some cases, you might not want to alert the user when there is a maybe temporary communication error while the event is being dispatched to the server. In those cases, you call `dispatchEvent()` with `ignoreErrors` set to `true`. |
 
 
 The following parameters were previously documented but had no effect. They are ignored and you should not use them:
@@ -245,7 +245,7 @@ For security reasons, by default Orbeon Forms prohibits client-side JavaScript f
 </xf:model>
 ```
 
-This attribute contains a space-separated list of event name. In this example, you explicitly enable your JavaScript code to fire the two events `acme-super-event` and `acme-famous-event` to any relevant and non-readonly XForms controls, or to any model object supporting event handlers. Note that you can only enable custom events, but you cannot enable standard XForms or DOM events in addition to `DOMActivate`, `DOMFocusIn` and `DOMFocusOut`.
+This attribute contains a space-separated list of event names. In this example, you explicitly enable your JavaScript code to fire the two events `acme-super-event` and `acme-famous-event` to any relevant and non-readonly XForms controls, or to any model object supporting event handlers. Note that you can only enable custom events, but you cannot enable standard XForms or DOM events in addition to `DOMActivate`, `DOMFocusIn` and `DOMFocusOut`.
 
 Since the event handlers for custom events can be called by JavaScript code that runs on the client, you need to be aware that these handlers can potentially be activated by anybody able to load the form in his browser.
 

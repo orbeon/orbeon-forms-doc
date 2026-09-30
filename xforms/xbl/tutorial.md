@@ -19,7 +19,7 @@ By default, within an `<xbl:binding>` element, encapsulation is strong: this mea
 
 In other words, things behave as if you were working in a new, completely separate XForms document!
 
-If you place models within `<xbl:implementation>` or `<xbl:template>`, the same rule that applies in a top-level XForms document apply:
+If you place models within `<xbl:implementation>` or `<xbl:template>`, the same rule that applies in a top-level XForms document applies:
 
 * The default XPath context starts with the root element of the first instance of the first model.
 * However, if your component doesn't have a model, then the XPath context is set to an empty document node.

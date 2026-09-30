@@ -52,7 +52,7 @@ _NOTE: This works the same as the per-form properties for `<xf:input>`._
 
 The XForms `oxf.xforms.label.appearance` or `oxf.xforms.hint.appearance` (or the corresponding `xxf:label.appearance` and `xxf:hint.appearance` attributes on the first `<xf:model>` element) allow setting a default for the labels and hint appearances for the entire form.
 
-The default values is `full`:
+The default value is `full`:
 
 ```xml
 <property

@@ -2,9 +2,9 @@
 
 ## Rationale
 
-Some Orbeon Forms components do not require any custom JavaScript code, for example components which simply combine other controls (such as a date components made of separate input fields or dropdown menus). In such cases, you implement all the logic with XForms.
+Some Orbeon Forms components do not require any custom JavaScript code, for example components which simply combine other controls (such as a date component made of separate input fields or dropdown menus). In such cases, you implement all the logic with XForms.
 
-On the other hand, some components encapsulate functionality mainly implemented in JavaScript. Orbeon Forms provides an easy way to interface with the JavaScript side: each JavaScript-based component must define a JavaScript class used to handle the component's lifecycle as well as hold custom data and functions. We call this class is called the component's *companion class*. One instance of this class is created by Orbeon Forms for each instance of relevant (visible) control. We call these instances *companion instances*.
+On the other hand, some components encapsulate functionality mainly implemented in JavaScript. Orbeon Forms provides an easy way to interface with the JavaScript side: each JavaScript-based component must define a JavaScript class used to handle the component's lifecycle as well as hold custom data and functions. We call this class the component's *companion class*. One instance of this class is created by Orbeon Forms for each instance of relevant (visible) control. We call these instances *companion instances*.
 
 ## Directory layout
 
@@ -300,8 +300,8 @@ The XForms engine calls this method:
 
 `xformsUpdateValue()` must return:
 
-- If it sets value is synchronously: `undefined` (or not return anything).
-- If it sets value is asynchronously: a jQuery deferred object whose `done()` method must be called once the value is known to have been fully applied. For instance:
+- If it sets value synchronously: `undefined` (or not return anything).
+- If it sets value asynchronously: a jQuery deferred object whose `done()` method must be called once the value is known to have been fully applied. For instance:
 	```javascript
 	var editor   = this.editor;
 	var deferred = $.Deferred();
@@ -413,7 +413,7 @@ It is *not* called just after the control is initialized.
 
 [UNTIL Orbeon Forms 2021.1]
 
-So your JavaScript can access the current value of parameters and be notified when their value changes, include the `oxf:/oxf/xslt/utils/xbl.xsl` XSL file, and call `xxbl:parameter()` function for each parameter, as in:
+So your JavaScript can access the current value of parameters and be notified when their value changes, include the `oxf:/oxf/xslt/utils/xbl.xsl` XSL file, and call the `xxbl:parameter()` function for each parameter, as in:
 
 ```xml
 <xbl:xbl>
@@ -449,7 +449,7 @@ var prefix =
     ORBEON.xforms.Document.getValue(prefixElement.id);
 ```
 
-Whenever the value of a parameter changes, a method of your JavaScript class is called. The name of this method is ` parameterFooChanged` if "foo" is the name of your property. Parameters names are in lowercase and use dash as a word separator, while the method names use camel case. E.g. if your parameter name is `digits-after-decimal`, you will defined a method `parameterDigitsAfterDecimalChanged`.
+Whenever the value of a parameter changes, a method of your JavaScript class is called. The name of this method is ` parameterFooChanged` if "foo" is the name of your property. Parameter names are in lowercase and use dash as a word separator, while the method names use camel case. E.g. if your parameter name is `digits-after-decimal`, you will define a method `parameterDigitsAfterDecimalChanged`.
 
 ## Sending events from JavaScript
 

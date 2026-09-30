@@ -2,7 +2,7 @@
 
 ## Orbeon Forms 4.3
 
-Here at the feature from [XForms 2.0](https://www.w3.org/community/xformsusers/wiki/XForms_2.0) and its [XPath expression module](https://www.w3.org/community/xformsusers/wiki/XPath_Expressions_Module) that are available as of Orbeon Forms 4.3:
+Here are the features from [XForms 2.0](https://www.w3.org/community/xformsusers/wiki/XForms_2.0) and its [XPath expression module](https://www.w3.org/community/xformsusers/wiki/XPath_Expressions_Module) that are available as of Orbeon Forms 4.3:
 
 - `xf:var`
 - `xf:repeat` over sequences of atomic values and nodes
@@ -83,7 +83,7 @@ XForms 2.0 features added with Orbeon Forms 2020.1:
     
 ### Example of `xf:copy` attributes support 
 
-Let's say we an XML representation which proposes a discriminated union based on a `type` attribute. We have, in the data, either:
+Let's say we have an XML representation which proposes a discriminated union based on a `type` attribute. We have, in the data, either:
 
 ```xml
 <label type="PredefinedButtonLabel"/>

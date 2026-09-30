@@ -94,7 +94,7 @@ Now consider `<xf:output>`. As you guess from the name of the element, this simp
 
 With many client-side libraries, you express this type of logic with JavaScript. With XForms, you use XPath instead. This means that you need to learn at least a few bits of the XPath syntax. While XPath may be different from what you already know (it is based on expressions and definitely targeted at XML), it is in fact a smaller language than JavaScript.
 
-So how do you hook-up the logic within `<xf:output>`? Here, instead of a `ref` attribute, we use a `value` attribute. Like `ref`, `value` takes an XPath expression, but it doesn't actually create a binding to instance data: it just returns a string. The XPath is as follows:
+So how do you hook up the logic within `<xf:output>`? Here, instead of a `ref` attribute, we use a `value` attribute. Like `ref`, `value` takes an XPath expression, but it doesn't actually create a binding to instance data: it just returns a string. The XPath is as follows:
 
 ```xpath
 if (normalize-space(/first-name) = '') then

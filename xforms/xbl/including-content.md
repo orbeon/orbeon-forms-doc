@@ -53,7 +53,7 @@ You would think that the implementation of the `fr:link-select1` component could
 
 But this doesn't work properly because the CSS selector `xf|label` actually returns _all descendant label elements_, including the `xf:label` element under `xf:itemset`.
 
-The recommend way to express this is as follows:
+The recommended way to express this is as follows:
 
 ```markup
 <xf:group>

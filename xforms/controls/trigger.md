@@ -103,4 +103,4 @@ You can obtain this behavior by using the `xxf:modal="true"` attribute on `<xf:t
 
 With this attribute set to true, user input is blocked until all the events triggered by `DOMActivate` are processed. In the meanwhile, the page is grayed out and an icon appears indicating that background processing is taking place.
 
-As soon as users activate (press enter or click) on a modal trigger or submit, the corresponding button loses the focus. This prevents users from being able to press enter and thus activate a button which still has the focus, while screen is grayed out.
+As soon as users activate (press enter or click) on a modal trigger or submit, the corresponding button loses the focus. This prevents users from being able to press enter and thus activate a button which still has the focus, while the screen is grayed out.

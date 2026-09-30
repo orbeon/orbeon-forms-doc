@@ -16,7 +16,7 @@ The "meat" of most components is in files ending with the `.xbl` extension.
 
 * create a new `xbl` directory under your RESOURCES directory
 * create a directory with your company or project name (e.g. `acme`; Orbeon uses `orbeon`)
-* create directory with your new component name (e.g. `cool-stuff`)
+* create a directory with your new component name (e.g. `cool-stuff`)
 * create a new XBL file with the same name in that directory, e.g. `cool-stuff.xbl`
 * so you should have: `xbl/acme/cool-stuff/cool-stuff.xbl`
 
