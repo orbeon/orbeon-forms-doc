@@ -10,11 +10,13 @@ Form Runner offers a number of integration APIs, including:
     - [Search](/form-runner/api/persistence/search.md)
     - [List form data attachments](/form-runner/api/persistence/list-form-data-attachments.md)
     - [Form metadata](/form-runner/api/persistence/forms-metadata.md)
+    - [Form discovery](/form-runner/api/persistence/form-discovery.md)
     - [Caching](/form-runner/api/persistence/caching.md)
     - [Versioning](/form-runner/api/persistence/versioning.md)
     - [Lease API](/form-runner/api/persistence/lease.md)
     - [Reindexing API](/form-runner/api/persistence/reindexing.md)
     - [Revision History API](/form-runner/api/persistence/revision-history.md)
+    - [Zip Export API](/form-runner/api/persistence/export-zip.md)
     - [Custom persistence providers](/form-runner/api/persistence/custom-persistence-providers.md)
 - Other APIs
     - [Connection context API](/form-runner/api/other/connection-context-api.md)

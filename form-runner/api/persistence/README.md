@@ -7,6 +7,7 @@
 - [Search](search.md)
 - [List form data attachments](list-form-data-attachments.md)
 - [Form metadata](forms-metadata.md)
+- [Form discovery](form-discovery.md)
 - [Caching](caching.md)
 - [Versioning](versioning.md)
 - [Lease API](lease.md)
@@ -47,8 +48,11 @@ For example, to deal with form data:
 | Read      | `GET`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
 | Update    | `PUT`       | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
 | Delete    | `DELETE`    | <code>/fr/service/persistence/crud/$app/$form/(data&#124;draft)/$document/data.xml</code> |
-| Search    | `POST`      | `/fr/service/persistence/search/$app/$form`                                               |
-| Metadata  | `GET`       | `/fr/service/persistence/form`                                                            |
+| Search            | `POST`      | `/fr/service/persistence/search/$app/$form`                                               |
+| Metadata          | `GET`       | `/fr/service/persistence/form`                                                            |
+| Distinct apps     | `GET`       | `/fr/service/persistence/distinct-apps`                                                   |
+| Distinct forms    | `GET`       | `/fr/service/persistence/distinct-forms/$app`                                             |
+| Distinct versions | `GET`       | `/fr/service/persistence/distinct-versions/$app/$form`                                     |
 
 where:
 

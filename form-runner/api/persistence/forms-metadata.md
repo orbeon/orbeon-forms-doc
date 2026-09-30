@@ -505,7 +505,7 @@ Here note that version 5 is marked as not available with:
 - [CRUD](crud.md)
 - [Reindexing](reindexing.md)
 - [Search](search.md)
-- [Form metadata](forms-metadata.md)
+- [Form discovery](form-discovery.md)
 - [Caching](caching.md)
 - [Versioning](versioning.md)
 - [Custom persistence providers](custom-persistence-providers.md)

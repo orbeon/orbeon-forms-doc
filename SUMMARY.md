@@ -221,6 +221,7 @@
       * [Search API](form-runner/api/persistence/search.md)
       * [List form data attachments API](form-runner/api/persistence/list-form-data-attachments.md)
       * [Form Metadata API](form-runner/api/persistence/forms-metadata.md)
+      * [Form Discovery API](form-runner/api/persistence/form-discovery.md)
       * [Lease API](form-runner/api/persistence/lease.md)
       * [Reindexing API](form-runner/api/persistence/reindexing.md)
       * [Caching](form-runner/api/persistence/caching.md)
