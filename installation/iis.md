@@ -26,7 +26,7 @@ Download the following files by clicking on each link, then clicking on the "Dow
 
 ### Pass the user information to Tomcat through a header
 
-- In the directory where you put `user.aspx`, create a directory named `App_Code`. Move the `WindowsAuthHeaderModule.cs` inside that `App_Code` directory. This module sets the `HTTP_ORBEON_USERNAME` variable to the part of Windows username that follows the `\` character.
+- In the directory where you put `user.aspx`, create a directory named `App_Code`. Move the `WindowsAuthHeaderModule.cs` inside that `App_Code` directory. This module sets the `HTTP_ORBEON_USERNAME` variable to the part of the Windows username that follows the `\` character.
 - Move the `web.config` in the same directory where you have `App_Code` and `user.aspx`.
 - Move `user.jsp` in the directory `webapps\ROOT`, inside the Tomcat directory (for instance `C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\ROOT`). This page will show the value of the `Orbeon-Username` header.
 - Access [http://localhost/user.jsp](http://localhost/user.jsp). It should show something like: *Forwarded User: Homer Simpson*.

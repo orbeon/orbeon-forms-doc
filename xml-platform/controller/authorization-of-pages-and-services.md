@@ -132,7 +132,7 @@ An additional header, `Orbeon-Remote-Address`, is passed, with the value of the 
 
 ## A simple authorization service
 
-Orbeon Forms ships with a very simple WAR file: `orbeon-auth.war`. This war file contains a dummy servlet and a web.xml with stub to configure BASIC authentication. You typically deploy this WAR file within the same servlet container as the main Orbeon Forms WAR file. This means that you can set the property above to `/orbeon-auth`. Here is the default content of the `web.xml`:
+Orbeon Forms ships with a very simple WAR file: `orbeon-auth.war`. This war file contains a dummy servlet and a web.xml with a stub to configure BASIC authentication. You typically deploy this WAR file within the same servlet container as the main Orbeon Forms WAR file. This means that you can set the property above to `/orbeon-auth`. Here is the default content of the `web.xml`:
 
 ```xml
 <web-app version="2.4"

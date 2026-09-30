@@ -11,7 +11,7 @@ Orbeon Forms addresses this question by defining two standard XML document forma
 
 ## Binary documents
 
-A binary document consist of a `document` root node containing character data encoded with Base64. The following attributes are supported:
+A binary document consists of a `document` root node containing character data encoded with Base64. The following attributes are supported:
 
 * `xsi:type`: mandatory, specifies the content as `xs:base64Binary`
 * `content-type`: optional, provides a content-type which may be used by the consumer

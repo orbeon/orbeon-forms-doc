@@ -59,7 +59,7 @@ You don't have to use the following, but in case you care, the Orbeon Forms deve
 
 ### GitHub token
 
-Starting with Orbeon Forms 2021.1, some packages are hosted by [GitHub Packages](https://github.com/features/packages). Unfortunately, as of May 2022, there is no way to enable downloading these packages fully anonymously via tools like Maven or sbt. There is a now [multi-year thread on GitHub about this](https://github.community/t/download-from-github-package-registry-without-authentication/14407/146).
+Starting with Orbeon Forms 2021.1, some packages are hosted by [GitHub Packages](https://github.com/features/packages). Unfortunately, as of May 2022, there is no way to enable downloading these packages fully anonymously via tools like Maven or sbt. There is now a [multi-year thread on GitHub about this](https://github.community/t/download-from-github-package-registry-without-authentication/14407/146).
 
 This means that until that is addressed, or until we move to another host for packages, a GitHub token is needed to build Orbeon Forms.
 
@@ -221,7 +221,7 @@ JAVA_OPTS="-ea $ORBEON_MEMORY_OPTS -Dapple.awt.UIElement=true"
 
 ### Making changes
 
-If you modify Java or Scala files, you need to recompile. You do this from the command-line with sbt, which can let run the `compile` task incrementally with:
+If you modify Java or Scala files, you need to recompile. You do this from the command-line with sbt, which can let you run the `compile` task incrementally with:
 
 ```
 ~compile
@@ -231,7 +231,7 @@ TODO: document making changes to resources or assets.
 
 ### Sbt tips
 
-The following runs only tests within `FormBuilderFunctionsTest` which contain the string `my test` and show full stack traces in case of exception:
+The following runs only tests within `FormBuilderFunctionsTest` which contain the string `my test` and shows full stack traces in case of exception:
 
 ```
 testOnly *FormBuilderFunctionsTest -- -z "my test" -oF
@@ -266,7 +266,7 @@ To incrementally compile Scala and Java files during further development, run:
 
 The `copyJarToExplodedWar` command in the `root` project incrementally:
 
-* builds all the sub-projects depended by `root`
+* builds all the sub-projects depended on by `root`
   * `orbeon-common`
   * `orbeon-dom`
   * `orbeon-form-builder-shared` (empty currently on `master`)
@@ -445,7 +445,7 @@ _NOTE: With ant, class files are produced under `build/classes`, but with Intell
 
 #### Building a distribution
 
-_WARNING: `ant clean` deletes everything under the `build` directory. This includes the data for the embedded eXist database. If you have some test data, including form definitions and data in there, backup `build/orbeon-war/WEB-INF/exist-data` first!_
+_WARNING: `ant clean` deletes everything under the `build` directory. This includes the data for the embedded eXist database. If you have some test data, including form definitions and data in there, back up `build/orbeon-war/WEB-INF/exist-data` first!_
 
 * run `ant clean`
 * run `ant orbeon-dist-war` to build the WAR files

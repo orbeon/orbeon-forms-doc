@@ -10,7 +10,7 @@ We also have reports of this feature working with OpenLiberty and Hazelcast sess
 
 The purpose of replication is to provide high-availability of Orbeon Forms with as little disruption as possible to users currently filling out forms. This is achieved by replicating state between servers.
 
-Consider a simple scenario of load balancing with two servers, with sticky sessions (that is, a given user's requests always reach the same server). If one of the servers fails, new users will be assigned to the other server. So the system remains operational from that point of view. However, users with active sessions will have their current work lost, as the content will still in the failed server-memory.
+Consider a simple scenario of load balancing with two servers, with sticky sessions (that is, a given user's requests always reach the same server). If one of the servers fails, new users will be assigned to the other server. So the system remains operational from that point of view. However, users with active sessions will have their current work lost, as the content will still be in the failed server-memory.
 
 Replication changes that by replicating state to one or more additional servers. So if a server goes down, the load balancer can redirect users with active sessions to other servers, and because state was replicated there, users can continue their work.
 
@@ -20,7 +20,7 @@ Orbeon Forms achieves replication by enabling the replication of servlet session
 
 Sessions are still sticky for performance reasons. Because Orbeon Forms stores a lot of information in memory, and there are data structures associated with that information, there is a cost to recreate all necessary data structures at each request. Therefore, requests for a given user must constantly reach the same server. However, if a server fails, then there is a one-time cost to recreating data structures on the new server for the given user (in fact, for a given form in use by that user).
 
-A load balancer is required. It is in charge of proxying client requests to specific servers, detect which servers might have failed or are being brought back, and ensuring session affinity.
+A load balancer is required. It is in charge of proxying client requests to specific servers, detecting which servers might have failed or are being brought back, and ensuring session affinity.
 
 <figure>
     <img src="images/replication.png" alt="Replication architecture" width="500"/>
@@ -48,7 +48,7 @@ When to use the Ehcache configuration (deprecated as of Orbeon Forms 2025.1):
 
 - Ehcache is better suited for traditional on-premises deployments where servers are on the same network and can use multicast for automatic peer discovery.
 - Your servers can communicate via multicast (IP multicast address and port).
-- You are using version of Orbeon Forms before 2024.1.2.
+- You are using a version of Orbeon Forms before 2024.1.2.
 
 ### Infinispan configuration
 
@@ -118,7 +118,7 @@ Orbeon Forms has a single property enabling replication. By default, it is set t
 
 The Orbeon Forms `ehcache.xml` must be modified to include replication settings, which are turned off by default. This is similar to Tomcat session replication. To modify this file, extract it from the `WEB-INF/lib/orbeon-core.jar`, and copy it in the `WEB-INF/resources/config` directory. You can then modify the `ehcache.xml` in that directory, and your updated version will take precedence over the built-in version of that file found inside `orbeon-core.jar`.
 
-*NOTE: There isn't a single set of settings to replicate the Tomcat servlet session and Ehcache, as the two products use different libraries for replication. But the idea is that both configuration should behave as closely as possible from each other.* 
+*NOTE: There isn't a single set of settings to replicate the Tomcat servlet session and Ehcache, as the two products use different libraries for replication. But the idea is that both configurations should behave as closely as possible from each other.* 
 
 The keys to this configuration are:
 
@@ -218,7 +218,7 @@ Here is an example configuration:
 
 When using a firewall:
 
-1. The `multicastGroupPort` port might need an UDP firewall unlock.
+1. The `multicastGroupPort` port might need a UDP firewall unlock.
 
 2. If you don't specify ports for `<cacheManagerPeerListenerFactory>`, the ports are chosen at random and might be blocked by the firewall. You can specify explicit ports to address this: 
 
@@ -345,7 +345,7 @@ Uploaded files which are not yet saved to a database are currently not replicate
   - clears the associated temporary file path
   - shows an alert to the user
   
-This requires users with unsaved attachments to re-upload their attachments. This is not ideal, but it is likely that  the user still have the attachment or attachments available. 
+This requires users with unsaved attachments to re-upload their attachments. This is not ideal, but it is likely that  the user still has the attachment or attachments available. 
   
 ### Loss of state
 

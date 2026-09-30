@@ -11,7 +11,7 @@ Orbeon Forms requires a few important configuration steps to be performed before
 * setting a password for encryption
 * configuring a separate database
 
-If either of these is not properly configured, Orbeon Forms show a banner at the top of application pages.
+If either of these is not properly configured, Orbeon Forms shows a banner at the top of application pages.
 
 ![Configuration banner](images/configuration-banner.png)
 

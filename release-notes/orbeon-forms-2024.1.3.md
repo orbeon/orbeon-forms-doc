@@ -47,7 +47,7 @@ You can now specify custom cards on the Landing page for:
 * published form definitions in a particular app
 * form data for a particular form
 
-This including specifying titles, descriptions, and icons for those cards.
+This includes specifying titles, descriptions, and icons for those cards.
 
 In addition, if the configuration is blank, the Landing page is entirely disabled.
 
@@ -55,7 +55,7 @@ For more, see the [documentation](../form-runner/feature/landing-page.md#configu
 
 ### Other new features
 
-* New keyboard shortcut allow you to move a grid line up or down in Form Builder: <kbd>⌃⇧↑</kbd> and <kbd>⌃⇧↓</kbd>.
+* New keyboard shortcuts allow you to move a grid line up or down in Form Builder: <kbd>⌃⇧↑</kbd> and <kbd>⌃⇧↓</kbd>.
 * You can now automatically open search options in the Forms/Admin pages ([doc](../form-runner/feature/published-forms-page.md#search-options-opened-on-load)).
 * The WebP image format is now supported in automatic PDF production.
 

@@ -12,7 +12,7 @@ _NOTE: The Request generator can be used as the first component in a web applica
 
 ## Configuration
 
-The Request generator takes a mandatory configuration to select which request information to return. This configuration consists of a series of `include` and `exclude` elements containing XPath expressions selecting a number of element from the request tree. Those expressions can be as complex as any regular XPath 1.0 expression that returns a single node or a node-set. However, it is recommended to keep those expressions as simple as possible. One known limitation is that it is not possible to test on the `value` element of uploaded files, as well as the content of the request body.
+The Request generator takes a mandatory configuration to select which request information to return. This configuration consists of a series of `include` and `exclude` elements containing XPath expressions selecting a number of elements from the request tree. Those expressions can be as complex as any regular XPath 1.0 expression that returns a single node or a node-set. However, it is recommended to keep those expressions as simple as possible. One known limitation is that it is not possible to test on the `value` element of uploaded files, as well as the content of the request body.
 
 Sample Configuration:
 
@@ -136,7 +136,7 @@ When the request includes `/request/attributes`, the Request generator attempts 
 
 When the request includes `/request/body`, the Request generator retrieves the body of the request sent to the application server. The content of the body is made available as the following data types:
 
-* If the attribute `stream-type` on the `config` element is set to `xs:anyURI`, an URI is returned as the value of the `/request/body` element.
+* If the attribute `stream-type` on the `config` element is set to `xs:anyURI`, a URI is returned as the value of the `/request/body` element.
 * If the attribute `stream-type` on the `config` element is set to `xs:base64Binary`, the content of the request encoded as Base64 is returned as the value of the `/request/body` element.
 * Otherwise, the content of the `/request/body` is set as either `xs:anyURI` if the request body is large (as set by the `max-upload-memory-size` property, by default larger than 10 KB), or `xs:base64Binary` if the request body is small.
 * The URL stored as the value of the request body is only valid for the duration of the current request, unless the `stream-scope` attribute is set to `session`, in which case it is valid for the duration of the session. [SINCE 2010-12-09]
@@ -185,12 +185,12 @@ Uploaded files are stored into `parameter` elements, like any other form paramet
 </config>
 ```
 
-The URL stored as the value an upload body is only valid for the duration of the current request, unless the `stream-scope` attribute is set to `session`, in which case it is valid for the duration of the session.
+The URL stored as the value of an upload body is only valid for the duration of the current request, unless the `stream-scope` attribute is set to `session`, in which case it is valid for the duration of the session.
 
-The `parameter` element for an uploaded file contains the following elements in addition to the `name` and `value` elements use for other parameters:
+The `parameter` element for an uploaded file contains the following elements in addition to the `name` and `value` elements used for other parameters:
 
 * `filename`: stores the file name sent by the user agent
-* `content-type`: store the media type sent by the user agent
+* `content-type`: stores the media type sent by the user agent
 * `content-length`: stores the actual size in bytes of the uploaded data
 
 A resulting uploaded file may look as follows:

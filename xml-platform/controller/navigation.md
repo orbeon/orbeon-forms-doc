@@ -9,7 +9,7 @@ The site logic or page flow describes the conditions that trigger the navigation
 With the PFC, page flow is expressed declaratively and externally to the pages. Consequently, pages can be designed independently from each other. The benefits of a clear separation between site logic and page logic and layout include:
 
 * **Simplicity:** the site logic is declared in one place and in a declarative way. You don't need to write custom logic to perform redirects between pages or pass arguments from page to page.
-* **Maintainability:** having different developers implementing independent page is much easier. Since the relationship between pages is clearly stated in the page flow, it also becomes much easier to modify a page in an existing application without affecting other pages.
+* **Maintainability:** having different developers implementing independent pages is much easier. Since the relationship between pages is clearly stated in the page flow, it also becomes much easier to modify a page in an existing application without affecting other pages.
 
 ## Actions and results
 

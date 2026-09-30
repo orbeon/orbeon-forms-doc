@@ -3,7 +3,7 @@
 ## How can I get support for Orbeon Forms?
 
 - You can get support from the Orbeon Forms community on the [Orbeon Forms forum][1] which is the hub of the Orbeon Forms community, and this is the best place to ask questions, share your experience, or post issues and requests for enhancements.
-- Orbeon can provide professional support for your company. Orbeon has two types of plans: [Orbeon Forms PE subscriptions][2] are the most appropriate when your application is in production, while [Dev Support plans][3] also covers issues during development, feature enhancements, and training. For more information contact Orbeon at [info@orbeon.com][4].
+- Orbeon can provide professional support for your company. Orbeon has two types of plans: [Orbeon Forms PE subscriptions][2] are the most appropriate when your application is in production, while [Dev Support plans][3] also cover issues during development, feature enhancements, and training. For more information contact Orbeon at [info@orbeon.com][4].
 
 ## How can I subscribe to the Orbeon Forms forum?
 
@@ -63,7 +63,7 @@ In both cases:
 
 You can help by:
 
-- Subscribing to the [discussion forum][1], and helping other people in community.
+- Subscribing to the [discussion forum][1], and helping other people in the community.
 - Contributing to the open source effort. If you have a feature in mind and think it would benefit Orbeon Forms, you can implement it and contribute it. The best place to get started is to discuss your idea on the Orbeon Forms forum.
 - Get a [PE subscription](https://www.orbeon.com/pricing) or a [Dev Support plan](https://www.orbeon.com/services) with Orbeon. If Orbeon Forms is what it is today, it is in great part thanks to companies who have financially supported Orbeon, allowing Orbeon developers to be paid to work on Orbeon Forms and make it a better product. For more, contact Orbeon at [info@orbeon.com][4].
 

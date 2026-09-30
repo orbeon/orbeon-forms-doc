@@ -111,7 +111,7 @@ In this version, we have refactored our CSS files to use CSS variables. This mak
 
 Variables also allow modifying aspects of the PDF output, including font sizes, in a much easier way than before.
 
-In the future, we plan to introduce configuration user interface for themes in Orbeon Forms.
+In the future, we plan to introduce a configuration user interface for themes in Orbeon Forms.
 
 See also:
 

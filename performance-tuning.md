@@ -21,7 +21,7 @@ TODO: separate items which are useful to Form Runner/Form Builder user deploymen
 
 When sizing an Orbeon Forms application, or considering whether you need to improve the performance of your application, you need to take into account the following parameters:  
 
-* The first three parameters depend on how your application is being used. The ideal way to estimate those values is to get actual end users to interact with your forms (not tester, who will most likely be much faster than typical users), and infer those values based on the logs:
+* The first three parameters depend on how your application is being used. The ideal way to estimate those values is to get actual end users to interact with your forms (not testers, who will most likely be much faster than typical users), and infer those values based on the logs:
     * **Page load frequency** (_PF_) – How often does a single active user stay on a given page before loading another page. This could go, say, from 30 minutes (or longer!) for complex forms to 30 seconds for super-simple forms, or pages that don't really look like forms (publishing).
     * **Ajax request frequency** (_AF_) – How often does the browser of one active user issue Ajax requests to the server, e.g. 30 seconds.
     * **Peak active users** (_AU_) – How many concurrent users do you expect to have at peak time during the day.
@@ -36,7 +36,7 @@ Roughly, the number of CPU cores you will need will be:
 _C_ = (_PT_ / _PF_ \+ _AT_ / _AF_) * _AU_  
 
   
-This is of course an approximation, and assumes that if for a single user, a CPU core take 100 ms to respond, under load it will be able to handle 10 requests per seconds. The actual number of requests per second per core can be slightly higher (e.g. thanks to [hyper-threading][1] on modern processors) or slightly lower if there is contention. Note that excessive contention, i.e. if the number of requests handled on a given server under load is significantly lower than 1 divided by the time the server takes to handle one request for a single user, then take this as a sign that you need to improve the system configuration to avoid contention.
+This is of course an approximation, and assumes that if for a single user, a CPU core takes 100 ms to respond, under load it will be able to handle 10 requests per second. The actual number of requests per second per core can be slightly higher (e.g. thanks to [hyper-threading][1] on modern processors) or slightly lower if there is contention. Note that excessive contention, i.e. if the number of requests handled on a given server under load is significantly lower than 1 divided by the time the server takes to handle one request for a single user, then take this as a sign that you need to improve the system configuration to avoid contention.
 
 ### Examples
 
@@ -48,7 +48,7 @@ _C_ = (1/1800 + 0.2/30) * 100 = 0.72
 
 _C_ = (0.25/60 + 0.1/30) * 100 = 0.75
   
-Most likely, your application sit somewhere between the first case (very large forms: lots of time spent on the form, few pages loaded) and the second case (simple forms: very little time spent on the form, lots of page loads). The significant difference is in what contributes to the load. In the first case, 92% of the load comes from Ajax requests, while in the second case only 44% of the load comes from Ajax requests. With this knowledge, if an optimization is needed, you can determine whether page loads or Ajax requests need more of your attention.
+Most likely, your application sits somewhere between the first case (very large forms: lots of time spent on the form, few pages loaded) and the second case (simple forms: very little time spent on the form, lots of page loads). The significant difference is in what contributes to the load. In the first case, 92% of the load comes from Ajax requests, while in the second case only 44% of the load comes from Ajax requests. With this knowledge, if an optimization is needed, you can determine whether page loads or Ajax requests need more of your attention.
 
 ## Tuning the Java Virtual Machine (JVM)
 
@@ -60,9 +60,9 @@ Asking the JVM to balance memory usage and performance by setting different valu
 
 ### Allocate a large heap but don't cause swapping
 
-The larger the heap, the faster your application will be get. This for two reasons: first, the JVM garbage collector works more efficiently with a larger heap, and second, this enables you to increase the size of the Orbeon Forms cache (more on this later) which will also improve the performance of your application. However, don't use a heap size so large that it would cause swapping, as this would then drastically reduce the performance of your application.
+The larger the heap, the faster your application will be. This for two reasons: first, the JVM garbage collector works more efficiently with a larger heap, and second, this enables you to increase the size of the Orbeon Forms cache (more on this later) which will also improve the performance of your application. However, don't use a heap size so large that it would cause swapping, as this would then drastically reduce the performance of your application.
 
-We recommend that you first set the heap size based on how much memory the server has and what other major applications are running. Say you have 2GB of physical memory, and no other major application: then you could set the heap to 1.5 GB, which leaves 512 MB to the operating system and minor applications. Say you have 4 GB of physical memory and also a database running on the same server, then you can set the heap size to 2 GB, assign 1.5 GB to the database server, and leave 512 MB to the operating and minor applications.
+We recommend that you first set the heap size based on how much memory the server has and what other major applications are running. Say you have 2GB of physical memory, and no other major application: then you could set the heap to 1.5 GB, which leaves 512 MB to the operating system and minor applications. Say you have 4 GB of physical memory and also a database running on the same server, then you can set the heap size to 2 GB, assign 1.5 GB to the database server, and leave 512 MB to the operating system and minor applications.
 
 Then, with a "reasonable" setting in place, monitor the server under normal load and look if the machine is swapping or if on the contrary the operating system is reporting a lot of available memory. In the first case, reduce the heap size. In the second, increase it.  
 
@@ -112,7 +112,7 @@ To do this, after you have installed your Orbeon Forms application, stop WebLogi
 
 ### Disable DNS lookup
 
-You can configure your application server to perform a DNS lookup for every HTTP request. The server always know the IP address of the machine where the HTTP request originated. However, to get the name, the application server needs to send a DNS lookup query to the DNS server. In most cases, performing this query only has a negligible impact on performance. However, the request can take a significant amount of time in certain cases where the network from which the request originated is badly configured. In most case, the application server is doing DNS lookups for "aesthetic reasons": that is to able to include in the logs the name of the client's machines, instead of their IP address (note that web analysis tools can usually do this reverse DNS lookup much more efficiently when analyzing log files subsequently, typically on a daily basis). So we recommend you change the configuration of your application server to disable DNS lookup, which is in general enabled by default.
+You can configure your application server to perform a DNS lookup for every HTTP request. The server always knows the IP address of the machine where the HTTP request originated. However, to get the name, the application server needs to send a DNS lookup query to the DNS server. In most cases, performing this query only has a negligible impact on performance. However, the request can take a significant amount of time in certain cases where the network from which the request originated is badly configured. In most cases, the application server is doing DNS lookups for "aesthetic reasons": that is to be able to include in the logs the name of the client's machines, instead of their IP address (note that web analysis tools can usually do this reverse DNS lookup much more efficiently when analyzing log files subsequently, typically on a daily basis). So we recommend you change the configuration of your application server to disable DNS lookup, which is in general enabled by default.
 
 On Tomcat 5.5 ([external documentation][3]), look for the `enableLookups` attribute on the `<connector>` element and set it to false. If the attribute is not present, add it and set it to `false` (the default value is true).
 
@@ -136,7 +136,7 @@ Tomcat appears to accept only a minimum of 10 for the `maxThreads` configuration
 
 #### Apache configuration
 
-When doing load balancing with Apache's [mod_proxy][5], you should use the `max` parameter to set the hard maximum number of connection allowed to any given Tomcat. For instance, a configuration that limits the number of concurrent connections to each one of your back-end Tomcat server to 4 would look like:
+When doing load balancing with Apache's [mod_proxy][5], you should use the `max` parameter to set the hard maximum number of connections allowed to any given Tomcat. For instance, a configuration that limits the number of concurrent connections to each one of your back-end Tomcat servers to 4 would look like:
 
 ```xml
 ProxyPass / balancer://mycluster/ stickysession=JSESSIONID|jsessionid
@@ -154,7 +154,7 @@ Unfortunately, within Apache, the value of `max` is per process. So, you can onl
 * **On UNIX**, if you're using the Apache that came with your OS, unfortunately there is a good chance you have [prefork MPM][8] Apache, which creates one process per request, and with which the `max` parameter wouldn't work:
     * To check what MPM you have, run `apachectl -l`.
     * In the list, if you see `worker.``c` or `event.c`, then you are almost good: you now just need to make sure that Apache creates only one process. For this, set `ThreadsPerChild` and `MaxClients` to the same value, which will be the total number of concurrent connections your Apache will be able to process. Also set `ServerLimit` to 1.  
-    * In the list, if you see `prefork.c`, then you first need to replace your Apache with the worker or event MPM Apache. You can do so by either recompiling Apache yourself (the MPM is not a run-time configuration parameter), or getting a existing package for your platform. Then, go to step 2.
+    * In the list, if you see `prefork.c`, then you first need to replace your Apache with the worker or event MPM Apache. You can do so by either recompiling Apache yourself (the MPM is not a run-time configuration parameter), or getting an existing package for your platform. Then, go to step 2.
 
 #### WebLogic configuration
 
@@ -182,7 +182,7 @@ You want to test your configuration to make sure it is effective. For this you i
 ab -n 10 -c 10  http://localhost/orbeon/xforms-sandbox/service/image-with-delay
 ```
   
-Assuming you set the maximum number of concurrent processing threads to 2, you will then see in the logs that the request are handle 2 by 2:
+Assuming you set the maximum number of concurrent processing threads to 2, you will then see in the logs that the requests are handled 2 by 2:
 
 ```xml
 INFO  ProcessorService  - /xforms-sandbox/service/image-with-delay - Received request
@@ -235,11 +235,11 @@ By default, events produced by users' interactions with a form are sent by the b
 
 ### Tune the Orbeon Forms cache size
 
-One way to increase the performance of your application is to increase the size of the Orbeon Forms cache. You set up the size of the Orbeon Forms cache with the oxf.cache.size property. Due to limitations of the JVM, you cannot set the size of the Orbeon Forms cache in MB. Instead, the value you specify the maximum number of objects that Orbeon Forms can store in cache. As the size of each object stored in cache is different and the average size of those objects can change widely depending on your application, we can't give you an equivalence between number of objects and memory used. Instead, we recommend you follow the suggestions below to tune your Orbeon Forms cache size.
+One way to increase the performance of your application is to increase the size of the Orbeon Forms cache. You set up the size of the Orbeon Forms cache with the oxf.cache.size property. Due to limitations of the JVM, you cannot set the size of the Orbeon Forms cache in MB. Instead, the value you specify is the maximum number of objects that Orbeon Forms can store in cache. As the size of each object stored in cache is different and the average size of those objects can change widely depending on your application, we can't give you an equivalence between number of objects and memory used. Instead, we recommend you follow the suggestions below to tune your Orbeon Forms cache size.
 
 1. Keep the default value for the Orbeon Forms cache size, use the `-verbosegc` parameter when starting your JVM. With this option enabled, the JVM will log the garbage collection it does.  
-2. Start hitting your application using a tool like JMeter, and monitor how the heap usage varies. In particular, pay a close attention to how much memory is freed by the full GCs done when the memory used gets close the heap size. A full GC will not get rid of objects in the Orbeon Forms cache.
-    * So assuming your heap size is 2 GB, if after getting close to 2 GB a full GC brings back the heap usage to 0.5 GB, as the cached objects are included in those 0.5 GB, it means you can and should to increase the size of your Orbeon Forms cache.
+2. Start hitting your application using a tool like JMeter, and monitor how the heap usage varies. In particular, pay close attention to how much memory is freed by the full GCs done when the memory used gets close to the heap size. A full GC will not get rid of objects in the Orbeon Forms cache.
+    * So assuming your heap size is 2 GB, if after getting close to 2 GB a full GC brings back the heap usage to 0.5 GB, as the cached objects are included in those 0.5 GB, it means you can and should increase the size of your Orbeon Forms cache.
     * However, you should not increase the size to a point where a full GC can only reclaim a small amount of memory, as this will trigger more frequent full GC and so degrade the performance of your application. Typically, after the application has been used for a while, you want a full GC to be able to reclaim 20 to 30% of the heap. If your heap size is 2 GB, this means reducing the heap usage to a value around 1.5 GB range. The optimal value will change depending on your JVM, server, and application, so you might want to try multiple values and see how they impact performance.
   
 
@@ -268,7 +268,7 @@ If you are required to work with large documents, also consider using an XML dat
 
 ### Tune your XSLT code
 
-Some operations in XSLT or XPath can be very expensive. This in particular the case for XPath expressions where the engine has to go through the whole input document to evaluate the expression. Consider this XPath expression: //person. To evaluate it, the engine iterates over every element in the document looking for a <person>. If you know that given the structure of the document, a person is inside a department, which is in a company, you can rewrite this as /company/department/person, which will typically run more efficiently.
+Some operations in XSLT or XPath can be very expensive. This is in particular the case for XPath expressions where the engine has to go through the whole input document to evaluate the expression. Consider this XPath expression: //person. To evaluate it, the engine iterates over every element in the document looking for a <person>. If you know that given the structure of the document, a person is inside a department, which is in a company, you can rewrite this as /company/department/person, which will typically run more efficiently.
 
 If you can, also try to avoid running many XSLT transformations. In particular, you may be able to avoid running a theme stylesheet entirely. See also [Customize the standard epilogue][11].
 
@@ -293,7 +293,7 @@ It is overkill to serve static files such as static images through Orbeon Forms.
 
 ### Delay expensive submissions
 
-There are times when you need to perform an expensive call to your backend to load data which is shown on your form. Typically, you do this by running an `<xf:submission> on xforms-model-construct-done`. If running that submission is really expensive (say, taking seconds), you might want to consider serving your form to the browser without that data, and loading it through Ajax as soon as the form displayed in the browser. In essence, you will:
+There are times when you need to perform an expensive call to your backend to load data which is shown on your form. Typically, you do this by running an `<xf:submission> on xforms-model-construct-done`. If running that submission is really expensive (say, taking seconds), you might want to consider serving your form to the browser without that data, and loading it through Ajax as soon as the form is displayed in the browser. In essence, you will:
 
 1. In your page, where the data would normally show, have some sort of loading indicator displayed when the data is not present in the instance. You will typically use a spinning "loading" icon, or some text such as "Loading...".
 2. On `xforms-model-construct-done`, dispatch an event to your model with JavaScript. Doing so in JavaScript ensures that the event is not dispatched right away, but instead dispatched from the browser, after the page has loaded. For instance, assuming your model has an ID my-model and the event you choose to dispatch is called `my-load-initial-data`:
@@ -315,7 +315,7 @@ There are times when you need to perform an expensive call to your backend to lo
 
 ### Use xf:instance to load dynamic instances
 
-There are several ways of initialization XForms instances. For instances whose content is generated dynamically, run a submission on xforms-model-construct-done to load the instance instead of using XSLT or XInclude. This helps ensures that the source XForms page is cacheable.
+There are several ways of initializing XForms instances. For instances whose content is generated dynamically, run a submission on xforms-model-construct-done to load the instance instead of using XSLT or XInclude. This helps ensure that the source XForms page is cacheable.
 
 ### Perform initialization on xforms-model-construct-done
 
@@ -327,7 +327,7 @@ If you have initialization tasks to perform upon page initialization, try using 
 
 * Configure _versioned resources_, to maximize client-side caching of CSS, JavaScript, and other resources. Versioned resources are not enabled by default.
 * Make sure that the _minimal resources_ property is set to true (it is by default). When enabled, minimized versions of the JavaScript and CSS resources, are produced. Minimal resources load faster because downloading them takes less bandwidth, but also because being smaller the browser can then process them faster. See the XForms reference for details. Also enable gzip compression in addition.
-* Make sure that _combined resources_ property is set to true (it is by default).  When enabled, multiple JavaScript files will be combined into one, and multiple CSS files will be combined into one.
+* Make sure that the _combined resources_ property is set to true (it is by default).  When enabled, multiple JavaScript files will be combined into one, and multiple CSS files will be combined into one.
 
 For more information on this, see [XForms - JavaScript and CSS Resources][?].
 
@@ -372,7 +372,7 @@ If the analysis can be stored in cache, performance is typically enhanced. There
 Here is how you can check whether a given XForms document can cache its static analysis:
 
 1. Temporarily [enable logging][15], and make sure that the oxf.xforms.logging.debug property in your `properties-local.xml` contains `analysis`.
-2. Make a request to one your page.
+2. Make a request to one of your pages.
 3. Then make the same request _again_ by reloading the page (click on the URL bar, and press enter) and check that static state is cached by looking at the `orbeon.log`. You should first see a line such as (instead of `your-page`, you will see `xforms-renderer` if you are using separate deployment):
 
 ```xml
@@ -442,7 +442,7 @@ See also [Load initial form data][?].
 
 ### Use a performance analysis tool
 
-To obtain your numbers, use a tool such as Apache JMeter. Be sure to warm up your Java VM first and to let the tool run for a significant number of sample before recording your performance numbers.
+To obtain your numbers, use a tool such as Apache JMeter. Be sure to warm up your Java VM first and to let the tool run for a significant number of samples before recording your performance numbers.
 
 If you feel comfortable with the source code of Orbeon Forms, you can also use a Java profiler such as YourKit to figure out if a particular part of the Orbeon Forms platform is a bottleneck.
 

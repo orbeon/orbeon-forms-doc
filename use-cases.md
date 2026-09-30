@@ -11,7 +11,7 @@ We describe a few usage scenarios for Orbeon Forms below, with the intent of ans
 A local government publishes a number of forms for its constituents. Orbeon Forms is used for the capture of data as well as consultation by government employees.
 
 - Constituents are provided with a catalog of available forms (e.g. linked from a web page).
-    - They can fill-out and submit relevant forms.
+    - They can fill out and submit relevant forms.
     - The data is saved to a database and/or sent to other systems or workflows.
 - The relevant government offices have access to the captured data for further processing.
     - Data entered by the citizen can be viewed.

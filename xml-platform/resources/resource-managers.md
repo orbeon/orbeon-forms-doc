@@ -65,7 +65,7 @@ Using the filesystem resource manager without a sandbox is particularly useful f
 | Factory | `org.orbeon.oxf.resources.ClassLoaderResourceManagerFactory` |
 | Properties | None |
 
-The class loader resource manager can load resource from a JAR file or from a directory in the classpath. This resource manager is required to load internal resources for Orbeon Forms.
+The class loader resource manager can load resources from a JAR file or from a directory in the classpath. This resource manager is required to load internal resources for Orbeon Forms.
 
 ### Example
 

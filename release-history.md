@@ -12,7 +12,7 @@ Since 2020 we have switched to one major release per year. Minor releases, when 
 
 ## Orbeon Forms 4.0 and newer
 
-The following table lists all the release since Orbeon Forms 4.0 as well as the current status of support.
+The following table lists all the releases since Orbeon Forms 4.0 as well as the current status of support.
 
 | Year | Date   | Version    | PE support             | Release notes                                                                                                                        |
 |------|--------|------------|------------------------|--------------------------------------------------------------------------------------------------------------------------------------|

@@ -6,7 +6,7 @@ A page flow file is comprised of three sections:
 
 * The `<files>` elements list files that must be served directly to the client, such as images or CSS files.
 * The `<page>` elements declare pages and for each one specify identifier, path, model, view, and XML submission.
-* The `<epilogue>`, `<not-found-handler>`, `<unauthorized-handler>` and `<error-handler>` elements define additional behavior that apply to all the pages.
+* The `<epilogue>`, `<not-found-handler>`, `<unauthorized-handler>` and `<error-handler>` elements define additional behavior that applies to all the pages.
 
 ## The files element
 
@@ -33,7 +33,7 @@ You tell the PFC what files to serve directly with one or more `<files>` element
 
 With `<files path="*.gif">`, if a request reaches the PFC with the path `images/logo.gif`, the file `oxf:/images/logo.gif` is sent in response to that request.
 
-The `<files>` element supports the [`path` and `matcher`](other.md#matchers) attributes like the `<page>` element. It also supports a `mediatype` attribute telling the PFC what media type must be sent to the client with the files. The PFC uses defaults for well-known extension, as defined by the [Resource Server processor](http://wiki.orbeon.com/forms/doc/developer-guide/processors-other#resource-server). In doubt, you can specify the mediatype attribute.
+The `<files>` element supports the [`path` and `matcher`](other.md#matchers) attributes like the `<page>` element. It also supports a `mediatype` attribute telling the PFC what media type must be sent to the client with the files. The PFC uses defaults for well-known extensions, as defined by the [Resource Server processor](http://wiki.orbeon.com/forms/doc/developer-guide/processors-other#resource-server). In doubt, you can specify the mediatype attribute.
 
 ## The epilogue element
 
@@ -47,7 +47,7 @@ This is an example of `<epilogue>` element, pointing to the default epilogue XPL
 <epilogue url="oxf:/config/epilogue.xpl">
 ```
 
-The page flow epilogue is discussed in more details in the [Page Flow Epilogue](http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue) documentation.
+The page flow epilogue is discussed in more detail in the [Page Flow Epilogue](http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue) documentation.
 
 ## The not-found-handler element
 

@@ -34,9 +34,9 @@ Specific requirements will depend on how much load Orbeon Forms needs to handle,
 
 ### How much load can Orbeon Forms handle?
 
-Our testing using real forms used by customers in production show that Orbeon Forms can sustain, on a laptop-grade 2013 4-core i7 CPU, 400 concurrent active users filling out a field every 10 seconds, or 40 requests per second. This means that if you have a forms with 75 fields filled by users on average, with 1/3 load during a given day, Orbeon Forms can support 40\*3600\*24/3/75 ~= 15,000 form submissions per day, per processor.
+Our testing using real forms used by customers in production shows that Orbeon Forms can sustain, on a laptop-grade 2013 4-core i7 CPU, 400 concurrent active users filling out a field every 10 seconds, or 40 requests per second. This means that if you have a form with 75 fields filled by users on average, with 1/3 load during a given day, Orbeon Forms can support 40\*3600\*24/3/75 ~= 15,000 form submissions per day, per processor.
 
-We don't recommend you deploy Orbeon Forms on a server less powerful than the aforementioned 2013 4-core i7 CPU. This means that the server has to run on a recent i7 or Xeon processors (not AMD processors), and on [Geekbench](http://www.primatelabs.com/geekbench/) have a score of more than 3,000 on single-core and 12,000 on multi-core.
+We don't recommend you deploy Orbeon Forms on a server less powerful than the aforementioned 2013 4-core i7 CPU. This means that the server has to run on a recent i7 or Xeon processor (not AMD processors), and on [Geekbench](http://www.primatelabs.com/geekbench/) have a score of more than 3,000 on single-core and 12,000 on multi-core.
 
 If you're looking to run Orbeon Forms in the cloud, make sure to pick a configuration that matches the above requirement. For instance, the table below provides a summary of Amazon's AWS offering, with [EC2 pricing](http://aws.amazon.com/ec2/pricing/). On EC2, we recommend you start with a c4.2xlarge.
 
@@ -96,7 +96,7 @@ This said, Form Builder forms are probably one XSLT transformation away from bei
 
 ### Can I import my existing XForms documents into Form Builder?
 
-Form Builder produces XHTML+XForms files as output, but it follows a number of convention when creating forms. It is only able to read forms that follow those conventions, which means that in general, you can't just import your existing forms into Form Builder.
+Form Builder produces XHTML+XForms files as output, but it follows a number of conventions when creating forms. It is only able to read forms that follow those conventions, which means that in general, you can't just import your existing forms into Form Builder.
 
 ### Where is my Form Builder form stored?
 
@@ -152,7 +152,7 @@ Some relational persistence layers support a "flat view", which is created at fo
 
 ### If I write my own persistence layer, do I need to recompile Orbeon Forms?
 
-No. A persistence layer implementation consists a few REST services that you implement. You simply tell Orbeon Forms, in a configuration file (`properties-local.xml`), what the URL of the service is.
+No. A persistence layer implementation consists of a few REST services that you implement. You simply tell Orbeon Forms, in a configuration file (`properties-local.xml`), what the URL of the service is.
 
 You can implement them within Orbeon (for example using XML pipelines (XPL)), or with any technology you like (Java, Ruby, PHP, you name it). In all cases, you won't need to modify Orbeon Forms beyond configuration properties.
 
@@ -191,4 +191,4 @@ No, this is not supported, sorry. Forms created with Form Builder require Form R
 ### Can I customize the appearance of forms I create with Form Builder?
 
 1. You can change fonts, colors, and other styling by creating your own CSS stylesheet, to [supplement or override the default CSS](../form-runner/styling/css.md).
-1. For changes that you can't do with CSS and that require modifications to the HTML sent by Orbeon Forms to browser, you can change the Form Runner XBL and XSLT stylesheets. But this is hard work and we discourage it.
+1. For changes that you can't do with CSS and that require modifications to the HTML sent by Orbeon Forms to the browser, you can change the Form Runner XBL and XSLT stylesheets. But this is hard work and we discourage it.

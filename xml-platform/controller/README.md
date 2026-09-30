@@ -2,7 +2,7 @@
 
 ## Deprecation
 
-This technology is _deprecated_. While it is still use internally by Orbeon Forms, it is not recommended that you write new code using this technology.
+This technology is _deprecated_. While it is still used internally by Orbeon Forms, it is not recommended that you write new code using this technology.
 
 ## Introduction to the Page Flow Controller
 

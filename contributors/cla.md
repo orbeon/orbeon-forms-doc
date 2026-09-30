@@ -15,7 +15,7 @@ It's enough if you want to make changes and distribute them on your own, but it'
 ## More about CLAs
 
 * This [wikipedia page](https://en.wikipedia.org/wiki/Contributor_License_Agreement) provides some general information about CLAs and mentions some major projects which require CLAs.
-* The [Django project](https://www.djangoproject.com/foundation/cla/faq/) has a FAQ in which covers the reasons they have a CLA.
+* The [Django project](https://www.djangoproject.com/foundation/cla/faq/) has a FAQ which covers the reasons they have a CLA.
 
 ## See also
 

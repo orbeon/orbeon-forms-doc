@@ -13,7 +13,7 @@ We recommend you test your upgrade in a non-production environment, and only upg
     - Open the page [Using Form Runner with a relational database](form-runner/persistence/relational-db.md).
     - You might have to run some upgrade DDL at the database level. In the page you just opened, find the section about the database you are using, and in the table with the DDL, given the version you are upgrading from and the version you are upgrading to, check if there is some DDL you need to run.
     - Open the "DDL to create from scratch" for the version you are upgrading to, and check that your database has all the indexes mentioned in this file. Make sure to check this, even if you didn't have to run any upgrade DDL.
-7. Restart your application server and test that everything is working as expected with the new version of Orbeon Forms. We also recommend you review the [compatibility notes](#compatibility-notes-for-previous-versions) which might give you some indication of what you might to pay especially attention to when testing.
+7. Restart your application server and test that everything is working as expected with the new version of Orbeon Forms. We also recommend you review the [compatibility notes](#compatibility-notes-for-previous-versions) which might give you some indication of what you might want to pay especially attention to when testing.
 
 Finally, let us know if you have any question or encounter any issue while upgrading:
 
@@ -56,7 +56,7 @@ The way we handle fixes, generally, is as follows:
 *NOTE: As a reminder, starting with Orbeon Forms 2016.1, we are using a versioning scheme with the number of the year first followed by the number of the major release during that year. See [Release History](release-history.md) for details.*
 
 - Between any two subsequent 4.x releases, or 20xx.x releases, upgrades are expected to be fairly straightforward.
-- The longer the interval of time between two release, the harder the upgrade might be. For example, it will be easier to upgrade between 2023.1 and 2024.1 than between 2016.1 and 2024.1.
+- The longer the interval of time between two releases, the harder the upgrade might be. For example, it will be easier to upgrade between 2023.1 and 2024.1 than between 2016.1 and 2024.1.
 - Orbeon Forms 4.0 was a large release with many changes. In general upgrading between pre-4.0 releases and 4.x releases is more difficult than upgrades between two 4.x or 20xx.x releases.
 - Since Orbeon Forms 4.0, we have switched to a faster release cycle, with releases every few months. So there are typically more changes between, say, 3.8 and 3.9, and especially 3.9 and 4.0, than between two subsequent 4.x or 20xx.x releases.
 
@@ -68,7 +68,7 @@ The way we handle fixes, generally, is as follows:
   - Similarly, and since Orbeon Forms 4.6, the Form Runner Home page has an "Upgrade" feature to upgrade published form definitions.
 - __XForms support:__ We strive for maximum backward compatibility at the XForms source level. But because the XForms processing model is quite advanced, some subtle details are subject to change, such as the order in which some events are dispatched.
 - __Look and feel and CSS:__ Often users adapt the Orbeon Forms look and feel using custom CSS. It is hard to guarantee full backward compatibility here due to the lack of encapsulation provided by CSS. Upgrades can require custom CSS to be adapted. 4.0 in particular introduced the Bootstrap library for the user interface, and that was a major change from previous versions. 2026.1 upgraded that library from Bootstrap 2 to Bootstrap 5.
-- __Configuration properties:__ We strive to keep properties backward compatible. On rare occasions, configuration properties have changed in incompatible ways, in particular in 4.0 the Form Runner persistence providers configuration have changed.
+- __Configuration properties:__ We strive to keep properties backward compatible. On rare occasions, configuration properties have changed in incompatible ways, in particular in 4.0 the Form Runner persistence providers configuration has changed.
 
 ## Compatibility notes for previous versions
 
@@ -113,7 +113,7 @@ This includes not modifying the content of any JAR files present in Orbeon Forms
 
 ### When it happens
 
-Our users sometimes customize Orbeon Forms by relying on the internals of Orbeon Forms. This might even be on Orbeon's advice, when no better solution are available at a given time. In such cases, upgrading can be more difficult, because the internals of Orbeon Forms are subject to change, and backward compatibility of look and feel is difficult to achieve with only CSS.
+Our users sometimes customize Orbeon Forms by relying on the internals of Orbeon Forms. This might even be on Orbeon's advice, when no better solutions are available at a given time. In such cases, upgrading can be more difficult, because the internals of Orbeon Forms are subject to change, and backward compatibility of look and feel is difficult to achieve with only CSS.
 
 When this happens, we consider the reasons changes relying upon Orbeon Forms internals, and evaluate how this could be improved in the future. Examples include:
 
@@ -130,7 +130,7 @@ Each new version brings:
 - stability, security and other bug-fixes
 - new features
 
-In addition, we can support newer version of Orbeon Forms much better than older versions.
+In addition, we can support newer versions of Orbeon Forms much better than older versions.
 
 In addition, if you are on the 3.x series of Orbeon Forms, the 4.x series brings:
 

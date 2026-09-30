@@ -65,7 +65,7 @@ The following small features have been added in this release:
 
 ## New demo forms
 
-We are continuing to add to our collection of demo forms, which you can use directly, as templates for your own forms, or to learn about Orbeon Forms features and capabilities. In this release, we are adding the following demo forms, which makes use of the new SSN and EIN components, as well as the custom PDF field names feature:
+We are continuing to add to our collection of demo forms, which you can use directly, as templates for your own forms, or to learn about Orbeon Forms features and capabilities. In this release, we are adding the following demo forms, which make use of the new SSN and EIN components, as well as the custom PDF field names feature:
 
 * Vendor Application ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/a9ccae9cb991ebabc507a0da9850bf1c33c1d910), [runner](https://demo.orbeon.com/demo/fr/orbeon/vendor-application/edit/18dc67f6ac5f239dec92a876fb4cc3c039388a7d))
 * PTA Payment Authorization/Request for Reimbursement ([builder](https://demo.orbeon.com/demo/fr/orbeon/builder/edit/8fcdfe4ff49218923b6599ec9c7bb91488fcdf1a), [runner](https://demo.orbeon.com/demo/fr/orbeon/pta-payment-authorization/edit/dc858de075f523e64b7020a6bcd10353a0d1c8ce))

@@ -79,11 +79,11 @@ Here is [an example](https://gist.github.com/orbeon/99d75c9f624d68db07493ae50854
 Since its inception, Orbeon Forms has had a hybrid architecture for forms:
 
 * the user interface runs in the browser, implemented in JavaScript (and more recently Scala.js)
-* the form's logic and validations runs on the server
+* the form's logic and validations run on the server
 
 This architecture has benefits, such as protecting the confidentiality of internal data that never leaves the server.
 
-This is still the case with the Orbeon Forms 2021.1, however we made lots of internal changes to support running Form Runner in a pure JavaScript environment. This will, in the future, allow running forms entirely offline, as well as embedded within mobile apps.
+This is still the case with Orbeon Forms 2021.1, however we made lots of internal changes to support running Form Runner in a pure JavaScript environment. This will, in the future, allow running forms entirely offline, as well as embedded within mobile apps.
 
 With Orbeon Forms 2021.1, we are releasing a preview of this feature. From Form Builder, simply use the new "Test Offline" button to see whether your form operates and renders properly in this new mode.
 
@@ -122,11 +122,11 @@ This allows you to see, in a table, the following formulas used in the form for:
 * Required
 * Read-Only
 
-The following example show dependencies between "Calculated Value" formulas and controls. A color scheme indicates the dependency relationships between controls via formulas.
+The following example shows dependencies between "Calculated Value" formulas and controls. A color scheme indicates the dependency relationships between controls via formulas.
 
 ![Example showing "Calculated Value" dependencies](../form-builder/images/inspect-formulas-example.png)
 
-We consider this features still experimental, but only because it is still fairly basic! However, it is still useful and we hope to improve it in newer versions of Orbeon Forms.
+We consider this feature still experimental, but only because it is still fairly basic! However, it is still useful and we hope to improve it in newer versions of Orbeon Forms.
 
 For details, see [Formulas inspector](../form-builder/formulas-inspector.md).
 
@@ -135,7 +135,7 @@ For details, see [Formulas inspector](../form-builder/formulas-inspector.md).
 The Actions Editor features two new enhancements:
 
 * You can now set service values from a formula in addition to a control value.
-* You can control whether an action runs based on formula.
+* You can control whether an action runs based on a formula.
 
 ![Action request formula](../form-builder/images/actions-request-formula.png)
 
@@ -351,7 +351,7 @@ Log4j 2.x uses different configuration files than Log4j 1.x. However, we provide
 
 Orbeon Forms no longer ships with a `log4j.xml` configuration file, but it ships with a `log4j2.xml` configuration file.
 
-* If you have pre-existing `log4j.xml` configuration file, for example because you are upgrading to Orbeon Forms 2021.1 from an older version, you can still use that configuration file, which will take precedence over the new `log4j2.xml` file. However:
+* If you have a pre-existing `log4j.xml` configuration file, for example because you are upgrading to Orbeon Forms 2021.1 from an older version, you can still use that configuration file, which will take precedence over the new `log4j2.xml` file. However:
   * You must make sure that you do not have duplicate log file names in the configuration, or Log4j 2.x will complain about that and ignore the configuration.
   * We recommend that you consider moving to a `log4j2.xml` configuration file.
 * If you do not yet have an existing `log4j.xml` file:
@@ -359,7 +359,7 @@ Orbeon Forms no longer ships with a `log4j.xml` configuration file, but it ships
 
 If you are creating or updating a `log4j2.xml` file, you cannot simply copy the contents of an existing `log4j.xml` to `log4j2.xml` as the two formats are incompatible! Instead, start with the `log4j2.xml` provided, and visit the [Log4j 2 configuration](https://logging.apache.org/log4j/2.x/manual/configuration.html) online to understand and make changes.
 
-_WARNING: With version of Orbeon Forms that use Log4j 2.x, and whether you are using `log4j.xml` or `log4j2.xml`, you must make sure that you do not have **duplicate log file names in the configuration**, even if some of them are unused, or Log4j 2.x will complain about that and ignore the configuration. Log4j 1.x did not use to consider this an error, but Log4j 2.x does._
+_WARNING: With versions of Orbeon Forms that use Log4j 2.x, and whether you are using `log4j.xml` or `log4j2.xml`, you must make sure that you do not have **duplicate log file names in the configuration**, even if some of them are unused, or Log4j 2.x will complain about that and ignore the configuration. Log4j 1.x did not use to consider this an error, but Log4j 2.x does._
 
 For more, see [Logging](../installation/logging.md).
 

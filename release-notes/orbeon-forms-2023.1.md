@@ -136,7 +136,7 @@ For more information, see the [documentation](../form-builder/actions-syntax.md#
 
 ### Table of contents configuration
 
-When not using the Wizard view, as well as in readonly modes such as View and PDF modes, you can now show the table of contents either on the left, on the top, or not at all. The table of content scrolls the page as needed. This is useful for long forms with many sections. You can also control in which modes the table of contents is shown.
+When not using the Wizard view, as well as in readonly modes such as View and PDF modes, you can now show the table of contents either on the left, on the top, or not at all. The table of contents scrolls the page as needed. This is useful for long forms with many sections. You can also control in which modes the table of contents is shown.
 
 ![Table of contents on the left](../form-runner/images/toc-left.png)
 
@@ -218,7 +218,7 @@ We have now separated `oxf.fr.field-encryption.password` and `oxf.crypto.passwor
 
 The [`oxf.crypto.check-password-strength`](../configuration/properties/general.md#oxf.crypto.check-password-strength) property allows checking and reporting about password strength. By default, this is enabled, and reports an error if the passwords are not set or too weak.
 
-If you start Orbeon Forms with a `oxf.crypto.password` that hasn't been set or that is set to a password that is too weak, by default Orbeon Forms will show a banner at the top of every Form Runner page informing the user that some changes to the configuration need to be made. Exactly what changes need to be made is shown in the log file.
+If you start Orbeon Forms with an `oxf.crypto.password` that hasn't been set or that is set to a password that is too weak, by default Orbeon Forms will show a banner at the top of every Form Runner page informing the user that some changes to the configuration need to be made. Exactly what changes need to be made is shown in the log file.
 
 See the [documentation](../configuration/properties/general.md#oxf.crypto.check-password-strength).
 
@@ -268,7 +268,7 @@ Thanks to external contributors:
   * New experimental properties allow configuring automatic PDF accessibility and PDF/A settings ([doc](../form-runner/feature/pdf-automatic.md#accessibility-and-pdf-a-support))
 * Form Builder usability
   * "Test PDF" produces meaningful filenames
-  * Cmd/Ctrl-Enter commit the value in "Edit Source"
+  * Cmd/Ctrl-Enter commits the value in "Edit Source"
   * You are warned when referring to a non-existent variable in a formula
   * You can easily reset the value of a "Yes/No Answer" ([doc](../form-runner/component/yesno-input.md))
 
@@ -296,7 +296,7 @@ You can now directly download a form definition XHTML from Form Builder ([doc](.
 * You can now opt to keep the "Formatted Text Area" colors in PDF output ([doc](../form-runner/feature/pdf-automatic.md#pdf-color-mode))
 * The Summary page field search can show dropdown values for controls without static items ([doc](../form-runner/feature/summary-page.md#dynamic-dropdowns))
 * The `success-message()` and `error-message()` now support HTML ([doc](../form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message))
-* The Import page validate static lists of choices when using named ranges Excel files
+* The Import page validates static lists of choices when using named ranges Excel files
 * The Excel and XML export buttons can also be present on the Summary page ([doc](../form-runner/advanced/buttons-and-processes/summary-page-buttons-and-processes.md#configuring-summary-page-buttons))
 * XPath functions for checking permissions now work ([doc](../xforms/xpath/extension-form-runner.md#authentication-functions))
 * You can now configure the "Dynamic Dropdown with Search" with a minimum input length ([doc](../form-runner/component/static-dynamic-dropdown.md#minimum-input-length))
@@ -368,11 +368,11 @@ If you are upgrading from an earlier version of Orbeon Forms to version 2023.1, 
 
 If you fail to do this, Orbeon Forms will report an error when you try to read or write encrypted data.
 
-Once you have set `oxf.fr.field-encryption.password`, we recommend that you can change `oxf.crypto.password` to a different value.
+Once you have set `oxf.fr.field-encryption.password`, we recommend that you change `oxf.crypto.password` to a different value.
 
 It is generally safe to change `oxf.crypto.password`, even regularly, as this is not used to encrypt data at rest.
 
-**WARNING: But keep in mind that `oxf.fr.field-encryption.password` needs to remain stable so that existing encrypted value can be read back. If that password is changed or lost, the existing data will not be readable anymore.**
+**WARNING: But keep in mind that `oxf.fr.field-encryption.password` needs to remain stable so that existing encrypted values can be read back. If that password is changed or lost, the existing data will not be readable anymore.**
 
 Please be sure to read the [field-level encryption documentation](../form-builder/field-level-encryption.md#configuration).
 

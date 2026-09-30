@@ -101,7 +101,7 @@ To get started search for the English version in all files for both:
 
 Then add the corresponding resources for the new language.
 
-*NOTE: Makes sure also to localize
+*NOTE: Make sure also to localize
 [`dialog-select-resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/dialog-select/dialog-select-resources.xml),
 which is easily missed.*
 

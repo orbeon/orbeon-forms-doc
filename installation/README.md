@@ -93,7 +93,7 @@ See also [Removing the built-in SQLite database](/configuration/advanced/product
     WEB-INF/resources/config/license.xml
     ```
 
-With Orbeon Forms 4.1 and newer, you can also place license.xml file under the user's home directory. For example, on Unix systems:
+With Orbeon Forms 4.1 and newer, you can also place the license.xml file under the user's home directory. For example, on Unix systems:
 
 ```
 ~/.orbeon/license.xml

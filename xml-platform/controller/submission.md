@@ -91,12 +91,12 @@ If no submission has taken place, the XML submission document is an Orbeon Forms
 
 ## Extracting data from the URL
 
-XML submission using HTTP `POST` convenient in many cases, however there are other ways page developers would like to configure the way a page behaves:
+XML submission using HTTP `POST` is convenient in many cases, however there are other ways page developers would like to configure the way a page behaves:
 
 * **Using URL parameters.** URL parameters are specified in a query string after a question mark in the URL, explained above.
 * **Using URL path elements.** URL paths can be hierarchical, and the elements of the paths can have a user-defined meaning.
 
-A PFC page can easily extract data from the URL using the `<setvalue>` element nested within the `<page>` element. To do so, an XML submission must take place on the page. This can be achieved by using the default submission if no other submission is taking place. The default submission document must contain placeholders for the values to extract from the URL. Given an URL query string of `first=12&amp;count=10` with two parameters, `first` and `count`, a default submission document can look as follows:
+A PFC page can easily extract data from the URL using the `<setvalue>` element nested within the `<page>` element. To do so, an XML submission must take place on the page. This can be achieved by using the default submission if no other submission is taking place. The default submission document must contain placeholders for the values to extract from the URL. Given a URL query string of `first=12&amp;count=10` with two parameters, `first` and `count`, a default submission document can look as follows:
 
 ```markup
 <submission>

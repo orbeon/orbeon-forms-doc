@@ -122,7 +122,7 @@ See also:
 
 ### Multipart support for attachments and more
 
-This release enhances the `send` action with the ability to send multiple items to a service endpoint in a single HTTP request using a so-called multipart request format. This allows sending form data along with its attachments, and even to add a PDF file or an Excel export to that. The configuration is simple as you just specified multiple `content` tokens:
+This release enhances the `send` action with the ability to send multiple items to a service endpoint in a single HTTP request using a so-called multipart request format. This allows sending form data along with its attachments, and even to add a PDF file or an Excel export to that. The configuration is simple as you just specify multiple `content` tokens:
 
 ```
 send(
@@ -161,7 +161,7 @@ Users of Orbeon Forms are used to using variable references in formulas to refer
 * Visibility
 * Read-Only
 
-But you can also use them the following formulas:
+But you can also use them in the following formulas:
 
 * Repeated grids and sections:
   * Minimum Number of Repetitions
@@ -278,7 +278,7 @@ In addition, when a service exposes URL parameters, an action can explicitly spe
 * The Summary search supports the new "Dropdown with Other" form control ([#5408](https://github.com/orbeon/orbeon-forms/issues/5408))
 * The Summary page aligns table headers depending on content ([#1693](https://github.com/orbeon/orbeon-forms/issues/1693))
 * Combined "drop-up" buttons can now be configured for Form Runner ([#5546](https://github.com/orbeon/orbeon-forms/issues/5546))
-* The `fr:control-string-value()` and `fr:control-typed-value()` function can access controls within section templates ([#5246](https://github.com/orbeon/orbeon-forms/issues/5246))
+* The `fr:control-string-value()` and `fr:control-typed-value()` functions can access controls within section templates ([#5246](https://github.com/orbeon/orbeon-forms/issues/5246))
 
 ## Compatibility notes
 
@@ -327,7 +327,7 @@ See [Initial data](../configuration/properties/form-runner-initial-data.md).
 
 Form Builder already used [CSS grids](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) for rendering the form being edited. Starting with Orbeon Forms 2022.1, by default, Orbeon Forms also uses CSS grids for all grids at runtime as well. Previously, the default was to use HTML tables at runtime. This is made possible with the removal of Internet Explorer support.
 
-There can be impact on custom CSS, since the markup now contains `<div>` elements instead of `<table>`, `<tr>`, `<td>`, etc., and the default CSS use `display: grid` and related CSS properties.
+There can be impact on custom CSS, since the markup now contains `<div>` elements instead of `<table>`, `<tr>`, `<td>`, etc., and the default CSS uses `display: grid` and related CSS properties.
 
 Although we do not recommend it, it is possible to change the default back to HTML tables with the following property:
 
@@ -354,7 +354,7 @@ See [Providing user information](../form-runner/api/authentication.md#providing-
 
 Before Orbeon Forms 2022.1, when loading a `javascript:` URI, `xf:load` was ignoring the value of the `xxf:show-progress` attribute, and always behaving as if the attribute was set to `false`. Instead, starting with Orbeon Forms 2022.1, if you don't specify `xxf:show-progress`, it defaults to `false` for `javascript:` URIs, and to `true` otherwise.
 
-This allows you to keep the progress indicator when using `xf:load` to run JavaScript that loads a page. Conversely, in the unlikely case you had some code doing a `<xf:load resource="javascript: …" xxf:show-progress="true"/>` but didn't want the progress indicator to be kept, then you will need to either remove the `xxf:show-progress="true"` or change the value of the attributes to `false`.
+This allows you to keep the progress indicator when using `xf:load` to run JavaScript that loads a page. Conversely, in the unlikely case you had some code doing a `<xf:load resource="javascript: …" xxf:show-progress="true"/>` but didn't want the progress indicator to be kept, then you will need to either remove the `xxf:show-progress="true"` or change the value of the attribute to `false`.
 
 ### JavaScript companion classes
 
@@ -366,7 +366,7 @@ The older way to associate companion classes, without the `javascript-lifecycle`
 
 * use of `ORBEON.xforms.XBL.declareClass()` (use `ORBEON.xforms.XBL.declareCompanion` instead)
 * use of the `instance()` method on the component class (use `javascript-lifecycle` and `instanceForControl()` instead)
-* explicit calling of the `init()` and `destroy()` method on component instances (Orbeon Forms manages those calls instead)
+* explicit calling of the `init()` and `destroy()` methods on component instances (Orbeon Forms manages those calls instead)
 
 #### Removal of `xxbl:parameter()`
 

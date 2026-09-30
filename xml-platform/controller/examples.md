@@ -2,7 +2,7 @@
 
 ## Redirection with the PFC
 
-The following example illustrates how to perform a simple redirection with the PFC. Assume you want some path, `/a`, to be redirect to another path, `/b`. You can do this as follows:
+The following example illustrates how to perform a simple redirection with the PFC. Assume you want some path, `/a`, to be redirected to another path, `/b`. You can do this as follows:
 
 ```markup
 <page path="/a">
