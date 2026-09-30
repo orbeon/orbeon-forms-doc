@@ -58,6 +58,7 @@ Notes:
 - If both `pdf-template-name` and `pdf-template-names` are specified, the template from `pdf-template-name` comes first, followed by the templates from `pdf-template-names`. Duplicate names are ignored.
 - The `use-pdf-template` and `pdf-template-lang` parameters apply to all the templates.
 - The name of each PDF attachment is determined by the `oxf.fr.email.pdf.filename` property. With the default value of this property, all the PDFs attached to the same email have the same name. To give each PDF a distinct name, use the `fr:pdf-template-name()` function in this property, as described in [Attachment properties](/configuration/properties/form-runner-email.md#attachment-properties). When `s3-store` is enabled, attachments with the same name are stored under distinct keys: a number is added before the extension of each of them, for example `form-1.pdf`, `form-2.pdf`, `form-3.pdf`.
+- When TIFF attachments are enabled with the `oxf.fr.email.attach-tiff` property, one TIFF is attached per PDF template as well, named by the `oxf.fr.email.tiff.filename` property, in which `fr:pdf-template-name()` can also be used.
 
 ## Example
 

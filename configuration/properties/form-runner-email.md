@@ -279,7 +279,7 @@ The property contains an XPath expression which generates the filename. The expr
 
 [SINCE Orbeon Forms 2025.1.3]
 
-In the `oxf.fr.email.pdf.filename` property, the `fr:pdf-template-name()` function returns the name of the PDF template used to produce the PDF, or the empty sequence if the PDF is not produced from a template. This is useful when the `email` action attaches [several PDFs](/form-runner/advanced/buttons-and-processes/actions-form-runner-email.md#multiple-pdf-attachments), so that each PDF gets a distinct name:
+In the `oxf.fr.email.pdf.filename` and `oxf.fr.email.tiff.filename` properties, the `fr:pdf-template-name()` function returns the name of the PDF template used to produce the PDF or TIFF, or the empty sequence if the PDF is not produced from a template. This is useful when the `email` action attaches [several PDFs](/form-runner/advanced/buttons-and-processes/actions-form-runner-email.md#multiple-pdf-attachments), so that each PDF gets a distinct name:
 
 ```xml
 <property as="xs:string" name="oxf.fr.email.pdf.filename.*.*">
