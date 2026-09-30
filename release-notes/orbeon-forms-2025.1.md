@@ -270,7 +270,7 @@ The following deprecated date/time functions (since 2017!) have been removed. Pl
 
 Support for Ehcache 2.x as a caching provider is deprecated and will be removed in a subsequent release. The Ehcache 2.x JAR file is no longer provided. If you are using Ehcache 2.x, please migrate to using a JCache provider, such as Infinispan, which is now the default.
 
-If this is not convenient or possible in the short term, you can still, at of Orbeon Forms 2025.1, configure Ehcache 2.x as the caching provider by adding the Ehcache 2.x JAR file to Orbeon Forms' classpath and setting the following property in `properties-local.xml`:
+If this is not convenient or possible in the short term, you can still, as of Orbeon Forms 2025.1, configure Ehcache 2.x as the caching provider by adding the Ehcache 2.x JAR file to Orbeon Forms' classpath and setting the following property in `properties-local.xml`:
 
 ```xml
 <property

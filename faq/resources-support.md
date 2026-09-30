@@ -78,7 +78,7 @@ In general, we recommend you do not add bugs or RFEs in the tracker yourself, as
 ## Is there a wiki?
 
 - There is an old wiki on [Google Sites](http://wiki.orbeon.com/forms/).
-- But all the new documentation as [at this location](https://doc.orbeon.com/).
+- But all the new documentation is [at this location](https://doc.orbeon.com/).
 
 Feel free to add or make changes to the contents there. You can do so after creating a user (anonymous changes are not allowed). But please be considerate. You may want to discuss changes on the forum first.
 

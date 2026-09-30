@@ -84,7 +84,7 @@ The result of a file upload looks as follows when using `xs:base64Binary`:
 </file>
 ```
 
-In this case, the uploaded file is encoded an directly embedded into the XML instance. This is a good method to handle small files only, because the entire file is converted and stored in memory.
+In this case, the uploaded file is encoded and directly embedded into the XML instance. This is a good method to handle small files only, because the entire file is converted and stored in memory.
 
 ## Validating a file upload
 

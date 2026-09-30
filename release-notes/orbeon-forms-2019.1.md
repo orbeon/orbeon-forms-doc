@@ -148,7 +148,7 @@ With this version, a new Danish localization is available thanks to a kind contr
 See also:
 
 * [Supported languages](../form-runner/feature/supported-languages.md) for the list of supported languages.
-* [Localizing Orbeon Forms](../contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form runner in additional languages. Localization depends on volunteers, so please let us know if you want to help!
+* [Localizing Orbeon Forms](../contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form Runner in additional languages. Localization depends on volunteers, so please let us know if you want to help!
 
 ## Browser support
 

@@ -55,7 +55,7 @@ The example configuration above enforces that the `acme-user` and `ajax-user` ro
 
 ### Isolating forms with Form Builder
 
-You might also want to isolate forms at the Form Builder level. This means that a use from company Acme can only see and publish form definitions for company Acme.
+You might also want to isolate forms at the Form Builder level. This means that a user from company Acme can only see and publish form definitions for company Acme.
 
 You do this with settings in `form-builder-permissions.xml`, for example:
 

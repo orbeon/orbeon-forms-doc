@@ -83,7 +83,7 @@ Finally, when your form runs and users make a selection in the dropdown, the _va
 
 ## Populating fields using another field value
 
-Say that when users enter a value in _employee number_, you want to lookup the corresponding employee in your database and populate other fields, _First name_ and _Last name_, based on the information you find about that employee. We've already know how to establish a [connection with the database](database-services.md#1-connect-with-the-database), so let's start by seeing how we can use the value of a field in a SQL query.
+Say that when users enter a value in _employee number_, you want to look up the corresponding employee in your database and populate other fields, _First name_ and _Last name_, based on the information you find about that employee. We've already know how to establish a [connection with the database](database-services.md#1-connect-with-the-database), so let's start by seeing how we can use the value of a field in a SQL query.
 
 ![Populate fields](images/database-services-poulate-fields.png)
 
@@ -112,7 +112,7 @@ You can do this as follows, in Form Builder:
 1. Create a field to hold the employee id passed through the request parameter. You might want to put this field in another section, for instance named "(Internal)", that you hide from end users by setting in its Section Settings dialog, the Visibility to No. For the field, you can use a Hidden Field, or a Calculated Value if you'd like to see its value at runtime when debugging the form.
 2. In the Control Settings for that field, name it `employee-id`, and in the Formulas tab, set its Initial Value to `xxf:get-request-parameter('employee-id')`.
 3. Create a database service that retrieves the information about the employee, with a statement like the one below.
-4. Create an action that, on form load, runs the database service, passing the value of the `employee-id` field, and setting the value of the first name, last name, hire data, and department fields to values returned by the SQL query.
+4. Create an action that, on form load, runs the database service, passing the value of the `employee-id` field, and setting the value of the first name, last name, hire date, and department fields to values returned by the SQL query.
 
 ```sql
 SELECT *

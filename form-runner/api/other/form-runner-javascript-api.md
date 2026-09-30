@@ -18,7 +18,7 @@ The `formIdOrElem` parameter used in APIs can be:
 
 - missing or `undefined`: this searches for the first Orbeon Forms form on the page
 - a `string`: this is the namespaced id of the form
-- an HTML element: this is the HTML form element, or a descendant or an HTML form element
+- an HTML element: this is the HTML form element, or a descendant of an HTML form element
 
 If the form is not found, `null` is returned. If found, an object is returned, which contains methods described below.
 

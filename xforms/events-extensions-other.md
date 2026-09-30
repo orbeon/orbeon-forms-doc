@@ -64,7 +64,7 @@ _NOTE: At the moment, with, `<xf:dispatch>`, only custom events support passing 
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-The `xxf:tunnel="true` attribute on `<xf:property>` allows the propagation, or tunnelling, of event properties in the following cases:
+The `xxf:tunnel="true` attribute on `<xf:property>` allows the propagation, or tunneling, of event properties in the following cases:
 
 - `<xf:send>`: the properties are tunneled to event handlers for the `xforms-submit-error` and `xforms-submit-done` events as well as event handlers for `xxforms-action-error` event dispatched while processing event handlers for those events
 - `<xf:dispatch>`: the properties are tunneled to event handlers for the `xxforms-action-error` event dispatched while processing event handlers for the event dispatched
@@ -132,7 +132,7 @@ The following actions all support attributes resolving to a particular control:
 - `<xf:toggle>` (`case` attribute)
 - `<xxf:show>` (`neighbor` attribute)
 
-When that control is within a repeat iteration, the actual control targetted is chosen based on the current set of repeat indexes. However, in some cases, it is useful to be able to target the control within a particular iteration. This is achieved with the `xxf:repeat-indexes` extension attribute on these actions. This attribute takes a space-separated list of repeat indexes, starting with the outermost repeat. Example:
+When that control is within a repeat iteration, the actual control targeted is chosen based on the current set of repeat indexes. However, in some cases, it is useful to be able to target the control within a particular iteration. This is achieved with the `xxf:repeat-indexes` extension attribute on these actions. This attribute takes a space-separated list of repeat indexes, starting with the outermost repeat. Example:
 
 ```xml
 <!-- Repeat hierarchy -->

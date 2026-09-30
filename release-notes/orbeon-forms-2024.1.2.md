@@ -11,7 +11,7 @@ Today we released Orbeon Forms 2024.1.2! This maintenance release contains more 
 
 ### Components with built-in validation
 
-Orbeon Forms is built on top of a component system which allows adding new form controls with a little bit of programming. In fact, this is how most of the form controls which whip with Orbeon Forms are made. In this release, we are improving support for components which provide their own validation, and introducing new components.
+Orbeon Forms is built on top of a component system which allows adding new form controls with a little bit of programming. In fact, this is how most of the form controls which ship with Orbeon Forms are made. In this release, we are improving support for components which provide their own validation, and introducing new components.
 
 <figure><img src="../form-runner/component/images/xbl-ssn-ein-isin-lei.webp" alt="" width="456"><figcaption><p>New components with builtin validation</p></figcaption></figure>
 

@@ -86,7 +86,7 @@ Button labels can be overridden as well:
   value="Fancy Send"/>
 ```
 
-With this, we have overridden the label of the "Send" button in general for all forms which are displayed in the english local.
+With this, we have overridden the label of the "Send" button in general for all forms which are displayed in the English locale.
 
 Another approach would be to create an entirely custom button instead of reusing the name `send`. Just pick a button/process name, say `foo`, and then:
 

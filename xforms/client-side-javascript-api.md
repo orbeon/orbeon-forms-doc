@@ -326,7 +326,7 @@ The arguments of the listener for `errorEvent` are as follows:
     - `eventData.title` – A string describing the issue.
     - `eventData.details` – A string containing HTML with more information about the error, including:
         - If it happened in JavaScript: information of where the error happened (such as the file name and the line number).
-        - If if happened on the server: detailed information about where the error happened (such as the invalid XPath expression and the file where that expression is found).
+        - If it happened on the server: detailed information about where the error happened (such as the invalid XPath expression and the file where that expression is found).
 
 ### Removing event listeners
 

@@ -103,6 +103,6 @@ Errors occurring while running a given page (#1 above) can be handled via the `<
 <error-handler page="error"/>
 ```
 
-Other errors (#2 above) are not directly handled by the PFC. Instead, they are handled with the error [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) specified in the web application's `web.xml` file. By default, the error processor is the Pipeline processor, which runs the `oxf:/config/error.xpl` XPL pipeline. You can configure `error.xpl` for your own needs. By default, it formats and displays the Java exception which caused ther error.
+Other errors (#2 above) are not directly handled by the PFC. Instead, they are handled with the error [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) specified in the web application's `web.xml` file. By default, the error processor is the Pipeline processor, which runs the `oxf:/config/error.xpl` XPL pipeline. You can configure `error.xpl` for your own needs. By default, it formats and displays the Java exception which caused the error.
 
 See [Packaging and Deployment](http://wiki.orbeon.com/forms/doc/developer-guide/packaging-and-deployment) for more information about configuring error processors.

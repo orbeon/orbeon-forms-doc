@@ -31,7 +31,7 @@ The following parameters can be used:
     - [SINCE Orbeon Forms 2017.1]
     - values
         - `keep`: all values are serialized, 
-        - `remove`: non-relevant values are not serialised 
+        - `remove`: non-relevant values are not serialized 
         - `empty`: non-relevant nodes are serialized as empty values
     - default: `remove`
 - <a name="send_parameter_prune"></a>`prune`

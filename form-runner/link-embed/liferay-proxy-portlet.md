@@ -85,7 +85,7 @@ The Form Runner server can be entirely hidden behind a firewall as it doesn't ne
 * within the same container as Liferay
 * in a separate servlet container
 
-Note the URL at which Form runner is deployed. The default is assumed to be:
+Note the URL at which Form Runner is deployed. The default is assumed to be:
 
 ```
 http://localhost:8080/orbeon/

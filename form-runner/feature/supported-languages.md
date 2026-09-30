@@ -10,7 +10,7 @@ The following lists which languages Orbeon Forms supports, by general area of fu
 | P            | partial support |
 | N            | no support      |
 
-See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form runner in additional languages. Your contributions are welcome!
+See also [Localizing Orbeon Forms](/contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form Runner in additional languages. Your contributions are welcome!
 
 ## As of Orbeon Forms 2025.1
 

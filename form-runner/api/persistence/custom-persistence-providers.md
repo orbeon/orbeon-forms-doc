@@ -192,7 +192,7 @@ In addition, a `GET`/`HEAD` request should support the `last-modified-time` URL 
     * in such a case, the proxy will pass `1` as the version number
 * `Orbeon-Created-Existing`
   * \[SINCE Orbeon Forms 2023.1.4]
-  * millisecond-resolution ISO format date/time with the data's created data, if we are updating an existing resource
+  * millisecond-resolution ISO format date/time with the data's created date, if we are updating an existing resource
   * for example: `2024-07-17T21:52:11.611Z`
   * for `PUT`/`DELETE` requests
   * if present, the provider should use this to set the resource's original creation date/time
@@ -304,13 +304,13 @@ HTTP response headers for `GET` and `HEAD` requests:
   * username of the user who last modified the data
   * for example: `hsimpson`
 * `Created`
-  * RFC 1123 format date/time with the data's created data
+  * RFC 1123 format date/time with the data's created date
   * for example: `Wed, 17 Jul 2024 21:52:11 GMT`
 * `Last-Modified`
   * RFC 1123 format date/time with the data's last modification date
   * for example: `Wed, 17 Jul 2024 21:52:11 GMT`
 * `Orbeon-Created`
-  * millisecond-resolution ISO format date/time with the data's created data
+  * millisecond-resolution ISO format date/time with the data's created date
   * for example: `2024-07-17T21:52:11.611Z`
   * this is used by
     * the [Zip Export API](export-zip.md)

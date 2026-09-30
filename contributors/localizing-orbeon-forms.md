@@ -15,7 +15,7 @@ See these 2 files:
 - [Form Runner's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/i18n/resources.xml)
 - [Form Builder's `resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/form/resources.xml)
 
-Each file has as series of `<resource>` elements each with an `xml:lang`
+Each file has a series of `<resource>` elements each with an `xml:lang`
 attribute. You need to add your own element. Say you want to localize to
 Italian:
 

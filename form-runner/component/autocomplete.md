@@ -28,7 +28,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
     No, you don't need hard code the list of values in your form, or even to know it when you generate the page. You can fetch the list from a service using an `<xf:submission>`, and this list can change depending on other values entered by users in other fields of the page. But at a given point in time, that list must be complete; you can't change it depending what users are currently typing in the field as they type.
 *   How does the filtering work?
 
-    In this mode, the autocomplete field determines which values are shown in the suggestion based on what users typed in the field. It will only show items which label starts with the text entered by users. The comparison is not case sensitive. For instance, typing "ar" in a field that expects a list of countries with show "Argentina", amongst other countries, but not "Saudi Arabia".
+    In this mode, the autocomplete field determines which values are shown in the suggestion based on what users typed in the field. It will only show items which label starts with the text entered by users. The comparison is not case sensitive. For instance, typing "ar" in a field that expects a list of countries will show "Argentina", amongst other countries, but not "Saudi Arabia".
 *   What does the syntax look like?
 
     ```markup
@@ -67,7 +67,7 @@ The autocomplete can work in one of three modes, which in order of increasing co
     * `labelref`: binds the autocomplete to a node that the autocomplete will populate with the selected item's label. The XPath expression in `labelref` is evaluated in the context of the node to which the control is bound. This attribute is optional, but if you don't specify it, when loading a form where an autocomplete already has a value, then autocomplete will show empty, which most likely will be seen as incorrect behavior by users. This is because in _resource_ mode, as well as in _dynamic_ mode (see below), the autocomplete doesn't know about all the items, and thus can't automatically infer the label it needs to show users based on a value stored in the instance. `labelref` solves this problem by also storing the label in the instance.
     * `resource`: points to an HTTP service responding with an XML document. It is interpreted as an AVT, and you can use the `$fr-search-value` to refer to the value users typed so far in the search field, as done in the above example.
     * `<xf:itemset>`: points to the items in the XML returned by the service, and for each item to its label and value.
-    * Whenever the result of the `resource` AVT evaluates to a different URI, a request is made by the autocomplete to that new URI to retrieve a new itemset. Typically, your `resource` AVT will use `$fr-search-value`, and thus whenever users change the value in the search field, your service will be called. But this mechanism is general, and should your AVT, say, refer to a node in an instance that can change, then the service will we called again every time a change occurs.
+    * Whenever the result of the `resource` AVT evaluates to a different URI, a request is made by the autocomplete to that new URI to retrieve a new itemset. Typically, your `resource` AVT will use `$fr-search-value`, and thus whenever users change the value in the search field, your service will be called. But this mechanism is general, and should your AVT, say, refer to a node in an instance that can change, then the service will be called again every time a change occurs.
 
 ### Dynamic
 
@@ -129,7 +129,7 @@ _For more on the `labelref` attribute, see the above section the resource mode._
     When using the autocomplete in dynamic itemset mode, you can listen on the `fr-search-changed` event to be notified when the value typed in the field changes. This event is dispatched as users type in the field, just like the `xforms-value-changed` event would for an incremental `<xf:input>`. The preceding example uses this event to update the itemset as users type in the field.
 *   `xforms-value-changed` – When did the user make a selection?
 
-    Just as with other XForms controls, you can listen on `xforms-value-changed` to be notified when the value of the node bound to the autocomplete changes. That event is also dispatched when users make a selection from the suggestion list, or when they happen to have typed a value that exactly matches one of the items in the itemset. This event is dispatched when the autocomplete looses the focus. At that time, the node bound to the autocomplete is also updated with the value corresponding to the label typed or selected by users. If the label in the field doesn't correspond to label of any item in the itemset, both the value of the node bound to the autocomplete as well as the content of the search field are set to empty string.
+    Just as with other XForms controls, you can listen on `xforms-value-changed` to be notified when the value of the node bound to the autocomplete changes. That event is also dispatched when users make a selection from the suggestion list, or when they happen to have typed a value that exactly matches one of the items in the itemset. This event is dispatched when the autocomplete loses the focus. At that time, the node bound to the autocomplete is also updated with the value corresponding to the label typed or selected by users. If the label in the field doesn't correspond to label of any item in the itemset, both the value of the node bound to the autocomplete as well as the content of the search field are set to empty string.
 
 ## Setting the content of the text field
 
@@ -156,7 +156,7 @@ Don't set the value of the node bound to an autocomplete control if you are usin
 
 ## Maximum number of displayed results
 
-By default, the autocomplete displays a maximum of 10 items. You can have the autocomplete display less of more results by:
+By default, the autocomplete displays a maximum of 10 items. You can have the autocomplete display less or more results by:
 
 *   Adding attribute `max-results-displayed`. You would typically use this attribute to provide a static value. For instance:
 
@@ -214,7 +214,7 @@ The defaults of the autocomplete are improved compared to previous versions:
     ```css
       .orbeon .my-autocomplete .xforms-input input { width: 200px }
     ```
-*   You can constraint the height of the section that displays results with CSS. For instance, the following will set a max height constraint of 100 pixels:
+*   You can constrain the height of the section that displays results with CSS. For instance, the following will set a max height constraint of 100 pixels:
 
     ```css
       .orbeon .fr-autocomplete-container .yui-ac-content {

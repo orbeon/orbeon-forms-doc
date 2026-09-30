@@ -54,7 +54,7 @@ However, in some cases, you might still want to have that type information in th
 
 ## Limitations
 
-- Not all form validations can be encoded in an XML Schema. For example, validations specified with the XForms `constraint` attribute are not present, as they are expressed with XPath an XML Schema 1.0 does not support XPath constraints.
+- Not all form validations can be encoded in an XML Schema. For example, validations specified with the XForms `constraint` attribute are not present, as they are expressed with XPath and XML Schema 1.0 does not support XPath constraints.
 
 ## Example
 

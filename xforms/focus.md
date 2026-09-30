@@ -166,7 +166,7 @@ XForms enforces that, within a repeat, only a control part of the repeat iterati
 This means that:
 
 1. if the user clicks on a control within a repeat iteration, the focus changes to that control and the current iteration is adjusted
-2. if the current repeat iteration changes, and focus was on a control within another iteration, the focus as adjusted
+2. if the current repeat iteration changes, and focus was on a control within another iteration, the focus is adjusted
 
 When using the `<xf:setindex>` action, the following logic takes place if the index changes:
 

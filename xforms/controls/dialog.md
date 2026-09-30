@@ -29,7 +29,7 @@ You declare dialogs directly under the `<xh:body>` element (or under the `<fr:bo
 | `id` |  Mandatory | ID |  The ID of the dialog. You reference this ID when opening the dialog with ` <xxf:show dialog="my-dialog-id">`.  |
 | `appearance` |  Optional | `full` or `minimal`  | See details below. |
 | `level` |  Optional | `modal` (default) or `modeless` | Can only be used `appearance="full"`. When set to `modal` the rest the page is grayed out and you can't interact with any control on the page outside of the dialog. When set to `modeless` you can still use other controls on the page.  |
-| `close`  | Optional | `true` or `false`| Can only be used `appearance="full"`. A close box "x" is shown in the dialog title bar when `close="true"`. If you specify `close="false"`, then you should provide a way to close the dialog, for instance by having you own "Close" button inside the dialog. This is typically useful when you want to force users to enter some data before proceeding and you don't want them to cancel the current operation by closing the dialog.  |
+| `close`  | Optional | `true` or `false`| Can only be used `appearance="full"`. A close box "x" is shown in the dialog title bar when `close="true"`. If you specify `close="false"`, then you should provide a way to close the dialog, for instance by having your own "Close" button inside the dialog. This is typically useful when you want to force users to enter some data before proceeding and you don't want them to cancel the current operation by closing the dialog.  |
 | `draggable` |  Optional | `true` or `false`| Can only be used `appearance="full"`. When `draggable="false"`, you won't be able to move dialog on the page by using drag and drop in the dialog title bar.  |
 | `visible`  |  Optional | `true` or `false`| Whether the dialog is initially visible when the page loads. When `visible="true"`, the dialog appears immediately when the page loads.  |
 | `neighbor`  |  Optional | ID |  Use only with `minimal` appearance. The id of the control next to which the dialog should display when opening. |
@@ -39,7 +39,7 @@ You declare dialogs directly under the `<xh:body>` element (or under the `<fr:bo
 You can set the appearance to either `full` or `minimal`:
 
 * The first screenshot below shows a dialog with `appearance="full"` while the second one shows a dialog with `appearance="minimal"`.
-* In general, you will use the minimal dialog when you want to show a limited set of information which is related to a certain element in the page. The minimal dialog is sometime also referred to as a "drop-down dialog".
+* In general, you will use the minimal dialog when you want to show a limited set of information which is related to a certain element in the page. The minimal dialog is sometimes also referred to as a "drop-down dialog".
 * Some of the other attributes on `<xxf:dialog>` can only be used for the full or the minimal dialog. You will find more details on this below.
 
 ## The `xxf:show` and `xxf:hide` actions

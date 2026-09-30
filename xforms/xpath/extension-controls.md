@@ -213,7 +213,7 @@ xxf:is-control-readonly(
 ) as xs:boolean
 ```
 
-The `xxf:is-control-readonly()` function returns `true()` if and only if the controlled specified by `$control-id` exists, is relevant, and is readonly.
+The `xxf:is-control-readonly()` function returns `true()` if and only if the control specified by `$control-id` exists, is relevant, and is readonly.
 
 ## xxf:is-control-relevant()
 
@@ -225,7 +225,7 @@ xxf:is-control-relevant(
 ) as xs:boolean
 ```
 
-The `xxf:is-control-relevant()` function returns `true()` if and only if the controlled specified by `$control-id` exists and is relevant.
+The `xxf:is-control-relevant()` function returns `true()` if and only if the control specified by `$control-id` exists and is relevant.
 
 ## xxf:is-control-required()
 
@@ -237,7 +237,7 @@ xxf:is-control-required(
 ) as xs:boolean
 ```
 
-The `xxf:is-control-required()` function returns `true()` if and only if the controlled specified by `$control-id` exists, is relevant, and is required.
+The `xxf:is-control-required()` function returns `true()` if and only if the control specified by `$control-id` exists, is relevant, and is required.
 
 ## xxf:is-control-valid()
 
@@ -249,7 +249,7 @@ xxf:is-control-valid(
 ) as xs:boolean
 ```
 
-The `xxf:is-control-valid()` function returns `true()` if and only if the controlled specified by `$control-id` exists, is relevant, and is valid.
+The `xxf:is-control-valid()` function returns `true()` if and only if the control specified by `$control-id` exists, is relevant, and is valid.
 
 ## xxf:itemset()
 
@@ -596,7 +596,7 @@ The `xxf:open-dialogs()` function returns the number of open dialogs in the page
 
 If there is no pending upload, the function returns 0.
 
-It is rare, but possibe, that there is more than 1 dialog open. Typically, the function returns 0 or 1.
+It is rare, but possible, that there is more than 1 dialog open. Typically, the function returns 0 or 1.
 
 ## xxf:pending-uploads()
 
@@ -749,7 +749,7 @@ The `xxf:formatted-value()` function returns the formatted value for one or more
 
 _NOTE: You must be careful when using this function as a control's value might be out of date. Keep in mind that control values are updated during refresh._
 
-See also [XLB modes](/xforms/xbl/modes.md#formatted-value).
+See also [XBL modes](/xforms/xbl/modes.md#formatted-value).
 
 ## xxf:visited
 

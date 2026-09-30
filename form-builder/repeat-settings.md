@@ -45,7 +45,7 @@ This is how the repetition number appears at runtime.
 
 ## Minimum and maximum number of repetitions
 
-These settings can be predefined numbers or formulas when selecting "Other". Here is an example of using a firmula for the maximum number of repetitions.
+These settings can be predefined numbers or formulas when selecting "Other". Here is an example of using a formula for the maximum number of repetitions.
 
 ![Formula for the maximum number of repetitions](images/container-settings-repeated-content-maximum-other-highlighted.png)
 

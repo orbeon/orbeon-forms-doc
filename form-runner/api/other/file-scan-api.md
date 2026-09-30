@@ -201,7 +201,7 @@ The provider must:
 To enable a provider with Orbeon Forms:
 
 * create your provider as per the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
-* create a JAR file containing the code or your provider
+* create a JAR file containing the code of your provider
 * place your JAR file under the Orbeon Forms `WEB-INF/lib` directory
 
 The Orbeon Forms log files will log errors if any when starting if the provider was found but could not be instantiated.
@@ -306,7 +306,7 @@ The provider must:
 To enable a provider with Orbeon Forms:
 
 * create your provider as per the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
-* create a JAR file containing the code or your provider
+* create a JAR file containing the code of your provider
 * place your JAR file under the Orbeon Forms `WEB-INF/lib` directory
 
 The Orbeon Forms log files will log errors if any when starting if the provider was found but could not be instantiated.

@@ -172,14 +172,14 @@ Currently, re-encryption is only supported in the built-in implementation of the
 
 ### Creating a database backup before re-encryption
 
-Unlike typical update and delete operations that are performed at the database level by adding a new row, thus keeping the old data, re-encryption is done _in-place_. All data is being re-encrypted, including historical data that is part of the "journal". This means that you could loose data if something were to go wrong during re-encryption. As such, we strongly recommend you create a backup of your data before re-encryption.
+Unlike typical update and delete operations that are performed at the database level by adding a new row, thus keeping the old data, re-encryption is done _in-place_. All data is being re-encrypted, including historical data that is part of the "journal". This means that you could lose data if something were to go wrong during re-encryption. As such, we strongly recommend you create a backup of your data before re-encryption.
 
 ### Starting re-encryption
 
 To re-encrypt all the data for certain forms, from the Forms Admin page:
 
 1. Mark the checkboxes corresponding to the relevant forms.
-2. Click on the "Operations" button, and in the menu click on "Re-encrypt form definitions". If that entry is greyed out, make sure that you haven't selected a form for which data is stored with a persistence layer that doesn't support re-encryption.
+2. Click on the "Operations" button, and in the menu click on "Re-encrypt form definitions". If that entry is grayed out, make sure that you haven't selected a form for which data is stored with a persistence layer that doesn't support re-encryption.
 3. After you confirm you desire to go ahead with the re-encryption, you will see, in the "Status" column:
    * "Re-encryption started," right after you triggered the re-encryption.
    * "Re-encrypting 392/2401," while the re-encryption is in progress, here assuming it has already re-encrypted 391 documents out of 2401 it needs to re-encrypt.
@@ -227,7 +227,7 @@ After you click it, and confirm you want to go ahead, if this is indeed what you
 
 ![Reindex status](../images/home-reindex-status.png)
 
-If, for some reason, you want to stop reindexing, you can do so by clicking on the _Stop reindexing_ button. When doing so, the index is left in an incoherent state, and you should restart indexing at a latter time. While reindexing stops, you'll see the following message:
+If, for some reason, you want to stop reindexing, you can do so by clicking on the _Stop reindexing_ button. When doing so, the index is left in an incoherent state, and you should restart indexing at a later time. While reindexing stops, you'll see the following message:
 
 ![Reindex stopping](../images/home-reindex-stopping.png)
 

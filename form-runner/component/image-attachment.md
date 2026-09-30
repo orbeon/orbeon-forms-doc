@@ -37,7 +37,7 @@ The component can transform the uploaded image. The following attributes control
 * `transform-max-height`:
   * no attribute: use the default (form-level then property)
   * blank attribute value: don't constrain the image width
-  * positive integer: scale the image hight to the given value if the image is larger
+  * positive integer: scale the image height to the given value if the image is larger
   * the image's aspect ratio is preserved when used in conjunction with `transform-max-width`
 * `transform-format`:
   * no attribute: use the default (form-level then property)

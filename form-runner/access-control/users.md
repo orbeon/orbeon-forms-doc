@@ -21,7 +21,7 @@ Form Runner can obtain this information either by:
    * You are using [group-based permissions](owner-group.md) and you need finer-grained control over what the user's group is. More specifically, with container-based permissions, users information is obtained through the servlet API, which doesn't have a notion of user's group. So in that case, Form Runner takes the first role to be the group, which is fine in certain use cases, but not in others that require more control over what the user's group is.
    * You are using [organization-based permissions](organization.md), as the servlet API doesn't have any support for organizations.
 3. Otherwise, do you want to use the [login and logout pages](login-logout.md) provided by Form Runner? If so, you'll want to go with container-based permissions, as those pages rely on facilities provided by the container to do the authentication.
-4. Otherwise, you can use either container-based or header-based permissions, going with the one that is the most convenient for you. If your information about users is stored in a system supported by your application server, e.g. you are using LDAP and Tomcat, then container-based is most likely the simplest option. If not, you could do such an integration, e.g. creating a custom security realm for Tomcat, and user container-based permissions, but it is in that case most likely simpler for you to go with header-based permissions and set headers in servlet filter or reverse proxy.
+4. Otherwise, you can use either container-based or header-based permissions, going with the one that is the most convenient for you. If your information about users is stored in a system supported by your application server, e.g. you are using LDAP and Tomcat, then container-based is most likely the simplest option. If not, you could do such an integration, e.g. creating a custom security realm for Tomcat, and use container-based permissions, but it is in that case most likely simpler for you to go with header-based permissions and set headers in servlet filter or reverse proxy.
 
 ## Container driven method
 
@@ -273,7 +273,7 @@ This is because, out-of-the-box, that is unless you set `oxf.fr.authentication.h
       * obtained via the header specified by `oxf.fr.authentication.header.roles`
 * **Persistence** — These headers are forwarded to the persistence layer, which can make use of them. In particular, the [relational persistence layers](../persistence/relational-db.md) store the current username when doing any database update.
 
-See also [Accessing liferay users and roles](../link-embed/liferay-full-portlet.md#accessing-liferay-users-and-roles).
+See also [Accessing Liferay users and roles](../link-embed/liferay-full-portlet.md#accessing-liferay-users-and-roles).
 
 ## See also
 

@@ -888,7 +888,7 @@ Import the deployment configuration:
 kubectl apply -f orbeon-forms-deployment.yaml
 ```
 
-You can display information about you Kubernetes contexts, cluster, pods, nodes, and service with the following commands:
+You can display information about your Kubernetes contexts, cluster, pods, nodes, and service with the following commands:
 
 ```bash
 # Contexts information

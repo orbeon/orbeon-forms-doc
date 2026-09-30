@@ -23,7 +23,7 @@ In this release, we have addressed many issues, including:
     * FB Summary: applications include the label "Application Name" ([\#7344](https://github.com/orbeon/orbeon-forms/issues/7344))
     * Don't disable custom classes that don't use AVTs in Form Builder at design time ([\#7347](https://github.com/orbeon/orbeon-forms/issues/7347))
     * Controls in section template disappear after it is marked as repeated and the form is saved ([\#7352](https://github.com/orbeon/orbeon-forms/issues/7352))
-    * Checkbox incorrectly shows as checked after navigating Gird Settings with Previous or Next ([\#7429](https://github.com/orbeon/orbeon-forms/issues/7429))
+    * Checkbox incorrectly shows as checked after navigating Grid Settings with Previous or Next ([\#7429](https://github.com/orbeon/orbeon-forms/issues/7429))
 * Form Runner
     * Avoid duplicate names for file types in automatic hints ([\#7327](https://github.com/orbeon/orbeon-forms/issues/7327)) 
     * Incorrect MIME type for ODT leads to name not being shown in automatic hints ([\#7331](https://github.com/orbeon/orbeon-forms/issues/7331))

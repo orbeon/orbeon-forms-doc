@@ -26,7 +26,7 @@ See [JSON support](submission-json.md).
 The XForms 2.0 `nonrelevant` attribute takes values
 
 - `keep`: all values are serialized, 
-- `remove`: non-relevant values are not serialised 
+- `remove`: non-relevant values are not serialized 
 - `empty`: non-relevant nodes are serialized as empty values
 
 The default is `remove`.

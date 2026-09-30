@@ -37,7 +37,7 @@ The `save-draft` button is replaced by `save-progress`. The button label is also
 
 The `save-draft` button remains for backward compatibility. By default, it calls the `process("save-progress")` process.
 
-We recommend that you review whether you have customized the `save-draft` process and/or button resources in your `properties-local.xml` and udpate them to the new name as needed,
+We recommend that you review whether you have customized the `save-draft` process and/or button resources in your `properties-local.xml` and update them to the new name as needed,
 
 \[SINCE Orbeon Forms 2022.1]
 
@@ -104,7 +104,7 @@ xf:show(dialog = "fr-validation-dialog") then suspend
 
 The `result-dialog` action shows a configurable dialog. You can customize:
 
-*   The **message** shown in the dialog, which can either be a static message informing users that the data has been submitted (the default), or a message returned by the persistence layer. In the later case, it is assumed that the persistence layer responds to a CRUD `PUT` operation with the HTML to display in the dialog. None of the persistence implementations that ship with Orbeon Forms do that, so this property is only relevant if you implement your own persistence layer. Otherwise, you will want to leave this property to its default value:
+*   The **message** shown in the dialog, which can either be a static message informing users that the data has been submitted (the default), or a message returned by the persistence layer. In the latter case, it is assumed that the persistence layer responds to a CRUD `PUT` operation with the HTML to display in the dialog. None of the persistence implementations that ship with Orbeon Forms do that, so this property is only relevant if you implement your own persistence layer. Otherwise, you will want to leave this property to its default value:
 
     ```xml
     <property

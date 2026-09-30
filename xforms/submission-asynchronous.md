@@ -96,7 +96,7 @@ When completed submissions are found, the result of each submission is processed
 * Instance replacement or text replacement is done.
 * `xforms-submit-done` / `xforms-submit-error` are dispatched.
 
-If an asynchronous submission is still running (pending) at the time an client HTTP connexion returns (whether an initial page load or an Ajax request):
+If an asynchronous submission is still running (pending) at the time an client HTTP connection returns (whether an initial page load or an Ajax request):
 
 * The client is instructed to poll the server at regular intervals, or when an Ajax request is sent for other reasons.
 * Only once a client request reaches the server are pending asynchronous submission results processed.

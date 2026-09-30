@@ -40,7 +40,7 @@ This is of course an approximation, and assumes that if for a single user, a CPU
 
 ### Examples
 
-* **Large, complex form** – Because the form is quite large, users spend quite a bit of time one it (say, 30 minutes). Maybe this is even the only form that people fill out, which is factored in the peak number of concurrent active users. Because the form is rather complex, Ajax requests are also relatively expensive (say, 250 ms). Imagine in this case the parameters are: _PF_ = 1800 (30 minutes), _AF_ = 30, _AU_ = 100, _PT_ = 1, _AT_ = 0.2. Then this application should run comfortably with even just 1 core, as:
+* **Large, complex form** – Because the form is quite large, users spend quite a bit of time on it (say, 30 minutes). Maybe this is even the only form that people fill out, which is factored in the peak number of concurrent active users. Because the form is rather complex, Ajax requests are also relatively expensive (say, 250 ms). Imagine in this case the parameters are: _PF_ = 1800 (30 minutes), _AF_ = 30, _AU_ = 100, _PT_ = 1, _AT_ = 0.2. Then this application should run comfortably with even just 1 core, as:
 
 _C_ = (1/1800 + 0.2/30) * 100 = 0.72
 
@@ -262,7 +262,7 @@ You might want to override these properties and set them to `smart` during devel
 
 With XML, it is very easy to add data to an existing document and then extract just the data you need from that document. This creates a tendency for the size of the documents manipulated by your application to grow as you progress on the development of your application. Who has never said "let's just add this information to this existing document", or "let's keep this information in the document and pass it around; you never know, we might need it in the future". While this might be just fine in some cases, you need to make sure that the size of your documents does not increase to the point where performance is impacted. If you uncover a performance issue, you should check the size of the documents you manipulate and reduce it when possible.
 
-If you need to be further convinced, consider an application where pages are generated based on some information contained in an XML schema. This XML schema is stored in an XML database and takes about a 100 KB or 4000 lines when serialized. Because data contained in the file is needed in multiple locations, the file is passed around in a number of pipelines while generating a page, and is used overall as input to 10 processors. Each processor will create its own representation of the data in memory, which can take 10 times the size of the serialized XML. That means that each processor has to allocate 1 MB of objects and do some processing one those objects. At the end of the request, 10 MB of memory have been allocated to process this data, and the garbage collector will eventually have to spend CPU cycles on freeing this memory. What if out of the 4000 lines, only 400 are actually used? Starting by extracting those 400 lines and then passing only those to the processors means that the processors now need to do only one tenth of the work they were doing before. Clearly this type of modification can drastically improve performance.
+If you need to be further convinced, consider an application where pages are generated based on some information contained in an XML schema. This XML schema is stored in an XML database and takes about a 100 KB or 4000 lines when serialized. Because data contained in the file is needed in multiple locations, the file is passed around in a number of pipelines while generating a page, and is used overall as input to 10 processors. Each processor will create its own representation of the data in memory, which can take 10 times the size of the serialized XML. That means that each processor has to allocate 1 MB of objects and do some processing on those objects. At the end of the request, 10 MB of memory have been allocated to process this data, and the garbage collector will eventually have to spend CPU cycles on freeing this memory. What if out of the 4000 lines, only 400 are actually used? Starting by extracting those 400 lines and then passing only those to the processors means that the processors now need to do only one tenth of the work they were doing before. Clearly this type of modification can drastically improve performance.
 
 If you are required to work with large documents, also consider using an XML database such as the open source eXist database, and delegate complex queries to the database: this should be more efficient than continually retrieving large XML documents and processing them in Orbeon Forms.
 
@@ -276,7 +276,7 @@ If you can, also try to avoid running many XSLT transformations. In particular, 
 
 The standard Orbeon Forms epilogue can be optimized for your own needs. For example:
 
-* If you do not use the old-style (pre-Orbeon Forms 3.8) XSLT "widgets" (i.e. widget:tabs, which ws the only standard "widget"), you can remove the inclusion of `xforms-widgets.xsl.`
+* If you do not use the old-style (pre-Orbeon Forms 3.8) XSLT "widgets" (i.e. widget:tabs, which was the only standard "widget"), you can remove the inclusion of `xforms-widgets.xsl.`
 * If you are not using portlets (which is likely), you can remove the test for portlets.
 * If you are using the `theme-plain.xsl` theme and have not modified it, you can bypass completely the theme stylesheet. You can do this with the following property:
 ```xml
@@ -357,7 +357,7 @@ The [XForms engine state][15] can be either stored on the server, or sent to the
 
 ### Control Ajax updates
 
-See [Xforms - Performance settings][14]
+See [XForms - Performance settings][14]
 
 ### Check whether your XForms document is cacheable
 

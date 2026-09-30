@@ -4,7 +4,7 @@
 
 The Form Builder form area is meant to look as much as possible like the published form.
 
-Form Builder is built around as simple layout concept: _sections_ and _grids_. This is a good alternative to:
+Form Builder is built around a simple layout concept: _sections_ and _grids_. This is a good alternative to:
 
 * absolute positioning, which is rarely appropriate for web forms
 * complex dynamic layouts, which often confuse form authors
@@ -137,7 +137,7 @@ If a control is present, the following actions related to the control are possib
   * Simply enter text or select a value.
   * You can also set a calculated initial value from the ["Control Settings" dialog](control-settings.md).
 * **Edit the control's items:**
-  * Click on the "Edit Items" icon or test to open the [Choices editor](itemset-editor.md) (for selection controls only).
+  * Click on the "Edit Items" icon or text to open the [Choices editor](itemset-editor.md) (for selection controls only).
 
 When your mouse pointer hovers over a grid cell containing a control, some icons allowing for further actions appear:
 

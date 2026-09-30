@@ -441,7 +441,7 @@ Currently, there is no incremental compilation when running from the command lin
 
 A related known issue, from the command-line, is that running `ant classes` twice in a row fails with errors. You must remove classes under `build/classes` before running `ant classes` again.
 
-_NOTE: With ant, class files are produced under `build/classes`, but with IntelliJ they are produced under `build/orbeon-war/WEB-INF/classes`. You should be aware of this is you switch between building from IntelliJ and building with ant._
+_NOTE: With ant, class files are produced under `build/classes`, but with IntelliJ they are produced under `build/orbeon-war/WEB-INF/classes`. You should be aware of this if you switch between building from IntelliJ and building with ant._
 
 #### Building a distribution
 

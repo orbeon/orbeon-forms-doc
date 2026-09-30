@@ -66,7 +66,7 @@ See also [Required fields: more subtle than you might think](https://blog.orbeon
 The list of data types includes:
 
 * Built-in types
-* XML Schema types (only if an XML Schema with simple types was attache to the form).
+* XML Schema types (only if an XML Schema with simple types was attached to the form).
 
 Built-in types include:
 
@@ -93,13 +93,13 @@ _NOTE: Until Orbeon Forms 4.10, the "Double-precision floating point" data type 
 
 _The reason for the removal was that in the vast majority of cases, this is not the appropriate type ("Integer" or "Decimal" are), and users would often select the incorrect type and then get rounding errors in fields such as the Currency field._
 
-_The reason for re-adding the double-precisiong floating-point data type is that it is appropriate for certain scientific calculations. This said, we recommend its use only in very specific circumstances._
+_The reason for re-adding the double-precision floating-point data type is that it is appropriate for certain scientific calculations. This said, we recommend its use only in very specific circumstances._
 
 At runtime, if the value is required and does not match the specified datatype, the value is marked as invalid.
 
 _NOTE: When selecting certain controls from the toolbox, such as "Email", "Date", "Time", and "Date and Time", the appropriate data type is already selected by Form Builder. Changing the type to a different type might change the appearance of the control to match the type selected._
 
-If an XML Schema containing simple types has been attached to the form \[Orbeon Forms PE only], the simples types are listed in the Schema Type menu.
+If an XML Schema containing simple types has been attached to the form \[Orbeon Forms PE only], the simple types are listed in the Schema Type menu.
 
 ![Built-in Types](images/schema-types.png)
 
@@ -209,7 +209,7 @@ for $d in fr:dataset('my-excluded-dates')/date return xs:date($d)
 * "Supported File Types"
   * SINCE Orbeon Forms 2017.1
   * applies to Single and Multiple File Attachments controls only
-  * the constraint fails if the attachment mediatype doest not match one of the included mediatypes or mediatype wildcards
+  * the constraint fails if the attachment mediatype does not match one of the included mediatypes or mediatype wildcards
   * when listing multiple media types, separate them by a space
 
 In the future, it is expected that more common constraints will be added (see [#2281](https://github.com/orbeon/orbeon-forms/issues/2281)).
@@ -263,13 +263,13 @@ _NOTE: Since 4.6.2, required validations take precedence over other validations,
 * If at least one error validation has failed:
   * If no specific alert message is specified for the validation, the default alert message for the control is used if available, or a global default Form Runner message is used otherwise.
   * If a specific alert message is specified, then it is used.
-  * More than one message can show is several error validations have failed.
+  * More than one message can show if several error validations have failed.
 * Only if the control is valid, if at least one warning formula or common constraint has failed:
   * The specific alert message is used.
-  * More than one message can show is several warning validations have failed.
-* Only if the control is valid and doesn't have any failed warning s, if at least one info formula or common constraint has failed:
+  * More than one message can show if several warning validations have failed.
+* Only if the control is valid and doesn't have any failed warnings, if at least one info formula or common constraint has failed:
   * The specific alert message is used.
-  * More than one message can show is several info validations have failed.
+  * More than one message can show if several info validations have failed.
 
 _NOTE: It is not possible to associate specific alert message to the required or data type validations: they always use the default or global alert message._
 
@@ -310,7 +310,7 @@ You can validate a field using an external validation service as follows:
    * (b) a [hidden field](../form-runner/component/hidden.md) used to store the result from the validation.
 2. You create (c) an HTTP Service for your validation service
 3. You create an action, which, when the value of the field you want to validate (a) changes, calls the service (c), passing the value of the field (a), and stores the result from the validation in the hidden field (b). That result is typically be a boolean, `true` if valid, and `false` if invalid.
-4. In the Control Settings for the field you want to validate (a), in the Validations and Alerts tab, you use a formula to declare that the field is valid only of the value of the hidden field (b) is `true`.
+4. In the Control Settings for the field you want to validate (a), in the Validations and Alerts tab, you use a formula to declare that the field is valid only if the value of the hidden field (b) is `true`.
 
 ## See also
 

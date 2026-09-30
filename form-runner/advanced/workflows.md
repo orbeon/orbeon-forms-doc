@@ -252,7 +252,7 @@ An email can include control values, as well as links pointing back to the form 
 
 Here is the confirmation page template:
 
-![Conformation page template](/form-runner/images/permit-workflow-confirmation-template.webp)
+![Confirmation page template](/form-runner/images/permit-workflow-confirmation-template.webp)
 
 The Confirmation page can also let the user download a PDF document.
 

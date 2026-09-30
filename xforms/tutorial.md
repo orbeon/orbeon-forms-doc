@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is the tutorial for Orbeon Forms's XForms features. It is aimed at programmers who want to program Orbeon Forms, as opposed to analysis who want to use [Form Builder][1].
+This is the tutorial for Orbeon Forms's XForms features. It is aimed at programmers who want to program Orbeon Forms, as opposed to analysts who want to use [Form Builder][1].
 
 If you have questions, issues or suggestions related to this tutorial, please send a message to the [Orbeon forum][2].
 
@@ -52,7 +52,7 @@ Tomcat is the container application into which Orbeon Forms deploys. Follow thes
 
 1. Download Tomcat (see [supported versions](/installation/tomcat.md)) from the [Apache website](http://tomcat.apache.org/).
 
-2. Install Tomcat as per the instructions. If you downloaded the installer version (Windows only), run the installer. If you downloaded a compressed archive, uncompress it to the location of your choice. We call the install location `TOMCAT_HOME` (on windows, this could be `c:/Program Files/Apache/Tomcat`, on a Unix system, `/home/jdoe/tomcat`, etc.).
+2. Install Tomcat as per the instructions. If you downloaded the installer version (Windows only), run the installer. If you downloaded a compressed archive, uncompress it to the location of your choice. We call the install location `TOMCAT_HOME` (on Windows, this could be `c:/Program Files/Apache/Tomcat`, on a Unix system, `/home/jdoe/tomcat`, etc.).
 
 3. Check that your Tomcat installation is working correctly:
     * Run the Tomcat startup script under `TOMCAT_HOME/bin` (`startup.sh` or `startup.bat` depending on your platform), or start Tomcat with the control application (Windows only).
@@ -281,7 +281,7 @@ Reload the page, and notice, as you type in an input field, how the other one up
 
 ![][10]
 
-You notice that you get instant gratification with Orbeon forms: just change files on disk, reload your page, and your changes are taken into account with no compilation or other complex deployment.
+You notice that you get instant gratification with Orbeon Forms: just change files on disk, reload your page, and your changes are taken into account with no compilation or other complex deployment.
 
 ## The Bookcast application
 
@@ -446,7 +446,7 @@ Now it's time to add some visual controls to your page. Start with the following
 </xf:group>
 ```
 
-Reload the page. You should seem something like this:
+Reload the page. You should see something like this:
 
 ![][14]
 
@@ -526,7 +526,7 @@ Reload the page. You should see the following:
 
 You have just added a single selection control with `<xf:select1>`. The name means that the user can "select one" item among several items. (XForms tends to call controls using more abstract terms, rather than giving them names such as "combo box" or "menu".) The single selection control usually appears like a drop-down menu or combo box with most XForms implementations (but you can change it's appearance as shown later).
 
-Nested within the control, you find several `<xf:item>` elements. Each one creates an item in the drop-down menu. An item has to sides: the `<xf:label>` element specifies the _label_ that is presented to the user, and the `<xf:value>` element specifies the _value_ that is stored into the XForms instance when the user selects that particular item.
+Nested within the control, you find several `<xf:item>` elements. Each one creates an item in the drop-down menu. An item has two sides: the `<xf:label>` element specifies the _label_ that is presented to the user, and the `<xf:value>` element specifies the _value_ that is stored into the XForms instance when the user selects that particular item.
 
 Now XForms encourages you to store data in the model. For a selection control, this means storing the list of labels and values in an XForms instance instead of statically listing the items under the `<xf:select1>` element. So let's do this! Create a new instance in the model:
 
@@ -832,7 +832,7 @@ The following is an overview of what has just happened:
 * The XForms engine updates the XForms controls bound to the instance with the values now contained in the instance. For example, the "title" and "author" input fields are now updated with the values that came from the database.
 * The XForms engine sends an HTML page to your web browser. You see the page with all the correct data as saved earlier into the database.
 
-_Actions_ and _events_ are very important in xf: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable action that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
+_Actions_ and _events_ are very important in XForms: they are the glue that allows you to react to different "things" that happen in an XForms page, whether controlled by the XForms engine or directly by the user. This is very similar to using JavaScript in a regular HTML page. In XForms, they allow you to react to the user pressing a button, entering data, etc. XForms comes with a number of standard events and configurable action that you can combine in many ways, so that in most cases you don't need to use something like JavaScript.
 
 (You may wonder what would happen the first time the `list-submission` is called if no `books.xml` document is available in the database. The answer is that the database would return an error, and the submission would throw an event called `xforms-submit-error`. But because you don't have an event handler for this event, nothing happens: the initial content of the `books-submission` instance is not changed and so you see an empty form.)
 
@@ -1232,7 +1232,7 @@ Also add `<xf:alert>` elements to the controls which might be invalid. This allo
 
 Reload the page, and try to enter an invalid link, for example "ftp://ftp.example.com/". An alert icon will show up as you leave the link field with your cursor.
 
-_NOTE: The URL of the schema, "/apps/my-bookcast/schema.xsd", is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded though:_
+_NOTE: The URL of the schema, "/apps/my-bookcast/schema.xsd", is resolved relatively to the external URL of the Bookcast page, so the schema is actually loaded through:_
 
 ```xml
 http://localhost:8080/orbeon/apps/my-bookcast/schema.xsd
@@ -1251,7 +1251,7 @@ This protocol allows loading files stored as Orbeon Forms resources.
 
 Still with an invalid link, press the "Save" link and check the data in the database. Notice that the invalid data didn't save! This happens because the XForms engine automatically ensures that the data sent by a submission is valid before going on with the actual submission.
 
-It would be nice to tell the user that saving didn't work. You can do this very easily: if a submission error occurs, the `<xf:submission>` element dispaches the `xforms-submit-error` event. So let's see how you catch that event and display a message to the user:
+It would be nice to tell the user that saving didn't work. You can do this very easily: if a submission error occurs, the `<xf:submission>` element dispatches the `xforms-submit-error` event. So let's see how you catch that event and display a message to the user:
 
 ```xml
 <xf:submission
@@ -1276,7 +1276,7 @@ Try now making this change, enter an invalid link, and press the "Save" link: an
 
 Remember, the name of this application is Book_cast_, which lets suggest that we can expose the list of books as a feed of some sort. Here, you will use the Atom Syndication Format (or Atom in short). Atom is a format very much like RSS but it has been standardized by IETF and is much cleaner than RSS (note that there are at least 6 different versions of RSS). Atom is now supported by most feed readers.
 
-An atom feed looks like this (example from the Atom specification):
+An Atom feed looks like this (example from the Atom specification):
 
 ```xml
 <feed xmlns="http://www.w3.org/2005/Atom">

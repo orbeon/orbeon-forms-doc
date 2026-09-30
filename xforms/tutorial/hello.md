@@ -192,7 +192,7 @@ Reload the page, and notice, as you type in an input field, how the other one up
 
 ![][10]
 
-You notice that you get instant gratification with Orbeon forms: just change files on disk, reload your page, and your changes are taken into account with no compilation or other complex deployment.
+You notice that you get instant gratification with Orbeon Forms: just change files on disk, reload your page, and your changes are taken into account with no compilation or other complex deployment.
 
 [7]: https://raw.github.com/wiki/orbeon/orbeon-forms/images/tutorial/03.png
 [8]: http://www.w3.org/TR/xforms/

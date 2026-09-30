@@ -60,7 +60,7 @@ You must change the default password or Form Runner will generate an error when 
 
 #### General
 
-Links use the `oxf.fr.external-base-url` to specify the external based URL to use:
+Links use the `oxf.fr.external-base-url` to specify the external base URL to use:
 
 ```xml
 <property 

@@ -19,7 +19,7 @@ A component is really a way of packaging and reusing a piece of XForms and HTML 
 
 ## How do you use a component?
 
-This is even easier: each component is assigned an element name. For example, must built-in Orbeon Forms components are in the "fr:" namespace (for Form Runner), and so you write things like:
+This is even easier: each component is assigned an element name. For example, most built-in Orbeon Forms components are in the "fr:" namespace (for Form Runner), and so you write things like:
 
 ```xml
 <fr:fields-date ref="my-date">

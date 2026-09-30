@@ -73,7 +73,7 @@ The `<action>` element can contain zero or more `<result>` elements.
     * An `action` input, containing the result of the action [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) if present. From XSLT, XQuery and XUpdate, this input is available with the `doc('input:action')` function. If there is no action result, a "null" document is available instead:
     *   The default input contains the current XML submission as available from the `instance` input.
 
-        The result of the transformation is automatically submitted to the destination page. If there is no destination page, it replaces the current XML submission document made availabe to the page model and page view.
+        The result of the transformation is automatically submitted to the destination page. If there is no destination page, it replaces the current XML submission document made available to the page model and page view.
 
 An action [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) supports an optional `instance` input containing the current XML submission, and produces an optional `data` output with an action result document which may be used by a `<result>` element's `when` attribute, as well as by an XML submission-producing transformation. This is an example of action XPL pipeline:
 

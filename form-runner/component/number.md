@@ -18,7 +18,7 @@ You use the number component like a regular input field, for example:
 
 ### Form builder support
 
-Form builder shows extended control settings for Number and Currency fields:
+Form Builder shows extended control settings for Number and Currency fields:
 
 ![Number and Currency field control settings](images/xbl-number-control-settings.png)
 

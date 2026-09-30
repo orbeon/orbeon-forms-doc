@@ -78,7 +78,7 @@ Typically, you'll leave this property to its default value (`strict`). However, 
 
 ## 2-way SSL
 
-When using HTTPS, you might want Orbeon Forms to authenticate itself by presenting a client certificate. For this, you need the client to have a key and certificate in a keystore, and point Orbeon Forms to that keystore using the propertied below.
+When using HTTPS, you might want Orbeon Forms to authenticate itself by presenting a client certificate. For this, you need the client to have a key and certificate in a keystore, and point Orbeon Forms to that keystore using the properties below.
 
 ```xml
 <property
@@ -224,7 +224,7 @@ _NOTE: These two headers are computed values and it is only possible to override
 
 [SINCE Orbeon Forms 2019.1]
 
-Since the HTTP client uses connection pooling, some connections can be come stale, which can cause errors at inopportune times. Enabling expired and idle connections checking can help reduce this issue.
+Since the HTTP client uses connection pooling, some connections can become stale, which can cause errors at inopportune times. Enabling expired and idle connections checking can help reduce this issue.
 
 The `oxf.http.expired-connections-polling-delay` property sets the expired connection checking polling delay. The default is 5,000 milliseconds (5 seconds). 
 

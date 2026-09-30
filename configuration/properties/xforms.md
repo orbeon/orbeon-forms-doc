@@ -109,7 +109,7 @@ See [XPath Analysis](../../xforms/xpath/expression-analysis.md).
 
 \[SINCE Orbeon Forms 4.4]
 
-The following property specifies whether the XForms engine should keep file location formation:
+The following property specifies whether the XForms engine should keep file location information:
 
 ```xml
 <property 
@@ -456,7 +456,7 @@ See also [`oxf.fr.detail.attachment.mediatypes`](form-runner-attachments.md#allo
 
 #### Upload progress
 
-When you use an `<xf:upload>` control, as soon users select a file, the file is uploaded in the background from the browser to Orbeon Forms. While the file is uploaded, a progress bar is show in the browser, in place of the file selection control, as in this screenshot:
+When you use an `<xf:upload>` control, as soon users select a file, the file is uploaded in the background from the browser to Orbeon Forms. While the file is uploaded, a progress bar is shown in the browser, in place of the file selection control, as in this screenshot:
 
 ![Upload Progress](../../xforms/images/xforms-upload-progress-bar.png)
 
@@ -611,7 +611,7 @@ See [XForms Error Handling](../../xforms/error-handling.md).
 
 If you write your own XBL components, you need to include the XBL in every page that uses them. To avoid this, you can define a mapping between the namespace in which your XBL components are, and a directory containing the XBL file. Then, following some naming conventions (more on this below), your XBL will be automatically found by Orbeon Forms, without you having to explicitly include it in every page that uses it.
 
-Properties starting with `oxf.xforms.xbl.mapping` specify a mapping between directory name an a URI:
+Properties starting with `oxf.xforms.xbl.mapping` specify a mapping between directory name and a URI:
 
 ```xml
 <property

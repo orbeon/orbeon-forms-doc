@@ -2,7 +2,7 @@
 
 ## Events in XForms
 
-The event model of XForms is based on the [Document Object Model (DOM) Level 2 Events][1] specification. This is the same specification that defines how your web browser handles events in HTML documents. This is good news because it means that his knowledge is reusable between XForms and HTML/JavaScript development!
+The event model of XForms is based on the [Document Object Model (DOM) Level 2 Events][1] specification. This is the same specification that defines how your web browser handles events in HTML documents. This is good news because it means that this knowledge is reusable between XForms and HTML/JavaScript development!
 
 What's new with XForms is that it allows users to declaratively register event handlers following the [XML Events 2][2] specification. If you write HTML and JavaScript code running directly in your browser, you would typically register event handlers using JavaScript APIs. In XForms, which does not mandate JavaScript, XML Events provide a declarative alternative to using JavaScript. This usually makes it clearer how listeners are attached to XForms objects.
 
@@ -295,7 +295,7 @@ The boolean attribute `xxf:show-progress` allows specifying whether the client m
     xxf:show-progress="false"/>
 ```
 
-[UP TO 4.10] The `xxf:progress-message` attribute allows specifying a custom progress message when `xxf:show-progress` is `true`. By default, the standard progres message is used. [SINCE 2016.1] Orbeon Forms switched to using a [slim loading bar](https://blog.orbeon.com/2016/04/how-do-you-tell-users-something-is.html) instead of a loading indicator message, and as a result specifying a "progress message" does not make sense anymore. The `xxf:progress-message` attribute is deprecated: specifying it has no effect, and might be considered as an error in future versions.
+[UP TO 4.10] The `xxf:progress-message` attribute allows specifying a custom progress message when `xxf:show-progress` is `true`. By default, the standard progress message is used. [SINCE 2016.1] Orbeon Forms switched to using a [slim loading bar](https://blog.orbeon.com/2016/04/how-do-you-tell-users-something-is.html) instead of a loading indicator message, and as a result specifying a "progress message" does not make sense anymore. The `xxf:progress-message` attribute is deprecated: specifying it has no effect, and might be considered as an error in future versions.
 
 For more information, see the [XForms specification](https://www.w3.org/TR/xforms11/#action-dispatch).
 
@@ -309,7 +309,7 @@ For more information, see the [XForms specification](https://www.w3.org/TR/xform
 
 ## Historical note: differences between specifications
 
-There are differences between some events specifications, in particular with regard to how events phases are defined hand how handlers can specify event phases.
+There are differences between some events specifications, in particular with regard to how events phases are defined and how handlers can specify event phases.
 
 * DOM Level 3 Events nicely clarifies the different event phases (capture, target, and bubbling).
 * XML Events 1 `phase="default"` attribute means a listener is activated on the `target` or `bubbling` phase.

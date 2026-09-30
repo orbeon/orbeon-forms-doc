@@ -72,7 +72,7 @@ Say you edit an existing form definition in Form Builder and change the fields t
 
 * If you publish the form as a new version, then changes apply to new data captured with the new version. (Existing data tied to earlier versions will continue to be encrypted per the earlier versions of those form definitions.)
 * If you publish the form overwriting an existing version:
-  * When retrieving form data form the persistence API, fields that were encrypted at the time the form data was stored will be decrypted (even if the list of fields to encrypt has changed in the current form definition).
+  * When retrieving form data from the persistence API, fields that were encrypted at the time the form data was stored will be decrypted (even if the list of fields to encrypt has changed in the current form definition).
   * When storing form data, fields marked for encryption in the form definition will be encrypted.
 
 This means that, from the perspective of fields encryption, overwriting an existing form definition at publication time doesn't cause any problem. This is because encrypted fields are marked as such in the form data, so Orbeon Forms can decrypt them even if the list of fields to be encrypted has changed since the last time the form data was saved.

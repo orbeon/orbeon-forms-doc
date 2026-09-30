@@ -220,7 +220,7 @@ The controls appear like this at design time:
 
 Here is an example of attachment control with multiple selection enabled:
 
-![The attachment control with mulltiple selection enabled](../form-runner/component/images/attachment-controls-design-time.png)
+![The attachment control with multiple selection enabled](../form-runner/component/images/attachment-controls-design-time.png)
 
 /form-runner/component/images/xbl-attachment-multiple.png
 

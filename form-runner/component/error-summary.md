@@ -160,7 +160,7 @@ The `page-size` attribute can also be used on the component when used outside of
 
 ## Adding a header and a footer
 
-When there are no visible errors, the entire body of the error summary is hidden. You can had your own header and footer content within that body so it hides and shows depending on whether there are errors or not. Just add the `<fr:header>` and `<fr:footer>` elements:
+When there are no visible errors, the entire body of the error summary is hidden. You can add your own header and footer content within that body so it hides and shows depending on whether there are errors or not. Just add the `<fr:header>` and `<fr:footer>` elements:
 
 ```xml
 <fr:error-summary observer="my-group">

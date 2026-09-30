@@ -16,7 +16,7 @@ The Form Builder specific extensions are in an namespace::
 
 ## Group metadata for the toolbox
 
-In XBL, each component is defined in an `<xbl:binding>` element and multiple `<xbl:binding>` can be grouped under an `<xbl:xbl>` element. The Form Builder toolbox shows components, grouped by "types of components", e.g. "Text Controls", as shown at the right of this text. To instruct Form Builder that multiple component should be grouped together in the toolbar, place then inside the same `<xbl:xbl>`. Then, as a child element of `<xbl:xbl>`, you provide the title for the group inside an `<fb:metadata>`, as in (see the [full source](https://github.com/orbeon/orbeon-forms/blob/1f92ad665d15de2eda212a0d6a59694529970cb9/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-controls.xbl) as of Orbeon Forms 2018.1):
+In XBL, each component is defined in an `<xbl:binding>` element and multiple `<xbl:binding>` can be grouped under an `<xbl:xbl>` element. The Form Builder toolbox shows components, grouped by "types of components", e.g. "Text Controls", as shown at the right of this text. To instruct Form Builder that multiple component should be grouped together in the toolbar, place them inside the same `<xbl:xbl>`. Then, as a child element of `<xbl:xbl>`, you provide the title for the group inside an `<fb:metadata>`, as in (see the [full source](https://github.com/orbeon/orbeon-forms/blob/1f92ad665d15de2eda212a0d6a59694529970cb9/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/text-controls.xbl) as of Orbeon Forms 2018.1):
 
 ```markup
 <fb:metadata>

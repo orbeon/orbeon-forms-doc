@@ -23,7 +23,7 @@ http://www.orbeon.org/myapp/report/detail?first=12&amp;count=10#middle
 In most cases the URL can be split as follows:
 
 * `http://www.orbeon.org/` identifies the web or application server hosting the application.
-* `/myapp` may optionally identify the particular web application running on that server. Whils this part of the URL path is not mandatory, its use is encouraged on Java application servers, where it is called the _context path_.
+* `/myapp` may optionally identify the particular web application running on that server. While this part of the URL path is not mandatory, its use is encouraged on Java application servers, where it is called the _context path_.
 * `/report/detail` identifies the particular page within the web application. Such a path may be "flat", or hierarchical, separated with "/" (slashes).
 * `?first=12&amp;count=10` specifies an optional _query string_ which identifies zero or more _parameters_ passed to that page. Each parameter has a value. This example has two parameters: the first one is called `first` with value `12`, and the second one is called `count` with value `10`.
 * `#middle` is an optional fragment identifier identifying a section of the resulting page. Usually, this part of the URL is not handled by the web application, instead the web browser uses it to scroll to a section of the resulting page identified by this identifier (here `middle`).
@@ -136,8 +136,8 @@ For instance, a news page can use a page model to retrieve the list of headlines
 
 Each PFC `<page>` element therefore supports attributes defining what page model and page view must be used:
 
-* The `model` attribute is a URL refering to an [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) (optionally an XSLT stylesheet or a static XML file) implementing the model.
-* The `view` attribute is a URL refering to an XSLT stylesheet (optionally an [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) or a static XML file) implementing the view.
+* The `model` attribute is a URL referring to an [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) (optionally an XSLT stylesheet or a static XML file) implementing the model.
+* The `view` attribute is a URL referring to an XSLT stylesheet (optionally an [XPL pipeline](http://wiki.orbeon.com/forms/doc/developer-guide/xml-pipeline-language-xpl) or a static XML file) implementing the view.
 
 The model passes data to the view as an XML document, as follows:
 

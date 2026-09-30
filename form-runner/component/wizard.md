@@ -49,7 +49,7 @@ The `subsections-nav` attribute on top-level `fr:section` elements can be used t
 <fr:section subsections-nav="false">
 ```
 
-Top-level repeated sections do no support subsection navigation and behave as if they have `subsections-nav="false"`.
+Top-level repeated sections do not support subsection navigation and behave as if they have `subsections-nav="false"`.
 
 ## Events supported by fr:wizard
 

@@ -13,7 +13,7 @@ Orbeon Forms uses in-memory caches for data structures associated with forms and
     - The size of this cache is controlled by the `oxf.xforms.cache.documents.size` property and defaults to 50.
     - For testing purposes, this can be turned off with the `oxf.xforms.cache.document` property, but this is not recommended.
     - If a form session is evicted from the cache, it is stored in the `xforms.state` store, from which it can be reloaded and reconstructed when needed.
-    - Whe a user session expires (that is, an application server session expires), the corresponding form sessions are evicted from the cache.
+    - When a user session expires (that is, an application server session expires), the corresponding form sessions are evicted from the cache.
 
 The default size of `oxf.xforms.cache.static-state.size` or `oxf.xforms.cache.documents.size` is fairly small. You definitely will want to consider what size to use for your deployment. If possible, set:
 

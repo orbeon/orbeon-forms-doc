@@ -243,7 +243,7 @@ In addition:
 
 ### New "Dropdown with Other" control
 
-Orbeon Forms already had a "Radio buttons with Other" form control. The nwe "Dropdown with Other" control is similar to the existing "Dropdown" control, but it also allows the user to enter a custom value. ([#5172](https://github.com/orbeon/orbeon-forms/issues/5172))
+Orbeon Forms already had a "Radio buttons with Other" form control. The new "Dropdown with Other" control is similar to the existing "Dropdown" control, but it also allows the user to enter a custom value. ([#5172](https://github.com/orbeon/orbeon-forms/issues/5172))
 
 ### Use of CSS grids by default
 
@@ -312,7 +312,7 @@ We plan to add support for the new date picker in plain XForms in a future point
 
 With earlier Orbeon Forms versions, the Landing page was at `/home/`. This was a static Landing page, which mixed links to the Form Runner Home page, Form Builder, and demo forms. The new Landing page replaces this page and automatically redirects to the `/fr/` path. The `/home/` path now redirects to `/fr/`.
 
-The `/fr/` path pointed to the combined Home page. It how points to the Landing page. Instead, the Home page is now split into the Forms and Admin pages:
+The `/fr/` path pointed to the combined Home page. It now points to the Landing page. Instead, the Home page is now split into the Forms and Admin pages:
 
 * `/fr/forms` now points to published forms (Forms page)
 * `/fr/admin` now points to published forms with administrative functions (Admin page)

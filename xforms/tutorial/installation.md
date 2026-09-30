@@ -12,7 +12,7 @@ Tomcat is the container application into which Orbeon Forms deploys. Follow thes
 
 1. Download Tomcat (see [supported versions](/installation/tomcat.md)) from the [Apache website](http://tomcat.apache.org/).
 
-2. Install Tomcat as per the instructions. If you downloaded the installer version (Windows only), run the installer. If you downloaded a compressed archive, uncompress it to the location of your choice. We call the install location `TOMCAT_HOME` (on windows, this could be `c:/Program Files/Apache/Tomcat`, on a Unix system, `/home/jdoe/tomcat`, etc.).
+2. Install Tomcat as per the instructions. If you downloaded the installer version (Windows only), run the installer. If you downloaded a compressed archive, uncompress it to the location of your choice. We call the install location `TOMCAT_HOME` (on Windows, this could be `c:/Program Files/Apache/Tomcat`, on a Unix system, `/home/jdoe/tomcat`, etc.).
 
 3. Check that your Tomcat installation is working correctly:
     * Run the Tomcat startup script under `TOMCAT_HOME/bin` (`startup.sh` or `startup.bat` depending on your platform), or start Tomcat with the control application (Windows only).

@@ -324,13 +324,13 @@ or, using the default namespace mechanism:
 </soap:Envelope>
 ```
 
-In both these cases, `<my:item>` (or `<item>`) and nested elements are in the `http://example.org/my` namespace. This means that your XPath expression must match elements in a namespace and that, in theory, you need a custom namespace mapping in form builder. Since this is not supported yet, you can work around the issue by using XPath expressions with wildcards:
+In both these cases, `<my:item>` (or `<item>`) and nested elements are in the `http://example.org/my` namespace. This means that your XPath expression must match elements in a namespace and that, in theory, you need a custom namespace mapping in Form Builder. Since this is not supported yet, you can work around the issue by using XPath expressions with wildcards:
 
 * Items: `/soap:Envelope/soap:Body/*:items/*:item`
 * Label: `*:label`
 * Value: `*:value`
 
-You can even use shorter variations if element names are use consistently, for example:
+You can even use shorter variations if element names are used consistently, for example:
 
 * Items: `//*:item`
 * Label: `*:label`

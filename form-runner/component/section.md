@@ -151,7 +151,7 @@ The following events are dispatched to the `fr:section` element:
 | `fr-iteration-added`   | Dispatched when the user has just added an iteration   |
 | `fr-iteration-removed` | Dispatched when the user has just removed an iteration |
 
-These events are not dispatched if the number of iterations changes by other means, for examle if the data is replaced, or inserts/deletes happen outside of the component.
+These events are not dispatched if the number of iterations changes by other means, for example if the data is replaced, or inserts/deletes happen outside of the component.
 
 ## See also
 

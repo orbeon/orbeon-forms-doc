@@ -4,7 +4,7 @@
 
 [Professional Edition (PE) builds](https://www.orbeon.com/download) are available through [PE Subscription plans](https://www.orbeon.com/pricing). Further commercial support is available with [Dev Support plans](https://www.orbeon.com/services).
 
-[Community Edition (CE) builds](https://www.orbeon.com/download) are available free of charge whether your use it to build open source or commercial applications.
+[Community Edition (CE) builds](https://www.orbeon.com/download) are available free of charge whether you use it to build open source or commercial applications.
 
 The complete [source code](http://github.com/orbeon/orbeon-forms/) to Orbeon Forms CE is available free of charge and under *real* open source terms. The source code to Orbeon Forms PE is available to subscription customers on demand.
 
@@ -19,7 +19,7 @@ Note however that if you make changes to the existing Orbeon Forms code, you are
 
 Yes, a license generated for a given version will work with previous versions of the software as well.
 
-For example if you have a license file for orbeon Forms 2017.2, you can use it with Orbeon Forms 2017.1, and so on.
+For example if you have a license file for Orbeon Forms 2017.2, you can use it with Orbeon Forms 2017.1, and so on.
 
 ## Can I use a newer version of Orbeon Forms with an older license file?
 

@@ -87,7 +87,7 @@ Parametrizing `model` and `view` attributes this way often allows greatly reduci
 
 ## Navigating to pages that use matchers
 
-When a `result` element directs flow to a page that uses matchers and `<setvalue>` elements, the PFC attemps to rebuild the destination path accordingly. Consider the following example:
+When a `result` element directs flow to a page that uses matchers and `<setvalue>` elements, the PFC attempts to rebuild the destination path accordingly. Consider the following example:
 
 ```markup
 <page id="source" path="/">

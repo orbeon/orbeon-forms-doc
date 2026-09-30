@@ -22,4 +22,4 @@ Say you want to show a textarea when users check a checkbox to indicate they wan
 ![Textarea shown if checkbox is checked](images/dependent-fields-sections-checkbox.png)
 
 1. Add a Single Checkbox control, open its Control Settings, name it `provide-additional-details`.
-2. Add a Plain Text Area control, open its Control Settings, open the Formulas tab, set the Visibility to Formula, an enter `$provide-additional-details/string() = 'true'`.
+2. Add a Plain Text Area control, open its Control Settings, open the Formulas tab, set the Visibility to Formula, and enter `$provide-additional-details/string() = 'true'`.

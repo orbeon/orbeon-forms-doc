@@ -59,7 +59,7 @@ At the beginning of a top-level process, the current state of:
 
 is temporarily saved.
 
-Upon running the `rollback` action, that stat is restored.
+Upon running the `rollback` action, that state is restored.
 
 This means, for example, that if the instance data was changed due to actions such as:
 

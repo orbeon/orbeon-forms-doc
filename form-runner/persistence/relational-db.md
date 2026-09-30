@@ -20,7 +20,7 @@ See also [Removing the built-in SQLite database](/configuration/advanced/product
 
 ### Oracle database setup
 
-1. Make sure that Oracle's Database Character Set is set to `AL32UTF8`, also as [recommended by Oracle][2].  You can see you database parameters by running the following query: `select * from nls_database_parameters`,  and the Database Character Set is identified by `nls_characterset`.
+1. Make sure that Oracle's Database Character Set is set to `AL32UTF8`, also as [recommended by Oracle][2].  You can see your database parameters by running the following query: `select * from nls_database_parameters`,  and the Database Character Set is identified by `nls_characterset`.
 2. Create a user/schema in Oracle, for instance with the commands below. In this example "all privileges" are granted to the newly created user/schema, which is not strictly required. You might want to fine-tune permissions on your system as appropriate. If you had already created this schema and that the definition changed, or that you want to restart from scratch for some other reason, you can first delete the schema with all the data it contains with `drop user orbeon cascade`.
 
     ```sql
@@ -471,7 +471,7 @@ In your `properties-local.xml`, you map an app / form / form type to the impleme
 
 ### With multiple schemas
 
-The single schema configuration described in the previous section uses the predefined `oracle` and `mysql` providers. To use multiple schemas you need to define you own provider names. For instance, assume that you have two apps, `hr` and `finance`, and would like both the form definition and data for those apps to be stored in two separate schemas:
+The single schema configuration described in the previous section uses the predefined `oracle` and `mysql` providers. To use multiple schemas you need to define your own provider names. For instance, assume that you have two apps, `hr` and `finance`, and would like both the form definition and data for those apps to be stored in two separate schemas:
 
 1. In your application server configuration, you setup two data sources ; let's call them `hr-datasource` and `finance-datasource`.
 2. In `properties-local.xml`, you use the following properties to define two providers `hr` and `finance` that you configure to use the desired persistence layer implementation (Oracle in this example) and data source:

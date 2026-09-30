@@ -356,7 +356,7 @@ The `update-url-param` property controls whether the wizard updates the `fr-wiza
 
 Setting `allow-url-param` to `true` and `update-url-param` to `false` is useful when you want to provide links to a specific page (for example, a link to return to a draft on a given page), but don't want users to inadvertently copy a page-specific URL from the browser's address bar.
 
-It is possible to read the current wizard page name using the [`fr:wizard-current-page-name()`](../../xforms/xpath/extension-form-runner.md#fr-wizard-current-page-name) function. This can be used for example whe calling a process from a button to pass the current wizard page name as a parameter to the service URL.
+It is possible to read the current wizard page name using the [`fr:wizard-current-page-name()`](../../xforms/xpath/extension-form-runner.md#fr-wizard-current-page-name) function. This can be used for example when calling a process from a button to pass the current wizard page name as a parameter to the service URL.
 
 ## See also
 

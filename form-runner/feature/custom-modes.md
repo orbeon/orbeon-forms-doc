@@ -59,7 +59,7 @@ As usual, with wildcards representing the application name and form name, you ca
   * If `false`, the mode is not allowed to access the persistence layer.
     * In this case, form data typically comes from navigation from another mode, or from state restoration, and is passed to another mode or saved through `fr:save-state()`.
 
-Custom mode names appear in URLS, for example:
+Custom mode names appear in URLs, for example:
 
 ```
 /fr/orbeon/feedback/fr:demo-sign/9eff349bfd95aab8d4d5e048bd25a815
@@ -161,7 +161,7 @@ This must be reached with an HTTP `GET`. When called, the callback:
 * checks that a valid, non-expired token is provided
 * obtain the state from the store
 * navigates to the Detail page, restoring the state that was stored
-  * is a continuation mode was specified with `fr:save-state()`, Form Runner switches to that mode, otherwise uses the same mode as when `fr:save-state()` was called
+  * if a continuation mode was specified with `fr:save-state()`, Form Runner switches to that mode, otherwise uses the same mode as when `fr:save-state()` was called
   * if a continuation workflow stage was specified with `fr:save-state()`, Form Runner switches to that workflow state, otherwise uses the same workflow stage as when `fr:save-state()` was called
 
 ## Implementing a view component
@@ -228,7 +228,7 @@ The `change-mode()` action allows you to navigate to any mode, including custom 
 
 The parameter to the `change-mode()` action is the public name of the mode to navigate to. This means that:
 
-- if you defined a custom public name, l.ike `demo-sign` in the example above, you would use `change-mode("demo-sign")`
+- if you defined a custom public name, like `demo-sign` in the example above, you would use `change-mode("demo-sign")`
 - if you did not define a custom public name, you would use the qualified name of the mode, like `change-mode("acme:demo-sign")`.
 
 _NOTE: It is not possible to use this action to produce a `pdf` or `tiff` view of the form data. Use the `open-rendered-format()` action instead._

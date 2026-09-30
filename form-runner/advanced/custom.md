@@ -46,7 +46,7 @@ Make sure that the dialog's root element has the proper XML namespaces, for exam
 The properties mentioned earlier make your dialogs and custom model logic separate from the rest of your form definition. This has the following benefits:
 
 * You can easily share that logic between form definitions.
-* You can rest assured that changed to your form definition with Form Builder will not impact your custom model logic.
+* You can rest assured that changes to your form definition with Form Builder will not impact your custom model logic.
 
 We can note the following drawbacks:
 

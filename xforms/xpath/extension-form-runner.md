@@ -609,7 +609,7 @@ Whether the wizard is configured to have a separate table of contents.
 fr:is-wizard-toc-shown() as xs:boolean
 ```
 
-Whether the wizard's table of content is visible.
+Whether the wizard's table of contents is visible.
 
 ### fr:wizard-current-page-name()
 

@@ -57,7 +57,7 @@ data($price) * data($quantity)
 
 Note that the multiplication will fail if the form controls do not contain valid decimal numbers.
 
-The `data()` function can be a little tricky because of this. Now say you'd like instead to _concatenate_ the text of those nodes containing decimal values even if the don't contain valid decimal values. Then you have to explicitly use the `string()` function:
+The `data()` function can be a little tricky because of this. Now say you'd like instead to _concatenate_ the text of those nodes containing decimal values even if they don't contain valid decimal values. Then you have to explicitly use the `string()` function:
 
 ```xpath
 concat('Price: ', string($price), 'Quantity: ', string($quantity))

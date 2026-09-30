@@ -4,7 +4,7 @@
 
 Specific Form Builder permissions are configured with `WEB-INF/resources/config/form-builder-permissions.xml`.
 
-If you'd like to have multiple classes of Form Builder users where some case edit, say, form in the `hr` app, while other can edit forms in the `sales` app, then you'll want to setup the `form-builder-permissions.xml`.
+If you'd like to have multiple classes of Form Builder users where some can edit, say, form in the `hr` app, while other can edit forms in the `sales` app, then you'll want to setup the `form-builder-permissions.xml`.
 
 _NOTE: The file used to be called `form-runner-roles.xml`._
 
@@ -17,7 +17,7 @@ In this file you map role names to applications and forms. For instance, the fol
 </roles>
 ```
 
-_NOTE: Each `<role>` element refers to as single role name. It is **not** possible to place multiple space-separated roles in the `name` attribute._
+_NOTE: Each `<role>` element refers to a single role name. It is **not** possible to place multiple space-separated roles in the `name` attribute._
 
 Orbeon Forms can infer the roles for the current user either based on information it gets from the container or from an HTTP header. Those two cases are detailed in the following two sections. Once you've defined your `form-builder-permissions.xml` and done the appropriate setup for container-driven or header-driven roles, as described below:
 

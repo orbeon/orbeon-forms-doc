@@ -213,7 +213,7 @@ The `oxf.xforms.assets.baseline.updates` property can be used to exclude and add
 
 It doesn't make much sense to use this property in a properties file. Instead, it should be used via an attribute on `xf:model`.
 
-Each asset must be prefixed with a `+` or a `-` to indicate whether the asset as removed from or added to the baseline. 
+Each asset must be prefixed with a `+` or a `-` to indicate whether the asset is removed from or added to the baseline. 
 
 ```xml
 xxf:assets.baseline.updates="-/ops/javascript/scalajs/orbeon-xforms.js +/apps/fr/resources/scalajs/orbeon-form-runner.js"
@@ -441,7 +441,7 @@ with the `defer` attribute.
 
 With Orbeon Forms 2017.2 and older, this feature is enabled by default.
 
-The following property, if enabled, places external and inline JavaScript at the bottom of the page for performanc
+The following property, if enabled, places external and inline JavaScript at the bottom of the page for performance
 reasons:
 
 ```xml

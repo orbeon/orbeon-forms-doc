@@ -18,7 +18,7 @@ Scenario: compute the sum of values in multiple repeat repetitions. Say you have
 * a decimal text output field called `row-total` on each row
 * a decimal text output field called `total` below the grid
 
-You want to compute the row totals and athe general total.
+You want to compute the row totals and the general total.
 
 Calculated value expression for `row-total`:
 

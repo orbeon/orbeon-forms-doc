@@ -118,7 +118,7 @@ Orbeon Forms has a single property enabling replication. By default, it is set t
 
 The Orbeon Forms `ehcache.xml` must be modified to include replication settings, which are turned off by default. This is similar to Tomcat session replication. To modify this file, extract it from the `WEB-INF/lib/orbeon-core.jar`, and copy it in the `WEB-INF/resources/config` directory. You can then modify the `ehcache.xml` in that directory, and your updated version will take precedence over the built-in version of that file found inside `orbeon-core.jar`.
 
-*NOTE: There isn't as single set of settings to replicate the Tomcat servlet session and Ehcache, as the two products use different libraries for replication. But the idea is that both configuration should behave as closely as possible from each other.* 
+*NOTE: There isn't a single set of settings to replicate the Tomcat servlet session and Ehcache, as the two products use different libraries for replication. But the idea is that both configuration should behave as closely as possible from each other.* 
 
 The keys to this configuration are:
 

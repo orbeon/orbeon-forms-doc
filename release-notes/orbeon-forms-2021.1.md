@@ -275,7 +275,7 @@ Low-level `xf:insert` and `xf:delete` actions are now available in processes.
 
 The [`oxf.fr.detail.warn-when-data-unsafe` property](../configuration/properties/form-runner-detail-page.md#warning-the-user-when-data-is-unsafe) supports a formula (AVT).
 
-The `oxf.http.ssl.keystore` properties can point to resources within Orbeon Forms (`oxf:` protocol). The handling of the keystore vs. the trustore has been clarified. See the [documentation](../configuration/properties/properties-general-http-client.md#2-way-ssl).
+The `oxf.http.ssl.keystore` properties can point to resources within Orbeon Forms (`oxf:` protocol). The handling of the keystore vs. the truststore has been clarified. See the [documentation](../configuration/properties/properties-general-http-client.md#2-way-ssl).
 
 ### Flat view to support form versions
 
@@ -319,7 +319,7 @@ See the [documentation](../form-runner/advanced/monitoring-http-requests.md##orb
 See also:
 
 * [Supported languages](../form-runner/feature/supported-languages.md) for the list of supported languages.
-* [Localizing Orbeon Forms](../contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form runner in additional languages. Localization depends on volunteers, so please let us know if you want to help!
+* [Localizing Orbeon Forms](../contributors/localizing-orbeon-forms.md) for information about how to localize Form Builder and Form Runner in additional languages. Localization depends on volunteers, so please let us know if you want to help!
 
 ## Browser support
 

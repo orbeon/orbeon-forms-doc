@@ -19,7 +19,7 @@ However, XPath formulas or custom XForms code have full access to the form data 
 
 When XPath formulas or custom XForms code are required, we recommend making sure that those do not depend on the specifics of the internal data format.
 
-On way to avoid issues is to avoid referring to data in the form using relative XPath expressions, such as:
+One way to avoid issues is to avoid referring to data in the form using relative XPath expressions, such as:
  
 ```xpath
 ../my-other-control

@@ -236,7 +236,7 @@ Form Runner calls are made through the `SubmissionProvider` interface.
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
 Form Runner persistence calls (saving and reading form data and attachments) use `submitAsync()` instead of `submit()`
-in call cases.
+in all cases.
 
 ### Saving form data
 

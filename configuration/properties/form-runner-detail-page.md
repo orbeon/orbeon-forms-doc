@@ -206,7 +206,7 @@ Example with `fr:control-string-value()`:
 The property `oxf.fr.detail.loading-indicator.BUTTON.*.*`, where you replace `BUTTON` by a specific button name, allows you to configure which loading indicator, if any, is to be used for that button. The value of the property can be either:
 
 * Empty, which is the default, and means "no loading indicator".
-* `modal`, greys out the background, shows a spinner in the center of the screen, and prevents any user input as long as the action triggered by the button is being processed.
+* `modal`, grays out the background, shows a spinner in the center of the screen, and prevents any user input as long as the action triggered by the button is being processed.
 * `inline`, shows a spinner inside the button itself.
 
 In the following example, the `send` button is made modal:
@@ -467,7 +467,7 @@ See also [Run form in the background](../../form-runner/api/other/run-form-backg
 
 \[SINCE Orbeon Forms 2018.2]
 
-When data is _unsafe_, meaning that is has been modified but not saved yet, Form Runner by default shows a warning when attempting to navigate away from the current page or to close the current browser tab or window.
+When data is _unsafe_, meaning that it has been modified but not saved yet, Form Runner by default shows a warning when attempting to navigate away from the current page or to close the current browser tab or window.
 
 <figure><img src="../images/chrome-leave-site.png" alt="" width="490"><figcaption>Chrome warning when leaving a page</figcaption></figure>
 

@@ -8,7 +8,7 @@ The component system favors a strong _encapsulation_ so that components can be:
 * used without knowing the details of how they are implemented
 * in short: reused as much as possible!
 
-The goal is first eased of use and transparency for the form author. This means that sometimes the component author must do a little bit more work!
+The goal is first ease of use and transparency for the form author. This means that sometimes the component author must do a little bit more work!
 
 ## The default: strong encapsulation
 

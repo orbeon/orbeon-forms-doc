@@ -193,7 +193,7 @@ This property specifies the default hash algorithm. The default is:
 
 Not all encryption strengths are enabled by default in the JVM. See [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files](http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html).
 
-Orbeon forms uses hash algorithms in at least the following cases:
+Orbeon Forms uses hash algorithms in at least the following cases:
 
 * to encode random identifiers, such as document ids in Form Runner
 * for internal caching purposes

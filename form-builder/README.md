@@ -12,7 +12,7 @@ A few key Form Builder features:
 * **Easy HTML and PDF output.** The forms you build with Form Builder automatically produce nice-looking HTML and PDF output.
 * **Full internationalization.** With Form Builder, any form is easily designed in multiple languages, including labels, help, and error messages.
 * **Expert mode with XForms.** For experts, Form Builder lets your form talk to the outside world with its built-in Web Services editor, and advanced form authors can provide their own XForms markup.
-* **Accessible forms.** Forms produce use either Ajax or a more accessible mode without script.
+* **Accessible forms.** Forms produced use either Ajax or a more accessible mode without script.
 * **Built-in runtime environment.** With a single click, your form is deployed into the Form Runner runtime environment and users can start filling-out data.
 * **Services and actions.** Build simple services and actions right from the editor without writing code.
 

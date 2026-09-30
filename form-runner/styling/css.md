@@ -213,12 +213,12 @@ You style specific controls in your form, say to set the width of an input field
 
 The CSS class you use can either be one you define, or one of the following built-in classes:
 
-- `fr-width-2em`: sets the field with to 2 em
-- `fr-width-3em`: sets the field with to 3 em
-- `fr-width-5em`: sets the field with to 5 em
-- `fr-width-7em`: sets the field with to 7 em
-- `fr-width-10em`: sets the field with to 10 em
-- `fr-width-15em`: sets the field with to 15 em
+- `fr-width-2em`: sets the field width to 2 em
+- `fr-width-3em`: sets the field width to 3 em
+- `fr-width-5em`: sets the field width to 5 em
+- `fr-width-7em`: sets the field width to 7 em
+- `fr-width-10em`: sets the field width to 10 em
+- `fr-width-15em`: sets the field width to 15 em
 
 *NOTE: Since Orbeon Forms 2018.1, it is no longer recommended to use those CSS classes. Instead, vary the width of the 12-column grid cell in Form Builder to the desired size.*
 
@@ -230,9 +230,9 @@ The CSS class you use can either be one you define, or one of the following buil
 
 You can either:
 
-1. Store your CSS is a separate CSS file, which you either provide in addition or that overrides the default CSS provided by Orbeon Forms. For more on this, see the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) configuration property. This is the recommended technique if your CSS is intended to be shared by several forms.
+1. Store your CSS in a separate CSS file, which you either provide in addition or that overrides the default CSS provided by Orbeon Forms. For more on this, see the [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css) configuration property. This is the recommended technique if your CSS is intended to be shared by several forms.
 
-2. Put your CSS inline, in the form. Uf your CSS is quite short, and specific to a given form (not to be shared amongst forms), this is a possibility. For this, put the rules within your own `<style>` section of the form:
+2. Put your CSS inline, in the form. If your CSS is quite short, and specific to a given form (not to be shared amongst forms), this is a possibility. For this, put the rules within your own `<style>` section of the form:
     ```xml
     <xh:title>My Form Title</xh:title>
     <xh:style type="text/css">

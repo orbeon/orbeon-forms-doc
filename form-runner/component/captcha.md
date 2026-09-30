@@ -50,7 +50,7 @@ The property name changed in Orbeon Forms 2020.1 with the introduction of new ca
   * make sure that, at the top of your properties-local.xml file, you have `xmlns:fr="http://orbeon.org/oxf/xml/form-runner"` defined (this should be present by default)
 * `fr:on-premise-captcha`
   * [\[SINCE Orbeon Forms 2023.1.1\]](../../release-notes/orbeon-forms-2023.1.1.md)
-  * This enables the [Katpcha](https://github.com/youkol/kaptcha) implementation.
+  * This enables the [Kaptcha](https://github.com/youkol/kaptcha) implementation.
   * You can also use the deprecated tokens `OnPremiseCaptcha` or `SimpleCaptcha` for backward compatibility.
   * Make sure that, at the top of your properties-local.xml file, you have `xmlns:fr="http://orbeon.org/oxf/xml/form-runner"` defined (this should be present by default).
 * `SimpleCaptcha`

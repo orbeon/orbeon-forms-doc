@@ -294,7 +294,7 @@ This protocol allows loading files stored as Orbeon Forms resources.
 
 Still with an invalid link, press the "Save" link and check the data in the database. Notice that the invalid data didn't save! This happens because the XForms engine automatically ensures that the data sent by a submission is valid before going on with the actual submission.
 
-It would be nice to tell the user that saving didn't work. You can do this very easily: if a submission error occurs, the `<xf:submission>` element dispaches the `xforms-submit-error` event. So let's see how you catch that event and display a message to the user:
+It would be nice to tell the user that saving didn't work. You can do this very easily: if a submission error occurs, the `<xf:submission>` element dispatches the `xforms-submit-error` event. So let's see how you catch that event and display a message to the user:
 
 ```markup
 <xf:submission

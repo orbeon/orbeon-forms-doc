@@ -73,7 +73,7 @@ Rules:
 In XForms, repeat processing works as follows:
 
 - For each repeat iteration, a "repeat object" (implicit group) is created, containing the "run-time objects" representing the UI controls for that iteration.
-- "the user interface form controls generated for the repeat object are initialized in the same manner as the user interface initialization that is performed during default processsing of `xforms-model-construct-done`"  
+- "the user interface form controls generated for the repeat object are initialized in the same manner as the user interface initialization that is performed during default processing of `xforms-model-construct-done`"  
 
 This means that user interface controls can be updated in these circumstances:  
 

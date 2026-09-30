@@ -22,7 +22,7 @@ If running within a portlet context, return the portlet mode (e.g. `view`, `edit
 xxf:get-remote-user() as xs:string?
 ```
 
-Returns the username for the current user of the application, if known by the container, for instance because users log in with BASIC of FORM-based authentication.
+Returns the username for the current user of the application, if known by the container, for instance because users log in with BASIC or FORM-based authentication.
 
 ## xxf:get-request-attribute()
 

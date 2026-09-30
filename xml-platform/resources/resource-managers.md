@@ -112,7 +112,7 @@ This resource manager is useful when you want to package an application into a s
 | Factory | `org.orbeon.oxf.resources.URLResourceManagerFactory` |
 | Properties | `oxf.resources.url.base` |
 
-This resource manager is able to load resources form any URL (typically `http` or `https`). It can be used if your resources are located on a web server or a content management system with an HTTP interface.
+This resource manager is able to load resources from any URL (typically `http` or `https`). It can be used if your resources are located on a web server or a content management system with an HTTP interface.
 
 ### Example
 

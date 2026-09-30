@@ -60,7 +60,7 @@ Each `<xf:repeat>` element has an associated index, representing the notion of a
 
 Each nested repeat keeps its own separate index value.
 
-The `index()` function should not be confused wit the `position()` function.
+The `index()` function should not be confused with the `position()` function.
 
 _NOTE: XForms 1.1 does not explicitly limit in what type of XPath expressions_ `index()` _can be used. However, in Orbeon Forms, it is strongly advised at the moment to only use_ `index()` _within actions, and to avoid using it in control bindings and binds, as doing so may yield unpredictable results._
 

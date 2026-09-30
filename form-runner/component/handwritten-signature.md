@@ -7,7 +7,7 @@
 This component allows you to capture a signature from people filling out the form, similar to what you would do if you had a paper form, except of course:
 
 * The signature is stored digitally.
-* On a desktop, the signature is drawn with a mouse or other pointing device, while one a mobile it is drawn with the user's finger or, more rarely, a stylus.
+* On a desktop, the signature is drawn with a mouse or other pointing device, while on a mobile it is drawn with the user's finger or, more rarely, a stylus.
 
 <figure><img src="../images/handwritten-signature.png" alt="" width="346"><figcaption><p>An example signature</p></figcaption></figure>
 
