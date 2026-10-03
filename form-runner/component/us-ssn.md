@@ -73,6 +73,8 @@ Because the SSN is a sensitive piece of information, we recommend that you handl
 * Second, if you request it, consider making only transient use of it, such as calling a verification service, without storing it in your database.
 * Finally, if you do store it, consider encrypting it in your database, and ensure that you comply with data protection regulations such as GDPR. Orbeon Forms [supports encryption at rest](../../form-builder/field-level-encryption.md), which satisfies this requirement.
 
+[SINCE Orbeon Forms PE 2026.1] When you add a new US Social Security Number field to a form in Form Builder, its "Encrypt data at rest" option is enabled by default. If needed, you can disable it in the "Control Settings" dialog. This doesn't change existing fields, including SSN fields in forms created with earlier versions.
+
 ## See also
 
 * Blog post: [Field-level encryption](https://blog.orbeon.com/2019/04/field-level-encryption.html)
