@@ -106,14 +106,17 @@ With actions and combinators, the syntax becomes:
 - Two actions or sub-processes must be separated by a combinator.
 - Some actions have parameters
 
-For example, the behavior of the "Save" button, associated with the `save-final` process, is specified this way:
+For example, the behavior of the "Save" button, associated with the `save-final` process, is specified this way (slightly simplified):
 
 ```sh
 require-uploads
 then validate-all
 then save
 then success-message("save-success")
-recover error-message("database-error")
+recover (
+    error-message("database-error")
+    then terminate-with-failure
+)
 ```
 Notice that there are:
 
@@ -124,13 +127,15 @@ Notice that there are:
 So in the example above what you want to say is the following:
 
 - start by checking that there are no pending uploads
-    - if there are, the process is interrupted
+    - if there are, an error message is shown and the process is interrupted with a failure
 - then in case of success validate the data
     - if it's invalid, the process is interrupted
     - if there are warnings or info messages, a dialog is shown to the user
 - then in case of success save the data
 - then in case of success show a success message
-- if saving has failed, then show an error message
+- if saving has failed, then show an error message and interrupt the process with a failure
+
+Interrupting the process with a failure, rather than just showing an error message, ensures that, if `save-final` is used as a sub-process, the actions following it don't run, and that callers of the process know that the data wasn't saved.
 
 A process which just saves the data without checking validity and shows success and error messages looks like this:
 
