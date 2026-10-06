@@ -129,6 +129,26 @@ This property lists, as a space-separated list of tokens, which of these pages t
 - With only `general-settings`, the wizard shows just the general settings page, and new forms are created as blank forms.
 - With neither token, the wizard doesn't show at all, and new forms are created directly as blank forms.
 
+## Form title and description requirements
+
+[SINCE Orbeon Forms 2025.1.3]
+
+```xml
+<property
+    as="xs:boolean"
+    name="oxf.fb.form-title.required.*.*"
+    value="false"/>
+<property
+    as="xs:boolean"
+    name="oxf.fb.form-description.required.*.*"
+    value="false"/>
+```
+
+These properties configure whether the form title and description are required:
+
+- Like the application name and form name, the title and description are optional when you create a new form, so you can start working on your form right away. They become required when you save or publish the form: if they are required and missing in the current language, Form Builder shows the general settings and asks you to fill them before it saves or publishes the form.
+- If you have any property that starts with `oxf.fb.form-title.required` set to tue `true`, then for all forms you create the form title is not pre-populated with "Untitled Form".
+
 ## Closing sections
 
 ```xml
