@@ -129,6 +129,18 @@ When multiple property definitions match a given property query, the resolution 
 | 5        | Global wildcard (`*.*`) | Matching profile     | `<property name="oxf.fr.detail.buttons.*.*" profiles="internal" ...>`           |
 | 6        | Global wildcard (`*.*`) | Default (no profile) | `<property name="oxf.fr.detail.buttons.*.*" ...>`                               |
 
+## Limitations
+
+As of Orbeon Forms 2026.1, property profiles are not supported for the following:
+
+- Landing, Published Forms, and Admin pages: these do not pertain to a specific form, so they cannot be assigned a profile.
+- Summary page (`oxf.fr.default-timezone`, `oxf.fr.summary.show-$column.*.*`, `oxf.fr.summary.show-version-selector.*.*`, `oxf.fr.summary.page-size.*.*`)
+- Configuration of the persistence layer (`oxf.fr.persistence.**` properties)
+- Patching of resources (`oxf.fr.resource.**` properties)
+- Form permissions (`oxf.fr.permissions.$app.$form` properties)
+- TIFF settings (`oxf.fr.detail.tiff.*` properties)
+- Low-level XForms properties (`oxf.xforms.*` properties like `oxf.xforms.encrypt-item-values`, etc.)
+
 ## XPath and API access
 
 ### `xxf:property()`
