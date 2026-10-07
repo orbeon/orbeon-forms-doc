@@ -8,6 +8,10 @@
 
 Property profiles provide a mechanism to group, share, and reuse configuration properties across multiple forms without having to duplicate property definitions in `properties-local.xml`.
 
+Watch the video below for a quick overview of property profiles:
+
+{% embed url="https://www.youtube.com/watch?v=_pp42xo2vAI" %}
+
 Often, families or categories of forms (such as forms belonging to the same business unit or following the same workflow) share identical configuration settings, such as:
 
 - Detail page buttons (e.g. Save, Review, PDF, Submit)
