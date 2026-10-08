@@ -156,6 +156,7 @@
     * [Custom modes](form-runner/feature/custom-modes.md)
     * [Datasets](form-runner/feature/datasets.md)
     * [Detail page modes](form-runner/feature/detail-page-modes.md)
+    * [Ephemeral messages](form-runner/feature/ephemeral-messages.md)
     * [Excel and XML import](form-runner/feature/excel-xml-import.md)
     * [Excel and XML export](form-runner/feature/excel-xml-export.md)
     * [Form Runner keyboard shortcuts](form-runner/feature/keyboard-shortcuts.md)

@@ -65,4 +65,5 @@ For example, you might want to define a custom `email-and-save` process to email
 
 ## See also
 
+* [Ephemeral messages](../form-runner/feature/ephemeral-messages.md)
 * Blog post: [Customizing Form Runner messages directly from Form Builder](https://blog.orbeon.com/2023/10/customizing-form-runner-messages.html)

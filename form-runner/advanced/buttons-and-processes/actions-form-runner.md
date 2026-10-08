@@ -178,9 +178,11 @@ In most cases you'll want to use this action in conjunction with [`navigate`](ac
     * `message`: message to show (is an XPath value template)
     * `html`: [\[SINCE Orbeon Forms 2023.1\]](../../../release-notes/orbeon-forms-2023.1.md) `"true"` if the message is HTML (default is `"false"`)
     * `resource`: resource key pointing to the message
-    * `appearance`: \[SINCE Orbeon Forms 2021.1] This parameter is optional. If present, the value must be either `dialog` or `ephemeral`. If missing, the `dialog` is implied.
-      * `dialog`: the message is shown in the modal dialog
-      * `ephemeral`: the message is shown at the bottom of the form, and disappears when users perform an action
+    * `appearance`: \[SINCE Orbeon Forms 2021.1] This parameter is optional. If present, the value must be either `dialog` or `ephemeral`. If missing, `dialog` is implied.
+      * `dialog`: the message is shown in a modal dialog
+      * `ephemeral`: the message is shown as an ephemeral notification
+
+\[SINCE Orbeon Forms 2026.1] Ephemeral messages (`success-message` and `error-message` with `appearance = "ephemeral"`) are displayed as floating **toast notifications** fixed to the screen viewport and automatically dismissed after a configurable delay. See [Ephemeral messages](../../feature/ephemeral-messages.md) for details and configuration properties.
 
 \[SINCE Orbeon Forms 4.7] The value of the `message` parameter and the message to which points the resource key in the `resource` parameter are interpreted as an XPath Value Template.
 

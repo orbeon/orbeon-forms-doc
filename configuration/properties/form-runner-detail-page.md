@@ -130,6 +130,59 @@ See [Table of contents configuration properties](form-runner-toc.md).
 
 Where to place the error summary: `top`, `bottom`, `both`, or `none`.
 
+## Ephemeral messages
+
+[SINCE Orbeon Forms 2026.1]
+
+Form Runner displays feedback messages to users when running actions such as [`success-message`](../../form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message) or [`error-message(appearance = "ephemeral")`](../../form-runner/advanced/buttons-and-processes/actions-form-runner.md#success-message-and-error-message).
+
+For full details, see the [Ephemeral messages feature guide](../../form-runner/feature/ephemeral-messages.md).
+
+### Appearance
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.messages.appearance.*.*"
+    value="toast"/>
+```
+
+Available values:
+
+* `toast` (default): Displays ephemeral messages as floating toast notifications fixed to the viewport.
+* `inline`: Displays messages as inline alert banners at the bottom of the form above the buttons bar (legacy behavior). In `inline` mode, messages are automatically dismissed upon user focus on any control.
+
+### Position
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.messages.position.*.*"
+    value="bottom-right"/>
+```
+
+Controls the position of the toast notification on screen:
+
+* `bottom-right` (default)
+* `bottom-left`
+* `top-right`
+* `top-left`
+* `bottom-center`
+* `top-center`
+
+Custom CSS / Bootstrap 5 utility classes can also be specified.
+
+### Auto-dismiss delay
+
+```xml
+<property
+    as="xs:integer"
+    name="oxf.fr.detail.messages.delay.*.*"
+    value="10000"/>
+```
+
+Specifies the delay in milliseconds before the toast notification automatically disappears (default: `10000` ms / 10 seconds). Set to `0` or negative to disable automatic dismissal.
+
 ## Buttons on the Detail page
 
 ### Choosing which buttons are shown
