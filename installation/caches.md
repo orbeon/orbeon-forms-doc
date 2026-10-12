@@ -51,7 +51,7 @@ Orbeon Forms has traditionally used Ehcache 2.x. In recent versions, JCache API 
 
 | Orbeon Forms Version | Infinispan support | Ehcache 2.x Support | JCache Support | Default     |
 |----------------------|--------------------|---------------------|----------------|-------------|
-| 2025.1               | Yes                | Yes (deprecated)    | Yes            | Infinispan  |
+| 2025.1 and newer     | Yes                | Yes (deprecated)    | Yes            | Infinispan  |
 | 2023.1 and newer     | No                 | Yes                 | Yes            | Ehcache 2.x |
 | 2022.1.5 and newer   | No                 | Yes                 | Yes            | Ehcache 2.x |
 | 2021.1.9 and newer   | No                 | Yes                 | Yes            | Ehcache 2.x |
