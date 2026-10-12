@@ -19,7 +19,7 @@ You need to have already installed:
   * ([Tomcat 7](http://tomcat.apache.org/download-70.cgi) still works as of 2018-10-01 but is deprecated)
 * [Node.js](https://nodejs.org/en/)
 * [jsdom](https://github.com/jsdom/jsdom)
-* Java 11 or newer
+* A version of Java [supported](/installation#java-versions) by the version of Orbeon Forms you're building
 
 On macOS, you can install the following easily if you have [Homebrew](http://brew.sh/):
 
@@ -178,7 +178,7 @@ Create a new context in Tomcat's `conf/server.xml`:
 </Context>
 ```
 
-Tomcat has a file called `bin/setenv.sh` where you can set environment variables. In it, set the `JAVA_OPTS` for Tomcat. Create the file if it doesn't exist yet. For Java 11:
+Tomcat has a file called `bin/setenv.sh` where you can set environment variables. In it, set the `JAVA_OPTS` for Tomcat. Create the file if it doesn't exist yet.
 
 ```bash
 ORBEON_MEMORY_OPTS="-Xms300m -Xmx3g -verbosegc -XX:+PrintGCDetails"
