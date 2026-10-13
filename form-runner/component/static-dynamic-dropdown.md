@@ -20,6 +20,8 @@ In the Form Builder Toolbox you'll find two dropdown components, as shown in the
 
 Typically, you'll want to use the Static Dropdown for cases where the number of choices is limited, and doesn't change much over time, and the Dynamic Dropdown for cases where you have a long list of choices and/or those choices can change over time.
 
+If users need to select more than one choice from a list loaded from a service, use the [Dynamic Multiselect](#dynamic-multiselect), which you'll find in the Toolbox just below the Dynamic Dropdown.
+
 <figure><img src="images/dynamic-data-dropdown-components.png" alt="" width="193"><figcaption><p>Static Dropdown and Dynamic Dropdown in the Toolbox</p></figcaption></figure>
 
 ### With vs. without search
@@ -159,6 +161,33 @@ You can specify a minimum input length, in characters, before a dropdown with se
     name="oxf.xforms.xbl.fr.dropdown-select1-search.min-input-length.*.*"
     value="2"/>
 ```
+
+## Dynamic Multiselect
+
+\[SINCE Orbeon Forms 2026.1]
+
+### Overview
+
+The Dynamic Multiselect is similar to the Dynamic Dropdown with search, but allows users to select more than one choice. As with the Dynamic Dropdown, the list of choices is loaded at runtime from a service you provide. Users search for a choice by typing part of its label, select it, and can then search for and select additional choices. Each selected choice shows in the field, and users can remove choices they selected previously.
+
+You'll find the Dynamic Multiselect in the Form Builder Toolbox, just below the Dynamic Dropdown.
+
+### Format of the data and 
+
+The values of the selected choices are stored in the data as a space-separated list, in the same way as with [Checkboxes](../../form-builder/toolbox.md#selection-controls). For instance, if users select the countries whose values are `ch`, `fr`, and `it`, the data will contain:
+
+```xml
+<countries>ch fr it</countries>
+```
+
+### Limitations
+
+- Since values are separated by spaces, the values returned by your service must not contain spaces.
+- The Dynamic Multiselect always shows with search, so there is no appearance to choose.
+- Services can't perform the search, and consequently can't implement paging. Instead, your service must return all the possible choices, and the search takes place in the browser, as users type.
+- The label of the selected choices isn't stored in the data, and the "Store label" option isn't available.
+
+These restrictions come from the way the Dynamic Dropdown stores the label of the selected choice in an attribute, which doesn't lend itself to storing the labels of multiple choices.
 
 ## See also
 

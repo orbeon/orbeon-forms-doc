@@ -191,6 +191,7 @@ The controls appear like this at design time:
 | **Scrollable Checkboxes**      | multiple  | scrollable checkboxes                                        |
 | **Yes/No Answer**              | single    | a simple "Yes" or "No" choice                                |
 | **Dynamic Data Dropdown**      | single    | dynamic dropdown bound to a REST service                     |
+| **Dynamic Multiselect**        | multiple  | dynamic multiple selection bound to a REST service, see [Dynamic Multiselect](../form-runner/component/static-dynamic-dropdown.md#dynamic-multiselect) \[SINCE Orbeon Forms 2026.1] |
 | **Autocomplete**               | single    | autocompletion                                               |
 
 You edit the choices of most selection controls with the [Choices editor](itemset-editor.md).
