@@ -98,6 +98,7 @@ The `oxf.fr.landing.cards` property can now be in JSON format and specify more o
   },
   {
     "card-type": "form-data",
+    "thumbnail": "/apps/fr/style/images/orbeon/library.svg",
     "app": "orbeon",
     "form": "builder",
     "version": 1
@@ -153,6 +154,7 @@ For each card type, the following options are available:
   * `app` (string, required): application name
   * `form` (string, required): form name
   * `version` (integer, required): form version
+  * `thumbnail` (string, optional): URL of the thumbnail image for the card, used if the form definition doesn't have a thumbnail
 
 For the `form-data` cards, the title and description are taken from the form definition.
 
