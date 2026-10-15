@@ -107,10 +107,10 @@ You can configure the authorization service via a property:
   as="xs:anyURI"
   processor-name="oxf:page-flow"
   name="authorizer"
-  value="/orbeon-auth"/>
+  value="http://localhost:8080/orbeon-auth"/>
 ```
 
-The value of this property is either an absolute URL or an absolute path. If it is an absolute path, it is resolved against the host receiving the request. For example, if your servlet container is deployed on `http://localhost:8080/`, the path above resolves to `http://localhost:8080/orbeon-auth`.
+The value of this property must be an absolute URL, which Orbeon Forms uses to reach the authorization service. If the value is not an absolute URL, for instance if it is an absolute path like `/orbeon-auth`, Orbeon Forms logs an error and denies access to all pages and services that require authorization.
 
 This means that the authorization service can reside within the same container as Orbeon Forms, or in a completely different location.
 
@@ -132,7 +132,7 @@ An additional header, `Orbeon-Remote-Address`, is passed, with the value of the 
 
 ## A simple authorization service
 
-Orbeon Forms ships with a very simple WAR file: `orbeon-auth.war`. This war file contains a dummy servlet and a web.xml with a stub to configure BASIC authentication. You typically deploy this WAR file within the same servlet container as the main Orbeon Forms WAR file. This means that you can set the property above to `/orbeon-auth`. Here is the default content of the `web.xml`:
+Orbeon Forms ships with a very simple WAR file: `orbeon-auth.war`. This war file contains a dummy servlet and a web.xml with a stub to configure BASIC authentication. You typically deploy this WAR file within the same servlet container as the main Orbeon Forms WAR file. This means that you can set the property above to `http://localhost:8080/orbeon-auth`, adjusting the host and port to those on which Orbeon Forms can reach your servlet container. Here is the default content of the `web.xml`:
 
 ```xml
 <web-app version="2.4"
