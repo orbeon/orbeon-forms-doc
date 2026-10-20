@@ -142,15 +142,41 @@ If you need to forward, say, `JSESSIONID` and `JSESSIONIDSSO` to services, set t
     value="JSESSIONID JSESSIONIDSSO"/>
 ```
 
-When a username for HTTP Basic authentication is specified, cookies are not forwarded. The first cookie in the list, typically `JSESSIONID`, is interpreted by Orbeon Forms to be the session cookie. If the value of the session cookie doesn't match the current session, say because the provided `JSESSIONID` has expired or is invalid, then the value of the cookie from the incoming request isn't forwarded. Instead, in that case, the new value of the session cookie is:
- 
-- [UP TO Orbeon Forms 2016.3] The session id.
-- [SINCE Orbeon Forms 2017.1] The concatenation of the following 3 values: 
- 
-     1. The value of the `oxf.http.forward-cookies.session.prefix` property
-     2. The session id
-     3. The value of the `oxf.http.forward-cookies.session.suffix` property
-     
+When a username for HTTP Basic authentication is specified, cookies are not forwarded.
+
+### Session cookie name
+
+[SINCE Orbeon Forms 2026.1, 2025.1.3, 2024.1.6, and 2023.1.9]
+
+The name of the session cookie is determined by the `oxf.http.forward-cookies.session-cookie-name` property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.http.forward-cookies.session-cookie-name"
+    value="JSESSIONID"/>
+```
+
+The default value is `JSESSIONID`.
+
+> [!WARNING]
+> **Backward Incompatibility**:
+> Prior to Orbeon Forms 2026.1, 2025.1.3, 2024.1.6, and 2023.1.9, Orbeon Forms assumed by convention that the first cookie listed in `oxf.http.forward-cookies` was the session cookie. This is no longer the case:
+> - If your servlet container or application server uses a custom session cookie name other than `JSESSIONID` (for example, in WebLogic), you must explicitly set `oxf.http.forward-cookies.session-cookie-name` to that name.
+> - The order of cookies in `oxf.http.forward-cookies` no longer determines which cookie is treated as the session cookie. Cookies are forwarded in the order they are listed.
+
+### Session cookie value, prefix, and suffix
+
+When forwarding the session cookie:
+
+- If an incoming cookie matching the session cookie name has a value matching the current HTTP session ID (including clustered routing suffixes, e.g. `session-123.node1`), that value is forwarded as-is.
+- If there is no matching incoming session cookie, or if the current session is new, but an active HTTP session exists, Orbeon Forms synthesizes a session cookie value:
+  - [UP TO Orbeon Forms 2016.3] The session id.
+  - [SINCE Orbeon Forms 2017.1] The concatenation of the following 3 values: 
+    1. The value of the `oxf.http.forward-cookies.session.prefix` property
+    2. The session id
+    3. The value of the `oxf.http.forward-cookies.session.suffix` property
+
 By default, the value of the prefix and suffix properties is empty, as shown below, which works well with application servers like Tomcat that set the `JSESSIONID` directly to the session id.   
 
 ```xml
@@ -176,6 +202,16 @@ On the other hand, some application servers add a prefix and suffix to the sessi
     name="oxf.http.forward-cookies.session.suffix"
     value=":123"/>
 ```
+
+### Other cookies
+
+All other cookies listed in `oxf.http.forward-cookies` are forwarded with their incoming values from the client request.
+
+Unlike the session cookie, non-session cookies are never synthesized using the session ID.
+
+### Incoming cookies parsing
+
+Incoming cookies are parsed directly from the incoming HTTP `Cookie` header (with a fallback to the servlet container `HttpServletRequest.getCookies()` API if the header is absent). This ensures that custom cookies (such as JWT tokens) and container routing information are preserved even when the container's cookie parsing behavior is restrictive.
 
 _WARNING: For security reasons, you should be careful with cookies forwarding, as this might cause non trusted services to receive client cookies._
 

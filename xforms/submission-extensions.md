@@ -225,7 +225,7 @@ _SECURITY NOTE: Forwarding authentication-related headers may cause a security r
 
 ### Configuration
 
-You do this with the global [`oxf.http.forward-headers`](../configuration/properties/general.md#headers-forwarding) property.
+You do this with the global [`oxf.http.forward-headers`](../configuration/properties/properties-general-http-client.md#headers-forwarding) property.
 
 The property contains a space-separated list of header names to forward:
 
@@ -235,6 +235,8 @@ The property contains a space-separated list of header names to forward:
   name="oxf.http.forward-headers"
   value="My-Header-1 My-Header-2"/>
 ```
+
+To forward HTTP cookies, see [Cookies forwarding](../configuration/properties/properties-general-http-client.md#cookies-forwarding).
 
 ### Lifecycle
 
@@ -268,7 +270,7 @@ Since Orbeon Forms 4.9, `oxf.xforms.forward-submission-headers` is deprecated. U
 Prior to Orbeon Forms 4.9, the two properties were looked at in order:
 
 1. The local, XForms-specific `oxf.xforms.forward-submission-headers` property. [DEPRECATED]
-2. The global Orbeon Forms [`oxf.http.forward-headers`](../configuration/properties/general.md#headers-forwarding) property (used only as a default if `oxf.xforms.forward-submission-headers` is not set).
+2. The global Orbeon Forms [`oxf.http.forward-headers`](../configuration/properties/properties-general-http-client.md#headers-forwarding) property (used only as a default if `oxf.xforms.forward-submission-headers` is not set).
 
 ### Per-page forwarding settings (removed)
 
