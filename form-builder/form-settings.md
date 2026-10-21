@@ -169,8 +169,14 @@ For details, see [Wizard View](../form-runner/feature/wizard-view.md).
   * Form Builder setting \[SINCE Orbeon Forms 2018.1]
   * Use property: use the [`oxf.xforms.xbl.fr.wizard.subsections-toc` property](../form-runner/feature/wizard-view.md#visibility-in-the-table-of-contents)
   * "Show subsections for the active section only", "Show subsections for all sections", "Don't show subsections": use the given setting for this form definition, no matter how the property is configured.
-* Wizard Separate Table of Contents
+* Wizard Table of Contents
+  * Form Builder setting [SINCE Orbeon Forms 2026.1]
+  * Use property: use the [`oxf.xforms.xbl.fr.wizard.toc.position` property](../form-runner/feature/wizard-view.md#table-of-contents-position)
+  * Left, Separate, or None: use the given table of contents position for this form definition, no matter how the property is configured.
+  * Replaces the former "Wizard Separate Table of Contents" setting.
 * Always Show Wizard Section Status
+  * Use property: use the [`oxf.xforms.xbl.fr.wizard.section-status` property](../form-runner/feature/wizard-view.md#section-status)
+  * Yes or No: always show or don't show section status in the table of contents.
 
 See also the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html).
 

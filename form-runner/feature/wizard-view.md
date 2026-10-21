@@ -133,11 +133,46 @@ The following property allows specifying which buttons are presented _inside_ th
 
 ![](../images/wizard-buttons.png)
 
-## Separate table of contents
+## Table of contents position
 
-\[SINCE Orbeon Forms 2016.2]
+<a id="separate-table-of-contents"></a>
 
-When set to `true`, the following property enables showing the table of contents separately, as if on a different page:
+The wizard supports configuring the display and position of the table of contents:
+
+* **`left` (default):**
+  * The table of contents appears to the left (wide desktop layout) or to the top (narrow mobile layout).
+  * The section content appears to the right (wide desktop layout) or under the table of contents (narrow mobile layout).
+* **`separate`:** [SINCE Orbeon Forms 2016.2]
+  * The table of contents takes the entire width when landing on the form.
+  * When selecting a section, the view toggles to the selected section (top-level or subsection depending on whether subsection navigation is enabled).
+* **`none`:** [SINCE Orbeon Forms 2026.1]
+  * The table of contents is completely hidden, and the wizard section content takes the entire width.
+  * Navigation is performed using wizard buttons (e.g. "Prev" and "Next").
+
+### Using a property
+
+[SINCE Orbeon Forms 2026.1]
+
+Use the `oxf.xforms.xbl.fr.wizard.toc.position` property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.wizard.toc.position.*.*"
+    value="left"/>
+```
+
+Supported values are:
+
+* `left` (the default when empty or unspecified)
+* `separate`
+* `none`
+
+#### Deprecated separate-toc property
+
+[FROM Orbeon Forms 2016.2 to 2025.1, DEPRECATED SINCE Orbeon Forms 2026.1]
+
+In earlier versions, the `oxf.xforms.xbl.fr.wizard.separate-toc` property was used:
 
 ```xml
 <property
@@ -146,27 +181,38 @@ When set to `true`, the following property enables showing the table of contents
     value="true"/>
 ```
 
-When `false` (the default):
+Setting this property to `true` is equivalent to setting `oxf.xforms.xbl.fr.wizard.toc.position` to `separate`, and `false` is equivalent to `left`. This property remains supported for backward compatibility.
 
-* the table of contents appears to the left (wide desktop layout) or the top (narrow mobile layout)
-* the section content appears to the right (wide desktop layout) or under the table of contents (narrow mobile layout)
+#### Precedence and backward compatibility
 
-When `true`:
+When determining the table of contents position:
 
-* the table of contents takes the entire width when landing on the page
-* when selecting a section, the view toggles to the selected section (top-level or subsection depending on whether subsection navigation is enabled)
+1. **Form Builder metadata:** A setting configured in Form Builder takes precedence over configuration properties. Form metadata `<wizard-toc-position>` takes precedence over legacy `<wizard-separate-toc>`.
+2. **Property specificity:** If both `oxf.xforms.xbl.fr.wizard.toc.position` and `oxf.xforms.xbl.fr.wizard.separate-toc` are defined, standard property specificity applies:
+   * A more specific property (e.g. at the `app.form` level) wins over a less specific one (e.g. wildcard `*.*`). For example, if `oxf.xforms.xbl.fr.wizard.separate-toc.*.*` is `true` and `oxf.xforms.xbl.fr.wizard.toc.position.acme.order` is `none`, the resolved value is `none`.
+   * If both properties have the same specificity, `oxf.xforms.xbl.fr.wizard.toc.position` wins.
+3. If neither property nor metadata is set, the position defaults to `left`.
 
-\[SINCE Orbeon Forms 2022.1]
+### From Form Builder
 
-The Form Settings in Form Builder allow overriding the default set by configuration properties at the form level.
+[SINCE Orbeon Forms 2026.1]
+
+You can configure the table of contents position for a form definition in Form Builder under **Form Settings** &rarr; **Wizard** &rarr; **Wizard Table of Contents**:
+
+* **Use property:** use the configuration specified by `oxf.xforms.xbl.fr.wizard.toc.position` (or legacy `oxf.xforms.xbl.fr.wizard.separate-toc`).
+* **Left:** display the table of contents to the left.
+* **Separate:** display the table of contents as a separate page.
+* **None:** completely hide the table of contents.
+
+This replaces the former "Wizard Separate Table of Contents" option.
 
 ## Section status
 
 ### Status indication
 
-\[SINCE Orbeon Forms 2016.2]
+[SINCE Orbeon Forms 2016.2]
 
-When enabling the separate table of contents of the wizard (see above), the wizard automatically indicates the status of each section:
+When using the `separate` table of contents position (see above), the wizard automatically indicates the status of each section:
 
 * **Not Started:** the user hasn't visited the section yet.
 * **Incomplete:** the user has visited the section but some required fields are not filled.
@@ -175,9 +221,9 @@ When enabling the separate table of contents of the wizard (see above), the wiza
 
 ![Wizard validated mode](../images/wizard-status.png)
 
-\[SINCE Orbeon Forms 2022.1]
+[SINCE Orbeon Forms 2022.1]
 
-By default, the status of each section is not shown in the regular (not separate) wizard table of contents. Setting the `section-status` property to `true` allows changing this default:
+By default, the status of each section is not shown in the regular (`left`) wizard table of contents. Setting the `section-status` property to `true` allows changing this default:
 
 ```xml
 <property
@@ -187,6 +233,8 @@ By default, the status of each section is not shown in the regular (not separate
 ```
 
 The Form Settings in Form Builder allow overriding the default set by configuration properties at the form level.
+
+When the table of contents position is `none`, the table of contents is hidden so section status is not displayed.
 
 ### CSS classes
 

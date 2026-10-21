@@ -591,6 +591,21 @@ Whether the currently-shown wizard page is the last relevant page. For instance,
     value="fr:is-wizard-last-page()"/>
 ```
 
+ ### fr:wizard-toc-position()
+
+[SINCE Orbeon Forms 2026.1]
+
+```xpath
+fr:wizard-toc-position() as xs:string?
+```
+
+Returns the wizard table of contents position:
+
+- `"left"`: the table of contents is shown to the left (the default)
+- `"separate"`: the table of contents is shown on a separate page
+- `"none"`: the table of contents is hidden
+- the empty sequence if the form does not use the wizard view
+
 ### fr:is-wizard-separate-toc()
 
 [SINCE Orbeon Forms 2022.1]
@@ -599,7 +614,7 @@ Whether the currently-shown wizard page is the last relevant page. For instance,
 fr:is-wizard-separate-toc() as xs:boolean
 ```
 
-Whether the wizard is configured to have a separate table of contents.
+Whether the wizard is configured to have a separate table of contents (equivalent to `fr:wizard-toc-position() = 'separate'`).
 
 ### fr:is-wizard-toc-shown()
 
@@ -609,7 +624,7 @@ Whether the wizard is configured to have a separate table of contents.
 fr:is-wizard-toc-shown() as xs:boolean
 ```
 
-Whether the wizard's table of contents is visible.
+Whether the wizard's table of contents is currently visible. When the table of contents position is `"none"`, this function always returns `false()`.
 
 ### fr:wizard-current-page-name()
 

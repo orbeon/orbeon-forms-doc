@@ -12,9 +12,13 @@ TODO
 
 ## Other new features and enhancements
 
-TODO
+- Wizard: option to hide the table of contents ([#7960](https://github.com/orbeon/orbeon-forms/issues/7960))
 
 ## Compatibility and upgrade notes
+
+### Wizard separate table of contents property deprecation
+
+The `oxf.xforms.xbl.fr.wizard.separate-toc` property and `<wizard-separate-toc>` form metadata element are deprecated in favor of `oxf.xforms.xbl.fr.wizard.toc.position` and `<wizard-toc-position>` ([#7960](https://github.com/orbeon/orbeon-forms/issues/7960)). Existing configurations using `separate-toc` continue to be supported.
 
 ### Cookie forwarding and session cookie name
 

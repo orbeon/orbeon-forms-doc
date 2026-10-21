@@ -18,11 +18,12 @@ For the latest default values of Form Runner properties, see [properties-form-ru
 * [Custom dialogs and model Logic](/form-runner/advanced/custom.md)
     * `oxf.fr.detail.model.custom`
     * `oxf.fr.detail.dialogs.custom`
-* [Wizard View](/form-runner/component/wizard.md)
+* [Wizard View](/form-runner/feature/wizard-view.md)
     * `oxf.fr.detail.view.appearance`
     * `oxf.fr.detail.buttons.inner`
     * `oxf.xforms.xbl.fr.wizard.validate`
-    * `oxf.xforms.xbl.fr.wizard.separate-toc`
+    * `oxf.xforms.xbl.fr.wizard.toc.position`
+    * `oxf.xforms.xbl.fr.wizard.separate-toc` (deprecated)
     * `oxf.xforms.xbl.fr.wizard.section-status`
     * `oxf.xforms.xbl.fr.wizard.subsections-nav`
     * `oxf.xforms.xbl.fr.wizard.subsections-toc`

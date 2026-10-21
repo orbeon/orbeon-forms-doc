@@ -39,6 +39,24 @@ When the wizard shows for the first time, the current section value is read from
 
 The section name is obtained from the section id by removing its `-section` or `-control` suffix. So in this example, the value stored will be `personal-data` or `comments`.
 
+## The toc-position attribute
+
+[SINCE Orbeon Forms 2026.1]
+
+The `toc-position` attribute specifies the position and visibility of the table of contents:
+
+* `left`: table of contents appears on the left (the default)
+* `separate`: table of contents appears on a separate page
+* `none`: table of contents is completely hidden
+
+```xml
+<fr:wizard toc-position="none">
+    ...
+</fr:wizard>
+```
+
+The deprecated `separate-toc` attribute (`true` or `false`) is still supported for backward compatibility.
+
 ## The subsections-nav attribute
 
 [SINCE Orbeon Forms 2016.3]
@@ -71,13 +89,14 @@ If the wizard cannot navigate, the event has no effect.
 
 When the wizard component shows a section, it dispatches the `fr-section-shown` event with the following properties:
  
-| Property       | Type         | Description                                              |
-|----------------|--------------|----------------------------------------------------------|
-| `section-name` | `xs:string`  | name of the Form Runner section being shown              |
-| `validate`     | `xs:boolean` | whether the wizard is in validated mode                  |
-| `separate-toc` | `xs:boolean` | whether the wizard is in separate table of contents mode |
+| Property       | Type         | Description                                                                               |
+|----------------|--------------|-------------------------------------------------------------------------------------------|
+| `section-name` | `xs:string`  | name of the Form Runner section being shown                                               |
+| `validate`     | `xs:boolean` | whether the wizard is in validated mode                                                   |
+| `toc-position` | `xs:string`  | table of contents position: `left`, `separate`, or `none` [SINCE Orbeon Forms 2026.1]     |
+| `separate-toc` | `xs:boolean` | whether the wizard is in separate table of contents mode (deprecated; use `toc-position`) |
 
-In separate table of contents mode, if no section shows initially, this event is not dispatched until the first section shows. 
+In separate table of contents mode, if no section shows initially, this event is not dispatched until the first section shows. When the table of contents position is `none`, the event is dispatched as soon as the initial section is shown.
 
 ### The fr-toc-shown event
 
@@ -90,7 +109,7 @@ When the wizard component shows its table of contents, it dispatches the `fr-toc
 | `validate`     | `xs:boolean` | whether the wizard is in validated mode                   |
 | `separate-toc` | `xs:boolean` | whether the wizard is in separate table of contents mode  |
 
-In separate table of contents mode, this event can be dispatched multiple times as the user goes back and forth to the table of contents.
+In separate table of contents mode, this event can be dispatched multiple times as the user goes back and forth to the table of contents. When the table of contents position is `none`, this event is not dispatched because the table of contents is never shown.
 
 ## See also
 
