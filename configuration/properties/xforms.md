@@ -558,6 +558,8 @@ The default formatting properties for `date`, `time`, and `dateTime` now use the
 
 This means that the language that is used for the formatting is the language in effect where the control is in use, via the `xml:lang` attribute.
 
+_NOTE: Starting with Orbeon Forms 2026.1 and 2025.1.3, `oxf.xforms.format.output.dateTime` is no longer used for the Date and Time control (`<fr:datetime>`) in readonly modes. The control now uses its own configured date and time formats. See [Date and Time](../../form-runner/component/date-and-time.md#format-in-readonly-modes)._
+
 ### For xf:input
 
 _NOTE: With Orbeon Forms 2022.1, there is no longer support for binding `<xf:input>` to `xs:date`, `xs:time`, and `xs:dateTime` types. Instead, you should use the `<fr:date>`, `<fr:time>`, and `<fr:datetime>` controls._

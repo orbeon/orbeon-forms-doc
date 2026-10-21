@@ -229,6 +229,7 @@ There is no more support for `<xf:input>` bound to an `xs:time` type. Use this c
 
 ## See also
 
+* [Date and time](date-and-time.md)
 * [Date component](date.md)
 * Blog post: [Time form control improvements](https://blog.orbeon.com/2023/01/time-form-control-improvements.html)
 * [Native date picker](date.md#native-date-picker)

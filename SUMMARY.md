@@ -121,6 +121,7 @@
     * [Content filter](form-runner/component/content-filter.md)
     * [Currency](form-runner/component/currency.md)
     * [Date](form-runner/component/date.md)
+    * [Date and time](form-runner/component/date-and-time.md)
     * [Dropdown date](form-runner/component/dropdown-date.md)
     * [Static and dynamic dropdown](form-runner/component/static-dynamic-dropdown.md)
     * [Error summary](form-runner/component/error-summary.md)

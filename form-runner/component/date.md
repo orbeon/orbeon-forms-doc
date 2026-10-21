@@ -121,6 +121,7 @@ You use the date component like a regular input field, for example:
 
 ## See also
 
+* [Date and time](date-and-time.md)
 * [Dropdown Date](dropdown-date.md)
 * [Dates to Exclude constraint in Form Builder](../../form-builder/validation.md#dates-to-exclude-constraint)
 * [Native time picker](time.md#native-time-picker)
