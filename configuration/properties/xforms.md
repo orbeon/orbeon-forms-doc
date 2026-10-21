@@ -676,6 +676,19 @@ You can set the following property to a regexp. When set to a non-empty value, i
     value=""/>
 ```
 
+### Maximum request size
+
+\[SINCE Orbeon Forms 2025.1.3]
+
+The following property sets the maximum size in bytes of the body of an Ajax request sent to `/xforms-server`. The default is `10000000` (10 MB). A value of `-1` disables the limit. Requests that exceed the limit are rejected with HTTP status code 413 (Payload Too Large).
+
+```xml
+<property 
+    as="xs:string"  
+    name="oxf.xforms.ajax.max-request-size" 
+    value="10000000"/>
+```
+
 ## Preprocessing step
 
 The XForms engine supports a preprocessing step. By default, this step is disabled. You can enable it with the following properties:
