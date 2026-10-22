@@ -41,7 +41,7 @@ The section name is obtained from the section id by removing its `-section` or `
 
 ## The toc-position attribute
 
-[SINCE Orbeon Forms 2026.1]
+[SINCE Orbeon Forms 2026.1, Orbeon Forms 2025.1.3]
 
 The `toc-position` attribute specifies the position and visibility of the table of contents:
 
@@ -89,12 +89,12 @@ If the wizard cannot navigate, the event has no effect.
 
 When the wizard component shows a section, it dispatches the `fr-section-shown` event with the following properties:
  
-| Property       | Type         | Description                                                                               |
-|----------------|--------------|-------------------------------------------------------------------------------------------|
-| `section-name` | `xs:string`  | name of the Form Runner section being shown                                               |
-| `validate`     | `xs:boolean` | whether the wizard is in validated mode                                                   |
-| `toc-position` | `xs:string`  | table of contents position: `left`, `separate`, or `none` [SINCE Orbeon Forms 2026.1]     |
-| `separate-toc` | `xs:boolean` | whether the wizard is in separate table of contents mode (deprecated; use `toc-position`) |
+| Property       | Type         | Description                                                                                                  |
+|----------------|--------------|--------------------------------------------------------------------------------------------------------------|
+| `section-name` | `xs:string`  | name of the Form Runner section being shown                                                                  |
+| `validate`     | `xs:boolean` | whether the wizard is in validated mode                                                                      |
+| `toc-position` | `xs:string`  | table of contents position: `left`, `separate`, or `none` [SINCE Orbeon Forms 2026.1, Orbeon Forms 2025.1.3] |
+| `separate-toc` | `xs:boolean` | whether the wizard is in separate table of contents mode (deprecated; use `toc-position`)                    |
 
 In separate table of contents mode, if no section shows initially, this event is not dispatched until the first section shows. When the table of contents position is `none`, the event is dispatched as soon as the initial section is shown.
 

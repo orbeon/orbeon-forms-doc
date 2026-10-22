@@ -593,7 +593,7 @@ Whether the currently-shown wizard page is the last relevant page. For instance,
 
  ### fr:wizard-toc-position()
 
-[SINCE Orbeon Forms 2026.1]
+[SINCE Orbeon Forms 2026.1, Orbeon Forms 2025.1.3]
 
 ```xpath
 fr:wizard-toc-position() as xs:string?
