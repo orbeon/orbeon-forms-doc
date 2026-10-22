@@ -409,7 +409,7 @@ To override resources in an XBL component, define properties with a name that ha
 
 1. The name starts with `oxf.fr.resource`.
 2. Followed by the application name and form name, or `*` wildcards (such as `*.*`, `acme.*`, or `acme.order`).
-3. The 2-letter language code (such as `en` or `fr`).
+3. The language code (such as `en` or `fr`).
 4. The literal segment `xbl`.
 5. The qualified name of the XBL component, including its prefix and a colon (such as `fr:content-filter` or `fr:attachment`).
 6. A dot-separated path corresponding to the resource key within the component's resources.
