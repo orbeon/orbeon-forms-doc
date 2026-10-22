@@ -405,8 +405,6 @@ After setting these properties, make sure to restart your application server, as
 
 Form Runner components implemented using XBL (such as [Attachment](/form-runner/component/attachment.md) or [Content Filter](/form-runner/component/content-filter.md)) sometimes define localizable resources. You can override these resources using properties.
 
-_NOTE: This property syntax is only used to override resources for XBL components, and not outside of them. Resources defined outside of XBL components (such as global Form Runner resources or form-level resources) use the standard `oxf.fr.resource.[app].[form].[lang].[path]` syntax described above, without the `xbl` token._
-
 To override resources in an XBL component, define properties with a name that has the following structure:
 
 1. The name starts with `oxf.fr.resource`.
@@ -442,22 +440,22 @@ This mechanism also works with custom XBL components, provided that within the c
 
 As of Orbeon Forms 2026.1, the following built-in Form Runner XBL components resources can be overridden via properties:
 
-| Component               | Resource Key       | Default (English)                                     | Description                                           |
-|-------------------------|--------------------|-------------------------------------------------------|-------------------------------------------------------|
-| `fr:attachment`         | `cancel`           | `Cancel`                                              | Cancel upload button label                            |
-|                         | `drag-single`      | `Drag file here or {0}select file{1}.`                | Drag-and-drop prompt for a single file                |
-|                         | `drag-multiple`    | `Drag files here or {0}select files{1}.`              | Drag-and-drop prompt for multiple files               |
-|                         | `empty`            | `No attachment.`                                      | Message displayed when no file is attached            |
-|                         | `remove`           | `Remove Attachment`                                   | Tooltip for removing an attachment                    |
-|                         | `uploading`        | `Uploading…`                                          | Label displayed while upload is in progress           |
-| `fr:clipboard-copy`     | `copy`             | `Copy to clipboard`                                   | Tooltip/title for the copy button                     |
-| `fr:confirmation`       | `download-pdf`     | `<i class="fa fa-fw fa-file-pdf-o"></i> Download PDF` | Button label to download PDF on the confirmation page |
-| `fr:content-filter`     | `alert`            | `This content appears to use inappropriate language.` | Alert message for disallowed content                  |
-| `fr:datetime`           | `date`             | `Date`                                                | Label for the date sub-field                          |
-|                         | `time`             | `Time`                                                | Label for the time sub-field                          |
-| `fr:on-premise-captcha` | `ask-to-type-word` | `Type the word above:`                                | Prompt to enter the captcha word                      |
-| `fr:us-ssn`             | `reveal`           | `Reveal`                                              | Checkbox label to reveal/unmask SSN                   |
-| `fr:wpaint`             | `annotated-image`  | `Annotated image`                                     | Alternative text for the annotated image              |
+| Component               | Resource Key       | Default (English)                                     | Description                                                |
+|-------------------------|--------------------|-------------------------------------------------------|------------------------------------------------------------|
+| `fr:attachment`         | `cancel`           | `Cancel`                                              | Cancel upload button label                                 |
+|                         | `drag-single`      | `Drag file here or {0}select file{1}.`                | Drag-and-drop prompt for a single file                     |
+|                         | `drag-multiple`    | `Drag files here or {0}select files{1}.`              | Drag-and-drop prompt for multiple files                    |
+|                         | `empty`            | `No attachment.`                                      | Message displayed when no file is attached                 |
+|                         | `remove`           | `Remove Attachment`                                   | Tooltip for removing an attachment                         |
+|                         | `uploading`        | `Uploading…`                                          | Label displayed while upload is in progress                |
+| `fr:clipboard-copy`     | `copy`             | `Copy to clipboard`                                   | Tooltip/title for the copy button                          |
+| `fr:confirmation`       | `download-pdf`     | `<i class="fa fa-fw fa-file-pdf-o"></i> Download PDF` | HTML button label to download PDF on the confirmation page |
+| `fr:content-filter`     | `alert`            | `This content appears to use inappropriate language.` | Alert message for disallowed content                       |
+| `fr:datetime`           | `date`             | `Date`                                                | Label for the date sub-field                               |
+|                         | `time`             | `Time`                                                | Label for the time sub-field                               |
+| `fr:on-premise-captcha` | `ask-to-type-word` | `Type the word above:`                                | Prompt to enter the captcha word                           |
+| `fr:us-ssn`             | `reveal`           | `Reveal`                                              | Checkbox label to reveal/unmask SSN                        |
+| `fr:wpaint`             | `annotated-image`  | `Annotated image`                                     | Alternative text for the annotated image                   |
 
 ## Email settings
 
