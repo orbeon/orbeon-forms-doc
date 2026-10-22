@@ -399,6 +399,66 @@ The example below shows how to override all 3 formats to use an ISO-8601 style f
 
 After setting these properties, make sure to restart your application server, as resources are aggressively cached for performance reasons.
 
+### Resources for XBL components
+
+[SINCE Orbeon Forms 2026.1, Orbeon Forms 2025.1.3]
+
+Form Runner components implemented using XBL (such as [Attachment](/form-runner/component/attachment.md) or [Content Filter](/form-runner/component/content-filter.md)) sometimes define localizable resources. You can override these resources using properties.
+
+_NOTE: This property syntax is only used to override resources for XBL components, and not outside of them. Resources defined outside of XBL components (such as global Form Runner resources or form-level resources) use the standard `oxf.fr.resource.[app].[form].[lang].[path]` syntax described above, without the `xbl` token._
+
+To override resources in an XBL component, define properties with a name that has the following structure:
+
+1. The name starts with `oxf.fr.resource`.
+2. Followed by the application name and form name, or `*` wildcards (such as `*.*`, `acme.*`, or `acme.order`).
+3. The 2-letter language code (such as `en` or `fr`).
+4. The literal segment `xbl`.
+5. The qualified name of the XBL component, including its prefix and a colon (such as `fr:content-filter` or `fr:attachment`).
+6. A dot-separated path corresponding to the resource key within the component's resources.
+
+For example, to override the alert message displayed by the `fr:content-filter` component in English for all forms:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.resource.*.*.en.xbl.fr:content-filter.alert"
+    value="This content appears to use inappropriate language. Please make corrections before submitting."/>
+```
+
+Or to override the text shown by the `fr:attachment` component when no file is attached, for a specific application and form in French:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.resource.acme.order.fr.xbl.fr:attachment.empty"
+    value="Aucun fichier joint"/>
+```
+
+#### Custom XBL components
+
+This mechanism also works with custom XBL components, provided that within the component implementation, resources are resolved using the `fr:r()` function (instead of `xxf:r()`).
+
+#### Available component resources
+
+As of Orbeon Forms 2026.1, the following built-in Form Runner XBL components resources can be overridden via properties:
+
+| Component               | Resource Key       | Default (English)                                     | Description                                           |
+|-------------------------|--------------------|-------------------------------------------------------|-------------------------------------------------------|
+| `fr:attachment`         | `cancel`           | `Cancel`                                              | Cancel upload button label                            |
+|                         | `drag-single`      | `Drag file here or {0}select file{1}.`                | Drag-and-drop prompt for a single file                |
+|                         | `drag-multiple`    | `Drag files here or {0}select files{1}.`              | Drag-and-drop prompt for multiple files               |
+|                         | `empty`            | `No attachment.`                                      | Message displayed when no file is attached            |
+|                         | `remove`           | `Remove Attachment`                                   | Tooltip for removing an attachment                    |
+|                         | `uploading`        | `Uploading…`                                          | Label displayed while upload is in progress           |
+| `fr:clipboard-copy`     | `copy`             | `Copy to clipboard`                                   | Tooltip/title for the copy button                     |
+| `fr:confirmation`       | `download-pdf`     | `<i class="fa fa-fw fa-file-pdf-o"></i> Download PDF` | Button label to download PDF on the confirmation page |
+| `fr:content-filter`     | `alert`            | `This content appears to use inappropriate language.` | Alert message for disallowed content                  |
+| `fr:datetime`           | `date`             | `Date`                                                | Label for the date sub-field                          |
+|                         | `time`             | `Time`                                                | Label for the time sub-field                          |
+| `fr:on-premise-captcha` | `ask-to-type-word` | `Type the word above:`                                | Prompt to enter the captcha word                      |
+| `fr:us-ssn`             | `reveal`           | `Reveal`                                              | Checkbox label to reveal/unmask SSN                   |
+| `fr:wpaint`             | `annotated-image`  | `Annotated image`                                     | Alternative text for the annotated image              |
+
 ## Email settings
 
 See [Email](form-runner-email.md).
