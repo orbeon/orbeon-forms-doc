@@ -46,7 +46,7 @@ Selecting an option switches the color scheme dynamically without reloading the 
 
 When a user selects a color scheme from the navigation bar, their choice is saved to:
 
-1. A cookie named `fr-color-scheme` (with `path=/; max-age=31536000; SameSite=Lax`).
+1. A cookie named `orbeon-color-scheme`.
 2. Browser `localStorage` under `orbeon-color-scheme`.
 
 This preference is remembered across page navigations, form submissions, and subsequent visits.
@@ -92,7 +92,7 @@ The selector is automatically hidden in the following situations:
 When Form Runner renders a page, the effective color scheme (`light`, `dark`, or `system`) is determined according to the following order of precedence:
 
 1. **URL parameter**: If the `fr-color-scheme` query parameter is present in the request URL (e.g. `?fr-color-scheme=dark` or `?fr-color-scheme=system`), its value is used. This allows external applications or portal links to explicitly request a specific scheme.
-2. **Cookie**: If the `fr-color-scheme` cookie is present (such as when set by the navigation bar selector), its value is used.
+2. **Cookie**: If the `orbeon-color-scheme` cookie is present (such as when set by the navigation bar selector), its value is used.
 3. **Session attribute**: If the `fr-color-scheme` attribute is set on the HTTP servlet session, its value is used.
 4. **Configuration properties**: If none of the above are set, the value of the `oxf.fr.style.color-scheme` property is used (see below).
 5. **Default**: If no property is configured, Form Runner defaults to `light`.
