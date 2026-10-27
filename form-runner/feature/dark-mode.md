@@ -1,4 +1,4 @@
-v# Dark mode
+# Dark mode
 
 ## Availability
 
