@@ -35,7 +35,8 @@ A new dark mode is now available in Orbeon Forms. This mode can be enabled using
 
 See also:
 
-- Documentation: [Color scheme](/configuration/properties/form-runner-detail-page.md#color-scheme)
+- Documentation: [Dark mode](/form-runner/feature/dark-mode.md)
+- Blog post: [User interface dark mode](https://www.orbeon.com/2026/05/dark-mode)
 
 ### Keyboard Shortcuts dialog
 

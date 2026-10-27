@@ -12,6 +12,9 @@ It features the following elements:
 * The form title
   * This always shows
 * The language selector
+* The color scheme selector
+  * [\[SINCE Orbeon Forms 2026.1\]](../../release-notes/orbeon-forms-2026.1.md)
+  * this is enabled by default
 * The login menu
   * \[SINCE Orbeon Forms 2018.2]
   * this is disabled by default
@@ -43,6 +46,10 @@ The language selector is enabled by default. You can disable it globally by sett
     name="oxf.fr.navbar.language-selector.enable"
     value="false"/>
 ```
+
+### Color scheme selector
+
+For more details on dark mode and runtime color scheme resolution, see [Dark mode](dark-mode.md).
 
 ### Login menu
 
@@ -94,6 +101,7 @@ See [Token-based permissions](../access-control/tokens.md#using-the-share-dialog
 ## See also
 
 * [Default logo](../../configuration/properties/form-runner.md#default-logo)
+* [Dark mode](dark-mode.md)
 * [Login & Logout](../access-control/login-logout.md)
 * [Token-based permissions](../access-control/tokens.md#using-the-share-dialog)
 * [Revision history](revision-history.md)

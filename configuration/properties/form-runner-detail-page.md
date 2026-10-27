@@ -87,6 +87,10 @@ For other pages (Summary, Form Builder Forms, Published Forms, Forms Admin, and 
 
 ![Dark color scheme](../images/dark-color-scheme.png)
 
+See also:
+
+* [Dark mode](../../form-runner/feature/dark-mode.md)
+
 ## Adding your own CSS files
 
 \[SINCE Orbeon Forms 2017.1]

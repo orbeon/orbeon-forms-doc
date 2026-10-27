@@ -155,6 +155,7 @@
   * [Features](form-runner/features/README.md)
     * [Automatic calculations dependencies](form-runner/feature/automatic-calculations-dependencies.md)
     * [Custom modes](form-runner/feature/custom-modes.md)
+    * [Dark mode](form-runner/feature/dark-mode.md)
     * [Datasets](form-runner/feature/datasets.md)
     * [Detail page modes](form-runner/feature/detail-page-modes.md)
     * [Ephemeral messages](form-runner/feature/ephemeral-messages.md)

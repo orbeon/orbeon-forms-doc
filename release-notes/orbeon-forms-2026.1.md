@@ -12,6 +12,7 @@ TODO
 
 ## Other new features and enhancements
 
+- Navigation bar: Color scheme selector ([#7996](https://github.com/orbeon/orbeon-forms/issues/7996))
 - Wizard: option to hide the table of contents ([#7960](https://github.com/orbeon/orbeon-forms/issues/7960))
 
 ## Compatibility and upgrade notes
