@@ -156,3 +156,4 @@ Controls whether the color scheme selector appears in the navigation bar.
 * [Release notes for Orbeon Forms 2025.1](../../release-notes/orbeon-forms-2025.1.md)
 * [Release notes for Orbeon Forms 2026.1](../../release-notes/orbeon-forms-2026.1.md)
 * Blog post: [User interface dark mode](https://www.orbeon.com/2026/05/dark-mode)
+
