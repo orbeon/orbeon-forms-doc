@@ -31,6 +31,7 @@ In this release, we have addressed the following issues:
     * Match service base URL at start of URL only, send token to internal requests only ([\#7944](https://github.com/orbeon/orbeon-forms/issues/7944))
     * Only the host app can establish the Form Runner session in embedding ([\#7948](https://github.com/orbeon/orbeon-forms/issues/7948))
     * Cookie incorrectly forwarded to the persistence layer ([\#7066](https://github.com/orbeon/orbeon-forms/issues/7066))
+    * Form Runner service calls: enforce stateless request handling and prevent `Set-Cookie` ([\#7929](https://github.com/orbeon/orbeon-forms/issues/7929))
     * Third-party library updates
 * Form Builder
     * Form migration tests on lexical QNames ([\#7624](https://github.com/orbeon/orbeon-forms/issues/7624))

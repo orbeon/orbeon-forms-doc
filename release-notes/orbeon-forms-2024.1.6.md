@@ -34,6 +34,7 @@ In this release, we have addressed many issues, including:
     * Only the host app can establish the Form Runner session in embedding ([\#7948](https://github.com/orbeon/orbeon-forms/issues/7948))
     * Cookie incorrectly forwarded to the persistence layer ([\#7066](https://github.com/orbeon/orbeon-forms/issues/7066))
     * Form Builder `/new` to 403 when user can't create forms ([\#7997](https://github.com/orbeon/orbeon-forms/issues/7997))
+    * Form Runner service calls: enforce stateless request handling and prevent `Set-Cookie` ([\#7929](https://github.com/orbeon/orbeon-forms/issues/7929))
     * Third-party library updates
 * Form Builder
     * Show section template names upon hover ([\#7777](https://github.com/orbeon/orbeon-forms/issues/7777))
@@ -61,7 +62,6 @@ In this release, we have addressed many issues, including:
     * Icon broken in emergency-medical-consent demo form description ([\#7710](https://github.com/orbeon/orbeon-forms/issues/7710))
     * Process with suspend and an expression with double quote inside single quote leads to XPath syntax error ([\#7712](https://github.com/orbeon/orbeon-forms/issues/7712))
     * Bookshelf demo: "Invalid schema type: publication-year" ([\#7615](https://github.com/orbeon/orbeon-forms/issues/7615))
-    * Form Runner service calls: enforce stateless request handling and prevent `Set-Cookie` ([\#7929](https://github.com/orbeon/orbeon-forms/issues/7929))
 * XBL Components
     * Help for dropdown with search isn't positioned correctly ([\#7406](https://github.com/orbeon/orbeon-forms/issues/7406))
     * Date control using browser datepicker resets after typing the first digit of the year ([\#7674](https://github.com/orbeon/orbeon-forms/issues/7674))
