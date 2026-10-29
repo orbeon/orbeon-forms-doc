@@ -322,6 +322,7 @@
       * [Controls functions](xforms/xpath/extension-controls.md)
       * [XML functions](xforms/xpath/extension-xml.md)
       * [JSON functions](xforms/xpath/extension-json.md)
+      * [CSV functions](xforms/xpath/extension-csv.md)
       * [HTTP functions](xforms/xpath/extension-http.md)
       * [Form Runner functions](xforms/xpath/extension-form-runner.md)
       * [Other functions](xforms/xpath/extension-other.md)

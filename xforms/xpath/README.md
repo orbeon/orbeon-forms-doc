@@ -16,6 +16,7 @@ This page and sub-pages describe XPath usage and the Orbeon Forms XPath function
     - [Controls functions](extension-controls.md)
     - [XML functions](extension-xml.md)
     - [JSON functions](extension-json.md)
+    - [CSV functions](extension-csv.md)
     - [HTTP functions](extension-http.md)
     - [Form Runner functions](extension-form-runner.md)
     - [Other functions](extension-other.md)

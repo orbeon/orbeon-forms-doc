@@ -14,6 +14,7 @@ TODO
 
 - Navigation bar: Color scheme selector ([#7996](https://github.com/orbeon/orbeon-forms/issues/7996))
 - Wizard: option to hide the table of contents ([#7960](https://github.com/orbeon/orbeon-forms/issues/7960))
+- XPath: new `xxf:csv-to-xml()` and `xxf:xml-to-csv()` functions ([#6826](https://github.com/orbeon/orbeon-forms/issues/6826))
 
 ## Compatibility and upgrade notes
 
