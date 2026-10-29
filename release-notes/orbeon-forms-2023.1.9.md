@@ -25,6 +25,7 @@ In this release, we have addressed the following issues:
     * Port fix for CVE-2022-23437 in Apache Xerces ([\#7972](https://github.com/orbeon/orbeon-forms/issues/7972))
     * Enhanced protocol filtering on `xf:output` ([\#7952](https://github.com/orbeon/orbeon-forms/issues/7952))
     * Restrict serving some assets ([\#7923](https://github.com/orbeon/orbeon-forms/issues/7923))
+    * Improve sanitation of HTML attributes ([\#7930](https://github.com/orbeon/orbeon-forms/issues/7930))
     * Filter sensitive properties sent to the client / JS environment ([\#7931](https://github.com/orbeon/orbeon-forms/issues/7931))
     * Require absolute URL to the authorizer ([\#7957](https://github.com/orbeon/orbeon-forms/issues/7957))
     * Match service base URL at start of URL only, send token to internal requests only ([\#7944](https://github.com/orbeon/orbeon-forms/issues/7944))
