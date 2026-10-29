@@ -89,7 +89,7 @@ Without a header row:
 2012, "Feb, Apr"
 ```
 
-`xxf:csv-to-xml($csv, false())` (or `xxf:csv-to-xml($csv, false())`) returns:
+`xxf:csv-to-xml($csv, false())` returns:
 
 ```xml
 <csv>
@@ -113,7 +113,7 @@ The `xxf:xml-to-csv()` function takes an XML document or element following the [
 ```xpath
 xxf:xml-to-csv() as xs:string?
 xxf:xml-to-csv($xml as node()?) as xs:string?
-xxf:xml-to-csv($xml as node()?, $header as item()?) as xs:string?
+xxf:xml-to-csv($xml as node()?, $header as xs:boolean?) as xs:string?
 ```
 
 ### Parameters
