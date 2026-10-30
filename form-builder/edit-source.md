@@ -35,3 +35,7 @@ _NOTE: You have to be cautious when doing so because it is possible to break the
 [\[SINCE Orbeon Forms 2023.1\]](../release-notes/orbeon-forms-2023.1.md)
 
 There is also an ["XHTML Export"](buttons-bar.md) button in the buttons bar, which allows directly downloading the form definition.
+
+[SINCE Orbeon Forms 2026.1]
+
+When loading a form, Form Builder removes namespace declarations that the form body and data don't use. If you add a namespace declaration with Edit Source, put it on the root `xh:html` element, where Form Builder keeps it.
