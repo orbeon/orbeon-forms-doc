@@ -119,6 +119,7 @@
     * [Character counter](form-runner/component/character-counter.md)
     * [Checkbox input](form-runner/component/checkbox-input.md)
     * [Content filter](form-runner/component/content-filter.md)
+    * [Country](form-runner/component/country.md)
     * [Currency](form-runner/component/currency.md)
     * [Date](form-runner/component/date.md)
     * [Date and time](form-runner/component/date-and-time.md)
