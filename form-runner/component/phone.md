@@ -11,7 +11,7 @@ The `fr:phone` component allows users to enter and validate national and interna
 Key features:
 
 * **Standard E.164 storage**: Valid phone numbers are normalized and stored in the canonical [ITU-T E.164](https://en.wikipedia.org/wiki/E.164) format (such as `+16502530000`, `+41446681800`, or `+442079460000`). If the user enters an invalid phone number, the raw text is preserved in the bound node so that validation (`type="fr:phone"`) marks the control as invalid without losing the user's input.
-* **International validation and formatting**: Powered by Google's [`libphonenumber`](https://github.com/google/libphonenumber) both online (JVM) and in offline (Scala.js) mode:
+* **International validation and formatting**:
   * Validates phone numbers against the selected country's numbering rules.
   * Formats valid phone numbers in the country's national format while editing (for example, `(650) 253-0000` for `US`, `044 668 18 00` for `CH`, `020 7946 0000` for `GB`).
   * Formats phone numbers in international format in read-only, view, and PDF modes (for example, `+1 650-253-0000`, `+41 44 668 18 00`).
@@ -39,14 +39,14 @@ You use `fr:phone` like a regular XForms control, typically bound to a node with
 
 You can configure `fr:phone` in Form Builder's **Control Settings** dialog, via attributes directly on `<fr:phone>`, or via configuration properties:
 
-| Parameter             | Type         | Default | Description                                                                                                                                                                                                                                         |
-|-----------------------|--------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter             | Type         | Default | Description                                                                                                                                                                                                                                                |
+|-----------------------|--------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `default-country`     | `xs:string`  | `""`    | Default 2-letter ISO 3166-1 alpha-2 country code selected when the field is empty (e.g. `US`, `CH`, `GB`). When empty, falls back to the first country in `preferred-countries` if specified, or to the country matching the current Form Runner language. |
-| `preferred-countries` | `xs:string`  | `""`    | Space- or comma-separated list of 2-letter ISO codes to pin at the top of the list in the specified order (e.g. `US CA GB`). Preferred countries appear once at the top above a divider line and are not duplicated in the alphabetical list below. |
-| `include-countries`   | `xs:string`  | `""`    | Space- or comma-separated list of 2-letter ISO codes. When non-empty, only the specified countries are available in the selector.                                                                                                                   |
-| `exclude-countries`   | `xs:string`  | `""`    | Space- or comma-separated list of 2-letter ISO codes to exclude from the selector.                                                                                                                                                                  |
-| `show-code`           | `xs:boolean` | `false` | When `true`, includes the 2-letter ISO code in the country dropdown items (e.g. `🇨🇭 Switzerland (CH) +41`) and in the closed selector badge (e.g. `🇨🇭 CH +41`).                                                                                  |
-| `show-flag`           | `xs:boolean` | `true`  | When `true`, prepends the country's Unicode flag emoji to each country item and to the closed selector badge (e.g. `🇨🇭 +41`).                                                                                                                      |
+| `preferred-countries` | `xs:string`  | `""`    | Space- or comma-separated list of 2-letter ISO codes to pin at the top of the list in the specified order (e.g. `US CA GB`). Preferred countries appear once at the top above a divider line and are not duplicated in the alphabetical list below.        |
+| `include-countries`   | `xs:string`  | `""`    | Space- or comma-separated list of 2-letter ISO codes. When non-empty, only the specified countries are available in the selector.                                                                                                                          |
+| `exclude-countries`   | `xs:string`  | `""`    | Space- or comma-separated list of 2-letter ISO codes to exclude from the selector.                                                                                                                                                                         |
+| `show-code`           | `xs:boolean` | `false` | When `true`, includes the 2-letter ISO code in the country dropdown items (e.g. `🇨🇭 Switzerland (CH) +41`) and in the closed selector badge (e.g. `🇨🇭 CH +41`).                                                                                            |
+| `show-flag`           | `xs:boolean` | `true`  | When `true`, prepends the country's Unicode flag emoji to each country item and to the closed selector badge (e.g. `🇨🇭 +41`).                                                                                                                              |
 
 ### Examples
 
