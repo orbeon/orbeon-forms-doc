@@ -137,6 +137,7 @@
     * [Legal Entity Identifier (LEI)](form-runner/component/lei.md)
     * [Number](form-runner/component/number.md)
     * [Open selection](form-runner/component/open-select1.md)
+    * [Phone number](form-runner/component/phone.md)
     * [Repeater](form-runner/component/repeater.md)
     * [Formatted Text / Rich Text Editor](form-runner/component/rich-text-editor.md)
     * [Section](form-runner/component/section.md)

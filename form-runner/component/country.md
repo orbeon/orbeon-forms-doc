@@ -95,6 +95,7 @@ You can override any of these properties globally or per application/form in `pr
 
 ## See also
 
+* [Phone Number](phone.md)
 * [Static and Dynamic Dropdown](static-dynamic-dropdown.md)
 * [US State](us-state.md)
 * [US Phone Number](us-phone.md)

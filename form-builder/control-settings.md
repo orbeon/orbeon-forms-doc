@@ -202,6 +202,8 @@ The following controls have custom settings:
 
 * [Number](../form-runner/component/number.md#form-builder-customer-settings)
 * [Currency](../form-runner/component/currency.md#form-builder-customer-settings)
+* [Country](../form-runner/component/country.md#parameters-and-form-builder-settings) \[SINCE Orbeon Forms 2026.1]
+* [Phone Number](../form-runner/component/phone.md#parameters-and-form-builder-settings) \[SINCE Orbeon Forms 2026.1]
 * [US Phone Number](../form-runner/component/us-phone.md#form-builder-customer-settings)
 * Date
 * Time

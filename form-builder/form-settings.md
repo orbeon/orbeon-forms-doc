@@ -150,7 +150,7 @@ See also:
 
 ## Wizard
 
-![Wizard](form-settings/wizard.webp)
+![Wizard](form-settings/wizard.png)
 
 For details, see [Wizard View](../form-runner/feature/wizard-view.md).
 

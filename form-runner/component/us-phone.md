@@ -1,5 +1,9 @@
 # US Phone Number component
 
+{% hint style="info" %}
+Starting with Orbeon Forms 2026.1, use the [Phone Number](phone.md) (`fr:phone`) component instead, which supports both US and international phone numbers. The `fr:us-phone` component remains supported for backward compatibility in existing forms.
+{% endhint %}
+
 ## What it does
 
 This component represents a US phone number. It:
@@ -10,6 +14,7 @@ This component represents a US phone number. It:
 
 ## See also
 
+- [Phone Number](phone.md)
 - [US Employer Identification Number (EIN)](us-ein.md)
 - [US Social Security Number (SSN)](us-ssn.md)
 - [US State](us-state.md)

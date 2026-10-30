@@ -150,14 +150,15 @@ The controls appear like this at design time:
 
 ![](images/typed-controls.png)
 
-| Name                | Description                                                                                       |
-|---------------------|---------------------------------------------------------------------------------------------------|
-| **Number**          | number field with formatting, validation and rounding                                             |
-| **Email Address**   | text field which validates that the content is an email address                                   |
-| **Currency**        | US dollar currency                                                                                |
-| **Country**         | country selector, see [Country](../form-runner/component/country.md) \[SINCE Orbeon Forms 2026.1] |
-| **US Phone Number** | US phone number with automatic formatting                                                         |
-| **US State**        | US state selector                                                                                 |
+| Name                | Description                                                                                                                                                           |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Number**          | number field with formatting, validation and rounding                                                                                                                 |
+| **Email Address**   | text field which validates that the content is an email address                                                                                                       |
+| **Currency**        | US dollar currency                                                                                                                                                    |
+| **Country**         | country selector, see [Country](../form-runner/component/country.md) \[SINCE Orbeon Forms 2026.1]                                                                     |
+| **Phone Number**    | phone number field with country calling-code selector, formatting, and validation, see [Phone Number](../form-runner/component/phone.md) \[SINCE Orbeon Forms 2026.1] |
+| **US Phone Number** | US phone number with automatic formatting                                                                                                                             |
+| **US State**        | US state selector                                                                                                                                                     |
 
 The controls appear like this at design time:
 
