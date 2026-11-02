@@ -46,10 +46,10 @@ Even though you can configure the proxy portlet to display a specific app and fo
 The proxy portlet now filters incoming paths and blocks access to disallowed pages as follows:
 
 | Configuration  | Landing Page | Summary Page | New Page | Edit Page | View Page | Other Pages | Notes                |
-| -------------- | ------------ | ------------ | -------- | --------- | --------- | ----------- | -------------------- |
-| _Home Page_    | ✅            | ✅            | ✅        | ✅         | ✅         | ❌           | all forms            |
-| _Summary Page_ | ❌            | ✅            | ✅        | ✅         | ✅         | ❌           | configured form only |
-| _New Page_     | ❌            | ❌            | ✅        | ❌         | ❌         | ❌           | configured form only |
+|----------------|--------------|--------------|----------|-----------|-----------|-------------|----------------------|
+| _Home Page_    | ✅           | ✅           | ✅       | ✅        | ✅        | ❌          | all forms            |
+| _Summary Page_ | ❌           | ✅           | ✅       | ✅        | ✅        | ❌          | configured form only |
+| _New Page_     | ❌           | ❌           | ✅       | ❌        | ❌        | ❌          | configured form only |
 
 For example, if you configure the proxy portlet as follows:
 
@@ -96,6 +96,35 @@ http://localhost:8080/orbeon/
 For Orbeon Forms 4.0 and newer, no particular configuration is needed.
 
 ### Deploy the proxy portlet
+
+#### Choosing between `javax` and `jakarta` packages
+
+\[SINCE Orbeon Forms 2026.1]
+
+Starting with Liferay DXP 2025.Q3 (running on Tomcat 10.1+), Liferay transitioned from the Java EE (`javax.portlet` and `javax.servlet`) packages to the Jakarta EE (`jakarta.portlet` and `jakarta.servlet`) packages.
+
+`orbeon-proxy-portlet.war` includes classes for both `javax` and `jakarta` packages in the same artifact. Before deploying `orbeon-proxy-portlet.war`, make sure `WEB-INF/portlet.xml` inside the WAR is configured for your target Liferay version:
+
+* **Liferay versions prior to 2025.Q3 (Java EE / `javax` packages):**
+  By default, `WEB-INF/portlet.xml` is configured for `javax`-based Liferay versions using:
+  ```xml
+  <portlet-class>org.orbeon.oxf.portlet.OrbeonProxyPortlet</portlet-class>
+  ```
+  and for the user headers portlet filter:
+  ```xml
+  <filter-class>org.orbeon.oxf.portlet.liferay.AddLiferayUserHeadersFilter</filter-class>
+  ```
+* **Liferay DXP 2025.Q3 and newer (Jakarta EE / `jakarta` packages):**
+  Update both `<portlet-class>` and `<filter-class>` in `WEB-INF/portlet.xml` inside `orbeon-proxy-portlet.war` to use the `Jakarta` variants:
+  ```xml
+  <portlet-class>org.orbeon.oxf.portlet.JakartaOrbeonProxyPortlet</portlet-class>
+  ```
+  and for the user headers portlet filter:
+  ```xml
+  <filter-class>org.orbeon.oxf.portlet.liferay.JakartaAddLiferayUserHeadersFilter</filter-class>
+  ```
+
+#### Deploying into Liferay
 
 1. Deploy `orbeon-proxy-portlet.war` or `proxy-portlet.war` (formerly `orbeon-PE-proxy-portlet.war`) into Liferay
 2.  Add an instance of Orbeon Forms → Form Runner to a page:

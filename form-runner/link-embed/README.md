@@ -24,29 +24,32 @@ In all cases, also see [Securing Form Runner access when embedding](securing.md)
 
 The following versions of Liferay have been tested:
 
-| Orbeon Forms Version | Tested Liferay Version     | Proxy Portlet | Full Portlet |
-|----------------------|----------------------------|---------------|--------------|
-| 2026.1               | Liferay 7.4.3 CE GA132     | yes           | no           |
-| 2025.1               | Liferay 7.4.3 CE GA106     | yes           | no           |
-| 2024.1               | Liferay 7.4.3 CE GA106     | yes           | no           |
-| 2023.1               | Liferay 7.4.3 CE GA106     | yes           | no           |
-| 2021.1               | Liferay 7.2.1 CE GA2       | yes           | no           |
-| 2020.1               | Liferay 7.2.1 CE GA2       | yes           | no           |
-| 2019.2.2             | Liferay 7.2.1 CE GA2       | yes           | no           |
-|                      | Liferay 7.1.3 CE GA4       | yes           | no           |
-| 2019.2               | Liferay 7.1.3 CE GA4       | yes           | no           |
-| 2019.1               | Liferay 7.1.3 CE GA4       | yes           | no           |
-| 2018.2               | Liferay 7.1.2 CE GA3       | yes           | no           |
-|                      | Liferay 7.0 CE GA5 / 7.0.4 | yes           | no           |
-| 2018.1               | Liferay 7.0 CE GA5 / 7.0.4 | yes           | no           |
-| 2017.2               | Liferay 7.0 CE GA5 / 7.0.4 | yes           | no           |
-| 2017.1               | Liferay 6.2 CE GA6 / 6.2.5 | yes           | yes          |
-|                      | Liferay 7.0 CE GA3 / 7.0.2 | yes           | no           |
-| 2016.3               | Liferay 6.2 CE GA6 / 6.2.5 | yes           | yes          |
-| 2016.2               | Liferay 6.1.2 CE GA3       | yes           | yes          |
-|                      | Liferay 6.2 CE GA6 / 6.2.5 | yes           | yes          |
-| 4.9                  | Liferay 6.0                | yes           | yes          |
-|                      | Liferay 6.1.2 CE GA3       | yes           | yes          |
+| Orbeon Forms Version | Tested Liferay Version       | Proxy Portlet | Full Portlet |
+|----------------------|------------------------------|---------------|--------------|
+| 2026.1               | Liferay DXP 2026.Q3          | yes           | no           |
+|                      | Liferay 7.4.3 CE GA132       | yes           | no           |
+| 2025.1               | Liferay 7.4.3 CE GA106       | yes           | no           |
+| 2024.1               | Liferay 7.4.3 CE GA106       | yes           | no           |
+| 2023.1               | Liferay 7.4.3 CE GA106       | yes           | no           |
+| 2021.1               | Liferay 7.2.1 CE GA2         | yes           | no           |
+| 2020.1               | Liferay 7.2.1 CE GA2         | yes           | no           |
+| 2019.2.2             | Liferay 7.2.1 CE GA2         | yes           | no           |
+|                      | Liferay 7.1.3 CE GA4         | yes           | no           |
+| 2019.2               | Liferay 7.1.3 CE GA4         | yes           | no           |
+| 2019.1               | Liferay 7.1.3 CE GA4         | yes           | no           |
+| 2018.2               | Liferay 7.1.2 CE GA3         | yes           | no           |
+|                      | Liferay 7.0 CE GA5 / 7.0.4   | yes           | no           |
+| 2018.1               | Liferay 7.0 CE GA5 / 7.0.4   | yes           | no           |
+| 2017.2               | Liferay 7.0 CE GA5 / 7.0.4   | yes           | no           |
+| 2017.1               | Liferay 6.2 CE GA6 / 6.2.5   | yes           | yes          |
+|                      | Liferay 7.0 CE GA3 / 7.0.2   | yes           | no           |
+| 2016.3               | Liferay 6.2 CE GA6 / 6.2.5   | yes           | yes          |
+| 2016.2               | Liferay 6.1.2 CE GA3         | yes           | yes          |
+|                      | Liferay 6.2 CE GA6 / 6.2.5   | yes           | yes          |
+| 4.9                  | Liferay 6.0                  | yes           | yes          |
+|                      | Liferay 6.1.2 CE GA3         | yes           | yes          |
+
+[SINCE Orbeon Forms 2026.1, 2025.1.3] Starting with Liferay DXP 2025.Q3, Liferay moved from the Java EE (`javax.*`) packages to the Jakarta EE (`jakarta.*`) packages. The Orbeon Forms proxy portlet WAR supports both `javax` and `jakarta` packages in the same artifact; see [Deploying the proxy portlet](liferay-proxy-portlet.md#deploy-the-proxy-portlet) for how to configure `WEB-INF/portlet.xml` depending on your target Liferay version.
 
 ### Servlet vs. Liferay portal deployment
 
