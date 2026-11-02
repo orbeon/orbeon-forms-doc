@@ -194,7 +194,7 @@ Key characteristics:
 * **Static analysis:** When expressions are compiled (e.g. during form initialization or Form Builder editing), calls to disallowed functions raise a static XPath error (`Function '...' is not allowed in user-defined form expressions`), preventing form loading.
 * **Runtime evaluation:** Expressions evaluated at runtime (such as AVTs evaluated via `xxf:evaluate-avt()`) enforce the same whitelist restrictions.
 
-See also [Form Runner allowed functions configuration](form-runner-detail-page.md#allowed-xpath-functions-in-formulas-and-expressions).
+See also [Form Runner allowed functions configuration](form-runner-allowed-functions.md).
 
 ## File location information
 
