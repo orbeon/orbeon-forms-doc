@@ -15,8 +15,48 @@ TODO
 - Navigation bar: Color scheme selector ([#7996](https://github.com/orbeon/orbeon-forms/issues/7996))
 - Wizard: option to hide the table of contents ([#7960](https://github.com/orbeon/orbeon-forms/issues/7960))
 - XPath: new `xxf:csv-to-xml()` and `xxf:xml-to-csv()` functions ([#6826](https://github.com/orbeon/orbeon-forms/issues/6826))
+- Security: Whitelist allowed XPath functions in user forms ([#7266](https://github.com/orbeon/orbeon-forms/issues/7266))
 
 ## Compatibility and upgrade notes
+
+### Whitelist of allowed XPath functions in user forms
+
+Orbeon Forms 2026.1 introduces function whitelisting for XPath expressions and formulas authored in user forms ([#7266](https://github.com/orbeon/orbeon-forms/issues/7266)).
+
+Starting with this release, user forms operate under a restricted XPath function library by default. Potentially dangerous or internal functions are blocked out of the box, including:
+
+* `xxf:instance()`
+* `xxf:get-request-attribute()` / `xxf:set-request-attribute()`
+* `xxf:get-session-attribute()` / `xxf:set-session-attribute()`
+* `fn:doc()`, `fn:collection()`, and `fn:unparsed-text()`
+* `xxf:call-xpl()`
+* Java reflection methods (`java:*`)
+
+**Backward incompatibility:** If you have existing forms that use any of these functions (for example, forms referencing `xxf:instance()` or `fn:doc()`), their expressions will now fail static compilation or runtime evaluation with an error indicating the function is not allowed.
+
+To allow specific existing forms to continue using these functions, administrators can selectively re-allow functions per application and form name using the `oxf.fr.detail.formula.allowed-functions.<app>.<form>` property in `properties-local.xml`:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.formula.allowed-functions.acme.expense-report"
+    xmlns:xxf="http://orbeon.org/oxf/xml/xforms"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions"
+    value="+xxf:instance"/>
+```
+
+To re-allow all functions and restore previous unrestricted behavior for a legacy form:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.fr.detail.formula.allowed-functions.acme.legacy-form"
+    value="-* *"/>
+```
+
+For full details, see:
+* [Allowed XPath functions in Form Runner formulas](../configuration/properties/form-runner-detail-page.md#allowed-xpath-functions-in-formulas-and-expressions)
+* [Low-level XForms allowed functions configuration](../configuration/properties/xforms.md#allowed-xpath-functions)
 
 ### Wizard separate table of contents property deprecation
 

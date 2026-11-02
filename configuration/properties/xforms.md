@@ -105,6 +105,97 @@ More information: [Type annotations](../../xforms/xpath/type-annotations.md).
 
 See [XPath Analysis](../../xforms/xpath/expression-analysis.md).
 
+### Allowed XPath functions
+
+[\[SINCE Orbeon Forms 2026.1\]](../../release-notes/orbeon-forms-2026.1.md)
+
+By default in plain XForms, expressions can invoke standard XPath functions, Orbeon extension functions (`xxf:*`, `exf:*`, etc.), and Java methods via Java reflection (`java:...`). To harden security, Orbeon Forms allows restricting which XPath functions may be called within user-defined expressions.
+
+The restriction mechanism combines two parts:
+
+1. **Document-level allowed functions specification**: defines which function namespaces, individual functions, and Java methods are allowed or denied.
+2. **Element-level restriction**: controls which parts of the XForms markup are subject to function restrictions via `xxf:functions="restricted"`.
+
+#### Document-level configuration
+
+You can configure the allowed functions list globally or locally via the `oxf.xforms.allowed-functions` property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.allowed-functions"
+    value="math:* fn:* xf:* xs:* map:* array:* xxf:* exf:* fr:* -fn:doc -xxf:call-xpl"/>
+```
+
+Alternatively, you can specify this directly on a particular form by adding the `xxf:allowed-functions` attribute on the first `<xf:model>` element (or the document root element):
+
+```xml
+<xf:model
+    xxf:allowed-functions="math:* fn:* xf:* xs:* map:* array:* xxf:* exf:* fr:* -fn:doc -xxf:call-xpl">
+    ...
+</xf:model>
+```
+
+#### Specification syntax
+
+The allowed functions value is a whitespace-separated list of tokens. Each token can specify an allowed function (`+`, default if omitted) or a denied function (`-`):
+
+* **Namespace wildcards:**
+  * `prefix:*` or `+prefix:*`: allows all functions in the given namespace (e.g. `fn:*`, `math:*`, `xf:*`, `xs:*`, `map:*`, `array:*`).
+  * `-prefix:*`: denies all functions in the given namespace.
+  * Prefixes are resolved using the in-scope XML namespace mappings of the configuration property or `<xf:model>` element.
+  * You can also use Clark / URI-qualified syntax: `Q{uri}*` or `-Q{uri}*` (e.g. `Q{http://example.com/ns}*`).
+* **Specific functions:**
+  * `prefix:name` or `+prefix:name`: allows a specific function (e.g. `+xxf:instance`, `+fn:doc`).
+  * `-prefix:name`: denies a specific function (e.g. `-fn:doc`, `-xxf:evaluate`).
+  * Unprefixed names (e.g. `concat` or `-doc`) refer to the default XPath function namespace (`http://www.w3.org/2005/xpath-functions`).
+  * URI-qualified syntax is also supported: `Q{http://example.com/ns}func` or `-Q{http://example.com/ns}func`.
+* **Global wildcards:**
+  * `*` or `*:*`: allows all functions.
+  * `-*` or `-*:*`: resets the configuration, clearing all previously allowed and denied namespaces and functions (useful when customizing on top of a baseline).
+* **Java reflection functions:**
+  * Java functions use the `java:` scheme (e.g. `java:java.lang.Math:abs`).
+  * By default, calling arbitrary Java methods is denied.
+  * `java:*` or `java`: allows all Java reflection calls; `-java:*` or `-java`: denies all Java reflection calls.
+  * `java:package.Class:*`: allows all methods of a specific Java class.
+  * `java:package.Class:methodName`: allows a specific method of a Java class (e.g. `+java:java.lang.Math:abs`).
+
+#### Precedence order
+
+When determining whether a function `(namespace, localName)` is allowed, rules are evaluated in the following order:
+
+1. Denied specific function QNames (`-prefix:name` or `-Q{uri}name`) &rarr; **denied**
+2. Allowed specific function QNames (`+prefix:name` or `+Q{uri}name`) &rarr; **allowed**
+3. Denied specific namespaces (`-prefix:*` or `-Q{uri}*`) &rarr; **denied**
+4. Allowed specific namespaces (`prefix:*` or `+Q{uri}*`) &rarr; **allowed**
+5. Denied Java (`-java:*` or `-java`) &rarr; **denied**
+6. Allow all (`*` or `*:*`) &rarr; **allowed**
+7. Allowed Java (`java:*` or `java`) &rarr; **allowed**
+8. Default &rarr; **denied**
+
+#### Element-level restriction (`xxf:functions="restricted"`)
+
+Restricting allowed functions is applied using the `xxf:functions="restricted"` attribute on XForms elements:
+
+```xml
+<xf:bind id="my-binds" ref="data" xxf:functions="restricted">
+    <xf:bind id="b1" ref="amount" calculate="math:pow(2, 3)"/>
+</xf:bind>
+```
+
+Key characteristics:
+
+* **Subtree inheritance:** Any element marked with `xxf:functions="restricted"` restricts all XPath expressions within its entire subtree within that scope (including bind MIPs, controls, AVTs, variables, and actions).
+* **XBL component scoping:** XBL components define their own scope. An XBL component scope starts from scratch as **unrestricted**. This ensures that reusable XBL components can internally call any functions they need without being affected by restrictions applied to the enclosing form. Elements inside an XBL component can still be explicitly restricted if desired.
+* **Compiler internal helpers:** Safe internal helper functions needed by the XForms and Form Runner compiler (such as `xxf:evaluate-avt`, `xxf:r`, and internal variable resolvers) are automatically permitted so that compiled forms continue to run seamlessly.
+
+#### Compile-time and runtime enforcement
+
+* **Static analysis:** When expressions are compiled (e.g. during form initialization or Form Builder editing), calls to disallowed functions raise a static XPath error (`Function '...' is not allowed in user-defined form expressions`), preventing form loading.
+* **Runtime evaluation:** Expressions evaluated at runtime (such as AVTs evaluated via `xxf:evaluate-avt()`) enforce the same whitelist restrictions.
+
+See also [Form Runner allowed functions configuration](form-runner-detail-page.md#allowed-xpath-functions-in-formulas-and-expressions).
+
 ## File location information
 
 \[SINCE Orbeon Forms 4.4]
