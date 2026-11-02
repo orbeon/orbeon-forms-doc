@@ -215,12 +215,19 @@ In the Section/Grid Settings dialog, formulas are used to specify the following 
 
 TODO
 
+## Allowed functions in formulas
+
+[\[SINCE Orbeon Forms 2026.1\]](../release-notes/orbeon-forms-2026.1.md)
+
+To ensure form security, Orbeon Forms enforces a whitelist of allowed XPath functions in user-defined formulas. For details on default allowed functions and how administrators can customize the whitelist for specific forms, see [Allowed XPath functions in formulas and expressions](../configuration/properties/form-runner-allowed-functions.md).
+
 ## Examples
 
 See [examples of formulas](formulas-examples.md).
 
 ## See also
 
+* [Allowed XPath functions](../configuration/properties/form-runner-allowed-functions.md)
 * [Examples of formulas](formulas-examples.md)
 * [Form Builder Validation](validation.md)
 * [Formulas inspector](formulas-inspector.md)

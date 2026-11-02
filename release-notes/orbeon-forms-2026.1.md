@@ -55,7 +55,7 @@ To re-allow all functions and restore previous unrestricted behavior for a legac
 ```
 
 For full details, see:
-* [Allowed XPath functions in Form Runner formulas](../configuration/properties/form-runner-detail-page.md#allowed-xpath-functions-in-formulas-and-expressions)
+* [Allowed XPath functions in Form Runner formulas](../configuration/properties/form-runner-allowed-functions.md)
 * [Low-level XForms allowed functions configuration](../configuration/properties/xforms.md#allowed-xpath-functions)
 
 ### Wizard separate table of contents property deprecation

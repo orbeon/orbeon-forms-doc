@@ -22,6 +22,7 @@
     * [Property profiles](configuration/properties/property-profiles.md)
     * [Form Runner](configuration/properties/form-runner.md)
       * [Detail page](configuration/properties/form-runner-detail-page.md)
+        * [Allowed XPath functions](configuration/properties/form-runner-allowed-functions.md)
         * [Attachments](configuration/properties/form-runner-attachments.md)
         * [Email properties](configuration/properties/form-runner-email.md)
         * [Initial data](configuration/properties/form-runner-initial-data.md)

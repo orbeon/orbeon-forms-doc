@@ -7,6 +7,7 @@ This page and sub-pages describe XPath usage and the Orbeon Forms XPath function
 - [Type annotations](type-annotations.md)
 - [Tips](tips.md)
 - [Compatibility](compatibility.md)
+- [Allowed functions](../../configuration/properties/xforms.md#allowed-xpath-functions)
 - [Standard Functions](standard-functions.md)
 - [Maps and arrays Functions](maps-arrays.md)
 - Extension Functions
