@@ -1,6 +1,6 @@
 # Orbeon Forms 2023.1.9
 
-**Tuesday, October 27, 2026**
+**Tuesday, November 3, 2026**
 
 Today we released Orbeon Forms 2023.1.9 PE! This maintenance release mainly contains bug-fixes and security updates and is recommended for all users of:
 
@@ -32,6 +32,8 @@ In this release, we have addressed the following issues:
     * Only the host app can establish the Form Runner session in embedding ([\#7948](https://github.com/orbeon/orbeon-forms/issues/7948))
     * Cookie incorrectly forwarded to the persistence layer ([\#7066](https://github.com/orbeon/orbeon-forms/issues/7066))
     * Form Runner service calls: enforce stateless request handling and prevent `Set-Cookie` ([\#7929](https://github.com/orbeon/orbeon-forms/issues/7929))
+    * Error with `xxf:set-session-attribute()` for 'fr-language' ([\#8008](https://github.com/orbeon/orbeon-forms/issues/8008))
+    * Clickable area of link in HTML label in PDF is too large ([\#7621](https://github.com/orbeon/orbeon-forms/issues/7621))
     * Third-party library updates
 * Form Builder
     * Form migration tests on lexical QNames ([\#7624](https://github.com/orbeon/orbeon-forms/issues/7624))
