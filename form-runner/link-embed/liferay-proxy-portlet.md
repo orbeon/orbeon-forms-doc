@@ -8,21 +8,6 @@ This is an Orbeon Forms PE feature.
 
 See [Supported Liferay versions](./#supported-liferay-versions).
 
-## Known Liferay 7/DXP issues
-
-These issues apply to Orbeon Forms 2017.1 to 2019.1.
-
-* **The Form Runner language selector doesn't work**
-  * See [issue #3257](https://github.com/orbeon/orbeon-forms/issues/3257)
-  * Workaround: Select the "Send Liferay language" option. When this option is set, the Form Runner language selector doesn't show. Orbeon Forms uses instead the current Liferay user's language preference.
-* **The Liferay navigation menu doesn't navigate to Form Runner**
-  * See [issue #3256](https://github.com/orbeon/orbeon-forms/issues/3256)
-  * Workarounds:
-    1. Don't use the Liferay navigation menu to reach the Form Runner proxy portlet.
-    2. Or disable Liferay's SPA support portal-wide (see the [Disabling SPA](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-0/automatic-single-page-applications#disabling-spa)).
-
-We plan to lift these limitations in a future release of Orbeon Forms.
-
 ## Introduction
 
 Form Runner can be deployed [directly](liferay-full-portlet.md) into Liferay. However in some cases, it is desirable to deploy Form Runner _separately_. The Form Runner proxy portlet provides this type of deployment, with the following benefits:
@@ -541,6 +526,21 @@ Concretely, this means that you cannot have the following portlet instances at t
 * `orbeon/contact` form in "list and review form data" scenario
 
 This is because both scenarios need a different configuration for the Summary page buttons.
+
+## Known Liferay 7/DXP issues
+
+These issues apply to Orbeon Forms 2017.1 to 2019.1.
+
+* **The Form Runner language selector doesn't work**
+  * See [issue #3257](https://github.com/orbeon/orbeon-forms/issues/3257)
+  * Workaround: Select the "Send Liferay language" option. When this option is set, the Form Runner language selector doesn't show. Orbeon Forms uses instead the current Liferay user's language preference.
+* **The Liferay navigation menu doesn't navigate to Form Runner**
+  * See [issue #3256](https://github.com/orbeon/orbeon-forms/issues/3256)
+  * Workarounds:
+    1. Don't use the Liferay navigation menu to reach the Form Runner proxy portlet.
+    2. Or disable Liferay's SPA support portal-wide (see the [Disabling SPA](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-0/automatic-single-page-applications#disabling-spa)).
+
+We plan to lift these limitations in a future release of Orbeon Forms.
 
 ## See also
 
