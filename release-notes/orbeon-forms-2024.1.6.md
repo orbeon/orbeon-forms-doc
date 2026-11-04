@@ -1,6 +1,6 @@
 # Orbeon Forms 2024.1.6
 
-**Tuesday, October 27, 2026**
+**Wednesday, November 4, 2026**
 
 Today we released Orbeon Forms 2024.1.6! This maintenance release mainly contains bug-fixes and is recommended for all users of:
 
