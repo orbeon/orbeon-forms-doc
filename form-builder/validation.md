@@ -14,8 +14,6 @@ In addition, some values might be correct, but the user should be encouraged to 
 
 Form Builder supports this kind of validations via the "Validations and Alerts" tab of the "Control Settings" dialog. You open the dialog with the "Control Settings" icon to the right of each control.
 
-_NOTE: Prior to Orbeon Forms 4.3, the dialog was called "Validation Properties". Orbeon Forms 4.3 combines dialogs and adds functionality._
-
 ![Control validation settings](images/validation.png)
 
 ## Validation types
