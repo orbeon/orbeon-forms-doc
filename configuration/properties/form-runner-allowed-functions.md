@@ -23,7 +23,7 @@ Internal Form Runner pages (such as Form Builder itself, the Summary page, the L
 
 ## Default baseline configuration
 
-Form Runner defines an internal baseline configuration via the private property `oxf.fr.detail.formula.allowed-functions.private`.
+Form Runner defines an internal baseline configuration:
 
 **Allowed by default:**
 
