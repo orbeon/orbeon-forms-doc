@@ -50,7 +50,7 @@ You specify what key stroke(s) you want to listen to with the following two attr
     - the key you want to listen to
     - SINCE Orbeon Forms 2019.1
         - special keys are supported: `backspace`, `tab`, `enter`, `return`, `capslock`, `esc`, `escape`, `space`, `pageup`, `pagedown`, `end`, `home`, `left`, `up`, `right`, `down`, `ins`, `del`, `plus`
-- `xxf:modifier`
+- `xxf:modifiers`
     - optional
     - space-separated list of key modifiers that need to be pressed in addition to the key
     - UNTIL Orbeon Forms 2018.2

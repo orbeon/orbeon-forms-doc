@@ -8,7 +8,7 @@
 
 ## Standard appearance
 
-By default, the text area control is rendered as a regular single-line input field:
+By default, the input control is rendered as a regular single-line input field:
 
 ![](../images/xforms-input-simple.png)
 

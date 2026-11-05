@@ -594,7 +594,7 @@ xxf:open-dialogs() as xs:integer
 
 The `xxf:open-dialogs()` function returns the number of open dialogs in the page.
 
-If there is no pending upload, the function returns 0.
+If there is no open dialog, the function returns 0.
 
 It is rare, but possible, that there is more than 1 dialog open. Typically, the function returns 0 or 1.
 

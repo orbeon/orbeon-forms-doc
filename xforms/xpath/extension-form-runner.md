@@ -397,7 +397,7 @@ Return the modification date of the current form data *as of the last read from 
 fr:pdf-templates() as map(xs:string, xs:string?)*
 ```
 
-Return the list of section templates associated with the current form definition. The return value is a sequence of
+Return the list of PDF templates associated with the current form definition. The return value is a sequence of
 `map(xs:string, xs:string?)`, where keys map to values as follows:
 
 - `path`: the path to the PDF template in the persistence layer
