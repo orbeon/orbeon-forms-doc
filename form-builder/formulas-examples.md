@@ -223,7 +223,7 @@ $fr-mode = 'edit'
 
 It can be useful to access HTTP headers to set default values upon form initialization, for example when single sign-on systems use HTTP headers as a way of communicating information to an application.
 
-XPath expressions have access to a special function, `xxf:request-header()`, which allows retrieving a header by name. Example of setting the default value of a field using an initial value:
+XPath expressions have access to a special function, `xxf:get-request-header()`, which allows retrieving a header by name. Example of setting the default value of a field using an initial value:
 
 ```xpath
 xxf:get-request-header('full-name')

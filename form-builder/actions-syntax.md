@@ -767,7 +767,7 @@ Note that the `<fr:control-setattachment>` action automatically sets a mediatype
 | `control` | Yes       | control name     |                          |
 | `value`   | Yes       | value expression | value of the size to set |
 
-This action allows setting the mediatype of an attachment control. Example:
+This action allows setting the size of an attachment control. Example:
 
 ```xml
 <fr:control-setsize

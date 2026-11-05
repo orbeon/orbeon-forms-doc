@@ -16,7 +16,7 @@ You'll most likely be interested in the information on this page if:
 
 1. The first time a browser requests a web page from Orbeon Forms, Orbeon Forms creates a session, and the HTTP response has a header with `Set-Cookie: JSESSIONID=123`, where `123` is a unique identifier. (The specific cookie name may differ depending on how you configured your app server, but typically `JSESSIONID` is the default and for simplicity we'll use that name in the rest of this document.) From that point, any subsequent requests issued by the browser will have a header that looks like `Cookie: JSESSIONID=123`.
 2. When Orbeon Forms generates a web page for a form, it produces a unique UUID, and stores _state_ in the session related to this UUID. If the user reloads the form, Orbeon Forms generates a different UUID.
-3.  When the Orbeon Forms client-side code sends an Ajax request, it includes that UUID in the body of the request, and the browser passes the `JSESSIONID`. On the server, Orbeon Forms uses that information to find the _state_ it stored in step 1. The UUID sent by Orbeon Forms in the Ajax request looks like:
+3.  When the Orbeon Forms client-side code sends an Ajax request, it includes that UUID in the body of the request, and the browser passes the `JSESSIONID`. On the server, Orbeon Forms uses that information to find the _state_ it stored in step 2. The UUID sent by Orbeon Forms in the Ajax request looks like:
 
     ```xml
     <xxf:uuid>abc</xxf:uuid>
