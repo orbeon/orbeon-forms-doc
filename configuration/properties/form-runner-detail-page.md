@@ -66,7 +66,7 @@ Available values:
 
 This property allows you to switch between the light and dark color schemes.
 
-_NOTE: This is a work in progress, and enhancements will be included in future releases. At the moment, Form Builder only supports the light color scheme._
+_NOTE: Until Orbeon Forms 2025.1, Form Builder only supports the light color scheme. Since Orbeon Forms 2026.1, Form Builder supports the dark color scheme as well. See [Dark mode](../../form-runner/feature/dark-mode.md)._
 
 For Form Runner Detail pages, use:
 

@@ -3,19 +3,20 @@
 ## Availability
 
 * [\[SINCE Orbeon Forms 2025.1\]](../../release-notes/orbeon-forms-2025.1.md) Dark color scheme support and initial configuration properties.
-* [\[SINCE Orbeon Forms 2026.1\]](../../release-notes/orbeon-forms-2026.1.md) Navigation bar color scheme selector, runtime selection via URL parameter, cookie, and session.
+* [\[SINCE Orbeon Forms 2026.1\]](../../release-notes/orbeon-forms-2026.1.md) Navigation bar color scheme selector, runtime selection via URL parameter, cookie, and session. Form Builder support.
 
 ## Overview
 
-Orbeon Forms provides dark mode support across Form Runner. When enabled, a modern, high-contrast dark theme is applied to form views and administrative pages, making forms more comfortable to view in low-light environments and aligning with system-wide dark mode preferences.
+Orbeon Forms provides dark mode support across Form Runner and Form Builder. When enabled, a modern, high-contrast dark theme is applied to form views and administrative pages, making forms more comfortable to view in low-light environments and aligning with system-wide dark mode preferences.
 
-Dark mode is available for the following Form Runner pages:
+Dark mode is available for the following pages:
 
 * **Detail page**: Form view, edit, and new modes
 * **Summary page**: Form data summary table
 * **Landing page**: Application landing page
 * **Published Forms page**: Listing of published forms
 * **Forms Admin page**: Form management and admin operations
+* **Form Builder**: Form editor, including its dialogs and toolbox [SINCE Orbeon Forms 2026.1]
 
 ![Detail page in dark mode](../images/dark-mode-detail.webp)
 
@@ -71,7 +72,7 @@ You can disable the selector globally or per application/form by setting the pro
     value="false"/>
 ```
 
-Form Builder explicitly disables this selector by default:
+The selector also appears in the Form Builder navigation bar. To hide it there only, set the property for the `orbeon`/`builder` application and form names:
 
 ```xml
 <property
@@ -143,10 +144,6 @@ Controls whether the color scheme selector appears in the navigation bar.
     name="oxf.fr.navbar.color-scheme-selector.enable.*.*"
     value="true"/>
 ```
-
-## Limitations
-
-* **Form Builder**: Form Builder currently supports only the light color scheme.
 
 ## See also
 
