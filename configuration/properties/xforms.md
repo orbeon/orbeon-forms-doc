@@ -522,7 +522,7 @@ Whenever possible, it is recommended to use the Form Runner property [`oxf.fr.de
 
 \[SINCE Orbeon Forms 2017.1]
 
-The following property specifies which file types (also known as "mediatypes") are allowed for uploaded files. For example, the following values of `image/png image/jpeg` specify that JPEG images and PDF files are allowed but no other files.
+The following property specifies which file types (also known as "mediatypes") are allowed for uploaded files. For example, the following values of `image/jpeg application/pdf` specify that JPEG images and PDF files are allowed but no other files.
 
 ```xml
 <property 

@@ -8,7 +8,7 @@ This issue can also manifest itself with a dialog titled _Session has expired. U
 * WebLogic stores one cookie `JSESSIONID` with cookie path `/` for all the applications. This cookie doesn't change when a session is invalidated, and hence there is no one-to-one mapping between a `JSESSIONID` cookie and a session in WebLogic.\
   The error can happen when:
   1. You first access your application deployed on `/myapp` with Tomcat. Tomcat sets a `JSESSIONID` cookie for `/myapp`.
-  2. You then access your application on the same server deployed on `/myapp` with WebLogic. Tomcat sets a `JSESSIONID` cookie for `/`.
+  2. You then access your application on the same server deployed on `/myapp` with WebLogic. WebLogic sets a `JSESSIONID` cookie for `/`.
   3. In subsequent requests, the browser sends the Tomcat `JSESSIONID` as it is more specific (for `/myapp` instead of just `/`), but WebLogic doesn't recognize it, hence the error you're getting.
 
 The solution is simply to clear in your browser all the `JSESSIONID` cookies for the host you are trying to access.

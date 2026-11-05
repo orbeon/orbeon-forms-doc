@@ -58,7 +58,7 @@ When `POST`ing data as described above, the data can now be incomplete. Say the 
 </form>
 ```
 
-Let's say that you just want to pass the `<last-name>` and `<order-number>` comments. You can now just `POST`:
+Let's say that you just want to pass the `<last-name>` and `<order-number>` elements. You can now just `POST`:
 
 ```xml
 <form>
