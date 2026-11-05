@@ -125,7 +125,7 @@ As of Orbeon Forms 2021.1, this property is used for:
   * if `oxf.xforms.resources.encode-version` is `true`, which is the default
 * [Upload events encryption](https://github.com/orbeon/orbeon-forms/issues/4624)
 * [Hashes for the `metadata` format](../../form-runner/advanced/buttons-and-processes/actions-form-runner-send.md#sending-form-metadata)
-* Hashing internal upload URLs to prevent against tampering
+* Hashing internal upload URLs to protect against tampering
 * Form data encryption for the ["Test PDF"](../../form-builder/pdf-test.md) feature
   * SINCE Orbeon Forms 2021.1
 * The [XForms `hmac()` function](https://www.w3.org/TR/xforms11/#fn-hmac)

@@ -240,7 +240,7 @@ The possible values for each property are:
 * empty: show the selected value only (default)
 * `full`: show all values as radio buttons
 
-Example to change the default the "Static Dropdown" control to showing all values in the automatic PDF:
+Example to change the default for the "Static Dropdown" control to showing all values in the automatic PDF:
 
 ```xml
 <property 

@@ -284,7 +284,7 @@ Examples:
 * `response-must-await="0ms"`: don't wait
 * `response-must-await="200ms"`: wait up to 200 milliseconds
 * `response-must-await="5s"`: wait up to 5 seconds
-* `response-must-await="forever`"\`: wait indefinitely
+* `response-must-await="forever"`: wait indefinitely
 
 For example, the Form Runner Landing page runs multiple background services to load lists of published forms. The page waits a few hundred milliseconds for the completion of those services, and if they take longer, for example due to a slow database, the page is shown to the user, and the services continue to run in the background.
 
