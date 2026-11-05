@@ -301,7 +301,7 @@ fr:is-embedded($embedding-type as xs:string) as xs:boolean
 Possible values:
 
 - `portlet`: if passed, returns true if embedding is done via the Form Runner proxy portlet
-- `java-api`: if passed, returns true if embedding is done via the Form Runner proxy portlet
+- `java-api`: if passed, returns true if embedding is done via the Form Runner Java embedding API
 
 Example:
 

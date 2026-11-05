@@ -158,7 +158,7 @@ xxf:get-session-attribute(
 ) as item()?
 ```
 
-The `xxf:get-session-attribute()` function returns the value of the given session attribute. The attribute may have been previously placed in the request:
+The `xxf:get-session-attribute()` function returns the value of the given session attribute. The attribute may have been previously placed in the session:
 
 - through Java code
 - or using `xxf:set-session-attribute()`

@@ -100,7 +100,7 @@ The same idea applies to:
 * control bindings
 * control values
 * itemsets
-* values of label, help, hint, and help elements
+* values of label, help, hint, and alert elements
 * `<xf:bind>` bindings
 * values of model item properties
 
