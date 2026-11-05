@@ -162,7 +162,7 @@ This must be reached with an HTTP `GET`. When called, the callback:
 * obtains the state from the store
 * navigates to the Detail page, restoring the state that was stored
   * if a continuation mode was specified with `fr:save-state()`, Form Runner switches to that mode, otherwise uses the same mode as when `fr:save-state()` was called
-  * if a continuation workflow stage was specified with `fr:save-state()`, Form Runner switches to that workflow state, otherwise uses the same workflow stage as when `fr:save-state()` was called
+  * if a continuation workflow stage was specified with `fr:save-state()`, Form Runner switches to that workflow stage, otherwise uses the same workflow stage as when `fr:save-state()` was called
 
 ## Implementing a view component
 

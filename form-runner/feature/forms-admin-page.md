@@ -80,7 +80,7 @@ Making a form definition available or unavailable also takes into account the _v
 
 Unlike the "Make unavailable" operations, this operation removes the selected published form definitions. Once this is done, the form definitions are no longer visible in the Admin page and they can no longer be accessed.
 
-This feature is useful in cases a form definition was published by mistake, for testing, or if at a later time the form definition is deemed unnecessary.
+This feature is useful in cases where a form definition was published by mistake, for testing, or if at a later time the form definition is deemed unnecessary.
 
 Important notes:
 

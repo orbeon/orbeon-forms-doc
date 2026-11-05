@@ -29,7 +29,7 @@ First declare the dialog, with:
 1. You gave an id to the dialog (`overwrite-file-dialog`).
 2. You defined what the dialog title and message are with `<fr:label>` and `<fr:message>`.
 3. You use the `<fr:negative-choice>` and `<fr:positive-choice>` elements to indicate which buttons you want to have, and in which order they should be shown.
-4. You placed an event handler inside the `<fr:positive-choice``>`, which will run when/if users press the _Yes_ button.
+4. You placed an event handler inside the `<fr:positive-choice>`, which will run when/if users press the _Yes_ button.
 
 You open this dialog by dispatching the event `fr-show` to the dialog:
 
@@ -66,7 +66,7 @@ In most cases, you will be using either the positive and negative choice togethe
 
 You specify the actions running upon a button being pressed by either:
 
-* **Use inline actions** – Placing the actions inside the `<fr:``positive-choice``>` or  or , and run them on the `DOMActivate` event, as done in the example above.
+* **Use inline actions** – Placing the actions inside the `<fr:positive-choice>`, `<fr:negative-choice>` or `<fr:neutral-choice>`, and run them on the `DOMActivate` event, as done in the example above.
 *   **Use a "callback"** – When opening the alert dialog, passing the id of an element to which the dialog will dispatch an event upon a button being pressed. For instance you would open the dialog with:
 
     ```markup

@@ -37,7 +37,7 @@ See [Renaming of controls and formulas](../../form-builder/formulas.md#renaming-
 
 ## Examples
 
-Consider the following grid, where the Total Total appear on each line item row:
+Consider the following grid, where the Row Total appears on each line item row:
 
 ![Grid with calculations](../images/calculations-dependencies-grid.png)
 
