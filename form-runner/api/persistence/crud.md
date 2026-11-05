@@ -275,7 +275,7 @@ http://example.org/orbeon/fr/service/persistence/crud/
 
 ## Publishing from Form Builder
 
-When you create, edit, or read form definition with Form Builder, those are considered _unpublished_ form definitions and are stored as Form Builder _data_. Those are . They are stored under the path:
+When you create, edit, or read form definitions with Form Builder, those are considered _unpublished_ form definitions and are stored as Form Builder _data_. They are stored under the path:
 
 `/crud/orbeon/builder/data/$doc`
 

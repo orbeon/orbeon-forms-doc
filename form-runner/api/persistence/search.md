@@ -127,7 +127,7 @@ The paths sent by Form Runner are usually simple paths, but there are some excep
             description[@xml:lang = $fb-lang]
     ```
 
-- Forms where user has entered XPath expressions manually to bind controls to XML data will contain those paths.
+- Forms where the user has entered XPath expressions manually to bind controls to XML data will contain those paths.
 
 If the persistence layer is able to run XPath expressions (as eXist or other XML databases can), then the path provided by the search request can be executed. However, XPath evaluation is not absolutely required. For example with non-XML (relational, key/value) data stores, it is easier to consider the search path as an opaque search key that uniquely identifies the control to search.
 
