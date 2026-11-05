@@ -87,6 +87,26 @@ The format described above allows placing the date or time first, and choosing t
 
 As of Orbeon Forms 2025.1.1, there is no UI to specify the date format, but the `output-format` attribute on the `<fr:timestamp>` component allows overriding the default format on a per-component basis.
 
+### Field width
+
+[SINCE Orbeon Forms 2026.1]
+
+The `field-width` parameter controls the width of the field:
+
+* `full`: the field expands to take the available width of the grid cell
+* `natural`: the field takes the same width as the [Date and Time](date-and-time.md) component with the same value of this parameter
+
+This parameter can be configured in Form Builder via the Control Settings dialog, or via property:
+
+```xml
+<property
+    as="xs:string"
+    name="oxf.xforms.xbl.fr.timestamp.field-width"
+    value="full"/>
+```
+
+In PDF output, the field always takes the available width of the grid cell.
+
 ## XForms usage
 
 You use the timestamp component:
