@@ -40,7 +40,7 @@ Here are examples of supported smart time formats:
 | now          | current local time         |
 | 21           | equivalent to 9:00:00 pm   |
 | 800          | equivalent to 8:00:00 am   |
-| 1732         | equivalent to 5:43:00 pm   |
+| 1732         | equivalent to 5:32:00 pm   |
 | 3:34:56 p.m. | full time with seconds     |
 | 3:34:56 pm   | same as above              |
 | 3:34 p.m.    | equivalent to 3:34:00 p.m. |

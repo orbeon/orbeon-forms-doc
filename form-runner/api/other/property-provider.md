@@ -162,7 +162,7 @@ A provider implementation must not implement these interfaces: instead, they are
 
 ### Registering a provider
 
-The connection context API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) API with a provider name of `org.orbeon.properties.api.PropertyProvider`.
+The property provider API uses the standard Java [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html) API with a provider name of `org.orbeon.properties.api.PropertyProvider`.
 
 The provider must:
 

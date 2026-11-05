@@ -167,7 +167,7 @@ The following properties can be used to configure a `send` action with propertie
 
 - property prefix + `.uri`: see [`uri` parameter](#send_parameter_property)
 - property prefix + `.method`: see [`method` parameter](#send_parameter_method)
-- property prefix + `.nonrelevant`: see [`prune` parameter](#send_parameter_nonrelevant)
+- property prefix + `.nonrelevant`: see [`nonrelevant` parameter](#send_parameter_nonrelevant)
 - property prefix + `.prune`: see [`prune` parameter](#send_parameter_prune)
 - property prefix + `.annotate`: see [`annotate` parameter](#send_parameter_annotate)
 - property prefix + `.replace`: see [`replace` parameter](#send_parameter_replace)

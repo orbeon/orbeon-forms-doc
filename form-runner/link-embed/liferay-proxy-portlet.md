@@ -490,7 +490,7 @@ Remove the `delete` token if the Delete button is not needed.
 
 ### Scenario: list and review form data
 
-In this scenario, the user of the portlet is only allowed to capture and save form data.
+In this scenario, the user of the portlet is only allowed to list and review form data.
 
 Portlet preferences:
 
