@@ -65,7 +65,6 @@ With this setup:
 - Form Builder also requires `orbeon-admin` at the Orbeon Forms level.
 - Any user, logged in or anonymous, can create form data from any published form.
 - All other operations (`read`, `update`, `delete`) are not available to anonymous users or logged in users without the `orbeon-admin` role.
-Users with the `orbeon-admin` role have
 - Users with the `orbeon-admin` role can perform any operations on the form data after they are logged in.
 
 Limitations:

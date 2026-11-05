@@ -52,7 +52,7 @@ Form Runner must know that the request comes from the embedding application and 
 There are two ways to set username and password using the embedding API:
 
 * statically, within `web.xml`
-* dynamically, by passing the `Authorization` when calling the API
+* dynamically, by passing the `Authorization` header when calling the API
 
 #### Client setup with static username and password
 
