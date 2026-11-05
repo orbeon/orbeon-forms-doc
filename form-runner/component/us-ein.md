@@ -16,7 +16,7 @@ It allows the user to enter an Employer Identification Number in the format `12-
 * The user input is validated:
   * to ensure that it contains exactly 9 digits, otherwise the field value is considered invalid
 * The value is formatted as `12-3456789` when displaying the value.
-* The value is stored in the database as a string of 9 digits including two separator dashes, for example `12-3456789`.
+* The value is stored in the database as a string of 9 digits including one separator dash, for example `12-3456789`.
 
 _NOTE: Storing the value with dashes is a design choice which seems to match the most common usage._
 

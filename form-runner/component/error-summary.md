@@ -132,7 +132,7 @@ In Orbeon Forms, a form control can be _visited_ or not. Visited controls have t
     value="false"/>
 ```
 
-[\[SINCE Orbeon Forms 2024.1\]](../../release-notes/orbeon-forms-2024.1.md) Form controls are also marked as visible as they become invalid. This is useful when you want to immediately show validation errors for fields that become invalid not as the result of their value changing, but because their validity depends on something else in the form that has changed. You can disable this behavior by setting the following property:
+[\[SINCE Orbeon Forms 2024.1\]](../../release-notes/orbeon-forms-2024.1.md) Form controls are also marked as visited as they become invalid. This is useful when you want to immediately show validation errors for fields that become invalid not as the result of their value changing, but because their validity depends on something else in the form that has changed. You can disable this behavior by setting the following property:
 
 ```xml
 <property

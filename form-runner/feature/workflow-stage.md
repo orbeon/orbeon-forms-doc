@@ -42,7 +42,7 @@ The workflow stage can be read using the [`fr:workflow-stage-value()` function](
 
 ## Showing the workflow stage in the Summary page
 
-You can optionally show the workflow page in a column in the form's Summary page by setting the following property value to `true`:
+You can optionally show the workflow stage in a column in the form's Summary page by setting the following property value to `true`:
 
 ```xml
 <property 
@@ -57,7 +57,7 @@ In addition, the user can search by workflow stage.
 
 [\[SINCE Orbeon Forms 2024.1.1\]](../../release-notes/orbeon-forms-2024.1.1.md)
 
-You can optionally show the workflow page in the navigation bar of the form's Detail page by setting the following property value to `true`:
+You can optionally show the workflow stage in the navigation bar of the form's Detail page by setting the following property value to `true`:
 
 ```xml
 <property 
