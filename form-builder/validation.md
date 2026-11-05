@@ -20,7 +20,7 @@ Form Builder supports this kind of validations via the "Validations and Alerts" 
 
 ### Introduction
 
-The value associated with a control can be validated with 3 different validation types:
+The value associated with a control can be validated with 4 different validation types:
 
 1. _Required_. This indicates whether the value can be empty or not.
 2. _Data Type_. For example `string`, `decimal`, `date`, or `time`.

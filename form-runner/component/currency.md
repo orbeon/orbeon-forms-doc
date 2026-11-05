@@ -12,7 +12,7 @@ While working with currency amounts, the component is careful not to do any mani
 
 ## Basic usage
 
-You use the number component like a regular input field, for example:
+You use the currency component like a regular input field, for example:
 
 ```xml
 <fr:currency ref="my-amount">

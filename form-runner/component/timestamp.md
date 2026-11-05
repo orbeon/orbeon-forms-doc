@@ -12,7 +12,7 @@ The timestamp component is a readonly form control able to show an instant in ti
 
 ## Usage
 
-From Form Builder, insert the Timezone control from the toolbox.
+From Form Builder, insert the Timestamp control from the toolbox.
 
 ## Datatype
 
