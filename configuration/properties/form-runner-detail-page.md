@@ -286,7 +286,7 @@ In all cases, should an action take any noticeable amount of time, Orbeon Forms 
 
 By default, as shown in the below video:
 
-* The `modal` loading indicator used for the `submit` button.
+* The `modal` loading indicator is used for the `submit` button.
 * The `inline` loading indicator for the _save_ buttons (`save-draft` (up to 2020.1.x), `save-progress` (2021.1 and newer), and `save-final`).
 
 ![Loading indicators](../images/loading-indicators.gif)

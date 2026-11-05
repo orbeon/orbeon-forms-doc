@@ -49,7 +49,7 @@ Orbeon Forms doesn't handle aspects of the infrastructure that can be handled in
 
 #### Rationale
 
-Your XForms manipulates on a number of XML documents called _instances_ in XForms. You capture the data users enter in instances, but also use instances to store the internal state of your XForms pages. Some XForms implementations expose those instances to the client (the browser, a plug-in running in the browser, or JavaScript running in the browser). When this happens, malicious users can access and modify your application internal state, potentially leading to security flaws.  
+Your XForms manipulates a number of XML documents called _instances_ in XForms. You capture the data users enter in instances, but also use instances to store the internal state of your XForms pages. Some XForms implementations expose those instances to the client (the browser, a plug-in running in the browser, or JavaScript running in the browser). When this happens, malicious users can access and modify your application internal state, potentially leading to security flaws.  
 
 #### Direct access to XForms instance data
 

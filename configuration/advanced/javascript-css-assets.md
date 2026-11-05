@@ -58,7 +58,7 @@ The idea is that this way, in an application with multiple pages:
 * a large baseline of resources is loaded and cached once and for all
 * a smaller incremental set of extra resources is loaded for each individual page
 
-If all the resources belong to the baseline, only one JavaScript and one CSS files are produced. Otherwise, two JavaScript and two CSS files are produced.
+If all the resources belong to the baseline, only one JavaScript file and one CSS file are produced. Otherwise, two JavaScript and two CSS files are produced.
 
 The URLs produced identify the resources needed by the page, for example:
 

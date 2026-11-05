@@ -337,7 +337,7 @@ See [HTTP client configuration properties](properties-general-http-client.md).
 | Type          | `xs:anyURI`                      |
 | Default Value | `oxf:/config/theme-examples.xsl` |
 
-This can be overwritten for a given app by placing a file `theme.xsl` inside the app directory.
+This can be overridden for a given app by placing a file `theme.xsl` inside the app directory.
 
 ### oxf.epilogue.theme.embeddable
 
@@ -348,7 +348,7 @@ This can be overwritten for a given app by placing a file `theme.xsl` inside the
 | Type          | `xs:anyURI`                                                                       |
 | Default Value | `oxf:/config/theme-portlet-examples.xsl`                                          |
 
-This can be overwritten for a given app by placing a file `theme-embeddable.xsl` inside the app directory.
+This can be overridden for a given app by placing a file `theme-embeddable.xsl` inside the app directory.
 
 ### oxf.epilogue.theme.renderer
 
