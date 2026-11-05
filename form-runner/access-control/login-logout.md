@@ -21,7 +21,7 @@ Conversely, when users are logged in, the menu will show who the user is, as wel
 
 ![User menu when logged in](../images/logout-logout-menu-logged-in.png)
 
-You can configure what page users will be taken to when they select "Login", "Logout", or "Register" by setting the properties below, shown here with their default value. Setting a property to the empty string disables hides the corresponding entry in the menu.
+You can configure what page users will be taken to when they select "Login", "Logout", or "Register" by setting the properties below, shown here with their default value. Setting a property to the empty string hides the corresponding entry in the menu.
 
 ```xml
 <property

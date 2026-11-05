@@ -101,7 +101,7 @@ Here Orbeon invokes the URL:
 $<Resource URL>?userId=1&userName=test
 ```
 
-where `$<Resoure URL>` is the content of the input field "Resource URL".
+where `$<Resource URL>` is the content of the input field "Resource URL".
 
 Make sure to select `HTML Form` in the `Serialization` dropdown, otherwise the URL parameters are not appended to the request URL.
 

@@ -173,7 +173,7 @@ Administrator | Power User | User
 
 White space around the commas or pipes is ignored.
 
-In addition or alternatively, multiple role headers can be provided, and each of them is split according to those roles. The resulting set of roles is the combination of all roles extracted from all role headers.
+In addition or alternatively, multiple role headers can be provided, and each of them is split according to those rules. The resulting set of roles is the combination of all roles extracted from all role headers.
 
 \[SINCE Orbeon Forms 4.9] The splitting of header names can be overridden with the following property:
 
@@ -199,7 +199,7 @@ When using header-based authentication, in addition to defining the name of the 
 
 #### LDAP-style header syntax
 
-The value of the header is a list of roles separated by spaces, commas, or pipes (`|`). Furthermore, they can optionally be composed of properties in the form of `name=value`, where `name` is specified by a configuration property, and `value` is the value of the role. This is typically useful the value if the header follows an LDAP-style syntax, for instance:
+The value of the header is a list of roles separated by spaces, commas, or pipes (`|`). Furthermore, they can optionally be composed of properties in the form of `name=value`, where `name` is specified by a configuration property, and `value` is the value of the role. This is typically useful if the value of the header follows an LDAP-style syntax, for instance:
 
 ```
 cn=role1,dc=acme,dc=ch|cn=role2,dc=acme,dc=ch
