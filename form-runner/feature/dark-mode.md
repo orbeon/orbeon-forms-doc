@@ -45,10 +45,7 @@ Selecting an option switches the color scheme dynamically without reloading the 
 
 ### Persistence
 
-When a user selects a color scheme from the navigation bar, their choice is saved to:
-
-1. A cookie named `orbeon-color-scheme`.
-2. Browser `localStorage` under `orbeon-color-scheme`.
+When a user selects a color scheme from the navigation bar, their choice is saved to a cookie named `orbeon-color-scheme`.
 
 This preference is remembered across page navigations, form submissions, and subsequent visits.
 
