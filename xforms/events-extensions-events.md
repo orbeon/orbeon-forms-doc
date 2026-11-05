@@ -261,7 +261,7 @@ In this example:
 - The `ev:target` attribute ensures that this particular handler only catches events for `my-repeat`, in case there are some nested repeats or some other repeats within the group.
 - The `ev:event` attribute lists not only `xxforms-nodeset-changed` event, but also the `xforms-enabled` and `xforms-disabled` events so the event runs when the nodeset goes from empty to non-empty or from non-empty to empty.
 
-We recommend that you put the handler for `xxforms-nodeset-changed` outside the `` element, as shown in the example above. This ensures that, in case the repeat node-set becomes empty, actions associated with your event handler will still execute within a non-empty XPath context.
+We recommend that you put the handler for `xxforms-nodeset-changed` outside the `<xf:repeat>` element, as shown in the example above. This ensures that, in case the repeat node-set becomes empty, actions associated with your event handler will still execute within a non-empty XPath context.
 
 If nodes related to a repeat are inserted with `xf:insert` or `xf:delete` (including instance replacement upon submission), you could detect changes to the repeat node-set with XForms 1.1 using `xforms-insert` and `xforms-delete` events on instances. However these events are harder to use in this scenario, and will not catch situations where the repeat nodeset changes without insertions / deletions.  
 

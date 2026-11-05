@@ -64,7 +64,7 @@ _NOTE: At the moment, with `<xf:dispatch>`, only custom events support passing c
 
 [\[SINCE Orbeon Forms 2023.1\]](/release-notes/orbeon-forms-2023.1.md)
 
-The `xxf:tunnel="true` attribute on `<xf:property>` allows the propagation, or tunneling, of event properties in the following cases:
+The `xxf:tunnel="true"` attribute on `<xf:property>` allows the propagation, or tunneling, of event properties in the following cases:
 
 - `<xf:send>`: the properties are tunneled to event handlers for the `xforms-submit-error` and `xforms-submit-done` events as well as event handlers for the `xxforms-action-error` event dispatched while processing event handlers for those events
 - `<xf:dispatch>`: the properties are tunneled to event handlers for the `xxforms-action-error` event dispatched while processing event handlers for the event dispatched

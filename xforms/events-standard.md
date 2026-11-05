@@ -229,7 +229,7 @@ _NOTE: For event handlers nested further within the bound node, the behavior is 
 
 Event handlers on XBL bindings are very similar to regular XML Events handlers, except:
 
-* they use the `` containing element placed within the `` section of an XBL binding
+* they use the `<xbl:handler>` containing element placed within the `<xbl:handlers>` section of an XBL binding
 * attributes do not use the XML Events namespace (typically with the `ev:` prefix)
 * the XBL 2 `default-action` attribute is not supported but instead the XML Events 1 `defaultAction` is supported (both support the values `cancel` and `perform`)
 

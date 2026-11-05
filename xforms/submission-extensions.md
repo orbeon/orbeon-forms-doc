@@ -4,7 +4,7 @@
 
 ### Introduction
 
-The optional `xxf:annotate` may contain tokens which specify whether to annotate some elements in the submitted XML data.
+The optional `xxf:annotate` attribute may contain tokens which specify whether to annotate some elements in the submitted XML data.
  
 This only allows annotating elements, not attributes.
 
