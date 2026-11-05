@@ -346,7 +346,7 @@ The ability to mark a field as "Show in email subject", as highlighted in the sc
 
 ### User information when calling Orbeon Forms service APIs
 
-If, with earlier versions of Orbeon Forms, you were calling service APIs and passing headers, they had to match the headers configured with the header-driven method. Starting Orbeon Forms 2022.1, the headers can only be the `Orbeon-*` headers.
+If, with earlier versions of Orbeon Forms, you were calling service APIs and passing headers, they had to match the headers configured with the header-driven method. Starting with Orbeon Forms 2022.1, the headers can only be the `Orbeon-*` headers.
 
 See [Providing user information](../form-runner/api/authentication.md#providing-user-information) for more.
 

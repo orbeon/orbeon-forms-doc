@@ -7,7 +7,6 @@ Today we released Orbeon Forms 2023.1.5 PE! This maintenance release contains bu
 - [Orbeon Forms 2023.1.4 PE](orbeon-forms-2023.1.4.md)
 - [Orbeon Forms 2023.1.3 PE](orbeon-forms-2023.1.3.md)
 - [Orbeon Forms 2023.1.2 PE](orbeon-forms-2023.1.2.md)
-- [Orbeon Forms 2023.1.2 PE](orbeon-forms-2023.1.2.md)
 - [Orbeon Forms 2023.1.1 PE](orbeon-forms-2023.1.1.md)
 - [Orbeon Forms 2023.1 PE](orbeon-forms-2023.1.md)
 

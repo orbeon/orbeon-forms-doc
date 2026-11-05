@@ -313,13 +313,13 @@ Orbeon Forms comes with an embedded SQLite database in order to show demo forms,
 
 If you have [PDF-specific custom CSS](../form-runner/styling/automatic-pdf.md#pdf-specific-css) which modifies header and footer styles using directives such as `@top-left`, note that the order of precedence is changed in this version. Previously:
 
-1. The [header and footer configuration](../form-runner/feature/pdf-automatic-header-footer.md) `"css` property had priority.
+1. The [header and footer configuration](../form-runner/feature/pdf-automatic-header-footer.md) `"css"` property had priority.
 2. If missing, then the custom CSS would be used. However, because there was always a default PDF configuration, it was not possible to use custom CSS to override the header and footer styles.
 
 Since this version:
 
 1. Custom CSS directives such as `@top-left` are used first if present.
-2. If such directives are missing, the [header and footer configuration](../form-runner/feature/pdf-automatic-header-footer.md) `"css` property is used.
+2. If such directives are missing, the [header and footer configuration](../form-runner/feature/pdf-automatic-header-footer.md) `"css"` property is used.
 
 We recommend that you always use the [header and footer configuration](../form-runner/feature/pdf-automatic-header-footer.md) to specify CSS styles in the PDF header and footer. We believe that this is better and clearer as it keeps PDF header/footer configuration in one place in `properties-local.xml`.
 
