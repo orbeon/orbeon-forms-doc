@@ -553,7 +553,7 @@ end;
 |
 ```
 
-Since you are interested in data for Bookshelf form, which is in the app `orbeon` form `bookshelf`, the trigger only does something if `new.app = 'orbeon' and new.form = 'bookshelf'`. To enable auditing, the MySQL persistence layer never deletes or updates data; it only inserts new rows. So your trigger only needs to be concerned about updates. On insert, you want to make sure you are not creating duplicates in your `bookshelf` table, hence the `delete` statement. When a newly inserted row has `delete = 'N'`, this indicates that a user deleted that document, in which case you don't want to insert a row in your `bookshelf` table, hence the `if` test.
+Since you are interested in data for Bookshelf form, which is in the app `orbeon` form `bookshelf`, the trigger only does something if `new.app = 'orbeon' and new.form = 'bookshelf'`. To enable auditing, the MySQL persistence layer never deletes or updates data; it only inserts new rows. So your trigger only needs to be concerned about updates. On insert, you want to make sure you are not creating duplicates in your `bookshelf` table, hence the `delete` statement. When a newly inserted row has `deleted = 'Y'`, this indicates that a user deleted that document, in which case you don't want to insert a row in your `bookshelf` table, hence the `if` test.
 
 ## Auditing
 

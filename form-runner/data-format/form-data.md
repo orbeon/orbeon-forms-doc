@@ -156,7 +156,7 @@ Non-repeated grids do not have a representation in XML.
 
 See also [Grid data format](/component/grid.md#data-format).
 
-Each iteration is represented by an element with the name of the repeated section. There is no enclosing element:
+Each iteration is represented by an element with the name of the repeated grid. There is no enclosing element:
 
 ```xml
 <note>

@@ -102,7 +102,7 @@ These attributes are supported in addition to the non-repeated mode attributes w
     *   show the iteration menu and buttons, unless the section binds to a readonly node or unless the Form Runner
 
         mode is readonly ("view" mode, "pdf" mode, etc.)
-  * `true` (default)
+  * `true`
     * don't show the iteration menu and buttons
 * `appearance` \[SINCE Orbeon Forms 2016.1]
   * `full`

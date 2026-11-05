@@ -44,7 +44,7 @@ The `match` parameter is a triplet of app, form, and version, separated by slash
 
 1. app name
     - specific app name
-    - empty: all forms
+    - empty: all apps
 2. form name
     - specific form name
     - empty: all forms (only allowed if the app name is also empty)
