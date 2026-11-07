@@ -2,9 +2,9 @@
 
 __DRAFT RELEASE NOTES__
 
-**TODO, October TODO, 2026**
+**Friday, November 6, 2026**
 
-Today we released Orbeon Forms 2025.1.3! This maintenance release contains bug-fixes, performance improvements, and new features and is recommended for all users of:
+Today we released Orbeon Forms 2025.1.3! This maintenance release contains bug-fixes, security updates, performance improvements, and new features and is recommended for all users of:
 
 * [Orbeon Forms 2025.1.2 PE](orbeon-forms-2025.1.2.md)
 * [Orbeon Forms 2025.1.1 PE](orbeon-forms-2025.1.1.md)
@@ -43,9 +43,13 @@ Form Runner now provides a unified mechanism using `fr:resource()` to override t
 The Form Builder MCP server for AI agents has been expanded with several new capabilities:
 
 * **Attach PDF templates:** New `form_attach_pdf_template` tool allows AI agents to attach PDF fillable templates to form definitions ([\#7897](https://github.com/orbeon/orbeon-forms/issues/7897)).
+* **Form settings:** New `form_get_settings` and `form_set_settings` tools allow reading and updating form-level settings ([\#7748](https://github.com/orbeon/orbeon-forms/issues/7748)).
 * **Control settings:** New `control_get_settings` and `control_set_settings` tools allow reading and updating specific control settings ([\#7900](https://github.com/orbeon/orbeon-forms/issues/7900)).
 * **Container settings:** New `container_get_settings` and `container_set_settings` tools allow reading and updating section and grid settings ([\#7909](https://github.com/orbeon/orbeon-forms/issues/7909)).
 * **Declarative custom parameters:** XBL components can now declaratively expose custom parameters to Form Builder and MCP tools ([\#7984](https://github.com/orbeon/orbeon-forms/issues/7984)).
+* **Localized labels and choices:** Control, section, and selection item tools now support localized labels and choices across multiple languages ([\#7748](https://github.com/orbeon/orbeon-forms/issues/7748)).
+* **Form Builder permissions:** The MCP server now enforces permissions defined in `form-builder-permissions.xml` ([\#7847](https://github.com/orbeon/orbeon-forms/issues/7847)).
+* **Implicit form session:** The form session is now maintained implicitly across tool calls, and `form_save` returns the saved document ID ([\#7748](https://github.com/orbeon/orbeon-forms/issues/7748)).
 
 ### Landing page enhancements
 
@@ -55,6 +59,10 @@ The Form Builder MCP server for AI agents has been expanded with several new cap
 ### Offline image transformations
 
 Offline forms now support image transformations (such as resizing and compression) on client-side image attachments upon upload ([\#7859](https://github.com/orbeon/orbeon-forms/issues/7859)).
+
+### Liferay proxy portlet: Jakarta EE support
+
+Starting with Liferay DXP 2025.Q3, Liferay moved from the Java EE (`javax.*`) packages to the Jakarta EE (`jakarta.*`) packages. The Orbeon Forms proxy portlet WAR now supports both `javax` and `jakarta` packages in the same artifact ([\#7994](https://github.com/orbeon/orbeon-forms/issues/7994)). See [Deploying the proxy portlet](../form-runner/link-embed/liferay-proxy-portlet.md#deploy-the-proxy-portlet) for configuration details.
 
 ## Performance enhancements
 
@@ -110,7 +118,7 @@ Starting with this release, the authorizer property strictly requires an absolut
 
 ## Issues addressed
 
-In this release, we have addressed over 60 issues, including:
+In this release, we have addressed over 100 issues, including:
 
 * Security
     * Disallow `xxforms-upload-store` as an untrusted client event ([\#7975](https://github.com/orbeon/orbeon-forms/issues/7975))
@@ -129,6 +137,7 @@ In this release, we have addressed over 60 issues, including:
     * Only the host app can establish the Form Runner session in embedding ([\#7948](https://github.com/orbeon/orbeon-forms/issues/7948))
     * Limit Ajax request body size ([\#7974](https://github.com/orbeon/orbeon-forms/issues/7974))
     * Cookie incorrectly forwarded to the persistence layer ([\#7066](https://github.com/orbeon/orbeon-forms/issues/7066))
+    * Form Runner service calls: enforce stateless request handling and prevent `Set-Cookie` ([\#7929](https://github.com/orbeon/orbeon-forms/issues/7929))
     * Library updates (including Apache Xerces, Apache PDFBox, Bouncy Castle, AWS SDK, Netty, SLF4J, Log4j, and Jackson)
 * Form Builder
     * Choices Editor: ability to copy/paste list of items to/from Excel ([\#7784](https://github.com/orbeon/orbeon-forms/issues/7784))
@@ -149,10 +158,14 @@ In this release, we have addressed over 60 issues, including:
     * Don't lose subsections when manipulating containers ([\#7762](https://github.com/orbeon/orbeon-forms/issues/7762))
     * Fix XPath syntax error in Control Settings ([\#7780](https://github.com/orbeon/orbeon-forms/issues/7780))
     * Rejected file message to show in Form Builder's test mode ([\#7868](https://github.com/orbeon/orbeon-forms/issues/7868))
+    * Incorrect control selected when switching datatype to HTML ([\#7981](https://github.com/orbeon/orbeon-forms/issues/7981))
+    * `renameControlByElement()` adds `bind` to section template element ([\#8042](https://github.com/orbeon/orbeon-forms/issues/8042))
 * Form Runner
     * Form Discovery API: API to return distinct application, form, and version values ([\#6573](https://github.com/orbeon/orbeon-forms/issues/6573))
     * Revision history: show workflow stage changes ([\#7911](https://github.com/orbeon/orbeon-forms/issues/7911))
     * `log()` process action ([\#7781](https://github.com/orbeon/orbeon-forms/issues/7781))
+    * Process action errors to log context of error ([\#7907](https://github.com/orbeon/orbeon-forms/issues/7907))
+    * Process errors: more granular information ([\#7908](https://github.com/orbeon/orbeon-forms/issues/7908))
     * Wizard: option to hide the TOC ([\#7960](https://github.com/orbeon/orbeon-forms/issues/7960))
     * Wizard: separate TOC layout is incorrect ([\#7959](https://github.com/orbeon/orbeon-forms/issues/7959))
     * `fr-wizard-page` didn't update anymore ([\#7613](https://github.com/orbeon/orbeon-forms/issues/7613))
@@ -163,9 +176,12 @@ In this release, we have addressed over 60 issues, including:
     * Forms page: width of the Created and Modified search dropdowns ([\#7936](https://github.com/orbeon/orbeon-forms/issues/7936))
     * Forms Admin page: Reindex progress bar and status message not shown ([\#7795](https://github.com/orbeon/orbeon-forms/issues/7795))
     * Summary page: cleanup `summary-metadata-columns` on open ([\#7926](https://github.com/orbeon/orbeon-forms/issues/7926))
+    * Aggregate control values when sorting in search API ([\#8014](https://github.com/orbeon/orbeon-forms/issues/8014))
     * Custom modes: propagate request parameters ([\#7803](https://github.com/orbeon/orbeon-forms/issues/7803))
     * "Deleting all records" gets into an infinite loop ([\#7961](https://github.com/orbeon/orbeon-forms/issues/7961))
+    * Deleting autosave draft deletes explicitly saved document ([\#8034](https://github.com/orbeon/orbeon-forms/issues/8034))
     * Initial form data from service now uses simple data migration ([\#7769](https://github.com/orbeon/orbeon-forms/issues/7769))
+    * Actions with `<fr:if>` fail in unmerged section templates ([\#8025](https://github.com/orbeon/orbeon-forms/issues/8025))
     * For non-relevant controls, get value from data in emails ([\#7773](https://github.com/orbeon/orbeon-forms/issues/7773))
     * `email()` can cause unneeded PDF generation ([\#7872](https://github.com/orbeon/orbeon-forms/issues/7872))
     * Email: TIFF attachments no longer sent since XPL/XSL-to-Scala refactoring ([\#7891](https://github.com/orbeon/orbeon-forms/issues/7891))
@@ -173,6 +189,8 @@ In this release, we have addressed over 60 issues, including:
     * "Calculations in Read-Only Modes (Review, PDF)" set to Disable is ignored on Review pages and in PDF files ([\#7921](https://github.com/orbeon/orbeon-forms/issues/7921))
     * Rich text does not show in PDF ([\#7945](https://github.com/orbeon/orbeon-forms/issues/7945))
     * PDF/A output is not conformant ([\#7998](https://github.com/orbeon/orbeon-forms/issues/7998))
+    * Clickable area of link in HTML label in PDF is too large ([\#7621](https://github.com/orbeon/orbeon-forms/issues/7621))
+    * PDF: required star no longer shows with openhtmltopdf 1.1.94 ([\#8050](https://github.com/orbeon/orbeon-forms/issues/8050))
     * Improve PDF image rotation handling ([\#7856](https://github.com/orbeon/orbeon-forms/issues/7856))
     * `send(content = "pdf-url")` to produce dynamic resource URL ([\#7976](https://github.com/orbeon/orbeon-forms/issues/7976))
     * `send()`: URL credentials are no longer used ([\#7794](https://github.com/orbeon/orbeon-forms/issues/7794))
@@ -180,11 +198,14 @@ In this release, we have addressed over 60 issues, including:
     * Hidden fields error summary: errors without underline, number aligned ([\#7818](https://github.com/orbeon/orbeon-forms/issues/7818))
     * Fix message format syntax in French and Catalan validation dialog message ([\#6184](https://github.com/orbeon/orbeon-forms/issues/6184))
     * Property to define custom favicon: `oxf.fr.favicon.uri` ([\#5567](https://github.com/orbeon/orbeon-forms/issues/5567))
-    * Form Runner service calls: enforce stateless request handling and prevent `Set-Cookie` ([\#7929](https://github.com/orbeon/orbeon-forms/issues/7929))
+    * Avoid session creation during service calls ([\#8008](https://github.com/orbeon/orbeon-forms/issues/8008))
+    * Liferay proxy portlet: support Jakarta packages ([\#7994](https://github.com/orbeon/orbeon-forms/issues/7994))
 * XBL Components & Form Controls
     * Provide way to override resources defined in XBL ([\#3235](https://github.com/orbeon/orbeon-forms/issues/3235))
+    * Switch Rich Text Editor from TinyMCE to HugeRTE ([\#4632](https://github.com/orbeon/orbeon-forms/issues/4632))
     * `fr:datetime` control shows different date format in edit and view modes ([\#7850](https://github.com/orbeon/orbeon-forms/issues/7850))
     * Dates to Exclude can be one-day off ([\#7833](https://github.com/orbeon/orbeon-forms/issues/7833))
+    * Datepicker unreadable in dark mode ([\#8022](https://github.com/orbeon/orbeon-forms/issues/8022))
     * Attachment: download button shows when "Allow download" is unchecked ([\#7791](https://github.com/orbeon/orbeon-forms/issues/7791))
     * Attachment upload: support showing multiple inline alert messages on rejection ([\#7792](https://github.com/orbeon/orbeon-forms/issues/7792))
     * Attachment upload: drop area still grey after pointer leaves ([\#7824](https://github.com/orbeon/orbeon-forms/issues/7824))
@@ -194,22 +215,28 @@ In this release, we have addressed over 60 issues, including:
     * LEI and IBAN validation: reject 00, 01, 99 as check-digit pairs ([\#7775](https://github.com/orbeon/orbeon-forms/issues/7775))
     * Header of repeated grid with no iterations to show ([\#7759](https://github.com/orbeon/orbeon-forms/issues/7759))
     * Changing `oxf.xforms.xbl.library` value can break repeated grids ([\#7793](https://github.com/orbeon/orbeon-forms/issues/7793))
+    * Don't create XBL companion when reading a control value in `javascript-lifecycle` mode ([\#8001](https://github.com/orbeon/orbeon-forms/issues/8001))
 * Model Context Protocol (MCP) Server
     * Expose MCP endpoint as public method ([\#7898](https://github.com/orbeon/orbeon-forms/issues/7898))
     * New `form_attach_pdf_template` tool ([\#7897](https://github.com/orbeon/orbeon-forms/issues/7897))
+    * `form_get_settings` and `form_set_settings` tools, localized labels and selection items, implicit form session across tool calls, and returning document ID from `form_save` ([\#7748](https://github.com/orbeon/orbeon-forms/issues/7748))
     * `control_get_settings` and `control_set_settings` tools ([\#7900](https://github.com/orbeon/orbeon-forms/issues/7900))
     * `container_get_settings` and `container_set_settings` tools ([\#7909](https://github.com/orbeon/orbeon-forms/issues/7909))
     * XBL: declarative custom parameters support for control settings ([\#7984](https://github.com/orbeon/orbeon-forms/issues/7984))
+    * MCP: handle `form-builder-permissions.xml` ([\#7847](https://github.com/orbeon/orbeon-forms/issues/7847))
     * MCP: session error with `form_new` ([\#7953](https://github.com/orbeon/orbeon-forms/issues/7953))
     * MCP default token expiration and web.xml path configuration ([\#7001](https://github.com/orbeon/orbeon-forms/issues/7001), [\#7701](https://github.com/orbeon/orbeon-forms/issues/7701))
 * XForms Engine
     * Couldn't cast `XFormsVariableControl` to `XFormsEventHandler` ([\#7880](https://github.com/orbeon/orbeon-forms/issues/7880))
     * Don't resend `<xxf:submission>` on subsequent Ajax requests ([\#7447](https://github.com/orbeon/orbeon-forms/issues/7447))
     * XPath error seen when reporting XPath errors ([\#7853](https://github.com/orbeon/orbeon-forms/issues/7853))
+    * Examples of Formulas: testing value of checkbox is broken ([\#7982](https://github.com/orbeon/orbeon-forms/issues/7982))
 * Offline
     * Offline: support upload image transformations ([\#7859](https://github.com/orbeon/orbeon-forms/issues/7859))
     * `fr|databound-select1-search` XPath expression fails in JS environment ([\#7849](https://github.com/orbeon/orbeon-forms/issues/7849))
     * Two XPath expressions crash offline ([\#7934](https://github.com/orbeon/orbeon-forms/issues/7934))
+    * Test Offline: copy action doesn't warn user ([\#7598](https://github.com/orbeon/orbeon-forms/issues/7598))
+    * Test Offline causes "Uncaught TypeError" ([\#8056](https://github.com/orbeon/orbeon-forms/issues/8056))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page, or use our Docker images.
 
