@@ -8,6 +8,12 @@ Today we released Orbeon Forms 2025.1.3! This maintenance release contains bug-f
 * [Orbeon Forms 2025.1.1 PE](orbeon-forms-2025.1.1.md)
 * [Orbeon Forms 2025.1 PE](orbeon-forms-2025.1.md)
 
+## Security updates
+
+This release includes important security updates covering authorization checks, HTML and email sanitization, client event and URL validation, session and cookie handling, and third-party library upgrades.
+
+**We strongly recommend that all Orbeon Forms 2025.1.x users upgrade to Orbeon Forms 2025.1.3 as soon as possible.** See the [Compatibility and upgrade notes](#compatibility-and-upgrade-notes) and the full list of security fixes under [Issues addressed](#issues-addressed) below.
+
 ## New features
 
 ### Choices Editor: copy and paste to/from Excel
