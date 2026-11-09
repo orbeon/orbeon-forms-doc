@@ -126,5 +126,5 @@ You can get the [source of the form described above](https://gist.github.com/orb
 
 * Blog post: [Making sense of Form Runner Actions](https://www.orbeon.com/2024/09/making-sense-form-runner-actions)
 * [HTTP services](http-services.md)
-* [Simple Actions](/broken/pages/-LEkBr90Nq9hbV8krZWy)
+* [Simple Actions](/form-builder/actions.md)
 * [Synchronizing repeated content](synchronize-repeated-content.md)

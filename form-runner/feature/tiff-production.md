@@ -104,7 +104,7 @@ If the form contains a `customer-id` field, the TIFF filename will be the value 
 
 ### Sending
 
-You can *send* the URL of a TIFF file using the `content = "tiff-url"` parameter. See [Sending a TIFF URL](../advanced/buttons-and-processes/actions-form-runner.md#sending-a-tiff-url).
+You can *send* the URL of a TIFF file using the `content = "tiff-url"` parameter. See [Sending a TIFF URL](../advanced/buttons-and-processes/actions-form-runner-send.md#sending-a-tiff-url).
 
 ### Email
 

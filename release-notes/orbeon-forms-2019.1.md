@@ -123,7 +123,7 @@ Including the features and enhancements above, we [closed over 180 issues](https
   * `xxf:formatted-value()` ([doc](../xforms/xpath/extension-controls.md#xxf-formatted-value))
   * `fr:wizard-current-page-name()` ([doc](../xforms/xpath/extension-form-runner.md#fr-wizard-current-page-name))
 * A new option allows showing alerts in view and PDF modes. ([doc](../configuration/properties/form-runner-detail-page.md#showing-alerts-in-view-and-pdf-modes))
-* Orbeon Forms performs expired and idle connections checking, which can improve the reliability of connections to remote servers. ([doc](../configuration/properties/general.md#expired-and-idle-connections))
+* Orbeon Forms performs expired and idle connections checking, which can improve the reliability of connections to remote servers. ([doc](../configuration/properties/properties-general-http-client.md#expired-and-idle-connections))
 * XBL components feature improvements, including:
   * external value serialization/deserialization ([doc](../xforms/xbl/javascript.md#external-value-serialization-deserialization))
   * formatted values ([doc](../xforms/xbl/modes.md#formatted-value))

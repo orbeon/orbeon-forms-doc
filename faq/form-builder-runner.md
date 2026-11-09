@@ -109,7 +109,7 @@ The API has a number of implementations. The default implementation is the embed
 There is no built-in integration with CMS or workflow engines. However you can integrate with systems in a few ways:
 
 - Form Runner is built around a [REST API for persistence](/form-runner/api/persistence/README.md), which allows you to integrate yourself with any system by providing an implementation of that API.
-- [Simple processes](/form-runner/advanced/buttons-and-processes.md) allow you to send data to external systems.
+- [Simple processes](/form-runner/advanced/buttons-and-processes/README.md) allow you to send data to external systems.
 
 ### Is it possible to edit and update a published form?
 

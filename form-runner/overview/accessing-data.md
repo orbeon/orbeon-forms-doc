@@ -23,7 +23,7 @@ In most cases, this is the best option, and the one we recommend. In essence, yo
 Let's see in more detail what this entails:
 
 1. When users click the _submit_ button on a form created in Form Builder (or for that matter any other button at the bottom of the form), a _process_ runs. In essence, a _process_ defines a sequence of actions to be performed, and one of them can be to _send_ the data to your app. Currently, processes are defined in your [`properties-local.xml`](../../configuration/properties/). To learn more about processes, see the documentation on [Buttons and Processes](../advanced/buttons-and-processes/).
-2. In your process, you'll be using the [`send()`](../advanced/buttons-and-processes/#send) action to instruct Orbeon Forms to `POST` the data entered by users to a URL of your choice.
+2. In your process, you'll be using the [`send()`](../advanced/buttons-and-processes/actions-form-runner-send.md) action to instruct Orbeon Forms to `POST` the data entered by users to a URL of your choice.
 3. Your app can do what it wants with the data it receives: perform some operation in a database, call a service, etc.
 4. If you passed the `replace = "all"` parameter to `send()`, then what your app sends back to Orbeon Forms in the HTTP response will be sent/proxied back to the browser by Orbeon Forms. This allows you to send a custom confirmation page, or issue a redirect to another page or form that users should go to next.
 

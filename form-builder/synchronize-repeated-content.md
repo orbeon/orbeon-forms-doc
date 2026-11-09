@@ -107,7 +107,7 @@ With Orbeon Forms 2018.2, the `<fr:synchronize-repeated-content>` has the follow
 
 ## See also
 
-* [Simple Actions](/broken/pages/-LEkBr90Nq9hbV8krZWy)
+* [Simple Actions](/form-builder/actions.md)
 * [HTTP services](http-services.md)
 * [Database services](database-services.md)
 * [Repeated grids](repeated-grids.md)

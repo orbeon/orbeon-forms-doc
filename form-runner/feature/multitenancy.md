@@ -6,7 +6,7 @@ Multitenancy consists in using a single Orbeon Forms installation to handle mult
 
 ## Orbeon Forms support
 
-Orbeon Forms has some support for multitenancy thanks to the concept of *application name* (see [Terminology](/form-runner/overview/multitenancy.md)). For multitenancy, you use the application name to refer to an organization or entity, and you enable access control to isolate those entities.
+Orbeon Forms has some support for multitenancy thanks to the concept of *application name* (see [Terminology](/form-runner/overview/terminology.md)). For multitenancy, you use the application name to refer to an organization or entity, and you enable access control to isolate those entities.
 
 ## Configuration
 
@@ -20,7 +20,7 @@ See also [Providing information about the user](/form-runner/access-control/user
 
 Now that users have a role identifying them, it is possible to isolate users at the Form Runner level. There are two separate configurations you can do to enforce that.
 
-First, you can set individual form permissions (see also [Setting permissions](/form-runner/access-control/deployed-forms#setting-permissions.md)). For a given form:
+First, you can set individual form permissions (see also [Setting permissions](/form-runner/access-control/deployed-forms.md#setting-permissions)). For a given form:
 
 1. In Form Builder, enable permission for that form definition.
 2. Indicate that all operations require the role `acme-user`, for example.

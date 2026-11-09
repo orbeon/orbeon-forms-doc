@@ -147,7 +147,7 @@ _NOTE: The default submission document does not have to use element or attribute
 
 If there are multiple URL parameters with the same name, they will be stored in the element or attribute separated by spaces.
 
-It is also possible to extract data from the URL path. To do so, use a `matcher` attribute on the page as [documented below](submission.md#matchers). You can then extract regular expression groups using the `<setvalue>` element with the `matcher-group` attribute:
+It is also possible to extract data from the URL path. To do so, use a `matcher` attribute on the page as [documented below](paths-matchers.md). You can then extract regular expression groups using the `<setvalue>` element with the `matcher-group` attribute:
 
 ```markup
 <page

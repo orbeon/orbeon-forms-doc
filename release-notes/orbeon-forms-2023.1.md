@@ -144,7 +144,7 @@ When enabled in PDF files, the table of contents is always shown on top:
 
 ![Table of contents on top in PDF files](../form-runner/images/toc-top-pdf.png)
 
-For more information, see the [documentation](../configuration/properties/form-runner-detail-page.md#show-table-of-contents).
+For more information, see the [documentation](../configuration/properties/form-runner-toc.md#show-table-of-contents).
 
 ### "Copy to clipboard" button
 

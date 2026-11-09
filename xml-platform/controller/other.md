@@ -33,7 +33,7 @@ You tell the PFC what files to serve directly with one or more `<files>` element
 
 With `<files path="*.gif">`, if a request reaches the PFC with the path `images/logo.gif`, the file `oxf:/images/logo.gif` is sent in response to that request.
 
-The `<files>` element supports the [`path` and `matcher`](other.md#matchers) attributes like the `<page>` element. It also supports a `mediatype` attribute telling the PFC what media type must be sent to the client with the files. The PFC uses defaults for well-known extensions, as defined by the [Resource Server processor](http://wiki.orbeon.com/forms/doc/developer-guide/processors-other#resource-server). In doubt, you can specify the mediatype attribute.
+The `<files>` element supports the [`path` and `matcher`](paths-matchers.md) attributes like the `<page>` element. It also supports a `mediatype` attribute telling the PFC what media type must be sent to the client with the files. The PFC uses defaults for well-known extensions, as defined by the [Resource Server processor](http://wiki.orbeon.com/forms/doc/developer-guide/processors-other#resource-server). In doubt, you can specify the mediatype attribute.
 
 ## The epilogue element
 

@@ -48,7 +48,7 @@ See also \[Predefined buttons]\(/form-runner/advanced/buttons-and-processes/READ
 
 ### Sending
 
-You can _send_ the URL of a PDF file using the `content = "pdf-url"` parameter. See [Sending a PDF URL](../advanced/buttons-and-processes/actions-form-runner.md#sending-a-pdf-url).
+You can _send_ the URL of a PDF file using the `content = "pdf-url"` parameter. See [Sending a PDF URL](../advanced/buttons-and-processes/actions-form-runner-send.md#sending-a-pdf-url).
 
 ### Email
 

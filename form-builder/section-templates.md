@@ -110,7 +110,7 @@ Limitations:
 
 \[SINCE Orbeon Forms 2022.1.2]
 
-Actions and related listeners using the [Action Syntax](/broken/pages/-LTfNL822m6v3asjBCuO) are also included in section templates.
+Actions and related listeners using the [Action Syntax](/form-builder/actions-syntax.md) are also included in section templates.
 
 ## Updating section templates
 
@@ -187,4 +187,4 @@ Services and actions in the section template are _not_ merged into the enclosing
 * [Toolbox](toolbox.md)
 * [HTTP services](http-services.md)
 * [Database services](database-services.md)
-* [Simple Actions](/broken/pages/-LEkBr90Nq9hbV8krZWy)
+* [Simple Actions](/form-builder/actions.md)

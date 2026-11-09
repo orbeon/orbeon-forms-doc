@@ -12,7 +12,7 @@ When investigating issues, you often need to look at what goes "over the wire", 
 
 ### On the server
 
-* [XForms logging](../../configuration/advanced/xforms-logging.html)
+* [XForms logging](../../configuration/advanced/xforms-logging.md)
 * \[SINCE Orbeon Forms 2020.1.6]
   * [Orbeon Forms `HttpLoggingFilter`](monitoring-http-requests.md#orbeon-forms-httploggingfilter)
 * \[UNTIL Orbeon Forms 2020.1.5]

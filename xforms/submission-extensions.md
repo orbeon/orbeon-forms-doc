@@ -563,7 +563,7 @@ XForms pages can make heavy use of services through the use of `<xf:submission>`
     * No actual HTTP connection is initiated, so performance is likely to be better.
     * There is no need to deal with absolute URLs such as `http://localhost:8080`, especially when proxies or firewalls are in place.
 
-For more information, see also the [configuration properties](../configuration/properties/xforms.html) related to submissions.
+For more information, see also the [configuration properties](../configuration/properties/xforms.md) related to submissions.
 
 ### Enabling local submissions
 

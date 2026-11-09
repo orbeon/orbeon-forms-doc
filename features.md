@@ -152,7 +152,7 @@ As of 2016-04-19 this page is still being updated.
         - Template-based: [doc](form-runner/feature/pdf-templates.md)
             - multiple PDF templates
     - Automatic highlighting of links [blog post](https://blog.orbeon.com/2015/04/automatic-web-links-in-pdf-files.html)
-    - Customizable file name: [doc](configuration/properties/form-runner/form-runner-detail-page.md#custom-pdf-filename)
+    - Customizable file name: [doc](configuration/properties/form-runner-pdf.md#custom-pdf-filename)
     - TIFF production: [doc](form-runner/feature/tiff-production.md)
     - Ability to send to services: [blog post](https://blog.orbeon.com/2016/08/submitting-pdf-file-to-external-service.html)
 - Validation

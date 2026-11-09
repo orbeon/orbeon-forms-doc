@@ -120,7 +120,7 @@ In addition, a password strength checker will also cause an error if the passwor
 
 If you plan to use [Field-level encryption](/form-builder/field-level-encryption.md), also set `oxf.fr.field-encryption.password`. See [Field-level encryption configuration](/form-builder/field-level-encryption.md#configuration) for details.
 
-If you plan to use [Access tokens](/form-runner/access-token.md), also set `oxf.fr.access-token.password`. See [Access tokens configuration](/form-runner/access-token.md#configuration) for details.
+If you plan to use [Access tokens](/form-runner/access-control/tokens.md), also set `oxf.fr.access-token.password`. See [Access tokens configuration](/form-runner/access-token.md#configuration) for details.
 
 ## Base URL for internal services
 
