@@ -358,7 +358,7 @@ In order to generate a multipart request, you pass the `content` parameter one o
 - `xml`: form data in XML format
 - `metadata`: [form metadata](#sending-form-metadata) in XML format
 - `attachments`: all attachments associated with the form data (but not those associated with the form definition) 
-- `pdf`: [PDF binary](#sending-a-pdf-binar)
+- `pdf`: [PDF binary](#sending-a-pdf-binary)
 - `tiff`: [TIFF binary](#sending-a-tiff-binary)
 - `excel-with-named-ranges`: [Excel export](https://blog.orbeon.com/2021/09/excel-export-and-import.html) 
 - `xml-form-structure-and-data`: XML form structure and data export (not yet documented)

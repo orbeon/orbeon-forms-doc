@@ -124,7 +124,7 @@ The `javascript-lifecycle` mode lets Orbeon Forms handle more of a JavaScript co
 
 For example prior to Orbeon Forms 2016.1, you would call the component's `init()` method from XForms event handlers. With `javascript-lifecycle`, this is no longer needed.
 
-For more details, see [Support for the javascript-lifecycle mode](javascript.md#support-for-the-javascriptlifecycle-mode).
+For more details, see [Support for the javascript-lifecycle mode](javascript.md#support-for-the-javascript-lifecycle-mode).
 
 ## The lhha and custom-lhha modes
 

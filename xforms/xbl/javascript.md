@@ -277,7 +277,7 @@ With Orbeon Forms 4.10 and earlier, you obtained the class using the JavaScript 
 
 [SINCE Orbeon Forms 2016.1]
 
-When the [`external-value` mode](modes.md#the-externalvalue-mode) is enabled, the following two methods must be provided:
+When the [`external-value` mode](modes.md#the-external-value-mode) is enabled, the following two methods must be provided:
 
 - `xformsUpdateValue()`
 - `xformsGetValue()`
@@ -367,7 +367,7 @@ For `xxbl:deserialize-external-value`:
 
 [SINCE Orbeon Forms 2016.1]
 
-When the [`javascript-lifecycle` mode](modes.md#the-javascriptlifecycle-mode) is enabled, the following methods should be provided:
+When the [`javascript-lifecycle` mode](modes.md#the-javascript-lifecycle-mode) is enabled, the following methods should be provided:
 
 - `init()`
 - `destroy()`

@@ -757,7 +757,7 @@ fr:attachment-id() as xs:string
 fr:attachment-id($el as node()) as xs:string
 ```
 
-Attachment unique ID. This function can only be called in the context of [the `oxf.fr.persistence.attachments.filename.*.*` property](/configuration/properties/persistence.md#customizing-the-filename-of-stored-attachments).
+Attachment unique ID. This function can only be called in the context of [the `oxf.fr.persistence.attachments.filename.*.*` property](/configuration/properties/persistence.md#filename-of-stored-attachments).
 
 ### fr:attachment-filename()
 

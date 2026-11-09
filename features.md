@@ -43,7 +43,7 @@ As of 2016-04-19 this page is still being updated.
     - whitespace trimming: [doc](form-builder/validation.md#trimming-leading-and-trailing-spaces), [blog post](https://blog.orbeon.com/2016/02/required-fields-more-subtle-than-you.html)
     - data types such as string, number, date, etc.
     - multiple constraints with formulas
-    - common constraints: [doc](form-builder/validation.md#commonconstraints), [blog post](https://blog.orbeon.com/2015/07/how-common-constraints-work.html)
+    - common constraints: [doc](form-builder/validation.md#other-common-constraints), [blog post](https://blog.orbeon.com/2015/07/how-common-constraints-work.html)
         - minimum/maximum length
         - positive, positive or zero, negative or zero, or negative value
         - maximum fractional digits
@@ -165,7 +165,7 @@ As of 2016-04-19 this page is still being updated.
     - Email templates: [doc](https://doc.orbeon.com/form-builder/advanced/email-settings), [blog post](https://blog.orbeon.com/2018/11/email-templates.html)
 - Captcha: [properties doc](configuration/properties/form-runner-detail-page.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](https://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 - Appearance of repeated sections: [properties doc](configuration/properties/form-runner.md#appearance-of-repeated-sections), [component doc](form-runner/component/grid.md#repeated-mode)
-- Appearance of repeated grids: [properties doc](configuration/properties/form-runner.md#appearance-of-grids-sections), [component doc](form-runner/component/section.md#repeated-mode)
+- Appearance of repeated grids: [properties doc](configuration/properties/form-runner.md#appearance-of-repeated-grids), [component doc](form-runner/component/section.md#repeated-mode)
 - Function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)
 - Repeated content synchronization: [doc](/form-builder/synchronize-repeated-content.md)
 - Grids

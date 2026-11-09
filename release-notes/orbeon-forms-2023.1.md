@@ -192,7 +192,7 @@ For more information, see the [documentation](../configuration/advanced/state-ha
 
 If you handle large and/or a large number of attachments, you can now configure Form Runner to store attachments in the filesystem instead of the database. This can improve performance and reduce the size of the database.
 
-For more information, see the [documentation](../configuration/properties/persistence.md#attachments).
+For more information, see the [documentation](../configuration/properties/persistence.md#storing-attachments-in-the-filesystem-or-on-s3).
 
 ### Summary page processes
 
@@ -264,7 +264,7 @@ Thanks to external contributors:
   * Automatic hints are supported for the maximum file size and file types ([doc](../form-builder/control-settings.md#automatic-hints))
   * Automatically focus on the first invalid field after closing Errors/Validation dialogs
   * The Excel import now shows errors immediately when reviewing uploaded data
-  * The "Date" field supports the native date picker on the desktop ([doc](../form-runner/component/date.md#native-date-picker))
+  * The "Date" field supports the native date picker on the desktop ([doc](../form-runner/component/date.md#browser-date-form-control))
   * New experimental properties allow configuring automatic PDF accessibility and PDF/A settings ([doc](../form-runner/feature/pdf-automatic.md#accessibility-and-pdf-a-support))
 * Form Builder usability
   * "Test PDF" produces meaningful filenames

@@ -180,7 +180,7 @@ As of January 2025, the native time form control is supported on all major deskt
 | Firefox     |        ✅       |           ❌          |
 | Safari      |        ✅       |           ❌          |
 
-See also the [native date picker](date.md#native-date-picker).
+See also the [native date picker](date.md#browser-date-form-control).
 
 ## Output format in readonly modes
 
@@ -232,4 +232,4 @@ There is no more support for `<xf:input>` bound to an `xs:time` type. Use this c
 * [Date and time](date-and-time.md)
 * [Date component](date.md)
 * Blog post: [Time form control improvements](https://blog.orbeon.com/2023/01/time-form-control-improvements.html)
-* [Native date picker](date.md#native-date-picker)
+* [Native date picker](date.md#browser-date-form-control)

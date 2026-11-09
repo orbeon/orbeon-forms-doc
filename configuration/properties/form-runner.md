@@ -319,7 +319,7 @@ See the [CSS page](/form-runner/styling/css.md).
     * `WEB-INF/resources/forms/assets`: scripts for all forms
     * `WEB-INF/resources/forms/APP/assets`: scripts for app name APP
     * `WEB-INF/resources/forms/APP/FORM/assets`: scripts for app name APP and form name FORM
-2. Define the [`oxf.fr.js.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-adding-your-own-javascript-files) property to point to the file(s) you added. The path points to a location under the `WEB-INF/resources` directory.
+2. Define the [`oxf.fr.js.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-javascript) property to point to the file(s) you added. The path points to a location under the `WEB-INF/resources` directory.
 
 ```xml
 <property as="xs:string" name="oxf.fr.js.custom.uri.*.*">
@@ -332,7 +332,7 @@ You can add more than one file, and just separate the paths by whitespace in the
 
 [SINCE Orbeon Forms 2017.1]
 
-In addition to [`oxf.fr.js.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-adding-your-own-javascript-files), you can also use the following properties, which apply only to the Summary and Detail pages respectively:
+In addition to [`oxf.fr.js.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-javascript), you can also use the following properties, which apply only to the Summary and Detail pages respectively:
 
 - [`oxf.fr.summary.js.custom.uri`](form-runner-summary-page.md#adding-your-own-javascript-files)
 - [`oxf.fr.detail.js.custom.uri`](form-runner-detail-page.md#adding-your-own-javascript-files)

@@ -32,7 +32,7 @@ If you wish to submit an XForms instance to this page from within `report-detail
 
 This ensures that when this XForms submission is activated, an XML document containing the submitted XForms instance will be made available to the page model and view.
 
-_NOTE: The_ `action` _attribute on the_ `xf:submission` _element should not be confused with the_ `<action>` _element of the page flow. The former specifies a URL to which the XForms submission must be performed, as per the XForms 1.0 recommendation; the latter specifies a PFC_ [_action_](submission.md#action-element) _executed when a specified boolean XPath expression operating on an XML submission evaluates to true. The XForms submission's_ `action` _attribute instead matches a PFC_ `<page>` _element's_ `path` _attribute._
+_NOTE: The_ `action` _attribute on the_ `xf:submission` _element should not be confused with the_ `<action>` _element of the page flow. The former specifies a URL to which the XForms submission must be performed, as per the XForms 1.0 recommendation; the latter specifies a PFC_ [_action_](navigation.md#the-action-element) _executed when a specified boolean XPath expression operating on an XML submission evaluates to true. The XForms submission's_ `action` _attribute instead matches a PFC_ `<page>` _element's_ `path` _attribute._
 
 You can also directly submit to another page by specifying a different action, for example:
 

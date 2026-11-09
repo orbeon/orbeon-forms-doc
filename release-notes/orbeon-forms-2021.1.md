@@ -173,7 +173,7 @@ Until now, Orbeon Forms would index fields marked as "Show on Summary page" or "
 
 It is now possible to tell Form Runner to index fields independently of whether they show in the Summary page. This allows indexed fields to be searchable via the [Search API](../form-runner/api/persistence/search.md).
 
-For details, see [Control Settings](../form-builder/control-settings.md#main-options).
+For details, see [Control Settings](../form-builder/control-settings.md#basic-options).
 
 ![Index control](../form-builder/images/control-settings.png)
 
@@ -312,7 +312,7 @@ We added initial support for allowing section templates from the same library to
 
 ### Filter to log the body of incoming requests
 
-See the [documentation](../form-runner/advanced/monitoring-http-requests.md##orbeon-forms-httploggingfilter).
+See the [documentation](../form-runner/advanced/monitoring-http-requests.md#orbeon-forms-httploggingfilter).
 
 ## Internationalization
 

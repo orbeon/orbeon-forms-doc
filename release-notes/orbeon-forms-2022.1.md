@@ -61,7 +61,7 @@ With earlier versions of Orbeon Forms, the ability to "Read" implied the ability
 
 ![Permissions dialog with list permission](../form-builder/images/permissions-dialog.png)
 
-For more details, see the [documentation](../form-runner/access-control/deployed-forms.md#the-_list_-permission).
+For more details, see the [documentation](../form-runner/access-control/deployed-forms.md#the-list-permission).
 
 ### Improved look and feel
 

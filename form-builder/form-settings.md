@@ -55,7 +55,7 @@ Form options include options which apply to the entire form definition.
   * Other: the maximum size allowed in bytes
 * Maximum Number of Files
   * [\[SINCE Orbeon Forms 2025.1\]](../release-notes/orbeon-forms-2025.1.md)
-  * Use property: use the [`oxf.fr.detail.attachment.max-files-per-control` property](../configuration/properties/form-runner-attachments.md#maximum-number-of-files)
+  * Use property: use the [`oxf.fr.detail.attachment.max-files-per-control` property](../configuration/properties/form-runner-attachments.md#maximum-number-of-files-controls)
   * Other: the maximum number of files allowed per multiple file attachment control
 * Allowed File Types
   * \[SINCE Orbeon Forms 2017.1]
@@ -159,7 +159,7 @@ For details, see [Wizard View](../form-runner/feature/wizard-view.md).
   * Always or Never: enable or disable the wizard view for this form definition, no matter how the property is configured.
 * Wizard Navigation Validation Mode
   * Form Builder setting \[SINCE Orbeon Forms 2018.1]
-  * Use property: use the [`oxf.xforms.xbl.fr.wizard.validate` property](../form-runner/feature/wizard-view.md#lax-validated-mode)
+  * Use property: use the [`oxf.xforms.xbl.fr.wizard.validate` property](../form-runner/feature/wizard-view.md#modes)
   * Free, Lax or Strict: use the given validation mode for this form definition, no matter how the property is configured.
 * Wizard Subsections Navigation
   * Form Builder setting \[SINCE Orbeon Forms 2018.1]
