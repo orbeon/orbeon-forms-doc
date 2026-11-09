@@ -25,6 +25,8 @@ If that file doesn't exist yet in your installation of Orbeon Forms, you can cre
 </properties>
 ```
 
+If a property with the exact same name is defined multiple times (for example, if the same property is declared twice in `properties-local.xml`), the last definition in document order takes precedence.
+
 ## Properties you must configure
 
 You must set the [`oxf.crypto.password`](/configuration/properties/general.md#oxf.crypto.password) property to something different from the default.
