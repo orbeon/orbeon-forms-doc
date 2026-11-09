@@ -25,7 +25,7 @@ docker create \
     --name orbeon-forms-with-sqlite \
     -p 8080:8080 \
     -v ~/.orbeon/license.xml:/usr/local/tomcat/webapps/orbeon/WEB-INF/resources/config/license.xml \
-    orbeon/orbeon-forms:2025.1.2-pe
+    orbeon/orbeon-forms:2025.1.3-pe
 ```
 
 Make sure to replace `~/.orbeon/license.xml` with the path to your license file and to use another port if `8080` is already in use on your machine.
@@ -60,7 +60,7 @@ The following `docker-compose.yml` file can be used to start Orbeon Forms with a
 version: '3.8'
 services:
   orbeon-forms:
-    image: orbeon/orbeon-forms:2025.1.2-pe
+    image: orbeon/orbeon-forms:2025.1.3-pe
     ports:
       - ${ORBEON_TOMCAT_PORT:-8080}:8080
     volumes:
@@ -75,7 +75,7 @@ services:
     networks:
       - orbeon-forms-and-postgres
   postgres:
-    image: orbeon/postgres:2025.1.1-pe
+    image: orbeon/postgres:2025.1.3-pe
     restart: always
     ports:
       - ${ORBEON_POSTGRES_PORT:-5432}:5432
@@ -196,7 +196,7 @@ The `orbeon/orbeon-forms` image contains the JDBC drivers for SQLite and Postgre
 This can be done by using the following Dockerfile, using MySQL as an example:
 
 ```dockerfile
-FROM orbeon/orbeon-forms:2025.1.2-pe
+FROM orbeon/orbeon-forms:2025.1.3-pe
 
 RUN mkdir -p /tmp/orbeon
 WORKDIR /tmp/orbeon
@@ -220,7 +220,7 @@ RUN rm -rf /tmp/orbeon
 The customized image above can then be built using the following command:
 
 ```bash
-docker build -f Dockerfile.mysql -t "orbeon/orbeon-forms-mysql:2025.1.1-pe" .
+docker build -f Dockerfile.mysql -t "orbeon/orbeon-forms-mysql:2025.1.3-pe" .
 ```
 
 For further information about configuring Orbeon Forms to use a different database, see [Using a relational database](/form-runner/persistence/relational-db.md).
@@ -239,7 +239,7 @@ See [Logging](/installation/logging.md) for more information.
 
 To use WildFly instead of Tomcat:
 
-- use the tags suffixed with `-wildfly` (for example `2025.1-pe-wildfly`)
+- use the tags suffixed with `-wildfly` (for example `2025.1.3-pe-wildfly`)
 - mount the files in `/opt/jboss/wildfly/standalone/deployments/orbeon.war/WEB-INF` instead of `/usr/local/tomcat/webapps/orbeon/WEB-INF`
 - configure data sources in WildFly's `standalone.xml` configuration file, which should be copied or mounted into the `/docker-entrypoint-wildfly.d/` directory 
 
@@ -248,7 +248,35 @@ docker create \
     --name orbeon-forms-with-sqlite \
     -p 8080:8080 \
     -v ~/.orbeon/license.xml:/opt/jboss/wildfly/standalone/deployments/orbeon.war/WEB-INF/resources/config/license.xml \
-    orbeon/orbeon-forms:2025.1.2-pe-wildfly
+    orbeon/orbeon-forms:2025.1.3-pe-wildfly
 ```
+
+### WildFly version and custom `standalone.xml`
+
+\[SINCE Orbeon Forms 2025.1.3, 2024.1.6, 2023.1.9]
+
+The `-wildfly` images use WildFly 42. Earlier images used WildFly 39 or older. WildFly 42 fixes a number of security vulnerabilities, but it doesn't start with a `standalone.xml` file created for an older version of WildFly.
+
+If you provide your own `standalone.xml` file, and you created it from an older version of WildFly, you need to update it. You have two options:
+
+- Start from the default `standalone.xml` of WildFly 42, and add your own configuration to it, for example your data sources.
+- Or update your existing file:
+    - Remove the line `<extension module="org.wildfly.extension.security.manager"/>`.
+    - Remove the element `<subsystem xmlns="urn:jboss:domain:security-manager:1.0">`, including its content.
+    - Remove the element `<policy name="jacc">`, including its content.
+
+The PostgreSQL JDBC driver is now deployed under the name `postgresql.jar`. This name doesn't include a version, so your configuration will keep working when the driver is upgraded. If your data source refers to the driver by its previous name, update it:
+
+```xml
+<driver>postgresql.jar</driver>
+```
+
+When the container starts with a `standalone.xml` file that needs one of these changes, it writes a warning to the log.
+
+### Transitional WildFly 39 images
+
+If you can't update your `standalone.xml` file right away, use the tags suffixed with `-wildfly39` (for example `2025.1.3-pe-wildfly39`). These images use WildFly 39, and the PostgreSQL JDBC driver is deployed under its previous name, `postgresql-42.7.3.jar`. They work with your existing `standalone.xml` file, without any change.
+
+The `-wildfly39` images are transitional. They don't include the security fixes of WildFly 42, and we will stop providing them in a future release. We recommend that you update your configuration and move to the `-wildfly` images.
 
 See also [WildFly](wildfly.md) for more information.
