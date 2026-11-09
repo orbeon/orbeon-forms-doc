@@ -59,7 +59,7 @@ As of 2016-04-19 this page is still being updated.
     - relational database support: [doc](form-runner/persistence/relational-db.md), [blog post about new indexes](https://blog.orbeon.com/2016/06/new-indexes-boost-performance-with.html)
 - Datasets: [doc](form-runner/feature/datasets.md), [blog post](https://blog.orbeon.com/2017/01/datasets.html)
 - Multitenancy: [doc](/form-runner/feature/multitenancy.md)
-- User menu: [doc](/form-runner/access-control/login-logout)
+- User menu: [doc](/form-runner/access-control/login-logout.md)
 
 ### Form Builder
 
@@ -127,7 +127,7 @@ As of 2016-04-19 this page is still being updated.
         - show numeric keypad/"numbers and punctuation" keyboard pane when possible: [doc](form-runner/component/number.md#mobile-support), [blog post](https://blog.orbeon.com/2016/01/better-numeric-input-on-mobile.html)
     - Review mode (printable)
     - Wizard view: [doc](form-runner/feature/wizard-view.md), [introduction blog post](https://blog.orbeon.com/2012/12/form-runner-wizard-view.html)
-        - validated mode: [blog post](https://blog.orbeon.com/2015/03/new-wizard-validated-mode.html), [doc](feature/wizard-view.md#validated-mode)
+        - validated mode: [blog post](https://blog.orbeon.com/2015/03/new-wizard-validated-mode.html), [doc](form-runner/feature/wizard-view.md#modes)
         - highlighting of sections in error/accessible sections
         - buttons appearing only on the wizard's last page
         - status information for each section
@@ -157,13 +157,13 @@ As of 2016-04-19 this page is still being updated.
     - Ability to send to services: [blog post](https://blog.orbeon.com/2016/08/submitting-pdf-file-to-external-service.html)
 - Validation
     - as-you-type validation
-    - explicit validation: [doc](configuration/properties/form-runner/form-runner-detail-page.md#validation-mode)
+    - explicit validation: [doc](configuration/properties/form-runner-detail-page.md#validation-mode)
     - centralized error summary showing currently relevant errors: [component doc](form-runner/component/error-summary.md), [blog post on warnings/infos enhancements](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
     - controlling which attachments are included: [Form Builder doc](form-builder/control-settings.md#basic-options), [Form Runner doc](configuration/properties/form-runner/form-runner-detail-page/form-runner-email#attachment-properties)
     - controlling To, Cc, Bcc, From: [doc](form-builder/control-settings.md), [blog post](https://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)
     - Email templates: [doc](https://doc.orbeon.com/form-builder/advanced/email-settings), [blog post](https://blog.orbeon.com/2018/11/email-templates.html)
-- Captcha: [properties doc](configuration/properties/form-runner/form-runner-detail-page.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](https://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
+- Captcha: [properties doc](configuration/properties/form-runner-detail-page.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](https://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)
 - Appearance of repeated sections: [properties doc](configuration/properties/form-runner.md#appearance-of-repeated-sections), [component doc](form-runner/component/grid.md#repeated-mode)
 - Appearance of repeated grids: [properties doc](configuration/properties/form-runner.md#appearance-of-grids-sections), [component doc](form-runner/component/section.md#repeated-mode)
 - Function library: [doc](xforms/xpath/extension-form-runner.md), [blog post](https://blog.orbeon.com/2016/08/a-stable-function-library-for-form.html)

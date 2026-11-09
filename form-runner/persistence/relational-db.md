@@ -557,7 +557,7 @@ Since you are interested in data for Bookshelf form, which is in the app `orbeon
 
 ## Auditing
 
-See [Auditing](form-runner/persistence/auditing.md).
+See [Auditing](auditing.md).
 
 ## See also
 

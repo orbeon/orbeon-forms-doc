@@ -11,7 +11,7 @@ See the [Community][5] page. If you are having any problem subscribing to the fo
 
 ## Where do I find the source code?
 
-The source code for the CE version is on GitHub. See: [Orbeon Source Code Repository](contributors/building-orbeon-forms.md).
+The source code for the CE version is on GitHub. See: [Orbeon Source Code Repository](../contributors/building-orbeon-forms.md).
 
 The source code for the PE version is made available to PE customers on demand.
 

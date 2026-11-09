@@ -29,15 +29,15 @@ Depending on your monitor or browser size, you can use the scrollbar to the righ
 The toolbox can be configured via:
 
 * [Properties](../configuration/properties/form-builder.md#toolbox): for selecting and ordering the components that show in the toolbox.
-* [Component metadata](form-builder/metadata.md): for the component names.
+* [Component metadata](metadata.md): for the component names.
 
 ## Cut, copy and paste
 
-See [Cut, copy and paste](form-builder/cut-copy-paste.md).
+See [Cut, copy and paste](cut-copy-paste.md).
 
 ## Undo and redo
 
-See [Undo and redo](form-builder/undo-redo.md).
+See [Undo and redo](undo-redo.md).
 
 ## Reloading the toolbox
 
@@ -303,6 +303,6 @@ See [Keyboard shortcuts](keyboard-shortcuts.md).
 * [Documented XBL components](../form-runner/component/)
 * [XBL components](../xforms/xbl/)
 * [Form Builder toolbox properties](../configuration/properties/form-builder.md#toolbox)
-* [Component metadata](form-builder/metadata.md): for the component names.
+* [Component metadata](metadata.md): for the component names.
 * Blog post: [The new Multiple File Attachments control](https://blog.orbeon.com/2020/05/the-new-multiple-file-attachments.html)
 * Blog post: [Copying and pasting across forms](https://blog.orbeon.com/2020/06/copying-and-pasting-across-forms.html)

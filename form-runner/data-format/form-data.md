@@ -35,7 +35,7 @@ $my-other-control
 
 The *publishing* of a form definition determines the data format that is supported by that form definition.
 
-However, some limited changes to a form definition allow for the data to remain compatible. For more, see [Simple data migration](form-runner/feature/simple-data-migration.md) and the [associated blog post](https://blog.orbeon.com/2018/09/simple-data-migration.html).
+However, some limited changes to a form definition allow for the data to remain compatible. For more, see [Simple data migration](../feature/simple-data-migration.md) and the [associated blog post](https://blog.orbeon.com/2018/09/simple-data-migration.html).
 
 ## Formats in use
 
@@ -154,7 +154,7 @@ Non-repeated grids do not have a representation in XML.
 
 ### Repeated grids
 
-See also [Grid data format](/component/grid.md#data-format).
+See also [Grid data format](/form-runner/component/grid.md#data-format).
 
 Each iteration is represented by an element with the name of the repeated grid. There is no enclosing element:
 
@@ -344,7 +344,7 @@ _NOTE: When the Wizard is not in use, these annotations are not added as of Orbe
 
 ## See also
 
-- [Grid data format](/component/grid.md#data-format)
+- [Grid data format](/form-runner/component/grid.md#data-format)
 - [Form Definition Format](/form-runner/data-format/form-definition.md)
 - [Field-level encryption](/form-builder/field-level-encryption.md)
 - [Send action](/form-runner/advanced/buttons-and-processes/actions-form-runner-send.md) (`data-format-version` parameter)

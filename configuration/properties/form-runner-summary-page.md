@@ -96,7 +96,7 @@ See [Configuring Summary page buttons](../../form-runner/advanced/buttons-and-pr
 
 ## Versioning
 
-\[SINCE Orbeon Forms 2020.1 and 2019.2.3] The following property allows you to configure whether the [Summary page](form-runner/feature/summary-page.md) shows data:
+\[SINCE Orbeon Forms 2020.1 and 2019.2.3] The following property allows you to configure whether the [Summary page](../../form-runner/feature/summary-page.md) shows data:
 
 * if set to `true`: for one version at a time, which is the default;
 * if set to `false`: for all data across form definition versions, as it used to be the case up until Orbeon Forms 2018.1.
