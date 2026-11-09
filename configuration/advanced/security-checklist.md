@@ -5,8 +5,8 @@
 This page provides a practical security checklist for deploying Orbeon Forms. Depending on your architecture, you may deploy Orbeon Forms as a single instance or split authoring and runtime across separate instances:
 
 1. **[Baseline checklist (all deployments)](#baseline-checklist-all-deployments):** Essential security measures that apply to every Orbeon Forms instance.
-2. **[1. Deployed as Form Runner only](#1-deployed-as-form-runner-only):** Hardening steps for a runtime-only instance (internal or public-facing) where end users fill out and review published forms, and where Form Builder is not used.
-3. **[2. Deployed as internal Form Builder](#2-deployed-as-internal-form-builder):** Hardening steps for an internal authoring instance where form authors design, test, and publish forms (and optionally push them to a remote Form Runner server).
+2. **[Deployed as Form Runner only](#deployed-as-form-runner-only):** Hardening steps for a runtime-only instance (internal or public-facing) where end users fill out and review published forms, and where Form Builder is not used.
+3. **[Deployed as internal Form Builder](#deployed-as-internal-form-builder):** Hardening steps for an internal authoring instance where form authors design, test, and publish forms (and optionally push them to a remote Form Runner server).
 
 ---
 
@@ -65,7 +65,7 @@ Apply the following measures to both Form Runner and Form Builder deployments:
 
 ---
 
-## 1. Deployed as Form Runner only
+## Deployed as Form Runner only
 
 Use this checklist when deploying an Orbeon Forms instance dedicated to running published forms for end users (whether internal users or anonymous public users), without Form Builder on the server.
 
@@ -122,7 +122,7 @@ Use this checklist when deploying an Orbeon Forms instance dedicated to running 
 
 ---
 
-## 2. Deployed as internal Form Builder
+## Deployed as internal Form Builder
 
 Use this checklist when deploying an internal Orbeon Forms instance where form authors design, test, and publish forms. Because Form Builder allows authors to define services, queries, formulas, and form structure, it requires specific controls depending on how trusted your form authors are.
 
