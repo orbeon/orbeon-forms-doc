@@ -97,4 +97,5 @@ When the option of not encoding such values is chosen, the server still checks t
 
 ## See also 
 
+- [Security checklist](security-checklist.md)
 - [Content-Security-Policy header](content-security-policy.md)
