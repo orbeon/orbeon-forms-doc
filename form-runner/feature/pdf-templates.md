@@ -142,7 +142,7 @@ The field names must look like:
 
 When using a PDF template, Orbeon Forms can only fill out fields that are already present in the PDF template. It cannot add new iterations. This means that the maximum number of allowed iterations in the form must match the number of iterations present in the PDF template.
 
-![Example of repeated fields](images/pdf-template-repeat.png)
+![Example of repeated fields](../../form-builder/images/pdf-template-repeat.png)
 
 ## Font configuration and embedding
 

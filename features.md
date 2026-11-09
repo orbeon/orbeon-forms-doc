@@ -160,7 +160,7 @@ As of 2016-04-19 this page is still being updated.
     - explicit validation: [doc](configuration/properties/form-runner-detail-page.md#validation-mode)
     - centralized error summary showing currently relevant errors: [component doc](form-runner/component/error-summary.md), [blog post on warnings/infos enhancements](https://blog.orbeon.com/2013/07/enhanced-validation-in-form-builder-and.html)
 - Sending emails
-    - controlling which attachments are included: [Form Builder doc](form-builder/control-settings.md#basic-options), [Form Runner doc](configuration/properties/form-runner/form-runner-detail-page/form-runner-email#attachment-properties)
+    - controlling which attachments are included: [Form Builder doc](form-builder/control-settings.md#basic-options), [Form Runner doc](configuration/properties/form-runner-email.md#attachment-properties)
     - controlling To, Cc, Bcc, From: [doc](form-builder/control-settings.md), [blog post](https://blog.orbeon.com/2017/05/more-flexible-email-senders-and.html)
     - Email templates: [doc](https://doc.orbeon.com/form-builder/advanced/email-settings), [blog post](https://blog.orbeon.com/2018/11/email-templates.html)
 - Captcha: [properties doc](configuration/properties/form-runner-detail-page.md#captcha), [component doc](form-runner/component/captcha.md), [blog post](https://blog.orbeon.com/2011/12/stop-spammer-by-adding-captcha-to-your.html)

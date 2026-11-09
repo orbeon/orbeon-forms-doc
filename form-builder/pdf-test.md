@@ -47,7 +47,7 @@ Selecting "Continue" opens the resulting PDF, which will show in your browser wi
 
 ## PDF templates
 
-The "Test PDF" dialog lets you choose between the [automatic PDF](pdf-automatic.md) or one of the available [PDF templates](pdf-templates.md) when testing.
+The "Test PDF" dialog lets you choose between the [automatic PDF](../form-runner/feature/pdf-automatic.md) or one of the available [PDF templates](../form-runner/feature/pdf-templates.md) when testing.
 
 ![Selecting a PDF template for PDF testing](images/test-pdf-use-pdf-template.png)
 
@@ -68,9 +68,9 @@ See also [The `open-rendered-format()` action](../form-runner/advanced/buttons-a
 ## See also
 
 * Blog post: [Testing PDF production in Form Builder](https://blog.orbeon.com/2021/11/testing-pdf-production-in-form-builder.html)
-* [PDF Production](pdf-production.md)
-* [Automatic PDF](pdf-automatic.md)
-* [PDF templates](pdf-templates.md)
+* [PDF Production](../form-runner/feature/pdf-production.md)
+* [Automatic PDF](../form-runner/feature/pdf-automatic.md)
+* [PDF templates](../form-runner/feature/pdf-templates.md)
 * [The `open-rendered-format()` action](../form-runner/advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format)
 * [Testing in web mode](web-test.md)
 * [Testing in offline mode](offline-test.md)

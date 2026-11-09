@@ -113,7 +113,7 @@ Including the features and enhancements above, we [closed over 180 issues](https
 * Repeated grids and sections have the following new options:
   * allow or disallow the user to add, remove, or move repetitions ([doc](../form-builder/repeat-settings.md#allow-the-user-to-add-remove-or-move-repetitions))
   * enable or disable the simplified appearance ([doc](../form-builder/repeat-settings.md#simplified-appearance))
-* The "Explanation Text" control supports templates. ([doc](form-builder/template-syntax.md))
+* The "Explanation Text" control supports templates. ([doc](../form-builder/template-syntax.md))
 
 ### Form Runner
 

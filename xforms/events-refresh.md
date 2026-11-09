@@ -173,7 +173,7 @@ The following occurs:
 - `xforms-enabled` is dispatched
 - `xxforms-visible` is dispatched if the control is not in a hidden switch case
     - SINCE Orbeon Forms 2018.1
-    - See also [`xxforms-visible`](xforms/events-extensions-events.md#xxforms-visible). 
+    - See also [`xxforms-visible`](events-extensions-events.md#xxforms-visible). 
 - non-default MIP events are dispatched (in order to reduce the number of events dispatched)  
     - `xforms-invalid`
     - `xforms-required`
@@ -203,7 +203,7 @@ The following occurs:
 
 - `xxforms-hidden` is dispatched if the control is not in a hidden switch case
     - SINCE Orbeon Forms 2018.1
-    - See also [`xxforms-hidden`](xforms/events-extensions-events.md#xxforms-hidden).
+    - See also [`xxforms-hidden`](events-extensions-events.md#xxforms-hidden).
 - `xforms-disabled` is dispatched
 - no other events are dispatched  
 

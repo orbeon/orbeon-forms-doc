@@ -61,7 +61,7 @@ You can _email_ the PDF file using the following property:
     value="true"/>
 ```
 
-See also [Email properties](../configuration/properties/form-runner.md#email-settings).
+See also [Email properties](../../configuration/properties/form-runner.md#email-settings).
 
 ## Production of TIFF images
 

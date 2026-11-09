@@ -74,11 +74,11 @@ Including the features and enhancements above, we [closed over 180 issues](https
 ### Form Builder and Form Runner
 
 * The [Simple Actions Editor](../form-builder/actions.md) supports setting a hint for control choices. ([#4566](https://github.com/orbeon/orbeon-forms/issues/4566))
-* Emails can include a link back to the form. ([#4461](https://github.com/orbeon/orbeon-forms/issues/4461)) ([doc](../form-builder/advanced/template-syntax.md#links))
+* Emails can include a link back to the form. ([#4461](https://github.com/orbeon/orbeon-forms/issues/4461)) ([doc](../form-builder/template-syntax.md#links))
 * Emails support `Reply-To`. ([#4480](https://github.com/orbeon/orbeon-forms/issues/4480)) ([doc](../form-builder/control-settings.md#email-options))
 * Some math functions are now exposed in formulas. ([#4508](https://github.com/orbeon/orbeon-forms/issues/4508)) ([doc](../xforms/xpath/standard-functions.md#xpath-3-0-functions))
 * We improved the choices for the appearance of Calculated Values. ([#4531](https://github.com/orbeon/orbeon-forms/issues/4531))
-* We added a checkbox to mark the service response as binary. ([#4280](https://github.com/orbeon/orbeon-forms/issues/4280)) ([doc](../form-builder/advanced/services-and-actions/http-services.md#advanced-parameters))
+* We added a checkbox to mark the service response as binary. ([#4280](https://github.com/orbeon/orbeon-forms/issues/4280)) ([doc](../form-builder/http-services.md#advanced-parameters))
 * We automatically migrate older `fr:autocomplete` uses. ([#4242](https://github.com/orbeon/orbeon-forms/issues/4242))
 
 ### Form Runner
@@ -89,7 +89,7 @@ Including the features and enhancements above, we [closed over 180 issues](https
 * Control when and where the captcha is shown. ([#4651](https://github.com/orbeon/orbeon-forms/issues/4651)) ([doc](../configuration/properties/form-runner-detail-page.md#captcha))
 * Allow the Summary page to show data across all versions. ([#4699](https://github.com/orbeon/orbeon-forms/issues/4699))
 * Structured search on Summary page supports multiple selection controls. ([#4479](https://github.com/orbeon/orbeon-forms/issues/4479))
-* Action to clear a control, including attachment controls ([#4427](https://github.com/orbeon/orbeon-forms/issues/4427)) ([doc](../form-builder/advanced/services-and-actions/actions-syntax.md#clearing-the-value-of-a-control))
+* Action to clear a control, including attachment controls ([#4427](https://github.com/orbeon/orbeon-forms/issues/4427)) ([doc](../form-builder/actions-syntax.md#clearing-the-value-of-a-control))
 
 ### Accessibility
 

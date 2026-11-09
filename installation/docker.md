@@ -14,7 +14,7 @@ Multiple Docker images are available from the [Orbeon repository on Docker Hub](
 
 The `orbeon/orbeon-forms` image can be run as a standalone container, as it contains an SQLite database with demo forms. This is intended for evaluation purposes only, and you will probably want to use another database in production. For this, you can use the `orbeon/postgres` image, which contains a PostgreSQL database prepopulated with the Orbeon Forms database schema. See the [Docker Compose configuration](#docker-compose-configuration) below for an example of how to run Orbeon Forms with PostgreSQL.
 
-To install Orbeon Forms on Microsoft Azure, see [Azure](installation/azure.md).
+To install Orbeon Forms on Microsoft Azure, see [Azure](azure.md).
 
 ## Evaluation mode
 

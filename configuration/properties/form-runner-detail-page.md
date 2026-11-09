@@ -531,7 +531,7 @@ When data is _unsafe_, meaning that it has been modified but not saved yet, Form
 
 In some cases, in particular when [embedding a form](../../form-runner/link-embed/java-api.md), this can be an inconvenience. The following property allows disabling this behavior.
 
-\[SINCE Orbeon Forms 2021.1] In addition to `true` or `false`, since the value of the property is an [AVT](../../xforms/core/attribute-value-templates.md), you can also, when needed, dynamically disable the warning by providing an expression between curly braces. For instance the following would only warn users if the content of the field named `description` has more than 50 characters and if users have made changes to the form since it was loaded:
+\[SINCE Orbeon Forms 2021.1] In addition to `true` or `false`, since the value of the property is an [AVT](../../xforms/attribute-value-templates.md), you can also, when needed, dynamically disable the warning by providing an expression between curly braces. For instance the following would only warn users if the content of the field named `description` has more than 50 characters and if users have made changes to the form since it was loaded:
 
 ```xml
 <property 

@@ -44,8 +44,8 @@ If a specific property is defined for an app/form, such as `oxf.fr.css.custom.ur
 
 In addition to [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.md#adding-your-own-css), you can also use the following properties, which apply only to the Summary and Detail pages respectively:
 
-- [`oxf.fr.summary.css.custom.uri`](form-runner-summary-page.md#adding-your-own-css-files)
-- [`oxf.fr.detail.css.custom.uri`](form-runner-detail-page.md#adding-your-own-css-files)
+- [`oxf.fr.summary.css.custom.uri`](../../configuration/properties/form-runner-summary-page.md#adding-your-own-css-files)
+- [`oxf.fr.detail.css.custom.uri`](../../configuration/properties/form-runner-detail-page.md#adding-your-own-css-files)
 
 ### Overriding CSS variables
 
