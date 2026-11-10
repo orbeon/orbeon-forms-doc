@@ -698,11 +698,9 @@ To change to a European style days-first format for the date and a 24-hour time,
 
 ## Email address validation
 
-\[SINCE Orbeon Forms 2026.1]
+\[SINCE Orbeon Forms 2025.1.4, 2026.1]
 
-By default, the `xf:email` type (used by the Email field) validates the local part (before the `@`) and the domain part using built-in rules based on the XForms and Internet standards.
-
-You can configure additional regular expressions to enforce stricter validation on either part, or on both parts, using the following properties:
+By default, the `xf:email` type (used by the Email field) validates the local part (before the `@`) and the domain part using built-in rules based on the XForms and Internet standards. You can configure additional regular expressions to enforce stricter validation on either part, or on both parts, using the following properties:
 
 ```xml
 <property as="xs:string" name="oxf.xforms.email.local-part-regex" value=""/>
@@ -710,24 +708,15 @@ You can configure additional regular expressions to enforce stricter validation 
 ```
 
 Both properties default to empty.
-* When a property is empty, that part is validated using the built-in rules only.
-* When set, its regular expression is evaluated in addition to the built-in validation rules, allowing administrators to enforce stricter constraints.
-* Either property can be set on its own.
 
-### Example: Reject trailing underscore in local part
+- When a property is empty, that part is validated using the built-in rules only.
+- When set, its regular expression is evaluated in addition to the built-in validation rules, allowing administrators to enforce stricter constraints.
+- Either property can be set on its own.
 
 For example, if your backend system rejects email addresses where the local part ends with an underscore before the `@` (such as `john_@example.com`):
 
 ```xml
 <property as="xs:string" name="oxf.xforms.email.local-part-regex" value=".*[^_]"/>
-```
-
-### Example: Restrict allowed email domains
-
-To only accept email addresses from specific domains (for example, `example.com` or `orbeon.com`):
-
-```xml
-<property as="xs:string" name="oxf.xforms.email.domain-regex" value="(?i)(example\.com|orbeon\.com)"/>
 ```
 
 ## Error handling
