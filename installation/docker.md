@@ -116,6 +116,8 @@ Outside the `docker-compose.yml` file, you will also need at least four other fi
 
 The `postgres_password.txt` file contains the password of the PostgreSQL user, and nothing else. Choose a strong password.
 
+The password file is only read when the database is first initialized, that is when the data volume is empty. If you already have a volume, changing the file doesn't change the password of the existing database.
+
 ### Properties file
 
 The `properties-local.xml` properties file needs to contain at least the following:
