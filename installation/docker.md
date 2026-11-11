@@ -57,7 +57,6 @@ This involves creating a first container just to extract the `orbeon-demo.sqlite
 The following `docker-compose.yml` file can be used to start Orbeon Forms with a PostgreSQL database:
 
 ```yaml
-version: '3.8'
 services:
   orbeon-forms:
     image: orbeon/orbeon-forms:2025.1.3-pe
@@ -78,16 +77,15 @@ services:
     image: orbeon/postgres:2025.1.3-pe
     restart: always
     ports:
-      - ${ORBEON_POSTGRES_PORT:-5432}:5432
+      - 127.0.0.1:${ORBEON_POSTGRES_PORT:-5432}:5432
     volumes:
-      - pgdata:/var/lib/postgresql
+      - pgdata:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: ${ORBEON_POSTGRES_DB:-orbeon}
       POSTGRES_USER: ${ORBEON_POSTGRES_USER:-orbeon}
-      POSTGRES_PASSWORD: ${ORBEON_POSTGRES_PASSWORD:-orbeon}
-#      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
-#    secrets:
-#      - postgres_password
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+    secrets:
+      - postgres_password
     networks:
       - orbeon-forms-and-postgres
 networks:
@@ -99,17 +97,24 @@ volumes:
 secrets:
   license:
     file: ${ORBEON_LICENSE_FILE:-~/.orbeon/license.xml}
-#  postgres_password:
-#    file: ${ORBEON_POSTGRES_PASSWORD_FILE:-postgres_password.txt}
+  postgres_password:
+    file: ${ORBEON_POSTGRES_PASSWORD_FILE:-./postgres_password.txt}
 ```
 
 This Docker Compose file is meant as an example and can be customized to fit your needs.
 
-Outside the `docker-compose.yml` file, you will also need at least three other files:
+_WARNING: The current `orbeon/postgres` images use PostgreSQL 17, which stores its data in `/var/lib/postgresql/data`. Mount the volume at this exact path. If you mount it at `/var/lib/postgresql`, Docker stores the data in an anonymous volume instead, and the data is lost when the container is removed and created again, for example with `docker compose down` followed by `docker compose up`._
+
+Outside the `docker-compose.yml` file, you will also need at least four other files:
 
 - the license file (like in the single container case)
+- a file containing the PostgreSQL password
 - an Orbeon Forms properties file to specify that PostgreSQL must be used instead of SQLite
 - a Tomcat context configuration file to specify the PostgreSQL data source
+
+### PostgreSQL password file
+
+The `postgres_password.txt` file contains the password of the PostgreSQL user, and nothing else. Choose a strong password.
 
 ### Properties file
 
@@ -150,12 +155,12 @@ The `orbeon.xml` Tomcat context configuration file needs to contain at least the
         validationQuery="select 1"
     
         username="orbeon"
-        password="orbeon"
+        password="CHANGE THIS PASSWORD"
         url="jdbc:postgresql://postgres:5432/orbeon?useUnicode=true&amp;characterEncoding=UTF8&amp;socketTimeout=30&amp;tcpKeepAlive=true"/>
 </Context>
 ```
 
-If you've changed the default PostgreSQL service name, database name, user, password, or port in the Docker Compose configuration, make sure to update the `url`, `username`, and `password` attributes accordingly.
+Set the `password` attribute to the password you put in the PostgreSQL password file. If you've changed the default PostgreSQL service name, database name, user, or port in the Docker Compose configuration, make sure to update the `url` and `username` attributes accordingly.
 
 In particular, note that the `postgres` hostname in the `url` attribute refers to the name of the PostgreSQL service in the Docker Compose configuration.
 
@@ -163,21 +168,25 @@ In particular, note that the `postgres` hostname in the `url` attribute refers t
 
 Using the example Docker Compose configuration above, you can customize the behavior of the containers by editing the configuration file directly or by using the following environment variables:
 
-| Environment variable         | Default value            | Description                                     |
-|------------------------------|--------------------------|-------------------------------------------------|
-| `ORBEON_LICENSE_FILE`        | `~/.orbeon/license.xml`  | Path to the Orbeon Forms license file           |
-| `ORBEON_PROPERTIES_FILE`     | `./properties-local.xml` | Path to the Orbeon Forms properties file        |
-| `ORBEON_TOMCAT_CONTEXT_FILE` | `./orbeon.xml`           | Path to the Tomcat context configuration file   |
-| `ORBEON_TOMCAT_PORT`         | 8080                     | Tomcat port                                     |
-| `ORBEON_POSTGRES_PORT`       | 5432                     | PostgreSQL port                                 |
-| `ORBEON_POSTGRES_DB`         | orbeon                   | PostgreSQL database                             |
-| `ORBEON_POSTGRES_USER`       | orbeon                   | PostgreSQL user                                 |
-| `ORBEON_POSTGRES_PASSWORD`   | orbeon                   | PostgreSQL password                             |
-| `ORBEON_POSTGRES_VOLUME`     | orbeon_pgdata            | Docker volume used to store the PostgreSQL data |
+| Environment variable            | Default value             | Description                                         |
+|---------------------------------|---------------------------|-----------------------------------------------------|
+| `ORBEON_LICENSE_FILE`           | `~/.orbeon/license.xml`   | Path to the Orbeon Forms license file               |
+| `ORBEON_PROPERTIES_FILE`        | `./properties-local.xml`  | Path to the Orbeon Forms properties file            |
+| `ORBEON_TOMCAT_CONTEXT_FILE`    | `./orbeon.xml`            | Path to the Tomcat context configuration file       |
+| `ORBEON_TOMCAT_PORT`            | 8080                      | Tomcat port                                         |
+| `ORBEON_POSTGRES_PORT`          | 5432                      | PostgreSQL port                                     |
+| `ORBEON_POSTGRES_DB`            | orbeon                    | PostgreSQL database                                 |
+| `ORBEON_POSTGRES_USER`          | orbeon                    | PostgreSQL user                                     |
+| `ORBEON_POSTGRES_PASSWORD_FILE` | `./postgres_password.txt` | Path to the file containing the PostgreSQL password |
+| `ORBEON_POSTGRES_VOLUME`        | orbeon_pgdata             | Docker volume used to store the PostgreSQL data     |
 
 The values of those environment variables can be set in a `.env` file in the same directory as the `docker-compose.yml` file.
 
-Note that the PostgreSQL password can be specified via a Docker secret file. To do so, uncomment the lines related to `postgres_password` in the Docker Compose configuration file.
+The example only publishes the PostgreSQL port on the loopback interface of the host, so that the database isn't reachable from other machines. Orbeon Forms connects to PostgreSQL through the Docker network and doesn't use this port. If you don't need to access the database from the host, remove the `ports` section of the `postgres` service.
+
+The PostgreSQL password is passed to the PostgreSQL container as a Docker secret, and not as an environment variable: environment variables are visible with `docker inspect` and are inherited by all the processes of the container. Note that with Docker Compose, a secret is a file mounted into the container: protect the password file, the Tomcat context configuration file, which contains the same password, and the `.env` file if you use one, with appropriate file permissions.
+
+In production, store these secrets in a secret manager (for example HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault) and let your orchestrator mount them as files. The example above works unchanged in that case.
 
 ### Running the containers using Docker Compose
 
