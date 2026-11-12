@@ -81,6 +81,20 @@ In this release, we have addressed many issues, including:
     * RestApiTest using S3 occasionally fails on CI ([\#7585](https://github.com/orbeon/orbeon-forms/issues/7585))
     * Docker images: update base Tomcat and WildFly versions, pin PostgreSQL version, and add vulnerability scanning ([\#7702](https://github.com/orbeon/orbeon-forms/issues/7702))
 
+### Orbeon Forms 2024.1.6.1
+
+* Security
+    * reCAPTCHA and Friendly Captcha verification fails because private-key property is blocked ([\#8069](https://github.com/orbeon/orbeon-forms/issues/8069))
+    * Form Builder `/new` to return 403 on load when user can't create forms ([\#7997](https://github.com/orbeon/orbeon-forms/issues/7997))
+* Form Builder
+    * Action in section template to pass value to parameter ([\#7760](https://github.com/orbeon/orbeon-forms/issues/7760))
+* Form Runner
+    * Preserve `audio/*`, `video/*`, and `image/*` in upload `accept` attribute and add media extensions ([\#8077](https://github.com/orbeon/orbeon-forms/issues/8077))
+* Offline
+    * Test Offline: copy action doesn't warn user ([\#7598](https://github.com/orbeon/orbeon-forms/issues/7598))
+* Distribution
+    * Docker images: upgrade base WildFly version to 42.0.0, upgrade PostgreSQL JDBC driver, and add transitional WildFly 39 images ([\#7702](https://github.com/orbeon/orbeon-forms/issues/7702))
+
 ## Compatibility and upgrade notes
 
 ### Cookie forwarding and session cookie name
