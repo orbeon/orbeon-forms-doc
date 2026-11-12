@@ -240,6 +240,24 @@ In this release, we have addressed over 100 issues, including:
     * Test Offline: copy action doesn't warn user ([\#7598](https://github.com/orbeon/orbeon-forms/issues/7598))
     * Test Offline causes "Uncaught TypeError" ([\#8056](https://github.com/orbeon/orbeon-forms/issues/8056))
 
+### Orbeon Forms 2025.1.3.1
+
+* Security
+    * reCAPTCHA and Friendly Captcha verification fails because private-key property is blocked ([\#8069](https://github.com/orbeon/orbeon-forms/issues/8069))
+    * Third-party library updates
+* Form Runner
+    * Support `<fr:repeat-*>` actions in unmerged section templates ([\#8059](https://github.com/orbeon/orbeon-forms/issues/8059))
+    * Drain request body when skipping duplicate attachment `PUT` ([\#8071](https://github.com/orbeon/orbeon-forms/issues/8071))
+    * Preserve `audio/*`, `video/*`, and `image/*` in upload `accept` attribute and add media extensions ([\#8077](https://github.com/orbeon/orbeon-forms/issues/8077))
+    * Uploaded video to play in Firefox ([\#8078](https://github.com/orbeon/orbeon-forms/issues/8078))
+    * PDF creation date uses the Gregorian calendar regardless of the JVM locale ([\#8079](https://github.com/orbeon/orbeon-forms/issues/8079))
+* XForms Engine
+    * Allow configuring local part and domain email validation regex ([\#8058](https://github.com/orbeon/orbeon-forms/issues/8058))
+* Offline
+    * Offline: Formatted Text Area doesn't show ([\#8074](https://github.com/orbeon/orbeon-forms/issues/8074))
+* Distribution
+    * Docker images: upgrade base WildFly version to 42.0.0, upgrade PostgreSQL JDBC driver, and add transitional WildFly 39 images ([\#7702](https://github.com/orbeon/orbeon-forms/issues/7702))
+
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page, or use our Docker images.
 
 Don't forget to [grab a trial license](https://prod.orbeon.com/prod/fr/orbeon/register/new) for the PE version.
