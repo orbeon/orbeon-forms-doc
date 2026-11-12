@@ -37,7 +37,16 @@ In many cases, the `Content-Security-Policy` header is generated more globally b
 
 But Orbeon Forms is able to produce that header as well, whether just for testing or for deployment. To enable this, simply uncomment the following entry in the Orbeon Forms WAR file's `web.xml`:
 
-```markup
+```xml
+<context-param>
+    <param-name>oxf.orbeon-form-runner-auth-servlet-filter.content-security-policy</param-name>
+    <param-value>default-src 'self'; img-src 'self' data:</param-value>
+</context-param>
+```
+
+With Orbeon Forms 2022.1 and earlier, the entry is an `<init-param>` of the `orbeon-form-runner-auth-servlet-filter` filter instead:
+
+```xml
 <init-param>
     <param-name>content-security-policy</param-name>
     <param-value>default-src 'self'; img-src 'self' data:</param-value>
@@ -46,7 +55,7 @@ But Orbeon Forms is able to produce that header as well, whether just for testin
 
 You can set the `param-value` to any legal value supported by web browsers. In this example, `default-src 'self'` "Refers to the origin from which the protected document is being served, including the same URL scheme and port number. You must include the single quotes." ([Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src))
 
-_NOTE: The `content-security-policy` name must remain in lowercase. It is a configuration parameter name, not the actual header name._
+_NOTE: The `content-security-policy` part of the name must remain in lowercase. It is a configuration parameter name, not the actual header name._
 
 ## See also
 
