@@ -42,6 +42,13 @@ In this release, we have addressed the following issues:
 * Distribution
     * Docker images: update base WildFly version and Docker files ([\#7702](https://github.com/orbeon/orbeon-forms/issues/7702))
 
+### Orbeon Forms 2023.1.9.1
+
+* Security
+    * Allow `fr:component-param-value()` to read sensitive properties from inner scope ([\#8069](https://github.com/orbeon/orbeon-forms/issues/8069))
+* Distribution
+    * Docker images: more updates.
+
 ## Compatibility and upgrade notes
 
 ### Cookie forwarding and session cookie name
