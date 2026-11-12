@@ -75,7 +75,7 @@ For more details, see [Cookies forwarding](../configuration/properties/propertie
 
 ### Authorizer URL must be absolute
 
-In previous versions, the `oxf.page-flow.authorizer` property accepted an absolute path (such as `/orbeon-auth`), which was resolved relative to the current host.
+In previous versions, the `authorizer` property of the `oxf:page-flow` processor accepted an absolute path (such as `/orbeon-auth`), which was resolved relative to the current host.
 
 Starting with this release, the authorizer property strictly requires an absolute URL with a scheme (e.g. `http://localhost:8080/orbeon-auth`). If the property contains a relative or scheme-less path, Orbeon Forms will log an error and deny access.
 
