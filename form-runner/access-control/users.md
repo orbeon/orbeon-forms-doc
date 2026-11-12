@@ -102,6 +102,15 @@ With the header-driven method, you are responsible for, in the block labeled as 
 
 When using the header-driven method, as it is your reverse proxy that performs user authentication, and not the container, you must remove or comment out the `<security-constraint>` in the `web.xml`.
 
+### Prevent header spoofing
+
+With the header-driven method, Orbeon Forms trusts the headers it receives. If a user can send a request with those headers directly to Orbeon Forms, that user can pretend to be any other user, with any role. So you must make sure that:
+
+1. Orbeon Forms only accepts requests from your reverse proxy, for example with firewall rules, network segmentation, binding to localhost, or mutual TLS.
+2. Your reverse proxy removes those headers from incoming requests before it sets them itself, on every request. This applies to the headers you configured, and to `Orbeon-Username`, `Orbeon-Group`, `Orbeon-Roles`, and `Orbeon-Credentials`.
+
+See also the [security checklist](../../configuration/advanced/security-checklist.md).
+
 ### Individual headers or single header with JSON?
 
 You can pass information about the user either using:
