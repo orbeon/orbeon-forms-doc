@@ -117,13 +117,23 @@ You can use this component to show users a captcha, like the one shown in the fo
        ```
 3. Add the reCAPTCHA component to your form:
    *   For forms you're creating in Form Builder, enable the reCAPTCHA by setting the following property:
+       *   [\[SINCE Orbeon Forms 2020.1\]](../../release-notes/orbeon-forms-2020.1.md)
 
-       ```xml
-       <property
-           as="xs:string" 
-           name="oxf.fr.detail.captcha.*.*" 
-           value="reCAPTCHA"/>
-       ```
+           ```xml
+           <property
+               as="xs:string"
+               name="oxf.fr.detail.captcha.component.*.*"
+               value="fr:recaptcha"
+               xmlns:fr="http://orbeon.org/oxf/xml/form-runner"/>
+           ```
+       *   [\[UNTIL Orbeon Forms 2019.2\]](../../release-notes/orbeon-forms-2019.2.md)
+
+           ```xml
+           <property
+               as="xs:string"
+               name="oxf.fr.detail.captcha.*.*"
+               value="reCAPTCHA"/>
+           ```
    *   For forms you're creating by writing XForms "by hand", add the component to your form as follows. You'll also want to add handlers for the `fr-verify-done` and maybe `fr-verify-error` events.
 
        ```xml
