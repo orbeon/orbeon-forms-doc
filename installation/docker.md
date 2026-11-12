@@ -114,7 +114,9 @@ Outside the `docker-compose.yml` file, you will also need at least four other fi
 
 ### PostgreSQL password file
 
-The `postgres_password.txt` file contains the password of the PostgreSQL user, and nothing else. Choose a strong password.
+The `postgres_password.txt` file contains the password of the PostgreSQL user, and nothing else. Choose a strong password, for example with `openssl rand -base64 32`. Don't use Windows line endings (CRLF): the carriage return would become part of the password.
+
+Make the file readable only by you (`chmod 600 postgres_password.txt`) and don't commit it to version control. With these permissions, the database server itself can't read the file.
 
 The password file is only read when the database is first initialized, that is when the data volume is empty. If you already have a volume, changing the file doesn't change the password of the existing database.
 
@@ -186,9 +188,11 @@ The values of those environment variables can be set in a `.env` file in the sam
 
 The example only publishes the PostgreSQL port on the loopback interface of the host, so that the database isn't reachable from other machines. Orbeon Forms connects to PostgreSQL through the Docker network and doesn't use this port. If you don't need to access the database from the host, remove the `ports` section of the `postgres` service.
 
-The PostgreSQL password is passed to the PostgreSQL container as a Docker secret, and not as an environment variable: environment variables are visible with `docker inspect` and are inherited by all the processes of the container. Note that with Docker Compose, a secret is a file mounted into the container: protect the password file, the Tomcat context configuration file, which contains the same password, and the `.env` file if you use one, with appropriate file permissions.
+The PostgreSQL password is passed as a Docker secret, not as an environment variable: an environment variable is shown by `docker inspect` and `docker compose config`, saved by Docker on the host, and passed to commands run with `docker exec`.
 
-In production, store these secrets in a secret manager (for example HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault) and let your orchestrator mount them as files. The example above works unchanged in that case.
+With Docker Compose, a secret isn't encrypted: it's the password file itself, mounted read-only into the container. The Tomcat context configuration file (`orbeon.xml`) contains the same password. Protect both files: restrict their permissions, keep them out of version control, and protect their backups.
+
+This configuration is a starting point for a single host. In production, use the secrets of your orchestrator (Docker Swarm, Kubernetes), which are mounted on an in-memory file system, with a secret manager such as HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault. With Kubernetes, enable encryption at rest for secrets, which is off by default.
 
 ### Running the containers using Docker Compose
 
