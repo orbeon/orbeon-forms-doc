@@ -121,7 +121,7 @@ Use this checklist when deploying an internal Orbeon Forms instance where form a
 - [ ] **Require authentication for Form Builder and admin paths:** Configure your reverse proxy (header-driven method) or `<security-constraint>` in `WEB-INF/web.xml` (container-driven method) to require authentication for `/fr/orbeon/builder/*`, `/fr/admin`, and `/fr/`. See [Users](../../form-runner/access-control/users.md).
 - [ ] **Configure `form-builder-permissions.xml` with least privilege:**
   - Define explicit `<role name="..." app="..." form="*"/>` entries in `WEB-INF/resources/config/form-builder-permissions.xml` so each group of form authors can only create, edit, and administer forms in their designated application(s).
-  - Do **not** leave `form-builder-permissions.xml` empty or use `<role name="*" app="*" form="*"/>`, as this allows any authenticated user who can reach Form Builder to create or modify forms in any application.
+  - Do **not** leave `form-builder-permissions.xml` empty or use `<role name="*" app="*" form="*"/>`, as this allows any user who can reach Form Builder, authenticated or not, to create or modify forms in any application.
   - Note that roles listed in `form-builder-permissions.xml` also grant access to the [Forms Admin page](../../form-runner/feature/forms-admin-page.md) (`/fr/admin`) for the matching applications. See [Editing forms](../../form-runner/access-control/editing-forms.md).
 
 ### Restrict high-risk Form Builder toolbox capabilities
