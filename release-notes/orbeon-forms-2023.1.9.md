@@ -45,7 +45,7 @@ In this release, we have addressed the following issues:
 ### Orbeon Forms 2023.1.9.1
 
 * Security
-    * Allow `fr:component-param-value()` to read sensitive properties from inner scope ([\#8069](https://github.com/orbeon/orbeon-forms/issues/8069))
+    * reCAPTCHA and Friendly Captcha verification fails because private-key property is blocked ([\#8069](https://github.com/orbeon/orbeon-forms/issues/8069))
 * Distribution
     * Docker images: more updates.
 
