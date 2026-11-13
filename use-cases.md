@@ -19,7 +19,7 @@ A local government publishes a number of forms for its constituents. Orbeon Form
 
 ### When a signature on paper is required
 
-Not all workflows can be handled 100% online. Yet. But even when constituents will ultimately need to sign a document on paper, a web form can help. Here is how the workflow looks like:
+Not all workflows can be handled 100% online. Yet. But even when constituents will ultimately need to sign a document on paper, a web form can help. Here is what the workflow looks like:
 
 - Constituents:
     - Fill out the form online, and the data is saved in a database, as above.
