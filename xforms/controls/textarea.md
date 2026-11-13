@@ -110,10 +110,10 @@ When using the attribute `mediatype="text/html"`, the HTML area will clean up th
 \[SINCE Orbeon Forms 2024.1]
 
 * the HTML is parsed
-* only whitelisted elements are preserved
+* only allowed elements are preserved
 * all attributes starting with `on` or containing `javascript:` are removed
 
-The currently supported whitelisted elements are:
+The currently supported allowed elements are:
 
 ```
 a, b, blockquote, br, code, div, em, font, h1, h2, h3, h4, h5, h6, i,
@@ -121,7 +121,7 @@ img, kbd, li, ol, p, pre, span, strong, sub, sup, table, tbody, td,
 th, tr, u, ul
 ```
 
-The list of whitelisted elements is currently not configurable.
+The list of allowed elements is currently not configurable.
 
 \[UNTIL Orbeon Forms 2023.1]
 

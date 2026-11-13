@@ -219,7 +219,7 @@ TODO
 
 [\[SINCE Orbeon Forms 2026.1\]](../release-notes/orbeon-forms-2026.1.md)
 
-To ensure form security, Orbeon Forms enforces a whitelist of allowed XPath functions in user-defined formulas. For details on default allowed functions and how administrators can customize the whitelist for specific forms, see [Allowed XPath functions in formulas and expressions](../configuration/properties/form-runner-allowed-functions.md).
+To ensure form security, Orbeon Forms enforces a list of allowed XPath functions in user-defined formulas. For details on default allowed functions and how administrators can customize the list of allowed functions for specific forms, see [Allowed XPath functions in formulas and expressions](../configuration/properties/form-runner-allowed-functions.md).
 
 ## Examples
 

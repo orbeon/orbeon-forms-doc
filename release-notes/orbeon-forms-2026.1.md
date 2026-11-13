@@ -15,13 +15,13 @@ TODO
 - Navigation bar: Color scheme selector ([#7996](https://github.com/orbeon/orbeon-forms/issues/7996))
 - Wizard: option to hide the table of contents ([#7960](https://github.com/orbeon/orbeon-forms/issues/7960))
 - XPath: new `xxf:csv-to-xml()` and `xxf:xml-to-csv()` functions ([#6826](https://github.com/orbeon/orbeon-forms/issues/6826))
-- Security: Whitelist allowed XPath functions in user forms ([#7266](https://github.com/orbeon/orbeon-forms/issues/7266))
+- Security: Restrict allowed XPath functions in user forms ([#7266](https://github.com/orbeon/orbeon-forms/issues/7266))
 
 ## Compatibility and upgrade notes
 
-### Whitelist of allowed XPath functions in user forms
+### Allowed XPath functions in user forms
 
-Orbeon Forms 2026.1 introduces function whitelisting for XPath expressions and formulas authored in user forms ([#7266](https://github.com/orbeon/orbeon-forms/issues/7266)).
+Orbeon Forms 2026.1 restricts by default which XPath functions can be called in expressions and formulas authored in user forms ([#7266](https://github.com/orbeon/orbeon-forms/issues/7266)).
 
 Starting with this release, user forms operate under a restricted XPath function library by default. Potentially dangerous or internal functions are blocked out of the box, including:
 

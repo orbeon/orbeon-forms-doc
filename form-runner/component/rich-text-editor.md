@@ -12,7 +12,7 @@ This component is used by Form Builder for the "Formatted Text" and "Explanatory
 
 ## Security considerations
 
-This component performs bidirectional sanitation (with whitelisting) of the HTML content. This protects Orbeon Forms from various types of injections and cross-site issues which might be associated with the use of a rich text editor.
+This component performs bidirectional sanitization of the HTML content, preserving only allowed elements and attributes. This protects Orbeon Forms from various types of injections and cross-site issues which might be associated with the use of a rich text editor.
 
 ## XForms usage
 

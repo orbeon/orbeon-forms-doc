@@ -28,11 +28,11 @@ Form Builder automatically sanitizes HTML content entered by form authors, inclu
 
 In addition, all Orbeon Forms HTML output goes through HTML sanitization as well. This also covers cases where HTML might be produced dynamically, for example using formulas.
 
-### Whitelist of allowed XPath functions in user forms
+### Allowed XPath functions in user forms
 
 [\[SINCE Orbeon Forms 2026.1\]](/release-notes/orbeon-forms-2026.1.md)
 
-User forms created with Form Builder can contain formulas and XPath expressions for calculations, validations, visibility, initial values, and actions. To prevent form authors from accessing sensitive server resources, Orbeon Forms enforces a strict whitelist of allowed XPath functions.
+User forms created with Form Builder can contain formulas and XPath expressions for calculations, validations, visibility, initial values, and actions. To prevent form authors from accessing sensitive server resources, Orbeon Forms enforces a strict list of allowed XPath functions.
 
 Form Builder catches disallowed functions during editing, and Form Runner enforces the restriction at compile time and runtime. Administrators can selectively allow specific functions for individual forms when needed.
 

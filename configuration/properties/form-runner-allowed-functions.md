@@ -6,7 +6,7 @@
 
 Form authors can specify XPath formulas for control calculations, validations, visibility, initial values, and actions. In multi-tenant environments or setups where forms are authored by users who should not have access to server internals, allowing arbitrary XPath functions can pose a security risk.
 
-Starting with Orbeon Forms 2026.1, Form Runner enforces a secure-by-default function whitelist on all user-defined formulas and expressions.
+Starting with Orbeon Forms 2026.1, Form Runner enforces a secure-by-default list of allowed functions on all user-defined formulas and expressions.
 
 ## Where restrictions apply
 
@@ -88,7 +88,7 @@ To forbid additional functions or entire namespaces across all forms:
 
 ### Allowing a specific Java method
 
-If your organization has custom Java or Scala utility functions, you can whitelist specific methods for trusted forms:
+If your organization has custom Java or Scala utility functions, you can allow specific methods for trusted forms:
 
 ```xml
 <property
@@ -120,4 +120,4 @@ When editing forms in Form Builder, disallowed functions are caught at design ti
 
 * [Low-level XForms allowed functions configuration](xforms.md#allowed-xpath-functions)
 * [Form Formulas](../../form-builder/formulas.md)
-* [Security](../advanced/security.md#whitelist-of-allowed-xpath-functions-in-user-forms)
+* [Security](../advanced/security.md#allowed-xpath-functions-in-user-forms)
