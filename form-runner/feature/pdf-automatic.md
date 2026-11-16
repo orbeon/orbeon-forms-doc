@@ -80,6 +80,12 @@ Allowed values:
     value="keep-field-colors"/>
 ```
 
+## Zero width no-break space characters
+
+[\[SINCE Orbeon Forms 2026.1\]](/release-notes/orbeon-forms-2026.1.md)
+
+U+FEFF characters (zero width no-break space, byte order mark) are removed from the text of the PDF, as some PDF/A levels don't allow them. To prevent a line break, use a no-break space (U+00A0) instead.
+
 ## Accessibility and PDF/A support
 
 [SINCE Orbeon Forms 2022.1.5 and 2023.1]

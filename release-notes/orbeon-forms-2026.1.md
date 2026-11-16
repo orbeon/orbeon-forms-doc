@@ -99,3 +99,7 @@ Starting with this release:
 **Backward incompatibility:** If you previously customized `oxf.xforms.format.output.dateTime` to adjust the appearance of the Date and Time control in readonly modes, this property will no longer affect the Date and Time control. You should instead configure the date and time formats using the Date and Time control properties (`oxf.xforms.xbl.fr.date.output-format` and `oxf.xforms.xbl.fr.time.output-format`), or configure `oxf.xforms.xbl.fr.datetime.output-format`.
 
 For more details, see [Date and time component](../form-runner/component/date-and-time.md).
+
+### U+FEFF characters in PDF
+
+U+FEFF characters (zero width no-break space, byte order mark) are now removed from the text of the PDF ([\#8055](https://github.com/orbeon/orbeon-forms/issues/8055)). See [Zero width no-break space characters](../form-runner/feature/pdf-automatic.md#zero-width-no-break-space-characters).
