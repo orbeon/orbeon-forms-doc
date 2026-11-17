@@ -49,6 +49,16 @@ In this release, we have addressed the following issues:
 * Distribution
     * Docker images: more updates.
 
+### Orbeon Forms 2023.1.9.2
+
+* Form Runner
+    * Publish API produces a session error, and stateless session handling in other Form Runner services ([\#8083](https://github.com/orbeon/orbeon-forms/issues/8083))
+    * Excel Import: progress shows incorrectly during large import ([\#7029](https://github.com/orbeon/orbeon-forms/issues/7029))
+    * `ConnectionContext` not passed with Excel import when passing `document-id` ([\#7175](https://github.com/orbeon/orbeon-forms/issues/7175))
+    * WebSphere: missing current servlet error ([\#7052](https://github.com/orbeon/orbeon-forms/issues/7052))
+* Distribution
+    * Docker PostgreSQL image: create a separate user for Orbeon Forms ([\#8084](https://github.com/orbeon/orbeon-forms/issues/8084))
+
 ## Compatibility and upgrade notes
 
 ### Cookie forwarding and session cookie name
