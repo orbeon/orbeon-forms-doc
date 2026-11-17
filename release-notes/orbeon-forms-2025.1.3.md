@@ -8,6 +8,8 @@ Today we released Orbeon Forms 2025.1.3! This maintenance release contains bug-f
 * [Orbeon Forms 2025.1.1 PE](orbeon-forms-2025.1.1.md)
 * [Orbeon Forms 2025.1 PE](orbeon-forms-2025.1.md)
 
+_NOTE: Orbeon Forms [2025.1.3.1](#orbeon-forms-2025.1.3.1) and [2025.1.3.2](#orbeon-forms-2025.1.3.2) were released shortly after 2025.1.3 to address regressions found in 2025.1.3._
+
 ## Security updates
 
 **This release includes important security updates. We strongly recommend that all Orbeon Forms 2025.1.x users upgrade to Orbeon Forms 2025.1.3 as soon as possible.** See the [Compatibility and upgrade notes](#compatibility-and-upgrade-notes) and the full list of security fixes under [Issues addressed](#issues-addressed) below.
@@ -257,6 +259,22 @@ In this release, we have addressed over 100 issues, including:
     * Offline: Formatted Text Area doesn't show ([\#8074](https://github.com/orbeon/orbeon-forms/issues/8074))
 * Distribution
     * Docker images: upgrade base WildFly version to 42.0.0, upgrade PostgreSQL JDBC driver, and add transitional WildFly 39 images ([\#7702](https://github.com/orbeon/orbeon-forms/issues/7702))
+
+### Orbeon Forms 2025.1.3.2
+
+* Form Runner
+    * Publish API produces a session error, and stateless session handling in other Form Runner services ([\#8083](https://github.com/orbeon/orbeon-forms/issues/8083))
+* XBL Components & Form Controls
+    * Open file picker when clicking anywhere in attachment drop area ([\#8082](https://github.com/orbeon/orbeon-forms/issues/8082))
+* Model Context Protocol (MCP) Server
+    * New `form_publish` tool ([\#7899](https://github.com/orbeon/orbeon-forms/issues/7899))
+    * Require explicit language maps for text updates and add WebMCP `ui_get_current_language` ([\#8066](https://github.com/orbeon/orbeon-forms/issues/8066))
+    * Support legacy container IDs and nested section insertion ([\#8086](https://github.com/orbeon/orbeon-forms/issues/8086))
+    * Synchronize Form Builder MCP sessions and serialize per-session RPC calls
+    * Support background view mode and fix `form_view`
+    * Place newly inserted grids at end of target section or explicit position
+* Distribution
+    * Docker PostgreSQL image: create a separate user for Orbeon Forms ([\#8084](https://github.com/orbeon/orbeon-forms/issues/8084))
 
 You can download the latest version of Orbeon Forms from the [downloads](https://www.orbeon.com/download) page, or use our Docker images.
 
