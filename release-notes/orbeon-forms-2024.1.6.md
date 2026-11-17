@@ -11,6 +11,8 @@ Today we released Orbeon Forms 2024.1.6! This maintenance release mainly contain
 * [Orbeon Forms 2024.1.1 PE](orbeon-forms-2024.1.1.md)
 * [Orbeon Forms 2024.1 PE](orbeon-forms-2024.1.md)
 
+_NOTE: Orbeon Forms [2024.1.6.1](#orbeon-forms-2024.1.6.1) and [2024.1.6.2](#orbeon-forms-2024.1.6.2) were released shortly after 2024.1.6 to address regressions found in 2024.1.6._
+
 ## Performance enhancements
 
 * **Excel/XML import and export:** Improved performance of Excel export (specifically cell merge region handling and property templates) and added ID indexing for faster form definition processing during import/export ([\#7840](https://github.com/orbeon/orbeon-forms/issues/7840)).
@@ -94,6 +96,13 @@ In this release, we have addressed many issues, including:
     * Test Offline: copy action doesn't warn user ([\#7598](https://github.com/orbeon/orbeon-forms/issues/7598))
 * Distribution
     * Docker images: upgrade base WildFly version to 42.0.0, upgrade PostgreSQL JDBC driver, and add transitional WildFly 39 images ([\#7702](https://github.com/orbeon/orbeon-forms/issues/7702))
+
+### Orbeon Forms 2024.1.6.2
+
+* Form Runner
+    * Publish API produces a session error, and stateless session handling in other Form Runner services ([\#8083](https://github.com/orbeon/orbeon-forms/issues/8083))
+* Distribution
+    * Docker PostgreSQL image: create a separate user for Orbeon Forms ([\#8084](https://github.com/orbeon/orbeon-forms/issues/8084))
 
 ## Compatibility and upgrade notes
 
