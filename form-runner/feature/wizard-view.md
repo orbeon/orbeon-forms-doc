@@ -29,13 +29,15 @@ The wizard view is optional - you can use the regular view instead, and you can 
 
 \[SINCE Orbeon Forms 2016.2]
 
-You can enable or disable the wizard view for a specific form definition directly from Form Builder's Form Settings dialog, under Form Options:
+You can enable or disable the wizard view for a specific form definition directly from Form Builder's Form Settings dialog, in the Wizard tab, with the Wizard View setting:
 
-* **Use Default:** use the configuration specified with the `oxf.fr.detail.view.appearance` property
-* **Always:** enable the wizard view no matter what the `oxf.fr.detail.view.appearance` property specifies
-* **Never:** disable the wizard view no matter what the `oxf.fr.detail.view.appearance` property specifies
+* **Use property:** use the configuration specified with the `oxf.fr.detail.view.appearance` property
+* **Yes:** enable the wizard view no matter what the property specifies
+* **No:** disable the wizard view no matter what the property specifies
 
-![](../../form-builder/images/form-settings-view-options.png)
+![Wizard tab of the Form Settings dialog](../../form-builder/form-settings/wizard.png)
+
+The same tab has the other wizard settings. See [Form Settings](../../form-builder/form-settings.md#wizard).
 
 ## Modes
 

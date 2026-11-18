@@ -255,7 +255,7 @@ Form Builder has a UI to specify whether the Wizard should have a separate table
 
 In addition, showing the section status is supported even when the TOC is not separate. There is also a Form Builder UI to control this.
 
-![New Wizard Form Builder settings](../form-builder/images/form-settings-view-options.png)
+![New Wizard Form Builder settings](../form-builder/form-settings/wizard.png)
 
 ### Actions editor improvements
 
