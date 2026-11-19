@@ -90,7 +90,7 @@ U+FEFF characters (zero width no-break space, byte order mark) are removed from 
 
 [SINCE Orbeon Forms 2022.1.5 and 2023.1]
 
-Experimentally, the following properties allow enabling accessibility and PDF/A support:
+The following properties allow enabling accessibility and PDF/A support:
 
 ```xml
 <property as="xs:boolean" name="oxf.fr.pdf.accessibility" value="true"/>
@@ -115,7 +115,32 @@ Experimentally, the following properties allow enabling accessibility and PDF/A 
         - `3u`: PDF/A-3b plus Unicode
     - default: `none`
 
-Note that the values above are simply passed to the PDF renderer library used by Orbeon Forms. There is currently no guarantee of compliance with the PDF/A standard. 
+### PDF/A conformance
+
+[SINCE Orbeon Forms 2025.1.3]
+
+With one of the levels above, the automatic PDF is a PDF/A file. Orbeon Forms tests this with the [veraPDF](https://verapdf.org/) validator, for the eight levels. Before Orbeon Forms 2025.1.3, the output didn't pass validation.
+
+With PDF/A enabled, the PDF differs from a regular PDF as follows:
+
+- __All levels:__ the document includes an sRGB color profile.
+- __PDF/A-1a and 1b__, which don't allow transparency: images with transparency are drawn on a white background.
+- __PDF/A-2a and 3a__, which don't allow Unicode Private Use Area characters: the file type icon of attachments is hidden, the star of required fields uses a regular character, and the Star Rating control only shows its value as text, for example "4 / 5".
+- __All levels__, [SINCE Orbeon Forms 2026.1]: images which PDF/A doesn't allow as they are get converted to 8-bit sRGB. This includes CMYK images, 16-bit images, and most PNG and TIFF images with their own color profile. Their colors can change slightly.
+
+[SINCE Orbeon Forms 2026.1] Three changes apply to all automatic PDFs, with or without PDF/A, and each removes a cause of validation failure: U+FEFF characters are removed from the text (see [Zero width no-break space characters](#zero-width-no-break-space-characters)), the creation date uses the Gregorian calendar whatever the locale of the server, and the PDF no longer contains an empty interactive form.
+
+### PDF/A limitations
+
+`oxf.fr.pdf.pdf/a` only applies to automatic PDFs. With a [PDF template](pdf-templates.md), the property has no effect, and Orbeon Forms does nothing to make the PDF a PDF/A file.
+
+An automatic PDF doesn't pass validation in the following cases:
+
+- __Long documents, PDF/A-1a and 1b:__ a section or a text which spans a few dozen pages. For long documents, use PDF/A-2 or PDF/A-3.
+- __Private Use Area characters, PDF/A-2a and 3a:__ a character between U+E000 and U+F8FF which one of the fonts of the PDF contains, for example an icon from an icon font in an HTML label. If no font contains the character, the file is valid, but the character doesn't show.
+- __Very long strings:__ a string of more than 65,535 bytes with PDF/A-1, or 32,767 bytes with PDF/A-2 and PDF/A-3, for example a URL of that length in a field or in a link. We consider this an extreme and rare case.
+
+A valid file can still miss content: as in a regular PDF, a character which none of the configured fonts contains doesn't show correctly (see [Font configuration and embedding](#font-configuration-and-embedding)). Also, Orbeon Forms only validates with veraPDF, and another validator can judge some points differently. If you archive PDF/A files, validate them with your own forms and data.
 
 ## See also
 

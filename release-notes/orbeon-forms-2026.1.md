@@ -16,6 +16,8 @@ TODO
 - Wizard: option to hide the table of contents ([#7960](https://github.com/orbeon/orbeon-forms/issues/7960))
 - XPath: new `xxf:csv-to-xml()` and `xxf:xml-to-csv()` functions ([#6826](https://github.com/orbeon/orbeon-forms/issues/6826))
 - Security: Restrict allowed XPath functions in user forms ([#7266](https://github.com/orbeon/orbeon-forms/issues/7266))
+- PDF/A: images in CMYK, with 16 bits per component or with their own color profile no longer make the output fail validation ([#8054](https://github.com/orbeon/orbeon-forms/issues/8054)), and neither do U+FEFF characters ([#8055](https://github.com/orbeon/orbeon-forms/issues/8055)) or a server locale with a non-Gregorian calendar ([#8052](https://github.com/orbeon/orbeon-forms/issues/8052)). The documentation now lists what Orbeon Forms does to produce PDF/A files, and the remaining limitations ([doc](../form-runner/feature/pdf-automatic.md#pdf-a-conformance))
+- PDF: automatic PDFs no longer contain an empty interactive form ([#7394](https://github.com/orbeon/orbeon-forms/issues/7394))
 
 ## Compatibility and upgrade notes
 
