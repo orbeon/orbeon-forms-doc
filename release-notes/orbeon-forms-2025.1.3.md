@@ -8,6 +8,8 @@ Today we released Orbeon Forms 2025.1.3! This maintenance release contains bug-f
 * [Orbeon Forms 2025.1.1 PE](orbeon-forms-2025.1.1.md)
 * [Orbeon Forms 2025.1 PE](orbeon-forms-2025.1.md)
 
+![PDF to web form conversion example](images/pdf-to-form-conversion.webp)
+
 _NOTE: Orbeon Forms [2025.1.3.1](#orbeon-forms-2025.1.3.1) and [2025.1.3.2](#orbeon-forms-2025.1.3.2) were released shortly after 2025.1.3 to address regressions found in 2025.1.3._
 
 ## Security updates
@@ -54,6 +56,8 @@ The Form Builder MCP server for AI agents has been expanded with several new cap
 * **Localized labels and choices:** Control, section, and selection item tools now support localized labels and choices across multiple languages ([\#7748](https://github.com/orbeon/orbeon-forms/issues/7748)).
 * **Form Builder permissions:** The MCP server now enforces permissions defined in `form-builder-permissions.xml` ([\#7847](https://github.com/orbeon/orbeon-forms/issues/7847)).
 * **Implicit form session:** The form session is now maintained implicitly across tool calls, and `form_save` returns the saved document ID ([\#7748](https://github.com/orbeon/orbeon-forms/issues/7748)).
+
+Together, these enhancements enable AI-assisted [PDF to web forms conversion](https://www.orbeon.com/solution/pdf-to-web-forms), allowing agents to build complete web forms from existing PDFs and attach the original fillable PDF templates.
 
 ### Landing page enhancements
 
