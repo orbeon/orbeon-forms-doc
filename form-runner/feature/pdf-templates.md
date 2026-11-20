@@ -171,6 +171,10 @@ This will, by default, use a PDF template if there is one, otherwise use the aut
 
 You can, in your `properties-local.xml`, specify your own process, and, using the `use-pdf-template`, `pdf-template-name`, and `pdf-template-lang` action parameters, be specific about which template you'd like to use, if any. For more about these parameters and the `open-rendered-format` action, see [the `open-rendered-format` action](../advanced/buttons-and-processes/actions-form-runner.md#open-rendered-format).
 
+## PDF/A
+
+The `oxf.fr.pdf.pdf/a` property has no effect with a PDF template: Orbeon Forms does nothing to make the PDF a PDF/A file. See [PDF/A limitations](pdf-automatic.md#pdf-a-limitations).
+
 ## See also
 
 * [PDF Production](pdf-production.md)
