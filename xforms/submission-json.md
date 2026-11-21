@@ -96,19 +96,9 @@ Here is a link to [more examples](https://github.com/orbeon/orbeon-forms/blob/ma
 
 ### Seeing the converted XML
 
-You can visualize the XML converted from JSON with Form Builder as follows:
-
-1. Create a new form.
-2. In the Advanced tab, create a new HTTP service, name it `my-service`, provide the URL to your JSON, and save.
-3. In the Advanced tab, create a new Action, name it `show-result`, run it on form load after the controls are ready, have it call `my-service`.
-4. Still while editing the new action, in the Service Response Actions tab set the value of "(control-1)" to `saxon:serialize(., 'xml')`.
-5. Hit the Text button, and you'll find the XML in the text field. To make it easier to read, copy the XML in the text field, and paste it in an [XML formatting tool](https://www.freeformatter.com/xml-formatter.html).
-
-![How to see the converted XML](images/submission-json-see-xml.png)
-
 \[SINCE Orbeon Forms 2019.1]
 
-The Form Builder HTTP Service dialog supports viewing JSON response translated into XML.
+The Form Builder HTTP Service dialog supports viewing JSON responses translated into XML.
 
 See [XML view of JSON responses](../form-builder/http-services.md#xml-view-of-json-responses).
 
