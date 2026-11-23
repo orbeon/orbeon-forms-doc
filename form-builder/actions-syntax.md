@@ -348,16 +348,103 @@ Assume now that the control `my-repeated-value` is within a repeated grid, itsel
 or:
 
 ```xml
-<fr:value control="..." ref="..."/>
+<fr:value control="..." ref="..." metadata="..."/>
 ```
 
 When calling an [HTTP service](http-services.md), you can set XML request body values using nested `<fr:value>` elements.
 
-| Attribute | Mandatory | Value                  | Comment                                              |
-|-----------|-----------|------------------------|------------------------------------------------------|
-| `control` | No        | control name           | either this or `value` must be specified             |
-| `value`   | No        | value expression       | either this or `control` must be specified           |
-| `ref`     | Yes       | destination expression | points to an element or attribute in the request XML |
+| Attribute  | Mandatory | Value                                                 | Comment                                                                                                                         |
+|------------|-----------|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| `control`  | No        | control name                                          | either this or `value` must be specified                                                                                        |
+| `value`    | No        | value expression                                      | either this or `control` must be specified                                                                                      |
+| `ref`      | Yes       | destination expression                                | points to an element or attribute in the request XML (must point to an element when `control` references an attachment control) |
+| `metadata` | No        | space-separated list: `filename`, `mediatype`, `size` | attachment metadata to include when `control` references an attachment control \[SINCE Orbeon Forms 2026.1]                     |
+
+\[SINCE Orbeon Forms 2026.1] When `control` references a single or multiple attachment control (such as `<fr:attachment>`, `<fr:image-attachment>`, `<fr:video-attachment>`, or `<fr:audio-attachment>`), Orbeon Forms reads the attached file(s) and encodes their binary content as Base64 in the service request body instead of passing an internal attachment URL.
+
+You can optionally include any subset of `filename`, `mediatype`, and `size` via the `metadata` attribute:
+
+```xml
+<fr:value
+    control="my-attachment"
+    ref="/request/file"
+    metadata="filename mediatype size"/>
+```
+
+Depending on whether the control holds a single or multiple attachments, whether `metadata` is specified, and whether the HTTP service uses XML (`application/xml`) or [JSON](../xforms/submission-json.md#sending-json) (`application/json`) serialization, the target element pointed to by `ref` (for example `<file/>` or `<files/>`) is serialized as follows:
+
+* **Single attachment, without `metadata`**:
+  * **XML**: `<file>SGVsbG8=</file>` (or `<file/>` when empty)
+  * **JSON**: `{ "file": "SGVsbG8=" }` (or `{ "file": null }` when empty)
+* **Single attachment, with `metadata="filename mediatype size"`**:
+  * **XML**:
+
+    ```xml
+    <file filename="map.geojson" mediatype="application/geo+json" size="5">SGVsbG8=</file>
+    ```
+
+    (or `<file/>` when empty)
+  * **JSON**:
+
+    ```json
+    {
+      "file": {
+        "content": "SGVsbG8=",
+        "filename": "map.geojson",
+        "mediatype": "application/geo+json",
+        "size": 5
+      }
+    }
+    ```
+
+    (or `{ "file": null }` when empty)
+* **Multiple attachments, without `metadata`**:
+  * **XML**:
+
+    ```xml
+    <files>
+        <_>SGVsbG8=</_>
+        <_>V29ybGQ=</_>
+    </files>
+    ```
+
+    (or `<files/>` when empty)
+  * **JSON**: `{ "files": ["SGVsbG8=", "V29ybGQ="] }` (or `{ "files": [] }` when empty)
+* **Multiple attachments, with `metadata="filename mediatype size"`**:
+  * **XML**:
+
+    ```xml
+    <files>
+        <_ filename="first.txt" mediatype="text/plain" size="5">SGVsbG8=</_>
+        <_ filename="second.txt" mediatype="text/plain" size="5">V29ybGQ=</_>
+    </files>
+    ```
+
+    (or `<files/>` when empty)
+  * **JSON**:
+
+    ```json
+    {
+      "files": [
+        {
+          "content": "SGVsbG8=",
+          "filename": "first.txt",
+          "mediatype": "text/plain",
+          "size": 5
+        },
+        {
+          "content": "V29ybGQ=",
+          "filename": "second.txt",
+          "mediatype": "text/plain",
+          "size": 5
+        }
+      ]
+    }
+    ```
+
+    (or `{ "files": [] }` when empty)
+
+For a JSON service, in the HTTP Service Editor's XML Request Body, place a placeholder element under `<json type="object">` (such as `<file type="null"/>` or `<files type="array"/>`) and point `ref` to it (for example `ref="/json/file"` or `ref="/json/files"`).
 
 #### Passing a URL parameter
 
