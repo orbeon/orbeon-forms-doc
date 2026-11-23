@@ -4,7 +4,7 @@
 
 The number component is designed to enter integer or decimal numbers. See [Currency](currency.md) for a similar component designed to enter currency amounts.
 
-![Number field with unit](<images/xbl-number.png>)
+<figure><img src="images/xbl-number.png" alt="Number field with unit" width="185"></figure>
 
 ## Basic usage
 
@@ -20,7 +20,7 @@ You use the number component like a regular input field, for example:
 
 Form Builder shows extended control settings for Number and Currency fields:
 
-![Number and Currency field control settings](images/xbl-number-control-settings.png)
+<figure><img src="images/xbl-number-control-settings.png" alt="Number and Currency field control settings" width="492"></figure>
 
 These are also available at the form level:
 
@@ -123,7 +123,7 @@ Otherwise, the control shows the numeric pane of the regular keyboard:
 
 Here is an example with a suffix:
 
-![Number field with suffix](<images/xbl-number.png>)
+<figure><img src="images/xbl-number.png" alt="Number field with suffix" width="185"></figure>
 
 ```xml
 <fr:number ref="my-number" suffix="m/s">
@@ -200,11 +200,11 @@ This is useful if you don't want to keep the full precision of decimal values in
 
 Regular controls:
 
-![Right-aligned content](images/xbl-number-right-aligned.png)
+<figure><img src="images/xbl-number-right-aligned.png" alt="Right-aligned content" width="466"></figure>
 
 Within a repeated grid:
 
-![Right-aligned content in a repeated grid](images/xbl-number-right-aligned-repeated-grid.png)
+<figure><img src="images/xbl-number-right-aligned-repeated-grid.png" alt="Right-aligned content in a repeated grid" width="726"></figure>
 
 ## See also
 

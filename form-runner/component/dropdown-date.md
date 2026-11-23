@@ -4,7 +4,7 @@
 
 This component allows users to select a date with 3 drop-downs, for the month, day, and year.
 
-![Dropdown date component](images/xbl-dropdown-date.png)
+<figure><img src="images/xbl-dropdown-date.png" alt="Dropdown date component" width="204"></figure>
 
 ## Default
 
@@ -32,7 +32,7 @@ Starting Orbeon Forms 2020.1, dynamic values should be written as AVTs and not p
 
 Form Builder offers an option in the "Control Settings" dialog. The following example shows how to set the first available year as the current year, and the last available year as 10 years from the current year.
 
-![Start year and End year value templates](images/xbl-dropdown-date-years.png)
+<figure><img src="images/xbl-dropdown-date-years.png" alt="Start year and End year value templates" width="488"></figure>
 
 ### Until Orbeon Forms 2019.2
 

@@ -4,7 +4,7 @@
 
 XBL components can be loaded by the Form Builder toolbox. In order for Form Builder to have information about those components, metadata can be added to each XBL binding.
 
-![](images/text-controls.png)
+<figure><img src="images/text-controls.png" alt="" width="200"></figure>
 
 ## Namespace
 

@@ -60,17 +60,17 @@ For more, see [Versioning of section templates](section-templates.md#versioning-
 
 The "Reload Toolbox" button is located at the top of the "Advanced" tab.
 
-![](images/advanced-menu.png)
+<figure><img src="images/advanced-menu.png" alt="" width="218"></figure>
 
 ### Orbeon Forms 2017.1 and earlier
 
 The "Reload Toolbox" icon is located at the top of the toolbox:
 
-![](images/toolbox-reload.png)
+<figure><img src="images/toolbox-reload.png" alt="" width="275"></figure>
 
 ## Form structure
 
-![](images/form-structure.png)
+<figure><img src="images/form-structure.png" alt="" width="200"></figure>
 
 ### New Section button
 
@@ -123,7 +123,7 @@ You can also drag a control directly from the toolbox to a grid cell in the form
 
 ### Text Controls
 
-![](images/text-controls.png)
+<figure><img src="images/text-controls.png" alt="" width="200"></figure>
 
 | Name                    | Description                                    |
 | ----------------------- | ---------------------------------------------- |
@@ -138,7 +138,7 @@ The controls appear like this at design time:
 
 ### Utility Controls
 
-![](images/utility-controls.png)
+<figure><img src="images/utility-controls.png" alt="" width="200"></figure>
 
 | Name                 | Description                                                                                                                                                                                         |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -148,7 +148,7 @@ The controls appear like this at design time:
 
 ### Typed Controls
 
-![](images/typed-controls.png)
+<figure><img src="images/typed-controls.png" alt="" width="200"></figure>
 
 | Name                | Description                                                                                                                                                           |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -166,7 +166,7 @@ The controls appear like this at design time:
 
 ### Date and time Controls
 
-![](images/date-time-controls.png)
+<figure><img src="images/date-time-controls.png" alt="" width="200"></figure>
 
 | Name              | Description                                  |
 | ----------------- | -------------------------------------------- |
@@ -182,7 +182,7 @@ The controls appear like this at design time:
 
 ### Selection Controls
 
-![](images/selection-controls.png)
+<figure><img src="images/selection-controls.png" alt="" width="200"></figure>
 
 | Name                           | Selection | Description                                                  |
 | ------------------------------ | --------- | ------------------------------------------------------------ |
@@ -206,7 +206,7 @@ _NOTE: The "Scrollable List" control is deprecated since Orbeon Forms 2016.1 and
 
 ### Attachment Controls
 
-![](images/attachment-controls.png)
+<figure><img src="images/attachment-controls.png" alt="" width="200"></figure>
 
 | Name                          | Description                                                                                                                                                                                                                                                                        |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -233,7 +233,7 @@ This is the Handwritten Signature control (which of course you usually leave bla
 
 ### Button Controls
 
-![](images/button-controls.png)
+<figure><img src="images/button-controls.png" alt="" width="200"></figure>
 
 | Name            | Description                |
 | --------------- | -------------------------- |
@@ -246,7 +246,7 @@ _NOTE: Buttons do not appear at all in preview mode._
 
 The controls appear like this at design time:
 
-![](images/button-controls-design-time.png)
+<figure><img src="images/button-controls-design-time.png" alt="" width="272"></figure>
 
 ### Choices
 

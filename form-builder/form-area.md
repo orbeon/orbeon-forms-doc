@@ -80,7 +80,7 @@ You can perform the following operations on grids:
   * Cut or copy the entire grid to the clipboard (scissors or copy icons)
     * _NOTE: Until Orbeon Forms 2018.2, this was only available for repeated grids._
 
-![Grid icons](images/grid-icons.png)
+<figure><img src="images/grid-icons.png" alt="Grid icons" width="400"></figure>
 
 Expanding/shrinking cells horizontally makes grid cells span _columns_. This allows grid cells to have a width of 1, 2, and up to 12 columns.
 
@@ -117,7 +117,7 @@ You can perform the following operations on grids:
 
 For delete operations, a warning dialog shows if controls will be deleted as a result.
 
-![Column confirmation dialog](../form-runner/component/images/xbl-alert-dialog.png)
+<figure><img src="../form-runner/component/images/xbl-alert-dialog.png" alt="Column confirmation dialog" width="502"></figure>
 
 ## Grid cells and controls
 

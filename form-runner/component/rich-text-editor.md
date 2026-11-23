@@ -4,7 +4,7 @@
 
 This component wraps the [TinyMCE](https://www.tiny.cloud/) rich text editor.
 
-![](images/xbl-tinymce.png)
+<figure><img src="images/xbl-tinymce.png" alt="" width="545"></figure>
 
 ## Use
 

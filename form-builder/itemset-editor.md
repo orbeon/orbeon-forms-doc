@@ -15,7 +15,7 @@ For each choice, you can enter:
 
 If you provide a hint for a choice, that choice will be highlighted and the hint you provided will show when users move the mouse pointer over the label, as shown in the following screenshot:
 
-![](../form-runner/images/itemset-hint.png)
+<figure><img src="../form-runner/images/itemset-hint.png" alt="" width="220"></figure>
 
 For radio buttons and checkboxes, the "Mark this checkbox if you'd like to type HTML tags" option shows. If you check the HTML checkbox, all the hints and labels you type in the dialog are interpreted as HTML, allowing you to use HTML tags in labels and hints, say to make text bold or italic:
 
@@ -23,7 +23,7 @@ For radio buttons and checkboxes, the "Mark this checkbox if you'd like to type 
 
 This results in the following hint:
 
-![](../form-runner/images/itemset-hint-html.png)
+<figure><img src="../form-runner/images/itemset-hint-html.png" alt="" width="220"></figure>
 
 You add items using the "+" button.
 

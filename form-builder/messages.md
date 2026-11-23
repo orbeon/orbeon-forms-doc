@@ -12,7 +12,7 @@ Some of the [Form Runner actions](../form-runner/advanced/buttons-and-processes/
 
 You can open the Messages dialog by clicking on the "Messages" button, under the "Advanced" tab, in the toolbox.
 
-![](images/advanced-menu.png)
+<figure><img src="images/advanced-menu.png" alt="" width="218"></figure>
 
 Each message must have a language, a name, and a value.
 

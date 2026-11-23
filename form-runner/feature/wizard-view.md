@@ -221,7 +221,7 @@ When using the `separate` table of contents position (see above), the wizard aut
 * **Errors:** the user has visited the section and some fields have been filled but contain errors.
 * **Complete:** the user has visited the section and all the required fields for the section have been filled.
 
-![Wizard validated mode](../images/wizard-status.png)
+<figure><img src="../images/wizard-status.png" alt="Wizard validated mode" width="580"></figure>
 
 [SINCE Orbeon Forms 2022.1]
 

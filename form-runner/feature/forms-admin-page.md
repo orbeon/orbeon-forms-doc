@@ -50,11 +50,11 @@ Administrators can select forms in two ways:
 * by using the checkboxes next to the form
 * by using the _Select_ menu to automatically select all forms matching a certain condition
 
-![Select Menu](../images/home-select-menu.png)
+<figure><img src="../images/home-select-menu.png" alt="Select Menu" width="216"></figure>
 
 The operations listed in the Operation menu are then available depending on the current selection:
 
-![Operation Menu](../images/home-operation-menu.png)
+<figure><img src="../images/home-operation-menu.png" alt="Operation Menu" width="217"></figure>
 
 ## Controlling form definitions availability
 

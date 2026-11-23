@@ -20,7 +20,7 @@ The dialog allows you to configure the content of emails sent by Orbeon Forms. Y
 
 You can open the "Email Settings" by clicking on the "Email Settings" button, under the "Advanced" tab, in the toolbox.
 
-![](images/advanced-menu.png)
+<figure><img src="images/advanced-menu.png" alt="" width="218"></figure>
 
 * Template name – Each email template must have a _name_. This name is not exposed to end users; it is only for your own use, to understand what each template is for, and to be able to refer to a specific template in the [`email(template = "my-template")` action](../form-runner/advanced/buttons-and-processes/actions-form-runner-email.md).\
   Localization – If your form is available in multiple languages, a "Language" dropdown shows next to the template name, allowing you to select which language this template is for. When an email is sent, the template that corresponds to the user's language is automatically used.

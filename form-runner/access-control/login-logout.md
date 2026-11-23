@@ -15,11 +15,11 @@ Form Runner can show a _user menu_ in the navigation bar, allowing users to log 
 
 When enabled, before users log in, the menu contains 2 entries: "Login" and "Register", as shown in the screenshot below.
 
-![User menu when logged out](../images/logout-logout-menu-logged-out.png)
+<figure><img src="../images/logout-logout-menu-logged-out.png" alt="User menu when logged out" width="217"></figure>
 
 Conversely, when users are logged in, the menu will show who the user is, as well as provide a way for users to log out.
 
-![User menu when logged in](../images/logout-logout-menu-logged-in.png)
+<figure><img src="../images/logout-logout-menu-logged-in.png" alt="User menu when logged in" width="233"></figure>
 
 You can configure what page users will be taken to when they select "Login", "Logout", or "Register" by setting the properties below, shown here with their default value. Setting a property to the empty string hides the corresponding entry in the menu.
 

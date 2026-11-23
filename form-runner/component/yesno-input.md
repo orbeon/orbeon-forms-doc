@@ -8,7 +8,7 @@
 
 The `fr:yesno-input` component displays a simple choice between "Yes" and "No". It stores a value of `true` when "Yes" is selected and `false` when "No" is selected.
 
-![Appearance](images/xbl-yesno-input.png)
+<figure><img src="images/xbl-yesno-input.png" alt="Appearance" width="115"></figure>
 
 This control is generally recommended over the [Checkbox Input Component](checkbox-input.md) for binary (or boolean) selection, because:
 

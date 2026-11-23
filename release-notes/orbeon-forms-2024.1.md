@@ -60,7 +60,7 @@ The format allows you to control the following:
 * the separator to use
 * pad the months and days with zeros or not
 
-<figure><img src="../form-runner/component/images/xbl-date-editor-custom-cropped-small.png" alt=""><figcaption><p>Custom date format configuration</p></figcaption></figure>
+<figure><img src="../form-runner/component/images/xbl-date-editor-custom-cropped-small.png" alt="" width="481"><figcaption><p>Custom date format configuration</p></figcaption></figure>
 
 If you are configuring this at the form control or form level, you can do this in the Form Builder UI, so you don’t have to figure out a textual syntax (but you still use such a syntax in Orbeon Forms configuration properties).
 
@@ -69,11 +69,11 @@ In addition, we have fixed other issues with the Date control, and we have broug
 * Use browser date picker
 * First day of the week
 
-<figure><img src="../form-runner/component/images/xbl-date-editor.png" alt=""><figcaption><p>Browser date picker and first day of the week</p></figcaption></figure>
+<figure><img src="../form-runner/component/images/xbl-date-editor.png" alt="" width="481"><figcaption><p>Browser date picker and first day of the week</p></figcaption></figure>
 
 The following shows examples of Date and Time controls at runtime:
 
-<figure><img src="../form-runner/component/images/xbl-date-time-controls.png" alt=""><figcaption><p>Date and time controls</p></figcaption></figure>
+<figure><img src="../form-runner/component/images/xbl-date-time-controls.png" alt="" width="624"><figcaption><p>Date and time controls</p></figcaption></figure>
 
 ### Sorting and searching on the Admin and Published Forms pages
 
@@ -97,7 +97,7 @@ You now have a choice of several form density settings:
 
 This setting can be set globally, per app, or per form, with a setting in Form Builder as well.
 
-<figure><img src="../form-builder/images/form-settings-density.png" alt=""><figcaption><p>Form Density Setting</p></figcaption></figure>
+<figure><img src="../form-builder/images/form-settings-density.png" alt="" width="567"><figcaption><p>Form Density Setting</p></figcaption></figure>
 
 For more, see also the [Form Density Setting](https://www.orbeon.com/2024/11/form-density) blog post.
 

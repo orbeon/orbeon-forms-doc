@@ -6,7 +6,7 @@ With Orbeon Forms, [formulas](formulas.md) are very important: they are used for
 
 This new, still experimental feature allows you to inspect formulas. You access it under the "Test" menu.
 
-![The "Inspect Formulas" button](images/inspect-formulas-button.png)
+<figure><img src="images/inspect-formulas-button.png" alt="The &quot;Inspect Formulas&quot; button" width="290"></figure>
 
 ## Availability
 

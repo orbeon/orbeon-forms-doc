@@ -15,11 +15,11 @@
 
 The map component shows the location of an address on the map, but doesn't by itself allow users to enter an address. So, in Form Builder, you'll want to first create a text field for users to enter an address. Say you name this field `address`. Then add a map control, which you'll find after scrolling to the very bottom of the left sidebar, open the Control Settings for the new control, and under Formulas set its Calculated Value as `$address`. If you test the form, the map will show the map of the world.
 
-![](example-map-world.png)
+<figure><img src="example-map-world.png" alt="" width="469"></figure>
 
 Enter a location or address, press enter or tab out, and, if found, a marker will be added on the map at that location.
 
-![](example-map-address.png)
+<figure><img src="example-map-address.png" alt="" width="466"></figure>
 
 ## Source
 

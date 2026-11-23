@@ -83,7 +83,7 @@ Built-in types include:
   * Time: time stored in ISO format
   * Date and Time: date and time stored in ISO format
 
-![Built-in Types](images/built-in-types.png)
+<figure><img src="images/built-in-types.png" alt="Built-in Types" width="246"></figure>
 
 _NOTE: Prior to Orbeon Forms 4.3, the list of available types was longer, as explained in_ [_this blog post_](https://blog.orbeon.com/2013/07/simplifying-list-of-data-types-in-form.html)_._
 

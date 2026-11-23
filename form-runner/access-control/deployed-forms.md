@@ -12,7 +12,7 @@ You can restrict which users can access which forms, and what operations they ca
 
 By default, no restriction is imposed on _who_ can do _what_ with forms you create in Form Builder. You enable permissions by going to the Form Builder toolbox, and under _Advanced_, clicking on _Permissions_.
 
-![Opening the Permissions dialog](../../form-builder/images/advanced-menu.png)
+<figure><img src="../../form-builder/images/advanced-menu.png" alt="Opening the Permissions dialog" width="218"></figure>
 
 This shows the following dialog:
 

@@ -10,7 +10,7 @@ In XForms, buttons are called "triggers" and use the `<xf:trigger>` element. A s
 
 This is the default appearance of a button.
 
-![](../images/xforms-button-full.png)
+<figure><img src="../images/xforms-button-full.png" alt="" width="150"></figure>
 
 ### Usage
 
@@ -46,7 +46,7 @@ or:
 
 The `minimal` appearance creates a button which appears like a link.
 
-![](../images/xforms-button-link.png)
+<figure><img src="../images/xforms-button-link.png" alt="" width="150"></figure>
 
 ### Usage
 
@@ -70,7 +70,7 @@ When the trigger has the `full` appearance, the following additional appearances
 * `xxf:small` (SINCE Orbeon Forms 2016.3)
 * `xxf:large` (SINCE Orbeon Forms 2016.3)
 
-![](../images/xforms-buttons-appearances.png)
+<figure><img src="../images/xforms-buttons-appearances.png" alt="" width="150"></figure>
 
 These appearances are mutually exclusive. They match corresponding [Bootstrap button classes](https://getbootstrap.com/docs/5.1/components/buttons/).
 

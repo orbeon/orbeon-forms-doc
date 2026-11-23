@@ -10,7 +10,7 @@ Today we released Orbeon Forms 2021.1! This release introduces new features and 
 
 Orbeon Forms 2021.1 allows you to test PDF production without publishing your form.
 
-![The "Test PDF" button](../form-builder/images/test-pdf-button.png)
+<figure><img src="../form-builder/images/test-pdf-button.png" alt="The &quot;Test PDF&quot; button" width="290"></figure>
 
 This feature provides a number of options that help test some of the form's logic as well:
 
@@ -32,7 +32,7 @@ The shortcuts open a small dialog. Clicking or pressing the Enter key and then t
 
 If the "Open Settings Dialog" option is selected, the "Control Settings" dialog for the control also opens right away.
 
-![The quick search dialog](../form-builder/images/quick-search.png)
+<figure><img src="../form-builder/images/quick-search.png" alt="The quick search dialog" width="635"></figure>
 
 For details, see [Quick control search](../form-builder/quick-control-search.md).
 
@@ -87,7 +87,7 @@ This is still the case with Orbeon Forms 2021.1, however we made lots of interna
 
 With Orbeon Forms 2021.1, we are releasing a preview of this feature. From Form Builder, simply use the new "Test Offline" button to see whether your form operates and renders properly in this new mode.
 
-![The "Test Offline" button](../form-builder/images/test-offline-button.png)
+<figure><img src="../form-builder/images/test-offline-button.png" alt="The &quot;Test Offline&quot; button" width="290"></figure>
 
 When you do this:
 
@@ -112,7 +112,7 @@ With Orbeon Forms, formulas are very important: they are used for calculating va
 
 A new, still experimental feature allows you to inspect formulas. You access it under the "Test" menu.
 
-![The "Inspect Formulas" button](../form-builder/images/inspect-formulas-button.png)
+<figure><img src="../form-builder/images/inspect-formulas-button.png" alt="The &quot;Inspect Formulas&quot; button" width="290"></figure>
 
 This allows you to see, in a table, the following formulas used in the form for:
 
@@ -185,17 +185,17 @@ However, for scientific calculations, a floating-point type is appropriate. For 
 
 For details, see [Control Settings](../form-builder/validation.md#data-type-validation).
 
-![Built-in Types](../form-builder/images/built-in-types-double.png)
+<figure><img src="../form-builder/images/built-in-types-double.png" alt="Built-in Types" width="246"></figure>
 
 ### Hints for dropdown control choices
 
 Hints were already supported, among selection controls, on "Radio Buttons" and "Checkboxes" controls. They are now used on the "Static Dropdown" as well. This allows browsers to show hints when the user hovers over an entry. Screen readers also read the hint, represented as a `title` attribute in HTML.
 
-!["Static Dropdown" hint](../form-runner/images/dropdown-hint.png)
+<figure><img src="../form-runner/images/dropdown-hint.png" alt="&quot;Static Dropdown&quot; hint" width="713"></figure>
 
 This also works with the "Dropdown with Search" control.
 
-!["Dropdown with Search" hint](../form-runner/images/dropdown-search-hint.png)
+<figure><img src="../form-runner/images/dropdown-search-hint.png" alt="&quot;Dropdown with Search&quot; hint" width="445"></figure>
 
 ### Option to show all dropdown control values in automatic PDF
 
@@ -203,7 +203,7 @@ When producing a PDF file, single-selection controls like the "Static Dropdown" 
 
 For more, see [Automatic PDF options](../form-builder/control-settings.md#automatic-pdf-options).
 
-![PDF options](../form-builder/images/control-settings-pdf-options.png)
+<figure><img src="../form-builder/images/control-settings-pdf-options.png" alt="PDF options" width="230"></figure>
 
 ### More fine-grained control over calculations
 

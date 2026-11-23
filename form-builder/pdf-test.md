@@ -11,7 +11,7 @@ There are two ways to access the "Test PDF" function:
 1. directly from the Form Builder's main window's "Test" menu
 2. from the "Test Form" window
 
-![The "Test" menu](images/test-pdf-button.png)
+<figure><img src="images/test-pdf-button.png" alt="The &quot;Test&quot; menu" width="290"></figure>
 
 When accessed directly, "Test PDF" shows the following dialog:
 

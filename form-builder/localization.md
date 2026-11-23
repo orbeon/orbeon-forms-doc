@@ -10,7 +10,7 @@ Form Builder has localization support. This means that your form's titles, label
 
 By default, only one language is present, typically English. The default language is configurable by the Form Builder system administrator. By pressing the "⊕" icon, a dropdown dialog shows. The dropdown list allows you to pick a new language to add to the list of languages of the form.
 
-![Adding a language](images/language-add.png)
+<figure><img src="images/language-add.png" alt="Adding a language" width="391"></figure>
 
 When a new language is added:
 

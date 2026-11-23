@@ -53,7 +53,7 @@ The "Control Settings" dialog now includes a UI for the various appearances of b
 
 At runtime, this translates into various button appearances:
 
-![Button appearances](../form-builder/images/button-appearance-runtime.png)
+<figure><img src="../form-builder/images/button-appearance-runtime.png" alt="Button appearances" width="660"></figure>
 
 This was already supported at runtime, but there was no selector in the "Control Settings" dialog to set it.
 

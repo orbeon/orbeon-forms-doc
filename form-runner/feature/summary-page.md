@@ -63,7 +63,7 @@ When the corresponding [`oxf.fr.summary.show-*` properties](../../configuration/
 
 The created by, modified by, and workflow stage search fields contain distinct values from accessible data.
 
-![Search by created, modified, etc.](../images/summary-search-created-last-modified.png)
+<figure><img src="../images/summary-search-created-last-modified.png" alt="Search by created, modified, etc." width="578"></figure>
 
 ### Dynamic dropdowns
 

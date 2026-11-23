@@ -12,7 +12,7 @@ The exception is anything that is documented in the Orbeon Forms documentation, 
 
 The "Edit Source" button under the "Advanced" tab in the toolbox opens the "Edit Source" dialog.
 
-![](images/advanced-menu.png)
+<figure><img src="images/advanced-menu.png" alt="" width="218"></figure>
 
 ## With Orbeon Forms 2017.1 and earlier
 

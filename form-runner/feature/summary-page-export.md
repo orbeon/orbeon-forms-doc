@@ -73,7 +73,7 @@ The Excel document includes:
   * Modified By: username of the user who last modified the data
   * Workflow stage: name of the workflow stage associated with the data
 
-![Example of Excel export from the Summary page](../images/summary-excel-export-sheet.png)
+<figure><img src="../images/summary-excel-export-sheet.png" alt="Example of Excel export from the Summary page" width="640"></figure>
 
 ## See also
 

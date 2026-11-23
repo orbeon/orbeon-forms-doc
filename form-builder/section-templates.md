@@ -118,7 +118,7 @@ When you open Form Builder, the latest version of the controls and section templ
 
 If you make changes to section templates by modifying and publishing a library form, you must reload the toolbox in your form to reflect the latest changes using the "Reload Toolbox" icon at the top of the toolbox (Orbeon Forms 2017.1 and earlier) or the "Reload Toolbox" button in the "Advanced" tab (Orbeon Forms 2017.2).
 
-![](images/advanced-menu.png)
+<figure><img src="images/advanced-menu.png" alt="" width="218"></figure>
 
 For more about reloading, see [Reloading the toolbox](toolbox.md#reloading-the-toolbox)
 
@@ -135,7 +135,7 @@ When [versioning](../form-runner/feature/versioning.md) is available:
 
 For example, if you have published versions 1, 2 and 3 of the `acme` library form, the toolbox shows a dropdown with those versions.
 
-![Version 2 of the section templates library](<images/section-templates-v2.png>)
+<figure><img src="images/section-templates-v2.png" alt="Version 2 of the section templates library" width="222"></figure>
 
 When you select a particular version, the toolbox reloads with the latest published form definition with that version.
 

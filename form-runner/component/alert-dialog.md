@@ -8,7 +8,7 @@ The alert dialog allows you to build simple dialogs for those cases where you ne
 
 Let's assume that you want to ask a yes/no question which produces a dialog as shown below, and that you want to react to users choosing _Yes_.
 
-![](<images/xbl-alert-dialog.png>)
+<figure><img src="images/xbl-alert-dialog.png" alt="" width="502"></figure>
 
 First declare the dialog, with:
 
@@ -120,7 +120,7 @@ Depending on the number of buttons you place in your dialog, a different icon is
 
 *   When you have 2 or 3 buttons, the dialog is considered to be a **question**. The CSS class is `xbl-fr-alert-dialog-question` and the dialog looks like:
 
-    ![](<images/xbl-alert-dialog.png>)
+    <figure><img src="images/xbl-alert-dialog.png" alt="" width="502"></figure>
 *   When you have 1 button, the dialog is considered to be **informational**. The CSS class is `xbl-fr-alert-dialog-info` and the dialog looks like:
 
     ![](images/xbl-alert-dialog-info.png)

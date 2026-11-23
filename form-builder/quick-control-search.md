@@ -21,7 +21,7 @@ The shortcut opens a small dialog. Clicking or pressing the Enter key and then t
 
 If the "Open Settings Dialog" option is selected, the "Control Settings" dialog for the control also opens right away.
 
-![The quick search dialog](images/quick-search.png)
+<figure><img src="images/quick-search.png" alt="The quick search dialog" width="635"></figure>
 
 ## See also
 

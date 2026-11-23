@@ -41,7 +41,7 @@ For grids only, selecting this option automatically shows a row number at the be
 
 This is how the repetition number appears at runtime.
 
-![Repetition number at runtime](images/container-settings-repeated-content-repetition-number-runtimep-highlighted.png)
+<figure><img src="images/container-settings-repeated-content-repetition-number-runtimep-highlighted.png" alt="Repetition number at runtime" width="722"></figure>
 
 ## Minimum and maximum number of repetitions
 

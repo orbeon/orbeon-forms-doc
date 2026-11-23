@@ -14,7 +14,7 @@ This control supports all the features of a regular control, including:
 
 However, it doesn't show in the form at runtime. At design-time, the control shows as a box with an icon so that the form author knows that a hidden control is in use.
 
-![Hidden field in Form Builder](images/xbl-hidden.png)
+<figure><img src="images/xbl-hidden.png" alt="Hidden field in Form Builder" width="485"></figure>
 
 This is useful in the following cases:
 

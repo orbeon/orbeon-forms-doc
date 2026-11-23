@@ -75,7 +75,7 @@ The following matching properties allow setting global defaults. For example:
 
 When used in Form Builder, the following custom settings for image transformation are available:
 
-![Custom settings](images/custom-settings-image-attachment.png)
+<figure><img src="images/custom-settings-image-attachment.png" alt="Custom settings" width="488"></figure>
 
 ## See also
 

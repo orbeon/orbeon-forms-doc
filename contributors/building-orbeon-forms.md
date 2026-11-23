@@ -124,7 +124,7 @@ To open the Orbeon Forms project:
 * Do "Refresh all sbt projects".
 * ~~Open `build.sbt` and click "Refresh" to let IntelliJ create modules based on the sbt build.~~
 
-![IntelliJ sbt module import](images/building-intellij-sbt.png)
+<figure><img src="images/building-intellij-sbt.png" alt="IntelliJ sbt module import" width="429"></figure>
 
 ### Running
 
