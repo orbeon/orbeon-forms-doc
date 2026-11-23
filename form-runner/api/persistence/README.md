@@ -132,7 +132,7 @@ All persistence URLs are called with headers matching configuration properties f
         <property
             as="xs:anyURI"
             name="oxf.fr.persistence.exist.exist-uri"
-            value="/exist/rest/db/orbeon/fr">
+            value="/exist/rest/db/orbeon/fr"/>
         ```
 
     * header:
@@ -148,11 +148,11 @@ All persistence URLs are called with headers matching configuration properties f
         <property
             as="xs:string"
             name="oxf.fr.persistence.oracle.datasource"
-            value="oracle">
+            value="oracle"/>
         <property
-            as="xs:boolean
-            name=" oxf.fr.persistence.oracle.create-flat-view"
-            value="false">
+            as="xs:boolean"
+            name="oxf.fr.persistence.oracle.create-flat-view"
+            value="false"/>
         ```
 
     * headers:
@@ -169,7 +169,7 @@ All persistence URLs are called with headers matching configuration properties f
         <property
             as="xs:string"
             name="oxf.fr.persistence.mysql.datasource"
-            value="mysql">
+            value="mysql"/>
         ```
 
     * header:
@@ -185,7 +185,7 @@ All persistence URLs are called with headers matching configuration properties f
         <property
             as="xs:string"
             name="oxf.fr.persistence.db2.datasource"
-            value="db2">
+            value="db2"/>
         ```
 
     * header:

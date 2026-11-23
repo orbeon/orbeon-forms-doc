@@ -105,7 +105,7 @@ The full tree is:
   <path-info>/doc/home-welcome</path-info>
   <request-path>/doc/home-welcome</request-path>
   <path-translated>C:\orbeon\projects\OPS\build\ops-war\doc\home-welcome</path-translated>
-  <query-string>id=12&print=false</query-string>
+  <query-string>id=12&amp;print=false</query-string>
   <requested-session-id>DA6E64FC1E6DFF0499B5D6F46A32186A</requested-session-id>
   <request-uri>/ops/doc/home-welcome</request-uri>
   <request-url>http://localhost:8888/ops/doc/home-welcome</request-url>

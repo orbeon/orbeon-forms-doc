@@ -50,7 +50,7 @@ _SECURITY NOTE: The file name and the media type are provided by the user agent 
 
 The result of a file upload when using `xs:anyURI` contains metadata parameters and typically looks like this:
 
-```xml
+```
 file:/home/tomcat/apache-tomcat-6.0.29/temp/xforms_upload_2351863081926002422.tmp?
   filename=orbeon-logo-trimmed-42.png&
   mediatype=image%2Fpng&
@@ -186,7 +186,7 @@ In addition, the `xxf:pending-uploads()` function returns the number of pending 
 ```xml
 <xf:bind
     ref="save-button"
-    readonly="xxf:pending-uploads() gt 0">
+    readonly="xxf:pending-uploads() gt 0"/>
 ```
 
 ## Events

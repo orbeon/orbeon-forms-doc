@@ -54,7 +54,7 @@ When to use the Ehcache configuration (deprecated as of Orbeon Forms 2025.1):
 
 [\[SINCE Orbeon Forms 2025.1\]](/release-notes/orbeon-forms-2025.1.md)
 
-See [Infinispan configuration file for replication](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/js/src/test/resources/resources/config-replication/infinispan.xml).
+See [Infinispan configuration file for replication](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/jvm/src/test/resources/resources/config-replication/infinispan.xml).
 
 Unlike with Ehcache 2.x, which synchronizes disk stores as well as in-memory caches, with Infinispan only in-memory caches are synchronized. There are a few ways to deal with this with Infinispan:
 

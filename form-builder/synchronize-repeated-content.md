@@ -68,6 +68,7 @@ The following example does the following:
 * For each iteration, copy over the value of the `traveler-name` and `traveler-birth-date` form controls.
 
 ```xml
+<xf:model id="fr-form-model" xxf:expose-xpath-types="true">
     <!-- other Form Builder code here -->
 
     <fr:synchronize-repeated-content left="master-grid" right="detail-section" version="2018.2">

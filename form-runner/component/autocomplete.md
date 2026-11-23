@@ -167,7 +167,9 @@ By default, the autocomplete displays a maximum of 10 items. You can have the au
 
     ```markup
       <fr:autocomplete>
-          <fr:max-results-displayed value="/configuration/max-results-displayed">
+          <fr:max-results-displayed value="/configuration/max-results-displayed"/>
+          ...
+      </fr:autocomplete>
     ```
 *   By defining the property:
 
@@ -175,7 +177,7 @@ By default, the autocomplete displays a maximum of 10 items. You can have the au
       <property
           as="xs:integer"
           name="oxf.xforms.xbl.fr.autocomplete.max-results-displayed"
-          value="10">
+          value="10"/>
     ```
 
 When several configurations are used for an autocomplete component, the `<fr:max-results-displayed>` element has priority over the `max-results-displayed` attribute, which has priority over the global property.

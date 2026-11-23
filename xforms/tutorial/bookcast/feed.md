@@ -33,7 +33,7 @@ It would be nice if you could use XForms to produce such a format, and in fact i
 But first, it's time to introduce the Model-View-Controller (MVC) support in the page flow. Consider the following page flow declaration:
 
 ```markup
-<page path="/my-bookcast/atom" model="atom.xpl" view="atom.xsl">
+<page path="/my-bookcast/atom" model="atom.xpl" view="atom.xsl"/>
 ```
 
 Notice how, instead of an XHTML page view (`view.xhtml`), you now use:
@@ -147,7 +147,7 @@ Now look at the page view:
 This page view is an XSLT document (notice the `xsl:version="2.0"` attribute on the root element). It automatically receives on its main input the document produced by the page model. So if you were to write:
 
 ```markup
-<xsl:value-of select="/books/book[1]/title">
+<xsl:value-of select="/books/book[1]/title"/>
 ```
 
 You would get the title of the first book from `books.xsl`.
@@ -161,7 +161,7 @@ Now this XSLT document does not use many XSLT constructs:
 
 And that's it! You can now add the entry in `page-flow.xml`, add the two files `atom.xpl` and `atom.xsl`, and point your browser to:
 
-```markup
+```
 http://localhost:8080/orbeon/my-bookcast/atom
 ```
 
@@ -176,7 +176,7 @@ To make things even better, add the following to `view.xhtml` under the `<head>`
     rel="alternate"
     type="application/atom+xml"
     title="Orbeon XForms Bookcast Tutorial Feed"
-    href="atom">
+    href="atom"/>
 ```
 
 With this addition, most modern browsers will display a feed icon or an RSS icon, making the feed directly accessible from the main Bookcast page.

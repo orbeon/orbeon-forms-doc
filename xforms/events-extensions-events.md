@@ -201,7 +201,7 @@ You can set the focus on a specific control of the dialog with a `setfocus` acti
 ```xml
 <xf:setfocus 
     ev:event="xxforms-dialog-open" 
-    control="my-control">
+    control="my-control"/>
 ```
 
 When the dialog opens upon receiving the `xxforms-dialog-open` event, it sets the focus on the first relevant, non-readonly control. This means that in general you don't need to use an explicit `setfocus` action.

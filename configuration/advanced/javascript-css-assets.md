@@ -62,7 +62,7 @@ If all the resources belong to the baseline, only one JavaScript file and one CS
 
 The URLs produced identify the resources needed by the page, for example:
 
-```xml
+```html
 <link rel="stylesheet"
   href="/orbeon/xforms-server/orbeon-8b3d174e93f2d74146c9b2a5356bd5b8b5e196f8.css"
   type="text/css" media="all">
@@ -72,10 +72,10 @@ The URLs produced identify the resources needed by the page, for example:
   type="text/css" media="all">
 
 <script type="text/javascript"
-  src="/orbeon/xforms-server/orbeon-19e8d10829ccdd0d9aec779c0c89e5d1f57764dd.js">
+  src="/orbeon/xforms-server/orbeon-19e8d10829ccdd0d9aec779c0c89e5d1f57764dd.js"></script>
 
 <script type="text/javascript"
-  src="/orbeon/xforms-server/orbeon-3a3469eca94e6df9783e742067f464b57de4e2f3.js"/>
+  src="/orbeon/xforms-server/orbeon-3a3469eca94e6df9783e742067f464b57de4e2f3.js"></script>
 ```
 
 When the Orbeon Forms XForms server receives a request for a combined resource, it determines what files need to be combined and outputs them all together. Furthermore, for CSS files, all URLs referred to with `url()` are rewritten, so that links to images, in particular, remain correct.

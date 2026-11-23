@@ -138,7 +138,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 ```xml
 <fr:currency
     ref="value"
-    digits-after-decimal="3/>
+    digits-after-decimal="3"/>
 ```
 
 ![](images/xbl-currency2.png)
@@ -148,7 +148,7 @@ If you set `digits-after-decimal` to 0, then the decimal separator isn't shown. 
 ```xml
 <fr:currency
     ref="value"
-    digits-after-decimal="0/>
+    digits-after-decimal="0"/>
 ```
 
 ![](images/xbl-currency3.png)

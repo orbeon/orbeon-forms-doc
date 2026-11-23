@@ -46,7 +46,7 @@ You can use components to implement:
         * A [form grid component](../../form-runner/component/grid.md)
         * A [wizard component](../../form-runner/component/wizard.md)
 * Components which implement a completely new control based on a JavaScript library
-    * Example: A [map component](../../form-runner/component/map.md)
+    * Example: A [map component](example-map.md)
 
 This is not an exhaustive list. Your imagination is the limit!
 

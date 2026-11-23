@@ -250,7 +250,7 @@ For a list of supported Orbeon Forms versions, see [Release History](/release-hi
 [postgresql-4_8.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.8/postgresql-4_8.sql
 [postgresql-2017_2-to-2018_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2018.2/postgresql-2017_2-to-2018_2.sql
 [postgresql-2016_3-to-2017_2.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2017.2/postgresql-2016_3-to-2017_2.sql
-[postgresql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.3postgresql-2016_2-to-2016_3.sql
+[postgresql-2016_2-to-2016_3.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.3/postgresql-2016_2-to-2016_3.sql
 [postgresql-4_8-to-2016_2.sql]:    https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2016.2/postgresql-4_8-to-2016_2.sql
 
 [db2-2025_1.sql]: https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/2025.1/db2-2025_1.sql

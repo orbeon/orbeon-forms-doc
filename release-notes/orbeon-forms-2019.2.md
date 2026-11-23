@@ -12,7 +12,7 @@ You can now set the PDF page size and orientation (portrait or landscape) with t
 
 For details, see the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html).
 
-![New PDF Options](../form-builder/images/form-settings-pdf-options.png)
+![New PDF Options](../form-builder/form-settings/pdf.png)
 
 ### Fluid layout support
 
@@ -20,7 +20,7 @@ You can now opt for a _fluid_ form width, where the form takes all the width ava
 
 For details, see the [blog post](https://blog.orbeon.com/2019/11/new-layout-choices-for-pdf-and-browser.html) and [documentation](https://doc.orbeon.com/form-builder/form-settings).
 
-![Browser page layout in view Options](../form-builder/images/form-settings-view-options.png)
+![Browser page layout in view Options](../form-builder/form-settings/appearance.png)
 
 ### Date support for Excel import
 

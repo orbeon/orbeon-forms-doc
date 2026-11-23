@@ -9,7 +9,7 @@ The following example illustrates how to perform a simple redirection with the P
     <action>
         <result page="page-b" instance-passing="redirect"/>
     </action>
-</page
+</page>
 ```
 
 ```markup
@@ -25,7 +25,7 @@ Note that you do not have to use `redirect`, but that doing so will cause the us
 The PFC allows you to very easily receive an XML document submitted, for example with an HTTP `POST`, and to generate an XML response. This can be useful to implement XML services such as XML-RPC, SOAP, or any XML-over-HTTP service. The following PFC configuration defines a simple XML service:
 
 ```markup
-<page path="/xmlrpc" model="xml-rpc.xpl">
+<page path="/xmlrpc" model="xml-rpc.xpl"/>
 ```
 
 Notice that there is no `view` attribute: all the processing for this page is done in the page model.

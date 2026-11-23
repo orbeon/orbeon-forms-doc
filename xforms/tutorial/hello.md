@@ -82,7 +82,7 @@ This element defines an XForms _instance_, which is just XForms' way of calling 
 Now consider the remaining XForms elements in the source file: `<xf:input>` and `<xf:output>`. These two elements are not located under the XHTML `<head>`, but under `<body>`. They are part of the _view_ of your page, in other words these elements directly help define visible controls on the page. Consider `<xf:input>`:
 
 ```xml
-<xf:input ref="/first-name" incremental="true">
+<xf:input ref="/first-name" incremental="true"/>
 ```
 
 You guessed that this element allows the user to _input_ information. `<xf:input>` is usually displayed to the user as an input field. The `ref` attribute is the magic that connects the input field to the XForms instance. It contains an _XPath expression_, which in this case just looks like a file path. In this case, `/first-name` points to the element called `first-name`, which happens to be the only element we have in the XForms instance. Using the `ref` attribute this way is called a _binding_ and means two things:
@@ -115,7 +115,7 @@ A few things to point out:
 
 If you look at your browser's URL bar when showing the example, you notice that it looks like this:
 
-```xml
+```
 http://localhost:8080/orbeon/xforms-hello/
 ```
 
@@ -135,7 +135,7 @@ So now look at `page-flow.xml` for the Hello application. It is very simple:
 The important line in this page flow is this one:
 
 ```xml
-<page path="*" view="view.xhtml">
+<page path="*" view="view.xhtml"/>
 ```
 
 It tells Orbeon Forms that any path (notice the wildcard `*`) sent by the web browser to this application causes the page view stored in `view.xhtml` to be processed. You can check this by entering the following path in your browser:
@@ -184,8 +184,8 @@ Now, modify `view.xhtml`:
 * Repeat the experience but add some XForms. For example, add a second `<xf:input>` right after the first one:
 
     ```xml
-    <xf:input ref="/first-name" incremental="true">
-    <xf:input ref="/first-name" incremental="true">
+    <xf:input ref="/first-name" incremental="true"/>
+    <xf:input ref="/first-name" incremental="true"/>
     ```
 
 Reload the page, and notice, as you type in an input field, how the other one updates as you type. This happens because the two fields are bound to the same instance data. The `incremental="true"` attribute allows the changes to occur as you type, instead of occurring when you focus in and out of fields:

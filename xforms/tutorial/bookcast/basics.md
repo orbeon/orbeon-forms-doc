@@ -45,8 +45,8 @@ _NOTE:_
 
 _If you get lost at some point in this tutorial, feel free to look at the reference source files for the Bookcast application:_
 
-* [view.xhtml](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/view.xhtml)
-* [page-flow.xml](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/page-flow.xml)
+* [view.xhtml](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/jvm/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/view.xhtml)
+* [page-flow.xml](https://github.com/orbeon/orbeon-forms/blob/master/orbeon-war/jvm/src/main/webapp/WEB-INF/resources/apps/xforms-bookcast/page-flow.xml)
 
 ## XForms model and instance
 

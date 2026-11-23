@@ -105,7 +105,7 @@ The following property enables or disables autosave for a given persistence prov
 
 With Orbeon Forms 4.3 specifically, you need to:
 
-* If using MySQL, update your database by running [this DDL](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/mysql-4_3-to-4_4.sql). (The tables for DB2 on 4.3 already contain the required changes out-of-the-box.)
+* If using MySQL, update your database by running [this DDL](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/apps/fr/persistence/relational/ddl/4.4/mysql-4_3-to-4_4.sql). (The tables for DB2 on 4.3 already contain the required changes out-of-the-box.)
 * Set the following properties:
 
 ```xml

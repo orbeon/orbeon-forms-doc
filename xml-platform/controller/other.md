@@ -44,7 +44,7 @@ You often want a common look and feel across pages. Instead of duplicating the c
 This is an example of `<epilogue>` element, pointing to the default epilogue XPL pipeline:
 
 ```markup
-<epilogue url="oxf:/config/epilogue.xpl">
+<epilogue url="oxf:/config/epilogue.xpl"/>
 ```
 
 The page flow epilogue is discussed in more detail in the [Page Flow Epilogue](http://wiki.orbeon.com/forms/doc/developer-guide/page-flow-epilogue) documentation.

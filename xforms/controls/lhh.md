@@ -46,5 +46,5 @@ In the resulting HTML, Orbeon Forms generates ARIA attributes to link repeated c
 
 ## See also
 
-* [Validation](https://github.com/orbeon/orbeon-forms-doc/tree/c432b92f4f85b0983a3ce0b85bb2bdd4e53d043e/xforms/controls/validation.md)
+* [Validation](../validation.md)
 * [Grid component](../../form-runner/component/grid.md)

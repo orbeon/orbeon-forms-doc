@@ -27,7 +27,7 @@ The most common case of XML submission in Orbeon Forms is submission from the bu
 If you wish to submit an XForms instance to this page from within `report-detail-view.xsl`, create an XForms submission as follows:
 
 ```markup
-<xf:submission id="main" method="post" action="/report/detail">
+<xf:submission id="main" method="post" action="/report/detail"/>
 ```
 
 This ensures that when this XForms submission is activated, an XML document containing the submitted XForms instance will be made available to the page model and view.
@@ -37,7 +37,7 @@ _NOTE: The_ `action` _attribute on the_ `xf:submission` _element should not be c
 You can also directly submit to another page by specifying a different action, for example:
 
 ```markup
-<xf:submission id="main" method="post" action="/report/summary">
+<xf:submission id="main" method="post" action="/report/summary"/>
 ```
 
 In general it is recommended to leave the control of the flow between pages to PFC _actions_, as documented below.
@@ -47,7 +47,7 @@ In general it is recommended to leave the control of the flow between pages to P
 An external XML submission must refer to the URL of the page accepting the submission. It is up to the developer to provide this URL to the external application, for example `http://www.orbeon.org/myapp/xmlrpc` if you have a page declaring the path `/xmlrpc`:
 
 ```markup
-<page path="/xmlrpc" model="xmlrpc.xpl">
+<page path="/xmlrpc" model="xmlrpc.xpl"/>
 ```
 
 ## External JSON submission
@@ -86,7 +86,7 @@ The mechanisms described above explain how a page receives an XML submission, bu
 If no submission has taken place, the XML submission document is an Orbeon Forms "null" document, as follows:
 
 ```markup
-<null xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true">
+<null xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
 ```
 
 ## Extracting data from the URL
@@ -166,7 +166,7 @@ The `matcher-group` attribute contains a positive integer identifying the number
 The `<setvalue>` element also supports a `value` attribute, which can be used to set a value using an XPath expression:
 
 ```markup
-<setvalue ref="/form/date-time" value="current-dateTime()">
+<setvalue ref="/form/date-time" value="current-dateTime()"/>
 ```
 
 Finally, `<setvalue>` supports setting a literal value:

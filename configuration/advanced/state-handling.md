@@ -22,7 +22,7 @@ A property controls whether the XForms engine should try to optimize state recon
 <property
     as="xs:boolean"
     name="oxf.xforms.cache.document"
-    value="true">
+    value="true"/>
 ```
 
 _NOTE: We might get rid of this property in the future as there is no use case for setting it to false._
@@ -33,7 +33,7 @@ If `oxf.xforms.cache.document` is set to `true`, the number of XForms documents 
 <property
     as="xs:integer"
     name="oxf.xforms.cache.documents.size"
-    value="50">
+    value="50"/>
 ```
 
 _NOTE: This property is global and cannot be overridden on a page by page basis._
@@ -46,7 +46,7 @@ The static state (or static analysis) of an XForms page is stored in a separate 
 <property
     as="xs:integer"
     name="oxf.xforms.cache.static-state.size"
-    value="50">
+    value="50"/>
 ```
 
 This property should be set to a number equal to or greater than the number of distinct XForms pages you have.

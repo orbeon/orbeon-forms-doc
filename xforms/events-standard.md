@@ -48,7 +48,7 @@ not run. Previously, such handlers would run. For example the following `<xf:mes
     <xf:message 
         event="xforms-ready" 
         observer="my-model">Hello!</xf:message>
-<xf:group>
+</xf:group>
 ```
 
 ```xml

@@ -116,7 +116,7 @@ The `xf:element()` function returns a new XML element with the qualified name pr
 <!-- Insert an element called "value" as a child of element "section" -->
 <xf:insert
     context="section"
-    origin="xf:element('value')">
+    origin="xf:element('value')"/>
 ```
 
 The second, optional argument can take a sequence of items specifying attributes and content for the new element:
@@ -262,7 +262,7 @@ xxf:serialize(
 The `xxf:serialize()` function allows you to serialize an XML node to XML, HTML, XHTML or text. For example:
 
 ```xml
-<xf:bind ref="my-html" calculate="xxf:serialize(instance('my-instance'), 'html')"="">
+<xf:bind ref="my-html" calculate="xxf:serialize(instance('my-instance'), 'html')"/>
 ```
 
 ## xxf:sort()

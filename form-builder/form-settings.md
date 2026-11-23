@@ -37,7 +37,6 @@ Form options include options which apply to the entire form definition.
   * [\[SINCE Orbeon Forms 2024.1\]](../release-notes/orbeon-forms-2024.1.md)
   * When this is checked, this form can be used as a template for new forms.
   * The default is unchecked.
-  * For details, see [Form templates](form-templates.md).
 * Simple Data Migration
   * \[SINCE Orbeon Forms 2018.2]
   * For details, see [Simple data migration](../form-runner/feature/simple-data-migration.md).

@@ -282,7 +282,7 @@ When the [`external-value` mode](modes.md#the-external-value-mode) is enabled, t
 - `xformsUpdateValue()`
 - `xformsGetValue()`
 
-For an example, see the implementation of the `fr:code-mirror` component: [`code-mirror.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/code-mirror/code-mirror.xbl) and [`code-mirror.js`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/xbl/orbeon/code-mirror/code-mirror.js).
+For an example, see the implementation of the `fr:code-mirror` component: [`code-mirror.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/code-mirror/code-mirror.xbl) and [`CodeMirror.scala`](https://github.com/orbeon/orbeon-forms/blob/master/xforms-web/src/main/scala/org/orbeon/xbl/CodeMirror.scala).
 
 ### The xformsUpdateValue method
 

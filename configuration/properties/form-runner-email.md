@@ -266,6 +266,7 @@ The property contains an XPath expression which generates the filename. The expr
         //case-id,
         '.tiff'
     )
+</property>
 
 <property as="xs:string" name="oxf.fr.email.xml.filename.*.*">
     concat(

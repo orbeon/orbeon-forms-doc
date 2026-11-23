@@ -7,7 +7,7 @@ Orbeon Forms supports exposing MIP type annotations to XPath 2.0.
 This means that if you have a type associated with a node, e.g.:
 
 ```markup
-<xf:bind ref="age" type="xs:integer">
+<xf:bind ref="age" type="xs:integer"/>
 ```
 
 then the type is not only used for validation, but also determines the typed value of the element node age.

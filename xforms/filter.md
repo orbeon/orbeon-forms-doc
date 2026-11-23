@@ -167,7 +167,7 @@ For instances, you could use a relative URL such as `<xf:instance src="http://wi
 
 So instead, you will want to use an inclusion mechanism native to the template language you are using in your application. If you write JSP, use the [include directive][11]. To include an instance, use:
 
-```xml
+```jsp
 <xf:instance id="my-instance">
     <%@include file="file.xml"%>
 </xf:instance>
@@ -175,7 +175,7 @@ So instead, you will want to use an inclusion mechanism native to the template l
 
 You can use the include directive in the same way to include an arbitrary part of your form stored in a separate file:
 
-```xml
+```jsp
 <xh:body>
     <!-- Part of the form inline. -->
     <xh:div>
@@ -194,10 +194,10 @@ Say your application produces XForms using JSP. You might want to pass some info
 
 It may be tempting to directly inline data into instances, like this:
 
-```xml
+```jsp
 <xf:instance id="profile-instance">
   <profile>
-    <user-id><% request.getAttribute('user-id') %></user-id>
+    <user-id><%= request.getAttribute("user-id") %></user-id>
   </profile>
 </xf:instance>
 ```

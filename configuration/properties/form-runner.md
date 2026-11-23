@@ -70,7 +70,7 @@ The following property determines Form Runner's default language:
 <property
     as="xs:string"
     name="oxf.fr.default-language.*.*"
-    value="en">
+    value="en"/>
 ```
 
 When wildcards are specified, this property can control the default language for a given app or form.
@@ -81,7 +81,7 @@ The property without wildcards can also be used to control the default language 
 <property
     as="xs:string"
     name="oxf.fr.default-language"
-    value="en">
+    value="en"/>
 ```
 
 For more details, see [Language selection at runtime](/form-runner/feature/localization.md#language-selection-at-runtime)

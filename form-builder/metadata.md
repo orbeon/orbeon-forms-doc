@@ -12,7 +12,7 @@ The Form Builder specific extensions are in a namespace:
 
 * URI: `http://orbeon.org/oxf/xml/form-builder`
 * Usual prefix: `fb`
-* Example: `xmlns:fb="xmlns="http://orbeon.org/oxf/xml/form-builder"`
+* Example: `xmlns:fb="http://orbeon.org/oxf/xml/form-builder"`
 
 ## Group metadata for the toolbox
 
@@ -22,7 +22,7 @@ In XBL, each component is defined in an `<xbl:binding>` element and multiple `<x
 <fb:metadata>
     <fb:display-name lang="en">Text Controls</fb:display-name>
     <fb:display-name lang="fr">Contrôles texte</fb:display-name>
-</metadata>
+</fb:metadata>
 ```
 
 ## Control metadata for the toolbox
@@ -128,7 +128,7 @@ If your component only needs a template for the view, which is maybe the most fr
 
 ### Introduction
 
-All the controls share certain properties, like the control name. However, some XBL components take additional properties, set at design time in Form Builder. For instance the [Dynamic Data Dropdown](https://github.com/orbeon/orbeon-forms-doc/tree/365fc64422dc63e5e12ecef4092a5dab6484a9e9/form-runner/component/dynamic-data-dropdown.md) takes:
+All the controls share certain properties, like the control name. However, some XBL components take additional properties, set at design time in Form Builder. For instance the [Static and Dynamic Dropdown](../form-runner/component/static-dynamic-dropdown.md) takes:
 
 * the HTTP URI of a service returning an XML document with the items shown in the drop-down,
 * an XPath expression extracting the items from the XML document,

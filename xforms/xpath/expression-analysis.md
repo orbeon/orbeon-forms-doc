@@ -48,11 +48,11 @@ Consider this instance in a `people-model` model:
     <person>
       <name>Mary</name>
       <age>20</age>
-    </person
+    </person>
     <person>
       <name>Bob</name>
       <age>27</age>
-    </person
+    </person>
   </people>
 </xf:instance>
 ```
@@ -123,7 +123,7 @@ For debugging purposes, you can log the result of the XPath analysis to the serv
 <property 
     as="xs:boolean" 
     name="oxf.xforms.debug.log-xpath-analysis" 
-    value="true">
+    value="true"/>
 ```
 
 This lists all the expressions considered, marks whether they were analyzed or not, and lists all aspects of the analysis.

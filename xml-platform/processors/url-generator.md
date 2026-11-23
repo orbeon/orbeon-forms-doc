@@ -384,7 +384,7 @@ If you don't want to embed user names and passwords in URLs or need more control
       <authentication>
         <username>aUsername</username>
         <password>aPassword</password>
-        <preemptive>true|false</password>
+        <preemptive>true|false</preemptive>
         <domain>an NTLM domain name</domain>
       </authentication>
     </config>

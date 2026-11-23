@@ -118,7 +118,7 @@ The `at` attribute contains an XPath expression returning the index of the eleme
 As an extension to XForms 1.1, Orbeon Forms supports inserting an element into a document node:
 
 ```markup
-<xf:insert context="instance()/root()" origin="instance('other')">
+<xf:insert context="instance()/root()" origin="instance('other')"/>
 ```
 
 This is particularly useful in conjunction with the `xxf:create-document()` function.

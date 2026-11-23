@@ -61,4 +61,4 @@ The faster the browser and the computer, the better your authoring experience wi
 
 ## See also
 
-* [Form Runner](https://github.com/orbeon/orbeon-forms-doc/tree/05dfe635d04d26fa28f0c788c3cc816a72c4c8ae/form-runner/overview/README.md)
+* [Form Runner](../form-runner/README.md)

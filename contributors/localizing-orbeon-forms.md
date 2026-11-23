@@ -65,10 +65,7 @@ question](http://stackoverflow.com/questions/11449195/orbeon-4-0-0-m6-how-to-set
 
 ### Calendar resources
 
-See [`CalendarResources.js`](https://github.com/orbeon/orbeon-forms/blob/master/src/main/assets/ops/javascript/orbeon/xforms/control/CalendarResources.js).
-
-Similar idea here, but this is in JavaScript, for client-side calendar
-support.
+Client-side date picker localization uses `bootstrap-datepicker` locale files located under [`locales`](https://github.com/orbeon/orbeon-forms/tree/master/form-runner/jvm/src/main/assets/xbl/orbeon/date/bootstrap-datepicker-1.8.0-dist/locales) and referenced in [`date.xbl`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/date/date.xbl).
 
 ### XBL components
 
@@ -84,8 +81,6 @@ As of Orbeon Forms 2016.1, the following controls need help:
 
 - [character-counter.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/character-counter/character-counter.xbl)
 - [checkbox-input.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/checkbox-input/checkbox-input.xbl)
-- [dialog-select.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/dialog-select/dialog-select.xbl)
-- [dialog-select1.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/dialog-select1/dialog-select1.xbl)
 - [explanation.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/explanation/explanation.xbl)
 - [handwritten-signature.xbl](https://github.com/orbeon/orbeon-forms-pe/blob/master/src/main/resources/xbl/orbeon/handwritten-signature/handwritten-signature.xbl) (link needs authorization)
 - [number.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/number/number.xbl)
@@ -101,20 +96,16 @@ To get started search for the English version in all files for both:
 
 Then add the corresponding resources for the new language.
 
-*NOTE: Make sure also to localize
-[`dialog-select-resources.xml`](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/resources/xbl/orbeon/dialog-select/dialog-select-resources.xml),
-which is easily missed.*
-
 ### Pseudo-XBL components
 
-- https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl
+- https://github.com/orbeon/orbeon-forms/tree/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl
 
 These files are used by the Form Builder toolbox for built-in XForms controls.
 
 As of Orbeon Forms 2018.2, the following files need help:
 
 - [attachment-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/attachment-controls.xbl)
-- [output-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/output-controls.xbl)
+- [output-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/tag-release-2018.1-ce/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/output-controls.xbl)
     - UNTIL Orbeon Forms 2018.1
 - [utility-controls.xbl](https://github.com/orbeon/orbeon-forms/blob/master/form-builder/jvm/src/main/resources/forms/orbeon/builder/xbl/utility-controls.xbl)
     - SINCE Orbeon Forms 2018.2

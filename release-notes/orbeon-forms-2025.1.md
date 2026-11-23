@@ -122,8 +122,6 @@ See also:
 
 A new PDF color mode allows preserving colors, and CSS variables related to colors can be overridden in a custom `@media print` section and will be used by the PDF generator.
 
-![Orbeon Forms PDF color mode](xxx)
-
 See also:
 
 - Documentation: [PDF color mode](/form-runner/feature/pdf-automatic.md#pdf-color-mode)
