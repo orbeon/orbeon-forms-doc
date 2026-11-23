@@ -1,4 +1,4 @@
-# Summary page
+# Summary page configuration properties
 
 ## Adding your own CSS files
 

@@ -1,4 +1,4 @@
-# Summary Page
+# Summary page form settings
 
 \[SINCE Orbeon Forms 2026.1]
 
